@@ -7,7 +7,7 @@ lbl_80AED208:
 /* 80AED21C  40 82 00 30 */	bne lbl_80AED24C
 /* 80AED220  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80AED224  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80AED228  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80AED228  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80AED22C  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80AED230  28 03 00 00 */	cmplwi r3, 0
 /* 80AED234  41 82 00 18 */	beq lbl_80AED24C

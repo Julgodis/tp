@@ -114,10 +114,10 @@ lbl_8079FBB0:
 /* 8079FBB0  A8 1E 06 82 */	lha r0, 0x682(r30)
 /* 8079FBB4  2C 00 00 00 */	cmpwi r0, 0
 /* 8079FBB8  40 82 00 68 */	bne lbl_8079FC20
-/* 8079FBBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079FBC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8079FBC4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8079FBC8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8079FBBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079FBC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8079FBC4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8079FBC8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8079FBCC  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
 /* 8079FBD0  41 82 00 24 */	beq lbl_8079FBF4
 /* 8079FBD4  80 1E 00 B0 */	lwz r0, 0xb0(r30)

@@ -5,8 +5,8 @@ lbl_80D44DCC:
 /* 80D44DD8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D44DDC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D44DE0  7C 7E 1B 78 */	mr r30, r3
-/* 80D44DE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D44DE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D44DE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D44DE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D44DEC  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80D44DF0  7F E3 FB 78 */	mr r3, r31
 /* 80D44DF4  38 9E 07 F4 */	addi r4, r30, 0x7f4

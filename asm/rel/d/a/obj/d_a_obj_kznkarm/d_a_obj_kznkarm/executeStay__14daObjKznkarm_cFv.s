@@ -40,9 +40,9 @@ lbl_80C50504:
 /* 80C5059C  4B 3B BE 00 */	b mDoMtx_XrotM__FPA4_fs
 /* 80C505A0  3C 60 80 C5 */	lis r3, M_attr__14daObjKznkarm_c@ha
 /* 80C505A4  38 63 0D 08 */	addi r3, r3, M_attr__14daObjKznkarm_c@l
-/* 80C505A8  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 80C50D2C */
-/* 80C505AC  C0 43 00 28 */	lfs f2, 0x28(r3)	/* effective address: 80C50D30 */
-/* 80C505B0  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 80C50D34 */
+/* 80C505A8  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 80C505AC  C0 43 00 28 */	lfs f2, 0x28(r3)
+/* 80C505B0  C0 63 00 2C */	lfs f3, 0x2c(r3)
 /* 80C505B4  4B 3B C7 E8 */	b transM__14mDoMtx_stack_cFfff
 /* 80C505B8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C505BC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

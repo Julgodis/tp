@@ -200,7 +200,7 @@ lbl_807F36E8:
 /* 807F36FC  38 7E 06 98 */	addi r3, r30, 0x698
 /* 807F3700  3C 80 80 7F */	lis r4, l_HIO@ha
 /* 807F3704  38 84 7D 78 */	addi r4, r4, l_HIO@l
-/* 807F3708  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 807F7D84 */
+/* 807F3708  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 807F370C  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807F3710  C0 7F 00 64 */	lfs f3, 0x64(r31)
 /* 807F3714  4B A7 C3 28 */	b cLib_addCalc2__FPffff

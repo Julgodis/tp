@@ -11,8 +11,8 @@ lbl_80C262CC:
 /* 80C262F0  80 9F 05 B8 */	lwz r4, 0x5b8(r31)
 /* 80C262F4  28 04 00 00 */	cmplwi r4, 0
 /* 80C262F8  41 82 00 14 */	beq lbl_80C2630C
-/* 80C262FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C26300  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C262FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C26300  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C26304  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C26308  4B 44 DF 48 */	b Release__4cBgSFP9dBgW_Base
 lbl_80C2630C:

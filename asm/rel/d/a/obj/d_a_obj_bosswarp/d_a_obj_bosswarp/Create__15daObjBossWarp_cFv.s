@@ -19,8 +19,8 @@ lbl_805797F4:
 /* 805797F8  B0 1E 05 92 */	sth r0, 0x592(r30)
 /* 805797FC  48 00 00 2C */	b lbl_80579828
 lbl_80579800:
-/* 80579800  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80579804  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80579800  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80579804  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80579808  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8057980C  7F C4 F3 78 */	mr r4, r30
 /* 80579810  57 A0 10 3A */	slwi r0, r29, 2
@@ -38,8 +38,8 @@ lbl_80579828:
 /* 8057983C  2C 1D 00 08 */	cmpwi r29, 8
 /* 80579840  40 82 00 48 */	bne lbl_80579888
 lbl_80579844:
-/* 80579844  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80579848  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80579844  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80579848  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057984C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80579850  7F C4 F3 78 */	mr r4, r30
 /* 80579854  3C A0 80 58 */	lis r5, struct_8057B4EC+0x0@ha
@@ -56,8 +56,8 @@ lbl_80579844:
 /* 80579880  48 00 05 19 */	bl set_appear__15daObjBossWarp_cFv
 /* 80579884  48 00 00 3C */	b lbl_805798C0
 lbl_80579888:
-/* 80579888  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057988C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80579888  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057988C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80579890  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80579894  7F C4 F3 78 */	mr r4, r30
 /* 80579898  3C A0 80 58 */	lis r5, struct_8057B4EC+0x0@ha
@@ -73,8 +73,8 @@ lbl_80579888:
 lbl_805798C0:
 /* 805798C0  80 1F 00 20 */	lwz r0, 0x20(r31)
 /* 805798C4  90 1E 01 00 */	stw r0, 0x100(r30)
-/* 805798C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805798CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805798C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805798CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805798D0  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 805798D4  7F A3 EB 78 */	mr r3, r29
 /* 805798D8  7F C4 F3 78 */	mr r4, r30

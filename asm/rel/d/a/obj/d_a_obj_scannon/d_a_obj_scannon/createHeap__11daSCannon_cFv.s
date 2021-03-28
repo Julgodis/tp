@@ -30,8 +30,8 @@ lbl_80CC765C:
 /* 80CC7670  3B 03 02 84 */	addi r24, r3, 0x284
 lbl_80CC7674:
 /* 80CC7674  7F C3 F3 78 */	mr r3, r30
-/* 80CC7678  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CC767C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CC7678  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CC767C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CC7680  3F 65 00 02 */	addis r27, r5, 2
 /* 80CC7684  3B 7B C2 F8 */	addi r27, r27, -15624
 /* 80CC7688  7F 65 DB 78 */	mr r5, r27

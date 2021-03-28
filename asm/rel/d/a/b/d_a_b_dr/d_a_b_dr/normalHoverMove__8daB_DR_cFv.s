@@ -16,10 +16,10 @@ lbl_805BD3E4:
 /* 805BD41C  7C 64 02 14 */	add r3, r4, r0
 /* 805BD420  C0 43 00 04 */	lfs f2, 4(r3)
 /* 805BD424  7C 04 04 2E */	lfsx f0, r4, r0
-/* 805BD428  C0 3E 03 84 */	lfs f1, 0x384(r30)	/* effective address: 805C6FF8 */
+/* 805BD428  C0 3E 03 84 */	lfs f1, 0x384(r30)
 /* 805BD42C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 805BD430  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 805BD434  C0 1E 00 30 */	lfs f0, 0x30(r30)	/* effective address: 805C6CA4 */
+/* 805BD434  C0 1E 00 30 */	lfs f0, 0x30(r30)
 /* 805BD438  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 805BD43C  EC 01 00 B2 */	fmuls f0, f1, f2
 /* 805BD440  D0 01 00 2C */	stfs f0, 0x2c(r1)

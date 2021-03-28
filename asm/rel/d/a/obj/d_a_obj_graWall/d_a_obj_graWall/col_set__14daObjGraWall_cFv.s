@@ -10,14 +10,14 @@ lbl_80C10ED4:
 /* 80C10EF4  38 7F 06 C8 */	addi r3, r31, 0x6c8
 /* 80C10EF8  3C 80 80 C1 */	lis r4, l_DATA@ha
 /* 80C10EFC  38 84 0F B0 */	addi r4, r4, l_DATA@l
-/* 80C10F00  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80C10FB4 */
+/* 80C10F00  C0 24 00 04 */	lfs f1, 4(r4)
 /* 80C10F04  4B 65 E2 F4 */	b SetH__8cM3dGCylFf
 /* 80C10F08  38 7F 06 C8 */	addi r3, r31, 0x6c8
 /* 80C10F0C  3C 80 80 C1 */	lis r4, l_DATA@ha
 /* 80C10F10  C0 24 0F B0 */	lfs f1, l_DATA@l(r4)
 /* 80C10F14  4B 65 E2 EC */	b SetR__8cM3dGCylFf
-/* 80C10F18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C10F1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C10F18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C10F1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C10F20  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C10F24  38 9F 05 A4 */	addi r4, r31, 0x5a4
 /* 80C10F28  4B 65 3C 80 */	b Set__4cCcSFP8cCcD_Obj

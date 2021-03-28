@@ -6,15 +6,15 @@ lbl_804986B8:
 /* 804986C8  4B EC 9B 14 */	b _savegpr_29
 /* 804986CC  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 804986D0  3B E4 CA 54 */	addi r31, r4, g_env_light@l
-/* 804986D4  A9 7F 10 CC */	lha r11, 0x10cc(r31)	/* effective address: 8042DB20 */
-/* 804986D8  A9 5F 10 CA */	lha r10, 0x10ca(r31)	/* effective address: 8042DB1E */
-/* 804986DC  A9 3F 10 C8 */	lha r9, 0x10c8(r31)	/* effective address: 8042DB1C */
-/* 804986E0  A9 1F 10 C4 */	lha r8, 0x10c4(r31)	/* effective address: 8042DB18 */
-/* 804986E4  A8 FF 10 C2 */	lha r7, 0x10c2(r31)	/* effective address: 8042DB16 */
-/* 804986E8  A8 DF 10 C0 */	lha r6, 0x10c0(r31)	/* effective address: 8042DB14 */
-/* 804986EC  A8 BF 10 E4 */	lha r5, 0x10e4(r31)	/* effective address: 8042DB38 */
-/* 804986F0  A8 9F 10 E0 */	lha r4, 0x10e0(r31)	/* effective address: 8042DB34 */
-/* 804986F4  A8 1F 10 E2 */	lha r0, 0x10e2(r31)	/* effective address: 8042DB36 */
+/* 804986D4  A9 7F 10 CC */	lha r11, 0x10cc(r31)
+/* 804986D8  A9 5F 10 CA */	lha r10, 0x10ca(r31)
+/* 804986DC  A9 3F 10 C8 */	lha r9, 0x10c8(r31)
+/* 804986E0  A9 1F 10 C4 */	lha r8, 0x10c4(r31)
+/* 804986E4  A8 FF 10 C2 */	lha r7, 0x10c2(r31)
+/* 804986E8  A8 DF 10 C0 */	lha r6, 0x10c0(r31)
+/* 804986EC  A8 BF 10 E4 */	lha r5, 0x10e4(r31)
+/* 804986F0  A8 9F 10 E0 */	lha r4, 0x10e0(r31)
+/* 804986F4  A8 1F 10 E2 */	lha r0, 0x10e2(r31)
 /* 804986F8  7C 00 2A 14 */	add r0, r0, r5
 /* 804986FC  7C 00 32 14 */	add r0, r0, r6
 /* 80498700  7C 00 3A 14 */	add r0, r0, r7
@@ -81,13 +81,13 @@ lbl_804987B4:
 /* 804987EC  4E 80 04 21 */	bctrl 
 /* 804987F0  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 804987F4  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 804987F8  A8 03 10 E8 */	lha r0, 0x10e8(r3)	/* effective address: 8042DB3C */
+/* 804987F8  A8 03 10 E8 */	lha r0, 0x10e8(r3)
 /* 804987FC  B0 01 00 08 */	sth r0, 8(r1)
-/* 80498800  A8 03 10 EA */	lha r0, 0x10ea(r3)	/* effective address: 8042DB3E */
+/* 80498800  A8 03 10 EA */	lha r0, 0x10ea(r3)
 /* 80498804  B0 01 00 0A */	sth r0, 0xa(r1)
-/* 80498808  A8 03 10 EC */	lha r0, 0x10ec(r3)	/* effective address: 8042DB40 */
+/* 80498808  A8 03 10 EC */	lha r0, 0x10ec(r3)
 /* 8049880C  B0 01 00 0C */	sth r0, 0xc(r1)
-/* 80498810  A8 03 10 EE */	lha r0, 0x10ee(r3)	/* effective address: 8042DB42 */
+/* 80498810  A8 03 10 EE */	lha r0, 0x10ee(r3)
 /* 80498814  B0 01 00 0E */	sth r0, 0xe(r1)
 /* 80498818  80 7D 00 2C */	lwz r3, 0x2c(r29)
 /* 8049881C  38 80 00 00 */	li r4, 0

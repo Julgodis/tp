@@ -32,22 +32,23 @@ struct dStage_roomControl_c {
 // Forward References:
 // 
 
-static void daVrbox_Draw(vrbox_class*); // 2
+void daVrbox_Draw(vrbox_class*); // 2
 static void daVrbox_color_set(vrbox_class*); // 2
-static bool daVrbox_Execute(vrbox_class*); // 2
-static bool daVrbox_IsDelete(vrbox_class*); // 2
-static bool daVrbox_Delete(vrbox_class*); // 2
+bool daVrbox_Execute(vrbox_class*); // 2
+bool daVrbox_IsDelete(vrbox_class*); // 2
+bool daVrbox_Delete(vrbox_class*); // 2
 static void daVrbox_solidHeapCB(fopAc_ac_c*); // 2
-static void daVrbox_Create(fopAc_ac_c*); // 2
+void daVrbox_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daVrbox_Draw__FP11vrbox_class(); // 1
+extern "C" void daVrbox_Draw__FP11vrbox_class(); // 1
 extern "C" static void daVrbox_color_set__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_Execute__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_IsDelete__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_Delete__FP11vrbox_class(); // 1
+extern "C" bool daVrbox_Execute__FP11vrbox_class(); // 1
+extern "C" bool daVrbox_IsDelete__FP11vrbox_class(); // 1
+extern "C" bool daVrbox_Delete__FP11vrbox_class(); // 1
 extern "C" static void daVrbox_solidHeapCB__FP10fopAc_ac_c(); // 1
-extern "C" static void daVrbox_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daVrbox_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daVrbox_Method[8];
 extern "C" extern void* g_profile_VRBOX[12];
 
 // 
@@ -73,21 +74,10 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040BF04[44];
-SECTION_BSS extern u8 data_8040C124[4];
-SECTION_BSS extern u8 data_8040C128[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-extern "C" extern u8 data_8040C370[81040];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042DD28[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 struct_80450D64[4];
 
 // 
@@ -103,11 +93,11 @@ SECTION_RODATA static u8 const lit_3695[4] = {
 /* 80498994-80498998 0004+00 s=1 e=0 z=0  None .rodata    @3696                                                        */
 SECTION_RODATA static u32 const lit_3696 = 0x3DB851EC;
 
-/* 80498518-804986B8 01A0+00 s=1 e=0 z=0  None .text      daVrbox_Draw__FP11vrbox_class                                */
+/* 80498518-804986B8 01A0+00 s=0 e=0 z=0  None .text      daVrbox_Draw__FP11vrbox_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daVrbox_Draw(vrbox_class* param_0) {
+asm void daVrbox_Draw(vrbox_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Draw__FP11vrbox_class.s"
 }
@@ -125,20 +115,20 @@ asm static void daVrbox_color_set(vrbox_class* param_0) {
 #pragma pop
 
 
-/* 80498850-80498858 0008+00 s=1 e=0 z=0  None .text      daVrbox_Execute__FP11vrbox_class                             */
-static bool daVrbox_Execute(vrbox_class* param_0) {
+/* 80498850-80498858 0008+00 s=0 e=0 z=0  None .text      daVrbox_Execute__FP11vrbox_class                             */
+bool daVrbox_Execute(vrbox_class* param_0) {
 	return true;
 }
 
 
-/* 80498858-80498860 0008+00 s=1 e=0 z=0  None .text      daVrbox_IsDelete__FP11vrbox_class                            */
-static bool daVrbox_IsDelete(vrbox_class* param_0) {
+/* 80498858-80498860 0008+00 s=0 e=0 z=0  None .text      daVrbox_IsDelete__FP11vrbox_class                            */
+bool daVrbox_IsDelete(vrbox_class* param_0) {
 	return true;
 }
 
 
-/* 80498860-80498868 0008+00 s=1 e=0 z=0  None .text      daVrbox_Delete__FP11vrbox_class                              */
-static bool daVrbox_Delete(vrbox_class* param_0) {
+/* 80498860-80498868 0008+00 s=0 e=0 z=0  None .text      daVrbox_Delete__FP11vrbox_class                              */
+bool daVrbox_Delete(vrbox_class* param_0) {
 	return true;
 }
 
@@ -162,11 +152,11 @@ asm static void daVrbox_solidHeapCB(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 804988DC-80498988 00AC+00 s=1 e=0 z=0  None .text      daVrbox_Create__FP10fopAc_ac_c                               */
+/* 804988DC-80498988 00AC+00 s=0 e=0 z=0  None .text      daVrbox_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daVrbox_Create(fopAc_ac_c* param_0) {
+asm void daVrbox_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox/d_a_vrbox/daVrbox_Create__FP10fopAc_ac_c.s"
 }
@@ -174,31 +164,31 @@ asm static void daVrbox_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804989A8-804989C8 0020+00 s=1 e=0 z=0  None .data      l_daVrbox_Method                                             */
-SECTION_DATA static void* l_daVrbox_Method[8] = {
-	/* 0    */ (void*)daVrbox_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daVrbox_Delete__FP11vrbox_class,
-	/* 2    */ (void*)daVrbox_Execute__FP11vrbox_class,
-	/* 3    */ (void*)daVrbox_IsDelete__FP11vrbox_class,
-	/* 4    */ (void*)daVrbox_Draw__FP11vrbox_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804989A8-804989C8 0020+00 s=0 e=0 z=0  None .data      l_daVrbox_Method                                             */
+SECTION_DATA void* l_daVrbox_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804989C8-804989F8 0030+00 s=0 e=0 z=1  None .data      g_profile_VRBOX                                              */
+/* 804989C8-804989F8 0030+00 s=0 e=0 z=0  None .data      g_profile_VRBOX                                              */
 SECTION_DATA void* g_profile_VRBOX[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02DA0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000578,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00070000,
-	/* 9    */ (void*)&l_daVrbox_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02DA0000,
+	(void*)NULL,
+	(void*)0x00000578,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00070000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)NULL,
 };
 

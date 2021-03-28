@@ -7,7 +7,7 @@ lbl_80945C8C:
 /* 80945CA0  40 82 00 24 */	bne lbl_80945CC4
 /* 80945CA4  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80945CA8  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80945CAC  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80945CAC  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80945CB0  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80945CB4  28 03 00 00 */	cmplwi r3, 0
 /* 80945CB8  41 82 00 0C */	beq lbl_80945CC4

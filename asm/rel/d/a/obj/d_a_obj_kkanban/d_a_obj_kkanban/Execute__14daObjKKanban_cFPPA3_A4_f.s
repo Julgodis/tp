@@ -20,7 +20,7 @@ lbl_80C46AE4:
 /* 80C46B2C  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80C46B30  7C 64 02 14 */	add r3, r4, r0
 /* 80C46B34  C0 43 00 04 */	lfs f2, 4(r3)
-/* 80C46B38  C0 3F 00 10 */	lfs f1, 0x10(r31)	/* effective address: 80C46F64 */
+/* 80C46B38  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80C46B3C  C0 1D 07 4C */	lfs f0, 0x74c(r29)
 /* 80C46B40  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C46B44  EC 00 00 B2 */	fmuls f0, f0, f2
@@ -34,7 +34,7 @@ lbl_80C46AE4:
 /* 80C46B64  7C 03 01 D6 */	mullw r0, r3, r0
 /* 80C46B68  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80C46B6C  7C 44 04 2E */	lfsx f2, r4, r0
-/* 80C46B70  C0 3F 00 0C */	lfs f1, 0xc(r31)	/* effective address: 80C46F60 */
+/* 80C46B70  C0 3F 00 0C */	lfs f1, 0xc(r31)
 /* 80C46B74  C0 1D 07 4C */	lfs f0, 0x74c(r29)
 /* 80C46B78  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C46B7C  EC 00 00 B2 */	fmuls f0, f0, f2
@@ -43,8 +43,8 @@ lbl_80C46AE4:
 /* 80C46B88  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C46B8C  B0 1D 07 48 */	sth r0, 0x748(r29)
 /* 80C46B90  38 7D 07 4C */	addi r3, r29, 0x74c
-/* 80C46B94  C0 3F 00 28 */	lfs f1, 0x28(r31)	/* effective address: 80C46F7C */
-/* 80C46B98  C0 5F 00 2C */	lfs f2, 0x2c(r31)	/* effective address: 80C46F80 */
+/* 80C46B94  C0 3F 00 28 */	lfs f1, 0x28(r31)
+/* 80C46B98  C0 5F 00 2C */	lfs f2, 0x2c(r31)
 /* 80C46B9C  4B 62 8E E4 */	b cLib_addCalc0__FPfff
 /* 80C46BA0  38 7D 07 4A */	addi r3, r29, 0x74a
 /* 80C46BA4  38 80 00 00 */	li r4, 0
@@ -66,8 +66,8 @@ lbl_80C46BD4:
 /* 80C46BE0  4B FF FB C5 */	bl setBaseMtx__14daObjKKanban_cFv
 /* 80C46BE4  7F A3 EB 78 */	mr r3, r29
 /* 80C46BE8  4B FF FD 41 */	bl setTG__14daObjKKanban_cFv
-/* 80C46BEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C46BF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C46BEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C46BF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C46BF4  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C46BF8  38 9D 05 E8 */	addi r4, r29, 0x5e8
 /* 80C46BFC  4B 61 DF AC */	b Set__4cCcSFP8cCcD_Obj

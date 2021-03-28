@@ -7,10 +7,10 @@ lbl_808089DC:
 /* 808089F0  7C 7E 1B 78 */	mr r30, r3
 /* 808089F4  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 808089F8  3B E3 59 94 */	addi r31, r3, lit_3925@l
-/* 808089FC  C0 3F 00 58 */	lfs f1, 0x58(r31)	/* effective address: 808159EC */
+/* 808089FC  C0 3F 00 58 */	lfs f1, 0x58(r31)
 /* 80808A00  C0 1E 06 8C */	lfs f0, 0x68c(r30)
 /* 80808A04  EC 21 00 32 */	fmuls f1, f1, f0
-/* 80808A08  C0 1F 00 5C */	lfs f0, 0x5c(r31)	/* effective address: 808159F0 */
+/* 80808A08  C0 1F 00 5C */	lfs f0, 0x5c(r31)
 /* 80808A0C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80808A10  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80808A14  D0 01 00 30 */	stfs f0, 0x30(r1)
@@ -39,9 +39,9 @@ lbl_80808A54:
 /* 80808A68  D0 41 00 28 */	stfs f2, 0x28(r1)
 /* 80808A6C  7F C3 F3 78 */	mr r3, r30
 /* 80808A70  4B FF FE 15 */	bl setElecEffect1__8daE_YM_cFv
-/* 80808A74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80808A78  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80808A7C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80808A74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80808A78  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80808A7C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80808A80  38 00 00 FF */	li r0, 0xff
 /* 80808A84  90 01 00 08 */	stw r0, 8(r1)
 /* 80808A88  38 80 00 00 */	li r4, 0

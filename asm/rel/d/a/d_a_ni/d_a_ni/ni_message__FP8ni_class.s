@@ -33,9 +33,9 @@ lbl_8094E30C:
 /* 8094E324  38 A0 00 02 */	li r5, 2
 /* 8094E328  38 C0 10 00 */	li r6, 0x1000
 /* 8094E32C  4B 92 22 DC */	b cLib_addCalcAngleS2__FPssss
-/* 8094E330  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094E334  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8094E338  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8094E330  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094E334  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8094E338  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8094E33C  28 00 00 00 */	cmplwi r0, 0
 /* 8094E340  40 82 00 20 */	bne lbl_8094E360
 /* 8094E344  C0 3E 05 E0 */	lfs f1, 0x5e0(r30)

@@ -28,8 +28,8 @@ lbl_80497C30:
 /* 80497C30  3C 04 00 01 */	addis r0, r4, 1
 /* 80497C34  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80497C38  41 82 00 14 */	beq lbl_80497C4C
-/* 80497C3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80497C40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80497C3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80497C40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80497C44  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80497C48  4B BA BA A4 */	b setPtI_Id__14dEvt_control_cFUi
 lbl_80497C4C:

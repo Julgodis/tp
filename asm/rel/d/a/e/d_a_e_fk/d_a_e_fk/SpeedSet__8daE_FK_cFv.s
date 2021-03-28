@@ -11,8 +11,8 @@ lbl_806B9B2C:
 /* 806B9B50  B0 1E 05 D2 */	sth r0, 0x5d2(r30)
 /* 806B9B54  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806B9B58  C0 3E 05 CC */	lfs f1, 0x5cc(r30)
-/* 806B9B5C  C0 5F 00 E0 */	lfs f2, 0xe0(r31)	/* effective address: 806BB7B0 */
-/* 806B9B60  C0 7F 00 E4 */	lfs f3, 0xe4(r31)	/* effective address: 806BB7B4 */
+/* 806B9B5C  C0 5F 00 E0 */	lfs f2, 0xe0(r31)
+/* 806B9B60  C0 7F 00 E4 */	lfs f3, 0xe4(r31)
 /* 806B9B64  4B BB 5E D8 */	b cLib_addCalc2__FPffff
 /* 806B9B68  38 7E 04 DE */	addi r3, r30, 0x4de
 /* 806B9B6C  A8 9E 05 D0 */	lha r4, 0x5d0(r30)

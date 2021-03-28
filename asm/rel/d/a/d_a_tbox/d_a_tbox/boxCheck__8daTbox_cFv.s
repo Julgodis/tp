@@ -9,9 +9,9 @@ lbl_80491F68:
 /* 80491F84  7C 7C 1B 78 */	mr r28, r3
 /* 80491F88  3C 60 80 49 */	lis r3, l_cull_size_box@ha
 /* 80491F8C  3B C3 61 D4 */	addi r30, r3, l_cull_size_box@l
-/* 80491F90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80491F94  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80491F98  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80491F90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80491F94  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80491F98  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 80491F9C  38 7F 4E 00 */	addi r3, r31, 0x4e00
 /* 80491FA0  3C 80 80 49 */	lis r4, struct_80496334+0x0@ha
 /* 80491FA4  38 84 63 34 */	addi r4, r4, struct_80496334+0x0@l

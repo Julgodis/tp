@@ -54,11 +54,11 @@ lbl_80967C7C:
 /* 80967D4C  90 7E 0E AC */	stw r3, 0xeac(r30)
 /* 80967D50  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80967D54  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80967D58  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80967D5C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80967D58  80 64 00 00 */	lwz r3, 0(r4)
+/* 80967D5C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80967D60  90 7E 0E 78 */	stw r3, 0xe78(r30)
 /* 80967D64  90 1E 0E 7C */	stw r0, 0xe7c(r30)
-/* 80967D68  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80967D68  80 04 00 08 */	lwz r0, 8(r4)
 /* 80967D6C  90 1E 0E 80 */	stw r0, 0xe80(r30)
 /* 80967D70  7F C3 F3 78 */	mr r3, r30
 /* 80967D74  4B 82 F5 C4 */	b initShopSystem__13dShopSystem_cFv

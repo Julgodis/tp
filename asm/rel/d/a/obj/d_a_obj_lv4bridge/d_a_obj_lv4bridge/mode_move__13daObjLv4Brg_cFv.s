@@ -12,14 +12,14 @@ lbl_80C62CFC:
 /* 80C62D24  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C62D28  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C62D2C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C62D30  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C62D30  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C62D34  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C62D38  38 BD 05 C4 */	addi r5, r29, 0x5c4
 /* 80C62D3C  38 C0 00 00 */	li r6, 0
 /* 80C62D40  38 E0 00 00 */	li r7, 0
-/* 80C62D44  C0 3F 00 10 */	lfs f1, 0x10(r31)	/* effective address: 80C63180 */
+/* 80C62D44  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80C62D48  FC 40 08 90 */	fmr f2, f1
-/* 80C62D4C  C0 7F 00 14 */	lfs f3, 0x14(r31)	/* effective address: 80C63184 */
+/* 80C62D4C  C0 7F 00 14 */	lfs f3, 0x14(r31)
 /* 80C62D50  FC 80 18 90 */	fmr f4, f3
 /* 80C62D54  39 00 00 00 */	li r8, 0
 /* 80C62D58  4B 64 97 B4 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
@@ -38,7 +38,7 @@ lbl_80C62CFC:
 /* 80C62D8C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C62D90  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C62D94  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C62D98  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C62D98  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C62D9C  38 81 00 08 */	addi r4, r1, 8
 /* 80C62DA0  38 BD 05 C4 */	addi r5, r29, 0x5c4
 /* 80C62DA4  38 C0 00 00 */	li r6, 0
@@ -49,8 +49,8 @@ lbl_80C62CFC:
 /* 80C62DB8  FC 80 18 90 */	fmr f4, f3
 /* 80C62DBC  39 00 00 00 */	li r8, 0
 /* 80C62DC0  4B 64 8B C4 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 80C62DC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C62DC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C62DC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C62DC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C62DCC  3B C3 5B D4 */	addi r30, r3, 0x5bd4
 /* 80C62DD0  7F C3 F3 78 */	mr r3, r30
 /* 80C62DD4  38 80 00 1F */	li r4, 0x1f

@@ -14,15 +14,15 @@ lbl_80651B1C:
 /* 80651B4C  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80651B50  D0 1E 05 40 */	stfs f0, 0x540(r30)
 /* 80651B54  C0 3E 05 3C */	lfs f1, 0x53c(r30)
-/* 80651B58  C0 1B 00 80 */	lfs f0, 0x80(r27)	/* effective address: 806527BC */
+/* 80651B58  C0 1B 00 80 */	lfs f0, 0x80(r27)
 /* 80651B5C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80651B60  D0 1E 05 3C */	stfs f0, 0x53c(r30)
 /* 80651B64  3B E0 00 00 */	li r31, 0
 /* 80651B68  3B A0 00 00 */	li r29, 0
 /* 80651B6C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80651B70  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80651B74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80651B78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80651B74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80651B78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80651B7C  3B 43 23 3C */	addi r26, r3, 0x233c
 lbl_80651B80:
 /* 80651B80  80 7E 05 B4 */	lwz r3, 0x5b4(r30)

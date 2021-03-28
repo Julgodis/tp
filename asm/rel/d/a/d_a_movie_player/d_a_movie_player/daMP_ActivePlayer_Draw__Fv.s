@@ -7,14 +7,14 @@ lbl_80878994:
 /* 808789A8  4B FF FF 15 */	bl getRenderMode__8JUTVideoCFv
 /* 808789AC  3C 80 80 94 */	lis r4, daMP_DrawPosX@ha
 /* 808789B0  38 84 5A FC */	addi r4, r4, daMP_DrawPosX@l
-/* 808789B4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80945AFC */
+/* 808789B4  80 84 00 00 */	lwz r4, 0(r4)
 /* 808789B8  3C A0 80 94 */	lis r5, daMP_DrawPosY@ha
 /* 808789BC  38 A5 5B 00 */	addi r5, r5, daMP_DrawPosY@l
-/* 808789C0  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80945B00 */
+/* 808789C0  80 A5 00 00 */	lwz r5, 0(r5)
 /* 808789C4  3C C0 80 94 */	lis r6, daMP_videoInfo@ha
 /* 808789C8  38 E6 5A E0 */	addi r7, r6, daMP_videoInfo@l
-/* 808789CC  80 C7 00 00 */	lwz r6, 0(r7)	/* effective address: 80945AE0 */
-/* 808789D0  80 E7 00 04 */	lwz r7, 4(r7)	/* effective address: 80945AE4 */
+/* 808789CC  80 C7 00 00 */	lwz r6, 0(r7)
+/* 808789D0  80 E7 00 04 */	lwz r7, 4(r7)
 /* 808789D4  4B FF FA 65 */	bl daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl
 /* 808789D8  7C 7F 1B 78 */	mr r31, r3
 /* 808789DC  4B FF F8 C5 */	bl daMP_THPPlayerDrawDone__Fv

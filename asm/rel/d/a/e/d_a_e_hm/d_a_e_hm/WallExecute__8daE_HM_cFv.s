@@ -29,8 +29,8 @@ lbl_806E1A58:
 /* 806E1A60  90 1F 09 28 */	stw r0, 0x928(r31)
 /* 806E1A64  4B FF F9 0D */	bl W_DeathMotion__8daE_HM_cFv
 /* 806E1A68  38 7F 07 14 */	addi r3, r31, 0x714
-/* 806E1A6C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806E1A70  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806E1A6C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806E1A70  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806E1A74  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806E1A78  4B 99 50 34 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806E1A7C  48 00 00 10 */	b lbl_806E1A8C

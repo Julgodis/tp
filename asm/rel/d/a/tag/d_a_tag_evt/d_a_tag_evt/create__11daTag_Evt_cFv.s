@@ -25,7 +25,7 @@ lbl_8048B96C:
 /* 8048B96C  38 7E 05 C4 */	addi r3, r30, 0x5c4
 /* 8048B970  3C 80 80 49 */	lis r4, l_resFileName@ha
 /* 8048B974  38 84 C4 04 */	addi r4, r4, l_resFileName@l
-/* 8048B978  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8048C404 */
+/* 8048B978  80 84 00 00 */	lwz r4, 0(r4)
 /* 8048B97C  4B BA 15 40 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8048B980  7C 7F 1B 78 */	mr r31, r3
 /* 8048B984  2C 1F 00 04 */	cmpwi r31, 4

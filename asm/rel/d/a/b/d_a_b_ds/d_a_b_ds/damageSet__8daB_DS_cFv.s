@@ -19,8 +19,8 @@ lbl_805D0398:
 /* 805D03B4  C0 03 CA 5C */	lfs f0, lit_3934@l(r3)
 /* 805D03B8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805D03BC  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 805D03C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D03C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805D03C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D03C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805D03C8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805D03CC  38 80 00 03 */	li r4, 3
 /* 805D03D0  38 A0 00 4F */	li r5, 0x4f

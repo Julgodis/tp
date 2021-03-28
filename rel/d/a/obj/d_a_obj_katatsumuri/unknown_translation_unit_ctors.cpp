@@ -19,7 +19,6 @@ extern void* const data_80C3C660[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_katatsumuri_cpp(); // 1
 
 // 
 // Declarations:

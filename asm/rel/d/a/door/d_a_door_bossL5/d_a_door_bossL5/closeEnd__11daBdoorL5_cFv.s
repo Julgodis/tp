@@ -9,8 +9,8 @@ lbl_80671820:
 /* 8067183C  C0 03 25 0C */	lfs f0, lit_3757@l(r3)
 /* 80671840  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80671844  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80671848  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067184C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80671848  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067184C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80671850  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80671854  38 80 00 04 */	li r4, 4
 /* 80671858  38 A0 00 1F */	li r5, 0x1f

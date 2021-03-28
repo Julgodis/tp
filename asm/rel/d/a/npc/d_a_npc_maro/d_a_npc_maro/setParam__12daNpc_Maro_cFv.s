@@ -97,10 +97,10 @@ lbl_8055CA00:
 /* 8055CA0C  3B 60 00 05 */	li r27, 5
 /* 8055CA10  3B 20 00 05 */	li r25, 5
 lbl_8055CA14:
-/* 8055CA14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055CA18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8055CA1C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8055CA20  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8055CA14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055CA18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8055CA1C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8055CA20  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8055CA24  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8055CA28  7D 89 03 A6 */	mtctr r12
 /* 8055CA2C  4E 80 04 21 */	bctrl 

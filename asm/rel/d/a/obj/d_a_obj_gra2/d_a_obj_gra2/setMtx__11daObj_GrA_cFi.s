@@ -10,7 +10,7 @@ lbl_80C01FE8:
 /* 80C02008  3B C3 08 A0 */	addi r30, r3, lit_1109@l
 /* 80C0200C  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C02010  3B E3 FA 7C */	addi r31, r3, m__17daObj_GrA_Param_c@l
-/* 80C02014  88 1E 00 74 */	lbz r0, 0x74(r30)	/* effective address: 80C10914 */
+/* 80C02014  88 1E 00 74 */	lbz r0, 0x74(r30)
 /* 80C02018  7C 00 07 75 */	extsb. r0, r0
 /* 80C0201C  40 82 03 84 */	bne lbl_80C023A0
 /* 80C02020  C0 1F 01 1C */	lfs f0, 0x11c(r31)
@@ -298,11 +298,11 @@ lbl_80C023D0:
 /* 80C0247C  4B 40 A9 58 */	b transM__14mDoMtx_stack_cFRC4cXyz
 /* 80C02480  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C02484  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C02488  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C02488  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80C0248C  D0 21 00 D4 */	stfs f1, 0xd4(r1)
-/* 80C02490  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C02490  C0 43 00 1C */	lfs f2, 0x1c(r3)
 /* 80C02494  D0 41 00 D8 */	stfs f2, 0xd8(r1)
-/* 80C02498  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C02498  C0 63 00 2C */	lfs f3, 0x2c(r3)
 /* 80C0249C  D0 61 00 DC */	stfs f3, 0xdc(r1)
 /* 80C024A0  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80C024A4  EC 20 08 2A */	fadds f1, f0, f1
@@ -351,11 +351,11 @@ lbl_80C024F4:
 /* 80C0254C  4B 40 A8 50 */	b transM__14mDoMtx_stack_cFfff
 /* 80C02550  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C02554  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C02558  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C02558  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80C0255C  D0 21 00 BC */	stfs f1, 0xbc(r1)
-/* 80C02560  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C02560  C0 43 00 1C */	lfs f2, 0x1c(r3)
 /* 80C02564  D0 41 00 C0 */	stfs f2, 0xc0(r1)
-/* 80C02568  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C02568  C0 63 00 2C */	lfs f3, 0x2c(r3)
 /* 80C0256C  D0 61 00 C4 */	stfs f3, 0xc4(r1)
 /* 80C02570  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80C02574  EC 20 08 2A */	fadds f1, f0, f1

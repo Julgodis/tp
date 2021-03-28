@@ -9,8 +9,8 @@ lbl_80CCC20C:
 /* 80CCC228  C0 03 CC 4C */	lfs f0, lit_3987@l(r3)
 /* 80CCC22C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80CCC230  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80CCC234  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCC238  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCC234  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC238  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCC23C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CCC240  38 80 00 03 */	li r4, 3
 /* 80CCC244  38 A0 00 1F */	li r5, 0x1f

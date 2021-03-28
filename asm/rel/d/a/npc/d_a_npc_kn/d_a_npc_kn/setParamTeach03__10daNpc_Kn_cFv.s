@@ -7,10 +7,10 @@ lbl_80A2BFB0:
 /* 80A2BFC4  7C 7D 1B 78 */	mr r29, r3
 /* 80A2BFC8  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A2BFCC  38 83 09 70 */	addi r4, r3, m__16daNpc_Kn_Param_c@l
-/* 80A2BFD0  AB C4 00 48 */	lha r30, 0x48(r4)	/* effective address: 80A409B8 */
-/* 80A2BFD4  AB E4 00 4A */	lha r31, 0x4a(r4)	/* effective address: 80A409BA */
-/* 80A2BFD8  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 80A409BC */
-/* 80A2BFDC  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 80A409BE */
+/* 80A2BFD0  AB C4 00 48 */	lha r30, 0x48(r4)
+/* 80A2BFD4  AB E4 00 4A */	lha r31, 0x4a(r4)
+/* 80A2BFD8  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 80A2BFDC  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 80A2BFE0  4B 72 0A 38 */	b daNpcT_getDistTableIdx__Fii
 /* 80A2BFE4  98 7D 05 44 */	stb r3, 0x544(r29)
 /* 80A2BFE8  38 00 00 E4 */	li r0, 0xe4
@@ -27,7 +27,7 @@ lbl_80A2BFB0:
 /* 80A2C014  4B 64 9F 2C */	b SetWallR__12dBgS_AcchCirFf
 /* 80A2C018  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A2C01C  38 63 09 70 */	addi r3, r3, m__16daNpc_Kn_Param_c@l
-/* 80A2C020  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A40988 */
+/* 80A2C020  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A2C024  D0 1D 09 14 */	stfs f0, 0x914(r29)
 /* 80A2C028  38 60 00 04 */	li r3, 4
 /* 80A2C02C  39 61 00 20 */	addi r11, r1, 0x20

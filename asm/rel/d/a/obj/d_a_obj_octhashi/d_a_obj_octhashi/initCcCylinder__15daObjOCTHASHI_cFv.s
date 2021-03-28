@@ -15,7 +15,7 @@ lbl_80CA4BB8:
 /* 80CA4BEC  3B E3 64 80 */	addi r31, r3, data_80CA6480@l
 /* 80CA4BF0  3C 60 80 CA */	lis r3, data_80CA6680@ha
 /* 80CA4BF4  38 83 66 80 */	addi r4, r3, data_80CA6680@l
-/* 80CA4BF8  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80CA6680 */
+/* 80CA4BF8  88 04 00 00 */	lbz r0, 0(r4)
 /* 80CA4BFC  7C 00 07 75 */	extsb. r0, r0
 /* 80CA4C00  40 82 00 4C */	bne lbl_80CA4C4C
 /* 80CA4C04  C0 5F 00 40 */	lfs f2, 0x40(r31)
@@ -33,7 +33,7 @@ lbl_80CA4BB8:
 /* 80CA4C34  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80CA4C38  3C 60 80 CA */	lis r3, data_80CA6588@ha
 /* 80CA4C3C  38 63 65 88 */	addi r3, r3, data_80CA6588@l
-/* 80CA4C40  D0 03 00 40 */	stfs f0, 0x40(r3)	/* effective address: 80CA65C8 */
+/* 80CA4C40  D0 03 00 40 */	stfs f0, 0x40(r3)
 /* 80CA4C44  38 00 00 01 */	li r0, 1
 /* 80CA4C48  98 04 00 00 */	stb r0, 0(r4)
 lbl_80CA4C4C:

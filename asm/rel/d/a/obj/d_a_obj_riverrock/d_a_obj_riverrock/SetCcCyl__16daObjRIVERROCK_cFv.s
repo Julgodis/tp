@@ -13,8 +13,8 @@ lbl_80CBC754:
 /* 80CBC780  C0 1F 05 C4 */	lfs f0, 0x5c4(r31)
 /* 80CBC784  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80CBC788  4B 5B 2A 78 */	b SetR__8cM3dGCylFf
-/* 80CBC78C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CBC790  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CBC78C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CBC790  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CBC794  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80CBC798  38 9F 06 5C */	addi r4, r31, 0x65c
 /* 80CBC79C  4B 5A 84 0C */	b Set__4cCcSFP8cCcD_Obj

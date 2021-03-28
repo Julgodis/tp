@@ -99,14 +99,14 @@ lbl_806B1E98:
 /* 806B1EBC  41 82 00 1C */	beq lbl_806B1ED8
 /* 806B1EC0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806B1EC4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806B1EC8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806B1EC8  80 63 00 00 */	lwz r3, 0(r3)
 /* 806B1ECC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 806B1ED0  38 80 00 03 */	li r4, 3
 /* 806B1ED4  4B BF FF 20 */	b changeSubBgmStatus__8Z2SeqMgrFl
 lbl_806B1ED8:
 /* 806B1ED8  3C 60 80 6B */	lis r3, l_HIO@ha
 /* 806B1EDC  38 63 62 AC */	addi r3, r3, l_HIO@l
-/* 806B1EE0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 806B62C8 */
+/* 806B1EE0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806B1EE4  FC 00 00 1E */	fctiwz f0, f0
 /* 806B1EE8  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 806B1EEC  80 01 00 1C */	lwz r0, 0x1c(r1)

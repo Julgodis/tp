@@ -6,7 +6,7 @@ lbl_809AE5CC:
 /* 809AE5DC  38 A0 00 00 */	li r5, 0
 /* 809AE5E0  3C C0 80 9B */	lis r6, m__18daNpcDrSol_Param_c@ha
 /* 809AE5E4  38 C6 F9 A4 */	addi r6, r6, m__18daNpcDrSol_Param_c@l
-/* 809AE5E8  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 809AF9B0 */
+/* 809AE5E8  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 809AE5EC  38 C0 00 00 */	li r6, 0
 /* 809AE5F0  38 E0 00 00 */	li r7, 0
 /* 809AE5F4  4B 7A 3C B8 */	b draw__8daNpcF_cFiifP11_GXColorS10i

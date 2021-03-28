@@ -16,12 +16,12 @@ lbl_8087445C:
 /* 80874494  38 C5 90 34 */	addi r6, r5, __THPJpegNaturalOrder@l
 /* 80874498  3C A0 80 88 */	lis r5, lit_1109@ha
 /* 8087449C  38 A5 95 A0 */	addi r5, r5, lit_1109@l
-/* 808744A0  C3 C6 00 98 */	lfs f30, 0x98(r6)	/* effective address: 808790CC */
-/* 808744A4  C3 A6 00 9C */	lfs f29, 0x9c(r6)	/* effective address: 808790D0 */
-/* 808744A8  C3 86 00 A0 */	lfs f28, 0xa0(r6)	/* effective address: 808790D4 */
-/* 808744AC  C3 66 00 A4 */	lfs f27, 0xa4(r6)	/* effective address: 808790D8 */
-/* 808744B0  C3 46 00 A8 */	lfs f26, 0xa8(r6)	/* effective address: 808790DC */
-/* 808744B4  80 C5 05 E4 */	lwz r6, 0x5e4(r5)	/* effective address: 80879B84 */
+/* 808744A0  C3 C6 00 98 */	lfs f30, 0x98(r6)
+/* 808744A4  C3 A6 00 9C */	lfs f29, 0x9c(r6)
+/* 808744A8  C3 86 00 A0 */	lfs f28, 0xa0(r6)
+/* 808744AC  C3 66 00 A4 */	lfs f27, 0xa4(r6)
+/* 808744B0  C3 46 00 A8 */	lfs f26, 0xa8(r6)
+/* 808744B4  80 C5 05 E4 */	lwz r6, 0x5e4(r5)
 /* 808744B8  39 45 04 C0 */	addi r10, r5, 0x4c0
 /* 808744BC  39 00 00 08 */	li r8, 8
 /* 808744C0  7D 09 03 A6 */	mtctr r8

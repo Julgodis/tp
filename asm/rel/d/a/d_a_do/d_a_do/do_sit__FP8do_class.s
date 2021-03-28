@@ -9,7 +9,7 @@ lbl_8066A3D0:
 /* 8066A3EC  3B E4 ED E8 */	addi r31, r4, lit_3662@l
 /* 8066A3F0  38 80 00 01 */	li r4, 1
 /* 8066A3F4  98 83 06 16 */	stb r4, 0x616(r3)
-/* 8066A3F8  C0 1F 00 7C */	lfs f0, 0x7c(r31)	/* effective address: 8066EE64 */
+/* 8066A3F8  C0 1F 00 7C */	lfs f0, 0x7c(r31)
 /* 8066A3FC  D0 03 06 48 */	stfs f0, 0x648(r3)
 /* 8066A400  A8 03 05 F6 */	lha r0, 0x5f6(r3)
 /* 8066A404  2C 00 00 02 */	cmpwi r0, 2

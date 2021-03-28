@@ -50,8 +50,8 @@ lbl_80465E48:
 /* 80465E54  38 60 00 00 */	li r3, 0
 /* 80465E58  48 00 00 1C */	b lbl_80465E74
 lbl_80465E5C:
-/* 80465E5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80465E60  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80465E5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80465E60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80465E64  54 05 06 3E */	clrlwi r5, r0, 0x18
 /* 80465E68  4B BC F4 F8 */	b isSwitch__10dSv_info_cCFii
 /* 80465E6C  7C 60 00 34 */	cntlzw r0, r3

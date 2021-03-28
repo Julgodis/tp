@@ -8,12 +8,12 @@ lbl_80BA0084:
 /* 80BA009C  3C 60 80 BA */	lis r3, lit_3695@ha
 /* 80BA00A0  3B E3 11 54 */	addi r31, r3, lit_3695@l
 /* 80BA00A4  A8 9E 04 B8 */	lha r4, 0x4b8(r30)
-/* 80BA00A8  C0 5F 00 18 */	lfs f2, 0x18(r31)	/* effective address: 80BA116C */
+/* 80BA00A8  C0 5F 00 18 */	lfs f2, 0x18(r31)
 /* 80BA00AC  A8 7E 04 CA */	lha r3, 0x4ca(r30)
 /* 80BA00B0  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 80BA00B4  7C 03 00 50 */	subf r0, r3, r0
 /* 80BA00B8  7C 00 07 34 */	extsh r0, r0
-/* 80BA00BC  C8 3F 00 30 */	lfd f1, 0x30(r31)	/* effective address: 80BA1184 */
+/* 80BA00BC  C8 3F 00 30 */	lfd f1, 0x30(r31)
 /* 80BA00C0  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80BA00C4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BA00C8  3C 00 43 30 */	lis r0, 0x4330
@@ -28,13 +28,13 @@ lbl_80BA0084:
 /* 80BA00EC  B0 1E 04 B8 */	sth r0, 0x4b8(r30)
 /* 80BA00F0  3C 60 80 BA */	lis r3, data_80BA135C@ha
 /* 80BA00F4  38 83 13 5C */	addi r4, r3, data_80BA135C@l
-/* 80BA00F8  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80BA135C */
+/* 80BA00F8  88 04 00 00 */	lbz r0, 0(r4)
 /* 80BA00FC  7C 00 07 75 */	extsb. r0, r0
 /* 80BA0100  40 82 00 28 */	bne lbl_80BA0128
 /* 80BA0104  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 80BA0108  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80BA010C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
-/* 80BA0110  C0 03 0C CC */	lfs f0, 0xccc(r3)	/* effective address: 8043A6EC */
+/* 80BA0110  C0 03 0C CC */	lfs f0, 0xccc(r3)
 /* 80BA0114  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80BA0118  3C 60 80 BA */	lis r3, data_80BA1358@ha
 /* 80BA011C  D0 03 13 58 */	stfs f0, data_80BA1358@l(r3)

@@ -13,7 +13,7 @@ lbl_8062BA5C:
 /* 8062BA88  4B 9E 14 BC */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8062BA8C  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 8062BA90  3A 83 F0 2C */	addi r20, r3, l_HIO@l
-/* 8062BA94  C0 34 00 08 */	lfs f1, 8(r20)	/* effective address: 8062F034 */
+/* 8062BA94  C0 34 00 08 */	lfs f1, 8(r20)
 /* 8062BA98  FC 40 08 90 */	fmr f2, f1
 /* 8062BA9C  FC 60 08 90 */	fmr f3, f1
 /* 8062BAA0  4B 9E 13 98 */	b scaleM__14mDoMtx_stack_cFfff

@@ -38,8 +38,8 @@ lbl_8062CDEC:
 /* 8062CDFC  38 63 E8 E8 */	addi r3, r3, stringBase0@l
 /* 8062CE00  38 03 00 05 */	addi r0, r3, 5
 /* 8062CE04  90 1B 0A B4 */	stw r0, 0xab4(r27)
-/* 8062CE08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8062CE0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8062CE08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8062CE0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8062CE10  38 63 09 58 */	addi r3, r3, 0x958
 /* 8062CE14  38 80 00 07 */	li r4, 7
 /* 8062CE18  4B A0 7B 1C */	b isDungeonItem__12dSv_memBit_cCFi
@@ -52,8 +52,8 @@ lbl_8062CE2C:
 /* 8062CE30  38 63 E8 E8 */	addi r3, r3, stringBase0@l
 /* 8062CE34  38 03 00 0B */	addi r0, r3, 0xb
 /* 8062CE38  90 1B 0A B4 */	stw r0, 0xab4(r27)
-/* 8062CE3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8062CE40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8062CE3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8062CE40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8062CE44  88 9B 0A A4 */	lbz r4, 0xaa4(r27)
 /* 8062CE48  88 1B 04 E2 */	lbz r0, 0x4e2(r27)
 /* 8062CE4C  7C 05 07 74 */	extsb r5, r0
@@ -129,7 +129,7 @@ lbl_8062CF34:
 /* 8062CF50  38 00 FF FF */	li r0, -1
 /* 8062CF54  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 8062CF58  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 8062CF5C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8062F030 */
+/* 8062CF5C  98 03 00 04 */	stb r0, 4(r3)
 lbl_8062CF60:
 /* 8062CF60  38 00 00 04 */	li r0, 4
 /* 8062CF64  90 1B 05 5C */	stw r0, 0x55c(r27)
@@ -345,8 +345,8 @@ lbl_8062D290:
 /* 8062D290  3C 60 80 63 */	lis r3, stringBase0@ha
 /* 8062D294  38 63 E8 E8 */	addi r3, r3, stringBase0@l
 /* 8062D298  38 63 00 12 */	addi r3, r3, 0x12
-/* 8062D29C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8062D2A0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8062D29C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8062D2A0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8062D2A4  38 84 4E 00 */	addi r4, r4, 0x4e00
 /* 8062D2A8  4B D3 B6 EC */	b strcmp
 /* 8062D2AC  2C 03 00 00 */	cmpwi r3, 0

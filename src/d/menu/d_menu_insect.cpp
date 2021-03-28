@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -102,10 +102,10 @@ struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -158,10 +158,10 @@ struct CPaneMgrAlpha {
 	/* 80255878 */ void alphaAnime(s16, u8, u8, u8);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -391,37 +391,37 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BD78C-803BD798 000C+00 s=1 e=0 z=0  None .data      @3797                                                        */
 SECTION_DATA static void* lit_3797[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__14dMenu_Insect_cFv,
 };
 
 /* 803BD798-803BD7A4 000C+00 s=1 e=0 z=0  None .data      @3798                                                        */
 SECTION_DATA static void* lit_3798[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_open_init__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_open_init__14dMenu_Insect_cFv,
 };
 
 /* 803BD7A4-803BD7B0 000C+00 s=1 e=0 z=0  None .data      @3799                                                        */
 SECTION_DATA static void* lit_3799[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_move_init__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_move_init__14dMenu_Insect_cFv,
 };
 
 /* 803BD7B0-803BD7BC 000C+00 s=1 e=0 z=0  None .data      @3800                                                        */
 SECTION_DATA static void* lit_3800[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)select_move_init__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)select_move_init__14dMenu_Insect_cFv,
 };
 
 /* 803BD7BC-803BD7C8 000C+00 s=1 e=0 z=0  None .data      @3801                                                        */
 SECTION_DATA static void* lit_3801[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_close_init__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_close_init__14dMenu_Insect_cFv,
 };
 
 /* 803BD7C8-803BD804 003C+00 s=3 e=0 z=0  None .data      map_init_process                                             */
@@ -434,37 +434,37 @@ SECTION_DATA static u8 map_init_process[60] = {
 
 /* 803BD804-803BD810 000C+00 s=1 e=0 z=0  None .data      @3802                                                        */
 SECTION_DATA static void* lit_3802[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_move__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_move__14dMenu_Insect_cFv,
 };
 
 /* 803BD810-803BD81C 000C+00 s=1 e=0 z=0  None .data      @3803                                                        */
 SECTION_DATA static void* lit_3803[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_open_move__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_open_move__14dMenu_Insect_cFv,
 };
 
 /* 803BD81C-803BD828 000C+00 s=1 e=0 z=0  None .data      @3804                                                        */
 SECTION_DATA static void* lit_3804[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_move_move__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_move_move__14dMenu_Insect_cFv,
 };
 
 /* 803BD828-803BD834 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA static void* lit_3805[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)select_move_move__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)select_move_move__14dMenu_Insect_cFv,
 };
 
 /* 803BD834-803BD840 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA static void* lit_3806[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)explain_close_move__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)explain_close_move__14dMenu_Insect_cFv,
 };
 
 /* 803BD840-803BD87C 003C+00 s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -489,10 +489,10 @@ SECTION_DATA static u8 data_803BD894[24] = {
 
 /* 803BD8AC-803BD8C8 0010+0C s=2 e=0 z=0  None .data      __vt__14dMenu_Insect_c                                       */
 SECTION_DATA static void* __vt__14dMenu_Insect_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMenu_Insect_cFv,
-	/* 3    */ (void*)__dt__14dMenu_Insect_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMenu_Insect_cFv,
+	(void*)__dt__14dMenu_Insect_cFv,
 	/* padding */
 	NULL,
 	NULL,

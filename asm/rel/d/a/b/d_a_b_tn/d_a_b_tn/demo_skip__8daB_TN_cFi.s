@@ -7,14 +7,14 @@ lbl_80622F64:
 /* 80622F78  7C 7E 1B 78 */	mr r30, r3
 /* 80622F7C  3C 60 80 63 */	lis r3, lit_3920@ha
 /* 80622F80  3B E3 E6 34 */	addi r31, r3, lit_3920@l
-/* 80622F84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80622F88  38 A3 61 C0 */	addi r5, r3, struct_804061C0+0x0@l
-/* 80622F8C  88 05 5D B0 */	lbz r0, 0x5db0(r5)	/* effective address: 8040BF70 */
+/* 80622F84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80622F88  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
+/* 80622F8C  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 80622F90  7C 00 07 74 */	extsb r0, r0
 /* 80622F94  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80622F98  7C 65 02 14 */	add r3, r5, r0
 /* 80622F9C  83 A3 5D 74 */	lwz r29, 0x5d74(r3)
-/* 80622FA0  80 65 5D AC */	lwz r3, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 80622FA0  80 65 5D AC */	lwz r3, 0x5dac(r5)
 /* 80622FA4  2C 04 00 00 */	cmpwi r4, 0
 /* 80622FA8  40 82 00 F4 */	bne lbl_8062309C
 /* 80622FAC  C0 3F 00 04 */	lfs f1, 4(r31)
@@ -49,19 +49,19 @@ lbl_80622F64:
 /* 80623020  38 7D 02 48 */	addi r3, r29, 0x248
 /* 80623024  38 80 00 00 */	li r4, 0
 /* 80623028  4B B3 FF E4 */	b SetTrimSize__9dCamera_cFl
-/* 8062302C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80623030  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8062302C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80623030  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80623034  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80623038  4B A1 F4 30 */	b reset__14dEvt_control_cFv
 /* 8062303C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80623040  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80623044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80623044  80 63 00 00 */	lwz r3, 0(r3)
 /* 80623048  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8062304C  38 80 00 1E */	li r4, 0x1e
 /* 80623050  4B C8 CE 8C */	b bgmStreamStop__8Z2SeqMgrFUl
 /* 80623054  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80623058  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8062305C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8062305C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80623060  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80623064  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100006C@ha */
 /* 80623068  38 84 00 6C */	addi r4, r4, 0x006C /* 0x0100006C@l */
@@ -124,8 +124,8 @@ lbl_8062309C:
 /* 80623148  38 7D 02 48 */	addi r3, r29, 0x248
 /* 8062314C  38 80 00 00 */	li r4, 0
 /* 80623150  4B B3 FE BC */	b SetTrimSize__9dCamera_cFl
-/* 80623154  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80623158  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80623154  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80623158  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8062315C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80623160  4B A1 F3 08 */	b reset__14dEvt_control_cFv
 /* 80623164  7F C3 F3 78 */	mr r3, r30

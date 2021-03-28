@@ -119,22 +119,23 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObj_Udoor_Draw(obj_udoor_class*); // 2
+void daObj_Udoor_Draw(obj_udoor_class*); // 2
 static void daObj_Udoor_Execute(obj_udoor_class*); // 2
-static bool daObj_Udoor_IsDelete(obj_udoor_class*); // 2
-static void daObj_Udoor_Delete(obj_udoor_class*); // 2
+bool daObj_Udoor_IsDelete(obj_udoor_class*); // 2
+void daObj_Udoor_Delete(obj_udoor_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObj_Udoor_Create(fopAc_ac_c*); // 2
+void daObj_Udoor_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daObj_Udoor_Draw__FP15obj_udoor_class(); // 1
+extern "C" void daObj_Udoor_Draw__FP15obj_udoor_class(); // 1
 extern "C" static void daObj_Udoor_Execute__FP15obj_udoor_class(); // 1
-extern "C" static bool daObj_Udoor_IsDelete__FP15obj_udoor_class(); // 1
-extern "C" static void daObj_Udoor_Delete__FP15obj_udoor_class(); // 1
+extern "C" bool daObj_Udoor_IsDelete__FP15obj_udoor_class(); // 1
+extern "C" void daObj_Udoor_Delete__FP15obj_udoor_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daObj_Udoor_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObj_Udoor_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObj_Udoor_Method[8];
 extern "C" extern void* g_profile_OBJ_UDOOR[12];
 
 // 
@@ -189,29 +190,26 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80D20738-80D2079C 0064+00 s=1 e=0 z=0  None .text      daObj_Udoor_Draw__FP15obj_udoor_class                        */
+/* 80D20738-80D2079C 0064+00 s=0 e=0 z=0  None .text      daObj_Udoor_Draw__FP15obj_udoor_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Udoor_Draw(obj_udoor_class* param_0) {
+asm void daObj_Udoor_Draw(obj_udoor_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Draw__FP15obj_udoor_class.s"
 }
@@ -243,7 +241,7 @@ SECTION_RODATA static u32 const lit_3713 = 0x3D4CCCCD;
 /* 80D20DFC-80D20E00 0004+00 s=1 e=0 z=0  None .rodata    @3714                                                        */
 SECTION_RODATA static u32 const lit_3714 = 0x42480000;
 
-/* 80D2079C-80D209BC 0220+00 s=2 e=0 z=0  None .text      daObj_Udoor_Execute__FP15obj_udoor_class                     */
+/* 80D2079C-80D209BC 0220+00 s=1 e=0 z=0  None .text      daObj_Udoor_Execute__FP15obj_udoor_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -254,8 +252,8 @@ asm static void daObj_Udoor_Execute(obj_udoor_class* param_0) {
 #pragma pop
 
 
-/* 80D209BC-80D209C4 0008+00 s=1 e=0 z=0  None .text      daObj_Udoor_IsDelete__FP15obj_udoor_class                    */
-static bool daObj_Udoor_IsDelete(obj_udoor_class* param_0) {
+/* 80D209BC-80D209C4 0008+00 s=0 e=0 z=0  None .text      daObj_Udoor_IsDelete__FP15obj_udoor_class                    */
+bool daObj_Udoor_IsDelete(obj_udoor_class* param_0) {
 	return true;
 }
 
@@ -280,11 +278,11 @@ SECTION_RODATA static u32 const lit_3831 = 0x44160000;
 SECTION_DEAD char const* const stringBase_80D20E10 = "Obj_udoor";
 #pragma pop
 
-/* 80D209C4-80D20A1C 0058+00 s=1 e=0 z=0  None .text      daObj_Udoor_Delete__FP15obj_udoor_class                      */
+/* 80D209C4-80D20A1C 0058+00 s=0 e=0 z=0  None .text      daObj_Udoor_Delete__FP15obj_udoor_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Udoor_Delete(obj_udoor_class* param_0) {
+asm void daObj_Udoor_Delete(obj_udoor_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Delete__FP15obj_udoor_class.s"
 }
@@ -322,60 +320,60 @@ SECTION_DATA static u8 data_80D20E2C[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
 };
 
-/* 80D20E6C-80D20E8C 0020+00 s=1 e=0 z=0  None .data      l_daObj_Udoor_Method                                         */
-SECTION_DATA static void* l_daObj_Udoor_Method[8] = {
-	/* 0    */ (void*)daObj_Udoor_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObj_Udoor_Delete__FP15obj_udoor_class,
-	/* 2    */ (void*)daObj_Udoor_Execute__FP15obj_udoor_class,
-	/* 3    */ (void*)daObj_Udoor_IsDelete__FP15obj_udoor_class,
-	/* 4    */ (void*)daObj_Udoor_Draw__FP15obj_udoor_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D20E6C-80D20E8C 0020+00 s=0 e=0 z=0  None .data      l_daObj_Udoor_Method                                         */
+SECTION_DATA void* l_daObj_Udoor_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D20E8C-80D20EBC 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_UDOOR                                          */
+/* 80D20E8C-80D20EBC 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_UDOOR                                          */
 SECTION_DATA void* g_profile_OBJ_UDOOR[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01290000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000754,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x004D0000,
-	/* 9    */ (void*)&l_daObj_Udoor_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01290000,
+	(void*)NULL,
+	(void*)0x00000754,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x004D0000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80D20EBC-80D20EC8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D20EC8-80D20ED4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D20B40-80D20D48 0208+00 s=1 e=0 z=0  None .text      daObj_Udoor_Create__FP10fopAc_ac_c                           */
+/* 80D20B40-80D20D48 0208+00 s=0 e=0 z=0  None .text      daObj_Udoor_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Udoor_Create(fopAc_ac_c* param_0) {
+asm void daObj_Udoor_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_udoor/d_a_obj_udoor/daObj_Udoor_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D20D48-80D20D90 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80D20D48-80D20D90 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -386,7 +384,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80D20D90-80D20DD8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D20D90-80D20DD8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

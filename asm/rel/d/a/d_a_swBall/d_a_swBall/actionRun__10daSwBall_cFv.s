@@ -37,8 +37,8 @@ lbl_80D4E598:
 /* 80D4E5A8  88 1F 05 88 */	lbz r0, 0x588(r31)
 /* 80D4E5AC  28 00 00 00 */	cmplwi r0, 0
 /* 80D4E5B0  40 82 00 54 */	bne lbl_80D4E604
-/* 80D4E5B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4E5B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4E5B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E5B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4E5BC  54 84 86 3E */	rlwinm r4, r4, 0x10, 0x18, 0x1f
 /* 80D4E5C0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4E5C4  7C 05 07 74 */	extsb r5, r0
@@ -50,8 +50,8 @@ lbl_80D4E5D8:
 /* 80D4E5D8  88 1F 05 88 */	lbz r0, 0x588(r31)
 /* 80D4E5DC  28 00 00 00 */	cmplwi r0, 0
 /* 80D4E5E0  40 82 00 24 */	bne lbl_80D4E604
-/* 80D4E5E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4E5E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4E5E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E5E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4E5EC  54 84 86 3E */	rlwinm r4, r4, 0x10, 0x18, 0x1f
 /* 80D4E5F0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4E5F4  7C 05 07 74 */	extsb r5, r0
@@ -62,8 +62,8 @@ lbl_80D4E604:
 /* 80D4E604  38 00 00 01 */	li r0, 1
 /* 80D4E608  98 1F 05 8A */	stb r0, 0x58a(r31)
 lbl_80D4E60C:
-/* 80D4E60C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4E610  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4E60C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E610  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4E614  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D4E618  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80D4E61C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -85,8 +85,8 @@ lbl_80D4E640:
 /* 80D4E654  98 1F 05 8A */	stb r0, 0x58a(r31)
 /* 80D4E658  48 00 00 4C */	b lbl_80D4E6A4
 lbl_80D4E65C:
-/* 80D4E65C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4E660  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4E65C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E660  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4E664  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D4E668  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80D4E66C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

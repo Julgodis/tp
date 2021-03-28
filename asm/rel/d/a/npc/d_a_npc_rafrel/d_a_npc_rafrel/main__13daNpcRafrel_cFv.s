@@ -21,9 +21,9 @@ lbl_80ABE214:
 /* 80ABE218  3C 03 00 01 */	addis r0, r3, 1
 /* 80ABE21C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80ABE220  41 82 00 4C */	beq lbl_80ABE26C
-/* 80ABE224  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ABE228  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80ABE22C  88 1D 4F AD */	lbz r0, 0x4fad(r29)	/* effective address: 8040B16D */
+/* 80ABE224  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ABE228  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80ABE22C  88 1D 4F AD */	lbz r0, 0x4fad(r29)
 /* 80ABE230  28 00 00 00 */	cmplwi r0, 0
 /* 80ABE234  41 82 00 38 */	beq lbl_80ABE26C
 /* 80ABE238  38 7D 4F F8 */	addi r3, r29, 0x4ff8

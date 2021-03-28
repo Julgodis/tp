@@ -6,15 +6,15 @@ lbl_8068E12C:
 /* 8068E13C  90 03 00 00 */	stw r0, 0(r3)
 /* 8068E140  38 00 FF FF */	li r0, -1
 /* 8068E144  98 03 00 04 */	stb r0, 4(r3)
-/* 8068E148  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80690DE0 */
+/* 8068E148  C0 05 00 08 */	lfs f0, 8(r5)
 /* 8068E14C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8068E150  C0 05 00 2C */	lfs f0, 0x2c(r5)	/* effective address: 80690E04 */
+/* 8068E150  C0 05 00 2C */	lfs f0, 0x2c(r5)
 /* 8068E154  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 8068E158  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 80690E08 */
+/* 8068E158  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 8068E15C  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 8068E160  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 80690E0C */
+/* 8068E160  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 8068E164  D0 03 00 10 */	stfs f0, 0x10(r3)
-/* 8068E168  C0 05 00 38 */	lfs f0, 0x38(r5)	/* effective address: 80690E10 */
+/* 8068E168  C0 05 00 38 */	lfs f0, 0x38(r5)
 /* 8068E16C  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 8068E170  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 8068E174  4E 80 00 20 */	blr 

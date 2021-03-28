@@ -14,8 +14,8 @@ lbl_80946E08:
 /* 80946E38  4B 90 34 A0 */	b doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
 /* 80946E3C  2C 03 00 00 */	cmpwi r3, 0
 /* 80946E40  41 82 00 30 */	beq lbl_80946E70
-/* 80946E44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80946E48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80946E44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80946E48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80946E4C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80946E50  4B 6F B6 18 */	b reset__14dEvt_control_cFv
 /* 80946E54  88 1F 09 2F */	lbz r0, 0x92f(r31)

@@ -33,9 +33,9 @@ lbl_80A11AB4:
 /* 80A11AF4  38 00 00 02 */	li r0, 2
 /* 80A11AF8  B0 1F 0E 1E */	sth r0, 0xe1e(r31)
 lbl_80A11AFC:
-/* 80A11AFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A11B00  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80A11B04  88 1E 4F AD */	lbz r0, 0x4fad(r30)	/* effective address: 8040B16D */
+/* 80A11AFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A11B00  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80A11B04  88 1E 4F AD */	lbz r0, 0x4fad(r30)
 /* 80A11B08  28 00 00 00 */	cmplwi r0, 0
 /* 80A11B0C  41 82 00 C0 */	beq lbl_80A11BCC
 /* 80A11B10  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
@@ -45,7 +45,7 @@ lbl_80A11AFC:
 /* 80A11B20  7F A3 EB 78 */	mr r3, r29
 /* 80A11B24  3C 80 80 A1 */	lis r4, l_myName@ha
 /* 80A11B28  38 84 43 94 */	addi r4, r4, l_myName@l
-/* 80A11B2C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80A14394 */
+/* 80A11B2C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80A11B30  38 A0 00 00 */	li r5, 0
 /* 80A11B34  38 C0 00 00 */	li r6, 0
 /* 80A11B38  4B 63 5F E4 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

@@ -19,7 +19,7 @@ lbl_80BB6430:
 /* 80BB6430  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80BB6434  3C 80 80 BB */	lis r4, l_arcName@ha
 /* 80BB6438  38 84 67 58 */	addi r4, r4, l_arcName@l
-/* 80BB643C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB6758 */
+/* 80BB643C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB6440  4B 47 6A 7C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BB6444  7C 7F 1B 78 */	mr r31, r3
 /* 80BB6448  2C 1F 00 04 */	cmpwi r31, 4

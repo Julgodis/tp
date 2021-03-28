@@ -11,9 +11,9 @@ lbl_807DAA00:
 /* 807DAA24  3B C3 35 78 */	addi r30, r3, lit_1109@l
 /* 807DAA28  3C 60 80 7E */	lis r3, lit_3882@ha
 /* 807DAA2C  3B E3 29 8C */	addi r31, r3, lit_3882@l
-/* 807DAA30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807DAA34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807DAA38  82 C3 5D AC */	lwz r22, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807DAA30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807DAA34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807DAA38  82 C3 5D AC */	lwz r22, 0x5dac(r3)
 /* 807DAA3C  38 00 00 56 */	li r0, 0x56
 /* 807DAA40  B0 01 00 08 */	sth r0, 8(r1)
 /* 807DAA44  3C 60 80 02 */	lis r3, fpcSch_JudgeForPName__FPvPv@ha
@@ -306,8 +306,8 @@ lbl_807DAE2C:
 /* 807DAE7C  7F A6 EB 78 */	mr r6, r29
 /* 807DAE80  4B 89 CE E4 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
 /* 807DAE84  3A A0 00 00 */	li r21, 0
-/* 807DAE88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807DAE8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807DAE88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807DAE8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807DAE90  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807DAE94  38 81 00 E8 */	addi r4, r1, 0xe8
 /* 807DAE98  4B 89 95 1C */	b LineCross__4cBgSFP11cBgS_LinChk
@@ -485,7 +485,7 @@ lbl_807DB0D4:
 lbl_807DB0FC:
 /* 807DB0FC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DB100  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DB104  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DB104  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DB108  A8 96 04 E6 */	lha r4, 0x4e6(r22)
 /* 807DB10C  4B 83 12 D0 */	b mDoMtx_YrotS__FPA4_fs
 /* 807DB110  C0 16 05 38 */	lfs f0, 0x538(r22)
@@ -498,7 +498,7 @@ lbl_807DB0FC:
 lbl_807DB12C:
 /* 807DB12C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DB130  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DB134  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DB134  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DB138  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 807DB13C  4B 83 12 A0 */	b mDoMtx_YrotS__FPA4_fs
 /* 807DB140  C0 3C 04 D0 */	lfs f1, 0x4d0(r28)

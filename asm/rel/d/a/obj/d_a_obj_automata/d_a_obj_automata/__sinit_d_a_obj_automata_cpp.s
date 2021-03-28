@@ -9,8 +9,8 @@ lbl_80BA6AE0:
 /* 80BA6AFC  38 00 00 06 */	li r0, 6
 /* 80BA6B00  7C 09 03 A6 */	mtctr r0
 lbl_80BA6B04:
-/* 80BA6B04  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BA6C1C */
-/* 80BA6B08  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BA6C20 */
+/* 80BA6B04  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BA6B08  84 04 00 08 */	lwzu r0, 8(r4)
 /* 80BA6B0C  90 65 00 04 */	stw r3, 4(r5)
 /* 80BA6B10  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BA6B14  42 00 FF F0 */	bdnz lbl_80BA6B04
@@ -23,8 +23,8 @@ lbl_80BA6B04:
 lbl_80BA6B30:
 /* 80BA6B30  80 64 00 04 */	lwz r3, 4(r4)
 /* 80BA6B34  84 04 00 08 */	lwzu r0, 8(r4)
-/* 80BA6B38  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BA6CE0 */
-/* 80BA6B3C  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BA6CE4 */
+/* 80BA6B38  90 65 00 04 */	stw r3, 4(r5)
+/* 80BA6B3C  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BA6B40  42 00 FF F0 */	bdnz lbl_80BA6B30
 /* 80BA6B44  3C 60 80 BA */	lis r3, l_ccDSph@ha
 /* 80BA6B48  38 63 6D 24 */	addi r3, r3, l_ccDSph@l
@@ -35,8 +35,8 @@ lbl_80BA6B30:
 lbl_80BA6B5C:
 /* 80BA6B5C  80 64 00 04 */	lwz r3, 4(r4)
 /* 80BA6B60  84 04 00 08 */	lwzu r0, 8(r4)
-/* 80BA6B64  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BA6D24 */
-/* 80BA6B68  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BA6D28 */
+/* 80BA6B64  90 65 00 04 */	stw r3, 4(r5)
+/* 80BA6B68  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BA6B6C  42 00 FF F0 */	bdnz lbl_80BA6B5C
 /* 80BA6B70  3C 60 80 BA */	lis r3, __vt__22daObj_AutoMata_Param_c@ha
 /* 80BA6B74  38 03 6E 38 */	addi r0, r3, __vt__22daObj_AutoMata_Param_c@l

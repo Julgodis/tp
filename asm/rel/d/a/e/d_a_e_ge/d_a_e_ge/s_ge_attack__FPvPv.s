@@ -25,9 +25,9 @@ lbl_806C8018:
 /* 806C8038  40 82 00 18 */	bne lbl_806C8050
 /* 806C803C  3C 60 80 6D */	lis r3, target_count@ha
 /* 806C8040  38 83 D3 9C */	addi r4, r3, target_count@l
-/* 806C8044  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806CD39C */
+/* 806C8044  80 64 00 00 */	lwz r3, 0(r4)
 /* 806C8048  38 03 00 01 */	addi r0, r3, 1
-/* 806C804C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 806CD39C */
+/* 806C804C  90 04 00 00 */	stw r0, 0(r4)
 lbl_806C8050:
 /* 806C8050  38 60 00 00 */	li r3, 0
 /* 806C8054  83 E1 00 0C */	lwz r31, 0xc(r1)

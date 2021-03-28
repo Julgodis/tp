@@ -135,11 +135,11 @@ asm static void fopMsg_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A3958-803A3970 0014+04 s=0 e=5 z=0  None .data      g_fopMsg_Method                                              */
 SECTION_DATA void* g_fopMsg_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopMsg_Create__FPv,
-	/* 1    */ (void*)fopMsg_Delete__FPv,
-	/* 2    */ (void*)fopMsg_Execute__FPv,
-	/* 3    */ (void*)fopMsg_IsDelete__FPv,
-	/* 4    */ (void*)fopMsg_Draw__FPv,
+	(void*)fopMsg_Create__FPv,
+	(void*)fopMsg_Delete__FPv,
+	(void*)fopMsg_Execute__FPv,
+	(void*)fopMsg_IsDelete__FPv,
+	(void*)fopMsg_Draw__FPv,
 	/* padding */
 	NULL,
 };

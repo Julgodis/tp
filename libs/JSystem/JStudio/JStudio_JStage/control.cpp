@@ -11,6 +11,27 @@
 // Types:
 // 
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TAmbientLight {
+	};
+
+	struct TCamera {
+	};
+
+	struct TFog {
+	};
+
+	struct TLight {
+	};
+
+};
+
 namespace JStudio {
 	struct TObject {
 	};
@@ -61,27 +82,6 @@ namespace JStudio {
 
 	struct TObject_light {
 		/* 80287368 */ TObject_light(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_light*);
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TAmbientLight {
-	};
-
-	struct TCamera {
-	};
-
-	struct TFog {
-	};
-
-	struct TLight {
 	};
 
 };
@@ -158,10 +158,10 @@ extern "C" void _restgpr_28(); // 1
 /* ############################################################################################## */
 /* 803C5720-803C5730 0010+00 s=1 e=1 z=0  None .data      __vt__Q214JStudio_JStage13TCreateObject                      */
 SECTION_DATA void* __vt__Q214JStudio_JStage13TCreateObject[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q214JStudio_JStage13TCreateObjectFv,
-	/* 3    */ (void*)create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q214JStudio_JStage13TCreateObjectFv,
+	(void*)create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
 };
 
 /* 80289B00-80289B60 0060+00 s=1 e=0 z=0  None .text      __dt__Q214JStudio_JStage13TCreateObjectFv                    */

@@ -16,7 +16,7 @@ lbl_8067B598:
 /* 8067B5D0  4B 99 0E FC */	b mDoMtx_ZrotM__FPA4_fs
 /* 8067B5D4  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 8067B5D8  38 63 C6 A8 */	addi r3, r3, l_HIO@l
-/* 8067B5DC  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8067C6B0 */
+/* 8067B5DC  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8067B5E0  FC 40 08 90 */	fmr f2, f1
 /* 8067B5E4  FC 60 08 90 */	fmr f3, f1
 /* 8067B5E8  4B 99 18 50 */	b scaleM__14mDoMtx_stack_cFfff

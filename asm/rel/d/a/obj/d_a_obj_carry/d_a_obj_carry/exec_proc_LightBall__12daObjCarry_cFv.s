@@ -13,8 +13,8 @@ lbl_80478C18:
 /* 80478C44  38 7F 0A 28 */	addi r3, r31, 0xa28
 /* 80478C48  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80478C4C  4B DF 69 FC */	b SetC__8cM3dGSphFRC4cXyz
-/* 80478C50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80478C54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80478C50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80478C54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80478C58  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80478C5C  38 9F 09 04 */	addi r4, r31, 0x904
 /* 80478C60  4B DE BF 48 */	b Set__4cCcSFP8cCcD_Obj

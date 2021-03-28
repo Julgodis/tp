@@ -16,11 +16,11 @@ lbl_8098DBBC:
 /* 8098DBF4  90 BF 0D FC */	stw r5, 0xdfc(r31)
 /* 8098DBF8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8098DBFC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8098DC00  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8098DC04  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8098DC00  80 64 00 00 */	lwz r3, 0(r4)
+/* 8098DC04  80 04 00 04 */	lwz r0, 4(r4)
 /* 8098DC08  90 7F 0D B8 */	stw r3, 0xdb8(r31)
 /* 8098DC0C  90 1F 0D BC */	stw r0, 0xdbc(r31)
-/* 8098DC10  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8098DC10  80 04 00 08 */	lwz r0, 8(r4)
 /* 8098DC14  90 1F 0D C0 */	stw r0, 0xdc0(r31)
 /* 8098DC18  38 60 FF FF */	li r3, -1
 /* 8098DC1C  B0 7F 0E 02 */	sth r3, 0xe02(r31)
@@ -56,11 +56,11 @@ lbl_8098DC78:
 /* 8098DC8C  D0 1F 09 7C */	stfs f0, 0x97c(r31)
 /* 8098DC90  3C 60 80 99 */	lis r3, lit_4844@ha
 /* 8098DC94  38 83 22 14 */	addi r4, r3, lit_4844@l
-/* 8098DC98  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80992214 */
-/* 8098DC9C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80992218 */
+/* 8098DC98  80 64 00 00 */	lwz r3, 0(r4)
+/* 8098DC9C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8098DCA0  90 61 00 08 */	stw r3, 8(r1)
 /* 8098DCA4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8098DCA8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8099221C */
+/* 8098DCA8  80 04 00 08 */	lwz r0, 8(r4)
 /* 8098DCAC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8098DCB0  7F E3 FB 78 */	mr r3, r31
 /* 8098DCB4  38 81 00 08 */	addi r4, r1, 8

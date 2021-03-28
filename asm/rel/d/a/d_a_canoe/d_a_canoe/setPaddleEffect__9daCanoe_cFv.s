@@ -9,7 +9,7 @@ lbl_804DC330:
 /* 804DC34C  3B C3 D7 F8 */	addi r30, r3, lit_1109@l
 /* 804DC350  3C 60 80 4E */	lis r3, lit_3766@ha
 /* 804DC354  3B E3 D5 DC */	addi r31, r3, lit_3766@l
-/* 804DC358  88 1E 00 4C */	lbz r0, 0x4c(r30)	/* effective address: 804DD844 */
+/* 804DC358  88 1E 00 4C */	lbz r0, 0x4c(r30)
 /* 804DC35C  7C 00 07 75 */	extsb. r0, r0
 /* 804DC360  40 82 00 30 */	bne lbl_804DC390
 /* 804DC364  C0 1F 00 D4 */	lfs f0, 0xd4(r31)
@@ -24,9 +24,9 @@ lbl_804DC330:
 /* 804DC388  38 00 00 01 */	li r0, 1
 /* 804DC38C  98 1E 00 4C */	stb r0, 0x4c(r30)
 lbl_804DC390:
-/* 804DC390  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DC394  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804DC398  83 A3 5D B4 */	lwz r29, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804DC390  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DC394  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DC398  83 A3 5D B4 */	lwz r29, 0x5db4(r3)
 /* 804DC39C  7F A3 EB 78 */	mr r3, r29
 /* 804DC3A0  7F 84 E3 78 */	mr r4, r28
 /* 804DC3A4  4B C1 7B 14 */	b checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c
@@ -100,9 +100,9 @@ lbl_804DC46C:
 /* 804DC4A8  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 804DC4AC  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 804DC4B0  7C 09 07 74 */	extsb r9, r0
-/* 804DC4B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DC4B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804DC4BC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804DC4B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DC4B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DC4BC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804DC4C0  38 9C 14 80 */	addi r4, r28, 0x1480
 /* 804DC4C4  3C A0 80 3F */	lis r5, mWaterCheck__11fopAcM_wt_c@ha
 /* 804DC4C8  38 A5 1D 80 */	addi r5, r5, mWaterCheck__11fopAcM_wt_c@l

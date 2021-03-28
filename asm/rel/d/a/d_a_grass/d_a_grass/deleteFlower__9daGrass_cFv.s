@@ -4,7 +4,7 @@ lbl_8051C140:
 /* 8051C148  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8051C14C  3C 60 80 45 */	lis r3, m_flower__9daGrass_c@ha
 /* 8051C150  38 63 0D B4 */	addi r3, r3, m_flower__9daGrass_c@l
-/* 8051C154  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB4 */
+/* 8051C154  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051C158  28 03 00 00 */	cmplwi r3, 0
 /* 8051C15C  41 82 00 28 */	beq lbl_8051C184
 /* 8051C160  41 82 00 18 */	beq lbl_8051C178

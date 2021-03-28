@@ -46,11 +46,11 @@ lbl_8096AE10:
 /* 8096AE14  41 82 00 30 */	beq lbl_8096AE44
 /* 8096AE18  3C 60 80 97 */	lis r3, lit_5100@ha
 /* 8096AE1C  38 83 CD 28 */	addi r4, r3, lit_5100@l
-/* 8096AE20  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8096CD28 */
-/* 8096AE24  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8096CD2C */
+/* 8096AE20  80 64 00 00 */	lwz r3, 0(r4)
+/* 8096AE24  80 04 00 04 */	lwz r0, 4(r4)
 /* 8096AE28  90 61 00 08 */	stw r3, 8(r1)
 /* 8096AE2C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8096AE30  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8096CD30 */
+/* 8096AE30  80 04 00 08 */	lwz r0, 8(r4)
 /* 8096AE34  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8096AE38  7F E3 FB 78 */	mr r3, r31
 /* 8096AE3C  38 81 00 08 */	addi r4, r1, 8

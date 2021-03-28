@@ -9,7 +9,7 @@ lbl_806CF720:
 /* 806CF73C  41 82 01 18 */	beq lbl_806CF854
 /* 806CF740  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 806CF744  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 806CF748  A8 63 00 0C */	lha r3, 0xc(r3)	/* effective address: 803DD2F4 */
+/* 806CF748  A8 63 00 0C */	lha r3, 0xc(r3)
 /* 806CF74C  A8 1F 06 A6 */	lha r0, 0x6a6(r31)
 /* 806CF750  7C 03 00 50 */	subf r0, r3, r0
 /* 806CF754  7C 03 07 34 */	extsh r3, r0
@@ -22,7 +22,7 @@ lbl_806CF720:
 lbl_806CF770:
 /* 806CF770  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 806CF774  38 83 D2 E8 */	addi r4, r3, m_cpadInfo__8mDoCPd_c@l
-/* 806CF778  80 04 00 34 */	lwz r0, 0x34(r4)	/* effective address: 803DD31C */
+/* 806CF778  80 04 00 34 */	lwz r0, 0x34(r4)
 /* 806CF77C  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 806CF780  41 82 00 10 */	beq lbl_806CF790
 /* 806CF784  80 7F 06 A8 */	lwz r3, 0x6a8(r31)
@@ -73,7 +73,7 @@ lbl_806CF804:
 /* 806CF824  EC 20 08 28 */	fsubs f1, f0, f1
 /* 806CF828  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CF82C  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CF830  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 806D115C */
+/* 806CF830  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 806CF834  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CF838  FC 00 00 1E */	fctiwz f0, f0
 /* 806CF83C  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -85,7 +85,7 @@ lbl_806CF804:
 lbl_806CF854:
 /* 806CF854  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 806CF858  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 806CF85C  A8 03 00 0C */	lha r0, 0xc(r3)	/* effective address: 803DD2F4 */
+/* 806CF85C  A8 03 00 0C */	lha r0, 0xc(r3)
 /* 806CF860  B0 1F 06 A6 */	sth r0, 0x6a6(r31)
 /* 806CF864  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 806CF868  80 01 00 24 */	lwz r0, 0x24(r1)

@@ -14,8 +14,8 @@ lbl_80BF682C:
 /* 80BF685C  54 00 10 3A */	slwi r0, r0, 2
 /* 80BF6860  38 9F 00 20 */	addi r4, r31, 0x20
 /* 80BF6864  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80BF6868  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BF686C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BF6868  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BF686C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BF6870  3F C5 00 02 */	addis r30, r5, 2
 /* 80BF6874  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80BF6878  7F C5 F3 78 */	mr r5, r30

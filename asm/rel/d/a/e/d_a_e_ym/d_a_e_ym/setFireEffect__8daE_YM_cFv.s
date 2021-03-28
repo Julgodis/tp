@@ -7,13 +7,13 @@ lbl_80808B3C:
 /* 80808B50  7C 7B 1B 78 */	mr r27, r3
 /* 80808B54  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 80808B58  3B A3 59 94 */	addi r29, r3, lit_3925@l
-/* 80808B5C  C0 3D 00 08 */	lfs f1, 8(r29)	/* effective address: 8081599C */
+/* 80808B5C  C0 3D 00 08 */	lfs f1, 8(r29)
 /* 80808B60  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 80808B64  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 80808B68  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 80808B6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80808B70  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80808B74  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80808B6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80808B70  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80808B74  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80808B78  38 00 00 FF */	li r0, 0xff
 /* 80808B7C  90 01 00 08 */	stw r0, 8(r1)
 /* 80808B80  38 80 00 00 */	li r4, 0

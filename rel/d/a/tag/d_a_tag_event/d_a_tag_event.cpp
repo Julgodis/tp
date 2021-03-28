@@ -73,11 +73,11 @@ struct cXyz {
 // 
 
 static void daTag_getBk(u32); // 2
-static void daTag_Event_Draw(daTag_Event_c*); // 2
-static void daTag_Event_Execute(daTag_Event_c*); // 2
-static bool daTag_Event_IsDelete(daTag_Event_c*); // 2
-static void daTag_Event_Delete(daTag_Event_c*); // 2
-static void daTag_Event_Create(fopAc_ac_c*); // 2
+void daTag_Event_Draw(daTag_Event_c*); // 2
+void daTag_Event_Execute(daTag_Event_c*); // 2
+bool daTag_Event_IsDelete(daTag_Event_c*); // 2
+void daTag_Event_Delete(daTag_Event_c*); // 2
+void daTag_Event_Create(fopAc_ac_c*); // 2
 
 extern "C" static void daTag_getBk__FUl(); // 1
 extern "C" void getEventNo__13daTag_Event_cFv(); // 1
@@ -103,12 +103,13 @@ extern "C" bool actionWait__13daTag_Event_cFv(); // 1
 extern "C" void actionHunt2__13daTag_Event_cFv(); // 1
 extern "C" void execute__13daTag_Event_cFv(); // 1
 extern "C" bool draw__13daTag_Event_cFv(); // 1
-extern "C" static void daTag_Event_Draw__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Execute__FP13daTag_Event_c(); // 1
-extern "C" static bool daTag_Event_IsDelete__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Delete__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTag_Event_Draw__FP13daTag_Event_c(); // 1
+extern "C" void daTag_Event_Execute__FP13daTag_Event_c(); // 1
+extern "C" bool daTag_Event_IsDelete__FP13daTag_Event_c(); // 1
+extern "C" void daTag_Event_Delete__FP13daTag_Event_c(); // 1
+extern "C" void daTag_Event_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daTag_Event_Method[8];
 extern "C" extern void* g_profile_TAG_EVENT[12];
 
 // 
@@ -133,12 +134,8 @@ extern "C" void __mi__4cXyzCFRC3Vec(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040BF78[4];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
 
 // 
@@ -411,50 +408,50 @@ bool daTag_Event_c::draw() {
 }
 
 
-/* 8048B78C-8048B7AC 0020+00 s=1 e=0 z=0  None .text      daTag_Event_Draw__FP13daTag_Event_c                          */
+/* 8048B78C-8048B7AC 0020+00 s=0 e=0 z=0  None .text      daTag_Event_Draw__FP13daTag_Event_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Event_Draw(daTag_Event_c* param_0) {
+asm void daTag_Event_Draw(daTag_Event_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Draw__FP13daTag_Event_c.s"
 }
 #pragma pop
 
 
-/* 8048B7AC-8048B7D0 0024+00 s=1 e=0 z=0  None .text      daTag_Event_Execute__FP13daTag_Event_c                       */
+/* 8048B7AC-8048B7D0 0024+00 s=0 e=0 z=0  None .text      daTag_Event_Execute__FP13daTag_Event_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Event_Execute(daTag_Event_c* param_0) {
+asm void daTag_Event_Execute(daTag_Event_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Execute__FP13daTag_Event_c.s"
 }
 #pragma pop
 
 
-/* 8048B7D0-8048B7D8 0008+00 s=1 e=0 z=0  None .text      daTag_Event_IsDelete__FP13daTag_Event_c                      */
-static bool daTag_Event_IsDelete(daTag_Event_c* param_0) {
+/* 8048B7D0-8048B7D8 0008+00 s=0 e=0 z=0  None .text      daTag_Event_IsDelete__FP13daTag_Event_c                      */
+bool daTag_Event_IsDelete(daTag_Event_c* param_0) {
 	return true;
 }
 
 
-/* 8048B7D8-8048B808 0030+00 s=1 e=0 z=0  None .text      daTag_Event_Delete__FP13daTag_Event_c                        */
+/* 8048B7D8-8048B808 0030+00 s=0 e=0 z=0  None .text      daTag_Event_Delete__FP13daTag_Event_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Event_Delete(daTag_Event_c* param_0) {
+asm void daTag_Event_Delete(daTag_Event_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Delete__FP13daTag_Event_c.s"
 }
 #pragma pop
 
 
-/* 8048B808-8048B828 0020+00 s=1 e=0 z=0  None .text      daTag_Event_Create__FP10fopAc_ac_c                           */
+/* 8048B808-8048B828 0020+00 s=0 e=0 z=0  None .text      daTag_Event_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Event_Create(fopAc_ac_c* param_0) {
+asm void daTag_Event_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_event/d_a_tag_event/daTag_Event_Create__FP10fopAc_ac_c.s"
 }
@@ -462,31 +459,31 @@ asm static void daTag_Event_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048B844-8048B864 0020+00 s=1 e=0 z=0  None .data      l_daTag_Event_Method                                         */
-SECTION_DATA static void* l_daTag_Event_Method[8] = {
-	/* 0    */ (void*)daTag_Event_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTag_Event_Delete__FP13daTag_Event_c,
-	/* 2    */ (void*)daTag_Event_Execute__FP13daTag_Event_c,
-	/* 3    */ (void*)daTag_Event_IsDelete__FP13daTag_Event_c,
-	/* 4    */ (void*)daTag_Event_Draw__FP13daTag_Event_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8048B844-8048B864 0020+00 s=0 e=0 z=0  None .data      l_daTag_Event_Method                                         */
+SECTION_DATA void* l_daTag_Event_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048B864-8048B894 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_EVENT                                          */
+/* 8048B864-8048B894 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_EVENT                                          */
 SECTION_DATA void* g_profile_TAG_EVENT[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D10000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000574,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01190000,
-	/* 9    */ (void*)&l_daTag_Event_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D10000,
+	(void*)NULL,
+	(void*)0x00000574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01190000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x00060000,
 };
 

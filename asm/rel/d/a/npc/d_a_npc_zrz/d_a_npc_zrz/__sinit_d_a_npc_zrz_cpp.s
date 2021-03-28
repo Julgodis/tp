@@ -16,11 +16,11 @@ lbl_80B9AE60:
 /* 80B9AE98  4B FF 8E C1 */	bl __register_global_object
 /* 80B9AE9C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B9AEA0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B9AEA4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B9AEA8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B9AEA4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B9AEA8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B9AEAC  90 7F 01 B0 */	stw r3, 0x1b0(r31)
 /* 80B9AEB0  90 1F 01 B4 */	stw r0, 0x1b4(r31)
-/* 80B9AEB4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B9AEB4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B9AEB8  90 1F 01 B8 */	stw r0, 0x1b8(r31)
 /* 80B9AEBC  38 9F 01 B0 */	addi r4, r31, 0x1b0
 /* 80B9AEC0  80 7F 01 5C */	lwz r3, 0x15c(r31)

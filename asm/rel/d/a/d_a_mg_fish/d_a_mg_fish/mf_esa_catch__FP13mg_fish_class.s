@@ -7,9 +7,9 @@ lbl_805313D8:
 /* 805313EC  7C 7C 1B 78 */	mr r28, r3
 /* 805313F0  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 805313F4  3B E3 61 68 */	addi r31, r3, lit_3679@l
-/* 805313F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805313FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80531400  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805313F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805313FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80531400  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80531404  80 1C 06 4C */	lwz r0, 0x64c(r28)
 /* 80531408  90 01 00 08 */	stw r0, 8(r1)
 /* 8053140C  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha
@@ -110,7 +110,7 @@ lbl_80531520:
 /* 80531568  4B AE E3 14 */	b fopKyM_createWpillar__FPC4cXyzfi
 /* 8053156C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80531570  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80531574  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80531574  80 63 00 00 */	lwz r3, 0(r3)
 /* 80531578  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8053157C  38 80 00 04 */	li r4, 4
 /* 80531580  4B D8 15 08 */	b changeFishingBgm__8Z2SeqMgrFl
@@ -162,7 +162,7 @@ lbl_80531618:
 /* 8053162C  7C 23 04 2E */	lfsx f1, r3, r0
 /* 80531630  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80531634  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80531638  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80531638  80 63 00 00 */	lwz r3, 0(r3)
 /* 8053163C  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 80531640  C0 1F 00 74 */	lfs f0, 0x74(r31)
 /* 80531644  EC 00 00 72 */	fmuls f0, f0, f1
@@ -235,7 +235,7 @@ lbl_805316D0:
 /* 80531748  40 82 00 48 */	bne lbl_80531790
 /* 8053174C  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 80531750  38 63 0C D8 */	addi r3, r3, g_Counter@l
-/* 80531754  80 03 00 08 */	lwz r0, 8(r3)	/* effective address: 80430CE0 */
+/* 80531754  80 03 00 08 */	lwz r0, 8(r3)
 /* 80531758  54 00 06 31 */	rlwinm. r0, r0, 0, 0x18, 0x18
 /* 8053175C  41 82 00 1C */	beq lbl_80531778
 /* 80531760  38 7C 07 34 */	addi r3, r28, 0x734
@@ -256,7 +256,7 @@ lbl_80531790:
 /* 80531794  41 80 00 48 */	blt lbl_805317DC
 /* 80531798  3C 60 80 43 */	lis r3, g_Counter@ha
 /* 8053179C  38 63 0C D8 */	addi r3, r3, g_Counter@l
-/* 805317A0  80 03 00 08 */	lwz r0, 8(r3)	/* effective address: 80430CE0 */
+/* 805317A0  80 03 00 08 */	lwz r0, 8(r3)
 /* 805317A4  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 805317A8  41 82 00 1C */	beq lbl_805317C4
 /* 805317AC  38 7C 07 34 */	addi r3, r28, 0x734

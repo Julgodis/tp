@@ -55,13 +55,13 @@ lbl_806E24A0:
 /* 806E24DC  4E 80 04 21 */	bctrl 
 lbl_806E24E0:
 /* 806E24E0  7F E3 FB 78 */	mr r3, r31
-/* 806E24E4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806E24E8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806E24EC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806E24E4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806E24E8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806E24EC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806E24F0  4B 93 84 74 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806E24F4  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806E24F8  38 63 5C 24 */	addi r3, r3, l_HIO@l
-/* 806E24FC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 806E5C2C */
+/* 806E24FC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 806E2500  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806E2504  40 80 00 4C */	bge lbl_806E2550
 /* 806E2508  80 1F 09 40 */	lwz r0, 0x940(r31)

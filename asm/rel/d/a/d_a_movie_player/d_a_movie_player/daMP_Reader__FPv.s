@@ -7,8 +7,8 @@ lbl_80875A28:
 /* 80875A3C  3B 80 00 00 */	li r28, 0
 /* 80875A40  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80875A44  3B E3 9B D0 */	addi r31, r3, daMP_ActivePlayer@l
-/* 80875A48  83 DF 00 B8 */	lwz r30, 0xb8(r31)	/* effective address: 80879C88 */
-/* 80875A4C  83 BF 00 BC */	lwz r29, 0xbc(r31)	/* effective address: 80879C8C */
+/* 80875A48  83 DF 00 B8 */	lwz r30, 0xb8(r31)
+/* 80875A4C  83 BF 00 BC */	lwz r29, 0xbc(r31)
 lbl_80875A50:
 /* 80875A50  4B FF FE 95 */	bl daMP_PopFreeReadBuffer__Fv
 /* 80875A54  7C 7B 1B 78 */	mr r27, r3

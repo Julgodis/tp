@@ -317,12 +317,12 @@ lbl_8071DB08:
 /* 8071DB0C  D0 1C 05 2C */	stfs f0, 0x52c(r28)
 /* 8071DB10  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8071DB14  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8071DB18  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8071DB18  80 63 00 00 */	lwz r3, 0(r3)
 /* 8071DB1C  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 8071DB20  4B 8E E8 BC */	b mDoMtx_YrotS__FPA4_fs
 /* 8071DB24  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8071DB28  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8071DB2C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8071DB2C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8071DB30  A8 9C 04 DC */	lha r4, 0x4dc(r28)
 /* 8071DB34  4B 8E E8 68 */	b mDoMtx_XrotM__FPA4_fs
 /* 8071DB38  C0 1E 00 00 */	lfs f0, 0(r30)

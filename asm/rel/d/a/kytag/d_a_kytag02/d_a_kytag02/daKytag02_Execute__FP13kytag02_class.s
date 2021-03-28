@@ -11,8 +11,8 @@ lbl_80855AC0:
 /* 80855AE4  3B A3 CA 54 */	addi r29, r3, g_env_light@l
 /* 80855AE8  4B 80 4F F8 */	b dKyw_get_wind_vec__Fv
 /* 80855AEC  7C 7F 1B 78 */	mr r31, r3
-/* 80855AF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80855AF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80855AF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80855AF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80855AF8  88 9E 05 77 */	lbz r4, 0x577(r30)
 /* 80855AFC  88 BE 04 BA */	lbz r5, 0x4ba(r30)
 /* 80855B00  7C A5 07 74 */	extsb r5, r5
@@ -54,7 +54,7 @@ lbl_80855B6C:
 /* 80855B88  38 00 00 02 */	li r0, 2
 /* 80855B8C  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
 /* 80855B90  38 63 DD 70 */	addi r3, r3, g_mEnvSeMgr@l
-/* 80855B94  98 03 01 60 */	stb r0, 0x160(r3)	/* effective address: 8042DED0 */
+/* 80855B94  98 03 01 60 */	stb r0, 0x160(r3)
 /* 80855B98  88 7E 05 76 */	lbz r3, 0x576(r30)
 /* 80855B9C  38 03 00 01 */	addi r0, r3, 1
 /* 80855BA0  98 1E 05 76 */	stb r0, 0x576(r30)
@@ -69,7 +69,7 @@ lbl_80855BA8:
 /* 80855BC0  B0 1E 05 74 */	sth r0, 0x574(r30)
 /* 80855BC4  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
 /* 80855BC8  38 63 DD 70 */	addi r3, r3, g_mEnvSeMgr@l
-/* 80855BCC  98 83 01 60 */	stb r4, 0x160(r3)	/* effective address: 8042DED0 */
+/* 80855BCC  98 83 01 60 */	stb r4, 0x160(r3)
 /* 80855BD0  88 7E 05 76 */	lbz r3, 0x576(r30)
 /* 80855BD4  38 03 00 01 */	addi r0, r3, 1
 /* 80855BD8  98 1E 05 76 */	stb r0, 0x576(r30)
@@ -87,7 +87,7 @@ lbl_80855BE0:
 /* 80855C04  38 00 00 03 */	li r0, 3
 /* 80855C08  3C 60 80 43 */	lis r3, g_mEnvSeMgr@ha
 /* 80855C0C  38 63 DD 70 */	addi r3, r3, g_mEnvSeMgr@l
-/* 80855C10  98 03 01 60 */	stb r0, 0x160(r3)	/* effective address: 8042DED0 */
+/* 80855C10  98 03 01 60 */	stb r0, 0x160(r3)
 lbl_80855C14:
 /* 80855C14  A8 7E 05 74 */	lha r3, 0x574(r30)
 /* 80855C18  2C 03 00 00 */	cmpwi r3, 0
@@ -105,7 +105,7 @@ lbl_80855C40:
 /* 80855C40  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80855C44  38 83 CA 54 */	addi r4, r3, g_env_light@l
 /* 80855C48  38 60 00 00 */	li r3, 0
-/* 80855C4C  98 64 0E 6D */	stb r3, 0xe6d(r4)	/* effective address: 8042D8C1 */
+/* 80855C4C  98 64 0E 6D */	stb r3, 0xe6d(r4)
 /* 80855C50  88 1E 05 78 */	lbz r0, 0x578(r30)
 /* 80855C54  28 00 00 63 */	cmplwi r0, 0x63
 /* 80855C58  41 82 00 08 */	beq lbl_80855C60
@@ -123,7 +123,7 @@ lbl_80855C68:
 /* 80855C80  4B A7 23 48 */	b setWindDirection__10Z2EnvSeMgrFP3Vec
 /* 80855C84  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80855C88  38 63 0D 64 */	addi r3, r3, struct_80450D64+0x0@l
-/* 80855C8C  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80450D64 */
+/* 80855C8C  88 63 00 00 */	lbz r3, 0(r3)
 /* 80855C90  7C 63 07 74 */	extsb r3, r3
 /* 80855C94  4B 7D 73 D8 */	b dComIfGp_getReverb__Fi
 /* 80855C98  7C 64 1B 78 */	mr r4, r3

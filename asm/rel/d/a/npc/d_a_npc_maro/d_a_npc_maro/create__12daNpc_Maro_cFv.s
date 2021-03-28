@@ -128,8 +128,8 @@ lbl_8055B804:
 /* 8055B8C0  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 8055B8C4  90 1D 10 24 */	stw r0, 0x1024(r29)
 /* 8055B8C8  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 8055B8CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8055B8D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8055B8CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8055B8D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8055B8D4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8055B8D8  4B B1 B1 D4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8055B8DC  80 1D 07 68 */	lwz r0, 0x768(r29)

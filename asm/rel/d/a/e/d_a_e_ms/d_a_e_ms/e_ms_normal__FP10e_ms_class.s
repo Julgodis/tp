@@ -9,7 +9,7 @@ lbl_80726360:
 /* 8072637C  7C 7E 1B 78 */	mr r30, r3
 /* 80726380  3C 60 80 73 */	lis r3, lit_3800@ha
 /* 80726384  3B E3 95 04 */	addi r31, r3, lit_3800@l
-/* 80726388  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80729508 */
+/* 80726388  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8072638C  3B A0 00 01 */	li r29, 1
 /* 80726390  A8 1E 06 7C */	lha r0, 0x67c(r30)
 /* 80726394  54 00 06 FF */	clrlwi. r0, r0, 0x1b
@@ -74,7 +74,7 @@ lbl_80726410:
 lbl_80726474:
 /* 80726474  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 80726478  38 63 98 0C */	addi r3, r3, l_HIO@l
-/* 8072647C  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 80729818 */
+/* 8072647C  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 80726480  80 7E 05 CC */	lwz r3, 0x5cc(r30)
 /* 80726484  38 63 00 0C */	addi r3, r3, 0xc
 /* 80726488  C0 3F 00 08 */	lfs f1, 8(r31)
@@ -179,7 +179,7 @@ lbl_807265F4:
 /* 807265F8  C0 3F 00 6C */	lfs f1, 0x6c(r31)
 /* 807265FC  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 80726600  38 63 98 0C */	addi r3, r3, l_HIO@l
-/* 80726604  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80729818 */
+/* 80726604  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80726608  EF E1 00 32 */	fmuls f31, f1, f0
 /* 8072660C  80 7E 05 CC */	lwz r3, 0x5cc(r30)
 /* 80726610  38 63 00 0C */	addi r3, r3, 0xc
@@ -229,7 +229,7 @@ lbl_80726694:
 /* 807266B4  C0 7F 00 74 */	lfs f3, 0x74(r31)
 /* 807266B8  3C 80 80 73 */	lis r4, l_HIO@ha
 /* 807266BC  38 84 98 0C */	addi r4, r4, l_HIO@l
-/* 807266C0  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80729818 */
+/* 807266C0  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 807266C4  EC 63 00 32 */	fmuls f3, f3, f0
 /* 807266C8  4B B4 93 74 */	b cLib_addCalc2__FPffff
 /* 807266CC  88 1E 0B A6 */	lbz r0, 0xba6(r30)
@@ -240,7 +240,7 @@ lbl_80726694:
 /* 807266E0  7F C3 F3 78 */	mr r3, r30
 /* 807266E4  3C 80 80 73 */	lis r4, l_HIO@ha
 /* 807266E8  38 84 98 0C */	addi r4, r4, l_HIO@l
-/* 807266EC  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 80729824 */
+/* 807266EC  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 807266F0  4B FF F5 91 */	bl pl_check__FP10e_ms_classf
 /* 807266F4  2C 03 00 00 */	cmpwi r3, 0
 /* 807266F8  41 82 00 14 */	beq lbl_8072670C

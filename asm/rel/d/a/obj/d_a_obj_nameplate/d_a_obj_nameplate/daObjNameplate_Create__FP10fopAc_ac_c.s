@@ -56,7 +56,7 @@ lbl_80594CC8:
 /* 80594CC8  38 7F 05 6C */	addi r3, r31, 0x56c
 /* 80594CCC  3C 80 80 59 */	lis r4, l_arcName@ha
 /* 80594CD0  38 84 4F 28 */	addi r4, r4, l_arcName@l
-/* 80594CD4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80594F28 */
+/* 80594CD4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80594CD8  4B A9 81 E4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80594CDC  7C 7E 1B 78 */	mr r30, r3
 /* 80594CE0  2C 1E 00 04 */	cmpwi r30, 4

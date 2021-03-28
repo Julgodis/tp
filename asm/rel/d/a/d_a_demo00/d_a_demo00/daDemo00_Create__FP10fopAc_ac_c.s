@@ -80,12 +80,12 @@ lbl_804A8574:
 /* 804A860C  C0 03 88 6C */	lfs f0, lit_4004@l(r3)
 /* 804A8610  3C 60 80 4B */	lis r3, S_ganon_left_hand_pos@ha
 /* 804A8614  D4 03 8D FC */	stfsu f0, S_ganon_left_hand_pos@l(r3)
-/* 804A8618  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 804B0004 */
-/* 804A861C  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 804B0008 */
+/* 804A8618  D0 03 00 04 */	stfs f0, 4(r3)
+/* 804A861C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804A8620  3C 60 80 4B */	lis r3, S_ganon_right_hand_pos@ha
 /* 804A8624  D4 03 8E 14 */	stfsu f0, S_ganon_right_hand_pos@l(r3)
-/* 804A8628  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 804B0004 */
-/* 804A862C  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 804B0008 */
+/* 804A8628  D0 03 00 04 */	stfs f0, 4(r3)
+/* 804A862C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804A8630  38 7F 01 0C */	addi r3, r31, 0x10c
 /* 804A8634  3C 80 80 45 */	lis r4, struct_80450D64+0x0@ha
 /* 804A8638  88 04 0D 64 */	lbz r0, struct_80450D64+0x0@l(r4)
@@ -102,11 +102,11 @@ lbl_804A8574:
 /* 804A8664  4B E1 7E CC */	b init__10Z2CreatureFP3VecP3VecUcUc
 /* 804A8668  3C 60 80 4B */	lis r3, lit_4662@ha
 /* 804A866C  38 83 89 F8 */	addi r4, r3, lit_4662@l
-/* 804A8670  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804A89F8 */
-/* 804A8674  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804A89FC */
+/* 804A8670  80 64 00 00 */	lwz r3, 0(r4)
+/* 804A8674  80 04 00 04 */	lwz r0, 4(r4)
 /* 804A8678  90 7F 05 7C */	stw r3, 0x57c(r31)
 /* 804A867C  90 1F 05 80 */	stw r0, 0x580(r31)
-/* 804A8680  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804A8A00 */
+/* 804A8680  80 04 00 08 */	lwz r0, 8(r4)
 /* 804A8684  90 1F 05 84 */	stw r0, 0x584(r31)
 /* 804A8688  38 7F 05 88 */	addi r3, r31, 0x588
 /* 804A868C  4B FF BC 81 */	bl reset__16daDemo00_resID_cFv

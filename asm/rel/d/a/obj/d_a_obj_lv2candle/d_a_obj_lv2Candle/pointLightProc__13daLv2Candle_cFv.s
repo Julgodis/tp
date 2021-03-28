@@ -24,12 +24,12 @@ lbl_8058E780:
 /* 8058E7D8  7C 85 02 14 */	add r4, r5, r0
 /* 8058E7DC  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8058E7E0  C0 5F 00 08 */	lfs f2, 8(r31)
-/* 8058E7E4  C0 65 00 0C */	lfs f3, 0xc(r5)	/* effective address: 8058F2B8 */
+/* 8058E7E4  C0 65 00 0C */	lfs f3, 0xc(r5)
 /* 8058E7E8  C0 9F 00 60 */	lfs f4, 0x60(r31)
 /* 8058E7EC  4B CE 11 90 */	b cLib_addCalc__FPfffff
 /* 8058E7F0  3C 60 80 59 */	lis r3, l_HIO@ha
 /* 8058E7F4  38 63 F2 AC */	addi r3, r3, l_HIO@l
-/* 8058E7F8  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 8058F2B4 */
+/* 8058E7F8  C0 43 00 08 */	lfs f2, 8(r3)
 /* 8058E7FC  C0 1E 07 10 */	lfs f0, 0x710(r30)
 /* 8058E800  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8058E804  D0 1E 07 28 */	stfs f0, 0x728(r30)
@@ -64,11 +64,11 @@ lbl_8058E868:
 /* 8058E86C  90 01 00 08 */	stw r0, 8(r1)
 /* 8058E870  3C 60 80 59 */	lis r3, l_HIO@ha
 /* 8058E874  38 A3 F2 AC */	addi r5, r3, l_HIO@l
-/* 8058E878  88 05 00 31 */	lbz r0, 0x31(r5)	/* effective address: 8058F2DD */
+/* 8058E878  88 05 00 31 */	lbz r0, 0x31(r5)
 /* 8058E87C  98 01 00 08 */	stb r0, 8(r1)
-/* 8058E880  88 05 00 32 */	lbz r0, 0x32(r5)	/* effective address: 8058F2DE */
+/* 8058E880  88 05 00 32 */	lbz r0, 0x32(r5)
 /* 8058E884  98 01 00 09 */	stb r0, 9(r1)
-/* 8058E888  88 05 00 33 */	lbz r0, 0x33(r5)	/* effective address: 8058F2DF */
+/* 8058E888  88 05 00 33 */	lbz r0, 0x33(r5)
 /* 8058E88C  98 01 00 0A */	stb r0, 0xa(r1)
 /* 8058E890  88 1E 06 F9 */	lbz r0, 0x6f9(r30)
 /* 8058E894  28 00 00 00 */	cmplwi r0, 0

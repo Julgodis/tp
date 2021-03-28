@@ -36,8 +36,8 @@ lbl_8054D910:
 /* 8054D93C  88 1F 09 9A */	lbz r0, 0x99a(r31)
 /* 8054D940  28 00 00 01 */	cmplwi r0, 1
 /* 8054D944  40 82 00 1C */	bne lbl_8054D960
-/* 8054D948  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8054D94C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8054D948  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8054D94C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8054D950  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8054D954  4B AF 4B 14 */	b reset__14dEvt_control_cFv
 /* 8054D958  38 00 00 03 */	li r0, 3

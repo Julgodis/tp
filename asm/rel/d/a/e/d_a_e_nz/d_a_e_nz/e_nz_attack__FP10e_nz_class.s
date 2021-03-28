@@ -90,7 +90,7 @@ lbl_8072A16C:
 /* 8072A190  B0 1D 05 B4 */	sth r0, 0x5b4(r29)
 /* 8072A194  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 8072A198  38 63 C4 34 */	addi r3, r3, l_HIO@l
-/* 8072A19C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8072C444 */
+/* 8072A19C  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8072A1A0  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 8072A1A4  C0 1F 00 30 */	lfs f0, 0x30(r31)
 /* 8072A1A8  D0 1D 05 DC */	stfs f0, 0x5dc(r29)
@@ -419,7 +419,7 @@ lbl_8072A5E4:
 /* 8072A630  B0 DD 04 DC */	sth r6, 0x4dc(r29)
 /* 8072A634  3C 60 80 73 */	lis r3, data_8072C454@ha
 /* 8072A638  38 A3 C4 54 */	addi r5, r3, data_8072C454@l
-/* 8072A63C  88 85 00 00 */	lbz r4, 0(r5)	/* effective address: 8072C454 */
+/* 8072A63C  88 85 00 00 */	lbz r4, 0(r5)
 /* 8072A640  3C 60 80 73 */	lis r3, stick_bit@ha
 /* 8072A644  38 63 C2 84 */	addi r3, r3, stick_bit@l
 /* 8072A648  88 1D 06 AC */	lbz r0, 0x6ac(r29)
@@ -427,7 +427,7 @@ lbl_8072A5E4:
 /* 8072A650  7C 63 02 14 */	add r3, r3, r0
 /* 8072A654  88 03 FF FF */	lbz r0, -1(r3)
 /* 8072A658  7C 80 00 78 */	andc r0, r4, r0
-/* 8072A65C  98 05 00 00 */	stb r0, 0(r5)	/* effective address: 8072C454 */
+/* 8072A65C  98 05 00 00 */	stb r0, 0(r5)
 /* 8072A660  98 DD 06 AC */	stb r6, 0x6ac(r29)
 lbl_8072A664:
 /* 8072A664  7F C3 F3 78 */	mr r3, r30

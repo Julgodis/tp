@@ -18,7 +18,7 @@ lbl_80668370:
 /* 80668378  41 82 00 30 */	beq lbl_806683A8
 /* 8066837C  3C 60 80 67 */	lis r3, target_info_count@ha
 /* 80668380  38 83 F2 F8 */	addi r4, r3, target_info_count@l
-/* 80668384  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8066F2F8 */
+/* 80668384  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80668388  2C 05 00 05 */	cmpwi r5, 5
 /* 8066838C  40 80 00 1C */	bge lbl_806683A8
 /* 80668390  54 A0 10 3A */	slwi r0, r5, 2

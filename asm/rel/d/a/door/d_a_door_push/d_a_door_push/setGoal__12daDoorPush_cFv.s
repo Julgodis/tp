@@ -35,8 +35,8 @@ lbl_80678C1C:
 /* 80678C3C  38 81 00 08 */	addi r4, r1, 8
 /* 80678C40  7C 85 23 78 */	mr r5, r4
 /* 80678C44  4B CC E1 28 */	b PSMTXMultVec
-/* 80678C48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80678C4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80678C48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80678C4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80678C50  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80678C54  38 81 00 08 */	addi r4, r1, 8
 /* 80678C58  4B 9C F7 6C */	b setGoal__16dEvent_manager_cFP4cXyz

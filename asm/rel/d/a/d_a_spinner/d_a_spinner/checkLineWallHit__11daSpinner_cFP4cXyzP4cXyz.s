@@ -7,8 +7,8 @@ lbl_804D36F4:
 /* 804D3708  38 7F 08 24 */	addi r3, r31, 0x824
 /* 804D370C  7F E6 FB 78 */	mr r6, r31
 /* 804D3710  4B BA 46 54 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 804D3714  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D3718  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804D3714  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D3718  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804D371C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804D3720  38 9F 08 24 */	addi r4, r31, 0x824
 /* 804D3724  4B BA 0C 90 */	b LineCross__4cBgSFP11cBgS_LinChk

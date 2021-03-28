@@ -13,7 +13,7 @@ lbl_80CB21D8:
 /* 80CB2204  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80CB2208  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CB220C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CB2210  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CB2210  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB2214  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CB2218  38 BF 05 C4 */	addi r5, r31, 0x5c4
 /* 80CB221C  38 C0 00 00 */	li r6, 0
@@ -27,13 +27,13 @@ lbl_80CB21D8:
 /* 80CB223C  4B 5F 97 48 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80CB2240  3C 60 80 CB */	lis r3, l_HIO@ha
 /* 80CB2244  38 63 28 4C */	addi r3, r3, l_HIO@l
-/* 80CB2248  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80CB2854 */
+/* 80CB2248  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CB224C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80CB2250  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80CB2254  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80CB2258  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB225C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CB2260  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80CB2258  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB225C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CB2260  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80CB2264  38 80 00 00 */	li r4, 0
 /* 80CB2268  90 81 00 08 */	stw r4, 8(r1)
 /* 80CB226C  38 00 FF FF */	li r0, -1

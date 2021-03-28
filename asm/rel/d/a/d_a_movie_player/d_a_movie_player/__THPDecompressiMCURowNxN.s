@@ -6,8 +6,8 @@ lbl_80874B38:
 /* 80874B48  4B AE D6 84 */	b _savegpr_25
 /* 80874B4C  3C 60 80 88 */	lis r3, lit_1109@ha
 /* 80874B50  3B E3 95 A0 */	addi r31, r3, lit_1109@l
-/* 80874B54  80 7F 06 24 */	lwz r3, 0x624(r31)	/* effective address: 80879BC4 */
-/* 80874B58  A3 43 06 92 */	lhz r26, 0x692(r3)	/* effective address: 80880692 */
+/* 80874B54  80 7F 06 24 */	lwz r3, 0x624(r31)
+/* 80874B58  A3 43 06 92 */	lhz r26, 0x692(r3)
 /* 80874B5C  38 60 00 03 */	li r3, 3
 /* 80874B60  4B AC 6D 84 */	b LCQueueWait
 /* 80874B64  3B 60 00 00 */	li r27, 0

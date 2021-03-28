@@ -8,7 +8,7 @@ lbl_80A789D8:
 /* 80A789F0  3C 60 80 A8 */	lis r3, m__17daNpc_Moi_Param_c@ha
 /* 80A789F4  3B E3 AE F0 */	addi r31, r3, m__17daNpc_Moi_Param_c@l
 /* 80A789F8  38 7F 00 00 */	addi r3, r31, 0
-/* 80A789FC  AB 83 00 98 */	lha r28, 0x98(r3)	/* effective address: 80A7AF88 */
+/* 80A789FC  AB 83 00 98 */	lha r28, 0x98(r3)
 /* 80A78A00  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 80A78A04  2C 00 00 02 */	cmpwi r0, 2
 /* 80A78A08  41 82 00 D4 */	beq lbl_80A78ADC

@@ -74,11 +74,11 @@ lbl_805E5314:
 lbl_805E5318:
 /* 805E5318  7F 63 DB 78 */	mr r3, r27
 /* 805E531C  4B FF FE 75 */	bl AttentionChk__8daB_GG_cFv
-/* 805E5320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E5324  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 805E5328  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 805E5320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E5324  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 805E5328  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 /* 805E532C  7F 64 DB 78 */	mr r4, r27
-/* 805E5330  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 805E5330  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 805E5334  81 8C 00 EC */	lwz r12, 0xec(r12)
 /* 805E5338  7D 89 03 A6 */	mtctr r12
 /* 805E533C  4E 80 04 21 */	bctrl 

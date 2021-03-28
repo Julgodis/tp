@@ -6,7 +6,7 @@ lbl_80D674B4:
 /* 80D674C4  7C 7F 1B 78 */	mr r31, r3
 /* 80D674C8  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80D674CC  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80D674D0  80 63 00 34 */	lwz r3, 0x34(r3)	/* effective address: 803DD31C */
+/* 80D674D0  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 80D674D4  54 60 05 EF */	rlwinm. r0, r3, 0, 0x17, 0x17
 /* 80D674D8  40 82 00 0C */	bne lbl_80D674E4
 /* 80D674DC  54 60 04 E7 */	rlwinm. r0, r3, 0, 0x13, 0x13
@@ -16,7 +16,7 @@ lbl_80D674E4:
 /* 80D674E8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D674EC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D674F0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D674F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D674F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D674F8  38 81 00 08 */	addi r4, r1, 8
 /* 80D674FC  38 A0 00 00 */	li r5, 0
 /* 80D67500  38 C0 00 00 */	li r6, 0

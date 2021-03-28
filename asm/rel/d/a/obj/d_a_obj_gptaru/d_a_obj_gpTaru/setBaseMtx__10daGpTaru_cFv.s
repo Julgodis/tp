@@ -6,11 +6,11 @@ lbl_8057D1F8:
 /* 8057D208  7C 7F 1B 78 */	mr r31, r3
 /* 8057D20C  3C 60 80 58 */	lis r3, l_HIO@ha
 /* 8057D210  38 63 F8 E4 */	addi r3, r3, l_HIO@l
-/* 8057D214  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8057F914 */
+/* 8057D214  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 8057D218  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
-/* 8057D21C  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8057F918 */
+/* 8057D21C  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8057D220  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
-/* 8057D224  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8057F91C */
+/* 8057D224  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 8057D228  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
 /* 8057D22C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8057D230  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

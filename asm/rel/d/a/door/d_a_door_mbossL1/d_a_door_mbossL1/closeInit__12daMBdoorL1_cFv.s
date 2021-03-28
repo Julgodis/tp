@@ -19,7 +19,7 @@ lbl_80675068:
 /* 806750AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806750B0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806750B4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806750B8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806750B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 806750BC  38 81 00 14 */	addi r4, r1, 0x14
 /* 806750C0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 806750C4  38 C0 00 00 */	li r6, 0
@@ -65,7 +65,7 @@ lbl_806750E4:
 /* 80675160  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80675164  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80675168  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8067516C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8067516C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80675170  38 81 00 10 */	addi r4, r1, 0x10
 /* 80675174  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80675178  38 C0 00 00 */	li r6, 0
@@ -90,7 +90,7 @@ lbl_80675198:
 /* 806751C0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 806751C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806751C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806751CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806751CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 806751D0  38 81 00 0C */	addi r4, r1, 0xc
 /* 806751D4  38 BE 05 38 */	addi r5, r30, 0x538
 /* 806751D8  38 C0 00 00 */	li r6, 0
@@ -111,7 +111,7 @@ lbl_806751F8:
 /* 80675210  90 01 00 08 */	stw r0, 8(r1)
 /* 80675214  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80675218  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8067521C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8067521C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80675220  38 81 00 08 */	addi r4, r1, 8
 /* 80675224  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80675228  38 C0 00 00 */	li r6, 0
@@ -131,8 +131,8 @@ lbl_8067524C:
 /* 80675258  7F C3 F3 78 */	mr r3, r30
 /* 8067525C  4B FF DC 15 */	bl getAnmArcName__12daMBdoorL1_cFv
 /* 80675260  7F A4 EB 78 */	mr r4, r29
-/* 80675264  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80675268  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80675264  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80675268  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8067526C  3C A5 00 02 */	addis r5, r5, 2
 /* 80675270  38 C0 00 80 */	li r6, 0x80
 /* 80675274  38 A5 C2 F8 */	addi r5, r5, -15624

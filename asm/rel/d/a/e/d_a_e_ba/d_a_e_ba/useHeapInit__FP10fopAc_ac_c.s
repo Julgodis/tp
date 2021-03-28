@@ -11,8 +11,8 @@ lbl_806817A0:
 /* 806817C4  41 82 00 8C */	beq lbl_80681850
 /* 806817C8  80 7C 05 B8 */	lwz r3, 0x5b8(r28)
 /* 806817CC  38 80 00 0A */	li r4, 0xa
-/* 806817D0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806817D4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806817D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806817D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806817D8  3F A5 00 02 */	addis r29, r5, 2
 /* 806817DC  3B BD C2 F8 */	addi r29, r29, -15624
 /* 806817E0  7F A5 EB 78 */	mr r5, r29

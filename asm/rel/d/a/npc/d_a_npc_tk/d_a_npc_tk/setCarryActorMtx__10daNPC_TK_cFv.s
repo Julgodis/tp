@@ -15,8 +15,8 @@ lbl_80B04BF8:
 /* 80B04C2C  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80B04C30  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80B04C34  7C 43 04 2E */	lfsx f2, r3, r0
-/* 80B04C38  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 80B0C1F0 */
-/* 80B04C3C  C0 1F 01 00 */	lfs f0, 0x100(r31)	/* effective address: 80B0C2C4 */
+/* 80B04C38  C0 3F 00 2C */	lfs f1, 0x2c(r31)
+/* 80B04C3C  C0 1F 01 00 */	lfs f0, 0x100(r31)
 /* 80B04C40  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80B04C44  EC 01 00 2A */	fadds f0, f1, f0
 /* 80B04C48  FC 00 00 1E */	fctiwz f0, f0
@@ -47,11 +47,11 @@ lbl_80B04C8C:
 /* 80B04CA4  4B 84 18 0C */	b PSMTXCopy
 /* 80B04CA8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B04CAC  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80B04CB0  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 803DD47C */
+/* 80B04CB0  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 80B04CB4  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80B04CB8  C0 1D 00 1C */	lfs f0, 0x1c(r29)	/* effective address: 803DD48C */
+/* 80B04CB8  C0 1D 00 1C */	lfs f0, 0x1c(r29)
 /* 80B04CBC  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80B04CC0  C0 1D 00 2C */	lfs f0, 0x2c(r29)	/* effective address: 803DD49C */
+/* 80B04CC0  C0 1D 00 2C */	lfs f0, 0x2c(r29)
 /* 80B04CC4  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80B04CC8  38 61 00 2C */	addi r3, r1, 0x2c
 /* 80B04CCC  4B 50 80 98 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -111,11 +111,11 @@ lbl_80B04D88:
 /* 80B04DA0  4B 84 17 10 */	b PSMTXCopy
 /* 80B04DA4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B04DA8  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80B04DAC  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 803DD47C */
+/* 80B04DAC  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 80B04DB0  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80B04DB4  C0 1D 00 1C */	lfs f0, 0x1c(r29)	/* effective address: 803DD48C */
+/* 80B04DB4  C0 1D 00 1C */	lfs f0, 0x1c(r29)
 /* 80B04DB8  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80B04DBC  C0 1D 00 2C */	lfs f0, 0x2c(r29)	/* effective address: 803DD49C */
+/* 80B04DBC  C0 1D 00 2C */	lfs f0, 0x2c(r29)
 /* 80B04DC0  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80B04DC4  38 61 00 2C */	addi r3, r1, 0x2c
 /* 80B04DC8  4B 50 7F 9C */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -198,11 +198,11 @@ lbl_80B04EB4:
 /* 80B04EF8  4B 84 15 B8 */	b PSMTXCopy
 /* 80B04EFC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B04F00  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B04F04  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B04F04  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 80B04F08  D0 41 00 08 */	stfs f2, 8(r1)
-/* 80B04F0C  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B04F0C  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80B04F10  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 80B04F14  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B04F14  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B04F18  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80B04F1C  D0 5D 04 D0 */	stfs f2, 0x4d0(r29)
 /* 80B04F20  D0 3D 04 D4 */	stfs f1, 0x4d4(r29)

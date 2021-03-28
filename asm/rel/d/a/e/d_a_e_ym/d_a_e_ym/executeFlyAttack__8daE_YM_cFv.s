@@ -43,14 +43,14 @@ lbl_8080F9AC:
 /* 8080F9C8  4B FF 89 61 */	bl bckSetFly__8daE_YM_cFiUcff
 /* 8080F9CC  38 00 00 01 */	li r0, 1
 /* 8080F9D0  90 1D 06 98 */	stw r0, 0x698(r29)
-/* 8080F9D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080F9D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8080F9DC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8080F9E0  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 8080F9D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080F9D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8080F9DC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8080F9E0  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8080F9E4  D0 1D 06 7C */	stfs f0, 0x67c(r29)
-/* 8080F9E8  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 80406694 */
+/* 8080F9E8  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 8080F9EC  D0 1D 06 80 */	stfs f0, 0x680(r29)
-/* 8080F9F0  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 8080F9F0  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8080F9F4  D0 1D 06 84 */	stfs f0, 0x684(r29)
 /* 8080F9F8  C0 3D 06 80 */	lfs f1, 0x680(r29)
 /* 8080F9FC  C0 1E 00 70 */	lfs f0, 0x70(r30)
@@ -130,7 +130,7 @@ lbl_8080FABC:
 /* 8080FB18  4E 80 04 21 */	bctrl 
 /* 8080FB1C  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080FB20  3B E3 5D 38 */	addi r31, r3, l_HIO@l
-/* 8080FB24  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80815D44 */
+/* 8080FB24  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 8080FB28  FC 00 00 1E */	fctiwz f0, f0
 /* 8080FB2C  D8 01 00 48 */	stfd f0, 0x48(r1)
 /* 8080FB30  80 01 00 4C */	lwz r0, 0x4c(r1)
@@ -237,7 +237,7 @@ lbl_8080FC94:
 /* 8080FCA0  38 7D 04 FC */	addi r3, r29, 0x4fc
 /* 8080FCA4  3C 80 80 81 */	lis r4, l_HIO@ha
 /* 8080FCA8  3B 84 5D 38 */	addi r28, r4, l_HIO@l
-/* 8080FCAC  C0 3C 00 18 */	lfs f1, 0x18(r28)	/* effective address: 80815D50 */
+/* 8080FCAC  C0 3C 00 18 */	lfs f1, 0x18(r28)
 /* 8080FCB0  3C 80 80 44 */	lis r4, sincosTable___5JMath@ha
 /* 8080FCB4  38 04 9A 20 */	addi r0, r4, sincosTable___5JMath@l
 /* 8080FCB8  54 BB 04 38 */	rlwinm r27, r5, 0, 0x10, 0x1c

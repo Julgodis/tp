@@ -7,9 +7,9 @@ lbl_80693074:
 /* 80693088  7C 7E 1B 78 */	mr r30, r3
 /* 8069308C  3C 80 80 69 */	lis r4, lit_3788@ha
 /* 80693090  3B E4 46 90 */	addi r31, r4, lit_3788@l
-/* 80693094  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80693098  3B 44 61 C0 */	addi r26, r4, struct_804061C0+0x0@l
-/* 8069309C  80 9A 5D AC */	lwz r4, 0x5dac(r26)	/* effective address: 8040BF6C */
+/* 80693094  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80693098  3B 44 61 C0 */	addi r26, r4, g_dComIfG_gameInfo@l
+/* 8069309C  80 9A 5D AC */	lwz r4, 0x5dac(r26)
 /* 806930A0  7C 9D 23 78 */	mr r29, r4
 /* 806930A4  4B 98 76 6C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806930A8  B0 7E 06 84 */	sth r3, 0x684(r30)
@@ -170,7 +170,7 @@ lbl_806932B8:
 /* 806932D8  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 806932DC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806932E0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806932E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806932E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 806932E8  A8 9E 06 9C */	lha r4, 0x69c(r30)
 /* 806932EC  4B 97 90 F0 */	b mDoMtx_YrotS__FPA4_fs
 /* 806932F0  38 61 00 24 */	addi r3, r1, 0x24
@@ -235,8 +235,8 @@ lbl_806933B8:
 /* 806933D0  EC 01 00 28 */	fsubs f0, f1, f0
 /* 806933D4  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 /* 806933D8  38 7E 07 0C */	addi r3, r30, 0x70c
-/* 806933DC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806933E0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806933DC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806933E0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806933E4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806933E8  4B 9E 36 C4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806933EC  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
@@ -254,7 +254,7 @@ lbl_806933B8:
 /* 8069341C  C0 3F 00 40 */	lfs f1, 0x40(r31)
 /* 80693420  3C 80 80 69 */	lis r4, l_HIO@ha
 /* 80693424  38 84 49 68 */	addi r4, r4, l_HIO@l
-/* 80693428  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80694970 */
+/* 80693428  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8069342C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80693430  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 80693434  FC 60 10 90 */	fmr f3, f2

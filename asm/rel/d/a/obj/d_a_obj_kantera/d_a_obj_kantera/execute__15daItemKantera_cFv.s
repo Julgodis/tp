@@ -8,7 +8,7 @@ lbl_80C393B0:
 /* 80C393C8  38 C3 96 DC */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80C393CC  3C 60 80 C4 */	lis r3, data_80C39860@ha
 /* 80C393D0  38 A3 98 60 */	addi r5, r3, data_80C39860@l
-/* 80C393D4  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C39860 */
+/* 80C393D4  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C393D8  7C 00 07 75 */	extsb. r0, r0
 /* 80C393DC  40 82 00 70 */	bne lbl_80C3944C
 /* 80C393E0  80 66 00 20 */	lwz r3, 0x20(r6)

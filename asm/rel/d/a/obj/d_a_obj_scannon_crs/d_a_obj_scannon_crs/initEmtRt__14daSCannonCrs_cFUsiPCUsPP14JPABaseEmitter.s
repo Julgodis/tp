@@ -26,15 +26,15 @@ lbl_80CCAB24:
 /* 80CCAB84  B0 01 00 24 */	sth r0, 0x24(r1)
 /* 80CCAB88  3C 60 80 CD */	lis r3, lit_3952@ha
 /* 80CCAB8C  3B 23 B0 AC */	addi r25, r3, lit_3952@l
-/* 80CCAB90  C0 19 00 00 */	lfs f0, 0(r25)	/* effective address: 80CCB0AC */
+/* 80CCAB90  C0 19 00 00 */	lfs f0, 0(r25)
 /* 80CCAB94  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80CCAB98  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80CCAB9C  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80CCABA0  3A E0 00 00 */	li r23, 0
 /* 80CCABA4  3B 80 00 00 */	li r28, 0
 /* 80CCABA8  3B 60 00 00 */	li r27, 0
-/* 80CCABAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCABB0  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80CCABAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCABB0  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80CCABB4  48 00 00 74 */	b lbl_80CCAC28
 lbl_80CCABB8:
 /* 80CCABB8  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)

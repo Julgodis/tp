@@ -3,11 +3,11 @@ lbl_80A6CD30:
 /* 80A6CD34  38 C4 FF CC */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80A6CD38  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80A6CD3C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80A6CD40  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80A6CD44  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80A6CD40  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A6CD44  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A6CD48  90 83 0F A8 */	stw r4, 0xfa8(r3)
 /* 80A6CD4C  90 03 0F AC */	stw r0, 0xfac(r3)
-/* 80A6CD50  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80A6CD50  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A6CD54  90 03 0F B0 */	stw r0, 0xfb0(r3)
 /* 80A6CD58  88 03 0F 8C */	lbz r0, 0xf8c(r3)
 /* 80A6CD5C  2C 00 00 05 */	cmpwi r0, 5

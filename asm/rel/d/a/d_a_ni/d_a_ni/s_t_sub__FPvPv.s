@@ -12,7 +12,7 @@ lbl_8094C4B0:
 /* 8094C4D8  40 82 00 30 */	bne lbl_8094C508
 /* 8094C4DC  3C 60 80 95 */	lis r3, target_info_count@ha
 /* 8094C4E0  38 83 16 00 */	addi r4, r3, target_info_count@l
-/* 8094C4E4  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80951600 */
+/* 8094C4E4  80 A4 00 00 */	lwz r5, 0(r4)
 /* 8094C4E8  2C 05 00 0A */	cmpwi r5, 0xa
 /* 8094C4EC  40 80 00 1C */	bge lbl_8094C508
 /* 8094C4F0  54 A0 10 3A */	slwi r0, r5, 2

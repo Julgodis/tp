@@ -41,9 +41,9 @@ lbl_80D14264:
 /* 80D14300  38 84 00 24 */	addi r4, r4, 0x24
 /* 80D14304  4B 63 21 AC */	b PSMTXCopy
 /* 80D14308  38 61 00 08 */	addi r3, r1, 8
-/* 80D1430C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D14310  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D14314  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D1430C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D14310  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D14314  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80D14318  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80D1431C  38 BF 00 08 */	addi r5, r31, 8
 /* 80D14320  4B 55 28 14 */	b __mi__4cXyzCFRC3Vec

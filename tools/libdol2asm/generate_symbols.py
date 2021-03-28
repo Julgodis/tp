@@ -69,15 +69,13 @@ def value_initialized_symbol(section: Section,
         assert section.name == ".data"
         assert symbol.size % 4 == 0
         assert len(padding_data) % 4 == 0
-        padding_values = Integer.u32_from(padding_data)
-        assert sum(padding_values) == 0
+        assert sum(padding_data) == 0
 
-        values = Integer.u32_from(data)
         return [VirtualTable.create(
             identifier,
             symbol.addr,
-            values,
-            padding_values)]
+            data,
+            padding_data)]
 
     # strings will always be in rodata
     if section.name == ".rodata":
@@ -116,20 +114,20 @@ def value_initialized_symbol(section: Section,
                 ReferenceArray.create(
                     identifier,
                     symbol.addr,
-                    Integer.u32_from(data),
-                    []),
+                    data,
+                    bytearray()),
                 ReferenceArray.create(
                     Identifier("_ctors", symbol.addr + 4, "_ctors"),
                     symbol.addr + 4,
-                    Integer.u32_from(_ctors_data),
-                    []),
+                    _ctors_data,
+                    bytearray()),
             ]
 
     if section.name == ".dtors":
         if symbol.name == "__destroy_global_chain_reference":
             assert len(data) == 4
             __destroy_global_chain_reference = ReferenceArray.create(
-                identifier, symbol.addr, Integer.u32_from(data), [])
+                identifier, symbol.addr, data, bytearray())
 
             if len(padding_data) == 0:
                 return [__destroy_global_chain_reference]
@@ -140,13 +138,13 @@ def value_initialized_symbol(section: Section,
                     Identifier('pad', symbol.addr + 4, None),
                     symbol.addr + 4,
                     padding_data,
-                    [])
+                    bytearray())
             ]
 
         elif symbol.name == "__fini_cpp_exceptions_reference":
             assert len(data) == 4
             assert len(padding_data) == 0
-            return [ReferenceArray.create(identifier, symbol.addr, Integer.u32_from(data), [])]
+            return [ReferenceArray.create(identifier, symbol.addr, data, bytearray())]
 
     if isinstance(symbol.access, FloatLoadAccess):
         is_float_constant = identifier.name and identifier.name.startswith(

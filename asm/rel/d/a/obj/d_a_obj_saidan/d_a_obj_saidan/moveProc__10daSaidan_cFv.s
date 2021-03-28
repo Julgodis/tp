@@ -6,7 +6,7 @@ lbl_80CC40A4:
 /* 80CC40B4  38 E4 45 4C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CC40B8  3C 80 80 CC */	lis r4, data_80CC4668@ha
 /* 80CC40BC  38 C4 46 68 */	addi r6, r4, data_80CC4668@l
-/* 80CC40C0  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CC4668 */
+/* 80CC40C0  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CC40C4  7C 00 07 75 */	extsb. r0, r0
 /* 80CC40C8  40 82 00 58 */	bne lbl_80CC4120
 /* 80CC40CC  80 87 00 20 */	lwz r4, 0x20(r7)

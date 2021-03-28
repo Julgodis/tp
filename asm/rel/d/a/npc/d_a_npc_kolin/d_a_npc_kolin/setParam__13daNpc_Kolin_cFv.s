@@ -10,10 +10,10 @@ lbl_80554F48:
 /* 80554F68  48 00 03 75 */	bl srchActors__13daNpc_Kolin_cFv
 /* 80554F6C  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 80554F70  38 63 A5 B4 */	addi r3, r3, m__19daNpc_Kolin_Param_c@l
-/* 80554F74  AB C3 00 48 */	lha r30, 0x48(r3)	/* effective address: 8055A5FC */
-/* 80554F78  AB A3 00 4A */	lha r29, 0x4a(r3)	/* effective address: 8055A5FE */
-/* 80554F7C  AB 83 00 4C */	lha r28, 0x4c(r3)	/* effective address: 8055A600 */
-/* 80554F80  AB 63 00 4E */	lha r27, 0x4e(r3)	/* effective address: 8055A602 */
+/* 80554F74  AB C3 00 48 */	lha r30, 0x48(r3)
+/* 80554F78  AB A3 00 4A */	lha r29, 0x4a(r3)
+/* 80554F7C  AB 83 00 4C */	lha r28, 0x4c(r3)
+/* 80554F80  AB 63 00 4E */	lha r27, 0x4e(r3)
 /* 80554F84  88 1F 0F 84 */	lbz r0, 0xf84(r31)
 /* 80554F88  28 00 00 03 */	cmplwi r0, 3
 /* 80554F8C  40 82 00 18 */	bne lbl_80554FA4
@@ -34,10 +34,10 @@ lbl_80554FA4:
 /* 80554FC4  3B 80 00 03 */	li r28, 3
 /* 80554FC8  3B 60 00 06 */	li r27, 6
 lbl_80554FCC:
-/* 80554FCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80554FD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80554FD4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80554FD8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80554FCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80554FD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80554FD4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80554FD8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80554FDC  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 80554FE0  7D 89 03 A6 */	mtctr r12
 /* 80554FE4  4E 80 04 21 */	bctrl 
@@ -74,11 +74,11 @@ lbl_80555010:
 lbl_80555058:
 /* 80555058  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 8055505C  38 63 A5 B4 */	addi r3, r3, m__19daNpc_Kolin_Param_c@l
-/* 80555060  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8055A5BC */
+/* 80555060  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80555064  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80555068  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 8055506C  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 80555070  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8055A5C4 */
+/* 80555070  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80555074  FC 00 00 1E */	fctiwz f0, f0
 /* 80555078  D8 01 00 08 */	stfd f0, 8(r1)
 /* 8055507C  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -94,26 +94,26 @@ lbl_80555058:
 lbl_805550A4:
 /* 805550A4  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 805550A8  38 63 A5 B4 */	addi r3, r3, m__19daNpc_Kolin_Param_c@l
-/* 805550AC  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8055A5C8 */
+/* 805550AC  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 805550B0  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 805550B4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8055A5D0 */
+/* 805550B4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805550B8  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 805550BC  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8055A604 */
+/* 805550BC  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 805550C0  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 805550C4  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 805550C8  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 805550CC  4B B2 0E 74 */	b SetWallR__12dBgS_AcchCirFf
 /* 805550D0  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 805550D4  38 63 A5 B4 */	addi r3, r3, m__19daNpc_Kolin_Param_c@l
-/* 805550D8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8055A5CC */
+/* 805550D8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 805550DC  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 805550E0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8055A5C0 */
+/* 805550E0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805550E4  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 805550E8  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 8055A620 */
+/* 805550E8  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 805550EC  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 805550F0  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 8055A5F8 */
+/* 805550F0  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 805550F4  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 805550F8  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8055A5B8 */
+/* 805550F8  C0 03 00 04 */	lfs f0, 4(r3)
 /* 805550FC  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80555100  39 61 00 30 */	addi r11, r1, 0x30
 /* 80555104  4B E0 D1 1C */	b _restgpr_27

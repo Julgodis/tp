@@ -27,11 +27,11 @@ lbl_80B308EC:
 /* 80B30910  90 BE 0E 84 */	stw r5, 0xe84(r30)
 /* 80B30914  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B30918  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B3091C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B30920  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B3091C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B30920  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B30924  90 7E 0D CC */	stw r3, 0xdcc(r30)
 /* 80B30928  90 1E 0D D0 */	stw r0, 0xdd0(r30)
-/* 80B3092C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B3092C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B30930  90 1E 0D D4 */	stw r0, 0xdd4(r30)
 /* 80B30934  38 00 FF FF */	li r0, -1
 /* 80B30938  B0 1E 0E 90 */	sth r0, 0xe90(r30)
@@ -110,11 +110,11 @@ lbl_80B309FC:
 /* 80B30A54  90 1E 0E 7C */	stw r0, 0xe7c(r30)
 /* 80B30A58  3C 60 80 B4 */	lis r3, lit_4776@ha
 /* 80B30A5C  38 83 27 68 */	addi r4, r3, lit_4776@l
-/* 80B30A60  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B42768 */
-/* 80B30A64  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B4276C */
+/* 80B30A60  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B30A64  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B30A68  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80B30A6C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B30A70  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B42770 */
+/* 80B30A70  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B30A74  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B30A78  7F C3 F3 78 */	mr r3, r30
 /* 80B30A7C  38 81 00 14 */	addi r4, r1, 0x14
@@ -123,11 +123,11 @@ lbl_80B309FC:
 lbl_80B30A88:
 /* 80B30A88  3C 60 80 B4 */	lis r3, lit_4779@ha
 /* 80B30A8C  38 83 27 74 */	addi r4, r3, lit_4779@l
-/* 80B30A90  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B42774 */
-/* 80B30A94  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B42778 */
+/* 80B30A90  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B30A94  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B30A98  90 61 00 08 */	stw r3, 8(r1)
 /* 80B30A9C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B30AA0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B4277C */
+/* 80B30AA0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B30AA4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B30AA8  7F C3 F3 78 */	mr r3, r30
 /* 80B30AAC  38 81 00 08 */	addi r4, r1, 8

@@ -6,7 +6,7 @@ lbl_80D186C0:
 /* 80D186D0  7C 7F 1B 78 */	mr r31, r3
 /* 80D186D4  3C 60 80 D2 */	lis r3, l_HIO@ha
 /* 80D186D8  38 63 90 B4 */	addi r3, r3, l_HIO@l
-/* 80D186DC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D190BC */
+/* 80D186DC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D186E0  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80D186E4  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D186E8  7C 03 07 74 */	extsb r3, r0
@@ -17,7 +17,7 @@ lbl_80D186C0:
 /* 80D186FC  90 01 00 08 */	stw r0, 8(r1)
 /* 80D18700  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D18704  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D18708  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D18708  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D1870C  38 81 00 08 */	addi r4, r1, 8
 /* 80D18710  38 BF 04 A8 */	addi r5, r31, 0x4a8
 /* 80D18714  38 C0 00 00 */	li r6, 0

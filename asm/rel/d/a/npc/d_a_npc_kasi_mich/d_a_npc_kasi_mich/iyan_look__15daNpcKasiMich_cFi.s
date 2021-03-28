@@ -42,11 +42,11 @@ lbl_80A2910C:
 /* 80A29120  40 82 00 2C */	bne lbl_80A2914C
 /* 80A29124  3C 80 80 A3 */	lis r4, lit_5261@ha
 /* 80A29128  38 A4 A6 48 */	addi r5, r4, lit_5261@l
-/* 80A2912C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A2A648 */
-/* 80A29130  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A2A64C */
+/* 80A2912C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A29130  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A29134  90 81 00 08 */	stw r4, 8(r1)
 /* 80A29138  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A2913C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A2A650 */
+/* 80A2913C  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A29140  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A29144  38 81 00 08 */	addi r4, r1, 8
 /* 80A29148  4B FF E9 3D */	bl setAction__15daNpcKasiMich_cFM15daNpcKasiMich_cFPCvPvi_i

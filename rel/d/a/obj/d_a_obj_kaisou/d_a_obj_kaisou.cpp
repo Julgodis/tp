@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjKaisou_c {
@@ -125,34 +125,31 @@ struct Z2SoundObjSimple {
 
 static void JointCallBack(J3DJoint*, int); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObjKaisou_Create(fopAc_ac_c*); // 2
-static void daObjKaisou_Delete(daObjKaisou_c*); // 2
-static void daObjKaisou_Draw(daObjKaisou_c*); // 2
+void daObjKaisou_Create(fopAc_ac_c*); // 2
+void daObjKaisou_Delete(daObjKaisou_c*); // 2
+void daObjKaisou_Draw(daObjKaisou_c*); // 2
 static void daObjKaisou_Execute(daObjKaisou_c*); // 2
-static bool daObjKaisou_IsDelete(daObjKaisou_c*); // 2
+bool daObjKaisou_IsDelete(daObjKaisou_c*); // 2
 
 extern "C" void ctrlJoint__13daObjKaisou_cFP8J3DJointP8J3DModel(); // 1
 extern "C" static void JointCallBack__FP8J3DJointi(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjKaisou_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjKaisou_Delete__FP13daObjKaisou_c(); // 1
+extern "C" void daObjKaisou_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjKaisou_Delete__FP13daObjKaisou_c(); // 1
 extern "C" void initCcCylinder__13daObjKaisou_cFv(); // 1
 extern "C" void setCcCylinder__13daObjKaisou_cFv(); // 1
 extern "C" void ObjHit__13daObjKaisou_cFv(); // 1
 extern "C" void Execute__13daObjKaisou_cFv(); // 1
 extern "C" void Delete__13daObjKaisou_cFv(); // 1
 extern "C" void setBaseMtx__13daObjKaisou_cFv(); // 1
-extern "C" static void daObjKaisou_Draw__FP13daObjKaisou_c(); // 1
+extern "C" void daObjKaisou_Draw__FP13daObjKaisou_c(); // 1
 extern "C" static void daObjKaisou_Execute__FP13daObjKaisou_c(); // 1
 extern "C" void create__13daObjKaisou_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static bool daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
-extern "C" extern u8 const lit_3964[8];
-extern "C" extern u8 const lit_3965[8];
-extern "C" extern u8 const lit_3966[8];
-extern "C" extern u8 const lit_3996[8];
+extern "C" bool daObjKaisou_IsDelete__FP13daObjKaisou_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjKaisou_Method[8];
 extern "C" extern void* g_profile_Obj_Kaisou[12];
 
 // 
@@ -211,26 +208,17 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 struct_8040AFC8[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 
@@ -245,7 +233,7 @@ SECTION_RODATA static u32 const lit_3806 = 0x3F333333;
 /* 80C34EF0-80C34EF4 0004+00 s=1 e=0 z=0  None .rodata    @3807                                                        */
 SECTION_RODATA static u32 const lit_3807 = 0x3F000000;
 
-/* 80C34EF4-80C34EFC 0008+00 s=1 e=0 z=0  None .rodata    @3809                                                        */
+/* 80C34EF4-80C34EFC 0008+00 s=3 e=0 z=0  None .rodata    @3809                                                        */
 SECTION_RODATA static u8 const lit_3809[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -287,18 +275,18 @@ SECTION_RODATA static u8 const lit_3963[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C34F44-80C34F4C 0008+00 s=0 e=0 z=0  None .rodata    @3964                                                        */
-SECTION_RODATA u8 const lit_3964[8] = {
+/* 80C34F44-80C34F4C 0008+00 s=1 e=0 z=0  None .rodata    @3964                                                        */
+SECTION_RODATA static u8 const lit_3964[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C34F4C-80C34F54 0008+00 s=0 e=0 z=0  None .rodata    @3965                                                        */
-SECTION_RODATA u8 const lit_3965[8] = {
+/* 80C34F4C-80C34F54 0008+00 s=1 e=0 z=0  None .rodata    @3965                                                        */
+SECTION_RODATA static u8 const lit_3965[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C34F54-80C34F5C 0008+00 s=0 e=0 z=0  None .rodata    @3966                                                        */
-SECTION_RODATA u8 const lit_3966[8] = {
+/* 80C34F54-80C34F5C 0008+00 s=1 e=0 z=0  None .rodata    @3966                                                        */
+SECTION_RODATA static u8 const lit_3966[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -321,8 +309,8 @@ SECTION_RODATA static u32 const lit_3995[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80C34F74-80C34F7C 0008+00 s=0 e=0 z=0  None .rodata    @3996                                                        */
-SECTION_RODATA u8 const lit_3996[8] = {
+/* 80C34F74-80C34F7C 0008+00 s=1 e=0 z=0  None .rodata    @3996                                                        */
+SECTION_RODATA static u8 const lit_3996[8] = {
 	0x3F, 0xF8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -353,7 +341,7 @@ SECTION_RODATA static u32 const lit_4161 = 0x447A0000;
 /* 80C34F9C-80C34FA0 0004+00 s=1 e=0 z=0  None .rodata    @4162                                                        */
 SECTION_RODATA static u32 const lit_4162 = 0x43FA0000;
 
-/* 80C34FA0-80C34FBE 001E+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C34FA0-80C34FBE 001E+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -363,7 +351,7 @@ SECTION_DEAD char const* const stringBase_80C34FB6 = "D_MN01A";
 #pragma pop
 
 /* 80C34FC0-80C34FC4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80C342D4-80C3434C 0078+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
 #pragma push
@@ -376,22 +364,22 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C3434C-80C3436C 0020+00 s=1 e=0 z=0  None .text      daObjKaisou_Create__FP10fopAc_ac_c                           */
+/* 80C3434C-80C3436C 0020+00 s=0 e=0 z=0  None .text      daObjKaisou_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKaisou_Create(fopAc_ac_c* param_0) {
+asm void daObjKaisou_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C3436C-80C34390 0024+00 s=1 e=0 z=0  None .text      daObjKaisou_Delete__FP13daObjKaisou_c                        */
+/* 80C3436C-80C34390 0024+00 s=0 e=0 z=0  None .text      daObjKaisou_Delete__FP13daObjKaisou_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKaisou_Delete(daObjKaisou_c* param_0) {
+asm void daObjKaisou_Delete(daObjKaisou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Delete__FP13daObjKaisou_c.s"
 }
@@ -423,38 +411,38 @@ asm void daObjKaisou_c::setCcCylinder() {
 /* ############################################################################################## */
 /* 80C34FC4-80C35038 0074+00 s=1 e=0 z=0  None .data      @3975                                                        */
 SECTION_DATA static void* lit_3975[29] = {
-	/* 0    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
-	/* 1    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
-	/* 2    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 3    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
-	/* 4    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 5    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 6    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 7    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 8    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 9    */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 10   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 11   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 12   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 13   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 14   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 15   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 16   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 17   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 18   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
-	/* 19   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x360),
-	/* 20   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 21   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 22   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 23   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 24   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 25   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 26   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 27   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x374),
-	/* 28   */ (void*)(((char*)ObjHit__13daObjKaisou_cFv)+0x34C),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C34438-80C34824 03EC+00 s=2 e=0 z=0  None .text      ObjHit__13daObjKaisou_cFv                                    */
+/* 80C34438-80C34824 03EC+00 s=1 e=0 z=0  None .text      ObjHit__13daObjKaisou_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,18 +486,18 @@ asm void daObjKaisou_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C34B34-80C34BB8 0084+00 s=1 e=0 z=0  None .text      daObjKaisou_Draw__FP13daObjKaisou_c                          */
+/* 80C34B34-80C34BB8 0084+00 s=0 e=0 z=0  None .text      daObjKaisou_Draw__FP13daObjKaisou_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjKaisou_Draw(daObjKaisou_c* param_0) {
+asm void daObjKaisou_Draw(daObjKaisou_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_kaisou/d_a_obj_kaisou/daObjKaisou_Draw__FP13daObjKaisou_c.s"
 }
 #pragma pop
 
 
-/* 80C34BB8-80C34BD8 0020+00 s=2 e=0 z=0  None .text      daObjKaisou_Execute__FP13daObjKaisou_c                       */
+/* 80C34BB8-80C34BD8 0020+00 s=1 e=0 z=0  None .text      daObjKaisou_Execute__FP13daObjKaisou_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,46 +509,46 @@ asm static void daObjKaisou_Execute(daObjKaisou_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C35038-80C35058 0020+00 s=1 e=0 z=0  None .data      l_daObjKaisou_Method                                         */
-SECTION_DATA static void* l_daObjKaisou_Method[8] = {
-	/* 0    */ (void*)daObjKaisou_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjKaisou_Delete__FP13daObjKaisou_c,
-	/* 2    */ (void*)daObjKaisou_Execute__FP13daObjKaisou_c,
-	/* 3    */ (void*)daObjKaisou_IsDelete__FP13daObjKaisou_c,
-	/* 4    */ (void*)daObjKaisou_Draw__FP13daObjKaisou_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C35038-80C35058 0020+00 s=0 e=0 z=0  None .data      l_daObjKaisou_Method                                         */
+SECTION_DATA void* l_daObjKaisou_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C35058-80C35088 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Kaisou                                         */
+/* 80C35058-80C35088 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Kaisou                                         */
 SECTION_DATA void* g_profile_Obj_Kaisou[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x006A0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000079C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01CC0000,
-	/* 9    */ (void*)&l_daObjKaisou_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x006A0000,
+	(void*)NULL,
+	(void*)0x0000079C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01CC0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80C35088-80C35094 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C35094-80C350A0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C34BD8-80C34E4C 0274+00 s=1 e=0 z=0  None .text      create__13daObjKaisou_cFv                                    */
@@ -574,7 +562,7 @@ asm void daObjKaisou_c::create() {
 #pragma pop
 
 
-/* 80C34E4C-80C34E94 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C34E4C-80C34E94 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,7 +573,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C34E94-80C34EDC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C34E94-80C34EDC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,8 +584,8 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C34EDC-80C34EE4 0008+00 s=1 e=0 z=0  None .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
-static bool daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
+/* 80C34EDC-80C34EE4 0008+00 s=0 e=0 z=0  None .text      daObjKaisou_IsDelete__FP13daObjKaisou_c                      */
+bool daObjKaisou_IsDelete(daObjKaisou_c* param_0) {
 	return true;
 }
 

@@ -108,7 +108,7 @@ lbl_807837D0:
 /* 807837F4  C0 3F 00 80 */	lfs f1, 0x80(r31)
 /* 807837F8  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 807837FC  38 C6 4F 84 */	addi r6, r6, l_HIO@l
-/* 80783800  C0 46 00 28 */	lfs f2, 0x28(r6)	/* effective address: 80784FAC */
+/* 80783800  C0 46 00 28 */	lfs f2, 0x28(r6)
 /* 80783804  4B FF E2 49 */	bl SetAnm__8daE_SB_cFiiff
 /* 80783808  3C 60 00 07 */	lis r3, 0x0007 /* 0x000702AC@ha */
 /* 8078380C  38 03 02 AC */	addi r0, r3, 0x02AC /* 0x000702AC@l */

@@ -11,7 +11,7 @@ lbl_804E5220:
 /* 804E5244  38 63 00 60 */	addi r3, r3, 0x60
 /* 804E5248  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804E524C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804E5250  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804E5250  80 84 00 00 */	lwz r4, 0(r4)
 /* 804E5254  4B E6 12 5C */	b PSMTXCopy
 /* 804E5258  3C 60 80 4F */	lis r3, lit_3790@ha
 /* 804E525C  C0 03 E8 B0 */	lfs f0, lit_3790@l(r3)
@@ -33,8 +33,8 @@ lbl_804E5220:
 /* 804E529C  54 04 46 3E */	srwi r4, r0, 0x18
 /* 804E52A0  2C 04 00 FF */	cmpwi r4, 0xff
 /* 804E52A4  41 82 00 18 */	beq lbl_804E52BC
-/* 804E52A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E52AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804E52A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E52AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E52B0  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 804E52B4  7C 05 07 74 */	extsb r5, r0
 /* 804E52B8  4B B4 FF 48 */	b onSwitch__10dSv_info_cFii

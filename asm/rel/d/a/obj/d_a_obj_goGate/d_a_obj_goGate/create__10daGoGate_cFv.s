@@ -51,8 +51,8 @@ lbl_80BFD8CC:
 /* 80BFD8E4  4B 41 CC 94 */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
 /* 80BFD8E8  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 80BFD8EC  98 1D 05 AD */	stb r0, 0x5ad(r29)
-/* 80BFD8F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BFD8F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BFD8F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BFD8F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BFD8F8  88 9D 05 AD */	lbz r4, 0x5ad(r29)
 /* 80BFD8FC  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 80BFD900  7C 05 07 74 */	extsb r5, r0

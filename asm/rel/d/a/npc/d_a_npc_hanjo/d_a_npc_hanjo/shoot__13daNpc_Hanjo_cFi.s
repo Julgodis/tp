@@ -13,9 +13,9 @@ lbl_809FB90C:
 /* 809FB938  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FB93C  3B E3 06 00 */	addi r31, r3, m__19daNpc_Hanjo_Param_c@l
 /* 809FB940  38 7F 00 00 */	addi r3, r31, 0
-/* 809FB944  C3 E3 00 98 */	lfs f31, 0x98(r3)	/* effective address: 80A00698 */
-/* 809FB948  C0 3F 01 8C */	lfs f1, 0x18c(r31)	/* effective address: 80A0078C */
-/* 809FB94C  C0 03 00 9C */	lfs f0, 0x9c(r3)	/* effective address: 80A0069C */
+/* 809FB944  C3 E3 00 98 */	lfs f31, 0x98(r3)
+/* 809FB948  C0 3F 01 8C */	lfs f1, 0x18c(r31)
+/* 809FB94C  C0 03 00 9C */	lfs f0, 0x9c(r3)
 /* 809FB950  EC 01 00 32 */	fmuls f0, f1, f0
 /* 809FB954  FC 00 00 1E */	fctiwz f0, f0
 /* 809FB958  D8 01 00 18 */	stfd f0, 0x18(r1)

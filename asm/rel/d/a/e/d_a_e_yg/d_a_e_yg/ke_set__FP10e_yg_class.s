@@ -27,7 +27,7 @@ lbl_807FA8C8:
 /* 807FA8E4  38 63 00 30 */	addi r3, r3, 0x30
 /* 807FA8E8  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807FA8EC  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807FA8F0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807FA8F0  80 84 00 00 */	lwz r4, 0(r4)
 /* 807FA8F4  4B B4 BB BC */	b PSMTXCopy
 /* 807FA8F8  3B C0 00 00 */	li r30, 0
 /* 807FA8FC  3B 80 00 00 */	li r28, 0

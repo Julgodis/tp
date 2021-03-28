@@ -9,7 +9,7 @@ lbl_809B04E0:
 /* 809B04FC  7C 7E 1B 78 */	mr r30, r3
 /* 809B0500  3C 80 80 9B */	lis r4, lit_3762@ha
 /* 809B0504  3B E4 18 48 */	addi r31, r4, lit_3762@l
-/* 809B0508  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 809B184C */
+/* 809B0508  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 809B050C  38 C0 01 00 */	li r6, 0x100
 /* 809B0510  A8 03 05 D0 */	lha r0, 0x5d0(r3)
 /* 809B0514  2C 00 00 01 */	cmpwi r0, 1

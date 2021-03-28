@@ -13,7 +13,7 @@ lbl_806F63FC:
 /* 806F6428  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 806F642C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 806F6430  38 7F 05 2C */	addi r3, r31, 0x52c
-/* 806F6434  C0 3E 00 00 */	lfs f1, 0(r30)	/* effective address: 806F7B6C */
+/* 806F6434  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 806F6438  FC 40 08 90 */	fmr f2, f1
 /* 806F643C  4B B7 96 44 */	b cLib_addCalc0__FPfff
 /* 806F6440  A8 1F 06 94 */	lha r0, 0x694(r31)

@@ -8,8 +8,8 @@ lbl_8064DC04:
 /* 8064DC1C  3C 60 80 65 */	lis r3, stringBase0@ha
 /* 8064DC20  38 63 EE 60 */	addi r3, r3, stringBase0@l
 /* 8064DC24  38 80 00 48 */	li r4, 0x48
-/* 8064DC28  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8064DC2C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8064DC28  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8064DC2C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8064DC30  3F C5 00 02 */	addis r30, r5, 2
 /* 8064DC34  3B DE C2 F8 */	addi r30, r30, -15624
 /* 8064DC38  7F C5 F3 78 */	mr r5, r30

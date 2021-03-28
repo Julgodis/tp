@@ -178,8 +178,8 @@ lbl_80A9E0E8:
 /* 80A9E0F8  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 80A9E0FC  A0 1F 0E 30 */	lhz r0, 0xe30(r31)
 /* 80A9E100  B0 1F 0F DC */	sth r0, 0xfdc(r31)
-/* 80A9E104  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A9E108  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A9E104  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A9E108  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A9E10C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80A9E110  7F E4 FB 78 */	mr r4, r31
 /* 80A9E114  3C A0 80 04 */	lis r5, dEv_defaultSkipProc__FPvi@ha

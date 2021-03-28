@@ -14,7 +14,7 @@ lbl_806C06DC:
 /* 806C070C  4B 94 C8 38 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 806C0710  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806C0714  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806C0718  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 806C1BBC */
+/* 806C0718  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 806C071C  FC 40 08 90 */	fmr f2, f1
 /* 806C0720  FC 60 08 90 */	fmr f3, f1
 /* 806C0724  4B 94 C7 14 */	b scaleM__14mDoMtx_stack_cFfff

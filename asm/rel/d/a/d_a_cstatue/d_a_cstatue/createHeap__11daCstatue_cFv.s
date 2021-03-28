@@ -13,8 +13,8 @@ lbl_806636EC:
 /* 80663718  7F 9C 02 14 */	add r28, r28, r0
 /* 8066371C  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80663720  A0 9C 00 02 */	lhz r4, 2(r28)
-/* 80663724  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80663728  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80663724  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80663728  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8066372C  3F A5 00 02 */	addis r29, r5, 2
 /* 80663730  3B BD C2 F8 */	addi r29, r29, -15624
 /* 80663734  7F A5 EB 78 */	mr r5, r29

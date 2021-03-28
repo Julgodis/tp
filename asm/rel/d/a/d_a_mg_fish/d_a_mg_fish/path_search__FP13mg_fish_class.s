@@ -9,7 +9,7 @@ lbl_8052BFF8:
 /* 8052C014  7C 7B 1B 78 */	mr r27, r3
 /* 8052C018  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 8052C01C  3B C3 61 68 */	addi r30, r3, lit_3679@l
-/* 8052C020  C3 FE 00 84 */	lfs f31, 0x84(r30)	/* effective address: 805361EC */
+/* 8052C020  C3 FE 00 84 */	lfs f31, 0x84(r30)
 /* 8052C024  38 60 00 00 */	li r3, 0
 /* 8052C028  7C 65 1B 78 */	mr r5, r3
 /* 8052C02C  38 81 00 30 */	addi r4, r1, 0x30

@@ -251,11 +251,11 @@ lbl_806EE750:
 /* 806EE770  4B C5 7D 40 */	b PSMTXCopy
 /* 806EE774  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806EE778  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806EE77C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806EE77C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806EE780  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 806EE784  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806EE784  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806EE788  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 806EE78C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806EE78C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806EE790  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 806EE794  7F C3 F3 78 */	mr r3, r30
 /* 806EE798  38 81 00 2C */	addi r4, r1, 0x2c

@@ -9,13 +9,13 @@ lbl_80BA2004:
 /* 80BA2020  3B E3 23 90 */	addi r31, r3, lit_3655@l
 /* 80BA2024  38 7E 04 D8 */	addi r3, r30, 0x4d8
 /* 80BA2028  C0 3E 05 C8 */	lfs f1, 0x5c8(r30)
-/* 80BA202C  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80BA239C */
+/* 80BA202C  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80BA2030  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80BA2034  C0 5F 00 40 */	lfs f2, 0x40(r31)	/* effective address: 80BA23D0 */
+/* 80BA2034  C0 5F 00 40 */	lfs f2, 0x40(r31)
 /* 80BA2038  3C 80 80 BA */	lis r4, l_HIO@ha
 /* 80BA203C  38 84 25 6C */	addi r4, r4, l_HIO@l
-/* 80BA2040  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BA2574 */
-/* 80BA2044  C0 9F 00 34 */	lfs f4, 0x34(r31)	/* effective address: 80BA23C4 */
+/* 80BA2040  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80BA2044  C0 9F 00 34 */	lfs f4, 0x34(r31)
 /* 80BA2048  4B 6C D9 34 */	b cLib_addCalc__FPfffff
 /* 80BA204C  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80BA2050  FC 00 08 00 */	fcmpu cr0, f0, f1

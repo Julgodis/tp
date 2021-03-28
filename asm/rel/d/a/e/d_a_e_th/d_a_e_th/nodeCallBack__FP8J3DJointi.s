@@ -9,7 +9,7 @@ lbl_807B0550:
 /* 807B056C  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 807B0570  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 807B0574  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 807B0578  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 807B0578  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 807B057C  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 807B0580  28 1D 00 00 */	cmplwi r29, 0
 /* 807B0584  41 82 00 90 */	beq lbl_807B0614
@@ -24,28 +24,28 @@ lbl_807B0598:
 /* 807B05A4  7C 60 F2 14 */	add r3, r0, r30
 /* 807B05A8  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807B05AC  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807B05B0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807B05B0  80 84 00 00 */	lwz r4, 0(r4)
 /* 807B05B4  4B B9 5E FC */	b PSMTXCopy
 /* 807B05B8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B05BC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B05C0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B05C0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B05C4  A8 9D 06 E6 */	lha r4, 0x6e6(r29)
 /* 807B05C8  4B 85 BE 6C */	b mDoMtx_YrotM__FPA4_fs
 /* 807B05CC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B05D0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B05D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B05D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B05D8  A8 9D 06 E8 */	lha r4, 0x6e8(r29)
 /* 807B05DC  4B 85 BE F0 */	b mDoMtx_ZrotM__FPA4_fs
 /* 807B05E0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B05E4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B05E8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B05E8  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B05EC  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 807B05F0  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 807B05F4  7C 80 F2 14 */	add r4, r0, r30
 /* 807B05F8  4B B9 5E B8 */	b PSMTXCopy
 /* 807B05FC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B0600  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B0604  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B0604  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B0608  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 807B060C  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 807B0610  4B B9 5E A0 */	b PSMTXCopy

@@ -7,8 +7,8 @@ lbl_8085814C:
 /* 80858160  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858164  3B E3 CA 54 */	addi r31, r3, g_env_light@l
 /* 80858168  38 00 00 00 */	li r0, 0
-/* 8085816C  90 1F 0E D8 */	stw r0, 0xed8(r31)	/* effective address: 8042D92C */
-/* 80858170  8B DF 12 C8 */	lbz r30, 0x12c8(r31)	/* effective address: 8042DD1C */
+/* 8085816C  90 1F 0E D8 */	stw r0, 0xed8(r31)
+/* 80858170  8B DF 12 C8 */	lbz r30, 0x12c8(r31)
 /* 80858174  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 80858178  2C 00 00 01 */	cmpwi r0, 1
 /* 8085817C  41 82 00 58 */	beq lbl_808581D4
@@ -59,7 +59,7 @@ lbl_80858204:
 /* 80858210  41 82 00 24 */	beq lbl_80858234
 /* 80858214  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858218  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8085821C  88 03 12 D8 */	lbz r0, 0x12d8(r3)	/* effective address: 8042DD2C */
+/* 8085821C  88 03 12 D8 */	lbz r0, 0x12d8(r3)
 /* 80858220  28 00 00 00 */	cmplwi r0, 0
 /* 80858224  40 82 00 10 */	bne lbl_80858234
 /* 80858228  9B DF 12 C8 */	stb r30, 0x12c8(r31)

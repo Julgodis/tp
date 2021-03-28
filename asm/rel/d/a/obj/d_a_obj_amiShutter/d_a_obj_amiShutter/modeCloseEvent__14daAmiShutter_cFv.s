@@ -19,7 +19,7 @@ lbl_80BA1E98:
 /* 80BA1EA0  C0 5F 00 40 */	lfs f2, 0x40(r31)
 /* 80BA1EA4  3C 80 80 BA */	lis r4, l_HIO@ha
 /* 80BA1EA8  38 84 25 6C */	addi r4, r4, l_HIO@l
-/* 80BA1EAC  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BA2574 */
+/* 80BA1EAC  C0 64 00 08 */	lfs f3, 8(r4)
 /* 80BA1EB0  C0 9F 00 34 */	lfs f4, 0x34(r31)
 /* 80BA1EB4  4B 6C DA C8 */	b cLib_addCalc__FPfffff
 /* 80BA1EB8  C0 1F 00 10 */	lfs f0, 0x10(r31)

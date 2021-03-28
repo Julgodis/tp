@@ -7,9 +7,9 @@ lbl_80AF61B0:
 /* 80AF61C4  7C 7E 1B 78 */	mr r30, r3
 /* 80AF61C8  3C 80 80 AF */	lis r4, lit_3768@ha
 /* 80AF61CC  3B E4 74 08 */	addi r31, r4, lit_3768@l
-/* 80AF61D0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AF61D4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80AF61D8  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80AF61D0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AF61D4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80AF61D8  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80AF61DC  A8 03 06 2A */	lha r0, 0x62a(r3)
 /* 80AF61E0  2C 00 00 01 */	cmpwi r0, 1
 /* 80AF61E4  41 82 00 88 */	beq lbl_80AF626C

@@ -94,8 +94,8 @@ lbl_8047E27C:
 /* 8047E288  80 1D 00 5C */	lwz r0, 0x5c(r29)
 /* 8047E28C  2C 00 00 00 */	cmpwi r0, 0
 /* 8047E290  41 80 00 2C */	blt lbl_8047E2BC
-/* 8047E294  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047E298  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047E294  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047E298  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047E29C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8047E2A0  1C A0 00 54 */	mulli r5, r0, 0x54
 /* 8047E2A4  3C 80 80 48 */	lis r4, M_gnd_work__Q212daObjMovebox5Bgc_c@ha

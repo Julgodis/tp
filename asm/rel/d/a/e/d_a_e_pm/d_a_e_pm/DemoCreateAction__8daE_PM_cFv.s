@@ -88,7 +88,7 @@ lbl_80749ABC:
 /* 80749B08  38 81 00 30 */	addi r4, r1, 0x30
 /* 80749B0C  3C A0 80 75 */	lis r5, data_8074C3E8@ha
 /* 80749B10  38 A5 C3 E8 */	addi r5, r5, data_8074C3E8@l
-/* 80749B14  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 8074C3E8 */
+/* 80749B14  A8 A5 00 00 */	lha r5, 0(r5)
 /* 80749B18  38 C1 00 24 */	addi r6, r1, 0x24
 /* 80749B1C  4B B2 72 A4 */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 80749B20  C0 01 00 18 */	lfs f0, 0x18(r1)
@@ -127,7 +127,7 @@ lbl_80749B74:
 /* 80749B9C  40 82 00 38 */	bne lbl_80749BD4
 /* 80749BA0  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 80749BA4  38 63 C3 94 */	addi r3, r3, l_HIO@l
-/* 80749BA8  A8 03 00 22 */	lha r0, 0x22(r3)	/* effective address: 8074C3B6 */
+/* 80749BA8  A8 03 00 22 */	lha r0, 0x22(r3)
 /* 80749BAC  B0 1F 06 26 */	sth r0, 0x626(r31)
 /* 80749BB0  38 60 00 00 */	li r3, 0
 /* 80749BB4  98 7F 06 13 */	stb r3, 0x613(r31)

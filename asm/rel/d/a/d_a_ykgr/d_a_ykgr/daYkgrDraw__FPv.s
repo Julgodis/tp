@@ -7,8 +7,8 @@ lbl_805A8BBC:
 /* 805A8BD0  7C 7E 1B 78 */	mr r30, r3
 /* 805A8BD4  3C 60 80 5B */	lis r3, lit_3759@ha
 /* 805A8BD8  3B E3 8F BC */	addi r31, r3, lit_3759@l
-/* 805A8BDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A8BE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A8BDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A8BE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A8BE4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 805A8BE8  3C 80 80 5B */	lis r4, stringBase0@ha
 /* 805A8BEC  38 84 90 18 */	addi r4, r4, stringBase0@l
@@ -33,7 +33,7 @@ lbl_805A8BBC:
 /* 805A8C38  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 805A8C3C  3C 60 80 45 */	lis r3, struct_80450D8C+0x2@ha
 /* 805A8C40  38 83 0D 8E */	addi r4, r3, struct_80450D8C+0x2@l
-/* 805A8C44  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 80450D8E */
+/* 805A8C44  98 04 00 00 */	stb r0, 0(r4)
 /* 805A8C48  54 03 06 3F */	clrlwi. r3, r0, 0x18
 /* 805A8C4C  40 82 00 0C */	bne lbl_805A8C58
 /* 805A8C50  38 03 00 01 */	addi r0, r3, 1
@@ -46,9 +46,9 @@ lbl_805A8C58:
 /* 805A8C68  38 00 00 01 */	li r0, 1
 /* 805A8C6C  48 00 01 08 */	b lbl_805A8D74
 lbl_805A8C70:
-/* 805A8C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A8C74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A8C78  80 83 5D 74 */	lwz r4, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 805A8C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A8C74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A8C78  80 83 5D 74 */	lwz r4, 0x5d74(r3)
 /* 805A8C7C  38 64 00 D8 */	addi r3, r4, 0xd8
 /* 805A8C80  C0 04 00 D8 */	lfs f0, 0xd8(r4)
 /* 805A8C84  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
@@ -109,8 +109,8 @@ lbl_805A8CDC:
 /* 805A8D5C  88 03 0D 8E */	lbz r0, struct_80450D8C+0x2@l(r3)
 /* 805A8D60  3C 60 80 45 */	lis r3, m_emitter__8daYkgr_c@ha
 /* 805A8D64  38 63 0D 98 */	addi r3, r3, m_emitter__8daYkgr_c@l
-/* 805A8D68  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450D98 */
-/* 805A8D6C  98 03 00 BB */	stb r0, 0xbb(r3)	/* effective address: 80450E53 */
+/* 805A8D68  80 63 00 00 */	lwz r3, 0(r3)
+/* 805A8D6C  98 03 00 BB */	stb r0, 0xbb(r3)
 lbl_805A8D70:
 /* 805A8D70  38 00 00 01 */	li r0, 1
 lbl_805A8D74:

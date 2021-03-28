@@ -6,7 +6,7 @@ lbl_80BE9610:
 /* 80BE9620  38 E4 9A BC */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80BE9624  3C 80 80 BF */	lis r4, data_80BE9C30@ha
 /* 80BE9628  38 C4 9C 30 */	addi r6, r4, data_80BE9C30@l
-/* 80BE962C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80BE9C30 */
+/* 80BE962C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80BE9630  7C 00 07 75 */	extsb. r0, r0
 /* 80BE9634  40 82 00 58 */	bne lbl_80BE968C
 /* 80BE9638  80 87 00 84 */	lwz r4, 0x84(r7)

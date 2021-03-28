@@ -9,7 +9,7 @@ lbl_8059A518:
 /* 8059A534  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 8059A538  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8059A53C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8059A540  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 8059A540  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 8059A544  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 8059A548  A0 1D 08 30 */	lhz r0, 0x830(r29)
 /* 8059A54C  7C 04 00 00 */	cmpw r4, r0

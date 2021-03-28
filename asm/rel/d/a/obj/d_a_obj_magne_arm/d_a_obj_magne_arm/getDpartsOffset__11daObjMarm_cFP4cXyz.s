@@ -9,9 +9,9 @@ lbl_8058F3D4:
 /* 8058F3F0  3C 60 80 59 */	lis r3, data_80592894@ha
 /* 8058F3F4  C4 03 28 94 */	lfsu f0, data_80592894@l(r3)
 /* 8058F3F8  D0 04 00 00 */	stfs f0, 0(r4)
-/* 8058F3FC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80590004 */
+/* 8058F3FC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8058F400  D0 04 00 04 */	stfs f0, 4(r4)
-/* 8058F404  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80590008 */
+/* 8058F404  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8058F408  D0 04 00 08 */	stfs f0, 8(r4)
 /* 8058F40C  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 8058F410  4B A7 D9 54 */	b transS__14mDoMtx_stack_cFRC4cXyz

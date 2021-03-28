@@ -33,11 +33,11 @@ lbl_80B16674:
 /* 80B166AC  B0 1F 13 88 */	sth r0, 0x1388(r31)
 /* 80B166B0  48 00 01 64 */	b lbl_80B16814
 lbl_80B166B4:
-/* 80B166B4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B166B8  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80B166BC  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80B166B4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B166B8  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80B166BC  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 80B166C0  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
-/* 80B166C4  C0 04 04 D4 */	lfs f0, 0x4d4(r4)	/* effective address: 804004D4 */
+/* 80B166C4  C0 04 04 D4 */	lfs f0, 0x4d4(r4)
 /* 80B166C8  EC 21 00 28 */	fsubs f1, f1, f0
 /* 80B166CC  C0 1D 01 D0 */	lfs f0, 0x1d0(r29)
 /* 80B166D0  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -63,9 +63,9 @@ lbl_80B166B4:
 /* 80B16720  38 A0 00 00 */	li r5, 0
 /* 80B16724  4B 50 4A 78 */	b fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs
 lbl_80B16728:
-/* 80B16728  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B1672C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B16730  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80B16728  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B1672C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B16730  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80B16734  28 00 00 00 */	cmplwi r0, 0
 /* 80B16738  41 82 00 DC */	beq lbl_80B16814
 /* 80B1673C  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
@@ -84,18 +84,18 @@ lbl_80B16728:
 lbl_80B16770:
 /* 80B16770  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B16774  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B16778  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B16778  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B1677C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80B16780  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100006D@ha */
 /* 80B16784  38 84 00 6D */	addi r4, r4, 0x006D /* 0x0100006D@l */
 /* 80B16788  4B 79 8D 14 */	b subBgmStart__8Z2SeqMgrFUl
 /* 80B1678C  3C 60 80 B2 */	lis r3, lit_5228@ha
 /* 80B16790  38 83 E2 C4 */	addi r4, r3, lit_5228@l
-/* 80B16794  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E2C4 */
-/* 80B16798  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E2C8 */
+/* 80B16794  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B16798  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B1679C  90 61 00 08 */	stw r3, 8(r1)
 /* 80B167A0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B167A4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E2CC */
+/* 80B167A4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B167A8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B167AC  38 00 00 03 */	li r0, 3
 /* 80B167B0  B0 1F 13 88 */	sth r0, 0x1388(r31)

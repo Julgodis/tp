@@ -7,12 +7,12 @@ lbl_80496114:
 /* 80496128  3B E3 68 98 */	addi r31, r3, lit_1109@l
 /* 8049612C  3C 60 80 49 */	lis r3, lit_3934@ha
 /* 80496130  C0 23 62 48 */	lfs f1, lit_3934@l(r3)
-/* 80496134  D0 3F 00 4C */	stfs f1, 0x4c(r31)	/* effective address: 804968E4 */
+/* 80496134  D0 3F 00 4C */	stfs f1, 0x4c(r31)
 /* 80496138  3C 60 80 49 */	lis r3, lit_6499@ha
 /* 8049613C  C0 03 63 30 */	lfs f0, lit_6499@l(r3)
 /* 80496140  38 7F 00 4C */	addi r3, r31, 0x4c
-/* 80496144  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 804968E8 */
-/* 80496148  D0 23 00 08 */	stfs f1, 8(r3)	/* effective address: 804968EC */
+/* 80496144  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80496148  D0 23 00 08 */	stfs f1, 8(r3)
 /* 8049614C  3C 80 80 49 */	lis r4, __dt__4cXyzFv@ha
 /* 80496150  38 84 0D CC */	addi r4, r4, __dt__4cXyzFv@l
 /* 80496154  38 BF 00 40 */	addi r5, r31, 0x40

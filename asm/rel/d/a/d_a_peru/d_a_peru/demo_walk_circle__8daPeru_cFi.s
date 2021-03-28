@@ -73,11 +73,11 @@ lbl_80D49380:
 /* 80D493B4  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80D493B8  3C 60 80 D5 */	lis r3, lit_5259@ha
 /* 80D493BC  38 83 C5 98 */	addi r4, r3, lit_5259@l
-/* 80D493C0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4C598 */
-/* 80D493C4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4C59C */
+/* 80D493C0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D493C4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D493C8  90 61 00 08 */	stw r3, 8(r1)
 /* 80D493CC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D493D0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4C5A0 */
+/* 80D493D0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D493D4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D493D8  7F E3 FB 78 */	mr r3, r31
 /* 80D493DC  38 81 00 08 */	addi r4, r1, 8

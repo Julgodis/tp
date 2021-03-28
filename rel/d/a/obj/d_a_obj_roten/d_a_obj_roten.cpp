@@ -52,19 +52,19 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct cXyz {
-};
-
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -79,9 +79,6 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -106,11 +103,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObj_Roten_Create(void*); // 2
-static void daObj_Roten_Delete(void*); // 2
-static void daObj_Roten_Execute(void*); // 2
-static void daObj_Roten_Draw(void*); // 2
-static bool daObj_Roten_IsDelete(void*); // 2
+void daObj_Roten_Create(void*); // 2
+void daObj_Roten_Delete(void*); // 2
+void daObj_Roten_Execute(void*); // 2
+void daObj_Roten_Draw(void*); // 2
+bool daObj_Roten_IsDelete(void*); // 2
 
 extern "C" void initBaseMtx__13daObj_Roten_cFv(); // 1
 extern "C" void setBaseMtx__13daObj_Roten_cFv(); // 1
@@ -121,13 +118,14 @@ extern "C" void Execute__13daObj_Roten_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObj_Roten_cFv(); // 1
 extern "C" void Delete__13daObj_Roten_cFv(); // 1
 extern "C" void getResName__13daObj_Roten_cFv(); // 1
-extern "C" static void daObj_Roten_Create__FPv(); // 1
-extern "C" static void daObj_Roten_Delete__FPv(); // 1
-extern "C" static void daObj_Roten_Execute__FPv(); // 1
-extern "C" static void daObj_Roten_Draw__FPv(); // 1
-extern "C" static bool daObj_Roten_IsDelete__FPv(); // 1
+extern "C" void daObj_Roten_Create__FPv(); // 1
+extern "C" void daObj_Roten_Delete__FPv(); // 1
+extern "C" void daObj_Roten_Execute__FPv(); // 1
+extern "C" void daObj_Roten_Draw__FPv(); // 1
+extern "C" bool daObj_Roten_IsDelete__FPv(); // 1
 extern "C" void __dt__13daObj_Roten_cFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daObj_Roten_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_ROTEN[12];
 
 // 
@@ -160,9 +158,6 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -174,24 +169,13 @@ extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 struct_803A7308[8];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern f32 data_804061F4;
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -254,7 +238,7 @@ SECTION_RODATA static u32 const lit_3786 = 0x3E800000;
 /* 80CC1424-80CC1428 0004+00 s=3 e=0 z=0  None .rodata    @3787                                                        */
 SECTION_RODATA static u32 const lit_3787 = 0x3F800000;
 
-/* 80CC0C20-80CC0EC4 02A4+00 s=1 e=0 z=0  None .text      Create__13daObj_Roten_cFv                                    */
+/* 80CC0C20-80CC0EC4 02A4+00 s=0 e=0 z=0  None .text      Create__13daObj_Roten_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,9 +250,97 @@ asm void daObj_Roten_c::Create() {
 
 
 /* ############################################################################################## */
+/* 80CC144C-80CC1450 0004+00 s=1 e=0 z=0  None .data      l_resFileName                                                */
+SECTION_DATA static void* l_resFileName = (void*)NULL;
+
+/* 80CC1450-80CC1454 0004+00 s=1 e=0 z=0  None .data      l_bmdFileIdx                                                 */
+SECTION_DATA static u32 l_bmdFileIdx = 0x00000004;
+
+/* 80CC0EC4-80CC0F40 007C+00 s=0 e=0 z=0  None .text      CreateHeap__13daObj_Roten_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_Roten_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/CreateHeap__13daObj_Roten_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80CC1454-80CC1458 0004+00 s=1 e=0 z=0  None .data      l_dzbFileIdx                                                 */
+SECTION_DATA static u32 l_dzbFileIdx = 0x00000007;
+
+/* 80CC1458-80CC1478 0020+00 s=0 e=0 z=0  None .data      daObj_Roten_MethodTable                                      */
+SECTION_DATA void* daObj_Roten_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CC1478-80CC14A8 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_ROTEN                                          */
+SECTION_DATA void* g_profile_OBJ_ROTEN[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x011F0000,
+	(void*)NULL,
+	(void*)0x000005C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00430000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
+};
+
+/* 80CC14A8-80CC14D4 002C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Roten_c                                        */
+SECTION_DATA static void* __vt__13daObj_Roten_c[11] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CC0F40-80CC1038 00F8+00 s=1 e=0 z=0  None .text      create__13daObj_Roten_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_Roten_c::create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80CC1428-80CC142C 0004+00 s=1 e=0 z=0  None .rodata    @3844                                                        */
 SECTION_RODATA static u32 const lit_3844 = 0xBF800000;
 
+/* 80CC1038-80CC1138 0100+00 s=0 e=0 z=0  None .text      Execute__13daObj_Roten_cFPPA3_A4_f                           */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObj_Roten_c::Execute(f32 (** param_0)[3][4]) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Execute__13daObj_Roten_cFPPA3_A4_f.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80CC142C-80CC1430 0004+00 s=1 e=0 z=0  None .rodata    @3853                                                        */
 SECTION_RODATA static u32 const lit_3853 = 0xBC6642FF;
 
@@ -284,100 +356,7 @@ SECTION_RODATA static u32 const lit_3880 = 0x38D1B717;
 /* 80CC143C-80CC1440 0004+00 s=1 e=0 z=0  None .rodata    @3881                                                        */
 SECTION_RODATA static u32 const lit_3881 = 0x358637BD;
 
-/* 80CC1440-80CC144A 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CC1440 = "Obj_roten";
-#pragma pop
-
-/* 80CC144C-80CC1450 0004+00 s=1 e=0 z=0  None .data      l_resFileName                                                */
-SECTION_DATA static void* l_resFileName = (void*)&stringBase0;
-
-/* 80CC1450-80CC1454 0004+00 s=1 e=0 z=0  None .data      l_bmdFileIdx                                                 */
-SECTION_DATA static u32 l_bmdFileIdx = 0x00000004;
-
-/* 80CC0EC4-80CC0F40 007C+00 s=1 e=0 z=0  None .text      CreateHeap__13daObj_Roten_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Roten_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/CreateHeap__13daObj_Roten_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80CC1454-80CC1458 0004+00 s=1 e=0 z=0  None .data      l_dzbFileIdx                                                 */
-SECTION_DATA static u32 l_dzbFileIdx = 0x00000007;
-
-/* 80CC1458-80CC1478 0020+00 s=1 e=0 z=0  None .data      daObj_Roten_MethodTable                                      */
-SECTION_DATA static void* daObj_Roten_MethodTable[8] = {
-	/* 0    */ (void*)daObj_Roten_Create__FPv,
-	/* 1    */ (void*)daObj_Roten_Delete__FPv,
-	/* 2    */ (void*)daObj_Roten_Execute__FPv,
-	/* 3    */ (void*)daObj_Roten_IsDelete__FPv,
-	/* 4    */ (void*)daObj_Roten_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80CC1478-80CC14A8 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_ROTEN                                          */
-SECTION_DATA void* g_profile_OBJ_ROTEN[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x011F0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00430000,
-	/* 9    */ (void*)&daObj_Roten_MethodTable,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80CC14A8-80CC14D4 002C+00 s=2 e=0 z=0  None .data      __vt__13daObj_Roten_c                                        */
-SECTION_DATA static void* __vt__13daObj_Roten_c[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObj_Roten_cFv,
-	/* 3    */ (void*)Create__13daObj_Roten_cFv,
-	/* 4    */ (void*)Execute__13daObj_Roten_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObj_Roten_cFv,
-	/* 6    */ (void*)Delete__13daObj_Roten_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-	/* 10   */ (void*)__dt__13daObj_Roten_cFv,
-};
-
-/* 80CC0F40-80CC1038 00F8+00 s=1 e=0 z=0  None .text      create__13daObj_Roten_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Roten_c::create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/func_80CC0F40.s"
-}
-#pragma pop
-
-
-/* 80CC1038-80CC1138 0100+00 s=1 e=0 z=0  None .text      Execute__13daObj_Roten_cFPPA3_A4_f                           */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObj_Roten_c::Execute(f32 (** param_0)[3][4]) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/Execute__13daObj_Roten_cFPPA3_A4_f.s"
-}
-#pragma pop
-
-
-/* 80CC1138-80CC1254 011C+00 s=1 e=0 z=0  None .text      Draw__13daObj_Roten_cFv                                      */
+/* 80CC1138-80CC1254 011C+00 s=0 e=0 z=0  None .text      Draw__13daObj_Roten_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -388,7 +367,7 @@ asm void daObj_Roten_c::Draw() {
 #pragma pop
 
 
-/* 80CC1254-80CC12E4 0090+00 s=1 e=0 z=0  None .text      Delete__13daObj_Roten_cFv                                    */
+/* 80CC1254-80CC12E4 0090+00 s=0 e=0 z=0  None .text      Delete__13daObj_Roten_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,57 +389,57 @@ asm void daObj_Roten_c::getResName() {
 #pragma pop
 
 
-/* 80CC12F4-80CC1314 0020+00 s=1 e=0 z=0  None .text      daObj_Roten_Create__FPv                                      */
+/* 80CC12F4-80CC1314 0020+00 s=0 e=0 z=0  None .text      daObj_Roten_Create__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Roten_Create(void* param_0) {
+asm void daObj_Roten_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80CC1314-80CC1334 0020+00 s=1 e=0 z=0  None .text      daObj_Roten_Delete__FPv                                      */
+/* 80CC1314-80CC1334 0020+00 s=0 e=0 z=0  None .text      daObj_Roten_Delete__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Roten_Delete(void* param_0) {
+asm void daObj_Roten_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80CC1334-80CC1354 0020+00 s=1 e=0 z=0  None .text      daObj_Roten_Execute__FPv                                     */
+/* 80CC1334-80CC1354 0020+00 s=0 e=0 z=0  None .text      daObj_Roten_Execute__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Roten_Execute(void* param_0) {
+asm void daObj_Roten_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80CC1354-80CC1380 002C+00 s=1 e=0 z=0  None .text      daObj_Roten_Draw__FPv                                        */
+/* 80CC1354-80CC1380 002C+00 s=0 e=0 z=0  None .text      daObj_Roten_Draw__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Roten_Draw(void* param_0) {
+asm void daObj_Roten_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_roten/d_a_obj_roten/daObj_Roten_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80CC1380-80CC1388 0008+00 s=1 e=0 z=0  None .text      daObj_Roten_IsDelete__FPv                                    */
-static bool daObj_Roten_IsDelete(void* param_0) {
+/* 80CC1380-80CC1388 0008+00 s=0 e=0 z=0  None .text      daObj_Roten_IsDelete__FPv                                    */
+bool daObj_Roten_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80CC1388-80CC13F8 0070+00 s=1 e=0 z=0  None .text      __dt__13daObj_Roten_cFv                                      */
+/* 80CC1388-80CC13F8 0070+00 s=0 e=0 z=0  None .text      __dt__13daObj_Roten_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,4 +449,12 @@ asm daObj_Roten_c::~daObj_Roten_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CC1440-80CC144A 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CC1440 = "Obj_roten";
+#pragma pop
 

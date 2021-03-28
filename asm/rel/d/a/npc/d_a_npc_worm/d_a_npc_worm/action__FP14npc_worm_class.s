@@ -166,7 +166,7 @@ lbl_80B2E91C:
 /* 80B2E920  41 82 00 E0 */	beq lbl_80B2EA00
 /* 80B2E924  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B2E928  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B2E92C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B2E92C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B2E930  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80B2E934  4B 4D DA A8 */	b mDoMtx_YrotS__FPA4_fs
 /* 80B2E938  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -206,8 +206,8 @@ lbl_80B2E9AC:
 /* 80B2E9BC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80B2E9C0  7F C6 F3 78 */	mr r6, r30
 /* 80B2E9C4  4B 54 93 A0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80B2E9C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B2E9CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B2E9C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B2E9CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B2E9D0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80B2E9D4  38 81 00 80 */	addi r4, r1, 0x80
 /* 80B2E9D8  4B 54 59 DC */	b LineCross__4cBgSFP11cBgS_LinChk
@@ -238,8 +238,8 @@ lbl_80B2EA00:
 /* 80B2EA34  38 61 00 2C */	addi r3, r1, 0x2c
 /* 80B2EA38  38 81 00 08 */	addi r4, r1, 8
 /* 80B2EA3C  4B 73 92 EC */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80B2EA40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B2EA44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B2EA40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B2EA44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B2EA48  3B 03 0F 38 */	addi r24, r3, 0xf38
 /* 80B2EA4C  7F 03 C3 78 */	mr r3, r24
 /* 80B2EA50  38 81 00 2C */	addi r4, r1, 0x2c
@@ -337,9 +337,9 @@ lbl_80B2EBAC:
 /* 80B2EBAC  2C 1B 00 00 */	cmpwi r27, 0
 /* 80B2EBB0  41 82 00 2C */	beq lbl_80B2EBDC
 /* 80B2EBB4  7F C3 F3 78 */	mr r3, r30
-/* 80B2EBB8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B2EBBC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B2EBC0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B2EBB8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B2EBBC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B2EBC0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B2EBC4  4B 4E BC 1C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B2EBC8  C0 1F 00 5C */	lfs f0, 0x5c(r31)
 /* 80B2EBCC  FC 01 00 40 */	fcmpo cr0, f1, f0

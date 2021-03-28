@@ -42,8 +42,8 @@ lbl_805EF684:
 /* 805EF6C8  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 805EF6CC  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805EF6D0  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 805EF6D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805EF6D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805EF6D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805EF6D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805EF6DC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805EF6E0  38 80 00 08 */	li r4, 8
 /* 805EF6E4  38 A0 00 4F */	li r5, 0x4f
@@ -69,7 +69,7 @@ lbl_805EF684:
 /* 805EF734  4B A2 D8 EC */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
 /* 805EF738  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805EF73C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805EF740  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805EF740  80 63 00 00 */	lwz r3, 0(r3)
 /* 805EF744  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805EF748  38 80 00 01 */	li r4, 1
 /* 805EF74C  4B CC 08 40 */	b changeBgmStatus__8Z2SeqMgrFl
@@ -113,7 +113,7 @@ lbl_805EF7A8:
 /* 805EF7D8  4B FF E2 25 */	bl anm_init__FP10b_gm_classifUcf
 /* 805EF7DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805EF7E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805EF7E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805EF7E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805EF7E8  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805EF7EC  38 80 00 02 */	li r4, 2
 /* 805EF7F0  4B CC 07 9C */	b changeBgmStatus__8Z2SeqMgrFl
@@ -138,7 +138,7 @@ lbl_805EF820:
 /* 805EF834  38 A0 00 02 */	li r5, 2
 /* 805EF838  3C C0 80 5F */	lis r6, l_HIO@ha
 /* 805EF83C  38 C6 47 DC */	addi r6, r6, l_HIO@l
-/* 805EF840  C0 46 00 20 */	lfs f2, 0x20(r6)	/* effective address: 805F47FC */
+/* 805EF840  C0 46 00 20 */	lfs f2, 0x20(r6)
 /* 805EF844  4B FF E1 B9 */	bl anm_init__FP10b_gm_classifUcf
 /* 805EF848  38 00 00 00 */	li r0, 0
 /* 805EF84C  B0 1E 04 DC */	sth r0, 0x4dc(r30)
@@ -149,7 +149,7 @@ lbl_805EF820:
 /* 805EF860  B0 1E 07 20 */	sth r0, 0x720(r30)
 /* 805EF864  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805EF868  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805EF86C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805EF86C  80 63 00 00 */	lwz r3, 0(r3)
 /* 805EF870  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 805EF874  4B A1 CB 68 */	b mDoMtx_YrotS__FPA4_fs
 /* 805EF878  C0 1F 00 1C */	lfs f0, 0x1c(r31)

@@ -7,9 +7,9 @@ lbl_80948828:
 /* 8094883C  7C 7D 1B 78 */	mr r29, r3
 /* 80948840  3C 60 80 95 */	lis r3, mCcDSph__8daMyna_c@ha
 /* 80948844  3B E3 B1 B0 */	addi r31, r3, mCcDSph__8daMyna_c@l
-/* 80948848  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094884C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80948850  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80948848  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094884C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80948850  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80948854  38 61 00 3C */	addi r3, r1, 0x3c
 /* 80948858  48 00 21 AD */	bl getHeadTopPos__9daPy_py_cCFv
 /* 8094885C  C0 01 00 3C */	lfs f0, 0x3c(r1)
@@ -20,7 +20,7 @@ lbl_80948828:
 /* 80948870  D0 01 00 74 */	stfs f0, 0x74(r1)
 /* 80948874  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80948878  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094887C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8094BA50 */
+/* 8094887C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80948880  EC 01 00 2A */	fadds f0, f1, f0
 /* 80948884  D0 01 00 70 */	stfs f0, 0x70(r1)
 /* 80948888  C0 1D 08 5C */	lfs f0, 0x85c(r29)
@@ -172,7 +172,7 @@ lbl_80948A9C:
 lbl_80948AAC:
 /* 80948AAC  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80948AB0  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80948AB4  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8094BA54 */
+/* 80948AB4  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80948AB8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80948ABC  7C 00 00 26 */	mfcr r0
 /* 80948AC0  54 03 0F FE */	srwi r3, r0, 0x1f

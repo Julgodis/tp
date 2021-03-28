@@ -43,8 +43,8 @@ lbl_8049C874:
 /* 8049C918  4B BD B4 4C */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
 /* 8049C91C  7F C3 F3 78 */	mr r3, r30
 /* 8049C920  4B FF D6 9D */	bl decAlphaBlur__9daArrow_cFv
-/* 8049C924  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049C928  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049C924  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049C928  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049C92C  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8049C930  7F A3 EB 78 */	mr r3, r29
 /* 8049C934  38 9E 05 6C */	addi r4, r30, 0x56c

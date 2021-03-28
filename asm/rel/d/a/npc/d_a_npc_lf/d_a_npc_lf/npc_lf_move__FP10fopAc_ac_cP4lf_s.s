@@ -15,9 +15,9 @@ lbl_80A69D90:
 /* 80A69DC4  A8 1D 00 18 */	lha r0, 0x18(r29)
 /* 80A69DC8  54 00 07 7F */	clrlwi. r0, r0, 0x1d
 /* 80A69DCC  40 82 00 18 */	bne lbl_80A69DE4
-/* 80A69DD0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A69DD4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A69DD8  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A69DD0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A69DD4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A69DD8  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A69DDC  4B 5B 0A 04 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A69DE0  D0 3D 00 34 */	stfs f1, 0x34(r29)
 lbl_80A69DE4:
@@ -169,7 +169,7 @@ lbl_80A69FBC:
 lbl_80A69FF0:
 /* 80A69FF0  3C 60 80 A7 */	lis r3, l_HIO@ha
 /* 80A69FF4  38 63 AA A0 */	addi r3, r3, l_HIO@l
-/* 80A69FF8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80A6AAAC */
+/* 80A69FF8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80A69FFC  D0 1D 00 40 */	stfs f0, 0x40(r29)
 /* 80A6A000  3B C0 04 00 */	li r30, 0x400
 /* 80A6A004  C3 FF 00 50 */	lfs f31, 0x50(r31)
@@ -180,7 +180,7 @@ lbl_80A6A008:
 /* 80A6A014  C3 FF 00 50 */	lfs f31, 0x50(r31)
 /* 80A6A018  3C 60 80 A7 */	lis r3, l_HIO@ha
 /* 80A6A01C  38 63 AA A0 */	addi r3, r3, l_HIO@l
-/* 80A6A020  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80A6AAB4 */
+/* 80A6A020  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80A6A024  D0 1D 00 40 */	stfs f0, 0x40(r29)
 /* 80A6A028  3B C0 06 00 */	li r30, 0x600
 /* 80A6A02C  48 00 00 50 */	b lbl_80A6A07C
@@ -188,7 +188,7 @@ lbl_80A6A030:
 /* 80A6A030  C0 3D 00 34 */	lfs f1, 0x34(r29)
 /* 80A6A034  3C 60 80 A7 */	lis r3, l_HIO@ha
 /* 80A6A038  38 63 AA A0 */	addi r3, r3, l_HIO@l
-/* 80A6A03C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A6AAB8 */
+/* 80A6A03C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A6A040  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80A6A044  40 80 00 38 */	bge lbl_80A6A07C
 /* 80A6A048  C0 3F 00 54 */	lfs f1, 0x54(r31)
@@ -272,7 +272,7 @@ lbl_80A6A15C:
 /* 80A6A170  C0 3D 00 3C */	lfs f1, 0x3c(r29)
 /* 80A6A174  3C 80 80 A7 */	lis r4, l_HIO@ha
 /* 80A6A178  38 84 AA A0 */	addi r4, r4, l_HIO@l
-/* 80A6A17C  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80A6AAB0 */
+/* 80A6A17C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80A6A180  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80A6A184  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 80A6A188  FC 60 F8 90 */	fmr f3, f31

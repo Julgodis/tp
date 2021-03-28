@@ -5,9 +5,9 @@ lbl_8045FE68:
 /* 8045FE74  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045FE78  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045FE7C  7C 7E 1B 78 */	mr r30, r3
-/* 8045FE80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045FE84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045FE88  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8045FE80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045FE84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045FE88  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 8045FE8C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8045FE90  3C 80 80 46 */	lis r4, struct_804606C4+0x0@ha
 /* 8045FE94  38 84 06 C4 */	addi r4, r4, struct_804606C4+0x0@l

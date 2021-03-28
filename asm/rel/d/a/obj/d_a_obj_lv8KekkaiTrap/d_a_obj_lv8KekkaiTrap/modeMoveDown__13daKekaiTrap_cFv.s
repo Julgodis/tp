@@ -16,7 +16,7 @@ lbl_80C88214:
 lbl_80C8824C:
 /* 80C8824C  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C88250  38 63 86 1C */	addi r3, r3, l_HIO@l
-/* 80C88254  C0 23 00 14 */	lfs f1, 0x14(r3)	/* effective address: 80C88630 */
+/* 80C88254  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 80C88258  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 80C8825C  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80C88260  EC 41 00 24 */	fdivs f2, f1, f0
@@ -33,8 +33,8 @@ lbl_80C8824C:
 /* 80C8828C  80 9E 05 68 */	lwz r4, 0x568(r30)
 /* 80C88290  28 04 00 00 */	cmplwi r4, 0
 /* 80C88294  41 82 00 14 */	beq lbl_80C882A8
-/* 80C88298  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C8829C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C88298  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C8829C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C882A0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C882A4  4B 3E BF AC */	b Release__4cBgSFP9dBgW_Base
 lbl_80C882A8:

@@ -39,8 +39,8 @@ lbl_8074D1EC:
 /* 8074D1F8  4B A1 22 2C */	b checkNowWolfEyeUp__9daPy_py_cFv
 /* 8074D1FC  2C 03 00 00 */	cmpwi r3, 0
 /* 8074D200  41 82 00 90 */	beq lbl_8074D290
-/* 8074D204  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074D208  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8074D204  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074D208  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074D20C  3B C3 56 B8 */	addi r30, r3, 0x56b8
 /* 8074D210  7F C3 F3 78 */	mr r3, r30
 /* 8074D214  38 80 00 00 */	li r4, 0
@@ -76,9 +76,9 @@ lbl_8074D1EC:
 /* 8074D28C  48 00 00 94 */	b lbl_8074D320
 lbl_8074D290:
 /* 8074D290  7F E3 FB 78 */	mr r3, r31
-/* 8074D294  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8074D298  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8074D29C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8074D294  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8074D298  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8074D29C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8074D2A0  4B 8C D4 70 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8074D2A4  3C 63 00 01 */	addis r3, r3, 1
 /* 8074D2A8  38 03 80 00 */	addi r0, r3, -32768

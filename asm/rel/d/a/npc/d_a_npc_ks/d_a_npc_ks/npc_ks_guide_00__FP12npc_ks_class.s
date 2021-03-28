@@ -9,9 +9,9 @@ lbl_80A54A14:
 /* 80A54A30  3B C4 FE 48 */	addi r30, r4, lit_1109@l
 /* 80A54A34  3C 80 80 A6 */	lis r4, lit_4030@ha
 /* 80A54A38  3B E4 DE FC */	addi r31, r4, lit_4030@l
-/* 80A54A3C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A54A40  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A54A44  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A54A3C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A54A40  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A54A44  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80A54A48  3B 80 00 01 */	li r28, 1
 /* 80A54A4C  80 83 05 CC */	lwz r4, 0x5cc(r3)
 /* 80A54A50  C0 04 00 1C */	lfs f0, 0x1c(r4)

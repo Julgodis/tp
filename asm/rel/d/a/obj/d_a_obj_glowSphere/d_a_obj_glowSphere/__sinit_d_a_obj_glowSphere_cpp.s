@@ -20,10 +20,10 @@ lbl_80BFA7D8:
 /* 80BFA820  38 00 00 06 */	li r0, 6
 /* 80BFA824  7C 09 03 A6 */	mtctr r0
 lbl_80BFA828:
-/* 80BFA828  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BFA978 */
-/* 80BFA82C  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BFA97C */
-/* 80BFA830  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BFAA08 */
-/* 80BFA834  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BFAA0C */
+/* 80BFA828  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BFA82C  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80BFA830  90 65 00 04 */	stw r3, 4(r5)
+/* 80BFA834  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BFA838  42 00 FF F0 */	bdnz lbl_80BFA828
 /* 80BFA83C  38 7F 00 64 */	addi r3, r31, 0x64
 /* 80BFA840  3C 80 80 C0 */	lis r4, __ct__16_GlSph_LstInfo_cFv@ha

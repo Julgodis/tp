@@ -18,9 +18,9 @@ lbl_80808768:
 /* 808087A8  C0 03 06 DC */	lfs f0, 0x6dc(r3)
 /* 808087AC  EC 01 00 2A */	fadds f0, f1, f0
 /* 808087B0  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 808087B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808087B8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 808087BC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 808087B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808087B8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 808087BC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 808087C0  38 00 00 FF */	li r0, 0xff
 /* 808087C4  90 01 00 08 */	stw r0, 8(r1)
 /* 808087C8  38 80 00 00 */	li r4, 0

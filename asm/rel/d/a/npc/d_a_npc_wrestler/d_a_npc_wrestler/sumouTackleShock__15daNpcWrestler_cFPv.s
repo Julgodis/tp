@@ -7,9 +7,9 @@ lbl_80B389A4:
 /* 80B389B8  7C 7F 1B 78 */	mr r31, r3
 /* 80B389BC  3C 80 80 B4 */	lis r4, m__21daNpcWrestler_Param_c@ha
 /* 80B389C0  3B A4 16 DC */	addi r29, r4, m__21daNpcWrestler_Param_c@l
-/* 80B389C4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B389C8  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80B389CC  83 9E 5D AC */	lwz r28, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80B389C4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B389C8  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80B389CC  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 80B389D0  A0 03 0E 96 */	lhz r0, 0xe96(r3)
 /* 80B389D4  2C 00 00 02 */	cmpwi r0, 2
 /* 80B389D8  41 82 00 EC */	beq lbl_80B38AC4
@@ -93,8 +93,8 @@ lbl_80B38AC4:
 /* 80B38B08  C0 1D 01 B4 */	lfs f0, 0x1b4(r29)
 /* 80B38B0C  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80B38B10  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 80B38B14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B38B18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B38B14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B38B18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B38B1C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80B38B20  80 9F 0B D8 */	lwz r4, 0xbd8(r31)
 /* 80B38B24  80 84 00 74 */	lwz r4, 0x74(r4)
@@ -108,11 +108,11 @@ lbl_80B38B34:
 /* 80B38B40  41 82 00 98 */	beq lbl_80B38BD8
 /* 80B38B44  3C 60 80 B4 */	lis r3, lit_8323@ha
 /* 80B38B48  38 83 2B 80 */	addi r4, r3, lit_8323@l
-/* 80B38B4C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B42B80 */
-/* 80B38B50  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B42B84 */
+/* 80B38B4C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B38B50  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B38B54  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80B38B58  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80B38B5C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B42B88 */
+/* 80B38B5C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B38B60  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80B38B64  38 00 00 03 */	li r0, 3
 /* 80B38B68  B0 1F 0E 96 */	sth r0, 0xe96(r31)
@@ -150,11 +150,11 @@ lbl_80B38BD8:
 /* 80B38BE0  40 82 00 94 */	bne lbl_80B38C74
 /* 80B38BE4  3C 60 80 B4 */	lis r3, lit_8328@ha
 /* 80B38BE8  38 83 2B 8C */	addi r4, r3, lit_8328@l
-/* 80B38BEC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B42B8C */
-/* 80B38BF0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B42B90 */
+/* 80B38BEC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B38BF0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B38BF4  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80B38BF8  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B38BFC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B42B94 */
+/* 80B38BFC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B38C00  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B38C04  38 00 00 03 */	li r0, 3
 /* 80B38C08  B0 1F 0E 96 */	sth r0, 0xe96(r31)

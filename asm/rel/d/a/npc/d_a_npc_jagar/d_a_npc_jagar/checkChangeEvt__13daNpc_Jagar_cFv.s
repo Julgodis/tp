@@ -6,11 +6,11 @@ lbl_80A155E4:
 /* 80A155F4  7C 7F 1B 78 */	mr r31, r3
 /* 80A155F8  3C 80 80 A2 */	lis r4, lit_4674@ha
 /* 80A155FC  38 A4 AB 74 */	addi r5, r4, lit_4674@l
-/* 80A15600  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A1AB74 */
-/* 80A15604  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A1AB78 */
+/* 80A15600  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A15604  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A15608  90 81 00 08 */	stw r4, 8(r1)
 /* 80A1560C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A15610  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A1AB7C */
+/* 80A15610  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A15614  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A15618  38 81 00 08 */	addi r4, r1, 8
 /* 80A1561C  48 00 0C 95 */	bl chkAction__13daNpc_Jagar_cFM13daNpc_Jagar_cFPCvPvPv_i
@@ -18,9 +18,9 @@ lbl_80A155E4:
 /* 80A15624  40 82 00 D8 */	bne lbl_80A156FC
 /* 80A15628  38 00 00 00 */	li r0, 0
 /* 80A1562C  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80A15630  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A15634  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A15638  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80A15630  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A15634  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A15638  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80A1563C  28 04 00 01 */	cmplwi r4, 1
 /* 80A15640  41 82 00 0C */	beq lbl_80A1564C
 /* 80A15644  28 04 00 02 */	cmplwi r4, 2

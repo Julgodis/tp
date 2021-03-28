@@ -74,9 +74,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -98,10 +95,10 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-static void daObjGake_create1st(daObjGake_c*); // 2
-static void daObjGake_MoveBGDelete(daObjGake_c*); // 2
-static void daObjGake_MoveBGExecute(daObjGake_c*); // 2
-static void daObjGake_MoveBGDraw(daObjGake_c*); // 2
+void daObjGake_create1st(daObjGake_c*); // 2
+void daObjGake_MoveBGDelete(daObjGake_c*); // 2
+void daObjGake_MoveBGExecute(daObjGake_c*); // 2
+void daObjGake_MoveBGDraw(daObjGake_c*); // 2
 
 extern "C" void initBaseMtx__11daObjGake_cFv(); // 1
 extern "C" void setBaseMtx__11daObjGake_cFv(); // 1
@@ -111,11 +108,12 @@ extern "C" void create1st__11daObjGake_cFv(); // 1
 extern "C" void Execute__11daObjGake_cFPPA3_A4_f(); // 1
 extern "C" void Draw__11daObjGake_cFv(); // 1
 extern "C" void Delete__11daObjGake_cFv(); // 1
-extern "C" static void daObjGake_create1st__FP11daObjGake_c(); // 1
-extern "C" static void daObjGake_MoveBGDelete__FP11daObjGake_c(); // 1
-extern "C" static void daObjGake_MoveBGExecute__FP11daObjGake_c(); // 1
-extern "C" static void daObjGake_MoveBGDraw__FP11daObjGake_c(); // 1
+extern "C" void daObjGake_create1st__FP11daObjGake_c(); // 1
+extern "C" void daObjGake_MoveBGDelete__FP11daObjGake_c(); // 1
+extern "C" void daObjGake_MoveBGExecute__FP11daObjGake_c(); // 1
+extern "C" void daObjGake_MoveBGDraw__FP11daObjGake_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daObjGake_METHODS[8];
 extern "C" extern void* g_profile_Obj_Gake[12];
 
 // 
@@ -143,9 +141,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -153,19 +148,11 @@ extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
 extern "C" void PSMTXCopy(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -193,7 +180,7 @@ asm void daObjGake_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80D0BCB8-80D0BD30 0078+00 s=1 e=0 z=0  None .text      Create__11daObjGake_cFv                                      */
+/* 80D0BCB8-80D0BD30 0078+00 s=0 e=0 z=0  None .text      Create__11daObjGake_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -205,17 +192,10 @@ asm void daObjGake_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80D0C13C-80D0C144 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D0C13C = "A_TGake";
-#pragma pop
-
 /* 80D0C144-80D0C148 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80D0BD30-80D0BDA0 0070+00 s=1 e=0 z=0  None .text      CreateHeap__11daObjGake_cFv                                  */
+/* 80D0BD30-80D0BDA0 0070+00 s=0 e=0 z=0  None .text      CreateHeap__11daObjGake_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -237,7 +217,7 @@ asm void daObjGake_c::create1st() {
 #pragma pop
 
 
-/* 80D0BE24-80D0BF7C 0158+00 s=1 e=0 z=0  None .text      Execute__11daObjGake_cFPPA3_A4_f                             */
+/* 80D0BE24-80D0BF7C 0158+00 s=0 e=0 z=0  None .text      Execute__11daObjGake_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -248,7 +228,7 @@ asm void daObjGake_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80D0BF7C-80D0C034 00B8+00 s=1 e=0 z=0  None .text      Draw__11daObjGake_cFv                                        */
+/* 80D0BF7C-80D0C034 00B8+00 s=0 e=0 z=0  None .text      Draw__11daObjGake_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -259,7 +239,7 @@ asm void daObjGake_c::Draw() {
 #pragma pop
 
 
-/* 80D0C034-80D0C068 0034+00 s=1 e=0 z=0  None .text      Delete__11daObjGake_cFv                                      */
+/* 80D0C034-80D0C068 0034+00 s=0 e=0 z=0  None .text      Delete__11daObjGake_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -271,89 +251,97 @@ asm void daObjGake_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80D0C148-80D0C168 0020+00 s=1 e=0 z=0  None .data      daObjGake_METHODS                                            */
-SECTION_DATA static void* daObjGake_METHODS[8] = {
-	/* 0    */ (void*)daObjGake_create1st__FP11daObjGake_c,
-	/* 1    */ (void*)daObjGake_MoveBGDelete__FP11daObjGake_c,
-	/* 2    */ (void*)daObjGake_MoveBGExecute__FP11daObjGake_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjGake_MoveBGDraw__FP11daObjGake_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D0C148-80D0C168 0020+00 s=0 e=0 z=0  None .data      daObjGake_METHODS                                            */
+SECTION_DATA void* daObjGake_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D0C168-80D0C198 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Gake                                           */
+/* 80D0C168-80D0C198 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Gake                                           */
 SECTION_DATA void* g_profile_Obj_Gake[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00BA0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005B4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02380000,
-	/* 9    */ (void*)&daObjGake_METHODS,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00BA0000,
+	(void*)NULL,
+	(void*)0x000005B4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02380000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80D0C198-80D0C1C0 0028+00 s=1 e=0 z=0  None .data      __vt__11daObjGake_c                                          */
 SECTION_DATA static void* __vt__11daObjGake_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__11daObjGake_cFv,
-	/* 3    */ (void*)Create__11daObjGake_cFv,
-	/* 4    */ (void*)Execute__11daObjGake_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__11daObjGake_cFv,
-	/* 6    */ (void*)Delete__11daObjGake_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D0C068-80D0C0C8 0060+00 s=1 e=0 z=0  None .text      daObjGake_create1st__FP11daObjGake_c                         */
+/* 80D0C068-80D0C0C8 0060+00 s=0 e=0 z=0  None .text      daObjGake_create1st__FP11daObjGake_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjGake_create1st(daObjGake_c* param_0) {
+asm void daObjGake_create1st(daObjGake_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_create1st__FP11daObjGake_c.s"
 }
 #pragma pop
 
 
-/* 80D0C0C8-80D0C0E8 0020+00 s=1 e=0 z=0  None .text      daObjGake_MoveBGDelete__FP11daObjGake_c                      */
+/* 80D0C0C8-80D0C0E8 0020+00 s=0 e=0 z=0  None .text      daObjGake_MoveBGDelete__FP11daObjGake_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjGake_MoveBGDelete(daObjGake_c* param_0) {
+asm void daObjGake_MoveBGDelete(daObjGake_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGDelete__FP11daObjGake_c.s"
 }
 #pragma pop
 
 
-/* 80D0C0E8-80D0C108 0020+00 s=1 e=0 z=0  None .text      daObjGake_MoveBGExecute__FP11daObjGake_c                     */
+/* 80D0C0E8-80D0C108 0020+00 s=0 e=0 z=0  None .text      daObjGake_MoveBGExecute__FP11daObjGake_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjGake_MoveBGExecute(daObjGake_c* param_0) {
+asm void daObjGake_MoveBGExecute(daObjGake_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGExecute__FP11daObjGake_c.s"
 }
 #pragma pop
 
 
-/* 80D0C108-80D0C134 002C+00 s=1 e=0 z=0  None .text      daObjGake_MoveBGDraw__FP11daObjGake_c                        */
+/* 80D0C108-80D0C134 002C+00 s=0 e=0 z=0  None .text      daObjGake_MoveBGDraw__FP11daObjGake_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjGake_MoveBGDraw(daObjGake_c* param_0) {
+asm void daObjGake_MoveBGDraw(daObjGake_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tgake/d_a_obj_tgake/daObjGake_MoveBGDraw__FP11daObjGake_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D0C13C-80D0C144 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D0C13C = "A_TGake";
+#pragma pop
 

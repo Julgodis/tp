@@ -18,9 +18,9 @@ lbl_8051B1A4:
 /* 8051B1AC  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8051B1B0  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8051B1B4  7F C3 F3 78 */	mr r3, r30
-/* 8051B1B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8051B1BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8051B1C0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8051B1B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8051B1BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8051B1C0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8051B1C4  4B AF F6 1C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8051B1C8  D0 3E 05 D8 */	stfs f1, 0x5d8(r30)
 /* 8051B1CC  A8 7E 05 D0 */	lha r3, 0x5d0(r30)

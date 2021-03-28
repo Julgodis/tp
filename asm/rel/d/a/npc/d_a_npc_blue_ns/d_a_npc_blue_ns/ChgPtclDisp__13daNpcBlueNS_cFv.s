@@ -25,9 +25,9 @@ lbl_8096B23C:
 /* 8096B25C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8096B260  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 8096B264  D0 41 00 28 */	stfs f2, 0x28(r1)
-/* 8096B268  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8096B26C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 8096B270  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 8096B268  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8096B26C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 8096B270  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 8096B274  38 80 00 00 */	li r4, 0
 /* 8096B278  90 81 00 08 */	stw r4, 8(r1)
 /* 8096B27C  38 00 FF FF */	li r0, -1

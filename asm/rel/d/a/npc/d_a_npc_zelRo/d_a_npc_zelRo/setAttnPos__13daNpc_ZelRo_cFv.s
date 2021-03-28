@@ -7,11 +7,11 @@ lbl_80B7320C:
 /* 80B73220  7C 7E 1B 78 */	mr r30, r3
 /* 80B73224  3C 60 80 B7 */	lis r3, m__19daNpc_ZelRo_Param_c@ha
 /* 80B73228  3B E3 4C 5C */	addi r31, r3, m__19daNpc_ZelRo_Param_c@l
-/* 80B7322C  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 80B74D10 */
+/* 80B7322C  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
 /* 80B73230  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80B73234  C0 1F 00 B8 */	lfs f0, 0xb8(r31)	/* effective address: 80B74D14 */
+/* 80B73234  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 80B73238  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80B7323C  C0 1F 00 9C */	lfs f0, 0x9c(r31)	/* effective address: 80B74CF8 */
+/* 80B7323C  C0 1F 00 9C */	lfs f0, 0x9c(r31)
 /* 80B73240  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80B73244  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80B73248  38 80 00 00 */	li r4, 0

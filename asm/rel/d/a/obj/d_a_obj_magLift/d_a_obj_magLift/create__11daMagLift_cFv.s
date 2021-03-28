@@ -79,8 +79,8 @@ lbl_80C8DC54:
 /* 80C8DCB8  48 00 05 A9 */	bl init_modeWaitInit__11daMagLift_cFv
 /* 80C8DCBC  48 00 00 3C */	b lbl_80C8DCF8
 lbl_80C8DCC0:
-/* 80C8DCC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C8DCC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C8DCC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C8DCC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C8DCC8  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C8DCCC  7C 05 07 74 */	extsb r5, r0
 /* 80C8DCD0  4B 3A 76 90 */	b isSwitch__10dSv_info_cCFii

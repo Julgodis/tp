@@ -9,7 +9,7 @@ lbl_80C8DE98:
 /* 80C8DEB4  3B E3 E6 5C */	addi r31, r3, mSpeed__11daMagLift_c@l
 /* 80C8DEB8  C0 3E 05 CC */	lfs f1, 0x5cc(r30)
 /* 80C8DEBC  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80C8DEC0  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 80C8E6A0 */
+/* 80C8DEC0  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 80C8DEC4  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80C8DEC8  4B 5E 28 78 */	b cLib_chaseF__FPfff
 /* 80C8DECC  2C 03 00 01 */	cmpwi r3, 1

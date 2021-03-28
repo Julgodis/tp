@@ -120,25 +120,25 @@ asm static void dKyeff2_Create(kankyo_class* param_0) {
 /* ############################################################################################## */
 /* 803BC198-803BC1AC 0014+00 s=1 e=0 z=0  None .data      l_dKyeff2_Method                                             */
 SECTION_DATA static void* l_dKyeff2_Method[5] = {
-	/* 0    */ (void*)dKyeff2_Create__FP12kankyo_class,
-	/* 1    */ (void*)dKyeff2_Delete__FP9dKyeff2_c,
-	/* 2    */ (void*)dKyeff2_Execute__FP9dKyeff2_c,
-	/* 3    */ (void*)dKyeff2_IsDelete__FP9dKyeff2_c,
-	/* 4    */ (void*)dKyeff2_Draw__FP9dKyeff2_c,
+	(void*)dKyeff2_Create__FP12kankyo_class,
+	(void*)dKyeff2_Delete__FP9dKyeff2_c,
+	(void*)dKyeff2_Execute__FP9dKyeff2_c,
+	(void*)dKyeff2_IsDelete__FP9dKyeff2_c,
+	(void*)dKyeff2_Draw__FP9dKyeff2_c,
 };
 
-/* 803BC1AC-803BC1D8 0028+04 s=0 e=0 z=1  None .data      g_profile_KYEFF2                                             */
+/* 803BC1AC-803BC1D8 0028+04 s=0 e=0 z=0  None .data      g_profile_KYEFF2                                             */
 SECTION_DATA void* g_profile_KYEFF2[10 + 1 /* padding */] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000CFFFD,
-	/* 2    */ (void*)0x03120000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000000F8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopKy_Method,
-	/* 8    */ (void*)0x00030000,
-	/* 9    */ (void*)&l_dKyeff2_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03120000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000F8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x00030000,
+	(void*)&l_dKyeff2_Method,
 	/* padding */
 	NULL,
 };

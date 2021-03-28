@@ -88,9 +88,9 @@ struct dCcD_GStts {
 // Forward References:
 // 
 
-static void daObjSMark_Draw(daObjSMark_c*); // 2
-static void daObjSMark_Delete(daObjSMark_c*); // 2
-static void daObjSMark_Create(fopAc_ac_c*); // 2
+void daObjSMark_Draw(daObjSMark_c*); // 2
+void daObjSMark_Delete(daObjSMark_c*); // 2
+void daObjSMark_Create(fopAc_ac_c*); // 2
 
 extern "C" void initBaseMtx__12daObjSMark_cFv(); // 1
 extern "C" void setBaseMtx__12daObjSMark_cFv(); // 1
@@ -99,12 +99,13 @@ extern "C" void create__12daObjSMark_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void draw__12daObjSMark_cFv(); // 1
 extern "C" void _delete__12daObjSMark_cFv(); // 1
-extern "C" static void daObjSMark_Draw__FP12daObjSMark_c(); // 1
-extern "C" static void daObjSMark_Delete__FP12daObjSMark_c(); // 1
-extern "C" static void daObjSMark_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_8059A3D0(); // 1
-extern "C" static void func_8059A3D8(); // 1
+extern "C" void daObjSMark_Draw__FP12daObjSMark_c(); // 1
+extern "C" void daObjSMark_Delete__FP12daObjSMark_c(); // 1
+extern "C" void daObjSMark_Create__FP10fopAc_ac_c(); // 1
+extern "C" void func_8059A3D0(); // 1
+extern "C" void func_8059A3D8(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjSMark_Method[8];
 extern "C" extern void* g_profile_Obj_StoneMark[12];
 
 // 
@@ -139,14 +140,11 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 data_8042DC8C[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
@@ -186,26 +184,8 @@ SECTION_RODATA static u32 const lit_3643 = 0x42C80000;
 /* 8059A3F0-8059A3F4 0004+00 s=1 e=0 z=0  None .rodata    @3644                                                        */
 SECTION_RODATA static u32 const lit_3644 = 0x41F00000;
 
-/* 8059A3F4-8059A3FC 0008+00 s=1 e=0 z=0  None .rodata    l_shadow_size$3714                                           */
-SECTION_RODATA static u8 const data_8059A3F4[8] = {
-	0x42, 0x5C, 0x00, 0x00, 0x42, 0xAA, 0x00, 0x00,
-};
-
-/* 8059A3FC-8059A400 0004+00 s=1 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA static u32 const lit_3718 = 0xBF19999A;
-
-/* 8059A400-8059A404 0004+00 s=1 e=0 z=0  None .rodata    @3719                                                        */
-SECTION_RODATA static u32 const lit_3719 = 0x3ECCCCCC;
-
-/* 8059A404-8059A40D 0009+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_8059A404 = "A_IwaAto";
-#pragma pop
-
 /* 8059A410-8059A414 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 8059A080-8059A168 00E8+00 s=1 e=0 z=0  None .text      Create__12daObjSMark_cFv                                     */
 #pragma push
@@ -219,45 +199,45 @@ asm void daObjSMark_c::Create() {
 
 
 /* ############################################################################################## */
-/* 8059A414-8059A434 0020+00 s=1 e=0 z=0  None .data      l_daObjSMark_Method                                          */
-SECTION_DATA static void* l_daObjSMark_Method[8] = {
-	/* 0    */ (void*)daObjSMark_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjSMark_Delete__FP12daObjSMark_c,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjSMark_Draw__FP12daObjSMark_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8059A414-8059A434 0020+00 s=0 e=0 z=0  None .data      l_daObjSMark_Method                                          */
+SECTION_DATA void* l_daObjSMark_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8059A434-8059A464 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_StoneMark                                      */
+/* 8059A434-8059A464 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_StoneMark                                      */
 SECTION_DATA void* g_profile_Obj_StoneMark[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01710000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000814,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02160000,
-	/* 9    */ (void*)&l_daObjSMark_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x00170000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01710000,
+	(void*)NULL,
+	(void*)0x00000814,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02160000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x00170000,
 };
 
 /* 8059A464-8059A488 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8059A3D8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8059A3D0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8059A168-8059A25C 00F4+00 s=1 e=0 z=0  None .text      create__12daObjSMark_cFv                                     */
@@ -271,7 +251,7 @@ asm void daObjSMark_c::create() {
 #pragma pop
 
 
-/* 8059A25C-8059A2CC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 8059A25C-8059A2CC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -281,6 +261,18 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8059A3F4-8059A3FC 0008+00 s=1 e=0 z=0  None .rodata    l_shadow_size$3714                                           */
+SECTION_RODATA static u8 const data_8059A3F4[8] = {
+	0x42, 0x5C, 0x00, 0x00, 0x42, 0xAA, 0x00, 0x00,
+};
+
+/* 8059A3FC-8059A400 0004+00 s=1 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA static u32 const lit_3718 = 0xBF19999A;
+
+/* 8059A400-8059A404 0004+00 s=1 e=0 z=0  None .rodata    @3719                                                        */
+SECTION_RODATA static u32 const lit_3719 = 0x3ECCCCCC;
 
 /* 8059A2CC-8059A33C 0070+00 s=1 e=0 z=0  None .text      draw__12daObjSMark_cFv                                       */
 #pragma push
@@ -304,58 +296,66 @@ asm void daObjSMark_c::_delete() {
 #pragma pop
 
 
-/* 8059A370-8059A390 0020+00 s=1 e=0 z=0  None .text      daObjSMark_Draw__FP12daObjSMark_c                            */
+/* 8059A370-8059A390 0020+00 s=0 e=0 z=0  None .text      daObjSMark_Draw__FP12daObjSMark_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSMark_Draw(daObjSMark_c* param_0) {
+asm void daObjSMark_Draw(daObjSMark_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Draw__FP12daObjSMark_c.s"
 }
 #pragma pop
 
 
-/* 8059A390-8059A3B0 0020+00 s=1 e=0 z=0  None .text      daObjSMark_Delete__FP12daObjSMark_c                          */
+/* 8059A390-8059A3B0 0020+00 s=0 e=0 z=0  None .text      daObjSMark_Delete__FP12daObjSMark_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSMark_Delete(daObjSMark_c* param_0) {
+asm void daObjSMark_Delete(daObjSMark_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Delete__FP12daObjSMark_c.s"
 }
 #pragma pop
 
 
-/* 8059A3B0-8059A3D0 0020+00 s=1 e=0 z=0  None .text      daObjSMark_Create__FP10fopAc_ac_c                            */
+/* 8059A3B0-8059A3D0 0020+00 s=0 e=0 z=0  None .text      daObjSMark_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjSMark_Create(fopAc_ac_c* param_0) {
+asm void daObjSMark_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/daObjSMark_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8059A3D0-8059A3D8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 8059A3D0-8059A3D8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8059A3D0() {
+extern "C" asm void func_8059A3D0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A3D0.s"
 }
 #pragma pop
 
 
-/* 8059A3D8-8059A3E0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 8059A3D8-8059A3E0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_8059A3D8() {
+extern "C" asm void func_8059A3D8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_stonemark/d_a_obj_stoneMark/func_8059A3D8.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8059A404-8059A40D 0009+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_8059A404 = "A_IwaAto";
+#pragma pop
 

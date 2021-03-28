@@ -29,7 +29,7 @@ lbl_80C03C74:
 /* 80C03C80  38 80 00 00 */	li r4, 0
 /* 80C03C84  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C03C88  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C03C8C  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C03C8C  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C03C90  4B FF DA FD */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C03C94  7F E3 FB 78 */	mr r3, r31
 /* 80C03C98  38 80 00 00 */	li r4, 0

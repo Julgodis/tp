@@ -109,7 +109,7 @@ lbl_80B0BEA8:
 /* 80B0BEC4  38 00 FF FF */	li r0, -1
 /* 80B0BEC8  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B0BECC  38 63 C6 0C */	addi r3, r3, l_HIO@l
-/* 80B0BED0  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80B0C610 */
+/* 80B0BED0  98 03 00 04 */	stb r0, 4(r3)
 lbl_80B0BED4:
 /* 80B0BED4  38 00 00 00 */	li r0, 0
 /* 80B0BED8  90 1D 05 5C */	stw r0, 0x55c(r29)

@@ -115,23 +115,24 @@ struct cBgW_BgId {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjMirrorSand_Draw(daObjMirrorSand_c*); // 2
-static void daObjMirrorSand_Execute(daObjMirrorSand_c*); // 2
-static bool daObjMirrorSand_IsDelete(daObjMirrorSand_c*); // 2
-static void daObjMirrorSand_Delete(daObjMirrorSand_c*); // 2
-static void daObjMirrorSand_Create(fopAc_ac_c*); // 2
+void daObjMirrorSand_Draw(daObjMirrorSand_c*); // 2
+void daObjMirrorSand_Execute(daObjMirrorSand_c*); // 2
+bool daObjMirrorSand_IsDelete(daObjMirrorSand_c*); // 2
+void daObjMirrorSand_Delete(daObjMirrorSand_c*); // 2
+void daObjMirrorSand_Create(fopAc_ac_c*); // 2
 
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void initBaseMtx__17daObjMirrorSand_cFv(); // 1
 extern "C" void setBaseMtx__17daObjMirrorSand_cFv(); // 1
-extern "C" static void daObjMirrorSand_Draw__FP17daObjMirrorSand_c(); // 1
-extern "C" static void daObjMirrorSand_Execute__FP17daObjMirrorSand_c(); // 1
-extern "C" static bool daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c(); // 1
-extern "C" static void daObjMirrorSand_Delete__FP17daObjMirrorSand_c(); // 1
+extern "C" void daObjMirrorSand_Draw__FP17daObjMirrorSand_c(); // 1
+extern "C" void daObjMirrorSand_Execute__FP17daObjMirrorSand_c(); // 1
+extern "C" bool daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c(); // 1
+extern "C" void daObjMirrorSand_Delete__FP17daObjMirrorSand_c(); // 1
 extern "C" void __dt__4dBgWFv(); // 1
-extern "C" static void daObjMirrorSand_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjMirrorSand_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjMirrorSand_Method[8];
 extern "C" extern void* g_profile_Obj_MirrorSand[12];
 
 // 
@@ -182,21 +183,12 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 struct_803A7538[64];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__4dBgW[65];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -216,49 +208,42 @@ SECTION_RODATA static u8 const lit_3732[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80C989E8-80C989F0 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C989E8 = "MR-Sand";
-#pragma pop
-
 /* 80C989F0-80C989F4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80C989F4-80C98A14 0020+00 s=1 e=0 z=0  None .data      l_daObjMirrorSand_Method                                     */
-SECTION_DATA static void* l_daObjMirrorSand_Method[8] = {
-	/* 0    */ (void*)daObjMirrorSand_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjMirrorSand_Delete__FP17daObjMirrorSand_c,
-	/* 2    */ (void*)daObjMirrorSand_Execute__FP17daObjMirrorSand_c,
-	/* 3    */ (void*)daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c,
-	/* 4    */ (void*)daObjMirrorSand_Draw__FP17daObjMirrorSand_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C989F4-80C98A14 0020+00 s=0 e=0 z=0  None .data      l_daObjMirrorSand_Method                                     */
+SECTION_DATA void* l_daObjMirrorSand_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C98A14-80C98A44 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_MirrorSand                                     */
+/* 80C98A14-80C98A44 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_MirrorSand                                     */
 SECTION_DATA void* g_profile_Obj_MirrorSand[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00AF0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000072C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02A70000,
-	/* 9    */ (void*)&l_daObjMirrorSand_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00AF0000,
+	(void*)NULL,
+	(void*)0x0000072C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02A70000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80C98A44-80C98A50 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C981D8-80C984C0 02E8+00 s=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
@@ -272,7 +257,7 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C984C0-80C98508 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C984C0-80C98508 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,39 +290,39 @@ asm void daObjMirrorSand_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C98598-80C98668 00D0+00 s=1 e=0 z=0  None .text      daObjMirrorSand_Draw__FP17daObjMirrorSand_c                  */
+/* 80C98598-80C98668 00D0+00 s=0 e=0 z=0  None .text      daObjMirrorSand_Draw__FP17daObjMirrorSand_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMirrorSand_Draw(daObjMirrorSand_c* param_0) {
+asm void daObjMirrorSand_Draw(daObjMirrorSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Draw__FP17daObjMirrorSand_c.s"
 }
 #pragma pop
 
 
-/* 80C98668-80C98700 0098+00 s=1 e=0 z=0  None .text      daObjMirrorSand_Execute__FP17daObjMirrorSand_c               */
+/* 80C98668-80C98700 0098+00 s=0 e=0 z=0  None .text      daObjMirrorSand_Execute__FP17daObjMirrorSand_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMirrorSand_Execute(daObjMirrorSand_c* param_0) {
+asm void daObjMirrorSand_Execute(daObjMirrorSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Execute__FP17daObjMirrorSand_c.s"
 }
 #pragma pop
 
 
-/* 80C98700-80C98708 0008+00 s=1 e=0 z=0  None .text      daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c              */
-static bool daObjMirrorSand_IsDelete(daObjMirrorSand_c* param_0) {
+/* 80C98700-80C98708 0008+00 s=0 e=0 z=0  None .text      daObjMirrorSand_IsDelete__FP17daObjMirrorSand_c              */
+bool daObjMirrorSand_IsDelete(daObjMirrorSand_c* param_0) {
 	return true;
 }
 
 
-/* 80C98708-80C987B8 00B0+00 s=1 e=0 z=0  None .text      daObjMirrorSand_Delete__FP17daObjMirrorSand_c                */
+/* 80C98708-80C987B8 00B0+00 s=0 e=0 z=0  None .text      daObjMirrorSand_Delete__FP17daObjMirrorSand_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMirrorSand_Delete(daObjMirrorSand_c* param_0) {
+asm void daObjMirrorSand_Delete(daObjMirrorSand_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Delete__FP17daObjMirrorSand_c.s"
 }
@@ -355,14 +340,22 @@ asm dBgW::~dBgW() {
 #pragma pop
 
 
-/* 80C98818-80C989D0 01B8+00 s=1 e=0 z=0  None .text      daObjMirrorSand_Create__FP10fopAc_ac_c                       */
+/* 80C98818-80C989D0 01B8+00 s=0 e=0 z=0  None .text      daObjMirrorSand_Create__FP10fopAc_ac_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMirrorSand_Create(fopAc_ac_c* param_0) {
+asm void daObjMirrorSand_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/mirror/d_a_obj_mirror_sand/d_a_obj_mirror_sand/daObjMirrorSand_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C989E8-80C989F0 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C989E8 = "MR-Sand";
+#pragma pop
 

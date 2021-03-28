@@ -6,7 +6,7 @@ lbl_80C75E78:
 /* 80C75E88  38 84 66 68 */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 80C75E8C  3C A0 80 C7 */	lis r5, data_80C767FC@ha
 /* 80C75E90  38 E5 67 FC */	addi r7, r5, data_80C767FC@l
-/* 80C75E94  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80C767FC */
+/* 80C75E94  88 07 00 00 */	lbz r0, 0(r7)
 /* 80C75E98  7C 00 07 75 */	extsb. r0, r0
 /* 80C75E9C  40 82 00 A0 */	bne lbl_80C75F3C
 /* 80C75EA0  80 A4 00 38 */	lwz r5, 0x38(r4)

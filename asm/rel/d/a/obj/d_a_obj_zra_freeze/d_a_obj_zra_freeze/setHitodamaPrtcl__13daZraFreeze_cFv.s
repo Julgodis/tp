@@ -23,13 +23,13 @@ lbl_80D444C0:
 /* 80D44514  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80D44518  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80D4451C  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80D44520  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 80D44B64 */
+/* 80D44520  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 80D44524  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80D44528  D0 1D 05 D0 */	stfs f0, 0x5d0(r29)
 /* 80D4452C  A8 1D 05 DC */	lha r0, 0x5dc(r29)
 /* 80D44530  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80D44534  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80D44538  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 80D44B68 */
+/* 80D44538  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80D4453C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80D44540  D0 1D 05 D4 */	stfs f0, 0x5d4(r29)
 /* 80D44544  A8 1D 04 E6 */	lha r0, 0x4e6(r29)
@@ -64,11 +64,11 @@ lbl_80D444C0:
 /* 80D445B8  3B C0 00 00 */	li r30, 0
 /* 80D445BC  3B 80 00 00 */	li r28, 0
 /* 80D445C0  3B 60 00 00 */	li r27, 0
-/* 80D445C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D445C8  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
+/* 80D445C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D445C8  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 /* 80D445CC  3B 3F 00 18 */	addi r25, r31, 0x18
 lbl_80D445D0:
-/* 80D445D0  80 78 5D 3C */	lwz r3, 0x5d3c(r24)	/* effective address: 8040BEFC */
+/* 80D445D0  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 80D445D4  38 00 00 FF */	li r0, 0xff
 /* 80D445D8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D445DC  38 80 00 00 */	li r4, 0
@@ -86,7 +86,7 @@ lbl_80D445D0:
 /* 80D4460C  39 00 00 00 */	li r8, 0
 /* 80D44610  39 3D 04 E4 */	addi r9, r29, 0x4e4
 /* 80D44614  39 40 00 00 */	li r10, 0
-/* 80D44618  C0 3F 00 24 */	lfs f1, 0x24(r31)	/* effective address: 80D44B6C */
+/* 80D44618  C0 3F 00 24 */	lfs f1, 0x24(r31)
 /* 80D4461C  4B 30 8E B0 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80D44620  7C 7D D1 2E */	stwx r3, r29, r26
 /* 80D44624  80 78 5D 3C */	lwz r3, 0x5d3c(r24)

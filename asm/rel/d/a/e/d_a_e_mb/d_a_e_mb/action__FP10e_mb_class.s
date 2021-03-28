@@ -42,12 +42,12 @@ lbl_807075F0:
 lbl_807075F4:
 /* 807075F4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807075F8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807075FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807075FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80707600  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80707604  4B 90 4D D8 */	b mDoMtx_YrotS__FPA4_fs
 /* 80707608  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070760C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80707610  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80707610  80 63 00 00 */	lwz r3, 0(r3)
 /* 80707614  A8 9E 04 DC */	lha r4, 0x4dc(r30)
 /* 80707618  4B 90 4D 84 */	b mDoMtx_XrotM__FPA4_fs
 /* 8070761C  3C 60 80 71 */	lis r3, lit_3767@ha

@@ -7,9 +7,9 @@ lbl_804F6500:
 /* 804F6514  7C 7E 1B 78 */	mr r30, r3
 /* 804F6518  3C 80 80 50 */	lis r4, lit_3777@ha
 /* 804F651C  3B 64 A6 BC */	addi r27, r4, lit_3777@l
-/* 804F6520  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804F6524  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 804F6528  83 5C 5D AC */	lwz r26, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 804F6520  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804F6524  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 804F6528  83 5C 5D AC */	lwz r26, 0x5dac(r28)
 /* 804F652C  7F 44 D3 78 */	mr r4, r26
 /* 804F6530  4B B2 41 E0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 804F6534  B0 7E 05 C6 */	sth r3, 0x5c6(r30)
@@ -21,18 +21,18 @@ lbl_804F6500:
 /* 804F654C  38 00 00 01 */	li r0, 1
 /* 804F6550  3C 7E 00 02 */	addis r3, r30, 2
 /* 804F6554  90 03 B0 7C */	stw r0, -0x4f84(r3)
-/* 804F6558  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804F655C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804F6558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804F655C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804F6560  3B 23 07 F0 */	addi r25, r3, 0x7f0
 /* 804F6564  7F 23 CB 78 */	mr r3, r25
 /* 804F6568  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 804F656C  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 804F6570  A0 9D 01 FE */	lhz r4, 0x1fe(r29)	/* effective address: 803A7486 */
+/* 804F6570  A0 9D 01 FE */	lhz r4, 0x1fe(r29)
 /* 804F6574  4B B3 E4 30 */	b offEventBit__11dSv_event_cFUs
 /* 804F6578  7F 23 CB 78 */	mr r3, r25
 /* 804F657C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 804F6580  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 804F6584  A0 84 02 02 */	lhz r4, 0x202(r4)	/* effective address: 803A748A */
+/* 804F6584  A0 84 02 02 */	lhz r4, 0x202(r4)
 /* 804F6588  4B B3 E4 1C */	b offEventBit__11dSv_event_cFUs
 /* 804F658C  A8 1E 07 A2 */	lha r0, 0x7a2(r30)
 /* 804F6590  28 00 00 0C */	cmplwi r0, 0xc
@@ -138,14 +138,14 @@ lbl_804F66B4:
 /* 804F66EC  4B D7 9F 1C */	b cLib_addCalcAngleS2__FPssss
 /* 804F66F0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804F66F4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804F66F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804F66F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F66FC  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 804F6700  4B B1 5C DC */	b mDoMtx_YrotS__FPA4_fs
 /* 804F6704  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804F6708  38 63 AE A4 */	addi r3, r3, l_HIO@l
-/* 804F670C  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 804FAEB0 */
+/* 804F670C  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 804F6710  C0 3E 05 2C */	lfs f1, 0x52c(r30)
-/* 804F6714  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 804FAEAC */
+/* 804F6714  C0 03 00 08 */	lfs f0, 8(r3)
 /* 804F6718  EC 01 00 32 */	fmuls f0, f1, f0
 /* 804F671C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 804F6720  D0 01 00 3C */	stfs f0, 0x3c(r1)
@@ -235,7 +235,7 @@ lbl_804F6840:
 lbl_804F6850:
 /* 804F6850  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804F6854  38 63 AE A4 */	addi r3, r3, l_HIO@l
-/* 804F6858  C0 03 00 A0 */	lfs f0, 0xa0(r3)	/* effective address: 804FAF44 */
+/* 804F6858  C0 03 00 A0 */	lfs f0, 0xa0(r3)
 /* 804F685C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804F6860  40 81 00 78 */	ble lbl_804F68D8
 /* 804F6864  C0 3E 04 D0 */	lfs f1, 0x4d0(r30)
@@ -250,7 +250,7 @@ lbl_804F6850:
 /* 804F6888  7C 64 1B 78 */	mr r4, r3
 /* 804F688C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804F6890  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804F6894  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804F6894  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F6898  4B B1 5B 44 */	b mDoMtx_YrotS__FPA4_fs
 /* 804F689C  C0 1B 00 3C */	lfs f0, 0x3c(r27)
 /* 804F68A0  D0 01 00 34 */	stfs f0, 0x34(r1)
@@ -293,7 +293,7 @@ lbl_804F6908:
 /* 804F6928  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 804F692C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804F6930  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804F6934  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804F6934  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F6938  A8 9E 08 00 */	lha r4, 0x800(r30)
 /* 804F693C  4B B1 5A A0 */	b mDoMtx_YrotS__FPA4_fs
 /* 804F6940  38 61 00 34 */	addi r3, r1, 0x34

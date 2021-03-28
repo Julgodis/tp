@@ -15,9 +15,9 @@ lbl_805C85E8:
 /* 805C861C  D0 01 00 B4 */	stfs f0, 0xb4(r1)
 /* 805C8620  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
 /* 805C8624  D0 01 00 B8 */	stfs f0, 0xb8(r1)
-/* 805C8628  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805C862C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805C8630  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805C8628  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C862C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805C8630  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 805C8634  4B BB 90 0C */	b dCam_getBody__Fv
 /* 805C8638  C0 1E 00 70 */	lfs f0, 0x70(r30)
 /* 805C863C  D0 1D 05 38 */	stfs f0, 0x538(r29)
@@ -156,8 +156,8 @@ lbl_805C87BC:
 /* 805C8840  4B FF F8 4D */	bl SetStopCam__9daB_DRE_cF4cXyzffs
 /* 805C8844  38 00 00 64 */	li r0, 0x64
 /* 805C8848  B0 1D 06 2C */	sth r0, 0x62c(r29)
-/* 805C884C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805C8850  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805C884C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C8850  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805C8854  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 805C8858  7F A4 EB 78 */	mr r4, r29
 /* 805C885C  4B A7 AE 30 */	b setPtT__14dEvt_control_cFPv
@@ -201,7 +201,7 @@ lbl_805C88BC:
 /* 805C88F0  38 00 00 02 */	li r0, 2
 /* 805C88F4  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 805C88F8  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 805C88FC  98 03 12 CC */	stb r0, 0x12cc(r3)	/* effective address: 8042DD20 */
+/* 805C88FC  98 03 12 CC */	stb r0, 0x12cc(r3)
 /* 805C8900  88 7D 05 B4 */	lbz r3, 0x5b4(r29)
 /* 805C8904  38 03 00 01 */	addi r0, r3, 1
 /* 805C8908  98 1D 05 B4 */	stb r0, 0x5b4(r29)

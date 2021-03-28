@@ -37,8 +37,8 @@ lbl_807B193C:
 /* 807B1940  41 82 00 34 */	beq lbl_807B1974
 /* 807B1944  38 00 00 02 */	li r0, 2
 /* 807B1948  B0 1E 05 B4 */	sth r0, 0x5b4(r30)
-/* 807B194C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B1950  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B194C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B1950  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B1954  38 63 09 58 */	addi r3, r3, 0x958
 /* 807B1958  38 80 00 07 */	li r4, 7
 /* 807B195C  4B 88 2F BC */	b onDungeonItem__12dSv_memBit_cFi

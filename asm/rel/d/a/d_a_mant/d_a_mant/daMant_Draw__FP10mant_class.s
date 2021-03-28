@@ -21,20 +21,20 @@ lbl_808616B8:
 /* 80861704  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 80861708  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8086170C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80861710  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80861710  80 84 00 00 */	lwz r4, 0(r4)
 /* 80861714  4B AE 4D D0 */	b PSMTXConcat
 /* 80861718  38 BF 05 B0 */	addi r5, r31, 0x5b0
 /* 8086171C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80861720  38 63 4A C8 */	addi r3, r3, j3dSys@l
 /* 80861724  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80861728  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8086172C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8086172C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80861730  4B AE 4D B4 */	b PSMTXConcat
 /* 80861734  38 1F 01 0C */	addi r0, r31, 0x10c
 /* 80861738  90 1F 05 E0 */	stw r0, 0x5e0(r31)
 /* 8086173C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80861740  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80861744  80 63 00 48 */	lwz r3, 0x48(r3)	/* effective address: 80434B10 */
+/* 80861744  80 63 00 48 */	lwz r3, 0x48(r3)
 /* 80861748  38 9F 05 70 */	addi r4, r31, 0x570
 /* 8086174C  38 A0 00 00 */	li r5, 0
 /* 80861750  4B AC 3D 3C */	b entryImm__13J3DDrawBufferFP9J3DPacketUs

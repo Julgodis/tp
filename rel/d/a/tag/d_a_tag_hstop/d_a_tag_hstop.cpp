@@ -52,20 +52,21 @@ struct dMsgFlow_c {
 // Forward References:
 // 
 
-static void daTagHstop_Create(fopAc_ac_c*); // 2
-static void daTagHstop_Delete(daTagHstop_c*); // 2
-static void daTagHstop_Execute(daTagHstop_c*); // 2
-static bool daTagHstop_Draw(daTagHstop_c*); // 2
+void daTagHstop_Create(fopAc_ac_c*); // 2
+void daTagHstop_Delete(daTagHstop_c*); // 2
+void daTagHstop_Execute(daTagHstop_c*); // 2
+bool daTagHstop_Draw(daTagHstop_c*); // 2
 
 extern "C" void create__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagHstop_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Delete__FP12daTagHstop_c(); // 1
+extern "C" void daTagHstop_Delete__FP12daTagHstop_c(); // 1
 extern "C" void setActive__12daTagHstop_cFv(); // 1
 extern "C" void execute__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Execute__FP12daTagHstop_c(); // 1
-extern "C" static bool daTagHstop_Draw__FP12daTagHstop_c(); // 1
+extern "C" void daTagHstop_Execute__FP12daTagHstop_c(); // 1
+extern "C" bool daTagHstop_Draw__FP12daTagHstop_c(); // 1
 extern "C" void __sinit_d_a_tag_hstop_cpp(); // 1
+extern "C" extern void* l_daTagHstop_Method[8];
 extern "C" extern void* g_profile_Tag_Hstop[12];
 
 // 
@@ -89,15 +90,8 @@ extern "C" void __dt__10dMsgFlow_cFv(); // 1
 extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
 extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
 extern "C" void __dl__FPv(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_804062AC[8];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040BF78[4];
-extern "C" extern u8 struct_8040BFB4[24];
-SECTION_BSS extern u8 g_meter2_info[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -120,11 +114,11 @@ asm void daTagHstop_c::create() {
 #pragma pop
 
 
-/* 805A45D8-805A45F8 0020+00 s=1 e=0 z=0  None .text      daTagHstop_Create__FP10fopAc_ac_c                            */
+/* 805A45D8-805A45F8 0020+00 s=0 e=0 z=0  None .text      daTagHstop_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHstop_Create(fopAc_ac_c* param_0) {
+asm void daTagHstop_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hstop/d_a_tag_hstop/daTagHstop_Create__FP10fopAc_ac_c.s"
 }
@@ -142,11 +136,11 @@ asm daTagHstop_c::~daTagHstop_c() {
 #pragma pop
 
 
-/* 805A4690-805A46B8 0028+00 s=1 e=0 z=0  None .text      daTagHstop_Delete__FP12daTagHstop_c                          */
+/* 805A4690-805A46B8 0028+00 s=0 e=0 z=0  None .text      daTagHstop_Delete__FP12daTagHstop_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHstop_Delete(daTagHstop_c* param_0) {
+asm void daTagHstop_Delete(daTagHstop_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hstop/d_a_tag_hstop/daTagHstop_Delete__FP12daTagHstop_c.s"
 }
@@ -182,24 +176,24 @@ asm void daTagHstop_c::execute() {
 #pragma pop
 
 
-/* 805A4AA8-805A4AC8 0020+00 s=1 e=0 z=0  None .text      daTagHstop_Execute__FP12daTagHstop_c                         */
+/* 805A4AA8-805A4AC8 0020+00 s=0 e=0 z=0  None .text      daTagHstop_Execute__FP12daTagHstop_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHstop_Execute(daTagHstop_c* param_0) {
+asm void daTagHstop_Execute(daTagHstop_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hstop/d_a_tag_hstop/daTagHstop_Execute__FP12daTagHstop_c.s"
 }
 #pragma pop
 
 
-/* 805A4AC8-805A4AD0 0008+00 s=1 e=0 z=0  None .text      daTagHstop_Draw__FP12daTagHstop_c                            */
-static bool daTagHstop_Draw(daTagHstop_c* param_0) {
+/* 805A4AC8-805A4AD0 0008+00 s=0 e=0 z=0  None .text      daTagHstop_Draw__FP12daTagHstop_c                            */
+bool daTagHstop_Draw(daTagHstop_c* param_0) {
 	return true;
 }
 
 
-/* 805A4AD0-805A4B0C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_hstop_cpp                                    */
+/* 805A4AD0-805A4B0C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_tag_hstop_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -211,31 +205,31 @@ extern "C" asm void __sinit_d_a_tag_hstop_cpp() {
 
 
 /* ############################################################################################## */
-/* 805A4B24-805A4B44 0020+00 s=1 e=0 z=0  None .data      l_daTagHstop_Method                                          */
-SECTION_DATA static void* l_daTagHstop_Method[8] = {
-	/* 0    */ (void*)daTagHstop_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagHstop_Delete__FP12daTagHstop_c,
-	/* 2    */ (void*)daTagHstop_Execute__FP12daTagHstop_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagHstop_Draw__FP12daTagHstop_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A4B24-805A4B44 0020+00 s=0 e=0 z=0  None .data      l_daTagHstop_Method                                          */
+SECTION_DATA void* l_daTagHstop_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A4B44-805A4B74 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Hstop                                          */
+/* 805A4B44-805A4B74 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Hstop                                          */
 SECTION_DATA void* g_profile_Tag_Hstop[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00EC0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000578,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01B30000,
-	/* 9    */ (void*)&l_daTagHstop_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00EC0000,
+	(void*)NULL,
+	(void*)0x00000578,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01B30000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x030E0000,
 };
 

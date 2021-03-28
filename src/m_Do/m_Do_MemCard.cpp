@@ -254,20 +254,20 @@ asm void mDoMemCd_Ctrl_c::SaveSync() {
 /* ############################################################################################## */
 /* 803A34F8-803A3530 0038+00 s=1 e=0 z=0  None .data      @3770                                                        */
 SECTION_DATA static void* lit_3770[14] = {
-	/* 0    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x74),
-	/* 1    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x4C),
-	/* 2    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x54),
-	/* 3    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x5C),
-	/* 4    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x64),
-	/* 5    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x6C),
-	/* 6    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x7C),
-	/* 7    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x84),
-	/* 8    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x8C),
-	/* 9    */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x94),
-	/* 10   */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x9C),
-	/* 11   */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xA4),
-	/* 12   */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xAC),
-	/* 13   */ (void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xB4),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x74),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x4C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x54),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x5C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x64),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x6C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x7C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x84),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x8C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x94),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0x9C),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xA4),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xAC),
+	(void*)(((char*)getStatus__15mDoMemCd_Ctrl_cFUl)+0xB4),
 };
 
 /* 80016D74-80016E58 00E4+00 s=2 e=2 z=0  None .text      getStatus__15mDoMemCd_Ctrl_cFUl                              */
@@ -350,20 +350,20 @@ asm void mDoMemCd_Ctrl_c::detach() {
 /* ############################################################################################## */
 /* 803A3530-803A3568 0038+00 s=1 e=0 z=0  None .data      @3850                                                        */
 SECTION_DATA static void* lit_3850[14] = {
-	/* 0    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xF4),
-	/* 1    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 2    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 3    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 4    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 5    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 6    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 7    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xC4),
-	/* 8    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xD4),
-	/* 9    */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 10   */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xE4),
-	/* 11   */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 12   */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
-	/* 13   */ (void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xBC),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xF4),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xC4),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xD4),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xE4),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0x114),
+	(void*)(((char*)mount__15mDoMemCd_Ctrl_cFv)+0xBC),
 };
 
 /* 803E0F40-803EAF40 A000+00 s=1 e=0 z=0  None .bss       MemCardWorkArea0                                             */

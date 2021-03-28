@@ -14,10 +14,10 @@
 struct _GXTexMapID {
 };
 
-struct ResFONT {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct ResFONT {
 };
 
 struct JUTCacheFont {
@@ -46,17 +46,17 @@ struct JUTCacheFont {
 	/* 802DDFAC */ void prepend(JUTCacheFont::TGlyphCacheInfo*);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JUTFont {
 	struct TWidth {
 	};
 
 	/* 802DED24 */ void initialize_state();
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
 };
 
 struct JUTResFont {
@@ -184,25 +184,25 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 /* ############################################################################################## */
 /* 803CC540-803CC590 004C+04 s=2 e=0 z=0  None .data      __vt__12JUTCacheFont                                         */
 SECTION_DATA static void* __vt__12JUTCacheFont[19 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JUTCacheFontFv,
-	/* 3    */ (void*)setGX__10JUTResFontFv,
-	/* 4    */ (void*)setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 5    */ (void*)drawChar_scale__10JUTResFontFffffib,
-	/* 6    */ (void*)getLeading__10JUTResFontCFv,
-	/* 7    */ (void*)getAscent__10JUTResFontCFv,
-	/* 8    */ (void*)getDescent__10JUTResFontCFv,
-	/* 9    */ (void*)getHeight__10JUTResFontCFv,
-	/* 10   */ (void*)getWidth__10JUTResFontCFv,
-	/* 11   */ (void*)getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth,
-	/* 12   */ (void*)getCellWidth__10JUTResFontCFv,
-	/* 13   */ (void*)getCellHeight__10JUTResFontCFv,
-	/* 14   */ (void*)getFontType__10JUTResFontCFv,
-	/* 15   */ (void*)getResFont__10JUTResFontCFv,
-	/* 16   */ (void*)isLeadByte__10JUTResFontCFi,
-	/* 17   */ (void*)loadImage__12JUTCacheFontFi11_GXTexMapID,
-	/* 18   */ (void*)setBlock__12JUTCacheFontFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JUTCacheFontFv,
+	(void*)setGX__10JUTResFontFv,
+	(void*)setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)drawChar_scale__10JUTResFontFffffib,
+	(void*)getLeading__10JUTResFontCFv,
+	(void*)getAscent__10JUTResFontCFv,
+	(void*)getDescent__10JUTResFontCFv,
+	(void*)getHeight__10JUTResFontCFv,
+	(void*)getWidth__10JUTResFontCFv,
+	(void*)getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth,
+	(void*)getCellWidth__10JUTResFontCFv,
+	(void*)getCellHeight__10JUTResFontCFv,
+	(void*)getFontType__10JUTResFontCFv,
+	(void*)getResFont__10JUTResFontCFv,
+	(void*)isLeadByte__10JUTResFontCFi,
+	(void*)loadImage__12JUTCacheFontFi11_GXTexMapID,
+	(void*)setBlock__12JUTCacheFontFv,
 	/* padding */
 	NULL,
 };

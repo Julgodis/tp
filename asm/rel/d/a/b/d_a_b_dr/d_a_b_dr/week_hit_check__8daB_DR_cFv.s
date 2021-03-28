@@ -7,12 +7,12 @@ lbl_805BCAD4:
 /* 805BCAE8  80 03 0A 5C */	lwz r0, 0xa5c(r3)
 /* 805BCAEC  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 805BCAF0  41 82 00 CC */	beq lbl_805BCBBC
-/* 805BCAF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805BCAF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805BCAFC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805BCB00  80 03 05 88 */	lwz r0, 0x588(r3)	/* effective address: 80406748 */
+/* 805BCAF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805BCAF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BCAFC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805BCB00  80 03 05 88 */	lwz r0, 0x588(r3)
 /* 805BCB04  64 00 02 00 */	oris r0, r0, 0x200
-/* 805BCB08  90 03 05 88 */	stw r0, 0x588(r3)	/* effective address: 80406748 */
+/* 805BCB08  90 03 05 88 */	stw r0, 0x588(r3)
 /* 805BCB0C  A8 1F 05 62 */	lha r0, 0x562(r31)
 /* 805BCB10  2C 00 00 00 */	cmpwi r0, 0
 /* 805BCB14  40 81 00 A8 */	ble lbl_805BCBBC
@@ -43,7 +43,7 @@ lbl_805BCAD4:
 /* 805BCB78  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 805BCB7C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805BCB80  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805BCB84  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805BCB84  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BCB88  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805BCB8C  38 80 00 02 */	li r4, 2
 /* 805BCB90  4B CF 33 FC */	b changeBgmStatus__8Z2SeqMgrFl

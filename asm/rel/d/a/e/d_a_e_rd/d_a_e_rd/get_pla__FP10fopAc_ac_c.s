@@ -5,9 +5,9 @@ lbl_80504B20:
 /* 80504B2C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80504B30  4B E5 D6 AC */	b _savegpr_29
 /* 80504B34  7C 7D 1B 78 */	mr r29, r3
-/* 80504B38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80504B3C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80504B40  83 DF 5D AC */	lwz r30, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80504B38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80504B3C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80504B40  83 DF 5D AC */	lwz r30, 0x5dac(r31)
 /* 80504B44  38 00 00 56 */	li r0, 0x56
 /* 80504B48  B0 01 00 08 */	sth r0, 8(r1)
 /* 80504B4C  3C 60 80 02 */	lis r3, fpcSch_JudgeForPName__FPvPv@ha

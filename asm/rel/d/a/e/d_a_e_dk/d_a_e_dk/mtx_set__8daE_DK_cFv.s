@@ -33,7 +33,7 @@ lbl_806AC614:
 lbl_806AC634:
 /* 806AC634  3C 60 80 6B */	lis r3, l_HIO@ha
 /* 806AC638  3B A3 D8 08 */	addi r29, r3, l_HIO@l
-/* 806AC63C  C0 3D 00 08 */	lfs f1, 8(r29)	/* effective address: 806AD810 */
+/* 806AC63C  C0 3D 00 08 */	lfs f1, 8(r29)
 /* 806AC640  FC 40 08 90 */	fmr f2, f1
 /* 806AC644  FC 60 08 90 */	fmr f3, f1
 /* 806AC648  4B 96 07 F0 */	b scaleM__14mDoMtx_stack_cFfff
@@ -56,9 +56,9 @@ lbl_806AC634:
 /* 806AC68C  4B C9 9E 24 */	b PSMTXCopy
 /* 806AC690  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806AC694  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806AC698  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
-/* 806AC69C  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 803DD48C */
-/* 806AC6A0  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806AC698  C0 23 00 0C */	lfs f1, 0xc(r3)
+/* 806AC69C  C0 43 00 1C */	lfs f2, 0x1c(r3)
+/* 806AC6A0  C0 63 00 2C */	lfs f3, 0x2c(r3)
 /* 806AC6A4  4B C9 A2 44 */	b PSMTXTrans
 /* 806AC6A8  38 7E 04 E4 */	addi r3, r30, 0x4e4
 /* 806AC6AC  4B 96 08 98 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz

@@ -25,7 +25,7 @@ lbl_8054FCB4:
 /* 8054FCBC  38 A0 00 00 */	li r5, 0
 /* 8054FCC0  3C C0 80 55 */	lis r6, m__18daNpc_Kkri_Param_c@ha
 /* 8054FCC4  38 C6 34 90 */	addi r6, r6, m__18daNpc_Kkri_Param_c@l
-/* 8054FCC8  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 8055349C */
+/* 8054FCC8  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 8054FCCC  38 C0 00 00 */	li r6, 0
 /* 8054FCD0  3C E0 80 55 */	lis r7, lit_4441@ha
 /* 8054FCD4  C0 47 35 4C */	lfs f2, lit_4441@l(r7)

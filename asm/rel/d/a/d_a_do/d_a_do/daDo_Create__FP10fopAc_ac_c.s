@@ -161,13 +161,13 @@ lbl_8066EA10:
 lbl_8066EA7C:
 /* 8066EA7C  38 00 00 00 */	li r0, 0
 /* 8066EA80  98 1E 00 3D */	stb r0, 0x3d(r30)
-/* 8066EA84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066EA88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066EA8C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)	/* effective address: 8040AFE0 */
+/* 8066EA84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066EA88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066EA8C  85 83 4E 20 */	lwzu r12, 0x4e20(r3)
 /* 8066EA90  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 8066EA94  7D 89 03 A6 */	mtctr r12
 /* 8066EA98  4E 80 04 21 */	bctrl 
-/* 8066EA9C  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 804061CC */
+/* 8066EA9C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8066EAA0  54 00 87 7F */	rlwinm. r0, r0, 0x10, 0x1d, 0x1f
 /* 8066EAA4  41 82 00 14 */	beq lbl_8066EAB8
 /* 8066EAA8  38 00 00 01 */	li r0, 1

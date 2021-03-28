@@ -2,9 +2,9 @@ lbl_806F5E38:
 /* 806F5E38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 806F5E3C  7C 08 02 A6 */	mflr r0
 /* 806F5E40  90 01 00 14 */	stw r0, 0x14(r1)
-/* 806F5E44  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806F5E48  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 806F5E4C  80 C5 5D AC */	lwz r6, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 806F5E44  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806F5E48  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 806F5E4C  80 C5 5D AC */	lwz r6, 0x5dac(r5)
 /* 806F5E50  C0 03 06 A8 */	lfs f0, 0x6a8(r3)
 /* 806F5E54  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 806F5E58  40 80 00 48 */	bge lbl_806F5EA0

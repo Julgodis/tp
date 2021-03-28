@@ -127,8 +127,8 @@ lbl_809A6ED0:
 /* 809A6FA0  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 809A6FA4  90 1D 0E E8 */	stw r0, 0xee8(r29)
 /* 809A6FA8  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 809A6FAC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809A6FB0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809A6FAC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809A6FB0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809A6FB4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809A6FB8  4B 6C FA F4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809A6FBC  80 1D 07 68 */	lwz r0, 0x768(r29)

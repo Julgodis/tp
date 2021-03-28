@@ -84,8 +84,8 @@ lbl_80C30624:
 /* 80C30684  C0 1F 04 EC */	lfs f0, 0x4ec(r31)
 /* 80C30688  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80C3068C  4B 63 F0 7C */	b SetR__8cM3dGSphFf
-/* 80C30690  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C30694  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C30690  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C30694  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C30698  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C3069C  38 9F 06 C4 */	addi r4, r31, 0x6c4
 /* 80C306A0  4B 63 45 08 */	b Set__4cCcSFP8cCcD_Obj

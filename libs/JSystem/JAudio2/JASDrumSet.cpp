@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JASInstParam {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JASInstParam {
 };
 
 struct JASDrumSet {
@@ -68,11 +68,11 @@ extern "C" extern void* __vt__7JASInst[5];
 /* ############################################################################################## */
 /* 803C7710-803C7728 0014+04 s=2 e=0 z=0  None .data      __vt__10JASDrumSet                                           */
 SECTION_DATA static void* __vt__10JASDrumSet[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JASDrumSetFv,
-	/* 3    */ (void*)getParam__10JASDrumSetCFiiP12JASInstParam,
-	/* 4    */ (void*)getType__10JASDrumSetCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JASDrumSetFv,
+	(void*)getParam__10JASDrumSetCFiiP12JASInstParam,
+	(void*)getType__10JASDrumSetCFv,
 	/* padding */
 	NULL,
 };

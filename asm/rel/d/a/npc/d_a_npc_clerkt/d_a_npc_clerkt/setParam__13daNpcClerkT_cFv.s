@@ -40,10 +40,10 @@ lbl_8099BD4C:
 lbl_8099BD70:
 /* 8099BD70  3C 60 80 9A */	lis r3, m__19daNpcClerkt_Param_c@ha
 /* 8099BD74  38 83 D2 44 */	addi r4, r3, m__19daNpcClerkt_Param_c@l
-/* 8099BD78  AB A4 00 48 */	lha r29, 0x48(r4)	/* effective address: 8099D28C */
-/* 8099BD7C  AB C4 00 4A */	lha r30, 0x4a(r4)	/* effective address: 8099D28E */
-/* 8099BD80  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 8099D290 */
-/* 8099BD84  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 8099D292 */
+/* 8099BD78  AB A4 00 48 */	lha r29, 0x48(r4)
+/* 8099BD7C  AB C4 00 4A */	lha r30, 0x4a(r4)
+/* 8099BD80  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 8099BD84  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 8099BD88  4B 7B 0C 90 */	b daNpcT_getDistTableIdx__Fii
 /* 8099BD8C  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 8099BD90  88 1F 05 44 */	lbz r0, 0x544(r31)
@@ -56,35 +56,35 @@ lbl_8099BD70:
 /* 8099BDAC  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 8099BDB0  3C 60 80 9A */	lis r3, m__19daNpcClerkt_Param_c@ha
 /* 8099BDB4  38 63 D2 44 */	addi r3, r3, m__19daNpcClerkt_Param_c@l
-/* 8099BDB8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8099D24C */
+/* 8099BDB8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8099BDBC  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 8099BDC0  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 8099BDC4  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 8099BDC8  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8099D254 */
+/* 8099BDC8  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8099BDCC  FC 00 00 1E */	fctiwz f0, f0
 /* 8099BDD0  D8 01 00 08 */	stfd f0, 8(r1)
 /* 8099BDD4  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8099BDD8  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 8099BDDC  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8099D258 */
+/* 8099BDDC  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8099BDE0  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 8099BDE4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8099D260 */
+/* 8099BDE4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8099BDE8  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 8099BDEC  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8099D294 */
+/* 8099BDEC  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 8099BDF0  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 8099BDF4  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 8099BDF8  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 8099BDFC  4B 6D A1 44 */	b SetWallR__12dBgS_AcchCirFf
 /* 8099BE00  3C 60 80 9A */	lis r3, m__19daNpcClerkt_Param_c@ha
 /* 8099BE04  38 63 D2 44 */	addi r3, r3, m__19daNpcClerkt_Param_c@l
-/* 8099BE08  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8099D25C */
+/* 8099BE08  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8099BE0C  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 8099BE10  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8099D250 */
+/* 8099BE10  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8099BE14  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 8099BE18  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8099D248 */
+/* 8099BE18  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8099BE1C  D0 1F 05 30 */	stfs f0, 0x530(r31)
-/* 8099BE20  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 8099D2B0 */
+/* 8099BE20  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 8099BE24  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 8099BE28  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 8099D288 */
+/* 8099BE28  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 8099BE2C  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
 /* 8099BE30  39 61 00 20 */	addi r11, r1, 0x20
 /* 8099BE34  4B 9C 63 F4 */	b _restgpr_29

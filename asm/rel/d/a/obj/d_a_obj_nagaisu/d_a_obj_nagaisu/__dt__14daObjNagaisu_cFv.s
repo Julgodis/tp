@@ -16,7 +16,7 @@ lbl_80C9F4B8:
 lbl_80C9F4F0:
 /* 80C9F4F0  3C 80 80 CA */	lis r4, l_arcName@ha
 /* 80C9F4F4  38 84 04 08 */	addi r4, r4, l_arcName@l
-/* 80C9F4F8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CA0408 */
+/* 80C9F4F8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C9F4FC  4B 38 DB 0C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C9F500  38 7E 05 B4 */	addi r3, r30, 0x5b4
 /* 80C9F504  3C 80 80 CA */	lis r4, __dt__15daObjIsuChild_cFv@ha

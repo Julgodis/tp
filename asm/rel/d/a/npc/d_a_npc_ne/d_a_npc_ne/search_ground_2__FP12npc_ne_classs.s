@@ -22,8 +22,8 @@ lbl_80A8DD58:
 /* 80A8DDA8  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80A8DDAC  C0 1D 06 BC */	lfs f0, 0x6bc(r29)
 /* 80A8DDB0  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80A8DDB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A8DDB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A8DDB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A8DDB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A8DDBC  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80A8DDC0  38 7E 3E C8 */	addi r3, r30, 0x3ec8
 /* 80A8DDC4  3C 80 80 A9 */	lis r4, stringBase0@ha
@@ -41,7 +41,7 @@ lbl_80A8DDE8:
 lbl_80A8DDF0:
 /* 80A8DDF0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A8DDF4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A8DDF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A8DDF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A8DDFC  7F 84 E3 78 */	mr r4, r28
 /* 80A8DE00  4B 57 E5 DC */	b mDoMtx_YrotS__FPA4_fs
 /* 80A8DE04  C0 1F 00 10 */	lfs f0, 0x10(r31)

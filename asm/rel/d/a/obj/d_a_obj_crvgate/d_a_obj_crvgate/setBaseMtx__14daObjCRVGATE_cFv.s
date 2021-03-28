@@ -7,10 +7,10 @@ lbl_80BD2528:
 /* 80BD253C  7C 7E 1B 78 */	mr r30, r3
 /* 80BD2540  3C 60 80 BD */	lis r3, data_80BD30C0@ha
 /* 80BD2544  3B E3 30 C0 */	addi r31, r3, data_80BD30C0@l
-/* 80BD2548  C0 1F 00 48 */	lfs f0, 0x48(r31)	/* effective address: 80BD3108 */
+/* 80BD2548  C0 1F 00 48 */	lfs f0, 0x48(r31)
 /* 80BD254C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80BD2550  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80BD2554  C0 1F 00 D8 */	lfs f0, 0xd8(r31)	/* effective address: 80BD3198 */
+/* 80BD2554  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80BD2558  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BD255C  38 7E 05 E0 */	addi r3, r30, 0x5e0
 /* 80BD2560  4B 43 A8 04 */	b transS__14mDoMtx_stack_cFRC4cXyz

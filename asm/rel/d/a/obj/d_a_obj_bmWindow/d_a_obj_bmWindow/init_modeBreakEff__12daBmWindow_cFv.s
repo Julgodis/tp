@@ -13,7 +13,7 @@ lbl_80BB922C:
 /* 80BB9258  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BB925C  C0 3E 04 D8 */	lfs f1, 0x4d8(r30)
 /* 80BB9260  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80BB9264  C0 1F 00 8C */	lfs f0, 0x8c(r31)	/* effective address: 80BB97C8 */
+/* 80BB9264  C0 1F 00 8C */	lfs f0, 0x8c(r31)
 /* 80BB9268  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80BB926C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BB9270  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
@@ -25,7 +25,7 @@ lbl_80BB922C:
 /* 80BB9288  90 01 00 08 */	stw r0, 8(r1)
 /* 80BB928C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB9290  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB9294  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB9294  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB9298  38 81 00 08 */	addi r4, r1, 8
 /* 80BB929C  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80BB92A0  38 C0 00 00 */	li r6, 0
@@ -38,8 +38,8 @@ lbl_80BB922C:
 /* 80BB92BC  7F C3 F3 78 */	mr r3, r30
 /* 80BB92C0  38 80 00 01 */	li r4, 1
 /* 80BB92C4  48 00 00 61 */	bl setBreakEffect__12daBmWindow_cFi
-/* 80BB92C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB92CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB92C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB92CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB92D0  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BB92D4  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BB92D8  88 1E 04 BA */	lbz r0, 0x4ba(r30)

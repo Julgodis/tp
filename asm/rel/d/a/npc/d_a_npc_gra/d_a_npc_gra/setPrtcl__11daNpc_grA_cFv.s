@@ -9,14 +9,14 @@ lbl_809C36AC:
 /* 809C36C8  3B E3 9D 98 */	addi r31, r3, m__17daNpc_grA_Param_c@l
 /* 809C36CC  3B A0 00 00 */	li r29, 0
 /* 809C36D0  3B 80 00 00 */	li r28, 0
-/* 809C36D4  C0 1F 06 8C */	lfs f0, 0x68c(r31)	/* effective address: 809CA424 */
+/* 809C36D4  C0 1F 06 8C */	lfs f0, 0x68c(r31)
 /* 809C36D8  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 809C36DC  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 809C36E0  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 809C36E4  3B 60 00 00 */	li r27, 0
 /* 809C36E8  3B 20 00 00 */	li r25, 0
-/* 809C36EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C36F0  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
+/* 809C36EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C36F0  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 lbl_809C36F4:
 /* 809C36F4  28 1B 00 01 */	cmplwi r27, 1
 /* 809C36F8  40 81 00 0C */	ble lbl_809C3704

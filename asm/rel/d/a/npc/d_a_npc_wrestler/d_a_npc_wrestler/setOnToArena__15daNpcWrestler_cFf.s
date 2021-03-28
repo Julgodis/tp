@@ -70,9 +70,9 @@ lbl_80B30DDC:
 /* 80B30E50  7F E3 FB 78 */	mr r3, r31
 /* 80B30E54  A8 9F 0E 00 */	lha r4, 0xe00(r31)
 /* 80B30E58  4B 62 33 F8 */	b setAngle__8daNpcF_cFs
-/* 80B30E5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B30E60  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B30E64  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B30E5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B30E60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B30E64  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80B30E68  3C 60 80 B4 */	lis r3, lit_4418@ha
 /* 80B30E6C  C0 03 18 94 */	lfs f0, lit_4418@l(r3)
 /* 80B30E70  D0 01 00 14 */	stfs f0, 0x14(r1)

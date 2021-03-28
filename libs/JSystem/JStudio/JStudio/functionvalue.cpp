@@ -299,10 +299,10 @@ extern "C" extern u32 __float_nan;
 /* ############################################################################################## */
 /* 8039A9F0-8039AA00 0010+00 s=1 e=0 z=0  None .rodata    gapfnExtrapolateParameter___Q27JStudio27@unnamed@functionvalue_cpp@ */
 SECTION_RODATA static void* const data_8039A9F0[4] = {
-	/* 0    */ (void*)extrapolateParameter_raw__Q27JStudio13functionvalueFdd,
-	/* 1    */ (void*)extrapolateParameter_repeat__Q27JStudio13functionvalueFdd,
-	/* 2    */ (void*)extrapolateParameter_turn__Q27JStudio13functionvalueFdd,
-	/* 3    */ (void*)extrapolateParameter_clamp__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_raw__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_repeat__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_turn__Q27JStudio13functionvalueFdd,
+	(void*)extrapolateParameter_clamp__Q27JStudio13functionvalueFdd,
 };
 
 /* 80281648-80281690 0048+00 s=3 e=1 z=0  None .text      toFunction_outside__Q27JStudio14TFunctionValueFi             */
@@ -319,86 +319,86 @@ asm void JStudio::TFunctionValue::toFunction_outside(int param_0) {
 /* ############################################################################################## */
 /* 803C48E0-803C4900 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio22TFunctionValue_hermite                     */
 SECTION_DATA void* __vt__Q27JStudio22TFunctionValue_hermite[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio22TFunctionValue_hermiteFv,
-	/* 3    */ (void*)getType__Q27JStudio22TFunctionValue_hermiteCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv,
-	/* 5    */ (void*)initialize__Q27JStudio22TFunctionValue_hermiteFv,
-	/* 6    */ (void*)prepare__Q27JStudio22TFunctionValue_hermiteFv,
-	/* 7    */ (void*)getValue__Q27JStudio22TFunctionValue_hermiteFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio22TFunctionValue_hermiteFv,
+	(void*)getType__Q27JStudio22TFunctionValue_hermiteCFv,
+	(void*)getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv,
+	(void*)initialize__Q27JStudio22TFunctionValue_hermiteFv,
+	(void*)prepare__Q27JStudio22TFunctionValue_hermiteFv,
+	(void*)getValue__Q27JStudio22TFunctionValue_hermiteFd,
 };
 
 /* 803C4900-803C4920 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio29TFunctionValue_list_parameter              */
 SECTION_DATA void* __vt__Q27JStudio29TFunctionValue_list_parameter[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio29TFunctionValue_list_parameterFv,
-	/* 3    */ (void*)getType__Q27JStudio29TFunctionValue_list_parameterCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv,
-	/* 5    */ (void*)initialize__Q27JStudio29TFunctionValue_list_parameterFv,
-	/* 6    */ (void*)prepare__Q27JStudio29TFunctionValue_list_parameterFv,
-	/* 7    */ (void*)getValue__Q27JStudio29TFunctionValue_list_parameterFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio29TFunctionValue_list_parameterFv,
+	(void*)getType__Q27JStudio29TFunctionValue_list_parameterCFv,
+	(void*)getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv,
+	(void*)initialize__Q27JStudio29TFunctionValue_list_parameterFv,
+	(void*)prepare__Q27JStudio29TFunctionValue_list_parameterFv,
+	(void*)getValue__Q27JStudio29TFunctionValue_list_parameterFd,
 };
 
 /* 803C4920-803C4940 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio19TFunctionValue_list                        */
 SECTION_DATA void* __vt__Q27JStudio19TFunctionValue_list[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio19TFunctionValue_listFv,
-	/* 3    */ (void*)getType__Q27JStudio19TFunctionValue_listCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio19TFunctionValue_listFv,
-	/* 5    */ (void*)initialize__Q27JStudio19TFunctionValue_listFv,
-	/* 6    */ (void*)prepare__Q27JStudio19TFunctionValue_listFv,
-	/* 7    */ (void*)getValue__Q27JStudio19TFunctionValue_listFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio19TFunctionValue_listFv,
+	(void*)getType__Q27JStudio19TFunctionValue_listCFv,
+	(void*)getAttributeSet__Q27JStudio19TFunctionValue_listFv,
+	(void*)initialize__Q27JStudio19TFunctionValue_listFv,
+	(void*)prepare__Q27JStudio19TFunctionValue_listFv,
+	(void*)getValue__Q27JStudio19TFunctionValue_listFd,
 };
 
 /* 803C4940-803C4960 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio25TFunctionValue_transition                  */
 SECTION_DATA void* __vt__Q27JStudio25TFunctionValue_transition[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio25TFunctionValue_transitionFv,
-	/* 3    */ (void*)getType__Q27JStudio25TFunctionValue_transitionCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio25TFunctionValue_transitionFv,
-	/* 5    */ (void*)initialize__Q27JStudio25TFunctionValue_transitionFv,
-	/* 6    */ (void*)prepare__Q27JStudio25TFunctionValue_transitionFv,
-	/* 7    */ (void*)getValue__Q27JStudio25TFunctionValue_transitionFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio25TFunctionValue_transitionFv,
+	(void*)getType__Q27JStudio25TFunctionValue_transitionCFv,
+	(void*)getAttributeSet__Q27JStudio25TFunctionValue_transitionFv,
+	(void*)initialize__Q27JStudio25TFunctionValue_transitionFv,
+	(void*)prepare__Q27JStudio25TFunctionValue_transitionFv,
+	(void*)getValue__Q27JStudio25TFunctionValue_transitionFd,
 };
 
 /* 803C4960-803C4980 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio23TFunctionValue_constant                    */
 SECTION_DATA void* __vt__Q27JStudio23TFunctionValue_constant[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio23TFunctionValue_constantFv,
-	/* 3    */ (void*)getType__Q27JStudio23TFunctionValue_constantCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio23TFunctionValue_constantFv,
-	/* 5    */ (void*)initialize__Q27JStudio23TFunctionValue_constantFv,
-	/* 6    */ (void*)prepare__Q27JStudio23TFunctionValue_constantFv,
-	/* 7    */ (void*)getValue__Q27JStudio23TFunctionValue_constantFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio23TFunctionValue_constantFv,
+	(void*)getType__Q27JStudio23TFunctionValue_constantCFv,
+	(void*)getAttributeSet__Q27JStudio23TFunctionValue_constantFv,
+	(void*)initialize__Q27JStudio23TFunctionValue_constantFv,
+	(void*)prepare__Q27JStudio23TFunctionValue_constantFv,
+	(void*)getValue__Q27JStudio23TFunctionValue_constantFd,
 };
 
 /* 803C4980-803C49A0 0020+00 s=2 e=1 z=0  None .data      __vt__Q27JStudio24TFunctionValue_composite                   */
 SECTION_DATA void* __vt__Q27JStudio24TFunctionValue_composite[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio24TFunctionValue_compositeFv,
-	/* 3    */ (void*)getType__Q27JStudio24TFunctionValue_compositeCFv,
-	/* 4    */ (void*)getAttributeSet__Q27JStudio24TFunctionValue_compositeFv,
-	/* 5    */ (void*)initialize__Q27JStudio24TFunctionValue_compositeFv,
-	/* 6    */ (void*)prepare__Q27JStudio24TFunctionValue_compositeFv,
-	/* 7    */ (void*)getValue__Q27JStudio24TFunctionValue_compositeFd,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio24TFunctionValue_compositeFv,
+	(void*)getType__Q27JStudio24TFunctionValue_compositeCFv,
+	(void*)getAttributeSet__Q27JStudio24TFunctionValue_compositeFv,
+	(void*)initialize__Q27JStudio24TFunctionValue_compositeFv,
+	(void*)prepare__Q27JStudio24TFunctionValue_compositeFv,
+	(void*)getValue__Q27JStudio24TFunctionValue_compositeFd,
 };
 
 /* 803C49A0-803C49C0 0020+00 s=2 e=0 z=0  None .data      __vt__Q27JStudio14TFunctionValue                             */
 SECTION_DATA static void* __vt__Q27JStudio14TFunctionValue[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80281690-802816A0 0010+00 s=6 e=0 z=0  None .text      __ct__Q27JStudio14TFunctionValueFv                           */

@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct J2DAnmTransformKey {
 };
 
 struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMeterHaihai_c {
@@ -45,9 +45,6 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -59,6 +56,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -141,14 +141,14 @@ extern "C" extern u8 g_drawHIO[3880];
 /* ############################################################################################## */
 /* 803BF268-803BF288 0020+00 s=2 e=0 z=0  None .data      __vt__14dMeterHaihai_c                                       */
 SECTION_DATA static void* __vt__14dMeterHaihai_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMeterHaihai_cFv,
-	/* 3    */ (void*)__dt__14dMeterHaihai_cFv,
-	/* 4    */ (void*)_create__14dMeterHaihai_cFv,
-	/* 5    */ (void*)_execute__14dMeterHaihai_cFUl,
-	/* 6    */ (void*)_delete__14dMeterHaihai_cFv,
-	/* 7    */ (void*)isDead__11dMeterSub_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMeterHaihai_cFv,
+	(void*)__dt__14dMeterHaihai_cFv,
+	(void*)_create__14dMeterHaihai_cFv,
+	(void*)_execute__14dMeterHaihai_cFUl,
+	(void*)_delete__14dMeterHaihai_cFv,
+	(void*)isDead__11dMeterSub_cFv,
 };
 
 /* 8020AE8C-8020AEF0 0064+00 s=0 e=4 z=0  None .text      __ct__14dMeterHaihai_cFUc                                    */

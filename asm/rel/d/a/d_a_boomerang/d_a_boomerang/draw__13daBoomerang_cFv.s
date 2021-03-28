@@ -90,9 +90,9 @@ lbl_8049F4D4:
 /* 8049F4DC  38 A0 00 05 */	li r5, 5
 /* 8049F4E0  4B FF F9 E9 */	bl setSight__19daBoomerang_sight_cFPC4cXyzi
 lbl_8049F4E4:
-/* 8049F4E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049F4E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049F4EC  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8049F4E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049F4E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049F4EC  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8049F4F0  28 00 00 00 */	cmplwi r0, 0
 /* 8049F4F4  40 82 00 18 */	bne lbl_8049F50C
 /* 8049F4F8  38 63 5F 64 */	addi r3, r3, 0x5f64
@@ -132,9 +132,9 @@ lbl_8049F50C:
 /* 8049F57C  4B B9 23 D0 */	b entry__10daMirror_cFP8J3DModel
 /* 8049F580  48 00 00 38 */	b lbl_8049F5B8
 lbl_8049F584:
-/* 8049F584  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049F588  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049F58C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 8049F584  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049F588  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049F58C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 8049F590  54 00 03 19 */	rlwinm. r0, r0, 0, 0xc, 0xc
 /* 8049F594  41 82 00 24 */	beq lbl_8049F5B8
 /* 8049F598  3C 60 80 43 */	lis r3, g_env_light@ha

@@ -11,8 +11,8 @@ lbl_80BB75D8:
 /* 80BB75FC  80 1D 05 74 */	lwz r0, 0x574(r29)
 /* 80BB7600  2C 00 00 00 */	cmpwi r0, 0
 /* 80BB7604  41 82 00 74 */	beq lbl_80BB7678
-/* 80BB7608  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB760C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB7608  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB760C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB7610  3B C3 5B D4 */	addi r30, r3, 0x5bd4
 /* 80BB7614  7F C3 F3 78 */	mr r3, r30
 /* 80BB7618  4B 4B 88 44 */	b CheckQuake__12dVibration_cFv

@@ -27,8 +27,8 @@ lbl_8058271C:
 /* 80582780  38 61 00 20 */	addi r3, r1, 0x20
 /* 80582784  38 81 00 14 */	addi r4, r1, 0x14
 /* 80582788  4B CE 55 84 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 8058278C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80582790  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8058278C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80582790  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80582794  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80582798  7F C3 F3 78 */	mr r3, r30
 /* 8058279C  38 81 00 20 */	addi r4, r1, 0x20

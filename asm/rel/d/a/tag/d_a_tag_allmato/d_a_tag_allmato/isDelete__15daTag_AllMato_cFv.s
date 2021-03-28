@@ -30,8 +30,8 @@ lbl_80487F34:
 /* 80487F38  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80487F3C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80487F40  41 82 00 24 */	beq lbl_80487F64
-/* 80487F44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80487F48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80487F44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80487F48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80487F4C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80487F50  7C 05 07 74 */	extsb r5, r0
 /* 80487F54  4B BA D4 0C */	b isSwitch__10dSv_info_cCFii

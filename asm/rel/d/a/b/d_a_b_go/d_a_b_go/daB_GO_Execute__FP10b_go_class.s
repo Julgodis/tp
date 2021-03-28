@@ -42,7 +42,7 @@ lbl_80603848:
 /* 8060387C  4B A0 8B B8 */	b mDoMtx_YrotM__FPA4_fs
 /* 80603880  3C 60 80 60 */	lis r3, l_HIO@ha
 /* 80603884  38 63 41 50 */	addi r3, r3, l_HIO@l
-/* 80603888  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80604158 */
+/* 80603888  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8060388C  FC 40 08 90 */	fmr f2, f1
 /* 80603890  FC 60 08 90 */	fmr f3, f1
 /* 80603894  4B A0 95 A4 */	b scaleM__14mDoMtx_stack_cFfff

@@ -15,8 +15,8 @@ lbl_805B35A0:
 /* 805B35D4  FF E0 10 90 */	fmr f31, f2
 /* 805B35D8  3C 60 80 5C */	lis r3, stringBase0@ha
 /* 805B35DC  38 63 A8 6C */	addi r3, r3, stringBase0@l
-/* 805B35E0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805B35E4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805B35E0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805B35E4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805B35E8  3C A5 00 02 */	addis r5, r5, 2
 /* 805B35EC  38 C0 00 80 */	li r6, 0x80
 /* 805B35F0  38 A5 C2 F8 */	addi r5, r5, -15624

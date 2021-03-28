@@ -17,10 +17,10 @@ lbl_80838498:
 /* 808384D4  7C 7C 1B 78 */	mr r28, r3
 /* 808384D8  3C 60 80 84 */	lis r3, lit_3894@ha
 /* 808384DC  3B E3 54 AC */	addi r31, r3, lit_3894@l
-/* 808384E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808384E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808384E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808384E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808384E8  3B C3 0F 38 */	addi r30, r3, 0xf38
-/* 808384EC  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 808384EC  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 808384F0  28 00 00 00 */	cmplwi r0, 0
 /* 808384F4  40 82 02 1C */	bne lbl_80838710
 /* 808384F8  80 1C 17 4C */	lwz r0, 0x174c(r28)

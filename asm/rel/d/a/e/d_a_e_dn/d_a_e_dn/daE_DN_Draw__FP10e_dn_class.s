@@ -169,8 +169,8 @@ lbl_804E5A44:
 /* 804E5AB4  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 804E5AB8  4B B4 8E 58 */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 804E5ABC  90 7D 06 DC */	stw r3, 0x6dc(r29)
-/* 804E5AC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E5AC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804E5AC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E5AC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E5AC8  3B 63 61 C0 */	addi r27, r3, 0x61c0
 /* 804E5ACC  7F 63 DB 78 */	mr r3, r27
 /* 804E5AD0  80 9D 06 DC */	lwz r4, 0x6dc(r29)

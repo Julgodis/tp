@@ -8,8 +8,8 @@ lbl_80AAFA64:
 /* 80AAFA7C  80 63 05 78 */	lwz r3, 0x578(r3)
 /* 80AAFA80  83 83 00 04 */	lwz r28, 4(r3)
 /* 80AAFA84  38 00 00 00 */	li r0, 0
-/* 80AAFA88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AAFA8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AAFA88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AAFA8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AAFA90  3B E3 61 C0 */	addi r31, r3, 0x61c0
 /* 80AAFA94  80 7D 0E 44 */	lwz r3, 0xe44(r29)
 /* 80AAFA98  28 03 00 00 */	cmplwi r3, 0

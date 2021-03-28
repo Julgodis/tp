@@ -433,7 +433,7 @@ lbl_806AE39C:
 lbl_806AE414:
 /* 806AE414  3C 60 80 6B */	lis r3, l_HIO@ha
 /* 806AE418  38 63 62 AC */	addi r3, r3, l_HIO@l
-/* 806AE41C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 806B62C4 */
+/* 806AE41C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806AE420  EC 20 00 72 */	fmuls f1, f0, f1
 /* 806AE424  C0 1F 00 6C */	lfs f0, 0x6c(r31)
 /* 806AE428  EC 01 00 24 */	fdivs f0, f1, f0

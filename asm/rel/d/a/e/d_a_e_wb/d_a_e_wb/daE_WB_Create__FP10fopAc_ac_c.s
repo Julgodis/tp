@@ -149,8 +149,8 @@ lbl_807E15CC:
 /* 807E15E0  98 1D 00 3E */	stb r0, 0x3e(r29)
 /* 807E15E4  98 1D 00 3D */	stb r0, 0x3d(r29)
 /* 807E15E8  98 1D 00 3F */	stb r0, 0x3f(r29)
-/* 807E15EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E15F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807E15EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E15F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807E15F4  3B 63 4E 00 */	addi r27, r3, 0x4e00
 /* 807E15F8  7F 63 DB 78 */	mr r3, r27
 /* 807E15FC  3C 80 80 7E */	lis r4, stringBase0@ha
@@ -211,7 +211,7 @@ lbl_807E168C:
 lbl_807E16C8:
 /* 807E16C8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807E16CC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807E16D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807E16D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807E16D4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807E16D8  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000096@ha */
 /* 807E16DC  38 84 00 96 */	addi r4, r4, 0x0096 /* 0x01000096@l */
@@ -288,7 +288,7 @@ lbl_807E17A4:
 /* 807E17E0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807E17E4  3A E3 07 68 */	addi r23, r3, calc_mtx@l
 lbl_807E17E8:
-/* 807E17E8  80 77 00 00 */	lwz r3, 0(r23)	/* effective address: 80450768 */
+/* 807E17E8  80 77 00 00 */	lwz r3, 0(r23)
 /* 807E17EC  7F 04 07 34 */	extsh r4, r24
 /* 807E17F0  4B 82 AB EC */	b mDoMtx_YrotS__FPA4_fs
 /* 807E17F4  88 1D 00 3D */	lbz r0, 0x3d(r29)
@@ -595,12 +595,12 @@ lbl_807E1C3C:
 /* 807E1C5C  4B FF E7 2D */	bl daE_WB_Execute__FP10e_wb_class
 /* 807E1C60  38 00 00 00 */	li r0, 0
 /* 807E1C64  90 1D 03 24 */	stw r0, 0x324(r29)
-/* 807E1C68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E1C6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807E1C68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E1C6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807E1C70  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 807E1C74  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 807E1C78  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 807E1C7C  A0 84 00 B0 */	lhz r4, 0xb0(r4)	/* effective address: 803A7338 */
+/* 807E1C7C  A0 84 00 B0 */	lhz r4, 0xb0(r4)
 /* 807E1C80  4B 85 2D 3C */	b isEventBit__11dSv_event_cCFUs
 /* 807E1C84  2C 03 00 00 */	cmpwi r3, 0
 /* 807E1C88  41 82 00 0C */	beq lbl_807E1C94

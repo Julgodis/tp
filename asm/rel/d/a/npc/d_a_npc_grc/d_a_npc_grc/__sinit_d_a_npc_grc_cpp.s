@@ -15,12 +15,12 @@ lbl_809CF444:
 /* 809CF478  38 A3 F9 7C */	addi r5, r3, mEvtCutList__11daNpc_grC_c@l
 /* 809CF47C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809CF480  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809CF484  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809CF488  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809CF48C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809CF97C */
-/* 809CF490  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809CF980 */
-/* 809CF494  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809CF498  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809CF984 */
+/* 809CF484  80 64 00 00 */	lwz r3, 0(r4)
+/* 809CF488  80 04 00 04 */	lwz r0, 4(r4)
+/* 809CF48C  90 65 00 00 */	stw r3, 0(r5)
+/* 809CF490  90 05 00 04 */	stw r0, 4(r5)
+/* 809CF494  80 04 00 08 */	lwz r0, 8(r4)
+/* 809CF498  90 05 00 08 */	stw r0, 8(r5)
 /* 809CF49C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 809CF4A0  7C 08 03 A6 */	mtlr r0
 /* 809CF4A4  38 21 00 10 */	addi r1, r1, 0x10

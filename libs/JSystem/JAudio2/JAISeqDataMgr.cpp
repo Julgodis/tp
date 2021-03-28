@@ -44,21 +44,21 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C9928-803C9940 0018+00 s=1 e=2 z=0  None .data      __vt__13JAISeqDataMgr                                        */
 SECTION_DATA void* __vt__13JAISeqDataMgr[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13JAISeqDataMgrFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13JAISeqDataMgrFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803C9940-803C9958 0014+04 s=1 e=3 z=0  None .data      __vt__14JAISeqDataUser                                       */
 SECTION_DATA void* __vt__14JAISeqDataUser[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JAISeqDataUserFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JAISeqDataUserFv,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

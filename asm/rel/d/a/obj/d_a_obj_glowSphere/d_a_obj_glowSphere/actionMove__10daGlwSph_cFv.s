@@ -10,10 +10,10 @@ lbl_80BFA204:
 /* 80BFA224  3C 60 80 C0 */	lis r3, lit_3665@ha
 /* 80BFA228  3B E3 A9 70 */	addi r31, r3, lit_3665@l
 /* 80BFA22C  38 7E 09 58 */	addi r3, r30, 0x958
-/* 80BFA230  C0 3F 00 48 */	lfs f1, 0x48(r31)	/* effective address: 80BFA9B8 */
-/* 80BFA234  C0 5F 00 44 */	lfs f2, 0x44(r31)	/* effective address: 80BFA9B4 */
-/* 80BFA238  C0 7F 00 50 */	lfs f3, 0x50(r31)	/* effective address: 80BFA9C0 */
-/* 80BFA23C  C0 9F 00 38 */	lfs f4, 0x38(r31)	/* effective address: 80BFA9A8 */
+/* 80BFA230  C0 3F 00 48 */	lfs f1, 0x48(r31)
+/* 80BFA234  C0 5F 00 44 */	lfs f2, 0x44(r31)
+/* 80BFA238  C0 7F 00 50 */	lfs f3, 0x50(r31)
+/* 80BFA23C  C0 9F 00 38 */	lfs f4, 0x38(r31)
 /* 80BFA240  4B 67 57 3C */	b cLib_addCalc__FPfffff
 /* 80BFA244  FF E0 08 90 */	fmr f31, f1
 /* 80BFA248  38 61 00 08 */	addi r3, r1, 8

@@ -24,19 +24,7 @@ struct dBgS_AcchCir {
 struct csXyz {
 };
 
-struct cBgS_PolyInfo {
-	/* 80268074 */ cBgS_PolyInfo();
-	/* 802680B0 */ ~cBgS_PolyInfo();
-	/* 80268120 */ void ClearPi();
-	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct dBgS_Acch;
 struct cXyz {
-};
-
-struct fopAc_ac_c {
 };
 
 struct dBgS_RoofChk {
@@ -47,6 +35,18 @@ struct dBgS_RoofChk {
 struct dBgS_SplGrpChk {
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078C78 */ ~dBgS_SplGrpChk();
+};
+
+struct dBgS_Acch;
+struct cBgS_PolyInfo {
+	/* 80268074 */ cBgS_PolyInfo();
+	/* 802680B0 */ ~cBgS_PolyInfo();
+	/* 80268120 */ void ClearPi();
+	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct fopAc_ac_c {
 };
 
 struct dBgS {
@@ -98,10 +98,6 @@ struct daPy_py_c {
 	/* 80077494 */ bool checkPlayerFly() const;
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
-};
-
 struct cM3dGPla {
 	/* 8026F5D4 */ void getCrossYLessD(Vec const&, f32*) const;
 };
@@ -110,6 +106,10 @@ struct cBgS_LinChk {
 	/* 80267D5C */ cBgS_LinChk();
 	/* 80267DBC */ ~cBgS_LinChk();
 	/* 80267ED0 */ void Set2(cXyz const*, cXyz const*, unsigned int);
+};
+
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -277,22 +277,22 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803AB640-803AB664 0024+00 s=2 e=0 z=0  None .data      __vt__9dBgS_Acch                                             */
 SECTION_DATA static void* __vt__9dBgS_Acch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9dBgS_AcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8007748C,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80077484,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9dBgS_AcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8007748C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80077484,
 };
 
 /* 803AB664-803AB670 000C+00 s=2 e=3 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA void* __vt__12dBgS_AcchCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_AcchCirFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_AcchCirFv,
 };
 
 /* 804526C0-804526C4 0004+00 s=11 e=0 z=0  None .sdata2    @4025                                                        */

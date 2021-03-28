@@ -7,9 +7,9 @@ lbl_80A1E78C:
 /* 80A1E7A0  38 00 00 00 */	li r0, 0
 /* 80A1E7A4  3C 80 80 A2 */	lis r4, mTargetTag__15daNpcKasiHana_c@ha
 /* 80A1E7A8  90 04 18 58 */	stw r0, mTargetTag__15daNpcKasiHana_c@l(r4)
-/* 80A1E7AC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A1E7B0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A1E7B4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A1E7AC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A1E7B0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A1E7B4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A1E7B8  4B 5F BF 58 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A1E7BC  3C 80 80 A2 */	lis r4, mWolfAngle__15daNpcKasiHana_c@ha
 /* 80A1E7C0  B0 64 18 60 */	sth r3, mWolfAngle__15daNpcKasiHana_c@l(r4)
@@ -19,7 +19,7 @@ lbl_80A1E78C:
 /* 80A1E7D0  4B 60 2B 68 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80A1E7D4  3C 60 80 A2 */	lis r3, mTargetTag__15daNpcKasiHana_c@ha
 /* 80A1E7D8  38 63 18 58 */	addi r3, r3, mTargetTag__15daNpcKasiHana_c@l
-/* 80A1E7DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80A21858 */
+/* 80A1E7DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A1E7E0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80A1E7E4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80A1E7E8  7C 08 03 A6 */	mtlr r0

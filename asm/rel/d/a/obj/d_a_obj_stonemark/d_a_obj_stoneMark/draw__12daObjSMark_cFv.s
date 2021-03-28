@@ -13,11 +13,11 @@ lbl_8059A2CC:
 /* 8059A2F8  7C 44 04 2E */	lfsx f2, r4, r0
 /* 8059A2FC  38 87 06 80 */	addi r4, r7, 0x680
 /* 8059A300  A8 A7 04 E6 */	lha r5, 0x4e6(r7)
-/* 8059A304  C0 86 00 14 */	lfs f4, 0x14(r6)	/* effective address: 8059A3FC */
-/* 8059A308  C0 66 00 18 */	lfs f3, 0x18(r6)	/* effective address: 8059A400 */
+/* 8059A304  C0 86 00 14 */	lfs f4, 0x14(r6)
+/* 8059A308  C0 66 00 18 */	lfs f3, 0x18(r6)
 /* 8059A30C  3C C0 80 43 */	lis r6, g_env_light@ha
 /* 8059A310  38 C6 CA 54 */	addi r6, r6, g_env_light@l
-/* 8059A314  C0 06 12 38 */	lfs f0, 0x1238(r6)	/* effective address: 8042DC8C */
+/* 8059A314  C0 06 12 38 */	lfs f0, 0x1238(r6)
 /* 8059A318  EC 03 00 32 */	fmuls f0, f3, f0
 /* 8059A31C  EC 64 00 28 */	fsubs f3, f4, f0
 /* 8059A320  38 C7 05 70 */	addi r6, r7, 0x570

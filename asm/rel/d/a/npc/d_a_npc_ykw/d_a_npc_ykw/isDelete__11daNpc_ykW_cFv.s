@@ -18,16 +18,16 @@ lbl_80B5FD6C:
 /* 80B5FD6C  38 60 00 00 */	li r3, 0
 /* 80B5FD70  48 00 00 E4 */	b lbl_80B5FE54
 lbl_80B5FD74:
-/* 80B5FD74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B5FD78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B5FD74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B5FD78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B5FD7C  38 63 09 58 */	addi r3, r3, 0x958
 /* 80B5FD80  38 80 00 02 */	li r4, 2
 /* 80B5FD84  4B 4D 4B B0 */	b isDungeonItem__12dSv_memBit_cCFi
 /* 80B5FD88  48 00 00 CC */	b lbl_80B5FE54
 lbl_80B5FD8C:
 /* 80B5FD8C  3B E0 00 01 */	li r31, 1
-/* 80B5FD90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B5FD94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B5FD90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B5FD94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B5FD98  38 63 09 58 */	addi r3, r3, 0x958
 /* 80B5FD9C  38 80 00 02 */	li r4, 2
 /* 80B5FDA0  4B 4D 4B 94 */	b isDungeonItem__12dSv_memBit_cCFi
@@ -38,8 +38,8 @@ lbl_80B5FD8C:
 /* 80B5FDB4  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80B5FDB8  28 04 00 FF */	cmplwi r4, 0xff
 /* 80B5FDBC  41 82 00 24 */	beq lbl_80B5FDE0
-/* 80B5FDC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B5FDC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B5FDC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B5FDC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B5FDC8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80B5FDCC  7C 05 07 74 */	extsb r5, r0
 /* 80B5FDD0  4B 4D 55 90 */	b isSwitch__10dSv_info_cCFii
@@ -58,8 +58,8 @@ lbl_80B5FDF4:
 /* 80B5FDF8  48 00 00 5C */	b lbl_80B5FE54
 lbl_80B5FDFC:
 /* 80B5FDFC  3B C0 00 00 */	li r30, 0
-/* 80B5FE00  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B5FE04  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B5FE00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B5FE04  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B5FE08  3B E3 09 58 */	addi r31, r3, 0x958
 /* 80B5FE0C  7F E3 FB 78 */	mr r3, r31
 /* 80B5FE10  38 80 00 03 */	li r4, 3

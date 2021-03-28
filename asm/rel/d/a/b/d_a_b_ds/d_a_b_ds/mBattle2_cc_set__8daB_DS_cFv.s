@@ -11,7 +11,7 @@ lbl_805DAA98:
 /* 805DAABC  3B E3 DA 70 */	addi r31, r3, lit_1109@l
 /* 805DAAC0  3C 60 80 5E */	lis r3, lit_3932@ha
 /* 805DAAC4  3A E3 CA 54 */	addi r23, r3, lit_3932@l
-/* 805DAAC8  88 1F 07 CC */	lbz r0, 0x7cc(r31)	/* effective address: 805DE23C */
+/* 805DAAC8  88 1F 07 CC */	lbz r0, 0x7cc(r31)
 /* 805DAACC  7C 00 07 75 */	extsb. r0, r0
 /* 805DAAD0  40 82 01 30 */	bne lbl_805DAC00
 /* 805DAAD4  C0 37 06 04 */	lfs f1, 0x604(r23)
@@ -103,8 +103,8 @@ lbl_805DAC00:
 /* 805DAC28  3B 80 00 00 */	li r28, 0
 /* 805DAC2C  3B 60 00 00 */	li r27, 0
 /* 805DAC30  3B 40 00 00 */	li r26, 0
-/* 805DAC34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DAC38  3A E3 61 C0 */	addi r23, r3, struct_804061C0+0x0@l
+/* 805DAC34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DAC38  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
 /* 805DAC3C  3A D7 23 3C */	addi r22, r23, 0x233c
 /* 805DAC40  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805DAC44  3B 03 D4 70 */	addi r24, r3, now__14mDoMtx_stack_c@l

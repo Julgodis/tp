@@ -8,11 +8,11 @@ lbl_80A9EB3C:
 /* 80A9EB54  7C 9E 23 78 */	mr r30, r4
 /* 80A9EB58  3C 60 80 AA */	lis r3, lit_5507@ha
 /* 80A9EB5C  38 83 17 28 */	addi r4, r3, lit_5507@l
-/* 80A9EB60  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA1728 */
-/* 80A9EB64  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA172C */
+/* 80A9EB60  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A9EB64  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A9EB68  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9EB6C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A9EB70  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA1730 */
+/* 80A9EB70  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A9EB74  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A9EB78  93 A1 00 08 */	stw r29, 8(r1)
 /* 80A9EB7C  38 7D 0F 8C */	addi r3, r29, 0xf8c

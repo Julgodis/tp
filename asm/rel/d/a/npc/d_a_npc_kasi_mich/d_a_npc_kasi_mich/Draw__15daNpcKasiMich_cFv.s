@@ -9,7 +9,7 @@ lbl_80A26A84:
 /* 80A26AA0  38 A0 00 00 */	li r5, 0
 /* 80A26AA4  3C C0 80 A3 */	lis r6, m__21daNpcKasiMich_Param_c@ha
 /* 80A26AA8  38 C6 A0 4C */	addi r6, r6, m__21daNpcKasiMich_Param_c@l
-/* 80A26AAC  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80A2A058 */
+/* 80A26AAC  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80A26AB0  38 C0 00 00 */	li r6, 0
 /* 80A26AB4  38 E0 00 00 */	li r7, 0
 /* 80A26AB8  4B 72 B7 F4 */	b draw__8daNpcF_cFiifP11_GXColorS10i

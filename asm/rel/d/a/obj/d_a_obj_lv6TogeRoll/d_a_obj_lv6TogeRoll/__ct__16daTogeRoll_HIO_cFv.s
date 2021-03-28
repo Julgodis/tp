@@ -13,10 +13,10 @@ lbl_80C77C2C:
 /* 80C77C58  98 03 00 05 */	stb r0, 5(r3)
 /* 80C77C5C  38 00 00 1E */	li r0, 0x1e
 /* 80C77C60  98 03 00 06 */	stb r0, 6(r3)
-/* 80C77C64  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80C799E4 */
+/* 80C77C64  C0 05 00 00 */	lfs f0, 0(r5)
 /* 80C77C68  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80C77C6C  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80C799E8 */
+/* 80C77C6C  C0 05 00 04 */	lfs f0, 4(r5)
 /* 80C77C70  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 80C77C74  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80C799EC */
+/* 80C77C74  C0 05 00 08 */	lfs f0, 8(r5)
 /* 80C77C78  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 80C77C7C  4E 80 00 20 */	blr 

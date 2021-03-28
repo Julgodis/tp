@@ -7,7 +7,7 @@ lbl_80CDFF14:
 /* 80CDFF28  7C 79 1B 78 */	mr r25, r3
 /* 80CDFF2C  3C 60 80 CE */	lis r3, SOUP_MODEL_OFFSET@ha
 /* 80CDFF30  3B 63 02 3C */	addi r27, r3, SOUP_MODEL_OFFSET@l
-/* 80CDFF34  C0 1B 00 18 */	lfs f0, 0x18(r27)	/* effective address: 80CE0254 */
+/* 80CDFF34  C0 1B 00 18 */	lfs f0, 0x18(r27)
 /* 80CDFF38  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80CDFF3C  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 80CDFF40  D0 01 00 3C */	stfs f0, 0x3c(r1)
@@ -23,11 +23,11 @@ lbl_80CDFF14:
 /* 80CDFF68  3B 40 00 00 */	li r26, 0
 /* 80CDFF6C  3B E0 00 00 */	li r31, 0
 /* 80CDFF70  3B C0 00 00 */	li r30, 0
-/* 80CDFF74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDFF78  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 80CDFF74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDFF78  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 80CDFF7C  3B BB 00 24 */	addi r29, r27, 0x24
 lbl_80CDFF80:
-/* 80CDFF80  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 80CDFF80  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 80CDFF84  38 80 00 00 */	li r4, 0
 /* 80CDFF88  90 81 00 08 */	stw r4, 8(r1)
 /* 80CDFF8C  38 00 FF FF */	li r0, -1

@@ -20,7 +20,7 @@ lbl_80C18C10:
 lbl_80C18C18:
 /* 80C18C18  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C18C1C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80C18C20  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80C18C20  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80C18C24  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 80C18C28  28 1F 00 00 */	cmplwi r31, 0
 /* 80C18C2C  41 82 00 0C */	beq lbl_80C18C38

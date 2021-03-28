@@ -18,15 +18,15 @@ lbl_805977D0:
 /* 80597810  3C 60 80 59 */	lis r3, l_rope_cullbox@ha
 /* 80597814  C4 03 7D C4 */	lfsu f0, l_rope_cullbox@l(r3)
 /* 80597818  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8059781C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80590004 */
+/* 8059781C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80597820  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80597824  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80590008 */
+/* 80597824  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80597828  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8059782C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8059000C */
+/* 8059782C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80597830  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80597834  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80590010 */
+/* 80597834  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80597838  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8059783C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80590014 */
+/* 8059783C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80597840  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80597844  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80597848  4B A7 55 1C */	b transS__14mDoMtx_stack_cFRC4cXyz

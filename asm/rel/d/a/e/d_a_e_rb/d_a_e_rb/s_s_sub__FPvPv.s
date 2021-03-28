@@ -24,7 +24,7 @@ lbl_80763618:
 /* 80763670  40 82 00 30 */	bne lbl_807636A0
 /* 80763674  3C 60 80 76 */	lis r3, target_info_count@ha
 /* 80763678  38 83 4F C8 */	addi r4, r3, target_info_count@l
-/* 8076367C  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80764FC8 */
+/* 8076367C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80763680  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80763684  40 80 00 1C */	bge lbl_807636A0
 /* 80763688  54 A0 10 3A */	slwi r0, r5, 2

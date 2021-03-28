@@ -33,7 +33,7 @@ lbl_809FBBDC:
 lbl_809FBC0C:
 /* 809FBC0C  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FBC10  38 63 06 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l
-/* 809FBC14  C0 03 00 8C */	lfs f0, 0x8c(r3)	/* effective address: 80A0068C */
+/* 809FBC14  C0 03 00 8C */	lfs f0, 0x8c(r3)
 /* 809FBC18  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 809FBC1C  38 00 00 01 */	li r0, 1
 /* 809FBC20  98 1E 17 21 */	stb r0, 0x1721(r30)

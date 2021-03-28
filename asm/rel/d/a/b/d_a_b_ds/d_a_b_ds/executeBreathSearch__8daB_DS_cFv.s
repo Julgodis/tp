@@ -93,9 +93,9 @@ lbl_805D285C:
 /* 805D2880  2C 00 00 96 */	cmpwi r0, 0x96
 /* 805D2884  40 80 00 34 */	bge lbl_805D28B8
 /* 805D2888  7F C3 F3 78 */	mr r3, r30
-/* 805D288C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805D2890  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805D2894  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805D288C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805D2890  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805D2894  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 805D2898  4B A4 7E 78 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805D289C  7C 64 1B 78 */	mr r4, r3
 /* 805D28A0  38 7E 04 DE */	addi r3, r30, 0x4de

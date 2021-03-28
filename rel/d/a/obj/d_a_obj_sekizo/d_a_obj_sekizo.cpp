@@ -74,9 +74,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -94,11 +91,11 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daObj_Sekizo_Create(void*); // 2
-static void daObj_Sekizo_Delete(void*); // 2
-static void daObj_Sekizo_Execute(void*); // 2
-static void daObj_Sekizo_Draw(void*); // 2
-static bool daObj_Sekizo_IsDelete(void*); // 2
+void daObj_Sekizo_Create(void*); // 2
+void daObj_Sekizo_Delete(void*); // 2
+void daObj_Sekizo_Execute(void*); // 2
+void daObj_Sekizo_Draw(void*); // 2
+bool daObj_Sekizo_IsDelete(void*); // 2
 
 extern "C" void create__14daObj_Sekizo_cFv(); // 1
 extern "C" void CreateHeap__14daObj_Sekizo_cFv(); // 1
@@ -108,14 +105,16 @@ extern "C" void Execute__14daObj_Sekizo_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daObj_Sekizo_cFv(); // 1
 extern "C" void initBaseMtx__14daObj_Sekizo_cFv(); // 1
 extern "C" void setBaseMtx__14daObj_Sekizo_cFv(); // 1
-extern "C" static void daObj_Sekizo_Create__FPv(); // 1
-extern "C" static void daObj_Sekizo_Delete__FPv(); // 1
-extern "C" static void daObj_Sekizo_Execute__FPv(); // 1
-extern "C" static void daObj_Sekizo_Draw__FPv(); // 1
-extern "C" static bool daObj_Sekizo_IsDelete__FPv(); // 1
+extern "C" void daObj_Sekizo_Create__FPv(); // 1
+extern "C" void daObj_Sekizo_Delete__FPv(); // 1
+extern "C" void daObj_Sekizo_Execute__FPv(); // 1
+extern "C" void daObj_Sekizo_Draw__FPv(); // 1
+extern "C" bool daObj_Sekizo_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_obj_sekizo_cpp(); // 1
 extern "C" void __dt__20daObj_Sekizo_Param_cFv(); // 1
+extern "C" extern u8 const struct_80CCE174[8];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* daObj_Sekizo_MethodTable[8];
 extern "C" extern void* g_profile_OBJ_SEKIZO[12];
 
 // 
@@ -143,9 +142,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -153,18 +149,10 @@ extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" void __register_global_object(); // 1
 
@@ -173,14 +161,6 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80CCE174-80CCE17C 0008+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80CCE174[8] = {
-	/* 80CCE174 0001 stringBase_80CCE174 @stringBase0 */
-	0x00,
-	/* 80CCE175 0007 data_80CCE175 None */
-	0x53, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x00,
-};
-
 /* 80CCE17C-80CCE188 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -205,50 +185,50 @@ SECTION_DATA static u8 l_dzbData[8] = {
 
 /* 80CCE1AC-80CCE1B4 0008+00 s=3 e=0 z=0  None .data      l_resNameList                                                */
 SECTION_DATA static void* l_resNameList[2] = {
-	/* 0    */ (void*)(((char*)&struct_80CCE174)+0x0) /* @stringBase0 */,
-	/* 1    */ (void*)(((char*)&struct_80CCE174)+0x1) /* None */,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CCE1B4-80CCE1D4 0020+00 s=1 e=0 z=0  None .data      daObj_Sekizo_MethodTable                                     */
-SECTION_DATA static void* daObj_Sekizo_MethodTable[8] = {
-	/* 0    */ (void*)daObj_Sekizo_Create__FPv,
-	/* 1    */ (void*)daObj_Sekizo_Delete__FPv,
-	/* 2    */ (void*)daObj_Sekizo_Execute__FPv,
-	/* 3    */ (void*)daObj_Sekizo_IsDelete__FPv,
-	/* 4    */ (void*)daObj_Sekizo_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CCE1B4-80CCE1D4 0020+00 s=0 e=0 z=0  None .data      daObj_Sekizo_MethodTable                                     */
+SECTION_DATA void* daObj_Sekizo_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CCE1D4-80CCE204 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_SEKIZO                                         */
+/* 80CCE1D4-80CCE204 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_SEKIZO                                         */
 SECTION_DATA void* g_profile_OBJ_SEKIZO[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01330000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005B4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00580000,
-	/* 9    */ (void*)&daObj_Sekizo_MethodTable,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01330000,
+	(void*)NULL,
+	(void*)0x000005B4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00580000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 80CCE204-80CCE22C 0028+00 s=1 e=0 z=0  None .data      __vt__14daObj_Sekizo_c                                       */
 SECTION_DATA static void* __vt__14daObj_Sekizo_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__14daObj_Sekizo_cFv,
-	/* 3    */ (void*)Create__14daObj_Sekizo_cFv,
-	/* 4    */ (void*)Execute__14daObj_Sekizo_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__14daObj_Sekizo_cFv,
-	/* 6    */ (void*)Delete__14daObj_Sekizo_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CCDC0C-80CCDD00 00F4+00 s=1 e=0 z=0  None .text      create__14daObj_Sekizo_cFv                                   */
@@ -262,7 +242,7 @@ asm void daObj_Sekizo_c::create() {
 #pragma pop
 
 
-/* 80CCDD00-80CCDD8C 008C+00 s=1 e=0 z=0  None .text      CreateHeap__14daObj_Sekizo_cFv                               */
+/* 80CCDD00-80CCDD8C 008C+00 s=0 e=0 z=0  None .text      CreateHeap__14daObj_Sekizo_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,7 +253,7 @@ asm void daObj_Sekizo_c::CreateHeap() {
 #pragma pop
 
 
-/* 80CCDD8C-80CCDDE8 005C+00 s=1 e=0 z=0  None .text      Create__14daObj_Sekizo_cFv                                   */
+/* 80CCDD8C-80CCDDE8 005C+00 s=0 e=0 z=0  None .text      Create__14daObj_Sekizo_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -284,7 +264,7 @@ asm void daObj_Sekizo_c::Create() {
 #pragma pop
 
 
-/* 80CCDDE8-80CCDE3C 0054+00 s=1 e=0 z=0  None .text      Delete__14daObj_Sekizo_cFv                                   */
+/* 80CCDDE8-80CCDE3C 0054+00 s=0 e=0 z=0  None .text      Delete__14daObj_Sekizo_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -295,7 +275,7 @@ asm void daObj_Sekizo_c::Delete() {
 #pragma pop
 
 
-/* 80CCDE3C-80CCDEF4 00B8+00 s=1 e=0 z=0  None .text      Execute__14daObj_Sekizo_cFPPA3_A4_f                          */
+/* 80CCDE3C-80CCDEF4 00B8+00 s=0 e=0 z=0  None .text      Execute__14daObj_Sekizo_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,7 +286,7 @@ asm void daObj_Sekizo_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80CCDEF4-80CCDFA4 00B0+00 s=1 e=0 z=0  None .text      Draw__14daObj_Sekizo_cFv                                     */
+/* 80CCDEF4-80CCDFA4 00B0+00 s=0 e=0 z=0  None .text      Draw__14daObj_Sekizo_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,52 +319,52 @@ asm void daObj_Sekizo_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80CCE044-80CCE064 0020+00 s=1 e=0 z=0  None .text      daObj_Sekizo_Create__FPv                                     */
+/* 80CCE044-80CCE064 0020+00 s=0 e=0 z=0  None .text      daObj_Sekizo_Create__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Sekizo_Create(void* param_0) {
+asm void daObj_Sekizo_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80CCE064-80CCE084 0020+00 s=1 e=0 z=0  None .text      daObj_Sekizo_Delete__FPv                                     */
+/* 80CCE064-80CCE084 0020+00 s=0 e=0 z=0  None .text      daObj_Sekizo_Delete__FPv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Sekizo_Delete(void* param_0) {
+asm void daObj_Sekizo_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80CCE084-80CCE0A4 0020+00 s=1 e=0 z=0  None .text      daObj_Sekizo_Execute__FPv                                    */
+/* 80CCE084-80CCE0A4 0020+00 s=0 e=0 z=0  None .text      daObj_Sekizo_Execute__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Sekizo_Execute(void* param_0) {
+asm void daObj_Sekizo_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80CCE0A4-80CCE0D0 002C+00 s=1 e=0 z=0  None .text      daObj_Sekizo_Draw__FPv                                       */
+/* 80CCE0A4-80CCE0D0 002C+00 s=0 e=0 z=0  None .text      daObj_Sekizo_Draw__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Sekizo_Draw(void* param_0) {
+asm void daObj_Sekizo_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sekizo/d_a_obj_sekizo/daObj_Sekizo_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80CCE0D0-80CCE0D8 0008+00 s=1 e=0 z=0  None .text      daObj_Sekizo_IsDelete__FPv                                   */
-static bool daObj_Sekizo_IsDelete(void* param_0) {
+/* 80CCE0D0-80CCE0D8 0008+00 s=0 e=0 z=0  None .text      daObj_Sekizo_IsDelete__FPv                                   */
+bool daObj_Sekizo_IsDelete(void* param_0) {
 	return true;
 }
 
@@ -392,9 +372,9 @@ static bool daObj_Sekizo_IsDelete(void* param_0) {
 /* ############################################################################################## */
 /* 80CCE22C-80CCE238 000C+00 s=2 e=0 z=0  None .data      __vt__20daObj_Sekizo_Param_c                                 */
 SECTION_DATA static void* __vt__20daObj_Sekizo_Param_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20daObj_Sekizo_Param_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CCE240-80CCE24C 000C+00 s=1 e=0 z=0  None .bss       @3800                                                        */
@@ -403,7 +383,7 @@ static u8 lit_3800[12];
 /* 80CCE24C-80CCE250 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80CCE0D8-80CCE118 0040+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_sekizo_cpp                                   */
+/* 80CCE0D8-80CCE118 0040+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_sekizo_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -414,7 +394,7 @@ extern "C" asm void __sinit_d_a_obj_sekizo_cpp() {
 #pragma pop
 
 
-/* 80CCE118-80CCE160 0048+00 s=2 e=0 z=0  None .text      __dt__20daObj_Sekizo_Param_cFv                               */
+/* 80CCE118-80CCE160 0048+00 s=1 e=0 z=0  None .text      __dt__20daObj_Sekizo_Param_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,4 +404,13 @@ asm daObj_Sekizo_Param_c::~daObj_Sekizo_Param_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CCE174-80CCE17C 0008+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_80CCE174[8] = {
+	/* 80CCE174 0001 stringBase_80CCE174 @stringBase0 */
+	0x00,
+	/* 80CCE175 0007 data_80CCE175 None */
+	0x53, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x00,
+};
 

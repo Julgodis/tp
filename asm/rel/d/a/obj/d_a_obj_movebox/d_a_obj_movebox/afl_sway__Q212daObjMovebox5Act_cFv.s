@@ -41,7 +41,7 @@ lbl_8047F1A0:
 /* 8047F1B0  7F 46 D3 78 */	mr r6, r26
 /* 8047F1B4  3C E0 80 45 */	lis r7, M_dir_base__Q212daObjMovebox5Act_c@ha
 /* 8047F1B8  38 E7 1D 28 */	addi r7, r7, M_dir_base__Q212daObjMovebox5Act_c@l
-/* 8047F1BC  A8 E7 00 00 */	lha r7, 0(r7)	/* effective address: 80451D28 */
+/* 8047F1BC  A8 E7 00 00 */	lha r7, 0(r7)
 /* 8047F1C0  4B FF F3 E1 */	bl chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis
 /* 8047F1C4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8047F1C8  40 82 00 30 */	bne lbl_8047F1F8
@@ -51,7 +51,7 @@ lbl_8047F1A0:
 /* 8047F1D8  7F 46 D3 78 */	mr r6, r26
 /* 8047F1DC  3C E0 80 45 */	lis r7, M_dir_base__Q212daObjMovebox5Act_c@ha
 /* 8047F1E0  38 E7 1D 28 */	addi r7, r7, M_dir_base__Q212daObjMovebox5Act_c@l
-/* 8047F1E4  A8 E7 00 04 */	lha r7, 4(r7)	/* effective address: 80451D2C */
+/* 8047F1E4  A8 E7 00 04 */	lha r7, 4(r7)
 /* 8047F1E8  4B FF F3 B9 */	bl chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis
 /* 8047F1EC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8047F1F0  40 82 00 08 */	bne lbl_8047F1F8
@@ -64,7 +64,7 @@ lbl_8047F1F8:
 /* 8047F208  7F 46 D3 78 */	mr r6, r26
 /* 8047F20C  3C E0 80 45 */	lis r7, M_dir_base__Q212daObjMovebox5Act_c@ha
 /* 8047F210  38 E7 1D 28 */	addi r7, r7, M_dir_base__Q212daObjMovebox5Act_c@l
-/* 8047F214  A8 E7 00 02 */	lha r7, 2(r7)	/* effective address: 80451D2A */
+/* 8047F214  A8 E7 00 02 */	lha r7, 2(r7)
 /* 8047F218  4B FF F3 89 */	bl chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis
 /* 8047F21C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8047F220  40 82 00 30 */	bne lbl_8047F250
@@ -74,7 +74,7 @@ lbl_8047F1F8:
 /* 8047F230  7F 46 D3 78 */	mr r6, r26
 /* 8047F234  3C E0 80 45 */	lis r7, M_dir_base__Q212daObjMovebox5Act_c@ha
 /* 8047F238  38 E7 1D 28 */	addi r7, r7, M_dir_base__Q212daObjMovebox5Act_c@l
-/* 8047F23C  A8 E7 00 06 */	lha r7, 6(r7)	/* effective address: 80451D2E */
+/* 8047F23C  A8 E7 00 06 */	lha r7, 6(r7)
 /* 8047F240  4B FF F3 61 */	bl chk_wall_touch2__Q212daObjMovebox5Bgc_cFPCQ212daObjMovebox5Act_cPCQ212daObjMovebox8BgcSrc_cis
 /* 8047F244  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8047F248  40 82 00 08 */	bne lbl_8047F250

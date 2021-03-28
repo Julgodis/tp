@@ -27,10 +27,10 @@ struct csXyz {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -51,26 +51,26 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static bool daDisappear_Draw(disappear_class*); // 2
+bool daDisappear_Draw(disappear_class*); // 2
 static void s_ks_sub(void*, void*); // 2
-static void daDisappear_Execute(disappear_class*); // 2
-static bool daDisappear_IsDelete(disappear_class*); // 2
-static bool daDisappear_Delete(disappear_class*); // 2
+void daDisappear_Execute(disappear_class*); // 2
+bool daDisappear_IsDelete(disappear_class*); // 2
+bool daDisappear_Delete(disappear_class*); // 2
 static void yami_disappear(disappear_class*, f32); // 2
 static void ghost_disappear(disappear_class*, f32); // 2
 static void set_disappear(disappear_class*, f32); // 2
-static void daDisappear_Create(fopAc_ac_c*); // 2
+void daDisappear_Create(fopAc_ac_c*); // 2
 
-extern "C" static bool daDisappear_Draw__FP15disappear_class(); // 1
+extern "C" bool daDisappear_Draw__FP15disappear_class(); // 1
 extern "C" static void s_ks_sub__FPvPv(); // 1
-extern "C" static void daDisappear_Execute__FP15disappear_class(); // 1
-extern "C" static bool daDisappear_IsDelete__FP15disappear_class(); // 1
-extern "C" static bool daDisappear_Delete__FP15disappear_class(); // 1
+extern "C" void daDisappear_Execute__FP15disappear_class(); // 1
+extern "C" bool daDisappear_IsDelete__FP15disappear_class(); // 1
+extern "C" bool daDisappear_Delete__FP15disappear_class(); // 1
 extern "C" static void yami_disappear__FP15disappear_classf(); // 1
 extern "C" static void ghost_disappear__FP15disappear_classf(); // 1
 extern "C" static void set_disappear__FP15disappear_classf(); // 1
-extern "C" static void daDisappear_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3829[8];
+extern "C" void daDisappear_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daDisappear_Method[8];
 extern "C" extern void* g_profile_DISAPPEAR[12];
 
 // 
@@ -97,18 +97,15 @@ extern "C" void _savegpr_25(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 804A8F18-804A8F20 0008+00 s=1 e=0 z=0  None .text      daDisappear_Draw__FP15disappear_class                        */
-static bool daDisappear_Draw(disappear_class* param_0) {
+/* 804A8F18-804A8F20 0008+00 s=0 e=0 z=0  None .text      daDisappear_Draw__FP15disappear_class                        */
+bool daDisappear_Draw(disappear_class* param_0) {
 	return true;
 }
 
@@ -124,25 +121,25 @@ asm static void s_ks_sub(void* param_0, void* param_1) {
 #pragma pop
 
 
-/* 804A8F6C-804A8FA8 003C+00 s=1 e=0 z=0  None .text      daDisappear_Execute__FP15disappear_class                     */
+/* 804A8F6C-804A8FA8 003C+00 s=0 e=0 z=0  None .text      daDisappear_Execute__FP15disappear_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDisappear_Execute(disappear_class* param_0) {
+asm void daDisappear_Execute(disappear_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Execute__FP15disappear_class.s"
 }
 #pragma pop
 
 
-/* 804A8FA8-804A8FB0 0008+00 s=1 e=0 z=0  None .text      daDisappear_IsDelete__FP15disappear_class                    */
-static bool daDisappear_IsDelete(disappear_class* param_0) {
+/* 804A8FA8-804A8FB0 0008+00 s=0 e=0 z=0  None .text      daDisappear_IsDelete__FP15disappear_class                    */
+bool daDisappear_IsDelete(disappear_class* param_0) {
 	return true;
 }
 
 
-/* 804A8FB0-804A8FB8 0008+00 s=1 e=0 z=0  None .text      daDisappear_Delete__FP15disappear_class                      */
-static bool daDisappear_Delete(disappear_class* param_0) {
+/* 804A8FB0-804A8FB8 0008+00 s=0 e=0 z=0  None .text      daDisappear_Delete__FP15disappear_class                      */
+bool daDisappear_Delete(disappear_class* param_0) {
 	return true;
 }
 
@@ -221,11 +218,16 @@ SECTION_RODATA static u32 const lit_3826 = 0x3DCCCCCD;
 /* 804A9474-804A9478 0004+00 s=1 e=0 z=0  None .rodata    @3827                                                        */
 SECTION_RODATA static u32 const lit_3827 = 0x42480000;
 
-/* 804A9364-804A9458 00F4+00 s=1 e=0 z=0  None .text      daDisappear_Create__FP10fopAc_ac_c                           */
+/* 804A9478-804A9480 0008+00 s=1 e=0 z=0  None .rodata    @3829                                                        */
+SECTION_RODATA static u8 const lit_3829[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804A9364-804A9458 00F4+00 s=0 e=0 z=0  None .text      daDisappear_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDisappear_Create(fopAc_ac_c* param_0) {
+asm void daDisappear_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_disappear/d_a_disappear/daDisappear_Create__FP10fopAc_ac_c.s"
 }
@@ -233,36 +235,31 @@ asm static void daDisappear_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804A9478-804A9480 0008+00 s=0 e=0 z=0  None .rodata    @3829                                                        */
-SECTION_RODATA u8 const lit_3829[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 804A94A4-804A94C4 0020+00 s=0 e=0 z=0  None .data      l_daDisappear_Method                                         */
+SECTION_DATA void* l_daDisappear_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804A94A4-804A94C4 0020+00 s=1 e=0 z=0  None .data      l_daDisappear_Method                                         */
-SECTION_DATA static void* l_daDisappear_Method[8] = {
-	/* 0    */ (void*)daDisappear_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daDisappear_Delete__FP15disappear_class,
-	/* 2    */ (void*)daDisappear_Execute__FP15disappear_class,
-	/* 3    */ (void*)daDisappear_IsDelete__FP15disappear_class,
-	/* 4    */ (void*)daDisappear_Draw__FP15disappear_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 804A94C4-804A94F4 0030+00 s=0 e=0 z=1  None .data      g_profile_DISAPPEAR                                          */
+/* 804A94C4-804A94F4 0030+00 s=0 e=0 z=0  None .data      g_profile_DISAPPEAR                                          */
 SECTION_DATA void* g_profile_DISAPPEAR[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01390000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000578,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02D50000,
-	/* 9    */ (void*)&l_daDisappear_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01390000,
+	(void*)NULL,
+	(void*)0x00000578,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02D50000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)NULL,
 };
 

@@ -10,7 +10,7 @@ lbl_805EB910:
 /* 805EB930  4B A2 16 14 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 805EB934  3C 60 80 5F */	lis r3, l_HIO@ha
 /* 805EB938  38 63 D7 0C */	addi r3, r3, l_HIO@l
-/* 805EB93C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 805ED714 */
+/* 805EB93C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 805EB940  FC 40 08 90 */	fmr f2, f1
 /* 805EB944  FC 60 08 90 */	fmr f3, f1
 /* 805EB948  4B A2 14 F0 */	b scaleM__14mDoMtx_stack_cFfff

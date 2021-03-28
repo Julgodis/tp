@@ -10,7 +10,7 @@ lbl_80A8CA20:
 /* 80A8CA40  7C 9C 23 78 */	mr r28, r4
 /* 80A8CA44  3C 60 80 A9 */	lis r3, lit_3990@ha
 /* 80A8CA48  3B C3 24 1C */	addi r30, r3, lit_3990@l
-/* 80A8CA4C  C3 FE 00 18 */	lfs f31, 0x18(r30)	/* effective address: 80A92434 */
+/* 80A8CA4C  C3 FE 00 18 */	lfs f31, 0x18(r30)
 /* 80A8CA50  38 60 00 00 */	li r3, 0
 /* 80A8CA54  7C 65 1B 78 */	mr r5, r3
 /* 80A8CA58  38 81 00 30 */	addi r4, r1, 0x30

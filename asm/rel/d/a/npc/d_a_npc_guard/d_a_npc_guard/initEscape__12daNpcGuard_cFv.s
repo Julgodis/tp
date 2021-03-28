@@ -22,9 +22,9 @@ lbl_809F0A50:
 /* 809F0AA0  38 80 00 00 */	li r4, 0
 /* 809F0AA4  4B 8D 03 74 */	b playVoice__17Z2CreatureCitizenFi
 /* 809F0AA8  7F C3 F3 78 */	mr r3, r30
-/* 809F0AAC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809F0AB0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809F0AB4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 809F0AAC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809F0AB0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809F0AB4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 809F0AB8  4B 62 9C 58 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 809F0ABC  3C 63 00 01 */	addis r3, r3, 1
 /* 809F0AC0  38 03 80 00 */	addi r0, r3, -32768

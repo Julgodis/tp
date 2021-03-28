@@ -8,8 +8,8 @@ lbl_80652F38:
 /* 80652F50  3C 60 80 65 */	lis r3, stringBase0@ha
 /* 80652F54  38 63 33 64 */	addi r3, r3, stringBase0@l
 /* 80652F58  38 80 00 07 */	li r4, 7
-/* 80652F5C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80652F60  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80652F5C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80652F60  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80652F64  3F E5 00 02 */	addis r31, r5, 2
 /* 80652F68  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80652F6C  7F E5 FB 78 */	mr r5, r31

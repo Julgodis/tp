@@ -14,7 +14,7 @@ lbl_80CC027C:
 /* 80CC02AC  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC02B0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC02B4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC02B8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC02B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC02BC  38 81 00 08 */	addi r4, r1, 8
 /* 80CC02C0  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80CC02C4  38 C0 00 00 */	li r6, 0
@@ -30,7 +30,7 @@ lbl_80CC027C:
 /* 80CC02EC  38 7F 05 B2 */	addi r3, r31, 0x5b2
 /* 80CC02F0  3C A0 80 CC */	lis r5, l_HIO@ha
 /* 80CC02F4  38 A5 0A C4 */	addi r5, r5, l_HIO@l
-/* 80CC02F8  A8 05 00 0C */	lha r0, 0xc(r5)	/* effective address: 80CC0AD0 */
+/* 80CC02F8  A8 05 00 0C */	lha r0, 0xc(r5)
 /* 80CC02FC  7C 04 03 D6 */	divw r0, r4, r0
 /* 80CC0300  7C 05 07 34 */	extsh r5, r0
 /* 80CC0304  4B 5B 08 8C */	b cLib_chaseAngleS__FPsss

@@ -11,14 +11,6 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
-	/* 802CE548 */ void free(void*);
-	/* 802CEB18 */ void copyMemory(void*, void*, u32);
-};
-
 struct JKRArchive {
 	struct EMountDirection {
 	};
@@ -46,6 +38,14 @@ struct JKRArchive {
 	/* 802D6734 */ void findPtrResource(void const*) const;
 	/* 802D693C */ void setExpandSize(JKRArchive::SDIFileEntry*, u32);
 	/* 802D6978 */ void getExpandSize(JKRArchive::SDIFileEntry*) const;
+};
+
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
+	/* 802CE548 */ void free(void*);
+	/* 802CEB18 */ void copyMemory(void*, void*, u32);
 };
 
 struct JKRAramArchive {
@@ -196,38 +196,38 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 /* ############################################################################################## */
 /* 803CC328-803CC348 0020+00 s=1 e=4 z=0  None .data      __vt__7JKRFile                                               */
 SECTION_DATA void* __vt__7JKRFile[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7JKRFileFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7JKRFileFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803CC348-803CC398 0050+00 s=2 e=0 z=0  None .data      __vt__14JKRAramArchive                                       */
 SECTION_DATA static void* __vt__14JKRAramArchive[20] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JKRAramArchiveFv,
-	/* 3    */ (void*)unmount__13JKRFileLoaderFv,
-	/* 4    */ (void*)becomeCurrent__10JKRArchiveFPCc,
-	/* 5    */ (void*)getResource__10JKRArchiveFPCc,
-	/* 6    */ (void*)getResource__10JKRArchiveFUlPCc,
-	/* 7    */ (void*)readResource__10JKRArchiveFPvUlPCc,
-	/* 8    */ (void*)readResource__10JKRArchiveFPvUlUlPCc,
-	/* 9    */ (void*)removeResourceAll__10JKRArchiveFv,
-	/* 10   */ (void*)removeResource__10JKRArchiveFPv,
-	/* 11   */ (void*)detachResource__10JKRArchiveFPv,
-	/* 12   */ (void*)getResSize__10JKRArchiveCFPCv,
-	/* 13   */ (void*)countFile__10JKRArchiveCFPCc,
-	/* 14   */ (void*)getFirstFile__10JKRArchiveCFPCc,
-	/* 15   */ (void*)getExpandedResSize__14JKRAramArchiveCFPCv,
-	/* 16   */ (void*)fetchResource__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntryPUl,
-	/* 17   */ (void*)fetchResource__14JKRAramArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl,
-	/* 18   */ (void*)setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl,
-	/* 19   */ (void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JKRAramArchiveFv,
+	(void*)unmount__13JKRFileLoaderFv,
+	(void*)becomeCurrent__10JKRArchiveFPCc,
+	(void*)getResource__10JKRArchiveFPCc,
+	(void*)getResource__10JKRArchiveFUlPCc,
+	(void*)readResource__10JKRArchiveFPvUlPCc,
+	(void*)readResource__10JKRArchiveFPvUlUlPCc,
+	(void*)removeResourceAll__10JKRArchiveFv,
+	(void*)removeResource__10JKRArchiveFPv,
+	(void*)detachResource__10JKRArchiveFPv,
+	(void*)getResSize__10JKRArchiveCFPCv,
+	(void*)countFile__10JKRArchiveCFPCc,
+	(void*)getFirstFile__10JKRArchiveCFPCc,
+	(void*)getExpandedResSize__14JKRAramArchiveCFPCv,
+	(void*)fetchResource__14JKRAramArchiveFPQ210JKRArchive12SDIFileEntryPUl,
+	(void*)fetchResource__14JKRAramArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl,
+	(void*)setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl,
+	(void*)getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry,
 };
 
 /* 802D70C0-802D7168 00A8+00 s=0 e=1 z=0  None .text      __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection      */

@@ -6,15 +6,15 @@ lbl_80D434F8:
 /* 80D43508  7C 7F 1B 78 */	mr r31, r3
 /* 80D4350C  3C 60 80 D4 */	lis r3, l_arcName@ha
 /* 80D43510  38 63 3F A4 */	addi r3, r3, l_arcName@l
-/* 80D43514  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D43FA4 */
+/* 80D43514  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D43518  88 1F 03 C8 */	lbz r0, 0x3c8(r31)
 /* 80D4351C  7C 00 07 74 */	extsb r0, r0
 /* 80D43520  54 00 10 3A */	slwi r0, r0, 2
 /* 80D43524  3C 80 80 D4 */	lis r4, data_80D43E4C@ha
 /* 80D43528  38 84 3E 4C */	addi r4, r4, data_80D43E4C@l
 /* 80D4352C  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80D43530  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80D43534  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80D43530  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D43534  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80D43538  3C A5 00 02 */	addis r5, r5, 2
 /* 80D4353C  38 C0 00 80 */	li r6, 0x80
 /* 80D43540  38 A5 C2 F8 */	addi r5, r5, -15624

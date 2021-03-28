@@ -31,7 +31,7 @@ lbl_8086084C:
 lbl_80860868:
 /* 80860868  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8086086C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80860870  88 03 12 C2 */	lbz r0, 0x12c2(r3)	/* effective address: 8042DD16 */
+/* 80860870  88 03 12 C2 */	lbz r0, 0x12c2(r3)
 /* 80860874  28 00 00 0B */	cmplwi r0, 0xb
 /* 80860878  40 82 00 1C */	bne lbl_80860894
 /* 8086087C  38 7E 05 90 */	addi r3, r30, 0x590

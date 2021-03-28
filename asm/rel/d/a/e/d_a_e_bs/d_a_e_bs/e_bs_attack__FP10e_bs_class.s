@@ -91,10 +91,10 @@ lbl_8068F0AC:
 /* 8068F0D8  A8 03 00 08 */	lha r0, 8(r3)
 /* 8068F0DC  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 8068F0E0  40 82 00 64 */	bne lbl_8068F144
-/* 8068F0E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068F0E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8068F0EC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8068F0F0  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8068F0E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068F0E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8068F0EC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8068F0F0  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8068F0F4  81 8C 00 40 */	lwz r12, 0x40(r12)
 /* 8068F0F8  7D 89 03 A6 */	mtctr r12
 /* 8068F0FC  4E 80 04 21 */	bctrl 

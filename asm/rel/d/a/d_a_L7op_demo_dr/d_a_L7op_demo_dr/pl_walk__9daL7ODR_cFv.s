@@ -7,14 +7,14 @@ lbl_805AB520:
 /* 805AB534  7C 7E 1B 78 */	mr r30, r3
 /* 805AB538  3C 80 80 5B */	lis r4, lit_3850@ha
 /* 805AB53C  3B A4 DF 50 */	addi r29, r4, lit_3850@l
-/* 805AB540  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805AB544  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 805AB548  88 05 5D B0 */	lbz r0, 0x5db0(r5)	/* effective address: 8040BF70 */
+/* 805AB540  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805AB544  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 805AB548  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 805AB54C  7C 00 07 74 */	extsb r0, r0
 /* 805AB550  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805AB554  7C 85 02 14 */	add r4, r5, r0
 /* 805AB558  83 84 5D 74 */	lwz r28, 0x5d74(r4)
-/* 805AB55C  83 E5 5D AC */	lwz r31, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 805AB55C  83 E5 5D AC */	lwz r31, 0x5dac(r5)
 /* 805AB560  80 03 08 88 */	lwz r0, 0x888(r3)
 /* 805AB564  2C 00 00 00 */	cmpwi r0, 0
 /* 805AB568  40 82 01 8C */	bne lbl_805AB6F4
@@ -97,15 +97,15 @@ lbl_805AB520:
 /* 805AB69C  4B BA A0 D8 */	b daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz
 /* 805AB6A0  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 805AB6A4  7C 06 07 74 */	extsb r6, r0
-/* 805AB6A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AB6AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805AB6A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AB6AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AB6B0  38 63 0D B4 */	addi r3, r3, 0xdb4
 /* 805AB6B4  38 81 00 D0 */	addi r4, r1, 0xd0
 /* 805AB6B8  A8 A1 00 0A */	lha r5, 0xa(r1)
 /* 805AB6BC  4B A8 98 C4 */	b setRoom__13dSv_restart_cFRC4cXyzsSc
 /* 805AB6C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805AB6C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805AB6C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805AB6C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 805AB6CC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805AB6D0  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100008D@ha */
 /* 805AB6D4  38 84 00 8D */	addi r4, r4, 0x008D /* 0x0100008D@l */
@@ -165,7 +165,7 @@ lbl_805AB6F4:
 /* 805AB7A8  38 00 00 01 */	li r0, 1
 /* 805AB7AC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 805AB7B0  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 805AB7B4  98 03 12 CC */	stb r0, 0x12cc(r3)	/* effective address: 8042DD20 */
+/* 805AB7B4  98 03 12 CC */	stb r0, 0x12cc(r3)
 /* 805AB7B8  80 7E 08 88 */	lwz r3, 0x888(r30)
 /* 805AB7BC  38 03 00 01 */	addi r0, r3, 1
 /* 805AB7C0  90 1E 08 88 */	stw r0, 0x888(r30)
@@ -391,11 +391,11 @@ lbl_805ABADC:
 /* 805ABB0C  B0 1F 06 0A */	sth r0, 0x60a(r31)
 /* 805ABB10  3C 80 80 5B */	lis r4, lit_3940@ha
 /* 805ABB14  38 A4 E0 C4 */	addi r5, r4, lit_3940@l
-/* 805ABB18  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 805AE0C4 */
-/* 805ABB1C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 805AE0C8 */
+/* 805ABB18  80 85 00 00 */	lwz r4, 0(r5)
+/* 805ABB1C  80 05 00 04 */	lwz r0, 4(r5)
 /* 805ABB20  90 81 00 1C */	stw r4, 0x1c(r1)
 /* 805ABB24  90 01 00 20 */	stw r0, 0x20(r1)
-/* 805ABB28  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 805AE0CC */
+/* 805ABB28  80 05 00 08 */	lwz r0, 8(r5)
 /* 805ABB2C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805ABB30  38 81 00 1C */	addi r4, r1, 0x1c
 /* 805ABB34  4B FF F6 31 */	bl setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v
@@ -410,11 +410,11 @@ lbl_805ABB44:
 /* 805ABB54  40 82 00 C0 */	bne lbl_805ABC14
 /* 805ABB58  3C 80 80 5B */	lis r4, lit_3947@ha
 /* 805ABB5C  38 A4 E0 D0 */	addi r5, r4, lit_3947@l
-/* 805ABB60  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 805AE0D0 */
-/* 805ABB64  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 805AE0D4 */
+/* 805ABB60  80 85 00 00 */	lwz r4, 0(r5)
+/* 805ABB64  80 05 00 04 */	lwz r0, 4(r5)
 /* 805ABB68  90 81 00 10 */	stw r4, 0x10(r1)
 /* 805ABB6C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805ABB70  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 805AE0D8 */
+/* 805ABB70  80 05 00 08 */	lwz r0, 8(r5)
 /* 805ABB74  90 01 00 18 */	stw r0, 0x18(r1)
 /* 805ABB78  38 81 00 10 */	addi r4, r1, 0x10
 /* 805ABB7C  4B FF F5 E9 */	bl setDrAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v

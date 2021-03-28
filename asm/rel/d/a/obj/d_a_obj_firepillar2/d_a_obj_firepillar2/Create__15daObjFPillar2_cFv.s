@@ -88,11 +88,11 @@ lbl_80BE9F14:
 /* 80BE9F14  7F C3 F3 78 */	mr r3, r30
 /* 80BE9F18  3C 80 80 BF */	lis r4, l_cull_box@ha
 /* 80BE9F1C  C4 24 B5 4C */	lfsu f1, l_cull_box@l(r4)
-/* 80BE9F20  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80BF0004 */
-/* 80BE9F24  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BF0008 */
-/* 80BE9F28  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80BF000C */
-/* 80BE9F2C  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80BF0010 */
-/* 80BE9F30  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80BF0014 */
+/* 80BE9F20  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80BE9F24  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80BE9F28  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80BE9F2C  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80BE9F30  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80BE9F34  4B 43 06 14 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80BE9F38  38 1E 09 14 */	addi r0, r30, 0x914
 /* 80BE9F3C  90 1E 05 04 */	stw r0, 0x504(r30)
@@ -108,9 +108,9 @@ lbl_80BE9F14:
 /* 80BE9F64  40 82 00 AC */	bne lbl_80BEA010
 /* 80BE9F68  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BE9F6C  7C 04 07 74 */	extsb r4, r0
-/* 80BE9F70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE9F74  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80BE9F78  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80BE9F70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE9F74  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80BE9F78  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80BE9F7C  38 00 00 00 */	li r0, 0
 /* 80BE9F80  90 01 00 08 */	stw r0, 8(r1)
 /* 80BE9F84  90 81 00 0C */	stw r4, 0xc(r1)

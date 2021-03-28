@@ -17,9 +17,9 @@ lbl_8065AE88:
 lbl_8065AEC4:
 /* 8065AEC4  38 00 00 06 */	li r0, 6
 /* 8065AEC8  98 1F 0C 60 */	stb r0, 0xc60(r31)
-/* 8065AECC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8065AED0  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 8065AED4  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 8065AECC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8065AED0  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 8065AED4  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 8065AED8  4B 9B F9 08 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8065AEDC  FF E0 08 90 */	fmr f31, f1
 /* 8065AEE0  C3 DF 0C 78 */	lfs f30, 0xc78(r31)
@@ -75,7 +75,7 @@ lbl_8065AF7C:
 /* 8065AF90  EC 1F 00 32 */	fmuls f0, f31, f0
 /* 8065AF94  FC 00 02 10 */	fabs f0, f0
 /* 8065AF98  FC 20 00 18 */	frsp f1, f0
-/* 8065AF9C  C0 04 20 04 */	lfs f0, 0x2004(r4)	/* effective address: 8043BA24 */
+/* 8065AF9C  C0 04 20 04 */	lfs f0, 0x2004(r4)
 /* 8065AFA0  EC 1E 00 32 */	fmuls f0, f30, f0
 /* 8065AFA4  FC 00 02 10 */	fabs f0, f0
 /* 8065AFA8  FC 00 00 18 */	frsp f0, f0

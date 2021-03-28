@@ -12,8 +12,8 @@ lbl_80A661B4:
 /* 80A661DC  3B A0 FF FF */	li r29, -1
 /* 80A661E0  3B 20 00 00 */	li r25, 0
 /* 80A661E4  3B 80 00 00 */	li r28, 0
-/* 80A661E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A661EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A661E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A661EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A661F0  3B 43 4F F8 */	addi r26, r3, 0x4ff8
 /* 80A661F4  7F 43 D3 78 */	mr r3, r26
 /* 80A661F8  3C A0 80 A7 */	lis r5, struct_80A68FDC+0x0@ha

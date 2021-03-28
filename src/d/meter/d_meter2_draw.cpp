@@ -11,7 +11,36 @@
 // Types:
 // 
 
+struct J2DGrafContext {
+};
+
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
 struct JKRExpHeap {
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
 };
 
 struct J2DBasePosition {
@@ -28,26 +57,6 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct J2DGrafContext {
-};
-
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
@@ -56,15 +65,6 @@ struct CPaneMgr {
 };
 
 struct J2DAnmColor {
-};
-
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 8025564C */ void isVisible();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
 };
 
 struct dMeter2Draw_c {
@@ -192,6 +192,9 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
+struct ResTLUT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -199,9 +202,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTLUT {
 };
 
 struct ResTIMG {
@@ -228,10 +228,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -706,16 +706,16 @@ SECTION_DEAD static char const* const pad_80398A77 = "";
 
 /* 803BF328-803BF350 0028+00 s=1 e=0 z=0  None .data      bmg_filename$3954                                            */
 SECTION_DATA static void* data_803BF328[10] = {
-	/* 0    */ (void*)&d_meter_d_meter2_draw__stringBase0,
-	/* 1    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0xB),
-	/* 2    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x16),
-	/* 3    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x21),
-	/* 4    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x2C),
-	/* 5    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x37),
-	/* 6    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x42),
-	/* 7    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x4D),
-	/* 8    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x58),
-	/* 9    */ (void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x63),
+	(void*)&d_meter_d_meter2_draw__stringBase0,
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0xB),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x16),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x21),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x2C),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x37),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x42),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x4D),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x58),
+	(void*)(((char*)&d_meter_d_meter2_draw__stringBase0)+0x63),
 };
 
 /* 803BF350-803BF554 0204+00 s=1 e=0 z=0  None .data      i_action_num$8471                                            */
@@ -757,153 +757,153 @@ SECTION_DATA static u8 data_803BF350[516] = {
 
 /* 803BF554-803BF578 0024+00 s=1 e=0 z=0  None .data      @9008                                                        */
 SECTION_DATA static void* lit_9008[9] = {
-	/* 0    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x8C),
-	/* 1    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
-	/* 2    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
-	/* 3    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0xC8),
-	/* 4    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x140),
-	/* 5    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x104),
-	/* 6    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
-	/* 7    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
-	/* 8    */ (void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x17C),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x8C),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0xC8),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x140),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x104),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamX__13dMeter2Draw_cFUc)+0x17C),
 };
 
 /* 803BF578-803BF59C 0024+00 s=1 e=0 z=0  None .data      @9030                                                        */
 SECTION_DATA static void* lit_9030[9] = {
-	/* 0    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x8C),
-	/* 1    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
-	/* 2    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
-	/* 3    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0xC4),
-	/* 4    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x130),
-	/* 5    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0xFC),
-	/* 6    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
-	/* 7    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
-	/* 8    */ (void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x168),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x8C),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0xC4),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x130),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0xFC),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x1A4),
+	(void*)(((char*)setItemParamY__13dMeter2Draw_cFUc)+0x168),
 };
 
 /* 803BF59C-803BF5C0 0024+00 s=1 e=0 z=0  None .data      @9053                                                        */
 SECTION_DATA static void* lit_9053[9] = {
-	/* 0    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x8C),
-	/* 1    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
-	/* 2    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
-	/* 3    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0xC8),
-	/* 4    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x140),
-	/* 5    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x104),
-	/* 6    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
-	/* 7    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
-	/* 8    */ (void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x17C),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x8C),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0xC8),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x140),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x104),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x1B8),
+	(void*)(((char*)setItemParamZ__13dMeter2Draw_cFUc)+0x17C),
 };
 
 /* 803BF5C0-803BF750 0190+00 s=1 e=0 z=0  None .data      @9106                                                        */
 SECTION_DATA static void* lit_9106[100] = {
-	/* 0    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 1    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 2    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 3    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 4    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 5    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 6    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 7    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 8    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 9    */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 10   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 11   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 12   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 13   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 14   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 15   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 16   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 17   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x1D0),
-	/* 18   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 19   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x11C),
-	/* 20   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x1D0),
-	/* 21   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
-	/* 22   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x158),
-	/* 23   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x284),
-	/* 24   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x194),
-	/* 25   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
-	/* 26   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
-	/* 27   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x2C0),
-	/* 28   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 29   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 30   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 31   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 32   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 33   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 34   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 35   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 36   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 37   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 38   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 39   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 40   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 41   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 42   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 43   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 44   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 45   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 46   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 47   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 48   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 49   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 50   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 51   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 52   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 53   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 54   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 55   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 56   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 57   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 58   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 59   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 60   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 61   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 62   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 63   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 64   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 65   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 66   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 67   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 68   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 69   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
-	/* 70   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 71   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 72   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 73   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 74   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 75   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 76   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 77   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 78   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 79   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 80   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 81   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 82   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 83   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 84   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 85   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 86   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 87   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
-	/* 88   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 89   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 90   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 91   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 92   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 93   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 94   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 95   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 96   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 97   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 98   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
-	/* 99   */ (void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x1D0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x11C),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x1D0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x158),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x284),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x194),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x20C),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x2C0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0xE0),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x304),
+	(void*)(((char*)setItemParamB__13dMeter2Draw_cFUc)+0x248),
 };
 
 /* 803BF750-803BF760 0010+00 s=2 e=0 z=0  None .data      __vt__13dMeter2Draw_c                                        */
 SECTION_DATA static void* __vt__13dMeter2Draw_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__13dMeter2Draw_cFv,
-	/* 3    */ (void*)__dt__13dMeter2Draw_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__13dMeter2Draw_cFv,
+	(void*)__dt__13dMeter2Draw_cFv,
 };
 
 /* 80454880-80454884 0004+00 s=38 e=0 z=0  None .sdata2    @4182                                                        */

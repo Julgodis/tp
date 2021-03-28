@@ -9,7 +9,7 @@ lbl_80C74A3C:
 /* 80C74A58  3B E3 55 98 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80C74A5C  3C 60 80 C7 */	lis r3, data_80C7576C@ha
 /* 80C74A60  38 A3 57 6C */	addi r5, r3, data_80C7576C@l
-/* 80C74A64  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C7576C */
+/* 80C74A64  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C74A68  7C 00 07 75 */	extsb. r0, r0
 /* 80C74A6C  40 82 00 70 */	bne lbl_80C74ADC
 /* 80C74A70  80 7F 00 7C */	lwz r3, 0x7c(r31)

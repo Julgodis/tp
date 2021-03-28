@@ -140,11 +140,11 @@ lbl_8058F77C:
 /* 8058F9A4  4B DB 6B 0C */	b PSMTXCopy
 /* 8058F9A8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8058F9AC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8058F9B0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8058F9B0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8058F9B4  D0 1F 05 50 */	stfs f0, 0x550(r31)
-/* 8058F9B8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8058F9B8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8058F9BC  D0 1F 05 54 */	stfs f0, 0x554(r31)
-/* 8058F9C0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8058F9C0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8058F9C4  D0 1F 05 58 */	stfs f0, 0x558(r31)
 /* 8058F9C8  C0 1F 05 50 */	lfs f0, 0x550(r31)
 /* 8058F9CC  D0 1F 05 38 */	stfs f0, 0x538(r31)

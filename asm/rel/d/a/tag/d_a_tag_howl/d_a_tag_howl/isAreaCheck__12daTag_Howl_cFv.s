@@ -14,8 +14,8 @@ lbl_8048DA2C:
 /* 8048DA5C  7F E3 FB 78 */	mr r3, r31
 /* 8048DA60  48 00 02 09 */	bl getSwitchBit__12daTag_Howl_cFv
 /* 8048DA64  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 8048DA68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048DA6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048DA68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048DA6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048DA70  38 63 09 58 */	addi r3, r3, 0x958
 /* 8048DA74  4B BA 6D EC */	b isSwitch__12dSv_memBit_cCFi
 /* 8048DA78  2C 03 00 00 */	cmpwi r3, 0
@@ -24,9 +24,9 @@ lbl_8048DA2C:
 /* 8048DA84  48 00 01 80 */	b lbl_8048DC04
 lbl_8048DA88:
 /* 8048DA88  38 61 00 18 */	addi r3, r1, 0x18
-/* 8048DA8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8048DA90  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8048DA94  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8048DA8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8048DA90  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8048DA94  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8048DA98  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8048DA9C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8048DAA0  4B DD 90 94 */	b __mi__4cXyzCFRC3Vec
@@ -36,10 +36,10 @@ lbl_8048DA88:
 /* 8048DAB0  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8048DAB4  C0 21 00 20 */	lfs f1, 0x20(r1)
 /* 8048DAB8  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 8048DABC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048DAC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8048DAC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8048DAC8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8048DABC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048DAC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8048DAC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8048DAC8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8048DACC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8048DAD0  41 82 01 30 */	beq lbl_8048DC00
 /* 8048DAD4  D0 41 00 0C */	stfs f2, 0xc(r1)

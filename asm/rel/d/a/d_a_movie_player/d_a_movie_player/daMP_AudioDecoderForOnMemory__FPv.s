@@ -7,7 +7,7 @@ lbl_80876344:
 /* 80876358  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 8087635C  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 80876360  3B C4 9B D0 */	addi r30, r4, daMP_ActivePlayer@l
-/* 80876364  83 BE 00 BC */	lwz r29, 0xbc(r30)	/* effective address: 80879C8C */
+/* 80876364  83 BE 00 BC */	lwz r29, 0xbc(r30)
 /* 80876368  90 61 00 08 */	stw r3, 8(r1)
 /* 8087636C  3B E0 00 00 */	li r31, 0
 lbl_80876370:

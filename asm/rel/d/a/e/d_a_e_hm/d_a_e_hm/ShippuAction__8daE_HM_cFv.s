@@ -56,7 +56,7 @@ lbl_806E2A64:
 /* 806E2A88  4B B8 DC B8 */	b cLib_chaseF__FPfff
 /* 806E2A8C  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806E2A90  38 63 5C 24 */	addi r3, r3, l_HIO@l
-/* 806E2A94  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 806E5C40 */
+/* 806E2A94  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806E2A98  FC 00 00 1E */	fctiwz f0, f0
 /* 806E2A9C  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 806E2AA0  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -49,16 +49,16 @@ lbl_80947978:
 /* 8094797C  98 1E 09 33 */	stb r0, 0x933(r30)
 /* 80947980  3B E0 00 00 */	li r31, 0
 lbl_80947984:
-/* 80947984  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80947988  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80947984  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80947988  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8094798C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80947990  4B 6F AA D8 */	b reset__14dEvt_control_cFv
-/* 80947994  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80947998  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80947994  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80947998  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8094799C  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 809479A0  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 809479A4  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 809479A8  A0 84 06 44 */	lhz r4, 0x644(r4)	/* effective address: 803A78CC */
+/* 809479A8  A0 84 06 44 */	lhz r4, 0x644(r4)
 /* 809479AC  4B 6E D0 10 */	b isEventBit__11dSv_event_cCFUs
 /* 809479B0  2C 03 00 00 */	cmpwi r3, 0
 /* 809479B4  41 82 00 18 */	beq lbl_809479CC

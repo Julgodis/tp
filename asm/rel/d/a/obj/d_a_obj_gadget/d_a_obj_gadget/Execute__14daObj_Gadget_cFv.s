@@ -12,8 +12,8 @@ lbl_80BF3538:
 /* 80BF3560  80 1B 04 9C */	lwz r0, 0x49c(r27)
 /* 80BF3564  54 1E 9F FE */	rlwinm r30, r0, 0x13, 0x1f, 0x1f
 /* 80BF3568  3B FD 00 00 */	addi r31, r29, 0
-/* 80BF356C  C3 FF 00 28 */	lfs f31, 0x28(r31)	/* effective address: 80BF496C */
-/* 80BF3570  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80BF494C */
+/* 80BF356C  C3 FF 00 28 */	lfs f31, 0x28(r31)
+/* 80BF3570  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80BF3574  D0 1B 04 EC */	stfs f0, 0x4ec(r27)
 /* 80BF3578  D0 1B 04 F0 */	stfs f0, 0x4f0(r27)
 /* 80BF357C  D0 1B 04 F4 */	stfs f0, 0x4f4(r27)
@@ -22,7 +22,7 @@ lbl_80BF3538:
 /* 80BF3588  38 00 00 06 */	li r0, 6
 /* 80BF358C  98 1B 05 48 */	stb r0, 0x548(r27)
 /* 80BF3590  38 7B 07 8C */	addi r3, r27, 0x78c
-/* 80BF3594  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 80BF4960 */
+/* 80BF3594  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 80BF3598  4B 48 29 A8 */	b SetWallR__12dBgS_AcchCirFf
 /* 80BF359C  7F E3 FB 78 */	mr r3, r31
 /* 80BF35A0  C0 1F 00 18 */	lfs f0, 0x18(r31)
@@ -588,8 +588,8 @@ lbl_80BF3DC4:
 /* 80BF3DE0  4B 42 94 14 */	b fopAcM_riverStream__FP4cXyzPsPff
 lbl_80BF3DE4:
 /* 80BF3DE4  38 7B 05 78 */	addi r3, r27, 0x578
-/* 80BF3DE8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BF3DEC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80BF3DE8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BF3DEC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BF3DF0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80BF3DF4  4B 48 2C B8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80BF3DF8  80 1B 06 54 */	lwz r0, 0x654(r27)
@@ -677,8 +677,8 @@ lbl_80BF3EA8:
 /* 80BF3F38  38 7B 09 2C */	addi r3, r27, 0x92c
 /* 80BF3F3C  38 9B 04 D0 */	addi r4, r27, 0x4d0
 /* 80BF3F40  4B 67 B2 9C */	b SetC__8cM3dGCylFRC4cXyz
-/* 80BF3F44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF3F48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF3F44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF3F48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF3F4C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80BF3F50  38 9B 08 08 */	addi r4, r27, 0x808
 /* 80BF3F54  4B 67 0C 54 */	b Set__4cCcSFP8cCcD_Obj

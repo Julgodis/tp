@@ -8,7 +8,7 @@ lbl_80C51BE4:
 /* 80C51BFC  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80C51C00  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C51C04  38 84 20 F0 */	addi r4, r4, l_arcName@l
-/* 80C51C08  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C520F0 */
+/* 80C51C08  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C51C0C  4B 3D B3 FC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C51C10  38 7F 07 20 */	addi r3, r31, 0x720
 /* 80C51C14  3C 80 80 C5 */	lis r4, __dt__12LaundJoint_cFv@ha

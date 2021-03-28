@@ -23,14 +23,14 @@ lbl_80488FD8:
 /* 8048902C  38 63 97 FC */	addi r3, r3, l_resNameList@l
 /* 80489030  7C 03 00 2E */	lwzx r0, r3, r0
 /* 80489034  90 1E 01 00 */	stw r0, 0x100(r30)
-/* 80489038  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048903C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80489038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048903C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80489040  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80489044  80 9E 01 00 */	lwz r4, 0x100(r30)
 /* 80489048  4B BB D7 B8 */	b setObjectArchive__16dEvent_manager_cFPc
 lbl_8048904C:
-/* 8048904C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80489050  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 8048904C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80489050  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80489054  38 7D 4F F8 */	addi r3, r29, 0x4ff8
 /* 80489058  7F C4 F3 78 */	mr r4, r30
 /* 8048905C  3C A0 80 49 */	lis r5, l_evtList@ha

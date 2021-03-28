@@ -4,7 +4,7 @@ lbl_80C1641C:
 /* 80C16424  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C16428  3C 80 80 C1 */	lis r4, l_arcName@ha
 /* 80C1642C  38 84 65 40 */	addi r4, r4, l_arcName@l
-/* 80C16430  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C16540 */
+/* 80C16430  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C16434  38 63 06 30 */	addi r3, r3, 0x630
 /* 80C16438  4B 41 6B D0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C1643C  38 60 00 01 */	li r3, 1

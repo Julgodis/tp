@@ -8,7 +8,7 @@ lbl_80CB1D74:
 /* 80CB1D8C  C0 03 05 CC */	lfs f0, 0x5cc(r3)
 /* 80CB1D90  D0 03 05 E8 */	stfs f0, 0x5e8(r3)
 /* 80CB1D94  C0 23 05 E4 */	lfs f1, 0x5e4(r3)
-/* 80CB1D98  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80CB26C0 */
+/* 80CB1D98  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80CB1D9C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CB1DA0  D0 03 05 E4 */	stfs f0, 0x5e4(r3)
 /* 80CB1DA4  88 03 05 EC */	lbz r0, 0x5ec(r3)

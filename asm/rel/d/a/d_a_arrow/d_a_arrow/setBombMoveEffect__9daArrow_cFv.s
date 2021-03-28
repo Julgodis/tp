@@ -15,9 +15,9 @@ lbl_8049B214:
 /* 8049B248  28 00 00 00 */	cmplwi r0, 0
 /* 8049B24C  40 82 01 0C */	bne lbl_8049B358
 /* 8049B250  4B FF FC C9 */	bl setSmokePos__9daArrow_cFv
-/* 8049B254  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049B258  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 8049B25C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 8049B254  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049B258  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 8049B25C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 8049B260  38 00 00 FF */	li r0, 0xff
 /* 8049B264  90 01 00 08 */	stw r0, 8(r1)
 /* 8049B268  38 1F 0A 10 */	addi r0, r31, 0xa10

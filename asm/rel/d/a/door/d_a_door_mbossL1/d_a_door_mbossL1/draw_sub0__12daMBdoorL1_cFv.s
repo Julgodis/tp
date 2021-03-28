@@ -17,14 +17,14 @@ lbl_806771B4:
 /* 806771F0  80 84 00 04 */	lwz r4, 4(r4)
 /* 806771F4  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 806771F8  4B B2 DB A8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 806771FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80677200  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80677204  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 806771FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80677200  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80677204  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80677208  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8067720C  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 80677210  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80677214  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80677218  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 80677210  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 80677214  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80677218  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 8067721C  80 7F 05 94 */	lwz r3, 0x594(r31)
 /* 80677220  28 03 00 00 */	cmplwi r3, 0
 /* 80677224  41 82 00 18 */	beq lbl_8067723C
@@ -50,11 +50,11 @@ lbl_8067723C:
 /* 80677270  80 7F 05 80 */	lwz r3, 0x580(r31)
 /* 80677274  80 63 00 04 */	lwz r3, 4(r3)
 /* 80677278  4B 99 6B 78 */	b mDoExt_btkAnmRemove__FP12J3DModelData
-/* 8067727C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80677280  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80677284  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8067727C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80677280  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80677284  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80677288  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 8067728C  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8067728C  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80677290  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80677294  88 1F 06 00 */	lbz r0, 0x600(r31)
 /* 80677298  28 00 00 00 */	cmplwi r0, 0

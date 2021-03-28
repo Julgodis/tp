@@ -6,11 +6,11 @@ lbl_80A6BFA4:
 /* 80A6BFB4  7C 7F 1B 78 */	mr r31, r3
 /* 80A6BFB8  3C 80 80 A7 */	lis r4, lit_4698@ha
 /* 80A6BFBC  38 A4 08 A0 */	addi r5, r4, lit_4698@l
-/* 80A6BFC0  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A708A0 */
-/* 80A6BFC4  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A708A4 */
+/* 80A6BFC0  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A6BFC4  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A6BFC8  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A6BFCC  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A6BFD0  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A708A8 */
+/* 80A6BFD0  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A6BFD4  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A6BFD8  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A6BFDC  48 00 0E 19 */	bl chkAction__11daNpc_Lud_cFM11daNpc_Lud_cFPCvPvPv_i
@@ -25,11 +25,11 @@ lbl_80A6BFA4:
 lbl_80A6C000:
 /* 80A6C000  3C 60 80 A7 */	lis r3, lit_4703@ha
 /* 80A6C004  38 83 08 AC */	addi r4, r3, lit_4703@l
-/* 80A6C008  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A708AC */
-/* 80A6C00C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A708B0 */
+/* 80A6C008  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A6C00C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A6C010  90 61 00 08 */	stw r3, 8(r1)
 /* 80A6C014  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A6C018  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A708B4 */
+/* 80A6C018  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A6C01C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A6C020  7F E3 FB 78 */	mr r3, r31
 /* 80A6C024  38 81 00 08 */	addi r4, r1, 8

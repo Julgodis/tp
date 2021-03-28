@@ -130,7 +130,7 @@ lbl_80BCC1CC:
 /* 80BCC20C  40 82 00 20 */	bne lbl_80BCC22C
 /* 80BCC210  3C 60 80 BD */	lis r3, l_HIO@ha
 /* 80BCC214  38 63 C7 60 */	addi r3, r3, l_HIO@l
-/* 80BCC218  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BCC768 */
+/* 80BCC218  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BCC21C  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80BCC220  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
 /* 80BCC224  D0 1D 04 F4 */	stfs f0, 0x4f4(r29)
@@ -140,7 +140,7 @@ lbl_80BCC22C:
 /* 80BCC230  40 82 00 1C */	bne lbl_80BCC24C
 /* 80BCC234  3C 60 80 BD */	lis r3, l_HIO@ha
 /* 80BCC238  38 63 C7 60 */	addi r3, r3, l_HIO@l
-/* 80BCC23C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80BCC76C */
+/* 80BCC23C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80BCC240  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80BCC244  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
 /* 80BCC248  D0 1D 04 F4 */	stfs f0, 0x4f4(r29)
@@ -172,7 +172,7 @@ lbl_80BCC288:
 /* 80BCC2A4  38 00 FF FF */	li r0, -1
 /* 80BCC2A8  3C 60 80 BD */	lis r3, l_HIO@ha
 /* 80BCC2AC  38 63 C7 60 */	addi r3, r3, l_HIO@l
-/* 80BCC2B0  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80BCC764 */
+/* 80BCC2B0  98 03 00 04 */	stb r0, 4(r3)
 lbl_80BCC2B4:
 /* 80BCC2B4  38 00 00 00 */	li r0, 0
 /* 80BCC2B8  90 01 00 08 */	stw r0, 8(r1)
@@ -199,15 +199,15 @@ lbl_80BCC2FC:
 /* 80BCC308  3C 60 80 BD */	lis r3, stringBase0@ha
 /* 80BCC30C  38 63 C6 78 */	addi r3, r3, stringBase0@l
 /* 80BCC310  38 63 00 06 */	addi r3, r3, 6
-/* 80BCC314  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BCC318  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80BCC314  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BCC318  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BCC31C  38 84 4E 00 */	addi r4, r4, 0x4e00
 /* 80BCC320  4B 79 C6 74 */	b strcmp
 /* 80BCC324  2C 03 00 00 */	cmpwi r3, 0
 /* 80BCC328  40 82 00 2C */	bne lbl_80BCC354
-/* 80BCC32C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BCC330  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BCC334  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
+/* 80BCC32C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BCC330  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BCC334  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
 /* 80BCC338  2C 00 00 03 */	cmpwi r0, 3
 /* 80BCC33C  40 82 00 18 */	bne lbl_80BCC354
 /* 80BCC340  88 1D 09 C8 */	lbz r0, 0x9c8(r29)

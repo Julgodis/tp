@@ -9,11 +9,11 @@ lbl_809BC7D8:
 /* 809BC7F4  7C 7E 1B 78 */	mr r30, r3
 /* 809BC7F8  3C 60 80 9C */	lis r3, m__17daNpc_Gnd_Param_c@ha
 /* 809BC7FC  3B E3 E4 A0 */	addi r31, r3, m__17daNpc_Gnd_Param_c@l
-/* 809BC800  C0 3F 00 B8 */	lfs f1, 0xb8(r31)	/* effective address: 809BE558 */
+/* 809BC800  C0 3F 00 B8 */	lfs f1, 0xb8(r31)
 /* 809BC804  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 809BC808  C0 1F 00 BC */	lfs f0, 0xbc(r31)	/* effective address: 809BE55C */
+/* 809BC808  C0 1F 00 BC */	lfs f0, 0xbc(r31)
 /* 809BC80C  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 809BC810  C0 1F 00 A0 */	lfs f0, 0xa0(r31)	/* effective address: 809BE540 */
+/* 809BC810  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
 /* 809BC814  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 809BC818  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 809BC81C  D0 01 00 2C */	stfs f0, 0x2c(r1)

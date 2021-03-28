@@ -11,10 +11,10 @@ lbl_80C959CC:
 /* 80C959F0  38 00 00 06 */	li r0, 6
 /* 80C959F4  7C 09 03 A6 */	mtctr r0
 lbl_80C959F8:
-/* 80C959F8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C95AD8 */
-/* 80C959FC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C95ADC */
-/* 80C95A00  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C95B98 */
-/* 80C95A04  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C95B9C */
+/* 80C959F8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C959FC  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C95A00  90 65 00 04 */	stw r3, 4(r5)
+/* 80C95A04  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C95A08  42 00 FF F0 */	bdnz lbl_80C959F8
 /* 80C95A0C  3C 60 80 C9 */	lis r3, __vt__17daObj_Mie_Param_c@ha
 /* 80C95A10  38 03 5C B8 */	addi r0, r3, __vt__17daObj_Mie_Param_c@l

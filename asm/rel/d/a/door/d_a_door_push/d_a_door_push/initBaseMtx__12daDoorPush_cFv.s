@@ -21,9 +21,9 @@ lbl_80677E08:
 /* 80677E54  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80677E58  C0 1E 04 F4 */	lfs f0, 0x4f4(r30)
 /* 80677E5C  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80677E60  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80678ECC */
+/* 80677E60  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80677E64  D0 1E 06 14 */	stfs f0, 0x614(r30)
-/* 80677E68  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80678ED0 */
+/* 80677E68  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 80677E6C  D0 1E 06 18 */	stfs f0, 0x618(r30)
 /* 80677E70  D0 1E 06 1C */	stfs f0, 0x61c(r30)
 /* 80677E74  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

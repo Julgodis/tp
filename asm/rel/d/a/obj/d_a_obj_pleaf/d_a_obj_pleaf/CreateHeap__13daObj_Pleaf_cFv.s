@@ -6,8 +6,8 @@ lbl_80CB134C:
 /* 80CB135C  7C 7F 1B 78 */	mr r31, r3
 /* 80CB1360  48 00 02 59 */	bl getResName__13daObj_Pleaf_cFv
 /* 80CB1364  38 80 00 03 */	li r4, 3
-/* 80CB1368  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CB136C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CB1368  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CB136C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CB1370  3C A5 00 02 */	addis r5, r5, 2
 /* 80CB1374  38 C0 00 80 */	li r6, 0x80
 /* 80CB1378  38 A5 C2 F8 */	addi r5, r5, -15624

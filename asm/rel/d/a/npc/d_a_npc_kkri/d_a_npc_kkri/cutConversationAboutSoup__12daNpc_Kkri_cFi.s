@@ -9,8 +9,8 @@ lbl_80550E18:
 /* 80550E34  3B C0 00 00 */	li r30, 0
 /* 80550E38  3B A0 FF FF */	li r29, -1
 /* 80550E3C  3B 80 00 00 */	li r28, 0
-/* 80550E40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80550E44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80550E40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80550E44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80550E48  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80550E4C  7F E3 FB 78 */	mr r3, r31
 /* 80550E50  3C A0 80 55 */	lis r5, struct_805535A4+0x0@ha

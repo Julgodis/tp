@@ -14,7 +14,7 @@ lbl_807A7CD0:
 /* 807A7D00  4B 87 2A E0 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807A7D04  3C 60 80 7B */	lis r3, l_HIO@ha
 /* 807A7D08  38 63 02 10 */	addi r3, r3, l_HIO@l
-/* 807A7D0C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807B021C */
+/* 807A7D0C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807A7D10  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807A7D14  40 80 00 1C */	bge lbl_807A7D30
 /* 807A7D18  7F E3 FB 78 */	mr r3, r31

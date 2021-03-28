@@ -66,25 +66,25 @@ extern "C" extern void* __vt__10JSUIosBase[3];
 /* ############################################################################################## */
 /* 803CC4B0-803CC4D4 0024+00 s=0 e=7 z=0  None .data      __vt__20JSURandomInputStream                                 */
 SECTION_DATA void* __vt__20JSURandomInputStream[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20JSURandomInputStreamFv,
-	/* 3    */ (void*)getAvailable__20JSURandomInputStreamCFv,
-	/* 4    */ (void*)skip__20JSURandomInputStreamFl,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20JSURandomInputStreamFv,
+	(void*)getAvailable__20JSURandomInputStreamCFv,
+	(void*)skip__20JSURandomInputStreamFl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803CC4D4-803CC4F0 0018+04 s=1 e=4 z=0  None .data      __vt__14JSUInputStream                                       */
 SECTION_DATA void* __vt__14JSUInputStream[6 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JSUInputStreamFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)skip__14JSUInputStreamFl,
-	/* 5    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JSUInputStreamFv,
+	(void*)NULL,
+	(void*)skip__14JSUInputStreamFl,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

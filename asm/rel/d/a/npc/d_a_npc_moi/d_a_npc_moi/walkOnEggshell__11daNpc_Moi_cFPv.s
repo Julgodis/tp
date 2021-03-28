@@ -8,7 +8,7 @@ lbl_80A78FF4:
 /* 80A7900C  3C 60 80 A8 */	lis r3, m__17daNpc_Moi_Param_c@ha
 /* 80A79010  3B E3 AE F0 */	addi r31, r3, m__17daNpc_Moi_Param_c@l
 /* 80A79014  38 7F 00 00 */	addi r3, r31, 0
-/* 80A79018  AB A3 00 9A */	lha r29, 0x9a(r3)	/* effective address: 80A7AF8A */
+/* 80A79018  AB A3 00 9A */	lha r29, 0x9a(r3)
 /* 80A7901C  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 80A79020  2C 00 00 02 */	cmpwi r0, 2
 /* 80A79024  41 82 01 88 */	beq lbl_80A791AC
@@ -202,10 +202,10 @@ lbl_80A792C0:
 /* 80A792D8  80 1E 16 58 */	lwz r0, 0x1658(r30)
 /* 80A792DC  2C 00 00 00 */	cmpwi r0, 0
 /* 80A792E0  41 82 00 D0 */	beq lbl_80A793B0
-/* 80A792E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A792E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A792EC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A792F0  A0 03 00 FA */	lhz r0, 0xfa(r3)	/* effective address: 804062BA */
+/* 80A792E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A792E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A792EC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A792F0  A0 03 00 FA */	lhz r0, 0xfa(r3)
 /* 80A792F4  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80A792F8  41 82 01 A4 */	beq lbl_80A7949C
 /* 80A792FC  C0 43 05 58 */	lfs f2, 0x558(r3)

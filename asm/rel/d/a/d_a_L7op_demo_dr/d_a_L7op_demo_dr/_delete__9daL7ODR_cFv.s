@@ -19,7 +19,7 @@ lbl_805AD8B4:
 /* 805AD8BC  41 82 00 18 */	beq lbl_805AD8D4
 /* 805AD8C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805AD8C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805AD8C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805AD8C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 805AD8CC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805AD8D0  4B D0 1F B4 */	b subBgmStop__8Z2SeqMgrFv
 lbl_805AD8D4:

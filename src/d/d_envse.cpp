@@ -224,25 +224,25 @@ asm static void dEnvSe_Create(dEnvSe_c* param_0) {
 /* ############################################################################################## */
 /* 803BA808-803BA81C 0014+00 s=1 e=0 z=0  None .data      l_dEnvSe_Method                                              */
 SECTION_DATA static void* l_dEnvSe_Method[5] = {
-	/* 0    */ (void*)dEnvSe_Create__FP8dEnvSe_c,
-	/* 1    */ (void*)dEnvSe_Delete__FP8dEnvSe_c,
-	/* 2    */ (void*)dEnvSe_Execute__FP8dEnvSe_c,
-	/* 3    */ (void*)dEnvSe_IsDelete__FP8dEnvSe_c,
-	/* 4    */ (void*)dEnvSe_Draw__FP8dEnvSe_c,
+	(void*)dEnvSe_Create__FP8dEnvSe_c,
+	(void*)dEnvSe_Delete__FP8dEnvSe_c,
+	(void*)dEnvSe_Execute__FP8dEnvSe_c,
+	(void*)dEnvSe_IsDelete__FP8dEnvSe_c,
+	(void*)dEnvSe_Draw__FP8dEnvSe_c,
 };
 
-/* 803BA81C-803BA848 0028+04 s=0 e=0 z=1  None .data      g_profile_ENVSE                                              */
+/* 803BA81C-803BA848 0028+04 s=0 e=0 z=0  None .data      g_profile_ENVSE                                              */
 SECTION_DATA void* g_profile_ENVSE[10 + 1 /* padding */] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0002FFFD,
-	/* 2    */ (void*)0x00150000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000010C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopKy_Method,
-	/* 8    */ (void*)0x02B10000,
-	/* 9    */ (void*)&l_dEnvSe_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x0002FFFD,
+	(void*)0x00150000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x0000010C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x02B10000,
+	(void*)&l_dEnvSe_Method,
 	/* padding */
 	NULL,
 };

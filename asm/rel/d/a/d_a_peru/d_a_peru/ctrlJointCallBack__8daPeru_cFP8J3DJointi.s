@@ -7,7 +7,7 @@ lbl_80D47860:
 /* 80D47874  40 82 00 30 */	bne lbl_80D478A4
 /* 80D47878  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D4787C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80D47880  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80D47880  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80D47884  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80D47888  28 03 00 00 */	cmplwi r3, 0
 /* 80D4788C  41 82 00 18 */	beq lbl_80D478A4

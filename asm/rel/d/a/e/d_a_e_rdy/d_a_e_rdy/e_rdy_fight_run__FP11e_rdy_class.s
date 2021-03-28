@@ -9,9 +9,9 @@ lbl_8076DA3C:
 /* 8076DA58  7C 7D 1B 78 */	mr r29, r3
 /* 8076DA5C  3C 80 80 78 */	lis r4, lit_4018@ha
 /* 8076DA60  3B E4 9D FC */	addi r31, r4, lit_4018@l
-/* 8076DA64  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80779E00 */
+/* 8076DA64  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8076DA68  3B C0 00 01 */	li r30, 1
-/* 8076DA6C  C0 3F 00 7C */	lfs f1, 0x7c(r31)	/* effective address: 80779E78 */
+/* 8076DA6C  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 8076DA70  C0 03 0A 50 */	lfs f0, 0xa50(r3)
 /* 8076DA74  EC 21 00 2A */	fadds f1, f1, f0
 /* 8076DA78  38 80 7F FF */	li r4, 0x7fff
@@ -32,7 +32,7 @@ lbl_8076DAA8:
 lbl_8076DAB0:
 /* 8076DAB0  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076DAB4  38 83 A8 84 */	addi r4, r3, l_HIO@l
-/* 8076DAB8  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 8077A898 */
+/* 8076DAB8  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8076DABC  88 1D 05 BA */	lbz r0, 0x5ba(r29)
 /* 8076DAC0  28 00 00 01 */	cmplwi r0, 1
 /* 8076DAC4  41 82 00 64 */	beq lbl_8076DB28
@@ -320,7 +320,7 @@ lbl_8076DED4:
 /* 8076DED4  C0 3D 0A 48 */	lfs f1, 0xa48(r29)
 /* 8076DED8  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076DEDC  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 8076DEE0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8077A89C */
+/* 8076DEE0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8076DEE4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8076DEE8  40 80 00 44 */	bge lbl_8076DF2C
 /* 8076DEEC  4B 91 94 E8 */	b cc_pl_cut_bit_get__Fv
@@ -346,7 +346,7 @@ lbl_8076DF2C:
 /* 8076DF38  C0 3D 0A 48 */	lfs f1, 0xa48(r29)
 /* 8076DF3C  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076DF40  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 8076DF44  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8077A8A0 */
+/* 8076DF44  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8076DF48  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8076DF4C  40 80 00 54 */	bge lbl_8076DFA0
 /* 8076DF50  A8 1D 0A 64 */	lha r0, 0xa64(r29)

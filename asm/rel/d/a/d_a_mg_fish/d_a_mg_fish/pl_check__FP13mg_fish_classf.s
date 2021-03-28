@@ -10,14 +10,14 @@ lbl_80529F68:
 /* 80529F88  FF E0 08 90 */	fmr f31, f1
 /* 80529F8C  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 80529F90  3B E3 61 68 */	addi r31, r3, lit_3679@l
-/* 80529F94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529F98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80529F9C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80529FA0  C0 03 05 2C */	lfs f0, 0x52c(r3)	/* effective address: 804066EC */
+/* 80529F94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529F98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80529F9C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80529FA0  C0 03 05 2C */	lfs f0, 0x52c(r3)
 /* 80529FA4  FC 00 02 10 */	fabs f0, f0
 /* 80529FA8  FC 40 00 18 */	frsp f2, f0
 /* 80529FAC  C0 3E 05 F0 */	lfs f1, 0x5f0(r30)
-/* 80529FB0  C0 1F 00 28 */	lfs f0, 0x28(r31)	/* effective address: 80536190 */
+/* 80529FB0  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80529FB4  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80529FB8  EC 1F 00 2A */	fadds f0, f31, f0
 /* 80529FBC  FC 01 00 40 */	fcmpo cr0, f1, f0

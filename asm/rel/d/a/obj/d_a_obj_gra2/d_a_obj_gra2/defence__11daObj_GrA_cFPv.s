@@ -53,11 +53,11 @@ lbl_80C0601C:
 /* 80C06024  41 82 00 30 */	beq lbl_80C06054
 /* 80C06028  3C 80 80 C1 */	lis r4, lit_6661@ha
 /* 80C0602C  38 A4 01 D8 */	addi r5, r4, lit_6661@l
-/* 80C06030  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80C101D8 */
-/* 80C06034  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80C101DC */
+/* 80C06030  80 85 00 00 */	lwz r4, 0(r5)
+/* 80C06034  80 05 00 04 */	lwz r0, 4(r5)
 /* 80C06038  90 81 00 08 */	stw r4, 8(r1)
 /* 80C0603C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C06040  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80C101E0 */
+/* 80C06040  80 05 00 08 */	lwz r0, 8(r5)
 /* 80C06044  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C06048  38 81 00 08 */	addi r4, r1, 8
 /* 80C0604C  4B FF B8 A9 */	bl setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i
@@ -104,11 +104,11 @@ lbl_80C06054:
 /* 80C060EC  4B 74 03 C4 */	b PSMTXCopy
 /* 80C060F0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C060F4  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80C060F8  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 803DD47C */
+/* 80C060F8  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 80C060FC  D0 1E 0A BC */	stfs f0, 0xabc(r30)
-/* 80C06100  C0 1D 00 1C */	lfs f0, 0x1c(r29)	/* effective address: 803DD48C */
+/* 80C06100  C0 1D 00 1C */	lfs f0, 0x1c(r29)
 /* 80C06104  D0 1E 0A C0 */	stfs f0, 0xac0(r30)
-/* 80C06108  C0 1D 00 2C */	lfs f0, 0x2c(r29)	/* effective address: 803DD49C */
+/* 80C06108  C0 1D 00 2C */	lfs f0, 0x2c(r29)
 /* 80C0610C  D0 1E 0A C4 */	stfs f0, 0xac4(r30)
 /* 80C06110  C0 3E 0A C0 */	lfs f1, 0xac0(r30)
 /* 80C06114  C0 1F 02 10 */	lfs f0, 0x210(r31)

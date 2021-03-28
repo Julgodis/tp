@@ -34,11 +34,11 @@ lbl_8055BE1C:
 /* 8055BE9C  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 8055BEA0  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8055BEA4  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8055BEA8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8055BEAC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8055BEA8  80 64 00 00 */	lwz r3, 0(r4)
+/* 8055BEAC  80 04 00 04 */	lwz r0, 4(r4)
 /* 8055BEB0  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 8055BEB4  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 8055BEB8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8055BEB8  80 04 00 08 */	lwz r0, 8(r4)
 /* 8055BEBC  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 8055BEC0  38 00 00 01 */	li r0, 1
 /* 8055BEC4  98 1F 11 31 */	stb r0, 0x1131(r31)

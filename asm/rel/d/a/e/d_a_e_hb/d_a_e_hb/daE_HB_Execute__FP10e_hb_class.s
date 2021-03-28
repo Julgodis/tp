@@ -33,9 +33,9 @@ lbl_804FF790:
 /* 804FF7B8  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 804FF7BC  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
 /* 804FF7C0  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 804FF7C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804FF7C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804FF7CC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804FF7C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804FF7C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804FF7CC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804FF7D0  38 80 00 00 */	li r4, 0
 /* 804FF7D4  90 81 00 08 */	stw r4, 8(r1)
 /* 804FF7D8  38 00 FF FF */	li r0, -1
@@ -107,7 +107,7 @@ lbl_804FF868:
 /* 804FF8D0  4B D7 0D 38 */	b cLib_addCalcAngleS2__FPssss
 /* 804FF8D4  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804FF8D8  3B E3 0E 70 */	addi r31, r3, l_HIO@l
-/* 804FF8DC  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80500E78 */
+/* 804FF8DC  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 804FF8E0  C0 1D 06 94 */	lfs f0, 0x694(r29)
 /* 804FF8E4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 804FF8E8  FC 40 08 90 */	fmr f2, f1
@@ -139,7 +139,7 @@ lbl_804FF868:
 /* 804FF950  38 63 00 30 */	addi r3, r3, 0x30
 /* 804FF954  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804FF958  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804FF95C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804FF95C  80 84 00 00 */	lwz r4, 0(r4)
 /* 804FF960  4B E4 6B 50 */	b PSMTXCopy
 /* 804FF964  C0 1E 00 64 */	lfs f0, 0x64(r30)
 /* 804FF968  D0 01 00 5C */	stfs f0, 0x5c(r1)
@@ -204,8 +204,8 @@ lbl_804FFA2C:
 /* 804FFA48  C0 1D 06 94 */	lfs f0, 0x694(r29)
 /* 804FFA4C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 804FFA50  4B D6 FC B8 */	b SetR__8cM3dGSphFf
-/* 804FFA54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804FFA58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804FFA54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804FFA58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804FFA5C  3B 83 23 3C */	addi r28, r3, 0x233c
 /* 804FFA60  7F 83 E3 78 */	mr r3, r28
 /* 804FFA64  38 9D 08 9C */	addi r4, r29, 0x89c

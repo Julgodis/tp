@@ -18,9 +18,9 @@ lbl_80B33A20:
 /* 80B33A28  C8 43 1C 9C */	lfd f2, lit_6299@l(r3)
 /* 80B33A2C  4B 83 8D 54 */	b pow
 /* 80B33A30  FF E0 08 18 */	frsp f31, f1
-/* 80B33A34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B33A38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B33A3C  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B33A34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B33A38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B33A3C  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80B33A40  38 61 00 44 */	addi r3, r1, 0x44
 /* 80B33A44  7F E4 FB 78 */	mr r4, r31
 /* 80B33A48  48 00 DC 09 */	bl getLeftFootPos__9daPy_py_cCFv

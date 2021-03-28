@@ -6,11 +6,11 @@ lbl_80741EEC:
 /* 80741EFC  90 03 00 00 */	stw r0, 0(r3)
 /* 80741F00  38 00 FF FF */	li r0, -1
 /* 80741F04  98 03 00 04 */	stb r0, 4(r3)
-/* 80741F08  C0 05 00 2C */	lfs f0, 0x2c(r5)	/* effective address: 8074BF68 */
+/* 80741F08  C0 05 00 2C */	lfs f0, 0x2c(r5)
 /* 80741F0C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80741F10  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 8074BF44 */
+/* 80741F10  C0 05 00 08 */	lfs f0, 8(r5)
 /* 80741F14  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 80741F18  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 8074BF6C */
+/* 80741F18  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 80741F1C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 80741F20  38 00 00 FA */	li r0, 0xfa
 /* 80741F24  B0 03 00 14 */	sth r0, 0x14(r3)
@@ -31,21 +31,21 @@ lbl_80741EEC:
 /* 80741F60  B0 03 00 26 */	sth r0, 0x26(r3)
 /* 80741F64  38 00 01 C2 */	li r0, 0x1c2
 /* 80741F68  B0 03 00 22 */	sth r0, 0x22(r3)
-/* 80741F6C  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 8074BF70 */
+/* 80741F6C  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 80741F70  D0 03 00 30 */	stfs f0, 0x30(r3)
-/* 80741F74  C0 05 00 38 */	lfs f0, 0x38(r5)	/* effective address: 8074BF74 */
+/* 80741F74  C0 05 00 38 */	lfs f0, 0x38(r5)
 /* 80741F78  D0 03 00 28 */	stfs f0, 0x28(r3)
-/* 80741F7C  C0 05 00 3C */	lfs f0, 0x3c(r5)	/* effective address: 8074BF78 */
+/* 80741F7C  C0 05 00 3C */	lfs f0, 0x3c(r5)
 /* 80741F80  D0 03 00 2C */	stfs f0, 0x2c(r3)
-/* 80741F84  C0 05 00 40 */	lfs f0, 0x40(r5)	/* effective address: 8074BF7C */
+/* 80741F84  C0 05 00 40 */	lfs f0, 0x40(r5)
 /* 80741F88  D0 03 00 34 */	stfs f0, 0x34(r3)
-/* 80741F8C  C0 05 00 44 */	lfs f0, 0x44(r5)	/* effective address: 8074BF80 */
+/* 80741F8C  C0 05 00 44 */	lfs f0, 0x44(r5)
 /* 80741F90  D0 03 00 38 */	stfs f0, 0x38(r3)
-/* 80741F94  C0 05 00 48 */	lfs f0, 0x48(r5)	/* effective address: 8074BF84 */
+/* 80741F94  C0 05 00 48 */	lfs f0, 0x48(r5)
 /* 80741F98  D0 03 00 3C */	stfs f0, 0x3c(r3)
-/* 80741F9C  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 8074BF40 */
+/* 80741F9C  C0 05 00 04 */	lfs f0, 4(r5)
 /* 80741FA0  D0 03 00 40 */	stfs f0, 0x40(r3)
 /* 80741FA4  D0 03 00 44 */	stfs f0, 0x44(r3)
-/* 80741FA8  C0 05 00 4C */	lfs f0, 0x4c(r5)	/* effective address: 8074BF88 */
+/* 80741FA8  C0 05 00 4C */	lfs f0, 0x4c(r5)
 /* 80741FAC  D0 03 00 48 */	stfs f0, 0x48(r3)
 /* 80741FB0  4E 80 00 20 */	blr 

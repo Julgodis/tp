@@ -104,8 +104,8 @@ lbl_80973A10:
 /* 80973ACC  38 1D 07 A8 */	addi r0, r29, 0x7a8
 /* 80973AD0  90 1D 0C C8 */	stw r0, 0xcc8(r29)
 /* 80973AD4  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 80973AD8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80973ADC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80973AD8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80973ADC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80973AE0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80973AE4  4B 70 2F C8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80973AE8  80 1D 06 AC */	lwz r0, 0x6ac(r29)

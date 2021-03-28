@@ -20,9 +20,9 @@ lbl_8077B274:
 /* 8077B2BC  40 82 00 40 */	bne lbl_8077B2FC
 /* 8077B2C0  3C 60 80 78 */	lis r3, same_id@ha
 /* 8077B2C4  38 83 14 B8 */	addi r4, r3, same_id@l
-/* 8077B2C8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807814B8 */
+/* 8077B2C8  80 64 00 00 */	lwz r3, 0(r4)
 /* 8077B2CC  38 03 00 01 */	addi r0, r3, 1
-/* 8077B2D0  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 807814B8 */
+/* 8077B2D0  90 04 00 00 */	stw r0, 0(r4)
 /* 8077B2D4  A8 1E 06 96 */	lha r0, 0x696(r30)
 /* 8077B2D8  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8077B2DC  41 82 00 0C */	beq lbl_8077B2E8
@@ -31,9 +31,9 @@ lbl_8077B274:
 lbl_8077B2E8:
 /* 8077B2E8  3C 60 80 78 */	lis r3, fail_id@ha
 /* 8077B2EC  38 83 14 BC */	addi r4, r3, fail_id@l
-/* 8077B2F0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807814BC */
+/* 8077B2F0  80 64 00 00 */	lwz r3, 0(r4)
 /* 8077B2F4  38 03 00 01 */	addi r0, r3, 1
-/* 8077B2F8  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 807814BC */
+/* 8077B2F8  90 04 00 00 */	stw r0, 0(r4)
 lbl_8077B2FC:
 /* 8077B2FC  38 60 00 00 */	li r3, 0
 /* 8077B300  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -9,9 +9,9 @@ lbl_80666390:
 /* 806663AC  7C 7B 1B 78 */	mr r27, r3
 /* 806663B0  3C 60 80 66 */	lis r3, lit_3768@ha
 /* 806663B4  3B E3 76 98 */	addi r31, r3, lit_3768@l
-/* 806663B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806663BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806663C0  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 806663B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806663BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806663C0  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 806663C4  7F C3 F3 78 */	mr r3, r30
 /* 806663C8  4B A7 AF AC */	b getCopyRodControllActor__9daAlink_cFv
 /* 806663CC  7C 7D 1B 78 */	mr r29, r3
@@ -21,8 +21,8 @@ lbl_80666390:
 /* 806663DC  88 9B 0A E2 */	lbz r4, 0xae2(r27)
 /* 806663E0  28 04 00 FF */	cmplwi r4, 0xff
 /* 806663E4  41 82 00 34 */	beq lbl_80666418
-/* 806663E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806663EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806663E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806663EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806663F0  88 1B 04 BA */	lbz r0, 0x4ba(r27)
 /* 806663F4  7C 05 07 74 */	extsb r5, r0
 /* 806663F8  4B 9C EF 68 */	b isSwitch__10dSv_info_cCFii
@@ -122,8 +122,8 @@ lbl_80666530:
 /* 80666544  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
 /* 80666548  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8066654C  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 80666550  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80666554  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80666550  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80666554  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80666558  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8066655C  38 80 00 08 */	li r4, 8
 /* 80666560  38 A0 00 1F */	li r5, 0x1f
@@ -144,8 +144,8 @@ lbl_80666578:
 /* 80666598  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
 /* 8066659C  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 806665A0  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 806665A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806665A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806665A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806665A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806665AC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806665B0  38 80 00 08 */	li r4, 8
 /* 806665B4  38 A0 00 1F */	li r5, 0x1f
@@ -176,8 +176,8 @@ lbl_80666604:
 /* 80666610  7C 1D D8 40 */	cmplw r29, r27
 /* 80666614  40 82 00 24 */	bne lbl_80666638
 /* 80666618  3B 80 00 02 */	li r28, 2
-/* 8066661C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80666620  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066661C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80666620  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80666624  38 80 00 E2 */	li r4, 0xe2
 /* 80666628  88 1B 04 BA */	lbz r0, 0x4ba(r27)
 /* 8066662C  7C 05 07 74 */	extsb r5, r0
@@ -192,9 +192,9 @@ lbl_80666640:
 /* 80666648  40 82 02 04 */	bne lbl_8066684C
 /* 8066664C  7C 1D D8 40 */	cmplw r29, r27
 /* 80666650  40 82 01 FC */	bne lbl_8066684C
-/* 80666654  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80666658  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066665C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80666654  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80666658  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066665C  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80666660  28 00 00 00 */	cmplwi r0, 0
 /* 80666664  41 82 00 14 */	beq lbl_80666678
 /* 80666668  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
@@ -397,8 +397,8 @@ lbl_80666910:
 /* 80666920  57 80 08 3C */	slwi r0, r28, 1
 /* 80666924  7C 05 02 14 */	add r0, r5, r0
 /* 80666928  7C 84 02 2E */	lhzx r4, r4, r0
-/* 8066692C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80666930  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8066692C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80666930  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80666934  3C A5 00 02 */	addis r5, r5, 2
 /* 80666938  38 C0 00 80 */	li r6, 0x80
 /* 8066693C  38 A5 C2 F8 */	addi r5, r5, -15624

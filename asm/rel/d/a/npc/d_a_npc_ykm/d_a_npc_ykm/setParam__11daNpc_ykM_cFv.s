@@ -90,10 +90,10 @@ lbl_80B54CFC:
 /* 80B54D20  98 1E 05 45 */	stb r0, 0x545(r30)
 /* 80B54D24  38 00 00 46 */	li r0, 0x46
 /* 80B54D28  98 1E 05 47 */	stb r0, 0x547(r30)
-/* 80B54D2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B54D30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B54D34  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80B54D38  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80B54D2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B54D30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B54D34  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80B54D38  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B54D3C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B54D40  41 82 00 08 */	beq lbl_80B54D48
 /* 80B54D44  67 9C 00 80 */	oris r28, r28, 0x80

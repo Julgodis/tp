@@ -39,7 +39,7 @@ lbl_804E5DBC:
 /* 804E5DD8  C3 BD 00 44 */	lfs f29, 0x44(r29)
 /* 804E5DDC  3C 60 80 4F */	lis r3, target_info_count@ha
 /* 804E5DE0  3B C3 EF 8C */	addi r30, r3, target_info_count@l
-/* 804E5DE4  80 1E 00 00 */	lwz r0, 0(r30)	/* effective address: 804EEF8C */
+/* 804E5DE4  80 1E 00 00 */	lwz r0, 0(r30)
 /* 804E5DE8  2C 00 00 00 */	cmpwi r0, 0
 /* 804E5DEC  41 82 03 B0 */	beq lbl_804E619C
 /* 804E5DF0  3B 60 00 00 */	li r27, 0
@@ -250,7 +250,7 @@ lbl_804E60BC:
 lbl_804E60D0:
 /* 804E60D0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804E60D4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804E60D8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804E60D8  80 63 00 00 */	lwz r3, 0(r3)
 /* 804E60DC  7C 04 00 D0 */	neg r0, r4
 /* 804E60E0  7C 04 07 34 */	extsh r4, r0
 /* 804E60E4  4B B2 62 F8 */	b mDoMtx_YrotS__FPA4_fs

@@ -8,7 +8,7 @@ lbl_805A759C:
 /* 805A75B4  38 C3 81 FC */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 805A75B8  3C 60 80 5B */	lis r3, data_805A8390@ha
 /* 805A75BC  38 A3 83 90 */	addi r5, r3, data_805A8390@l
-/* 805A75C0  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 805A8390 */
+/* 805A75C0  88 05 00 00 */	lbz r0, 0(r5)
 /* 805A75C4  7C 00 07 75 */	extsb. r0, r0
 /* 805A75C8  40 82 00 70 */	bne lbl_805A7638
 /* 805A75CC  80 66 00 74 */	lwz r3, 0x74(r6)

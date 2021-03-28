@@ -146,8 +146,8 @@ lbl_8051F264:
 /* 8051F268  3A 60 00 00 */	li r19, 0
 /* 8051F26C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8051F270  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8051F274  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051F278  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8051F274  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051F278  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8051F27C  3B 43 4E 00 */	addi r26, r3, 0x4e00
 /* 8051F280  3B 23 4E C4 */	addi r25, r3, 0x4ec4
 lbl_8051F284:

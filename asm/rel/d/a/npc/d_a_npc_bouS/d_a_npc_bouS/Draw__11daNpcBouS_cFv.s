@@ -19,7 +19,7 @@ lbl_80974040:
 /* 80974060  38 A0 00 00 */	li r5, 0
 /* 80974064  3C C0 80 98 */	lis r6, m__17daNpcBouS_Param_c@ha
 /* 80974068  38 C6 84 10 */	addi r6, r6, m__17daNpcBouS_Param_c@l
-/* 8097406C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 8097841C */
+/* 8097406C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80974070  38 C0 00 00 */	li r6, 0
 /* 80974074  38 E0 00 00 */	li r7, 0
 /* 80974078  4B 7D E2 34 */	b draw__8daNpcF_cFiifP11_GXColorS10i

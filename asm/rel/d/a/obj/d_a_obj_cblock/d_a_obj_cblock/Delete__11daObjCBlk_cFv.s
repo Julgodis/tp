@@ -4,7 +4,7 @@ lbl_80BC6870:
 /* 80BC6878  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BC687C  3C 80 80 BC */	lis r4, l_arcName@ha
 /* 80BC6880  38 84 6A F4 */	addi r4, r4, l_arcName@l
-/* 80BC6884  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BC6AF4 */
+/* 80BC6884  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BC6888  38 63 05 A0 */	addi r3, r3, 0x5a0
 /* 80BC688C  4B 46 67 7C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BC6890  38 60 00 01 */	li r3, 1

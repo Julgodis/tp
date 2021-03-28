@@ -119,16 +119,16 @@ SECTION_DATA static u8 cam_seira_evnt_after[56] = {
 
 /* 803BB870-803BB87C 000C+00 s=2 e=0 z=0  None .data      shop_cam_data_tbl                                            */
 SECTION_DATA static void* shop_cam_data_tbl[3] = {
-	/* 0    */ (void*)&cam_seira_shop,
-	/* 1    */ (void*)&cam_seira_evnt_before,
-	/* 2    */ (void*)&cam_seira_evnt_after,
+	(void*)&cam_seira_shop,
+	(void*)&cam_seira_evnt_before,
+	(void*)&cam_seira_evnt_after,
 };
 
 /* 803BB87C-803BB888 000C+00 s=1 e=0 z=0  None .data      @3771                                                        */
 SECTION_DATA static void* lit_3771[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)shop_cam_action__16ShopCam_action_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)shop_cam_action__16ShopCam_action_cFv,
 };
 
 /* 80453A88-80453A8C 0004+00 s=1 e=0 z=0  None .sdata2    @3796                                                        */

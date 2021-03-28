@@ -18,7 +18,7 @@ lbl_80B157C0:
 /* 80B15800  41 80 00 18 */	blt lbl_80B15818
 /* 80B15804  3C 80 80 B2 */	lis r4, l_arcName@ha
 /* 80B15808  38 84 E2 08 */	addi r4, r4, l_arcName@l
-/* 80B1580C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B1E208 */
+/* 80B1580C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B15810  4B 63 D3 1C */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80B15814  48 00 00 08 */	b lbl_80B1581C
 lbl_80B15818:

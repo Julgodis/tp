@@ -6,15 +6,15 @@ lbl_804D6C4C:
 /* 804D6C5C  90 03 00 00 */	stw r0, 0(r3)
 /* 804D6C60  38 00 FF FF */	li r0, -1
 /* 804D6C64  98 03 00 04 */	stb r0, 4(r3)
-/* 804D6C68  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 804D9E64 */
+/* 804D6C68  C0 05 00 00 */	lfs f0, 0(r5)
 /* 804D6C6C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 804D6C70  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 804D9E68 */
+/* 804D6C70  C0 05 00 04 */	lfs f0, 4(r5)
 /* 804D6C74  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 804D6C78  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 804D9E6C */
+/* 804D6C78  C0 05 00 08 */	lfs f0, 8(r5)
 /* 804D6C7C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 804D6C80  38 00 01 90 */	li r0, 0x190
 /* 804D6C84  B0 03 00 14 */	sth r0, 0x14(r3)
-/* 804D6C88  C0 05 00 0C */	lfs f0, 0xc(r5)	/* effective address: 804D9E70 */
+/* 804D6C88  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 804D6C8C  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 804D6C90  38 00 00 3C */	li r0, 0x3c
 /* 804D6C94  B0 03 00 1C */	sth r0, 0x1c(r3)

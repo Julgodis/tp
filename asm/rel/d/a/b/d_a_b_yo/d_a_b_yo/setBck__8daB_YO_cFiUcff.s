@@ -22,8 +22,8 @@ lbl_8062FC08:
 /* 8062FC58  54 9B 10 3A */	slwi r27, r4, 2
 /* 8062FC5C  38 9D 01 00 */	addi r4, r29, 0x100
 /* 8062FC60  7C 84 D8 2E */	lwzx r4, r4, r27
-/* 8062FC64  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8062FC68  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8062FC64  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8062FC68  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8062FC6C  3F 45 00 02 */	addis r26, r5, 2
 /* 8062FC70  3B 5A C2 F8 */	addi r26, r26, -15624
 /* 8062FC74  7F 45 D3 78 */	mr r5, r26

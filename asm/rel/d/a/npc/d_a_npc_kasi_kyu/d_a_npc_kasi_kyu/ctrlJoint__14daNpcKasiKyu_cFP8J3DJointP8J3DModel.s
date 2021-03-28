@@ -10,11 +10,11 @@ lbl_80A222D0:
 /* 80A222F0  7C BF 2B 78 */	mr r31, r5
 /* 80A222F4  3C 60 80 A2 */	lis r3, lit_4270@ha
 /* 80A222F8  38 83 59 48 */	addi r4, r3, lit_4270@l
-/* 80A222FC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A25948 */
-/* 80A22300  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2594C */
+/* 80A222FC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A22300  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A22304  90 61 00 08 */	stw r3, 8(r1)
 /* 80A22308  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A2230C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A25950 */
+/* 80A2230C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A22310  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A22314  2C 05 00 00 */	cmpwi r5, 0
 /* 80A22318  40 82 00 B0 */	bne lbl_80A223C8
@@ -28,11 +28,11 @@ lbl_80A222D0:
 /* 80A22338  4B 92 41 78 */	b PSMTXCopy
 /* 80A2233C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A22340  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80A22344  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 80A22344  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80A22348  D0 1D 08 54 */	stfs f0, 0x854(r29)
-/* 80A2234C  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 80A2234C  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 80A22350  D0 1D 08 58 */	stfs f0, 0x858(r29)
-/* 80A22354  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 80A22354  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 80A22358  D0 1D 08 5C */	stfs f0, 0x85c(r29)
 /* 80A2235C  80 7D 05 68 */	lwz r3, 0x568(r29)
 /* 80A22360  80 63 00 04 */	lwz r3, 4(r3)
@@ -80,7 +80,7 @@ lbl_80A223F8:
 /* 80A22400  38 A1 00 08 */	addi r5, r1, 8
 /* 80A22404  3C C0 80 A2 */	lis r6, m__20daNpcKasiKyu_Param_c@ha
 /* 80A22408  38 C6 58 B8 */	addi r6, r6, m__20daNpcKasiKyu_Param_c@l
-/* 80A2240C  C0 26 00 40 */	lfs f1, 0x40(r6)	/* effective address: 80A258F8 */
+/* 80A2240C  C0 26 00 40 */	lfs f1, 0x40(r6)
 /* 80A22410  4B 73 0F 6C */	b setLookatMtx__8daNpcF_cFiPif
 lbl_80A22414:
 /* 80A22414  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

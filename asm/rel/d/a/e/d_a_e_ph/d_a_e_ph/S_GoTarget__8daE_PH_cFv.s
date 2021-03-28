@@ -15,7 +15,7 @@ lbl_8073EE68:
 /* 8073EE9C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 8073EEA0  D0 21 00 38 */	stfs f1, 0x38(r1)
 /* 8073EEA4  D0 41 00 3C */	stfs f2, 0x3c(r1)
-/* 8073EEA8  C0 1F 00 94 */	lfs f0, 0x94(r31)	/* effective address: 80741C88 */
+/* 8073EEA8  C0 1F 00 94 */	lfs f0, 0x94(r31)
 /* 8073EEAC  C0 5E 07 F8 */	lfs f2, 0x7f8(r30)
 /* 8073EEB0  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 8073EEB4  41 82 00 1C */	beq lbl_8073EED0

@@ -11,79 +11,10 @@
 // Types:
 // 
 
-struct ResTLUT {
-};
-
-struct _GXTlut {
-};
-
-struct JUTPalette {
-	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
-};
-
-struct _GXTexMapID {
-};
-
-struct JKRArchive {
-};
-
 struct J2DBinding {
 };
 
-struct J2DMaterial {
-};
-
-struct J2DMirror {
-};
-
-struct ResFONT {
-};
-
-struct ResTIMG {
-};
-
-struct JUTTexture {
-	/* 802DE234 */ ~JUTTexture();
-	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
-	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
-	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
-	/* 802DE5B0 */ void attachPalette(JUTPalette*);
-	/* 802DE840 */ void load(_GXTexMapID);
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmColor {
-};
-
-struct _GXCullMode {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVisibilityFull {
-};
-
-struct J2DAnmTransform {
+struct ResTLUT {
 };
 
 struct JGeometry {
@@ -100,6 +31,82 @@ struct JGeometry {
 		/* 802FF204 */ TVec2__template0();
 	};
 
+};
+
+struct _GXTlut {
+};
+
+struct JUTPalette {
+	/* 802DE890 */ void storeTLUT(_GXTlut, ResTLUT*);
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct _GXTexMapID {
+};
+
+struct JUTTexture {
+	/* 802DE234 */ ~JUTTexture();
+	/* 802DE480 */ void storeTIMG(ResTIMG const*, JUTPalette*, _GXTlut);
+	/* 802DE2A8 */ void storeTIMG(ResTIMG const*, u8);
+	/* 802DE44C */ void storeTIMG(ResTIMG const*, JUTPalette*);
+	/* 802DE5B0 */ void attachPalette(JUTPalette*);
+	/* 802DE840 */ void load(_GXTexMapID);
+};
+
+struct JUtility {
+	struct TColor {
+		/* 80193960 */ TColor();
+	};
+
+};
+
+struct J2DMirror {
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DMaterial {
+};
+
+struct JKRArchive {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct _GXCullMode {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -141,13 +148,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct JUtility {
-	struct TColor {
-		/* 80193960 */ TColor();
-	};
-
 };
 
 struct J2DPicture {
@@ -414,89 +414,89 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803CD1D8-803CD328 014C+04 s=6 e=0 z=0  None .data      __vt__10J2DPicture                                           */
 SECTION_DATA static void* __vt__10J2DPicture[83 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J2DPictureFv,
-	/* 3    */ (void*)getTypeID__10J2DPictureCFv,
-	/* 4    */ (void*)move__7J2DPaneFff,
-	/* 5    */ (void*)add__7J2DPaneFff,
-	/* 6    */ (void*)resize__7J2DPaneFff,
-	/* 7    */ (void*)setCullBack__7J2DPaneFb,
-	/* 8    */ (void*)setCullBack__7J2DPaneF11_GXCullMode,
-	/* 9    */ (void*)setAlpha__7J2DPaneFUc,
-	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
-	/* 11   */ (void*)calcMtx__7J2DPaneFv,
-	/* 12   */ (void*)update__7J2DPaneFv,
-	/* 13   */ (void*)drawSelf__10J2DPictureFff,
-	/* 14   */ (void*)drawSelf__10J2DPictureFffPA3_A4_f,
-	/* 15   */ (void*)search__7J2DPaneFUx,
-	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
-	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
-	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
-	/* 19   */ (void*)isUsed__10J2DPictureFPC7ResTIMG,
-	/* 20   */ (void*)isUsed__10J2DPictureFPC7ResFONT,
-	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
-	/* 22   */ (void*)rewriteAlpha__10J2DPictureFv,
-	/* 23   */ (void*)setAnimation__7J2DPaneFP10J2DAnmBase,
-	/* 24   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
-	/* 25   */ (void*)setAnimation__7J2DPaneFP11J2DAnmColor,
-	/* 26   */ (void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
-	/* 27   */ (void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
-	/* 28   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
-	/* 29   */ (void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 30   */ (void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	/* 36   */ (void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
-	/* 37   */ (void*)initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT,
-	/* 38   */ (void*)prepareTexture__10J2DPictureFUc,
-	/* 39   */ (void*)append__10J2DPictureFPC7ResTIMGf,
-	/* 40   */ (void*)append__10J2DPictureFPC7ResTIMGP10JUTPalettef,
-	/* 41   */ (void*)append__10J2DPictureFPCcf,
-	/* 42   */ (void*)append__10J2DPictureFPCcP10JUTPalettef,
-	/* 43   */ (void*)append__10J2DPictureFP10JUTTexturef,
-	/* 44   */ (void*)prepend__10J2DPictureFPC7ResTIMGf,
-	/* 45   */ (void*)prepend__10J2DPictureFPC7ResTIMGP10JUTPalettef,
-	/* 46   */ (void*)prepend__10J2DPictureFPCcf,
-	/* 47   */ (void*)prepend__10J2DPictureFPCcP10JUTPalettef,
-	/* 48   */ (void*)prepend__10J2DPictureFP10JUTTexturef,
-	/* 49   */ (void*)insert__10J2DPictureFPC7ResTIMGUcf,
-	/* 50   */ (void*)insert__10J2DPictureFPC7ResTIMGP10JUTPaletteUcf,
-	/* 51   */ (void*)insert__10J2DPictureFPCcUcf,
-	/* 52   */ (void*)insert__10J2DPictureFPCcP10JUTPaletteUcf,
-	/* 53   */ (void*)insert__10J2DPictureFP10JUTTextureUcf,
-	/* 54   */ (void*)remove__10J2DPictureFUc,
-	/* 55   */ (void*)remove__10J2DPictureFv,
-	/* 56   */ (void*)remove__10J2DPictureFP10JUTTexture,
-	/* 57   */ (void*)draw__10J2DPictureFffbbb,
-	/* 58   */ (void*)draw__10J2DPictureFffUcbbb,
-	/* 59   */ (void*)draw__10J2DPictureFffffbbb,
-	/* 60   */ (void*)drawOut__10J2DPictureFffffff,
-	/* 61   */ (void*)drawOut__10J2DPictureFffffffff,
-	/* 62   */ (void*)func_802FDF88,
-	/* 63   */ (void*)load__10J2DPictureF11_GXTexMapIDUc,
-	/* 64   */ (void*)load__10J2DPictureFUc,
-	/* 65   */ (void*)setBlendRatio__10J2DPictureFff,
-	/* 66   */ (void*)setBlendColorRatio__10J2DPictureFff,
-	/* 67   */ (void*)setBlendAlphaRatio__10J2DPictureFff,
-	/* 68   */ (void*)changeTexture__10J2DPictureFPC7ResTIMGUc,
-	/* 69   */ (void*)changeTexture__10J2DPictureFPCcUc,
-	/* 70   */ (void*)changeTexture__10J2DPictureFPC7ResTIMGUcP10JUTPalette,
-	/* 71   */ (void*)changeTexture__10J2DPictureFPCcUcP10JUTPalette,
-	/* 72   */ (void*)getTexture__10J2DPictureCFUc,
-	/* 73   */ (void*)getTextureCount__10J2DPictureCFv,
-	/* 74   */ (void*)setBlack__10J2DPictureFQ28JUtility6TColor,
-	/* 75   */ (void*)setWhite__10J2DPictureFQ28JUtility6TColor,
-	/* 76   */ (void*)setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 77   */ (void*)getBlack__10J2DPictureCFv,
-	/* 78   */ (void*)getWhite__10J2DPictureCFv,
-	/* 79   */ (void*)getMaterial__10J2DPictureCFv,
-	/* 80   */ (void*)drawFullSet__10J2DPictureFffffPA3_A4_f,
-	/* 81   */ (void*)drawTexCoord__10J2DPictureFffffssssssssPA3_A4_f,
-	/* 82   */ (void*)getUsableTlut__10J2DPictureFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10J2DPictureFv,
+	(void*)getTypeID__10J2DPictureCFv,
+	(void*)move__7J2DPaneFff,
+	(void*)add__7J2DPaneFff,
+	(void*)resize__7J2DPaneFff,
+	(void*)setCullBack__7J2DPaneFb,
+	(void*)setCullBack__7J2DPaneF11_GXCullMode,
+	(void*)setAlpha__7J2DPaneFUc,
+	(void*)setConnectParent__7J2DPaneFb,
+	(void*)calcMtx__7J2DPaneFv,
+	(void*)update__7J2DPaneFv,
+	(void*)drawSelf__10J2DPictureFff,
+	(void*)drawSelf__10J2DPictureFffPA3_A4_f,
+	(void*)search__7J2DPaneFUx,
+	(void*)searchUserInfo__7J2DPaneFUx,
+	(void*)makeMatrix__7J2DPaneFff,
+	(void*)makeMatrix__7J2DPaneFffff,
+	(void*)isUsed__10J2DPictureFPC7ResTIMG,
+	(void*)isUsed__10J2DPictureFPC7ResFONT,
+	(void*)clearAnmTransform__7J2DPaneFv,
+	(void*)rewriteAlpha__10J2DPictureFv,
+	(void*)setAnimation__7J2DPaneFP10J2DAnmBase,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
+	(void*)setAnimation__7J2DPaneFP11J2DAnmColor,
+	(void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
+	(void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
+	(void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
+	(void*)initiate__10J2DPictureFPC7ResTIMGPC7ResTLUT,
+	(void*)prepareTexture__10J2DPictureFUc,
+	(void*)append__10J2DPictureFPC7ResTIMGf,
+	(void*)append__10J2DPictureFPC7ResTIMGP10JUTPalettef,
+	(void*)append__10J2DPictureFPCcf,
+	(void*)append__10J2DPictureFPCcP10JUTPalettef,
+	(void*)append__10J2DPictureFP10JUTTexturef,
+	(void*)prepend__10J2DPictureFPC7ResTIMGf,
+	(void*)prepend__10J2DPictureFPC7ResTIMGP10JUTPalettef,
+	(void*)prepend__10J2DPictureFPCcf,
+	(void*)prepend__10J2DPictureFPCcP10JUTPalettef,
+	(void*)prepend__10J2DPictureFP10JUTTexturef,
+	(void*)insert__10J2DPictureFPC7ResTIMGUcf,
+	(void*)insert__10J2DPictureFPC7ResTIMGP10JUTPaletteUcf,
+	(void*)insert__10J2DPictureFPCcUcf,
+	(void*)insert__10J2DPictureFPCcP10JUTPaletteUcf,
+	(void*)insert__10J2DPictureFP10JUTTextureUcf,
+	(void*)remove__10J2DPictureFUc,
+	(void*)remove__10J2DPictureFv,
+	(void*)remove__10J2DPictureFP10JUTTexture,
+	(void*)draw__10J2DPictureFffbbb,
+	(void*)draw__10J2DPictureFffUcbbb,
+	(void*)draw__10J2DPictureFffffbbb,
+	(void*)drawOut__10J2DPictureFffffff,
+	(void*)drawOut__10J2DPictureFffffffff,
+	(void*)func_802FDF88,
+	(void*)load__10J2DPictureF11_GXTexMapIDUc,
+	(void*)load__10J2DPictureFUc,
+	(void*)setBlendRatio__10J2DPictureFff,
+	(void*)setBlendColorRatio__10J2DPictureFff,
+	(void*)setBlendAlphaRatio__10J2DPictureFff,
+	(void*)changeTexture__10J2DPictureFPC7ResTIMGUc,
+	(void*)changeTexture__10J2DPictureFPCcUc,
+	(void*)changeTexture__10J2DPictureFPC7ResTIMGUcP10JUTPalette,
+	(void*)changeTexture__10J2DPictureFPCcUcP10JUTPalette,
+	(void*)getTexture__10J2DPictureCFUc,
+	(void*)getTextureCount__10J2DPictureCFv,
+	(void*)setBlack__10J2DPictureFQ28JUtility6TColor,
+	(void*)setWhite__10J2DPictureFQ28JUtility6TColor,
+	(void*)setBlackWhite__10J2DPictureFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)getBlack__10J2DPictureCFv,
+	(void*)getWhite__10J2DPictureCFv,
+	(void*)getMaterial__10J2DPictureCFv,
+	(void*)drawFullSet__10J2DPictureFffffPA3_A4_f,
+	(void*)drawTexCoord__10J2DPictureFffffssssssssPA3_A4_f,
+	(void*)getUsableTlut__10J2DPictureFUc,
 	/* padding */
 	NULL,
 };

@@ -6,12 +6,12 @@ lbl_80462A5C:
 /* 80462A6C  7C 7F 1B 78 */	mr r31, r3
 /* 80462A70  3C 60 80 46 */	lis r3, lit_4018@ha
 /* 80462A74  38 63 68 20 */	addi r3, r3, lit_4018@l
-/* 80462A78  C0 03 00 60 */	lfs f0, 0x60(r3)	/* effective address: 80466880 */
+/* 80462A78  C0 03 00 60 */	lfs f0, 0x60(r3)
 /* 80462A7C  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80462A80  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 8046682C */
+/* 80462A80  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80462A84  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80462A88  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 80462A8C  C0 03 00 64 */	lfs f0, 0x64(r3)	/* effective address: 80466884 */
+/* 80462A8C  C0 03 00 64 */	lfs f0, 0x64(r3)
 /* 80462A90  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80462A94  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80462A98  D0 21 00 10 */	stfs f1, 0x10(r1)

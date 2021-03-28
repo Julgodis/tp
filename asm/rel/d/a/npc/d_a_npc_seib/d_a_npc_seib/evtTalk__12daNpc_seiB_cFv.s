@@ -6,11 +6,11 @@ lbl_80AC58F4:
 /* 80AC5904  7C 7F 1B 78 */	mr r31, r3
 /* 80AC5908  3C 80 80 AC */	lis r4, lit_4342@ha
 /* 80AC590C  38 A4 72 38 */	addi r5, r4, lit_4342@l
-/* 80AC5910  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80AC7238 */
-/* 80AC5914  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80AC723C */
+/* 80AC5910  80 85 00 00 */	lwz r4, 0(r5)
+/* 80AC5914  80 05 00 04 */	lwz r0, 4(r5)
 /* 80AC5918  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80AC591C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80AC5920  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80AC7240 */
+/* 80AC5920  80 05 00 08 */	lwz r0, 8(r5)
 /* 80AC5924  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80AC5928  38 81 00 14 */	addi r4, r1, 0x14
 /* 80AC592C  48 00 04 DD */	bl chkAction__12daNpc_seiB_cFM12daNpc_seiB_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_80AC58F4:
 lbl_80AC5950:
 /* 80AC5950  38 00 00 00 */	li r0, 0
 /* 80AC5954  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80AC5958  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC595C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AC5960  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80AC5958  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC595C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AC5960  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80AC5964  28 04 00 01 */	cmplwi r4, 1
 /* 80AC5968  41 82 00 0C */	beq lbl_80AC5974
 /* 80AC596C  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80AC5998:
 lbl_80AC59B0:
 /* 80AC59B0  3C 60 80 AC */	lis r3, lit_4352@ha
 /* 80AC59B4  38 83 72 44 */	addi r4, r3, lit_4352@l
-/* 80AC59B8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AC7244 */
-/* 80AC59BC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AC7248 */
+/* 80AC59B8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AC59BC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AC59C0  90 61 00 08 */	stw r3, 8(r1)
 /* 80AC59C4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80AC59C8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AC724C */
+/* 80AC59C8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AC59CC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AC59D0  7F E3 FB 78 */	mr r3, r31
 /* 80AC59D4  38 81 00 08 */	addi r4, r1, 8

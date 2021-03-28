@@ -88,10 +88,10 @@ lbl_805B3F28:
 /* 805B3F50  7F E3 FB 78 */	mr r3, r31
 /* 805B3F54  38 9F 11 54 */	addi r4, r31, 0x1154
 /* 805B3F58  4B AD 3C AC */	b cc_at_check__FP10fopAc_ac_cP11dCcU_AtInfo
-/* 805B3F5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B3F60  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 805B3F64  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
-/* 805B3F68  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80400568 */
+/* 805B3F5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B3F60  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 805B3F64  80 7E 5D AC */	lwz r3, 0x5dac(r30)
+/* 805B3F68  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 805B3F6C  28 00 00 0A */	cmplwi r0, 0xa
 /* 805B3F70  40 82 00 28 */	bne lbl_805B3F98
 /* 805B3F74  81 83 06 28 */	lwz r12, 0x628(r3)

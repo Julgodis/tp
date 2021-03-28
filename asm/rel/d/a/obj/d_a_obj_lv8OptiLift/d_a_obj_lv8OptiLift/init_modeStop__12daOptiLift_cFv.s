@@ -21,7 +21,7 @@ lbl_80C8B2C4:
 lbl_80C8B2E0:
 /* 80C8B2E0  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C8B2E4  38 63 BB EC */	addi r3, r3, l_HIO@l
-/* 80C8B2E8  88 03 00 04 */	lbz r0, 4(r3)	/* effective address: 80C8BBF0 */
+/* 80C8B2E8  88 03 00 04 */	lbz r0, 4(r3)
 /* 80C8B2EC  98 1F 05 EA */	stb r0, 0x5ea(r31)
 /* 80C8B2F0  3C 60 80 C9 */	lis r3, lit_3902@ha
 /* 80C8B2F4  C0 03 BA 00 */	lfs f0, lit_3902@l(r3)

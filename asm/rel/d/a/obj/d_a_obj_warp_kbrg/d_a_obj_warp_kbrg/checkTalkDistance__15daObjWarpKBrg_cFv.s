@@ -4,9 +4,9 @@ lbl_80D28AE0:
 /* 80D28AE8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D28AEC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D28AF0  7C 7F 1B 78 */	mr r31, r3
-/* 80D28AF4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D28AF8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D28AFC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D28AF4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D28AF8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D28AFC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80D28B00  4B 2F 1E 64 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80D28B04  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D28B08  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f

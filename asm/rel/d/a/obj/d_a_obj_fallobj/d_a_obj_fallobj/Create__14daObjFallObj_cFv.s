@@ -53,11 +53,11 @@ lbl_80BE3B28:
 /* 80BE3B44  7F C3 F3 78 */	mr r3, r30
 /* 80BE3B48  3C 80 80 BE */	lis r4, l_cull_box@ha
 /* 80BE3B4C  C4 24 4B 24 */	lfsu f1, l_cull_box@l(r4)
-/* 80BE3B50  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80BE0004 */
-/* 80BE3B54  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80BE0008 */
-/* 80BE3B58  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80BE000C */
-/* 80BE3B5C  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80BE0010 */
-/* 80BE3B60  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80BE0014 */
+/* 80BE3B50  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80BE3B54  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80BE3B58  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80BE3B5C  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80BE3B60  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80BE3B64  4B 43 69 E4 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80BE3B68  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80BE3B6C  D0 1E 05 30 */	stfs f0, 0x530(r30)

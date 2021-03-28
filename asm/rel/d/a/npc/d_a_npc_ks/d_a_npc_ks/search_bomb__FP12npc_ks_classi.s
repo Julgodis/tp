@@ -18,7 +18,7 @@ lbl_80A49930:
 /* 80A49970  3B E3 DE FC */	addi r31, r3, lit_4030@l
 /* 80A49974  7C FD 3B 78 */	mr r29, r7
 /* 80A49978  38 C0 00 00 */	li r6, 0
-/* 80A4997C  90 DE 00 D0 */	stw r6, 0xd0(r30)	/* effective address: 80A5FF18 */
+/* 80A4997C  90 DE 00 D0 */	stw r6, 0xd0(r30)
 /* 80A49980  7C C3 33 78 */	mr r3, r6
 /* 80A49984  38 BE 00 A8 */	addi r5, r30, 0xa8
 /* 80A49988  38 9E 00 D4 */	addi r4, r30, 0xd4

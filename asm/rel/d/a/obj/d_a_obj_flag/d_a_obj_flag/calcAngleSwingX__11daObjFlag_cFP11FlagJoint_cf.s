@@ -4,13 +4,13 @@ lbl_80BEBDAC:
 /* 80BEBDB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BEBDB8  3C 60 80 BF */	lis r3, M_attr__11daObjFlag_c@ha
 /* 80BEBDBC  38 A3 C4 EC */	addi r5, r3, M_attr__11daObjFlag_c@l
-/* 80BEBDC0  C0 45 00 5C */	lfs f2, 0x5c(r5)	/* effective address: 80BEC548 */
+/* 80BEBDC0  C0 45 00 5C */	lfs f2, 0x5c(r5)
 /* 80BEBDC4  38 65 00 00 */	addi r3, r5, 0
-/* 80BEBDC8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BEC4F4 */
+/* 80BEBDC8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BEBDCC  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80BEBDD0  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80BEBDD4  EC 40 10 28 */	fsubs f2, f0, f2
-/* 80BEBDD8  C0 05 00 40 */	lfs f0, 0x40(r5)	/* effective address: 80BEC52C */
+/* 80BEBDD8  C0 05 00 40 */	lfs f0, 0x40(r5)
 /* 80BEBDDC  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80BEBDE0  40 81 00 08 */	ble lbl_80BEBDE8
 /* 80BEBDE4  FC 40 00 90 */	fmr f2, f0

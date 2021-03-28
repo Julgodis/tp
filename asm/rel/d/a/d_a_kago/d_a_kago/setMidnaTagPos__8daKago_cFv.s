@@ -18,11 +18,11 @@ lbl_8084AAAC:
 /* 8084AAEC  4B AF B9 C4 */	b PSMTXCopy
 /* 8084AAF0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8084AAF4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8084AAF8  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 8084AAF8  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 8084AAFC  D0 41 00 08 */	stfs f2, 8(r1)
-/* 8084AB00  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8084AB00  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 8084AB04  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 8084AB08  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8084AB08  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8084AB0C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8084AB10  D0 5F 09 AC */	stfs f2, 0x9ac(r31)
 /* 8084AB14  D0 3F 09 B0 */	stfs f1, 0x9b0(r31)

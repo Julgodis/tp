@@ -13,7 +13,7 @@ lbl_80B0C964:
 /* 80B0C990  38 7E 0D 2C */	addi r3, r30, 0xd2c
 /* 80B0C994  3C 80 80 B1 */	lis r4, l_arcName@ha
 /* 80B0C998  38 84 0A B8 */	addi r4, r4, l_arcName@l
-/* 80B0C99C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B10AB8 */
+/* 80B0C99C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B0C9A0  4B 52 06 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80B0C9A4  80 1E 00 F0 */	lwz r0, 0xf0(r30)
 /* 80B0C9A8  28 00 00 00 */	cmplwi r0, 0

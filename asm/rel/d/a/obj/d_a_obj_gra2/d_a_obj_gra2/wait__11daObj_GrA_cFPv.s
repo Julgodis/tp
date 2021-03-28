@@ -32,7 +32,7 @@ lbl_80C03250:
 /* 80C03250  38 80 00 00 */	li r4, 0
 /* 80C03254  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C03258  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C0325C  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C0325C  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C03260  4B FF E5 2D */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C03264  7F C3 F3 78 */	mr r3, r30
 /* 80C03268  38 80 00 00 */	li r4, 0
@@ -53,7 +53,7 @@ lbl_80C032A0:
 /* 80C032A0  38 80 00 00 */	li r4, 0
 /* 80C032A4  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C032A8  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C032AC  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C032AC  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C032B0  4B FF E4 DD */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C032B4  7F C3 F3 78 */	mr r3, r30
 /* 80C032B8  38 80 00 00 */	li r4, 0

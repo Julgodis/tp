@@ -328,9 +328,9 @@ lbl_80530DB4:
 lbl_80530DB8:
 /* 80530DB8  90 1E 10 AC */	stw r0, 0x10ac(r30)
 /* 80530DBC  C3 DF 00 5C */	lfs f30, 0x5c(r31)
-/* 80530DC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80530DC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80530DC8  A0 03 01 76 */	lhz r0, 0x176(r3)	/* effective address: 80406336 */
+/* 80530DC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80530DC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80530DC8  A0 03 01 76 */	lhz r0, 0x176(r3)
 /* 80530DCC  28 00 00 05 */	cmplwi r0, 5
 /* 80530DD0  41 81 00 08 */	bgt lbl_80530DD8
 /* 80530DD4  C3 DF 00 58 */	lfs f30, 0x58(r31)

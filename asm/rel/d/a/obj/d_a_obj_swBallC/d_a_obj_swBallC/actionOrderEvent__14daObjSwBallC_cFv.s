@@ -10,14 +10,14 @@ lbl_80CF629C:
 /* 80CF62BC  38 00 00 02 */	li r0, 2
 /* 80CF62C0  98 1F 05 7F */	stb r0, 0x57f(r31)
 /* 80CF62C4  48 00 01 31 */	bl demoProc__14daObjSwBallC_cFv
-/* 80CF62C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF62CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF62C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF62CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF62D0  38 80 00 3F */	li r4, 0x3f
 /* 80CF62D4  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF62D8  7C 05 07 74 */	extsb r5, r0
 /* 80CF62DC  4B 33 EF 24 */	b onSwitch__10dSv_info_cFii
-/* 80CF62E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF62E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF62E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF62E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF62E8  3B E3 09 58 */	addi r31, r3, 0x958
 /* 80CF62EC  7F E3 FB 78 */	mr r3, r31
 /* 80CF62F0  38 80 00 0A */	li r4, 0xa

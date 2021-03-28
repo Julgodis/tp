@@ -21,9 +21,9 @@ lbl_80A49C00:
 /* 80A49C4C  3B C3 FE 48 */	addi r30, r3, lit_1109@l
 /* 80A49C50  3C 60 80 A6 */	lis r3, lit_4030@ha
 /* 80A49C54  3B E3 DE FC */	addi r31, r3, lit_4030@l
-/* 80A49C58  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A49C5C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80A49C60  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 80A49C58  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A49C5C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80A49C60  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 80A49C64  28 00 00 00 */	cmplwi r0, 0
 /* 80A49C68  41 82 00 24 */	beq lbl_80A49C8C
 /* 80A49C6C  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha

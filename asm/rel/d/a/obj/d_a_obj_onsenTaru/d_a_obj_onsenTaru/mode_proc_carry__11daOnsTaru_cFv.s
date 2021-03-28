@@ -4,13 +4,13 @@ lbl_80CA9320:
 /* 80CA9328  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CA932C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CA9330  7C 7F 1B 78 */	mr r31, r3
-/* 80CA9334  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA9338  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CA933C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CA9334  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA9338  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CA933C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CA9340  C0 3F 05 7C */	lfs f1, 0x57c(r31)
 /* 80CA9344  C0 5F 05 84 */	lfs f2, 0x584(r31)
 /* 80CA9348  38 80 00 00 */	li r4, 0
-/* 80CA934C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80CA934C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80CA9350  81 8C 01 24 */	lwz r12, 0x124(r12)
 /* 80CA9354  7D 89 03 A6 */	mtctr r12
 /* 80CA9358  4E 80 04 21 */	bctrl 

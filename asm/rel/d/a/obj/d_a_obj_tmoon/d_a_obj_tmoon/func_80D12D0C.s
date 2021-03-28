@@ -19,7 +19,7 @@ lbl_80D12D48:
 /* 80D12D48  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80D12D4C  3C 80 80 D1 */	lis r4, l_arcName@ha
 /* 80D12D50  38 84 2F A0 */	addi r4, r4, l_arcName@l
-/* 80D12D54  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D12FA0 */
+/* 80D12D54  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D12D58  4B 31 A1 64 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D12D5C  7C 7F 1B 78 */	mr r31, r3
 /* 80D12D60  2C 1F 00 04 */	cmpwi r31, 4

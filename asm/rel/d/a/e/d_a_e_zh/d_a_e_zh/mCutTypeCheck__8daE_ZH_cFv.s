@@ -1,8 +1,8 @@
 lbl_8082A4C8:
-/* 8082A4C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082A4CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8082A4D0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8082A4D4  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 8082A4C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082A4CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8082A4D0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8082A4D4  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 8082A4D8  28 00 00 13 */	cmplwi r0, 0x13
 /* 8082A4DC  41 82 00 30 */	beq lbl_8082A50C
 /* 8082A4E0  54 00 06 3E */	clrlwi r0, r0, 0x18

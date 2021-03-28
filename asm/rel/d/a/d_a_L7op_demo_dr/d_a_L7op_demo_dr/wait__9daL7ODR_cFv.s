@@ -14,14 +14,14 @@ lbl_805AB3F0:
 lbl_805AB420:
 /* 805AB420  2C 04 FF FF */	cmpwi r4, -1
 /* 805AB424  41 82 00 E4 */	beq lbl_805AB508
-/* 805AB428  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805AB42C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805AB430  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 805AB428  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805AB42C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805AB430  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 805AB434  7C 00 07 74 */	extsb r0, r0
 /* 805AB438  38 84 5D 74 */	addi r4, r4, 0x5d74
 /* 805AB43C  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805AB440  7F C4 00 2E */	lwzx r30, r4, r0
-/* 805AB444  83 A4 00 00 */	lwz r29, 0(r4)	/* effective address: 8040BF34 */
+/* 805AB444  83 A4 00 00 */	lwz r29, 0(r4)
 /* 805AB448  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
 /* 805AB44C  28 00 00 02 */	cmplwi r0, 2
 /* 805AB450  40 82 00 58 */	bne lbl_805AB4A8
@@ -36,11 +36,11 @@ lbl_805AB420:
 /* 805AB474  4B BB 7B 98 */	b SetTrimSize__9dCamera_cFl
 /* 805AB478  3C 60 80 5B */	lis r3, lit_3871@ha
 /* 805AB47C  38 83 E0 B8 */	addi r4, r3, lit_3871@l
-/* 805AB480  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AE0B8 */
-/* 805AB484  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AE0BC */
+/* 805AB480  80 64 00 00 */	lwz r3, 0(r4)
+/* 805AB484  80 04 00 04 */	lwz r0, 4(r4)
 /* 805AB488  90 61 00 08 */	stw r3, 8(r1)
 /* 805AB48C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805AB490  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AE0C0 */
+/* 805AB490  80 04 00 08 */	lwz r0, 8(r4)
 /* 805AB494  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805AB498  7F E3 FB 78 */	mr r3, r31
 /* 805AB49C  38 81 00 08 */	addi r4, r1, 8

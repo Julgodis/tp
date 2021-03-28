@@ -8,8 +8,8 @@ lbl_80C67B40:
 /* 80C67B58  3C 60 80 C6 */	lis r3, lit_3704@ha
 /* 80C67B5C  3B E3 7D 80 */	addi r31, r3, lit_3704@l
 /* 80C67B60  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 80C67B64  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80C67D84 */
-/* 80C67B68  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80C67D88 */
+/* 80C67B64  C0 3F 00 04 */	lfs f1, 4(r31)
+/* 80C67B68  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 80C67B6C  4B 60 8B D4 */	b cLib_chaseF__FPfff
 /* 80C67B70  38 7E 05 AC */	addi r3, r30, 0x5ac
 /* 80C67B74  C0 3F 00 0C */	lfs f1, 0xc(r31)

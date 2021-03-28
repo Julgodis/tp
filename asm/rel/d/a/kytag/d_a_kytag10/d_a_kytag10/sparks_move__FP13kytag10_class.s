@@ -9,9 +9,9 @@ lbl_80528D78:
 /* 80528D94  7C 7E 1B 78 */	mr r30, r3
 /* 80528D98  3C 80 80 53 */	lis r4, lit_3788@ha
 /* 80528D9C  3B E4 94 00 */	addi r31, r4, lit_3788@l
-/* 80528DA0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80528DA4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80528DA8  83 A4 5D 74 */	lwz r29, 0x5d74(r4)	/* effective address: 8040BF34 */
+/* 80528DA0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80528DA4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80528DA8  83 A4 5D 74 */	lwz r29, 0x5d74(r4)
 /* 80528DAC  83 83 05 68 */	lwz r28, 0x568(r3)
 /* 80528DB0  28 1C 00 00 */	cmplwi r28, 0
 /* 80528DB4  41 82 03 74 */	beq lbl_80529128

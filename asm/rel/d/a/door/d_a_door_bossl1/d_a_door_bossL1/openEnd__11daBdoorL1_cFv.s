@@ -25,7 +25,7 @@ lbl_804E37D0:
 /* 804E37E8  90 01 00 08 */	stw r0, 8(r1)
 /* 804E37EC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804E37F0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804E37F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804E37F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 804E37F8  38 81 00 08 */	addi r4, r1, 8
 /* 804E37FC  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 804E3800  38 C0 00 00 */	li r6, 0
@@ -38,8 +38,8 @@ lbl_804E37D0:
 /* 804E381C  39 00 00 00 */	li r8, 0
 /* 804E3820  4B DC 81 64 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_804E3824:
-/* 804E3824  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E3828  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804E3824  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E3828  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E382C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804E3830  38 80 00 1F */	li r4, 0x1f
 /* 804E3834  4B B8 C5 60 */	b StopQuake__12dVibration_cFi

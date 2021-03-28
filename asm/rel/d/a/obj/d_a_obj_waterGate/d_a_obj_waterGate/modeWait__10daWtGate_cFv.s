@@ -5,8 +5,8 @@ lbl_80D2BF94:
 /* 80D2BFA0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D2BFA4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D2BFA8  7C 7E 1B 78 */	mr r30, r3
-/* 80D2BFAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2BFB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2BFAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2BFB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2BFB4  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80D2BFB8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D2BFBC  88 1E 04 BA */	lbz r0, 0x4ba(r30)

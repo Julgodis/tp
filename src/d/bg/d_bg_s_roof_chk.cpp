@@ -71,18 +71,18 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803ABA50-803ABA80 0030+00 s=2 e=0 z=0  None .data      __vt__12dBgS_RoofChk                                         */
 SECTION_DATA static void* __vt__12dBgS_RoofChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_RoofChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8007914C,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8007915C,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_80079154,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_RoofChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8007914C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8007915C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80079154,
 };
 
 /* 804526F0-804526F4 0004+00 s=1 e=0 z=0  None .sdata2    @316                                                         */

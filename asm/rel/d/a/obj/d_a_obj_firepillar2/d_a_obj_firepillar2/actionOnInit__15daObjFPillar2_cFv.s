@@ -14,14 +14,14 @@ lbl_80BEAC68:
 /* 80BEAC98  3B A0 00 00 */	li r29, 0
 /* 80BEAC9C  3B 60 00 00 */	li r27, 0
 /* 80BEACA0  3B 40 00 00 */	li r26, 0
-/* 80BEACA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEACA8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80BEACA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEACA8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80BEACAC  3C 60 80 BF */	lis r3, data_80BEB620@ha
 /* 80BEACB0  3B 23 B6 20 */	addi r25, r3, data_80BEB620@l
 lbl_80BEACB4:
 /* 80BEACB4  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80BEACB8  7C 04 07 74 */	extsb r4, r0
-/* 80BEACBC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80BEACBC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80BEACC0  38 00 00 00 */	li r0, 0
 /* 80BEACC4  90 01 00 08 */	stw r0, 8(r1)
 /* 80BEACC8  90 81 00 0C */	stw r4, 0xc(r1)

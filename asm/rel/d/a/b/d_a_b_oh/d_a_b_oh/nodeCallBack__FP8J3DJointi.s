@@ -9,7 +9,7 @@ lbl_8061B75C:
 /* 8061B778  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 8061B77C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8061B780  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8061B784  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 8061B784  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 8061B788  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 8061B78C  28 1C 00 00 */	cmplwi r28, 0
 /* 8061B790  41 82 01 04 */	beq lbl_8061B894
@@ -24,11 +24,11 @@ lbl_8061B75C:
 /* 8061B7B4  7C 60 EA 14 */	add r3, r0, r29
 /* 8061B7B8  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8061B7BC  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8061B7C0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8061B7C0  80 84 00 00 */	lwz r4, 0(r4)
 /* 8061B7C4  4B D2 AC EC */	b PSMTXCopy
 /* 8061B7C8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061B7CC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061B7D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061B7D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061B7D4  1F 7F 00 06 */	mulli r27, r31, 6
 /* 8061B7D8  7C BC DA 14 */	add r5, r28, r27
 /* 8061B7DC  A8 85 06 1E */	lha r4, 0x61e(r5)
@@ -38,7 +38,7 @@ lbl_8061B75C:
 /* 8061B7EC  4B 9F 0C 48 */	b mDoMtx_YrotM__FPA4_fs
 /* 8061B7F0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061B7F4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061B7F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061B7F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061B7FC  7C BC DA 14 */	add r5, r28, r27
 /* 8061B800  A8 85 06 1C */	lha r4, 0x61c(r5)
 /* 8061B804  A8 05 07 84 */	lha r0, 0x784(r5)
@@ -56,7 +56,7 @@ lbl_8061B75C:
 /* 8061B834  4B C5 56 28 */	b MtxTrans__FfffUc
 /* 8061B838  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061B83C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061B840  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061B840  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061B844  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 8061B848  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 8061B84C  4B D2 AC 64 */	b PSMTXCopy
@@ -72,7 +72,7 @@ lbl_8061B75C:
 /* 8061B874  4B C5 56 30 */	b MtxScale__FfffUc
 /* 8061B878  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061B87C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061B880  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061B880  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061B884  80 9E 00 84 */	lwz r4, 0x84(r30)
 /* 8061B888  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 8061B88C  7C 80 EA 14 */	add r4, r0, r29

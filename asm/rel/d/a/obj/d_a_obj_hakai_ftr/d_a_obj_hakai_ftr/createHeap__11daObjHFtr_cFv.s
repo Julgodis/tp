@@ -13,8 +13,8 @@ lbl_80C17874:
 /* 80C178A0  3C 80 80 C2 */	lis r4, l_bmdIdx@ha
 /* 80C178A4  38 84 80 B8 */	addi r4, r4, l_bmdIdx@l
 /* 80C178A8  7C 84 F8 2E */	lwzx r4, r4, r31
-/* 80C178AC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C178B0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C178AC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C178B0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C178B4  3F 85 00 02 */	addis r28, r5, 2
 /* 80C178B8  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 80C178BC  7F 85 E3 78 */	mr r5, r28

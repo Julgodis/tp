@@ -8,14 +8,14 @@ lbl_80C859E0:
 /* 80C859F8  3C 60 80 C8 */	lis r3, lit_3650@ha
 /* 80C859FC  3B A3 61 30 */	addi r29, r3, lit_3650@l
 /* 80C85A00  38 7F 05 2C */	addi r3, r31, 0x52c
-/* 80C85A04  C0 5D 00 14 */	lfs f2, 0x14(r29)	/* effective address: 80C86144 */
-/* 80C85A08  C0 3D 00 18 */	lfs f1, 0x18(r29)	/* effective address: 80C86148 */
+/* 80C85A04  C0 5D 00 14 */	lfs f2, 0x14(r29)
+/* 80C85A08  C0 3D 00 18 */	lfs f1, 0x18(r29)
 /* 80C85A0C  3C 80 80 C8 */	lis r4, l_HIO@ha
 /* 80C85A10  3B C4 62 CC */	addi r30, r4, l_HIO@l
-/* 80C85A14  C0 1E 00 14 */	lfs f0, 0x14(r30)	/* effective address: 80C862E0 */
+/* 80C85A14  C0 1E 00 14 */	lfs f0, 0x14(r30)
 /* 80C85A18  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80C85A1C  EC 22 00 24 */	fdivs f1, f2, f0
-/* 80C85A20  C0 5E 00 0C */	lfs f2, 0xc(r30)	/* effective address: 80C862D8 */
+/* 80C85A20  C0 5E 00 0C */	lfs f2, 0xc(r30)
 /* 80C85A24  4B 5E AD 1C */	b cLib_chaseF__FPfff
 /* 80C85A28  C0 3D 00 1C */	lfs f1, 0x1c(r29)
 /* 80C85A2C  C0 1F 05 2C */	lfs f0, 0x52c(r31)
@@ -46,7 +46,7 @@ lbl_80C859E0:
 /* 80C85A90  90 01 00 08 */	stw r0, 8(r1)
 /* 80C85A94  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C85A98  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C85A9C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C85A9C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C85AA0  38 81 00 08 */	addi r4, r1, 8
 /* 80C85AA4  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C85AA8  7F 87 E3 78 */	mr r7, r28

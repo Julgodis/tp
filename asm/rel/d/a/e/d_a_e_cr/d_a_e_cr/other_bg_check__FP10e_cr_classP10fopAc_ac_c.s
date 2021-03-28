@@ -31,8 +31,8 @@ lbl_80698250:
 /* 806982C4  38 A1 00 08 */	addi r5, r1, 8
 /* 806982C8  7F E6 FB 78 */	mr r6, r31
 /* 806982CC  4B 9D FA 98 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 806982D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806982D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806982D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806982D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806982D8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 806982DC  38 81 00 20 */	addi r4, r1, 0x20
 /* 806982E0  4B 9D C0 D4 */	b LineCross__4cBgSFP11cBgS_LinChk

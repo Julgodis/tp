@@ -69,11 +69,11 @@ lbl_8047F710:
 /* 8047F7AC  4B B8 D5 F0 */	b transM__14mDoMtx_stack_cFfff
 /* 8047F7B0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8047F7B4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8047F7B8  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 8047F7B8  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8047F7BC  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8047F7C0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8047F7C0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8047F7C4  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8047F7C8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8047F7C8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8047F7CC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8047F7D0  D0 3D 04 D0 */	stfs f1, 0x4d0(r29)
 /* 8047F7D4  D0 1D 04 D8 */	stfs f0, 0x4d8(r29)
@@ -82,12 +82,12 @@ lbl_8047F710:
 /* 8047F7E0  93 FD 08 E8 */	stw r31, 0x8e8(r29)
 /* 8047F7E4  7F A3 EB 78 */	mr r3, r29
 /* 8047F7E8  4B FF FD E5 */	bl eff_smoke_slip_start__Q212daObjMovebox5Act_cFv
-/* 8047F7EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047F7F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8047F7F4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8047F7F8  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8047F7EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047F7F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8047F7F4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8047F7F8  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 8047F7FC  60 00 08 00 */	ori r0, r0, 0x800
-/* 8047F800  90 03 05 70 */	stw r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8047F800  90 03 05 70 */	stw r0, 0x570(r3)
 /* 8047F804  7F A3 EB 78 */	mr r3, r29
 /* 8047F808  48 00 00 CD */	bl mode_walk_init__Q212daObjMovebox5Act_cFv
 /* 8047F80C  80 1D 08 EC */	lwz r0, 0x8ec(r29)

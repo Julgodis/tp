@@ -6,7 +6,7 @@ lbl_805BB4CC:
 /* 805BB4DC  7C 7F 1B 78 */	mr r31, r3
 /* 805BB4E0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805BB4E4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805BB4E8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805BB4E8  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BB4EC  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 805BB4F0  4B A5 0E EC */	b mDoMtx_YrotS__FPA4_fs
 /* 805BB4F4  3C 60 80 5C */	lis r3, lit_4011@ha

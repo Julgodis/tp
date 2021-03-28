@@ -6,7 +6,7 @@ lbl_80CED708:
 /* 80CED718  38 A4 F0 00 */	addi r5, r4, cNullVec__6Z2Calc@l
 /* 80CED71C  3C 80 80 CF */	lis r4, data_80CEF244@ha
 /* 80CED720  38 84 F2 44 */	addi r4, r4, data_80CEF244@l
-/* 80CED724  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80CEF244 */
+/* 80CED724  88 04 00 00 */	lbz r0, 0(r4)
 /* 80CED728  7C 00 07 75 */	extsb. r0, r0
 /* 80CED72C  40 82 00 D0 */	bne lbl_80CED7FC
 /* 80CED730  80 C5 00 20 */	lwz r6, 0x20(r5)

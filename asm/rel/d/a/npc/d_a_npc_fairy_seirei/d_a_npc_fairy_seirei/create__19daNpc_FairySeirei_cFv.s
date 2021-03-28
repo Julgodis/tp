@@ -59,7 +59,7 @@ lbl_80540114:
 /* 80540140  38 7F 08 64 */	addi r3, r31, 0x864
 /* 80540144  3C 80 80 54 */	lis r4, m__25daNpc_FairySeirei_Param_c@ha
 /* 80540148  38 84 1D 8C */	addi r4, r4, m__25daNpc_FairySeirei_Param_c@l
-/* 8054014C  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80541D9C */
+/* 8054014C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80540150  FC 00 00 1E */	fctiwz f0, f0
 /* 80540154  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80540158  80 81 00 14 */	lwz r4, 0x14(r1)
@@ -73,8 +73,8 @@ lbl_80540114:
 /* 80540178  38 1F 08 64 */	addi r0, r31, 0x864
 /* 8054017C  90 1F 0E 8C */	stw r0, 0xe8c(r31)
 /* 80540180  38 7F 06 8C */	addi r3, r31, 0x68c
-/* 80540184  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80540188  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80540184  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80540188  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8054018C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80540190  4B B3 69 1C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80540194  80 1F 07 68 */	lwz r0, 0x768(r31)

@@ -112,8 +112,8 @@ lbl_8046AA68:
 /* 8046AA70  88 9C 06 0A */	lbz r4, 0x60a(r28)
 /* 8046AA74  28 04 00 FF */	cmplwi r4, 0xff
 /* 8046AA78  41 82 00 2C */	beq lbl_8046AAA4
-/* 8046AA7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8046AA80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8046AA7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8046AA80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8046AA84  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8046AA88  7C 05 07 74 */	extsb r5, r0
 /* 8046AA8C  4B BC A8 D4 */	b isSwitch__10dSv_info_cCFii

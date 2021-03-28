@@ -8,7 +8,7 @@ lbl_80C59754:
 /* 80C5976C  98 03 06 00 */	stb r0, 0x600(r3)
 /* 80C59770  3C 60 80 C6 */	lis r3, l_HIO@ha
 /* 80C59774  38 63 A3 14 */	addi r3, r3, l_HIO@l
-/* 80C59778  88 03 00 04 */	lbz r0, 4(r3)	/* effective address: 80C5A318 */
+/* 80C59778  88 03 00 04 */	lbz r0, 4(r3)
 /* 80C5977C  98 1F 06 04 */	stb r0, 0x604(r31)
 /* 80C59780  88 1F 05 F9 */	lbz r0, 0x5f9(r31)
 /* 80C59784  28 00 00 09 */	cmplwi r0, 9
@@ -22,7 +22,7 @@ lbl_80C59754:
 /* 80C597A4  90 01 00 08 */	stw r0, 8(r1)
 /* 80C597A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C597AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C597B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C597B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C597B4  38 81 00 08 */	addi r4, r1, 8
 /* 80C597B8  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C597BC  38 C0 00 00 */	li r6, 0

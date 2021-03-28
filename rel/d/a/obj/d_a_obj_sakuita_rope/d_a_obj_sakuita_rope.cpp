@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DModelData {
+};
+
 struct Vec {
 };
 
@@ -19,9 +22,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266F48 */ void normalizeZP();
-};
-
-struct J3DModelData {
 };
 
 struct Sakuita_c {
@@ -63,13 +63,13 @@ struct cCcD_GStts {
 	/* 80CC68A0 */ ~cCcD_GStts();
 };
 
+struct _GXColor {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct ResTIMG {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -112,11 +112,11 @@ struct dScnKy_env_light_c {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjItaRope_Draw(daObjItaRope_c*); // 2
-static void daObjItaRope_Execute(daObjItaRope_c*); // 2
-static bool daObjItaRope_IsDelete(daObjItaRope_c*); // 2
-static void daObjItaRope_Delete(daObjItaRope_c*); // 2
-static void daObjItaRope_Create(fopAc_ac_c*); // 2
+void daObjItaRope_Draw(daObjItaRope_c*); // 2
+void daObjItaRope_Execute(daObjItaRope_c*); // 2
+bool daObjItaRope_IsDelete(daObjItaRope_c*); // 2
+void daObjItaRope_Delete(daObjItaRope_c*); // 2
+void daObjItaRope_Create(fopAc_ac_c*); // 2
 
 extern "C" void setModelData__9Sakuita_cFP12J3DModelData(); // 1
 extern "C" void create__9Sakuita_cFP4cXyzsSc(); // 1
@@ -135,17 +135,15 @@ extern "C" void __dt__9Sakuita_cFv(); // 1
 extern "C" void __ct__9Sakuita_cFv(); // 1
 extern "C" void __dt__10RopeWork_cFv(); // 1
 extern "C" void __ct__10RopeWork_cFv(); // 1
-extern "C" static void daObjItaRope_Draw__FP14daObjItaRope_c(); // 1
-extern "C" static void daObjItaRope_Execute__FP14daObjItaRope_c(); // 1
-extern "C" static bool daObjItaRope_IsDelete__FP14daObjItaRope_c(); // 1
-extern "C" static void daObjItaRope_Delete__FP14daObjItaRope_c(); // 1
-extern "C" static void daObjItaRope_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjItaRope_Draw__FP14daObjItaRope_c(); // 1
+extern "C" void daObjItaRope_Execute__FP14daObjItaRope_c(); // 1
+extern "C" bool daObjItaRope_IsDelete__FP14daObjItaRope_c(); // 1
+extern "C" void daObjItaRope_Delete__FP14daObjItaRope_c(); // 1
+extern "C" void daObjItaRope_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" extern u8 const lit_3746[8];
-extern "C" extern u8 const lit_3747[8];
-extern "C" extern u8 const lit_3748[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjItaRope_Method[8];
 extern "C" extern void* g_profile_Obj_ItaRope[12];
 
 // 
@@ -218,14 +216,12 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 
 // 
@@ -318,18 +314,18 @@ asm void Sakuita_c::setBaseMtx() {
 
 
 /* ############################################################################################## */
-/* 80CC6910-80CC6918 0008+00 s=0 e=0 z=0  None .rodata    @3746                                                        */
-SECTION_RODATA u8 const lit_3746[8] = {
+/* 80CC6910-80CC6918 0008+00 s=2 e=0 z=0  None .rodata    @3746                                                        */
+SECTION_RODATA static u8 const lit_3746[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CC6918-80CC6920 0008+00 s=0 e=0 z=0  None .rodata    @3747                                                        */
-SECTION_RODATA u8 const lit_3747[8] = {
+/* 80CC6918-80CC6920 0008+00 s=2 e=0 z=0  None .rodata    @3747                                                        */
+SECTION_RODATA static u8 const lit_3747[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CC6920-80CC6928 0008+00 s=0 e=0 z=0  None .rodata    @3748                                                        */
-SECTION_RODATA u8 const lit_3748[8] = {
+/* 80CC6920-80CC6928 0008+00 s=2 e=0 z=0  None .rodata    @3748                                                        */
+SECTION_RODATA static u8 const lit_3748[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -376,7 +372,7 @@ asm void Sakuita_c::setPlatePos(cXyz* param_0) {
 
 
 /* ############################################################################################## */
-/* 80CC6950-80CC6958 0008+00 s=1 e=0 z=0  None .rodata    @3776                                                        */
+/* 80CC6950-80CC6958 0008+00 s=2 e=0 z=0  None .rodata    @3776                                                        */
 SECTION_RODATA static u8 const lit_3776[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -411,7 +407,7 @@ SECTION_RODATA static u32 const lit_4094 = 0x3F19999A;
 /* 80CC696C-80CC6970 0004+00 s=1 e=0 z=0  None .rodata    @4149                                                        */
 SECTION_RODATA static u32 const lit_4149 = 0x40000000;
 
-/* 80CC6970-80CC6995 0025+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80CC6970-80CC6995 0025+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -421,7 +417,7 @@ SECTION_DEAD char const* const stringBase_80CC6988 = "Obj_Rope.bti";
 #pragma pop
 
 /* 80CC6998-80CC699C 0004+00 s=4 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80CC57E4-80CC5E48 0664+00 s=1 e=0 z=0  None .text      create_init__14daObjItaRope_cFv                              */
 #pragma push
@@ -518,109 +514,109 @@ SECTION_DATA static u8 data_80CC699C[4] = {
 	0x14, 0x0F, 0x00, 0xFF,
 };
 
-/* 80CC6464-80CC652C 00C8+00 s=1 e=0 z=0  None .text      daObjItaRope_Draw__FP14daObjItaRope_c                        */
+/* 80CC6464-80CC652C 00C8+00 s=0 e=0 z=0  None .text      daObjItaRope_Draw__FP14daObjItaRope_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjItaRope_Draw(daObjItaRope_c* param_0) {
+asm void daObjItaRope_Draw(daObjItaRope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Draw__FP14daObjItaRope_c.s"
 }
 #pragma pop
 
 
-/* 80CC652C-80CC6610 00E4+00 s=1 e=0 z=0  None .text      daObjItaRope_Execute__FP14daObjItaRope_c                     */
+/* 80CC652C-80CC6610 00E4+00 s=0 e=0 z=0  None .text      daObjItaRope_Execute__FP14daObjItaRope_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjItaRope_Execute(daObjItaRope_c* param_0) {
+asm void daObjItaRope_Execute(daObjItaRope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Execute__FP14daObjItaRope_c.s"
 }
 #pragma pop
 
 
-/* 80CC6610-80CC6618 0008+00 s=1 e=0 z=0  None .text      daObjItaRope_IsDelete__FP14daObjItaRope_c                    */
-static bool daObjItaRope_IsDelete(daObjItaRope_c* param_0) {
+/* 80CC6610-80CC6618 0008+00 s=0 e=0 z=0  None .text      daObjItaRope_IsDelete__FP14daObjItaRope_c                    */
+bool daObjItaRope_IsDelete(daObjItaRope_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80CC69A0-80CC69C0 0020+00 s=1 e=0 z=0  None .data      l_daObjItaRope_Method                                        */
-SECTION_DATA static void* l_daObjItaRope_Method[8] = {
-	/* 0    */ (void*)daObjItaRope_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjItaRope_Delete__FP14daObjItaRope_c,
-	/* 2    */ (void*)daObjItaRope_Execute__FP14daObjItaRope_c,
-	/* 3    */ (void*)daObjItaRope_IsDelete__FP14daObjItaRope_c,
-	/* 4    */ (void*)daObjItaRope_Draw__FP14daObjItaRope_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CC69A0-80CC69C0 0020+00 s=0 e=0 z=0  None .data      l_daObjItaRope_Method                                        */
+SECTION_DATA void* l_daObjItaRope_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC69C0-80CC69F0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_ItaRope                                        */
+/* 80CC69C0-80CC69F0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_ItaRope                                        */
 SECTION_DATA void* g_profile_Obj_ItaRope[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01530000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000638,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00230000,
-	/* 9    */ (void*)&l_daObjItaRope_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01530000,
+	(void*)NULL,
+	(void*)0x00000638,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00230000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80CC69F0-80CC6A04 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
 SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC6A04-80CC6A10 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC6A10-80CC6A1C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC6618-80CC6738 0120+00 s=1 e=0 z=0  None .text      daObjItaRope_Delete__FP14daObjItaRope_c                      */
+/* 80CC6618-80CC6738 0120+00 s=0 e=0 z=0  None .text      daObjItaRope_Delete__FP14daObjItaRope_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjItaRope_Delete(daObjItaRope_c* param_0) {
+asm void daObjItaRope_Delete(daObjItaRope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Delete__FP14daObjItaRope_c.s"
 }
 #pragma pop
 
 
-/* 80CC6738-80CC6844 010C+00 s=1 e=0 z=0  None .text      daObjItaRope_Create__FP10fopAc_ac_c                          */
+/* 80CC6738-80CC6844 010C+00 s=0 e=0 z=0  None .text      daObjItaRope_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjItaRope_Create(fopAc_ac_c* param_0) {
+asm void daObjItaRope_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_sakuita_rope/d_a_obj_sakuita_rope/daObjItaRope_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CC6844-80CC68A0 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CC6844-80CC68A0 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -631,7 +627,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CC68A0-80CC68E8 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CC68A0-80CC68E8 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

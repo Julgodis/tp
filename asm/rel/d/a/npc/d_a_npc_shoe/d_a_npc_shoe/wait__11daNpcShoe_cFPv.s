@@ -33,9 +33,9 @@ lbl_80AE8A54:
 /* 80AE8A7C  B0 1C 0E 18 */	sth r0, 0xe18(r28)
 /* 80AE8A80  48 00 03 80 */	b lbl_80AE8E00
 lbl_80AE8A84:
-/* 80AE8A84  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AE8A88  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80AE8A8C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80AE8A84  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AE8A88  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80AE8A8C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80AE8A90  38 BE 00 00 */	addi r5, r30, 0
 /* 80AE8A94  C0 25 00 50 */	lfs f1, 0x50(r5)
 /* 80AE8A98  4B 66 AF 58 */	b chkActorInSight__8daNpcF_cFP10fopAc_ac_cf
@@ -95,9 +95,9 @@ lbl_80AE8B4C:
 /* 80AE8B58  38 00 00 00 */	li r0, 0
 /* 80AE8B5C  B0 1C 0E 10 */	sth r0, 0xe10(r28)
 lbl_80AE8B60:
-/* 80AE8B60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE8B64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AE8B68  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80AE8B60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE8B64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE8B68  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80AE8B6C  28 00 00 00 */	cmplwi r0, 0
 /* 80AE8B70  41 82 01 78 */	beq lbl_80AE8CE8
 /* 80AE8B74  A0 1C 00 F8 */	lhz r0, 0xf8(r28)
@@ -203,10 +203,10 @@ lbl_80AE8CE8:
 /* 80AE8CE8  4B 6C 38 94 */	b dKy_darkworld_check__Fv
 /* 80AE8CEC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AE8CF0  40 82 00 CC */	bne lbl_80AE8DBC
-/* 80AE8CF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE8CF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AE8CFC  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80AE8D00  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80AE8CF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE8CF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE8CFC  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80AE8D00  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80AE8D04  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80AE8D08  41 82 00 B4 */	beq lbl_80AE8DBC
 /* 80AE8D0C  C8 3E 01 48 */	lfd f1, 0x148(r30)

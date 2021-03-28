@@ -9,7 +9,7 @@ lbl_8094D2A4:
 /* 8094D2C0  7C 7E 1B 78 */	mr r30, r3
 /* 8094D2C4  3C 80 80 95 */	lis r4, lit_3958@ha
 /* 8094D2C8  3B E4 11 C0 */	addi r31, r4, lit_3958@l
-/* 8094D2CC  C3 FF 00 24 */	lfs f31, 0x24(r31)	/* effective address: 809511E4 */
+/* 8094D2CC  C3 FF 00 24 */	lfs f31, 0x24(r31)
 /* 8094D2D0  A8 03 05 FC */	lha r0, 0x5fc(r3)
 /* 8094D2D4  2C 00 00 02 */	cmpwi r0, 2
 /* 8094D2D8  41 82 01 28 */	beq lbl_8094D400

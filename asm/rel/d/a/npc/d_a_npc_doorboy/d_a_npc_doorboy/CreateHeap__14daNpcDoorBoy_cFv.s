@@ -9,10 +9,10 @@ lbl_809AB320:
 /* 809AB33C  3B E3 D9 A8 */	addi r31, r3, m__20daNpcDoorBoy_Param_c@l
 /* 809AB340  3C 60 80 9B */	lis r3, l_arcNames@ha
 /* 809AB344  38 63 DB 9C */	addi r3, r3, l_arcNames@l
-/* 809AB348  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 809ADB9C */
+/* 809AB348  80 63 00 00 */	lwz r3, 0(r3)
 /* 809AB34C  38 80 00 04 */	li r4, 4
-/* 809AB350  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809AB354  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809AB350  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809AB354  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809AB358  3C A5 00 02 */	addis r5, r5, 2
 /* 809AB35C  38 C0 00 80 */	li r6, 0x80
 /* 809AB360  38 A5 C2 F8 */	addi r5, r5, -15624

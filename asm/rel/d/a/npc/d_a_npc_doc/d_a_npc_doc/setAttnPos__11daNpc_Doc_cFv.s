@@ -11,9 +11,9 @@ lbl_809A80B8:
 /* 809A80DC  3B C3 AA D0 */	addi r30, r3, lit_1109@l
 /* 809A80E0  3C 60 80 9B */	lis r3, m__17daNpc_Doc_Param_c@ha
 /* 809A80E4  3B E3 A3 1C */	addi r31, r3, m__17daNpc_Doc_Param_c@l
-/* 809A80E8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 809AA3E0 */
+/* 809A80E8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 809A80EC  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 809A80F0  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 809AA3C4 */
+/* 809A80F0  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 809A80F4  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 809A80F8  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 809A80FC  38 7D 0D 08 */	addi r3, r29, 0xd08

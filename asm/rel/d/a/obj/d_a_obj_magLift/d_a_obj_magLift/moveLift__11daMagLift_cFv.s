@@ -9,7 +9,7 @@ lbl_80C8DD88:
 /* 80C8DDA4  41 82 00 E4 */	beq lbl_80C8DE88
 /* 80C8DDA8  3C 80 80 C9 */	lis r4, data_80C8E85C@ha
 /* 80C8DDAC  38 84 E8 5C */	addi r4, r4, data_80C8E85C@l
-/* 80C8DDB0  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80C8E85C */
+/* 80C8DDB0  88 04 00 00 */	lbz r0, 0(r4)
 /* 80C8DDB4  7C 00 07 75 */	extsb. r0, r0
 /* 80C8DDB8  40 82 00 B8 */	bne lbl_80C8DE70
 /* 80C8DDBC  80 C5 00 20 */	lwz r6, 0x20(r5)

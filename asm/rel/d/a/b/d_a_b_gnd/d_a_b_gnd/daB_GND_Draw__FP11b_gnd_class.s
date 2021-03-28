@@ -199,8 +199,8 @@ lbl_805F51E0:
 /* 805F5230  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 805F5234  4B A3 96 DC */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 805F5238  90 7F 0C 40 */	stw r3, 0xc40(r31)
-/* 805F523C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F5240  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805F523C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F5240  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805F5244  3B 43 61 C0 */	addi r26, r3, 0x61c0
 /* 805F5248  7F 43 D3 78 */	mr r3, r26
 /* 805F524C  80 9F 0C 40 */	lwz r4, 0xc40(r31)
@@ -243,8 +243,8 @@ lbl_805F52A4:
 /* 805F52D4  7D 89 03 A6 */	mtctr r12
 /* 805F52D8  4E 80 04 21 */	bctrl 
 /* 805F52DC  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 805F52E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F52E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805F52E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F52E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805F52E8  3B 43 5F 64 */	addi r26, r3, 0x5f64
 /* 805F52EC  3C 64 00 01 */	addis r3, r4, 1
 /* 805F52F0  38 63 61 54 */	addi r3, r3, 0x6154

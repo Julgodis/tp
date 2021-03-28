@@ -11,38 +11,6 @@
 // Types:
 // 
 
-struct J2DTextBoxVBinding {
-};
-
-struct JKRArchive {
-};
-
-struct JUTFont {
-};
-
-struct J2DMaterial {
-};
-
-struct J2DTextBoxHBinding {
-};
-
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
-struct ResTIMG {
-};
-
-struct JSUStreamSeekFrom {
-};
-
-struct JSURandomInputStream {
-	/* 802DC458 */ void peek(void*, s32);
-	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -55,31 +23,63 @@ struct JGeometry {
 struct ResFONT {
 };
 
+struct ResTIMG {
+};
+
+struct JUTFont {
+};
+
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JSUStreamSeekFrom {
+};
+
+struct JSURandomInputStream {
+	/* 802DC458 */ void peek(void*, s32);
+	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
+};
+
+struct J2DMaterial {
+};
+
+struct J2DTextBoxHBinding {
+};
+
+struct JKRArchive {
+};
+
+struct J2DTextBoxVBinding {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
+};
+
 struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmColor {
-};
-
 struct _GXCullMode {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmBase {
 };
 
+struct J2DAnmTexPattern {
+};
+
 struct J2DAnmVisibilityFull {
 };
 
-struct J2DAnmTransform {
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -291,53 +291,53 @@ extern "C" void strlen(); // 1
 /* ############################################################################################## */
 /* 803CD328-803CD3E8 00BC+04 s=5 e=0 z=0  None .data      __vt__10J2DTextBox                                           */
 SECTION_DATA static void* __vt__10J2DTextBox[47 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J2DTextBoxFv,
-	/* 3    */ (void*)getTypeID__10J2DTextBoxCFv,
-	/* 4    */ (void*)move__7J2DPaneFff,
-	/* 5    */ (void*)add__7J2DPaneFff,
-	/* 6    */ (void*)resize__10J2DTextBoxFff,
-	/* 7    */ (void*)setCullBack__7J2DPaneFb,
-	/* 8    */ (void*)setCullBack__7J2DPaneF11_GXCullMode,
-	/* 9    */ (void*)setAlpha__7J2DPaneFUc,
-	/* 10   */ (void*)setConnectParent__10J2DTextBoxFb,
-	/* 11   */ (void*)calcMtx__7J2DPaneFv,
-	/* 12   */ (void*)update__7J2DPaneFv,
-	/* 13   */ (void*)drawSelf__10J2DTextBoxFff,
-	/* 14   */ (void*)drawSelf__10J2DTextBoxFffPA3_A4_f,
-	/* 15   */ (void*)search__7J2DPaneFUx,
-	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
-	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
-	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
-	/* 19   */ (void*)isUsed__10J2DTextBoxFPC7ResTIMG,
-	/* 20   */ (void*)isUsed__10J2DTextBoxFPC7ResFONT,
-	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
-	/* 22   */ (void*)rewriteAlpha__10J2DTextBoxFv,
-	/* 23   */ (void*)setAnimation__7J2DPaneFP10J2DAnmBase,
-	/* 24   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
-	/* 25   */ (void*)setAnimation__7J2DPaneFP11J2DAnmColor,
-	/* 26   */ (void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
-	/* 27   */ (void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
-	/* 28   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
-	/* 29   */ (void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 30   */ (void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	/* 36   */ (void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
-	/* 37   */ (void*)draw__10J2DTextBoxFff,
-	/* 38   */ (void*)draw__10J2DTextBoxFfff18J2DTextBoxHBinding,
-	/* 39   */ (void*)setFont__10J2DTextBoxFP7JUTFont,
-	/* 40   */ (void*)getFont__10J2DTextBoxCFv,
-	/* 41   */ (void*)setBlack__10J2DTextBoxFQ28JUtility6TColor,
-	/* 42   */ (void*)setWhite__10J2DTextBoxFQ28JUtility6TColor,
-	/* 43   */ (void*)setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 44   */ (void*)getBlack__10J2DTextBoxCFv,
-	/* 45   */ (void*)getWhite__10J2DTextBoxCFv,
-	/* 46   */ (void*)getMaterial__10J2DTextBoxCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10J2DTextBoxFv,
+	(void*)getTypeID__10J2DTextBoxCFv,
+	(void*)move__7J2DPaneFff,
+	(void*)add__7J2DPaneFff,
+	(void*)resize__10J2DTextBoxFff,
+	(void*)setCullBack__7J2DPaneFb,
+	(void*)setCullBack__7J2DPaneF11_GXCullMode,
+	(void*)setAlpha__7J2DPaneFUc,
+	(void*)setConnectParent__10J2DTextBoxFb,
+	(void*)calcMtx__7J2DPaneFv,
+	(void*)update__7J2DPaneFv,
+	(void*)drawSelf__10J2DTextBoxFff,
+	(void*)drawSelf__10J2DTextBoxFffPA3_A4_f,
+	(void*)search__7J2DPaneFUx,
+	(void*)searchUserInfo__7J2DPaneFUx,
+	(void*)makeMatrix__7J2DPaneFff,
+	(void*)makeMatrix__7J2DPaneFffff,
+	(void*)isUsed__10J2DTextBoxFPC7ResTIMG,
+	(void*)isUsed__10J2DTextBoxFPC7ResFONT,
+	(void*)clearAnmTransform__7J2DPaneFv,
+	(void*)rewriteAlpha__10J2DTextBoxFv,
+	(void*)setAnimation__7J2DPaneFP10J2DAnmBase,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
+	(void*)setAnimation__7J2DPaneFP11J2DAnmColor,
+	(void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
+	(void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
+	(void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
+	(void*)draw__10J2DTextBoxFff,
+	(void*)draw__10J2DTextBoxFfff18J2DTextBoxHBinding,
+	(void*)setFont__10J2DTextBoxFP7JUTFont,
+	(void*)getFont__10J2DTextBoxCFv,
+	(void*)setBlack__10J2DTextBoxFQ28JUtility6TColor,
+	(void*)setWhite__10J2DTextBoxFQ28JUtility6TColor,
+	(void*)setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)getBlack__10J2DTextBoxCFv,
+	(void*)getWhite__10J2DTextBoxCFv,
+	(void*)getMaterial__10J2DTextBoxCFv,
 	/* padding */
 	NULL,
 };

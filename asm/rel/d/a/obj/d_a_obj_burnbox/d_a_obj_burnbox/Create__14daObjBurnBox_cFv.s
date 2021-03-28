@@ -66,11 +66,11 @@ lbl_8046E828:
 /* 8046E828  3B 20 00 00 */	li r25, 0
 /* 8046E82C  3B A0 00 00 */	li r29, 0
 /* 8046E830  3B 80 00 00 */	li r28, 0
-/* 8046E834  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8046E838  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 8046E834  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8046E838  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 8046E83C  3B 7F 00 5C */	addi r27, r31, 0x5c
 lbl_8046E840:
-/* 8046E840  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 8046E840  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8046E844  38 80 00 00 */	li r4, 0
 /* 8046E848  90 81 00 08 */	stw r4, 8(r1)
 /* 8046E84C  38 00 FF FF */	li r0, -1

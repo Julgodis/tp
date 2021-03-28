@@ -20,8 +20,8 @@ lbl_8082E420:
 /* 8082E42C  88 9F 07 A9 */	lbz r4, 0x7a9(r31)
 /* 8082E430  28 04 00 FF */	cmplwi r4, 0xff
 /* 8082E434  41 82 00 40 */	beq lbl_8082E474
-/* 8082E438  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082E43C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082E438  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082E43C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082E440  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 8082E444  7C 05 07 74 */	extsb r5, r0
 /* 8082E448  4B 80 6F 18 */	b isSwitch__10dSv_info_cCFii

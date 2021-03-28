@@ -7,9 +7,9 @@ lbl_80D25364:
 /* 80D25378  7C 7E 1B 78 */	mr r30, r3
 /* 80D2537C  3C 60 80 D2 */	lis r3, l_midna_offset@ha
 /* 80D25380  3B E3 6B 5C */	addi r31, r3, l_midna_offset@l
-/* 80D25384  C0 3F 00 30 */	lfs f1, 0x30(r31)	/* effective address: 80D26B8C */
+/* 80D25384  C0 3F 00 30 */	lfs f1, 0x30(r31)
 /* 80D25388  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80D2538C  C0 1F 00 78 */	lfs f0, 0x78(r31)	/* effective address: 80D26BD4 */
+/* 80D2538C  C0 1F 00 78 */	lfs f0, 0x78(r31)
 /* 80D25390  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80D25394  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80D25398  38 7E 04 D0 */	addi r3, r30, 0x4d0

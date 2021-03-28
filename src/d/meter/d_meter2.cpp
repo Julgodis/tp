@@ -243,10 +243,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -612,17 +612,17 @@ asm void dMeter2_c::setLifeZero() {
 /* ############################################################################################## */
 /* 803BFA28-803BFA54 002C+00 s=1 e=0 z=0  None .data      @5038                                                        */
 SECTION_DATA static void* lit_5038[11] = {
-	/* 0    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
-	/* 1    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x3FC),
-	/* 2    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x41C),
-	/* 3    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x40C),
-	/* 4    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x454),
-	/* 5    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x48C),
-	/* 6    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x454),
-	/* 7    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x4C4),
-	/* 8    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x500),
-	/* 9    */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
-	/* 10   */ (void*)(((char*)checkStatus__9dMeter2_cFv)+0x40C),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x3FC),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x41C),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x40C),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x454),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x48C),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x454),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x4C4),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x500),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x530),
+	(void*)(((char*)checkStatus__9dMeter2_cFv)+0x40C),
 };
 
 /* 8021F7B0-8021FD60 05B0+00 s=2 e=0 z=0  None .text      checkStatus__9dMeter2_cFv                                    */
@@ -1139,24 +1139,24 @@ asm static void dMeter2_Create(msg_class* param_0) {
 /* ############################################################################################## */
 /* 803BFA54-803BFA68 0014+00 s=1 e=0 z=0  None .data      l_dMeter2_Method                                             */
 SECTION_DATA static void* l_dMeter2_Method[5] = {
-	/* 0    */ (void*)dMeter2_Create__FP9msg_class,
-	/* 1    */ (void*)dMeter2_Delete__FP9dMeter2_c,
-	/* 2    */ (void*)dMeter2_Execute__FP9dMeter2_c,
-	/* 3    */ (void*)dMeter2_IsDelete__FP9dMeter2_c,
-	/* 4    */ (void*)dMeter2_Draw__FP9dMeter2_c,
+	(void*)dMeter2_Create__FP9msg_class,
+	(void*)dMeter2_Delete__FP9dMeter2_c,
+	(void*)dMeter2_Execute__FP9dMeter2_c,
+	(void*)dMeter2_IsDelete__FP9dMeter2_c,
+	(void*)dMeter2_Draw__FP9dMeter2_c,
 };
 
-/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=1  None .data      g_profile_METER2                                             */
+/* 803BFA68-803BFA90 0028+00 s=0 e=0 z=0  None .data      g_profile_METER2                                             */
 SECTION_DATA void* g_profile_METER2[10] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000CFFFD,
-	/* 2    */ (void*)0x03160000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000004C0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopMsg_Method,
-	/* 8    */ (void*)0x03010000,
-	/* 9    */ (void*)&l_dMeter2_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03160000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000004C0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopMsg_Method,
+	(void*)0x03010000,
+	(void*)&l_dMeter2_Method,
 };
 

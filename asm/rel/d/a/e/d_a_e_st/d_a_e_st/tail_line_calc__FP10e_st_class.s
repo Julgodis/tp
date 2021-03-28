@@ -36,8 +36,8 @@ lbl_807A0D20:
 /* 807A0DA8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 807A0DAC  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 807A0DB0  3B 40 00 01 */	li r26, 1
-/* 807A0DB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A0DB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807A0DB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A0DB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807A0DBC  3B 63 0F 38 */	addi r27, r3, 0xf38
 /* 807A0DC0  3B 24 00 0C */	addi r25, r4, 0xc
 /* 807A0DC4  C3 FC 00 E4 */	lfs f31, 0xe4(r28)

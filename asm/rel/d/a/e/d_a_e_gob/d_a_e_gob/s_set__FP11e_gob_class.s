@@ -1,8 +1,8 @@
 lbl_806DB50C:
-/* 806DB50C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806DB510  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806DB514  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 806DB518  C0 24 04 D4 */	lfs f1, 0x4d4(r4)	/* effective address: 80406694 */
+/* 806DB50C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806DB510  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806DB514  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 806DB518  C0 24 04 D4 */	lfs f1, 0x4d4(r4)
 /* 806DB51C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 806DB520  EC 21 00 28 */	fsubs f1, f1, f0
 /* 806DB524  3C 80 80 6E */	lis r4, lit_4400@ha

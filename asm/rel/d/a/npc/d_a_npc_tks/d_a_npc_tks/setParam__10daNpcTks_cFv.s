@@ -9,7 +9,7 @@ lbl_80B1C480:
 /* 80B1C49C  3B E3 DD 58 */	addi r31, r3, m__16daNpcTks_Param_c@l
 /* 80B1C4A0  38 7E 07 E4 */	addi r3, r30, 0x7e4
 /* 80B1C4A4  38 9F 00 00 */	addi r4, r31, 0
-/* 80B1C4A8  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80B1DD74 */
+/* 80B1C4A8  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80B1C4AC  4B 55 9A 94 */	b SetWallR__12dBgS_AcchCirFf
 /* 80B1C4B0  38 7F 00 00 */	addi r3, r31, 0
 /* 80B1C4B4  C0 03 00 18 */	lfs f0, 0x18(r3)

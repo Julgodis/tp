@@ -125,8 +125,8 @@ lbl_80C56040:
 /* 80C5604C  D0 1E 05 3C */	stfs f0, 0x53c(r30)
 /* 80C56050  C0 1E 06 F4 */	lfs f0, 0x6f4(r30)
 /* 80C56054  D0 1E 05 40 */	stfs f0, 0x540(r30)
-/* 80C56058  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5605C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C56058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5605C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C56060  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C56064  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C56068  88 1E 04 BA */	lbz r0, 0x4ba(r30)

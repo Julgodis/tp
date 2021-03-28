@@ -7,12 +7,12 @@ lbl_80675DB0:
 /* 80675DC4  7C 7E 1B 78 */	mr r30, r3
 /* 80675DC8  3C 60 80 67 */	lis r3, l_staff_name@ha
 /* 80675DCC  3B E3 75 58 */	addi r31, r3, l_staff_name@l
-/* 80675DD0  C0 1F 00 40 */	lfs f0, 0x40(r31)	/* effective address: 80677598 */
+/* 80675DD0  C0 1F 00 40 */	lfs f0, 0x40(r31)
 /* 80675DD4  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80675DD8  38 61 00 08 */	addi r3, r1, 8
-/* 80675DDC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80675DE0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80675DE4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80675DDC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80675DE0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80675DE4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80675DE8  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80675DEC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80675DF0  4B BF 0D 44 */	b __mi__4cXyzCFRC3Vec
@@ -69,8 +69,8 @@ lbl_80675E84:
 /* 80675EAC  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80675EB0  7C 65 1B 78 */	mr r5, r3
 /* 80675EB4  4B CD 11 DC */	b PSVECAdd
-/* 80675EB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80675EBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80675EB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80675EBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80675EC0  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80675EC4  38 81 00 20 */	addi r4, r1, 0x20
 /* 80675EC8  4B 9D 24 FC */	b setGoal__16dEvent_manager_cFP4cXyz

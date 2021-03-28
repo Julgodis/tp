@@ -23,7 +23,7 @@ lbl_80C31B3C:
 /* 80C31B3C  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80C31B40  3C 80 80 C3 */	lis r4, l_bmdData@ha
 /* 80C31B44  38 84 3D C0 */	addi r4, r4, l_bmdData@l
-/* 80C31B48  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C33DC4 */
+/* 80C31B48  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C31B4C  54 00 10 3A */	slwi r0, r0, 2
 /* 80C31B50  3C 80 80 C3 */	lis r4, l_resNameList@ha
 /* 80C31B54  38 84 3D D0 */	addi r4, r4, l_resNameList@l

@@ -11,8 +11,8 @@ lbl_80D209C4:
 /* 80D209E8  80 9F 05 B8 */	lwz r4, 0x5b8(r31)
 /* 80D209EC  28 04 00 00 */	cmplwi r4, 0
 /* 80D209F0  41 82 00 14 */	beq lbl_80D20A04
-/* 80D209F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D209F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D209F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D209F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D209FC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D20A00  4B 35 38 50 */	b Release__4cBgSFP9dBgW_Base
 lbl_80D20A04:

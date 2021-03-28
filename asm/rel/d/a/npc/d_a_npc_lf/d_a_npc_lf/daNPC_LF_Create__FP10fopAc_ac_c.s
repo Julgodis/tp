@@ -102,7 +102,7 @@ lbl_80A6A7AC:
 /* 80A6A7C8  38 00 FF FF */	li r0, -1
 /* 80A6A7CC  3C 60 80 A7 */	lis r3, l_HIO@ha
 /* 80A6A7D0  38 63 AA A0 */	addi r3, r3, l_HIO@l
-/* 80A6A7D4  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80A6AAA4 */
+/* 80A6A7D4  98 03 00 04 */	stb r0, 4(r3)
 lbl_80A6A7D8:
 /* 80A6A7D8  3B 9E 05 BC */	addi r28, r30, 0x5bc
 /* 80A6A7DC  3B 60 00 00 */	li r27, 0

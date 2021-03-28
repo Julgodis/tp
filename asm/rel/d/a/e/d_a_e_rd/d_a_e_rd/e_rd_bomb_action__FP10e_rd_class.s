@@ -113,7 +113,7 @@ lbl_8050ACC0:
 /* 8050ACC0  3F BD 00 01 */	addis r29, r29, 1
 /* 8050ACC4  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8050ACC8  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 8050ACCC  C3 E3 00 14 */	lfs f31, 0x14(r3)	/* effective address: 805191A8 */
+/* 8050ACCC  C3 E3 00 14 */	lfs f31, 0x14(r3)
 /* 8050ACD0  C0 01 00 14 */	lfs f0, 0x14(r1)
 /* 8050ACD4  EC 20 00 32 */	fmuls f1, f0, f0
 /* 8050ACD8  C0 01 00 1C */	lfs f0, 0x1c(r1)
@@ -159,7 +159,7 @@ lbl_8050AD54:
 lbl_8050AD6C:
 /* 8050AD6C  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8050AD70  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 8050AD74  C3 E3 00 14 */	lfs f31, 0x14(r3)	/* effective address: 805191A8 */
+/* 8050AD74  C3 E3 00 14 */	lfs f31, 0x14(r3)
 /* 8050AD78  38 00 00 00 */	li r0, 0
 /* 8050AD7C  98 1C 09 AD */	stb r0, 0x9ad(r28)
 /* 8050AD80  C0 3E 05 2C */	lfs f1, 0x52c(r30)
@@ -207,7 +207,7 @@ lbl_8050ADF8:
 /* 8050AE1C  41 81 00 A4 */	bgt lbl_8050AEC0
 /* 8050AE20  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8050AE24  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8050AE28  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8050AE28  80 63 00 00 */	lwz r3, 0(r3)
 /* 8050AE2C  7F A4 EB 78 */	mr r4, r29
 /* 8050AE30  4B B0 15 AC */	b mDoMtx_YrotS__FPA4_fs
 /* 8050AE34  C0 1F 00 F4 */	lfs f0, 0xf4(r31)

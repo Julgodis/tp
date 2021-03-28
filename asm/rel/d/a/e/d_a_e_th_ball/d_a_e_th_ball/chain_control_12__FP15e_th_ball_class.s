@@ -15,12 +15,12 @@ lbl_807B5980:
 /* 807B59B4  7C 7D 1B 78 */	mr r29, r3
 /* 807B59B8  3C 60 80 7C */	lis r3, master@ha
 /* 807B59BC  38 63 80 E0 */	addi r3, r3, master@l
-/* 807B59C0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 807B80E0 */
-/* 807B59C4  C0 03 06 A8 */	lfs f0, 0x6a8(r3)	/* effective address: 807B8788 */
+/* 807B59C0  80 63 00 00 */	lwz r3, 0(r3)
+/* 807B59C4  C0 03 06 A8 */	lfs f0, 0x6a8(r3)
 /* 807B59C8  D0 1D 0F 20 */	stfs f0, 0xf20(r29)
-/* 807B59CC  C0 03 06 AC */	lfs f0, 0x6ac(r3)	/* effective address: 807B878C */
+/* 807B59CC  C0 03 06 AC */	lfs f0, 0x6ac(r3)
 /* 807B59D0  D0 1D 0F 24 */	stfs f0, 0xf24(r29)
-/* 807B59D4  C0 03 06 B0 */	lfs f0, 0x6b0(r3)	/* effective address: 807B8790 */
+/* 807B59D4  C0 03 06 B0 */	lfs f0, 0x6b0(r3)
 /* 807B59D8  D0 1D 0F 28 */	stfs f0, 0xf28(r29)
 /* 807B59DC  3B FD 0F 14 */	addi r31, r29, 0xf14
 /* 807B59E0  3B DD 11 78 */	addi r30, r29, 0x1178

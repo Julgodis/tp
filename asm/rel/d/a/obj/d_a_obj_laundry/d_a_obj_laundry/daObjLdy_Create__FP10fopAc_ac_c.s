@@ -62,7 +62,7 @@ lbl_80C51E50:
 /* 80C51E50  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80C51E54  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C51E58  38 84 20 F0 */	addi r4, r4, l_arcName@l
-/* 80C51E5C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C520F0 */
+/* 80C51E5C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C51E60  4B 3D B0 5C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C51E64  7C 7E 1B 78 */	mr r30, r3
 /* 80C51E68  2C 1E 00 04 */	cmpwi r30, 4

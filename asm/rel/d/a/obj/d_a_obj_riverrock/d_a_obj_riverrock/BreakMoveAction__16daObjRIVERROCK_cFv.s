@@ -10,7 +10,7 @@ lbl_80CBCC3C:
 /* 80CBCC5C  C0 25 DA D4 */	lfs f1, lit_3758@l(r5)
 /* 80CBCC60  3C A0 80 CC */	lis r5, l_HIO@ha
 /* 80CBCC64  38 A5 DB F8 */	addi r5, r5, l_HIO@l
-/* 80CBCC68  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80CBDC00 */
+/* 80CBCC68  C0 05 00 08 */	lfs f0, 8(r5)
 /* 80CBCC6C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CBCC70  FC 00 00 1E */	fctiwz f0, f0
 /* 80CBCC74  D8 01 00 08 */	stfd f0, 8(r1)

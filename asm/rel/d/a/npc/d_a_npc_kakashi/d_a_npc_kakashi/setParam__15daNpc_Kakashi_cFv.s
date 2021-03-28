@@ -21,35 +21,35 @@ lbl_8054BEF0:
 /* 8054BEF0  90 7F 05 5C */	stw r3, 0x55c(r31)
 /* 8054BEF4  3C 60 80 55 */	lis r3, m__21daNpc_Kakashi_Param_c@ha
 /* 8054BEF8  38 63 EA C4 */	addi r3, r3, m__21daNpc_Kakashi_Param_c@l
-/* 8054BEFC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8054EACC */
+/* 8054BEFC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8054BF00  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 8054BF04  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 8054BF08  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 8054BF0C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8054EAD4 */
+/* 8054BF0C  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8054BF10  FC 00 00 1E */	fctiwz f0, f0
 /* 8054BF14  D8 01 00 08 */	stfd f0, 8(r1)
 /* 8054BF18  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8054BF1C  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 8054BF20  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8054EAD8 */
+/* 8054BF20  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8054BF24  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 8054BF28  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8054EAE0 */
+/* 8054BF28  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8054BF2C  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 8054BF30  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 8054EB14 */
+/* 8054BF30  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 8054BF34  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 8054BF38  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 8054BF3C  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 8054BF40  4B B2 A0 00 */	b SetWallR__12dBgS_AcchCirFf
 /* 8054BF44  3C 60 80 55 */	lis r3, m__21daNpc_Kakashi_Param_c@ha
 /* 8054BF48  38 63 EA C4 */	addi r3, r3, m__21daNpc_Kakashi_Param_c@l
-/* 8054BF4C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8054EADC */
+/* 8054BF4C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8054BF50  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 8054BF54  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8054EAD0 */
+/* 8054BF54  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8054BF58  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 8054BF5C  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 8054EB30 */
+/* 8054BF5C  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 8054BF60  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 8054BF64  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 8054EB08 */
+/* 8054BF64  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 8054BF68  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 8054BF6C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8054EAC8 */
+/* 8054BF6C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8054BF70  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 8054BF74  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8054BF78  80 01 00 24 */	lwz r0, 0x24(r1)

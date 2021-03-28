@@ -16,8 +16,8 @@ lbl_80A8C508:
 /* 80A8C540  FC 00 00 1E */	fctiwz f0, f0
 /* 80A8C544  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80A8C548  80 A1 00 14 */	lwz r5, 0x14(r1)
-/* 80A8C54C  C3 FF 00 10 */	lfs f31, 0x10(r31)	/* effective address: 80A9242C */
-/* 80A8C550  C3 DF 00 74 */	lfs f30, 0x74(r31)	/* effective address: 80A92490 */
+/* 80A8C54C  C3 FF 00 10 */	lfs f31, 0x10(r31)
+/* 80A8C550  C3 DF 00 74 */	lfs f30, 0x74(r31)
 /* 80A8C554  A8 03 06 46 */	lha r0, 0x646(r3)
 /* 80A8C558  2C 00 00 02 */	cmpwi r0, 2
 /* 80A8C55C  41 82 00 E4 */	beq lbl_80A8C640

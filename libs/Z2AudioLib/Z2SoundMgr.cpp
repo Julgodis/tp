@@ -20,7 +20,7 @@ struct JASTrack {
 struct JAISound {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -32,7 +32,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct Z2SoundMgr {
@@ -219,28 +219,28 @@ extern "C" extern u8 struct_80451340[8];
 /* ############################################################################################## */
 /* 803C9D18-803C9D70 0058+00 s=1 e=0 z=0  None .data      @3690                                                        */
 SECTION_DATA static void* lit_3690[22] = {
-	/* 0    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
-	/* 1    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
-	/* 2    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x88),
-	/* 3    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x94),
-	/* 4    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xA4),
-	/* 5    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xB4),
-	/* 6    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0xC4),
-	/* 7    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1AC),
-	/* 8    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1BC),
-	/* 9    */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 10   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 11   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 12   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 13   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 14   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 15   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 16   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 17   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 18   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 19   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
-	/* 20   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x1CC),
-	/* 21   */ (void*)(((char*)seqCallback__FP8JASTrackUs)+0x148),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x40),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x7C),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x88),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x94),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xA4),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xB4),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0xC4),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1AC),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1BC),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1D0),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x1CC),
+	(void*)(((char*)seqCallback__FP8JASTrackUs)+0x148),
 };
 
 /* 80455838-8045583C 0004+00 s=5 e=0 z=0  None .sdata2    @3688                                                        */
@@ -263,9 +263,9 @@ asm void seqCallback(JASTrack* param_0, u16 param_1) {
 /* ############################################################################################## */
 /* 803C9D70-803C9D80 000C+04 s=1 e=1 z=0  None .data      __vt__10Z2SoundMgr                                           */
 SECTION_DATA void* __vt__10Z2SoundMgr[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_802A9EE8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802A9EE8,
 	/* padding */
 	NULL,
 };

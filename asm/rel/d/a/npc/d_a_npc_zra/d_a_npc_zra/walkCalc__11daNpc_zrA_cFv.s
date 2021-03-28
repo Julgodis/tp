@@ -37,15 +37,15 @@ lbl_80B7FD8C:
 /* 80B7FD98  7C 64 1B 78 */	mr r4, r3
 /* 80B7FD9C  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B7FDA0  38 C3 C4 58 */	addi r6, r3, m__17daNpc_zrA_Param_c@l
-/* 80B7FDA4  C0 26 00 94 */	lfs f1, 0x94(r6)	/* effective address: 80B8C4EC */
+/* 80B7FDA4  C0 26 00 94 */	lfs f1, 0x94(r6)
 /* 80B7FDA8  D0 3F 05 2C */	stfs f1, 0x52c(r31)
-/* 80B7FDAC  C0 06 00 9C */	lfs f0, 0x9c(r6)	/* effective address: 80B8C4F4 */
+/* 80B7FDAC  C0 06 00 9C */	lfs f0, 0x9c(r6)
 /* 80B7FDB0  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80B7FDB4  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80B7FDB8  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 80B7FDBC  38 7F 04 DE */	addi r3, r31, 0x4de
-/* 80B7FDC0  A8 A6 00 9A */	lha r5, 0x9a(r6)	/* effective address: 80B8C4F2 */
-/* 80B7FDC4  A8 C6 00 98 */	lha r6, 0x98(r6)	/* effective address: 80B8C4F0 */
+/* 80B7FDC0  A8 A6 00 9A */	lha r5, 0x9a(r6)
+/* 80B7FDC4  A8 C6 00 98 */	lha r6, 0x98(r6)
 /* 80B7FDC8  4B 6F 08 40 */	b cLib_addCalcAngleS2__FPssss
 /* 80B7FDCC  A8 1F 04 DC */	lha r0, 0x4dc(r31)
 /* 80B7FDD0  B0 1F 08 F0 */	sth r0, 0x8f0(r31)

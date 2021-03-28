@@ -35,23 +35,20 @@ struct Z2EnvSeMgr {
 
 static void get_check_pos(kytag01_class*); // 2
 static void mist_tag_move(kytag01_class*); // 2
-static bool daKytag01_Draw(kytag01_class*); // 2
-static void daKytag01_Execute(kytag01_class*); // 2
-static bool daKytag01_IsDelete(kytag01_class*); // 2
-static bool daKytag01_Delete(kytag01_class*); // 2
-static void daKytag01_Create(fopAc_ac_c*); // 2
+bool daKytag01_Draw(kytag01_class*); // 2
+void daKytag01_Execute(kytag01_class*); // 2
+bool daKytag01_IsDelete(kytag01_class*); // 2
+bool daKytag01_Delete(kytag01_class*); // 2
+void daKytag01_Create(fopAc_ac_c*); // 2
 
 extern "C" static void get_check_pos__FP13kytag01_class(); // 1
 extern "C" static void mist_tag_move__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_Draw__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Execute__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_IsDelete__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_Delete__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3797[8];
-extern "C" extern u8 const lit_3798[8];
-extern "C" extern u8 const lit_3799[8];
-extern "C" extern u8 const lit_3888[8];
+extern "C" bool daKytag01_Draw__FP13kytag01_class(); // 1
+extern "C" void daKytag01_Execute__FP13kytag01_class(); // 1
+extern "C" bool daKytag01_IsDelete__FP13kytag01_class(); // 1
+extern "C" bool daKytag01_Delete__FP13kytag01_class(); // 1
+extern "C" void daKytag01_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daKytag01_Method[8];
 extern "C" extern void* g_profile_KYTAG01[12];
 
 // 
@@ -80,22 +77,9 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 struct_80406F78[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042D908[4];
-SECTION_BSS extern u8 data_8042D90C[4];
-SECTION_BSS extern u8 data_8042DC34[4];
-SECTION_BSS extern u8 struct_8042DD14[4];
-SECTION_BSS extern u8 struct_8042DD18[4];
-SECTION_BSS extern u8 struct_8042DD1C[4];
-SECTION_BSS extern u8 struct_8042DD20[4];
-extern "C" extern u8 g_mEnvSeMgr[352];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 
@@ -111,6 +95,21 @@ SECTION_RODATA static u8 const lit_3796[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
+/* 80855994-8085599C 0008+00 s=2 e=0 z=0  None .rodata    @3797                                                        */
+SECTION_RODATA static u8 const lit_3797[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8085599C-808559A4 0008+00 s=2 e=0 z=0  None .rodata    @3798                                                        */
+SECTION_RODATA static u8 const lit_3798[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 808559A4-808559AC 0008+00 s=2 e=0 z=0  None .rodata    @3799                                                        */
+SECTION_RODATA static u8 const lit_3799[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80855058-80855320 02C8+00 s=1 e=0 z=0  None .text      get_check_pos__FP13kytag01_class                             */
 #pragma push
 #pragma optimization_level 0
@@ -123,21 +122,6 @@ asm static void get_check_pos(kytag01_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80855994-8085599C 0008+00 s=0 e=0 z=0  None .rodata    @3797                                                        */
-SECTION_RODATA u8 const lit_3797[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8085599C-808559A4 0008+00 s=0 e=0 z=0  None .rodata    @3798                                                        */
-SECTION_RODATA u8 const lit_3798[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 808559A4-808559AC 0008+00 s=0 e=0 z=0  None .rodata    @3799                                                        */
-SECTION_RODATA u8 const lit_3799[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 808559AC-808559B0 0004+00 s=2 e=0 z=0  None .rodata    @3879                                                        */
 SECTION_RODATA static u32 const lit_3879 = 0x42C80000;
 
@@ -162,6 +146,11 @@ SECTION_RODATA static u32 const lit_3885 = 0x42480000;
 /* 808559C8-808559CC 0004+00 s=1 e=0 z=0  None .rodata    @3886                                                        */
 SECTION_RODATA static u32 const lit_3886 = 0x3F000000;
 
+/* 808559CC-808559D4 0008+00 s=2 e=0 z=0  None .rodata    @3888                                                        */
+SECTION_RODATA static u8 const lit_3888[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 80855320-80855638 0318+00 s=1 e=0 z=0  None .text      mist_tag_move__FP13kytag01_class                             */
 #pragma push
 #pragma optimization_level 0
@@ -173,18 +162,13 @@ asm static void mist_tag_move(kytag01_class* param_0) {
 #pragma pop
 
 
-/* 80855638-80855640 0008+00 s=1 e=0 z=0  None .text      daKytag01_Draw__FP13kytag01_class                            */
-static bool daKytag01_Draw(kytag01_class* param_0) {
+/* 80855638-80855640 0008+00 s=0 e=0 z=0  None .text      daKytag01_Draw__FP13kytag01_class                            */
+bool daKytag01_Draw(kytag01_class* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 808559CC-808559D4 0008+00 s=0 e=0 z=0  None .rodata    @3888                                                        */
-SECTION_RODATA u8 const lit_3888[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 808559D4-808559D8 0004+00 s=1 e=0 z=0  None .rodata    @3946                                                        */
 SECTION_RODATA static u32 const lit_3946 = 0x3D4CCCCD;
 
@@ -194,25 +178,25 @@ SECTION_RODATA static u32 const lit_3947 = 0x3CA3D70A;
 /* 808559DC-808559E0 0004+00 s=1 e=0 z=0  None .rodata    @3948                                                        */
 SECTION_RODATA static u32 const lit_3948 = 0x38D1B717;
 
-/* 80855640-808557DC 019C+00 s=1 e=0 z=0  None .text      daKytag01_Execute__FP13kytag01_class                         */
+/* 80855640-808557DC 019C+00 s=0 e=0 z=0  None .text      daKytag01_Execute__FP13kytag01_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag01_Execute(kytag01_class* param_0) {
+asm void daKytag01_Execute(kytag01_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Execute__FP13kytag01_class.s"
 }
 #pragma pop
 
 
-/* 808557DC-808557E4 0008+00 s=1 e=0 z=0  None .text      daKytag01_IsDelete__FP13kytag01_class                        */
-static bool daKytag01_IsDelete(kytag01_class* param_0) {
+/* 808557DC-808557E4 0008+00 s=0 e=0 z=0  None .text      daKytag01_IsDelete__FP13kytag01_class                        */
+bool daKytag01_IsDelete(kytag01_class* param_0) {
 	return true;
 }
 
 
-/* 808557E4-808557EC 0008+00 s=1 e=0 z=0  None .text      daKytag01_Delete__FP13kytag01_class                          */
-static bool daKytag01_Delete(kytag01_class* param_0) {
+/* 808557E4-808557EC 0008+00 s=0 e=0 z=0  None .text      daKytag01_Delete__FP13kytag01_class                          */
+bool daKytag01_Delete(kytag01_class* param_0) {
 	return true;
 }
 
@@ -224,11 +208,11 @@ SECTION_RODATA static u32 const lit_4016 = 0x437F0000;
 /* 808559E4-808559E8 0004+00 s=1 e=0 z=0  None .rodata    @4017                                                        */
 SECTION_RODATA static u32 const lit_4017 = 0x41200000;
 
-/* 808557EC-80855984 0198+00 s=1 e=0 z=0  None .text      daKytag01_Create__FP10fopAc_ac_c                             */
+/* 808557EC-80855984 0198+00 s=0 e=0 z=0  None .text      daKytag01_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag01_Create(fopAc_ac_c* param_0) {
+asm void daKytag01_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag01/d_a_kytag01/daKytag01_Create__FP10fopAc_ac_c.s"
 }
@@ -236,31 +220,31 @@ asm static void daKytag01_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 808559E8-80855A08 0020+00 s=1 e=0 z=0  None .data      l_daKytag01_Method                                           */
-SECTION_DATA static void* l_daKytag01_Method[8] = {
-	/* 0    */ (void*)daKytag01_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daKytag01_Delete__FP13kytag01_class,
-	/* 2    */ (void*)daKytag01_Execute__FP13kytag01_class,
-	/* 3    */ (void*)daKytag01_IsDelete__FP13kytag01_class,
-	/* 4    */ (void*)daKytag01_Draw__FP13kytag01_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 808559E8-80855A08 0020+00 s=0 e=0 z=0  None .data      l_daKytag01_Method                                           */
+SECTION_DATA void* l_daKytag01_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80855A08-80855A38 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG01                                            */
+/* 80855A08-80855A38 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG01                                            */
 SECTION_DATA void* g_profile_KYTAG01[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02AB0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005A0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x005F0000,
-	/* 9    */ (void*)&l_daKytag01_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02AB0000,
+	(void*)NULL,
+	(void*)0x000005A0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x005F0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)NULL,
 };
 

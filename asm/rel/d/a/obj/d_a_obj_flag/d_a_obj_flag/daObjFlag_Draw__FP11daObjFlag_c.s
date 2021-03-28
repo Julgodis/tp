@@ -11,14 +11,14 @@ lbl_80BEC234:
 /* 80BEC258  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BEC25C  38 DE 01 0C */	addi r6, r30, 0x10c
 /* 80BEC260  4B 5B 75 64 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80BEC264  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEC268  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80BEC26C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80BEC264  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEC268  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BEC26C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80BEC270  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BEC274  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80BEC278  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80BEC27C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80BEC280  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80BEC278  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80BEC27C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80BEC280  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BEC284  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80BEC288  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80BEC28C  80 9E 05 6C */	lwz r4, 0x56c(r30)
@@ -38,11 +38,11 @@ lbl_80BEC234:
 /* 80BEC2C4  80 7E 05 68 */	lwz r3, 0x568(r30)
 /* 80BEC2C8  4B 42 19 FC */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_80BEC2CC:
-/* 80BEC2CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEC2D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BEC2D4  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80BEC2CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEC2D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BEC2D4  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80BEC2D8  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80BEC2DC  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80BEC2DC  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80BEC2E0  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BEC2E4  38 60 00 01 */	li r3, 1
 /* 80BEC2E8  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -43,7 +43,7 @@ lbl_804A918C:
 /* 804A91CC  90 01 00 28 */	stw r0, 0x28(r1)
 /* 804A91D0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804A91D4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804A91D8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804A91D8  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A91DC  38 81 00 28 */	addi r4, r1, 0x28
 /* 804A91E0  38 BE 05 38 */	addi r5, r30, 0x538
 /* 804A91E4  38 C0 00 00 */	li r6, 0
@@ -69,7 +69,7 @@ lbl_804A9210:
 /* 804A9230  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804A9234  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804A9238  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804A923C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804A923C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A9240  38 81 00 24 */	addi r4, r1, 0x24
 /* 804A9244  38 BE 05 38 */	addi r5, r30, 0x538
 /* 804A9248  38 C0 00 00 */	li r6, 0
@@ -94,7 +94,7 @@ lbl_804A9278:
 /* 804A9290  90 01 00 20 */	stw r0, 0x20(r1)
 /* 804A9294  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804A9298  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804A929C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804A929C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A92A0  38 81 00 20 */	addi r4, r1, 0x20
 /* 804A92A4  38 BE 05 38 */	addi r5, r30, 0x538
 /* 804A92A8  38 C0 00 00 */	li r6, 0
@@ -111,12 +111,12 @@ lbl_804A9278:
 /* 804A92D4  B0 1E 05 74 */	sth r0, 0x574(r30)
 /* 804A92D8  3B 40 00 00 */	li r26, 0
 /* 804A92DC  3B A0 00 00 */	li r29, 0
-/* 804A92E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A92E4  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 804A92E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A92E4  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 804A92E8  3C 60 80 4B */	lis r3, data_804A9494@ha
 /* 804A92EC  3B 83 94 94 */	addi r28, r3, data_804A9494@l
 lbl_804A92F0:
-/* 804A92F0  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 804A92F0  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 804A92F4  38 80 00 00 */	li r4, 0
 /* 804A92F8  90 81 00 08 */	stw r4, 8(r1)
 /* 804A92FC  38 00 FF FF */	li r0, -1

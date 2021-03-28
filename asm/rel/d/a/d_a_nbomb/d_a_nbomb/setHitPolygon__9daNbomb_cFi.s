@@ -24,8 +24,8 @@ lbl_804C8ADC:
 /* 804C8ADC  3C 60 80 4D */	lis r3, __vt__8cM3dGPla@ha
 /* 804C8AE0  38 03 C5 E0 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 804C8AE4  90 01 00 44 */	stw r0, 0x44(r1)
-/* 804C8AE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C8AEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C8AE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C8AEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C8AF0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804C8AF4  38 9E 0B 10 */	addi r4, r30, 0xb10
 /* 804C8AF8  38 A1 00 34 */	addi r5, r1, 0x34

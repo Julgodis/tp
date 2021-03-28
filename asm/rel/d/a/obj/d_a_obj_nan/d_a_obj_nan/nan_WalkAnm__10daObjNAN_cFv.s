@@ -9,7 +9,7 @@ lbl_80CA0D9C:
 /* 80CA0DB8  3B E3 31 BC */	addi r31, r3, lit_3774@l
 /* 80CA0DBC  80 7E 06 28 */	lwz r3, 0x628(r30)
 /* 80CA0DC0  C0 23 00 1C */	lfs f1, 0x1c(r3)
-/* 80CA0DC4  C0 1F 00 48 */	lfs f0, 0x48(r31)	/* effective address: 80CA3204 */
+/* 80CA0DC4  C0 1F 00 48 */	lfs f0, 0x48(r31)
 /* 80CA0DC8  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 80CA0DCC  41 82 00 10 */	beq lbl_80CA0DDC
 /* 80CA0DD0  C0 1F 00 4C */	lfs f0, 0x4c(r31)

@@ -10,11 +10,11 @@ lbl_80D28E9C:
 /* 80D28EBC  3B 20 00 00 */	li r25, 0
 /* 80D28EC0  3B 60 00 00 */	li r27, 0
 /* 80D28EC4  3B 80 00 00 */	li r28, 0
-/* 80D28EC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D28ECC  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D28EC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D28ECC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D28ED0  3B 5E 00 34 */	addi r26, r30, 0x34
 lbl_80D28ED4:
-/* 80D28ED4  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80D28ED4  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80D28ED8  38 80 00 00 */	li r4, 0
 /* 80D28EDC  90 81 00 08 */	stw r4, 8(r1)
 /* 80D28EE0  38 00 FF FF */	li r0, -1
@@ -29,7 +29,7 @@ lbl_80D28ED4:
 /* 80D28F04  39 1D 04 B4 */	addi r8, r29, 0x4b4
 /* 80D28F08  39 3D 04 EC */	addi r9, r29, 0x4ec
 /* 80D28F0C  39 40 00 FF */	li r10, 0xff
-/* 80D28F10  C0 3E 00 80 */	lfs f1, 0x80(r30)	/* effective address: 80D29634 */
+/* 80D28F10  C0 3E 00 80 */	lfs f1, 0x80(r30)
 /* 80D28F14  4B 32 3B 7C */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80D28F18  38 1B 06 60 */	addi r0, r27, 0x660
 /* 80D28F1C  7C 7D 01 2E */	stwx r3, r29, r0

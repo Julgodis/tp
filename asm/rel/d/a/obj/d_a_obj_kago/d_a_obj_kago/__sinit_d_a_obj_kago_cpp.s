@@ -11,10 +11,10 @@ lbl_80C33BA0:
 /* 80C33BC4  38 00 00 06 */	li r0, 6
 /* 80C33BC8  7C 09 03 A6 */	mtctr r0
 lbl_80C33BCC:
-/* 80C33BCC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80392680 */
-/* 80C33BD0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80392684 */
-/* 80C33BD4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C33DD8 */
-/* 80C33BD8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C33DDC */
+/* 80C33BCC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C33BD0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C33BD4  90 65 00 04 */	stw r3, 4(r5)
+/* 80C33BD8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C33BDC  42 00 FF F0 */	bdnz lbl_80C33BCC
 /* 80C33BE0  3C 60 80 C3 */	lis r3, __vt__18daObj_Kago_Param_c@ha
 /* 80C33BE4  38 03 3E EC */	addi r0, r3, __vt__18daObj_Kago_Param_c@l

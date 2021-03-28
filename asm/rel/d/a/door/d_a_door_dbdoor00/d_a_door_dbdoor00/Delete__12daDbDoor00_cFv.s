@@ -7,8 +7,8 @@ lbl_8045E428:
 /* 8045E43C  80 03 00 F0 */	lwz r0, 0xf0(r3)
 /* 8045E440  28 00 00 00 */	cmplwi r0, 0
 /* 8045E444  41 82 00 18 */	beq lbl_8045E45C
-/* 8045E448  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E44C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045E448  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E44C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045E450  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8045E454  80 9F 05 80 */	lwz r4, 0x580(r31)
 /* 8045E458  4B C1 5D F8 */	b Release__4cBgSFP9dBgW_Base

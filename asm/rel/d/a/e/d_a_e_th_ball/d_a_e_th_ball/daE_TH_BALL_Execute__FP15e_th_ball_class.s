@@ -96,11 +96,11 @@ lbl_807B75E0:
 /* 807B76A0  4B 85 56 FC */	b transM__14mDoMtx_stack_cFfff
 /* 807B76A4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 807B76A8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 807B76AC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 807B76AC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807B76B0  D0 1F 0D D8 */	stfs f0, 0xdd8(r31)
-/* 807B76B4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 807B76B4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 807B76B8  D0 1F 0D DC */	stfs f0, 0xddc(r31)
-/* 807B76BC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 807B76BC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 807B76C0  D0 1F 0D E0 */	stfs f0, 0xde0(r31)
 /* 807B76C4  7F E3 FB 78 */	mr r3, r31
 /* 807B76C8  4B FF D6 25 */	bl chain_control_01__FP15e_th_ball_class

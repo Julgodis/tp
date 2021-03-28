@@ -7,7 +7,7 @@ lbl_80AF8114:
 /* 80AF8128  40 82 00 24 */	bne lbl_80AF814C
 /* 80AF812C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80AF8130  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80AF8134  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80AF8134  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80AF8138  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80AF813C  28 03 00 00 */	cmplwi r3, 0
 /* 80AF8140  41 82 00 0C */	beq lbl_80AF814C

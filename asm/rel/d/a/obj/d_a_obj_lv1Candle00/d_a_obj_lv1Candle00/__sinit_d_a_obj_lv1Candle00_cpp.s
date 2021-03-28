@@ -19,10 +19,10 @@ lbl_80C569CC:
 /* 80C56A10  38 00 00 06 */	li r0, 6
 /* 80C56A14  7C 09 03 A6 */	mtctr r0
 lbl_80C56A18:
-/* 80C56A18  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C56A50 */
-/* 80C56A1C  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C56A54 */
-/* 80C56A20  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C56AC0 */
-/* 80C56A24  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C56AC4 */
+/* 80C56A18  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C56A1C  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C56A20  90 65 00 04 */	stw r3, 4(r5)
+/* 80C56A24  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C56A28  42 00 FF F0 */	bdnz lbl_80C56A18
 /* 80C56A2C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C56A30  7C 08 03 A6 */	mtlr r0

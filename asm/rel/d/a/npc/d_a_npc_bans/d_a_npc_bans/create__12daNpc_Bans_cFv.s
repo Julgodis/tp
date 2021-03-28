@@ -128,8 +128,8 @@ lbl_80962BB0:
 /* 80962C84  38 1D 08 64 */	addi r0, r29, 0x864
 /* 80962C88  90 1D 0F CC */	stw r0, 0xfcc(r29)
 /* 80962C8C  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80962C90  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80962C94  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80962C90  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80962C94  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80962C98  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80962C9C  4B 71 3E 10 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80962CA0  80 1D 07 68 */	lwz r0, 0x768(r29)

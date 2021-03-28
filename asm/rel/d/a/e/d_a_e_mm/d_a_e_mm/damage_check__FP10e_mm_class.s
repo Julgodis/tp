@@ -30,7 +30,7 @@ lbl_8071FE98:
 /* 8071FF08  C0 3F 00 48 */	lfs f1, 0x48(r31)
 /* 8071FF0C  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 8071FF10  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 8071FF14  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 80722EEC */
+/* 8071FF14  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8071FF18  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8071FF1C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 lbl_8071FF20:
@@ -59,13 +59,13 @@ lbl_8071FF20:
 /* 8071FF78  40 82 00 18 */	bne lbl_8071FF90
 /* 8071FF7C  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 8071FF80  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 8071FF84  A8 03 00 30 */	lha r0, 0x30(r3)	/* effective address: 80722EF0 */
+/* 8071FF84  A8 03 00 30 */	lha r0, 0x30(r3)
 /* 8071FF88  B0 1E 06 9C */	sth r0, 0x69c(r30)
 /* 8071FF8C  48 00 00 14 */	b lbl_8071FFA0
 lbl_8071FF90:
 /* 8071FF90  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 8071FF94  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 8071FF98  A8 03 00 18 */	lha r0, 0x18(r3)	/* effective address: 80722ED8 */
+/* 8071FF98  A8 03 00 18 */	lha r0, 0x18(r3)
 /* 8071FF9C  B0 1E 06 9C */	sth r0, 0x69c(r30)
 lbl_8071FFA0:
 /* 8071FFA0  38 7E 09 04 */	addi r3, r30, 0x904

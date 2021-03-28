@@ -7,12 +7,12 @@ lbl_804C955C:
 /* 804C9570  7C 7E 1B 78 */	mr r30, r3
 /* 804C9574  3C 60 80 4D */	lis r3, lit_3767@ha
 /* 804C9578  3B E3 C3 40 */	addi r31, r3, lit_3767@l
-/* 804C957C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C9580  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 804C9584  83 9D 5D B4 */	lwz r28, 0x5db4(r29)	/* effective address: 8040BF74 */
+/* 804C957C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C9580  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 804C9584  83 9D 5D B4 */	lwz r28, 0x5db4(r29)
 /* 804C9588  38 7E 0B B0 */	addi r3, r30, 0xbb0
-/* 804C958C  C0 3F 00 40 */	lfs f1, 0x40(r31)	/* effective address: 804CC380 */
-/* 804C9590  C0 5F 00 3C */	lfs f2, 0x3c(r31)	/* effective address: 804CC37C */
+/* 804C958C  C0 3F 00 40 */	lfs f1, 0x40(r31)
+/* 804C9590  C0 5F 00 3C */	lfs f2, 0x3c(r31)
 /* 804C9594  4B DA 71 AC */	b cLib_chaseF__FPfff
 /* 804C9598  80 1E 0B 4C */	lwz r0, 0xb4c(r30)
 /* 804C959C  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
@@ -197,8 +197,8 @@ lbl_804C9838:
 /* 804C9848  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 804C984C  D0 01 00 70 */	stfs f0, 0x70(r1)
 /* 804C9850  38 7E 05 78 */	addi r3, r30, 0x578
-/* 804C9854  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804C9858  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804C9854  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804C9858  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804C985C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 804C9860  4B BA D2 4C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 804C9864  7F C3 F3 78 */	mr r3, r30
@@ -244,9 +244,9 @@ lbl_804C98D8:
 /* 804C98F8  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 804C98FC  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 804C9900  D0 1E 04 F8 */	stfs f0, 0x4f8(r30)
-/* 804C9904  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 804C9904  C0 03 00 04 */	lfs f0, 4(r3)
 /* 804C9908  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
-/* 804C990C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 804C990C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 804C9910  D0 1E 05 00 */	stfs f0, 0x500(r30)
 /* 804C9914  38 60 00 01 */	li r3, 1
 lbl_804C9918:

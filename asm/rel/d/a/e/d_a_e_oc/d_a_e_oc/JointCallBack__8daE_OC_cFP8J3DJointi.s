@@ -7,7 +7,7 @@ lbl_8072C6E8:
 /* 8072C6FC  40 82 00 24 */	bne lbl_8072C720
 /* 8072C700  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8072C704  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8072C708  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8072C708  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8072C70C  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8072C710  28 03 00 00 */	cmplwi r3, 0
 /* 8072C714  41 82 00 0C */	beq lbl_8072C720

@@ -31,14 +31,14 @@ lbl_80A02DD4:
 /* 80A02E48  54 00 10 3A */	slwi r0, r0, 2
 /* 80A02E4C  7C 04 00 2E */	lwzx r0, r4, r0
 /* 80A02E50  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 80A02E54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A02E58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A02E54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A02E58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A02E5C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80A02E60  80 9F 01 00 */	lwz r4, 0x100(r31)
 /* 80A02E64  4B 64 39 9C */	b setObjectArchive__16dEvent_manager_cFPc
 lbl_80A02E68:
-/* 80A02E68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A02E6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A02E68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A02E6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A02E70  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80A02E74  7F E4 FB 78 */	mr r4, r31
 /* 80A02E78  80 BF 05 70 */	lwz r5, 0x570(r31)

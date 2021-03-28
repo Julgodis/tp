@@ -17,7 +17,7 @@ lbl_807821B8:
 /* 807821B8  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 807821BC  3C 80 80 78 */	lis r4, data_80784FCC@ha
 /* 807821C0  38 84 4F CC */	addi r4, r4, data_80784FCC@l
-/* 807821C4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80784FCC */
+/* 807821C4  80 84 00 00 */	lwz r4, 0(r4)
 /* 807821C8  4B AE EA 3C */	b cLib_targetAngleY__FPC3VecPC3Vec
 lbl_807821CC:
 /* 807821CC  7C 7D 1B 78 */	mr r29, r3

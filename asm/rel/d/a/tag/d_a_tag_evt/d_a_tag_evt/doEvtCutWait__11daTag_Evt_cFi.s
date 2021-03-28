@@ -6,8 +6,8 @@ lbl_8048C090:
 /* 8048C0A0  4B ED 61 3C */	b _savegpr_29
 /* 8048C0A4  7C 7D 1B 78 */	mr r29, r3
 /* 8048C0A8  7C 9E 23 78 */	mr r30, r4
-/* 8048C0AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048C0B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048C0AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048C0B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048C0B4  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 8048C0B8  7F E3 FB 78 */	mr r3, r31
 /* 8048C0BC  4B BB BC 90 */	b getIsAddvance__16dEvent_manager_cFi

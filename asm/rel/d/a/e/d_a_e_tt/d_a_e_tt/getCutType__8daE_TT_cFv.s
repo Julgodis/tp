@@ -1,8 +1,8 @@
 lbl_807BDC10:
-/* 807BDC10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BDC14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807BDC18  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 807BDC1C  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 807BDC10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BDC14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807BDC18  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 807BDC1C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 807BDC20  2C 00 00 26 */	cmpwi r0, 0x26
 /* 807BDC24  41 82 00 1C */	beq lbl_807BDC40
 /* 807BDC28  40 80 00 20 */	bge lbl_807BDC48

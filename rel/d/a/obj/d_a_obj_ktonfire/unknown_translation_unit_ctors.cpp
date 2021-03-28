@@ -19,7 +19,6 @@ extern void* const data_8058CF74[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_ktOnFire_cpp(); // 1
 
 // 
 // Declarations:

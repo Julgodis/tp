@@ -12,7 +12,7 @@ lbl_80714534:
 /* 8071455C  40 82 00 30 */	bne lbl_8071458C
 /* 80714560  3C 60 80 72 */	lis r3, target_info_count@ha
 /* 80714564  38 83 CB 8C */	addi r4, r3, target_info_count@l
-/* 80714568  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8071CB8C */
+/* 80714568  80 A4 00 00 */	lwz r5, 0(r4)
 /* 8071456C  2C 05 00 14 */	cmpwi r5, 0x14
 /* 80714570  40 80 00 1C */	bge lbl_8071458C
 /* 80714574  54 A0 10 3A */	slwi r0, r5, 2

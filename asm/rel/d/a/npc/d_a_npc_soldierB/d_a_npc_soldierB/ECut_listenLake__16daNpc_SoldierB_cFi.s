@@ -6,8 +6,8 @@ lbl_80AF4F54:
 /* 80AF4F64  4B 86 D2 70 */	b _savegpr_27
 /* 80AF4F68  7C 7B 1B 78 */	mr r27, r3
 /* 80AF4F6C  7C 9C 23 78 */	mr r28, r4
-/* 80AF4F70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF4F74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF4F70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF4F74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF4F78  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80AF4F7C  3B C0 00 00 */	li r30, 0
 /* 80AF4F80  3B A0 FF FF */	li r29, -1

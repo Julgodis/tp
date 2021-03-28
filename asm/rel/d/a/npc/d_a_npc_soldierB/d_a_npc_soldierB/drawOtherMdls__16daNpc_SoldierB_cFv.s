@@ -31,8 +31,8 @@ lbl_80AF417C:
 /* 80AF41F0  4B 52 92 3C */	b fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData
 /* 80AF41F4  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
 /* 80AF41F8  4B 51 9A CC */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80AF41FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF4200  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF41FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF4200  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF4204  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80AF4208  80 9F 09 A0 */	lwz r4, 0x9a0(r31)
 /* 80AF420C  80 BF 0B D8 */	lwz r5, 0xbd8(r31)

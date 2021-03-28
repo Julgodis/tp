@@ -16,8 +16,8 @@ lbl_80529520:
 /* 80529558  A0 1D 05 6C */	lhz r0, 0x56c(r29)
 /* 8052955C  28 00 0F FF */	cmplwi r0, 0xfff
 /* 80529560  41 82 00 38 */	beq lbl_80529598
-/* 80529564  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529568  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80529564  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529568  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8052956C  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80529570  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 80529574  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
@@ -36,8 +36,8 @@ lbl_80529598:
 /* 805295A4  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 805295A8  88 A3 0D 64 */	lbz r5, struct_80450D64+0x0@l(r3)
 /* 805295AC  7C A5 07 74 */	extsb r5, r5
-/* 805295B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805295B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805295B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805295B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805295B8  4B B0 BD A8 */	b isSwitch__10dSv_info_cCFii
 /* 805295BC  2C 03 00 00 */	cmpwi r3, 0
 /* 805295C0  40 82 00 0C */	bne lbl_805295CC
@@ -47,8 +47,8 @@ lbl_805295CC:
 /* 805295CC  A0 1D 05 6E */	lhz r0, 0x56e(r29)
 /* 805295D0  28 00 0F FF */	cmplwi r0, 0xfff
 /* 805295D4  41 82 00 38 */	beq lbl_8052960C
-/* 805295D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805295DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805295D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805295DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805295E0  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 805295E4  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 805295E8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
@@ -67,8 +67,8 @@ lbl_8052960C:
 /* 80529618  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 8052961C  88 A3 0D 64 */	lbz r5, struct_80450D64+0x0@l(r3)
 /* 80529620  7C A5 07 74 */	extsb r5, r5
-/* 80529624  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529628  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80529624  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529628  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8052962C  4B B0 BD 34 */	b isSwitch__10dSv_info_cCFii
 /* 80529630  2C 03 00 00 */	cmpwi r3, 0
 /* 80529634  41 82 00 0C */	beq lbl_80529640
@@ -87,9 +87,9 @@ lbl_80529654:
 /* 80529660  88 1D 05 68 */	lbz r0, 0x568(r29)
 /* 80529664  28 00 00 1F */	cmplwi r0, 0x1f
 /* 80529668  41 82 00 3C */	beq lbl_805296A4
-/* 8052966C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529670  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80529674  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 804061F4 */
+/* 8052966C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529670  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80529674  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 80529678  D0 1F 12 44 */	stfs f0, 0x1244(r31)
 /* 8052967C  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 80529680  C8 3E 00 18 */	lfd f1, 0x18(r30)
@@ -100,7 +100,7 @@ lbl_80529654:
 /* 80529694  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80529698  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8052969C  D0 1F 12 44 */	stfs f0, 0x1244(r31)
-/* 805296A0  D0 03 00 34 */	stfs f0, 0x34(r3)	/* effective address: 804061F4 */
+/* 805296A0  D0 03 00 34 */	stfs f0, 0x34(r3)
 lbl_805296A4:
 /* 805296A4  38 00 00 01 */	li r0, 1
 /* 805296A8  98 1D 05 71 */	stb r0, 0x571(r29)
@@ -129,11 +129,11 @@ lbl_805296DC:
 /* 805296FC  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 80529700  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80529704  EC 22 00 32 */	fmuls f1, f2, f0
-/* 80529708  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8052970C  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80529710  C0 1D 00 34 */	lfs f0, 0x34(r29)	/* effective address: 804061F4 */
+/* 80529708  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8052970C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80529710  C0 1D 00 34 */	lfs f0, 0x34(r29)
 /* 80529714  D0 1F 12 44 */	stfs f0, 0x1244(r31)
-/* 80529718  A0 1D 00 38 */	lhz r0, 0x38(r29)	/* effective address: 804061F8 */
+/* 80529718  A0 1D 00 38 */	lhz r0, 0x38(r29)
 /* 8052971C  B0 1F 12 BE */	sth r0, 0x12be(r31)
 /* 80529720  EC 20 08 2A */	fadds f1, f0, f1
 /* 80529724  D0 3F 12 44 */	stfs f1, 0x1244(r31)

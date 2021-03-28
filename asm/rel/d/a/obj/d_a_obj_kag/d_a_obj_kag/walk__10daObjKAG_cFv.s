@@ -13,8 +13,8 @@ lbl_80C2F8C4:
 /* 80C2F8F0  3C 60 80 C3 */	lis r3, stringBase0@ha
 /* 80C2F8F4  38 63 12 60 */	addi r3, r3, stringBase0@l
 /* 80C2F8F8  38 80 00 07 */	li r4, 7
-/* 80C2F8FC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C2F900  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C2F8FC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C2F900  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C2F904  3C A5 00 02 */	addis r5, r5, 2
 /* 80C2F908  38 C0 00 80 */	li r6, 0x80
 /* 80C2F90C  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -124,8 +124,8 @@ lbl_80C2F978:
 /* 80C2FAA4  4B 44 82 C0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
 /* 80C2FAA8  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80C2FAAC  D0 1E 05 2C */	stfs f0, 0x52c(r30)
-/* 80C2FAB0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C2FAB4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C2FAB0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C2FAB4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C2FAB8  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80C2FABC  7F A3 EB 78 */	mr r3, r29
 /* 80C2FAC0  38 81 01 00 */	addi r4, r1, 0x100
@@ -280,11 +280,11 @@ lbl_80C2FCB4:
 /* 80C2FCD8  41 82 00 34 */	beq lbl_80C2FD0C
 /* 80C2FCDC  3C 60 80 C3 */	lis r3, lit_4377@ha
 /* 80C2FCE0  38 83 12 F4 */	addi r4, r3, lit_4377@l
-/* 80C2FCE4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C312F4 */
-/* 80C2FCE8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C312F8 */
+/* 80C2FCE4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C2FCE8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C2FCEC  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 80C2FCF0  90 01 00 20 */	stw r0, 0x20(r1)
-/* 80C2FCF4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C312FC */
+/* 80C2FCF4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C2FCF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80C2FCFC  7F C3 F3 78 */	mr r3, r30
 /* 80C2FD00  38 81 00 1C */	addi r4, r1, 0x1c
@@ -293,11 +293,11 @@ lbl_80C2FCB4:
 lbl_80C2FD0C:
 /* 80C2FD0C  3C 60 80 C3 */	lis r3, lit_4380@ha
 /* 80C2FD10  38 83 13 00 */	addi r4, r3, lit_4380@l
-/* 80C2FD14  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C31300 */
-/* 80C2FD18  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C31304 */
+/* 80C2FD14  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C2FD18  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C2FD1C  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80C2FD20  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80C2FD24  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C31308 */
+/* 80C2FD24  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C2FD28  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80C2FD2C  7F C3 F3 78 */	mr r3, r30
 /* 80C2FD30  38 81 00 10 */	addi r4, r1, 0x10

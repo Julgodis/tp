@@ -7,7 +7,7 @@ lbl_80BF7174:
 /* 80BF7188  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80BF718C  3C 80 80 C0 */	lis r4, l_arcName@ha
 /* 80BF7190  38 84 90 88 */	addi r4, r4, l_arcName@l
-/* 80BF7194  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF9088 */
+/* 80BF7194  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF7198  4B 43 5D 24 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BF719C  2C 03 00 04 */	cmpwi r3, 4
 /* 80BF71A0  41 82 00 08 */	beq lbl_80BF71A8
@@ -16,7 +16,7 @@ lbl_80BF71A8:
 /* 80BF71A8  7F E3 FB 78 */	mr r3, r31
 /* 80BF71AC  3C 80 80 C0 */	lis r4, l_arcName@ha
 /* 80BF71B0  38 84 90 88 */	addi r4, r4, l_arcName@l
-/* 80BF71B4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF9088 */
+/* 80BF71B4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF71B8  A0 1F 07 66 */	lhz r0, 0x766(r31)
 /* 80BF71BC  54 00 D6 BA */	rlwinm r0, r0, 0x1a, 0x1a, 0x1d
 /* 80BF71C0  3C A0 80 C0 */	lis r5, l_dzb@ha

@@ -18,8 +18,8 @@ lbl_80BE98D8:
 /* 80BE98DC  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BE98E0  28 04 00 FF */	cmplwi r4, 0xff
 /* 80BE98E4  41 82 00 3C */	beq lbl_80BE9920
-/* 80BE98E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE98EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE98E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE98EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE98F0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80BE98F4  7C 05 07 74 */	extsb r5, r0
 /* 80BE98F8  4B 44 BA 68 */	b isSwitch__10dSv_info_cCFii

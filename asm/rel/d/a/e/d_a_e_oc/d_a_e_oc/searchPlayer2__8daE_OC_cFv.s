@@ -26,15 +26,15 @@ lbl_8072CF90:
 /* 8072CFF0  88 9F 06 E1 */	lbz r4, 0x6e1(r31)
 /* 8072CFF4  28 04 00 FF */	cmplwi r4, 0xff
 /* 8072CFF8  41 82 00 38 */	beq lbl_8072D030
-/* 8072CFFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D000  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072CFFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D000  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072D004  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8072D008  7C 05 07 74 */	extsb r5, r0
 /* 8072D00C  4B 90 83 54 */	b isSwitch__10dSv_info_cCFii
 /* 8072D010  2C 03 00 00 */	cmpwi r3, 0
 /* 8072D014  40 82 00 1C */	bne lbl_8072D030
-/* 8072D018  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D01C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072D018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D01C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072D020  88 9F 06 E1 */	lbz r4, 0x6e1(r31)
 /* 8072D024  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8072D028  7C 05 07 74 */	extsb r5, r0
@@ -58,15 +58,15 @@ lbl_8072D048:
 /* 8072D064  88 9F 06 E1 */	lbz r4, 0x6e1(r31)
 /* 8072D068  28 04 00 FF */	cmplwi r4, 0xff
 /* 8072D06C  41 82 00 40 */	beq lbl_8072D0AC
-/* 8072D070  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D074  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072D070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D074  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072D078  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8072D07C  7C 05 07 74 */	extsb r5, r0
 /* 8072D080  4B 90 82 E0 */	b isSwitch__10dSv_info_cCFii
 /* 8072D084  2C 03 00 00 */	cmpwi r3, 0
 /* 8072D088  40 82 00 24 */	bne lbl_8072D0AC
-/* 8072D08C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D090  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072D08C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072D094  88 9F 06 E1 */	lbz r4, 0x6e1(r31)
 /* 8072D098  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8072D09C  7C 05 07 74 */	extsb r5, r0

@@ -125,8 +125,8 @@ lbl_80A2CF48:
 /* 80A2CF64  38 00 00 00 */	li r0, 0
 /* 80A2CF68  90 03 00 54 */	stw r0, 0x54(r3)
 lbl_80A2CF6C:
-/* 80A2CF6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A2CF70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A2CF6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A2CF70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A2CF74  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80A2CF78  80 9F 0D C8 */	lwz r4, 0xdc8(r31)
 /* 80A2CF7C  80 BF 0E 44 */	lwz r5, 0xe44(r31)

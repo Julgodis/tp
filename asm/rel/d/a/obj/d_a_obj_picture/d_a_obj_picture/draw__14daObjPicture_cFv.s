@@ -31,21 +31,21 @@ lbl_80CAE0C0:
 /* 80CAE0CC  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CAE0D0  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 80CAE0D4  4B 4F 6C CC */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80CAE0D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAE0DC  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CAE0E0  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80CAE0D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAE0DC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CAE0E0  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80CAE0E4  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CAE0E8  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80CAE0EC  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80CAE0F0  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80CAE0F4  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
+/* 80CAE0EC  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80CAE0F0  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80CAE0F4  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80CAE0F8  80 7F 0C B4 */	lwz r3, 0xcb4(r31)
 /* 80CAE0FC  4B 35 FB C8 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80CAE100  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAE104  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CAE108  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80CAE100  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAE104  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CAE108  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CAE10C  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80CAE110  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80CAE110  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80CAE114  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80CAE118  3B 20 00 00 */	li r25, 0
 /* 80CAE11C  3B C0 00 00 */	li r30, 0
@@ -55,12 +55,12 @@ lbl_80CAE0C0:
 /* 80CAE12C  3C 60 80 CB */	lis r3, lit_4076@ha
 /* 80CAE130  3B A3 F0 68 */	addi r29, r3, lit_4076@l
 lbl_80CAE134:
-/* 80CAE134  80 1C 00 00 */	lwz r0, 0(r28)	/* effective address: 80CAF064 */
+/* 80CAE134  80 1C 00 00 */	lwz r0, 0(r28)
 /* 80CAE138  90 01 00 08 */	stw r0, 8(r1)
 /* 80CAE13C  3B 7E 0C AC */	addi r27, r30, 0xcac
 /* 80CAE140  7C 7F D8 2E */	lwzx r3, r31, r27
 /* 80CAE144  38 80 00 0A */	li r4, 0xa
-/* 80CAE148  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80CAF068 */
+/* 80CAE148  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 80CAE14C  38 A1 00 08 */	addi r5, r1, 8
 /* 80CAE150  38 C0 00 00 */	li r6, 0
 /* 80CAE154  38 FF 01 0C */	addi r7, r31, 0x10c

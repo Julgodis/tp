@@ -205,30 +205,30 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803A82C4-803A82D0 000C+00 s=1 e=0 z=0  None .data      @3617                                                        */
 SECTION_DATA static void* lit_3617[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)initStart__17dEvLib_callback_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)initStart__17dEvLib_callback_cFv,
 };
 
 /* 803A82D0-803A82DC 000C+00 s=1 e=0 z=0  None .data      @3618                                                        */
 SECTION_DATA static void* lit_3618[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)executeStart__17dEvLib_callback_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)executeStart__17dEvLib_callback_cFv,
 };
 
 /* 803A82DC-803A82E8 000C+00 s=1 e=0 z=0  None .data      @3621                                                        */
 SECTION_DATA static void* lit_3621[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)initRun__17dEvLib_callback_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)initRun__17dEvLib_callback_cFv,
 };
 
 /* 803A82E8-803A82F8 000C+04 s=1 e=0 z=0  None .data      @3622                                                        */
 SECTION_DATA static void* lit_3622[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)executeRun__17dEvLib_callback_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)executeRun__17dEvLib_callback_cFv,
 	/* padding */
 	NULL,
 };

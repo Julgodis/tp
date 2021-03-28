@@ -5,9 +5,9 @@ lbl_807C3B58:
 /* 807C3B64  39 61 01 70 */	addi r11, r1, 0x170
 /* 807C3B68  4B B9 E6 60 */	b _savegpr_24
 /* 807C3B6C  7C 78 1B 78 */	mr r24, r3
-/* 807C3B70  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807C3B74  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807C3B78  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807C3B70  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807C3B74  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807C3B78  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 807C3B7C  4B FF FE 49 */	bl getWolfCutType__8daE_VA_cFv
 /* 807C3B80  7C 7F 1B 78 */	mr r31, r3
 /* 807C3B84  38 78 1B 1C */	addi r3, r24, 0x1b1c
@@ -390,7 +390,7 @@ lbl_807C40CC:
 /* 807C4100  4B FF F8 19 */	bl setActionMode__8daE_VA_cFii
 /* 807C4104  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807C4108  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807C410C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 807CF4E0 */
+/* 807C410C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 807C4110  FC 00 00 1E */	fctiwz f0, f0
 /* 807C4114  D8 01 01 48 */	stfd f0, 0x148(r1)
 /* 807C4118  80 01 01 4C */	lwz r0, 0x14c(r1)
@@ -399,8 +399,8 @@ lbl_807C40CC:
 /* 807C4124  98 18 13 81 */	stb r0, 0x1381(r24)
 /* 807C4128  48 00 02 40 */	b lbl_807C4368
 lbl_807C412C:
-/* 807C412C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C4130  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807C412C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C4130  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807C4134  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807C4138  38 80 00 1F */	li r4, 0x1f
 /* 807C413C  4B 8A BC 58 */	b StopQuake__12dVibration_cFi

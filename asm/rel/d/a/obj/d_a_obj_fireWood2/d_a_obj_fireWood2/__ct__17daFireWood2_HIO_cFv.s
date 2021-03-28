@@ -7,10 +7,10 @@ lbl_80BE824C:
 /* 80BE8260  3C 80 80 BF */	lis r4, __vt__17daFireWood2_HIO_c@ha
 /* 80BE8264  38 04 90 5C */	addi r0, r4, __vt__17daFireWood2_HIO_c@l
 /* 80BE8268  90 03 00 00 */	stw r0, 0(r3)
-/* 80BE826C  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80BE8F34 */
+/* 80BE826C  C0 05 00 00 */	lfs f0, 0(r5)
 /* 80BE8270  D0 03 00 04 */	stfs f0, 4(r3)
-/* 80BE8274  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80BE8F38 */
+/* 80BE8274  C0 05 00 04 */	lfs f0, 4(r5)
 /* 80BE8278  D0 03 00 08 */	stfs f0, 8(r3)
-/* 80BE827C  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80BE8F3C */
+/* 80BE827C  C0 05 00 08 */	lfs f0, 8(r5)
 /* 80BE8280  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80BE8284  4E 80 00 20 */	blr 

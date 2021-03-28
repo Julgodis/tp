@@ -99,7 +99,7 @@ lbl_80D031FC:
 lbl_80D0320C:
 /* 80D0320C  3C 60 80 D0 */	lis r3, l_HIO@ha
 /* 80D03210  38 63 42 6C */	addi r3, r3, l_HIO@l
-/* 80D03214  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 80D0429C */
+/* 80D03214  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 80D03218  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80D0321C  4C 40 13 82 */	cror 2, 0, 2
 /* 80D03220  40 82 00 0C */	bne lbl_80D0322C

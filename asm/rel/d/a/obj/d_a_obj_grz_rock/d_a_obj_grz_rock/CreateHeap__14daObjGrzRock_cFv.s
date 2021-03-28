@@ -6,10 +6,10 @@ lbl_80C14EE0:
 /* 80C14EF0  7C 7F 1B 78 */	mr r31, r3
 /* 80C14EF4  3C 60 80 C1 */	lis r3, l_arcName@ha
 /* 80C14EF8  38 63 53 8C */	addi r3, r3, l_arcName@l
-/* 80C14EFC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C1538C */
+/* 80C14EFC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C14F00  38 80 00 04 */	li r4, 4
-/* 80C14F04  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C14F08  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C14F04  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C14F08  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C14F0C  3C A5 00 02 */	addis r5, r5, 2
 /* 80C14F10  38 C0 00 80 */	li r6, 0x80
 /* 80C14F14  38 A5 C2 F8 */	addi r5, r5, -15624

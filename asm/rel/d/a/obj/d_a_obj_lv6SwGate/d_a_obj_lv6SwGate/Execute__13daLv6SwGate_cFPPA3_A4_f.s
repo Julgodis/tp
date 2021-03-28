@@ -44,8 +44,8 @@ lbl_80C747FC:
 lbl_80C7480C:
 /* 80C7480C  3A C0 00 00 */	li r22, 0
 /* 80C74810  3B A0 00 00 */	li r29, 0
-/* 80C74814  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C74818  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C74814  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C74818  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C7481C  3B C3 23 3C */	addi r30, r3, 0x233c
 /* 80C74820  C3 FF 00 44 */	lfs f31, 0x44(r31)
 /* 80C74824  C3 DF 00 3C */	lfs f30, 0x3c(r31)

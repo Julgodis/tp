@@ -10,8 +10,8 @@ lbl_8072AA90:
 /* 8072AAB0  7C DD 33 78 */	mr r29, r6
 /* 8072AAB4  7C FE 3B 78 */	mr r30, r7
 /* 8072AAB8  7D 1F 43 78 */	mr r31, r8
-/* 8072AABC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072AAC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072AABC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072AAC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072AAC4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8072AAC8  7F 44 D3 78 */	mr r4, r26
 /* 8072AACC  4B 94 9B 94 */	b ChkPolySafe__4cBgSFRC13cBgS_PolyInfo

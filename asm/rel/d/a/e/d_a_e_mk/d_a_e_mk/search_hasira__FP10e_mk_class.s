@@ -36,13 +36,13 @@ lbl_807145FC:
 /* 80714628  98 18 07 1D */	stb r0, 0x71d(r24)
 /* 8071462C  3C 60 80 72 */	lis r3, target_info@ha
 /* 80714630  38 63 CB 3C */	addi r3, r3, target_info@l
-/* 80714634  80 63 00 14 */	lwz r3, 0x14(r3)	/* effective address: 8071CB50 */
+/* 80714634  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80714638  48 00 02 0C */	b lbl_80714844
 lbl_8071463C:
 /* 8071463C  C3 DD 00 20 */	lfs f30, 0x20(r29)
 /* 80714640  3C 60 80 72 */	lis r3, target_info_count@ha
 /* 80714644  3B C3 CB 8C */	addi r30, r3, target_info_count@l
-/* 80714648  80 1E 00 00 */	lwz r0, 0(r30)	/* effective address: 8071CB8C */
+/* 80714648  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8071464C  2C 00 00 00 */	cmpwi r0, 0
 /* 80714650  41 82 01 E8 */	beq lbl_80714838
 /* 80714654  3B 60 00 00 */	li r27, 0

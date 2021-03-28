@@ -75,20 +75,17 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -143,10 +140,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjWindow_create1st(daObjWindow_c*); // 2
-static void daObjWindow_MoveBGDelete(daObjWindow_c*); // 2
-static void daObjWindow_MoveBGExecute(daObjWindow_c*); // 2
-static void daObjWindow_MoveBGDraw(daObjWindow_c*); // 2
+void daObjWindow_create1st(daObjWindow_c*); // 2
+void daObjWindow_MoveBGDelete(daObjWindow_c*); // 2
+void daObjWindow_MoveBGExecute(daObjWindow_c*); // 2
+void daObjWindow_MoveBGDraw(daObjWindow_c*); // 2
 
 extern "C" void initBaseMtx__13daObjWindow_cFv(); // 1
 extern "C" void setBaseMtx__13daObjWindow_cFv(); // 1
@@ -157,13 +154,14 @@ extern "C" void create1st__13daObjWindow_cFv(); // 1
 extern "C" void Execute__13daObjWindow_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjWindow_cFv(); // 1
 extern "C" void Delete__13daObjWindow_cFv(); // 1
-extern "C" static void daObjWindow_create1st__FP13daObjWindow_c(); // 1
+extern "C" void daObjWindow_create1st__FP13daObjWindow_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static void daObjWindow_MoveBGDelete__FP13daObjWindow_c(); // 1
-extern "C" static void daObjWindow_MoveBGExecute__FP13daObjWindow_c(); // 1
-extern "C" static void daObjWindow_MoveBGDraw__FP13daObjWindow_c(); // 1
+extern "C" void daObjWindow_MoveBGDelete__FP13daObjWindow_c(); // 1
+extern "C" void daObjWindow_MoveBGExecute__FP13daObjWindow_c(); // 1
+extern "C" void daObjWindow_MoveBGDraw__FP13daObjWindow_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daObjWindow_METHODS[8];
 extern "C" extern void* g_profile_Obj_Window[12];
 
 // 
@@ -193,9 +191,6 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void dComIfGp_getReverb__Fi(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -217,23 +212,15 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -282,9 +269,116 @@ SECTION_RODATA static u8 const lit_3664[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
+/* 80D39284-80D39288 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)NULL;
+
+/* 80D39288-80D392CC 0044+00 s=1 e=0 z=0  None .data      l_cyl_src                                                    */
+SECTION_DATA static u8 l_cyl_src[68] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
+	0x43, 0xC8, 0x00, 0x00,
+};
+
+/* 80D38840-80D388F0 00B0+00 s=0 e=0 z=0  None .text      Create__13daObjWindow_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWindow_c::Create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Create__13daObjWindow_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80D39248-80D3924C 0004+00 s=2 e=0 z=0  None .rodata    @3696                                                        */
 SECTION_RODATA static u32 const lit_3696 = 0x3F800000;
 
+/* 80D392CC-80D392EC 0020+00 s=0 e=0 z=0  None .data      daObjWindow_METHODS                                          */
+SECTION_DATA void* daObjWindow_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D392EC-80D3931C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Window                                         */
+SECTION_DATA void* g_profile_Obj_Window[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00780000,
+	(void*)NULL,
+	(void*)0x0000072C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01EB0000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
+};
+
+/* 80D3931C-80D39328 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D39328-80D39334 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D39334-80D39340 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
+SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D388F0-80D38A20 0130+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjWindow_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWindow_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/CreateHeap__13daObjWindow_cFv.s"
+}
+#pragma pop
+
+
+/* 80D38A20-80D38A68 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm J3DFrameCtrl::~J3DFrameCtrl() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/__dt__12J3DFrameCtrlFv.s"
+}
+#pragma pop
+
+
+/* 80D38A68-80D38B04 009C+00 s=1 e=0 z=0  None .text      create1st__13daObjWindow_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjWindow_c::create1st() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/create1st__13daObjWindow_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80D3924C-80D39250 0004+00 s=1 e=0 z=0  None .rodata    @3821                                                        */
 SECTION_RODATA static u32 const lit_3821 = 0x43240000;
 
@@ -321,120 +415,7 @@ SECTION_RODATA static u32 const lit_3831 = 0xC2480000;
 /* 80D39278-80D3927C 0004+00 s=1 e=0 z=0  None .rodata    @3832                                                        */
 SECTION_RODATA static u32 const lit_3832 = 0x42A00000;
 
-/* 80D3927C-80D39284 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D3927C = "J_KazeD";
-#pragma pop
-
-/* 80D39284-80D39288 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80D39288-80D392CC 0044+00 s=1 e=0 z=0  None .data      l_cyl_src                                                    */
-SECTION_DATA static u8 l_cyl_src[68] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0xD8, 0xFB, 0xFD, 0xFF, 0x00, 0x00, 0x00, 0x11, 0x00, 0x00, 0x00, 0x79, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x20, 0x00, 0x00,
-	0x43, 0xC8, 0x00, 0x00,
-};
-
-/* 80D38840-80D388F0 00B0+00 s=1 e=0 z=0  None .text      Create__13daObjWindow_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWindow_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/Create__13daObjWindow_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80D392CC-80D392EC 0020+00 s=1 e=0 z=0  None .data      daObjWindow_METHODS                                          */
-SECTION_DATA static void* daObjWindow_METHODS[8] = {
-	/* 0    */ (void*)daObjWindow_create1st__FP13daObjWindow_c,
-	/* 1    */ (void*)daObjWindow_MoveBGDelete__FP13daObjWindow_c,
-	/* 2    */ (void*)daObjWindow_MoveBGExecute__FP13daObjWindow_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjWindow_MoveBGDraw__FP13daObjWindow_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80D392EC-80D3931C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Window                                         */
-SECTION_DATA void* g_profile_Obj_Window[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00780000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000072C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01EB0000,
-	/* 9    */ (void*)&daObjWindow_METHODS,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80D3931C-80D39328 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80D39328-80D39334 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80D39334-80D39340 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
-SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
-};
-
-/* 80D388F0-80D38A20 0130+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjWindow_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWindow_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/CreateHeap__13daObjWindow_cFv.s"
-}
-#pragma pop
-
-
-/* 80D38A20-80D38A68 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm J3DFrameCtrl::~J3DFrameCtrl() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/__dt__12J3DFrameCtrlFv.s"
-}
-#pragma pop
-
-
-/* 80D38A68-80D38B04 009C+00 s=1 e=0 z=0  None .text      create1st__13daObjWindow_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjWindow_c::create1st() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/create1st__13daObjWindow_cFv.s"
-}
-#pragma pop
-
-
-/* 80D38B04-80D38F28 0424+00 s=1 e=0 z=0  None .text      Execute__13daObjWindow_cFPPA3_A4_f                           */
+/* 80D38B04-80D38F28 0424+00 s=0 e=0 z=0  None .text      Execute__13daObjWindow_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +426,7 @@ asm void daObjWindow_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80D38F28-80D39000 00D8+00 s=1 e=0 z=0  None .text      Draw__13daObjWindow_cFv                                      */
+/* 80D38F28-80D39000 00D8+00 s=0 e=0 z=0  None .text      Draw__13daObjWindow_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,7 +437,7 @@ asm void daObjWindow_c::Draw() {
 #pragma pop
 
 
-/* 80D39000-80D39034 0034+00 s=1 e=0 z=0  None .text      Delete__13daObjWindow_cFv                                    */
+/* 80D39000-80D39034 0034+00 s=0 e=0 z=0  None .text      Delete__13daObjWindow_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,30 +451,30 @@ asm void daObjWindow_c::Delete() {
 /* ############################################################################################## */
 /* 80D39340-80D39368 0028+00 s=1 e=0 z=0  None .data      __vt__13daObjWindow_c                                        */
 SECTION_DATA static void* __vt__13daObjWindow_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjWindow_cFv,
-	/* 3    */ (void*)Create__13daObjWindow_cFv,
-	/* 4    */ (void*)Execute__13daObjWindow_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjWindow_cFv,
-	/* 6    */ (void*)Delete__13daObjWindow_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D39034-80D39128 00F4+00 s=1 e=0 z=0  None .text      daObjWindow_create1st__FP13daObjWindow_c                     */
+/* 80D39034-80D39128 00F4+00 s=0 e=0 z=0  None .text      daObjWindow_create1st__FP13daObjWindow_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjWindow_create1st(daObjWindow_c* param_0) {
+asm void daObjWindow_create1st(daObjWindow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_create1st__FP13daObjWindow_c.s"
 }
 #pragma pop
 
 
-/* 80D39128-80D39170 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80D39128-80D39170 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -504,7 +485,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80D39170-80D391B8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D39170-80D391B8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -515,36 +496,44 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D391B8-80D391D8 0020+00 s=1 e=0 z=0  None .text      daObjWindow_MoveBGDelete__FP13daObjWindow_c                  */
+/* 80D391B8-80D391D8 0020+00 s=0 e=0 z=0  None .text      daObjWindow_MoveBGDelete__FP13daObjWindow_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjWindow_MoveBGDelete(daObjWindow_c* param_0) {
+asm void daObjWindow_MoveBGDelete(daObjWindow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGDelete__FP13daObjWindow_c.s"
 }
 #pragma pop
 
 
-/* 80D391D8-80D391F8 0020+00 s=1 e=0 z=0  None .text      daObjWindow_MoveBGExecute__FP13daObjWindow_c                 */
+/* 80D391D8-80D391F8 0020+00 s=0 e=0 z=0  None .text      daObjWindow_MoveBGExecute__FP13daObjWindow_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjWindow_MoveBGExecute(daObjWindow_c* param_0) {
+asm void daObjWindow_MoveBGExecute(daObjWindow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGExecute__FP13daObjWindow_c.s"
 }
 #pragma pop
 
 
-/* 80D391F8-80D39224 002C+00 s=1 e=0 z=0  None .text      daObjWindow_MoveBGDraw__FP13daObjWindow_c                    */
+/* 80D391F8-80D39224 002C+00 s=0 e=0 z=0  None .text      daObjWindow_MoveBGDraw__FP13daObjWindow_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjWindow_MoveBGDraw(daObjWindow_c* param_0) {
+asm void daObjWindow_MoveBGDraw(daObjWindow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_window/d_a_obj_window/daObjWindow_MoveBGDraw__FP13daObjWindow_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D3927C-80D39284 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D3927C = "J_KazeD";
+#pragma pop
 

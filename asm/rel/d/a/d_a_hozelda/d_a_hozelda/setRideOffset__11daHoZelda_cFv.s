@@ -4,10 +4,10 @@ lbl_8084819C:
 /* 808481A4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 808481A8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 808481AC  7C 7F 1B 78 */	mr r31, r3
-/* 808481B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808481B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 808481B8  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 808481BC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 808481B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808481B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 808481B8  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 808481BC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 808481C0  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 808481C4  7D 89 03 A6 */	mtctr r12
 /* 808481C8  4E 80 04 21 */	bctrl 

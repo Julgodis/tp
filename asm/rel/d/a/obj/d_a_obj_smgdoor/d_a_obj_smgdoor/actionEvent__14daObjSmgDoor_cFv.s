@@ -6,11 +6,11 @@ lbl_80CDC790:
 /* 80CDC7A0  7C 7F 1B 78 */	mr r31, r3
 /* 80CDC7A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80CDC7A8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80CDC7AC  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
+/* 80CDC7AC  A0 03 00 B0 */	lhz r0, 0xb0(r3)
 /* 80CDC7B0  60 00 00 02 */	ori r0, r0, 2
-/* 80CDC7B4  B0 03 00 B0 */	sth r0, 0xb0(r3)	/* effective address: 80430238 */
-/* 80CDC7B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDC7BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDC7B4  B0 03 00 B0 */	sth r0, 0xb0(r3)
+/* 80CDC7B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDC7BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDC7C0  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80CDC7C4  7F E4 FB 78 */	mr r4, r31
 /* 80CDC7C8  3C A0 80 CE */	lis r5, eventCallBack__FPvi@ha

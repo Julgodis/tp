@@ -9,8 +9,8 @@ lbl_8065E7D0:
 /* 8065E7EC  3B C4 2D B0 */	addi r30, r4, lit_3987@l
 /* 8065E7F0  38 80 00 17 */	li r4, 0x17
 /* 8065E7F4  38 A0 00 00 */	li r5, 0
-/* 8065E7F8  C0 3E 00 18 */	lfs f1, 0x18(r30)	/* effective address: 80662DC8 */
-/* 8065E7FC  C0 5E 00 08 */	lfs f2, 8(r30)	/* effective address: 80662DB8 */
+/* 8065E7F8  C0 3E 00 18 */	lfs f1, 0x18(r30)
+/* 8065E7FC  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8065E800  4B FF 9F 31 */	bl setBck__7daCow_cFiUcff
 /* 8065E804  38 00 00 03 */	li r0, 3
 /* 8065E808  98 1C 0C 9F */	stb r0, 0xc9f(r28)

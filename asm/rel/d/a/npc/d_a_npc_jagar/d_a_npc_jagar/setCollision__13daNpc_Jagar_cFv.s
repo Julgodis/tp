@@ -70,8 +70,8 @@ lbl_80A16134:
 /* 80A16180  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80A16184  38 81 00 08 */	addi r4, r1, 8
 /* 80A16188  4B 85 90 54 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80A1618C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A16190  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A1618C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A16190  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A16194  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80A16198  38 9F 0E 44 */	addi r4, r31, 0xe44
 /* 80A1619C  4B 84 EA 0C */	b Set__4cCcSFP8cCcD_Obj

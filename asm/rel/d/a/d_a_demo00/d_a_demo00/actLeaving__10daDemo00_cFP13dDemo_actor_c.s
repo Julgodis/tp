@@ -13,11 +13,11 @@ lbl_804A6070:
 /* 804A6074  4B B7 40 C4 */	b fopAcM_DeleteHeap__FP10fopAc_ac_c
 /* 804A6078  3C 60 80 4B */	lis r3, lit_4999@ha
 /* 804A607C  38 83 8A 1C */	addi r4, r3, lit_4999@l
-/* 804A6080  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804A8A1C */
-/* 804A6084  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804A8A20 */
+/* 804A6080  80 64 00 00 */	lwz r3, 0(r4)
+/* 804A6084  80 04 00 04 */	lwz r0, 4(r4)
 /* 804A6088  90 7F 05 7C */	stw r3, 0x57c(r31)
 /* 804A608C  90 1F 05 80 */	stw r0, 0x580(r31)
-/* 804A6090  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804A8A24 */
+/* 804A6090  80 04 00 08 */	lwz r0, 8(r4)
 /* 804A6094  90 1F 05 84 */	stw r0, 0x584(r31)
 /* 804A6098  38 60 00 01 */	li r3, 1
 /* 804A609C  83 E1 00 0C */	lwz r31, 0xc(r1)

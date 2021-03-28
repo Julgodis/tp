@@ -15,8 +15,8 @@ lbl_806FAB14:
 /* 806FAB48  FF E0 10 90 */	fmr f31, f2
 /* 806FAB4C  3C 60 80 70 */	lis r3, stringBase0@ha
 /* 806FAB50  38 63 F6 B8 */	addi r3, r3, stringBase0@l
-/* 806FAB54  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806FAB58  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806FAB54  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806FAB58  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806FAB5C  3C A5 00 02 */	addis r5, r5, 2
 /* 806FAB60  38 C0 00 80 */	li r6, 0x80
 /* 806FAB64  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -10,7 +10,7 @@ lbl_80551A4C:
 /* 80551A6C  3C 60 80 55 */	lis r3, m__18daNpc_Kkri_Param_c@ha
 /* 80551A70  3B E3 34 90 */	addi r31, r3, m__18daNpc_Kkri_Param_c@l
 /* 80551A74  3B C0 00 00 */	li r30, 0
-/* 80551A78  C3 FF 01 10 */	lfs f31, 0x110(r31)	/* effective address: 805535A0 */
+/* 80551A78  C3 FF 01 10 */	lfs f31, 0x110(r31)
 /* 80551A7C  A0 1C 0E 22 */	lhz r0, 0xe22(r28)
 /* 80551A80  2C 00 00 02 */	cmpwi r0, 2
 /* 80551A84  41 82 00 78 */	beq lbl_80551AFC
@@ -65,8 +65,8 @@ lbl_80551B28:
 /* 80551B34  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80551B38  28 04 00 FF */	cmplwi r4, 0xff
 /* 80551B3C  41 82 02 44 */	beq lbl_80551D80
-/* 80551B40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80551B44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80551B40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80551B44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80551B48  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80551B4C  7C 05 07 74 */	extsb r5, r0
 /* 80551B50  4B AE 38 10 */	b isSwitch__10dSv_info_cCFii

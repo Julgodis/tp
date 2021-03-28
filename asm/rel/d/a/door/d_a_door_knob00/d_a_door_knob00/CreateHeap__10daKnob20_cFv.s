@@ -10,8 +10,8 @@ lbl_8045E960:
 /* 8045E980  7F C3 F3 78 */	mr r3, r30
 /* 8045E984  4B FF FF 05 */	bl getAlwaysArcName__10daKnob20_cFv
 /* 8045E988  7F A4 EB 78 */	mr r4, r29
-/* 8045E98C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8045E990  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8045E98C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8045E990  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8045E994  3F E5 00 02 */	addis r31, r5, 2
 /* 8045E998  3B FF C2 F8 */	addi r31, r31, -15624
 /* 8045E99C  7F E5 FB 78 */	mr r5, r31

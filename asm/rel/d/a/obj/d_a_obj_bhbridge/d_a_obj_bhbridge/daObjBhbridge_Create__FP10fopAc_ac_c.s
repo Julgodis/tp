@@ -39,17 +39,17 @@ lbl_80BB577C:
 /* 80BB577C  38 7E 05 F0 */	addi r3, r30, 0x5f0
 /* 80BB5780  3C 80 80 BB */	lis r4, l_arcName@ha
 /* 80BB5784  38 84 5F AC */	addi r4, r4, l_arcName@l
-/* 80BB5788  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB5FAC */
+/* 80BB5788  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB578C  4B 47 77 30 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BB5790  7C 7D 1B 78 */	mr r29, r3
 /* 80BB5794  2C 1D 00 04 */	cmpwi r29, 4
 /* 80BB5798  40 82 01 10 */	bne lbl_80BB58A8
-/* 80BB579C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB57A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB579C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB57A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB57A4  3C 63 00 02 */	addis r3, r3, 2
 /* 80BB57A8  3C 80 80 BB */	lis r4, l_arcName@ha
 /* 80BB57AC  38 84 5F AC */	addi r4, r4, l_arcName@l
-/* 80BB57B0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB5FAC */
+/* 80BB57B0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB57B4  3C A0 80 BB */	lis r5, stringBase0@ha
 /* 80BB57B8  38 A5 5F 84 */	addi r5, r5, stringBase0@l
 /* 80BB57BC  38 A5 00 09 */	addi r5, r5, 9
@@ -59,7 +59,7 @@ lbl_80BB577C:
 /* 80BB57CC  7F C3 F3 78 */	mr r3, r30
 /* 80BB57D0  3C 80 80 BB */	lis r4, l_arcName@ha
 /* 80BB57D4  38 84 5F AC */	addi r4, r4, l_arcName@l
-/* 80BB57D8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB5FAC */
+/* 80BB57D8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB57DC  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80BB57E0  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80BB57E4  38 E0 15 A0 */	li r7, 0x15a0
@@ -82,8 +82,8 @@ lbl_80BB5800:
 /* 80BB5824  39 40 00 00 */	li r10, 0
 /* 80BB5828  4B 4C 0A 20 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80BB582C  38 7E 05 F8 */	addi r3, r30, 0x5f8
-/* 80BB5830  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BB5834  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80BB5830  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BB5834  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BB5838  3B 84 0F 38 */	addi r28, r4, 0xf38
 /* 80BB583C  7F 84 E3 78 */	mr r4, r28
 /* 80BB5840  4B 4C 12 6C */	b CrrPos__9dBgS_AcchFR4dBgS

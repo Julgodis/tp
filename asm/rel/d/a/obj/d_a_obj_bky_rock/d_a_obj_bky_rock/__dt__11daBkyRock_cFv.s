@@ -16,7 +16,7 @@ lbl_80BB6B5C:
 lbl_80BB6B94:
 /* 80BB6B94  3C 80 80 BC */	lis r4, l_arcName@ha
 /* 80BB6B98  38 84 80 3C */	addi r4, r4, l_arcName@l
-/* 80BB6B9C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB803C */
+/* 80BB6B9C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB6BA0  4B 47 64 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BB6BA4  38 7E 05 EC */	addi r3, r30, 0x5ec
 /* 80BB6BA8  3C 80 80 BB */	lis r4, __dt__8dCcD_CylFv@ha

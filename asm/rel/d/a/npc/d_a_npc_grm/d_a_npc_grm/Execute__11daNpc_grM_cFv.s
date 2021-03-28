@@ -29,11 +29,11 @@ lbl_809D45F8:
 /* 809D4664  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 809D4668  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809D466C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809D4670  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809D4674  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809D4670  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D4674  80 04 00 04 */	lwz r0, 4(r4)
 /* 809D4678  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 809D467C  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 809D4680  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809D4680  80 04 00 08 */	lwz r0, 8(r4)
 /* 809D4684  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 809D4688  38 00 00 01 */	li r0, 1
 /* 809D468C  98 1F 10 DD */	stb r0, 0x10dd(r31)

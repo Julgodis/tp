@@ -10,9 +10,9 @@ lbl_80B0A444:
 /* 80B0A464  3B E3 C1 C4 */	addi r31, r3, lit_3999@l
 /* 80B0A468  38 00 00 04 */	li r0, 4
 /* 80B0A46C  B0 1D 07 10 */	sth r0, 0x710(r29)
-/* 80B0A470  C0 3F 01 C4 */	lfs f1, 0x1c4(r31)	/* effective address: 80B0C388 */
+/* 80B0A470  C0 3F 01 C4 */	lfs f1, 0x1c4(r31)
 /* 80B0A474  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80B0A478  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 80B0C208 */
+/* 80B0A478  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 80B0A47C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80B0A480  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 80B0A484  38 61 00 08 */	addi r3, r1, 8

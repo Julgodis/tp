@@ -12,7 +12,7 @@ lbl_8078A6EC:
 /* 8078A714  3C 60 80 79 */	lis r3, lit_3767@ha
 /* 8078A718  3B C3 DD A4 */	addi r30, r3, lit_3767@l
 /* 8078A71C  38 C0 00 00 */	li r6, 0
-/* 8078A720  90 DD 01 20 */	stw r6, 0x120(r29)	/* effective address: 8078E1C0 */
+/* 8078A720  90 DD 01 20 */	stw r6, 0x120(r29)
 /* 8078A724  7C C4 33 78 */	mr r4, r6
 /* 8078A728  38 BD 00 68 */	addi r5, r29, 0x68
 /* 8078A72C  38 1D 00 90 */	addi r0, r29, 0x90

@@ -16,8 +16,8 @@ lbl_8051B04C:
 /* 8051B084  4B D2 F2 54 */	b doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
 /* 8051B088  2C 03 00 00 */	cmpwi r3, 0
 /* 8051B08C  41 82 00 1C */	beq lbl_8051B0A8
-/* 8051B090  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051B094  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8051B090  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051B094  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8051B098  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8051B09C  4B B2 73 CC */	b reset__14dEvt_control_cFv
 /* 8051B0A0  38 00 00 00 */	li r0, 0
@@ -26,9 +26,9 @@ lbl_8051B0A8:
 /* 8051B0A8  38 60 00 01 */	li r3, 1
 /* 8051B0AC  48 00 00 B0 */	b lbl_8051B15C
 lbl_8051B0B0:
-/* 8051B0B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051B0B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051B0B8  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8051B0B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051B0B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051B0B8  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8051B0BC  28 00 00 00 */	cmplwi r0, 0
 /* 8051B0C0  41 82 00 30 */	beq lbl_8051B0F0
 /* 8051B0C4  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
@@ -49,10 +49,10 @@ lbl_8051B0F0:
 /* 8051B0FC  A8 1F 09 94 */	lha r0, 0x994(r31)
 /* 8051B100  2C 00 FF FF */	cmpwi r0, -1
 /* 8051B104  41 82 00 38 */	beq lbl_8051B13C
-/* 8051B108  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051B10C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051B110  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8051B114  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8051B108  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051B10C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051B110  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8051B114  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8051B118  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8051B11C  41 82 00 20 */	beq lbl_8051B13C
 /* 8051B120  80 1F 05 5C */	lwz r0, 0x55c(r31)

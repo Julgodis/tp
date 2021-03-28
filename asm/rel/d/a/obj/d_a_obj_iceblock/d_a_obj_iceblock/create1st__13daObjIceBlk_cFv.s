@@ -8,7 +8,7 @@ lbl_80C227F4:
 /* 80C2280C  38 7E 05 A0 */	addi r3, r30, 0x5a0
 /* 80C22810  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C22814  38 84 44 F0 */	addi r4, r4, l_arcName@l
-/* 80C22818  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C244F0 */
+/* 80C22818  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C2281C  4B 40 A6 A0 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C22820  7C 60 1B 78 */	mr r0, r3
 /* 80C22824  2C 00 00 04 */	cmpwi r0, 4
@@ -18,8 +18,8 @@ lbl_80C227F4:
 /* 80C22834  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80C22838  28 04 00 FF */	cmplwi r4, 0xff
 /* 80C2283C  41 82 00 24 */	beq lbl_80C22860
-/* 80C22840  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C22844  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C22840  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C22844  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C22848  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C2284C  7C 05 07 74 */	extsb r5, r0
 /* 80C22850  4B 41 2B 10 */	b isSwitch__10dSv_info_cCFii
@@ -30,7 +30,7 @@ lbl_80C22860:
 /* 80C22860  7F C3 F3 78 */	mr r3, r30
 /* 80C22864  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C22868  38 84 44 F0 */	addi r4, r4, l_arcName@l
-/* 80C2286C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C244F0 */
+/* 80C2286C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C22870  38 A0 00 0C */	li r5, 0xc
 /* 80C22874  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C22878  38 C6 5B 44 */	addi r6, r6, dBgS_MoveBGProc_Trans__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l

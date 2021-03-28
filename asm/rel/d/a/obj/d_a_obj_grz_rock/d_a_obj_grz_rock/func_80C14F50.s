@@ -36,8 +36,8 @@ lbl_80C14FD0:
 /* 80C14FD4  60 00 00 08 */	ori r0, r0, 8
 /* 80C14FD8  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80C14FDC:
-/* 80C14FDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C14FE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C14FDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C14FE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C14FE4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C14FE8  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80C14FEC  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
@@ -52,7 +52,7 @@ lbl_80C15008:
 /* 80C1500C  3C 60 80 C1 */	lis r3, l_arcName@ha
 /* 80C15010  38 83 53 8C */	addi r4, r3, l_arcName@l
 /* 80C15014  38 7F 05 A0 */	addi r3, r31, 0x5a0
-/* 80C15018  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1538C */
+/* 80C15018  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C1501C  4B 41 7E A0 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C15020  7C 64 1B 78 */	mr r4, r3
 /* 80C15024  2C 04 00 05 */	cmpwi r4, 5
@@ -70,12 +70,12 @@ lbl_80C15048:
 /* 80C15048  38 00 00 01 */	li r0, 1
 /* 80C1504C  7C 00 F0 00 */	cmpw r0, r30
 /* 80C15050  40 82 00 70 */	bne lbl_80C150C0
-/* 80C15054  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C15058  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C15054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C15058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C1505C  3C 63 00 02 */	addis r3, r3, 2
 /* 80C15060  3C 80 80 C1 */	lis r4, l_arcName@ha
 /* 80C15064  38 84 53 8C */	addi r4, r4, l_arcName@l
-/* 80C15068  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1538C */
+/* 80C15068  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C1506C  3C A0 80 C1 */	lis r5, stringBase0@ha
 /* 80C15070  38 A5 53 78 */	addi r5, r5, stringBase0@l
 /* 80C15074  38 A5 00 08 */	addi r5, r5, 8
@@ -85,7 +85,7 @@ lbl_80C15048:
 /* 80C15084  7F E3 FB 78 */	mr r3, r31
 /* 80C15088  3C 80 80 C1 */	lis r4, l_arcName@ha
 /* 80C1508C  38 84 53 8C */	addi r4, r4, l_arcName@l
-/* 80C15090  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1538C */
+/* 80C15090  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C15094  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C15098  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80C1509C  38 E0 10 30 */	li r7, 0x1030

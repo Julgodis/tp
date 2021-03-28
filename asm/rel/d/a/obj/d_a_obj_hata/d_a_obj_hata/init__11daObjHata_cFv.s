@@ -12,7 +12,7 @@ lbl_80C190FC:
 /* 80C19124  3C 60 80 C2 */	lis r3, lit_3789@ha
 /* 80C19128  3B C3 94 7C */	addi r30, r3, lit_3789@l
 lbl_80C1912C:
-/* 80C1912C  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80C19478 */
+/* 80C1912C  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 80C19130  4B 64 E8 5C */	b cM_rndFX__Ff
 /* 80C19134  7F 9A FA 14 */	add r28, r26, r31
 /* 80C19138  D0 3C 05 8C */	stfs f1, 0x58c(r28)

@@ -21,7 +21,7 @@ lbl_8082DE18:
 /* 8082DE64  4B 7D EF 38 */	b transM__14mDoMtx_stack_cFfff
 /* 8082DE68  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 8082DE6C  3B C3 F7 34 */	addi r30, r3, l_HIO@l
-/* 8082DE70  C0 3E 00 08 */	lfs f1, 8(r30)	/* effective address: 8082F73C */
+/* 8082DE70  C0 3E 00 08 */	lfs f1, 8(r30)
 /* 8082DE74  FC 40 08 90 */	fmr f2, f1
 /* 8082DE78  FC 60 08 90 */	fmr f3, f1
 /* 8082DE7C  4B 7D EF BC */	b scaleM__14mDoMtx_stack_cFfff

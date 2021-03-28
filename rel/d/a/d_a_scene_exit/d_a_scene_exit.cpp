@@ -43,13 +43,14 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daScex_Create(fopAc_ac_c*); // 2
-static void daScex_Execute(daScex_c*); // 2
+void daScex_Create(fopAc_ac_c*); // 2
+void daScex_Execute(daScex_c*); // 2
 
 extern "C" void checkWork__8daScex_cFv(); // 1
-extern "C" static void daScex_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daScex_Execute__FP8daScex_c(); // 1
+extern "C" void daScex_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daScex_Execute__FP8daScex_c(); // 1
 extern "C" void execute__8daScex_cFv(); // 1
+extern "C" extern void* l_daScex_Method[8];
 extern "C" extern void* g_profile_SCENE_EXIT[13];
 
 // 
@@ -69,12 +70,9 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSMTXMultVec(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -99,22 +97,22 @@ SECTION_RODATA static u32 const lit_3758 = 0x42960000;
 /* 80485C9C-80485CA0 0004+00 s=1 e=0 z=0  None .rodata    @3759                                                        */
 SECTION_RODATA static u32 const lit_3759 = 0x43160000;
 
-/* 80485974-80485A30 00BC+00 s=1 e=0 z=0  None .text      daScex_Create__FP10fopAc_ac_c                                */
+/* 80485974-80485A30 00BC+00 s=0 e=0 z=0  None .text      daScex_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daScex_Create(fopAc_ac_c* param_0) {
+asm void daScex_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/daScex_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80485A30-80485A50 0020+00 s=1 e=0 z=0  None .text      daScex_Execute__FP8daScex_c                                  */
+/* 80485A30-80485A50 0020+00 s=0 e=0 z=0  None .text      daScex_Execute__FP8daScex_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daScex_Execute(daScex_c* param_0) {
+asm void daScex_Execute(daScex_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_scene_exit/d_a_scene_exit/daScex_Execute__FP8daScex_c.s"
 }
@@ -145,32 +143,32 @@ asm void daScex_c::execute() {
 
 
 /* ############################################################################################## */
-/* 80485CAC-80485CCC 0020+00 s=1 e=0 z=0  None .data      l_daScex_Method                                              */
-SECTION_DATA static void* l_daScex_Method[8] = {
-	/* 0    */ (void*)daScex_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)daScex_Execute__FP8daScex_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80485CAC-80485CCC 0020+00 s=0 e=0 z=0  None .data      l_daScex_Method                                              */
+SECTION_DATA void* l_daScex_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80485CCC-80485D00 0034+00 s=0 e=0 z=1  None .data      g_profile_SCENE_EXIT                                         */
+/* 80485CCC-80485D00 0034+00 s=0 e=0 z=0  None .data      g_profile_SCENE_EXIT                                         */
 SECTION_DATA void* g_profile_SCENE_EXIT[13] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000AFFFD,
-	/* 2    */ (void*)0x030C0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000059C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02F90000,
-	/* 9    */ (void*)&l_daScex_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
-	/* 12   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x000AFFFD,
+	(void*)0x030C0000,
+	(void*)NULL,
+	(void*)0x0000059C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02F90000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x05000000,
+	(void*)NULL,
 };
 

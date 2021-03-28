@@ -9,10 +9,10 @@ lbl_80A268A0:
 /* 80A268BC  3B E3 A0 4C */	addi r31, r3, m__21daNpcKasiMich_Param_c@l
 /* 80A268C0  3C 60 80 A3 */	lis r3, l_arcNames@ha
 /* 80A268C4  38 63 A3 A0 */	addi r3, r3, l_arcNames@l
-/* 80A268C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80A2A3A0 */
+/* 80A268C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A268CC  38 80 00 04 */	li r4, 4
-/* 80A268D0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A268D4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A268D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A268D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A268D8  3C A5 00 02 */	addis r5, r5, 2
 /* 80A268DC  38 C0 00 80 */	li r6, 0x80
 /* 80A268E0  38 A5 C2 F8 */	addi r5, r5, -15624

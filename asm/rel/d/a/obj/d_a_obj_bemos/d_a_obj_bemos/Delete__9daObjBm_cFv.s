@@ -140,7 +140,7 @@ lbl_80BB2E68:
 /* 80BB2E8C  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80BB2E90  3C 80 80 BB */	lis r4, l_arcName@ha
 /* 80BB2E94  38 84 3A 94 */	addi r4, r4, l_arcName@l
-/* 80BB2E98  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BB3A94 */
+/* 80BB2E98  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BB2E9C  4B 47 A1 6C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BB2EA0  38 60 00 01 */	li r3, 1
 /* 80BB2EA4  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -6,9 +6,9 @@ lbl_80C01C18:
 /* 80C01C28  4B 76 05 B4 */	b _savegpr_29
 /* 80C01C2C  7C 7E 1B 78 */	mr r30, r3
 /* 80C01C30  3B E0 00 01 */	li r31, 1
-/* 80C01C34  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C01C38  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 80C01C3C  88 1D 4F AD */	lbz r0, 0x4fad(r29)	/* effective address: 8040B16D */
+/* 80C01C34  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C01C38  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 80C01C3C  88 1D 4F AD */	lbz r0, 0x4fad(r29)
 /* 80C01C40  28 00 00 00 */	cmplwi r0, 0
 /* 80C01C44  41 82 01 1C */	beq lbl_80C01D60
 /* 80C01C48  3B E0 00 00 */	li r31, 0
@@ -17,11 +17,11 @@ lbl_80C01C18:
 /* 80C01C54  40 82 00 BC */	bne lbl_80C01D10
 /* 80C01C58  3C 80 80 C1 */	lis r4, lit_4933@ha
 /* 80C01C5C  38 A4 01 30 */	addi r5, r4, lit_4933@l
-/* 80C01C60  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80C10130 */
-/* 80C01C64  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80C10134 */
+/* 80C01C60  80 85 00 00 */	lwz r4, 0(r5)
+/* 80C01C64  80 05 00 04 */	lwz r0, 4(r5)
 /* 80C01C68  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80C01C6C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80C01C70  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80C10138 */
+/* 80C01C70  80 05 00 08 */	lwz r0, 8(r5)
 /* 80C01C74  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80C01C78  38 81 00 14 */	addi r4, r1, 0x14
 /* 80C01C7C  4B FF FC 45 */	bl checkProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i
@@ -36,9 +36,9 @@ lbl_80C01C18:
 /* 80C01CA0  48 00 00 C0 */	b lbl_80C01D60
 lbl_80C01CA4:
 /* 80C01CA4  38 00 00 00 */	li r0, 0
-/* 80C01CA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C01CAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C01CB0  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80C01CA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C01CAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C01CB0  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 80C01CB4  28 03 00 01 */	cmplwi r3, 1
 /* 80C01CB8  41 82 00 0C */	beq lbl_80C01CC4
 /* 80C01CBC  28 03 00 02 */	cmplwi r3, 2
@@ -55,11 +55,11 @@ lbl_80C01CC8:
 lbl_80C01CE0:
 /* 80C01CE0  3C 60 80 C1 */	lis r3, lit_4941@ha
 /* 80C01CE4  38 83 01 3C */	addi r4, r3, lit_4941@l
-/* 80C01CE8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C1013C */
-/* 80C01CEC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10140 */
+/* 80C01CE8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C01CEC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C01CF0  90 61 00 08 */	stw r3, 8(r1)
 /* 80C01CF4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C01CF8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C10144 */
+/* 80C01CF8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C01CFC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C01D00  7F C3 F3 78 */	mr r3, r30
 /* 80C01D04  38 81 00 08 */	addi r4, r1, 8

@@ -16,8 +16,8 @@ lbl_80D66EC4:
 /* 80D66ED0  D0 03 07 20 */	stfs f0, mViewOffsetY__17dMenu_Collect3D_c@l(r3)
 /* 80D66ED4  3C 60 80 45 */	lis r3, mResetData__6mDoRst@ha
 /* 80D66ED8  38 63 0C 78 */	addi r3, r3, mResetData__6mDoRst@l
-/* 80D66EDC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450C78 */
-/* 80D66EE0  80 03 00 00 */	lwz r0, 0(r3)	/* effective address: 80450C78 */
+/* 80D66EDC  80 63 00 00 */	lwz r3, 0(r3)
+/* 80D66EE0  80 03 00 00 */	lwz r0, 0(r3)
 /* 80D66EE4  2C 00 00 00 */	cmpwi r0, 0
 /* 80D66EE8  41 82 00 0C */	beq lbl_80D66EF4
 /* 80D66EEC  38 60 00 01 */	li r3, 1

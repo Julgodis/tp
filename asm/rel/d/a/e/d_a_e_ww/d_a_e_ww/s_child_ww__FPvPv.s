@@ -36,9 +36,9 @@ lbl_807E8AF4:
 /* 807E8AF8  40 82 00 18 */	bne lbl_807E8B10
 /* 807E8AFC  3C 60 80 7F */	lis r3, data_807EFBF4@ha
 /* 807E8B00  38 83 FB F4 */	addi r4, r3, data_807EFBF4@l
-/* 807E8B04  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 807EFBF4 */
+/* 807E8B04  88 64 00 00 */	lbz r3, 0(r4)
 /* 807E8B08  38 03 00 01 */	addi r0, r3, 1
-/* 807E8B0C  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 807EFBF4 */
+/* 807E8B0C  98 04 00 00 */	stb r0, 0(r4)
 lbl_807E8B10:
 /* 807E8B10  38 60 00 00 */	li r3, 0
 /* 807E8B14  83 E1 00 0C */	lwz r31, 0xc(r1)

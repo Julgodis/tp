@@ -26,21 +26,22 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static bool daEcont_Draw(econt_class*); // 2
+bool daEcont_Draw(econt_class*); // 2
 static void s_rd_sub(void*, void*); // 2
 static void rider_game(econt_class*); // 2
-static void daEcont_Execute(econt_class*); // 2
-static bool daEcont_IsDelete(econt_class*); // 2
-static void daEcont_Delete(econt_class*); // 2
-static void daEcont_Create(fopAc_ac_c*); // 2
+void daEcont_Execute(econt_class*); // 2
+bool daEcont_IsDelete(econt_class*); // 2
+void daEcont_Delete(econt_class*); // 2
+void daEcont_Create(fopAc_ac_c*); // 2
 
-extern "C" static bool daEcont_Draw__FP11econt_class(); // 1
+extern "C" bool daEcont_Draw__FP11econt_class(); // 1
 extern "C" static void s_rd_sub__FPvPv(); // 1
 extern "C" static void rider_game__FP11econt_class(); // 1
-extern "C" static void daEcont_Execute__FP11econt_class(); // 1
-extern "C" static bool daEcont_IsDelete__FP11econt_class(); // 1
-extern "C" static void daEcont_Delete__FP11econt_class(); // 1
-extern "C" static void daEcont_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daEcont_Execute__FP11econt_class(); // 1
+extern "C" bool daEcont_IsDelete__FP11econt_class(); // 1
+extern "C" void daEcont_Delete__FP11econt_class(); // 1
+extern "C" void daEcont_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daEcont_Method[8];
 extern "C" extern void* g_profile_ECONT[12];
 
 // 
@@ -62,21 +63,16 @@ extern "C" void dComIfG_TimerStart__Fis(); // 1
 extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 g_meter2_info[8];
-SECTION_BSS extern u8 struct_80430240[4];
-SECTION_BSS extern u8 struct_80430244[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 data_805197E0[4];
 
 // 
 // Declarations:
 // 
 
-/* 80519518-80519520 0008+00 s=1 e=0 z=0  None .text      daEcont_Draw__FP11econt_class                                */
-static bool daEcont_Draw(econt_class* param_0) {
+/* 80519518-80519520 0008+00 s=0 e=0 z=0  None .text      daEcont_Draw__FP11econt_class                                */
+bool daEcont_Draw(econt_class* param_0) {
 	return true;
 }
 
@@ -103,28 +99,28 @@ asm static void rider_game(econt_class* param_0) {
 #pragma pop
 
 
-/* 80519664-805196B4 0050+00 s=1 e=0 z=0  None .text      daEcont_Execute__FP11econt_class                             */
+/* 80519664-805196B4 0050+00 s=0 e=0 z=0  None .text      daEcont_Execute__FP11econt_class                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daEcont_Execute(econt_class* param_0) {
+asm void daEcont_Execute(econt_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Execute__FP11econt_class.s"
 }
 #pragma pop
 
 
-/* 805196B4-805196BC 0008+00 s=1 e=0 z=0  None .text      daEcont_IsDelete__FP11econt_class                            */
-static bool daEcont_IsDelete(econt_class* param_0) {
+/* 805196B4-805196BC 0008+00 s=0 e=0 z=0  None .text      daEcont_IsDelete__FP11econt_class                            */
+bool daEcont_IsDelete(econt_class* param_0) {
 	return true;
 }
 
 
-/* 805196BC-805196E4 0028+00 s=1 e=0 z=0  None .text      daEcont_Delete__FP11econt_class                              */
+/* 805196BC-805196E4 0028+00 s=0 e=0 z=0  None .text      daEcont_Delete__FP11econt_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daEcont_Delete(econt_class* param_0) {
+asm void daEcont_Delete(econt_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Delete__FP11econt_class.s"
 }
@@ -144,11 +140,11 @@ SECTION_RODATA static u32 const lit_3872 = 0x42000000;
 /* 80519788-8051978C 0004+00 s=1 e=0 z=0  None .rodata    @3873                                                        */
 SECTION_RODATA static u32 const lit_3873 = 0x43D18000;
 
-/* 805196E4-80519774 0090+00 s=1 e=0 z=0  None .text      daEcont_Create__FP10fopAc_ac_c                               */
+/* 805196E4-80519774 0090+00 s=0 e=0 z=0  None .text      daEcont_Create__FP10fopAc_ac_c                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daEcont_Create(fopAc_ac_c* param_0) {
+asm void daEcont_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_econt/d_a_econt/daEcont_Create__FP10fopAc_ac_c.s"
 }
@@ -156,31 +152,31 @@ asm static void daEcont_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8051978C-805197AC 0020+00 s=1 e=0 z=0  None .data      l_daEcont_Method                                             */
-SECTION_DATA static void* l_daEcont_Method[8] = {
-	/* 0    */ (void*)daEcont_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daEcont_Delete__FP11econt_class,
-	/* 2    */ (void*)daEcont_Execute__FP11econt_class,
-	/* 3    */ (void*)daEcont_IsDelete__FP11econt_class,
-	/* 4    */ (void*)daEcont_Draw__FP11econt_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8051978C-805197AC 0020+00 s=0 e=0 z=0  None .data      l_daEcont_Method                                             */
+SECTION_DATA void* l_daEcont_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805197AC-805197DC 0030+00 s=0 e=0 z=1  None .data      g_profile_ECONT                                              */
+/* 805197AC-805197DC 0030+00 s=0 e=0 z=0  None .data      g_profile_ECONT                                              */
 SECTION_DATA void* g_profile_ECONT[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02E30000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x009B0000,
-	/* 9    */ (void*)&l_daEcont_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02E30000,
+	(void*)NULL,
+	(void*)0x000005C0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x009B0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)NULL,
 };
 

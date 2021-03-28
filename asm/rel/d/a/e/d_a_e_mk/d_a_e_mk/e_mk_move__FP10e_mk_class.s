@@ -230,12 +230,12 @@ lbl_80714ED4:
 /* 80714ED8  40 82 02 30 */	bne lbl_80715108
 /* 80714EDC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80714EE0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80714EE4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80714EE4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80714EE8  A8 9D 04 DE */	lha r4, 0x4de(r29)
 /* 80714EEC  4B 8F 74 F0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80714EF0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80714EF4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80714EF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80714EF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80714EFC  A8 9D 04 DC */	lha r4, 0x4dc(r29)
 /* 80714F00  4B 8F 74 9C */	b mDoMtx_XrotM__FPA4_fs
 /* 80714F04  C0 1F 00 0C */	lfs f0, 0xc(r31)

@@ -9,20 +9,20 @@ lbl_805506BC:
 /* 805506D8  7C 7E 1B 78 */	mr r30, r3
 /* 805506DC  3C 60 80 55 */	lis r3, m__18daNpc_Kkri_Param_c@ha
 /* 805506E0  3B E3 34 90 */	addi r31, r3, m__18daNpc_Kkri_Param_c@l
-/* 805506E4  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80553554 */
+/* 805506E4  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 805506E8  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 805506EC  C0 1F 00 AC */	lfs f0, 0xac(r31)	/* effective address: 8055353C */
+/* 805506EC  C0 1F 00 AC */	lfs f0, 0xac(r31)
 /* 805506F0  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 805506F4  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 805506F8  88 1E 0F D4 */	lbz r0, 0xfd4(r30)
 /* 805506FC  28 00 00 00 */	cmplwi r0, 0
 /* 80550700  41 82 00 1C */	beq lbl_8055071C
-/* 80550704  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80550708  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8055070C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80550710  80 03 05 8C */	lwz r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 80550704  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80550708  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8055070C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80550710  80 03 05 8C */	lwz r0, 0x58c(r3)
 /* 80550714  60 00 02 00 */	ori r0, r0, 0x200
-/* 80550718  90 03 05 8C */	stw r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 80550718  90 03 05 8C */	stw r0, 0x58c(r3)
 lbl_8055071C:
 /* 8055071C  C0 5F 00 C8 */	lfs f2, 0xc8(r31)
 /* 80550720  A8 7E 0D 80 */	lha r3, 0xd80(r30)

@@ -88,7 +88,7 @@ lbl_806BB134:
 /* 806BB150  38 00 FF FF */	li r0, -1
 /* 806BB154  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BB158  38 63 B9 1C */	addi r3, r3, l_HIO@l
-/* 806BB15C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806BB920 */
+/* 806BB15C  98 03 00 04 */	stb r0, 4(r3)
 lbl_806BB160:
 /* 806BB160  80 7D 0C 30 */	lwz r3, 0xc30(r29)
 /* 806BB164  80 63 00 04 */	lwz r3, 4(r3)

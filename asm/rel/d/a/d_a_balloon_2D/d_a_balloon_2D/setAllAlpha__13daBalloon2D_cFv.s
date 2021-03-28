@@ -37,35 +37,35 @@ lbl_806544BC:
 /* 806544C8  80 7F 05 80 */	lwz r3, 0x580(r31)
 /* 806544CC  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806544D0  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 806544D4  C0 24 00 3C */	lfs f1, 0x3c(r4)	/* effective address: 806557B8 */
+/* 806544D4  C0 24 00 3C */	lfs f1, 0x3c(r4)
 /* 806544D8  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 806544DC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806544E0  4B C0 12 F0 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 806544E4  80 7F 05 94 */	lwz r3, 0x594(r31)
 /* 806544E8  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806544EC  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 806544F0  C0 24 00 84 */	lfs f1, 0x84(r4)	/* effective address: 80655800 */
+/* 806544F0  C0 24 00 84 */	lfs f1, 0x84(r4)
 /* 806544F4  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 806544F8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806544FC  4B C0 12 D4 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 80654500  80 7F 05 98 */	lwz r3, 0x598(r31)
 /* 80654504  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80654508  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 8065450C  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 80655810 */
+/* 8065450C  C0 24 00 94 */	lfs f1, 0x94(r4)
 /* 80654510  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 80654514  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80654518  4B C0 12 B8 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 8065451C  80 7F 05 9C */	lwz r3, 0x59c(r31)
 /* 80654520  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80654524  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 80654528  C0 24 00 A4 */	lfs f1, 0xa4(r4)	/* effective address: 80655820 */
+/* 80654528  C0 24 00 A4 */	lfs f1, 0xa4(r4)
 /* 8065452C  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 80654530  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80654534  4B C0 12 9C */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 80654538  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
 /* 8065453C  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80654540  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 80654544  C0 24 00 B4 */	lfs f1, 0xb4(r4)	/* effective address: 80655830 */
+/* 80654544  C0 24 00 B4 */	lfs f1, 0xb4(r4)
 /* 80654548  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 8065454C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80654550  4B C0 12 80 */	b setAlphaRate__13CPaneMgrAlphaFf
@@ -95,35 +95,35 @@ lbl_8065459C:
 /* 806545A8  80 7F 05 80 */	lwz r3, 0x580(r31)
 /* 806545AC  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806545B0  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 806545B4  C0 24 00 3C */	lfs f1, 0x3c(r4)	/* effective address: 806557B8 */
+/* 806545B4  C0 24 00 3C */	lfs f1, 0x3c(r4)
 /* 806545B8  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 806545BC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806545C0  4B C0 12 10 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 806545C4  80 7F 05 94 */	lwz r3, 0x594(r31)
 /* 806545C8  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806545CC  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 806545D0  C0 24 00 84 */	lfs f1, 0x84(r4)	/* effective address: 80655800 */
+/* 806545D0  C0 24 00 84 */	lfs f1, 0x84(r4)
 /* 806545D4  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 806545D8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806545DC  4B C0 11 F4 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 806545E0  80 7F 05 98 */	lwz r3, 0x598(r31)
 /* 806545E4  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806545E8  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 806545EC  C0 24 00 94 */	lfs f1, 0x94(r4)	/* effective address: 80655810 */
+/* 806545EC  C0 24 00 94 */	lfs f1, 0x94(r4)
 /* 806545F0  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 806545F4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806545F8  4B C0 11 D8 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 806545FC  80 7F 05 9C */	lwz r3, 0x59c(r31)
 /* 80654600  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80654604  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 80654608  C0 24 00 A4 */	lfs f1, 0xa4(r4)	/* effective address: 80655820 */
+/* 80654608  C0 24 00 A4 */	lfs f1, 0xa4(r4)
 /* 8065460C  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 80654610  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80654614  4B C0 11 BC */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 80654618  80 7F 05 A0 */	lwz r3, 0x5a0(r31)
 /* 8065461C  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80654620  38 84 57 7C */	addi r4, r4, l_HOSTIO@l
-/* 80654624  C0 24 00 B4 */	lfs f1, 0xb4(r4)	/* effective address: 80655830 */
+/* 80654624  C0 24 00 B4 */	lfs f1, 0xb4(r4)
 /* 80654628  C0 1F 07 38 */	lfs f0, 0x738(r31)
 /* 8065462C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80654630  4B C0 11 A0 */	b setAlphaRate__13CPaneMgrAlphaFf

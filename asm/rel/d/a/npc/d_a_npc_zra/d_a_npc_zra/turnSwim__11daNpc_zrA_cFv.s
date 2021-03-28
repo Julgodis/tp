@@ -8,7 +8,7 @@ lbl_80B81A18:
 /* 80B81A30  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B81A34  3B E3 C4 58 */	addi r31, r3, m__17daNpc_zrA_Param_c@l
 /* 80B81A38  38 7F 00 00 */	addi r3, r31, 0
-/* 80B81A3C  AB 83 00 74 */	lha r28, 0x74(r3)	/* effective address: 80B8C4CC */
+/* 80B81A3C  AB 83 00 74 */	lha r28, 0x74(r3)
 /* 80B81A40  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80B81A44  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80B81A48  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)

@@ -190,9 +190,9 @@ lbl_80965F70:
 /* 80965F80  4B 7E 6B 2C */	b daNpcT_chkEvtBit__FUl
 /* 80965F84  2C 03 00 00 */	cmpwi r3, 0
 /* 80965F88  41 82 00 20 */	beq lbl_80965FA8
-/* 80965F8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80965F90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80965F94  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80965F8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80965F90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80965F94  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80965F98  28 00 00 00 */	cmplwi r0, 0
 /* 80965F9C  40 82 00 0C */	bne lbl_80965FA8
 /* 80965FA0  38 00 00 00 */	li r0, 0

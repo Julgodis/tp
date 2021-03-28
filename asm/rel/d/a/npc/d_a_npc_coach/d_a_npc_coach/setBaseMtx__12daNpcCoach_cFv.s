@@ -27,11 +27,11 @@ lbl_809A43DC:
 /* 809A4440  4B 9A 20 70 */	b PSMTXCopy
 /* 809A4444  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 809A4448  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 809A444C  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
+/* 809A444C  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 809A4450  D0 1F 0C D8 */	stfs f0, 0xcd8(r31)
-/* 809A4454  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
+/* 809A4454  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 809A4458  D0 1F 0C DC */	stfs f0, 0xcdc(r31)
-/* 809A445C  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
+/* 809A445C  C0 1E 00 2C */	lfs f0, 0x2c(r30)
 /* 809A4460  D0 1F 0C E0 */	stfs f0, 0xce0(r31)
 /* 809A4464  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 809A4468  4B 66 88 FC */	b transS__14mDoMtx_stack_cFRC4cXyz

@@ -129,8 +129,8 @@ lbl_805EB780:
 /* 805EB7D0  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 805EB7D4  4B A4 31 3C */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 805EB7D8  90 7D 0E 48 */	stw r3, 0xe48(r29)
-/* 805EB7DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805EB7E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805EB7DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805EB7E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805EB7E4  3B 83 61 C0 */	addi r28, r3, 0x61c0
 /* 805EB7E8  7F 83 E3 78 */	mr r3, r28
 /* 805EB7EC  80 9D 0E 48 */	lwz r4, 0xe48(r29)

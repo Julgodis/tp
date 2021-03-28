@@ -17,11 +17,11 @@ lbl_80B0DEF8:
 /* 80B0DF34  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80B0DF38  7C 23 04 2E */	lfsx f1, r3, r0
 /* 80B0DF3C  38 9E 00 00 */	addi r4, r30, 0
-/* 80B0DF40  C0 04 00 98 */	lfs f0, 0x98(r4)	/* effective address: 80B1094C */
+/* 80B0DF40  C0 04 00 98 */	lfs f0, 0x98(r4)
 /* 80B0DF44  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80B0DF48  D0 1F 0D 64 */	stfs f0, 0xd64(r31)
 /* 80B0DF4C  A8 7F 0D 78 */	lha r3, 0xd78(r31)
-/* 80B0DF50  A8 04 00 9C */	lha r0, 0x9c(r4)	/* effective address: 80B10950 */
+/* 80B0DF50  A8 04 00 9C */	lha r0, 0x9c(r4)
 /* 80B0DF54  7C 03 02 14 */	add r0, r3, r0
 /* 80B0DF58  B0 1F 0D 78 */	sth r0, 0xd78(r31)
 /* 80B0DF5C  C0 1F 04 F8 */	lfs f0, 0x4f8(r31)

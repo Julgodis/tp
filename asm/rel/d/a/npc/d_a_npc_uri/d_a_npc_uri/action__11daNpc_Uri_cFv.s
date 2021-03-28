@@ -60,9 +60,9 @@ lbl_80B27EB4:
 /* 80B27ED0  38 81 00 08 */	addi r4, r1, 8
 /* 80B27ED4  48 00 08 ED */	bl setAction__11daNpc_Uri_cFM11daNpc_Uri_cFPCvPvPv_i
 lbl_80B27ED8:
-/* 80B27ED8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B27EDC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B27EE0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80B27ED8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B27EDC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B27EE0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80B27EE4  28 00 00 00 */	cmplwi r0, 0
 /* 80B27EE8  40 82 00 18 */	bne lbl_80B27F00
 /* 80B27EEC  88 1F 10 12 */	lbz r0, 0x1012(r31)

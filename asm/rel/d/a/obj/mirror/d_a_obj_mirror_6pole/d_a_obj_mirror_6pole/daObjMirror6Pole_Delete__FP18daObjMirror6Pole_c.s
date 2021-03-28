@@ -8,7 +8,7 @@ lbl_80C96328:
 /* 80C96340  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80C96344  3C 80 80 C9 */	lis r4, l_arcName@ha
 /* 80C96348  38 84 65 4C */	addi r4, r4, l_arcName@l
-/* 80C9634C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9654C */
+/* 80C9634C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C96350  4B 39 6C B8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C96354  7F E3 FB 78 */	mr r3, r31
 /* 80C96358  38 80 00 00 */	li r4, 0

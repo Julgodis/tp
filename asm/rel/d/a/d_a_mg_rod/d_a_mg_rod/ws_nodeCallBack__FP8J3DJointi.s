@@ -9,7 +9,7 @@ lbl_804A9734:
 /* 804A9750  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 804A9754  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 804A9758  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 804A975C  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 804A975C  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 804A9760  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 804A9764  28 1C 00 00 */	cmplwi r28, 0
 /* 804A9768  41 82 00 74 */	beq lbl_804A97DC
@@ -19,25 +19,25 @@ lbl_804A9734:
 /* 804A9778  7C 60 EA 14 */	add r3, r0, r29
 /* 804A977C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804A9780  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804A9784  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804A9784  80 84 00 00 */	lwz r4, 0(r4)
 /* 804A9788  4B E9 CD 28 */	b PSMTXCopy
 /* 804A978C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A9790  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804A9794  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804A9794  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A9798  57 E0 08 3C */	slwi r0, r31, 1
 /* 804A979C  7C 9C 02 14 */	add r4, r28, r0
 /* 804A97A0  A8 84 10 1A */	lha r4, 0x101a(r4)
 /* 804A97A4  4B B6 2B F8 */	b mDoMtx_XrotM__FPA4_fs
 /* 804A97A8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A97AC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804A97B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804A97B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A97B4  80 9E 00 84 */	lwz r4, 0x84(r30)
 /* 804A97B8  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 804A97BC  7C 80 EA 14 */	add r4, r0, r29
 /* 804A97C0  4B E9 CC F0 */	b PSMTXCopy
 /* 804A97C4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A97C8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804A97CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804A97CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A97D0  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 804A97D4  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 804A97D8  4B E9 CC D8 */	b PSMTXCopy

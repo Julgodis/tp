@@ -14,8 +14,8 @@ lbl_809B4450:
 /* 809B4480  4B 79 86 2C */	b daNpcT_chkEvtBit__FUl
 /* 809B4484  2C 03 00 00 */	cmpwi r3, 0
 /* 809B4488  41 82 00 34 */	beq lbl_809B44BC
-/* 809B448C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809B4490  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809B448C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809B4490  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809B4494  38 63 00 9C */	addi r3, r3, 0x9c
 /* 809B4498  4B 67 F3 54 */	b checkEmptyBottle__17dSv_player_item_cFv
 /* 809B449C  54 60 06 3F */	clrlwi. r0, r3, 0x18
@@ -28,8 +28,8 @@ lbl_809B44B0:
 /* 809B44B4  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 809B44B8  48 00 00 B0 */	b lbl_809B4568
 lbl_809B44BC:
-/* 809B44BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809B44C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809B44BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809B44C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809B44C4  38 63 00 9C */	addi r3, r3, 0x9c
 /* 809B44C8  4B 67 F3 24 */	b checkEmptyBottle__17dSv_player_item_cFv
 /* 809B44CC  54 60 06 3F */	clrlwi. r0, r3, 0x18

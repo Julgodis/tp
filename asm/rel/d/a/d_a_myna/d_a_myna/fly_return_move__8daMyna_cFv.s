@@ -10,9 +10,9 @@ lbl_80948ADC:
 /* 80948AFC  A8 1E 09 26 */	lha r0, 0x926(r30)
 /* 80948B00  2C 00 00 00 */	cmpwi r0, 0
 /* 80948B04  40 81 00 DC */	ble lbl_80948BE0
-/* 80948B08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80948B0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80948B10  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80948B08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80948B0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80948B10  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80948B14  38 61 00 30 */	addi r3, r1, 0x30
 /* 80948B18  48 00 1E ED */	bl getHeadTopPos__9daPy_py_cCFv
 /* 80948B1C  C0 01 00 30 */	lfs f0, 0x30(r1)

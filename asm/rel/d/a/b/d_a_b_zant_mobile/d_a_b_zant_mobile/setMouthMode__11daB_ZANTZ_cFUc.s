@@ -21,8 +21,8 @@ lbl_80650BBC:
 /* 80650BC4  3C 60 80 65 */	lis r3, stringBase0@ha
 /* 80650BC8  38 63 27 D0 */	addi r3, r3, stringBase0@l
 /* 80650BCC  38 80 00 43 */	li r4, 0x43
-/* 80650BD0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80650BD4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80650BD0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80650BD4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80650BD8  3C A5 00 02 */	addis r5, r5, 2
 /* 80650BDC  38 C0 00 80 */	li r6, 0x80
 /* 80650BE0  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -40,7 +40,7 @@ lbl_80650BBC:
 /* 80650C10  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80650C14  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80650C18  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80650C1C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80650C1C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80650C20  38 81 00 0C */	addi r4, r1, 0xc
 /* 80650C24  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80650C28  38 C0 00 00 */	li r6, 0
@@ -66,8 +66,8 @@ lbl_80650C68:
 /* 80650C70  3C 60 80 65 */	lis r3, stringBase0@ha
 /* 80650C74  38 63 27 D0 */	addi r3, r3, stringBase0@l
 /* 80650C78  38 80 00 44 */	li r4, 0x44
-/* 80650C7C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80650C80  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80650C7C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80650C80  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80650C84  3C A5 00 02 */	addis r5, r5, 2
 /* 80650C88  38 C0 00 80 */	li r6, 0x80
 /* 80650C8C  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -85,7 +85,7 @@ lbl_80650C68:
 /* 80650CBC  90 01 00 08 */	stw r0, 8(r1)
 /* 80650CC0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80650CC4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80650CC8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80650CC8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80650CCC  38 81 00 08 */	addi r4, r1, 8
 /* 80650CD0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80650CD4  38 C0 00 00 */	li r6, 0

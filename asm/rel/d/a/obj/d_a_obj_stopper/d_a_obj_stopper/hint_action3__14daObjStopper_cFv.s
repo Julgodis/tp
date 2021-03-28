@@ -32,8 +32,8 @@ lbl_80CEEA88:
 /* 80CEEA98  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80CEEA9C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80CEEAA0  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 80CEEAA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEEAA8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEEAA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEEAA8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEEAAC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CEEAB0  38 80 00 04 */	li r4, 4
 /* 80CEEAB4  38 A0 00 01 */	li r5, 1
@@ -48,7 +48,7 @@ lbl_80CEEA88:
 /* 80CEEAD8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CEEADC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEEAE0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEEAE4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEEAE4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEEAE8  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CEEAEC  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CEEAF0  38 C0 00 00 */	li r6, 0
@@ -121,7 +121,7 @@ lbl_80CEEBD0:
 /* 80CEEBF0  90 01 00 08 */	stw r0, 8(r1)
 /* 80CEEBF4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEEBF8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEEBFC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEEBFC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEEC00  38 81 00 08 */	addi r4, r1, 8
 /* 80CEEC04  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CEEC08  38 C0 00 00 */	li r6, 0
@@ -149,8 +149,8 @@ lbl_80CEEC28:
 /* 80CEEC5C  4B 58 1A E4 */	b cLib_chaseF__FPfff
 /* 80CEEC60  2C 03 00 00 */	cmpwi r3, 0
 /* 80CEEC64  41 82 00 80 */	beq lbl_80CEECE4
-/* 80CEEC68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEEC6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEEC68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEEC6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEEC70  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CEEC74  38 80 00 1F */	li r4, 0x1f
 /* 80CEEC78  4B 38 11 1C */	b StopQuake__12dVibration_cFi
@@ -173,8 +173,8 @@ lbl_80CEECAC:
 /* 80CEECB4  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80CEECB8  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CEECBC  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80CEECC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEECC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEECC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEECC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEECC8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CEECCC  38 80 00 08 */	li r4, 8
 /* 80CEECD0  38 A0 00 01 */	li r5, 1

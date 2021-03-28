@@ -46,8 +46,8 @@ lbl_807447F4:
 /* 8074482C  28 00 00 00 */	cmplwi r0, 0
 /* 80744830  41 82 00 30 */	beq lbl_80744860
 lbl_80744834:
-/* 80744834  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80744838  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80744834  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80744838  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074483C  3B E3 4E C8 */	addi r31, r3, 0x4ec8
 /* 80744840  7F E3 FB 78 */	mr r3, r31
 /* 80744844  4B 8F E1 64 */	b onSkipFade__14dEvt_control_cFv

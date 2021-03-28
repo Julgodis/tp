@@ -9,16 +9,16 @@ lbl_80540B28:
 /* 80540B44  7C 78 1B 78 */	mr r24, r3
 /* 80540B48  3C 60 80 54 */	lis r3, m__25daNpc_FairySeirei_Param_c@ha
 /* 80540B4C  3B 63 1D 8C */	addi r27, r3, m__25daNpc_FairySeirei_Param_c@l
-/* 80540B50  C0 1B 00 B4 */	lfs f0, 0xb4(r27)	/* effective address: 80541E40 */
+/* 80540B50  C0 1B 00 B4 */	lfs f0, 0xb4(r27)
 /* 80540B54  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80540B58  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80540B5C  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80540B60  3B 20 00 00 */	li r25, 0
 /* 80540B64  3B E0 00 00 */	li r31, 0
 /* 80540B68  3B C0 00 00 */	li r30, 0
-/* 80540B6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80540B70  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80540B74  C3 FB 00 B8 */	lfs f31, 0xb8(r27)	/* effective address: 80541E44 */
+/* 80540B6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80540B70  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80540B74  C3 FB 00 B8 */	lfs f31, 0xb8(r27)
 /* 80540B78  3B BB 00 AC */	addi r29, r27, 0xac
 lbl_80540B7C:
 /* 80540B7C  C0 18 05 50 */	lfs f0, 0x550(r24)
@@ -29,7 +29,7 @@ lbl_80540B7C:
 /* 80540B90  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80540B94  EC 01 F8 28 */	fsubs f0, f1, f31
 /* 80540B98  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80540B9C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 80540B9C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 80540BA0  38 00 00 FF */	li r0, 0xff
 /* 80540BA4  90 01 00 08 */	stw r0, 8(r1)
 /* 80540BA8  38 80 00 00 */	li r4, 0
@@ -47,7 +47,7 @@ lbl_80540B7C:
 /* 80540BD8  39 00 00 00 */	li r8, 0
 /* 80540BDC  39 38 0D 78 */	addi r9, r24, 0xd78
 /* 80540BE0  39 41 00 20 */	addi r10, r1, 0x20
-/* 80540BE4  C0 3B 00 B4 */	lfs f1, 0xb4(r27)	/* effective address: 80541E40 */
+/* 80540BE4  C0 3B 00 B4 */	lfs f1, 0xb4(r27)
 /* 80540BE8  4B B0 C8 E4 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80540BEC  7C 78 D1 2E */	stwx r3, r24, r26
 /* 80540BF0  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)

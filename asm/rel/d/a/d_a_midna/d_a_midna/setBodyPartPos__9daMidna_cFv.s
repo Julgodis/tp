@@ -8,7 +8,7 @@ lbl_804BEDB8:
 /* 804BEDD0  3C 60 80 4C */	lis r3, lit_3777@ha
 /* 804BEDD4  3B E3 64 C8 */	addi r31, r3, lit_3777@l
 /* 804BEDD8  38 7F 01 1C */	addi r3, r31, 0x11c
-/* 804BEDDC  A0 63 00 D8 */	lhz r3, 0xd8(r3)	/* effective address: 804C66BC */
+/* 804BEDDC  A0 63 00 D8 */	lhz r3, 0xd8(r3)
 /* 804BEDE0  A0 1E 05 E4 */	lhz r0, 0x5e4(r30)
 /* 804BEDE4  7C 03 00 40 */	cmplw r3, r0
 /* 804BEDE8  40 82 00 18 */	bne lbl_804BEE00
@@ -40,9 +40,9 @@ lbl_804BEE1C:
 /* 804BEE48  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804BEE4C  40 80 00 90 */	bge lbl_804BEEDC
 lbl_804BEE50:
-/* 804BEE50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804BEE54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804BEE58  80 A3 5D B4 */	lwz r5, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804BEE50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BEE54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804BEE58  80 A3 5D B4 */	lwz r5, 0x5db4(r3)
 /* 804BEE5C  80 05 05 74 */	lwz r0, 0x574(r5)
 /* 804BEE60  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 804BEE64  41 82 00 0C */	beq lbl_804BEE70
@@ -114,15 +114,15 @@ lbl_804BEF20:
 /* 804BEF58  38 9F 04 10 */	addi r4, r31, 0x410
 /* 804BEF5C  38 A1 00 08 */	addi r5, r1, 8
 /* 804BEF60  4B E8 7E 0C */	b PSMTXMultVec
-/* 804BEF64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804BEF68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804BEF6C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804BEF64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BEF68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804BEF6C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 804BEF70  C0 01 00 08 */	lfs f0, 8(r1)
-/* 804BEF74  D0 03 05 B0 */	stfs f0, 0x5b0(r3)	/* effective address: 80406770 */
+/* 804BEF74  D0 03 05 B0 */	stfs f0, 0x5b0(r3)
 /* 804BEF78  C0 01 00 0C */	lfs f0, 0xc(r1)
-/* 804BEF7C  D0 03 05 B4 */	stfs f0, 0x5b4(r3)	/* effective address: 80406774 */
+/* 804BEF7C  D0 03 05 B4 */	stfs f0, 0x5b4(r3)
 /* 804BEF80  C0 01 00 10 */	lfs f0, 0x10(r1)
-/* 804BEF84  D0 03 05 B8 */	stfs f0, 0x5b8(r3)	/* effective address: 80406778 */
+/* 804BEF84  D0 03 05 B8 */	stfs f0, 0x5b8(r3)
 lbl_804BEF88:
 /* 804BEF88  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 804BEF8C  83 C1 00 18 */	lwz r30, 0x18(r1)

@@ -9,12 +9,12 @@ lbl_80D2814C:
 /* 80D28168  40 82 00 40 */	bne lbl_80D281A8
 /* 80D2816C  38 00 00 09 */	li r0, 9
 /* 80D28170  98 1F 05 CA */	stb r0, 0x5ca(r31)
-/* 80D28174  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D28178  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D28174  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D28178  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2817C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D28180  3C 80 80 D3 */	lis r4, l_staff_name@ha
 /* 80D28184  38 84 97 44 */	addi r4, r4, l_staff_name@l
-/* 80D28188  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29744 */
+/* 80D28188  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D2818C  38 A0 00 00 */	li r5, 0
 /* 80D28190  38 C0 00 00 */	li r6, 0
 /* 80D28194  4B 31 F9 88 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

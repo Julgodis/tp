@@ -8,8 +8,8 @@ lbl_80502AD4:
 /* 80502AEC  3C 60 80 50 */	lis r3, lit_3999@ha
 /* 80502AF0  3B E3 46 DC */	addi r31, r3, lit_3999@l
 /* 80502AF4  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 80502AF8  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 805046DC */
-/* 80502AFC  C0 5F 00 B0 */	lfs f2, 0xb0(r31)	/* effective address: 8050478C */
+/* 80502AF8  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80502AFC  C0 5F 00 B0 */	lfs f2, 0xb0(r31)
 /* 80502B00  4B D6 CF 80 */	b cLib_addCalc0__FPfff
 /* 80502B04  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80502B08  38 9E 04 F8 */	addi r4, r30, 0x4f8

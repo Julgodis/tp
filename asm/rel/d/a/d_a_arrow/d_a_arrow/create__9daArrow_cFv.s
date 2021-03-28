@@ -170,9 +170,9 @@ lbl_8049D67C:
 /* 8049D6C0  4B BE 73 74 */	b Set__8dCcD_SphFRC11dCcD_SrcSph
 /* 8049D6C4  38 1D 06 4C */	addi r0, r29, 0x64c
 /* 8049D6C8  90 1D 08 10 */	stw r0, 0x810(r29)
-/* 8049D6CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049D6D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049D6D4  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8049D6CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049D6D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049D6D4  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 8049D6D8  88 1D 09 3C */	lbz r0, 0x93c(r29)
 /* 8049D6DC  28 00 00 04 */	cmplwi r0, 4
 /* 8049D6E0  40 82 00 54 */	bne lbl_8049D734
@@ -189,21 +189,21 @@ lbl_8049D67C:
 /* 8049D70C  4B FF D2 C1 */	bl arrowShooting__9daArrow_cFv
 /* 8049D710  3C 60 80 4A */	lis r3, lit_5714@ha
 /* 8049D714  38 83 DE 74 */	addi r4, r3, lit_5714@l
-/* 8049D718  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8049DE74 */
-/* 8049D71C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8049DE78 */
+/* 8049D718  80 64 00 00 */	lwz r3, 0(r4)
+/* 8049D71C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8049D720  90 7D 0A 28 */	stw r3, 0xa28(r29)
 /* 8049D724  90 1D 0A 2C */	stw r0, 0xa2c(r29)
-/* 8049D728  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8049DE7C */
+/* 8049D728  80 04 00 08 */	lwz r0, 8(r4)
 /* 8049D72C  90 1D 0A 30 */	stw r0, 0xa30(r29)
 /* 8049D730  48 00 00 2C */	b lbl_8049D75C
 lbl_8049D734:
 /* 8049D734  3C 60 80 4A */	lis r3, lit_5716@ha
 /* 8049D738  38 83 DE 80 */	addi r4, r3, lit_5716@l
-/* 8049D73C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8049DE80 */
-/* 8049D740  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8049DE84 */
+/* 8049D73C  80 64 00 00 */	lwz r3, 0(r4)
+/* 8049D740  80 04 00 04 */	lwz r0, 4(r4)
 /* 8049D744  90 7D 0A 28 */	stw r3, 0xa28(r29)
 /* 8049D748  90 1D 0A 2C */	stw r0, 0xa2c(r29)
-/* 8049D74C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8049DE88 */
+/* 8049D74C  80 04 00 08 */	lwz r0, 8(r4)
 /* 8049D750  90 1D 0A 30 */	stw r0, 0xa30(r29)
 /* 8049D754  7F A3 EB 78 */	mr r3, r29
 /* 8049D758  4B FF D8 95 */	bl setKeepMatrix__9daArrow_cFv

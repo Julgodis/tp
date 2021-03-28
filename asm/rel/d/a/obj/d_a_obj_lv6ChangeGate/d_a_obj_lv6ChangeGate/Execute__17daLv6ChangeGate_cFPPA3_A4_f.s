@@ -44,8 +44,8 @@ lbl_80C71390:
 /* 80C71390  C3 BB 00 3C */	lfs f29, 0x3c(r27)
 /* 80C71394  3A E0 00 00 */	li r23, 0
 /* 80C71398  3B A0 00 00 */	li r29, 0
-/* 80C7139C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C713A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C7139C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C713A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C713A4  3B 43 23 3C */	addi r26, r3, 0x233c
 /* 80C713A8  C3 DB 00 38 */	lfs f30, 0x38(r27)
 /* 80C713AC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

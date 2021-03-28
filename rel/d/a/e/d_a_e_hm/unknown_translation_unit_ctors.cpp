@@ -19,7 +19,6 @@ extern void* const data_806E590C[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_hm_cpp(); // 1
 
 // 
 // Declarations:

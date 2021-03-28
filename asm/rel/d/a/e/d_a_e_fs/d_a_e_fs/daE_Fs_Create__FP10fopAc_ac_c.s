@@ -108,20 +108,20 @@ lbl_806BD9A8:
 /* 806BD9D8  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 806BD9DC  54 00 46 3E */	srwi r0, r0, 0x18
 /* 806BD9E0  98 1E 05 B7 */	stb r0, 0x5b7(r30)
-/* 806BD9E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BD9E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806BD9E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BD9E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806BD9EC  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 806BD9F0  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 806BD9F4  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 806BD9F8  A0 84 04 14 */	lhz r4, 0x414(r4)	/* effective address: 803A769C */
+/* 806BD9F8  A0 84 04 14 */	lhz r4, 0x414(r4)
 /* 806BD9FC  4B 97 6F C0 */	b isEventBit__11dSv_event_cCFUs
 /* 806BDA00  2C 03 00 00 */	cmpwi r3, 0
 /* 806BDA04  41 82 00 30 */	beq lbl_806BDA34
 /* 806BDA08  3C 60 80 6C */	lis r3, stringBase0@ha
 /* 806BDA0C  38 63 E5 64 */	addi r3, r3, stringBase0@l
 /* 806BDA10  38 63 00 0D */	addi r3, r3, 0xd
-/* 806BDA14  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806BDA18  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806BDA14  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806BDA18  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806BDA1C  38 84 4E 00 */	addi r4, r4, 0x4e00
 /* 806BDA20  4B CA AF 74 */	b strcmp
 /* 806BDA24  2C 03 00 00 */	cmpwi r3, 0
@@ -175,8 +175,8 @@ lbl_806BDA84:
 /* 806BDAD8  38 A1 00 14 */	addi r5, r1, 0x14
 /* 806BDADC  38 C0 00 00 */	li r6, 0
 /* 806BDAE0  4B 9B A2 84 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 806BDAE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BDAE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806BDAE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BDAE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806BDAEC  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 806BDAF0  7F 83 E3 78 */	mr r3, r28
 /* 806BDAF4  38 81 00 2C */	addi r4, r1, 0x2c
@@ -238,7 +238,7 @@ lbl_806BDBA4:
 /* 806BDBC0  38 00 FF FF */	li r0, -1
 /* 806BDBC4  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BDBC8  38 63 E7 B0 */	addi r3, r3, l_HIO@l
-/* 806BDBCC  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806BE7B4 */
+/* 806BDBCC  98 03 00 04 */	stb r0, 4(r3)
 lbl_806BDBD0:
 /* 806BDBD0  80 7E 05 D0 */	lwz r3, 0x5d0(r30)
 /* 806BDBD4  80 63 00 04 */	lwz r3, 4(r3)

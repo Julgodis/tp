@@ -15,7 +15,7 @@ lbl_8076CAA8:
 /* 8076CADC  41 82 00 30 */	beq lbl_8076CB0C
 /* 8076CAE0  3C 60 80 78 */	lis r3, target_info_count@ha
 /* 8076CAE4  38 83 A9 18 */	addi r4, r3, target_info_count@l
-/* 8076CAE8  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8077A918 */
+/* 8076CAE8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 8076CAEC  2C 05 00 0A */	cmpwi r5, 0xa
 /* 8076CAF0  40 80 00 1C */	bge lbl_8076CB0C
 /* 8076CAF4  54 A0 10 3A */	slwi r0, r5, 2

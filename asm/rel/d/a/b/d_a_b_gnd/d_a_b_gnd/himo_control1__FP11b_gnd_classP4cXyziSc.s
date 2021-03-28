@@ -32,12 +32,12 @@ lbl_805FB0F0:
 /* 805FB168  D0 19 00 08 */	stfs f0, 8(r25)
 /* 805FB16C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805FB170  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805FB174  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805FB174  80 63 00 00 */	lwz r3, 0(r3)
 /* 805FB178  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 805FB17C  4B A1 12 60 */	b mDoMtx_YrotS__FPA4_fs
 /* 805FB180  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805FB184  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805FB188  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805FB188  80 63 00 00 */	lwz r3, 0(r3)
 /* 805FB18C  A8 9F 04 E4 */	lha r4, 0x4e4(r31)
 /* 805FB190  4B A1 12 0C */	b mDoMtx_XrotM__FPA4_fs
 /* 805FB194  C0 3D 01 28 */	lfs f1, 0x128(r29)

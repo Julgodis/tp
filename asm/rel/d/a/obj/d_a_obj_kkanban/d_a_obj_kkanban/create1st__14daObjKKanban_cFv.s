@@ -7,7 +7,7 @@ lbl_80C46A64:
 /* 80C46A78  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80C46A7C  3C 80 80 C4 */	lis r4, l_arcName@ha
 /* 80C46A80  38 84 6F 98 */	addi r4, r4, l_arcName@l
-/* 80C46A84  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C46F98 */
+/* 80C46A84  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C46A88  4B 3E 64 34 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C46A8C  7C 60 1B 78 */	mr r0, r3
 /* 80C46A90  2C 00 00 04 */	cmpwi r0, 4
@@ -15,7 +15,7 @@ lbl_80C46A64:
 /* 80C46A98  7F E3 FB 78 */	mr r3, r31
 /* 80C46A9C  3C 80 80 C4 */	lis r4, l_arcName@ha
 /* 80C46AA0  38 84 6F 98 */	addi r4, r4, l_arcName@l
-/* 80C46AA4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C46F98 */
+/* 80C46AA4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C46AA8  38 A0 00 07 */	li r5, 7
 /* 80C46AAC  38 C0 00 00 */	li r6, 0
 /* 80C46AB0  38 E0 19 50 */	li r7, 0x1950

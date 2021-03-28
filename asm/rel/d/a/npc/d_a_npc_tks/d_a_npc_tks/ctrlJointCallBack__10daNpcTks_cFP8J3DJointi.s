@@ -7,7 +7,7 @@ lbl_80B15670:
 /* 80B15684  40 82 00 24 */	bne lbl_80B156A8
 /* 80B15688  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B1568C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80B15690  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80B15690  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80B15694  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80B15698  28 03 00 00 */	cmplwi r3, 0
 /* 80B1569C  41 82 00 0C */	beq lbl_80B156A8

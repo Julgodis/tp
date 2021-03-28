@@ -7,9 +7,9 @@ lbl_80CAF3F8:
 /* 80CAF40C  7C BC 2B 78 */	mr r28, r5
 /* 80CAF410  3C 60 80 CB */	lis r3, l_bmd@ha
 /* 80CAF414  3B E3 09 D4 */	addi r31, r3, l_bmd@l
-/* 80CAF418  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAF41C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CAF420  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80CAF418  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAF41C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CAF420  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 80CAF424  88 04 07 32 */	lbz r0, 0x732(r4)
 /* 80CAF428  28 00 00 00 */	cmplwi r0, 0
 /* 80CAF42C  41 82 00 70 */	beq lbl_80CAF49C

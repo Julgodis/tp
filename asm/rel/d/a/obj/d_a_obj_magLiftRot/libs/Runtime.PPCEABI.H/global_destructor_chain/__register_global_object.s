@@ -4,5 +4,5 @@ lbl_80C8E8D8:
 /* 80C8E8E0  90 05 00 00 */	stw r0, 0(r5)
 /* 80C8E8E4  90 85 00 04 */	stw r4, 4(r5)
 /* 80C8E8E8  90 65 00 08 */	stw r3, 8(r5)
-/* 80C8E8EC  90 A6 00 00 */	stw r5, 0(r6)	/* effective address: 80C90000 */
+/* 80C8E8EC  90 A6 00 00 */	stw r5, 0(r6)
 /* 80C8E8F0  4E 80 00 20 */	blr 

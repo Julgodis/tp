@@ -51,17 +51,17 @@ lbl_80C289E4:
 /* 80C289E4  38 7E 06 B8 */	addi r3, r30, 0x6b8
 /* 80C289E8  3C 80 80 C3 */	lis r4, l_arcName@ha
 /* 80C289EC  38 84 93 18 */	addi r4, r4, l_arcName@l
-/* 80C289F0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C29318 */
+/* 80C289F0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C289F4  4B 40 44 C8 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C289F8  7C 7D 1B 78 */	mr r29, r3
 /* 80C289FC  2C 1D 00 04 */	cmpwi r29, 4
 /* 80C28A00  40 82 00 68 */	bne lbl_80C28A68
-/* 80C28A04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C28A08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C28A04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C28A08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C28A0C  3C 63 00 02 */	addis r3, r3, 2
 /* 80C28A10  3C 80 80 C3 */	lis r4, l_arcName@ha
 /* 80C28A14  38 84 93 18 */	addi r4, r4, l_arcName@l
-/* 80C28A18  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C29318 */
+/* 80C28A18  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C28A1C  3C A0 80 C3 */	lis r5, stringBase0@ha
 /* 80C28A20  38 A5 92 E8 */	addi r5, r5, stringBase0@l
 /* 80C28A24  38 A5 00 06 */	addi r5, r5, 6
@@ -71,7 +71,7 @@ lbl_80C289E4:
 /* 80C28A34  7F C3 F3 78 */	mr r3, r30
 /* 80C28A38  3C 80 80 C3 */	lis r4, l_arcName@ha
 /* 80C28A3C  38 84 93 18 */	addi r4, r4, l_arcName@l
-/* 80C28A40  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C29318 */
+/* 80C28A40  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C28A44  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C28A48  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80C28A4C  38 E0 13 20 */	li r7, 0x1320
@@ -100,8 +100,8 @@ lbl_80C28A68:
 /* 80C28AA4  38 00 01 00 */	li r0, 0x100
 /* 80C28AA8  B0 1E 05 B0 */	sth r0, 0x5b0(r30)
 /* 80C28AAC  38 7E 07 04 */	addi r3, r30, 0x704
-/* 80C28AB0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C28AB4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C28AB0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C28AB4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C28AB8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C28ABC  4B 44 DF F0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C28AC0  7F C3 F3 78 */	mr r3, r30

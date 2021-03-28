@@ -7,7 +7,7 @@ lbl_80AB661C:
 /* 80AB6630  40 82 00 30 */	bne lbl_80AB6660
 /* 80AB6634  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80AB6638  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80AB663C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80AB663C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80AB6640  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80AB6644  28 03 00 00 */	cmplwi r3, 0
 /* 80AB6648  41 82 00 18 */	beq lbl_80AB6660

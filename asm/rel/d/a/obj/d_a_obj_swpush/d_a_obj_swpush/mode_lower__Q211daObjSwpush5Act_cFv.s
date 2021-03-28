@@ -29,8 +29,8 @@ lbl_80484250:
 /* 80484258  38 A0 00 08 */	li r5, 8
 /* 8048425C  48 00 0A 89 */	bl func_80484CE4
 /* 80484260  7C 64 1B 78 */	mr r4, r3
-/* 80484264  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80484268  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80484264  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80484268  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048426C  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80484270  7C 05 07 74 */	extsb r5, r0
 /* 80484274  4B BB 10 EC */	b isSwitch__10dSv_info_cCFii

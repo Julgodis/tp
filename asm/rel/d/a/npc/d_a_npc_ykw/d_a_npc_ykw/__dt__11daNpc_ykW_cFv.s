@@ -30,7 +30,7 @@ lbl_80B5EF4C:
 /* 80B5EF78  41 82 00 18 */	beq lbl_80B5EF90
 /* 80B5EF7C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B5EF80  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B5EF84  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B5EF84  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B5EF88  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80B5EF8C  4B 75 08 F8 */	b subBgmStop__8Z2SeqMgrFv
 lbl_80B5EF90:

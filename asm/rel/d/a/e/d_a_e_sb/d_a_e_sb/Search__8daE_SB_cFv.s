@@ -16,12 +16,12 @@ lbl_80783010:
 /* 80783048  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
 /* 8078304C  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80783050  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80783054  C0 3F 00 70 */	lfs f1, 0x70(r31)	/* effective address: 80784DD8 */
+/* 80783054  C0 3F 00 70 */	lfs f1, 0x70(r31)
 /* 80783058  D0 21 00 2C */	stfs f1, 0x2c(r1)
 /* 8078305C  D0 41 00 30 */	stfs f2, 0x30(r1)
-/* 80783060  80 7E 00 94 */	lwz r3, 0x94(r30)	/* effective address: 80784FCC */
-/* 80783064  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 80780008 */
-/* 80783068  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80780000 */
+/* 80783060  80 7E 00 94 */	lwz r3, 0x94(r30)
+/* 80783064  C0 43 00 08 */	lfs f2, 8(r3)
+/* 80783068  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8078306C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80783070  D0 21 00 38 */	stfs f1, 0x38(r1)
 /* 80783074  D0 41 00 3C */	stfs f2, 0x3c(r1)
@@ -180,9 +180,9 @@ lbl_8078327C:
 lbl_80783290:
 /* 80783290  FF C0 08 90 */	fmr f30, f1
 lbl_80783294:
-/* 80783294  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80783298  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8078329C  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80783294  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80783298  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8078329C  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 807832A0  38 7D 06 2C */	addi r3, r29, 0x62c
 /* 807832A4  38 80 00 00 */	li r4, 0
 /* 807832A8  4B B3 E8 D4 */	b setLinkSearch__15Z2CreatureEnemyFb

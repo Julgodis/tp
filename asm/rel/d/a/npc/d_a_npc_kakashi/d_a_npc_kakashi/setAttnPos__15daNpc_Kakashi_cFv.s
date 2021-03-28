@@ -9,11 +9,11 @@ lbl_8054C2E0:
 /* 8054C2FC  7C 7C 1B 78 */	mr r28, r3
 /* 8054C300  3C 60 80 55 */	lis r3, m__21daNpc_Kakashi_Param_c@ha
 /* 8054C304  3B E3 EA C4 */	addi r31, r3, m__21daNpc_Kakashi_Param_c@l
-/* 8054C308  C0 1F 00 AC */	lfs f0, 0xac(r31)	/* effective address: 8054EB70 */
+/* 8054C308  C0 1F 00 AC */	lfs f0, 0xac(r31)
 /* 8054C30C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8054C310  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8054C314  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 8054C318  C3 FF 00 00 */	lfs f31, 0(r31)	/* effective address: 8054EAC4 */
+/* 8054C318  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 8054C31C  88 1C 13 92 */	lbz r0, 0x1392(r28)
 /* 8054C320  28 00 00 00 */	cmplwi r0, 0
 /* 8054C324  40 82 00 14 */	bne lbl_8054C338

@@ -27,14 +27,14 @@ lbl_8058BEEC:
 /* 8058BF50  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 8058BF54  4B C1 8E 4C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 lbl_8058BF58:
-/* 8058BF58  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058BF5C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 8058BF60  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 8058BF58  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058BF5C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8058BF60  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 8058BF64  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8058BF68  3B A3 4A C8 */	addi r29, r3, j3dSys@l
-/* 8058BF6C  90 1D 00 48 */	stw r0, 0x48(r29)	/* effective address: 80434B10 */
-/* 8058BF70  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 8058BF74  90 1D 00 4C */	stw r0, 0x4c(r29)	/* effective address: 80434B14 */
+/* 8058BF6C  90 1D 00 48 */	stw r0, 0x48(r29)
+/* 8058BF70  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 8058BF74  90 1D 00 4C */	stw r0, 0x4c(r29)
 /* 8058BF78  80 7F 06 08 */	lwz r3, 0x608(r31)
 /* 8058BF7C  4B A8 1D 48 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 8058BF80  80 1F 00 B0 */	lwz r0, 0xb0(r31)
@@ -65,11 +65,11 @@ lbl_8058BFD4:
 /* 8058BFD8  7C 1B 00 00 */	cmpw r27, r0
 /* 8058BFDC  41 80 FF E0 */	blt lbl_8058BFBC
 lbl_8058BFE0:
-/* 8058BFE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058BFE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8058BFE8  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8058BFE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058BFE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8058BFE8  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8058BFEC  90 1D 00 48 */	stw r0, 0x48(r29)
-/* 8058BFF0  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8058BFF0  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 8058BFF4  90 1D 00 4C */	stw r0, 0x4c(r29)
 /* 8058BFF8  38 60 00 01 */	li r3, 1
 /* 8058BFFC  39 61 00 20 */	addi r11, r1, 0x20

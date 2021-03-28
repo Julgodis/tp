@@ -32,11 +32,11 @@ lbl_8094DED0:
 /* 8094DF48  4B 6B EE 54 */	b transM__14mDoMtx_stack_cFfff
 /* 8094DF4C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8094DF50  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8094DF54  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 8094DF54  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 8094DF58  D0 41 00 1C */	stfs f2, 0x1c(r1)
-/* 8094DF5C  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8094DF5C  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 8094DF60  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 8094DF64  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8094DF64  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8094DF68  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8094DF6C  48 00 00 0C */	b lbl_8094DF78
 lbl_8094DF70:

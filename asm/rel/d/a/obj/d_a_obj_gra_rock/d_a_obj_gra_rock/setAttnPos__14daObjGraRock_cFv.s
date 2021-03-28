@@ -7,11 +7,11 @@ lbl_80C110F8:
 /* 80C1110C  7C 7E 1B 78 */	mr r30, r3
 /* 80C11110  3C 60 80 C1 */	lis r3, mCcDCyl__14daObjGraRock_c@ha
 /* 80C11114  3B E3 23 BC */	addi r31, r3, mCcDCyl__14daObjGraRock_c@l
-/* 80C11118  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 80C12400 */
+/* 80C11118  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 80C1111C  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80C11120  C0 1F 00 48 */	lfs f0, 0x48(r31)	/* effective address: 80C12404 */
+/* 80C11120  C0 1F 00 48 */	lfs f0, 0x48(r31)
 /* 80C11124  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80C11128  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 80C12408 */
+/* 80C11128  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80C1112C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80C11130  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C11134  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
@@ -34,8 +34,8 @@ lbl_80C110F8:
 /* 80C11178  98 7E 05 44 */	stb r3, 0x544(r30)
 /* 80C1117C  38 00 00 01 */	li r0, 1
 /* 80C11180  90 1E 05 5C */	stw r0, 0x55c(r30)
-/* 80C11184  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C11188  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C11184  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C11188  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C1118C  3B A3 56 B8 */	addi r29, r3, 0x56b8
 /* 80C11190  7F A3 EB 78 */	mr r3, r29
 /* 80C11194  4B 46 26 50 */	b LockonTruth__12dAttention_cFv
@@ -104,7 +104,7 @@ lbl_80C110F8:
 /* 80C11290  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C11294  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C11298  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C1129C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C1129C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C112A0  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C112A4  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C112A8  38 C0 00 00 */	li r6, 0
@@ -120,7 +120,7 @@ lbl_80C110F8:
 /* 80C112D0  90 01 00 08 */	stw r0, 8(r1)
 /* 80C112D4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C112D8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C112DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C112DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C112E0  38 81 00 08 */	addi r4, r1, 8
 /* 80C112E4  38 BE 05 50 */	addi r5, r30, 0x550
 /* 80C112E8  38 C0 00 00 */	li r6, 0

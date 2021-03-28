@@ -19,16 +19,16 @@ lbl_80CA4F24:
 /* 80CA4F68  3C 60 80 CA */	lis r3, data_80CA6480@ha
 /* 80CA4F6C  3B 63 64 80 */	addi r27, r3, data_80CA6480@l
 /* 80CA4F70  3B 37 FF FF */	addi r25, r23, -1
-/* 80CA4F74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA4F78  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80CA4F7C  C3 9B 00 60 */	lfs f28, 0x60(r27)	/* effective address: 80CA64E0 */
-/* 80CA4F80  C3 BB 00 64 */	lfs f29, 0x64(r27)	/* effective address: 80CA64E4 */
-/* 80CA4F84  C3 FB 00 48 */	lfs f31, 0x48(r27)	/* effective address: 80CA64C8 */
-/* 80CA4F88  CB DB 00 50 */	lfd f30, 0x50(r27)	/* effective address: 80CA64D0 */
+/* 80CA4F74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA4F78  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80CA4F7C  C3 9B 00 60 */	lfs f28, 0x60(r27)
+/* 80CA4F80  C3 BB 00 64 */	lfs f29, 0x64(r27)
+/* 80CA4F84  C3 FB 00 48 */	lfs f31, 0x48(r27)
+/* 80CA4F88  CB DB 00 50 */	lfd f30, 0x50(r27)
 /* 80CA4F8C  3F C0 43 30 */	lis r30, 0x4330
 /* 80CA4F90  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80CA4F94  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80CA4F98  C3 7B 00 6C */	lfs f27, 0x6c(r27)	/* effective address: 80CA64EC */
+/* 80CA4F98  C3 7B 00 6C */	lfs f27, 0x6c(r27)
 /* 80CA4F9C  3E 80 00 01 */	lis r20, 1
 /* 80CA4FA0  1E B9 00 0C */	mulli r21, r25, 0xc
 /* 80CA4FA4  1E D9 00 06 */	mulli r22, r25, 6

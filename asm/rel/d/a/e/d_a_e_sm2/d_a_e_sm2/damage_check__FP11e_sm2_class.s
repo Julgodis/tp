@@ -309,8 +309,8 @@ lbl_8079AD20:
 /* 8079AE44  38 A1 00 4C */	addi r5, r1, 0x4c
 /* 8079AE48  7F 46 D3 78 */	mr r6, r26
 /* 8079AE4C  4B 8D CF 18 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8079AE50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079AE54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8079AE50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079AE54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8079AE58  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8079AE5C  38 81 00 70 */	addi r4, r1, 0x70
 /* 8079AE60  4B 8D 95 54 */	b LineCross__4cBgSFP11cBgS_LinChk

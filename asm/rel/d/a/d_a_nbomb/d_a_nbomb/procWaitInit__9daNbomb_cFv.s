@@ -8,11 +8,11 @@ lbl_804C9930:
 lbl_804C9948:
 /* 804C9948  3C 80 80 4D */	lis r4, lit_5630@ha
 /* 804C994C  38 A4 C5 54 */	addi r5, r4, lit_5630@l
-/* 804C9950  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 804CC554 */
-/* 804C9954  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 804CC558 */
+/* 804C9950  80 85 00 00 */	lwz r4, 0(r5)
+/* 804C9954  80 05 00 04 */	lwz r0, 4(r5)
 /* 804C9958  90 83 0C 38 */	stw r4, 0xc38(r3)
 /* 804C995C  90 03 0C 3C */	stw r0, 0xc3c(r3)
-/* 804C9960  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 804CC55C */
+/* 804C9960  80 05 00 08 */	lwz r0, 8(r5)
 /* 804C9964  90 03 0C 40 */	stw r0, 0xc40(r3)
 /* 804C9968  38 00 00 03 */	li r0, 3
 /* 804C996C  90 03 00 B0 */	stw r0, 0xb0(r3)

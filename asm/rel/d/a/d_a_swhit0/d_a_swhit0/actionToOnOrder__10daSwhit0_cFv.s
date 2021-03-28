@@ -10,8 +10,8 @@ lbl_80486C28:
 /* 80486C48  40 82 00 7C */	bne lbl_80486CC4
 /* 80486C4C  4B FF F3 C5 */	bl getEvNo__10daSwhit0_cFv
 /* 80486C50  7C 64 1B 78 */	mr r4, r3
-/* 80486C54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80486C58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80486C54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80486C58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80486C5C  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80486C60  7F E3 FB 78 */	mr r3, r31
 /* 80486C64  38 A0 FF FF */	li r5, -1

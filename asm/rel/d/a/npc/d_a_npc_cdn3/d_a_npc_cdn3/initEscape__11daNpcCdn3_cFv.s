@@ -62,8 +62,8 @@ lbl_80979FB4:
 lbl_80979FF4:
 /* 80979FF4  38 00 00 00 */	li r0, 0
 /* 80979FF8  90 1E 0B 70 */	stw r0, 0xb70(r30)
-/* 80979FFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8097A000  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80979FFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8097A000  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8097A004  38 63 09 78 */	addi r3, r3, 0x978
 /* 8097A008  38 80 00 3C */	li r4, 0x3c
 /* 8097A00C  4B 6B AB 8C */	b onSwitch__12dSv_danBit_cFi

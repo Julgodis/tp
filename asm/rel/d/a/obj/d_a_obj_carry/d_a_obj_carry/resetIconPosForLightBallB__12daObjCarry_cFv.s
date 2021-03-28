@@ -4,11 +4,11 @@ lbl_80471894:
 /* 8047189C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804718A0  3C 80 80 48 */	lis r4, l_cyl_info@ha
 /* 804718A4  38 84 99 0C */	addi r4, r4, l_cyl_info@l
-/* 804718A8  C0 04 0A 48 */	lfs f0, 0xa48(r4)	/* effective address: 8047A354 */
+/* 804718A8  C0 04 0A 48 */	lfs f0, 0xa48(r4)
 /* 804718AC  D0 01 00 08 */	stfs f0, 8(r1)
-/* 804718B0  C0 04 0A AC */	lfs f0, 0xaac(r4)	/* effective address: 8047A3B8 */
+/* 804718B0  C0 04 0A AC */	lfs f0, 0xaac(r4)
 /* 804718B4  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 804718B8  C0 04 0A E0 */	lfs f0, 0xae0(r4)	/* effective address: 8047A3EC */
+/* 804718B8  C0 04 0A E0 */	lfs f0, 0xae0(r4)
 /* 804718BC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 804718C0  A0 03 0D 16 */	lhz r0, 0xd16(r3)
 /* 804718C4  54 03 C6 BE */	rlwinm r3, r0, 0x18, 0x1a, 0x1f

@@ -15,8 +15,8 @@ lbl_80BB7458:
 /* 80BB748C  80 1E 05 74 */	lwz r0, 0x574(r30)
 /* 80BB7490  2C 00 00 00 */	cmpwi r0, 0
 /* 80BB7494  41 81 00 2C */	bgt lbl_80BB74C0
-/* 80BB7498  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB749C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB7498  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB749C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB74A0  3B A3 5B D4 */	addi r29, r3, 0x5bd4
 /* 80BB74A4  7F A3 EB 78 */	mr r3, r29
 /* 80BB74A8  4B 4B 89 B4 */	b CheckQuake__12dVibration_cFv
@@ -55,7 +55,7 @@ lbl_80BB74E0:
 /* 80BB7524  90 01 00 08 */	stw r0, 8(r1)
 /* 80BB7528  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB752C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB7530  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB7530  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB7534  38 81 00 08 */	addi r4, r1, 8
 /* 80BB7538  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BB753C  38 C0 00 00 */	li r6, 0
@@ -69,8 +69,8 @@ lbl_80BB74E0:
 /* 80BB755C  98 1E 05 78 */	stb r0, 0x578(r30)
 /* 80BB7560  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BB7564  54 04 E6 3E */	rlwinm r4, r0, 0x1c, 0x18, 0x1f
-/* 80BB7568  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB756C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB7568  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB756C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB7570  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80BB7574  7C 05 07 74 */	extsb r5, r0
 /* 80BB7578  4B 47 DC 88 */	b onSwitch__10dSv_info_cFii
@@ -81,8 +81,8 @@ lbl_80BB7584:
 /* 80BB7588  4B FF F9 DD */	bl setModelMtx__11daBkyRock_cFv
 /* 80BB758C  3B 80 00 00 */	li r28, 0
 /* 80BB7590  3B E0 00 00 */	li r31, 0
-/* 80BB7594  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB7598  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB7594  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB7598  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB759C  3B A3 23 3C */	addi r29, r3, 0x233c
 lbl_80BB75A0:
 /* 80BB75A0  7F A3 EB 78 */	mr r3, r29

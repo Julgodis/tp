@@ -14,7 +14,7 @@ lbl_80817064:
 /* 80817094  80 1E 04 D8 */	lwz r0, 0x4d8(r30)
 /* 80817098  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8081709C  C0 21 00 0C */	lfs f1, 0xc(r1)
-/* 808170A0  C0 1F 00 5C */	lfs f0, 0x5c(r31)	/* effective address: 80821908 */
+/* 808170A0  C0 1F 00 5C */	lfs f0, 0x5c(r31)
 /* 808170A4  EC 01 00 2A */	fadds f0, f1, f0
 /* 808170A8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 808170AC  38 61 00 14 */	addi r3, r1, 0x14
@@ -22,8 +22,8 @@ lbl_80817064:
 /* 808170B4  38 61 00 14 */	addi r3, r1, 0x14
 /* 808170B8  38 81 00 08 */	addi r4, r1, 8
 /* 808170BC  4B A5 0C 50 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 808170C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808170C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808170C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808170C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808170C8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 808170CC  38 81 00 14 */	addi r4, r1, 0x14
 /* 808170D0  4B 85 D3 D0 */	b GroundCross__4cBgSFP11cBgS_GndChk
@@ -35,7 +35,7 @@ lbl_80817064:
 /* 808170E8  EC 20 08 2A */	fadds f1, f0, f1
 /* 808170EC  3C 60 80 82 */	lis r3, l_HIO@ha
 /* 808170F0  38 63 1E 64 */	addi r3, r3, l_HIO@l
-/* 808170F4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80821E80 */
+/* 808170F4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 808170F8  EC 01 00 2A */	fadds f0, f1, f0
 /* 808170FC  D0 1E 06 A0 */	stfs f0, 0x6a0(r30)
 /* 80817100  C0 5E 06 CC */	lfs f2, 0x6cc(r30)

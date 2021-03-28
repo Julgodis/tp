@@ -19,8 +19,8 @@ lbl_804CD5B8:
 /* 804CD5FC  D0 1F 05 58 */	stfs f0, 0x558(r31)
 /* 804CD600  38 00 00 00 */	li r0, 0
 /* 804CD604  98 1F 09 34 */	stb r0, 0x934(r31)
-/* 804CD608  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804CD60C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804CD608  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804CD60C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804CD610  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 804CD614  3C 80 80 4D */	lis r4, stringBase0@ha
 /* 804CD618  38 84 E4 A4 */	addi r4, r4, stringBase0@l

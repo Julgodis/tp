@@ -19,7 +19,7 @@ lbl_80BF502C:
 /* 80BF502C  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80BF5030  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BF5034  38 84 56 E4 */	addi r4, r4, l_arcName@l
-/* 80BF5038  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF56E4 */
+/* 80BF5038  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF503C  4B 43 7E 80 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BF5040  7C 7F 1B 78 */	mr r31, r3
 /* 80BF5044  2C 1F 00 04 */	cmpwi r31, 4

@@ -6,11 +6,11 @@ lbl_80AC9E8C:
 /* 80AC9E9C  7C 7F 1B 78 */	mr r31, r3
 /* 80AC9EA0  3C 80 80 AD */	lis r4, lit_4342@ha
 /* 80AC9EA4  38 A4 B4 EC */	addi r5, r4, lit_4342@l
-/* 80AC9EA8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80ACB4EC */
-/* 80AC9EAC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80ACB4F0 */
+/* 80AC9EA8  80 85 00 00 */	lwz r4, 0(r5)
+/* 80AC9EAC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80AC9EB0  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80AC9EB4  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80AC9EB8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80ACB4F4 */
+/* 80AC9EB8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80AC9EBC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80AC9EC0  38 81 00 14 */	addi r4, r1, 0x14
 /* 80AC9EC4  48 00 04 DD */	bl chkAction__12daNpc_seiD_cFM12daNpc_seiD_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_80AC9E8C:
 lbl_80AC9EE8:
 /* 80AC9EE8  38 00 00 00 */	li r0, 0
 /* 80AC9EEC  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80AC9EF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC9EF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AC9EF8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80AC9EF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC9EF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AC9EF8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80AC9EFC  28 04 00 01 */	cmplwi r4, 1
 /* 80AC9F00  41 82 00 0C */	beq lbl_80AC9F0C
 /* 80AC9F04  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80AC9F30:
 lbl_80AC9F48:
 /* 80AC9F48  3C 60 80 AD */	lis r3, lit_4352@ha
 /* 80AC9F4C  38 83 B4 F8 */	addi r4, r3, lit_4352@l
-/* 80AC9F50  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80ACB4F8 */
-/* 80AC9F54  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80ACB4FC */
+/* 80AC9F50  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AC9F54  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AC9F58  90 61 00 08 */	stw r3, 8(r1)
 /* 80AC9F5C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80AC9F60  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80ACB500 */
+/* 80AC9F60  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AC9F64  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AC9F68  7F E3 FB 78 */	mr r3, r31
 /* 80AC9F6C  38 81 00 08 */	addi r4, r1, 8

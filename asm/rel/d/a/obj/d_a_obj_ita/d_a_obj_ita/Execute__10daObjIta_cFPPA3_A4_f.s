@@ -19,7 +19,7 @@ lbl_80C28C70:
 /* 80C28CB4  90 01 00 08 */	stw r0, 8(r1)
 /* 80C28CB8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C28CBC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C28CC0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C28CC0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C28CC4  38 81 00 08 */	addi r4, r1, 8
 /* 80C28CC8  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80C28CCC  38 C0 00 00 */	li r6, 0
@@ -38,9 +38,9 @@ lbl_80C28C70:
 /* 80C28D00  38 00 00 00 */	li r0, 0
 /* 80C28D04  B0 1D 05 E6 */	sth r0, 0x5e6(r29)
 lbl_80C28D08:
-/* 80C28D08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C28D0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C28D10  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C28D08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C28D0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C28D10  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 80C28D14  38 60 01 F6 */	li r3, 0x1f6
 /* 80C28D18  3C 80 80 C3 */	lis r4, data_80C293F4@ha
 /* 80C28D1C  38 84 93 F4 */	addi r4, r4, data_80C293F4@l
@@ -49,7 +49,7 @@ lbl_80C28D08:
 /* 80C28D28  41 82 00 24 */	beq lbl_80C28D4C
 /* 80C28D2C  3C 60 80 C3 */	lis r3, data_80C293F4@ha
 /* 80C28D30  38 63 93 F4 */	addi r3, r3, data_80C293F4@l
-/* 80C28D34  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C293F4 */
+/* 80C28D34  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C28D38  28 03 00 00 */	cmplwi r3, 0
 /* 80C28D3C  41 82 00 10 */	beq lbl_80C28D4C
 /* 80C28D40  38 03 04 D0 */	addi r0, r3, 0x4d0
@@ -262,8 +262,8 @@ lbl_80C28E54:
 /* 80C2906C  7F A3 EB 78 */	mr r3, r29
 /* 80C29070  4B FF F7 45 */	bl setBaseMtx__10daObjIta_cFv
 /* 80C29074  38 7D 07 04 */	addi r3, r29, 0x704
-/* 80C29078  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C2907C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C29078  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C2907C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C29080  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C29084  4B 44 DA 28 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C29088  38 60 00 01 */	li r3, 1

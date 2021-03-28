@@ -8,13 +8,13 @@ lbl_80BD9EE4:
 /* 80BD9EFC  3B C3 A3 00 */	addi r30, r3, lit_1109@l
 /* 80BD9F00  3C 60 80 BE */	lis r3, l_wallBmd@ha
 /* 80BD9F04  3B E3 9F A4 */	addi r31, r3, l_wallBmd@l
-/* 80BD9F08  C0 1F 00 64 */	lfs f0, 0x64(r31)	/* effective address: 80BDA008 */
-/* 80BD9F0C  D0 1E 00 4C */	stfs f0, 0x4c(r30)	/* effective address: 80BDA34C */
-/* 80BD9F10  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80BDA0A0 */
+/* 80BD9F08  C0 1F 00 64 */	lfs f0, 0x64(r31)
+/* 80BD9F0C  D0 1E 00 4C */	stfs f0, 0x4c(r30)
+/* 80BD9F10  C0 1F 00 FC */	lfs f0, 0xfc(r31)
 /* 80BD9F14  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 80BD9F18  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80BDA350 */
-/* 80BD9F1C  C0 1F 01 00 */	lfs f0, 0x100(r31)	/* effective address: 80BDA0A4 */
-/* 80BD9F20  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80BDA354 */
+/* 80BD9F18  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80BD9F1C  C0 1F 01 00 */	lfs f0, 0x100(r31)
+/* 80BD9F20  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80BD9F24  3C 80 80 BD */	lis r4, __dt__4cXyzFv@ha
 /* 80BD9F28  38 84 6C CC */	addi r4, r4, __dt__4cXyzFv@l
 /* 80BD9F2C  38 BE 00 40 */	addi r5, r30, 0x40

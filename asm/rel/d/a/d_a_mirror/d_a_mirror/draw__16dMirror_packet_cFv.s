@@ -5,13 +5,13 @@ lbl_80871D84:
 /* 80871D90  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80871D94  93 C1 00 08 */	stw r30, 8(r1)
 /* 80871D98  7C 7E 1B 78 */	mr r30, r3
-/* 80871D9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80871DA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80871DA4  80 63 61 B0 */	lwz r3, 0x61b0(r3)	/* effective address: 8040C370 */
-/* 80871DA8  C0 03 00 CC */	lfs f0, 0xcc(r3)	/* effective address: 8040628C */
+/* 80871D9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80871DA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80871DA4  80 63 61 B0 */	lwz r3, 0x61b0(r3)
+/* 80871DA8  C0 03 00 CC */	lfs f0, 0xcc(r3)
 /* 80871DAC  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 80871DB0  3B E3 D8 E4 */	addi r31, r3, mClipper__14mDoLib_clipper@l
-/* 80871DB4  D0 1F 00 58 */	stfs f0, 0x58(r31)	/* effective address: 803DD93C */
+/* 80871DB4  D0 1F 00 58 */	stfs f0, 0x58(r31)
 /* 80871DB8  7F E3 FB 78 */	mr r3, r31
 /* 80871DBC  4B A0 19 D0 */	b calcViewFrustum__11J3DUClipperFv
 /* 80871DC0  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha

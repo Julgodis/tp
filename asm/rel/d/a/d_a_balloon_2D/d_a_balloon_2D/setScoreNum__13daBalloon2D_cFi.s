@@ -16,9 +16,9 @@ lbl_80654284:
 /* 8065428C  7C 64 03 D6 */	divw r3, r4, r0
 /* 80654290  7C 03 01 D6 */	mullw r0, r3, r0
 /* 80654294  7F 80 20 50 */	subf r28, r0, r4
-/* 80654298  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8065429C  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 806542A0  83 BE 5D 30 */	lwz r29, 0x5d30(r30)	/* effective address: 8040BEF0 */
+/* 80654298  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8065429C  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 806542A0  83 BE 5D 30 */	lwz r29, 0x5d30(r30)
 /* 806542A4  4B BC A0 24 */	b dMeter2Info_getNumberTextureName__Fi
 /* 806542A8  7C 65 1B 78 */	mr r5, r3
 /* 806542AC  7F A3 EB 78 */	mr r3, r29

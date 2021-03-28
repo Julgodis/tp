@@ -24,9 +24,9 @@ lbl_80AEDA18:
 /* 80AEDA30  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80AEDA34  3C 60 80 AF */	lis r3, m__18daNpc_solA_Param_c@ha
 /* 80AEDA38  38 83 F1 00 */	addi r4, r3, m__18daNpc_solA_Param_c@l
-/* 80AEDA3C  C3 E4 00 1C */	lfs f31, 0x1c(r4)	/* effective address: 80AEF11C */
+/* 80AEDA3C  C3 E4 00 1C */	lfs f31, 0x1c(r4)
 /* 80AEDA40  38 7F 0F 68 */	addi r3, r31, 0xf68
-/* 80AEDA44  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80AEF114 */
+/* 80AEDA44  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 80AEDA48  4B 78 17 B0 */	b SetH__8cM3dGCylFf
 /* 80AEDA4C  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80AEDA50  FC 20 F8 90 */	fmr f1, f31
@@ -34,8 +34,8 @@ lbl_80AEDA18:
 /* 80AEDA58  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80AEDA5C  38 81 00 08 */	addi r4, r1, 8
 /* 80AEDA60  4B 78 17 7C */	b SetC__8cM3dGCylFRC4cXyz
-/* 80AEDA64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AEDA68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AEDA64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AEDA68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AEDA6C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80AEDA70  38 9F 0E 44 */	addi r4, r31, 0xe44
 /* 80AEDA74  4B 77 71 34 */	b Set__4cCcSFP8cCcD_Obj

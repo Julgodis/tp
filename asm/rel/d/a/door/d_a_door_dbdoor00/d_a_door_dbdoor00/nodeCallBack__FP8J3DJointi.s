@@ -9,7 +9,7 @@ lbl_8045D378:
 /* 8045D394  A3 83 00 14 */	lhz r28, 0x14(r3)
 /* 8045D398  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8045D39C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8045D3A0  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 8045D3A0  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 8045D3A4  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 8045D3A8  80 7F 00 84 */	lwz r3, 0x84(r31)
 /* 8045D3AC  80 03 00 0C */	lwz r0, 0xc(r3)

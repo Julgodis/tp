@@ -13,7 +13,7 @@ lbl_80BA8734:
 /* 80BA8760  90 01 00 08 */	stw r0, 8(r1)
 /* 80BA8764  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BA8768  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BA876C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BA876C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BA8770  38 81 00 08 */	addi r4, r1, 8
 /* 80BA8774  38 A0 00 00 */	li r5, 0
 /* 80BA8778  4B 70 51 38 */	b seStop__7Z2SeMgrF10JAISoundIDUl

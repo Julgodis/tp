@@ -17,9 +17,9 @@ lbl_805B10AC:
 /* 805B10E8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 805B10EC  28 00 00 00 */	cmplwi r0, 0
 /* 805B10F0  41 82 01 48 */	beq lbl_805B1238
-/* 805B10F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B10F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805B10FC  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 805B10F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B10F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805B10FC  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 805B1100  28 00 00 00 */	cmplwi r0, 0
 /* 805B1104  40 82 01 34 */	bne lbl_805B1238
 /* 805B1108  38 61 00 0C */	addi r3, r1, 0xc

@@ -35,8 +35,8 @@ lbl_805B5510:
 /* 805B5560  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 805B5564  38 00 00 01 */	li r0, 1
 /* 805B5568  B0 1F 06 CC */	sth r0, 0x6cc(r31)
-/* 805B556C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B5570  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805B556C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B5570  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805B5574  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 805B5578  54 04 46 3E */	srwi r4, r0, 0x18
 /* 805B557C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)

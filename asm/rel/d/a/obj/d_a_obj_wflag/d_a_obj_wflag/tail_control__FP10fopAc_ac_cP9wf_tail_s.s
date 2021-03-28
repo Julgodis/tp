@@ -26,7 +26,7 @@ lbl_80D36CA0:
 /* 80D36D00  3B 7A 00 FA */	addi r27, r26, 0xfa
 /* 80D36D04  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80D36D08  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80D36D0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80D36D0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D36D10  A8 93 04 DE */	lha r4, 0x4de(r19)
 /* 80D36D14  4B 2D 56 C8 */	b mDoMtx_YrotS__FPA4_fs
 /* 80D36D18  C0 15 00 00 */	lfs f0, 0(r21)

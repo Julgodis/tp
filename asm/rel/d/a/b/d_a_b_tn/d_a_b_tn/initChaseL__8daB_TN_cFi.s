@@ -8,7 +8,7 @@ lbl_8062799C:
 /* 806279B4  3C A0 80 63 */	lis r5, lit_3920@ha
 /* 806279B8  3B E5 E6 34 */	addi r31, r5, lit_3920@l
 /* 806279BC  90 83 06 F4 */	stw r4, 0x6f4(r3)
-/* 806279C0  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 8062E638 */
+/* 806279C0  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 806279C4  D0 03 05 2C */	stfs f0, 0x52c(r3)
 /* 806279C8  80 03 06 F4 */	lwz r0, 0x6f4(r3)
 /* 806279CC  28 00 00 11 */	cmplwi r0, 0x11

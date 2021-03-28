@@ -13,11 +13,11 @@ lbl_809DB184:
 /* 809DB1B0  90 04 00 3C */	stw r0, 0x3c(r4)
 /* 809DB1B4  3C 80 80 9E */	lis r4, lit_4584@ha
 /* 809DB1B8  38 A4 F5 08 */	addi r5, r4, lit_4584@l
-/* 809DB1BC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 809DF508 */
-/* 809DB1C0  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 809DF50C */
+/* 809DB1BC  80 85 00 00 */	lwz r4, 0(r5)
+/* 809DB1C0  80 05 00 04 */	lwz r0, 4(r5)
 /* 809DB1C4  90 81 00 08 */	stw r4, 8(r1)
 /* 809DB1C8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 809DB1CC  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 809DF510 */
+/* 809DB1CC  80 05 00 08 */	lwz r0, 8(r5)
 /* 809DB1D0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 809DB1D4  38 81 00 08 */	addi r4, r1, 8
 /* 809DB1D8  48 00 1B CD */	bl chkAction__11daNpc_grO_cFM11daNpc_grO_cFPCvPvPv_i
@@ -26,7 +26,7 @@ lbl_809DB184:
 /* 809DB1E4  38 A0 00 00 */	li r5, 0
 /* 809DB1E8  3C C0 80 9E */	lis r6, m__17daNpc_grO_Param_c@ha
 /* 809DB1EC  38 C6 EF 7C */	addi r6, r6, m__17daNpc_grO_Param_c@l
-/* 809DB1F0  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 809DEF88 */
+/* 809DB1F0  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 809DB1F4  38 C0 00 00 */	li r6, 0
 /* 809DB1F8  38 E0 00 00 */	li r7, 0
 /* 809DB1FC  4B 77 70 B0 */	b draw__8daNpcF_cFiifP11_GXColorS10i

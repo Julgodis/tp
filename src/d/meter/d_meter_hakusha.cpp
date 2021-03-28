@@ -54,12 +54,6 @@ struct dMeter2Draw_c {
 	/* 8021AAA4 */ void setAlphaAnimeMax(CPaneMgrAlpha*, s16);
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-};
-
 struct J2DGrafContext {
 };
 
@@ -70,6 +64,12 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -151,14 +151,14 @@ SECTION_DATA static u8 data_803BF288[48] = {
 
 /* 803BF2B8-803BF2D8 0020+00 s=2 e=0 z=0  None .data      __vt__15dMeterHakusha_c                                      */
 SECTION_DATA static void* __vt__15dMeterHakusha_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15dMeterHakusha_cFv,
-	/* 3    */ (void*)__dt__15dMeterHakusha_cFv,
-	/* 4    */ (void*)_create__15dMeterHakusha_cFv,
-	/* 5    */ (void*)_execute__15dMeterHakusha_cFUl,
-	/* 6    */ (void*)_delete__15dMeterHakusha_cFv,
-	/* 7    */ (void*)isDead__11dMeterSub_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15dMeterHakusha_cFv,
+	(void*)__dt__15dMeterHakusha_cFv,
+	(void*)_create__15dMeterHakusha_cFv,
+	(void*)_execute__15dMeterHakusha_cFUl,
+	(void*)_delete__15dMeterHakusha_cFv,
+	(void*)isDead__11dMeterSub_cFv,
 };
 
 /* 8020C320-8020C384 0064+00 s=0 e=1 z=0  None .text      __ct__15dMeterHakusha_cFPv                                   */

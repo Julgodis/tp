@@ -11,11 +11,11 @@ lbl_8095349C:
 /* 809534C0  3B C3 81 20 */	addi r30, r3, lit_1109@l
 /* 809534C4  3C 60 80 95 */	lis r3, m__17daNpc_Aru_Param_c@ha
 /* 809534C8  3B E3 76 D0 */	addi r31, r3, m__17daNpc_Aru_Param_c@l
-/* 809534CC  C0 1F 00 F8 */	lfs f0, 0xf8(r31)	/* effective address: 809577C8 */
+/* 809534CC  C0 1F 00 F8 */	lfs f0, 0xf8(r31)
 /* 809534D0  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 809534D4  C0 3F 00 FC */	lfs f1, 0xfc(r31)	/* effective address: 809577CC */
+/* 809534D4  C0 3F 00 FC */	lfs f1, 0xfc(r31)
 /* 809534D8  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 809534DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80957798 */
+/* 809534DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 809534E0  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 809534E4  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 809534E8  D0 21 00 38 */	stfs f1, 0x38(r1)

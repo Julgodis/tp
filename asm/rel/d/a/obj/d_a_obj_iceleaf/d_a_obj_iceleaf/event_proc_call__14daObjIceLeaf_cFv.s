@@ -6,7 +6,7 @@ lbl_80C25908:
 /* 80C25918  38 E4 5D B0 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80C2591C  3C 80 80 C2 */	lis r4, struct_80C25F98+0x1@ha
 /* 80C25920  38 C4 5F 99 */	addi r6, r4, struct_80C25F98+0x1@l
-/* 80C25924  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80C25F99 */
+/* 80C25924  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C25928  7C 00 07 75 */	extsb. r0, r0
 /* 80C2592C  40 82 00 70 */	bne lbl_80C2599C
 /* 80C25930  80 87 00 C8 */	lwz r4, 0xc8(r7)

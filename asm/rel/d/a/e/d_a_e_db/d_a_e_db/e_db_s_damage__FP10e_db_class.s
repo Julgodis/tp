@@ -42,7 +42,7 @@ lbl_8069D570:
 /* 8069D5D0  41 82 00 28 */	beq lbl_8069D5F8
 /* 8069D5D4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8069D5D8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8069D5DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8069D5DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8069D5E0  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 8069D5E4  3C 84 00 01 */	addis r4, r4, 1
 /* 8069D5E8  38 04 80 00 */	addi r0, r4, -32768
@@ -52,7 +52,7 @@ lbl_8069D570:
 lbl_8069D5F8:
 /* 8069D5F8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8069D5FC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8069D600  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8069D600  80 63 00 00 */	lwz r3, 0(r3)
 /* 8069D604  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 8069D608  4B 96 ED D4 */	b mDoMtx_YrotS__FPA4_fs
 lbl_8069D60C:

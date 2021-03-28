@@ -23,16 +23,16 @@ lbl_804D3D60:
 lbl_804D3DB4:
 /* 804D3DB4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804D3DB8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804D3DBC  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 804D3DBC  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 804D3DC0  C0 1E 00 DC */	lfs f0, 0xdc(r30)
 /* 804D3DC4  EC 01 00 28 */	fsubs f0, f1, f0
-/* 804D3DC8  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 804D3DC8  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 804D3DCC  3B 80 00 00 */	li r28, 0
 /* 804D3DD0  3B 40 00 00 */	li r26, 0
-/* 804D3DD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D3DD8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 804D3DD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D3DD8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_804D3DDC:
-/* 804D3DDC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 804D3DDC  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 804D3DE0  38 63 02 10 */	addi r3, r3, 0x210
 /* 804D3DE4  80 9D 00 00 */	lwz r4, 0(r29)
 /* 804D3DE8  4B B7 7B 30 */	b getEmitter__Q213dPa_control_c7level_cFUl

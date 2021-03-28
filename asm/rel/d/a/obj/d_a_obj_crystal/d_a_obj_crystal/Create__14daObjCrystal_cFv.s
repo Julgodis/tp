@@ -9,9 +9,9 @@ lbl_80BD6470:
 /* 80BD648C  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BD6490  38 03 00 24 */	addi r0, r3, 0x24
 /* 80BD6494  90 1F 05 04 */	stw r0, 0x504(r31)
-/* 80BD6498  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD649C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BD64A0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80BD6498  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD649C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BD64A0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80BD64A4  38 80 00 00 */	li r4, 0
 /* 80BD64A8  90 81 00 08 */	stw r4, 8(r1)
 /* 80BD64AC  38 00 FF FF */	li r0, -1

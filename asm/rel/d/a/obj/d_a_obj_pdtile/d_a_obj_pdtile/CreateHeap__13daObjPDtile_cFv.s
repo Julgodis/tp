@@ -6,8 +6,8 @@ lbl_80CAB1F0:
 /* 80CAB200  7C 7F 1B 78 */	mr r31, r3
 /* 80CAB204  80 63 07 BC */	lwz r3, 0x7bc(r3)
 /* 80CAB208  80 9F 07 C4 */	lwz r4, 0x7c4(r31)
-/* 80CAB20C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CAB210  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CAB20C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CAB210  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CAB214  3C A5 00 02 */	addis r5, r5, 2
 /* 80CAB218  38 C0 00 80 */	li r6, 0x80
 /* 80CAB21C  38 A5 C2 F8 */	addi r5, r5, -15624

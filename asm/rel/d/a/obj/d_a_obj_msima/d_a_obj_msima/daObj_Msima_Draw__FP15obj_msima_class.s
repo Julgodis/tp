@@ -17,14 +17,14 @@ lbl_80C9B4A8:
 /* 80C9B4E4  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C9B4E8  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 80C9B4EC  4B 50 98 B4 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80C9B4F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9B4F4  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C9B4F8  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80C9B4F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9B4F4  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C9B4F8  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80C9B4FC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C9B500  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80C9B504  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80C9B508  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80C9B50C  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
+/* 80C9B504  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80C9B508  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80C9B50C  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C9B510  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80C9B514  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C9B518  80 7F 05 7C */	lwz r3, 0x57c(r31)
@@ -39,11 +39,11 @@ lbl_80C9B4A8:
 /* 80C9B53C  4B 37 22 6C */	b entry__13mDoExt_brkAnmFP16J3DMaterialTablef
 /* 80C9B540  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80C9B544  4B 37 27 80 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80C9B548  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9B54C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C9B550  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C9B548  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9B54C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C9B550  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C9B554  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80C9B558  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C9B558  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C9B55C  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C9B560  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80C9B564  28 00 00 01 */	cmplwi r0, 1

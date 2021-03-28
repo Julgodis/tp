@@ -13,8 +13,8 @@ lbl_806A43C0:
 /* 806A43EC  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 806A43F0  83 A1 00 24 */	lwz r29, 0x24(r1)
 /* 806A43F4  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 806A43F8  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 806A71CC */
-/* 806A43FC  C0 5F 00 64 */	lfs f2, 0x64(r31)	/* effective address: 806A7228 */
+/* 806A43F8  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 806A43FC  C0 5F 00 64 */	lfs f2, 0x64(r31)
 /* 806A4400  4B BC B6 80 */	b cLib_addCalc0__FPfff
 /* 806A4404  38 00 00 05 */	li r0, 5
 /* 806A4408  B0 1E 06 B2 */	sth r0, 0x6b2(r30)
@@ -98,12 +98,12 @@ lbl_806A44E8:
 /* 806A452C  41 82 00 4C */	beq lbl_806A4578
 /* 806A4530  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806A4534  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806A4538  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806A4538  80 63 00 00 */	lwz r3, 0(r3)
 /* 806A453C  A8 9E 06 D8 */	lha r4, 0x6d8(r30)
 /* 806A4540  4B 96 7E 9C */	b mDoMtx_YrotS__FPA4_fs
 /* 806A4544  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806A4548  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806A454C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806A454C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806A4550  A8 9E 06 D6 */	lha r4, 0x6d6(r30)
 /* 806A4554  4B 96 7E 48 */	b mDoMtx_XrotM__FPA4_fs
 /* 806A4558  C0 3F 00 04 */	lfs f1, 4(r31)

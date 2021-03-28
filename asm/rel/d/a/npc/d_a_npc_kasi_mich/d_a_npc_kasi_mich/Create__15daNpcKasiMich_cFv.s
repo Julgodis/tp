@@ -95,8 +95,8 @@ lbl_80A26700:
 /* 80A26780  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 80A26784  4B 64 FA C4 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80A26788  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 80A2678C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A26790  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80A2678C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A26790  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80A26794  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80A26798  4B 65 03 14 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80A2679C  38 7D 07 A8 */	addi r3, r29, 0x7a8

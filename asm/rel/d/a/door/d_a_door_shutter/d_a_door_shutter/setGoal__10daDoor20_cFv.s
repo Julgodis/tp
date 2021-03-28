@@ -8,9 +8,9 @@ lbl_80465960:
 /* 80465978  3C 60 80 46 */	lis r3, lit_4018@ha
 /* 8046597C  3B E3 68 20 */	addi r31, r3, lit_4018@l
 /* 80465980  38 61 00 08 */	addi r3, r1, 8
-/* 80465984  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80465988  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8046598C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80465984  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80465988  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8046598C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80465990  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80465994  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80465998  4B E0 11 9C */	b __mi__4cXyzCFRC3Vec
@@ -38,10 +38,10 @@ lbl_80465960:
 /* 804659F0  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 804659F4  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 804659F8  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 804659FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80465A00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80465A04  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80465A08  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 804659FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80465A00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80465A04  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80465A08  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80465A0C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80465A10  41 82 00 10 */	beq lbl_80465A20
 /* 80465A14  C0 1F 00 70 */	lfs f0, 0x70(r31)
@@ -79,8 +79,8 @@ lbl_80465A40:
 /* 80465A88  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80465A8C  C0 01 00 28 */	lfs f0, 0x28(r1)
 /* 80465A90  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80465A94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80465A98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80465A94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80465A98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80465A9C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80465AA0  38 81 00 14 */	addi r4, r1, 0x14
 /* 80465AA4  4B BE 29 20 */	b setGoal__16dEvent_manager_cFP4cXyz

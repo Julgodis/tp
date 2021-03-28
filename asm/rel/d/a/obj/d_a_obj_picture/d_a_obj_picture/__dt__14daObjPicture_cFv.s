@@ -16,7 +16,7 @@ lbl_80CAD6C8:
 lbl_80CAD700:
 /* 80CAD700  3C 80 80 CB */	lis r4, l_arcName@ha
 /* 80CAD704  38 84 F0 E8 */	addi r4, r4, l_arcName@l
-/* 80CAD708  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CAF0E8 */
+/* 80CAD708  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CAD70C  4B 37 F8 FC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CAD710  38 7E 09 EC */	addi r3, r30, 0x9ec
 /* 80CAD714  3C 80 80 CB */	lis r4, __dt__8dCcD_CpsFv@ha

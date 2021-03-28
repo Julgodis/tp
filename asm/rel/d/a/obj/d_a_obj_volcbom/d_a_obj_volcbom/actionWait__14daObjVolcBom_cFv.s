@@ -8,12 +8,12 @@ lbl_80D25A08:
 /* 80D25A20  4B FF F8 A9 */	bl checkTalkDistance__14daObjVolcBom_cFv
 /* 80D25A24  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D25A28  41 82 00 38 */	beq lbl_80D25A60
-/* 80D25A2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D25A30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D25A2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D25A30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D25A34  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D25A38  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D25A3C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D25A40  A0 84 00 A8 */	lhz r4, 0xa8(r4)	/* effective address: 803A7330 */
+/* 80D25A40  A0 84 00 A8 */	lhz r4, 0xa8(r4)
 /* 80D25A44  4B 30 EF 78 */	b isEventBit__11dSv_event_cCFUs
 /* 80D25A48  2C 03 00 00 */	cmpwi r3, 0
 /* 80D25A4C  41 82 00 14 */	beq lbl_80D25A60
@@ -22,9 +22,9 @@ lbl_80D25A08:
 /* 80D25A58  7F E3 FB 78 */	mr r3, r31
 /* 80D25A5C  48 00 00 A9 */	bl actionOrderEvent__14daObjVolcBom_cFv
 lbl_80D25A60:
-/* 80D25A60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D25A64  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80D25A68  83 BE 5D AC */	lwz r29, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80D25A60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D25A64  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80D25A68  83 BE 5D AC */	lwz r29, 0x5dac(r30)
 /* 80D25A6C  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80D25A70  7F 83 E3 78 */	mr r3, r28
 /* 80D25A74  A8 9F 09 F0 */	lha r4, 0x9f0(r31)
@@ -48,7 +48,7 @@ lbl_80D25A60:
 /* 80D25ABC  7F 83 E3 78 */	mr r3, r28
 /* 80D25AC0  3C 80 80 D2 */	lis r4, l_staff_name@ha
 /* 80D25AC4  38 84 6C 7C */	addi r4, r4, l_staff_name@l
-/* 80D25AC8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D26C7C */
+/* 80D25AC8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D25ACC  38 A0 00 00 */	li r5, 0
 /* 80D25AD0  38 C0 00 00 */	li r6, 0
 /* 80D25AD4  4B 32 20 48 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

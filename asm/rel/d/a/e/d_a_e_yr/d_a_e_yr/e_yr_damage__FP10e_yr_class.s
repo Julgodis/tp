@@ -11,7 +11,7 @@ lbl_808260E8:
 /* 8082610C  98 1E 0E 94 */	stb r0, 0xe94(r30)
 /* 80826110  38 00 00 0A */	li r0, 0xa
 /* 80826114  B0 1E 06 D0 */	sth r0, 0x6d0(r30)
-/* 80826118  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80828854 */
+/* 80826118  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 8082611C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80826120  38 7E 04 DC */	addi r3, r30, 0x4dc
 /* 80826124  38 80 00 00 */	li r4, 0
@@ -95,7 +95,7 @@ lbl_80826210:
 /* 80826254  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80826258  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8082625C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80826260  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80826260  80 63 00 00 */	lwz r3, 0(r3)
 /* 80826264  A8 9E 06 D2 */	lha r4, 0x6d2(r30)
 /* 80826268  4B 7E 61 74 */	b mDoMtx_YrotS__FPA4_fs
 /* 8082626C  38 61 00 0C */	addi r3, r1, 0xc
@@ -228,8 +228,8 @@ lbl_8082641C:
 /* 80826444  98 7E 06 7D */	stb r3, 0x67d(r30)
 /* 80826448  3C 60 80 83 */	lis r3, l_e_yrHIO@ha
 /* 8082644C  3B A3 8D BC */	addi r29, r3, l_e_yrHIO@l
-/* 80826450  A8 7D 00 1C */	lha r3, 0x1c(r29)	/* effective address: 80828DD8 */
-/* 80826454  A8 1D 00 1E */	lha r0, 0x1e(r29)	/* effective address: 80828DDA */
+/* 80826450  A8 7D 00 1C */	lha r3, 0x1c(r29)
+/* 80826454  A8 1D 00 1E */	lha r0, 0x1e(r29)
 /* 80826458  7C 03 00 50 */	subf r0, r3, r0
 /* 8082645C  C8 3F 00 E0 */	lfd f1, 0xe0(r31)
 /* 80826460  6C 00 80 00 */	xoris r0, r0, 0x8000

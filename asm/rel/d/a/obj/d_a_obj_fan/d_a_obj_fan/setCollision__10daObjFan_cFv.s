@@ -17,8 +17,8 @@ lbl_80BE583C:
 /* 80BE5878  3B E0 00 00 */	li r31, 0
 /* 80BE587C  3B A0 00 00 */	li r29, 0
 /* 80BE5880  3B 80 00 00 */	li r28, 0
-/* 80BE5884  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE5888  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE5884  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE5888  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE588C  3B 63 23 3C */	addi r27, r3, 0x233c
 lbl_80BE5890:
 /* 80BE5890  88 1E 0A D4 */	lbz r0, 0xad4(r30)

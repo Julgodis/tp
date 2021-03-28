@@ -25,7 +25,7 @@ lbl_8065B788:
 /* 8065B7B8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8065B7BC  3C 80 80 66 */	lis r4, struct_80662FB8+0x2@ha
 /* 8065B7C0  38 84 2F BA */	addi r4, r4, struct_80662FB8+0x2@l
-/* 8065B7C4  A8 84 00 00 */	lha r4, 0(r4)	/* effective address: 80662FBA */
+/* 8065B7C4  A8 84 00 00 */	lha r4, 0(r4)
 /* 8065B7C8  4B 9B 0C 14 */	b mDoMtx_YrotS__FPA4_fs
 /* 8065B7CC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8065B7D0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

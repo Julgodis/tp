@@ -27,8 +27,8 @@ lbl_807841CC:
 /* 80784230  38 61 00 50 */	addi r3, r1, 0x50
 /* 80784234  38 81 00 44 */	addi r4, r1, 0x44
 /* 80784238  4B AE 3A F0 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 8078423C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80784240  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8078423C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80784240  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80784244  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80784248  7F C3 F3 78 */	mr r3, r30
 /* 8078424C  38 81 00 50 */	addi r4, r1, 0x50

@@ -7,9 +7,9 @@ lbl_80BAF8F8:
 /* 80BAF90C  7C 7E 1B 78 */	mr r30, r3
 /* 80BAF910  3C 80 80 BB */	lis r4, l_eye_offset@ha
 /* 80BAF914  3B A4 37 B8 */	addi r29, r4, l_eye_offset@l
-/* 80BAF918  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BAF91C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BAF920  83 84 5D AC */	lwz r28, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BAF918  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BAF91C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BAF920  83 84 5D AC */	lwz r28, 0x5dac(r4)
 /* 80BAF924  7F 84 E3 78 */	mr r4, r28
 /* 80BAF928  4B 46 B0 3C */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80BAF92C  C0 1D 00 24 */	lfs f0, 0x24(r29)

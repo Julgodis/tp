@@ -29,7 +29,7 @@ lbl_806B9F70:
 /* 806B9F84  38 7E 05 E4 */	addi r3, r30, 0x5e4
 /* 806B9F88  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806B9F8C  38 84 B9 1C */	addi r4, r4, l_HIO@l
-/* 806B9F90  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 806BB924 */
+/* 806B9F90  C0 24 00 08 */	lfs f1, 8(r4)
 /* 806B9F94  C0 5F 01 04 */	lfs f2, 0x104(r31)
 /* 806B9F98  C0 7F 00 FC */	lfs f3, 0xfc(r31)
 /* 806B9F9C  4B BB 5A A0 */	b cLib_addCalc2__FPffff
@@ -43,7 +43,7 @@ lbl_806B9FA4:
 /* 806B9FB8  38 7E 05 E4 */	addi r3, r30, 0x5e4
 /* 806B9FBC  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806B9FC0  38 84 B9 1C */	addi r4, r4, l_HIO@l
-/* 806B9FC4  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 806BB924 */
+/* 806B9FC4  C0 24 00 08 */	lfs f1, 8(r4)
 /* 806B9FC8  C0 5F 01 04 */	lfs f2, 0x104(r31)
 /* 806B9FCC  C0 7F 00 FC */	lfs f3, 0xfc(r31)
 /* 806B9FD0  4B BB 5A 6C */	b cLib_addCalc2__FPffff

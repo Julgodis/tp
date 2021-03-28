@@ -33,8 +33,8 @@ lbl_80712C44:
 /* 80712C64  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80712C68  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80712C6C  41 82 00 28 */	beq lbl_80712C94
-/* 80712C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80712C74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80712C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80712C74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80712C78  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80712C7C  7C 05 07 74 */	extsb r5, r0
 /* 80712C80  4B 92 26 E0 */	b isSwitch__10dSv_info_cCFii
@@ -188,8 +188,8 @@ lbl_80712E8C:
 /* 80712EB0  4B BA EC E0 */	b setEnemyName__15Z2CreatureEnemyFPCc
 /* 80712EB4  38 1C 05 E8 */	addi r0, r28, 0x5e8
 /* 80712EB8  90 1C 10 9C */	stw r0, 0x109c(r28)
-/* 80712EBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80712EC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80712EBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80712EC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80712EC4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80712EC8  3C 80 80 71 */	lis r4, stringBase0@ha
 /* 80712ECC  38 84 3A F4 */	addi r4, r4, stringBase0@l

@@ -14,8 +14,8 @@ lbl_8084DBFC:
 /* 8084DC2C  4B 7D ED 50 */	b getLayerNo__14dComIfG_play_cFi
 /* 8084DC30  2C 03 00 0D */	cmpwi r3, 0xd
 /* 8084DC34  40 82 00 44 */	bne lbl_8084DC78
-/* 8084DC38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084DC3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084DC38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084DC3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8084DC40  3B E3 09 58 */	addi r31, r3, 0x958
 /* 8084DC44  7F E3 FB 78 */	mr r3, r31
 /* 8084DC48  38 80 00 10 */	li r4, 0x10
@@ -61,8 +61,8 @@ lbl_8084DCAC:
 /* 8084DCE0  98 1D 06 DC */	stb r0, 0x6dc(r29)
 /* 8084DCE4  38 00 00 FF */	li r0, 0xff
 /* 8084DCE8  98 1D 06 DE */	stb r0, 0x6de(r29)
-/* 8084DCEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084DCF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084DCEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084DCF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8084DCF4  38 63 09 58 */	addi r3, r3, 0x958
 /* 8084DCF8  38 80 00 08 */	li r4, 8
 /* 8084DCFC  4B 7E 6B 14 */	b onSwitch__12dSv_memBit_cFi

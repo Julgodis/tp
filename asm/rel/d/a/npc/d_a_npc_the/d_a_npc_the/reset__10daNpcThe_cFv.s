@@ -22,17 +22,17 @@ lbl_80AF977C:
 /* 80AF9794  41 80 FF E8 */	blt lbl_80AF977C
 /* 80AF9798  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AF979C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AF97A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AF97A4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AF97A0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AF97A4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AF97A8  90 7F 0D D0 */	stw r3, 0xdd0(r31)
 /* 80AF97AC  90 1F 0D D4 */	stw r0, 0xdd4(r31)
-/* 80AF97B0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AF97B0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AF97B4  90 1F 0D D8 */	stw r0, 0xdd8(r31)
-/* 80AF97B8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AF97BC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AF97B8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AF97BC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AF97C0  90 7F 0D DC */	stw r3, 0xddc(r31)
 /* 80AF97C4  90 1F 0D E0 */	stw r0, 0xde0(r31)
-/* 80AF97C8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AF97C8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AF97CC  90 1F 0D E4 */	stw r0, 0xde4(r31)
 /* 80AF97D0  38 60 00 00 */	li r3, 0
 /* 80AF97D4  90 7F 0E 04 */	stw r3, 0xe04(r31)

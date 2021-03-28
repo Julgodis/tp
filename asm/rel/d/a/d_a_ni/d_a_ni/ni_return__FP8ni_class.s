@@ -9,9 +9,9 @@ lbl_8094DA0C:
 /* 8094DA28  7C 7D 1B 78 */	mr r29, r3
 /* 8094DA2C  3C 60 80 95 */	lis r3, lit_3958@ha
 /* 8094DA30  3B E3 11 C0 */	addi r31, r3, lit_3958@l
-/* 8094DA34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094DA38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8094DA3C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8094DA34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094DA38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8094DA3C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 8094DA40  C0 3D 05 C0 */	lfs f1, 0x5c0(r29)
 /* 8094DA44  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 8094DA48  EC 21 00 28 */	fsubs f1, f1, f0

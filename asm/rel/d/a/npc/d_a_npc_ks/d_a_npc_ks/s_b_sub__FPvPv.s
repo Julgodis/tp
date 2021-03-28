@@ -15,7 +15,7 @@ lbl_80A498B4:
 /* 80A498E8  41 82 00 30 */	beq lbl_80A49918
 /* 80A498EC  3C 60 80 A6 */	lis r3, target_info_count@ha
 /* 80A498F0  38 83 FF 18 */	addi r4, r3, target_info_count@l
-/* 80A498F4  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80A5FF18 */
+/* 80A498F4  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80A498F8  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80A498FC  40 80 00 1C */	bge lbl_80A49918
 /* 80A49900  54 A0 10 3A */	slwi r0, r5, 2

@@ -8,9 +8,9 @@ lbl_80D64300:
 /* 80D64318  40 82 00 18 */	bne lbl_80D64330
 /* 80D6431C  3C 60 80 D6 */	lis r3, m_group_count@ha
 /* 80D64320  38 83 45 28 */	addi r4, r3, m_group_count@l
-/* 80D64324  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D64528 */
+/* 80D64324  80 64 00 00 */	lwz r3, 0(r4)
 /* 80D64328  38 03 00 01 */	addi r0, r3, 1
-/* 80D6432C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80D64528 */
+/* 80D6432C  90 04 00 00 */	stw r0, 0(r4)
 lbl_80D64330:
 /* 80D64330  38 60 00 00 */	li r3, 0
 /* 80D64334  4E 80 00 20 */	blr 

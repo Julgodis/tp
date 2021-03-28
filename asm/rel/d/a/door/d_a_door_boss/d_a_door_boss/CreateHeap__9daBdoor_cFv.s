@@ -22,8 +22,8 @@ lbl_8066F528:
 /* 8066F530  3C 80 80 67 */	lis r4, stringBase0@ha
 /* 8066F534  38 84 09 84 */	addi r4, r4, stringBase0@l
 /* 8066F538  38 84 00 36 */	addi r4, r4, 0x36
-/* 8066F53C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8066F540  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8066F53C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8066F540  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8066F544  3F E5 00 02 */	addis r31, r5, 2
 /* 8066F548  3B FF C2 F8 */	addi r31, r31, -15624
 /* 8066F54C  7F E5 FB 78 */	mr r5, r31

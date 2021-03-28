@@ -17,8 +17,8 @@ lbl_80CBDF84:
 /* 80CBDFC0  1C 7F 01 60 */	mulli r3, r31, 0x160
 /* 80CBDFC4  3B 63 05 7C */	addi r27, r3, 0x57c
 /* 80CBDFC8  7F 7E DA 14 */	add r27, r30, r27
-/* 80CBDFCC  C3 FC 00 04 */	lfs f31, 4(r28)	/* effective address: 80CBE7A8 */
-/* 80CBDFD0  C3 DC 00 20 */	lfs f30, 0x20(r28)	/* effective address: 80CBE7C4 */
+/* 80CBDFCC  C3 FC 00 04 */	lfs f31, 4(r28)
+/* 80CBDFD0  C3 DC 00 20 */	lfs f30, 0x20(r28)
 /* 80CBDFD4  48 00 01 30 */	b lbl_80CBE104
 lbl_80CBDFD8:
 /* 80CBDFD8  38 61 00 0C */	addi r3, r1, 0xc

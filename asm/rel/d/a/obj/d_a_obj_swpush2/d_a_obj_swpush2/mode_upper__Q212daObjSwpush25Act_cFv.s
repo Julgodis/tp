@@ -52,8 +52,8 @@ lbl_80CFEEAC:
 /* 80CFEEB4  38 A0 00 08 */	li r5, 8
 /* 80CFEEB8  48 00 0D 19 */	bl func_80CFFBD0
 /* 80CFEEBC  7C 64 1B 78 */	mr r4, r3
-/* 80CFEEC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFEEC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFEEC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFEEC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFEEC8  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80CFEECC  7C 05 07 74 */	extsb r5, r0
 /* 80CFEED0  4B 33 64 90 */	b isSwitch__10dSv_info_cCFii

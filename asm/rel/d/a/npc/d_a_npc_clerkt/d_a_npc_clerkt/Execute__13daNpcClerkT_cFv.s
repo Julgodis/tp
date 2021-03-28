@@ -30,11 +30,11 @@ lbl_8099A9A0:
 /* 8099AA10  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 8099AA14  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8099AA18  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8099AA1C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8099AA20  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8099AA1C  80 64 00 00 */	lwz r3, 0(r4)
+/* 8099AA20  80 04 00 04 */	lwz r0, 4(r4)
 /* 8099AA24  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 8099AA28  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 8099AA2C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8099AA2C  80 04 00 08 */	lwz r0, 8(r4)
 /* 8099AA30  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 8099AA34  38 00 00 01 */	li r0, 1
 /* 8099AA38  98 1F 10 EA */	stb r0, 0x10ea(r31)

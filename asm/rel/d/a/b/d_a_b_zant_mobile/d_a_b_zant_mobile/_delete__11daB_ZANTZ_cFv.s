@@ -19,8 +19,8 @@ lbl_80651D48:
 /* 80651D5C  80 9F 06 A4 */	lwz r4, 0x6a4(r31)
 /* 80651D60  28 04 00 00 */	cmplwi r4, 0
 /* 80651D64  41 82 00 14 */	beq lbl_80651D78
-/* 80651D68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80651D6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80651D68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80651D6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80651D70  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80651D74  4B A2 24 DC */	b Release__4cBgSFP9dBgW_Base
 lbl_80651D78:

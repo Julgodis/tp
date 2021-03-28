@@ -8,7 +8,7 @@ lbl_80558C4C:
 /* 80558C64  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 80558C68  3B E3 A5 B4 */	addi r31, r3, m__19daNpc_Kolin_Param_c@l
 /* 80558C6C  38 7F 00 00 */	addi r3, r31, 0
-/* 80558C70  AB 83 00 9A */	lha r28, 0x9a(r3)	/* effective address: 8055A64E */
+/* 80558C70  AB 83 00 9A */	lha r28, 0x9a(r3)
 /* 80558C74  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 80558C78  2C 00 00 02 */	cmpwi r0, 2
 /* 80558C7C  41 82 00 C4 */	beq lbl_80558D40

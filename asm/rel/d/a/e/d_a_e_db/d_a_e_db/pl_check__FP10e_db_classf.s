@@ -2,9 +2,9 @@ lbl_8069AFB4:
 /* 8069AFB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8069AFB8  7C 08 02 A6 */	mflr r0
 /* 8069AFBC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8069AFC0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8069AFC4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8069AFC8  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8069AFC0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8069AFC4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8069AFC8  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8069AFCC  C0 03 06 88 */	lfs f0, 0x688(r3)
 /* 8069AFD0  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8069AFD4  40 80 00 18 */	bge lbl_8069AFEC

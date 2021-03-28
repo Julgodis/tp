@@ -39,13 +39,13 @@ lbl_80566B54:
 lbl_80566B98:
 /* 80566B98  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 80566B9C  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 80566BA0  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 80566BA0  80 85 00 00 */	lwz r4, 0(r5)
 /* 80566BA4  54 80 10 3A */	slwi r0, r4, 2
 /* 80566BA8  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 80566BAC  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 80566BB0  7F E3 01 2E */	stwx r31, r3, r0
 /* 80566BB4  38 04 00 01 */	addi r0, r4, 1
-/* 80566BB8  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 80566BB8  90 05 00 00 */	stw r0, 0(r5)
 lbl_80566BBC:
 /* 80566BBC  38 60 00 00 */	li r3, 0
 /* 80566BC0  83 E1 00 0C */	lwz r31, 0xc(r1)

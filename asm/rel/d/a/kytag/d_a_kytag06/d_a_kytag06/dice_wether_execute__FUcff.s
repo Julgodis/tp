@@ -13,7 +13,7 @@ lbl_80857918:
 /* 80857944  FF C0 10 90 */	fmr f30, f2
 /* 80857948  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 8085794C  3B E4 CA 54 */	addi r31, r4, g_env_light@l
-/* 80857950  98 7F 12 C9 */	stb r3, 0x12c9(r31)	/* effective address: 8042DD1D */
+/* 80857950  98 7F 12 C9 */	stb r3, 0x12c9(r31)
 /* 80857954  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80857958  28 00 00 FF */	cmplwi r0, 0xff
 /* 8085795C  41 82 00 50 */	beq lbl_808579AC

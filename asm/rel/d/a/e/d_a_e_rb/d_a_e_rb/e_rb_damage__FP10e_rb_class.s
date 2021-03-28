@@ -124,7 +124,7 @@ lbl_80763148:
 /* 807631A8  C0 3F 00 84 */	lfs f1, 0x84(r31)
 /* 807631AC  3C 80 80 76 */	lis r4, l_HIO@ha
 /* 807631B0  38 84 4F 90 */	addi r4, r4, l_HIO@l
-/* 807631B4  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80764F9C */
+/* 807631B4  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 807631B8  EC 21 00 2A */	fadds f1, f1, f0
 /* 807631BC  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807631C0  FC 60 10 90 */	fmr f3, f2

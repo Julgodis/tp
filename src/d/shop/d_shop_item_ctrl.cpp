@@ -81,9 +81,9 @@ extern "C" extern u32 __float_nan;
 /* ############################################################################################## */
 /* 803BB888-803BB898 000C+04 s=2 e=0 z=0  None .data      __vt__15dShopItemCtrl_c                                      */
 SECTION_DATA static void* __vt__15dShopItemCtrl_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dShopItemCtrl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dShopItemCtrl_cFv,
 	/* padding */
 	NULL,
 };

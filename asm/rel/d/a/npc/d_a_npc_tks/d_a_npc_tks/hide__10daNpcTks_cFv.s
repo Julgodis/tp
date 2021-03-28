@@ -27,8 +27,8 @@ lbl_80B17048:
 /* 80B17068  98 1E 13 8A */	stb r0, 0x138a(r30)
 /* 80B1706C  3C 60 80 B2 */	lis r3, m__16daNpcTks_Param_c@ha
 /* 80B17070  38 83 DD 58 */	addi r4, r3, m__16daNpcTks_Param_c@l
-/* 80B17074  80 64 00 6C */	lwz r3, 0x6c(r4)	/* effective address: 80B1DDC4 */
-/* 80B17078  80 04 00 70 */	lwz r0, 0x70(r4)	/* effective address: 80B1DDC8 */
+/* 80B17074  80 64 00 6C */	lwz r3, 0x6c(r4)
+/* 80B17078  80 04 00 70 */	lwz r0, 0x70(r4)
 /* 80B1707C  7C 83 00 50 */	subf r4, r3, r0
 /* 80B17080  48 00 63 05 */	bl func_80B1D384
 /* 80B17084  90 7E 13 70 */	stw r3, 0x1370(r30)

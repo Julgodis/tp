@@ -20,17 +20,17 @@ lbl_809CCFE8:
 /* 809CD000  41 80 FF E8 */	blt lbl_809CCFE8
 /* 809CD004  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809CD008  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809CD00C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809CD010  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809CD00C  80 64 00 00 */	lwz r3, 0(r4)
+/* 809CD010  80 04 00 04 */	lwz r0, 4(r4)
 /* 809CD014  90 7F 0E 00 */	stw r3, 0xe00(r31)
 /* 809CD018  90 1F 0E 04 */	stw r0, 0xe04(r31)
-/* 809CD01C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809CD01C  80 04 00 08 */	lwz r0, 8(r4)
 /* 809CD020  90 1F 0E 08 */	stw r0, 0xe08(r31)
-/* 809CD024  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809CD028  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809CD024  80 64 00 00 */	lwz r3, 0(r4)
+/* 809CD028  80 04 00 04 */	lwz r0, 4(r4)
 /* 809CD02C  90 7F 0E 0C */	stw r3, 0xe0c(r31)
 /* 809CD030  90 1F 0E 10 */	stw r0, 0xe10(r31)
-/* 809CD034  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809CD034  80 04 00 08 */	lwz r0, 8(r4)
 /* 809CD038  90 1F 0E 14 */	stw r0, 0xe14(r31)
 /* 809CD03C  38 A0 00 00 */	li r5, 0
 /* 809CD040  90 BF 0E 30 */	stw r5, 0xe30(r31)

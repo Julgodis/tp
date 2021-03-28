@@ -5,9 +5,9 @@ lbl_805DFC58:
 /* 805DFC64  39 61 00 30 */	addi r11, r1, 0x30
 /* 805DFC68  4B D8 25 74 */	b _savegpr_29
 /* 805DFC6C  7C 7D 1B 78 */	mr r29, r3
-/* 805DFC70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DFC74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805DFC78  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805DFC70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DFC74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805DFC78  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805DFC7C  7C 00 07 74 */	extsb r0, r0
 /* 805DFC80  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805DFC84  7C 63 02 14 */	add r3, r3, r0

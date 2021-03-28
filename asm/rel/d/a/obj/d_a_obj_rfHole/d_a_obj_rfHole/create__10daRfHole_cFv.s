@@ -47,8 +47,8 @@ lbl_80CB9090:
 /* 80CB90A0  80 83 00 04 */	lwz r4, 4(r3)
 /* 80CB90A4  7F C3 F3 78 */	mr r3, r30
 /* 80CB90A8  4B 36 14 D0 */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
-/* 80CB90AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB90B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB90AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB90B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB90B4  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80CB90B8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CB90BC  88 1E 04 BA */	lbz r0, 0x4ba(r30)

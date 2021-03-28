@@ -257,10 +257,10 @@ asm void JASDriver::setOutputRate(JASOutputRate param_0) {
 /* ############################################################################################## */
 /* 8039B2E0-8039B2F0 0010+00 s=1 e=0 z=0  None .rodata    sMixFuncs__9JASDriver                                        */
 SECTION_RODATA static void* const sMixFuncs__9JASDriver[4] = {
-	/* 0    */ (void*)mixMonoTrack__9JASDriverFPsUlPFl_Ps,
-	/* 1    */ (void*)mixMonoTrackWide__9JASDriverFPsUlPFl_Ps,
-	/* 2    */ (void*)mixExtraTrack__9JASDriverFPsUlPFl_Ps,
-	/* 3    */ (void*)mixInterleaveTrack__9JASDriverFPsUlPFl_Ps,
+	(void*)mixMonoTrack__9JASDriverFPsUlPFl_Ps,
+	(void*)mixMonoTrackWide__9JASDriverFPsUlPFl_Ps,
+	(void*)mixExtraTrack__9JASDriverFPsUlPFl_Ps,
+	(void*)mixInterleaveTrack__9JASDriverFPsUlPFl_Ps,
 };
 
 /* 804512C4-804512C8 0004+00 s=2 e=0 z=0  None .sbss      sSubFrameCounter__9JASDriver                                 */

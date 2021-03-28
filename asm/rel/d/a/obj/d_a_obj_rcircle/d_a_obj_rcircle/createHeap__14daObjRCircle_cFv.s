@@ -7,10 +7,10 @@ lbl_80CB8814:
 /* 80CB8828  7C 7F 1B 78 */	mr r31, r3
 /* 80CB882C  3C 60 80 CC */	lis r3, l_arcName@ha
 /* 80CB8830  38 63 8D 10 */	addi r3, r3, l_arcName@l
-/* 80CB8834  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CB8D10 */
+/* 80CB8834  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB8838  38 80 00 05 */	li r4, 5
-/* 80CB883C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CB8840  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CB883C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CB8840  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CB8844  3F A5 00 02 */	addis r29, r5, 2
 /* 80CB8848  3B BD C2 F8 */	addi r29, r29, -15624
 /* 80CB884C  7F A5 EB 78 */	mr r5, r29
@@ -30,7 +30,7 @@ lbl_80CB8814:
 lbl_80CB8884:
 /* 80CB8884  3C 60 80 CC */	lis r3, l_arcName@ha
 /* 80CB8888  38 63 8D 10 */	addi r3, r3, l_arcName@l
-/* 80CB888C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CB8D10 */
+/* 80CB888C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB8890  38 80 00 0B */	li r4, 0xb
 /* 80CB8894  7F A5 EB 78 */	mr r5, r29
 /* 80CB8898  38 C0 00 80 */	li r6, 0x80
@@ -47,7 +47,7 @@ lbl_80CB8884:
 /* 80CB88C4  4B 35 4D 78 */	b init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss
 /* 80CB88C8  3C 60 80 CC */	lis r3, l_arcName@ha
 /* 80CB88CC  38 63 8D 10 */	addi r3, r3, l_arcName@l
-/* 80CB88D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CB8D10 */
+/* 80CB88D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB88D4  38 80 00 08 */	li r4, 8
 /* 80CB88D8  7F A5 EB 78 */	mr r5, r29
 /* 80CB88DC  38 C0 00 80 */	li r6, 0x80

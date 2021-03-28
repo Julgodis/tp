@@ -62,7 +62,7 @@ lbl_805E8DE8:
 /* 805E8E18  38 7E 04 E6 */	addi r3, r30, 0x4e6
 /* 805E8E1C  3C 80 80 5F */	lis r4, data_805ED730@ha
 /* 805E8E20  38 84 D7 30 */	addi r4, r4, data_805ED730@l
-/* 805E8E24  A8 84 00 00 */	lha r4, 0(r4)	/* effective address: 805ED730 */
+/* 805E8E24  A8 84 00 00 */	lha r4, 0(r4)
 /* 805E8E28  7F E5 FB 78 */	mr r5, r31
 /* 805E8E2C  38 C0 10 00 */	li r6, 0x1000
 /* 805E8E30  4B C8 77 D8 */	b cLib_addCalcAngleS2__FPssss

@@ -116,8 +116,8 @@ lbl_8099A38C:
 /* 8099A440  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 8099A444  90 1D 10 24 */	stw r0, 0x1024(r29)
 /* 8099A448  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 8099A44C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8099A450  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8099A44C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8099A450  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8099A454  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8099A458  4B 6D C6 54 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8099A45C  80 1D 07 68 */	lwz r0, 0x768(r29)

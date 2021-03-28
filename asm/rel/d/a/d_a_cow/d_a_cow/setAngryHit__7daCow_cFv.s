@@ -19,10 +19,10 @@ lbl_8065D0B8:
 /* 8065D0FC  7F E3 FB 78 */	mr r3, r31
 /* 8065D100  38 80 00 01 */	li r4, 1
 /* 8065D104  4B FF B4 C9 */	bl calcRunAnime__7daCow_cFi
-/* 8065D108  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065D10C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065D110  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8065D114  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8065D108  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065D10C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065D110  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8065D114  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8065D118  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8065D11C  7D 89 03 A6 */	mtctr r12
 /* 8065D120  4E 80 04 21 */	bctrl 

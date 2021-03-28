@@ -19,7 +19,6 @@ extern void* const data_80B0C1B0[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_tk_cpp(); // 1
 
 // 
 // Declarations:

@@ -211,12 +211,12 @@ lbl_806830B8:
 /* 806830B8  C0 1D 00 4C */	lfs f0, 0x4c(r29)
 /* 806830BC  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 806830C0  40 80 00 1C */	bge lbl_806830DC
-/* 806830C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806830C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806830CC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806830D0  80 03 05 88 */	lwz r0, 0x588(r3)	/* effective address: 80406748 */
+/* 806830C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806830C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806830CC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806830D0  80 03 05 88 */	lwz r0, 0x588(r3)
 /* 806830D4  64 00 00 40 */	oris r0, r0, 0x40
-/* 806830D8  90 03 05 88 */	stw r0, 0x588(r3)	/* effective address: 80406748 */
+/* 806830D8  90 03 05 88 */	stw r0, 0x588(r3)
 lbl_806830DC:
 /* 806830DC  38 61 00 60 */	addi r3, r1, 0x60
 /* 806830E0  38 9B 00 1C */	addi r4, r27, 0x1c
@@ -504,12 +504,12 @@ lbl_806834D8:
 /* 806834F4  4B BE D1 14 */	b cLib_addCalcAngleS2__FPssss
 /* 806834F8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806834FC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80683500  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80683500  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683504  A8 9B 00 36 */	lha r4, 0x36(r27)
 /* 80683508  4B 98 8E D4 */	b mDoMtx_YrotS__FPA4_fs
 /* 8068350C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80683510  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80683514  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80683514  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683518  A8 9B 00 34 */	lha r4, 0x34(r27)
 /* 8068351C  4B 98 8E 80 */	b mDoMtx_XrotM__FPA4_fs
 /* 80683520  C0 1D 00 10 */	lfs f0, 0x10(r29)
@@ -530,7 +530,7 @@ lbl_806834D8:
 /* 8068355C  4B FF F4 4D */	bl bee_mtxset__FP5bee_s
 /* 80683560  3C 60 80 68 */	lis r3, data_80685694@ha
 /* 80683564  38 83 56 94 */	addi r4, r3, data_80685694@l
-/* 80683568  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 80685694 */
+/* 80683568  88 64 00 00 */	lbz r3, 0(r4)
 /* 8068356C  28 03 00 00 */	cmplwi r3, 0
 /* 80683570  40 82 00 54 */	bne lbl_806835C4
 /* 80683574  38 03 00 01 */	addi r0, r3, 1

@@ -19,7 +19,6 @@ extern void* const data_806F084C[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_hz_cpp(); // 1
 
 // 
 // Declarations:

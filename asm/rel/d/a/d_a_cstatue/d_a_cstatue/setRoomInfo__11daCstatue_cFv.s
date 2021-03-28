@@ -10,8 +10,8 @@ lbl_80664AA0:
 /* 80664AC0  C0 1D 07 44 */	lfs f0, 0x744(r29)
 /* 80664AC4  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80664AC8  41 82 00 34 */	beq lbl_80664AFC
-/* 80664ACC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80664AD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80664ACC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80664AD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80664AD4  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80664AD8  7F E3 FB 78 */	mr r3, r31
 /* 80664ADC  38 9D 07 9C */	addi r4, r29, 0x79c

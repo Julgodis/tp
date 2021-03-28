@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct dPa_YkgrPcallBack {
@@ -45,19 +45,19 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct cXyz {
-};
-
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -77,31 +77,28 @@ struct JGeometry {
 // Forward References:
 // 
 
-static void daYkgrCreate(void*); // 2
-static bool daYkgrDelete(void*); // 2
-static void daYkgrExecute(void*); // 2
-static void daYkgrDraw(void*); // 2
-static bool daYkgrIsDelete(void*); // 2
+void daYkgrCreate(void*); // 2
+bool daYkgrDelete(void*); // 2
+void daYkgrExecute(void*); // 2
+void daYkgrDraw(void*); // 2
+bool daYkgrIsDelete(void*); // 2
 
 extern "C" void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" void setParam__17dPa_YkgrPcallBackFf(); // 1
 extern "C" void getPosRate__8daYkgr_cFv(); // 1
-extern "C" static void daYkgrCreate__FPv(); // 1
-extern "C" static bool daYkgrDelete__FPv(); // 1
-extern "C" static void daYkgrExecute__FPv(); // 1
-extern "C" static void daYkgrDraw__FPv(); // 1
-extern "C" static bool daYkgrIsDelete__FPv(); // 1
+extern "C" void daYkgrCreate__FPv(); // 1
+extern "C" bool daYkgrDelete__FPv(); // 1
+extern "C" void daYkgrExecute__FPv(); // 1
+extern "C" void daYkgrDraw__FPv(); // 1
+extern "C" bool daYkgrIsDelete__FPv(); // 1
 extern "C" void __dt__12daYkgr_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
 extern "C" void __dt__17dPa_YkgrPcallBackFv(); // 1
 extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
 extern "C" void __sinit_d_a_ykgr_cpp(); // 1
 extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" extern u8 const lit_3766[8];
-extern "C" extern u8 const lit_3846[8];
-extern "C" extern u8 const lit_3847[8];
-extern "C" extern u8 const lit_3848[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daYkgrMethodTable[8];
 extern "C" extern void* g_profile_Ykgr[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -182,13 +179,8 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_max;
 extern "C" extern u8 struct_80450D8C[4];
@@ -201,7 +193,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* 805A848C-805A84D4 0048+00 s=1 e=0 z=0  None .text      draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 805A848C-805A84D4 0048+00 s=0 e=0 z=0  None .text      draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -234,6 +226,11 @@ SECTION_RODATA static u32 const lit_3763[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 805A8FD4-805A8FDC 0008+00 s=2 e=0 z=0  None .rodata    @3766                                                        */
+SECTION_RODATA static u8 const lit_3766[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 805A84D4-805A85D4 0100+00 s=2 e=0 z=0  None .text      setParam__17dPa_YkgrPcallBackFf                              */
 #pragma push
 #pragma optimization_level 0
@@ -246,6 +243,21 @@ asm void dPa_YkgrPcallBack::setParam(f32 param_0) {
 
 
 /* ############################################################################################## */
+/* 805A8FDC-805A8FE4 0008+00 s=1 e=0 z=0  None .rodata    @3846                                                        */
+SECTION_RODATA static u8 const lit_3846[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805A8FE4-805A8FEC 0008+00 s=1 e=0 z=0  None .rodata    @3847                                                        */
+SECTION_RODATA static u8 const lit_3847[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805A8FEC-805A8FF4 0008+00 s=1 e=0 z=0  None .rodata    @3848                                                        */
+SECTION_RODATA static u8 const lit_3848[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 805A90B8-805A90BC 0001+03 s=1 e=0 z=0  None .bss       @1109                                                        */
 static u8 lit_1109[1 + 3 /* padding */];
 
@@ -312,26 +324,6 @@ asm void daYkgr_c::getPosRate() {
 
 
 /* ############################################################################################## */
-/* 805A8FD4-805A8FDC 0008+00 s=0 e=0 z=0  None .rodata    @3766                                                        */
-SECTION_RODATA u8 const lit_3766[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 805A8FDC-805A8FE4 0008+00 s=0 e=0 z=0  None .rodata    @3846                                                        */
-SECTION_RODATA u8 const lit_3846[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A8FE4-805A8FEC 0008+00 s=0 e=0 z=0  None .rodata    @3847                                                        */
-SECTION_RODATA u8 const lit_3847[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A8FEC-805A8FF4 0008+00 s=0 e=0 z=0  None .rodata    @3848                                                        */
-SECTION_RODATA u8 const lit_3848[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 805A8FF4-805A8FF8 0004+00 s=2 e=0 z=0  None .rodata    @3951                                                        */
 SECTION_RODATA static u32 const lit_3951 = 0xC0400000;
 
@@ -341,19 +333,19 @@ static u8 lit_3851[12];
 /* 805A9138-805A9158 0020+00 s=3 e=0 z=0  None .bss       YkgrCB                                                       */
 static u8 YkgrCB[32];
 
-/* 805A882C-805A8A48 021C+00 s=1 e=0 z=0  None .text      daYkgrCreate__FPv                                            */
+/* 805A882C-805A8A48 021C+00 s=0 e=0 z=0  None .text      daYkgrCreate__FPv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daYkgrCreate(void* param_0) {
+asm void daYkgrCreate(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrCreate__FPv.s"
 }
 #pragma pop
 
 
-/* 805A8A48-805A8A50 0008+00 s=1 e=0 z=0  None .text      daYkgrDelete__FPv                                            */
-static bool daYkgrDelete(void* param_0) {
+/* 805A8A48-805A8A50 0008+00 s=0 e=0 z=0  None .text      daYkgrDelete__FPv                                            */
+bool daYkgrDelete(void* param_0) {
 	return true;
 }
 
@@ -365,11 +357,11 @@ SECTION_RODATA static u32 const lit_3976 = 0x3E800000;
 /* 805A8FFC-805A9000 0004+00 s=1 e=0 z=0  None .rodata    @3977                                                        */
 SECTION_RODATA static u32 const lit_3977 = 0x3D4CCCCD;
 
-/* 805A8A50-805A8BBC 016C+00 s=1 e=0 z=0  None .text      daYkgrExecute__FPv                                           */
+/* 805A8A50-805A8BBC 016C+00 s=0 e=0 z=0  None .text      daYkgrExecute__FPv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daYkgrExecute(void* param_0) {
+asm void daYkgrExecute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrExecute__FPv.s"
 }
@@ -402,85 +394,85 @@ SECTION_RODATA static u32 const lit_4064 = 0x43FA0000;
 SECTION_DEAD char const* const stringBase_805A9018 = "D_MN04A";
 #pragma pop
 
-/* 805A8BBC-805A8D90 01D4+00 s=1 e=0 z=0  None .text      daYkgrDraw__FPv                                              */
+/* 805A8BBC-805A8D90 01D4+00 s=0 e=0 z=0  None .text      daYkgrDraw__FPv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daYkgrDraw(void* param_0) {
+asm void daYkgrDraw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_ykgr/d_a_ykgr/daYkgrDraw__FPv.s"
 }
 #pragma pop
 
 
-/* 805A8D90-805A8D98 0008+00 s=1 e=0 z=0  None .text      daYkgrIsDelete__FPv                                          */
-static bool daYkgrIsDelete(void* param_0) {
+/* 805A8D90-805A8D98 0008+00 s=0 e=0 z=0  None .text      daYkgrIsDelete__FPv                                          */
+bool daYkgrIsDelete(void* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 805A9020-805A9040 0020+00 s=1 e=0 z=0  None .data      daYkgrMethodTable                                            */
-SECTION_DATA static void* daYkgrMethodTable[8] = {
-	/* 0    */ (void*)daYkgrCreate__FPv,
-	/* 1    */ (void*)daYkgrDelete__FPv,
-	/* 2    */ (void*)daYkgrExecute__FPv,
-	/* 3    */ (void*)daYkgrIsDelete__FPv,
-	/* 4    */ (void*)daYkgrDraw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A9020-805A9040 0020+00 s=0 e=0 z=0  None .data      daYkgrMethodTable                                            */
+SECTION_DATA void* daYkgrMethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A9040-805A9070 0030+00 s=0 e=0 z=1  None .data      g_profile_Ykgr                                               */
+/* 805A9040-805A9070 0030+00 s=0 e=0 z=0  None .data      g_profile_Ykgr                                               */
 SECTION_DATA void* g_profile_Ykgr[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02BC0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005AC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01AE0000,
-	/* 9    */ (void*)&daYkgrMethodTable,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02BC0000,
+	(void*)NULL,
+	(void*)0x000005AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01AE0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)NULL,
 };
 
 /* 805A9070-805A9084 0014+00 s=2 e=0 z=0  None .data      __vt__17dPa_YkgrPcallBack                                    */
 SECTION_DATA static void* __vt__17dPa_YkgrPcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dPa_YkgrPcallBackFv,
-	/* 3    */ (void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A9084-805A9098 0014+00 s=1 e=0 z=0  None .data      __vt__19JPAParticleCallBack                                  */
 SECTION_DATA static void* __vt__19JPAParticleCallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A9098-805A90A4 000C+00 s=2 e=0 z=0  None .data      __vt__12daYkgr_HIO_c                                         */
 SECTION_DATA static void* __vt__12daYkgr_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daYkgr_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A90A4-805A90B0 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A8D98-805A8DF4 005C+00 s=2 e=0 z=0  None .text      __dt__12daYkgr_HIO_cFv                                       */
+/* 805A8D98-805A8DF4 005C+00 s=1 e=0 z=0  None .text      __dt__12daYkgr_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,7 +483,7 @@ asm daYkgr_HIO_c::~daYkgr_HIO_c() {
 #pragma pop
 
 
-/* 805A8DF4-805A8E3C 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 805A8DF4-805A8E3C 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -502,7 +494,7 @@ asm mDoHIO_entry_c::~mDoHIO_entry_c() {
 #pragma pop
 
 
-/* 805A8E3C-805A8E9C 0060+00 s=2 e=0 z=0  None .text      __dt__17dPa_YkgrPcallBackFv                                  */
+/* 805A8E3C-805A8E9C 0060+00 s=1 e=0 z=0  None .text      __dt__17dPa_YkgrPcallBackFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -513,13 +505,13 @@ asm dPa_YkgrPcallBack::~dPa_YkgrPcallBack() {
 #pragma pop
 
 
-/* 805A8E9C-805A8EA0 0004+00 s=2 e=0 z=0  None .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 805A8E9C-805A8EA0 0004+00 s=0 e=0 z=0  None .text      execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
 void JPAParticleCallBack::execute(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
 	/* empty function */
 }
 
 
-/* 805A8EA0-805A8FA4 0104+00 s=0 e=1 z=0  None .text      __sinit_d_a_ykgr_cpp                                         */
+/* 805A8EA0-805A8FA4 0104+00 s=0 e=0 z=0  None .text      __sinit_d_a_ykgr_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -530,7 +522,7 @@ extern "C" asm void __sinit_d_a_ykgr_cpp() {
 #pragma pop
 
 
-/* 805A8FA4-805A8FA8 0004+00 s=1 e=0 z=0  None .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
+/* 805A8FA4-805A8FA8 0004+00 s=0 e=0 z=0  None .text      draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle */
 void JPAParticleCallBack::draw(JPABaseEmitter* param_0, JPABaseParticle* param_1) {
 	/* empty function */
 }

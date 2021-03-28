@@ -111,18 +111,18 @@ asm void J3DClusterLoaderDataBase::load(void const* param_0) {
 /* ############################################################################################## */
 /* 803CF0E8-803CF0F8 0010+00 s=2 e=0 z=0  None .data      __vt__20J3DClusterLoader_v15                                 */
 SECTION_DATA static void* __vt__20J3DClusterLoader_v15[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__20J3DClusterLoader_v15FPCv,
-	/* 3    */ (void*)__dt__20J3DClusterLoader_v15Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__20J3DClusterLoader_v15FPCv,
+	(void*)__dt__20J3DClusterLoader_v15Fv,
 };
 
 /* 803CF0F8-803CF108 0010+00 s=3 e=0 z=0  None .data      __vt__16J3DClusterLoader                                     */
 SECTION_DATA static void* __vt__16J3DClusterLoader[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)__dt__16J3DClusterLoaderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J3DClusterLoaderFv,
 };
 
 /* 803341CC-803341E8 001C+00 s=1 e=0 z=0  None .text      __ct__20J3DClusterLoader_v15Fv                               */

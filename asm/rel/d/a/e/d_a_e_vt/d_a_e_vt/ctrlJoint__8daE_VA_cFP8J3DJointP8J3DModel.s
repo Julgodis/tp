@@ -59,7 +59,7 @@ lbl_807C26F0:
 /* 807C2758  4B 84 9C DC */	b mDoMtx_YrotM__FPA4_fs
 /* 807C275C  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807C2760  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807C2764  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 807CF4CC */
+/* 807C2764  C0 23 00 08 */	lfs f1, 8(r3)
 /* 807C2768  FC 40 08 90 */	fmr f2, f1
 /* 807C276C  FC 60 08 90 */	fmr f3, f1
 /* 807C2770  4B 84 A6 C8 */	b scaleM__14mDoMtx_stack_cFfff

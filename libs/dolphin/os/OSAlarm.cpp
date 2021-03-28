@@ -51,10 +51,10 @@ extern "C" void __div2i(); // 1
 /* ############################################################################################## */
 /* 803CF480-803CF490 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
 SECTION_DATA static void* ResetFunctionInfo[4] = {
-	/* 0    */ (void*)OnReset,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)OnReset,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80451638-80451640 0008+00 s=5 e=0 z=0  None .sbss      AlarmQueue                                                   */

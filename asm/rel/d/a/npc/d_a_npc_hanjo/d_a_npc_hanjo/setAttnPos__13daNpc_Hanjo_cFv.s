@@ -11,11 +11,11 @@ lbl_809FABB8:
 /* 809FABDC  3B C3 12 88 */	addi r30, r3, lit_1109@l
 /* 809FABE0  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FABE4  3B E3 06 00 */	addi r31, r3, m__19daNpc_Hanjo_Param_c@l
-/* 809FABE8  C0 1F 01 24 */	lfs f0, 0x124(r31)	/* effective address: 80A00724 */
+/* 809FABE8  C0 1F 01 24 */	lfs f0, 0x124(r31)
 /* 809FABEC  D0 01 00 58 */	stfs f0, 0x58(r1)
-/* 809FABF0  C0 1F 01 28 */	lfs f0, 0x128(r31)	/* effective address: 80A00728 */
+/* 809FABF0  C0 1F 01 28 */	lfs f0, 0x128(r31)
 /* 809FABF4  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 809FABF8  C0 1F 00 FC */	lfs f0, 0xfc(r31)	/* effective address: 80A006FC */
+/* 809FABF8  C0 1F 00 FC */	lfs f0, 0xfc(r31)
 /* 809FABFC  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 809FAC00  38 7D 0D 08 */	addi r3, r29, 0xd08
 /* 809FAC04  38 80 00 00 */	li r4, 0

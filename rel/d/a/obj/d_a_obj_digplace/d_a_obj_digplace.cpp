@@ -33,10 +33,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -51,21 +51,19 @@ struct daPy_py_c {
 // Forward References:
 // 
 
-static void daObjDigpl_Create(fopAc_ac_c*); // 2
-static void daObjDigpl_Delete(daObjDigpl_c*); // 2
-static void daObjDigpl_Execute(daObjDigpl_c*); // 2
-static bool daObjDigpl_Draw(daObjDigpl_c*); // 2
+void daObjDigpl_Create(fopAc_ac_c*); // 2
+void daObjDigpl_Delete(daObjDigpl_c*); // 2
+void daObjDigpl_Execute(daObjDigpl_c*); // 2
+bool daObjDigpl_Draw(daObjDigpl_c*); // 2
 
 extern "C" void create__12daObjDigpl_cFv(); // 1
-extern "C" static void daObjDigpl_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjDigpl_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daObjDigpl_cFv(); // 1
-extern "C" static void daObjDigpl_Delete__FP12daObjDigpl_c(); // 1
+extern "C" void daObjDigpl_Delete__FP12daObjDigpl_c(); // 1
 extern "C" void execute__12daObjDigpl_cFv(); // 1
-extern "C" static void daObjDigpl_Execute__FP12daObjDigpl_c(); // 1
-extern "C" static bool daObjDigpl_Draw__FP12daObjDigpl_c(); // 1
-extern "C" extern u8 const lit_4026[8];
-extern "C" extern u8 const lit_4027[8];
-extern "C" extern u8 const lit_4028[8];
+extern "C" void daObjDigpl_Execute__FP12daObjDigpl_c(); // 1
+extern "C" bool daObjDigpl_Draw__FP12daObjDigpl_c(); // 1
+extern "C" extern void* l_daObjDigpl_Method[8];
 extern "C" extern void* g_profile_Obj_Digpl[12];
 
 // 
@@ -104,13 +102,8 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareDistance(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_25(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 g_whiteColor;
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_max;
@@ -133,39 +126,39 @@ SECTION_RODATA static u32 const lit_3824 = 0x44098000;
 /* 8057C8BC-8057C8C0 0004+00 s=1 e=0 z=0  None .rodata    @3825                                                        */
 SECTION_RODATA static u32 const lit_3825 = 0x437A0000;
 
-/* 8057C8F8-8057C918 0020+00 s=1 e=0 z=0  None .data      l_daObjDigpl_Method                                          */
-SECTION_DATA static void* l_daObjDigpl_Method[8] = {
-	/* 0    */ (void*)daObjDigpl_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjDigpl_Delete__FP12daObjDigpl_c,
-	/* 2    */ (void*)daObjDigpl_Execute__FP12daObjDigpl_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjDigpl_Draw__FP12daObjDigpl_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8057C8F8-8057C918 0020+00 s=0 e=0 z=0  None .data      l_daObjDigpl_Method                                          */
+SECTION_DATA void* l_daObjDigpl_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8057C918-8057C948 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Digpl                                          */
+/* 8057C918-8057C948 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Digpl                                          */
 SECTION_DATA void* g_profile_Obj_Digpl[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00530000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00FA0000,
-	/* 9    */ (void*)&l_daObjDigpl_Method,
-	/* 10   */ (void*)0x00044080,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00530000,
+	(void*)NULL,
+	(void*)0x000005C0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00FA0000,
+	(void*)NULL,
+	(void*)0x00044080,
+	(void*)0x030E0000,
 };
 
 /* 8057C948-8057C954 000C+00 s=2 e=0 z=0  None .data      __vt__12daObjDigpl_c                                         */
 SECTION_DATA static void* __vt__12daObjDigpl_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daObjDigpl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8057BF98-8057C138 01A0+00 s=1 e=0 z=0  None .text      create__12daObjDigpl_cFv                                     */
@@ -179,18 +172,18 @@ asm void daObjDigpl_c::create() {
 #pragma pop
 
 
-/* 8057C138-8057C158 0020+00 s=1 e=0 z=0  None .text      daObjDigpl_Create__FP10fopAc_ac_c                            */
+/* 8057C138-8057C158 0020+00 s=0 e=0 z=0  None .text      daObjDigpl_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigpl_Create(fopAc_ac_c* param_0) {
+asm void daObjDigpl_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8057C158-8057C1B8 0060+00 s=1 e=0 z=0  None .text      __dt__12daObjDigpl_cFv                                       */
+/* 8057C158-8057C1B8 0060+00 s=0 e=0 z=0  None .text      __dt__12daObjDigpl_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -201,11 +194,11 @@ asm daObjDigpl_c::~daObjDigpl_c() {
 #pragma pop
 
 
-/* 8057C1B8-8057C1EC 0034+00 s=1 e=0 z=0  None .text      daObjDigpl_Delete__FP12daObjDigpl_c                          */
+/* 8057C1B8-8057C1EC 0034+00 s=0 e=0 z=0  None .text      daObjDigpl_Delete__FP12daObjDigpl_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigpl_Delete(daObjDigpl_c* param_0) {
+asm void daObjDigpl_Delete(daObjDigpl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Delete__FP12daObjDigpl_c.s"
 }
@@ -226,18 +219,18 @@ SECTION_RODATA static u8 const lit_4025[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8057C8D0-8057C8D8 0008+00 s=0 e=0 z=0  None .rodata    @4026                                                        */
-SECTION_RODATA u8 const lit_4026[8] = {
+/* 8057C8D0-8057C8D8 0008+00 s=1 e=0 z=0  None .rodata    @4026                                                        */
+SECTION_RODATA static u8 const lit_4026[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8057C8D8-8057C8E0 0008+00 s=0 e=0 z=0  None .rodata    @4027                                                        */
-SECTION_RODATA u8 const lit_4027[8] = {
+/* 8057C8D8-8057C8E0 0008+00 s=1 e=0 z=0  None .rodata    @4027                                                        */
+SECTION_RODATA static u8 const lit_4027[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8057C8E0-8057C8E8 0008+00 s=0 e=0 z=0  None .rodata    @4028                                                        */
-SECTION_RODATA u8 const lit_4028[8] = {
+/* 8057C8E0-8057C8E8 0008+00 s=1 e=0 z=0  None .rodata    @4028                                                        */
+SECTION_RODATA static u8 const lit_4028[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -264,19 +257,19 @@ asm void daObjDigpl_c::execute() {
 #pragma pop
 
 
-/* 8057C880-8057C8A0 0020+00 s=1 e=0 z=0  None .text      daObjDigpl_Execute__FP12daObjDigpl_c                         */
+/* 8057C880-8057C8A0 0020+00 s=0 e=0 z=0  None .text      daObjDigpl_Execute__FP12daObjDigpl_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjDigpl_Execute(daObjDigpl_c* param_0) {
+asm void daObjDigpl_Execute(daObjDigpl_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_digplace/d_a_obj_digplace/daObjDigpl_Execute__FP12daObjDigpl_c.s"
 }
 #pragma pop
 
 
-/* 8057C8A0-8057C8A8 0008+00 s=1 e=0 z=0  None .text      daObjDigpl_Draw__FP12daObjDigpl_c                            */
-static bool daObjDigpl_Draw(daObjDigpl_c* param_0) {
+/* 8057C8A0-8057C8A8 0008+00 s=0 e=0 z=0  None .text      daObjDigpl_Draw__FP12daObjDigpl_c                            */
+bool daObjDigpl_Draw(daObjDigpl_c* param_0) {
 	return true;
 }
 

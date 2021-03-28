@@ -11,11 +11,11 @@ lbl_80C0BE5C:
 /* 80C0BE80  41 82 00 4C */	beq lbl_80C0BECC
 /* 80C0BE84  3C 80 80 C1 */	lis r4, lit_9077@ha
 /* 80C0BE88  38 A4 03 2C */	addi r5, r4, lit_9077@l
-/* 80C0BE8C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80C1032C */
-/* 80C0BE90  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80C10330 */
+/* 80C0BE8C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80C0BE90  80 05 00 04 */	lwz r0, 4(r5)
 /* 80C0BE94  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80C0BE98  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80C0BE9C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80C10334 */
+/* 80C0BE9C  80 05 00 08 */	lwz r0, 8(r5)
 /* 80C0BEA0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80C0BEA4  38 81 00 14 */	addi r4, r1, 0x14
 /* 80C0BEA8  4B FF 5A 4D */	bl setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i
@@ -32,11 +32,11 @@ lbl_80C0BECC:
 /* 80C0BED0  41 82 00 4C */	beq lbl_80C0BF1C
 /* 80C0BED4  3C 80 80 C1 */	lis r4, lit_9082@ha
 /* 80C0BED8  38 A4 03 38 */	addi r5, r4, lit_9082@l
-/* 80C0BEDC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80C10338 */
-/* 80C0BEE0  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80C1033C */
+/* 80C0BEDC  80 85 00 00 */	lwz r4, 0(r5)
+/* 80C0BEE0  80 05 00 04 */	lwz r0, 4(r5)
 /* 80C0BEE4  90 81 00 08 */	stw r4, 8(r1)
 /* 80C0BEE8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C0BEEC  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80C10340 */
+/* 80C0BEEC  80 05 00 08 */	lwz r0, 8(r5)
 /* 80C0BEF0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C0BEF4  38 81 00 08 */	addi r4, r1, 8
 /* 80C0BEF8  4B FF 59 FD */	bl setProcess__11daObj_GrA_cFM11daObj_GrA_cFPCvPvPv_i

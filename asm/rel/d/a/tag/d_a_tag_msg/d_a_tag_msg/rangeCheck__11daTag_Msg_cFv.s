@@ -8,9 +8,9 @@ lbl_8048FC70:
 /* 8048FC88  3C 60 80 49 */	lis r3, m__17daTag_Msg_Param_c@ha
 /* 8048FC8C  3B C3 01 78 */	addi r30, r3, m__17daTag_Msg_Param_c@l
 /* 8048FC90  38 61 00 18 */	addi r3, r1, 0x18
-/* 8048FC94  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8048FC98  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8048FC9C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8048FC94  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8048FC98  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8048FC9C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8048FCA0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8048FCA4  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8048FCA8  4B DD 6E 8C */	b __mi__4cXyzCFRC3Vec

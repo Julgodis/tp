@@ -26,8 +26,8 @@ lbl_806EDB00:
 /* 806EDB00  80 9E 0A B4 */	lwz r4, 0xab4(r30)
 /* 806EDB04  28 04 00 00 */	cmplwi r4, 0
 /* 806EDB08  41 82 00 1C */	beq lbl_806EDB24
-/* 806EDB0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806EDB10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806EDB0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EDB10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806EDB14  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 806EDB18  4B 98 67 38 */	b Release__4cBgSFP9dBgW_Base
 /* 806EDB1C  38 00 00 00 */	li r0, 0

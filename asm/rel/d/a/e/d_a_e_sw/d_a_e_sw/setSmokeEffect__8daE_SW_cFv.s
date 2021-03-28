@@ -23,9 +23,9 @@ lbl_807A78B4:
 /* 807A7908  C0 1D 00 00 */	lfs f0, 0(r29)
 /* 807A790C  EC 01 00 2A */	fadds f0, f1, f0
 /* 807A7910  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 807A7914  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A7918  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 807A791C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 807A7914  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A7918  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 807A791C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 807A7920  38 00 00 FF */	li r0, 0xff
 /* 807A7924  90 01 00 08 */	stw r0, 8(r1)
 /* 807A7928  38 80 00 00 */	li r4, 0

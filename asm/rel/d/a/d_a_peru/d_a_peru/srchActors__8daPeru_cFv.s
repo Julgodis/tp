@@ -36,9 +36,9 @@ lbl_80D47D24:
 /* 80D47D2C  28 03 00 00 */	cmplwi r3, 0
 /* 80D47D30  40 82 00 18 */	bne lbl_80D47D48
 /* 80D47D34  38 7F 0E 50 */	addi r3, r31, 0xe50
-/* 80D47D38  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D47D3C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D47D40  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D47D38  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D47D3C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D47D40  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80D47D44  4B 3F D9 9C */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80D47D48:
 /* 80D47D48  83 E1 00 1C */	lwz r31, 0x1c(r1)

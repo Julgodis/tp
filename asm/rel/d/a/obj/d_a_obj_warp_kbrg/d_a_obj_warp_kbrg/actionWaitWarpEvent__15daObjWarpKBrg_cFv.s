@@ -7,8 +7,8 @@ lbl_80D27E08:
 /* 80D27E1C  7C 7C 1B 78 */	mr r28, r3
 /* 80D27E20  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 80D27E24  83 A3 10 18 */	lwz r29, m_midnaActor__9daPy_py_c@l(r3)
-/* 80D27E28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27E2C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D27E28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27E2C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D27E30  3B DF 4F F8 */	addi r30, r31, 0x4ff8
 /* 80D27E34  7F C3 F3 78 */	mr r3, r30
 /* 80D27E38  88 1C 05 D8 */	lbz r0, 0x5d8(r28)
@@ -34,7 +34,7 @@ lbl_80D27E08:
 /* 80D27E88  7F C3 F3 78 */	mr r3, r30
 /* 80D27E8C  3C 80 80 D3 */	lis r4, l_staff_name@ha
 /* 80D27E90  38 84 97 44 */	addi r4, r4, l_staff_name@l
-/* 80D27E94  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29744 */
+/* 80D27E94  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D27E98  38 A0 00 00 */	li r5, 0
 /* 80D27E9C  38 C0 00 00 */	li r6, 0
 /* 80D27EA0  4B 31 FC 7C */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

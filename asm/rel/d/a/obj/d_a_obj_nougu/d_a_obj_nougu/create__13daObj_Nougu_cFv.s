@@ -126,8 +126,8 @@ lbl_80CA3FE4:
 /* 80CA4000  3B 9C 01 38 */	addi r28, r28, 0x138
 /* 80CA4004  41 80 FF E0 */	blt lbl_80CA3FE4
 /* 80CA4008  38 7D 05 78 */	addi r3, r29, 0x578
-/* 80CA400C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CA4010  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80CA400C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CA4010  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80CA4014  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80CA4018  4B 3D 2A 94 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80CA401C  80 1D 06 54 */	lwz r0, 0x654(r29)

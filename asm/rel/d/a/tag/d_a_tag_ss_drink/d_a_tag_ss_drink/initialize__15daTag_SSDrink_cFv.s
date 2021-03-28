@@ -6,11 +6,11 @@ lbl_80D63044:
 /* 80D63054  7C 7F 1B 78 */	mr r31, r3
 /* 80D63058  3C 80 80 D6 */	lis r4, lit_3843@ha
 /* 80D6305C  38 84 37 A0 */	addi r4, r4, lit_3843@l
-/* 80D63060  C0 24 00 00 */	lfs f1, 0(r4)	/* effective address: 80D637A0 */
-/* 80D63064  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80D637A4 */
+/* 80D63060  C0 24 00 00 */	lfs f1, 0(r4)
+/* 80D63064  C0 44 00 04 */	lfs f2, 4(r4)
 /* 80D63068  FC 60 08 90 */	fmr f3, f1
-/* 80D6306C  C0 84 00 08 */	lfs f4, 8(r4)	/* effective address: 80D637A8 */
-/* 80D63070  C0 A4 00 0C */	lfs f5, 0xc(r4)	/* effective address: 80D637AC */
+/* 80D6306C  C0 84 00 08 */	lfs f4, 8(r4)
+/* 80D63070  C0 A4 00 0C */	lfs f5, 0xc(r4)
 /* 80D63074  FC C0 20 90 */	fmr f6, f4
 /* 80D63078  4B 2B 74 D0 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80D6307C  38 00 00 00 */	li r0, 0

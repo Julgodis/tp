@@ -32,16 +32,16 @@ struct daGrass_c {
 	/* 8051C304 */ void create();
 };
 
-struct dCcMassS_HitInf {
-	/* 8051ED98 */ ~dCcMassS_HitInf();
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8051EB4C */ ~csXyz();
 };
 
 struct cCcD_Obj {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8051EB4C */ ~csXyz();
+struct dCcMassS_HitInf {
+	/* 8051ED98 */ ~dCcMassS_HitInf();
 };
 
 struct fopAc_ac_c {
@@ -134,10 +134,10 @@ struct dStage_roomControl_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -193,13 +193,11 @@ struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
+struct J3DPacket {
 };
 
-struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
 // 
@@ -208,10 +206,10 @@ struct J3DPacket {
 
 static void randam_addcol_set(s16*); // 2
 static void dGrass_Tex_Change(); // 2
-static void daGrass_create(daGrass_c*); // 2
-static void daGrass_Delete(daGrass_c*); // 2
-static void daGrass_execute(daGrass_c*); // 2
-static void daGrass_draw(daGrass_c*); // 2
+void daGrass_create(daGrass_c*); // 2
+void daGrass_Delete(daGrass_c*); // 2
+void daGrass_execute(daGrass_c*); // 2
+void daGrass_draw(daGrass_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 void checkGroundY(cXyz&); // 2
 static void flowerCheckGroundY(cXyz&); // 2
@@ -230,11 +228,11 @@ extern "C" void executeFlower__9daGrass_cFv(); // 1
 extern "C" void drawFlower__9daGrass_cFv(); // 1
 extern "C" void newFlowerData__9daGrass_cFScR4cXyziScs(); // 1
 extern "C" static void dGrass_Tex_Change__Fv(); // 1
-extern "C" static void daGrass_create__FP9daGrass_c(); // 1
+extern "C" void daGrass_create__FP9daGrass_c(); // 1
 extern "C" void create__9daGrass_cFv(); // 1
-extern "C" static void daGrass_Delete__FP9daGrass_c(); // 1
-extern "C" static void daGrass_execute__FP9daGrass_c(); // 1
-extern "C" static void daGrass_draw__FP9daGrass_c(); // 1
+extern "C" void daGrass_Delete__FP9daGrass_c(); // 1
+extern "C" void daGrass_execute__FP9daGrass_c(); // 1
+extern "C" void daGrass_draw__FP9daGrass_c(); // 1
 extern "C" static void func_8051D7B4(); // 1
 extern "C" void __sinit_d_a_grass_cpp(); // 1
 extern "C" void WorkCo__13dGrass_data_cFP10fopAc_ac_cUli(); // 1
@@ -282,14 +280,15 @@ extern "C" void __ct__14dFlower_room_cFv(); // 1
 extern "C" void __ct__13dFlower_anm_cFv(); // 1
 extern "C" void __dt__14dFlower_data_cFv(); // 1
 extern "C" void __ct__14dFlower_data_cFv(); // 1
-extern "C" extern u8 const lit_4158[8];
-extern "C" extern u8 const lit_4509[8];
-extern "C" extern u8 const lit_4510[8];
-extern "C" extern u8 const lit_4511[8];
-extern "C" extern u8 const lit_4854[8];
 extern "C" extern u32 const lit_5958;
+extern "C" extern u8 const lit_5961[8];
+extern "C" extern u32 const lit_6080;
+extern "C" extern u32 const lit_6081;
+extern "C" extern u32 const lit_6082;
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 l_J_hana01_c_00DL[222 + 2 /* padding */];
+extern "C" extern void* daGrass_METHODS[8];
 extern "C" extern void* g_profile_GRASS[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -412,7 +411,6 @@ extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
 extern "C" void* __nw__FUl(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -452,33 +450,17 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void memcmp(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern u8 mClipper__14mDoLib_clipper[76];
-SECTION_BSS extern u8 data_803DD93C[4];
-extern "C" extern u8 mStatus__20dStage_roomControl_c[40812];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C150[4];
-SECTION_BSS extern u8 m_deleteRoom__15dGrass_packet_c[4];
-SECTION_BSS extern u8 data_8042458C[4];
-SECTION_BSS extern u8 data_80424590[4];
-SECTION_BSS extern u8 m_deleteRoom__16dFlower_packet_c[4];
-SECTION_BSS extern u8 data_80424598[4];
-SECTION_BSS extern u8 data_8042459C[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042DB5C[4];
-SECTION_BSS extern u8 struct_8042DB60[4];
-SECTION_BSS extern f32 data_8042DCB0;
-SECTION_BSS extern u8 data_8042DCB4[4];
-SECTION_BSS extern u8 struct_8042DD24[4];
-SECTION_BSS extern u8 g_Counter[4];
-SECTION_BSS extern u8 data_80430CE0[8];
-SECTION_BSS extern u8 j3dSys[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 m_deleteRoom__15dGrass_packet_c[12];
+extern "C" extern u8 m_deleteRoom__16dFlower_packet_c[12];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mSystemFar__14mDoLib_clipper;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
@@ -541,23 +523,23 @@ SECTION_RODATA static u32 const lit_4155 = 0x41A00000;
 /* 8052305C-80523060 0004+00 s=3 e=0 z=0  None .rodata    @4156                                                        */
 SECTION_RODATA static u32 const lit_4156 = 0x3E99999A;
 
-/* 80523060-80523068 0008+00 s=0 e=0 z=0  None .rodata    @4158                                                        */
-SECTION_RODATA u8 const lit_4158[8] = {
+/* 80523060-80523068 0008+00 s=9 e=0 z=0  None .rodata    @4158                                                        */
+SECTION_RODATA static u8 const lit_4158[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
-/* 80523068-80523070 0008+00 s=0 e=0 z=0  None .rodata    @4509                                                        */
-SECTION_RODATA u8 const lit_4509[8] = {
+/* 80523068-80523070 0008+00 s=2 e=0 z=0  None .rodata    @4509                                                        */
+SECTION_RODATA static u8 const lit_4509[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80523070-80523078 0008+00 s=0 e=0 z=0  None .rodata    @4510                                                        */
-SECTION_RODATA u8 const lit_4510[8] = {
+/* 80523070-80523078 0008+00 s=2 e=0 z=0  None .rodata    @4510                                                        */
+SECTION_RODATA static u8 const lit_4510[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80523078-80523080 0008+00 s=0 e=0 z=0  None .rodata    @4511                                                        */
-SECTION_RODATA u8 const lit_4511[8] = {
+/* 80523078-80523080 0008+00 s=2 e=0 z=0  None .rodata    @4511                                                        */
+SECTION_RODATA static u8 const lit_4511[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -650,8 +632,8 @@ SECTION_RODATA static u32 const lit_4852[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 805230F8-80523100 0008+00 s=0 e=0 z=0  None .rodata    @4854                                                        */
-SECTION_RODATA u8 const lit_4854[8] = {
+/* 805230F8-80523100 0008+00 s=2 e=0 z=0  None .rodata    @4854                                                        */
+SECTION_RODATA static u8 const lit_4854[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -756,19 +738,19 @@ SECTION_RODATA static u8 const lit_5916[8] = {
 /* 80523184-80523188 0004+00 s=0 e=0 z=0  None .rodata    @5958                                                        */
 SECTION_RODATA u32 const lit_5958 = 0xFFFFFFFF;
 
-/* 80523188-80523190 0008+00 s=1 e=0 z=0  None .rodata    @5961                                                        */
-SECTION_RODATA static u8 const lit_5961[8] = {
+/* 80523188-80523190 0008+00 s=0 e=0 z=0  None .rodata    @5961                                                        */
+SECTION_RODATA u8 const lit_5961[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80523190-80523194 0004+00 s=1 e=0 z=0  None .rodata    @6080                                                        */
-SECTION_RODATA static u32 const lit_6080 = 0x3D000000;
+/* 80523190-80523194 0004+00 s=0 e=0 z=0  None .rodata    @6080                                                        */
+SECTION_RODATA u32 const lit_6080 = 0x3D000000;
 
-/* 80523194-80523198 0004+00 s=1 e=0 z=0  None .rodata    @6081                                                        */
-SECTION_RODATA static u32 const lit_6081 = 0xBECCCCCD;
+/* 80523194-80523198 0004+00 s=0 e=0 z=0  None .rodata    @6081                                                        */
+SECTION_RODATA u32 const lit_6081 = 0xBECCCCCD;
 
-/* 80523198-8052319C 0004+00 s=1 e=0 z=0  None .rodata    @6082                                                        */
-SECTION_RODATA static u32 const lit_6082 = 0x40C00000;
+/* 80523198-8052319C 0004+00 s=0 e=0 z=0  None .rodata    @6082                                                        */
+SECTION_RODATA u32 const lit_6082 = 0x40C00000;
 
 /* 8052319C-805231A0 0004+00 s=1 e=0 z=0  None .rodata    @6165                                                        */
 SECTION_RODATA static u32 const lit_6165 = 0x447A0000;
@@ -819,24 +801,6 @@ asm void daGrass_c::deleteGrass() {
 
 
 /* ############################################################################################## */
-/* 80528854-80528880 002C+00 s=2 e=0 z=0  None .bss       None                                                         */
-extern "C" u8 struct_80528854[44];
-
-/* 80528880-80528900 0080+00 s=2 e=0 z=0  None .bss       None                                                         */
-extern "C" u8 struct_80528880[128];
-
-/* 80528900-80528914 0014+00 s=2 e=0 z=0  None .bss       None                                                         */
-extern "C" u8 struct_80528900[20];
-
-/* 80528914-80528940 002C+00 s=2 e=0 z=0  None .bss       None                                                         */
-extern "C" u8 struct_80528914[44];
-
-/* 80528940-805289A8 0068+00 s=2 e=0 z=0  None .bss       None                                                         */
-extern "C" u8 struct_80528940[104];
-
-/* 805289A8-805289D2 002A+00 s=2 e=0 z=0  None .bss       l_setType5$localstatic13$create__9daGrass_cFv                */
-extern "C" u8 data_805289A8[42];
-
 /* 805231D8-805231E4 000C+00 s=5 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -1315,9 +1279,9 @@ SECTION_DATA static u8 l_kusa9q_l4_matDL[168] = {
 
 /* 80524B40-80524B4C 000C+00 s=1 e=0 z=0  None .data      @4620                                                        */
 SECTION_DATA static void* lit_4620[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)deleteRoom__15dGrass_packet_cFi,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80524B4C-80524B74 0028+00 s=1 e=0 z=0  None .data      l_vtxDescList$4654                                           */
@@ -2064,8 +2028,8 @@ SECTION_DATA static u8 l_J_hana01DL[312 + 8 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80527478-80527558 00DE+02 s=1 e=0 z=0  None .data      l_J_hana01_c_00DL                                            */
-SECTION_DATA static u8 l_J_hana01_c_00DL[222 + 2 /* padding */] = {
+/* 80527478-80527558 00DE+02 s=0 e=0 z=0  None .data      l_J_hana01_c_00DL                                            */
+SECTION_DATA u8 l_J_hana01_c_00DL[222 + 2 /* padding */] = {
 	0x98, 0x00, 0x05, 0x2C, 0x01, 0x00, 0x11, 0x2E, 0x01, 0x00, 0x10, 0x2A, 0x01, 0x00, 0x0F, 0x2D,
 	0x01, 0x00, 0x11, 0x2B, 0x01, 0x00, 0x10, 0x98, 0x00, 0x03, 0x2A, 0x01, 0x00, 0x0F, 0x2B, 0x01,
 	0x00, 0x10, 0x2C, 0x01, 0x00, 0x11, 0x98, 0x00, 0x05, 0x31, 0x01, 0x00, 0x12, 0x33, 0x01, 0x00,
@@ -2144,88 +2108,237 @@ SECTION_DATA static u8 l_mat2Light4DL[153 + 3 /* padding */] = {
 
 /* 805277D4-805277E0 000C+00 s=1 e=0 z=0  None .data      @5875                                                        */
 SECTION_DATA static void* lit_5875[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)deleteRoom__16dFlower_packet_cFi,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805277E0-80527800 0020+00 s=1 e=0 z=0  None .data      @6092                                                        */
 SECTION_DATA static void* lit_6092[8] = {
-	/* 0    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x6EC),
-	/* 1    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x708),
-	/* 2    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x724),
-	/* 3    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x740),
-	/* 4    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x760),
-	/* 5    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x780),
-	/* 6    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x7A0),
-	/* 7    */ (void*)(((char*)draw__16dFlower_packet_cFv)+0x7C0),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80527800-80527840 0040+00 s=1 e=0 z=0  None .data      l_offsetData$localstatic15$create__9daGrass_cFv              */
 SECTION_DATA static void* data_80527800[16] = {
-	/* 0    */ (void*)0x03000000,
-	/* 1    */ (void*)(((char*)&struct_80528900)+0x0) /* l_setType2$localstatic7$create__9daGrass_cFv */,
-	/* 2    */ (void*)0x07000000,
-	/* 3    */ (void*)(((char*)&struct_80528854)+0x0) /* l_setType0$localstatic3$create__9daGrass_cFv */,
-	/* 4    */ (void*)0x15000000,
-	/* 5    */ (void*)(((char*)&struct_80528880)+0x0) /* l_setType1$localstatic5$create__9daGrass_cFv */,
-	/* 6    */ (void*)0x07000000,
-	/* 7    */ (void*)(((char*)&struct_80528854)+0x0) /* l_setType0$localstatic3$create__9daGrass_cFv */,
-	/* 8    */ (void*)0x07000000,
-	/* 9    */ (void*)(((char*)&struct_80528914)+0x0) /* l_setType3$localstatic9$create__9daGrass_cFv */,
-	/* 10   */ (void*)0x11000000,
-	/* 11   */ (void*)(((char*)&struct_80528940)+0x0) /* l_setType4$localstatic11$create__9daGrass_cFv */,
-	/* 12   */ (void*)0x07000000,
-	/* 13   */ (void*)&data_805289A8,
-	/* 14   */ (void*)0x07000000,
-	/* 15   */ (void*)(((char*)&struct_80528854)+0x0) /* l_setType0$localstatic3$create__9daGrass_cFv */,
+	(void*)0x03000000,
+	(void*)NULL,
+	(void*)0x07000000,
+	(void*)NULL,
+	(void*)0x15000000,
+	(void*)NULL,
+	(void*)0x07000000,
+	(void*)NULL,
+	(void*)0x07000000,
+	(void*)NULL,
+	(void*)0x11000000,
+	(void*)NULL,
+	(void*)0x07000000,
+	(void*)NULL,
+	(void*)0x07000000,
+	(void*)NULL,
 };
 
-/* 80527840-80527860 0020+00 s=1 e=0 z=0  None .data      daGrass_METHODS                                              */
-SECTION_DATA static void* daGrass_METHODS[8] = {
-	/* 0    */ (void*)daGrass_create__FP9daGrass_c,
-	/* 1    */ (void*)daGrass_Delete__FP9daGrass_c,
-	/* 2    */ (void*)daGrass_execute__FP9daGrass_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daGrass_draw__FP9daGrass_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80527840-80527860 0020+00 s=0 e=0 z=0  None .data      daGrass_METHODS                                              */
+SECTION_DATA void* daGrass_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80527860-80527890 0030+00 s=0 e=0 z=1  None .data      g_profile_GRASS                                              */
+/* 80527860-80527890 0030+00 s=0 e=0 z=0  None .data      g_profile_GRASS                                              */
 SECTION_DATA void* g_profile_GRASS[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000BFFFD,
-	/* 2    */ (void*)0x03100000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00080000,
-	/* 9    */ (void*)&daGrass_METHODS,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x000BFFFD,
+	(void*)0x03100000,
+	(void*)NULL,
+	(void*)0x00000570,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00080000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)NULL,
 };
 
 /* 80527890-805278A4 0014+00 s=2 e=0 z=0  None .data      __vt__16dFlower_packet_c                                     */
 SECTION_DATA static void* __vt__16dFlower_packet_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__16dFlower_packet_cFv,
-	/* 4    */ (void*)__dt__16dFlower_packet_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805278A4-805278B8 0014+00 s=2 e=0 z=0  None .data      __vt__15dGrass_packet_c                                      */
 SECTION_DATA static void* __vt__15dGrass_packet_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__15dGrass_packet_cFv,
-	/* 4    */ (void*)__dt__15dGrass_packet_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
+
+/* 8051BFBC-8051C040 0084+00 s=0 e=0 z=0  None .text      __dt__15dGrass_packet_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dGrass_packet_c::~dGrass_packet_c() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__15dGrass_packet_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C040-8051C074 0034+00 s=1 e=0 z=0  None .text      executeGrass__9daGrass_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::executeGrass() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/executeGrass__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C074-8051C0A8 0034+00 s=1 e=0 z=0  None .text      drawGrass__9daGrass_cFv                                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::drawGrass() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/drawGrass__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C0A8-8051C0D4 002C+00 s=1 e=0 z=0  None .text      newGrassData__9daGrass_cFR4cXyziUcUcsUc                      */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::newGrassData(cXyz& param_0, int param_1, u8 param_2, u8 param_3, s16 param_4, u8 param_5) {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/newGrassData__9daGrass_cFR4cXyziUcUcsUc.s"
+}
+#pragma pop
+
+
+/* 8051C0D4-8051C140 006C+00 s=1 e=0 z=0  None .text      createFlower__9daGrass_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::createFlower() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/createFlower__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C140-8051C194 0054+00 s=1 e=0 z=0  None .text      deleteFlower__9daGrass_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::deleteFlower() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/deleteFlower__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C194-8051C218 0084+00 s=0 e=0 z=0  None .text      __dt__16dFlower_packet_cFv                                   */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm dFlower_packet_c::~dFlower_packet_c() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__16dFlower_packet_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C218-8051C24C 0034+00 s=1 e=0 z=0  None .text      executeFlower__9daGrass_cFv                                  */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::executeFlower() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/executeFlower__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C24C-8051C280 0034+00 s=1 e=0 z=0  None .text      drawFlower__9daGrass_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::drawFlower() {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/drawFlower__9daGrass_cFv.s"
+}
+#pragma pop
+
+
+/* 8051C280-8051C2AC 002C+00 s=1 e=0 z=0  None .text      newFlowerData__9daGrass_cFScR4cXyziScs                       */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_c::newFlowerData(s8 param_0, cXyz& param_1, int param_2, s8 param_3, s16 param_4) {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/newFlowerData__9daGrass_cFScR4cXyziScs.s"
+}
+#pragma pop
+
+
+/* 8051C2AC-8051C2B0 0004+00 s=1 e=0 z=0  None .text      dGrass_Tex_Change__Fv                                        */
+static void dGrass_Tex_Change() {
+	/* empty function */
+}
+
+
+/* 8051C2B0-8051C304 0054+00 s=0 e=0 z=0  None .text      daGrass_create__FP9daGrass_c                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daGrass_create(daGrass_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_create__FP9daGrass_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 805231B0-805231B4 0004+00 s=1 e=0 z=0  None .rodata    @6978                                                        */
+SECTION_RODATA static u32 const lit_6978 = 0x44960000;
+
+/* 805231B4-805231B8 0004+00 s=1 e=0 z=0  None .rodata    @6979                                                        */
+SECTION_RODATA static u32 const lit_6979 = 0x42960000;
+
+/* 805231B8-805231BC 0004+00 s=1 e=0 z=0  None .rodata    @6980                                                        */
+SECTION_RODATA static u32 const lit_6980 = 0x3F547AE1;
+
+/* 805231BC-805231C0 0004+00 s=1 e=0 z=0  None .rodata    @6981                                                        */
+SECTION_RODATA static u32 const lit_6981 = 0x40133333;
+
+/* 805231C0-805231D6 0016+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_805231C0 = "D_MN01";
+SECTION_DEAD char const* const stringBase_805231C7 = "D_MN54";
+SECTION_DEAD char const* const stringBase_805231CE = "D_MN07A";
+#pragma pop
 
 /* 805278D0-805278D4 0001+03 s=4 e=0 z=0  None .bss       @1109                                                        */
 static u8 lit_1109[1 + 3 /* padding */];
@@ -2563,172 +2676,23 @@ u8 data_8052884C[4];
 /* 80528850-80528854 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 data_80528850[4];
 
-/* 80528854-80528880 002C+00 s=2 e=0 z=0  None .bss       None                                                         */
+/* 80528854-80528880 002C+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80528854[44];
 
-/* 80528880-80528900 0080+00 s=2 e=0 z=0  None .bss       None                                                         */
+/* 80528880-80528900 0080+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80528880[128];
 
-/* 80528900-80528914 0014+00 s=2 e=0 z=0  None .bss       None                                                         */
+/* 80528900-80528914 0014+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80528900[20];
 
-/* 80528914-80528940 002C+00 s=2 e=0 z=0  None .bss       None                                                         */
+/* 80528914-80528940 002C+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80528914[44];
 
-/* 80528940-805289A8 0068+00 s=2 e=0 z=0  None .bss       None                                                         */
+/* 80528940-805289A8 0068+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 struct_80528940[104];
 
-/* 805289A8-805289D2 002A+00 s=2 e=0 z=0  None .bss       l_setType5$localstatic13$create__9daGrass_cFv                */
+/* 805289A8-805289D2 002A+00 s=1 e=0 z=0  None .bss       l_setType5$localstatic13$create__9daGrass_cFv                */
 static u8 data_805289A8[42];
-
-/* 8051BFBC-8051C040 0084+00 s=1 e=0 z=0  None .text      __dt__15dGrass_packet_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dGrass_packet_c::~dGrass_packet_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__15dGrass_packet_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C040-8051C074 0034+00 s=1 e=0 z=0  None .text      executeGrass__9daGrass_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::executeGrass() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/executeGrass__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C074-8051C0A8 0034+00 s=1 e=0 z=0  None .text      drawGrass__9daGrass_cFv                                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::drawGrass() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/drawGrass__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C0A8-8051C0D4 002C+00 s=1 e=0 z=0  None .text      newGrassData__9daGrass_cFR4cXyziUcUcsUc                      */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::newGrassData(cXyz& param_0, int param_1, u8 param_2, u8 param_3, s16 param_4, u8 param_5) {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/newGrassData__9daGrass_cFR4cXyziUcUcsUc.s"
-}
-#pragma pop
-
-
-/* 8051C0D4-8051C140 006C+00 s=1 e=0 z=0  None .text      createFlower__9daGrass_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::createFlower() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/createFlower__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C140-8051C194 0054+00 s=1 e=0 z=0  None .text      deleteFlower__9daGrass_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::deleteFlower() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/deleteFlower__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C194-8051C218 0084+00 s=1 e=0 z=0  None .text      __dt__16dFlower_packet_cFv                                   */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm dFlower_packet_c::~dFlower_packet_c() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/__dt__16dFlower_packet_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C218-8051C24C 0034+00 s=1 e=0 z=0  None .text      executeFlower__9daGrass_cFv                                  */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::executeFlower() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/executeFlower__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C24C-8051C280 0034+00 s=1 e=0 z=0  None .text      drawFlower__9daGrass_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::drawFlower() {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/drawFlower__9daGrass_cFv.s"
-}
-#pragma pop
-
-
-/* 8051C280-8051C2AC 002C+00 s=1 e=0 z=0  None .text      newFlowerData__9daGrass_cFScR4cXyziScs                       */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daGrass_c::newFlowerData(s8 param_0, cXyz& param_1, int param_2, s8 param_3, s16 param_4) {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/newFlowerData__9daGrass_cFScR4cXyziScs.s"
-}
-#pragma pop
-
-
-/* 8051C2AC-8051C2B0 0004+00 s=1 e=0 z=0  None .text      dGrass_Tex_Change__Fv                                        */
-static void dGrass_Tex_Change() {
-	/* empty function */
-}
-
-
-/* 8051C2B0-8051C304 0054+00 s=1 e=0 z=0  None .text      daGrass_create__FP9daGrass_c                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daGrass_create(daGrass_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_create__FP9daGrass_c.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 805231B0-805231B4 0004+00 s=1 e=0 z=0  None .rodata    @6978                                                        */
-SECTION_RODATA static u32 const lit_6978 = 0x44960000;
-
-/* 805231B4-805231B8 0004+00 s=1 e=0 z=0  None .rodata    @6979                                                        */
-SECTION_RODATA static u32 const lit_6979 = 0x42960000;
-
-/* 805231B8-805231BC 0004+00 s=1 e=0 z=0  None .rodata    @6980                                                        */
-SECTION_RODATA static u32 const lit_6980 = 0x3F547AE1;
-
-/* 805231BC-805231C0 0004+00 s=1 e=0 z=0  None .rodata    @6981                                                        */
-SECTION_RODATA static u32 const lit_6981 = 0x40133333;
-
-/* 805231C0-805231D6 0016+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_805231C0 = "D_MN01";
-SECTION_DEAD char const* const stringBase_805231C7 = "D_MN54";
-SECTION_DEAD char const* const stringBase_805231CE = "D_MN07A";
-#pragma pop
 
 /* 8051C304-8051D6CC 13C8+00 s=1 e=0 z=0  None .text      create__9daGrass_cFv                                         */
 #pragma push
@@ -2741,33 +2705,33 @@ asm void daGrass_c::create() {
 #pragma pop
 
 
-/* 8051D6CC-8051D720 0054+00 s=1 e=0 z=0  None .text      daGrass_Delete__FP9daGrass_c                                 */
+/* 8051D6CC-8051D720 0054+00 s=0 e=0 z=0  None .text      daGrass_Delete__FP9daGrass_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGrass_Delete(daGrass_c* param_0) {
+asm void daGrass_Delete(daGrass_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_Delete__FP9daGrass_c.s"
 }
 #pragma pop
 
 
-/* 8051D720-8051D77C 005C+00 s=1 e=0 z=0  None .text      daGrass_execute__FP9daGrass_c                                */
+/* 8051D720-8051D77C 005C+00 s=0 e=0 z=0  None .text      daGrass_execute__FP9daGrass_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGrass_execute(daGrass_c* param_0) {
+asm void daGrass_execute(daGrass_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_execute__FP9daGrass_c.s"
 }
 #pragma pop
 
 
-/* 8051D77C-8051D7B4 0038+00 s=1 e=0 z=0  None .text      daGrass_draw__FP9daGrass_c                                   */
+/* 8051D77C-8051D7B4 0038+00 s=0 e=0 z=0  None .text      daGrass_draw__FP9daGrass_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGrass_draw(daGrass_c* param_0) {
+asm void daGrass_draw(daGrass_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_grass/d_a_grass/daGrass_draw__FP9daGrass_c.s"
 }
@@ -2785,7 +2749,7 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 #pragma pop
 
 
-/* 8051D7D0-8051D88C 00BC+00 s=0 e=1 z=0  None .text      __sinit_d_a_grass_cpp                                        */
+/* 8051D7D0-8051D88C 00BC+00 s=0 e=0 z=0  None .text      __sinit_d_a_grass_cpp                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2854,9 +2818,9 @@ asm csXyz::~csXyz() {
 /* ############################################################################################## */
 /* 805278B8-805278C4 000C+00 s=3 e=0 z=0  None .data      __vt__15dCcMassS_HitInf                                      */
 SECTION_DATA static void* __vt__15dCcMassS_HitInf[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dCcMassS_HitInfFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8051EB88-8051ED98 0210+00 s=1 e=0 z=0  None .text      hitCheck__13dGrass_data_cFiUs                                */
@@ -2870,7 +2834,7 @@ asm void dGrass_data_c::hitCheck(int param_0, u16 param_1) {
 #pragma pop
 
 
-/* 8051ED98-8051EDE0 0048+00 s=1 e=0 z=0  None .text      __dt__15dCcMassS_HitInfFv                                    */
+/* 8051ED98-8051EDE0 0048+00 s=0 e=0 z=0  None .text      __dt__15dCcMassS_HitInfFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2914,7 +2878,7 @@ asm dGrass_packet_c::dGrass_packet_c() {
 #pragma pop
 
 
-/* 8051F03C-8051FABC 0A80+00 s=1 e=0 z=0  None .text      draw__15dGrass_packet_cFv                                    */
+/* 8051F03C-8051FABC 0A80+00 s=0 e=0 z=0  None .text      draw__15dGrass_packet_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2980,7 +2944,7 @@ asm void dGrass_packet_c::newData(cXyz& param_0, int param_1, u8 param_2, u8 par
 #pragma pop
 
 
-/* 80520864-80520898 0034+00 s=1 e=0 z=0  None .text      deleteRoom__15dGrass_packet_cFi                              */
+/* 80520864-80520898 0034+00 s=0 e=0 z=0  None .text      deleteRoom__15dGrass_packet_cFi                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3156,7 +3120,7 @@ asm dFlower_packet_c::dFlower_packet_c() {
 #pragma pop
 
 
-/* 80521DAC-80522774 09C8+00 s=2 e=0 z=0  None .text      draw__16dFlower_packet_cFv                                   */
+/* 80521DAC-80522774 09C8+00 s=0 e=0 z=0  None .text      draw__16dFlower_packet_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -3222,7 +3186,7 @@ asm void dFlower_packet_c::newData(s8 param_0, cXyz& param_1, int param_2, s8 pa
 #pragma pop
 
 
-/* 80522F0C-80522F40 0034+00 s=1 e=0 z=0  None .text      deleteRoom__16dFlower_packet_cFi                             */
+/* 80522F0C-80522F40 0034+00 s=0 e=0 z=0  None .text      deleteRoom__16dFlower_packet_cFi                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

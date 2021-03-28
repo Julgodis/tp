@@ -42,22 +42,19 @@ struct dMsgFlow_c {
 // Forward References:
 // 
 
-static void daTagMwait_Create(fopAc_ac_c*); // 2
-static void daTagMwait_Delete(daTagMwait_c*); // 2
-static void daTagMwait_Execute(daTagMwait_c*); // 2
-static bool daTagMwait_Draw(daTagMwait_c*); // 2
+void daTagMwait_Create(fopAc_ac_c*); // 2
+void daTagMwait_Delete(daTagMwait_c*); // 2
+void daTagMwait_Execute(daTagMwait_c*); // 2
+bool daTagMwait_Draw(daTagMwait_c*); // 2
 
 extern "C" void create__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagMwait_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Delete__FP12daTagMwait_c(); // 1
+extern "C" void daTagMwait_Delete__FP12daTagMwait_c(); // 1
 extern "C" void execute__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Execute__FP12daTagMwait_c(); // 1
-extern "C" static bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
-extern "C" extern u8 const lit_3847[8];
-extern "C" extern u8 const lit_4007[8];
-extern "C" extern u8 const lit_4008[8];
-extern "C" extern u8 const lit_4009[8];
+extern "C" void daTagMwait_Execute__FP12daTagMwait_c(); // 1
+extern "C" bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
+extern "C" extern void* l_daTagMwait_Method[8];
 extern "C" extern void* g_profile_Tag_Mwait[12];
 
 // 
@@ -86,10 +83,7 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 
@@ -117,6 +111,11 @@ SECTION_RODATA static u32 const lit_3845[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 80D5C598-80D5C5A0 0008+00 s=1 e=0 z=0  None .rodata    @3847                                                        */
+SECTION_RODATA static u8 const lit_3847[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80D5BE18-80D5BFFC 01E4+00 s=1 e=0 z=0  None .text      create__12daTagMwait_cFv                                     */
 #pragma push
 #pragma optimization_level 0
@@ -128,11 +127,11 @@ asm void daTagMwait_c::create() {
 #pragma pop
 
 
-/* 80D5BFFC-80D5C01C 0020+00 s=1 e=0 z=0  None .text      daTagMwait_Create__FP10fopAc_ac_c                            */
+/* 80D5BFFC-80D5C01C 0020+00 s=0 e=0 z=0  None .text      daTagMwait_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMwait_Create(fopAc_ac_c* param_0) {
+asm void daTagMwait_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Create__FP10fopAc_ac_c.s"
 }
@@ -150,11 +149,11 @@ asm daTagMwait_c::~daTagMwait_c() {
 #pragma pop
 
 
-/* 80D5C080-80D5C0A8 0028+00 s=1 e=0 z=0  None .text      daTagMwait_Delete__FP12daTagMwait_c                          */
+/* 80D5C080-80D5C0A8 0028+00 s=0 e=0 z=0  None .text      daTagMwait_Delete__FP12daTagMwait_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMwait_Delete(daTagMwait_c* param_0) {
+asm void daTagMwait_Delete(daTagMwait_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Delete__FP12daTagMwait_c.s"
 }
@@ -162,11 +161,6 @@ asm static void daTagMwait_Delete(daTagMwait_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D5C598-80D5C5A0 0008+00 s=0 e=0 z=0  None .rodata    @3847                                                        */
-SECTION_RODATA u8 const lit_3847[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80D5C5A0-80D5C5A8 0004+04 s=1 e=0 z=0  None .rodata    @4006                                                        */
 SECTION_RODATA static u8 const lit_4006[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
@@ -174,18 +168,18 @@ SECTION_RODATA static u8 const lit_4006[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5C5A8-80D5C5B0 0008+00 s=0 e=0 z=0  None .rodata    @4007                                                        */
-SECTION_RODATA u8 const lit_4007[8] = {
+/* 80D5C5A8-80D5C5B0 0008+00 s=1 e=0 z=0  None .rodata    @4007                                                        */
+SECTION_RODATA static u8 const lit_4007[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5C5B0-80D5C5B8 0008+00 s=0 e=0 z=0  None .rodata    @4008                                                        */
-SECTION_RODATA u8 const lit_4008[8] = {
+/* 80D5C5B0-80D5C5B8 0008+00 s=1 e=0 z=0  None .rodata    @4008                                                        */
+SECTION_RODATA static u8 const lit_4008[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5C5B8-80D5C5C0 0008+00 s=0 e=0 z=0  None .rodata    @4009                                                        */
-SECTION_RODATA u8 const lit_4009[8] = {
+/* 80D5C5B8-80D5C5C0 0008+00 s=1 e=0 z=0  None .rodata    @4009                                                        */
+SECTION_RODATA static u8 const lit_4009[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -203,49 +197,49 @@ asm void daTagMwait_c::execute() {
 #pragma pop
 
 
-/* 80D5C550-80D5C570 0020+00 s=1 e=0 z=0  None .text      daTagMwait_Execute__FP12daTagMwait_c                         */
+/* 80D5C550-80D5C570 0020+00 s=0 e=0 z=0  None .text      daTagMwait_Execute__FP12daTagMwait_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMwait_Execute(daTagMwait_c* param_0) {
+asm void daTagMwait_Execute(daTagMwait_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mwait/d_a_tag_mwait/daTagMwait_Execute__FP12daTagMwait_c.s"
 }
 #pragma pop
 
 
-/* 80D5C570-80D5C578 0008+00 s=1 e=0 z=0  None .text      daTagMwait_Draw__FP12daTagMwait_c                            */
-static bool daTagMwait_Draw(daTagMwait_c* param_0) {
+/* 80D5C570-80D5C578 0008+00 s=0 e=0 z=0  None .text      daTagMwait_Draw__FP12daTagMwait_c                            */
+bool daTagMwait_Draw(daTagMwait_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80D5C5C4-80D5C5E4 0020+00 s=1 e=0 z=0  None .data      l_daTagMwait_Method                                          */
-SECTION_DATA static void* l_daTagMwait_Method[8] = {
-	/* 0    */ (void*)daTagMwait_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagMwait_Delete__FP12daTagMwait_c,
-	/* 2    */ (void*)daTagMwait_Execute__FP12daTagMwait_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagMwait_Draw__FP12daTagMwait_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5C5C4-80D5C5E4 0020+00 s=0 e=0 z=0  None .data      l_daTagMwait_Method                                          */
+SECTION_DATA void* l_daTagMwait_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5C5E4-80D5C614 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Mwait                                          */
+/* 80D5C5E4-80D5C614 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Mwait                                          */
 SECTION_DATA void* g_profile_Tag_Mwait[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02C30000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005CC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01000000,
-	/* 9    */ (void*)&l_daTagMwait_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02C30000,
+	(void*)NULL,
+	(void*)0x000005CC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01000000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x030E0000,
 };
 

@@ -128,8 +128,8 @@ lbl_80B2E498:
 /* 80B2E4A8  4B 4E B7 D4 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 80B2E4AC  48 00 00 3C */	b lbl_80B2E4E8
 lbl_80B2E4B0:
-/* 80B2E4B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B2E4B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B2E4B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B2E4B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B2E4B8  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 80B2E4BC  7F C4 F3 78 */	mr r4, r30
 /* 80B2E4C0  38 A0 00 74 */	li r5, 0x74

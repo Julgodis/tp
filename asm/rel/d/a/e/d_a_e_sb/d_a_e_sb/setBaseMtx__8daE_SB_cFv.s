@@ -12,7 +12,7 @@ lbl_80784640:
 /* 80784668  4B 88 88 DC */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8078466C  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 80784670  38 63 4F 84 */	addi r3, r3, l_HIO@l
-/* 80784674  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 80784FB8 */
+/* 80784674  C0 23 00 34 */	lfs f1, 0x34(r3)
 /* 80784678  FC 40 08 90 */	fmr f2, f1
 /* 8078467C  FC 60 08 90 */	fmr f3, f1
 /* 80784680  4B 88 87 B8 */	b scaleM__14mDoMtx_stack_cFfff

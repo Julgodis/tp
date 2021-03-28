@@ -6,12 +6,12 @@ lbl_80BB59AC:
 /* 80BB59BC  7C 7F 1B 78 */	mr r31, r3
 /* 80BB59C0  3C 80 80 BB */	lis r4, lit_3655@ha
 /* 80BB59C4  38 84 5F 00 */	addi r4, r4, lit_3655@l
-/* 80BB59C8  C0 24 00 44 */	lfs f1, 0x44(r4)	/* effective address: 80BB5F44 */
-/* 80BB59CC  C0 44 00 48 */	lfs f2, 0x48(r4)	/* effective address: 80BB5F48 */
-/* 80BB59D0  C0 64 00 4C */	lfs f3, 0x4c(r4)	/* effective address: 80BB5F4C */
-/* 80BB59D4  C0 84 00 50 */	lfs f4, 0x50(r4)	/* effective address: 80BB5F50 */
-/* 80BB59D8  C0 A4 00 3C */	lfs f5, 0x3c(r4)	/* effective address: 80BB5F3C */
-/* 80BB59DC  C0 C4 00 54 */	lfs f6, 0x54(r4)	/* effective address: 80BB5F54 */
+/* 80BB59C8  C0 24 00 44 */	lfs f1, 0x44(r4)
+/* 80BB59CC  C0 44 00 48 */	lfs f2, 0x48(r4)
+/* 80BB59D0  C0 64 00 4C */	lfs f3, 0x4c(r4)
+/* 80BB59D4  C0 84 00 50 */	lfs f4, 0x50(r4)
+/* 80BB59D8  C0 A4 00 3C */	lfs f5, 0x3c(r4)
+/* 80BB59DC  C0 C4 00 54 */	lfs f6, 0x54(r4)
 /* 80BB59E0  4B 46 4B 68 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80BB59E4  7F E3 FB 78 */	mr r3, r31
 /* 80BB59E8  4B FF FB A5 */	bl initBaseMtx__15daObjBhbridge_cFv

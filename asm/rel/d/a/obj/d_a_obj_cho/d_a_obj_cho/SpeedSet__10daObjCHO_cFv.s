@@ -16,7 +16,7 @@ lbl_80BCA78C:
 /* 80BCA7C4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80BCA7C8  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 /* 80BCA7CC  C0 3E 05 2C */	lfs f1, 0x52c(r30)
-/* 80BCA7D0  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 80BCC5C4 */
+/* 80BCA7D0  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80BCA7D4  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BCA7D8  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80BCA7DC  D0 21 00 1C */	stfs f1, 0x1c(r1)

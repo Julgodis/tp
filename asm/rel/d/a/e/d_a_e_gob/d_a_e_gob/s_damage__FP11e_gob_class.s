@@ -7,7 +7,7 @@ lbl_806D9C80:
 /* 806D9C94  7C 7E 1B 78 */	mr r30, r3
 /* 806D9C98  3C 80 80 6E */	lis r4, lit_3763@ha
 /* 806D9C9C  3B E4 EE 38 */	addi r31, r4, lit_3763@l
-/* 806D9CA0  C0 3F 00 18 */	lfs f1, 0x18(r31)	/* effective address: 806DEE50 */
+/* 806D9CA0  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 806D9CA4  A8 03 06 58 */	lha r0, 0x658(r3)
 /* 806D9CA8  2C 00 00 01 */	cmpwi r0, 1
 /* 806D9CAC  41 82 00 30 */	beq lbl_806D9CDC

@@ -11,7 +11,7 @@ lbl_8045E8C8:
 /* 8045E8EC  38 84 00 3B */	addi r4, r4, 0x3b
 /* 8045E8F0  3C A0 80 46 */	lis r5, l_bmd_base_name@ha
 /* 8045E8F4  38 A5 08 94 */	addi r5, r5, l_bmd_base_name@l
-/* 8045E8F8  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80460894 */
+/* 8045E8F8  80 A5 00 00 */	lwz r5, 0(r5)
 /* 8045E8FC  4C C6 31 82 */	crclr 6
 /* 8045E900  4B F0 7B DC */	b sprintf
 /* 8045E904  3C 60 80 46 */	lis r3, data_80460A98@ha

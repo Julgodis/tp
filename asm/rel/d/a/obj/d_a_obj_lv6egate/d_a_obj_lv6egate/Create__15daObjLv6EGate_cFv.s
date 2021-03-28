@@ -9,11 +9,11 @@ lbl_80C82180:
 /* 80C8219C  90 03 05 04 */	stw r0, 0x504(r3)
 /* 80C821A0  3C 80 80 C8 */	lis r4, l_cull_box@ha
 /* 80C821A4  C4 24 2B 70 */	lfsu f1, l_cull_box@l(r4)
-/* 80C821A8  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C80004 */
-/* 80C821AC  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C80008 */
-/* 80C821B0  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C8000C */
-/* 80C821B4  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C80010 */
-/* 80C821B8  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C80014 */
+/* 80C821A8  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C821AC  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C821B0  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C821B4  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C821B8  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C821BC  4B 39 83 8C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C821C0  38 7F 06 08 */	addi r3, r31, 0x608
 /* 80C821C4  38 80 00 FF */	li r4, 0xff
@@ -47,8 +47,8 @@ lbl_80C821EC:
 lbl_80C82230:
 /* 80C82230  54 00 C7 FF */	rlwinm. r0, r0, 0x18, 0x1f, 0x1f
 /* 80C82234  41 82 00 38 */	beq lbl_80C8226C
-/* 80C82238  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C8223C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C82238  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C8223C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C82240  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C82244  7C 05 07 74 */	extsb r5, r0
 /* 80C82248  4B 3B 31 18 */	b isSwitch__10dSv_info_cCFii
@@ -62,8 +62,8 @@ lbl_80C82260:
 /* 80C82264  48 00 00 79 */	bl offDisp__15daObjLv6EGate_cFv
 /* 80C82268  48 00 00 34 */	b lbl_80C8229C
 lbl_80C8226C:
-/* 80C8226C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C82270  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C8226C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C82270  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C82274  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C82278  7C 05 07 74 */	extsb r5, r0
 /* 80C8227C  4B 3B 30 E4 */	b isSwitch__10dSv_info_cCFii

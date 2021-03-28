@@ -51,8 +51,8 @@ lbl_809C10D4:
 lbl_809C1120:
 /* 809C1120  80 7F 0B D8 */	lwz r3, 0xbd8(r31)
 /* 809C1124  4B 64 CB A0 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 809C1128  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C112C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809C1128  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C112C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809C1130  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 809C1134  80 9F 09 A0 */	lwz r4, 0x9a0(r31)
 /* 809C1138  80 BF 0B D8 */	lwz r5, 0xbd8(r31)

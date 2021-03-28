@@ -44,8 +44,8 @@ lbl_80D16048:
 /* 80D16084  3B 40 00 00 */	li r26, 0
 /* 80D16088  3B C0 00 00 */	li r30, 0
 /* 80D1608C  3B A0 00 00 */	li r29, 0
-/* 80D16090  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D16094  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D16090  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D16094  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D16098  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 80D1609C  3C 60 80 D1 */	lis r3, l_event_name@ha
 /* 80D160A0  3B 83 78 84 */	addi r28, r3, l_event_name@l

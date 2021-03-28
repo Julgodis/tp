@@ -9,8 +9,8 @@ lbl_80D55180:
 /* 80D5519C  38 63 58 48 */	addi r3, r3, struct_80D55848+0x0@l
 /* 80D551A0  38 63 01 0B */	addi r3, r3, 0x10b
 /* 80D551A4  38 80 00 07 */	li r4, 7
-/* 80D551A8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80D551AC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80D551A8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D551AC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80D551B0  3F 85 00 02 */	addis r28, r5, 2
 /* 80D551B4  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 80D551B8  7F 85 E3 78 */	mr r5, r28

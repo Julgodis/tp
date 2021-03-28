@@ -21,7 +21,7 @@ lbl_8075F734:
 /* 8075F780  C0 03 15 04 */	lfs f0, lit_3908@l(r3)
 /* 8075F784  3C 60 80 76 */	lis r3, l_HIO@ha
 /* 8075F788  38 63 1E 0C */	addi r3, r3, l_HIO@l
-/* 8075F78C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80761E14 */
+/* 8075F78C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8075F790  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8075F794  41 82 00 10 */	beq lbl_8075F7A4
 /* 8075F798  D0 3F 07 9C */	stfs f1, 0x79c(r31)

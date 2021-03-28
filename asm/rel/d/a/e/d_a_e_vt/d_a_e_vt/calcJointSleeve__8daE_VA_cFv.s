@@ -31,11 +31,11 @@ lbl_807C2A4C:
 /* 807C2AC0  4B B8 39 F0 */	b PSMTXCopy
 /* 807C2AC4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 807C2AC8  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 807C2ACC  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
+/* 807C2ACC  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 807C2AD0  D0 17 13 B8 */	stfs f0, 0x13b8(r23)
-/* 807C2AD4  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
+/* 807C2AD4  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 807C2AD8  D0 17 13 BC */	stfs f0, 0x13bc(r23)
-/* 807C2ADC  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
+/* 807C2ADC  C0 1E 00 2C */	lfs f0, 0x2c(r30)
 /* 807C2AE0  D0 17 13 C0 */	stfs f0, 0x13c0(r23)
 /* 807C2AE4  7F C3 F3 78 */	mr r3, r30
 /* 807C2AE8  38 81 00 10 */	addi r4, r1, 0x10

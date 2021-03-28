@@ -23,8 +23,8 @@ lbl_80BD3628:
 /* 80BD367C  38 A1 00 08 */	addi r5, r1, 8
 /* 80BD3680  38 C0 00 00 */	li r6, 0
 /* 80BD3684  4B 4A 46 E0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80BD3688  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD368C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD3688  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD368C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD3690  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BD3694  38 81 00 14 */	addi r4, r1, 0x14
 /* 80BD3698  4B 4A 0D 1C */	b LineCross__4cBgSFP11cBgS_LinChk

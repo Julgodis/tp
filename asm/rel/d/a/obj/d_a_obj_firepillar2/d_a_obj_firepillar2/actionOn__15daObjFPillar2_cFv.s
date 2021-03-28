@@ -20,8 +20,8 @@ lbl_80BEAE10:
 /* 80BEAE14  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BEAE18  28 04 00 FF */	cmplwi r4, 0xff
 /* 80BEAE1C  41 82 00 30 */	beq lbl_80BEAE4C
-/* 80BEAE20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEAE24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BEAE20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEAE24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BEAE28  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80BEAE2C  7C 05 07 74 */	extsb r5, r0
 /* 80BEAE30  4B 44 A5 30 */	b isSwitch__10dSv_info_cCFii
@@ -249,7 +249,7 @@ lbl_80BEB148:
 /* 80BEB160  90 01 00 08 */	stw r0, 8(r1)
 /* 80BEB164  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BEB168  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BEB16C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BEB16C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BEB170  38 81 00 08 */	addi r4, r1, 8
 /* 80BEB174  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80BEB178  38 C0 00 00 */	li r6, 0

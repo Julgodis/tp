@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct _GXAttr {
+struct Vec {
 };
 
-struct Vec {
+struct _GXAttr {
 };
 
 struct J3DShape {
@@ -342,11 +342,11 @@ asm void J3DShape::simpleDrawCache() const {
 /* ############################################################################################## */
 /* 803CDC78-803CDC90 0018+00 s=0 e=1 z=0  None .data      __vt__8J3DShape                                              */
 SECTION_DATA void* __vt__8J3DShape[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__8J3DShapeCFv,
-	/* 3    */ (void*)drawFast__8J3DShapeCFv,
-	/* 4    */ (void*)simpleDraw__8J3DShapeCFv,
-	/* 5    */ (void*)simpleDrawCache__8J3DShapeCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__8J3DShapeCFv,
+	(void*)drawFast__8J3DShapeCFv,
+	(void*)simpleDraw__8J3DShapeCFv,
+	(void*)simpleDrawCache__8J3DShapeCFv,
 };
 

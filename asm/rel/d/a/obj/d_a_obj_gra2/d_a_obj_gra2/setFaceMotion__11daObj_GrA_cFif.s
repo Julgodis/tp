@@ -11,7 +11,7 @@ lbl_80C017AC:
 /* 80C017D0  40 80 00 18 */	bge lbl_80C017E8
 /* 80C017D4  3C 80 80 C1 */	lis r4, m__17daObj_GrA_Param_c@ha
 /* 80C017D8  38 84 FA 7C */	addi r4, r4, m__17daObj_GrA_Param_c@l
-/* 80C017DC  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80C0FA88 */
+/* 80C017DC  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80C017E0  D0 03 0A 98 */	stfs f0, 0xa98(r3)
 /* 80C017E4  4E 80 00 20 */	blr 
 lbl_80C017E8:

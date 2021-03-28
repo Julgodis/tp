@@ -7,12 +7,12 @@ lbl_80CC46F8:
 /* 80CC470C  7C 7E 1B 78 */	mr r30, r3
 /* 80CC4710  3C 80 80 CC */	lis r4, M_attr__14daObjSakuita_c@ha
 /* 80CC4714  3B E4 50 B4 */	addi r31, r4, M_attr__14daObjSakuita_c@l
-/* 80CC4718  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 80CC50E0 */
-/* 80CC471C  C0 5F 00 30 */	lfs f2, 0x30(r31)	/* effective address: 80CC50E4 */
-/* 80CC4720  C0 7F 00 34 */	lfs f3, 0x34(r31)	/* effective address: 80CC50E8 */
-/* 80CC4724  C0 9F 00 38 */	lfs f4, 0x38(r31)	/* effective address: 80CC50EC */
-/* 80CC4728  C0 BF 00 3C */	lfs f5, 0x3c(r31)	/* effective address: 80CC50F0 */
-/* 80CC472C  C0 DF 00 40 */	lfs f6, 0x40(r31)	/* effective address: 80CC50F4 */
+/* 80CC4718  C0 3F 00 2C */	lfs f1, 0x2c(r31)
+/* 80CC471C  C0 5F 00 30 */	lfs f2, 0x30(r31)
+/* 80CC4720  C0 7F 00 34 */	lfs f3, 0x34(r31)
+/* 80CC4724  C0 9F 00 38 */	lfs f4, 0x38(r31)
+/* 80CC4728  C0 BF 00 3C */	lfs f5, 0x3c(r31)
+/* 80CC472C  C0 DF 00 40 */	lfs f6, 0x40(r31)
 /* 80CC4730  4B 35 5E 18 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CC4734  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80CC4738  D0 1E 05 30 */	stfs f0, 0x530(r30)
@@ -37,19 +37,19 @@ lbl_80CC46F8:
 /* 80CC4784  48 00 00 75 */	bl initBaseMtx__14daObjSakuita_cFv
 /* 80CC4788  3C 60 80 CC */	lis r3, l_arcName@ha
 /* 80CC478C  38 63 51 2C */	addi r3, r3, l_arcName@l
-/* 80CC4790  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CC512C */
+/* 80CC4790  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC4794  3C 80 80 CC */	lis r4, stringBase0@ha
 /* 80CC4798  38 84 51 14 */	addi r4, r4, stringBase0@l
 /* 80CC479C  38 84 00 0A */	addi r4, r4, 0xa
-/* 80CC47A0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CC47A4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CC47A0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CC47A4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CC47A8  3C A5 00 02 */	addis r5, r5, 2
 /* 80CC47AC  38 C0 00 80 */	li r6, 0x80
 /* 80CC47B0  38 A5 C2 F8 */	addi r5, r5, -15624
 /* 80CC47B4  4B 37 7B C8 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 80CC47B8  7C 64 1B 78 */	mr r4, r3
-/* 80CC47BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC47C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC47BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC47C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC47C4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC47C8  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80CC47CC  7C 05 07 74 */	extsb r5, r0

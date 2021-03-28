@@ -1,8 +1,8 @@
 lbl_805EB028:
-/* 805EB028  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805EB02C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805EB030  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 805EB034  88 84 05 68 */	lbz r4, 0x568(r4)	/* effective address: 80406728 */
+/* 805EB028  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805EB02C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805EB030  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 805EB034  88 84 05 68 */	lbz r4, 0x568(r4)
 /* 805EB038  38 04 FF FD */	addi r0, r4, -3
 /* 805EB03C  28 00 00 1C */	cmplwi r0, 0x1c
 /* 805EB040  4D 81 00 20 */	bgtlr 

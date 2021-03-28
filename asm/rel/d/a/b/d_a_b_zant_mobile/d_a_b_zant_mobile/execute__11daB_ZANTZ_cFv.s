@@ -18,7 +18,7 @@ lbl_80651C48:
 /* 80651C5C  4B 9B B2 E8 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80651C60  3C 60 80 65 */	lis r3, l_HIO@ha
 /* 80651C64  38 63 29 38 */	addi r3, r3, l_HIO@l
-/* 80651C68  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80652940 */
+/* 80651C68  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80651C6C  FC 40 08 90 */	fmr f2, f1
 /* 80651C70  FC 60 08 90 */	fmr f3, f1
 /* 80651C74  4B 9B B1 C4 */	b scaleM__14mDoMtx_stack_cFfff

@@ -31,13 +31,13 @@ lbl_80BBBEE8:
 /* 80BBBF0C  41 82 00 28 */	beq lbl_80BBBF34
 /* 80BBBF10  3C 60 80 BC */	lis r3, l_findCount@ha
 /* 80BBBF14  38 A3 C8 08 */	addi r5, r3, l_findCount@l
-/* 80BBBF18  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80BBC808 */
+/* 80BBBF18  80 85 00 00 */	lwz r4, 0(r5)
 /* 80BBBF1C  54 80 10 3A */	slwi r0, r4, 2
 /* 80BBBF20  3C 60 80 BC */	lis r3, l_findActorPtrs@ha
 /* 80BBBF24  38 63 C6 78 */	addi r3, r3, l_findActorPtrs@l
 /* 80BBBF28  7F E3 01 2E */	stwx r31, r3, r0
 /* 80BBBF2C  38 04 00 01 */	addi r0, r4, 1
-/* 80BBBF30  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80BBC808 */
+/* 80BBBF30  90 05 00 00 */	stw r0, 0(r5)
 lbl_80BBBF34:
 /* 80BBBF34  38 60 00 00 */	li r3, 0
 /* 80BBBF38  83 E1 00 0C */	lwz r31, 0xc(r1)

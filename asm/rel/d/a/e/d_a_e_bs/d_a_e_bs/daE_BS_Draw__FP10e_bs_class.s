@@ -57,8 +57,8 @@ lbl_8068E3D4:
 /* 8068E4B0  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 8068E4B4  4B 9A 04 5C */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 8068E4B8  90 7F 06 98 */	stw r3, 0x698(r31)
-/* 8068E4BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068E4C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8068E4BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068E4C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8068E4C4  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 8068E4C8  80 9F 06 98 */	lwz r4, 0x698(r31)
 /* 8068E4CC  7F 85 E3 78 */	mr r5, r28

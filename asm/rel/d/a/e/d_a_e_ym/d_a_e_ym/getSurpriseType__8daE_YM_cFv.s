@@ -87,7 +87,7 @@ lbl_8080C180:
 lbl_8080C190:
 /* 8080C190  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080C194  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080C198  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80815D58 */
+/* 8080C198  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8080C19C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8080C1A0  40 81 00 0C */	ble lbl_8080C1AC
 /* 8080C1A4  3B C0 00 02 */	li r30, 2

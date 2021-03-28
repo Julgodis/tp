@@ -68,8 +68,8 @@ lbl_8058FB30:
 /* 8058FB38  38 00 00 00 */	li r0, 0
 /* 8058FB3C  98 1E 0A 08 */	stb r0, 0xa08(r30)
 lbl_8058FB40:
-/* 8058FB40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058FB44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8058FB40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058FB44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058FB48  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8058FB4C  7F A3 EB 78 */	mr r3, r29
 /* 8058FB50  80 9E 05 CC */	lwz r4, 0x5cc(r30)
@@ -118,22 +118,22 @@ lbl_8058FB84:
 /* 8058FBF4  7F C3 F3 78 */	mr r3, r30
 /* 8058FBF8  3C 80 80 59 */	lis r4, l_cull_box2@ha
 /* 8058FBFC  C4 24 29 BC */	lfsu f1, l_cull_box2@l(r4)
-/* 8058FC00  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80590004 */
-/* 8058FC04  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80590008 */
-/* 8058FC08  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 8059000C */
-/* 8058FC0C  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80590010 */
-/* 8058FC10  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80590014 */
+/* 8058FC00  C0 44 00 04 */	lfs f2, 4(r4)
+/* 8058FC04  C0 64 00 08 */	lfs f3, 8(r4)
+/* 8058FC08  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 8058FC0C  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 8058FC10  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 8058FC14  4B A8 A9 34 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 8058FC18  48 00 00 28 */	b lbl_8058FC40
 lbl_8058FC1C:
 /* 8058FC1C  7F C3 F3 78 */	mr r3, r30
 /* 8058FC20  3C 80 80 59 */	lis r4, l_cull_box@ha
 /* 8058FC24  C4 24 29 A4 */	lfsu f1, l_cull_box@l(r4)
-/* 8058FC28  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80590004 */
-/* 8058FC2C  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80590008 */
-/* 8058FC30  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 8059000C */
-/* 8058FC34  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80590010 */
-/* 8058FC38  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80590014 */
+/* 8058FC28  C0 44 00 04 */	lfs f2, 4(r4)
+/* 8058FC2C  C0 64 00 08 */	lfs f3, 8(r4)
+/* 8058FC30  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 8058FC34  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 8058FC38  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 8058FC3C  4B A8 A9 0C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 lbl_8058FC40:
 /* 8058FC40  C0 1F 00 C0 */	lfs f0, 0xc0(r31)

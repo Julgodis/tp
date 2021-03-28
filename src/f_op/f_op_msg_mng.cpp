@@ -340,13 +340,13 @@ asm void J2DPane::setAlpha(u8 param_0) {
 /* ############################################################################################## */
 /* 803A3970-803A3990 001C+04 s=1 e=0 z=0  None .data      @4305                                                        */
 SECTION_DATA static void* lit_4305[7 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x88),
-	/* 1    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x90),
-	/* 2    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xB4),
-	/* 3    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xBC),
-	/* 4    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xD8),
-	/* 5    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x10C),
-	/* 6    */ (void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x140),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x88),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x90),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xB4),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xBC),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0xD8),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x10C),
+	(void*)(((char*)fopMsgM_valueIncrease__FiiUc)+0x140),
 	/* padding */
 	NULL,
 };

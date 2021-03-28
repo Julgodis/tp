@@ -8,10 +8,10 @@ lbl_8057F014:
 /* 8057F02C  3C 60 80 58 */	lis r3, lit_3656@ha
 /* 8057F030  3B E3 F5 70 */	addi r31, r3, lit_3656@l
 /* 8057F034  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 8057F038  C0 3F 00 54 */	lfs f1, 0x54(r31)	/* effective address: 8057F5C4 */
-/* 8057F03C  C0 5F 00 D8 */	lfs f2, 0xd8(r31)	/* effective address: 8057F648 */
-/* 8057F040  C0 7F 00 94 */	lfs f3, 0x94(r31)	/* effective address: 8057F604 */
-/* 8057F044  C0 9F 00 D0 */	lfs f4, 0xd0(r31)	/* effective address: 8057F640 */
+/* 8057F038  C0 3F 00 54 */	lfs f1, 0x54(r31)
+/* 8057F03C  C0 5F 00 D8 */	lfs f2, 0xd8(r31)
+/* 8057F040  C0 7F 00 94 */	lfs f3, 0x94(r31)
+/* 8057F044  C0 9F 00 D0 */	lfs f4, 0xd0(r31)
 /* 8057F048  4B CF 09 34 */	b cLib_addCalc__FPfffff
 /* 8057F04C  C0 1E 04 FC */	lfs f0, 0x4fc(r30)
 /* 8057F050  C0 3F 00 84 */	lfs f1, 0x84(r31)

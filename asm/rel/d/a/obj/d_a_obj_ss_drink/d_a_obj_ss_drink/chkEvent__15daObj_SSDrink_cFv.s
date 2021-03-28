@@ -8,11 +8,11 @@ lbl_80CE622C:
 /* 80CE6244  3C 80 80 CE */	lis r4, cNullVec__6Z2Calc@ha
 /* 80CE6248  3B E4 69 C4 */	addi r31, r4, cNullVec__6Z2Calc@l
 /* 80CE624C  3B C0 00 01 */	li r30, 1
-/* 80CE6250  80 9F 00 A8 */	lwz r4, 0xa8(r31)	/* effective address: 80CE6A6C */
-/* 80CE6254  80 1F 00 AC */	lwz r0, 0xac(r31)	/* effective address: 80CE6A70 */
+/* 80CE6250  80 9F 00 A8 */	lwz r4, 0xa8(r31)
+/* 80CE6254  80 1F 00 AC */	lwz r0, 0xac(r31)
 /* 80CE6258  90 81 00 20 */	stw r4, 0x20(r1)
 /* 80CE625C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80CE6260  80 1F 00 B0 */	lwz r0, 0xb0(r31)	/* effective address: 80CE6A74 */
+/* 80CE6260  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CE6264  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80CE6268  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CE626C  4B FF FB 45 */	bl checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i
@@ -21,10 +21,10 @@ lbl_80CE622C:
 /* 80CE6278  38 60 00 01 */	li r3, 1
 /* 80CE627C  48 00 01 18 */	b lbl_80CE6394
 lbl_80CE6280:
-/* 80CE6280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE6284  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 80CE6280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE6284  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 80CE6288  38 00 00 00 */	li r0, 0
-/* 80CE628C  88 7C 4F AD */	lbz r3, 0x4fad(r28)	/* effective address: 8040B16D */
+/* 80CE628C  88 7C 4F AD */	lbz r3, 0x4fad(r28)
 /* 80CE6290  28 03 00 00 */	cmplwi r3, 0
 /* 80CE6294  41 82 00 0C */	beq lbl_80CE62A0
 /* 80CE6298  28 03 00 02 */	cmplwi r3, 2
@@ -68,9 +68,9 @@ lbl_80CE62D0:
 /* 80CE6324  48 00 00 64 */	b lbl_80CE6388
 lbl_80CE6328:
 /* 80CE6328  38 00 00 00 */	li r0, 0
-/* 80CE632C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE6330  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CE6334  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80CE632C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE6330  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE6334  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 80CE6338  28 03 00 01 */	cmplwi r3, 1
 /* 80CE633C  41 82 00 0C */	beq lbl_80CE6348
 /* 80CE6340  28 03 00 02 */	cmplwi r3, 2

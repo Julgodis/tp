@@ -10,7 +10,7 @@ lbl_807EB964:
 /* 807EB984  C0 5E 06 70 */	lfs f2, 0x670(r30)
 /* 807EB988  C0 1E 06 68 */	lfs f0, 0x668(r30)
 /* 807EB98C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 807EB990  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 807EF774 */
+/* 807EB990  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 807EB994  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 807EB998  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 807EB99C  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)

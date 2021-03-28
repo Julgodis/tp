@@ -128,9 +128,9 @@ asm static void dSmplMdl_modelUpdateDL(J3DModel* param_0) {
 /* ############################################################################################## */
 /* 803A82F8-803A8308 000C+04 s=2 e=0 z=0  None .data      __vt__15dSmplMdl_draw_c                                      */
 SECTION_DATA static void* __vt__15dSmplMdl_draw_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dSmplMdl_draw_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dSmplMdl_draw_cFv,
 	/* padding */
 	NULL,
 };

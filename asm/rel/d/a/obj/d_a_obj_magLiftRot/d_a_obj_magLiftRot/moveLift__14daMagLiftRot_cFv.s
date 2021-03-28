@@ -11,7 +11,7 @@ lbl_80C8F02C:
 /* 80C8F050  3B E3 FA E8 */	addi r31, r3, lit_3627@l
 /* 80C8F054  3C 60 80 C9 */	lis r3, data_80C8FD0C@ha
 /* 80C8F058  38 A3 FD 0C */	addi r5, r3, data_80C8FD0C@l
-/* 80C8F05C  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C8FD0C */
+/* 80C8F05C  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C8F060  7C 00 07 75 */	extsb. r0, r0
 /* 80C8F064  40 82 00 58 */	bne lbl_80C8F0BC
 /* 80C8F068  80 66 00 2C */	lwz r3, 0x2c(r6)

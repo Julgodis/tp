@@ -69,11 +69,11 @@ lbl_805AA2C4:
 /* 805AA324  D0 1E 04 F4 */	stfs f0, 0x4f4(r30)
 /* 805AA328  3C 60 80 5B */	lis r3, lit_4306@ha
 /* 805AA32C  38 83 A5 0C */	addi r4, r3, lit_4306@l
-/* 805AA330  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AA50C */
-/* 805AA334  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AA510 */
+/* 805AA330  80 64 00 00 */	lwz r3, 0(r4)
+/* 805AA334  80 04 00 04 */	lwz r0, 4(r4)
 /* 805AA338  90 61 00 14 */	stw r3, 0x14(r1)
 /* 805AA33C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 805AA340  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AA514 */
+/* 805AA340  80 04 00 08 */	lwz r0, 8(r4)
 /* 805AA344  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 805AA348  7F C3 F3 78 */	mr r3, r30
 /* 805AA34C  38 81 00 14 */	addi r4, r1, 0x14
@@ -82,8 +82,8 @@ lbl_805AA2C4:
 /* 805AA358  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 805AA35C  28 04 00 FF */	cmplwi r4, 0xff
 /* 805AA360  41 82 00 28 */	beq lbl_805AA388
-/* 805AA364  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AA368  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805AA364  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AA368  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AA36C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 805AA370  7C 05 07 74 */	extsb r5, r0
 /* 805AA374  4B A8 AF EC */	b isSwitch__10dSv_info_cCFii
@@ -105,8 +105,8 @@ lbl_805AA394:
 /* 805AA3AC  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 805AA3B0  28 04 00 FF */	cmplwi r4, 0xff
 /* 805AA3B4  41 82 00 28 */	beq lbl_805AA3DC
-/* 805AA3B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AA3BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805AA3B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AA3BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AA3C0  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 805AA3C4  7C 05 07 74 */	extsb r5, r0
 /* 805AA3C8  4B A8 AF 98 */	b isSwitch__10dSv_info_cCFii
@@ -117,11 +117,11 @@ lbl_805AA394:
 lbl_805AA3DC:
 /* 805AA3DC  3C 60 80 5B */	lis r3, lit_4317@ha
 /* 805AA3E0  38 83 A5 18 */	addi r4, r3, lit_4317@l
-/* 805AA3E4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AA518 */
-/* 805AA3E8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AA51C */
+/* 805AA3E4  80 64 00 00 */	lwz r3, 0(r4)
+/* 805AA3E8  80 04 00 04 */	lwz r0, 4(r4)
 /* 805AA3EC  90 61 00 08 */	stw r3, 8(r1)
 /* 805AA3F0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805AA3F4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AA520 */
+/* 805AA3F4  80 04 00 08 */	lwz r0, 8(r4)
 /* 805AA3F8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805AA3FC  7F C3 F3 78 */	mr r3, r30
 /* 805AA400  38 81 00 08 */	addi r4, r1, 8

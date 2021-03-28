@@ -7,11 +7,11 @@ lbl_8084B134:
 /* 8084B148  7C 9E 23 78 */	mr r30, r4
 /* 8084B14C  3C 60 80 85 */	lis r3, lit_3929@ha
 /* 8084B150  3B E3 4B 04 */	addi r31, r3, lit_3929@l
-/* 8084B154  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80854BCC */
+/* 8084B154  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 8084B158  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8084B15C  C0 1F 00 34 */	lfs f0, 0x34(r31)	/* effective address: 80854B38 */
+/* 8084B15C  C0 1F 00 34 */	lfs f0, 0x34(r31)
 /* 8084B160  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8084B164  C0 1F 00 CC */	lfs f0, 0xcc(r31)	/* effective address: 80854BD0 */
+/* 8084B164  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 8084B168  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8084B16C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8084B170  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

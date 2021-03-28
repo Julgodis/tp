@@ -26,7 +26,7 @@ lbl_8059CC98:
 /* 8059CCBC  4B A7 DC A8 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8059CCC0  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059CCC4  38 63 DE 7C */	addi r3, r3, M_attr__15daObjYobikusa_c@l
-/* 8059CCC8  C0 43 00 04 */	lfs f2, 4(r3)	/* effective address: 8059DE80 */
+/* 8059CCC8  C0 43 00 04 */	lfs f2, 4(r3)
 /* 8059CCCC  3C 60 80 5A */	lis r3, lit_3724@ha
 /* 8059CCD0  C0 03 DE C0 */	lfs f0, lit_3724@l(r3)
 /* 8059CCD4  EC 02 00 24 */	fdivs f0, f2, f0

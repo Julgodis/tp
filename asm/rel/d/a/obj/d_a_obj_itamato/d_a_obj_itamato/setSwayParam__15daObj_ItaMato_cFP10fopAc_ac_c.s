@@ -10,15 +10,15 @@ lbl_80C2A630:
 /* 80C2A650  7C 9D 23 78 */	mr r29, r4
 /* 80C2A654  3C A0 80 C3 */	lis r5, m__21daObj_ItaMato_Param_c@ha
 /* 80C2A658  3B E5 AB 70 */	addi r31, r5, m__21daObj_ItaMato_Param_c@l
-/* 80C2A65C  C3 FF 00 54 */	lfs f31, 0x54(r31)	/* effective address: 80C2ABC4 */
-/* 80C2A660  80 BF 00 8C */	lwz r5, 0x8c(r31)	/* effective address: 80C2ABFC */
-/* 80C2A664  80 1F 00 90 */	lwz r0, 0x90(r31)	/* effective address: 80C2AC00 */
+/* 80C2A65C  C3 FF 00 54 */	lfs f31, 0x54(r31)
+/* 80C2A660  80 BF 00 8C */	lwz r5, 0x8c(r31)
+/* 80C2A664  80 1F 00 90 */	lwz r0, 0x90(r31)
 /* 80C2A668  90 A1 00 08 */	stw r5, 8(r1)
 /* 80C2A66C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C2A670  80 1F 00 94 */	lwz r0, 0x94(r31)	/* effective address: 80C2AC04 */
+/* 80C2A670  80 1F 00 94 */	lwz r0, 0x94(r31)
 /* 80C2A674  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C2A678  38 BF 00 00 */	addi r5, r31, 0
-/* 80C2A67C  C0 05 00 10 */	lfs f0, 0x10(r5)	/* effective address: 80C2AB80 */
+/* 80C2A67C  C0 05 00 10 */	lfs f0, 0x10(r5)
 /* 80C2A680  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80C2A684  4B 3F 00 8C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80C2A688  A8 1E 04 E6 */	lha r0, 0x4e6(r30)

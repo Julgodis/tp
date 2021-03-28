@@ -7,9 +7,9 @@ lbl_806E6948:
 /* 806E695C  7C 7E 1B 78 */	mr r30, r3
 /* 806E6960  3C 80 80 6F */	lis r4, lit_3905@ha
 /* 806E6964  3B E4 A1 F4 */	addi r31, r4, lit_3905@l
-/* 806E6968  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806E696C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806E6970  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806E6968  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806E696C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806E6970  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 806E6974  80 03 07 14 */	lwz r0, 0x714(r3)
 /* 806E6978  2C 00 00 0B */	cmpwi r0, 0xb
 /* 806E697C  41 82 02 20 */	beq lbl_806E6B9C

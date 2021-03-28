@@ -6,8 +6,8 @@ lbl_80A3203C:
 /* 80A3204C  4B 93 01 88 */	b _savegpr_27
 /* 80A32050  7C 7D 1B 78 */	mr r29, r3
 /* 80A32054  7C 9B 23 78 */	mr r27, r4
-/* 80A32058  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A3205C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A32058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A3205C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A32060  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80A32064  3B E0 00 00 */	li r31, 0
 /* 80A32068  3B C0 FF FF */	li r30, -1

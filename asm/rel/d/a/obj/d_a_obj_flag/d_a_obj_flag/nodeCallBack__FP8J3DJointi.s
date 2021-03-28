@@ -12,7 +12,7 @@ lbl_80BEBFEC:
 /* 80BEBFEC  A3 C3 00 14 */	lhz r30, 0x14(r3)
 /* 80BEBFF0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BEBFF4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80BEBFF8  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80BEBFF8  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80BEBFFC  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 80BEC000  38 81 00 08 */	addi r4, r1, 8
 /* 80BEC004  7F C5 F3 78 */	mr r5, r30

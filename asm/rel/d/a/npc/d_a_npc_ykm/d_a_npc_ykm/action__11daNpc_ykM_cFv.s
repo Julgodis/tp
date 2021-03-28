@@ -155,9 +155,9 @@ lbl_80B555F4:
 /* 80B555F4  88 1F 15 82 */	lbz r0, 0x1582(r31)
 /* 80B555F8  28 00 00 00 */	cmplwi r0, 0
 /* 80B555FC  41 82 00 20 */	beq lbl_80B5561C
-/* 80B55600  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B55604  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B55608  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80B55600  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B55604  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B55608  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80B5560C  28 00 00 00 */	cmplwi r0, 0
 /* 80B55610  40 82 00 0C */	bne lbl_80B5561C
 /* 80B55614  7F E3 FB 78 */	mr r3, r31

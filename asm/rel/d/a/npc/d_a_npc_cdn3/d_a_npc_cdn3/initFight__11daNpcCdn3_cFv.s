@@ -33,8 +33,8 @@ lbl_8097A724:
 /* 8097A7A0  C0 BF 00 3C */	lfs f5, 0x3c(r31)
 /* 8097A7A4  C0 DF 00 40 */	lfs f6, 0x40(r31)
 /* 8097A7A8  4B 69 FD A0 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
-/* 8097A7AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8097A7B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8097A7AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8097A7B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8097A7B4  38 63 09 78 */	addi r3, r3, 0x978
 /* 8097A7B8  38 80 00 3C */	li r4, 0x3c
 /* 8097A7BC  4B 6B A3 DC */	b onSwitch__12dSv_danBit_cFi

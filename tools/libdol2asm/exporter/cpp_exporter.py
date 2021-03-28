@@ -142,15 +142,7 @@ class CPPDisassembler(Disassembler):
 
         prefixComment = '/* %08X  %02X %02X %02X %02X */' % (
             address, bytes[0], bytes[1], bytes[2], bytes[3])
-        comment = ""
-        if address in self.function.ref_addrs:
-            sym = ""
-            addr = self.function.ref_addrs[address]
-            symbol = self.get_symbol(addr)
-            if symbol:
-                sym = f", symbol: {symbol.asm_reference(addr)}"
-            comment = f" /* constant-address: {addr:08X}{sym} */"
-        await self.builder.write(f"{prefixComment}\t{asm:<40}{comment}")
+        await self.builder.write(f"{prefixComment}\t{asm}")
 
     def insn_to_text(self, addr, insn, raw) -> str:
         id = insn.id
@@ -570,8 +562,10 @@ class CPPExporter:
                 section.symbols.sort(key=lambda x: x.addr)
 
         def add_references(used_symbols, parent, depth):
-            references = parent.internal_references(self.context, self.gst)
-            for symbol in references:
+            for addr in parent.references:
+                symbol = self.gst[-1, addr]
+                if not symbol:
+                    continue
                 if isinstance(symbol, Function):
                     continue
                 if not symbol in decl_references:
@@ -587,26 +581,6 @@ class CPPExporter:
                 if not symbol.require_forward_reference:
                     add_references(used_symbols, symbol, depth + 1)
 
-        def add_relocations(used_symbols, parent, depth):
-            # TODO:
-            relocations = parent.relocation_symbols(
-                self.context, self.gst, section)
-            for symbol in relocations:
-                if isinstance(symbol, Function):
-                    continue
-                if not symbol in decl_references:
-                    continue
-                if symbol.addr > parent.addr and not isinstance(parent, Function) and symbol.is_static:
-                    if not symbol in forward_used_symbols:
-                        forward_used_symbols.add(symbol)
-                        forward_symbols.append(symbol)
-                if symbol in used_symbols:
-                    continue
-                used_symbols.add(symbol)
-                symbols.append(symbol)
-                if not symbol.require_forward_reference:
-                    add_relocations(used_symbols, symbol, depth + 1)
-
         used_symbols = set()
         forward_used_symbols = set()
         function_symbols_groups = []
@@ -616,7 +590,7 @@ class CPPExporter:
                     symbols = []
                     forward_symbols = []
                     add_references(used_symbols, function, 1)
-                    add_relocations(used_symbols, function, 1)
+                    
 
                     # add missing references so that the order is still correct
                     missing_order_symbols = []
@@ -630,7 +604,7 @@ class CPPExporter:
                             if prev_symbol in used_symbols:
                                 continue
                             add_references(used_symbols, prev_symbol, 1)
-                            add_relocations(used_symbols, prev_symbol, 1)
+                            #add_relocations(used_symbols, prev_symbol, 1)
                             missing_order_symbols.append(prev_symbol)
                             used_symbols.add(prev_symbol)
 
@@ -686,16 +660,11 @@ class CPPExporter:
     def find_references(self,
                         section: Section,
                         decl_references: Set[Symbol],
-                        internal_references: Set[Symbol],
+                        references: Set[int],
                         relocation_symbols: Set[Symbol]):
         for symbol in section.symbols:
             decl_references.add(symbol)
-            internal_addrs = symbol.internal_references(self.context, self.gst)
-            internal_references.update(internal_addrs)
-
-            relocation_addrs = symbol.relocation_symbols(
-                self.context, self.gst, section)
-            relocation_symbols.update(relocation_addrs)
+            references.update(symbol.references)
 
     def get_or_create_type(self, parent, parent_ti, types, names):
         class_name = names[0]
@@ -1198,8 +1167,8 @@ class CPPExporter:
         forward_references = list(decl_references)
         forward_references.sort(key=lambda x: x.addr)
 
-        external_references = list(
-            (internal_references | relocation_symbols) - decl_references)
+        symbol_references = self.gst.all(internal_references)
+        external_references = list(symbol_references - decl_references)
         external_references.sort(key=lambda x: x.addr)
 
         types = dict()

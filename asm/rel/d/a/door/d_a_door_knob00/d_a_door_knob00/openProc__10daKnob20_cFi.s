@@ -24,9 +24,9 @@ lbl_8045FC3C:
 /* 8045FC48  4B EC 87 E4 */	b checkPass__12J3DFrameCtrlFf
 /* 8045FC4C  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FC50  41 82 00 38 */	beq lbl_8045FC88
-/* 8045FC54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045FC58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045FC5C  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8045FC54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045FC58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045FC5C  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 8045FC60  7F C3 F3 78 */	mr r3, r30
 /* 8045FC64  4B FF EC 19 */	bl getExitNo__12knob_param_cFP10fopAc_ac_c
 /* 8045FC68  7C 64 1B 78 */	mr r4, r3

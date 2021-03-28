@@ -4,9 +4,9 @@ lbl_807834FC:
 /* 80783504  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80783508  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 8078350C  7C 7F 1B 78 */	mr r31, r3
-/* 80783510  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80783514  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80783518  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80783510  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80783514  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80783518  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8078351C  38 00 00 FF */	li r0, 0xff
 /* 80783520  90 01 00 08 */	stw r0, 8(r1)
 /* 80783524  38 80 00 00 */	li r4, 0

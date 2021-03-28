@@ -19,7 +19,7 @@ lbl_804DB7AC:
 /* 804DB7F0  D0 43 14 98 */	stfs f2, 0x1498(r3)
 /* 804DB7F4  D0 63 14 9C */	stfs f3, 0x149c(r3)
 /* 804DB7F8  C0 23 04 D8 */	lfs f1, 0x4d8(r3)
-/* 804DB7FC  C0 C4 00 10 */	lfs f6, 0x10(r4)	/* effective address: 804E0010 */
+/* 804DB7FC  C0 C4 00 10 */	lfs f6, 0x10(r4)
 /* 804DB800  EC 06 01 72 */	fmuls f0, f6, f5
 /* 804DB804  EC 61 00 2A */	fadds f3, f1, f0
 /* 804DB808  C0 43 04 D4 */	lfs f2, 0x4d4(r3)

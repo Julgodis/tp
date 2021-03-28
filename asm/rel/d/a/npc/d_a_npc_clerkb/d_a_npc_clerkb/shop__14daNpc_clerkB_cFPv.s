@@ -81,12 +81,12 @@ lbl_80998620:
 /* 80998644  2C 00 00 00 */	cmpwi r0, 0
 /* 80998648  41 82 00 38 */	beq lbl_80998680
 /* 8099864C  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 80998650  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80998654  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80998658  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80998650  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80998654  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80998658  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8099865C  4B 7A D0 84 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
-/* 80998660  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80998664  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80998660  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80998664  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80998668  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8099866C  4B 6A 9D FC */	b reset__14dEvt_control_cFv
 /* 80998670  38 00 00 03 */	li r0, 3

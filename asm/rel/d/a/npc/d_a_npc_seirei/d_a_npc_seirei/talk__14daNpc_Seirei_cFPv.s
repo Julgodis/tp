@@ -62,8 +62,8 @@ lbl_80AD6E10:
 /* 80AD6E10  88 1F 09 9A */	lbz r0, 0x99a(r31)
 /* 80AD6E14  28 00 00 01 */	cmplwi r0, 1
 /* 80AD6E18  40 82 00 24 */	bne lbl_80AD6E3C
-/* 80AD6E1C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD6E20  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AD6E1C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD6E20  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AD6E24  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80AD6E28  4B 56 B6 40 */	b reset__14dEvt_control_cFv
 /* 80AD6E2C  38 00 00 00 */	li r0, 0

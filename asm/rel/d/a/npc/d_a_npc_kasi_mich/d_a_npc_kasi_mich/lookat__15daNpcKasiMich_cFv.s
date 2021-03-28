@@ -12,14 +12,14 @@ lbl_80A27B50:
 /* 80A27B78  83 E3 00 04 */	lwz r31, 4(r3)
 /* 80A27B7C  3B C0 00 00 */	li r30, 0
 /* 80A27B80  38 64 00 00 */	addi r3, r4, 0
-/* 80A27B84  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 80A2A070 */
-/* 80A27B88  C0 43 00 20 */	lfs f2, 0x20(r3)	/* effective address: 80A2A06C */
-/* 80A27B8C  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 80A2A078 */
-/* 80A27B90  C0 83 00 28 */	lfs f4, 0x28(r3)	/* effective address: 80A2A074 */
-/* 80A27B94  C0 C3 00 34 */	lfs f6, 0x34(r3)	/* effective address: 80A2A080 */
-/* 80A27B98  C0 E3 00 30 */	lfs f7, 0x30(r3)	/* effective address: 80A2A07C */
-/* 80A27B9C  C1 03 00 3C */	lfs f8, 0x3c(r3)	/* effective address: 80A2A088 */
-/* 80A27BA0  C1 23 00 38 */	lfs f9, 0x38(r3)	/* effective address: 80A2A084 */
+/* 80A27B84  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 80A27B88  C0 43 00 20 */	lfs f2, 0x20(r3)
+/* 80A27B8C  C0 63 00 2C */	lfs f3, 0x2c(r3)
+/* 80A27B90  C0 83 00 28 */	lfs f4, 0x28(r3)
+/* 80A27B94  C0 C3 00 34 */	lfs f6, 0x34(r3)
+/* 80A27B98  C0 E3 00 30 */	lfs f7, 0x30(r3)
+/* 80A27B9C  C1 03 00 3C */	lfs f8, 0x3c(r3)
+/* 80A27BA0  C1 23 00 38 */	lfs f9, 0x38(r3)
 /* 80A27BA4  A8 7C 08 F8 */	lha r3, 0x8f8(r28)
 /* 80A27BA8  A8 1C 08 F2 */	lha r0, 0x8f2(r28)
 /* 80A27BAC  7C 03 00 50 */	subf r0, r3, r0
@@ -42,11 +42,11 @@ lbl_80A27B50:
 /* 80A27BF0  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80A27BF4  C0 1C 08 74 */	lfs f0, 0x874(r28)
 /* 80A27BF8  D0 01 00 44 */	stfs f0, 0x44(r1)
-/* 80A27BFC  80 64 02 0C */	lwz r3, 0x20c(r4)	/* effective address: 80A2A258 */
-/* 80A27C00  80 04 02 10 */	lwz r0, 0x210(r4)	/* effective address: 80A2A25C */
+/* 80A27BFC  80 64 02 0C */	lwz r3, 0x20c(r4)
+/* 80A27C00  80 04 02 10 */	lwz r0, 0x210(r4)
 /* 80A27C04  90 61 00 18 */	stw r3, 0x18(r1)
 /* 80A27C08  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80A27C0C  80 04 02 14 */	lwz r0, 0x214(r4)	/* effective address: 80A2A260 */
+/* 80A27C0C  80 04 02 14 */	lwz r0, 0x214(r4)
 /* 80A27C10  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80A27C14  38 1C 09 1A */	addi r0, r28, 0x91a
 /* 80A27C18  90 01 00 18 */	stw r0, 0x18(r1)
@@ -67,9 +67,9 @@ lbl_80A27C4C:
 /* 80A27C4C  3B C0 00 01 */	li r30, 1
 /* 80A27C50  48 00 00 20 */	b lbl_80A27C70
 lbl_80A27C54:
-/* 80A27C54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A27C58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A27C5C  80 A3 5D AC */	lwz r5, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80A27C54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A27C58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A27C5C  80 A3 5D AC */	lwz r5, 0x5dac(r3)
 /* 80A27C60  2C 00 00 03 */	cmpwi r0, 3
 /* 80A27C64  40 82 00 0C */	bne lbl_80A27C70
 /* 80A27C68  C1 04 02 18 */	lfs f8, 0x218(r4)

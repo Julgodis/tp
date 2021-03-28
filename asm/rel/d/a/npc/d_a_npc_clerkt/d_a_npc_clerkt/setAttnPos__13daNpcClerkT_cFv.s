@@ -9,14 +9,14 @@ lbl_8099BF20:
 /* 8099BF3C  7C 7E 1B 78 */	mr r30, r3
 /* 8099BF40  3C 60 80 9A */	lis r3, m__19daNpcClerkt_Param_c@ha
 /* 8099BF44  3B E3 D2 44 */	addi r31, r3, m__19daNpcClerkt_Param_c@l
-/* 8099BF48  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 8099D30C */
+/* 8099BF48  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 8099BF4C  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 8099BF50  C0 1F 00 CC */	lfs f0, 0xcc(r31)	/* effective address: 8099D310 */
+/* 8099BF50  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 8099BF54  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 8099BF58  C0 3F 00 AC */	lfs f1, 0xac(r31)	/* effective address: 8099D2F0 */
+/* 8099BF58  C0 3F 00 AC */	lfs f1, 0xac(r31)
 /* 8099BF5C  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 8099BF60  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 8099BF64  C0 1F 00 D0 */	lfs f0, 0xd0(r31)	/* effective address: 8099D314 */
+/* 8099BF64  C0 1F 00 D0 */	lfs f0, 0xd0(r31)
 /* 8099BF68  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 8099BF6C  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 8099BF70  38 7E 0D 08 */	addi r3, r30, 0xd08

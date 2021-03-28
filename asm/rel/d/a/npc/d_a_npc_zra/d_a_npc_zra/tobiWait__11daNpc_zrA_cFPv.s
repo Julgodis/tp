@@ -50,11 +50,11 @@ lbl_80B8A5E8:
 lbl_80B8A604:
 /* 80B8A604  3C 60 80 B9 */	lis r3, lit_11309@ha
 /* 80B8A608  38 83 D8 94 */	addi r4, r3, lit_11309@l
-/* 80B8A60C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B8D894 */
-/* 80B8A610  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B8D898 */
+/* 80B8A60C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B8A610  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B8A614  90 61 00 08 */	stw r3, 8(r1)
 /* 80B8A618  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B8A61C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B8D89C */
+/* 80B8A61C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B8A620  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B8A624  7F E3 FB 78 */	mr r3, r31
 /* 80B8A628  38 81 00 08 */	addi r4, r1, 8

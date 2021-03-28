@@ -8,8 +8,8 @@ lbl_8080CFC8:
 /* 8080CFE0  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080CFE4  3B E3 59 94 */	addi r31, r3, lit_3925@l
 /* 8080CFE8  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 8080CFEC  C0 3F 00 DC */	lfs f1, 0xdc(r31)	/* effective address: 80815A70 */
-/* 8080CFF0  C0 5F 00 58 */	lfs f2, 0x58(r31)	/* effective address: 808159EC */
+/* 8080CFEC  C0 3F 00 DC */	lfs f1, 0xdc(r31)
+/* 8080CFF0  C0 5F 00 58 */	lfs f2, 0x58(r31)
 /* 8080CFF4  4B A6 37 4C */	b cLib_chaseF__FPfff
 /* 8080CFF8  80 1E 06 98 */	lwz r0, 0x698(r30)
 /* 8080CFFC  2C 00 00 01 */	cmpwi r0, 1
@@ -148,7 +148,7 @@ lbl_8080D1A0:
 /* 8080D1F8  4E 80 04 21 */	bctrl 
 /* 8080D1FC  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080D200  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080D204  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80815D44 */
+/* 8080D204  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8080D208  FC 00 00 1E */	fctiwz f0, f0
 /* 8080D20C  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 8080D210  80 01 00 24 */	lwz r0, 0x24(r1)

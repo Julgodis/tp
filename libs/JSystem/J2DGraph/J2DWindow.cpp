@@ -11,16 +11,19 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TBox2 { };
+	/* TBox2<f32> */
+	struct TBox2__template0 {
+	};
 
-struct J2DMaterial {
-};
-
-struct ResFONT {
 };
 
 struct ResTIMG {
+};
+
+struct ResFONT {
 };
 
 struct _GXTexMapID {
@@ -32,6 +35,12 @@ struct JUTTexture {
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
 struct JSUStreamSeekFrom {
 };
 
@@ -40,19 +49,16 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TBox2 { };
-	/* TBox2<f32> */
-	struct TBox2__template0 {
-	};
-
+struct J2DMaterial {
 };
 
-struct JUtility {
-	struct TColor {
-	};
+struct JKRArchive {
+};
 
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
 };
 
 struct J2DAnmTextureSRTKey {
@@ -61,25 +67,19 @@ struct J2DAnmTextureSRTKey {
 struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmColor {
-};
-
 struct _GXCullMode {
-};
-
-struct J2DAnmTexPattern {
 };
 
 struct J2DAnmBase {
 };
 
+struct J2DAnmTexPattern {
+};
+
 struct J2DAnmVisibilityFull {
 };
 
-struct J2DAnmTransform {
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -304,57 +304,57 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803CD108-803CD1D8 00CC+04 s=4 e=0 z=0  None .data      __vt__9J2DWindow                                             */
 SECTION_DATA static void* __vt__9J2DWindow[51 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9J2DWindowFv,
-	/* 3    */ (void*)getTypeID__9J2DWindowCFv,
-	/* 4    */ (void*)move__7J2DPaneFff,
-	/* 5    */ (void*)add__7J2DPaneFff,
-	/* 6    */ (void*)resize__9J2DWindowFff,
-	/* 7    */ (void*)setCullBack__7J2DPaneFb,
-	/* 8    */ (void*)setCullBack__7J2DPaneF11_GXCullMode,
-	/* 9    */ (void*)setAlpha__7J2DPaneFUc,
-	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
-	/* 11   */ (void*)calcMtx__7J2DPaneFv,
-	/* 12   */ (void*)update__7J2DPaneFv,
-	/* 13   */ (void*)drawSelf__9J2DWindowFff,
-	/* 14   */ (void*)drawSelf__9J2DWindowFffPA3_A4_f,
-	/* 15   */ (void*)search__7J2DPaneFUx,
-	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
-	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
-	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
-	/* 19   */ (void*)isUsed__9J2DWindowFPC7ResTIMG,
-	/* 20   */ (void*)isUsed__9J2DWindowFPC7ResFONT,
-	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
-	/* 22   */ (void*)rewriteAlpha__9J2DWindowFv,
-	/* 23   */ (void*)setAnimation__7J2DPaneFP10J2DAnmBase,
-	/* 24   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
-	/* 25   */ (void*)setAnimation__7J2DPaneFP11J2DAnmColor,
-	/* 26   */ (void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
-	/* 27   */ (void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
-	/* 28   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
-	/* 29   */ (void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 30   */ (void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	/* 36   */ (void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
-	/* 37   */ (void*)func_802FA928,
-	/* 38   */ (void*)func_802FAED0,
-	/* 39   */ (void*)draw__9J2DWindowFffff,
-	/* 40   */ (void*)setBlack__9J2DWindowFQ28JUtility6TColor,
-	/* 41   */ (void*)setWhite__9J2DWindowFQ28JUtility6TColor,
-	/* 42   */ (void*)setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 43   */ (void*)getBlack__9J2DWindowCFv,
-	/* 44   */ (void*)getWhite__9J2DWindowCFv,
-	/* 45   */ (void*)getFrameTexture__9J2DWindowCFUcUc,
-	/* 46   */ (void*)getContentsTexture__9J2DWindowCFUc,
-	/* 47   */ (void*)getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial,
-	/* 48   */ (void*)getFrameMaterial__9J2DWindowCFUc,
-	/* 49   */ (void*)getContentsMaterial__9J2DWindowCFv,
-	/* 50   */ (void*)func_802FB338,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9J2DWindowFv,
+	(void*)getTypeID__9J2DWindowCFv,
+	(void*)move__7J2DPaneFff,
+	(void*)add__7J2DPaneFff,
+	(void*)resize__9J2DWindowFff,
+	(void*)setCullBack__7J2DPaneFb,
+	(void*)setCullBack__7J2DPaneF11_GXCullMode,
+	(void*)setAlpha__7J2DPaneFUc,
+	(void*)setConnectParent__7J2DPaneFb,
+	(void*)calcMtx__7J2DPaneFv,
+	(void*)update__7J2DPaneFv,
+	(void*)drawSelf__9J2DWindowFff,
+	(void*)drawSelf__9J2DWindowFffPA3_A4_f,
+	(void*)search__7J2DPaneFUx,
+	(void*)searchUserInfo__7J2DPaneFUx,
+	(void*)makeMatrix__7J2DPaneFff,
+	(void*)makeMatrix__7J2DPaneFffff,
+	(void*)isUsed__9J2DWindowFPC7ResTIMG,
+	(void*)isUsed__9J2DWindowFPC7ResFONT,
+	(void*)clearAnmTransform__7J2DPaneFv,
+	(void*)rewriteAlpha__9J2DWindowFv,
+	(void*)setAnimation__7J2DPaneFP10J2DAnmBase,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
+	(void*)setAnimation__7J2DPaneFP11J2DAnmColor,
+	(void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
+	(void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
+	(void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
+	(void*)func_802FA928,
+	(void*)func_802FAED0,
+	(void*)draw__9J2DWindowFffff,
+	(void*)setBlack__9J2DWindowFQ28JUtility6TColor,
+	(void*)setWhite__9J2DWindowFQ28JUtility6TColor,
+	(void*)setBlackWhite__9J2DWindowFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)getBlack__9J2DWindowCFv,
+	(void*)getWhite__9J2DWindowCFv,
+	(void*)getFrameTexture__9J2DWindowCFUcUc,
+	(void*)getContentsTexture__9J2DWindowCFUc,
+	(void*)getMaterial__9J2DWindowCFRQ29J2DWindow9TMaterial,
+	(void*)getFrameMaterial__9J2DWindowCFUc,
+	(void*)getContentsMaterial__9J2DWindowCFv,
+	(void*)func_802FB338,
 	/* padding */
 	NULL,
 };

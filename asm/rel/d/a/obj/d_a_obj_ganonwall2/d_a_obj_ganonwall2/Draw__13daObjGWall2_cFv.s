@@ -222,14 +222,14 @@ lbl_80BF5CCC:
 /* 80BF5F70  D8 01 00 A8 */	stfd f0, 0xa8(r1)
 /* 80BF5F74  80 01 00 AC */	lwz r0, 0xac(r1)
 /* 80BF5F78  98 03 00 03 */	stb r0, 3(r3)
-/* 80BF5F7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF5F80  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80BF5F84  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80BF5F7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF5F80  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BF5F84  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80BF5F88  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BF5F8C  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80BF5F90  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80BF5F94  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80BF5F98  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80BF5F90  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80BF5F94  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80BF5F98  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BF5F9C  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80BF5FA0  80 83 00 04 */	lwz r4, 4(r3)
 /* 80BF5FA4  80 7E 05 AC */	lwz r3, 0x5ac(r30)
@@ -241,11 +241,11 @@ lbl_80BF5CCC:
 /* 80BF5FBC  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80BF5FC0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80BF5FC4  4B 41 7E 2C */	b mDoExt_btkAnmRemove__FP12J3DModelData
-/* 80BF5FC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF5FCC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BF5FD0  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80BF5FC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF5FCC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BF5FD0  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80BF5FD4  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80BF5FD8  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80BF5FD8  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80BF5FDC  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BF5FE0  38 60 00 01 */	li r3, 1
 /* 80BF5FE4  E3 E1 00 C8 */	psq_l f31, 200(r1), 0, 0 /* qr0 */

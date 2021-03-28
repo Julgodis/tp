@@ -6,6 +6,13 @@ from ..builder import AsyncBuilder
 from ..types import *
 from .identifier import *
 
+@dataclass(frozen=True)
+class AddressRange:
+    start: int
+    end: int
+
+    def __contains__(self, value):
+        return value >= self.start and value < self.end
 
 @dataclass
 class ReferenceCount:
@@ -48,11 +55,12 @@ class Symbol:
     data_type: Type = None
     source: str = None
     force_section: str = None
-    _internal_references = None
     _module: str = None
     _library: str = None
     _translation_unit: str = None
     _section: str = None
+
+    references: Set[int] = field(default_factory=set)
 
     def __hash__(self):
         return hash(self.addr)
@@ -102,22 +110,8 @@ class Symbol:
             return None
         return self.identifier.label
 
-    def _get_internal_references(self, context, symbol_table):
-        return set()
-
-    def internal_references_addr(self, context, symbol_table):
-        if not self._internal_references:
-            refs = self._get_internal_references(context, symbol_table)
-            refs.discard((self._module, self.addr))
-            self._internal_references = frozenset(refs)
-
-        return self._internal_references
-
-    def internal_references(self, context, symbol_table):
-        refs = self.internal_references_addr(context, symbol_table)
-        symbols = symbol_table.resolve_set(refs)
-        # TODO: cache symbols. (remember that pickle this will not work)
-        return symbols
+    def gather_references(self, context, valid_range):
+        pass
 
     def relocation_symbols(self, context, symbol_table, section):
         return set()

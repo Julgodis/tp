@@ -80,19 +80,7 @@ struct daItemBase_c {
 	/* 80037ACC */ void chkDraw();
 	/* 80037AF4 */ void chkDead();
 	/* 80144724 */ void DeleteBase(char const*);
-	/* 8014474C */ bool clothCreate();
-	/* 80144B94 */ void DrawBase();
-	/* 80144C30 */ void RotateYBase();
-	/* 80144CC4 */ void settingBeforeDraw();
-	/* 80144D70 */ void setShadow();
-	/* 80144EDC */ void animEntry();
 	/* 8014503C */ void animPlay(f32, f32, f32, f32, f32, f32);
-	/* 80145144 */ void chkFlag(int);
-	/* 80145164 */ void getTevFrm();
-	/* 80145180 */ void getBtpFrm();
-	/* 8014519C */ void getShadowSize();
-	/* 801451B4 */ void getCollisionH();
-	/* 801451D0 */ void getCollisionR();
 };
 
 struct dPa_followEcallBack {
@@ -102,13 +90,13 @@ struct dPa_followEcallBack {
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -160,10 +148,10 @@ struct JUTNameTab {
 // Forward References:
 // 
 
-static void daDitem_Delete(daDitem_c*); // 2
-static void daDitem_Create(daDitem_c*); // 2
-static void daDitem_Execute(daDitem_c*); // 2
-static void daDitem_Draw(daDitem_c*); // 2
+void daDitem_Delete(daDitem_c*); // 2
+void daDitem_Create(daDitem_c*); // 2
+void daDitem_Execute(daDitem_c*); // 2
+void daDitem_Draw(daDitem_c*); // 2
 
 extern "C" bool __CreateHeap__9daDitem_cFv(); // 1
 extern "C" void CreateInit__9daDitem_cFv(); // 1
@@ -185,17 +173,18 @@ extern "C" void set_mtx__9daDitem_cFv(); // 1
 extern "C" void setTevStr__9daDitem_cFv(); // 1
 extern "C" void setListStart__9daDitem_cFv(); // 1
 extern "C" void draw_WOOD_STICK__9daDitem_cFv(); // 1
-extern "C" static void daDitem_Delete__FP9daDitem_c(); // 1
-extern "C" static void daDitem_Create__FP9daDitem_c(); // 1
+extern "C" void daDitem_Delete__FP9daDitem_c(); // 1
+extern "C" void daDitem_Create__FP9daDitem_c(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daDitem_Execute__FP9daDitem_c(); // 1
-extern "C" static void daDitem_Draw__FP9daDitem_c(); // 1
+extern "C" void daDitem_Execute__FP9daDitem_c(); // 1
+extern "C" void daDitem_Draw__FP9daDitem_c(); // 1
 extern "C" void __sinit_d_a_demo_item_cpp(); // 1
-extern "C" static void func_804E19B0(); // 1
-extern "C" static void func_804E19B8(); // 1
+extern "C" void func_804E19B0(); // 1
+extern "C" void func_804E19B8(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daDitem_Method[8];
 extern "C" extern void* g_profile_Demo_Item[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -295,19 +284,7 @@ extern "C" void __ct__12dCcD_GObjInfFv(); // 1
 extern "C" void execItemGet__FUc(); // 1
 extern "C" void isInsect__FUc(); // 1
 extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" bool clothCreate__12daItemBase_cFv(); // 1
-extern "C" void DrawBase__12daItemBase_cFv(); // 1
-extern "C" void RotateYBase__12daItemBase_cFv(); // 1
-extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
-extern "C" void setShadow__12daItemBase_cFv(); // 1
-extern "C" void animEntry__12daItemBase_cFv(); // 1
 extern "C" void animPlay__12daItemBase_cFffffff(); // 1
-extern "C" void chkFlag__12daItemBase_cFi(); // 1
-extern "C" void getTevFrm__12daItemBase_cFv(); // 1
-extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
-extern "C" void getShadowSize__12daItemBase_cFv(); // 1
-extern "C" void getCollisionH__12daItemBase_cFv(); // 1
-extern "C" void getCollisionR__12daItemBase_cFv(); // 1
 extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE(); // 1
@@ -328,8 +305,6 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* item_resource__10dItem_data[1530];
@@ -337,12 +312,9 @@ extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" void __register_global_object(); // 1
 
@@ -350,7 +322,7 @@ extern "C" void __register_global_object(); // 1
 // Declarations:
 // 
 
-/* 804DFBCC-804DFBD4 0008+00 s=1 e=0 z=0  None .text      __CreateHeap__9daDitem_cFv                                   */
+/* 804DFBCC-804DFBD4 0008+00 s=0 e=0 z=0  None .text      __CreateHeap__9daDitem_cFv                                   */
 bool daDitem_c::__CreateHeap() {
 	return true;
 }
@@ -733,7 +705,7 @@ asm void daDitem_c::set_mtx() {
 #pragma pop
 
 
-/* 804E11D4-804E122C 0058+00 s=1 e=0 z=0  None .text      setTevStr__9daDitem_cFv                                      */
+/* 804E11D4-804E122C 0058+00 s=0 e=0 z=0  None .text      setTevStr__9daDitem_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -744,7 +716,7 @@ asm void daDitem_c::setTevStr() {
 #pragma pop
 
 
-/* 804E122C-804E1230 0004+00 s=1 e=0 z=0  None .text      setListStart__9daDitem_cFv                                   */
+/* 804E122C-804E1230 0004+00 s=0 e=0 z=0  None .text      setListStart__9daDitem_cFv                                   */
 void daDitem_c::setListStart() {
 	/* empty function */
 }
@@ -761,11 +733,11 @@ asm void daDitem_c::draw_WOOD_STICK() {
 #pragma pop
 
 
-/* 804E12C8-804E13C8 0100+00 s=1 e=0 z=0  None .text      daDitem_Delete__FP9daDitem_c                                 */
+/* 804E12C8-804E13C8 0100+00 s=0 e=0 z=0  None .text      daDitem_Delete__FP9daDitem_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDitem_Delete(daDitem_c* param_0) {
+asm void daDitem_Delete(daDitem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Delete__FP9daDitem_c.s"
 }
@@ -773,94 +745,94 @@ asm static void daDitem_Delete(daDitem_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804E1B10-804E1B30 0020+00 s=1 e=0 z=0  None .data      l_daDitem_Method                                             */
-SECTION_DATA static void* l_daDitem_Method[8] = {
-	/* 0    */ (void*)daDitem_Create__FP9daDitem_c,
-	/* 1    */ (void*)daDitem_Delete__FP9daDitem_c,
-	/* 2    */ (void*)daDitem_Execute__FP9daDitem_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daDitem_Draw__FP9daDitem_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804E1B10-804E1B30 0020+00 s=0 e=0 z=0  None .data      l_daDitem_Method                                             */
+SECTION_DATA void* l_daDitem_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804E1B30-804E1B60 0030+00 s=0 e=0 z=1  None .data      g_profile_Demo_Item                                          */
+/* 804E1B30-804E1B60 0030+00 s=0 e=0 z=0  None .data      g_profile_Demo_Item                                          */
 SECTION_DATA void* g_profile_Demo_Item[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x021D0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000009C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00F10000,
-	/* 9    */ (void*)&l_daDitem_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x021D0000,
+	(void*)NULL,
+	(void*)0x000009C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00F10000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x000E0000,
 };
 
 /* 804E1B60-804E1B6C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804E1B6C-804E1B78 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804E1B78-804E1B9C 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_804E19B8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_804E19B0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804E1B9C-804E1BE0 0044+00 s=1 e=0 z=0  None .data      __vt__9daDitem_c                                             */
 SECTION_DATA static void* __vt__9daDitem_c[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)DrawBase__12daItemBase_cFv,
-	/* 3    */ (void*)setListStart__9daDitem_cFv,
-	/* 4    */ (void*)settingBeforeDraw__12daItemBase_cFv,
-	/* 5    */ (void*)setTevStr__9daDitem_cFv,
-	/* 6    */ (void*)setShadow__12daItemBase_cFv,
-	/* 7    */ (void*)animEntry__12daItemBase_cFv,
-	/* 8    */ (void*)RotateYBase__12daItemBase_cFv,
-	/* 9    */ (void*)clothCreate__12daItemBase_cFv,
-	/* 10   */ (void*)__CreateHeap__9daDitem_cFv,
-	/* 11   */ (void*)chkFlag__12daItemBase_cFi,
-	/* 12   */ (void*)getTevFrm__12daItemBase_cFv,
-	/* 13   */ (void*)getBtpFrm__12daItemBase_cFv,
-	/* 14   */ (void*)getShadowSize__12daItemBase_cFv,
-	/* 15   */ (void*)getCollisionH__12daItemBase_cFv,
-	/* 16   */ (void*)getCollisionR__12daItemBase_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804E13C8-804E15BC 01F4+00 s=1 e=0 z=0  None .text      daDitem_Create__FP9daDitem_c                                 */
+/* 804E13C8-804E15BC 01F4+00 s=0 e=0 z=0  None .text      daDitem_Create__FP9daDitem_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDitem_Create(daDitem_c* param_0) {
+asm void daDitem_Create(daDitem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Create__FP9daDitem_c.s"
 }
 #pragma pop
 
 
-/* 804E15BC-804E1604 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 804E15BC-804E1604 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -871,7 +843,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 804E1604-804E164C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804E1604-804E164C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -882,7 +854,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804E164C-804E16BC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 804E164C-804E16BC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -893,29 +865,29 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 804E16BC-804E1878 01BC+00 s=1 e=0 z=0  None .text      daDitem_Execute__FP9daDitem_c                                */
+/* 804E16BC-804E1878 01BC+00 s=0 e=0 z=0  None .text      daDitem_Execute__FP9daDitem_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDitem_Execute(daDitem_c* param_0) {
+asm void daDitem_Execute(daDitem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Execute__FP9daDitem_c.s"
 }
 #pragma pop
 
 
-/* 804E1878-804E18CC 0054+00 s=1 e=0 z=0  None .text      daDitem_Draw__FP9daDitem_c                                   */
+/* 804E1878-804E18CC 0054+00 s=0 e=0 z=0  None .text      daDitem_Draw__FP9daDitem_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDitem_Draw(daDitem_c* param_0) {
+asm void daDitem_Draw(daDitem_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/daDitem_Draw__FP9daDitem_c.s"
 }
 #pragma pop
 
 
-/* 804E18CC-804E19B0 00E4+00 s=0 e=1 z=0  None .text      __sinit_d_a_demo_item_cpp                                    */
+/* 804E18CC-804E19B0 00E4+00 s=0 e=0 z=0  None .text      __sinit_d_a_demo_item_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -926,22 +898,22 @@ extern "C" asm void __sinit_d_a_demo_item_cpp() {
 #pragma pop
 
 
-/* 804E19B0-804E19B8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 804E19B0-804E19B8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804E19B0() {
+extern "C" asm void func_804E19B0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/func_804E19B0.s"
 }
 #pragma pop
 
 
-/* 804E19B8-804E19C0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 804E19B8-804E19C0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804E19B8() {
+extern "C" asm void func_804E19B8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_demo_item/d_a_demo_item/func_804E19B8.s"
 }

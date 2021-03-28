@@ -13,8 +13,8 @@ lbl_80485838:
 /* 80485864  28 00 00 03 */	cmplwi r0, 3
 /* 80485868  40 82 00 2C */	bne lbl_80485894
 lbl_8048586C:
-/* 8048586C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80485870  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048586C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80485870  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80485874  54 84 46 3E */	srwi r4, r4, 0x18
 /* 80485878  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 8048587C  7C 05 07 74 */	extsb r5, r0
@@ -34,8 +34,8 @@ lbl_804858AC:
 /* 804858AC  54 84 46 3E */	srwi r4, r4, 0x18
 /* 804858B0  28 04 00 FF */	cmplwi r4, 0xff
 /* 804858B4  41 82 00 28 */	beq lbl_804858DC
-/* 804858B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804858BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804858B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804858BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804858C0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 804858C4  7C 05 07 74 */	extsb r5, r0
 /* 804858C8  4B BA FA 98 */	b isSwitch__10dSv_info_cCFii
@@ -48,8 +48,8 @@ lbl_804858DC:
 /* 804858E0  54 00 05 3E */	clrlwi r0, r0, 0x14
 /* 804858E4  28 00 0F FF */	cmplwi r0, 0xfff
 /* 804858E8  41 82 00 34 */	beq lbl_8048591C
-/* 804858EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804858F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804858EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804858F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804858F4  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 804858F8  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 804858FC  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
@@ -65,8 +65,8 @@ lbl_8048591C:
 /* 80485920  54 00 05 3E */	clrlwi r0, r0, 0x14
 /* 80485924  28 00 0F FF */	cmplwi r0, 0xfff
 /* 80485928  41 82 00 34 */	beq lbl_8048595C
-/* 8048592C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80485930  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048592C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80485930  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80485934  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80485938  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 8048593C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha

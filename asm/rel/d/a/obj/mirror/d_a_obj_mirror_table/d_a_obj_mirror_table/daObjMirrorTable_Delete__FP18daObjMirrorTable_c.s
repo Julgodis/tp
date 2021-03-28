@@ -9,8 +9,8 @@ lbl_80C9A9DC:
 /* 80C9A9F8  4B 5C D7 DC */	b ChkUsed__9cBgW_BgIdCFv
 /* 80C9A9FC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C9AA00  41 82 00 18 */	beq lbl_80C9AA18
-/* 80C9AA04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9AA08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9AA04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9AA08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9AA0C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C9AA10  38 9F 05 9C */	addi r4, r31, 0x59c
 /* 80C9AA14  4B 3D 98 3C */	b Release__4cBgSFP9dBgW_Base
@@ -19,8 +19,8 @@ lbl_80C9AA18:
 /* 80C9AA1C  4B 5C D7 B8 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80C9AA20  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C9AA24  41 82 00 18 */	beq lbl_80C9AA3C
-/* 80C9AA28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9AA2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9AA28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9AA2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9AA30  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C9AA34  38 9F 06 5C */	addi r4, r31, 0x65c
 /* 80C9AA38  4B 3D 98 18 */	b Release__4cBgSFP9dBgW_Base
@@ -29,8 +29,8 @@ lbl_80C9AA3C:
 /* 80C9AA40  4B 5C D7 94 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80C9AA44  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C9AA48  41 82 00 18 */	beq lbl_80C9AA60
-/* 80C9AA4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9AA50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9AA4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9AA50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9AA54  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C9AA58  38 9F 07 1C */	addi r4, r31, 0x71c
 /* 80C9AA5C  4B 3D 97 F4 */	b Release__4cBgSFP9dBgW_Base
@@ -38,7 +38,7 @@ lbl_80C9AA60:
 /* 80C9AA60  38 7F 05 94 */	addi r3, r31, 0x594
 /* 80C9AA64  3C 80 80 CA */	lis r4, l_arcName@ha
 /* 80C9AA68  38 84 B2 A4 */	addi r4, r4, l_arcName@l
-/* 80C9AA6C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9B2A4 */
+/* 80C9AA6C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C9AA70  4B 39 25 98 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C9AA74  38 7F 05 9C */	addi r3, r31, 0x59c
 /* 80C9AA78  3C 80 80 CA */	lis r4, __dt__4dBgWFv@ha

@@ -31,11 +31,11 @@ lbl_809D79F0:
 /* 809D7A64  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 809D7A68  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809D7A6C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809D7A70  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809D7A74  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809D7A70  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D7A74  80 04 00 04 */	lwz r0, 4(r4)
 /* 809D7A78  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 809D7A7C  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 809D7A80  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809D7A80  80 04 00 08 */	lwz r0, 8(r4)
 /* 809D7A84  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 809D7A88  38 00 00 01 */	li r0, 1
 /* 809D7A8C  98 1F 10 DD */	stb r0, 0x10dd(r31)

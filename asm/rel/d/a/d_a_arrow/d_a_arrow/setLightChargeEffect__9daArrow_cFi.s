@@ -31,8 +31,8 @@ lbl_8049A244:
 /* 8049A258  3B A0 00 00 */	li r29, 0
 /* 8049A25C  3B 60 00 00 */	li r27, 0
 /* 8049A260  3B 40 00 00 */	li r26, 0
-/* 8049A264  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049A268  3B 23 61 C0 */	addi r25, r3, struct_804061C0+0x0@l
+/* 8049A264  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049A268  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
 lbl_8049A26C:
 /* 8049A26C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8049A270  41 82 00 70 */	beq lbl_8049A2E0

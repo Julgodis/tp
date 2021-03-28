@@ -200,10 +200,10 @@ lbl_8063B4C8:
 /* 8063B534  90 1E 06 98 */	stw r0, 0x698(r30)
 /* 8063B538  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
 /* 8063B53C  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
-/* 8063B540  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063B544  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 8063B548  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
-/* 8063B54C  A8 03 05 6C */	lha r0, 0x56c(r3)	/* effective address: 8040056C */
+/* 8063B540  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063B544  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 8063B548  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 8063B54C  A8 03 05 6C */	lha r0, 0x56c(r3)
 /* 8063B550  7C 00 07 35 */	extsh. r0, r0
 /* 8063B554  41 82 00 90 */	beq lbl_8063B5E4
 /* 8063B558  C0 23 05 2C */	lfs f1, 0x52c(r3)
@@ -447,8 +447,8 @@ lbl_8063B898:
 /* 8063B8D4  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8063B8D8  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 8063B8DC  D0 21 00 54 */	stfs f1, 0x54(r1)
-/* 8063B8E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063B8E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8063B8E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063B8E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8063B8E8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8063B8EC  38 80 00 06 */	li r4, 6
 /* 8063B8F0  38 A0 00 1F */	li r5, 0x1f
@@ -493,11 +493,11 @@ lbl_8063B93C:
 /* 8063B988  40 80 01 98 */	bge lbl_8063BB20
 /* 8063B98C  38 00 00 00 */	li r0, 0
 /* 8063B990  B0 1E 06 9E */	sth r0, 0x69e(r30)
-/* 8063B994  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063B998  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063B99C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8063B9A0  C0 23 04 D8 */	lfs f1, 0x4d8(r3)	/* effective address: 80406698 */
-/* 8063B9A4  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 8063B994  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063B998  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063B99C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8063B9A0  C0 23 04 D8 */	lfs f1, 0x4d8(r3)
+/* 8063B9A4  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8063B9A8  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8063B9AC  C0 1F 00 14 */	lfs f0, 0x14(r31)
 /* 8063B9B0  D0 01 00 2C */	stfs f0, 0x2c(r1)

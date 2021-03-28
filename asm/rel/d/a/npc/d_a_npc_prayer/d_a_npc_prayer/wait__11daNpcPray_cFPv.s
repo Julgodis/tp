@@ -66,9 +66,9 @@ lbl_80AB447C:
 /* 80AB44CC  38 00 00 00 */	li r0, 0
 /* 80AB44D0  90 1E 09 6C */	stw r0, 0x96c(r30)
 lbl_80AB44D4:
-/* 80AB44D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AB44D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AB44DC  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80AB44D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AB44D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AB44DC  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80AB44E0  28 00 00 00 */	cmplwi r0, 0
 /* 80AB44E4  41 82 00 B0 */	beq lbl_80AB4594
 /* 80AB44E8  A0 1E 00 F8 */	lhz r0, 0xf8(r30)
@@ -122,10 +122,10 @@ lbl_80AB4594:
 /* 80AB4594  4B 6F 7F E8 */	b dKy_darkworld_check__Fv
 /* 80AB4598  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AB459C  40 82 00 70 */	bne lbl_80AB460C
-/* 80AB45A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AB45A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AB45A8  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80AB45AC  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80AB45A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AB45A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AB45A8  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80AB45AC  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80AB45B0  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80AB45B4  41 82 00 58 */	beq lbl_80AB460C
 /* 80AB45B8  C8 3D 01 28 */	lfd f1, 0x128(r29)
@@ -133,9 +133,9 @@ lbl_80AB4594:
 /* 80AB45C0  4B 8B 81 C0 */	b pow
 /* 80AB45C4  FF E0 08 18 */	frsp f31, f1
 /* 80AB45C8  7F C3 F3 78 */	mr r3, r30
-/* 80AB45CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AB45D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80AB45D4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80AB45CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AB45D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80AB45D4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80AB45D8  4B 56 64 BC */	b fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80AB45DC  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 80AB45E0  40 80 00 2C */	bge lbl_80AB460C

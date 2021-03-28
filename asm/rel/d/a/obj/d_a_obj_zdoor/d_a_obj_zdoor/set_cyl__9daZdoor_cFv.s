@@ -7,29 +7,29 @@ lbl_80D3F740:
 /* 80D3F754  7C 7A 1B 78 */	mr r26, r3
 /* 80D3F758  3C 60 80 D4 */	lis r3, l_cyl_data@ha
 /* 80D3F75C  38 63 01 EC */	addi r3, r3, l_cyl_data@l
-/* 80D3F760  C0 03 00 A8 */	lfs f0, 0xa8(r3)	/* effective address: 80D40294 */
+/* 80D3F760  C0 03 00 A8 */	lfs f0, 0xa8(r3)
 /* 80D3F764  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80D3F768  C0 23 00 90 */	lfs f1, 0x90(r3)	/* effective address: 80D4027C */
+/* 80D3F768  C0 23 00 90 */	lfs f1, 0x90(r3)
 /* 80D3F76C  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 80D3F770  D0 21 00 34 */	stfs f1, 0x34(r1)
 /* 80D3F774  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 80D3F778  D0 21 00 48 */	stfs f1, 0x48(r1)
 /* 80D3F77C  D0 21 00 4C */	stfs f1, 0x4c(r1)
-/* 80D3F780  C0 03 00 AC */	lfs f0, 0xac(r3)	/* effective address: 80D40298 */
+/* 80D3F780  C0 03 00 AC */	lfs f0, 0xac(r3)
 /* 80D3F784  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80D3F788  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 80D3F78C  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 80D3F790  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 80D3F794  D0 21 00 54 */	stfs f1, 0x54(r1)
 /* 80D3F798  D0 21 00 58 */	stfs f1, 0x58(r1)
-/* 80D3F79C  C0 03 00 B0 */	lfs f0, 0xb0(r3)	/* effective address: 80D4029C */
+/* 80D3F79C  C0 03 00 B0 */	lfs f0, 0xb0(r3)
 /* 80D3F7A0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80D3F7A4  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80D3F7A8  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 80D3F7AC  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 80D3F7B0  D0 21 00 60 */	stfs f1, 0x60(r1)
 /* 80D3F7B4  D0 21 00 64 */	stfs f1, 0x64(r1)
-/* 80D3F7B8  C0 03 00 B4 */	lfs f0, 0xb4(r3)	/* effective address: 80D402A0 */
+/* 80D3F7B8  C0 03 00 B4 */	lfs f0, 0xb4(r3)
 /* 80D3F7BC  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80D3F7C0  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80D3F7C4  D0 21 00 10 */	stfs f1, 0x10(r1)

@@ -47,7 +47,7 @@ lbl_80BF20C0:
 lbl_80BF2120:
 /* 80BF2120  3C 60 80 BF */	lis r3, l_HIO@ha
 /* 80BF2124  38 63 2C 30 */	addi r3, r3, l_HIO@l
-/* 80BF2128  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80BF2C38 */
+/* 80BF2128  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80BF212C  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80BF2130  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80BF2134  EC 01 00 32 */	fmuls f0, f1, f0

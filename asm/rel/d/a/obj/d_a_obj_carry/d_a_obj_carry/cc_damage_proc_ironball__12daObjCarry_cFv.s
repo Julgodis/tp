@@ -9,8 +9,8 @@ lbl_80476CE4:
 /* 80476D00  80 03 05 A0 */	lwz r0, 0x5a0(r3)
 /* 80476D04  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
 /* 80476D08  41 82 00 70 */	beq lbl_80476D78
-/* 80476D0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80476D10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80476D0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80476D10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80476D14  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80476D18  7F E3 FB 78 */	mr r3, r31
 /* 80476D1C  38 9D 06 64 */	addi r4, r29, 0x664

@@ -11,11 +11,11 @@ lbl_80C6DB5C:
 /* 80C6DB80  7F E3 FB 78 */	mr r3, r31
 /* 80C6DB84  3C 80 80 C7 */	lis r4, l_cull_box@ha
 /* 80C6DB88  C4 24 E9 88 */	lfsu f1, l_cull_box@l(r4)
-/* 80C6DB8C  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C70004 */
-/* 80C6DB90  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C70008 */
-/* 80C6DB94  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C7000C */
-/* 80C6DB98  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C70010 */
-/* 80C6DB9C  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C70014 */
+/* 80C6DB8C  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C6DB90  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C6DB94  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C6DB98  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C6DB9C  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C6DBA0  4B 3A C9 A8 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C6DBA4  38 7F 06 24 */	addi r3, r31, 0x624
 /* 80C6DBA8  38 80 00 FF */	li r4, 0xff

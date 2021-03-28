@@ -10,7 +10,7 @@ lbl_80656ED0:
 /* 80656EF0  48 00 03 71 */	bl update__11daCoach2D_cFv
 /* 80656EF4  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 80656EF8  38 63 7A 9C */	addi r3, r3, l_HOSTIO@l
-/* 80656EFC  88 03 00 5B */	lbz r0, 0x5b(r3)	/* effective address: 80657AF7 */
+/* 80656EFC  88 03 00 5B */	lbz r0, 0x5b(r3)
 /* 80656F00  28 00 00 00 */	cmplwi r0, 0
 /* 80656F04  41 82 00 28 */	beq lbl_80656F2C
 /* 80656F08  80 7A 05 80 */	lwz r3, 0x580(r26)
@@ -36,8 +36,8 @@ lbl_80656F4C:
 /* 80656F50  3B 20 00 00 */	li r25, 0
 /* 80656F54  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 80656F58  3B C3 7A 9C */	addi r30, r3, l_HOSTIO@l
-/* 80656F5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80656F60  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80656F5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80656F60  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80656F64  48 00 01 94 */	b lbl_806570F8
 lbl_80656F68:
 /* 80656F68  7F 9A CA 14 */	add r28, r26, r25
@@ -158,8 +158,8 @@ lbl_806570F8:
 /* 8065711C  80 7A 05 84 */	lwz r3, 0x584(r26)
 /* 80657120  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80657124  38 84 7A 9C */	addi r4, r4, l_HOSTIO@l
-/* 80657128  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 80657AC4 */
-/* 8065712C  C0 44 00 2C */	lfs f2, 0x2c(r4)	/* effective address: 80657AC8 */
+/* 80657128  C0 24 00 28 */	lfs f1, 0x28(r4)
+/* 8065712C  C0 44 00 2C */	lfs f2, 0x2c(r4)
 /* 80657130  4B BF D4 80 */	b paneTrans__8CPaneMgrFff
 /* 80657134  80 7A 05 74 */	lwz r3, 0x574(r26)
 /* 80657138  C0 3D 00 04 */	lfs f1, 4(r29)

@@ -21,8 +21,8 @@ lbl_80CA4EA4:
 /* 80CA4EF0  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80CA4EF4  EC 22 00 32 */	fmuls f1, f2, f0
 /* 80CA4EF8  4B 5C A3 00 */	b SetH__8cM3dGCylFf
-/* 80CA4EFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA4F00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA4EFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA4F00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA4F04  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80CA4F08  38 9F 13 4C */	addi r4, r31, 0x134c
 /* 80CA4F0C  4B 5B FC 9C */	b Set__4cCcSFP8cCcD_Obj

@@ -14,10 +14,10 @@
 struct JAISound {
 };
 
-struct JAISoundID {
+struct JAIStream {
 };
 
-struct JAIStream {
+struct JAISoundID {
 };
 
 struct JAISeq {
@@ -311,26 +311,26 @@ asm void Z2SoundInfo::getSoundInfo_(JAISoundID param_0, JAISound* param_1) const
 /* ############################################################################################## */
 /* 803CAC48-803CAC98 0050+00 s=1 e=2 z=0  None .data      __vt__11Z2SoundInfo                                          */
 SECTION_DATA void* __vt__11Z2SoundInfo[20] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getSoundType__11Z2SoundInfoCF10JAISoundID,
-	/* 3    */ (void*)getCategory__11Z2SoundInfoCF10JAISoundID,
-	/* 4    */ (void*)getPriority__11Z2SoundInfoCF10JAISoundID,
-	/* 5    */ (void*)getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe,
-	/* 6    */ (void*)getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq,
-	/* 7    */ (void*)getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream,
-	/* 8    */ (void*)__dt__11Z2SoundInfoFv,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_802BBCC4,
-	/* 12   */ (void*)func_802BBCBC,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)NULL,
-	/* 15   */ (void*)func_802BBCD4,
-	/* 16   */ (void*)func_802BBCCC,
-	/* 17   */ (void*)getAudibleSw__11Z2SoundInfoCF10JAISoundID,
-	/* 18   */ (void*)getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID,
-	/* 19   */ (void*)getStreamFileEntry__11Z2SoundInfoF10JAISoundID,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getSoundType__11Z2SoundInfoCF10JAISoundID,
+	(void*)getCategory__11Z2SoundInfoCF10JAISoundID,
+	(void*)getPriority__11Z2SoundInfoCF10JAISoundID,
+	(void*)getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe,
+	(void*)getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq,
+	(void*)getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream,
+	(void*)__dt__11Z2SoundInfoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802BBCC4,
+	(void*)func_802BBCBC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802BBCD4,
+	(void*)func_802BBCCC,
+	(void*)getAudibleSw__11Z2SoundInfoCF10JAISoundID,
+	(void*)getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID,
+	(void*)getStreamFileEntry__11Z2SoundInfoF10JAISoundID,
 };
 
 /* 802BBBE0-802BBCBC 00DC+00 s=2 e=0 z=0  None .text      __dt__11Z2SoundInfoFv                                        */

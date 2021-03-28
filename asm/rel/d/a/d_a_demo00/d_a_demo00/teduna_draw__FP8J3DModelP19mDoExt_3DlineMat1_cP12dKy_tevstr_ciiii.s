@@ -279,8 +279,8 @@ lbl_804A67DC:
 /* 804A6824  7D 89 03 A6 */	mtctr r12
 /* 804A6828  4E 80 04 21 */	bctrl 
 /* 804A682C  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 804A6830  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A6834  38 03 61 C0 */	addi r0, r3, struct_804061C0+0x0@l
+/* 804A6830  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A6834  38 03 61 C0 */	addi r0, r3, g_dComIfG_gameInfo@l
 /* 804A6838  7C 60 22 14 */	add r3, r0, r4
 /* 804A683C  3C 63 00 01 */	addis r3, r3, 1
 /* 804A6840  38 63 61 54 */	addi r3, r3, 0x6154

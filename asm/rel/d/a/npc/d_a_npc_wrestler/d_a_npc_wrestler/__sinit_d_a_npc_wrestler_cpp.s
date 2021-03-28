@@ -16,11 +16,11 @@ lbl_80B40D34:
 /* 80B40D6C  4B FE E4 AD */	bl __register_global_object
 /* 80B40D70  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B40D74  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B40D78  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B40D7C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B40D78  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B40D7C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B40D80  90 7F 08 74 */	stw r3, 0x874(r31)
 /* 80B40D84  90 1F 08 78 */	stw r0, 0x878(r31)
-/* 80B40D88  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B40D88  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B40D8C  90 1F 08 7C */	stw r0, 0x87c(r31)
 /* 80B40D90  38 9F 08 74 */	addi r4, r31, 0x874
 /* 80B40D94  80 7F 08 2C */	lwz r3, 0x82c(r31)

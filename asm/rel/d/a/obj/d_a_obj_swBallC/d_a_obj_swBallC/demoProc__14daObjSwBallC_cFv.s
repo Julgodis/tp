@@ -7,9 +7,9 @@ lbl_80CF63F4:
 /* 80CF6408  7C 7B 1B 78 */	mr r27, r3
 /* 80CF640C  3C 60 80 CF */	lis r3, l_color@ha
 /* 80CF6410  3B C3 6C D4 */	addi r30, r3, l_color@l
-/* 80CF6414  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF6418  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CF641C  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CF6414  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF6418  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CF641C  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80CF6420  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80CF6424  7F 83 E3 78 */	mr r3, r28
 /* 80CF6428  80 9B 05 78 */	lwz r4, 0x578(r27)
@@ -23,7 +23,7 @@ lbl_80CF63F4:
 /* 80CF6448  7F 83 E3 78 */	mr r3, r28
 /* 80CF644C  3C 80 80 CF */	lis r4, l_staffName@ha
 /* 80CF6450  38 84 6D B8 */	addi r4, r4, l_staffName@l
-/* 80CF6454  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CF6DB8 */
+/* 80CF6454  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CF6458  38 A0 00 00 */	li r5, 0
 /* 80CF645C  38 C0 00 00 */	li r6, 0
 /* 80CF6460  4B 35 16 BC */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
@@ -93,7 +93,7 @@ lbl_80CF6528:
 /* 80CF6540  90 01 00 08 */	stw r0, 8(r1)
 /* 80CF6544  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CF6548  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CF654C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CF654C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF6550  38 81 00 08 */	addi r4, r1, 8
 /* 80CF6554  38 BB 05 38 */	addi r5, r27, 0x538
 /* 80CF6558  38 C0 00 00 */	li r6, 0
@@ -107,7 +107,7 @@ lbl_80CF6528:
 lbl_80CF6578:
 /* 80CF6578  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CF657C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CF6580  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CF6580  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF6584  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80CF6588  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200005E@ha */
 /* 80CF658C  38 84 00 5E */	addi r4, r4, 0x005E /* 0x0200005E@l */
@@ -279,7 +279,7 @@ lbl_80CF67C8:
 /* 80CF67E4  40 82 00 18 */	bne lbl_80CF67FC
 /* 80CF67E8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CF67EC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CF67F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CF67F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF67F4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80CF67F8  4B 5B 96 20 */	b bgmStreamPlay__8Z2SeqMgrFv
 lbl_80CF67FC:

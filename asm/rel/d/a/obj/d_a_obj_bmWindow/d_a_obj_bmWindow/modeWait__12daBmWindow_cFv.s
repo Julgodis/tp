@@ -15,21 +15,21 @@ lbl_80BB8B48:
 /* 80BB8B7C  7C 7E 1B 78 */	mr r30, r3
 /* 80BB8B80  3C 60 80 BC */	lis r3, lit_3653@ha
 /* 80BB8B84  3B E3 97 3C */	addi r31, r3, lit_3653@l
-/* 80BB8B88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB8B8C  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 80BB8B90  83 1B 5D B4 */	lwz r24, 0x5db4(r27)	/* effective address: 8040BF74 */
-/* 80BB8B94  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80BB9790 */
+/* 80BB8B88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB8B8C  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 80BB8B90  83 1B 5D B4 */	lwz r24, 0x5db4(r27)
+/* 80BB8B94  C0 1F 00 54 */	lfs f0, 0x54(r31)
 /* 80BB8B98  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 80BB8B9C  38 7F 00 54 */	addi r3, r31, 0x54
-/* 80BB8BA0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80BB9794 */
+/* 80BB8BA0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BB8BA4  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 80BB8BA8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BB9798 */
+/* 80BB8BA8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BB8BAC  D0 01 00 54 */	stfs f0, 0x54(r1)
-/* 80BB8BB0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80BB97A8 */
+/* 80BB8BB0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80BB8BB4  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80BB8BB8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80BB97AC */
+/* 80BB8BB8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80BB8BBC  D0 01 00 44 */	stfs f0, 0x44(r1)
-/* 80BB8BC0  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80BB97B0 */
+/* 80BB8BC0  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 80BB8BC4  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80BB8BC8  80 18 05 78 */	lwz r0, 0x578(r24)
 /* 80BB8BCC  54 00 03 DF */	rlwinm. r0, r0, 0, 0xf, 0xf
@@ -98,7 +98,7 @@ lbl_80BB8C30:
 /* 80BB8CC0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BB8CC4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB8CC8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB8CCC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB8CCC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB8CD0  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BB8CD4  38 A1 00 34 */	addi r5, r1, 0x34
 /* 80BB8CD8  38 C0 00 00 */	li r6, 0
@@ -141,31 +141,31 @@ lbl_80BB8D4C:
 /* 80BB8D54  40 82 01 34 */	bne lbl_80BB8E88
 /* 80BB8D58  3C 60 80 BC */	lis r3, l_HIO@ha
 /* 80BB8D5C  38 63 99 9C */	addi r3, r3, l_HIO@l
-/* 80BB8D60  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BB99A4 */
+/* 80BB8D60  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BB8D64  D0 1E 0E A0 */	stfs f0, 0xea0(r30)
-/* 80BB8D68  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80BB99AC */
+/* 80BB8D68  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80BB8D6C  D0 1E 0E A8 */	stfs f0, 0xea8(r30)
-/* 80BB8D70  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80BB99A8 */
+/* 80BB8D70  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80BB8D74  D0 1E 0E A4 */	stfs f0, 0xea4(r30)
-/* 80BB8D78  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80BB99B0 */
+/* 80BB8D78  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80BB8D7C  D0 1E 0E AC */	stfs f0, 0xeac(r30)
-/* 80BB8D80  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80BB99B4 */
+/* 80BB8D80  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80BB8D84  D0 1E 0E B0 */	stfs f0, 0xeb0(r30)
-/* 80BB8D88  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80BB99B8 */
+/* 80BB8D88  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80BB8D8C  D0 1E 0E B4 */	stfs f0, 0xeb4(r30)
-/* 80BB8D90  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 80BB99C4 */
+/* 80BB8D90  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 80BB8D94  D0 1E 0E CC */	stfs f0, 0xecc(r30)
-/* 80BB8D98  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80BB99BC */
+/* 80BB8D98  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 80BB8D9C  D0 1E 0E C4 */	stfs f0, 0xec4(r30)
-/* 80BB8DA0  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 80BB99C0 */
+/* 80BB8DA0  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 80BB8DA4  D0 1E 0E C8 */	stfs f0, 0xec8(r30)
-/* 80BB8DA8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 80BB99C8 */
+/* 80BB8DA8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80BB8DAC  D0 1E 0E D0 */	stfs f0, 0xed0(r30)
-/* 80BB8DB0  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 80BB99CC */
+/* 80BB8DB0  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 80BB8DB4  D0 1E 0E D4 */	stfs f0, 0xed4(r30)
-/* 80BB8DB8  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 80BB99D0 */
+/* 80BB8DB8  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 80BB8DBC  D0 1E 0E D8 */	stfs f0, 0xed8(r30)
-/* 80BB8DC0  88 03 00 39 */	lbz r0, 0x39(r3)	/* effective address: 80BB99D5 */
+/* 80BB8DC0  88 03 00 39 */	lbz r0, 0x39(r3)
 /* 80BB8DC4  C8 3F 00 A8 */	lfd f1, 0xa8(r31)
 /* 80BB8DC8  90 01 00 5C */	stw r0, 0x5c(r1)
 /* 80BB8DCC  3C 00 43 30 */	lis r0, 0x4330
@@ -184,7 +184,7 @@ lbl_80BB8D4C:
 /* 80BB8E00  80 81 00 64 */	lwz r4, 0x64(r1)
 /* 80BB8E04  3C 60 80 BC */	lis r3, l_HIO@ha
 /* 80BB8E08  38 63 99 9C */	addi r3, r3, l_HIO@l
-/* 80BB8E0C  88 03 00 38 */	lbz r0, 0x38(r3)	/* effective address: 80BB99D4 */
+/* 80BB8E0C  88 03 00 38 */	lbz r0, 0x38(r3)
 /* 80BB8E10  7C 00 22 14 */	add r0, r0, r4
 /* 80BB8E14  B0 1E 0E DC */	sth r0, 0xedc(r30)
 /* 80BB8E18  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
@@ -205,7 +205,7 @@ lbl_80BB8D4C:
 /* 80BB8E54  90 01 00 08 */	stw r0, 8(r1)
 /* 80BB8E58  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB8E5C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB8E60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB8E60  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB8E64  38 81 00 08 */	addi r4, r1, 8
 /* 80BB8E68  38 A1 00 28 */	addi r5, r1, 0x28
 /* 80BB8E6C  38 C0 00 00 */	li r6, 0
@@ -224,8 +224,8 @@ lbl_80BB8E88:
 lbl_80BB8E9C:
 /* 80BB8E9C  3A E0 00 00 */	li r23, 0
 /* 80BB8EA0  3B A0 00 00 */	li r29, 0
-/* 80BB8EA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB8EA8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB8EA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB8EA8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB8EAC  3B 43 23 3C */	addi r26, r3, 0x233c
 /* 80BB8EB0  C3 9F 00 84 */	lfs f28, 0x84(r31)
 /* 80BB8EB4  C3 BF 00 9C */	lfs f29, 0x9c(r31)

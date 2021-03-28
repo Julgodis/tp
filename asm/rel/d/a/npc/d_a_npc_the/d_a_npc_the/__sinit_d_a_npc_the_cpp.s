@@ -16,11 +16,11 @@ lbl_80AFB49C:
 /* 80AFB4D4  4B FF C1 85 */	bl __register_global_object
 /* 80AFB4D8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AFB4DC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AFB4E0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AFB4E4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AFB4E0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AFB4E4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AFB4E8  90 7F 02 18 */	stw r3, 0x218(r31)
 /* 80AFB4EC  90 1F 02 1C */	stw r0, 0x21c(r31)
-/* 80AFB4F0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AFB4F0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AFB4F4  90 1F 02 20 */	stw r0, 0x220(r31)
 /* 80AFB4F8  38 9F 02 18 */	addi r4, r31, 0x218
 /* 80AFB4FC  80 7F 01 F4 */	lwz r3, 0x1f4(r31)

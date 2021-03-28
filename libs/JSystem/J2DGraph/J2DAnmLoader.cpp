@@ -15,16 +15,16 @@ struct J2DAnmLoaderDataBase {
 	/* 80308A6C */ void load(void const*);
 };
 
-struct J3DAnmTevRegKeyData {
+struct J3DAnmTransformKeyData {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColorKey {
 };
 
-struct J3DAnmTextureSRTKeyData {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DScreen {
@@ -34,22 +34,22 @@ struct J2DAnmBase {
 	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
-struct J2DAnmTransformKey {
-};
-
 struct J3DAnmColorKeyData {
-};
-
-struct J2DAnmColorKey {
 };
 
 struct J2DAnmVtxColorKey {
 };
 
-struct J3DAnmTransformKeyData {
+struct J3DAnmTextureSRTKeyData {
 };
 
 struct J3DAnmVtxColorKeyData {
+};
+
+struct J2DAnmTransformKey {
+};
+
+struct J3DAnmTevRegKeyData {
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -69,13 +69,28 @@ struct J2DAnmKeyLoader_v15 {
 	/* 8030A004 */ void setAnmTevReg(J2DAnmTevRegKey*, J3DAnmTevRegKeyData const*);
 };
 
+struct J2DAnmColorFull {
+};
+
+struct J2DAnmTransformFull {
+};
+
+struct J2DAnmVtxColorFull {
+};
+
+struct J3DAnmColorFullData {
+};
+
 struct J3DAnmTransformFullData {
 };
 
 struct J3DAnmTexPatternFullData {
 };
 
-struct J2DAnmColorFull {
+struct J3DAnmVisibilityFullData {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmVisibilityFull {
@@ -83,21 +98,6 @@ struct J2DAnmVisibilityFull {
 };
 
 struct J3DAnmVtxColorFullData {
-};
-
-struct J2DAnmVtxColorFull {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTransformFull {
-};
-
-struct J3DAnmColorFullData {
-};
-
-struct J3DAnmVisibilityFullData {
 };
 
 struct J2DAnmFullLoader_v15 {
@@ -243,46 +243,46 @@ extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 /* ############################################################################################## */
 /* 803CD6C8-803CD6DC 0014+00 s=2 e=0 z=0  None .data      __vt__20J2DAnmFullLoader_v15                                 */
 SECTION_DATA static void* __vt__20J2DAnmFullLoader_v15[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__20J2DAnmFullLoader_v15FPCv,
-	/* 3    */ (void*)setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv,
-	/* 4    */ (void*)__dt__20J2DAnmFullLoader_v15Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__20J2DAnmFullLoader_v15FPCv,
+	(void*)setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv,
+	(void*)__dt__20J2DAnmFullLoader_v15Fv,
 };
 
 /* 803CD6DC-803CD6F0 0014+00 s=2 e=0 z=0  None .data      __vt__19J2DAnmKeyLoader_v15                                  */
 SECTION_DATA static void* __vt__19J2DAnmKeyLoader_v15[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__19J2DAnmKeyLoader_v15FPCv,
-	/* 3    */ (void*)setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv,
-	/* 4    */ (void*)__dt__19J2DAnmKeyLoader_v15Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__19J2DAnmKeyLoader_v15FPCv,
+	(void*)setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv,
+	(void*)__dt__19J2DAnmKeyLoader_v15Fv,
 };
 
 /* 803CD6F0-803CD704 0014+00 s=5 e=0 z=0  None .data      __vt__12J2DAnmLoader                                         */
 SECTION_DATA static void* __vt__12J2DAnmLoader[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)__dt__12J2DAnmLoaderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J2DAnmLoaderFv,
 };
 
 /* 803CD704-803CD714 0010+00 s=2 e=0 z=0  None .data      __vt__20J2DAnmVisibilityFull                                 */
 SECTION_DATA static void* __vt__20J2DAnmVisibilityFull[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20J2DAnmVisibilityFullFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20J2DAnmVisibilityFullFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
 };
 
 /* 803CD714-803CD728 0014+00 s=2 e=2 z=0  None .data      __vt__14J2DAnmVtxColor                                       */
 SECTION_DATA void* __vt__14J2DAnmVtxColor[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J2DAnmVtxColorFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
-	/* 4    */ (void*)getColor__14J2DAnmVtxColorCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J2DAnmVtxColorFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)getColor__14J2DAnmVtxColorCFUcUsP8_GXColor,
 };
 
 /* 804562F8-80456300 0004+04 s=11 e=0 z=0  None .sdata2    @1581                                                        */

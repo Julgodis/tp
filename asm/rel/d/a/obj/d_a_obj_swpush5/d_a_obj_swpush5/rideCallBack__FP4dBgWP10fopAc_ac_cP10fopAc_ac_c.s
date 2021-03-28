@@ -10,9 +10,9 @@ lbl_8059B4EC:
 /* 8059B50C  3B C3 C6 A4 */	addi r30, r3, l_dzbIdx@l
 /* 8059B510  3C 60 80 5A */	lis r3, lit_1109@ha
 /* 8059B514  3B E3 C8 70 */	addi r31, r3, lit_1109@l
-/* 8059B518  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059B51C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8059B520  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8059B518  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059B51C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8059B520  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 8059B524  7F 83 E3 78 */	mr r3, r28
 /* 8059B528  48 00 07 FD */	bl checkPushable__10daObjSw5_cFv
 /* 8059B52C  2C 03 00 00 */	cmpwi r3, 0

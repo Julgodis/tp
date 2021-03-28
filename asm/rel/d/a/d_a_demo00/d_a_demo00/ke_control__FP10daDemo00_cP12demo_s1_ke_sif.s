@@ -30,11 +30,11 @@ lbl_804A692C:
 /* 804A699C  3A C3 88 60 */	addi r22, r3, lit_3727@l
 /* 804A69A0  3B 79 00 0C */	addi r27, r25, 0xc
 /* 804A69A4  3B 59 00 CC */	addi r26, r25, 0xcc
-/* 804A69A8  C0 16 00 0C */	lfs f0, 0xc(r22)	/* effective address: 804A886C */
+/* 804A69A8  C0 16 00 0C */	lfs f0, 0xc(r22)
 /* 804A69AC  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 804A69B0  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 804A69B4  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 804A69B8  C0 36 00 D4 */	lfs f1, 0xd4(r22)	/* effective address: 804A8934 */
+/* 804A69B8  C0 36 00 D4 */	lfs f1, 0xd4(r22)
 /* 804A69BC  4B DC 11 10 */	b cM_rndF2__Ff
 /* 804A69C0  FC 00 08 1E */	fctiwz f0, f1
 /* 804A69C4  D8 01 00 30 */	stfd f0, 0x30(r1)

@@ -21,19 +21,6 @@ struct dMsgObject_HIO_c {
 	/* 80238BDC */ ~dMsgObject_HIO_c();
 };
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
-};
-
-struct fopAc_ac_c {
-};
-
-struct J2DTextBox {
-};
-
-struct JUTFont {
-};
-
 struct JKRArchive {
 	struct EMountMode {
 	};
@@ -48,7 +35,20 @@ struct mDoDvdThd_mountXArchive_c {
 	/* 800161E0 */ void create(char const*, u8, JKRArchive::EMountMode, JKRHeap*);
 };
 
+struct J2DTextBox {
+};
+
+struct fopAc_ac_c {
+};
+
+struct JUTFont {
+};
+
 struct msg_class {
+};
+
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {
@@ -746,92 +746,92 @@ asm static void dMsgObject_searchSSItem(void* param_0, void* param_1) {
 /* ############################################################################################## */
 /* 803C0AE8-803C0B4C 0064+00 s=1 e=0 z=0  None .data      @4486                                                        */
 SECTION_DATA static void* lit_4486[25] = {
-	/* 0    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 1    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x1F4),
-	/* 2    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x200),
-	/* 3    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 4    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 5    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x218),
-	/* 6    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x20C),
-	/* 7    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x224),
-	/* 8    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
-	/* 9    */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
-	/* 10   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 11   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x284),
-	/* 12   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 13   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 14   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 15   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x230),
-	/* 16   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x260),
-	/* 17   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x26C),
-	/* 18   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 19   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x278),
-	/* 20   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
-	/* 21   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x254),
-	/* 22   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 23   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
-	/* 24   */ (void*)(((char*)_execute__12dMsgObject_cFv)+0x248),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x1F4),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x200),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x218),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x20C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x224),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x284),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x230),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x260),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x26C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x278),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x23C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x254),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x28C),
+	(void*)(((char*)_execute__12dMsgObject_cFv)+0x248),
 };
 
 /* 803C0B4C-803C0B9C 0050+00 s=1 e=0 z=0  None .data      @5875                                                        */
 SECTION_DATA static void* lit_5875[20] = {
-	/* 0    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 1    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x308),
-	/* 2    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x21C),
-	/* 3    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 4    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 5    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x308),
-	/* 6    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x254),
-	/* 7    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x278),
-	/* 8    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 9    */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x1E8),
-	/* 10   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x338),
-	/* 11   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 12   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2A4),
-	/* 13   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 14   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 15   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 16   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 17   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2E4),
-	/* 18   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
-	/* 19   */ (void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2C4),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x308),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x21C),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x308),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x254),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x278),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x1E8),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x338),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2A4),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2E4),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x340),
+	(void*)(((char*)talkStartInit__12dMsgObject_cFv)+0x2C4),
 };
 
 /* 803C0B9C-803C0BB0 0014+00 s=1 e=0 z=0  None .data      l_dMsgObject_Method                                          */
 SECTION_DATA static void* l_dMsgObject_Method[5] = {
-	/* 0    */ (void*)dMsgObject_Create__FP9msg_class,
-	/* 1    */ (void*)dMsgObject_Delete__FP12dMsgObject_c,
-	/* 2    */ (void*)dMsgObject_Execute__FP12dMsgObject_c,
-	/* 3    */ (void*)dMsgObject_IsDelete__FP12dMsgObject_c,
-	/* 4    */ (void*)dMsgObject_Draw__FP12dMsgObject_c,
+	(void*)dMsgObject_Create__FP9msg_class,
+	(void*)dMsgObject_Delete__FP12dMsgObject_c,
+	(void*)dMsgObject_Execute__FP12dMsgObject_c,
+	(void*)dMsgObject_IsDelete__FP12dMsgObject_c,
+	(void*)dMsgObject_Draw__FP12dMsgObject_c,
 };
 
-/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=1  None .data      g_profile_MSG_OBJECT                                         */
+/* 803C0BB0-803C0BD8 0028+00 s=0 e=0 z=0  None .data      g_profile_MSG_OBJECT                                         */
 SECTION_DATA void* g_profile_MSG_OBJECT[10] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000CFFFD,
-	/* 2    */ (void*)0x03130000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000004D8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopMsg_Method,
-	/* 8    */ (void*)0x03020000,
-	/* 9    */ (void*)&l_dMsgObject_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03130000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000004D8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopMsg_Method,
+	(void*)0x03020000,
+	(void*)&l_dMsgObject_Method,
 };
 
 /* 803C0BD8-803C0BE4 000C+00 s=2 e=0 z=0  None .data      __vt__16dMsgObject_HIO_c                                     */
 SECTION_DATA static void* __vt__16dMsgObject_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMsgObject_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMsgObject_HIO_cFv,
 };
 
 /* 803C0BE4-803C0BF0 000C+00 s=3 e=0 z=0  None .data      __vt__20dMsgObject_HowlHIO_c                                 */
 SECTION_DATA static void* __vt__20dMsgObject_HowlHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20dMsgObject_HowlHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20dMsgObject_HowlHIO_cFv,
 };
 
 /* 80454AA0-80454AA4 0004+00 s=2 e=0 z=0  None .sdata2    @4076                                                        */

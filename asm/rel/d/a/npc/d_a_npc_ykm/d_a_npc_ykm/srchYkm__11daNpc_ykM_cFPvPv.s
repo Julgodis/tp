@@ -27,13 +27,13 @@ lbl_80B544F8:
 /* 80B5450C  40 82 00 28 */	bne lbl_80B54534
 /* 80B54510  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 80B54514  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 80B54518  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 80B54518  80 85 00 00 */	lwz r4, 0(r5)
 /* 80B5451C  54 80 10 3A */	slwi r0, r4, 2
 /* 80B54520  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 80B54524  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 80B54528  7F E3 01 2E */	stwx r31, r3, r0
 /* 80B5452C  38 04 00 01 */	addi r0, r4, 1
-/* 80B54530  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 80B54530  90 05 00 00 */	stw r0, 0(r5)
 lbl_80B54534:
 /* 80B54534  38 60 00 00 */	li r3, 0
 /* 80B54538  83 E1 00 0C */	lwz r31, 0xc(r1)

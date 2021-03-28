@@ -8,8 +8,8 @@ lbl_80B20434:
 /* 80B2044C  80 63 05 78 */	lwz r3, 0x578(r3)
 /* 80B20450  83 A3 00 04 */	lwz r29, 4(r3)
 /* 80B20454  38 00 00 00 */	li r0, 0
-/* 80B20458  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B2045C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B20458  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B2045C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B20460  3B E3 61 C0 */	addi r31, r3, 0x61c0
 /* 80B20464  80 9E 0E 44 */	lwz r4, 0xe44(r30)
 /* 80B20468  28 04 00 00 */	cmplwi r4, 0

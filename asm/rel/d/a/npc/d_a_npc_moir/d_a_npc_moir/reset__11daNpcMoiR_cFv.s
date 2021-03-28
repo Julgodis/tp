@@ -25,11 +25,11 @@ lbl_80A7D5F8:
 /* 80A7D61C  90 BF 0E 00 */	stw r5, 0xe00(r31)
 /* 80A7D620  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A7D624  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A7D628  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A7D62C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A7D628  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A7D62C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A7D630  90 7F 0D DC */	stw r3, 0xddc(r31)
 /* 80A7D634  90 1F 0D E0 */	stw r0, 0xde0(r31)
-/* 80A7D638  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A7D638  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A7D63C  90 1F 0D E4 */	stw r0, 0xde4(r31)
 /* 80A7D640  38 80 FF FF */	li r4, -1
 /* 80A7D644  B0 9F 0E 06 */	sth r4, 0xe06(r31)

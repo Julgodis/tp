@@ -7,12 +7,12 @@ lbl_804EAF94:
 /* 804EAFA8  7C 7D 1B 78 */	mr r29, r3
 /* 804EAFAC  3C 60 80 4F */	lis r3, lit_3789@ha
 /* 804EAFB0  3B C3 E8 AC */	addi r30, r3, lit_3789@l
-/* 804EAFB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804EAFB8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 804EAFBC  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 804EAFB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804EAFB8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 804EAFBC  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 804EAFC0  3C 60 80 4F */	lis r3, l_HIO@ha
 /* 804EAFC4  38 63 EF 3C */	addi r3, r3, l_HIO@l
-/* 804EAFC8  88 03 00 24 */	lbz r0, 0x24(r3)	/* effective address: 804EEF60 */
+/* 804EAFC8  88 03 00 24 */	lbz r0, 0x24(r3)
 /* 804EAFCC  28 00 00 00 */	cmplwi r0, 0
 /* 804EAFD0  41 82 00 0C */	beq lbl_804EAFDC
 /* 804EAFD4  38 00 00 00 */	li r0, 0
@@ -26,7 +26,7 @@ lbl_804EAFDC:
 /* 804EAFF0  7F B9 EB 78 */	mr r25, r29
 /* 804EAFF4  3C 60 80 4F */	lis r3, l_HIO@ha
 /* 804EAFF8  38 63 EF 3C */	addi r3, r3, l_HIO@l
-/* 804EAFFC  88 03 00 23 */	lbz r0, 0x23(r3)	/* effective address: 804EEF5F */
+/* 804EAFFC  88 03 00 23 */	lbz r0, 0x23(r3)
 /* 804EB000  28 00 00 00 */	cmplwi r0, 0
 /* 804EB004  41 82 00 0C */	beq lbl_804EB010
 /* 804EB008  38 00 00 64 */	li r0, 0x64
@@ -170,10 +170,10 @@ lbl_804EB1F4:
 /* 804EB204  4E 80 04 21 */	bctrl 
 /* 804EB208  28 03 00 00 */	cmplwi r3, 0
 /* 804EB20C  41 82 00 68 */	beq lbl_804EB274
-/* 804EB210  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804EB214  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804EB218  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
-/* 804EB21C  C0 23 05 2C */	lfs f1, 0x52c(r3)	/* effective address: 804066EC */
+/* 804EB210  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804EB214  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804EB218  80 63 5D B8 */	lwz r3, 0x5db8(r3)
+/* 804EB21C  C0 23 05 2C */	lfs f1, 0x52c(r3)
 /* 804EB220  C0 1E 00 78 */	lfs f0, 0x78(r30)
 /* 804EB224  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804EB228  4C 41 13 82 */	cror 2, 1, 2

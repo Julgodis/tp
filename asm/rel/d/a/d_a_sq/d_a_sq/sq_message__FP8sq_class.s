@@ -66,18 +66,18 @@ lbl_805A02FC:
 /* 805A0304  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 805A0308  4B CC F7 78 */	b cLib_addCalc0__FPfff
 /* 805A030C  7F C3 F3 78 */	mr r3, r30
-/* 805A0310  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805A0314  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805A0318  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805A0310  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805A0314  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805A0318  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 805A031C  4B A7 A3 F4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805A0320  7C 64 1B 78 */	mr r4, r3
 /* 805A0324  38 7E 04 DE */	addi r3, r30, 0x4de
 /* 805A0328  38 A0 00 02 */	li r5, 2
 /* 805A032C  38 C0 10 00 */	li r6, 0x1000
 /* 805A0330  4B CD 02 D8 */	b cLib_addCalcAngleS2__FPssss
-/* 805A0334  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A0338  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A033C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 805A0334  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A0338  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A033C  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 805A0340  28 00 00 00 */	cmplwi r0, 0
 /* 805A0344  40 82 00 20 */	bne lbl_805A0364
 /* 805A0348  C0 3E 05 D4 */	lfs f1, 0x5d4(r30)

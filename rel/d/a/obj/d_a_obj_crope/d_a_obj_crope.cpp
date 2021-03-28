@@ -63,13 +63,13 @@ struct cCcD_GStts {
 	/* 80BCEA7C */ ~cCcD_GStts();
 };
 
+struct _GXColor {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct ResTIMG {
-};
-
-struct _GXColor {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -126,10 +126,10 @@ struct cCcS {
 // 
 
 static void daObjCrope_createHeap(fopAc_ac_c*); // 2
-static void daObjCrope_Create(fopAc_ac_c*); // 2
-static void daObjCrope_Delete(daObjCrope_c*); // 2
-static void daObjCrope_Execute(daObjCrope_c*); // 2
-static void daObjCrope_Draw(daObjCrope_c*); // 2
+void daObjCrope_Create(fopAc_ac_c*); // 2
+void daObjCrope_Delete(daObjCrope_c*); // 2
+void daObjCrope_Execute(daObjCrope_c*); // 2
+void daObjCrope_Draw(daObjCrope_c*); // 2
 
 extern "C" void createHeap__12daObjCrope_cFv(); // 1
 extern "C" static void daObjCrope_createHeap__FP10fopAc_ac_c(); // 1
@@ -139,21 +139,18 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daObjCrope_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjCrope_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daObjCrope_cFv(); // 1
-extern "C" static void daObjCrope_Delete__FP12daObjCrope_c(); // 1
+extern "C" void daObjCrope_Delete__FP12daObjCrope_c(); // 1
 extern "C" void setNormalRopePos__12daObjCrope_cFv(); // 1
 extern "C" void setRideRopePos__12daObjCrope_cFv(); // 1
 extern "C" void execute__12daObjCrope_cFv(); // 1
 extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" static void daObjCrope_Execute__FP12daObjCrope_c(); // 1
+extern "C" void daObjCrope_Execute__FP12daObjCrope_c(); // 1
 extern "C" void draw__12daObjCrope_cFv(); // 1
-extern "C" static void daObjCrope_Draw__FP12daObjCrope_c(); // 1
+extern "C" void daObjCrope_Draw__FP12daObjCrope_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" extern u8 const lit_3874[8];
-extern "C" extern u8 const lit_3875[8];
-extern "C" extern u8 const lit_3876[8];
-extern "C" extern u8 const lit_4410[8];
+extern "C" extern void* l_daObjCrope_Method[8];
 extern "C" extern void* g_profile_Obj_Crope[12];
 
 // 
@@ -218,16 +215,13 @@ extern "C" void _restgpr_23(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 extern "C" extern u32 __float_nan;
 
 // 
@@ -279,18 +273,18 @@ SECTION_RODATA static u8 const lit_3873[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BCEAE4-80BCEAEC 0008+00 s=0 e=0 z=0  None .rodata    @3874                                                        */
-SECTION_RODATA u8 const lit_3874[8] = {
+/* 80BCEAE4-80BCEAEC 0008+00 s=3 e=0 z=0  None .rodata    @3874                                                        */
+SECTION_RODATA static u8 const lit_3874[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BCEAEC-80BCEAF4 0008+00 s=0 e=0 z=0  None .rodata    @3875                                                        */
-SECTION_RODATA u8 const lit_3875[8] = {
+/* 80BCEAEC-80BCEAF4 0008+00 s=3 e=0 z=0  None .rodata    @3875                                                        */
+SECTION_RODATA static u8 const lit_3875[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BCEAF4-80BCEAFC 0008+00 s=0 e=0 z=0  None .rodata    @3876                                                        */
-SECTION_RODATA u8 const lit_3876[8] = {
+/* 80BCEAF4-80BCEAFC 0008+00 s=3 e=0 z=0  None .rodata    @3876                                                        */
+SECTION_RODATA static u8 const lit_3876[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -325,76 +319,76 @@ SECTION_DATA static u8 data_80BCEB7C[4] = {
 	0x00, 0x00, 0x00, 0xFF,
 };
 
-/* 80BCEB80-80BCEBA0 0020+00 s=1 e=0 z=0  None .data      l_daObjCrope_Method                                          */
-SECTION_DATA static void* l_daObjCrope_Method[8] = {
-	/* 0    */ (void*)daObjCrope_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjCrope_Delete__FP12daObjCrope_c,
-	/* 2    */ (void*)daObjCrope_Execute__FP12daObjCrope_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjCrope_Draw__FP12daObjCrope_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BCEB80-80BCEBA0 0020+00 s=0 e=0 z=0  None .data      l_daObjCrope_Method                                          */
+SECTION_DATA void* l_daObjCrope_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BCEBA0-80BCEBD0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Crope                                          */
+/* 80BCEBA0-80BCEBD0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Crope                                          */
 SECTION_DATA void* g_profile_Obj_Crope[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02BE0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000010AC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00F80000,
-	/* 9    */ (void*)&l_daObjCrope_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02BE0000,
+	(void*)NULL,
+	(void*)0x000010AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00F80000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x030E0000,
 };
 
 /* 80BCEBD0-80BCEBDC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
 SECTION_DATA static void* __vt__8cM3dGLin[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGLinFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCEBDC-80BCEBE8 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCEBE8-80BCEBF4 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCEBF4-80BCEC08 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
 SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCEC08-80BCEC14 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCEC14-80BCEC20 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCCD64-80BCD3D8 0674+00 s=1 e=0 z=0  None .text      create__12daObjCrope_cFv                                     */
@@ -414,7 +408,7 @@ cXyz::cXyz() {
 }
 
 
-/* 80BCD3DC-80BCD424 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BCD3DC-80BCD424 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,7 +419,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BCD424-80BCD46C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BCD424-80BCD46C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -436,7 +430,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BCD46C-80BCD4C8 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BCD46C-80BCD4C8 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -458,11 +452,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80BCD504-80BCD524 0020+00 s=1 e=0 z=0  None .text      daObjCrope_Create__FP10fopAc_ac_c                            */
+/* 80BCD504-80BCD524 0020+00 s=0 e=0 z=0  None .text      daObjCrope_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCrope_Create(fopAc_ac_c* param_0) {
+asm void daObjCrope_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Create__FP10fopAc_ac_c.s"
 }
@@ -480,11 +474,11 @@ asm daObjCrope_c::~daObjCrope_c() {
 #pragma pop
 
 
-/* 80BCD69C-80BCD6C4 0028+00 s=1 e=0 z=0  None .text      daObjCrope_Delete__FP12daObjCrope_c                          */
+/* 80BCD69C-80BCD6C4 0028+00 s=0 e=0 z=0  None .text      daObjCrope_Delete__FP12daObjCrope_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCrope_Delete(daObjCrope_c* param_0) {
+asm void daObjCrope_Delete(daObjCrope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Delete__FP12daObjCrope_c.s"
 }
@@ -529,6 +523,11 @@ SECTION_RODATA static u32 const lit_4408[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 80BCEB34-80BCEB3C 0008+00 s=1 e=0 z=0  None .rodata    @4410                                                        */
+SECTION_RODATA static u8 const lit_4410[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 80BCD9EC-80BCE4FC 0B10+00 s=1 e=0 z=0  None .text      setRideRopePos__12daObjCrope_cFv                             */
 #pragma push
 #pragma optimization_level 0
@@ -551,7 +550,7 @@ asm void daObjCrope_c::execute() {
 #pragma pop
 
 
-/* 80BCE954-80BCE99C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
+/* 80BCE954-80BCE99C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -562,11 +561,11 @@ asm cM3dGLin::~cM3dGLin() {
 #pragma pop
 
 
-/* 80BCE99C-80BCE9BC 0020+00 s=1 e=0 z=0  None .text      daObjCrope_Execute__FP12daObjCrope_c                         */
+/* 80BCE99C-80BCE9BC 0020+00 s=0 e=0 z=0  None .text      daObjCrope_Execute__FP12daObjCrope_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCrope_Execute(daObjCrope_c* param_0) {
+asm void daObjCrope_Execute(daObjCrope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Execute__FP12daObjCrope_c.s"
 }
@@ -584,18 +583,18 @@ asm void daObjCrope_c::draw() {
 #pragma pop
 
 
-/* 80BCEA5C-80BCEA7C 0020+00 s=1 e=0 z=0  None .text      daObjCrope_Draw__FP12daObjCrope_c                            */
+/* 80BCEA5C-80BCEA7C 0020+00 s=0 e=0 z=0  None .text      daObjCrope_Draw__FP12daObjCrope_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCrope_Draw(daObjCrope_c* param_0) {
+asm void daObjCrope_Draw(daObjCrope_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crope/d_a_obj_crope/daObjCrope_Draw__FP12daObjCrope_c.s"
 }
 #pragma pop
 
 
-/* 80BCEA7C-80BCEAC4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BCEA7C-80BCEAC4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -605,10 +604,4 @@ asm cCcD_GStts::~cCcD_GStts() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 80BCEB34-80BCEB3C 0008+00 s=0 e=0 z=0  None .rodata    @4410                                                        */
-SECTION_RODATA u8 const lit_4410[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
 

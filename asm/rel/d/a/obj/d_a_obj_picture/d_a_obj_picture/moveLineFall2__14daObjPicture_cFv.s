@@ -18,7 +18,7 @@ lbl_80CAEA60:
 /* 80CAEAA0  3B 60 00 00 */	li r27, 0
 /* 80CAEAA4  3B 00 00 00 */	li r24, 0
 /* 80CAEAA8  3A E0 00 00 */	li r23, 0
-/* 80CAEAAC  C3 FE 00 90 */	lfs f31, 0x90(r30)	/* effective address: 80CAF0AC */
+/* 80CAEAAC  C3 FE 00 90 */	lfs f31, 0x90(r30)
 /* 80CAEAB0  3C 60 80 45 */	lis r3, mGroundY__11fopAcM_gc_c@ha
 /* 80CAEAB4  3B E3 0C D0 */	addi r31, r3, mGroundY__11fopAcM_gc_c@l
 lbl_80CAEAB8:

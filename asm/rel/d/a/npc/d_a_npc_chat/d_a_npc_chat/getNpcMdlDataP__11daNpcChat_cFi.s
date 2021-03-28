@@ -23,8 +23,8 @@ lbl_809812A4:
 lbl_809812CC:
 /* 809812CC  80 65 00 00 */	lwz r3, 0(r5)
 /* 809812D0  80 85 00 04 */	lwz r4, 4(r5)
-/* 809812D4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809812D8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809812D4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809812D8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809812DC  3C A5 00 02 */	addis r5, r5, 2
 /* 809812E0  38 C0 00 80 */	li r6, 0x80
 /* 809812E4  38 A5 C2 F8 */	addi r5, r5, -15624

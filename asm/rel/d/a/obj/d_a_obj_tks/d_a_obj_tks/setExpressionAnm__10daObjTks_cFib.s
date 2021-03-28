@@ -18,7 +18,7 @@ lbl_80D10184:
 /* 80D101C4  41 80 00 18 */	blt lbl_80D101DC
 /* 80D101C8  3C 80 80 D1 */	lis r4, l_arcName@ha
 /* 80D101CC  38 84 29 54 */	addi r4, r4, l_arcName@l
-/* 80D101D0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D12954 */
+/* 80D101D0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D101D4  4B 44 29 58 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80D101D8  48 00 00 08 */	b lbl_80D101E0
 lbl_80D101DC:

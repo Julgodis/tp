@@ -7,8 +7,8 @@ lbl_8045A574:
 /* 8045A588  7C 7F 1B 78 */	mr r31, r3
 /* 8045A58C  3B 60 00 00 */	li r27, 0
 /* 8045A590  3B 20 00 00 */	li r25, 0
-/* 8045A594  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045A598  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045A594  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045A598  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045A59C  3F 83 00 02 */	addis r28, r3, 2
 /* 8045A5A0  3B 9C C2 F8 */	addi r28, r28, -15624
 lbl_8045A5A4:

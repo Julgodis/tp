@@ -16,7 +16,7 @@ lbl_80CDF910:
 lbl_80CDF948:
 /* 80CDF948  3C 80 80 CE */	lis r4, l_arcName@ha
 /* 80CDF94C  38 84 02 80 */	addi r4, r4, l_arcName@l
-/* 80CDF950  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CE0280 */
+/* 80CDF950  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CDF954  4B 34 D6 B4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CDF958  7F C3 F3 78 */	mr r3, r30
 /* 80CDF95C  38 80 00 00 */	li r4, 0

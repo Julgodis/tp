@@ -414,21 +414,21 @@ asm void dMenuFmapIconDisp_c::getPosition(int* param_0, int* param_1, f32* param
 /* ############################################################################################## */
 /* 803A7D38-803A7D74 003C+00 s=1 e=0 z=0  None .data      @4467                                                        */
 SECTION_DATA static void* lit_4467[15] = {
-	/* 0    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 1    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
-	/* 2    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 3    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 4    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x154),
-	/* 5    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x1FC),
-	/* 6    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x308),
-	/* 7    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 8    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
-	/* 9    */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 10   */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x35C),
-	/* 11   */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 12   */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
-	/* 13   */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
-	/* 14   */ (void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x154),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x1FC),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x308),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0xA8),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x35C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x40C),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
+	(void*)(((char*)isDrawDisp__19dMenuFmapIconDisp_cFv)+0x388),
 };
 
 /* 8003E6E8-8003EB10 0428+00 s=2 e=3 z=0  None .text      isDrawDisp__19dMenuFmapIconDisp_cFv                          */
@@ -478,8 +478,8 @@ asm fmpTresTypeGroupDataList_c::fmpTresTypeGroupDataList_c() {
 /* ############################################################################################## */
 /* 803A7D74-803A7D80 000C+00 s=0 e=3 z=0  None .data      __vt__19dMenuFmapIconDisp_c                                  */
 SECTION_DATA void* __vt__19dMenuFmapIconDisp_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)isDrawDisp__19dMenuFmapIconDisp_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)isDrawDisp__19dMenuFmapIconDisp_cFv,
 };
 

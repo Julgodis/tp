@@ -10,8 +10,8 @@ lbl_80CFE1D0:
 /* 80CFE1F0  7F E3 FB 78 */	mr r3, r31
 /* 80CFE1F4  4B FF FE A5 */	bl getArcName__Q212daObjSwpush25Act_cFv
 /* 80CFE1F8  7F 84 E3 78 */	mr r4, r28
-/* 80CFE1FC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CFE200  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CFE1FC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CFE200  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CFE204  3F C5 00 02 */	addis r30, r5, 2
 /* 80CFE208  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80CFE20C  7F C5 F3 78 */	mr r5, r30

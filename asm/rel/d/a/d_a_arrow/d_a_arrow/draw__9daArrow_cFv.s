@@ -30,9 +30,9 @@ lbl_8049D130:
 /* 8049D134  80 1F 01 68 */	lwz r0, 0x168(r31)
 /* 8049D138  90 61 00 08 */	stw r3, 8(r1)
 /* 8049D13C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8049D140  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049D144  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 8049D148  83 DC 5D B4 */	lwz r30, 0x5db4(r28)	/* effective address: 8040BF74 */
+/* 8049D140  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049D144  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 8049D148  83 DC 5D B4 */	lwz r30, 0x5db4(r28)
 /* 8049D14C  28 04 00 00 */	cmplwi r4, 0
 /* 8049D150  40 82 00 20 */	bne lbl_8049D170
 /* 8049D154  88 1D 09 40 */	lbz r0, 0x940(r29)

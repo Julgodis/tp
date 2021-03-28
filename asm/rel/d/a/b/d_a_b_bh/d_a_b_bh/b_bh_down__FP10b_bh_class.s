@@ -209,7 +209,7 @@ lbl_805AF3F8:
 /* 805AF4FC  B0 1D 06 6C */	sth r0, 0x66c(r29)
 /* 805AF500  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805AF504  38 63 33 FC */	addi r3, r3, l_HIO@l
-/* 805AF508  A8 03 00 14 */	lha r0, 0x14(r3)	/* effective address: 805B3410 */
+/* 805AF508  A8 03 00 14 */	lha r0, 0x14(r3)
 /* 805AF50C  B0 1D 06 94 */	sth r0, 0x694(r29)
 lbl_805AF510:
 /* 805AF510  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)

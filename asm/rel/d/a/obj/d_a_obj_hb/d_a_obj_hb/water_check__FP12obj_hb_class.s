@@ -18,8 +18,8 @@ lbl_80C19A2C:
 /* 80C19A6C  38 61 00 14 */	addi r3, r1, 0x14
 /* 80C19A70  38 81 00 08 */	addi r4, r1, 8
 /* 80C19A74  4B 64 E2 98 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 80C19A78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C19A7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C19A78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C19A7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C19A80  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C19A84  38 81 00 14 */	addi r4, r1, 0x14
 /* 80C19A88  4B 45 AA 18 */	b GroundCross__4cBgSFP11cBgS_GndChk

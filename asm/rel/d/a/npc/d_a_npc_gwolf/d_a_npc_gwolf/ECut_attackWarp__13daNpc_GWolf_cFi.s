@@ -8,10 +8,10 @@ lbl_809F5E0C:
 /* 809F5E24  7C 98 23 78 */	mr r24, r4
 /* 809F5E28  3C 60 80 A0 */	lis r3, m__19daNpc_GWolf_Param_c@ha
 /* 809F5E2C  3B C3 84 F4 */	addi r30, r3, m__19daNpc_GWolf_Param_c@l
-/* 809F5E30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F5E34  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 809F5E30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F5E34  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 809F5E38  3B 3F 4F F8 */	addi r25, r31, 0x4ff8
-/* 809F5E3C  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 809F5E3C  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 809F5E40  3B 80 00 00 */	li r28, 0
 /* 809F5E44  3B 60 FF FF */	li r27, -1
 /* 809F5E48  7F 23 CB 78 */	mr r3, r25
@@ -457,7 +457,7 @@ lbl_809F6474:
 /* 809F6498  90 01 00 10 */	stw r0, 0x10(r1)
 /* 809F649C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809F64A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809F64A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809F64A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 809F64A8  38 81 00 10 */	addi r4, r1, 0x10
 /* 809F64AC  38 A0 00 00 */	li r5, 0
 /* 809F64B0  38 C0 00 00 */	li r6, 0

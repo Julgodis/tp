@@ -124,11 +124,11 @@ asm static void fopScn_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A38B0-803A38C8 0014+04 s=0 e=9 z=0  None .data      g_fopScn_Method                                              */
 SECTION_DATA void* g_fopScn_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopScn_Create__FPv,
-	/* 1    */ (void*)fopScn_Delete__FPv,
-	/* 2    */ (void*)fopScn_Execute__FP11scene_class,
-	/* 3    */ (void*)fopScn_IsDelete__FPv,
-	/* 4    */ (void*)fopScn_Draw__FP11scene_class,
+	(void*)fopScn_Create__FPv,
+	(void*)fopScn_Delete__FPv,
+	(void*)fopScn_Execute__FP11scene_class,
+	(void*)fopScn_IsDelete__FPv,
+	(void*)fopScn_Draw__FP11scene_class,
 	/* padding */
 	NULL,
 };

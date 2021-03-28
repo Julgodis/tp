@@ -113,7 +113,7 @@ lbl_8079F3A8:
 /* 8079F3B4  7F C3 F3 78 */	mr r3, r30
 /* 8079F3B8  3C 80 80 7A */	lis r4, l_HIO@ha
 /* 8079F3BC  38 84 6D F4 */	addi r4, r4, l_HIO@l
-/* 8079F3C0  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 807A6E00 */
+/* 8079F3C0  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8079F3C4  4B FF F1 8D */	bl pl_check__FP10e_st_classf
 /* 8079F3C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8079F3CC  41 82 00 18 */	beq lbl_8079F3E4

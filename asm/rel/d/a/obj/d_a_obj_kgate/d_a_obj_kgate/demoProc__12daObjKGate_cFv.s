@@ -5,8 +5,8 @@ lbl_8058A3A4:
 /* 8058A3B0  39 61 00 20 */	addi r11, r1, 0x20
 /* 8058A3B4  4B DD 7E 28 */	b _savegpr_29
 /* 8058A3B8  7C 7D 1B 78 */	mr r29, r3
-/* 8058A3BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058A3C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8058A3BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058A3C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058A3C4  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8058A3C8  7F C3 F3 78 */	mr r3, r30
 /* 8058A3CC  3C 80 80 59 */	lis r4, struct_8058ACB8+0x0@ha

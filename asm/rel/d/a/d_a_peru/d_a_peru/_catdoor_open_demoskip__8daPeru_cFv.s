@@ -12,8 +12,8 @@ lbl_80D4A920:
 /* 80D4A948  38 00 78 00 */	li r0, 0x7800
 /* 80D4A94C  B0 1F 07 5C */	sth r0, 0x75c(r31)
 /* 80D4A950  4B E7 9B 04 */	b setBaseMtx__14daObjCatDoor_cFv
-/* 80D4A954  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4A958  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4A954  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4A958  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4A95C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D4A960  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D4A964  88 1F 04 BA */	lbz r0, 0x4ba(r31)

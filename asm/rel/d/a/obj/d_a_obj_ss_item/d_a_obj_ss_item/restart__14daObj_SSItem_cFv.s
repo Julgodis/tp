@@ -15,11 +15,11 @@ lbl_80CE78E0:
 /* 80CE7914  B0 03 04 E8 */	sth r0, 0x4e8(r3)
 /* 80CE7918  3C 80 80 CE */	lis r4, lit_4309@ha
 /* 80CE791C  38 A4 7F 9C */	addi r5, r4, lit_4309@l
-/* 80CE7920  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CE7F9C */
-/* 80CE7924  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CE7FA0 */
+/* 80CE7920  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CE7924  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CE7928  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE792C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CE7930  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CE7FA4 */
+/* 80CE7930  80 05 00 08 */	lwz r0, 8(r5)
 /* 80CE7934  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE7938  38 81 00 08 */	addi r4, r1, 8
 /* 80CE793C  48 00 01 C9 */	bl setProcess__14daObj_SSItem_cFM14daObj_SSItem_cFPCvPvPv_i

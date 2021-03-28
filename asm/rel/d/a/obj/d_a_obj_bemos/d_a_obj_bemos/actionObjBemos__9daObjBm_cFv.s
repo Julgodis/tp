@@ -6,7 +6,7 @@ lbl_80BAF750:
 /* 80BAF760  38 E4 3A 74 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80BAF764  3C 80 80 BB */	lis r4, struct_80BB3F24+0x3@ha
 /* 80BAF768  38 C4 3F 27 */	addi r6, r4, struct_80BB3F24+0x3@l
-/* 80BAF76C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80BB3F27 */
+/* 80BAF76C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80BAF770  7C 00 07 75 */	extsb. r0, r0
 /* 80BAF774  40 82 00 70 */	bne lbl_80BAF7E4
 /* 80BAF778  80 87 01 E0 */	lwz r4, 0x1e0(r7)

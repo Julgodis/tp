@@ -107,22 +107,22 @@ lbl_805ADB94:
 /* 805ADC58  4B AC 83 00 */	b SetWall__12dBgS_AcchCirFff
 /* 805ADC5C  3C 60 80 5B */	lis r3, lit_4839@ha
 /* 805ADC60  38 83 E0 DC */	addi r4, r3, lit_4839@l
-/* 805ADC64  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AE0DC */
-/* 805ADC68  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AE0E0 */
+/* 805ADC64  80 64 00 00 */	lwz r3, 0(r4)
+/* 805ADC68  80 04 00 04 */	lwz r0, 4(r4)
 /* 805ADC6C  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 805ADC70  90 01 00 20 */	stw r0, 0x20(r1)
-/* 805ADC74  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AE0E4 */
+/* 805ADC74  80 04 00 08 */	lwz r0, 8(r4)
 /* 805ADC78  90 01 00 24 */	stw r0, 0x24(r1)
 /* 805ADC7C  7F A3 EB 78 */	mr r3, r29
 /* 805ADC80  38 81 00 1C */	addi r4, r1, 0x1c
 /* 805ADC84  4B FF D4 15 */	bl setAction__9daL7ODR_cFM9daL7ODR_cFPCvPv_v
 /* 805ADC88  3C 60 80 5B */	lis r3, lit_4841@ha
 /* 805ADC8C  38 83 E0 E8 */	addi r4, r3, lit_4841@l
-/* 805ADC90  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AE0E8 */
-/* 805ADC94  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AE0EC */
+/* 805ADC90  80 64 00 00 */	lwz r3, 0(r4)
+/* 805ADC94  80 04 00 04 */	lwz r0, 4(r4)
 /* 805ADC98  90 61 00 10 */	stw r3, 0x10(r1)
 /* 805ADC9C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 805ADCA0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AE0F0 */
+/* 805ADCA0  80 04 00 08 */	lwz r0, 8(r4)
 /* 805ADCA4  90 01 00 18 */	stw r0, 0x18(r1)
 /* 805ADCA8  7F A3 EB 78 */	mr r3, r29
 /* 805ADCAC  38 81 00 10 */	addi r4, r1, 0x10

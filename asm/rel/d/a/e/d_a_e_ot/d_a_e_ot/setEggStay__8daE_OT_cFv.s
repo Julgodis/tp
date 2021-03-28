@@ -37,11 +37,11 @@ lbl_8073AB38:
 /* 8073ABC4  4B 8D 22 10 */	b transM__14mDoMtx_stack_cFRC4cXyz
 /* 8073ABC8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8073ABCC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8073ABD0  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 8073ABD0  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8073ABD4  D0 21 00 08 */	stfs f1, 8(r1)
-/* 8073ABD8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8073ABD8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8073ABDC  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8073ABE0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8073ABE0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8073ABE4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8073ABE8  D0 3E 04 D0 */	stfs f1, 0x4d0(r30)
 /* 8073ABEC  C0 01 00 0C */	lfs f0, 0xc(r1)

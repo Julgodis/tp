@@ -24,8 +24,8 @@ lbl_80BDCFDC:
 /* 80BDD034  7F 63 DB 78 */	mr r3, r27
 /* 80BDD038  38 9C 04 D0 */	addi r4, r28, 0x4d0
 /* 80BDD03C  4B 68 AC EC */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80BDD040  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDD044  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDD040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDD044  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BDD048  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BDD04C  7F 64 DB 78 */	mr r4, r27
 /* 80BDD050  4B 49 74 50 */	b GroundCross__4cBgSFP11cBgS_GndChk

@@ -63,9 +63,9 @@ lbl_806627E8:
 lbl_806627F4:
 /* 806627F4  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 806627F8  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 806627FC  C0 43 00 2C */	lfs f2, 0x2c(r3)	/* effective address: 80434C10 */
-/* 80662800  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 80434C00 */
-/* 80662804  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80434BF0 */
+/* 806627FC  C0 43 00 2C */	lfs f2, 0x2c(r3)
+/* 80662800  C0 23 00 1C */	lfs f1, 0x1c(r3)
+/* 80662804  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80662808  D0 1E 0C 14 */	stfs f0, 0xc14(r30)
 /* 8066280C  D0 3E 0C 18 */	stfs f1, 0xc18(r30)
 /* 80662810  D0 5E 0C 1C */	stfs f2, 0xc1c(r30)
@@ -73,11 +73,11 @@ lbl_806627F4:
 lbl_80662818:
 /* 80662818  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8066281C  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 80662820  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80434BF0 */
+/* 80662820  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80662824  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80662828  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80434C00 */
+/* 80662828  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8066282C  D0 01 00 3C */	stfs f0, 0x3c(r1)
-/* 80662830  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 80434C10 */
+/* 80662830  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80662834  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80662838  38 61 00 20 */	addi r3, r1, 0x20
 /* 8066283C  38 9E 0C 14 */	addi r4, r30, 0xc14
@@ -128,9 +128,9 @@ lbl_806628C8:
 /* 806628EC  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 806628F0  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 806628F4  38 63 4B E4 */	addi r3, r3, mCurrentMtx__6J3DSys@l
-/* 806628F8  D0 43 00 0C */	stfs f2, 0xc(r3)	/* effective address: 80434BF0 */
-/* 806628FC  D0 23 00 1C */	stfs f1, 0x1c(r3)	/* effective address: 80434C00 */
-/* 80662900  D0 03 00 2C */	stfs f0, 0x2c(r3)	/* effective address: 80434C10 */
+/* 806628F8  D0 43 00 0C */	stfs f2, 0xc(r3)
+/* 806628FC  D0 23 00 1C */	stfs f1, 0x1c(r3)
+/* 80662900  D0 03 00 2C */	stfs f0, 0x2c(r3)
 lbl_80662904:
 /* 80662904  38 60 00 01 */	li r3, 1
 /* 80662908  39 61 00 60 */	addi r11, r1, 0x60

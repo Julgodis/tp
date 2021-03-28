@@ -19,7 +19,6 @@ extern void* const data_80BFD318[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_gm_cpp(); // 1
 
 // 
 // Declarations:

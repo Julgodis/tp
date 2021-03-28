@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct JASDsp {
-	struct TChannel {
+struct JASOscillator {
+	struct Data {
 	};
 
 };
 
-struct JASOscillator {
-	struct Data {
+struct JASDsp {
+	struct TChannel {
 	};
 
 };
@@ -120,12 +120,12 @@ SECTION_RODATA static u8 const data_8039B190[12] = {
 
 /* 8039B19C-8039B1B8 0018+04 s=1 e=0 z=0  None .rodata    OSC_ENV$261                                                  */
 SECTION_RODATA static void* const data_8039B19C[6 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x3F800000,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)&data_8039B190,
-	/* 4    */ (void*)0x3F800000,
-	/* 5    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x3F800000,
+	(void*)NULL,
+	(void*)&data_8039B190,
+	(void*)0x3F800000,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

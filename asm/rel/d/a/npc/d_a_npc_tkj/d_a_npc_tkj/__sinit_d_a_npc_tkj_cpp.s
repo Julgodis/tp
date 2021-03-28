@@ -6,20 +6,20 @@ lbl_80576328:
 /* 80576338  38 A3 67 C4 */	addi r5, r3, mCutList__10daNpcTkj_c@l
 /* 8057633C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80576340  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80576344  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80576348  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 8057634C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 805767C4 */
-/* 80576350  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 805767C8 */
-/* 80576354  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80576358  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 805767CC */
+/* 80576344  80 64 00 00 */	lwz r3, 0(r4)
+/* 80576348  80 04 00 04 */	lwz r0, 4(r4)
+/* 8057634C  90 65 00 00 */	stw r3, 0(r5)
+/* 80576350  90 05 00 04 */	stw r0, 4(r5)
+/* 80576354  80 04 00 08 */	lwz r0, 8(r4)
+/* 80576358  90 05 00 08 */	stw r0, 8(r5)
 /* 8057635C  3C 60 80 57 */	lis r3, lit_3917@ha
 /* 80576360  38 83 67 B8 */	addi r4, r3, lit_3917@l
-/* 80576364  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805767B8 */
-/* 80576368  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805767BC */
-/* 8057636C  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 805767D0 */
-/* 80576370  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 805767D4 */
-/* 80576374  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805767C0 */
-/* 80576378  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 805767D8 */
+/* 80576364  80 64 00 00 */	lwz r3, 0(r4)
+/* 80576368  80 04 00 04 */	lwz r0, 4(r4)
+/* 8057636C  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80576370  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80576374  80 04 00 08 */	lwz r0, 8(r4)
+/* 80576378  90 05 00 14 */	stw r0, 0x14(r5)
 /* 8057637C  3C 60 80 57 */	lis r3, __vt__17daNpc_Tkj_Param_c@ha
 /* 80576380  38 03 69 B0 */	addi r0, r3, __vt__17daNpc_Tkj_Param_c@l
 /* 80576384  3C 60 80 57 */	lis r3, l_HIO@ha

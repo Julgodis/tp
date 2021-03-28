@@ -28,8 +28,8 @@ lbl_804934D0:
 /* 804934E4  C0 03 62 48 */	lfs f0, lit_3934@l(r3)
 /* 804934E8  80 7F 07 34 */	lwz r3, 0x734(r31)
 /* 804934EC  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 804934F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804934F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804934F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804934F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804934F8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 804934FC  80 9F 07 4C */	lwz r4, 0x74c(r31)
 /* 80493500  4B BB 4C 7C */	b cutEnd__16dEvent_manager_cFi

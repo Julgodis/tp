@@ -21,7 +21,7 @@ lbl_809DCF44:
 lbl_809DCF90:
 /* 809DCF90  3C 80 80 9E */	lis r4, m__17daNpc_grO_Param_c@ha
 /* 809DCF94  38 84 EF 7C */	addi r4, r4, m__17daNpc_grO_Param_c@l
-/* 809DCF98  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 809DEFDE */
+/* 809DCF98  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_809DCF9C:
 /* 809DCF9C  38 A0 00 0C */	li r5, 0xc
 /* 809DCFA0  38 C0 00 00 */	li r6, 0

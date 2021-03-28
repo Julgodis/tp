@@ -11,8 +11,8 @@ lbl_80B61C8C:
 /* 80B61CB0  3B A0 00 00 */	li r29, 0
 /* 80B61CB4  3B 80 00 00 */	li r28, 0
 /* 80B61CB8  3B 60 00 00 */	li r27, 0
-/* 80B61CBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B61CC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B61CBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B61CC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B61CC4  3B 03 4F F8 */	addi r24, r3, 0x4ff8
 /* 80B61CC8  7F 03 C3 78 */	mr r3, r24
 /* 80B61CCC  3C A0 80 B6 */	lis r5, struct_80B67E68+0x0@ha
@@ -73,7 +73,7 @@ lbl_80B61D94:
 /* 80B61D94  38 00 00 04 */	li r0, 4
 /* 80B61D98  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80B61D9C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80B61DA0  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
+/* 80B61DA0  98 03 00 C1 */	stb r0, 0xc1(r3)
 /* 80B61DA4  93 B9 0D C4 */	stw r29, 0xdc4(r25)
 /* 80B61DA8  48 00 00 14 */	b lbl_80B61DBC
 lbl_80B61DAC:
@@ -84,8 +84,8 @@ lbl_80B61DAC:
 lbl_80B61DBC:
 /* 80B61DBC  3C 60 80 B6 */	lis r3, lit_5758@ha
 /* 80B61DC0  38 83 7D B4 */	addi r4, r3, lit_5758@l
-/* 80B61DC4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B67DB4 */
-/* 80B61DC8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B67DB8 */
+/* 80B61DC4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B61DC8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B61DCC  90 61 00 08 */	stw r3, 8(r1)
 /* 80B61DD0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80B61DD4  2C 1E 00 00 */	cmpwi r30, 0

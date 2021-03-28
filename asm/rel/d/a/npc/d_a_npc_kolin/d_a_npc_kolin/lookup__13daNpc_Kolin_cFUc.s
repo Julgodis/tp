@@ -8,11 +8,11 @@ lbl_805567AC:
 /* 805567C4  7C 9F 23 78 */	mr r31, r4
 /* 805567C8  3C 60 80 56 */	lis r3, m__19daNpc_Kolin_Param_c@ha
 /* 805567CC  3B A3 A5 B4 */	addi r29, r3, m__19daNpc_Kolin_Param_c@l
-/* 805567D0  C0 1D 00 EC */	lfs f0, 0xec(r29)	/* effective address: 8055A6A0 */
+/* 805567D0  C0 1D 00 EC */	lfs f0, 0xec(r29)
 /* 805567D4  D0 01 00 08 */	stfs f0, 8(r1)
-/* 805567D8  C0 1D 01 0C */	lfs f0, 0x10c(r29)	/* effective address: 8055A6C0 */
+/* 805567D8  C0 1D 01 0C */	lfs f0, 0x10c(r29)
 /* 805567DC  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 805567E0  C0 1D 00 E4 */	lfs f0, 0xe4(r29)	/* effective address: 8055A698 */
+/* 805567E0  C0 1D 00 E4 */	lfs f0, 0xe4(r29)
 /* 805567E4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 805567E8  38 7E 05 50 */	addi r3, r30, 0x550
 /* 805567EC  4B AB 65 78 */	b transS__14mDoMtx_stack_cFRC4cXyz

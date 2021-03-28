@@ -10,15 +10,15 @@ lbl_80BBC008:
 /* 80BBC028  7C 9D 23 78 */	mr r29, r4
 /* 80BBC02C  3C A0 80 BC */	lis r5, m__21daObj_BouMato_Param_c@ha
 /* 80BBC030  3B E5 C4 70 */	addi r31, r5, m__21daObj_BouMato_Param_c@l
-/* 80BBC034  C3 FF 00 5C */	lfs f31, 0x5c(r31)	/* effective address: 80BBC4CC */
-/* 80BBC038  80 BF 00 88 */	lwz r5, 0x88(r31)	/* effective address: 80BBC4F8 */
-/* 80BBC03C  80 1F 00 8C */	lwz r0, 0x8c(r31)	/* effective address: 80BBC4FC */
+/* 80BBC034  C3 FF 00 5C */	lfs f31, 0x5c(r31)
+/* 80BBC038  80 BF 00 88 */	lwz r5, 0x88(r31)
+/* 80BBC03C  80 1F 00 8C */	lwz r0, 0x8c(r31)
 /* 80BBC040  90 A1 00 08 */	stw r5, 8(r1)
 /* 80BBC044  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80BBC048  80 1F 00 90 */	lwz r0, 0x90(r31)	/* effective address: 80BBC500 */
+/* 80BBC048  80 1F 00 90 */	lwz r0, 0x90(r31)
 /* 80BBC04C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80BBC050  38 BF 00 00 */	addi r5, r31, 0
-/* 80BBC054  C0 05 00 18 */	lfs f0, 0x18(r5)	/* effective address: 80BBC488 */
+/* 80BBC054  C0 05 00 18 */	lfs f0, 0x18(r5)
 /* 80BBC058  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BBC05C  4B 45 E6 B4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80BBC060  A8 1E 04 E6 */	lha r0, 0x4e6(r30)

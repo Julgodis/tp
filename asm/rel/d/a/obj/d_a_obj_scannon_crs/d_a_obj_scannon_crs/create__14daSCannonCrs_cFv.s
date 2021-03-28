@@ -18,12 +18,12 @@ lbl_80CC9948:
 /* 80CC994C  60 00 00 08 */	ori r0, r0, 8
 /* 80CC9950  90 1D 04 A0 */	stw r0, 0x4a0(r29)
 lbl_80CC9954:
-/* 80CC9954  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC9958  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC9954  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC9958  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC995C  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80CC9960  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80CC9964  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80CC9968  A0 84 03 20 */	lhz r4, 0x320(r4)	/* effective address: 803A75A8 */
+/* 80CC9968  A0 84 03 20 */	lhz r4, 0x320(r4)
 /* 80CC996C  4B 36 B0 50 */	b isEventBit__11dSv_event_cCFUs
 /* 80CC9970  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC9974  41 82 00 0C */	beq lbl_80CC9980
@@ -37,7 +37,7 @@ lbl_80CC9980:
 lbl_80CC9990:
 /* 80CC9990  3C 80 80 CD */	lis r4, l_arcName@ha
 /* 80CC9994  38 84 B1 7C */	addi r4, r4, l_arcName@l
-/* 80CC9998  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CCB17C */
+/* 80CC9998  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CC999C  4B 36 35 20 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CC99A0  7C 7E 1B 78 */	mr r30, r3
 /* 80CC99A4  2C 1E 00 04 */	cmpwi r30, 4
@@ -53,8 +53,8 @@ lbl_80CC9990:
 /* 80CC99CC  38 60 00 05 */	li r3, 5
 /* 80CC99D0  48 00 01 28 */	b lbl_80CC9AF8
 lbl_80CC99D4:
-/* 80CC99D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC99D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC99D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC99D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC99DC  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80CC99E0  7F 83 E3 78 */	mr r3, r28
 /* 80CC99E4  80 9D 06 04 */	lwz r4, 0x604(r29)
@@ -90,7 +90,7 @@ lbl_80CC9A00:
 /* 80CC9A58  7F A4 EB 78 */	mr r4, r29
 /* 80CC9A5C  3C A0 80 CD */	lis r5, l_eventName@ha
 /* 80CC9A60  38 A5 B1 80 */	addi r5, r5, l_eventName@l
-/* 80CC9A64  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80CCB180 */
+/* 80CC9A64  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80CC9A68  38 C0 00 FF */	li r6, 0xff
 /* 80CC9A6C  4B 37 DC EC */	b getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 80CC9A70  B0 7D 06 4C */	sth r3, 0x64c(r29)

@@ -71,7 +71,7 @@ lbl_80BBCA08:
 lbl_80BBCA0C:
 /* 80BBCA0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80BBCA10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80BBCA14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80BBCA14  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BBCA18  A8 1E 00 D6 */	lha r0, 0xd6(r30)
 /* 80BBCA1C  7C 00 00 D0 */	neg r0, r0
 /* 80BBCA20  7C 04 07 34 */	extsh r4, r0

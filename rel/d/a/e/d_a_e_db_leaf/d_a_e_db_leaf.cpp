@@ -18,13 +18,13 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct J3DModelData {
+};
+
 struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
-};
-
-struct J3DModelData {
 };
 
 struct J3DAnmTransform {
@@ -46,10 +46,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -61,20 +61,21 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daE_DB_LEAF_Draw(e_db_leaf_class*); // 2
+void daE_DB_LEAF_Draw(e_db_leaf_class*); // 2
 static void daE_DB_LEAF_Execute(e_db_leaf_class*); // 2
-static bool daE_DB_LEAF_IsDelete(e_db_leaf_class*); // 2
-static void daE_DB_LEAF_Delete(e_db_leaf_class*); // 2
+bool daE_DB_LEAF_IsDelete(e_db_leaf_class*); // 2
+void daE_DB_LEAF_Delete(e_db_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_DB_LEAF_Create(fopAc_ac_c*); // 2
+void daE_DB_LEAF_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daE_DB_LEAF_Draw__FP15e_db_leaf_class(); // 1
+extern "C" void daE_DB_LEAF_Draw__FP15e_db_leaf_class(); // 1
 extern "C" static void daE_DB_LEAF_Execute__FP15e_db_leaf_class(); // 1
-extern "C" static bool daE_DB_LEAF_IsDelete__FP15e_db_leaf_class(); // 1
-extern "C" static void daE_DB_LEAF_Delete__FP15e_db_leaf_class(); // 1
+extern "C" bool daE_DB_LEAF_IsDelete__FP15e_db_leaf_class(); // 1
+extern "C" void daE_DB_LEAF_Delete__FP15e_db_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_DB_LEAF_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_DB_LEAF_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_DB_LEAF_Method[8];
 extern "C" extern void* g_profile_E_DB_LEAF[12];
 
 // 
@@ -105,28 +106,26 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
 // 
 
-/* 806A1E38-806A1EA0 0068+00 s=1 e=0 z=0  None .text      daE_DB_LEAF_Draw__FP15e_db_leaf_class                        */
+/* 806A1E38-806A1EA0 0068+00 s=0 e=0 z=0  None .text      daE_DB_LEAF_Draw__FP15e_db_leaf_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_DB_LEAF_Draw(e_db_leaf_class* param_0) {
+asm void daE_DB_LEAF_Draw(e_db_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db_leaf/d_a_e_db_leaf/daE_DB_LEAF_Draw__FP15e_db_leaf_class.s"
 }
 #pragma pop
 
 
-/* 806A1EA0-806A1F24 0084+00 s=2 e=0 z=0  None .text      daE_DB_LEAF_Execute__FP15e_db_leaf_class                     */
+/* 806A1EA0-806A1F24 0084+00 s=1 e=0 z=0  None .text      daE_DB_LEAF_Execute__FP15e_db_leaf_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -137,8 +136,8 @@ asm static void daE_DB_LEAF_Execute(e_db_leaf_class* param_0) {
 #pragma pop
 
 
-/* 806A1F24-806A1F2C 0008+00 s=1 e=0 z=0  None .text      daE_DB_LEAF_IsDelete__FP15e_db_leaf_class                    */
-static bool daE_DB_LEAF_IsDelete(e_db_leaf_class* param_0) {
+/* 806A1F24-806A1F2C 0008+00 s=0 e=0 z=0  None .text      daE_DB_LEAF_IsDelete__FP15e_db_leaf_class                    */
+bool daE_DB_LEAF_IsDelete(e_db_leaf_class* param_0) {
 	return true;
 }
 
@@ -154,11 +153,11 @@ SECTION_RODATA static u32 const lit_3699 = 0x3F800000;
 SECTION_DEAD char const* const stringBase_806A2118 = "E_DB";
 #pragma pop
 
-/* 806A1F2C-806A1F5C 0030+00 s=1 e=0 z=0  None .text      daE_DB_LEAF_Delete__FP15e_db_leaf_class                      */
+/* 806A1F2C-806A1F5C 0030+00 s=0 e=0 z=0  None .text      daE_DB_LEAF_Delete__FP15e_db_leaf_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_DB_LEAF_Delete(e_db_leaf_class* param_0) {
+asm void daE_DB_LEAF_Delete(e_db_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db_leaf/d_a_e_db_leaf/daE_DB_LEAF_Delete__FP15e_db_leaf_class.s"
 }
@@ -176,11 +175,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 806A205C-806A210C 00B0+00 s=1 e=0 z=0  None .text      daE_DB_LEAF_Create__FP10fopAc_ac_c                           */
+/* 806A205C-806A210C 00B0+00 s=0 e=0 z=0  None .text      daE_DB_LEAF_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_DB_LEAF_Create(fopAc_ac_c* param_0) {
+asm void daE_DB_LEAF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_db_leaf/d_a_e_db_leaf/daE_DB_LEAF_Create__FP10fopAc_ac_c.s"
 }
@@ -188,31 +187,31 @@ asm static void daE_DB_LEAF_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 806A2120-806A2140 0020+00 s=1 e=0 z=0  None .data      l_daE_DB_LEAF_Method                                         */
-SECTION_DATA static void* l_daE_DB_LEAF_Method[8] = {
-	/* 0    */ (void*)daE_DB_LEAF_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_DB_LEAF_Delete__FP15e_db_leaf_class,
-	/* 2    */ (void*)daE_DB_LEAF_Execute__FP15e_db_leaf_class,
-	/* 3    */ (void*)daE_DB_LEAF_IsDelete__FP15e_db_leaf_class,
-	/* 4    */ (void*)daE_DB_LEAF_Draw__FP15e_db_leaf_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 806A2120-806A2140 0020+00 s=0 e=0 z=0  None .data      l_daE_DB_LEAF_Method                                         */
+SECTION_DATA void* l_daE_DB_LEAF_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 806A2140-806A2170 0030+00 s=0 e=0 z=1  None .data      g_profile_E_DB_LEAF                                          */
+/* 806A2140-806A2170 0030+00 s=0 e=0 z=0  None .data      g_profile_E_DB_LEAF                                          */
 SECTION_DATA void* g_profile_E_DB_LEAF[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01C60000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005B8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00890000,
-	/* 9    */ (void*)&l_daE_DB_LEAF_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01C60000,
+	(void*)NULL,
+	(void*)0x000005B8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00890000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)NULL,
 };
 

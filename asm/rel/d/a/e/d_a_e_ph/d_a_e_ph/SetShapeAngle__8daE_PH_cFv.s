@@ -62,7 +62,7 @@ lbl_8073E068:
 /* 8073E158  A8 9F 06 1C */	lha r4, 0x61c(r31)
 /* 8073E15C  3C A0 80 74 */	lis r5, l_HIO@ha
 /* 8073E160  38 A5 1D D0 */	addi r5, r5, l_HIO@l
-/* 8073E164  C0 45 00 14 */	lfs f2, 0x14(r5)	/* effective address: 80741DE4 */
+/* 8073E164  C0 45 00 14 */	lfs f2, 0x14(r5)
 /* 8073E168  A8 1F 05 B4 */	lha r0, 0x5b4(r31)
 /* 8073E16C  54 00 40 2E */	slwi r0, r0, 8
 /* 8073E170  3C A0 80 74 */	lis r5, lit_4215@ha

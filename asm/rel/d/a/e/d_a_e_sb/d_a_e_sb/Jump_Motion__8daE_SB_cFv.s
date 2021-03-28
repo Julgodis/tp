@@ -38,7 +38,7 @@ lbl_80782D10:
 /* 80782D50  C0 3D 00 80 */	lfs f1, 0x80(r29)
 /* 80782D54  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 80782D58  38 C6 4F 84 */	addi r6, r6, l_HIO@l
-/* 80782D5C  C0 46 00 28 */	lfs f2, 0x28(r6)	/* effective address: 80784FAC */
+/* 80782D5C  C0 46 00 28 */	lfs f2, 0x28(r6)
 /* 80782D60  4B FF EC ED */	bl SetAnm__8daE_SB_cFiiff
 /* 80782D64  38 00 00 01 */	li r0, 1
 /* 80782D68  90 1F 05 BC */	stw r0, 0x5bc(r31)
@@ -53,7 +53,7 @@ lbl_80782D80:
 /* 80782D88  C0 3D 00 80 */	lfs f1, 0x80(r29)
 /* 80782D8C  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 80782D90  3B C6 4F 84 */	addi r30, r6, l_HIO@l
-/* 80782D94  C0 5E 00 28 */	lfs f2, 0x28(r30)	/* effective address: 80784FAC */
+/* 80782D94  C0 5E 00 28 */	lfs f2, 0x28(r30)
 /* 80782D98  4B FF EC B5 */	bl SetAnm__8daE_SB_cFiiff
 /* 80782D9C  7F E3 FB 78 */	mr r3, r31
 /* 80782DA0  4B FF FE 35 */	bl JumpMiddleMotion__8daE_SB_cFv

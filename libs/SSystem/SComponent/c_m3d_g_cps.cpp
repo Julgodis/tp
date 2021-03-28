@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct cM3dGCpsS {
 };
 
-struct cM3dGCpsS {
+struct cXyz {
 };
 
 struct cM3dGCps {
@@ -62,9 +62,9 @@ extern "C" extern void* __vt__8cM3dGLin[3];
 /* ############################################################################################## */
 /* 803C3FF8-803C4020 000C+1C s=2 e=0 z=0  None .data      __vt__8cM3dGCps                                              */
 SECTION_DATA static void* __vt__8cM3dGCps[3 + 7 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCpsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCpsFv,
 	/* padding */
 	NULL,
 	NULL,

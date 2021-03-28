@@ -43,7 +43,7 @@ lbl_80AF60B8:
 /* 80AF615C  C0 5F 00 14 */	lfs f2, 0x14(r31)
 /* 80AF6160  3C E0 80 AF */	lis r7, l_HIO@ha
 /* 80AF6164  38 E7 75 D0 */	addi r7, r7, l_HIO@l
-/* 80AF6168  C0 07 00 08 */	lfs f0, 8(r7)	/* effective address: 80AF75D8 */
+/* 80AF6168  C0 07 00 08 */	lfs f0, 8(r7)
 /* 80AF616C  EC 42 00 32 */	fmuls f2, f2, f0
 /* 80AF6170  C0 9D 07 14 */	lfs f4, 0x714(r29)
 /* 80AF6174  38 FD 07 6C */	addi r7, r29, 0x76c

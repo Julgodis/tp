@@ -51,11 +51,11 @@ lbl_80834518:
 /* 808345DC  4B B1 1E D4 */	b PSMTXCopy
 /* 808345E0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 808345E4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 808345E8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 808345E8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 808345EC  D0 01 00 08 */	stfs f0, 8(r1)
-/* 808345F0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 808345F0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 808345F4  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 808345F8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 808345F8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 808345FC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80834600  38 7F 09 EC */	addi r3, r31, 0x9ec
 /* 80834604  38 81 00 08 */	addi r4, r1, 8
@@ -66,8 +66,8 @@ lbl_80834518:
 /* 80834618  38 7F 09 EC */	addi r3, r31, 0x9ec
 /* 8083461C  C0 3E 00 64 */	lfs f1, 0x64(r30)
 /* 80834620  4B A3 AB E0 */	b SetR__8cM3dGCylFf
-/* 80834624  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80834628  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80834624  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80834628  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8083462C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80834630  38 9F 08 C8 */	addi r4, r31, 0x8c8
 /* 80834634  4B A3 05 74 */	b Set__4cCcSFP8cCcD_Obj

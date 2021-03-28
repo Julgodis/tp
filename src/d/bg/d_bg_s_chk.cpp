@@ -58,12 +58,12 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803AB670-803AB688 0018+00 s=2 e=0 z=0  None .data      __vt__8dBgS_Chk                                              */
 SECTION_DATA static void* __vt__8dBgS_Chk[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8dBgS_ChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80077574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8dBgS_ChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80077574,
 };
 
 /* 8007749C-800774E8 004C+00 s=0 e=6 z=0  None .text      __ct__8dBgS_ChkFv                                            */

@@ -2,9 +2,9 @@ lbl_80725C80:
 /* 80725C80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80725C84  7C 08 02 A6 */	mflr r0
 /* 80725C88  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80725C8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80725C90  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80725C94  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80725C8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80725C90  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80725C94  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80725C98  C0 03 06 80 */	lfs f0, 0x680(r3)
 /* 80725C9C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 80725CA0  40 80 00 18 */	bge lbl_80725CB8

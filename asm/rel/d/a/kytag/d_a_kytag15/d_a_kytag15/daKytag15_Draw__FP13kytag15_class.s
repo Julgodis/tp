@@ -9,7 +9,7 @@ lbl_80860638:
 /* 80860654  3B C3 0B 40 */	addi r30, r3, lit_3823@l
 /* 80860658  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8086065C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80860660  C0 3E 00 00 */	lfs f1, 0(r30)	/* effective address: 80860B40 */
+/* 80860660  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 80860664  FC 40 08 90 */	fmr f2, f1
 /* 80860668  FC 60 08 90 */	fmr f3, f1
 /* 8086066C  4B AE 62 7C */	b PSMTXTrans
@@ -90,21 +90,21 @@ lbl_808606D4:
 /* 80860794  38 7F 05 6C */	addi r3, r31, 0x56c
 /* 80860798  4B 7A CC 90 */	b play__14mDoExt_baseAnmFv
 lbl_8086079C:
-/* 8086079C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808607A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 808607A4  80 03 5F AC */	lwz r0, 0x5fac(r3)	/* effective address: 8040C16C */
+/* 8086079C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808607A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 808607A4  80 03 5F AC */	lwz r0, 0x5fac(r3)
 /* 808607A8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 808607AC  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 808607B0  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 808607B0  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 808607B4  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 808607B8  4B 7A D5 0C */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 808607BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808607C0  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 808607C4  80 04 5F 80 */	lwz r0, 0x5f80(r4)	/* effective address: 8040C140 */
+/* 808607BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808607C0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 808607C4  80 04 5F 80 */	lwz r0, 0x5f80(r4)
 /* 808607C8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 808607CC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 808607D0  90 03 00 48 */	stw r0, 0x48(r3)	/* effective address: 80434B10 */
-/* 808607D4  80 04 5F 84 */	lwz r0, 0x5f84(r4)	/* effective address: 8040C144 */
+/* 808607D0  90 03 00 48 */	stw r0, 0x48(r3)
+/* 808607D4  80 04 5F 84 */	lwz r0, 0x5f84(r4)
 /* 808607D8  90 1E 00 4C */	stw r0, 0x4c(r30)
 lbl_808607DC:
 /* 808607DC  38 60 00 01 */	li r3, 1

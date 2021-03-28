@@ -10,8 +10,8 @@ lbl_805611E0:
 /* 80561200  4B BE 45 08 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80561204  3B E0 00 00 */	li r31, 0
 /* 80561208  3B C0 FF FF */	li r30, -1
-/* 8056120C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80561210  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8056120C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80561210  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80561214  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80561218  7F 83 E3 78 */	mr r3, r28
 /* 8056121C  7F 64 DB 78 */	mr r4, r27

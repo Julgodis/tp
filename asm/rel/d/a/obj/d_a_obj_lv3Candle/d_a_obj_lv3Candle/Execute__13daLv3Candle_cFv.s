@@ -7,9 +7,9 @@ lbl_80C580A0:
 /* 80C580B4  7C 7E 1B 78 */	mr r30, r3
 /* 80C580B8  3C 60 80 C6 */	lis r3, mCcDObjInfo__13daLv3Candle_c@ha
 /* 80C580BC  3B E3 85 64 */	addi r31, r3, mCcDObjInfo__13daLv3Candle_c@l
-/* 80C580C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C580C4  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80C580C8  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80C580C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C580C4  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80C580C8  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80C580CC  38 80 01 00 */	li r4, 0x100
 /* 80C580D0  38 BE 06 EC */	addi r5, r30, 0x6ec
 /* 80C580D4  38 C0 00 00 */	li r6, 0
@@ -18,7 +18,7 @@ lbl_80C580A0:
 /* 80C580E0  39 08 06 08 */	addi r8, r8, g_whiteColor@l
 /* 80C580E4  7D 09 43 78 */	mr r9, r8
 /* 80C580E8  39 40 00 00 */	li r10, 0
-/* 80C580EC  C0 3F 00 38 */	lfs f1, 0x38(r31)	/* effective address: 80C5859C */
+/* 80C580EC  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 80C580F0  4B 3F 50 C8 */	b setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif
 /* 80C580F4  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80C580F8  38 80 01 01 */	li r4, 0x101
@@ -51,7 +51,7 @@ lbl_80C580A0:
 /* 80C58164  90 01 00 08 */	stw r0, 8(r1)
 /* 80C58168  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C5816C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C58170  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C58170  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C58174  38 81 00 08 */	addi r4, r1, 8
 /* 80C58178  38 BE 06 EC */	addi r5, r30, 0x6ec
 /* 80C5817C  38 C0 00 00 */	li r6, 0
@@ -141,8 +141,8 @@ lbl_80C582B8:
 /* 80C582B8  38 7E 06 D8 */	addi r3, r30, 0x6d8
 /* 80C582BC  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C582C0  4B 61 73 88 */	b SetC__8cM3dGSphFRC4cXyz
-/* 80C582C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C582C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C582C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C582C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C582CC  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C582D0  38 9E 05 B4 */	addi r4, r30, 0x5b4
 /* 80C582D4  4B 60 C8 D4 */	b Set__4cCcSFP8cCcD_Obj

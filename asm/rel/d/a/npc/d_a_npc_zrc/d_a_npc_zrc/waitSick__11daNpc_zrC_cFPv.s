@@ -43,10 +43,10 @@ lbl_80B91730:
 /* 80B9179C  38 00 00 02 */	li r0, 2
 /* 80B917A0  B0 1F 0E 26 */	sth r0, 0xe26(r31)
 lbl_80B917A4:
-/* 80B917A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B917A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B917AC  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80B917B0  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80B917A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B917A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B917AC  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80B917B0  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B917B4  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B917B8  41 82 00 38 */	beq lbl_80B917F0
 /* 80B917BC  4B 5C DC 68 */	b checkNowWolfEyeUp__9daPy_py_cFv

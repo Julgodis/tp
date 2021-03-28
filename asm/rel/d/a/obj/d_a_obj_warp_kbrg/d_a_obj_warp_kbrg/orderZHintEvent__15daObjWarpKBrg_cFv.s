@@ -5,9 +5,9 @@ lbl_80D27A38:
 /* 80D27A44  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D27A48  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80D27A4C  7C 7F 1B 78 */	mr r31, r3
-/* 80D27A50  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D27A54  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D27A58  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D27A50  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D27A54  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D27A58  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 80D27A5C  48 00 10 85 */	bl checkTalkDistance__15daObjWarpKBrg_cFv
 /* 80D27A60  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D27A64  41 82 00 B0 */	beq lbl_80D27B14
@@ -21,8 +21,8 @@ lbl_80D27A38:
 /* 80D27A84  4E 80 04 21 */	bctrl 
 /* 80D27A88  28 03 00 00 */	cmplwi r3, 0
 /* 80D27A8C  40 82 00 88 */	bne lbl_80D27B14
-/* 80D27A90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27A94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D27A90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27A94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D27A98  38 63 5B 48 */	addi r3, r3, 0x5b48
 /* 80D27A9C  7F E4 FB 78 */	mr r4, r31
 /* 80D27AA0  38 A0 01 FF */	li r5, 0x1ff
@@ -39,7 +39,7 @@ lbl_80D27A38:
 /* 80D27ACC  90 01 00 08 */	stw r0, 8(r1)
 /* 80D27AD0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D27AD4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D27AD8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D27AD8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D27ADC  38 81 00 08 */	addi r4, r1, 8
 /* 80D27AE0  38 A0 00 00 */	li r5, 0
 /* 80D27AE4  38 C0 00 00 */	li r6, 0

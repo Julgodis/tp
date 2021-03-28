@@ -21,9 +21,9 @@ lbl_80947D74:
 /* 80947DC0  7F E4 FB 78 */	mr r4, r31
 /* 80947DC4  3C A0 80 95 */	lis r5, l_HOSTIO@ha
 /* 80947DC8  38 E5 BA 3C */	addi r7, r5, l_HOSTIO@l
-/* 80947DCC  A8 A7 00 26 */	lha r5, 0x26(r7)	/* effective address: 8094BA62 */
-/* 80947DD0  A8 C7 00 28 */	lha r6, 0x28(r7)	/* effective address: 8094BA64 */
-/* 80947DD4  A8 E7 00 2A */	lha r7, 0x2a(r7)	/* effective address: 8094BA66 */
+/* 80947DCC  A8 A7 00 26 */	lha r5, 0x26(r7)
+/* 80947DD0  A8 C7 00 28 */	lha r6, 0x28(r7)
+/* 80947DD4  A8 E7 00 2A */	lha r7, 0x2a(r7)
 /* 80947DD8  4B 92 87 68 */	b cLib_addCalcAngleS__FPsssss
 /* 80947DDC  7F E3 07 34 */	extsh r3, r31
 /* 80947DE0  A8 1E 04 DE */	lha r0, 0x4de(r30)

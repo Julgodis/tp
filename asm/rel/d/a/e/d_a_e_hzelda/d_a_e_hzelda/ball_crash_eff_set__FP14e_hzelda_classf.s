@@ -10,14 +10,14 @@ lbl_806F1FA4:
 /* 806F1FC4  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 806F1FC8  3B 60 00 00 */	li r27, 0
 /* 806F1FCC  3B E0 00 00 */	li r31, 0
-/* 806F1FD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F1FD4  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 806F1FD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F1FD4  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 806F1FD8  3C 60 80 6F */	lis r3, data_806F567C@ha
 /* 806F1FDC  3B A3 56 7C */	addi r29, r3, data_806F567C@l
 /* 806F1FE0  3C 60 80 6F */	lis r3, lit_3767@ha
 /* 806F1FE4  3B C3 55 14 */	addi r30, r3, lit_3767@l
 lbl_806F1FE8:
-/* 806F1FE8  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 806F1FE8  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 806F1FEC  38 80 00 00 */	li r4, 0
 /* 806F1FF0  90 81 00 08 */	stw r4, 8(r1)
 /* 806F1FF4  38 00 FF FF */	li r0, -1
@@ -32,7 +32,7 @@ lbl_806F1FE8:
 /* 806F2018  39 00 00 00 */	li r8, 0
 /* 806F201C  39 21 00 20 */	addi r9, r1, 0x20
 /* 806F2020  39 40 00 FF */	li r10, 0xff
-/* 806F2024  C0 3E 00 00 */	lfs f1, 0(r30)	/* effective address: 806F5514 */
+/* 806F2024  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 806F2028  4B 95 AA 68 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 806F202C  3B 7B 00 01 */	addi r27, r27, 1
 /* 806F2030  2C 1B 00 03 */	cmpwi r27, 3

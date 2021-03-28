@@ -6,20 +6,20 @@ lbl_80AD7B70:
 /* 80AD7B80  38 A3 7E F8 */	addi r5, r3, mCutList__14daNpc_Seirei_c@l
 /* 80AD7B84  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AD7B88  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AD7B8C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AD7B90  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AD7B94  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AD7EF8 */
-/* 80AD7B98  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AD7EFC */
-/* 80AD7B9C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AD7BA0  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AD7F00 */
+/* 80AD7B8C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AD7B90  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AD7B94  90 65 00 00 */	stw r3, 0(r5)
+/* 80AD7B98  90 05 00 04 */	stw r0, 4(r5)
+/* 80AD7B9C  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AD7BA0  90 05 00 08 */	stw r0, 8(r5)
 /* 80AD7BA4  3C 60 80 AD */	lis r3, lit_3834@ha
 /* 80AD7BA8  38 83 7E EC */	addi r4, r3, lit_3834@l
-/* 80AD7BAC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AD7EEC */
-/* 80AD7BB0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AD7EF0 */
-/* 80AD7BB4  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 80AD7F04 */
-/* 80AD7BB8  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 80AD7F08 */
-/* 80AD7BBC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AD7EF4 */
-/* 80AD7BC0  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 80AD7F0C */
+/* 80AD7BAC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AD7BB0  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AD7BB4  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80AD7BB8  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80AD7BBC  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AD7BC0  90 05 00 14 */	stw r0, 0x14(r5)
 /* 80AD7BC4  3C 60 80 AE */	lis r3, __vt__20daNpc_Seirei_Param_c@ha
 /* 80AD7BC8  38 03 80 E0 */	addi r0, r3, __vt__20daNpc_Seirei_Param_c@l
 /* 80AD7BCC  3C 60 80 AE */	lis r3, l_HIO@ha

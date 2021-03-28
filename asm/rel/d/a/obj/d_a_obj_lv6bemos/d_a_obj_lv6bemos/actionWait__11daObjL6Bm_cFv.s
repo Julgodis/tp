@@ -9,9 +9,9 @@ lbl_80C7D598:
 /* 80C7D5B4  3B E4 DE CC */	addi r31, r4, l_sph_src@l
 /* 80C7D5B8  3B 80 00 00 */	li r28, 0
 /* 80C7D5BC  3B 60 00 00 */	li r27, 0
-/* 80C7D5C0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C7D5C4  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 80C7D5C8  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 80C7D5C0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C7D5C4  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 80C7D5C8  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 80C7D5CC  4B 39 D3 98 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80C7D5D0  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C7D5D4  54 00 86 3E */	rlwinm r0, r0, 0x10, 0x18, 0x1f

@@ -73,22 +73,22 @@ lbl_8052DBCC:
 lbl_8052DBE4:
 /* 8052DBE4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052DBE8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052DBEC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052DBEC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052DBF0  A8 97 04 E6 */	lha r4, 0x4e6(r23)
 /* 8052DBF4  4B AD E7 E8 */	b mDoMtx_YrotS__FPA4_fs
 /* 8052DBF8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052DBFC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052DC00  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052DC00  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052DC04  A8 97 04 E4 */	lha r4, 0x4e4(r23)
 /* 8052DC08  4B AD E7 94 */	b mDoMtx_XrotM__FPA4_fs
 /* 8052DC0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052DC10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052DC14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052DC14  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052DC18  A8 97 04 E8 */	lha r4, 0x4e8(r23)
 /* 8052DC1C  4B AD E8 B0 */	b mDoMtx_ZrotM__FPA4_fs
 /* 8052DC20  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052DC24  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052DC28  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052DC28  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052DC2C  A8 97 07 30 */	lha r4, 0x730(r23)
 /* 8052DC30  4B AD E8 04 */	b mDoMtx_YrotM__FPA4_fs
 /* 8052DC34  C0 1F 00 18 */	lfs f0, 0x18(r31)

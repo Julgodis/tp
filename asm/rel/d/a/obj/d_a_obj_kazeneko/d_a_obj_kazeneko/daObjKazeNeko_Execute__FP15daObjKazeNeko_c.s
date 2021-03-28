@@ -40,7 +40,7 @@ lbl_80C3CEA8:
 /* 80C3CF40  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C3CF44  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C3CF48  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C3CF4C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C3CF4C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C3CF50  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C3CF54  38 BF 07 2C */	addi r5, r31, 0x72c
 /* 80C3CF58  38 C0 00 00 */	li r6, 0

@@ -8,8 +8,8 @@ lbl_805DE464:
 /* 805DE47C  3C 60 80 5F */	lis r3, stringBase0@ha
 /* 805DE480  38 63 D3 D4 */	addi r3, r3, stringBase0@l
 /* 805DE484  38 80 00 23 */	li r4, 0x23
-/* 805DE488  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805DE48C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805DE488  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805DE48C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805DE490  3F E5 00 02 */	addis r31, r5, 2
 /* 805DE494  3B FF C2 F8 */	addi r31, r31, -15624
 /* 805DE498  7F E5 FB 78 */	mr r5, r31

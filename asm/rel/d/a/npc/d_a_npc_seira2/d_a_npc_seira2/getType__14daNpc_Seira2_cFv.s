@@ -2,8 +2,8 @@ lbl_80AD171C:
 /* 80AD171C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80AD1720  7C 08 02 A6 */	mflr r0
 /* 80AD1724  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80AD1728  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD172C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AD1728  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD172C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AD1730  38 63 00 28 */	addi r3, r3, 0x28
 /* 80AD1734  38 80 00 00 */	li r4, 0
 /* 80AD1738  4B 56 14 78 */	b isDarkClearLV__21dSv_player_status_b_cCFi

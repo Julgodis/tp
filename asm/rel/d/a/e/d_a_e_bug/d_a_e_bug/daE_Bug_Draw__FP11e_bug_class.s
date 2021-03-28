@@ -7,8 +7,8 @@ lbl_80694BBC:
 /* 80694BD0  7C 7C 1B 78 */	mr r28, r3
 /* 80694BD4  3B DC 05 88 */	addi r30, r28, 0x588
 /* 80694BD8  3B A0 00 00 */	li r29, 0
-/* 80694BDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80694BE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80694BDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80694BE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80694BE4  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80694BE8  48 00 00 B8 */	b lbl_80694CA0
 lbl_80694BEC:
@@ -23,7 +23,7 @@ lbl_80694BEC:
 /* 80694C0C  80 9E 00 00 */	lwz r4, 0(r30)
 /* 80694C10  3C A0 80 69 */	lis r5, struct_80697E8C+0x0@ha
 /* 80694C14  38 A5 7E 8C */	addi r5, r5, struct_80697E8C+0x0@l
-/* 80694C18  88 A5 00 00 */	lbz r5, 0(r5)	/* effective address: 80697E8C */
+/* 80694C18  88 A5 00 00 */	lbz r5, 0(r5)
 /* 80694C1C  7C A5 07 74 */	extsb r5, r5
 /* 80694C20  4B 99 7F 48 */	b entrySimpleModel__14dComIfG_play_cFP8J3DModeli
 /* 80694C24  48 00 00 74 */	b lbl_80694C98
@@ -32,7 +32,7 @@ lbl_80694C28:
 /* 80694C2C  80 9E 00 04 */	lwz r4, 4(r30)
 /* 80694C30  3C A0 80 69 */	lis r5, struct_80697E8C+0x0@ha
 /* 80694C34  38 A5 7E 8C */	addi r5, r5, struct_80697E8C+0x0@l
-/* 80694C38  88 A5 00 00 */	lbz r5, 0(r5)	/* effective address: 80697E8C */
+/* 80694C38  88 A5 00 00 */	lbz r5, 0(r5)
 /* 80694C3C  7C A5 07 74 */	extsb r5, r5
 /* 80694C40  4B 99 7F 28 */	b entrySimpleModel__14dComIfG_play_cFP8J3DModeli
 /* 80694C44  48 00 00 54 */	b lbl_80694C98
@@ -46,7 +46,7 @@ lbl_80694C48:
 /* 80694C60  80 9E 00 00 */	lwz r4, 0(r30)
 /* 80694C64  3C A0 80 69 */	lis r5, struct_80697E8C+0x0@ha
 /* 80694C68  38 A5 7E 8C */	addi r5, r5, struct_80697E8C+0x0@l
-/* 80694C6C  88 A5 00 00 */	lbz r5, 0(r5)	/* effective address: 80697E8C */
+/* 80694C6C  88 A5 00 00 */	lbz r5, 0(r5)
 /* 80694C70  7C A5 07 74 */	extsb r5, r5
 /* 80694C74  4B 99 7E F4 */	b entrySimpleModel__14dComIfG_play_cFP8J3DModeli
 /* 80694C78  48 00 00 20 */	b lbl_80694C98
@@ -55,7 +55,7 @@ lbl_80694C7C:
 /* 80694C80  80 9E 00 04 */	lwz r4, 4(r30)
 /* 80694C84  3C A0 80 69 */	lis r5, struct_80697E8C+0x0@ha
 /* 80694C88  38 A5 7E 8C */	addi r5, r5, struct_80697E8C+0x0@l
-/* 80694C8C  88 A5 00 00 */	lbz r5, 0(r5)	/* effective address: 80697E8C */
+/* 80694C8C  88 A5 00 00 */	lbz r5, 0(r5)
 /* 80694C90  7C A5 07 74 */	extsb r5, r5
 /* 80694C94  4B 99 7E D4 */	b entrySimpleModel__14dComIfG_play_cFP8J3DModeli
 lbl_80694C98:

@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPAEmitterWorkData {
 };
 
 struct JKRHeap {
@@ -22,7 +22,7 @@ struct JPAFieldBlock {
 	/* 8027D0C0 */ void init(JKRHeap*);
 };
 
-struct JPAEmitterWorkData {
+struct JPABaseParticle {
 };
 
 struct JPAFieldBase {
@@ -377,105 +377,105 @@ asm JPAFieldBlock::JPAFieldBlock(u8 const* param_0, JKRHeap* param_1) {
 /* ############################################################################################## */
 /* 803C44A8-803C44CC 0024+00 s=1 e=0 z=0  None .data      @3259                                                        */
 SECTION_DATA static void* lit_3259[9] = {
-	/* 0    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0xFC),
-	/* 1    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x130),
-	/* 2    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x164),
-	/* 3    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x198),
-	/* 4    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x1CC),
-	/* 5    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x200),
-	/* 6    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x234),
-	/* 7    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x268),
-	/* 8    */ (void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x29C),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0xFC),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x130),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x164),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x198),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x1CC),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x200),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x234),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x268),
+	(void*)(((char*)init__13JPAFieldBlockFP7JKRHeap)+0x29C),
 };
 
 /* 803C44CC-803C44E0 0014+00 s=11 e=0 z=0  None .data      __vt__12JPAFieldBase                                         */
 SECTION_DATA static void* __vt__12JPAFieldBase[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JPAFieldBaseFv,
-	/* 3    */ (void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JPAFieldBaseFv,
+	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)NULL,
 };
 
 /* 803C44E0-803C44F4 0014+00 s=2 e=0 z=0  None .data      __vt__12JPAFieldSpin                                         */
 SECTION_DATA static void* __vt__12JPAFieldSpin[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JPAFieldSpinFv,
-	/* 3    */ (void*)prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JPAFieldSpinFv,
+	(void*)prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C44F4-803C4508 0014+00 s=2 e=0 z=0  None .data      __vt__12JPAFieldDrag                                         */
 SECTION_DATA static void* __vt__12JPAFieldDrag[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JPAFieldDragFv,
-	/* 3    */ (void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JPAFieldDragFv,
+	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C4508-803C451C 0014+00 s=2 e=0 z=0  None .data      __vt__14JPAFieldRandom                                       */
 SECTION_DATA static void* __vt__14JPAFieldRandom[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JPAFieldRandomFv,
-	/* 3    */ (void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JPAFieldRandomFv,
+	(void*)prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C451C-803C4530 0014+00 s=2 e=0 z=0  None .data      __vt__18JPAFieldConvection                                   */
 SECTION_DATA static void* __vt__18JPAFieldConvection[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18JPAFieldConvectionFv,
-	/* 3    */ (void*)prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18JPAFieldConvectionFv,
+	(void*)prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C4530-803C4544 0014+00 s=2 e=0 z=0  None .data      __vt__14JPAFieldVortex                                       */
 SECTION_DATA static void* __vt__14JPAFieldVortex[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JPAFieldVortexFv,
-	/* 3    */ (void*)prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JPAFieldVortexFv,
+	(void*)prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C4544-803C4558 0014+00 s=2 e=0 z=0  None .data      __vt__14JPAFieldNewton                                       */
 SECTION_DATA static void* __vt__14JPAFieldNewton[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JPAFieldNewtonFv,
-	/* 3    */ (void*)prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JPAFieldNewtonFv,
+	(void*)prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C4558-803C456C 0014+00 s=2 e=0 z=0  None .data      __vt__14JPAFieldMagnet                                       */
 SECTION_DATA static void* __vt__14JPAFieldMagnet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JPAFieldMagnetFv,
-	/* 3    */ (void*)prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JPAFieldMagnetFv,
+	(void*)prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C456C-803C4580 0014+00 s=2 e=0 z=0  None .data      __vt__11JPAFieldAir                                          */
 SECTION_DATA static void* __vt__11JPAFieldAir[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JPAFieldAirFv,
-	/* 3    */ (void*)prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JPAFieldAirFv,
+	(void*)prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 };
 
 /* 803C4580-803C4598 0014+04 s=2 e=0 z=0  None .data      __vt__15JPAFieldGravity                                      */
 SECTION_DATA static void* __vt__15JPAFieldGravity[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15JPAFieldGravityFv,
-	/* 3    */ (void*)prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock,
-	/* 4    */ (void*)calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15JPAFieldGravityFv,
+	(void*)prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock,
+	(void*)calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle,
 	/* padding */
 	NULL,
 };

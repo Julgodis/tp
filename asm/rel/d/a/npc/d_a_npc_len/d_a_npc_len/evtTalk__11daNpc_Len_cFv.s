@@ -6,11 +6,11 @@ lbl_80A65710:
 /* 80A65720  7C 7F 1B 78 */	mr r31, r3
 /* 80A65724  3C 80 80 A7 */	lis r4, lit_4723@ha
 /* 80A65728  38 A4 98 54 */	addi r5, r4, lit_4723@l
-/* 80A6572C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A69854 */
-/* 80A65730  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A69858 */
+/* 80A6572C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A65730  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A65734  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A65738  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A6573C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A6985C */
+/* 80A6573C  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A65740  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A65744  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A65748  48 00 08 BD */	bl chkAction__11daNpc_Len_cFM11daNpc_Len_cFPCvPvPv_i
@@ -25,11 +25,11 @@ lbl_80A65710:
 lbl_80A6576C:
 /* 80A6576C  3C 60 80 A7 */	lis r3, lit_4728@ha
 /* 80A65770  38 83 98 60 */	addi r4, r3, lit_4728@l
-/* 80A65774  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A69860 */
-/* 80A65778  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A69864 */
+/* 80A65774  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A65778  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A6577C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A65780  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A65784  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A69868 */
+/* 80A65784  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A65788  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A6578C  7F E3 FB 78 */	mr r3, r31
 /* 80A65790  38 81 00 08 */	addi r4, r1, 8

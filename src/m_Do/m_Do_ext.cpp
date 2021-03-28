@@ -20,20 +20,20 @@ struct mDoExt_baseAnm {
 };
 
 struct J3DMaterialTable;
-struct J3DAnmTevRegKey {
-	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
+struct J3DAnmTextureSRTKey {
+	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DAnmTexPattern {
 	/* 8032B004 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
-struct J3DAnmTextureSRTKey {
-	/* 8032B0C0 */ void searchUpdateMaterialID(J3DMaterialTable*);
-};
-
 struct J3DAnmColor {
 	/* 8032A8A4 */ void searchUpdateMaterialID(J3DMaterialTable*);
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B780 */ void searchUpdateMaterialID(J3DMaterialTable*);
 };
 
 struct J3DMaterialTable {
@@ -125,22 +125,6 @@ struct J3DModel {
 	/* 803279A0 */ void diff();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DTevSwapModeTable {
-	/* 8000E134 */ J3DTevSwapModeTable();
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
 struct J3DTevStageInfo {
 };
 
@@ -149,8 +133,24 @@ struct J3DTevStage {
 	/* 8000E298 */ void setTevStageInfo(J3DTevStageInfo const&);
 };
 
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DTevSwapModeTable {
+	/* 8000E134 */ J3DTevSwapModeTable();
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
 };
 
 struct J3DTevBlock {
@@ -216,14 +216,14 @@ struct J3DColorBlock {
 	/* 8000E0E0 */ void setColorChanNum(u8);
 };
 
-struct J3DIndTexCoordScale {
-	/* 8000E024 */ ~J3DIndTexCoordScale();
-	/* 8000E0E4 */ J3DIndTexCoordScale();
-};
-
 struct J3DIndTexMtx {
 	/* 8000E064 */ ~J3DIndTexMtx();
 	/* 8000E0F0 */ J3DIndTexMtx();
+};
+
+struct J3DIndTexCoordScale {
+	/* 8000E024 */ ~J3DIndTexCoordScale();
+	/* 8000E0E4 */ J3DIndTexCoordScale();
 };
 
 struct J3DIndBlock {
@@ -346,10 +346,10 @@ struct J3DMtxCalcNoAnmBase {
 	/* 8000FA8C */ ~J3DMtxCalcNoAnmBase();
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct mDoExt_McaMorfCallBack1_c {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorf {
@@ -402,10 +402,10 @@ struct mDoExt_3Dline_c {
 	/* 800126BC */ mDoExt_3Dline_c();
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat0_c {
@@ -458,10 +458,10 @@ struct dDlst_list_c {
 	/* 800565EC */ void entryZSortXluDrawList(J3DDrawBuffer*, J3DPacket*, cXyz&);
 };
 
-struct JAISoundID {
+struct Z2SoundHandlePool {
 };
 
-struct Z2SoundHandlePool {
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -535,13 +535,13 @@ struct J3DIndTexMtxInfo {
 	/* 803257DC */ void operator=(J3DIndTexMtxInfo const&);
 };
 
-struct J3DTevColorAnm {
+struct J3DTexMtxAnm {
 };
 
 struct J3DTevKColorAnm {
 };
 
-struct J3DTexMtxAnm {
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterialAnm {
@@ -1221,243 +1221,243 @@ SECTION_DATA static u8 l_mat1DL[141 + 3 /* padding */] = {
 
 /* 803A31F0-803A3234 0044+00 s=1 e=2 z=0  None .data      __vt__7JUTFont                                               */
 SECTION_DATA void* __vt__7JUTFont[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7JUTFontFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)NULL,
-	/* 12   */ (void*)getCellWidth__7JUTFontCFv,
-	/* 13   */ (void*)getCellHeight__7JUTFontCFv,
-	/* 14   */ (void*)NULL,
-	/* 15   */ (void*)NULL,
-	/* 16   */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7JUTFontFv,
+	(void*)NULL,
+	(void*)setGX__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getCellWidth__7JUTFontCFv,
+	(void*)getCellHeight__7JUTFontCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A3234-803A3248 0014+00 s=1 e=1 z=0  None .data      __vt__26mDoExt_3DlineMatSortPacket                           */
 SECTION_DATA void* __vt__26mDoExt_3DlineMatSortPacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__26mDoExt_3DlineMatSortPacketFv,
-	/* 4    */ (void*)__dt__26mDoExt_3DlineMatSortPacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__26mDoExt_3DlineMatSortPacketFv,
+	(void*)__dt__26mDoExt_3DlineMatSortPacketFv,
 };
 
 /* 803A3248-803A325C 0014+00 s=0 e=0 z=22  None .data      __vt__19mDoExt_3DlineMat1_c                                  */
 SECTION_DATA void* __vt__19mDoExt_3DlineMat1_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getMaterialID__19mDoExt_3DlineMat1_cFv,
-	/* 3    */ (void*)setMaterial__19mDoExt_3DlineMat1_cFv,
-	/* 4    */ (void*)draw__19mDoExt_3DlineMat1_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getMaterialID__19mDoExt_3DlineMat1_cFv,
+	(void*)setMaterial__19mDoExt_3DlineMat1_cFv,
+	(void*)draw__19mDoExt_3DlineMat1_cFv,
 };
 
 /* 803A325C-803A3270 0014+00 s=0 e=0 z=14  None .data      __vt__19mDoExt_3DlineMat0_c                                  */
 SECTION_DATA void* __vt__19mDoExt_3DlineMat0_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getMaterialID__19mDoExt_3DlineMat0_cFv,
-	/* 3    */ (void*)setMaterial__19mDoExt_3DlineMat0_cFv,
-	/* 4    */ (void*)draw__19mDoExt_3DlineMat0_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getMaterialID__19mDoExt_3DlineMat0_cFv,
+	(void*)setMaterial__19mDoExt_3DlineMat0_cFv,
+	(void*)draw__19mDoExt_3DlineMat0_cFv,
 };
 
 /* 803A3270-803A3284 0014+00 s=2 e=0 z=0  None .data      __vt__19mDoExt_invJntPacket                                  */
 SECTION_DATA static void* __vt__19mDoExt_invJntPacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__19mDoExt_invJntPacketFv,
-	/* 4    */ (void*)__dt__19mDoExt_invJntPacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19mDoExt_invJntPacketFv,
+	(void*)__dt__19mDoExt_invJntPacketFv,
 };
 
 /* 803A3284-803A32B0 002C+00 s=2 e=0 z=0  None .data      __vt__15mDoExt_McaMorf2                                      */
 SECTION_DATA static void* __vt__15mDoExt_McaMorf2[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15mDoExt_McaMorf2Fv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)calc__15mDoExt_McaMorf2Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15mDoExt_McaMorf2Fv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)calc__15mDoExt_McaMorf2Fv,
 };
 
 /* 803A32B0-803A32DC 002C+00 s=2 e=0 z=0  None .data      __vt__16mDoExt_McaMorfSO                                     */
 SECTION_DATA static void* __vt__16mDoExt_McaMorfSO[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16mDoExt_McaMorfSOFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)calc__16mDoExt_McaMorfSOFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16mDoExt_McaMorfSOFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)calc__16mDoExt_McaMorfSOFv,
 };
 
 /* 803A32DC-803A32FC 0020+00 s=1 e=0 z=0  None .data      __vt__15mDoExt_zelAnime                                      */
 SECTION_DATA static void* __vt__15mDoExt_zelAnime[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__15Z2SoundObjAnimeFP3VecUc,
-	/* 6    */ (void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__14Z2SoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__15Z2SoundObjAnimeFP3VecUc,
+	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 803A32FC-803A3328 002C+00 s=2 e=0 z=0  None .data      __vt__14mDoExt_McaMorf                                       */
 SECTION_DATA static void* __vt__14mDoExt_McaMorf[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoExt_McaMorfFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)calc__14mDoExt_McaMorfFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14mDoExt_McaMorfFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)calc__14mDoExt_McaMorfFv,
 };
 
 /* 803A3328-803A3354 002C+00 s=2 e=0 z=0  None .data      __vt__13mDoExt_morf_c                                        */
 SECTION_DATA static void* __vt__13mDoExt_morf_c[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13mDoExt_morf_cFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)func_80015084,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13mDoExt_morf_cFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)func_80015084,
 };
 
 /* 803A3354-803A3360 000C+00 s=3 e=30 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DFrameCtrlFv,
 };
 
 /* 803A3360-803A338C 002C+00 s=5 e=2 z=0  None .data      __vt__73J3DMtxCalcNoAnm<27J3DMtxCalcCalcTransformMaya,24J3DMtxCalcJ3DSysInitMaya> */
 SECTION_DATA void* data_803A3360[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_8000FA20,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)func_80015084,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8000FA20,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)func_80015084,
 };
 
 /* 803A338C-803A33B8 002C+00 s=6 e=4 z=0  None .data      __vt__19J3DMtxCalcNoAnmBase                                  */
 SECTION_DATA void* __vt__19J3DMtxCalcNoAnmBase[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J3DMtxCalcNoAnmBaseFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19J3DMtxCalcNoAnmBaseFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A33B8-803A33E4 002C+00 s=1 e=1 z=2  None .data      __vt__28mDoExt_MtxCalcAnmBlendTblOld                         */
 SECTION_DATA void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__28mDoExt_MtxCalcAnmBlendTblOldFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)calc__28mDoExt_MtxCalcAnmBlendTblOldFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__28mDoExt_MtxCalcAnmBlendTblOldFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)calc__28mDoExt_MtxCalcAnmBlendTblOldFv,
 };
 
 /* 803A33E4-803A3410 002C+00 s=2 e=1 z=2  None .data      __vt__25mDoExt_MtxCalcAnmBlendTbl                            */
 SECTION_DATA void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25mDoExt_MtxCalcAnmBlendTblFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_8001505C,
-	/* 10   */ (void*)calc__25mDoExt_MtxCalcAnmBlendTblFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25mDoExt_MtxCalcAnmBlendTblFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_8001505C,
+	(void*)calc__25mDoExt_MtxCalcAnmBlendTblFv,
 };
 
 /* 803A3410-803A343C 002C+00 s=2 e=0 z=0  None .data      __vt__114J3DMtxCalcAnimation<64J3DMtxCalcAnimationAdaptorDefault<27J3DMtxCalcCalcTransformMaya>,24J3DMtxCalcJ3DSysInitMaya> */
 SECTION_DATA static void* data_803A3410[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80014FC8,
-	/* 3    */ (void*)func_8000D8E4,
-	/* 4    */ (void*)getAnmTransform__17J3DMtxCalcAnmBaseFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_80015034,
-	/* 10   */ (void*)func_800150AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80014FC8,
+	(void*)func_8000D8E4,
+	(void*)getAnmTransform__17J3DMtxCalcAnmBaseFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_80015034,
+	(void*)func_800150AC,
 };
 
 /* 803A343C-803A3468 002C+00 s=3 e=0 z=0  None .data      __vt__17J3DMtxCalcAnmBase                                    */
 SECTION_DATA static void* __vt__17J3DMtxCalcAnmBase[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17J3DMtxCalcAnmBaseFv,
-	/* 3    */ (void*)setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__17J3DMtxCalcAnmBaseFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17J3DMtxCalcAnmBaseFv,
+	(void*)setAnmTransform__17J3DMtxCalcAnmBaseFP15J3DAnmTransform,
+	(void*)getAnmTransform__17J3DMtxCalcAnmBaseFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A3468-803A3498 002C+04 s=10 e=4 z=0  None .data      __vt__10J3DMtxCalc                                           */
 SECTION_DATA void* __vt__10J3DMtxCalc[11 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J3DMtxCalcFv,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

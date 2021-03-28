@@ -27,15 +27,18 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct cXyz {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct cXyz {
 };
 
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
+};
+
+struct J3DModelData {
 };
 
 struct Z2Creature {
@@ -44,13 +47,10 @@ struct Z2Creature {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -96,28 +96,29 @@ struct Z2CreatureEnemy {
 // 
 
 static void anm_init(e_gs_class*, int, f32, u8, f32); // 2
-static void daE_GS_Draw(e_gs_class*); // 2
+void daE_GS_Draw(e_gs_class*); // 2
 static void e_gs_wait(e_gs_class*); // 2
 static void action(e_gs_class*); // 2
 static void daE_GS_Execute(e_gs_class*); // 2
-static bool daE_GS_IsDelete(e_gs_class*); // 2
-static void daE_GS_Delete(e_gs_class*); // 2
+bool daE_GS_IsDelete(e_gs_class*); // 2
+void daE_GS_Delete(e_gs_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_GS_Create(fopAc_ac_c*); // 2
+void daE_GS_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__12daE_GS_HIO_cFv(); // 1
 extern "C" static void anm_init__FP10e_gs_classifUcf(); // 1
-extern "C" static void daE_GS_Draw__FP10e_gs_class(); // 1
+extern "C" void daE_GS_Draw__FP10e_gs_class(); // 1
 extern "C" static void e_gs_wait__FP10e_gs_class(); // 1
 extern "C" static void action__FP10e_gs_class(); // 1
 extern "C" static void daE_GS_Execute__FP10e_gs_class(); // 1
-extern "C" static bool daE_GS_IsDelete__FP10e_gs_class(); // 1
-extern "C" static void daE_GS_Delete__FP10e_gs_class(); // 1
+extern "C" bool daE_GS_IsDelete__FP10e_gs_class(); // 1
+extern "C" void daE_GS_Delete__FP10e_gs_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_GS_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_GS_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daE_GS_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_gs_cpp(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_GS_Method[8];
 extern "C" extern void* g_profile_E_GS[12];
 
 // 
@@ -182,13 +183,9 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -209,39 +206,39 @@ SECTION_RODATA static u32 const lit_3648 = 0x41F00000;
 /* 806DFE00-806DFE04 0004+00 s=1 e=0 z=0  None .rodata    @3649                                                        */
 SECTION_RODATA static u32 const lit_3649 = 0x43960000;
 
-/* 806DFE34-806DFE54 0020+00 s=1 e=0 z=0  None .data      l_daE_GS_Method                                              */
-SECTION_DATA static void* l_daE_GS_Method[8] = {
-	/* 0    */ (void*)daE_GS_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_GS_Delete__FP10e_gs_class,
-	/* 2    */ (void*)daE_GS_Execute__FP10e_gs_class,
-	/* 3    */ (void*)daE_GS_IsDelete__FP10e_gs_class,
-	/* 4    */ (void*)daE_GS_Draw__FP10e_gs_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 806DFE34-806DFE54 0020+00 s=0 e=0 z=0  None .data      l_daE_GS_Method                                              */
+SECTION_DATA void* l_daE_GS_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 806DFE54-806DFE84 0030+00 s=0 e=0 z=1  None .data      g_profile_E_GS                                               */
+/* 806DFE54-806DFE84 0030+00 s=0 e=0 z=0  None .data      g_profile_E_GS                                               */
 SECTION_DATA void* g_profile_E_GS[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01B00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000006BC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00730000,
-	/* 9    */ (void*)&l_daE_GS_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01B00000,
+	(void*)NULL,
+	(void*)0x000006BC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00730000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x020E0000,
 };
 
 /* 806DFE84-806DFE90 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_GS_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_GS_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daE_GS_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 806DF46C-806DF4B4 0048+00 s=1 e=0 z=0  None .text      __ct__12daE_GS_HIO_cFv                                       */
@@ -306,11 +303,11 @@ asm static void anm_init(e_gs_class* param_0, int param_1, f32 param_2, u8 param
 #pragma pop
 
 
-/* 806DF560-806DF660 0100+00 s=1 e=0 z=0  None .text      daE_GS_Draw__FP10e_gs_class                                  */
+/* 806DF560-806DF660 0100+00 s=0 e=0 z=0  None .text      daE_GS_Draw__FP10e_gs_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_GS_Draw(e_gs_class* param_0) {
+asm void daE_GS_Draw(e_gs_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Draw__FP10e_gs_class.s"
 }
@@ -349,7 +346,7 @@ asm static void action(e_gs_class* param_0) {
 #pragma pop
 
 
-/* 806DF874-806DFA48 01D4+00 s=2 e=0 z=0  None .text      daE_GS_Execute__FP10e_gs_class                               */
+/* 806DF874-806DFA48 01D4+00 s=1 e=0 z=0  None .text      daE_GS_Execute__FP10e_gs_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -360,17 +357,17 @@ asm static void daE_GS_Execute(e_gs_class* param_0) {
 #pragma pop
 
 
-/* 806DFA48-806DFA50 0008+00 s=1 e=0 z=0  None .text      daE_GS_IsDelete__FP10e_gs_class                              */
-static bool daE_GS_IsDelete(e_gs_class* param_0) {
+/* 806DFA48-806DFA50 0008+00 s=0 e=0 z=0  None .text      daE_GS_IsDelete__FP10e_gs_class                              */
+bool daE_GS_IsDelete(e_gs_class* param_0) {
 	return true;
 }
 
 
-/* 806DFA50-806DFAB8 0068+00 s=1 e=0 z=0  None .text      daE_GS_Delete__FP10e_gs_class                                */
+/* 806DFA50-806DFAB8 0068+00 s=0 e=0 z=0  None .text      daE_GS_Delete__FP10e_gs_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_GS_Delete(e_gs_class* param_0) {
+asm void daE_GS_Delete(e_gs_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Delete__FP10e_gs_class.s"
 }
@@ -388,18 +385,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 806DFC00-806DFD5C 015C+00 s=1 e=0 z=0  None .text      daE_GS_Create__FP10fopAc_ac_c                                */
+/* 806DFC00-806DFD5C 015C+00 s=0 e=0 z=0  None .text      daE_GS_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_GS_Create(fopAc_ac_c* param_0) {
+asm void daE_GS_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_gs/d_a_e_gs/daE_GS_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 806DFD5C-806DFDA4 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_GS_HIO_cFv                                       */
+/* 806DFD5C-806DFDA4 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_GS_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -410,7 +407,7 @@ asm daE_GS_HIO_c::~daE_GS_HIO_c() {
 #pragma pop
 
 
-/* 806DFDA4-806DFDE0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_gs_cpp                                         */
+/* 806DFDA4-806DFDE0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_gs_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

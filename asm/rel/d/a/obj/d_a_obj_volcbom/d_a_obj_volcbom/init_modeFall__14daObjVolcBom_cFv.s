@@ -7,7 +7,7 @@ lbl_80D24D80:
 /* 80D24D94  7C 7E 1B 78 */	mr r30, r3
 /* 80D24D98  3C 60 80 D2 */	lis r3, l_midna_offset@ha
 /* 80D24D9C  3B E3 6B 5C */	addi r31, r3, l_midna_offset@l
-/* 80D24DA0  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 80D26B7C */
+/* 80D24DA0  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80D24DA4  80 7E 05 C0 */	lwz r3, 0x5c0(r30)
 /* 80D24DA8  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80D24DAC  80 7E 05 BC */	lwz r3, 0x5bc(r30)
@@ -16,7 +16,7 @@ lbl_80D24D80:
 /* 80D24DB8  98 1E 09 5E */	stb r0, 0x95e(r30)
 /* 80D24DBC  38 00 00 00 */	li r0, 0
 /* 80D24DC0  98 1E 09 60 */	stb r0, 0x960(r30)
-/* 80D24DC4  C0 1F 00 50 */	lfs f0, 0x50(r31)	/* effective address: 80D26BAC */
+/* 80D24DC4  C0 1F 00 50 */	lfs f0, 0x50(r31)
 /* 80D24DC8  D0 1E 09 78 */	stfs f0, 0x978(r30)
 /* 80D24DCC  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80D24DD0  D0 1E 05 38 */	stfs f0, 0x538(r30)
@@ -33,7 +33,7 @@ lbl_80D24D80:
 /* 80D24DFC  90 01 00 08 */	stw r0, 8(r1)
 /* 80D24E00  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D24E04  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D24E08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D24E08  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D24E0C  38 81 00 08 */	addi r4, r1, 8
 /* 80D24E10  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80D24E14  38 C0 00 00 */	li r6, 0

@@ -9,11 +9,11 @@ lbl_8059EC1C:
 /* 8059EC38  3B C4 F4 38 */	addi r30, r4, m_cullfar_max__12daShopItem_c@l
 /* 8059EC3C  38 1F 09 2C */	addi r0, r31, 0x92c
 /* 8059EC40  90 03 05 04 */	stw r0, 0x504(r3)
-/* 8059EC44  C0 3E 00 34 */	lfs f1, 0x34(r30)	/* effective address: 8059F46C */
-/* 8059EC48  C0 5E 00 38 */	lfs f2, 0x38(r30)	/* effective address: 8059F470 */
+/* 8059EC44  C0 3E 00 34 */	lfs f1, 0x34(r30)
+/* 8059EC48  C0 5E 00 38 */	lfs f2, 0x38(r30)
 /* 8059EC4C  FC 60 08 90 */	fmr f3, f1
-/* 8059EC50  C0 9E 00 3C */	lfs f4, 0x3c(r30)	/* effective address: 8059F474 */
-/* 8059EC54  C0 BE 00 40 */	lfs f5, 0x40(r30)	/* effective address: 8059F478 */
+/* 8059EC50  C0 9E 00 3C */	lfs f4, 0x3c(r30)
+/* 8059EC54  C0 BE 00 40 */	lfs f5, 0x40(r30)
 /* 8059EC58  FC C0 20 90 */	fmr f6, f4
 /* 8059EC5C  4B A7 B8 EC */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 8059EC60  3C 60 80 45 */	lis r3, mSystemFar__14mDoLib_clipper@ha
@@ -30,15 +30,15 @@ lbl_8059EC80:
 /* 8059EC88  3C 60 80 5A */	lis r3, stringBase0@ha
 /* 8059EC8C  38 63 F4 8C */	addi r3, r3, stringBase0@l
 /* 8059EC90  38 63 00 08 */	addi r3, r3, 8
-/* 8059EC94  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8059EC98  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8059EC94  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8059EC98  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8059EC9C  38 84 4E 00 */	addi r4, r4, 0x4e00
 /* 8059ECA0  4B DC 9C F4 */	b strcmp
 /* 8059ECA4  2C 03 00 00 */	cmpwi r3, 0
 /* 8059ECA8  40 82 00 48 */	bne lbl_8059ECF0
-/* 8059ECAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059ECB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8059ECB4  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
+/* 8059ECAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059ECB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8059ECB4  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
 /* 8059ECB8  2C 00 00 01 */	cmpwi r0, 1
 /* 8059ECBC  40 82 00 34 */	bne lbl_8059ECF0
 /* 8059ECC0  88 1F 09 64 */	lbz r0, 0x964(r31)

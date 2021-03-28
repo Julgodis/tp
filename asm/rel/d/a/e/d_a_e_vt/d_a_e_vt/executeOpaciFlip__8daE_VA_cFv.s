@@ -19,16 +19,16 @@ lbl_807CAD1C:
 /* 807CAD20  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 807CAD24  38 00 00 01 */	li r0, 1
 /* 807CAD28  90 1E 13 20 */	stw r0, 0x1320(r30)
-/* 807CAD2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807CAD30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807CAD34  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807CAD2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807CAD30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807CAD34  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 807CAD38  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 807CAD3C  C0 3F 01 64 */	lfs f1, 0x164(r31)
 /* 807CAD40  C0 5F 00 50 */	lfs f2, 0x50(r31)
 /* 807CAD44  38 A0 00 01 */	li r5, 1
 /* 807CAD48  38 C0 00 00 */	li r6, 0
 /* 807CAD4C  38 E0 00 00 */	li r7, 0
-/* 807CAD50  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 807CAD50  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 807CAD54  81 8C 01 60 */	lwz r12, 0x160(r12)
 /* 807CAD58  7D 89 03 A6 */	mtctr r12
 /* 807CAD5C  4E 80 04 21 */	bctrl 

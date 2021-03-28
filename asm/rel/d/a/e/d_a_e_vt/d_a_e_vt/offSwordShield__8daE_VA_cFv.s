@@ -1,8 +1,8 @@
 lbl_807C3A50:
-/* 807C3A50  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807C3A54  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807C3A58  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 807C3A5C  88 04 05 68 */	lbz r0, 0x568(r4)	/* effective address: 80406728 */
+/* 807C3A50  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807C3A54  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807C3A58  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 807C3A5C  88 04 05 68 */	lbz r0, 0x568(r4)
 /* 807C3A60  28 00 00 39 */	cmplwi r0, 0x39
 /* 807C3A64  4C 82 00 20 */	bnelr 
 /* 807C3A68  38 00 00 03 */	li r0, 3

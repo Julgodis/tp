@@ -1,7 +1,7 @@
 lbl_80C85B5C:
 /* 80C85B5C  3C 80 80 C8 */	lis r4, l_HIO@ha
 /* 80C85B60  38 84 62 CC */	addi r4, r4, l_HIO@l
-/* 80C85B64  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80C862D0 */
+/* 80C85B64  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80C85B68  D0 03 05 2C */	stfs f0, 0x52c(r3)
 /* 80C85B6C  3C 80 80 C8 */	lis r4, lit_3650@ha
 /* 80C85B70  C0 04 61 30 */	lfs f0, lit_3650@l(r4)

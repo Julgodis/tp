@@ -8,12 +8,12 @@ lbl_8058F504:
 /* 8058F51C  7C 9F 23 78 */	mr r31, r4
 /* 8058F520  3C 60 80 59 */	lis r3, l_magne_scale@ha
 /* 8058F524  3B C3 28 48 */	addi r30, r3, l_magne_scale@l
-/* 8058F528  C0 1E 00 64 */	lfs f0, 0x64(r30)	/* effective address: 805928AC */
+/* 8058F528  C0 1E 00 64 */	lfs f0, 0x64(r30)
 /* 8058F52C  D0 04 00 00 */	stfs f0, 0(r4)
 /* 8058F530  38 7E 00 64 */	addi r3, r30, 0x64
-/* 8058F534  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 805928B0 */
+/* 8058F534  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8058F538  D0 04 00 04 */	stfs f0, 4(r4)
-/* 8058F53C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 805928B4 */
+/* 8058F53C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8058F540  D0 04 00 08 */	stfs f0, 8(r4)
 /* 8058F544  C0 24 00 04 */	lfs f1, 4(r4)
 /* 8058F548  88 1D 0A 15 */	lbz r0, 0xa15(r29)

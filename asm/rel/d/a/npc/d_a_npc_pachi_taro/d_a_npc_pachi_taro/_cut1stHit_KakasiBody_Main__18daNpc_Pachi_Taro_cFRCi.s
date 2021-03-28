@@ -8,11 +8,11 @@ lbl_80A9F83C:
 /* 80A9F854  7C 9B 23 78 */	mr r27, r4
 /* 80A9F858  3C 60 80 AA */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha
 /* 80A9F85C  3B A3 16 04 */	addi r29, r3, m__24daNpc_Pachi_Taro_Param_c@l
-/* 80A9F860  80 7D 01 D4 */	lwz r3, 0x1d4(r29)	/* effective address: 80AA17D8 */
-/* 80A9F864  80 1D 01 D8 */	lwz r0, 0x1d8(r29)	/* effective address: 80AA17DC */
+/* 80A9F860  80 7D 01 D4 */	lwz r3, 0x1d4(r29)
+/* 80A9F864  80 1D 01 D8 */	lwz r0, 0x1d8(r29)
 /* 80A9F868  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80A9F86C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A9F870  80 1D 01 DC */	lwz r0, 0x1dc(r29)	/* effective address: 80AA17E0 */
+/* 80A9F870  80 1D 01 DC */	lwz r0, 0x1dc(r29)
 /* 80A9F874  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A9F878  93 41 00 14 */	stw r26, 0x14(r1)
 /* 80A9F87C  38 7A 0F 8C */	addi r3, r26, 0xf8c

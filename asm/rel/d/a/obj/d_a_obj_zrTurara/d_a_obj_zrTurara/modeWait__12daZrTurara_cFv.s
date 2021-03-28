@@ -7,8 +7,8 @@ lbl_80D40D88:
 /* 80D40D9C  88 83 07 29 */	lbz r4, 0x729(r3)
 /* 80D40DA0  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D40DA4  41 82 00 28 */	beq lbl_80D40DCC
-/* 80D40DA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D40DAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D40DA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D40DAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D40DB0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D40DB4  7C 05 07 74 */	extsb r5, r0
 /* 80D40DB8  4B 2F 45 A8 */	b isSwitch__10dSv_info_cCFii

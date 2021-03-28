@@ -7,7 +7,7 @@ lbl_80AAA124:
 /* 80AAA138  7C 7E 1B 78 */	mr r30, r3
 /* 80AAA13C  3C 60 80 AB */	lis r3, m__18daNpc_Post_Param_c@ha
 /* 80AAA140  3B E3 D1 EC */	addi r31, r3, m__18daNpc_Post_Param_c@l
-/* 80AAA144  C0 3F 00 B8 */	lfs f1, 0xb8(r31)	/* effective address: 80AAD2A4 */
+/* 80AAA144  C0 3F 00 B8 */	lfs f1, 0xb8(r31)
 /* 80AAA148  C0 1E 0D F4 */	lfs f0, 0xdf4(r30)
 /* 80AAA14C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80AAA150  40 82 00 7C */	bne lbl_80AAA1CC
@@ -23,8 +23,8 @@ lbl_80AAA124:
 /* 80AAA178  38 7E 09 30 */	addi r3, r30, 0x930
 /* 80AAA17C  38 81 00 08 */	addi r4, r1, 8
 /* 80AAA180  4B 7B DB A8 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80AAA184  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AAA188  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AAA184  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AAA188  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AAA18C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80AAA190  38 9E 09 30 */	addi r4, r30, 0x930
 /* 80AAA194  4B 5C A3 0C */	b GroundCross__4cBgSFP11cBgS_GndChk

@@ -8,7 +8,7 @@ lbl_80672164:
 /* 8067217C  38 C3 25 F4 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80672180  3C 60 80 67 */	lis r3, data_806727A0@ha
 /* 80672184  38 A3 27 A0 */	addi r5, r3, data_806727A0@l
-/* 80672188  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 806727A0 */
+/* 80672188  88 05 00 00 */	lbz r0, 0(r5)
 /* 8067218C  7C 00 07 75 */	extsb. r0, r0
 /* 80672190  40 82 00 70 */	bne lbl_80672200
 /* 80672194  80 66 00 BC */	lwz r3, 0xbc(r6)
@@ -44,8 +44,8 @@ lbl_80672200:
 /* 80672208  80 1F 04 9C */	lwz r0, 0x49c(r31)
 /* 8067220C  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 80672210  41 82 00 48 */	beq lbl_80672258
-/* 80672214  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80672218  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80672214  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80672218  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8067221C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80672220  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80672224  38 84 24 FC */	addi r4, r4, l_staff_name@l
@@ -55,9 +55,9 @@ lbl_80672200:
 /* 80672234  90 7F 05 9C */	stw r3, 0x59c(r31)
 /* 80672238  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 8067223C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80672240  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
+/* 80672240  A0 03 00 B0 */	lhz r0, 0xb0(r3)
 /* 80672244  60 00 00 02 */	ori r0, r0, 2
-/* 80672248  B0 03 00 B0 */	sth r0, 0xb0(r3)	/* effective address: 80430238 */
+/* 80672248  B0 03 00 B0 */	sth r0, 0xb0(r3)
 /* 8067224C  7F E3 FB 78 */	mr r3, r31
 /* 80672250  4B FF F0 D5 */	bl demoProc__11daBdoorL5_cFv
 /* 80672254  48 00 00 20 */	b lbl_80672274

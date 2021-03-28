@@ -12,9 +12,9 @@ lbl_80D62024:
 /* 80D6204C  7C B9 2B 78 */	mr r25, r5
 /* 80D62050  3C 60 80 D6 */	lis r3, lit_3694@ha
 /* 80D62054  3B E3 2C 18 */	addi r31, r3, lit_3694@l
-/* 80D62058  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D6205C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D62060  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D62058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D6205C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D62060  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80D62064  3B A3 04 D0 */	addi r29, r3, 0x4d0
 /* 80D62068  83 85 00 08 */	lwz r28, 8(r5)
 /* 80D6206C  3C 60 80 45 */	lis r3, __float_max@ha

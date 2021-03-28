@@ -8,16 +8,16 @@ lbl_804E18CC:
 /* 804E18E4  3B C3 1B E8 */	addi r30, r3, lit_1109@l
 /* 804E18E8  3C 60 80 4E */	lis r3, l_light_color@ha
 /* 804E18EC  3B E3 19 D4 */	addi r31, r3, l_light_color@l
-/* 804E18F0  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 804E19DC */
+/* 804E18F0  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 804E18F4  D0 41 00 20 */	stfs f2, 0x20(r1)
-/* 804E18F8  C0 3F 00 64 */	lfs f1, 0x64(r31)	/* effective address: 804E1A38 */
+/* 804E18F8  C0 3F 00 64 */	lfs f1, 0x64(r31)
 /* 804E18FC  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 804E1900  C0 1F 00 68 */	lfs f0, 0x68(r31)	/* effective address: 804E1A3C */
+/* 804E1900  C0 1F 00 68 */	lfs f0, 0x68(r31)
 /* 804E1904  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 804E1908  D0 5E 00 4C */	stfs f2, 0x4c(r30)	/* effective address: 804E1C34 */
+/* 804E1908  D0 5E 00 4C */	stfs f2, 0x4c(r30)
 /* 804E190C  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 804E1910  D0 23 00 04 */	stfs f1, 4(r3)	/* effective address: 804E1C38 */
-/* 804E1914  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 804E1C3C */
+/* 804E1910  D0 23 00 04 */	stfs f1, 4(r3)
+/* 804E1914  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804E1918  3C 80 80 4E */	lis r4, __dt__4cXyzFv@ha
 /* 804E191C  38 84 00 A0 */	addi r4, r4, __dt__4cXyzFv@l
 /* 804E1920  38 BE 00 40 */	addi r5, r30, 0x40

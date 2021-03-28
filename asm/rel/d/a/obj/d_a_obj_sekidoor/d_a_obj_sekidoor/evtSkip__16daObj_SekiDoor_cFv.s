@@ -7,8 +7,8 @@ lbl_80CCD5DC:
 /* 80CCD5F0  80 03 05 B8 */	lwz r0, 0x5b8(r3)
 /* 80CCD5F4  2C 00 00 00 */	cmpwi r0, 0
 /* 80CCD5F8  41 82 00 18 */	beq lbl_80CCD610
-/* 80CCD5FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCD600  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCD5FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCD600  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCD604  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CCD608  38 80 00 0F */	li r4, 0xf
 /* 80CCD60C  4B 3A 27 88 */	b StopQuake__12dVibration_cFi

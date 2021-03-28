@@ -2,15 +2,15 @@ lbl_804C4AE8:
 /* 804C4AE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C4AEC  7C 08 02 A6 */	mflr r0
 /* 804C4AF0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804C4AF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C4AF8  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 804C4AFC  80 64 5D B4 */	lwz r3, 0x5db4(r4)	/* effective address: 8040BF74 */
-/* 804C4B00  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80400570 */
+/* 804C4AF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C4AF8  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 804C4AFC  80 64 5D B4 */	lwz r3, 0x5db4(r4)
+/* 804C4B00  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 804C4B04  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 804C4B08  41 82 00 44 */	beq lbl_804C4B4C
 /* 804C4B0C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 804C4B10  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 804C4B14  88 03 10 50 */	lbz r0, 0x1050(r3)	/* effective address: 8042DAA4 */
+/* 804C4B14  88 03 10 50 */	lbz r0, 0x1050(r3)
 /* 804C4B18  54 00 06 31 */	rlwinm. r0, r0, 0, 0x18, 0x18
 /* 804C4B1C  40 82 00 30 */	bne lbl_804C4B4C
 /* 804C4B20  38 64 07 F0 */	addi r3, r4, 0x7f0

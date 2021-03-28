@@ -35,11 +35,11 @@ lbl_808161B4:
 /* 808161DC  41 82 00 A4 */	beq lbl_80816280
 /* 808161E0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 808161E4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 808161E8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 808161E8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 808161EC  D0 01 00 48 */	stfs f0, 0x48(r1)
-/* 808161F0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 808161F0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 808161F4  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 808161F8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 808161F8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 808161FC  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 80816200  38 81 00 10 */	addi r4, r1, 0x10
 /* 80816204  4B 7F 69 FC */	b mDoMtx_MtxToRot__FPA4_CfP5csXyz
@@ -76,11 +76,11 @@ lbl_808161B4:
 lbl_80816280:
 /* 80816280  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80816284  3B 43 D4 70 */	addi r26, r3, now__14mDoMtx_stack_c@l
-/* 80816288  C0 1A 00 0C */	lfs f0, 0xc(r26)	/* effective address: 803DD47C */
+/* 80816288  C0 1A 00 0C */	lfs f0, 0xc(r26)
 /* 8081628C  D0 01 00 48 */	stfs f0, 0x48(r1)
-/* 80816290  C0 1A 00 1C */	lfs f0, 0x1c(r26)	/* effective address: 803DD48C */
+/* 80816290  C0 1A 00 1C */	lfs f0, 0x1c(r26)
 /* 80816294  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 80816298  C0 1A 00 2C */	lfs f0, 0x2c(r26)	/* effective address: 803DD49C */
+/* 80816298  C0 1A 00 2C */	lfs f0, 0x2c(r26)
 /* 8081629C  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 808162A0  7F 43 D3 78 */	mr r3, r26
 /* 808162A4  38 81 00 10 */	addi r4, r1, 0x10

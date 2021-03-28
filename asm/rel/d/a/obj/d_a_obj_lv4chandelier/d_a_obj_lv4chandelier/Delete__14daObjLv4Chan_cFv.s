@@ -8,7 +8,7 @@ lbl_80C66114:
 lbl_80C6612C:
 /* 80C6612C  3C 80 80 C6 */	lis r4, l_arcName@ha
 /* 80C66130  38 84 69 90 */	addi r4, r4, l_arcName@l
-/* 80C66134  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C66990 */
+/* 80C66134  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C66138  4B 3C 6E D0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C6613C  38 60 00 01 */	li r3, 1
 /* 80C66140  80 01 00 14 */	lwz r0, 0x14(r1)

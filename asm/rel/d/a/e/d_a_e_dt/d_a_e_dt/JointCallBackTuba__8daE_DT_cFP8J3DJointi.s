@@ -7,7 +7,7 @@ lbl_806ADD30:
 /* 806ADD44  40 82 00 24 */	bne lbl_806ADD68
 /* 806ADD48  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 806ADD4C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 806ADD50  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 806ADD50  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 806ADD54  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 806ADD58  28 03 00 00 */	cmplwi r3, 0
 /* 806ADD5C  41 82 00 0C */	beq lbl_806ADD68

@@ -7,11 +7,11 @@ lbl_80595038:
 /* 8059504C  7C 7E 1B 78 */	mr r30, r3
 /* 80595050  3C 80 80 59 */	lis r4, M_attr__14daObjOnCloth_c@ha
 /* 80595054  3B E4 5C B4 */	addi r31, r4, M_attr__14daObjOnCloth_c@l
-/* 80595058  C0 3F 00 30 */	lfs f1, 0x30(r31)	/* effective address: 80595CE4 */
-/* 8059505C  C0 5F 00 34 */	lfs f2, 0x34(r31)	/* effective address: 80595CE8 */
+/* 80595058  C0 3F 00 30 */	lfs f1, 0x30(r31)
+/* 8059505C  C0 5F 00 34 */	lfs f2, 0x34(r31)
 /* 80595060  FC 60 08 90 */	fmr f3, f1
-/* 80595064  C0 9F 00 38 */	lfs f4, 0x38(r31)	/* effective address: 80595CEC */
-/* 80595068  C0 BF 00 3C */	lfs f5, 0x3c(r31)	/* effective address: 80595CF0 */
+/* 80595064  C0 9F 00 38 */	lfs f4, 0x38(r31)
+/* 80595068  C0 BF 00 3C */	lfs f5, 0x3c(r31)
 /* 8059506C  FC C0 20 90 */	fmr f6, f4
 /* 80595070  4B A8 54 D8 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80595074  38 DE 05 A8 */	addi r6, r30, 0x5a8

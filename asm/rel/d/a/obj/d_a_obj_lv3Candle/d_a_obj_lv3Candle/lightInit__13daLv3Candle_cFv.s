@@ -8,7 +8,7 @@ lbl_80C57F8C:
 /* 80C57FA4  C0 03 06 F4 */	lfs f0, 0x6f4(r3)
 /* 80C57FA8  D0 03 07 04 */	stfs f0, 0x704(r3)
 /* 80C57FAC  C0 23 07 00 */	lfs f1, 0x700(r3)
-/* 80C57FB0  C0 04 00 48 */	lfs f0, 0x48(r4)	/* effective address: 80C585AC */
+/* 80C57FB0  C0 04 00 48 */	lfs f0, 0x48(r4)
 /* 80C57FB4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C57FB8  D0 03 07 00 */	stfs f0, 0x700(r3)
 /* 80C57FBC  88 03 07 08 */	lbz r0, 0x708(r3)

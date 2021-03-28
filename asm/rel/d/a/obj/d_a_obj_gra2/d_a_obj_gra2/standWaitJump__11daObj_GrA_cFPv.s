@@ -42,7 +42,7 @@ lbl_80C0F8A4:
 /* 80C0F8F8  38 80 00 15 */	li r4, 0x15
 /* 80C0F8FC  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C0F900  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C0F904  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C0F904  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C0F908  4B FF 1E 85 */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C0F90C  7F E3 FB 78 */	mr r3, r31
 /* 80C0F910  38 80 00 00 */	li r4, 0
@@ -58,7 +58,7 @@ lbl_80C0F924:
 /* 80C0F934  38 80 00 15 */	li r4, 0x15
 /* 80C0F938  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C0F93C  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C0F940  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C0F940  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C0F944  4B FF 1E 49 */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C0F948  7F E3 FB 78 */	mr r3, r31
 /* 80C0F94C  38 80 00 00 */	li r4, 0
@@ -81,9 +81,9 @@ lbl_80C0F960:
 /* 80C0F98C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80C0F990  40 82 00 30 */	bne lbl_80C0F9C0
 /* 80C0F994  38 7F 14 F8 */	addi r3, r31, 0x14f8
-/* 80C0F998  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C0F99C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80C0F9A0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80C0F998  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C0F99C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C0F9A0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80C0F9A4  4B 53 DE 78 */	b entry__18daBaseNpc_acMngr_cFP10fopAc_ac_c
 /* 80C0F9A8  48 00 00 18 */	b lbl_80C0F9C0
 lbl_80C0F9AC:
@@ -122,7 +122,7 @@ lbl_80C0F9E0:
 /* 80C0FA24  38 80 00 00 */	li r4, 0
 /* 80C0FA28  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C0FA2C  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C0FA30  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C0FA30  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C0FA34  4B FF 1D 59 */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C0FA38  7F E3 FB 78 */	mr r3, r31
 /* 80C0FA3C  38 80 00 00 */	li r4, 0

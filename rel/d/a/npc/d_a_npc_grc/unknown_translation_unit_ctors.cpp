@@ -19,7 +19,6 @@ extern void* const data_809CF508[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_grc_cpp(); // 1
 
 // 
 // Declarations:

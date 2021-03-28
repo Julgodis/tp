@@ -11,11 +11,11 @@ lbl_80657260:
 /* 80657284  3B E3 79 24 */	addi r31, r3, lit_4003@l
 /* 80657288  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 8065728C  38 83 7A 9C */	addi r4, r3, l_HOSTIO@l
-/* 80657290  C0 64 00 14 */	lfs f3, 0x14(r4)	/* effective address: 80657AB0 */
-/* 80657294  C0 44 00 18 */	lfs f2, 0x18(r4)	/* effective address: 80657AB4 */
+/* 80657290  C0 64 00 14 */	lfs f3, 0x14(r4)
+/* 80657294  C0 44 00 18 */	lfs f2, 0x18(r4)
 /* 80657298  88 7E 07 81 */	lbz r3, 0x781(r30)
 /* 8065729C  38 03 FF FF */	addi r0, r3, -1
-/* 806572A0  C8 3F 00 20 */	lfd f1, 0x20(r31)	/* effective address: 80657944 */
+/* 806572A0  C8 3F 00 20 */	lfd f1, 0x20(r31)
 /* 806572A4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 806572A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806572AC  3C 00 43 30 */	lis r0, 0x4330
@@ -24,7 +24,7 @@ lbl_80657260:
 /* 806572B8  EC 00 08 28 */	fsubs f0, f0, f1
 /* 806572BC  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 806572C0  EC 02 00 2A */	fadds f0, f2, f0
-/* 806572C4  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80657AB8 */
+/* 806572C4  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 806572C8  38 60 00 00 */	li r3, 0
 /* 806572CC  38 00 00 14 */	li r0, 0x14
 /* 806572D0  7C 09 03 A6 */	mtctr r0
@@ -67,12 +67,12 @@ lbl_8065735C:
 /* 8065735C  80 7E 05 80 */	lwz r3, 0x580(r30)
 /* 80657360  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80657364  38 84 7A 9C */	addi r4, r4, l_HOSTIO@l
-/* 80657368  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80657AA0 */
-/* 8065736C  C0 44 00 08 */	lfs f2, 8(r4)	/* effective address: 80657AA4 */
+/* 80657368  C0 24 00 04 */	lfs f1, 4(r4)
+/* 8065736C  C0 44 00 08 */	lfs f2, 8(r4)
 /* 80657370  4B BF D2 40 */	b paneTrans__8CPaneMgrFff
 /* 80657374  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 80657378  38 63 7A 9C */	addi r3, r3, l_HOSTIO@l
-/* 8065737C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80657AA8 */
+/* 8065737C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80657380  80 7E 05 80 */	lwz r3, 0x580(r30)
 /* 80657384  80 63 00 04 */	lwz r3, 4(r3)
 /* 80657388  D0 03 00 CC */	stfs f0, 0xcc(r3)
@@ -84,7 +84,7 @@ lbl_8065735C:
 /* 806573A0  80 7E 05 80 */	lwz r3, 0x580(r30)
 /* 806573A4  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806573A8  3B A4 7A 9C */	addi r29, r4, l_HOSTIO@l
-/* 806573AC  C0 3D 00 10 */	lfs f1, 0x10(r29)	/* effective address: 80657AAC */
+/* 806573AC  C0 3D 00 10 */	lfs f1, 0x10(r29)
 /* 806573B0  4B BF E4 20 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 806573B4  80 7E 05 88 */	lwz r3, 0x588(r30)
 /* 806573B8  C0 7F 00 14 */	lfs f3, 0x14(r31)
@@ -96,7 +96,7 @@ lbl_8065735C:
 /* 806573D0  EC 40 08 24 */	fdivs f2, f0, f1
 /* 806573D4  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 806573D8  3B E4 7A 9C */	addi r31, r4, l_HOSTIO@l
-/* 806573DC  C0 3F 00 24 */	lfs f1, 0x24(r31)	/* effective address: 80657AC0 */
+/* 806573DC  C0 3F 00 24 */	lfs f1, 0x24(r31)
 /* 806573E0  C0 1D 00 10 */	lfs f0, 0x10(r29)
 /* 806573E4  EC 01 00 32 */	fmuls f0, f1, f0
 /* 806573E8  EC 22 00 32 */	fmuls f1, f2, f0
@@ -108,7 +108,7 @@ lbl_8065735C:
 /* 80657400  4B BF E3 D0 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 80657404  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 80657408  38 63 7A 9C */	addi r3, r3, l_HOSTIO@l
-/* 8065740C  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 80657ACC */
+/* 8065740C  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 80657410  80 7E 05 84 */	lwz r3, 0x584(r30)
 /* 80657414  80 63 00 04 */	lwz r3, 4(r3)
 /* 80657418  D0 03 00 CC */	stfs f0, 0xcc(r3)
@@ -120,13 +120,13 @@ lbl_8065735C:
 /* 80657430  80 7E 05 84 */	lwz r3, 0x584(r30)
 /* 80657434  3C 80 80 65 */	lis r4, l_HOSTIO@ha
 /* 80657438  38 84 7A 9C */	addi r4, r4, l_HOSTIO@l
-/* 8065743C  C0 24 00 34 */	lfs f1, 0x34(r4)	/* effective address: 80657AD0 */
+/* 8065743C  C0 24 00 34 */	lfs f1, 0x34(r4)
 /* 80657440  C0 1D 00 10 */	lfs f0, 0x10(r29)
 /* 80657444  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80657448  4B BF E3 88 */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 8065744C  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 80657450  38 63 7A 9C */	addi r3, r3, l_HOSTIO@l
-/* 80657454  88 03 00 58 */	lbz r0, 0x58(r3)	/* effective address: 80657AF4 */
+/* 80657454  88 03 00 58 */	lbz r0, 0x58(r3)
 /* 80657458  28 00 00 00 */	cmplwi r0, 0
 /* 8065745C  41 82 00 14 */	beq lbl_80657470
 /* 80657460  88 03 00 59 */	lbz r0, 0x59(r3)

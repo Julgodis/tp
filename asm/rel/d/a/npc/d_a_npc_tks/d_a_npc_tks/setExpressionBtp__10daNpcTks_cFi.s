@@ -8,7 +8,7 @@ lbl_80B1590C:
 /* 80B15924  7C 9F 23 78 */	mr r31, r4
 /* 80B15928  3C 80 80 B2 */	lis r4, l_arcName@ha
 /* 80B1592C  38 84 E2 08 */	addi r4, r4, l_arcName@l
-/* 80B15930  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B1E208 */
+/* 80B15930  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B15934  57 FD 18 38 */	slwi r29, r31, 3
 /* 80B15938  3C A0 80 B2 */	lis r5, l_btpGetParamList@ha
 /* 80B1593C  38 A5 E1 B4 */	addi r5, r5, l_btpGetParamList@l

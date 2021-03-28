@@ -11,7 +11,7 @@ lbl_80CEB01C:
 /* 80CEB040  38 04 00 01 */	addi r0, r4, 1
 /* 80CEB044  90 03 09 0C */	stw r0, 0x90c(r3)
 /* 80CEB048  C0 23 05 2C */	lfs f1, 0x52c(r3)
-/* 80CEB04C  C0 1F 01 40 */	lfs f0, 0x140(r31)	/* effective address: 80CECBF4 */
+/* 80CEB04C  C0 1F 01 40 */	lfs f0, 0x140(r31)
 /* 80CEB050  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CEB054  D0 03 05 2C */	stfs f0, 0x52c(r3)
 /* 80CEB058  38 9E 07 8C */	addi r4, r30, 0x78c

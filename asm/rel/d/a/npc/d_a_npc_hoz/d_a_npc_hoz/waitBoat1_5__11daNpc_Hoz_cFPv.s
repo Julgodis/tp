@@ -102,7 +102,7 @@ lbl_80A040D8:
 /* 80A040F8  38 00 00 00 */	li r0, 0
 /* 80A040FC  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80A04100  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80A04104  98 03 00 BC */	stb r0, 0xbc(r3)	/* effective address: 80430244 */
+/* 80A04104  98 03 00 BC */	stb r0, 0xbc(r3)
 /* 80A04108  38 80 00 00 */	li r4, 0
 /* 80A0410C  4B 81 A1 5C */	b setMiniGameCount__13dMeter2Info_cFSc
 lbl_80A04110:
@@ -133,9 +133,9 @@ lbl_80A04164:
 /* 80A0416C  40 82 01 40 */	bne lbl_80A042AC
 /* 80A04170  38 61 00 18 */	addi r3, r1, 0x18
 /* 80A04174  38 9E 04 D0 */	addi r4, r30, 0x4d0
-/* 80A04178  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A0417C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 80A04180  80 A5 5D AC */	lwz r5, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 80A04178  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A0417C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 80A04180  80 A5 5D AC */	lwz r5, 0x5dac(r5)
 /* 80A04184  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 80A04188  4B 86 29 AC */	b __mi__4cXyzCFRC3Vec
 /* 80A0418C  C0 01 00 18 */	lfs f0, 0x18(r1)

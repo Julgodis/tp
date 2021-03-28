@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTextureSRTKey {
 };
 
 struct JKRExpHeap {
@@ -110,14 +110,6 @@ struct dMsgScrnLight_c {
 	/* 80245C04 */ void draw(f32*, f32, f32, f32, f32, f32, u8);
 };
 
-struct J2DBasePosition {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
-};
-
 struct J2DGrafContext {
 };
 
@@ -130,6 +122,14 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+	/* 802F76F8 */ void setBasePosition(J2DBasePosition);
 };
 
 struct CPaneMgr {
@@ -302,28 +302,28 @@ SECTION_DEAD static char const* const pad_80399A1A = "\0\0\0\0\0";
 
 /* 803C0F78-803C0FD0 0058+00 s=2 e=0 z=0  None .data      __vt__14dMsgScrnItem_c                                       */
 SECTION_DATA static void* __vt__14dMsgScrnItem_c[22] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMsgScrnBase_cFv,
-	/* 3    */ (void*)__dt__14dMsgScrnItem_cFv,
-	/* 4    */ (void*)exec__14dMsgScrnItem_cFv,
-	/* 5    */ (void*)multiDraw__14dMsgScrnBase_cFv,
-	/* 6    */ (void*)drawSelf__14dMsgScrnItem_cFv,
-	/* 7    */ (void*)setSelectString__14dMsgScrnItem_cFPcPcPc,
-	/* 8    */ (void*)setSelectRubyString__14dMsgScrnItem_cFPcPcPc,
-	/* 9    */ (void*)arwAnimeInit__14dMsgScrnItem_cFv,
-	/* 10   */ (void*)arwAnimeMove__14dMsgScrnItem_cFv,
-	/* 11   */ (void*)dotAnimeInit__14dMsgScrnItem_cFv,
-	/* 12   */ (void*)dotAnimeMove__14dMsgScrnItem_cFv,
-	/* 13   */ (void*)isSelect__14dMsgScrnItem_cFv,
-	/* 14   */ (void*)selectAnimeInit__14dMsgScrnItem_cFUcUcfUc,
-	/* 15   */ (void*)selectAnimeMove__14dMsgScrnItem_cFUcUcb,
-	/* 16   */ (void*)selectAnimeEnd__14dMsgScrnItem_cFv,
-	/* 17   */ (void*)fukiScale__14dMsgScrnItem_cFf,
-	/* 18   */ (void*)fukiTrans__14dMsgScrnItem_cFff,
-	/* 19   */ (void*)fukiAlpha__14dMsgScrnItem_cFf,
-	/* 20   */ (void*)fontAlpha__14dMsgScrnBase_cFf,
-	/* 21   */ (void*)fukiPosCalc__14dMsgScrnItem_cFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMsgScrnBase_cFv,
+	(void*)__dt__14dMsgScrnItem_cFv,
+	(void*)exec__14dMsgScrnItem_cFv,
+	(void*)multiDraw__14dMsgScrnBase_cFv,
+	(void*)drawSelf__14dMsgScrnItem_cFv,
+	(void*)setSelectString__14dMsgScrnItem_cFPcPcPc,
+	(void*)setSelectRubyString__14dMsgScrnItem_cFPcPcPc,
+	(void*)arwAnimeInit__14dMsgScrnItem_cFv,
+	(void*)arwAnimeMove__14dMsgScrnItem_cFv,
+	(void*)dotAnimeInit__14dMsgScrnItem_cFv,
+	(void*)dotAnimeMove__14dMsgScrnItem_cFv,
+	(void*)isSelect__14dMsgScrnItem_cFv,
+	(void*)selectAnimeInit__14dMsgScrnItem_cFUcUcfUc,
+	(void*)selectAnimeMove__14dMsgScrnItem_cFUcUcb,
+	(void*)selectAnimeEnd__14dMsgScrnItem_cFv,
+	(void*)fukiScale__14dMsgScrnItem_cFf,
+	(void*)fukiTrans__14dMsgScrnItem_cFff,
+	(void*)fukiAlpha__14dMsgScrnItem_cFf,
+	(void*)fontAlpha__14dMsgScrnBase_cFf,
+	(void*)fukiPosCalc__14dMsgScrnItem_cFUc,
 };
 
 /* 80454BF8-80454BFC 0004+00 s=2 e=0 z=0  None .sdata2    @4192                                                        */

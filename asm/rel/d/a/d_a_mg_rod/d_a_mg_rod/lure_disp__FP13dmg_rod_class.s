@@ -111,7 +111,7 @@ lbl_804B1838:
 lbl_804B1858:
 /* 804B1858  3C 60 80 4C */	lis r3, l_HIO@ha
 /* 804B185C  38 63 BB E4 */	addi r3, r3, l_HIO@l
-/* 804B1860  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 804BBBEC */
+/* 804B1860  C0 23 00 08 */	lfs f1, 8(r3)
 /* 804B1864  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 804B1868  7C 00 07 74 */	extsb r0, r0
 /* 804B186C  54 00 10 3A */	slwi r0, r0, 2
@@ -205,11 +205,11 @@ lbl_804B1960:
 /* 804B19C0  4B B5 B3 DC */	b transM__14mDoMtx_stack_cFfff
 /* 804B19C4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804B19C8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804B19CC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 804B19CC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 804B19D0  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 804B19D4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 804B19D4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 804B19D8  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 804B19DC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 804B19DC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 804B19E0  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 804B19E4  7F E3 FB 78 */	mr r3, r31
 /* 804B19E8  38 81 00 18 */	addi r4, r1, 0x18
@@ -228,11 +228,11 @@ lbl_804B19F8:
 /* 804B1A18  4B B5 B3 84 */	b transM__14mDoMtx_stack_cFfff
 /* 804B1A1C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804B1A20  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804B1A24  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 804B1A24  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 804B1A28  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 804B1A2C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 804B1A2C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 804B1A30  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 804B1A34  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 804B1A34  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 804B1A38  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 804B1A3C  7F E3 FB 78 */	mr r3, r31
 /* 804B1A40  38 81 00 18 */	addi r4, r1, 0x18

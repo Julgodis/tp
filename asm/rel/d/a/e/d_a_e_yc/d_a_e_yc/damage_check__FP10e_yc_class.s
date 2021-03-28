@@ -5,9 +5,9 @@ lbl_807F00BC:
 /* 807F00C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 807F00CC  93 C1 00 08 */	stw r30, 8(r1)
 /* 807F00D0  7C 7E 1B 78 */	mr r30, r3
-/* 807F00D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807F00D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807F00DC  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807F00D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807F00D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807F00DC  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 807F00E0  38 7E 08 E8 */	addi r3, r30, 0x8e8
 /* 807F00E4  4B 89 37 4C */	b Move__10dCcD_GSttsFv
 /* 807F00E8  A8 1E 06 AA */	lha r0, 0x6aa(r30)

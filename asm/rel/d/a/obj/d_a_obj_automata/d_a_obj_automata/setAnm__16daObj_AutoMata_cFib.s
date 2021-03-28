@@ -28,8 +28,8 @@ lbl_80BA6500:
 /* 80BA6568  54 9C 10 3A */	slwi r28, r4, 2
 /* 80BA656C  38 9F 00 68 */	addi r4, r31, 0x68
 /* 80BA6570  7C 84 E0 2E */	lwzx r4, r4, r28
-/* 80BA6574  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BA6578  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BA6574  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BA6578  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BA657C  3F 65 00 02 */	addis r27, r5, 2
 /* 80BA6580  3B 7B C2 F8 */	addi r27, r27, -15624
 /* 80BA6584  7F 65 DB 78 */	mr r5, r27

@@ -16,14 +16,14 @@ lbl_80997D94:
 /* 80997DCC  40 82 00 74 */	bne lbl_80997E40
 /* 80997DD0  3C 60 80 9A */	lis r3, l_motionAnmData@ha
 /* 80997DD4  38 83 9C 00 */	addi r4, r3, l_motionAnmData@l
-/* 80997DD8  80 04 00 24 */	lwz r0, 0x24(r4)	/* effective address: 80999C24 */
+/* 80997DD8  80 04 00 24 */	lwz r0, 0x24(r4)
 /* 80997DDC  54 00 10 3A */	slwi r0, r0, 2
 /* 80997DE0  3C 60 80 9A */	lis r3, l_resNameList@ha
 /* 80997DE4  38 63 9A F0 */	addi r3, r3, l_resNameList@l
 /* 80997DE8  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80997DEC  80 84 00 1C */	lwz r4, 0x1c(r4)	/* effective address: 80999C1C */
-/* 80997DF0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80997DF4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80997DEC  80 84 00 1C */	lwz r4, 0x1c(r4)
+/* 80997DF0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80997DF4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80997DF8  3C A5 00 02 */	addis r5, r5, 2
 /* 80997DFC  38 C0 00 80 */	li r6, 0x80
 /* 80997E00  38 A5 C2 F8 */	addi r5, r5, -15624

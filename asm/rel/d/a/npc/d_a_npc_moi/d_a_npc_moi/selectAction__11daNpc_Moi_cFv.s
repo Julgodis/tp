@@ -9,11 +9,11 @@ lbl_80A764B0:
 /* 80A764CC  3B C3 B1 5C */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 80A764D0  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A764D4  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A764D8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A764DC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A764D8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A764DC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A764E0  90 7F 16 10 */	stw r3, 0x1610(r31)
 /* 80A764E4  90 1F 16 14 */	stw r0, 0x1614(r31)
-/* 80A764E8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A764E8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A764EC  90 1F 16 18 */	stw r0, 0x1618(r31)
 /* 80A764F0  88 1F 15 C4 */	lbz r0, 0x15c4(r31)
 /* 80A764F4  2C 00 00 03 */	cmpwi r0, 3

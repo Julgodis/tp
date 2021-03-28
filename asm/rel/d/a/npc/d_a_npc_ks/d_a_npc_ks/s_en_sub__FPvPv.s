@@ -12,7 +12,7 @@ lbl_80A49EC0:
 /* 80A49EE8  41 82 00 30 */	beq lbl_80A49F18
 /* 80A49EEC  3C 60 80 A6 */	lis r3, target_info_count@ha
 /* 80A49EF0  38 83 FF 18 */	addi r4, r3, target_info_count@l
-/* 80A49EF4  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80A5FF18 */
+/* 80A49EF4  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80A49EF8  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80A49EFC  40 80 00 1C */	bge lbl_80A49F18
 /* 80A49F00  54 A0 10 3A */	slwi r0, r5, 2

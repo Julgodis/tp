@@ -80,7 +80,7 @@ lbl_80CEE198:
 /* 80CEE278  90 01 00 08 */	stw r0, 8(r1)
 /* 80CEE27C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEE280  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEE284  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEE284  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEE288  38 81 00 08 */	addi r4, r1, 8
 /* 80CEE28C  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CEE290  38 C0 00 00 */	li r6, 0
@@ -99,8 +99,8 @@ lbl_80CEE2AC:
 /* 80CEE2C0  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80CEE2C4  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80CEE2C8  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 80CEE2CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEE2D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEE2CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEE2D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEE2D4  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CEE2D8  38 80 00 02 */	li r4, 2
 /* 80CEE2DC  38 A0 00 01 */	li r5, 1
@@ -121,8 +121,8 @@ lbl_80CEE2E8:
 /* 80CEE314  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80CEE318  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80CEE31C  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 80CEE320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEE324  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEE320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEE324  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEE328  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CEE32C  38 80 00 02 */	li r4, 2
 /* 80CEE330  38 A0 00 01 */	li r5, 1
@@ -179,8 +179,8 @@ lbl_80CEE340:
 /* 80CEE3F8  C0 1E 09 78 */	lfs f0, 0x978(r30)
 /* 80CEE3FC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80CEE400  40 81 01 B8 */	ble lbl_80CEE5B8
-/* 80CEE404  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEE408  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEE404  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEE408  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEE40C  3B A3 5B D4 */	addi r29, r3, 0x5bd4
 /* 80CEE410  7F A3 EB 78 */	mr r3, r29
 /* 80CEE414  38 80 00 1F */	li r4, 0x1f

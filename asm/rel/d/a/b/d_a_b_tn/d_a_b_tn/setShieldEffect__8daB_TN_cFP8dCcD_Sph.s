@@ -12,9 +12,9 @@ lbl_8062138C:
 /* 806213B4  7F C6 F3 78 */	mr r6, r30
 /* 806213B8  4B A6 61 5C */	b def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c
 /* 806213BC  38 DF 00 D4 */	addi r6, r31, 0xd4
-/* 806213C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806213C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806213C8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 806213C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806213C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806213C8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 806213CC  38 80 00 02 */	li r4, 2
 /* 806213D0  7F C5 F3 78 */	mr r5, r30
 /* 806213D4  38 E0 00 00 */	li r7, 0

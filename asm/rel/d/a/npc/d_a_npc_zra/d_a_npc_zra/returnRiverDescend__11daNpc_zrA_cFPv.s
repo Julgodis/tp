@@ -10,7 +10,7 @@ lbl_80B86A2C:
 /* 80B86A4C  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B86A50  3B E3 C4 58 */	addi r31, r3, m__17daNpc_zrA_Param_c@l
 /* 80B86A54  38 7F 00 00 */	addi r3, r31, 0
-/* 80B86A58  AB 83 00 74 */	lha r28, 0x74(r3)	/* effective address: 80B8C4CC */
+/* 80B86A58  AB 83 00 74 */	lha r28, 0x74(r3)
 /* 80B86A5C  C3 FA 15 28 */	lfs f31, 0x1528(r26)
 /* 80B86A60  A0 1A 14 E6 */	lhz r0, 0x14e6(r26)
 /* 80B86A64  2C 00 00 02 */	cmpwi r0, 2

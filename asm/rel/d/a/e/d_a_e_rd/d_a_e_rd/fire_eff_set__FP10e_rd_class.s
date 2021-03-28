@@ -89,8 +89,8 @@ lbl_80512A00:
 /* 80512A68  3B A0 00 00 */	li r29, 0
 /* 80512A6C  3B 60 00 00 */	li r27, 0
 /* 80512A70  3B 40 00 00 */	li r26, 0
-/* 80512A74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80512A78  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
+/* 80512A74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80512A78  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 /* 80512A7C  3A FC 12 88 */	addi r23, r28, 0x1288
 /* 80512A80  3B 21 00 28 */	addi r25, r1, 0x28
 /* 80512A84  48 00 00 94 */	b lbl_80512B18

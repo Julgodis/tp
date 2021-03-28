@@ -8,8 +8,8 @@ lbl_80A6736C:
 /* 80A67384  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A67388  3B E3 8E A4 */	addi r31, r3, m__17daNpc_Len_Param_c@l
 /* 80A6738C  38 7F 00 00 */	addi r3, r31, 0
-/* 80A67390  AB C3 00 8C */	lha r30, 0x8c(r3)	/* effective address: 80A68F30 */
-/* 80A67394  AB A3 00 8E */	lha r29, 0x8e(r3)	/* effective address: 80A68F32 */
+/* 80A67390  AB C3 00 8C */	lha r30, 0x8c(r3)
+/* 80A67394  AB A3 00 8E */	lha r29, 0x8e(r3)
 /* 80A67398  A0 1C 0E 22 */	lhz r0, 0xe22(r28)
 /* 80A6739C  2C 00 00 02 */	cmpwi r0, 2
 /* 80A673A0  41 82 00 90 */	beq lbl_80A67430

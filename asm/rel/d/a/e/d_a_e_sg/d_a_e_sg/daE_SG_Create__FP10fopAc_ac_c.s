@@ -98,7 +98,7 @@ lbl_8078D8D8:
 /* 8078D8F4  38 00 FF FF */	li r0, -1
 /* 8078D8F8  3C 60 80 79 */	lis r3, l_HIO@ha
 /* 8078D8FC  38 63 E0 EC */	addi r3, r3, l_HIO@l
-/* 8078D900  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8078E0F0 */
+/* 8078D900  98 03 00 04 */	stb r0, 4(r3)
 lbl_8078D904:
 /* 8078D904  38 00 00 04 */	li r0, 4
 /* 8078D908  90 1E 05 5C */	stw r0, 0x55c(r30)

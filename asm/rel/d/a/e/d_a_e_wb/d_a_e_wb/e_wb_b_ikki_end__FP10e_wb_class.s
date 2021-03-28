@@ -11,8 +11,8 @@ lbl_807D79EC:
 /* 807D7A10  7C 7E 1B 78 */	mr r30, r3
 /* 807D7A14  3C 80 80 7E */	lis r4, lit_3882@ha
 /* 807D7A18  3B E4 29 8C */	addi r31, r4, lit_3882@l
-/* 807D7A1C  C3 FF 00 48 */	lfs f31, 0x48(r31)	/* effective address: 807E29D4 */
-/* 807D7A20  C3 DF 00 60 */	lfs f30, 0x60(r31)	/* effective address: 807E29EC */
+/* 807D7A1C  C3 FF 00 48 */	lfs f31, 0x48(r31)
+/* 807D7A20  C3 DF 00 60 */	lfs f30, 0x60(r31)
 /* 807D7A24  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807D7A28  2C 00 00 01 */	cmpwi r0, 1
 /* 807D7A2C  41 82 00 34 */	beq lbl_807D7A60
@@ -32,7 +32,7 @@ lbl_807D7A40:
 lbl_807D7A60:
 /* 807D7A60  3C 60 80 7E */	lis r3, l_HIO@ha
 /* 807D7A64  38 63 35 C8 */	addi r3, r3, l_HIO@l
-/* 807D7A68  C3 E3 00 34 */	lfs f31, 0x34(r3)	/* effective address: 807E35FC */
+/* 807D7A68  C3 E3 00 34 */	lfs f31, 0x34(r3)
 /* 807D7A6C  C3 DF 00 F8 */	lfs f30, 0xf8(r31)
 lbl_807D7A70:
 /* 807D7A70  38 7E 05 2C */	addi r3, r30, 0x52c

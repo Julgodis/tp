@@ -21,7 +21,7 @@ lbl_8047B358:
 /* 8047B36C  4B D2 84 58 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
 /* 8047B370  3C 60 80 48 */	lis r3, l_HIO@ha
 /* 8047B374  3B A3 D9 D8 */	addi r29, r3, l_HIO@l
-/* 8047B378  A8 7D 00 10 */	lha r3, 0x10(r29)	/* effective address: 8047D9E8 */
+/* 8047B378  A8 7D 00 10 */	lha r3, 0x10(r29)
 /* 8047B37C  7C 60 07 35 */	extsh. r0, r3
 /* 8047B380  41 82 00 18 */	beq lbl_8047B398
 /* 8047B384  88 1E 10 38 */	lbz r0, 0x1038(r30)
@@ -79,8 +79,8 @@ lbl_8047B3F8:
 /* 8047B448  7D 89 03 A6 */	mtctr r12
 /* 8047B44C  4E 80 04 21 */	bctrl 
 /* 8047B450  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 8047B454  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047B458  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047B454  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047B458  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047B45C  3B A3 5F 64 */	addi r29, r3, 0x5f64
 /* 8047B460  3C 64 00 01 */	addis r3, r4, 1
 /* 8047B464  38 63 61 54 */	addi r3, r3, 0x6154

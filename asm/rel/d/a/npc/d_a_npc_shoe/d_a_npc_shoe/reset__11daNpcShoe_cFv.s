@@ -17,11 +17,11 @@ lbl_80AE864C:
 /* 80AE8688  90 BE 0E 08 */	stw r5, 0xe08(r30)
 /* 80AE868C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AE8690  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AE8694  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AE8698  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AE8694  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AE8698  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AE869C  90 7E 0D DC */	stw r3, 0xddc(r30)
 /* 80AE86A0  90 1E 0D E0 */	stw r0, 0xde0(r30)
-/* 80AE86A4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AE86A4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AE86A8  90 1E 0D E4 */	stw r0, 0xde4(r30)
 /* 80AE86AC  38 00 FF FF */	li r0, -1
 /* 80AE86B0  B0 1E 0E 10 */	sth r0, 0xe10(r30)
@@ -142,7 +142,7 @@ lbl_80AE8798:
 /* 80AE885C  7F C3 F3 78 */	mr r3, r30
 /* 80AE8860  3C 80 80 AF */	lis r4, l_arcNames@ha
 /* 80AE8864  38 84 A5 A0 */	addi r4, r4, l_arcNames@l
-/* 80AE8868  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80AEA5A0 */
+/* 80AE8868  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AE886C  38 A0 00 0C */	li r5, 0xc
 /* 80AE8870  4B 66 A2 F8 */	b getTexPtrnAnmP__8daNpcF_cFPci
 /* 80AE8874  7C 64 1B 78 */	mr r4, r3
@@ -187,11 +187,11 @@ lbl_80AE88B8:
 /* 80AE890C  4B 85 DB A4 */	b PSMTXCopy
 /* 80AE8910  3C 60 80 AF */	lis r3, lit_4424@ha
 /* 80AE8914  38 83 A5 C0 */	addi r4, r3, lit_4424@l
-/* 80AE8918  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AEA5C0 */
-/* 80AE891C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AEA5C4 */
+/* 80AE8918  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AE891C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AE8920  90 61 00 08 */	stw r3, 8(r1)
 /* 80AE8924  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80AE8928  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AEA5C8 */
+/* 80AE8928  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AE892C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AE8930  7F C3 F3 78 */	mr r3, r30
 /* 80AE8934  38 81 00 08 */	addi r4, r1, 8

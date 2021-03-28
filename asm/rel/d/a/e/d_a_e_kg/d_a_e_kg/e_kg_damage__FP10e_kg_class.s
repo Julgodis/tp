@@ -127,8 +127,8 @@ lbl_806F8E1C:
 /* 806F8E70  54 04 46 3E */	srwi r4, r0, 0x18
 /* 806F8E74  2C 04 00 FF */	cmpwi r4, 0xff
 /* 806F8E78  41 82 00 18 */	beq lbl_806F8E90
-/* 806F8E7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F8E80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806F8E7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F8E80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806F8E84  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 806F8E88  7C 05 07 74 */	extsb r5, r0
 /* 806F8E8C  4B 93 C3 74 */	b onSwitch__10dSv_info_cFii

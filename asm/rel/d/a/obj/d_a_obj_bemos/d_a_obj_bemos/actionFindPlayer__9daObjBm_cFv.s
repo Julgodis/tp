@@ -17,9 +17,9 @@ lbl_80BB1848:
 /* 80BB184C  40 80 00 FC */	bge lbl_80BB1948
 /* 80BB1850  48 00 00 C8 */	b lbl_80BB1918
 lbl_80BB1854:
-/* 80BB1854  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BB1858  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80BB185C  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80BB1854  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BB1858  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80BB185C  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 80BB1860  4B 46 8E B0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80BB1864  A8 1F 04 B6 */	lha r0, 0x4b6(r31)
 /* 80BB1868  7C 00 18 50 */	subf r0, r0, r3

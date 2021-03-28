@@ -6,12 +6,12 @@ lbl_809AA124:
 /* 809AA134  38 A3 A8 A8 */	addi r5, r3, mCutList__11daNpc_Doc_c@l
 /* 809AA138  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809AA13C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809AA140  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809AA144  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809AA148  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809AA8A8 */
-/* 809AA14C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809AA8AC */
-/* 809AA150  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809AA154  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809AA8B0 */
+/* 809AA140  80 64 00 00 */	lwz r3, 0(r4)
+/* 809AA144  80 04 00 04 */	lwz r0, 4(r4)
+/* 809AA148  90 65 00 00 */	stw r3, 0(r5)
+/* 809AA14C  90 05 00 04 */	stw r0, 4(r5)
+/* 809AA150  80 04 00 08 */	lwz r0, 8(r4)
+/* 809AA154  90 05 00 08 */	stw r0, 8(r5)
 /* 809AA158  3C 60 80 9B */	lis r3, __vt__17daNpc_Doc_Param_c@ha
 /* 809AA15C  38 03 AA B8 */	addi r0, r3, __vt__17daNpc_Doc_Param_c@l
 /* 809AA160  3C 60 80 9B */	lis r3, l_HIO@ha

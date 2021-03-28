@@ -13,8 +13,8 @@ lbl_80CBD814:
 /* 80CBD840  88 9E 05 A9 */	lbz r4, 0x5a9(r30)
 /* 80CBD844  28 04 00 FF */	cmplwi r4, 0xff
 /* 80CBD848  41 82 00 3C */	beq lbl_80CBD884
-/* 80CBD84C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CBD850  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CBD84C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CBD850  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CBD854  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80CBD858  7C 05 07 74 */	extsb r5, r0
 /* 80CBD85C  4B 37 7B 04 */	b isSwitch__10dSv_info_cCFii

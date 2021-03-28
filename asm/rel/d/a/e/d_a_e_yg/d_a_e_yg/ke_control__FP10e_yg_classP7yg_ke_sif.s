@@ -30,7 +30,7 @@ lbl_807FA478:
 /* 807FA4E8  3A 83 CC B4 */	addi r20, r3, lit_3801@l
 /* 807FA4EC  3B 79 00 0C */	addi r27, r25, 0xc
 /* 807FA4F0  3B 59 00 84 */	addi r26, r25, 0x84
-/* 807FA4F4  C0 14 00 04 */	lfs f0, 4(r20)	/* effective address: 807FCCB8 */
+/* 807FA4F4  C0 14 00 04 */	lfs f0, 4(r20)
 /* 807FA4F8  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 807FA4FC  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 807FA500  D0 21 00 28 */	stfs f1, 0x28(r1)

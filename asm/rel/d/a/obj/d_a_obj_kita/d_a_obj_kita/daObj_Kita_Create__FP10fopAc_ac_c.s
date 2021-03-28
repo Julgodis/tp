@@ -70,8 +70,8 @@ lbl_80C45D24:
 lbl_80C45D48:
 /* 80C45D48  3B 20 00 00 */	li r25, 0
 /* 80C45D4C  3B 80 00 00 */	li r28, 0
-/* 80C45D50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C45D54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C45D50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C45D54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C45D58  3B 63 0F 38 */	addi r27, r3, 0xf38
 /* 80C45D5C  C3 DF 00 58 */	lfs f30, 0x58(r31)
 /* 80C45D60  C3 FF 00 18 */	lfs f31, 0x18(r31)
@@ -115,7 +115,7 @@ lbl_80C45DBC:
 /* 80C45DE8  38 00 FF FF */	li r0, -1
 /* 80C45DEC  3C 60 80 C4 */	lis r3, l_HIO@ha
 /* 80C45DF0  38 63 60 00 */	addi r3, r3, l_HIO@l
-/* 80C45DF4  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80C46004 */
+/* 80C45DF4  98 03 00 04 */	stb r0, 4(r3)
 lbl_80C45DF8:
 /* 80C45DF8  C0 3F 00 60 */	lfs f1, 0x60(r31)
 /* 80C45DFC  4B 62 1B 58 */	b cM_rndF__Ff

@@ -15,7 +15,7 @@ lbl_8070B1EC:
 /* 8070B220  41 82 00 30 */	beq lbl_8070B250
 /* 8070B224  3C 60 80 71 */	lis r3, target_info_count@ha
 /* 8070B228  38 83 3F C0 */	addi r4, r3, target_info_count@l
-/* 8070B22C  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80713FC0 */
+/* 8070B22C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 8070B230  2C 05 00 0A */	cmpwi r5, 0xa
 /* 8070B234  40 80 00 1C */	bge lbl_8070B250
 /* 8070B238  54 A0 10 3A */	slwi r0, r5, 2

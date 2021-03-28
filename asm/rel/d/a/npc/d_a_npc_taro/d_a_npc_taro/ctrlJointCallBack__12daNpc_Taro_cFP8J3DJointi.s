@@ -7,7 +7,7 @@ lbl_80566A18:
 /* 80566A2C  40 82 00 30 */	bne lbl_80566A5C
 /* 80566A30  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80566A34  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80566A38  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80566A38  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80566A3C  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80566A40  28 03 00 00 */	cmplwi r3, 0
 /* 80566A44  41 82 00 18 */	beq lbl_80566A5C

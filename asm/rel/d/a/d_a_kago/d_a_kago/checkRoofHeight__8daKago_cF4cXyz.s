@@ -26,8 +26,8 @@ lbl_8084A070:
 /* 8084A0D0  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 8084A0D4  D0 21 00 54 */	stfs f1, 0x54(r1)
 /* 8084A0D8  D0 41 00 58 */	stfs f2, 0x58(r1)
-/* 8084A0DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084A0E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084A0DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084A0E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8084A0E4  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8084A0E8  7F C3 F3 78 */	mr r3, r30
 /* 8084A0EC  38 81 00 14 */	addi r4, r1, 0x14
@@ -38,7 +38,7 @@ lbl_8084A070:
 /* 8084A100  41 82 00 98 */	beq lbl_8084A198
 /* 8084A104  3C 60 80 85 */	lis r3, l_HIO@ha
 /* 8084A108  38 63 4F 78 */	addi r3, r3, l_HIO@l
-/* 8084A10C  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 80854F9C */
+/* 8084A10C  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 8084A110  EF FF 00 28 */	fsubs f31, f31, f0
 /* 8084A114  C0 1C 04 D4 */	lfs f0, 0x4d4(r28)
 /* 8084A118  FC 00 F8 40 */	fcmpo cr0, f0, f31

@@ -199,8 +199,8 @@ lbl_805109F0:
 /* 805109F8  40 80 00 5C */	bge lbl_80510A54
 /* 805109FC  3B 20 00 00 */	li r25, 0
 /* 80510A00  3B 80 00 00 */	li r28, 0
-/* 80510A04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80510A08  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80510A04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80510A08  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 lbl_80510A0C:
 /* 80510A0C  3B DC 0D 58 */	addi r30, r28, 0xd58
 /* 80510A10  7F DA F2 14 */	add r30, r26, r30

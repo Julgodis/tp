@@ -7,7 +7,7 @@ lbl_8063E264:
 /* 8063E278  40 82 00 24 */	bne lbl_8063E29C
 /* 8063E27C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8063E280  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8063E284  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8063E284  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8063E288  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8063E28C  28 03 00 00 */	cmplwi r3, 0
 /* 8063E290  41 82 00 0C */	beq lbl_8063E29C

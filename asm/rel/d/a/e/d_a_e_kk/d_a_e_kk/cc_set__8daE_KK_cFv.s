@@ -20,11 +20,11 @@ lbl_806FE0B8:
 /* 806FE100  4B C4 83 B0 */	b PSMTXCopy
 /* 806FE104  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806FE108  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806FE10C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806FE10C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806FE110  D0 1E 05 50 */	stfs f0, 0x550(r30)
-/* 806FE114  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806FE114  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806FE118  D0 1E 05 54 */	stfs f0, 0x554(r30)
-/* 806FE11C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806FE11C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806FE120  D0 1E 05 58 */	stfs f0, 0x558(r30)
 /* 806FE124  C0 1E 05 50 */	lfs f0, 0x550(r30)
 /* 806FE128  D0 1E 05 38 */	stfs f0, 0x538(r30)
@@ -51,8 +51,8 @@ lbl_806FE0B8:
 /* 806FE17C  38 7E 0A E8 */	addi r3, r30, 0xae8
 /* 806FE180  C0 3F 00 A8 */	lfs f1, 0xa8(r31)
 /* 806FE184  4B B7 10 7C */	b SetR__8cM3dGCylFf
-/* 806FE188  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806FE18C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806FE188  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806FE18C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806FE190  38 63 23 3C */	addi r3, r3, 0x233c
 /* 806FE194  38 9E 09 C4 */	addi r4, r30, 0x9c4
 /* 806FE198  4B B6 6A 10 */	b Set__4cCcSFP8cCcD_Obj
@@ -69,8 +69,8 @@ lbl_806FE19C:
 /* 806FE1C0  38 7E 0C 24 */	addi r3, r30, 0xc24
 /* 806FE1C4  C0 3F 00 BC */	lfs f1, 0xbc(r31)
 /* 806FE1C8  4B B7 15 40 */	b SetR__8cM3dGSphFf
-/* 806FE1CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806FE1D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806FE1CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806FE1D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806FE1D4  38 63 23 3C */	addi r3, r3, 0x233c
 /* 806FE1D8  38 9E 0B 00 */	addi r4, r30, 0xb00
 /* 806FE1DC  4B B6 69 CC */	b Set__4cCcSFP8cCcD_Obj
@@ -85,8 +85,8 @@ lbl_806FE1F8:
 /* 806FE1F8  3B 00 00 00 */	li r24, 0
 /* 806FE1FC  3B A0 00 00 */	li r29, 0
 /* 806FE200  3B 80 00 00 */	li r28, 0
-/* 806FE204  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806FE208  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806FE204  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806FE208  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806FE20C  3B 63 23 3C */	addi r27, r3, 0x233c
 lbl_806FE210:
 /* 806FE210  88 1E 06 79 */	lbz r0, 0x679(r30)

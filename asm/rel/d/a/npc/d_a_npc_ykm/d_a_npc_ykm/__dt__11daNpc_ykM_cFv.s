@@ -39,7 +39,7 @@ lbl_80B53548:
 /* 80B53574  41 82 00 18 */	beq lbl_80B5358C
 /* 80B53578  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B5357C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B53580  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B53580  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B53584  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80B53588  4B 75 C2 FC */	b subBgmStop__8Z2SeqMgrFv
 lbl_80B5358C:

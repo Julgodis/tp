@@ -11,6 +11,21 @@
 // Types:
 // 
 
+struct JASOscillator {
+	struct Data {
+	};
+
+	struct EffectParams {
+	};
+
+	/* 8029BE94 */ JASOscillator();
+	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
+	/* 8029BF68 */ void incCounter(f32);
+	/* 8029BFC8 */ void getValue() const;
+	/* 8029BFE4 */ void release();
+	/* 8029C0E0 */ void update();
+};
+
 struct JASWaveInfo {
 };
 
@@ -27,21 +42,6 @@ struct JASDsp {
 		/* 8029E09C */ void setBusConnect(u8, u8);
 	};
 
-};
-
-struct JASOscillator {
-	struct Data {
-	};
-
-	struct EffectParams {
-	};
-
-	/* 8029BE94 */ JASOscillator();
-	/* 8029BEC4 */ void initStart(JASOscillator::Data const*);
-	/* 8029BF68 */ void incCounter(f32);
-	/* 8029BFC8 */ void getValue() const;
-	/* 8029BFE4 */ void release();
-	/* 8029C0E0 */ void update();
 };
 
 struct JASChannel {
@@ -327,13 +327,13 @@ asm void JASChannel::calcPan(JASChannel::PanVector const* param_0) {
 /* ############################################################################################## */
 /* 803C7848-803C7864 001C+00 s=1 e=0 z=0  None .data      @662                                                         */
 SECTION_DATA static void* lit_662[7] = {
-	/* 0    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x68),
-	/* 1    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x58),
-	/* 2    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x78),
-	/* 3    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x94),
-	/* 4    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xA4),
-	/* 5    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xB4),
-	/* 6    */ (void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xC4),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x68),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x58),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x78),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0x94),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xA4),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xB4),
+	(void*)(((char*)effectOsc__10JASChannelFUlPQ213JASOscillator12EffectParams)+0xC4),
 };
 
 /* 80455690-80455698 0008+00 s=1 e=0 z=0  None .sdata2    @661                                                         */
@@ -461,26 +461,26 @@ asm void JASChannel::updateAutoMixer(JASDsp::TChannel* param_0, f32 param_1, f32
 /* ############################################################################################## */
 /* 803C7864-803C7884 0020+00 s=1 e=0 z=0  None .data      @977                                                         */
 SECTION_DATA static void* lit_977[8] = {
-	/* 0    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x210),
-	/* 1    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1E4),
-	/* 2    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1EC),
-	/* 3    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1F4),
-	/* 4    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x210),
-	/* 5    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1FC),
-	/* 6    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x204),
-	/* 7    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x20C),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x210),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1E4),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1EC),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1F4),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x210),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x1FC),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x204),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x20C),
 };
 
 /* 803C7884-803C78A8 0020+04 s=1 e=0 z=0  None .data      @974                                                         */
 SECTION_DATA static void* lit_974[8 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x114),
-	/* 1    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xE8),
-	/* 2    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xF0),
-	/* 3    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xF8),
-	/* 4    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x114),
-	/* 5    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x100),
-	/* 6    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x108),
-	/* 7    */ (void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x110),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x114),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xE8),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xF0),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0xF8),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x114),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x100),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x108),
+	(void*)(((char*)updateMixer__10JASChannelFffffPUs)+0x110),
 	/* padding */
 	NULL,
 };

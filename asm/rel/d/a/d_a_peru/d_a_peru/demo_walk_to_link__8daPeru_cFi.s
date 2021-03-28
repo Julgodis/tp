@@ -87,11 +87,11 @@ lbl_80D491D8:
 /* 80D49250  B0 1F 0D D8 */	sth r0, 0xdd8(r31)
 /* 80D49254  3C 60 80 D5 */	lis r3, lit_5219@ha
 /* 80D49258  38 83 C5 8C */	addi r4, r3, lit_5219@l
-/* 80D4925C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4C58C */
-/* 80D49260  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4C590 */
+/* 80D4925C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D49260  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D49264  90 61 00 08 */	stw r3, 8(r1)
 /* 80D49268  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D4926C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4C594 */
+/* 80D4926C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D49270  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D49274  7F E3 FB 78 */	mr r3, r31
 /* 80D49278  38 81 00 08 */	addi r4, r1, 8

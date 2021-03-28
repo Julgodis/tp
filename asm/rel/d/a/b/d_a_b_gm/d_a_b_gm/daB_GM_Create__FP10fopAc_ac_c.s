@@ -48,10 +48,10 @@ lbl_805F3638:
 /* 805F3654  38 00 FF FF */	li r0, -1
 /* 805F3658  3C 60 80 5F */	lis r3, l_HIO@ha
 /* 805F365C  38 63 47 DC */	addi r3, r3, l_HIO@l
-/* 805F3660  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 805F47E0 */
+/* 805F3660  98 03 00 04 */	stb r0, 4(r3)
 lbl_805F3664:
-/* 805F3664  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F3668  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805F3664  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F3668  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805F366C  3B 43 09 58 */	addi r26, r3, 0x958
 /* 805F3670  7F 43 D3 78 */	mr r3, r26
 /* 805F3674  38 80 00 03 */	li r4, 3

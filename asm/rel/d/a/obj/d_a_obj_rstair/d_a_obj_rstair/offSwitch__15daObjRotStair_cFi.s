@@ -7,8 +7,8 @@ lbl_80CC22A0:
 /* 80CC22B4  7C 7C 1B 78 */	mr r28, r3
 /* 80CC22B8  7C 9D 23 78 */	mr r29, r4
 /* 80CC22BC  3B C0 00 00 */	li r30, 0
-/* 80CC22C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC22C4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80CC22C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC22C4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80CC22C8:
 /* 80CC22C8  A0 1C 05 CA */	lhz r0, 0x5ca(r28)
 /* 80CC22CC  54 00 06 3E */	clrlwi r0, r0, 0x18

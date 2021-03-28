@@ -49,8 +49,8 @@ lbl_80C62050:
 /* 80C62068  4B 3B 85 10 */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
 /* 80C6206C  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C62070  98 1E 05 AD */	stb r0, 0x5ad(r30)
-/* 80C62074  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C62078  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C62074  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C62078  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C6207C  88 9E 05 AD */	lbz r4, 0x5ad(r30)
 /* 80C62080  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C62084  7C 05 07 74 */	extsb r5, r0
@@ -64,7 +64,7 @@ lbl_80C62050:
 /* 80C620A4  41 82 00 14 */	beq lbl_80C620B8
 /* 80C620A8  3C 60 80 C6 */	lis r3, l_HIO@ha
 /* 80C620AC  38 63 27 DC */	addi r3, r3, l_HIO@l
-/* 80C620B0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80C627E0 */
+/* 80C620B0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80C620B4  D0 1E 05 B0 */	stfs f0, 0x5b0(r30)
 lbl_80C620B8:
 /* 80C620B8  7F C3 F3 78 */	mr r3, r30

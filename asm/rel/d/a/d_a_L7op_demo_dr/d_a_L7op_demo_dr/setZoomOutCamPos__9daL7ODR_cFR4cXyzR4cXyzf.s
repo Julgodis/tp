@@ -36,11 +36,11 @@ lbl_805ABC2C:
 /* 805ABCB4  4B A6 10 E8 */	b transM__14mDoMtx_stack_cFfff
 /* 805ABCB8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805ABCBC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805ABCC0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 805ABCC0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805ABCC4  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 805ABCC8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805ABCC8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805ABCCC  D0 1E 00 04 */	stfs f0, 4(r30)
-/* 805ABCD0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 805ABCD0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805ABCD4  D0 1E 00 08 */	stfs f0, 8(r30)
 /* 805ABCD8  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 805ABCDC  CB E1 00 20 */	lfd f31, 0x20(r1)

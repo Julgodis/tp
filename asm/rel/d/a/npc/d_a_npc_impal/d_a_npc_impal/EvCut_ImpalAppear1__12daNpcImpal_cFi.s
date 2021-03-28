@@ -8,8 +8,8 @@ lbl_80A0A1E0:
 /* 80A0A1F8  7C 9A 23 78 */	mr r26, r4
 /* 80A0A1FC  3C 60 80 A1 */	lis r3, m__18daNpcImpal_Param_c@ha
 /* 80A0A200  3B A3 C2 70 */	addi r29, r3, m__18daNpcImpal_Param_c@l
-/* 80A0A204  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A0A208  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80A0A204  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A0A208  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80A0A20C  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80A0A210  7F 83 E3 78 */	mr r3, r28
 /* 80A0A214  4B 63 DD 48 */	b getMyNowCutName__16dEvent_manager_cFi
@@ -119,14 +119,14 @@ lbl_80A0A374:
 lbl_80A0A38C:
 /* 80A0A38C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A0A390  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A0A394  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A0A394  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A0A398  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A0A39C  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200005C@ha */
 /* 80A0A3A0  38 84 00 5C */	addi r4, r4, 0x005C /* 0x0200005C@l */
 /* 80A0A3A4  4B 8A 57 F0 */	b bgmStreamPrepare__8Z2SeqMgrFUl
 /* 80A0A3A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A0A3AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A0A3B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A0A3B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A0A3B4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A0A3B8  4B 8A 5A 60 */	b bgmStreamPlay__8Z2SeqMgrFv
 lbl_80A0A3BC:

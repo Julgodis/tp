@@ -7,10 +7,10 @@ lbl_80A3C998:
 /* 80A3C9AC  7C 7F 1B 78 */	mr r31, r3
 /* 80A3C9B0  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A3C9B4  38 83 09 70 */	addi r4, r3, m__16daNpc_Kn_Param_c@l
-/* 80A3C9B8  AB A4 00 48 */	lha r29, 0x48(r4)	/* effective address: 80A409B8 */
-/* 80A3C9BC  AB C4 00 4A */	lha r30, 0x4a(r4)	/* effective address: 80A409BA */
-/* 80A3C9C0  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 80A409BC */
-/* 80A3C9C4  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 80A409BE */
+/* 80A3C9B8  AB A4 00 48 */	lha r29, 0x48(r4)
+/* 80A3C9BC  AB C4 00 4A */	lha r30, 0x4a(r4)
+/* 80A3C9C0  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 80A3C9C4  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 80A3C9C8  88 1F 15 AE */	lbz r0, 0x15ae(r31)
 /* 80A3C9CC  7C 00 07 74 */	extsb r0, r0
 /* 80A3C9D0  2C 00 00 02 */	cmpwi r0, 2
@@ -61,11 +61,11 @@ lbl_80A3CA44:
 /* 80A3CA74  38 7F 08 E4 */	addi r3, r31, 0x8e4
 /* 80A3CA78  3C 80 80 A4 */	lis r4, m__16daNpc_Kn_Param_c@ha
 /* 80A3CA7C  38 84 09 70 */	addi r4, r4, m__16daNpc_Kn_Param_c@l
-/* 80A3CA80  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80A4098C */
+/* 80A3CA80  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80A3CA84  4B 63 94 BC */	b SetWallR__12dBgS_AcchCirFf
 /* 80A3CA88  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A3CA8C  38 63 09 70 */	addi r3, r3, m__16daNpc_Kn_Param_c@l
-/* 80A3CA90  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A40988 */
+/* 80A3CA90  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A3CA94  D0 1F 09 14 */	stfs f0, 0x914(r31)
 /* 80A3CA98  38 60 00 04 */	li r3, 4
 /* 80A3CA9C  48 00 00 60 */	b lbl_80A3CAFC
@@ -88,7 +88,7 @@ lbl_80A3CAA0:
 /* 80A3CADC  4B 63 94 64 */	b SetWallR__12dBgS_AcchCirFf
 /* 80A3CAE0  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A3CAE4  38 63 09 70 */	addi r3, r3, m__16daNpc_Kn_Param_c@l
-/* 80A3CAE8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A40988 */
+/* 80A3CAE8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A3CAEC  D0 1F 09 14 */	stfs f0, 0x914(r31)
 /* 80A3CAF0  38 60 00 04 */	li r3, 4
 /* 80A3CAF4  48 00 00 08 */	b lbl_80A3CAFC

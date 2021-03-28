@@ -67,11 +67,11 @@ asm void JASVoiceBank::getInstParam(int param_0, int param_1, int param_2, JASIn
 /* ############################################################################################## */
 /* 803C76D0-803C76E8 0014+04 s=1 e=1 z=0  None .data      __vt__12JASVoiceBank                                         */
 SECTION_DATA void* __vt__12JASVoiceBank[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JASVoiceBankFv,
-	/* 3    */ (void*)getInstParam__12JASVoiceBankCFiiiP12JASInstParam,
-	/* 4    */ (void*)getType__12JASVoiceBankCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JASVoiceBankFv,
+	(void*)getInstParam__12JASVoiceBankCFiiiP12JASInstParam,
+	(void*)getType__12JASVoiceBankCFv,
 	/* padding */
 	NULL,
 };

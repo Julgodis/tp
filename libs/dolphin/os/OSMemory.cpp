@@ -109,10 +109,10 @@ extern "C" asm static void RealMode() {
 /* ############################################################################################## */
 /* 803D07D8-803D07E8 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
 SECTION_DATA static void* ResetFunctionInfo[4] = {
-	/* 0    */ (void*)OnReset,
-	/* 1    */ (void*)0x0000007F,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)OnReset,
+	(void*)0x0000007F,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8033EEF0-8033F008 0118+00 s=0 e=1 z=0  None .text      __OSInitMemoryProtection                                     */

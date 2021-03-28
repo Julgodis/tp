@@ -20,11 +20,11 @@ lbl_806AEB48:
 /* 806AEB90  4B 95 E2 0C */	b transM__14mDoMtx_stack_cFfff
 /* 806AEB94  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806AEB98  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806AEB9C  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 806AEB9C  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 806AEBA0  D0 41 00 08 */	stfs f2, 8(r1)
-/* 806AEBA4  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806AEBA4  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 806AEBA8  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 806AEBAC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806AEBAC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806AEBB0  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 806AEBB4  D0 5F 05 68 */	stfs f2, 0x568(r31)
 /* 806AEBB8  D0 3F 05 6C */	stfs f1, 0x56c(r31)

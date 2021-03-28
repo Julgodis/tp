@@ -8,7 +8,7 @@ lbl_80C7FC54:
 /* 80C7FC6C  38 C3 1D 04 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80C7FC70  3C 60 80 C8 */	lis r3, struct_80C81FE8+0x1@ha
 /* 80C7FC74  38 A3 1F E9 */	addi r5, r3, struct_80C81FE8+0x1@l
-/* 80C7FC78  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C81FE9 */
+/* 80C7FC78  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C7FC7C  7C 00 07 75 */	extsb. r0, r0
 /* 80C7FC80  40 82 00 40 */	bne lbl_80C7FCC0
 /* 80C7FC84  80 66 01 C8 */	lwz r3, 0x1c8(r6)
@@ -49,18 +49,18 @@ lbl_80C7FCC0:
 /* 80C7FD0C  4B 6C 67 A4 */	b PSMTXCopy
 /* 80C7FD10  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C7FD14  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C7FD18  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C7FD18  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80C7FD1C  D0 1F 0A 58 */	stfs f0, 0xa58(r31)
-/* 80C7FD20  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C7FD20  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80C7FD24  D0 1F 0A 5C */	stfs f0, 0xa5c(r31)
-/* 80C7FD28  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C7FD28  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80C7FD2C  D0 1F 0A 60 */	stfs f0, 0xa60(r31)
 /* 80C7FD30  3C 60 00 07 */	lis r3, 0x0007 /* 0x00070226@ha */
 /* 80C7FD34  38 03 02 26 */	addi r0, r3, 0x0226 /* 0x00070226@l */
 /* 80C7FD38  90 01 00 08 */	stw r0, 8(r1)
 /* 80C7FD3C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C7FD40  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C7FD44  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C7FD44  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C7FD48  38 81 00 08 */	addi r4, r1, 8
 /* 80C7FD4C  38 BF 0A 58 */	addi r5, r31, 0xa58
 /* 80C7FD50  38 C0 00 00 */	li r6, 0

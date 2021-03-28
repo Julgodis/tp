@@ -24,9 +24,9 @@ lbl_805A2DAC:
 /* 805A2DAC  38 60 00 01 */	li r3, 1
 /* 805A2DB0  48 00 01 8C */	b lbl_805A2F3C
 lbl_805A2DB4:
-/* 805A2DB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A2DB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A2DBC  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805A2DB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A2DB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A2DBC  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 805A2DC0  80 1D 05 80 */	lwz r0, 0x580(r29)
 /* 805A2DC4  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 805A2DC8  40 82 00 10 */	bne lbl_805A2DD8

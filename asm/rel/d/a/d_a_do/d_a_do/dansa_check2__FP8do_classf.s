@@ -12,7 +12,7 @@ lbl_80668A30:
 /* 80668A58  3B E3 ED E8 */	addi r31, r3, lit_3662@l
 /* 80668A5C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80668A60  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80668A64  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80668A64  80 63 00 00 */	lwz r3, 0(r3)
 /* 80668A68  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80668A6C  4B 9A 39 70 */	b mDoMtx_YrotS__FPA4_fs
 /* 80668A70  C0 1F 00 14 */	lfs f0, 0x14(r31)

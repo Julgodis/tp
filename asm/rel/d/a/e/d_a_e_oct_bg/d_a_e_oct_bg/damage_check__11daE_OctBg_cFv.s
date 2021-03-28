@@ -42,10 +42,10 @@ lbl_80738EBC:
 /* 80738ECC  80 1E 0A 54 */	lwz r0, 0xa54(r30)
 /* 80738ED0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80738ED4  41 82 00 44 */	beq lbl_80738F18
-/* 80738ED8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80738EDC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80738EE0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80738EE4  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 80738ED8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80738EDC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80738EE0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80738EE4  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80738EE8  28 00 00 29 */	cmplwi r0, 0x29
 /* 80738EEC  40 82 00 2C */	bne lbl_80738F18
 /* 80738EF0  80 7F 01 84 */	lwz r3, 0x184(r31)

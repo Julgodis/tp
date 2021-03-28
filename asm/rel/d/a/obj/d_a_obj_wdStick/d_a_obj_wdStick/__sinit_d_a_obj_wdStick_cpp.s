@@ -19,10 +19,10 @@ lbl_80D3408C:
 /* 80D340D0  38 00 00 06 */	li r0, 6
 /* 80D340D4  7C 09 03 A6 */	mtctr r0
 lbl_80D340D8:
-/* 80D340D8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80D34138 */
-/* 80D340DC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80D3413C */
-/* 80D340E0  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80D3423C */
-/* 80D340E4  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80D34240 */
+/* 80D340D8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80D340DC  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80D340E0  90 65 00 04 */	stw r3, 4(r5)
+/* 80D340E4  94 05 00 08 */	stwu r0, 8(r5)
 /* 80D340E8  42 00 FF F0 */	bdnz lbl_80D340D8
 /* 80D340EC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D340F0  7C 08 03 A6 */	mtlr r0

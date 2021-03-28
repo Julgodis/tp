@@ -11,34 +11,34 @@
 // Types:
 // 
 
-struct J3DTextureBlock {
-};
-
-struct J3DVertexBlock {
-};
-
-struct J3DEnvelopeBlock {
-};
-
 struct J3DJointBlock {
 };
 
-struct J3DShapeBlock {
-};
-
-struct J3DMaterialBlock_v21 {
+struct J3DDrawBlock {
 };
 
 struct J3DModelInfoBlock {
 };
 
+struct J3DMaterialBlock_v21 {
+};
+
+struct J3DTextureBlock {
+};
+
 struct J3DMaterialBlock {
 };
 
-struct J3DMaterialDLBlock {
+struct J3DEnvelopeBlock {
 };
 
-struct J3DDrawBlock {
+struct J3DShapeBlock {
+};
+
+struct J3DVertexBlock {
+};
+
+struct J3DMaterialDLBlock {
 };
 
 struct J3DModelLoader {
@@ -147,10 +147,10 @@ struct JUTNameTab {
 	/* 802DE9E0 */ JUTNameTab(ResNTAB const*);
 };
 
-struct J3DVertexData {
+struct J3DDrawMtxData {
 };
 
-struct J3DDrawMtxData {
+struct J3DVertexData {
 };
 
 struct J3DShapeTable {
@@ -158,15 +158,15 @@ struct J3DShapeTable {
 	/* 8032597C */ void sortVcdVatCmd();
 };
 
+struct J3DMaterialTable {
+	/* 8032F5A8 */ void clear();
+	/* 8032F5D0 */ J3DMaterialTable();
+};
+
 struct J3DJoint {
 };
 
 struct J3DModelHierarchy {
-};
-
-struct J3DMaterialTable {
-	/* 8032F5A8 */ void clear();
-	/* 8032F5D0 */ J3DMaterialTable();
 };
 
 struct J3DJointTree {
@@ -378,102 +378,102 @@ extern "C" extern u8 mJoint__10J3DMtxCalc[4];
 /* ############################################################################################## */
 /* 803CF108-803CF14C 0044+00 s=2 e=0 z=0  None .data      __vt__18J3DModelLoader_v21                                   */
 SECTION_DATA static void* __vt__18J3DModelLoader_v21[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__14J3DModelLoaderFPCvUl,
-	/* 3    */ (void*)loadMaterialTable__14J3DModelLoaderFPCv,
-	/* 4    */ (void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
-	/* 5    */ (void*)calcLoadSize__14J3DModelLoaderFPCvUl,
-	/* 6    */ (void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
-	/* 7    */ (void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
-	/* 8    */ (void*)countMaterialNum__14J3DModelLoaderFPCv,
-	/* 9    */ (void*)setupBBoardInfo__14J3DModelLoaderFv,
-	/* 10   */ (void*)__dt__18J3DModelLoader_v21Fv,
-	/* 11   */ (void*)readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 12   */ (void*)readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul,
-	/* 13   */ (void*)readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 14   */ (void*)readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul,
-	/* 15   */ (void*)calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 16   */ (void*)calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__14J3DModelLoaderFPCvUl,
+	(void*)loadMaterialTable__14J3DModelLoaderFPCv,
+	(void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadSize__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
+	(void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
+	(void*)countMaterialNum__14J3DModelLoaderFPCv,
+	(void*)setupBBoardInfo__14J3DModelLoaderFv,
+	(void*)__dt__18J3DModelLoader_v21Fv,
+	(void*)readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul,
+	(void*)readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul,
+	(void*)calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
 };
 
 /* 803CF14C-803CF190 0044+00 s=2 e=0 z=0  None .data      __vt__18J3DModelLoader_v26                                   */
 SECTION_DATA static void* __vt__18J3DModelLoader_v26[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__14J3DModelLoaderFPCvUl,
-	/* 3    */ (void*)loadMaterialTable__14J3DModelLoaderFPCv,
-	/* 4    */ (void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
-	/* 5    */ (void*)calcLoadSize__14J3DModelLoaderFPCvUl,
-	/* 6    */ (void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
-	/* 7    */ (void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
-	/* 8    */ (void*)countMaterialNum__14J3DModelLoaderFPCv,
-	/* 9    */ (void*)setupBBoardInfo__14J3DModelLoaderFv,
-	/* 10   */ (void*)__dt__18J3DModelLoader_v26Fv,
-	/* 11   */ (void*)readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
-	/* 12   */ (void*)readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
-	/* 13   */ (void*)readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
-	/* 14   */ (void*)readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
-	/* 15   */ (void*)calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
-	/* 16   */ (void*)calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__14J3DModelLoaderFPCvUl,
+	(void*)loadMaterialTable__14J3DModelLoaderFPCv,
+	(void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadSize__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
+	(void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
+	(void*)countMaterialNum__14J3DModelLoaderFPCv,
+	(void*)setupBBoardInfo__14J3DModelLoaderFv,
+	(void*)__dt__18J3DModelLoader_v26Fv,
+	(void*)readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
+	(void*)readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
+	(void*)readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
+	(void*)readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
+	(void*)calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
+	(void*)calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl,
 };
 
 /* 803CF190-803CF1BC 002C+00 s=2 e=0 z=0  None .data      __vt__83J3DMtxCalcNoAnm<32J3DMtxCalcCalcTransformSoftimage,29J3DMtxCalcJ3DSysInitSoftimage> */
 SECTION_DATA static void* data_803CF190[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_803364B8,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_80336524,
-	/* 10   */ (void*)func_8033656C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_803364B8,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_80336524,
+	(void*)func_8033656C,
 };
 
 /* 803CF1BC-803CF1E8 002C+00 s=2 e=0 z=0  None .data      __vt__75J3DMtxCalcNoAnm<28J3DMtxCalcCalcTransformBasic,25J3DMtxCalcJ3DSysInitBasic> */
 SECTION_DATA static void* data_803CF1BC[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80336594,
-	/* 3    */ (void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
-	/* 4    */ (void*)getAnmTransform__10J3DMtxCalcFv,
-	/* 5    */ (void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
-	/* 6    */ (void*)getAnmTransform__10J3DMtxCalcFUc,
-	/* 7    */ (void*)setWeight__10J3DMtxCalcFUcf,
-	/* 8    */ (void*)getWeight__10J3DMtxCalcCFUc,
-	/* 9    */ (void*)func_80336600,
-	/* 10   */ (void*)func_80336628,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80336594,
+	(void*)setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFv,
+	(void*)setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform,
+	(void*)getAnmTransform__10J3DMtxCalcFUc,
+	(void*)setWeight__10J3DMtxCalcFUcf,
+	(void*)getWeight__10J3DMtxCalcCFUc,
+	(void*)func_80336600,
+	(void*)func_80336628,
 };
 
 /* 803CF1E8-803CF1F4 000C+00 s=4 e=0 z=0  None .data      __vt__10J3DTexture                                           */
 SECTION_DATA static void* __vt__10J3DTexture[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J3DTextureFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10J3DTextureFv,
 };
 
 /* 803CF1F4-803CF238 0044+00 s=5 e=0 z=0  None .data      __vt__14J3DModelLoader                                       */
 SECTION_DATA static void* __vt__14J3DModelLoader[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__14J3DModelLoaderFPCvUl,
-	/* 3    */ (void*)loadMaterialTable__14J3DModelLoaderFPCv,
-	/* 4    */ (void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
-	/* 5    */ (void*)calcLoadSize__14J3DModelLoaderFPCvUl,
-	/* 6    */ (void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
-	/* 7    */ (void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
-	/* 8    */ (void*)countMaterialNum__14J3DModelLoaderFPCv,
-	/* 9    */ (void*)setupBBoardInfo__14J3DModelLoaderFv,
-	/* 10   */ (void*)__dt__14J3DModelLoaderFv,
-	/* 11   */ (void*)readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 12   */ (void*)readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
-	/* 13   */ (void*)readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 14   */ (void*)readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
-	/* 15   */ (void*)calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
-	/* 16   */ (void*)calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__14J3DModelLoaderFPCvUl,
+	(void*)loadMaterialTable__14J3DModelLoaderFPCv,
+	(void*)loadBinaryDisplayList__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadSize__14J3DModelLoaderFPCvUl,
+	(void*)calcLoadMaterialTableSize__14J3DModelLoaderFPCv,
+	(void*)calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl,
+	(void*)countMaterialNum__14J3DModelLoaderFPCv,
+	(void*)setupBBoardInfo__14J3DModelLoaderFv,
+	(void*)__dt__14J3DModelLoaderFv,
+	(void*)readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
+	(void*)readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul,
+	(void*)calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl,
+	(void*)calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl,
 };
 
 /* 8033468C-803346BC 0030+00 s=1 e=0 z=0  None .text      __ct__14J3DModelLoaderFv                                     */

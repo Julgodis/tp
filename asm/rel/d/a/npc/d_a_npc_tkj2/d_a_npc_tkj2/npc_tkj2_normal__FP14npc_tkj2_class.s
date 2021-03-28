@@ -9,9 +9,9 @@ lbl_80B11CCC:
 /* 80B11CE8  7C 7E 1B 78 */	mr r30, r3
 /* 80B11CEC  3C 80 80 B1 */	lis r4, lit_3648@ha
 /* 80B11CF0  3B E4 42 DC */	addi r31, r4, lit_3648@l
-/* 80B11CF4  C3 FF 00 08 */	lfs f31, 8(r31)	/* effective address: 80B142E4 */
+/* 80B11CF4  C3 FF 00 08 */	lfs f31, 8(r31)
 /* 80B11CF8  D3 E1 00 38 */	stfs f31, 0x38(r1)
-/* 80B11CFC  C0 3F 00 10 */	lfs f1, 0x10(r31)	/* effective address: 80B142EC */
+/* 80B11CFC  C0 3F 00 10 */	lfs f1, 0x10(r31)
 /* 80B11D00  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 80B11D04  FC 00 F8 90 */	fmr f0, f31
 /* 80B11D08  D3 E1 00 40 */	stfs f31, 0x40(r1)

@@ -7,7 +7,7 @@ lbl_805CB4A4:
 /* 805CB4B8  40 82 00 24 */	bne lbl_805CB4DC
 /* 805CB4BC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 805CB4C0  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 805CB4C4  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 805CB4C4  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 805CB4C8  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 805CB4CC  28 03 00 00 */	cmplwi r3, 0
 /* 805CB4D0  41 82 00 0C */	beq lbl_805CB4DC

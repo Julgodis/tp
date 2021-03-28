@@ -35,8 +35,8 @@ lbl_80A8919C:
 /* 80A89220  38 A1 00 08 */	addi r5, r1, 8
 /* 80A89224  7F C6 F3 78 */	mr r6, r30
 /* 80A89228  4B 5E EB 3C */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80A8922C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A89230  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A8922C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A89230  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A89234  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80A89238  38 81 00 20 */	addi r4, r1, 0x20
 /* 80A8923C  4B 5E B1 78 */	b LineCross__4cBgSFP11cBgS_LinChk

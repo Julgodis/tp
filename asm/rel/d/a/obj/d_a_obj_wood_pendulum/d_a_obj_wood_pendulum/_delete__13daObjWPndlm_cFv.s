@@ -4,7 +4,7 @@ lbl_80D39BCC:
 /* 80D39BD4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D39BD8  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D39BDC  38 84 9D 44 */	addi r4, r4, l_arcName@l
-/* 80D39BE0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D39D44 */
+/* 80D39BE0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D39BE4  38 63 05 68 */	addi r3, r3, 0x568
 /* 80D39BE8  4B 2F 34 20 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D39BEC  38 60 00 01 */	li r3, 1

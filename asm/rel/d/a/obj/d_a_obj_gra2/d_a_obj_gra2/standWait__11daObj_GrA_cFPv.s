@@ -97,14 +97,14 @@ lbl_80C054F4:
 /* 80C05528  4B FF D5 AD */	bl setLookMode__11daObj_GrA_cFi
 /* 80C0552C  48 00 03 C8 */	b lbl_80C058F4
 lbl_80C05530:
-/* 80C05530  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C05534  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C05538  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80C0553C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80C05530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C05534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C05538  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80C0553C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80C05540  D0 01 00 58 */	stfs f0, 0x58(r1)
-/* 80C05544  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 80406694 */
+/* 80C05544  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 80C05548  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 80C0554C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 80C0554C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80C05550  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 80C05554  4B 55 9E A8 */	b getAttentionOffsetY__9daPy_py_cFv
 /* 80C05558  C0 01 00 5C */	lfs f0, 0x5c(r1)
@@ -200,9 +200,9 @@ lbl_80C05680:
 /* 80C05698  80 1E 1F DC */	lwz r0, 0x1fdc(r30)
 /* 80C0569C  2C 00 00 00 */	cmpwi r0, 0
 /* 80C056A0  40 82 01 8C */	bne lbl_80C0582C
-/* 80C056A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C056A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C056AC  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 80C056A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C056A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C056AC  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 80C056B0  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80C056B4  40 82 01 78 */	bne lbl_80C0582C
 /* 80C056B8  38 61 00 34 */	addi r3, r1, 0x34
@@ -314,11 +314,11 @@ lbl_80C0582C:
 /* 80C05834  41 82 00 58 */	beq lbl_80C0588C
 /* 80C05838  3C 60 80 C1 */	lis r3, lit_6363@ha
 /* 80C0583C  38 83 01 B4 */	addi r4, r3, lit_6363@l
-/* 80C05840  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C101B4 */
-/* 80C05844  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C101B8 */
+/* 80C05840  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C05844  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C05848  90 61 00 28 */	stw r3, 0x28(r1)
 /* 80C0584C  90 01 00 2C */	stw r0, 0x2c(r1)
-/* 80C05850  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C101BC */
+/* 80C05850  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C05854  90 01 00 30 */	stw r0, 0x30(r1)
 /* 80C05858  7F C3 F3 78 */	mr r3, r30
 /* 80C0585C  38 81 00 28 */	addi r4, r1, 0x28

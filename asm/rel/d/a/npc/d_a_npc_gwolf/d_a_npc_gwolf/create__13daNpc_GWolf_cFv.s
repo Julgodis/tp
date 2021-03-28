@@ -151,8 +151,8 @@ lbl_809F3620:
 /* 809F36E8  38 03 26 14 */	addi r0, r3, tgHitCallBack__8daNpcF_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 809F36EC  90 1E 0D 30 */	stw r0, 0xd30(r30)
 /* 809F36F0  38 7E 05 D0 */	addi r3, r30, 0x5d0
-/* 809F36F4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809F36F8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809F36F4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809F36F8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809F36FC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809F3700  4B 68 33 AC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809F3704  80 1E 06 AC */	lwz r0, 0x6ac(r30)

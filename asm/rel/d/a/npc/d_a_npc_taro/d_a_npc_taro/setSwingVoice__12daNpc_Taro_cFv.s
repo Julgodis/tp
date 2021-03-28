@@ -13,12 +13,12 @@ lbl_805688FC:
 /* 80568928  41 82 00 F0 */	beq lbl_80568A18
 /* 8056892C  3C 80 80 57 */	lis r4, l_motionAnmData@ha
 /* 80568930  38 A4 20 E8 */	addi r5, r4, l_motionAnmData@l
-/* 80568934  80 05 02 1C */	lwz r0, 0x21c(r5)	/* effective address: 80572304 */
+/* 80568934  80 05 02 1C */	lwz r0, 0x21c(r5)
 /* 80568938  54 00 10 3A */	slwi r0, r0, 2
 /* 8056893C  3C 80 80 57 */	lis r4, l_resNameList@ha
 /* 80568940  38 84 1C F4 */	addi r4, r4, l_resNameList@l
 /* 80568944  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80568948  80 A5 02 14 */	lwz r5, 0x214(r5)	/* effective address: 805722FC */
+/* 80568948  80 A5 02 14 */	lwz r5, 0x214(r5)
 /* 8056894C  4B BD F7 0C */	b getTrnsfrmAnmP__8daNpcT_cFPCci
 /* 80568950  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 80568954  80 04 00 08 */	lwz r0, 8(r4)
@@ -44,12 +44,12 @@ lbl_805689A0:
 /* 805689A0  7F E3 FB 78 */	mr r3, r31
 /* 805689A4  3C 80 80 57 */	lis r4, l_motionAnmData@ha
 /* 805689A8  38 A4 20 E8 */	addi r5, r4, l_motionAnmData@l
-/* 805689AC  80 05 02 38 */	lwz r0, 0x238(r5)	/* effective address: 80572320 */
+/* 805689AC  80 05 02 38 */	lwz r0, 0x238(r5)
 /* 805689B0  54 00 10 3A */	slwi r0, r0, 2
 /* 805689B4  3C 80 80 57 */	lis r4, l_resNameList@ha
 /* 805689B8  38 84 1C F4 */	addi r4, r4, l_resNameList@l
 /* 805689BC  7C 84 00 2E */	lwzx r4, r4, r0
-/* 805689C0  80 A5 02 30 */	lwz r5, 0x230(r5)	/* effective address: 80572318 */
+/* 805689C0  80 A5 02 30 */	lwz r5, 0x230(r5)
 /* 805689C4  4B BD F6 94 */	b getTrnsfrmAnmP__8daNpcT_cFPCci
 /* 805689C8  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 805689CC  80 04 00 08 */	lwz r0, 8(r4)

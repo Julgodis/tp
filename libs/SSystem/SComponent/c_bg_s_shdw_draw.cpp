@@ -14,10 +14,10 @@
 struct cXyz {
 };
 
-struct cM3dGPla {
+struct cBgD_Vtx_t {
 };
 
-struct cBgD_Vtx_t {
+struct cM3dGPla {
 };
 
 struct cBgS_ShdwDraw {
@@ -65,9 +65,9 @@ extern "C" extern void* __vt__8cM3dGAab[3];
 /* ############################################################################################## */
 /* 803C3FC0-803C3FD0 000C+04 s=2 e=0 z=0  None .data      __vt__13cBgS_ShdwDraw                                        */
 SECTION_DATA static void* __vt__13cBgS_ShdwDraw[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13cBgS_ShdwDrawFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13cBgS_ShdwDrawFv,
 	/* padding */
 	NULL,
 };

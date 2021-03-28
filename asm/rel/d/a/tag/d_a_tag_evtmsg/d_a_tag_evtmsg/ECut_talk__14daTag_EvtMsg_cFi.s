@@ -4,8 +4,8 @@ lbl_8048D54C:
 /* 8048D554  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8048D558  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8048D55C  7C 7F 1B 78 */	mr r31, r3
-/* 8048D560  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048D564  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048D560  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048D564  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048D568  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8048D56C  4B BB A7 E0 */	b getIsAddvance__16dEvent_manager_cFi
 /* 8048D570  2C 03 00 00 */	cmpwi r3, 0

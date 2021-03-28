@@ -60,8 +60,8 @@ lbl_80CA29EC:
 /* 80CA2AD4  38 61 00 14 */	addi r3, r1, 0x14
 /* 80CA2AD8  38 81 00 08 */	addi r4, r1, 8
 /* 80CA2ADC  4B 5C 52 4C */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80CA2AE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA2AE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA2AE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA2AE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA2AE8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CA2AEC  38 81 00 14 */	addi r4, r1, 0x14
 /* 80CA2AF0  4B 3D 19 B0 */	b GroundCross__4cBgSFP11cBgS_GndChk

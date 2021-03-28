@@ -8,8 +8,8 @@ lbl_80CEE0E0:
 /* 80CEE0F8  3C 60 80 CF */	lis r3, lit_3635@ha
 /* 80CEE0FC  3B E3 EF A0 */	addi r31, r3, lit_3635@l
 /* 80CEE100  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80CEE104  C0 3F 00 28 */	lfs f1, 0x28(r31)	/* effective address: 80CEEFC8 */
-/* 80CEE108  C0 5F 00 34 */	lfs f2, 0x34(r31)	/* effective address: 80CEEFD4 */
+/* 80CEE104  C0 3F 00 28 */	lfs f1, 0x28(r31)
+/* 80CEE108  C0 5F 00 34 */	lfs f2, 0x34(r31)
 /* 80CEE10C  4B 58 26 34 */	b cLib_chaseF__FPfff
 /* 80CEE110  38 7E 09 50 */	addi r3, r30, 0x950
 /* 80CEE114  C0 3F 00 00 */	lfs f1, 0(r31)

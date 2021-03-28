@@ -58,10 +58,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -73,24 +73,24 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daKytag09_Draw(kytag09_class*); // 2
-static bool daKytag09_Execute(kytag09_class*); // 2
-static bool daKytag09_IsDelete(kytag09_class*); // 2
-static void daKytag09_Delete(kytag09_class*); // 2
+void daKytag09_Draw(kytag09_class*); // 2
+bool daKytag09_Execute(kytag09_class*); // 2
+bool daKytag09_IsDelete(kytag09_class*); // 2
+void daKytag09_Delete(kytag09_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void useHeapInit2(fopAc_ac_c*); // 2
-static void daKytag09_Create(fopAc_ac_c*); // 2
+void daKytag09_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daKytag09_Draw__FP13kytag09_class(); // 1
-extern "C" static bool daKytag09_Execute__FP13kytag09_class(); // 1
-extern "C" static bool daKytag09_IsDelete__FP13kytag09_class(); // 1
-extern "C" static void daKytag09_Delete__FP13kytag09_class(); // 1
+extern "C" void daKytag09_Draw__FP13kytag09_class(); // 1
+extern "C" bool daKytag09_Execute__FP13kytag09_class(); // 1
+extern "C" bool daKytag09_IsDelete__FP13kytag09_class(); // 1
+extern "C" void daKytag09_Delete__FP13kytag09_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void useHeapInit2__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag09_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daKytag09_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" extern char const* const stringBase0;
-extern "C" extern void* g_profile_KYTAG09[12];
+extern "C" extern void* l_daKytag09_Method[8];
 
 // 
 // External References:
@@ -124,19 +124,10 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_804061E8[12];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -148,25 +139,25 @@ SECTION_RODATA static u8 const lit_3863[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8085B3F8-8085B5F4 01FC+00 s=1 e=0 z=0  None .text      daKytag09_Draw__FP13kytag09_class                            */
+/* 8085B3F8-8085B5F4 01FC+00 s=0 e=0 z=0  None .text      daKytag09_Draw__FP13kytag09_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag09_Draw(kytag09_class* param_0) {
+asm void daKytag09_Draw(kytag09_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag09/d_a_kytag09/daKytag09_Draw__FP13kytag09_class.s"
 }
 #pragma pop
 
 
-/* 8085B5F4-8085B5FC 0008+00 s=1 e=0 z=0  None .text      daKytag09_Execute__FP13kytag09_class                         */
-static bool daKytag09_Execute(kytag09_class* param_0) {
+/* 8085B5F4-8085B5FC 0008+00 s=0 e=0 z=0  None .text      daKytag09_Execute__FP13kytag09_class                         */
+bool daKytag09_Execute(kytag09_class* param_0) {
 	return true;
 }
 
 
-/* 8085B5FC-8085B604 0008+00 s=1 e=0 z=0  None .text      daKytag09_IsDelete__FP13kytag09_class                        */
-static bool daKytag09_IsDelete(kytag09_class* param_0) {
+/* 8085B5FC-8085B604 0008+00 s=0 e=0 z=0  None .text      daKytag09_IsDelete__FP13kytag09_class                        */
+bool daKytag09_IsDelete(kytag09_class* param_0) {
 	return true;
 }
 
@@ -183,11 +174,11 @@ SECTION_DEAD char const* const stringBase_8085BA4C = "Kytag09";
 SECTION_DEAD char const* const stringBase_8085BA54 = "kytag09_2";
 #pragma pop
 
-/* 8085B604-8085B658 0054+00 s=1 e=0 z=0  None .text      daKytag09_Delete__FP13kytag09_class                          */
+/* 8085B604-8085B658 0054+00 s=0 e=0 z=0  None .text      daKytag09_Delete__FP13kytag09_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag09_Delete(kytag09_class* param_0) {
+asm void daKytag09_Delete(kytag09_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag09/d_a_kytag09/daKytag09_Delete__FP13kytag09_class.s"
 }
@@ -195,32 +186,32 @@ asm static void daKytag09_Delete(kytag09_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 8085BA60-8085BA80 0020+00 s=1 e=0 z=0  None .data      l_daKytag09_Method                                           */
-SECTION_DATA static void* l_daKytag09_Method[8] = {
-	/* 0    */ (void*)daKytag09_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daKytag09_Delete__FP13kytag09_class,
-	/* 2    */ (void*)daKytag09_Execute__FP13kytag09_class,
-	/* 3    */ (void*)daKytag09_IsDelete__FP13kytag09_class,
-	/* 4    */ (void*)daKytag09_Draw__FP13kytag09_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8085BA60-8085BA80 0020+00 s=0 e=0 z=0  None .data      l_daKytag09_Method                                           */
+SECTION_DATA void* l_daKytag09_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8085BA80-8085BAB0 0030+00 s=2 e=0 z=1  None .data      g_profile_KYTAG09                                            */
-SECTION_DATA void* g_profile_KYTAG09[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02B30000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00670000,
-	/* 9    */ (void*)&l_daKytag09_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)NULL,
+/* 8085BA80-8085BAB0 0030+00 s=2 e=0 z=0  None .data      g_profile_KYTAG09                                            */
+SECTION_DATA static void* g_profile_KYTAG09[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02B30000,
+	(void*)NULL,
+	(void*)0x000005C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00670000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)NULL,
 };
 
 /* 8085B658-8085B7C0 0168+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
@@ -248,23 +239,23 @@ asm static void useHeapInit2(fopAc_ac_c* param_0) {
 /* ############################################################################################## */
 /* 8085BAB0-8085BABC 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8085B894-8085B9F4 0160+00 s=1 e=0 z=0  None .text      daKytag09_Create__FP10fopAc_ac_c                             */
+/* 8085B894-8085B9F4 0160+00 s=0 e=0 z=0  None .text      daKytag09_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag09_Create(fopAc_ac_c* param_0) {
+asm void daKytag09_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag09/d_a_kytag09/daKytag09_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8085B9F4-8085BA3C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 8085B9F4-8085BA3C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -5,9 +5,9 @@ lbl_8076D004:
 /* 8076D010  39 61 00 20 */	addi r11, r1, 0x20
 /* 8076D014  4B BF 51 C0 */	b _savegpr_27
 /* 8076D018  7C 7F 1B 78 */	mr r31, r3
-/* 8076D01C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076D020  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 8076D024  88 1D 4F AD */	lbz r0, 0x4fad(r29)	/* effective address: 8040B16D */
+/* 8076D01C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076D020  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 8076D024  88 1D 4F AD */	lbz r0, 0x4fad(r29)
 /* 8076D028  28 00 00 00 */	cmplwi r0, 0
 /* 8076D02C  41 82 00 0C */	beq lbl_8076D038
 /* 8076D030  38 60 00 00 */	li r3, 0

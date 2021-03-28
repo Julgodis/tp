@@ -97,8 +97,8 @@ lbl_80BD70B8:
 /* 80BD70DC  3A C0 00 00 */	li r22, 0
 /* 80BD70E0  3B 80 00 00 */	li r28, 0
 /* 80BD70E4  3B 60 00 00 */	li r27, 0
-/* 80BD70E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD70EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD70E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD70EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD70F0  3B 03 23 3C */	addi r24, r3, 0x233c
 /* 80BD70F4  3C 60 80 BE */	lis r3, l_side_co_offset@ha
 /* 80BD70F8  3B 23 A1 00 */	addi r25, r3, l_side_co_offset@l
@@ -137,9 +137,9 @@ lbl_80BD7174:
 /* 80BD7174  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 80BD7178  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 80BD717C  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80BD7180  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 80BD7180  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BD7184  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80BD7188  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80BD7188  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BD718C  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80BD7190  38 7D 0F 38 */	addi r3, r29, 0xf38
 /* 80BD7194  4B 43 5B D0 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -155,8 +155,8 @@ lbl_80BD7174:
 /* 80BD71BC  38 7D 0E 70 */	addi r3, r29, 0xe70
 /* 80BD71C0  38 81 00 20 */	addi r4, r1, 0x20
 /* 80BD71C4  4B 69 80 18 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80BD71C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD71CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD71C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD71CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD71D0  3A E3 23 3C */	addi r23, r3, 0x233c
 /* 80BD71D4  7E E3 BB 78 */	mr r3, r23
 /* 80BD71D8  38 9D 0D 4C */	addi r4, r29, 0xd4c
@@ -170,9 +170,9 @@ lbl_80BD7174:
 /* 80BD71F8  88 1D 0E 90 */	lbz r0, 0xe90(r29)
 /* 80BD71FC  98 1D 0E 93 */	stb r0, 0xe93(r29)
 /* 80BD7200  38 61 00 08 */	addi r3, r1, 8
-/* 80BD7204  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BD7208  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BD720C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BD7204  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BD7208  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BD720C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80BD7210  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80BD7214  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80BD7218  4B 68 F9 1C */	b __mi__4cXyzCFRC3Vec

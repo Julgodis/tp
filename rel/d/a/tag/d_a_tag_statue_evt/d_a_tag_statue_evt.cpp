@@ -121,10 +121,10 @@ struct dEvent_manager_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -146,10 +146,10 @@ struct Z2SeqMgr {
 
 static void CheckCreateHeap(fopAc_ac_c*); // 2
 static void s_s_sub(void*, void*); // 2
-static void daTagStatue_Draw(daTagStatue_c*); // 2
-static void daTagStatue_Execute(daTagStatue_c*); // 2
-static void daTagStatue_Delete(daTagStatue_c*); // 2
-static void daTagStatue_Create(daTagStatue_c*); // 2
+void daTagStatue_Draw(daTagStatue_c*); // 2
+void daTagStatue_Execute(daTagStatue_c*); // 2
+void daTagStatue_Delete(daTagStatue_c*); // 2
+void daTagStatue_Create(daTagStatue_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
@@ -174,15 +174,17 @@ extern "C" void checkOnEffect__13daTagStatue_cFv(); // 1
 extern "C" void getLetterCount__13daTagStatue_cFv(); // 1
 extern "C" void draw__13daTagStatue_cFv(); // 1
 extern "C" void _delete__13daTagStatue_cFv(); // 1
-extern "C" static void daTagStatue_Draw__FP13daTagStatue_c(); // 1
-extern "C" static void daTagStatue_Execute__FP13daTagStatue_c(); // 1
-extern "C" static void daTagStatue_Delete__FP13daTagStatue_c(); // 1
-extern "C" static void daTagStatue_Create__FP13daTagStatue_c(); // 1
+extern "C" void daTagStatue_Draw__FP13daTagStatue_c(); // 1
+extern "C" void daTagStatue_Execute__FP13daTagStatue_c(); // 1
+extern "C" void daTagStatue_Delete__FP13daTagStatue_c(); // 1
+extern "C" void daTagStatue_Create__FP13daTagStatue_c(); // 1
 extern "C" static void func_805A80E0(); // 1
-extern "C" extern u8 const lit_4079[8];
-extern "C" extern u8 const lit_4080[8];
-extern "C" extern u8 const lit_4081[8];
+extern "C" extern u8 const struct_805A816C[60];
+extern "C" extern u8 const struct_805A81A8[24];
+extern "C" extern u8 const struct_805A81C0[36];
+extern "C" extern u8 const struct_805A81E4[24];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daTagStatue_Method[8];
 extern "C" extern void* g_profile_Tag_Statue[12];
 
 // 
@@ -259,20 +261,10 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_805A8390[4];
@@ -352,74 +344,6 @@ SECTION_RODATA static u8 const lit_3759[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805A812C-805A8134 0004+04 s=1 e=0 z=0  None .rodata    @3894                                                        */
-SECTION_RODATA static u32 const lit_3894[1 + 1 /* padding */] = {
-	0xBF800000,
-	/* padding */
-	0x00000000,
-};
-
-/* 805A8134-805A813C 0008+00 s=0 e=0 z=0  None .rodata    @4079                                                        */
-SECTION_RODATA u8 const lit_4079[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A813C-805A8144 0008+00 s=0 e=0 z=0  None .rodata    @4080                                                        */
-SECTION_RODATA u8 const lit_4080[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A8144-805A814C 0008+00 s=0 e=0 z=0  None .rodata    @4081                                                        */
-SECTION_RODATA u8 const lit_4081[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 805A814C-805A8150 0004+00 s=1 e=0 z=0  None .rodata    @4082                                                        */
-SECTION_RODATA static u32 const lit_4082 = 0x42C80000;
-
-/* 805A8150-805A8154 0004+00 s=1 e=0 z=0  None .rodata    @4143                                                        */
-SECTION_RODATA static u32 const lit_4143 = 0x42F00000;
-
-/* 805A8154-805A816C 0018+00 s=3 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_805A8154[24] = {
-	/* 805A8154 0009 stringBase_805A8154 @stringBase0 */
-	0x4F, 0x62, 0x6A, 0x5F, 0x63, 0x73, 0x5F, 0x66, 0x00,
-	/* 805A815D 000F data_805A815D None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x30, 0x00,
-};
-
-/* 805A816C-805A81A8 003C+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_805A816C[60] = {
-	/* 805A816C 000F data_805A816C None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x31, 0x00,
-	/* 805A817B 000F data_805A817B None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x32, 0x00,
-	/* 805A818A 000F data_805A818A None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x33, 0x00,
-	/* 805A8199 000F data_805A8199 None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x34, 0x00,
-};
-
-/* 805A81A8-805A81C0 0018+00 s=2 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_805A81A8[24] = {
-	/* 805A81A8 000F data_805A81A8 None */
-	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x35, 0x00,
-	/* 805A81B7 0009 data_805A81B7 None */
-	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x31, 0x00,
-};
-
-/* 805A81C0-805A81E4 0024+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_805A81C0[36] = {
-	/* 805A81C0 0009 data_805A81C0 None */
-	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x32, 0x00,
-	/* 805A81C9 0009 data_805A81C9 None */
-	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x33, 0x00,
-	/* 805A81D2 0009 data_805A81D2 None */
-	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x34, 0x00,
-	/* 805A81DB 0009 data_805A81DB None */
-	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x35, 0x00,
-};
-
 /* 805A81FC-805A8208 000C+00 s=3 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -433,7 +357,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 805A821C-805A8220 0004+00 s=4 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_805A8154)+0x0) /* @stringBase0 */;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 805A8220-805A8228 0006+02 s=1 e=0 z=0  None .data      l_eff_id                                                     */
 SECTION_DATA static u8 l_eff_id[6 + 2 /* padding */] = {
@@ -444,22 +368,22 @@ SECTION_DATA static u8 l_eff_id[6 + 2 /* padding */] = {
 
 /* 805A8228-805A8240 0018+00 s=1 e=0 z=0  None .data      l_eventName                                                  */
 SECTION_DATA static void* l_eventName[6] = {
-	/* 0    */ (void*)(((char*)&struct_805A8154)+0x9) /* None */,
-	/* 1    */ (void*)(((char*)&struct_805A816C)+0x0) /* None */,
-	/* 2    */ (void*)(((char*)&struct_805A816C)+0xF) /* None */,
-	/* 3    */ (void*)(((char*)&struct_805A816C)+0x1E) /* None */,
-	/* 4    */ (void*)(((char*)&struct_805A816C)+0x2D) /* None */,
-	/* 5    */ (void*)(((char*)&struct_805A81A8)+0x0) /* None */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A8240-805A8258 0018+00 s=3 e=0 z=0  None .data      l_evArcName                                                  */
 SECTION_DATA static void* l_evArcName[6] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)(((char*)&struct_805A81A8)+0xF) /* None */,
-	/* 2    */ (void*)(((char*)&struct_805A81C0)+0x0) /* None */,
-	/* 3    */ (void*)(((char*)&struct_805A81C0)+0x9) /* None */,
-	/* 4    */ (void*)(((char*)&struct_805A81C0)+0x12) /* None */,
-	/* 5    */ (void*)(((char*)&struct_805A81C0)+0x1B) /* None */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A8258-805A8270 0018+00 s=1 e=0 z=0  None .data      l_cull_box                                                   */
@@ -480,42 +404,32 @@ asm void daTagStatue_c::Create() {
 
 
 /* ############################################################################################## */
-/* 805A81E4-805A81FC 0018+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_805A81E4[24] = {
-	/* 805A81E4 0005 data_805A81E4 None */
-	0x57, 0x41, 0x49, 0x54, 0x00,
-	/* 805A81E9 0008 data_805A81E9 None */
-	0x53, 0x54, 0x5F, 0x4D, 0x4F, 0x56, 0x45, 0x00,
-	/* 805A81F1 000B data_805A81F1 None */
-	0x49, 0x54, 0x45, 0x4D, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
-
 /* 805A8270-805A827C 000C+00 s=1 e=0 z=0  None .data      @3878                                                        */
 SECTION_DATA static void* lit_3878[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionWait__13daTagStatue_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A827C-805A8288 000C+00 s=1 e=0 z=0  None .data      @3879                                                        */
 SECTION_DATA static void* lit_3879[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionOrderEvent__13daTagStatue_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A8288-805A8294 000C+00 s=1 e=0 z=0  None .data      @3880                                                        */
 SECTION_DATA static void* lit_3880[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEvent__13daTagStatue_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A8294-805A82A0 000C+00 s=1 e=0 z=0  None .data      @3881                                                        */
 SECTION_DATA static void* lit_3881[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionDead__13daTagStatue_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A82A0-805A82D0 0030+00 s=1 e=0 z=0  None .data      l_func$3877                                                  */
@@ -527,9 +441,9 @@ SECTION_DATA static u8 data_805A82A0[48] = {
 
 /* 805A82D0-805A82DC 000C+00 s=1 e=0 z=0  None .data      action_table$3942                                            */
 SECTION_DATA static void* data_805A82D0[3] = {
-	/* 0    */ (void*)(((char*)&struct_805A81E4)+0x0) /* None */,
-	/* 1    */ (void*)(((char*)&struct_805A81E4)+0x5) /* None */,
-	/* 2    */ (void*)(((char*)&struct_805A81E4)+0xD) /* None */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A82DC-805A8324 0048+00 s=1 e=0 z=0  None .data      l_statue_pos$3943                                            */
@@ -546,39 +460,39 @@ SECTION_DATA static u8 data_805A8324[12] = {
 	0x40, 0x00, 0x40, 0x00, 0x21, 0x25, 0x40, 0x00, 0x40, 0x00, 0x40, 0x00,
 };
 
-/* 805A8330-805A8350 0020+00 s=1 e=0 z=0  None .data      l_daTagStatue_Method                                         */
-SECTION_DATA static void* l_daTagStatue_Method[8] = {
-	/* 0    */ (void*)daTagStatue_Create__FP13daTagStatue_c,
-	/* 1    */ (void*)daTagStatue_Delete__FP13daTagStatue_c,
-	/* 2    */ (void*)daTagStatue_Execute__FP13daTagStatue_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagStatue_Draw__FP13daTagStatue_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A8330-805A8350 0020+00 s=0 e=0 z=0  None .data      l_daTagStatue_Method                                         */
+SECTION_DATA void* l_daTagStatue_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A8350-805A8380 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Statue                                         */
+/* 805A8350-805A8380 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Statue                                         */
 SECTION_DATA void* g_profile_Tag_Statue[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01AE0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005A4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x024C0000,
-	/* 9    */ (void*)&l_daTagStatue_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01AE0000,
+	(void*)NULL,
+	(void*)0x000005A4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x024C0000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 805A8380-805A838C 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A7230-805A73DC 01AC+00 s=1 e=0 z=0  None .text      CreateHeap__13daTagStatue_cFv                                */
@@ -592,7 +506,7 @@ asm void daTagStatue_c::CreateHeap() {
 #pragma pop
 
 
-/* 805A73DC-805A7424 0048+00 s=2 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 805A73DC-805A7424 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,6 +539,14 @@ asm void daTagStatue_c::execute() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 805A812C-805A8134 0004+04 s=1 e=0 z=0  None .rodata    @3894                                                        */
+SECTION_RODATA static u32 const lit_3894[1 + 1 /* padding */] = {
+	0xBF800000,
+	/* padding */
+	0x00000000,
+};
+
 /* 805A759C-805A76AC 0110+00 s=1 e=0 z=0  None .text      event_proc_call__13daTagStatue_cFv                           */
 #pragma push
 #pragma optimization_level 0
@@ -636,7 +558,7 @@ asm void daTagStatue_c::event_proc_call() {
 #pragma pop
 
 
-/* 805A76AC-805A7714 0068+00 s=1 e=0 z=0  None .text      actionWait__13daTagStatue_cFv                                */
+/* 805A76AC-805A7714 0068+00 s=0 e=0 z=0  None .text      actionWait__13daTagStatue_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -647,7 +569,7 @@ asm void daTagStatue_c::actionWait() {
 #pragma pop
 
 
-/* 805A7714-805A77A0 008C+00 s=1 e=0 z=0  None .text      actionOrderEvent__13daTagStatue_cFv                          */
+/* 805A7714-805A77A0 008C+00 s=0 e=0 z=0  None .text      actionOrderEvent__13daTagStatue_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -658,7 +580,7 @@ asm void daTagStatue_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 805A77A0-805A7848 00A8+00 s=1 e=0 z=0  None .text      actionEvent__13daTagStatue_cFv                               */
+/* 805A77A0-805A7848 00A8+00 s=0 e=0 z=0  None .text      actionEvent__13daTagStatue_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -669,11 +591,41 @@ asm void daTagStatue_c::actionEvent() {
 #pragma pop
 
 
-/* 805A7848-805A784C 0004+00 s=1 e=0 z=0  None .text      actionDead__13daTagStatue_cFv                                */
+/* 805A7848-805A784C 0004+00 s=0 e=0 z=0  None .text      actionDead__13daTagStatue_cFv                                */
 void daTagStatue_c::actionDead() {
 	/* empty function */
 }
 
+
+/* ############################################################################################## */
+/* 805A8134-805A813C 0008+00 s=2 e=0 z=0  None .rodata    @4079                                                        */
+SECTION_RODATA static u8 const lit_4079[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805A813C-805A8144 0008+00 s=2 e=0 z=0  None .rodata    @4080                                                        */
+SECTION_RODATA static u8 const lit_4080[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805A8144-805A814C 0008+00 s=2 e=0 z=0  None .rodata    @4081                                                        */
+SECTION_RODATA static u8 const lit_4081[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 805A814C-805A8150 0004+00 s=1 e=0 z=0  None .rodata    @4082                                                        */
+SECTION_RODATA static u32 const lit_4082 = 0x42C80000;
+
+/* 805A8150-805A8154 0004+00 s=1 e=0 z=0  None .rodata    @4143                                                        */
+SECTION_RODATA static u32 const lit_4143 = 0x42F00000;
+
+/* 805A8154-805A816C 0018+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_805A8154[24] = {
+	/* 805A8154 0009 stringBase_805A8154 @stringBase0 */
+	0x4F, 0x62, 0x6A, 0x5F, 0x63, 0x73, 0x5F, 0x66, 0x00,
+	/* 805A815D 000F data_805A815D None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x30, 0x00,
+};
 
 /* 805A784C-805A7A68 021C+00 s=2 e=0 z=0  None .text      demoProc__13daTagStatue_cFv                                  */
 #pragma push
@@ -763,44 +715,44 @@ asm void daTagStatue_c::_delete() {
 #pragma pop
 
 
-/* 805A8060-805A8080 0020+00 s=1 e=0 z=0  None .text      daTagStatue_Draw__FP13daTagStatue_c                          */
+/* 805A8060-805A8080 0020+00 s=0 e=0 z=0  None .text      daTagStatue_Draw__FP13daTagStatue_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStatue_Draw(daTagStatue_c* param_0) {
+asm void daTagStatue_Draw(daTagStatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Draw__FP13daTagStatue_c.s"
 }
 #pragma pop
 
 
-/* 805A8080-805A80A0 0020+00 s=1 e=0 z=0  None .text      daTagStatue_Execute__FP13daTagStatue_c                       */
+/* 805A8080-805A80A0 0020+00 s=0 e=0 z=0  None .text      daTagStatue_Execute__FP13daTagStatue_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStatue_Execute(daTagStatue_c* param_0) {
+asm void daTagStatue_Execute(daTagStatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Execute__FP13daTagStatue_c.s"
 }
 #pragma pop
 
 
-/* 805A80A0-805A80C0 0020+00 s=1 e=0 z=0  None .text      daTagStatue_Delete__FP13daTagStatue_c                        */
+/* 805A80A0-805A80C0 0020+00 s=0 e=0 z=0  None .text      daTagStatue_Delete__FP13daTagStatue_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStatue_Delete(daTagStatue_c* param_0) {
+asm void daTagStatue_Delete(daTagStatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Delete__FP13daTagStatue_c.s"
 }
 #pragma pop
 
 
-/* 805A80C0-805A80E0 0020+00 s=1 e=0 z=0  None .text      daTagStatue_Create__FP13daTagStatue_c                        */
+/* 805A80C0-805A80E0 0020+00 s=0 e=0 z=0  None .text      daTagStatue_Create__FP13daTagStatue_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStatue_Create(daTagStatue_c* param_0) {
+asm void daTagStatue_Create(daTagStatue_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_statue_evt/d_a_tag_statue_evt/daTagStatue_Create__FP13daTagStatue_c.s"
 }
@@ -817,4 +769,47 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 805A816C-805A81A8 003C+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_805A816C[60] = {
+	/* 805A816C 000F data_805A816C None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x31, 0x00,
+	/* 805A817B 000F data_805A817B None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x32, 0x00,
+	/* 805A818A 000F data_805A818A None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x33, 0x00,
+	/* 805A8199 000F data_805A8199 None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x34, 0x00,
+};
+
+/* 805A81A8-805A81C0 0018+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_805A81A8[24] = {
+	/* 805A81A8 000F data_805A81A8 None */
+	0x53, 0x4B, 0x59, 0x5F, 0x4C, 0x45, 0x54, 0x54, 0x45, 0x52, 0x53, 0x5F, 0x30, 0x35, 0x00,
+	/* 805A81B7 0009 data_805A81B7 None */
+	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x31, 0x00,
+};
+
+/* 805A81C0-805A81E4 0024+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_805A81C0[36] = {
+	/* 805A81C0 0009 data_805A81C0 None */
+	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x32, 0x00,
+	/* 805A81C9 0009 data_805A81C9 None */
+	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x33, 0x00,
+	/* 805A81D2 0009 data_805A81D2 None */
+	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x34, 0x00,
+	/* 805A81DB 0009 data_805A81DB None */
+	0x63, 0x73, 0x5F, 0x65, 0x76, 0x5F, 0x30, 0x35, 0x00,
+};
+
+/* 805A81E4-805A81FC 0018+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_805A81E4[24] = {
+	/* 805A81E4 0005 data_805A81E4 None */
+	0x57, 0x41, 0x49, 0x54, 0x00,
+	/* 805A81E9 0008 data_805A81E9 None */
+	0x53, 0x54, 0x5F, 0x4D, 0x4F, 0x56, 0x45, 0x00,
+	/* 805A81F1 000B data_805A81F1 None */
+	0x49, 0x54, 0x45, 0x4D, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
+};
 

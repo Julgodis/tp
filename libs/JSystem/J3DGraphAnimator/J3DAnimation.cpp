@@ -40,13 +40,13 @@ struct J3DAnmTransformKey {
 	/* 80329A34 */ void calcTransform(f32, u16, J3DTransformInfo*) const;
 };
 
-struct J3DTextureSRTInfo {
-};
-
 struct J3DModelData {
 };
 
 struct J3DMaterialTable {
+};
+
+struct J3DTextureSRTInfo {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -375,107 +375,107 @@ asm void J3DAnmTransformKey::calcTransform(f32 param_0, u16 param_1, J3DTransfor
 /* ############################################################################################## */
 /* 803CED50-803CED60 0010+00 s=2 e=0 z=0  None .data      __vt__16J3DAnmTexPattern                                     */
 SECTION_DATA static void* __vt__16J3DAnmTexPattern[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16J3DAnmTexPatternFv,
-	/* 3    */ (void*)getKind__16J3DAnmTexPatternCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J3DAnmTexPatternFv,
+	(void*)getKind__16J3DAnmTexPatternCFv,
 };
 
 /* 803CED60-803CED70 0010+00 s=2 e=0 z=0  None .data      __vt__15J3DAnmTevRegKey                                      */
 SECTION_DATA static void* __vt__15J3DAnmTevRegKey[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15J3DAnmTevRegKeyFv,
-	/* 3    */ (void*)getKind__15J3DAnmTevRegKeyCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15J3DAnmTevRegKeyFv,
+	(void*)getKind__15J3DAnmTevRegKeyCFv,
 };
 
 /* 803CED70-803CED84 0014+00 s=2 e=0 z=0  None .data      __vt__14J3DAnmColorKey                                       */
 SECTION_DATA static void* __vt__14J3DAnmColorKey[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J3DAnmColorKeyFv,
-	/* 3    */ (void*)getKind__14J3DAnmColorKeyCFv,
-	/* 4    */ (void*)getColor__14J3DAnmColorKeyCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J3DAnmColorKeyFv,
+	(void*)getKind__14J3DAnmColorKeyCFv,
+	(void*)getColor__14J3DAnmColorKeyCFUsP8_GXColor,
 };
 
 /* 803CED84-803CED98 0014+00 s=2 e=0 z=0  None .data      __vt__15J3DAnmColorFull                                      */
 SECTION_DATA static void* __vt__15J3DAnmColorFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15J3DAnmColorFullFv,
-	/* 3    */ (void*)getKind__15J3DAnmColorFullCFv,
-	/* 4    */ (void*)getColor__15J3DAnmColorFullCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15J3DAnmColorFullFv,
+	(void*)getKind__15J3DAnmColorFullCFv,
+	(void*)getColor__15J3DAnmColorFullCFUsP8_GXColor,
 };
 
 /* 803CED98-803CEDAC 0014+00 s=4 e=0 z=0  None .data      __vt__11J3DAnmColor                                          */
 SECTION_DATA static void* __vt__11J3DAnmColor[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11J3DAnmColorFv,
-	/* 3    */ (void*)getKind__11J3DAnmColorCFv,
-	/* 4    */ (void*)getColor__11J3DAnmColorCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11J3DAnmColorFv,
+	(void*)getKind__11J3DAnmColorCFv,
+	(void*)getColor__11J3DAnmColorCFUsP8_GXColor,
 };
 
 /* 803CEDAC-803CEDC0 0014+00 s=2 e=0 z=0  None .data      __vt__17J3DAnmVtxColorKey                                    */
 SECTION_DATA static void* __vt__17J3DAnmVtxColorKey[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17J3DAnmVtxColorKeyFv,
-	/* 3    */ (void*)getKind__17J3DAnmVtxColorKeyCFv,
-	/* 4    */ (void*)getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17J3DAnmVtxColorKeyFv,
+	(void*)getKind__17J3DAnmVtxColorKeyCFv,
+	(void*)getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor,
 };
 
 /* 803CEDC0-803CEDD4 0014+00 s=2 e=0 z=0  None .data      __vt__18J3DAnmVtxColorFull                                   */
 SECTION_DATA static void* __vt__18J3DAnmVtxColorFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18J3DAnmVtxColorFullFv,
-	/* 3    */ (void*)getKind__18J3DAnmVtxColorFullCFv,
-	/* 4    */ (void*)getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18J3DAnmVtxColorFullFv,
+	(void*)getKind__18J3DAnmVtxColorFullCFv,
+	(void*)getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor,
 };
 
 /* 803CEDD4-803CEDE8 0014+00 s=4 e=0 z=0  None .data      __vt__14J3DAnmVtxColor                                       */
 SECTION_DATA static void* __vt__14J3DAnmVtxColor[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J3DAnmVtxColorFv,
-	/* 3    */ (void*)getKind__14J3DAnmVtxColorCFv,
-	/* 4    */ (void*)getColor__14J3DAnmVtxColorCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J3DAnmVtxColorFv,
+	(void*)getKind__14J3DAnmVtxColorCFv,
+	(void*)getColor__14J3DAnmVtxColorCFUcUsP8_GXColor,
 };
 
 /* 803CEDE8-803CEDFC 0014+00 s=1 e=1 z=0  None .data      __vt__16J3DAnmClusterKey                                     */
 SECTION_DATA void* __vt__16J3DAnmClusterKey[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16J3DAnmClusterKeyFv,
-	/* 3    */ (void*)getKind__16J3DAnmClusterKeyCFv,
-	/* 4    */ (void*)getWeight__16J3DAnmClusterKeyCFUs,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J3DAnmClusterKeyFv,
+	(void*)getKind__16J3DAnmClusterKeyCFv,
+	(void*)getWeight__16J3DAnmClusterKeyCFUs,
 };
 
 /* 803CEDFC-803CEE10 0014+00 s=3 e=1 z=0  None .data      __vt__13J3DAnmCluster                                        */
 SECTION_DATA void* __vt__13J3DAnmCluster[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13J3DAnmClusterFv,
-	/* 3    */ (void*)getKind__13J3DAnmClusterCFv,
-	/* 4    */ (void*)getWeight__13J3DAnmClusterCFUs,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13J3DAnmClusterFv,
+	(void*)getKind__13J3DAnmClusterCFv,
+	(void*)getWeight__13J3DAnmClusterCFUs,
 };
 
 /* 803CEE10-803CEE24 0014+00 s=1 e=1 z=0  None .data      __vt__17J3DAnmClusterFull                                    */
 SECTION_DATA void* __vt__17J3DAnmClusterFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17J3DAnmClusterFullFv,
-	/* 3    */ (void*)getKind__17J3DAnmClusterFullCFv,
-	/* 4    */ (void*)getWeight__17J3DAnmClusterFullCFUs,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17J3DAnmClusterFullFv,
+	(void*)getKind__17J3DAnmClusterFullCFv,
+	(void*)getWeight__17J3DAnmClusterFullCFUs,
 };
 
 /* 803CEE24-803CEE34 0010+00 s=2 e=0 z=0  None .data      __vt__19J3DAnmTextureSRTKey                                  */
 SECTION_DATA static void* __vt__19J3DAnmTextureSRTKey[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J3DAnmTextureSRTKeyFv,
-	/* 3    */ (void*)getKind__19J3DAnmTextureSRTKeyCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19J3DAnmTextureSRTKeyFv,
+	(void*)getKind__19J3DAnmTextureSRTKeyCFv,
 };
 
 /* 80329E5C-80329F14 00B8+00 s=0 e=2 z=0  None .text      __ct__19J3DAnmTextureSRTKeyFv                                */
@@ -1031,20 +1031,20 @@ s32 J3DAnmTextureSRTKey::getKind() const {
 /* ############################################################################################## */
 /* 803CEE34-803CEE48 0014+00 s=1 e=1 z=0  None .data      __vt__27J3DAnmTransformFullWithLerp                          */
 SECTION_DATA void* __vt__27J3DAnmTransformFullWithLerp[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__27J3DAnmTransformFullWithLerpFv,
-	/* 3    */ (void*)getKind__27J3DAnmTransformFullWithLerpCFv,
-	/* 4    */ (void*)getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__27J3DAnmTransformFullWithLerpFv,
+	(void*)getKind__27J3DAnmTransformFullWithLerpCFv,
+	(void*)getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo,
 };
 
 /* 803CEE48-803CEE60 0014+04 s=2 e=1 z=0  None .data      __vt__19J3DAnmTransformFull                                  */
 SECTION_DATA void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J3DAnmTransformFullFv,
-	/* 3    */ (void*)getKind__19J3DAnmTransformFullCFv,
-	/* 4    */ (void*)getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19J3DAnmTransformFullFv,
+	(void*)getKind__19J3DAnmTransformFullCFv,
+	(void*)getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo,
 	/* padding */
 	NULL,
 };

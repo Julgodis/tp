@@ -66,18 +66,18 @@ lbl_80BE77D0:
 /* 80BE7800  90 1F 05 F4 */	stw r0, 0x5f4(r31)
 /* 80BE7804  3C 60 80 BF */	lis r3, l_cull_box@ha
 /* 80BE7808  38 83 80 94 */	addi r4, r3, l_cull_box@l
-/* 80BE780C  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80BE80A4 */
+/* 80BE780C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80BE7810  C0 5F 04 F0 */	lfs f2, 0x4f0(r31)
 /* 80BE7814  EC A0 00 B2 */	fmuls f5, f0, f2
 /* 80BE7818  C0 9F 04 EC */	lfs f4, 0x4ec(r31)
 /* 80BE781C  7F E3 FB 78 */	mr r3, r31
-/* 80BE7820  C0 04 00 00 */	lfs f0, 0(r4)	/* effective address: 80BE8094 */
+/* 80BE7820  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80BE7824  EC 20 01 32 */	fmuls f1, f0, f4
-/* 80BE7828  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80BE8098 */
+/* 80BE7828  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80BE782C  EC 40 00 B2 */	fmuls f2, f0, f2
-/* 80BE7830  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80BE809C */
+/* 80BE7830  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80BE7834  EC 60 01 32 */	fmuls f3, f0, f4
-/* 80BE7838  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80BE80A0 */
+/* 80BE7838  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80BE783C  EC 80 01 32 */	fmuls f4, f0, f4
 /* 80BE7840  FC C0 28 90 */	fmr f6, f5
 /* 80BE7844  4B 43 2D 04 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
@@ -86,7 +86,7 @@ lbl_80BE77D0:
 /* 80BE7850  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 80BE7854  3C 60 80 BF */	lis r3, l_HIO@ha
 /* 80BE7858  38 63 81 44 */	addi r3, r3, l_HIO@l
-/* 80BE785C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80BE8148 */
+/* 80BE785C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BE7860  EC 01 00 2A */	fadds f0, f1, f0
 /* 80BE7864  D0 1F 06 F0 */	stfs f0, 0x6f0(r31)
 /* 80BE7868  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
@@ -104,8 +104,8 @@ lbl_80BE7880:
 /* 80BE7894  48 00 01 0D */	bl lightInit__12daFireWood_cFv
 /* 80BE7898  38 00 00 00 */	li r0, 0
 /* 80BE789C  98 1F 06 F9 */	stb r0, 0x6f9(r31)
-/* 80BE78A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE78A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE78A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE78A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE78A8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BE78AC  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BE78B0  88 1F 04 BA */	lbz r0, 0x4ba(r31)

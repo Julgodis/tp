@@ -7,11 +7,11 @@ lbl_80C50F98:
 /* 80C50FAC  7C 7E 1B 78 */	mr r30, r3
 /* 80C50FB0  3C 80 80 C5 */	lis r4, M_attr__10daObjLdy_c@ha
 /* 80C50FB4  3B E4 20 00 */	addi r31, r4, M_attr__10daObjLdy_c@l
-/* 80C50FB8  C0 3F 00 34 */	lfs f1, 0x34(r31)	/* effective address: 80C52034 */
-/* 80C50FBC  C0 5F 00 38 */	lfs f2, 0x38(r31)	/* effective address: 80C52038 */
+/* 80C50FB8  C0 3F 00 34 */	lfs f1, 0x34(r31)
+/* 80C50FBC  C0 5F 00 38 */	lfs f2, 0x38(r31)
 /* 80C50FC0  FC 60 08 90 */	fmr f3, f1
-/* 80C50FC4  C0 9F 00 3C */	lfs f4, 0x3c(r31)	/* effective address: 80C5203C */
-/* 80C50FC8  C0 BF 00 40 */	lfs f5, 0x40(r31)	/* effective address: 80C52040 */
+/* 80C50FC4  C0 9F 00 3C */	lfs f4, 0x3c(r31)
+/* 80C50FC8  C0 BF 00 40 */	lfs f5, 0x40(r31)
 /* 80C50FCC  FC C0 20 90 */	fmr f6, f4
 /* 80C50FD0  4B 3C 95 78 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C50FD4  C0 1F 00 44 */	lfs f0, 0x44(r31)

@@ -9,7 +9,7 @@ lbl_80875CA0:
 /* 80875CBC  3B 44 00 08 */	addi r26, r4, 8
 /* 80875CC0  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80875CC4  3B C3 9B D0 */	addi r30, r3, daMP_ActivePlayer@l
-/* 80875CC8  80 1E 00 6C */	lwz r0, 0x6c(r30)	/* effective address: 80879C3C */
+/* 80875CC8  80 1E 00 6C */	lwz r0, 0x6c(r30)
 /* 80875CCC  54 03 10 3A */	slwi r3, r0, 2
 /* 80875CD0  3B 23 00 08 */	addi r25, r3, 8
 /* 80875CD4  7F 24 CA 14 */	add r25, r4, r25

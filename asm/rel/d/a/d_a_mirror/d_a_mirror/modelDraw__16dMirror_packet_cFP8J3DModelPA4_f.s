@@ -37,13 +37,13 @@ lbl_808712E8:
 /* 808712F0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 808712F4  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 808712F8  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 808712FC  A8 03 11 08 */	lha r0, 0x1108(r3)	/* effective address: 8042DB5C */
+/* 808712FC  A8 03 11 08 */	lha r0, 0x1108(r3)
 /* 80871300  98 01 00 0C */	stb r0, 0xc(r1)
-/* 80871304  A8 03 11 0A */	lha r0, 0x110a(r3)	/* effective address: 8042DB5E */
+/* 80871304  A8 03 11 0A */	lha r0, 0x110a(r3)
 /* 80871308  98 01 00 0D */	stb r0, 0xd(r1)
-/* 8087130C  A8 03 11 0C */	lha r0, 0x110c(r3)	/* effective address: 8042DB60 */
+/* 8087130C  A8 03 11 0C */	lha r0, 0x110c(r3)
 /* 80871310  98 01 00 0E */	stb r0, 0xe(r1)
-/* 80871314  A8 03 11 0E */	lha r0, 0x110e(r3)	/* effective address: 8042DB62 */
+/* 80871314  A8 03 11 0E */	lha r0, 0x110e(r3)
 /* 80871318  98 01 00 0F */	stb r0, 0xf(r1)
 /* 8087131C  83 FB 00 04 */	lwz r31, 4(r27)
 /* 80871320  A3 5F 00 5C */	lhz r26, 0x5c(r31)

@@ -9,7 +9,7 @@ lbl_8097A518:
 /* 8097A534  3B E3 F5 40 */	addi r31, r3, lit_4037@l
 /* 8097A538  80 7E 05 8C */	lwz r3, 0x58c(r30)
 /* 8097A53C  38 63 00 0C */	addi r3, r3, 0xc
-/* 8097A540  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 8097F544 */
+/* 8097A540  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 8097A544  4B 9A DE E8 */	b checkPass__12J3DFrameCtrlFf
 /* 8097A548  2C 03 00 00 */	cmpwi r3, 0
 /* 8097A54C  41 82 00 10 */	beq lbl_8097A55C
@@ -44,9 +44,9 @@ lbl_8097A584:
 /* 8097A5B8  38 C0 00 00 */	li r6, 0
 /* 8097A5BC  38 E0 FF FF */	li r7, -1
 /* 8097A5C0  4B 7D E9 40 */	b setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
-/* 8097A5C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8097A5C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8097A5CC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8097A5C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8097A5C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8097A5CC  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8097A5D0  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 8097A5D4  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 8097A5D8  4B 8F 66 2C */	b cLib_targetAngleY__FPC3VecPC3Vec

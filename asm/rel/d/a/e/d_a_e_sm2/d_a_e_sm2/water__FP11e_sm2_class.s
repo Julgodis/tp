@@ -8,9 +8,9 @@ lbl_8079A1CC:
 /* 8079A1E4  3C 60 80 7A */	lis r3, lit_3790@ha
 /* 8079A1E8  3B C3 D5 B0 */	addi r30, r3, lit_3790@l
 /* 8079A1EC  38 7C 05 2C */	addi r3, r28, 0x52c
-/* 8079A1F0  C0 3E 00 08 */	lfs f1, 8(r30)	/* effective address: 8079D5B8 */
-/* 8079A1F4  C0 5E 00 78 */	lfs f2, 0x78(r30)	/* effective address: 8079D628 */
-/* 8079A1F8  C0 7E 00 54 */	lfs f3, 0x54(r30)	/* effective address: 8079D604 */
+/* 8079A1F0  C0 3E 00 08 */	lfs f1, 8(r30)
+/* 8079A1F4  C0 5E 00 78 */	lfs f2, 0x78(r30)
+/* 8079A1F8  C0 7E 00 54 */	lfs f3, 0x54(r30)
 /* 8079A1FC  4B AD 58 40 */	b cLib_addCalc2__FPffff
 /* 8079A200  C0 1E 00 C0 */	lfs f0, 0xc0(r30)
 /* 8079A204  D0 1C 04 FC */	stfs f0, 0x4fc(r28)

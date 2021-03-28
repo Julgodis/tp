@@ -7,7 +7,7 @@ lbl_8098CFD8:
 /* 8098CFEC  40 82 00 24 */	bne lbl_8098D010
 /* 8098CFF0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8098CFF4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8098CFF8  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8098CFF8  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8098CFFC  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8098D000  28 03 00 00 */	cmplwi r3, 0
 /* 8098D004  41 82 00 0C */	beq lbl_8098D010

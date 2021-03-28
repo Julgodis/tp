@@ -1,10 +1,10 @@
 lbl_80D4204C:
 /* 80D4204C  3C 80 80 D4 */	lis r4, l_HIO@ha
 /* 80D42050  38 84 25 AC */	addi r4, r4, l_HIO@l
-/* 80D42054  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80D425B4 */
+/* 80D42054  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80D42058  FC 00 00 50 */	fneg f0, f0
 /* 80D4205C  D0 03 05 30 */	stfs f0, 0x530(r3)
-/* 80D42060  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80D425B8 */
+/* 80D42060  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80D42064  FC 00 00 50 */	fneg f0, f0
 /* 80D42068  D0 03 05 34 */	stfs f0, 0x534(r3)
 /* 80D4206C  3C 80 80 D4 */	lis r4, lit_3885@ha

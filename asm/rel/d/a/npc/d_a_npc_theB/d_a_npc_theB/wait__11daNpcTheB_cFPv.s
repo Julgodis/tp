@@ -45,8 +45,8 @@ lbl_80AFEF68:
 /* 80AFEF6C  4B 65 17 80 */	b getActorP__18daNpcF_ActorMngr_cFv
 /* 80AFEF70  30 03 FF FF */	addic r0, r3, -1
 /* 80AFEF74  7F 80 19 10 */	subfe r28, r0, r3
-/* 80AFEF78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AFEF7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AFEF78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AFEF7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AFEF80  3B C3 09 78 */	addi r30, r3, 0x978
 /* 80AFEF84  7F C3 F3 78 */	mr r3, r30
 /* 80AFEF88  38 80 00 37 */	li r4, 0x37
@@ -62,9 +62,9 @@ lbl_80AFEF68:
 /* 80AFEFB0  57 80 06 3F */	clrlwi. r0, r28, 0x18
 /* 80AFEFB4  40 82 00 20 */	bne lbl_80AFEFD4
 /* 80AFEFB8  38 7D 0C 78 */	addi r3, r29, 0xc78
-/* 80AFEFBC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AFEFC0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80AFEFC4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80AFEFBC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AFEFC0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80AFEFC4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80AFEFC8  4B 65 16 F4 */	b entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c
 /* 80AFEFCC  38 00 00 00 */	li r0, 0
 /* 80AFEFD0  90 1D 09 6C */	stw r0, 0x96c(r29)
@@ -131,10 +131,10 @@ lbl_80AFF094:
 /* 80AFF09C  7F A3 EB 78 */	mr r3, r29
 /* 80AFF0A0  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF0A4  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF0A8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF0A8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF0AC  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF0B0  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF0B4  80 A5 00 40 */	lwz r5, 0x40(r5)	/* effective address: 80B0108C */
+/* 80AFF0B4  80 A5 00 40 */	lwz r5, 0x40(r5)
 /* 80AFF0B8  4B 65 3A 74 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF0BC  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF0C0  41 82 00 34 */	beq lbl_80AFF0F4
@@ -143,10 +143,10 @@ lbl_80AFF094:
 /* 80AFF0CC  7F A3 EB 78 */	mr r3, r29
 /* 80AFF0D0  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF0D4  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF0D8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF0D8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF0DC  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF0E0  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF0E4  80 A5 00 50 */	lwz r5, 0x50(r5)	/* effective address: 80B0109C */
+/* 80AFF0E4  80 A5 00 50 */	lwz r5, 0x50(r5)
 /* 80AFF0E8  4B 65 3A 44 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF0EC  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF0F0  40 82 00 C0 */	bne lbl_80AFF1B0
@@ -206,10 +206,10 @@ lbl_80AFF1B0:
 /* 80AFF1B8  7F A3 EB 78 */	mr r3, r29
 /* 80AFF1BC  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF1C0  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF1C4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF1C4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF1C8  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF1CC  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF1D0  80 A5 00 48 */	lwz r5, 0x48(r5)	/* effective address: 80B01094 */
+/* 80AFF1D0  80 A5 00 48 */	lwz r5, 0x48(r5)
 /* 80AFF1D4  4B 65 39 58 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF1D8  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF1DC  41 82 00 34 */	beq lbl_80AFF210
@@ -218,10 +218,10 @@ lbl_80AFF1B0:
 /* 80AFF1E8  7F A3 EB 78 */	mr r3, r29
 /* 80AFF1EC  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF1F0  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF1F4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF1F4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF1F8  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF1FC  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF200  80 A5 00 58 */	lwz r5, 0x58(r5)	/* effective address: 80B010A4 */
+/* 80AFF200  80 A5 00 58 */	lwz r5, 0x58(r5)
 /* 80AFF204  4B 65 39 28 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF208  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF20C  40 82 00 C0 */	bne lbl_80AFF2CC
@@ -281,10 +281,10 @@ lbl_80AFF2CC:
 /* 80AFF2D4  7F A3 EB 78 */	mr r3, r29
 /* 80AFF2D8  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF2DC  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF2E0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF2E0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF2E4  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF2E8  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF2EC  80 A5 00 60 */	lwz r5, 0x60(r5)	/* effective address: 80B010AC */
+/* 80AFF2EC  80 A5 00 60 */	lwz r5, 0x60(r5)
 /* 80AFF2F0  4B 65 38 3C */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF2F4  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF2F8  41 82 00 34 */	beq lbl_80AFF32C
@@ -293,10 +293,10 @@ lbl_80AFF2CC:
 /* 80AFF304  7F A3 EB 78 */	mr r3, r29
 /* 80AFF308  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFF30C  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFF310  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFF310  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFF314  3C A0 80 B0 */	lis r5, l_bckGetParamList@ha
 /* 80AFF318  38 A5 10 4C */	addi r5, r5, l_bckGetParamList@l
-/* 80AFF31C  80 A5 00 68 */	lwz r5, 0x68(r5)	/* effective address: 80B010B4 */
+/* 80AFF31C  80 A5 00 68 */	lwz r5, 0x68(r5)
 /* 80AFF320  4B 65 38 0C */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFF324  7C 1C 18 40 */	cmplw r28, r3
 /* 80AFF328  40 82 01 18 */	bne lbl_80AFF440

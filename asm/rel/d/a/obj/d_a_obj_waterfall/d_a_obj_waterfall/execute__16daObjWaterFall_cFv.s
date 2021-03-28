@@ -8,8 +8,8 @@ lbl_80D2F984:
 /* 80D2F99C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D2F9A0  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D2F9A4  41 82 00 28 */	beq lbl_80D2F9CC
-/* 80D2F9A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2F9AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2F9A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2F9AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2F9B0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D2F9B4  7C 05 07 74 */	extsb r5, r0
 /* 80D2F9B8  4B 30 59 A8 */	b isSwitch__10dSv_info_cCFii
@@ -49,8 +49,8 @@ lbl_80D2FA34:
 /* 80D2FA34  38 7F 09 8C */	addi r3, r31, 0x98c
 /* 80D2FA38  38 9F 09 BC */	addi r4, r31, 0x9bc
 /* 80D2FA3C  4B 53 F7 A0 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80D2FA40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2FA44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2FA40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2FA44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2FA48  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80D2FA4C  38 9F 08 68 */	addi r4, r31, 0x868
 /* 80D2FA50  4B 53 51 58 */	b Set__4cCcSFP8cCcD_Obj

@@ -7,7 +7,7 @@ lbl_8059F9FC:
 /* 8059FA10  3C 60 80 5A */	lis r3, lit_3884@ha
 /* 8059FA14  84 03 11 88 */	lwzu r0, lit_3884@l(r3)
 /* 8059FA18  90 01 00 08 */	stw r0, 8(r1)
-/* 8059FA1C  A0 03 00 04 */	lhz r0, 4(r3)	/* effective address: 805A0004 */
+/* 8059FA1C  A0 03 00 04 */	lhz r0, 4(r3)
 /* 8059FA20  B0 01 00 0C */	sth r0, 0xc(r1)
 /* 8059FA24  3C 60 80 5A */	lis r3, lit_3886@ha
 /* 8059FA28  C0 23 11 90 */	lfs f1, lit_3886@l(r3)

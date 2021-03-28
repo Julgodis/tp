@@ -25,11 +25,11 @@ lbl_80ABABBC:
 /* 80ABABE0  90 BF 0E 08 */	stw r5, 0xe08(r31)
 /* 80ABABE4  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80ABABE8  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80ABABEC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80ABABF0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80ABABEC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80ABABF0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80ABABF4  90 7F 0D E0 */	stw r3, 0xde0(r31)
 /* 80ABABF8  90 1F 0D E4 */	stw r0, 0xde4(r31)
-/* 80ABABFC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80ABABFC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80ABAC00  90 1F 0D E8 */	stw r0, 0xde8(r31)
 /* 80ABAC04  38 80 FF FF */	li r4, -1
 /* 80ABAC08  B0 9F 0E 0E */	sth r4, 0xe0e(r31)

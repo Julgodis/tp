@@ -9,11 +9,11 @@ lbl_80A9F188:
 /* 80A9F1A4  7C BF 2B 78 */	mr r31, r5
 /* 80A9F1A8  3C 60 80 AA */	lis r3, lit_5647@ha
 /* 80A9F1AC  38 83 17 78 */	addi r4, r3, lit_5647@l
-/* 80A9F1B0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA1778 */
-/* 80A9F1B4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA177C */
+/* 80A9F1B0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A9F1B4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A9F1B8  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A9F1BC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A9F1C0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA1780 */
+/* 80A9F1C0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A9F1C4  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A9F1C8  93 C1 00 10 */	stw r30, 0x10(r1)
 /* 80A9F1CC  38 7E 0F 8C */	addi r3, r30, 0xf8c
@@ -29,8 +29,8 @@ lbl_80A9F188:
 /* 80A9F1F4  4B 6A 65 14 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A9F1F8  3C 60 80 AA */	lis r3, lit_5648@ha
 /* 80A9F1FC  38 83 17 84 */	addi r4, r3, lit_5648@l
-/* 80A9F200  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA1784 */
-/* 80A9F204  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA1788 */
+/* 80A9F200  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A9F204  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A9F208  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9F20C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80A9F210  3B 80 00 00 */	li r28, 0

@@ -11,11 +11,11 @@ lbl_806F1758:
 /* 806F177C  7C 7B 1B 78 */	mr r27, r3
 /* 806F1780  3C 80 80 6F */	lis r4, lit_3767@ha
 /* 806F1784  3B E4 55 14 */	addi r31, r4, lit_3767@l
-/* 806F1788  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806F178C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806F1790  80 A4 5D AC */	lwz r5, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 806F1794  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 806F5518 */
-/* 806F1798  C3 DF 00 38 */	lfs f30, 0x38(r31)	/* effective address: 806F554C */
+/* 806F1788  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806F178C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806F1790  80 A4 5D AC */	lwz r5, 0x5dac(r4)
+/* 806F1794  C3 FF 00 04 */	lfs f31, 4(r31)
+/* 806F1798  C3 DF 00 38 */	lfs f30, 0x38(r31)
 /* 806F179C  3B C0 00 00 */	li r30, 0
 /* 806F17A0  3B A0 00 01 */	li r29, 1
 /* 806F17A4  38 00 00 05 */	li r0, 5

@@ -2,7 +2,7 @@ lbl_805910E8:
 /* 805910E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 805910EC  3C 80 80 59 */	lis r4, l_stop_timer@ha
 /* 805910F0  38 84 28 7C */	addi r4, r4, l_stop_timer@l
-/* 805910F4  88 04 00 01 */	lbz r0, 1(r4)	/* effective address: 8059287D */
+/* 805910F4  88 04 00 01 */	lbz r0, 1(r4)
 /* 805910F8  98 03 0A 17 */	stb r0, 0xa17(r3)
 /* 805910FC  88 03 0A 1D */	lbz r0, 0xa1d(r3)
 /* 80591100  28 00 00 00 */	cmplwi r0, 0

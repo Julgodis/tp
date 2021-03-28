@@ -19,7 +19,6 @@ extern void* const data_8060FDCC[2];
 // 
 
 
-extern "C" void __sinit_d_a_b_mgn_cpp(); // 1
 
 // 
 // Declarations:

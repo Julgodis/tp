@@ -46,9 +46,9 @@ lbl_80C08484:
 /* 80C0848C  48 00 01 A0 */	b lbl_80C0862C
 lbl_80C08490:
 /* 80C08490  38 7E 04 D0 */	addi r3, r30, 0x4d0
-/* 80C08494  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C08498  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80C0849C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80C08494  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C08498  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C0849C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80C084A0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80C084A4  4B 66 87 60 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80C084A8  7C 64 1B 78 */	mr r4, r3
@@ -171,11 +171,11 @@ lbl_80C08660:
 /* 80C08668  40 82 01 78 */	bne lbl_80C087E0
 /* 80C0866C  3C 60 80 C1 */	lis r3, lit_7645@ha
 /* 80C08670  38 83 02 74 */	addi r4, r3, lit_7645@l
-/* 80C08674  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C10274 */
-/* 80C08678  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10278 */
+/* 80C08674  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C08678  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C0867C  90 61 00 18 */	stw r3, 0x18(r1)
 /* 80C08680  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80C08684  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C1027C */
+/* 80C08684  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C08688  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80C0868C  7F C3 F3 78 */	mr r3, r30
 /* 80C08690  38 81 00 18 */	addi r4, r1, 0x18
@@ -250,11 +250,11 @@ lbl_80C086D8:
 /* 80C0879C  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 80C087A0  3C 60 80 C1 */	lis r3, lit_7653@ha
 /* 80C087A4  38 83 02 80 */	addi r4, r3, lit_7653@l
-/* 80C087A8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C10280 */
-/* 80C087AC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10284 */
+/* 80C087A8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C087AC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C087B0  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80C087B4  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80C087B8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C10288 */
+/* 80C087B8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C087BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C087C0  7F C3 F3 78 */	mr r3, r30
 /* 80C087C4  38 81 00 0C */	addi r4, r1, 0xc

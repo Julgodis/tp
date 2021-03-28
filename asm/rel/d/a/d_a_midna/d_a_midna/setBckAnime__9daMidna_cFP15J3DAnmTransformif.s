@@ -9,9 +9,9 @@ lbl_804C0F24:
 /* 804C0F40  3C 60 80 4C */	lis r3, lit_3777@ha
 /* 804C0F44  3B E3 64 C8 */	addi r31, r3, lit_3777@l
 /* 804C0F48  80 7E 05 78 */	lwz r3, 0x578(r30)
-/* 804C0F4C  C0 5F 00 BC */	lfs f2, 0xbc(r31)	/* effective address: 804C6584 */
-/* 804C0F50  C0 7F 00 B8 */	lfs f3, 0xb8(r31)	/* effective address: 804C6580 */
-/* 804C0F54  C0 9F 03 98 */	lfs f4, 0x398(r31)	/* effective address: 804C6860 */
+/* 804C0F4C  C0 5F 00 BC */	lfs f2, 0xbc(r31)
+/* 804C0F50  C0 7F 00 B8 */	lfs f3, 0xb8(r31)
+/* 804C0F54  C0 9F 03 98 */	lfs f4, 0x398(r31)
 /* 804C0F58  4B B4 FF 18 */	b setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
 /* 804C0F5C  A0 1E 05 E8 */	lhz r0, 0x5e8(r30)
 /* 804C0F60  28 00 FF FF */	cmplwi r0, 0xffff

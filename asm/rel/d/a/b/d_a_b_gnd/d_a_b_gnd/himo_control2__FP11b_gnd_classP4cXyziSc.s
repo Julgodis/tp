@@ -25,7 +25,7 @@ lbl_805FB414:
 /* 805FB470  D0 18 00 B8 */	stfs f0, 0xb8(r24)
 /* 805FB474  C0 04 00 08 */	lfs f0, 8(r4)
 /* 805FB478  D0 18 00 BC */	stfs f0, 0xbc(r24)
-/* 805FB47C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80602678 */
+/* 805FB47C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 805FB480  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 805FB484  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 805FB488  7C C0 07 75 */	extsb. r0, r6

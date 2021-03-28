@@ -9,11 +9,11 @@ lbl_809FB59C:
 /* 809FB5B8  3B C3 09 40 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 809FB5BC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809FB5C0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809FB5C4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809FB5C8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809FB5C4  80 64 00 00 */	lwz r3, 0(r4)
+/* 809FB5C8  80 04 00 04 */	lwz r0, 4(r4)
 /* 809FB5CC  90 7F 16 E0 */	stw r3, 0x16e0(r31)
 /* 809FB5D0  90 1F 16 E4 */	stw r0, 0x16e4(r31)
-/* 809FB5D4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809FB5D4  80 04 00 08 */	lwz r0, 8(r4)
 /* 809FB5D8  90 1F 16 E8 */	stw r0, 0x16e8(r31)
 /* 809FB5DC  88 1F 10 C4 */	lbz r0, 0x10c4(r31)
 /* 809FB5E0  2C 00 00 01 */	cmpwi r0, 1

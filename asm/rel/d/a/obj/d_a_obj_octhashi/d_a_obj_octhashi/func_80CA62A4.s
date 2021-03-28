@@ -8,11 +8,11 @@ lbl_80CA62A4:
 /* 80CA62BC  38 04 5A 88 */	addi r0, r4, rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c@l
 /* 80CA62C0  80 83 05 68 */	lwz r4, 0x568(r3)
 /* 80CA62C4  90 04 00 B4 */	stw r0, 0xb4(r4)
-/* 80CA62C8  C0 25 00 C4 */	lfs f1, 0xc4(r5)	/* effective address: 80CA6544 */
-/* 80CA62CC  C0 45 00 C8 */	lfs f2, 0xc8(r5)	/* effective address: 80CA6548 */
+/* 80CA62C8  C0 25 00 C4 */	lfs f1, 0xc4(r5)
+/* 80CA62CC  C0 45 00 C8 */	lfs f2, 0xc8(r5)
 /* 80CA62D0  FC 60 08 90 */	fmr f3, f1
-/* 80CA62D4  C0 85 00 CC */	lfs f4, 0xcc(r5)	/* effective address: 80CA654C */
-/* 80CA62D8  C0 A5 00 B0 */	lfs f5, 0xb0(r5)	/* effective address: 80CA6530 */
+/* 80CA62D4  C0 85 00 CC */	lfs f4, 0xcc(r5)
+/* 80CA62D8  C0 A5 00 B0 */	lfs f5, 0xb0(r5)
 /* 80CA62DC  FC C0 20 90 */	fmr f6, f4
 /* 80CA62E0  4B 37 42 68 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CA62E4  38 60 00 04 */	li r3, 4

@@ -22,8 +22,8 @@ lbl_80CC8818:
 lbl_80CC8868:
 /* 80CC8868  54 A0 06 3F */	clrlwi. r0, r5, 0x18
 /* 80CC886C  41 82 00 18 */	beq lbl_80CC8884
-/* 80CC8870  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC8874  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC8870  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC8874  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC8878  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC887C  80 9F 06 04 */	lwz r4, 0x604(r31)
 /* 80CC8880  4B 37 F8 FC */	b cutEnd__16dEvent_manager_cFi

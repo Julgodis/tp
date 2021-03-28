@@ -7,7 +7,7 @@ lbl_80836C64:
 /* 80836C78  7C 7E 1B 78 */	mr r30, r3
 /* 80836C7C  3C 60 80 83 */	lis r3, M_attr__10daFmtMng_c@ha
 /* 80836C80  3B E3 78 A8 */	addi r31, r3, M_attr__10daFmtMng_c@l
-/* 80836C84  C0 1F 00 24 */	lfs f0, 0x24(r31)	/* effective address: 808378CC */
+/* 80836C84  C0 1F 00 24 */	lfs f0, 0x24(r31)
 /* 80836C88  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80836C8C  80 9E 05 68 */	lwz r4, 0x568(r30)
 /* 80836C90  80 64 00 00 */	lwz r3, 0(r4)

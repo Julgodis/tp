@@ -15,8 +15,8 @@ lbl_80CCA240:
 /* 80CCA274  98 1F 06 52 */	stb r0, 0x652(r31)
 /* 80CCA278  38 00 00 02 */	li r0, 2
 /* 80CCA27C  98 1F 06 4E */	stb r0, 0x64e(r31)
-/* 80CCA280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCA284  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCA280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCA284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCA288  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80CCA28C  4B 37 81 DC */	b reset__14dEvt_control_cFv
 /* 80CCA290  38 7F 05 80 */	addi r3, r31, 0x580
@@ -28,7 +28,7 @@ lbl_80CCA240:
 /* 80CCA2A8  38 00 00 06 */	li r0, 6
 /* 80CCA2AC  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80CCA2B0  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80CCA2B4  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
+/* 80CCA2B4  98 03 00 C1 */	stb r0, 0xc1(r3)
 lbl_80CCA2B8:
 /* 80CCA2B8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80CCA2BC  80 01 00 24 */	lwz r0, 0x24(r1)

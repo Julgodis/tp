@@ -125,9 +125,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -171,10 +168,10 @@ struct J3DTexMtxInfo {
 // Forward References:
 // 
 
-static void daObjRotStair_create1st(daObjRotStair_c*); // 2
-static void daObjRotStair_MoveBGDelete(daObjRotStair_c*); // 2
-static void daObjRotStair_MoveBGExecute(daObjRotStair_c*); // 2
-static void daObjRotStair_MoveBGDraw(daObjRotStair_c*); // 2
+void daObjRotStair_create1st(daObjRotStair_c*); // 2
+void daObjRotStair_MoveBGDelete(daObjRotStair_c*); // 2
+void daObjRotStair_MoveBGExecute(daObjRotStair_c*); // 2
+void daObjRotStair_MoveBGDraw(daObjRotStair_c*); // 2
 
 extern "C" void initBaseMtx__15daObjRotStair_cFv(); // 1
 extern "C" void setBaseMtx__15daObjRotStair_cFv(); // 1
@@ -199,13 +196,14 @@ extern "C" void onWaterModel__15daObjRotStair_cFv(); // 1
 extern "C" void offWaterModel__15daObjRotStair_cFv(); // 1
 extern "C" void Draw__15daObjRotStair_cFv(); // 1
 extern "C" void Delete__15daObjRotStair_cFv(); // 1
-extern "C" static void daObjRotStair_create1st__FP15daObjRotStair_c(); // 1
-extern "C" static void daObjRotStair_MoveBGDelete__FP15daObjRotStair_c(); // 1
-extern "C" static void daObjRotStair_MoveBGExecute__FP15daObjRotStair_c(); // 1
-extern "C" static void daObjRotStair_MoveBGDraw__FP15daObjRotStair_c(); // 1
+extern "C" void daObjRotStair_create1st__FP15daObjRotStair_c(); // 1
+extern "C" void daObjRotStair_MoveBGDelete__FP15daObjRotStair_c(); // 1
+extern "C" void daObjRotStair_MoveBGExecute__FP15daObjRotStair_c(); // 1
+extern "C" void daObjRotStair_MoveBGDraw__FP15daObjRotStair_c(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern u8 l_water_check_offset[12];
+extern "C" extern void* daObjRotStair_METHODS[8];
 extern "C" extern void* g_profile_Obj_RotStair[12];
 
 // 
@@ -248,9 +246,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -281,22 +276,10 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" extern u8 const j3dDefaultMtx[48];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C13C[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 data_8040C160[4];
-SECTION_BSS extern u8 data_8040C164[4];
-extern "C" extern u8 data_8040C370[81040];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 struct_80CC2880[4];
 
@@ -342,7 +325,7 @@ SECTION_RODATA static u8 const l_target_angleY[16] = {
 	0x7F, 0xFF, 0x40, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x00, 0x00, 0xC0, 0x00, 0x7F, 0xFF, 0x40, 0x00,
 };
 
-/* 80CC16B0-80CC17F0 0140+00 s=1 e=0 z=0  None .text      Create__15daObjRotStair_cFv                                  */
+/* 80CC16B0-80CC17F0 0140+00 s=0 e=0 z=0  None .text      Create__15daObjRotStair_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -357,24 +340,6 @@ asm void daObjRotStair_c::Create() {
 /* 80CC2720-80CC2724 0004+00 s=3 e=0 z=0  None .rodata    @3770                                                        */
 SECTION_RODATA static u32 const lit_3770 = 0x3F800000;
 
-/* 80CC2724-80CC2728 0004+00 s=2 e=0 z=0  None .rodata    @3911                                                        */
-SECTION_RODATA static u8 const lit_3911[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CC2728-80CC272C 0004+00 s=1 e=0 z=0  None .rodata    @3912                                                        */
-SECTION_RODATA static u32 const lit_3912 = 0xBF800000;
-
-/* 80CC272C-80CC2730 0004+00 s=1 e=0 z=0  None .rodata    @4107                                                        */
-SECTION_RODATA static u32 const lit_4107 = 0xBC23D70A;
-
-/* 80CC2730-80CC273A 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CC2730 = "K_spkai00";
-#pragma pop
-
 /* 80CC273C-80CC2748 000C+00 s=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -388,7 +353,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80CC275C-80CC2760 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80CC2760-80CC276C 000C+00 s=0 e=0 z=0  None .data      l_water_check_offset                                         */
 SECTION_DATA u8 l_water_check_offset[12] = {
@@ -397,16 +362,16 @@ SECTION_DATA u8 l_water_check_offset[12] = {
 
 /* 80CC276C-80CC2778 000C+00 s=1 e=0 z=0  None .data      @3811                                                        */
 SECTION_DATA static void* lit_3811[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC2778-80CC2784 000C+00 s=1 e=0 z=0  None .data      @3812                                                        */
 SECTION_DATA static void* lit_3812[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeRotate__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC2784-80CC279C 0018+00 s=1 e=0 z=0  None .data      l_func$3810                                                  */
@@ -417,30 +382,30 @@ SECTION_DATA static u8 data_80CC2784[24] = {
 
 /* 80CC279C-80CC27A8 000C+00 s=1 e=0 z=0  None .data      @3919                                                        */
 SECTION_DATA static void* lit_3919[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionWait__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC27A8-80CC27B4 000C+00 s=1 e=0 z=0  None .data      @3920                                                        */
 SECTION_DATA static void* lit_3920[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionOrderEvent__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC27B4-80CC27C0 000C+00 s=1 e=0 z=0  None .data      @3921                                                        */
 SECTION_DATA static void* lit_3921[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEvent__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC27C0-80CC27CC 000C+00 s=1 e=0 z=0  None .data      @3922                                                        */
 SECTION_DATA static void* lit_3922[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionDead__15daObjRotStair_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC27CC-80CC27FC 0030+00 s=1 e=0 z=0  None .data      l_func$3918                                                  */
@@ -450,42 +415,42 @@ SECTION_DATA static u8 data_80CC27CC[48] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CC27FC-80CC281C 0020+00 s=1 e=0 z=0  None .data      daObjRotStair_METHODS                                        */
-SECTION_DATA static void* daObjRotStair_METHODS[8] = {
-	/* 0    */ (void*)daObjRotStair_create1st__FP15daObjRotStair_c,
-	/* 1    */ (void*)daObjRotStair_MoveBGDelete__FP15daObjRotStair_c,
-	/* 2    */ (void*)daObjRotStair_MoveBGExecute__FP15daObjRotStair_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjRotStair_MoveBGDraw__FP15daObjRotStair_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CC27FC-80CC281C 0020+00 s=0 e=0 z=0  None .data      daObjRotStair_METHODS                                        */
+SECTION_DATA void* daObjRotStair_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC281C-80CC284C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RotStair                                       */
+/* 80CC281C-80CC284C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RotStair                                       */
 SECTION_DATA void* g_profile_Obj_RotStair[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00C50000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005E4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02650000,
-	/* 9    */ (void*)&daObjRotStair_METHODS,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00C50000,
+	(void*)NULL,
+	(void*)0x000005E4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02650000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80CC284C-80CC2858 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC17F0-80CC19E0 01F0+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjRotStair_cFv                              */
+/* 80CC17F0-80CC19E0 01F0+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjRotStair_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -496,7 +461,7 @@ asm void daObjRotStair_c::CreateHeap() {
 #pragma pop
 
 
-/* 80CC19E0-80CC1A28 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80CC19E0-80CC1A28 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -518,7 +483,7 @@ asm void daObjRotStair_c::create1st() {
 #pragma pop
 
 
-/* 80CC1AF0-80CC1BA4 00B4+00 s=1 e=0 z=0  None .text      Execute__15daObjRotStair_cFPPA3_A4_f                         */
+/* 80CC1AF0-80CC1BA4 00B4+00 s=0 e=0 z=0  None .text      Execute__15daObjRotStair_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -551,7 +516,7 @@ asm void daObjRotStair_c::init_modeWait() {
 #pragma pop
 
 
-/* 80CC1CF0-80CC1DF8 0108+00 s=1 e=0 z=0  None .text      modeWait__15daObjRotStair_cFv                                */
+/* 80CC1CF0-80CC1DF8 0108+00 s=0 e=0 z=0  None .text      modeWait__15daObjRotStair_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +538,16 @@ asm void daObjRotStair_c::init_modeRotate() {
 #pragma pop
 
 
-/* 80CC1EC8-80CC2024 015C+00 s=1 e=0 z=0  None .text      modeRotate__15daObjRotStair_cFv                              */
+/* ############################################################################################## */
+/* 80CC2724-80CC2728 0004+00 s=2 e=0 z=0  None .rodata    @3911                                                        */
+SECTION_RODATA static u8 const lit_3911[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CC2728-80CC272C 0004+00 s=1 e=0 z=0  None .rodata    @3912                                                        */
+SECTION_RODATA static u32 const lit_3912 = 0xBF800000;
+
+/* 80CC1EC8-80CC2024 015C+00 s=0 e=0 z=0  None .text      modeRotate__15daObjRotStair_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +569,7 @@ asm void daObjRotStair_c::event_proc_call() {
 #pragma pop
 
 
-/* 80CC20E0-80CC2158 0078+00 s=1 e=0 z=0  None .text      actionWait__15daObjRotStair_cFv                              */
+/* 80CC20E0-80CC2158 0078+00 s=0 e=0 z=0  None .text      actionWait__15daObjRotStair_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -606,7 +580,7 @@ asm void daObjRotStair_c::actionWait() {
 #pragma pop
 
 
-/* 80CC2158-80CC21C0 0068+00 s=1 e=0 z=0  None .text      actionOrderEvent__15daObjRotStair_cFv                        */
+/* 80CC2158-80CC21C0 0068+00 s=0 e=0 z=0  None .text      actionOrderEvent__15daObjRotStair_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -617,7 +591,7 @@ asm void daObjRotStair_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 80CC21C0-80CC221C 005C+00 s=1 e=0 z=0  None .text      actionEvent__15daObjRotStair_cFv                             */
+/* 80CC21C0-80CC221C 005C+00 s=0 e=0 z=0  None .text      actionEvent__15daObjRotStair_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +602,7 @@ asm void daObjRotStair_c::actionEvent() {
 #pragma pop
 
 
-/* 80CC221C-80CC2220 0004+00 s=1 e=0 z=0  None .text      actionDead__15daObjRotStair_cFv                              */
+/* 80CC221C-80CC2220 0004+00 s=0 e=0 z=0  None .text      actionDead__15daObjRotStair_cFv                              */
 void daObjRotStair_c::actionDead() {
 	/* empty function */
 }
@@ -678,7 +652,11 @@ asm void daObjRotStair_c::offWaterModel() {
 #pragma pop
 
 
-/* 80CC23C4-80CC25C0 01FC+00 s=1 e=0 z=0  None .text      Draw__15daObjRotStair_cFv                                    */
+/* ############################################################################################## */
+/* 80CC272C-80CC2730 0004+00 s=1 e=0 z=0  None .rodata    @4107                                                        */
+SECTION_RODATA static u32 const lit_4107 = 0xBC23D70A;
+
+/* 80CC23C4-80CC25C0 01FC+00 s=0 e=0 z=0  None .text      Draw__15daObjRotStair_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -689,7 +667,7 @@ asm void daObjRotStair_c::Draw() {
 #pragma pop
 
 
-/* 80CC25C0-80CC262C 006C+00 s=1 e=0 z=0  None .text      Delete__15daObjRotStair_cFv                                  */
+/* 80CC25C0-80CC262C 006C+00 s=0 e=0 z=0  None .text      Delete__15daObjRotStair_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -703,59 +681,67 @@ asm void daObjRotStair_c::Delete() {
 /* ############################################################################################## */
 /* 80CC2858-80CC2880 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjRotStair_c                                      */
 SECTION_DATA static void* __vt__15daObjRotStair_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjRotStair_cFv,
-	/* 3    */ (void*)Create__15daObjRotStair_cFv,
-	/* 4    */ (void*)Execute__15daObjRotStair_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjRotStair_cFv,
-	/* 6    */ (void*)Delete__15daObjRotStair_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC262C-80CC268C 0060+00 s=1 e=0 z=0  None .text      daObjRotStair_create1st__FP15daObjRotStair_c                 */
+/* 80CC262C-80CC268C 0060+00 s=0 e=0 z=0  None .text      daObjRotStair_create1st__FP15daObjRotStair_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRotStair_create1st(daObjRotStair_c* param_0) {
+asm void daObjRotStair_create1st(daObjRotStair_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_create1st__FP15daObjRotStair_c.s"
 }
 #pragma pop
 
 
-/* 80CC268C-80CC26AC 0020+00 s=1 e=0 z=0  None .text      daObjRotStair_MoveBGDelete__FP15daObjRotStair_c              */
+/* 80CC268C-80CC26AC 0020+00 s=0 e=0 z=0  None .text      daObjRotStair_MoveBGDelete__FP15daObjRotStair_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRotStair_MoveBGDelete(daObjRotStair_c* param_0) {
+asm void daObjRotStair_MoveBGDelete(daObjRotStair_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGDelete__FP15daObjRotStair_c.s"
 }
 #pragma pop
 
 
-/* 80CC26AC-80CC26CC 0020+00 s=1 e=0 z=0  None .text      daObjRotStair_MoveBGExecute__FP15daObjRotStair_c             */
+/* 80CC26AC-80CC26CC 0020+00 s=0 e=0 z=0  None .text      daObjRotStair_MoveBGExecute__FP15daObjRotStair_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRotStair_MoveBGExecute(daObjRotStair_c* param_0) {
+asm void daObjRotStair_MoveBGExecute(daObjRotStair_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGExecute__FP15daObjRotStair_c.s"
 }
 #pragma pop
 
 
-/* 80CC26CC-80CC26F8 002C+00 s=1 e=0 z=0  None .text      daObjRotStair_MoveBGDraw__FP15daObjRotStair_c                */
+/* 80CC26CC-80CC26F8 002C+00 s=0 e=0 z=0  None .text      daObjRotStair_MoveBGDraw__FP15daObjRotStair_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRotStair_MoveBGDraw(daObjRotStair_c* param_0) {
+asm void daObjRotStair_MoveBGDraw(daObjRotStair_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rstair/d_a_obj_rstair/daObjRotStair_MoveBGDraw__FP15daObjRotStair_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CC2730-80CC273A 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CC2730 = "K_spkai00";
+#pragma pop
 

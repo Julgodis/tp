@@ -2,11 +2,11 @@ lbl_807927F8:
 /* 807927F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 807927FC  7C 08 02 A6 */	mflr r0
 /* 80792800  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80792804  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80792808  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8079280C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80792804  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80792808  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8079280C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80792810  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
-/* 80792814  C0 04 04 D4 */	lfs f0, 0x4d4(r4)	/* effective address: 80406694 */
+/* 80792814  C0 04 04 D4 */	lfs f0, 0x4d4(r4)
 /* 80792818  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8079281C  FC 00 02 10 */	fabs f0, f0
 /* 80792820  FC 20 00 18 */	frsp f1, f0

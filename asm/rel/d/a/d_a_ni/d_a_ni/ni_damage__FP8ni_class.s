@@ -82,7 +82,7 @@ lbl_8094DCC8:
 /* 8094DCC8  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 8094DCCC  3C 80 80 95 */	lis r4, l_HIO@ha
 /* 8094DCD0  38 84 15 9C */	addi r4, r4, l_HIO@l
-/* 8094DCD4  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 809515B8 */
+/* 8094DCD4  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 8094DCD8  C0 5F 00 20 */	lfs f2, 0x20(r31)
 /* 8094DCDC  C0 7F 00 98 */	lfs f3, 0x98(r31)
 /* 8094DCE0  4B 92 1D 5C */	b cLib_addCalc2__FPffff

@@ -20,8 +20,8 @@ lbl_80D59690:
 /* 80D59698  7C 00 07 34 */	extsh r0, r0
 /* 80D5969C  2C 00 00 02 */	cmpwi r0, 2
 /* 80D596A0  40 82 00 30 */	bne lbl_80D596D0
-/* 80D596A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D596A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D596A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D596A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D596AC  54 80 86 3E */	rlwinm r0, r4, 0x10, 0x18, 0x1f
 /* 80D596B0  7C 04 07 34 */	extsh r4, r0
 /* 80D596B4  88 1F 04 E2 */	lbz r0, 0x4e2(r31)

@@ -6,9 +6,9 @@ lbl_807A8290:
 /* 807A82A0  A8 03 06 EE */	lha r0, 0x6ee(r3)
 /* 807A82A4  2C 00 00 00 */	cmpwi r0, 0
 /* 807A82A8  40 82 00 5C */	bne lbl_807A8304
-/* 807A82AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A82B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807A82B4  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807A82AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A82B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807A82B4  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 807A82B8  7F E3 FB 78 */	mr r3, r31
 /* 807A82BC  81 9F 06 28 */	lwz r12, 0x628(r31)
 /* 807A82C0  81 8C 01 88 */	lwz r12, 0x188(r12)

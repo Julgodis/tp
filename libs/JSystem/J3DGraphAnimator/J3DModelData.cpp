@@ -112,16 +112,16 @@ asm void J3DModelData::clear() {
 /* ############################################################################################## */
 /* 803CED08-803CED14 000C+00 s=3 e=0 z=0  None .data      __vt__13J3DShapeTable                                        */
 SECTION_DATA static void* __vt__13J3DShapeTable[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13J3DShapeTableFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13J3DShapeTableFv,
 };
 
 /* 803CED14-803CED20 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DModelData                                         */
 SECTION_DATA static void* __vt__12J3DModelData[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DModelDataFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DModelDataFv,
 };
 
 /* 80325DA0-80325E14 0074+00 s=0 e=2 z=0  None .text      __ct__12J3DModelDataFv                                       */

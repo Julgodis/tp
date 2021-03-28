@@ -42,9 +42,9 @@ lbl_80848B64:
 /* 80848C04  4B 95 C1 9C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80848C08  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80848C0C  4B 7C 51 58 */	b mDoExt_modelEntryDL__FP8J3DModel
-/* 80848C10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80848C14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80848C18  80 83 5D B8 */	lwz r4, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 80848C10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80848C14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80848C18  80 83 5D B8 */	lwz r4, 0x5db8(r3)
 /* 80848C1C  28 04 00 00 */	cmplwi r4, 0
 /* 80848C20  41 82 00 2C */	beq lbl_80848C4C
 /* 80848C24  83 C4 17 34 */	lwz r30, 0x1734(r4)

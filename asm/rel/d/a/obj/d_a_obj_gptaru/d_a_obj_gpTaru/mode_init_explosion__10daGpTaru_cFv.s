@@ -57,7 +57,7 @@ lbl_8057EEE4:
 /* 8057EEFC  90 01 00 08 */	stw r0, 8(r1)
 /* 8057EF00  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8057EF04  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8057EF08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8057EF08  80 63 00 00 */	lwz r3, 0(r3)
 /* 8057EF0C  38 81 00 08 */	addi r4, r1, 8
 /* 8057EF10  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8057EF14  38 C0 00 00 */	li r6, 0
@@ -72,12 +72,12 @@ lbl_8057EEE4:
 /* 8057EF38  C0 1E 00 10 */	lfs f0, 0x10(r30)
 /* 8057EF3C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8057EF40  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 8057EF44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057EF48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057EF44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057EF48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057EF4C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8057EF50  3C 80 80 58 */	lis r4, l_HIO@ha
 /* 8057EF54  38 84 F8 E4 */	addi r4, r4, l_HIO@l
-/* 8057EF58  88 84 00 11 */	lbz r4, 0x11(r4)	/* effective address: 8057F8F5 */
+/* 8057EF58  88 84 00 11 */	lbz r4, 0x11(r4)
 /* 8057EF5C  38 A0 00 0F */	li r5, 0xf
 /* 8057EF60  38 C1 00 0C */	addi r6, r1, 0xc
 /* 8057EF64  4B AF 0A C0 */	b StartShock__12dVibration_cFii4cXyz
@@ -89,7 +89,7 @@ lbl_8057EEE4:
 /* 8057EF7C  98 1F 08 0C */	stb r0, 0x80c(r31)
 /* 8057EF80  3C 60 80 58 */	lis r3, l_HIO@ha
 /* 8057EF84  38 63 F8 E4 */	addi r3, r3, l_HIO@l
-/* 8057EF88  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8057F8F0 */
+/* 8057EF88  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8057EF8C  D0 1F 09 48 */	stfs f0, 0x948(r31)
 /* 8057EF90  38 00 00 05 */	li r0, 5
 /* 8057EF94  98 1F 05 78 */	stb r0, 0x578(r31)

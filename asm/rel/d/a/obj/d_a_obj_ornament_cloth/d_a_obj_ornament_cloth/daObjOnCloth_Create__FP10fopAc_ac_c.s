@@ -28,7 +28,7 @@ lbl_80595C38:
 /* 80595C38  38 7E 05 70 */	addi r3, r30, 0x570
 /* 80595C3C  3C 80 80 59 */	lis r4, l_arcName@ha
 /* 80595C40  38 84 5D 60 */	addi r4, r4, l_arcName@l
-/* 80595C44  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80595D60 */
+/* 80595C44  80 84 00 00 */	lwz r4, 0(r4)
 /* 80595C48  4B A9 72 74 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80595C4C  7C 7F 1B 78 */	mr r31, r3
 /* 80595C50  2C 1F 00 04 */	cmpwi r31, 4

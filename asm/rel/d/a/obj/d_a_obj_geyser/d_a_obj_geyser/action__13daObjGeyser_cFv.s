@@ -6,7 +6,7 @@ lbl_80BF744C:
 /* 80BF745C  38 84 90 68 */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 80BF7460  3C A0 80 C0 */	lis r5, struct_80BF9240+0x0@ha
 /* 80BF7464  38 E5 92 40 */	addi r7, r5, struct_80BF9240+0x0@l
-/* 80BF7468  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80BF9240 */
+/* 80BF7468  88 07 00 00 */	lbz r0, 0(r7)
 /* 80BF746C  7C 00 07 75 */	extsb. r0, r0
 /* 80BF7470  40 82 00 58 */	bne lbl_80BF74C8
 /* 80BF7474  80 A4 00 88 */	lwz r5, 0x88(r4)
@@ -33,7 +33,7 @@ lbl_80BF744C:
 lbl_80BF74C8:
 /* 80BF74C8  3C A0 80 C0 */	lis r5, struct_80BF9240+0x1@ha
 /* 80BF74CC  38 E5 92 41 */	addi r7, r5, struct_80BF9240+0x1@l
-/* 80BF74D0  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80BF9241 */
+/* 80BF74D0  88 07 00 00 */	lbz r0, 0(r7)
 /* 80BF74D4  7C 00 07 75 */	extsb. r0, r0
 /* 80BF74D8  40 82 00 70 */	bne lbl_80BF7548
 /* 80BF74DC  80 A4 00 D0 */	lwz r5, 0xd0(r4)

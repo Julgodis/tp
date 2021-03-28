@@ -10,9 +10,9 @@ lbl_80D3B164:
 /* 80D3B184  40 82 00 B4 */	bne lbl_80D3B238
 /* 80D3B188  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D3B18C  7C 04 07 74 */	extsb r4, r0
-/* 80D3B190  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3B194  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80D3B198  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80D3B190  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3B194  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80D3B198  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80D3B19C  38 1F 09 4C */	addi r0, r31, 0x94c
 /* 80D3B1A0  90 01 00 08 */	stw r0, 8(r1)
 /* 80D3B1A4  90 81 00 0C */	stw r4, 0xc(r1)

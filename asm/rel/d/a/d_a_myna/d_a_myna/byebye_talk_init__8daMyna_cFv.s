@@ -64,13 +64,13 @@ lbl_8094785C:
 /* 8094786C  B0 7F 09 22 */	sth r3, 0x922(r31)
 /* 80947870  4B 8F 0D F0 */	b dMsgObject_getTotalPrice__Fv
 /* 80947874  B0 7F 09 20 */	sth r3, 0x920(r31)
-/* 80947878  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094787C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80947880  80 83 5D BC */	lwz r4, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 80947878  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094787C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80947880  80 83 5D BC */	lwz r4, 0x5dbc(r3)
 /* 80947884  38 00 00 00 */	li r0, 0
 /* 80947888  B0 04 01 7A */	sth r0, 0x17a(r4)
-/* 8094788C  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
-/* 80947890  B0 03 01 7C */	sth r0, 0x17c(r3)	/* effective address: 8040633C */
+/* 8094788C  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 80947890  B0 03 01 7C */	sth r0, 0x17c(r3)
 /* 80947894  88 1F 09 2F */	lbz r0, 0x92f(r31)
 /* 80947898  54 00 06 3C */	rlwinm r0, r0, 0, 0x18, 0x1e
 /* 8094789C  98 1F 09 2F */	stb r0, 0x92f(r31)

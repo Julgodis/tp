@@ -127,20 +127,17 @@ struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -189,10 +186,10 @@ struct Z2SeMgr {
 
 static void checkPlayerPos(daObjThDoor_c*); // 2
 static void doorCoHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daObjThDoor_create1st(daObjThDoor_c*); // 2
-static void daObjThDoor_MoveBGDelete(daObjThDoor_c*); // 2
-static void daObjThDoor_MoveBGExecute(daObjThDoor_c*); // 2
-static void daObjThDoor_MoveBGDraw(daObjThDoor_c*); // 2
+void daObjThDoor_create1st(daObjThDoor_c*); // 2
+void daObjThDoor_MoveBGDelete(daObjThDoor_c*); // 2
+void daObjThDoor_MoveBGExecute(daObjThDoor_c*); // 2
+void daObjThDoor_MoveBGDraw(daObjThDoor_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" static void checkPlayerPos__FP13daObjThDoor_c(); // 1
@@ -214,18 +211,20 @@ extern "C" void demoProc__13daObjThDoor_cFv(); // 1
 extern "C" void checkArea__13daObjThDoor_cFv(); // 1
 extern "C" void Draw__13daObjThDoor_cFv(); // 1
 extern "C" void Delete__13daObjThDoor_cFv(); // 1
-extern "C" static void daObjThDoor_create1st__FP13daObjThDoor_c(); // 1
+extern "C" void daObjThDoor_create1st__FP13daObjThDoor_c(); // 1
 extern "C" void __dt__8dCcD_CylFv(); // 1
 extern "C" void __ct__8dCcD_CylFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" static void daObjThDoor_MoveBGDelete__FP13daObjThDoor_c(); // 1
-extern "C" static void daObjThDoor_MoveBGExecute__FP13daObjThDoor_c(); // 1
-extern "C" static void daObjThDoor_MoveBGDraw__FP13daObjThDoor_c(); // 1
+extern "C" void daObjThDoor_MoveBGDelete__FP13daObjThDoor_c(); // 1
+extern "C" void daObjThDoor_MoveBGExecute__FP13daObjThDoor_c(); // 1
+extern "C" void daObjThDoor_MoveBGDraw__FP13daObjThDoor_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" static void func_80D0E5D4(); // 1
+extern "C" extern u8 const struct_80D0E640[24];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* daObjThDoor_METHODS[8];
 extern "C" extern void* g_profile_Obj_TDoor[12];
 
 // 
@@ -270,9 +269,6 @@ extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -304,25 +300,15 @@ extern "C" void _savegpr_25(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_80D0E7E0[4];
 
@@ -385,40 +371,6 @@ asm void daObjThDoor_c::setBaseMtx() {
 
 
 /* ############################################################################################## */
-/* 80D0E600-80D0E604 0004+00 s=2 e=0 z=0  None .rodata    @3765                                                        */
-SECTION_RODATA static u32 const lit_3765 = 0x3F800000;
-
-/* 80D0E604-80D0E608 0004+00 s=2 e=0 z=0  None .rodata    @3766                                                        */
-SECTION_RODATA static u32 const lit_3766 = 0xBF800000;
-
-/* 80D0E608-80D0E60C 0004+00 s=1 e=0 z=0  None .rodata    @3807                                                        */
-SECTION_RODATA static u32 const lit_3807 = 0x42160000;
-
-/* 80D0E60C-80D0E610 0004+00 s=1 e=0 z=0  None .rodata    @3808                                                        */
-SECTION_RODATA static u32 const lit_3808 = 0x42E10000;
-
-/* 80D0E610-80D0E614 0004+00 s=1 e=0 z=0  None .rodata    @3988                                                        */
-SECTION_RODATA static u32 const lit_3988 = 0xC2480000;
-
-/* 80D0E614-80D0E618 0004+00 s=1 e=0 z=0  None .rodata    @3989                                                        */
-SECTION_RODATA static u32 const lit_3989 = 0xC3960000;
-
-/* 80D0E618-80D0E61C 0004+00 s=1 e=0 z=0  None .rodata    @3990                                                        */
-SECTION_RODATA static u32 const lit_3990 = 0xC2C80000;
-
-/* 80D0E61C-80D0E620 0004+00 s=1 e=0 z=0  None .rodata    @3991                                                        */
-SECTION_RODATA static u32 const lit_3991 = 0x42C80000;
-
-/* 80D0E620-80D0E640 0020+00 s=4 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80D0E620[32] = {
-	/* 80D0E620 0009 stringBase_80D0E620 @stringBase0 */
-	0x56, 0x5F, 0x43, 0x54, 0x44, 0x6F, 0x6F, 0x72, 0x00,
-	/* 80D0E629 0010 data_80D0E629 None */
-	0x43, 0x48, 0x41, 0x53, 0x45, 0x5F, 0x41, 0x57, 0x41, 0x59, 0x5F, 0x57, 0x4F, 0x4C, 0x46, 0x00,
-	/* 80D0E639 0007 data_80D0E639 None */
-	0x74, 0x68, 0x64, 0x6F, 0x6F, 0x72, 0x00,
-};
-
 /* 80D0E658-80D0E664 000C+00 s=2 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -432,13 +384,13 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80D0E678-80D0E67C 0004+00 s=4 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80D0E620)+0x0) /* @stringBase0 */;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80D0E67C-80D0E680 0004+00 s=1 e=0 z=0  None .data      l_evName                                                     */
-SECTION_DATA static void* l_evName = (void*)(((char*)&struct_80D0E620)+0x9) /* None */;
+SECTION_DATA static void* l_evName = (void*)NULL;
 
 /* 80D0E680-80D0E684 0004+00 s=1 e=0 z=0  None .data      l_staffName                                                  */
-SECTION_DATA static void* l_staffName = (void*)(((char*)&struct_80D0E620)+0x19) /* None */;
+SECTION_DATA static void* l_staffName = (void*)NULL;
 
 /* 80D0E684-80D0E6C8 0044+00 s=1 e=0 z=0  None .data      l_cyl_src                                                    */
 SECTION_DATA static u8 l_cyl_src[68] = {
@@ -449,7 +401,7 @@ SECTION_DATA static u8 l_cyl_src[68] = {
 	0x43, 0x7A, 0x00, 0x00,
 };
 
-/* 80D0D6B8-80D0D7F8 0140+00 s=1 e=0 z=0  None .text      Create__13daObjThDoor_cFv                                    */
+/* 80D0D6B8-80D0D7F8 0140+00 s=0 e=0 z=0  None .text      Create__13daObjThDoor_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -460,7 +412,7 @@ asm void daObjThDoor_c::Create() {
 #pragma pop
 
 
-/* 80D0D7F8-80D0D868 0070+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjThDoor_cFv                                */
+/* 80D0D7F8-80D0D868 0070+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjThDoor_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -482,7 +434,14 @@ asm void daObjThDoor_c::create1st() {
 #pragma pop
 
 
-/* 80D0D8E8-80D0D9B4 00CC+00 s=1 e=0 z=0  None .text      Execute__13daObjThDoor_cFPPA3_A4_f                           */
+/* ############################################################################################## */
+/* 80D0E600-80D0E604 0004+00 s=2 e=0 z=0  None .rodata    @3765                                                        */
+SECTION_RODATA static u32 const lit_3765 = 0x3F800000;
+
+/* 80D0E604-80D0E608 0004+00 s=2 e=0 z=0  None .rodata    @3766                                                        */
+SECTION_RODATA static u32 const lit_3766 = 0xBF800000;
+
+/* 80D0D8E8-80D0D9B4 00CC+00 s=0 e=0 z=0  None .text      Execute__13daObjThDoor_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -492,6 +451,13 @@ asm void daObjThDoor_c::Execute(f32 (** param_0)[3][4]) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D0E608-80D0E60C 0004+00 s=1 e=0 z=0  None .rodata    @3807                                                        */
+SECTION_RODATA static u32 const lit_3807 = 0x42160000;
+
+/* 80D0E60C-80D0E610 0004+00 s=1 e=0 z=0  None .rodata    @3808                                                        */
+SECTION_RODATA static u32 const lit_3808 = 0x42E10000;
 
 /* 80D0D9B4-80D0DAC8 0114+00 s=1 e=0 z=0  None .text      set_cyl__13daObjThDoor_cFv                                   */
 #pragma push
@@ -518,30 +484,30 @@ asm void daObjThDoor_c::action() {
 /* ############################################################################################## */
 /* 80D0E6C8-80D0E6D4 000C+00 s=1 e=0 z=0  None .data      @3829                                                        */
 SECTION_DATA static void* lit_3829[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionWait__13daObjThDoor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D0E6D4-80D0E6E0 000C+00 s=1 e=0 z=0  None .data      @3830                                                        */
 SECTION_DATA static void* lit_3830[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionOrderEvent__13daObjThDoor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D0E6E0-80D0E6EC 000C+00 s=1 e=0 z=0  None .data      @3831                                                        */
 SECTION_DATA static void* lit_3831[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEvent__13daObjThDoor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D0E6EC-80D0E6F8 000C+00 s=1 e=0 z=0  None .data      @3832                                                        */
 SECTION_DATA static void* lit_3832[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionDead__13daObjThDoor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D0E6F8-80D0E728 0030+00 s=1 e=0 z=0  None .data      l_func$3828                                                  */
@@ -562,7 +528,7 @@ asm void daObjThDoor_c::event_proc_call() {
 #pragma pop
 
 
-/* 80D0DC4C-80D0DCC8 007C+00 s=1 e=0 z=0  None .text      actionWait__13daObjThDoor_cFv                                */
+/* 80D0DC4C-80D0DCC8 007C+00 s=0 e=0 z=0  None .text      actionWait__13daObjThDoor_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -573,7 +539,7 @@ asm void daObjThDoor_c::actionWait() {
 #pragma pop
 
 
-/* 80D0DCC8-80D0DD90 00C8+00 s=1 e=0 z=0  None .text      actionOrderEvent__13daObjThDoor_cFv                          */
+/* 80D0DCC8-80D0DD90 00C8+00 s=0 e=0 z=0  None .text      actionOrderEvent__13daObjThDoor_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -584,7 +550,7 @@ asm void daObjThDoor_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 80D0DD90-80D0DE30 00A0+00 s=1 e=0 z=0  None .text      actionEvent__13daObjThDoor_cFv                               */
+/* 80D0DD90-80D0DE30 00A0+00 s=0 e=0 z=0  None .text      actionEvent__13daObjThDoor_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,28 +561,40 @@ asm void daObjThDoor_c::actionEvent() {
 #pragma pop
 
 
-/* 80D0DE30-80D0DE34 0004+00 s=1 e=0 z=0  None .text      actionDead__13daObjThDoor_cFv                                */
+/* 80D0DE30-80D0DE34 0004+00 s=0 e=0 z=0  None .text      actionDead__13daObjThDoor_cFv                                */
 void daObjThDoor_c::actionDead() {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
-/* 80D0E640-80D0E658 0018+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80D0E640[24] = {
-	/* 80D0E640 0005 data_80D0E640 None */
-	0x57, 0x41, 0x49, 0x54, 0x00,
-	/* 80D0E645 0004 data_80D0E645 None */
-	0x4D, 0x53, 0x47, 0x00,
-	/* 80D0E649 000F data_80D0E649 None */
-	0x43, 0x4C, 0x4F, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x00, 0x00, 0x00,
+/* 80D0E610-80D0E614 0004+00 s=1 e=0 z=0  None .rodata    @3988                                                        */
+SECTION_RODATA static u32 const lit_3988 = 0xC2480000;
+
+/* 80D0E614-80D0E618 0004+00 s=1 e=0 z=0  None .rodata    @3989                                                        */
+SECTION_RODATA static u32 const lit_3989 = 0xC3960000;
+
+/* 80D0E618-80D0E61C 0004+00 s=1 e=0 z=0  None .rodata    @3990                                                        */
+SECTION_RODATA static u32 const lit_3990 = 0xC2C80000;
+
+/* 80D0E61C-80D0E620 0004+00 s=1 e=0 z=0  None .rodata    @3991                                                        */
+SECTION_RODATA static u32 const lit_3991 = 0x42C80000;
+
+/* 80D0E620-80D0E640 0020+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80D0E620[32] = {
+	/* 80D0E620 0009 stringBase_80D0E620 @stringBase0 */
+	0x56, 0x5F, 0x43, 0x54, 0x44, 0x6F, 0x6F, 0x72, 0x00,
+	/* 80D0E629 0010 data_80D0E629 None */
+	0x43, 0x48, 0x41, 0x53, 0x45, 0x5F, 0x41, 0x57, 0x41, 0x59, 0x5F, 0x57, 0x4F, 0x4C, 0x46, 0x00,
+	/* 80D0E639 0007 data_80D0E639 None */
+	0x74, 0x68, 0x64, 0x6F, 0x6F, 0x72, 0x00,
 };
 
 /* 80D0E728-80D0E734 000C+00 s=1 e=0 z=0  None .data      action_table$3895                                            */
 SECTION_DATA static void* data_80D0E728[3] = {
-	/* 0    */ (void*)(((char*)&struct_80D0E640)+0x0) /* None */,
-	/* 1    */ (void*)(((char*)&struct_80D0E640)+0x5) /* None */,
-	/* 2    */ (void*)(((char*)&struct_80D0E640)+0x9) /* None */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D0DE34-80D0E06C 0238+00 s=2 e=0 z=0  None .text      demoProc__13daObjThDoor_cFv                                  */
@@ -641,7 +619,7 @@ asm void daObjThDoor_c::checkArea() {
 #pragma pop
 
 
-/* 80D0E150-80D0E1F4 00A4+00 s=1 e=0 z=0  None .text      Draw__13daObjThDoor_cFv                                      */
+/* 80D0E150-80D0E1F4 00A4+00 s=0 e=0 z=0  None .text      Draw__13daObjThDoor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -652,7 +630,7 @@ asm void daObjThDoor_c::Draw() {
 #pragma pop
 
 
-/* 80D0E1F4-80D0E228 0034+00 s=1 e=0 z=0  None .text      Delete__13daObjThDoor_cFv                                    */
+/* 80D0E1F4-80D0E228 0034+00 s=0 e=0 z=0  None .text      Delete__13daObjThDoor_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -664,81 +642,81 @@ asm void daObjThDoor_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80D0E734-80D0E754 0020+00 s=1 e=0 z=0  None .data      daObjThDoor_METHODS                                          */
-SECTION_DATA static void* daObjThDoor_METHODS[8] = {
-	/* 0    */ (void*)daObjThDoor_create1st__FP13daObjThDoor_c,
-	/* 1    */ (void*)daObjThDoor_MoveBGDelete__FP13daObjThDoor_c,
-	/* 2    */ (void*)daObjThDoor_MoveBGExecute__FP13daObjThDoor_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjThDoor_MoveBGDraw__FP13daObjThDoor_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D0E734-80D0E754 0020+00 s=0 e=0 z=0  None .data      daObjThDoor_METHODS                                          */
+SECTION_DATA void* daObjThDoor_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D0E754-80D0E784 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_TDoor                                          */
+/* 80D0E754-80D0E784 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_TDoor                                          */
 SECTION_DATA void* g_profile_Obj_TDoor[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00B40000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000008C0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02300000,
-	/* 9    */ (void*)&daObjThDoor_METHODS,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00B40000,
+	(void*)NULL,
+	(void*)0x000008C0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02300000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80D0E784-80D0E790 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D0E790-80D0E79C 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D0E79C-80D0E7A8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D0E7A8-80D0E7B4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D0E7B4-80D0E7DC 0028+00 s=1 e=0 z=0  None .data      __vt__13daObjThDoor_c                                        */
 SECTION_DATA static void* __vt__13daObjThDoor_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjThDoor_cFv,
-	/* 3    */ (void*)Create__13daObjThDoor_cFv,
-	/* 4    */ (void*)Execute__13daObjThDoor_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjThDoor_cFv,
-	/* 6    */ (void*)Delete__13daObjThDoor_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D0E228-80D0E2E4 00BC+00 s=1 e=0 z=0  None .text      daObjThDoor_create1st__FP13daObjThDoor_c                     */
+/* 80D0E228-80D0E2E4 00BC+00 s=0 e=0 z=0  None .text      daObjThDoor_create1st__FP13daObjThDoor_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjThDoor_create1st(daObjThDoor_c* param_0) {
+asm void daObjThDoor_create1st(daObjThDoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_create1st__FP13daObjThDoor_c.s"
 }
@@ -767,7 +745,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80D0E434-80D0E47C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80D0E434-80D0E47C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -778,7 +756,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80D0E47C-80D0E4C4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D0E47C-80D0E4C4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -789,7 +767,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D0E4C4-80D0E520 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80D0E4C4-80D0E520 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -800,40 +778,40 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80D0E520-80D0E540 0020+00 s=1 e=0 z=0  None .text      daObjThDoor_MoveBGDelete__FP13daObjThDoor_c                  */
+/* 80D0E520-80D0E540 0020+00 s=0 e=0 z=0  None .text      daObjThDoor_MoveBGDelete__FP13daObjThDoor_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjThDoor_MoveBGDelete(daObjThDoor_c* param_0) {
+asm void daObjThDoor_MoveBGDelete(daObjThDoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGDelete__FP13daObjThDoor_c.s"
 }
 #pragma pop
 
 
-/* 80D0E540-80D0E560 0020+00 s=1 e=0 z=0  None .text      daObjThDoor_MoveBGExecute__FP13daObjThDoor_c                 */
+/* 80D0E540-80D0E560 0020+00 s=0 e=0 z=0  None .text      daObjThDoor_MoveBGExecute__FP13daObjThDoor_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjThDoor_MoveBGExecute(daObjThDoor_c* param_0) {
+asm void daObjThDoor_MoveBGExecute(daObjThDoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGExecute__FP13daObjThDoor_c.s"
 }
 #pragma pop
 
 
-/* 80D0E560-80D0E58C 002C+00 s=1 e=0 z=0  None .text      daObjThDoor_MoveBGDraw__FP13daObjThDoor_c                    */
+/* 80D0E560-80D0E58C 002C+00 s=0 e=0 z=0  None .text      daObjThDoor_MoveBGDraw__FP13daObjThDoor_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjThDoor_MoveBGDraw(daObjThDoor_c* param_0) {
+asm void daObjThDoor_MoveBGDraw(daObjThDoor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_thdoor/d_a_obj_thdoor/daObjThDoor_MoveBGDraw__FP13daObjThDoor_c.s"
 }
 #pragma pop
 
 
-/* 80D0E58C-80D0E5D4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80D0E58C-80D0E5D4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -854,4 +832,15 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D0E640-80D0E658 0018+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_80D0E640[24] = {
+	/* 80D0E640 0005 data_80D0E640 None */
+	0x57, 0x41, 0x49, 0x54, 0x00,
+	/* 80D0E645 0004 data_80D0E645 None */
+	0x4D, 0x53, 0x47, 0x00,
+	/* 80D0E649 000F data_80D0E649 None */
+	0x43, 0x4C, 0x4F, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00, 0x00, 0x00, 0x00,
+};
 

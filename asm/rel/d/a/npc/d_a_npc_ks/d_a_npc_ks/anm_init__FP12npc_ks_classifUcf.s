@@ -85,8 +85,8 @@ lbl_80A492BC:
 lbl_80A492C0:
 /* 80A492C0  80 7B 05 C0 */	lwz r3, 0x5c0(r27)
 /* 80A492C4  7F 84 E3 78 */	mr r4, r28
-/* 80A492C8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A492CC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A492C8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A492CC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A492D0  3C A5 00 02 */	addis r5, r5, 2
 /* 80A492D4  38 C0 00 80 */	li r6, 0x80
 /* 80A492D8  38 A5 C2 F8 */	addi r5, r5, -15624

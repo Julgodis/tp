@@ -1,13 +1,13 @@
 lbl_80872F48:
 /* 80872F48  3C 60 80 88 */	lis r3, __THPInfo@ha
 /* 80872F4C  84 A3 9B C4 */	lwzu r5, __THPInfo@l(r3)
-/* 80872F50  80 85 06 9C */	lwz r4, 0x69c(r5)	/* effective address: 8087A260 */
+/* 80872F50  80 85 06 9C */	lwz r4, 0x69c(r5)
 /* 80872F54  38 04 00 02 */	addi r0, r4, 2
-/* 80872F58  90 05 06 9C */	stw r0, 0x69c(r5)	/* effective address: 8087A260 */
-/* 80872F5C  80 A3 00 00 */	lwz r5, 0(r3)	/* effective address: 80880000 */
-/* 80872F60  80 85 06 9C */	lwz r4, 0x69c(r5)	/* effective address: 8087A260 */
+/* 80872F58  90 05 06 9C */	stw r0, 0x69c(r5)
+/* 80872F5C  80 A3 00 00 */	lwz r5, 0(r3)
+/* 80872F60  80 85 06 9C */	lwz r4, 0x69c(r5)
 /* 80872F64  38 04 00 01 */	addi r0, r4, 1
-/* 80872F68  90 05 06 9C */	stw r0, 0x69c(r5)	/* effective address: 8087A260 */
+/* 80872F68  90 05 06 9C */	stw r0, 0x69c(r5)
 /* 80872F6C  88 04 00 00 */	lbz r0, 0(r4)
 /* 80872F70  28 00 00 08 */	cmplwi r0, 8
 /* 80872F74  41 82 00 0C */	beq lbl_80872F80

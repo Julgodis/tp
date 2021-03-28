@@ -19,9 +19,9 @@ lbl_8049EB64:
 /* 8049EBA8  3B FD 00 B0 */	addi r31, r29, 0xb0
 /* 8049EBAC  3B DD 00 62 */	addi r30, r29, 0x62
 /* 8049EBB0  3B 40 00 00 */	li r26, 0
-/* 8049EBB4  C3 BB 00 58 */	lfs f29, 0x58(r27)	/* effective address: 804A28A8 */
-/* 8049EBB8  C3 DB 00 5C */	lfs f30, 0x5c(r27)	/* effective address: 804A28AC */
-/* 8049EBBC  CB FB 00 70 */	lfd f31, 0x70(r27)	/* effective address: 804A28C0 */
+/* 8049EBB4  C3 BB 00 58 */	lfs f29, 0x58(r27)
+/* 8049EBB8  C3 DB 00 5C */	lfs f30, 0x5c(r27)
+/* 8049EBBC  CB FB 00 70 */	lfd f31, 0x70(r27)
 /* 8049EBC0  3F 80 43 30 */	lis r28, 0x4330
 lbl_8049EBC4:
 /* 8049EBC4  C0 19 00 00 */	lfs f0, 0(r25)

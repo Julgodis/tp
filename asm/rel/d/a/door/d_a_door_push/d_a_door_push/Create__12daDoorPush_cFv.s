@@ -8,8 +8,8 @@ lbl_8067809C:
 /* 806780B4  80 83 05 B0 */	lwz r4, 0x5b0(r3)
 /* 806780B8  28 04 00 00 */	cmplwi r4, 0
 /* 806780BC  41 82 00 28 */	beq lbl_806780E4
-/* 806780C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806780C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806780C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806780C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806780C8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 806780CC  7F E5 FB 78 */	mr r5, r31
 /* 806780D0  4B 9F C9 38 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -36,11 +36,11 @@ lbl_806780E4:
 /* 80678120  7F E3 FB 78 */	mr r3, r31
 /* 80678124  3C 80 80 68 */	lis r4, l_cull_box@ha
 /* 80678128  C4 24 8F 74 */	lfsu f1, l_cull_box@l(r4)
-/* 8067812C  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80680004 */
-/* 80678130  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80680008 */
-/* 80678134  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 8068000C */
-/* 80678138  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80680010 */
-/* 8067813C  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80680014 */
+/* 8067812C  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80678130  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80678134  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80678138  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 8067813C  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80678140  4B 9A 24 08 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80678144  3C 60 80 67 */	lis r3, PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel@ha
 /* 80678148  38 03 7D B8 */	addi r0, r3, PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel@l
@@ -55,8 +55,8 @@ lbl_806780E4:
 /* 8067816C  90 1F 01 00 */	stw r0, 0x100(r31)
 /* 80678170  3B 40 00 00 */	li r26, 0
 /* 80678174  3B C0 00 00 */	li r30, 0
-/* 80678178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067817C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80678178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067817C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80678180  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 80678184  3C 60 80 68 */	lis r3, struct_80678F18+0x0@ha
 /* 80678188  3B 83 8F 18 */	addi r28, r3, struct_80678F18+0x0@l

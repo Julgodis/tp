@@ -33,10 +33,10 @@ lbl_80B4E154:
 /* 80B4E16C  3B 80 00 03 */	li r28, 3
 /* 80B4E170  3B 40 00 03 */	li r26, 3
 lbl_80B4E174:
-/* 80B4E174  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B4E178  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B4E17C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80B4E180  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B4E174  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B4E178  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B4E17C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80B4E180  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B4E184  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 80B4E188  7D 89 03 A6 */	mtctr r12
 /* 80B4E18C  4E 80 04 21 */	bctrl 

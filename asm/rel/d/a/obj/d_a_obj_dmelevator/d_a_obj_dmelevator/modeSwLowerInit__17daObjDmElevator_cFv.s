@@ -12,14 +12,14 @@ lbl_80BDEB88:
 /* 80BDEBB0  90 01 00 08 */	stw r0, 8(r1)
 /* 80BDEBB4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BDEBB8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BDEBBC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BDEBBC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BDEBC0  38 81 00 08 */	addi r4, r1, 8
 /* 80BDEBC4  38 BE 06 1C */	addi r5, r30, 0x61c
 /* 80BDEBC8  38 C0 00 00 */	li r6, 0
 /* 80BDEBCC  38 E0 00 00 */	li r7, 0
-/* 80BDEBD0  C0 3F 00 68 */	lfs f1, 0x68(r31)	/* effective address: 80BDF8D8 */
+/* 80BDEBD0  C0 3F 00 68 */	lfs f1, 0x68(r31)
 /* 80BDEBD4  FC 40 08 90 */	fmr f2, f1
-/* 80BDEBD8  C0 7F 00 6C */	lfs f3, 0x6c(r31)	/* effective address: 80BDF8DC */
+/* 80BDEBD8  C0 7F 00 6C */	lfs f3, 0x6c(r31)
 /* 80BDEBDC  FC 80 18 90 */	fmr f4, f3
 /* 80BDEBE0  39 00 00 00 */	li r8, 0
 /* 80BDEBE4  4B 6C CD A0 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

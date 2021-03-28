@@ -14,8 +14,8 @@ lbl_807C3818:
 /* 807C3848  FF E0 10 90 */	fmr f31, f2
 /* 807C384C  3C 60 80 7D */	lis r3, stringBase0@ha
 /* 807C3850  38 63 EE FC */	addi r3, r3, stringBase0@l
-/* 807C3854  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 807C3858  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 807C3854  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 807C3858  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 807C385C  3C A5 00 02 */	addis r5, r5, 2
 /* 807C3860  38 C0 00 80 */	li r6, 0x80
 /* 807C3864  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -10,7 +10,7 @@ lbl_80C91448:
 /* 80C91468  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80C9146C  3C 80 80 C9 */	lis r4, l_arcName@ha
 /* 80C91470  38 84 19 9C */	addi r4, r4, l_arcName@l
-/* 80C91474  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9199C */
+/* 80C91474  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C91478  4B 39 BB 90 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C9147C  38 7E 07 28 */	addi r3, r30, 0x728
 /* 80C91480  38 80 FF FF */	li r4, -1

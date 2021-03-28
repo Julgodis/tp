@@ -8,8 +8,8 @@ lbl_80BC89B0:
 /* 80BC89C8  3C 60 80 BD */	lis r3, lit_3731@ha
 /* 80BC89CC  3B C3 8C DC */	addi r30, r3, lit_3731@l
 /* 80BC89D0  38 7F 05 EC */	addi r3, r31, 0x5ec
-/* 80BC89D4  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 80BC8CE0 */
-/* 80BC89D8  C0 5E 00 50 */	lfs f2, 0x50(r30)	/* effective address: 80BC8D2C */
+/* 80BC89D4  C0 3E 00 04 */	lfs f1, 4(r30)
+/* 80BC89D8  C0 5E 00 50 */	lfs f2, 0x50(r30)
 /* 80BC89DC  4B 6A 7D 64 */	b cLib_chaseF__FPfff
 /* 80BC89E0  88 1F 06 08 */	lbz r0, 0x608(r31)
 /* 80BC89E4  1C 00 FF FF */	mulli r0, r0, -1

@@ -13,8 +13,8 @@ lbl_8067ED30:
 /* 8067ED5C  54 04 46 3E */	srwi r4, r0, 0x18
 /* 8067ED60  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8067ED64  41 82 00 18 */	beq lbl_8067ED7C
-/* 8067ED68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067ED6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8067ED68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067ED6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8067ED70  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8067ED74  7C 05 07 74 */	extsb r5, r0
 /* 8067ED78  4B 9B 64 88 */	b onSwitch__10dSv_info_cFii

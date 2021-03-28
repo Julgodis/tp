@@ -21,8 +21,8 @@ lbl_80470AB4:
 /* 80470B00  80 1F 08 68 */	lwz r0, 0x868(r31)
 /* 80470B04  60 00 00 02 */	ori r0, r0, 2
 /* 80470B08  90 1F 08 68 */	stw r0, 0x868(r31)
-/* 80470B0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80470B10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80470B0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80470B10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80470B14  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80470B18  54 04 D6 3E */	rlwinm r4, r0, 0x1a, 0x18, 0x1f
 /* 80470B1C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

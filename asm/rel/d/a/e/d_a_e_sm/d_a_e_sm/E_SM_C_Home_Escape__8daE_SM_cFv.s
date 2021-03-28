@@ -321,9 +321,9 @@ lbl_80794DE4:
 /* 80794E74  7C 64 1B 78 */	mr r4, r3
 /* 80794E78  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80794E7C  4B BB 22 5C */	b PSVECScale
-/* 80794E80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80794E84  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80794E88  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80794E80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80794E84  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80794E88  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80794E8C  38 80 00 00 */	li r4, 0
 /* 80794E90  90 81 00 08 */	stw r4, 8(r1)
 /* 80794E94  38 00 FF FF */	li r0, -1

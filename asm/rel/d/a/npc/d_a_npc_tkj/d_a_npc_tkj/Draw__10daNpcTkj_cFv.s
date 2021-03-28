@@ -25,7 +25,7 @@ lbl_8057400C:
 /* 80574014  38 A0 00 00 */	li r5, 0
 /* 80574018  3C C0 80 57 */	lis r6, m__17daNpc_Tkj_Param_c@ha
 /* 8057401C  38 C6 65 98 */	addi r6, r6, m__17daNpc_Tkj_Param_c@l
-/* 80574020  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 805765A4 */
+/* 80574020  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80574024  38 C0 00 00 */	li r6, 0
 /* 80574028  3C E0 80 57 */	lis r7, lit_4487@ha
 /* 8057402C  C0 47 66 44 */	lfs f2, lit_4487@l(r7)

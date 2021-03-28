@@ -11,14 +11,14 @@ lbl_80BEEC5C:
 /* 80BEEC80  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BEEC84  38 DE 01 0C */	addi r6, r30, 0x10c
 /* 80BEEC88  4B 5B 4B 3C */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80BEEC8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEEC90  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80BEEC94  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80BEEC8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEEC90  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BEEC94  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80BEEC98  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BEEC9C  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80BEECA0  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80BEECA4  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80BEECA8  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80BEECA0  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80BEECA4  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80BEECA8  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BEECAC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80BEECB0  38 63 CA 54 */	addi r3, r3, g_env_light@l
 /* 80BEECB4  80 9E 05 68 */	lwz r4, 0x568(r30)
@@ -35,11 +35,11 @@ lbl_80BEEC5C:
 /* 80BEECE0  38 A0 00 00 */	li r5, 0
 /* 80BEECE4  4B 73 67 A8 */	b entryImm__13J3DDrawBufferFP9J3DPacketUs
 lbl_80BEECE8:
-/* 80BEECE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BEECEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BEECF0  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80BEECE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BEECEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BEECF0  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80BEECF4  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80BEECF8  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80BEECF8  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80BEECFC  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BEED00  38 60 00 01 */	li r3, 1
 /* 80BEED04  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -9,7 +9,7 @@ lbl_80D333F4:
 /* 80D33410  3B E3 42 1C */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80D33414  3C 60 80 D3 */	lis r3, data_80D34430@ha
 /* 80D33418  38 A3 44 30 */	addi r5, r3, data_80D34430@l
-/* 80D3341C  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80D34430 */
+/* 80D3341C  88 05 00 00 */	lbz r0, 0(r5)
 /* 80D33420  7C 00 07 75 */	extsb. r0, r0
 /* 80D33424  40 82 00 88 */	bne lbl_80D334AC
 /* 80D33428  80 7F 00 60 */	lwz r3, 0x60(r31)

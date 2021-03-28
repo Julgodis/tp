@@ -100,7 +100,7 @@ lbl_8082DCB8:
 /* 8082DCD0  41 82 00 1C */	beq lbl_8082DCEC
 /* 8082DCD4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8082DCD8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8082DCDC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8082DCDC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082DCE0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8082DCE4  38 80 00 63 */	li r4, 0x63
 /* 8082DCE8  4B A8 22 A4 */	b changeBgmStatus__8Z2SeqMgrFl
@@ -165,8 +165,8 @@ lbl_8082DD7C:
 /* 8082DDC0  C0 3E 07 60 */	lfs f1, 0x760(r30)
 /* 8082DDC4  4B 84 93 50 */	b SetGroundUpY__9dBgS_AcchFf
 /* 8082DDC8  38 7E 07 F4 */	addi r3, r30, 0x7f4
-/* 8082DDCC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8082DDD0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8082DDCC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8082DDD0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8082DDD4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8082DDD8  4B 84 8C D4 */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_8082DDDC:

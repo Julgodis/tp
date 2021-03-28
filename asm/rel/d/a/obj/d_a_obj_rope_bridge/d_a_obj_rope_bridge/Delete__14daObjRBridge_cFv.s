@@ -16,7 +16,7 @@ lbl_805978BC:
 /* 805978F4  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 805978F8  3C 80 80 59 */	lis r4, l_ropeArcName@ha
 /* 805978FC  38 84 7E 8C */	addi r4, r4, l_ropeArcName@l
-/* 80597900  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80597E8C */
+/* 80597900  80 84 00 00 */	lwz r4, 0(r4)
 /* 80597904  4B A9 57 04 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80597908  38 60 00 01 */	li r3, 1
 /* 8059790C  83 E1 00 0C */	lwz r31, 0xc(r1)

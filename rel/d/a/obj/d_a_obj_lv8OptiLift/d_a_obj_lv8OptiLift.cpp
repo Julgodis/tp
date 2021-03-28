@@ -131,10 +131,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -167,10 +163,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daOptiLift_Draw(daOptiLift_c*); // 2
-static void daOptiLift_Execute(daOptiLift_c*); // 2
-static void daOptiLift_Delete(daOptiLift_c*); // 2
-static void daOptiLift_Create(fopAc_ac_c*); // 2
+void daOptiLift_Draw(daOptiLift_c*); // 2
+void daOptiLift_Execute(daOptiLift_c*); // 2
+void daOptiLift_Delete(daOptiLift_c*); // 2
+void daOptiLift_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daOptiLift_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -204,17 +200,15 @@ extern "C" void liftReset__12daOptiLift_cFv(); // 1
 extern "C" void setNextPoint__12daOptiLift_cFv(); // 1
 extern "C" void Draw__12daOptiLift_cFv(); // 1
 extern "C" void Delete__12daOptiLift_cFv(); // 1
-extern "C" static void daOptiLift_Draw__FP12daOptiLift_c(); // 1
-extern "C" static void daOptiLift_Execute__FP12daOptiLift_c(); // 1
-extern "C" static void daOptiLift_Delete__FP12daOptiLift_c(); // 1
-extern "C" static void daOptiLift_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daOptiLift_Draw__FP12daOptiLift_c(); // 1
+extern "C" void daOptiLift_Execute__FP12daOptiLift_c(); // 1
+extern "C" void daOptiLift_Delete__FP12daOptiLift_c(); // 1
+extern "C" void daOptiLift_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daOptiLift_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv8OptiLift_cpp(); // 1
-extern "C" extern u8 const lit_3984[8];
-extern "C" extern u8 const lit_3985[8];
-extern "C" extern u8 const lit_3986[8];
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daOptiLift_Method[8];
 extern "C" extern void* g_profile_Obj_Lv8OptiLift[12];
 
 // 
@@ -257,10 +251,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -289,18 +279,10 @@ extern "C" void _savegpr_26(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C138[4];
-SECTION_BSS extern u8 data_8040C13C[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
@@ -327,65 +309,65 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 80C8BA64-80C8BA70 000C+00 s=1 e=0 z=0  None .data      @3826                                                        */
 SECTION_DATA static void* lit_3826[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeAcc__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BA70-80C8BA7C 000C+00 s=1 e=0 z=0  None .data      @3827                                                        */
 SECTION_DATA static void* lit_3827[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMove__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BA7C-80C8BA88 000C+00 s=1 e=0 z=0  None .data      @3828                                                        */
 SECTION_DATA static void* lit_3828[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeBrk__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BA88-80C8BA94 000C+00 s=1 e=0 z=0  None .data      @3829                                                        */
 SECTION_DATA static void* lit_3829[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BA94-80C8BAA0 000C+00 s=2 e=0 z=0  None .data      @3830                                                        */
 SECTION_DATA static void* lit_3830[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMoveInit__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BAA0-80C8BAAC 000C+00 s=1 e=0 z=0  None .data      @3831                                                        */
 SECTION_DATA static void* lit_3831[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMoveWait__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BAAC-80C8BAB8 000C+00 s=1 e=0 z=0  None .data      @3832                                                        */
 SECTION_DATA static void* lit_3832[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeStop__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BAB8-80C8BAC4 000C+00 s=1 e=0 z=0  None .data      @3833                                                        */
 SECTION_DATA static void* lit_3833[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeInitSet__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BAC4-80C8BAD0 000C+00 s=1 e=0 z=0  None .data      @3834                                                        */
 SECTION_DATA static void* lit_3834[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeInitSet2__12daOptiLift_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8BAD0-80C8BB3C 006C+00 s=1 e=0 z=0  None .data      mode_proc$3825                                               */
@@ -399,67 +381,67 @@ SECTION_DATA static u8 data_80C8BAD0[108] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C8BB3C-80C8BB5C 0020+00 s=1 e=0 z=0  None .data      l_daOptiLift_Method                                          */
-SECTION_DATA static void* l_daOptiLift_Method[8] = {
-	/* 0    */ (void*)daOptiLift_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daOptiLift_Delete__FP12daOptiLift_c,
-	/* 2    */ (void*)daOptiLift_Execute__FP12daOptiLift_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daOptiLift_Draw__FP12daOptiLift_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C8BB3C-80C8BB5C 0020+00 s=0 e=0 z=0  None .data      l_daOptiLift_Method                                          */
+SECTION_DATA void* l_daOptiLift_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C8BB5C-80C8BB8C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv8OptiLift                                    */
+/* 80C8BB5C-80C8BB8C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv8OptiLift                                    */
 SECTION_DATA void* g_profile_Obj_Lv8OptiLift[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00A20000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000618,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02830000,
-	/* 9    */ (void*)&l_daOptiLift_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00A20000,
+	(void*)NULL,
+	(void*)0x00000618,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02830000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80C8BB8C-80C8BB98 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8BB98-80C8BBC0 0028+00 s=1 e=0 z=0  None .data      __vt__12daOptiLift_c                                         */
 SECTION_DATA static void* __vt__12daOptiLift_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__12daOptiLift_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__12daOptiLift_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__12daOptiLift_cFv,
-	/* 6    */ (void*)Delete__12daOptiLift_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8BBC0-80C8BBCC 000C+00 s=2 e=0 z=0  None .data      __vt__16daOptiLift_HIO_c                                     */
 SECTION_DATA static void* __vt__16daOptiLift_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daOptiLift_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8BBCC-80C8BBD8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8A30C-80C8A368 005C+00 s=1 e=0 z=0  None .text      __ct__16daOptiLift_HIO_cFv                                   */
@@ -473,7 +455,7 @@ asm daOptiLift_HIO_c::daOptiLift_HIO_c() {
 #pragma pop
 
 
-/* 80C8A368-80C8A3B0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C8A368-80C8A3B0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,18 +503,18 @@ SECTION_RODATA static u32 const lit_3901 = 0x3DCCCCCD;
 /* 80C8BA00-80C8BA04 0004+00 s=5 e=0 z=0  None .rodata    @3902                                                        */
 SECTION_RODATA static u32 const lit_3902 = 0xBF800000;
 
-/* 80C8BA04-80C8BA0C 0008+00 s=0 e=0 z=0  None .rodata    @3984                                                        */
-SECTION_RODATA u8 const lit_3984[8] = {
+/* 80C8BA04-80C8BA0C 0008+00 s=2 e=0 z=0  None .rodata    @3984                                                        */
+SECTION_RODATA static u8 const lit_3984[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C8BA0C-80C8BA14 0008+00 s=0 e=0 z=0  None .rodata    @3985                                                        */
-SECTION_RODATA u8 const lit_3985[8] = {
+/* 80C8BA0C-80C8BA14 0008+00 s=2 e=0 z=0  None .rodata    @3985                                                        */
+SECTION_RODATA static u8 const lit_3985[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C8BA14-80C8BA1C 0008+00 s=0 e=0 z=0  None .rodata    @3986                                                        */
-SECTION_RODATA u8 const lit_3986[8] = {
+/* 80C8BA14-80C8BA1C 0008+00 s=2 e=0 z=0  None .rodata    @3986                                                        */
+SECTION_RODATA static u8 const lit_3986[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -566,7 +548,7 @@ SECTION_RODATA static u32 const lit_4232 = 0xC2C80000;
 SECTION_DEAD char const* const stringBase_80C8BA3C = "Lv8Lift";
 #pragma pop
 
-/* 80C8A438-80C8A500 00C8+00 s=1 e=0 z=0  None .text      CreateHeap__12daOptiLift_cFv                                 */
+/* 80C8A438-80C8A500 00C8+00 s=0 e=0 z=0  None .text      CreateHeap__12daOptiLift_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -595,7 +577,7 @@ asm void daOptiLift_c::create() {
 #pragma pop
 
 
-/* 80C8A738-80C8A780 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C8A738-80C8A780 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,7 +610,7 @@ asm void daOptiLift_c::rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac
 #pragma pop
 
 
-/* 80C8A7E8-80C8A848 0060+00 s=1 e=0 z=0  None .text      Execute__12daOptiLift_cFPPA3_A4_f                            */
+/* 80C8A7E8-80C8A848 0060+00 s=0 e=0 z=0  None .text      Execute__12daOptiLift_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +647,7 @@ asm void daOptiLift_c::init_modeAcc() {
 #pragma pop
 
 
-/* 80C8AAD0-80C8ABB0 00E0+00 s=1 e=0 z=0  None .text      modeAcc__12daOptiLift_cFv                                    */
+/* 80C8AAD0-80C8ABB0 00E0+00 s=0 e=0 z=0  None .text      modeAcc__12daOptiLift_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -687,7 +669,7 @@ asm void daOptiLift_c::init_modeMove() {
 #pragma pop
 
 
-/* 80C8ABBC-80C8AED4 0318+00 s=1 e=0 z=0  None .text      modeMove__12daOptiLift_cFv                                   */
+/* 80C8ABBC-80C8AED4 0318+00 s=0 e=0 z=0  None .text      modeMove__12daOptiLift_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -709,7 +691,7 @@ asm void daOptiLift_c::init_modeBrk() {
 #pragma pop
 
 
-/* 80C8AEE0-80C8B100 0220+00 s=1 e=0 z=0  None .text      modeBrk__12daOptiLift_cFv                                    */
+/* 80C8AEE0-80C8B100 0220+00 s=0 e=0 z=0  None .text      modeBrk__12daOptiLift_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -731,7 +713,7 @@ asm void daOptiLift_c::init_modeMoveInit() {
 #pragma pop
 
 
-/* 80C8B1B0-80C8B1F0 0040+00 s=1 e=0 z=0  None .text      modeMoveInit__12daOptiLift_cFv                               */
+/* 80C8B1B0-80C8B1F0 0040+00 s=0 e=0 z=0  None .text      modeMoveInit__12daOptiLift_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -753,7 +735,7 @@ asm void daOptiLift_c::init_modeMoveWait() {
 #pragma pop
 
 
-/* 80C8B230-80C8B288 0058+00 s=1 e=0 z=0  None .text      modeMoveWait__12daOptiLift_cFv                               */
+/* 80C8B230-80C8B288 0058+00 s=0 e=0 z=0  None .text      modeMoveWait__12daOptiLift_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -775,7 +757,7 @@ asm void daOptiLift_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C8B294-80C8B298 0004+00 s=1 e=0 z=0  None .text      modeWait__12daOptiLift_cFv                                   */
+/* 80C8B294-80C8B298 0004+00 s=0 e=0 z=0  None .text      modeWait__12daOptiLift_cFv                                   */
 void daOptiLift_c::modeWait() {
 	/* empty function */
 }
@@ -792,7 +774,7 @@ asm void daOptiLift_c::init_modeStop() {
 #pragma pop
 
 
-/* 80C8B318-80C8B428 0110+00 s=1 e=0 z=0  None .text      modeStop__12daOptiLift_cFv                                   */
+/* 80C8B318-80C8B428 0110+00 s=0 e=0 z=0  None .text      modeStop__12daOptiLift_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -814,7 +796,7 @@ asm void daOptiLift_c::init_modeInitSet() {
 #pragma pop
 
 
-/* 80C8B464-80C8B484 0020+00 s=1 e=0 z=0  None .text      modeInitSet__12daOptiLift_cFv                                */
+/* 80C8B464-80C8B484 0020+00 s=0 e=0 z=0  None .text      modeInitSet__12daOptiLift_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -836,7 +818,7 @@ asm void daOptiLift_c::init_modeInitSet2() {
 #pragma pop
 
 
-/* 80C8B4B8-80C8B4D8 0020+00 s=1 e=0 z=0  None .text      modeInitSet2__12daOptiLift_cFv                               */
+/* 80C8B4B8-80C8B4D8 0020+00 s=0 e=0 z=0  None .text      modeInitSet2__12daOptiLift_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -869,7 +851,7 @@ asm void daOptiLift_c::setNextPoint() {
 #pragma pop
 
 
-/* 80C8B66C-80C8B824 01B8+00 s=1 e=0 z=0  None .text      Draw__12daOptiLift_cFv                                       */
+/* 80C8B66C-80C8B824 01B8+00 s=0 e=0 z=0  None .text      Draw__12daOptiLift_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -880,7 +862,7 @@ asm void daOptiLift_c::Draw() {
 #pragma pop
 
 
-/* 80C8B824-80C8B874 0050+00 s=1 e=0 z=0  None .text      Delete__12daOptiLift_cFv                                     */
+/* 80C8B824-80C8B874 0050+00 s=0 e=0 z=0  None .text      Delete__12daOptiLift_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -891,51 +873,51 @@ asm void daOptiLift_c::Delete() {
 #pragma pop
 
 
-/* 80C8B874-80C8B8A0 002C+00 s=1 e=0 z=0  None .text      daOptiLift_Draw__FP12daOptiLift_c                            */
+/* 80C8B874-80C8B8A0 002C+00 s=0 e=0 z=0  None .text      daOptiLift_Draw__FP12daOptiLift_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOptiLift_Draw(daOptiLift_c* param_0) {
+asm void daOptiLift_Draw(daOptiLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8OptiLift/d_a_obj_lv8OptiLift/daOptiLift_Draw__FP12daOptiLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8B8A0-80C8B8C0 0020+00 s=1 e=0 z=0  None .text      daOptiLift_Execute__FP12daOptiLift_c                         */
+/* 80C8B8A0-80C8B8C0 0020+00 s=0 e=0 z=0  None .text      daOptiLift_Execute__FP12daOptiLift_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOptiLift_Execute(daOptiLift_c* param_0) {
+asm void daOptiLift_Execute(daOptiLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8OptiLift/d_a_obj_lv8OptiLift/daOptiLift_Execute__FP12daOptiLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8B8C0-80C8B8E0 0020+00 s=1 e=0 z=0  None .text      daOptiLift_Delete__FP12daOptiLift_c                          */
+/* 80C8B8C0-80C8B8E0 0020+00 s=0 e=0 z=0  None .text      daOptiLift_Delete__FP12daOptiLift_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOptiLift_Delete(daOptiLift_c* param_0) {
+asm void daOptiLift_Delete(daOptiLift_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8OptiLift/d_a_obj_lv8OptiLift/daOptiLift_Delete__FP12daOptiLift_c.s"
 }
 #pragma pop
 
 
-/* 80C8B8E0-80C8B900 0020+00 s=1 e=0 z=0  None .text      daOptiLift_Create__FP10fopAc_ac_c                            */
+/* 80C8B8E0-80C8B900 0020+00 s=0 e=0 z=0  None .text      daOptiLift_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOptiLift_Create(fopAc_ac_c* param_0) {
+asm void daOptiLift_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8OptiLift/d_a_obj_lv8OptiLift/daOptiLift_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C8B900-80C8B95C 005C+00 s=2 e=0 z=0  None .text      __dt__16daOptiLift_HIO_cFv                                   */
+/* 80C8B900-80C8B95C 005C+00 s=1 e=0 z=0  None .text      __dt__16daOptiLift_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -946,7 +928,7 @@ asm daOptiLift_HIO_c::~daOptiLift_HIO_c() {
 #pragma pop
 
 
-/* 80C8B95C-80C8B998 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv8OptiLift_cpp                              */
+/* 80C8B95C-80C8B998 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv8OptiLift_cpp                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

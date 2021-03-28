@@ -12,9 +12,9 @@ lbl_806BFA64:
 /* 806BFA8C  41 82 00 08 */	beq lbl_806BFA94
 /* 806BFA90  48 00 00 60 */	b lbl_806BFAF0
 lbl_806BFA94:
-/* 806BFA94  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806BFA98  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806BFA9C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806BFA94  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806BFA98  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806BFA9C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806BFAA0  4B 95 AC 70 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806BFAA4  7C 64 1B 78 */	mr r4, r3
 /* 806BFAA8  38 7E 04 DE */	addi r3, r30, 0x4de
@@ -28,7 +28,7 @@ lbl_806BFA94:
 /* 806BFAC8  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806BFACC  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806BFAD0  38 84 1B B0 */	addi r4, r4, l_HIO@l
-/* 806BFAD4  C0 24 00 20 */	lfs f1, 0x20(r4)	/* effective address: 806C1BD0 */
+/* 806BFAD4  C0 24 00 20 */	lfs f1, 0x20(r4)
 /* 806BFAD8  C0 5F 00 80 */	lfs f2, 0x80(r31)
 /* 806BFADC  C0 7F 00 08 */	lfs f3, 8(r31)
 /* 806BFAE0  4B BA FF 5C */	b cLib_addCalc2__FPffff
@@ -40,13 +40,13 @@ lbl_806BFAF0:
 /* 806BFAF0  A8 1E 04 DE */	lha r0, 0x4de(r30)
 /* 806BFAF4  B0 1E 04 E6 */	sth r0, 0x4e6(r30)
 /* 806BFAF8  7F C3 F3 78 */	mr r3, r30
-/* 806BFAFC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806BFB00  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 806BFB04  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 806BFAFC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806BFB00  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 806BFB04  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 806BFB08  4B 95 AC D8 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806BFB0C  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BFB10  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806BFB14  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 806C1BC0 */
+/* 806BFB14  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 806BFB18  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806BFB1C  4C 41 13 82 */	cror 2, 1, 2
 /* 806BFB20  41 82 00 18 */	beq lbl_806BFB38

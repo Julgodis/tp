@@ -175,8 +175,8 @@ lbl_804C9BDC:
 /* 804C9C08  7C 65 1B 78 */	mr r5, r3
 /* 804C9C0C  4B E7 D4 84 */	b PSVECAdd
 /* 804C9C10  38 7A 05 78 */	addi r3, r26, 0x578
-/* 804C9C14  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804C9C18  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804C9C14  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804C9C18  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804C9C1C  3B A4 0F 38 */	addi r29, r4, 0xf38
 /* 804C9C20  7F A4 EB 78 */	mr r4, r29
 /* 804C9C24  4B BA CE 88 */	b CrrPos__9dBgS_AcchFR4dBgS
@@ -330,9 +330,9 @@ lbl_804C9E38:
 /* 804C9E3C  38 03 C5 E0 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 804C9E40  90 01 00 68 */	stw r0, 0x68(r1)
 lbl_804C9E44:
-/* 804C9E44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C9E48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C9E4C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804C9E44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C9E48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C9E4C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 804C9E50  80 7A 05 A4 */	lwz r3, 0x5a4(r26)
 /* 804C9E54  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 804C9E58  41 82 00 38 */	beq lbl_804C9E90
@@ -421,7 +421,7 @@ lbl_804C9F8C:
 /* 804C9F94  90 01 00 10 */	stw r0, 0x10(r1)
 /* 804C9F98  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804C9F9C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804C9FA0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804C9FA0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804C9FA4  38 81 00 10 */	addi r4, r1, 0x10
 /* 804C9FA8  38 BA 04 D0 */	addi r5, r26, 0x4d0
 /* 804C9FAC  80 DA 0B B4 */	lwz r6, 0xbb4(r26)
@@ -489,7 +489,7 @@ lbl_804CA07C:
 /* 804CA094  90 01 00 0C */	stw r0, 0xc(r1)
 /* 804CA098  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804CA09C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804CA0A0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804CA0A0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804CA0A4  38 81 00 0C */	addi r4, r1, 0xc
 /* 804CA0A8  38 BA 04 D0 */	addi r5, r26, 0x4d0
 /* 804CA0AC  38 C0 00 00 */	li r6, 0

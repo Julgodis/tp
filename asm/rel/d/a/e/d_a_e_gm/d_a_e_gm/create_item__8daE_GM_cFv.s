@@ -18,9 +18,9 @@ lbl_806D21A4:
 /* 806D21E4  4B 94 9C 30 */	b fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf
 /* 806D21E8  48 00 00 98 */	b lbl_806D2280
 lbl_806D21EC:
-/* 806D21EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806D21F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806D21F4  A0 03 00 02 */	lhz r0, 2(r3)	/* effective address: 804061C2 */
+/* 806D21EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806D21F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806D21F4  A0 03 00 02 */	lhz r0, 2(r3)
 /* 806D21F8  2C 00 00 05 */	cmpwi r0, 5
 /* 806D21FC  40 80 00 10 */	bge lbl_806D220C
 /* 806D2200  3C 60 80 6D */	lis r3, lit_4424@ha

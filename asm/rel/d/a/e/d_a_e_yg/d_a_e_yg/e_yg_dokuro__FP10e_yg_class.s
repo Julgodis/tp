@@ -185,7 +185,7 @@ lbl_807F9E00:
 lbl_807F9E50:
 /* 807F9E50  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 807F9E54  38 63 D0 6C */	addi r3, r3, l_HIO@l
-/* 807F9E58  C3 C3 00 0C */	lfs f30, 0xc(r3)	/* effective address: 807FD078 */
+/* 807F9E58  C3 C3 00 0C */	lfs f30, 0xc(r3)
 /* 807F9E5C  48 00 00 28 */	b lbl_807F9E84
 lbl_807F9E60:
 /* 807F9E60  C0 1F 00 C0 */	lfs f0, 0xc0(r31)

@@ -7,8 +7,8 @@ lbl_80CDF990:
 /* 80CDF9A4  7C 79 1B 78 */	mr r25, r3
 /* 80CDF9A8  3B 40 00 00 */	li r26, 0
 /* 80CDF9AC  3B E0 00 00 */	li r31, 0
-/* 80CDF9B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDF9B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDF9B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDF9B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDF9B8  3F 63 00 02 */	addis r27, r3, 2
 /* 80CDF9BC  3C 60 80 CE */	lis r3, l_arcName@ha
 /* 80CDF9C0  3B 83 02 80 */	addi r28, r3, l_arcName@l
@@ -17,7 +17,7 @@ lbl_80CDF990:
 /* 80CDF9CC  3F C0 11 00 */	lis r30, 0x1100
 /* 80CDF9D0  3B 7B C2 F8 */	addi r27, r27, -15624
 lbl_80CDF9D4:
-/* 80CDF9D4  80 7C 00 00 */	lwz r3, 0(r28)	/* effective address: 80CE0280 */
+/* 80CDF9D4  80 7C 00 00 */	lwz r3, 0(r28)
 /* 80CDF9D8  7C 9D F8 2E */	lwzx r4, r29, r31
 /* 80CDF9DC  7F 65 DB 78 */	mr r5, r27
 /* 80CDF9E0  38 C0 00 80 */	li r6, 0x80

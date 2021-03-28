@@ -23,8 +23,8 @@ lbl_80521A3C:
 /* 80521A90  EC 01 00 2A */	fadds f0, f1, f0
 /* 80521A94  D0 01 00 10 */	stfs f0, 0x10(r1)
 lbl_80521A98:
-/* 80521A98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80521A9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80521A98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80521A9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80521AA0  38 63 4B 88 */	addi r3, r3, 0x4b88
 /* 80521AA4  38 81 00 0C */	addi r4, r1, 0xc
 /* 80521AA8  38 A1 00 08 */	addi r5, r1, 8

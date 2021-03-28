@@ -9,8 +9,8 @@ lbl_80C5518C:
 /* 80C551A8  38 63 5A C0 */	addi r3, r3, stringBase0@l
 /* 80C551AC  38 63 00 07 */	addi r3, r3, 7
 /* 80C551B0  38 80 00 03 */	li r4, 3
-/* 80C551B4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C551B8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C551B4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C551B8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C551BC  3C A5 00 02 */	addis r5, r5, 2
 /* 80C551C0  38 C0 00 80 */	li r6, 0x80
 /* 80C551C4  38 A5 C2 F8 */	addi r5, r5, -15624

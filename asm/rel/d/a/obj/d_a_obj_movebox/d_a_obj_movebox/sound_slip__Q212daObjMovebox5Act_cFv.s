@@ -34,7 +34,7 @@ lbl_8047FFC0:
 /* 8047FFD8  90 01 00 08 */	stw r0, 8(r1)
 /* 8047FFDC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8047FFE0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8047FFE4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8047FFE4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8047FFE8  38 81 00 08 */	addi r4, r1, 8
 /* 8047FFEC  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8047FFF0  C0 3E 01 D4 */	lfs f1, 0x1d4(r30)

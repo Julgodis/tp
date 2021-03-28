@@ -27,7 +27,7 @@ lbl_806C7EB8:
 /* 806C7ED8  4B 95 29 08 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806C7EDC  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806C7EE0  38 63 D3 68 */	addi r3, r3, l_HIO@l
-/* 806C7EE4  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 806CD378 */
+/* 806C7EE4  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 806C7EE8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806C7EEC  40 80 00 3C */	bge lbl_806C7F28
 /* 806C7EF0  A8 1E 0B 94 */	lha r0, 0xb94(r30)

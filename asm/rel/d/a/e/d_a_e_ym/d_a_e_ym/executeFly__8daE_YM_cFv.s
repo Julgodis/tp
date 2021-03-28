@@ -7,14 +7,14 @@ lbl_8080E6A0:
 /* 8080E6B4  7C 7D 1B 78 */	mr r29, r3
 /* 8080E6B8  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080E6BC  3B C3 59 94 */	addi r30, r3, lit_3925@l
-/* 8080E6C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080E6C4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8080E6C8  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 8080E6CC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 804004D0 */
+/* 8080E6C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080E6C4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8080E6C8  80 7F 5D AC */	lwz r3, 0x5dac(r31)
+/* 8080E6CC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8080E6D0  D0 01 00 B8 */	stfs f0, 0xb8(r1)
-/* 8080E6D4  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 804004D4 */
+/* 8080E6D4  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 8080E6D8  D0 01 00 BC */	stfs f0, 0xbc(r1)
-/* 8080E6DC  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 804004D8 */
+/* 8080E6DC  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8080E6E0  D0 01 00 C0 */	stfs f0, 0xc0(r1)
 /* 8080E6E4  38 61 00 88 */	addi r3, r1, 0x88
 /* 8080E6E8  38 9D 04 D0 */	addi r4, r29, 0x4d0
@@ -326,13 +326,13 @@ lbl_8080EB28:
 /* 8080EB5C  C0 23 00 04 */	lfs f1, 4(r3)
 /* 8080EB60  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080EB64  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080EB68  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80815D4C */
+/* 8080EB68  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8080EB6C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8080EB70  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 8080EB74  A8 1D 04 DC */	lha r0, 0x4dc(r29)
 /* 8080EB78  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 8080EB7C  7C 24 04 2E */	lfsx f1, r4, r0
-/* 8080EB80  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80815D4C */
+/* 8080EB80  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8080EB84  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8080EB88  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 8080EB8C  38 00 00 14 */	li r0, 0x14
@@ -517,7 +517,7 @@ lbl_8080EE00:
 /* 8080EE10  7C 23 04 2E */	lfsx f1, r3, r0
 /* 8080EE14  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080EE18  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080EE1C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80815D4C */
+/* 8080EE1C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8080EE20  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8080EE24  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 8080EE28  38 00 00 14 */	li r0, 0x14
@@ -536,7 +536,7 @@ lbl_8080EE38:
 /* 8080EE58  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 8080EE5C  3C 80 80 81 */	lis r4, l_HIO@ha
 /* 8080EE60  38 84 5D 38 */	addi r4, r4, l_HIO@l
-/* 8080EE64  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80815D4C */
+/* 8080EE64  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8080EE68  EC 20 00 72 */	fmuls f1, f0, f1
 /* 8080EE6C  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8080EE70  4B A6 18 D0 */	b cLib_chaseF__FPfff
@@ -1083,7 +1083,7 @@ lbl_8080F620:
 /* 8080F620  C0 5E 00 68 */	lfs f2, 0x68(r30)
 /* 8080F624  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080F628  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080F62C  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80815D58 */
+/* 8080F62C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8080F630  EC 02 00 2A */	fadds f0, f2, f0
 /* 8080F634  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8080F638  40 80 02 44 */	bge lbl_8080F87C
@@ -1118,7 +1118,7 @@ lbl_8080F66C:
 /* 8080F6A8  4E 80 04 21 */	bctrl 
 /* 8080F6AC  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080F6B0  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080F6B4  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80815D44 */
+/* 8080F6B4  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8080F6B8  FC 00 00 1E */	fctiwz f0, f0
 /* 8080F6BC  D8 01 00 C8 */	stfd f0, 0xc8(r1)
 /* 8080F6C0  80 01 00 CC */	lwz r0, 0xcc(r1)
@@ -1219,7 +1219,7 @@ lbl_8080F7F0:
 /* 8080F81C  7C 25 04 2E */	lfsx f1, r5, r0
 /* 8080F820  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080F824  38 83 5D 38 */	addi r4, r3, l_HIO@l
-/* 8080F828  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80815D4C */
+/* 8080F828  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8080F82C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8080F830  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 8080F834  A8 1D 04 DC */	lha r0, 0x4dc(r29)
@@ -1227,7 +1227,7 @@ lbl_8080F7F0:
 /* 8080F83C  7C 65 02 14 */	add r3, r5, r0
 /* 8080F840  C0 23 00 04 */	lfs f1, 4(r3)
 /* 8080F844  38 7D 05 2C */	addi r3, r29, 0x52c
-/* 8080F848  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80815D4C */
+/* 8080F848  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8080F84C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 8080F850  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8080F854  4B A6 0E EC */	b cLib_chaseF__FPfff

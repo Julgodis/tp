@@ -19,9 +19,9 @@ lbl_80C0F330:
 /* 80C0F374  3B C3 FA 7C */	addi r30, r3, m__17daObj_GrA_Param_c@l
 /* 80C0F378  38 61 00 20 */	addi r3, r1, 0x20
 /* 80C0F37C  7F 84 E3 78 */	mr r4, r28
-/* 80C0F380  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C0F384  3B E5 61 C0 */	addi r31, r5, struct_804061C0+0x0@l
-/* 80C0F388  80 BF 5D AC */	lwz r5, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80C0F380  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C0F384  3B E5 61 C0 */	addi r31, r5, g_dComIfG_gameInfo@l
+/* 80C0F388  80 BF 5D AC */	lwz r5, 0x5dac(r31)
 /* 80C0F38C  48 00 04 61 */	bl getAttentionPos__11daObj_GrA_cFP10fopAc_ac_c
 /* 80C0F390  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 80C0F394  D0 01 00 2C */	stfs f0, 0x2c(r1)

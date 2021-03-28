@@ -30,10 +30,10 @@ lbl_806CFE50:
 /* 806CFE58  41 82 00 CC */	beq lbl_806CFF24
 /* 806CFE5C  38 03 FF FF */	addi r0, r3, -1
 /* 806CFE60  90 1E 06 8C */	stw r0, 0x68c(r30)
-/* 806CFE64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806CFE68  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 806CFE6C  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
-/* 806CFE70  A8 03 05 6C */	lha r0, 0x56c(r3)	/* effective address: 8040056C */
+/* 806CFE64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806CFE68  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 806CFE6C  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 806CFE70  A8 03 05 6C */	lha r0, 0x56c(r3)
 /* 806CFE74  2C 00 00 1E */	cmpwi r0, 0x1e
 /* 806CFE78  40 80 00 AC */	bge lbl_806CFF24
 /* 806CFE7C  48 00 0F B9 */	bl checkNowWolf__9daPy_py_cFv
@@ -49,8 +49,8 @@ lbl_806CFE50:
 /* 806CFEA4  EC 40 08 28 */	fsubs f2, f0, f1
 /* 806CFEA8  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CFEAC  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CFEB0  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 806D1154 */
-/* 806CFEB4  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 806D1160 */
+/* 806CFEB0  C0 23 00 1C */	lfs f1, 0x1c(r3)
+/* 806CFEB4  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 806CFEB8  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CFEBC  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 806CFEC0  40 80 00 64 */	bge lbl_806CFF24
@@ -70,8 +70,8 @@ lbl_806CFED8:
 /* 806CFEF4  EC 40 08 28 */	fsubs f2, f0, f1
 /* 806CFEF8  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CFEFC  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CFF00  C0 23 00 20 */	lfs f1, 0x20(r3)	/* effective address: 806D1158 */
-/* 806CFF04  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 806D1160 */
+/* 806CFF00  C0 23 00 20 */	lfs f1, 0x20(r3)
+/* 806CFF04  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 806CFF08  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CFF0C  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 806CFF10  40 80 00 14 */	bge lbl_806CFF24
@@ -125,11 +125,11 @@ lbl_806CFF80:
 /* 806CFFC4  4B 93 CD D8 */	b transM__14mDoMtx_stack_cFfff
 /* 806CFFC8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806CFFCC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806CFFD0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806CFFD0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806CFFD4  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 806CFFD8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806CFFD8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806CFFDC  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 806CFFE0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806CFFE0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806CFFE4  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 806CFFE8  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 806CFFEC  D0 21 00 08 */	stfs f1, 8(r1)

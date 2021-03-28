@@ -10,7 +10,7 @@ lbl_807AA784:
 /* 807AA7A4  3C 80 80 7B */	lis r4, lit_3909@ha
 /* 807AA7A8  3B C4 FD 2C */	addi r30, r4, lit_3909@l
 /* 807AA7AC  3B A0 08 00 */	li r29, 0x800
-/* 807AA7B0  C3 FE 01 08 */	lfs f31, 0x108(r30)	/* effective address: 807AFE34 */
+/* 807AA7B0  C3 FE 01 08 */	lfs f31, 0x108(r30)
 /* 807AA7B4  A8 03 06 80 */	lha r0, 0x680(r3)
 /* 807AA7B8  2C 00 00 01 */	cmpwi r0, 1
 /* 807AA7BC  41 82 00 48 */	beq lbl_807AA804

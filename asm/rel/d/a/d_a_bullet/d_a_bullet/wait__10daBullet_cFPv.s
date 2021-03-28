@@ -26,11 +26,11 @@ lbl_80656458:
 /* 80656478  40 82 00 2C */	bne lbl_806564A4
 /* 8065647C  3C 80 80 65 */	lis r4, lit_3933@ha
 /* 80656480  38 A4 67 E0 */	addi r5, r4, lit_3933@l
-/* 80656484  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 806567E0 */
-/* 80656488  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 806567E4 */
+/* 80656484  80 85 00 00 */	lwz r4, 0(r5)
+/* 80656488  80 05 00 04 */	lwz r0, 4(r5)
 /* 8065648C  90 81 00 08 */	stw r4, 8(r1)
 /* 80656490  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80656494  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 806567E8 */
+/* 80656494  80 05 00 08 */	lwz r0, 8(r5)
 /* 80656498  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8065649C  38 81 00 08 */	addi r4, r1, 8
 /* 806564A0  4B FF FE D9 */	bl setProcess__10daBullet_cFM10daBullet_cFPCvPvPv_i

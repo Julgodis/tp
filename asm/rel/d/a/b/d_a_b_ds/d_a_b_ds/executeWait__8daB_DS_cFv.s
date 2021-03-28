@@ -57,13 +57,13 @@ lbl_805D00F4:
 /* 805D00F8  90 1F 06 84 */	stw r0, 0x684(r31)
 lbl_805D00FC:
 /* 805D00FC  7F E3 FB 78 */	mr r3, r31
-/* 805D0100  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805D0104  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 805D0108  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 805D0100  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805D0104  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 805D0108  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 805D010C  4B A4 A6 D4 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805D0110  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805D0114  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805D0118  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 805DDAD4 */
+/* 805D0118  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 805D011C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805D0120  41 81 00 20 */	bgt lbl_805D0140
 /* 805D0124  80 7E 5D AC */	lwz r3, 0x5dac(r30)

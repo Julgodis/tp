@@ -11,8 +11,8 @@ lbl_80CB22F4:
 /* 80CB2318  98 1F 05 D3 */	stb r0, 0x5d3(r31)
 /* 80CB231C  48 00 00 24 */	b lbl_80CB2340
 lbl_80CB2320:
-/* 80CB2320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB2324  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB2320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB2324  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB2328  88 9F 05 D4 */	lbz r4, 0x5d4(r31)
 /* 80CB232C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CB2330  7C 05 07 74 */	extsb r5, r0

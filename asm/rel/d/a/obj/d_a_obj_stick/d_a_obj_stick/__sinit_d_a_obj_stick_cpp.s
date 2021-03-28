@@ -11,10 +11,10 @@ lbl_80599D5C:
 /* 80599D80  38 00 00 06 */	li r0, 6
 /* 80599D84  7C 09 03 A6 */	mtctr r0
 lbl_80599D88:
-/* 80599D88  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80392680 */
-/* 80599D8C  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80392684 */
-/* 80599D90  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80599E70 */
-/* 80599D94  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80599E74 */
+/* 80599D88  80 64 00 04 */	lwz r3, 4(r4)
+/* 80599D8C  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80599D90  90 65 00 04 */	stw r3, 4(r5)
+/* 80599D94  94 05 00 08 */	stwu r0, 8(r5)
 /* 80599D98  42 00 FF F0 */	bdnz lbl_80599D88
 /* 80599D9C  3C 60 80 5A */	lis r3, __vt__19daObj_Stick_Param_c@ha
 /* 80599DA0  38 03 9F 70 */	addi r0, r3, __vt__19daObj_Stick_Param_c@l

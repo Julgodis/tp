@@ -45,9 +45,9 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagLv2PrChk_Execute(daTagLv2PrChk_c*); // 2
-static void daTagLv2PrChk_Delete(daTagLv2PrChk_c*); // 2
-static void daTagLv2PrChk_Create(daTagLv2PrChk_c*); // 2
+void daTagLv2PrChk_Execute(daTagLv2PrChk_c*); // 2
+void daTagLv2PrChk_Delete(daTagLv2PrChk_c*); // 2
+void daTagLv2PrChk_Create(daTagLv2PrChk_c*); // 2
 
 extern "C" void Create__15daTagLv2PrChk_cFv(); // 1
 extern "C" void create__15daTagLv2PrChk_cFv(); // 1
@@ -57,10 +57,11 @@ extern "C" void actionCheck__15daTagLv2PrChk_cFv(); // 1
 extern "C" void actionEnd__15daTagLv2PrChk_cFv(); // 1
 extern "C" void seStartWrong__15daTagLv2PrChk_cFv(); // 1
 extern "C" bool _delete__15daTagLv2PrChk_cFv(); // 1
-extern "C" static void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c(); // 1
-extern "C" static void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c(); // 1
-extern "C" static void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c(); // 1
+extern "C" void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c(); // 1
+extern "C" void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c(); // 1
+extern "C" void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daTagLv2PrChk_Method[8];
 extern "C" extern void* g_profile_Tag_Lv2PrChk[12];
 
 // 
@@ -75,9 +76,7 @@ extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_805A5410[4];
 
@@ -133,16 +132,16 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 805A538C-805A5398 000C+00 s=1 e=0 z=0  None .data      @3667                                                        */
 SECTION_DATA static void* lit_3667[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionCheck__15daTagLv2PrChk_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A5398-805A53A4 000C+00 s=1 e=0 z=0  None .data      @3668                                                        */
 SECTION_DATA static void* lit_3668[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEnd__15daTagLv2PrChk_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805A53A4-805A53BC 0018+00 s=1 e=0 z=0  None .data      l_func$3666                                                  */
@@ -162,7 +161,7 @@ asm void daTagLv2PrChk_c::action() {
 #pragma pop
 
 
-/* 805A4DF4-805A5290 049C+00 s=1 e=0 z=0  None .text      actionCheck__15daTagLv2PrChk_cFv                             */
+/* 805A4DF4-805A5290 049C+00 s=0 e=0 z=0  None .text      actionCheck__15daTagLv2PrChk_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -173,7 +172,7 @@ asm void daTagLv2PrChk_c::actionCheck() {
 #pragma pop
 
 
-/* 805A5290-805A5294 0004+00 s=1 e=0 z=0  None .text      actionEnd__15daTagLv2PrChk_cFv                               */
+/* 805A5290-805A5294 0004+00 s=0 e=0 z=0  None .text      actionEnd__15daTagLv2PrChk_cFv                               */
 void daTagLv2PrChk_c::actionEnd() {
 	/* empty function */
 }
@@ -203,33 +202,33 @@ bool daTagLv2PrChk_c::_delete() {
 }
 
 
-/* 805A52FC-805A531C 0020+00 s=1 e=0 z=0  None .text      daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c                   */
+/* 805A52FC-805A531C 0020+00 s=0 e=0 z=0  None .text      daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLv2PrChk_Execute(daTagLv2PrChk_c* param_0) {
+asm void daTagLv2PrChk_Execute(daTagLv2PrChk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c.s"
 }
 #pragma pop
 
 
-/* 805A531C-805A533C 0020+00 s=1 e=0 z=0  None .text      daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c                    */
+/* 805A531C-805A533C 0020+00 s=0 e=0 z=0  None .text      daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLv2PrChk_Delete(daTagLv2PrChk_c* param_0) {
+asm void daTagLv2PrChk_Delete(daTagLv2PrChk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c.s"
 }
 #pragma pop
 
 
-/* 805A533C-805A535C 0020+00 s=1 e=0 z=0  None .text      daTagLv2PrChk_Create__FP15daTagLv2PrChk_c                    */
+/* 805A533C-805A535C 0020+00 s=0 e=0 z=0  None .text      daTagLv2PrChk_Create__FP15daTagLv2PrChk_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLv2PrChk_Create(daTagLv2PrChk_c* param_0) {
+asm void daTagLv2PrChk_Create(daTagLv2PrChk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lv2prchk/d_a_tag_lv2prchk/daTagLv2PrChk_Create__FP15daTagLv2PrChk_c.s"
 }
@@ -237,31 +236,31 @@ asm static void daTagLv2PrChk_Create(daTagLv2PrChk_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 805A53BC-805A53DC 0020+00 s=1 e=0 z=0  None .data      l_daTagLv2PrChk_Method                                       */
-SECTION_DATA static void* l_daTagLv2PrChk_Method[8] = {
-	/* 0    */ (void*)daTagLv2PrChk_Create__FP15daTagLv2PrChk_c,
-	/* 1    */ (void*)daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c,
-	/* 2    */ (void*)daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A53BC-805A53DC 0020+00 s=0 e=0 z=0  None .data      l_daTagLv2PrChk_Method                                       */
+SECTION_DATA void* l_daTagLv2PrChk_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A53DC-805A540C 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Lv2PrChk                                       */
+/* 805A53DC-805A540C 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Lv2PrChk                                       */
 SECTION_DATA void* g_profile_Tag_Lv2PrChk[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01820000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x022E0000,
-	/* 9    */ (void*)&l_daTagLv2PrChk_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01820000,
+	(void*)NULL,
+	(void*)0x00000570,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x022E0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

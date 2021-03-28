@@ -21,9 +21,9 @@ lbl_80653568:
 lbl_80653580:
 /* 80653580  3C 60 80 65 */	lis r3, l_arcName@ha
 /* 80653584  38 63 56 D4 */	addi r3, r3, l_arcName@l
-/* 80653588  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806556D4 */
-/* 8065358C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80653590  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80653588  80 63 00 00 */	lwz r3, 0(r3)
+/* 8065358C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80653590  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80653594  3C 84 00 02 */	addis r4, r4, 2
 /* 80653598  38 A0 00 80 */	li r5, 0x80
 /* 8065359C  38 84 C2 F8 */	addi r4, r4, -15624
@@ -223,11 +223,11 @@ lbl_80653854:
 /* 80653874  4B C0 1F 5C */	b setAlphaRate__13CPaneMgrAlphaFf
 /* 80653878  3A E0 00 00 */	li r23, 0
 /* 8065387C  3B A0 00 00 */	li r29, 0
-/* 80653880  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80653884  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80653880  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80653884  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80653888  3F 20 54 49 */	lis r25, 0x5449
 lbl_8065388C:
-/* 8065388C  83 7A 5D 30 */	lwz r27, 0x5d30(r26)	/* effective address: 8040BEF0 */
+/* 8065388C  83 7A 5D 30 */	lwz r27, 0x5d30(r26)
 /* 80653890  7E E3 BB 78 */	mr r3, r23
 /* 80653894  4B BC AA 34 */	b dMeter2Info_getNumberTextureName__Fi
 /* 80653898  7C 65 1B 78 */	mr r5, r3

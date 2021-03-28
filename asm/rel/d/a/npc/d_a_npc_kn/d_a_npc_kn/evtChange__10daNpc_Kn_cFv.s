@@ -32,14 +32,14 @@ lbl_80A3A404:
 /* 80A3A47C  54 00 10 3A */	slwi r0, r0, 2
 /* 80A3A480  7C 04 00 2E */	lwzx r0, r4, r0
 /* 80A3A484  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 80A3A488  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A3A48C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A3A488  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A3A48C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A3A490  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80A3A494  80 9F 01 00 */	lwz r4, 0x100(r31)
 /* 80A3A498  4B 60 C3 68 */	b setObjectArchive__16dEvent_manager_cFPc
 lbl_80A3A49C:
-/* 80A3A49C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A3A4A0  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80A3A49C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A3A4A0  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80A3A4A4  38 7E 4F F8 */	addi r3, r30, 0x4ff8
 /* 80A3A4A8  7F E4 FB 78 */	mr r4, r31
 /* 80A3A4AC  80 BF 05 B4 */	lwz r5, 0x5b4(r31)

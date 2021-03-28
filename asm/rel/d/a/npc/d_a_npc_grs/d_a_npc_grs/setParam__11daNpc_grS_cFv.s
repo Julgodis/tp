@@ -16,10 +16,10 @@ lbl_809E4FDC:
 /* 809E5014  88 1F 09 F4 */	lbz r0, 0x9f4(r31)
 /* 809E5018  28 00 00 00 */	cmplwi r0, 0
 /* 809E501C  40 82 00 20 */	bne lbl_809E503C
-/* 809E5020  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809E5024  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809E5028  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 809E502C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 809E5020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809E5024  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809E5028  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 809E502C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 809E5030  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809E5034  41 82 00 08 */	beq lbl_809E503C
 /* 809E5038  3B A0 00 00 */	li r29, 0
@@ -60,18 +60,18 @@ lbl_809E5078:
 /* 809E50B4  93 BF 05 5C */	stw r29, 0x55c(r31)
 /* 809E50B8  3C 60 80 9E */	lis r3, m__17daNpc_grS_Param_c@ha
 /* 809E50BC  38 83 7D CC */	addi r4, r3, m__17daNpc_grS_Param_c@l
-/* 809E50C0  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 809E7DD4 */
+/* 809E50C0  C0 04 00 08 */	lfs f0, 8(r4)
 /* 809E50C4  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 809E50C8  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 809E50CC  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
 /* 809E50D0  38 7F 07 E4 */	addi r3, r31, 0x7e4
-/* 809E50D4  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 809E7DE8 */
+/* 809E50D4  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 809E50D8  4B 69 0E 68 */	b SetWallR__12dBgS_AcchCirFf
 /* 809E50DC  3C 60 80 9E */	lis r3, m__17daNpc_grS_Param_c@ha
 /* 809E50E0  38 63 7D CC */	addi r3, r3, m__17daNpc_grS_Param_c@l
-/* 809E50E4  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 809E7DE4 */
+/* 809E50E4  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 809E50E8  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 809E50EC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 809E7DD0 */
+/* 809E50EC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 809E50F0  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 809E50F4  39 61 00 30 */	addi r11, r1, 0x30
 /* 809E50F8  4B 97 D1 2C */	b _restgpr_28

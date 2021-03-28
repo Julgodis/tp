@@ -27,8 +27,8 @@ lbl_809EAE14:
 lbl_809EAE44:
 /* 809EAE44  28 00 00 02 */	cmplwi r0, 2
 /* 809EAE48  40 82 00 2C */	bne lbl_809EAE74
-/* 809EAE4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809EAE50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809EAE4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809EAE50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809EAE54  88 85 1A 98 */	lbz r4, 0x1a98(r5)
 /* 809EAE58  88 05 04 E2 */	lbz r0, 0x4e2(r5)
 /* 809EAE5C  7C 05 07 74 */	extsb r5, r0

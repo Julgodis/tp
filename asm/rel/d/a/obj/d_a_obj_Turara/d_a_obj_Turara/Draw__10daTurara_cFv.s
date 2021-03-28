@@ -31,14 +31,14 @@ lbl_80B9E388:
 /* 80B9E3FC  7F E3 FB 78 */	mr r3, r31
 /* 80B9E400  4B 47 F0 2C */	b fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData
 lbl_80B9E404:
-/* 80B9E404  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B9E408  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80B9E40C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80B9E404  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B9E408  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80B9E40C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80B9E410  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B9E414  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 80B9E418  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80B9E41C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80B9E420  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 80B9E418  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 80B9E41C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80B9E420  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80B9E424  88 1F 09 94 */	lbz r0, 0x994(r31)
 /* 80B9E428  28 00 00 00 */	cmplwi r0, 0
 /* 80B9E42C  41 82 00 18 */	beq lbl_80B9E444
@@ -48,11 +48,11 @@ lbl_80B9E404:
 /* 80B9E43C  80 63 05 C0 */	lwz r3, 0x5c0(r3)
 /* 80B9E440  4B 46 F8 84 */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_80B9E444:
-/* 80B9E444  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B9E448  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B9E44C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80B9E444  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B9E448  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B9E44C  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80B9E450  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 80B9E454  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80B9E454  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80B9E458  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80B9E45C  38 60 00 01 */	li r3, 1
 /* 80B9E460  83 E1 00 0C */	lwz r31, 0xc(r1)

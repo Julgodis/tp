@@ -11,7 +11,7 @@ lbl_8064CB1C:
 /* 8064CB40  4B 9C 04 04 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8064CB44  3C 60 80 65 */	lis r3, l_HIO@ha
 /* 8064CB48  38 63 F6 04 */	addi r3, r3, l_HIO@l
-/* 8064CB4C  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 8064F60C */
+/* 8064CB4C  C0 43 00 08 */	lfs f2, 8(r3)
 /* 8064CB50  C0 1F 06 C0 */	lfs f0, 0x6c0(r31)
 /* 8064CB54  EC 22 00 32 */	fmuls f1, f2, f0
 /* 8064CB58  C0 1F 06 C4 */	lfs f0, 0x6c4(r31)
@@ -65,11 +65,11 @@ lbl_8064CC0C:
 /* 8064CC14  41 82 00 E0 */	beq lbl_8064CCF4
 /* 8064CC18  3C 60 80 65 */	lis r3, l_HIO@ha
 /* 8064CC1C  38 63 F6 04 */	addi r3, r3, l_HIO@l
-/* 8064CC20  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 8064F634 */
+/* 8064CC20  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 8064CC24  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8064CC28  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8064F638 */
+/* 8064CC28  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8064CC2C  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8064CC30  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 8064F63C */
+/* 8064CC30  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 8064CC34  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8064CC38  38 61 00 08 */	addi r3, r1, 8
 /* 8064CC3C  38 9F 04 D0 */	addi r4, r31, 0x4d0
@@ -82,7 +82,7 @@ lbl_8064CC0C:
 /* 8064CC58  4B 9C 02 EC */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8064CC5C  3C 60 80 65 */	lis r3, l_HIO@ha
 /* 8064CC60  38 63 F6 04 */	addi r3, r3, l_HIO@l
-/* 8064CC64  C0 23 00 2C */	lfs f1, 0x2c(r3)	/* effective address: 8064F630 */
+/* 8064CC64  C0 23 00 2C */	lfs f1, 0x2c(r3)
 /* 8064CC68  FC 40 08 90 */	fmr f2, f1
 /* 8064CC6C  FC 60 08 90 */	fmr f3, f1
 /* 8064CC70  4B 9C 01 C8 */	b scaleM__14mDoMtx_stack_cFfff

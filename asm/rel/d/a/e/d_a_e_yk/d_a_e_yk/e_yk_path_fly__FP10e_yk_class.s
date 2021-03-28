@@ -202,7 +202,7 @@ lbl_808062B4:
 lbl_808062C8:
 /* 808062C8  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 808062CC  38 63 7F 08 */	addi r3, r3, l_HIO@l
-/* 808062D0  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80807F14 */
+/* 808062D0  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 808062D4  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 808062D8  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 808062DC  C0 1F 00 6C */	lfs f0, 0x6c(r31)

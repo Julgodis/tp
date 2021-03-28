@@ -30,7 +30,7 @@ lbl_80783A9C:
 /* 80783B0C  C0 26 4D E8 */	lfs f1, lit_3906@l(r6)
 /* 80783B10  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 80783B14  38 C6 4F 84 */	addi r6, r6, l_HIO@l
-/* 80783B18  C0 46 00 28 */	lfs f2, 0x28(r6)	/* effective address: 80784FAC */
+/* 80783B18  C0 46 00 28 */	lfs f2, 0x28(r6)
 /* 80783B1C  4B FF DF 31 */	bl SetAnm__8daE_SB_cFiiff
 /* 80783B20  7F E3 FB 78 */	mr r3, r31
 /* 80783B24  3C 80 00 01 */	lis r4, 0x0001 /* 0x00008478@ha */

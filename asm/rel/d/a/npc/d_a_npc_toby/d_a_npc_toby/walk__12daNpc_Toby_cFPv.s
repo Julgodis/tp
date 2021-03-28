@@ -97,9 +97,9 @@ lbl_80B22E58:
 /* 80B22F00  7C 04 00 00 */	cmpw r4, r0
 /* 80B22F04  40 82 00 24 */	bne lbl_80B22F28
 /* 80B22F08  38 7F 0B 98 */	addi r3, r31, 0xb98
-/* 80B22F0C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B22F10  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B22F14  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B22F0C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B22F10  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B22F14  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B22F18  4B 62 27 C8 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80B22F1C  38 00 00 01 */	li r0, 1
 /* 80B22F20  98 1F 0F FE */	stb r0, 0xffe(r31)

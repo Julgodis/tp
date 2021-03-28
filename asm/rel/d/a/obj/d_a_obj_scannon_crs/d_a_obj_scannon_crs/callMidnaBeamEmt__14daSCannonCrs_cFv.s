@@ -9,7 +9,7 @@ lbl_80CCACD0:
 /* 80CCACEC  3B E3 B0 80 */	addi r31, r3, DISAP_PARTICLE_NAME@l
 /* 80CCACF0  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 80CCACF4  38 63 10 18 */	addi r3, r3, m_midnaActor__9daPy_py_c@l
-/* 80CCACF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451018 */
+/* 80CCACF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CCACFC  28 03 00 00 */	cmplwi r3, 0
 /* 80CCAD00  41 82 02 08 */	beq lbl_80CCAF08
 /* 80CCAD04  80 63 05 74 */	lwz r3, 0x574(r3)
@@ -60,9 +60,9 @@ lbl_80CCAD98:
 /* 80CCADB4  D0 21 00 38 */	stfs f1, 0x38(r1)
 /* 80CCADB8  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 80CCADBC  D0 21 00 40 */	stfs f1, 0x40(r1)
-/* 80CCADC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCADC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CCADC8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80CCADC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCADC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCADC8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80CCADCC  90 81 00 08 */	stw r4, 8(r1)
 /* 80CCADD0  38 00 FF FF */	li r0, -1
 /* 80CCADD4  90 01 00 0C */	stw r0, 0xc(r1)

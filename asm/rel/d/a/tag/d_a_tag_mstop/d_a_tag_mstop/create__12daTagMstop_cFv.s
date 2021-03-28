@@ -115,9 +115,9 @@ lbl_805A6224:
 /* 805A62E0  D0 1F 05 58 */	stfs f0, 0x558(r31)
 lbl_805A62E4:
 /* 805A62E4  7F E3 FB 78 */	mr r3, r31
-/* 805A62E8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805A62EC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805A62F0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805A62E8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805A62EC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805A62F0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 805A62F4  4B A7 44 1C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805A62F8  B0 7F 04 E6 */	sth r3, 0x4e6(r31)
 /* 805A62FC  38 60 00 04 */	li r3, 4

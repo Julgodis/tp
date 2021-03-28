@@ -35,8 +35,8 @@ lbl_804CA7EC:
 /* 804CA7FC  40 81 01 F0 */	ble lbl_804CA9EC
 /* 804CA800  4B BD 30 84 */	b getAlinkArcName__9daAlink_cFv
 /* 804CA804  38 80 00 15 */	li r4, 0x15
-/* 804CA808  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804CA80C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804CA808  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804CA80C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804CA810  3C A5 00 02 */	addis r5, r5, 2
 /* 804CA814  38 C0 00 80 */	li r6, 0x80
 /* 804CA818  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -166,8 +166,8 @@ lbl_804CA9A0:
 /* 804CA9E4  4B FF EF 4D */	bl procWaitInit__9daNbomb_cFv
 /* 804CA9E8  48 00 04 E0 */	b lbl_804CAEC8
 lbl_804CA9EC:
-/* 804CA9EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804CA9F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804CA9EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804CA9F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804CA9F4  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 804CA9F8  7F C3 F3 78 */	mr r3, r30
 /* 804CA9FC  38 9D 0B 10 */	addi r4, r29, 0xb10

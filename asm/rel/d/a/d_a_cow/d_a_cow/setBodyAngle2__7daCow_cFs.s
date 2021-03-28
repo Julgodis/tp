@@ -41,9 +41,9 @@ lbl_80658FE8:
 /* 80659024  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 80659028  38 A0 01 00 */	li r5, 0x100
 /* 8065902C  4B C1 76 A4 */	b cLib_chaseS__FPsss
-/* 80659030  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80659034  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80659038  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80659030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80659034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80659038  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 8065903C  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80659040  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80659044  4B C1 7B C0 */	b cLib_targetAngleY__FPC3VecPC3Vec

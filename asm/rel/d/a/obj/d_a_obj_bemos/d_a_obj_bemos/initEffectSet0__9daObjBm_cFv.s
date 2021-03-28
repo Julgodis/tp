@@ -17,11 +17,11 @@ lbl_80BB0584:
 /* 80BB05C0  B0 01 00 22 */	sth r0, 0x22(r1)
 /* 80BB05C4  3B 40 00 00 */	li r26, 0
 /* 80BB05C8  3B A0 00 00 */	li r29, 0
-/* 80BB05CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB05D0  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 80BB05CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB05D0  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 80BB05D4  3B 9F 00 C8 */	addi r28, r31, 0xc8
 lbl_80BB05D8:
-/* 80BB05D8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 80BB05D8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 80BB05DC  38 80 00 00 */	li r4, 0
 /* 80BB05E0  90 81 00 08 */	stw r4, 8(r1)
 /* 80BB05E4  38 00 FF FF */	li r0, -1
@@ -36,7 +36,7 @@ lbl_80BB05D8:
 /* 80BB0608  39 01 00 20 */	addi r8, r1, 0x20
 /* 80BB060C  39 3E 04 EC */	addi r9, r30, 0x4ec
 /* 80BB0610  39 40 00 FF */	li r10, 0xff
-/* 80BB0614  C0 3F 00 6C */	lfs f1, 0x6c(r31)	/* effective address: 80BB3824 */
+/* 80BB0614  C0 3F 00 6C */	lfs f1, 0x6c(r31)
 /* 80BB0618  4B 49 C4 78 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80BB061C  3B 5A 00 01 */	addi r26, r26, 1
 /* 80BB0620  2C 1A 00 02 */	cmpwi r26, 2

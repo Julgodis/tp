@@ -113,16 +113,16 @@ extern "C" extern void* __vt__14J2DGrafContext[10];
 /* ############################################################################################## */
 /* 803CC9E0-803CCA08 0028+00 s=5 e=9 z=0  None .data      __vt__13J2DOrthoGraph                                        */
 SECTION_DATA void* __vt__13J2DOrthoGraph[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13J2DOrthoGraphFv,
-	/* 3    */ (void*)func_802E90E4,
-	/* 4    */ (void*)place__14J2DGrafContextFffff,
-	/* 5    */ (void*)setPort__13J2DOrthoGraphFv,
-	/* 6    */ (void*)setup2D__14J2DGrafContextFv,
-	/* 7    */ (void*)setScissor__14J2DGrafContextFv,
-	/* 8    */ (void*)getGrafType__13J2DOrthoGraphCFv,
-	/* 9    */ (void*)setLookat__13J2DOrthoGraphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13J2DOrthoGraphFv,
+	(void*)func_802E90E4,
+	(void*)place__14J2DGrafContextFffff,
+	(void*)setPort__13J2DOrthoGraphFv,
+	(void*)setup2D__14J2DGrafContextFv,
+	(void*)setScissor__14J2DGrafContextFv,
+	(void*)getGrafType__13J2DOrthoGraphCFv,
+	(void*)setLookat__13J2DOrthoGraphFv,
 };
 
 /* 80456160-80456168 0004+04 s=3 e=0 z=0  None .sdata2    @522                                                         */

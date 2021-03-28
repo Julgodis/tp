@@ -5,9 +5,9 @@ lbl_80C23B70:
 /* 80C23B7C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C23B80  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C23B84  7C 7E 1B 78 */	mr r30, r3
-/* 80C23B88  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C23B8C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80C23B90  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 80C23B88  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C23B8C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C23B90  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 80C23B94  7C 00 07 74 */	extsb r0, r0
 /* 80C23B98  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80C23B9C  7C 84 02 14 */	add r4, r4, r0

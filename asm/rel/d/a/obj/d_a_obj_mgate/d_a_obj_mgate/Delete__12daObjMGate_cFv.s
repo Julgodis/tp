@@ -14,7 +14,7 @@ lbl_80593D18:
 /* 80593D48  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 80593D4C  3C 80 80 59 */	lis r4, l_keyArcName@ha
 /* 80593D50  38 84 3F A0 */	addi r4, r4, l_keyArcName@l
-/* 80593D54  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80593FA0 */
+/* 80593D54  80 84 00 00 */	lwz r4, 0(r4)
 /* 80593D58  4B A9 92 B0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80593D5C  38 60 00 01 */	li r3, 1
 /* 80593D60  83 E1 00 0C */	lwz r31, 0xc(r1)

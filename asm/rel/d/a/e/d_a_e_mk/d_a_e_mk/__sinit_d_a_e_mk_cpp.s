@@ -8,13 +8,13 @@ lbl_8071C434:
 /* 8071C44C  3B C3 CA 68 */	addi r30, r3, lit_1109@l
 /* 8071C450  3C 60 80 72 */	lis r3, lit_3777@ha
 /* 8071C454  3B E3 C5 44 */	addi r31, r3, lit_3777@l
-/* 8071C458  C0 1F 02 84 */	lfs f0, 0x284(r31)	/* effective address: 8071C7C8 */
-/* 8071C45C  D0 1E 00 4C */	stfs f0, 0x4c(r30)	/* effective address: 8071CAB4 */
-/* 8071C460  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 8071C560 */
+/* 8071C458  C0 1F 02 84 */	lfs f0, 0x284(r31)
+/* 8071C45C  D0 1E 00 4C */	stfs f0, 0x4c(r30)
+/* 8071C460  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 8071C464  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 8071C468  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 8071CAB8 */
-/* 8071C46C  C0 1F 02 88 */	lfs f0, 0x288(r31)	/* effective address: 8071C7CC */
-/* 8071C470  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 8071CABC */
+/* 8071C468  D0 03 00 04 */	stfs f0, 4(r3)
+/* 8071C46C  C0 1F 02 88 */	lfs f0, 0x288(r31)
+/* 8071C470  D0 03 00 08 */	stfs f0, 8(r3)
 /* 8071C474  3C 80 80 71 */	lis r4, __dt__4cXyzFv@ha
 /* 8071C478  38 84 44 98 */	addi r4, r4, __dt__4cXyzFv@l
 /* 8071C47C  38 BE 00 40 */	addi r5, r30, 0x40

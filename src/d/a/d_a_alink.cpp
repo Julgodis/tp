@@ -11,7 +11,48 @@
 // Types:
 // 
 
-struct daAlinkHIO_anm_c {
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
+	/* 800842C0 */ void ChkAtHit();
+	/* 80084318 */ void ResetAtHit();
+	/* 800843A8 */ void GetAtHitGObj();
+	/* 80084460 */ void ChkTgHit();
+	/* 800844B8 */ void ResetTgHit();
+	/* 80084548 */ void GetTgHitGObj();
+	/* 8008457C */ void GetTgHitObjSe();
+	/* 800845B0 */ void getHitSeID(u8, int);
+	/* 80084658 */ void ChkCoHit();
+	/* 800846B0 */ void ResetCoHit();
+};
+
+struct J3DDeformData {
+};
+
+struct J3DModel {
+	/* 800CFFE0 */ void getAnmMtx(int);
+	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
+	/* 803279A0 */ void diff();
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327C58 */ void calcWeightEnvelopeMtx();
+};
+
+struct J3DModelData {
+};
+
+struct dBgW_Base {
+	struct PushPullLabel {
+	};
+
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 };
 
 struct Vec {
@@ -288,32 +329,24 @@ struct daPy_py_c {
 	/* 8015F730 */ void checkCarryStartLightBallB();
 };
 
+struct JPABaseEmitter {
+};
+
 struct daAlink_footData_c {
 	/* 800CFCB8 */ ~daAlink_footData_c();
 	/* 800CFCF4 */ daAlink_footData_c();
 };
 
-struct J3DModelData {
+struct dAttList_c {
+	/* 80073864 */ void getActor();
 };
 
-struct J3DAnmTransform {
+struct _GXColorS10 {
 };
 
-struct mDoExt_bckAnm {
-	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
-	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
-	/* 8000D9CC */ void entry(J3DModelData*, f32);
-};
-
-struct J3DAnmBase {
-};
-
-struct daPy_frameCtrl_c {
-	/* 80140D24 */ ~daPy_frameCtrl_c();
-	/* 80140D80 */ daPy_frameCtrl_c();
-	/* 8015E4CC */ void checkAnmEnd();
-	/* 8015E510 */ void updateFrame();
-	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct JKRHeap {
@@ -322,6 +355,9 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct J3DAnmBase {
 };
 
 struct daPy_anmHeap_c {
@@ -339,16 +375,18 @@ struct daPy_anmHeap_c {
 	/* 8015F168 */ void setAnimeHeap();
 };
 
-struct dAttList_c {
-	/* 80073864 */ void getActor();
+struct daPy_frameCtrl_c {
+	/* 80140D24 */ ~daPy_frameCtrl_c();
+	/* 80140D80 */ daPy_frameCtrl_c();
+	/* 8015E4CC */ void checkAnmEnd();
+	/* 8015E510 */ void updateFrame();
+	/* 8015E544 */ void setFrameCtrl(u8, s16, s16, f32, f32);
 };
 
-struct JPABaseEmitter {
+struct dCcG_At_Spl {
 };
 
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+struct J3DAnmTransform {
 };
 
 struct cM3dGPla {
@@ -358,54 +396,16 @@ struct cM3dGPla {
 	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 };
 
-struct dBgW_Base {
-	struct PushPullLabel {
-	};
-
-};
-
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 800CFFE0 */ void getAnmMtx(int);
-	/* 800CFFF4 */ void setBaseTRMtx(f32 (* )[4]);
-	/* 803279A0 */ void diff();
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327C58 */ void calcWeightEnvelopeMtx();
-};
-
-struct dCcG_At_Spl {
-};
-
 struct fopEn_enemy_c {
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
-	/* 800842C0 */ void ChkAtHit();
-	/* 80084318 */ void ResetAtHit();
-	/* 800843A8 */ void GetAtHitGObj();
-	/* 80084460 */ void ChkTgHit();
-	/* 800844B8 */ void ResetTgHit();
-	/* 80084548 */ void GetTgHitGObj();
-	/* 8008457C */ void GetTgHitObjSe();
-	/* 800845B0 */ void getHitSeID(u8, int);
-	/* 80084658 */ void ChkCoHit();
-	/* 800846B0 */ void ResetCoHit();
+struct daAlinkHIO_anm_c {
+};
+
+struct mDoExt_bckAnm {
+	/* 8000D7DC */ void init(J3DAnmTransform*, int, int, f32, s16, s16, bool);
+	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
+	/* 8000D9CC */ void entry(J3DModelData*, f32);
 };
 
 struct daAlink_c {
@@ -2361,13 +2361,6 @@ struct mDoExt_MtxCalcAnmBlendTbl {
 	/* 800D00BC */ void getAnm(int);
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80077414 */ ~dBgS_AcchCir();
-};
-
 struct dBgS {
 	/* 80074ABC */ void ChkMoveBG(cBgS_PolyInfo const&);
 	/* 80074B40 */ void ChkMoveBG_NoDABg(cBgS_PolyInfo const&);
@@ -2390,6 +2383,13 @@ struct dBgS {
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075880 */ void MoveBgTransPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 	/* 80075C6C */ void PushPullCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80077414 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -2828,10 +2828,10 @@ struct dEvent_manager_c {
 	/* 8004882C */ void checkStartDemo();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -2871,13 +2871,13 @@ struct dDlst_peekZ_c {
 	/* 80056018 */ void newData(s16, s16, u32*);
 };
 
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
-};
-
+struct J3DDrawBuffer;
 struct J3DPacket {
 	/* 80312750 */ bool entry(J3DDrawBuffer*);
+};
+
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
 struct dDlst_list_c {
@@ -3115,13 +3115,13 @@ struct JASKernel {
 	/* 80290B08 */ void getAramHeap();
 };
 
-struct JAISeqMgr {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
+};
+
+struct JAISeqMgr {
 };
 
 struct JAISeq {
@@ -9460,300 +9460,300 @@ SECTION_RODATA static u8 const m_anmDataTable__9daAlink_c[4968] = {
 
 /* 80391010-803914A8 0498+00 s=4 e=0 z=0  None .rodata    m_wlAnmDataTable__9daAlink_c                                 */
 SECTION_RODATA static void* const m_wlAnmDataTable__9daAlink_c[294] = {
-	/* 0    */ (void*)0x02FF0001,
-	/* 1    */ (void*)0x0A28FFFF,
-	/* 2    */ (void*)0x030A0002,
-	/* 3    */ (void*)0x010EFFFF,
-	/* 4    */ (void*)0x030B0002,
-	/* 5    */ (void*)0x010EFFFF,
-	/* 6    */ (void*)0x02B4000C,
-	/* 7    */ (void*)0xFFFFFFFF,
-	/* 8    */ (void*)0x02CC010C,
-	/* 9    */ (void*)0xFFFFFFFF,
-	/* 10   */ (void*)0x02CA010C,
-	/* 11   */ (void*)0xFFFFFFFF,
-	/* 12   */ (void*)0x02CB010C,
-	/* 13   */ (void*)0xFFFFFFFF,
-	/* 14   */ (void*)0x03050001,
-	/* 15   */ (void*)0x0FFFFFFF,
-	/* 16   */ (void*)0x02E00007,
-	/* 17   */ (void*)0x02FFFFFF,
-	/* 18   */ (void*)0x02DF0007,
-	/* 19   */ (void*)0x0620FFFF,
-	/* 20   */ (void*)0x02DE000C,
-	/* 21   */ (void*)0xFFFFFFFF,
-	/* 22   */ (void*)0x02E90100,
-	/* 23   */ (void*)0x07FFFFFF,
-	/* 24   */ (void*)0x02D4010C,
-	/* 25   */ (void*)0xFFFFFFFF,
-	/* 26   */ (void*)0x02D5020C,
-	/* 27   */ (void*)0xFFFFFFFF,
-	/* 28   */ (void*)0x03060100,
-	/* 29   */ (void*)0x01FFFFFF,
-	/* 30   */ (void*)0x029A0107,
-	/* 31   */ (void*)0x09FFFFFF,
-	/* 32   */ (void*)0x02FE0105,
-	/* 33   */ (void*)0x09FFFFFF,
-	/* 34   */ (void*)0x029C0105,
-	/* 35   */ (void*)0x03FFFFFF,
-	/* 36   */ (void*)0x029B010C,
-	/* 37   */ (void*)0xFFFFFFFF,
-	/* 38   */ (void*)0x02FD0106,
-	/* 39   */ (void*)0x19FFFFFF,
-	/* 40   */ (void*)0x02FC010C,
-	/* 41   */ (void*)0xFFFFFFFF,
-	/* 42   */ (void*)0x02FB0008,
-	/* 43   */ (void*)0x03FFFFFF,
-	/* 44   */ (void*)0x02A7000C,
-	/* 45   */ (void*)0xFFFFFFFF,
-	/* 46   */ (void*)0x03030003,
-	/* 47   */ (void*)0x0A1E32FF,
-	/* 48   */ (void*)0x03000003,
-	/* 49   */ (void*)0x06FFFFFF,
-	/* 50   */ (void*)0x02C20105,
-	/* 51   */ (void*)0x06FFFFFF,
-	/* 52   */ (void*)0x02EE010C,
-	/* 53   */ (void*)0xFFFFFFFF,
-	/* 54   */ (void*)0x02FA010C,
-	/* 55   */ (void*)0xFFFFFFFF,
-	/* 56   */ (void*)0x027E000C,
-	/* 57   */ (void*)0xFFFFFFFF,
-	/* 58   */ (void*)0x030C0102,
-	/* 59   */ (void*)0x0112FFFF,
-	/* 60   */ (void*)0x02EA010C,
-	/* 61   */ (void*)0xFFFFFFFF,
-	/* 62   */ (void*)0x02EB010C,
-	/* 63   */ (void*)0xFFFFFFFF,
-	/* 64   */ (void*)0x02EC020C,
-	/* 65   */ (void*)0xFFFFFFFF,
-	/* 66   */ (void*)0x02E70002,
-	/* 67   */ (void*)0x010EFFFF,
-	/* 68   */ (void*)0x02E30105,
-	/* 69   */ (void*)0x14FFFFFF,
-	/* 70   */ (void*)0x02E40105,
-	/* 71   */ (void*)0x1AFFFFFF,
-	/* 72   */ (void*)0x02E6000C,
-	/* 73   */ (void*)0xFFFFFFFF,
-	/* 74   */ (void*)0x02E80801,
-	/* 75   */ (void*)0x1932FFFF,
-	/* 76   */ (void*)0x02E50902,
-	/* 77   */ (void*)0x010E1E2D,
-	/* 78   */ (void*)0x02B5010C,
-	/* 79   */ (void*)0xFFFFFFFF,
-	/* 80   */ (void*)0x02AC020C,
-	/* 81   */ (void*)0xFFFFFFFF,
-	/* 82   */ (void*)0x02AA020C,
-	/* 83   */ (void*)0xFFFFFFFF,
-	/* 84   */ (void*)0x02AE020C,
-	/* 85   */ (void*)0xFFFFFFFF,
-	/* 86   */ (void*)0x02B0020C,
-	/* 87   */ (void*)0xFFFFFFFF,
-	/* 88   */ (void*)0x02AD020A,
-	/* 89   */ (void*)0x20FFFFFF,
-	/* 90   */ (void*)0x02AB020B,
-	/* 91   */ (void*)0x14FFFFFF,
-	/* 92   */ (void*)0x02AF020C,
-	/* 93   */ (void*)0xFFFFFFFF,
-	/* 94   */ (void*)0x02B1020C,
-	/* 95   */ (void*)0xFFFFFFFF,
-	/* 96   */ (void*)0x02F0000C,
-	/* 97   */ (void*)0xFFFFFFFF,
-	/* 98   */ (void*)0x03020001,
-	/* 99   */ (void*)0x0A28FFFF,
-	/* 100  */ (void*)0x02CF000C,
-	/* 101  */ (void*)0xFFFFFFFF,
-	/* 102  */ (void*)0x02D0000C,
-	/* 103  */ (void*)0xFFFFFFFF,
-	/* 104  */ (void*)0x02CD000C,
-	/* 105  */ (void*)0xFFFFFFFF,
-	/* 106  */ (void*)0x02CE000C,
-	/* 107  */ (void*)0xFFFFFFFF,
-	/* 108  */ (void*)0x02F7010C,
-	/* 109  */ (void*)0xFFFFFFFF,
-	/* 110  */ (void*)0x02F80001,
-	/* 111  */ (void*)0x0DFFFFFF,
-	/* 112  */ (void*)0x02F60002,
-	/* 113  */ (void*)0x01FFFFFF,
-	/* 114  */ (void*)0x02F30004,
-	/* 115  */ (void*)0x03FFFFFF,
-	/* 116  */ (void*)0x02F1010C,
-	/* 117  */ (void*)0xFFFFFFFF,
-	/* 118  */ (void*)0x0307000C,
-	/* 119  */ (void*)0xFFFFFFFF,
-	/* 120  */ (void*)0x02A9010C,
-	/* 121  */ (void*)0xFFFFFFFF,
-	/* 122  */ (void*)0x02A8010C,
-	/* 123  */ (void*)0xFFFFFFFF,
-	/* 124  */ (void*)0x02B2010C,
-	/* 125  */ (void*)0xFFFFFFFF,
-	/* 126  */ (void*)0x02B3010C,
-	/* 127  */ (void*)0xFFFFFFFF,
-	/* 128  */ (void*)0x028D010C,
-	/* 129  */ (void*)0xFFFFFFFF,
-	/* 130  */ (void*)0x028E010C,
-	/* 131  */ (void*)0xFFFFFFFF,
-	/* 132  */ (void*)0x028F000C,
-	/* 133  */ (void*)0xFFFFFFFF,
-	/* 134  */ (void*)0x0290010C,
-	/* 135  */ (void*)0xFFFFFFFF,
-	/* 136  */ (void*)0x027F000C,
-	/* 137  */ (void*)0xFFFFFFFF,
-	/* 138  */ (void*)0x0281000C,
-	/* 139  */ (void*)0xFFFFFFFF,
-	/* 140  */ (void*)0x0280000C,
-	/* 141  */ (void*)0xFFFFFFFF,
-	/* 142  */ (void*)0x02DA000C,
-	/* 143  */ (void*)0xFFFFFFFF,
-	/* 144  */ (void*)0x0285010C,
-	/* 145  */ (void*)0xFFFFFFFF,
-	/* 146  */ (void*)0x0284010C,
-	/* 147  */ (void*)0xFFFFFFFF,
-	/* 148  */ (void*)0x0287010C,
-	/* 149  */ (void*)0xFFFFFFFF,
-	/* 150  */ (void*)0x0286010C,
-	/* 151  */ (void*)0xFFFFFFFF,
-	/* 152  */ (void*)0x0283010C,
-	/* 153  */ (void*)0xFFFFFFFF,
-	/* 154  */ (void*)0x0282010C,
-	/* 155  */ (void*)0xFFFFFFFF,
-	/* 156  */ (void*)0x02DB000C,
-	/* 157  */ (void*)0xFFFFFFFF,
-	/* 158  */ (void*)0x02DC0009,
-	/* 159  */ (void*)0x07FFFFFF,
-	/* 160  */ (void*)0x028C010C,
-	/* 161  */ (void*)0xFFFFFFFF,
-	/* 162  */ (void*)0x0288010C,
-	/* 163  */ (void*)0xFFFFFFFF,
-	/* 164  */ (void*)0x0289010C,
-	/* 165  */ (void*)0xFFFFFFFF,
-	/* 166  */ (void*)0x028B010C,
-	/* 167  */ (void*)0xFFFFFFFF,
-	/* 168  */ (void*)0x028A010C,
-	/* 169  */ (void*)0xFFFFFFFF,
-	/* 170  */ (void*)0x0295020C,
-	/* 171  */ (void*)0xFFFFFFFF,
-	/* 172  */ (void*)0x0294020C,
-	/* 173  */ (void*)0xFFFFFFFF,
-	/* 174  */ (void*)0x02C3010C,
-	/* 175  */ (void*)0xFFFFFFFF,
-	/* 176  */ (void*)0x02C5010C,
-	/* 177  */ (void*)0xFFFFFFFF,
-	/* 178  */ (void*)0x02C4010C,
-	/* 179  */ (void*)0xFFFFFFFF,
-	/* 180  */ (void*)0x02A4000C,
-	/* 181  */ (void*)0xFFFFFFFF,
-	/* 182  */ (void*)0x02A6000C,
-	/* 183  */ (void*)0xFFFFFFFF,
-	/* 184  */ (void*)0x02C6000C,
-	/* 185  */ (void*)0xFFFFFFFF,
-	/* 186  */ (void*)0x02C7010C,
-	/* 187  */ (void*)0xFFFFFFFF,
-	/* 188  */ (void*)0x02C8010C,
-	/* 189  */ (void*)0xFFFFFFFF,
-	/* 190  */ (void*)0x02C90001,
-	/* 191  */ (void*)0x1EFFFFFF,
-	/* 192  */ (void*)0x02D2010C,
-	/* 193  */ (void*)0xFFFFFFFF,
-	/* 194  */ (void*)0x02D3010A,
-	/* 195  */ (void*)0x04FFFFFF,
-	/* 196  */ (void*)0x0299000C,
-	/* 197  */ (void*)0xFFFFFFFF,
-	/* 198  */ (void*)0x0296010C,
-	/* 199  */ (void*)0xFFFFFFFF,
-	/* 200  */ (void*)0x0297010C,
-	/* 201  */ (void*)0xFFFFFFFF,
-	/* 202  */ (void*)0x0298010B,
-	/* 203  */ (void*)0x28FFFFFF,
-	/* 204  */ (void*)0x02E2010C,
-	/* 205  */ (void*)0xFFFFFFFF,
-	/* 206  */ (void*)0x02E1010C,
-	/* 207  */ (void*)0xFFFFFFFF,
-	/* 208  */ (void*)0x02B9000B,
-	/* 209  */ (void*)0x41FFFFFF,
-	/* 210  */ (void*)0x02BA0D0C,
-	/* 211  */ (void*)0xFFFFFFFF,
-	/* 212  */ (void*)0x02F90005,
-	/* 213  */ (void*)0x394655FF,
-	/* 214  */ (void*)0x02ED0106,
-	/* 215  */ (void*)0x01FFFFFF,
-	/* 216  */ (void*)0x02D1010C,
-	/* 217  */ (void*)0xFFFFFFFF,
-	/* 218  */ (void*)0x02DD000C,
-	/* 219  */ (void*)0xFFFFFFFF,
-	/* 220  */ (void*)0x02A5000C,
-	/* 221  */ (void*)0xFFFFFFFF,
-	/* 222  */ (void*)0x02A2000C,
-	/* 223  */ (void*)0xFFFFFFFF,
-	/* 224  */ (void*)0x02A3000C,
-	/* 225  */ (void*)0xFFFFFFFF,
-	/* 226  */ (void*)0x0308010C,
-	/* 227  */ (void*)0xFFFFFFFF,
-	/* 228  */ (void*)0x02EF000C,
-	/* 229  */ (void*)0xFFFFFFFF,
-	/* 230  */ (void*)0x02B60204,
-	/* 231  */ (void*)0x01FFFFFF,
-	/* 232  */ (void*)0x0293010C,
-	/* 233  */ (void*)0xFFFFFFFF,
-	/* 234  */ (void*)0x0291010C,
-	/* 235  */ (void*)0xFFFFFFFF,
-	/* 236  */ (void*)0x02BC000C,
-	/* 237  */ (void*)0xFFFFFFFF,
-	/* 238  */ (void*)0x02BF000C,
-	/* 239  */ (void*)0xFFFFFFFF,
-	/* 240  */ (void*)0x029E020C,
-	/* 241  */ (void*)0xFFFFFFFF,
-	/* 242  */ (void*)0x029D020C,
-	/* 243  */ (void*)0xFFFFFFFF,
-	/* 244  */ (void*)0x02920105,
-	/* 245  */ (void*)0x10FFFFFF,
-	/* 246  */ (void*)0x02B8060C,
-	/* 247  */ (void*)0xFFFFFFFF,
-	/* 248  */ (void*)0x02F4070C,
-	/* 249  */ (void*)0xFFFFFFFF,
-	/* 250  */ (void*)0x02F5070C,
-	/* 251  */ (void*)0xFFFFFFFF,
-	/* 252  */ (void*)0x0304020C,
-	/* 253  */ (void*)0xFFFFFFFF,
-	/* 254  */ (void*)0x03010001,
-	/* 255  */ (void*)0x0FFFFFFF,
-	/* 256  */ (void*)0x02F20001,
-	/* 257  */ (void*)0x0F2DFFFF,
-	/* 258  */ (void*)0x02D7000C,
-	/* 259  */ (void*)0xFFFFFFFF,
-	/* 260  */ (void*)0x02BB030C,
-	/* 261  */ (void*)0xFFFFFFFF,
-	/* 262  */ (void*)0x02C1010C,
-	/* 263  */ (void*)0xFFFFFFFF,
-	/* 264  */ (void*)0x02C00100,
-	/* 265  */ (void*)0x05FFFFFF,
-	/* 266  */ (void*)0x03090001,
-	/* 267  */ (void*)0x01FFFFFF,
-	/* 268  */ (void*)0x029F050C,
-	/* 269  */ (void*)0xFFFFFFFF,
-	/* 270  */ (void*)0x02D8000C,
-	/* 271  */ (void*)0xFFFFFFFF,
-	/* 272  */ (void*)0x02D9020C,
-	/* 273  */ (void*)0xFFFFFFFF,
-	/* 274  */ (void*)0x4003000C,
-	/* 275  */ (void*)0xFFFFFFFF,
-	/* 276  */ (void*)0x02A0000C,
-	/* 277  */ (void*)0xFFFFFFFF,
-	/* 278  */ (void*)0x02A1000C,
-	/* 279  */ (void*)0xFFFFFFFF,
-	/* 280  */ (void*)0x02D60100,
-	/* 281  */ (void*)0x143AFFFF,
-	/* 282  */ (void*)(((char*)JPACalcKeyAnmValue__FfUsPCf)+0x88),
-	/* 283  */ (void*)0xFFFFFFFF,
-	/* 284  */ (void*)(((char*)cLib_chasePosXZ__FP4cXyzRC4cXyzf)+0x7C),
-	/* 285  */ (void*)0xFFFFFFFF,
-	/* 286  */ (void*)(((char*)func_802A0A8C)+0x80),
-	/* 287  */ (void*)0xFFFFFFFF,
-	/* 288  */ (void*)(((char*)getAramHeap__9JASKernelFv)+0x4),
-	/* 289  */ (void*)0xFFFFFFFF,
-	/* 290  */ (void*)(((char*)startCollisionSE__10Z2CreatureFUlUl)+0x24),
-	/* 291  */ (void*)0xFFFFFFFF,
-	/* 292  */ (void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0xC80),
-	/* 293  */ (void*)0xFFFFFFFF,
+	(void*)0x02FF0001,
+	(void*)0x0A28FFFF,
+	(void*)0x030A0002,
+	(void*)0x010EFFFF,
+	(void*)0x030B0002,
+	(void*)0x010EFFFF,
+	(void*)0x02B4000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02CC010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02CA010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02CB010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x03050001,
+	(void*)0x0FFFFFFF,
+	(void*)0x02E00007,
+	(void*)0x02FFFFFF,
+	(void*)0x02DF0007,
+	(void*)0x0620FFFF,
+	(void*)0x02DE000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02E90100,
+	(void*)0x07FFFFFF,
+	(void*)0x02D4010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D5020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x03060100,
+	(void*)0x01FFFFFF,
+	(void*)0x029A0107,
+	(void*)0x09FFFFFF,
+	(void*)0x02FE0105,
+	(void*)0x09FFFFFF,
+	(void*)0x029C0105,
+	(void*)0x03FFFFFF,
+	(void*)0x029B010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02FD0106,
+	(void*)0x19FFFFFF,
+	(void*)0x02FC010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02FB0008,
+	(void*)0x03FFFFFF,
+	(void*)0x02A7000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x03030003,
+	(void*)0x0A1E32FF,
+	(void*)0x03000003,
+	(void*)0x06FFFFFF,
+	(void*)0x02C20105,
+	(void*)0x06FFFFFF,
+	(void*)0x02EE010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02FA010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x027E000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x030C0102,
+	(void*)0x0112FFFF,
+	(void*)0x02EA010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02EB010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02EC020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02E70002,
+	(void*)0x010EFFFF,
+	(void*)0x02E30105,
+	(void*)0x14FFFFFF,
+	(void*)0x02E40105,
+	(void*)0x1AFFFFFF,
+	(void*)0x02E6000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02E80801,
+	(void*)0x1932FFFF,
+	(void*)0x02E50902,
+	(void*)0x010E1E2D,
+	(void*)0x02B5010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02AC020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02AA020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02AE020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B0020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02AD020A,
+	(void*)0x20FFFFFF,
+	(void*)0x02AB020B,
+	(void*)0x14FFFFFF,
+	(void*)0x02AF020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B1020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F0000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x03020001,
+	(void*)0x0A28FFFF,
+	(void*)0x02CF000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D0000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02CD000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02CE000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F7010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F80001,
+	(void*)0x0DFFFFFF,
+	(void*)0x02F60002,
+	(void*)0x01FFFFFF,
+	(void*)0x02F30004,
+	(void*)0x03FFFFFF,
+	(void*)0x02F1010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0307000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A9010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A8010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B2010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B3010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x028D010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x028E010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x028F000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0290010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x027F000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0281000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0280000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02DA000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0285010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0284010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0287010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0286010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0283010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0282010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02DB000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02DC0009,
+	(void*)0x07FFFFFF,
+	(void*)0x028C010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0288010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0289010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x028B010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x028A010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0295020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0294020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C3010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C5010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C4010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A4000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A6000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C6000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C7010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C8010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C90001,
+	(void*)0x1EFFFFFF,
+	(void*)0x02D2010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D3010A,
+	(void*)0x04FFFFFF,
+	(void*)0x0299000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0296010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0297010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0298010B,
+	(void*)0x28FFFFFF,
+	(void*)0x02E2010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02E1010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B9000B,
+	(void*)0x41FFFFFF,
+	(void*)0x02BA0D0C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F90005,
+	(void*)0x394655FF,
+	(void*)0x02ED0106,
+	(void*)0x01FFFFFF,
+	(void*)0x02D1010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02DD000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A5000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A2000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A3000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0308010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02EF000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02B60204,
+	(void*)0x01FFFFFF,
+	(void*)0x0293010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0291010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02BC000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02BF000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x029E020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x029D020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02920105,
+	(void*)0x10FFFFFF,
+	(void*)0x02B8060C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F4070C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02F5070C,
+	(void*)0xFFFFFFFF,
+	(void*)0x0304020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x03010001,
+	(void*)0x0FFFFFFF,
+	(void*)0x02F20001,
+	(void*)0x0F2DFFFF,
+	(void*)0x02D7000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02BB030C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C1010C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02C00100,
+	(void*)0x05FFFFFF,
+	(void*)0x03090001,
+	(void*)0x01FFFFFF,
+	(void*)0x029F050C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D8000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D9020C,
+	(void*)0xFFFFFFFF,
+	(void*)0x4003000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A0000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02A1000C,
+	(void*)0xFFFFFFFF,
+	(void*)0x02D60100,
+	(void*)0x143AFFFF,
+	(void*)(((char*)JPACalcKeyAnmValue__FfUsPCf)+0x88),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)cLib_chasePosXZ__FP4cXyzRC4cXyzf)+0x7C),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)func_802A0A8C)+0x80),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)getAramHeap__9JASKernelFv)+0x4),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)startCollisionSE__10Z2CreatureFUlUl)+0x24),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)changeBgmStatus__8Z2SeqMgrFl)+0xC80),
+	(void*)0xFFFFFFFF,
 };
 
 /* 803914A8-80391734 028C+00 s=2 e=0 z=0  None .rodata    m_faceTexDataTable__9daAlink_c                               */
@@ -10829,2466 +10829,2466 @@ SECTION_DATA static u8 l_peepEventName[10 + 2 /* padding */] = {
 
 /* 803AF9A8-803AF9B4 000C+00 s=1 e=0 z=0  None .data      @4422                                                        */
 SECTION_DATA static void* lit_4422[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procPreActionUnequip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procPreActionUnequip__9daAlink_cFv,
 };
 
 /* 803AF9B4-803AF9C0 000C+00 s=1 e=0 z=0  None .data      @4423                                                        */
 SECTION_DATA static void* lit_4423[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procServiceWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procServiceWait__9daAlink_cFv,
 };
 
 /* 803AF9C0-803AF9CC 000C+00 s=1 e=0 z=0  None .data      @4424                                                        */
 SECTION_DATA static void* lit_4424[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procTiredWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procTiredWait__9daAlink_cFv,
 };
 
 /* 803AF9CC-803AF9D8 000C+00 s=1 e=0 z=0  None .data      @4425                                                        */
 SECTION_DATA static void* lit_4425[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWait__9daAlink_cFv,
 };
 
 /* 803AF9D8-803AF9E4 000C+00 s=1 e=0 z=0  None .data      @4426                                                        */
 SECTION_DATA static void* lit_4426[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMove__9daAlink_cFv,
 };
 
 /* 803AF9E4-803AF9F0 000C+00 s=1 e=0 z=0  None .data      @4427                                                        */
 SECTION_DATA static void* lit_4427[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procAtnMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procAtnMove__9daAlink_cFv,
 };
 
 /* 803AF9F0-803AF9FC 000C+00 s=1 e=0 z=0  None .data      @4428                                                        */
 SECTION_DATA static void* lit_4428[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procAtnActorWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procAtnActorWait__9daAlink_cFv,
 };
 
 /* 803AF9FC-803AFA08 000C+00 s=1 e=0 z=0  None .data      @4429                                                        */
 SECTION_DATA static void* lit_4429[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procAtnActorMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procAtnActorMove__9daAlink_cFv,
 };
 
 /* 803AFA08-803AFA14 000C+00 s=1 e=0 z=0  None .data      @4430                                                        */
 SECTION_DATA static void* lit_4430[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWaitTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWaitTurn__9daAlink_cFv,
 };
 
 /* 803AFA14-803AFA20 000C+00 s=1 e=0 z=0  None .data      @4431                                                        */
 SECTION_DATA static void* lit_4431[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMoveTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMoveTurn__9daAlink_cFv,
 };
 
 /* 803AFA20-803AFA2C 000C+00 s=1 e=0 z=0  None .data      @4432                                                        */
 SECTION_DATA static void* lit_4432[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSideStep__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSideStep__9daAlink_cFv,
 };
 
 /* 803AFA2C-803AFA38 000C+00 s=1 e=0 z=0  None .data      @4433                                                        */
 SECTION_DATA static void* lit_4433[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSideStepLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSideStepLand__9daAlink_cFv,
 };
 
 /* 803AFA38-803AFA44 000C+00 s=1 e=0 z=0  None .data      @4434                                                        */
 SECTION_DATA static void* lit_4434[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSlide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSlide__9daAlink_cFv,
 };
 
 /* 803AFA44-803AFA50 000C+00 s=1 e=0 z=0  None .data      @4435                                                        */
 SECTION_DATA static void* lit_4435[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSlideLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSlideLand__9daAlink_cFv,
 };
 
 /* 803AFA50-803AFA5C 000C+00 s=1 e=0 z=0  None .data      @4436                                                        */
 SECTION_DATA static void* lit_4436[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFrontRoll__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFrontRoll__9daAlink_cFv,
 };
 
 /* 803AFA5C-803AFA68 000C+00 s=1 e=0 z=0  None .data      @4437                                                        */
 SECTION_DATA static void* lit_4437[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFrontRollCrash__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFrontRollCrash__9daAlink_cFv,
 };
 
 /* 803AFA68-803AFA74 000C+00 s=1 e=0 z=0  None .data      @4438                                                        */
 SECTION_DATA static void* lit_4438[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFrontRollSuccess__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFrontRollSuccess__9daAlink_cFv,
 };
 
 /* 803AFA74-803AFA80 000C+00 s=1 e=0 z=0  None .data      @4439                                                        */
 SECTION_DATA static void* lit_4439[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSideRoll__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSideRoll__9daAlink_cFv,
 };
 
 /* 803AFA80-803AFA8C 000C+00 s=1 e=0 z=0  None .data      @4440                                                        */
 SECTION_DATA static void* lit_4440[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBackJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBackJump__9daAlink_cFv,
 };
 
 /* 803AFA8C-803AFA98 000C+00 s=1 e=0 z=0  None .data      @4441                                                        */
 SECTION_DATA static void* lit_4441[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBackJumpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBackJumpLand__9daAlink_cFv,
 };
 
 /* 803AFA98-803AFAA4 000C+00 s=1 e=0 z=0  None .data      @4442                                                        */
 SECTION_DATA static void* lit_4442[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSlip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSlip__9daAlink_cFv,
 };
 
 /* 803AFAA4-803AFAB0 000C+00 s=1 e=0 z=0  None .data      @4443                                                        */
 SECTION_DATA static void* lit_4443[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procAutoJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procAutoJump__9daAlink_cFv,
 };
 
 /* 803AFAB0-803AFABC 000C+00 s=1 e=0 z=0  None .data      @4444                                                        */
 SECTION_DATA static void* lit_4444[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDiveJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDiveJump__9daAlink_cFv,
 };
 
 /* 803AFABC-803AFAC8 000C+00 s=1 e=0 z=0  None .data      @4445                                                        */
 SECTION_DATA static void* lit_4445[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRollJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRollJump__9daAlink_cFv,
 };
 
 /* 803AFAC8-803AFAD4 000C+00 s=1 e=0 z=0  None .data      @4446                                                        */
 SECTION_DATA static void* lit_4446[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFall__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFall__9daAlink_cFv,
 };
 
 /* 803AFAD4-803AFAE0 000C+00 s=1 e=0 z=0  None .data      @4447                                                        */
 SECTION_DATA static void* lit_4447[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLand__9daAlink_cFv,
 };
 
 /* 803AFAE0-803AFAEC 000C+00 s=1 e=0 z=0  None .data      @4448                                                        */
 SECTION_DATA static void* lit_4448[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSmallJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSmallJump__9daAlink_cFv,
 };
 
 /* 803AFAEC-803AFAF8 000C+00 s=1 e=0 z=0  None .data      @4449                                                        */
 SECTION_DATA static void* lit_4449[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procStepMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procStepMove__9daAlink_cFv,
 };
 
 /* 803AFAF8-803AFB04 000C+00 s=1 e=0 z=0  None .data      @4450                                                        */
 SECTION_DATA static void* lit_4450[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrouch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrouch__9daAlink_cFv,
 };
 
 /* 803AFB04-803AFB10 000C+00 s=1 e=0 z=0  None .data      @4451                                                        */
 SECTION_DATA static void* lit_4451[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGuardSlip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGuardSlip__9daAlink_cFv,
 };
 
 /* 803AFB10-803AFB1C 000C+00 s=1 e=0 z=0  None .data      @4452                                                        */
 SECTION_DATA static void* lit_4452[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGuardAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGuardAttack__9daAlink_cFv,
 };
 
 /* 803AFB1C-803AFB28 000C+00 s=1 e=0 z=0  None .data      @4453                                                        */
 SECTION_DATA static void* lit_4453[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGuardBreak__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGuardBreak__9daAlink_cFv,
 };
 
 /* 803AFB28-803AFB34 000C+00 s=1 e=0 z=0  None .data      @4454                                                        */
 SECTION_DATA static void* lit_4454[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procTurnMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procTurnMove__9daAlink_cFv,
 };
 
 /* 803AFB34-803AFB40 000C+00 s=1 e=0 z=0  None .data      @4455                                                        */
 SECTION_DATA static void* lit_4455[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutNormal__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutNormal__9daAlink_cFv,
 };
 
 /* 803AFB40-803AFB4C 000C+00 s=1 e=0 z=0  None .data      @4456                                                        */
 SECTION_DATA static void* lit_4456[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutFinish__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutFinish__9daAlink_cFv,
 };
 
 /* 803AFB4C-803AFB58 000C+00 s=1 e=0 z=0  None .data      @4457                                                        */
 SECTION_DATA static void* lit_4457[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutFinishJumpUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutFinishJumpUp__9daAlink_cFv,
 };
 
 /* 803AFB58-803AFB64 000C+00 s=1 e=0 z=0  None .data      @4458                                                        */
 SECTION_DATA static void* lit_4458[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutFinishJumpUpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutFinishJumpUpLand__9daAlink_cFv,
 };
 
 /* 803AFB64-803AFB70 000C+00 s=1 e=0 z=0  None .data      @4459                                                        */
 SECTION_DATA static void* lit_4459[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutReverse__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutReverse__9daAlink_cFv,
 };
 
 /* 803AFB70-803AFB7C 000C+00 s=1 e=0 z=0  None .data      @4460                                                        */
 SECTION_DATA static void* lit_4460[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutJump__9daAlink_cFv,
 };
 
 /* 803AFB7C-803AFB88 000C+00 s=1 e=0 z=0  None .data      @4461                                                        */
 SECTION_DATA static void* lit_4461[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutJumpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutJumpLand__9daAlink_cFv,
 };
 
 /* 803AFB88-803AFB94 000C+00 s=1 e=0 z=0  None .data      @4462                                                        */
 SECTION_DATA static void* lit_4462[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutTurn__9daAlink_cFv,
 };
 
 /* 803AFB94-803AFBA0 000C+00 s=1 e=0 z=0  None .data      @4463                                                        */
 SECTION_DATA static void* lit_4463[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutTurnCharge__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutTurnCharge__9daAlink_cFv,
 };
 
 /* 803AFBA0-803AFBAC 000C+00 s=1 e=0 z=0  None .data      @4464                                                        */
 SECTION_DATA static void* lit_4464[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutTurnMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutTurnMove__9daAlink_cFv,
 };
 
 /* 803AFBAC-803AFBB8 000C+00 s=1 e=0 z=0  None .data      @4465                                                        */
 SECTION_DATA static void* lit_4465[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutDown__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutDown__9daAlink_cFv,
 };
 
 /* 803AFBB8-803AFBC4 000C+00 s=1 e=0 z=0  None .data      @4466                                                        */
 SECTION_DATA static void* lit_4466[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutDownLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutDownLand__9daAlink_cFv,
 };
 
 /* 803AFBC4-803AFBD0 000C+00 s=1 e=0 z=0  None .data      @4467                                                        */
 SECTION_DATA static void* lit_4467[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutHead__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutHead__9daAlink_cFv,
 };
 
 /* 803AFBD0-803AFBDC 000C+00 s=1 e=0 z=0  None .data      @4468                                                        */
 SECTION_DATA static void* lit_4468[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutHeadLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutHeadLand__9daAlink_cFv,
 };
 
 /* 803AFBDC-803AFBE8 000C+00 s=1 e=0 z=0  None .data      @4469                                                        */
 SECTION_DATA static void* lit_4469[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutLargeJumpCharge__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutLargeJumpCharge__9daAlink_cFv,
 };
 
 /* 803AFBE8-803AFBF4 000C+00 s=1 e=0 z=0  None .data      @4470                                                        */
 SECTION_DATA static void* lit_4470[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutLargeJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutLargeJump__9daAlink_cFv,
 };
 
 /* 803AFBF4-803AFC00 000C+00 s=1 e=0 z=0  None .data      @4471                                                        */
 SECTION_DATA static void* lit_4471[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutLargeJumpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutLargeJumpLand__9daAlink_cFv,
 };
 
 /* 803AFC00-803AFC0C 000C+00 s=1 e=0 z=0  None .data      @4472                                                        */
 SECTION_DATA static void* lit_4472[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDamage__9daAlink_cFv,
 };
 
 /* 803AFC0C-803AFC18 000C+00 s=1 e=0 z=0  None .data      @4473                                                        */
 SECTION_DATA static void* lit_4473[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLargeDamageUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLargeDamageUp__9daAlink_cFv,
 };
 
 /* 803AFC18-803AFC24 000C+00 s=1 e=0 z=0  None .data      @4474                                                        */
 SECTION_DATA static void* lit_4474[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLandDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLandDamage__9daAlink_cFv,
 };
 
 /* 803AFC24-803AFC30 000C+00 s=1 e=0 z=0  None .data      @4475                                                        */
 SECTION_DATA static void* lit_4475[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrawlStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrawlStart__9daAlink_cFv,
 };
 
 /* 803AFC30-803AFC3C 000C+00 s=1 e=0 z=0  None .data      @4476                                                        */
 SECTION_DATA static void* lit_4476[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrawlMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrawlMove__9daAlink_cFv,
 };
 
 /* 803AFC3C-803AFC48 000C+00 s=1 e=0 z=0  None .data      @4477                                                        */
 SECTION_DATA static void* lit_4477[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrawlAutoMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrawlAutoMove__9daAlink_cFv,
 };
 
 /* 803AFC48-803AFC54 000C+00 s=1 e=0 z=0  None .data      @4478                                                        */
 SECTION_DATA static void* lit_4478[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrawlEnd__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrawlEnd__9daAlink_cFv,
 };
 
 /* 803AFC54-803AFC60 000C+00 s=1 e=0 z=0  None .data      @4479                                                        */
 SECTION_DATA static void* lit_4479[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procPullMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procPullMove__9daAlink_cFv,
 };
 
 /* 803AFC60-803AFC6C 000C+00 s=1 e=0 z=0  None .data      @4480                                                        */
 SECTION_DATA static void* lit_4480[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseRide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseRide__9daAlink_cFv,
 };
 
 /* 803AFC6C-803AFC78 000C+00 s=1 e=0 z=0  None .data      @4481                                                        */
 SECTION_DATA static void* lit_4481[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseGetOff__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseGetOff__9daAlink_cFv,
 };
 
 /* 803AFC78-803AFC84 000C+00 s=1 e=0 z=0  None .data      @4482                                                        */
 SECTION_DATA static void* lit_4482[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseWait__9daAlink_cFv,
 };
 
 /* 803AFC84-803AFC90 000C+00 s=1 e=0 z=0  None .data      @4483                                                        */
 SECTION_DATA static void* lit_4483[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseTurn__9daAlink_cFv,
 };
 
 /* 803AFC90-803AFC9C 000C+00 s=1 e=0 z=0  None .data      @4484                                                        */
 SECTION_DATA static void* lit_4484[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseJump__9daAlink_cFv,
 };
 
 /* 803AFC9C-803AFCA8 000C+00 s=1 e=0 z=0  None .data      @4485                                                        */
 SECTION_DATA static void* lit_4485[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseLand__9daAlink_cFv,
 };
 
 /* 803AFCA8-803AFCB4 000C+00 s=1 e=0 z=0  None .data      @4486                                                        */
 SECTION_DATA static void* lit_4486[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseSubjectivity__9daAlink_cFv,
 };
 
 /* 803AFCB4-803AFCC0 000C+00 s=1 e=0 z=0  None .data      @4487                                                        */
 SECTION_DATA static void* lit_4487[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseCut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseCut__9daAlink_cFv,
 };
 
 /* 803AFCC0-803AFCCC 000C+00 s=1 e=0 z=0  None .data      @4488                                                        */
 SECTION_DATA static void* lit_4488[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseCutChargeReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseCutChargeReady__9daAlink_cFv,
 };
 
 /* 803AFCCC-803AFCD8 000C+00 s=1 e=0 z=0  None .data      @4489                                                        */
 SECTION_DATA static void* lit_4489[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseCutTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseCutTurn__9daAlink_cFv,
 };
 
 /* 803AFCD8-803AFCE4 000C+00 s=1 e=0 z=0  None .data      @4490                                                        */
 SECTION_DATA static void* lit_4490[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseDamage__9daAlink_cFv,
 };
 
 /* 803AFCE4-803AFCF0 000C+00 s=1 e=0 z=0  None .data      @4491                                                        */
 SECTION_DATA static void* lit_4491[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseBowSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseBowSubject__9daAlink_cFv,
 };
 
 /* 803AFCF0-803AFCFC 000C+00 s=1 e=0 z=0  None .data      @4492                                                        */
 SECTION_DATA static void* lit_4492[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseBowMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseBowMove__9daAlink_cFv,
 };
 
 /* 803AFCFC-803AFD08 000C+00 s=1 e=0 z=0  None .data      @4493                                                        */
 SECTION_DATA static void* lit_4493[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseGrabMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseGrabMove__9daAlink_cFv,
 };
 
 /* 803AFD08-803AFD14 000C+00 s=1 e=0 z=0  None .data      @4494                                                        */
 SECTION_DATA static void* lit_4494[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseBoomerangSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseBoomerangSubject__9daAlink_cFv,
 };
 
 /* 803AFD14-803AFD20 000C+00 s=1 e=0 z=0  None .data      @4495                                                        */
 SECTION_DATA static void* lit_4495[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseBoomerangMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseBoomerangMove__9daAlink_cFv,
 };
 
 /* 803AFD20-803AFD2C 000C+00 s=1 e=0 z=0  None .data      @4496                                                        */
 SECTION_DATA static void* lit_4496[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseHookshotSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseHookshotSubject__9daAlink_cFv,
 };
 
 /* 803AFD2C-803AFD38 000C+00 s=1 e=0 z=0  None .data      @4497                                                        */
 SECTION_DATA static void* lit_4497[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseHookshotMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseHookshotMove__9daAlink_cFv,
 };
 
 /* 803AFD38-803AFD44 000C+00 s=1 e=0 z=0  None .data      @4498                                                        */
 SECTION_DATA static void* lit_4498[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseBottleDrink__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseBottleDrink__9daAlink_cFv,
 };
 
 /* 803AFD44-803AFD50 000C+00 s=1 e=0 z=0  None .data      @4499                                                        */
 SECTION_DATA static void* lit_4499[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseComeback__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseComeback__9daAlink_cFv,
 };
 
 /* 803AFD50-803AFD5C 000C+00 s=1 e=0 z=0  None .data      @4500                                                        */
 SECTION_DATA static void* lit_4500[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseKandelaarPour__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseKandelaarPour__9daAlink_cFv,
 };
 
 /* 803AFD5C-803AFD68 000C+00 s=1 e=0 z=0  None .data      @4501                                                        */
 SECTION_DATA static void* lit_4501[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseRun__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseRun__9daAlink_cFv,
 };
 
 /* 803AFD68-803AFD74 000C+00 s=1 e=0 z=0  None .data      @4502                                                        */
 SECTION_DATA static void* lit_4502[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseHang__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseHang__9daAlink_cFv,
 };
 
 /* 803AFD74-803AFD80 000C+00 s=1 e=0 z=0  None .data      @4503                                                        */
 SECTION_DATA static void* lit_4503[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseGetKey__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseGetKey__9daAlink_cFv,
 };
 
 /* 803AFD80-803AFD8C 000C+00 s=1 e=0 z=0  None .data      @4504                                                        */
 SECTION_DATA static void* lit_4504[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseLookDown__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseLookDown__9daAlink_cFv,
 };
 
 /* 803AFD8C-803AFD98 000C+00 s=1 e=0 z=0  None .data      @4505                                                        */
 SECTION_DATA static void* lit_4505[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoarRun__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoarRun__9daAlink_cFv,
 };
 
 /* 803AFD98-803AFDA4 000C+00 s=1 e=0 z=0  None .data      @4506                                                        */
 SECTION_DATA static void* lit_4506[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordUnequipSp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordUnequipSp__9daAlink_cFv,
 };
 
 /* 803AFDA4-803AFDB0 000C+00 s=1 e=0 z=0  None .data      @4507                                                        */
 SECTION_DATA static void* lit_4507[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangStart__9daAlink_cFv,
 };
 
 /* 803AFDB0-803AFDBC 000C+00 s=1 e=0 z=0  None .data      @4508                                                        */
 SECTION_DATA static void* lit_4508[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangFallStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangFallStart__9daAlink_cFv,
 };
 
 /* 803AFDBC-803AFDC8 000C+00 s=1 e=0 z=0  None .data      @4509                                                        */
 SECTION_DATA static void* lit_4509[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangUp__9daAlink_cFv,
 };
 
 /* 803AFDC8-803AFDD4 000C+00 s=1 e=0 z=0  None .data      @4510                                                        */
 SECTION_DATA static void* lit_4510[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangWait__9daAlink_cFv,
 };
 
 /* 803AFDD4-803AFDE0 000C+00 s=1 e=0 z=0  None .data      @4511                                                        */
 SECTION_DATA static void* lit_4511[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangMove__9daAlink_cFv,
 };
 
 /* 803AFDE0-803AFDEC 000C+00 s=1 e=0 z=0  None .data      @4512                                                        */
 SECTION_DATA static void* lit_4512[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangClimb__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangClimb__9daAlink_cFv,
 };
 
 /* 803AFDEC-803AFDF8 000C+00 s=1 e=0 z=0  None .data      @4513                                                        */
 SECTION_DATA static void* lit_4513[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangWallCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangWallCatch__9daAlink_cFv,
 };
 
 /* 803AFDF8-803AFE04 000C+00 s=1 e=0 z=0  None .data      @4514                                                        */
 SECTION_DATA static void* lit_4514[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangReady__9daAlink_cFv,
 };
 
 /* 803AFE04-803AFE10 000C+00 s=1 e=0 z=0  None .data      @4515                                                        */
 SECTION_DATA static void* lit_4515[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHangLeverDown__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHangLeverDown__9daAlink_cFv,
 };
 
 /* 803AFE10-803AFE1C 000C+00 s=1 e=0 z=0  None .data      @4516                                                        */
 SECTION_DATA static void* lit_4516[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBowSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBowSubject__9daAlink_cFv,
 };
 
 /* 803AFE1C-803AFE28 000C+00 s=1 e=0 z=0  None .data      @4517                                                        */
 SECTION_DATA static void* lit_4517[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBowMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBowMove__9daAlink_cFv,
 };
 
 /* 803AFE28-803AFE34 000C+00 s=1 e=0 z=0  None .data      @4518                                                        */
 SECTION_DATA static void* lit_4518[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoomerangSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoomerangSubject__9daAlink_cFv,
 };
 
 /* 803AFE34-803AFE40 000C+00 s=1 e=0 z=0  None .data      @4519                                                        */
 SECTION_DATA static void* lit_4519[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoomerangMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoomerangMove__9daAlink_cFv,
 };
 
 /* 803AFE40-803AFE4C 000C+00 s=1 e=0 z=0  None .data      @4520                                                        */
 SECTION_DATA static void* lit_4520[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoomerangCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoomerangCatch__9daAlink_cFv,
 };
 
 /* 803AFE4C-803AFE58 000C+00 s=1 e=0 z=0  None .data      @4521                                                        */
 SECTION_DATA static void* lit_4521[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCopyRodSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCopyRodSubject__9daAlink_cFv,
 };
 
 /* 803AFE58-803AFE64 000C+00 s=1 e=0 z=0  None .data      @4522                                                        */
 SECTION_DATA static void* lit_4522[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCopyRodMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCopyRodMove__9daAlink_cFv,
 };
 
 /* 803AFE64-803AFE70 000C+00 s=1 e=0 z=0  None .data      @4523                                                        */
 SECTION_DATA static void* lit_4523[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCopyRodSwing__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCopyRodSwing__9daAlink_cFv,
 };
 
 /* 803AFE70-803AFE7C 000C+00 s=1 e=0 z=0  None .data      @4524                                                        */
 SECTION_DATA static void* lit_4524[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCopyRodRevive__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCopyRodRevive__9daAlink_cFv,
 };
 
 /* 803AFE7C-803AFE88 000C+00 s=1 e=0 z=0  None .data      @4525                                                        */
 SECTION_DATA static void* lit_4525[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLadderUpStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLadderUpStart__9daAlink_cFv,
 };
 
 /* 803AFE88-803AFE94 000C+00 s=1 e=0 z=0  None .data      @4526                                                        */
 SECTION_DATA static void* lit_4526[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLadderUpEnd__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLadderUpEnd__9daAlink_cFv,
 };
 
 /* 803AFE94-803AFEA0 000C+00 s=1 e=0 z=0  None .data      @4527                                                        */
 SECTION_DATA static void* lit_4527[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLadderDownStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLadderDownStart__9daAlink_cFv,
 };
 
 /* 803AFEA0-803AFEAC 000C+00 s=1 e=0 z=0  None .data      @4528                                                        */
 SECTION_DATA static void* lit_4528[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLadderDownEnd__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLadderDownEnd__9daAlink_cFv,
 };
 
 /* 803AFEAC-803AFEB8 000C+00 s=1 e=0 z=0  None .data      @4529                                                        */
 SECTION_DATA static void* lit_4529[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLadderMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLadderMove__9daAlink_cFv,
 };
 
 /* 803AFEB8-803AFEC4 000C+00 s=1 e=0 z=0  None .data      @4530                                                        */
 SECTION_DATA static void* lit_4530[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabReady__9daAlink_cFv,
 };
 
 /* 803AFEC4-803AFED0 000C+00 s=1 e=0 z=0  None .data      @4531                                                        */
 SECTION_DATA static void* lit_4531[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabUp__9daAlink_cFv,
 };
 
 /* 803AFED0-803AFEDC 000C+00 s=1 e=0 z=0  None .data      @4532                                                        */
 SECTION_DATA static void* lit_4532[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabMiss__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabMiss__9daAlink_cFv,
 };
 
 /* 803AFEDC-803AFEE8 000C+00 s=1 e=0 z=0  None .data      @4533                                                        */
 SECTION_DATA static void* lit_4533[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabThrow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabThrow__9daAlink_cFv,
 };
 
 /* 803AFEE8-803AFEF4 000C+00 s=1 e=0 z=0  None .data      @4534                                                        */
 SECTION_DATA static void* lit_4534[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabPut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabPut__9daAlink_cFv,
 };
 
 /* 803AFEF4-803AFF00 000C+00 s=1 e=0 z=0  None .data      @4535                                                        */
 SECTION_DATA static void* lit_4535[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabWait__9daAlink_cFv,
 };
 
 /* 803AFF00-803AFF0C 000C+00 s=1 e=0 z=0  None .data      @4536                                                        */
 SECTION_DATA static void* lit_4536[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabRebound__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabRebound__9daAlink_cFv,
 };
 
 /* 803AFF0C-803AFF18 000C+00 s=1 e=0 z=0  None .data      @4537                                                        */
 SECTION_DATA static void* lit_4537[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrabStand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrabStand__9daAlink_cFv,
 };
 
 /* 803AFF18-803AFF24 000C+00 s=1 e=0 z=0  None .data      @4538                                                        */
 SECTION_DATA static void* lit_4538[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procInsectCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procInsectCatch__9daAlink_cFv,
 };
 
 /* 803AFF24-803AFF30 000C+00 s=1 e=0 z=0  None .data      @4539                                                        */
 SECTION_DATA static void* lit_4539[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procPickUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procPickUp__9daAlink_cFv,
 };
 
 /* 803AFF30-803AFF3C 000C+00 s=1 e=0 z=0  None .data      @4540                                                        */
 SECTION_DATA static void* lit_4540[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procPickPut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procPickPut__9daAlink_cFv,
 };
 
 /* 803AFF3C-803AFF48 000C+00 s=1 e=0 z=0  None .data      @4541                                                        */
 SECTION_DATA static void* lit_4541[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procStEscape__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procStEscape__9daAlink_cFv,
 };
 
 /* 803AFF48-803AFF54 000C+00 s=1 e=0 z=0  None .data      @4542                                                        */
 SECTION_DATA static void* lit_4542[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDkCaught__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDkCaught__9daAlink_cFv,
 };
 
 /* 803AFF54-803AFF60 000C+00 s=1 e=0 z=0  None .data      @4543                                                        */
 SECTION_DATA static void* lit_4543[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimUp__9daAlink_cFv,
 };
 
 /* 803AFF60-803AFF6C 000C+00 s=1 e=0 z=0  None .data      @4544                                                        */
 SECTION_DATA static void* lit_4544[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimWait__9daAlink_cFv,
 };
 
 /* 803AFF6C-803AFF78 000C+00 s=1 e=0 z=0  None .data      @4545                                                        */
 SECTION_DATA static void* lit_4545[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimMove__9daAlink_cFv,
 };
 
 /* 803AFF78-803AFF84 000C+00 s=1 e=0 z=0  None .data      @4546                                                        */
 SECTION_DATA static void* lit_4546[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimDive__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimDive__9daAlink_cFv,
 };
 
 /* 803AFF84-803AFF90 000C+00 s=1 e=0 z=0  None .data      @4547                                                        */
 SECTION_DATA static void* lit_4547[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimHookshotSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimHookshotSubject__9daAlink_cFv,
 };
 
 /* 803AFF90-803AFF9C 000C+00 s=1 e=0 z=0  None .data      @4548                                                        */
 SECTION_DATA static void* lit_4548[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimHookshotMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimHookshotMove__9daAlink_cFv,
 };
 
 /* 803AFF9C-803AFFA8 000C+00 s=1 e=0 z=0  None .data      @4549                                                        */
 SECTION_DATA static void* lit_4549[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwimDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwimDamage__9daAlink_cFv,
 };
 
 /* 803AFFA8-803AFFB4 000C+00 s=1 e=0 z=0  None .data      @4550                                                        */
 SECTION_DATA static void* lit_4550[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbUpStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbUpStart__9daAlink_cFv,
 };
 
 /* 803AFFB4-803AFFC0 000C+00 s=1 e=0 z=0  None .data      @4551                                                        */
 SECTION_DATA static void* lit_4551[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbDownStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbDownStart__9daAlink_cFv,
 };
 
 /* 803AFFC0-803AFFCC 000C+00 s=1 e=0 z=0  None .data      @4552                                                        */
 SECTION_DATA static void* lit_4552[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbMoveUpDown__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbMoveUpDown__9daAlink_cFv,
 };
 
 /* 803AFFCC-803AFFD8 000C+00 s=1 e=0 z=0  None .data      @4553                                                        */
 SECTION_DATA static void* lit_4553[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbMoveSide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbMoveSide__9daAlink_cFv,
 };
 
 /* 803AFFD8-803AFFE4 000C+00 s=1 e=0 z=0  None .data      @4554                                                        */
 SECTION_DATA static void* lit_4554[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbWait__9daAlink_cFv,
 };
 
 /* 803AFFE4-803AFFF0 000C+00 s=1 e=0 z=0  None .data      @4555                                                        */
 SECTION_DATA static void* lit_4555[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procClimbToRoof__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procClimbToRoof__9daAlink_cFv,
 };
 
 /* 803AFFF0-803AFFFC 000C+00 s=1 e=0 z=0  None .data      @4556                                                        */
 SECTION_DATA static void* lit_4556[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofHangStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofHangStart__9daAlink_cFv,
 };
 
 /* 803AFFFC-803B0008 000C+00 s=1 e=0 z=0  None .data      @4557                                                        */
 SECTION_DATA static void* lit_4557[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofHangWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofHangWait__9daAlink_cFv,
 };
 
 /* 803B0008-803B0014 000C+00 s=1 e=0 z=0  None .data      @4558                                                        */
 SECTION_DATA static void* lit_4558[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofHangFrontMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofHangFrontMove__9daAlink_cFv,
 };
 
 /* 803B0014-803B0020 000C+00 s=1 e=0 z=0  None .data      @4559                                                        */
 SECTION_DATA static void* lit_4559[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofHangSideMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofHangSideMove__9daAlink_cFv,
 };
 
 /* 803B0020-803B002C 000C+00 s=1 e=0 z=0  None .data      @4560                                                        */
 SECTION_DATA static void* lit_4560[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofHangTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofHangTurn__9daAlink_cFv,
 };
 
 /* 803B002C-803B0038 000C+00 s=1 e=0 z=0  None .data      @4561                                                        */
 SECTION_DATA static void* lit_4561[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procRoofSwitchHang__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procRoofSwitchHang__9daAlink_cFv,
 };
 
 /* 803B0038-803B0044 000C+00 s=1 e=0 z=0  None .data      @4562                                                        */
 SECTION_DATA static void* lit_4562[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeRide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeRide__9daAlink_cFv,
 };
 
 /* 803B0044-803B0050 000C+00 s=1 e=0 z=0  None .data      @4563                                                        */
 SECTION_DATA static void* lit_4563[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeJumpRide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeJumpRide__9daAlink_cFv,
 };
 
 /* 803B0050-803B005C 000C+00 s=1 e=0 z=0  None .data      @4564                                                        */
 SECTION_DATA static void* lit_4564[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeGetOff__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeGetOff__9daAlink_cFv,
 };
 
 /* 803B005C-803B0068 000C+00 s=1 e=0 z=0  None .data      @4565                                                        */
 SECTION_DATA static void* lit_4565[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeWait__9daAlink_cFv,
 };
 
 /* 803B0068-803B0074 000C+00 s=1 e=0 z=0  None .data      @4566                                                        */
 SECTION_DATA static void* lit_4566[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeRow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeRow__9daAlink_cFv,
 };
 
 /* 803B0074-803B0080 000C+00 s=1 e=0 z=0  None .data      @4567                                                        */
 SECTION_DATA static void* lit_4567[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoePaddleShift__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoePaddleShift__9daAlink_cFv,
 };
 
 /* 803B0080-803B008C 000C+00 s=1 e=0 z=0  None .data      @4568                                                        */
 SECTION_DATA static void* lit_4568[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoePaddlePut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoePaddlePut__9daAlink_cFv,
 };
 
 /* 803B008C-803B0098 000C+00 s=1 e=0 z=0  None .data      @4569                                                        */
 SECTION_DATA static void* lit_4569[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoePaddleGrab__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoePaddleGrab__9daAlink_cFv,
 };
 
 /* 803B0098-803B00A4 000C+00 s=1 e=0 z=0  None .data      @4570                                                        */
 SECTION_DATA static void* lit_4570[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeRodGrab__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeRodGrab__9daAlink_cFv,
 };
 
 /* 803B00A4-803B00B0 000C+00 s=1 e=0 z=0  None .data      @4571                                                        */
 SECTION_DATA static void* lit_4571[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeFishingWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeFishingWait__9daAlink_cFv,
 };
 
 /* 803B00B0-803B00BC 000C+00 s=1 e=0 z=0  None .data      @4572                                                        */
 SECTION_DATA static void* lit_4572[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeFishingReel__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeFishingReel__9daAlink_cFv,
 };
 
 /* 803B00BC-803B00C8 000C+00 s=1 e=0 z=0  None .data      @4573                                                        */
 SECTION_DATA static void* lit_4573[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeFishingGet__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeFishingGet__9daAlink_cFv,
 };
 
 /* 803B00C8-803B00D4 000C+00 s=1 e=0 z=0  None .data      @4574                                                        */
 SECTION_DATA static void* lit_4574[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeSubjectivity__9daAlink_cFv,
 };
 
 /* 803B00D4-803B00E0 000C+00 s=1 e=0 z=0  None .data      @4575                                                        */
 SECTION_DATA static void* lit_4575[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeBowSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeBowSubject__9daAlink_cFv,
 };
 
 /* 803B00E0-803B00EC 000C+00 s=1 e=0 z=0  None .data      @4576                                                        */
 SECTION_DATA static void* lit_4576[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeBowMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeBowMove__9daAlink_cFv,
 };
 
 /* 803B00EC-803B00F8 000C+00 s=1 e=0 z=0  None .data      @4577                                                        */
 SECTION_DATA static void* lit_4577[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeGrabMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeGrabMove__9daAlink_cFv,
 };
 
 /* 803B00F8-803B0104 000C+00 s=1 e=0 z=0  None .data      @4578                                                        */
 SECTION_DATA static void* lit_4578[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeBoomerangSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeBoomerangSubject__9daAlink_cFv,
 };
 
 /* 803B0104-803B0110 000C+00 s=1 e=0 z=0  None .data      @4579                                                        */
 SECTION_DATA static void* lit_4579[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeBoomerangMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeBoomerangMove__9daAlink_cFv,
 };
 
 /* 803B0110-803B011C 000C+00 s=1 e=0 z=0  None .data      @4580                                                        */
 SECTION_DATA static void* lit_4580[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeHookshotSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeHookshotSubject__9daAlink_cFv,
 };
 
 /* 803B011C-803B0128 000C+00 s=1 e=0 z=0  None .data      @4581                                                        */
 SECTION_DATA static void* lit_4581[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeHookshotMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeHookshotMove__9daAlink_cFv,
 };
 
 /* 803B0128-803B0134 000C+00 s=1 e=0 z=0  None .data      @4582                                                        */
 SECTION_DATA static void* lit_4582[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeBottleDrink__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeBottleDrink__9daAlink_cFv,
 };
 
 /* 803B0134-803B0140 000C+00 s=1 e=0 z=0  None .data      @4583                                                        */
 SECTION_DATA static void* lit_4583[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCanoeKandelaarPour__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCanoeKandelaarPour__9daAlink_cFv,
 };
 
 /* 803B0140-803B014C 000C+00 s=1 e=0 z=0  None .data      @4584                                                        */
 SECTION_DATA static void* lit_4584[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFishingCast__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFishingCast__9daAlink_cFv,
 };
 
 /* 803B014C-803B0158 000C+00 s=1 e=0 z=0  None .data      @4585                                                        */
 SECTION_DATA static void* lit_4585[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFishingFood__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFishingFood__9daAlink_cFv,
 };
 
 /* 803B0158-803B0164 000C+00 s=1 e=0 z=0  None .data      @4586                                                        */
 SECTION_DATA static void* lit_4586[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSpinnerReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSpinnerReady__9daAlink_cFv,
 };
 
 /* 803B0164-803B0170 000C+00 s=1 e=0 z=0  None .data      @4587                                                        */
 SECTION_DATA static void* lit_4587[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSpinnerWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSpinnerWait__9daAlink_cFv,
 };
 
 /* 803B0170-803B017C 000C+00 s=1 e=0 z=0  None .data      @4588                                                        */
 SECTION_DATA static void* lit_4588[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardRide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardRide__9daAlink_cFv,
 };
 
 /* 803B017C-803B0188 000C+00 s=1 e=0 z=0  None .data      @4589                                                        */
 SECTION_DATA static void* lit_4589[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardWait__9daAlink_cFv,
 };
 
 /* 803B0188-803B0194 000C+00 s=1 e=0 z=0  None .data      @4590                                                        */
 SECTION_DATA static void* lit_4590[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardRow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardRow__9daAlink_cFv,
 };
 
 /* 803B0194-803B01A0 000C+00 s=1 e=0 z=0  None .data      @4591                                                        */
 SECTION_DATA static void* lit_4591[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardTurn__9daAlink_cFv,
 };
 
 /* 803B01A0-803B01AC 000C+00 s=1 e=0 z=0  None .data      @4592                                                        */
 SECTION_DATA static void* lit_4592[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardJump__9daAlink_cFv,
 };
 
 /* 803B01AC-803B01B8 000C+00 s=1 e=0 z=0  None .data      @4593                                                        */
 SECTION_DATA static void* lit_4593[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardSubjectivity__9daAlink_cFv,
 };
 
 /* 803B01B8-803B01C4 000C+00 s=1 e=0 z=0  None .data      @4594                                                        */
 SECTION_DATA static void* lit_4594[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardCut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardCut__9daAlink_cFv,
 };
 
 /* 803B01C4-803B01D0 000C+00 s=1 e=0 z=0  None .data      @4595                                                        */
 SECTION_DATA static void* lit_4595[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBoardCutTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBoardCutTurn__9daAlink_cFv,
 };
 
 /* 803B01D0-803B01DC 000C+00 s=1 e=0 z=0  None .data      @4596                                                        */
 SECTION_DATA static void* lit_4596[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFmChainUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFmChainUp__9daAlink_cFv,
 };
 
 /* 803B01DC-803B01E8 000C+00 s=1 e=0 z=0  None .data      @4597                                                        */
 SECTION_DATA static void* lit_4597[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFmChainStrongPull__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFmChainStrongPull__9daAlink_cFv,
 };
 
 /* 803B01E8-803B01F4 000C+00 s=1 e=0 z=0  None .data      @4598                                                        */
 SECTION_DATA static void* lit_4598[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDoorOpen__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDoorOpen__9daAlink_cFv,
 };
 
 /* 803B01F4-803B0200 000C+00 s=1 e=0 z=0  None .data      @4599                                                        */
 SECTION_DATA static void* lit_4599[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMonkeyMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMonkeyMove__9daAlink_cFv,
 };
 
 /* 803B0200-803B020C 000C+00 s=1 e=0 z=0  None .data      @4600                                                        */
 SECTION_DATA static void* lit_4600[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoBoomerangCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoBoomerangCatch__9daAlink_cFv,
 };
 
 /* 803B020C-803B0218 000C+00 s=1 e=0 z=0  None .data      @4601                                                        */
 SECTION_DATA static void* lit_4601[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBottleDrink__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBottleDrink__9daAlink_cFv,
 };
 
 /* 803B0218-803B0224 000C+00 s=1 e=0 z=0  None .data      @4602                                                        */
 SECTION_DATA static void* lit_4602[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBottleOpen__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBottleOpen__9daAlink_cFv,
 };
 
 /* 803B0224-803B0230 000C+00 s=1 e=0 z=0  None .data      @4603                                                        */
 SECTION_DATA static void* lit_4603[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBottleSwing__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBottleSwing__9daAlink_cFv,
 };
 
 /* 803B0230-803B023C 000C+00 s=1 e=0 z=0  None .data      @4604                                                        */
 SECTION_DATA static void* lit_4604[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBottleGet__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBottleGet__9daAlink_cFv,
 };
 
 /* 803B023C-803B0248 000C+00 s=1 e=0 z=0  None .data      @4605                                                        */
 SECTION_DATA static void* lit_4605[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procKandelaarSwing__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procKandelaarSwing__9daAlink_cFv,
 };
 
 /* 803B0248-803B0254 000C+00 s=1 e=0 z=0  None .data      @4606                                                        */
 SECTION_DATA static void* lit_4606[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procKandelaarPour__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procKandelaarPour__9daAlink_cFv,
 };
 
 /* 803B0254-803B0260 000C+00 s=1 e=0 z=0  None .data      @4607                                                        */
 SECTION_DATA static void* lit_4607[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrassWhistleGet__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrassWhistleGet__9daAlink_cFv,
 };
 
 /* 803B0260-803B026C 000C+00 s=1 e=0 z=0  None .data      @4608                                                        */
 SECTION_DATA static void* lit_4608[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGrassWhistleWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGrassWhistleWait__9daAlink_cFv,
 };
 
 /* 803B026C-803B0278 000C+00 s=1 e=0 z=0  None .data      @4609                                                        */
 SECTION_DATA static void* lit_4609[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHawkCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHawkCatch__9daAlink_cFv,
 };
 
 /* 803B0278-803B0284 000C+00 s=1 e=0 z=0  None .data      @4610                                                        */
 SECTION_DATA static void* lit_4610[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHawkSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHawkSubject__9daAlink_cFv,
 };
 
 /* 803B0284-803B0290 000C+00 s=1 e=0 z=0  None .data      @4611                                                        */
 SECTION_DATA static void* lit_4611[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFloorDownRebound__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFloorDownRebound__9daAlink_cFv,
 };
 
 /* 803B0290-803B029C 000C+00 s=1 e=0 z=0  None .data      @4612                                                        */
 SECTION_DATA static void* lit_4612[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoronRideWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoronRideWait__9daAlink_cFv,
 };
 
 /* 803B029C-803B02A8 000C+00 s=1 e=0 z=0  None .data      @4613                                                        */
 SECTION_DATA static void* lit_4613[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoatMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoatMove__9daAlink_cFv,
 };
 
 /* 803B02A8-803B02B4 000C+00 s=1 e=0 z=0  None .data      @4614                                                        */
 SECTION_DATA static void* lit_4614[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoatCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoatCatch__9daAlink_cFv,
 };
 
 /* 803B02B4-803B02C0 000C+00 s=1 e=0 z=0  None .data      @4615                                                        */
 SECTION_DATA static void* lit_4615[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoatStroke__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoatStroke__9daAlink_cFv,
 };
 
 /* 803B02C0-803B02CC 000C+00 s=1 e=0 z=0  None .data      @4616                                                        */
 SECTION_DATA static void* lit_4616[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoronMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoronMove__9daAlink_cFv,
 };
 
 /* 803B02CC-803B02D8 000C+00 s=1 e=0 z=0  None .data      @4617                                                        */
 SECTION_DATA static void* lit_4617[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B02D8-803B02E4 000C+00 s=1 e=0 z=0  None .data      @4618                                                        */
 SECTION_DATA static void* lit_4618[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotSubject__9daAlink_cFv,
 };
 
 /* 803B02E4-803B02F0 000C+00 s=1 e=0 z=0  None .data      @4619                                                        */
 SECTION_DATA static void* lit_4619[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotMove__9daAlink_cFv,
 };
 
 /* 803B02F0-803B02FC 000C+00 s=1 e=0 z=0  None .data      @4620                                                        */
 SECTION_DATA static void* lit_4620[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotFly__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotFly__9daAlink_cFv,
 };
 
 /* 803B02FC-803B0308 000C+00 s=1 e=0 z=0  None .data      @4621                                                        */
 SECTION_DATA static void* lit_4621[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotRoofWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotRoofWait__9daAlink_cFv,
 };
 
 /* 803B0308-803B0314 000C+00 s=1 e=0 z=0  None .data      @4622                                                        */
 SECTION_DATA static void* lit_4622[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotRoofShoot__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotRoofShoot__9daAlink_cFv,
 };
 
 /* 803B0314-803B0320 000C+00 s=1 e=0 z=0  None .data      @4623                                                        */
 SECTION_DATA static void* lit_4623[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotRoofBoots__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotRoofBoots__9daAlink_cFv,
 };
 
 /* 803B0320-803B032C 000C+00 s=1 e=0 z=0  None .data      @4624                                                        */
 SECTION_DATA static void* lit_4624[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotWallWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotWallWait__9daAlink_cFv,
 };
 
 /* 803B032C-803B0338 000C+00 s=1 e=0 z=0  None .data      @4625                                                        */
 SECTION_DATA static void* lit_4625[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHookshotWallShoot__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHookshotWallShoot__9daAlink_cFv,
 };
 
 /* 803B0338-803B0344 000C+00 s=1 e=0 z=0  None .data      @4626                                                        */
 SECTION_DATA static void* lit_4626[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMagneBootsFly__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMagneBootsFly__9daAlink_cFv,
 };
 
 /* 803B0344-803B0350 000C+00 s=1 e=0 z=0  None .data      @4627                                                        */
 SECTION_DATA static void* lit_4627[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBootsEquip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBootsEquip__9daAlink_cFv,
 };
 
 /* 803B0350-803B035C 000C+00 s=1 e=0 z=0  None .data      @4628                                                        */
 SECTION_DATA static void* lit_4628[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouReady__9daAlink_cFv,
 };
 
 /* 803B035C-803B0368 000C+00 s=1 e=0 z=0  None .data      @4629                                                        */
 SECTION_DATA static void* lit_4629[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouMove__9daAlink_cFv,
 };
 
 /* 803B0368-803B0374 000C+00 s=1 e=0 z=0  None .data      @4630                                                        */
 SECTION_DATA static void* lit_4630[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouSideMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouSideMove__9daAlink_cFv,
 };
 
 /* 803B0374-803B0380 000C+00 s=1 e=0 z=0  None .data      @4631                                                        */
 SECTION_DATA static void* lit_4631[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouAction__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouAction__9daAlink_cFv,
 };
 
 /* 803B0380-803B038C 000C+00 s=1 e=0 z=0  None .data      @4632                                                        */
 SECTION_DATA static void* lit_4632[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouStagger__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouStagger__9daAlink_cFv,
 };
 
 /* 803B038C-803B0398 000C+00 s=1 e=0 z=0  None .data      @4633                                                        */
 SECTION_DATA static void* lit_4633[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouWinLose__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouWinLose__9daAlink_cFv,
 };
 
 /* 803B0398-803B03A4 000C+00 s=1 e=0 z=0  None .data      @4634                                                        */
 SECTION_DATA static void* lit_4634[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouShiko__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouShiko__9daAlink_cFv,
 };
 
 /* 803B03A4-803B03B0 000C+00 s=1 e=0 z=0  None .data      @4635                                                        */
 SECTION_DATA static void* lit_4635[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookUp__9daAlink_cFv,
 };
 
 /* 803B03B0-803B03BC 000C+00 s=1 e=0 z=0  None .data      @4636                                                        */
 SECTION_DATA static void* lit_4636[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookUpToGetItem__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookUpToGetItem__9daAlink_cFv,
 };
 
 /* 803B03BC-803B03C8 000C+00 s=1 e=0 z=0  None .data      @4637                                                        */
 SECTION_DATA static void* lit_4637[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHandPat__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHandPat__9daAlink_cFv,
 };
 
 /* 803B03C8-803B03D4 000C+00 s=1 e=0 z=0  None .data      @4638                                                        */
 SECTION_DATA static void* lit_4638[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procIronBallSubject__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procIronBallSubject__9daAlink_cFv,
 };
 
 /* 803B03D4-803B03E0 000C+00 s=1 e=0 z=0  None .data      @4639                                                        */
 SECTION_DATA static void* lit_4639[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procIronBallMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procIronBallMove__9daAlink_cFv,
 };
 
 /* 803B03E0-803B03EC 000C+00 s=1 e=0 z=0  None .data      @4640                                                        */
 SECTION_DATA static void* lit_4640[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procIronBallThrow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procIronBallThrow__9daAlink_cFv,
 };
 
 /* 803B03EC-803B03F8 000C+00 s=1 e=0 z=0  None .data      @4641                                                        */
 SECTION_DATA static void* lit_4641[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procIronBallReturn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procIronBallReturn__9daAlink_cFv,
 };
 
 /* 803B03F8-803B0404 000C+00 s=1 e=0 z=0  None .data      @4642                                                        */
 SECTION_DATA static void* lit_4642[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBossBodyHang__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBossBodyHang__9daAlink_cFv,
 };
 
 /* 803B0404-803B0410 000C+00 s=1 e=0 z=0  None .data      @4643                                                        */
 SECTION_DATA static void* lit_4643[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procOctaIealSpit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procOctaIealSpit__9daAlink_cFv,
 };
 
 /* 803B0410-803B041C 000C+00 s=1 e=0 z=0  None .data      @4644                                                        */
 SECTION_DATA static void* lit_4644[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procScreamWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procScreamWait__9daAlink_cFv,
 };
 
 /* 803B041C-803B0428 000C+00 s=1 e=0 z=0  None .data      @4645                                                        */
 SECTION_DATA static void* lit_4645[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoatStopReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoatStopReady__9daAlink_cFv,
 };
 
 /* 803B0428-803B0434 000C+00 s=1 e=0 z=0  None .data      @4646                                                        */
 SECTION_DATA static void* lit_4646[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procZoraMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procZoraMove__9daAlink_cFv,
 };
 
 /* 803B0434-803B0440 000C+00 s=1 e=0 z=0  None .data      @4647                                                        */
 SECTION_DATA static void* lit_4647[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookAroundTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookAroundTurn__9daAlink_cFv,
 };
 
 /* 803B0440-803B044C 000C+00 s=1 e=0 z=0  None .data      @4648                                                        */
 SECTION_DATA static void* lit_4648[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procTradeItemOut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procTradeItemOut__9daAlink_cFv,
 };
 
 /* 803B044C-803B0458 000C+00 s=1 e=0 z=0  None .data      @4649                                                        */
 SECTION_DATA static void* lit_4649[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procNotUseItem__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procNotUseItem__9daAlink_cFv,
 };
 
 /* 803B0458-803B0464 000C+00 s=1 e=0 z=0  None .data      @4650                                                        */
 SECTION_DATA static void* lit_4650[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordReady__9daAlink_cFv,
 };
 
 /* 803B0464-803B0470 000C+00 s=1 e=0 z=0  None .data      @4651                                                        */
 SECTION_DATA static void* lit_4651[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordPush__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordPush__9daAlink_cFv,
 };
 
 /* 803B0470-803B047C 000C+00 s=1 e=0 z=0  None .data      @4652                                                        */
 SECTION_DATA static void* lit_4652[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGanonFinish__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGanonFinish__9daAlink_cFv,
 };
 
 /* 803B047C-803B0488 000C+00 s=1 e=0 z=0  None .data      @4653                                                        */
 SECTION_DATA static void* lit_4653[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutFastReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutFastReady__9daAlink_cFv,
 };
 
 /* 803B0488-803B0494 000C+00 s=1 e=0 z=0  None .data      @4654                                                        */
 SECTION_DATA static void* lit_4654[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMasterSwordStick__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMasterSwordStick__9daAlink_cFv,
 };
 
 /* 803B0494-803B04A0 000C+00 s=1 e=0 z=0  None .data      @4655                                                        */
 SECTION_DATA static void* lit_4655[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMasterSwordPull__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMasterSwordPull__9daAlink_cFv,
 };
 
 /* 803B04A0-803B04AC 000C+00 s=1 e=0 z=0  None .data      @4656                                                        */
 SECTION_DATA static void* lit_4656[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDungeonWarpReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDungeonWarpReady__9daAlink_cFv,
 };
 
 /* 803B04AC-803B04B8 000C+00 s=1 e=0 z=0  None .data      @4657                                                        */
 SECTION_DATA static void* lit_4657[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDungeonWarp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDungeonWarp__9daAlink_cFv,
 };
 
 /* 803B04B8-803B04C4 000C+00 s=1 e=0 z=0  None .data      @4658                                                        */
 SECTION_DATA static void* lit_4658[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDungeonWarpSceneStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDungeonWarpSceneStart__9daAlink_cFv,
 };
 
 /* 803B04C4-803B04D0 000C+00 s=1 e=0 z=0  None .data      @4659                                                        */
 SECTION_DATA static void* lit_4659[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfHowlDemo__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfHowlDemo__9daAlink_cFv,
 };
 
 /* 803B04D0-803B04DC 000C+00 s=1 e=0 z=0  None .data      @4660                                                        */
 SECTION_DATA static void* lit_4660[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfServiceWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfServiceWait__9daAlink_cFv,
 };
 
 /* 803B04DC-803B04E8 000C+00 s=1 e=0 z=0  None .data      @4661                                                        */
 SECTION_DATA static void* lit_4661[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfTiredWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfTiredWait__9daAlink_cFv,
 };
 
 /* 803B04E8-803B04F4 000C+00 s=1 e=0 z=0  None .data      @4662                                                        */
 SECTION_DATA static void* lit_4662[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfMidnaRideShock__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfMidnaRideShock__9daAlink_cFv,
 };
 
 /* 803B04F4-803B0500 000C+00 s=1 e=0 z=0  None .data      @4663                                                        */
 SECTION_DATA static void* lit_4663[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfWait__9daAlink_cFv,
 };
 
 /* 803B0500-803B050C 000C+00 s=1 e=0 z=0  None .data      @4664                                                        */
 SECTION_DATA static void* lit_4664[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfMove__9daAlink_cFv,
 };
 
 /* 803B050C-803B0518 000C+00 s=1 e=0 z=0  None .data      @4665                                                        */
 SECTION_DATA static void* lit_4665[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDash__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDash__9daAlink_cFv,
 };
 
 /* 803B0518-803B0524 000C+00 s=1 e=0 z=0  None .data      @4666                                                        */
 SECTION_DATA static void* lit_4666[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDashReverse__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDashReverse__9daAlink_cFv,
 };
 
 /* 803B0524-803B0530 000C+00 s=1 e=0 z=0  None .data      @4667                                                        */
 SECTION_DATA static void* lit_4667[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfWaitTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfWaitTurn__9daAlink_cFv,
 };
 
 /* 803B0530-803B053C 000C+00 s=1 e=0 z=0  None .data      @4668                                                        */
 SECTION_DATA static void* lit_4668[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfAtnActorMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfAtnActorMove__9daAlink_cFv,
 };
 
 /* 803B053C-803B0548 000C+00 s=1 e=0 z=0  None .data      @4669                                                        */
 SECTION_DATA static void* lit_4669[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSideStep__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSideStep__9daAlink_cFv,
 };
 
 /* 803B0548-803B0554 000C+00 s=1 e=0 z=0  None .data      @4670                                                        */
 SECTION_DATA static void* lit_4670[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSideStepLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSideStepLand__9daAlink_cFv,
 };
 
 /* 803B0554-803B0560 000C+00 s=1 e=0 z=0  None .data      @4671                                                        */
 SECTION_DATA static void* lit_4671[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfBackJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfBackJump__9daAlink_cFv,
 };
 
 /* 803B0560-803B056C 000C+00 s=1 e=0 z=0  None .data      @4672                                                        */
 SECTION_DATA static void* lit_4672[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfBackJumpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfBackJumpLand__9daAlink_cFv,
 };
 
 /* 803B056C-803B0578 000C+00 s=1 e=0 z=0  None .data      @4673                                                        */
 SECTION_DATA static void* lit_4673[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfHowl__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfHowl__9daAlink_cFv,
 };
 
 /* 803B0578-803B0584 000C+00 s=1 e=0 z=0  None .data      @4674                                                        */
 SECTION_DATA static void* lit_4674[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfAutoJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfAutoJump__9daAlink_cFv,
 };
 
 /* 803B0584-803B0590 000C+00 s=1 e=0 z=0  None .data      @4675                                                        */
 SECTION_DATA static void* lit_4675[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfFall__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfFall__9daAlink_cFv,
 };
 
 /* 803B0590-803B059C 000C+00 s=1 e=0 z=0  None .data      @4676                                                        */
 SECTION_DATA static void* lit_4676[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLand__9daAlink_cFv,
 };
 
 /* 803B059C-803B05A8 000C+00 s=1 e=0 z=0  None .data      @4677                                                        */
 SECTION_DATA static void* lit_4677[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSit__9daAlink_cFv,
 };
 
 /* 803B05A8-803B05B4 000C+00 s=1 e=0 z=0  None .data      @4678                                                        */
 SECTION_DATA static void* lit_4678[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLieStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLieStart__9daAlink_cFv,
 };
 
 /* 803B05B4-803B05C0 000C+00 s=1 e=0 z=0  None .data      @4679                                                        */
 SECTION_DATA static void* lit_4679[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLieMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLieMove__9daAlink_cFv,
 };
 
 /* 803B05C0-803B05CC 000C+00 s=1 e=0 z=0  None .data      @4680                                                        */
 SECTION_DATA static void* lit_4680[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLieAutoMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLieAutoMove__9daAlink_cFv,
 };
 
 /* 803B05CC-803B05D8 000C+00 s=1 e=0 z=0  None .data      @4681                                                        */
 SECTION_DATA static void* lit_4681[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfHangReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfHangReady__9daAlink_cFv,
 };
 
 /* 803B05D8-803B05E4 000C+00 s=1 e=0 z=0  None .data      @4682                                                        */
 SECTION_DATA static void* lit_4682[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfStepMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfStepMove__9daAlink_cFv,
 };
 
 /* 803B05E4-803B05F0 000C+00 s=1 e=0 z=0  None .data      @4683                                                        */
 SECTION_DATA static void* lit_4683[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfHangWallCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfHangWallCatch__9daAlink_cFv,
 };
 
 /* 803B05F0-803B05FC 000C+00 s=1 e=0 z=0  None .data      @4684                                                        */
 SECTION_DATA static void* lit_4684[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfHangFallStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfHangFallStart__9daAlink_cFv,
 };
 
 /* 803B05FC-803B0608 000C+00 s=1 e=0 z=0  None .data      @4685                                                        */
 SECTION_DATA static void* lit_4685[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDamage__9daAlink_cFv,
 };
 
 /* 803B0608-803B0614 000C+00 s=1 e=0 z=0  None .data      @4686                                                        */
 SECTION_DATA static void* lit_4686[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLargeDamageUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLargeDamageUp__9daAlink_cFv,
 };
 
 /* 803B0614-803B0620 000C+00 s=1 e=0 z=0  None .data      @4687                                                        */
 SECTION_DATA static void* lit_4687[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLandDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLandDamage__9daAlink_cFv,
 };
 
 /* 803B0620-803B062C 000C+00 s=1 e=0 z=0  None .data      @4688                                                        */
 SECTION_DATA static void* lit_4688[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfScreamWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfScreamWait__9daAlink_cFv,
 };
 
 /* 803B062C-803B0638 000C+00 s=1 e=0 z=0  None .data      @4689                                                        */
 SECTION_DATA static void* lit_4689[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlip__9daAlink_cFv,
 };
 
 /* 803B0638-803B0644 000C+00 s=1 e=0 z=0  None .data      @4690                                                        */
 SECTION_DATA static void* lit_4690[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlipTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlipTurn__9daAlink_cFv,
 };
 
 /* 803B0644-803B0650 000C+00 s=1 e=0 z=0  None .data      @4691                                                        */
 SECTION_DATA static void* lit_4691[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlipTurnLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlipTurnLand__9daAlink_cFv,
 };
 
 /* 803B0650-803B065C 000C+00 s=1 e=0 z=0  None .data      @4692                                                        */
 SECTION_DATA static void* lit_4692[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlideReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlideReady__9daAlink_cFv,
 };
 
 /* 803B065C-803B0668 000C+00 s=1 e=0 z=0  None .data      @4693                                                        */
 SECTION_DATA static void* lit_4693[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlide__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlide__9daAlink_cFv,
 };
 
 /* 803B0668-803B0674 000C+00 s=1 e=0 z=0  None .data      @4694                                                        */
 SECTION_DATA static void* lit_4694[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlideLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlideLand__9daAlink_cFv,
 };
 
 /* 803B0674-803B0680 000C+00 s=1 e=0 z=0  None .data      @4695                                                        */
 SECTION_DATA static void* lit_4695[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfWaitSlip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfWaitSlip__9daAlink_cFv,
 };
 
 /* 803B0680-803B068C 000C+00 s=1 e=0 z=0  None .data      @4696                                                        */
 SECTION_DATA static void* lit_4696[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSlopeStart__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSlopeStart__9daAlink_cFv,
 };
 
 /* 803B068C-803B0698 000C+00 s=1 e=0 z=0  None .data      @4697                                                        */
 SECTION_DATA static void* lit_4697[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRopeMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRopeMove__9daAlink_cFv,
 };
 
 /* 803B0698-803B06A4 000C+00 s=1 e=0 z=0  None .data      @4698                                                        */
 SECTION_DATA static void* lit_4698[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRopeHang__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRopeHang__9daAlink_cFv,
 };
 
 /* 803B06A4-803B06B0 000C+00 s=1 e=0 z=0  None .data      @4699                                                        */
 SECTION_DATA static void* lit_4699[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRopeTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRopeTurn__9daAlink_cFv,
 };
 
 /* 803B06B0-803B06BC 000C+00 s=1 e=0 z=0  None .data      @4700                                                        */
 SECTION_DATA static void* lit_4700[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRopeStagger__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRopeStagger__9daAlink_cFv,
 };
 
 /* 803B06BC-803B06C8 000C+00 s=1 e=0 z=0  None .data      @4701                                                        */
 SECTION_DATA static void* lit_4701[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRopeSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRopeSubjectivity__9daAlink_cFv,
 };
 
 /* 803B06C8-803B06D4 000C+00 s=1 e=0 z=0  None .data      @4702                                                        */
 SECTION_DATA static void* lit_4702[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfTagJump__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfTagJump__9daAlink_cFv,
 };
 
 /* 803B06D4-803B06E0 000C+00 s=1 e=0 z=0  None .data      @4703                                                        */
 SECTION_DATA static void* lit_4703[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfTagJumpLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfTagJumpLand__9daAlink_cFv,
 };
 
 /* 803B06E0-803B06EC 000C+00 s=1 e=0 z=0  None .data      @4704                                                        */
 SECTION_DATA static void* lit_4704[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRollAttackCharge__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRollAttackCharge__9daAlink_cFv,
 };
 
 /* 803B06EC-803B06F8 000C+00 s=1 e=0 z=0  None .data      @4705                                                        */
 SECTION_DATA static void* lit_4705[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRollAttackMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRollAttackMove__9daAlink_cFv,
 };
 
 /* 803B06F8-803B0704 000C+00 s=1 e=0 z=0  None .data      @4706                                                        */
 SECTION_DATA static void* lit_4706[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfJumpAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfJumpAttack__9daAlink_cFv,
 };
 
 /* 803B0704-803B0710 000C+00 s=1 e=0 z=0  None .data      @4707                                                        */
 SECTION_DATA static void* lit_4707[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfJumpAttackKick__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfJumpAttackKick__9daAlink_cFv,
 };
 
 /* 803B0710-803B071C 000C+00 s=1 e=0 z=0  None .data      @4708                                                        */
 SECTION_DATA static void* lit_4708[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfJumpAttackSlideLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfJumpAttackSlideLand__9daAlink_cFv,
 };
 
 /* 803B071C-803B0728 000C+00 s=1 e=0 z=0  None .data      @4709                                                        */
 SECTION_DATA static void* lit_4709[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfJumpAttackNormalLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfJumpAttackNormalLand__9daAlink_cFv,
 };
 
 /* 803B0728-803B0734 000C+00 s=1 e=0 z=0  None .data      @4710                                                        */
 SECTION_DATA static void* lit_4710[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfWaitAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfWaitAttack__9daAlink_cFv,
 };
 
 /* 803B0734-803B0740 000C+00 s=1 e=0 z=0  None .data      @4711                                                        */
 SECTION_DATA static void* lit_4711[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfRollAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfRollAttack__9daAlink_cFv,
 };
 
 /* 803B0740-803B074C 000C+00 s=1 e=0 z=0  None .data      @4712                                                        */
 SECTION_DATA static void* lit_4712[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDownAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDownAttack__9daAlink_cFv,
 };
 
 /* 803B074C-803B0758 000C+00 s=1 e=0 z=0  None .data      @4713                                                        */
 SECTION_DATA static void* lit_4713[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDownAtLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDownAtLand__9daAlink_cFv,
 };
 
 /* 803B0758-803B0764 000C+00 s=1 e=0 z=0  None .data      @4714                                                        */
 SECTION_DATA static void* lit_4714[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDownAtMissLand__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDownAtMissLand__9daAlink_cFv,
 };
 
 /* 803B0764-803B0770 000C+00 s=1 e=0 z=0  None .data      @4715                                                        */
 SECTION_DATA static void* lit_4715[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLockAttack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLockAttack__9daAlink_cFv,
 };
 
 /* 803B0770-803B077C 000C+00 s=1 e=0 z=0  None .data      @4716                                                        */
 SECTION_DATA static void* lit_4716[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfLockAttackTurn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfLockAttackTurn__9daAlink_cFv,
 };
 
 /* 803B077C-803B0788 000C+00 s=1 e=0 z=0  None .data      @4717                                                        */
 SECTION_DATA static void* lit_4717[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSwimUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSwimUp__9daAlink_cFv,
 };
 
 /* 803B0788-803B0794 000C+00 s=1 e=0 z=0  None .data      @4718                                                        */
 SECTION_DATA static void* lit_4718[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSwimWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSwimWait__9daAlink_cFv,
 };
 
 /* 803B0794-803B07A0 000C+00 s=1 e=0 z=0  None .data      @4719                                                        */
 SECTION_DATA static void* lit_4719[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSwimMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSwimMove__9daAlink_cFv,
 };
 
 /* 803B07A0-803B07AC 000C+00 s=1 e=0 z=0  None .data      @4720                                                        */
 SECTION_DATA static void* lit_4720[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSwimEndWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSwimEndWait__9daAlink_cFv,
 };
 
 /* 803B07AC-803B07B8 000C+00 s=1 e=0 z=0  None .data      @4721                                                        */
 SECTION_DATA static void* lit_4721[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGrabUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGrabUp__9daAlink_cFv,
 };
 
 /* 803B07B8-803B07C4 000C+00 s=1 e=0 z=0  None .data      @4722                                                        */
 SECTION_DATA static void* lit_4722[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGrabPut__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGrabPut__9daAlink_cFv,
 };
 
 /* 803B07C4-803B07D0 000C+00 s=1 e=0 z=0  None .data      @4723                                                        */
 SECTION_DATA static void* lit_4723[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGrabThrow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGrabThrow__9daAlink_cFv,
 };
 
 /* 803B07D0-803B07DC 000C+00 s=1 e=0 z=0  None .data      @4724                                                        */
 SECTION_DATA static void* lit_4724[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfChainUp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfChainUp__9daAlink_cFv,
 };
 
 /* 803B07DC-803B07E8 000C+00 s=1 e=0 z=0  None .data      @4725                                                        */
 SECTION_DATA static void* lit_4725[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfPush__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfPush__9daAlink_cFv,
 };
 
 /* 803B07E8-803B07F4 000C+00 s=1 e=0 z=0  None .data      @4726                                                        */
 SECTION_DATA static void* lit_4726[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfChainReady__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfChainReady__9daAlink_cFv,
 };
 
 /* 803B07F4-803B0800 000C+00 s=1 e=0 z=0  None .data      @4727                                                        */
 SECTION_DATA static void* lit_4727[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfChainWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfChainWait__9daAlink_cFv,
 };
 
 /* 803B0800-803B080C 000C+00 s=1 e=0 z=0  None .data      @4728                                                        */
 SECTION_DATA static void* lit_4728[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDig__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDig__9daAlink_cFv,
 };
 
 /* 803B080C-803B0818 000C+00 s=1 e=0 z=0  None .data      @4729                                                        */
 SECTION_DATA static void* lit_4729[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfDigThrough__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfDigThrough__9daAlink_cFv,
 };
 
 /* 803B0818-803B0824 000C+00 s=1 e=0 z=0  None .data      @4730                                                        */
 SECTION_DATA static void* lit_4730[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfAttackReverse__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfAttackReverse__9daAlink_cFv,
 };
 
 /* 803B0824-803B0830 000C+00 s=1 e=0 z=0  None .data      @4731                                                        */
 SECTION_DATA static void* lit_4731[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfEnemyThrow__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfEnemyThrow__9daAlink_cFv,
 };
 
 /* 803B0830-803B083C 000C+00 s=1 e=0 z=0  None .data      @4732                                                        */
 SECTION_DATA static void* lit_4732[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfEnemyHangBite__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfEnemyHangBite__9daAlink_cFv,
 };
 
 /* 803B083C-803B0848 000C+00 s=1 e=0 z=0  None .data      @4733                                                        */
 SECTION_DATA static void* lit_4733[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGiantPuzzle__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGiantPuzzle__9daAlink_cFv,
 };
 
 /* 803B0848-803B0854 000C+00 s=1 e=0 z=0  None .data      @4734                                                        */
 SECTION_DATA static void* lit_4734[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfCargoCarry__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfCargoCarry__9daAlink_cFv,
 };
 
 /* 803B0854-803B0860 000C+00 s=1 e=0 z=0  None .data      @4735                                                        */
 SECTION_DATA static void* lit_4735[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGetSmell__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGetSmell__9daAlink_cFv,
 };
 
 /* 803B0860-803B086C 000C+00 s=1 e=0 z=0  None .data      @4736                                                        */
 SECTION_DATA static void* lit_4736[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B086C-803B0878 000C+00 s=1 e=0 z=0  None .data      @4737                                                        */
 SECTION_DATA static void* lit_4737[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSnowEscape__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSnowEscape__9daAlink_cFv,
 };
 
 /* 803B0878-803B0884 000C+00 s=1 e=0 z=0  None .data      @4738                                                        */
 SECTION_DATA static void* lit_4738[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfGanonCatch__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfGanonCatch__9daAlink_cFv,
 };
 
 /* 803B0884-803B0890 000C+00 s=1 e=0 z=0  None .data      @4739                                                        */
 SECTION_DATA static void* lit_4739[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoToolDemo__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoToolDemo__9daAlink_cFv,
 };
 
 /* 803B0890-803B089C 000C+00 s=1 e=0 z=0  None .data      @4740                                                        */
 SECTION_DATA static void* lit_4740[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoSubjectivity__9daAlink_cFv,
 };
 
 /* 803B089C-803B08A8 000C+00 s=1 e=0 z=0  None .data      @4741                                                        */
 SECTION_DATA static void* lit_4741[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoSwimSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoSwimSubjectivity__9daAlink_cFv,
 };
 
 /* 803B08A8-803B08B4 000C+00 s=1 e=0 z=0  None .data      @4742                                                        */
 SECTION_DATA static void* lit_4742[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoPeepSubjectivity__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoPeepSubjectivity__9daAlink_cFv,
 };
 
 /* 803B08B4-803B08C0 000C+00 s=1 e=0 z=0  None .data      @4743                                                        */
 SECTION_DATA static void* lit_4743[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoPolyDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoPolyDamage__9daAlink_cFv,
 };
 
 /* 803B08C0-803B08CC 000C+00 s=1 e=0 z=0  None .data      @4744                                                        */
 SECTION_DATA static void* lit_4744[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoElecDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoElecDamage__9daAlink_cFv,
 };
 
 /* 803B08CC-803B08D8 000C+00 s=1 e=0 z=0  None .data      @4745                                                        */
 SECTION_DATA static void* lit_4745[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoPushPullWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoPushPullWait__9daAlink_cFv,
 };
 
 /* 803B08D8-803B08E4 000C+00 s=1 e=0 z=0  None .data      @4746                                                        */
 SECTION_DATA static void* lit_4746[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoPushMove__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoPushMove__9daAlink_cFv,
 };
 
 /* 803B08E4-803B08F0 000C+00 s=1 e=0 z=0  None .data      @4747                                                        */
 SECTION_DATA static void* lit_4747[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoTalk__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoTalk__9daAlink_cFv,
 };
 
 /* 803B08F0-803B08FC 000C+00 s=1 e=0 z=0  None .data      @4748                                                        */
 SECTION_DATA static void* lit_4748[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoOpenTreasure__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoOpenTreasure__9daAlink_cFv,
 };
 
 /* 803B08FC-803B0908 000C+00 s=1 e=0 z=0  None .data      @4749                                                        */
 SECTION_DATA static void* lit_4749[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoUnequip__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoUnequip__9daAlink_cFv,
 };
 
 /* 803B0908-803B0914 000C+00 s=1 e=0 z=0  None .data      @4750                                                        */
 SECTION_DATA static void* lit_4750[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGetItem__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGetItem__9daAlink_cFv,
 };
 
 /* 803B0914-803B0920 000C+00 s=1 e=0 z=0  None .data      @4751                                                        */
 SECTION_DATA static void* lit_4751[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoTurnBack__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoTurnBack__9daAlink_cFv,
 };
 
 /* 803B0920-803B092C 000C+00 s=1 e=0 z=0  None .data      @4752                                                        */
 SECTION_DATA static void* lit_4752[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLookWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLookWait__9daAlink_cFv,
 };
 
 /* 803B092C-803B0938 000C+00 s=1 e=0 z=0  None .data      @4753                                                        */
 SECTION_DATA static void* lit_4753[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B0938-803B0944 000C+00 s=1 e=0 z=0  None .data      @4754                                                        */
 SECTION_DATA static void* lit_4754[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B0944-803B0950 000C+00 s=1 e=0 z=0  None .data      @4755                                                        */
 SECTION_DATA static void* lit_4755[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphose__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphose__9daAlink_cFv,
 };
 
 /* 803B0950-803B095C 000C+00 s=1 e=0 z=0  None .data      @4756                                                        */
 SECTION_DATA static void* lit_4756[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphoseOnly__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphoseOnly__9daAlink_cFv,
 };
 
 /* 803B095C-803B0968 000C+00 s=1 e=0 z=0  None .data      @4757                                                        */
 SECTION_DATA static void* lit_4757[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoWarp__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoWarp__9daAlink_cFv,
 };
 
 /* 803B0968-803B0974 000C+00 s=1 e=0 z=0  None .data      @4758                                                        */
 SECTION_DATA static void* lit_4758[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoDead__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoDead__9daAlink_cFv,
 };
 
 /* 803B0974-803B0980 000C+00 s=1 e=0 z=0  None .data      @4759                                                        */
 SECTION_DATA static void* lit_4759[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoFogDead__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoFogDead__9daAlink_cFv,
 };
 
 /* 803B0980-803B098C 000C+00 s=1 e=0 z=0  None .data      @4760                                                        */
 SECTION_DATA static void* lit_4760[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLookAround__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLookAround__9daAlink_cFv,
 };
 
 /* 803B098C-803B0998 000C+00 s=1 e=0 z=0  None .data      @4761                                                        */
 SECTION_DATA static void* lit_4761[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B0998-803B09A4 000C+00 s=1 e=0 z=0  None .data      @4762                                                        */
 SECTION_DATA static void* lit_4762[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoSandWallHit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoSandWallHit__9daAlink_cFv,
 };
 
 /* 803B09A4-803B09B0 000C+00 s=1 e=0 z=0  None .data      @4763                                                        */
 SECTION_DATA static void* lit_4763[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLavaReturn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLavaReturn__9daAlink_cFv,
 };
 
 /* 803B09B0-803B09BC 000C+00 s=1 e=0 z=0  None .data      @4764                                                        */
 SECTION_DATA static void* lit_4764[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoSwimFreezeReturn__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoSwimFreezeReturn__9daAlink_cFv,
 };
 
 /* 803B09BC-803B09C8 000C+00 s=1 e=0 z=0  None .data      @4765                                                        */
 SECTION_DATA static void* lit_4765[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGetReadySit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGetReadySit__9daAlink_cFv,
 };
 
 /* 803B09C8-803B09D4 000C+00 s=1 e=0 z=0  None .data      @4766                                                        */
 SECTION_DATA static void* lit_4766[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoTwGate__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoTwGate__9daAlink_cFv,
 };
 
 /* 803B09D4-803B09E0 000C+00 s=1 e=0 z=0  None .data      @4767                                                        */
 SECTION_DATA static void* lit_4767[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLargeDamage__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLargeDamage__9daAlink_cFv,
 };
 
 /* 803B09E0-803B09EC 000C+00 s=1 e=0 z=0  None .data      @4768                                                        */
 SECTION_DATA static void* lit_4768[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLargeDamageWall__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLargeDamageWall__9daAlink_cFv,
 };
 
 /* 803B09EC-803B09F8 000C+00 s=1 e=0 z=0  None .data      @4769                                                        */
 SECTION_DATA static void* lit_4769[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoNod__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoNod__9daAlink_cFv,
 };
 
 /* 803B09F8-803B0A04 000C+00 s=1 e=0 z=0  None .data      @4770                                                        */
 SECTION_DATA static void* lit_4770[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B0A04-803B0A10 000C+00 s=1 e=0 z=0  None .data      @4771                                                        */
 SECTION_DATA static void* lit_4771[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGlare__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGlare__9daAlink_cFv,
 };
 
 /* 803B0A10-803B0A1C 000C+00 s=1 e=0 z=0  None .data      @4772                                                        */
 SECTION_DATA static void* lit_4772[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoHorseCallWait__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoHorseCallWait__9daAlink_cFv,
 };
 
 /* 803B0A1C-803B0A28 000C+00 s=1 e=0 z=0  None .data      @4773                                                        */
 SECTION_DATA static void* lit_4773[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoCommon__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoCommon__9daAlink_cFv,
 };
 
 /* 803B0A28-803B2028 1600+00 s=2 e=0 z=0  None .data      m_procInitTable__9daAlink_c                                  */
@@ -13649,408 +13649,408 @@ SECTION_DATA static u8 m_procInitTable__9daAlink_c[5632] = {
 
 /* 803B2028-803B2034 000C+00 s=1 e=0 z=0  None .data      @4774                                                        */
 SECTION_DATA static void* lit_4774[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)commonWaitTurnInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)commonWaitTurnInit__9daAlink_cFv,
 };
 
 /* 803B2034-803B2040 000C+00 s=1 e=0 z=0  None .data      @4775                                                        */
 SECTION_DATA static void* lit_4775[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoOpenTreasureInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoOpenTreasureInit__9daAlink_cFv,
 };
 
 /* 803B2040-803B204C 000C+00 s=1 e=0 z=0  None .data      @4776                                                        */
 SECTION_DATA static void* lit_4776[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGetItemInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGetItemInit__9daAlink_cFv,
 };
 
 /* 803B204C-803B2058 000C+00 s=1 e=0 z=0  None .data      @4777                                                        */
 SECTION_DATA static void* lit_4777[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoUnequipInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoUnequipInit__9daAlink_cFv,
 };
 
 /* 803B2058-803B2064 000C+00 s=1 e=0 z=0  None .data      @4778                                                        */
 SECTION_DATA static void* lit_4778[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)commonGrabPutInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)commonGrabPutInit__9daAlink_cFv,
 };
 
 /* 803B2064-803B2070 000C+00 s=1 e=0 z=0  None .data      @4779                                                        */
 SECTION_DATA static void* lit_4779[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMonkeyMoveInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMonkeyMoveInit__9daAlink_cFv,
 };
 
 /* 803B2070-803B207C 000C+00 s=1 e=0 z=0  None .data      @4780                                                        */
 SECTION_DATA static void* lit_4780[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoLookAroundInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoLookAroundInit__9daAlink_cFv,
 };
 
 /* 803B207C-803B2088 000C+00 s=1 e=0 z=0  None .data      @4781                                                        */
 SECTION_DATA static void* lit_4781[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoTurnBackInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoTurnBackInit__9daAlink_cFv,
 };
 
 /* 803B2088-803B2094 000C+00 s=1 e=0 z=0  None .data      @4782                                                        */
 SECTION_DATA static void* lit_4782[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDemoBoomerangCatchInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDemoBoomerangCatchInit__9daAlink_cFv,
 };
 
 /* 803B2094-803B20A0 000C+00 s=1 e=0 z=0  None .data      @4783                                                        */
 SECTION_DATA static void* lit_4783[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHawkCatchInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHawkCatchInit__9daAlink_cFv,
 };
 
 /* 803B20A0-803B20AC 000C+00 s=1 e=0 z=0  None .data      @4784                                                        */
 SECTION_DATA static void* lit_4784[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordUnequipSpInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordUnequipSpInit__9daAlink_cFv,
 };
 
 /* 803B20AC-803B20B8 000C+00 s=1 e=0 z=0  None .data      @4785                                                        */
 SECTION_DATA static void* lit_4785[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoDemoPushPullWaitInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoDemoPushPullWaitInit__9daAlink_cFv,
 };
 
 /* 803B20B8-803B20C4 000C+00 s=1 e=0 z=0  None .data      @4786                                                        */
 SECTION_DATA static void* lit_4786[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoDemoPushMoveInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoDemoPushMoveInit__9daAlink_cFv,
 };
 
 /* 803B20C4-803B20D0 000C+00 s=1 e=0 z=0  None .data      @4787                                                        */
 SECTION_DATA static void* lit_4787[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBossAtnWaitInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procBossAtnWaitInit__9daAlink_cFv,
 };
 
 /* 803B20D0-803B20DC 000C+00 s=1 e=0 z=0  None .data      @4788                                                        */
 SECTION_DATA static void* lit_4788[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDoorOpenInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDoorOpenInit__9daAlink_cFv,
 };
 
 /* 803B20DC-803B20E8 000C+00 s=1 e=0 z=0  None .data      @4789                                                        */
 SECTION_DATA static void* lit_4789[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procTradeItemOutInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procTradeItemOutInit__9daAlink_cFv,
 };
 
 /* 803B20E8-803B20F4 000C+00 s=1 e=0 z=0  None .data      @4790                                                        */
 SECTION_DATA static void* lit_4790[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procKandelaarSwingInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procKandelaarSwingInit__9daAlink_cFv,
 };
 
 /* 803B20F4-803B2100 000C+00 s=1 e=0 z=0  None .data      @4791                                                        */
 SECTION_DATA static void* lit_4791[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFrontRollInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFrontRollInit__9daAlink_cFv,
 };
 
 /* 803B2100-803B210C 000C+00 s=1 e=0 z=0  None .data      @4792                                                        */
 SECTION_DATA static void* lit_4792[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCrouchInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCrouchInit__9daAlink_cFv,
 };
 
 /* 803B210C-803B2118 000C+00 s=1 e=0 z=0  None .data      @4793                                                        */
 SECTION_DATA static void* lit_4793[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoCaughtInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoCaughtInit__9daAlink_cFv,
 };
 
 /* 803B2118-803B2124 000C+00 s=1 e=0 z=0  None .data      @4794                                                        */
 SECTION_DATA static void* lit_4794[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookUpInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookUpInit__9daAlink_cFv,
 };
 
 /* 803B2124-803B2130 000C+00 s=1 e=0 z=0  None .data      @4795                                                        */
 SECTION_DATA static void* lit_4795[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookUpToGetItemInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookUpToGetItemInit__9daAlink_cFv,
 };
 
 /* 803B2130-803B213C 000C+00 s=1 e=0 z=0  None .data      @4796                                                        */
 SECTION_DATA static void* lit_4796[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHandPatInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHandPatInit__9daAlink_cFv,
 };
 
 /* 803B213C-803B2148 000C+00 s=1 e=0 z=0  None .data      @4797                                                        */
 SECTION_DATA static void* lit_4797[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfMidnaRideShockInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfMidnaRideShockInit__9daAlink_cFv,
 };
 
 /* 803B2148-803B2154 000C+00 s=1 e=0 z=0  None .data      @4798                                                        */
 SECTION_DATA static void* lit_4798[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSumouShikoInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSumouShikoInit__9daAlink_cFv,
 };
 
 /* 803B2154-803B2160 000C+00 s=1 e=0 z=0  None .data      @4799                                                        */
 SECTION_DATA static void* lit_4799[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoFogDeadInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoFogDeadInit__9daAlink_cFv,
 };
 
 /* 803B2160-803B216C 000C+00 s=1 e=0 z=0  None .data      @4800                                                        */
 SECTION_DATA static void* lit_4800[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSmellWaitInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSmellWaitInit__9daAlink_cFv,
 };
 
 /* 803B216C-803B2178 000C+00 s=1 e=0 z=0  None .data      @4801                                                        */
 SECTION_DATA static void* lit_4801[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfCargoCarryInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfCargoCarryInit__9daAlink_cFv,
 };
 
 /* 803B2178-803B2184 000C+00 s=1 e=0 z=0  None .data      @4802                                                        */
 SECTION_DATA static void* lit_4802[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphoseInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphoseInit__9daAlink_cFv,
 };
 
 /* 803B2184-803B2190 000C+00 s=1 e=0 z=0  None .data      @4803                                                        */
 SECTION_DATA static void* lit_4803[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphoseInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphoseInit__9daAlink_cFv,
 };
 
 /* 803B2190-803B219C 000C+00 s=1 e=0 z=0  None .data      @4804                                                        */
 SECTION_DATA static void* lit_4804[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseGetKeyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseGetKeyInit__9daAlink_cFv,
 };
 
 /* 803B219C-803B21A8 000C+00 s=1 e=0 z=0  None .data      @4805                                                        */
 SECTION_DATA static void* lit_4805[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoNodInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoNodInit__9daAlink_cFv,
 };
 
 /* 803B21A8-803B21B4 000C+00 s=1 e=0 z=0  None .data      @4806                                                        */
 SECTION_DATA static void* lit_4806[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGlareInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGlareInit__9daAlink_cFv,
 };
 
 /* 803B21B4-803B21C0 000C+00 s=1 e=0 z=0  None .data      @4807                                                        */
 SECTION_DATA static void* lit_4807[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoEyeAwayInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoEyeAwayInit__9daAlink_cFv,
 };
 
 /* 803B21C0-803B21CC 000C+00 s=1 e=0 z=0  None .data      @4808                                                        */
 SECTION_DATA static void* lit_4808[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGoatStopReadyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGoatStopReadyInit__9daAlink_cFv,
 };
 
 /* 803B21CC-803B21D8 000C+00 s=1 e=0 z=0  None .data      @4809                                                        */
 SECTION_DATA static void* lit_4809[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoGetReadySitInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoGetReadySitInit__9daAlink_cFv,
 };
 
 /* 803B21D8-803B21E4 000C+00 s=1 e=0 z=0  None .data      @4810                                                        */
 SECTION_DATA static void* lit_4810[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoTwGateInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoTwGateInit__9daAlink_cFv,
 };
 
 /* 803B21E4-803B21F0 000C+00 s=1 e=0 z=0  None .data      @4811                                                        */
 SECTION_DATA static void* lit_4811[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procFmChainStrongPullInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procFmChainStrongPullInit__9daAlink_cFv,
 };
 
 /* 803B21F0-803B21FC 000C+00 s=1 e=0 z=0  None .data      @4812                                                        */
 SECTION_DATA static void* lit_4812[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWolfSnowEscapeInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWolfSnowEscapeInit__9daAlink_cFv,
 };
 
 /* 803B21FC-803B2208 000C+00 s=1 e=0 z=0  None .data      @4813                                                        */
 SECTION_DATA static void* lit_4813[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procZoraMoveInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procZoraMoveInit__9daAlink_cFv,
 };
 
 /* 803B2208-803B2214 000C+00 s=1 e=0 z=0  None .data      @4814                                                        */
 SECTION_DATA static void* lit_4814[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphoseOnlyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphoseOnlyInit__9daAlink_cFv,
 };
 
 /* 803B2214-803B2220 000C+00 s=1 e=0 z=0  None .data      @4815                                                        */
 SECTION_DATA static void* lit_4815[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoMetamorphoseOnlyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoMetamorphoseOnlyInit__9daAlink_cFv,
 };
 
 /* 803B2220-803B222C 000C+00 s=1 e=0 z=0  None .data      @4816                                                        */
 SECTION_DATA static void* lit_4816[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procLookAroundTurnInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procLookAroundTurnInit__9daAlink_cFv,
 };
 
 /* 803B222C-803B2238 000C+00 s=1 e=0 z=0  None .data      @4817                                                        */
 SECTION_DATA static void* lit_4817[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCoQuakeWaitInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCoQuakeWaitInit__9daAlink_cFv,
 };
 
 /* 803B2238-803B2244 000C+00 s=1 e=0 z=0  None .data      @4818                                                        */
 SECTION_DATA static void* lit_4818[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGuardAttackInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGuardAttackInit__9daAlink_cFv,
 };
 
 /* 803B2244-803B2250 000C+00 s=1 e=0 z=0  None .data      @4819                                                        */
 SECTION_DATA static void* lit_4819[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordReadyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordReadyInit__9daAlink_cFv,
 };
 
 /* 803B2250-803B225C 000C+00 s=1 e=0 z=0  None .data      @4820                                                        */
 SECTION_DATA static void* lit_4820[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDungeonWarpInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDungeonWarpInit__9daAlink_cFv,
 };
 
 /* 803B225C-803B2268 000C+00 s=1 e=0 z=0  None .data      @4821                                                        */
 SECTION_DATA static void* lit_4821[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procDungeonWarpSceneStartInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procDungeonWarpSceneStartInit__9daAlink_cFv,
 };
 
 /* 803B2268-803B2274 000C+00 s=1 e=0 z=0  None .data      @4822                                                        */
 SECTION_DATA static void* lit_4822[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMasterSwordStickInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMasterSwordStickInit__9daAlink_cFv,
 };
 
 /* 803B2274-803B2280 000C+00 s=1 e=0 z=0  None .data      @4823                                                        */
 SECTION_DATA static void* lit_4823[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMasterSwordPullInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMasterSwordPullInit__9daAlink_cFv,
 };
 
 /* 803B2280-803B228C 000C+00 s=1 e=0 z=0  None .data      @4824                                                        */
 SECTION_DATA static void* lit_4824[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutDownInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutDownInit__9daAlink_cFv,
 };
 
 /* 803B228C-803B2298 000C+00 s=1 e=0 z=0  None .data      @4825                                                        */
 SECTION_DATA static void* lit_4825[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutHeadInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutHeadInit__9daAlink_cFv,
 };
 
 /* 803B2298-803B22A4 000C+00 s=1 e=0 z=0  None .data      @4826                                                        */
 SECTION_DATA static void* lit_4826[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutLargeJumpInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutLargeJumpInit__9daAlink_cFv,
 };
 
 /* 803B22A4-803B22B0 000C+00 s=1 e=0 z=0  None .data      @4827                                                        */
 SECTION_DATA static void* lit_4827[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCutFastReadyInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCutFastReadyInit__9daAlink_cFv,
 };
 
 /* 803B22B0-803B22BC 000C+00 s=1 e=0 z=0  None .data      @4828                                                        */
 SECTION_DATA static void* lit_4828[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procCopyRodReviveInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procCopyRodReviveInit__9daAlink_cFv,
 };
 
 /* 803B22BC-803B22C8 000C+00 s=1 e=0 z=0  None .data      @4829                                                        */
 SECTION_DATA static void* lit_4829[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSwordPushInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procSwordPushInit__9daAlink_cFv,
 };
 
 /* 803B22C8-803B22D4 000C+00 s=1 e=0 z=0  None .data      @4830                                                        */
 SECTION_DATA static void* lit_4830[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procGanonFinishInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procGanonFinishInit__9daAlink_cFv,
 };
 
 /* 803B22D4-803B22E0 000C+00 s=1 e=0 z=0  None .data      @4831                                                        */
 SECTION_DATA static void* lit_4831[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procHorseLookDownInit__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procHorseLookDownInit__9daAlink_cFv,
 };
 
 /* 803B22E0-803B2754 0474+00 s=2 e=0 z=0  None .data      m_demoInitTable__9daAlink_c                                  */
@@ -14253,60 +14253,60 @@ SECTION_DATA static u8 l_jntColPos17[12] = {
 
 /* 803B29AC-803B2A84 00D8+00 s=1 e=0 z=0  None .data      l_jntColData                                                 */
 SECTION_DATA static void* l_jntColData[54] = {
-	/* 0    */ (void*)0x01000001,
-	/* 1    */ (void*)0x41900000,
-	/* 2    */ (void*)&l_jntColPos0,
-	/* 3    */ (void*)0x00000004,
-	/* 4    */ (void*)0x41800000,
-	/* 5    */ (void*)&l_jntColPos1,
-	/* 6    */ (void*)0x01000007,
-	/* 7    */ (void*)0x40E00000,
-	/* 8    */ (void*)&l_jntColPos2,
-	/* 9    */ (void*)0x0100000C,
-	/* 10   */ (void*)0x40E00000,
-	/* 11   */ (void*)&l_jntColPos2,
-	/* 12   */ (void*)0x01000008,
-	/* 13   */ (void*)0x40C00000,
-	/* 14   */ (void*)&l_jntColPos4,
-	/* 15   */ (void*)0x0100000D,
-	/* 16   */ (void*)0x40C00000,
-	/* 17   */ (void*)&l_jntColPos4,
-	/* 18   */ (void*)0x00000009,
-	/* 19   */ (void*)0x40C00000,
-	/* 20   */ (void*)&l_jntColPos6,
-	/* 21   */ (void*)0x0000000E,
-	/* 22   */ (void*)0x40C00000,
-	/* 23   */ (void*)&l_jntColPos6,
-	/* 24   */ (void*)0x01000010,
-	/* 25   */ (void*)0x41900000,
-	/* 26   */ (void*)&l_jntColPos8,
-	/* 27   */ (void*)0x01000012,
-	/* 28   */ (void*)0x41000000,
-	/* 29   */ (void*)&l_jntColPos9,
-	/* 30   */ (void*)0x01000017,
-	/* 31   */ (void*)0x41000000,
-	/* 32   */ (void*)&l_jntColPos10,
-	/* 33   */ (void*)0x01000013,
-	/* 34   */ (void*)0x40E00000,
-	/* 35   */ (void*)&l_jntColPos11,
-	/* 36   */ (void*)0x01000018,
-	/* 37   */ (void*)0x40E00000,
-	/* 38   */ (void*)&l_jntColPos12,
-	/* 39   */ (void*)0x01000014,
-	/* 40   */ (void*)0x40C00000,
-	/* 41   */ (void*)&l_jntColPos13,
-	/* 42   */ (void*)0x01000019,
-	/* 43   */ (void*)0x40C00000,
-	/* 44   */ (void*)&l_jntColPos14,
-	/* 45   */ (void*)0x0203000F,
-	/* 46   */ (void*)0x42200000,
-	/* 47   */ (void*)&l_jntColPos15,
-	/* 48   */ (void*)0x02030005,
-	/* 49   */ (void*)0x42200000,
-	/* 50   */ (void*)&l_jntColPos16,
-	/* 51   */ (void*)0x0003000F,
-	/* 52   */ (void*)0x42340000,
-	/* 53   */ (void*)&l_jntColPos17,
+	(void*)0x01000001,
+	(void*)0x41900000,
+	(void*)&l_jntColPos0,
+	(void*)0x00000004,
+	(void*)0x41800000,
+	(void*)&l_jntColPos1,
+	(void*)0x01000007,
+	(void*)0x40E00000,
+	(void*)&l_jntColPos2,
+	(void*)0x0100000C,
+	(void*)0x40E00000,
+	(void*)&l_jntColPos2,
+	(void*)0x01000008,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos4,
+	(void*)0x0100000D,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos4,
+	(void*)0x00000009,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos6,
+	(void*)0x0000000E,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos6,
+	(void*)0x01000010,
+	(void*)0x41900000,
+	(void*)&l_jntColPos8,
+	(void*)0x01000012,
+	(void*)0x41000000,
+	(void*)&l_jntColPos9,
+	(void*)0x01000017,
+	(void*)0x41000000,
+	(void*)&l_jntColPos10,
+	(void*)0x01000013,
+	(void*)0x40E00000,
+	(void*)&l_jntColPos11,
+	(void*)0x01000018,
+	(void*)0x40E00000,
+	(void*)&l_jntColPos12,
+	(void*)0x01000014,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos13,
+	(void*)0x01000019,
+	(void*)0x40C00000,
+	(void*)&l_jntColPos14,
+	(void*)0x0203000F,
+	(void*)0x42200000,
+	(void*)&l_jntColPos15,
+	(void*)0x02030005,
+	(void*)0x42200000,
+	(void*)&l_jntColPos16,
+	(void*)0x0003000F,
+	(void*)0x42340000,
+	(void*)&l_jntColPos17,
 };
 
 /* 803B2A84-803B2A9C 0018+00 s=1 e=0 z=0  None .data      l_wolfJntColPos0                                             */
@@ -14370,60 +14370,60 @@ SECTION_DATA static u8 l_wolfJntColPos16[24] = {
 
 /* 803B2B68-803B2C40 00D8+00 s=1 e=0 z=0  None .data      l_wolfJntColData                                             */
 SECTION_DATA static void* l_wolfJntColData[54] = {
-	/* 0    */ (void*)0x01000001,
-	/* 1    */ (void*)0x41E00000,
-	/* 2    */ (void*)&l_wolfJntColPos0,
-	/* 3    */ (void*)0x00000004,
-	/* 4    */ (void*)0x41C80000,
-	/* 5    */ (void*)&l_wolfJntColPos1,
-	/* 6    */ (void*)0x01000010,
-	/* 7    */ (void*)0x41200000,
-	/* 8    */ (void*)&l_wolfJntColPos2,
-	/* 9    */ (void*)0x01000015,
-	/* 10   */ (void*)0x41200000,
-	/* 11   */ (void*)&l_wolfJntColPos2,
-	/* 12   */ (void*)0x01000011,
-	/* 13   */ (void*)0x40C00000,
-	/* 14   */ (void*)&l_wolfJntColPos4,
-	/* 15   */ (void*)0x01000016,
-	/* 16   */ (void*)0x40C00000,
-	/* 17   */ (void*)&l_wolfJntColPos4,
-	/* 18   */ (void*)0x01000012,
-	/* 19   */ (void*)0x40800000,
-	/* 20   */ (void*)&l_wolfJntColPos6,
-	/* 21   */ (void*)0x01000017,
-	/* 22   */ (void*)0x40800000,
-	/* 23   */ (void*)&l_wolfJntColPos6,
-	/* 24   */ (void*)0x01000013,
-	/* 25   */ (void*)0x40800000,
-	/* 26   */ (void*)&l_wolfJntColPos8,
-	/* 27   */ (void*)0x01000018,
-	/* 28   */ (void*)0x40800000,
-	/* 29   */ (void*)&l_wolfJntColPos8,
-	/* 30   */ (void*)0x0100001C,
-	/* 31   */ (void*)0x41300000,
-	/* 32   */ (void*)&l_wolfJntColPos10,
-	/* 33   */ (void*)0x01000021,
-	/* 34   */ (void*)0x41300000,
-	/* 35   */ (void*)&l_wolfJntColPos10,
-	/* 36   */ (void*)0x0100001D,
-	/* 37   */ (void*)0x40E00000,
-	/* 38   */ (void*)&l_wolfJntColPos12,
-	/* 39   */ (void*)0x01000022,
-	/* 40   */ (void*)0x40E00000,
-	/* 41   */ (void*)&l_wolfJntColPos12,
-	/* 42   */ (void*)0x0100001E,
-	/* 43   */ (void*)0x40A00000,
-	/* 44   */ (void*)&l_wolfJntColPos14,
-	/* 45   */ (void*)0x01000023,
-	/* 46   */ (void*)0x40A00000,
-	/* 47   */ (void*)&l_wolfJntColPos14,
-	/* 48   */ (void*)0x0100001F,
-	/* 49   */ (void*)0x40C00000,
-	/* 50   */ (void*)&l_wolfJntColPos16,
-	/* 51   */ (void*)0x01000024,
-	/* 52   */ (void*)0x40A00000,
-	/* 53   */ (void*)&l_wolfJntColPos16,
+	(void*)0x01000001,
+	(void*)0x41E00000,
+	(void*)&l_wolfJntColPos0,
+	(void*)0x00000004,
+	(void*)0x41C80000,
+	(void*)&l_wolfJntColPos1,
+	(void*)0x01000010,
+	(void*)0x41200000,
+	(void*)&l_wolfJntColPos2,
+	(void*)0x01000015,
+	(void*)0x41200000,
+	(void*)&l_wolfJntColPos2,
+	(void*)0x01000011,
+	(void*)0x40C00000,
+	(void*)&l_wolfJntColPos4,
+	(void*)0x01000016,
+	(void*)0x40C00000,
+	(void*)&l_wolfJntColPos4,
+	(void*)0x01000012,
+	(void*)0x40800000,
+	(void*)&l_wolfJntColPos6,
+	(void*)0x01000017,
+	(void*)0x40800000,
+	(void*)&l_wolfJntColPos6,
+	(void*)0x01000013,
+	(void*)0x40800000,
+	(void*)&l_wolfJntColPos8,
+	(void*)0x01000018,
+	(void*)0x40800000,
+	(void*)&l_wolfJntColPos8,
+	(void*)0x0100001C,
+	(void*)0x41300000,
+	(void*)&l_wolfJntColPos10,
+	(void*)0x01000021,
+	(void*)0x41300000,
+	(void*)&l_wolfJntColPos10,
+	(void*)0x0100001D,
+	(void*)0x40E00000,
+	(void*)&l_wolfJntColPos12,
+	(void*)0x01000022,
+	(void*)0x40E00000,
+	(void*)&l_wolfJntColPos12,
+	(void*)0x0100001E,
+	(void*)0x40A00000,
+	(void*)&l_wolfJntColPos14,
+	(void*)0x01000023,
+	(void*)0x40A00000,
+	(void*)&l_wolfJntColPos14,
+	(void*)0x0100001F,
+	(void*)0x40C00000,
+	(void*)&l_wolfJntColPos16,
+	(void*)0x01000024,
+	(void*)0x40A00000,
+	(void*)&l_wolfJntColPos16,
 };
 
 /* 803B2C40-803B2C50 000D+03 s=1 e=0 z=0  None .data      defaultPortal$39238                                          */
@@ -14461,44 +14461,44 @@ SECTION_DATA static u8 data_803B2C8C[22 + 2 /* padding */] = {
 
 /* 803B2CA4-803B2CB0 000C+00 s=1 e=0 z=0  None .data      @39610                                                       */
 SECTION_DATA static void* lit_39610[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectFrontRollParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectFrontRollParam__9daAlink_cFv,
 };
 
 /* 803B2CB0-803B2CBC 000C+00 s=1 e=0 z=0  None .data      @39611                                                       */
 SECTION_DATA static void* lit_39611[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectSlipParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectSlipParam__9daAlink_cFv,
 };
 
 /* 803B2CBC-803B2CC8 000C+00 s=1 e=0 z=0  None .data      @39612                                                       */
 SECTION_DATA static void* lit_39612[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectSmallLandParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectSmallLandParam__9daAlink_cFv,
 };
 
 /* 803B2CC8-803B2CD4 000C+00 s=1 e=0 z=0  None .data      @39613                                                       */
 SECTION_DATA static void* lit_39613[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectRunParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectRunParam__9daAlink_cFv,
 };
 
 /* 803B2CD4-803B2CE0 000C+00 s=1 e=0 z=0  None .data      @39614                                                       */
 SECTION_DATA static void* lit_39614[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectLandParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectLandParam__9daAlink_cFv,
 };
 
 /* 803B2CE0-803B2CEC 000C+00 s=1 e=0 z=0  None .data      @39615                                                       */
 SECTION_DATA static void* lit_39615[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setEffectSumouParam__9daAlink_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)setEffectSumouParam__9daAlink_cFv,
 };
 
 /* 803B2CEC-803B2D34 0048+00 s=2 e=0 z=0  None .data      m_fEffParamProc__9daAlink_c                                  */
@@ -14540,44 +14540,44 @@ SECTION_DATA static u8 data_803B2D88[12] = {
 
 /* 803B2D94-803B2DA0 000C+00 s=1 e=0 z=0  None .data      bodyBrkName$69118                                            */
 SECTION_DATA static void* data_803B2D94[3] = {
-	/* 0    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x494),
-	/* 1    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4AB),
-	/* 2    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4C2),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x494),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4AB),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4C2),
 };
 
 /* 803B2DA0-803B2DAC 000C+00 s=1 e=0 z=0  None .data      headBrkName$69119                                            */
 SECTION_DATA static void* data_803B2DA0[3] = {
-	/* 0    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4D9),
-	/* 1    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4F0),
-	/* 2    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0x507),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4D9),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x4F0),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0x507),
 };
 
 /* 803B2DAC-803B2DCC 0020+00 s=1 e=0 z=0  None .data      l_daAlink_Method                                             */
 SECTION_DATA static void* l_daAlink_Method[8] = {
-	/* 0    */ (void*)daAlink_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daAlink_Delete__FP9daAlink_c,
-	/* 2    */ (void*)daAlink_Execute__FP9daAlink_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daAlink_Draw__FP9daAlink_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)daAlink_Create__FP10fopAc_ac_c,
+	(void*)daAlink_Delete__FP9daAlink_c,
+	(void*)daAlink_Execute__FP9daAlink_c,
+	(void*)NULL,
+	(void*)daAlink_Draw__FP9daAlink_c,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=1  None .data      g_profile_ALINK                                              */
+/* 803B2DCC-803B2E20 0030+24 s=0 e=0 z=0  None .data      g_profile_ALINK                                              */
 SECTION_DATA void* g_profile_ALINK[12 + 9 /* padding */] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0005FFFD,
-	/* 2    */ (void*)0x00FD0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000385C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x005B0000,
-	/* 9    */ (void*)&l_daAlink_Method,
-	/* 10   */ (void*)0x00060400,
-	/* 11   */ (void*)0x01000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0005FFFD,
+	(void*)0x00FD0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x0000385C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x005B0000,
+	(void*)&l_daAlink_Method,
+	(void*)0x00060400,
+	(void*)0x01000000,
 	/* padding */
 	NULL,
 	NULL,
@@ -14592,9 +14592,9 @@ SECTION_DATA void* g_profile_ALINK[12 + 9 /* padding */] = {
 
 /* 803B2E20-803B2E80 000C+54 s=2 e=0 z=0  None .data      __vt__16daPy_frameCtrl_c                                     */
 SECTION_DATA static void* __vt__16daPy_frameCtrl_c[3 + 21 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daPy_frameCtrl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16daPy_frameCtrl_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -14621,9 +14621,9 @@ SECTION_DATA static void* __vt__16daPy_frameCtrl_c[3 + 21 /* padding */] = {
 
 /* 803B2E80-803B2EC8 000C+3C s=3 e=0 z=0  None .data      __vt__8dEyeHL_c                                              */
 SECTION_DATA static void* __vt__8dEyeHL_c[3 + 15 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8dEyeHL_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8dEyeHL_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -14644,47 +14644,47 @@ SECTION_DATA static void* __vt__8dEyeHL_c[3 + 15 /* padding */] = {
 
 /* 803B2EC8-803B2EF8 0030+00 s=3 e=0 z=0  None .data      __vt__16dBgS_LinkRoofChk                                     */
 SECTION_DATA static void* __vt__16dBgS_LinkRoofChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dBgS_LinkRoofChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8014470C,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8014471C,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_80144714,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dBgS_LinkRoofChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8014470C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8014471C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80144714,
 };
 
 /* 803B2EF8-803B2F28 0030+00 s=3 e=0 z=0  None .data      __vt__15dBgS_LinkGndChk                                      */
 SECTION_DATA static void* __vt__15dBgS_LinkGndChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dBgS_LinkGndChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_801446F4,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80144704,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_801446FC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dBgS_LinkGndChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446F4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80144704,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446FC,
 };
 
 /* 803B2F28-803B2F70 0024+24 s=3 e=0 z=0  None .data      __vt__13dBgS_LinkAcch                                        */
 SECTION_DATA static void* __vt__13dBgS_LinkAcch[9 + 9 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13dBgS_LinkAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_801446EC,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_801446E4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13dBgS_LinkAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446EC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446E4,
 	/* padding */
 	NULL,
 	NULL,
@@ -14699,184 +14699,184 @@ SECTION_DATA static void* __vt__13dBgS_LinkAcch[9 + 9 /* padding */] = {
 
 /* 803B2F70-803B321C 02AC+00 s=2 e=0 z=0  None .data      __vt__9daPy_py_c                                             */
 SECTION_DATA static void* __vt__9daPy_py_c[171] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getMidnaAtnPos__9daPy_py_cCFv,
-	/* 3    */ (void*)setMidnaMsgNum__9daPy_py_cFP10fopAc_ac_cUs,
-	/* 4    */ (void*)getModelMtx__9daPy_py_cFv,
-	/* 5    */ (void*)getInvMtx__9daPy_py_cFv,
-	/* 6    */ (void*)getShadowTalkAtnPos__9daPy_py_cFv,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)getLeftItemMatrix__9daPy_py_cFv,
-	/* 9    */ (void*)getRightItemMatrix__9daPy_py_cFv,
-	/* 10   */ (void*)getLeftHandMatrix__9daPy_py_cFv,
-	/* 11   */ (void*)getRightHandMatrix__9daPy_py_cFv,
-	/* 12   */ (void*)getLinkBackBone1Matrix__9daPy_py_cFv,
-	/* 13   */ (void*)getWolfMouthMatrix__9daPy_py_cFv,
-	/* 14   */ (void*)getWolfBackbone2Matrix__9daPy_py_cFv,
-	/* 15   */ (void*)getBottleMtx__9daPy_py_cFv,
-	/* 16   */ (void*)checkPlayerGuard__9daPy_py_cCFv,
-	/* 17   */ (void*)checkPlayerFly__9daPy_py_cCFv,
-	/* 18   */ (void*)checkFrontRoll__9daPy_py_cCFv,
-	/* 19   */ (void*)checkWolfDash__9daPy_py_cCFv,
-	/* 20   */ (void*)checkAutoJump__9daPy_py_cCFv,
-	/* 21   */ (void*)checkSideStep__9daPy_py_cCFv,
-	/* 22   */ (void*)checkWolfTriggerJump__9daPy_py_cCFv,
-	/* 23   */ (void*)checkGuardBreakMode__9daPy_py_cCFv,
-	/* 24   */ (void*)checkLv3Slide__9daPy_py_cCFv,
-	/* 25   */ (void*)checkWolfHowlDemoMode__9daPy_py_cCFv,
-	/* 26   */ (void*)checkChainBlockPushPull__9daPy_py_cFv,
-	/* 27   */ (void*)checkElecDamage__9daPy_py_cCFv,
-	/* 28   */ (void*)checkEmptyBottleSwing__9daPy_py_cCFv,
-	/* 29   */ (void*)checkBottleSwingMode__9daPy_py_cCFv,
-	/* 30   */ (void*)checkHawkWait__9daPy_py_cCFv,
-	/* 31   */ (void*)checkGoatThrow__9daPy_py_cCFv,
-	/* 32   */ (void*)checkGoatThrowAfter__9daPy_py_cCFv,
-	/* 33   */ (void*)checkWolfTagLockJump__9daPy_py_cCFv,
-	/* 34   */ (void*)checkWolfTagLockJumpLand__9daPy_py_cCFv,
-	/* 35   */ (void*)checkWolfRope__9daPy_py_cFv,
-	/* 36   */ (void*)checkWolfRopeHang__9daPy_py_cCFv,
-	/* 37   */ (void*)checkRollJump__9daPy_py_cCFv,
-	/* 38   */ (void*)checkGoronRideWait__9daPy_py_cCFv,
-	/* 39   */ (void*)checkWolfChain__9daPy_py_cCFv,
-	/* 40   */ (void*)checkWolfWait__9daPy_py_cCFv,
-	/* 41   */ (void*)checkWolfJumpAttack__9daPy_py_cCFv,
-	/* 42   */ (void*)checkWolfRSit__9daPy_py_cCFv,
-	/* 43   */ (void*)checkBubbleFly__9daPy_py_cCFv,
-	/* 44   */ (void*)checkBottleDrinkEnd__9daPy_py_cCFv,
-	/* 45   */ (void*)checkWolfDig__9daPy_py_cCFv,
-	/* 46   */ (void*)checkCutCharge__9daPy_py_cCFv,
-	/* 47   */ (void*)checkCutTurnCharge__9daPy_py_cCFv,
-	/* 48   */ (void*)checkCutLargeJumpCharge__9daPy_py_cCFv,
-	/* 49   */ (void*)getBokoFlamePos__9daPy_py_cFP4cXyz,
-	/* 50   */ (void*)checkComboCutTurn__9daPy_py_cCFv,
-	/* 51   */ (void*)checkClimbMove__9daPy_py_cCFv,
-	/* 52   */ (void*)checkGrassWhistle__9daPy_py_cCFv,
-	/* 53   */ (void*)checkBoarRun__9daPy_py_cCFv,
-	/* 54   */ (void*)checkFmChainPut__9daPy_py_cCFv,
-	/* 55   */ (void*)checkHorseElecDamage__9daPy_py_cCFv,
-	/* 56   */ (void*)getBaseAnimeFrameRate__9daPy_py_cCFv,
-	/* 57   */ (void*)getBaseAnimeFrame__9daPy_py_cCFv,
-	/* 58   */ (void*)setAnimeFrame__9daPy_py_cFf,
-	/* 59   */ (void*)checkWolfLock__9daPy_py_cCFP10fopAc_ac_c,
-	/* 60   */ (void*)cancelWolfLock__9daPy_py_cFP10fopAc_ac_c,
-	/* 61   */ (void*)getAtnActorID__9daPy_py_cCFv,
-	/* 62   */ (void*)getItemID__9daPy_py_cCFv,
-	/* 63   */ (void*)getGrabActorID__9daPy_py_cCFv,
-	/* 64   */ (void*)exchangeGrabActor__9daPy_py_cFP10fopAc_ac_c,
-	/* 65   */ (void*)setForceGrab__9daPy_py_cFP10fopAc_ac_cii,
-	/* 66   */ (void*)setForcePutPos__9daPy_py_cFRC4cXyz,
-	/* 67   */ (void*)checkPlayerNoDraw__9daPy_py_cFv,
-	/* 68   */ (void*)checkRopeTag__9daPy_py_cFv,
-	/* 69   */ (void*)voiceStart__9daPy_py_cFUl,
-	/* 70   */ (void*)seStartOnlyReverb__9daPy_py_cFUl,
-	/* 71   */ (void*)seStartOnlyReverbLevel__9daPy_py_cFUl,
-	/* 72   */ (void*)setOutPower__9daPy_py_cFfsi,
-	/* 73   */ (void*)setGrabCollisionOffset__9daPy_py_cFffP13cBgS_PolyInfo,
-	/* 74   */ (void*)onMagneGrab__9daPy_py_cFff,
-	/* 75   */ (void*)onFrollCrashFlg__9daPy_py_cFUci,
-	/* 76   */ (void*)getModelJointMtx__9daPy_py_cFUs,
-	/* 77   */ (void*)getHeadMtx__9daPy_py_cFv,
-	/* 78   */ (void*)setHookshotCarryOffset__9daPy_py_cFUiPC4cXyz,
-	/* 79   */ (void*)checkCutJumpCancelTurn__9daPy_py_cCFv,
-	/* 80   */ (void*)checkIronBallReturn__9daPy_py_cCFv,
-	/* 81   */ (void*)checkIronBallGroundStop__9daPy_py_cCFv,
-	/* 82   */ (void*)checkSingleBoarBattleSecondBowReady__9daPy_py_cCFv,
-	/* 83   */ (void*)checkPointSubWindowMode__9daPy_py_cCFv,
-	/* 84   */ (void*)setClothesChange__9daPy_py_cFi,
-	/* 85   */ (void*)setPlayerPosAndAngle__9daPy_py_cFPC4cXyzsi,
-	/* 86   */ (void*)setPlayerPosAndAngle__9daPy_py_cFPC4cXyzPC5csXyz,
-	/* 87   */ (void*)setPlayerPosAndAngle__9daPy_py_cFPA4_f,
-	/* 88   */ (void*)setThrowDamage__9daPy_py_cFsffiii,
-	/* 89   */ (void*)checkSetNpcTks__9daPy_py_cFP4cXyzii,
-	/* 90   */ (void*)setRollJump__9daPy_py_cFffs,
-	/* 91   */ (void*)playerStartCollisionSE__9daPy_py_cFUlUl,
-	/* 92   */ (void*)changeTextureAnime__9daPy_py_cFUsUsi,
-	/* 93   */ (void*)cancelChangeTextureAnime__9daPy_py_cFv,
-	/* 94   */ (void*)cancelDungeonWarpReadyNeck__9daPy_py_cFv,
-	/* 95   */ (void*)onSceneChangeArea__9daPy_py_cFUcUcP10fopAc_ac_c,
-	/* 96   */ (void*)onSceneChangeAreaJump__9daPy_py_cFUcUcP10fopAc_ac_c,
-	/* 97   */ (void*)onSceneChangeDead__9daPy_py_cFUci,
-	/* 98   */ (void*)checkHorseRide__9daPy_py_cCFv,
-	/* 99   */ (void*)checkBoarRide__9daPy_py_cCFv,
-	/* 100  */ (void*)checkCanoeRide__9daPy_py_cCFv,
-	/* 101  */ (void*)checkBoardRide__9daPy_py_cCFv,
-	/* 102  */ (void*)checkSpinnerRide__9daPy_py_cCFv,
-	/* 103  */ (void*)getSpinnerActor__9daPy_py_cFv,
-	/* 104  */ (void*)checkHorseRideNotReady__9daPy_py_cCFv,
-	/* 105  */ (void*)checkArrowChargeEnd__9daPy_py_cCFv,
-	/* 106  */ (void*)getSearchBallScale__9daPy_py_cCFv,
-	/* 107  */ (void*)checkFastShotTime__9daPy_py_cFv,
-	/* 108  */ (void*)checkNoEquipItem__9daPy_py_cCFv,
-	/* 109  */ (void*)checkFireMaterial__9daPy_py_cCFv,
-	/* 110  */ (void*)checkKandelaarSwing__9daPy_py_cCFi,
-	/* 111  */ (void*)getBoardCutTurnOffsetAngleY__9daPy_py_cCFv,
-	/* 112  */ (void*)getMagneHitPos__9daPy_py_cFv,
-	/* 113  */ (void*)getMagneBootsTopVec__9daPy_py_cFv,
-	/* 114  */ (void*)getKandelaarFlamePos__9daPy_py_cFv,
-	/* 115  */ (void*)checkUseKandelaar__9daPy_py_cFi,
-	/* 116  */ (void*)setDkCaught__9daPy_py_cFP10fopAc_ac_c,
-	/* 117  */ (void*)onPressedDamage__9daPy_py_cFRC4cXyzs,
-	/* 118  */ (void*)checkPriActorOwn__9daPy_py_cCFPC10fopAc_ac_c,
-	/* 119  */ (void*)onWolfEnemyBiteAll__9daPy_py_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2,
-	/* 120  */ (void*)checkWolfEnemyBiteAllOwn__9daPy_py_cCFPC10fopAc_ac_c,
-	/* 121  */ (void*)setWolfEnemyHangBiteAngle__9daPy_py_cFs,
-	/* 122  */ (void*)setKandelaarMtx__9daPy_py_cFPA4_fii,
-	/* 123  */ (void*)getStickAngleFromPlayerShape__9daPy_py_cCFPs,
-	/* 124  */ (void*)checkSpinnerPathMove__9daPy_py_cFv,
-	/* 125  */ (void*)checkSpinnerTriggerAttack__9daPy_py_cFv,
-	/* 126  */ (void*)onSpinnerPathForceRemove__9daPy_py_cFv,
-	/* 127  */ (void*)getIronBallBgHit__9daPy_py_cCFv,
-	/* 128  */ (void*)getIronBallCenterPos__9daPy_py_cFv,
-	/* 129  */ (void*)checkCanoeFishingGetLeft__9daPy_py_cCFv,
-	/* 130  */ (void*)checkCanoeFishingGetRight__9daPy_py_cCFv,
-	/* 131  */ (void*)checkBeeChildDrink__9daPy_py_cCFv,
-	/* 132  */ (void*)skipPortalObjWarp__9daPy_py_cFv,
-	/* 133  */ (void*)checkTreasureRupeeReturn__9daPy_py_cCFi,
-	/* 134  */ (void*)setSumouReady__9daPy_py_cFP10fopAc_ac_c,
-	/* 135  */ (void*)checkAcceptDungeonWarpAlink__9daPy_py_cFi,
-	/* 136  */ (void*)getSumouCounter__9daPy_py_cCFv,
-	/* 137  */ (void*)checkSumouWithstand__9daPy_py_cCFv,
-	/* 138  */ (void*)cancelGoronThrowEvent__9daPy_py_cFv,
-	/* 139  */ (void*)setSumouGraspCancelCount__9daPy_py_cFi,
-	/* 140  */ (void*)setSumouPushBackDirection__9daPy_py_cFs,
-	/* 141  */ (void*)setSumouLoseHeadUp__9daPy_py_cFv,
-	/* 142  */ (void*)getGiantPuzzleAimAngle__9daPy_py_cCFv,
-	/* 143  */ (void*)setGoronSideMove__9daPy_py_cFP10fopAc_ac_c,
-	/* 144  */ (void*)setCargoCarry__9daPy_py_cFP10fopAc_ac_c,
-	/* 145  */ (void*)getDpdFarFlg__9daPy_py_cCFv,
-	/* 146  */ (void*)getHookshotTopPos__9daPy_py_cFv,
-	/* 147  */ (void*)checkHookshotReturnMode__9daPy_py_cCFv,
-	/* 148  */ (void*)checkHookshotShootReturnMode__9daPy_py_cCFv,
-	/* 149  */ (void*)checkOctaIealHang__9daPy_py_cCFv,
-	/* 150  */ (void*)cancelOctaIealHang__9daPy_py_cFv,
-	/* 151  */ (void*)cancelDragonHangBackJump__9daPy_py_cFv,
-	/* 152  */ (void*)setOctaIealWildHang__9daPy_py_cFv,
-	/* 153  */ (void*)checkDragonHangRide__9daPy_py_cCFv,
-	/* 154  */ (void*)changeDragonActor__9daPy_py_cFP10fopAc_ac_c,
-	/* 155  */ (void*)getClothesChangeWaitTimer__9daPy_py_cCFv,
-	/* 156  */ (void*)getShieldChangeWaitTimer__9daPy_py_cCFv,
-	/* 157  */ (void*)getSwordChangeWaitTimer__9daPy_py_cCFv,
-	/* 158  */ (void*)checkMetamorphose__9daPy_py_cCFv,
-	/* 159  */ (void*)checkWolfDownAttackPullOut__9daPy_py_cCFv,
-	/* 160  */ (void*)checkBootsOrArmorHeavy__9daPy_py_cCFv,
-	/* 161  */ (void*)getBottleOpenAppearItem__9daPy_py_cCFv,
-	/* 162  */ (void*)checkItemSwordEquip__9daPy_py_cCFv,
-	/* 163  */ (void*)getSinkShapeOffset__9daPy_py_cCFv,
-	/* 164  */ (void*)checkSinkDead__9daPy_py_cCFv,
-	/* 165  */ (void*)checkHorseStart__9daPy_py_cFv,
-	/* 166  */ (void*)getWolfHowlMgrP__9daPy_py_cFv,
-	/* 167  */ (void*)checkWolfHowlSuccessAnime__9daPy_py_cCFv,
-	/* 168  */ (void*)checkCopyRodTopUse__9daPy_py_cFv,
-	/* 169  */ (void*)checkCopyRodEquip__9daPy_py_cCFv,
-	/* 170  */ (void*)checkCutJumpMode__9daPy_py_cCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getMidnaAtnPos__9daPy_py_cCFv,
+	(void*)setMidnaMsgNum__9daPy_py_cFP10fopAc_ac_cUs,
+	(void*)getModelMtx__9daPy_py_cFv,
+	(void*)getInvMtx__9daPy_py_cFv,
+	(void*)getShadowTalkAtnPos__9daPy_py_cFv,
+	(void*)NULL,
+	(void*)getLeftItemMatrix__9daPy_py_cFv,
+	(void*)getRightItemMatrix__9daPy_py_cFv,
+	(void*)getLeftHandMatrix__9daPy_py_cFv,
+	(void*)getRightHandMatrix__9daPy_py_cFv,
+	(void*)getLinkBackBone1Matrix__9daPy_py_cFv,
+	(void*)getWolfMouthMatrix__9daPy_py_cFv,
+	(void*)getWolfBackbone2Matrix__9daPy_py_cFv,
+	(void*)getBottleMtx__9daPy_py_cFv,
+	(void*)checkPlayerGuard__9daPy_py_cCFv,
+	(void*)checkPlayerFly__9daPy_py_cCFv,
+	(void*)checkFrontRoll__9daPy_py_cCFv,
+	(void*)checkWolfDash__9daPy_py_cCFv,
+	(void*)checkAutoJump__9daPy_py_cCFv,
+	(void*)checkSideStep__9daPy_py_cCFv,
+	(void*)checkWolfTriggerJump__9daPy_py_cCFv,
+	(void*)checkGuardBreakMode__9daPy_py_cCFv,
+	(void*)checkLv3Slide__9daPy_py_cCFv,
+	(void*)checkWolfHowlDemoMode__9daPy_py_cCFv,
+	(void*)checkChainBlockPushPull__9daPy_py_cFv,
+	(void*)checkElecDamage__9daPy_py_cCFv,
+	(void*)checkEmptyBottleSwing__9daPy_py_cCFv,
+	(void*)checkBottleSwingMode__9daPy_py_cCFv,
+	(void*)checkHawkWait__9daPy_py_cCFv,
+	(void*)checkGoatThrow__9daPy_py_cCFv,
+	(void*)checkGoatThrowAfter__9daPy_py_cCFv,
+	(void*)checkWolfTagLockJump__9daPy_py_cCFv,
+	(void*)checkWolfTagLockJumpLand__9daPy_py_cCFv,
+	(void*)checkWolfRope__9daPy_py_cFv,
+	(void*)checkWolfRopeHang__9daPy_py_cCFv,
+	(void*)checkRollJump__9daPy_py_cCFv,
+	(void*)checkGoronRideWait__9daPy_py_cCFv,
+	(void*)checkWolfChain__9daPy_py_cCFv,
+	(void*)checkWolfWait__9daPy_py_cCFv,
+	(void*)checkWolfJumpAttack__9daPy_py_cCFv,
+	(void*)checkWolfRSit__9daPy_py_cCFv,
+	(void*)checkBubbleFly__9daPy_py_cCFv,
+	(void*)checkBottleDrinkEnd__9daPy_py_cCFv,
+	(void*)checkWolfDig__9daPy_py_cCFv,
+	(void*)checkCutCharge__9daPy_py_cCFv,
+	(void*)checkCutTurnCharge__9daPy_py_cCFv,
+	(void*)checkCutLargeJumpCharge__9daPy_py_cCFv,
+	(void*)getBokoFlamePos__9daPy_py_cFP4cXyz,
+	(void*)checkComboCutTurn__9daPy_py_cCFv,
+	(void*)checkClimbMove__9daPy_py_cCFv,
+	(void*)checkGrassWhistle__9daPy_py_cCFv,
+	(void*)checkBoarRun__9daPy_py_cCFv,
+	(void*)checkFmChainPut__9daPy_py_cCFv,
+	(void*)checkHorseElecDamage__9daPy_py_cCFv,
+	(void*)getBaseAnimeFrameRate__9daPy_py_cCFv,
+	(void*)getBaseAnimeFrame__9daPy_py_cCFv,
+	(void*)setAnimeFrame__9daPy_py_cFf,
+	(void*)checkWolfLock__9daPy_py_cCFP10fopAc_ac_c,
+	(void*)cancelWolfLock__9daPy_py_cFP10fopAc_ac_c,
+	(void*)getAtnActorID__9daPy_py_cCFv,
+	(void*)getItemID__9daPy_py_cCFv,
+	(void*)getGrabActorID__9daPy_py_cCFv,
+	(void*)exchangeGrabActor__9daPy_py_cFP10fopAc_ac_c,
+	(void*)setForceGrab__9daPy_py_cFP10fopAc_ac_cii,
+	(void*)setForcePutPos__9daPy_py_cFRC4cXyz,
+	(void*)checkPlayerNoDraw__9daPy_py_cFv,
+	(void*)checkRopeTag__9daPy_py_cFv,
+	(void*)voiceStart__9daPy_py_cFUl,
+	(void*)seStartOnlyReverb__9daPy_py_cFUl,
+	(void*)seStartOnlyReverbLevel__9daPy_py_cFUl,
+	(void*)setOutPower__9daPy_py_cFfsi,
+	(void*)setGrabCollisionOffset__9daPy_py_cFffP13cBgS_PolyInfo,
+	(void*)onMagneGrab__9daPy_py_cFff,
+	(void*)onFrollCrashFlg__9daPy_py_cFUci,
+	(void*)getModelJointMtx__9daPy_py_cFUs,
+	(void*)getHeadMtx__9daPy_py_cFv,
+	(void*)setHookshotCarryOffset__9daPy_py_cFUiPC4cXyz,
+	(void*)checkCutJumpCancelTurn__9daPy_py_cCFv,
+	(void*)checkIronBallReturn__9daPy_py_cCFv,
+	(void*)checkIronBallGroundStop__9daPy_py_cCFv,
+	(void*)checkSingleBoarBattleSecondBowReady__9daPy_py_cCFv,
+	(void*)checkPointSubWindowMode__9daPy_py_cCFv,
+	(void*)setClothesChange__9daPy_py_cFi,
+	(void*)setPlayerPosAndAngle__9daPy_py_cFPC4cXyzsi,
+	(void*)setPlayerPosAndAngle__9daPy_py_cFPC4cXyzPC5csXyz,
+	(void*)setPlayerPosAndAngle__9daPy_py_cFPA4_f,
+	(void*)setThrowDamage__9daPy_py_cFsffiii,
+	(void*)checkSetNpcTks__9daPy_py_cFP4cXyzii,
+	(void*)setRollJump__9daPy_py_cFffs,
+	(void*)playerStartCollisionSE__9daPy_py_cFUlUl,
+	(void*)changeTextureAnime__9daPy_py_cFUsUsi,
+	(void*)cancelChangeTextureAnime__9daPy_py_cFv,
+	(void*)cancelDungeonWarpReadyNeck__9daPy_py_cFv,
+	(void*)onSceneChangeArea__9daPy_py_cFUcUcP10fopAc_ac_c,
+	(void*)onSceneChangeAreaJump__9daPy_py_cFUcUcP10fopAc_ac_c,
+	(void*)onSceneChangeDead__9daPy_py_cFUci,
+	(void*)checkHorseRide__9daPy_py_cCFv,
+	(void*)checkBoarRide__9daPy_py_cCFv,
+	(void*)checkCanoeRide__9daPy_py_cCFv,
+	(void*)checkBoardRide__9daPy_py_cCFv,
+	(void*)checkSpinnerRide__9daPy_py_cCFv,
+	(void*)getSpinnerActor__9daPy_py_cFv,
+	(void*)checkHorseRideNotReady__9daPy_py_cCFv,
+	(void*)checkArrowChargeEnd__9daPy_py_cCFv,
+	(void*)getSearchBallScale__9daPy_py_cCFv,
+	(void*)checkFastShotTime__9daPy_py_cFv,
+	(void*)checkNoEquipItem__9daPy_py_cCFv,
+	(void*)checkFireMaterial__9daPy_py_cCFv,
+	(void*)checkKandelaarSwing__9daPy_py_cCFi,
+	(void*)getBoardCutTurnOffsetAngleY__9daPy_py_cCFv,
+	(void*)getMagneHitPos__9daPy_py_cFv,
+	(void*)getMagneBootsTopVec__9daPy_py_cFv,
+	(void*)getKandelaarFlamePos__9daPy_py_cFv,
+	(void*)checkUseKandelaar__9daPy_py_cFi,
+	(void*)setDkCaught__9daPy_py_cFP10fopAc_ac_c,
+	(void*)onPressedDamage__9daPy_py_cFRC4cXyzs,
+	(void*)checkPriActorOwn__9daPy_py_cCFPC10fopAc_ac_c,
+	(void*)onWolfEnemyBiteAll__9daPy_py_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2,
+	(void*)checkWolfEnemyBiteAllOwn__9daPy_py_cCFPC10fopAc_ac_c,
+	(void*)setWolfEnemyHangBiteAngle__9daPy_py_cFs,
+	(void*)setKandelaarMtx__9daPy_py_cFPA4_fii,
+	(void*)getStickAngleFromPlayerShape__9daPy_py_cCFPs,
+	(void*)checkSpinnerPathMove__9daPy_py_cFv,
+	(void*)checkSpinnerTriggerAttack__9daPy_py_cFv,
+	(void*)onSpinnerPathForceRemove__9daPy_py_cFv,
+	(void*)getIronBallBgHit__9daPy_py_cCFv,
+	(void*)getIronBallCenterPos__9daPy_py_cFv,
+	(void*)checkCanoeFishingGetLeft__9daPy_py_cCFv,
+	(void*)checkCanoeFishingGetRight__9daPy_py_cCFv,
+	(void*)checkBeeChildDrink__9daPy_py_cCFv,
+	(void*)skipPortalObjWarp__9daPy_py_cFv,
+	(void*)checkTreasureRupeeReturn__9daPy_py_cCFi,
+	(void*)setSumouReady__9daPy_py_cFP10fopAc_ac_c,
+	(void*)checkAcceptDungeonWarpAlink__9daPy_py_cFi,
+	(void*)getSumouCounter__9daPy_py_cCFv,
+	(void*)checkSumouWithstand__9daPy_py_cCFv,
+	(void*)cancelGoronThrowEvent__9daPy_py_cFv,
+	(void*)setSumouGraspCancelCount__9daPy_py_cFi,
+	(void*)setSumouPushBackDirection__9daPy_py_cFs,
+	(void*)setSumouLoseHeadUp__9daPy_py_cFv,
+	(void*)getGiantPuzzleAimAngle__9daPy_py_cCFv,
+	(void*)setGoronSideMove__9daPy_py_cFP10fopAc_ac_c,
+	(void*)setCargoCarry__9daPy_py_cFP10fopAc_ac_c,
+	(void*)getDpdFarFlg__9daPy_py_cCFv,
+	(void*)getHookshotTopPos__9daPy_py_cFv,
+	(void*)checkHookshotReturnMode__9daPy_py_cCFv,
+	(void*)checkHookshotShootReturnMode__9daPy_py_cCFv,
+	(void*)checkOctaIealHang__9daPy_py_cCFv,
+	(void*)cancelOctaIealHang__9daPy_py_cFv,
+	(void*)cancelDragonHangBackJump__9daPy_py_cFv,
+	(void*)setOctaIealWildHang__9daPy_py_cFv,
+	(void*)checkDragonHangRide__9daPy_py_cCFv,
+	(void*)changeDragonActor__9daPy_py_cFP10fopAc_ac_c,
+	(void*)getClothesChangeWaitTimer__9daPy_py_cCFv,
+	(void*)getShieldChangeWaitTimer__9daPy_py_cCFv,
+	(void*)getSwordChangeWaitTimer__9daPy_py_cCFv,
+	(void*)checkMetamorphose__9daPy_py_cCFv,
+	(void*)checkWolfDownAttackPullOut__9daPy_py_cCFv,
+	(void*)checkBootsOrArmorHeavy__9daPy_py_cCFv,
+	(void*)getBottleOpenAppearItem__9daPy_py_cCFv,
+	(void*)checkItemSwordEquip__9daPy_py_cCFv,
+	(void*)getSinkShapeOffset__9daPy_py_cCFv,
+	(void*)checkSinkDead__9daPy_py_cCFv,
+	(void*)checkHorseStart__9daPy_py_cFv,
+	(void*)getWolfHowlMgrP__9daPy_py_cFv,
+	(void*)checkWolfHowlSuccessAnime__9daPy_py_cCFv,
+	(void*)checkCopyRodTopUse__9daPy_py_cFv,
+	(void*)checkCopyRodEquip__9daPy_py_cCFv,
+	(void*)checkCutJumpMode__9daPy_py_cCFv,
 };
 
 /* 803B321C-803B32B8 000C+90 s=2 e=0 z=0  None .data      __vt__12daAlinkHIO_c                                         */
 SECTION_DATA static void* __vt__12daAlinkHIO_c[3 + 36 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daAlinkHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12daAlinkHIO_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -14918,185 +14918,185 @@ SECTION_DATA static void* __vt__12daAlinkHIO_c[3 + 36 /* padding */] = {
 
 /* 803B32B8-803B3564 02AC+00 s=2 e=0 z=0  None .data      __vt__9daAlink_c                                             */
 SECTION_DATA static void* __vt__9daAlink_c[171] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getMidnaAtnPos__9daAlink_cCFv,
-	/* 3    */ (void*)setMidnaMsgNum__9daAlink_cFP10fopAc_ac_cUs,
-	/* 4    */ (void*)getModelMtx__9daAlink_cFv,
-	/* 5    */ (void*)getInvMtx__9daAlink_cFv,
-	/* 6    */ (void*)getShadowTalkAtnPos__9daAlink_cFv,
-	/* 7    */ (void*)getGroundY__9daAlink_cFv,
-	/* 8    */ (void*)getLeftItemMatrix__9daAlink_cFv,
-	/* 9    */ (void*)getRightItemMatrix__9daAlink_cFv,
-	/* 10   */ (void*)getLeftHandMatrix__9daAlink_cFv,
-	/* 11   */ (void*)getRightHandMatrix__9daAlink_cFv,
-	/* 12   */ (void*)getLinkBackBone1Matrix__9daAlink_cFv,
-	/* 13   */ (void*)getWolfMouthMatrix__9daAlink_cFv,
-	/* 14   */ (void*)getWolfBackbone2Matrix__9daAlink_cFv,
-	/* 15   */ (void*)getBottleMtx__9daAlink_cFv,
-	/* 16   */ (void*)checkPlayerGuard__9daAlink_cCFv,
-	/* 17   */ (void*)checkPlayerFly__9daAlink_cCFv,
-	/* 18   */ (void*)checkFrontRoll__9daAlink_cCFv,
-	/* 19   */ (void*)checkWolfDash__9daAlink_cCFv,
-	/* 20   */ (void*)checkAutoJump__9daAlink_cCFv,
-	/* 21   */ (void*)checkSideStep__9daAlink_cCFv,
-	/* 22   */ (void*)checkWolfTriggerJump__9daAlink_cCFv,
-	/* 23   */ (void*)checkGuardBreakMode__9daAlink_cCFv,
-	/* 24   */ (void*)checkLv3Slide__9daAlink_cCFv,
-	/* 25   */ (void*)checkWolfHowlDemoMode__9daAlink_cCFv,
-	/* 26   */ (void*)checkChainBlockPushPull__9daAlink_cFv,
-	/* 27   */ (void*)checkElecDamage__9daAlink_cCFv,
-	/* 28   */ (void*)checkEmptyBottleSwing__9daAlink_cCFv,
-	/* 29   */ (void*)checkBottleSwingMode__9daAlink_cCFv,
-	/* 30   */ (void*)checkHawkWait__9daAlink_cCFv,
-	/* 31   */ (void*)checkGoatThrow__9daAlink_cCFv,
-	/* 32   */ (void*)checkGoatThrowAfter__9daAlink_cCFv,
-	/* 33   */ (void*)checkWolfTagLockJump__9daAlink_cCFv,
-	/* 34   */ (void*)checkWolfTagLockJumpLand__9daAlink_cCFv,
-	/* 35   */ (void*)checkWolfRope__9daAlink_cFv,
-	/* 36   */ (void*)checkWolfRopeHang__9daAlink_cCFv,
-	/* 37   */ (void*)checkRollJump__9daAlink_cCFv,
-	/* 38   */ (void*)checkGoronRideWait__9daAlink_cCFv,
-	/* 39   */ (void*)checkWolfChain__9daAlink_cCFv,
-	/* 40   */ (void*)checkWolfWait__9daAlink_cCFv,
-	/* 41   */ (void*)checkWolfJumpAttack__9daAlink_cCFv,
-	/* 42   */ (void*)checkWolfRSit__9daAlink_cCFv,
-	/* 43   */ (void*)checkBubbleFly__9daPy_py_cCFv,
-	/* 44   */ (void*)checkBottleDrinkEnd__9daAlink_cCFv,
-	/* 45   */ (void*)checkWolfDig__9daAlink_cCFv,
-	/* 46   */ (void*)checkCutCharge__9daAlink_cCFv,
-	/* 47   */ (void*)checkCutTurnCharge__9daAlink_cCFv,
-	/* 48   */ (void*)checkCutLargeJumpCharge__9daAlink_cCFv,
-	/* 49   */ (void*)getBokoFlamePos__9daPy_py_cFP4cXyz,
-	/* 50   */ (void*)checkComboCutTurn__9daAlink_cCFv,
-	/* 51   */ (void*)checkClimbMove__9daAlink_cCFv,
-	/* 52   */ (void*)checkGrassWhistle__9daAlink_cCFv,
-	/* 53   */ (void*)checkBoarRun__9daAlink_cCFv,
-	/* 54   */ (void*)checkFmChainPut__9daPy_py_cCFv,
-	/* 55   */ (void*)checkHorseElecDamage__9daPy_py_cCFv,
-	/* 56   */ (void*)getBaseAnimeFrameRate__9daAlink_cCFv,
-	/* 57   */ (void*)getBaseAnimeFrame__9daAlink_cCFv,
-	/* 58   */ (void*)setAnimeFrame__9daAlink_cFf,
-	/* 59   */ (void*)checkWolfLock__9daAlink_cCFP10fopAc_ac_c,
-	/* 60   */ (void*)cancelWolfLock__9daAlink_cFP10fopAc_ac_c,
-	/* 61   */ (void*)getAtnActorID__9daAlink_cCFv,
-	/* 62   */ (void*)getItemID__9daAlink_cCFv,
-	/* 63   */ (void*)getGrabActorID__9daAlink_cCFv,
-	/* 64   */ (void*)exchangeGrabActor__9daAlink_cFP10fopAc_ac_c,
-	/* 65   */ (void*)setForceGrab__9daAlink_cFP10fopAc_ac_cii,
-	/* 66   */ (void*)setForcePutPos__9daAlink_cFRC4cXyz,
-	/* 67   */ (void*)checkPlayerNoDraw__9daAlink_cFv,
-	/* 68   */ (void*)checkRopeTag__9daPy_py_cFv,
-	/* 69   */ (void*)voiceStart__9daAlink_cFUl,
-	/* 70   */ (void*)seStartOnlyReverb__9daAlink_cFUl,
-	/* 71   */ (void*)seStartOnlyReverbLevel__9daAlink_cFUl,
-	/* 72   */ (void*)setOutPower__9daAlink_cFfsi,
-	/* 73   */ (void*)setGrabCollisionOffset__9daAlink_cFffP13cBgS_PolyInfo,
-	/* 74   */ (void*)onMagneGrab__9daPy_py_cFff,
-	/* 75   */ (void*)onFrollCrashFlg__9daAlink_cFUci,
-	/* 76   */ (void*)getModelJointMtx__9daAlink_cFUs,
-	/* 77   */ (void*)getHeadMtx__9daAlink_cFv,
-	/* 78   */ (void*)setHookshotCarryOffset__9daAlink_cFUiPC4cXyz,
-	/* 79   */ (void*)checkCutJumpCancelTurn__9daAlink_cCFv,
-	/* 80   */ (void*)checkIronBallReturn__9daAlink_cCFv,
-	/* 81   */ (void*)checkIronBallGroundStop__9daAlink_cCFv,
-	/* 82   */ (void*)checkSingleBoarBattleSecondBowReady__9daAlink_cCFv,
-	/* 83   */ (void*)checkPointSubWindowMode__9daPy_py_cCFv,
-	/* 84   */ (void*)setClothesChange__9daAlink_cFi,
-	/* 85   */ (void*)setPlayerPosAndAngle__9daAlink_cFPC4cXyzsi,
-	/* 86   */ (void*)setPlayerPosAndAngle__9daAlink_cFPC4cXyzPC5csXyz,
-	/* 87   */ (void*)setPlayerPosAndAngle__9daAlink_cFPA4_f,
-	/* 88   */ (void*)setThrowDamage__9daAlink_cFsffiii,
-	/* 89   */ (void*)checkSetNpcTks__9daAlink_cFP4cXyzii,
-	/* 90   */ (void*)setRollJump__9daAlink_cFffs,
-	/* 91   */ (void*)playerStartCollisionSE__9daAlink_cFUlUl,
-	/* 92   */ (void*)changeTextureAnime__9daPy_py_cFUsUsi,
-	/* 93   */ (void*)cancelChangeTextureAnime__9daPy_py_cFv,
-	/* 94   */ (void*)cancelDungeonWarpReadyNeck__9daAlink_cFv,
-	/* 95   */ (void*)onSceneChangeArea__9daAlink_cFUcUcP10fopAc_ac_c,
-	/* 96   */ (void*)onSceneChangeAreaJump__9daAlink_cFUcUcP10fopAc_ac_c,
-	/* 97   */ (void*)onSceneChangeDead__9daAlink_cFUci,
-	/* 98   */ (void*)checkHorseRide__9daAlink_cCFv,
-	/* 99   */ (void*)checkBoarRide__9daAlink_cCFv,
-	/* 100  */ (void*)checkCanoeRide__9daAlink_cCFv,
-	/* 101  */ (void*)checkBoardRide__9daAlink_cCFv,
-	/* 102  */ (void*)checkSpinnerRide__9daAlink_cCFv,
-	/* 103  */ (void*)getSpinnerActor__9daAlink_cFv,
-	/* 104  */ (void*)checkHorseRideNotReady__9daAlink_cCFv,
-	/* 105  */ (void*)checkArrowChargeEnd__9daAlink_cCFv,
-	/* 106  */ (void*)getSearchBallScale__9daAlink_cCFv,
-	/* 107  */ (void*)checkFastShotTime__9daAlink_cFv,
-	/* 108  */ (void*)checkNoEquipItem__9daAlink_cCFv,
-	/* 109  */ (void*)checkFireMaterial__9daPy_py_cCFv,
-	/* 110  */ (void*)checkKandelaarSwing__9daAlink_cCFi,
-	/* 111  */ (void*)getBoardCutTurnOffsetAngleY__9daAlink_cCFv,
-	/* 112  */ (void*)getMagneHitPos__9daPy_py_cFv,
-	/* 113  */ (void*)getMagneBootsTopVec__9daAlink_cFv,
-	/* 114  */ (void*)getKandelaarFlamePos__9daAlink_cFv,
-	/* 115  */ (void*)checkUseKandelaar__9daAlink_cFi,
-	/* 116  */ (void*)setDkCaught__9daAlink_cFP10fopAc_ac_c,
-	/* 117  */ (void*)onPressedDamage__9daAlink_cFRC4cXyzs,
-	/* 118  */ (void*)checkPriActorOwn__9daAlink_cCFPC10fopAc_ac_c,
-	/* 119  */ (void*)onWolfEnemyBiteAll__9daAlink_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2,
-	/* 120  */ (void*)checkWolfEnemyBiteAllOwn__9daAlink_cCFPC10fopAc_ac_c,
-	/* 121  */ (void*)setWolfEnemyHangBiteAngle__9daAlink_cFs,
-	/* 122  */ (void*)setKandelaarMtx__9daAlink_cFPA4_fii,
-	/* 123  */ (void*)getStickAngleFromPlayerShape__9daAlink_cCFPs,
-	/* 124  */ (void*)checkSpinnerPathMove__9daAlink_cFv,
-	/* 125  */ (void*)checkSpinnerTriggerAttack__9daAlink_cFv,
-	/* 126  */ (void*)onSpinnerPathForceRemove__9daAlink_cFv,
-	/* 127  */ (void*)getIronBallBgHit__9daAlink_cCFv,
-	/* 128  */ (void*)getIronBallCenterPos__9daAlink_cFv,
-	/* 129  */ (void*)checkCanoeFishingGetLeft__9daAlink_cCFv,
-	/* 130  */ (void*)checkCanoeFishingGetRight__9daAlink_cCFv,
-	/* 131  */ (void*)checkBeeChildDrink__9daAlink_cCFv,
-	/* 132  */ (void*)skipPortalObjWarp__9daAlink_cFv,
-	/* 133  */ (void*)checkTreasureRupeeReturn__9daAlink_cCFi,
-	/* 134  */ (void*)setSumouReady__9daAlink_cFP10fopAc_ac_c,
-	/* 135  */ (void*)checkAcceptDungeonWarpAlink__9daAlink_cFi,
-	/* 136  */ (void*)getSumouCounter__9daAlink_cCFv,
-	/* 137  */ (void*)checkSumouWithstand__9daAlink_cCFv,
-	/* 138  */ (void*)cancelGoronThrowEvent__9daAlink_cFv,
-	/* 139  */ (void*)setSumouGraspCancelCount__9daAlink_cFi,
-	/* 140  */ (void*)setSumouPushBackDirection__9daAlink_cFs,
-	/* 141  */ (void*)setSumouLoseHeadUp__9daAlink_cFv,
-	/* 142  */ (void*)getGiantPuzzleAimAngle__9daAlink_cCFv,
-	/* 143  */ (void*)setGoronSideMove__9daAlink_cFP10fopAc_ac_c,
-	/* 144  */ (void*)setCargoCarry__9daAlink_cFP10fopAc_ac_c,
-	/* 145  */ (void*)getDpdFarFlg__9daPy_py_cCFv,
-	/* 146  */ (void*)getHookshotTopPos__9daAlink_cFv,
-	/* 147  */ (void*)checkHookshotReturnMode__9daAlink_cCFv,
-	/* 148  */ (void*)checkHookshotShootReturnMode__9daAlink_cCFv,
-	/* 149  */ (void*)checkOctaIealHang__9daAlink_cCFv,
-	/* 150  */ (void*)cancelOctaIealHang__9daAlink_cFv,
-	/* 151  */ (void*)cancelDragonHangBackJump__9daAlink_cFv,
-	/* 152  */ (void*)setOctaIealWildHang__9daAlink_cFv,
-	/* 153  */ (void*)checkDragonHangRide__9daAlink_cCFv,
-	/* 154  */ (void*)changeDragonActor__9daAlink_cFP10fopAc_ac_c,
-	/* 155  */ (void*)getClothesChangeWaitTimer__9daAlink_cCFv,
-	/* 156  */ (void*)getShieldChangeWaitTimer__9daAlink_cCFv,
-	/* 157  */ (void*)getSwordChangeWaitTimer__9daAlink_cCFv,
-	/* 158  */ (void*)checkMetamorphose__9daAlink_cCFv,
-	/* 159  */ (void*)checkWolfDownAttackPullOut__9daAlink_cCFv,
-	/* 160  */ (void*)checkBootsOrArmorHeavy__9daAlink_cCFv,
-	/* 161  */ (void*)getBottleOpenAppearItem__9daAlink_cCFv,
-	/* 162  */ (void*)checkItemSwordEquip__9daAlink_cCFv,
-	/* 163  */ (void*)getSinkShapeOffset__9daAlink_cCFv,
-	/* 164  */ (void*)checkSinkDead__9daAlink_cCFv,
-	/* 165  */ (void*)checkHorseStart__9daAlink_cFv,
-	/* 166  */ (void*)getWolfHowlMgrP__9daAlink_cFv,
-	/* 167  */ (void*)checkWolfHowlSuccessAnime__9daAlink_cCFv,
-	/* 168  */ (void*)checkCopyRodTopUse__9daAlink_cFv,
-	/* 169  */ (void*)checkCopyRodEquip__9daAlink_cCFv,
-	/* 170  */ (void*)checkCutJumpMode__9daAlink_cCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getMidnaAtnPos__9daAlink_cCFv,
+	(void*)setMidnaMsgNum__9daAlink_cFP10fopAc_ac_cUs,
+	(void*)getModelMtx__9daAlink_cFv,
+	(void*)getInvMtx__9daAlink_cFv,
+	(void*)getShadowTalkAtnPos__9daAlink_cFv,
+	(void*)getGroundY__9daAlink_cFv,
+	(void*)getLeftItemMatrix__9daAlink_cFv,
+	(void*)getRightItemMatrix__9daAlink_cFv,
+	(void*)getLeftHandMatrix__9daAlink_cFv,
+	(void*)getRightHandMatrix__9daAlink_cFv,
+	(void*)getLinkBackBone1Matrix__9daAlink_cFv,
+	(void*)getWolfMouthMatrix__9daAlink_cFv,
+	(void*)getWolfBackbone2Matrix__9daAlink_cFv,
+	(void*)getBottleMtx__9daAlink_cFv,
+	(void*)checkPlayerGuard__9daAlink_cCFv,
+	(void*)checkPlayerFly__9daAlink_cCFv,
+	(void*)checkFrontRoll__9daAlink_cCFv,
+	(void*)checkWolfDash__9daAlink_cCFv,
+	(void*)checkAutoJump__9daAlink_cCFv,
+	(void*)checkSideStep__9daAlink_cCFv,
+	(void*)checkWolfTriggerJump__9daAlink_cCFv,
+	(void*)checkGuardBreakMode__9daAlink_cCFv,
+	(void*)checkLv3Slide__9daAlink_cCFv,
+	(void*)checkWolfHowlDemoMode__9daAlink_cCFv,
+	(void*)checkChainBlockPushPull__9daAlink_cFv,
+	(void*)checkElecDamage__9daAlink_cCFv,
+	(void*)checkEmptyBottleSwing__9daAlink_cCFv,
+	(void*)checkBottleSwingMode__9daAlink_cCFv,
+	(void*)checkHawkWait__9daAlink_cCFv,
+	(void*)checkGoatThrow__9daAlink_cCFv,
+	(void*)checkGoatThrowAfter__9daAlink_cCFv,
+	(void*)checkWolfTagLockJump__9daAlink_cCFv,
+	(void*)checkWolfTagLockJumpLand__9daAlink_cCFv,
+	(void*)checkWolfRope__9daAlink_cFv,
+	(void*)checkWolfRopeHang__9daAlink_cCFv,
+	(void*)checkRollJump__9daAlink_cCFv,
+	(void*)checkGoronRideWait__9daAlink_cCFv,
+	(void*)checkWolfChain__9daAlink_cCFv,
+	(void*)checkWolfWait__9daAlink_cCFv,
+	(void*)checkWolfJumpAttack__9daAlink_cCFv,
+	(void*)checkWolfRSit__9daAlink_cCFv,
+	(void*)checkBubbleFly__9daPy_py_cCFv,
+	(void*)checkBottleDrinkEnd__9daAlink_cCFv,
+	(void*)checkWolfDig__9daAlink_cCFv,
+	(void*)checkCutCharge__9daAlink_cCFv,
+	(void*)checkCutTurnCharge__9daAlink_cCFv,
+	(void*)checkCutLargeJumpCharge__9daAlink_cCFv,
+	(void*)getBokoFlamePos__9daPy_py_cFP4cXyz,
+	(void*)checkComboCutTurn__9daAlink_cCFv,
+	(void*)checkClimbMove__9daAlink_cCFv,
+	(void*)checkGrassWhistle__9daAlink_cCFv,
+	(void*)checkBoarRun__9daAlink_cCFv,
+	(void*)checkFmChainPut__9daPy_py_cCFv,
+	(void*)checkHorseElecDamage__9daPy_py_cCFv,
+	(void*)getBaseAnimeFrameRate__9daAlink_cCFv,
+	(void*)getBaseAnimeFrame__9daAlink_cCFv,
+	(void*)setAnimeFrame__9daAlink_cFf,
+	(void*)checkWolfLock__9daAlink_cCFP10fopAc_ac_c,
+	(void*)cancelWolfLock__9daAlink_cFP10fopAc_ac_c,
+	(void*)getAtnActorID__9daAlink_cCFv,
+	(void*)getItemID__9daAlink_cCFv,
+	(void*)getGrabActorID__9daAlink_cCFv,
+	(void*)exchangeGrabActor__9daAlink_cFP10fopAc_ac_c,
+	(void*)setForceGrab__9daAlink_cFP10fopAc_ac_cii,
+	(void*)setForcePutPos__9daAlink_cFRC4cXyz,
+	(void*)checkPlayerNoDraw__9daAlink_cFv,
+	(void*)checkRopeTag__9daPy_py_cFv,
+	(void*)voiceStart__9daAlink_cFUl,
+	(void*)seStartOnlyReverb__9daAlink_cFUl,
+	(void*)seStartOnlyReverbLevel__9daAlink_cFUl,
+	(void*)setOutPower__9daAlink_cFfsi,
+	(void*)setGrabCollisionOffset__9daAlink_cFffP13cBgS_PolyInfo,
+	(void*)onMagneGrab__9daPy_py_cFff,
+	(void*)onFrollCrashFlg__9daAlink_cFUci,
+	(void*)getModelJointMtx__9daAlink_cFUs,
+	(void*)getHeadMtx__9daAlink_cFv,
+	(void*)setHookshotCarryOffset__9daAlink_cFUiPC4cXyz,
+	(void*)checkCutJumpCancelTurn__9daAlink_cCFv,
+	(void*)checkIronBallReturn__9daAlink_cCFv,
+	(void*)checkIronBallGroundStop__9daAlink_cCFv,
+	(void*)checkSingleBoarBattleSecondBowReady__9daAlink_cCFv,
+	(void*)checkPointSubWindowMode__9daPy_py_cCFv,
+	(void*)setClothesChange__9daAlink_cFi,
+	(void*)setPlayerPosAndAngle__9daAlink_cFPC4cXyzsi,
+	(void*)setPlayerPosAndAngle__9daAlink_cFPC4cXyzPC5csXyz,
+	(void*)setPlayerPosAndAngle__9daAlink_cFPA4_f,
+	(void*)setThrowDamage__9daAlink_cFsffiii,
+	(void*)checkSetNpcTks__9daAlink_cFP4cXyzii,
+	(void*)setRollJump__9daAlink_cFffs,
+	(void*)playerStartCollisionSE__9daAlink_cFUlUl,
+	(void*)changeTextureAnime__9daPy_py_cFUsUsi,
+	(void*)cancelChangeTextureAnime__9daPy_py_cFv,
+	(void*)cancelDungeonWarpReadyNeck__9daAlink_cFv,
+	(void*)onSceneChangeArea__9daAlink_cFUcUcP10fopAc_ac_c,
+	(void*)onSceneChangeAreaJump__9daAlink_cFUcUcP10fopAc_ac_c,
+	(void*)onSceneChangeDead__9daAlink_cFUci,
+	(void*)checkHorseRide__9daAlink_cCFv,
+	(void*)checkBoarRide__9daAlink_cCFv,
+	(void*)checkCanoeRide__9daAlink_cCFv,
+	(void*)checkBoardRide__9daAlink_cCFv,
+	(void*)checkSpinnerRide__9daAlink_cCFv,
+	(void*)getSpinnerActor__9daAlink_cFv,
+	(void*)checkHorseRideNotReady__9daAlink_cCFv,
+	(void*)checkArrowChargeEnd__9daAlink_cCFv,
+	(void*)getSearchBallScale__9daAlink_cCFv,
+	(void*)checkFastShotTime__9daAlink_cFv,
+	(void*)checkNoEquipItem__9daAlink_cCFv,
+	(void*)checkFireMaterial__9daPy_py_cCFv,
+	(void*)checkKandelaarSwing__9daAlink_cCFi,
+	(void*)getBoardCutTurnOffsetAngleY__9daAlink_cCFv,
+	(void*)getMagneHitPos__9daPy_py_cFv,
+	(void*)getMagneBootsTopVec__9daAlink_cFv,
+	(void*)getKandelaarFlamePos__9daAlink_cFv,
+	(void*)checkUseKandelaar__9daAlink_cFi,
+	(void*)setDkCaught__9daAlink_cFP10fopAc_ac_c,
+	(void*)onPressedDamage__9daAlink_cFRC4cXyzs,
+	(void*)checkPriActorOwn__9daAlink_cCFPC10fopAc_ac_c,
+	(void*)onWolfEnemyBiteAll__9daAlink_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2,
+	(void*)checkWolfEnemyBiteAllOwn__9daAlink_cCFPC10fopAc_ac_c,
+	(void*)setWolfEnemyHangBiteAngle__9daAlink_cFs,
+	(void*)setKandelaarMtx__9daAlink_cFPA4_fii,
+	(void*)getStickAngleFromPlayerShape__9daAlink_cCFPs,
+	(void*)checkSpinnerPathMove__9daAlink_cFv,
+	(void*)checkSpinnerTriggerAttack__9daAlink_cFv,
+	(void*)onSpinnerPathForceRemove__9daAlink_cFv,
+	(void*)getIronBallBgHit__9daAlink_cCFv,
+	(void*)getIronBallCenterPos__9daAlink_cFv,
+	(void*)checkCanoeFishingGetLeft__9daAlink_cCFv,
+	(void*)checkCanoeFishingGetRight__9daAlink_cCFv,
+	(void*)checkBeeChildDrink__9daAlink_cCFv,
+	(void*)skipPortalObjWarp__9daAlink_cFv,
+	(void*)checkTreasureRupeeReturn__9daAlink_cCFi,
+	(void*)setSumouReady__9daAlink_cFP10fopAc_ac_c,
+	(void*)checkAcceptDungeonWarpAlink__9daAlink_cFi,
+	(void*)getSumouCounter__9daAlink_cCFv,
+	(void*)checkSumouWithstand__9daAlink_cCFv,
+	(void*)cancelGoronThrowEvent__9daAlink_cFv,
+	(void*)setSumouGraspCancelCount__9daAlink_cFi,
+	(void*)setSumouPushBackDirection__9daAlink_cFs,
+	(void*)setSumouLoseHeadUp__9daAlink_cFv,
+	(void*)getGiantPuzzleAimAngle__9daAlink_cCFv,
+	(void*)setGoronSideMove__9daAlink_cFP10fopAc_ac_c,
+	(void*)setCargoCarry__9daAlink_cFP10fopAc_ac_c,
+	(void*)getDpdFarFlg__9daPy_py_cCFv,
+	(void*)getHookshotTopPos__9daAlink_cFv,
+	(void*)checkHookshotReturnMode__9daAlink_cCFv,
+	(void*)checkHookshotShootReturnMode__9daAlink_cCFv,
+	(void*)checkOctaIealHang__9daAlink_cCFv,
+	(void*)cancelOctaIealHang__9daAlink_cFv,
+	(void*)cancelDragonHangBackJump__9daAlink_cFv,
+	(void*)setOctaIealWildHang__9daAlink_cFv,
+	(void*)checkDragonHangRide__9daAlink_cCFv,
+	(void*)changeDragonActor__9daAlink_cFP10fopAc_ac_c,
+	(void*)getClothesChangeWaitTimer__9daAlink_cCFv,
+	(void*)getShieldChangeWaitTimer__9daAlink_cCFv,
+	(void*)getSwordChangeWaitTimer__9daAlink_cCFv,
+	(void*)checkMetamorphose__9daAlink_cCFv,
+	(void*)checkWolfDownAttackPullOut__9daAlink_cCFv,
+	(void*)checkBootsOrArmorHeavy__9daAlink_cCFv,
+	(void*)getBottleOpenAppearItem__9daAlink_cCFv,
+	(void*)checkItemSwordEquip__9daAlink_cCFv,
+	(void*)getSinkShapeOffset__9daAlink_cCFv,
+	(void*)checkSinkDead__9daAlink_cCFv,
+	(void*)checkHorseStart__9daAlink_cFv,
+	(void*)getWolfHowlMgrP__9daAlink_cFv,
+	(void*)checkWolfHowlSuccessAnime__9daAlink_cCFv,
+	(void*)checkCopyRodTopUse__9daAlink_cFv,
+	(void*)checkCopyRodEquip__9daAlink_cCFv,
+	(void*)checkCutJumpMode__9daAlink_cCFv,
 };
 
 /* 803B3564-803B3580 0010+0C s=2 e=0 z=0  None .data      __vt__16daAlink_matAnm_c                                     */
 SECTION_DATA static void* __vt__16daAlink_matAnm_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daAlink_matAnm_cFv,
-	/* 3    */ (void*)calc__16daAlink_matAnm_cCFP11J3DMaterial,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16daAlink_matAnm_cFv,
+	(void*)calc__16daAlink_matAnm_cCFP11J3DMaterial,
 	/* padding */
 	NULL,
 	NULL,
@@ -19393,36 +19393,36 @@ asm static void daAlink_Draw(daAlink_c* param_0) {
 /* ############################################################################################## */
 /* 803B3580-803B3590 0010+00 s=3 e=0 z=0  None .data      __vt__15daAlink_sight_c                                      */
 SECTION_DATA static void* __vt__15daAlink_sight_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15daAlink_sight_cFv,
-	/* 3    */ (void*)__dt__15daAlink_sight_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15daAlink_sight_cFv,
+	(void*)__dt__15daAlink_sight_cFv,
 };
 
 /* 803B3590-803B35A0 0010+00 s=4 e=0 z=0  None .data      __vt__20daAlink_lockCursor_c                                 */
 SECTION_DATA static void* __vt__20daAlink_lockCursor_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__20daAlink_lockCursor_cFv,
-	/* 3    */ (void*)__dt__20daAlink_lockCursor_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__20daAlink_lockCursor_cFv,
+	(void*)__dt__20daAlink_lockCursor_cFv,
 };
 
 /* 803B35A0-803B35B4 0014+00 s=3 e=0 z=0  None .data      __vt__14daAlink_blur_c                                       */
 SECTION_DATA static void* __vt__14daAlink_blur_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__14daAlink_blur_cFv,
-	/* 4    */ (void*)__dt__14daAlink_blur_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__14daAlink_blur_cFv,
+	(void*)__dt__14daAlink_blur_cFv,
 };
 
 /* 803B35B4-803B35C8 0014+00 s=3 e=0 z=0  None .data      __vt__29dAlink_bottleWaterPcallBack_c                        */
 SECTION_DATA static void* __vt__29dAlink_bottleWaterPcallBack_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__29dAlink_bottleWaterPcallBack_cFv,
-	/* 3    */ (void*)execute__29dAlink_bottleWaterPcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__29dAlink_bottleWaterPcallBack_cFv,
+	(void*)execute__29dAlink_bottleWaterPcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 800CD7AC-800CE208 0A5C+00 s=1 e=0 z=0  None .text      __dt__9daAlink_cFv                                           */
@@ -21167,15 +21167,15 @@ asm daAlink_matAnm_c::~daAlink_matAnm_c() {
 /* ############################################################################################## */
 /* 803B35C8-803B35EC 0024+00 s=2 e=5 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_801446DC,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_801446D4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dBgS_ObjAcchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446DC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801446D4,
 };
 
 /* 800D0C6C-800D0CDC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
@@ -21192,11 +21192,11 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 /* ############################################################################################## */
 /* 803B35EC-803B3610 0014+10 s=3 e=0 z=0  None .data      __vt__Q29daAlink_c14hsChainShape_c                           */
 SECTION_DATA static void* __vt__Q29daAlink_c14hsChainShape_c[5 + 4 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__Q29daAlink_c14hsChainShape_cFv,
-	/* 4    */ (void*)__dt__Q29daAlink_c14hsChainShape_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__Q29daAlink_c14hsChainShape_cFv,
+	(void*)__dt__Q29daAlink_c14hsChainShape_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -30788,8 +30788,8 @@ asm static void daAlink_searchHawk(fopAc_ac_c* param_0, void* param_1) {
 /* ############################################################################################## */
 /* 8045069C-804506A4 0008+00 s=1 e=0 z=0  None .sdata     grassWhistleArcName$33096                                    */
 SECTION_SDATA static void* data_8045069C[2] = {
-	/* 0    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0xAD),
-	/* 1    */ (void*)(((char*)&d_a_d_a_alink__stringBase0)+0xB4),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0xAD),
+	(void*)(((char*)&d_a_d_a_alink__stringBase0)+0xB4),
 };
 
 /* 80111784-8011181C 0098+00 s=1 e=0 z=0  None .text      setGrassWhistleModel__9daAlink_cFi                           */

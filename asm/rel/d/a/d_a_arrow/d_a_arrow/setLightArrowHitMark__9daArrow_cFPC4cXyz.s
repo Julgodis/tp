@@ -8,14 +8,14 @@ lbl_8049A110:
 /* 8049A128  7C 9A 23 78 */	mr r26, r4
 /* 8049A12C  3B 60 00 00 */	li r27, 0
 /* 8049A130  3B E0 00 00 */	li r31, 0
-/* 8049A134  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049A138  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 8049A134  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049A138  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 8049A13C  3C 60 80 4A */	lis r3, data_8049DD40@ha
 /* 8049A140  3B A3 DD 40 */	addi r29, r3, data_8049DD40@l
 /* 8049A144  3C 60 80 4A */	lis r3, lit_4187@ha
 /* 8049A148  3B C3 DD 3C */	addi r30, r3, lit_4187@l
 lbl_8049A14C:
-/* 8049A14C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 8049A14C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 8049A150  38 80 00 00 */	li r4, 0
 /* 8049A154  90 81 00 08 */	stw r4, 8(r1)
 /* 8049A158  38 00 FF FF */	li r0, -1
@@ -30,7 +30,7 @@ lbl_8049A14C:
 /* 8049A17C  39 19 04 E4 */	addi r8, r25, 0x4e4
 /* 8049A180  39 20 00 00 */	li r9, 0
 /* 8049A184  39 40 00 FF */	li r10, 0xff
-/* 8049A188  C0 3E 00 00 */	lfs f1, 0(r30)	/* effective address: 8049DD3C */
+/* 8049A188  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 8049A18C  4B BB 29 04 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8049A190  3B 7B 00 01 */	addi r27, r27, 1
 /* 8049A194  2C 1B 00 06 */	cmpwi r27, 6

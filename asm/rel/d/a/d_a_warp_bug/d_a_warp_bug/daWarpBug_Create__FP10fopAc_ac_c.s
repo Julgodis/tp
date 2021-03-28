@@ -19,7 +19,7 @@ lbl_80D6816C:
 /* 80D6816C  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80D68170  3C 80 80 D7 */	lis r4, l_arcName@ha
 /* 80D68174  38 84 82 08 */	addi r4, r4, l_arcName@l
-/* 80D68178  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D68208 */
+/* 80D68178  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D6817C  4B 2C 4D 40 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D68180  7C 7F 1B 78 */	mr r31, r3
 /* 80D68184  2C 1F 00 04 */	cmpwi r31, 4

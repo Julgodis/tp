@@ -10,7 +10,7 @@ lbl_80D33348:
 /* 80D33368  C0 1D 05 98 */	lfs f0, 0x598(r29)
 /* 80D3336C  FC 00 02 10 */	fabs f0, f0
 /* 80D33370  FC 20 00 18 */	frsp f1, f0
-/* 80D33374  C0 1F 00 98 */	lfs f0, 0x98(r31)	/* effective address: 80D341D0 */
+/* 80D33374  C0 1F 00 98 */	lfs f0, 0x98(r31)
 /* 80D33378  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80D3337C  4B 62 ED 30 */	b __cvt_fp2unsigned
 /* 80D33380  7C 7E 1B 78 */	mr r30, r3
@@ -27,7 +27,7 @@ lbl_80D33390:
 /* 80D333A8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D333AC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D333B0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D333B4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D333B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D333B8  38 81 00 08 */	addi r4, r1, 8
 /* 80D333BC  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80D333C0  7F C6 F3 78 */	mr r6, r30

@@ -4,9 +4,9 @@ lbl_8077AEFC:
 /* 8077AF04  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8077AF08  DB E1 00 08 */	stfd f31, 8(r1)
 /* 8077AF0C  FF E0 08 90 */	fmr f31, f1
-/* 8077AF10  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8077AF14  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8077AF18  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8077AF10  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8077AF14  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8077AF18  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8077AF1C  4B 89 F8 C4 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8077AF20  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 8077AF24  7C 00 00 26 */	mfcr r0

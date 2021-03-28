@@ -9,7 +9,7 @@ lbl_80D27C6C:
 /* 80D27C88  3B C4 95 B4 */	addi r30, r4, l_bmd_idx@l
 /* 80D27C8C  3C 80 80 45 */	lis r4, m_midnaActor__9daPy_py_c@ha
 /* 80D27C90  38 84 10 18 */	addi r4, r4, m_midnaActor__9daPy_py_c@l
-/* 80D27C94  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80451018 */
+/* 80D27C94  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D27C98  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80D27C9C  28 00 00 01 */	cmplwi r0, 1
 /* 80D27CA0  40 82 01 4C */	bne lbl_80D27DEC

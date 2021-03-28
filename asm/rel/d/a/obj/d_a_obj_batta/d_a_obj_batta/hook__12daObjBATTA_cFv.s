@@ -7,9 +7,9 @@ lbl_80BAB820:
 /* 80BAB834  80 03 09 E8 */	lwz r0, 0x9e8(r3)
 /* 80BAB838  2C 00 00 00 */	cmpwi r0, 0
 /* 80BAB83C  40 82 00 6C */	bne lbl_80BAB8A8
-/* 80BAB840  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BAB844  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BAB848  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BAB840  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BAB844  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BAB848  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80BAB84C  3C 80 80 BB */	lis r4, lit_3956@ha
 /* 80BAB850  C0 24 C9 8C */	lfs f1, lit_3956@l(r4)
 /* 80BAB854  D0 21 00 14 */	stfs f1, 0x14(r1)
@@ -59,11 +59,11 @@ lbl_80BAB8E8:
 /* 80BAB8F0  40 82 00 30 */	bne lbl_80BAB920
 /* 80BAB8F4  3C 60 80 BB */	lis r3, lit_4485@ha
 /* 80BAB8F8  38 83 CB 48 */	addi r4, r3, lit_4485@l
-/* 80BAB8FC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80BACB48 */
-/* 80BAB900  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80BACB4C */
+/* 80BAB8FC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80BAB900  80 04 00 04 */	lwz r0, 4(r4)
 /* 80BAB904  90 61 00 08 */	stw r3, 8(r1)
 /* 80BAB908  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80BAB90C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80BACB50 */
+/* 80BAB90C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80BAB910  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80BAB914  7F E3 FB 78 */	mr r3, r31
 /* 80BAB918  38 81 00 08 */	addi r4, r1, 8

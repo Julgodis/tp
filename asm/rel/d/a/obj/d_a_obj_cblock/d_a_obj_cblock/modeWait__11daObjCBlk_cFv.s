@@ -7,14 +7,14 @@ lbl_80BC627C:
 /* 80BC6290  7C 7F 1B 78 */	mr r31, r3
 /* 80BC6294  3C 80 80 BC */	lis r4, l_cull_box@ha
 /* 80BC6298  3B C4 6A 38 */	addi r30, r4, l_cull_box@l
-/* 80BC629C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BC62A0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BC62A4  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BC629C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BC62A0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BC62A4  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80BC62A8  3B 80 00 00 */	li r28, 0
-/* 80BC62AC  C0 1E 00 18 */	lfs f0, 0x18(r30)	/* effective address: 80BC6A50 */
+/* 80BC62AC  C0 1E 00 18 */	lfs f0, 0x18(r30)
 /* 80BC62B0  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80BC62B4  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80BC62B8  C0 1E 00 20 */	lfs f0, 0x20(r30)	/* effective address: 80BC6A58 */
+/* 80BC62B8  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 80BC62BC  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80BC62C0  38 81 00 44 */	addi r4, r1, 0x44
 /* 80BC62C4  48 00 03 09 */	bl getChainBasePos__11daObjCBlk_cFP4cXyz

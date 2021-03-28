@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct JASDsp {
-	struct TChannel {
+struct JASOscillator {
+	struct Data {
 	};
 
 };
 
-struct JASOscillator {
-	struct Data {
+struct JASDsp {
+	struct TChannel {
 	};
 
 };
@@ -406,19 +406,19 @@ asm void JASAramStream::channelProcCallback(void* param_0) {
 /* ############################################################################################## */
 /* 803C7670-803C76A8 0034+04 s=1 e=0 z=0  None .data      @613                                                         */
 SECTION_DATA static void* lit_613[13 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 1    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x34),
-	/* 2    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x48),
-	/* 3    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 4    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 5    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 6    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 7    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 8    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 9    */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 10   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 11   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
-	/* 12   */ (void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x34),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x48),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
+	(void*)(((char*)dvdErrorCheck__13JASAramStreamFPv)+0x40),
 	/* padding */
 	NULL,
 };
@@ -475,12 +475,12 @@ SECTION_RODATA static u8 const OSC_RELEASE_TABLE[12] = {
 
 /* 8039B174-8039B190 0018+04 s=1 e=0 z=0  None .rodata    OSC_ENV                                                      */
 SECTION_RODATA static void* const OSC_ENV[6 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x3F800000,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)&OSC_RELEASE_TABLE,
-	/* 4    */ (void*)0x3F800000,
-	/* 5    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x3F800000,
+	(void*)NULL,
+	(void*)&OSC_RELEASE_TABLE,
+	(void*)0x3F800000,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

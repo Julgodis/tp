@@ -659,7 +659,7 @@ lbl_807DCB04:
 /* 807DCB40  4B AD 32 D8 */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 807DCB44  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 807DCB48  38 63 72 88 */	addi r3, r3, saveBitLabels__16dSv_event_flag_c@l
-/* 807DCB4C  A0 63 00 AA */	lhz r3, 0xaa(r3)	/* effective address: 803A7332 */
+/* 807DCB4C  A0 63 00 AA */	lhz r3, 0xaa(r3)
 /* 807DCB50  48 00 58 75 */	bl dComIfGs_onEventBit__FUs
 /* 807DCB54  3C 60 80 7E */	lis r3, stringBase0@ha
 /* 807DCB58  38 63 2F 0C */	addi r3, r3, stringBase0@l
@@ -865,7 +865,7 @@ lbl_807DCDFC:
 /* 807DCE54  40 82 28 DC */	bne lbl_807DF730
 /* 807DCE58  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DCE5C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DCE60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DCE60  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DCE64  A8 99 04 E6 */	lha r4, 0x4e6(r25)
 /* 807DCE68  48 00 55 11 */	bl cMtx_YrotS__FPA4_fs
 /* 807DCE6C  C0 1E 00 48 */	lfs f0, 0x48(r30)
@@ -1033,7 +1033,7 @@ lbl_807DCF8C:
 /* 807DD0EC  48 00 57 CD */	bl changeDemoPos0__9daHorse_cFPC4cXyz
 /* 807DD0F0  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 807DD0F4  38 63 72 88 */	addi r3, r3, saveBitLabels__16dSv_event_flag_c@l
-/* 807DD0F8  A0 63 00 AC */	lhz r3, 0xac(r3)	/* effective address: 803A7334 */
+/* 807DD0F8  A0 63 00 AC */	lhz r3, 0xac(r3)
 /* 807DD0FC  48 00 52 C9 */	bl dComIfGs_onEventBit__FUs
 /* 807DD100  48 00 52 F5 */	bl Z2GetAudioMgr__Fv
 /* 807DD104  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200000F@ha */
@@ -1139,7 +1139,7 @@ lbl_807DD250:
 /* 807DD274  48 00 52 55 */	bl set__4cXyzFfff
 /* 807DD278  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DD27C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DD280  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DD280  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DD284  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 807DD288  48 00 50 F1 */	bl cMtx_YrotS__FPA4_fs
 /* 807DD28C  38 7F 16 B0 */	addi r3, r31, 0x16b0
@@ -1282,7 +1282,7 @@ lbl_807DD3DC:
 /* 807DD4A8  4B A9 25 94 */	b cLib_addCalc2__FPffff
 /* 807DD4AC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DD4B0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DD4B4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DD4B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DD4B8  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 807DD4BC  48 00 4E BD */	bl cMtx_YrotS__FPA4_fs
 /* 807DD4C0  38 7F 16 B0 */	addi r3, r31, 0x16b0
@@ -1361,7 +1361,7 @@ lbl_807DD5B0:
 /* 807DD5D4  48 00 4E F5 */	bl set__4cXyzFfff
 /* 807DD5D8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DD5DC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DD5E0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DD5E0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DD5E4  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 807DD5E8  48 00 4D 91 */	bl cMtx_YrotS__FPA4_fs
 /* 807DD5EC  38 7F 16 B0 */	addi r3, r31, 0x16b0
@@ -1717,7 +1717,7 @@ lbl_807DD9C0:
 /* 807DDB34  48 00 4D 85 */	bl changeDemoPos0__9daHorse_cFPC4cXyz
 /* 807DDB38  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 807DDB3C  38 63 72 88 */	addi r3, r3, saveBitLabels__16dSv_event_flag_c@l
-/* 807DDB40  A0 63 00 AE */	lhz r3, 0xae(r3)	/* effective address: 803A7336 */
+/* 807DDB40  A0 63 00 AE */	lhz r3, 0xae(r3)
 /* 807DDB44  48 00 48 81 */	bl dComIfGs_onEventBit__FUs
 /* 807DDB48  48 00 48 AD */	bl Z2GetAudioMgr__Fv
 /* 807DDB4C  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000015@ha */
@@ -2137,7 +2137,7 @@ lbl_807DE16C:
 /* 807DE184  B0 1F 16 A0 */	sth r0, 0x16a0(r31)
 /* 807DE188  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DE18C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DE190  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DE190  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DE194  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 807DE198  48 00 41 E1 */	bl cMtx_YrotS__FPA4_fs
 /* 807DE19C  C0 1E 00 48 */	lfs f0, 0x48(r30)
@@ -3016,7 +3016,7 @@ lbl_807DEEA4:
 /* 807DEEAC  40 82 08 84 */	bne lbl_807DF730
 /* 807DEEB0  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 807DEEB4  38 63 72 88 */	addi r3, r3, saveBitLabels__16dSv_event_flag_c@l
-/* 807DEEB8  A0 63 00 B4 */	lhz r3, 0xb4(r3)	/* effective address: 803A733C */
+/* 807DEEB8  A0 63 00 B4 */	lhz r3, 0xb4(r3)
 /* 807DEEBC  48 00 35 09 */	bl dComIfGs_onEventBit__FUs
 /* 807DEEC0  38 00 00 01 */	li r0, 1
 /* 807DEEC4  90 01 00 08 */	stw r0, 8(r1)
@@ -3314,7 +3314,7 @@ lbl_807DF2CC:
 /* 807DF334  7C 64 1B 78 */	mr r4, r3
 /* 807DF338  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DF33C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DF340  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DF340  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DF344  48 00 30 35 */	bl cMtx_YrotS__FPA4_fs
 /* 807DF348  C0 01 01 68 */	lfs f0, 0x168(r1)
 /* 807DF34C  EC 20 00 32 */	fmuls f1, f0, f0
@@ -3329,7 +3329,7 @@ lbl_807DF2CC:
 /* 807DF370  7C 04 07 34 */	extsh r4, r0
 /* 807DF374  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DF378  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DF37C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DF37C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DF380  48 00 33 81 */	bl cMtx_XrotM__FPA4_fs
 /* 807DF384  C0 1E 00 48 */	lfs f0, 0x48(r30)
 /* 807DF388  D0 01 01 68 */	stfs f0, 0x168(r1)
@@ -3426,7 +3426,7 @@ lbl_807DF4D8:
 /* 807DF4E4  7C 64 1B 78 */	mr r4, r3
 /* 807DF4E8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DF4EC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DF4F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DF4F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DF4F4  48 00 2E 85 */	bl cMtx_YrotS__FPA4_fs
 /* 807DF4F8  C0 01 01 68 */	lfs f0, 0x168(r1)
 /* 807DF4FC  EC 20 00 32 */	fmuls f1, f0, f0
@@ -3441,7 +3441,7 @@ lbl_807DF4D8:
 /* 807DF520  7C 04 07 34 */	extsh r4, r0
 /* 807DF524  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807DF528  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807DF52C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807DF52C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807DF530  48 00 31 D1 */	bl cMtx_XrotM__FPA4_fs
 /* 807DF534  C0 1E 00 48 */	lfs f0, 0x48(r30)
 /* 807DF538  D0 01 01 68 */	stfs f0, 0x168(r1)

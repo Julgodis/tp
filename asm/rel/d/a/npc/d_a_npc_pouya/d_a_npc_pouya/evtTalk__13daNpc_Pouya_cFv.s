@@ -6,11 +6,11 @@ lbl_80AAF1F4:
 /* 80AAF204  7C 7F 1B 78 */	mr r31, r3
 /* 80AAF208  3C 80 80 AB */	lis r4, lit_4758@ha
 /* 80AAF20C  38 A4 2A 90 */	addi r5, r4, lit_4758@l
-/* 80AAF210  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80AB2A90 */
-/* 80AAF214  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80AB2A94 */
+/* 80AAF210  80 85 00 00 */	lwz r4, 0(r5)
+/* 80AAF214  80 05 00 04 */	lwz r0, 4(r5)
 /* 80AAF218  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80AAF21C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80AAF220  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80AB2A98 */
+/* 80AAF220  80 05 00 08 */	lwz r0, 8(r5)
 /* 80AAF224  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80AAF228  38 81 00 14 */	addi r4, r1, 0x14
 /* 80AAF22C  48 00 09 F9 */	bl chkAction__13daNpc_Pouya_cFM13daNpc_Pouya_cFPCvPvPv_i
@@ -25,11 +25,11 @@ lbl_80AAF1F4:
 lbl_80AAF250:
 /* 80AAF250  3C 60 80 AB */	lis r3, lit_4763@ha
 /* 80AAF254  38 83 2A 9C */	addi r4, r3, lit_4763@l
-/* 80AAF258  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AB2A9C */
-/* 80AAF25C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AB2AA0 */
+/* 80AAF258  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AAF25C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AAF260  90 61 00 08 */	stw r3, 8(r1)
 /* 80AAF264  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80AAF268  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AB2AA4 */
+/* 80AAF268  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AAF26C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AAF270  7F E3 FB 78 */	mr r3, r31
 /* 80AAF274  38 81 00 08 */	addi r4, r1, 8

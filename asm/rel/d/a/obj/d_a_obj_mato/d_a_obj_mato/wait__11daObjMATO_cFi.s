@@ -40,11 +40,11 @@ lbl_80C91FA8:
 lbl_80C92008:
 /* 80C92008  3C 80 80 C9 */	lis r4, lit_3891@ha
 /* 80C9200C  38 C4 2D 38 */	addi r6, r4, lit_3891@l
-/* 80C92010  80 86 00 00 */	lwz r4, 0(r6)	/* effective address: 80C92D38 */
-/* 80C92014  80 06 00 04 */	lwz r0, 4(r6)	/* effective address: 80C92D3C */
+/* 80C92010  80 86 00 00 */	lwz r4, 0(r6)
+/* 80C92014  80 06 00 04 */	lwz r0, 4(r6)
 /* 80C92018  90 81 00 08 */	stw r4, 8(r1)
 /* 80C9201C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C92020  80 06 00 08 */	lwz r0, 8(r6)	/* effective address: 80C92D40 */
+/* 80C92020  80 06 00 08 */	lwz r0, 8(r6)
 /* 80C92024  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C92028  38 81 00 08 */	addi r4, r1, 8
 /* 80C9202C  4B FF FB 2D */	bl setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi

@@ -6,7 +6,7 @@ lbl_8057A390:
 /* 8057A3A0  38 C4 B6 58 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 8057A3A4  3C 80 80 58 */	lis r4, data_8057B8D0@ha
 /* 8057A3A8  38 A4 B8 D0 */	addi r5, r4, data_8057B8D0@l
-/* 8057A3AC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 8057B8D0 */
+/* 8057A3AC  88 05 00 00 */	lbz r0, 0(r5)
 /* 8057A3B0  7C 00 07 75 */	extsb. r0, r0
 /* 8057A3B4  40 82 01 18 */	bne lbl_8057A4CC
 /* 8057A3B8  80 86 00 50 */	lwz r4, 0x50(r6)

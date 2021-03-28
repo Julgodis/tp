@@ -5,8 +5,8 @@ lbl_809DC330:
 /* 809DC33C  39 61 00 20 */	addi r11, r1, 0x20
 /* 809DC340  4B 98 5E 9C */	b _savegpr_29
 /* 809DC344  7C 7D 1B 78 */	mr r29, r3
-/* 809DC348  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809DC34C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809DC348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809DC34C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809DC350  3B E3 61 C0 */	addi r31, r3, 0x61c0
 /* 809DC354  83 DD 0B D8 */	lwz r30, 0xbd8(r29)
 /* 809DC358  28 1E 00 00 */	cmplwi r30, 0

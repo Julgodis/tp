@@ -16,7 +16,18 @@ struct mDoAud_zelAudio_c {
 	/* 80007368 */ ~mDoAud_zelAudio_c();
 };
 
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JAISoundID {
+};
+
+struct JKRArchive {
+	struct EMountMode {
+	};
+
 };
 
 struct JKRSolidHeap {
@@ -30,17 +41,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRArchive {
-	struct EMountMode {
-	};
-
-};
-
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
 };
 
 struct Z2AudioMgr {
@@ -358,9 +358,9 @@ asm void mDoAud_resetRecover() {
 /* ############################################################################################## */
 /* 803A2F40-803A2F4C 000C+00 s=2 e=0 z=0  None .data      __vt__17mDoAud_zelAudio_c                                    */
 SECTION_DATA static void* __vt__17mDoAud_zelAudio_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_802CDB1C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802CDB1C,
 };
 
 /* 80007318-80007368 0050+00 s=0 e=1 z=0  None .text      __sinit_m_Do_audio_cpp                                       */
@@ -388,10 +388,10 @@ asm mDoAud_zelAudio_c::~mDoAud_zelAudio_c() {
 /* ############################################################################################## */
 /* 803A2F4C-803A2F60 0010+04 s=1 e=2 z=0  None .data      __vt__12JAUSoundInfo                                         */
 SECTION_DATA void* __vt__12JAUSoundInfo[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

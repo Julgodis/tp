@@ -11,8 +11,8 @@ lbl_80762C4C:
 /* 80762C70  7C 7E 1B 78 */	mr r30, r3
 /* 80762C74  3C 80 80 76 */	lis r4, lit_3788@ha
 /* 80762C78  3B E4 4D 0C */	addi r31, r4, lit_3788@l
-/* 80762C7C  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80764D10 */
-/* 80762C80  C3 DF 00 08 */	lfs f30, 8(r31)	/* effective address: 80764D14 */
+/* 80762C7C  C3 FF 00 04 */	lfs f31, 4(r31)
+/* 80762C80  C3 DF 00 08 */	lfs f30, 8(r31)
 /* 80762C84  A8 03 0A 44 */	lha r0, 0xa44(r3)
 /* 80762C88  2C 00 00 01 */	cmpwi r0, 1
 /* 80762C8C  41 82 00 48 */	beq lbl_80762CD4

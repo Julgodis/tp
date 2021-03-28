@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -184,10 +184,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -352,58 +352,58 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BDA0C-803BDA18 000C+00 s=1 e=0 z=0  None .data      @3795                                                        */
 SECTION_DATA static void* lit_3795[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA18-803BDA24 000C+00 s=1 e=0 z=0  None .data      @3796                                                        */
 SECTION_DATA static void* lit_3796[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)slide_right_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)slide_right_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA24-803BDA30 000C+00 s=1 e=0 z=0  None .data      @3797                                                        */
 SECTION_DATA static void* lit_3797[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)slide_left_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)slide_left_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA30-803BDA3C 000C+00 s=1 e=0 z=0  None .data      @3798                                                        */
 SECTION_DATA static void* lit_3798[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_open_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_open_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA3C-803BDA48 000C+00 s=1 e=0 z=0  None .data      @3799                                                        */
 SECTION_DATA static void* lit_3799[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_move_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_move_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA48-803BDA54 000C+00 s=1 e=0 z=0  None .data      @3800                                                        */
 SECTION_DATA static void* lit_3800[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_next_fadeout_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_next_fadeout_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA54-803BDA60 000C+00 s=1 e=0 z=0  None .data      @3801                                                        */
 SECTION_DATA static void* lit_3801[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_next_fadein_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_next_fadein_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA60-803BDA6C 000C+00 s=1 e=0 z=0  None .data      @3802                                                        */
 SECTION_DATA static void* lit_3802[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_close_init__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_close_init__14dMenu_Letter_cFv,
 };
 
 /* 803BDA6C-803BDACC 0060+00 s=3 e=0 z=0  None .data      map_init_process                                             */
@@ -418,58 +418,58 @@ SECTION_DATA static u8 map_init_process[96] = {
 
 /* 803BDACC-803BDAD8 000C+00 s=1 e=0 z=0  None .data      @3803                                                        */
 SECTION_DATA static void* lit_3803[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDAD8-803BDAE4 000C+00 s=1 e=0 z=0  None .data      @3804                                                        */
 SECTION_DATA static void* lit_3804[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)slide_right_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)slide_right_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDAE4-803BDAF0 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA static void* lit_3805[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)slide_left_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)slide_left_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDAF0-803BDAFC 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA static void* lit_3806[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_open_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_open_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDAFC-803BDB08 000C+00 s=1 e=0 z=0  None .data      @3807                                                        */
 SECTION_DATA static void* lit_3807[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_move_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_move_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDB08-803BDB14 000C+00 s=1 e=0 z=0  None .data      @3808                                                        */
 SECTION_DATA static void* lit_3808[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_next_fadeout_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_next_fadeout_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDB14-803BDB20 000C+00 s=1 e=0 z=0  None .data      @3809                                                        */
 SECTION_DATA static void* lit_3809[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_next_fadein_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_next_fadein_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDB20-803BDB2C 000C+00 s=1 e=0 z=0  None .data      @3810                                                        */
 SECTION_DATA static void* lit_3810[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_close_move__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_close_move__14dMenu_Letter_cFv,
 };
 
 /* 803BDB2C-803BDB8C 0060+00 s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -484,10 +484,10 @@ SECTION_DATA static u8 map_move_process[96] = {
 
 /* 803BDB8C-803BDBA8 0010+0C s=2 e=0 z=0  None .data      __vt__14dMenu_Letter_c                                       */
 SECTION_DATA static void* __vt__14dMenu_Letter_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMenu_Letter_cFv,
-	/* 3    */ (void*)__dt__14dMenu_Letter_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMenu_Letter_cFv,
+	(void*)__dt__14dMenu_Letter_cFv,
 	/* padding */
 	NULL,
 	NULL,

@@ -15,11 +15,11 @@ lbl_805A9304:
 /* 805A9338  4B D9 D1 78 */	b PSMTXCopy
 /* 805A933C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805A9340  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805A9344  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 805A9344  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805A9348  D0 1E 06 18 */	stfs f0, 0x618(r30)
-/* 805A934C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805A934C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805A9350  D0 1E 06 1C */	stfs f0, 0x61c(r30)
-/* 805A9354  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 805A9354  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805A9358  D0 1E 06 20 */	stfs f0, 0x620(r30)
 /* 805A935C  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 805A9360  4B A6 3A 04 */	b transS__14mDoMtx_stack_cFRC4cXyz

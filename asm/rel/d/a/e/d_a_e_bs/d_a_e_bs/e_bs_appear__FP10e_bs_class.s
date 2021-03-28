@@ -54,12 +54,12 @@ lbl_8068E78C:
 /* 8068E7CC  98 1E 06 94 */	stb r0, 0x694(r30)
 /* 8068E7D0  3B 40 00 00 */	li r26, 0
 /* 8068E7D4  3B A0 00 00 */	li r29, 0
-/* 8068E7D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068E7DC  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 8068E7D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068E7DC  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 8068E7E0  3C 60 80 69 */	lis r3, data_80690EFC@ha
 /* 8068E7E4  3B 83 0E FC */	addi r28, r3, data_80690EFC@l
 lbl_8068E7E8:
-/* 8068E7E8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 8068E7E8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8068E7EC  38 80 00 00 */	li r4, 0
 /* 8068E7F0  90 81 00 08 */	stw r4, 8(r1)
 /* 8068E7F4  38 00 FF FF */	li r0, -1

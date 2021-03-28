@@ -54,11 +54,11 @@ lbl_8071DF64:
 /* 8071DFD0  4B 8E ED CC */	b transM__14mDoMtx_stack_cFfff
 /* 8071DFD4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8071DFD8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8071DFDC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8071DFDC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8071DFE0  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8071DFE4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8071DFE4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8071DFE8  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8071DFEC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8071DFEC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8071DFF0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8071DFF4  A8 9D 04 DE */	lha r4, 0x4de(r29)
 /* 8071DFF8  A8 1D 05 FA */	lha r0, 0x5fa(r29)

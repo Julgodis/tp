@@ -97,28 +97,29 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObj_Suisya_Draw(daObj_Suisya_c*); // 2
+void daObj_Suisya_Draw(daObj_Suisya_c*); // 2
 static void daObj_Suisya_Execute(daObj_Suisya_c*); // 2
-static bool daObj_Suisya_IsDelete(daObj_Suisya_c*); // 2
-static void daObj_Suisya_Delete(daObj_Suisya_c*); // 2
+bool daObj_Suisya_IsDelete(daObj_Suisya_c*); // 2
+void daObj_Suisya_Delete(daObj_Suisya_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObj_Suisya_Create(daObj_Suisya_c*); // 2
+void daObj_Suisya_Create(daObj_Suisya_c*); // 2
 
 extern "C" void draw__14daObj_Suisya_cFv(); // 1
-extern "C" static void daObj_Suisya_Draw__FP14daObj_Suisya_c(); // 1
+extern "C" void daObj_Suisya_Draw__FP14daObj_Suisya_c(); // 1
 extern "C" void execute__14daObj_Suisya_cFv(); // 1
 extern "C" static void daObj_Suisya_Execute__FP14daObj_Suisya_c(); // 1
-extern "C" static bool daObj_Suisya_IsDelete__FP14daObj_Suisya_c(); // 1
+extern "C" bool daObj_Suisya_IsDelete__FP14daObj_Suisya_c(); // 1
 extern "C" void _delete__14daObj_Suisya_cFv(); // 1
-extern "C" static void daObj_Suisya_Delete__FP14daObj_Suisya_c(); // 1
+extern "C" void daObj_Suisya_Delete__FP14daObj_Suisya_c(); // 1
 extern "C" void CreateHeap__14daObj_Suisya_cFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void create__14daObj_Suisya_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daObj_Suisya_Create__FP14daObj_Suisya_c(); // 1
-extern "C" static void func_80CF0508(); // 1
-extern "C" static void func_80CF0510(); // 1
+extern "C" void daObj_Suisya_Create__FP14daObj_Suisya_c(); // 1
+extern "C" void func_80CF0508(); // 1
+extern "C" void func_80CF0510(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObj_Suisya_Method[8];
 extern "C" extern void* g_profile_OBJ_SUISYA[12];
 
 // 
@@ -160,12 +161,10 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -198,11 +197,11 @@ asm void daObj_Suisya_c::draw() {
 #pragma pop
 
 
-/* 80CF0148-80CF0168 0020+00 s=1 e=0 z=0  None .text      daObj_Suisya_Draw__FP14daObj_Suisya_c                        */
+/* 80CF0148-80CF0168 0020+00 s=0 e=0 z=0  None .text      daObj_Suisya_Draw__FP14daObj_Suisya_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Suisya_Draw(daObj_Suisya_c* param_0) {
+asm void daObj_Suisya_Draw(daObj_Suisya_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Draw__FP14daObj_Suisya_c.s"
 }
@@ -224,7 +223,7 @@ asm void daObj_Suisya_c::execute() {
 #pragma pop
 
 
-/* 80CF020C-80CF022C 0020+00 s=2 e=0 z=0  None .text      daObj_Suisya_Execute__FP14daObj_Suisya_c                     */
+/* 80CF020C-80CF022C 0020+00 s=1 e=0 z=0  None .text      daObj_Suisya_Execute__FP14daObj_Suisya_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -235,8 +234,8 @@ asm static void daObj_Suisya_Execute(daObj_Suisya_c* param_0) {
 #pragma pop
 
 
-/* 80CF022C-80CF0234 0008+00 s=1 e=0 z=0  None .text      daObj_Suisya_IsDelete__FP14daObj_Suisya_c                    */
-static bool daObj_Suisya_IsDelete(daObj_Suisya_c* param_0) {
+/* 80CF022C-80CF0234 0008+00 s=0 e=0 z=0  None .text      daObj_Suisya_IsDelete__FP14daObj_Suisya_c                    */
+bool daObj_Suisya_IsDelete(daObj_Suisya_c* param_0) {
 	return true;
 }
 
@@ -272,11 +271,11 @@ asm void daObj_Suisya_c::_delete() {
 #pragma pop
 
 
-/* 80CF0264-80CF0284 0020+00 s=1 e=0 z=0  None .text      daObj_Suisya_Delete__FP14daObj_Suisya_c                      */
+/* 80CF0264-80CF0284 0020+00 s=0 e=0 z=0  None .text      daObj_Suisya_Delete__FP14daObj_Suisya_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Suisya_Delete(daObj_Suisya_c* param_0) {
+asm void daObj_Suisya_Delete(daObj_Suisya_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Delete__FP14daObj_Suisya_c.s"
 }
@@ -306,45 +305,45 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80CF054C-80CF056C 0020+00 s=1 e=0 z=0  None .data      l_daObj_Suisya_Method                                        */
-SECTION_DATA static void* l_daObj_Suisya_Method[8] = {
-	/* 0    */ (void*)daObj_Suisya_Create__FP14daObj_Suisya_c,
-	/* 1    */ (void*)daObj_Suisya_Delete__FP14daObj_Suisya_c,
-	/* 2    */ (void*)daObj_Suisya_Execute__FP14daObj_Suisya_c,
-	/* 3    */ (void*)daObj_Suisya_IsDelete__FP14daObj_Suisya_c,
-	/* 4    */ (void*)daObj_Suisya_Draw__FP14daObj_Suisya_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CF054C-80CF056C 0020+00 s=0 e=0 z=0  None .data      l_daObj_Suisya_Method                                        */
+SECTION_DATA void* l_daObj_Suisya_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CF056C-80CF059C 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_SUISYA                                         */
+/* 80CF056C-80CF059C 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_SUISYA                                         */
 SECTION_DATA void* g_profile_OBJ_SUISYA[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x011D0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000790,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00410000,
-	/* 9    */ (void*)&l_daObj_Suisya_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x011D0000,
+	(void*)NULL,
+	(void*)0x00000790,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00410000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80CF059C-80CF05C0 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80CF0510,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80CF0508,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CF0310-80CF0478 0168+00 s=1 e=0 z=0  None .text      create__14daObj_Suisya_cFv                                   */
@@ -358,7 +357,7 @@ asm void daObj_Suisya_c::create() {
 #pragma pop
 
 
-/* 80CF0478-80CF04E8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80CF0478-80CF04E8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -369,33 +368,33 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80CF04E8-80CF0508 0020+00 s=1 e=0 z=0  None .text      daObj_Suisya_Create__FP14daObj_Suisya_c                      */
+/* 80CF04E8-80CF0508 0020+00 s=0 e=0 z=0  None .text      daObj_Suisya_Create__FP14daObj_Suisya_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Suisya_Create(daObj_Suisya_c* param_0) {
+asm void daObj_Suisya_Create(daObj_Suisya_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/daObj_Suisya_Create__FP14daObj_Suisya_c.s"
 }
 #pragma pop
 
 
-/* 80CF0508-80CF0510 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CF0508-80CF0510 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80CF0508() {
+extern "C" asm void func_80CF0508() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/func_80CF0508.s"
 }
 #pragma pop
 
 
-/* 80CF0510-80CF0518 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80CF0510-80CF0518 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80CF0510() {
+extern "C" asm void func_80CF0510() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_suisya/d_a_obj_suisya/func_80CF0510.s"
 }

@@ -33,7 +33,7 @@ lbl_8082A068:
 lbl_8082A094:
 /* 8082A094  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8082A098  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8082A09C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8082A09C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082A0A0  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 8082A0A4  4B 7E 23 38 */	b mDoMtx_YrotS__FPA4_fs
 /* 8082A0A8  C0 1F 00 10 */	lfs f0, 0x10(r31)
@@ -141,7 +141,7 @@ lbl_8082A210:
 /* 8082A224  7C 7B 1B 78 */	mr r27, r3
 /* 8082A228  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8082A22C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8082A230  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8082A230  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082A234  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8082A238  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 8082A23C  EC 00 F8 2A */	fadds f0, f0, f31
@@ -156,7 +156,7 @@ lbl_8082A254:
 /* 8082A25C  7C 7B 07 34 */	extsh r27, r3
 /* 8082A260  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8082A264  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8082A268  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8082A268  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082A26C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8082A270  38 80 00 63 */	li r4, 0x63
 /* 8082A274  4B A8 5D 18 */	b changeBgmStatus__8Z2SeqMgrFl

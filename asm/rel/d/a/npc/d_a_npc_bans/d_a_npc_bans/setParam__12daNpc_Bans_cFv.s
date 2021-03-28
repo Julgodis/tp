@@ -28,10 +28,10 @@ lbl_80963918:
 /* 80963928  3B A0 00 0A */	li r29, 0xa
 /* 8096392C  3C 60 80 96 */	lis r3, m__18daNpc_Bans_Param_c@ha
 /* 80963930  38 63 7E 20 */	addi r3, r3, m__18daNpc_Bans_Param_c@l
-/* 80963934  AB 83 00 48 */	lha r28, 0x48(r3)	/* effective address: 80967E68 */
-/* 80963938  AB C3 00 4A */	lha r30, 0x4a(r3)	/* effective address: 80967E6A */
-/* 8096393C  A8 A3 00 4C */	lha r5, 0x4c(r3)	/* effective address: 80967E6C */
-/* 80963940  A8 83 00 4E */	lha r4, 0x4e(r3)	/* effective address: 80967E6E */
+/* 80963934  AB 83 00 48 */	lha r28, 0x48(r3)
+/* 80963938  AB C3 00 4A */	lha r30, 0x4a(r3)
+/* 8096393C  A8 A3 00 4C */	lha r5, 0x4c(r3)
+/* 80963940  A8 83 00 4E */	lha r4, 0x4e(r3)
 /* 80963944  88 1F 12 00 */	lbz r0, 0x1200(r31)
 /* 80963948  2C 00 00 02 */	cmpwi r0, 2
 /* 8096394C  41 82 00 6C */	beq lbl_809639B8
@@ -59,10 +59,10 @@ lbl_80963988:
 lbl_80963994:
 /* 80963994  3B 80 00 05 */	li r28, 5
 /* 80963998  38 A0 00 05 */	li r5, 5
-/* 8096399C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809639A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809639A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 809639A8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8096399C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809639A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809639A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 809639A8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 809639AC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809639B0  41 82 00 08 */	beq lbl_809639B8
 /* 809639B4  3B A0 00 00 */	li r29, 0
@@ -80,35 +80,35 @@ lbl_809639B8:
 /* 809639E0  93 BF 05 5C */	stw r29, 0x55c(r31)
 /* 809639E4  3C 60 80 96 */	lis r3, m__18daNpc_Bans_Param_c@ha
 /* 809639E8  38 63 7E 20 */	addi r3, r3, m__18daNpc_Bans_Param_c@l
-/* 809639EC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80967E28 */
+/* 809639EC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 809639F0  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 809639F4  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 809639F8  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 809639FC  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80967E30 */
+/* 809639FC  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80963A00  FC 00 00 1E */	fctiwz f0, f0
 /* 80963A04  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80963A08  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80963A0C  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 80963A10  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80967E34 */
+/* 80963A10  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80963A14  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 80963A18  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80967E3C */
+/* 80963A18  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80963A1C  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 80963A20  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 80967E70 */
+/* 80963A20  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 80963A24  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 80963A28  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80963A2C  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 80963A30  4B 71 25 10 */	b SetWallR__12dBgS_AcchCirFf
 /* 80963A34  3C 60 80 96 */	lis r3, m__18daNpc_Bans_Param_c@ha
 /* 80963A38  38 63 7E 20 */	addi r3, r3, m__18daNpc_Bans_Param_c@l
-/* 80963A3C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80967E38 */
+/* 80963A3C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80963A40  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 80963A44  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80967E2C */
+/* 80963A44  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80963A48  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 80963A4C  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80967E8C */
+/* 80963A4C  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80963A50  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 80963A54  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80967E64 */
+/* 80963A54  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80963A58  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 80963A5C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80967E24 */
+/* 80963A5C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80963A60  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80963A64  39 61 00 20 */	addi r11, r1, 0x20
 /* 80963A68  4B 9F E7 BC */	b _restgpr_28

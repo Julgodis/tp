@@ -7,10 +7,10 @@ lbl_80CACA44:
 /* 80CACA58  7C 7D 1B 78 */	mr r29, r3
 /* 80CACA5C  3C 60 80 CB */	lis r3, l_arcName@ha
 /* 80CACA60  38 63 D1 FC */	addi r3, r3, l_arcName@l
-/* 80CACA64  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CAD1FC */
+/* 80CACA64  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CACA68  38 80 00 04 */	li r4, 4
-/* 80CACA6C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CACA70  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CACA6C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CACA70  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CACA74  3F E5 00 02 */	addis r31, r5, 2
 /* 80CACA78  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80CACA7C  7F E5 FB 78 */	mr r5, r31

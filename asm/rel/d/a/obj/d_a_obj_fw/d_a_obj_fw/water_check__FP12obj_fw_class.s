@@ -18,8 +18,8 @@ lbl_80BF2200:
 /* 80BF2240  38 61 00 14 */	addi r3, r1, 0x14
 /* 80BF2244  38 81 00 08 */	addi r4, r1, 8
 /* 80BF2248  4B 67 5A C4 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 80BF224C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF2250  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF224C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF2250  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF2254  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BF2258  38 81 00 14 */	addi r4, r1, 0x14
 /* 80BF225C  4B 48 22 44 */	b GroundCross__4cBgSFP11cBgS_GndChk

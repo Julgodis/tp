@@ -5,16 +5,16 @@ lbl_80CAA03C:
 /* 80CAA048  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CAA04C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CAA050  7C 7F 1B 78 */	mr r31, r3
-/* 80CAA054  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAA058  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CAA054  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAA058  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAA05C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CAA060  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CAA064  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CAA068  7C 05 07 74 */	extsb r5, r0
 /* 80CAA06C  4B 38 B2 F4 */	b isSwitch__10dSv_info_cCFii
 /* 80CAA070  7C 7E 1B 78 */	mr r30, r3
-/* 80CAA074  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAA078  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CAA074  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAA078  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAA07C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CAA080  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CAA084  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -57,11 +57,11 @@ lbl_80CAA0E8:
 /* 80CAA10C  7F E3 FB 78 */	mr r3, r31
 /* 80CAA110  3C 80 80 CB */	lis r4, l_cull_box@ha
 /* 80CAA114  C4 24 AB 70 */	lfsu f1, l_cull_box@l(r4)
-/* 80CAA118  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80CB0004 */
-/* 80CAA11C  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80CB0008 */
-/* 80CAA120  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80CB000C */
-/* 80CAA124  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80CB0010 */
-/* 80CAA128  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80CB0014 */
+/* 80CAA118  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80CAA11C  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80CAA120  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80CAA124  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80CAA128  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80CAA12C  4B 37 04 1C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CAA130  38 60 00 01 */	li r3, 1
 /* 80CAA134  83 E1 00 0C */	lwz r31, 0xc(r1)

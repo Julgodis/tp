@@ -11,8 +11,7 @@
 // Types:
 // 
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct cCcD_GStts {
 };
 
 struct cXyz {
@@ -26,10 +25,11 @@ struct cCcD_Stts {
 	/* 80263984 */ void GetWeightF() const;
 };
 
-struct cCcD_GStts {
+struct cCcD_GObjInf {
 };
 
-struct cCcD_GObjInf {
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct cCcS {
@@ -174,18 +174,18 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803C3748-803C3778 0030+00 s=1 e=2 z=0  None .data      __vt__4cCcS                                                  */
 SECTION_DATA void* __vt__4cCcS[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts,
-	/* 3    */ (void*)SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf,
-	/* 4    */ (void*)SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
-	/* 5    */ (void*)SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz,
-	/* 6    */ (void*)ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts,
-	/* 7    */ (void*)ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
-	/* 8    */ (void*)ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj,
-	/* 9    */ (void*)__dt__4cCcSFv,
-	/* 10   */ (void*)MoveAfterCheck__4cCcSFv,
-	/* 11   */ (void*)SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts,
+	(void*)SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf,
+	(void*)SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
+	(void*)SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz,
+	(void*)ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts,
+	(void*)ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
+	(void*)ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj,
+	(void*)__dt__4cCcSFv,
+	(void*)MoveAfterCheck__4cCcSFv,
+	(void*)SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj,
 };
 
 /* 80264A6C-80264A94 0028+00 s=0 e=1 z=0  None .text      __ct__4cCcSFv                                                */

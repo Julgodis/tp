@@ -28,11 +28,11 @@ lbl_80992D84:
 /* 80992DEC  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 80992DF0  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80992DF4  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80992DF8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80992DFC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80992DF8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80992DFC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80992E00  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 80992E04  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 80992E08  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80992E08  80 04 00 08 */	lwz r0, 8(r4)
 /* 80992E0C  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 80992E10  38 00 00 01 */	li r0, 1
 /* 80992E14  98 1F 10 EF */	stb r0, 0x10ef(r31)

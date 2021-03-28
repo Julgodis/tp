@@ -8,8 +8,8 @@ lbl_804942CC:
 /* 804942E4  7C 9F 23 78 */	mr r31, r4
 /* 804942E8  3A C0 00 00 */	li r22, 0
 /* 804942EC  3A A0 00 00 */	li r21, 0
-/* 804942F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804942F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804942F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804942F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804942F8  3B 43 00 9C */	addi r26, r3, 0x9c
 /* 804942FC  3B 23 00 F8 */	addi r25, r3, 0xf8
 /* 80494300  3B 03 00 EC */	addi r24, r3, 0xec

@@ -8,11 +8,11 @@ lbl_80A1FE6C:
 /* 80A1FE84  7C 9F 23 78 */	mr r31, r4
 /* 80A1FE88  3C 60 80 A2 */	lis r3, lit_6169@ha
 /* 80A1FE8C  38 83 13 0C */	addi r4, r3, lit_6169@l
-/* 80A1FE90  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2130C */
-/* 80A1FE94  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A21310 */
+/* 80A1FE90  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1FE94  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1FE98  90 61 00 08 */	stw r3, 8(r1)
 /* 80A1FE9C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A1FEA0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A21314 */
+/* 80A1FEA0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1FEA4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1FEA8  38 7E 14 48 */	addi r3, r30, 0x1448
 /* 80A1FEAC  4B 73 08 40 */	b getActorP__18daNpcF_ActorMngr_cFv

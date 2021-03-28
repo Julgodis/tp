@@ -18,8 +18,8 @@ lbl_80BC5284:
 /* 80BC5284  80 9F 07 F8 */	lwz r4, 0x7f8(r31)
 /* 80BC5288  28 04 00 00 */	cmplwi r4, 0
 /* 80BC528C  41 82 00 14 */	beq lbl_80BC52A0
-/* 80BC5290  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC5294  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BC5290  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC5294  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC5298  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BC529C  4B 4A EF B4 */	b Release__4cBgSFP9dBgW_Base
 lbl_80BC52A0:

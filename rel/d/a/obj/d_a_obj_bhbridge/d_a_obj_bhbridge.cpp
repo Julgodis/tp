@@ -97,9 +97,6 @@ struct dBgS_ObjGndChk_Spl {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -133,34 +130,32 @@ struct Z2SeMgr {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-static void daObjBhbridge_Draw(daObjBhbridge_c*); // 2
-static void daObjBhbridge_Execute(daObjBhbridge_c*); // 2
-static bool daObjBhbridge_IsDelete(daObjBhbridge_c*); // 2
-static void daObjBhbridge_Delete(daObjBhbridge_c*); // 2
-static void daObjBhbridge_Create(fopAc_ac_c*); // 2
+void daObjBhbridge_Draw(daObjBhbridge_c*); // 2
+void daObjBhbridge_Execute(daObjBhbridge_c*); // 2
+bool daObjBhbridge_IsDelete(daObjBhbridge_c*); // 2
+void daObjBhbridge_Delete(daObjBhbridge_c*); // 2
+void daObjBhbridge_Create(fopAc_ac_c*); // 2
 
 extern "C" void RideOn_Angle__15daObjBhbridge_cFRsfsf(); // 1
 extern "C" void Check_RideOn__15daObjBhbridge_cFv(); // 1
 extern "C" void initBaseMtx__15daObjBhbridge_cFv(); // 1
 extern "C" void setBaseMtx__15daObjBhbridge_cFv(); // 1
 extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" static void daObjBhbridge_Draw__FP15daObjBhbridge_c(); // 1
-extern "C" static void daObjBhbridge_Execute__FP15daObjBhbridge_c(); // 1
-extern "C" static bool daObjBhbridge_IsDelete__FP15daObjBhbridge_c(); // 1
-extern "C" static void daObjBhbridge_Delete__FP15daObjBhbridge_c(); // 1
-extern "C" static void daObjBhbridge_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjBhbridge_Draw__FP15daObjBhbridge_c(); // 1
+extern "C" void daObjBhbridge_Execute__FP15daObjBhbridge_c(); // 1
+extern "C" bool daObjBhbridge_IsDelete__FP15daObjBhbridge_c(); // 1
+extern "C" void daObjBhbridge_Delete__FP15daObjBhbridge_c(); // 1
+extern "C" void daObjBhbridge_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void CreateHeap__15daObjBhbridge_cFv(); // 1
 extern "C" void Create__15daObjBhbridge_cFv(); // 1
 extern "C" void Execute__15daObjBhbridge_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjBhbridge_cFv(); // 1
 extern "C" void Delete__15daObjBhbridge_cFv(); // 1
-extern "C" static void func_80BB5EE8(); // 1
-extern "C" static void func_80BB5EF0(); // 1
-extern "C" extern u8 const lit_3704[8];
-extern "C" extern u8 const lit_3705[8];
-extern "C" extern u8 const lit_3706[8];
+extern "C" void func_80BB5EE8(); // 1
+extern "C" void func_80BB5EF0(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjBhbridge_Method[8];
 extern "C" extern void* g_profile_Obj_Bhbridge[12];
 
 // 
@@ -198,9 +193,6 @@ extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__18dBgS_ObjGndChk_SplFv(); // 1
 extern "C" void __dt__18dBgS_ObjGndChk_SplFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -222,20 +214,11 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -269,18 +252,18 @@ SECTION_RODATA static u8 const lit_3703[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BB5F10-80BB5F18 0008+00 s=0 e=0 z=0  None .rodata    @3704                                                        */
-SECTION_RODATA u8 const lit_3704[8] = {
+/* 80BB5F10-80BB5F18 0008+00 s=1 e=0 z=0  None .rodata    @3704                                                        */
+SECTION_RODATA static u8 const lit_3704[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BB5F18-80BB5F20 0008+00 s=0 e=0 z=0  None .rodata    @3705                                                        */
-SECTION_RODATA u8 const lit_3705[8] = {
+/* 80BB5F18-80BB5F20 0008+00 s=1 e=0 z=0  None .rodata    @3705                                                        */
+SECTION_RODATA static u8 const lit_3705[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BB5F20-80BB5F28 0008+00 s=0 e=0 z=0  None .rodata    @3706                                                        */
-SECTION_RODATA u8 const lit_3706[8] = {
+/* 80BB5F20-80BB5F28 0008+00 s=1 e=0 z=0  None .rodata    @3706                                                        */
+SECTION_RODATA static u8 const lit_3706[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -344,39 +327,39 @@ asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* par
 #pragma pop
 
 
-/* 80BB5678-80BB56A4 002C+00 s=1 e=0 z=0  None .text      daObjBhbridge_Draw__FP15daObjBhbridge_c                      */
+/* 80BB5678-80BB56A4 002C+00 s=0 e=0 z=0  None .text      daObjBhbridge_Draw__FP15daObjBhbridge_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBhbridge_Draw(daObjBhbridge_c* param_0) {
+asm void daObjBhbridge_Draw(daObjBhbridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Draw__FP15daObjBhbridge_c.s"
 }
 #pragma pop
 
 
-/* 80BB56A4-80BB56C4 0020+00 s=1 e=0 z=0  None .text      daObjBhbridge_Execute__FP15daObjBhbridge_c                   */
+/* 80BB56A4-80BB56C4 0020+00 s=0 e=0 z=0  None .text      daObjBhbridge_Execute__FP15daObjBhbridge_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBhbridge_Execute(daObjBhbridge_c* param_0) {
+asm void daObjBhbridge_Execute(daObjBhbridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Execute__FP15daObjBhbridge_c.s"
 }
 #pragma pop
 
 
-/* 80BB56C4-80BB56CC 0008+00 s=1 e=0 z=0  None .text      daObjBhbridge_IsDelete__FP15daObjBhbridge_c                  */
-static bool daObjBhbridge_IsDelete(daObjBhbridge_c* param_0) {
+/* 80BB56C4-80BB56CC 0008+00 s=0 e=0 z=0  None .text      daObjBhbridge_IsDelete__FP15daObjBhbridge_c                  */
+bool daObjBhbridge_IsDelete(daObjBhbridge_c* param_0) {
 	return true;
 }
 
 
-/* 80BB56CC-80BB56F0 0024+00 s=1 e=0 z=0  None .text      daObjBhbridge_Delete__FP15daObjBhbridge_c                    */
+/* 80BB56CC-80BB56F0 0024+00 s=0 e=0 z=0  None .text      daObjBhbridge_Delete__FP15daObjBhbridge_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBhbridge_Delete(daObjBhbridge_c* param_0) {
+asm void daObjBhbridge_Delete(daObjBhbridge_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Delete__FP15daObjBhbridge_c.s"
 }
@@ -438,7 +421,7 @@ SECTION_RODATA static u32 const lit_3900 = 0x3F000000;
 /* 80BB5F80-80BB5F84 0004+00 s=1 e=0 z=0  None .rodata    @3901                                                        */
 SECTION_RODATA static u32 const lit_3901 = 0x3E4CCCCD;
 
-/* 80BB5F84-80BB5FAB 0027+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BB5F84-80BB5FAB 0027+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -448,75 +431,75 @@ SECTION_DEAD char const* const stringBase_80BB5F9C = "M_BHbridge.bmd";
 #pragma pop
 
 /* 80BB5FAC-80BB5FB0 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80BB5FB0-80BB5FD0 0020+00 s=1 e=0 z=0  None .data      l_daObjBhbridge_Method                                       */
-SECTION_DATA static void* l_daObjBhbridge_Method[8] = {
-	/* 0    */ (void*)daObjBhbridge_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjBhbridge_Delete__FP15daObjBhbridge_c,
-	/* 2    */ (void*)daObjBhbridge_Execute__FP15daObjBhbridge_c,
-	/* 3    */ (void*)daObjBhbridge_IsDelete__FP15daObjBhbridge_c,
-	/* 4    */ (void*)daObjBhbridge_Draw__FP15daObjBhbridge_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BB5FB0-80BB5FD0 0020+00 s=0 e=0 z=0  None .data      l_daObjBhbridge_Method                                       */
+SECTION_DATA void* l_daObjBhbridge_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BB5FD0-80BB6000 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Bhbridge                                       */
+/* 80BB5FD0-80BB6000 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Bhbridge                                       */
 SECTION_DATA void* g_profile_Obj_Bhbridge[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00690000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000810,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01CB0000,
-	/* 9    */ (void*)&l_daObjBhbridge_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00690000,
+	(void*)NULL,
+	(void*)0x00000810,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01CB0000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80BB6000-80BB6024 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BB5EF0,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BB5EE8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BB6024-80BB604C 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjBhbridge_c                                      */
 SECTION_DATA static void* __vt__15daObjBhbridge_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjBhbridge_cFv,
-	/* 3    */ (void*)Create__15daObjBhbridge_cFv,
-	/* 4    */ (void*)Execute__15daObjBhbridge_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjBhbridge_cFv,
-	/* 6    */ (void*)Delete__15daObjBhbridge_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BB56F0-80BB58C4 01D4+00 s=1 e=0 z=0  None .text      daObjBhbridge_Create__FP10fopAc_ac_c                         */
+/* 80BB56F0-80BB58C4 01D4+00 s=0 e=0 z=0  None .text      daObjBhbridge_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjBhbridge_Create(fopAc_ac_c* param_0) {
+asm void daObjBhbridge_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/daObjBhbridge_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BB58C4-80BB5934 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BB58C4-80BB5934 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -527,7 +510,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BB5934-80BB59AC 0078+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjBhbridge_cFv                              */
+/* 80BB5934-80BB59AC 0078+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjBhbridge_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -538,7 +521,7 @@ asm void daObjBhbridge_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BB59AC-80BB5A14 0068+00 s=1 e=0 z=0  None .text      Create__15daObjBhbridge_cFv                                  */
+/* 80BB59AC-80BB5A14 0068+00 s=0 e=0 z=0  None .text      Create__15daObjBhbridge_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -549,7 +532,7 @@ asm void daObjBhbridge_c::Create() {
 #pragma pop
 
 
-/* 80BB5A14-80BB5E10 03FC+00 s=1 e=0 z=0  None .text      Execute__15daObjBhbridge_cFPPA3_A4_f                         */
+/* 80BB5A14-80BB5E10 03FC+00 s=0 e=0 z=0  None .text      Execute__15daObjBhbridge_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -560,7 +543,7 @@ asm void daObjBhbridge_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BB5E10-80BB5EB4 00A4+00 s=1 e=0 z=0  None .text      Draw__15daObjBhbridge_cFv                                    */
+/* 80BB5E10-80BB5EB4 00A4+00 s=0 e=0 z=0  None .text      Draw__15daObjBhbridge_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -571,7 +554,7 @@ asm void daObjBhbridge_c::Draw() {
 #pragma pop
 
 
-/* 80BB5EB4-80BB5EE8 0034+00 s=1 e=0 z=0  None .text      Delete__15daObjBhbridge_cFv                                  */
+/* 80BB5EB4-80BB5EE8 0034+00 s=0 e=0 z=0  None .text      Delete__15daObjBhbridge_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -582,22 +565,22 @@ asm void daObjBhbridge_c::Delete() {
 #pragma pop
 
 
-/* 80BB5EE8-80BB5EF0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BB5EE8-80BB5EF0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BB5EE8() {
+extern "C" asm void func_80BB5EE8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/func_80BB5EE8.s"
 }
 #pragma pop
 
 
-/* 80BB5EF0-80BB5EF8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BB5EF0-80BB5EF8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BB5EF0() {
+extern "C" asm void func_80BB5EF0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bhbridge/d_a_obj_bhbridge/func_80BB5EF0.s"
 }

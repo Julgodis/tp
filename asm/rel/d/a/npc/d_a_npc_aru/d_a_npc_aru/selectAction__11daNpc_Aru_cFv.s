@@ -9,11 +9,11 @@ lbl_809538F8:
 /* 80953914  3B E4 78 E8 */	addi r31, r4, cNullVec__6Z2Calc@l
 /* 80953918  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 8095391C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80953920  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80953924  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80953920  80 85 00 00 */	lwz r4, 0(r5)
+/* 80953924  80 05 00 04 */	lwz r0, 4(r5)
 /* 80953928  90 83 0F A4 */	stw r4, 0xfa4(r3)
 /* 8095392C  90 03 0F A8 */	stw r0, 0xfa8(r3)
-/* 80953930  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80953930  80 05 00 08 */	lwz r0, 8(r5)
 /* 80953934  90 03 0F AC */	stw r0, 0xfac(r3)
 /* 80953938  88 03 0F 80 */	lbz r0, 0xf80(r3)
 /* 8095393C  2C 00 00 02 */	cmpwi r0, 2

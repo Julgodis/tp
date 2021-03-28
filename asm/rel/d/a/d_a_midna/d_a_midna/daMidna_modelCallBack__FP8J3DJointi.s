@@ -5,8 +5,8 @@ lbl_804BC6FC:
 /* 804BC708  A0 03 00 14 */	lhz r0, 0x14(r3)
 /* 804BC70C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 804BC710  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 804BC714  80 63 00 38 */	lwz r3, 0x38(r3)	/* effective address: 80434B00 */
-/* 804BC718  80 63 00 14 */	lwz r3, 0x14(r3)	/* effective address: 80434ADC */
+/* 804BC714  80 63 00 38 */	lwz r3, 0x38(r3)
+/* 804BC718  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 804BC71C  2C 04 00 00 */	cmpwi r4, 0
 /* 804BC720  40 82 00 0C */	bne lbl_804BC72C
 /* 804BC724  7C 04 03 78 */	mr r4, r0

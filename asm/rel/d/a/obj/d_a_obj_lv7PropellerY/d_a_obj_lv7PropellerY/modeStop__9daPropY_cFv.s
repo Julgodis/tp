@@ -62,7 +62,7 @@ lbl_80C85E58:
 /* 80C85EB8  90 01 00 08 */	stw r0, 8(r1)
 /* 80C85EBC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C85EC0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C85EC4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C85EC4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C85EC8  38 81 00 08 */	addi r4, r1, 8
 /* 80C85ECC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C85ED0  7F 87 E3 78 */	mr r7, r28

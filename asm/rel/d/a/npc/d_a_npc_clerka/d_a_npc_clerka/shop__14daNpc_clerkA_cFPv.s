@@ -7,9 +7,9 @@ lbl_809943B0:
 /* 809943C4  7C 7E 1B 78 */	mr r30, r3
 /* 809943C8  3C 80 80 99 */	lis r4, m__20daNpc_clerkA_Param_c@ha
 /* 809943CC  3B E4 58 70 */	addi r31, r4, m__20daNpc_clerkA_Param_c@l
-/* 809943D0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809943D4  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 809943D8  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 809943D0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809943D4  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 809943D8  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 809943DC  4B 68 63 34 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 809943E0  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 809943E4  2C 00 00 02 */	cmpwi r0, 2
@@ -84,8 +84,8 @@ lbl_809944B4:
 /* 809944E0  38 7E 0B 98 */	addi r3, r30, 0xb98
 /* 809944E4  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 809944E8  4B 7B 11 F8 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
-/* 809944EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809944F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809944EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809944F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809944F4  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 809944F8  4B 6A DF 70 */	b reset__14dEvt_control_cFv
 /* 809944FC  38 00 00 03 */	li r0, 3

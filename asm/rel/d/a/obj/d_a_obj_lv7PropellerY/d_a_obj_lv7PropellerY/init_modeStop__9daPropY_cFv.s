@@ -10,7 +10,7 @@ lbl_80C85CAC:
 /* 80C85CCC  C0 25 00 18 */	lfs f1, 0x18(r5)
 /* 80C85CD0  3C 80 80 C8 */	lis r4, l_HIO@ha
 /* 80C85CD4  38 84 62 CC */	addi r4, r4, l_HIO@l
-/* 80C85CD8  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80C862E0 */
+/* 80C85CD8  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 80C85CDC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80C85CE0  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80C85CE4  EC 03 00 32 */	fmuls f0, f3, f0

@@ -70,7 +70,7 @@ lbl_807A9660:
 /* 807A9678  4B 87 11 68 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807A967C  3C 60 80 7B */	lis r3, l_HIO@ha
 /* 807A9680  38 63 02 10 */	addi r3, r3, l_HIO@l
-/* 807A9684  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 807B0220 */
+/* 807A9684  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 807A9688  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807A968C  40 80 00 94 */	bge lbl_807A9720
 /* 807A9690  38 00 00 02 */	li r0, 2

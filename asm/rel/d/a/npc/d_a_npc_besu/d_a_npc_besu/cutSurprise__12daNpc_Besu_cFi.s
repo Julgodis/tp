@@ -11,8 +11,8 @@ lbl_8053B250:
 /* 8053B274  7C 7F 1B 78 */	mr r31, r3
 /* 8053B278  3B A0 00 00 */	li r29, 0
 /* 8053B27C  3B 80 FF FF */	li r28, -1
-/* 8053B280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053B284  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8053B280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053B284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8053B288  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8053B28C  7F C3 F3 78 */	mr r3, r30
 /* 8053B290  7F 44 D3 78 */	mr r4, r26
@@ -102,19 +102,19 @@ lbl_8053B3B4:
 /* 8053B3C4  4B C1 11 3C */	b daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz
 /* 8053B3C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8053B3CC  41 82 00 B4 */	beq lbl_8053B480
-/* 8053B3D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053B3D4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8053B3D8  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8053B3D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053B3D4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8053B3D8  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 /* 8053B3DC  38 81 00 10 */	addi r4, r1, 0x10
 /* 8053B3E0  A8 A1 00 0A */	lha r5, 0xa(r1)
 /* 8053B3E4  38 C0 00 00 */	li r6, 0
-/* 8053B3E8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 8053B3E8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8053B3EC  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 8053B3F0  7D 89 03 A6 */	mtctr r12
 /* 8053B3F4  4E 80 04 21 */	bctrl 
-/* 8053B3F8  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8053B3F8  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 /* 8053B3FC  A8 01 00 0A */	lha r0, 0xa(r1)
-/* 8053B400  B0 03 06 06 */	sth r0, 0x606(r3)	/* effective address: 80400606 */
+/* 8053B400  B0 03 06 06 */	sth r0, 0x606(r3)
 /* 8053B404  7F C3 F3 78 */	mr r3, r30
 /* 8053B408  38 81 00 10 */	addi r4, r1, 0x10
 /* 8053B40C  4B B0 CF B8 */	b setGoal__16dEvent_manager_cFP4cXyz

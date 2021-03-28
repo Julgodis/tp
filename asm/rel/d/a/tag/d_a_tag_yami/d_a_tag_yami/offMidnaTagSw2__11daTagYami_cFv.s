@@ -3,8 +3,8 @@ lbl_80D65F24:
 /* 80D65F28  7C 08 02 A6 */	mflr r0
 /* 80D65F2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D65F30  7C 65 1B 78 */	mr r5, r3
-/* 80D65F34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D65F38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D65F34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D65F38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D65F3C  80 85 06 E8 */	lwz r4, 0x6e8(r5)
 /* 80D65F40  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 80D65F44  7C 05 07 74 */	extsb r5, r0

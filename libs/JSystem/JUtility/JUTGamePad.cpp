@@ -25,10 +25,10 @@ struct JUTGamePad {
 		/* 802E1CD8 */ CButton();
 	};
 
-	struct EWhichStick {
+	struct EStickMode {
 	};
 
-	struct EStickMode {
+	struct EWhichStick {
 	};
 
 	struct CStick {
@@ -209,9 +209,9 @@ SECTION_DATA static u8 channel_mask[16] = {
 
 /* 803CC610-803CC620 000C+04 s=2 e=0 z=0  None .data      __vt__10JUTGamePad                                           */
 SECTION_DATA static void* __vt__10JUTGamePad[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JUTGamePadFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JUTGamePadFv,
 	/* padding */
 	NULL,
 };

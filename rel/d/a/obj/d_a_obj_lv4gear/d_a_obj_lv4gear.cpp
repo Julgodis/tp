@@ -73,10 +73,10 @@ struct Z2SeMgr {
 
 static void CheckCreateHeap(fopAc_ac_c*); // 2
 static void searchSwSpinSub(void*, void*); // 2
-static void daObjLv4Gear_Draw(daObjLv4Gear_c*); // 2
-static void daObjLv4Gear_Execute(daObjLv4Gear_c*); // 2
-static void daObjLv4Gear_Delete(daObjLv4Gear_c*); // 2
-static void daObjLv4Gear_Create(daObjLv4Gear_c*); // 2
+void daObjLv4Gear_Draw(daObjLv4Gear_c*); // 2
+void daObjLv4Gear_Execute(daObjLv4Gear_c*); // 2
+void daObjLv4Gear_Delete(daObjLv4Gear_c*); // 2
+void daObjLv4Gear_Create(daObjLv4Gear_c*); // 2
 
 extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" static void searchSwSpinSub__FPvPv(); // 1
@@ -88,12 +88,13 @@ extern "C" void create__14daObjLv4Gear_cFv(); // 1
 extern "C" void execute__14daObjLv4Gear_cFv(); // 1
 extern "C" void draw__14daObjLv4Gear_cFv(); // 1
 extern "C" void _delete__14daObjLv4Gear_cFv(); // 1
-extern "C" static void daObjLv4Gear_Draw__FP14daObjLv4Gear_c(); // 1
-extern "C" static void daObjLv4Gear_Execute__FP14daObjLv4Gear_c(); // 1
-extern "C" static void daObjLv4Gear_Delete__FP14daObjLv4Gear_c(); // 1
-extern "C" static void daObjLv4Gear_Create__FP14daObjLv4Gear_c(); // 1
+extern "C" void daObjLv4Gear_Draw__FP14daObjLv4Gear_c(); // 1
+extern "C" void daObjLv4Gear_Execute__FP14daObjLv4Gear_c(); // 1
+extern "C" void daObjLv4Gear_Delete__FP14daObjLv4Gear_c(); // 1
+extern "C" void daObjLv4Gear_Create__FP14daObjLv4Gear_c(); // 1
 extern "C" extern u8 const l_size[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjLv4Gear_Method[8];
 extern "C" extern void* g_profile_Obj_Lv4Gear[12];
 
 // 
@@ -136,11 +137,9 @@ extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -208,6 +207,21 @@ SECTION_RODATA static u8 const l_bmd[8] = {
 	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x03,
 };
 
+/* 80C6852C-80C68530 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)NULL;
+
+/* 80C680A4-80C68124 0080+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjLv4Gear_cFv                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjLv4Gear_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/CreateHeap__14daObjLv4Gear_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80C68508-80C68510 0008+00 s=0 e=0 z=0  None .rodata    l_size                                                       */
 SECTION_RODATA u8 const l_size[8] = {
 	0x42, 0xC8, 0x00, 0x00, 0x43, 0x96, 0x00, 0x00,
@@ -221,33 +235,6 @@ SECTION_RODATA static u8 const l_heap_size[8] = {
 	0x00, 0x00, 0x0F, 0x00, 0x00, 0x00, 0x0F, 0x00,
 };
 
-/* 80C6851C-80C68520 0004+00 s=1 e=0 z=0  None .rodata    @3773                                                        */
-SECTION_RODATA static u32 const lit_3773 = 0x3F800000;
-
-/* 80C68520-80C68524 0004+00 s=1 e=0 z=0  None .rodata    @3774                                                        */
-SECTION_RODATA static u32 const lit_3774 = 0xBF800000;
-
-/* 80C68524-80C6852B 0007+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C68524 = "P_Gear";
-#pragma pop
-
-/* 80C6852C-80C68530 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80C680A4-80C68124 0080+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjLv4Gear_cFv                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjLv4Gear_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/CreateHeap__14daObjLv4Gear_cFv.s"
-}
-#pragma pop
-
-
 /* 80C68124-80C681F4 00D0+00 s=1 e=0 z=0  None .text      create__14daObjLv4Gear_cFv                                   */
 #pragma push
 #pragma optimization_level 0
@@ -258,6 +245,13 @@ asm void daObjLv4Gear_c::create() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C6851C-80C68520 0004+00 s=1 e=0 z=0  None .rodata    @3773                                                        */
+SECTION_RODATA static u32 const lit_3773 = 0x3F800000;
+
+/* 80C68520-80C68524 0004+00 s=1 e=0 z=0  None .rodata    @3774                                                        */
+SECTION_RODATA static u32 const lit_3774 = 0xBF800000;
 
 /* 80C681F4-80C683E0 01EC+00 s=1 e=0 z=0  None .text      execute__14daObjLv4Gear_cFv                                  */
 #pragma push
@@ -292,44 +286,44 @@ asm void daObjLv4Gear_c::_delete() {
 #pragma pop
 
 
-/* 80C68478-80C68498 0020+00 s=1 e=0 z=0  None .text      daObjLv4Gear_Draw__FP14daObjLv4Gear_c                        */
+/* 80C68478-80C68498 0020+00 s=0 e=0 z=0  None .text      daObjLv4Gear_Draw__FP14daObjLv4Gear_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Gear_Draw(daObjLv4Gear_c* param_0) {
+asm void daObjLv4Gear_Draw(daObjLv4Gear_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Draw__FP14daObjLv4Gear_c.s"
 }
 #pragma pop
 
 
-/* 80C68498-80C684B8 0020+00 s=1 e=0 z=0  None .text      daObjLv4Gear_Execute__FP14daObjLv4Gear_c                     */
+/* 80C68498-80C684B8 0020+00 s=0 e=0 z=0  None .text      daObjLv4Gear_Execute__FP14daObjLv4Gear_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Gear_Execute(daObjLv4Gear_c* param_0) {
+asm void daObjLv4Gear_Execute(daObjLv4Gear_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Execute__FP14daObjLv4Gear_c.s"
 }
 #pragma pop
 
 
-/* 80C684B8-80C684D8 0020+00 s=1 e=0 z=0  None .text      daObjLv4Gear_Delete__FP14daObjLv4Gear_c                      */
+/* 80C684B8-80C684D8 0020+00 s=0 e=0 z=0  None .text      daObjLv4Gear_Delete__FP14daObjLv4Gear_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Gear_Delete(daObjLv4Gear_c* param_0) {
+asm void daObjLv4Gear_Delete(daObjLv4Gear_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Delete__FP14daObjLv4Gear_c.s"
 }
 #pragma pop
 
 
-/* 80C684D8-80C684F8 0020+00 s=1 e=0 z=0  None .text      daObjLv4Gear_Create__FP14daObjLv4Gear_c                      */
+/* 80C684D8-80C684F8 0020+00 s=0 e=0 z=0  None .text      daObjLv4Gear_Create__FP14daObjLv4Gear_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Gear_Create(daObjLv4Gear_c* param_0) {
+asm void daObjLv4Gear_Create(daObjLv4Gear_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4gear/d_a_obj_lv4gear/daObjLv4Gear_Create__FP14daObjLv4Gear_c.s"
 }
@@ -337,31 +331,38 @@ asm static void daObjLv4Gear_Create(daObjLv4Gear_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C68530-80C68550 0020+00 s=1 e=0 z=0  None .data      l_daObjLv4Gear_Method                                        */
-SECTION_DATA static void* l_daObjLv4Gear_Method[8] = {
-	/* 0    */ (void*)daObjLv4Gear_Create__FP14daObjLv4Gear_c,
-	/* 1    */ (void*)daObjLv4Gear_Delete__FP14daObjLv4Gear_c,
-	/* 2    */ (void*)daObjLv4Gear_Execute__FP14daObjLv4Gear_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjLv4Gear_Draw__FP14daObjLv4Gear_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C68524-80C6852B 0007+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C68524 = "P_Gear";
+#pragma pop
+
+/* 80C68530-80C68550 0020+00 s=0 e=0 z=0  None .data      l_daObjLv4Gear_Method                                        */
+SECTION_DATA void* l_daObjLv4Gear_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C68550-80C68580 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4Gear                                        */
+/* 80C68550-80C68580 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4Gear                                        */
 SECTION_DATA void* g_profile_Obj_Lv4Gear[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01830000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000584,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02310000,
-	/* 9    */ (void*)&l_daObjLv4Gear_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01830000,
+	(void*)NULL,
+	(void*)0x00000584,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02310000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 

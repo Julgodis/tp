@@ -7,9 +7,9 @@ lbl_8045DE44:
 /* 8045DE58  7C 7D 1B 78 */	mr r29, r3
 /* 8045DE5C  3C 60 80 46 */	lis r3, lit_3806@ha
 /* 8045DE60  3B E3 E5 34 */	addi r31, r3, lit_3806@l
-/* 8045DE64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045DE68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045DE6C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8045DE64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045DE68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045DE6C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 8045DE70  38 61 00 08 */	addi r3, r1, 8
 /* 8045DE74  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 8045DE78  38 BD 04 A8 */	addi r5, r29, 0x4a8

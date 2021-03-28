@@ -19,14 +19,14 @@ lbl_80CF406C:
 /* 80CF40B0  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CF40B4  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80CF40B8  4B 4B 0C E8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80CF40BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF40C0  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CF40C4  80 04 5F 78 */	lwz r0, 0x5f78(r4)	/* effective address: 8040C138 */
+/* 80CF40BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF40C0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CF40C4  80 04 5F 78 */	lwz r0, 0x5f78(r4)
 /* 80CF40C8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CF40CC  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80CF40D0  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80CF40D4  80 04 5F 7C */	lwz r0, 0x5f7c(r4)	/* effective address: 8040C13C */
-/* 80CF40D8  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80CF40D0  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80CF40D4  80 04 5F 7C */	lwz r0, 0x5f7c(r4)
+/* 80CF40D8  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CF40DC  80 7E 05 84 */	lwz r3, 0x584(r30)
 /* 80CF40E0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80CF40E4  80 63 00 60 */	lwz r3, 0x60(r3)
@@ -85,11 +85,11 @@ lbl_80CF4194:
 /* 80CF41B4  80 7E 05 84 */	lwz r3, 0x584(r30)
 /* 80CF41B8  80 63 00 04 */	lwz r3, 4(r3)
 /* 80CF41BC  4B 31 9C 34 */	b mDoExt_btkAnmRemove__FP12J3DModelData
-/* 80CF41C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF41C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CF41C8  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80CF41C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF41C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CF41C8  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CF41CC  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80CF41D0  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80CF41D0  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80CF41D4  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CF41D8  38 60 00 01 */	li r3, 1
 /* 80CF41DC  39 61 00 50 */	addi r11, r1, 0x50

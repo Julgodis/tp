@@ -8,8 +8,8 @@ lbl_809B6F40:
 /* 809B6F58  3C C0 80 9C */	lis r6, m__19daNpc_Fairy_Param_c@ha
 /* 809B6F5C  3B A6 92 E4 */	addi r29, r6, m__19daNpc_Fairy_Param_c@l
 /* 809B6F60  3B E0 00 00 */	li r31, 0
-/* 809B6F64  80 DD 01 D8 */	lwz r6, 0x1d8(r29)	/* effective address: 809B94BC */
-/* 809B6F68  80 1D 01 DC */	lwz r0, 0x1dc(r29)	/* effective address: 809B94C0 */
+/* 809B6F64  80 DD 01 D8 */	lwz r6, 0x1d8(r29)
+/* 809B6F68  80 1D 01 DC */	lwz r0, 0x1dc(r29)
 /* 809B6F6C  90 C1 00 0C */	stw r6, 0xc(r1)
 /* 809B6F70  90 01 00 10 */	stw r0, 0x10(r1)
 /* 809B6F74  80 84 00 00 */	lwz r4, 0(r4)
@@ -118,7 +118,7 @@ lbl_809B70E8:
 /* 809B70EC  90 01 00 08 */	stw r0, 8(r1)
 /* 809B70F0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B70F4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B70F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B70F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B70FC  38 81 00 08 */	addi r4, r1, 8
 /* 809B7100  38 A0 00 00 */	li r5, 0
 /* 809B7104  38 C0 00 00 */	li r6, 0

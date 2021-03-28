@@ -40,8 +40,8 @@ lbl_804D37FC:
 /* 804D3804  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 804D3808  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 804D380C  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 804D3810  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D3814  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804D3810  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D3814  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804D3818  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804D381C  38 80 00 02 */	li r4, 2
 /* 804D3820  38 A0 00 01 */	li r5, 1
@@ -370,9 +370,9 @@ lbl_804D3C98:
 /* 804D3CCC  38 7E 0A 4C */	addi r3, r30, 0xa4c
 /* 804D3CD0  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 804D3CD4  4B D9 B5 2C */	b SetR__8cM3dGCylFf
-/* 804D3CD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D3CDC  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
-/* 804D3CE0  80 78 5D B4 */	lwz r3, 0x5db4(r24)	/* effective address: 8040BF74 */
+/* 804D3CD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D3CDC  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
+/* 804D3CE0  80 78 5D B4 */	lwz r3, 0x5db4(r24)
 /* 804D3CE4  4B C3 9C 88 */	b getSpinnerRideMoveTime__9daAlink_cFv
 /* 804D3CE8  B0 7E 0A 7A */	sth r3, 0xa7a(r30)
 /* 804D3CEC  80 7E 0A 64 */	lwz r3, 0xa64(r30)

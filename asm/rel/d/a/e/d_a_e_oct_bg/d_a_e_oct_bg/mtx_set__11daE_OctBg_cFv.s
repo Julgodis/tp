@@ -17,7 +17,7 @@ lbl_80736A78:
 /* 80736AB4  C0 5D 00 34 */	lfs f2, 0x34(r29)
 /* 80736AB8  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 80736ABC  3B C3 A1 4C */	addi r30, r3, l_HIO@l
-/* 80736AC0  C0 1E 00 18 */	lfs f0, 0x18(r30)	/* effective address: 8073A164 */
+/* 80736AC0  C0 1E 00 18 */	lfs f0, 0x18(r30)
 /* 80736AC4  EC 42 00 32 */	fmuls f2, f2, f0
 /* 80736AC8  FC 60 08 90 */	fmr f3, f1
 /* 80736ACC  4B 8D 62 D0 */	b transM__14mDoMtx_stack_cFfff

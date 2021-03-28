@@ -10,9 +10,9 @@ lbl_80BDD96C:
 /* 80BDD98C  3B C3 F8 70 */	addi r30, r3, l_swOffset@l
 /* 80BDD990  3C 60 80 BE */	lis r3, lit_1109@ha
 /* 80BDD994  3B E3 FB 38 */	addi r31, r3, lit_1109@l
-/* 80BDD998  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDD99C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BDD9A0  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BDD998  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDD99C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BDD9A0  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80BDD9A4  80 05 04 9C */	lwz r0, 0x49c(r5)
 /* 80BDD9A8  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 80BDD9AC  41 82 01 F0 */	beq lbl_80BDDB9C

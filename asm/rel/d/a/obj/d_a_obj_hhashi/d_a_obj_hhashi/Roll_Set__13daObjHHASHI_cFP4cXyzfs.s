@@ -16,7 +16,7 @@ lbl_80580A48:
 /* 80580A80  7C BA 2B 78 */	mr r26, r5
 /* 80580A84  3C 60 80 58 */	lis r3, data_805814AC@ha
 /* 80580A88  3B E3 14 AC */	addi r31, r3, data_805814AC@l
-/* 80580A8C  C0 3F 00 AC */	lfs f1, 0xac(r31)	/* effective address: 80581558 */
+/* 80580A8C  C0 3F 00 AC */	lfs f1, 0xac(r31)
 /* 80580A90  4B CE 6E FC */	b cM_rndFX__Ff
 /* 80580A94  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
 /* 80580A98  EC 00 08 2A */	fadds f0, f0, f1

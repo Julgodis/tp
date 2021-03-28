@@ -10,9 +10,9 @@ lbl_8067DAE8:
 /* 8067DB08  A8 05 00 08 */	lha r0, 8(r5)
 /* 8067DB0C  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 8067DB10  40 82 00 34 */	bne lbl_8067DB44
-/* 8067DB14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067DB18  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8067DB1C  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
+/* 8067DB14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067DB18  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8067DB1C  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
 /* 8067DB20  4B A5 EF 0C */	b checkWoodShieldEquipNotIronBall__9daAlink_cCFv
 /* 8067DB24  2C 03 00 00 */	cmpwi r3, 0
 /* 8067DB28  41 82 00 1C */	beq lbl_8067DB44

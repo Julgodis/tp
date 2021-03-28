@@ -4,8 +4,8 @@ lbl_80484708:
 /* 80484710  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80484714  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80484718  7C 7F 1B 78 */	mr r31, r3
-/* 8048471C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80484720  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048471C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80484720  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80484724  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80484728  A8 9F 05 BA */	lha r4, 0x5ba(r31)
 /* 8048472C  4B BC 2D 90 */	b getEventData__16dEvent_manager_cFs

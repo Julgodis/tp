@@ -21,21 +21,21 @@ lbl_80C72EE0:
 /* 80C72F2C  80 83 00 04 */	lwz r4, 4(r3)
 /* 80C72F30  7F C3 F3 78 */	mr r3, r30
 /* 80C72F34  4B 3A A4 F8 */	b fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData
-/* 80C72F38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C72F3C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C72F40  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80C72F38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C72F3C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C72F40  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80C72F44  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C72F48  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80C72F4C  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80C72F50  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80C72F54  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80C72F4C  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80C72F50  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80C72F54  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80C72F58  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 80C72F5C  4B 39 AD 68 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80C72F60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C72F64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C72F68  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C72F60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C72F64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C72F68  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C72F6C  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80C72F70  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C72F70  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C72F74  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80C72F78  38 60 00 01 */	li r3, 1
 /* 80C72F7C  83 E1 00 0C */	lwz r31, 0xc(r1)

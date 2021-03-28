@@ -7,16 +7,16 @@ lbl_805A037C:
 /* 805A0390  7C 7E 1B 78 */	mr r30, r3
 /* 805A0394  3C 80 80 5A */	lis r4, lit_3769@ha
 /* 805A0398  3B E4 11 58 */	addi r31, r4, lit_3769@l
-/* 805A039C  C0 1F 00 78 */	lfs f0, 0x78(r31)	/* effective address: 805A11D0 */
+/* 805A039C  C0 1F 00 78 */	lfs f0, 0x78(r31)
 /* 805A03A0  D0 03 05 30 */	stfs f0, 0x530(r3)
 /* 805A03A4  38 00 00 00 */	li r0, 0
 /* 805A03A8  98 03 05 E4 */	stb r0, 0x5e4(r3)
 /* 805A03AC  80 03 08 F0 */	lwz r0, 0x8f0(r3)
 /* 805A03B0  60 00 00 01 */	ori r0, r0, 1
 /* 805A03B4  90 03 08 F0 */	stw r0, 0x8f0(r3)
-/* 805A03B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805A03BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805A03C0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805A03B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805A03BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805A03C0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 805A03C4  4B A7 A4 1C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805A03C8  D0 3E 05 D4 */	stfs f1, 0x5d4(r30)
 /* 805A03CC  38 7E 04 DC */	addi r3, r30, 0x4dc
@@ -74,10 +74,10 @@ lbl_805A0480:
 /* 805A0480  88 1E 06 1E */	lbz r0, 0x61e(r30)
 /* 805A0484  2C 00 00 01 */	cmpwi r0, 1
 /* 805A0488  40 82 00 3C */	bne lbl_805A04C4
-/* 805A048C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A0490  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A0494  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 805A0498  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 805A048C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A0490  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A0494  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 805A0498  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 805A049C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 805A04A0  41 82 00 24 */	beq lbl_805A04C4
 /* 805A04A4  C0 3E 05 D4 */	lfs f1, 0x5d4(r30)
@@ -94,12 +94,12 @@ lbl_805A04C4:
 /* 805A04CC  41 82 00 60 */	beq lbl_805A052C
 /* 805A04D0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805A04D4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805A04D8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805A04D8  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A04DC  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 805A04E0  4B A6 BE FC */	b mDoMtx_YrotS__FPA4_fs
 /* 805A04E4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805A04E8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805A04EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805A04EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A04F0  A8 9E 04 DC */	lha r4, 0x4dc(r30)
 /* 805A04F4  4B A6 BE A8 */	b mDoMtx_XrotM__FPA4_fs
 /* 805A04F8  C0 1F 00 20 */	lfs f0, 0x20(r31)
@@ -118,7 +118,7 @@ lbl_805A04C4:
 lbl_805A052C:
 /* 805A052C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805A0530  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805A0534  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805A0534  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A0538  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 805A053C  4B A6 BE A0 */	b mDoMtx_YrotS__FPA4_fs
 /* 805A0540  C0 1F 00 20 */	lfs f0, 0x20(r31)
@@ -163,8 +163,8 @@ lbl_805A05A4:
 /* 805A05D8  D0 1E 04 D8 */	stfs f0, 0x4d8(r30)
 lbl_805A05DC:
 /* 805A05DC  38 7E 06 B0 */	addi r3, r30, 0x6b0
-/* 805A05E0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805A05E4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805A05E0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805A05E4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805A05E8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805A05EC  4B AD 64 C0 */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_805A05F0:
@@ -179,7 +179,7 @@ lbl_805A05F0:
 /* 805A0610  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 805A0614  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805A0618  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805A061C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805A061C  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A0620  A8 9E 06 10 */	lha r4, 0x610(r30)
 /* 805A0624  4B A6 BD B8 */	b mDoMtx_YrotS__FPA4_fs
 /* 805A0628  38 61 00 14 */	addi r3, r1, 0x14

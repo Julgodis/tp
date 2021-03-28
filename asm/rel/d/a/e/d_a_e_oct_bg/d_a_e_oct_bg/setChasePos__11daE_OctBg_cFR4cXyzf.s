@@ -32,11 +32,11 @@ lbl_80737574:
 /* 807375EC  4B 8D 57 B0 */	b transM__14mDoMtx_stack_cFfff
 /* 807375F0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 807375F4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 807375F8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 807375F8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807375FC  D0 1F 00 00 */	stfs f0, 0(r31)
-/* 80737600  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80737600  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80737604  D0 1F 00 04 */	stfs f0, 4(r31)
-/* 80737608  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80737608  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8073760C  D0 1F 00 08 */	stfs f0, 8(r31)
 /* 80737610  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 80737614  CB E1 00 20 */	lfd f31, 0x20(r1)

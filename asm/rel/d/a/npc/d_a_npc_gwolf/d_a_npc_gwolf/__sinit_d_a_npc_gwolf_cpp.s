@@ -16,11 +16,11 @@ lbl_809F83B4:
 /* 809F83EC  4B FF AC 4D */	bl __register_global_object
 /* 809F83F0  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809F83F4  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809F83F8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809F83FC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809F83F8  80 64 00 00 */	lwz r3, 0(r4)
+/* 809F83FC  80 04 00 04 */	lwz r0, 4(r4)
 /* 809F8400  90 7F 01 E0 */	stw r3, 0x1e0(r31)
 /* 809F8404  90 1F 01 E4 */	stw r0, 0x1e4(r31)
-/* 809F8408  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809F8408  80 04 00 08 */	lwz r0, 8(r4)
 /* 809F840C  90 1F 01 E8 */	stw r0, 0x1e8(r31)
 /* 809F8410  38 9F 01 E0 */	addi r4, r31, 0x1e0
 /* 809F8414  80 7F 01 B0 */	lwz r3, 0x1b0(r31)

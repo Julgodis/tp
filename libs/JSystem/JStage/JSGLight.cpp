@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct _GXDistAttnFn {
-};
-
 struct _GXSpotFn {
 };
 
-struct Vec {
+struct _GXDistAttnFn {
 };
 
 struct _GXColor {
+};
+
+struct Vec {
 };
 
 struct JStage {
@@ -109,33 +109,33 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C4778-803C47E8 006C+04 s=1 e=1 z=0  None .data      __vt__Q26JStage6TLight                                       */
 SECTION_DATA void* __vt__Q26JStage6TLight[27 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)JSGFGetType__Q26JStage6TLightCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetLightType__Q26JStage6TLightCFv,
-	/* 16   */ (void*)JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight,
-	/* 17   */ (void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
-	/* 18   */ (void*)JSGSetPosition__Q26JStage6TLightFRC3Vec,
-	/* 19   */ (void*)JSGGetColor__Q26JStage6TLightCFv,
-	/* 20   */ (void*)JSGSetColor__Q26JStage6TLightF8_GXColor,
-	/* 21   */ (void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
-	/* 22   */ (void*)JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn,
-	/* 23   */ (void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
-	/* 24   */ (void*)JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn,
-	/* 25   */ (void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
-	/* 26   */ (void*)JSGSetDirection__Q26JStage6TLightFRC3Vec,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)JSGFGetType__Q26JStage6TLightCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetLightType__Q26JStage6TLightCFv,
+	(void*)JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight,
+	(void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
+	(void*)JSGSetPosition__Q26JStage6TLightFRC3Vec,
+	(void*)JSGGetColor__Q26JStage6TLightCFv,
+	(void*)JSGSetColor__Q26JStage6TLightF8_GXColor,
+	(void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
+	(void*)JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn,
+	(void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
+	(void*)JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn,
+	(void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
+	(void*)JSGSetDirection__Q26JStage6TLightFRC3Vec,
 	/* padding */
 	NULL,
 };

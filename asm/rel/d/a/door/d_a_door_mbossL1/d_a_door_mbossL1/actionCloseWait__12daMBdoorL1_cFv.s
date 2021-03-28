@@ -8,8 +8,8 @@ lbl_80676BE8:
 /* 80676C00  A0 83 00 F8 */	lhz r4, 0xf8(r3)
 /* 80676C04  28 04 00 03 */	cmplwi r4, 3
 /* 80676C08  40 82 00 3C */	bne lbl_80676C44
-/* 80676C0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676C10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80676C0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676C10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676C14  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80676C18  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80676C1C  38 84 75 58 */	addi r4, r4, l_staff_name@l
@@ -35,8 +35,8 @@ lbl_80676C44:
 /* 80676C68  38 03 7F FF */	addi r0, r3, 0x7fff
 /* 80676C6C  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
 lbl_80676C70:
-/* 80676C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676C74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80676C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676C74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676C78  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80676C7C  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80676C80  38 84 75 58 */	addi r4, r4, l_staff_name@l
@@ -60,8 +60,8 @@ lbl_80676CAC:
 /* 80676CC4  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80676CC8  28 00 00 FF */	cmplwi r0, 0xff
 /* 80676CCC  41 82 00 24 */	beq lbl_80676CF0
-/* 80676CD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676CD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80676CD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676CD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676CD8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80676CDC  7F E4 FB 78 */	mr r4, r31
 /* 80676CE0  7F C5 F3 78 */	mr r5, r30
@@ -69,8 +69,8 @@ lbl_80676CAC:
 /* 80676CE8  B0 7F 05 D2 */	sth r3, 0x5d2(r31)
 /* 80676CEC  48 00 00 2C */	b lbl_80676D18
 lbl_80676CF0:
-/* 80676CF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676CF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80676CF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676CF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676CF8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80676CFC  3C 80 80 67 */	lis r4, struct_80677660+0x0@ha
 /* 80676D00  38 84 76 60 */	addi r4, r4, struct_80677660+0x0@l

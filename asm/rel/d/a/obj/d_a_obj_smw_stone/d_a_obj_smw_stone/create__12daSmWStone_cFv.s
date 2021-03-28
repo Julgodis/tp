@@ -23,7 +23,7 @@ lbl_80CDE650:
 lbl_80CDE660:
 /* 80CDE660  3C 80 80 CE */	lis r4, l_arcName@ha
 /* 80CDE664  38 84 EF 1C */	addi r4, r4, l_arcName@l
-/* 80CDE668  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CDEF1C */
+/* 80CDE668  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CDE66C  4B 34 E8 50 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CDE670  7C 7F 1B 78 */	mr r31, r3
 /* 80CDE674  2C 1F 00 04 */	cmpwi r31, 4
@@ -38,8 +38,8 @@ lbl_80CDE660:
 /* 80CDE698  38 60 00 05 */	li r3, 5
 /* 80CDE69C  48 00 01 44 */	b lbl_80CDE7E0
 lbl_80CDE6A0:
-/* 80CDE6A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDE6A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDE6A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDE6A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDE6A8  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80CDE6AC  7F A3 EB 78 */	mr r3, r29
 /* 80CDE6B0  80 9E 05 88 */	lwz r4, 0x588(r30)

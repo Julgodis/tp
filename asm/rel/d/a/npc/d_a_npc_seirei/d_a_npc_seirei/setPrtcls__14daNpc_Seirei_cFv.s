@@ -7,7 +7,7 @@ lbl_80AD6808:
 /* 80AD681C  7C 7B 1B 78 */	mr r27, r3
 /* 80AD6820  3C 60 80 AD */	lis r3, m__20daNpc_Seirei_Param_c@ha
 /* 80AD6824  3B A3 7C A8 */	addi r29, r3, m__20daNpc_Seirei_Param_c@l
-/* 80AD6828  C0 1D 00 A4 */	lfs f0, 0xa4(r29)	/* effective address: 80AD7D4C */
+/* 80AD6828  C0 1D 00 A4 */	lfs f0, 0xa4(r29)
 /* 80AD682C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80AD6830  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80AD6834  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -16,8 +16,8 @@ lbl_80AD6808:
 /* 80AD6840  3B 20 00 00 */	li r25, 0
 /* 80AD6844  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80AD6848  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80AD684C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD6850  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80AD684C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD6850  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80AD6854:
 /* 80AD6854  88 1B 0E 45 */	lbz r0, 0xe45(r27)
 /* 80AD6858  28 00 00 00 */	cmplwi r0, 0
@@ -64,8 +64,8 @@ lbl_80AD68F4:
 /* 80AD68F8  54 04 A6 3E */	rlwinm r4, r0, 0x14, 0x18, 0x1f
 /* 80AD68FC  28 04 00 FF */	cmplwi r4, 0xff
 /* 80AD6900  41 82 00 D8 */	beq lbl_80AD69D8
-/* 80AD6904  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD6908  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AD6904  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD6908  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AD690C  88 1B 04 E2 */	lbz r0, 0x4e2(r27)
 /* 80AD6910  7C 05 07 74 */	extsb r5, r0
 /* 80AD6914  4B 55 EA 4C */	b isSwitch__10dSv_info_cCFii
@@ -106,7 +106,7 @@ lbl_80AD68F4:
 /* 80AD69A0  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80AD69A4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80AD69A8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80AD69AC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80AD69AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80AD69B0  38 81 00 20 */	addi r4, r1, 0x20
 /* 80AD69B4  38 A1 00 30 */	addi r5, r1, 0x30
 /* 80AD69B8  38 C0 00 00 */	li r6, 0

@@ -7,7 +7,7 @@ lbl_80C39B2C:
 /* 80C39B40  40 82 00 24 */	bne lbl_80C39B64
 /* 80C39B44  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C39B48  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80C39B4C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80C39B4C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80C39B50  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80C39B54  28 03 00 00 */	cmplwi r3, 0
 /* 80C39B58  41 82 00 0C */	beq lbl_80C39B64

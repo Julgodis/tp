@@ -150,7 +150,7 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
@@ -159,7 +159,7 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -1185,11 +1185,11 @@ asm void dKyw_wether_delete() {
 /* ############################################################################################## */
 /* 803A9AC0-803A9AD4 0014+00 s=2 e=0 z=0  None .data      __vt__19dKankyo_evil_Packet                                  */
 SECTION_DATA static void* __vt__19dKankyo_evil_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__19dKankyo_evil_PacketFv,
-	/* 4    */ (void*)__dt__19dKankyo_evil_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19dKankyo_evil_PacketFv,
+	(void*)__dt__19dKankyo_evil_PacketFv,
 };
 
 /* 80057C84-80057D08 0084+00 s=1 e=0 z=0  None .text      __dt__19dKankyo_evil_PacketFv                                */
@@ -1206,11 +1206,11 @@ asm dKankyo_evil_Packet::~dKankyo_evil_Packet() {
 /* ############################################################################################## */
 /* 803A9AD4-803A9AE8 0014+00 s=2 e=0 z=0  None .data      __vt__18dKankyo_mud_Packet                                   */
 SECTION_DATA static void* __vt__18dKankyo_mud_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__18dKankyo_mud_PacketFv,
-	/* 4    */ (void*)__dt__18dKankyo_mud_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__18dKankyo_mud_PacketFv,
+	(void*)__dt__18dKankyo_mud_PacketFv,
 };
 
 /* 80057D08-80057D8C 0084+00 s=1 e=0 z=0  None .text      __dt__18dKankyo_mud_PacketFv                                 */
@@ -1227,11 +1227,11 @@ asm dKankyo_mud_Packet::~dKankyo_mud_Packet() {
 /* ############################################################################################## */
 /* 803A9AE8-803A9AFC 0014+00 s=2 e=0 z=0  None .data      __vt__20dKankyo_odour_Packet                                 */
 SECTION_DATA static void* __vt__20dKankyo_odour_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__20dKankyo_odour_PacketFv,
-	/* 4    */ (void*)__dt__20dKankyo_odour_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__20dKankyo_odour_PacketFv,
+	(void*)__dt__20dKankyo_odour_PacketFv,
 };
 
 /* 80057D8C-80057E10 0084+00 s=1 e=0 z=0  None .text      __dt__20dKankyo_odour_PacketFv                               */
@@ -1248,29 +1248,29 @@ asm dKankyo_odour_Packet::~dKankyo_odour_Packet() {
 /* ############################################################################################## */
 /* 803A9AFC-803A9B10 0014+00 s=2 e=0 z=0  None .data      __vt__21dKankyo_vrkumo_Packet                                */
 SECTION_DATA static void* __vt__21dKankyo_vrkumo_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__21dKankyo_vrkumo_PacketFv,
-	/* 4    */ (void*)__dt__21dKankyo_vrkumo_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__21dKankyo_vrkumo_PacketFv,
+	(void*)__dt__21dKankyo_vrkumo_PacketFv,
 };
 
 /* 803A9B10-803A9B24 0014+00 s=2 e=0 z=0  None .data      __vt__20dKankyo_housi_Packet                                 */
 SECTION_DATA static void* __vt__20dKankyo_housi_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__20dKankyo_housi_PacketFv,
-	/* 4    */ (void*)__dt__20dKankyo_housi_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__20dKankyo_housi_PacketFv,
+	(void*)__dt__20dKankyo_housi_PacketFv,
 };
 
 /* 803A9B24-803A9B38 0014+00 s=2 e=0 z=0  None .data      __vt__20dKankyo_cloud_Packet                                 */
 SECTION_DATA static void* __vt__20dKankyo_cloud_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__20dKankyo_cloud_PacketFv,
-	/* 4    */ (void*)__dt__20dKankyo_cloud_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__20dKankyo_cloud_PacketFv,
+	(void*)__dt__20dKankyo_cloud_PacketFv,
 };
 
 /* 80057E10-80057E94 0084+00 s=1 e=0 z=0  None .text      __dt__20dKankyo_cloud_PacketFv                               */
@@ -1298,11 +1298,11 @@ asm dKankyo_housi_Packet::~dKankyo_housi_Packet() {
 /* ############################################################################################## */
 /* 803A9B38-803A9B4C 0014+00 s=1 e=1 z=0  None .data      __vt__19dKankyo_star_Packet                                  */
 SECTION_DATA void* __vt__19dKankyo_star_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__19dKankyo_star_PacketFv,
-	/* 4    */ (void*)__dt__19dKankyo_star_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19dKankyo_star_PacketFv,
+	(void*)__dt__19dKankyo_star_PacketFv,
 };
 
 /* 80057F18-80057F9C 0084+00 s=1 e=0 z=0  None .text      __dt__19dKankyo_star_PacketFv                                */
@@ -1319,11 +1319,11 @@ asm dKankyo_star_Packet::~dKankyo_star_Packet() {
 /* ############################################################################################## */
 /* 803A9B4C-803A9B60 0014+00 s=1 e=1 z=0  None .data      __vt__19dKankyo_snow_Packet                                  */
 SECTION_DATA void* __vt__19dKankyo_snow_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__19dKankyo_snow_PacketFv,
-	/* 4    */ (void*)__dt__19dKankyo_snow_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19dKankyo_snow_PacketFv,
+	(void*)__dt__19dKankyo_snow_PacketFv,
 };
 
 /* 80057F9C-80058020 0084+00 s=1 e=0 z=0  None .text      __dt__19dKankyo_snow_PacketFv                                */
@@ -1340,11 +1340,11 @@ asm dKankyo_snow_Packet::~dKankyo_snow_Packet() {
 /* ############################################################################################## */
 /* 803A9B60-803A9B74 0014+00 s=2 e=0 z=0  None .data      __vt__19dKankyo_rain_Packet                                  */
 SECTION_DATA static void* __vt__19dKankyo_rain_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__19dKankyo_rain_PacketFv,
-	/* 4    */ (void*)__dt__19dKankyo_rain_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__19dKankyo_rain_PacketFv,
+	(void*)__dt__19dKankyo_rain_PacketFv,
 };
 
 /* 80058020-800580A4 0084+00 s=1 e=0 z=0  None .text      __dt__19dKankyo_rain_PacketFv                                */
@@ -1361,11 +1361,11 @@ asm dKankyo_rain_Packet::~dKankyo_rain_Packet() {
 /* ############################################################################################## */
 /* 803A9B74-803A9B88 0014+00 s=2 e=0 z=0  None .data      __vt__22dKankyo_sunlenz_Packet                               */
 SECTION_DATA static void* __vt__22dKankyo_sunlenz_Packet[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__22dKankyo_sunlenz_PacketFv,
-	/* 4    */ (void*)__dt__22dKankyo_sunlenz_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__22dKankyo_sunlenz_PacketFv,
+	(void*)__dt__22dKankyo_sunlenz_PacketFv,
 };
 
 /* 800580A4-80058128 0084+00 s=1 e=0 z=0  None .text      __dt__22dKankyo_sunlenz_PacketFv                             */
@@ -1382,11 +1382,11 @@ asm dKankyo_sunlenz_Packet::~dKankyo_sunlenz_Packet() {
 /* ############################################################################################## */
 /* 803A9B88-803A9BA0 0014+04 s=2 e=0 z=0  None .data      __vt__18dKankyo_sun_Packet                                   */
 SECTION_DATA static void* __vt__18dKankyo_sun_Packet[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__18dKankyo_sun_PacketFv,
-	/* 4    */ (void*)__dt__18dKankyo_sun_PacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__18dKankyo_sun_PacketFv,
+	(void*)__dt__18dKankyo_sun_PacketFv,
 	/* padding */
 	NULL,
 };

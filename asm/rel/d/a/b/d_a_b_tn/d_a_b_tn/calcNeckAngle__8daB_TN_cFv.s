@@ -21,9 +21,9 @@ lbl_8061ED5C:
 /* 8061EDA8  38 81 00 08 */	addi r4, r1, 8
 /* 8061EDAC  4B 9E DE 54 */	b mDoMtx_MtxToRot__FPA4_CfP5csXyz
 /* 8061EDB0  7F E3 FB 78 */	mr r3, r31
-/* 8061EDB4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8061EDB8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8061EDBC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8061EDB4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8061EDB8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8061EDBC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8061EDC0  4B 9F B9 50 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8061EDC4  A8 81 00 0A */	lha r4, 0xa(r1)
 /* 8061EDC8  38 04 40 00 */	addi r0, r4, 0x4000

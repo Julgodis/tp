@@ -7,7 +7,7 @@ lbl_809D4788:
 /* 809D479C  40 82 00 30 */	bne lbl_809D47CC
 /* 809D47A0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 809D47A4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 809D47A8  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 809D47A8  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 809D47AC  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 809D47B0  28 03 00 00 */	cmplwi r3, 0
 /* 809D47B4  41 82 00 18 */	beq lbl_809D47CC

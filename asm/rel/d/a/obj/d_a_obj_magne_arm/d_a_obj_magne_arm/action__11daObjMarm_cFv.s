@@ -6,7 +6,7 @@ lbl_80590818:
 /* 80590828  38 A4 2D 68 */	addi r5, r4, lit_1109@l
 /* 8059082C  3C 80 80 59 */	lis r4, cNullVec__6Z2Calc@ha
 /* 80590830  38 84 29 80 */	addi r4, r4, cNullVec__6Z2Calc@l
-/* 80590834  88 05 00 3E */	lbz r0, 0x3e(r5)	/* effective address: 80592DA6 */
+/* 80590834  88 05 00 3E */	lbz r0, 0x3e(r5)
 /* 80590838  7C 00 07 75 */	extsb. r0, r0
 /* 8059083C  40 82 00 A0 */	bne lbl_805908DC
 /* 80590840  80 C4 00 AC */	lwz r6, 0xac(r4)

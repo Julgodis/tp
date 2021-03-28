@@ -27,13 +27,13 @@ lbl_8057BA0C:
 /* 8057BA28  3C 80 80 58 */	lis r4, l_cull_box@ha
 /* 8057BA2C  C4 04 BE 38 */	lfsu f0, l_cull_box@l(r4)
 /* 8057BA30  EC 20 01 32 */	fmuls f1, f0, f4
-/* 8057BA34  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80580004 */
-/* 8057BA38  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80580008 */
+/* 8057BA34  C0 44 00 04 */	lfs f2, 4(r4)
+/* 8057BA38  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8057BA3C  EC 60 01 B2 */	fmuls f3, f0, f6
-/* 8057BA40  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8058000C */
+/* 8057BA40  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8057BA44  EC 80 01 32 */	fmuls f4, f0, f4
-/* 8057BA48  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80580010 */
-/* 8057BA4C  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80580014 */
+/* 8057BA48  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 8057BA4C  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8057BA50  EC C0 01 B2 */	fmuls f6, f0, f6
 /* 8057BA54  4B A9 EA F4 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 8057BA58  38 60 00 01 */	li r3, 1

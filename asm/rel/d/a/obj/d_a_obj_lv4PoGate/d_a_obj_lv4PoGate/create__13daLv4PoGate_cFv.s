@@ -49,8 +49,8 @@ lbl_80C5FE44:
 /* 80C5FE5C  4B 3B A7 1C */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
 /* 80C5FE60  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C5FE64  98 1E 05 AD */	stb r0, 0x5ad(r30)
-/* 80C5FE68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5FE6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5FE68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5FE6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5FE70  88 9E 05 AD */	lbz r4, 0x5ad(r30)
 /* 80C5FE74  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C5FE78  7C 05 07 74 */	extsb r5, r0

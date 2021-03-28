@@ -11,7 +11,7 @@ lbl_80A26D34:
 /* 80A26D58  41 80 02 40 */	blt lbl_80A26F98
 /* 80A26D5C  3C 60 80 A3 */	lis r3, struct_80A2A7F8+0x2@ha
 /* 80A26D60  38 83 A7 FA */	addi r4, r3, struct_80A2A7F8+0x2@l
-/* 80A26D64  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80A2A7FA */
+/* 80A26D64  88 04 00 00 */	lbz r0, 0(r4)
 /* 80A26D68  7C 00 07 75 */	extsb. r0, r0
 /* 80A26D6C  40 82 01 F8 */	bne lbl_80A26F64
 /* 80A26D70  80 65 01 0C */	lwz r3, 0x10c(r5)
@@ -107,11 +107,11 @@ lbl_80A26D34:
 /* 80A26ED8  90 03 00 B0 */	stw r0, 0xb0(r3)
 /* 80A26EDC  3C C0 80 3A */	lis r6, __ptmf_null@ha
 /* 80A26EE0  38 E6 21 80 */	addi r7, r6, __ptmf_null@l
-/* 80A26EE4  80 C7 00 00 */	lwz r6, 0(r7)	/* effective address: 803A2180 */
-/* 80A26EE8  80 07 00 04 */	lwz r0, 4(r7)	/* effective address: 803A2184 */
+/* 80A26EE4  80 C7 00 00 */	lwz r6, 0(r7)
+/* 80A26EE8  80 07 00 04 */	lwz r0, 4(r7)
 /* 80A26EEC  90 C3 00 B4 */	stw r6, 0xb4(r3)
 /* 80A26EF0  90 03 00 B8 */	stw r0, 0xb8(r3)
-/* 80A26EF4  80 07 00 08 */	lwz r0, 8(r7)	/* effective address: 803A2188 */
+/* 80A26EF4  80 07 00 08 */	lwz r0, 8(r7)
 /* 80A26EF8  90 03 00 BC */	stw r0, 0xbc(r3)
 /* 80A26EFC  80 C5 01 C0 */	lwz r6, 0x1c0(r5)
 /* 80A26F00  80 05 01 C4 */	lwz r0, 0x1c4(r5)

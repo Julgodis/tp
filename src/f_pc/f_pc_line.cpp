@@ -53,7 +53,7 @@ asm void fpcLn_Create() {
 /* ############################################################################################## */
 /* 804505D8-804505E0 0008+00 s=0 e=2 z=0  None .sdata     g_fpcLn_Queue                                                */
 SECTION_SDATA void* g_fpcLn_Queue[2] = {
-	/* 0    */ (void*)&l_fpcLn_Line,
-	/* 1    */ (void*)0x00000010,
+	(void*)&l_fpcLn_Line,
+	(void*)0x00000010,
 };
 

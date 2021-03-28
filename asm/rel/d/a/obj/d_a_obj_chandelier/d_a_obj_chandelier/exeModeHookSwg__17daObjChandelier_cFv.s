@@ -15,9 +15,9 @@ lbl_80BC851C:
 lbl_80BC8550:
 /* 80BC8550  C0 44 00 20 */	lfs f2, 0x20(r4)
 /* 80BC8554  C0 24 00 00 */	lfs f1, 0(r4)
-/* 80BC8558  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC855C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BC8560  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BC8558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC855C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BC8560  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80BC8564  28 03 00 00 */	cmplwi r3, 0
 /* 80BC8568  41 82 00 2C */	beq lbl_80BC8594
 /* 80BC856C  C0 7F 04 D4 */	lfs f3, 0x4d4(r31)

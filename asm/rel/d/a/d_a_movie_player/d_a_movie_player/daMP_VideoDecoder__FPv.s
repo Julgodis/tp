@@ -7,7 +7,7 @@ lbl_80875DD8:
 /* 80875DEC  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80875DF0  3B E3 9B D0 */	addi r31, r3, daMP_ActivePlayer@l
 lbl_80875DF4:
-/* 80875DF4  88 1F 00 A7 */	lbz r0, 0xa7(r31)	/* effective address: 80879C77 */
+/* 80875DF4  88 1F 00 A7 */	lbz r0, 0xa7(r31)
 /* 80875DF8  28 00 00 00 */	cmplwi r0, 0
 /* 80875DFC  41 82 00 70 */	beq lbl_80875E6C
 /* 80875E00  48 00 00 60 */	b lbl_80875E60

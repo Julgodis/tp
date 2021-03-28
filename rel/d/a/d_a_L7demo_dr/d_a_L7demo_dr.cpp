@@ -43,19 +43,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
+struct J3DModelData {
+};
+
 struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -127,18 +127,18 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-static void daDr_Draw(daDr_c*); // 2
+void daDr_Draw(daDr_c*); // 2
 static void daDr_Execute(daDr_c*); // 2
-static bool daDr_IsDelete(daDr_c*); // 2
-static void daDr_Delete(daDr_c*); // 2
+bool daDr_IsDelete(daDr_c*); // 2
+void daDr_Delete(daDr_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daDr_Create(daDr_c*); // 2
+void daDr_Create(daDr_c*); // 2
 
 extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v(); // 1
 extern "C" void action__6daDr_cFv(); // 1
 extern "C" void mtx_set__6daDr_cFv(); // 1
 extern "C" void draw__6daDr_cFv(); // 1
-extern "C" static void daDr_Draw__FP6daDr_c(); // 1
+extern "C" void daDr_Draw__FP6daDr_c(); // 1
 extern "C" void wait__6daDr_cFv(); // 1
 extern "C" void pl_walk__6daDr_cFv(); // 1
 extern "C" void pl_turn__6daDr_cFv(); // 1
@@ -146,15 +146,16 @@ extern "C" void bridge_destroy__6daDr_cFv(); // 1
 extern "C" void bridge_destroy2__6daDr_cFv(); // 1
 extern "C" void execute__6daDr_cFv(); // 1
 extern "C" static void daDr_Execute__FP6daDr_c(); // 1
-extern "C" static bool daDr_IsDelete__FP6daDr_c(); // 1
+extern "C" bool daDr_IsDelete__FP6daDr_c(); // 1
 extern "C" void _delete__6daDr_cFv(); // 1
-extern "C" static void daDr_Delete__FP6daDr_c(); // 1
+extern "C" void daDr_Delete__FP6daDr_c(); // 1
 extern "C" void CreateHeap__6daDr_cFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void check_start__6daDr_cFv(); // 1
 extern "C" void create__6daDr_cFv(); // 1
-extern "C" static void daDr_Create__FP6daDr_c(); // 1
+extern "C" void daDr_Create__FP6daDr_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daDr_Method[8];
 extern "C" extern void* g_profile_DR[12];
 
 // 
@@ -216,18 +217,9 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD47C[4];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern f32 data_803DD49C;
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_80406B34[4];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
@@ -277,11 +269,11 @@ asm void daDr_c::draw() {
 #pragma pop
 
 
-/* 805A9458-805A9478 0020+00 s=1 e=0 z=0  None .text      daDr_Draw__FP6daDr_c                                         */
+/* 805A9458-805A9478 0020+00 s=0 e=0 z=0  None .text      daDr_Draw__FP6daDr_c                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDr_Draw(daDr_c* param_0) {
+asm void daDr_Draw(daDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Draw__FP6daDr_c.s"
 }
@@ -300,19 +292,19 @@ SECTION_RODATA static u32 const lit_3866 = 0xC6428800;
 
 /* 805AA4D0-805AA4DC 000C+00 s=1 e=0 z=0  None .data      @3830                                                        */
 SECTION_DATA static void* lit_3830[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)pl_walk__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805AA4DC-805AA4E8 000C+00 s=1 e=0 z=0  None .data      @3833                                                        */
 SECTION_DATA static void* lit_3833[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)pl_turn__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 805A9478-805A963C 01C4+00 s=2 e=0 z=0  None .text      wait__6daDr_cFv                                              */
+/* 805A9478-805A963C 01C4+00 s=0 e=0 z=0  None .text      wait__6daDr_cFv                                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -349,12 +341,12 @@ SECTION_RODATA static u32 const lit_3952 = 0xC5802000;
 
 /* 805AA4E8-805AA4F4 000C+00 s=1 e=0 z=0  None .data      @3886                                                        */
 SECTION_DATA static void* lit_3886[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)pl_turn__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 805A963C-805A9914 02D8+00 s=1 e=0 z=0  None .text      pl_walk__6daDr_cFv                                           */
+/* 805A963C-805A9914 02D8+00 s=0 e=0 z=0  None .text      pl_walk__6daDr_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -368,12 +360,12 @@ asm void daDr_c::pl_walk() {
 /* ############################################################################################## */
 /* 805AA4F4-805AA500 000C+00 s=1 e=0 z=0  None .data      @3978                                                        */
 SECTION_DATA static void* lit_3978[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)bridge_destroy__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 805A9914-805A9A34 0120+00 s=2 e=0 z=0  None .text      pl_turn__6daDr_cFv                                           */
+/* 805A9914-805A9A34 0120+00 s=0 e=0 z=0  None .text      pl_turn__6daDr_cFv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -402,12 +394,12 @@ SECTION_RODATA static u32 const lit_4127 = 0x43520000;
 
 /* 805AA500-805AA50C 000C+00 s=1 e=0 z=0  None .data      @4041                                                        */
 SECTION_DATA static void* lit_4041[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)bridge_destroy2__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 805A9A34-805A9D10 02DC+00 s=1 e=0 z=0  None .text      bridge_destroy__6daDr_cFv                                    */
+/* 805A9A34-805A9D10 02DC+00 s=0 e=0 z=0  None .text      bridge_destroy__6daDr_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +426,7 @@ SECTION_RODATA static u32 const lit_4185 = 0xC4610000;
 /* 805AA4A0-805AA4A4 0004+00 s=1 e=0 z=0  None .rodata    @4186                                                        */
 SECTION_RODATA static u32 const lit_4186 = 0xC6A1B800;
 
-/* 805A9D10-805A9EE4 01D4+00 s=1 e=0 z=0  None .text      bridge_destroy2__6daDr_cFv                                   */
+/* 805A9D10-805A9EE4 01D4+00 s=0 e=0 z=0  None .text      bridge_destroy2__6daDr_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -463,7 +455,7 @@ asm void daDr_c::execute() {
 #pragma pop
 
 
-/* 805A9FD4-805A9FF4 0020+00 s=2 e=0 z=0  None .text      daDr_Execute__FP6daDr_c                                      */
+/* 805A9FD4-805A9FF4 0020+00 s=1 e=0 z=0  None .text      daDr_Execute__FP6daDr_c                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -474,8 +466,8 @@ asm static void daDr_Execute(daDr_c* param_0) {
 #pragma pop
 
 
-/* 805A9FF4-805A9FFC 0008+00 s=1 e=0 z=0  None .text      daDr_IsDelete__FP6daDr_c                                     */
-static bool daDr_IsDelete(daDr_c* param_0) {
+/* 805A9FF4-805A9FFC 0008+00 s=0 e=0 z=0  None .text      daDr_IsDelete__FP6daDr_c                                     */
+bool daDr_IsDelete(daDr_c* param_0) {
 	return true;
 }
 
@@ -520,11 +512,11 @@ asm void daDr_c::_delete() {
 #pragma pop
 
 
-/* 805AA064-805AA084 0020+00 s=1 e=0 z=0  None .text      daDr_Delete__FP6daDr_c                                       */
+/* 805AA064-805AA084 0020+00 s=0 e=0 z=0  None .text      daDr_Delete__FP6daDr_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDr_Delete(daDr_c* param_0) {
+asm void daDr_Delete(daDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Delete__FP6daDr_c.s"
 }
@@ -567,16 +559,16 @@ asm void daDr_c::check_start() {
 /* ############################################################################################## */
 /* 805AA50C-805AA518 000C+00 s=1 e=0 z=0  None .data      @4306                                                        */
 SECTION_DATA static void* lit_4306[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805AA518-805AA524 000C+00 s=1 e=0 z=0  None .data      @4317                                                        */
 SECTION_DATA static void* lit_4317[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait__6daDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805AA224-805AA42C 0208+00 s=1 e=0 z=0  None .text      create__6daDr_cFv                                            */
@@ -590,11 +582,11 @@ asm void daDr_c::create() {
 #pragma pop
 
 
-/* 805AA42C-805AA44C 0020+00 s=1 e=0 z=0  None .text      daDr_Create__FP6daDr_c                                       */
+/* 805AA42C-805AA44C 0020+00 s=0 e=0 z=0  None .text      daDr_Create__FP6daDr_c                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daDr_Create(daDr_c* param_0) {
+asm void daDr_Create(daDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7demo_dr/d_a_L7demo_dr/daDr_Create__FP6daDr_c.s"
 }
@@ -602,31 +594,31 @@ asm static void daDr_Create(daDr_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 805AA524-805AA544 0020+00 s=1 e=0 z=0  None .data      l_daDr_Method                                                */
-SECTION_DATA static void* l_daDr_Method[8] = {
-	/* 0    */ (void*)daDr_Create__FP6daDr_c,
-	/* 1    */ (void*)daDr_Delete__FP6daDr_c,
-	/* 2    */ (void*)daDr_Execute__FP6daDr_c,
-	/* 3    */ (void*)daDr_IsDelete__FP6daDr_c,
-	/* 4    */ (void*)daDr_Draw__FP6daDr_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805AA524-805AA544 0020+00 s=0 e=0 z=0  None .data      l_daDr_Method                                                */
+SECTION_DATA void* l_daDr_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805AA544-805AA574 0030+00 s=0 e=0 z=1  None .data      g_profile_DR                                                 */
+/* 805AA544-805AA574 0030+00 s=0 e=0 z=0  None .data      g_profile_DR                                                 */
 SECTION_DATA void* g_profile_DR[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02030000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000065C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00CE0000,
-	/* 9    */ (void*)&l_daDr_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02030000,
+	(void*)NULL,
+	(void*)0x0000065C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00CE0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x020E0000,
 };
 

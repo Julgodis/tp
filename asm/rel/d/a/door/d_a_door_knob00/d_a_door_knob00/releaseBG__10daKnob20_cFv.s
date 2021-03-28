@@ -8,8 +8,8 @@ lbl_8045F428:
 /* 8045F440  4B E0 8D 94 */	b ChkUsed__9cBgW_BgIdCFv
 /* 8045F444  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8045F448  41 82 00 18 */	beq lbl_8045F460
-/* 8045F44C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045F450  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045F44C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045F450  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045F454  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8045F458  80 9F 05 A0 */	lwz r4, 0x5a0(r31)
 /* 8045F45C  4B C1 4D F4 */	b Release__4cBgSFP9dBgW_Base

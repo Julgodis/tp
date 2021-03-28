@@ -7,8 +7,8 @@ lbl_80AE48D0:
 /* 80AE48E4  7C 9C 23 78 */	mr r28, r4
 /* 80AE48E8  2C 1C 00 30 */	cmpwi r28, 0x30
 /* 80AE48EC  40 80 00 70 */	bge lbl_80AE495C
-/* 80AE48F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE48F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AE48F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE48F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AE48F8  3B A3 0D D8 */	addi r29, r3, 0xdd8
 /* 80AE48FC  7F A3 EB 78 */	mr r3, r29
 /* 80AE4900  7F 80 1E 70 */	srawi r0, r28, 3

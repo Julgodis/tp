@@ -8,7 +8,7 @@ lbl_80817AEC:
 /* 80817B04  7C 9D 23 78 */	mr r29, r4
 /* 80817B08  3C 60 80 82 */	lis r3, lit_1109@ha
 /* 80817B0C  3B E3 1E 18 */	addi r31, r3, lit_1109@l
-/* 80817B10  88 1F 02 34 */	lbz r0, 0x234(r31)	/* effective address: 8082204C */
+/* 80817B10  88 1F 02 34 */	lbz r0, 0x234(r31)
 /* 80817B14  7C 00 07 75 */	extsb. r0, r0
 /* 80817B18  40 82 00 34 */	bne lbl_80817B4C
 /* 80817B1C  38 7F 00 4C */	addi r3, r31, 0x4c
@@ -27,9 +27,9 @@ lbl_80817B4C:
 /* 80817B4C  7F C3 F3 78 */	mr r3, r30
 /* 80817B50  38 81 00 20 */	addi r4, r1, 0x20
 /* 80817B54  48 00 85 4D */	bl getBellyBitePos__9daE_YMB_cFP4cXyz
-/* 80817B58  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80817B5C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80817B60  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80817B58  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80817B5C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80817B60  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80817B64  38 00 00 FF */	li r0, 0xff
 /* 80817B68  90 01 00 08 */	stw r0, 8(r1)
 /* 80817B6C  38 80 00 00 */	li r4, 0

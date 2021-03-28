@@ -115,9 +115,9 @@ asm void JUTVideo::destroyManager() {
 /* ############################################################################################## */
 /* 803CC980-803CC990 000C+04 s=2 e=0 z=0  None .data      __vt__8JUTVideo                                              */
 SECTION_DATA static void* __vt__8JUTVideo[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8JUTVideoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8JUTVideoFv,
 	/* padding */
 	NULL,
 };

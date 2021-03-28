@@ -90,28 +90,26 @@ struct cCcS {
 // Forward References:
 // 
 
-static void daTagSppath_Create(fopAc_ac_c*); // 2
-static void daTagSppath_Delete(daTagSppath_c*); // 2
-static void daTagSppath_Execute(daTagSppath_c*); // 2
-static bool daTagSppath_Draw(daTagSppath_c*); // 2
+void daTagSppath_Create(fopAc_ac_c*); // 2
+void daTagSppath_Delete(daTagSppath_c*); // 2
+void daTagSppath_Execute(daTagSppath_c*); // 2
+bool daTagSppath_Draw(daTagSppath_c*); // 2
 
 extern "C" void create__13daTagSppath_cFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static void daTagSppath_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagSppath_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daTagSppath_cFv(); // 1
-extern "C" static void daTagSppath_Delete__FP13daTagSppath_c(); // 1
+extern "C" void daTagSppath_Delete__FP13daTagSppath_c(); // 1
 extern "C" void getNearPathPos__13daTagSppath_cFP4cXyzP5dPath(); // 1
 extern "C" void __dt__8cM3dGLinFv(); // 1
 extern "C" void execute__13daTagSppath_cFv(); // 1
-extern "C" static void daTagSppath_Execute__FP13daTagSppath_c(); // 1
-extern "C" static bool daTagSppath_Draw__FP13daTagSppath_c(); // 1
+extern "C" void daTagSppath_Execute__FP13daTagSppath_c(); // 1
+extern "C" bool daTagSppath_Draw__FP13daTagSppath_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" extern u8 const lit_4101[8];
-extern "C" extern u8 const lit_4102[8];
-extern "C" extern u8 const lit_4103[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daTagSppath_Method[8];
 extern "C" extern void* g_profile_Tag_Sppath[12];
 
 // 
@@ -152,15 +150,12 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_max;
 
@@ -182,18 +177,18 @@ SECTION_RODATA static u8 const lit_4100[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D62C28-80D62C30 0008+00 s=0 e=0 z=0  None .rodata    @4101                                                        */
-SECTION_RODATA u8 const lit_4101[8] = {
+/* 80D62C28-80D62C30 0008+00 s=1 e=0 z=0  None .rodata    @4101                                                        */
+SECTION_RODATA static u8 const lit_4101[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D62C30-80D62C38 0008+00 s=0 e=0 z=0  None .rodata    @4102                                                        */
-SECTION_RODATA u8 const lit_4102[8] = {
+/* 80D62C30-80D62C38 0008+00 s=1 e=0 z=0  None .rodata    @4102                                                        */
+SECTION_RODATA static u8 const lit_4102[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D62C38-80D62C40 0008+00 s=0 e=0 z=0  None .rodata    @4103                                                        */
-SECTION_RODATA u8 const lit_4103[8] = {
+/* 80D62C38-80D62C40 0008+00 s=1 e=0 z=0  None .rodata    @4103                                                        */
+SECTION_RODATA static u8 const lit_4103[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -222,67 +217,67 @@ SECTION_DATA static u8 l_cylSrc[68] = {
 	0x42, 0xC8, 0x00, 0x00,
 };
 
-/* 80D62C98-80D62CB8 0020+00 s=1 e=0 z=0  None .data      l_daTagSppath_Method                                         */
-SECTION_DATA static void* l_daTagSppath_Method[8] = {
-	/* 0    */ (void*)daTagSppath_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagSppath_Delete__FP13daTagSppath_c,
-	/* 2    */ (void*)daTagSppath_Execute__FP13daTagSppath_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagSppath_Draw__FP13daTagSppath_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D62C98-80D62CB8 0020+00 s=0 e=0 z=0  None .data      l_daTagSppath_Method                                         */
+SECTION_DATA void* l_daTagSppath_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D62CB8-80D62CE8 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Sppath                                         */
+/* 80D62CB8-80D62CE8 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Sppath                                         */
 SECTION_DATA void* g_profile_Tag_Sppath[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02C60000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000006F4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01020000,
-	/* 9    */ (void*)&l_daTagSppath_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02C60000,
+	(void*)NULL,
+	(void*)0x000006F4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01020000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x030E0000,
 };
 
 /* 80D62CE8-80D62CF4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGLin                                              */
 SECTION_DATA static void* __vt__8cM3dGLin[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGLinFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D62CF4-80D62D00 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D62D00-80D62D0C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D62D0C-80D62D18 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D62D18-80D62D24 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D61C18-80D61DB8 01A0+00 s=1 e=0 z=0  None .text      create__13daTagSppath_cFv                                    */
@@ -296,7 +291,7 @@ asm void daTagSppath_c::create() {
 #pragma pop
 
 
-/* 80D61DB8-80D61E14 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80D61DB8-80D61E14 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -307,7 +302,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80D61E14-80D61E5C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80D61E14-80D61E5C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,7 +313,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80D61E5C-80D61EA4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D61E5C-80D61EA4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -329,11 +324,11 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80D61EA4-80D61EC4 0020+00 s=1 e=0 z=0  None .text      daTagSppath_Create__FP10fopAc_ac_c                           */
+/* 80D61EA4-80D61EC4 0020+00 s=0 e=0 z=0  None .text      daTagSppath_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSppath_Create(fopAc_ac_c* param_0) {
+asm void daTagSppath_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Create__FP10fopAc_ac_c.s"
 }
@@ -351,11 +346,11 @@ asm daTagSppath_c::~daTagSppath_c() {
 #pragma pop
 
 
-/* 80D61FFC-80D62024 0028+00 s=1 e=0 z=0  None .text      daTagSppath_Delete__FP13daTagSppath_c                        */
+/* 80D61FFC-80D62024 0028+00 s=0 e=0 z=0  None .text      daTagSppath_Delete__FP13daTagSppath_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSppath_Delete(daTagSppath_c* param_0) {
+asm void daTagSppath_Delete(daTagSppath_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Delete__FP13daTagSppath_c.s"
 }
@@ -373,7 +368,7 @@ asm void daTagSppath_c::getNearPathPos(cXyz* param_0, dPath* param_1) {
 #pragma pop
 
 
-/* 80D62978-80D629C0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
+/* 80D62978-80D629C0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGLinFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -395,24 +390,24 @@ asm void daTagSppath_c::execute() {
 #pragma pop
 
 
-/* 80D62BA0-80D62BC0 0020+00 s=1 e=0 z=0  None .text      daTagSppath_Execute__FP13daTagSppath_c                       */
+/* 80D62BA0-80D62BC0 0020+00 s=0 e=0 z=0  None .text      daTagSppath_Execute__FP13daTagSppath_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSppath_Execute(daTagSppath_c* param_0) {
+asm void daTagSppath_Execute(daTagSppath_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_sppath/d_a_tag_sppath/daTagSppath_Execute__FP13daTagSppath_c.s"
 }
 #pragma pop
 
 
-/* 80D62BC0-80D62BC8 0008+00 s=1 e=0 z=0  None .text      daTagSppath_Draw__FP13daTagSppath_c                          */
-static bool daTagSppath_Draw(daTagSppath_c* param_0) {
+/* 80D62BC0-80D62BC8 0008+00 s=0 e=0 z=0  None .text      daTagSppath_Draw__FP13daTagSppath_c                          */
+bool daTagSppath_Draw(daTagSppath_c* param_0) {
 	return true;
 }
 
 
-/* 80D62BC8-80D62C10 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80D62BC8-80D62C10 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

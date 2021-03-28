@@ -4,7 +4,7 @@ lbl_8057E700:
 /* 8057E708  90 03 05 5C */	stw r0, 0x55c(r3)
 /* 8057E70C  3C 80 80 58 */	lis r4, l_HIO@ha
 /* 8057E710  38 84 F8 E4 */	addi r4, r4, l_HIO@l
-/* 8057E714  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 8057F8E8 */
+/* 8057E714  C0 04 00 04 */	lfs f0, 4(r4)
 /* 8057E718  FC 00 00 50 */	fneg f0, f0
 /* 8057E71C  D0 03 05 30 */	stfs f0, 0x530(r3)
 /* 8057E720  38 00 00 02 */	li r0, 2

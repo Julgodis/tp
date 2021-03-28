@@ -42,8 +42,8 @@ lbl_805F9280:
 /* 805F92BC  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 805F92C0  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 805F92C4  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 805F92C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F92CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805F92C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F92CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805F92D0  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805F92D4  38 80 00 06 */	li r4, 6
 /* 805F92D8  38 A0 00 1F */	li r5, 0x1f

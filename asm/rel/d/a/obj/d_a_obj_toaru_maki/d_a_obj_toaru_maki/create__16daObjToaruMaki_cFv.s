@@ -48,8 +48,8 @@ lbl_80D13354:
 /* 80D1335C  4B 2F B7 24 */	b mDoExt_setupStageTexture__FP12J3DModelData
 /* 80D13360  28 1E 00 00 */	cmplwi r30, 0
 /* 80D13364  40 82 00 2C */	bne lbl_80D13390
-/* 80D13368  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D1336C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D13368  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1336C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D13370  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D13374  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 80D13378  7F E5 FB 78 */	mr r5, r31

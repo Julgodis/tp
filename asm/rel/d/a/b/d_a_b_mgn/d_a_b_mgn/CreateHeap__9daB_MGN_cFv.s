@@ -9,8 +9,8 @@ lbl_8060EAE0:
 /* 8060EAFC  38 63 00 84 */	addi r3, r3, stringBase0@l
 /* 8060EB00  38 63 00 07 */	addi r3, r3, 7
 /* 8060EB04  38 80 00 2F */	li r4, 0x2f
-/* 8060EB08  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8060EB0C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8060EB08  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8060EB0C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8060EB10  3F C5 00 02 */	addis r30, r5, 2
 /* 8060EB14  3B DE C2 F8 */	addi r30, r30, -15624
 /* 8060EB18  7F C5 F3 78 */	mr r5, r30

@@ -10,13 +10,13 @@ lbl_80C04F74:
 /* 80C04F94  38 83 FA 7C */	addi r4, r3, m__17daObj_GrA_Param_c@l
 /* 80C04F98  3C 60 80 C1 */	lis r3, cNullVec__6Z2Calc@ha
 /* 80C04F9C  3B E3 FE 68 */	addi r31, r3, cNullVec__6Z2Calc@l
-/* 80C04FA0  C0 04 01 1C */	lfs f0, 0x11c(r4)	/* effective address: 80C0FB98 */
-/* 80C04FA4  D0 1E 00 4C */	stfs f0, 0x4c(r30)	/* effective address: 80C108EC */
-/* 80C04FA8  C0 04 03 90 */	lfs f0, 0x390(r4)	/* effective address: 80C0FE0C */
+/* 80C04FA0  C0 04 01 1C */	lfs f0, 0x11c(r4)
+/* 80C04FA4  D0 1E 00 4C */	stfs f0, 0x4c(r30)
+/* 80C04FA8  C0 04 03 90 */	lfs f0, 0x390(r4)
 /* 80C04FAC  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 80C04FB0  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80C108F0 */
-/* 80C04FB4  C0 04 03 94 */	lfs f0, 0x394(r4)	/* effective address: 80C0FE10 */
-/* 80C04FB8  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80C108F4 */
+/* 80C04FB0  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80C04FB4  C0 04 03 94 */	lfs f0, 0x394(r4)
+/* 80C04FB8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80C04FBC  3C 80 80 C0 */	lis r4, __dt__4cXyzFv@ha
 /* 80C04FC0  38 84 4C 40 */	addi r4, r4, __dt__4cXyzFv@l
 /* 80C04FC4  38 BE 00 40 */	addi r5, r30, 0x40

@@ -9,7 +9,7 @@ lbl_8079A3AC:
 /* 8079A3C8  3B E3 D5 B0 */	addi r31, r3, lit_3790@l
 /* 8079A3CC  38 00 00 0A */	li r0, 0xa
 /* 8079A3D0  B0 1E 06 8C */	sth r0, 0x68c(r30)
-/* 8079A3D4  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 8079D5B4 */
+/* 8079A3D4  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 8079A3D8  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 8079A3DC  80 1E 08 C0 */	lwz r0, 0x8c0(r30)
 /* 8079A3E0  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
@@ -61,8 +61,8 @@ lbl_8079A468:
 /* 8079A48C  B0 1E 06 86 */	sth r0, 0x686(r30)
 /* 8079A490  48 00 00 B8 */	b lbl_8079A548
 lbl_8079A494:
-/* 8079A494  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079A498  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8079A494  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079A498  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8079A49C  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 8079A4A0  7F C4 F3 78 */	mr r4, r30
 /* 8079A4A4  88 1E 05 B7 */	lbz r0, 0x5b7(r30)
@@ -85,16 +85,16 @@ lbl_8079A4DC:
 /* 8079A4E4  A8 1E 06 86 */	lha r0, 0x686(r30)
 /* 8079A4E8  2C 00 00 01 */	cmpwi r0, 1
 /* 8079A4EC  40 82 00 5C */	bne lbl_8079A548
-/* 8079A4F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079A4F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8079A4F8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8079A4FC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8079A4F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079A4F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8079A4F8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8079A4FC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8079A500  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 8079A504  7D 89 03 A6 */	mtctr r12
 /* 8079A508  4E 80 04 21 */	bctrl 
 /* 8079A50C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8079A510  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8079A514  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8079A514  80 84 00 00 */	lwz r4, 0(r4)
 /* 8079A518  4B BA BF 98 */	b PSMTXCopy
 /* 8079A51C  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 8079A520  D0 01 00 14 */	stfs f0, 0x14(r1)

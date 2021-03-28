@@ -13,7 +13,7 @@ lbl_80AFC980:
 /* 80AFC9AC  38 7E 0D D8 */	addi r3, r30, 0xdd8
 /* 80AFC9B0  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFC9B4  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFC9B8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFC9B8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFC9BC  4B 53 06 4C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80AFC9C0  80 1E 00 F0 */	lwz r0, 0xf0(r30)
 /* 80AFC9C4  28 00 00 00 */	cmplwi r0, 0

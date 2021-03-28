@@ -10,9 +10,9 @@ lbl_80D1C4D8:
 /* 80D1C4F8  D0 03 07 40 */	stfs f0, 0x740(r3)
 /* 80D1C4FC  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80D1C500  D0 03 07 44 */	stfs f0, 0x744(r3)
-/* 80D1C504  C0 44 00 30 */	lfs f2, 0x30(r4)	/* effective address: 80D1D404 */
+/* 80D1C504  C0 44 00 30 */	lfs f2, 0x30(r4)
 /* 80D1C508  D0 43 07 48 */	stfs f2, 0x748(r3)
-/* 80D1C50C  C0 04 00 34 */	lfs f0, 0x34(r4)	/* effective address: 80D1D408 */
+/* 80D1C50C  C0 04 00 34 */	lfs f0, 0x34(r4)
 /* 80D1C510  D0 03 07 4C */	stfs f0, 0x74c(r3)
 /* 80D1C514  D0 43 07 50 */	stfs f2, 0x750(r3)
 /* 80D1C518  C0 23 07 68 */	lfs f1, 0x768(r3)
@@ -20,7 +20,7 @@ lbl_80D1C4D8:
 /* 80D1C520  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80D1C524  D0 03 07 54 */	stfs f0, 0x754(r3)
 /* 80D1C528  D0 43 07 5C */	stfs f2, 0x75c(r3)
-/* 80D1C52C  C0 04 00 38 */	lfs f0, 0x38(r4)	/* effective address: 80D1D40C */
+/* 80D1C52C  C0 04 00 38 */	lfs f0, 0x38(r4)
 /* 80D1C530  D0 03 07 58 */	stfs f0, 0x758(r3)
 /* 80D1C534  38 63 07 3C */	addi r3, r3, 0x73c
 /* 80D1C538  4B 33 E8 C4 */	b dKyw_pntwind_set__FP14WIND_INFLUENCE

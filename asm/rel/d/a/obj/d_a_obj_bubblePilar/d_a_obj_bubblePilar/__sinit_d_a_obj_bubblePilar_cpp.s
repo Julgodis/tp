@@ -19,10 +19,10 @@ lbl_80BC3FEC:
 /* 80BC4030  38 00 00 06 */	li r0, 6
 /* 80BC4034  7C 09 03 A6 */	mtctr r0
 lbl_80BC4038:
-/* 80BC4038  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BC4070 */
-/* 80BC403C  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BC4074 */
-/* 80BC4040  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BC40DC */
-/* 80BC4044  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BC40E0 */
+/* 80BC4038  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BC403C  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80BC4040  90 65 00 04 */	stw r3, 4(r5)
+/* 80BC4044  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BC4048  42 00 FF F0 */	bdnz lbl_80BC4038
 /* 80BC404C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BC4050  7C 08 03 A6 */	mtlr r0

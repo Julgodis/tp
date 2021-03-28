@@ -6,12 +6,12 @@ lbl_80A453F8:
 /* 80A45408  38 A3 56 88 */	addi r5, r3, mCutList__11daNpc_Knj_c@l
 /* 80A4540C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A45410  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A45414  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A45418  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80A4541C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80A45688 */
-/* 80A45420  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80A4568C */
-/* 80A45424  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80A45428  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80A45690 */
+/* 80A45414  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A45418  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A4541C  90 65 00 00 */	stw r3, 0(r5)
+/* 80A45420  90 05 00 04 */	stw r0, 4(r5)
+/* 80A45424  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A45428  90 05 00 08 */	stw r0, 8(r5)
 /* 80A4542C  3C 60 80 A4 */	lis r3, __vt__17daNpc_Knj_Param_c@ha
 /* 80A45430  38 03 58 7C */	addi r0, r3, __vt__17daNpc_Knj_Param_c@l
 /* 80A45434  3C 60 80 A4 */	lis r3, l_HIO@ha

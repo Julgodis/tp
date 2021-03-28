@@ -158,8 +158,8 @@ lbl_8070AF58:
 /* 8070AFE8  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 8070AFEC  4B 92 39 24 */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 8070AFF0  90 7D 06 BC */	stw r3, 0x6bc(r29)
-/* 8070AFF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070AFF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8070AFF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070AFF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8070AFFC  3B 63 61 C0 */	addi r27, r3, 0x61c0
 /* 8070B000  7F 63 DB 78 */	mr r3, r27
 /* 8070B004  80 9D 06 BC */	lwz r4, 0x6bc(r29)

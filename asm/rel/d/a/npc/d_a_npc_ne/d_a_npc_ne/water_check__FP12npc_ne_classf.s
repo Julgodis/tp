@@ -29,8 +29,8 @@ lbl_80A89640:
 /* 80A896AC  38 A1 00 08 */	addi r5, r1, 8
 /* 80A896B0  7F A6 EB 78 */	mr r6, r29
 /* 80A896B4  4B 5E E6 B0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80A896B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A896BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A896B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A896BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A896C0  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80A896C4  7F C3 F3 78 */	mr r3, r30
 /* 80A896C8  38 81 00 14 */	addi r4, r1, 0x14

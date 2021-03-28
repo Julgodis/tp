@@ -99,10 +99,10 @@ lbl_8051EF7C:
 /* 8051F004  38 83 45 88 */	addi r4, r3, m_deleteRoom__15dGrass_packet_c@l
 /* 8051F008  80 7F 19 68 */	lwz r3, 0x1968(r31)
 /* 8051F00C  80 1F 19 6C */	lwz r0, 0x196c(r31)
-/* 8051F010  90 64 00 00 */	stw r3, 0(r4)	/* effective address: 80424588 */
-/* 8051F014  90 04 00 04 */	stw r0, 4(r4)	/* effective address: 8042458C */
+/* 8051F010  90 64 00 00 */	stw r3, 0(r4)
+/* 8051F014  90 04 00 04 */	stw r0, 4(r4)
 /* 8051F018  80 1F 19 70 */	lwz r0, 0x1970(r31)
-/* 8051F01C  90 04 00 08 */	stw r0, 8(r4)	/* effective address: 80424590 */
+/* 8051F01C  90 04 00 08 */	stw r0, 8(r4)
 /* 8051F020  7F C3 F3 78 */	mr r3, r30
 /* 8051F024  39 61 00 20 */	addi r11, r1, 0x20
 /* 8051F028  4B E4 31 FC */	b _restgpr_28

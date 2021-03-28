@@ -7,14 +7,14 @@ lbl_80B75530:
 /* 80B75544  7C 7D 1B 78 */	mr r29, r3
 /* 80B75548  3C 60 80 B8 */	lis r3, l_bmdData@ha
 /* 80B7554C  38 83 80 F8 */	addi r4, r3, l_bmdData@l
-/* 80B75550  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B780FC */
+/* 80B75550  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B75554  54 00 10 3A */	slwi r0, r0, 2
 /* 80B75558  3C 60 80 B8 */	lis r3, l_resNameList@ha
 /* 80B7555C  38 63 81 10 */	addi r3, r3, l_resNameList@l
 /* 80B75560  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80B75564  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B780F8 */
-/* 80B75568  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80B7556C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80B75564  80 84 00 00 */	lwz r4, 0(r4)
+/* 80B75568  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80B7556C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80B75570  3C A5 00 02 */	addis r5, r5, 2
 /* 80B75574  38 C0 00 80 */	li r6, 0x80
 /* 80B75578  38 A5 C2 F8 */	addi r5, r5, -15624

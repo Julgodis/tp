@@ -7,7 +7,7 @@ lbl_80A26C7C:
 /* 80A26C90  40 82 00 24 */	bne lbl_80A26CB4
 /* 80A26C94  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80A26C98  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80A26C9C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80A26C9C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80A26CA0  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80A26CA4  28 03 00 00 */	cmplwi r3, 0
 /* 80A26CA8  41 82 00 0C */	beq lbl_80A26CB4

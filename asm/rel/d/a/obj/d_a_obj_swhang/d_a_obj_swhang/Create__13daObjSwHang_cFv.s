@@ -31,8 +31,8 @@ lbl_80CFBB2C:
 /* 80CFBB34  80 9D 07 34 */	lwz r4, 0x734(r29)
 /* 80CFBB38  28 04 00 00 */	cmplwi r4, 0
 /* 80CFBB3C  41 82 00 20 */	beq lbl_80CFBB5C
-/* 80CFBB40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFBB44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFBB40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFBB44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFBB48  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CFBB4C  7F A5 EB 78 */	mr r5, r29
 /* 80CFBB50  4B 37 8E B8 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c

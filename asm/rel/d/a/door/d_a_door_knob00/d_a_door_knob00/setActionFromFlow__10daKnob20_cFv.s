@@ -13,9 +13,9 @@ lbl_8045EEE4:
 /* 8045EF10  40 82 00 08 */	bne lbl_8045EF18
 /* 8045EF14  48 00 00 A4 */	b lbl_8045EFB8
 lbl_8045EF18:
-/* 8045EF18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045EF1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045EF20  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8045EF18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045EF1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045EF20  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8045EF24  28 00 00 00 */	cmplwi r0, 0
 /* 8045EF28  40 82 00 90 */	bne lbl_8045EFB8
 /* 8045EF2C  4B DD 93 00 */	b getStatus__12dMsgObject_cFv
@@ -25,9 +25,9 @@ lbl_8045EF18:
 /* 8045EF3C  7C 00 19 10 */	subfe r0, r0, r3
 /* 8045EF40  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 8045EF44  41 82 00 1C */	beq lbl_8045EF60
-/* 8045EF48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045EF4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045EF50  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 8045EF48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045EF4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045EF50  80 63 5D BC */	lwz r3, 0x5dbc(r3)
 /* 8045EF54  4B DD 82 90 */	b isPlaceMessage__12dMsgObject_cFv
 /* 8045EF58  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8045EF5C  40 82 00 5C */	bne lbl_8045EFB8

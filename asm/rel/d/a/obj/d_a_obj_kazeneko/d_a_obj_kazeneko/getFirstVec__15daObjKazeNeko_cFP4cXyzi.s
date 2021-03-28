@@ -4,7 +4,7 @@ lbl_80C3CC40:
 /* 80C3CC48  7C 03 02 14 */	add r0, r3, r0
 /* 80C3CC4C  3C 60 80 C4 */	lis r3, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CC50  38 63 D3 DC */	addi r3, r3, M_attr__15daObjKazeNeko_c@l
-/* 80C3CC54  C0 43 00 20 */	lfs f2, 0x20(r3)	/* effective address: 80C3D3FC */
+/* 80C3CC54  C0 43 00 20 */	lfs f2, 0x20(r3)
 /* 80C3CC58  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80C3CC5C  38 A3 9A 20 */	addi r5, r3, sincosTable___5JMath@l
 /* 80C3CC60  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c

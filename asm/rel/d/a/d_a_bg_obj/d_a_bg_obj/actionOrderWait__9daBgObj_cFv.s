@@ -26,8 +26,8 @@ lbl_8045BB88:
 /* 8045BB8C  4B FF FC 71 */	bl orderWait_cyl__9daBgObj_cFv
 /* 8045BB90  48 00 00 38 */	b lbl_8045BBC8
 lbl_8045BB94:
-/* 8045BB94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045BB98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045BB94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045BB98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045BB9C  A0 1F 0C CC */	lhz r0, 0xccc(r31)
 /* 8045BBA0  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8045BBA4  88 1F 04 BA */	lbz r0, 0x4ba(r31)

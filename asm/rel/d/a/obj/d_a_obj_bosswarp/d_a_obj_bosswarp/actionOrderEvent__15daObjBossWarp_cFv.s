@@ -15,8 +15,8 @@ lbl_8057A54C:
 /* 8057A580  38 81 00 08 */	addi r4, r1, 8
 /* 8057A584  4B A9 F2 74 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 8057A588  7C 64 1B 78 */	mr r4, r3
-/* 8057A58C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057A590  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8057A58C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057A590  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8057A594  38 7F 4E C8 */	addi r3, r31, 0x4ec8
 /* 8057A598  4B AC 90 F4 */	b setPtT__14dEvt_control_cFPv
 /* 8057A59C  38 00 00 02 */	li r0, 2

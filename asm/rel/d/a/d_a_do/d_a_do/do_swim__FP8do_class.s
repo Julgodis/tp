@@ -9,7 +9,7 @@ lbl_8066B650:
 /* 8066B66C  3B E3 ED E8 */	addi r31, r3, lit_3662@l
 /* 8066B670  38 00 00 01 */	li r0, 1
 /* 8066B674  98 1E 06 16 */	stb r0, 0x616(r30)
-/* 8066B678  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 8066EE68 */
+/* 8066B678  C0 1F 00 80 */	lfs f0, 0x80(r31)
 /* 8066B67C  D0 1E 06 48 */	stfs f0, 0x648(r30)
 /* 8066B680  A8 1E 05 F6 */	lha r0, 0x5f6(r30)
 /* 8066B684  2C 00 00 01 */	cmpwi r0, 1
@@ -34,7 +34,7 @@ lbl_8066B69C:
 lbl_8066B6CC:
 /* 8066B6CC  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066B6D0  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 8066B6D4  C0 23 00 14 */	lfs f1, 0x14(r3)	/* effective address: 8066F2D8 */
+/* 8066B6D4  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 8066B6D8  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 8066B6DC  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 8066B6E0  C0 1F 01 14 */	lfs f0, 0x114(r31)

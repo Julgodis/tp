@@ -13,7 +13,7 @@ lbl_80A07C00:
 /* 80A07C2C  3C 60 80 A1 */	lis r3, l_arcNames@ha
 /* 80A07C30  38 83 C6 C4 */	addi r4, r3, l_arcNames@l
 /* 80A07C34  38 7E 0D CC */	addi r3, r30, 0xdcc
-/* 80A07C38  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80A0C6C4 */
+/* 80A07C38  80 84 00 00 */	lwz r4, 0(r4)
 /* 80A07C3C  4B 62 53 CC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80A07C40  80 1E 00 F0 */	lwz r0, 0xf0(r30)
 /* 80A07C44  28 00 00 00 */	cmplwi r0, 0

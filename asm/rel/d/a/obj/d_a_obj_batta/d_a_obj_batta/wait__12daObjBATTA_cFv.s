@@ -7,9 +7,9 @@ lbl_80BAA1C8:
 /* 80BAA1DC  7C 7E 1B 78 */	mr r30, r3
 /* 80BAA1E0  3C 80 80 BB */	lis r4, lit_3774@ha
 /* 80BAA1E4  3B E4 C9 70 */	addi r31, r4, lit_3774@l
-/* 80BAA1E8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BAA1EC  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 80BAA1F0  83 A5 5D AC */	lwz r29, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 80BAA1E8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BAA1EC  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 80BAA1F0  83 A5 5D AC */	lwz r29, 0x5dac(r5)
 /* 80BAA1F4  80 03 09 E8 */	lwz r0, 0x9e8(r3)
 /* 80BAA1F8  2C 00 00 00 */	cmpwi r0, 0
 /* 80BAA1FC  40 82 00 90 */	bne lbl_80BAA28C
@@ -150,11 +150,11 @@ lbl_80BAA3CC:
 /* 80BAA3EC  98 1E 09 F1 */	stb r0, 0x9f1(r30)
 /* 80BAA3F0  3C 60 80 BB */	lis r3, lit_3903@ha
 /* 80BAA3F4  38 83 CA D0 */	addi r4, r3, lit_3903@l
-/* 80BAA3F8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80BACAD0 */
-/* 80BAA3FC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80BACAD4 */
+/* 80BAA3F8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80BAA3FC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80BAA400  90 61 00 30 */	stw r3, 0x30(r1)
 /* 80BAA404  90 01 00 34 */	stw r0, 0x34(r1)
-/* 80BAA408  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80BACAD8 */
+/* 80BAA408  80 04 00 08 */	lwz r0, 8(r4)
 /* 80BAA40C  90 01 00 38 */	stw r0, 0x38(r1)
 /* 80BAA410  7F C3 F3 78 */	mr r3, r30
 /* 80BAA414  38 81 00 30 */	addi r4, r1, 0x30
@@ -169,11 +169,11 @@ lbl_80BAA420:
 /* 80BAA434  40 82 00 30 */	bne lbl_80BAA464
 /* 80BAA438  3C 60 80 BB */	lis r3, lit_3907@ha
 /* 80BAA43C  38 83 CA DC */	addi r4, r3, lit_3907@l
-/* 80BAA440  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80BACADC */
-/* 80BAA444  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80BACAE0 */
+/* 80BAA440  80 64 00 00 */	lwz r3, 0(r4)
+/* 80BAA444  80 04 00 04 */	lwz r0, 4(r4)
 /* 80BAA448  90 61 00 24 */	stw r3, 0x24(r1)
 /* 80BAA44C  90 01 00 28 */	stw r0, 0x28(r1)
-/* 80BAA450  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80BACAE4 */
+/* 80BAA450  80 04 00 08 */	lwz r0, 8(r4)
 /* 80BAA454  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80BAA458  7F C3 F3 78 */	mr r3, r30
 /* 80BAA45C  38 81 00 24 */	addi r4, r1, 0x24

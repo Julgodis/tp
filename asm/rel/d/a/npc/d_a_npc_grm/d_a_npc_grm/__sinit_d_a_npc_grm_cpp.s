@@ -6,20 +6,20 @@ lbl_809D6CD4:
 /* 809D6CE4  38 A3 70 D0 */	addi r5, r3, mCutList__11daNpc_grM_c@l
 /* 809D6CE8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809D6CEC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809D6CF0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809D6CF4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809D6CF8  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809D70D0 */
-/* 809D6CFC  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809D70D4 */
-/* 809D6D00  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809D6D04  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809D70D8 */
+/* 809D6CF0  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D6CF4  80 04 00 04 */	lwz r0, 4(r4)
+/* 809D6CF8  90 65 00 00 */	stw r3, 0(r5)
+/* 809D6CFC  90 05 00 04 */	stw r0, 4(r5)
+/* 809D6D00  80 04 00 08 */	lwz r0, 8(r4)
+/* 809D6D04  90 05 00 08 */	stw r0, 8(r5)
 /* 809D6D08  3C 60 80 9D */	lis r3, lit_3831@ha
 /* 809D6D0C  38 83 70 C4 */	addi r4, r3, lit_3831@l
-/* 809D6D10  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 809D70C4 */
-/* 809D6D14  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 809D70C8 */
-/* 809D6D18  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 809D70DC */
-/* 809D6D1C  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 809D70E0 */
-/* 809D6D20  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 809D70CC */
-/* 809D6D24  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 809D70E4 */
+/* 809D6D10  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D6D14  80 04 00 04 */	lwz r0, 4(r4)
+/* 809D6D18  90 65 00 0C */	stw r3, 0xc(r5)
+/* 809D6D1C  90 05 00 10 */	stw r0, 0x10(r5)
+/* 809D6D20  80 04 00 08 */	lwz r0, 8(r4)
+/* 809D6D24  90 05 00 14 */	stw r0, 0x14(r5)
 /* 809D6D28  3C 60 80 9D */	lis r3, __vt__17daNpc_grM_Param_c@ha
 /* 809D6D2C  38 03 72 E0 */	addi r0, r3, __vt__17daNpc_grM_Param_c@l
 /* 809D6D30  3C 60 80 9D */	lis r3, l_HIO@ha

@@ -19,11 +19,11 @@ lbl_805EA344:
 /* 805EA388  3B A4 D6 C0 */	addi r29, r4, lit_1109@l
 /* 805EA38C  3C 80 80 5F */	lis r4, lit_3911@ha
 /* 805EA390  3B C4 D0 60 */	addi r30, r4, lit_3911@l
-/* 805EA394  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805EA398  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 805EA39C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 805EA394  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805EA398  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 805EA39C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 805EA3A0  38 04 04 D0 */	addi r0, r4, 0x4d0
-/* 805EA3A4  90 1D 00 6C */	stw r0, 0x6c(r29)	/* effective address: 805ED72C */
+/* 805EA3A4  90 1D 00 6C */	stw r0, 0x6c(r29)
 /* 805EA3A8  4B A3 03 68 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805EA3AC  B0 7D 00 70 */	sth r3, 0x70(r29)
 /* 805EA3B0  38 7C 04 D0 */	addi r3, r28, 0x4d0
@@ -164,8 +164,8 @@ lbl_805EA548:
 /* 805EA594  38 9C 11 08 */	addi r4, r28, 0x1108
 /* 805EA598  4B A3 01 34 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 805EA59C  38 7C 0F 30 */	addi r3, r28, 0xf30
-/* 805EA5A0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805EA5A4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805EA5A0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805EA5A4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805EA5A8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805EA5AC  4B A8 C5 00 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 805EA5B0  7F 83 E3 78 */	mr r3, r28
@@ -194,8 +194,8 @@ lbl_805EA600:
 /* 805EA600  3B E0 00 00 */	li r31, 0
 /* 805EA604  3B 60 00 00 */	li r27, 0
 /* 805EA608  3B 3D 00 4C */	addi r25, r29, 0x4c
-/* 805EA60C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805EA610  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805EA60C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805EA610  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805EA614  3B 03 23 3C */	addi r24, r3, 0x233c
 /* 805EA618  C3 7E 00 04 */	lfs f27, 4(r30)
 /* 805EA61C  C3 9E 02 70 */	lfs f28, 0x270(r30)

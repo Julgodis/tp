@@ -11,30 +11,19 @@
 // Types:
 // 
 
-struct cCcD_ShapeAttr {
-	struct Shape {
-	};
-
+struct cCcD_GStts {
 };
 
 struct dCcD_GStts {
 };
 
+struct cCcD_GObjInf {
+};
+
 struct fopAc_ac_c {
 };
 
-struct csXyz {
-};
-
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
 struct cXyz {
-};
-
-struct dCcD_GObjInf {
-	/* 800843DC */ void ChkAtNoGuard();
 };
 
 struct cCcD_Stts {
@@ -42,10 +31,21 @@ struct cCcD_Stts {
 	/* 80263970 */ void PlusDmg(int);
 };
 
-struct cCcD_GStts {
+struct cCcD_ShapeAttr {
+	struct Shape {
+	};
+
 };
 
-struct cCcD_GObjInf {
+struct dCcD_GObjInf {
+	/* 800843DC */ void ChkAtNoGuard();
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
+struct csXyz {
 };
 
 struct dCcS {
@@ -531,18 +531,18 @@ asm void dCcS::ChkNoHitGAtTg(cCcD_GObjInf const* param_0, cCcD_GObjInf const* pa
 /* ############################################################################################## */
 /* 803AC3E4-803AC418 0034+00 s=0 e=2 z=0  None .data      __vt__4dCcS                                                  */
 SECTION_DATA void* __vt__4dCcS[13] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts,
-	/* 3    */ (void*)SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf,
-	/* 4    */ (void*)SetCoGObjInf__4dCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
-	/* 5    */ (void*)SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz,
-	/* 6    */ (void*)ChkNoHitGAtTg__4dCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts,
-	/* 7    */ (void*)ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
-	/* 8    */ (void*)ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj,
-	/* 9    */ (void*)__dt__4dCcSFv,
-	/* 10   */ (void*)MoveAfterCheck__4dCcSFv,
-	/* 11   */ (void*)SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj,
-	/* 12   */ (void*)CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csXyz,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts,
+	(void*)SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf,
+	(void*)SetCoGObjInf__4dCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
+	(void*)SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz,
+	(void*)ChkNoHitGAtTg__4dCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts,
+	(void*)ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts,
+	(void*)ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj,
+	(void*)__dt__4dCcSFv,
+	(void*)MoveAfterCheck__4dCcSFv,
+	(void*)SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj,
+	(void*)CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csXyz,
 };
 

@@ -28,11 +28,11 @@ lbl_80C7CED4:
 /* 80C7CF3C  7F E3 FB 78 */	mr r3, r31
 /* 80C7CF40  3C 80 80 C8 */	lis r4, l_cull_box@ha
 /* 80C7CF44  C4 24 DF 9C */	lfsu f1, l_cull_box@l(r4)
-/* 80C7CF48  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C80004 */
-/* 80C7CF4C  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C80008 */
-/* 80C7CF50  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C8000C */
-/* 80C7CF54  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C80010 */
-/* 80C7CF58  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C80014 */
+/* 80C7CF48  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C7CF4C  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C7CF50  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C7CF54  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C7CF58  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C7CF5C  4B 39 D5 EC */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C7CF60  80 7F 05 A8 */	lwz r3, 0x5a8(r31)
 /* 80C7CF64  80 63 00 04 */	lwz r3, 4(r3)

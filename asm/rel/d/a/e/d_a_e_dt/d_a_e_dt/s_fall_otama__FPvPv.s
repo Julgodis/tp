@@ -22,7 +22,7 @@ lbl_806AFDC8:
 /* 806AFDDC  40 82 00 30 */	bne lbl_806AFE0C
 /* 806AFDE0  3C 60 80 6B */	lis r3, m_fall_no__6E_DT_n@ha
 /* 806AFDE4  38 63 63 30 */	addi r3, r3, m_fall_no__6E_DT_n@l
-/* 806AFDE8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806B6330 */
+/* 806AFDE8  80 63 00 00 */	lwz r3, 0(r3)
 /* 806AFDEC  80 1F 06 8C */	lwz r0, 0x68c(r31)
 /* 806AFDF0  7C 03 00 00 */	cmpw r3, r0
 /* 806AFDF4  40 82 00 18 */	bne lbl_806AFE0C

@@ -70,8 +70,8 @@ lbl_80706344:
 /* 80706368  7D 89 03 A6 */	mtctr r12
 /* 8070636C  4E 80 04 21 */	bctrl 
 /* 80706370  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 80706374  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80706378  38 03 61 C0 */	addi r0, r3, struct_804061C0+0x0@l
+/* 80706374  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80706378  38 03 61 C0 */	addi r0, r3, g_dComIfG_gameInfo@l
 /* 8070637C  7C 60 22 14 */	add r3, r0, r4
 /* 80706380  3C 63 00 01 */	addis r3, r3, 1
 /* 80706384  38 63 61 54 */	addi r3, r3, 0x6154

@@ -14,9 +14,9 @@ lbl_8066AB78:
 /* 8066ABA8  38 81 00 10 */	addi r4, r1, 0x10
 /* 8066ABAC  4B 9A EC 4C */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 8066ABB0  7C 7F 1B 79 */	or. r31, r3, r3
-/* 8066ABB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066ABB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066ABBC  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8066ABB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066ABB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066ABBC  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 8066ABC0  38 80 00 00 */	li r4, 0
 /* 8066ABC4  40 82 00 08 */	bne lbl_8066ABCC
 /* 8066ABC8  38 80 00 01 */	li r4, 1
@@ -133,7 +133,7 @@ lbl_8066AD08:
 /* 8066AD68  4B FF D0 41 */	bl anm_init__FP8do_classifUcf
 /* 8066AD6C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8066AD70  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8066AD74  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8066AD74  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066AD78  A8 9D 04 E6 */	lha r4, 0x4e6(r29)
 /* 8066AD7C  4B 9A 16 60 */	b mDoMtx_YrotS__FPA4_fs
 /* 8066AD80  C0 3E 00 1C */	lfs f1, 0x1c(r30)
@@ -280,7 +280,7 @@ lbl_8066AF58:
 /* 8066AF94  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 8066AF98  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066AF9C  3B A3 F2 C4 */	addi r29, r3, l_HIO@l
-/* 8066AFA0  C0 7D 00 10 */	lfs f3, 0x10(r29)	/* effective address: 8066F2D4 */
+/* 8066AFA0  C0 7D 00 10 */	lfs f3, 0x10(r29)
 /* 8066AFA4  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8066AFA8  C0 1C 05 E8 */	lfs f0, 0x5e8(r28)
 /* 8066AFAC  EC 20 00 F2 */	fmuls f1, f0, f3
@@ -493,8 +493,8 @@ lbl_8066B278:
 /* 8066B294  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 8066B298  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8066B29C  40 81 00 A8 */	ble lbl_8066B344
-/* 8066B2A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066B2A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066B2A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066B2A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066B2A8  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8066B2AC  3C 80 80 67 */	lis r4, stringBase0@ha
 /* 8066B2B0  38 84 EF B0 */	addi r4, r4, stringBase0@l
@@ -539,9 +539,9 @@ lbl_8066B334:
 lbl_8066B344:
 /* 8066B344  57 60 06 3F */	clrlwi. r0, r27, 0x18
 /* 8066B348  41 82 00 A4 */	beq lbl_8066B3EC
-/* 8066B34C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066B350  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066B354  A0 03 00 02 */	lhz r0, 2(r3)	/* effective address: 804061C2 */
+/* 8066B34C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066B350  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066B354  A0 03 00 02 */	lhz r0, 2(r3)
 /* 8066B358  28 00 00 04 */	cmplwi r0, 4
 /* 8066B35C  41 81 00 0C */	bgt lbl_8066B368
 /* 8066B360  38 80 00 00 */	li r4, 0
@@ -615,7 +615,7 @@ lbl_8066B420:
 /* 8066B458  C0 3C 05 E8 */	lfs f1, 0x5e8(r28)
 /* 8066B45C  3C 80 80 67 */	lis r4, l_HIO@ha
 /* 8066B460  38 84 F2 C4 */	addi r4, r4, l_HIO@l
-/* 8066B464  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8066F2D0 */
+/* 8066B464  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8066B468  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8066B46C  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 8066B470  C0 7E 00 44 */	lfs f3, 0x44(r30)
@@ -658,7 +658,7 @@ lbl_8066B4D8:
 /* 8066B4FC  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 8066B500  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066B504  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 8066B508  C0 63 00 10 */	lfs f3, 0x10(r3)	/* effective address: 8066F2D4 */
+/* 8066B508  C0 63 00 10 */	lfs f3, 0x10(r3)
 /* 8066B50C  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8066B510  C0 1C 05 E8 */	lfs f0, 0x5e8(r28)
 /* 8066B514  EC 20 00 F2 */	fmuls f1, f0, f3
@@ -722,7 +722,7 @@ lbl_8066B5BC:
 /* 8066B5F4  C0 3C 05 E8 */	lfs f1, 0x5e8(r28)
 /* 8066B5F8  3C 80 80 67 */	lis r4, l_HIO@ha
 /* 8066B5FC  38 84 F2 C4 */	addi r4, r4, l_HIO@l
-/* 8066B600  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8066F2D0 */
+/* 8066B600  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8066B604  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8066B608  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 8066B60C  C0 7E 00 44 */	lfs f3, 0x44(r30)

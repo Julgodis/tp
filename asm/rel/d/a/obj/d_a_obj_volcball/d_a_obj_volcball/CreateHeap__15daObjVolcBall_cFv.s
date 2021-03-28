@@ -7,10 +7,10 @@ lbl_80D21D80:
 /* 80D21D94  7C 7B 1B 78 */	mr r27, r3
 /* 80D21D98  3C 60 80 D2 */	lis r3, l_arcName@ha
 /* 80D21D9C  38 63 3E AC */	addi r3, r3, l_arcName@l
-/* 80D21DA0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D23EAC */
+/* 80D21DA0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D21DA4  38 80 00 03 */	li r4, 3
-/* 80D21DA8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80D21DAC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80D21DA8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D21DAC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80D21DB0  3C A5 00 02 */	addis r5, r5, 2
 /* 80D21DB4  38 C0 00 80 */	li r6, 0x80
 /* 80D21DB8  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -27,9 +27,9 @@ lbl_807E5708:
 /* 807E5730  80 83 00 10 */	lwz r4, 0x10(r3)
 /* 807E5734  54 80 03 9D */	rlwinm. r0, r4, 0, 0xe, 0xe
 /* 807E5738  41 82 00 68 */	beq lbl_807E57A0
-/* 807E573C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E5740  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807E5744  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 807E573C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E5740  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807E5744  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 807E5748  38 80 00 01 */	li r4, 1
 /* 807E574C  7F E5 FB 78 */	mr r5, r31
 /* 807E5750  38 DF 05 38 */	addi r6, r31, 0x538

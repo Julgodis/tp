@@ -7,7 +7,7 @@ lbl_8052917C:
 /* 80529190  38 00 00 00 */	li r0, 0
 /* 80529194  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80529198  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8052919C  98 03 0F 21 */	stb r0, 0xf21(r3)	/* effective address: 8042D975 */
+/* 8052919C  98 03 0F 21 */	stb r0, 0xf21(r3)
 /* 805291A0  80 7F 05 6C */	lwz r3, 0x56c(r31)
 /* 805291A4  28 03 00 00 */	cmplwi r3, 0
 /* 805291A8  41 82 00 40 */	beq lbl_805291E8

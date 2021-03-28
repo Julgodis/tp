@@ -9,7 +9,7 @@ lbl_807735A8:
 /* 807735C4  7C 7D 1B 78 */	mr r29, r3
 /* 807735C8  3C 80 80 78 */	lis r4, lit_4018@ha
 /* 807735CC  3B E4 9D FC */	addi r31, r4, lit_4018@l
-/* 807735D0  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80779E00 */
+/* 807735D0  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 807735D4  3B C0 40 00 */	li r30, 0x4000
 /* 807735D8  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807735DC  2C 00 00 02 */	cmpwi r0, 2
@@ -49,7 +49,7 @@ lbl_80773610:
 lbl_8077365C:
 /* 8077365C  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 80773660  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 80773664  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 8077A894 */
+/* 80773664  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 80773668  38 61 00 18 */	addi r3, r1, 0x18
 /* 8077366C  38 9D 05 BC */	addi r4, r29, 0x5bc
 /* 80773670  38 BD 04 D0 */	addi r5, r29, 0x4d0

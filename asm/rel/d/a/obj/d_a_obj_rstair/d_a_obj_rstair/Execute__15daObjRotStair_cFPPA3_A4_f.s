@@ -20,8 +20,8 @@ lbl_80CC1AF0:
 /* 80CC1B38  4B 3B 9E 88 */	b Move__4dBgWFv
 lbl_80CC1B3C:
 /* 80CC1B3C  3B C0 00 00 */	li r30, 0
-/* 80CC1B40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC1B44  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80CC1B40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC1B44  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80CC1B48:
 /* 80CC1B48  7F E3 FB 78 */	mr r3, r31
 /* 80CC1B4C  A0 1D 05 CA */	lhz r0, 0x5ca(r29)

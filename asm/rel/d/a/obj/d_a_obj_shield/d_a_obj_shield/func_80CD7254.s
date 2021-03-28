@@ -73,8 +73,8 @@ lbl_80CD7360:
 lbl_80CD736C:
 /* 80CD736C  38 00 00 2A */	li r0, 0x2a
 /* 80CD7370  98 1F 09 2A */	stb r0, 0x92a(r31)
-/* 80CD7374  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD7378  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD7374  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD7378  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD737C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CD7380  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CD7384  88 1F 04 BA */	lbz r0, 0x4ba(r31)

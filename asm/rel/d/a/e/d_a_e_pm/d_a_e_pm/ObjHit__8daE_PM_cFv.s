@@ -91,7 +91,7 @@ lbl_8074A4C8:
 /* 8074A534  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8074A538  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074A53C  38 63 C3 94 */	addi r3, r3, l_HIO@l
-/* 8074A540  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8074C3C8 */
+/* 8074A540  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8074A544  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074A548  4C 40 13 82 */	cror 2, 0, 2
 /* 8074A54C  40 82 00 D8 */	bne lbl_8074A624
@@ -126,12 +126,12 @@ lbl_8074A5AC:
 /* 8074A5B8  88 1F 05 F8 */	lbz r0, 0x5f8(r31)
 /* 8074A5BC  28 00 00 00 */	cmplwi r0, 0
 /* 8074A5C0  40 82 00 64 */	bne lbl_8074A624
-/* 8074A5C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074A5C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8074A5CC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8074A5D0  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8074A5C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074A5C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8074A5CC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8074A5D0  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 8074A5D4  64 00 08 00 */	oris r0, r0, 0x800
-/* 8074A5D8  90 03 05 70 */	stw r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8074A5D8  90 03 05 70 */	stw r0, 0x570(r3)
 /* 8074A5DC  48 00 00 48 */	b lbl_8074A624
 lbl_8074A5E0:
 /* 8074A5E0  38 00 00 04 */	li r0, 4
@@ -146,12 +146,12 @@ lbl_8074A5F4:
 /* 8074A600  88 1F 05 F8 */	lbz r0, 0x5f8(r31)
 /* 8074A604  28 00 00 00 */	cmplwi r0, 0
 /* 8074A608  40 82 00 1C */	bne lbl_8074A624
-/* 8074A60C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074A610  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8074A614  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8074A618  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8074A60C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074A610  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8074A614  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8074A618  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 8074A61C  64 00 08 00 */	oris r0, r0, 0x800
-/* 8074A620  90 03 05 70 */	stw r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8074A620  90 03 05 70 */	stw r0, 0x570(r3)
 lbl_8074A624:
 /* 8074A624  38 00 00 0F */	li r0, 0xf
 /* 8074A628  B0 1F 06 16 */	sth r0, 0x616(r31)

@@ -67,9 +67,9 @@ lbl_80D639D8:
 /* 80D639E0  90 9F 05 74 */	stw r4, 0x574(r31)
 /* 80D639E4  3C 60 80 45 */	lis r3, m_top__13daTagStream_c@ha
 /* 80D639E8  38 83 0D A4 */	addi r4, r3, m_top__13daTagStream_c@l
-/* 80D639EC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80450DA4 */
-/* 80D639F0  93 E3 05 70 */	stw r31, 0x570(r3)	/* effective address: 80450570 */
-/* 80D639F4  93 E4 00 00 */	stw r31, 0(r4)	/* effective address: 80450DA4 */
+/* 80D639EC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D639F0  93 E3 05 70 */	stw r31, 0x570(r3)
+/* 80D639F4  93 E4 00 00 */	stw r31, 0(r4)
 /* 80D639F8  48 00 00 24 */	b lbl_80D63A1C
 lbl_80D639FC:
 /* 80D639FC  93 E6 05 74 */	stw r31, 0x574(r6)

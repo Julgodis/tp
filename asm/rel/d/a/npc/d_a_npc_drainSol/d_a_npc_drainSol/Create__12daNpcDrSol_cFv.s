@@ -86,8 +86,8 @@ lbl_809AE1CC:
 /* 809AE24C  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 809AE250  4B 6C 7F F8 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 809AE254  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 809AE258  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809AE25C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809AE258  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809AE25C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809AE260  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809AE264  4B 6C 88 48 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809AE268  38 7D 07 A8 */	addi r3, r29, 0x7a8

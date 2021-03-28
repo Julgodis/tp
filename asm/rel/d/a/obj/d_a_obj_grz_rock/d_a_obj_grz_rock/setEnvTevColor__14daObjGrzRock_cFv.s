@@ -5,8 +5,8 @@ lbl_80C14C54:
 /* 80C14C60  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C14C64  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C14C68  7C 7E 1B 78 */	mr r30, r3
-/* 80C14C6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C14C70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C14C6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C14C70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C14C74  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80C14C78  7F E3 FB 78 */	mr r3, r31
 /* 80C14C7C  38 9E 07 D8 */	addi r4, r30, 0x7d8

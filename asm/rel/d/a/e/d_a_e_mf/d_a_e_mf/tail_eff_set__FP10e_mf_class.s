@@ -7,9 +7,9 @@ lbl_8070E5E0:
 /* 8070E5F4  7C 7D 1B 78 */	mr r29, r3
 /* 8070E5F8  80 63 05 DC */	lwz r3, 0x5dc(r3)
 /* 8070E5FC  83 C3 00 04 */	lwz r30, 4(r3)
-/* 8070E600  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070E604  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8070E608  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 8070E600  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070E604  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8070E608  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 8070E60C  38 00 00 FF */	li r0, 0xff
 /* 8070E610  90 01 00 08 */	stw r0, 8(r1)
 /* 8070E614  38 80 00 00 */	li r4, 0
@@ -41,11 +41,11 @@ lbl_8070E5E0:
 /* 8070E67C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8070E680  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8070E684  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8070E688  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8070E688  80 84 00 00 */	lwz r4, 0(r4)
 /* 8070E68C  4B C3 7E 24 */	b PSMTXCopy
 /* 8070E690  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070E694  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070E698  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070E698  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070E69C  38 9C 00 68 */	addi r4, r28, 0x68
 /* 8070E6A0  38 BC 00 A4 */	addi r5, r28, 0xa4
 /* 8070E6A4  4B B7 21 3C */	b func_802807E0
@@ -82,11 +82,11 @@ lbl_8070E6A8:
 /* 8070E71C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8070E720  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8070E724  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8070E728  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8070E728  80 84 00 00 */	lwz r4, 0(r4)
 /* 8070E72C  4B C3 7D 84 */	b PSMTXCopy
 /* 8070E730  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070E734  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070E738  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070E738  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070E73C  38 9D 00 68 */	addi r4, r29, 0x68
 /* 8070E740  38 BD 00 A4 */	addi r5, r29, 0xa4
 /* 8070E744  4B B7 20 9C */	b func_802807E0

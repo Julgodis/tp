@@ -6,8 +6,8 @@ lbl_8049E0B8:
 /* 8049E0C8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049E0CC  7C 7E 1B 78 */	mr r30, r3
 /* 8049E0D0  4B BF F7 B4 */	b getAlinkArcName__9daAlink_cFv
-/* 8049E0D4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8049E0D8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8049E0D4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8049E0D8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8049E0DC  3C 84 00 02 */	addis r4, r4, 2
 /* 8049E0E0  38 A0 00 80 */	li r5, 0x80
 /* 8049E0E4  38 84 C2 F8 */	addi r4, r4, -15624

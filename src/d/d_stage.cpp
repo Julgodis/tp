@@ -49,37 +49,76 @@ struct dStage_roomControl_c {
 	/* 80024DB0 */ void SetTimePass(int);
 };
 
-struct dStage_Elst_c {
+struct stage_plight_info_class {
+};
+
+struct dStage_FloorInfo_c {
+};
+
+struct stage_camera_class {
 };
 
 struct dStage_Lbnk_c {
 };
 
-struct stage_map_info_dummy_class {
+struct dStage_dPath_c {
 };
 
-struct dStage_MemoryConfig_c {
+struct dStage_MemoryMap_c {
 };
 
-struct dStage_FileList2_dt_c {
+struct stage_arrow_class {
 };
 
-struct dStage_FileList_dt_c {
-};
-
-struct dStage_MapEventInfo_c {
-};
-
-struct stage_map_info_class {
+struct dStage_dPnt_c {
 };
 
 struct stage_pure_lightvec_info_class {
 };
 
-struct stage_vrbox_info_class {
+struct dStage_Elst_c {
+};
+
+struct stage_scls_info_dummy_class {
+};
+
+struct dStage_MapEventInfo_c {
+};
+
+struct stage_palette_info_class {
+};
+
+struct dStage_MemoryConfig_c {
+};
+
+struct stage_map_info_class {
 };
 
 struct stage_stag_info_class {
+};
+
+struct stage_envr_info_class {
+};
+
+struct dStage_DMap_c {
+};
+
+struct stage_map_info_dummy_class {
+};
+
+struct dStage_SoundInfo_c {
+};
+
+struct stage_tresure_class {
+};
+
+struct stage_actor_class {
+};
+
+struct stage_vrbox_info_class {
+};
+
+struct dStage_FileList2_dt_c {
 };
 
 struct roomRead_class {
@@ -88,52 +127,13 @@ struct roomRead_class {
 struct dStage_Multi_c {
 };
 
-struct stage_tresure_class {
-};
-
-struct dStage_FloorInfo_c {
-};
-
-struct dStage_DMap_c {
-};
-
-struct stage_palette_info_class {
-};
-
-struct stage_vrboxcol_info_class {
-};
-
-struct stage_arrow_class {
-};
-
-struct stage_plight_info_class {
-};
-
-struct dStage_dPath_c {
-};
-
-struct stage_scls_info_dummy_class {
+struct dStage_FileList_dt_c {
 };
 
 struct stage_pselect_info_class {
 };
 
-struct dStage_SoundInfo_c {
-};
-
-struct stage_actor_class {
-};
-
-struct stage_envr_info_class {
-};
-
-struct dStage_dPnt_c {
-};
-
-struct dStage_MemoryMap_c {
-};
-
-struct stage_camera_class {
+struct stage_vrboxcol_info_class {
 };
 
 struct dStage_stageDt_c {
@@ -463,11 +463,11 @@ struct J3DLightInfo {
 // 
 
 static void dStage_SetErrorRoom(); // 2
-static void dStage_SetErrorStage(); // 2
+void dStage_SetErrorStage(); // 2
 void dStage_GetKeepDoorInfo(); // 2
-static void dStage_isBossStage(dStage_dt_c*); // 2
-static void dStage_KeepDoorInfoInit(dStage_dt_c*); // 2
-static void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
+void dStage_isBossStage(dStage_dt_c*); // 2
+void dStage_KeepDoorInfoInit(dStage_dt_c*); // 2
+void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
 void dStage_GetRoomKeepDoorInfo(); // 2
 static void dStage_initRoomKeepDoorInfo(); // 2
 static void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
@@ -485,9 +485,9 @@ static void dStage_cameraInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_RoomCameraInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_arrowInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_paletteInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*); // 2
+void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*); // 2
+void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*); // 2
+void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_filiInfoInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_vrboxInfoInit(dStage_dt_c*, void*, int, void*); // 2
@@ -516,7 +516,7 @@ static void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int); // 2
 static void dStage_stEventInfoInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_mapEventInfoInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_floorInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*); // 2
+void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_mecoInfoInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_stageKeepTresureInit(dStage_dt_c*, void*, int, void*); // 2
 static void dStage_fieldMapTresureInit(dStage_dt_c*, void*, int, void*); // 2
@@ -553,11 +553,11 @@ void dStage_restartRoom(u32, u32, int); // 2
 
 extern "C" void set__18dStage_nextStage_cFPCcScsScScUc(); // 1
 extern "C" static void dStage_SetErrorRoom__Fv(); // 1
-extern "C" static void dStage_SetErrorStage__Fv(); // 1
+extern "C" void dStage_SetErrorStage__Fv(); // 1
 extern "C" void dStage_GetKeepDoorInfo__Fv(); // 1
-extern "C" static void dStage_isBossStage__FP11dStage_dt_c(); // 1
-extern "C" static void dStage_KeepDoorInfoInit__FP11dStage_dt_c(); // 1
-extern "C" static void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
+extern "C" void dStage_isBossStage__FP11dStage_dt_c(); // 1
+extern "C" void dStage_KeepDoorInfoInit__FP11dStage_dt_c(); // 1
+extern "C" void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
 extern "C" void dStage_GetRoomKeepDoorInfo__Fv(); // 1
 extern "C" static void dStage_initRoomKeepDoorInfo__Fv(); // 1
 extern "C" static void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
@@ -605,9 +605,9 @@ extern "C" void getMapInfoBase__15dStage_roomDt_cCFv(); // 1
 extern "C" void getMapInfo2__16dStage_stageDt_cCFi(); // 1
 extern "C" void getMapInfoBase__16dStage_stageDt_cCFv(); // 1
 extern "C" static void dStage_paletteInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_pselectInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_envrInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_filiInfo2Init__FP11dStage_dt_cPviPv(); // 1
+extern "C" void dStage_pselectInfoInit__FP11dStage_dt_cPviPv(); // 1
+extern "C" void dStage_envrInfoInit__FP11dStage_dt_cPviPv(); // 1
+extern "C" void dStage_filiInfo2Init__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_filiInfoInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv(); // 1
@@ -637,7 +637,7 @@ extern "C" static void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei(); // 1
 extern "C" static void dStage_stEventInfoInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_floorInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_memaInfoInit__FP11dStage_dt_cPviPv(); // 1
+extern "C" void dStage_memaInfoInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_mecoInfoInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv(); // 1
 extern "C" static void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv(); // 1
@@ -1024,7 +1024,7 @@ SECTION_DEAD char const* const stringBase_80378E2D = "stage non Lbnk data!\n";
 SECTION_DEAD static char const* const pad_80378E43 = "\0\0\0\0";
 #pragma pop
 
-/* 80023E28-80023E94 006C+00 s=0 e=1 z=0  None .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
+/* 80023E28-80023E94 006C+00 s=0 e=1 z=3  None .text      set__18dStage_nextStage_cFPCcScsScScUc                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1046,11 +1046,11 @@ asm static void dStage_SetErrorRoom() {
 #pragma pop
 
 
-/* 80023EC4-80023EF4 0030+00 s=5 e=0 z=0  None .text      dStage_SetErrorStage__Fv                                     */
+/* 80023EC4-80023EF4 0030+00 s=5 e=0 z=1  None .text      dStage_SetErrorStage__Fv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_SetErrorStage() {
+asm void dStage_SetErrorStage() {
 	nofralloc
 #include "asm/d/d_stage/dStage_SetErrorStage__Fv.s"
 }
@@ -1075,33 +1075,33 @@ asm void dStage_GetKeepDoorInfo() {
 #pragma pop
 
 
-/* 80023F00-80023F50 0050+00 s=2 e=0 z=0  None .text      dStage_isBossStage__FP11dStage_dt_c                          */
+/* 80023F00-80023F50 0050+00 s=2 e=0 z=3  None .text      dStage_isBossStage__FP11dStage_dt_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_isBossStage(dStage_dt_c* param_0) {
+asm void dStage_isBossStage(dStage_dt_c* param_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_isBossStage__FP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80023F50-80023F84 0034+00 s=1 e=0 z=0  None .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
+/* 80023F50-80023F84 0034+00 s=1 e=0 z=1  None .text      dStage_KeepDoorInfoInit__FP11dStage_dt_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_KeepDoorInfoInit(dStage_dt_c* param_0) {
+asm void dStage_KeepDoorInfoInit(dStage_dt_c* param_0) {
 	nofralloc
 #include "asm/d/d_stage/dStage_KeepDoorInfoInit__FP11dStage_dt_c.s"
 }
 #pragma pop
 
 
-/* 80023F84-8002405C 00D8+00 s=1 e=0 z=0  None .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
+/* 80023F84-8002405C 00D8+00 s=1 e=0 z=3  None .text      dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_KeepDoorInfoProc(dStage_dt_c* param_0, stage_tgsc_class* param_1) {
+asm void dStage_KeepDoorInfoProc(dStage_dt_c* param_0, stage_tgsc_class* param_1) {
 	nofralloc
 #include "asm/d/d_stage/dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class.s"
 }
@@ -1159,7 +1159,7 @@ asm static void dStage_RoomKeepDoorInit(dStage_dt_c* param_0, void* param_1, int
 #pragma pop
 
 
-/* 8002419C-800241E8 004C+00 s=2 e=0 z=0  None .text      set__19dStage_startStage_cFPCcScsSc                          */
+/* 8002419C-800241E8 004C+00 s=2 e=0 z=7  None .text      set__19dStage_startStage_cFPCcScsSc                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1195,7 +1195,7 @@ u8 mArcBankName__20dStage_roomControl_c[4];
 /* 80450D70-80450D74 0004+00 s=1 e=1 z=0  None .sbss      mArcBankData__20dStage_roomControl_c                         */
 u8 mArcBankData__20dStage_roomControl_c[4];
 
-/* 800241E8-80024338 0150+00 s=1 e=0 z=0  None .text      init__20dStage_roomControl_cFv                               */
+/* 800241E8-80024338 0150+00 s=1 e=0 z=4  None .text      init__20dStage_roomControl_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1206,7 +1206,7 @@ asm void dStage_roomControl_c::init() {
 #pragma pop
 
 
-/* 80024338-80024384 004C+00 s=1 e=1 z=0  None .text      initZone__20dStage_roomControl_cFv                           */
+/* 80024338-80024384 004C+00 s=1 e=1 z=7  None .text      initZone__20dStage_roomControl_cFv                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1919,259 +1919,259 @@ SECTION_DATA static u8 l_objectName[10932] = {
 
 /* 803A65CC-803A65FC 0030+00 s=1 e=0 z=0  None .data      l_roomFuncTable$5052                                         */
 SECTION_DATA static void* data_803A65CC[12] = {
-	/* 0    */ (void*)0x54524553,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x46494C49,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_filiInfo2Init__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x4D504154,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x446F6F72,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
+	(void*)0x54524553,
+	(void*)NULL,
+	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
+	(void*)0x46494C49,
+	(void*)NULL,
+	(void*)dStage_filiInfo2Init__FP11dStage_dt_cPviPv,
+	(void*)0x4D504154,
+	(void*)NULL,
+	(void*)dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F72,
+	(void*)NULL,
+	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A65FC-803A6620 0024+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5053                                        */
 SECTION_DATA static void* data_803A65FC[9] = {
-	/* 0    */ (void*)0x54524530,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x4D504130,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_mapPathInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x446F6F30,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
+	(void*)0x54524530,
+	(void*)NULL,
+	(void*)dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv,
+	(void*)0x4D504130,
+	(void*)NULL,
+	(void*)dStage_mapPathInit__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F30,
+	(void*)NULL,
+	(void*)dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6620-803A6638 0018+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5131                                        */
 SECTION_DATA static void* data_803A6620[6] = {
-	/* 0    */ (void*)0x4D454D30,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_memaInfoInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x4D454330,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_mecoInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4D454D30,
+	(void*)NULL,
+	(void*)dStage_memaInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4D454330,
+	(void*)NULL,
+	(void*)dStage_mecoInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6638-803A6644 000C+00 s=1 e=0 z=0  None .data      l_funcTable$5136                                             */
 SECTION_DATA static void* data_803A6638[3] = {
-	/* 0    */ (void*)0x53544147,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_stagInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53544147,
+	(void*)NULL,
+	(void*)dStage_stagInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6644-803A6650 000C+00 s=1 e=0 z=0  None .data      l_layerFuncTableA$5141                                       */
 SECTION_DATA static void* data_803A6644[3] = {
-	/* 0    */ (void*)0x534F4E30,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_soundInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x534F4E30,
+	(void*)NULL,
+	(void*)dStage_soundInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6650-803A668C 003C+00 s=1 e=0 z=0  None .data      l_envLayerFuncTable$5142                                     */
 SECTION_DATA static void* data_803A6650[15] = {
-	/* 0    */ (void*)0x4C475430,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_lgtvInfoInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x456E7630,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_envrInfoInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x436F6C30,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_pselectInfoInit__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x50414C30,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_paletteInfoInit__FP11dStage_dt_cPviPv,
-	/* 12   */ (void*)0x56524230,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4C475430,
+	(void*)NULL,
+	(void*)dStage_lgtvInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x456E7630,
+	(void*)NULL,
+	(void*)dStage_envrInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x436F6C30,
+	(void*)NULL,
+	(void*)dStage_pselectInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x50414C30,
+	(void*)NULL,
+	(void*)dStage_paletteInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x56524230,
+	(void*)NULL,
+	(void*)dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A668C-803A66BC 0030+00 s=1 e=0 z=0  None .data      l_layerFuncTable$5158                                        */
 SECTION_DATA static void* data_803A668C[12] = {
-	/* 0    */ (void*)0x446F6F30,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x53434F30,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x41435430,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_actorInit__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x54524530,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_layerTresureInit__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F30,
+	(void*)NULL,
+	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434F30,
+	(void*)NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x41435430,
+	(void*)NULL,
+	(void*)dStage_actorInit__FP11dStage_dt_cPviPv,
+	(void*)0x54524530,
+	(void*)NULL,
+	(void*)dStage_layerTresureInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A66BC-803A67F4 0138+00 s=1 e=0 z=0  None .data      l_funcTable$5163                                             */
 SECTION_DATA static void* data_803A66BC[78] = {
-	/* 0    */ (void*)0x45564C59,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_elstInfoInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x5250504E,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_rppnInfoInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x52504154,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_rpatInfoInit__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x4D554C54,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_multInfoInit__FP11dStage_dt_cPviPv,
-	/* 12   */ (void*)0x504C5952,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)dStage_playerInit__FP11dStage_dt_cPviPv,
-	/* 15   */ (void*)0x43414D52,
-	/* 16   */ (void*)NULL,
-	/* 17   */ (void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
-	/* 18   */ (void*)0x5243414D,
-	/* 19   */ (void*)NULL,
-	/* 20   */ (void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
-	/* 21   */ (void*)0x41435452,
-	/* 22   */ (void*)NULL,
-	/* 23   */ (void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
-	/* 24   */ (void*)0x54474F42,
-	/* 25   */ (void*)NULL,
-	/* 26   */ (void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
-	/* 27   */ (void*)0x5254424C,
-	/* 28   */ (void*)NULL,
-	/* 29   */ (void*)dStage_roomReadInit__FP11dStage_dt_cPviPv,
-	/* 30   */ (void*)0x41524F42,
-	/* 31   */ (void*)NULL,
-	/* 32   */ (void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
-	/* 33   */ (void*)0x5241524F,
-	/* 34   */ (void*)NULL,
-	/* 35   */ (void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
-	/* 36   */ (void*)0x56697274,
-	/* 37   */ (void*)NULL,
-	/* 38   */ (void*)dStage_vrboxInfoInit__FP11dStage_dt_cPviPv,
-	/* 39   */ (void*)0x53434C53,
-	/* 40   */ (void*)NULL,
-	/* 41   */ (void*)dStage_sclsInfoInit__FP11dStage_dt_cPviPv,
-	/* 42   */ (void*)0x54475343,
-	/* 43   */ (void*)NULL,
-	/* 44   */ (void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
-	/* 45   */ (void*)0x4C474854,
-	/* 46   */ (void*)NULL,
-	/* 47   */ (void*)dStage_plightInfoInit__FP11dStage_dt_cPviPv,
-	/* 48   */ (void*)0x50504E54,
-	/* 49   */ (void*)NULL,
-	/* 50   */ (void*)dStage_ppntInfoInit__FP11dStage_dt_cPviPv,
-	/* 51   */ (void*)0x50415448,
-	/* 52   */ (void*)NULL,
-	/* 53   */ (void*)dStage_pathInfoInit__FP11dStage_dt_cPviPv,
-	/* 54   */ (void*)0x53434F42,
-	/* 55   */ (void*)NULL,
-	/* 56   */ (void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
-	/* 57   */ (void*)0x46494C49,
-	/* 58   */ (void*)NULL,
-	/* 59   */ (void*)dStage_filiInfoInit__FP11dStage_dt_cPviPv,
-	/* 60   */ (void*)0x446F6F72,
-	/* 61   */ (void*)NULL,
-	/* 62   */ (void*)dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv,
-	/* 63   */ (void*)0x464C4F52,
-	/* 64   */ (void*)NULL,
-	/* 65   */ (void*)dStage_floorInfoInit__FP11dStage_dt_cPviPv,
-	/* 66   */ (void*)0x54474452,
-	/* 67   */ (void*)NULL,
-	/* 68   */ (void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
-	/* 69   */ (void*)0x444D4150,
-	/* 70   */ (void*)NULL,
-	/* 71   */ (void*)dStage_dmapInfoInit__FP11dStage_dt_cPviPv,
-	/* 72   */ (void*)0x52455654,
-	/* 73   */ (void*)NULL,
-	/* 74   */ (void*)dStage_stEventInfoInit__FP11dStage_dt_cPviPv,
-	/* 75   */ (void*)0x534F4E44,
-	/* 76   */ (void*)NULL,
-	/* 77   */ (void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
+	(void*)0x45564C59,
+	(void*)NULL,
+	(void*)dStage_elstInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x5250504E,
+	(void*)NULL,
+	(void*)dStage_rppnInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52504154,
+	(void*)NULL,
+	(void*)dStage_rpatInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4D554C54,
+	(void*)NULL,
+	(void*)dStage_multInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x504C5952,
+	(void*)NULL,
+	(void*)dStage_playerInit__FP11dStage_dt_cPviPv,
+	(void*)0x43414D52,
+	(void*)NULL,
+	(void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
+	(void*)0x5243414D,
+	(void*)NULL,
+	(void*)dStage_cameraInit__FP11dStage_dt_cPviPv,
+	(void*)0x41435452,
+	(void*)NULL,
+	(void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
+	(void*)0x54474F42,
+	(void*)NULL,
+	(void*)dStage_actorInit_always__FP11dStage_dt_cPviPv,
+	(void*)0x5254424C,
+	(void*)NULL,
+	(void*)dStage_roomReadInit__FP11dStage_dt_cPviPv,
+	(void*)0x41524F42,
+	(void*)NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x5241524F,
+	(void*)NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x56697274,
+	(void*)NULL,
+	(void*)dStage_vrboxInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434C53,
+	(void*)NULL,
+	(void*)dStage_sclsInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x54475343,
+	(void*)NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4C474854,
+	(void*)NULL,
+	(void*)dStage_plightInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x50504E54,
+	(void*)NULL,
+	(void*)dStage_ppntInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x50415448,
+	(void*)NULL,
+	(void*)dStage_pathInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434F42,
+	(void*)NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x46494C49,
+	(void*)NULL,
+	(void*)dStage_filiInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F72,
+	(void*)NULL,
+	(void*)dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x464C4F52,
+	(void*)NULL,
+	(void*)dStage_floorInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x54474452,
+	(void*)NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x444D4150,
+	(void*)NULL,
+	(void*)dStage_dmapInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52455654,
+	(void*)NULL,
+	(void*)dStage_stEventInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x534F4E44,
+	(void*)NULL,
+	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
 
 /* 803A67F4-803A689C 00A8+00 s=1 e=0 z=0  None .data      l_funcTable$5168                                             */
 SECTION_DATA static void* data_803A67F4[42] = {
-	/* 0    */ (void*)0x504C5952,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_playerInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x5243414D,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_RoomCameraInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x5241524F,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x5254424C,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_roomReadInit__FP11dStage_dt_cPviPv,
-	/* 12   */ (void*)0x41524F42,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
-	/* 15   */ (void*)0x56697274,
-	/* 16   */ (void*)NULL,
-	/* 17   */ (void*)dStage_vrboxInfoInit__FP11dStage_dt_cPviPv,
-	/* 18   */ (void*)0x53434C53,
-	/* 19   */ (void*)NULL,
-	/* 20   */ (void*)dStage_sclsInfoInit__FP11dStage_dt_cPviPv,
-	/* 21   */ (void*)0x4C474854,
-	/* 22   */ (void*)NULL,
-	/* 23   */ (void*)dStage_plightInfoInit__FP11dStage_dt_cPviPv,
-	/* 24   */ (void*)0x5250504E,
-	/* 25   */ (void*)NULL,
-	/* 26   */ (void*)dStage_rppnInfoInit__FP11dStage_dt_cPviPv,
-	/* 27   */ (void*)0x52504154,
-	/* 28   */ (void*)NULL,
-	/* 29   */ (void*)dStage_rpatInfoInit__FP11dStage_dt_cPviPv,
-	/* 30   */ (void*)0x46494C49,
-	/* 31   */ (void*)NULL,
-	/* 32   */ (void*)dStage_filiInfoInit__FP11dStage_dt_cPviPv,
-	/* 33   */ (void*)0x464C4F52,
-	/* 34   */ (void*)NULL,
-	/* 35   */ (void*)dStage_floorInfoInit__FP11dStage_dt_cPviPv,
-	/* 36   */ (void*)0x4C424E4B,
-	/* 37   */ (void*)NULL,
-	/* 38   */ (void*)dStage_lbnkInfoInit__FP11dStage_dt_cPviPv,
-	/* 39   */ (void*)0x534F4E44,
-	/* 40   */ (void*)NULL,
-	/* 41   */ (void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
+	(void*)0x504C5952,
+	(void*)NULL,
+	(void*)dStage_playerInit__FP11dStage_dt_cPviPv,
+	(void*)0x5243414D,
+	(void*)NULL,
+	(void*)dStage_RoomCameraInit__FP11dStage_dt_cPviPv,
+	(void*)0x5241524F,
+	(void*)NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x5254424C,
+	(void*)NULL,
+	(void*)dStage_roomReadInit__FP11dStage_dt_cPviPv,
+	(void*)0x41524F42,
+	(void*)NULL,
+	(void*)dStage_arrowInit__FP11dStage_dt_cPviPv,
+	(void*)0x56697274,
+	(void*)NULL,
+	(void*)dStage_vrboxInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434C53,
+	(void*)NULL,
+	(void*)dStage_sclsInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4C474854,
+	(void*)NULL,
+	(void*)dStage_plightInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x5250504E,
+	(void*)NULL,
+	(void*)dStage_rppnInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52504154,
+	(void*)NULL,
+	(void*)dStage_rpatInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x46494C49,
+	(void*)NULL,
+	(void*)dStage_filiInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x464C4F52,
+	(void*)NULL,
+	(void*)dStage_floorInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x4C424E4B,
+	(void*)NULL,
+	(void*)dStage_lbnkInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x534F4E44,
+	(void*)NULL,
+	(void*)dStage_soundInfoInitCL__FP11dStage_dt_cPviPv,
 };
 
 /* 803A689C-803A68FC 0060+00 s=1 e=0 z=0  None .data      l_funcTable$5173                                             */
 SECTION_DATA static void* data_803A689C[24] = {
-	/* 0    */ (void*)0x446F6F72,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x41435452,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x54474F42,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv,
-	/* 9    */ (void*)0x54524553,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)dStage_roomTresureInit__FP11dStage_dt_cPviPv,
-	/* 12   */ (void*)0x54475343,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv,
-	/* 15   */ (void*)0x53434F42,
-	/* 16   */ (void*)NULL,
-	/* 17   */ (void*)dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv,
-	/* 18   */ (void*)0x54474452,
-	/* 19   */ (void*)NULL,
-	/* 20   */ (void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
-	/* 21   */ (void*)0x52455654,
-	/* 22   */ (void*)NULL,
-	/* 23   */ (void*)dStage_mapEventInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x446F6F72,
+	(void*)NULL,
+	(void*)dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x41435452,
+	(void*)NULL,
+	(void*)dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv,
+	(void*)0x54474F42,
+	(void*)NULL,
+	(void*)dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv,
+	(void*)0x54524553,
+	(void*)NULL,
+	(void*)dStage_roomTresureInit__FP11dStage_dt_cPviPv,
+	(void*)0x54475343,
+	(void*)NULL,
+	(void*)dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv,
+	(void*)0x53434F42,
+	(void*)NULL,
+	(void*)dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv,
+	(void*)0x54474452,
+	(void*)NULL,
+	(void*)dStage_tgscInfoInit__FP11dStage_dt_cPviPv,
+	(void*)0x52455654,
+	(void*)NULL,
+	(void*)dStage_mapEventInfoInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A68FC-803A6920 0024+00 s=1 e=0 z=0  None .data      l_funcTable$5178                                             */
 SECTION_DATA static void* data_803A68FC[9] = {
-	/* 0    */ (void*)0x54524553,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv,
-	/* 3    */ (void*)0x46494C49,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv,
-	/* 6    */ (void*)0x4D504154,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv,
+	(void*)0x54524553,
+	(void*)NULL,
+	(void*)dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv,
+	(void*)0x46494C49,
+	(void*)NULL,
+	(void*)dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv,
+	(void*)0x4D504154,
+	(void*)NULL,
+	(void*)dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv,
 };
 
 /* 803A6920-803A696C 004C+00 s=3 e=0 z=0  None .data      mMemoryBlock__20dStage_roomControl_c                         */
@@ -2238,7 +2238,7 @@ asm static void createRoomScene(int param_0) {
 #pragma pop
 
 
-/* 800244E8-8002451C 0034+00 s=0 e=0 z=8  None .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
+/* 800244E8-8002451C 0034+00 s=0 e=0 z=13  None .text      checkRoomDisp__20dStage_roomControl_cCFi                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2249,7 +2249,7 @@ asm void dStage_roomControl_c::checkRoomDisp(int param_0) const {
 #pragma pop
 
 
-/* 8002451C-8002471C 0200+00 s=2 e=0 z=0  None .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
+/* 8002451C-8002471C 0200+00 s=2 e=0 z=2  None .text      loadRoom__20dStage_roomControl_cFiPUcb                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2260,7 +2260,7 @@ asm void dStage_roomControl_c::loadRoom(int param_0, u8* param_1, bool param_2) 
 #pragma pop
 
 
-/* 8002471C-8002483C 0120+00 s=1 e=0 z=0  None .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
+/* 8002471C-8002483C 0120+00 s=1 e=0 z=3  None .text      zoneCountCheck__20dStage_roomControl_cCFi                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2293,7 +2293,7 @@ asm void dStage_roomControl_c::createMemoryBlock(int param_0, u32 param_1) {
 #pragma pop
 
 
-/* 800248A8-8002490C 0064+00 s=1 e=0 z=0  None .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
+/* 800248A8-8002490C 0064+00 s=1 e=0 z=1  None .text      destroyMemoryBlock__20dStage_roomControl_cFv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2329,7 +2329,7 @@ SECTION_DATA static u8 mArcBank__20dStage_roomControl_c[320] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8002490C-80024940 0034+00 s=1 e=1 z=0  None .text      setArcBank__20dStage_roomControl_cFiPCc                      */
+/* 8002490C-80024940 0034+00 s=1 e=1 z=2  None .text      setArcBank__20dStage_roomControl_cFiPCc                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2340,7 +2340,7 @@ asm void dStage_roomControl_c::setArcBank(int param_0, char const* param_1) {
 #pragma pop
 
 
-/* 80024940-80024954 0014+00 s=1 e=1 z=0  None .text      getArcBank__20dStage_roomControl_cFi                         */
+/* 80024940-80024954 0014+00 s=1 e=1 z=1  None .text      getArcBank__20dStage_roomControl_cFi                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2351,7 +2351,7 @@ asm void dStage_roomControl_c::getArcBank(int param_0) {
 #pragma pop
 
 
-/* 80024954-80024A34 00E0+00 s=0 e=2 z=0  None .text      resetArchiveBank__20dStage_roomControl_cFi                   */
+/* 80024954-80024A34 00E0+00 s=0 e=2 z=2  None .text      resetArchiveBank__20dStage_roomControl_cFi                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2362,7 +2362,7 @@ asm void dStage_roomControl_c::resetArchiveBank(int param_0) {
 #pragma pop
 
 
-/* 80024A34-80024ABC 0088+00 s=1 e=0 z=0  None .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
+/* 80024A34-80024ABC 0088+00 s=1 e=0 z=2  None .text      create__Q220dStage_roomControl_c9roomDzs_cFUc                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2384,7 +2384,7 @@ asm void dStage_roomControl_c::roomDzs_c::remove() {
 #pragma pop
 
 
-/* 80024B44-80024C1C 00D8+00 s=1 e=0 z=0  None .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
+/* 80024B44-80024C1C 00D8+00 s=1 e=0 z=1  None .text      add__Q220dStage_roomControl_c9roomDzs_cFUcUc                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2450,7 +2450,7 @@ asm void dStage_roomControl_c::SetTimePass(int param_0) {
 #pragma pop
 
 
-/* 80024DB8-80024DC0 0008+00 s=1 e=0 z=0  None .text      getRoom__16dStage_stageDt_cCFv                               */
+/* 80024DB8-80024DC0 0008+00 s=1 e=0 z=1  None .text      getRoom__16dStage_stageDt_cCFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2643,33 +2643,33 @@ asm static void dStage_paletteInfoInit(dStage_dt_c* param_0, void* param_1, int 
 #pragma pop
 
 
-/* 800254CC-80025500 0034+00 s=1 e=0 z=0  None .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
+/* 800254CC-80025500 0034+00 s=1 e=0 z=1  None .text      dStage_pselectInfoInit__FP11dStage_dt_cPviPv                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_pselectInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
+asm void dStage_pselectInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_pselectInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025500-80025534 0034+00 s=1 e=0 z=0  None .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80025500-80025534 0034+00 s=1 e=0 z=1  None .text      dStage_envrInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_envrInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
+asm void dStage_envrInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_envrInfoInit__FP11dStage_dt_cPviPv.s"
 }
 #pragma pop
 
 
-/* 80025534-8002556C 0038+00 s=1 e=0 z=0  None .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
+/* 80025534-8002556C 0038+00 s=1 e=0 z=2  None .text      dStage_filiInfo2Init__FP11dStage_dt_cPviPv                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_filiInfo2Init(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
+asm void dStage_filiInfo2Init(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_filiInfo2Init__FP11dStage_dt_cPviPv.s"
 }
@@ -2995,11 +2995,11 @@ asm static void dStage_floorInfoInit(dStage_dt_c* param_0, void* param_1, int pa
 #pragma pop
 
 
-/* 80026218-80026298 0080+00 s=1 e=0 z=0  None .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
+/* 80026218-80026298 0080+00 s=1 e=0 z=9  None .text      dStage_memaInfoInit__FP11dStage_dt_cPviPv                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void dStage_memaInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
+asm void dStage_memaInfoInit(dStage_dt_c* param_0, void* param_1, int param_2, void* param_3) {
 	nofralloc
 #include "asm/d/d_stage/dStage_memaInfoInit__FP11dStage_dt_cPviPv.s"
 }
@@ -3322,7 +3322,7 @@ asm void dStage_Create() {
 #pragma pop
 
 
-/* 80026DF8-80026FDC 01E4+00 s=0 e=1 z=0  None .text      dStage_Delete__Fv                                            */
+/* 80026DF8-80026FDC 01E4+00 s=0 e=1 z=7  None .text      dStage_Delete__Fv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -5272,293 +5272,293 @@ asm dStage_roomStatus_c::~dStage_roomStatus_c() {
 /* ############################################################################################## */
 /* 803A6AAC-803A6C20 0174+00 s=1 e=0 z=0  None .data      __vt__15dStage_roomDt_c                                      */
 SECTION_DATA static void* __vt__15dStage_roomDt_c[93] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)init__15dStage_roomDt_cFv,
-	/* 3    */ (void*)setCamera__15dStage_roomDt_cFP18stage_camera_class,
-	/* 4    */ (void*)getCamera__15dStage_roomDt_cCFv,
-	/* 5    */ (void*)setArrow__15dStage_roomDt_cFP17stage_arrow_class,
-	/* 6    */ (void*)getArrow__15dStage_roomDt_cCFv,
-	/* 7    */ (void*)setPlayer__15dStage_roomDt_cFP17stage_actor_class,
-	/* 8    */ (void*)getPlayer__15dStage_roomDt_cCFv,
-	/* 9    */ (void*)setPlayerNum__15dStage_roomDt_cFUs,
-	/* 10   */ (void*)getPlayerNum__15dStage_roomDt_cCFv,
-	/* 11   */ (void*)setRoom__15dStage_roomDt_cFP14roomRead_class,
-	/* 12   */ (void*)getRoom__15dStage_roomDt_cCFv,
-	/* 13   */ (void*)setMapInfo__15dStage_roomDt_cFP20stage_map_info_class,
-	/* 14   */ (void*)getMapInfo__15dStage_roomDt_cCFv,
-	/* 15   */ (void*)getMapInfo2__15dStage_roomDt_cCFi,
-	/* 16   */ (void*)setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class,
-	/* 17   */ (void*)getMapInfoBase__15dStage_roomDt_cCFv,
-	/* 18   */ (void*)setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class,
-	/* 19   */ (void*)getPaletteInfo__15dStage_roomDt_cCFv,
-	/* 20   */ (void*)setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class,
-	/* 21   */ (void*)getPselectInfo__15dStage_roomDt_cCFv,
-	/* 22   */ (void*)setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class,
-	/* 23   */ (void*)getEnvrInfo__15dStage_roomDt_cCFv,
-	/* 24   */ (void*)setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class,
-	/* 25   */ (void*)getVrboxInfo__15dStage_roomDt_cCFv,
-	/* 26   */ (void*)setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class,
-	/* 27   */ (void*)getVrboxcolInfo__15dStage_roomDt_cCFv,
-	/* 28   */ (void*)setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class,
-	/* 29   */ (void*)getPlightInfo__15dStage_roomDt_cCFv,
-	/* 30   */ (void*)setPaletteNumInfo__15dStage_roomDt_cFi,
-	/* 31   */ (void*)getPaletteNumInfo__15dStage_roomDt_cCFv,
-	/* 32   */ (void*)setPselectNumInfo__15dStage_roomDt_cFi,
-	/* 33   */ (void*)getPselectNumInfo__15dStage_roomDt_cCFv,
-	/* 34   */ (void*)setEnvrNumInfo__15dStage_roomDt_cFi,
-	/* 35   */ (void*)getEnvrNumInfo__15dStage_roomDt_cCFv,
-	/* 36   */ (void*)setVrboxNumInfo__15dStage_roomDt_cFi,
-	/* 37   */ (void*)getVrboxNumInfo__15dStage_roomDt_cCFv,
-	/* 38   */ (void*)setVrboxcolNumInfo__15dStage_roomDt_cFi,
-	/* 39   */ (void*)getVrboxcolNumInfo__15dStage_roomDt_cCFv,
-	/* 40   */ (void*)setPlightNumInfo__15dStage_roomDt_cFi,
-	/* 41   */ (void*)getPlightNumInfo__15dStage_roomDt_cCFv,
-	/* 42   */ (void*)setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class,
-	/* 43   */ (void*)getLightVecInfo__15dStage_roomDt_cCFv,
-	/* 44   */ (void*)setLightVecInfoNum__15dStage_roomDt_cFi,
-	/* 45   */ (void*)getLightVecInfoNum__15dStage_roomDt_cCFv,
-	/* 46   */ (void*)setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class,
-	/* 47   */ (void*)getStagInfo__15dStage_roomDt_cCFv,
-	/* 48   */ (void*)setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class,
-	/* 49   */ (void*)getSclsInfo__15dStage_roomDt_cCFv,
-	/* 50   */ (void*)setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c,
-	/* 51   */ (void*)getPntInf__15dStage_roomDt_cCFv,
-	/* 52   */ (void*)setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c,
-	/* 53   */ (void*)getPathInf__15dStage_roomDt_cCFv,
-	/* 54   */ (void*)setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c,
-	/* 55   */ (void*)getPnt2Inf__15dStage_roomDt_cCFv,
-	/* 56   */ (void*)setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c,
-	/* 57   */ (void*)getPath2Inf__15dStage_roomDt_cCFv,
-	/* 58   */ (void*)setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c,
-	/* 59   */ (void*)getSoundInf__15dStage_roomDt_cCFv,
-	/* 60   */ (void*)setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c,
-	/* 61   */ (void*)getSoundInfCL__15dStage_roomDt_cCFv,
-	/* 62   */ (void*)setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c,
-	/* 63   */ (void*)getMapEventInfo__15dStage_roomDt_cCFv,
-	/* 64   */ (void*)setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c,
-	/* 65   */ (void*)getFileList2Info__15dStage_roomDt_cCFv,
-	/* 66   */ (void*)setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c,
-	/* 67   */ (void*)getFileListInfo__15dStage_roomDt_cCFv,
-	/* 68   */ (void*)setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c,
-	/* 69   */ (void*)getFloorInfo__15dStage_roomDt_cCFv,
-	/* 70   */ (void*)setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c,
-	/* 71   */ (void*)getMemoryConfig__15dStage_roomDt_cCFv,
-	/* 72   */ (void*)setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c,
-	/* 73   */ (void*)getMemoryMap__15dStage_roomDt_cCFv,
-	/* 74   */ (void*)setMulti__15dStage_roomDt_cFP14dStage_Multi_c,
-	/* 75   */ (void*)getMulti__15dStage_roomDt_cCFv,
-	/* 76   */ (void*)setOldMulti__15dStage_roomDt_cFv,
-	/* 77   */ (void*)resetOldMulti__15dStage_roomDt_cFv,
-	/* 78   */ (void*)getOldMulti__15dStage_roomDt_cCFv,
-	/* 79   */ (void*)setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c,
-	/* 80   */ (void*)getLbnk__15dStage_roomDt_cCFv,
-	/* 81   */ (void*)setTresure__15dStage_roomDt_cFP19stage_tresure_class,
-	/* 82   */ (void*)getTresure__15dStage_roomDt_cCFv,
-	/* 83   */ (void*)setDMap__15dStage_roomDt_cFP13dStage_DMap_c,
-	/* 84   */ (void*)getDMap__15dStage_roomDt_cCFv,
-	/* 85   */ (void*)setDrTg__15dStage_roomDt_cFP16stage_tgsc_class,
-	/* 86   */ (void*)getDrTg__15dStage_roomDt_cCFv,
-	/* 87   */ (void*)setDoor__15dStage_roomDt_cFP16stage_tgsc_class,
-	/* 88   */ (void*)getDoor__15dStage_roomDt_cCFv,
-	/* 89   */ (void*)setMapPath__15dStage_roomDt_cFPv,
-	/* 90   */ (void*)getMapPath__15dStage_roomDt_cFv,
-	/* 91   */ (void*)setElst__15dStage_roomDt_cFP13dStage_Elst_c,
-	/* 92   */ (void*)getElst__15dStage_roomDt_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)init__15dStage_roomDt_cFv,
+	(void*)setCamera__15dStage_roomDt_cFP18stage_camera_class,
+	(void*)getCamera__15dStage_roomDt_cCFv,
+	(void*)setArrow__15dStage_roomDt_cFP17stage_arrow_class,
+	(void*)getArrow__15dStage_roomDt_cCFv,
+	(void*)setPlayer__15dStage_roomDt_cFP17stage_actor_class,
+	(void*)getPlayer__15dStage_roomDt_cCFv,
+	(void*)setPlayerNum__15dStage_roomDt_cFUs,
+	(void*)getPlayerNum__15dStage_roomDt_cCFv,
+	(void*)setRoom__15dStage_roomDt_cFP14roomRead_class,
+	(void*)getRoom__15dStage_roomDt_cCFv,
+	(void*)setMapInfo__15dStage_roomDt_cFP20stage_map_info_class,
+	(void*)getMapInfo__15dStage_roomDt_cCFv,
+	(void*)getMapInfo2__15dStage_roomDt_cCFi,
+	(void*)setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class,
+	(void*)getMapInfoBase__15dStage_roomDt_cCFv,
+	(void*)setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class,
+	(void*)getPaletteInfo__15dStage_roomDt_cCFv,
+	(void*)setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class,
+	(void*)getPselectInfo__15dStage_roomDt_cCFv,
+	(void*)setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class,
+	(void*)getEnvrInfo__15dStage_roomDt_cCFv,
+	(void*)setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class,
+	(void*)getVrboxInfo__15dStage_roomDt_cCFv,
+	(void*)setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class,
+	(void*)getVrboxcolInfo__15dStage_roomDt_cCFv,
+	(void*)setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class,
+	(void*)getPlightInfo__15dStage_roomDt_cCFv,
+	(void*)setPaletteNumInfo__15dStage_roomDt_cFi,
+	(void*)getPaletteNumInfo__15dStage_roomDt_cCFv,
+	(void*)setPselectNumInfo__15dStage_roomDt_cFi,
+	(void*)getPselectNumInfo__15dStage_roomDt_cCFv,
+	(void*)setEnvrNumInfo__15dStage_roomDt_cFi,
+	(void*)getEnvrNumInfo__15dStage_roomDt_cCFv,
+	(void*)setVrboxNumInfo__15dStage_roomDt_cFi,
+	(void*)getVrboxNumInfo__15dStage_roomDt_cCFv,
+	(void*)setVrboxcolNumInfo__15dStage_roomDt_cFi,
+	(void*)getVrboxcolNumInfo__15dStage_roomDt_cCFv,
+	(void*)setPlightNumInfo__15dStage_roomDt_cFi,
+	(void*)getPlightNumInfo__15dStage_roomDt_cCFv,
+	(void*)setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class,
+	(void*)getLightVecInfo__15dStage_roomDt_cCFv,
+	(void*)setLightVecInfoNum__15dStage_roomDt_cFi,
+	(void*)getLightVecInfoNum__15dStage_roomDt_cCFv,
+	(void*)setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class,
+	(void*)getStagInfo__15dStage_roomDt_cCFv,
+	(void*)setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class,
+	(void*)getSclsInfo__15dStage_roomDt_cCFv,
+	(void*)setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c,
+	(void*)getPntInf__15dStage_roomDt_cCFv,
+	(void*)setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c,
+	(void*)getPathInf__15dStage_roomDt_cCFv,
+	(void*)setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c,
+	(void*)getPnt2Inf__15dStage_roomDt_cCFv,
+	(void*)setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c,
+	(void*)getPath2Inf__15dStage_roomDt_cCFv,
+	(void*)setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c,
+	(void*)getSoundInf__15dStage_roomDt_cCFv,
+	(void*)setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c,
+	(void*)getSoundInfCL__15dStage_roomDt_cCFv,
+	(void*)setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c,
+	(void*)getMapEventInfo__15dStage_roomDt_cCFv,
+	(void*)setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c,
+	(void*)getFileList2Info__15dStage_roomDt_cCFv,
+	(void*)setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c,
+	(void*)getFileListInfo__15dStage_roomDt_cCFv,
+	(void*)setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c,
+	(void*)getFloorInfo__15dStage_roomDt_cCFv,
+	(void*)setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c,
+	(void*)getMemoryConfig__15dStage_roomDt_cCFv,
+	(void*)setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c,
+	(void*)getMemoryMap__15dStage_roomDt_cCFv,
+	(void*)setMulti__15dStage_roomDt_cFP14dStage_Multi_c,
+	(void*)getMulti__15dStage_roomDt_cCFv,
+	(void*)setOldMulti__15dStage_roomDt_cFv,
+	(void*)resetOldMulti__15dStage_roomDt_cFv,
+	(void*)getOldMulti__15dStage_roomDt_cCFv,
+	(void*)setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c,
+	(void*)getLbnk__15dStage_roomDt_cCFv,
+	(void*)setTresure__15dStage_roomDt_cFP19stage_tresure_class,
+	(void*)getTresure__15dStage_roomDt_cCFv,
+	(void*)setDMap__15dStage_roomDt_cFP13dStage_DMap_c,
+	(void*)getDMap__15dStage_roomDt_cCFv,
+	(void*)setDrTg__15dStage_roomDt_cFP16stage_tgsc_class,
+	(void*)getDrTg__15dStage_roomDt_cCFv,
+	(void*)setDoor__15dStage_roomDt_cFP16stage_tgsc_class,
+	(void*)getDoor__15dStage_roomDt_cCFv,
+	(void*)setMapPath__15dStage_roomDt_cFPv,
+	(void*)getMapPath__15dStage_roomDt_cFv,
+	(void*)setElst__15dStage_roomDt_cFP13dStage_Elst_c,
+	(void*)getElst__15dStage_roomDt_cFv,
 };
 
 /* 803A6C20-803A6D94 0174+00 s=0 e=1 z=0  None .data      __vt__16dStage_stageDt_c                                     */
 SECTION_DATA void* __vt__16dStage_stageDt_c[93] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)init__16dStage_stageDt_cFv,
-	/* 3    */ (void*)setCamera__16dStage_stageDt_cFP18stage_camera_class,
-	/* 4    */ (void*)getCamera__16dStage_stageDt_cCFv,
-	/* 5    */ (void*)setArrow__16dStage_stageDt_cFP17stage_arrow_class,
-	/* 6    */ (void*)getArrow__16dStage_stageDt_cCFv,
-	/* 7    */ (void*)setPlayer__16dStage_stageDt_cFP17stage_actor_class,
-	/* 8    */ (void*)getPlayer__16dStage_stageDt_cCFv,
-	/* 9    */ (void*)setPlayerNum__16dStage_stageDt_cFUs,
-	/* 10   */ (void*)getPlayerNum__16dStage_stageDt_cCFv,
-	/* 11   */ (void*)setRoom__16dStage_stageDt_cFP14roomRead_class,
-	/* 12   */ (void*)getRoom__16dStage_stageDt_cCFv,
-	/* 13   */ (void*)setMapInfo__16dStage_stageDt_cFP20stage_map_info_class,
-	/* 14   */ (void*)getMapInfo__16dStage_stageDt_cCFv,
-	/* 15   */ (void*)getMapInfo2__16dStage_stageDt_cCFi,
-	/* 16   */ (void*)setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class,
-	/* 17   */ (void*)getMapInfoBase__16dStage_stageDt_cCFv,
-	/* 18   */ (void*)setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class,
-	/* 19   */ (void*)getPaletteInfo__16dStage_stageDt_cCFv,
-	/* 20   */ (void*)setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class,
-	/* 21   */ (void*)getPselectInfo__16dStage_stageDt_cCFv,
-	/* 22   */ (void*)setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class,
-	/* 23   */ (void*)getEnvrInfo__16dStage_stageDt_cCFv,
-	/* 24   */ (void*)setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class,
-	/* 25   */ (void*)getVrboxInfo__16dStage_stageDt_cCFv,
-	/* 26   */ (void*)setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class,
-	/* 27   */ (void*)getVrboxcolInfo__16dStage_stageDt_cCFv,
-	/* 28   */ (void*)setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class,
-	/* 29   */ (void*)getPlightInfo__16dStage_stageDt_cCFv,
-	/* 30   */ (void*)setPaletteNumInfo__16dStage_stageDt_cFi,
-	/* 31   */ (void*)getPaletteNumInfo__16dStage_stageDt_cCFv,
-	/* 32   */ (void*)setPselectNumInfo__16dStage_stageDt_cFi,
-	/* 33   */ (void*)getPselectNumInfo__16dStage_stageDt_cCFv,
-	/* 34   */ (void*)setEnvrNumInfo__16dStage_stageDt_cFi,
-	/* 35   */ (void*)getEnvrNumInfo__16dStage_stageDt_cCFv,
-	/* 36   */ (void*)setVrboxNumInfo__16dStage_stageDt_cFi,
-	/* 37   */ (void*)getVrboxNumInfo__16dStage_stageDt_cCFv,
-	/* 38   */ (void*)setVrboxcolNumInfo__16dStage_stageDt_cFi,
-	/* 39   */ (void*)getVrboxcolNumInfo__16dStage_stageDt_cCFv,
-	/* 40   */ (void*)setPlightNumInfo__16dStage_stageDt_cFi,
-	/* 41   */ (void*)getPlightNumInfo__16dStage_stageDt_cCFv,
-	/* 42   */ (void*)setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class,
-	/* 43   */ (void*)getLightVecInfo__16dStage_stageDt_cCFv,
-	/* 44   */ (void*)setLightVecInfoNum__16dStage_stageDt_cFi,
-	/* 45   */ (void*)getLightVecInfoNum__16dStage_stageDt_cCFv,
-	/* 46   */ (void*)setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class,
-	/* 47   */ (void*)getStagInfo__16dStage_stageDt_cCFv,
-	/* 48   */ (void*)setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class,
-	/* 49   */ (void*)getSclsInfo__16dStage_stageDt_cCFv,
-	/* 50   */ (void*)setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c,
-	/* 51   */ (void*)getPntInf__16dStage_stageDt_cCFv,
-	/* 52   */ (void*)setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c,
-	/* 53   */ (void*)getPathInf__16dStage_stageDt_cCFv,
-	/* 54   */ (void*)setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c,
-	/* 55   */ (void*)getPnt2Inf__16dStage_stageDt_cCFv,
-	/* 56   */ (void*)setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c,
-	/* 57   */ (void*)getPath2Inf__16dStage_stageDt_cCFv,
-	/* 58   */ (void*)setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c,
-	/* 59   */ (void*)getSoundInf__16dStage_stageDt_cCFv,
-	/* 60   */ (void*)setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c,
-	/* 61   */ (void*)getSoundInfCL__16dStage_stageDt_cCFv,
-	/* 62   */ (void*)setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c,
-	/* 63   */ (void*)getMapEventInfo__16dStage_stageDt_cCFv,
-	/* 64   */ (void*)setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c,
-	/* 65   */ (void*)getFileList2Info__16dStage_stageDt_cCFv,
-	/* 66   */ (void*)setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c,
-	/* 67   */ (void*)getFileListInfo__16dStage_stageDt_cCFv,
-	/* 68   */ (void*)setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c,
-	/* 69   */ (void*)getFloorInfo__16dStage_stageDt_cCFv,
-	/* 70   */ (void*)setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c,
-	/* 71   */ (void*)getMemoryConfig__16dStage_stageDt_cCFv,
-	/* 72   */ (void*)setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c,
-	/* 73   */ (void*)getMemoryMap__16dStage_stageDt_cCFv,
-	/* 74   */ (void*)setMulti__16dStage_stageDt_cFP14dStage_Multi_c,
-	/* 75   */ (void*)getMulti__16dStage_stageDt_cCFv,
-	/* 76   */ (void*)setOldMulti__16dStage_stageDt_cFv,
-	/* 77   */ (void*)resetOldMulti__16dStage_stageDt_cFv,
-	/* 78   */ (void*)getOldMulti__16dStage_stageDt_cCFv,
-	/* 79   */ (void*)setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c,
-	/* 80   */ (void*)getLbnk__16dStage_stageDt_cCFv,
-	/* 81   */ (void*)setTresure__16dStage_stageDt_cFP19stage_tresure_class,
-	/* 82   */ (void*)getTresure__16dStage_stageDt_cCFv,
-	/* 83   */ (void*)setDMap__16dStage_stageDt_cFP13dStage_DMap_c,
-	/* 84   */ (void*)getDMap__16dStage_stageDt_cCFv,
-	/* 85   */ (void*)setDrTg__16dStage_stageDt_cFP16stage_tgsc_class,
-	/* 86   */ (void*)getDrTg__16dStage_stageDt_cCFv,
-	/* 87   */ (void*)setDoor__16dStage_stageDt_cFP16stage_tgsc_class,
-	/* 88   */ (void*)getDoor__16dStage_stageDt_cCFv,
-	/* 89   */ (void*)setMapPath__16dStage_stageDt_cFPv,
-	/* 90   */ (void*)getMapPath__16dStage_stageDt_cFv,
-	/* 91   */ (void*)setElst__16dStage_stageDt_cFP13dStage_Elst_c,
-	/* 92   */ (void*)getElst__16dStage_stageDt_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)init__16dStage_stageDt_cFv,
+	(void*)setCamera__16dStage_stageDt_cFP18stage_camera_class,
+	(void*)getCamera__16dStage_stageDt_cCFv,
+	(void*)setArrow__16dStage_stageDt_cFP17stage_arrow_class,
+	(void*)getArrow__16dStage_stageDt_cCFv,
+	(void*)setPlayer__16dStage_stageDt_cFP17stage_actor_class,
+	(void*)getPlayer__16dStage_stageDt_cCFv,
+	(void*)setPlayerNum__16dStage_stageDt_cFUs,
+	(void*)getPlayerNum__16dStage_stageDt_cCFv,
+	(void*)setRoom__16dStage_stageDt_cFP14roomRead_class,
+	(void*)getRoom__16dStage_stageDt_cCFv,
+	(void*)setMapInfo__16dStage_stageDt_cFP20stage_map_info_class,
+	(void*)getMapInfo__16dStage_stageDt_cCFv,
+	(void*)getMapInfo2__16dStage_stageDt_cCFi,
+	(void*)setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class,
+	(void*)getMapInfoBase__16dStage_stageDt_cCFv,
+	(void*)setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class,
+	(void*)getPaletteInfo__16dStage_stageDt_cCFv,
+	(void*)setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class,
+	(void*)getPselectInfo__16dStage_stageDt_cCFv,
+	(void*)setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class,
+	(void*)getEnvrInfo__16dStage_stageDt_cCFv,
+	(void*)setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class,
+	(void*)getVrboxInfo__16dStage_stageDt_cCFv,
+	(void*)setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class,
+	(void*)getVrboxcolInfo__16dStage_stageDt_cCFv,
+	(void*)setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class,
+	(void*)getPlightInfo__16dStage_stageDt_cCFv,
+	(void*)setPaletteNumInfo__16dStage_stageDt_cFi,
+	(void*)getPaletteNumInfo__16dStage_stageDt_cCFv,
+	(void*)setPselectNumInfo__16dStage_stageDt_cFi,
+	(void*)getPselectNumInfo__16dStage_stageDt_cCFv,
+	(void*)setEnvrNumInfo__16dStage_stageDt_cFi,
+	(void*)getEnvrNumInfo__16dStage_stageDt_cCFv,
+	(void*)setVrboxNumInfo__16dStage_stageDt_cFi,
+	(void*)getVrboxNumInfo__16dStage_stageDt_cCFv,
+	(void*)setVrboxcolNumInfo__16dStage_stageDt_cFi,
+	(void*)getVrboxcolNumInfo__16dStage_stageDt_cCFv,
+	(void*)setPlightNumInfo__16dStage_stageDt_cFi,
+	(void*)getPlightNumInfo__16dStage_stageDt_cCFv,
+	(void*)setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class,
+	(void*)getLightVecInfo__16dStage_stageDt_cCFv,
+	(void*)setLightVecInfoNum__16dStage_stageDt_cFi,
+	(void*)getLightVecInfoNum__16dStage_stageDt_cCFv,
+	(void*)setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class,
+	(void*)getStagInfo__16dStage_stageDt_cCFv,
+	(void*)setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class,
+	(void*)getSclsInfo__16dStage_stageDt_cCFv,
+	(void*)setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c,
+	(void*)getPntInf__16dStage_stageDt_cCFv,
+	(void*)setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c,
+	(void*)getPathInf__16dStage_stageDt_cCFv,
+	(void*)setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c,
+	(void*)getPnt2Inf__16dStage_stageDt_cCFv,
+	(void*)setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c,
+	(void*)getPath2Inf__16dStage_stageDt_cCFv,
+	(void*)setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c,
+	(void*)getSoundInf__16dStage_stageDt_cCFv,
+	(void*)setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c,
+	(void*)getSoundInfCL__16dStage_stageDt_cCFv,
+	(void*)setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c,
+	(void*)getMapEventInfo__16dStage_stageDt_cCFv,
+	(void*)setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c,
+	(void*)getFileList2Info__16dStage_stageDt_cCFv,
+	(void*)setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c,
+	(void*)getFileListInfo__16dStage_stageDt_cCFv,
+	(void*)setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c,
+	(void*)getFloorInfo__16dStage_stageDt_cCFv,
+	(void*)setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c,
+	(void*)getMemoryConfig__16dStage_stageDt_cCFv,
+	(void*)setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c,
+	(void*)getMemoryMap__16dStage_stageDt_cCFv,
+	(void*)setMulti__16dStage_stageDt_cFP14dStage_Multi_c,
+	(void*)getMulti__16dStage_stageDt_cCFv,
+	(void*)setOldMulti__16dStage_stageDt_cFv,
+	(void*)resetOldMulti__16dStage_stageDt_cFv,
+	(void*)getOldMulti__16dStage_stageDt_cCFv,
+	(void*)setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c,
+	(void*)getLbnk__16dStage_stageDt_cCFv,
+	(void*)setTresure__16dStage_stageDt_cFP19stage_tresure_class,
+	(void*)getTresure__16dStage_stageDt_cCFv,
+	(void*)setDMap__16dStage_stageDt_cFP13dStage_DMap_c,
+	(void*)getDMap__16dStage_stageDt_cCFv,
+	(void*)setDrTg__16dStage_stageDt_cFP16stage_tgsc_class,
+	(void*)getDrTg__16dStage_stageDt_cCFv,
+	(void*)setDoor__16dStage_stageDt_cFP16stage_tgsc_class,
+	(void*)getDoor__16dStage_stageDt_cCFv,
+	(void*)setMapPath__16dStage_stageDt_cFPv,
+	(void*)getMapPath__16dStage_stageDt_cFv,
+	(void*)setElst__16dStage_stageDt_cFP13dStage_Elst_c,
+	(void*)getElst__16dStage_stageDt_cFv,
 };
 
 /* 803A6D94-803A6F08 0174+00 s=1 e=1 z=0  None .data      __vt__11dStage_dt_c                                          */
 SECTION_DATA void* __vt__11dStage_dt_c[93] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)NULL,
-	/* 12   */ (void*)NULL,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)NULL,
-	/* 15   */ (void*)NULL,
-	/* 16   */ (void*)NULL,
-	/* 17   */ (void*)NULL,
-	/* 18   */ (void*)NULL,
-	/* 19   */ (void*)NULL,
-	/* 20   */ (void*)NULL,
-	/* 21   */ (void*)NULL,
-	/* 22   */ (void*)NULL,
-	/* 23   */ (void*)NULL,
-	/* 24   */ (void*)NULL,
-	/* 25   */ (void*)NULL,
-	/* 26   */ (void*)NULL,
-	/* 27   */ (void*)NULL,
-	/* 28   */ (void*)NULL,
-	/* 29   */ (void*)NULL,
-	/* 30   */ (void*)NULL,
-	/* 31   */ (void*)NULL,
-	/* 32   */ (void*)NULL,
-	/* 33   */ (void*)NULL,
-	/* 34   */ (void*)NULL,
-	/* 35   */ (void*)NULL,
-	/* 36   */ (void*)NULL,
-	/* 37   */ (void*)NULL,
-	/* 38   */ (void*)NULL,
-	/* 39   */ (void*)NULL,
-	/* 40   */ (void*)NULL,
-	/* 41   */ (void*)NULL,
-	/* 42   */ (void*)NULL,
-	/* 43   */ (void*)NULL,
-	/* 44   */ (void*)NULL,
-	/* 45   */ (void*)NULL,
-	/* 46   */ (void*)NULL,
-	/* 47   */ (void*)NULL,
-	/* 48   */ (void*)NULL,
-	/* 49   */ (void*)NULL,
-	/* 50   */ (void*)NULL,
-	/* 51   */ (void*)NULL,
-	/* 52   */ (void*)NULL,
-	/* 53   */ (void*)NULL,
-	/* 54   */ (void*)NULL,
-	/* 55   */ (void*)NULL,
-	/* 56   */ (void*)NULL,
-	/* 57   */ (void*)NULL,
-	/* 58   */ (void*)NULL,
-	/* 59   */ (void*)NULL,
-	/* 60   */ (void*)NULL,
-	/* 61   */ (void*)NULL,
-	/* 62   */ (void*)NULL,
-	/* 63   */ (void*)NULL,
-	/* 64   */ (void*)NULL,
-	/* 65   */ (void*)NULL,
-	/* 66   */ (void*)NULL,
-	/* 67   */ (void*)NULL,
-	/* 68   */ (void*)NULL,
-	/* 69   */ (void*)NULL,
-	/* 70   */ (void*)NULL,
-	/* 71   */ (void*)NULL,
-	/* 72   */ (void*)NULL,
-	/* 73   */ (void*)NULL,
-	/* 74   */ (void*)NULL,
-	/* 75   */ (void*)NULL,
-	/* 76   */ (void*)NULL,
-	/* 77   */ (void*)NULL,
-	/* 78   */ (void*)NULL,
-	/* 79   */ (void*)NULL,
-	/* 80   */ (void*)NULL,
-	/* 81   */ (void*)NULL,
-	/* 82   */ (void*)NULL,
-	/* 83   */ (void*)NULL,
-	/* 84   */ (void*)NULL,
-	/* 85   */ (void*)NULL,
-	/* 86   */ (void*)NULL,
-	/* 87   */ (void*)NULL,
-	/* 88   */ (void*)NULL,
-	/* 89   */ (void*)NULL,
-	/* 90   */ (void*)NULL,
-	/* 91   */ (void*)NULL,
-	/* 92   */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8002839C-80028418 007C+00 s=1 e=0 z=0  None .text      __ct__19dStage_roomStatus_cFv                                */

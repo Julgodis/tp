@@ -29,8 +29,8 @@ lbl_80CDC4F4:
 /* 80CDC514  38 81 00 08 */	addi r4, r1, 8
 /* 80CDC518  7C 85 23 78 */	mr r5, r4
 /* 80CDC51C  4B 66 A8 50 */	b PSMTXMultVec
-/* 80CDC520  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDC524  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDC520  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDC524  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDC528  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CDC52C  38 81 00 08 */	addi r4, r1, 8
 /* 80CDC530  4B 36 BE 94 */	b setGoal__16dEvent_manager_cFP4cXyz

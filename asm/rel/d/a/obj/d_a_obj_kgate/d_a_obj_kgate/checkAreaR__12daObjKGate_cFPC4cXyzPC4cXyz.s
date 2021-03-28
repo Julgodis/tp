@@ -7,9 +7,9 @@ lbl_805890D4:
 /* 805890E8  7C 7D 1B 78 */	mr r29, r3
 /* 805890EC  3C 60 80 59 */	lis r3, l_gateBmdIdx@ha
 /* 805890F0  3B E3 AB 30 */	addi r31, r3, l_gateBmdIdx@l
-/* 805890F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805890F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805890FC  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805890F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805890F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805890FC  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80589100  88 1D 0B EC */	lbz r0, 0xbec(r29)
 /* 80589104  28 00 00 02 */	cmplwi r0, 2
 /* 80589108  40 82 02 08 */	bne lbl_80589310
@@ -88,9 +88,9 @@ lbl_80589220:
 /* 80589228  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 8058922C  C0 1F 01 0C */	lfs f0, 0x10c(r31)
 /* 80589230  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80589234  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80589238  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8058923C  83 83 5D B8 */	lwz r28, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 80589234  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80589238  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8058923C  83 83 5D B8 */	lwz r28, 0x5db8(r3)
 /* 80589240  28 1C 00 00 */	cmplwi r28, 0
 /* 80589244  41 82 00 CC */	beq lbl_80589310
 /* 80589248  38 7C 04 D0 */	addi r3, r28, 0x4d0
@@ -179,10 +179,10 @@ lbl_80589378:
 /* 80589384  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80589388  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 8058938C  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80589390  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80589394  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80589398  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8058939C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80589390  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80589394  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80589398  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8058939C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 805893A0  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 805893A4  41 82 00 1C */	beq lbl_805893C0
 /* 805893A8  C0 1F 00 AC */	lfs f0, 0xac(r31)

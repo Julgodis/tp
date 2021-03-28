@@ -50,11 +50,11 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803BA088-803BA0A0 0014+04 s=2 e=0 z=0  None .data      __vt__14daObj_SSBase_c                                       */
 SECTION_DATA static void* __vt__14daObj_SSBase_c[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daObj_SSBase_cFv,
-	/* 3    */ (void*)setSoldOut__14daObj_SSBase_cFv,
-	/* 4    */ (void*)getProcessID__14daObj_SSBase_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14daObj_SSBase_cFv,
+	(void*)setSoldOut__14daObj_SSBase_cFv,
+	(void*)getProcessID__14daObj_SSBase_cFv,
 	/* padding */
 	NULL,
 };
@@ -81,7 +81,7 @@ asm daObj_SSBase_c::~daObj_SSBase_c() {
 #pragma pop
 
 
-/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=2  None .text      getProcessID__14daObj_SSBase_cFv                             */
+/* 8015E4B0-8015E4C8 0018+00 s=1 e=0 z=0  None .text      getProcessID__14daObj_SSBase_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

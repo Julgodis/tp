@@ -8,7 +8,7 @@ lbl_80632660:
 /* 80632678  3C 60 80 64 */	lis r3, lit_3788@ha
 /* 8063267C  3B E3 97 F4 */	addi r31, r3, lit_3788@l
 /* 80632680  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80632684  C0 5F 01 00 */	lfs f2, 0x100(r31)	/* effective address: 806398F4 */
+/* 80632684  C0 5F 01 00 */	lfs f2, 0x100(r31)
 /* 80632688  4B C3 E0 B8 */	b cLib_chaseF__FPfff
 /* 8063268C  88 1E 0F AF */	lbz r0, 0xfaf(r30)
 /* 80632690  2C 00 00 02 */	cmpwi r0, 2
@@ -28,9 +28,9 @@ lbl_806326B8:
 /* 806326C0  38 A0 00 08 */	li r5, 8
 /* 806326C4  4B C3 E4 CC */	b cLib_chaseAngleS__FPsss
 /* 806326C8  7F C3 F3 78 */	mr r3, r30
-/* 806326CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806326D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806326D4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806326CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806326D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806326D4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806326D8  4B 9E 80 38 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806326DC  7C 64 1B 78 */	mr r4, r3
 /* 806326E0  38 7E 04 E6 */	addi r3, r30, 0x4e6
@@ -91,8 +91,8 @@ lbl_80632790:
 /* 806327A4  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 806327A8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 806327AC  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 806327B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806327B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806327B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806327B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806327B8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806327BC  88 1E 0F A8 */	lbz r0, 0xfa8(r30)
 /* 806327C0  20 80 00 08 */	subfic r4, r0, 8
@@ -103,14 +103,14 @@ lbl_80632790:
 /* 806327D4  4B C3 51 80 */	b cM_rndF__Ff
 /* 806327D8  3C 60 80 64 */	lis r3, l_HIO@ha
 /* 806327DC  38 63 9F 84 */	addi r3, r3, l_HIO@l
-/* 806327E0  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 80639FB4 */
+/* 806327E0  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 806327E4  EC 20 08 2A */	fadds f1, f0, f1
 /* 806327E8  C0 1E 05 2C */	lfs f0, 0x52c(r30)
 /* 806327EC  EC 00 00 72 */	fmuls f0, f0, f1
 /* 806327F0  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 806327F4  C0 5E 05 2C */	lfs f2, 0x52c(r30)
 /* 806327F8  C0 3F 00 10 */	lfs f1, 0x10(r31)
-/* 806327FC  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 80639FBC */
+/* 806327FC  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 80632800  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80632804  88 1E 0F A8 */	lbz r0, 0xfa8(r30)
 /* 80632808  54 00 10 3A */	slwi r0, r0, 2

@@ -31,8 +31,8 @@ lbl_80AA3E5C:
 /* 80AA3ED0  C0 BF 00 40 */	lfs f5, 0x40(r31)
 /* 80AA3ED4  C0 DF 00 44 */	lfs f6, 0x44(r31)
 /* 80AA3ED8  4B 57 66 70 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
-/* 80AA3EDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AA3EE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AA3EDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AA3EE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AA3EE4  38 63 09 78 */	addi r3, r3, 0x978
 /* 80AA3EE8  38 80 00 3C */	li r4, 0x3c
 /* 80AA3EEC  4B 59 0C AC */	b onSwitch__12dSv_danBit_cFi

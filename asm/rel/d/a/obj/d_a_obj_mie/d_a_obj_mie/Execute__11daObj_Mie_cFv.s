@@ -12,8 +12,8 @@ lbl_80C946A8:
 /* 80C946D0  80 1B 04 9C */	lwz r0, 0x49c(r27)
 /* 80C946D4  54 1E 9F FE */	rlwinm r30, r0, 0x13, 0x1f, 0x1f
 /* 80C946D8  3B FD 00 00 */	addi r31, r29, 0
-/* 80C946DC  C3 FF 00 28 */	lfs f31, 0x28(r31)	/* effective address: 80C95AD4 */
-/* 80C946E0  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80C95AB4 */
+/* 80C946DC  C3 FF 00 28 */	lfs f31, 0x28(r31)
+/* 80C946E0  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80C946E4  D0 1B 04 EC */	stfs f0, 0x4ec(r27)
 /* 80C946E8  D0 1B 04 F0 */	stfs f0, 0x4f0(r27)
 /* 80C946EC  D0 1B 04 F4 */	stfs f0, 0x4f4(r27)
@@ -22,7 +22,7 @@ lbl_80C946A8:
 /* 80C946F8  38 00 00 06 */	li r0, 6
 /* 80C946FC  98 1B 05 48 */	stb r0, 0x548(r27)
 /* 80C94700  38 7B 07 8C */	addi r3, r27, 0x78c
-/* 80C94704  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 80C95AC8 */
+/* 80C94704  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 80C94708  4B 3E 18 38 */	b SetWallR__12dBgS_AcchCirFf
 /* 80C9470C  7F E3 FB 78 */	mr r3, r31
 /* 80C94710  C0 1F 00 18 */	lfs f0, 0x18(r31)
@@ -595,8 +595,8 @@ lbl_80C94F4C:
 /* 80C94F68  4B 38 82 8C */	b fopAcM_riverStream__FP4cXyzPsPff
 lbl_80C94F6C:
 /* 80C94F6C  38 7B 05 78 */	addi r3, r27, 0x578
-/* 80C94F70  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C94F74  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C94F70  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C94F74  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C94F78  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C94F7C  4B 3E 1B 30 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C94F80  80 1B 06 54 */	lwz r0, 0x654(r27)
@@ -687,8 +687,8 @@ lbl_80C9503C:
 /* 80C950CC  38 7B 09 2C */	addi r3, r27, 0x92c
 /* 80C950D0  38 9B 04 D0 */	addi r4, r27, 0x4d0
 /* 80C950D4  4B 5D A1 08 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80C950D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C950DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C950D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C950DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C950E0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C950E4  38 9B 08 08 */	addi r4, r27, 0x808
 /* 80C950E8  4B 5C FA C0 */	b Set__4cCcSFP8cCcD_Obj

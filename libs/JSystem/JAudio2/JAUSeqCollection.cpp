@@ -118,12 +118,12 @@ asm void JAUSeqCollection::getSeqDataRegion(JAISeqDataRegion* param_0) {
 /* ############################################################################################## */
 /* 803C9B38-803C9B50 0018+00 s=2 e=0 z=0  None .data      __vt__27JAUSeqDataMgr_SeqCollection                          */
 SECTION_DATA static void* __vt__27JAUSeqDataMgr_SeqCollection[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__27JAUSeqDataMgr_SeqCollectionFv,
-	/* 3    */ (void*)getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData,
-	/* 4    */ (void*)releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv,
-	/* 5    */ (void*)setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__27JAUSeqDataMgr_SeqCollectionFv,
+	(void*)getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData,
+	(void*)releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv,
+	(void*)setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser,
 };
 
 /* 802A677C-802A67D0 0054+00 s=0 e=1 z=0  None .text      __ct__27JAUSeqDataMgr_SeqCollectionFv                        */

@@ -20,11 +20,11 @@ lbl_8054D294:
 /* 8054D2B0  4B DF 92 00 */	b PSMTXCopy
 /* 8054D2B4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8054D2B8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8054D2BC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8054D2BC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8054D2C0  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8054D2C4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8054D2C4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8054D2C8  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 8054D2CC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8054D2CC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8054D2D0  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8054D2D4  48 00 00 1C */	b lbl_8054D2F0
 lbl_8054D2D8:
@@ -39,9 +39,9 @@ lbl_8054D2F0:
 /* 8054D2F4  41 80 00 68 */	blt lbl_8054D35C
 /* 8054D2F8  2C 1E 00 02 */	cmpwi r30, 2
 /* 8054D2FC  40 80 00 60 */	bge lbl_8054D35C
-/* 8054D300  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8054D304  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8054D308  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8054D300  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8054D304  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8054D308  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8054D30C  38 80 00 00 */	li r4, 0
 /* 8054D310  90 81 00 08 */	stw r4, 8(r1)
 /* 8054D314  38 00 FF FF */	li r0, -1

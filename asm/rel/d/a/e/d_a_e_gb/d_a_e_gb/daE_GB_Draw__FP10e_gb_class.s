@@ -101,8 +101,8 @@ lbl_806C1FC0:
 /* 806C2018  90 7D 06 94 */	stw r3, 0x694(r29)
 /* 806C201C  3B 20 00 00 */	li r25, 0
 /* 806C2020  3B C0 00 00 */	li r30, 0
-/* 806C2024  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806C2028  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806C2024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806C2028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806C202C  3B 63 61 C0 */	addi r27, r3, 0x61c0
 lbl_806C2030:
 /* 806C2030  38 1E 08 28 */	addi r0, r30, 0x828

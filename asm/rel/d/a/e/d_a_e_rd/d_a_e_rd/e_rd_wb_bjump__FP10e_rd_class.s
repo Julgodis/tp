@@ -15,17 +15,17 @@ lbl_8050A908:
 /* 8050A93C  4B B0 EE BC */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 8050A940  7C 7D 1B 79 */	or. r29, r3, r3
 /* 8050A944  41 82 01 C0 */	beq lbl_8050AB04
-/* 8050A948  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050A94C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8050A950  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8050A954  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8050A948  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050A94C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8050A950  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8050A954  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8050A958  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8050A95C  7D 89 03 A6 */	mtctr r12
 /* 8050A960  4E 80 04 21 */	bctrl 
 /* 8050A964  28 03 00 00 */	cmplwi r3, 0
 /* 8050A968  41 82 00 58 */	beq lbl_8050A9C0
-/* 8050A96C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050A970  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050A96C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050A970  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050A974  3B 83 56 B8 */	addi r28, r3, 0x56b8
 /* 8050A978  3B 60 00 01 */	li r27, 1
 /* 8050A97C  7F 83 E3 78 */	mr r3, r28

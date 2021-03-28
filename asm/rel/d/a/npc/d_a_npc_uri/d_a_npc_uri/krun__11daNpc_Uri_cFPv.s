@@ -8,7 +8,7 @@ lbl_80B29EA0:
 /* 80B29EB8  3C 60 80 B3 */	lis r3, m__17daNpc_Uri_Param_c@ha
 /* 80B29EBC  3B E3 CE 14 */	addi r31, r3, m__17daNpc_Uri_Param_c@l
 /* 80B29EC0  38 7F 00 00 */	addi r3, r31, 0
-/* 80B29EC4  A8 03 00 8C */	lha r0, 0x8c(r3)	/* effective address: 80B2CEA0 */
+/* 80B29EC4  A8 03 00 8C */	lha r0, 0x8c(r3)
 /* 80B29EC8  7C 00 0E 70 */	srawi r0, r0, 1
 /* 80B29ECC  7F C0 01 94 */	addze r30, r0
 /* 80B29ED0  A0 1D 0E 22 */	lhz r0, 0xe22(r29)
@@ -163,12 +163,12 @@ lbl_80B2A104:
 /* 80B2A104  7F A3 EB 78 */	mr r3, r29
 /* 80B2A108  3C 80 80 B3 */	lis r4, l_motionAnmData@ha
 /* 80B2A10C  38 A4 D3 38 */	addi r5, r4, l_motionAnmData@l
-/* 80B2A110  80 05 01 AC */	lwz r0, 0x1ac(r5)	/* effective address: 80B2D4E4 */
+/* 80B2A110  80 05 01 AC */	lwz r0, 0x1ac(r5)
 /* 80B2A114  54 00 10 3A */	slwi r0, r0, 2
 /* 80B2A118  3C 80 80 B3 */	lis r4, l_resNameList@ha
 /* 80B2A11C  38 84 D0 D0 */	addi r4, r4, l_resNameList@l
 /* 80B2A120  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80B2A124  80 A5 01 A4 */	lwz r5, 0x1a4(r5)	/* effective address: 80B2D4DC */
+/* 80B2A124  80 A5 01 A4 */	lwz r5, 0x1a4(r5)
 /* 80B2A128  4B 61 DF 30 */	b getTrnsfrmAnmP__8daNpcT_cFPCci
 /* 80B2A12C  80 9D 05 78 */	lwz r4, 0x578(r29)
 /* 80B2A130  80 04 00 08 */	lwz r0, 8(r4)

@@ -4,13 +4,13 @@ lbl_8057E660:
 /* 8057E668  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8057E66C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057E670  7C 7F 1B 78 */	mr r31, r3
-/* 8057E674  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057E678  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8057E67C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8057E674  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057E678  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8057E67C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8057E680  C0 3F 05 7C */	lfs f1, 0x57c(r31)
 /* 8057E684  C0 5F 05 84 */	lfs f2, 0x584(r31)
 /* 8057E688  38 80 00 00 */	li r4, 0
-/* 8057E68C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8057E68C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8057E690  81 8C 01 24 */	lwz r12, 0x124(r12)
 /* 8057E694  7D 89 03 A6 */	mtctr r12
 /* 8057E698  4E 80 04 21 */	bctrl 

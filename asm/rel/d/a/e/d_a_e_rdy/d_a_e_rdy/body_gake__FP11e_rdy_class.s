@@ -14,7 +14,7 @@ lbl_807710DC:
 /* 8077110C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80771110  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80771114  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80771118  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80771118  80 84 00 00 */	lwz r4, 0(r4)
 /* 8077111C  4B BD 53 94 */	b PSMTXCopy
 /* 80771120  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80771124  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -45,8 +45,8 @@ lbl_807710DC:
 /* 80771188  7F 43 D3 78 */	mr r3, r26
 /* 8077118C  38 81 00 08 */	addi r4, r1, 8
 /* 80771190  4B AF 6B 98 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80771194  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80771198  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80771194  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80771198  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077119C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807711A0  7F 44 D3 78 */	mr r4, r26
 /* 807711A4  4B 90 32 FC */	b GroundCross__4cBgSFP11cBgS_GndChk

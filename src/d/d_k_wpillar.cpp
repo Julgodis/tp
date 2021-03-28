@@ -79,7 +79,7 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
@@ -88,7 +88,7 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -312,25 +312,25 @@ asm static void dkWpillar_Draw(dkWpillar_c* param_0) {
 /* ############################################################################################## */
 /* 803C3470-803C3484 0014+00 s=1 e=0 z=0  None .data      l_dkWpillar_Method                                           */
 SECTION_DATA static void* l_dkWpillar_Method[5] = {
-	/* 0    */ (void*)dkWpillar_Create__FP12kankyo_class,
-	/* 1    */ (void*)dkWpillar_Delete__FP11dkWpillar_c,
-	/* 2    */ (void*)dkWpillar_Execute__FP11dkWpillar_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)dkWpillar_Draw__FP11dkWpillar_c,
+	(void*)dkWpillar_Create__FP12kankyo_class,
+	(void*)dkWpillar_Delete__FP11dkWpillar_c,
+	(void*)dkWpillar_Execute__FP11dkWpillar_c,
+	(void*)NULL,
+	(void*)dkWpillar_Draw__FP11dkWpillar_c,
 };
 
-/* 803C3484-803C34B0 0028+04 s=0 e=0 z=1  None .data      g_profile_WPILLAR                                            */
+/* 803C3484-803C34B0 0028+04 s=0 e=0 z=0  None .data      g_profile_WPILLAR                                            */
 SECTION_DATA void* g_profile_WPILLAR[10 + 1 /* padding */] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03020000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000004D4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopKy_Method,
-	/* 8    */ (void*)0x02F70000,
-	/* 9    */ (void*)&l_dkWpillar_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x0009FFFD,
+	(void*)0x03020000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000004D4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x02F70000,
+	(void*)&l_dkWpillar_Method,
 	/* padding */
 	NULL,
 };

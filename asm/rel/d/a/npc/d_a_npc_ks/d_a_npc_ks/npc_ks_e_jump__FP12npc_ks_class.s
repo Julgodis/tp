@@ -25,7 +25,7 @@ lbl_80A4F278:
 /* 80A4F280  C0 3B 05 C4 */	lfs f1, 0x5c4(r27)
 /* 80A4F284  3C 80 80 A6 */	lis r4, l_HIO@ha
 /* 80A4F288  38 84 FE B8 */	addi r4, r4, l_HIO@l
-/* 80A4F28C  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80A5FEC4 */
+/* 80A4F28C  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80A4F290  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80A4F294  40 81 00 2C */	ble lbl_80A4F2C0
 /* 80A4F298  38 80 00 1C */	li r4, 0x1c
@@ -69,7 +69,7 @@ lbl_80A4F310:
 lbl_80A4F324:
 /* 80A4F324  3C 60 80 A6 */	lis r3, l_HIO@ha
 /* 80A4F328  38 63 FE B8 */	addi r3, r3, l_HIO@l
-/* 80A4F32C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80A5FECC */
+/* 80A4F32C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80A4F330  D0 1B 05 2C */	stfs f0, 0x52c(r27)
 /* 80A4F334  38 7B 04 DE */	addi r3, r27, 0x4de
 /* 80A4F338  A8 9B 05 C8 */	lha r4, 0x5c8(r27)
@@ -83,7 +83,7 @@ lbl_80A4F324:
 /* 80A4F358  C0 5B 05 C4 */	lfs f2, 0x5c4(r27)
 /* 80A4F35C  3C 60 80 A6 */	lis r3, l_HIO@ha
 /* 80A4F360  38 63 FE B8 */	addi r3, r3, l_HIO@l
-/* 80A4F364  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80A5FEC4 */
+/* 80A4F364  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80A4F368  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80A4F36C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80A4F370  FC 02 00 40 */	fcmpo cr0, f2, f0

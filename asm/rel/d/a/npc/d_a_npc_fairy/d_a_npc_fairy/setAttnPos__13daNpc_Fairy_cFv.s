@@ -9,9 +9,9 @@ lbl_809B3C64:
 /* 809B3C80  7C 7E 1B 78 */	mr r30, r3
 /* 809B3C84  3C 60 80 9C */	lis r3, m__19daNpc_Fairy_Param_c@ha
 /* 809B3C88  3B E3 92 E4 */	addi r31, r3, m__19daNpc_Fairy_Param_c@l
-/* 809B3C8C  C0 3F 00 E0 */	lfs f1, 0xe0(r31)	/* effective address: 809B93C4 */
+/* 809B3C8C  C0 3F 00 E0 */	lfs f1, 0xe0(r31)
 /* 809B3C90  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 809B3C94  C0 1F 01 48 */	lfs f0, 0x148(r31)	/* effective address: 809B942C */
+/* 809B3C94  C0 1F 01 48 */	lfs f0, 0x148(r31)
 /* 809B3C98  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 809B3C9C  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 809B3CA0  38 7E 0D 08 */	addi r3, r30, 0xd08

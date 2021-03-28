@@ -22,9 +22,9 @@ lbl_80C0BD90:
 /* 80C0BDE0  4B 40 0F BC */	b transM__14mDoMtx_stack_cFfff
 /* 80C0BDE4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C0BDE8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C0BDEC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C0BDF0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80C0BDF4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80C0BDEC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C0BDF0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C0BDF4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80C0BDF8  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80C0BDFC  38 A1 00 08 */	addi r5, r1, 8
 /* 80C0BE00  4B 73 AF 6C */	b PSMTXMultVec

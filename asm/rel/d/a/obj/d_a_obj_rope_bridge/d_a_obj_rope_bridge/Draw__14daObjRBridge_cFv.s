@@ -19,21 +19,21 @@ lbl_805975F8:
 /* 8059763C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80597640  38 BD 01 0C */	addi r5, r29, 0x10c
 /* 80597644  4B C0 D7 5C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80597648  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059764C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80597650  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80597648  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059764C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80597650  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80597654  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80597658  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 8059765C  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80597660  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80597664  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
+/* 8059765C  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80597660  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80597664  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80597668  80 7D 05 B0 */	lwz r3, 0x5b0(r29)
 /* 8059766C  4B A7 66 58 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80597670  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80597674  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80597678  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80597670  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80597674  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80597678  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8059767C  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80597680  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80597680  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80597684  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80597688  80 1D 05 B4 */	lwz r0, 0x5b4(r29)
 /* 8059768C  28 00 00 00 */	cmplwi r0, 0
@@ -68,8 +68,8 @@ lbl_805976F0:
 /* 805976F8  40 82 00 BC */	bne lbl_805977B4
 /* 805976FC  3B C0 00 00 */	li r30, 0
 /* 80597700  3B 80 00 00 */	li r28, 0
-/* 80597704  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80597708  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80597704  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80597708  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8059770C  3B 43 5F 64 */	addi r26, r3, 0x5f64
 lbl_80597710:
 /* 80597710  3B 7C 0A FC */	addi r27, r28, 0xafc

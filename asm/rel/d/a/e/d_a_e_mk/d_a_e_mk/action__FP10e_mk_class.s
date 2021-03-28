@@ -5,9 +5,9 @@ lbl_8071A538:
 /* 8071A544  39 61 00 30 */	addi r11, r1, 0x30
 /* 8071A548  4B C4 7C 90 */	b _savegpr_28
 /* 8071A54C  7C 7E 1B 78 */	mr r30, r3
-/* 8071A550  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8071A554  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8071A558  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8071A550  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8071A554  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8071A558  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8071A55C  4B 90 04 08 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8071A560  D0 3E 06 B8 */	stfs f1, 0x6b8(r30)
 /* 8071A564  7F C3 F3 78 */	mr r3, r30
@@ -107,8 +107,8 @@ lbl_8071A668:
 /* 8071A6AC  2C 00 00 01 */	cmpwi r0, 1
 /* 8071A6B0  40 82 00 2C */	bne lbl_8071A6DC
 /* 8071A6B4  38 7E 07 60 */	addi r3, r30, 0x760
-/* 8071A6B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8071A6BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8071A6B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8071A6BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8071A6C0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8071A6C4  4B 95 C3 E8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8071A6C8  48 00 00 14 */	b lbl_8071A6DC
@@ -131,7 +131,7 @@ lbl_8071A6DC:
 /* 8071A704  38 63 05 70 */	addi r3, r3, 0x570
 /* 8071A708  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8071A70C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8071A710  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8071A710  80 84 00 00 */	lwz r4, 0(r4)
 /* 8071A714  4B C2 BD 9C */	b PSMTXCopy
 /* 8071A718  3C 60 80 72 */	lis r3, lit_3780@ha
 /* 8071A71C  C0 03 C5 50 */	lfs f0, lit_3780@l(r3)
@@ -155,7 +155,7 @@ lbl_8071A6DC:
 /* 8071A764  38 63 06 30 */	addi r3, r3, 0x630
 /* 8071A768  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8071A76C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8071A770  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8071A770  80 84 00 00 */	lwz r4, 0(r4)
 /* 8071A774  4B C2 BD 3C */	b PSMTXCopy
 /* 8071A778  38 61 00 14 */	addi r3, r1, 0x14
 /* 8071A77C  38 81 00 08 */	addi r4, r1, 8

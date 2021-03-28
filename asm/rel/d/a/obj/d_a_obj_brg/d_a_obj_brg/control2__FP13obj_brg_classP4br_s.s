@@ -22,15 +22,15 @@ lbl_80BBDA64:
 /* 80BBDAB4  38 03 FF FE */	addi r0, r3, -2
 /* 80BBDAB8  1C 00 07 0C */	mulli r0, r0, 0x70c
 /* 80BBDABC  7F 44 02 14 */	add r26, r4, r0
-/* 80BBDAC0  C3 C5 00 00 */	lfs f30, 0(r5)	/* effective address: 80BC2148 */
+/* 80BBDAC0  C3 C5 00 00 */	lfs f30, 0(r5)
 /* 80BBDAC4  D3 C1 00 14 */	stfs f30, 0x14(r1)
 /* 80BBDAC8  D3 C1 00 18 */	stfs f30, 0x18(r1)
-/* 80BBDACC  C0 25 00 2C */	lfs f1, 0x2c(r5)	/* effective address: 80BC2174 */
+/* 80BBDACC  C0 25 00 2C */	lfs f1, 0x2c(r5)
 /* 80BBDAD0  C0 1E AE DC */	lfs f0, -0x5124(r30)
 /* 80BBDAD4  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80BBDAD8  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80BBDADC  3B A0 00 00 */	li r29, 0
-/* 80BBDAE0  C3 E5 00 58 */	lfs f31, 0x58(r5)	/* effective address: 80BC21A0 */
+/* 80BBDAE0  C3 E5 00 58 */	lfs f31, 0x58(r5)
 /* 80BBDAE4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80BBDAE8  3B E3 07 68 */	addi r31, r3, calc_mtx@l
 /* 80BBDAEC  48 00 00 E8 */	b lbl_80BBDBD4

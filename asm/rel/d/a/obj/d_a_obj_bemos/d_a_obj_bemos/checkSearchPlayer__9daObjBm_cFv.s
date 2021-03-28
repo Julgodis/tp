@@ -9,9 +9,9 @@ lbl_80BB0104:
 /* 80BB0120  7C 7F 1B 78 */	mr r31, r3
 /* 80BB0124  3C 80 80 BB */	lis r4, l_eye_offset@ha
 /* 80BB0128  3B A4 37 B8 */	addi r29, r4, l_eye_offset@l
-/* 80BB012C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BB0130  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80BB0134  83 9E 5D AC */	lwz r28, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80BB012C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BB0130  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80BB0134  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 80BB0138  48 00 01 29 */	bl getSearchDistance__9daObjBm_cFv
 /* 80BB013C  FF E0 08 90 */	fmr f31, f1
 /* 80BB0140  3B 60 FF FF */	li r27, -1

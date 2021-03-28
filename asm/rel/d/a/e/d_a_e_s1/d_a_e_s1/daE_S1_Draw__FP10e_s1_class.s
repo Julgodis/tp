@@ -26,14 +26,14 @@ lbl_8077ACD8:
 /* 8077AD00  80 9C 00 04 */	lwz r4, 4(r28)
 /* 8077AD04  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 8077AD08  4B A2 A0 98 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 8077AD0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077AD10  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 8077AD14  80 04 5F 88 */	lwz r0, 0x5f88(r4)	/* effective address: 8040C148 */
+/* 8077AD0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077AD10  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8077AD14  80 04 5F 88 */	lwz r0, 0x5f88(r4)
 /* 8077AD18  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8077AD1C  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 8077AD20  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 8077AD24  80 04 5F 8C */	lwz r0, 0x5f8c(r4)	/* effective address: 8040C14C */
-/* 8077AD28  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 8077AD20  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 8077AD24  80 04 5F 8C */	lwz r0, 0x5f8c(r4)
+/* 8077AD28  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8077AD2C  80 7E 05 D4 */	lwz r3, 0x5d4(r30)
 /* 8077AD30  4B 89 64 90 */	b entryDL__16mDoExt_McaMorfSOFv
 /* 8077AD34  88 1E 06 9A */	lbz r0, 0x69a(r30)
@@ -81,19 +81,19 @@ lbl_8077AD9C:
 /* 8077ADD8  7D 89 03 A6 */	mtctr r12
 /* 8077ADDC  4E 80 04 21 */	bctrl 
 /* 8077ADE0  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 8077ADE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077ADE8  38 03 61 C0 */	addi r0, r3, struct_804061C0+0x0@l
+/* 8077ADE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077ADE8  38 03 61 C0 */	addi r0, r3, g_dComIfG_gameInfo@l
 /* 8077ADEC  7C 60 22 14 */	add r3, r0, r4
 /* 8077ADF0  3C 63 00 01 */	addis r3, r3, 1
 /* 8077ADF4  38 63 61 54 */	addi r3, r3, 0x6154
 /* 8077ADF8  38 63 5F 64 */	addi r3, r3, 0x5f64
 /* 8077ADFC  38 9E 30 1C */	addi r4, r30, 0x301c
 /* 8077AE00  4B 89 99 38 */	b setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c
-/* 8077AE04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077AE08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8077AE0C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8077AE04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077AE08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8077AE0C  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8077AE10  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 8077AE14  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8077AE14  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 8077AE18  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8077AE1C  38 60 00 01 */	li r3, 1
 lbl_8077AE20:

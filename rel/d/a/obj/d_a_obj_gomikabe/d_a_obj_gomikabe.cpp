@@ -147,9 +147,6 @@ struct dBgS_GndChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -211,18 +208,18 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjGOMIKABE_Create(fopAc_ac_c*); // 2
-static void daObjGOMIKABE_Delete(daObjGOMIKABE_c*); // 2
-static void daObjGOMIKABE_Draw(daObjGOMIKABE_c*); // 2
+void daObjGOMIKABE_Create(fopAc_ac_c*); // 2
+void daObjGOMIKABE_Delete(daObjGOMIKABE_c*); // 2
+void daObjGOMIKABE_Draw(daObjGOMIKABE_c*); // 2
 static void daObjGOMIKABE_Execute(daObjGOMIKABE_c*); // 2
-static bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c*); // 2
+bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c*); // 2
 
 extern "C" void __ct__19daObjGOMIKABE_HIO_cFv(); // 1
 extern "C" void initCcCylinder__15daObjGOMIKABE_cFv(); // 1
 extern "C" void SetCcCyl__15daObjGOMIKABE_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daObjGOMIKABE_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c(); // 1
+extern "C" void daObjGOMIKABE_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c(); // 1
 extern "C" void WaitAction__15daObjGOMIKABE_cFv(); // 1
 extern "C" void BreakChk__15daObjGOMIKABE_cFv(); // 1
 extern "C" void BreakSet__15daObjGOMIKABE_cFv(); // 1
@@ -235,7 +232,7 @@ extern "C" void checkViewArea__15daObjGOMIKABE_cF4cXyz(); // 1
 extern "C" void Action__15daObjGOMIKABE_cFv(); // 1
 extern "C" void setBaseMtx__15daObjGOMIKABE_cFv(); // 1
 extern "C" void setBaseMtx2__15daObjGOMIKABE_cFv(); // 1
-extern "C" static void daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c(); // 1
+extern "C" void daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c(); // 1
 extern "C" static void daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c(); // 1
 extern "C" void CreateHeap__15daObjGOMIKABE_cFv(); // 1
 extern "C" void create__15daObjGOMIKABE_cFv(); // 1
@@ -248,22 +245,22 @@ extern "C" void __ct__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__12dBgS_AcchCirFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static bool daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c(); // 1
+extern "C" bool daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c(); // 1
 extern "C" void Create__15daObjGOMIKABE_cFv(); // 1
 extern "C" void Execute__15daObjGOMIKABE_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjGOMIKABE_cFv(); // 1
 extern "C" void Delete__15daObjGOMIKABE_cFv(); // 1
 extern "C" void __dt__19daObjGOMIKABE_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_gomikabe_cpp(); // 1
-extern "C" static void func_80BFFBF8(); // 1
-extern "C" static void func_80BFFC00(); // 1
+extern "C" void func_80BFFBF8(); // 1
+extern "C" void func_80BFFC00(); // 1
 extern "C" extern u8 const lit_4156[8];
 extern "C" extern u8 const lit_4157[8];
 extern "C" extern u8 const lit_4158[8];
 extern "C" extern u32 const lit_4159;
 extern "C" extern u32 const lit_4160;
-extern "C" extern u8 const lit_4503[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjGOMIKABE_Method[8];
 extern "C" extern void* g_profile_Obj_GOMIKABE[12];
 
 // 
@@ -316,9 +313,6 @@ extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__11dBgS_GndChkFv(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -363,22 +357,15 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
@@ -386,6 +373,104 @@ extern "C" void __register_global_object(); // 1
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80BFFD30-80BFFD34 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)NULL;
+
+/* 80BFFD34-80BFFD54 0020+00 s=0 e=0 z=0  None .data      l_daObjGOMIKABE_Method                                       */
+SECTION_DATA void* l_daObjGOMIKABE_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFD54-80BFFD84 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_GOMIKABE                                       */
+SECTION_DATA void* g_profile_Obj_GOMIKABE[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x013E0000,
+	(void*)NULL,
+	(void*)0x000013C4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02070000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
+};
+
+/* 80BFFD84-80BFFD90 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
+SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFD90-80BFFDB4 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
+SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFDB4-80BFFDC0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFDC0-80BFFDCC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
+SECTION_DATA static void* __vt__8cM3dGSph[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFDCC-80BFFDF4 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjGOMIKABE_c                                      */
+SECTION_DATA static void* __vt__15daObjGOMIKABE_c[10] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFFDF4-80BFFE00 000C+00 s=2 e=0 z=0  None .data      __vt__19daObjGOMIKABE_HIO_c                                  */
+SECTION_DATA static void* __vt__19daObjGOMIKABE_HIO_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80BFE22C-80BFE244 0018+00 s=1 e=0 z=0  None .text      __ct__19daObjGOMIKABE_HIO_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daObjGOMIKABE_HIO_c::daObjGOMIKABE_HIO_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__19daObjGOMIKABE_HIO_cFv.s"
+}
+#pragma pop
+
 
 /* ############################################################################################## */
 /* 80BFFC1C-80BFFC5C 0040+00 s=7 e=0 z=0  None .rodata    ccSphSrc$3769                                                */
@@ -396,6 +481,18 @@ SECTION_RODATA static u8 const data_80BFFC1C[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x43, 0x48, 0x00, 0x00,
 };
 
+/* 80BFE244-80BFE2CC 0088+00 s=1 e=0 z=0  None .text      initCcCylinder__15daObjGOMIKABE_cFv                          */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::initCcCylinder() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/initCcCylinder__15daObjGOMIKABE_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BFFC5C-80BFFC60 0004+00 s=1 e=0 z=0  None .rodata    @3801                                                        */
 SECTION_RODATA static u32 const lit_3801 = 0xC3480000;
 
@@ -411,14 +508,82 @@ SECTION_RODATA static u32 const lit_3803[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80BFFC6C-80BFFC74 0008+00 s=1 e=0 z=0  None .rodata    @3805                                                        */
+/* 80BFFC6C-80BFFC74 0008+00 s=3 e=0 z=0  None .rodata    @3805                                                        */
 SECTION_RODATA static u8 const lit_3805[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
+/* 80BFE2CC-80BFE3FC 0130+00 s=1 e=0 z=0  None .text      SetCcCyl__15daObjGOMIKABE_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::SetCcCyl() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/SetCcCyl__15daObjGOMIKABE_cFv.s"
+}
+#pragma pop
+
+
+/* 80BFE3FC-80BFE438 003C+00 s=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm cXyz::~cXyz() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__4cXyzFv.s"
+}
+#pragma pop
+
+
+/* 80BFE438-80BFE458 0020+00 s=0 e=0 z=0  None .text      daObjGOMIKABE_Create__FP10fopAc_ac_c                         */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_Create(fopAc_ac_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Create__FP10fopAc_ac_c.s"
+}
+#pragma pop
+
+
+/* 80BFE458-80BFE47C 0024+00 s=0 e=0 z=0  None .text      daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_Delete(daObjGOMIKABE_c* param_0) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BFFC74-80BFFC78 0004+00 s=2 e=0 z=0  None .rodata    @3842                                                        */
 SECTION_RODATA static u32 const lit_3842 = 0x43960000;
 
+/* 80BFE47C-80BFE4C4 0048+00 s=1 e=0 z=0  None .text      WaitAction__15daObjGOMIKABE_cFv                              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::WaitAction() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/WaitAction__15daObjGOMIKABE_cFv.s"
+}
+#pragma pop
+
+
+/* 80BFE4C4-80BFE52C 0068+00 s=1 e=0 z=0  None .text      BreakChk__15daObjGOMIKABE_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::BreakChk() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakChk__15daObjGOMIKABE_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BFFC78-80BFFC7C 0004+00 s=1 e=0 z=0  None .rodata    @3977                                                        */
 SECTION_RODATA static u32 const lit_3977 = 0x42480000;
 
@@ -446,12 +611,47 @@ SECTION_RODATA static u32 const lit_3984 = 0x3F800000;
 /* 80BFFC98-80BFFC9C 0004+00 s=1 e=0 z=0  None .rodata    @3985                                                        */
 SECTION_RODATA static u32 const lit_3985 = 0xBF800000;
 
+/* 80BFE52C-80BFEA24 04F8+00 s=1 e=0 z=1  None .text      BreakSet__15daObjGOMIKABE_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::BreakSet() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakSet__15daObjGOMIKABE_cFv.s"
+}
+#pragma pop
+
+
+/* 80BFEA24-80BFEA60 003C+00 s=1 e=0 z=0  None .text      __dt__5csXyzFv                                               */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm csXyz::~csXyz() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__5csXyzFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BFFC9C-80BFFCA0 0004+00 s=1 e=0 z=0  None .rodata    @4011                                                        */
 SECTION_RODATA static u32 const lit_4011 = 0x3F333333;
 
 /* 80BFFCA0-80BFFCA4 0004+00 s=1 e=0 z=0  None .rodata    @4012                                                        */
 SECTION_RODATA static u32 const lit_4012 = 0x3F000000;
 
+/* 80BFEA60-80BFEB90 0130+00 s=1 e=0 z=0  None .text      getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf              */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjGOMIKABE_c::getWaterStream(cXyz& param_0, cXyz& param_1, f32 param_2) {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80BFFCA4-80BFFCAC 0008+00 s=0 e=0 z=0  None .rodata    @4156                                                        */
 SECTION_RODATA u8 const lit_4156[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -476,255 +676,6 @@ SECTION_RODATA u32 const lit_4160 = 0x453B8000;
 /* 80BFFCC4-80BFFCC8 0004+00 s=2 e=0 z=0  None .rodata    @4278                                                        */
 SECTION_RODATA static u32 const lit_4278 = 0x42C80000;
 
-/* 80BFFCC8-80BFFCCC 0004+00 s=1 e=0 z=0  None .rodata    @4308                                                        */
-SECTION_RODATA static u32 const lit_4308 = 0x45DAC000;
-
-/* 80BFFCCC-80BFFCD0 0004+00 s=1 e=0 z=0  None .rodata    @4321                                                        */
-SECTION_RODATA static u32 const lit_4321 = 0x44180000;
-
-/* 80BFFCD0-80BFFCD4 0004+00 s=1 e=0 z=0  None .rodata    @4322                                                        */
-SECTION_RODATA static u32 const lit_4322 = 0x43E00000;
-
-/* 80BFFCD4-80BFFCD8 0004+00 s=1 e=0 z=0  None .rodata    @4498                                                        */
-SECTION_RODATA static u32 const lit_4498 = 0x3D4CCCCD;
-
-/* 80BFFCD8-80BFFCDC 0004+00 s=1 e=0 z=0  None .rodata    @4499                                                        */
-SECTION_RODATA static u32 const lit_4499 = 0x41F00000;
-
-/* 80BFFCDC-80BFFCE0 0004+00 s=2 e=0 z=0  None .rodata    @4500                                                        */
-SECTION_RODATA static u32 const lit_4500 = 0xC47A0000;
-
-/* 80BFFCE0-80BFFCE4 0004+00 s=2 e=0 z=0  None .rodata    @4501                                                        */
-SECTION_RODATA static u32 const lit_4501 = 0xC3FA0000;
-
-/* 80BFFCE4-80BFFCEC 0008+00 s=0 e=0 z=0  None .rodata    @4503                                                        */
-SECTION_RODATA u8 const lit_4503[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80BFFCEC-80BFFCF0 0004+00 s=1 e=0 z=0  None .rodata    @4607                                                        */
-SECTION_RODATA static u32 const lit_4607 = 0x43FA0000;
-
-/* 80BFFCF0-80BFFCF4 0004+00 s=1 e=0 z=0  None .rodata    @4620                                                        */
-SECTION_RODATA static u32 const lit_4620 = 0xC0A00000;
-
-/* 80BFFCF4-80BFFD30 003C+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80BFFCF4 = "GomiKabe";
-SECTION_DEAD char const* const stringBase_80BFFCFD = "M_Gomikabe.bmd";
-SECTION_DEAD char const* const stringBase_80BFFD0C = "M_Gomikabe_Hahen.bmd";
-SECTION_DEAD char const* const stringBase_80BFFD21 = "M_Gomikabe.dzb";
-#pragma pop
-
-/* 80BFFD30-80BFFD34 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80BFFD34-80BFFD54 0020+00 s=1 e=0 z=0  None .data      l_daObjGOMIKABE_Method                                       */
-SECTION_DATA static void* l_daObjGOMIKABE_Method[8] = {
-	/* 0    */ (void*)daObjGOMIKABE_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c,
-	/* 2    */ (void*)daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c,
-	/* 3    */ (void*)daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c,
-	/* 4    */ (void*)daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80BFFD54-80BFFD84 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_GOMIKABE                                       */
-SECTION_DATA void* g_profile_Obj_GOMIKABE[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x013E0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000013C4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02070000,
-	/* 9    */ (void*)&l_daObjGOMIKABE_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80BFFD84-80BFFD90 000C+00 s=1 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
-SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_AcchCirFv,
-};
-
-/* 80BFFD90-80BFFDB4 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
-SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BFFC00,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BFFBF8,
-};
-
-/* 80BFFDB4-80BFFDC0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80BFFDC0-80BFFDCC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
-SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
-};
-
-/* 80BFFDCC-80BFFDF4 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjGOMIKABE_c                                      */
-SECTION_DATA static void* __vt__15daObjGOMIKABE_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjGOMIKABE_cFv,
-	/* 3    */ (void*)Create__15daObjGOMIKABE_cFv,
-	/* 4    */ (void*)Execute__15daObjGOMIKABE_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjGOMIKABE_cFv,
-	/* 6    */ (void*)Delete__15daObjGOMIKABE_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-};
-
-/* 80BFFDF4-80BFFE00 000C+00 s=2 e=0 z=0  None .data      __vt__19daObjGOMIKABE_HIO_c                                  */
-SECTION_DATA static void* __vt__19daObjGOMIKABE_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19daObjGOMIKABE_HIO_cFv,
-};
-
-/* 80BFE22C-80BFE244 0018+00 s=1 e=0 z=0  None .text      __ct__19daObjGOMIKABE_HIO_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daObjGOMIKABE_HIO_c::daObjGOMIKABE_HIO_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__ct__19daObjGOMIKABE_HIO_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFE244-80BFE2CC 0088+00 s=1 e=0 z=0  None .text      initCcCylinder__15daObjGOMIKABE_cFv                          */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::initCcCylinder() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/initCcCylinder__15daObjGOMIKABE_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFE2CC-80BFE3FC 0130+00 s=1 e=0 z=0  None .text      SetCcCyl__15daObjGOMIKABE_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::SetCcCyl() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/SetCcCyl__15daObjGOMIKABE_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFE3FC-80BFE438 003C+00 s=1 e=0 z=0  None .text      __dt__4cXyzFv                                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm cXyz::~cXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__4cXyzFv.s"
-}
-#pragma pop
-
-
-/* 80BFE438-80BFE458 0020+00 s=1 e=0 z=0  None .text      daObjGOMIKABE_Create__FP10fopAc_ac_c                         */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjGOMIKABE_Create(fopAc_ac_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Create__FP10fopAc_ac_c.s"
-}
-#pragma pop
-
-
-/* 80BFE458-80BFE47C 0024+00 s=1 e=0 z=0  None .text      daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm static void daObjGOMIKABE_Delete(daObjGOMIKABE_c* param_0) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Delete__FP15daObjGOMIKABE_c.s"
-}
-#pragma pop
-
-
-/* 80BFE47C-80BFE4C4 0048+00 s=1 e=0 z=0  None .text      WaitAction__15daObjGOMIKABE_cFv                              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::WaitAction() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/WaitAction__15daObjGOMIKABE_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFE4C4-80BFE52C 0068+00 s=1 e=0 z=0  None .text      BreakChk__15daObjGOMIKABE_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::BreakChk() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakChk__15daObjGOMIKABE_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFE52C-80BFEA24 04F8+00 s=1 e=0 z=1  None .text      BreakSet__15daObjGOMIKABE_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::BreakSet() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/BreakSet__15daObjGOMIKABE_cFv.s"
-}
-#pragma pop
-
-
-/* 80BFEA24-80BFEA60 003C+00 s=1 e=0 z=0  None .text      __dt__5csXyzFv                                               */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm csXyz::~csXyz() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/__dt__5csXyzFv.s"
-}
-#pragma pop
-
-
-/* 80BFEA60-80BFEB90 0130+00 s=1 e=0 z=0  None .text      getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf              */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjGOMIKABE_c::getWaterStream(cXyz& param_0, cXyz& param_1, f32 param_2) {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/getWaterStream__15daObjGOMIKABE_cFR4cXyzR4cXyzf.s"
-}
-#pragma pop
-
-
 /* 80BFEB90-80BFED54 01C4+00 s=1 e=0 z=0  None .text      SpeedSet__15daObjGOMIKABE_cFv                                */
 #pragma push
 #pragma optimization_level 0
@@ -747,6 +698,10 @@ asm void daObjGOMIKABE_c::BreakAction() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80BFFCC8-80BFFCCC 0004+00 s=1 e=0 z=0  None .rodata    @4308                                                        */
+SECTION_RODATA static u32 const lit_4308 = 0x45DAC000;
+
 /* 80BFED74-80BFEE24 00B0+00 s=1 e=0 z=0  None .text      CheckCull__15daObjGOMIKABE_cFv                               */
 #pragma push
 #pragma optimization_level 0
@@ -757,6 +712,13 @@ asm void daObjGOMIKABE_c::CheckCull() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80BFFCCC-80BFFCD0 0004+00 s=1 e=0 z=0  None .rodata    @4321                                                        */
+SECTION_RODATA static u32 const lit_4321 = 0x44180000;
+
+/* 80BFFCD0-80BFFCD4 0004+00 s=1 e=0 z=0  None .rodata    @4322                                                        */
+SECTION_RODATA static u32 const lit_4322 = 0x43E00000;
 
 /* 80BFEE24-80BFEEA8 0084+00 s=1 e=0 z=0  None .text      checkViewArea__15daObjGOMIKABE_cF4cXyz                       */
 #pragma push
@@ -802,18 +764,18 @@ asm void daObjGOMIKABE_c::setBaseMtx2() {
 #pragma pop
 
 
-/* 80BFF018-80BFF044 002C+00 s=1 e=0 z=0  None .text      daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c                      */
+/* 80BFF018-80BFF044 002C+00 s=0 e=0 z=0  None .text      daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjGOMIKABE_Draw(daObjGOMIKABE_c* param_0) {
+asm void daObjGOMIKABE_Draw(daObjGOMIKABE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/daObjGOMIKABE_Draw__FP15daObjGOMIKABE_c.s"
 }
 #pragma pop
 
 
-/* 80BFF044-80BFF064 0020+00 s=2 e=0 z=0  None .text      daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c                   */
+/* 80BFF044-80BFF064 0020+00 s=1 e=0 z=0  None .text      daObjGOMIKABE_Execute__FP15daObjGOMIKABE_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -824,7 +786,41 @@ asm static void daObjGOMIKABE_Execute(daObjGOMIKABE_c* param_0) {
 #pragma pop
 
 
-/* 80BFF064-80BFF164 0100+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjGOMIKABE_cFv                              */
+/* ############################################################################################## */
+/* 80BFFCD4-80BFFCD8 0004+00 s=1 e=0 z=0  None .rodata    @4498                                                        */
+SECTION_RODATA static u32 const lit_4498 = 0x3D4CCCCD;
+
+/* 80BFFCD8-80BFFCDC 0004+00 s=1 e=0 z=0  None .rodata    @4499                                                        */
+SECTION_RODATA static u32 const lit_4499 = 0x41F00000;
+
+/* 80BFFCDC-80BFFCE0 0004+00 s=2 e=0 z=0  None .rodata    @4500                                                        */
+SECTION_RODATA static u32 const lit_4500 = 0xC47A0000;
+
+/* 80BFFCE0-80BFFCE4 0004+00 s=2 e=0 z=0  None .rodata    @4501                                                        */
+SECTION_RODATA static u32 const lit_4501 = 0xC3FA0000;
+
+/* 80BFFCE4-80BFFCEC 0008+00 s=1 e=0 z=0  None .rodata    @4503                                                        */
+SECTION_RODATA static u8 const lit_4503[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80BFFCEC-80BFFCF0 0004+00 s=1 e=0 z=0  None .rodata    @4607                                                        */
+SECTION_RODATA static u32 const lit_4607 = 0x43FA0000;
+
+/* 80BFFCF0-80BFFCF4 0004+00 s=1 e=0 z=0  None .rodata    @4620                                                        */
+SECTION_RODATA static u32 const lit_4620 = 0xC0A00000;
+
+/* 80BFFCF4-80BFFD30 003C+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80BFFCF4 = "GomiKabe";
+SECTION_DEAD char const* const stringBase_80BFFCFD = "M_Gomikabe.bmd";
+SECTION_DEAD char const* const stringBase_80BFFD0C = "M_Gomikabe_Hahen.bmd";
+SECTION_DEAD char const* const stringBase_80BFFD21 = "M_Gomikabe.dzb";
+#pragma pop
+
+/* 80BFF064-80BFF164 0100+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjGOMIKABE_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -878,7 +874,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80BFF704-80BFF74C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BFF704-80BFF74C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -889,7 +885,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BFF74C-80BFF794 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BFF74C-80BFF794 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -900,7 +896,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BFF794-80BFF804 0070+00 s=4 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BFF794-80BFF804 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -922,7 +918,7 @@ asm dBgS_ObjAcch::dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BFF858-80BFF8C8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80BFF858-80BFF8C8 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -945,13 +941,13 @@ cXyz::cXyz() {
 }
 
 
-/* 80BFF8D0-80BFF8D8 0008+00 s=1 e=0 z=0  None .text      daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c                  */
-static bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c* param_0) {
+/* 80BFF8D0-80BFF8D8 0008+00 s=0 e=0 z=0  None .text      daObjGOMIKABE_IsDelete__FP15daObjGOMIKABE_c                  */
+bool daObjGOMIKABE_IsDelete(daObjGOMIKABE_c* param_0) {
 	return true;
 }
 
 
-/* 80BFF8D8-80BFF938 0060+00 s=1 e=0 z=0  None .text      Create__15daObjGOMIKABE_cFv                                  */
+/* 80BFF8D8-80BFF938 0060+00 s=0 e=0 z=0  None .text      Create__15daObjGOMIKABE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -962,7 +958,7 @@ asm void daObjGOMIKABE_c::Create() {
 #pragma pop
 
 
-/* 80BFF938-80BFFA00 00C8+00 s=1 e=0 z=0  None .text      Execute__15daObjGOMIKABE_cFPPA3_A4_f                         */
+/* 80BFF938-80BFFA00 00C8+00 s=0 e=0 z=0  None .text      Execute__15daObjGOMIKABE_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -973,7 +969,7 @@ asm void daObjGOMIKABE_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BFFA00-80BFFB1C 011C+00 s=1 e=0 z=0  None .text      Draw__15daObjGOMIKABE_cFv                                    */
+/* 80BFFA00-80BFFB1C 011C+00 s=0 e=0 z=0  None .text      Draw__15daObjGOMIKABE_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -984,7 +980,7 @@ asm void daObjGOMIKABE_c::Draw() {
 #pragma pop
 
 
-/* 80BFFB1C-80BFFB74 0058+00 s=1 e=0 z=0  None .text      Delete__15daObjGOMIKABE_cFv                                  */
+/* 80BFFB1C-80BFFB74 0058+00 s=0 e=0 z=0  None .text      Delete__15daObjGOMIKABE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -995,7 +991,7 @@ asm void daObjGOMIKABE_c::Delete() {
 #pragma pop
 
 
-/* 80BFFB74-80BFFBBC 0048+00 s=2 e=0 z=0  None .text      __dt__19daObjGOMIKABE_HIO_cFv                                */
+/* 80BFFB74-80BFFBBC 0048+00 s=1 e=0 z=0  None .text      __dt__19daObjGOMIKABE_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1006,7 +1002,7 @@ asm daObjGOMIKABE_HIO_c::~daObjGOMIKABE_HIO_c() {
 #pragma pop
 
 
-/* 80BFFBBC-80BFFBF8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_gomikabe_cpp                                 */
+/* 80BFFBBC-80BFFBF8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_gomikabe_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1017,22 +1013,22 @@ extern "C" asm void __sinit_d_a_obj_gomikabe_cpp() {
 #pragma pop
 
 
-/* 80BFFBF8-80BFFC00 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BFFBF8-80BFFC00 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BFFBF8() {
+extern "C" asm void func_80BFFBF8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFFBF8.s"
 }
 #pragma pop
 
 
-/* 80BFFC00-80BFFC08 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BFFC00-80BFFC08 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BFFC00() {
+extern "C" asm void func_80BFFC00() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_gomikabe/d_a_obj_gomikabe/func_80BFFC00.s"
 }

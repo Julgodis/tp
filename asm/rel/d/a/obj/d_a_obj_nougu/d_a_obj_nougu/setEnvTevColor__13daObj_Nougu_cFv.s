@@ -5,8 +5,8 @@ lbl_80CA4708:
 /* 80CA4714  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CA4718  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CA471C  7C 7E 1B 78 */	mr r30, r3
-/* 80CA4720  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA4724  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA4720  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA4724  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA4728  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80CA472C  7F E3 FB 78 */	mr r3, r31
 /* 80CA4730  38 9E 07 E0 */	addi r4, r30, 0x7e0

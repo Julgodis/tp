@@ -7,11 +7,11 @@ lbl_80A1B920:
 /* 80A1B934  7C 7B 1B 78 */	mr r27, r3
 /* 80A1B938  3C 80 80 A2 */	lis r4, lit_3908@ha
 /* 80A1B93C  3B E4 10 80 */	addi r31, r4, lit_3908@l
-/* 80A1B940  80 9F 00 30 */	lwz r4, 0x30(r31)	/* effective address: 80A210B0 */
-/* 80A1B944  80 1F 00 34 */	lwz r0, 0x34(r31)	/* effective address: 80A210B4 */
+/* 80A1B940  80 9F 00 30 */	lwz r4, 0x30(r31)
+/* 80A1B944  80 1F 00 34 */	lwz r0, 0x34(r31)
 /* 80A1B948  90 81 00 3C */	stw r4, 0x3c(r1)
 /* 80A1B94C  90 01 00 40 */	stw r0, 0x40(r1)
-/* 80A1B950  80 1F 00 38 */	lwz r0, 0x38(r31)	/* effective address: 80A210B8 */
+/* 80A1B950  80 1F 00 38 */	lwz r0, 0x38(r31)
 /* 80A1B954  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80A1B958  4B 73 4D 94 */	b getActorP__18daNpcF_ActorMngr_cFv
 /* 80A1B95C  90 61 00 3C */	stw r3, 0x3c(r1)
@@ -74,7 +74,7 @@ lbl_80A1B9A4:
 /* 80A1BA3C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1BA40  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A1BA44  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A1BA48  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A1BA48  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A1BA4C  38 81 00 10 */	addi r4, r1, 0x10
 /* 80A1BA50  38 A1 00 24 */	addi r5, r1, 0x24
 /* 80A1BA54  38 C0 00 00 */	li r6, 0

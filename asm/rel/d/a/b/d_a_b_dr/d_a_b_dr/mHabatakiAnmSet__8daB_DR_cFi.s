@@ -92,7 +92,7 @@ lbl_805BC344:
 /* 805BC398  38 A0 00 00 */	li r5, 0
 /* 805BC39C  3C C0 80 5C */	lis r6, l_HIO@ha
 /* 805BC3A0  38 C6 79 0C */	addi r6, r6, l_HIO@l
-/* 805BC3A4  C0 26 00 2C */	lfs f1, 0x2c(r6)	/* effective address: 805C7938 */
+/* 805BC3A4  C0 26 00 2C */	lfs f1, 0x2c(r6)
 /* 805BC3A8  4B FF F0 61 */	bl setBck__8daB_DR_cFiUcff
 /* 805BC3AC  48 00 01 B8 */	b lbl_805BC564
 lbl_805BC3B0:

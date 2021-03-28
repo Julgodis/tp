@@ -11,12 +11,12 @@
 // Types:
 // 
 
-struct CSTControl {
-};
-
 struct STControl {
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -118,10 +118,10 @@ struct CPaneMgrAlpha {
 	/* 802557D0 */ void setAlphaRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -259,30 +259,30 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BE7E4-803BE7F0 000C+00 s=1 e=0 z=0  None .data      @3795                                                        */
 SECTION_DATA static void* lit_3795[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__13dMenu_Skill_cFv,
 };
 
 /* 803BE7F0-803BE7FC 000C+00 s=1 e=0 z=0  None .data      @3796                                                        */
 SECTION_DATA static void* lit_3796[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_open_init__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_open_init__13dMenu_Skill_cFv,
 };
 
 /* 803BE7FC-803BE808 000C+00 s=1 e=0 z=0  None .data      @3797                                                        */
 SECTION_DATA static void* lit_3797[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_move_init__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_move_init__13dMenu_Skill_cFv,
 };
 
 /* 803BE808-803BE814 000C+00 s=1 e=0 z=0  None .data      @3798                                                        */
 SECTION_DATA static void* lit_3798[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_close_init__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_close_init__13dMenu_Skill_cFv,
 };
 
 /* 803BE814-803BE844 0030+00 s=3 e=0 z=0  None .data      map_init_process                                             */
@@ -294,30 +294,30 @@ SECTION_DATA static u8 map_init_process[48] = {
 
 /* 803BE844-803BE850 000C+00 s=1 e=0 z=0  None .data      @3799                                                        */
 SECTION_DATA static void* lit_3799[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_move__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_move__13dMenu_Skill_cFv,
 };
 
 /* 803BE850-803BE85C 000C+00 s=1 e=0 z=0  None .data      @3800                                                        */
 SECTION_DATA static void* lit_3800[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_open_move__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_open_move__13dMenu_Skill_cFv,
 };
 
 /* 803BE85C-803BE868 000C+00 s=1 e=0 z=0  None .data      @3801                                                        */
 SECTION_DATA static void* lit_3801[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_move_move__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_move_move__13dMenu_Skill_cFv,
 };
 
 /* 803BE868-803BE874 000C+00 s=1 e=0 z=0  None .data      @3802                                                        */
 SECTION_DATA static void* lit_3802[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)read_close_move__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)read_close_move__13dMenu_Skill_cFv,
 };
 
 /* 803BE874-803BE8A4 0030+00 s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -335,10 +335,10 @@ SECTION_DATA static u8 data_803BE8A4[28] = {
 
 /* 803BE8C0-803BE8E0 0010+10 s=2 e=0 z=0  None .data      __vt__13dMenu_Skill_c                                        */
 SECTION_DATA static void* __vt__13dMenu_Skill_c[4 + 4 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__13dMenu_Skill_cFv,
-	/* 3    */ (void*)__dt__13dMenu_Skill_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__13dMenu_Skill_cFv,
+	(void*)__dt__13dMenu_Skill_cFv,
 	/* padding */
 	NULL,
 	NULL,

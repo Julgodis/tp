@@ -7,14 +7,14 @@ lbl_80C72D38:
 /* 80C72D4C  7C 7E 1B 78 */	mr r30, r3
 /* 80C72D50  3C 60 80 C7 */	lis r3, lit_3625@ha
 /* 80C72D54  3B E3 31 30 */	addi r31, r3, lit_3625@l
-/* 80C72D58  C0 7F 00 40 */	lfs f3, 0x40(r31)	/* effective address: 80C73170 */
-/* 80C72D5C  C0 3F 00 58 */	lfs f1, 0x58(r31)	/* effective address: 80C73188 */
+/* 80C72D58  C0 7F 00 40 */	lfs f3, 0x40(r31)
+/* 80C72D5C  C0 3F 00 58 */	lfs f1, 0x58(r31)
 /* 80C72D60  3C 60 80 C7 */	lis r3, l_HIO@ha
 /* 80C72D64  38 83 32 D4 */	addi r4, r3, l_HIO@l
-/* 80C72D68  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C732DC */
+/* 80C72D68  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C72D6C  EC 41 00 32 */	fmuls f2, f1, f0
-/* 80C72D70  C0 3F 00 4C */	lfs f1, 0x4c(r31)	/* effective address: 80C7317C */
-/* 80C72D74  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80C732D8 */
+/* 80C72D70  C0 3F 00 4C */	lfs f1, 0x4c(r31)
+/* 80C72D74  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80C72D78  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80C72D7C  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80C72D80  EC 03 00 32 */	fmuls f0, f3, f0
@@ -28,7 +28,7 @@ lbl_80C72D38:
 /* 80C72DA0  A8 1E 05 B0 */	lha r0, 0x5b0(r30)
 /* 80C72DA4  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80C72DA8  7C 25 04 2E */	lfsx f1, r5, r0
-/* 80C72DAC  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C732DC */
+/* 80C72DAC  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C72DB0  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80C72DB4  EC 03 00 32 */	fmuls f0, f3, f0
 /* 80C72DB8  FC 00 00 1E */	fctiwz f0, f0
@@ -44,7 +44,7 @@ lbl_80C72D38:
 /* 80C72DE0  7C 05 04 2E */	lfsx f0, r5, r0
 /* 80C72DE4  FC 00 02 10 */	fabs f0, f0
 /* 80C72DE8  FC 20 00 18 */	frsp f1, f0
-/* 80C72DEC  C0 1F 00 5C */	lfs f0, 0x5c(r31)	/* effective address: 80C7318C */
+/* 80C72DEC  C0 1F 00 5C */	lfs f0, 0x5c(r31)
 /* 80C72DF0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80C72DF4  40 81 00 C0 */	ble lbl_80C72EB4
 /* 80C72DF8  88 1E 05 B2 */	lbz r0, 0x5b2(r30)
@@ -84,7 +84,7 @@ lbl_80C72D38:
 /* 80C72E80  90 01 00 08 */	stw r0, 8(r1)
 /* 80C72E84  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C72E88  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C72E8C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C72E8C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C72E90  38 81 00 08 */	addi r4, r1, 8
 /* 80C72E94  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80C72E98  7F A7 EB 78 */	mr r7, r29

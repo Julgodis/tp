@@ -9,9 +9,9 @@ lbl_80596768:
 /* 80596784  3C 60 80 59 */	lis r3, l_rope_offsetSt@ha
 /* 80596788  C4 03 7E C0 */	lfsu f0, l_rope_offsetSt@l(r3)
 /* 8059678C  D0 04 00 00 */	stfs f0, 0(r4)
-/* 80596790  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80590004 */
+/* 80596790  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80596794  D0 04 00 04 */	stfs f0, 4(r4)
-/* 80596798  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80590008 */
+/* 80596798  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8059679C  D0 04 00 08 */	stfs f0, 8(r4)
 /* 805967A0  38 7E 0B 0C */	addi r3, r30, 0xb0c
 /* 805967A4  4B A7 65 C0 */	b transS__14mDoMtx_stack_cFRC4cXyz

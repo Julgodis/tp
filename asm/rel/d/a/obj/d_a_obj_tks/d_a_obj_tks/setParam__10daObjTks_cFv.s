@@ -1,9 +1,9 @@
 lbl_80D11670:
 /* 80D11670  3C 80 80 D1 */	lis r4, m__16daObjTks_Param_c@ha
 /* 80D11674  38 84 27 3C */	addi r4, r4, m__16daObjTks_Param_c@l
-/* 80D11678  C0 84 00 7C */	lfs f4, 0x7c(r4)	/* effective address: 80D127B8 */
+/* 80D11678  C0 84 00 7C */	lfs f4, 0x7c(r4)
 /* 80D1167C  C0 63 0D D0 */	lfs f3, 0xdd0(r3)
-/* 80D11680  C0 44 00 78 */	lfs f2, 0x78(r4)	/* effective address: 80D127B4 */
+/* 80D11680  C0 44 00 78 */	lfs f2, 0x78(r4)
 /* 80D11684  C0 23 0D CC */	lfs f1, 0xdcc(r3)
 /* 80D11688  3C 80 80 D1 */	lis r4, lit_5005@ha
 /* 80D1168C  C0 04 28 A0 */	lfs f0, lit_5005@l(r4)

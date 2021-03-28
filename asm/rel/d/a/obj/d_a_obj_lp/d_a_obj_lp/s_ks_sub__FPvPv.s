@@ -12,7 +12,7 @@ lbl_80C542FC:
 /* 80C54324  40 82 00 38 */	bne lbl_80C5435C
 /* 80C54328  3C 60 80 C5 */	lis r3, target_info_count@ha
 /* 80C5432C  38 83 5B B0 */	addi r4, r3, target_info_count@l
-/* 80C54330  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80C55BB0 */
+/* 80C54330  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80C54334  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80C54338  40 80 00 1C */	bge lbl_80C54354
 /* 80C5433C  54 A0 10 3A */	slwi r0, r5, 2

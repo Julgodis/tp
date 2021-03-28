@@ -8,8 +8,8 @@ lbl_804CDDAC:
 /* 804CDDC4  3C 60 80 4D */	lis r3, l_cyl_src@ha
 /* 804CDDC8  3B E3 E3 F4 */	addi r31, r3, l_cyl_src@l
 /* 804CDDCC  38 7E 09 54 */	addi r3, r30, 0x954
-/* 804CDDD0  C0 3F 00 7C */	lfs f1, 0x7c(r31)	/* effective address: 804CE470 */
-/* 804CDDD4  C0 5F 00 A8 */	lfs f2, 0xa8(r31)	/* effective address: 804CE49C */
+/* 804CDDD0  C0 3F 00 7C */	lfs f1, 0x7c(r31)
+/* 804CDDD4  C0 5F 00 A8 */	lfs f2, 0xa8(r31)
 /* 804CDDD8  4B DA 29 68 */	b cLib_chaseF__FPfff
 /* 804CDDDC  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 804CDDE0  C0 1E 09 54 */	lfs f0, 0x954(r30)

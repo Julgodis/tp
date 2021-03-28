@@ -27,8 +27,8 @@ lbl_8072D87C:
 /* 8072D8E0  38 61 00 74 */	addi r3, r1, 0x74
 /* 8072D8E4  38 81 00 14 */	addi r4, r1, 0x14
 /* 8072D8E8  4B B3 A4 40 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 8072D8EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D8F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072D8EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D8F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072D8F4  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8072D8F8  7F C3 F3 78 */	mr r3, r30
 /* 8072D8FC  38 81 00 74 */	addi r4, r1, 0x74

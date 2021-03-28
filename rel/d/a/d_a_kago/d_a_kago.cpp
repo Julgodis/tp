@@ -16,6 +16,9 @@ struct daKago_HIO_c {
 	/* 80854A4C */ ~daKago_HIO_c();
 };
 
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -28,9 +31,6 @@ struct cXyz {
 };
 
 struct J3DJoint {
-};
-
-struct J3DModel {
 };
 
 struct daKago_c {
@@ -146,19 +146,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
+struct J3DModelData {
+};
+
 struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -206,10 +206,10 @@ struct dEvt_control_c {
 	/* 80042914 */ void setSkipProc(void*, int (*)(void*, int), int);
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -235,11 +235,11 @@ struct dAttention_c {
 	/* 800737E4 */ void LockonTruth();
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -388,13 +388,13 @@ struct daTagWaterFall_c {
 // Forward References:
 // 
 
-static void daKago_Draw(daKago_c*); // 2
+void daKago_Draw(daKago_c*); // 2
 static void s_waterfall(void*, void*); // 2
 static void daKago_Execute(daKago_c*); // 2
-static bool daKago_IsDelete(daKago_c*); // 2
-static void daKago_Delete(daKago_c*); // 2
+bool daKago_IsDelete(daKago_c*); // 2
+void daKago_Delete(daKago_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daKago_Create(daKago_c*); // 2
+void daKago_Create(daKago_c*); // 2
 
 extern "C" void __ct__12daKago_HIO_cFv(); // 1
 extern "C" void getBckName__8daKago_cFi(); // 1
@@ -402,7 +402,7 @@ extern "C" void setBck__8daKago_cFiUcff(); // 1
 extern "C" void checkBck__8daKago_cFi(); // 1
 extern "C" void draw__8daKago_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daKago_Draw__FP8daKago_c(); // 1
+extern "C" void daKago_Draw__FP8daKago_c(); // 1
 extern "C" void executeBalloonMenu__8daKago_cFv(); // 1
 extern "C" void checkGroundHeight__8daKago_cF4cXyzPf(); // 1
 extern "C" void checkRoofHeight__8daKago_cF4cXyz(); // 1
@@ -469,9 +469,9 @@ extern "C" void mtx_set__8daKago_cFv(); // 1
 extern "C" void cc_set__8daKago_cFv(); // 1
 extern "C" void execute__8daKago_cFv(); // 1
 extern "C" static void daKago_Execute__FP8daKago_c(); // 1
-extern "C" static bool daKago_IsDelete__FP8daKago_c(); // 1
+extern "C" bool daKago_IsDelete__FP8daKago_c(); // 1
 extern "C" void _delete__8daKago_cFv(); // 1
-extern "C" static void daKago_Delete__FP8daKago_c(); // 1
+extern "C" void daKago_Delete__FP8daKago_c(); // 1
 extern "C" void ctrlJoint__8daKago_cFP8J3DJointP8J3DModel(); // 1
 extern "C" void JointCallBack__8daKago_cFP8J3DJointi(); // 1
 extern "C" void CreateHeap__8daKago_cFv(); // 1
@@ -481,15 +481,12 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daKago_Create__FP8daKago_c(); // 1
+extern "C" void daKago_Create__FP8daKago_c(); // 1
 extern "C" void __dt__12daKago_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_kago_cpp(); // 1
-extern "C" static void func_80854AD0(); // 1
-extern "C" static void func_80854AD8(); // 1
+extern "C" void func_80854AD0(); // 1
+extern "C" void func_80854AD8(); // 1
 extern "C" void getMidnaActor__9daPy_py_cFv(); // 1
-extern "C" extern u8 const lit_4201[8];
-extern "C" extern u8 const lit_4202[8];
-extern "C" extern u8 const lit_4203[8];
 extern "C" extern u32 const lit_4478;
 extern "C" extern u32 const lit_4479;
 extern "C" extern u32 const lit_4480;
@@ -521,6 +518,7 @@ extern "C" extern u32 const lit_7127;
 extern "C" extern u32 const lit_7128;
 extern "C" extern u32 const lit_7129;
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daKago_Method[8];
 extern "C" extern void* g_profile_KAGO[12];
 
 // 
@@ -707,43 +705,20 @@ extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[4];
-SECTION_BSS extern f32 data_803DD2EC;
-SECTION_BSS extern u8 struct_803DD31C[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD47C[4];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern f32 data_803DD49C;
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_80406F90[4];
-SECTION_BSS extern u8 struct_8040AFC8[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 struct_8040BFF4[4];
-SECTION_BSS extern u8 struct_8040BFFC[4];
-SECTION_BSS extern u8 struct_8040C010[8];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 data_8040C148[4];
-SECTION_BSS extern u8 data_8040C14C[4];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
@@ -816,85 +791,85 @@ SECTION_DATA static u8 data_80854D4C[64] = {
 
 /* 80854D8C-80854DC8 003C+00 s=1 e=0 z=0  None .data      @3969                                                        */
 SECTION_DATA static void* lit_3969[15] = {
-	/* 0    */ (void*)(((char*)getBckName__8daKago_cFi)+0x38),
-	/* 1    */ (void*)(((char*)getBckName__8daKago_cFi)+0x40),
-	/* 2    */ (void*)(((char*)getBckName__8daKago_cFi)+0x48),
-	/* 3    */ (void*)(((char*)getBckName__8daKago_cFi)+0x50),
-	/* 4    */ (void*)(((char*)getBckName__8daKago_cFi)+0x58),
-	/* 5    */ (void*)(((char*)getBckName__8daKago_cFi)+0x60),
-	/* 6    */ (void*)(((char*)getBckName__8daKago_cFi)+0x68),
-	/* 7    */ (void*)(((char*)getBckName__8daKago_cFi)+0x70),
-	/* 8    */ (void*)(((char*)getBckName__8daKago_cFi)+0x78),
-	/* 9    */ (void*)(((char*)getBckName__8daKago_cFi)+0x88),
-	/* 10   */ (void*)(((char*)getBckName__8daKago_cFi)+0x88),
-	/* 11   */ (void*)(((char*)getBckName__8daKago_cFi)+0x88),
-	/* 12   */ (void*)(((char*)getBckName__8daKago_cFi)+0x88),
-	/* 13   */ (void*)(((char*)getBckName__8daKago_cFi)+0x88),
-	/* 14   */ (void*)(((char*)getBckName__8daKago_cFi)+0x80),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854DC8-80854DF4 002C+00 s=1 e=0 z=0  None .data      @4496                                                        */
 SECTION_DATA static void* lit_4496[11] = {
-	/* 0    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x4C),
-	/* 1    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x60),
-	/* 2    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x74),
-	/* 3    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x6C),
-	/* 4    */ (void*)(((char*)demo_skip__8daKago_cFi)+0xC0),
-	/* 5    */ (void*)(((char*)demo_skip__8daKago_cFi)+0xD8),
-	/* 6    */ (void*)(((char*)demo_skip__8daKago_cFi)+0xD8),
-	/* 7    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x114),
-	/* 8    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x11C),
-	/* 9    */ (void*)(((char*)demo_skip__8daKago_cFi)+0x240),
-	/* 10   */ (void*)(((char*)demo_skip__8daKago_cFi)+0x248),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854DF4-80854E10 001C+00 s=1 e=0 z=0  None .data      @6166                                                        */
 SECTION_DATA static void* lit_6166[7] = {
-	/* 0    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0xAC),
-	/* 1    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0x3B8),
-	/* 2    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0x5A8),
-	/* 3    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0xA7C),
-	/* 4    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0xC2C),
-	/* 5    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0xCA8),
-	/* 6    */ (void*)(((char*)executePerchDemo__8daKago_cFv)+0xD9C),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854E10-80854E34 0024+00 s=1 e=0 z=0  None .data      @6560                                                        */
 SECTION_DATA static void* lit_6560[9] = {
-	/* 0    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x98),
-	/* 1    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x2A0),
-	/* 2    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x390),
-	/* 3    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x3B4),
-	/* 4    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x4C8),
-	/* 5    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x53C),
-	/* 6    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x598),
-	/* 7    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x5F4),
-	/* 8    */ (void*)(((char*)initFirstDemo__8daKago_cFv)+0x5FC),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854E34-80854E5C 0028+00 s=1 e=0 z=0  None .data      @6924                                                        */
 SECTION_DATA static void* lit_6924[10] = {
-	/* 0    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x9C),
-	/* 1    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x1E0),
-	/* 2    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x3F4),
-	/* 3    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x50C),
-	/* 4    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x5C8),
-	/* 5    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0x920),
-	/* 6    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0xBF4),
-	/* 7    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0xE24),
-	/* 8    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0xE24),
-	/* 9    */ (void*)(((char*)executeFirstDemo__8daKago_cFv)+0xF28),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854E5C-80854E78 001C+00 s=1 e=0 z=0  None .data      @7130                                                        */
 SECTION_DATA static void* lit_7130[7] = {
-	/* 0    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x64),
-	/* 1    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x188),
-	/* 2    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x1A8),
-	/* 3    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x2F4),
-	/* 4    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x3E0),
-	/* 5    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x480),
-	/* 6    */ (void*)(((char*)executeLandingLakeHairia__8daKago_cFv)+0x56C),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854E78-80854E84 000C+00 s=1 e=0 z=0  None .data      kago_wall_hit_id$7718                                        */
@@ -916,86 +891,86 @@ SECTION_DATA static u8 data_80854E8C[4] = {
 
 /* 80854E90-80854EBC 002C+00 s=1 e=0 z=0  None .data      @7982                                                        */
 SECTION_DATA static void* lit_7982[11] = {
-	/* 0    */ (void*)(((char*)action__8daKago_cFv)+0x13C),
-	/* 1    */ (void*)(((char*)action__8daKago_cFv)+0x148),
-	/* 2    */ (void*)(((char*)action__8daKago_cFv)+0x154),
-	/* 3    */ (void*)(((char*)action__8daKago_cFv)+0x160),
-	/* 4    */ (void*)(((char*)action__8daKago_cFv)+0x16C),
-	/* 5    */ (void*)(((char*)action__8daKago_cFv)+0x178),
-	/* 6    */ (void*)(((char*)action__8daKago_cFv)+0x184),
-	/* 7    */ (void*)(((char*)action__8daKago_cFv)+0x190),
-	/* 8    */ (void*)(((char*)action__8daKago_cFv)+0x19C),
-	/* 9    */ (void*)(((char*)action__8daKago_cFv)+0x1A8),
-	/* 10   */ (void*)(((char*)action__8daKago_cFv)+0x1B4),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80854EBC-80854EDC 0020+00 s=1 e=0 z=0  None .data      l_daKago_Method                                              */
-SECTION_DATA static void* l_daKago_Method[8] = {
-	/* 0    */ (void*)daKago_Create__FP8daKago_c,
-	/* 1    */ (void*)daKago_Delete__FP8daKago_c,
-	/* 2    */ (void*)daKago_Execute__FP8daKago_c,
-	/* 3    */ (void*)daKago_IsDelete__FP8daKago_c,
-	/* 4    */ (void*)daKago_Draw__FP8daKago_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80854EBC-80854EDC 0020+00 s=0 e=0 z=0  None .data      l_daKago_Method                                              */
+SECTION_DATA void* l_daKago_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80854EDC-80854F0C 0030+00 s=0 e=0 z=1  None .data      g_profile_KAGO                                               */
+/* 80854EDC-80854F0C 0030+00 s=0 e=0 z=0  None .data      g_profile_KAGO                                               */
 SECTION_DATA void* g_profile_KAGO[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0004FFFD,
-	/* 2    */ (void*)0x00F40000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000BA4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02B50000,
-	/* 9    */ (void*)&l_daKago_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x040E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0004FFFD,
+	(void*)0x00F40000,
+	(void*)NULL,
+	(void*)0x00000BA4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02B50000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x040E0000,
 };
 
 /* 80854F0C-80854F18 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854F18-80854F24 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854F24-80854F48 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80854AD8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80854AD0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854F48-80854F54 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80854F54-80854F60 000C+00 s=2 e=0 z=0  None .data      __vt__12daKago_HIO_c                                         */
 SECTION_DATA static void* __vt__12daKago_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daKago_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 808495AC-80849660 00B4+00 s=1 e=0 z=0  None .text      __ct__12daKago_HIO_cFv                                       */
@@ -1009,7 +984,7 @@ asm daKago_HIO_c::daKago_HIO_c() {
 #pragma pop
 
 
-/* 80849660-808496F0 0090+00 s=4 e=0 z=0  None .text      getBckName__8daKago_cFi                                      */
+/* 80849660-808496F0 0090+00 s=3 e=0 z=0  None .text      getBckName__8daKago_cFi                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1024,7 +999,7 @@ asm void daKago_c::getBckName(int param_0) {
 /* 80854B40-80854B44 0004+00 s=1 e=0 z=0  None .rodata    @3978                                                        */
 SECTION_RODATA static u32 const lit_3978 = 0xBF800000;
 
-/* 808496F0-80849798 00A8+00 s=10 e=0 z=0  None .text      setBck__8daKago_cFiUcff                                      */
+/* 808496F0-80849798 00A8+00 s=13 e=0 z=0  None .text      setBck__8daKago_cFiUcff                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1075,11 +1050,11 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 80849960-80849980 0020+00 s=1 e=0 z=0  None .text      daKago_Draw__FP8daKago_c                                     */
+/* 80849960-80849980 0020+00 s=0 e=0 z=0  None .text      daKago_Draw__FP8daKago_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKago_Draw(daKago_c* param_0) {
+asm void daKago_Draw(daKago_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Draw__FP8daKago_c.s"
 }
@@ -1087,18 +1062,18 @@ asm static void daKago_Draw(daKago_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80854B4C-80854B54 0008+00 s=0 e=0 z=0  None .rodata    @4201                                                        */
-SECTION_RODATA u8 const lit_4201[8] = {
+/* 80854B4C-80854B54 0008+00 s=6 e=0 z=0  None .rodata    @4201                                                        */
+SECTION_RODATA static u8 const lit_4201[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80854B54-80854B5C 0008+00 s=0 e=0 z=0  None .rodata    @4202                                                        */
-SECTION_RODATA u8 const lit_4202[8] = {
+/* 80854B54-80854B5C 0008+00 s=5 e=0 z=0  None .rodata    @4202                                                        */
+SECTION_RODATA static u8 const lit_4202[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80854B5C-80854B64 0008+00 s=0 e=0 z=0  None .rodata    @4203                                                        */
-SECTION_RODATA u8 const lit_4203[8] = {
+/* 80854B5C-80854B64 0008+00 s=5 e=0 z=0  None .rodata    @4203                                                        */
+SECTION_RODATA static u8 const lit_4203[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1186,7 +1161,7 @@ SECTION_RODATA static u32 const lit_4759 = 0xC6B39000;
 /* 80854BD0-80854BD4 0004+00 s=1 e=0 z=0  None .rodata    @4760                                                        */
 SECTION_RODATA static u32 const lit_4760 = 0x45E8F800;
 
-/* 80854BD4-80854BDC 0008+00 s=2 e=0 z=0  None .rodata    @4923                                                        */
+/* 80854BD4-80854BDC 0008+00 s=3 e=0 z=0  None .rodata    @4923                                                        */
 SECTION_RODATA static u8 const lit_4923[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -1239,7 +1214,7 @@ SECTION_RODATA static u32 const lit_5723 = 0x3DCCCCCD;
 /* 80854C18-80854C1C 0004+00 s=3 e=0 z=0  None .rodata    @5724                                                        */
 SECTION_RODATA static u32 const lit_5724 = 0xC47A0000;
 
-/* 80854C1C-80854C20 0004+00 s=2 e=0 z=0  None .rodata    @5725                                                        */
+/* 80854C1C-80854C20 0004+00 s=1 e=0 z=0  None .rodata    @5725                                                        */
 SECTION_RODATA static u32 const lit_5725 = 0x42700000;
 
 /* 80854C20-80854C24 0004+00 s=1 e=0 z=0  None .rodata    @5852                                                        */
@@ -1503,7 +1478,7 @@ asm void daKago_c::checkSizeBg() {
 #pragma pop
 
 
-/* 8084A694-8084A6DC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 8084A694-8084A6DC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1520,7 +1495,7 @@ bool daKago_c::getBeforeGroundHeight(u8 param_0) {
 }
 
 
-/* 8084A6E4-8084AA64 0380+00 s=2 e=0 z=0  None .text      demo_skip__8daKago_cFi                                       */
+/* 8084A6E4-8084AA64 0380+00 s=1 e=0 z=0  None .text      demo_skip__8daKago_cFi                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1542,7 +1517,7 @@ asm void daKago_c::DemoSkipCallBack(void* param_0, int param_1) {
 #pragma pop
 
 
-/* 8084AA98-8084AAAC 0014+00 s=15 e=0 z=0  None .text      setActionMode__8daKago_cFii                                  */
+/* 8084AA98-8084AAAC 0014+00 s=17 e=0 z=0  None .text      setActionMode__8daKago_cFii                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1564,7 +1539,7 @@ asm void daKago_c::setMidnaTagPos() {
 #pragma pop
 
 
-/* 8084AB40-8084AB8C 004C+00 s=2 e=0 z=0  None .text      setMidnaRideOn__8daKago_cFv                                  */
+/* 8084AB40-8084AB8C 004C+00 s=5 e=0 z=0  None .text      setMidnaRideOn__8daKago_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1575,7 +1550,7 @@ asm void daKago_c::setMidnaRideOn() {
 #pragma pop
 
 
-/* 8084AB8C-8084ABC8 003C+00 s=5 e=0 z=0  None .text      setPlayerRideOn__8daKago_cFv                                 */
+/* 8084AB8C-8084ABC8 003C+00 s=7 e=0 z=0  None .text      setPlayerRideOn__8daKago_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1586,7 +1561,7 @@ asm void daKago_c::setPlayerRideOn() {
 #pragma pop
 
 
-/* 8084ABC8-8084AC2C 0064+00 s=3 e=0 z=0  None .text      setRideOff__8daKago_cFv                                      */
+/* 8084ABC8-8084AC2C 0064+00 s=5 e=0 z=0  None .text      setRideOff__8daKago_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1608,7 +1583,7 @@ asm void daKago_c::searchNearPassPoint() {
 #pragma pop
 
 
-/* 8084AE78-8084AF40 00C8+00 s=2 e=0 z=0  None .text      setSceneChange__8daKago_cFi                                  */
+/* 8084AE78-8084AF40 00C8+00 s=4 e=0 z=0  None .text      setSceneChange__8daKago_cFi                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1806,7 +1781,7 @@ asm void daKago_c::executeFly() {
 #pragma pop
 
 
-/* 8084C8FC-8084D108 080C+00 s=0 e=0 z=0  None .text      executeStagger__8daKago_cFv                                  */
+/* 8084C8FC-8084D108 080C+00 s=1 e=0 z=0  None .text      executeStagger__8daKago_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1817,7 +1792,7 @@ asm void daKago_c::executeStagger() {
 #pragma pop
 
 
-/* 8084D108-8084D354 024C+00 s=0 e=0 z=0  None .text      executeWait__8daKago_cFv                                     */
+/* 8084D108-8084D354 024C+00 s=1 e=0 z=0  None .text      executeWait__8daKago_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1839,7 +1814,7 @@ asm void daKago_c::calcAttackMove(int param_0) {
 #pragma pop
 
 
-/* 8084D50C-8084DA18 050C+00 s=0 e=0 z=0  None .text      executeAttack__8daKago_cFv                                   */
+/* 8084D50C-8084DA18 050C+00 s=1 e=0 z=0  None .text      executeAttack__8daKago_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1861,7 +1836,7 @@ asm void daKago_c::calcCircleCamera(int param_0) {
 #pragma pop
 
 
-/* 8084DBFC-8084DD18 011C+00 s=0 e=0 z=0  None .text      executeEvent__8daKago_cFv                                    */
+/* 8084DBFC-8084DD18 011C+00 s=1 e=0 z=0  None .text      executeEvent__8daKago_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1883,7 +1858,7 @@ asm void daKago_c::initPerchDemo() {
 #pragma pop
 
 
-/* 8084E2D4-8084F09C 0DC8+00 s=2 e=0 z=0  None .text      executePerchDemo__8daKago_cFv                                */
+/* 8084E2D4-8084F09C 0DC8+00 s=1 e=0 z=0  None .text      executePerchDemo__8daKago_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1894,7 +1869,7 @@ asm void daKago_c::executePerchDemo() {
 #pragma pop
 
 
-/* 8084F09C-8084FA58 09BC+00 s=0 e=0 z=0  None .text      PerchDemoAwayForward__8daKago_cFv                            */
+/* 8084F09C-8084FA58 09BC+00 s=1 e=0 z=0  None .text      PerchDemoAwayForward__8daKago_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1905,7 +1880,7 @@ asm void daKago_c::PerchDemoAwayForward() {
 #pragma pop
 
 
-/* 8084FA58-8084FAA8 0050+00 s=0 e=0 z=0  None .text      executePerch__8daKago_cFv                                    */
+/* 8084FA58-8084FAA8 0050+00 s=1 e=0 z=0  None .text      executePerch__8daKago_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1916,7 +1891,7 @@ asm void daKago_c::executePerch() {
 #pragma pop
 
 
-/* 8084FAA8-8084FB50 00A8+00 s=0 e=0 z=0  None .text      executeEvent2__8daKago_cFv                                   */
+/* 8084FAA8-8084FB50 00A8+00 s=1 e=0 z=0  None .text      executeEvent2__8daKago_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1927,7 +1902,7 @@ asm void daKago_c::executeEvent2() {
 #pragma pop
 
 
-/* 8084FB50-80850384 0834+00 s=2 e=0 z=0  None .text      initFirstDemo__8daKago_cFv                                   */
+/* 8084FB50-80850384 0834+00 s=1 e=0 z=0  None .text      initFirstDemo__8daKago_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1938,7 +1913,7 @@ asm void daKago_c::initFirstDemo() {
 #pragma pop
 
 
-/* 80850384-808513E4 1060+00 s=2 e=0 z=0  None .text      executeFirstDemo__8daKago_cFv                                */
+/* 80850384-808513E4 1060+00 s=1 e=0 z=0  None .text      executeFirstDemo__8daKago_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1949,7 +1924,7 @@ asm void daKago_c::executeFirstDemo() {
 #pragma pop
 
 
-/* 808513E4-80851434 0050+00 s=0 e=0 z=0  None .text      executePerch2__8daKago_cFv                                   */
+/* 808513E4-80851434 0050+00 s=1 e=0 z=0  None .text      executePerch2__8daKago_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1960,7 +1935,7 @@ asm void daKago_c::executePerch2() {
 #pragma pop
 
 
-/* 80851434-80851DEC 09B8+00 s=2 e=0 z=0  None .text      executeLandingLakeHairia__8daKago_cFv                        */
+/* 80851434-80851DEC 09B8+00 s=1 e=0 z=0  None .text      executeLandingLakeHairia__8daKago_cFv                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1982,7 +1957,7 @@ asm void daKago_c::executeLandingBoartHouse() {
 #pragma pop
 
 
-/* 808525B0-80852610 0060+00 s=1 e=0 z=0  None .text      executeLanding__8daKago_cFv                                  */
+/* 808525B0-80852610 0060+00 s=2 e=0 z=0  None .text      executeLanding__8daKago_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1993,7 +1968,7 @@ asm void daKago_c::executeLanding() {
 #pragma pop
 
 
-/* 80852610-80852D90 0780+00 s=1 e=0 z=0  None .text      moveDemoFly__8daKago_cFv                                     */
+/* 80852610-80852D90 0780+00 s=2 e=0 z=0  None .text      moveDemoFly__8daKago_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2114,7 +2089,7 @@ asm void daKago_c::setFlySound() {
 #pragma pop
 
 
-/* 80853BCC-80853EF0 0324+00 s=2 e=0 z=0  None .text      action__8daKago_cFv                                          */
+/* 80853BCC-80853EF0 0324+00 s=1 e=0 z=0  None .text      action__8daKago_cFv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2158,7 +2133,7 @@ asm void daKago_c::execute() {
 #pragma pop
 
 
-/* 80854168-80854188 0020+00 s=2 e=0 z=0  None .text      daKago_Execute__FP8daKago_c                                  */
+/* 80854168-80854188 0020+00 s=1 e=0 z=0  None .text      daKago_Execute__FP8daKago_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2169,8 +2144,8 @@ asm static void daKago_Execute(daKago_c* param_0) {
 #pragma pop
 
 
-/* 80854188-80854190 0008+00 s=1 e=0 z=0  None .text      daKago_IsDelete__FP8daKago_c                                 */
-static bool daKago_IsDelete(daKago_c* param_0) {
+/* 80854188-80854190 0008+00 s=0 e=0 z=0  None .text      daKago_IsDelete__FP8daKago_c                                 */
+bool daKago_IsDelete(daKago_c* param_0) {
 	return true;
 }
 
@@ -2186,11 +2161,11 @@ asm void daKago_c::_delete() {
 #pragma pop
 
 
-/* 80854200-80854220 0020+00 s=1 e=0 z=0  None .text      daKago_Delete__FP8daKago_c                                   */
+/* 80854200-80854220 0020+00 s=0 e=0 z=0  None .text      daKago_Delete__FP8daKago_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKago_Delete(daKago_c* param_0) {
+asm void daKago_Delete(daKago_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Delete__FP8daKago_c.s"
 }
@@ -2252,7 +2227,7 @@ asm void daKago_c::create() {
 #pragma pop
 
 
-/* 80854928-80854970 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80854928-80854970 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2263,7 +2238,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80854970-808549B8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80854970-808549B8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2274,7 +2249,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 808549B8-80854A28 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 808549B8-80854A28 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2291,18 +2266,18 @@ cXyz::cXyz() {
 }
 
 
-/* 80854A2C-80854A4C 0020+00 s=1 e=0 z=0  None .text      daKago_Create__FP8daKago_c                                   */
+/* 80854A2C-80854A4C 0020+00 s=0 e=0 z=0  None .text      daKago_Create__FP8daKago_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKago_Create(daKago_c* param_0) {
+asm void daKago_Create(daKago_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/daKago_Create__FP8daKago_c.s"
 }
 #pragma pop
 
 
-/* 80854A4C-80854A94 0048+00 s=2 e=0 z=0  None .text      __dt__12daKago_HIO_cFv                                       */
+/* 80854A4C-80854A94 0048+00 s=1 e=0 z=0  None .text      __dt__12daKago_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2313,7 +2288,7 @@ asm daKago_HIO_c::~daKago_HIO_c() {
 #pragma pop
 
 
-/* 80854A94-80854AD0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_kago_cpp                                         */
+/* 80854A94-80854AD0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_kago_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2324,22 +2299,22 @@ extern "C" asm void __sinit_d_a_kago_cpp() {
 #pragma pop
 
 
-/* 80854AD0-80854AD8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80854AD0-80854AD8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80854AD0() {
+extern "C" asm void func_80854AD0() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/func_80854AD0.s"
 }
 #pragma pop
 
 
-/* 80854AD8-80854AE0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80854AD8-80854AE0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80854AD8() {
+extern "C" asm void func_80854AD8() {
 	nofralloc
 #include "asm/rel/d/a/d_a_kago/d_a_kago/func_80854AD8.s"
 }

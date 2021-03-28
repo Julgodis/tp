@@ -9,11 +9,11 @@ lbl_80AAF5BC:
 /* 80AAF5D8  7C 7E 1B 78 */	mr r30, r3
 /* 80AAF5DC  3C 60 80 AB */	lis r3, m__19daNpc_Pouya_Param_c@ha
 /* 80AAF5E0  3B E3 20 00 */	addi r31, r3, m__19daNpc_Pouya_Param_c@l
-/* 80AAF5E4  C0 3F 00 D4 */	lfs f1, 0xd4(r31)	/* effective address: 80AB20D4 */
+/* 80AAF5E4  C0 3F 00 D4 */	lfs f1, 0xd4(r31)
 /* 80AAF5E8  D0 21 00 40 */	stfs f1, 0x40(r1)
-/* 80AAF5EC  C0 1F 00 D8 */	lfs f0, 0xd8(r31)	/* effective address: 80AB20D8 */
+/* 80AAF5EC  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80AAF5F0  D0 01 00 44 */	stfs f0, 0x44(r1)
-/* 80AAF5F4  C0 1F 00 B8 */	lfs f0, 0xb8(r31)	/* effective address: 80AB20B8 */
+/* 80AAF5F4  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 80AAF5F8  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80AAF5FC  D0 21 00 34 */	stfs f1, 0x34(r1)
 /* 80AAF600  D0 01 00 38 */	stfs f0, 0x38(r1)

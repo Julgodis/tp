@@ -24,9 +24,9 @@ lbl_8072D12C:
 /* 8072D154  48 00 00 70 */	b lbl_8072D1C4
 lbl_8072D158:
 /* 8072D158  7F A3 EB 78 */	mr r3, r29
-/* 8072D15C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8072D160  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 8072D164  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 8072D15C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8072D160  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 8072D164  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 8072D168  4B 8E D6 78 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8072D16C  C0 1D 06 94 */	lfs f0, 0x694(r29)
 /* 8072D170  FC 01 00 40 */	fcmpo cr0, f1, f0

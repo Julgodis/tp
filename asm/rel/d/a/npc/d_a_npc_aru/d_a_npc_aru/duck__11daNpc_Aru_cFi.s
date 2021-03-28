@@ -8,7 +8,7 @@ lbl_809543F8:
 /* 80954410  3C A0 80 95 */	lis r5, m__17daNpc_Aru_Param_c@ha
 /* 80954414  3B E5 76 D0 */	addi r31, r5, m__17daNpc_Aru_Param_c@l
 /* 80954418  38 BF 00 00 */	addi r5, r31, 0
-/* 8095441C  AB 65 00 9A */	lha r27, 0x9a(r5)	/* effective address: 8095776A */
+/* 8095441C  AB 65 00 9A */	lha r27, 0x9a(r5)
 /* 80954420  4B FF DF E1 */	bl getCowP__11daNpc_Aru_cFi
 /* 80954424  7C 7C 1B 79 */	or. r28, r3, r3
 /* 80954428  41 82 00 F4 */	beq lbl_8095451C

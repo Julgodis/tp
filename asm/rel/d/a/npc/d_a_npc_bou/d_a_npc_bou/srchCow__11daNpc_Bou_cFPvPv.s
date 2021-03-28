@@ -27,13 +27,13 @@ lbl_8096D960:
 /* 8096D974  40 82 00 28 */	bne lbl_8096D99C
 /* 8096D978  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 8096D97C  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 8096D980  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 8096D980  80 85 00 00 */	lwz r4, 0(r5)
 /* 8096D984  54 80 10 3A */	slwi r0, r4, 2
 /* 8096D988  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 8096D98C  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 8096D990  7F E3 01 2E */	stwx r31, r3, r0
 /* 8096D994  38 04 00 01 */	addi r0, r4, 1
-/* 8096D998  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 8096D998  90 05 00 00 */	stw r0, 0(r5)
 lbl_8096D99C:
 /* 8096D99C  38 60 00 00 */	li r3, 0
 /* 8096D9A0  83 E1 00 0C */	lwz r31, 0xc(r1)

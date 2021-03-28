@@ -26,7 +26,7 @@ lbl_8052A464:
 /* 8052A4C4  4B AF 6E 74 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 8052A4C8  3C 60 80 53 */	lis r3, s_fish_ct@ha
 /* 8052A4CC  38 63 6B E8 */	addi r3, r3, s_fish_ct@l
-/* 8052A4D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80536BE8 */
+/* 8052A4D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052A4D4  2C 03 00 01 */	cmpwi r3, 1
 /* 8052A4D8  41 81 02 C0 */	bgt lbl_8052A798
 /* 8052A4DC  C3 FD 05 EC */	lfs f31, 0x5ec(r29)

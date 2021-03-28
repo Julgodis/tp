@@ -7,9 +7,9 @@ lbl_80502D30:
 /* 80502D44  7C 7D 1B 78 */	mr r29, r3
 /* 80502D48  3C 60 80 50 */	lis r3, lit_3999@ha
 /* 80502D4C  3B C3 46 DC */	addi r30, r3, lit_3999@l
-/* 80502D50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80502D54  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80502D58  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80502D50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80502D54  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80502D58  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 80502D5C  A8 1D 05 80 */	lha r0, 0x580(r29)
 /* 80502D60  2C 00 00 01 */	cmpwi r0, 1
 /* 80502D64  41 82 00 30 */	beq lbl_80502D94
@@ -170,8 +170,8 @@ lbl_80502F28:
 /* 80502F98  B0 1D 05 82 */	sth r0, 0x582(r29)
 /* 80502F9C  48 00 00 68 */	b lbl_80503004
 lbl_80502FA0:
-/* 80502FA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80502FA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80502FA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80502FA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80502FA8  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 80502FAC  7F A4 EB 78 */	mr r4, r29
 /* 80502FB0  38 A0 00 76 */	li r5, 0x76
@@ -207,8 +207,8 @@ lbl_80503004:
 /* 8050301C  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 80503020  4B C5 C4 D0 */	b setLookPos__9daPy_py_cFP4cXyz
 lbl_80503024:
-/* 80503024  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80503028  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80503024  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80503028  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050302C  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80503030  3C 80 80 50 */	lis r4, stringBase0@ha
 /* 80503034  38 84 47 EC */	addi r4, r4, stringBase0@l
@@ -222,7 +222,7 @@ lbl_80503024:
 /* 80503054  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80503058  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8050305C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80503060  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80503060  80 63 00 00 */	lwz r3, 0(r3)
 /* 80503064  38 81 00 10 */	addi r4, r1, 0x10
 /* 80503068  38 A0 00 00 */	li r5, 0
 /* 8050306C  38 C0 00 00 */	li r6, 0

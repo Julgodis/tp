@@ -225,7 +225,7 @@ SECTION_DATA static u8 lit_1[68 + 4 /* padding */] = {
 
 /* 80450A40-80450A48 0004+04 s=1 e=0 z=0  None .sdata     __AIVersion                                                  */
 SECTION_SDATA static void* __AIVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&lit_1,
+	(void*)&lit_1,
 	/* padding */
 	NULL,
 };

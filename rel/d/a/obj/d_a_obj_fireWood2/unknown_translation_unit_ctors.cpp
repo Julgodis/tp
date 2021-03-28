@@ -19,7 +19,6 @@ extern void* const data_80BE8F20[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_fireWood2_cpp(); // 1
 
 // 
 // Declarations:

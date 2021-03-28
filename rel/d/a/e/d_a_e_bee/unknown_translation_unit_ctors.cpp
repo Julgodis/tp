@@ -19,7 +19,6 @@ extern void* const data_80685420[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_bee_cpp(); // 1
 
 // 
 // Declarations:

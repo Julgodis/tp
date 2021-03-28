@@ -25,7 +25,7 @@ lbl_807D2B84:
 /* 807D2BE0  D0 18 00 B8 */	stfs f0, 0xb8(r24)
 /* 807D2BE4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 807D2BE8  D0 18 00 BC */	stfs f0, 0xbc(r24)
-/* 807D2BEC  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 807E29D4 */
+/* 807D2BEC  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 807D2BF0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 807D2BF4  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 807D2BF8  7C C0 07 75 */	extsb. r0, r6

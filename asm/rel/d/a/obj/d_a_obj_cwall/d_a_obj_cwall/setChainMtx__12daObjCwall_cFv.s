@@ -19,9 +19,9 @@ lbl_80BD7804:
 lbl_80BD7848:
 /* 80BD7848  3B 7B 40 00 */	addi r27, r27, 0x4000
 lbl_80BD784C:
-/* 80BD784C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD7850  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BD7854  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BD784C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD7850  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BD7854  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80BD7858  3B 40 00 00 */	li r26, 0
 /* 80BD785C  3A E0 00 00 */	li r23, 0
 /* 80BD7860  C3 FE 00 64 */	lfs f31, 0x64(r30)

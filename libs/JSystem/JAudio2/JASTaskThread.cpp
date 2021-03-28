@@ -92,10 +92,10 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 /* ############################################################################################## */
 /* 803C5B58-803C5B68 0010+00 s=2 e=0 z=0  None .data      __vt__13JASTaskThread                                        */
 SECTION_DATA static void* __vt__13JASTaskThread[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13JASTaskThreadFv,
-	/* 3    */ (void*)run__13JASTaskThreadFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13JASTaskThreadFv,
+	(void*)run__13JASTaskThreadFv,
 };
 
 /* 8028F6C4-8028F724 0060+00 s=0 e=1 z=0  None .text      __ct__13JASTaskThreadFiiUl                                   */

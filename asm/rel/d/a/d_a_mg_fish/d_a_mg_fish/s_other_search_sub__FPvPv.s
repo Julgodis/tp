@@ -19,9 +19,9 @@ lbl_8052A3EC:
 /* 8052A430  40 82 00 18 */	bne lbl_8052A448
 /* 8052A434  3C 60 80 53 */	lis r3, s_fish_ct@ha
 /* 8052A438  38 83 6B E8 */	addi r4, r3, s_fish_ct@l
-/* 8052A43C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80536BE8 */
+/* 8052A43C  80 64 00 00 */	lwz r3, 0(r4)
 /* 8052A440  38 03 00 01 */	addi r0, r3, 1
-/* 8052A444  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80536BE8 */
+/* 8052A444  90 04 00 00 */	stw r0, 0(r4)
 lbl_8052A448:
 /* 8052A448  38 60 00 00 */	li r3, 0
 /* 8052A44C  83 E1 00 0C */	lwz r31, 0xc(r1)

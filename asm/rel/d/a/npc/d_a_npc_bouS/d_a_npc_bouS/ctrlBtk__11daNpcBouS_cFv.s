@@ -9,12 +9,12 @@ lbl_80977368:
 /* 80977384  41 82 00 A8 */	beq lbl_8097742C
 /* 80977388  3C 80 80 98 */	lis r4, l_btkGetParamList@ha
 /* 8097738C  38 A4 89 14 */	addi r5, r4, l_btkGetParamList@l
-/* 80977390  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 8097891C */
+/* 80977390  80 05 00 08 */	lwz r0, 8(r5)
 /* 80977394  54 00 10 3A */	slwi r0, r0, 2
 /* 80977398  3C 80 80 98 */	lis r4, l_arcNames@ha
 /* 8097739C  38 84 89 20 */	addi r4, r4, l_arcNames@l
 /* 809773A0  7C 84 00 2E */	lwzx r4, r4, r0
-/* 809773A4  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80978914 */
+/* 809773A4  80 A5 00 00 */	lwz r5, 0(r5)
 /* 809773A8  4B 7D B7 FC */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 809773AC  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 809773B0  7C 03 00 40 */	cmplw r3, r0

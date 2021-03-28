@@ -4,8 +4,8 @@ lbl_80A385C8:
 /* 80A385D0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A385D4  7C 83 23 78 */	mr r3, r4
 /* 80A385D8  7C A4 2B 78 */	mr r4, r5
-/* 80A385DC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A385E0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A385DC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A385E0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A385E4  3C A5 00 02 */	addis r5, r5, 2
 /* 80A385E8  38 C0 00 80 */	li r6, 0x80
 /* 80A385EC  38 A5 C2 F8 */	addi r5, r5, -15624

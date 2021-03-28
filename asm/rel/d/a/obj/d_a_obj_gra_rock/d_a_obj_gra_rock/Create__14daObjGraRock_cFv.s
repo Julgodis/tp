@@ -65,8 +65,8 @@ lbl_80C11A48:
 /* 80C11A64  FC 20 F8 90 */	fmr f1, f31
 /* 80C11A68  4B 65 D7 98 */	b SetR__8cM3dGCylFf
 /* 80C11A6C  38 7F 05 E4 */	addi r3, r31, 0x5e4
-/* 80C11A70  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C11A74  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C11A70  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C11A74  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C11A78  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C11A7C  4B 46 50 30 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C11A80  80 1F 06 C0 */	lwz r0, 0x6c0(r31)

@@ -90,8 +90,8 @@ lbl_80AC0E14:
 /* 80AC0E40  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80AC0E44  28 04 00 FF */	cmplwi r4, 0xff
 /* 80AC0E48  41 82 00 28 */	beq lbl_80AC0E70
-/* 80AC0E4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC0E50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AC0E4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC0E50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AC0E54  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80AC0E58  7C 05 07 74 */	extsb r5, r0
 /* 80AC0E5C  4B 57 45 04 */	b isSwitch__10dSv_info_cCFii

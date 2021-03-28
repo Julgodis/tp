@@ -20,8 +20,8 @@ lbl_80B64954:
 /* 80B64960  2C 00 00 00 */	cmpwi r0, 0
 /* 80B64964  40 81 00 2C */	ble lbl_80B64990
 lbl_80B64968:
-/* 80B64968  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B6496C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B64968  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B6496C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B64970  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80B64974  38 80 0E 80 */	li r4, 0xe80
 /* 80B64978  4B 4D 00 2C */	b offEventBit__11dSv_event_cFUs

@@ -81,12 +81,12 @@ extern "C" extern void* __vt__13J2DOrthoGraph[10];
 /* ############################################################################################## */
 /* 803CC990-803CC9A8 0018+00 s=2 e=0 z=0  None .data      __vt__8JUTFader                                              */
 SECTION_DATA static void* __vt__8JUTFader[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8JUTFaderFv,
-	/* 3    */ (void*)startFadeIn__8JUTFaderFi,
-	/* 4    */ (void*)startFadeOut__8JUTFaderFi,
-	/* 5    */ (void*)draw__8JUTFaderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8JUTFaderFv,
+	(void*)startFadeIn__8JUTFaderFi,
+	(void*)startFadeOut__8JUTFaderFi,
+	(void*)draw__8JUTFaderFv,
 };
 
 /* 804560D0-804560D8 0008+00 s=1 e=0 z=0  None .sdata2    @2196                                                        */

@@ -14,8 +14,8 @@ lbl_8067ED90:
 /* 8067EDC0  7C BF 2B 78 */	mr r31, r5
 /* 8067EDC4  FF E0 10 90 */	fmr f31, f2
 /* 8067EDC8  80 63 05 B8 */	lwz r3, 0x5b8(r3)
-/* 8067EDCC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8067EDD0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8067EDCC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8067EDD0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8067EDD4  3C A5 00 02 */	addis r5, r5, 2
 /* 8067EDD8  38 C0 00 80 */	li r6, 0x80
 /* 8067EDDC  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -244,8 +244,8 @@ lbl_805B2D6C:
 /* 805B2EAC  EC 01 00 28 */	fsubs f0, f1, f0
 /* 805B2EB0  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)
 lbl_805B2EB4:
-/* 805B2EB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B2EB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805B2EB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B2EB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805B2EBC  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 805B2EC0  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 805B2EC4  88 1F 04 E2 */	lbz r0, 0x4e2(r31)

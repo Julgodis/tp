@@ -15,8 +15,8 @@ lbl_804DB828:
 /* 804DB85C  3B C4 D5 DC */	addi r30, r4, lit_3766@l
 /* 804DB860  4B FF FF 4D */	bl setFrontBackPos__9daCanoe_cFv
 /* 804DB864  38 75 09 D0 */	addi r3, r21, 0x9d0
-/* 804DB868  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804DB86C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804DB868  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804DB86C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804DB870  3B A4 0F 38 */	addi r29, r4, 0xf38
 /* 804DB874  7F A4 EB 78 */	mr r4, r29
 /* 804DB878  4B B9 B2 34 */	b CrrPos__9dBgS_AcchFR4dBgS
@@ -402,10 +402,10 @@ lbl_804DBDDC:
 /* 804DBDE8  38 03 FF FF */	addi r0, r3, -1
 /* 804DBDEC  B0 15 14 5C */	sth r0, 0x145c(r21)
 lbl_804DBDF0:
-/* 804DBDF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DBDF4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 804DBDF8  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
-/* 804DBDFC  88 03 05 6A */	lbz r0, 0x56a(r3)	/* effective address: 8040056A */
+/* 804DBDF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DBDF4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 804DBDF8  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 804DBDFC  88 03 05 6A */	lbz r0, 0x56a(r3)
 /* 804DBE00  28 00 00 2D */	cmplwi r0, 0x2d
 /* 804DBE04  40 82 01 C8 */	bne lbl_804DBFCC
 /* 804DBE08  3A 60 00 00 */	li r19, 0
@@ -493,7 +493,7 @@ lbl_804DBF1C:
 /* 804DBF38  90 03 05 8C */	stw r0, 0x58c(r3)
 /* 804DBF3C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 804DBF40  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 804DBF44  88 83 00 BC */	lbz r4, 0xbc(r3)	/* effective address: 80430244 */
+/* 804DBF44  88 83 00 BC */	lbz r4, 0xbc(r3)
 /* 804DBF48  28 04 00 00 */	cmplwi r4, 0
 /* 804DBF4C  41 82 00 48 */	beq lbl_804DBF94
 /* 804DBF50  38 04 FF FF */	addi r0, r4, -1
@@ -502,7 +502,7 @@ lbl_804DBF1C:
 /* 804DBF5C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 804DBF60  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804DBF64  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804DBF68  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804DBF68  80 63 00 00 */	lwz r3, 0(r3)
 /* 804DBF6C  38 81 00 10 */	addi r4, r1, 0x10
 /* 804DBF70  38 A0 00 00 */	li r5, 0
 /* 804DBF74  38 C0 00 00 */	li r6, 0

@@ -8,8 +8,8 @@ lbl_8045EFCC:
 /* 8045EFE4  3B 40 00 00 */	li r26, 0
 /* 8045EFE8  3B E0 00 00 */	li r31, 0
 /* 8045EFEC  3B C0 00 00 */	li r30, 0
-/* 8045EFF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045EFF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045EFF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045EFF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045EFF8  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8045EFFC  3B 80 00 FF */	li r28, 0xff
 /* 8045F000  3C 60 80 46 */	lis r3, data_80460898@ha

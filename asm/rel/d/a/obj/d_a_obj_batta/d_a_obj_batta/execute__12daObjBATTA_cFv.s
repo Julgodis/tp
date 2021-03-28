@@ -76,8 +76,8 @@ lbl_80BABEDC:
 /* 80BABF3C  C0 1F 04 EC */	lfs f0, 0x4ec(r31)
 /* 80BABF40  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80BABF44  4B 6C 37 C4 */	b SetR__8cM3dGSphFf
-/* 80BABF48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BABF4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BABF48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BABF4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BABF50  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80BABF54  38 9F 08 80 */	addi r4, r31, 0x880
 /* 80BABF58  4B 6B 8C 50 */	b Set__4cCcSFP8cCcD_Obj

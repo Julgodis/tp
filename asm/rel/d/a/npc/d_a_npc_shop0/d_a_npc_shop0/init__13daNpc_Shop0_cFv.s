@@ -43,11 +43,11 @@ lbl_80AEB22C:
 /* 80AEB2D0  B0 1F 09 E8 */	sth r0, 0x9e8(r31)
 /* 80AEB2D4  3C 60 80 AF */	lis r3, lit_4087@ha
 /* 80AEB2D8  38 83 BC 80 */	addi r4, r3, lit_4087@l
-/* 80AEB2DC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AEBC80 */
-/* 80AEB2E0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AEBC84 */
+/* 80AEB2DC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AEB2E0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AEB2E4  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80AEB2E8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80AEB2EC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AEBC88 */
+/* 80AEB2EC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AEB2F0  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80AEB2F4  7F E3 FB 78 */	mr r3, r31
 /* 80AEB2F8  38 81 00 10 */	addi r4, r1, 0x10

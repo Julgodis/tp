@@ -32,7 +32,7 @@ lbl_80D442F8:
 /* 80D4432C  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80D44330  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D44334  38 84 4B C4 */	addi r4, r4, l_arcName@l
-/* 80D44338  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D44BC4 */
+/* 80D44338  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D4433C  4B 2E 8B 80 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D44340  7C 7D 1B 78 */	mr r29, r3
 /* 80D44344  2C 1D 00 04 */	cmpwi r29, 4

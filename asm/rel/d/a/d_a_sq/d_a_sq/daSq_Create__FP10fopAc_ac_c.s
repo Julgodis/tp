@@ -154,7 +154,7 @@ lbl_805A0E64:
 /* 805A0E80  38 00 FF FF */	li r0, -1
 /* 805A0E84  3C 60 80 5A */	lis r3, l_HIO@ha
 /* 805A0E88  38 63 13 40 */	addi r3, r3, l_HIO@l
-/* 805A0E8C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 805A1344 */
+/* 805A0E8C  98 03 00 04 */	stb r0, 4(r3)
 lbl_805A0E90:
 /* 805A0E90  80 1B 04 9C */	lwz r0, 0x49c(r27)
 /* 805A0E94  60 00 01 00 */	ori r0, r0, 0x100

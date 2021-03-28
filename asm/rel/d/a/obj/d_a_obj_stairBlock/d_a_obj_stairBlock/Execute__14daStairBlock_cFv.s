@@ -14,10 +14,10 @@ lbl_80CE88A0:
 /* 80CE88D0  3B C0 00 00 */	li r30, 0
 /* 80CE88D4  3B A0 00 00 */	li r29, 0
 /* 80CE88D8  3B 80 00 00 */	li r28, 0
-/* 80CE88DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE88E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE88DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE88E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE88E4  3B 43 23 3C */	addi r26, r3, 0x233c
-/* 80CE88E8  C3 FB 01 0C */	lfs f31, 0x10c(r27)	/* effective address: 80CE8EC8 */
+/* 80CE88E8  C3 FB 01 0C */	lfs f31, 0x10c(r27)
 /* 80CE88EC  3C 60 80 CF */	lis r3, l_HIO@ha
 /* 80CE88F0  3A E3 8F D4 */	addi r23, r3, l_HIO@l
 lbl_80CE88F4:
@@ -53,7 +53,7 @@ lbl_80CE88F4:
 /* 80CE8968  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE896C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CE8970  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CE8974  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CE8974  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE8978  38 81 00 10 */	addi r4, r1, 0x10
 /* 80CE897C  38 A1 00 2C */	addi r5, r1, 0x2c
 /* 80CE8980  38 C0 00 00 */	li r6, 0
@@ -118,7 +118,7 @@ lbl_80CE89B0:
 /* 80CE8A64  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CE8A68  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CE8A6C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CE8A70  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CE8A70  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE8A74  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CE8A78  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80CE8A7C  38 C0 00 00 */	li r6, 0
@@ -137,7 +137,7 @@ lbl_80CE89B0:
 /* 80CE8AB0  90 01 00 08 */	stw r0, 8(r1)
 /* 80CE8AB4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CE8AB8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CE8ABC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CE8ABC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE8AC0  38 81 00 08 */	addi r4, r1, 8
 /* 80CE8AC4  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80CE8AC8  38 C0 00 00 */	li r6, 0

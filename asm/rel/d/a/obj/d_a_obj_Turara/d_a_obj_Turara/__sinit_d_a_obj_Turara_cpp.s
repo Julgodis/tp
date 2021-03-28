@@ -19,10 +19,10 @@ lbl_80B9E620:
 /* 80B9E664  38 00 00 06 */	li r0, 6
 /* 80B9E668  7C 09 03 A6 */	mtctr r0
 lbl_80B9E66C:
-/* 80B9E66C  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80B9E908 */
-/* 80B9E670  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80B9E90C */
-/* 80B9E674  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80B9E99C */
-/* 80B9E678  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80B9E9A0 */
+/* 80B9E66C  80 64 00 04 */	lwz r3, 4(r4)
+/* 80B9E670  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80B9E674  90 65 00 04 */	stw r3, 4(r5)
+/* 80B9E678  94 05 00 08 */	stwu r0, 8(r5)
 /* 80B9E67C  42 00 FF F0 */	bdnz lbl_80B9E66C
 /* 80B9E680  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80B9E684  7C 08 03 A6 */	mtlr r0

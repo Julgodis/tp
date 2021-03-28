@@ -7,7 +7,7 @@ lbl_80C48BD8:
 /* 80C48BEC  7C 7E 1B 78 */	mr r30, r3
 /* 80C48BF0  3C 80 80 C5 */	lis r4, l_bmd@ha
 /* 80C48BF4  3B E4 9C A8 */	addi r31, r4, l_bmd@l
-/* 80C48BF8  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80C49CFC */
+/* 80C48BF8  C0 1F 00 54 */	lfs f0, 0x54(r31)
 /* 80C48BFC  D0 03 05 FC */	stfs f0, 0x5fc(r3)
 /* 80C48C00  D0 03 05 2C */	stfs f0, 0x52c(r3)
 /* 80C48C04  D0 03 05 30 */	stfs f0, 0x530(r3)
@@ -35,7 +35,7 @@ lbl_80C48C3C:
 /* 80C48C54  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C48C58  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C48C5C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C48C60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C48C60  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C48C64  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C48C68  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80C48C6C  38 C0 00 00 */	li r6, 0
@@ -62,7 +62,7 @@ lbl_80C48C8C:
 /* 80C48CBC  90 01 00 08 */	stw r0, 8(r1)
 /* 80C48CC0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C48CC4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C48CC8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C48CC8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C48CCC  38 81 00 08 */	addi r4, r1, 8
 /* 80C48CD0  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80C48CD4  38 C0 00 00 */	li r6, 0

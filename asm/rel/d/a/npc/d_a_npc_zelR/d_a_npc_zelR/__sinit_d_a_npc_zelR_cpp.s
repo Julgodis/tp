@@ -6,12 +6,12 @@ lbl_80B7190C:
 /* 80B7191C  38 A3 1C AC */	addi r5, r3, mCutList__12daNpc_ZelR_c@l
 /* 80B71920  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B71924  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B71928  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B7192C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80B71930  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80B71CAC */
-/* 80B71934  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80B71CB0 */
-/* 80B71938  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80B7193C  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80B71CB4 */
+/* 80B71928  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B7192C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B71930  90 65 00 00 */	stw r3, 0(r5)
+/* 80B71934  90 05 00 04 */	stw r0, 4(r5)
+/* 80B71938  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B7193C  90 05 00 08 */	stw r0, 8(r5)
 /* 80B71940  3C 60 80 B7 */	lis r3, __vt__18daNpc_ZelR_Param_c@ha
 /* 80B71944  38 03 1E 98 */	addi r0, r3, __vt__18daNpc_ZelR_Param_c@l
 /* 80B71948  3C 60 80 B7 */	lis r3, l_HIO@ha

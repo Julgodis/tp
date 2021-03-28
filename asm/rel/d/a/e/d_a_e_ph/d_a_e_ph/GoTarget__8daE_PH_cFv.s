@@ -17,8 +17,8 @@ lbl_8073E22C:
 /* 8073E268  C0 3E 06 34 */	lfs f1, 0x634(r30)
 /* 8073E26C  3C 80 80 74 */	lis r4, l_HIO@ha
 /* 8073E270  38 84 1D D0 */	addi r4, r4, l_HIO@l
-/* 8073E274  C0 44 00 18 */	lfs f2, 0x18(r4)	/* effective address: 80741DE8 */
-/* 8073E278  C0 7F 00 88 */	lfs f3, 0x88(r31)	/* effective address: 80741C7C */
+/* 8073E274  C0 44 00 18 */	lfs f2, 0x18(r4)
+/* 8073E278  C0 7F 00 88 */	lfs f3, 0x88(r31)
 /* 8073E27C  4B B3 17 C0 */	b cLib_addCalc2__FPffff
 /* 8073E280  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 8073E284  C0 3E 06 38 */	lfs f1, 0x638(r30)

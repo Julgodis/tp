@@ -7,7 +7,7 @@ lbl_809E4F90:
 /* 809E4FA4  40 82 00 24 */	bne lbl_809E4FC8
 /* 809E4FA8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 809E4FAC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 809E4FB0  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 809E4FB0  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 809E4FB4  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 809E4FB8  28 03 00 00 */	cmplwi r3, 0
 /* 809E4FBC  41 82 00 0C */	beq lbl_809E4FC8

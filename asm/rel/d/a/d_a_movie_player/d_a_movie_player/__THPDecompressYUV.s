@@ -6,21 +6,21 @@ lbl_80873C44:
 /* 80873C54  93 C1 00 08 */	stw r30, 8(r1)
 /* 80873C58  3C C0 80 88 */	lis r6, __THPInfo@ha
 /* 80873C5C  38 E6 9B C4 */	addi r7, r6, __THPInfo@l
-/* 80873C60  80 C7 00 00 */	lwz r6, 0(r7)	/* effective address: 80879BC4 */
-/* 80873C64  90 66 06 B0 */	stw r3, 0x6b0(r6)	/* effective address: 808806B0 */
-/* 80873C68  80 67 00 00 */	lwz r3, 0(r7)	/* effective address: 80879BC4 */
+/* 80873C60  80 C7 00 00 */	lwz r6, 0(r7)
+/* 80873C64  90 66 06 B0 */	stw r3, 0x6b0(r6)
+/* 80873C68  80 67 00 00 */	lwz r3, 0(r7)
 /* 80873C6C  90 83 06 B4 */	stw r4, 0x6b4(r3)
-/* 80873C70  80 67 00 00 */	lwz r3, 0(r7)	/* effective address: 80879BC4 */
+/* 80873C70  80 67 00 00 */	lwz r3, 0(r7)
 /* 80873C74  90 A3 06 B8 */	stw r5, 0x6b8(r3)
-/* 80873C78  80 67 00 00 */	lwz r3, 0(r7)	/* effective address: 80879BC4 */
+/* 80873C78  80 67 00 00 */	lwz r3, 0(r7)
 /* 80873C7C  A3 E3 06 98 */	lhz r31, 0x698(r3)
 /* 80873C80  A3 C3 06 94 */	lhz r30, 0x694(r3)
 /* 80873C84  48 00 00 C5 */	bl __THPGQRSetup
 /* 80873C88  4B FF FD 7D */	bl __THPPrepBitStream
 /* 80873C8C  3C 60 80 88 */	lis r3, __THPInfo@ha
 /* 80873C90  38 63 9B C4 */	addi r3, r3, __THPInfo@l
-/* 80873C94  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80879BC4 */
-/* 80873C98  A0 03 06 92 */	lhz r0, 0x692(r3)	/* effective address: 8087A256 */
+/* 80873C94  80 63 00 00 */	lwz r3, 0(r3)
+/* 80873C98  A0 03 06 92 */	lhz r0, 0x692(r3)
 /* 80873C9C  28 00 02 00 */	cmplwi r0, 0x200
 /* 80873CA0  40 82 00 28 */	bne lbl_80873CC8
 /* 80873CA4  28 1E 01 C0 */	cmplwi r30, 0x1c0

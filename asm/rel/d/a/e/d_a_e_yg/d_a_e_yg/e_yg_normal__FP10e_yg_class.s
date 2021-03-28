@@ -9,7 +9,7 @@ lbl_807F8DD8:
 /* 807F8DF4  7C 7E 1B 78 */	mr r30, r3
 /* 807F8DF8  3C 80 80 80 */	lis r4, lit_3801@ha
 /* 807F8DFC  3B E4 CC B4 */	addi r31, r4, lit_3801@l
-/* 807F8E00  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 807FCCB8 */
+/* 807F8E00  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 807F8E04  3B A0 00 01 */	li r29, 1
 /* 807F8E08  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807F8E0C  2C 00 00 02 */	cmpwi r0, 2
@@ -54,7 +54,7 @@ lbl_807F8E40:
 lbl_807F8EA0:
 /* 807F8EA0  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 807F8EA4  38 63 D0 6C */	addi r3, r3, l_HIO@l
-/* 807F8EA8  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 807FD078 */
+/* 807F8EA8  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 807F8EAC  80 7E 05 CC */	lwz r3, 0x5cc(r30)
 /* 807F8EB0  38 63 00 0C */	addi r3, r3, 0xc
 /* 807F8EB4  C0 3F 00 08 */	lfs f1, 8(r31)
@@ -144,7 +144,7 @@ lbl_807F8FE8:
 /* 807F8FEC  C0 3F 00 88 */	lfs f1, 0x88(r31)
 /* 807F8FF0  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 807F8FF4  38 63 D0 6C */	addi r3, r3, l_HIO@l
-/* 807F8FF8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807FD078 */
+/* 807F8FF8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807F8FFC  EF E1 00 32 */	fmuls f31, f1, f0
 /* 807F9000  80 7E 05 CC */	lwz r3, 0x5cc(r30)
 /* 807F9004  38 63 00 0C */	addi r3, r3, 0xc
@@ -191,9 +191,9 @@ lbl_807F9088:
 /* 807F909C  4B 82 07 5C */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 807F90A0  28 03 00 00 */	cmplwi r3, 0
 /* 807F90A4  40 82 00 1C */	bne lbl_807F90C0
-/* 807F90A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807F90AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807F90B0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 807F90A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807F90AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807F90B0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 807F90B4  28 00 00 00 */	cmplwi r0, 0
 /* 807F90B8  41 82 00 08 */	beq lbl_807F90C0
 /* 807F90BC  C3 FF 00 04 */	lfs f31, 4(r31)
@@ -209,7 +209,7 @@ lbl_807F90C0:
 /* 807F90E0  C0 7F 00 90 */	lfs f3, 0x90(r31)
 /* 807F90E4  3C 80 80 80 */	lis r4, l_HIO@ha
 /* 807F90E8  38 84 D0 6C */	addi r4, r4, l_HIO@l
-/* 807F90EC  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 807FD078 */
+/* 807F90EC  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 807F90F0  EC 63 00 32 */	fmuls f3, f3, f0
 /* 807F90F4  4B A7 69 48 */	b cLib_addCalc2__FPffff
 /* 807F90F8  88 1E 0B A6 */	lbz r0, 0xba6(r30)

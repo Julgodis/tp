@@ -6,7 +6,7 @@ lbl_8045E1EC:
 /* 8045E1FC  38 84 E6 64 */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 8045E200  3C A0 80 46 */	lis r5, data_8045E7D0@ha
 /* 8045E204  38 E5 E7 D0 */	addi r7, r5, data_8045E7D0@l
-/* 8045E208  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 8045E7D0 */
+/* 8045E208  88 07 00 00 */	lbz r0, 0(r7)
 /* 8045E20C  7C 00 07 75 */	extsb. r0, r0
 /* 8045E210  40 82 00 A0 */	bne lbl_8045E2B0
 /* 8045E214  80 A4 00 6C */	lwz r5, 0x6c(r4)

@@ -6,9 +6,9 @@ lbl_8086CD70:
 /* 8086CD80  4B AF 54 3C */	b _savegpr_21
 /* 8086CD84  3C 80 80 87 */	lis r4, lit_3829@ha
 /* 8086CD88  3B A4 00 94 */	addi r29, r4, lit_3829@l
-/* 8086CD8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8086CD90  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 8086CD94  83 9E 5D AC */	lwz r28, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 8086CD8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8086CD90  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 8086CD94  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 8086CD98  3B 63 3F A4 */	addi r27, r3, 0x3fa4
 /* 8086CD9C  3B 00 00 00 */	li r24, 0
 /* 8086CDA0  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
@@ -26,8 +26,8 @@ lbl_8086CDB8:
 /* 8086CDCC  C0 1C 04 D8 */	lfs f0, 0x4d8(r28)
 /* 8086CDD0  EC 01 00 28 */	fsubs f0, f1, f0
 /* 8086CDD4  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8086CDD8  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
-/* 8086CDDC  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 803E0580 */
+/* 8086CDD8  80 7E 5D AC */	lwz r3, 0x5dac(r30)
+/* 8086CDDC  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 8086CDE0  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 8086CDE4  41 82 00 B4 */	beq lbl_8086CE98
 /* 8086CDE8  EC 22 00 B2 */	fmuls f1, f2, f2

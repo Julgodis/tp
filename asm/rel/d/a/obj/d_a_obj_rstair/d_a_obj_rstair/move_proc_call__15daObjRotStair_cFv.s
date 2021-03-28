@@ -6,7 +6,7 @@ lbl_80CC1BA4:
 /* 80CC1BB4  38 E4 27 3C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CC1BB8  3C 80 80 CC */	lis r4, struct_80CC2880+0x0@ha
 /* 80CC1BBC  38 C4 28 80 */	addi r6, r4, struct_80CC2880+0x0@l
-/* 80CC1BC0  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CC2880 */
+/* 80CC1BC0  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CC1BC4  7C 00 07 75 */	extsb. r0, r0
 /* 80CC1BC8  40 82 00 40 */	bne lbl_80CC1C08
 /* 80CC1BCC  80 87 00 30 */	lwz r4, 0x30(r7)

@@ -40,15 +40,15 @@ extern "C" extern u8 data_80450B5C[4];
 /* ############################################################################################## */
 /* 803C99A0-803C99C8 0024+04 s=2 e=0 z=0  None .data      __vt__12JAISoundInfo                                         */
 SECTION_DATA static void* __vt__12JAISoundInfo[9 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)__dt__12JAISoundInfoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JAISoundInfoFv,
 	/* padding */
 	NULL,
 };

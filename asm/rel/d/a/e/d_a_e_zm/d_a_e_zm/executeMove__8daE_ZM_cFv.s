@@ -31,9 +31,9 @@ lbl_80830A0C:
 /* 80830A4C  90 1F 06 60 */	stw r0, 0x660(r31)
 lbl_80830A50:
 /* 80830A50  7F E3 FB 78 */	mr r3, r31
-/* 80830A54  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80830A58  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80830A5C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80830A54  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80830A58  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80830A5C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80830A60  4B 7E 9C B0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80830A64  7C 64 1B 78 */	mr r4, r3
 /* 80830A68  38 7F 04 DE */	addi r3, r31, 0x4de
@@ -45,7 +45,7 @@ lbl_80830A50:
 /* 80830A80  40 82 00 24 */	bne lbl_80830AA4
 /* 80830A84  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 80830A88  38 63 2F 90 */	addi r3, r3, l_HIO@l
-/* 80830A8C  A8 03 00 16 */	lha r0, 0x16(r3)	/* effective address: 80832FA6 */
+/* 80830A8C  A8 03 00 16 */	lha r0, 0x16(r3)
 /* 80830A90  98 1F 07 25 */	stb r0, 0x725(r31)
 /* 80830A94  7F E3 FB 78 */	mr r3, r31
 /* 80830A98  38 80 00 03 */	li r4, 3

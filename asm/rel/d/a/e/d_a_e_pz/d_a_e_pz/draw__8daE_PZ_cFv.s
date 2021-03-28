@@ -34,14 +34,14 @@ lbl_8075861C:
 /* 8075862C  88 1F 08 42 */	lbz r0, 0x842(r31)
 /* 80758630  28 00 00 00 */	cmplwi r0, 0
 /* 80758634  41 82 00 84 */	beq lbl_807586B8
-/* 80758638  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8075863C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80758640  80 04 5F 88 */	lwz r0, 0x5f88(r4)	/* effective address: 8040C148 */
+/* 80758638  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8075863C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80758640  80 04 5F 88 */	lwz r0, 0x5f88(r4)
 /* 80758644  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80758648  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 8075864C  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80758650  80 04 5F 8C */	lwz r0, 0x5f8c(r4)	/* effective address: 8040C14C */
-/* 80758654  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 8075864C  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 80758650  80 04 5F 8C */	lwz r0, 0x5f8c(r4)
+/* 80758654  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80758658  80 7F 05 BC */	lwz r3, 0x5bc(r31)
 /* 8075865C  80 83 00 04 */	lwz r4, 4(r3)
 /* 80758660  80 7F 05 C0 */	lwz r3, 0x5c0(r31)
@@ -59,11 +59,11 @@ lbl_8075861C:
 /* 80758690  4B 8B 51 18 */	b entry__13mDoExt_brkAnmFP16J3DMaterialTablef
 /* 80758694  80 7F 05 BC */	lwz r3, 0x5bc(r31)
 /* 80758698  4B 8B 56 2C */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 8075869C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807586A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807586A4  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8075869C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807586A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807586A4  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 807586A8  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 807586AC  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 807586AC  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 807586B0  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 807586B4  48 00 00 28 */	b lbl_807586DC
 lbl_807586B8:

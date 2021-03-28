@@ -17,7 +17,7 @@ lbl_806CDD8C:
 /* 806CDDC8  C0 3F 00 64 */	lfs f1, 0x64(r31)
 /* 806CDDCC  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CDDD0  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CDDD4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 806D1154 */
+/* 806CDDD4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806CDDD8  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CDDDC  FC 00 00 1E */	fctiwz f0, f0
 /* 806CDDE0  D8 01 00 08 */	stfd f0, 8(r1)
@@ -28,7 +28,7 @@ lbl_806CDDF0:
 /* 806CDDF0  C0 3F 00 64 */	lfs f1, 0x64(r31)
 /* 806CDDF4  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CDDF8  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CDDFC  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 806D1158 */
+/* 806CDDFC  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 806CDE00  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CDE04  FC 00 00 1E */	fctiwz f0, f0
 /* 806CDE08  D8 01 00 08 */	stfd f0, 8(r1)
@@ -38,7 +38,7 @@ lbl_806CDE14:
 /* 806CDE14  80 9E 06 8C */	lwz r4, 0x68c(r30)
 /* 806CDE18  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CDE1C  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CDE20  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 806D1160 */
+/* 806CDE20  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 806CDE24  FC 00 00 1E */	fctiwz f0, f0
 /* 806CDE28  D8 01 00 08 */	stfd f0, 8(r1)
 /* 806CDE2C  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -54,7 +54,7 @@ lbl_806CDE14:
 /* 806CDE54  90 01 00 10 */	stw r0, 0x10(r1)
 /* 806CDE58  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 806CDE5C  EC 20 08 28 */	fsubs f1, f0, f1
-/* 806CDE60  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 806D115C */
+/* 806CDE60  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 806CDE64  EC 01 00 2A */	fadds f0, f1, f0
 /* 806CDE68  FC 00 00 1E */	fctiwz f0, f0
 /* 806CDE6C  D8 01 00 18 */	stfd f0, 0x18(r1)

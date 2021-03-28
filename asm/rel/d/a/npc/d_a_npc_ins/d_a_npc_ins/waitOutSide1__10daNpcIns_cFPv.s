@@ -253,9 +253,9 @@ lbl_80A1073C:
 /* 80A10758  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 80A1075C  7D 89 03 A6 */	mtctr r12
 /* 80A10760  4E 80 04 21 */	bctrl 
-/* 80A10764  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A10768  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A1076C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80A10764  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A10768  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A1076C  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A10770  28 00 00 00 */	cmplwi r0, 0
 /* 80A10774  41 82 01 74 */	beq lbl_80A108E8
 /* 80A10778  A0 1D 00 F8 */	lhz r0, 0xf8(r29)

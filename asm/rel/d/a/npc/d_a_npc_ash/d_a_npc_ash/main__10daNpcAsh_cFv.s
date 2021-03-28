@@ -17,9 +17,9 @@ lbl_8095BF6C:
 /* 8095BFA8  4B A0 60 DC */	b __ptmf_scall
 /* 8095BFAC  60 00 00 00 */	nop 
 lbl_8095BFB0:
-/* 8095BFB0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8095BFB4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8095BFB8  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8095BFB0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8095BFB4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8095BFB8  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8095BFBC  28 00 00 00 */	cmplwi r0, 0
 /* 8095BFC0  41 82 00 30 */	beq lbl_8095BFF0
 /* 8095BFC4  A0 1E 00 F8 */	lhz r0, 0xf8(r30)

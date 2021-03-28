@@ -9,7 +9,7 @@ lbl_80BF9BC0:
 /* 80BF9BDC  3B E3 A9 D0 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80BF9BE0  3C 60 80 C0 */	lis r3, struct_80BFAFD0+0x0@ha
 /* 80BF9BE4  38 A3 AF D0 */	addi r5, r3, struct_80BFAFD0+0x0@l
-/* 80BF9BE8  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80BFAFD0 */
+/* 80BF9BE8  88 05 00 00 */	lbz r0, 0(r5)
 /* 80BF9BEC  7C 00 07 75 */	extsb. r0, r0
 /* 80BF9BF0  40 82 00 58 */	bne lbl_80BF9C48
 /* 80BF9BF4  80 7F 00 8C */	lwz r3, 0x8c(r31)
@@ -128,7 +128,7 @@ lbl_80BF9D8C:
 /* 80BF9DA4  C0 25 A9 B4 */	lfs f1, lit_3969@l(r5)
 /* 80BF9DA8  3C A0 80 C0 */	lis r5, l_HIO@ha
 /* 80BF9DAC  38 A5 AB F4 */	addi r5, r5, l_HIO@l
-/* 80BF9DB0  C0 45 00 08 */	lfs f2, 8(r5)	/* effective address: 80BFABFC */
+/* 80BF9DB0  C0 45 00 08 */	lfs f2, 8(r5)
 /* 80BF9DB4  FC 60 08 90 */	fmr f3, f1
 /* 80BF9DB8  4B 67 5D 00 */	b cLib_addCalcPos__FP4cXyzRC4cXyzfff
 lbl_80BF9DBC:

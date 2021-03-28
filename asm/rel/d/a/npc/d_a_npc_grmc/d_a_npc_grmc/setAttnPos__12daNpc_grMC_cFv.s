@@ -7,11 +7,11 @@ lbl_809D8410:
 /* 809D8424  7C 7E 1B 78 */	mr r30, r3
 /* 809D8428  3C 60 80 9E */	lis r3, m__18daNpc_grMC_Param_c@ha
 /* 809D842C  3B E3 9D 70 */	addi r31, r3, m__18daNpc_grMC_Param_c@l
-/* 809D8430  C0 1F 00 CC */	lfs f0, 0xcc(r31)	/* effective address: 809D9E3C */
+/* 809D8430  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 809D8434  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 809D8438  C0 1F 00 D0 */	lfs f0, 0xd0(r31)	/* effective address: 809D9E40 */
+/* 809D8438  C0 1F 00 D0 */	lfs f0, 0xd0(r31)
 /* 809D843C  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 809D8440  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 809D9E18 */
+/* 809D8440  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 809D8444  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 809D8448  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 809D844C  38 80 00 00 */	li r4, 0

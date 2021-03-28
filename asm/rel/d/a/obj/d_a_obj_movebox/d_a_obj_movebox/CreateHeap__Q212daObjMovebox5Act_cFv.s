@@ -17,8 +17,8 @@ lbl_8047EB48:
 /* 8047EB84  3C 60 80 48 */	lis r3, M_arcname__Q212daObjMovebox5Act_c@ha
 /* 8047EB88  38 63 11 04 */	addi r3, r3, M_arcname__Q212daObjMovebox5Act_c@l
 /* 8047EB8C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8047EB90  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8047EB94  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8047EB90  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8047EB94  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8047EB98  3C A5 00 02 */	addis r5, r5, 2
 /* 8047EB9C  38 C0 00 80 */	li r6, 0x80
 /* 8047EBA0  38 A5 C2 F8 */	addi r5, r5, -15624

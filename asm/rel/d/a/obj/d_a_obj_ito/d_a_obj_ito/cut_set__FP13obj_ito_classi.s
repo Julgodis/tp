@@ -304,7 +304,7 @@ lbl_8047BEC8:
 /* 8047BF4C  90 1E 05 5C */	stw r0, 0x55c(r30)
 /* 8047BF50  3C 60 80 48 */	lis r3, l_HIO@ha
 /* 8047BF54  38 63 D9 D8 */	addi r3, r3, l_HIO@l
-/* 8047BF58  A8 03 00 10 */	lha r0, 0x10(r3)	/* effective address: 8047D9E8 */
+/* 8047BF58  A8 03 00 10 */	lha r0, 0x10(r3)
 /* 8047BF5C  2C 00 00 00 */	cmpwi r0, 0
 /* 8047BF60  40 82 00 0C */	bne lbl_8047BF6C
 /* 8047BF64  38 00 00 01 */	li r0, 1

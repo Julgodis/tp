@@ -5,9 +5,9 @@ lbl_80CFB464:
 /* 80CFB470  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 80CFB474  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80CFB478  7C 7E 1B 78 */	mr r30, r3
-/* 80CFB47C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFB480  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CFB484  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CFB47C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFB480  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CFB484  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80CFB488  80 DE 0A 74 */	lwz r6, 0xa74(r30)
 /* 80CFB48C  38 61 00 08 */	addi r3, r1, 8
 /* 80CFB490  38 86 00 34 */	addi r4, r6, 0x34

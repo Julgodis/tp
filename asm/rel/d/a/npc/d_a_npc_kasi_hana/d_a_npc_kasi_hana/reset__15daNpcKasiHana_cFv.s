@@ -44,11 +44,11 @@ lbl_80A1D080:
 /* 80A1D08C  90 BF 14 34 */	stw r5, 0x1434(r31)
 /* 80A1D090  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A1D094  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A1D098  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A1D09C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A1D098  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1D09C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1D0A0  90 7F 14 08 */	stw r3, 0x1408(r31)
 /* 80A1D0A4  90 1F 14 0C */	stw r0, 0x140c(r31)
-/* 80A1D0A8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A1D0A8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1D0AC  90 1F 14 10 */	stw r0, 0x1410(r31)
 /* 80A1D0B0  38 80 FF FF */	li r4, -1
 /* 80A1D0B4  B0 9F 14 3C */	sth r4, 0x143c(r31)
@@ -104,7 +104,7 @@ lbl_80A1D080:
 /* 80A1D17C  7F E3 FB 78 */	mr r3, r31
 /* 80A1D180  3C 80 80 A2 */	lis r4, l_arcNames@ha
 /* 80A1D184  38 84 14 B4 */	addi r4, r4, l_arcNames@l
-/* 80A1D188  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80A214B4 */
+/* 80A1D188  80 84 00 00 */	lwz r4, 0(r4)
 /* 80A1D18C  38 A0 00 08 */	li r5, 8
 /* 80A1D190  4B 73 59 D8 */	b getTexPtrnAnmP__8daNpcF_cFPci
 /* 80A1D194  7C 64 1B 78 */	mr r4, r3
@@ -132,11 +132,11 @@ lbl_80A1D1DC:
 /* 80A1D1E8  98 1F 14 43 */	stb r0, 0x1443(r31)
 /* 80A1D1EC  3C 60 80 A2 */	lis r3, lit_5084@ha
 /* 80A1D1F0  38 83 15 A8 */	addi r4, r3, lit_5084@l
-/* 80A1D1F4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A215A8 */
-/* 80A1D1F8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A215AC */
+/* 80A1D1F4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1D1F8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1D1FC  90 61 00 08 */	stw r3, 8(r1)
 /* 80A1D200  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A1D204  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A215B0 */
+/* 80A1D204  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1D208  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1D20C  7F E3 FB 78 */	mr r3, r31
 /* 80A1D210  38 81 00 08 */	addi r4, r1, 8

@@ -11,8 +11,8 @@ lbl_8058D158:
 /* 8058D17C  3C 60 80 59 */	lis r3, M_arcname__Q211daObjLadder5Act_c@ha
 /* 8058D180  38 63 DD 74 */	addi r3, r3, M_arcname__Q211daObjLadder5Act_c@l
 /* 8058D184  7C 84 02 AE */	lhax r4, r4, r0
-/* 8058D188  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8058D18C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8058D188  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8058D18C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8058D190  3C A5 00 02 */	addis r5, r5, 2
 /* 8058D194  38 C0 00 80 */	li r6, 0x80
 /* 8058D198  38 A5 C2 F8 */	addi r5, r5, -15624

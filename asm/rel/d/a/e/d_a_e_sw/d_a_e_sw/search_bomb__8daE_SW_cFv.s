@@ -8,10 +8,10 @@ lbl_807A7C50:
 /* 807A7C68  3C 60 80 7B */	lis r3, lit_1109@ha
 /* 807A7C6C  3B E3 01 B8 */	addi r31, r3, lit_1109@l
 /* 807A7C70  38 00 00 00 */	li r0, 0
-/* 807A7C74  90 1F 00 40 */	stw r0, 0x40(r31)	/* effective address: 807B01F8 */
+/* 807A7C74  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 807A7C78  38 7F 00 58 */	addi r3, r31, 0x58
-/* 807A7C7C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807B021C */
-/* 807A7C80  D0 1F 00 44 */	stfs f0, 0x44(r31)	/* effective address: 807B01FC */
+/* 807A7C7C  C0 03 00 0C */	lfs f0, 0xc(r3)
+/* 807A7C80  D0 1F 00 44 */	stfs f0, 0x44(r31)
 /* 807A7C84  3C 60 80 7A */	lis r3, s_b_sub__FPvPv@ha
 /* 807A7C88  38 63 7B 9C */	addi r3, r3, s_b_sub__FPvPv@l
 /* 807A7C8C  7F C4 F3 78 */	mr r4, r30

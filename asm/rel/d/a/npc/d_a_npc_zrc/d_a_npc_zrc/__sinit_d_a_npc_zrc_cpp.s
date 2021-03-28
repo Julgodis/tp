@@ -15,20 +15,20 @@ lbl_80B93104:
 /* 80B93138  38 A3 39 7C */	addi r5, r3, mEvtCutList__11daNpc_zrC_c@l
 /* 80B9313C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B93140  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B93144  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B93148  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80B9314C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80B9397C */
-/* 80B93150  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80B93980 */
-/* 80B93154  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80B93158  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80B93984 */
+/* 80B93144  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B93148  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B9314C  90 65 00 00 */	stw r3, 0(r5)
+/* 80B93150  90 05 00 04 */	stw r0, 4(r5)
+/* 80B93154  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B93158  90 05 00 08 */	stw r0, 8(r5)
 /* 80B9315C  3C 60 80 B9 */	lis r3, lit_4022@ha
 /* 80B93160  38 83 39 70 */	addi r4, r3, lit_4022@l
-/* 80B93164  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B93970 */
-/* 80B93168  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B93974 */
-/* 80B9316C  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 80B93988 */
-/* 80B93170  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 80B9398C */
-/* 80B93174  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B93978 */
-/* 80B93178  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 80B93990 */
+/* 80B93164  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B93168  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B9316C  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80B93170  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80B93174  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B93178  90 05 00 14 */	stw r0, 0x14(r5)
 /* 80B9317C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80B93180  7C 08 03 A6 */	mtlr r0
 /* 80B93184  38 21 00 10 */	addi r1, r1, 0x10

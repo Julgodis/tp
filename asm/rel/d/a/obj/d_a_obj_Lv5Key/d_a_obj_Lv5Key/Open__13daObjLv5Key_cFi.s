@@ -41,11 +41,11 @@ lbl_80B9BF90:
 /* 80B9BF94  41 82 00 34 */	beq lbl_80B9BFC8
 /* 80B9BF98  3C 60 80 BA */	lis r3, lit_3862@ha
 /* 80B9BF9C  38 83 C9 DC */	addi r4, r3, lit_3862@l
-/* 80B9BFA0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B9C9DC */
-/* 80B9BFA4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B9C9E0 */
+/* 80B9BFA0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B9BFA4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B9BFA8  90 61 00 08 */	stw r3, 8(r1)
 /* 80B9BFAC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B9BFB0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B9C9E4 */
+/* 80B9BFB0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B9BFB4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B9BFB8  7F E3 FB 78 */	mr r3, r31
 /* 80B9BFBC  38 81 00 08 */	addi r4, r1, 8

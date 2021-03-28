@@ -8,8 +8,8 @@ lbl_80A35D88:
 /* 80A35DA0  7C 9A 23 78 */	mr r26, r4
 /* 80A35DA4  3C 60 80 A4 */	lis r3, mCcDObjData__10daNpc_Kn_c@ha
 /* 80A35DA8  3B A3 08 C8 */	addi r29, r3, mCcDObjData__10daNpc_Kn_c@l
-/* 80A35DAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A35DB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A35DAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A35DB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A35DB4  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 80A35DB8  3B E0 00 00 */	li r31, 0
 /* 80A35DBC  3B 80 FF FF */	li r28, -1
@@ -141,9 +141,9 @@ lbl_80A35F04:
 /* 80A35F90  C0 03 0C D0 */	lfs f0, mGroundY__11fopAcM_gc_c@l(r3)
 /* 80A35F94  D0 01 00 18 */	stfs f0, 0x18(r1)
 lbl_80A35F98:
-/* 80A35F98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A35F9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A35FA0  83 63 5D AC */	lwz r27, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80A35F98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A35F9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A35FA0  83 63 5D AC */	lwz r27, 0x5dac(r3)
 /* 80A35FA4  38 7E 04 A8 */	addi r3, r30, 0x4a8
 /* 80A35FA8  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80A35FAC  4B 83 AC 58 */	b cLib_targetAngleY__FPC3VecPC3Vec
@@ -162,9 +162,9 @@ lbl_80A35F98:
 /* 80A35FE0  48 00 00 80 */	b lbl_80A36060
 lbl_80A35FE4:
 /* 80A35FE4  7F C3 F3 78 */	mr r3, r30
-/* 80A35FE8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A35FEC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A35FF0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A35FE8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A35FEC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A35FF0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A35FF4  4B 5E 47 1C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A35FF8  7C 64 1B 78 */	mr r4, r3
 /* 80A35FFC  7F C3 F3 78 */	mr r3, r30
@@ -173,14 +173,14 @@ lbl_80A35FE4:
 lbl_80A36008:
 /* 80A36008  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A3600C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A36010  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A36010  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A36014  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A36018  3C 80 02 00 */	lis r4, 0x0200 /* 0x02000038@ha */
 /* 80A3601C  38 84 00 38 */	addi r4, r4, 0x0038 /* 0x02000038@l */
 /* 80A36020  4B 87 9B 74 */	b bgmStreamPrepare__8Z2SeqMgrFUl
 /* 80A36024  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A36028  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A3602C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A3602C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A36030  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A36034  4B 87 9D E4 */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 80A36038  48 00 00 28 */	b lbl_80A36060
@@ -298,9 +298,9 @@ lbl_80A361B8:
 /* 80A361C8  48 00 01 DC */	b lbl_80A363A4
 lbl_80A361CC:
 /* 80A361CC  7F C3 F3 78 */	mr r3, r30
-/* 80A361D0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A361D4  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 80A361D8  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80A361D0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A361D4  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 80A361D8  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 80A361DC  4B 5E 45 34 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A361E0  A8 9E 0D AE */	lha r4, 0xdae(r30)
 /* 80A361E4  7C 60 07 34 */	extsh r0, r3
@@ -363,7 +363,7 @@ lbl_80A36288:
 /* 80A362BC  98 1E 17 0E */	stb r0, 0x170e(r30)
 /* 80A362C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A362C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A362C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A362C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A362CC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A362D0  38 80 00 32 */	li r4, 0x32
 /* 80A362D4  38 A0 00 00 */	li r5, 0
@@ -381,9 +381,9 @@ lbl_80A362E0:
 /* 80A36300  3B E0 00 01 */	li r31, 1
 lbl_80A36304:
 /* 80A36304  7F C3 F3 78 */	mr r3, r30
-/* 80A36308  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A3630C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A36310  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A36308  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A3630C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A36310  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A36314  4B 5E 43 FC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A36318  7C 64 1B 78 */	mr r4, r3
 /* 80A3631C  38 7E 0D AE */	addi r3, r30, 0xdae
@@ -408,9 +408,9 @@ lbl_80A3633C:
 /* 80A36364  4B FF 79 51 */	bl setSceneChange__10daNpc_Kn_cFi
 lbl_80A36368:
 /* 80A36368  7F C3 F3 78 */	mr r3, r30
-/* 80A3636C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A36370  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A36374  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A3636C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A36370  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A36374  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A36378  4B 5E 43 98 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A3637C  7C 64 1B 78 */	mr r4, r3
 /* 80A36380  38 7E 0D AE */	addi r3, r30, 0xdae

@@ -7,14 +7,14 @@ lbl_80B69330:
 /* 80B69344  7C 7E 1B 78 */	mr r30, r3
 /* 80B69348  3C 60 80 B7 */	lis r3, l_bmdData@ha
 /* 80B6934C  38 83 BD F0 */	addi r4, r3, l_bmdData@l
-/* 80B69350  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B6BDF4 */
+/* 80B69350  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B69354  54 00 10 3A */	slwi r0, r0, 2
 /* 80B69358  3C 60 80 B7 */	lis r3, l_resNameList@ha
 /* 80B6935C  38 63 BE 08 */	addi r3, r3, l_resNameList@l
 /* 80B69360  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80B69364  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B6BDF0 */
-/* 80B69368  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80B6936C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80B69364  80 84 00 00 */	lwz r4, 0(r4)
+/* 80B69368  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80B6936C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80B69370  3C A5 00 02 */	addis r5, r5, 2
 /* 80B69374  38 C0 00 80 */	li r6, 0x80
 /* 80B69378  38 A5 C2 F8 */	addi r5, r5, -15624

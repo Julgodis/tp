@@ -271,7 +271,7 @@ asm void J3DDisplayListObj::endPatch() {
 #pragma pop
 
 
-/* 80312750-80312758 0008+00 s=3 e=16 z=10  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
+/* 80312750-80312758 0008+00 s=3 e=16 z=0  None .text      entry__9J3DPacketFP13J3DDrawBuffer                           */
 bool J3DPacket::entry(J3DDrawBuffer* param_0) {
 	return true;
 }
@@ -303,38 +303,38 @@ SECTION_DATA static u8 sSizeOfDiffered[32] = {
 
 /* 803CD940-803CD954 0014+00 s=2 e=0 z=0  None .data      __vt__14J3DShapePacket                                       */
 SECTION_DATA static void* __vt__14J3DShapePacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__14J3DShapePacketFv,
-	/* 4    */ (void*)__dt__14J3DShapePacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__14J3DShapePacketFv,
+	(void*)__dt__14J3DShapePacketFv,
 };
 
 /* 803CD954-803CD968 0014+00 s=2 e=0 z=0  None .data      __vt__12J3DMatPacket                                         */
 SECTION_DATA static void* __vt__12J3DMatPacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__12J3DMatPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__12J3DMatPacketFv,
-	/* 4    */ (void*)__dt__12J3DMatPacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__12J3DMatPacketFP13J3DDrawBuffer,
+	(void*)draw__12J3DMatPacketFv,
+	(void*)__dt__12J3DMatPacketFv,
 };
 
 /* 803CD968-803CD97C 0014+00 s=2 e=0 z=0  None .data      __vt__13J3DDrawPacket                                        */
 SECTION_DATA static void* __vt__13J3DDrawPacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__13J3DDrawPacketFv,
-	/* 4    */ (void*)__dt__13J3DDrawPacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__13J3DDrawPacketFv,
+	(void*)__dt__13J3DDrawPacketFv,
 };
 
 /* 803CD97C-803CD990 0014+00 s=2 e=34 z=23  None .data      __vt__9J3DPacket                                             */
 SECTION_DATA void* __vt__9J3DPacket[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__9J3DPacketFv,
-	/* 4    */ (void*)__dt__9J3DPacketFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__9J3DPacketFv,
+	(void*)__dt__9J3DPacketFv,
 };
 
 /* 80312778-803127B0 0038+00 s=2 e=0 z=0  None .text      __ct__13J3DDrawPacketFv                                      */

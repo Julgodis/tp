@@ -7,9 +7,9 @@ lbl_80CF3D84:
 /* 80CF3D98  7C 76 1B 78 */	mr r22, r3
 /* 80CF3D9C  3C 60 80 CF */	lis r3, l_color@ha
 /* 80CF3DA0  3B E3 43 E4 */	addi r31, r3, l_color@l
-/* 80CF3DA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF3DA8  3A E3 61 C0 */	addi r23, r3, struct_804061C0+0x0@l
-/* 80CF3DAC  83 17 5D AC */	lwz r24, 0x5dac(r23)	/* effective address: 8040BF6C */
+/* 80CF3DA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF3DA8  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
+/* 80CF3DAC  83 17 5D AC */	lwz r24, 0x5dac(r23)
 /* 80CF3DB0  38 78 04 D0 */	addi r3, r24, 0x4d0
 /* 80CF3DB4  38 96 04 D0 */	addi r4, r22, 0x4d0
 /* 80CF3DB8  4B 57 CE 4C */	b cLib_targetAngleY__FPC3VecPC3Vec

@@ -9,8 +9,8 @@ lbl_80C03830:
 /* 80C0384C  3B C3 FA 7C */	addi r30, r3, m__17daObj_GrA_Param_c@l
 /* 80C03850  3B A0 00 00 */	li r29, 0
 /* 80C03854  3B 40 00 00 */	li r26, 0
-/* 80C03858  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C0385C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80C03858  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C0385C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80C03860:
 /* 80C03860  38 1D FF FE */	addi r0, r29, -2
 /* 80C03864  28 00 00 01 */	cmplwi r0, 1

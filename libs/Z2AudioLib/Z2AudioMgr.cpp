@@ -11,7 +11,13 @@
 // Types:
 // 
 
+struct JAISoundHandle {
+};
+
 struct JAISoundID {
+};
+
+struct JKRArchive {
 };
 
 struct JKRSolidHeap {
@@ -24,12 +30,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JKRArchive {
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2AudioMgr {
@@ -92,13 +92,13 @@ struct JASAudioReseter {
 	/* 8029D1F8 */ void checkDone() const;
 };
 
+struct JAISeCategoryArrangement {
+};
+
 struct JAIAudience {
 };
 
 struct JAISeqDataMgr {
-};
-
-struct JAISeCategoryArrangement {
 };
 
 struct JAISeMgr {
@@ -354,9 +354,9 @@ extern "C" extern u8 data_80451354[4];
 /* ############################################################################################## */
 /* 803CBF38-803CBF44 000C+00 s=1 e=1 z=0  None .data      __vt__10Z2AudioMgr                                           */
 SECTION_DATA void* __vt__10Z2AudioMgr[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_802CDB1C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802CDB1C,
 };
 
 /* 80451368-80451370 0004+04 s=1 e=251 z=900  None .sbss      mAudioMgrPtr__10Z2AudioMgr                                   */
@@ -391,20 +391,20 @@ SECTION_DEAD static char const* const pad_8039CAD1 = "\0\0\0\0\0\0";
 
 /* 803CBF44-803CBF58 0014+00 s=2 e=0 z=0  None .data      __vt__26JAUStreamStaticAramMgr_<1>                           */
 SECTION_DATA static void* data_803CBF44[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_802CDCEC,
-	/* 3    */ (void*)func_802CDC08,
-	/* 4    */ (void*)func_802CDB68,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802CDCEC,
+	(void*)func_802CDC08,
+	(void*)func_802CDB68,
 };
 
 /* 803CBF58-803CBF70 0014+04 s=3 e=0 z=0  None .data      __vt__24JAUStreamAramMgrBase_<1>                             */
 SECTION_DATA static void* data_803CBF58[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)func_802CD7F8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802CD7F8,
 	/* padding */
 	NULL,
 };

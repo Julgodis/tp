@@ -14,7 +14,7 @@ lbl_8046F52C:
 /* 8046F55C  41 82 00 28 */	beq lbl_8046F584
 /* 8046F560  3C 60 80 48 */	lis r3, l_sw_id@ha
 /* 8046F564  38 63 B1 D8 */	addi r3, r3, l_sw_id@l
-/* 8046F568  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8047B1D8 */
+/* 8046F568  80 63 00 00 */	lwz r3, 0(r3)
 /* 8046F56C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8046F570  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8046F574  7C 03 00 00 */	cmpw r3, r0

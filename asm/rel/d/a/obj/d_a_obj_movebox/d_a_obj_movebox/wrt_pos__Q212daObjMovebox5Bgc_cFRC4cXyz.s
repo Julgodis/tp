@@ -23,8 +23,8 @@ lbl_8047DD88:
 /* 8047DDDC  38 63 20 6C */	addi r3, r3, M_wrt_work__Q212daObjMovebox5Bgc_c@l
 /* 8047DDE0  38 81 00 08 */	addi r4, r1, 8
 /* 8047DDE4  4B BF AD AC */	b Set__14dBgS_SplGrpChkFR4cXyzf
-/* 8047DDE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047DDEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047DDE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047DDEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047DDF0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8047DDF4  3C 80 80 48 */	lis r4, M_wrt_work__Q212daObjMovebox5Bgc_c@ha
 /* 8047DDF8  38 84 20 6C */	addi r4, r4, M_wrt_work__Q212daObjMovebox5Bgc_c@l
@@ -33,7 +33,7 @@ lbl_8047DD88:
 /* 8047DE04  41 82 00 3C */	beq lbl_8047DE40
 /* 8047DE08  3C 60 80 48 */	lis r3, M_wrt_work__Q212daObjMovebox5Bgc_c@ha
 /* 8047DE0C  38 63 20 6C */	addi r3, r3, M_wrt_work__Q212daObjMovebox5Bgc_c@l
-/* 8047DE10  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 804820B8 */
+/* 8047DE10  C0 03 00 4C */	lfs f0, 0x4c(r3)
 /* 8047DE14  D0 1F 00 60 */	stfs f0, 0x60(r31)
 /* 8047DE18  80 1F 01 80 */	lwz r0, 0x180(r31)
 /* 8047DE1C  60 00 00 08 */	ori r0, r0, 8

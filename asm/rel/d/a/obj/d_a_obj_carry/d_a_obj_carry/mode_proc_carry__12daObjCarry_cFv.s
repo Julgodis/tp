@@ -5,9 +5,9 @@ lbl_804741A8:
 /* 804741B4  39 61 00 20 */	addi r11, r1, 0x20
 /* 804741B8  4B EE E0 24 */	b _savegpr_29
 /* 804741BC  7C 7E 1B 78 */	mr r30, r3
-/* 804741C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804741C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804741C8  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 804741C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804741C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804741C8  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 804741CC  88 1E 0D AA */	lbz r0, 0xdaa(r30)
 /* 804741D0  28 00 00 00 */	cmplwi r0, 0
 /* 804741D4  40 82 00 48 */	bne lbl_8047421C
@@ -82,10 +82,10 @@ lbl_804742A0:
 /* 804742CC  A8 1E 04 DC */	lha r0, 0x4dc(r30)
 /* 804742D0  2C 00 00 00 */	cmpwi r0, 0
 /* 804742D4  40 82 00 64 */	bne lbl_80474338
-/* 804742D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804742DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804742E0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 804742E4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 804742D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804742DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804742E0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 804742E4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 804742E8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 804742EC  41 82 00 28 */	beq lbl_80474314
 /* 804742F0  7F C3 F3 78 */	mr r3, r30
@@ -108,10 +108,10 @@ lbl_80474314:
 /* 80474330  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80474334  48 00 00 70 */	b lbl_804743A4
 lbl_80474338:
-/* 80474338  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047433C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80474340  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80474344  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80474338  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047433C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80474340  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80474344  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80474348  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8047434C  41 82 00 18 */	beq lbl_80474364
 /* 80474350  7F C3 F3 78 */	mr r3, r30

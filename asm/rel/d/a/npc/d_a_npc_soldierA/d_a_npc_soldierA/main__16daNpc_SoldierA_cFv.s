@@ -34,12 +34,12 @@ lbl_80AF0314:
 lbl_80AF0324:
 /* 80AF0324  3C 60 80 AF */	lis r3, m__22daNpc_SoldierA_Param_c@ha
 /* 80AF0328  38 63 26 E8 */	addi r3, r3, m__22daNpc_SoldierA_Param_c@l
-/* 80AF032C  88 03 00 6A */	lbz r0, 0x6a(r3)	/* effective address: 80AF2752 */
+/* 80AF032C  88 03 00 6A */	lbz r0, 0x6a(r3)
 /* 80AF0330  28 00 00 00 */	cmplwi r0, 0
 /* 80AF0334  40 82 00 AC */	bne lbl_80AF03E0
-/* 80AF0338  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF033C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AF0340  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80AF0338  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF033C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AF0340  88 63 4F AD */	lbz r3, 0x4fad(r3)
 /* 80AF0344  28 03 00 00 */	cmplwi r3, 0
 /* 80AF0348  41 82 00 30 */	beq lbl_80AF0378
 /* 80AF034C  88 1E 09 ED */	lbz r0, 0x9ed(r30)

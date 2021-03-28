@@ -27,11 +27,11 @@ lbl_80C0CDBC:
 /* 80C0CE20  90 1E 0F 50 */	stw r0, 0xf50(r30)
 /* 80C0CE24  3C 60 80 C1 */	lis r3, lit_9472@ha
 /* 80C0CE28  38 83 03 74 */	addi r4, r3, lit_9472@l
-/* 80C0CE2C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C10374 */
-/* 80C0CE30  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10378 */
+/* 80C0CE2C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C0CE30  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C0CE34  90 61 00 08 */	stw r3, 8(r1)
 /* 80C0CE38  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C0CE3C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C1037C */
+/* 80C0CE3C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C0CE40  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C0CE44  7F C3 F3 78 */	mr r3, r30
 /* 80C0CE48  38 81 00 08 */	addi r4, r1, 8

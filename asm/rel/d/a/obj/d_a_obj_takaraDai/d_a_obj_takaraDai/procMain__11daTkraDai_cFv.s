@@ -6,19 +6,19 @@ lbl_80D073A4:
 /* 80D073B4  7C 7F 1B 78 */	mr r31, r3
 /* 80D073B8  3C 60 80 D0 */	lis r3, data_80D07958@ha
 /* 80D073BC  38 C3 79 58 */	addi r6, r3, data_80D07958@l
-/* 80D073C0  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80D07958 */
+/* 80D073C0  88 06 00 00 */	lbz r0, 0(r6)
 /* 80D073C4  7C 00 07 75 */	extsb. r0, r0
 /* 80D073C8  40 82 00 34 */	bne lbl_80D073FC
 /* 80D073CC  3C 60 80 D0 */	lis r3, data_80D0786C@ha
 /* 80D073D0  38 A3 78 6C */	addi r5, r3, data_80D0786C@l
 /* 80D073D4  3C 60 80 D0 */	lis r3, lit_3799@ha
 /* 80D073D8  38 83 78 60 */	addi r4, r3, lit_3799@l
-/* 80D073DC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D07860 */
-/* 80D073E0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D07864 */
-/* 80D073E4  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80D0786C */
-/* 80D073E8  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80D07870 */
-/* 80D073EC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D07868 */
-/* 80D073F0  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80D07874 */
+/* 80D073DC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D073E0  80 04 00 04 */	lwz r0, 4(r4)
+/* 80D073E4  90 65 00 00 */	stw r3, 0(r5)
+/* 80D073E8  90 05 00 04 */	stw r0, 4(r5)
+/* 80D073EC  80 04 00 08 */	lwz r0, 8(r4)
+/* 80D073F0  90 05 00 08 */	stw r0, 8(r5)
 /* 80D073F4  38 00 00 01 */	li r0, 1
 /* 80D073F8  98 06 00 00 */	stb r0, 0(r6)
 lbl_80D073FC:

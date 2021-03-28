@@ -124,10 +124,10 @@ struct dMsgObject_c {
 	/* 8023806C */ void demoMessageGroup();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -555,19 +555,19 @@ asm void dEvDtStaff_c::specialProc_WaitProc(int param_0) {
 /* ############################################################################################## */
 /* 803A8238-803A8270 0034+04 s=1 e=0 z=0  None .data      @4398                                                        */
 SECTION_DATA static void* lit_4398[13 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
-	/* 1    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x50),
-	/* 2    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
-	/* 3    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x68),
-	/* 4    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x48),
-	/* 5    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
-	/* 6    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x40),
-	/* 7    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x94),
-	/* 8    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x8C),
-	/* 9    */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x9C),
-	/* 10   */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
-	/* 11   */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x38),
-	/* 12   */ (void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x70),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x50),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x68),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x48),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x40),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x94),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x8C),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x9C),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0xA0),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x38),
+	(void*)(((char*)specialProc__12dEvDtStaff_cFv)+0x70),
 	/* padding */
 	NULL,
 };

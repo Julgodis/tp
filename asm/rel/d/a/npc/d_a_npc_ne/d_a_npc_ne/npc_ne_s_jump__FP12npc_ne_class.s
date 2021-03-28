@@ -16,8 +16,8 @@ lbl_80A8C748:
 /* 80A8C780  FC 00 00 1E */	fctiwz f0, f0
 /* 80A8C784  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80A8C788  83 A1 00 0C */	lwz r29, 0xc(r1)
-/* 80A8C78C  C3 FE 00 10 */	lfs f31, 0x10(r30)	/* effective address: 80A9242C */
-/* 80A8C790  C3 DE 00 74 */	lfs f30, 0x74(r30)	/* effective address: 80A92490 */
+/* 80A8C78C  C3 FE 00 10 */	lfs f31, 0x10(r30)
+/* 80A8C790  C3 DE 00 74 */	lfs f30, 0x74(r30)
 /* 80A8C794  A8 03 06 46 */	lha r0, 0x646(r3)
 /* 80A8C798  2C 00 00 02 */	cmpwi r0, 2
 /* 80A8C79C  41 82 00 94 */	beq lbl_80A8C830

@@ -5,8 +5,8 @@ lbl_80A76F3C:
 /* 80A76F48  39 61 00 50 */	addi r11, r1, 0x50
 /* 80A76F4C  4B 8E B2 90 */	b _savegpr_29
 /* 80A76F50  7C 7F 1B 78 */	mr r31, r3
-/* 80A76F54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A76F58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A76F54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A76F58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A76F5C  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80A76F60  38 80 13 08 */	li r4, 0x1308
 /* 80A76F64  4B 5B DA 40 */	b offEventBit__11dSv_event_cFUs

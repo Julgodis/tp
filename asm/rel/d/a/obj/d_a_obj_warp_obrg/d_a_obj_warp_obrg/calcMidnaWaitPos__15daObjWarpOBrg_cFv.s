@@ -7,9 +7,9 @@ lbl_80D2B534:
 /* 80D2B548  3C 60 80 D3 */	lis r3, l_midna_wait_offset@ha
 /* 80D2B54C  C4 03 B8 38 */	lfsu f0, l_midna_wait_offset@l(r3)
 /* 80D2B550  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80D2B554  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80D30004 */
+/* 80D2B554  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80D2B558  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D2B55C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D30008 */
+/* 80D2B55C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D2B560  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80D2B564  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80D2B568  4B 2E 17 FC */	b transS__14mDoMtx_stack_cFRC4cXyz

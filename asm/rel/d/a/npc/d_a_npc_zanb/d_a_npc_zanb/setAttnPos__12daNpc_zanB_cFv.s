@@ -9,11 +9,11 @@ lbl_80B69FD8:
 /* 80B69FF4  7C 7E 1B 78 */	mr r30, r3
 /* 80B69FF8  3C 60 80 B7 */	lis r3, m__18daNpc_zanB_Param_c@ha
 /* 80B69FFC  3B E3 BC C4 */	addi r31, r3, m__18daNpc_zanB_Param_c@l
-/* 80B6A000  C0 1F 00 BC */	lfs f0, 0xbc(r31)	/* effective address: 80B6BD80 */
+/* 80B6A000  C0 1F 00 BC */	lfs f0, 0xbc(r31)
 /* 80B6A004  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80B6A008  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 80B6BD84 */
+/* 80B6A008  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 80B6A00C  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80B6A010  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 80B6BD6C */
+/* 80B6A010  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 80B6A014  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80B6A018  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80B6A01C  38 80 00 00 */	li r4, 0

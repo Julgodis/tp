@@ -31,9 +31,6 @@ struct dMsgScrnLight_c {
 	/* 802460DC */ void drawCommon(f32, f32, f32, f32, f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -45,6 +42,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -118,16 +118,16 @@ extern "C" extern u8 data_804510D8[8];
 /* ############################################################################################## */
 /* 803C1298-803C12A4 000C+00 s=2 e=0 z=0  None .data      __vt__15dMsgScrnLight_c                                      */
 SECTION_DATA static void* __vt__15dMsgScrnLight_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dMsgScrnLight_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dMsgScrnLight_cFv,
 };
 
 /* 803C12A4-803C12B0 000C+00 s=2 e=0 z=0  None .data      __vt__19dMsgScrnLight_HIO_c                                  */
 SECTION_DATA static void* __vt__19dMsgScrnLight_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dMsgScrnLight_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dMsgScrnLight_HIO_cFv,
 };
 
 /* 8024575C-802457C4 0068+00 s=1 e=0 z=0  None .text      __ct__19dMsgScrnLight_HIO_cFv                                */

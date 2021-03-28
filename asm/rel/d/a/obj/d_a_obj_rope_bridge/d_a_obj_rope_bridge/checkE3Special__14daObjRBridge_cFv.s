@@ -2,8 +2,8 @@ lbl_80595F84:
 /* 80595F84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80595F88  7C 08 02 A6 */	mflr r0
 /* 80595F8C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80595F90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80595F94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80595F90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80595F94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80595F98  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80595F9C  3C 80 80 59 */	lis r4, struct_80597E40+0x0@ha
 /* 80595FA0  38 84 7E 40 */	addi r4, r4, struct_80597E40+0x0@l

@@ -13,8 +13,8 @@ lbl_80678C70:
 /* 80678C9C  4B B2 AB 28 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
 /* 80678CA0  3B 40 00 00 */	li r26, 0
 /* 80678CA4  3B E0 00 00 */	li r31, 0
-/* 80678CA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80678CAC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 80678CA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80678CAC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 80678CB0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80678CB4  3B A3 4A C8 */	addi r29, r3, j3dSys@l
 /* 80678CB8  3C 60 80 43 */	lis r3, g_env_light@ha

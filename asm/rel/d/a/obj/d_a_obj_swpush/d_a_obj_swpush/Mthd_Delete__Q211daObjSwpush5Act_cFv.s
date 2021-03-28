@@ -4,8 +4,8 @@ lbl_8048348C:
 /* 80483494  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80483498  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8048349C  7C 7F 1B 78 */	mr r31, r3
-/* 804834A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804834A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804834A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804834A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804834A8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804834AC  80 9F 05 70 */	lwz r4, 0x570(r31)
 /* 804834B0  4B BF 0D A0 */	b Release__4cBgSFP9dBgW_Base

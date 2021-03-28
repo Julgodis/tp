@@ -7,7 +7,7 @@ lbl_804C8588:
 /* 804C859C  7C 7D 1B 78 */	mr r29, r3
 /* 804C85A0  3C 60 80 4D */	lis r3, lit_1109@ha
 /* 804C85A4  3B E3 C6 88 */	addi r31, r3, lit_1109@l
-/* 804C85A8  88 1F 00 4C */	lbz r0, 0x4c(r31)	/* effective address: 804CC6D4 */
+/* 804C85A8  88 1F 00 4C */	lbz r0, 0x4c(r31)
 /* 804C85AC  7C 00 07 75 */	extsb. r0, r0
 /* 804C85B0  40 82 00 34 */	bne lbl_804C85E4
 /* 804C85B4  3C 60 80 4D */	lis r3, lit_5143@ha
@@ -55,12 +55,12 @@ lbl_804C863C:
 /* 804C8650  4B B4 3C 50 */	b mDoMtx_ZXYrotM__FPA4_fsss
 lbl_804C8654:
 /* 804C8654  3B 40 00 00 */	li r26, 0
-/* 804C8658  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C865C  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 804C8658  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C865C  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 804C8660  3C 60 80 4D */	lis r3, lit_4216@ha
 /* 804C8664  3B 83 C3 7C */	addi r28, r3, lit_4216@l
 lbl_804C8668:
-/* 804C8668  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 804C8668  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 804C866C  38 00 00 FF */	li r0, 0xff
 /* 804C8670  90 01 00 08 */	stw r0, 8(r1)
 /* 804C8674  38 80 00 00 */	li r4, 0
@@ -77,7 +77,7 @@ lbl_804C8668:
 /* 804C86A0  39 1D 01 0C */	addi r8, r29, 0x10c
 /* 804C86A4  39 20 00 00 */	li r9, 0
 /* 804C86A8  39 40 00 00 */	li r10, 0
-/* 804C86AC  C0 3C 00 00 */	lfs f1, 0(r28)	/* effective address: 804CC37C */
+/* 804C86AC  C0 3C 00 00 */	lfs f1, 0(r28)
 /* 804C86B0  4B B8 4E 1C */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 804C86B4  90 7F 00 00 */	stw r3, 0(r31)
 /* 804C86B8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
@@ -99,9 +99,9 @@ lbl_804C86E4:
 /* 804C86F4  41 80 FF 74 */	blt lbl_804C8668
 /* 804C86F8  48 00 00 E0 */	b lbl_804C87D8
 lbl_804C86FC:
-/* 804C86FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C8700  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 804C8704  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 804C86FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C8700  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 804C8704  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 804C8708  38 00 00 FF */	li r0, 0xff
 /* 804C870C  90 01 00 08 */	stw r0, 8(r1)
 /* 804C8710  38 80 00 00 */	li r4, 0

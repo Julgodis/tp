@@ -68,7 +68,7 @@ lbl_8053116C:
 /* 80531190  7C 04 07 34 */	extsh r4, r0
 /* 80531194  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80531198  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8053119C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8053119C  80 63 00 00 */	lwz r3, 0(r3)
 /* 805311A0  4B AD B2 3C */	b mDoMtx_YrotS__FPA4_fs
 /* 805311A4  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 805311A8  D0 01 00 24 */	stfs f0, 0x24(r1)

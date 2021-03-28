@@ -5,9 +5,9 @@ lbl_805A13F8:
 /* 805A1404  93 E1 00 5C */	stw r31, 0x5c(r1)
 /* 805A1408  93 C1 00 58 */	stw r30, 0x58(r1)
 /* 805A140C  7C 7F 1B 78 */	mr r31, r3
-/* 805A1410  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A1414  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A1418  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805A1410  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A1414  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A1418  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 805A141C  A8 1F 04 E4 */	lha r0, 0x4e4(r31)
 /* 805A1420  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 805A1424  28 00 00 02 */	cmplwi r0, 2

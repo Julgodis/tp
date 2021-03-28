@@ -3,11 +3,11 @@ lbl_80A02F80:
 /* 80A02F84  38 C4 68 04 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80A02F88  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80A02F8C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80A02F90  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80A02F94  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80A02F90  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A02F94  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A02F98  90 83 0F AC */	stw r4, 0xfac(r3)
 /* 80A02F9C  90 03 0F B0 */	stw r0, 0xfb0(r3)
-/* 80A02FA0  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80A02FA0  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A02FA4  90 03 0F B4 */	stw r0, 0xfb4(r3)
 /* 80A02FA8  88 03 0F 80 */	lbz r0, 0xf80(r3)
 /* 80A02FAC  2C 00 00 04 */	cmpwi r0, 4

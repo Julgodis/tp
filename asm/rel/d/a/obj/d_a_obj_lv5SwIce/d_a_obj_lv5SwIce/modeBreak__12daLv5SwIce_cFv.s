@@ -7,18 +7,18 @@ lbl_80C6D144:
 /* 80C6D158  7C 7E 1B 78 */	mr r30, r3
 /* 80C6D15C  3C 60 80 C7 */	lis r3, mCcDObjInfo__12daLv5SwIce_c@ha
 /* 80C6D160  3B E3 D5 08 */	addi r31, r3, mCcDObjInfo__12daLv5SwIce_c@l
-/* 80C6D164  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 80C6D554 */
+/* 80C6D164  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80C6D168  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80C6D16C  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80C6D170  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80C6D174  3B 00 00 00 */	li r24, 0
 /* 80C6D178  3B A0 00 00 */	li r29, 0
 /* 80C6D17C  3B 80 00 00 */	li r28, 0
-/* 80C6D180  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C6D184  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80C6D180  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C6D184  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80C6D188  3B 7F 00 48 */	addi r27, r31, 0x48
 lbl_80C6D18C:
-/* 80C6D18C  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 80C6D18C  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C6D190  38 00 00 FF */	li r0, 0xff
 /* 80C6D194  90 01 00 08 */	stw r0, 8(r1)
 /* 80C6D198  38 80 00 00 */	li r4, 0
@@ -36,7 +36,7 @@ lbl_80C6D18C:
 /* 80C6D1C8  39 00 00 00 */	li r8, 0
 /* 80C6D1CC  39 20 00 00 */	li r9, 0
 /* 80C6D1D0  39 41 00 24 */	addi r10, r1, 0x24
-/* 80C6D1D4  C0 3F 00 34 */	lfs f1, 0x34(r31)	/* effective address: 80C6D53C */
+/* 80C6D1D4  C0 3F 00 34 */	lfs f1, 0x34(r31)
 /* 80C6D1D8  4B 3E 02 F4 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80C6D1DC  7C 7E C9 2E */	stwx r3, r30, r25
 /* 80C6D1E0  3B 18 00 01 */	addi r24, r24, 1
@@ -53,7 +53,7 @@ lbl_80C6D18C:
 /* 80C6D20C  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80C6D210  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C6D214  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C6D218  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C6D218  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C6D21C  38 81 00 20 */	addi r4, r1, 0x20
 /* 80C6D220  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C6D224  38 C0 00 00 */	li r6, 0

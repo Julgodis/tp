@@ -19,7 +19,7 @@ lbl_80C769D0:
 /* 80C76A14  4B 39 58 8C */	b mDoMtx_ZXYrotM__FPA4_fsss
 /* 80C76A18  3C 60 80 C7 */	lis r3, l_HIO@ha
 /* 80C76A1C  3B C3 7A DC */	addi r30, r3, l_HIO@l
-/* 80C76A20  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 80C77AE0 */
+/* 80C76A20  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 80C76A24  C0 5D 05 BC */	lfs f2, 0x5bc(r29)
 /* 80C76A28  3C 60 80 C7 */	lis r3, lit_3670@ha
 /* 80C76A2C  C0 63 79 B8 */	lfs f3, lit_3670@l(r3)
@@ -28,7 +28,7 @@ lbl_80C769D0:
 /* 80C76A38  C0 23 79 E4 */	lfs f1, lit_3735@l(r3)
 /* 80C76A3C  3C 60 80 C7 */	lis r3, l_HIO@ha
 /* 80C76A40  3B E3 7A DC */	addi r31, r3, l_HIO@l
-/* 80C76A44  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80C77AE8 */
+/* 80C76A44  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80C76A48  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80C76A4C  FC 00 00 1E */	fctiwz f0, f0
 /* 80C76A50  D8 01 00 08 */	stfd f0, 8(r1)

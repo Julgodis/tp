@@ -28,11 +28,11 @@ lbl_80AD153C:
 /* 80AD15A4  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 80AD15A8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AD15AC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AD15B0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AD15B4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AD15B0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AD15B4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AD15B8  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 80AD15BC  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 80AD15C0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AD15C0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AD15C4  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 80AD15C8  98 BF 10 ED */	stb r5, 0x10ed(r31)
 lbl_80AD15CC:

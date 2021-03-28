@@ -27,13 +27,13 @@ lbl_80487CAC:
 /* 80487CC0  40 82 00 28 */	bne lbl_80487CE8
 /* 80487CC4  3C 60 80 49 */	lis r3, l_findCount@ha
 /* 80487CC8  38 A3 9A 10 */	addi r5, r3, l_findCount@l
-/* 80487CCC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80489A10 */
+/* 80487CCC  80 85 00 00 */	lwz r4, 0(r5)
 /* 80487CD0  54 80 10 3A */	slwi r0, r4, 2
 /* 80487CD4  3C 60 80 49 */	lis r3, l_findActorPtrs@ha
 /* 80487CD8  38 63 98 80 */	addi r3, r3, l_findActorPtrs@l
 /* 80487CDC  7F E3 01 2E */	stwx r31, r3, r0
 /* 80487CE0  38 04 00 01 */	addi r0, r4, 1
-/* 80487CE4  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80489A10 */
+/* 80487CE4  90 05 00 00 */	stw r0, 0(r5)
 lbl_80487CE8:
 /* 80487CE8  38 60 00 00 */	li r3, 0
 /* 80487CEC  83 E1 00 0C */	lwz r31, 0xc(r1)

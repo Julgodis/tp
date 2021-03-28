@@ -140,7 +140,7 @@ lbl_806CA20C:
 lbl_806CA214:
 /* 806CA214  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CA218  38 63 D3 68 */	addi r3, r3, l_HIO@l
-/* 806CA21C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 806CD380 */
+/* 806CA21C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806CA220  D0 1D 0B 58 */	stfs f0, 0xb58(r29)
 /* 806CA224  38 7D 04 A8 */	addi r3, r29, 0x4a8
 /* 806CA228  38 9D 04 D0 */	addi r4, r29, 0x4d0

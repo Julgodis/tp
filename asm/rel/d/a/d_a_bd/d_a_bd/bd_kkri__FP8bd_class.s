@@ -7,7 +7,7 @@ lbl_804D8C48:
 /* 804D8C5C  7C 7E 1B 78 */	mr r30, r3
 /* 804D8C60  3C 60 80 4E */	lis r3, lit_3942@ha
 /* 804D8C64  3B E3 9E 64 */	addi r31, r3, lit_3942@l
-/* 804D8C68  C0 1F 00 10 */	lfs f0, 0x10(r31)	/* effective address: 804D9E74 */
+/* 804D8C68  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 804D8C6C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 804D8C70  D0 1E 05 30 */	stfs f0, 0x530(r30)
 /* 804D8C74  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
@@ -112,7 +112,7 @@ lbl_804D8D14:
 /* 804D8DF4  4B FF DE B1 */	bl anm_init__FP8bd_classifUcf
 /* 804D8DF8  3C 60 80 4E */	lis r3, l_HIO@ha
 /* 804D8DFC  38 63 A3 6C */	addi r3, r3, l_HIO@l
-/* 804D8E00  A8 03 00 1C */	lha r0, 0x1c(r3)	/* effective address: 804DA388 */
+/* 804D8E00  A8 03 00 1C */	lha r0, 0x1c(r3)
 /* 804D8E04  B0 1E 05 F4 */	sth r0, 0x5f4(r30)
 lbl_804D8E08:
 /* 804D8E08  83 E1 00 1C */	lwz r31, 0x1c(r1)

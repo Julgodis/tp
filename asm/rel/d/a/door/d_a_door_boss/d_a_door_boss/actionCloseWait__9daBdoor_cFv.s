@@ -7,8 +7,8 @@ lbl_80670328:
 /* 8067033C  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80670340  28 00 00 03 */	cmplwi r0, 3
 /* 80670344  40 82 00 3C */	bne lbl_80670380
-/* 80670348  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067034C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80670348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067034C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80670350  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80670354  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80670358  38 84 09 6C */	addi r4, r4, l_staff_name@l

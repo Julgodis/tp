@@ -86,10 +86,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -117,10 +113,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daUdFloor_Draw(daUdFloor_c*); // 2
-static void daUdFloor_Execute(daUdFloor_c*); // 2
-static void daUdFloor_Delete(daUdFloor_c*); // 2
-static void daUdFloor_Create(fopAc_ac_c*); // 2
+void daUdFloor_Draw(daUdFloor_c*); // 2
+void daUdFloor_Execute(daUdFloor_c*); // 2
+void daUdFloor_Delete(daUdFloor_c*); // 2
+void daUdFloor_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daUdFloor_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -142,14 +138,15 @@ extern "C" void init_modeDownMove__11daUdFloor_cFv(); // 1
 extern "C" void modeDownMove__11daUdFloor_cFv(); // 1
 extern "C" void Draw__11daUdFloor_cFv(); // 1
 extern "C" void Delete__11daUdFloor_cFv(); // 1
-extern "C" static void daUdFloor_Draw__FP11daUdFloor_c(); // 1
-extern "C" static void daUdFloor_Execute__FP11daUdFloor_c(); // 1
-extern "C" static void daUdFloor_Delete__FP11daUdFloor_c(); // 1
-extern "C" static void daUdFloor_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daUdFloor_Draw__FP11daUdFloor_c(); // 1
+extern "C" void daUdFloor_Execute__FP11daUdFloor_c(); // 1
+extern "C" void daUdFloor_Delete__FP11daUdFloor_c(); // 1
+extern "C" void daUdFloor_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__15daUdFloor_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv8UdFloor_cpp(); // 1
-extern "C" extern u8 const lit_3720[8];
+extern "C" extern u8 const struct_80C8CC34[16];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daUdFloor_Method[8];
 extern "C" extern void* g_profile_Obj_Lv8UdFloor[12];
 
 // 
@@ -181,10 +178,6 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -199,18 +192,10 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -222,57 +207,6 @@ extern "C" void __register_global_object(); // 1
 /* 80C8CBF0-80C8CBF4 0004+00 s=5 e=0 z=0  None .rodata    @3628                                                        */
 SECTION_RODATA static u8 const lit_3628[4] = {
 	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8CBF4-80C8CBFC 0008+00 s=1 e=0 z=0  None .rodata    l_bmdIdx                                                     */
-SECTION_RODATA static u8 const l_bmdIdx[8] = {
-	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04,
-};
-
-/* 80C8CBFC-80C8CC04 0008+00 s=1 e=0 z=0  None .rodata    l_dzbIdx                                                     */
-SECTION_RODATA static u8 const l_dzbIdx[8] = {
-	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07,
-};
-
-/* 80C8CC04-80C8CC0C 0008+00 s=1 e=0 z=0  None .rodata    l_heap_size                                                  */
-SECTION_RODATA static u8 const l_heap_size[8] = {
-	0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x14, 0x00,
-};
-
-/* 80C8CC0C-80C8CC10 0004+00 s=1 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA static u32 const lit_3718 = 0x42480000;
-
-/* 80C8CC10-80C8CC18 0008+00 s=0 e=0 z=0  None .rodata    @3720                                                        */
-SECTION_RODATA u8 const lit_3720[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80C8CC18-80C8CC20 0008+00 s=1 e=0 z=0  None .rodata    @3722                                                        */
-SECTION_RODATA static u8 const lit_3722[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C8CC20-80C8CC24 0004+00 s=6 e=0 z=0  None .rodata    @3777                                                        */
-SECTION_RODATA static u32 const lit_3777 = 0x3F800000;
-
-/* 80C8CC24-80C8CC28 0004+00 s=5 e=0 z=0  None .rodata    @3778                                                        */
-SECTION_RODATA static u32 const lit_3778 = 0xBF800000;
-
-/* 80C8CC28-80C8CC2C 0004+00 s=1 e=0 z=0  None .rodata    @3856                                                        */
-SECTION_RODATA static u32 const lit_3856 = 0x41F00000;
-
-/* 80C8CC2C-80C8CC30 0004+00 s=2 e=0 z=0  None .rodata    @3857                                                        */
-SECTION_RODATA static u32 const lit_3857 = 0x3DCCCCCD;
-
-/* 80C8CC30-80C8CC34 0004+00 s=1 e=0 z=0  None .rodata    @3892                                                        */
-SECTION_RODATA static u32 const lit_3892 = 0x3E99999A;
-
-/* 80C8CC34-80C8CC44 0010+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80C8CC34[16] = {
-	/* 80C8CC34 0007 stringBase_80C8CC34 @stringBase0 */
-	0x4C, 0x38, 0x53, 0x74, 0x65, 0x70, 0x00,
-	/* 80C8CC3B 0009 data_80C8CC3B None */
-	0x4C, 0x38, 0x53, 0x74, 0x65, 0x70, 0x58, 0x00, 0x00,
 };
 
 /* 80C8CC44-80C8CC50 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
@@ -289,43 +223,43 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 80C8CC64-80C8CC6C 0008+00 s=3 e=0 z=0  None .data      l_resNameIdx                                                 */
 SECTION_DATA static void* l_resNameIdx[2] = {
-	/* 0    */ (void*)(((char*)&struct_80C8CC34)+0x0) /* @stringBase0 */,
-	/* 1    */ (void*)(((char*)&struct_80C8CC34)+0x7) /* None */,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8CC6C-80C8CC78 000C+00 s=1 e=0 z=0  None .data      @3736                                                        */
 SECTION_DATA static void* lit_3736[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__11daUdFloor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8CC78-80C8CC84 000C+00 s=1 e=0 z=0  None .data      @3737                                                        */
 SECTION_DATA static void* lit_3737[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeUpMoveInit__11daUdFloor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8CC84-80C8CC90 000C+00 s=1 e=0 z=0  None .data      @3738                                                        */
 SECTION_DATA static void* lit_3738[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeUpMove__11daUdFloor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8CC90-80C8CC9C 000C+00 s=1 e=0 z=0  None .data      @3739                                                        */
 SECTION_DATA static void* lit_3739[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeDownMoveInit__11daUdFloor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8CC9C-80C8CCA8 000C+00 s=1 e=0 z=0  None .data      @3740                                                        */
 SECTION_DATA static void* lit_3740[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeDownMove__11daUdFloor_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8CCA8-80C8CCE4 003C+00 s=1 e=0 z=0  None .data      mode_proc$3735                                               */
@@ -336,60 +270,60 @@ SECTION_DATA static u8 data_80C8CCA8[60] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C8CCE4-80C8CD04 0020+00 s=1 e=0 z=0  None .data      l_daUdFloor_Method                                           */
-SECTION_DATA static void* l_daUdFloor_Method[8] = {
-	/* 0    */ (void*)daUdFloor_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daUdFloor_Delete__FP11daUdFloor_c,
-	/* 2    */ (void*)daUdFloor_Execute__FP11daUdFloor_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daUdFloor_Draw__FP11daUdFloor_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C8CCE4-80C8CD04 0020+00 s=0 e=0 z=0  None .data      l_daUdFloor_Method                                           */
+SECTION_DATA void* l_daUdFloor_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C8CD04-80C8CD34 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv8UdFloor                                     */
+/* 80C8CD04-80C8CD34 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv8UdFloor                                     */
 SECTION_DATA void* g_profile_Obj_Lv8UdFloor[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00A50000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02860000,
-	/* 9    */ (void*)&l_daUdFloor_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00A50000,
+	(void*)NULL,
+	(void*)0x000005C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02860000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80C8CD34-80C8CD5C 0028+00 s=1 e=0 z=0  None .data      __vt__11daUdFloor_c                                          */
 SECTION_DATA static void* __vt__11daUdFloor_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__11daUdFloor_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__11daUdFloor_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__11daUdFloor_cFv,
-	/* 6    */ (void*)Delete__11daUdFloor_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8CD5C-80C8CD68 000C+00 s=2 e=0 z=0  None .data      __vt__15daUdFloor_HIO_c                                      */
 SECTION_DATA static void* __vt__15daUdFloor_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15daUdFloor_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8CD68-80C8CD74 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C8BD0C-80C8BD80 0074+00 s=1 e=0 z=0  None .text      __ct__15daUdFloor_HIO_cFv                                    */
@@ -403,7 +337,7 @@ asm daUdFloor_HIO_c::daUdFloor_HIO_c() {
 #pragma pop
 
 
-/* 80C8BD80-80C8BDC8 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C8BD80-80C8BDC8 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -425,7 +359,13 @@ asm void daUdFloor_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C8BE64-80C8BEE4 0080+00 s=1 e=0 z=0  None .text      CreateHeap__11daUdFloor_cFv                                  */
+/* ############################################################################################## */
+/* 80C8CBF4-80C8CBFC 0008+00 s=1 e=0 z=0  None .rodata    l_bmdIdx                                                     */
+SECTION_RODATA static u8 const l_bmdIdx[8] = {
+	0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00, 0x04,
+};
+
+/* 80C8BE64-80C8BEE4 0080+00 s=0 e=0 z=0  None .text      CreateHeap__11daUdFloor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,6 +377,29 @@ asm void daUdFloor_c::CreateHeap() {
 
 
 /* ############################################################################################## */
+/* 80C8CBFC-80C8CC04 0008+00 s=1 e=0 z=0  None .rodata    l_dzbIdx                                                     */
+SECTION_RODATA static u8 const l_dzbIdx[8] = {
+	0x00, 0x00, 0x00, 0x07, 0x00, 0x00, 0x00, 0x07,
+};
+
+/* 80C8CC04-80C8CC0C 0008+00 s=1 e=0 z=0  None .rodata    l_heap_size                                                  */
+SECTION_RODATA static u8 const l_heap_size[8] = {
+	0x00, 0x00, 0x12, 0x00, 0x00, 0x00, 0x14, 0x00,
+};
+
+/* 80C8CC0C-80C8CC10 0004+00 s=1 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA static u32 const lit_3718 = 0x42480000;
+
+/* 80C8CC10-80C8CC18 0008+00 s=1 e=0 z=0  None .rodata    @3720                                                        */
+SECTION_RODATA static u8 const lit_3720[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80C8CC18-80C8CC20 0008+00 s=2 e=0 z=0  None .rodata    @3722                                                        */
+SECTION_RODATA static u8 const lit_3722[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80C8CD80-80C8CD8C 000C+00 s=1 e=0 z=0  None .bss       @3622                                                        */
 static u8 lit_3622[12];
 
@@ -454,7 +417,7 @@ asm void daUdFloor_c::create() {
 #pragma pop
 
 
-/* 80C8C0DC-80C8C12C 0050+00 s=1 e=0 z=0  None .text      Execute__11daUdFloor_cFPPA3_A4_f                             */
+/* 80C8C0DC-80C8C12C 0050+00 s=0 e=0 z=0  None .text      Execute__11daUdFloor_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -491,11 +454,18 @@ asm void daUdFloor_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C8C270-80C8C274 0004+00 s=1 e=0 z=0  None .text      modeWait__11daUdFloor_cFv                                    */
+/* 80C8C270-80C8C274 0004+00 s=0 e=0 z=0  None .text      modeWait__11daUdFloor_cFv                                    */
 void daUdFloor_c::modeWait() {
 	/* empty function */
 }
 
+
+/* ############################################################################################## */
+/* 80C8CC20-80C8CC24 0004+00 s=6 e=0 z=0  None .rodata    @3777                                                        */
+SECTION_RODATA static u32 const lit_3777 = 0x3F800000;
+
+/* 80C8CC24-80C8CC28 0004+00 s=5 e=0 z=0  None .rodata    @3778                                                        */
+SECTION_RODATA static u32 const lit_3778 = 0xBF800000;
 
 /* 80C8C274-80C8C310 009C+00 s=1 e=0 z=0  None .text      init_modeUpMoveInit__11daUdFloor_cFv                         */
 #pragma push
@@ -508,7 +478,7 @@ asm void daUdFloor_c::init_modeUpMoveInit() {
 #pragma pop
 
 
-/* 80C8C310-80C8C354 0044+00 s=1 e=0 z=0  None .text      modeUpMoveInit__11daUdFloor_cFv                              */
+/* 80C8C310-80C8C354 0044+00 s=0 e=0 z=0  None .text      modeUpMoveInit__11daUdFloor_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -541,7 +511,14 @@ asm void daUdFloor_c::init_modeUpMove() {
 #pragma pop
 
 
-/* 80C8C68C-80C8C7F8 016C+00 s=1 e=0 z=0  None .text      modeUpMove__11daUdFloor_cFv                                  */
+/* ############################################################################################## */
+/* 80C8CC28-80C8CC2C 0004+00 s=1 e=0 z=0  None .rodata    @3856                                                        */
+SECTION_RODATA static u32 const lit_3856 = 0x41F00000;
+
+/* 80C8CC2C-80C8CC30 0004+00 s=2 e=0 z=0  None .rodata    @3857                                                        */
+SECTION_RODATA static u32 const lit_3857 = 0x3DCCCCCD;
+
+/* 80C8C68C-80C8C7F8 016C+00 s=0 e=0 z=0  None .text      modeUpMove__11daUdFloor_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -563,7 +540,7 @@ asm void daUdFloor_c::init_modeDownMoveInit() {
 #pragma pop
 
 
-/* 80C8C81C-80C8C860 0044+00 s=1 e=0 z=0  None .text      modeDownMoveInit__11daUdFloor_cFv                            */
+/* 80C8C81C-80C8C860 0044+00 s=0 e=0 z=0  None .text      modeDownMoveInit__11daUdFloor_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -585,7 +562,11 @@ asm void daUdFloor_c::init_modeDownMove() {
 #pragma pop
 
 
-/* 80C8C8E4-80C8C994 00B0+00 s=1 e=0 z=0  None .text      modeDownMove__11daUdFloor_cFv                                */
+/* ############################################################################################## */
+/* 80C8CC30-80C8CC34 0004+00 s=1 e=0 z=0  None .rodata    @3892                                                        */
+SECTION_RODATA static u32 const lit_3892 = 0x3E99999A;
+
+/* 80C8C8E4-80C8C994 00B0+00 s=0 e=0 z=0  None .text      modeDownMove__11daUdFloor_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -596,7 +577,7 @@ asm void daUdFloor_c::modeDownMove() {
 #pragma pop
 
 
-/* 80C8C994-80C8CA78 00E4+00 s=1 e=0 z=0  None .text      Draw__11daUdFloor_cFv                                        */
+/* 80C8C994-80C8CA78 00E4+00 s=0 e=0 z=0  None .text      Draw__11daUdFloor_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -607,7 +588,7 @@ asm void daUdFloor_c::Draw() {
 #pragma pop
 
 
-/* 80C8CA78-80C8CAB8 0040+00 s=1 e=0 z=0  None .text      Delete__11daUdFloor_cFv                                      */
+/* 80C8CA78-80C8CAB8 0040+00 s=0 e=0 z=0  None .text      Delete__11daUdFloor_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -618,51 +599,51 @@ asm void daUdFloor_c::Delete() {
 #pragma pop
 
 
-/* 80C8CAB8-80C8CAE4 002C+00 s=1 e=0 z=0  None .text      daUdFloor_Draw__FP11daUdFloor_c                              */
+/* 80C8CAB8-80C8CAE4 002C+00 s=0 e=0 z=0  None .text      daUdFloor_Draw__FP11daUdFloor_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daUdFloor_Draw(daUdFloor_c* param_0) {
+asm void daUdFloor_Draw(daUdFloor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Draw__FP11daUdFloor_c.s"
 }
 #pragma pop
 
 
-/* 80C8CAE4-80C8CB04 0020+00 s=1 e=0 z=0  None .text      daUdFloor_Execute__FP11daUdFloor_c                           */
+/* 80C8CAE4-80C8CB04 0020+00 s=0 e=0 z=0  None .text      daUdFloor_Execute__FP11daUdFloor_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daUdFloor_Execute(daUdFloor_c* param_0) {
+asm void daUdFloor_Execute(daUdFloor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Execute__FP11daUdFloor_c.s"
 }
 #pragma pop
 
 
-/* 80C8CB04-80C8CB24 0020+00 s=1 e=0 z=0  None .text      daUdFloor_Delete__FP11daUdFloor_c                            */
+/* 80C8CB04-80C8CB24 0020+00 s=0 e=0 z=0  None .text      daUdFloor_Delete__FP11daUdFloor_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daUdFloor_Delete(daUdFloor_c* param_0) {
+asm void daUdFloor_Delete(daUdFloor_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Delete__FP11daUdFloor_c.s"
 }
 #pragma pop
 
 
-/* 80C8CB24-80C8CB44 0020+00 s=1 e=0 z=0  None .text      daUdFloor_Create__FP10fopAc_ac_c                             */
+/* 80C8CB24-80C8CB44 0020+00 s=0 e=0 z=0  None .text      daUdFloor_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daUdFloor_Create(fopAc_ac_c* param_0) {
+asm void daUdFloor_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv8UdFloor/d_a_obj_lv8UdFloor/daUdFloor_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C8CB44-80C8CBA0 005C+00 s=2 e=0 z=0  None .text      __dt__15daUdFloor_HIO_cFv                                    */
+/* 80C8CB44-80C8CBA0 005C+00 s=1 e=0 z=0  None .text      __dt__15daUdFloor_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -673,7 +654,7 @@ asm daUdFloor_HIO_c::~daUdFloor_HIO_c() {
 #pragma pop
 
 
-/* 80C8CBA0-80C8CBDC 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv8UdFloor_cpp                               */
+/* 80C8CBA0-80C8CBDC 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv8UdFloor_cpp                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -683,4 +664,13 @@ extern "C" asm void __sinit_d_a_obj_lv8UdFloor_cpp() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C8CC34-80C8CC44 0010+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_80C8CC34[16] = {
+	/* 80C8CC34 0007 stringBase_80C8CC34 @stringBase0 */
+	0x4C, 0x38, 0x53, 0x74, 0x65, 0x70, 0x00,
+	/* 80C8CC3B 0009 data_80C8CC3B None */
+	0x4C, 0x38, 0x53, 0x74, 0x65, 0x70, 0x58, 0x00, 0x00,
+};
 

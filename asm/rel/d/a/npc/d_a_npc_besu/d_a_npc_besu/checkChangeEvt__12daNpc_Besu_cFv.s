@@ -6,11 +6,11 @@ lbl_805382D0:
 /* 805382E0  7C 7F 1B 78 */	mr r31, r3
 /* 805382E4  3C 80 80 54 */	lis r4, lit_4829@ha
 /* 805382E8  38 A4 F9 B0 */	addi r5, r4, lit_4829@l
-/* 805382EC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 8053F9B0 */
-/* 805382F0  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 8053F9B4 */
+/* 805382EC  80 85 00 00 */	lwz r4, 0(r5)
+/* 805382F0  80 05 00 04 */	lwz r0, 4(r5)
 /* 805382F4  90 81 00 08 */	stw r4, 8(r1)
 /* 805382F8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805382FC  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 8053F9B8 */
+/* 805382FC  80 05 00 08 */	lwz r0, 8(r5)
 /* 80538300  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80538304  38 81 00 08 */	addi r4, r1, 8
 /* 80538308  48 00 17 C5 */	bl chkAction__12daNpc_Besu_cFM12daNpc_Besu_cFPCvPvPv_i
@@ -18,9 +18,9 @@ lbl_805382D0:
 /* 80538310  40 82 01 68 */	bne lbl_80538478
 /* 80538314  38 00 00 00 */	li r0, 0
 /* 80538318  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 8053831C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80538320  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80538324  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 8053831C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80538320  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80538324  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80538328  28 04 00 01 */	cmplwi r4, 1
 /* 8053832C  41 82 00 0C */	beq lbl_80538338
 /* 80538330  28 04 00 02 */	cmplwi r4, 2

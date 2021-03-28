@@ -15,7 +15,7 @@ lbl_80577FE0:
 /* 80578014  FF A0 08 90 */	fmr f29, f1
 /* 80578018  3C 60 80 58 */	lis r3, data_80578A88@ha
 /* 8057801C  3B C3 8A 88 */	addi r30, r3, data_80578A88@l
-/* 80578020  C0 3E 00 F8 */	lfs f1, 0xf8(r30)	/* effective address: 80578B80 */
+/* 80578020  C0 3E 00 F8 */	lfs f1, 0xf8(r30)
 /* 80578024  4B CE F9 68 */	b cM_rndFX__Ff
 /* 80578028  C0 1E 00 68 */	lfs f0, 0x68(r30)
 /* 8057802C  EC 00 08 2A */	fadds f0, f0, f1

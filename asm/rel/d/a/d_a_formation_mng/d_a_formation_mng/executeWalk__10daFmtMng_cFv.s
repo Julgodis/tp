@@ -19,11 +19,11 @@ lbl_80835DEC:
 /* 80835E30  3B 63 78 A8 */	addi r27, r3, M_attr__10daFmtMng_c@l
 /* 80835E34  C0 3E 05 2C */	lfs f1, 0x52c(r30)
 /* 80835E38  38 7B 00 00 */	addi r3, r27, 0
-/* 80835E3C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 808378B0 */
+/* 80835E3C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80835E40  EC 01 00 2A */	fadds f0, f1, f0
 /* 80835E44  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80835E48  C0 1E 05 2C */	lfs f0, 0x52c(r30)
-/* 80835E4C  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 808378AC */
+/* 80835E4C  C0 23 00 04 */	lfs f1, 4(r3)
 /* 80835E50  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 80835E54  40 81 00 08 */	ble lbl_80835E5C
 /* 80835E58  D0 3E 05 2C */	stfs f1, 0x52c(r30)

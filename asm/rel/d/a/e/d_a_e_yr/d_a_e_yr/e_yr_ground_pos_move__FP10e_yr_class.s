@@ -41,7 +41,7 @@ lbl_80823148:
 /* 808231E4  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 808231E8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 808231EC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 808231F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 808231F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 808231F4  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 808231F8  4B 7E 91 E4 */	b mDoMtx_YrotS__FPA4_fs
 /* 808231FC  38 61 00 14 */	addi r3, r1, 0x14

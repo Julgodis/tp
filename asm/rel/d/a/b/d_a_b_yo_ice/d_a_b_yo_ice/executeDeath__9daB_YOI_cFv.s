@@ -21,9 +21,9 @@ lbl_8063CC90:
 /* 8063CCDC  4B FF 2F 10 */	b onIceBreak__8daB_YO_cFUs
 /* 8063CCE0  7F E3 FB 78 */	mr r3, r31
 /* 8063CCE4  4B 9D CF 98 */	b fopAcM_delete__FP10fopAc_ac_c
-/* 8063CCE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063CCEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063CCF0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8063CCE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063CCEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063CCF0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8063CCF4  38 63 02 10 */	addi r3, r3, 0x210
 /* 8063CCF8  80 9F 0B 30 */	lwz r4, 0xb30(r31)
 /* 8063CCFC  4B A0 EB B8 */	b forceOnEventMove__Q213dPa_control_c7level_cFUl

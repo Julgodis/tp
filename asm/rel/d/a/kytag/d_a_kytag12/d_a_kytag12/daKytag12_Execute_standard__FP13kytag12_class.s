@@ -21,12 +21,12 @@ lbl_8085BD0C:
 /* 8085BD58  7C 6F 1B 78 */	mr r15, r3
 /* 8085BD5C  3C 60 80 86 */	lis r3, lit_3836@ha
 /* 8085BD60  3B 83 EF 00 */	addi r28, r3, lit_3836@l
-/* 8085BD64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8085BD68  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 8085BD6C  83 5D 5D AC */	lwz r26, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 8085BD64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085BD68  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 8085BD6C  83 5D 5D AC */	lwz r26, 0x5dac(r29)
 /* 8085BD70  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8085BD74  3B C3 CA 54 */	addi r30, r3, g_env_light@l
-/* 8085BD78  83 3E 10 58 */	lwz r25, 0x1058(r30)	/* effective address: 8042DAAC */
+/* 8085BD78  83 3E 10 58 */	lwz r25, 0x1058(r30)
 /* 8085BD7C  3B 00 00 00 */	li r24, 0
 /* 8085BD80  3A E0 00 00 */	li r23, 0
 /* 8085BD84  3A C0 00 00 */	li r22, 0
@@ -654,7 +654,7 @@ lbl_8085C648:
 /* 8085C6A4  90 01 00 30 */	stw r0, 0x30(r1)
 /* 8085C6A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085C6AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085C6B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085C6B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085C6B4  38 81 00 30 */	addi r4, r1, 0x30
 /* 8085C6B8  38 A1 00 74 */	addi r5, r1, 0x74
 /* 8085C6BC  38 C0 00 00 */	li r6, 0
@@ -828,7 +828,7 @@ lbl_8085C890:
 /* 8085C924  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 8085C928  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085C92C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085C930  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085C930  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085C934  38 81 00 2C */	addi r4, r1, 0x2c
 /* 8085C938  38 A1 00 68 */	addi r5, r1, 0x68
 /* 8085C93C  38 C0 00 00 */	li r6, 0
@@ -1111,9 +1111,9 @@ lbl_8085CD10:
 /* 8085CD14  4B FF EE AD */	bl daKytag12_light_swprd_proc__FP13kytag12_class
 /* 8085CD18  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8085CD1C  38 A3 CA 54 */	addi r5, r3, g_env_light@l
-/* 8085CD20  88 05 10 50 */	lbz r0, 0x1050(r5)	/* effective address: 8042DAA4 */
+/* 8085CD20  88 05 10 50 */	lbz r0, 0x1050(r5)
 /* 8085CD24  54 04 06 7E */	clrlwi r4, r0, 0x19
-/* 8085CD28  98 85 10 50 */	stb r4, 0x1050(r5)	/* effective address: 8042DAA4 */
+/* 8085CD28  98 85 10 50 */	stb r4, 0x1050(r5)
 /* 8085CD2C  80 7D 5D B4 */	lwz r3, 0x5db4(r29)
 /* 8085CD30  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8085CD34  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
@@ -1163,7 +1163,7 @@ lbl_8085CD4C:
 /* 8085CDE0  7C 66 1B 78 */	mr r6, r3
 /* 8085CDE4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085CDE8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085CDEC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085CDEC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085CDF0  38 81 00 28 */	addi r4, r1, 0x28
 /* 8085CDF4  38 AF 05 7C */	addi r5, r15, 0x57c
 /* 8085CDF8  38 E0 00 00 */	li r7, 0
@@ -1204,7 +1204,7 @@ lbl_8085CD4C:
 /* 8085CE84  7C 66 1B 78 */	mr r6, r3
 /* 8085CE88  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085CE8C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085CE90  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085CE90  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085CE94  38 81 00 24 */	addi r4, r1, 0x24
 /* 8085CE98  38 AF 05 88 */	addi r5, r15, 0x588
 /* 8085CE9C  38 E0 00 00 */	li r7, 0
@@ -1246,7 +1246,7 @@ lbl_8085CD4C:
 /* 8085CF2C  7C 66 1B 78 */	mr r6, r3
 /* 8085CF30  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085CF34  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085CF38  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085CF38  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085CF3C  38 81 00 20 */	addi r4, r1, 0x20
 /* 8085CF40  38 AF 05 94 */	addi r5, r15, 0x594
 /* 8085CF44  38 E0 00 00 */	li r7, 0
@@ -1288,7 +1288,7 @@ lbl_8085CD4C:
 /* 8085CFD4  7C 66 1B 78 */	mr r6, r3
 /* 8085CFD8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085CFDC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085CFE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085CFE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085CFE4  38 81 00 1C */	addi r4, r1, 0x1c
 /* 8085CFE8  38 AF 05 A0 */	addi r5, r15, 0x5a0
 /* 8085CFEC  38 E0 00 00 */	li r7, 0
@@ -1347,7 +1347,7 @@ lbl_8085D09C:
 /* 8085D0B4  7C 66 1B 78 */	mr r6, r3
 /* 8085D0B8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085D0BC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085D0C0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085D0C0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085D0C4  38 81 00 18 */	addi r4, r1, 0x18
 /* 8085D0C8  38 AF 04 D0 */	addi r5, r15, 0x4d0
 /* 8085D0CC  38 E0 00 00 */	li r7, 0
@@ -1388,7 +1388,7 @@ lbl_8085D0EC:
 /* 8085D154  7C 66 1B 78 */	mr r6, r3
 /* 8085D158  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8085D15C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8085D160  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8085D160  80 63 00 00 */	lwz r3, 0(r3)
 /* 8085D164  38 81 00 14 */	addi r4, r1, 0x14
 /* 8085D168  38 AF 05 7C */	addi r5, r15, 0x57c
 /* 8085D16C  38 E0 00 00 */	li r7, 0

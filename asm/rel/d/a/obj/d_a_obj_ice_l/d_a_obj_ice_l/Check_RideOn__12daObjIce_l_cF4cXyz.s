@@ -12,9 +12,9 @@ lbl_80C1FA60:
 /* 80C1FA88  7C 9A 23 78 */	mr r26, r4
 /* 80C1FA8C  3C 60 80 C2 */	lis r3, lit_3675@ha
 /* 80C1FA90  3B E3 07 8C */	addi r31, r3, lit_3675@l
-/* 80C1FA94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C1FA98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C1FA9C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C1FA94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C1FA98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C1FA9C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80C1FAA0  3B A0 00 00 */	li r29, 0
 /* 80C1FAA4  38 00 00 01 */	li r0, 1
 /* 80C1FAA8  98 1C 05 E6 */	stb r0, 0x5e6(r28)

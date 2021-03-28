@@ -86,8 +86,8 @@ lbl_80A6E45C:
 /* 80A6E460  41 82 00 D0 */	beq lbl_80A6E530
 /* 80A6E464  48 00 01 3C */	b lbl_80A6E5A0
 lbl_80A6E468:
-/* 80A6E468  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A6E46C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A6E468  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A6E46C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A6E470  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80A6E474  7F C3 F3 78 */	mr r3, r30
 /* 80A6E478  4B 5D 9F 70 */	b getRunEventName__16dEvent_manager_cFv

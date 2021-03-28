@@ -10,15 +10,15 @@ lbl_804FB724:
 /* 804FB744  3C 60 80 50 */	lis r3, stringBase0@ha
 /* 804FB748  38 63 BB D4 */	addi r3, r3, stringBase0@l
 /* 804FB74C  38 80 00 03 */	li r4, 3
-/* 804FB750  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804FB754  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804FB750  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804FB754  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804FB758  3C A5 00 02 */	addis r5, r5, 2
 /* 804FB75C  38 C0 00 80 */	li r6, 0x80
 /* 804FB760  38 A5 C2 F8 */	addi r5, r5, -15624
 /* 804FB764  4B B4 0B 88 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
 /* 804FB768  7C 64 1B 78 */	mr r4, r3
-/* 804FB76C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804FB770  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804FB76C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804FB770  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804FB774  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804FB778  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 804FB77C  7C 05 07 74 */	extsb r5, r0

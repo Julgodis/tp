@@ -31,7 +31,7 @@ lbl_805A01CC:
 /* 805A01CC  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 805A01D0  3C 80 80 5A */	lis r4, l_HIO@ha
 /* 805A01D4  38 84 13 40 */	addi r4, r4, l_HIO@l
-/* 805A01D8  C0 24 00 20 */	lfs f1, 0x20(r4)	/* effective address: 805A1360 */
+/* 805A01D8  C0 24 00 20 */	lfs f1, 0x20(r4)
 /* 805A01DC  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 805A01E0  C0 7F 00 2C */	lfs f3, 0x2c(r31)
 /* 805A01E4  4B CC F8 58 */	b cLib_addCalc2__FPffff

@@ -34,8 +34,8 @@ lbl_80C9F0E8:
 /* 80C9F124  38 60 00 05 */	li r3, 5
 /* 80C9F128  48 00 00 B0 */	b lbl_80C9F1D8
 lbl_80C9F12C:
-/* 80C9F12C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9F130  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9F12C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9F130  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9F134  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C9F138  80 9F 05 BC */	lwz r4, 0x5bc(r31)
 /* 80C9F13C  7F E5 FB 78 */	mr r5, r31
@@ -55,7 +55,7 @@ lbl_80C9F154:
 /* 80C9F170  38 00 FF FF */	li r0, -1
 /* 80C9F174  3C 60 80 CA */	lis r3, l_HIO@ha
 /* 80C9F178  38 63 F3 28 */	addi r3, r3, l_HIO@l
-/* 80C9F17C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80C9F32C */
+/* 80C9F17C  98 03 00 04 */	stb r0, 4(r3)
 lbl_80C9F180:
 /* 80C9F180  3C 60 80 CA */	lis r3, lit_3966@ha
 /* 80C9F184  C0 23 F2 98 */	lfs f1, lit_3966@l(r3)
@@ -64,8 +64,8 @@ lbl_80C9F180:
 /* 80C9F190  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80C9F194  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80C9F198  B0 1F 05 7C */	sth r0, 0x57c(r31)
-/* 80C9F19C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9F1A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9F19C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9F1A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9F1A4  38 63 09 58 */	addi r3, r3, 0x958
 /* 80C9F1A8  38 80 00 07 */	li r4, 7
 /* 80C9F1AC  4B 39 57 88 */	b isDungeonItem__12dSv_memBit_cCFi

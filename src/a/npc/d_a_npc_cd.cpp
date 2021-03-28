@@ -75,16 +75,16 @@ struct mDoMtx_stack_c {
 struct J3DModelData {
 };
 
-struct J3DAnmTransform {
+struct Z2Creature {
+};
+
+struct mDoExt_McaMorfCallBack1_c {
 };
 
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct Z2Creature {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
+struct J3DAnmTransform {
 };
 
 struct mDoExt_McaMorfSO {
@@ -105,7 +105,7 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
@@ -114,7 +114,7 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -268,394 +268,394 @@ asm static void jntNodeCallBack(J3DJoint* param_0, int param_1) {
 /* ############################################################################################## */
 /* 80392A18-80392A30 0018+00 s=2 e=0 z=0  None .rodata    l_resMANa                                                    */
 SECTION_RODATA static void* const l_resMANa[6] = {
-	/* 0    */ (void*)&a_npc_d_a_npc_cd__stringBase0,
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x8),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)&a_npc_d_a_npc_cd__stringBase0,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x8),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392A30-80392A48 0018+00 s=2 e=0 z=0  None .rodata    l_resMADa                                                    */
 SECTION_RODATA static void* const l_resMADa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x39),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x41),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x39),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x41),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392A48-80392A60 0018+00 s=2 e=0 z=0  None .rodata    l_resMCNa                                                    */
 SECTION_RODATA static void* const l_resMCNa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x4B),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x53),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x4B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x53),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392A60-80392A78 0018+00 s=2 e=0 z=0  None .rodata    l_resMONa                                                    */
 SECTION_RODATA static void* const l_resMONa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x5D),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x65),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x5D),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x65),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392A78-80392A90 0018+00 s=2 e=0 z=0  None .rodata    l_resMANb                                                    */
 SECTION_RODATA static void* const l_resMANb[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x6F),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x77),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x6F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x77),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392A90-80392AA8 0018+00 s=2 e=0 z=0  None .rodata    l_resMANc                                                    */
 SECTION_RODATA static void* const l_resMANc[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x81),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x89),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x81),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x89),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392AA8-80392AC0 0018+00 s=2 e=0 z=0  None .rodata    l_resMASa                                                    */
 SECTION_RODATA static void* const l_resMASa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x93),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x9B),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x93),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x9B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392AC0-80392AD8 0018+00 s=2 e=0 z=0  None .rodata    l_resMBNa                                                    */
 SECTION_RODATA static void* const l_resMBNa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xA5),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xAD),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xA5),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xAD),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392AD8-80392AF0 0018+00 s=2 e=0 z=0  None .rodata    l_resMANa2                                                   */
 SECTION_RODATA static void* const l_resMANa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xB7),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xC0),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xB7),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xC0),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392AF0-80392B08 0018+00 s=2 e=0 z=0  None .rodata    l_resMADa2                                                   */
 SECTION_RODATA static void* const l_resMADa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xCA),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xD3),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xCA),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xD3),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B08-80392B20 0018+00 s=2 e=0 z=0  None .rodata    l_resMCNa2                                                   */
 SECTION_RODATA static void* const l_resMCNa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xDD),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xE6),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xDD),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xE6),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B20-80392B38 0018+00 s=2 e=0 z=0  None .rodata    l_resMONa2                                                   */
 SECTION_RODATA static void* const l_resMONa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xF0),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xF9),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xF0),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0xF9),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B38-80392B50 0018+00 s=2 e=0 z=0  None .rodata    l_resMANb2                                                   */
 SECTION_RODATA static void* const l_resMANb2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x103),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x10C),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x103),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x10C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B50-80392B68 0018+00 s=2 e=0 z=0  None .rodata    l_resMANc2                                                   */
 SECTION_RODATA static void* const l_resMANc2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x116),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x11F),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x116),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x11F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B68-80392B80 0018+00 s=2 e=0 z=0  None .rodata    l_resMASa2                                                   */
 SECTION_RODATA static void* const l_resMASa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x129),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x132),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x129),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x132),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B80-80392B98 0018+00 s=2 e=0 z=0  None .rodata    l_resMBNa2                                                   */
 SECTION_RODATA static void* const l_resMBNa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x13C),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x145),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x13C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x145),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392B98-80392BB0 0018+00 s=2 e=0 z=0  None .rodata    l_resWANa                                                    */
 SECTION_RODATA static void* const l_resWANa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x157),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x14F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x157),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392BB0-80392BC8 0018+00 s=2 e=0 z=0  None .rodata    l_resWADa                                                    */
 SECTION_RODATA static void* const l_resWADa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x175),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x17D),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x175),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x17D),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392BC8-80392BE0 0018+00 s=2 e=0 z=0  None .rodata    l_resMATa                                                    */
 SECTION_RODATA static void* const l_resMATa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x187),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x18F),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x187),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x18F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392BE0-80392BF8 0018+00 s=2 e=0 z=0  None .rodata    l_resWCNa                                                    */
 SECTION_RODATA static void* const l_resWCNa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x199),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1A1),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x199),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1A1),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392BF8-80392C10 0018+00 s=2 e=0 z=0  None .rodata    l_resWONa                                                    */
 SECTION_RODATA static void* const l_resWONa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1AB),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1B3),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1AB),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1B3),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C10-80392C28 0018+00 s=2 e=0 z=0  None .rodata    l_resWGNa                                                    */
 SECTION_RODATA static void* const l_resWGNa[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1BD),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C5),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1BD),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C5),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C28-80392C40 0018+00 s=2 e=0 z=0  None .rodata    l_resWANb                                                    */
 SECTION_RODATA static void* const l_resWANb[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1CF),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1D7),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1CF),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1D7),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C40-80392C58 0018+00 s=2 e=0 z=0  None .rodata    l_resWANa2                                                   */
 SECTION_RODATA static void* const l_resWANa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1E1),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1EA),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1E1),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1EA),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C58-80392C70 0018+00 s=2 e=0 z=0  None .rodata    l_resWADa2                                                   */
 SECTION_RODATA static void* const l_resWADa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1F4),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1FD),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1F4),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1FD),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C70-80392C88 0018+00 s=2 e=0 z=0  None .rodata    l_resMATa2                                                   */
 SECTION_RODATA static void* const l_resMATa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x207),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x210),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x207),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x210),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392C88-80392CA0 0018+00 s=2 e=0 z=0  None .rodata    l_resWCNa2                                                   */
 SECTION_RODATA static void* const l_resWCNa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x21A),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x223),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x21A),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x223),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392CA0-80392CB8 0018+00 s=2 e=0 z=0  None .rodata    l_resWONa2                                                   */
 SECTION_RODATA static void* const l_resWONa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x22D),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x236),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x22D),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x236),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392CB8-80392CD0 0018+00 s=2 e=0 z=0  None .rodata    l_resWGNa2                                                   */
 SECTION_RODATA static void* const l_resWGNa2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x240),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x249),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x240),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x249),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392CD0-80392CE8 0018+00 s=2 e=0 z=0  None .rodata    l_resWANb2                                                   */
 SECTION_RODATA static void* const l_resWANb2[6] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x253),
-	/* 1    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x25C),
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x253),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x25C),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
 };
 
 /* 80392CE8-80392D30 0048+00 s=1 e=0 z=0  None .rodata    l_objTbl                                                     */
 SECTION_RODATA static void* const l_objTbl[18] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 1    */ (void*)0x00000006,
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 3    */ (void*)0x00000006,
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 5    */ (void*)0x00000005,
-	/* 6    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 7    */ (void*)0x00000003,
-	/* 8    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 9    */ (void*)0x00000007,
-	/* 10   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 11   */ (void*)0x00000008,
-	/* 12   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 13   */ (void*)0xFFFFFFFF,
-	/* 14   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 15   */ (void*)0xFFFFFFFF,
-	/* 16   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
-	/* 17   */ (void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000007,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000008,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x26),
+	(void*)0x00000004,
 };
 
 /* 80392D30-80392D78 0048+00 s=1 e=0 z=0  None .rodata    l_objTWTbl                                                   */
 SECTION_RODATA static void* const l_objTWTbl[18] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 1    */ (void*)0x00000006,
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 3    */ (void*)0x00000006,
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 5    */ (void*)0x00000005,
-	/* 6    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 7    */ (void*)0x00000003,
-	/* 8    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 9    */ (void*)0x00000007,
-	/* 10   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 11   */ (void*)0x00000008,
-	/* 12   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 13   */ (void*)0xFFFFFFFF,
-	/* 14   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 15   */ (void*)0xFFFFFFFF,
-	/* 16   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
-	/* 17   */ (void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000007,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000008,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0xFFFFFFFF,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x2F),
+	(void*)0x00000004,
 };
 
 /* 80392D78-80392DC8 0050+00 s=1 e=0 z=0  None .rodata    l_bckTbl_M                                                   */
 SECTION_RODATA static void* const l_bckTbl_M[20] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 1    */ (void*)0x00000005,
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 3    */ (void*)0x00000006,
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 5    */ (void*)0x00000003,
-	/* 6    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
-	/* 7    */ (void*)0x00000004,
-	/* 8    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 9    */ (void*)0x00000006,
-	/* 10   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 11   */ (void*)0x00000007,
-	/* 12   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 13   */ (void*)0x00000008,
-	/* 14   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 15   */ (void*)0x00000003,
-	/* 16   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 17   */ (void*)0x00000004,
-	/* 18   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
-	/* 19   */ (void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x12),
+	(void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000007,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000008,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x1C),
+	(void*)0x00000005,
 };
 
 /* 80392DC8-80392E18 0050+00 s=1 e=0 z=0  None .rodata    l_bckTbl_W                                                   */
 SECTION_RODATA static void* const l_bckTbl_W[20] = {
-	/* 0    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 1    */ (void*)0x00000005,
-	/* 2    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 3    */ (void*)0x00000006,
-	/* 4    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 5    */ (void*)0x00000003,
-	/* 6    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
-	/* 7    */ (void*)0x00000004,
-	/* 8    */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 9    */ (void*)0x00000006,
-	/* 10   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 11   */ (void*)0x00000007,
-	/* 12   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 13   */ (void*)0x00000008,
-	/* 14   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 15   */ (void*)0x00000003,
-	/* 16   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 17   */ (void*)0x00000004,
-	/* 18   */ (void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
-	/* 19   */ (void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)0x00000005,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x161),
+	(void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000006,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000007,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000008,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000003,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000004,
+	(void*)(((char*)&a_npc_d_a_npc_cd__stringBase0)+0x16B),
+	(void*)0x00000005,
 };
 
 /* 80392E18-80392E5C 0044+00 s=0 e=0 z=1  None .rodata    m_cylDat__9daNpcCd_c                                         */
@@ -958,36 +958,36 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803B3B8C-803B3C04 0078+00 s=2 e=0 z=0  None .data      l_resNameTbl                                                 */
 SECTION_DATA static void* l_resNameTbl[30] = {
-	/* 0    */ (void*)&l_resMANa,
-	/* 1    */ (void*)&l_resMADa,
-	/* 2    */ (void*)&l_resMCNa,
-	/* 3    */ (void*)&l_resMONa,
-	/* 4    */ (void*)&l_resMANb,
-	/* 5    */ (void*)&l_resMANc,
-	/* 6    */ (void*)&l_resMASa,
-	/* 7    */ (void*)&l_resMBNa,
-	/* 8    */ (void*)&l_resMANa2,
-	/* 9    */ (void*)&l_resMADa2,
-	/* 10   */ (void*)&l_resMCNa2,
-	/* 11   */ (void*)&l_resMONa2,
-	/* 12   */ (void*)&l_resMANb2,
-	/* 13   */ (void*)&l_resMANc2,
-	/* 14   */ (void*)&l_resMASa2,
-	/* 15   */ (void*)&l_resMBNa2,
-	/* 16   */ (void*)&l_resWANa,
-	/* 17   */ (void*)&l_resWADa,
-	/* 18   */ (void*)&l_resMATa,
-	/* 19   */ (void*)&l_resWCNa,
-	/* 20   */ (void*)&l_resWONa,
-	/* 21   */ (void*)&l_resWGNa,
-	/* 22   */ (void*)&l_resWANb,
-	/* 23   */ (void*)&l_resWANa2,
-	/* 24   */ (void*)&l_resWADa2,
-	/* 25   */ (void*)&l_resMATa2,
-	/* 26   */ (void*)&l_resWCNa2,
-	/* 27   */ (void*)&l_resWONa2,
-	/* 28   */ (void*)&l_resWGNa2,
-	/* 29   */ (void*)&l_resWANb2,
+	(void*)&l_resMANa,
+	(void*)&l_resMADa,
+	(void*)&l_resMCNa,
+	(void*)&l_resMONa,
+	(void*)&l_resMANb,
+	(void*)&l_resMANc,
+	(void*)&l_resMASa,
+	(void*)&l_resMBNa,
+	(void*)&l_resMANa2,
+	(void*)&l_resMADa2,
+	(void*)&l_resMCNa2,
+	(void*)&l_resMONa2,
+	(void*)&l_resMANb2,
+	(void*)&l_resMANc2,
+	(void*)&l_resMASa2,
+	(void*)&l_resMBNa2,
+	(void*)&l_resWANa,
+	(void*)&l_resWADa,
+	(void*)&l_resMATa,
+	(void*)&l_resWCNa,
+	(void*)&l_resWONa,
+	(void*)&l_resWGNa,
+	(void*)&l_resWANb,
+	(void*)&l_resWANa2,
+	(void*)&l_resWADa2,
+	(void*)&l_resMATa2,
+	(void*)&l_resWCNa2,
+	(void*)&l_resWONa2,
+	(void*)&l_resWGNa2,
+	(void*)&l_resWANb2,
 };
 
 /* 80156B4C-80156C50 0104+00 s=0 e=0 z=1  None .text      loadResrc__9daNpcCd_cFii                                     */
@@ -1766,37 +1766,37 @@ SECTION_DATA static u8 data_803B5E04[896] = {
 
 /* 803B6184-803B6190 000C+00 s=2 e=0 z=0  None .data      __vt__17daNpcCd_HIO_Jnt_c                                    */
 SECTION_DATA static void* __vt__17daNpcCd_HIO_Jnt_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17daNpcCd_HIO_Jnt_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17daNpcCd_HIO_Jnt_cFv,
 };
 
 /* 803B6190-803B619C 000C+00 s=2 e=0 z=0  None .data      __vt__19daNpcCd_HIO_Child_c                                  */
 SECTION_DATA static void* __vt__19daNpcCd_HIO_Child_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19daNpcCd_HIO_Child_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19daNpcCd_HIO_Child_cFv,
 };
 
 /* 803B619C-803B61A8 000C+00 s=2 e=0 z=0  None .data      __vt__13daNpcCd_HIO_c                                        */
 SECTION_DATA static void* __vt__13daNpcCd_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13daNpcCd_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13daNpcCd_HIO_cFv,
 };
 
 /* 803B61A8-803B61B4 000C+00 s=3 e=2 z=0  None .data      __vt__18fOpAcm_HIO_entry_c                                   */
 SECTION_DATA void* __vt__18fOpAcm_HIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18fOpAcm_HIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18fOpAcm_HIO_entry_cFv,
 };
 
 /* 803B61B4-803B61C0 000C+00 s=4 e=6 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14mDoHIO_entry_cFv,
 };
 
 /* 80157600-801577A0 01A0+00 s=1 e=0 z=0  None .text      __ct__13daNpcCd_HIO_cFv                                      */

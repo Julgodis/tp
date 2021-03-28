@@ -140,7 +140,7 @@ lbl_8068501C:
 /* 80685038  38 00 FF FF */	li r0, -1
 /* 8068503C  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 80685040  38 63 56 84 */	addi r3, r3, l_HIO@l
-/* 80685044  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80685688 */
+/* 80685044  98 03 00 04 */	stb r0, 4(r3)
 lbl_80685048:
 /* 80685048  88 1E 05 71 */	lbz r0, 0x571(r30)
 /* 8068504C  28 00 00 01 */	cmplwi r0, 1
@@ -234,8 +234,8 @@ lbl_80685138:
 /* 80685190  4B FF F9 05 */	bl daE_Bee_Execute__FP11e_bee_class
 /* 80685194  3A E0 00 00 */	li r23, 0
 /* 80685198  3B 80 00 00 */	li r28, 0
-/* 8068519C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806851A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8068519C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806851A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806851A4  3F 23 00 02 */	addis r25, r3, 2
 /* 806851A8  3B 03 0F 38 */	addi r24, r3, 0xf38
 /* 806851AC  3C 60 80 68 */	lis r3, stringBase0@ha

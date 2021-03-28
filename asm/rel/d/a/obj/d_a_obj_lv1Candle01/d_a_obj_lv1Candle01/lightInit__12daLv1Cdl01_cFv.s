@@ -8,7 +8,7 @@ lbl_80C570D8:
 /* 80C570F0  C0 03 07 2C */	lfs f0, 0x72c(r3)
 /* 80C570F4  D0 03 07 3C */	stfs f0, 0x73c(r3)
 /* 80C570F8  C0 23 07 38 */	lfs f1, 0x738(r3)
-/* 80C570FC  C0 04 00 34 */	lfs f0, 0x34(r4)	/* effective address: 80C57890 */
+/* 80C570FC  C0 04 00 34 */	lfs f0, 0x34(r4)
 /* 80C57100  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C57104  D0 03 07 38 */	stfs f0, 0x738(r3)
 /* 80C57108  88 03 07 40 */	lbz r0, 0x740(r3)

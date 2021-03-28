@@ -10,10 +10,10 @@ lbl_80B1F638:
 /* 80B1F658  48 00 03 B1 */	bl srchActors__12daNpc_Toby_cFv
 /* 80B1F65C  3C 60 80 B2 */	lis r3, m__18daNpc_Toby_Param_c@ha
 /* 80B1F660  38 63 49 E4 */	addi r3, r3, m__18daNpc_Toby_Param_c@l
-/* 80B1F664  AB C3 00 48 */	lha r30, 0x48(r3)	/* effective address: 80B24A2C */
-/* 80B1F668  AB A3 00 4A */	lha r29, 0x4a(r3)	/* effective address: 80B24A2E */
-/* 80B1F66C  A8 83 00 4C */	lha r4, 0x4c(r3)	/* effective address: 80B24A30 */
-/* 80B1F670  A8 A3 00 4E */	lha r5, 0x4e(r3)	/* effective address: 80B24A32 */
+/* 80B1F664  AB C3 00 48 */	lha r30, 0x48(r3)
+/* 80B1F668  AB A3 00 4A */	lha r29, 0x4a(r3)
+/* 80B1F66C  A8 83 00 4C */	lha r4, 0x4c(r3)
+/* 80B1F670  A8 A3 00 4E */	lha r5, 0x4e(r3)
 /* 80B1F674  88 1F 0F 84 */	lbz r0, 0xf84(r31)
 /* 80B1F678  28 00 00 00 */	cmplwi r0, 0
 /* 80B1F67C  40 82 00 14 */	bne lbl_80B1F690
@@ -36,29 +36,29 @@ lbl_80B1F690:
 /* 80B1F6BC  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80B1F6C0  3C 60 80 B2 */	lis r3, m__18daNpc_Toby_Param_c@ha
 /* 80B1F6C4  38 63 49 E4 */	addi r3, r3, m__18daNpc_Toby_Param_c@l
-/* 80B1F6C8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80B249EC */
+/* 80B1F6C8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80B1F6CC  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80B1F6D0  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 80B1F6D4  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 80B1F6D8  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80B249F4 */
+/* 80B1F6D8  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80B1F6DC  FC 00 00 1E */	fctiwz f0, f0
 /* 80B1F6E0  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80B1F6E4  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80B1F6E8  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 80B1F6EC  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80B249F8 */
+/* 80B1F6EC  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80B1F6F0  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 80B1F6F4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80B24A00 */
+/* 80B1F6F4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B1F6F8  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 80B1F6FC  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 80B24A34 */
+/* 80B1F6FC  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 80B1F700  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 80B1F704  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80B1F708  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 80B1F70C  4B 55 68 34 */	b SetWallR__12dBgS_AcchCirFf
 /* 80B1F710  3C 60 80 B2 */	lis r3, m__18daNpc_Toby_Param_c@ha
 /* 80B1F714  38 63 49 E4 */	addi r3, r3, m__18daNpc_Toby_Param_c@l
-/* 80B1F718  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B249FC */
+/* 80B1F718  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B1F71C  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 80B1F720  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80B249F0 */
+/* 80B1F720  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B1F724  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
 /* 80B1F728  3C 60 80 B2 */	lis r3, lit_4706@ha
 /* 80B1F72C  38 63 54 EC */	addi r3, r3, lit_4706@l
@@ -72,11 +72,11 @@ lbl_80B1F690:
 lbl_80B1F74C:
 /* 80B1F74C  3C 60 80 B2 */	lis r3, m__18daNpc_Toby_Param_c@ha
 /* 80B1F750  38 63 49 E4 */	addi r3, r3, m__18daNpc_Toby_Param_c@l
-/* 80B1F754  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80B24A50 */
+/* 80B1F754  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80B1F758  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 80B1F75C  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80B24A28 */
+/* 80B1F75C  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80B1F760  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 80B1F764  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80B249E8 */
+/* 80B1F764  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80B1F768  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80B1F76C  39 61 00 20 */	addi r11, r1, 0x20
 /* 80B1F770  4B 84 2A B8 */	b _restgpr_29

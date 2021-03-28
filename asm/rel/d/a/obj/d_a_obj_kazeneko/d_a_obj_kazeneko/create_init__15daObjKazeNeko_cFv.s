@@ -7,11 +7,11 @@ lbl_80C3C8D8:
 /* 80C3C8EC  7C 7E 1B 78 */	mr r30, r3
 /* 80C3C8F0  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
 /* 80C3C8F4  3B E4 D3 DC */	addi r31, r4, M_attr__15daObjKazeNeko_c@l
-/* 80C3C8F8  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 80C3D408 */
-/* 80C3C8FC  C0 5F 00 30 */	lfs f2, 0x30(r31)	/* effective address: 80C3D40C */
+/* 80C3C8F8  C0 3F 00 2C */	lfs f1, 0x2c(r31)
+/* 80C3C8FC  C0 5F 00 30 */	lfs f2, 0x30(r31)
 /* 80C3C900  FC 60 08 90 */	fmr f3, f1
-/* 80C3C904  C0 9F 00 34 */	lfs f4, 0x34(r31)	/* effective address: 80C3D410 */
-/* 80C3C908  C0 BF 00 38 */	lfs f5, 0x38(r31)	/* effective address: 80C3D414 */
+/* 80C3C904  C0 9F 00 34 */	lfs f4, 0x34(r31)
+/* 80C3C908  C0 BF 00 38 */	lfs f5, 0x38(r31)
 /* 80C3C90C  FC C0 20 90 */	fmr f6, f4
 /* 80C3C910  4B 3D DC 38 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C3C914  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)

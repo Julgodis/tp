@@ -69,9 +69,9 @@ extern "C" extern u32 data_80450580;
 /* ############################################################################################## */
 /* 803A35A0-803A35B0 000C+04 s=2 e=0 z=0  None .data      __vt__11fapGm_HIO_c                                          */
 SECTION_DATA static void* __vt__11fapGm_HIO_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11fapGm_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11fapGm_HIO_cFv,
 	/* padding */
 	NULL,
 };

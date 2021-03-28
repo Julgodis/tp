@@ -9,8 +9,8 @@ lbl_8068E178:
 /* 8068E194  3B E3 0D D8 */	addi r31, r3, lit_3788@l
 /* 8068E198  3C 60 80 69 */	lis r3, stringBase0@ha
 /* 8068E19C  38 63 0E B8 */	addi r3, r3, stringBase0@l
-/* 8068E1A0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8068E1A4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8068E1A0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8068E1A4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8068E1A8  3C A5 00 02 */	addis r5, r5, 2
 /* 8068E1AC  38 C0 00 80 */	li r6, 0x80
 /* 8068E1B0  38 A5 C2 F8 */	addi r5, r5, -15624

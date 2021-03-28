@@ -13,13 +13,13 @@ lbl_80BE1ACC:
 /* 80BE1AF8  3C 04 00 01 */	addis r0, r4, 1
 /* 80BE1AFC  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80BE1B00  41 82 00 14 */	beq lbl_80BE1B14
-/* 80BE1B04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE1B08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE1B04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE1B08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE1B0C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80BE1B10  4B 46 1B DC */	b setPtI_Id__14dEvt_control_cFUi
 lbl_80BE1B14:
-/* 80BE1B14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE1B18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE1B14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE1B18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE1B1C  38 63 09 58 */	addi r3, r3, 0x958
 /* 80BE1B20  38 80 00 0D */	li r4, 0xd
 /* 80BE1B24  4B 45 2C EC */	b onSwitch__12dSv_memBit_cFi

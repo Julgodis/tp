@@ -9,8 +9,8 @@ lbl_80BD65B0:
 /* 80BD65CC  38 83 68 BC */	addi r4, r3, lit_3693@l
 /* 80BD65D0  3B 20 00 00 */	li r25, 0
 /* 80BD65D4  3B E0 00 00 */	li r31, 0
-/* 80BD65D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD65DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD65D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD65DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD65E0  3F 43 00 02 */	addis r26, r3, 2
 /* 80BD65E4  3C 60 80 BD */	lis r3, l_arcName@ha
 /* 80BD65E8  3B 63 68 F0 */	addi r27, r3, l_arcName@l
@@ -19,7 +19,7 @@ lbl_80BD65B0:
 /* 80BD65F4  3B C4 00 14 */	addi r30, r4, 0x14
 /* 80BD65F8  3B 5A C2 F8 */	addi r26, r26, -15624
 lbl_80BD65FC:
-/* 80BD65FC  80 7B 00 00 */	lwz r3, 0(r27)	/* effective address: 80BD68F0 */
+/* 80BD65FC  80 7B 00 00 */	lwz r3, 0(r27)
 /* 80BD6600  7C 9C F8 2E */	lwzx r4, r28, r31
 /* 80BD6604  7F 45 D3 78 */	mr r5, r26
 /* 80BD6608  38 C0 00 80 */	li r6, 0x80

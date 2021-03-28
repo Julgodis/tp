@@ -15,8 +15,8 @@ lbl_80C9D594:
 /* 80C9D5C8  90 1D 00 00 */	stw r0, 0(r29)
 /* 80C9D5CC  7F C3 F3 78 */	mr r3, r30
 /* 80C9D5D0  4B FF FB 05 */	bl setBaseMtx__12daObjStair_cFv
-/* 80C9D5D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9D5D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9D5D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9D5D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9D5DC  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C9D5E0  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C9D5E4  88 1E 04 BA */	lbz r0, 0x4ba(r30)

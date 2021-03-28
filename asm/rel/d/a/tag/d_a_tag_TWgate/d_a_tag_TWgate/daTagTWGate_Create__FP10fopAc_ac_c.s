@@ -21,8 +21,8 @@ lbl_80D552C4:
 lbl_80D552D0:
 /* 80D552D0  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D552D4  98 1F 05 E2 */	stb r0, 0x5e2(r31)
-/* 80D552D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D552DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D552D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D552DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D552E0  38 63 00 28 */	addi r3, r3, 0x28
 /* 80D552E4  3C 80 80 D5 */	lis r4, l_zevParamTbl@ha
 /* 80D552E8  38 84 57 B0 */	addi r4, r4, l_zevParamTbl@l

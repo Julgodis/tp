@@ -188,11 +188,11 @@ lbl_80D496A8:
 /* 80D496C4  D0 1E 05 00 */	stfs f0, 0x500(r30)
 /* 80D496C8  3C 60 80 D5 */	lis r3, lit_5295@ha
 /* 80D496CC  38 83 C5 A4 */	addi r4, r3, lit_5295@l
-/* 80D496D0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4C5A4 */
-/* 80D496D4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4C5A8 */
+/* 80D496D0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D496D4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D496D8  90 61 00 18 */	stw r3, 0x18(r1)
 /* 80D496DC  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80D496E0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4C5AC */
+/* 80D496E0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D496E4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80D496E8  7F C3 F3 78 */	mr r3, r30
 /* 80D496EC  38 81 00 18 */	addi r4, r1, 0x18

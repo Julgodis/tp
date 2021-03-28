@@ -26,9 +26,9 @@ lbl_80606C94:
 /* 80606CC8  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80606CCC  D0 1E 26 6C */	stfs f0, 0x266c(r30)
 /* 80606CD0  7C 83 23 78 */	mr r3, r4
-/* 80606CD4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80606CD8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80606CDC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80606CD4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80606CD8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80606CDC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80606CE0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80606CE4  4B C6 9F 20 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80606CE8  57 E0 08 3C */	slwi r0, r31, 1

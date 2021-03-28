@@ -25,12 +25,12 @@ lbl_80C26584:
 /* 80C26594  7C 7D 1B 78 */	mr r29, r3
 /* 80C26598  2C 1D 00 04 */	cmpwi r29, 4
 /* 80C2659C  40 82 02 C8 */	bne lbl_80C26864
-/* 80C265A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C265A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C265A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C265A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C265A8  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80C265AC  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80C265B0  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80C265B4  A0 84 00 A6 */	lhz r4, 0xa6(r4)	/* effective address: 803A732E */
+/* 80C265B4  A0 84 00 A6 */	lhz r4, 0xa6(r4)
 /* 80C265B8  4B 40 E4 04 */	b isEventBit__11dSv_event_cCFUs
 /* 80C265BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80C265C0  41 82 00 FC */	beq lbl_80C266BC
@@ -107,8 +107,8 @@ lbl_80C266BC:
 /* 80C266D8  38 60 00 05 */	li r3, 5
 /* 80C266DC  48 00 01 8C */	b lbl_80C26868
 lbl_80C266E0:
-/* 80C266E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C266E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C266E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C266E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C266E8  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80C266EC  7F 83 E3 78 */	mr r3, r28
 /* 80C266F0  80 9E 05 B8 */	lwz r4, 0x5b8(r30)

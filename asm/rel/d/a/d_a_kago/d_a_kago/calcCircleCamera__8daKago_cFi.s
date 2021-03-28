@@ -24,11 +24,11 @@ lbl_8084DA18:
 /* 8084DA70  4B 7B F3 2C */	b transM__14mDoMtx_stack_cFfff
 /* 8084DA74  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8084DA78  3B E3 D4 70 */	addi r31, r3, now__14mDoMtx_stack_c@l
-/* 8084DA7C  C0 3F 00 0C */	lfs f1, 0xc(r31)	/* effective address: 803DD47C */
+/* 8084DA7C  C0 3F 00 0C */	lfs f1, 0xc(r31)
 /* 8084DA80  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 8084DA84  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 803DD48C */
+/* 8084DA84  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 8084DA88  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 8084DA8C  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 803DD49C */
+/* 8084DA8C  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 8084DA90  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8084DA94  2C 1D 00 00 */	cmpwi r29, 0
 /* 8084DA98  40 82 00 1C */	bne lbl_8084DAB4

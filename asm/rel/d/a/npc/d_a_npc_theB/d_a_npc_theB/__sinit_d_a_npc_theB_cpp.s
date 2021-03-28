@@ -16,11 +16,11 @@ lbl_80B00C14:
 /* 80B00C4C  4B FF BA AD */	bl __register_global_object
 /* 80B00C50  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B00C54  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B00C58  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B00C5C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B00C58  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B00C5C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B00C60  90 7F 01 00 */	stw r3, 0x100(r31)
 /* 80B00C64  90 1F 01 04 */	stw r0, 0x104(r31)
-/* 80B00C68  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B00C68  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B00C6C  90 1F 01 08 */	stw r0, 0x108(r31)
 /* 80B00C70  38 9F 01 00 */	addi r4, r31, 0x100
 /* 80B00C74  80 7F 00 C4 */	lwz r3, 0xc4(r31)

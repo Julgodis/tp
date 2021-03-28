@@ -21,7 +21,7 @@ lbl_80AD9160:
 /* 80AD9180  38 A0 00 00 */	li r5, 0
 /* 80AD9184  3C C0 80 AE */	lis r6, m__17daNpcShad_Param_c@ha
 /* 80AD9188  38 C6 1F DC */	addi r6, r6, m__17daNpcShad_Param_c@l
-/* 80AD918C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80AE1FE8 */
+/* 80AD918C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80AD9190  38 C0 00 00 */	li r6, 0
 /* 80AD9194  38 E0 00 00 */	li r7, 0
 /* 80AD9198  4B 67 91 14 */	b draw__8daNpcF_cFiifP11_GXColorS10i

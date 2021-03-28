@@ -11,10 +11,10 @@ lbl_80BE31BC:
 /* 80BE31E0  7C 7F 1B 78 */	mr r31, r3
 /* 80BE31E4  3C 60 80 BE */	lis r3, lit_3720@ha
 /* 80BE31E8  3B 83 38 88 */	addi r28, r3, lit_3720@l
-/* 80BE31EC  C0 1C 00 00 */	lfs f0, 0(r28)	/* effective address: 80BE3888 */
+/* 80BE31EC  C0 1C 00 00 */	lfs f0, 0(r28)
 /* 80BE31F0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BE31F4  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80BE31F8  C0 1C 00 04 */	lfs f0, 4(r28)	/* effective address: 80BE388C */
+/* 80BE31F8  C0 1C 00 04 */	lfs f0, 4(r28)
 /* 80BE31FC  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80BE3200  88 1F 05 80 */	lbz r0, 0x580(r31)
 /* 80BE3204  2C 00 00 02 */	cmpwi r0, 2
@@ -29,8 +29,8 @@ lbl_80BE3224:
 /* 80BE3224  88 9F 05 6A */	lbz r4, 0x56a(r31)
 /* 80BE3228  28 04 00 FF */	cmplwi r4, 0xff
 /* 80BE322C  41 82 02 08 */	beq lbl_80BE3434
-/* 80BE3230  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE3234  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE3230  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE3234  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE3238  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80BE323C  7C 05 07 74 */	extsb r5, r0
 /* 80BE3240  4B 45 21 20 */	b isSwitch__10dSv_info_cCFii
@@ -153,15 +153,15 @@ lbl_80BE33D0:
 /* 80BE33EC  88 9F 05 6B */	lbz r4, 0x56b(r31)
 /* 80BE33F0  28 04 00 FF */	cmplwi r4, 0xff
 /* 80BE33F4  41 82 00 38 */	beq lbl_80BE342C
-/* 80BE33F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE33FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE33F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE33FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE3400  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80BE3404  7C 05 07 74 */	extsb r5, r0
 /* 80BE3408  4B 45 1F 58 */	b isSwitch__10dSv_info_cCFii
 /* 80BE340C  2C 03 00 00 */	cmpwi r3, 0
 /* 80BE3410  40 82 00 1C */	bne lbl_80BE342C
-/* 80BE3414  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE3418  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE3414  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE3418  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE341C  88 9F 05 6B */	lbz r4, 0x56b(r31)
 /* 80BE3420  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80BE3424  7C 05 07 74 */	extsb r5, r0

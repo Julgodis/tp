@@ -35,8 +35,8 @@ lbl_80BF43F4:
 /* 80BF4478  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80BF447C  3B 60 00 00 */	li r27, 0
 /* 80BF4480  3B E0 00 00 */	li r31, 0
-/* 80BF4484  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF4488  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF4484  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF4488  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF448C  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80BF4490  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BF4494  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l

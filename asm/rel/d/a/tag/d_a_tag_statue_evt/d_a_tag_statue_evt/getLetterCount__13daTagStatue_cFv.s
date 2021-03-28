@@ -7,8 +7,8 @@ lbl_805A7E94:
 /* 805A7EA8  3B 80 00 00 */	li r28, 0
 /* 805A7EAC  3B 60 00 00 */	li r27, 0
 /* 805A7EB0  3B E0 00 00 */	li r31, 0
-/* 805A7EB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A7EB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A7EB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A7EB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A7EBC  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 805A7EC0  3C 60 80 5B */	lis r3, l_event_bit@ha
 /* 805A7EC4  3B C3 81 04 */	addi r30, r3, l_event_bit@l

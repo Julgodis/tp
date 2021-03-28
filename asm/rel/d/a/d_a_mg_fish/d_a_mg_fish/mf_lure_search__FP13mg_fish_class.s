@@ -349,7 +349,7 @@ lbl_8052E36C:
 lbl_8052E394:
 /* 8052E394  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8052E398  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8052E39C  C0 23 12 44 */	lfs f1, 0x1244(r3)	/* effective address: 8042DC98 */
+/* 8052E39C  C0 23 12 44 */	lfs f1, 0x1244(r3)
 /* 8052E3A0  C0 1E 01 0C */	lfs f0, 0x10c(r30)
 /* 8052E3A4  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8052E3A8  FC 00 00 1E */	fctiwz f0, f0
@@ -373,7 +373,7 @@ lbl_8052E3D0:
 lbl_8052E3E8:
 /* 8052E3E8  3C 60 80 53 */	lis r3, l_HIO@ha
 /* 8052E3EC  38 63 6B CC */	addi r3, r3, l_HIO@l
-/* 8052E3F0  88 03 00 18 */	lbz r0, 0x18(r3)	/* effective address: 80536BE4 */
+/* 8052E3F0  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 8052E3F4  28 00 00 00 */	cmplwi r0, 0
 /* 8052E3F8  40 82 00 10 */	bne lbl_8052E408
 /* 8052E3FC  88 1F 10 A4 */	lbz r0, 0x10a4(r31)

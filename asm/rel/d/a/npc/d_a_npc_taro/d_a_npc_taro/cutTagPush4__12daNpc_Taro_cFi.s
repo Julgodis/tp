@@ -11,8 +11,8 @@ lbl_8056DFAC:
 /* 8056DFD0  7C 7F 1B 78 */	mr r31, r3
 /* 8056DFD4  3B C0 00 00 */	li r30, 0
 /* 8056DFD8  3B A0 FF FF */	li r29, -1
-/* 8056DFDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056DFE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8056DFDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056DFE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056DFE4  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8056DFE8  7F 63 DB 78 */	mr r3, r27
 /* 8056DFEC  7F 44 D3 78 */	mr r4, r26
@@ -102,21 +102,21 @@ lbl_8056E110:
 /* 8056E120  4B BD E3 E0 */	b daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz
 /* 8056E124  2C 03 00 00 */	cmpwi r3, 0
 /* 8056E128  41 82 00 2C */	beq lbl_8056E154
-/* 8056E12C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056E130  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8056E134  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8056E12C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056E130  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8056E134  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8056E138  38 81 00 10 */	addi r4, r1, 0x10
 /* 8056E13C  A8 A1 00 0A */	lha r5, 0xa(r1)
 /* 8056E140  38 C0 00 00 */	li r6, 0
-/* 8056E144  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8056E144  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8056E148  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 8056E14C  7D 89 03 A6 */	mtctr r12
 /* 8056E150  4E 80 04 21 */	bctrl 
 lbl_8056E154:
 /* 8056E154  7F 83 E3 78 */	mr r3, r28
-/* 8056E158  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8056E15C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8056E160  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8056E158  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8056E15C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8056E160  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8056E164  4B AA C5 AC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8056E168  7C 64 1B 78 */	mr r4, r3
 /* 8056E16C  7F 83 E3 78 */	mr r3, r28

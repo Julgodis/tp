@@ -22,8 +22,8 @@ lbl_80685C2C:
 /* 80685C7C  88 9F 06 8C */	lbz r4, 0x68c(r31)
 /* 80685C80  28 04 00 FF */	cmplwi r4, 0xff
 /* 80685C84  41 82 00 18 */	beq lbl_80685C9C
-/* 80685C88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80685C8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80685C88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80685C8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80685C90  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80685C94  7C 05 07 74 */	extsb r5, r0
 /* 80685C98  4B 9A F5 68 */	b onSwitch__10dSv_info_cFii

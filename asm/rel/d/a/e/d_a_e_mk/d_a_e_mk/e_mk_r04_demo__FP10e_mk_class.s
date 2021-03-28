@@ -14,7 +14,7 @@ lbl_80716F48:
 /* 80716F78  FC 00 00 1E */	fctiwz f0, f0
 /* 80716F7C  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 80716F80  80 A1 00 34 */	lwz r5, 0x34(r1)
-/* 80716F84  C3 FF 00 0C */	lfs f31, 0xc(r31)	/* effective address: 8071C550 */
+/* 80716F84  C3 FF 00 0C */	lfs f31, 0xc(r31)
 /* 80716F88  38 00 00 05 */	li r0, 5
 /* 80716F8C  B0 03 07 04 */	sth r0, 0x704(r3)
 /* 80716F90  A8 03 05 B4 */	lha r0, 0x5b4(r3)
@@ -290,7 +290,7 @@ lbl_80717360:
 /* 80717378  D0 1E 05 30 */	stfs f0, 0x530(r30)
 /* 8071737C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80717380  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80717384  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80717384  80 63 00 00 */	lwz r3, 0(r3)
 /* 80717388  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 8071738C  4B 8F 50 50 */	b mDoMtx_YrotS__FPA4_fs
 /* 80717390  C0 1F 00 0C */	lfs f0, 0xc(r31)

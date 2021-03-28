@@ -67,21 +67,21 @@ lbl_80578528:
 /* 80578528  38 7C 12 E0 */	addi r3, r28, 0x12e0
 /* 8057852C  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 80578530  38 84 8B F0 */	addi r4, r4, l_arcName@l
-/* 80578534  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80578BF0 */
+/* 80578534  80 84 00 00 */	lwz r4, 0(r4)
 /* 80578538  4B AB 49 84 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8057853C  7C 7D 1B 78 */	mr r29, r3
 /* 80578540  2C 1D 00 04 */	cmpwi r29, 4
 /* 80578544  40 82 01 54 */	bne lbl_80578698
 /* 80578548  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
 /* 8057854C  D0 1C 05 30 */	stfs f0, 0x530(r28)
-/* 80578550  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80578554  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80578550  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80578554  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80578558  3F C3 00 02 */	addis r30, r3, 2
 /* 8057855C  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80578560  7F C3 F3 78 */	mr r3, r30
 /* 80578564  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 80578568  38 84 8B F0 */	addi r4, r4, l_arcName@l
-/* 8057856C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80578BF0 */
+/* 8057856C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80578570  3C A0 80 58 */	lis r5, stringBase0@ha
 /* 80578574  38 A5 8B A8 */	addi r5, r5, stringBase0@l
 /* 80578578  38 A5 00 34 */	addi r5, r5, 0x34
@@ -90,7 +90,7 @@ lbl_80578528:
 /* 80578584  7F 83 E3 78 */	mr r3, r28
 /* 80578588  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 8057858C  38 84 8B F0 */	addi r4, r4, l_arcName@l
-/* 80578590  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80578BF0 */
+/* 80578590  80 84 00 00 */	lwz r4, 0(r4)
 /* 80578594  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80578598  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 8057859C  3C E0 00 01 */	lis r7, 0x0001 /* 0x00008DA0@ha */
@@ -139,7 +139,7 @@ lbl_80578624:
 /* 80578640  4B AA 1F 08 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80578644  3C 60 80 58 */	lis r3, l_arcName@ha
 /* 80578648  38 63 8B F0 */	addi r3, r3, l_arcName@l
-/* 8057864C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80578BF0 */
+/* 8057864C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80578650  3C 80 80 58 */	lis r4, stringBase0@ha
 /* 80578654  38 84 8B A8 */	addi r4, r4, stringBase0@l
 /* 80578658  38 84 00 1B */	addi r4, r4, 0x1b
@@ -147,8 +147,8 @@ lbl_80578624:
 /* 80578660  38 C0 00 80 */	li r6, 0x80
 /* 80578664  4B AC 3D 18 */	b getRes__14dRes_control_cFPCcPCcP11dRes_info_ci
 /* 80578668  7C 64 1B 78 */	mr r4, r3
-/* 8057866C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80578670  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057866C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80578670  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80578674  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80578678  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8057867C  7C 05 07 74 */	extsb r5, r0

@@ -11,7 +11,7 @@ lbl_806EF144:
 /* 806EF168  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 806EF16C  C0 3E 04 A8 */	lfs f1, 0x4a8(r30)
 /* 806EF170  C0 5E 04 AC */	lfs f2, 0x4ac(r30)
-/* 806EF174  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 806F0920 */
+/* 806EF174  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 806EF178  EC 42 00 28 */	fsubs f2, f2, f0
 /* 806EF17C  C0 7E 04 B0 */	lfs f3, 0x4b0(r30)
 /* 806EF180  4B C5 77 68 */	b PSMTXTrans
@@ -33,7 +33,7 @@ lbl_806EF144:
 /* 806EF1C0  4B 91 DD 84 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 806EF1C4  3C 60 80 6F */	lis r3, l_HIO@ha
 /* 806EF1C8  38 63 0B 7C */	addi r3, r3, l_HIO@l
-/* 806EF1CC  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 806F0B84 */
+/* 806EF1CC  C0 23 00 08 */	lfs f1, 8(r3)
 /* 806EF1D0  FC 40 08 90 */	fmr f2, f1
 /* 806EF1D4  FC 60 08 90 */	fmr f3, f1
 /* 806EF1D8  4B 91 DC 60 */	b scaleM__14mDoMtx_stack_cFfff

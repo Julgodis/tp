@@ -10,8 +10,8 @@ lbl_804DB008:
 /* 804DB028  C0 1D 08 90 */	lfs f0, 0x890(r29)
 /* 804DB02C  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 804DB030  41 82 00 34 */	beq lbl_804DB064
-/* 804DB034  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DB038  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804DB034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DB038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804DB03C  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 804DB040  7F E3 FB 78 */	mr r3, r31
 /* 804DB044  38 9D 08 E8 */	addi r4, r29, 0x8e8

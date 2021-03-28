@@ -92,7 +92,7 @@ lbl_804864FC:
 lbl_8048650C:
 /* 8048650C  3C 80 80 48 */	lis r4, l_arcName@ha
 /* 80486510  38 84 73 BC */	addi r4, r4, l_arcName@l
-/* 80486514  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 804873BC */
+/* 80486514  80 84 00 00 */	lwz r4, 0(r4)
 /* 80486518  4B BA 69 A4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8048651C  7C 7E 1B 78 */	mr r30, r3
 /* 80486520  2C 1E 00 04 */	cmpwi r30, 4

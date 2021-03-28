@@ -26,15 +26,15 @@ lbl_80498918:
 /* 80498934  4B B8 1B 7C */	b fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl
 /* 80498938  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8049893C  41 82 00 2C */	beq lbl_80498968
-/* 80498940  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80498944  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80498948  A0 03 5D 46 */	lhz r0, 0x5d46(r3)	/* effective address: 8040BF06 */
+/* 80498940  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80498944  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80498948  A0 03 5D 46 */	lhz r0, 0x5d46(r3)
 /* 8049894C  60 00 00 01 */	ori r0, r0, 1
-/* 80498950  B0 03 5D 46 */	sth r0, 0x5d46(r3)	/* effective address: 8040BF06 */
+/* 80498950  B0 03 5D 46 */	sth r0, 0x5d46(r3)
 /* 80498954  38 00 00 00 */	li r0, 0
 /* 80498958  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8049895C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80498960  98 03 12 D4 */	stb r0, 0x12d4(r3)	/* effective address: 8042DD28 */
+/* 80498960  98 03 12 D4 */	stb r0, 0x12d4(r3)
 /* 80498964  48 00 00 08 */	b lbl_8049896C
 lbl_80498968:
 /* 80498968  3B E0 00 05 */	li r31, 5

@@ -124,8 +124,8 @@ lbl_80796A98:
 /* 80796A9C  D0 1E 05 30 */	stfs f0, 0x530(r30)
 lbl_80796AA0:
 /* 80796AA0  38 7E 0A 60 */	addi r3, r30, 0xa60
-/* 80796AA4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80796AA8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80796AA4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80796AA8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80796AAC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80796AB0  4B 8D FF FC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80796AB4  80 1E 04 9C */	lwz r0, 0x49c(r30)

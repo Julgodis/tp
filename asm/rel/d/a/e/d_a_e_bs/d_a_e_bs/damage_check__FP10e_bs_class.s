@@ -57,12 +57,12 @@ lbl_8068F2C8:
 /* 8068F2D0  41 81 01 18 */	bgt lbl_8068F3E8
 /* 8068F2D4  3B 40 00 00 */	li r26, 0
 /* 8068F2D8  3B A0 00 00 */	li r29, 0
-/* 8068F2DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068F2E0  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 8068F2DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068F2E0  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 8068F2E4  3C 60 80 69 */	lis r3, data_80690F40@ha
 /* 8068F2E8  3B 83 0F 40 */	addi r28, r3, data_80690F40@l
 lbl_8068F2EC:
-/* 8068F2EC  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 8068F2EC  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 8068F2F0  38 80 00 00 */	li r4, 0
 /* 8068F2F4  90 81 00 08 */	stw r4, 8(r1)
 /* 8068F2F8  38 00 FF FF */	li r0, -1
@@ -119,8 +119,8 @@ lbl_8068F2EC:
 /* 8068F3C4  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 8068F3C8  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8068F3CC  41 82 00 AC */	beq lbl_8068F478
-/* 8068F3D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068F3D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8068F3D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068F3D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8068F3D8  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 8068F3DC  7C 05 07 74 */	extsb r5, r0
 /* 8068F3E0  4B 9A 5E 20 */	b onSwitch__10dSv_info_cFii

@@ -7,9 +7,9 @@ lbl_80BD95A0:
 /* 80BD95B4  7C 7C 1B 78 */	mr r28, r3
 /* 80BD95B8  3C 60 80 BE */	lis r3, l_wallBmd@ha
 /* 80BD95BC  3B C3 9F A4 */	addi r30, r3, l_wallBmd@l
-/* 80BD95C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD95C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BD95C8  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BD95C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD95C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BD95C8  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80BD95CC  7F A3 EB 78 */	mr r3, r29
 /* 80BD95D0  38 81 00 08 */	addi r4, r1, 8
 /* 80BD95D4  81 9D 06 28 */	lwz r12, 0x628(r29)
@@ -17,10 +17,10 @@ lbl_80BD95A0:
 /* 80BD95DC  7D 89 03 A6 */	mtctr r12
 /* 80BD95E0  4E 80 04 21 */	bctrl 
 /* 80BD95E4  7C 7F 1B 78 */	mr r31, r3
-/* 80BD95E8  C0 1E 00 64 */	lfs f0, 0x64(r30)	/* effective address: 80BDA008 */
+/* 80BD95E8  C0 1E 00 64 */	lfs f0, 0x64(r30)
 /* 80BD95EC  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80BD95F0  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80BD95F4  C0 1E 00 F8 */	lfs f0, 0xf8(r30)	/* effective address: 80BDA09C */
+/* 80BD95F4  C0 1E 00 F8 */	lfs f0, 0xf8(r30)
 /* 80BD95F8  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 80BD95FC  38 7C 0F 38 */	addi r3, r28, 0xf38
 /* 80BD9600  4B 43 37 64 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -54,10 +54,10 @@ lbl_80BD95A0:
 /* 80BD9670  38 81 00 30 */	addi r4, r1, 0x30
 /* 80BD9674  7C 85 23 78 */	mr r5, r4
 /* 80BD9678  4B 76 D6 F4 */	b PSMTXMultVec
-/* 80BD967C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD9680  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BD9684  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80BD9688  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80BD967C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD9680  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BD9684  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80BD9688  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80BD968C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80BD9690  41 82 00 40 */	beq lbl_80BD96D0
 /* 80BD9694  C0 1E 00 4C */	lfs f0, 0x4c(r30)

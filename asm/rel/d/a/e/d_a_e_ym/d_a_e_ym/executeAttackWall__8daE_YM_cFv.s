@@ -9,9 +9,9 @@ lbl_8080DC5C:
 /* 8080DC78  3B E4 59 94 */	addi r31, r4, lit_3925@l
 /* 8080DC7C  38 00 00 1E */	li r0, 0x1e
 /* 8080DC80  B0 03 06 FA */	sth r0, 0x6fa(r3)
-/* 8080DC84  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8080DC88  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8080DC8C  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8080DC84  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8080DC88  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8080DC8C  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 8080DC90  4B FF B3 71 */	bl checkWolfBark__8daE_YM_cFv
 /* 8080DC94  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8080DC98  40 82 05 BC */	bne lbl_8080E254
@@ -289,7 +289,7 @@ lbl_8080E08C:
 /* 8080E08C  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 8080E090  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080E094  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080E098  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80815D58 */
+/* 8080E098  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8080E09C  EC 02 00 2A */	fadds f0, f2, f0
 /* 8080E0A0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8080E0A4  40 81 01 08 */	ble lbl_8080E1AC

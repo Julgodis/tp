@@ -7,7 +7,7 @@ lbl_805BB120:
 /* 805BB134  40 82 00 24 */	bne lbl_805BB158
 /* 805BB138  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 805BB13C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 805BB140  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 805BB140  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 805BB144  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 805BB148  28 03 00 00 */	cmplwi r3, 0
 /* 805BB14C  41 82 00 0C */	beq lbl_805BB158

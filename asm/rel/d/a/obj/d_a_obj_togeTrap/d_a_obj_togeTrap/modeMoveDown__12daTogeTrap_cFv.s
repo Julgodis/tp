@@ -9,9 +9,9 @@ lbl_80D188DC:
 /* 80D188F8  3B E3 8E 98 */	addi r31, r3, lit_3655@l
 /* 80D188FC  3C 60 80 D2 */	lis r3, l_HIO@ha
 /* 80D18900  38 63 90 B4 */	addi r3, r3, l_HIO@l
-/* 80D18904  C0 23 00 14 */	lfs f1, 0x14(r3)	/* effective address: 80D190C8 */
+/* 80D18904  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 80D18908  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80D1890C  C0 1F 00 6C */	lfs f0, 0x6c(r31)	/* effective address: 80D18F04 */
+/* 80D1890C  C0 1F 00 6C */	lfs f0, 0x6c(r31)
 /* 80D18910  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80D18914  4B 55 7E 2C */	b cLib_chaseF__FPfff
 /* 80D18918  38 7E 04 D4 */	addi r3, r30, 0x4d4

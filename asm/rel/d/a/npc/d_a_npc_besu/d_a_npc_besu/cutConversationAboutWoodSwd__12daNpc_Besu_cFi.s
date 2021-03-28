@@ -11,8 +11,8 @@ lbl_8053A45C:
 /* 8053A480  3B A0 00 00 */	li r29, 0
 /* 8053A484  3B 80 FF FF */	li r28, -1
 /* 8053A488  3B 60 00 00 */	li r27, 0
-/* 8053A48C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053A490  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8053A48C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053A490  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8053A494  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8053A498  7F C3 F3 78 */	mr r3, r30
 /* 8053A49C  3C A0 80 54 */	lis r5, struct_8053E908+0x0@ha
@@ -49,19 +49,19 @@ lbl_8053A4E4:
 /* 8053A510  90 61 00 10 */	stw r3, 0x10(r1)
 /* 8053A514  93 21 00 14 */	stw r25, 0x14(r1)
 /* 8053A518  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8053A51C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8053A520  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8053A524  90 04 5E F0 */	stw r0, 0x5ef0(r4)	/* effective address: 8040C0B0 */
-/* 8053A528  90 64 5E F4 */	stw r3, 0x5ef4(r4)	/* effective address: 8040C0B4 */
-/* 8053A52C  93 24 5E F8 */	stw r25, 0x5ef8(r4)	/* effective address: 8040C0B8 */
+/* 8053A51C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8053A520  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8053A524  90 04 5E F0 */	stw r0, 0x5ef0(r4)
+/* 8053A528  90 64 5E F4 */	stw r3, 0x5ef4(r4)
+/* 8053A52C  93 24 5E F8 */	stw r25, 0x5ef8(r4)
 /* 8053A530  38 00 00 00 */	li r0, 0
-/* 8053A534  90 04 5E FC */	stw r0, 0x5efc(r4)	/* effective address: 8040C0BC */
-/* 8053A538  90 04 5F 00 */	stw r0, 0x5f00(r4)	/* effective address: 8040C0C0 */
-/* 8053A53C  90 04 5F 04 */	stw r0, 0x5f04(r4)	/* effective address: 8040C0C4 */
-/* 8053A540  90 04 5F 08 */	stw r0, 0x5f08(r4)	/* effective address: 8040C0C8 */
-/* 8053A544  90 04 5F 0C */	stw r0, 0x5f0c(r4)	/* effective address: 8040C0CC */
-/* 8053A548  90 04 5F 10 */	stw r0, 0x5f10(r4)	/* effective address: 8040C0D0 */
-/* 8053A54C  90 04 5F 14 */	stw r0, 0x5f14(r4)	/* effective address: 8040C0D4 */
+/* 8053A534  90 04 5E FC */	stw r0, 0x5efc(r4)
+/* 8053A538  90 04 5F 00 */	stw r0, 0x5f00(r4)
+/* 8053A53C  90 04 5F 04 */	stw r0, 0x5f04(r4)
+/* 8053A540  90 04 5F 08 */	stw r0, 0x5f08(r4)
+/* 8053A544  90 04 5F 0C */	stw r0, 0x5f0c(r4)
+/* 8053A548  90 04 5F 10 */	stw r0, 0x5f10(r4)
+/* 8053A54C  90 04 5F 14 */	stw r0, 0x5f14(r4)
 /* 8053A550  7F C3 F3 78 */	mr r3, r30
 /* 8053A554  7F 44 D3 78 */	mr r4, r26
 /* 8053A558  4B B0 D7 F4 */	b getIsAddvance__16dEvent_manager_cFi

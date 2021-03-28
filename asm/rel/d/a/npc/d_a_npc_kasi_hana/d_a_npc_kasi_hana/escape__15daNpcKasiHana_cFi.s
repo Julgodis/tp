@@ -32,9 +32,9 @@ lbl_80A1EE78:
 /* 80A1EEA8  C0 03 00 78 */	lfs f0, 0x78(r3)
 /* 80A1EEAC  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80A1EEB0  7F C3 F3 78 */	mr r3, r30
-/* 80A1EEB4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A1EEB8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A1EEBC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A1EEB4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A1EEB8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A1EEBC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A1EEC0  48 00 03 81 */	bl actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c
 /* 80A1EEC4  2C 03 00 00 */	cmpwi r3, 0
 /* 80A1EEC8  41 82 00 0C */	beq lbl_80A1EED4

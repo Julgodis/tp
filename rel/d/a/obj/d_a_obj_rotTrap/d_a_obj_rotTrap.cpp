@@ -121,10 +121,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -180,10 +176,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daRotTrap_Draw(daRotTrap_c*); // 2
-static void daRotTrap_Execute(daRotTrap_c*); // 2
-static void daRotTrap_Delete(daRotTrap_c*); // 2
-static void daRotTrap_Create(fopAc_ac_c*); // 2
+void daRotTrap_Draw(daRotTrap_c*); // 2
+void daRotTrap_Execute(daRotTrap_c*); // 2
+void daRotTrap_Delete(daRotTrap_c*); // 2
+void daRotTrap_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daRotTrap_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -206,15 +202,16 @@ extern "C" void modeMove__11daRotTrap_cFv(); // 1
 extern "C" void seSet__11daRotTrap_cFv(); // 1
 extern "C" void Draw__11daRotTrap_cFv(); // 1
 extern "C" void Delete__11daRotTrap_cFv(); // 1
-extern "C" static void daRotTrap_Draw__FP11daRotTrap_c(); // 1
-extern "C" static void daRotTrap_Execute__FP11daRotTrap_c(); // 1
-extern "C" static void daRotTrap_Delete__FP11daRotTrap_c(); // 1
-extern "C" static void daRotTrap_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daRotTrap_Draw__FP11daRotTrap_c(); // 1
+extern "C" void daRotTrap_Execute__FP11daRotTrap_c(); // 1
+extern "C" void daRotTrap_Delete__FP11daRotTrap_c(); // 1
+extern "C" void daRotTrap_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__15daRotTrap_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_rotTrap_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daRotTrap_Method[8];
 extern "C" extern void* g_profile_Obj_RotTrap[12];
 
 // 
@@ -249,10 +246,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -287,23 +280,15 @@ extern "C" void _savegpr_20(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_20(); // 1
 extern "C" void _restgpr_25(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -361,23 +346,23 @@ SECTION_DATA static u8 atR[56] = {
 
 /* 80CC09A4-80CC09B0 000C+00 s=1 e=0 z=0  None .data      @3851                                                        */
 SECTION_DATA static void* lit_3851[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__11daRotTrap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC09B0-80CC09BC 000C+00 s=1 e=0 z=0  None .data      @3852                                                        */
 SECTION_DATA static void* lit_3852[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeAcc__11daRotTrap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC09BC-80CC09C8 000C+00 s=1 e=0 z=0  None .data      @3853                                                        */
 SECTION_DATA static void* lit_3853[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMove__11daRotTrap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80CC09C8-80CC09EC 0024+00 s=1 e=0 z=0  None .data      mode_proc$3850                                               */
@@ -387,88 +372,88 @@ SECTION_DATA static u8 data_80CC09C8[36] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CC09EC-80CC0A0C 0020+00 s=1 e=0 z=0  None .data      l_daRotTrap_Method                                           */
-SECTION_DATA static void* l_daRotTrap_Method[8] = {
-	/* 0    */ (void*)daRotTrap_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daRotTrap_Delete__FP11daRotTrap_c,
-	/* 2    */ (void*)daRotTrap_Execute__FP11daRotTrap_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daRotTrap_Draw__FP11daRotTrap_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CC09EC-80CC0A0C 0020+00 s=0 e=0 z=0  None .data      l_daRotTrap_Method                                           */
+SECTION_DATA void* l_daRotTrap_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC0A0C-80CC0A3C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RotTrap                                        */
+/* 80CC0A0C-80CC0A3C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RotTrap                                        */
 SECTION_DATA void* g_profile_Obj_RotTrap[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x004B0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000173C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x020D0000,
-	/* 9    */ (void*)&l_daRotTrap_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x004B0000,
+	(void*)NULL,
+	(void*)0x0000173C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x020D0000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80CC0A3C-80CC0A48 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0A48-80CC0A54 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0A54-80CC0A60 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0A60-80CC0A6C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0A6C-80CC0A94 0028+00 s=1 e=0 z=0  None .data      __vt__11daRotTrap_c                                          */
 SECTION_DATA static void* __vt__11daRotTrap_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__11daRotTrap_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__11daRotTrap_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__11daRotTrap_cFv,
-	/* 6    */ (void*)Delete__11daRotTrap_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0A94-80CC0AA0 000C+00 s=2 e=0 z=0  None .data      __vt__15daRotTrap_HIO_c                                      */
 SECTION_DATA static void* __vt__15daRotTrap_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15daRotTrap_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC0AA0-80CC0AAC 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CBF8AC-80CBF8F8 004C+00 s=1 e=0 z=0  None .text      __ct__15daRotTrap_HIO_cFv                                    */
@@ -482,7 +467,7 @@ asm daRotTrap_HIO_c::daRotTrap_HIO_c() {
 #pragma pop
 
 
-/* 80CBF8F8-80CBF940 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80CBF8F8-80CBF940 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -542,7 +527,7 @@ SECTION_RODATA static u32 const lit_3940 = 0xBF800000;
 SECTION_DEAD char const* const stringBase_80CC0858 = "P_kama";
 #pragma pop
 
-/* 80CBF9D8-80CBFAC8 00F0+00 s=1 e=0 z=0  None .text      CreateHeap__11daRotTrap_cFv                                  */
+/* 80CBF9D8-80CBFAC8 00F0+00 s=0 e=0 z=0  None .text      CreateHeap__11daRotTrap_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -586,7 +571,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80CBFDD8-80CBFE20 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CBFDD8-80CBFE20 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -597,7 +582,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CBFE20-80CBFE68 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CBFE20-80CBFE68 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -608,7 +593,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CBFE68-80CBFEC4 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CBFE68-80CBFEC4 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -619,7 +604,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80CBFEC4-80CBFF1C 0058+00 s=1 e=0 z=0  None .text      Execute__11daRotTrap_cFPPA3_A4_f                             */
+/* 80CBFEC4-80CBFF1C 0058+00 s=0 e=0 z=0  None .text      Execute__11daRotTrap_cFPPA3_A4_f                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -662,7 +647,7 @@ asm void daRotTrap_c::init_modeWait() {
 #pragma pop
 
 
-/* 80CC0120-80CC0180 0060+00 s=1 e=0 z=0  None .text      modeWait__11daRotTrap_cFv                                    */
+/* 80CC0120-80CC0180 0060+00 s=0 e=0 z=0  None .text      modeWait__11daRotTrap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -684,7 +669,7 @@ asm void daRotTrap_c::init_modeAcc() {
 #pragma pop
 
 
-/* 80CC027C-80CC034C 00D0+00 s=1 e=0 z=0  None .text      modeAcc__11daRotTrap_cFv                                     */
+/* 80CC027C-80CC034C 00D0+00 s=0 e=0 z=0  None .text      modeAcc__11daRotTrap_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -706,7 +691,7 @@ asm void daRotTrap_c::init_modeMove() {
 #pragma pop
 
 
-/* 80CC0360-80CC0440 00E0+00 s=1 e=0 z=0  None .text      modeMove__11daRotTrap_cFv                                    */
+/* 80CC0360-80CC0440 00E0+00 s=0 e=0 z=0  None .text      modeMove__11daRotTrap_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -728,7 +713,7 @@ asm void daRotTrap_c::seSet() {
 #pragma pop
 
 
-/* 80CC0548-80CC05EC 00A4+00 s=1 e=0 z=0  None .text      Draw__11daRotTrap_cFv                                        */
+/* 80CC0548-80CC05EC 00A4+00 s=0 e=0 z=0  None .text      Draw__11daRotTrap_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -739,7 +724,7 @@ asm void daRotTrap_c::Draw() {
 #pragma pop
 
 
-/* 80CC05EC-80CC0654 0068+00 s=1 e=0 z=0  None .text      Delete__11daRotTrap_cFv                                      */
+/* 80CC05EC-80CC0654 0068+00 s=0 e=0 z=0  None .text      Delete__11daRotTrap_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -750,51 +735,51 @@ asm void daRotTrap_c::Delete() {
 #pragma pop
 
 
-/* 80CC0654-80CC0680 002C+00 s=1 e=0 z=0  None .text      daRotTrap_Draw__FP11daRotTrap_c                              */
+/* 80CC0654-80CC0680 002C+00 s=0 e=0 z=0  None .text      daRotTrap_Draw__FP11daRotTrap_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daRotTrap_Draw(daRotTrap_c* param_0) {
+asm void daRotTrap_Draw(daRotTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Draw__FP11daRotTrap_c.s"
 }
 #pragma pop
 
 
-/* 80CC0680-80CC06A0 0020+00 s=1 e=0 z=0  None .text      daRotTrap_Execute__FP11daRotTrap_c                           */
+/* 80CC0680-80CC06A0 0020+00 s=0 e=0 z=0  None .text      daRotTrap_Execute__FP11daRotTrap_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daRotTrap_Execute(daRotTrap_c* param_0) {
+asm void daRotTrap_Execute(daRotTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Execute__FP11daRotTrap_c.s"
 }
 #pragma pop
 
 
-/* 80CC06A0-80CC06C0 0020+00 s=1 e=0 z=0  None .text      daRotTrap_Delete__FP11daRotTrap_c                            */
+/* 80CC06A0-80CC06C0 0020+00 s=0 e=0 z=0  None .text      daRotTrap_Delete__FP11daRotTrap_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daRotTrap_Delete(daRotTrap_c* param_0) {
+asm void daRotTrap_Delete(daRotTrap_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Delete__FP11daRotTrap_c.s"
 }
 #pragma pop
 
 
-/* 80CC06C0-80CC06E0 0020+00 s=1 e=0 z=0  None .text      daRotTrap_Create__FP10fopAc_ac_c                             */
+/* 80CC06C0-80CC06E0 0020+00 s=0 e=0 z=0  None .text      daRotTrap_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daRotTrap_Create(fopAc_ac_c* param_0) {
+asm void daRotTrap_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rotTrap/d_a_obj_rotTrap/daRotTrap_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80CC06E0-80CC0728 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CC06E0-80CC0728 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -805,7 +790,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CC0728-80CC0784 005C+00 s=2 e=0 z=0  None .text      __dt__15daRotTrap_HIO_cFv                                    */
+/* 80CC0728-80CC0784 005C+00 s=1 e=0 z=0  None .text      __dt__15daRotTrap_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -816,7 +801,7 @@ asm daRotTrap_HIO_c::~daRotTrap_HIO_c() {
 #pragma pop
 
 
-/* 80CC0784-80CC07F4 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_rotTrap_cpp                                  */
+/* 80CC0784-80CC07F4 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_rotTrap_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

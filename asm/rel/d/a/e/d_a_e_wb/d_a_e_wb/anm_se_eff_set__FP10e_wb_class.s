@@ -37,9 +37,9 @@ lbl_807DFB54:
 lbl_807DFBA0:
 /* 807DFBA0  2C 00 00 26 */	cmpwi r0, 0x26
 /* 807DFBA4  40 82 01 60 */	bne lbl_807DFD04
-/* 807DFBA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807DFBAC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 807DFBB0  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 807DFBA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807DFBAC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 807DFBB0  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 807DFBB4  38 00 00 FF */	li r0, 0xff
 /* 807DFBB8  90 01 00 08 */	stw r0, 8(r1)
 /* 807DFBBC  38 80 00 00 */	li r4, 0

@@ -13,7 +13,7 @@ lbl_8095E060:
 /* 8095E08C  3C 60 80 96 */	lis r3, l_arcNames@ha
 /* 8095E090  38 83 25 94 */	addi r4, r3, l_arcNames@l
 /* 8095E094  38 7E 0D D0 */	addi r3, r30, 0xdd0
-/* 8095E098  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80962594 */
+/* 8095E098  80 84 00 00 */	lwz r4, 0(r4)
 /* 8095E09C  4B 6C EF 6C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8095E0A0  80 1E 00 F0 */	lwz r0, 0xf0(r30)
 /* 8095E0A4  28 00 00 00 */	cmplwi r0, 0

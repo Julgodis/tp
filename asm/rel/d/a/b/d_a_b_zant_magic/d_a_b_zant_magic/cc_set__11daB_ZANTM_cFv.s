@@ -14,7 +14,7 @@ lbl_8064FD6C:
 /* 8064FD9C  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
 /* 8064FDA0  D0 1D 05 40 */	stfs f0, 0x540(r29)
 /* 8064FDA4  C0 1D 05 3C */	lfs f0, 0x53c(r29)
-/* 8064FDA8  C0 3F 00 38 */	lfs f1, 0x38(r31)	/* effective address: 806504D4 */
+/* 8064FDA8  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 8064FDAC  EC 00 08 2A */	fadds f0, f0, f1
 /* 8064FDB0  D0 1D 05 3C */	stfs f0, 0x53c(r29)
 /* 8064FDB4  C0 1D 05 38 */	lfs f0, 0x538(r29)
@@ -29,12 +29,12 @@ lbl_8064FD6C:
 /* 8064FDD8  38 7D 0B DC */	addi r3, r29, 0xbdc
 /* 8064FDDC  38 9D 04 BC */	addi r4, r29, 0x4bc
 /* 8064FDE0  38 BD 04 D0 */	addi r5, r29, 0x4d0
-/* 8064FDE4  C0 3F 00 3C */	lfs f1, 0x3c(r31)	/* effective address: 806504D8 */
+/* 8064FDE4  C0 3F 00 3C */	lfs f1, 0x3c(r31)
 /* 8064FDE8  4B C1 F2 18 */	b Set__8cM3dGCpsFRC4cXyzRC4cXyzf
 /* 8064FDEC  38 7D 0A B8 */	addi r3, r29, 0xab8
 /* 8064FDF0  4B A3 4A 34 */	b CalcAtVec__8dCcD_CpsFv
-/* 8064FDF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8064FDF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8064FDF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8064FDF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8064FDFC  3B C3 23 3C */	addi r30, r3, 0x233c
 /* 8064FE00  7F C3 F3 78 */	mr r3, r30
 /* 8064FE04  38 9D 0A B8 */	addi r4, r29, 0xab8

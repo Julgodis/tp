@@ -31,8 +31,8 @@ lbl_809E5D04:
 /* 809E5D78  4B 96 07 38 */	b PSMTXCopy
 /* 809E5D7C  80 7E 0B DC */	lwz r3, 0xbdc(r30)
 /* 809E5D80  4B 62 7F 44 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 809E5D84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809E5D88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809E5D84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809E5D88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809E5D8C  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 809E5D90  80 9E 09 A0 */	lwz r4, 0x9a0(r30)
 /* 809E5D94  80 BE 0B DC */	lwz r5, 0xbdc(r30)

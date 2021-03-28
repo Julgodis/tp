@@ -5,7 +5,7 @@ lbl_80D676F4:
 /* 80D67700  7C 64 1B 78 */	mr r4, r3
 /* 80D67704  3C 60 80 45 */	lis r3, m_object__7dDemo_c@ha
 /* 80D67708  38 63 0E 20 */	addi r3, r3, m_object__7dDemo_c@l
-/* 80D6770C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450E20 */
+/* 80D6770C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D67710  88 84 04 98 */	lbz r4, 0x498(r4)
 /* 80D67714  4B 2D 19 74 */	b getActor__14dDemo_object_cFUc
 /* 80D67718  28 03 00 00 */	cmplwi r3, 0

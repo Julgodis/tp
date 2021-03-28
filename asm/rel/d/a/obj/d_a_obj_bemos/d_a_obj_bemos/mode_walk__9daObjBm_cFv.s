@@ -11,7 +11,7 @@ lbl_80BB09E0:
 /* 80BB0A04  3B A3 3E E8 */	addi r29, r3, lit_1109@l
 /* 80BB0A08  3C 60 80 BB */	lis r3, l_eye_offset@ha
 /* 80BB0A0C  3B C3 37 B8 */	addi r30, r3, l_eye_offset@l
-/* 80BB0A10  88 1D 00 50 */	lbz r0, 0x50(r29)	/* effective address: 80BB3F38 */
+/* 80BB0A10  88 1D 00 50 */	lbz r0, 0x50(r29)
 /* 80BB0A14  7C 00 07 75 */	extsb. r0, r0
 /* 80BB0A18  40 82 00 E8 */	bne lbl_80BB0B00
 /* 80BB0A1C  C0 3E 00 78 */	lfs f1, 0x78(r30)
@@ -138,11 +138,11 @@ lbl_80BB0B00:
 /* 80BB0BFC  4B 45 C1 A0 */	b transM__14mDoMtx_stack_cFfff
 /* 80BB0C00  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BB0C04  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80BB0C08  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 80BB0C08  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80BB0C0C  D0 21 00 3C */	stfs f1, 0x3c(r1)
-/* 80BB0C10  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80BB0C10  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80BB0C14  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80BB0C18  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80BB0C18  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80BB0C1C  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 80BB0C20  D0 3F 04 D0 */	stfs f1, 0x4d0(r31)
 /* 80BB0C24  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
@@ -178,7 +178,7 @@ lbl_80BB0C70:
 /* 80BB0C98  90 01 00 08 */	stw r0, 8(r1)
 /* 80BB0C9C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB0CA0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB0CA4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB0CA4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB0CA8  38 81 00 08 */	addi r4, r1, 8
 /* 80BB0CAC  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80BB0CB0  38 C0 00 00 */	li r6, 0
@@ -218,9 +218,9 @@ lbl_80BB0D20:
 /* 80BB0D2C  38 03 FF FF */	addi r0, r3, -1
 /* 80BB0D30  90 1F 10 B0 */	stw r0, 0x10b0(r31)
 lbl_80BB0D34:
-/* 80BB0D34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB0D38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BB0D3C  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BB0D34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB0D38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB0D3C  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80BB0D40  80 04 05 70 */	lwz r0, 0x570(r4)
 /* 80BB0D44  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13
 /* 80BB0D48  90 04 05 70 */	stw r0, 0x570(r4)

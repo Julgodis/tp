@@ -7,9 +7,9 @@ lbl_807E273C:
 /* 807E2750  7C A8 2B 78 */	mr r8, r5
 /* 807E2754  7C C9 33 78 */	mr r9, r6
 /* 807E2758  7C EA 3B 78 */	mr r10, r7
-/* 807E275C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E2760  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807E2764  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 807E275C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E2760  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807E2764  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 807E2768  38 00 00 FF */	li r0, 0xff
 /* 807E276C  90 01 00 08 */	stw r0, 8(r1)
 /* 807E2770  38 80 00 00 */	li r4, 0

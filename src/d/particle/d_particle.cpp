@@ -16,9 +16,6 @@ struct cXyz {
 	/* 80267128 */ void atan2sX_Z() const;
 };
 
-struct csXyz {
-};
-
 struct _GXTexMapID {
 };
 
@@ -27,6 +24,9 @@ struct JPABaseEmitter {
 	/* 8027EF30 */ void getCurrentCreateNumber() const;
 	/* 8027EF40 */ void getDrawCount() const;
 	/* 8027EF50 */ void loadTexture(u8, _GXTexMapID);
+};
+
+struct csXyz {
 };
 
 struct dPa_followEcallBack {
@@ -112,10 +112,11 @@ struct dPa_selectTexEcallBack {
 	/* 80050010 */ void setup(JPABaseEmitter*, cXyz const*, csXyz const*, s8);
 };
 
-struct JPAParticleCallBack {
-	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
-	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
-	/* 8027EFA4 */ ~JPAParticleCallBack();
+struct JPADrawInfo {
+};
+
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JPAEmitterCallBack {
@@ -126,23 +127,13 @@ struct JPAEmitterCallBack {
 	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
-
-};
-
-struct JPADrawInfo {
+struct JPAParticleCallBack {
+	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
+	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
+	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
 struct ResTIMG {
-};
-
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JPAResourceManager {
@@ -150,6 +141,15 @@ struct JPAResourceManager {
 	/* 80273EA8 */ void checkUserIndexDuplication(u16) const;
 	/* 80273EEC */ void swapTexture(ResTIMG const*, char const*);
 	/* 80273FCC */ void getResUserWork(u16) const;
+};
+
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
+
 };
 
 struct JPAEmitterManager {
@@ -182,19 +182,19 @@ struct dPa_windPcallBack {
 	/* 8004FF2C */ ~dPa_windPcallBack();
 };
 
-struct dPa_levelEcallBack {
-	/* 8004FB18 */ ~dPa_levelEcallBack();
-	/* 8004FB8C */ void cleanup();
+struct cBgS_PolyInfo {
 };
 
 struct fopAc_ac_c {
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct mDoDvdThd_toMainRam_c {
 	/* 80016394 */ void create(char const*, u8, JKRHeap*);
+};
+
+struct dPa_levelEcallBack {
+	/* 8004FB18 */ ~dPa_levelEcallBack();
+	/* 8004FB8C */ void cleanup();
 };
 
 struct dPa_control_c {
@@ -789,69 +789,69 @@ SECTION_DATA static u8 data_803A835C[48] = {
 
 /* 803A838C-803A83A0 0014+00 s=2 e=0 z=0  None .data      __vt__28dPa_particleTracePcallBack_c                         */
 SECTION_DATA static void* __vt__28dPa_particleTracePcallBack_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__28dPa_particleTracePcallBack_cFv,
-	/* 3    */ (void*)execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__28dPa_particleTracePcallBack_cFv,
+	(void*)execute__28dPa_particleTracePcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A83A0-803A83C4 0024+00 s=1 e=2 z=3  None .data      __vt__22dPa_hermiteEcallBack_c                               */
 SECTION_DATA void* __vt__22dPa_hermiteEcallBack_c[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dPa_hermiteEcallBack_cFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dPa_hermiteEcallBack_cFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__22dPa_hermiteEcallBack_cFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)setup__22dPa_hermiteEcallBack_cFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A83C4-803A83D8 0014+00 s=2 e=0 z=0  None .data      __vt__25dPa_gen_d_light8PcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_d_light8PcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dPa_gen_d_light8PcallBackFv,
-	/* 3    */ (void*)execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dPa_gen_d_light8PcallBackFv,
+	(void*)execute__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__25dPa_gen_d_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A83D8-803A83EC 0014+00 s=2 e=0 z=0  None .data      __vt__25dPa_gen_b_light8PcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_b_light8PcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dPa_gen_b_light8PcallBackFv,
-	/* 3    */ (void*)execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dPa_gen_b_light8PcallBackFv,
+	(void*)execute__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__25dPa_gen_b_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A83EC-803A8400 0014+00 s=2 e=0 z=0  None .data      __vt__19dPa_light8PcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_light8PcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dPa_light8PcallBackFv,
-	/* 3    */ (void*)execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dPa_light8PcallBackFv,
+	(void*)execute__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19dPa_light8PcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A8400-803A8414 0014+00 s=2 e=0 z=0  None .data      __vt__19dPa_fsenthPcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_fsenthPcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dPa_fsenthPcallBackFv,
-	/* 3    */ (void*)execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dPa_fsenthPcallBackFv,
+	(void*)execute__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19dPa_fsenthPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A8414-803A8434 0014+0C s=2 e=0 z=0  None .data      __vt__17dPa_wbPcallBack_c                                    */
 SECTION_DATA static void* __vt__17dPa_wbPcallBack_c[5 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dPa_wbPcallBack_cFv,
-	/* 3    */ (void*)execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dPa_wbPcallBack_cFv,
+	(void*)execute__17dPa_wbPcallBack_cFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 	/* padding */
 	NULL,
 	NULL,
@@ -860,134 +860,134 @@ SECTION_DATA static void* __vt__17dPa_wbPcallBack_c[5 + 3 /* padding */] = {
 
 /* 803A8434-803A8448 0014+00 s=1 e=0 z=0  None .data      __vt__17dPa_windPcallBack                                    */
 SECTION_DATA static void* __vt__17dPa_windPcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dPa_windPcallBackFv,
-	/* 3    */ (void*)execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dPa_windPcallBackFv,
+	(void*)execute__17dPa_windPcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A8448-803A8464 001C+00 s=2 e=0 z=0  None .data      __vt__19dPa_simpleEcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_simpleEcallBack[7] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dPa_simpleEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__19dPa_simpleEcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dPa_simpleEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__19dPa_simpleEcallBackFP14JPABaseEmitter,
+	(void*)draw__19dPa_simpleEcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
 
 /* 803A8464-803A8488 0024+00 s=2 e=0 z=0  None .data      __vt__22dPa_selectTexEcallBack                               */
 SECTION_DATA static void* __vt__22dPa_selectTexEcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dPa_selectTexEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__22dPa_selectTexEcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dPa_selectTexEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__22dPa_selectTexEcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)setup__22dPa_selectTexEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A8488-803A84AC 0024+00 s=2 e=0 z=0  None .data      __vt__18dPa_modelEcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_modelEcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dPa_modelEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18dPa_modelEcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18dPa_modelEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18dPa_modelEcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18dPa_modelEcallBackFP14JPABaseEmitter,
+	(void*)setup__18dPa_modelEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A84AC-803A84C0 0014+00 s=2 e=0 z=0  None .data      __vt__18dPa_modelPcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_modelPcallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dPa_modelPcallBackFv,
-	/* 3    */ (void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18dPa_modelPcallBackFv,
+	(void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__18dPa_modelPcallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803A84C0-803A84E4 0024+00 s=2 e=0 z=0  None .data      __vt__25dPa_gen_d_light8EcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_d_light8EcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dPa_gen_d_light8EcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dPa_gen_d_light8EcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__25dPa_gen_d_light8EcallBackFP14JPABaseEmitter,
+	(void*)setup__25dPa_gen_d_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A84E4-803A8508 0024+00 s=2 e=0 z=0  None .data      __vt__25dPa_gen_b_light8EcallBack                            */
 SECTION_DATA static void* __vt__25dPa_gen_b_light8EcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dPa_gen_b_light8EcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dPa_gen_b_light8EcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__25dPa_gen_b_light8EcallBackFP14JPABaseEmitter,
+	(void*)setup__25dPa_gen_b_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A8508-803A852C 0024+00 s=2 e=0 z=0  None .data      __vt__19dPa_light8EcallBack                                  */
 SECTION_DATA static void* __vt__19dPa_light8EcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dPa_light8EcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__19dPa_light8EcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dPa_light8EcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__19dPa_light8EcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__19dPa_light8EcallBackFP14JPABaseEmitter,
+	(void*)setup__19dPa_light8EcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A852C-803A8554 0028+00 s=2 e=0 z=6  None .data      __vt__19dPa_followEcallBack                                  */
 SECTION_DATA void* __vt__19dPa_followEcallBack[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dPa_followEcallBackFv,
-	/* 3    */ (void*)execute__19dPa_followEcallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__19dPa_followEcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__19dPa_followEcallBackFv,
-	/* 9    */ (void*)end__19dPa_followEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dPa_followEcallBackFv,
+	(void*)execute__19dPa_followEcallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__19dPa_followEcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)setup__19dPa_followEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__19dPa_followEcallBackFv,
+	(void*)end__19dPa_followEcallBackFv,
 };
 
 /* 803A8554-803A8578 0024+00 s=11 e=2 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
 SECTION_DATA void* __vt__18dPa_levelEcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dPa_levelEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18dPa_levelEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 };
 
 /* 803A8578-803A8594 001C+00 s=3 e=3 z=0  None .data      __vt__18JPAEmitterCallBack                                   */
 SECTION_DATA void* __vt__18JPAEmitterCallBack[7] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
 };
 
 /* 80049580-800495BC 003C+00 s=0 e=1 z=8  None .text      __ct__19dPa_followEcallBackFUcUc                             */
@@ -2673,15 +2673,15 @@ void dPa_setColorEcallBack::setup(JPABaseEmitter* param_0, cXyz const* param_1, 
 /* ############################################################################################## */
 /* 803A8594-803A85D0 0024+18 s=2 e=0 z=0  None .data      __vt__21dPa_setColorEcallBack                                */
 SECTION_DATA static void* __vt__21dPa_setColorEcallBack[9 + 6 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21dPa_setColorEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__21dPa_setColorEcallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__21dPa_setColorEcallBackFv,
+	(void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)draw__21dPa_setColorEcallBackFP14JPABaseEmitter,
+	(void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)setup__21dPa_setColorEcallBackFP14JPABaseEmitterPC4cXyzPC5csXyzSc,
+	(void*)cleanup__18dPa_levelEcallBackFv,
 	/* padding */
 	NULL,
 	NULL,

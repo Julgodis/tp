@@ -63,9 +63,9 @@ lbl_806674EC:
 /* 8066751C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80667520  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80667524  D0 41 00 1C */	stfs f2, 0x1c(r1)
-/* 80667528  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066752C  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80667530  80 7D 61 B0 */	lwz r3, 0x61b0(r29)	/* effective address: 8040C370 */
+/* 80667528  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066752C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80667530  80 7D 61 B0 */	lwz r3, 0x61b0(r29)
 /* 80667534  38 63 01 40 */	addi r3, r3, 0x140
 /* 80667538  38 81 00 14 */	addi r4, r1, 0x14
 /* 8066753C  7C 85 23 78 */	mr r5, r4

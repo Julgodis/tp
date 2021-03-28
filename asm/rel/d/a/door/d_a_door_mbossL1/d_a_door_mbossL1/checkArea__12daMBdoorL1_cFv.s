@@ -5,11 +5,11 @@ lbl_806760B4:
 /* 806760C0  39 61 00 70 */	addi r11, r1, 0x70
 /* 806760C4  4B CE C1 18 */	b _savegpr_29
 /* 806760C8  7C 7E 1B 78 */	mr r30, r3
-/* 806760CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806760D0  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 806760D4  83 FD 5D AC */	lwz r31, 0x5dac(r29)	/* effective address: 8040BF6C */
-/* 806760D8  80 7D 5D B4 */	lwz r3, 0x5db4(r29)	/* effective address: 8040BF74 */
-/* 806760DC  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 806760CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806760D0  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 806760D4  83 FD 5D AC */	lwz r31, 0x5dac(r29)
+/* 806760D8  80 7D 5D B4 */	lwz r3, 0x5db4(r29)
+/* 806760DC  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 806760E0  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 806760E4  41 82 00 58 */	beq lbl_8067613C
 /* 806760E8  38 61 00 20 */	addi r3, r1, 0x20

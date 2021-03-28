@@ -19,7 +19,6 @@ extern void* const data_8096C90C[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_blue_ns_cpp(); // 1
 
 // 
 // Declarations:

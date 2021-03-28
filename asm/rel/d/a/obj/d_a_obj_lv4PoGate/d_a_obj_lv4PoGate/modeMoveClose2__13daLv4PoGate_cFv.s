@@ -7,10 +7,10 @@ lbl_80C6037C:
 /* 80C60390  38 7F 05 B4 */	addi r3, r31, 0x5b4
 /* 80C60394  3C 80 80 C6 */	lis r4, l_HIO@ha
 /* 80C60398  38 A4 09 C4 */	addi r5, r4, l_HIO@l
-/* 80C6039C  C0 25 00 14 */	lfs f1, 0x14(r5)	/* effective address: 80C609D8 */
+/* 80C6039C  C0 25 00 14 */	lfs f1, 0x14(r5)
 /* 80C603A0  3C 80 80 C6 */	lis r4, lit_3786@ha
 /* 80C603A4  C0 44 08 2C */	lfs f2, lit_3786@l(r4)
-/* 80C603A8  C0 65 00 0C */	lfs f3, 0xc(r5)	/* effective address: 80C609D0 */
+/* 80C603A8  C0 65 00 0C */	lfs f3, 0xc(r5)
 /* 80C603AC  FC 80 10 90 */	fmr f4, f2
 /* 80C603B0  4B 60 F5 CC */	b cLib_addCalc__FPfffff
 /* 80C603B4  3C 60 80 C6 */	lis r3, lit_3655@ha

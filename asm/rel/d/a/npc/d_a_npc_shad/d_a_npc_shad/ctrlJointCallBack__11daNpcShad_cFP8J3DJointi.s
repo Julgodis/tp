@@ -7,7 +7,7 @@ lbl_80AD946C:
 /* 80AD9480  40 82 00 24 */	bne lbl_80AD94A4
 /* 80AD9484  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80AD9488  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80AD948C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80AD948C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80AD9490  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80AD9494  28 03 00 00 */	cmplwi r3, 0
 /* 80AD9498  41 82 00 0C */	beq lbl_80AD94A4

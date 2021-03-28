@@ -21,7 +21,7 @@ lbl_809E2088:
 lbl_809E20D4:
 /* 809E20D4  3C 80 80 9E */	lis r4, m__17daNpc_grR_Param_c@ha
 /* 809E20D8  38 84 38 D8 */	addi r4, r4, m__17daNpc_grR_Param_c@l
-/* 809E20DC  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 809E393A */
+/* 809E20DC  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_809E20E0:
 /* 809E20E0  38 A0 00 07 */	li r5, 7
 /* 809E20E4  38 C0 00 00 */	li r6, 0

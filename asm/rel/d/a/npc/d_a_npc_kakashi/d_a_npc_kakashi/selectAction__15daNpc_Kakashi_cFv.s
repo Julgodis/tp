@@ -9,11 +9,11 @@ lbl_8054C92C:
 /* 8054C948  3B C3 ED 9C */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 8054C94C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8054C950  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8054C954  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8054C958  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8054C954  80 64 00 00 */	lwz r3, 0(r4)
+/* 8054C958  80 04 00 04 */	lwz r0, 4(r4)
 /* 8054C95C  90 7F 13 4C */	stw r3, 0x134c(r31)
 /* 8054C960  90 1F 13 50 */	stw r0, 0x1350(r31)
-/* 8054C964  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8054C964  80 04 00 08 */	lwz r0, 8(r4)
 /* 8054C968  90 1F 13 54 */	stw r0, 0x1354(r31)
 /* 8054C96C  88 1F 13 48 */	lbz r0, 0x1348(r31)
 /* 8054C970  2C 00 00 00 */	cmpwi r0, 0

@@ -13,7 +13,7 @@ lbl_80D09008:
 /* 80D09034  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80D09038  C0 5E 05 2C */	lfs f2, 0x52c(r30)
 /* 80D0903C  C0 3E 04 FC */	lfs f1, 0x4fc(r30)
-/* 80D09040  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 80D0B93C */
+/* 80D09040  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80D09044  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80D09048  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80D0904C  D0 41 00 1C */	stfs f2, 0x1c(r1)

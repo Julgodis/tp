@@ -21,8 +21,8 @@ lbl_80A1E5C0:
 /* 80A1E5C0  80 1F 14 68 */	lwz r0, 0x1468(r31)
 /* 80A1E5C4  64 00 00 08 */	oris r0, r0, 8
 /* 80A1E5C8  90 1F 14 68 */	stw r0, 0x1468(r31)
-/* 80A1E5CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A1E5D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A1E5CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A1E5D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A1E5D4  38 63 09 78 */	addi r3, r3, 0x978
 /* 80A1E5D8  38 80 00 3C */	li r4, 0x3c
 /* 80A1E5DC  4B 61 65 BC */	b onSwitch__12dSv_danBit_cFi

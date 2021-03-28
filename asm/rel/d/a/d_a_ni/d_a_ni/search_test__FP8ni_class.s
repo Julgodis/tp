@@ -30,7 +30,7 @@ lbl_8094C570:
 /* 8094C58C  C3 DF 00 28 */	lfs f30, 0x28(r31)
 /* 8094C590  3C 60 80 95 */	lis r3, target_info_count@ha
 /* 8094C594  3B 83 16 00 */	addi r28, r3, target_info_count@l
-/* 8094C598  80 1C 00 00 */	lwz r0, 0(r28)	/* effective address: 80951600 */
+/* 8094C598  80 1C 00 00 */	lwz r0, 0(r28)
 /* 8094C59C  2C 00 00 00 */	cmpwi r0, 0
 /* 8094C5A0  41 82 00 B4 */	beq lbl_8094C654
 /* 8094C5A4  3B 40 00 00 */	li r26, 0

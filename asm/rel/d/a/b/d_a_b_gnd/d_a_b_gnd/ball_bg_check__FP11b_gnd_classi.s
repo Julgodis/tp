@@ -41,8 +41,8 @@ lbl_805FAFF0:
 /* 805FB08C  38 A1 00 2C */	addi r5, r1, 0x2c
 /* 805FB090  7F C6 F3 78 */	mr r6, r30
 /* 805FB094  4B A7 CC D0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 805FB098  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805FB09C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805FB098  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805FB09C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805FB0A0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 805FB0A4  38 81 00 44 */	addi r4, r1, 0x44
 /* 805FB0A8  4B A7 93 0C */	b LineCross__4cBgSFP11cBgS_LinChk

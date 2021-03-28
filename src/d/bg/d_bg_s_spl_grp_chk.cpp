@@ -87,18 +87,18 @@ asm void dBgS_SplGrpChk::Set(cXyz& param_0, f32 param_1) {
 /* ############################################################################################## */
 /* 803ABA08-803ABA38 0030+00 s=2 e=0 z=0  None .data      __vt__14dBgS_SplGrpChk                                       */
 SECTION_DATA static void* __vt__14dBgS_SplGrpChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dBgS_SplGrpChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80078D4C,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80078D5C,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_80078D54,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14dBgS_SplGrpChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80078D4C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80078D5C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80078D54,
 };
 
 /* 804526E8-804526EC 0004+00 s=1 e=0 z=0  None .sdata2    @319                                                         */

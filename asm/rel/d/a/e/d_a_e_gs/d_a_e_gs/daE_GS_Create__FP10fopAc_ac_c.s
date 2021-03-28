@@ -52,7 +52,7 @@ lbl_806DFCA0:
 /* 806DFCBC  38 00 FF FF */	li r0, -1
 /* 806DFCC0  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DFCC4  38 63 FE A8 */	addi r3, r3, l_HIO@l
-/* 806DFCC8  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806DFEAC */
+/* 806DFCC8  98 03 00 04 */	stb r0, 4(r3)
 lbl_806DFCCC:
 /* 806DFCCC  80 7F 05 C8 */	lwz r3, 0x5c8(r31)
 /* 806DFCD0  80 63 00 04 */	lwz r3, 4(r3)

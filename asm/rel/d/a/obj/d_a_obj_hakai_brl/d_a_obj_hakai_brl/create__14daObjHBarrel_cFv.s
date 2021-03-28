@@ -23,7 +23,7 @@ lbl_80C16B44:
 lbl_80C16B54:
 /* 80C16B54  3C 80 80 C1 */	lis r4, l_arcName@ha
 /* 80C16B58  38 84 73 7C */	addi r4, r4, l_arcName@l
-/* 80C16B5C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1737C */
+/* 80C16B5C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C16B60  4B 41 63 5C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C16B64  7C 7F 1B 78 */	mr r31, r3
 /* 80C16B68  2C 1F 00 04 */	cmpwi r31, 4

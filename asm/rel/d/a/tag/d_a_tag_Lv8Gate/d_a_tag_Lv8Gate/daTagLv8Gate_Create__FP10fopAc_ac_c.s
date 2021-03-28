@@ -18,12 +18,12 @@ lbl_80D51E00:
 /* 80D51E04  60 00 00 08 */	ori r0, r0, 8
 /* 80D51E08  90 1D 04 A0 */	stw r0, 0x4a0(r29)
 lbl_80D51E0C:
-/* 80D51E0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D51E10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D51E0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D51E10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D51E14  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D51E18  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D51E1C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D51E20  A0 84 02 C4 */	lhz r4, 0x2c4(r4)	/* effective address: 803A754C */
+/* 80D51E20  A0 84 02 C4 */	lhz r4, 0x2c4(r4)
 /* 80D51E24  4B 2E 2B 98 */	b isEventBit__11dSv_event_cCFUs
 /* 80D51E28  2C 03 00 00 */	cmpwi r3, 0
 /* 80D51E2C  40 82 00 0C */	bne lbl_80D51E38
@@ -33,7 +33,7 @@ lbl_80D51E38:
 /* 80D51E38  38 7D 05 70 */	addi r3, r29, 0x570
 /* 80D51E3C  3C 80 80 D5 */	lis r4, l_arcName@ha
 /* 80D51E40  38 84 25 10 */	addi r4, r4, l_arcName@l
-/* 80D51E44  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D52510 */
+/* 80D51E44  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D51E48  4B 2D B0 74 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D51E4C  7C 7E 1B 78 */	mr r30, r3
 /* 80D51E50  2C 1E 00 04 */	cmpwi r30, 4

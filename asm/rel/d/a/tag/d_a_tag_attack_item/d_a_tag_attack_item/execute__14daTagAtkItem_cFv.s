@@ -12,8 +12,8 @@ lbl_805A2C48:
 /* 805A2C70  38 7F 06 E4 */	addi r3, r31, 0x6e4
 /* 805A2C74  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 805A2C78  4B CC C5 64 */	b SetC__8cM3dGCylFRC4cXyz
-/* 805A2C7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A2C80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A2C7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A2C80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A2C84  38 63 23 3C */	addi r3, r3, 0x233c
 /* 805A2C88  38 9F 05 C0 */	addi r4, r31, 0x5c0
 /* 805A2C8C  4B CC 1F 1C */	b Set__4cCcSFP8cCcD_Obj

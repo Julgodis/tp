@@ -320,9 +320,9 @@ lbl_807374DC:
 /* 807374DC  88 1C 0B AC */	lbz r0, 0xbac(r28)
 /* 807374E0  28 00 00 00 */	cmplwi r0, 0
 /* 807374E4  41 82 00 40 */	beq lbl_80737524
-/* 807374E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807374EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807374F0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 807374E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807374EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807374F0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 807374F4  28 00 00 00 */	cmplwi r0, 0
 /* 807374F8  40 82 00 2C */	bne lbl_80737524
 /* 807374FC  80 7D 00 E8 */	lwz r3, 0xe8(r29)

@@ -6,11 +6,11 @@ lbl_8054BF8C:
 /* 8054BF9C  7C 7F 1B 78 */	mr r31, r3
 /* 8054BFA0  3C 80 80 55 */	lis r4, lit_4583@ha
 /* 8054BFA4  38 A4 EF 7C */	addi r5, r4, lit_4583@l
-/* 8054BFA8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 8054EF7C */
-/* 8054BFAC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 8054EF80 */
+/* 8054BFA8  80 85 00 00 */	lwz r4, 0(r5)
+/* 8054BFAC  80 05 00 04 */	lwz r0, 4(r5)
 /* 8054BFB0  90 81 00 08 */	stw r4, 8(r1)
 /* 8054BFB4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8054BFB8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 8054EF84 */
+/* 8054BFB8  80 05 00 08 */	lwz r0, 8(r5)
 /* 8054BFBC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8054BFC0  38 81 00 08 */	addi r4, r1, 8
 /* 8054BFC4  48 00 0A 59 */	bl chkAction__15daNpc_Kakashi_cFM15daNpc_Kakashi_cFPCvPvPv_i

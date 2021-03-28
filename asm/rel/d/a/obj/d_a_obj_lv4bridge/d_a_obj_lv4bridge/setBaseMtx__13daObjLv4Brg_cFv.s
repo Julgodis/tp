@@ -8,7 +8,7 @@ lbl_80C628B4:
 /* 80C628CC  3C 60 80 C6 */	lis r3, lit_3653@ha
 /* 80C628D0  3B E3 31 70 */	addi r31, r3, lit_3653@l
 /* 80C628D4  C0 3E 05 BC */	lfs f1, 0x5bc(r30)
-/* 80C628D8  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80C63170 */
+/* 80C628D8  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80C628DC  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80C628E0  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80C628E4  D0 21 00 1C */	stfs f1, 0x1c(r1)

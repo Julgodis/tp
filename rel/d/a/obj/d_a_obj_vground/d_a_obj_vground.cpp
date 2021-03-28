@@ -74,10 +74,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -90,10 +90,10 @@ struct dScnKy_env_light_c {
 // 
 
 static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daObjVGnd_Draw(daObjVGnd_c*); // 2
-static void daObjVGnd_Execute(daObjVGnd_c*); // 2
-static void daObjVGnd_Delete(daObjVGnd_c*); // 2
-static void daObjVGnd_Create(fopAc_ac_c*); // 2
+void daObjVGnd_Draw(daObjVGnd_c*); // 2
+void daObjVGnd_Execute(daObjVGnd_c*); // 2
+void daObjVGnd_Delete(daObjVGnd_c*); // 2
+void daObjVGnd_Create(fopAc_ac_c*); // 2
 
 extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
 extern "C" void initBaseMtx__11daObjVGnd_cFv(); // 1
@@ -105,11 +105,12 @@ extern "C" void create__11daObjVGnd_cFv(); // 1
 extern "C" void execute__11daObjVGnd_cFv(); // 1
 extern "C" void draw__11daObjVGnd_cFv(); // 1
 extern "C" void _delete__11daObjVGnd_cFv(); // 1
-extern "C" static void daObjVGnd_Draw__FP11daObjVGnd_c(); // 1
-extern "C" static void daObjVGnd_Execute__FP11daObjVGnd_c(); // 1
-extern "C" static void daObjVGnd_Delete__FP11daObjVGnd_c(); // 1
-extern "C" static void daObjVGnd_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjVGnd_Draw__FP11daObjVGnd_c(); // 1
+extern "C" void daObjVGnd_Execute__FP11daObjVGnd_c(); // 1
+extern "C" void daObjVGnd_Delete__FP11daObjVGnd_c(); // 1
+extern "C" void daObjVGnd_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjVGnd_Method[8];
 extern "C" extern void* g_profile_Obj_VolcGnd[12];
 
 // 
@@ -150,20 +151,11 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_27(); // 1
 extern "C" void _restgpr_27(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 struct_803A7308[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C138[4];
-SECTION_BSS extern u8 data_8040C13C[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -221,57 +213,42 @@ asm void daObjVGnd_c::Create() {
 /* 80D21A0C-80D21A10 0004+00 s=2 e=0 z=0  None .rodata    @3704                                                        */
 SECTION_RODATA static u32 const lit_3704 = 0x3F800000;
 
-/* 80D21A10-80D21A14 0004+00 s=1 e=0 z=0  None .rodata    @3778                                                        */
-SECTION_RODATA static u32 const lit_3778 = 0x40000000;
-
-/* 80D21A14-80D21A18 0004+00 s=1 e=0 z=0  None .rodata    @3779                                                        */
-SECTION_RODATA static u8 const lit_3779[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D21A18-80D21A22 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D21A18 = "M_VolcGnd";
-#pragma pop
-
 /* 80D21A24-80D21A28 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80D21A28-80D21A48 0020+00 s=1 e=0 z=0  None .data      l_daObjVGnd_Method                                           */
-SECTION_DATA static void* l_daObjVGnd_Method[8] = {
-	/* 0    */ (void*)daObjVGnd_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjVGnd_Delete__FP11daObjVGnd_c,
-	/* 2    */ (void*)daObjVGnd_Execute__FP11daObjVGnd_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjVGnd_Draw__FP11daObjVGnd_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D21A28-80D21A48 0020+00 s=0 e=0 z=0  None .data      l_daObjVGnd_Method                                           */
+SECTION_DATA void* l_daObjVGnd_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D21A48-80D21A78 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_VolcGnd                                        */
+/* 80D21A48-80D21A78 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_VolcGnd                                        */
 SECTION_DATA void* g_profile_Obj_VolcGnd[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00E20000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000057C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02530000,
-	/* 9    */ (void*)&l_daObjVGnd_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00E20000,
+	(void*)NULL,
+	(void*)0x0000057C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02530000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80D21A78-80D21A84 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D21500-80D216AC 01AC+00 s=1 e=0 z=0  None .text      CreateHeap__11daObjVGnd_cFv                                  */
@@ -285,7 +262,7 @@ asm void daObjVGnd_c::CreateHeap() {
 #pragma pop
 
 
-/* 80D216AC-80D216F4 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80D216AC-80D216F4 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -306,6 +283,15 @@ asm void daObjVGnd_c::create() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D21A10-80D21A14 0004+00 s=1 e=0 z=0  None .rodata    @3778                                                        */
+SECTION_RODATA static u32 const lit_3778 = 0x40000000;
+
+/* 80D21A14-80D21A18 0004+00 s=1 e=0 z=0  None .rodata    @3779                                                        */
+SECTION_RODATA static u8 const lit_3779[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80D217A8-80D21878 00D0+00 s=2 e=0 z=0  None .text      execute__11daObjVGnd_cFv                                     */
 #pragma push
@@ -340,47 +326,55 @@ asm void daObjVGnd_c::_delete() {
 #pragma pop
 
 
-/* 80D21980-80D219A0 0020+00 s=1 e=0 z=0  None .text      daObjVGnd_Draw__FP11daObjVGnd_c                              */
+/* 80D21980-80D219A0 0020+00 s=0 e=0 z=0  None .text      daObjVGnd_Draw__FP11daObjVGnd_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjVGnd_Draw(daObjVGnd_c* param_0) {
+asm void daObjVGnd_Draw(daObjVGnd_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Draw__FP11daObjVGnd_c.s"
 }
 #pragma pop
 
 
-/* 80D219A0-80D219C0 0020+00 s=1 e=0 z=0  None .text      daObjVGnd_Execute__FP11daObjVGnd_c                           */
+/* 80D219A0-80D219C0 0020+00 s=0 e=0 z=0  None .text      daObjVGnd_Execute__FP11daObjVGnd_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjVGnd_Execute(daObjVGnd_c* param_0) {
+asm void daObjVGnd_Execute(daObjVGnd_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Execute__FP11daObjVGnd_c.s"
 }
 #pragma pop
 
 
-/* 80D219C0-80D219E0 0020+00 s=1 e=0 z=0  None .text      daObjVGnd_Delete__FP11daObjVGnd_c                            */
+/* 80D219C0-80D219E0 0020+00 s=0 e=0 z=0  None .text      daObjVGnd_Delete__FP11daObjVGnd_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjVGnd_Delete(daObjVGnd_c* param_0) {
+asm void daObjVGnd_Delete(daObjVGnd_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Delete__FP11daObjVGnd_c.s"
 }
 #pragma pop
 
 
-/* 80D219E0-80D21A00 0020+00 s=1 e=0 z=0  None .text      daObjVGnd_Create__FP10fopAc_ac_c                             */
+/* 80D219E0-80D21A00 0020+00 s=0 e=0 z=0  None .text      daObjVGnd_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjVGnd_Create(fopAc_ac_c* param_0) {
+asm void daObjVGnd_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_vground/d_a_obj_vground/daObjVGnd_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D21A18-80D21A22 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D21A18 = "M_VolcGnd";
+#pragma pop
 

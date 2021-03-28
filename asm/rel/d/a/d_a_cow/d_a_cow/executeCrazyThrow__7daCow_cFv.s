@@ -74,18 +74,18 @@ lbl_8065ECE8:
 /* 8065ED00  88 1E 0C 61 */	lbz r0, 0xc61(r30)
 /* 8065ED04  28 00 00 00 */	cmplwi r0, 0
 /* 8065ED08  41 82 00 20 */	beq lbl_8065ED28
-/* 8065ED0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065ED10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065ED14  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8065ED18  A8 63 04 E6 */	lha r3, 0x4e6(r3)	/* effective address: 804066A6 */
+/* 8065ED0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065ED10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065ED14  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8065ED18  A8 63 04 E6 */	lha r3, 0x4e6(r3)
 /* 8065ED1C  38 03 70 00 */	addi r0, r3, 0x7000
 /* 8065ED20  B0 1E 04 DE */	sth r0, 0x4de(r30)
 /* 8065ED24  48 00 00 1C */	b lbl_8065ED40
 lbl_8065ED28:
-/* 8065ED28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065ED2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065ED30  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8065ED34  A8 63 04 E6 */	lha r3, 0x4e6(r3)	/* effective address: 804066A6 */
+/* 8065ED28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065ED2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065ED30  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8065ED34  A8 63 04 E6 */	lha r3, 0x4e6(r3)
 /* 8065ED38  38 03 98 00 */	addi r0, r3, -26624
 /* 8065ED3C  B0 1E 04 DE */	sth r0, 0x4de(r30)
 lbl_8065ED40:
@@ -103,8 +103,8 @@ lbl_8065ED50:
 /* 8065ED68  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8065ED6C  38 C0 00 00 */	li r6, 0
 /* 8065ED70  4B A1 8F F4 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8065ED74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065ED78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8065ED74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065ED78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8065ED7C  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8065ED80  7F A3 EB 78 */	mr r3, r29
 /* 8065ED84  38 81 00 30 */	addi r4, r1, 0x30
@@ -177,8 +177,8 @@ lbl_8065EE28:
 /* 8065EE88  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 8065EE8C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8065EE90  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 8065EE94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065EE98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8065EE94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065EE98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8065EE9C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8065EEA0  38 80 00 05 */	li r4, 5
 /* 8065EEA4  38 A0 00 1F */	li r5, 0x1f

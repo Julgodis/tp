@@ -26,7 +26,7 @@ lbl_809B3748:
 /* 809B374C  B0 1F 0E 30 */	sth r0, 0xe30(r31)
 /* 809B3750  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B3754  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B3758  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B3758  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B375C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B3760  38 80 00 2D */	li r4, 0x2d
 /* 809B3764  4B 8F C7 78 */	b bgmStreamStop__8Z2SeqMgrFUl

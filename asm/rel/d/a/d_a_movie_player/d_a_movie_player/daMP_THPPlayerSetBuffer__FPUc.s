@@ -6,7 +6,7 @@ lbl_808777F0:
 /* 80877800  4B AE A9 D4 */	b _savegpr_27
 /* 80877804  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 80877808  38 A4 9B D0 */	addi r5, r4, daMP_ActivePlayer@l
-/* 8087780C  80 05 00 A0 */	lwz r0, 0xa0(r5)	/* effective address: 80879C70 */
+/* 8087780C  80 05 00 A0 */	lwz r0, 0xa0(r5)
 /* 80877810  2C 00 00 00 */	cmpwi r0, 0
 /* 80877814  41 82 01 D8 */	beq lbl_808779EC
 /* 80877818  88 05 00 A4 */	lbz r0, 0xa4(r5)
@@ -73,8 +73,8 @@ lbl_80877840:
 lbl_80877908:
 /* 80877908  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 8087790C  3B C3 9B D0 */	addi r30, r3, daMP_ActivePlayer@l
-/* 80877910  80 7E 00 80 */	lwz r3, 0x80(r30)	/* effective address: 80879C50 */
-/* 80877914  80 1E 00 84 */	lwz r0, 0x84(r30)	/* effective address: 80879C54 */
+/* 80877910  80 7E 00 80 */	lwz r3, 0x80(r30)
+/* 80877914  80 1E 00 84 */	lwz r0, 0x84(r30)
 /* 80877918  7C 63 01 D6 */	mullw r3, r3, r0
 /* 8087791C  38 03 00 1F */	addi r0, r3, 0x1f
 /* 80877920  54 1C 00 34 */	rlwinm r28, r0, 0, 0, 0x1a
@@ -83,7 +83,7 @@ lbl_80877908:
 /* 8087792C  54 1B 00 34 */	rlwinm r27, r0, 0, 0, 0x1a
 /* 80877930  3B A0 00 00 */	li r29, 0
 lbl_80877934:
-/* 80877934  93 FE 01 78 */	stw r31, 0x178(r30)	/* effective address: 80879D48 */
+/* 80877934  93 FE 01 78 */	stw r31, 0x178(r30)
 /* 80877938  7F E3 FB 78 */	mr r3, r31
 /* 8087793C  7F 84 E3 78 */	mr r4, r28
 /* 80877940  4B AC 3C 40 */	b DCInvalidateRange
@@ -104,7 +104,7 @@ lbl_80877934:
 /* 8087797C  41 80 FF B8 */	blt lbl_80877934
 /* 80877980  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877984  38 A3 9B D0 */	addi r5, r3, daMP_ActivePlayer@l
-/* 80877988  88 05 00 A7 */	lbz r0, 0xa7(r5)	/* effective address: 80879C77 */
+/* 80877988  88 05 00 A7 */	lbz r0, 0xa7(r5)
 /* 8087798C  28 00 00 00 */	cmplwi r0, 0
 /* 80877990  41 82 00 48 */	beq lbl_808779D8
 /* 80877994  93 E5 01 A8 */	stw r31, 0x1a8(r5)
@@ -127,7 +127,7 @@ lbl_80877934:
 lbl_808779D8:
 /* 808779D8  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808779DC  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 808779E0  93 E3 00 9C */	stw r31, 0x9c(r3)	/* effective address: 80879C6C */
+/* 808779E0  93 E3 00 9C */	stw r31, 0x9c(r3)
 /* 808779E4  38 60 00 01 */	li r3, 1
 /* 808779E8  48 00 00 08 */	b lbl_808779F0
 lbl_808779EC:

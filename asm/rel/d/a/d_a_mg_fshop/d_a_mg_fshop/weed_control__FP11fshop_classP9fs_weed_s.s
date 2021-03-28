@@ -20,19 +20,19 @@ lbl_8086CF8C:
 /* 8086CFD4  3C 60 80 87 */	lis r3, lit_3829@ha
 /* 8086CFD8  3B 03 00 94 */	addi r24, r3, lit_3829@l
 /* 8086CFDC  3B DD 00 0C */	addi r30, r29, 0xc
-/* 8086CFE0  C0 18 00 1C */	lfs f0, 0x1c(r24)	/* effective address: 808700B0 */
+/* 8086CFE0  C0 18 00 1C */	lfs f0, 0x1c(r24)
 /* 8086CFE4  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8086CFE8  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8086CFEC  C0 38 00 0C */	lfs f1, 0xc(r24)	/* effective address: 808700A0 */
+/* 8086CFEC  C0 38 00 0C */	lfs f1, 0xc(r24)
 /* 8086CFF0  C0 04 00 B4 */	lfs f0, 0xb4(r4)
 /* 8086CFF4  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8086CFF8  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 8086CFFC  C0 18 00 68 */	lfs f0, 0x68(r24)	/* effective address: 808700FC */
+/* 8086CFFC  C0 18 00 68 */	lfs f0, 0x68(r24)
 /* 8086D000  C0 44 00 B8 */	lfs f2, 0xb8(r4)
 /* 8086D004  EF C0 10 2A */	fadds f30, f0, f2
 /* 8086D008  A8 64 00 BC */	lha r3, 0xbc(r4)
-/* 8086D00C  C0 38 00 6C */	lfs f1, 0x6c(r24)	/* effective address: 80870100 */
-/* 8086D010  C0 18 00 70 */	lfs f0, 0x70(r24)	/* effective address: 80870104 */
+/* 8086D00C  C0 38 00 6C */	lfs f1, 0x6c(r24)
+/* 8086D010  C0 18 00 70 */	lfs f0, 0x70(r24)
 /* 8086D014  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 8086D018  EC 01 00 2A */	fadds f0, f1, f0
 /* 8086D01C  FC 00 00 1E */	fctiwz f0, f0
@@ -41,8 +41,8 @@ lbl_8086CF8C:
 /* 8086D028  7C 03 02 14 */	add r0, r3, r0
 /* 8086D02C  B0 04 00 BC */	sth r0, 0xbc(r4)
 /* 8086D030  38 7D 00 B8 */	addi r3, r29, 0xb8
-/* 8086D034  C0 38 00 58 */	lfs f1, 0x58(r24)	/* effective address: 808700EC */
-/* 8086D038  C0 58 00 74 */	lfs f2, 0x74(r24)	/* effective address: 80870108 */
+/* 8086D034  C0 38 00 58 */	lfs f1, 0x58(r24)
+/* 8086D038  C0 58 00 74 */	lfs f2, 0x74(r24)
 /* 8086D03C  4B A0 2A 44 */	b cLib_addCalc0__FPfff
 /* 8086D040  3B E0 00 01 */	li r31, 1
 /* 8086D044  3B 80 EA 84 */	li r28, -5500

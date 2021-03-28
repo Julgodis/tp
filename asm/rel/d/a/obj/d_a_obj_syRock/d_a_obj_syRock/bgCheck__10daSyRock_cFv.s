@@ -60,7 +60,7 @@ lbl_80D0378C:
 /* 80D037BC  38 61 00 20 */	addi r3, r1, 0x20
 /* 80D037C0  3C 80 80 D0 */	lis r4, l_HIO@ha
 /* 80D037C4  38 84 42 6C */	addi r4, r4, l_HIO@l
-/* 80D037C8  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 80D04294 */
+/* 80D037C8  C0 24 00 28 */	lfs f1, 0x28(r4)
 /* 80D037CC  38 80 00 03 */	li r4, 3
 /* 80D037D0  4B 31 C0 AC */	b fopKyM_createWpillar__FPC4cXyzfi
 /* 80D037D4  C0 1F 00 90 */	lfs f0, 0x90(r31)
@@ -75,7 +75,7 @@ lbl_80D0378C:
 /* 80D037F8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D037FC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D03800  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D03804  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D03804  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D03808  38 81 00 08 */	addi r4, r1, 8
 /* 80D0380C  38 BB 05 38 */	addi r5, r27, 0x538
 /* 80D03810  38 C0 00 00 */	li r6, 0
@@ -96,7 +96,7 @@ lbl_80D03830:
 /* 80D03848  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D0384C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D03850  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D03854  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D03854  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D03858  38 81 00 10 */	addi r4, r1, 0x10
 /* 80D0385C  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 80D03860  38 C0 00 00 */	li r6, 0
@@ -128,7 +128,7 @@ lbl_80D0388C:
 /* 80D038C0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D038C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D038C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D038CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D038CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D038D0  38 81 00 0C */	addi r4, r1, 0xc
 /* 80D038D4  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 80D038D8  38 C0 00 00 */	li r6, 0
@@ -140,7 +140,7 @@ lbl_80D0388C:
 /* 80D038F0  4B 5A 80 94 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80D038F4  3C 60 80 D0 */	lis r3, l_HIO@ha
 /* 80D038F8  38 63 42 6C */	addi r3, r3, l_HIO@l
-/* 80D038FC  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 80D04294 */
+/* 80D038FC  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 80D03900  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80D03904  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80D03908  D0 01 00 1C */	stfs f0, 0x1c(r1)

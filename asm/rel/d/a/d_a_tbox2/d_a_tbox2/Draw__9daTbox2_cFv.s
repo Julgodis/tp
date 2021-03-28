@@ -23,14 +23,14 @@ lbl_80497DCC:
 /* 80497DF0  80 84 00 04 */	lwz r4, 4(r4)
 /* 80497DF4  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80497DF8  4B D0 CF A8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80497DFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80497E00  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80497E04  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80497DFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80497E00  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80497E04  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80497E08  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80497E0C  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80497E10  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80497E14  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80497E18  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80497E10  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80497E14  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80497E18  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80497E1C  80 7E 07 24 */	lwz r3, 0x724(r30)
 /* 80497E20  80 83 00 04 */	lwz r4, 4(r3)
 /* 80497E24  80 7E 07 28 */	lwz r3, 0x728(r30)
@@ -38,11 +38,11 @@ lbl_80497DCC:
 /* 80497E2C  4B B7 5B A0 */	b entry__13mDoExt_bckAnmFP12J3DModelDataf
 /* 80497E30  80 7E 07 24 */	lwz r3, 0x724(r30)
 /* 80497E34  4B B7 5E 90 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80497E38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80497E3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80497E40  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80497E38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80497E3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80497E40  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80497E44  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80497E48  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80497E48  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80497E4C  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80497E50  38 60 00 01 */	li r3, 1
 lbl_80497E54:

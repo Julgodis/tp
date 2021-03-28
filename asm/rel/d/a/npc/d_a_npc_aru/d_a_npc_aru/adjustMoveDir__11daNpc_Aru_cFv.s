@@ -14,9 +14,9 @@ lbl_80953D58:
 /* 80953D88  90 01 00 8C */	stw r0, 0x8c(r1)
 /* 80953D8C  3B 41 00 90 */	addi r26, r1, 0x90
 /* 80953D90  90 01 00 A0 */	stw r0, 0xa0(r1)
-/* 80953D94  80 1E 01 2C */	lwz r0, 0x12c(r30)	/* effective address: 809577FC */
+/* 80953D94  80 1E 01 2C */	lwz r0, 0x12c(r30)
 /* 80953D98  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80953D9C  A0 1E 01 30 */	lhz r0, 0x130(r30)	/* effective address: 80957800 */
+/* 80953D9C  A0 1E 01 30 */	lhz r0, 0x130(r30)
 /* 80953DA0  B0 01 00 1C */	sth r0, 0x1c(r1)
 /* 80953DA4  C0 17 04 D0 */	lfs f0, 0x4d0(r23)
 /* 80953DA8  D0 01 00 5C */	stfs f0, 0x5c(r1)
@@ -25,15 +25,15 @@ lbl_80953D58:
 /* 80953DB4  C0 17 04 D8 */	lfs f0, 0x4d8(r23)
 /* 80953DB8  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 80953DBC  38 7E 00 00 */	addi r3, r30, 0
-/* 80953DC0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 809576E8 */
+/* 80953DC0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80953DC4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80953DC8  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 80953DCC  3B 00 00 00 */	li r24, 0
 /* 80953DD0  3A C0 00 00 */	li r22, 0
 /* 80953DD4  3A A0 00 00 */	li r21, 0
 /* 80953DD8  3A 80 00 00 */	li r20, 0
-/* 80953DDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80953DE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80953DDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80953DE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80953DE4  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80953DE8  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80953DEC  3B E3 9A 20 */	addi r31, r3, sincosTable___5JMath@l

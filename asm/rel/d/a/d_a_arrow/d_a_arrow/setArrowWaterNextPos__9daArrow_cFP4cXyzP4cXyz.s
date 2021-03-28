@@ -14,8 +14,8 @@ lbl_8049A370:
 /* 8049A3A0  38 7B 05 DC */	addi r3, r27, 0x5dc
 /* 8049A3A4  7F 66 DB 78 */	mr r6, r27
 /* 8049A3A8  4B BD D9 BC */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8049A3AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049A3B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049A3AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049A3B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049A3B4  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8049A3B8  7F C3 F3 78 */	mr r3, r30
 /* 8049A3BC  38 9B 05 DC */	addi r4, r27, 0x5dc

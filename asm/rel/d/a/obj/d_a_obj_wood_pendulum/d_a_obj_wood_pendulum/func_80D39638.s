@@ -62,7 +62,7 @@ lbl_80D39720:
 /* 80D39720  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80D39724  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D39728  38 84 9D 44 */	addi r4, r4, l_arcName@l
-/* 80D3972C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D39D44 */
+/* 80D3972C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D39730  4B 2F 37 8C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D39734  7C 7E 1B 78 */	mr r30, r3
 /* 80D39738  2C 1E 00 04 */	cmpwi r30, 4

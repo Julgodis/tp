@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JKRArchive {
+struct dSv_save_c {
 };
 
-struct dSv_save_c {
+struct JKRArchive {
 };
 
 struct dFile_info_c {
@@ -49,9 +49,6 @@ struct dMeter2Info_c {
 	/* 8021C250 */ void getString(u32, char*, JMSMesgEntry_c*);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -59,6 +56,9 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -173,24 +173,24 @@ SECTION_DATA static u8 data_803BB4A8[160] = {
 
 /* 803BB548-803BB558 0010+00 s=1 e=0 z=0  None .data      amariheartTex$3880                                           */
 SECTION_DATA static void* data_803BB548[4] = {
-	/* 0    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 1    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 2    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
-	/* 3    */ (void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
+	(void*)(((char*)&d_file_d_file_sel_info__stringBase0)+0x21),
 };
 
 /* 803BB558-803BB564 000C+00 s=1 e=0 z=0  None .data      @3953                                                        */
 SECTION_DATA static void* lit_3953[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__12dFile_info_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeWait__12dFile_info_cFv,
 };
 
 /* 803BB564-803BB570 000C+00 s=1 e=0 z=0  None .data      @3954                                                        */
 SECTION_DATA static void* lit_3954[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMove__12dFile_info_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeMove__12dFile_info_cFv,
 };
 
 /* 803BB570-803BB588 0018+00 s=1 e=0 z=0  None .data      fileWarningProc                                              */
@@ -201,17 +201,17 @@ SECTION_DATA static u8 fileWarningProc[24] = {
 
 /* 803BB588-803BB598 0010+00 s=3 e=0 z=0  None .data      __vt__16dDlst_FileInfo_c                                     */
 SECTION_DATA static void* __vt__16dDlst_FileInfo_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__16dDlst_FileInfo_cFv,
-	/* 3    */ (void*)__dt__16dDlst_FileInfo_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__16dDlst_FileInfo_cFv,
+	(void*)__dt__16dDlst_FileInfo_cFv,
 };
 
 /* 803BB598-803BB5B0 000C+0C s=2 e=0 z=0  None .data      __vt__12dFile_info_c                                         */
 SECTION_DATA static void* __vt__12dFile_info_c[3 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dFile_info_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dFile_info_cFv,
 	/* padding */
 	NULL,
 	NULL,

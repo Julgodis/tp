@@ -13,8 +13,8 @@ lbl_80A660D8:
 /* 80A66104  FF A0 28 90 */	fmr f29, f5
 /* 80A66108  FF C0 30 90 */	fmr f30, f6
 /* 80A6610C  FF E0 38 90 */	fmr f31, f7
-/* 80A66110  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A66114  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A66110  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A66114  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A66118  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80A6611C  3C 80 80 A7 */	lis r4, struct_80A68FDC+0x0@ha
 /* 80A66120  38 84 8F DC */	addi r4, r4, struct_80A68FDC+0x0@l

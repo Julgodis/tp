@@ -3,8 +3,8 @@ lbl_8057FA18:
 /* 8057FA1C  7C 08 02 A6 */	mflr r0
 /* 8057FA20  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8057FA24  7C 64 1B 78 */	mr r4, r3
-/* 8057FA28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057FA2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057FA28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057FA2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057FA30  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8057FA34  38 84 10 5C */	addi r4, r4, 0x105c
 /* 8057FA38  4B CE 51 70 */	b Set__4cCcSFP8cCcD_Obj

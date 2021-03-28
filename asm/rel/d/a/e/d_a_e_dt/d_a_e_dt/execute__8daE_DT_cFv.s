@@ -36,8 +36,8 @@ lbl_806B503C:
 /* 806B5050  88 1F 07 6F */	lbz r0, 0x76f(r31)
 /* 806B5054  28 00 00 00 */	cmplwi r0, 0
 /* 806B5058  40 82 00 18 */	bne lbl_806B5070
-/* 806B505C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B5060  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806B505C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B5060  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806B5064  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806B5068  38 80 00 1F */	li r4, 0x1f
 /* 806B506C  4B 9B AD 28 */	b StopQuake__12dVibration_cFi

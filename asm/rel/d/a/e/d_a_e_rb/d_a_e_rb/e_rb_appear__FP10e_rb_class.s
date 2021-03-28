@@ -105,7 +105,7 @@ lbl_80762938:
 /* 80762964  38 7E 0A 20 */	addi r3, r30, 0xa20
 /* 80762968  3C 80 80 76 */	lis r4, l_HIO@ha
 /* 8076296C  38 84 4F 90 */	addi r4, r4, l_HIO@l
-/* 80762970  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80764F9C */
+/* 80762970  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 80762974  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 80762978  FC 00 F8 1E */	fctiwz f0, f31
 /* 8076297C  D8 01 00 10 */	stfd f0, 0x10(r1)

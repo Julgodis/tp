@@ -84,8 +84,8 @@ lbl_8059A768:
 /* 8059A7A8  C0 1F 00 74 */	lfs f0, 0x74(r31)
 /* 8059A7AC  EC 01 00 2A */	fadds f0, f1, f0
 /* 8059A7B0  D0 1E 05 3C */	stfs f0, 0x53c(r30)
-/* 8059A7B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059A7B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8059A7B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059A7B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8059A7BC  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8059A7C0  3C 80 80 5A */	lis r4, struct_8059B360+0x0@ha
 /* 8059A7C4  38 84 B3 60 */	addi r4, r4, struct_8059B360+0x0@l

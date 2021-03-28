@@ -16,7 +16,7 @@ lbl_80C6449C:
 /* 80C644D4  7C 03 00 50 */	subf r0, r3, r0
 /* 80C644D8  7C 00 00 34 */	cntlzw r0, r0
 /* 80C644DC  7C 77 1B 78 */	mr r23, r3
-/* 80C644E0  C3 FA 00 68 */	lfs f31, 0x68(r26)	/* effective address: 80C668C8 */
+/* 80C644E0  C3 FA 00 68 */	lfs f31, 0x68(r26)
 /* 80C644E4  54 1B DE 3E */	rlwinm r27, r0, 0x1b, 0x18, 0x1f
 /* 80C644E8  1F 83 00 28 */	mulli r28, r3, 0x28
 /* 80C644EC  48 00 01 54 */	b lbl_80C64640

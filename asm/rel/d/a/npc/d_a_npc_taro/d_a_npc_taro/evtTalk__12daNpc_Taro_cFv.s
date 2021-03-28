@@ -6,11 +6,11 @@ lbl_805679F0:
 /* 80567A00  7C 7F 1B 78 */	mr r31, r3
 /* 80567A04  3C 80 80 57 */	lis r4, lit_5302@ha
 /* 80567A08  38 A4 2D 5C */	addi r5, r4, lit_5302@l
-/* 80567A0C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80572D5C */
-/* 80567A10  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80572D60 */
+/* 80567A0C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80567A10  80 05 00 04 */	lwz r0, 4(r5)
 /* 80567A14  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80567A18  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80567A1C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80572D64 */
+/* 80567A1C  80 05 00 08 */	lwz r0, 8(r5)
 /* 80567A20  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80567A24  38 81 00 14 */	addi r4, r1, 0x14
 /* 80567A28  48 00 0E 01 */	bl chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i
@@ -25,11 +25,11 @@ lbl_805679F0:
 lbl_80567A4C:
 /* 80567A4C  3C 60 80 57 */	lis r3, lit_5307@ha
 /* 80567A50  38 83 2D 68 */	addi r4, r3, lit_5307@l
-/* 80567A54  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80572D68 */
-/* 80567A58  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80572D6C */
+/* 80567A54  80 64 00 00 */	lwz r3, 0(r4)
+/* 80567A58  80 04 00 04 */	lwz r0, 4(r4)
 /* 80567A5C  90 61 00 08 */	stw r3, 8(r1)
 /* 80567A60  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80567A64  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80572D70 */
+/* 80567A64  80 04 00 08 */	lwz r0, 8(r4)
 /* 80567A68  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80567A6C  7F E3 FB 78 */	mr r3, r31
 /* 80567A70  38 81 00 08 */	addi r4, r1, 8

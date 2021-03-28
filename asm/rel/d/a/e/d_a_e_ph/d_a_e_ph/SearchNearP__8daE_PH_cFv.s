@@ -11,9 +11,9 @@ lbl_8073DBD4:
 /* 8073DBF8  7C 7D 1B 78 */	mr r29, r3
 /* 8073DBFC  3C 60 80 74 */	lis r3, lit_3767@ha
 /* 8073DC00  3B E3 1B F4 */	addi r31, r3, lit_3767@l
-/* 8073DC04  C3 DF 00 5C */	lfs f30, 0x5c(r31)	/* effective address: 80741C50 */
+/* 8073DC04  C3 DF 00 5C */	lfs f30, 0x5c(r31)
 /* 8073DC08  3B C0 00 00 */	li r30, 0
-/* 8073DC0C  C3 FF 00 00 */	lfs f31, 0(r31)	/* effective address: 80741BF4 */
+/* 8073DC0C  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 8073DC10  48 00 01 B0 */	b lbl_8073DDC0
 lbl_8073DC14:
 /* 8073DC14  7F C4 F3 78 */	mr r4, r30

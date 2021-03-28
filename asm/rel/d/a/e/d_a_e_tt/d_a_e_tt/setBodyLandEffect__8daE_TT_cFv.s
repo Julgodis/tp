@@ -7,7 +7,7 @@ lbl_807BE2A8:
 /* 807BE2BC  7C 7E 1B 78 */	mr r30, r3
 /* 807BE2C0  3C 60 80 7C */	lis r3, lit_1109@ha
 /* 807BE2C4  3B E3 23 A0 */	addi r31, r3, lit_1109@l
-/* 807BE2C8  88 1F 00 90 */	lbz r0, 0x90(r31)	/* effective address: 807C2430 */
+/* 807BE2C8  88 1F 00 90 */	lbz r0, 0x90(r31)
 /* 807BE2CC  7C 00 07 75 */	extsb. r0, r0
 /* 807BE2D0  40 82 00 34 */	bne lbl_807BE304
 /* 807BE2D4  3C 60 80 7C */	lis r3, lit_4297@ha
@@ -28,8 +28,8 @@ lbl_807BE304:
 /* 807BE30C  41 82 00 A8 */	beq lbl_807BE3B4
 /* 807BE310  3A C0 00 00 */	li r22, 0
 /* 807BE314  3B A0 00 00 */	li r29, 0
-/* 807BE318  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BE31C  3A E3 61 C0 */	addi r23, r3, struct_804061C0+0x0@l
+/* 807BE318  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BE31C  3A E3 61 C0 */	addi r23, r3, g_dComIfG_gameInfo@l
 /* 807BE320  3C 60 80 7C */	lis r3, data_807C21C8@ha
 /* 807BE324  3B 63 21 C8 */	addi r27, r3, data_807C21C8@l
 /* 807BE328  3B 80 00 01 */	li r28, 1
@@ -40,7 +40,7 @@ lbl_807BE338:
 /* 807BE338  93 01 00 08 */	stw r24, 8(r1)
 /* 807BE33C  93 21 00 0C */	stw r25, 0xc(r1)
 /* 807BE340  93 41 00 10 */	stw r26, 0x10(r1)
-/* 807BE344  80 77 5D 3C */	lwz r3, 0x5d3c(r23)	/* effective address: 8040BEFC */
+/* 807BE344  80 77 5D 3C */	lwz r3, 0x5d3c(r23)
 /* 807BE348  7C 9B EA 2E */	lhzx r4, r27, r29
 /* 807BE34C  38 BE 06 78 */	addi r5, r30, 0x678
 /* 807BE350  38 DE 04 D0 */	addi r6, r30, 0x4d0
@@ -75,9 +75,9 @@ lbl_807BE3B4:
 /* 807BE3BC  38 00 FF FF */	li r0, -1
 /* 807BE3C0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 807BE3C4  90 61 00 10 */	stw r3, 0x10(r1)
-/* 807BE3C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BE3CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807BE3D0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 807BE3C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BE3CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807BE3D0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 807BE3D4  38 80 00 E7 */	li r4, 0xe7
 /* 807BE3D8  38 BE 08 2C */	addi r5, r30, 0x82c
 /* 807BE3DC  38 DE 04 D0 */	addi r6, r30, 0x4d0

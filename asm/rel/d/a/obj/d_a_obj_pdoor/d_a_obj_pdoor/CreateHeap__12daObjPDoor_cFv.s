@@ -6,10 +6,10 @@ lbl_80CAA14C:
 /* 80CAA15C  7C 7F 1B 78 */	mr r31, r3
 /* 80CAA160  3C 60 80 CB */	lis r3, l_arcName@ha
 /* 80CAA164  38 63 AB 6C */	addi r3, r3, l_arcName@l
-/* 80CAA168  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CAAB6C */
+/* 80CAA168  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CAA16C  38 80 00 05 */	li r4, 5
-/* 80CAA170  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CAA174  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CAA170  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CAA174  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CAA178  3C A5 00 02 */	addis r5, r5, 2
 /* 80CAA17C  38 C0 00 80 */	li r6, 0x80
 /* 80CAA180  38 A5 C2 F8 */	addi r5, r5, -15624

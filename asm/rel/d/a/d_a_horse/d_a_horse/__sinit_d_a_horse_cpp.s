@@ -8,13 +8,13 @@ lbl_80844C0C:
 /* 80844C24  3B C3 5B B8 */	addi r30, r3, lit_1109@l
 /* 80844C28  3C 60 80 84 */	lis r3, lit_3894@ha
 /* 80844C2C  3B E3 54 AC */	addi r31, r3, lit_3894@l
-/* 80844C30  C0 1F 03 A4 */	lfs f0, 0x3a4(r31)	/* effective address: 80845850 */
-/* 80844C34  D0 1E 00 4C */	stfs f0, 0x4c(r30)	/* effective address: 80845C04 */
-/* 80844C38  C0 1F 03 A8 */	lfs f0, 0x3a8(r31)	/* effective address: 80845854 */
+/* 80844C30  C0 1F 03 A4 */	lfs f0, 0x3a4(r31)
+/* 80844C34  D0 1E 00 4C */	stfs f0, 0x4c(r30)
+/* 80844C38  C0 1F 03 A8 */	lfs f0, 0x3a8(r31)
 /* 80844C3C  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 80844C40  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80845C08 */
-/* 80844C44  C0 1F 01 50 */	lfs f0, 0x150(r31)	/* effective address: 808455FC */
-/* 80844C48  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80845C0C */
+/* 80844C40  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80844C44  C0 1F 01 50 */	lfs f0, 0x150(r31)
+/* 80844C48  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80844C4C  3C 80 80 84 */	lis r4, __dt__4cXyzFv@ha
 /* 80844C50  38 84 83 6C */	addi r4, r4, __dt__4cXyzFv@l
 /* 80844C54  38 BE 00 40 */	addi r5, r30, 0x40

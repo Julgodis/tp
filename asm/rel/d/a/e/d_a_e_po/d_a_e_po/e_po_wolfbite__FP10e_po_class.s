@@ -7,12 +7,12 @@ lbl_8074E694:
 /* 8074E6A8  7C 7E 1B 78 */	mr r30, r3
 /* 8074E6AC  3C 80 80 75 */	lis r4, lit_3917@ha
 /* 8074E6B0  3B E4 76 FC */	addi r31, r4, lit_3917@l
-/* 8074E6B4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8074E6B8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8074E6BC  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8074E6B4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8074E6B8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8074E6BC  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 8074E6C0  38 00 00 0A */	li r0, 0xa
 /* 8074E6C4  B0 03 07 54 */	sth r0, 0x754(r3)
-/* 8074E6C8  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80757700 */
+/* 8074E6C8  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 8074E6CC  D0 23 05 2C */	stfs f1, 0x52c(r3)
 /* 8074E6D0  80 03 05 B4 */	lwz r0, 0x5b4(r3)
 /* 8074E6D4  2C 00 00 01 */	cmpwi r0, 1

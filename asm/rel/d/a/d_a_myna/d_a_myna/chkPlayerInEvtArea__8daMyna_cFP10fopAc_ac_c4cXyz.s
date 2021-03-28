@@ -31,9 +31,9 @@ lbl_80949D54:
 /* 80949DC8  4B 6C 2F D4 */	b transM__14mDoMtx_stack_cFfff
 /* 80949DCC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80949DD0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80949DD4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80949DD8  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80949DDC  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80949DD4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80949DD8  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80949DDC  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80949DE0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80949DE4  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80949DE8  4B 9F CF 84 */	b PSMTXMultVec

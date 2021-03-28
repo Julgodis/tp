@@ -19,8 +19,8 @@ lbl_80D3F9F0:
 /* 80D3FA34  40 82 00 80 */	bne lbl_80D3FAB4
 /* 80D3FA38  88 1F 0E 30 */	lbz r0, 0xe30(r31)
 /* 80D3FA3C  54 00 10 3A */	slwi r0, r0, 2
-/* 80D3FA40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3FA44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D3FA40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3FA44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D3FA48  3C 63 00 02 */	addis r3, r3, 2
 /* 80D3FA4C  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D3FA50  38 84 03 98 */	addi r4, r4, l_arcName@l

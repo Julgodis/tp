@@ -15,10 +15,10 @@ lbl_807936B4:
 /* 807936E8  7C 7E 1B 78 */	mr r30, r3
 /* 807936EC  3C 80 80 7A */	lis r4, lit_3920@ha
 /* 807936F0  3B E4 85 E0 */	addi r31, r4, lit_3920@l
-/* 807936F4  C3 DF 00 04 */	lfs f30, 4(r31)	/* effective address: 807985E4 */
+/* 807936F4  C3 DF 00 04 */	lfs f30, 4(r31)
 /* 807936F8  FF A0 F0 90 */	fmr f29, f30
 /* 807936FC  A8 83 06 BC */	lha r4, 0x6bc(r3)
-/* 80793700  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 8079860C */
+/* 80793700  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 80793704  C0 03 09 80 */	lfs f0, 0x980(r3)
 /* 80793708  EC 21 00 2A */	fadds f1, f1, f0
 /* 8079370C  C0 03 06 F0 */	lfs f0, 0x6f0(r3)

@@ -10,10 +10,10 @@ lbl_80855058:
 /* 80855078  7C 9D 23 78 */	mr r29, r4
 /* 8085507C  3C 60 80 85 */	lis r3, lit_3796@ha
 /* 80855080  3B 63 59 8C */	addi r27, r3, lit_3796@l
-/* 80855084  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80855088  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8085508C  83 C3 5D 74 */	lwz r30, 0x5d74(r3)	/* effective address: 8040BF34 */
-/* 80855090  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80855084  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80855088  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8085508C  83 C3 5D 74 */	lwz r30, 0x5d74(r3)
+/* 80855090  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80855094  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 80855098  38 9E 00 D8 */	addi r4, r30, 0xd8
 /* 8085509C  4B AF 23 00 */	b PSVECSquareDistance
@@ -155,9 +155,9 @@ lbl_8085526C:
 /* 80855274  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 80855278  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_8085527C:
-/* 8085527C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80855280  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80855284  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8085527C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80855280  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80855284  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80855288  28 00 00 00 */	cmplwi r0, 0
 /* 8085528C  41 82 00 44 */	beq lbl_808552D0
 /* 80855290  FC 1F 08 40 */	fcmpo cr0, f31, f1

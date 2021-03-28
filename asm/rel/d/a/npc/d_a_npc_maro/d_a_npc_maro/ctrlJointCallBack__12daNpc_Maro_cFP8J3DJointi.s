@@ -7,7 +7,7 @@ lbl_8055BFC0:
 /* 8055BFD4  40 82 00 30 */	bne lbl_8055C004
 /* 8055BFD8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8055BFDC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8055BFE0  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8055BFE0  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8055BFE4  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8055BFE8  28 03 00 00 */	cmplwi r3, 0
 /* 8055BFEC  41 82 00 18 */	beq lbl_8055C004

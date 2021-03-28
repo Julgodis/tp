@@ -7,7 +7,7 @@ lbl_80AF3850:
 /* 80AF3864  40 82 00 24 */	bne lbl_80AF3888
 /* 80AF3868  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80AF386C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80AF3870  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80AF3870  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80AF3874  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80AF3878  28 03 00 00 */	cmplwi r3, 0
 /* 80AF387C  41 82 00 0C */	beq lbl_80AF3888

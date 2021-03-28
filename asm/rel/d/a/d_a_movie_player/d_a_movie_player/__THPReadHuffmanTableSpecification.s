@@ -8,11 +8,11 @@ lbl_80873574:
 /* 8087358C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80873590  3C 60 80 88 */	lis r3, lit_1109@ha
 /* 80873594  3B E3 95 A0 */	addi r31, r3, lit_1109@l
-/* 80873598  80 7F 06 08 */	lwz r3, 0x608(r31)	/* effective address: 80879BA8 */
-/* 8087359C  90 7F 05 C4 */	stw r3, 0x5c4(r31)	/* effective address: 80879B64 */
+/* 80873598  80 7F 06 08 */	lwz r3, 0x608(r31)
+/* 8087359C  90 7F 05 C4 */	stw r3, 0x5c4(r31)
 /* 808735A0  38 03 01 01 */	addi r0, r3, 0x101
-/* 808735A4  90 1F 05 C8 */	stw r0, 0x5c8(r31)	/* effective address: 80879B68 */
-/* 808735A8  80 9F 06 24 */	lwz r4, 0x624(r31)	/* effective address: 80879BC4 */
+/* 808735A4  90 1F 05 C8 */	stw r0, 0x5c8(r31)
+/* 808735A8  80 9F 06 24 */	lwz r4, 0x624(r31)
 /* 808735AC  80 A4 06 9C */	lwz r5, 0x69c(r4)
 /* 808735B0  88 65 00 00 */	lbz r3, 0(r5)
 /* 808735B4  88 05 00 01 */	lbz r0, 1(r5)
@@ -22,14 +22,14 @@ lbl_80873574:
 /* 808735C4  90 04 06 9C */	stw r0, 0x69c(r4)
 /* 808735C8  3B BD FF FE */	addi r29, r29, -2
 lbl_808735CC:
-/* 808735CC  80 9F 06 24 */	lwz r4, 0x624(r31)	/* effective address: 80879BC4 */
+/* 808735CC  80 9F 06 24 */	lwz r4, 0x624(r31)
 /* 808735D0  80 64 06 9C */	lwz r3, 0x69c(r4)
 /* 808735D4  38 03 00 01 */	addi r0, r3, 1
 /* 808735D8  90 04 06 9C */	stw r0, 0x69c(r4)
 /* 808735DC  88 83 00 00 */	lbz r4, 0(r3)
-/* 808735E0  80 7F 06 24 */	lwz r3, 0x624(r31)	/* effective address: 80879BC4 */
+/* 808735E0  80 7F 06 24 */	lwz r3, 0x624(r31)
 /* 808735E4  80 03 06 9C */	lwz r0, 0x69c(r3)
-/* 808735E8  90 1F 05 C0 */	stw r0, 0x5c0(r31)	/* effective address: 80879B60 */
+/* 808735E8  90 1F 05 C0 */	stw r0, 0x5c0(r31)
 /* 808735EC  54 83 0E FC */	rlwinm r3, r4, 1, 0x1b, 0x1e
 /* 808735F0  54 80 E7 3E */	rlwinm r0, r4, 0x1c, 0x1c, 0x1f
 /* 808735F4  7C 03 02 14 */	add r0, r3, r0

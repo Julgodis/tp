@@ -67,20 +67,20 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS {
@@ -111,9 +111,6 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -150,11 +147,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjH_Saku_Draw(daObjH_Saku_c*); // 2
-static void daObjH_Saku_Execute(daObjH_Saku_c*); // 2
-static bool daObjH_Saku_IsDelete(daObjH_Saku_c*); // 2
-static void daObjH_Saku_Delete(daObjH_Saku_c*); // 2
-static void daObjH_Saku_Create(fopAc_ac_c*); // 2
+void daObjH_Saku_Draw(daObjH_Saku_c*); // 2
+void daObjH_Saku_Execute(daObjH_Saku_c*); // 2
+bool daObjH_Saku_IsDelete(daObjH_Saku_c*); // 2
+void daObjH_Saku_Delete(daObjH_Saku_c*); // 2
+void daObjH_Saku_Create(fopAc_ac_c*); // 2
 
 extern "C" void BreakSet__13daObjH_Saku_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -162,11 +159,11 @@ extern "C" void SpeedSet__13daObjH_Saku_cFP4cXyzP4cXyzf(); // 1
 extern "C" void Action__13daObjH_Saku_cFv(); // 1
 extern "C" void initBaseMtx__13daObjH_Saku_cFv(); // 1
 extern "C" void setBaseMtx__13daObjH_Saku_cFv(); // 1
-extern "C" static void daObjH_Saku_Draw__FP13daObjH_Saku_c(); // 1
-extern "C" static void daObjH_Saku_Execute__FP13daObjH_Saku_c(); // 1
-extern "C" static bool daObjH_Saku_IsDelete__FP13daObjH_Saku_c(); // 1
-extern "C" static void daObjH_Saku_Delete__FP13daObjH_Saku_c(); // 1
-extern "C" static void daObjH_Saku_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjH_Saku_Draw__FP13daObjH_Saku_c(); // 1
+extern "C" void daObjH_Saku_Execute__FP13daObjH_Saku_c(); // 1
+extern "C" bool daObjH_Saku_IsDelete__FP13daObjH_Saku_c(); // 1
+extern "C" void daObjH_Saku_Delete__FP13daObjH_Saku_c(); // 1
+extern "C" void daObjH_Saku_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void CreateHeap__13daObjH_Saku_cFv(); // 1
 extern "C" void Create__13daObjH_Saku_cFv(); // 1
@@ -174,10 +171,10 @@ extern "C" void Execute__13daObjH_Saku_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjH_Saku_cFv(); // 1
 extern "C" void Delete__13daObjH_Saku_cFv(); // 1
 extern "C" void __sinit_d_a_obj_h_saku_cpp(); // 1
-extern "C" static void func_80C164A4(); // 1
-extern "C" static void func_80C164AC(); // 1
-extern "C" extern u8 const lit_3812[8];
+extern "C" void func_80C164A4(); // 1
+extern "C" void func_80C164AC(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjH_Saku_Method[8];
 extern "C" extern void* g_profile_Obj_H_Saku[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -263,9 +260,6 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -288,21 +282,12 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -390,6 +375,11 @@ SECTION_RODATA static u32 const lit_3809 = 0x3F000000;
 /* 80C164FC-80C16500 0004+00 s=1 e=0 z=0  None .rodata    @3810                                                        */
 SECTION_RODATA static u32 const lit_3810 = 0x3FC00000;
 
+/* 80C16500-80C16508 0008+00 s=1 e=0 z=0  None .rodata    @3812                                                        */
+SECTION_RODATA static u8 const lit_3812[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 80C15A4C-80C15E00 03B4+00 s=1 e=0 z=0  None .text      Action__13daObjH_Saku_cFv                                    */
 #pragma push
 #pragma optimization_level 0
@@ -413,11 +403,6 @@ asm void daObjH_Saku_c::initBaseMtx() {
 
 
 /* ############################################################################################## */
-/* 80C16500-80C16508 0008+00 s=0 e=0 z=0  None .rodata    @3812                                                        */
-SECTION_RODATA u8 const lit_3812[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80C16508-80C1650C 0004+00 s=1 e=0 z=0  None .rodata    @3856                                                        */
 SECTION_RODATA static u32 const lit_3856 = 0x41F00000;
 
@@ -432,39 +417,39 @@ asm void daObjH_Saku_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C15F4C-80C15F78 002C+00 s=1 e=0 z=0  None .text      daObjH_Saku_Draw__FP13daObjH_Saku_c                          */
+/* 80C15F4C-80C15F78 002C+00 s=0 e=0 z=0  None .text      daObjH_Saku_Draw__FP13daObjH_Saku_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjH_Saku_Draw(daObjH_Saku_c* param_0) {
+asm void daObjH_Saku_Draw(daObjH_Saku_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Draw__FP13daObjH_Saku_c.s"
 }
 #pragma pop
 
 
-/* 80C15F78-80C15F98 0020+00 s=1 e=0 z=0  None .text      daObjH_Saku_Execute__FP13daObjH_Saku_c                       */
+/* 80C15F78-80C15F98 0020+00 s=0 e=0 z=0  None .text      daObjH_Saku_Execute__FP13daObjH_Saku_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjH_Saku_Execute(daObjH_Saku_c* param_0) {
+asm void daObjH_Saku_Execute(daObjH_Saku_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Execute__FP13daObjH_Saku_c.s"
 }
 #pragma pop
 
 
-/* 80C15F98-80C15FA0 0008+00 s=1 e=0 z=0  None .text      daObjH_Saku_IsDelete__FP13daObjH_Saku_c                      */
-static bool daObjH_Saku_IsDelete(daObjH_Saku_c* param_0) {
+/* 80C15F98-80C15FA0 0008+00 s=0 e=0 z=0  None .text      daObjH_Saku_IsDelete__FP13daObjH_Saku_c                      */
+bool daObjH_Saku_IsDelete(daObjH_Saku_c* param_0) {
 	return true;
 }
 
 
-/* 80C15FA0-80C15FC4 0024+00 s=1 e=0 z=0  None .text      daObjH_Saku_Delete__FP13daObjH_Saku_c                        */
+/* 80C15FA0-80C15FC4 0024+00 s=0 e=0 z=0  None .text      daObjH_Saku_Delete__FP13daObjH_Saku_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjH_Saku_Delete(daObjH_Saku_c* param_0) {
+asm void daObjH_Saku_Delete(daObjH_Saku_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Delete__FP13daObjH_Saku_c.s"
 }
@@ -487,7 +472,7 @@ SECTION_RODATA static u32 const lit_3966 = 0x442F0000;
 /* 80C1651C-80C16520 0004+00 s=1 e=0 z=0  None .rodata    @3967                                                        */
 SECTION_RODATA static u32 const lit_3967 = 0x45DAC000;
 
-/* 80C16520-80C1653D 001D+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C16520-80C1653D 001D+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -497,75 +482,75 @@ SECTION_DEAD char const* const stringBase_80C16532 = "H_Saku.bmd";
 #pragma pop
 
 /* 80C16540-80C16544 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80C16544-80C16564 0020+00 s=1 e=0 z=0  None .data      l_daObjH_Saku_Method                                         */
-SECTION_DATA static void* l_daObjH_Saku_Method[8] = {
-	/* 0    */ (void*)daObjH_Saku_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjH_Saku_Delete__FP13daObjH_Saku_c,
-	/* 2    */ (void*)daObjH_Saku_Execute__FP13daObjH_Saku_c,
-	/* 3    */ (void*)daObjH_Saku_IsDelete__FP13daObjH_Saku_c,
-	/* 4    */ (void*)daObjH_Saku_Draw__FP13daObjH_Saku_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C16544-80C16564 0020+00 s=0 e=0 z=0  None .data      l_daObjH_Saku_Method                                         */
+SECTION_DATA void* l_daObjH_Saku_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C16564-80C16594 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_H_Saku                                         */
+/* 80C16564-80C16594 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_H_Saku                                         */
 SECTION_DATA void* g_profile_Obj_H_Saku[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x014C0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000850,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01D00000,
-	/* 9    */ (void*)&l_daObjH_Saku_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x014C0000,
+	(void*)NULL,
+	(void*)0x00000850,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01D00000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80C16594-80C165B8 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80C164AC,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80C164A4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C165B8-80C165E0 0028+00 s=1 e=0 z=0  None .data      __vt__13daObjH_Saku_c                                        */
 SECTION_DATA static void* __vt__13daObjH_Saku_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjH_Saku_cFv,
-	/* 3    */ (void*)Create__13daObjH_Saku_cFv,
-	/* 4    */ (void*)Execute__13daObjH_Saku_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjH_Saku_cFv,
-	/* 6    */ (void*)Delete__13daObjH_Saku_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C15FC4-80C16178 01B4+00 s=1 e=0 z=0  None .text      daObjH_Saku_Create__FP10fopAc_ac_c                           */
+/* 80C15FC4-80C16178 01B4+00 s=0 e=0 z=0  None .text      daObjH_Saku_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjH_Saku_Create(fopAc_ac_c* param_0) {
+asm void daObjH_Saku_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/daObjH_Saku_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C16178-80C161E8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C16178-80C161E8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,7 +561,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C161E8-80C1629C 00B4+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjH_Saku_cFv                                */
+/* 80C161E8-80C1629C 00B4+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjH_Saku_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -587,7 +572,7 @@ asm void daObjH_Saku_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C1629C-80C162F4 0058+00 s=1 e=0 z=0  None .text      Create__13daObjH_Saku_cFv                                    */
+/* 80C1629C-80C162F4 0058+00 s=0 e=0 z=0  None .text      Create__13daObjH_Saku_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -598,7 +583,7 @@ asm void daObjH_Saku_c::Create() {
 #pragma pop
 
 
-/* 80C162F4-80C16340 004C+00 s=1 e=0 z=0  None .text      Execute__13daObjH_Saku_cFPPA3_A4_f                           */
+/* 80C162F4-80C16340 004C+00 s=0 e=0 z=0  None .text      Execute__13daObjH_Saku_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -609,7 +594,7 @@ asm void daObjH_Saku_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C16340-80C1641C 00DC+00 s=1 e=0 z=0  None .text      Draw__13daObjH_Saku_cFv                                      */
+/* 80C16340-80C1641C 00DC+00 s=0 e=0 z=0  None .text      Draw__13daObjH_Saku_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -620,7 +605,7 @@ asm void daObjH_Saku_c::Draw() {
 #pragma pop
 
 
-/* 80C1641C-80C16450 0034+00 s=1 e=0 z=0  None .text      Delete__13daObjH_Saku_cFv                                    */
+/* 80C1641C-80C16450 0034+00 s=0 e=0 z=0  None .text      Delete__13daObjH_Saku_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -692,7 +677,7 @@ static u8 lit_3640[12];
 /* 80C1664C-80C16658 000C+00 s=1 e=0 z=0  None .bss       s_pos_r__28@unnamed@d_a_obj_h_saku_cpp@                      */
 static u8 data_80C1664C[12];
 
-/* 80C16450-80C164A4 0054+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_h_saku_cpp                                   */
+/* 80C16450-80C164A4 0054+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_h_saku_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -703,22 +688,22 @@ extern "C" asm void __sinit_d_a_obj_h_saku_cpp() {
 #pragma pop
 
 
-/* 80C164A4-80C164AC 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C164A4-80C164AC 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C164A4() {
+extern "C" asm void func_80C164A4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/func_80C164A4.s"
 }
 #pragma pop
 
 
-/* 80C164AC-80C164B4 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C164AC-80C164B4 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C164AC() {
+extern "C" asm void func_80C164AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_h_saku/d_a_obj_h_saku/func_80C164AC.s"
 }

@@ -9,7 +9,7 @@ lbl_80BD245C:
 /* 80BD2478  90 01 00 08 */	stw r0, 8(r1)
 /* 80BD247C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BD2480  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BD2484  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BD2484  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BD2488  38 81 00 08 */	addi r4, r1, 8
 /* 80BD248C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80BD2490  38 C0 00 00 */	li r6, 0

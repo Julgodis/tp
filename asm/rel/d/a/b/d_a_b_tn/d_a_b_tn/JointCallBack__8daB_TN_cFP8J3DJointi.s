@@ -7,7 +7,7 @@ lbl_8061ED10:
 /* 8061ED24  40 82 00 24 */	bne lbl_8061ED48
 /* 8061ED28  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8061ED2C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8061ED30  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8061ED30  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8061ED34  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8061ED38  28 03 00 00 */	cmplwi r3, 0
 /* 8061ED3C  41 82 00 0C */	beq lbl_8061ED48

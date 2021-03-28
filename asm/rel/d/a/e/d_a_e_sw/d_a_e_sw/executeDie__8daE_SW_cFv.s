@@ -90,9 +90,9 @@ lbl_807AACB4:
 /* 807AACC4  40 82 00 4C */	bne lbl_807AAD10
 /* 807AACC8  3C 60 80 7B */	lis r3, struct_807B0200+0x2@ha
 /* 807AACCC  38 83 02 02 */	addi r4, r3, struct_807B0200+0x2@l
-/* 807AACD0  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 807B0202 */
+/* 807AACD0  88 64 00 00 */	lbz r3, 0(r4)
 /* 807AACD4  38 03 00 01 */	addi r0, r3, 1
-/* 807AACD8  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 807B0202 */
+/* 807AACD8  98 04 00 00 */	stb r0, 0(r4)
 /* 807AACDC  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 807AACE0  28 00 00 0A */	cmplwi r0, 0xa
 /* 807AACE4  41 80 00 0C */	blt lbl_807AACF0

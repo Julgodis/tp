@@ -14,13 +14,13 @@ lbl_806B0114:
 /* 806B0144  4B C9 63 6C */	b PSMTXCopy
 /* 806B0148  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806B014C  38 83 D4 70 */	addi r4, r3, now__14mDoMtx_stack_c@l
-/* 806B0150  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 803DD47C */
+/* 806B0150  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 806B0154  3C 60 80 6B */	lis r3, m_tongue_pos__6E_DT_n@ha
 /* 806B0158  D4 03 63 40 */	stfsu f0, m_tongue_pos__6E_DT_n@l(r3)
-/* 806B015C  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 803DD48C */
-/* 806B0160  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 806B0004 */
-/* 806B0164  C0 04 00 2C */	lfs f0, 0x2c(r4)	/* effective address: 803DD49C */
-/* 806B0168  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 806B0008 */
+/* 806B015C  C0 04 00 1C */	lfs f0, 0x1c(r4)
+/* 806B0160  D0 03 00 04 */	stfs f0, 4(r3)
+/* 806B0164  C0 04 00 2C */	lfs f0, 0x2c(r4)
+/* 806B0168  D0 03 00 08 */	stfs f0, 8(r3)
 /* 806B016C  3C 60 80 6B */	lis r3, s_bomb_search__FPvPv@ha
 /* 806B0170  38 63 FF 8C */	addi r3, r3, s_bomb_search__FPvPv@l
 /* 806B0174  7F E4 FB 78 */	mr r4, r31

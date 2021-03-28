@@ -9,8 +9,8 @@ lbl_80AE45DC:
 /* 80AE45F8  3A 00 00 00 */	li r16, 0
 /* 80AE45FC  3A 20 00 00 */	li r17, 0
 /* 80AE4600  3A 40 00 00 */	li r18, 0
-/* 80AE4604  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE4608  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AE4604  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE4608  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AE460C  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80AE4610  3A 81 00 0C */	addi r20, r1, 0xc
 /* 80AE4614  3C 60 80 AE */	lis r3, mEvtBitLabels__11daNpc_Sha_c@ha
@@ -50,8 +50,8 @@ lbl_80AE4664:
 /* 80AE4690  48 00 02 28 */	b lbl_80AE48B8
 lbl_80AE4694:
 /* 80AE4694  3B 80 00 02 */	li r28, 2
-/* 80AE4698  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE469C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AE4698  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE469C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AE46A0  39 E3 0D D8 */	addi r15, r3, 0xdd8
 /* 80AE46A4  3C 60 80 AE */	lis r3, mTmpBitLabels__11daNpc_Sha_c@ha
 /* 80AE46A8  3A 23 71 28 */	addi r17, r3, mTmpBitLabels__11daNpc_Sha_c@l

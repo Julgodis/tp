@@ -11,10 +11,10 @@ lbl_807993F4:
 /* 80799418  7C 7D 1B 78 */	mr r29, r3
 /* 8079941C  3C 80 80 7A */	lis r4, lit_3790@ha
 /* 80799420  3B E4 D5 B0 */	addi r31, r4, lit_3790@l
-/* 80799424  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 8079D5B4 */
-/* 80799428  C3 DF 00 08 */	lfs f30, 8(r31)	/* effective address: 8079D5B8 */
+/* 80799424  C3 FF 00 04 */	lfs f31, 4(r31)
+/* 80799428  C3 DF 00 08 */	lfs f30, 8(r31)
 /* 8079942C  3B C0 03 E8 */	li r30, 0x3e8
-/* 80799430  C0 3F 00 38 */	lfs f1, 0x38(r31)	/* effective address: 8079D5E8 */
+/* 80799430  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 80799434  4B FF FF 61 */	bl pl_check__FP11e_sm2_classf
 /* 80799438  2C 03 00 00 */	cmpwi r3, 0
 /* 8079943C  41 82 00 18 */	beq lbl_80799454
@@ -191,7 +191,7 @@ lbl_8079968C:
 /* 807996B0  4B AD 63 8C */	b cLib_addCalc2__FPffff
 /* 807996B4  3C 60 80 7A */	lis r3, l_HIO@ha
 /* 807996B8  38 63 DB D4 */	addi r3, r3, l_HIO@l
-/* 807996BC  88 03 00 06 */	lbz r0, 6(r3)	/* effective address: 8079DBDA */
+/* 807996BC  88 03 00 06 */	lbz r0, 6(r3)
 /* 807996C0  28 00 00 00 */	cmplwi r0, 0
 /* 807996C4  40 82 00 98 */	bne lbl_8079975C
 /* 807996C8  A8 1D 06 80 */	lha r0, 0x680(r29)

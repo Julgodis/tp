@@ -11,34 +11,37 @@
 // Types:
 // 
 
-struct J2DScrnBlockHeader {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
 struct J2DGrafContext {
 };
 
 struct J2DAnmColor {
 };
 
-struct JKRArchive {
+struct J2DAnmTransform {
 };
 
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmBase {
+struct J2DAnmTextureSRTKey {
 };
 
 struct ResTIMG {
 };
 
+struct ResFONT {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTexPattern {
+};
+
 struct J2DAnmVisibilityFull {
+};
+
+struct J2DScrnBlockHeader {
 };
 
 struct JSUStreamSeekFrom {
@@ -49,16 +52,10 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
+struct JKRArchive {
 };
 
-struct J2DAnmTexPattern {
-};
-
-struct ResFONT {
-};
-
-struct _GXCullMode {
+struct J2DAnmVtxColor {
 };
 
 struct JGeometry {
@@ -68,6 +65,9 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct _GXCullMode {
 };
 
 struct J2DPane {
@@ -362,45 +362,45 @@ extern "C" extern void* __vt__13J2DOrthoGraph[10];
 /* ############################################################################################## */
 /* 803CD068-803CD108 009C+04 s=2 e=0 z=0  None .data      __vt__9J2DScreen                                             */
 SECTION_DATA static void* __vt__9J2DScreen[39 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9J2DScreenFv,
-	/* 3    */ (void*)getTypeID__9J2DScreenCFv,
-	/* 4    */ (void*)move__7J2DPaneFff,
-	/* 5    */ (void*)add__7J2DPaneFff,
-	/* 6    */ (void*)resize__7J2DPaneFff,
-	/* 7    */ (void*)setCullBack__7J2DPaneFb,
-	/* 8    */ (void*)setCullBack__7J2DPaneF11_GXCullMode,
-	/* 9    */ (void*)setAlpha__7J2DPaneFUc,
-	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
-	/* 11   */ (void*)calcMtx__9J2DScreenFv,
-	/* 12   */ (void*)update__7J2DPaneFv,
-	/* 13   */ (void*)drawSelf__7J2DPaneFff,
-	/* 14   */ (void*)drawSelf__9J2DScreenFffPA3_A4_f,
-	/* 15   */ (void*)search__9J2DScreenFUx,
-	/* 16   */ (void*)searchUserInfo__9J2DScreenFUx,
-	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
-	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
-	/* 19   */ (void*)isUsed__9J2DScreenFPC7ResTIMG,
-	/* 20   */ (void*)isUsed__9J2DScreenFPC7ResFONT,
-	/* 21   */ (void*)clearAnmTransform__9J2DScreenFv,
-	/* 22   */ (void*)rewriteAlpha__7J2DPaneFv,
-	/* 23   */ (void*)setAnimation__9J2DScreenFP10J2DAnmBase,
-	/* 24   */ (void*)setAnimation__9J2DScreenFP15J2DAnmTransform,
-	/* 25   */ (void*)setAnimation__9J2DScreenFP11J2DAnmColor,
-	/* 26   */ (void*)setAnimation__9J2DScreenFP16J2DAnmTexPattern,
-	/* 27   */ (void*)setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey,
-	/* 28   */ (void*)setAnimation__9J2DScreenFP15J2DAnmTevRegKey,
-	/* 29   */ (void*)setAnimation__9J2DScreenFP20J2DAnmVisibilityFull,
-	/* 30   */ (void*)setAnimation__9J2DScreenFP14J2DAnmVtxColor,
-	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 33   */ (void*)setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull,
-	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 35   */ (void*)setAnimationVC__9J2DScreenFP14J2DAnmVtxColor,
-	/* 36   */ (void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
-	/* 37   */ (void*)createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl,
-	/* 38   */ (void*)createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9J2DScreenFv,
+	(void*)getTypeID__9J2DScreenCFv,
+	(void*)move__7J2DPaneFff,
+	(void*)add__7J2DPaneFff,
+	(void*)resize__7J2DPaneFff,
+	(void*)setCullBack__7J2DPaneFb,
+	(void*)setCullBack__7J2DPaneF11_GXCullMode,
+	(void*)setAlpha__7J2DPaneFUc,
+	(void*)setConnectParent__7J2DPaneFb,
+	(void*)calcMtx__9J2DScreenFv,
+	(void*)update__7J2DPaneFv,
+	(void*)drawSelf__7J2DPaneFff,
+	(void*)drawSelf__9J2DScreenFffPA3_A4_f,
+	(void*)search__9J2DScreenFUx,
+	(void*)searchUserInfo__9J2DScreenFUx,
+	(void*)makeMatrix__7J2DPaneFff,
+	(void*)makeMatrix__7J2DPaneFffff,
+	(void*)isUsed__9J2DScreenFPC7ResTIMG,
+	(void*)isUsed__9J2DScreenFPC7ResFONT,
+	(void*)clearAnmTransform__9J2DScreenFv,
+	(void*)rewriteAlpha__7J2DPaneFv,
+	(void*)setAnimation__9J2DScreenFP10J2DAnmBase,
+	(void*)setAnimation__9J2DScreenFP15J2DAnmTransform,
+	(void*)setAnimation__9J2DScreenFP11J2DAnmColor,
+	(void*)setAnimation__9J2DScreenFP16J2DAnmTexPattern,
+	(void*)setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey,
+	(void*)setAnimation__9J2DScreenFP15J2DAnmTevRegKey,
+	(void*)setAnimation__9J2DScreenFP20J2DAnmVisibilityFull,
+	(void*)setAnimation__9J2DScreenFP14J2DAnmVtxColor,
+	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull,
+	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)setAnimationVC__9J2DScreenFP14J2DAnmVtxColor,
+	(void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
+	(void*)createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl,
+	(void*)createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive,
 	/* padding */
 	NULL,
 };

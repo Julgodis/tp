@@ -99,8 +99,8 @@ lbl_80CDA2A0:
 lbl_80CDA2E0:
 /* 80CDA2E0  38 00 00 20 */	li r0, 0x20
 /* 80CDA2E4  98 1F 09 2A */	stb r0, 0x92a(r31)
-/* 80CDA2E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDA2EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDA2E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDA2EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDA2F0  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80CDA2F4  3C 80 80 CE */	lis r4, stringBase0@ha
 /* 80CDA2F8  38 84 B8 90 */	addi r4, r4, stringBase0@l
@@ -109,21 +109,21 @@ lbl_80CDA2E0:
 /* 80CDA304  40 82 00 58 */	bne lbl_80CDA35C
 /* 80CDA308  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDA30C  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80CDA310  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDA314  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDA310  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDA314  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDA318  3B C3 09 58 */	addi r30, r3, 0x958
 /* 80CDA31C  7F C3 F3 78 */	mr r3, r30
 /* 80CDA320  4B 35 A4 C8 */	b isTbox__12dSv_memBit_cCFi
 /* 80CDA324  2C 03 00 00 */	cmpwi r3, 0
 /* 80CDA328  41 82 00 34 */	beq lbl_80CDA35C
-/* 80CDA32C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDA330  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CDA334  A8 64 5D C8 */	lha r3, 0x5dc8(r4)	/* effective address: 8040BF88 */
-/* 80CDA338  88 04 09 74 */	lbz r0, 0x974(r4)	/* effective address: 80406B34 */
+/* 80CDA32C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDA330  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CDA334  A8 64 5D C8 */	lha r3, 0x5dc8(r4)
+/* 80CDA338  88 04 09 74 */	lbz r0, 0x974(r4)
 /* 80CDA33C  7C 00 00 D0 */	neg r0, r0
 /* 80CDA340  7C 00 07 34 */	extsh r0, r0
 /* 80CDA344  7C 03 02 14 */	add r0, r3, r0
-/* 80CDA348  B0 04 5D C8 */	sth r0, 0x5dc8(r4)	/* effective address: 8040BF88 */
+/* 80CDA348  B0 04 5D C8 */	sth r0, 0x5dc8(r4)
 /* 80CDA34C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDA350  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CDA354  7F C3 F3 78 */	mr r3, r30
@@ -131,8 +131,8 @@ lbl_80CDA2E0:
 lbl_80CDA35C:
 /* 80CDA35C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDA360  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80CDA364  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDA368  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDA364  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDA368  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDA36C  38 63 09 58 */	addi r3, r3, 0x958
 /* 80CDA370  4B 35 A4 78 */	b isTbox__12dSv_memBit_cCFi
 /* 80CDA374  2C 03 00 00 */	cmpwi r3, 0

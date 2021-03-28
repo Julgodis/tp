@@ -16,7 +16,7 @@ lbl_80C18D68:
 lbl_80C18DA0:
 /* 80C18DA0  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C18DA4  38 84 94 C8 */	addi r4, r4, l_arcName@l
-/* 80C18DA8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C194C8 */
+/* 80C18DA8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C18DAC  4B 41 42 5C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C18DB0  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80C18DB4  3C 80 80 C2 */	lis r4, __dt__5csXyzFv@ha

@@ -4,8 +4,8 @@ lbl_80467A80:
 /* 80467A88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80467A8C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80467A90  7C 7F 1B 78 */	mr r31, r3
-/* 80467A94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80467A98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80467A94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80467A98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80467A9C  88 9F 05 BA */	lbz r4, 0x5ba(r31)
 /* 80467AA0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80467AA4  7C 05 07 74 */	extsb r5, r0

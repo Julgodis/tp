@@ -9,9 +9,9 @@ lbl_80A6A420:
 /* 80A6A43C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80A6A440  4B 8F 7D 98 */	b _savegpr_28
 /* 80A6A444  7C 7F 1B 78 */	mr r31, r3
-/* 80A6A448  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A6A44C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A6A450  83 C3 5D 74 */	lwz r30, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 80A6A448  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A6A44C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A6A450  83 C3 5D 74 */	lwz r30, 0x5d74(r3)
 /* 80A6A454  3B BF 05 BC */	addi r29, r31, 0x5bc
 /* 80A6A458  3B 80 00 00 */	li r28, 0
 /* 80A6A45C  3C 60 80 A7 */	lis r3, lit_3862@ha

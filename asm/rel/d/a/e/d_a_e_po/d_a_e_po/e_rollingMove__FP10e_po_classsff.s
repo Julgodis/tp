@@ -13,12 +13,12 @@ lbl_807501B0:
 /* 807501DC  FF E0 10 90 */	fmr f31, f2
 /* 807501E0  3C 60 80 75 */	lis r3, lit_3917@ha
 /* 807501E4  3B E3 76 FC */	addi r31, r3, lit_3917@l
-/* 807501E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807501EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807501F0  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807501E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807501EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807501F0  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 807501F4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807501F8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807501FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807501FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80750200  4B 8B C1 DC */	b mDoMtx_YrotS__FPA4_fs
 /* 80750204  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 80750208  D0 01 00 20 */	stfs f0, 0x20(r1)

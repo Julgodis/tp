@@ -85,7 +85,7 @@ lbl_80C817C4:
 /* 80C817DC  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80C817E0  3C 80 80 C8 */	lis r4, l_arcName@ha
 /* 80C817E4  38 84 1D 24 */	addi r4, r4, l_arcName@l
-/* 80C817E8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C81D24 */
+/* 80C817E8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C817EC  4B 3A B8 1C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C817F0  38 60 00 01 */	li r3, 1
 /* 80C817F4  83 E1 00 0C */	lwz r31, 0xc(r1)

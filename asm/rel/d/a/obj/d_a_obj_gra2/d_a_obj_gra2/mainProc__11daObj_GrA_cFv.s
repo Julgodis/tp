@@ -9,11 +9,11 @@ lbl_80C01D7C:
 /* 80C01D98  7C 7E 1B 78 */	mr r30, r3
 /* 80C01D9C  3C 80 80 C1 */	lis r4, m__17daObj_GrA_Param_c@ha
 /* 80C01DA0  3B E4 FA 7C */	addi r31, r4, m__17daObj_GrA_Param_c@l
-/* 80C01DA4  C0 3F 01 3C */	lfs f1, 0x13c(r31)	/* effective address: 80C0FBB8 */
-/* 80C01DA8  C0 5F 01 40 */	lfs f2, 0x140(r31)	/* effective address: 80C0FBBC */
+/* 80C01DA4  C0 3F 01 3C */	lfs f1, 0x13c(r31)
+/* 80C01DA8  C0 5F 01 40 */	lfs f2, 0x140(r31)
 /* 80C01DAC  FC 60 08 90 */	fmr f3, f1
-/* 80C01DB0  C0 9F 01 44 */	lfs f4, 0x144(r31)	/* effective address: 80C0FBC0 */
-/* 80C01DB4  C0 BF 01 48 */	lfs f5, 0x148(r31)	/* effective address: 80C0FBC4 */
+/* 80C01DB0  C0 9F 01 44 */	lfs f4, 0x144(r31)
+/* 80C01DB4  C0 BF 01 48 */	lfs f5, 0x148(r31)
 /* 80C01DB8  FC C0 20 90 */	fmr f6, f4
 /* 80C01DBC  4B 41 87 8C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C01DC0  7F C3 F3 78 */	mr r3, r30

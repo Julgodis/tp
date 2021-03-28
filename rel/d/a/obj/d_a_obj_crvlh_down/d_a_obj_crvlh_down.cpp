@@ -80,10 +80,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -109,9 +109,6 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -179,32 +176,33 @@ struct daObjCRVLH_UP_c {
 // Forward References:
 // 
 
-static void daObjCRVLH_DW_Create(fopAc_ac_c*); // 2
-static void daObjCRVLH_DW_Delete(daObjCRVLH_DW_c*); // 2
-static void daObjCRVLH_DW_Draw(daObjCRVLH_DW_c*); // 2
+void daObjCRVLH_DW_Create(fopAc_ac_c*); // 2
+void daObjCRVLH_DW_Delete(daObjCRVLH_DW_c*); // 2
+void daObjCRVLH_DW_Draw(daObjCRVLH_DW_c*); // 2
 static void daObjCRVLH_DW_Execute(daObjCRVLH_DW_c*); // 2
-static bool daObjCRVLH_DW_IsDelete(daObjCRVLH_DW_c*); // 2
+bool daObjCRVLH_DW_IsDelete(daObjCRVLH_DW_c*); // 2
 
 extern "C" void initCcCylinder__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void SetCcSyl__15daObjCRVLH_DW_cFv(); // 1
-extern "C" static void daObjCRVLH_DW_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c(); // 1
+extern "C" void daObjCRVLH_DW_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c(); // 1
 extern "C" void BgRelease__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void Break__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void Obj_Hit__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void setBaseMtx__15daObjCRVLH_DW_cFv(); // 1
-extern "C" static void daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c(); // 1
+extern "C" void daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c(); // 1
 extern "C" static void daObjCRVLH_DW_Execute__FP15daObjCRVLH_DW_c(); // 1
 extern "C" void CreateHeap__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void create__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static bool daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c(); // 1
+extern "C" bool daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c(); // 1
 extern "C" void Create__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void Execute__15daObjCRVLH_DW_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjCRVLH_DW_cFv(); // 1
 extern "C" void Delete__15daObjCRVLH_DW_cFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjCRVLH_DW_Method[8];
 extern "C" extern void* g_profile_Obj_CRVLH_DW[12];
 
 // 
@@ -247,9 +245,6 @@ extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -274,23 +269,15 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf(); // 1
@@ -339,22 +326,22 @@ asm void daObjCRVLH_DW_c::SetCcSyl() {
 #pragma pop
 
 
-/* 80BD4224-80BD4244 0020+00 s=1 e=0 z=0  None .text      daObjCRVLH_DW_Create__FP10fopAc_ac_c                         */
+/* 80BD4224-80BD4244 0020+00 s=0 e=0 z=0  None .text      daObjCRVLH_DW_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVLH_DW_Create(fopAc_ac_c* param_0) {
+asm void daObjCRVLH_DW_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/daObjCRVLH_DW_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BD4244-80BD4268 0024+00 s=1 e=0 z=0  None .text      daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c                    */
+/* 80BD4244-80BD4268 0024+00 s=0 e=0 z=0  None .text      daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVLH_DW_Delete(daObjCRVLH_DW_c* param_0) {
+asm void daObjCRVLH_DW_Delete(daObjCRVLH_DW_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c.s"
 }
@@ -406,7 +393,7 @@ SECTION_RODATA static u32 const lit_4043 = 0x41A00000;
 /* 80BD4D84-80BD4D88 0004+00 s=1 e=0 z=0  None .rodata    @4044                                                        */
 SECTION_RODATA static u32 const lit_4044 = 0x453B8000;
 
-/* 80BD4D88-80BD4DC2 003A+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BD4D88-80BD4DC2 003A+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -460,18 +447,18 @@ asm void daObjCRVLH_DW_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BD46A0-80BD46CC 002C+00 s=1 e=0 z=0  None .text      daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c                      */
+/* 80BD46A0-80BD46CC 002C+00 s=0 e=0 z=0  None .text      daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVLH_DW_Draw(daObjCRVLH_DW_c* param_0) {
+asm void daObjCRVLH_DW_Draw(daObjCRVLH_DW_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvlh_down/d_a_obj_crvlh_down/daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c.s"
 }
 #pragma pop
 
 
-/* 80BD46CC-80BD46EC 0020+00 s=2 e=0 z=0  None .text      daObjCRVLH_DW_Execute__FP15daObjCRVLH_DW_c                   */
+/* 80BD46CC-80BD46EC 0020+00 s=1 e=0 z=0  None .text      daObjCRVLH_DW_Execute__FP15daObjCRVLH_DW_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,9 +471,9 @@ asm static void daObjCRVLH_DW_Execute(daObjCRVLH_DW_c* param_0) {
 
 /* ############################################################################################## */
 /* 80BD4DC4-80BD4DC8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80BD46EC-80BD4764 0078+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjCRVLH_DW_cFv                              */
+/* 80BD46EC-80BD4764 0078+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjCRVLH_DW_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -498,60 +485,60 @@ asm void daObjCRVLH_DW_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 80BD4DC8-80BD4DE8 0020+00 s=1 e=0 z=0  None .data      l_daObjCRVLH_DW_Method                                       */
-SECTION_DATA static void* l_daObjCRVLH_DW_Method[8] = {
-	/* 0    */ (void*)daObjCRVLH_DW_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjCRVLH_DW_Delete__FP15daObjCRVLH_DW_c,
-	/* 2    */ (void*)daObjCRVLH_DW_Execute__FP15daObjCRVLH_DW_c,
-	/* 3    */ (void*)daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c,
-	/* 4    */ (void*)daObjCRVLH_DW_Draw__FP15daObjCRVLH_DW_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BD4DC8-80BD4DE8 0020+00 s=0 e=0 z=0  None .data      l_daObjCRVLH_DW_Method                                       */
+SECTION_DATA void* l_daObjCRVLH_DW_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BD4DE8-80BD4E18 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_CRVLH_DW                                       */
+/* 80BD4DE8-80BD4E18 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_CRVLH_DW                                       */
 SECTION_DATA void* g_profile_Obj_CRVLH_DW[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00740000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000074C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01D70000,
-	/* 9    */ (void*)&l_daObjCRVLH_DW_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00740000,
+	(void*)NULL,
+	(void*)0x0000074C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01D70000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80BD4E18-80BD4E24 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD4E24-80BD4E30 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD4E30-80BD4E58 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjCRVLH_DW_c                                      */
 SECTION_DATA static void* __vt__15daObjCRVLH_DW_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjCRVLH_DW_cFv,
-	/* 3    */ (void*)Create__15daObjCRVLH_DW_cFv,
-	/* 4    */ (void*)Execute__15daObjCRVLH_DW_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjCRVLH_DW_cFv,
-	/* 6    */ (void*)Delete__15daObjCRVLH_DW_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD4764-80BD49EC 0288+00 s=1 e=0 z=0  None .text      create__15daObjCRVLH_DW_cFv                                  */
@@ -565,7 +552,7 @@ asm void daObjCRVLH_DW_c::create() {
 #pragma pop
 
 
-/* 80BD49EC-80BD4A34 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BD49EC-80BD4A34 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -576,7 +563,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BD4A34-80BD4A7C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BD4A34-80BD4A7C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -587,13 +574,13 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BD4A7C-80BD4A84 0008+00 s=1 e=0 z=0  None .text      daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c                  */
-static bool daObjCRVLH_DW_IsDelete(daObjCRVLH_DW_c* param_0) {
+/* 80BD4A7C-80BD4A84 0008+00 s=0 e=0 z=0  None .text      daObjCRVLH_DW_IsDelete__FP15daObjCRVLH_DW_c                  */
+bool daObjCRVLH_DW_IsDelete(daObjCRVLH_DW_c* param_0) {
 	return true;
 }
 
 
-/* 80BD4A84-80BD4AC8 0044+00 s=1 e=0 z=0  None .text      Create__15daObjCRVLH_DW_cFv                                  */
+/* 80BD4A84-80BD4AC8 0044+00 s=0 e=0 z=0  None .text      Create__15daObjCRVLH_DW_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -604,7 +591,7 @@ asm void daObjCRVLH_DW_c::Create() {
 #pragma pop
 
 
-/* 80BD4AC8-80BD4C44 017C+00 s=1 e=0 z=0  None .text      Execute__15daObjCRVLH_DW_cFPPA3_A4_f                         */
+/* 80BD4AC8-80BD4C44 017C+00 s=0 e=0 z=0  None .text      Execute__15daObjCRVLH_DW_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -615,7 +602,7 @@ asm void daObjCRVLH_DW_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BD4C44-80BD4CC8 0084+00 s=1 e=0 z=0  None .text      Draw__15daObjCRVLH_DW_cFv                                    */
+/* 80BD4C44-80BD4CC8 0084+00 s=0 e=0 z=0  None .text      Draw__15daObjCRVLH_DW_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -626,7 +613,7 @@ asm void daObjCRVLH_DW_c::Draw() {
 #pragma pop
 
 
-/* 80BD4CC8-80BD4CFC 0034+00 s=1 e=0 z=0  None .text      Delete__15daObjCRVLH_DW_cFv                                  */
+/* 80BD4CC8-80BD4CFC 0034+00 s=0 e=0 z=0  None .text      Delete__15daObjCRVLH_DW_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

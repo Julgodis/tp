@@ -7,8 +7,8 @@ lbl_80B7E668:
 /* 80B7E67C  7C 7C 1B 78 */	mr r28, r3
 /* 80B7E680  7C 9D 23 78 */	mr r29, r4
 /* 80B7E684  7C BE 2B 78 */	mr r30, r5
-/* 80B7E688  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B7E68C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80B7E688  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B7E68C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80B7E690  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80B7E694  4B 4C 9D 54 */	b getRunEventName__16dEvent_manager_cFv
 /* 80B7E698  57 A0 10 3A */	slwi r0, r29, 2

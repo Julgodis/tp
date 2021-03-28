@@ -200,7 +200,7 @@ lbl_804FC7C0:
 /* 804FC7D4  38 7E 06 94 */	addi r3, r30, 0x694
 /* 804FC7D8  3C 80 80 50 */	lis r4, l_HIO@ha
 /* 804FC7DC  38 84 0E 70 */	addi r4, r4, l_HIO@l
-/* 804FC7E0  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80500E7C */
+/* 804FC7E0  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 804FC7E4  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 804FC7E8  C0 7F 00 60 */	lfs f3, 0x60(r31)
 /* 804FC7EC  4B D7 32 50 */	b cLib_addCalc2__FPffff

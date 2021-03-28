@@ -22,8 +22,8 @@ lbl_808472C0:
 /* 80847310  3B A3 8E 3C */	addi r29, r3, l_arcName@l
 /* 80847314  38 7D 00 00 */	addi r3, r29, 0
 /* 80847318  54 84 04 3E */	clrlwi r4, r4, 0x10
-/* 8084731C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80847320  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8084731C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80847320  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80847324  3C A5 00 02 */	addis r5, r5, 2
 /* 80847328  38 C0 00 80 */	li r6, 0x80
 /* 8084732C  38 A5 C2 F8 */	addi r5, r5, -15624

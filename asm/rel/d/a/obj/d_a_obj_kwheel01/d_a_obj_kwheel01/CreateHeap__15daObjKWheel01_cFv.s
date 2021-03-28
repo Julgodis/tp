@@ -7,14 +7,14 @@ lbl_80C4EDCC:
 /* 80C4EDE0  7C 7C 1B 78 */	mr r28, r3
 /* 80C4EDE4  3C 60 80 C5 */	lis r3, l_arcName@ha
 /* 80C4EDE8  38 63 F6 F8 */	addi r3, r3, l_arcName@l
-/* 80C4EDEC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C4F6F8 */
+/* 80C4EDEC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C4EDF0  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 80C4EDF4  54 00 3F 7A */	rlwinm r0, r0, 7, 0x1d, 0x1d
 /* 80C4EDF8  3C 80 80 C5 */	lis r4, l_bmdidx@ha
 /* 80C4EDFC  38 84 F6 C4 */	addi r4, r4, l_bmdidx@l
 /* 80C4EE00  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C4EE04  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C4EE08  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C4EE04  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C4EE08  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C4EE0C  3F C5 00 02 */	addis r30, r5, 2
 /* 80C4EE10  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80C4EE14  7F C5 F3 78 */	mr r5, r30
@@ -65,7 +65,7 @@ lbl_80C4EE9C:
 lbl_80C4EEB8:
 /* 80C4EEB8  3C 60 80 C5 */	lis r3, l_arcName@ha
 /* 80C4EEBC  38 63 F6 F8 */	addi r3, r3, l_arcName@l
-/* 80C4EEC0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C4F6F8 */
+/* 80C4EEC0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C4EEC4  80 9F 00 04 */	lwz r4, 4(r31)
 /* 80C4EEC8  7F C5 F3 78 */	mr r5, r30
 /* 80C4EECC  38 C0 00 80 */	li r6, 0x80

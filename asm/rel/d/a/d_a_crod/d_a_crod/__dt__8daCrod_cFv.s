@@ -10,9 +10,9 @@ lbl_804A3304:
 /* 804A3324  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 804A3328  28 00 00 06 */	cmplwi r0, 6
 /* 804A332C  40 82 00 20 */	bne lbl_804A334C
-/* 804A3330  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A3334  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A3338  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804A3330  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A3334  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A3338  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 804A333C  28 03 00 00 */	cmplwi r3, 0
 /* 804A3340  41 82 00 14 */	beq lbl_804A3354
 /* 804A3344  90 63 17 48 */	stw r3, 0x1748(r3)

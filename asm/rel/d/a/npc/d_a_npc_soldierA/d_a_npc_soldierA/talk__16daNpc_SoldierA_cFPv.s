@@ -39,9 +39,9 @@ lbl_80AF1934:
 /* 80AF1938  38 80 00 03 */	li r4, 3
 /* 80AF193C  4B FF FB 4D */	bl setLookMode__16daNpc_SoldierA_cFi
 /* 80AF1940  38 7D 0C 78 */	addi r3, r29, 0xc78
-/* 80AF1944  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AF1948  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 80AF194C  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80AF1944  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AF1948  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 80AF194C  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 80AF1950  4B 65 ED 6C */	b entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c
 /* 80AF1954  7F A3 EB 78 */	mr r3, r29
 /* 80AF1958  80 9C 5D AC */	lwz r4, 0x5dac(r28)
@@ -94,8 +94,8 @@ lbl_80AF19F8:
 /* 80AF1A08  88 1D 09 EC */	lbz r0, 0x9ec(r29)
 /* 80AF1A0C  28 00 00 00 */	cmplwi r0, 0
 /* 80AF1A10  40 82 00 14 */	bne lbl_80AF1A24
-/* 80AF1A14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF1A18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF1A14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF1A18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF1A1C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80AF1A20  4B 55 0A 48 */	b reset__14dEvt_control_cFv
 lbl_80AF1A24:

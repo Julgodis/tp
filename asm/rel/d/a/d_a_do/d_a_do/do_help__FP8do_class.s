@@ -9,7 +9,7 @@ lbl_8066B7C0:
 /* 8066B7DC  7C 7E 1B 78 */	mr r30, r3
 /* 8066B7E0  3C 80 80 67 */	lis r4, lit_3662@ha
 /* 8066B7E4  3B E4 ED E8 */	addi r31, r4, lit_3662@l
-/* 8066B7E8  C3 FF 00 14 */	lfs f31, 0x14(r31)	/* effective address: 8066EDFC */
+/* 8066B7E8  C3 FF 00 14 */	lfs f31, 0x14(r31)
 /* 8066B7EC  38 00 00 01 */	li r0, 1
 /* 8066B7F0  98 03 06 16 */	stb r0, 0x616(r3)
 /* 8066B7F4  A8 03 05 F6 */	lha r0, 0x5f6(r3)
@@ -96,10 +96,10 @@ lbl_8066B91C:
 /* 8066B91C  A8 1E 06 00 */	lha r0, 0x600(r30)
 /* 8066B920  2C 00 00 00 */	cmpwi r0, 0
 /* 8066B924  40 82 03 2C */	bne lbl_8066BC50
-/* 8066B928  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066B92C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066B930  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8066B934  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8066B928  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066B92C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066B930  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8066B934  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8066B938  81 8C 01 90 */	lwz r12, 0x190(r12)
 /* 8066B93C  7D 89 03 A6 */	mtctr r12
 /* 8066B940  4E 80 04 21 */	bctrl 
@@ -121,7 +121,7 @@ lbl_8066B91C:
 /* 8066B980  38 63 00 24 */	addi r3, r3, 0x24
 /* 8066B984  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8066B988  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8066B98C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8066B98C  80 84 00 00 */	lwz r4, 0(r4)
 /* 8066B990  4B CD AB 20 */	b PSMTXCopy
 /* 8066B994  C0 1F 00 14 */	lfs f0, 0x14(r31)
 /* 8066B998  D0 01 00 44 */	stfs f0, 0x44(r1)
@@ -329,10 +329,10 @@ lbl_8066BC64:
 /* 8066BC6C  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 8066BC70  C0 7F 00 0C */	lfs f3, 0xc(r31)
 /* 8066BC74  4B C0 3D C8 */	b cLib_addCalc2__FPffff
-/* 8066BC78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066BC7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066BC80  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8066BC84  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8066BC78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066BC7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066BC80  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8066BC84  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8066BC88  81 8C 01 90 */	lwz r12, 0x190(r12)
 /* 8066BC8C  7D 89 03 A6 */	mtctr r12
 /* 8066BC90  4E 80 04 21 */	bctrl 

@@ -9,11 +9,11 @@ lbl_805CA158:
 /* 805CA174  3B C3 B0 40 */	addi r30, r3, lit_1109@l
 /* 805CA178  3C 60 80 5D */	lis r3, lit_3844@ha
 /* 805CA17C  3B E3 AD 5C */	addi r31, r3, lit_3844@l
-/* 805CA180  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805CA184  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805CA188  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805CA180  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805CA184  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805CA188  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 805CA18C  38 83 04 D0 */	addi r4, r3, 0x4d0
-/* 805CA190  90 9E 00 44 */	stw r4, 0x44(r30)	/* effective address: 805CB084 */
+/* 805CA190  90 9E 00 44 */	stw r4, 0x44(r30)
 /* 805CA194  38 7D 04 D0 */	addi r3, r29, 0x4d0
 /* 805CA198  4B CA 6A 6C */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 805CA19C  B0 7E 00 48 */	sth r3, 0x48(r30)
@@ -207,8 +207,8 @@ lbl_805CA448:
 /* 805CA45C  38 80 00 00 */	li r4, 0
 /* 805CA460  4B A4 6C 50 */	b play__16mDoExt_McaMorfSOFUlSc
 /* 805CA464  38 7D 07 30 */	addi r3, r29, 0x730
-/* 805CA468  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805CA46C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805CA468  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805CA46C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805CA470  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805CA474  4B AA C6 38 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 805CA478  7F A3 EB 78 */	mr r3, r29

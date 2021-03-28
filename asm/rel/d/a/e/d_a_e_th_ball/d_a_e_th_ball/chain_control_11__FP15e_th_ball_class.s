@@ -22,20 +22,20 @@ lbl_807B56A4:
 /* 807B56F4  3B DB 0D EC */	addi r30, r27, 0xdec
 /* 807B56F8  3C 60 80 7C */	lis r3, master@ha
 /* 807B56FC  38 83 80 E0 */	addi r4, r3, master@l
-/* 807B5700  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807B80E0 */
-/* 807B5704  C0 03 06 CC */	lfs f0, 0x6cc(r3)	/* effective address: 807C06CC */
+/* 807B5700  80 64 00 00 */	lwz r3, 0(r4)
+/* 807B5704  C0 03 06 CC */	lfs f0, 0x6cc(r3)
 /* 807B5708  D0 1B 0E 3C */	stfs f0, 0xe3c(r27)
-/* 807B570C  C0 03 06 D0 */	lfs f0, 0x6d0(r3)	/* effective address: 807C06D0 */
+/* 807B570C  C0 03 06 D0 */	lfs f0, 0x6d0(r3)
 /* 807B5710  D0 1B 0E 40 */	stfs f0, 0xe40(r27)
-/* 807B5714  C0 03 06 D4 */	lfs f0, 0x6d4(r3)	/* effective address: 807C06D4 */
+/* 807B5714  C0 03 06 D4 */	lfs f0, 0x6d4(r3)
 /* 807B5718  D0 1B 0E 44 */	stfs f0, 0xe44(r27)
 /* 807B571C  3B BE 00 5C */	addi r29, r30, 0x5c
 /* 807B5720  3B 9E 03 9C */	addi r28, r30, 0x39c
 /* 807B5724  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B5728  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B572C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
-/* 807B5730  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 807B80E0 */
-/* 807B5734  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 807B85C6 */
+/* 807B572C  80 63 00 00 */	lwz r3, 0(r3)
+/* 807B5730  80 84 00 00 */	lwz r4, 0(r4)
+/* 807B5734  A8 84 04 E6 */	lha r4, 0x4e6(r4)
 /* 807B5738  4B 85 6C A4 */	b mDoMtx_YrotS__FPA4_fs
 /* 807B573C  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 807B5740  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -50,8 +50,8 @@ lbl_807B56A4:
 /* 807B5764  D3 C1 00 30 */	stfs f30, 0x30(r1)
 /* 807B5768  D3 C1 00 34 */	stfs f30, 0x34(r1)
 /* 807B576C  3B 00 00 01 */	li r24, 1
-/* 807B5770  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B5774  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B5770  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B5774  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B5778  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 807B577C  C3 FF 00 64 */	lfs f31, 0x64(r31)
 /* 807B5780  3C 60 80 45 */	lis r3, calc_mtx@ha

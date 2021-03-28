@@ -15,8 +15,8 @@ lbl_80796AEC:
 /* 80796B20  7C 7D 1B 78 */	mr r29, r3
 /* 80796B24  3C 60 80 7A */	lis r3, lit_3920@ha
 /* 80796B28  3B E3 85 E0 */	addi r31, r3, lit_3920@l
-/* 80796B2C  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 807985E8 */
-/* 80796B30  C0 3F 00 C0 */	lfs f1, 0xc0(r31)	/* effective address: 807986A0 */
+/* 80796B2C  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 80796B30  C0 3F 00 C0 */	lfs f1, 0xc0(r31)
 /* 80796B34  C0 1D 06 E4 */	lfs f0, 0x6e4(r29)
 /* 80796B38  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80796B3C  EF E2 00 28 */	fsubs f31, f2, f0

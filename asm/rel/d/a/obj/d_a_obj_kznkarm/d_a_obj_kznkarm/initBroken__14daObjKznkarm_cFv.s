@@ -19,11 +19,11 @@ lbl_80C4F8E0:
 lbl_80C4F924:
 /* 80C4F924  3C 60 80 C5 */	lis r3, M_attr__14daObjKznkarm_c@ha
 /* 80C4F928  38 63 0D 08 */	addi r3, r3, M_attr__14daObjKznkarm_c@l
-/* 80C4F92C  A8 03 00 30 */	lha r0, 0x30(r3)	/* effective address: 80C50D38 */
+/* 80C4F92C  A8 03 00 30 */	lha r0, 0x30(r3)
 /* 80C4F930  B0 1F 07 A8 */	sth r0, 0x7a8(r31)
-/* 80C4F934  A8 03 00 32 */	lha r0, 0x32(r3)	/* effective address: 80C50D3A */
+/* 80C4F934  A8 03 00 32 */	lha r0, 0x32(r3)
 /* 80C4F938  B0 1F 07 AA */	sth r0, 0x7aa(r31)
-/* 80C4F93C  A8 03 00 34 */	lha r0, 0x34(r3)	/* effective address: 80C50D3C */
+/* 80C4F93C  A8 03 00 34 */	lha r0, 0x34(r3)
 /* 80C4F940  B0 1F 07 AC */	sth r0, 0x7ac(r31)
 /* 80C4F944  38 00 00 0A */	li r0, 0xa
 /* 80C4F948  98 1F 07 B0 */	stb r0, 0x7b0(r31)

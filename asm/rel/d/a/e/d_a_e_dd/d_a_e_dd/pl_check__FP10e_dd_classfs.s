@@ -2,9 +2,9 @@ lbl_806A272C:
 /* 806A272C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 806A2730  7C 08 02 A6 */	mflr r0
 /* 806A2734  90 01 00 14 */	stw r0, 0x14(r1)
-/* 806A2738  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806A273C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 806A2740  80 C5 5D AC */	lwz r6, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 806A2738  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806A273C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 806A2740  80 C5 5D AC */	lwz r6, 0x5dac(r5)
 /* 806A2744  C0 03 06 A4 */	lfs f0, 0x6a4(r3)
 /* 806A2748  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 806A274C  40 80 00 48 */	bge lbl_806A2794

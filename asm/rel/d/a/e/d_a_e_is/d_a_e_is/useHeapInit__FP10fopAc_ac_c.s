@@ -12,8 +12,8 @@ lbl_806F7274:
 /* 806F729C  3C 60 80 6F */	lis r3, stringBase0@ha
 /* 806F72A0  38 63 7C 14 */	addi r3, r3, stringBase0@l
 /* 806F72A4  38 80 00 0E */	li r4, 0xe
-/* 806F72A8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806F72AC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806F72A8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806F72AC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806F72B0  3F 85 00 02 */	addis r28, r5, 2
 /* 806F72B4  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 806F72B8  7F 85 E3 78 */	mr r5, r28

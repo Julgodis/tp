@@ -7,7 +7,7 @@ lbl_80B4A5A8:
 /* 80B4A5BC  40 82 00 30 */	bne lbl_80B4A5EC
 /* 80B4A5C0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B4A5C4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80B4A5C8  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80B4A5C8  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80B4A5CC  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80B4A5D0  28 03 00 00 */	cmplwi r3, 0
 /* 80B4A5D4  41 82 00 18 */	beq lbl_80B4A5EC

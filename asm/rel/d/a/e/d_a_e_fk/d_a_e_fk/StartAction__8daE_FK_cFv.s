@@ -8,16 +8,16 @@ lbl_806B9E6C:
 /* 806B9E84  3C 60 80 6C */	lis r3, lit_3826@ha
 /* 806B9E88  3B C3 B6 D0 */	addi r30, r3, lit_3826@l
 /* 806B9E8C  38 7D 06 04 */	addi r3, r29, 0x604
-/* 806B9E90  C0 3E 00 FC */	lfs f1, 0xfc(r30)	/* effective address: 806BB7CC */
-/* 806B9E94  C0 5E 01 00 */	lfs f2, 0x100(r30)	/* effective address: 806BB7D0 */
+/* 806B9E90  C0 3E 00 FC */	lfs f1, 0xfc(r30)
+/* 806B9E94  C0 5E 01 00 */	lfs f2, 0x100(r30)
 /* 806B9E98  4B BB 68 A8 */	b cLib_chaseF__FPfff
 /* 806B9E9C  2C 03 00 00 */	cmpwi r3, 0
 /* 806B9EA0  41 82 00 0C */	beq lbl_806B9EAC
 /* 806B9EA4  38 00 00 01 */	li r0, 1
 /* 806B9EA8  98 1D 06 15 */	stb r0, 0x615(r29)
 lbl_806B9EAC:
-/* 806B9EAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B9EB0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 806B9EAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B9EB0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 806B9EB4  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 806B9EB8  D0 1D 05 DC */	stfs f0, 0x5dc(r29)
 /* 806B9EBC  7F A3 EB 78 */	mr r3, r29

@@ -39,7 +39,7 @@ lbl_80C419C4:
 /* 80C41A58  1C 60 00 06 */	mulli r3, r0, 6
 /* 80C41A5C  3B 63 01 D8 */	addi r27, r3, 0x1d8
 /* 80C41A60  7F 7A DA 14 */	add r27, r26, r27
-/* 80C41A64  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80C439E8 */
+/* 80C41A64  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80C41A68  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80C41A6C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80C41A70  88 19 05 84 */	lbz r0, 0x584(r25)

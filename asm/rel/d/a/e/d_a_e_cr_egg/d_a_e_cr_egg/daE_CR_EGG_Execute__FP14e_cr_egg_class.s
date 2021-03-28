@@ -73,8 +73,8 @@ lbl_8069A3E4:
 /* 8069A488  38 7E 09 D4 */	addi r3, r30, 0x9d4
 /* 8069A48C  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 8069A490  4B BD 52 78 */	b SetR__8cM3dGSphFf
-/* 8069A494  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8069A498  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8069A494  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8069A498  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8069A49C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8069A4A0  38 9E 08 B0 */	addi r4, r30, 0x8b0
 /* 8069A4A4  4B BC A7 04 */	b Set__4cCcSFP8cCcD_Obj

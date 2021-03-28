@@ -70,9 +70,9 @@ lbl_80A37740:
 /* 80A37778  98 1D 01 44 */	stb r0, 0x144(r29)
 lbl_80A3777C:
 /* 80A3777C  FF C0 F8 90 */	fmr f30, f31
-/* 80A37780  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A37784  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80A37788  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80A37780  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A37784  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80A37788  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80A3778C  38 00 00 FF */	li r0, 0xff
 /* 80A37790  90 01 00 08 */	stw r0, 8(r1)
 /* 80A37794  38 80 00 00 */	li r4, 0
@@ -142,11 +142,11 @@ lbl_80A3785C:
 /* 80A37890  4B 90 F5 BC */	b PSMTXMultVecSR
 /* 80A37894  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A37898  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80A3789C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80A3789C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80A378A0  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 80A378A4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80A378A4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A378A8  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 80A378AC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80A378AC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80A378B0  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 80A378B4  C0 1C 01 F4 */	lfs f0, 0x1f4(r28)
 /* 80A378B8  FC 1F 00 40 */	fcmpo cr0, f31, f0
@@ -221,9 +221,9 @@ lbl_80A378C8:
 /* 80A379C8  90 7F 15 DC */	stw r3, 0x15dc(r31)
 /* 80A379CC  48 00 01 14 */	b lbl_80A37AE0
 lbl_80A379D0:
-/* 80A379D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A379D4  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80A379D8  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80A379D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A379D4  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80A379D8  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80A379DC  38 63 02 10 */	addi r3, r3, 0x210
 /* 80A379E0  80 9F 15 D4 */	lwz r4, 0x15d4(r31)
 /* 80A379E4  4B 61 3F 34 */	b getEmitter__Q213dPa_control_c7level_cFUl

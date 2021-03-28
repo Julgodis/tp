@@ -101,12 +101,12 @@ lbl_80823000:
 /* 8082308C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80823090  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80823094  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80823098  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80823098  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082309C  A8 9F 04 DE */	lha r4, 0x4de(r31)
 /* 808230A0  4B 7E 93 3C */	b mDoMtx_YrotS__FPA4_fs
 /* 808230A4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 808230A8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 808230AC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 808230AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 808230B0  A8 9F 04 DC */	lha r4, 0x4dc(r31)
 /* 808230B4  4B 7E 92 E8 */	b mDoMtx_XrotM__FPA4_fs
 /* 808230B8  38 61 00 08 */	addi r3, r1, 8

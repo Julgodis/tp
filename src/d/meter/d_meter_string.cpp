@@ -46,14 +46,6 @@ struct dMeter2Info_c {
 	/* 8021CC00 */ void resetMeterString();
 };
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7AFC */ void getParentPane();
-	/* 802F7FCC */ void animationTransform();
-};
-
 struct J2DGrafContext {
 };
 
@@ -64,6 +56,14 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+	/* 802F7AFC */ void getParentPane();
+	/* 802F7FCC */ void animationTransform();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -156,14 +156,14 @@ extern "C" extern u8 g_meter2_info[248];
 /* ############################################################################################## */
 /* 803BF308-803BF328 0020+00 s=2 e=0 z=0  None .data      __vt__14dMeterString_c                                       */
 SECTION_DATA static void* __vt__14dMeterString_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMeterString_cFv,
-	/* 3    */ (void*)__dt__14dMeterString_cFv,
-	/* 4    */ (void*)_create__14dMeterString_cFv,
-	/* 5    */ (void*)_execute__14dMeterString_cFUl,
-	/* 6    */ (void*)_delete__14dMeterString_cFv,
-	/* 7    */ (void*)isDead__11dMeterSub_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMeterString_cFv,
+	(void*)__dt__14dMeterString_cFv,
+	(void*)_create__14dMeterString_cFv,
+	(void*)_execute__14dMeterString_cFUl,
+	(void*)_delete__14dMeterString_cFv,
+	(void*)isDead__11dMeterSub_cFv,
 };
 
 /* 8020ED60-8020EDF4 0094+00 s=0 e=1 z=0  None .text      __ct__14dMeterString_cFi                                     */

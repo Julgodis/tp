@@ -29,19 +29,20 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static bool daTag_Telop_Draw(daTag_Telop_c*); // 2
-static void daTag_Telop_Execute(daTag_Telop_c*); // 2
-static bool daTag_Telop_IsDelete(daTag_Telop_c*); // 2
-static void daTag_Telop_Delete(daTag_Telop_c*); // 2
-static void daTag_Telop_Create(fopAc_ac_c*); // 2
+bool daTag_Telop_Draw(daTag_Telop_c*); // 2
+void daTag_Telop_Execute(daTag_Telop_c*); // 2
+bool daTag_Telop_IsDelete(daTag_Telop_c*); // 2
+void daTag_Telop_Delete(daTag_Telop_c*); // 2
+void daTag_Telop_Create(fopAc_ac_c*); // 2
 
 extern "C" void create__13daTag_Telop_cFv(); // 1
 extern "C" void execute__13daTag_Telop_cFv(); // 1
-extern "C" static bool daTag_Telop_Draw__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Execute__FP13daTag_Telop_c(); // 1
-extern "C" static bool daTag_Telop_IsDelete__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Delete__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Create__FP10fopAc_ac_c(); // 1
+extern "C" bool daTag_Telop_Draw__FP13daTag_Telop_c(); // 1
+extern "C" void daTag_Telop_Execute__FP13daTag_Telop_c(); // 1
+extern "C" bool daTag_Telop_IsDelete__FP13daTag_Telop_c(); // 1
+extern "C" void daTag_Telop_Delete__FP13daTag_Telop_c(); // 1
+extern "C" void daTag_Telop_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daTag_Telop_Method[8];
 extern "C" extern void* g_profile_TAG_TELOP[12];
 
 // 
@@ -56,9 +57,7 @@ extern "C" void __dt__10fopAc_ac_cFv(); // 1
 extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
 extern "C" void fopMsgM_messageSetDemo__FUl(); // 1
 extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
@@ -86,45 +85,45 @@ asm void daTag_Telop_c::execute() {
 #pragma pop
 
 
-/* 80490B5C-80490B64 0008+00 s=1 e=0 z=0  None .text      daTag_Telop_Draw__FP13daTag_Telop_c                          */
-static bool daTag_Telop_Draw(daTag_Telop_c* param_0) {
+/* 80490B5C-80490B64 0008+00 s=0 e=0 z=0  None .text      daTag_Telop_Draw__FP13daTag_Telop_c                          */
+bool daTag_Telop_Draw(daTag_Telop_c* param_0) {
 	return true;
 }
 
 
-/* 80490B64-80490B88 0024+00 s=1 e=0 z=0  None .text      daTag_Telop_Execute__FP13daTag_Telop_c                       */
+/* 80490B64-80490B88 0024+00 s=0 e=0 z=0  None .text      daTag_Telop_Execute__FP13daTag_Telop_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Telop_Execute(daTag_Telop_c* param_0) {
+asm void daTag_Telop_Execute(daTag_Telop_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_telop/d_a_tag_telop/daTag_Telop_Execute__FP13daTag_Telop_c.s"
 }
 #pragma pop
 
 
-/* 80490B88-80490B90 0008+00 s=1 e=0 z=0  None .text      daTag_Telop_IsDelete__FP13daTag_Telop_c                      */
-static bool daTag_Telop_IsDelete(daTag_Telop_c* param_0) {
+/* 80490B88-80490B90 0008+00 s=0 e=0 z=0  None .text      daTag_Telop_IsDelete__FP13daTag_Telop_c                      */
+bool daTag_Telop_IsDelete(daTag_Telop_c* param_0) {
 	return true;
 }
 
 
-/* 80490B90-80490BC0 0030+00 s=1 e=0 z=0  None .text      daTag_Telop_Delete__FP13daTag_Telop_c                        */
+/* 80490B90-80490BC0 0030+00 s=0 e=0 z=0  None .text      daTag_Telop_Delete__FP13daTag_Telop_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Telop_Delete(daTag_Telop_c* param_0) {
+asm void daTag_Telop_Delete(daTag_Telop_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_telop/d_a_tag_telop/daTag_Telop_Delete__FP13daTag_Telop_c.s"
 }
 #pragma pop
 
 
-/* 80490BC0-80490BE0 0020+00 s=1 e=0 z=0  None .text      daTag_Telop_Create__FP10fopAc_ac_c                           */
+/* 80490BC0-80490BE0 0020+00 s=0 e=0 z=0  None .text      daTag_Telop_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Telop_Create(fopAc_ac_c* param_0) {
+asm void daTag_Telop_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_telop/d_a_tag_telop/daTag_Telop_Create__FP10fopAc_ac_c.s"
 }
@@ -132,31 +131,31 @@ asm static void daTag_Telop_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80490BE8-80490C08 0020+00 s=1 e=0 z=0  None .data      l_daTag_Telop_Method                                         */
-SECTION_DATA static void* l_daTag_Telop_Method[8] = {
-	/* 0    */ (void*)daTag_Telop_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTag_Telop_Delete__FP13daTag_Telop_c,
-	/* 2    */ (void*)daTag_Telop_Execute__FP13daTag_Telop_c,
-	/* 3    */ (void*)daTag_Telop_IsDelete__FP13daTag_Telop_c,
-	/* 4    */ (void*)daTag_Telop_Draw__FP13daTag_Telop_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80490BE8-80490C08 0020+00 s=0 e=0 z=0  None .data      l_daTag_Telop_Method                                         */
+SECTION_DATA void* l_daTag_Telop_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80490C08-80490C38 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_TELOP                                          */
+/* 80490C08-80490C38 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_TELOP                                          */
 SECTION_DATA void* g_profile_TAG_TELOP[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D30000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x011A0000,
-	/* 9    */ (void*)&l_daTag_Telop_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D30000,
+	(void*)NULL,
+	(void*)0x00000570,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x011A0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x00060000,
 };
 

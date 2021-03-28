@@ -16,7 +16,7 @@ lbl_80D4C958:
 lbl_80D4C990:
 /* 80D4C990  3C 80 80 D5 */	lis r4, l_arcName@ha
 /* 80D4C994  38 84 D2 D0 */	addi r4, r4, l_arcName@l
-/* 80D4C998  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D4D2D0 */
+/* 80D4C998  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D4C99C  4B 2E 06 6C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D4C9A0  34 1E 05 7C */	addic. r0, r30, 0x57c
 /* 80D4C9A4  41 82 00 20 */	beq lbl_80D4C9C4

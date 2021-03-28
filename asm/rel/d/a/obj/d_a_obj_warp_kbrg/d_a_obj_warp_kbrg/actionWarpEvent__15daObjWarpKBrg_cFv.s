@@ -5,8 +5,8 @@ lbl_80D280CC:
 /* 80D280D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D280DC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D280E0  7C 7E 1B 78 */	mr r30, r3
-/* 80D280E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D280E8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D280E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D280E8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D280EC  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80D280F0  88 1E 05 D8 */	lbz r0, 0x5d8(r30)
 /* 80D280F4  54 00 08 3C */	slwi r0, r0, 1

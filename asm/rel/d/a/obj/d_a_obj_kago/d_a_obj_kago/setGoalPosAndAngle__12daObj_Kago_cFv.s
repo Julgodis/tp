@@ -9,7 +9,7 @@ lbl_80C337B0:
 /* 80C337CC  3B E3 3F 00 */	addi r31, r3, lit_1109@l
 /* 80C337D0  3C 60 80 C3 */	lis r3, m__18daObj_Kago_Param_c@ha
 /* 80C337D4  38 83 3C 80 */	addi r4, r3, m__18daObj_Kago_Param_c@l
-/* 80C337D8  88 1F 00 5C */	lbz r0, 0x5c(r31)	/* effective address: 80C33F5C */
+/* 80C337D8  88 1F 00 5C */	lbz r0, 0x5c(r31)
 /* 80C337DC  7C 00 07 75 */	extsb. r0, r0
 /* 80C337E0  40 82 00 38 */	bne lbl_80C33818
 /* 80C337E4  C0 04 01 08 */	lfs f0, 0x108(r4)

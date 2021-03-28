@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JKRHeap {
+};
+
 struct JASOscillator {
 	struct Data {
 	};
@@ -18,9 +21,6 @@ struct JASOscillator {
 };
 
 struct JASInstParam {
-};
-
-struct JKRHeap {
 };
 
 struct JASBasicInst {
@@ -85,20 +85,20 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C76E8-803C76FC 0014+00 s=2 e=0 z=0  None .data      __vt__12JASBasicInst                                         */
 SECTION_DATA static void* __vt__12JASBasicInst[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JASBasicInstFv,
-	/* 3    */ (void*)getParam__12JASBasicInstCFiiP12JASInstParam,
-	/* 4    */ (void*)getType__12JASBasicInstCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JASBasicInstFv,
+	(void*)getParam__12JASBasicInstCFiiP12JASInstParam,
+	(void*)getType__12JASBasicInstCFv,
 };
 
 /* 803C76FC-803C7710 0014+00 s=3 e=2 z=0  None .data      __vt__7JASInst                                               */
 SECTION_DATA void* __vt__7JASInst[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7JASInstFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7JASInstFv,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80455640-80455648 0004+04 s=1 e=0 z=0  None .sdata2    @187                                                         */

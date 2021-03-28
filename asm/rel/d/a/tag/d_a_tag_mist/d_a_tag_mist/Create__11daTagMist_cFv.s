@@ -6,14 +6,14 @@ lbl_8048F370:
 /* 8048F380  7C 7F 1B 78 */	mr r31, r3
 /* 8048F384  3C 80 80 49 */	lis r4, lit_3678@ha
 /* 8048F388  38 84 F7 00 */	addi r4, r4, lit_3678@l
-/* 8048F38C  C0 44 00 00 */	lfs f2, 0(r4)	/* effective address: 8048F700 */
+/* 8048F38C  C0 44 00 00 */	lfs f2, 0(r4)
 /* 8048F390  C0 03 04 EC */	lfs f0, 0x4ec(r3)
 /* 8048F394  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8048F398  D0 03 05 70 */	stfs f0, 0x570(r3)
 /* 8048F39C  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
 /* 8048F3A0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8048F3A4  D0 03 05 78 */	stfs f0, 0x578(r3)
-/* 8048F3A8  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 8048F704 */
+/* 8048F3A8  C0 24 00 04 */	lfs f1, 4(r4)
 /* 8048F3AC  C0 03 04 EC */	lfs f0, 0x4ec(r3)
 /* 8048F3B0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8048F3B4  D0 03 05 7C */	stfs f0, 0x57c(r3)
@@ -32,7 +32,7 @@ lbl_8048F370:
 /* 8048F3E8  C0 03 04 F4 */	lfs f0, 0x4f4(r3)
 /* 8048F3EC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8048F3F0  D0 03 05 9C */	stfs f0, 0x59c(r3)
-/* 8048F3F4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 8048F708 */
+/* 8048F3F4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8048F3F8  D0 03 05 98 */	stfs f0, 0x598(r3)
 /* 8048F3FC  D0 03 05 8C */	stfs f0, 0x58c(r3)
 /* 8048F400  D0 03 05 80 */	stfs f0, 0x580(r3)

@@ -13,7 +13,7 @@ lbl_807B6594:
 /* 807B65C0  4B 8C 16 A8 */	b __ct__11dBgS_LinChkFv
 /* 807B65C4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B65C8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B65CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B65CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B65D0  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 807B65D4  4B 85 5E 08 */	b mDoMtx_YrotS__FPA4_fs
 /* 807B65D8  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -36,8 +36,8 @@ lbl_807B6594:
 /* 807B661C  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 807B6620  3B 60 00 00 */	li r27, 0
 /* 807B6624  3B E0 00 00 */	li r31, 0
-/* 807B6628  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B662C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B6628  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B662C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B6630  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 807B6634  C3 FE 00 AC */	lfs f31, 0xac(r30)
 lbl_807B6638:

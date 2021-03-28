@@ -27,8 +27,8 @@ lbl_80BD7AD4:
 /* 80BD7B38  C3 7E 00 98 */	lfs f27, 0x98(r30)
 /* 80BD7B3C  3B 40 00 01 */	li r26, 1
 /* 80BD7B40  3B 00 00 04 */	li r24, 4
-/* 80BD7B44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD7B48  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80BD7B44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD7B48  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80BD7B4C  C3 9E 00 A4 */	lfs f28, 0xa4(r30)
 /* 80BD7B50  C3 BE 00 64 */	lfs f29, 0x64(r30)
 /* 80BD7B54  C3 DE 00 B0 */	lfs f30, 0xb0(r30)

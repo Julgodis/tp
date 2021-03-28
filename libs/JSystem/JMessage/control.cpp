@@ -77,9 +77,9 @@ extern "C" void _restgpr_28(); // 1
 /* ############################################################################################## */
 /* 803C9B60-803C9B70 000C+04 s=2 e=0 z=0  None .data      __vt__Q28JMessage8TControl                                   */
 SECTION_DATA static void* __vt__Q28JMessage8TControl[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q28JMessage8TControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q28JMessage8TControlFv,
 	/* padding */
 	NULL,
 };

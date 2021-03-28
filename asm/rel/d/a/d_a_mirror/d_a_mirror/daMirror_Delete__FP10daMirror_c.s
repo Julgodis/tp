@@ -12,7 +12,7 @@ lbl_80872344:
 lbl_8087236C:
 /* 8087236C  3C 80 80 87 */	lis r4, l_arcName@ha
 /* 80872370  38 84 26 60 */	addi r4, r4, l_arcName@l
-/* 80872374  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80872660 */
+/* 80872374  80 84 00 00 */	lwz r4, 0(r4)
 /* 80872378  4B 7B AC 90 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8087237C  48 00 00 28 */	b lbl_808723A4
 lbl_80872380:
@@ -24,7 +24,7 @@ lbl_80872380:
 lbl_80872394:
 /* 80872394  3C 80 80 87 */	lis r4, l_arcName2@ha
 /* 80872398  38 84 26 64 */	addi r4, r4, l_arcName2@l
-/* 8087239C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80872664 */
+/* 8087239C  80 84 00 00 */	lwz r4, 0(r4)
 /* 808723A0  4B 7B AC 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_808723A4:
 /* 808723A4  38 00 00 00 */	li r0, 0

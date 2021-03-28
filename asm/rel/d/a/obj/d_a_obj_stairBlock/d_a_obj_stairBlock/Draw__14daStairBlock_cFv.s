@@ -11,14 +11,14 @@ lbl_80CE8B24:
 /* 80CE8B48  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80CE8B4C  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 80CE8B50  4B 4B AC 74 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80CE8B54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE8B58  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CE8B5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80CE8B54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE8B58  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CE8B5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80CE8B60  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CE8B64  3B 63 4A C8 */	addi r27, r3, j3dSys@l
-/* 80CE8B68  90 1B 00 48 */	stw r0, 0x48(r27)	/* effective address: 80434B10 */
-/* 80CE8B6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80CE8B70  90 1B 00 4C */	stw r0, 0x4c(r27)	/* effective address: 80434B14 */
+/* 80CE8B68  90 1B 00 48 */	stw r0, 0x48(r27)
+/* 80CE8B6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80CE8B70  90 1B 00 4C */	stw r0, 0x4c(r27)
 /* 80CE8B74  3B 20 00 00 */	li r25, 0
 /* 80CE8B78  3B C0 00 00 */	li r30, 0
 /* 80CE8B7C  3B A0 00 00 */	li r29, 0
@@ -44,11 +44,11 @@ lbl_80CE8B88:
 /* 80CE8BC8  3B DE 00 1C */	addi r30, r30, 0x1c
 /* 80CE8BCC  3B BD 00 04 */	addi r29, r29, 4
 /* 80CE8BD0  41 80 FF B8 */	blt lbl_80CE8B88
-/* 80CE8BD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE8BD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CE8BDC  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80CE8BD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE8BD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CE8BDC  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CE8BE0  90 1B 00 48 */	stw r0, 0x48(r27)
-/* 80CE8BE4  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80CE8BE4  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80CE8BE8  90 1B 00 4C */	stw r0, 0x4c(r27)
 /* 80CE8BEC  38 60 00 01 */	li r3, 1
 /* 80CE8BF0  39 61 00 30 */	addi r11, r1, 0x30

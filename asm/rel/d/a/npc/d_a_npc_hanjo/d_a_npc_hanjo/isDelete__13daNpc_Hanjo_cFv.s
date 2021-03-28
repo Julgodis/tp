@@ -24,8 +24,8 @@ lbl_809F9D34:
 /* 809F9D3C  4B 75 2D 70 */	b daNpcT_chkEvtBit__FUl
 /* 809F9D40  2C 03 00 00 */	cmpwi r3, 0
 /* 809F9D44  40 82 00 28 */	bne lbl_809F9D6C
-/* 809F9D48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F9D4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809F9D48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F9D4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809F9D50  38 63 01 00 */	addi r3, r3, 0x100
 /* 809F9D54  38 80 00 02 */	li r4, 2
 /* 809F9D58  38 A0 00 00 */	li r5, 0

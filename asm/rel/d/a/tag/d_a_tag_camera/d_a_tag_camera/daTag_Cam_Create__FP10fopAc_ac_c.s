@@ -79,9 +79,9 @@ lbl_8048A4B8:
 /* 8048A504  D0 1F 05 84 */	stfs f0, 0x584(r31)
 /* 8048A508  D0 5F 05 88 */	stfs f2, 0x588(r31)
 lbl_8048A50C:
-/* 8048A50C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048A510  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8048A514  80 03 5D B4 */	lwz r0, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8048A50C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048A510  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8048A514  80 03 5D B4 */	lwz r0, 0x5db4(r3)
 /* 8048A518  3C 60 80 49 */	lis r3, data_8048A670@ha
 /* 8048A51C  90 03 A6 70 */	stw r0, data_8048A670@l(r3)
 /* 8048A520  38 A1 00 04 */	addi r5, r1, 4

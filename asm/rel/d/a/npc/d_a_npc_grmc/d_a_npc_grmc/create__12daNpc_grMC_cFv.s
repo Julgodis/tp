@@ -94,8 +94,8 @@ lbl_809D7628:
 /* 809D7694  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 809D7698  4B 69 EB B0 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 809D769C  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 809D76A0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809D76A4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809D76A0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809D76A4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809D76A8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809D76AC  4B 69 F4 00 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809D76B0  80 1D 07 68 */	lwz r0, 0x768(r29)

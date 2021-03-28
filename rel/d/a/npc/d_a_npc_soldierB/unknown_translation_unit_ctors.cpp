@@ -19,7 +19,6 @@ extern void* const data_80AF5AC0[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_soldierB_cpp(); // 1
 
 // 
 // Declarations:

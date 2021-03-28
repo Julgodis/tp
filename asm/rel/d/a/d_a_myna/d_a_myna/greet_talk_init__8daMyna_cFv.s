@@ -12,13 +12,13 @@ lbl_80947030:
 /* 80947058  B0 7F 09 22 */	sth r3, 0x922(r31)
 /* 8094705C  4B 8F 16 04 */	b dMsgObject_getTotalPrice__Fv
 /* 80947060  B0 7F 09 20 */	sth r3, 0x920(r31)
-/* 80947064  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80947068  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8094706C  80 83 5D BC */	lwz r4, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 80947064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80947068  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8094706C  80 83 5D BC */	lwz r4, 0x5dbc(r3)
 /* 80947070  38 00 00 00 */	li r0, 0
 /* 80947074  B0 04 01 7A */	sth r0, 0x17a(r4)
-/* 80947078  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
-/* 8094707C  B0 03 01 7C */	sth r0, 0x17c(r3)	/* effective address: 8040633C */
+/* 80947078  80 63 5D BC */	lwz r3, 0x5dbc(r3)
+/* 8094707C  B0 03 01 7C */	sth r0, 0x17c(r3)
 /* 80947080  88 1F 09 32 */	lbz r0, 0x932(r31)
 /* 80947084  2C 00 00 01 */	cmpwi r0, 1
 /* 80947088  41 82 00 30 */	beq lbl_809470B8

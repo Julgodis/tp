@@ -115,10 +115,10 @@ asm void JAUStreamDataMgr_StreamFileTable::getStreamFileEntry(JAISoundID param_0
 /* ############################################################################################## */
 /* 803C9B50-803C9B60 0010+00 s=1 e=1 z=0  None .data      __vt__32JAUStreamDataMgr_StreamFileTable                     */
 SECTION_DATA void* __vt__32JAUStreamDataMgr_StreamFileTable[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID,
-	/* 3    */ (void*)__dt__32JAUStreamDataMgr_StreamFileTableFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID,
+	(void*)__dt__32JAUStreamDataMgr_StreamFileTableFv,
 };
 
 /* 802A74E8-802A7548 0060+00 s=1 e=0 z=0  None .text      __dt__32JAUStreamDataMgr_StreamFileTableFv                   */

@@ -9,11 +9,11 @@ lbl_80A613E8:
 /* 80A61404  7C 7E 1B 78 */	mr r30, r3
 /* 80A61408  3C 60 80 A6 */	lis r3, m__19daNpc_Kyury_Param_c@ha
 /* 80A6140C  3B E3 38 AC */	addi r31, r3, m__19daNpc_Kyury_Param_c@l
-/* 80A61410  C0 3F 00 C0 */	lfs f1, 0xc0(r31)	/* effective address: 80A6396C */
+/* 80A61410  C0 3F 00 C0 */	lfs f1, 0xc0(r31)
 /* 80A61414  D0 21 00 40 */	stfs f1, 0x40(r1)
-/* 80A61418  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80A63970 */
+/* 80A61418  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80A6141C  D0 01 00 44 */	stfs f0, 0x44(r1)
-/* 80A61420  C0 1F 00 A0 */	lfs f0, 0xa0(r31)	/* effective address: 80A6394C */
+/* 80A61420  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
 /* 80A61424  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80A61428  D0 21 00 34 */	stfs f1, 0x34(r1)
 /* 80A6142C  D0 01 00 38 */	stfs f0, 0x38(r1)

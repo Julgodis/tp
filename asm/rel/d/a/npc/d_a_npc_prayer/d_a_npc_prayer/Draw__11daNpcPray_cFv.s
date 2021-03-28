@@ -6,7 +6,7 @@ lbl_80AB3668:
 /* 80AB3678  38 A0 00 00 */	li r5, 0
 /* 80AB367C  3C C0 80 AB */	lis r6, m__17daNpcPray_Param_c@ha
 /* 80AB3680  38 C6 58 08 */	addi r6, r6, m__17daNpcPray_Param_c@l
-/* 80AB3684  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80AB5814 */
+/* 80AB3684  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80AB3688  38 C0 00 00 */	li r6, 0
 /* 80AB368C  38 E0 00 00 */	li r7, 0
 /* 80AB3690  4B 69 EC 1C */	b draw__8daNpcF_cFiifP11_GXColorS10i

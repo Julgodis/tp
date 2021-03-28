@@ -9,9 +9,9 @@ lbl_80D2C150:
 /* 80D2C16C  3B E3 C4 6C */	addi r31, r3, lit_3625@l
 /* 80D2C170  38 7E 04 D4 */	addi r3, r30, 0x4d4
 /* 80D2C174  C0 3E 05 B4 */	lfs f1, 0x5b4(r30)
-/* 80D2C178  C0 5F 00 10 */	lfs f2, 0x10(r31)	/* effective address: 80D2C47C */
+/* 80D2C178  C0 5F 00 10 */	lfs f2, 0x10(r31)
 /* 80D2C17C  C0 7E 05 B8 */	lfs f3, 0x5b8(r30)
-/* 80D2C180  C0 9F 00 14 */	lfs f4, 0x14(r31)	/* effective address: 80D2C480 */
+/* 80D2C180  C0 9F 00 14 */	lfs f4, 0x14(r31)
 /* 80D2C184  4B 54 37 F8 */	b cLib_addCalc__FPfffff
 /* 80D2C188  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80D2C18C  FC 00 08 00 */	fcmpu cr0, f0, f1
@@ -25,7 +25,7 @@ lbl_80D2C150:
 /* 80D2C1AC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D2C1B0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D2C1B4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D2C1B8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D2C1B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D2C1BC  38 81 00 0C */	addi r4, r1, 0xc
 /* 80D2C1C0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D2C1C4  38 C0 00 00 */	li r6, 0
@@ -48,7 +48,7 @@ lbl_80D2C1EC:
 /* 80D2C204  90 01 00 08 */	stw r0, 8(r1)
 /* 80D2C208  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D2C20C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D2C210  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D2C210  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D2C214  38 81 00 08 */	addi r4, r1, 8
 /* 80D2C218  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D2C21C  38 C0 00 00 */	li r6, 0

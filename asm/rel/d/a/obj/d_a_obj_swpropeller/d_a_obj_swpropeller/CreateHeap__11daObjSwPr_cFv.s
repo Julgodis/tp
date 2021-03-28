@@ -12,8 +12,8 @@ lbl_8059A808:
 /* 8059A830  3C 80 80 5A */	lis r4, l_bmdName@ha
 /* 8059A834  38 84 B2 C8 */	addi r4, r4, l_bmdName@l
 /* 8059A838  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8059A83C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8059A840  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8059A83C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8059A840  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8059A844  3C A5 00 02 */	addis r5, r5, 2
 /* 8059A848  38 C0 00 80 */	li r6, 0x80
 /* 8059A84C  38 A5 C2 F8 */	addi r5, r5, -15624

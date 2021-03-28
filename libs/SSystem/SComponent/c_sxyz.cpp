@@ -114,7 +114,7 @@ static u8 lit_262[12 + 4 /* padding */];
 /* 80451160-80451164 0004+00 s=1 e=13 z=3  None .sbss      Zero__5csXyz                                                 */
 u8 Zero__5csXyz[4];
 
-/* 80451164-80451168 0004+00 s=1 e=13 z=0  None .sbss      None                                                         */
+/* 80451164-80451168 0004+00 s=1 e=13 z=2  None .sbss      None                                                         */
 u8 data_80451164[4];
 
 /* 8026758C-802675E4 0058+00 s=0 e=1 z=0  None .text      __sinit_c_sxyz_cpp                                           */

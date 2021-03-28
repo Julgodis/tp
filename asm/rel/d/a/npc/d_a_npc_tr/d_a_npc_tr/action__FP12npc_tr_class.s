@@ -26,12 +26,12 @@ lbl_80B26014:
 /* 80B26038  4B 74 A5 D0 */	b cLib_addCalcAngleS2__FPssss
 /* 80B2603C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B26040  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B26044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B26044  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B26048  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80B2604C  4B 4E 63 90 */	b mDoMtx_YrotS__FPA4_fs
 /* 80B26050  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B26054  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B26058  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B26058  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B2605C  A8 9E 04 DC */	lha r4, 0x4dc(r30)
 /* 80B26060  4B 4E 63 3C */	b mDoMtx_XrotM__FPA4_fs
 /* 80B26064  C0 1F 00 18 */	lfs f0, 0x18(r31)
@@ -40,7 +40,7 @@ lbl_80B26014:
 /* 80B26070  C0 3E 05 2C */	lfs f1, 0x52c(r30)
 /* 80B26074  3C 60 80 B2 */	lis r3, l_HIO@ha
 /* 80B26078  38 63 66 88 */	addi r3, r3, l_HIO@l
-/* 80B2607C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80B26690 */
+/* 80B2607C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80B26080  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80B26084  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80B26088  38 61 00 14 */	addi r3, r1, 0x14

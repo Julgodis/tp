@@ -27,11 +27,11 @@ lbl_807399A4:
 /* 80739A08  4B 8D 3D A0 */	b entry__13mDoExt_brkAnmFP16J3DMaterialTablef
 /* 80739A0C  3C 60 80 74 */	lis r3, lit_5232@ha
 /* 80739A10  38 83 A0 14 */	addi r4, r3, lit_5232@l
-/* 80739A14  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8073A014 */
-/* 80739A18  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8073A018 */
+/* 80739A14  80 64 00 00 */	lwz r3, 0(r4)
+/* 80739A18  80 04 00 04 */	lwz r0, 4(r4)
 /* 80739A1C  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 80739A20  90 01 00 20 */	stw r0, 0x20(r1)
-/* 80739A24  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8073A01C */
+/* 80739A24  80 04 00 08 */	lwz r0, 8(r4)
 /* 80739A28  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80739A2C  38 7D 0B 58 */	addi r3, r29, 0xb58
 /* 80739A30  38 81 00 1C */	addi r4, r1, 0x1c
@@ -40,11 +40,11 @@ lbl_807399A4:
 /* 80739A3C  41 82 00 38 */	beq lbl_80739A74
 /* 80739A40  3C 60 80 74 */	lis r3, lit_5234@ha
 /* 80739A44  38 83 A0 20 */	addi r4, r3, lit_5234@l
-/* 80739A48  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8073A020 */
-/* 80739A4C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8073A024 */
+/* 80739A48  80 64 00 00 */	lwz r3, 0(r4)
+/* 80739A4C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80739A50  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80739A54  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80739A58  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8073A028 */
+/* 80739A58  80 04 00 08 */	lwz r0, 8(r4)
 /* 80739A5C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80739A60  38 7D 0B 58 */	addi r3, r29, 0xb58
 /* 80739A64  38 81 00 10 */	addi r4, r1, 0x10

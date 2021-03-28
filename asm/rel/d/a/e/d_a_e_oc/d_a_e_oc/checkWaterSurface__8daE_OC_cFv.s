@@ -21,8 +21,8 @@ lbl_80733E48:
 /* 80733E94  38 61 00 14 */	addi r3, r1, 0x14
 /* 80733E98  38 81 00 08 */	addi r4, r1, 8
 /* 80733E9C  4B B3 3E 70 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 80733EA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80733EA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80733EA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80733EA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80733EA8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80733EAC  38 81 00 14 */	addi r4, r1, 0x14
 /* 80733EB0  4B 94 05 F0 */	b GroundCross__4cBgSFP11cBgS_GndChk

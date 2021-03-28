@@ -31,12 +31,12 @@ lbl_80A59A34:
 /* 80A59A44  4B 81 6B C4 */	b cLib_addCalcAngleS2__FPssss
 /* 80A59A48  38 00 00 00 */	li r0, 0
 /* 80A59A4C  98 1F 0A EC */	stb r0, 0xaec(r31)
-/* 80A59A50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A59A54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A59A50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A59A54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A59A58  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80A59A5C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80A59A60  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80A59A64  A0 84 04 82 */	lhz r4, 0x482(r4)	/* effective address: 803A770A */
+/* 80A59A64  A0 84 04 82 */	lhz r4, 0x482(r4)
 /* 80A59A68  4B 5D AF 54 */	b isEventBit__11dSv_event_cCFUs
 /* 80A59A6C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A59A70  41 82 00 0C */	beq lbl_80A59A7C

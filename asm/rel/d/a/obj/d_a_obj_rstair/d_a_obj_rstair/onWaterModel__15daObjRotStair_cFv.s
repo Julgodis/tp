@@ -7,8 +7,8 @@ lbl_80CC2310:
 /* 80CC2324  88 03 05 BC */	lbz r0, 0x5bc(r3)
 /* 80CC2328  28 00 00 00 */	cmplwi r0, 0
 /* 80CC232C  40 82 00 24 */	bne lbl_80CC2350
-/* 80CC2330  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC2334  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC2330  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC2334  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC2338  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC233C  80 9F 05 C0 */	lwz r4, 0x5c0(r31)
 /* 80CC2340  7F E5 FB 78 */	mr r5, r31

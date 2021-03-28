@@ -7,14 +7,14 @@ lbl_80AF65FC:
 /* 80AF6610  7C 7D 1B 78 */	mr r29, r3
 /* 80AF6614  3C 80 80 AF */	lis r4, lit_3768@ha
 /* 80AF6618  3B E4 74 08 */	addi r31, r4, lit_3768@l
-/* 80AF661C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AF6620  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80AF6624  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 80AF661C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AF6620  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80AF6624  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 80AF6628  7C 00 07 74 */	extsb r0, r0
 /* 80AF662C  38 84 5D 74 */	addi r4, r4, 0x5d74
 /* 80AF6630  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80AF6634  7F C4 00 2E */	lwzx r30, r4, r0
-/* 80AF6638  83 64 00 00 */	lwz r27, 0(r4)	/* effective address: 8040BF34 */
+/* 80AF6638  83 64 00 00 */	lwz r27, 0(r4)
 /* 80AF663C  3B 80 00 00 */	li r28, 0
 /* 80AF6640  A8 03 09 EC */	lha r0, 0x9ec(r3)
 /* 80AF6644  28 00 00 09 */	cmplwi r0, 9
@@ -68,26 +68,26 @@ lbl_80AF6694:
 /* 80AF66FC  D0 1D 0A 00 */	stfs f0, 0xa00(r29)
 /* 80AF6700  C0 1B 00 EC */	lfs f0, 0xec(r27)
 /* 80AF6704  D0 1D 0A 04 */	stfs f0, 0xa04(r29)
-/* 80AF6708  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF670C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AF6710  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80AF6708  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF670C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AF6710  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80AF6714  38 00 00 03 */	li r0, 3
-/* 80AF6718  B0 03 06 04 */	sth r0, 0x604(r3)	/* effective address: 804067C4 */
+/* 80AF6718  B0 03 06 04 */	sth r0, 0x604(r3)
 /* 80AF671C  38 00 00 00 */	li r0, 0
-/* 80AF6720  90 03 06 0C */	stw r0, 0x60c(r3)	/* effective address: 804067CC */
+/* 80AF6720  90 03 06 0C */	stw r0, 0x60c(r3)
 lbl_80AF6724:
 /* 80AF6724  A8 1D 09 EE */	lha r0, 0x9ee(r29)
 /* 80AF6728  2C 00 00 0A */	cmpwi r0, 0xa
 /* 80AF672C  40 82 00 28 */	bne lbl_80AF6754
-/* 80AF6730  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF6734  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AF6738  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80AF6730  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF6734  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AF6738  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80AF673C  38 00 00 17 */	li r0, 0x17
-/* 80AF6740  90 03 06 14 */	stw r0, 0x614(r3)	/* effective address: 804067D4 */
+/* 80AF6740  90 03 06 14 */	stw r0, 0x614(r3)
 /* 80AF6744  38 00 00 00 */	li r0, 0
-/* 80AF6748  90 03 06 0C */	stw r0, 0x60c(r3)	/* effective address: 804067CC */
-/* 80AF674C  90 03 06 10 */	stw r0, 0x610(r3)	/* effective address: 804067D0 */
-/* 80AF6750  B0 03 06 0A */	sth r0, 0x60a(r3)	/* effective address: 804067CA */
+/* 80AF6748  90 03 06 0C */	stw r0, 0x60c(r3)
+/* 80AF674C  90 03 06 10 */	stw r0, 0x610(r3)
+/* 80AF6750  B0 03 06 0A */	sth r0, 0x60a(r3)
 lbl_80AF6754:
 /* 80AF6754  38 7D 05 BC */	addi r3, r29, 0x5bc
 /* 80AF6758  7F A4 EB 78 */	mr r4, r29
@@ -318,17 +318,17 @@ lbl_80AF6AAC:
 /* 80AF6ABC  38 7E 02 48 */	addi r3, r30, 0x248
 /* 80AF6AC0  38 80 00 00 */	li r4, 0
 /* 80AF6AC4  4B 66 C5 48 */	b SetTrimSize__9dCamera_cFl
-/* 80AF6AC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF6ACC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF6AC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF6ACC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF6AD0  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80AF6AD4  4B 54 B9 94 */	b reset__14dEvt_control_cFv
-/* 80AF6AD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF6ADC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AF6AE0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80AF6AD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF6ADC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AF6AE0  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80AF6AE4  38 00 00 02 */	li r0, 2
-/* 80AF6AE8  B0 03 06 04 */	sth r0, 0x604(r3)	/* effective address: 804067C4 */
+/* 80AF6AE8  B0 03 06 04 */	sth r0, 0x604(r3)
 /* 80AF6AEC  38 00 00 01 */	li r0, 1
-/* 80AF6AF0  90 03 06 14 */	stw r0, 0x614(r3)	/* effective address: 804067D4 */
+/* 80AF6AF0  90 03 06 14 */	stw r0, 0x614(r3)
 /* 80AF6AF4  38 00 00 00 */	li r0, 0
 /* 80AF6AF8  B0 1D 09 EC */	sth r0, 0x9ec(r29)
 lbl_80AF6AFC:

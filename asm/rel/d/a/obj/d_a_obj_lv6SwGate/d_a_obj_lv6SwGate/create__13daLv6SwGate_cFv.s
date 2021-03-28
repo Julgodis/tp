@@ -42,8 +42,8 @@ lbl_80C74330:
 /* 80C74334  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80C74338  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80C7433C  41 82 00 28 */	beq lbl_80C74364
-/* 80C74340  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C74344  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C74340  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C74344  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C74348  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C7434C  7C 05 07 74 */	extsb r5, r0
 /* 80C74350  4B 3C 10 10 */	b isSwitch__10dSv_info_cCFii
@@ -78,12 +78,12 @@ lbl_80C743B4:
 /* 80C743BC  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 80C743C0  3C 60 80 C7 */	lis r3, l_cull_box@ha
 /* 80C743C4  38 83 55 FC */	addi r4, r3, l_cull_box@l
-/* 80C743C8  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C7560C */
+/* 80C743C8  C0 A4 00 10 */	lfs f5, 0x10(r4)
 /* 80C743CC  7F C3 F3 78 */	mr r3, r30
-/* 80C743D0  C0 24 00 00 */	lfs f1, 0(r4)	/* effective address: 80C755FC */
-/* 80C743D4  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C75600 */
-/* 80C743D8  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C75604 */
-/* 80C743DC  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C75608 */
+/* 80C743D0  C0 24 00 00 */	lfs f1, 0(r4)
+/* 80C743D4  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C743D8  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C743DC  C0 84 00 0C */	lfs f4, 0xc(r4)
 /* 80C743E0  FC C0 28 90 */	fmr f6, f5
 /* 80C743E4  4B 3A 61 64 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C743E8  38 7E 05 A0 */	addi r3, r30, 0x5a0
@@ -109,8 +109,8 @@ lbl_80C74410:
 /* 80C74434  80 9E 14 C4 */	lwz r4, 0x14c4(r30)
 /* 80C74438  28 04 00 00 */	cmplwi r4, 0
 /* 80C7443C  41 82 00 20 */	beq lbl_80C7445C
-/* 80C74440  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C74444  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C74440  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C74444  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C74448  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C7444C  7F C5 F3 78 */	mr r5, r30
 /* 80C74450  4B 40 05 B8 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -139,7 +139,7 @@ lbl_80C7447C:
 /* 80C744A4  41 82 00 14 */	beq lbl_80C744B8
 /* 80C744A8  3C 60 80 C7 */	lis r3, l_HIO@ha
 /* 80C744AC  38 63 57 54 */	addi r3, r3, l_HIO@l
-/* 80C744B0  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80C75764 */
+/* 80C744B0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80C744B4  D0 1E 14 C0 */	stfs f0, 0x14c0(r30)
 lbl_80C744B8:
 /* 80C744B8  7F C3 F3 78 */	mr r3, r30

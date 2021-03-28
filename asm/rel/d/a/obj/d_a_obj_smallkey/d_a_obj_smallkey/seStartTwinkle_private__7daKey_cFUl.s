@@ -16,7 +16,7 @@ lbl_80CDB2E0:
 /* 80CDB318  93 E1 00 08 */	stw r31, 8(r1)
 /* 80CDB31C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CDB320  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CDB324  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CDB324  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CDB328  38 81 00 08 */	addi r4, r1, 8
 /* 80CDB32C  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CDB330  38 C0 00 00 */	li r6, 0

@@ -281,23 +281,23 @@ asm void Z2AudibleAbsPos::init(JGeometry::TVec3<f32>* param_0, JGeometry::TVec3<
 /* ############################################################################################## */
 /* 803CAC98-803CACB8 0020+00 s=2 e=0 z=0  None .data      __vt__10Z2Audience                                           */
 SECTION_DATA static void* __vt__10Z2Audience[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10Z2AudienceFv,
-	/* 3    */ (void*)func_802BD338,
-	/* 4    */ (void*)getMaxChannels__10Z2AudienceFv,
-	/* 5    */ (void*)deleteAudible__10Z2AudienceFP10JAIAudible,
-	/* 6    */ (void*)calcPriority__10Z2AudienceFP10JAIAudible,
-	/* 7    */ (void*)mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10Z2AudienceFv,
+	(void*)func_802BD338,
+	(void*)getMaxChannels__10Z2AudienceFv,
+	(void*)deleteAudible__10Z2AudienceFP10JAIAudible,
+	(void*)calcPriority__10Z2AudienceFP10JAIAudible,
+	(void*)mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei,
 };
 
 /* 803CACB8-803CACD0 0014+04 s=2 e=0 z=0  None .data      __vt__9Z2Audible                                             */
 SECTION_DATA static void* __vt__9Z2Audible[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9Z2AudibleFv,
-	/* 3    */ (void*)getOuterParams__9Z2AudibleFi,
-	/* 4    */ (void*)calc__9Z2AudibleFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9Z2AudibleFv,
+	(void*)getOuterParams__9Z2AudibleFi,
+	(void*)calc__9Z2AudibleFv,
 	/* padding */
 	NULL,
 };

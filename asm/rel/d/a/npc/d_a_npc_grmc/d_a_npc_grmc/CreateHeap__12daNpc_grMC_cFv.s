@@ -20,8 +20,8 @@ lbl_809D77BC:
 /* 809D7804  38 63 9E C4 */	addi r3, r3, l_resNameList@l
 /* 809D7808  7C 63 00 2E */	lwzx r3, r3, r0
 /* 809D780C  7C 84 28 2E */	lwzx r4, r4, r5
-/* 809D7810  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809D7814  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809D7810  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809D7814  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809D7818  3C A5 00 02 */	addis r5, r5, 2
 /* 809D781C  38 C0 00 80 */	li r6, 0x80
 /* 809D7820  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -18,8 +18,8 @@ lbl_8068BA28:
 /* 8068BA68  38 61 00 14 */	addi r3, r1, 0x14
 /* 8068BA6C  38 81 00 08 */	addi r4, r1, 8
 /* 8068BA70  4B BD C2 9C */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 8068BA74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068BA78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8068BA74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068BA78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8068BA7C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8068BA80  38 81 00 14 */	addi r4, r1, 0x14
 /* 8068BA84  4B 9E 8A 1C */	b GroundCross__4cBgSFP11cBgS_GndChk

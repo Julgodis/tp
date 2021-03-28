@@ -9,7 +9,7 @@ lbl_80CE2EAC:
 /* 80CE2EC8  B0 1F 0D AC */	sth r0, 0xdac(r31)
 /* 80CE2ECC  3C 60 80 CE */	lis r3, l_HIO@ha
 /* 80CE2ED0  38 63 3C A0 */	addi r3, r3, l_HIO@l
-/* 80CE2ED4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80CE3CA8 */
+/* 80CE2ED4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CE2ED8  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80CE2EDC  38 60 00 00 */	li r3, 0
 /* 80CE2EE0  38 00 00 02 */	li r0, 2

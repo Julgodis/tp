@@ -96,8 +96,8 @@ lbl_80BC5564:
 /* 80BC5570  80 9F 07 F8 */	lwz r4, 0x7f8(r31)
 /* 80BC5574  28 04 00 00 */	cmplwi r4, 0
 /* 80BC5578  41 82 00 28 */	beq lbl_80BC55A0
-/* 80BC557C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC5580  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BC557C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC5580  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC5584  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BC5588  7F E5 FB 78 */	mr r5, r31
 /* 80BC558C  4B 4A F4 7C */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -116,7 +116,7 @@ lbl_80BC55A0:
 /* 80BC55BC  38 00 FF FF */	li r0, -1
 /* 80BC55C0  3C 60 80 BC */	lis r3, l_HIO@ha
 /* 80BC55C4  38 63 59 08 */	addi r3, r3, l_HIO@l
-/* 80BC55C8  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80BC590C */
+/* 80BC55C8  98 03 00 04 */	stb r0, 4(r3)
 lbl_80BC55CC:
 /* 80BC55CC  80 7F 05 70 */	lwz r3, 0x570(r31)
 /* 80BC55D0  38 03 00 24 */	addi r0, r3, 0x24

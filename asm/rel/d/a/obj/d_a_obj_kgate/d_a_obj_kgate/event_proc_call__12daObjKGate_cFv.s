@@ -6,7 +6,7 @@ lbl_8058A300:
 /* 8058A310  38 E4 AD 24 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 8058A314  3C 80 80 59 */	lis r4, struct_8058AEA8+0x1@ha
 /* 8058A318  38 C4 AE A9 */	addi r6, r4, struct_8058AEA8+0x1@l
-/* 8058A31C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 8058AEA9 */
+/* 8058A31C  88 06 00 00 */	lbz r0, 0(r6)
 /* 8058A320  7C 00 07 75 */	extsb. r0, r0
 /* 8058A324  40 82 00 58 */	bne lbl_8058A37C
 /* 8058A328  80 87 00 80 */	lwz r4, 0x80(r7)

@@ -9,9 +9,9 @@ lbl_80855320:
 /* 8085533C  7C 7E 1B 78 */	mr r30, r3
 /* 80855340  3C 60 80 85 */	lis r3, lit_3796@ha
 /* 80855344  3B E3 59 8C */	addi r31, r3, lit_3796@l
-/* 80855348  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8085534C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80855350  83 A3 5D 74 */	lwz r29, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 80855348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085534C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80855350  83 A3 5D 74 */	lwz r29, 0x5d74(r3)
 /* 80855354  38 61 00 0C */	addi r3, r1, 0xc
 /* 80855358  7F C4 F3 78 */	mr r4, r30
 /* 8085535C  4B FF FC FD */	bl get_check_pos__FP13kytag01_class
@@ -184,19 +184,19 @@ lbl_808555AC:
 /* 808555C0  38 00 00 00 */	li r0, 0
 /* 808555C4  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 808555C8  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 808555CC  98 03 12 C4 */	stb r0, 0x12c4(r3)	/* effective address: 8042DD18 */
+/* 808555CC  98 03 12 C4 */	stb r0, 0x12c4(r3)
 /* 808555D0  38 00 00 01 */	li r0, 1
-/* 808555D4  98 03 12 C5 */	stb r0, 0x12c5(r3)	/* effective address: 8042DD19 */
-/* 808555D8  D0 23 11 E0 */	stfs f1, 0x11e0(r3)	/* effective address: 8042DC34 */
-/* 808555DC  98 03 12 CE */	stb r0, 0x12ce(r3)	/* effective address: 8042DD22 */
+/* 808555D4  98 03 12 C5 */	stb r0, 0x12c5(r3)
+/* 808555D8  D0 23 11 E0 */	stfs f1, 0x11e0(r3)
+/* 808555DC  98 03 12 CE */	stb r0, 0x12ce(r3)
 /* 808555E0  38 00 00 03 */	li r0, 3
-/* 808555E4  98 03 0E B5 */	stb r0, 0xeb5(r3)	/* effective address: 8042D909 */
+/* 808555E4  98 03 0E B5 */	stb r0, 0xeb5(r3)
 /* 808555E8  C0 1F 00 38 */	lfs f0, 0x38(r31)
 /* 808555EC  EC 00 00 72 */	fmuls f0, f0, f1
 /* 808555F0  FC 00 00 1E */	fctiwz f0, f0
 /* 808555F4  D8 01 00 60 */	stfd f0, 0x60(r1)
 /* 808555F8  80 01 00 64 */	lwz r0, 0x64(r1)
-/* 808555FC  90 03 0E B8 */	stw r0, 0xeb8(r3)	/* effective address: 8042D90C */
+/* 808555FC  90 03 0E B8 */	stw r0, 0xeb8(r3)
 /* 80855600  C0 1F 00 3C */	lfs f0, 0x3c(r31)
 /* 80855604  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80855608  40 81 00 10 */	ble lbl_80855618

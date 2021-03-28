@@ -22,8 +22,8 @@ lbl_806D842C:
 /* 806D847C  4B AC C9 24 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 806D8480  80 7D 05 B4 */	lwz r3, 0x5b4(r29)
 /* 806D8484  4B 93 8D 3C */	b entryDL__16mDoExt_McaMorfSOFv
-/* 806D8488  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806D848C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806D8488  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806D848C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806D8490  38 63 09 58 */	addi r3, r3, 0x958
 /* 806D8494  38 80 00 07 */	li r4, 7
 /* 806D8498  4B 95 C4 9C */	b isDungeonItem__12dSv_memBit_cCFi

@@ -19,7 +19,6 @@ extern void* const data_804961C0[2];
 // 
 
 
-extern "C" void __sinit_d_a_tbox_cpp(); // 1
 
 // 
 // Declarations:

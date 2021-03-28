@@ -10,8 +10,8 @@ lbl_80765A98:
 /* 80765AB8  7C DD 33 78 */	mr r29, r6
 /* 80765ABC  7C FE 3B 78 */	mr r30, r7
 /* 80765AC0  7D 1F 43 78 */	mr r31, r8
-/* 80765AC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80765AC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80765AC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80765AC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80765ACC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80765AD0  7F 44 D3 78 */	mr r4, r26
 /* 80765AD4  4B 90 EB 8C */	b ChkPolySafe__4cBgSFRC13cBgS_PolyInfo

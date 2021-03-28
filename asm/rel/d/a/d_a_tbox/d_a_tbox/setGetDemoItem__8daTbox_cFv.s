@@ -48,8 +48,8 @@ lbl_80494670:
 /* 80494670  3C 04 00 01 */	addis r0, r4, 1
 /* 80494674  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80494678  41 82 00 14 */	beq lbl_8049468C
-/* 8049467C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80494680  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049467C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80494680  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80494684  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80494688  4B BA F0 64 */	b setPtI_Id__14dEvt_control_cFUi
 lbl_8049468C:

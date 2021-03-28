@@ -16,7 +16,7 @@ lbl_80674FDC:
 /* 80675014  90 01 00 08 */	stw r0, 8(r1)
 /* 80675018  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8067501C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80675020  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80675020  80 63 00 00 */	lwz r3, 0(r3)
 /* 80675024  38 81 00 08 */	addi r4, r1, 8
 /* 80675028  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 8067502C  38 C0 00 00 */	li r6, 0

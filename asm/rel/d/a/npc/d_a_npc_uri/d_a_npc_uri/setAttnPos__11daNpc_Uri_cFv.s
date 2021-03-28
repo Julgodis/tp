@@ -11,11 +11,11 @@ lbl_80B27FD8:
 /* 80B27FFC  3B C3 DD 18 */	addi r30, r3, lit_1109@l
 /* 80B28000  3C 60 80 B3 */	lis r3, m__17daNpc_Uri_Param_c@ha
 /* 80B28004  3B E3 CE 14 */	addi r31, r3, m__17daNpc_Uri_Param_c@l
-/* 80B28008  C0 1F 00 F4 */	lfs f0, 0xf4(r31)	/* effective address: 80B2CF08 */
+/* 80B28008  C0 1F 00 F4 */	lfs f0, 0xf4(r31)
 /* 80B2800C  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80B28010  C0 1F 00 F8 */	lfs f0, 0xf8(r31)	/* effective address: 80B2CF0C */
+/* 80B28010  C0 1F 00 F8 */	lfs f0, 0xf8(r31)
 /* 80B28014  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80B28018  C0 1F 00 D8 */	lfs f0, 0xd8(r31)	/* effective address: 80B2CEEC */
+/* 80B28018  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80B2801C  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80B28020  38 7D 0D 08 */	addi r3, r29, 0xd08
 /* 80B28024  38 80 00 00 */	li r4, 0

@@ -21,8 +21,8 @@ lbl_806EEE10:
 /* 806EEE5C  38 61 00 14 */	addi r3, r1, 0x14
 /* 806EEE60  38 81 00 08 */	addi r4, r1, 8
 /* 806EEE64  4B B7 8E A8 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 806EEE68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806EEE6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806EEE68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EEE6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806EEE70  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 806EEE74  38 81 00 14 */	addi r4, r1, 0x14
 /* 806EEE78  4B 98 56 28 */	b GroundCross__4cBgSFP11cBgS_GndChk

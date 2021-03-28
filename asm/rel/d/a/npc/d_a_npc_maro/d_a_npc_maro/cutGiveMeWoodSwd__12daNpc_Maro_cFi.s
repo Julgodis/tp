@@ -10,8 +10,8 @@ lbl_8055E968:
 /* 8055E988  3B E3 4B AC */	addi r31, r3, m__18daNpc_Maro_Param_c@l
 /* 8055E98C  3B C0 00 00 */	li r30, 0
 /* 8055E990  3B A0 FF FF */	li r29, -1
-/* 8055E994  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055E998  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8055E994  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055E998  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8055E99C  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8055E9A0  7F 63 DB 78 */	mr r3, r27
 /* 8055E9A4  3C A0 80 56 */	lis r5, struct_80564D58+0x0@ha

@@ -9,7 +9,7 @@ lbl_80C88000:
 /* 80C8801C  3B E3 85 04 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80C88020  3C 60 80 C9 */	lis r3, data_80C88638@ha
 /* 80C88024  38 A3 86 38 */	addi r5, r3, data_80C88638@l
-/* 80C88028  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C88638 */
+/* 80C88028  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C8802C  7C 00 07 75 */	extsb. r0, r0
 /* 80C88030  40 82 00 58 */	bne lbl_80C88088
 /* 80C88034  80 7F 00 2C */	lwz r3, 0x2c(r31)
@@ -35,8 +35,8 @@ lbl_80C88000:
 /* 80C88084  98 05 00 00 */	stb r0, 0(r5)
 lbl_80C88088:
 /* 80C88088  8B BE 05 AC */	lbz r29, 0x5ac(r30)
-/* 80C8808C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C88090  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C8808C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C88090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C88094  88 9E 05 AD */	lbz r4, 0x5ad(r30)
 /* 80C88098  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C8809C  7C 05 07 74 */	extsb r5, r0

@@ -45,8 +45,8 @@ lbl_809C12DC:
 lbl_809C12E4:
 /* 809C12E4  28 00 00 02 */	cmplwi r0, 2
 /* 809C12E8  40 82 00 6C */	bne lbl_809C1354
-/* 809C12EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C12F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809C12EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C12F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809C12F4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 809C12F8  3C 80 80 9D */	lis r4, struct_809CA4B8+0x0@ha
 /* 809C12FC  38 84 A4 B8 */	addi r4, r4, struct_809CA4B8+0x0@l

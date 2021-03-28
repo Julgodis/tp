@@ -14,7 +14,7 @@ lbl_8070FD40:
 /* 8070FD70  38 63 00 60 */	addi r3, r3, 0x60
 /* 8070FD74  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8070FD78  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8070FD7C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8070FD7C  80 84 00 00 */	lwz r4, 0(r4)
 /* 8070FD80  4B C3 67 30 */	b PSMTXCopy
 /* 8070FD84  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8070FD88  D0 01 00 20 */	stfs f0, 0x20(r1)

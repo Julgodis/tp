@@ -7,9 +7,9 @@ lbl_80979A34:
 /* 80979A48  38 00 00 00 */	li r0, 0
 /* 80979A4C  90 03 0B 68 */	stw r0, 0xb68(r3)
 /* 80979A50  38 7F 0A F8 */	addi r3, r31, 0xaf8
-/* 80979A54  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80979A58  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80979A5C  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 80979A54  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80979A58  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80979A5C  80 84 5D B4 */	lwz r4, 0x5db4(r4)
 /* 80979A60  4B 7C BC 80 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80979A64  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 80979A68  B0 1F 0B 92 */	sth r0, 0xb92(r31)

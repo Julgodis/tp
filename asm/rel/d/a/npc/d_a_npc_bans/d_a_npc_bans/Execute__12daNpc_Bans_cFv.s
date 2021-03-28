@@ -28,11 +28,11 @@ lbl_8096336C:
 /* 809633D4  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 809633D8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809633DC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809633E0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809633E4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809633E0  80 64 00 00 */	lwz r3, 0(r4)
+/* 809633E4  80 04 00 04 */	lwz r0, 4(r4)
 /* 809633E8  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 809633EC  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 809633F0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809633F0  80 04 00 08 */	lwz r0, 8(r4)
 /* 809633F4  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 809633F8  38 00 00 01 */	li r0, 1
 /* 809633FC  98 1F 12 65 */	stb r0, 0x1265(r31)

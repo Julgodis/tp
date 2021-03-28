@@ -10,11 +10,11 @@ lbl_809699D0:
 /* 809699F0  7C BF 2B 78 */	mr r31, r5
 /* 809699F4  3C 60 80 97 */	lis r3, lit_4574@ha
 /* 809699F8  38 83 CA 3C */	addi r4, r3, lit_4574@l
-/* 809699FC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8096CA3C */
-/* 80969A00  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8096CA40 */
+/* 809699FC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80969A00  80 04 00 04 */	lwz r0, 4(r4)
 /* 80969A04  90 61 00 08 */	stw r3, 8(r1)
 /* 80969A08  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80969A0C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8096CA44 */
+/* 80969A0C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80969A10  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80969A14  2C 05 00 00 */	cmpwi r5, 0
 /* 80969A18  40 82 00 B0 */	bne lbl_80969AC8
@@ -28,11 +28,11 @@ lbl_809699D0:
 /* 80969A38  4B 9D CA 78 */	b PSMTXCopy
 /* 80969A3C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80969A40  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80969A44  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 80969A44  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80969A48  D0 1D 08 54 */	stfs f0, 0x854(r29)
-/* 80969A4C  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 80969A4C  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 80969A50  D0 1D 08 58 */	stfs f0, 0x858(r29)
-/* 80969A54  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 80969A54  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 80969A58  D0 1D 08 5C */	stfs f0, 0x85c(r29)
 /* 80969A5C  80 7D 05 68 */	lwz r3, 0x568(r29)
 /* 80969A60  80 63 00 04 */	lwz r3, 4(r3)
@@ -84,7 +84,7 @@ lbl_80969B04:
 /* 80969B0C  38 A1 00 08 */	addi r5, r1, 8
 /* 80969B10  3C C0 80 97 */	lis r6, m__19daNpcBlueNS_Param_c@ha
 /* 80969B14  38 C6 C9 64 */	addi r6, r6, m__19daNpcBlueNS_Param_c@l
-/* 80969B18  C0 26 00 40 */	lfs f1, 0x40(r6)	/* effective address: 8096C9A4 */
+/* 80969B18  C0 26 00 40 */	lfs f1, 0x40(r6)
 /* 80969B1C  4B 7E 98 60 */	b setLookatMtx__8daNpcF_cFiPif
 lbl_80969B20:
 /* 80969B20  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

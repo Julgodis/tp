@@ -201,9 +201,9 @@ asm void JUTConsole::create(unsigned int param_0, void* param_1, u32 param_2) {
 /* ############################################################################################## */
 /* 803CC9A8-803CC9B8 000C+04 s=2 e=0 z=0  None .data      __vt__10JUTConsole                                           */
 SECTION_DATA static void* __vt__10JUTConsole[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JUTConsoleFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JUTConsoleFv,
 	/* padding */
 	NULL,
 };

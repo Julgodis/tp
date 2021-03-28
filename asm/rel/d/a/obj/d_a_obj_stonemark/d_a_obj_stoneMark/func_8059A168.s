@@ -44,7 +44,7 @@ lbl_8059A208:
 /* 8059A208  38 7E 05 68 */	addi r3, r30, 0x568
 /* 8059A20C  3C 80 80 5A */	lis r4, l_arcName@ha
 /* 8059A210  38 84 A4 10 */	addi r4, r4, l_arcName@l
-/* 8059A214  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8059A410 */
+/* 8059A214  80 84 00 00 */	lwz r4, 0(r4)
 /* 8059A218  4B A9 2C A4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8059A21C  7C 7F 1B 78 */	mr r31, r3
 /* 8059A220  2C 1F 00 04 */	cmpwi r31, 4

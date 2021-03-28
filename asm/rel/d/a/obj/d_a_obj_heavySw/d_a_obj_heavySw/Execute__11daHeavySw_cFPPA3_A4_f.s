@@ -8,8 +8,8 @@ lbl_80C1CFC0:
 /* 80C1CFD8  7C 9F 23 78 */	mr r31, r4
 /* 80C1CFDC  48 00 00 51 */	bl moveSwitch__11daHeavySw_cFv
 /* 80C1CFE0  38 7E 06 20 */	addi r3, r30, 0x620
-/* 80C1CFE4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C1CFE8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C1CFE4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C1CFE8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C1CFEC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C1CFF0  4B 45 9A BC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C1CFF4  80 7E 05 A8 */	lwz r3, 0x5a8(r30)

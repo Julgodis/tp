@@ -86,7 +86,7 @@ lbl_80BB27E4:
 /* 80BB283C  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80BB2840  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB2844  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB2848  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB2848  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB284C  38 81 00 28 */	addi r4, r1, 0x28
 /* 80BB2850  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80BB2854  38 C0 00 00 */	li r6, 0
@@ -111,9 +111,9 @@ lbl_80BB2888:
 /* 80BB2898  C0 3F 00 6C */	lfs f1, 0x6c(r31)
 /* 80BB289C  80 7E 05 B0 */	lwz r3, 0x5b0(r30)
 /* 80BB28A0  D0 23 00 0C */	stfs f1, 0xc(r3)
-/* 80BB28A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB28A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BB28AC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80BB28A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB28A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB28AC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80BB28B0  38 80 00 00 */	li r4, 0
 /* 80BB28B4  90 81 00 08 */	stw r4, 8(r1)
 /* 80BB28B8  38 00 FF FF */	li r0, -1
@@ -158,7 +158,7 @@ lbl_80BB2924:
 /* 80BB294C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80BB2950  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB2954  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB2958  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB2958  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB295C  38 81 00 24 */	addi r4, r1, 0x24
 /* 80BB2960  3B BE 05 38 */	addi r29, r30, 0x538
 /* 80BB2964  7F A5 EB 78 */	mr r5, r29
@@ -180,7 +180,7 @@ lbl_80BB2924:
 /* 80BB29A4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80BB29A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB29AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB29B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB29B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB29B4  38 81 00 20 */	addi r4, r1, 0x20
 /* 80BB29B8  7F A5 EB 78 */	mr r5, r29
 /* 80BB29BC  38 C0 00 00 */	li r6, 0

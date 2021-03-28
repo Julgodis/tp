@@ -19,7 +19,6 @@ extern void* const data_80599E28[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_stick_cpp(); // 1
 
 // 
 // Declarations:

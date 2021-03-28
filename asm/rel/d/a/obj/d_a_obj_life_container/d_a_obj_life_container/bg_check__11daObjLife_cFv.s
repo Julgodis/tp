@@ -75,7 +75,7 @@ lbl_804CD4FC:
 /* 804CD53C  7C 66 1B 78 */	mr r6, r3
 /* 804CD540  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804CD544  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804CD548  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804CD548  80 63 00 00 */	lwz r3, 0(r3)
 /* 804CD54C  38 81 00 08 */	addi r4, r1, 8
 /* 804CD550  38 BF 05 38 */	addi r5, r31, 0x538
 /* 804CD554  7F A7 EB 78 */	mr r7, r29

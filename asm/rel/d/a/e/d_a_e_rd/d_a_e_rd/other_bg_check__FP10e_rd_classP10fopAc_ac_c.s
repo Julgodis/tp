@@ -31,8 +31,8 @@ lbl_805059A4:
 /* 80505A18  38 A1 00 08 */	addi r5, r1, 8
 /* 80505A1C  7F E6 FB 78 */	mr r6, r31
 /* 80505A20  4B B7 23 44 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80505A24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80505A28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80505A24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80505A28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80505A2C  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80505A30  7F E3 FB 78 */	mr r3, r31
 /* 80505A34  38 81 00 20 */	addi r4, r1, 0x20

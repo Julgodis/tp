@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J2DOrthoGraph {
+};
+
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
@@ -18,9 +21,6 @@ struct STControl {
 };
 
 struct JKRArchive {
-};
-
-struct J2DOrthoGraph {
 };
 
 struct JKRExpHeap {
@@ -73,6 +73,9 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
+struct ResTLUT {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -80,9 +83,6 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
-};
-
-struct ResTLUT {
 };
 
 struct ResTIMG {
@@ -93,10 +93,10 @@ struct J2DPicture {
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
 };
 
-struct JUTFont {
+struct JMSMesgEntry_c {
 };
 
-struct JMSMesgEntry_c {
+struct JUTFont {
 };
 
 struct dMeter2Info_c {
@@ -153,10 +153,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -342,44 +342,44 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BD8D4-803BD8E0 000C+00 s=1 e=0 z=0  None .data      @3844                                                        */
 SECTION_DATA static void* lit_3844[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD8E0-803BD8EC 000C+00 s=1 e=0 z=0  None .data      @3845                                                        */
 SECTION_DATA static void* lit_3845[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD8EC-803BD8F8 000C+00 s=1 e=0 z=0  None .data      @3846                                                        */
 SECTION_DATA static void* lit_3846[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD8F8-803BD904 000C+00 s=1 e=0 z=0  None .data      @3847                                                        */
 SECTION_DATA static void* lit_3847[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_select_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_select_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD904-803BD910 000C+00 s=1 e=0 z=0  None .data      @3848                                                        */
 SECTION_DATA static void* lit_3848[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_next_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_next_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD910-803BD91C 000C+00 s=1 e=0 z=0  None .data      @3849                                                        */
 SECTION_DATA static void* lit_3849[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)close_init__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)close_init__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD91C-803BD964 0048+00 s=2 e=0 z=0  None .data      init_process                                                 */
@@ -393,44 +393,44 @@ SECTION_DATA static u8 init_process[72] = {
 
 /* 803BD964-803BD970 000C+00 s=1 e=0 z=0  None .data      @3850                                                        */
 SECTION_DATA static void* lit_3850[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD970-803BD97C 000C+00 s=1 e=0 z=0  None .data      @3851                                                        */
 SECTION_DATA static void* lit_3851[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD97C-803BD988 000C+00 s=1 e=0 z=0  None .data      @3852                                                        */
 SECTION_DATA static void* lit_3852[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD988-803BD994 000C+00 s=1 e=0 z=0  None .data      @3853                                                        */
 SECTION_DATA static void* lit_3853[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_select_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_select_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD994-803BD9A0 000C+00 s=1 e=0 z=0  None .data      @3854                                                        */
 SECTION_DATA static void* lit_3854[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_next_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_next_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD9A0-803BD9AC 000C+00 s=1 e=0 z=0  None .data      @3855                                                        */
 SECTION_DATA static void* lit_3855[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)close_proc__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)close_proc__19dMenu_ItemExplain_cFv,
 };
 
 /* 803BD9AC-803BD9F4 0048+00 s=2 e=0 z=0  None .data      move_process                                                 */
@@ -444,9 +444,9 @@ SECTION_DATA static u8 move_process[72] = {
 
 /* 803BD9F4-803BDA00 000C+00 s=2 e=0 z=0  None .data      __vt__19dMenu_ItemExplain_c                                  */
 SECTION_DATA static void* __vt__19dMenu_ItemExplain_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dMenu_ItemExplain_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dMenu_ItemExplain_cFv,
 };
 
 /* 80454288-8045428C 0004+00 s=3 e=0 z=0  None .sdata2    @4062                                                        */

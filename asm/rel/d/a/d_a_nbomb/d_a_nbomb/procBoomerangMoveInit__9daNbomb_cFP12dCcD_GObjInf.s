@@ -15,11 +15,11 @@ lbl_804CA3B8:
 lbl_804CA3EC:
 /* 804CA3EC  3C 60 80 4D */	lis r3, lit_5924@ha
 /* 804CA3F0  38 83 C5 78 */	addi r4, r3, lit_5924@l
-/* 804CA3F4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804CC578 */
-/* 804CA3F8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804CC57C */
+/* 804CA3F4  80 64 00 00 */	lwz r3, 0(r4)
+/* 804CA3F8  80 04 00 04 */	lwz r0, 4(r4)
 /* 804CA3FC  90 7F 0C 38 */	stw r3, 0xc38(r31)
 /* 804CA400  90 1F 0C 3C */	stw r0, 0xc3c(r31)
-/* 804CA404  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804CC580 */
+/* 804CA404  80 04 00 08 */	lwz r0, 8(r4)
 /* 804CA408  90 1F 0C 40 */	stw r0, 0xc40(r31)
 /* 804CA40C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 804CA410  28 00 00 04 */	cmplwi r0, 4
@@ -51,9 +51,9 @@ lbl_804CA434:
 /* 804CA46C  38 7F 0B 40 */	addi r3, r31, 0xb40
 /* 804CA470  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 804CA474  4B C9 41 3C */	b initOffset__20daPy_boomerangMove_cFPC4cXyz
-/* 804CA478  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804CA47C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804CA480  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804CA478  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804CA47C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804CA480  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 804CA484  4B C1 92 DC */	b getBombExplodeTime__9daAlink_cCFv
 /* 804CA488  7C 60 07 34 */	extsh r0, r3
 /* 804CA48C  3C 60 80 4D */	lis r3, lit_4689@ha

@@ -9,7 +9,7 @@ lbl_80799784:
 /* 807997A0  7C 7E 1B 78 */	mr r30, r3
 /* 807997A4  3C 60 80 7A */	lis r3, lit_3790@ha
 /* 807997A8  3B E3 D5 B0 */	addi r31, r3, lit_3790@l
-/* 807997AC  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 8079D5B4 */
+/* 807997AC  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 807997B0  A8 1E 06 84 */	lha r0, 0x684(r30)
 /* 807997B4  28 00 00 14 */	cmplwi r0, 0x14
 /* 807997B8  41 81 02 50 */	bgt lbl_80799A08

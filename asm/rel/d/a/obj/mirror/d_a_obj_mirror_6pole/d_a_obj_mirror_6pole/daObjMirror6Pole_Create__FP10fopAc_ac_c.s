@@ -19,7 +19,7 @@ lbl_80C9625C:
 /* 80C9625C  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80C96260  3C 80 80 C9 */	lis r4, l_arcName@ha
 /* 80C96264  38 84 65 4C */	addi r4, r4, l_arcName@l
-/* 80C96268  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9654C */
+/* 80C96268  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C9626C  4B 39 6C 50 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C96270  7C 7E 1B 78 */	mr r30, r3
 /* 80C96274  2C 1E 00 04 */	cmpwi r30, 4

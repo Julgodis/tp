@@ -17,8 +17,8 @@ lbl_80C98668:
 /* 80C986A4  C0 03 89 DC */	lfs f0, lit_3730@l(r3)
 /* 80C986A8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80C986AC  40 81 00 38 */	ble lbl_80C986E4
-/* 80C986B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C986B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C986B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C986B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C986B8  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80C986BC  7F E3 FB 78 */	mr r3, r31
 /* 80C986C0  4B 3D BB 90 */	b Release__4cBgSFP9dBgW_Base

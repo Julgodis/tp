@@ -11,8 +11,8 @@ lbl_804BC7D4:
 /* 804BC7F8  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
 /* 804BC7FC  38 63 61 94 */	addi r3, r3, mDemoArcName__20dStage_roomControl_c@l
 /* 804BC800  7C A4 2B 78 */	mr r4, r5
-/* 804BC804  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804BC808  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804BC804  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804BC808  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804BC80C  3C A5 00 02 */	addis r5, r5, 2
 /* 804BC810  38 C0 00 80 */	li r6, 0x80
 /* 804BC814  38 A5 C2 F8 */	addi r5, r5, -15624

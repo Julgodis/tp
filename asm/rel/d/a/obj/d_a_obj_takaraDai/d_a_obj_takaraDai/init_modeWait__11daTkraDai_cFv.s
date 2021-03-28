@@ -4,12 +4,12 @@ lbl_80D074D0:
 /* 80D074D8  38 A4 78 08 */	addi r5, r4, lit_3627@l
 /* 80D074DC  3C 80 80 D0 */	lis r4, l_HIO@ha
 /* 80D074E0  38 84 79 1C */	addi r4, r4, l_HIO@l
-/* 80D074E4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80D07924 */
+/* 80D074E4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80D074E8  D0 03 05 DC */	stfs f0, 0x5dc(r3)
-/* 80D074EC  C0 65 00 44 */	lfs f3, 0x44(r5)	/* effective address: 80D0784C */
-/* 80D074F0  C0 45 00 48 */	lfs f2, 0x48(r5)	/* effective address: 80D07850 */
-/* 80D074F4  C0 25 00 20 */	lfs f1, 0x20(r5)	/* effective address: 80D07828 */
-/* 80D074F8  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80D07920 */
+/* 80D074EC  C0 65 00 44 */	lfs f3, 0x44(r5)
+/* 80D074F0  C0 45 00 48 */	lfs f2, 0x48(r5)
+/* 80D074F4  C0 25 00 20 */	lfs f1, 0x20(r5)
+/* 80D074F8  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80D074FC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80D07500  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80D07504  EC 03 00 32 */	fmuls f0, f3, f0

@@ -4,10 +4,10 @@ lbl_80B28868:
 /* 80B28870  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80B28874  38 00 00 00 */	li r0, 0
 /* 80B28878  90 01 00 08 */	stw r0, 8(r1)
-/* 80B2887C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B28880  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B28884  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80B28888  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B2887C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B28880  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B28884  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80B28888  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B2888C  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 80B28890  7D 89 03 A6 */	mtctr r12
 /* 80B28894  4E 80 04 21 */	bctrl 

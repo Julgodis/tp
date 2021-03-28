@@ -6,8 +6,8 @@ lbl_8058D628:
 /* 8058D638  93 C1 00 08 */	stw r30, 8(r1)
 /* 8058D63C  7C 7E 1B 78 */	mr r30, r3
 /* 8058D640  3B E0 00 00 */	li r31, 0
-/* 8058D644  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058D648  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8058D644  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058D648  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058D64C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8058D650  A8 9E 06 1C */	lha r4, 0x61c(r30)
 /* 8058D654  4B AB 9E 68 */	b getEventData__16dEvent_manager_cFs

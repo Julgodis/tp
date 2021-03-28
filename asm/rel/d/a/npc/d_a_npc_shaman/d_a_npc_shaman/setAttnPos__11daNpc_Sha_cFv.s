@@ -9,11 +9,11 @@ lbl_80AE4044:
 /* 80AE4060  7C 7E 1B 78 */	mr r30, r3
 /* 80AE4064  3C 60 80 AE */	lis r3, m__17daNpc_Sha_Param_c@ha
 /* 80AE4068  3B E3 6B C8 */	addi r31, r3, m__17daNpc_Sha_Param_c@l
-/* 80AE406C  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80AE6C8C */
+/* 80AE406C  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80AE4070  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 80AE4074  C0 3F 00 C8 */	lfs f1, 0xc8(r31)	/* effective address: 80AE6C90 */
+/* 80AE4074  C0 3F 00 C8 */	lfs f1, 0xc8(r31)
 /* 80AE4078  D0 21 00 54 */	stfs f1, 0x54(r1)
-/* 80AE407C  C0 1F 00 AC */	lfs f0, 0xac(r31)	/* effective address: 80AE6C74 */
+/* 80AE407C  C0 1F 00 AC */	lfs f0, 0xac(r31)
 /* 80AE4080  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 80AE4084  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 80AE4088  D0 21 00 48 */	stfs f1, 0x48(r1)
@@ -179,7 +179,7 @@ lbl_80AE4044:
 /* 80AE4308  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AE430C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80AE4310  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80AE4314  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80AE4314  80 63 00 00 */	lwz r3, 0(r3)
 /* 80AE4318  38 81 00 10 */	addi r4, r1, 0x10
 /* 80AE431C  38 BE 0D 6C */	addi r5, r30, 0xd6c
 /* 80AE4320  38 C0 00 00 */	li r6, 0

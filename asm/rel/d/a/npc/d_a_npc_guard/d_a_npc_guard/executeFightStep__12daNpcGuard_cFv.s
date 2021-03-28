@@ -13,9 +13,9 @@ lbl_809F0700:
 /* 809F072C  4B 97 C0 54 */	b pow
 /* 809F0730  FF E0 08 18 */	frsp f31, f1
 /* 809F0734  7F E3 FB 78 */	mr r3, r31
-/* 809F0738  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809F073C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809F0740  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 809F0738  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809F073C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809F0740  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 809F0744  4B 62 A3 50 */	b fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 809F0748  FC 01 F8 40 */	fcmpo cr0, f1, f31
 /* 809F074C  40 81 00 10 */	ble lbl_809F075C

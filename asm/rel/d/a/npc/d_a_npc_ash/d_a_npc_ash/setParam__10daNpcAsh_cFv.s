@@ -89,8 +89,8 @@ lbl_8095BE08:
 lbl_8095BE34:
 /* 8095BE34  38 00 00 0A */	li r0, 0xa
 /* 8095BE38  90 1F 05 5C */	stw r0, 0x55c(r31)
-/* 8095BE3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8095BE40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8095BE3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8095BE40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8095BE44  3B C3 4E 00 */	addi r30, r3, 0x4e00
 /* 8095BE48  7F C3 F3 78 */	mr r3, r30
 /* 8095BE4C  3C 80 80 96 */	lis r4, stringBase0@ha
@@ -99,9 +99,9 @@ lbl_8095BE34:
 /* 8095BE58  4B A0 CB 3C */	b strcmp
 /* 8095BE5C  2C 03 00 00 */	cmpwi r3, 0
 /* 8095BE60  40 82 00 30 */	bne lbl_8095BE90
-/* 8095BE64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8095BE68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8095BE6C  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
+/* 8095BE64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8095BE68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8095BE6C  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
 /* 8095BE70  2C 00 00 05 */	cmpwi r0, 5
 /* 8095BE74  40 82 00 1C */	bne lbl_8095BE90
 /* 8095BE78  38 60 00 00 */	li r3, 0
@@ -150,8 +150,8 @@ lbl_8095BF14:
 /* 8095BF14  7F E3 FB 78 */	mr r3, r31
 /* 8095BF18  3C 80 80 96 */	lis r4, m__16daNpcAsh_Param_c@ha
 /* 8095BF1C  38 A4 D6 40 */	addi r5, r4, m__16daNpcAsh_Param_c@l
-/* 8095BF20  A8 85 00 4C */	lha r4, 0x4c(r5)	/* effective address: 8095D68C */
-/* 8095BF24  A8 A5 00 4E */	lha r5, 0x4e(r5)	/* effective address: 8095D68E */
+/* 8095BF20  A8 85 00 4C */	lha r4, 0x4c(r5)
+/* 8095BF24  A8 A5 00 4E */	lha r5, 0x4e(r5)
 /* 8095BF28  4B 7F 83 50 */	b getDistTableIdx__8daNpcF_cFii
 /* 8095BF2C  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 8095BF30  88 1F 05 44 */	lbz r0, 0x544(r31)
@@ -159,8 +159,8 @@ lbl_8095BF14:
 /* 8095BF38  7F E3 FB 78 */	mr r3, r31
 /* 8095BF3C  3C 80 80 96 */	lis r4, m__16daNpcAsh_Param_c@ha
 /* 8095BF40  38 A4 D6 40 */	addi r5, r4, m__16daNpcAsh_Param_c@l
-/* 8095BF44  A8 85 00 48 */	lha r4, 0x48(r5)	/* effective address: 8095D688 */
-/* 8095BF48  A8 A5 00 4A */	lha r5, 0x4a(r5)	/* effective address: 8095D68A */
+/* 8095BF44  A8 85 00 48 */	lha r4, 0x48(r5)
+/* 8095BF48  A8 A5 00 4A */	lha r5, 0x4a(r5)
 /* 8095BF4C  4B 7F 83 2C */	b getDistTableIdx__8daNpcF_cFii
 /* 8095BF50  98 7F 05 47 */	stb r3, 0x547(r31)
 lbl_8095BF54:

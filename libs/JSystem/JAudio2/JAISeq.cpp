@@ -11,25 +11,25 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISeqMgr {
+};
+
+struct JAISoundActivity {
+};
+
+struct JAIAudience {
 };
 
 struct JASSoundParams {
+};
+
+struct JAISoundID {
 };
 
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAISeq> */
 struct JAISoundStrategyMgr__template1 {
-};
-
-struct JAIAudience {
-};
-
-struct JAISoundActivity {
-};
-
-struct JAISeqMgr {
 };
 
 struct JGeometry {
@@ -223,29 +223,29 @@ extern "C" asm static void func_802A0A6C() {
 /* ############################################################################################## */
 /* 803C98D8-803C98F4 001C+00 s=1 e=0 z=0  None .data      @852                                                         */
 SECTION_DATA static void* lit_852[7] = {
-	/* 0    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x68),
-	/* 1    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x9C),
-	/* 2    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x44),
-	/* 3    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xE0),
-	/* 4    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xB8),
-	/* 5    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xD8),
-	/* 6    */ (void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xE0),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x68),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x9C),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0x44),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xE0),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xB8),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xD8),
+	(void*)(((char*)prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity)+0xE0),
 };
 
 /* 803C98F4-803C9928 0030+04 s=1 e=2 z=0  None .data      __vt__6JAISeq                                                */
 SECTION_DATA void* __vt__6JAISeq[12 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getNumChild__6JAISeqCFv,
-	/* 3    */ (void*)getChild__6JAISeqFi,
-	/* 4    */ (void*)releaseChild__6JAISeqFi,
-	/* 5    */ (void*)asSe__8JAISoundFv,
-	/* 6    */ (void*)asSeq__6JAISeqFv,
-	/* 7    */ (void*)asStream__8JAISoundFv,
-	/* 8    */ (void*)getTrack__6JAISeqFv,
-	/* 9    */ (void*)getChildTrack__6JAISeqFi,
-	/* 10   */ (void*)getTempoMgr__6JAISeqFv,
-	/* 11   */ (void*)JAISound_tryDie___6JAISeqFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getNumChild__6JAISeqCFv,
+	(void*)getChild__6JAISeqFi,
+	(void*)releaseChild__6JAISeqFi,
+	(void*)asSe__8JAISoundFv,
+	(void*)asSeq__6JAISeqFv,
+	(void*)asStream__8JAISoundFv,
+	(void*)getTrack__6JAISeqFv,
+	(void*)getChildTrack__6JAISeqFi,
+	(void*)getTempoMgr__6JAISeqFv,
+	(void*)JAISound_tryDie___6JAISeqFv,
 	/* padding */
 	NULL,
 };

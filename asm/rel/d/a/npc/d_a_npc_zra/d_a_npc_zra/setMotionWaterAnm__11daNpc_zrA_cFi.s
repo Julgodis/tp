@@ -135,8 +135,8 @@ lbl_80B7C240:
 /* 80B7C25C  54 00 10 3A */	slwi r0, r0, 2
 /* 80B7C260  38 7F 04 70 */	addi r3, r31, 0x470
 /* 80B7C264  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80B7C268  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80B7C26C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80B7C268  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80B7C26C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80B7C270  3C A5 00 02 */	addis r5, r5, 2
 /* 80B7C274  38 C0 00 80 */	li r6, 0x80
 /* 80B7C278  38 A5 C2 F8 */	addi r5, r5, -15624

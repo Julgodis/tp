@@ -82,10 +82,10 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -363,22 +363,22 @@ asm void dMeterMap_c::isMapOpenCheck() {
 /* ############################################################################################## */
 /* 803BF2D8-803BF2F8 0020+00 s=1 e=0 z=0  None .data      @4516                                                        */
 SECTION_DATA static void* lit_4516[8] = {
-	/* 0    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
-	/* 1    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x184),
-	/* 2    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1B4),
-	/* 3    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x19C),
-	/* 4    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
-	/* 5    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1A8),
-	/* 6    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C0),
-	/* 7    */ (void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x190),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x184),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1B4),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x19C),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C8),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1A8),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x1C0),
+	(void*)(((char*)ctrlShowMap__11dMeterMap_cFv)+0x190),
 };
 
 /* 803BF2F8-803BF308 0010+00 s=2 e=0 z=0  None .data      __vt__11dMeterMap_c                                          */
 SECTION_DATA static void* __vt__11dMeterMap_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dMeterMap_cFv,
-	/* 3    */ (void*)__dt__11dMeterMap_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dMeterMap_cFv,
+	(void*)__dt__11dMeterMap_cFv,
 };
 
 /* 8020D948-8020D990 0048+00 s=0 e=1 z=0  None .text      __ct__11dMeterMap_cFP9J2DScreen                              */

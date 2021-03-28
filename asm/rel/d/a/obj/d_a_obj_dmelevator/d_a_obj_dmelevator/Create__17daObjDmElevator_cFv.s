@@ -21,8 +21,8 @@ lbl_80BDDEFC:
 /* 80BDDF48  98 1D 06 2B */	stb r0, 0x62b(r29)
 /* 80BDDF4C  48 00 0D 49 */	bl modeSwWaitUpperInit__17daObjDmElevator_cFv
 lbl_80BDDF50:
-/* 80BDDF50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDDF54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDDF50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDDF54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BDDF58  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80BDDF5C  7F C3 F3 78 */	mr r3, r30
 /* 80BDDF60  80 9D 05 E8 */	lwz r4, 0x5e8(r29)

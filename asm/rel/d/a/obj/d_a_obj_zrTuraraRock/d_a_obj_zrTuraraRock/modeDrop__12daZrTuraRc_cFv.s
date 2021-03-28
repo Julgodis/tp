@@ -18,8 +18,8 @@ lbl_80D42084:
 /* 80D420C4  7D 89 03 A6 */	mtctr r12
 /* 80D420C8  4E 80 04 21 */	bctrl 
 /* 80D420CC  38 7F 07 40 */	addi r3, r31, 0x740
-/* 80D420D0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D420D4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80D420D0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D420D4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80D420D8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80D420DC  4B 33 49 D0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80D420E0  7F E3 FB 78 */	mr r3, r31

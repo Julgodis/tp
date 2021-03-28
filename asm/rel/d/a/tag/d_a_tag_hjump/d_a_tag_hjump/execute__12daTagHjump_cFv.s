@@ -7,9 +7,9 @@ lbl_805A3E70:
 /* 805A3E84  7C 7D 1B 78 */	mr r29, r3
 /* 805A3E88  3C 60 80 5A */	lis r3, l_arcName@ha
 /* 805A3E8C  3B E3 42 38 */	addi r31, r3, l_arcName@l
-/* 805A3E90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A3E94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A3E98  83 C3 5D B8 */	lwz r30, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 805A3E90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A3E94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A3E98  83 C3 5D B8 */	lwz r30, 0x5db8(r3)
 /* 805A3E9C  28 1E 00 00 */	cmplwi r30, 0
 /* 805A3EA0  41 82 02 78 */	beq lbl_805A4118
 /* 805A3EA4  88 1D 05 AC */	lbz r0, 0x5ac(r29)
@@ -30,8 +30,8 @@ lbl_805A3EDC:
 /* 805A3EDC  A0 1D 05 B2 */	lhz r0, 0x5b2(r29)
 /* 805A3EE0  28 00 0F FF */	cmplwi r0, 0xfff
 /* 805A3EE4  41 82 00 2C */	beq lbl_805A3F10
-/* 805A3EE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A3EEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A3EE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A3EEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A3EF0  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 805A3EF4  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 805A3EF8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha

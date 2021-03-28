@@ -7,8 +7,8 @@ lbl_80B96DF0:
 /* 80B96E04  7C 7C 1B 78 */	mr r28, r3
 /* 80B96E08  7C 9D 23 78 */	mr r29, r4
 /* 80B96E0C  7C BE 2B 78 */	mr r30, r5
-/* 80B96E10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B96E14  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80B96E10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B96E14  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80B96E18  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80B96E1C  4B 4B 15 CC */	b getRunEventName__16dEvent_manager_cFv
 /* 80B96E20  57 A0 10 3A */	slwi r0, r29, 2

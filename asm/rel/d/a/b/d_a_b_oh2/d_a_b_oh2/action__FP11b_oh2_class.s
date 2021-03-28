@@ -11,11 +11,11 @@ lbl_8061E1D8:
 /* 8061E1FC  2C 00 00 00 */	cmpwi r0, 0
 /* 8061E200  3C 60 80 62 */	lis r3, boss@ha
 /* 8061E204  38 63 EA E8 */	addi r3, r3, boss@l
-/* 8061E208  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061EAE8 */
-/* 8061E20C  80 63 05 C0 */	lwz r3, 0x5c0(r3)	/* effective address: 8061F0A8 */
-/* 8061E210  80 63 00 04 */	lwz r3, 4(r3)	/* effective address: 8061EAEC */
-/* 8061E214  80 63 00 84 */	lwz r3, 0x84(r3)	/* effective address: 8061EB6C */
-/* 8061E218  80 83 00 0C */	lwz r4, 0xc(r3)	/* effective address: 8061EAF4 */
+/* 8061E208  80 63 00 00 */	lwz r3, 0(r3)
+/* 8061E20C  80 63 05 C0 */	lwz r3, 0x5c0(r3)
+/* 8061E210  80 63 00 04 */	lwz r3, 4(r3)
+/* 8061E214  80 63 00 84 */	lwz r3, 0x84(r3)
+/* 8061E218  80 83 00 0C */	lwz r4, 0xc(r3)
 /* 8061E21C  80 7E 05 C8 */	lwz r3, 0x5c8(r30)
 /* 8061E220  38 03 00 08 */	addi r0, r3, 8
 /* 8061E224  1C 00 00 30 */	mulli r0, r0, 0x30
@@ -25,19 +25,19 @@ lbl_8061E1D8:
 /* 8061E234  4B D2 82 7C */	b PSMTXCopy
 /* 8061E238  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8061E23C  38 83 D4 70 */	addi r4, r3, now__14mDoMtx_stack_c@l
-/* 8061E240  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 803DD47C */
+/* 8061E240  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8061E244  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
-/* 8061E248  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 803DD48C */
+/* 8061E248  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 8061E24C  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
-/* 8061E250  C0 04 00 2C */	lfs f0, 0x2c(r4)	/* effective address: 803DD49C */
+/* 8061E250  C0 04 00 2C */	lfs f0, 0x2c(r4)
 /* 8061E254  D0 1E 04 D8 */	stfs f0, 0x4d8(r30)
 /* 8061E258  3C 60 80 62 */	lis r3, boss@ha
 /* 8061E25C  38 63 EA E8 */	addi r3, r3, boss@l
-/* 8061E260  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061EAE8 */
-/* 8061E264  80 63 05 C0 */	lwz r3, 0x5c0(r3)	/* effective address: 8061F0A8 */
-/* 8061E268  80 63 00 04 */	lwz r3, 4(r3)	/* effective address: 8061EAEC */
-/* 8061E26C  80 63 00 84 */	lwz r3, 0x84(r3)	/* effective address: 8061EB6C */
-/* 8061E270  80 63 00 0C */	lwz r3, 0xc(r3)	/* effective address: 8061EAF4 */
+/* 8061E260  80 63 00 00 */	lwz r3, 0(r3)
+/* 8061E264  80 63 05 C0 */	lwz r3, 0x5c0(r3)
+/* 8061E268  80 63 00 04 */	lwz r3, 4(r3)
+/* 8061E26C  80 63 00 84 */	lwz r3, 0x84(r3)
+/* 8061E270  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8061E274  4B D2 82 3C */	b PSMTXCopy
 /* 8061E278  C0 7F 00 24 */	lfs f3, 0x24(r31)
 /* 8061E27C  C0 5F 00 28 */	lfs f2, 0x28(r31)
@@ -118,8 +118,8 @@ lbl_8061E324:
 /* 8061E3A4  4B 9F 2D 0C */	b play__16mDoExt_McaMorfSOFUlSc
 /* 8061E3A8  3C 60 80 62 */	lis r3, boss@ha
 /* 8061E3AC  38 63 EA E8 */	addi r3, r3, boss@l
-/* 8061E3B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061EAE8 */
-/* 8061E3B4  C0 23 05 2C */	lfs f1, 0x52c(r3)	/* effective address: 8061F014 */
+/* 8061E3B0  80 63 00 00 */	lwz r3, 0(r3)
+/* 8061E3B4  C0 23 05 2C */	lfs f1, 0x52c(r3)
 /* 8061E3B8  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8061E3BC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8061E3C0  4C 40 13 82 */	cror 2, 0, 2

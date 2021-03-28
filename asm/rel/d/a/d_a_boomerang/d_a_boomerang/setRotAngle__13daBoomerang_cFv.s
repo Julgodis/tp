@@ -21,7 +21,7 @@ lbl_8049FCD0:
 /* 8049FD1C  90 01 00 08 */	stw r0, 8(r1)
 /* 8049FD20  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8049FD24  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8049FD28  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8049FD28  80 63 00 00 */	lwz r3, 0(r3)
 /* 8049FD2C  38 81 00 08 */	addi r4, r1, 8
 /* 8049FD30  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8049FD34  38 C0 00 00 */	li r6, 0

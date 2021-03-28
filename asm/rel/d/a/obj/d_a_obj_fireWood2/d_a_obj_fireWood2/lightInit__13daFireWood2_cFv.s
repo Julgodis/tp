@@ -8,7 +8,7 @@ lbl_80BE8640:
 /* 80BE8658  C0 03 06 F4 */	lfs f0, 0x6f4(r3)
 /* 80BE865C  D0 03 07 14 */	stfs f0, 0x714(r3)
 /* 80BE8660  C0 23 07 10 */	lfs f1, 0x710(r3)
-/* 80BE8664  C0 04 00 3C */	lfs f0, 0x3c(r4)	/* effective address: 80BE8F70 */
+/* 80BE8664  C0 04 00 3C */	lfs f0, 0x3c(r4)
 /* 80BE8668  EC 01 00 2A */	fadds f0, f1, f0
 /* 80BE866C  D0 03 07 10 */	stfs f0, 0x710(r3)
 /* 80BE8670  88 03 07 18 */	lbz r0, 0x718(r3)

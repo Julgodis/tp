@@ -42,11 +42,11 @@ lbl_80A247F4:
 /* 80A24808  40 82 00 2C */	bne lbl_80A24834
 /* 80A2480C  3C 80 80 A2 */	lis r4, lit_5237@ha
 /* 80A24810  38 A4 5E B8 */	addi r5, r4, lit_5237@l
-/* 80A24814  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A25EB8 */
-/* 80A24818  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A25EBC */
+/* 80A24814  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A24818  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A2481C  90 81 00 08 */	stw r4, 8(r1)
 /* 80A24820  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A24824  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A25EC0 */
+/* 80A24824  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A24828  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A2482C  38 81 00 08 */	addi r4, r1, 8
 /* 80A24830  4B FF EA 55 */	bl setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i

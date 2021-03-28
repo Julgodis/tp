@@ -67,12 +67,12 @@ extern "C" extern f32 Zero__4cXyz[3];
 /* ############################################################################################## */
 /* 803C3F90-803C3FA8 0018+00 s=2 e=0 z=0  None .data      __vt__11cBgS_GndChk                                          */
 SECTION_DATA static void* __vt__11cBgS_GndChk[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11cBgS_GndChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80267D54,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11cBgS_GndChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80267D54,
 };
 
 /* 80267C1C-80267C94 0078+00 s=0 e=2 z=123  None .text      __ct__11cBgS_GndChkFv                                        */

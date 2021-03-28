@@ -94,9 +94,9 @@ lbl_804DB6E0:
 /* 804DB6E0  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 804DB6E4  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 804DB6E8  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 804DB6EC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 804DB6EC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 804DB6F0  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 804DB6F4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 804DB6F4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 804DB6F8  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 804DB6FC  C0 5F 00 60 */	lfs f2, 0x60(r31)
 lbl_804DB700:

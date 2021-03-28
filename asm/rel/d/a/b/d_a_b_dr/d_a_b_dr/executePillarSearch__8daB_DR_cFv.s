@@ -9,7 +9,7 @@ lbl_805C1E0C:
 /* 805C1E28  3B C3 78 C0 */	addi r30, r3, lit_1109@l
 /* 805C1E2C  3C 60 80 5C */	lis r3, lit_3800@ha
 /* 805C1E30  3B E3 6C 74 */	addi r31, r3, lit_3800@l
-/* 805C1E34  88 1E 00 C4 */	lbz r0, 0xc4(r30)	/* effective address: 805C7984 */
+/* 805C1E34  88 1E 00 C4 */	lbz r0, 0xc4(r30)
 /* 805C1E38  7C 00 07 75 */	extsb. r0, r0
 /* 805C1E3C  40 82 00 F8 */	bne lbl_805C1F34
 /* 805C1E40  C0 5F 04 14 */	lfs f2, 0x414(r31)

@@ -9,11 +9,11 @@ lbl_806E40D4:
 /* 806E40F0  3B 83 5B D8 */	addi r28, r3, lit_1109@l
 /* 806E40F4  3C 60 80 6E */	lis r3, lit_3791@ha
 /* 806E40F8  3B A3 59 20 */	addi r29, r3, lit_3791@l
-/* 806E40FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806E4100  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 806E4104  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 806E40FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806E4100  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 806E4104  80 7E 5D AC */	lwz r3, 0x5dac(r30)
 /* 806E4108  38 83 04 D0 */	addi r4, r3, 0x4d0
-/* 806E410C  90 9C 00 A4 */	stw r4, 0xa4(r28)	/* effective address: 806E5C7C */
+/* 806E410C  90 9C 00 A4 */	stw r4, 0xa4(r28)
 /* 806E4110  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 806E4114  4B C6 32 88 */	b PSVECSquareDistance
 /* 806E4118  C0 1D 00 04 */	lfs f0, 4(r29)

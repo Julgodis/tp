@@ -11,10 +11,10 @@ lbl_80587CA4:
 /* 80587CC8  38 00 00 06 */	li r0, 6
 /* 80587CCC  7C 09 03 A6 */	mtctr r0
 lbl_80587CD0:
-/* 80587CD0  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80587DB0 */
-/* 80587CD4  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80587DB4 */
-/* 80587CD8  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80587EAC */
-/* 80587CDC  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80587EB0 */
+/* 80587CD0  80 64 00 04 */	lwz r3, 4(r4)
+/* 80587CD4  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80587CD8  90 65 00 04 */	stw r3, 4(r5)
+/* 80587CDC  94 05 00 08 */	stwu r0, 8(r5)
 /* 80587CE0  42 00 FF F0 */	bdnz lbl_80587CD0
 /* 80587CE4  3C 60 80 58 */	lis r3, __vt__21daObj_KBacket_Param_c@ha
 /* 80587CE8  38 03 7F CC */	addi r0, r3, __vt__21daObj_KBacket_Param_c@l

@@ -10,7 +10,7 @@ lbl_809AB4FC:
 /* 809AB51C  38 80 00 00 */	li r4, 0
 /* 809AB520  38 A0 00 00 */	li r5, 0
 /* 809AB524  38 DF 00 00 */	addi r6, r31, 0
-/* 809AB528  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 809AD9B4 */
+/* 809AB528  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 809AB52C  38 C0 00 00 */	li r6, 0
 /* 809AB530  38 E0 00 00 */	li r7, 0
 /* 809AB534  4B 7A 6D 78 */	b draw__8daNpcF_cFiifP11_GXColorS10i

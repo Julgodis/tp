@@ -9,25 +9,25 @@ lbl_804588C4:
 /* 804588E0  3B 43 93 74 */	addi r26, r3, lit_3756@l
 /* 804588E4  81 FF 00 B0 */	lwz r15, 0xb0(r31)
 /* 804588E8  3A DF 05 70 */	addi r22, r31, 0x570
-/* 804588EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804588F0  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 804588F4  80 1B 5F 70 */	lwz r0, 0x5f70(r27)	/* effective address: 8040C130 */
+/* 804588EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804588F0  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 804588F4  80 1B 5F 70 */	lwz r0, 0x5f70(r27)
 /* 804588F8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 804588FC  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80458900  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80458904  80 1B 5F 74 */	lwz r0, 0x5f74(r27)	/* effective address: 8040C134 */
-/* 80458908  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
-/* 8045890C  C0 1A 00 18 */	lfs f0, 0x18(r26)	/* effective address: 8045938C */
+/* 80458900  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80458904  80 1B 5F 74 */	lwz r0, 0x5f74(r27)
+/* 80458908  90 1C 00 4C */	stw r0, 0x4c(r28)
+/* 8045890C  C0 1A 00 18 */	lfs f0, 0x18(r26)
 /* 80458910  3C 60 80 3E */	lis r3, mClipper__14mDoLib_clipper@ha
 /* 80458914  38 63 D8 E4 */	addi r3, r3, mClipper__14mDoLib_clipper@l
-/* 80458918  D0 03 00 58 */	stfs f0, 0x58(r3)	/* effective address: 803DD93C */
+/* 80458918  D0 03 00 58 */	stfs f0, 0x58(r3)
 /* 8045891C  4B E1 AE 70 */	b calcViewFrustum__11J3DUClipperFv
 /* 80458920  3A 80 00 00 */	li r20, 0
 /* 80458924  3B C0 00 00 */	li r30, 0
 /* 80458928  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8045892C  3B A3 CA 54 */	addi r29, r3, g_env_light@l
-/* 80458930  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80458934  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80458930  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80458934  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80458938  3A 03 07 F0 */	addi r16, r3, 0x7f0
 /* 8045893C  3A FB 4E 00 */	addi r23, r27, 0x4e00
 lbl_80458940:
@@ -420,11 +420,11 @@ lbl_80458EC8:
 /* 80458ED0  3A D6 00 14 */	addi r22, r22, 0x14
 /* 80458ED4  3B DE 00 04 */	addi r30, r30, 4
 /* 80458ED8  41 80 FA 68 */	blt lbl_80458940
-/* 80458EDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80458EE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80458EE4  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80458EDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80458EE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80458EE4  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80458EE8  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80458EEC  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80458EEC  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80458EF0  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80458EF4  1C 8F 04 04 */	mulli r4, r15, 0x404
 /* 80458EF8  3C 60 80 3F */	lis r3, mStatus__20dStage_roomControl_c@ha

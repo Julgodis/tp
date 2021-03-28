@@ -21,7 +21,7 @@ lbl_80AF465C:
 lbl_80AF46A8:
 /* 80AF46A8  3C 80 80 AF */	lis r4, m__22daNpc_SoldierB_Param_c@ha
 /* 80AF46AC  38 84 5A D4 */	addi r4, r4, m__22daNpc_SoldierB_Param_c@l
-/* 80AF46B0  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 80AF5B36 */
+/* 80AF46B0  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_80AF46B4:
 /* 80AF46B4  38 A0 FF FF */	li r5, -1
 /* 80AF46B8  38 C0 00 00 */	li r6, 0

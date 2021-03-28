@@ -81,9 +81,9 @@ lbl_8080BC64:
 /* 8080BCA0  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 8080BCA4  54 00 00 C7 */	rlwinm. r0, r0, 0, 3, 3
 /* 8080BCA8  41 82 00 2C */	beq lbl_8080BCD4
-/* 8080BCAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080BCB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8080BCB4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8080BCAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080BCB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8080BCB4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8080BCB8  38 80 00 03 */	li r4, 3
 /* 8080BCBC  7F E5 FB 78 */	mr r5, r31
 /* 8080BCC0  38 DF 05 38 */	addi r6, r31, 0x538

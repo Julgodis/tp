@@ -9,9 +9,9 @@ lbl_80B12810:
 /* 80B1282C  7C 7D 1B 78 */	mr r29, r3
 /* 80B12830  3C 60 80 B1 */	lis r3, lit_3648@ha
 /* 80B12834  3B E3 42 DC */	addi r31, r3, lit_3648@l
-/* 80B12838  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B1283C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B12840  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B12838  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B1283C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B12840  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80B12844  C0 3D 05 B8 */	lfs f1, 0x5b8(r29)
 /* 80B12848  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80B1284C  EC 21 00 28 */	fsubs f1, f1, f0

@@ -7,7 +7,7 @@ lbl_80836F78:
 /* 80836F8C  7C 7A 1B 78 */	mr r26, r3
 /* 80836F90  3C 60 80 83 */	lis r3, M_attr__10daFmtMng_c@ha
 /* 80836F94  3B C3 78 A8 */	addi r30, r3, M_attr__10daFmtMng_c@l
-/* 80836F98  C0 1E 00 24 */	lfs f0, 0x24(r30)	/* effective address: 808378CC */
+/* 80836F98  C0 1E 00 24 */	lfs f0, 0x24(r30)
 /* 80836F9C  D0 1A 05 2C */	stfs f0, 0x52c(r26)
 /* 80836FA0  83 9A 05 6C */	lwz r28, 0x56c(r26)
 /* 80836FA4  38 00 00 00 */	li r0, 0
@@ -55,8 +55,8 @@ lbl_80837038:
 /* 80837040  7C 03 01 D6 */	mullw r0, r3, r0
 /* 80837044  7C 1B 00 00 */	cmpw r27, r0
 /* 80837048  41 80 FF 6C */	blt lbl_80836FB4
-/* 8083704C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80837050  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8083704C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80837050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80837054  38 63 09 78 */	addi r3, r3, 0x978
 /* 80837058  38 80 00 3C */	li r4, 0x3c
 /* 8083705C  4B 7F DB 3C */	b onSwitch__12dSv_danBit_cFi

@@ -35,9 +35,9 @@ lbl_80ABBC1C:
 /* 80ABBC5C  C0 1E 00 88 */	lfs f0, 0x88(r30)
 /* 80ABBC60  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80ABBC64  38 7F 0C 7C */	addi r3, r31, 0xc7c
-/* 80ABBC68  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80ABBC6C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80ABBC70  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80ABBC68  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80ABBC6C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80ABBC70  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80ABBC74  4B 69 4A 48 */	b entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c
 /* 80ABBC78  A8 1F 0E 0E */	lha r0, 0xe0e(r31)
 /* 80ABBC7C  2C 00 00 00 */	cmpwi r0, 0
@@ -81,9 +81,9 @@ lbl_80ABBCC4:
 /* 80ABBD04  7F E3 FB 78 */	mr r3, r31
 /* 80ABBD08  38 80 A0 00 */	li r4, -24576
 /* 80ABBD0C  4B 69 85 44 */	b setAngle__8daNpcF_cFs
-/* 80ABBD10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ABBD14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80ABBD18  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80ABBD10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ABBD14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ABBD18  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80ABBD1C  38 80 00 00 */	li r4, 0
 /* 80ABBD20  90 81 00 08 */	stw r4, 8(r1)
 /* 80ABBD24  38 00 FF FF */	li r0, -1
@@ -135,11 +135,11 @@ lbl_80ABBDC8:
 /* 80ABBDD4  41 82 00 94 */	beq lbl_80ABBE68
 /* 80ABBDD8  3C 60 80 AC */	lis r3, lit_5117@ha
 /* 80ABBDDC  38 83 01 CC */	addi r4, r3, lit_5117@l
-/* 80ABBDE0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AC01CC */
-/* 80ABBDE4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AC01D0 */
+/* 80ABBDE0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80ABBDE4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80ABBDE8  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80ABBDEC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80ABBDF0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AC01D4 */
+/* 80ABBDF0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80ABBDF4  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80ABBDF8  38 00 00 03 */	li r0, 3
 /* 80ABBDFC  B0 1F 0E 10 */	sth r0, 0xe10(r31)

@@ -86,7 +86,7 @@ lbl_80A4CBD0:
 /* 80A4CBFC  90 01 00 08 */	stw r0, 8(r1)
 /* 80A4CC00  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A4CC04  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A4CC08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A4CC08  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A4CC0C  38 81 00 08 */	addi r4, r1, 8
 /* 80A4CC10  38 A0 00 00 */	li r5, 0
 /* 80A4CC14  38 C0 00 00 */	li r6, 0
@@ -99,13 +99,13 @@ lbl_80A4CBD0:
 /* 80A4CC30  4B 85 ED 54 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80A4CC34  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A4CC38  38 83 13 68 */	addi r4, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A4CC3C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80451368 */
-/* 80A4CC40  C0 03 04 14 */	lfs f0, 0x414(r3)	/* effective address: 80450414 */
+/* 80A4CC3C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A4CC40  C0 03 04 14 */	lfs f0, 0x414(r3)
 /* 80A4CC44  38 00 00 78 */	li r0, 0x78
-/* 80A4CC48  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80450420 */
+/* 80A4CC48  90 03 04 20 */	stw r0, 0x420(r3)
 /* 80A4CC4C  C0 7F 00 30 */	lfs f3, 0x30(r31)
 /* 80A4CC50  EC 43 00 28 */	fsubs f2, f3, f0
-/* 80A4CC54  80 03 04 20 */	lwz r0, 0x420(r3)	/* effective address: 80450420 */
+/* 80A4CC54  80 03 04 20 */	lwz r0, 0x420(r3)
 /* 80A4CC58  C8 3F 00 E0 */	lfd f1, 0xe0(r31)
 /* 80A4CC5C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A4CC60  3C 00 43 30 */	lis r0, 0x4330
@@ -113,9 +113,9 @@ lbl_80A4CBD0:
 /* 80A4CC68  C8 01 00 10 */	lfd f0, 0x10(r1)
 /* 80A4CC6C  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80A4CC70  EC 02 00 24 */	fdivs f0, f2, f0
-/* 80A4CC74  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80450418 */
-/* 80A4CC78  D0 63 04 1C */	stfs f3, 0x41c(r3)	/* effective address: 8045041C */
-/* 80A4CC7C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80451368 */
+/* 80A4CC74  D0 03 04 18 */	stfs f0, 0x418(r3)
+/* 80A4CC78  D0 63 04 1C */	stfs f3, 0x41c(r3)
+/* 80A4CC7C  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A4CC80  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80A4CC84  38 80 00 01 */	li r4, 1
 /* 80A4CC88  4B 86 74 DC */	b setBattleBgmOff__8Z2SeqMgrFb
@@ -245,8 +245,8 @@ lbl_80A4CE24:
 /* 80A4CE48  B0 1E 05 F0 */	sth r0, 0x5f0(r30)
 /* 80A4CE4C  38 00 00 17 */	li r0, 0x17
 /* 80A4CE50  B0 1E 05 EA */	sth r0, 0x5ea(r30)
-/* 80A4CE54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4CE58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A4CE54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4CE58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A4CE5C  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80A4CE60  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80A4CE64  88 1E 04 E2 */	lbz r0, 0x4e2(r30)

@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TFog {
-	};
-
-};
-
 struct _GXColor {
 };
 
@@ -40,6 +31,15 @@ namespace JStudio {
 
 	struct TAdaptor_fog {
 		/* 8028717C */ ~TAdaptor_fog();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TFog {
 	};
 
 };
@@ -140,14 +140,14 @@ SECTION_DATA static u8 lit_850[12] = {
 
 /* 803C59D0-803C5A10 0020+20 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage12TAdaptor_fog                       */
 SECTION_DATA static void* __vt__Q214JStudio_JStage12TAdaptor_fog[8 + 8 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q214JStudio_JStage12TAdaptor_fogFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv,
-	/* 4    */ (void*)adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv,
-	/* 5    */ (void*)adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv,
-	/* 6    */ (void*)adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl,
-	/* 7    */ (void*)adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q214JStudio_JStage12TAdaptor_fogFv,
+	(void*)adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv,
+	(void*)adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv,
+	(void*)adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv,
+	(void*)adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl,
+	(void*)adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl,
 	/* padding */
 	NULL,
 	NULL,
@@ -252,10 +252,10 @@ asm void JStudio_JStage::TAdaptor_fog::adaptor_do_data(void const* param_0, u32 
 /* ############################################################################################## */
 /* 803C5A10-803C5A30 0010+10 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage77TVariableValueOutput_object_<Q214JStudio_JStage12TAdaptor_fog,Q26JStage4TFog> */
 SECTION_DATA static void* data_803C5A10[4 + 4 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_8028CB20,
-	/* 3    */ (void*)func_8028CAC0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8028CB20,
+	(void*)func_8028CAC0,
 	/* padding */
 	NULL,
 	NULL,

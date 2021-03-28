@@ -99,9 +99,9 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 /* ############################################################################################## */
 /* 803BA078-803BA088 000C+04 s=1 e=0 z=0  None .data      __vt__9dInsect_c                                             */
 SECTION_DATA static void* __vt__9dInsect_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)Insect_Release__9dInsect_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)Insect_Release__9dInsect_cFv,
 	/* padding */
 	NULL,
 };

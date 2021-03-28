@@ -7,11 +7,11 @@ lbl_80459F14:
 /* 80459F28  7C 7B 1B 78 */	mr r27, r3
 /* 80459F2C  3C 60 80 46 */	lis r3, l_cyl_src@ha
 /* 80459F30  3B E3 C9 B8 */	addi r31, r3, l_cyl_src@l
-/* 80459F34  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 8045CA04 */
+/* 80459F34  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80459F38  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80459F3C  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80459F40  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80459F44  C0 1F 00 50 */	lfs f0, 0x50(r31)	/* effective address: 8045CA08 */
+/* 80459F44  C0 1F 00 50 */	lfs f0, 0x50(r31)
 /* 80459F48  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80459F4C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80459F50  D0 01 00 28 */	stfs f0, 0x28(r1)

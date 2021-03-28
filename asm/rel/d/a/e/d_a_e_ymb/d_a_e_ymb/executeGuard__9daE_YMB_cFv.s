@@ -43,9 +43,9 @@ lbl_8081A780:
 /* 8081A7B8  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 8081A7BC  4B FF C1 C1 */	bl setBck__9daE_YMB_cFiUcff
 /* 8081A7C0  7F E3 FB 78 */	mr r3, r31
-/* 8081A7C4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8081A7C8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8081A7CC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8081A7C4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081A7C8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8081A7CC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8081A7D0  4B 7F FF 40 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081A7D4  38 03 80 00 */	addi r0, r3, -32768
 /* 8081A7D8  B0 1F 04 DE */	sth r0, 0x4de(r31)
@@ -64,9 +64,9 @@ lbl_8081A7F0:
 /* 8081A808  C0 5E 00 C4 */	lfs f2, 0xc4(r30)
 /* 8081A80C  4B A5 5F 34 */	b cLib_chaseF__FPfff
 /* 8081A810  7F E3 FB 78 */	mr r3, r31
-/* 8081A814  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8081A818  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8081A81C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8081A814  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081A818  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8081A81C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8081A820  4B 7F FE F0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081A824  7C 64 1B 78 */	mr r4, r3
 /* 8081A828  38 7F 04 E6 */	addi r3, r31, 0x4e6

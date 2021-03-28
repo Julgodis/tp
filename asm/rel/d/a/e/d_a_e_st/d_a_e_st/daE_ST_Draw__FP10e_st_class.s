@@ -94,7 +94,7 @@ lbl_8079E2B4:
 /* 8079E308  C0 3F 00 4C */	lfs f1, 0x4c(r31)
 /* 8079E30C  3C E0 80 7A */	lis r7, l_HIO@ha
 /* 8079E310  38 E7 6D F4 */	addi r7, r7, l_HIO@l
-/* 8079E314  C0 07 00 08 */	lfs f0, 8(r7)	/* effective address: 807A6DFC */
+/* 8079E314  C0 07 00 08 */	lfs f0, 8(r7)
 /* 8079E318  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8079E31C  C0 5F 00 04 */	lfs f2, 4(r31)
 /* 8079E320  C0 7D 04 D4 */	lfs f3, 0x4d4(r29)
@@ -129,8 +129,8 @@ lbl_8079E34C:
 /* 8079E390  7D 89 03 A6 */	mtctr r12
 /* 8079E394  4E 80 04 21 */	bctrl 
 /* 8079E398  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 8079E39C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079E3A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8079E39C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079E3A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8079E3A4  3B 63 5F 64 */	addi r27, r3, 0x5f64
 /* 8079E3A8  3C 64 00 01 */	addis r3, r4, 1
 /* 8079E3AC  38 63 61 54 */	addi r3, r3, 0x6154

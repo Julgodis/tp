@@ -71,7 +71,7 @@ lbl_80CF2160:
 /* 80CF2274  7C 64 1B 78 */	mr r4, r3
 /* 80CF2278  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80CF227C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80CF2280  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80CF2280  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF2284  4B 31 A1 58 */	b mDoMtx_YrotS__FPA4_fs
 /* 80CF2288  3B A0 00 00 */	li r29, 0
 /* 80CF228C  3B 60 00 00 */	li r27, 0

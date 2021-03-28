@@ -63,7 +63,7 @@ lbl_8052CE1C:
 /* 8052CE48  7C 04 07 34 */	extsh r4, r0
 /* 8052CE4C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052CE50  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052CE54  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052CE54  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052CE58  4B AD F5 84 */	b mDoMtx_YrotS__FPA4_fs
 /* 8052CE5C  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 8052CE60  D0 01 00 34 */	stfs f0, 0x34(r1)

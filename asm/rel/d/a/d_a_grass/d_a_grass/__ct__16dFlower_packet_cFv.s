@@ -71,12 +71,12 @@ lbl_80521D48:
 /* 80521D6C  38 A3 45 94 */	addi r5, r3, m_deleteRoom__16dFlower_packet_c@l
 /* 80521D70  3C 60 80 52 */	lis r3, lit_5875@ha
 /* 80521D74  38 83 77 D4 */	addi r4, r3, lit_5875@l
-/* 80521D78  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805277D4 */
-/* 80521D7C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805277D8 */
-/* 80521D80  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80424594 */
-/* 80521D84  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80424598 */
-/* 80521D88  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805277DC */
-/* 80521D8C  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 8042459C */
+/* 80521D78  80 64 00 00 */	lwz r3, 0(r4)
+/* 80521D7C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80521D80  90 65 00 00 */	stw r3, 0(r5)
+/* 80521D84  90 05 00 04 */	stw r0, 4(r5)
+/* 80521D88  80 04 00 08 */	lwz r0, 8(r4)
+/* 80521D8C  90 05 00 08 */	stw r0, 8(r5)
 /* 80521D90  7F E3 FB 78 */	mr r3, r31
 /* 80521D94  39 61 00 20 */	addi r11, r1, 0x20
 /* 80521D98  4B E4 04 90 */	b _restgpr_29

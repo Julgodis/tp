@@ -10,8 +10,8 @@ lbl_809658F8:
 /* 80965918  3B E3 7E 20 */	addi r31, r3, m__18daNpc_Bans_Param_c@l
 /* 8096591C  3B C0 00 00 */	li r30, 0
 /* 80965920  3B A0 FF FF */	li r29, -1
-/* 80965924  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80965928  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80965924  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80965928  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8096592C  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 80965930  7F 63 DB 78 */	mr r3, r27
 /* 80965934  3C A0 80 96 */	lis r5, struct_80967F6C+0x0@ha

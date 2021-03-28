@@ -36,7 +36,7 @@ lbl_80680CDC:
 /* 80680D1C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80680D20  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80680D24  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80680D28  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80680D28  80 63 00 00 */	lwz r3, 0(r3)
 /* 80680D2C  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80680D30  4B 98 B6 AC */	b mDoMtx_YrotS__FPA4_fs
 /* 80680D34  C0 1F 00 04 */	lfs f0, 4(r31)

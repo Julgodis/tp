@@ -27,17 +27,17 @@ lbl_80D035F8:
 /* 80D0365C  41 82 00 48 */	beq lbl_80D036A4
 /* 80D03660  3C 60 80 D0 */	lis r3, l_HIO@ha
 /* 80D03664  38 63 42 6C */	addi r3, r3, l_HIO@l
-/* 80D03668  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80D04270 */
+/* 80D03668  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80D0366C  D0 1F 07 54 */	stfs f0, 0x754(r31)
-/* 80D03670  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80D04278 */
+/* 80D03670  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80D03674  D0 1F 07 5C */	stfs f0, 0x75c(r31)
-/* 80D03678  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D04274 */
+/* 80D03678  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D0367C  D0 1F 07 58 */	stfs f0, 0x758(r31)
-/* 80D03680  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80D0427C */
+/* 80D03680  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80D03684  D0 1F 07 60 */	stfs f0, 0x760(r31)
-/* 80D03688  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80D04280 */
+/* 80D03688  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80D0368C  D0 1F 07 64 */	stfs f0, 0x764(r31)
-/* 80D03690  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80D04284 */
+/* 80D03690  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80D03694  D0 1F 07 68 */	stfs f0, 0x768(r31)
 /* 80D03698  38 00 00 00 */	li r0, 0
 /* 80D0369C  80 7F 09 94 */	lwz r3, 0x994(r31)

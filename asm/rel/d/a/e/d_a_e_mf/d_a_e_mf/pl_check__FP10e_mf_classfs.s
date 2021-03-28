@@ -5,9 +5,9 @@ lbl_8070B76C:
 /* 8070B778  39 61 00 20 */	addi r11, r1, 0x20
 /* 8070B77C  4B C5 6A 58 */	b _savegpr_27
 /* 8070B780  7C 7B 1B 78 */	mr r27, r3
-/* 8070B784  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8070B788  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 8070B78C  83 A5 5D AC */	lwz r29, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 8070B784  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8070B788  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 8070B78C  83 A5 5D AC */	lwz r29, 0x5dac(r5)
 /* 8070B790  C0 03 06 B0 */	lfs f0, 0x6b0(r3)
 /* 8070B794  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8070B798  40 80 00 48 */	bge lbl_8070B7E0

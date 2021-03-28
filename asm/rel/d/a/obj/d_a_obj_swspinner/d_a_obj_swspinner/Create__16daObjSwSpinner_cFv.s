@@ -7,8 +7,8 @@ lbl_80D00284:
 /* 80D00298  7C 7E 1B 78 */	mr r30, r3
 /* 80D0029C  3C 60 80 D0 */	lis r3, lit_3717@ha
 /* 80D002A0  3B E3 0A 94 */	addi r31, r3, lit_3717@l
-/* 80D002A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D002A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D002A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D002A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D002AC  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80D002B0  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D002B4  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -40,8 +40,8 @@ lbl_80D002EC:
 /* 80D00314  80 83 00 04 */	lwz r4, 4(r3)
 /* 80D00318  7F C3 F3 78 */	mr r3, r30
 /* 80D0031C  4B 31 A2 5C */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
-/* 80D00320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D00324  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D00320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D00324  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D00328  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D0032C  80 9E 05 B0 */	lwz r4, 0x5b0(r30)
 /* 80D00330  7F C5 F3 78 */	mr r5, r30

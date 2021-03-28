@@ -21,27 +21,27 @@ lbl_80BCC980:
 /* 80BCC980  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80BCC984  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BCC988  38 84 CB DC */	addi r4, r4, l_arcName@l
-/* 80BCC98C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BCCBDC */
+/* 80BCC98C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BCC990  4B 46 05 2C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BCC994  7C 60 1B 78 */	mr r0, r3
 /* 80BCC998  2C 00 00 04 */	cmpwi r0, 4
 /* 80BCC99C  40 82 00 68 */	bne lbl_80BCCA04
-/* 80BCC9A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BCC9A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BCC9A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BCC9A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BCC9A8  3C 63 00 02 */	addis r3, r3, 2
 /* 80BCC9AC  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BCC9B0  38 84 CB DC */	addi r4, r4, l_arcName@l
-/* 80BCC9B4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BCCBDC */
+/* 80BCC9B4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BCC9B8  3C A0 80 BD */	lis r5, l_dzbName@ha
 /* 80BCC9BC  38 A5 CB E4 */	addi r5, r5, l_dzbName@l
-/* 80BCC9C0  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80BCCBE4 */
+/* 80BCC9C0  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80BCC9C4  38 63 C2 F8 */	addi r3, r3, -15624
 /* 80BCC9C8  4B 46 FC F0 */	b getObjectResName2Index__14dRes_control_cFPCcPCc
 /* 80BCC9CC  7C 65 1B 78 */	mr r5, r3
 /* 80BCC9D0  7F E3 FB 78 */	mr r3, r31
 /* 80BCC9D4  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BCC9D8  38 84 CB DC */	addi r4, r4, l_arcName@l
-/* 80BCC9DC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BCCBDC */
+/* 80BCC9DC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BCC9E0  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80BCC9E4  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80BCC9E8  38 E0 40 00 */	li r7, 0x4000

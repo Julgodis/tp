@@ -7,12 +7,12 @@ lbl_80C505F8:
 /* 80C5060C  7C 7E 1B 78 */	mr r30, r3
 /* 80C50610  3C 80 80 C5 */	lis r4, M_attr__14daObjKznkarm_c@ha
 /* 80C50614  3B E4 0D 08 */	addi r31, r4, M_attr__14daObjKznkarm_c@l
-/* 80C50618  C0 3F 00 68 */	lfs f1, 0x68(r31)	/* effective address: 80C50D70 */
-/* 80C5061C  C0 5F 00 6C */	lfs f2, 0x6c(r31)	/* effective address: 80C50D74 */
+/* 80C50618  C0 3F 00 68 */	lfs f1, 0x68(r31)
+/* 80C5061C  C0 5F 00 6C */	lfs f2, 0x6c(r31)
 /* 80C50620  FC 60 10 90 */	fmr f3, f2
-/* 80C50624  C0 9F 00 70 */	lfs f4, 0x70(r31)	/* effective address: 80C50D78 */
-/* 80C50628  C0 BF 00 74 */	lfs f5, 0x74(r31)	/* effective address: 80C50D7C */
-/* 80C5062C  C0 DF 00 78 */	lfs f6, 0x78(r31)	/* effective address: 80C50D80 */
+/* 80C50624  C0 9F 00 70 */	lfs f4, 0x70(r31)
+/* 80C50628  C0 BF 00 74 */	lfs f5, 0x74(r31)
+/* 80C5062C  C0 DF 00 78 */	lfs f6, 0x78(r31)
 /* 80C50630  4B 3C 9F 18 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C50634  88 1E 04 9A */	lbz r0, 0x49a(r30)
 /* 80C50638  60 00 00 30 */	ori r0, r0, 0x30

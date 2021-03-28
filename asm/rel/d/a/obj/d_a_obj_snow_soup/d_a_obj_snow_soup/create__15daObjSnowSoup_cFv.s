@@ -23,7 +23,7 @@ lbl_80CDFA78:
 lbl_80CDFA88:
 /* 80CDFA88  3C 80 80 CE */	lis r4, l_arcName@ha
 /* 80CDFA8C  38 84 02 80 */	addi r4, r4, l_arcName@l
-/* 80CDFA90  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CE0280 */
+/* 80CDFA90  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CDFA94  4B 34 D4 28 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CDFA98  7C 7F 1B 78 */	mr r31, r3
 /* 80CDFA9C  2C 1F 00 04 */	cmpwi r31, 4
@@ -62,9 +62,9 @@ lbl_80CDFAC8:
 /* 80CDFB1C  48 00 05 21 */	bl createSmkEmtChange__15daObjSnowSoup_cFi
 /* 80CDFB20  3C 60 80 CE */	lis r3, SOUP_MODEL_OFFSET@ha
 /* 80CDFB24  38 63 02 3C */	addi r3, r3, SOUP_MODEL_OFFSET@l
-/* 80CDFB28  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 80CE0244 */
-/* 80CDFB2C  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 80CE0240 */
-/* 80CDFB30  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80CE023C */
+/* 80CDFB28  C0 43 00 08 */	lfs f2, 8(r3)
+/* 80CDFB2C  C0 23 00 04 */	lfs f1, 4(r3)
+/* 80CDFB30  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80CDFB34  D0 1E 05 80 */	stfs f0, 0x580(r30)
 /* 80CDFB38  D0 3E 05 84 */	stfs f1, 0x584(r30)
 /* 80CDFB3C  D0 5E 05 88 */	stfs f2, 0x588(r30)

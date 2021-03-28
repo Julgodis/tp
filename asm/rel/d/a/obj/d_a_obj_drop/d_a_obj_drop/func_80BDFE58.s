@@ -107,8 +107,8 @@ lbl_80BDFFF4:
 /* 80BDFFF8  60 00 00 08 */	ori r0, r0, 8
 /* 80BDFFFC  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80BE0000:
-/* 80BE0000  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE0004  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE0000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE0004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE0008  38 63 09 58 */	addi r3, r3, 0x958
 /* 80BE000C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BE0010  54 04 06 BE */	clrlwi r4, r0, 0x1a

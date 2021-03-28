@@ -42,18 +42,18 @@ lbl_80A84838:
 /* 80A8485C  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 80A84860  3C 60 80 A9 */	lis r3, m__19daNpc_myna2_Param_c@ha
 /* 80A84864  38 83 84 34 */	addi r4, r3, m__19daNpc_myna2_Param_c@l
-/* 80A84868  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80A8843C */
+/* 80A84868  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80A8486C  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80A84870  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
 /* 80A84874  D0 1D 04 F4 */	stfs f0, 0x4f4(r29)
 /* 80A84878  38 7D 07 E4 */	addi r3, r29, 0x7e4
-/* 80A8487C  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80A88450 */
+/* 80A8487C  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80A84880  4B 5F 16 C0 */	b SetWallR__12dBgS_AcchCirFf
 /* 80A84884  3C 60 80 A9 */	lis r3, m__19daNpc_myna2_Param_c@ha
 /* 80A84888  38 63 84 34 */	addi r3, r3, m__19daNpc_myna2_Param_c@l
-/* 80A8488C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A8844C */
+/* 80A8488C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A84890  D0 1D 08 14 */	stfs f0, 0x814(r29)
-/* 80A84894  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80A88438 */
+/* 80A84894  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80A84898  D0 1D 05 30 */	stfs f0, 0x530(r29)
 /* 80A8489C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80A848A0  4B 8D D9 88 */	b _restgpr_29

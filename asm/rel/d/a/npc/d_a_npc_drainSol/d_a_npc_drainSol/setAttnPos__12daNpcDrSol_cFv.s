@@ -11,11 +11,11 @@ lbl_809AEFDC:
 /* 809AF000  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 809AF004  7D 89 03 A6 */	mtctr r12
 /* 809AF008  4E 80 04 21 */	bctrl 
-/* 809AF00C  C0 1D 01 04 */	lfs f0, 0x104(r29)	/* effective address: 809AFAA8 */
+/* 809AF00C  C0 1D 01 04 */	lfs f0, 0x104(r29)
 /* 809AF010  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 809AF014  C0 1D 01 08 */	lfs f0, 0x108(r29)	/* effective address: 809AFAAC */
+/* 809AF014  C0 1D 01 08 */	lfs f0, 0x108(r29)
 /* 809AF018  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 809AF01C  C0 1D 00 FC */	lfs f0, 0xfc(r29)	/* effective address: 809AFAA0 */
+/* 809AF01C  C0 1D 00 FC */	lfs f0, 0xfc(r29)
 /* 809AF020  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 809AF024  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 809AF028  80 63 00 04 */	lwz r3, 4(r3)
@@ -27,11 +27,11 @@ lbl_809AEFDC:
 /* 809AF040  4B 99 74 70 */	b PSMTXCopy
 /* 809AF044  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 809AF048  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 809AF04C  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
+/* 809AF04C  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 809AF050  D0 1F 08 E4 */	stfs f0, 0x8e4(r31)
-/* 809AF054  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
+/* 809AF054  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 809AF058  D0 1F 08 E8 */	stfs f0, 0x8e8(r31)
-/* 809AF05C  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
+/* 809AF05C  C0 1E 00 2C */	lfs f0, 0x2c(r30)
 /* 809AF060  D0 1F 08 EC */	stfs f0, 0x8ec(r31)
 /* 809AF064  7F C3 F3 78 */	mr r3, r30
 /* 809AF068  38 81 00 14 */	addi r4, r1, 0x14
@@ -72,8 +72,8 @@ lbl_809AEFDC:
 /* 809AF0F4  38 9D 00 00 */	addi r4, r29, 0
 /* 809AF0F8  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 809AF0FC  4B 8C 01 04 */	b SetR__8cM3dGCylFf
-/* 809AF100  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809AF104  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809AF100  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809AF104  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809AF108  38 63 23 3C */	addi r3, r3, 0x233c
 /* 809AF10C  38 9F 0B E0 */	addi r4, r31, 0xbe0
 /* 809AF110  4B 8B 5A 98 */	b Set__4cCcSFP8cCcD_Obj

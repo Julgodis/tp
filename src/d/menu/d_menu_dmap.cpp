@@ -60,12 +60,6 @@ struct dMenu_DmapBg_c {
 	/* 801BB468 */ void drawCursor();
 };
 
-struct CSTControl {
-};
-
-struct J2DOrthoGraph {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -87,6 +81,12 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct J2DOrthoGraph {
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Dmap_c {
@@ -313,10 +313,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -745,37 +745,37 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BC7EC-803BC7F8 000C+00 s=1 e=0 z=0  None .data      @4861                                                        */
 SECTION_DATA static void* lit_4861[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemInfo_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemInfo_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC7F8-803BC804 000C+00 s=1 e=0 z=0  None .data      @4862                                                        */
 SECTION_DATA static void* lit_4862[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mapMode_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mapMode_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC804-803BC810 000C+00 s=1 e=0 z=0  None .data      @4863                                                        */
 SECTION_DATA static void* lit_4863[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)infoModeChange_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)infoModeChange_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC810-803BC81C 000C+00 s=1 e=0 z=0  None .data      @4864                                                        */
 SECTION_DATA static void* lit_4864[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mapModeChange_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mapModeChange_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC81C-803BC828 000C+00 s=1 e=0 z=0  None .data      @4865                                                        */
 SECTION_DATA static void* lit_4865[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)lv5_talk_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)lv5_talk_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC828-803BC864 003C+00 s=3 e=0 z=0  None .data      init_process                                                 */
@@ -788,37 +788,37 @@ SECTION_DATA static u8 init_process[60] = {
 
 /* 803BC864-803BC870 000C+00 s=1 e=0 z=0  None .data      @4866                                                        */
 SECTION_DATA static void* lit_4866[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemInfo_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemInfo_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC870-803BC87C 000C+00 s=1 e=0 z=0  None .data      @4867                                                        */
 SECTION_DATA static void* lit_4867[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mapMode_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mapMode_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC87C-803BC888 000C+00 s=1 e=0 z=0  None .data      @4868                                                        */
 SECTION_DATA static void* lit_4868[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)infoModeChange_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)infoModeChange_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC888-803BC894 000C+00 s=1 e=0 z=0  None .data      @4869                                                        */
 SECTION_DATA static void* lit_4869[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mapModeChange_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mapModeChange_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC894-803BC8A0 000C+00 s=1 e=0 z=0  None .data      @4870                                                        */
 SECTION_DATA static void* lit_4870[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)lv5_talk_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)lv5_talk_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC8A0-803BC8DC 003C+00 s=2 e=0 z=0  None .data      move_process                                                 */
@@ -831,37 +831,37 @@ SECTION_DATA static u8 move_process[60] = {
 
 /* 803BC8DC-803BC8E8 000C+00 s=1 e=0 z=0  None .data      @4871                                                        */
 SECTION_DATA static void* lit_4871[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemSelect__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemSelect__12dMenu_Dmap_cFv,
 };
 
 /* 803BC8E8-803BC8F4 000C+00 s=1 e=0 z=0  None .data      @4872                                                        */
 SECTION_DATA static void* lit_4872[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemSelectAnm__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemSelectAnm__12dMenu_Dmap_cFv,
 };
 
 /* 803BC8F4-803BC900 000C+00 s=1 e=0 z=0  None .data      @4873                                                        */
 SECTION_DATA static void* lit_4873[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemInfoOpenAnm__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemInfoOpenAnm__12dMenu_Dmap_cFv,
 };
 
 /* 803BC900-803BC90C 000C+00 s=1 e=0 z=0  None .data      @4874                                                        */
 SECTION_DATA static void* lit_4874[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemInfoWait__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemInfoWait__12dMenu_Dmap_cFv,
 };
 
 /* 803BC90C-803BC918 000C+00 s=1 e=0 z=0  None .data      @4875                                                        */
 SECTION_DATA static void* lit_4875[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)itemInfoCloseAnm__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)itemInfoCloseAnm__12dMenu_Dmap_cFv,
 };
 
 /* 803BC918-803BC954 003C+00 s=2 e=0 z=0  None .data      itemInfo_subProcess                                          */
@@ -874,16 +874,16 @@ SECTION_DATA static u8 itemInfo_subProcess[60] = {
 
 /* 803BC954-803BC960 000C+00 s=1 e=0 z=0  None .data      @4876                                                        */
 SECTION_DATA static void* lit_4876[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)floorSelect_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)floorSelect_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC960-803BC96C 000C+00 s=1 e=0 z=0  None .data      @4877                                                        */
 SECTION_DATA static void* lit_4877[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)floorChange_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)floorChange_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC96C-803BC984 0018+00 s=2 e=0 z=0  None .data      floor_init_process                                           */
@@ -894,16 +894,16 @@ SECTION_DATA static u8 floor_init_process[24] = {
 
 /* 803BC984-803BC990 000C+00 s=1 e=0 z=0  None .data      @4878                                                        */
 SECTION_DATA static void* lit_4878[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)floorSelect_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)floorSelect_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC990-803BC99C 000C+00 s=1 e=0 z=0  None .data      @4879                                                        */
 SECTION_DATA static void* lit_4879[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)floorChange_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)floorChange_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC99C-803BC9B4 0018+00 s=2 e=0 z=0  None .data      floor_move_process                                           */
@@ -914,23 +914,23 @@ SECTION_DATA static u8 floor_move_process[24] = {
 
 /* 803BC9B4-803BC9C0 000C+00 s=1 e=0 z=0  None .data      @4880                                                        */
 SECTION_DATA static void* lit_4880[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomWait_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomWait_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC9C0-803BC9CC 000C+00 s=1 e=0 z=0  None .data      @4881                                                        */
 SECTION_DATA static void* lit_4881[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomIn_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomIn_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC9CC-803BC9D8 000C+00 s=1 e=0 z=0  None .data      @4882                                                        */
 SECTION_DATA static void* lit_4882[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomOut_init_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomOut_init_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BC9D8-803BC9FC 0024+00 s=4 e=0 z=0  None .data      map_init_process                                             */
@@ -942,23 +942,23 @@ SECTION_DATA static u8 map_init_process[36] = {
 
 /* 803BC9FC-803BCA08 000C+00 s=1 e=0 z=0  None .data      @4883                                                        */
 SECTION_DATA static void* lit_4883[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomWait_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomWait_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BCA08-803BCA14 000C+00 s=1 e=0 z=0  None .data      @4884                                                        */
 SECTION_DATA static void* lit_4884[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomIn_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomIn_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BCA14-803BCA20 000C+00 s=1 e=0 z=0  None .data      @4885                                                        */
 SECTION_DATA static void* lit_4885[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)zoomOut_proc__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)zoomOut_proc__12dMenu_Dmap_cFv,
 };
 
 /* 803BCA20-803BCAE0 0024+9C s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -981,29 +981,29 @@ SECTION_DATA static u8 map_move_process[36 + 156 /* padding */] = {
 
 /* 803BCAE0-803BCAEC 000C+00 s=4 e=0 z=0  None .data      __vt__15dMenu_DmapMap_c                                      */
 SECTION_DATA static void* __vt__15dMenu_DmapMap_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dMenu_DmapMap_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dMenu_DmapMap_cFv,
 };
 
 /* 803BCAEC-803BCB10 0024+00 s=3 e=0 z=0  None .data      __vt__20dMenu_StageMapCtrl_c                                 */
 SECTION_DATA static void* __vt__20dMenu_StageMapCtrl_c[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20dMenu_StageMapCtrl_cFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20dMenu_StageMapCtrl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803BCB10-803BCB38 000C+1C s=2 e=0 z=0  None .data      __vt__12dMenu_Dmap_c                                         */
 SECTION_DATA static void* __vt__12dMenu_Dmap_c[3 + 7 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dMenu_Dmap_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dMenu_Dmap_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -1016,13 +1016,13 @@ SECTION_DATA static void* __vt__12dMenu_Dmap_c[3 + 7 /* padding */] = {
 
 /* 803BCB38-803BCB60 001C+0C s=2 e=0 z=0  None .data      __vt__14dMenu_DmapBg_c                                       */
 SECTION_DATA static void* __vt__14dMenu_DmapBg_c[7 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMenu_DmapBg_cFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_801C0844,
-	/* 6    */ (void*)__dt__14dMenu_DmapBg_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMenu_DmapBg_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801C0844,
+	(void*)__dt__14dMenu_DmapBg_cFv,
 	/* padding */
 	NULL,
 	NULL,

@@ -5,10 +5,10 @@ lbl_804BEFA0:
 /* 804BEFAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804BEFB0  93 C1 00 08 */	stw r30, 8(r1)
 /* 804BEFB4  7C 7E 1B 78 */	mr r30, r3
-/* 804BEFB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804BEFBC  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 804BEFC0  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
-/* 804BEFC4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 804BEFB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BEFBC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 804BEFC0  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 804BEFC4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 804BEFC8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 804BEFCC  41 82 00 88 */	beq lbl_804BF054
 /* 804BEFD0  38 7F 07 F0 */	addi r3, r31, 0x7f0
@@ -25,7 +25,7 @@ lbl_804BEFA0:
 /* 804BEFFC  40 82 00 50 */	bne lbl_804BF04C
 /* 804BF000  3C 60 80 4C */	lis r3, m_anmDataTable__9daMidna_c@ha
 /* 804BF004  38 63 65 E4 */	addi r3, r3, m_anmDataTable__9daMidna_c@l
-/* 804BF008  A0 63 01 50 */	lhz r3, 0x150(r3)	/* effective address: 804C6734 */
+/* 804BF008  A0 63 01 50 */	lhz r3, 0x150(r3)
 /* 804BF00C  A0 1E 05 E4 */	lhz r0, 0x5e4(r30)
 /* 804BF010  7C 03 00 40 */	cmplw r3, r0
 /* 804BF014  40 82 00 40 */	bne lbl_804BF054

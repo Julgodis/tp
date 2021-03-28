@@ -3,11 +3,11 @@ lbl_80550CA8:
 /* 80550CAC  38 C4 35 F8 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80550CB0  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80550CB4  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80550CB8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80550CBC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80550CB8  80 85 00 00 */	lwz r4, 0(r5)
+/* 80550CBC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80550CC0  90 83 0F 8C */	stw r4, 0xf8c(r3)
 /* 80550CC4  90 03 0F 90 */	stw r0, 0xf90(r3)
-/* 80550CC8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80550CC8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80550CCC  90 03 0F 94 */	stw r0, 0xf94(r3)
 /* 80550CD0  88 03 0F 80 */	lbz r0, 0xf80(r3)
 /* 80550CD4  2C 00 00 01 */	cmpwi r0, 1

@@ -9,7 +9,7 @@ lbl_80C46698:
 /* 80C466B4  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 80C466B8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C466BC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80C466C0  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 80C466C0  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 80C466C4  83 FE 00 14 */	lwz r31, 0x14(r30)
 /* 80C466C8  A0 1F 07 44 */	lhz r0, 0x744(r31)
 /* 80C466CC  7C 04 00 00 */	cmpw r4, r0

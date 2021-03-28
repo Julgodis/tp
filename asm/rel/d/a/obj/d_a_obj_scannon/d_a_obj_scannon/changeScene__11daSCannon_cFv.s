@@ -11,8 +11,8 @@ lbl_80CC88A8:
 /* 80CC88CC  2C 00 00 0A */	cmpwi r0, 0xa
 /* 80CC88D0  40 82 00 B0 */	bne lbl_80CC8980
 lbl_80CC88D4:
-/* 80CC88D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC88D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC88D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC88D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC88DC  3B C3 5B D4 */	addi r30, r3, 0x5bd4
 /* 80CC88E0  7F C3 F3 78 */	mr r3, r30
 /* 80CC88E4  4B 3A 75 78 */	b CheckQuake__12dVibration_cFv
@@ -33,8 +33,8 @@ lbl_80CC88FC:
 lbl_80CC891C:
 /* 80CC891C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CC8920  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80CC8924  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC8928  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC8924  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC8928  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC892C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CC8930  7C 05 07 74 */	extsb r5, r0
 /* 80CC8934  4B 36 CA 2C */	b isSwitch__10dSv_info_cCFii
@@ -42,8 +42,8 @@ lbl_80CC891C:
 /* 80CC893C  40 82 00 20 */	bne lbl_80CC895C
 /* 80CC8940  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CC8944  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80CC8948  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC894C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC8948  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC894C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC8950  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CC8954  7C 05 07 74 */	extsb r5, r0
 /* 80CC8958  4B 36 C8 A8 */	b onSwitch__10dSv_info_cFii

@@ -226,44 +226,44 @@ SECTION_DEAD static char const* const pad_8039A7E4 = "\0\0\0";
 
 /* 803C34B0-803C34C0 0010+00 s=1 e=0 z=0  None .data      strings$4165                                                 */
 SECTION_DATA static void* data_803C34B0[4] = {
-	/* 0    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
-	/* 1    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
-	/* 2    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2C7),
-	/* 3    */ (void*)(((char*)&DynamicLink__stringBase0)+0x2CC),
+	(void*)(((char*)&DynamicLink__stringBase0)+0x2BE),
+	(void*)(((char*)&DynamicLink__stringBase0)+0x2C3),
+	(void*)(((char*)&DynamicLink__stringBase0)+0x2C7),
+	(void*)(((char*)&DynamicLink__stringBase0)+0x2CC),
 };
 
 /* 803C34C0-803C34F4 0034+00 s=1 e=2 z=0  None .data      __vt__20DynamicModuleControl                                 */
 SECTION_DATA void* __vt__20DynamicModuleControl[13] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20DynamicModuleControlFv,
-	/* 3    */ (void*)getModuleName__20DynamicModuleControlCFv,
-	/* 4    */ (void*)getModuleSize__20DynamicModuleControlCFv,
-	/* 5    */ (void*)getModuleTypeString__20DynamicModuleControlCFv,
-	/* 6    */ (void*)dump__24DynamicModuleControlBaseFv,
-	/* 7    */ (void*)dump2__20DynamicModuleControlFv,
-	/* 8    */ (void*)do_load__20DynamicModuleControlFv,
-	/* 9    */ (void*)do_load_async__20DynamicModuleControlFv,
-	/* 10   */ (void*)do_unload__20DynamicModuleControlFv,
-	/* 11   */ (void*)do_link__20DynamicModuleControlFv,
-	/* 12   */ (void*)do_unlink__20DynamicModuleControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20DynamicModuleControlFv,
+	(void*)getModuleName__20DynamicModuleControlCFv,
+	(void*)getModuleSize__20DynamicModuleControlCFv,
+	(void*)getModuleTypeString__20DynamicModuleControlCFv,
+	(void*)dump__24DynamicModuleControlBaseFv,
+	(void*)dump2__20DynamicModuleControlFv,
+	(void*)do_load__20DynamicModuleControlFv,
+	(void*)do_load_async__20DynamicModuleControlFv,
+	(void*)do_unload__20DynamicModuleControlFv,
+	(void*)do_link__20DynamicModuleControlFv,
+	(void*)do_unlink__20DynamicModuleControlFv,
 };
 
 /* 803C34F4-803C3528 0034+00 s=2 e=0 z=0  None .data      __vt__24DynamicModuleControlBase                             */
 SECTION_DATA static void* __vt__24DynamicModuleControlBase[13] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__24DynamicModuleControlBaseFv,
-	/* 3    */ (void*)getModuleName__24DynamicModuleControlBaseCFv,
-	/* 4    */ (void*)getModuleSize__24DynamicModuleControlBaseCFv,
-	/* 5    */ (void*)getModuleTypeString__24DynamicModuleControlBaseCFv,
-	/* 6    */ (void*)dump__24DynamicModuleControlBaseFv,
-	/* 7    */ (void*)dump2__24DynamicModuleControlBaseFv,
-	/* 8    */ (void*)do_load__24DynamicModuleControlBaseFv,
-	/* 9    */ (void*)do_load_async__24DynamicModuleControlBaseFv,
-	/* 10   */ (void*)do_unload__24DynamicModuleControlBaseFv,
-	/* 11   */ (void*)do_link__24DynamicModuleControlBaseFv,
-	/* 12   */ (void*)do_unlink__24DynamicModuleControlBaseFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__24DynamicModuleControlBaseFv,
+	(void*)getModuleName__24DynamicModuleControlBaseCFv,
+	(void*)getModuleSize__24DynamicModuleControlBaseCFv,
+	(void*)getModuleTypeString__24DynamicModuleControlBaseCFv,
+	(void*)dump__24DynamicModuleControlBaseFv,
+	(void*)dump2__24DynamicModuleControlBaseFv,
+	(void*)do_load__24DynamicModuleControlBaseFv,
+	(void*)do_load_async__24DynamicModuleControlBaseFv,
+	(void*)do_unload__24DynamicModuleControlBaseFv,
+	(void*)do_link__24DynamicModuleControlBaseFv,
+	(void*)do_unlink__24DynamicModuleControlBaseFv,
 };
 
 /* 80451138-8045113C 0004+00 s=3 e=0 z=0  None .sbss      mFirst__24DynamicModuleControlBase                           */

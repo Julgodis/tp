@@ -14,8 +14,8 @@ lbl_80CC83CC:
 /* 80CC83FC  4B 66 00 30 */	b checkPass__12J3DFrameCtrlFf
 /* 80CC8400  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC8404  41 82 00 18 */	beq lbl_80CC841C
-/* 80CC8408  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC840C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC8408  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC840C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC8410  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC8414  80 9F 06 04 */	lwz r4, 0x604(r31)
 /* 80CC8418  4B 37 FD 64 */	b cutEnd__16dEvent_manager_cFi

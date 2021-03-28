@@ -19,7 +19,7 @@ lbl_80B0D20C:
 /* 80B0D22C  38 A0 00 00 */	li r5, 0
 /* 80B0D230  3C C0 80 B1 */	lis r6, m__16daNpcTkc_Param_c@ha
 /* 80B0D234  38 C6 08 B4 */	addi r6, r6, m__16daNpcTkc_Param_c@l
-/* 80B0D238  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80B108C0 */
+/* 80B0D238  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80B0D23C  38 C0 00 00 */	li r6, 0
 /* 80B0D240  38 E0 00 00 */	li r7, 0
 /* 80B0D244  4B 64 50 68 */	b draw__8daNpcF_cFiifP11_GXColorS10i

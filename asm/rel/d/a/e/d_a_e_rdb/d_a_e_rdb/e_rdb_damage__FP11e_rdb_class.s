@@ -146,8 +146,8 @@ lbl_80766488:
 /* 807664A0  7C 00 07 74 */	extsb r0, r0
 /* 807664A4  2C 00 00 02 */	cmpwi r0, 2
 /* 807664A8  41 80 00 3C */	blt lbl_807664E4
-/* 807664AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807664B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807664AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807664B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807664B4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 807664B8  3C 80 80 77 */	lis r4, stringBase0@ha
 /* 807664BC  38 84 B6 C4 */	addi r4, r4, stringBase0@l

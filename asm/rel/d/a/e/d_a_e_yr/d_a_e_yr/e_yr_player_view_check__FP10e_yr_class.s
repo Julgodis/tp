@@ -5,12 +5,12 @@ lbl_80822954:
 /* 80822960  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80822964  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80822968  7C 7E 1B 78 */	mr r30, r3
-/* 8082296C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80822970  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80822974  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8082296C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80822970  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80822974  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 80822978  3C 80 80 83 */	lis r4, l_e_yrHIO@ha
 /* 8082297C  38 84 8D BC */	addi r4, r4, l_e_yrHIO@l
-/* 80822980  88 04 00 06 */	lbz r0, 6(r4)	/* effective address: 80828DC2 */
+/* 80822980  88 04 00 06 */	lbz r0, 6(r4)
 /* 80822984  28 00 00 00 */	cmplwi r0, 0
 /* 80822988  41 82 00 0C */	beq lbl_80822994
 /* 8082298C  38 60 00 01 */	li r3, 1
@@ -48,7 +48,7 @@ lbl_808229FC:
 /* 808229FC  C0 3E 06 CC */	lfs f1, 0x6cc(r30)
 /* 80822A00  3C 60 80 83 */	lis r3, l_e_yrHIO@ha
 /* 80822A04  38 63 8D BC */	addi r3, r3, l_e_yrHIO@l
-/* 80822A08  C0 03 00 68 */	lfs f0, 0x68(r3)	/* effective address: 80828E24 */
+/* 80822A08  C0 03 00 68 */	lfs f0, 0x68(r3)
 /* 80822A0C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80822A10  41 81 00 14 */	bgt lbl_80822A24
 /* 80822A14  7F C3 F3 78 */	mr r3, r30
@@ -78,14 +78,14 @@ lbl_80822A50:
 lbl_80822A64:
 /* 80822A64  3C 60 80 83 */	lis r3, l_e_yrHIO@ha
 /* 80822A68  38 63 8D BC */	addi r3, r3, l_e_yrHIO@l
-/* 80822A6C  A8 A3 00 6E */	lha r5, 0x6e(r3)	/* effective address: 80828E2A */
-/* 80822A70  C0 43 00 74 */	lfs f2, 0x74(r3)	/* effective address: 80828E30 */
+/* 80822A6C  A8 A3 00 6E */	lha r5, 0x6e(r3)
+/* 80822A70  C0 43 00 74 */	lfs f2, 0x74(r3)
 /* 80822A74  48 00 00 14 */	b lbl_80822A88
 lbl_80822A78:
 /* 80822A78  3C 60 80 83 */	lis r3, l_e_yrHIO@ha
 /* 80822A7C  38 63 8D BC */	addi r3, r3, l_e_yrHIO@l
-/* 80822A80  A8 A3 00 6C */	lha r5, 0x6c(r3)	/* effective address: 80828E28 */
-/* 80822A84  C0 43 00 70 */	lfs f2, 0x70(r3)	/* effective address: 80828E2C */
+/* 80822A80  A8 A3 00 6C */	lha r5, 0x6c(r3)
+/* 80822A84  C0 43 00 70 */	lfs f2, 0x70(r3)
 lbl_80822A88:
 /* 80822A88  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 80822A8C  C0 1E 05 3C */	lfs f0, 0x53c(r30)

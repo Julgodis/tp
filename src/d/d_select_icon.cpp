@@ -63,9 +63,9 @@ extern "C" void __register_global_object(); // 1
 /* ############################################################################################## */
 /* 803BB7B8-803BB7C8 000C+04 s=2 e=0 z=0  None .data      __vt__9dSi_HIO_c                                             */
 SECTION_DATA static void* __vt__9dSi_HIO_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9dSi_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9dSi_HIO_cFv,
 	/* padding */
 	NULL,
 };

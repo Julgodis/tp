@@ -11,8 +11,8 @@ lbl_8058D7EC:
 /* 8058D810  3C A0 80 43 */	lis r5, Zero__4cXyz@ha
 /* 8058D814  38 A5 0C F4 */	addi r5, r5, Zero__4cXyz@l
 /* 8058D818  38 DF 00 00 */	addi r6, r31, 0
-/* 8058D81C  C0 26 00 04 */	lfs f1, 4(r6)	/* effective address: 8058DD54 */
-/* 8058D820  C0 46 00 08 */	lfs f2, 8(r6)	/* effective address: 8058DD58 */
+/* 8058D81C  C0 26 00 04 */	lfs f1, 4(r6)
+/* 8058D820  C0 46 00 08 */	lfs f2, 8(r6)
 /* 8058D824  4B AA 9B 9C */	b posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff
 /* 8058D828  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 8058D82C  C0 1E 05 B8 */	lfs f0, 0x5b8(r30)
@@ -34,7 +34,7 @@ lbl_8058D7EC:
 /* 8058D86C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8058D870  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8058D874  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8058D878  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8058D878  80 63 00 00 */	lwz r3, 0(r3)
 /* 8058D87C  38 81 00 0C */	addi r4, r1, 0xc
 /* 8058D880  38 BE 05 38 */	addi r5, r30, 0x538
 /* 8058D884  7F A6 EB 78 */	mr r6, r29
@@ -49,8 +49,8 @@ lbl_8058D7EC:
 /* 8058D8A8  C0 1F 00 50 */	lfs f0, 0x50(r31)
 /* 8058D8AC  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8058D8B0  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 8058D8B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058D8B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8058D8B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058D8B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8058D8BC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8058D8C0  38 80 00 04 */	li r4, 4
 /* 8058D8C4  38 A0 00 1F */	li r5, 0x1f
@@ -84,7 +84,7 @@ lbl_8058D90C:
 /* 8058D920  90 01 00 08 */	stw r0, 8(r1)
 /* 8058D924  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8058D928  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8058D92C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8058D92C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8058D930  38 81 00 08 */	addi r4, r1, 8
 /* 8058D934  38 BE 05 38 */	addi r5, r30, 0x538
 /* 8058D938  7F A6 EB 78 */	mr r6, r29

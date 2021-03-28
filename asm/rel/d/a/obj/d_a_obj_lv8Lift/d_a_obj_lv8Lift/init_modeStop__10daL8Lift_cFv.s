@@ -14,7 +14,7 @@ lbl_80C89874:
 lbl_80C898A4:
 /* 80C898A4  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C898A8  38 63 A1 F4 */	addi r3, r3, l_HIO@l
-/* 80C898AC  88 03 00 04 */	lbz r0, 4(r3)	/* effective address: 80C8A1F8 */
+/* 80C898AC  88 03 00 04 */	lbz r0, 4(r3)
 /* 80C898B0  98 1F 08 09 */	stb r0, 0x809(r31)
 /* 80C898B4  3C 60 80 C9 */	lis r3, lit_3896@ha
 /* 80C898B8  C0 03 9F C8 */	lfs f0, lit_3896@l(r3)

@@ -268,30 +268,30 @@ asm void J3DShapeMtx::loadMtxIndx_PNCPU(int param_0, u16 param_1) const {
 /* ############################################################################################## */
 /* 803CD990-803CD99C 000C+00 s=1 e=0 z=0  None .data      @832                                                         */
 SECTION_DATA static void* lit_832[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxIndx_PNGP__11J3DShapeMtxCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PNGP__11J3DShapeMtxCFiUs,
 };
 
 /* 803CD99C-803CD9A8 000C+00 s=1 e=0 z=0  None .data      @833                                                         */
 SECTION_DATA static void* lit_833[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxIndx_PCPU__11J3DShapeMtxCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PCPU__11J3DShapeMtxCFiUs,
 };
 
 /* 803CD9A8-803CD9B4 000C+00 s=1 e=0 z=0  None .data      @834                                                         */
 SECTION_DATA static void* lit_834[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxIndx_NCPU__11J3DShapeMtxCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_NCPU__11J3DShapeMtxCFiUs,
 };
 
 /* 803CD9B4-803CD9C0 000C+00 s=1 e=0 z=0  None .data      @835                                                         */
 SECTION_DATA static void* lit_835[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxIndx_PNCPU__11J3DShapeMtxCFiUs,
 };
 
 /* 803CD9C0-803CD9F0 0030+00 s=3 e=0 z=0  None .data      sMtxLoadPipeline__11J3DShapeMtx                              */
@@ -303,30 +303,30 @@ SECTION_DATA static u8 sMtxLoadPipeline__11J3DShapeMtx[48] = {
 
 /* 803CD9F0-803CD9FC 000C+00 s=1 e=0 z=0  None .data      @836                                                         */
 SECTION_DATA static void* lit_836[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNGP__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CD9FC-803CDA08 000C+00 s=1 e=0 z=0  None .data      @837                                                         */
 SECTION_DATA static void* lit_837[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA08-803CDA14 000C+00 s=1 e=0 z=0  None .data      @838                                                         */
 SECTION_DATA static void* lit_838[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA14-803CDA20 000C+00 s=1 e=0 z=0  None .data      @839                                                         */
 SECTION_DATA static void* lit_839[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA20-803CDA50 0030+00 s=3 e=0 z=0  None .data      sMtxLoadPipeline__21J3DShapeMtxConcatView                    */
@@ -338,30 +338,30 @@ SECTION_DATA static u8 sMtxLoadPipeline__21J3DShapeMtxConcatView[48] = {
 
 /* 803CDA50-803CDA5C 000C+00 s=1 e=0 z=0  None .data      @840                                                         */
 SECTION_DATA static void* lit_840[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNGP_LOD__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA5C-803CDA68 000C+00 s=1 e=0 z=0  None .data      @841                                                         */
 SECTION_DATA static void* lit_841[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA68-803CDA74 000C+00 s=1 e=0 z=0  None .data      @842                                                         */
 SECTION_DATA static void* lit_842[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_NCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA74-803CDA80 000C+00 s=1 e=0 z=0  None .data      @843                                                         */
 SECTION_DATA static void* lit_843[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)loadMtxConcatView_PNCPU__21J3DShapeMtxConcatViewCFiUs,
 };
 
 /* 803CDA80-803CDAB0 0030+00 s=2 e=0 z=0  None .data      sMtxLoadLODPipeline__21J3DShapeMtxConcatView                 */
@@ -387,34 +387,34 @@ SECTION_DATA static u8 data_803CDAE0[48] = {
 
 /* 803CDB10-803CDB40 0030+00 s=1 e=0 z=0  None .data      @1035                                                        */
 SECTION_DATA static void* lit_1035[12] = {
-	/* 0    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x5B4),
-	/* 1    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
-	/* 2    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3CC),
-	/* 3    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x370),
-	/* 4    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x5B4),
-	/* 5    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3DC),
-	/* 6    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
-	/* 7    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
-	/* 8    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3CC),
-	/* 9    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x370),
-	/* 10   */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x510),
-	/* 11   */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x46C),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x5B4),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3CC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x370),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x5B4),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3DC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x390),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x3CC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x370),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x510),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x46C),
 };
 
 /* 803CDB40-803CDB70 0030+00 s=1 e=0 z=0  None .data      @1034                                                        */
 SECTION_DATA static void* lit_1034[12] = {
-	/* 0    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x2B8),
-	/* 1    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
-	/* 2    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xE0),
-	/* 3    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xB8),
-	/* 4    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x2B8),
-	/* 5    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x110),
-	/* 6    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
-	/* 7    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
-	/* 8    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xE0),
-	/* 9    */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xB8),
-	/* 10   */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x224),
-	/* 11   */ (void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x190),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x2B8),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xE0),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xB8),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x2B8),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x110),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xCC),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xE0),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0xB8),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x224),
+	(void*)(((char*)loadExecute__17J3DDifferedTexMtxFPA4_Cf)+0x190),
 };
 
 /* 804515A8-804515AC 0004+00 s=4 e=2 z=0  None .sbss      sCurrentPipeline__11J3DShapeMtx                              */
@@ -632,82 +632,82 @@ SECTION_DATA u8 data_803CDB70[20] = {
 
 /* 803CDB84-803CDBAC 0028+00 s=1 e=1 z=0  None .data      __vt__28J3DShapeMtxYBBoardConcatView                         */
 SECTION_DATA void* __vt__28J3DShapeMtxYBBoardConcatView[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__28J3DShapeMtxYBBoardConcatViewFv,
-	/* 3    */ (void*)getType__28J3DShapeMtxYBBoardConcatViewCFv,
-	/* 4    */ (void*)getUseMtxNum__11J3DShapeMtxCFv,
-	/* 5    */ (void*)getUseMtxIndex__11J3DShapeMtxCFUs,
-	/* 6    */ (void*)load__28J3DShapeMtxYBBoardConcatViewCFv,
-	/* 7    */ (void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
-	/* 8    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
-	/* 9    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__28J3DShapeMtxYBBoardConcatViewFv,
+	(void*)getType__28J3DShapeMtxYBBoardConcatViewCFv,
+	(void*)getUseMtxNum__11J3DShapeMtxCFv,
+	(void*)getUseMtxIndex__11J3DShapeMtxCFUs,
+	(void*)load__28J3DShapeMtxYBBoardConcatViewCFv,
+	(void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
 
 /* 803CDBAC-803CDBD4 0028+00 s=1 e=1 z=0  None .data      __vt__27J3DShapeMtxBBoardConcatView                          */
 SECTION_DATA void* __vt__27J3DShapeMtxBBoardConcatView[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__27J3DShapeMtxBBoardConcatViewFv,
-	/* 3    */ (void*)getType__27J3DShapeMtxBBoardConcatViewCFv,
-	/* 4    */ (void*)getUseMtxNum__11J3DShapeMtxCFv,
-	/* 5    */ (void*)getUseMtxIndex__11J3DShapeMtxCFUs,
-	/* 6    */ (void*)load__27J3DShapeMtxBBoardConcatViewCFv,
-	/* 7    */ (void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
-	/* 8    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
-	/* 9    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__27J3DShapeMtxBBoardConcatViewFv,
+	(void*)getType__27J3DShapeMtxBBoardConcatViewCFv,
+	(void*)getUseMtxNum__11J3DShapeMtxCFv,
+	(void*)getUseMtxIndex__11J3DShapeMtxCFUs,
+	(void*)load__27J3DShapeMtxBBoardConcatViewCFv,
+	(void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
 
 /* 803CDBD4-803CDBFC 0028+00 s=1 e=1 z=0  None .data      __vt__26J3DShapeMtxMultiConcatView                           */
 SECTION_DATA void* __vt__26J3DShapeMtxMultiConcatView[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__26J3DShapeMtxMultiConcatViewFv,
-	/* 3    */ (void*)getType__26J3DShapeMtxMultiConcatViewCFv,
-	/* 4    */ (void*)getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv,
-	/* 5    */ (void*)getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs,
-	/* 6    */ (void*)load__26J3DShapeMtxMultiConcatViewCFv,
-	/* 7    */ (void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
-	/* 8    */ (void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs,
-	/* 9    */ (void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__26J3DShapeMtxMultiConcatViewFv,
+	(void*)getType__26J3DShapeMtxMultiConcatViewCFv,
+	(void*)getUseMtxNum__26J3DShapeMtxMultiConcatViewCFv,
+	(void*)getUseMtxIndex__26J3DShapeMtxMultiConcatViewCFUs,
+	(void*)load__26J3DShapeMtxMultiConcatViewCFv,
+	(void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUs,
+	(void*)loadNrmMtx__26J3DShapeMtxMultiConcatViewCFiUsPA4_f,
 };
 
 /* 803CDBFC-803CDC1C 0020+00 s=1 e=1 z=0  None .data      __vt__16J3DShapeMtxMulti                                     */
 SECTION_DATA void* __vt__16J3DShapeMtxMulti[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16J3DShapeMtxMultiFv,
-	/* 3    */ (void*)getType__16J3DShapeMtxMultiCFv,
-	/* 4    */ (void*)getUseMtxNum__16J3DShapeMtxMultiCFv,
-	/* 5    */ (void*)getUseMtxIndex__16J3DShapeMtxMultiCFUs,
-	/* 6    */ (void*)load__16J3DShapeMtxMultiCFv,
-	/* 7    */ (void*)calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J3DShapeMtxMultiFv,
+	(void*)getType__16J3DShapeMtxMultiCFv,
+	(void*)getUseMtxNum__16J3DShapeMtxMultiCFv,
+	(void*)getUseMtxIndex__16J3DShapeMtxMultiCFUs,
+	(void*)load__16J3DShapeMtxMultiCFv,
+	(void*)calcNBTScale__16J3DShapeMtxMultiFRC3VecPA3_A3_fPA3_A3_f,
 };
 
 /* 803CDC1C-803CDC44 0028+00 s=4 e=1 z=0  None .data      __vt__21J3DShapeMtxConcatView                                */
 SECTION_DATA void* __vt__21J3DShapeMtxConcatView[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21J3DShapeMtxConcatViewFv,
-	/* 3    */ (void*)getType__21J3DShapeMtxConcatViewCFv,
-	/* 4    */ (void*)getUseMtxNum__11J3DShapeMtxCFv,
-	/* 5    */ (void*)getUseMtxIndex__11J3DShapeMtxCFUs,
-	/* 6    */ (void*)load__21J3DShapeMtxConcatViewCFv,
-	/* 7    */ (void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
-	/* 8    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
-	/* 9    */ (void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__21J3DShapeMtxConcatViewFv,
+	(void*)getType__21J3DShapeMtxConcatViewCFv,
+	(void*)getUseMtxNum__11J3DShapeMtxCFv,
+	(void*)getUseMtxIndex__11J3DShapeMtxCFUs,
+	(void*)load__21J3DShapeMtxConcatViewCFv,
+	(void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUs,
+	(void*)loadNrmMtx__21J3DShapeMtxConcatViewCFiUsPA4_f,
 };
 
 /* 803CDC44-803CDC68 0020+04 s=6 e=1 z=0  None .data      __vt__11J3DShapeMtx                                          */
 SECTION_DATA void* __vt__11J3DShapeMtx[8 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11J3DShapeMtxFv,
-	/* 3    */ (void*)getType__11J3DShapeMtxCFv,
-	/* 4    */ (void*)getUseMtxNum__11J3DShapeMtxCFv,
-	/* 5    */ (void*)getUseMtxIndex__11J3DShapeMtxCFUs,
-	/* 6    */ (void*)load__11J3DShapeMtxCFv,
-	/* 7    */ (void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11J3DShapeMtxFv,
+	(void*)getType__11J3DShapeMtxCFv,
+	(void*)getUseMtxNum__11J3DShapeMtxCFv,
+	(void*)getUseMtxIndex__11J3DShapeMtxCFUs,
+	(void*)load__11J3DShapeMtxCFv,
+	(void*)calcNBTScale__11J3DShapeMtxFRC3VecPA3_A3_fPA3_A3_f,
 	/* padding */
 	NULL,
 };

@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct STControl {
+struct ResTIMG {
 };
 
-struct ResTIMG {
+struct STControl {
 };
 
 struct dMenu_Fmap2DBack_c {
@@ -87,12 +87,6 @@ struct dMenu_Fmap2DBack_c {
 	/* 801D5BB8 */ void setArrowPosAxis(f32, f32);
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct JKRExpHeap {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -116,11 +110,17 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
+struct JKRExpHeap {
+};
+
 struct CPaneMgrAlpha {
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Fmap2DTop_c {
@@ -220,10 +220,10 @@ struct CPaneMgrAlphaMorf {
 	/* 80255E28 */ void setAlphaMorfRate(f32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -632,21 +632,21 @@ SECTION_DEAD static char const* const pad_8039668C = "\0\0\0";
 
 /* 803BD750-803BD760 0010+00 s=2 e=0 z=0  None .data      __vt__17dMenu_Fmap2DTop_c                                    */
 SECTION_DATA static void* __vt__17dMenu_Fmap2DTop_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__17dMenu_Fmap2DTop_cFv,
-	/* 3    */ (void*)__dt__17dMenu_Fmap2DTop_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__17dMenu_Fmap2DTop_cFv,
+	(void*)__dt__17dMenu_Fmap2DTop_cFv,
 };
 
 /* 803BD760-803BD780 001C+04 s=2 e=0 z=0  None .data      __vt__18dMenu_Fmap2DBack_c                                   */
 SECTION_DATA static void* __vt__18dMenu_Fmap2DBack_c[7 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__18dMenu_Fmap2DBack_cFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_801D810C,
-	/* 6    */ (void*)__dt__18dMenu_Fmap2DBack_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__18dMenu_Fmap2DBack_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_801D810C,
+	(void*)__dt__18dMenu_Fmap2DBack_cFv,
 	/* padding */
 	NULL,
 };

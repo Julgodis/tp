@@ -7,9 +7,9 @@ lbl_80BF8584:
 /* 80BF8598  7C 7E 1B 78 */	mr r30, r3
 /* 80BF859C  3C 60 80 C0 */	lis r3, l_dzb@ha
 /* 80BF85A0  3B E3 8F E8 */	addi r31, r3, l_dzb@l
-/* 80BF85A4  C0 3F 00 24 */	lfs f1, 0x24(r31)	/* effective address: 80BF900C */
+/* 80BF85A4  C0 3F 00 24 */	lfs f1, 0x24(r31)
 /* 80BF85A8  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80BF85AC  C0 1F 00 28 */	lfs f0, 0x28(r31)	/* effective address: 80BF9010 */
+/* 80BF85AC  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80BF85B0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BF85B4  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80BF85B8  38 7E 04 DC */	addi r3, r30, 0x4dc

@@ -13,10 +13,10 @@ lbl_805E5190:
 /* 805E51BC  88 03 05 C6 */	lbz r0, 0x5c6(r3)
 /* 805E51C0  28 00 00 02 */	cmplwi r0, 2
 /* 805E51C4  4C 82 00 20 */	bnelr 
-/* 805E51C8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805E51CC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805E51D0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 805E51D4  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 804066A6 */
+/* 805E51C8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805E51CC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805E51D0  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 805E51D4  A8 84 04 E6 */	lha r4, 0x4e6(r4)
 /* 805E51D8  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 805E51DC  7C 04 00 50 */	subf r0, r4, r0
 /* 805E51E0  7C 04 07 34 */	extsh r4, r0

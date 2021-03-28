@@ -127,7 +127,7 @@ lbl_80A4A700:
 lbl_80A4A71C:
 /* 80A4A71C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A4A720  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A4A724  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A4A724  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A4A728  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80A4A72C  4B 5C 1C B0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80A4A730  C0 1F 00 30 */	lfs f0, 0x30(r31)
@@ -307,9 +307,9 @@ lbl_80A4A9B4:
 /* 80A4A9C0  A8 1E 05 F0 */	lha r0, 0x5f0(r30)
 /* 80A4A9C4  2C 00 00 00 */	cmpwi r0, 0
 /* 80A4A9C8  41 82 00 18 */	beq lbl_80A4A9E0
-/* 80A4A9CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4A9D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A4A9D4  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80A4A9CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4A9D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A4A9D4  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A4A9D8  28 00 00 00 */	cmplwi r0, 0
 /* 80A4A9DC  40 82 00 0C */	bne lbl_80A4A9E8
 lbl_80A4A9E0:
@@ -323,15 +323,15 @@ lbl_80A4A9E8:
 /* 80A4A9F8  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80A4A9FC  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80A4AA00  41 82 00 AC */	beq lbl_80A4AAAC
-/* 80A4AA04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4AA08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A4AA04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4AA08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A4AA0C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80A4AA10  7C 05 07 74 */	extsb r5, r0
 /* 80A4AA14  4B 5E A9 4C */	b isSwitch__10dSv_info_cCFii
 /* 80A4AA18  2C 03 00 00 */	cmpwi r3, 0
 /* 80A4AA1C  41 82 00 90 */	beq lbl_80A4AAAC
-/* 80A4AA20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4AA24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A4AA20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4AA24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A4AA28  38 63 09 58 */	addi r3, r3, 0x958
 /* 80A4AA2C  80 9E 05 BC */	lwz r4, 0x5bc(r30)
 /* 80A4AA30  4B 5E 9D 70 */	b onTbox__12dSv_memBit_cFi

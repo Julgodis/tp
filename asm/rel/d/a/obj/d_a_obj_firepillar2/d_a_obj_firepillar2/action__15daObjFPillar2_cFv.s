@@ -8,7 +8,7 @@ lbl_80BEA734:
 /* 80BEA74C  38 C3 B5 28 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80BEA750  3C 60 80 BF */	lis r3, data_80BEB6E0@ha
 /* 80BEA754  38 A3 B6 E0 */	addi r5, r3, data_80BEB6E0@l
-/* 80BEA758  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80BEB6E0 */
+/* 80BEA758  88 05 00 00 */	lbz r0, 0(r5)
 /* 80BEA75C  7C 00 07 75 */	extsb. r0, r0
 /* 80BEA760  40 82 00 58 */	bne lbl_80BEA7B8
 /* 80BEA764  80 66 00 88 */	lwz r3, 0x88(r6)

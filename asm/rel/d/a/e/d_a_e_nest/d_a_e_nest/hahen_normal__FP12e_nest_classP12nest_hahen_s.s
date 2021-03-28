@@ -45,8 +45,8 @@ lbl_80501228:
 /* 80501274  38 61 00 60 */	addi r3, r1, 0x60
 /* 80501278  38 81 00 54 */	addi r4, r1, 0x54
 /* 8050127C  4B D6 6A AC */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80501280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80501284  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80501280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80501284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80501288  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8050128C  7F C3 F3 78 */	mr r3, r30
 /* 80501290  38 81 00 60 */	addi r4, r1, 0x60

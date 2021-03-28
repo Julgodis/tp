@@ -87,8 +87,8 @@ lbl_80C8BFAC:
 /* 80C8C02C  98 1D 05 B9 */	stb r0, 0x5b9(r29)
 /* 80C8C030  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 80C8C034  54 04 06 3E */	clrlwi r4, r0, 0x18
-/* 80C8C038  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C8C03C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C8C038  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C8C03C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C8C040  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 80C8C044  7C 05 07 74 */	extsb r5, r0
 /* 80C8C048  4B 3A 93 18 */	b isSwitch__10dSv_info_cCFii
@@ -100,11 +100,11 @@ lbl_80C8BFAC:
 /* 80C8C060  D0 1D 05 C0 */	stfs f0, 0x5c0(r29)
 /* 80C8C064  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C8C068  38 63 CD 8C */	addi r3, r3, l_HIO@l
-/* 80C8C06C  88 03 00 11 */	lbz r0, 0x11(r3)	/* effective address: 80C8CD9D */
+/* 80C8C06C  88 03 00 11 */	lbz r0, 0x11(r3)
 /* 80C8C070  98 1D 05 BD */	stb r0, 0x5bd(r29)
-/* 80C8C074  88 03 00 12 */	lbz r0, 0x12(r3)	/* effective address: 80C8CD9E */
+/* 80C8C074  88 03 00 12 */	lbz r0, 0x12(r3)
 /* 80C8C078  98 1D 05 BE */	stb r0, 0x5be(r29)
-/* 80C8C07C  88 03 00 13 */	lbz r0, 0x13(r3)	/* effective address: 80C8CD9F */
+/* 80C8C07C  88 03 00 13 */	lbz r0, 0x13(r3)
 /* 80C8C080  98 1D 05 BF */	stb r0, 0x5bf(r29)
 /* 80C8C084  48 00 00 2C */	b lbl_80C8C0B0
 lbl_80C8C088:
@@ -112,11 +112,11 @@ lbl_80C8C088:
 /* 80C8C08C  D0 1D 05 C0 */	stfs f0, 0x5c0(r29)
 /* 80C8C090  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C8C094  38 63 CD 8C */	addi r3, r3, l_HIO@l
-/* 80C8C098  88 03 00 0D */	lbz r0, 0xd(r3)	/* effective address: 80C8CD99 */
+/* 80C8C098  88 03 00 0D */	lbz r0, 0xd(r3)
 /* 80C8C09C  98 1D 05 BD */	stb r0, 0x5bd(r29)
-/* 80C8C0A0  88 03 00 0E */	lbz r0, 0xe(r3)	/* effective address: 80C8CD9A */
+/* 80C8C0A0  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 80C8C0A4  98 1D 05 BE */	stb r0, 0x5be(r29)
-/* 80C8C0A8  88 03 00 0F */	lbz r0, 0xf(r3)	/* effective address: 80C8CD9B */
+/* 80C8C0A8  88 03 00 0F */	lbz r0, 0xf(r3)
 /* 80C8C0AC  98 1D 05 BF */	stb r0, 0x5bf(r29)
 lbl_80C8C0B0:
 /* 80C8C0B0  7F A3 EB 78 */	mr r3, r29

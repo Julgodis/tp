@@ -188,29 +188,29 @@ static bool daNocrm_draw(daNocrm_c* param_0) {
 /* ############################################################################################## */
 /* 803B3658-803B3678 0020+00 s=1 e=0 z=0  None .data      daNocrm_METHODS                                              */
 SECTION_DATA static void* daNocrm_METHODS[8] = {
-	/* 0    */ (void*)daNocrm_create__FP9daNocrm_c,
-	/* 1    */ (void*)daNocrm_Delete__FP9daNocrm_c,
-	/* 2    */ (void*)daNocrm_execute__FP9daNocrm_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daNocrm_draw__FP9daNocrm_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)daNocrm_create__FP9daNocrm_c,
+	(void*)daNocrm_Delete__FP9daNocrm_c,
+	(void*)daNocrm_execute__FP9daNocrm_c,
+	(void*)NULL,
+	(void*)daNocrm_draw__FP9daNocrm_c,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 803B3678-803B36A8 0030+00 s=0 e=0 z=1  None .data      g_profile_NO_CHG_ROOM                                        */
+/* 803B3678-803B36A8 0030+00 s=0 e=0 z=0  None .data      g_profile_NO_CHG_ROOM                                        */
 SECTION_DATA void* g_profile_NO_CHG_ROOM[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0002FFFD,
-	/* 2    */ (void*)0x001A0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005CC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02FA0000,
-	/* 9    */ (void*)&daNocrm_METHODS,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0002FFFD,
+	(void*)0x001A0000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000005CC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x02FA0000,
+	(void*)&daNocrm_METHODS,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 

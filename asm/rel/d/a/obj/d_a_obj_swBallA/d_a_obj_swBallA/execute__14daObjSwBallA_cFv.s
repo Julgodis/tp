@@ -8,7 +8,7 @@ lbl_80CF3A90:
 /* 80CF3AA8  38 C3 44 18 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80CF3AAC  3C 60 80 CF */	lis r3, data_80CF452C@ha
 /* 80CF3AB0  38 A3 45 2C */	addi r5, r3, data_80CF452C@l
-/* 80CF3AB4  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CF452C */
+/* 80CF3AB4  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CF3AB8  7C 00 07 75 */	extsb. r0, r0
 /* 80CF3ABC  40 82 00 40 */	bne lbl_80CF3AFC
 /* 80CF3AC0  80 66 00 24 */	lwz r3, 0x24(r6)

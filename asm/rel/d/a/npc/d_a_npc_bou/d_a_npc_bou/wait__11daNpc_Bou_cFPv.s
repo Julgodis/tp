@@ -46,10 +46,10 @@ lbl_80970A90:
 /* 80970A90  38 00 00 02 */	li r0, 2
 /* 80970A94  B0 1F 0E 22 */	sth r0, 0xe22(r31)
 lbl_80970A98:
-/* 80970A98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80970A9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80970AA0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80970AA4  88 03 05 6A */	lbz r0, 0x56a(r3)	/* effective address: 8040672A */
+/* 80970A98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80970A9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80970AA0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80970AA4  88 03 05 6A */	lbz r0, 0x56a(r3)
 /* 80970AA8  28 00 00 2A */	cmplwi r0, 0x2a
 /* 80970AAC  40 82 00 10 */	bne lbl_80970ABC
 /* 80970AB0  38 00 00 01 */	li r0, 1

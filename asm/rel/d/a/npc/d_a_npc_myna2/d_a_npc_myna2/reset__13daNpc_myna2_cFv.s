@@ -14,17 +14,17 @@ lbl_80A85160:
 /* 80A85190  4B 6C B5 20 */	b initialize__18daNpcF_ActorMngr_cFv
 /* 80A85194  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A85198  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A8519C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A851A0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A8519C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A851A0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A851A4  90 7E 0D C0 */	stw r3, 0xdc0(r30)
 /* 80A851A8  90 1E 0D C4 */	stw r0, 0xdc4(r30)
-/* 80A851AC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A851AC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A851B0  90 1E 0D C8 */	stw r0, 0xdc8(r30)
-/* 80A851B4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A851B8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A851B4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A851B8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A851BC  90 7E 0D CC */	stw r3, 0xdcc(r30)
 /* 80A851C0  90 1E 0D D0 */	stw r0, 0xdd0(r30)
-/* 80A851C4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A851C4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A851C8  90 1E 0D D4 */	stw r0, 0xdd4(r30)
 /* 80A851CC  38 60 00 00 */	li r3, 0
 /* 80A851D0  90 7E 0D F4 */	stw r3, 0xdf4(r30)

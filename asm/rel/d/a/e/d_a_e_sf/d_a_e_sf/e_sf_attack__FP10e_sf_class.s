@@ -102,10 +102,10 @@ lbl_80786474:
 /* 807864A0  A8 03 00 08 */	lha r0, 8(r3)
 /* 807864A4  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 807864A8  40 82 00 64 */	bne lbl_8078650C
-/* 807864AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807864B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807864B4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 807864B8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 807864AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807864B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807864B4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 807864B8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 807864BC  81 8C 00 40 */	lwz r12, 0x40(r12)
 /* 807864C0  7D 89 03 A6 */	mtctr r12
 /* 807864C4  4E 80 04 21 */	bctrl 

@@ -15,7 +15,7 @@ lbl_80505D80:
 /* 80505DB4  41 82 00 30 */	beq lbl_80505DE4
 /* 80505DB8  3C 60 80 52 */	lis r3, target_info_count@ha
 /* 80505DBC  38 83 92 2C */	addi r4, r3, target_info_count@l
-/* 80505DC0  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8051922C */
+/* 80505DC0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80505DC4  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80505DC8  40 80 00 1C */	bge lbl_80505DE4
 /* 80505DCC  54 A0 10 3A */	slwi r0, r5, 2

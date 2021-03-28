@@ -74,9 +74,9 @@ asm void J3DShapeDraw::addTexMtxIndexInDL(u32 param_0, u32 param_1, u32 param_2)
 /* ############################################################################################## */
 /* 803CDC68-803CDC78 000C+04 s=2 e=0 z=0  None .data      __vt__12J3DShapeDraw                                         */
 SECTION_DATA static void* __vt__12J3DShapeDraw[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DShapeDrawFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DShapeDrawFv,
 	/* padding */
 	NULL,
 };

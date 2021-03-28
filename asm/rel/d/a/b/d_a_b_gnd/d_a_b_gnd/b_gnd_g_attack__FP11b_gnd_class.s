@@ -11,11 +11,11 @@ lbl_805F7E88:
 /* 805F7EAC  7C 79 1B 78 */	mr r25, r3
 /* 805F7EB0  3C 60 80 60 */	lis r3, lit_3815@ha
 /* 805F7EB4  3B C3 26 64 */	addi r30, r3, lit_3815@l
-/* 805F7EB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F7EBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805F7EC0  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805F7EC4  C3 FE 00 14 */	lfs f31, 0x14(r30)	/* effective address: 80602678 */
-/* 805F7EC8  C3 DE 00 84 */	lfs f30, 0x84(r30)	/* effective address: 806026E8 */
+/* 805F7EB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F7EBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805F7EC0  83 A3 5D AC */	lwz r29, 0x5dac(r3)
+/* 805F7EC4  C3 FE 00 14 */	lfs f31, 0x14(r30)
+/* 805F7EC8  C3 DE 00 84 */	lfs f30, 0x84(r30)
 /* 805F7ECC  80 79 05 D0 */	lwz r3, 0x5d0(r25)
 /* 805F7ED0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805F7ED4  FC 00 00 1E */	fctiwz f0, f0
@@ -400,11 +400,11 @@ lbl_805F83CC:
 /* 805F8410  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805F8414  40 80 00 24 */	bge lbl_805F8438
 /* 805F8418  38 00 00 6B */	li r0, 0x6b
-/* 805F841C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F8420  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805F8424  98 03 5E 3C */	stb r0, 0x5e3c(r3)	/* effective address: 8040BFFC */
+/* 805F841C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F8420  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805F8424  98 03 5E 3C */	stb r0, 0x5e3c(r3)
 /* 805F8428  38 00 00 00 */	li r0, 0
-/* 805F842C  98 03 5E 57 */	stb r0, 0x5e57(r3)	/* effective address: 8040C017 */
+/* 805F842C  98 03 5E 57 */	stb r0, 0x5e57(r3)
 /* 805F8430  38 00 00 01 */	li r0, 1
 /* 805F8434  98 19 27 40 */	stb r0, 0x2740(r25)
 lbl_805F8438:
@@ -492,11 +492,11 @@ lbl_805F8548:
 /* 805F8554  2C 03 00 00 */	cmpwi r3, 0
 /* 805F8558  41 82 01 E0 */	beq lbl_805F8738
 /* 805F855C  38 00 00 6B */	li r0, 0x6b
-/* 805F8560  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F8564  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805F8568  98 03 5E 3C */	stb r0, 0x5e3c(r3)	/* effective address: 8040BFFC */
+/* 805F8560  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F8564  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805F8568  98 03 5E 3C */	stb r0, 0x5e3c(r3)
 /* 805F856C  38 00 00 00 */	li r0, 0
-/* 805F8570  98 03 5E 57 */	stb r0, 0x5e57(r3)	/* effective address: 8040C017 */
+/* 805F8570  98 03 5E 57 */	stb r0, 0x5e57(r3)
 /* 805F8574  38 00 00 01 */	li r0, 1
 /* 805F8578  98 19 27 40 */	stb r0, 0x2740(r25)
 /* 805F857C  4B A8 EE 58 */	b cc_pl_cut_bit_get__Fv

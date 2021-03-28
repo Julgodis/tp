@@ -17,14 +17,14 @@ lbl_805A7F0C:
 /* 805A7F48  80 84 00 04 */	lwz r4, 4(r4)
 /* 805A7F4C  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 805A7F50  4B BF CE 50 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 805A7F54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A7F58  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 805A7F5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 805A7F54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A7F58  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 805A7F5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 805A7F60  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 805A7F64  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 805A7F68  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 805A7F6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 805A7F70  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 805A7F68  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 805A7F6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 805A7F70  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 805A7F74  80 7F 05 78 */	lwz r3, 0x578(r31)
 /* 805A7F78  80 83 00 04 */	lwz r4, 4(r3)
 /* 805A7F7C  80 7F 05 80 */	lwz r3, 0x580(r31)
@@ -45,11 +45,11 @@ lbl_805A7F0C:
 /* 805A7FB8  80 7F 05 78 */	lwz r3, 0x578(r31)
 /* 805A7FBC  80 63 00 04 */	lwz r3, 4(r3)
 /* 805A7FC0  4B A6 5E 30 */	b mDoExt_btkAnmRemove__FP12J3DModelData
-/* 805A7FC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A7FC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A7FCC  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 805A7FC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A7FC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A7FCC  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 805A7FD0  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 805A7FD4  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 805A7FD4  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 805A7FD8  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 805A7FDC  38 60 00 01 */	li r3, 1
 /* 805A7FE0  83 E1 00 0C */	lwz r31, 0xc(r1)

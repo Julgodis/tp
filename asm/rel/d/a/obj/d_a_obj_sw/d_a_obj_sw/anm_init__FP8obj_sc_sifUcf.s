@@ -15,8 +15,8 @@ lbl_80CF08F8:
 /* 80CF092C  FF E0 10 90 */	fmr f31, f2
 /* 80CF0930  3C 60 80 CF */	lis r3, stringBase0@ha
 /* 80CF0934  38 63 30 EC */	addi r3, r3, stringBase0@l
-/* 80CF0938  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CF093C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CF0938  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CF093C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CF0940  3C A5 00 02 */	addis r5, r5, 2
 /* 80CF0944  38 C0 00 80 */	li r6, 0x80
 /* 80CF0948  38 A5 C2 F8 */	addi r5, r5, -15624

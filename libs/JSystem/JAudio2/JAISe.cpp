@@ -11,16 +11,7 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
-template <typename A0>
-struct JAISoundStrategyMgr { };
-/* JAISoundStrategyMgr<JAISe> */
-struct JAISoundStrategyMgr__template0 {
-};
-
-struct JASSoundParams {
+struct JAISoundActivity {
 };
 
 struct JAISeMgr {
@@ -29,7 +20,16 @@ struct JAISeMgr {
 struct JAIAudience {
 };
 
-struct JAISoundActivity {
+struct JASSoundParams {
+};
+
+struct JAISoundID {
+};
+
+template <typename A0>
+struct JAISoundStrategyMgr { };
+/* JAISoundStrategyMgr<JAISe> */
+struct JAISoundStrategyMgr__template0 {
 };
 
 struct JGeometry {
@@ -162,28 +162,28 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C9858-803C98B0 0058+00 s=1 e=1 z=0  None .data      __vt__5JAISe                                                 */
 SECTION_DATA void* __vt__5JAISe[22] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)func_8029F8A8,
-	/* 5    */ (void*)func_8029F8A0,
-	/* 6    */ (void*)func_8029F898,
-	/* 7    */ (void*)func_8029F890,
-	/* 8    */ (void*)asSeq__8JAISoundFv,
-	/* 9    */ (void*)asStream__8JAISoundFv,
-	/* 10   */ (void*)func_8029F888,
-	/* 11   */ (void*)func_8029F880,
-	/* 12   */ (void*)func_8029F878,
-	/* 13   */ (void*)func_8029F870,
-	/* 14   */ (void*)getNumChild__5JAISeCFv,
-	/* 15   */ (void*)getChild__5JAISeFi,
-	/* 16   */ (void*)releaseChild__5JAISeFi,
-	/* 17   */ (void*)getTrack__5JAISeFv,
-	/* 18   */ (void*)getChildTrack__5JAISeFi,
-	/* 19   */ (void*)asSe__5JAISeFv,
-	/* 20   */ (void*)getTempoMgr__5JAISeFv,
-	/* 21   */ (void*)JAISound_tryDie___5JAISeFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8029F8A8,
+	(void*)func_8029F8A0,
+	(void*)func_8029F898,
+	(void*)func_8029F890,
+	(void*)asSeq__8JAISoundFv,
+	(void*)asStream__8JAISoundFv,
+	(void*)func_8029F888,
+	(void*)func_8029F880,
+	(void*)func_8029F878,
+	(void*)func_8029F870,
+	(void*)getNumChild__5JAISeCFv,
+	(void*)getChild__5JAISeFi,
+	(void*)releaseChild__5JAISeFi,
+	(void*)getTrack__5JAISeFv,
+	(void*)getChildTrack__5JAISeFi,
+	(void*)asSe__5JAISeFv,
+	(void*)getTempoMgr__5JAISeFv,
+	(void*)JAISound_tryDie___5JAISeFv,
 };
 
 /* 80455778-8045577C 0004+00 s=2 e=0 z=0  None .sdata2    @626                                                         */

@@ -33,8 +33,8 @@ lbl_8067B928:
 /* 8067B958  88 9D 06 98 */	lbz r4, 0x698(r29)
 /* 8067B95C  28 04 00 FF */	cmplwi r4, 0xff
 /* 8067B960  41 82 00 28 */	beq lbl_8067B988
-/* 8067B964  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067B968  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8067B964  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067B968  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8067B96C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8067B970  7C 05 07 74 */	extsb r5, r0
 /* 8067B974  4B 9B 99 EC */	b isSwitch__10dSv_info_cCFii
@@ -63,7 +63,7 @@ lbl_8067B9AC:
 /* 8067B9C8  38 00 FF FF */	li r0, -1
 /* 8067B9CC  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 8067B9D0  38 63 C6 A8 */	addi r3, r3, l_HIO@l
-/* 8067B9D4  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8067C6AC */
+/* 8067B9D4  98 03 00 04 */	stb r0, 4(r3)
 lbl_8067B9D8:
 /* 8067B9D8  38 00 00 04 */	li r0, 4
 /* 8067B9DC  90 1D 05 5C */	stw r0, 0x55c(r29)
@@ -122,7 +122,7 @@ lbl_8067B9D8:
 /* 8067BAB0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8067BAB4  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 8067BAB8  38 63 C6 A8 */	addi r3, r3, l_HIO@l
-/* 8067BABC  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 8067C6C4 */
+/* 8067BABC  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 8067BAC0  C0 1F 01 38 */	lfs f0, 0x138(r31)
 /* 8067BAC4  D0 1D 05 30 */	stfs f0, 0x530(r29)
 /* 8067BAC8  7F A3 EB 78 */	mr r3, r29

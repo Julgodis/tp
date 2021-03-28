@@ -127,7 +127,7 @@ lbl_8073E658:
 /* 8073E670  FC 60 02 10 */	fabs f3, f0
 /* 8073E674  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 8073E678  38 63 1D D0 */	addi r3, r3, l_HIO@l
-/* 8073E67C  C0 43 00 10 */	lfs f2, 0x10(r3)	/* effective address: 80741DE0 */
+/* 8073E67C  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 8073E680  88 1E 06 63 */	lbz r0, 0x663(r30)
 /* 8073E684  C8 3F 00 A8 */	lfd f1, 0xa8(r31)
 /* 8073E688  90 01 00 5C */	stw r0, 0x5c(r1)
@@ -250,7 +250,7 @@ lbl_8073E82C:
 /* 8073E830  D0 1E 05 B8 */	stfs f0, 0x5b8(r30)
 /* 8073E834  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 8073E838  38 63 1D D0 */	addi r3, r3, l_HIO@l
-/* 8073E83C  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 80741DDC */
+/* 8073E83C  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 8073E840  88 1E 06 64 */	lbz r0, 0x664(r30)
 /* 8073E844  C8 3F 00 A8 */	lfd f1, 0xa8(r31)
 /* 8073E848  90 01 00 5C */	stw r0, 0x5c(r1)

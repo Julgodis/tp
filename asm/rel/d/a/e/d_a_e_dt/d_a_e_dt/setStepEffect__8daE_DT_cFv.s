@@ -21,9 +21,9 @@ lbl_806AF5CC:
 /* 806AF618  4B C7 8E 14 */	b checkPass__12J3DFrameCtrlFf
 /* 806AF61C  2C 03 00 00 */	cmpwi r3, 0
 /* 806AF620  41 82 00 54 */	beq lbl_806AF674
-/* 806AF624  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806AF628  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806AF62C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 806AF624  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806AF628  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806AF62C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 806AF630  38 80 00 00 */	li r4, 0
 /* 806AF634  90 81 00 08 */	stw r4, 8(r1)
 /* 806AF638  38 00 FF FF */	li r0, -1

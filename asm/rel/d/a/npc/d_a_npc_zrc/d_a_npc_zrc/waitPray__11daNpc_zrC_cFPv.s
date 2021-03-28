@@ -10,9 +10,9 @@ lbl_80B91808:
 /* 80B91828  3C 60 80 B9 */	lis r3, m__17daNpc_zrC_Param_c@ha
 /* 80B9182C  3B C3 31 FC */	addi r30, r3, m__17daNpc_zrC_Param_c@l
 /* 80B91830  38 61 00 18 */	addi r3, r1, 0x18
-/* 80B91834  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B91838  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80B9183C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80B91834  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B91838  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80B9183C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80B91840  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80B91844  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80B91848  4B 6D 52 EC */	b __mi__4cXyzCFRC3Vec
@@ -155,10 +155,10 @@ lbl_80B91A24:
 /* 80B91A34  88 1D 0E 30 */	lbz r0, 0xe30(r29)
 /* 80B91A38  28 00 00 00 */	cmplwi r0, 0
 /* 80B91A3C  41 82 00 C0 */	beq lbl_80B91AFC
-/* 80B91A40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B91A44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B91A48  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80B91A4C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80B91A40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B91A44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B91A48  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80B91A4C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B91A50  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B91A54  40 82 00 A8 */	bne lbl_80B91AFC
 /* 80B91A58  38 7E 00 00 */	addi r3, r30, 0
@@ -177,9 +177,9 @@ lbl_80B91A24:
 /* 80B91A8C  80 04 05 70 */	lwz r0, 0x570(r4)
 /* 80B91A90  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80B91A94  41 82 00 68 */	beq lbl_80B91AFC
-/* 80B91A98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B91A9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B91AA0  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 80B91A98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B91A9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B91AA0  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 80B91AA4  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80B91AA8  40 82 00 54 */	bne lbl_80B91AFC
 /* 80B91AAC  C0 04 04 D0 */	lfs f0, 0x4d0(r4)

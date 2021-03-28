@@ -12,8 +12,8 @@ lbl_80BF279C:
 /* 80BF27C4  3C 80 80 BF */	lis r4, data_80BF2BAC@ha
 /* 80BF27C8  38 84 2B AC */	addi r4, r4, data_80BF2BAC@l
 /* 80BF27CC  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80BF27D0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BF27D4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BF27D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BF27D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BF27D8  3F C5 00 02 */	addis r30, r5, 2
 /* 80BF27DC  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80BF27E0  7F C5 F3 78 */	mr r5, r30

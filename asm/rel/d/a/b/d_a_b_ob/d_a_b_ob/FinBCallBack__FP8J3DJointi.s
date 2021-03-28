@@ -9,7 +9,7 @@ lbl_80610B3C:
 /* 80610B58  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 80610B5C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80610B60  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80610B64  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80610B64  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80610B68  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 80610B6C  28 1D 00 00 */	cmplwi r29, 0
 /* 80610B70  41 82 00 98 */	beq lbl_80610C08
@@ -27,11 +27,11 @@ lbl_80610B90:
 /* 80610B9C  7C 60 F2 14 */	add r3, r0, r30
 /* 80610BA0  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80610BA4  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80610BA8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80610BA8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80610BAC  4B D3 59 04 */	b PSMTXCopy
 /* 80610BB0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80610BB4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80610BB8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80610BB8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80610BBC  3C 80 80 62 */	lis r4, pno@ha
 /* 80610BC0  80 04 B5 34 */	lwz r0, pno@l(r4)
 /* 80610BC4  1C 00 01 78 */	mulli r0, r0, 0x178
@@ -40,14 +40,14 @@ lbl_80610B90:
 /* 80610BD0  4B 9F B8 64 */	b mDoMtx_YrotM__FPA4_fs
 /* 80610BD4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80610BD8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80610BDC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80610BDC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80610BE0  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 80610BE4  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 80610BE8  7C 80 F2 14 */	add r4, r0, r30
 /* 80610BEC  4B D3 58 C4 */	b PSMTXCopy
 /* 80610BF0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80610BF4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80610BF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80610BF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80610BFC  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 80610C00  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 80610C04  4B D3 58 AC */	b PSMTXCopy

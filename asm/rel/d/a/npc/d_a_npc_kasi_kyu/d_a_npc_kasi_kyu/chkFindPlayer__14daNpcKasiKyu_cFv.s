@@ -5,12 +5,12 @@ lbl_80A23624:
 /* 80A23630  39 61 00 20 */	addi r11, r1, 0x20
 /* 80A23634  4B 93 EB A8 */	b _savegpr_29
 /* 80A23638  7C 7D 1B 78 */	mr r29, r3
-/* 80A2363C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A23640  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A23644  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A2363C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A23640  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A23644  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A23648  3C A0 80 A2 */	lis r5, m__20daNpcKasiKyu_Param_c@ha
 /* 80A2364C  38 A5 58 B8 */	addi r5, r5, m__20daNpcKasiKyu_Param_c@l
-/* 80A23650  C0 25 00 50 */	lfs f1, 0x50(r5)	/* effective address: 80A25908 */
+/* 80A23650  C0 25 00 50 */	lfs f1, 0x50(r5)
 /* 80A23654  4B 73 03 9C */	b chkActorInSight__8daNpcF_cFP10fopAc_ac_cf
 /* 80A23658  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2365C  40 82 00 14 */	bne lbl_80A23670

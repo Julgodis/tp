@@ -159,7 +159,7 @@ lbl_80B25DE4:
 lbl_80B25E18:
 /* 80B25E18  3C 60 80 B2 */	lis r3, l_HIO@ha
 /* 80B25E1C  38 63 66 88 */	addi r3, r3, l_HIO@l
-/* 80B25E20  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80B26698 */
+/* 80B25E20  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80B25E24  D0 1E 05 E8 */	stfs f0, 0x5e8(r30)
 /* 80B25E28  3B A0 04 00 */	li r29, 0x400
 /* 80B25E2C  C3 FF 00 50 */	lfs f31, 0x50(r31)
@@ -170,7 +170,7 @@ lbl_80B25E30:
 /* 80B25E3C  C3 FF 00 50 */	lfs f31, 0x50(r31)
 /* 80B25E40  3C 60 80 B2 */	lis r3, l_HIO@ha
 /* 80B25E44  38 63 66 88 */	addi r3, r3, l_HIO@l
-/* 80B25E48  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80B2669C */
+/* 80B25E48  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80B25E4C  D0 1E 05 E8 */	stfs f0, 0x5e8(r30)
 /* 80B25E50  3B A0 06 00 */	li r29, 0x600
 /* 80B25E54  48 00 00 50 */	b lbl_80B25EA4
@@ -178,7 +178,7 @@ lbl_80B25E58:
 /* 80B25E58  C0 3E 05 D8 */	lfs f1, 0x5d8(r30)
 /* 80B25E5C  3C 60 80 B2 */	lis r3, l_HIO@ha
 /* 80B25E60  38 63 66 88 */	addi r3, r3, l_HIO@l
-/* 80B25E64  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B266A0 */
+/* 80B25E64  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B25E68  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80B25E6C  40 80 00 38 */	bge lbl_80B25EA4
 /* 80B25E70  C0 3F 00 54 */	lfs f1, 0x54(r31)
@@ -262,7 +262,7 @@ lbl_80B25F84:
 /* 80B25F98  C0 3E 05 E4 */	lfs f1, 0x5e4(r30)
 /* 80B25F9C  3C 80 80 B2 */	lis r4, l_HIO@ha
 /* 80B25FA0  38 84 66 88 */	addi r4, r4, l_HIO@l
-/* 80B25FA4  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80B26694 */
+/* 80B25FA4  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80B25FA8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80B25FAC  C0 5F 00 64 */	lfs f2, 0x64(r31)
 /* 80B25FB0  FC 60 F8 90 */	fmr f3, f31

@@ -6,7 +6,7 @@ lbl_80D010D4:
 /* 80D010E4  38 E4 20 CC */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80D010E8  3C 80 80 D0 */	lis r4, data_80D021A0@ha
 /* 80D010EC  38 C4 21 A0 */	addi r6, r4, data_80D021A0@l
-/* 80D010F0  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80D021A0 */
+/* 80D010F0  88 06 00 00 */	lbz r0, 0(r6)
 /* 80D010F4  7C 00 07 75 */	extsb. r0, r0
 /* 80D010F8  40 82 00 40 */	bne lbl_80D01138
 /* 80D010FC  80 87 00 28 */	lwz r4, 0x28(r7)

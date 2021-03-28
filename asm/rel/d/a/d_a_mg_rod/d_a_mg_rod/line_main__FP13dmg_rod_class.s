@@ -20,7 +20,7 @@ lbl_804ABED8:
 /* 804ABF20  40 82 00 18 */	bne lbl_804ABF38
 /* 804ABF24  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 804ABF28  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 804ABF2C  80 03 00 30 */	lwz r0, 0x30(r3)	/* effective address: 803DD318 */
+/* 804ABF2C  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 804ABF30  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 804ABF34  41 82 00 18 */	beq lbl_804ABF4C
 lbl_804ABF38:

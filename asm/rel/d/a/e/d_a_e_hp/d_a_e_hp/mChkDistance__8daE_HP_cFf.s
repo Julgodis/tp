@@ -10,9 +10,9 @@ lbl_806E65CC:
 /* 806E65EC  3C 60 80 6F */	lis r3, lit_3905@ha
 /* 806E65F0  3B E3 A1 F4 */	addi r31, r3, lit_3905@l
 /* 806E65F4  38 61 00 0C */	addi r3, r1, 0xc
-/* 806E65F8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806E65FC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806E6600  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806E65F8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806E65FC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806E6600  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806E6604  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 806E6608  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 806E660C  4B B8 05 28 */	b __mi__4cXyzCFRC3Vec

@@ -137,8 +137,8 @@ lbl_809E8CE4:
 /* 809E8D90  7F C3 F3 78 */	mr r3, r30
 /* 809E8D94  48 00 23 C1 */	bl resetCol__11daNpc_Grz_cFv
 /* 809E8D98  38 7E 05 D0 */	addi r3, r30, 0x5d0
-/* 809E8D9C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809E8DA0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809E8D9C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809E8DA0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809E8DA4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809E8DA8  4B 68 DD 04 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809E8DAC  80 1E 06 AC */	lwz r0, 0x6ac(r30)

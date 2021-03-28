@@ -7,13 +7,13 @@ lbl_80BCA924:
 /* 80BCA938  7C 7F 1B 78 */	mr r31, r3
 /* 80BCA93C  3C 60 80 BD */	lis r3, lit_3775@ha
 /* 80BCA940  3B C3 C5 78 */	addi r30, r3, lit_3775@l
-/* 80BCA944  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BCA948  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BCA94C  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BCA944  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BCA948  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BCA94C  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80BCA950  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
 /* 80BCA954  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80BCA958  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80BCA95C  C0 3E 00 4C */	lfs f1, 0x4c(r30)	/* effective address: 80BCC5C4 */
+/* 80BCA95C  C0 3E 00 4C */	lfs f1, 0x4c(r30)
 /* 80BCA960  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80BCA964  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 80BCA968  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
@@ -126,17 +126,17 @@ lbl_80BCAA6C:
 /* 80BCAAF0  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80BCAAF4  C0 1E 00 4C */	lfs f0, 0x4c(r30)
 /* 80BCAAF8  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80BCAAFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BCAB00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BCAB04  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80BCAAFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BCAB00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BCAB04  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80BCAB08  38 80 00 09 */	li r4, 9
-/* 80BCAB0C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80BCAB0C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80BCAB10  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 80BCAB14  7D 89 03 A6 */	mtctr r12
 /* 80BCAB18  4E 80 04 21 */	bctrl 
 /* 80BCAB1C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80BCAB20  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80BCAB24  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80BCAB24  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BCAB28  4B 77 B9 88 */	b PSMTXCopy
 /* 80BCAB2C  38 61 00 24 */	addi r3, r1, 0x24
 /* 80BCAB30  38 9F 09 B4 */	addi r4, r31, 0x9b4

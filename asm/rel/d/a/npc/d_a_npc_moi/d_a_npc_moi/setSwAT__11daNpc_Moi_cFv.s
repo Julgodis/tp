@@ -14,12 +14,12 @@ lbl_80A76A20:
 /* 80A76A50  40 82 00 94 */	bne lbl_80A76AE4
 /* 80A76A54  3C 80 80 A8 */	lis r4, l_motionAnmData@ha
 /* 80A76A58  38 A4 B4 58 */	addi r5, r4, l_motionAnmData@l
-/* 80A76A5C  80 05 02 A8 */	lwz r0, 0x2a8(r5)	/* effective address: 80A7B700 */
+/* 80A76A5C  80 05 02 A8 */	lwz r0, 0x2a8(r5)
 /* 80A76A60  54 00 10 3A */	slwi r0, r0, 2
 /* 80A76A64  3C 80 80 A8 */	lis r4, l_resNameList@ha
 /* 80A76A68  38 84 B1 DC */	addi r4, r4, l_resNameList@l
 /* 80A76A6C  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80A76A70  80 A5 02 A0 */	lwz r5, 0x2a0(r5)	/* effective address: 80A7B6F8 */
+/* 80A76A70  80 A5 02 A0 */	lwz r5, 0x2a0(r5)
 /* 80A76A74  4B 6D 15 E4 */	b getTrnsfrmAnmP__8daNpcT_cFPCci
 /* 80A76A78  80 9E 05 78 */	lwz r4, 0x578(r30)
 /* 80A76A7C  80 04 00 08 */	lwz r0, 8(r4)

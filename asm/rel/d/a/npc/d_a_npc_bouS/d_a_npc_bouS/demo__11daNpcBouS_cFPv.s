@@ -35,9 +35,9 @@ lbl_80975788:
 /* 809757C8  38 00 00 02 */	li r0, 2
 /* 809757CC  B0 1E 0D FC */	sth r0, 0xdfc(r30)
 lbl_809757D0:
-/* 809757D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809757D4  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 809757D8  88 1D 4F AD */	lbz r0, 0x4fad(r29)	/* effective address: 8040B16D */
+/* 809757D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809757D4  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 809757D8  88 1D 4F AD */	lbz r0, 0x4fad(r29)
 /* 809757DC  28 00 00 00 */	cmplwi r0, 0
 /* 809757E0  41 82 01 34 */	beq lbl_80975914
 /* 809757E4  A0 1E 00 F8 */	lhz r0, 0xf8(r30)

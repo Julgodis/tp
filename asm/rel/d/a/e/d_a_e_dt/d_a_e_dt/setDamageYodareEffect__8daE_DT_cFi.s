@@ -6,9 +6,9 @@ lbl_806AF460:
 /* 806AF470  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 806AF474  7C 7E 1B 78 */	mr r30, r3
 /* 806AF478  7C 86 23 78 */	mr r6, r4
-/* 806AF47C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806AF480  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 806AF484  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 806AF47C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806AF480  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 806AF484  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 806AF488  38 00 00 FF */	li r0, 0xff
 /* 806AF48C  90 01 00 08 */	stw r0, 8(r1)
 /* 806AF490  38 80 00 00 */	li r4, 0

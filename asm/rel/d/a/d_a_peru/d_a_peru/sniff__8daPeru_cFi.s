@@ -64,11 +64,11 @@ lbl_80D48F14:
 /* 80D48F18  41 82 00 3C */	beq lbl_80D48F54
 /* 80D48F1C  3C 60 80 D5 */	lis r3, lit_5131@ha
 /* 80D48F20  38 83 C5 80 */	addi r4, r3, lit_5131@l
-/* 80D48F24  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4C580 */
-/* 80D48F28  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4C584 */
+/* 80D48F24  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D48F28  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D48F2C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80D48F30  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80D48F34  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4C588 */
+/* 80D48F34  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D48F38  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D48F3C  7F E3 FB 78 */	mr r3, r31
 /* 80D48F40  38 81 00 0C */	addi r4, r1, 0xc

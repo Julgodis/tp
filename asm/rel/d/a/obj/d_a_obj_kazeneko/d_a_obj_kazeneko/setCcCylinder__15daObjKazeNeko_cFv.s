@@ -14,10 +14,10 @@ lbl_80C3CB10:
 /* 80C3CB40  38 7F 07 14 */	addi r3, r31, 0x714
 /* 80C3CB44  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CB48  38 84 D3 DC */	addi r4, r4, M_attr__15daObjKazeNeko_c@l
-/* 80C3CB4C  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80C3D3E0 */
+/* 80C3CB4C  C0 24 00 04 */	lfs f1, 4(r4)
 /* 80C3CB50  4B 63 26 A8 */	b SetH__8cM3dGCylFf
-/* 80C3CB54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C3CB58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C3CB54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C3CB58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C3CB5C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C3CB60  38 9F 05 F0 */	addi r4, r31, 0x5f0
 /* 80C3CB64  4B 62 80 44 */	b Set__4cCcSFP8cCcD_Obj

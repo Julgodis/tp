@@ -26,12 +26,12 @@ lbl_80A2B700:
 /* 80A2B70C  B0 01 00 0C */	sth r0, 0xc(r1)
 /* 80A2B710  3C 60 80 A4 */	lis r3, m__16daNpc_Kn_Param_c@ha
 /* 80A2B714  38 C3 09 70 */	addi r6, r3, m__16daNpc_Kn_Param_c@l
-/* 80A2B718  A8 06 00 8C */	lha r0, 0x8c(r6)	/* effective address: 80A409FC */
+/* 80A2B718  A8 06 00 8C */	lha r0, 0x8c(r6)
 /* 80A2B71C  B0 01 00 0E */	sth r0, 0xe(r1)
 /* 80A2B720  7F A3 EB 78 */	mr r3, r29
 /* 80A2B724  38 80 00 00 */	li r4, 0
 /* 80A2B728  38 A0 00 00 */	li r5, 0
-/* 80A2B72C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80A4097C */
+/* 80A2B72C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80A2B730  38 C1 00 08 */	addi r6, r1, 8
 /* 80A2B734  3C E0 80 A4 */	lis r7, lit_4204@ha
 /* 80A2B738  C0 47 09 00 */	lfs f2, lit_4204@l(r7)

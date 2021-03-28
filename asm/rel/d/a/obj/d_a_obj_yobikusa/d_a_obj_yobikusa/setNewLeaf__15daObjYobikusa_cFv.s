@@ -8,9 +8,9 @@ lbl_8059D454:
 /* 8059D46C  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059D470  3B E3 DE 7C */	addi r31, r3, M_attr__15daObjYobikusa_c@l
 /* 8059D474  38 7E 07 40 */	addi r3, r30, 0x740
-/* 8059D478  C0 3F 00 5C */	lfs f1, 0x5c(r31)	/* effective address: 8059DED8 */
+/* 8059D478  C0 3F 00 5C */	lfs f1, 0x5c(r31)
 /* 8059D47C  38 9F 00 00 */	addi r4, r31, 0
-/* 8059D480  C0 44 00 24 */	lfs f2, 0x24(r4)	/* effective address: 8059DEA0 */
+/* 8059D480  C0 44 00 24 */	lfs f2, 0x24(r4)
 /* 8059D484  4B CD 32 BC */	b cLib_chaseF__FPfff
 /* 8059D488  38 9F 00 00 */	addi r4, r31, 0
 /* 8059D48C  C0 04 00 28 */	lfs f0, 0x28(r4)

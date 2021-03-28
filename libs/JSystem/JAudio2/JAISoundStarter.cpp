@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -23,7 +23,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -57,10 +57,10 @@ extern "C" extern u8 data_80450B78[4];
 /* ############################################################################################## */
 /* 803C99C8-803C99D8 0010+00 s=2 e=0 z=0  None .data      __vt__15JAISoundStarter                                      */
 SECTION_DATA static void* __vt__15JAISoundStarter[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15JAISoundStarterFv,
-	/* 3    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15JAISoundStarterFv,
+	(void*)NULL,
 };
 
 /* 802A2F6C-802A2F88 001C+00 s=0 e=1 z=0  None .text      __ct__15JAISoundStarterFb                                    */

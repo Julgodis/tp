@@ -52,7 +52,7 @@ lbl_80990B50:
 /* 80990B54  90 1F 09 50 */	stw r0, 0x950(r31)
 /* 80990B58  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80990B5C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80990B60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80990B60  80 63 00 00 */	lwz r3, 0(r3)
 /* 80990B64  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80990B68  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100007A@ha */
 /* 80990B6C  38 84 00 7A */	addi r4, r4, 0x007A /* 0x0100007A@l */

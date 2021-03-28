@@ -8,7 +8,7 @@ lbl_804D057C:
 /* 804D0594  3C 80 80 4D */	lis r4, data_804D15F0@ha
 /* 804D0598  3B E4 15 F0 */	addi r31, r4, data_804D15F0@l
 /* 804D059C  C0 03 06 14 */	lfs f0, 0x614(r3)
-/* 804D05A0  C0 3F 00 D8 */	lfs f1, 0xd8(r31)	/* effective address: 804D16C8 */
+/* 804D05A0  C0 3F 00 D8 */	lfs f1, 0xd8(r31)
 /* 804D05A4  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 804D05A8  40 80 00 98 */	bge lbl_804D0640
 /* 804D05AC  C0 5F 00 7C */	lfs f2, 0x7c(r31)

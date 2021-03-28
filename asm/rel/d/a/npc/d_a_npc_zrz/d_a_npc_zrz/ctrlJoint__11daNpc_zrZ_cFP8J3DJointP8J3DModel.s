@@ -10,11 +10,11 @@ lbl_80B94E18:
 /* 80B94E38  3B 83 AF EC */	addi r28, r3, m__17daNpc_zrZ_Param_c@l
 /* 80B94E3C  A0 84 00 14 */	lhz r4, 0x14(r4)
 /* 80B94E40  7C 9E 23 78 */	mr r30, r4
-/* 80B94E44  80 7C 00 A8 */	lwz r3, 0xa8(r28)	/* effective address: 80B9B094 */
-/* 80B94E48  80 1C 00 AC */	lwz r0, 0xac(r28)	/* effective address: 80B9B098 */
+/* 80B94E44  80 7C 00 A8 */	lwz r3, 0xa8(r28)
+/* 80B94E48  80 1C 00 AC */	lwz r0, 0xac(r28)
 /* 80B94E4C  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80B94E50  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B94E54  80 1C 00 B0 */	lwz r0, 0xb0(r28)	/* effective address: 80B9B09C */
+/* 80B94E54  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 80B94E58  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B94E5C  2C 04 00 00 */	cmpwi r4, 0
 /* 80B94E60  40 82 00 B0 */	bne lbl_80B94F10
@@ -28,11 +28,11 @@ lbl_80B94E18:
 /* 80B94E80  4B 7B 16 30 */	b PSMTXCopy
 /* 80B94E84  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B94E88  3B 63 D4 70 */	addi r27, r3, now__14mDoMtx_stack_c@l
-/* 80B94E8C  C0 1B 00 0C */	lfs f0, 0xc(r27)	/* effective address: 803DD47C */
+/* 80B94E8C  C0 1B 00 0C */	lfs f0, 0xc(r27)
 /* 80B94E90  D0 1F 08 54 */	stfs f0, 0x854(r31)
-/* 80B94E94  C0 1B 00 1C */	lfs f0, 0x1c(r27)	/* effective address: 803DD48C */
+/* 80B94E94  C0 1B 00 1C */	lfs f0, 0x1c(r27)
 /* 80B94E98  D0 1F 08 58 */	stfs f0, 0x858(r31)
-/* 80B94E9C  C0 1B 00 2C */	lfs f0, 0x2c(r27)	/* effective address: 803DD49C */
+/* 80B94E9C  C0 1B 00 2C */	lfs f0, 0x2c(r27)
 /* 80B94EA0  D0 1F 08 5C */	stfs f0, 0x85c(r31)
 /* 80B94EA4  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80B94EA8  80 63 00 04 */	lwz r3, 4(r3)

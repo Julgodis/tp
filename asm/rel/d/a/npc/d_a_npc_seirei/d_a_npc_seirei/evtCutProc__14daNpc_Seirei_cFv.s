@@ -5,8 +5,8 @@ lbl_80AD6154:
 /* 80AD6160  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AD6164  93 C1 00 08 */	stw r30, 8(r1)
 /* 80AD6168  7C 7E 1B 78 */	mr r30, r3
-/* 80AD616C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD6170  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AD616C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD6170  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AD6174  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80AD6178  7F E3 FB 78 */	mr r3, r31
 /* 80AD617C  3C 80 80 AD */	lis r4, struct_80AD7D88+0x0@ha

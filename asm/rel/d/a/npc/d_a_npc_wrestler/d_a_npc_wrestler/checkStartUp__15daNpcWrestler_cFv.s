@@ -8,11 +8,11 @@ lbl_80B301BC:
 /* 80B301D4  3B E0 00 00 */	li r31, 0
 /* 80B301D8  3C 60 80 B4 */	lis r3, lit_4604@ha
 /* 80B301DC  38 83 26 C0 */	addi r4, r3, lit_4604@l
-/* 80B301E0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B426C0 */
-/* 80B301E4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B426C4 */
+/* 80B301E0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B301E4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B301E8  90 61 00 08 */	stw r3, 8(r1)
 /* 80B301EC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B301F0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B426C8 */
+/* 80B301F0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B301F4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B301F8  38 61 00 08 */	addi r3, r1, 8
 /* 80B301FC  38 9E 0D CC */	addi r4, r30, 0xdcc

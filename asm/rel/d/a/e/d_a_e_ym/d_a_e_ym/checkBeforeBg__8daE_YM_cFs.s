@@ -101,8 +101,8 @@ lbl_80813F20:
 /* 80814028  38 A1 00 54 */	addi r5, r1, 0x54
 /* 8081402C  38 C0 00 00 */	li r6, 0
 /* 80814030  4B 86 3D 34 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80814034  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80814038  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80814034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80814038  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8081403C  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80814040  7F C3 F3 78 */	mr r3, r30
 /* 80814044  38 81 00 8C */	addi r4, r1, 0x8c

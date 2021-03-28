@@ -38,11 +38,11 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C9820-803C9838 0014+04 s=1 e=1 z=0  None .data      __vt__10JAIAudible                                           */
 SECTION_DATA void* __vt__10JAIAudible[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JAIAudibleFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JAIAudibleFv,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

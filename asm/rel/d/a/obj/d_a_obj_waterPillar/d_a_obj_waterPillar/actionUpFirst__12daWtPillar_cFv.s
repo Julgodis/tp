@@ -9,7 +9,7 @@ lbl_80D2D6C4:
 /* 80D2D6E0  3B E3 E7 70 */	addi r31, r3, lit_3645@l
 /* 80D2D6E4  C0 3E 0B 04 */	lfs f1, 0xb04(r30)
 /* 80D2D6E8  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80D2D6EC  C0 1F 00 AC */	lfs f0, 0xac(r31)	/* effective address: 80D2E81C */
+/* 80D2D6EC  C0 1F 00 AC */	lfs f0, 0xac(r31)
 /* 80D2D6F0  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80D2D6F4  4B 54 30 4C */	b cLib_chaseF__FPfff
 /* 80D2D6F8  38 7E 0A E0 */	addi r3, r30, 0xae0

@@ -7,8 +7,8 @@ lbl_80D02E7C:
 /* 80D02E90  88 83 05 C9 */	lbz r4, 0x5c9(r3)
 /* 80D02E94  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D02E98  41 82 00 64 */	beq lbl_80D02EFC
-/* 80D02E9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D02EA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D02E9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D02EA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D02EA4  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D02EA8  7C 05 07 74 */	extsb r5, r0
 /* 80D02EAC  4B 33 24 B4 */	b isSwitch__10dSv_info_cCFii

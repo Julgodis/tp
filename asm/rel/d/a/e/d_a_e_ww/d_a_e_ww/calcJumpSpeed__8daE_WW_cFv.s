@@ -12,7 +12,7 @@ lbl_807E99B8:
 /* 807E99E0  EC 81 00 28 */	fsubs f4, f1, f0
 /* 807E99E4  38 80 00 00 */	li r4, 0
 /* 807E99E8  3B C0 00 00 */	li r30, 0
-/* 807E99EC  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 807EF774 */
+/* 807E99EC  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 807E99F0  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 807E99F4  40 81 00 50 */	ble lbl_807E9A44
 /* 807E99F8  C0 7F 00 94 */	lfs f3, 0x94(r31)

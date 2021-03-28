@@ -5,9 +5,9 @@ lbl_80C23C1C:
 /* 80C23C28  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C23C2C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C23C30  7C 7E 1B 78 */	mr r30, r3
-/* 80C23C34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C23C38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C23C3C  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 80C23C34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C23C38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C23C3C  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 80C23C40  7C 00 07 74 */	extsb r0, r0
 /* 80C23C44  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80C23C48  7C 63 02 14 */	add r3, r3, r0
@@ -22,8 +22,8 @@ lbl_80C23C1C:
 /* 80C23C6C  4B 53 F3 A0 */	b SetTrimSize__9dCamera_cFl
 /* 80C23C70  38 00 00 00 */	li r0, 0
 /* 80C23C74  98 1E 09 4C */	stb r0, 0x94c(r30)
-/* 80C23C78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C23C7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C23C78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C23C7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C23C80  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80C23C84  4B 41 E7 E4 */	b reset__14dEvt_control_cFv
 lbl_80C23C88:

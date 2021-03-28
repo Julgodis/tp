@@ -8,11 +8,11 @@ lbl_80A9FA58:
 /* 80A9FA70  7C 9F 23 78 */	mr r31, r4
 /* 80A9FA74  3C 60 80 AA */	lis r3, lit_5826@ha
 /* 80A9FA78  38 83 17 E4 */	addi r4, r3, lit_5826@l
-/* 80A9FA7C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA17E4 */
-/* 80A9FA80  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA17E8 */
+/* 80A9FA7C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A9FA80  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A9FA84  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9FA88  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A9FA8C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA17EC */
+/* 80A9FA8C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A9FA90  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A9FA94  93 C1 00 08 */	stw r30, 8(r1)
 /* 80A9FA98  38 7E 0F 8C */	addi r3, r30, 0xf8c

@@ -108,8 +108,8 @@ lbl_80ACBA40:
 /* 80ACBAAC  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 80ACBAB0  4B 5A A7 98 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80ACBAB4  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80ACBAB8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80ACBABC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80ACBAB8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80ACBABC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80ACBAC0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80ACBAC4  4B 5A AF E8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80ACBAC8  80 1D 07 68 */	lwz r0, 0x768(r29)

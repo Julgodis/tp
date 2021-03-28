@@ -15,7 +15,7 @@ lbl_809495E0:
 /* 80949614  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80949618  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 8094961C  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80949620  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8094BA40 */
+/* 80949620  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80949624  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80949628  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 8094962C  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
@@ -41,11 +41,11 @@ lbl_809495E0:
 /* 8094967C  4B 9F CE 34 */	b PSMTXCopy
 /* 80949680  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80949684  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80949688  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
+/* 80949688  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 8094968C  D0 1F 08 2C */	stfs f0, 0x82c(r31)
-/* 80949690  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
+/* 80949690  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 80949694  D0 1F 08 30 */	stfs f0, 0x830(r31)
-/* 80949698  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
+/* 80949698  C0 1E 00 2C */	lfs f0, 0x2c(r30)
 /* 8094969C  D0 1F 08 34 */	stfs f0, 0x834(r31)
 /* 809496A0  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 809496A4  80 63 00 04 */	lwz r3, 4(r3)

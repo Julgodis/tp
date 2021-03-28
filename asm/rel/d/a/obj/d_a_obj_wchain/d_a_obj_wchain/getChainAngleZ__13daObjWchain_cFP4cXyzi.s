@@ -12,7 +12,7 @@ lbl_80D305E4:
 /* 80D3060C  C0 24 00 08 */	lfs f1, 8(r4)
 /* 80D30610  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80D30614  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D30618  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 80D31950 */
+/* 80D30618  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80D3061C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80D30620  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 80D30624  38 61 00 0C */	addi r3, r1, 0xc

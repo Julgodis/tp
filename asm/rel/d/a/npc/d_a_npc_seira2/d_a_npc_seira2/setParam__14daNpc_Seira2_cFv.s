@@ -27,10 +27,10 @@ lbl_80AD1A38:
 /* 80AD1A44  48 00 01 B5 */	bl srchActors__14daNpc_Seira2_cFv
 /* 80AD1A48  3C 60 80 AD */	lis r3, m__20daNpc_Seira2_Param_c@ha
 /* 80AD1A4C  38 63 4A 60 */	addi r3, r3, m__20daNpc_Seira2_Param_c@l
-/* 80AD1A50  AB 83 00 48 */	lha r28, 0x48(r3)	/* effective address: 80AD4AA8 */
-/* 80AD1A54  AB A3 00 4A */	lha r29, 0x4a(r3)	/* effective address: 80AD4AAA */
-/* 80AD1A58  AB 63 00 4C */	lha r27, 0x4c(r3)	/* effective address: 80AD4AAC */
-/* 80AD1A5C  AB C3 00 4E */	lha r30, 0x4e(r3)	/* effective address: 80AD4AAE */
+/* 80AD1A50  AB 83 00 48 */	lha r28, 0x48(r3)
+/* 80AD1A54  AB A3 00 4A */	lha r29, 0x4a(r3)
+/* 80AD1A58  AB 63 00 4C */	lha r27, 0x4c(r3)
+/* 80AD1A5C  AB C3 00 4E */	lha r30, 0x4e(r3)
 /* 80AD1A60  7F E3 FB 78 */	mr r3, r31
 /* 80AD1A64  48 00 0E E1 */	bl checkStageIsSeira2sShop__14daNpc_Seira2_cFv
 /* 80AD1A68  2C 03 00 00 */	cmpwi r3, 0
@@ -52,33 +52,33 @@ lbl_80AD1A78:
 /* 80AD1AA4  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80AD1AA8  3C 60 80 AD */	lis r3, m__20daNpc_Seira2_Param_c@ha
 /* 80AD1AAC  38 63 4A 60 */	addi r3, r3, m__20daNpc_Seira2_Param_c@l
-/* 80AD1AB0  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80AD4A68 */
+/* 80AD1AB0  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80AD1AB4  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80AD1AB8  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 80AD1ABC  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 80AD1AC0  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80AD4A70 */
+/* 80AD1AC0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80AD1AC4  FC 00 00 1E */	fctiwz f0, f0
 /* 80AD1AC8  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80AD1ACC  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80AD1AD0  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 80AD1AD4  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80AD4A74 */
+/* 80AD1AD4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80AD1AD8  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 80AD1ADC  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80AD4A7C */
+/* 80AD1ADC  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80AD1AE0  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
 /* 80AD1AE4  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80AD1AE8  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 80AD1AEC  4B 5A 44 54 */	b SetWallR__12dBgS_AcchCirFf
 /* 80AD1AF0  3C 60 80 AD */	lis r3, m__20daNpc_Seira2_Param_c@ha
 /* 80AD1AF4  38 63 4A 60 */	addi r3, r3, m__20daNpc_Seira2_Param_c@l
-/* 80AD1AF8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80AD4A78 */
+/* 80AD1AF8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80AD1AFC  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 80AD1B00  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80AD4A6C */
+/* 80AD1B00  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80AD1B04  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 80AD1B08  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80AD4A64 */
+/* 80AD1B08  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80AD1B0C  D0 1F 05 30 */	stfs f0, 0x530(r31)
-/* 80AD1B10  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80AD4ACC */
+/* 80AD1B10  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80AD1B14  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 80AD1B18  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80AD4AA4 */
+/* 80AD1B18  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80AD1B1C  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
 /* 80AD1B20  39 61 00 30 */	addi r11, r1, 0x30
 /* 80AD1B24  4B 89 06 FC */	b _restgpr_27

@@ -6,8 +6,8 @@ lbl_80ADED68:
 /* 80ADED78  4B 88 34 60 */	b _savegpr_28
 /* 80ADED7C  7C 7F 1B 78 */	mr r31, r3
 /* 80ADED80  7C 9C 23 78 */	mr r28, r4
-/* 80ADED84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADED88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ADED84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADED88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ADED8C  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 80ADED90  7F A3 EB 78 */	mr r3, r29
 /* 80ADED94  4B 56 91 C8 */	b getMyNowCutName__16dEvent_manager_cFi

@@ -45,20 +45,18 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagMyna2_Create(fopAc_ac_c*); // 2
-static void daTagMyna2_Execute(daTagMyna2_c*); // 2
-static void daTagMyna2_Delete(daTagMyna2_c*); // 2
+void daTagMyna2_Create(fopAc_ac_c*); // 2
+void daTagMyna2_Execute(daTagMyna2_c*); // 2
+void daTagMyna2_Delete(daTagMyna2_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 
 extern "C" void create__12daTagMyna2_cFv(); // 1
 extern "C" void execute__12daTagMyna2_cFv(); // 1
-extern "C" static void daTagMyna2_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagMyna2_Execute__FP12daTagMyna2_c(); // 1
-extern "C" static void daTagMyna2_Delete__FP12daTagMyna2_c(); // 1
+extern "C" void daTagMyna2_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagMyna2_Execute__FP12daTagMyna2_c(); // 1
+extern "C" void daTagMyna2_Delete__FP12daTagMyna2_c(); // 1
 extern "C" static void func_80D5CA18(); // 1
-extern "C" extern u8 const lit_3744[8];
-extern "C" extern u8 const lit_3745[8];
-extern "C" extern u8 const lit_3746[8];
+extern "C" extern void* l_daTagMyna2_Method[8];
 extern "C" extern void* g_profile_TAG_MYNA2[12];
 
 // 
@@ -80,11 +78,7 @@ extern "C" void __ct__5csXyzFsss(); // 1
 extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 
@@ -111,18 +105,18 @@ SECTION_RODATA static u8 const lit_3743[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5CA44-80D5CA4C 0008+00 s=0 e=0 z=0  None .rodata    @3744                                                        */
-SECTION_RODATA u8 const lit_3744[8] = {
+/* 80D5CA44-80D5CA4C 0008+00 s=1 e=0 z=0  None .rodata    @3744                                                        */
+SECTION_RODATA static u8 const lit_3744[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5CA4C-80D5CA54 0008+00 s=0 e=0 z=0  None .rodata    @3745                                                        */
-SECTION_RODATA u8 const lit_3745[8] = {
+/* 80D5CA4C-80D5CA54 0008+00 s=1 e=0 z=0  None .rodata    @3745                                                        */
+SECTION_RODATA static u8 const lit_3745[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D5CA54-80D5CA5C 0008+00 s=0 e=0 z=0  None .rodata    @3746                                                        */
-SECTION_RODATA u8 const lit_3746[8] = {
+/* 80D5CA54-80D5CA5C 0008+00 s=1 e=0 z=0  None .rodata    @3746                                                        */
+SECTION_RODATA static u8 const lit_3746[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -143,33 +137,33 @@ asm void daTagMyna2_c::execute() {
 #pragma pop
 
 
-/* 80D5C9A8-80D5C9C8 0020+00 s=1 e=0 z=0  None .text      daTagMyna2_Create__FP10fopAc_ac_c                            */
+/* 80D5C9A8-80D5C9C8 0020+00 s=0 e=0 z=0  None .text      daTagMyna2_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMyna2_Create(fopAc_ac_c* param_0) {
+asm void daTagMyna2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D5C9C8-80D5C9E8 0020+00 s=1 e=0 z=0  None .text      daTagMyna2_Execute__FP12daTagMyna2_c                         */
+/* 80D5C9C8-80D5C9E8 0020+00 s=0 e=0 z=0  None .text      daTagMyna2_Execute__FP12daTagMyna2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMyna2_Execute(daTagMyna2_c* param_0) {
+asm void daTagMyna2_Execute(daTagMyna2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Execute__FP12daTagMyna2_c.s"
 }
 #pragma pop
 
 
-/* 80D5C9E8-80D5CA18 0030+00 s=1 e=0 z=0  None .text      daTagMyna2_Delete__FP12daTagMyna2_c                          */
+/* 80D5C9E8-80D5CA18 0030+00 s=0 e=0 z=0  None .text      daTagMyna2_Delete__FP12daTagMyna2_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMyna2_Delete(daTagMyna2_c* param_0) {
+asm void daTagMyna2_Delete(daTagMyna2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna2/d_a_tag_myna2/daTagMyna2_Delete__FP12daTagMyna2_c.s"
 }
@@ -188,31 +182,31 @@ asm static void cLib_calcTimer__template0(s16* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D5CA64-80D5CA84 0020+00 s=1 e=0 z=0  None .data      l_daTagMyna2_Method                                          */
-SECTION_DATA static void* l_daTagMyna2_Method[8] = {
-	/* 0    */ (void*)daTagMyna2_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagMyna2_Delete__FP12daTagMyna2_c,
-	/* 2    */ (void*)daTagMyna2_Execute__FP12daTagMyna2_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5CA64-80D5CA84 0020+00 s=0 e=0 z=0  None .data      l_daTagMyna2_Method                                          */
+SECTION_DATA void* l_daTagMyna2_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5CA84-80D5CAB4 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_MYNA2                                          */
+/* 80D5CA84-80D5CAB4 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_MYNA2                                          */
 SECTION_DATA void* g_profile_TAG_MYNA2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02870000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000574,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x018A0000,
-	/* 9    */ (void*)&l_daTagMyna2_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02870000,
+	(void*)NULL,
+	(void*)0x00000574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x018A0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 

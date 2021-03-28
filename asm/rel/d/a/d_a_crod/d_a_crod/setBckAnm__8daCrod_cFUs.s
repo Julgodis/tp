@@ -8,8 +8,8 @@ lbl_804A3580:
 /* 804A3598  7C 9F 23 78 */	mr r31, r4
 /* 804A359C  4B BF A2 E8 */	b getAlinkArcName__9daAlink_cFv
 /* 804A35A0  57 E4 04 3E */	clrlwi r4, r31, 0x10
-/* 804A35A4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804A35A8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804A35A4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804A35A8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804A35AC  3C A5 00 02 */	addis r5, r5, 2
 /* 804A35B0  38 C0 00 80 */	li r6, 0x80
 /* 804A35B4  38 A5 C2 F8 */	addi r5, r5, -15624

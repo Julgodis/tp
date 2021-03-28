@@ -7,11 +7,11 @@ lbl_80ABCA40:
 /* 80ABCA54  7C 7E 1B 78 */	mr r30, r3
 /* 80ABCA58  3C 80 80 AC */	lis r4, m__19daNpcRafrel_Param_c@ha
 /* 80ABCA5C  3B E4 F9 E0 */	addi r31, r4, m__19daNpcRafrel_Param_c@l
-/* 80ABCA60  C0 1F 03 80 */	lfs f0, 0x380(r31)	/* effective address: 80ABFD60 */
+/* 80ABCA60  C0 1F 03 80 */	lfs f0, 0x380(r31)
 /* 80ABCA64  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80ABCA68  C0 1F 00 88 */	lfs f0, 0x88(r31)	/* effective address: 80ABFA68 */
+/* 80ABCA68  C0 1F 00 88 */	lfs f0, 0x88(r31)
 /* 80ABCA6C  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80ABCA70  C0 1F 03 84 */	lfs f0, 0x384(r31)	/* effective address: 80ABFD64 */
+/* 80ABCA70  C0 1F 03 84 */	lfs f0, 0x384(r31)
 /* 80ABCA74  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80ABCA78  A0 03 0E 10 */	lhz r0, 0xe10(r3)
 /* 80ABCA7C  2C 00 00 02 */	cmpwi r0, 2

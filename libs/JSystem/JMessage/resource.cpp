@@ -137,38 +137,38 @@ asm void JMessage::TResource::toMessageIndex_messageID(u32 param_0, u32 param_1,
 /* ############################################################################################## */
 /* 803C9C80-803C9C94 0014+00 s=1 e=0 z=0  None .data      sapfnParseCharacter___Q28JMessage18TResourceContainer        */
 SECTION_DATA static void* sapfnParseCharacter___Q28JMessage18TResourceContainer[5] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)parseCharacter_1Byte__Q28JMessage6localeFPPCc,
-	/* 2    */ (void*)parseCharacter_2Byte__Q28JMessage6localeFPPCc,
-	/* 3    */ (void*)parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc,
-	/* 4    */ (void*)parseCharacter_UTF8__Q28JMessage6localeFPPCc,
+	(void*)NULL,
+	(void*)parseCharacter_1Byte__Q28JMessage6localeFPPCc,
+	(void*)parseCharacter_2Byte__Q28JMessage6localeFPPCc,
+	(void*)parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc,
+	(void*)parseCharacter_UTF8__Q28JMessage6localeFPPCc,
 };
 
 /* 803C9C94-803C9CA8 0014+00 s=2 e=0 z=0  None .data      __vt__Q28JMessage6TParse                                     */
 SECTION_DATA static void* __vt__Q28JMessage6TParse[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q28JMessage6TParseFv,
-	/* 3    */ (void*)parseHeader_next__Q28JMessage6TParseFPPCvPUlUl,
-	/* 4    */ (void*)parseBlock_next__Q28JMessage6TParseFPPCvPUlUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q28JMessage6TParseFv,
+	(void*)parseHeader_next__Q28JMessage6TParseFPPCvPUlUl,
+	(void*)parseBlock_next__Q28JMessage6TParseFPPCvPUlUl,
 };
 
 /* 803C9CA8-803C9CBC 0014+00 s=2 e=0 z=0  None .data      __vt__Q38JMessage18TResourceContainer10TCResource            */
 SECTION_DATA static void* __vt__Q38JMessage18TResourceContainer10TCResource[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q38JMessage18TResourceContainer10TCResourceFv,
-	/* 3    */ (void*)Do_create__Q38JMessage18TResourceContainer10TCResourceFv,
-	/* 4    */ (void*)Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q38JMessage18TResourceContainer10TCResourceFv,
+	(void*)Do_create__Q38JMessage18TResourceContainer10TCResourceFv,
+	(void*)Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource,
 };
 
 /* 803C9CBC-803C9CD0 0014+00 s=2 e=0 z=0  None .data      __vt__Q27JGadget42TLinkList_factory<Q28JMessage9TResource,0> */
 SECTION_DATA static void* data_803C9CBC[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 802A8EC0-802A8EF8 0038+00 s=1 e=0 z=0  None .text      __ct__Q38JMessage18TResourceContainer10TCResourceFv          */

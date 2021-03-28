@@ -19,10 +19,10 @@ lbl_80BE7F80:
 /* 80BE7FC4  38 00 00 06 */	li r0, 6
 /* 80BE7FC8  7C 09 03 A6 */	mtctr r0
 lbl_80BE7FCC:
-/* 80BE7FCC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BE800C */
-/* 80BE7FD0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BE8010 */
-/* 80BE7FD4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BE8050 */
-/* 80BE7FD8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BE8054 */
+/* 80BE7FCC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BE7FD0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80BE7FD4  90 65 00 04 */	stw r3, 4(r5)
+/* 80BE7FD8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BE7FDC  42 00 FF F0 */	bdnz lbl_80BE7FCC
 /* 80BE7FE0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BE7FE4  7C 08 03 A6 */	mtlr r0

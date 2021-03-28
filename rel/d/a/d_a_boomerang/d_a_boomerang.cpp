@@ -162,10 +162,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -176,9 +176,6 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS_AcchCir {
-};
-
 struct cBgS_PolyInfo {
 };
 
@@ -187,6 +184,9 @@ struct dBgS {
 	/* 80074DAC */ void GetUnderwaterRoofCode(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
 };
 
 struct dBgS_Acch {
@@ -205,11 +205,11 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -357,13 +357,13 @@ struct J3DMaterialTable {
 // 
 
 static void daBoomeang_windModelCallBack(J3DJoint*, int); // 2
-static void daBoomerang_Draw(daBoomerang_c*); // 2
+void daBoomerang_Draw(daBoomerang_c*); // 2
 static void daBoomerang_lockLineCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
 static void daBoomerang_moveLineCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daBoomerang_Execute(daBoomerang_c*); // 2
-static void daBoomerang_Delete(daBoomerang_c*); // 2
+void daBoomerang_Execute(daBoomerang_c*); // 2
+void daBoomerang_Delete(daBoomerang_c*); // 2
 static void daBoomerang_createHeap(fopAc_ac_c*); // 2
-static void daBoomerang_Create(fopAc_ac_c*); // 2
+void daBoomerang_Create(fopAc_ac_c*); // 2
 
 extern "C" void createHeap__19daBoomerang_sight_cFv(); // 1
 extern "C" void initialize__19daBoomerang_sight_cFv(); // 1
@@ -376,7 +376,7 @@ extern "C" void draw__19daBoomerang_sight_cFv(); // 1
 extern "C" void windModelCallBack__13daBoomerang_cFv(); // 1
 extern "C" static void daBoomeang_windModelCallBack__FP8J3DJointi(); // 1
 extern "C" void draw__13daBoomerang_cFv(); // 1
-extern "C" static void daBoomerang_Draw__FP13daBoomerang_c(); // 1
+extern "C" void daBoomerang_Draw__FP13daBoomerang_c(); // 1
 extern "C" void lockLineCallback__13daBoomerang_cFP10fopAc_ac_c(); // 1
 extern "C" static void daBoomerang_lockLineCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
 extern "C" void moveLineCallback__13daBoomerang_cFP10fopAc_ac_c(); // 1
@@ -398,9 +398,9 @@ extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void procWait__13daBoomerang_cFv(); // 1
 extern "C" void procMove__13daBoomerang_cFv(); // 1
 extern "C" void execute__13daBoomerang_cFv(); // 1
-extern "C" static void daBoomerang_Execute__FP13daBoomerang_c(); // 1
+extern "C" void daBoomerang_Execute__FP13daBoomerang_c(); // 1
 extern "C" void __dt__13daBoomerang_cFv(); // 1
-extern "C" static void daBoomerang_Delete__FP13daBoomerang_c(); // 1
+extern "C" void daBoomerang_Delete__FP13daBoomerang_c(); // 1
 extern "C" void createHeap__13daBoomerang_cFv(); // 1
 extern "C" static void daBoomerang_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void create__13daBoomerang_cFv(); // 1
@@ -410,14 +410,14 @@ extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daBoomerang_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daBoomerang_Create__FP10fopAc_ac_c(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_804A2764(); // 1
-extern "C" static void func_804A276C(); // 1
-extern "C" static void func_804A2774(); // 1
-extern "C" static void func_804A277C(); // 1
-extern "C" static void func_804A2784(); // 1
+extern "C" void func_804A2764(); // 1
+extern "C" void func_804A276C(); // 1
+extern "C" void func_804A2774(); // 1
+extern "C" void func_804A277C(); // 1
+extern "C" void func_804A2784(); // 1
 extern "C" void __dt__19daBoomerang_sight_cFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
@@ -429,12 +429,9 @@ extern "C" extern u32 const m_middleCircleR__18daBoomerang_HIO_c0;
 extern "C" extern u32 const m_maxCircleR__18daBoomerang_HIO_c0;
 extern "C" extern u32 const m_scale__18daBoomerang_HIO_c0;
 extern "C" extern u32 const m_lockWindScale__18daBoomerang_HIO_c0;
-extern "C" extern u8 const lit_4654[8];
-extern "C" extern u8 const lit_5391[8];
-extern "C" extern u8 const lit_5392[8];
-extern "C" extern u8 const lit_5393[8];
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daBoomerang_Method[8];
 extern "C" extern void* g_profile_BOOMERANG[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -646,8 +643,6 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__8dCcD_Cps[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -656,29 +651,13 @@ extern "C" extern void* __vt__12cCcD_CpsAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern void* __vt__16Z2SoundObjSimple[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD47C[4];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern f32 data_803DD49C;
-extern "C" extern u8 mRoofCheck__11fopAcM_rc_c[60];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040AFE0[88];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
-SECTION_BSS extern u8 data_8040C110[4];
-SECTION_BSS extern u8 data_8040C124[4];
-SECTION_BSS extern u8 data_8040C360[8];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-SECTION_BSS extern f32 data_80434BF0;
-SECTION_BSS extern f32 data_80434C00;
-SECTION_BSS extern f32 data_80434C10;
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mRoofCheck__11fopAcM_rc_c[80];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mRoofY__11fopAcM_rc_c[4];
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
@@ -756,7 +735,7 @@ SECTION_RODATA static u32 const lit_4485[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 804A28C0-804A28C8 0008+00 s=1 e=0 z=0  None .rodata    @4487                                                        */
+/* 804A28C0-804A28C8 0008+00 s=2 e=0 z=0  None .rodata    @4487                                                        */
 SECTION_RODATA static u8 const lit_4487[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -798,8 +777,8 @@ SECTION_RODATA static u32 const lit_4652[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 804A28F8-804A2900 0008+00 s=0 e=0 z=0  None .rodata    @4654                                                        */
-SECTION_RODATA u8 const lit_4654[8] = {
+/* 804A28F8-804A2900 0008+00 s=1 e=0 z=0  None .rodata    @4654                                                        */
+SECTION_RODATA static u8 const lit_4654[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -845,18 +824,18 @@ SECTION_RODATA static u32 const lit_5389 = 0x40A00000;
 /* 804A2934-804A2938 0004+00 s=1 e=0 z=0  None .rodata    @5390                                                        */
 SECTION_RODATA static u32 const lit_5390 = 0x41200000;
 
-/* 804A2938-804A2940 0008+00 s=0 e=0 z=0  None .rodata    @5391                                                        */
-SECTION_RODATA u8 const lit_5391[8] = {
+/* 804A2938-804A2940 0008+00 s=2 e=0 z=0  None .rodata    @5391                                                        */
+SECTION_RODATA static u8 const lit_5391[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804A2940-804A2948 0008+00 s=0 e=0 z=0  None .rodata    @5392                                                        */
-SECTION_RODATA u8 const lit_5392[8] = {
+/* 804A2940-804A2948 0008+00 s=2 e=0 z=0  None .rodata    @5392                                                        */
+SECTION_RODATA static u8 const lit_5392[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804A2948-804A2950 0008+00 s=0 e=0 z=0  None .rodata    @5393                                                        */
-SECTION_RODATA u8 const lit_5393[8] = {
+/* 804A2948-804A2950 0008+00 s=2 e=0 z=0  None .rodata    @5393                                                        */
+SECTION_RODATA static u8 const lit_5393[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1000,7 +979,7 @@ asm void daBoomerang_sight_c::setSight(cXyz const* param_0, int param_1) {
 #pragma pop
 
 
-/* 8049EF60-8049F280 0320+00 s=1 e=0 z=0  None .text      draw__19daBoomerang_sight_cFv                                */
+/* 8049EF60-8049F280 0320+00 s=0 e=0 z=0  None .text      draw__19daBoomerang_sight_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1044,11 +1023,11 @@ asm void daBoomerang_c::draw() {
 #pragma pop
 
 
-/* 8049F5D4-8049F5F4 0020+00 s=1 e=0 z=0  None .text      daBoomerang_Draw__FP13daBoomerang_c                          */
+/* 8049F5D4-8049F5F4 0020+00 s=0 e=0 z=0  None .text      daBoomerang_Draw__FP13daBoomerang_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBoomerang_Draw(daBoomerang_c* param_0) {
+asm void daBoomerang_Draw(daBoomerang_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Draw__FP13daBoomerang_c.s"
 }
@@ -1110,7 +1089,7 @@ asm void daBoomerang_c::pushLockList(int param_0) {
 #pragma pop
 
 
-/* 8049F818-8049F874 005C+00 s=1 e=0 z=0  None .text      cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c           */
+/* 8049F818-8049F874 005C+00 s=0 e=0 z=0  None .text      cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1121,7 +1100,7 @@ asm void daBoomerang_c::cancelLockActorBase(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8049F874-8049F8B0 003C+00 s=1 e=0 z=0  None .text      setAimActorBase__13daBoomerang_cFP10fopAc_ac_c               */
+/* 8049F874-8049F8B0 003C+00 s=0 e=0 z=0  None .text      setAimActorBase__13daBoomerang_cFP10fopAc_ac_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1246,16 +1225,16 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 804A2AFC-804A2B08 000C+00 s=1 e=0 z=0  None .data      @5412                                                        */
 SECTION_DATA static void* lit_5412[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMove__13daBoomerang_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 804A2B08-804A2B14 000C+00 s=1 e=0 z=0  None .data      @5579                                                        */
 SECTION_DATA static void* lit_5579[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWait__13daBoomerang_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 804A2B14-804A2B60 004C+00 s=1 e=0 z=0  None .data      l_atCpsSrc                                                   */
@@ -1278,129 +1257,129 @@ SECTION_DATA static u8 l_windAtCylSrc[68] = {
 
 /* 804A2BA4-804A2BB0 000C+00 s=1 e=0 z=0  None .data      @5999                                                        */
 SECTION_DATA static void* lit_5999[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWait__13daBoomerang_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 804A2BB0-804A2BBC 000C+00 s=1 e=0 z=0  None .data      @6005                                                        */
 SECTION_DATA static void* lit_6005[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)setAimActorBase__13daBoomerang_cFP10fopAc_ac_c,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 804A2BBC-804A2BC8 000C+00 s=1 e=0 z=0  None .data      @6006                                                        */
 SECTION_DATA static void* lit_6006[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)cancelLockActorBase__13daBoomerang_cFP10fopAc_ac_c,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 804A2BC8-804A2BE8 0020+00 s=1 e=0 z=0  None .data      l_daBoomerang_Method                                         */
-SECTION_DATA static void* l_daBoomerang_Method[8] = {
-	/* 0    */ (void*)daBoomerang_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daBoomerang_Delete__FP13daBoomerang_c,
-	/* 2    */ (void*)daBoomerang_Execute__FP13daBoomerang_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daBoomerang_Draw__FP13daBoomerang_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804A2BC8-804A2BE8 0020+00 s=0 e=0 z=0  None .data      l_daBoomerang_Method                                         */
+SECTION_DATA void* l_daBoomerang_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804A2BE8-804A2C18 0030+00 s=0 e=0 z=1  None .data      g_profile_BOOMERANG                                          */
+/* 804A2BE8-804A2C18 0030+00 s=0 e=0 z=0  None .data      g_profile_BOOMERANG                                          */
 SECTION_DATA void* g_profile_BOOMERANG[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0006FFFD,
-	/* 2    */ (void*)0x00FE0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000DE4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02AE0000,
-	/* 9    */ (void*)&l_daBoomerang_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0006FFFD,
+	(void*)0x00FE0000,
+	(void*)NULL,
+	(void*)0x00000DE4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02AE0000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 
 /* 804A2C18-804A2C24 000C+00 s=1 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
 SECTION_DATA static void* __vt__12dDlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_base_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C24-804A2C30 000C+00 s=3 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C30-804A2C54 0024+00 s=3 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_804A2784,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_804A277C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C54-804A2C60 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C60-804A2C6C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C6C-804A2C78 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C78-804A2C84 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2C84-804A2CB4 0030+00 s=3 e=0 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA static void* __vt__14dBgS_ObjGndChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dBgS_ObjGndChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_804A2764,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_804A2774,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_804A276C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2CB4-804A2CC0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2CD0-804A2CD4 0001+03 s=1 e=0 z=0  None .bss       @1109                                                        */
@@ -1477,7 +1456,7 @@ asm void daBoomerang_c::setEffect() {
 #pragma pop
 
 
-/* 804A082C-804A0874 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 804A082C-804A0874 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1488,7 +1467,7 @@ asm cM3dGPla::~cM3dGPla() {
 #pragma pop
 
 
-/* 804A0874-804A0F0C 0698+00 s=2 e=0 z=0  None .text      procWait__13daBoomerang_cFv                                  */
+/* 804A0874-804A0F0C 0698+00 s=0 e=0 z=0  None .text      procWait__13daBoomerang_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1499,7 +1478,7 @@ asm void daBoomerang_c::procWait() {
 #pragma pop
 
 
-/* 804A0F0C-804A1814 0908+00 s=2 e=0 z=0  None .text      procMove__13daBoomerang_cFv                                  */
+/* 804A0F0C-804A1814 0908+00 s=1 e=0 z=0  None .text      procMove__13daBoomerang_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1521,11 +1500,11 @@ asm void daBoomerang_c::execute() {
 #pragma pop
 
 
-/* 804A1BD4-804A1BF4 0020+00 s=1 e=0 z=0  None .text      daBoomerang_Execute__FP13daBoomerang_c                       */
+/* 804A1BD4-804A1BF4 0020+00 s=0 e=0 z=0  None .text      daBoomerang_Execute__FP13daBoomerang_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBoomerang_Execute(daBoomerang_c* param_0) {
+asm void daBoomerang_Execute(daBoomerang_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Execute__FP13daBoomerang_c.s"
 }
@@ -1535,10 +1514,10 @@ asm static void daBoomerang_Execute(daBoomerang_c* param_0) {
 /* ############################################################################################## */
 /* 804A2CC0-804A2CD0 0010+00 s=3 e=0 z=0  None .data      __vt__19daBoomerang_sight_c                                  */
 SECTION_DATA static void* __vt__19daBoomerang_sight_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__19daBoomerang_sight_cFv,
-	/* 3    */ (void*)__dt__19daBoomerang_sight_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A1BF4-804A1EBC 02C8+00 s=1 e=0 z=0  None .text      __dt__13daBoomerang_cFv                                      */
@@ -1552,11 +1531,11 @@ asm daBoomerang_c::~daBoomerang_c() {
 #pragma pop
 
 
-/* 804A1EBC-804A1EE4 0028+00 s=1 e=0 z=0  None .text      daBoomerang_Delete__FP13daBoomerang_c                        */
+/* 804A1EBC-804A1EE4 0028+00 s=0 e=0 z=0  None .text      daBoomerang_Delete__FP13daBoomerang_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBoomerang_Delete(daBoomerang_c* param_0) {
+asm void daBoomerang_Delete(daBoomerang_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Delete__FP13daBoomerang_c.s"
 }
@@ -1607,7 +1586,7 @@ asm daBoomerang_c::daBoomerang_c() {
 #pragma pop
 
 
-/* 804A2524-804A259C 0078+00 s=4 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
+/* 804A2524-804A259C 0078+00 s=3 e=0 z=0  None .text      __dt__14dBgS_ObjGndChkFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1618,7 +1597,7 @@ asm dBgS_ObjGndChk::~dBgS_ObjGndChk() {
 #pragma pop
 
 
-/* 804A259C-804A25E4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 804A259C-804A25E4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1629,7 +1608,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 804A25E4-804A262C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804A25E4-804A262C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1640,7 +1619,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804A262C-804A2688 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 804A262C-804A2688 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1651,7 +1630,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 804A2688-804A26F8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 804A2688-804A26F8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1662,24 +1641,24 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 804A26F8-804A2718 0020+00 s=1 e=0 z=0  None .text      daBoomerang_Create__FP10fopAc_ac_c                           */
+/* 804A26F8-804A2718 0020+00 s=0 e=0 z=0  None .text      daBoomerang_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBoomerang_Create(fopAc_ac_c* param_0) {
+asm void daBoomerang_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/daBoomerang_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 804A2718-804A271C 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
+/* 804A2718-804A271C 0004+00 s=0 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
 void dDlst_base_c::draw() {
 	/* empty function */
 }
 
 
-/* 804A271C-804A2764 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 804A271C-804A2764 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1690,62 +1669,62 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 804A2764-804A276C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
+/* 804A2764-804A276C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A2764() {
+extern "C" asm void func_804A2764() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2764.s"
 }
 #pragma pop
 
 
-/* 804A276C-804A2774 0008+00 s=1 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
+/* 804A276C-804A2774 0008+00 s=0 e=0 z=0  None .text      @76@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A276C() {
+extern "C" asm void func_804A276C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A276C.s"
 }
 #pragma pop
 
 
-/* 804A2774-804A277C 0008+00 s=1 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
+/* 804A2774-804A277C 0008+00 s=0 e=0 z=0  None .text      @60@__dt__14dBgS_ObjGndChkFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A2774() {
+extern "C" asm void func_804A2774() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2774.s"
 }
 #pragma pop
 
 
-/* 804A277C-804A2784 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 804A277C-804A2784 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A277C() {
+extern "C" asm void func_804A277C() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A277C.s"
 }
 #pragma pop
 
 
-/* 804A2784-804A278C 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 804A2784-804A278C 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_804A2784() {
+extern "C" asm void func_804A2784() {
 	nofralloc
 #include "asm/rel/d/a/d_a_boomerang/d_a_boomerang/func_804A2784.s"
 }
 #pragma pop
 
 
-/* 804A278C-804A27FC 0070+00 s=1 e=0 z=0  None .text      __dt__19daBoomerang_sight_cFv                                */
+/* 804A278C-804A27FC 0070+00 s=0 e=0 z=0  None .text      __dt__19daBoomerang_sight_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1762,7 +1741,7 @@ cXyz::cXyz() {
 }
 
 
-/* 804A2800-804A2848 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 804A2800-804A2848 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

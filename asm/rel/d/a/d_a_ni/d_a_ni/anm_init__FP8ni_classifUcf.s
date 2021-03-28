@@ -16,13 +16,13 @@ lbl_8094BCA8:
 /* 8094BCE0  3C 60 80 95 */	lis r3, lit_3958@ha
 /* 8094BCE4  3B E3 11 C0 */	addi r31, r3, lit_3958@l
 /* 8094BCE8  C0 3C 06 10 */	lfs f1, 0x610(r28)
-/* 8094BCEC  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 809511E0 */
+/* 8094BCEC  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 8094BCF0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8094BCF4  41 81 00 4C */	bgt lbl_8094BD40
 /* 8094BCF8  3C 60 80 95 */	lis r3, stringBase0@ha
 /* 8094BCFC  38 63 13 1C */	addi r3, r3, stringBase0@l
-/* 8094BD00  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8094BD04  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8094BD00  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8094BD04  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8094BD08  3C A5 00 02 */	addis r5, r5, 2
 /* 8094BD0C  38 C0 00 80 */	li r6, 0x80
 /* 8094BD10  38 A5 C2 F8 */	addi r5, r5, -15624

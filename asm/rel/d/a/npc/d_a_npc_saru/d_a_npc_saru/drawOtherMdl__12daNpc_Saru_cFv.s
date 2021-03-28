@@ -9,8 +9,8 @@ lbl_80AC1A28:
 /* 80AC1A44  83 E3 00 04 */	lwz r31, 4(r3)
 /* 80AC1A48  3B 80 00 00 */	li r28, 0
 /* 80AC1A4C  3B 40 00 00 */	li r26, 0
-/* 80AC1A50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC1A54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AC1A50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC1A54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AC1A58  3B C3 61 C0 */	addi r30, r3, 0x61c0
 lbl_80AC1A5C:
 /* 80AC1A5C  3B BA 0E 44 */	addi r29, r26, 0xe44

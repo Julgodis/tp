@@ -11,8 +11,8 @@ lbl_80720B50:
 /* 80720B74  7C 7C 1B 78 */	mr r28, r3
 /* 80720B78  3C 80 80 72 */	lis r4, lit_3789@ha
 /* 80720B7C  3B E4 2C 3C */	addi r31, r4, lit_3789@l
-/* 80720B80  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80722C40 */
-/* 80720B84  C3 DF 00 50 */	lfs f30, 0x50(r31)	/* effective address: 80722C8C */
+/* 80720B80  C3 FF 00 04 */	lfs f31, 4(r31)
+/* 80720B84  C3 DF 00 50 */	lfs f30, 0x50(r31)
 /* 80720B88  3B C0 00 00 */	li r30, 0
 /* 80720B8C  3B A0 00 01 */	li r29, 1
 /* 80720B90  A8 03 06 70 */	lha r0, 0x670(r3)
@@ -186,12 +186,12 @@ lbl_80720DF4:
 /* 80720E00  40 82 00 14 */	bne lbl_80720E14
 /* 80720E04  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80720E08  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80720E0C  C3 E3 00 24 */	lfs f31, 0x24(r3)	/* effective address: 80722EE4 */
+/* 80720E0C  C3 E3 00 24 */	lfs f31, 0x24(r3)
 /* 80720E10  48 00 00 10 */	b lbl_80720E20
 lbl_80720E14:
 /* 80720E14  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80720E18  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80720E1C  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 80722ED0 */
+/* 80720E1C  C3 E3 00 10 */	lfs f31, 0x10(r3)
 lbl_80720E20:
 /* 80720E20  38 00 00 01 */	li r0, 1
 /* 80720E24  98 1C 0B 98 */	stb r0, 0xb98(r28)
@@ -270,7 +270,7 @@ lbl_80720F0C:
 /* 80720F34  C0 3F 00 48 */	lfs f1, 0x48(r31)
 /* 80720F38  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80720F3C  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80720F40  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 80722EEC */
+/* 80720F40  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80720F44  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80720F48  D0 1C 05 2C */	stfs f0, 0x52c(r28)
 lbl_80720F4C:
@@ -287,13 +287,13 @@ lbl_80720F4C:
 /* 80720F74  40 82 00 18 */	bne lbl_80720F8C
 /* 80720F78  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80720F7C  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80720F80  A8 03 00 30 */	lha r0, 0x30(r3)	/* effective address: 80722EF0 */
+/* 80720F80  A8 03 00 30 */	lha r0, 0x30(r3)
 /* 80720F84  B0 1C 06 9C */	sth r0, 0x69c(r28)
 /* 80720F88  48 00 00 14 */	b lbl_80720F9C
 lbl_80720F8C:
 /* 80720F8C  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80720F90  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80720F94  A8 03 00 18 */	lha r0, 0x18(r3)	/* effective address: 80722ED8 */
+/* 80720F94  A8 03 00 18 */	lha r0, 0x18(r3)
 /* 80720F98  B0 1C 06 9C */	sth r0, 0x69c(r28)
 lbl_80720F9C:
 /* 80720F9C  88 1C 06 72 */	lbz r0, 0x672(r28)
@@ -424,7 +424,7 @@ lbl_80721164:
 /* 8072116C  40 82 00 10 */	bne lbl_8072117C
 /* 80721170  3C 60 80 72 */	lis r3, l_HIO@ha
 /* 80721174  38 63 2E C0 */	addi r3, r3, l_HIO@l
-/* 80721178  AB C3 00 32 */	lha r30, 0x32(r3)	/* effective address: 80722EF2 */
+/* 80721178  AB C3 00 32 */	lha r30, 0x32(r3)
 lbl_8072117C:
 /* 8072117C  38 7C 04 DE */	addi r3, r28, 0x4de
 /* 80721180  A8 9C 06 8C */	lha r4, 0x68c(r28)

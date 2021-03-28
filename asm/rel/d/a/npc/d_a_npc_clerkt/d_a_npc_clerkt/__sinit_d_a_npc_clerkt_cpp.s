@@ -6,12 +6,12 @@ lbl_8099CF34:
 /* 8099CF44  38 A3 D4 2C */	addi r5, r3, mCutList__13daNpcClerkT_c@l
 /* 8099CF48  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8099CF4C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8099CF50  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8099CF54  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 8099CF58  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 8099D42C */
-/* 8099CF5C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 8099D430 */
-/* 8099CF60  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 8099CF64  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 8099D434 */
+/* 8099CF50  80 64 00 00 */	lwz r3, 0(r4)
+/* 8099CF54  80 04 00 04 */	lwz r0, 4(r4)
+/* 8099CF58  90 65 00 00 */	stw r3, 0(r5)
+/* 8099CF5C  90 05 00 04 */	stw r0, 4(r5)
+/* 8099CF60  80 04 00 08 */	lwz r0, 8(r4)
+/* 8099CF64  90 05 00 08 */	stw r0, 8(r5)
 /* 8099CF68  3C 60 80 9A */	lis r3, __vt__19daNpcClerkt_Param_c@ha
 /* 8099CF6C  38 03 D6 3C */	addi r0, r3, __vt__19daNpcClerkt_Param_c@l
 /* 8099CF70  3C 60 80 9A */	lis r3, l_HIO@ha

@@ -27,7 +27,7 @@ lbl_80660590:
 /* 806605A0  3C 60 80 45 */	lis r3, g_dComIfGoat_gameInfo@ha
 /* 806605A4  93 C3 06 18 */	stw r30, g_dComIfGoat_gameInfo@l(r3)
 /* 806605A8  38 00 00 00 */	li r0, 0
-/* 806605AC  98 1E 0C 9E */	stb r0, 0xc9e(r30)	/* effective address: 804512B6 */
+/* 806605AC  98 1E 0C 9E */	stb r0, 0xc9e(r30)
 /* 806605B0  48 00 01 F0 */	b lbl_806607A0
 lbl_806605B4:
 /* 806605B4  80 7E 0C 94 */	lwz r3, 0xc94(r30)
@@ -68,14 +68,14 @@ lbl_80660624:
 /* 80660628  4B FF EB 1D */	bl executeCrazyAttack__7daCow_cFv
 /* 8066062C  48 00 01 28 */	b lbl_80660754
 lbl_80660630:
-/* 80660630  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80660634  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80660638  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8066063C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80660630  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80660634  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80660638  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8066063C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80660640  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80660644  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 80406694 */
+/* 80660644  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 80660648  D0 01 00 3C */	stfs f0, 0x3c(r1)
-/* 8066064C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 8066064C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80660650  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80660654  7F C3 F3 78 */	mr r3, r30
 /* 80660658  38 81 00 38 */	addi r4, r1, 0x38

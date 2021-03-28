@@ -7,11 +7,11 @@ lbl_80ACCED0:
 /* 80ACCEE4  7C 7E 1B 78 */	mr r30, r3
 /* 80ACCEE8  3C 60 80 AD */	lis r3, m__19daNpc_Seira_Param_c@ha
 /* 80ACCEEC  3B E3 FD F0 */	addi r31, r3, m__19daNpc_Seira_Param_c@l
-/* 80ACCEF0  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80ACFEB4 */
+/* 80ACCEF0  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80ACCEF4  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80ACCEF8  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80ACFEB8 */
+/* 80ACCEF8  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 80ACCEFC  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80ACCF00  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 80ACFE98 */
+/* 80ACCF00  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 80ACCF04  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80ACCF08  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80ACCF0C  38 80 00 00 */	li r4, 0

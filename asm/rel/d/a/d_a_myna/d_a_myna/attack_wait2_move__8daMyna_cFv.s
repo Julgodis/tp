@@ -4,10 +4,10 @@ lbl_809481B4:
 /* 809481BC  90 01 00 34 */	stw r0, 0x34(r1)
 /* 809481C0  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 809481C4  7C 7F 1B 78 */	mr r31, r3
-/* 809481C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809481CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809481D0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 809481D4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 809481C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809481CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809481D0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 809481D4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 809481D8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809481DC  41 82 00 10 */	beq lbl_809481EC
 /* 809481E0  38 00 00 07 */	li r0, 7
@@ -52,12 +52,12 @@ lbl_8094825C:
 /* 80948274  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80948278  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8094827C  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80948280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80948284  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80948280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80948284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80948288  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8094828C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80948290  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80948294  A0 84 06 44 */	lhz r4, 0x644(r4)	/* effective address: 803A78CC */
+/* 80948294  A0 84 06 44 */	lhz r4, 0x644(r4)
 /* 80948298  4B 6E C7 24 */	b isEventBit__11dSv_event_cCFUs
 /* 8094829C  2C 03 00 00 */	cmpwi r3, 0
 /* 809482A0  41 82 00 50 */	beq lbl_809482F0
@@ -70,7 +70,7 @@ lbl_8094825C:
 /* 809482BC  7F E3 FB 78 */	mr r3, r31
 /* 809482C0  3C 80 80 95 */	lis r4, daMyna_evtTagActor0@ha
 /* 809482C4  38 84 BA C8 */	addi r4, r4, daMyna_evtTagActor0@l
-/* 809482C8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8094BAC8 */
+/* 809482C8  80 84 00 00 */	lwz r4, 0(r4)
 /* 809482CC  38 A1 00 08 */	addi r5, r1, 8
 /* 809482D0  48 00 1A 85 */	bl chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz
 /* 809482D4  2C 03 00 00 */	cmpwi r3, 0
@@ -107,7 +107,7 @@ lbl_80948348:
 /* 80948348  A8 9F 09 2A */	lha r4, 0x92a(r31)
 /* 8094834C  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80948350  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80948354  A8 03 00 24 */	lha r0, 0x24(r3)	/* effective address: 8094BA60 */
+/* 80948354  A8 03 00 24 */	lha r0, 0x24(r3)
 /* 80948358  7C 04 00 00 */	cmpw r4, r0
 /* 8094835C  40 80 00 10 */	bge lbl_8094836C
 /* 80948360  38 04 00 01 */	addi r0, r4, 1

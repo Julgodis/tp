@@ -9,9 +9,9 @@ lbl_80A9D8B8:
 /* 80A9D8D4  7C 7E 1B 78 */	mr r30, r3
 /* 80A9D8D8  3C 60 80 AA */	lis r3, m__24daNpc_Pachi_Taro_Param_c@ha
 /* 80A9D8DC  3B E3 16 04 */	addi r31, r3, m__24daNpc_Pachi_Taro_Param_c@l
-/* 80A9D8E0  C0 3F 00 A0 */	lfs f1, 0xa0(r31)	/* effective address: 80AA16A4 */
+/* 80A9D8E0  C0 3F 00 A0 */	lfs f1, 0xa0(r31)
 /* 80A9D8E4  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 80A9D8E8  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 80AA16C4 */
+/* 80A9D8E8  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 80A9D8EC  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80A9D8F0  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 80A9D8F4  3B 60 00 00 */	li r27, 0

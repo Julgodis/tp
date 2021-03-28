@@ -1,8 +1,8 @@
 lbl_809490B8:
-/* 809490B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809490BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809490C0  80 84 5D B4 */	lwz r4, 0x5db4(r4)	/* effective address: 8040BF74 */
-/* 809490C4  80 04 05 74 */	lwz r0, 0x574(r4)	/* effective address: 80406734 */
+/* 809490B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809490BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809490C0  80 84 5D B4 */	lwz r4, 0x5db4(r4)
+/* 809490C4  80 04 05 74 */	lwz r0, 0x574(r4)
 /* 809490C8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809490CC  41 82 00 54 */	beq lbl_80949120
 /* 809490D0  88 03 09 2C */	lbz r0, 0x92c(r3)

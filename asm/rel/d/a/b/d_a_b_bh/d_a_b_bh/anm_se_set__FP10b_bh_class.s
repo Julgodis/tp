@@ -7,7 +7,7 @@ lbl_805B1F4C:
 /* 805B1F60  7C 7A 1B 78 */	mr r26, r3
 /* 805B1F64  3C 60 80 5B */	lis r3, lit_3764@ha
 /* 805B1F68  3B 83 31 40 */	addi r28, r3, lit_3764@l
-/* 805B1F6C  C0 3C 00 04 */	lfs f1, 4(r28)	/* effective address: 805B3144 */
+/* 805B1F6C  C0 3C 00 04 */	lfs f1, 4(r28)
 /* 805B1F70  80 1A 06 60 */	lwz r0, 0x660(r26)
 /* 805B1F74  2C 00 00 0C */	cmpwi r0, 0xc
 /* 805B1F78  40 82 00 18 */	bne lbl_805B1F90
@@ -24,12 +24,12 @@ lbl_805B1F90:
 /* 805B1FA0  3B 60 00 00 */	li r27, 0
 /* 805B1FA4  3B 20 00 00 */	li r25, 0
 /* 805B1FA8  3B 00 00 00 */	li r24, 0
-/* 805B1FAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B1FB0  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 805B1FAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B1FB0  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 805B1FB4  3C 60 80 5B */	lis r3, data_805B326C@ha
 /* 805B1FB8  3B C3 32 6C */	addi r30, r3, data_805B326C@l
 lbl_805B1FBC:
-/* 805B1FBC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 805B1FBC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 805B1FC0  38 00 00 FF */	li r0, 0xff
 /* 805B1FC4  90 01 00 08 */	stw r0, 8(r1)
 /* 805B1FC8  38 80 00 00 */	li r4, 0
@@ -67,7 +67,7 @@ lbl_805B1FBC:
 /* 805B2048  7C 64 02 14 */	add r3, r4, r0
 /* 805B204C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 805B2050  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 805B2054  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 805B2054  80 84 00 00 */	lwz r4, 0(r4)
 /* 805B2058  4B D9 44 58 */	b PSMTXCopy
 /* 805B205C  C0 3A 0F 44 */	lfs f1, 0xf44(r26)
 /* 805B2060  FC 40 08 90 */	fmr f2, f1
@@ -76,7 +76,7 @@ lbl_805B1FBC:
 /* 805B206C  4B CB EE 38 */	b MtxScale__FfffUc
 /* 805B2070  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805B2074  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805B2078  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805B2078  80 63 00 00 */	lwz r3, 0(r3)
 /* 805B207C  38 9F 00 68 */	addi r4, r31, 0x68
 /* 805B2080  38 BF 00 98 */	addi r5, r31, 0x98
 /* 805B2084  38 DF 00 A4 */	addi r6, r31, 0xa4

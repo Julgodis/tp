@@ -9,11 +9,11 @@ lbl_80A20350:
 /* 80A2036C  7C BC 2B 78 */	mr r28, r5
 /* 80A20370  3C 60 80 A2 */	lis r3, lit_3908@ha
 /* 80A20374  3B C3 10 80 */	addi r30, r3, lit_3908@l
-/* 80A20378  80 7E 02 B8 */	lwz r3, 0x2b8(r30)	/* effective address: 80A21338 */
-/* 80A2037C  80 1E 02 BC */	lwz r0, 0x2bc(r30)	/* effective address: 80A2133C */
+/* 80A20378  80 7E 02 B8 */	lwz r3, 0x2b8(r30)
+/* 80A2037C  80 1E 02 BC */	lwz r0, 0x2bc(r30)
 /* 80A20380  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A20384  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A20388  80 1E 02 C0 */	lwz r0, 0x2c0(r30)	/* effective address: 80A21340 */
+/* 80A20388  80 1E 02 C0 */	lwz r0, 0x2c0(r30)
 /* 80A2038C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A20390  38 7F 14 48 */	addi r3, r31, 0x1448
 /* 80A20394  4B 73 03 58 */	b getActorP__18daNpcF_ActorMngr_cFv

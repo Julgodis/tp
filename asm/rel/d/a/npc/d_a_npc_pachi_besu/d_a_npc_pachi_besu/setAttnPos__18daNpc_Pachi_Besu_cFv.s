@@ -9,11 +9,11 @@ lbl_80A94298:
 /* 80A942B4  7C 7E 1B 78 */	mr r30, r3
 /* 80A942B8  3C 60 80 A9 */	lis r3, m__24daNpc_Pachi_Besu_Param_c@ha
 /* 80A942BC  3B E3 6A 6C */	addi r31, r3, m__24daNpc_Pachi_Besu_Param_c@l
-/* 80A942C0  C0 1F 00 B8 */	lfs f0, 0xb8(r31)	/* effective address: 80A96B24 */
+/* 80A942C0  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 80A942C4  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80A942C8  C0 1F 00 BC */	lfs f0, 0xbc(r31)	/* effective address: 80A96B28 */
+/* 80A942C8  C0 1F 00 BC */	lfs f0, 0xbc(r31)
 /* 80A942CC  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80A942D0  C0 1F 00 A0 */	lfs f0, 0xa0(r31)	/* effective address: 80A96B0C */
+/* 80A942D0  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
 /* 80A942D4  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80A942D8  3B 60 00 00 */	li r27, 0
 /* 80A942DC  80 1E 0B 7C */	lwz r0, 0xb7c(r30)

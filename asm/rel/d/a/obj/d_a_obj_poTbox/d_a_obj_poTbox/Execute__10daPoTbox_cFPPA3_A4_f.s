@@ -10,7 +10,7 @@ lbl_80CB499C:
 /* 80CB49BC  38 C3 4F EC */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80CB49C0  3C 60 80 CB */	lis r3, data_80CB5140@ha
 /* 80CB49C4  38 A3 51 40 */	addi r5, r3, data_80CB5140@l
-/* 80CB49C8  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CB5140 */
+/* 80CB49C8  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CB49CC  7C 00 07 75 */	extsb. r0, r0
 /* 80CB49D0  40 82 00 70 */	bne lbl_80CB4A40
 /* 80CB49D4  80 66 00 38 */	lwz r3, 0x38(r6)

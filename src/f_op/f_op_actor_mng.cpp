@@ -136,11 +136,11 @@ struct dPa_control_c {
 	/* 8004D7C4 */ void setSimpleFoot(u32, u32*, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, int, csXyz const*, cXyz const*, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -150,14 +150,14 @@ struct cBgS {
 	/* 80074744 */ void GetTriPla(cBgS_PolyInfo const&, cM3dGPla*) const;
 };
 
-struct dBgS_RoofChk {
-	/* 80078FF4 */ dBgS_RoofChk();
-	/* 80079090 */ ~dBgS_RoofChk();
-};
-
 struct dBgS_SplGrpChk {
 	/* 80078B90 */ void Set(cXyz&, f32);
 	/* 80078C78 */ ~dBgS_SplGrpChk();
+};
+
+struct dBgS_RoofChk {
+	/* 80078FF4 */ dBgS_RoofChk();
+	/* 80079090 */ ~dBgS_RoofChk();
 };
 
 struct dBgS {
@@ -1883,9 +1883,9 @@ asm void fopAcM_getWaterStream(cXyz const* param_0, cBgS_PolyInfo const& param_1
 /* ############################################################################################## */
 /* 803A37C0-803A37CC 000C+00 s=2 e=93 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGPlaFv,
 };
 
 /* 8001DAE4-8001DB90 00AC+00 s=0 e=2 z=8  None .text      fopAcM_getPolygonAngle__FRC13cBgS_PolyInfos                  */
@@ -1986,50 +1986,50 @@ void fopAcM_initManager() {
 /* ############################################################################################## */
 /* 803A37CC-803A37FC 0030+00 s=2 e=0 z=0  None .data      __vt__15dBgS_ObjRoofChk                                      */
 SECTION_DATA static void* __vt__15dBgS_ObjRoofChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dBgS_ObjRoofChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8001E104,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8001E114,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_8001E10C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dBgS_ObjRoofChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E104,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E114,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E10C,
 };
 
 /* 803A37FC-803A382C 0030+00 s=1 e=2 z=0  None .data      __vt__11dBgS_WtrChk                                          */
 SECTION_DATA void* __vt__11dBgS_WtrChk[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dBgS_WtrChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8001E0EC,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8001E0FC,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_8001E0F4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dBgS_WtrChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0EC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0FC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0F4,
 };
 
 /* 803A382C-803A3860 0030+04 s=2 e=10 z=0  None .data      __vt__14dBgS_ObjGndChk                                       */
 SECTION_DATA void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dBgS_ObjGndChkFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_8001E0D4,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_8001E0E4,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)func_8001E0DC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14dBgS_ObjGndChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0D4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0E4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8001E0DC,
 	/* padding */
 	NULL,
 };

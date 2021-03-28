@@ -247,11 +247,11 @@ lbl_8097D478:
 /* 8097D494  B0 01 00 7C */	sth r0, 0x7c(r1)
 /* 8097D498  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 8097D49C  3B C3 0C F4 */	addi r30, r3, Zero__4cXyz@l
-/* 8097D4A0  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80430CF4 */
+/* 8097D4A0  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 8097D4A4  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 8097D4A8  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80430CF8 */
+/* 8097D4A8  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8097D4AC  D0 01 00 54 */	stfs f0, 0x54(r1)
-/* 8097D4B0  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 80430CFC */
+/* 8097D4B0  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 8097D4B4  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8097D4B8  7F E3 FB 78 */	mr r3, r31
 /* 8097D4BC  4B 7D AB EC */	b isM___10daNpcCd2_cFv

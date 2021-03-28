@@ -64,7 +64,7 @@ extern "C" void _restgpr_26(); // 1
 // Declarations:
 // 
 
-/* 80023A48-80023A98 0050+00 s=1 e=3 z=0  None .text      fpcFCtRq_Do__FP19fast_create_request                         */
+/* 80023A48-80023A98 0050+00 s=1 e=3 z=52  None .text      fpcFCtRq_Do__FP19fast_create_request                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -84,14 +84,14 @@ static bool fpcFCtRq_Delete(fast_create_request* param_0) {
 /* ############################################################################################## */
 /* 803A3AE0-803A3AF0 000C+04 s=1 e=0 z=0  None .data      submethod$2214                                               */
 SECTION_DATA static void* data_803A3AE0[3 + 1 /* padding */] = {
-	/* 0    */ (void*)fpcFCtRq_Do__FP19fast_create_request,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)fpcFCtRq_Delete__FP19fast_create_request,
+	(void*)fpcFCtRq_Do__FP19fast_create_request,
+	(void*)NULL,
+	(void*)fpcFCtRq_Delete__FP19fast_create_request,
 	/* padding */
 	NULL,
 };
 
-/* 80023AA0-80023B70 00D0+00 s=0 e=3 z=0  None .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
+/* 80023AA0-80023B70 00D0+00 s=0 e=3 z=43  None .text      fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

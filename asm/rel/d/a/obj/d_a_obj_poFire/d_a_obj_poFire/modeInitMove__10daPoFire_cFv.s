@@ -8,11 +8,11 @@ lbl_80CB30FC:
 /* 80CB3114  3C 60 80 CB */	lis r3, lit_3662@ha
 /* 80CB3118  3B E3 3E EC */	addi r31, r3, lit_3662@l
 /* 80CB311C  38 7E 04 D4 */	addi r3, r30, 0x4d4
-/* 80CB3120  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 80CB3F18 */
+/* 80CB3120  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 80CB3124  C0 1E 05 D0 */	lfs f0, 0x5d0(r30)
 /* 80CB3128  EC 21 00 2A */	fadds f1, f1, f0
-/* 80CB312C  C0 5F 00 28 */	lfs f2, 0x28(r31)	/* effective address: 80CB3F14 */
-/* 80CB3130  C0 7F 00 30 */	lfs f3, 0x30(r31)	/* effective address: 80CB3F1C */
+/* 80CB312C  C0 5F 00 28 */	lfs f2, 0x28(r31)
+/* 80CB3130  C0 7F 00 30 */	lfs f3, 0x30(r31)
 /* 80CB3134  FC 80 10 90 */	fmr f4, f2
 /* 80CB3138  4B 5B C8 44 */	b cLib_addCalc__FPfffff
 /* 80CB313C  C0 1F 00 20 */	lfs f0, 0x20(r31)

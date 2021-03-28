@@ -5,14 +5,14 @@ lbl_80D4DA68:
 /* 80D4DA74  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80D4DA78  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80D4DA7C  7C 7E 1B 78 */	mr r30, r3
-/* 80D4DA80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4DA84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D4DA88  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80D4DA8C  C0 43 04 D0 */	lfs f2, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80D4DA80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4DA84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4DA88  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80D4DA8C  C0 43 04 D0 */	lfs f2, 0x4d0(r3)
 /* 80D4DA90  D0 41 00 14 */	stfs f2, 0x14(r1)
-/* 80D4DA94  C0 23 04 D4 */	lfs f1, 0x4d4(r3)	/* effective address: 80406694 */
+/* 80D4DA94  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
 /* 80D4DA98  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80D4DA9C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 80D4DA9C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80D4DAA0  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80D4DAA4  D0 41 00 08 */	stfs f2, 8(r1)
 /* 80D4DAA8  D0 21 00 0C */	stfs f1, 0xc(r1)
@@ -36,13 +36,13 @@ lbl_80D4DA68:
 /* 80D4DAF0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80D4DAF4  38 80 FF FF */	li r4, -1
 /* 80D4DAF8  4B 2E 1B B8 */	b dComIfG_TimerEnd__Fii
-/* 80D4DAFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4DB00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4DAFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4DB00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4DB04  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D4DB08  4B 2D F0 94 */	b getTimerNowTimeMs__14dComIfG_play_cFv
 /* 80D4DB0C  3C 80 80 43 */	lis r4, g_meter2_info@ha
 /* 80D4DB10  38 84 01 88 */	addi r4, r4, g_meter2_info@l
-/* 80D4DB14  90 64 00 88 */	stw r3, 0x88(r4)	/* effective address: 80430210 */
+/* 80D4DB14  90 64 00 88 */	stw r3, 0x88(r4)
 lbl_80D4DB18:
 /* 80D4DB18  83 E1 00 2C */	lwz r31, 0x2c(r1)
 /* 80D4DB1C  83 C1 00 28 */	lwz r30, 0x28(r1)

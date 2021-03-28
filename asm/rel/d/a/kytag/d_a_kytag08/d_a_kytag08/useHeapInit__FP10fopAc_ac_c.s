@@ -7,8 +7,8 @@ lbl_8085AF74:
 /* 8085AF88  3C 60 80 86 */	lis r3, stringBase0@ha
 /* 8085AF8C  38 63 B3 10 */	addi r3, r3, stringBase0@l
 /* 8085AF90  38 80 00 03 */	li r4, 3
-/* 8085AF94  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8085AF98  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8085AF94  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8085AF98  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8085AF9C  3C A5 00 02 */	addis r5, r5, 2
 /* 8085AFA0  38 C0 00 80 */	li r6, 0x80
 /* 8085AFA4  38 A5 C2 F8 */	addi r5, r5, -15624

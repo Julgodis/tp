@@ -7,9 +7,9 @@ lbl_80BD42D8:
 /* 80BD42EC  7C 7D 1B 78 */	mr r29, r3
 /* 80BD42F0  3C 80 80 BD */	lis r4, data_80BD4D04@ha
 /* 80BD42F4  3B C4 4D 04 */	addi r30, r4, data_80BD4D04@l
-/* 80BD42F8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BD42FC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BD4300  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BD42F8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BD42FC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BD4300  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80BD4304  4B 44 64 0C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80BD4308  7C 65 1B 78 */	mr r5, r3
 /* 80BD430C  38 61 00 28 */	addi r3, r1, 0x28
@@ -19,9 +19,9 @@ lbl_80BD42D8:
 /* 80BD431C  7C 05 07 34 */	extsh r5, r0
 /* 80BD4320  38 C0 00 00 */	li r6, 0
 /* 80BD4324  4B 69 30 D0 */	b __ct__5csXyzFsss
-/* 80BD4328  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD432C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80BD4330  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80BD4328  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD432C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80BD4330  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80BD4334  38 80 00 00 */	li r4, 0
 /* 80BD4338  90 81 00 08 */	stw r4, 8(r1)
 /* 80BD433C  38 00 FF FF */	li r0, -1
@@ -116,8 +116,8 @@ lbl_80BD42D8:
 /* 80BD44A0  C0 1E 00 4C */	lfs f0, 0x4c(r30)
 /* 80BD44A4  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80BD44A8  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 80BD44AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD44B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD44AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD44B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD44B4  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80BD44B8  38 80 00 05 */	li r4, 5
 /* 80BD44BC  38 A0 00 1F */	li r5, 0x1f
@@ -165,7 +165,7 @@ lbl_80BD4530:
 /* 80BD4558  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80BD455C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BD4560  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BD4564  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BD4564  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BD4568  38 81 00 20 */	addi r4, r1, 0x20
 /* 80BD456C  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80BD4570  38 C0 00 00 */	li r6, 0

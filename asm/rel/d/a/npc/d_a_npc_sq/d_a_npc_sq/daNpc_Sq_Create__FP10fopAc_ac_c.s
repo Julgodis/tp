@@ -76,12 +76,12 @@ lbl_80AF70A8:
 /* 80AF70B8  7C 7D 1B 78 */	mr r29, r3
 /* 80AF70BC  2C 1D 00 04 */	cmpwi r29, 4
 /* 80AF70C0  40 82 01 84 */	bne lbl_80AF7244
-/* 80AF70C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF70C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF70C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF70C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF70CC  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80AF70D0  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80AF70D4  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80AF70D8  A0 84 00 32 */	lhz r4, 0x32(r4)	/* effective address: 803A72BA */
+/* 80AF70D8  A0 84 00 32 */	lhz r4, 0x32(r4)
 /* 80AF70DC  4B 53 D8 E0 */	b isEventBit__11dSv_event_cCFUs
 /* 80AF70E0  2C 03 00 00 */	cmpwi r3, 0
 /* 80AF70E4  41 82 00 0C */	beq lbl_80AF70F0
@@ -119,7 +119,7 @@ lbl_80AF7140:
 /* 80AF715C  38 00 FF FF */	li r0, -1
 /* 80AF7160  3C 60 80 AF */	lis r3, l_HIO@ha
 /* 80AF7164  38 63 75 D0 */	addi r3, r3, l_HIO@l
-/* 80AF7168  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80AF75D4 */
+/* 80AF7168  98 03 00 04 */	stb r0, 4(r3)
 lbl_80AF716C:
 /* 80AF716C  80 1E 04 9C */	lwz r0, 0x49c(r30)
 /* 80AF7170  60 00 01 00 */	ori r0, r0, 0x100

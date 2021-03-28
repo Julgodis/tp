@@ -19,11 +19,11 @@ lbl_8085F2B0:
 /* 8085F2F4  3B E3 04 70 */	addi r31, r3, lit_3783@l
 /* 8085F2F8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8085F2FC  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8085F300  83 C3 0E 94 */	lwz r30, 0xe94(r3)	/* effective address: 8042D8E8 */
-/* 8085F304  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8085F308  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8085F30C  83 A3 5D 74 */	lwz r29, 0x5d74(r3)	/* effective address: 8040BF34 */
-/* 8085F310  82 A3 5D AC */	lwz r21, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8085F300  83 C3 0E 94 */	lwz r30, 0xe94(r3)
+/* 8085F304  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085F308  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8085F30C  83 A3 5D 74 */	lwz r29, 0x5d74(r3)
+/* 8085F310  82 A3 5D AC */	lwz r21, 0x5dac(r3)
 /* 8085F314  38 61 00 10 */	addi r3, r1, 0x10
 /* 8085F318  4B 7F B7 E8 */	b dKyw_get_wind_vecpow__Fv
 /* 8085F31C  C0 01 00 10 */	lfs f0, 0x10(r1)
@@ -78,8 +78,8 @@ lbl_8085F3B8:
 /* 8085F3DC  7E C3 B3 78 */	mr r3, r22
 /* 8085F3E0  38 81 00 34 */	addi r4, r1, 0x34
 /* 8085F3E4  4B A0 89 44 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 8085F3E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8085F3EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8085F3E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085F3EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8085F3F0  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 8085F3F4  7F 43 D3 78 */	mr r3, r26
 /* 8085F3F8  7E C4 B3 78 */	mr r4, r22
@@ -93,15 +93,15 @@ lbl_8085F3B8:
 /* 8085F418  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 8085F41C  88 A3 0D 64 */	lbz r5, struct_80450D64+0x0@l(r3)
 /* 8085F420  7C A5 07 74 */	extsb r5, r5
-/* 8085F424  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8085F428  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8085F424  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8085F428  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8085F42C  4B 7D 5F 34 */	b isSwitch__10dSv_info_cCFii
 /* 8085F430  2C 03 00 00 */	cmpwi r3, 0
 /* 8085F434  40 82 00 14 */	bne lbl_8085F448
 /* 8085F438  38 00 00 00 */	li r0, 0
 /* 8085F43C  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8085F440  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8085F444  98 03 0E 90 */	stb r0, 0xe90(r3)	/* effective address: 8042D8E4 */
+/* 8085F444  98 03 0E 90 */	stb r0, 0xe90(r3)
 lbl_8085F448:
 /* 8085F448  C0 1D 00 D8 */	lfs f0, 0xd8(r29)
 /* 8085F44C  D0 1E 6D 74 */	stfs f0, 0x6d74(r30)

@@ -5,8 +5,8 @@ lbl_80CCC5A0:
 /* 80CCC5AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CCC5B0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CCC5B4  7C 7E 1B 78 */	mr r30, r3
-/* 80CCC5B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCC5BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCC5B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC5BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCC5C0  3B E3 5B D4 */	addi r31, r3, 0x5bd4
 /* 80CCC5C4  7F E3 FB 78 */	mr r3, r31
 /* 80CCC5C8  4B 3A 38 94 */	b CheckQuake__12dVibration_cFv

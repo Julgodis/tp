@@ -5,10 +5,10 @@ lbl_80CB3380:
 /* 80CB338C  39 61 00 40 */	addi r11, r1, 0x40
 /* 80CB3390  4B 6A EE 40 */	b _savegpr_26
 /* 80CB3394  7C 7D 1B 78 */	mr r29, r3
-/* 80CB3398  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB339C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80CB33A0  80 7E 5D B4 */	lwz r3, 0x5db4(r30)	/* effective address: 8040BF74 */
-/* 80CB33A4  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 80CB3398  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB339C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80CB33A0  80 7E 5D B4 */	lwz r3, 0x5db4(r30)
+/* 80CB33A4  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80CB33A8  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 80CB33AC  7D 89 03 A6 */	mtctr r12
 /* 80CB33B0  4E 80 04 21 */	bctrl 
@@ -16,11 +16,11 @@ lbl_80CB3380:
 /* 80CB33B8  40 82 00 64 */	bne lbl_80CB341C
 /* 80CB33BC  3B 40 00 00 */	li r26, 0
 /* 80CB33C0  3B 80 00 00 */	li r28, 0
-/* 80CB33C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB33C8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80CB33C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB33C8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80CB33CC  3B 60 00 01 */	li r27, 1
 lbl_80CB33D0:
-/* 80CB33D0  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80CB33D0  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80CB33D4  38 63 02 10 */	addi r3, r3, 0x210
 /* 80CB33D8  38 1C 05 98 */	addi r0, r28, 0x598
 /* 80CB33DC  7C 9D 00 2E */	lwzx r4, r29, r0
@@ -41,9 +41,9 @@ lbl_80CB3400:
 /* 80CB3414  4B 36 68 68 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 80CB3418  48 00 01 10 */	b lbl_80CB3528
 lbl_80CB341C:
-/* 80CB341C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB3420  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80CB3424  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80CB341C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB3420  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80CB3424  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80CB3428  38 00 00 FF */	li r0, 0xff
 /* 80CB342C  90 01 00 08 */	stw r0, 8(r1)
 /* 80CB3430  38 80 00 00 */	li r4, 0

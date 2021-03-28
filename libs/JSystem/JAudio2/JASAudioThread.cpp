@@ -134,10 +134,10 @@ extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 /* ############################################################################################## */
 /* 803C78E0-803C78F0 0010+00 s=2 e=0 z=0  None .data      __vt__14JASAudioThread                                       */
 SECTION_DATA static void* __vt__14JASAudioThread[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JASAudioThreadFv,
-	/* 3    */ (void*)run__14JASAudioThreadFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JASAudioThreadFv,
+	(void*)run__14JASAudioThreadFv,
 };
 
 /* 8029CCDC-8029CD4C 0070+00 s=1 e=0 z=0  None .text      __ct__14JASAudioThreadFiiUl                                  */

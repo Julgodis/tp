@@ -242,13 +242,13 @@ SECTION_RODATA static u8 const lit_498[45 + 3 /* padding */] = {
 
 /* 803D3200-803D321C 001C+00 s=1 e=0 z=0  None .data      @499                                                         */
 SECTION_DATA static void* lit_499[7] = {
-	/* 0    */ (void*)(((char*)TRKDoWriteMemory)+0x194),
-	/* 1    */ (void*)(((char*)TRKDoWriteMemory)+0x1B4),
-	/* 2    */ (void*)(((char*)TRKDoWriteMemory)+0x18C),
-	/* 3    */ (void*)(((char*)TRKDoWriteMemory)+0x1B4),
-	/* 4    */ (void*)(((char*)TRKDoWriteMemory)+0x19C),
-	/* 5    */ (void*)(((char*)TRKDoWriteMemory)+0x1A4),
-	/* 6    */ (void*)(((char*)TRKDoWriteMemory)+0x1AC),
+	(void*)(((char*)TRKDoWriteMemory)+0x194),
+	(void*)(((char*)TRKDoWriteMemory)+0x1B4),
+	(void*)(((char*)TRKDoWriteMemory)+0x18C),
+	(void*)(((char*)TRKDoWriteMemory)+0x1B4),
+	(void*)(((char*)TRKDoWriteMemory)+0x19C),
+	(void*)(((char*)TRKDoWriteMemory)+0x1A4),
+	(void*)(((char*)TRKDoWriteMemory)+0x1AC),
 };
 
 /* 8036E6A4-8036E8E0 023C+00 s=1 e=1 z=0  None .text      TRKDoWriteMemory                                             */
@@ -272,13 +272,13 @@ SECTION_RODATA static u8 const lit_535[44] = {
 
 /* 803D321C-803D3238 001C+00 s=1 e=0 z=0  None .data      @536                                                         */
 SECTION_DATA static void* lit_536[7] = {
-	/* 0    */ (void*)(((char*)TRKDoReadMemory)+0x19C),
-	/* 1    */ (void*)(((char*)TRKDoReadMemory)+0x1BC),
-	/* 2    */ (void*)(((char*)TRKDoReadMemory)+0x194),
-	/* 3    */ (void*)(((char*)TRKDoReadMemory)+0x1BC),
-	/* 4    */ (void*)(((char*)TRKDoReadMemory)+0x1A4),
-	/* 5    */ (void*)(((char*)TRKDoReadMemory)+0x1AC),
-	/* 6    */ (void*)(((char*)TRKDoReadMemory)+0x1B4),
+	(void*)(((char*)TRKDoReadMemory)+0x19C),
+	(void*)(((char*)TRKDoReadMemory)+0x1BC),
+	(void*)(((char*)TRKDoReadMemory)+0x194),
+	(void*)(((char*)TRKDoReadMemory)+0x1BC),
+	(void*)(((char*)TRKDoReadMemory)+0x1A4),
+	(void*)(((char*)TRKDoReadMemory)+0x1AC),
+	(void*)(((char*)TRKDoReadMemory)+0x1B4),
 };
 
 /* 8036E8E0-8036EB24 0244+00 s=1 e=1 z=0  None .text      TRKDoReadMemory                                              */

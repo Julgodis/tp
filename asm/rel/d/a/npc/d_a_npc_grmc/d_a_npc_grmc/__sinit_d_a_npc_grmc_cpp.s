@@ -6,12 +6,12 @@ lbl_809D9CF4:
 /* 809D9D04  38 A3 A2 44 */	addi r5, r3, mCutList__12daNpc_grMC_c@l
 /* 809D9D08  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809D9D0C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809D9D10  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809D9D14  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809D9D18  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809DA244 */
-/* 809D9D1C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809DA248 */
-/* 809D9D20  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809D9D24  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809DA24C */
+/* 809D9D10  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D9D14  80 04 00 04 */	lwz r0, 4(r4)
+/* 809D9D18  90 65 00 00 */	stw r3, 0(r5)
+/* 809D9D1C  90 05 00 04 */	stw r0, 4(r5)
+/* 809D9D20  80 04 00 08 */	lwz r0, 8(r4)
+/* 809D9D24  90 05 00 08 */	stw r0, 8(r5)
 /* 809D9D28  3C 60 80 9E */	lis r3, __vt__18daNpc_grMC_Param_c@ha
 /* 809D9D2C  38 03 A4 48 */	addi r0, r3, __vt__18daNpc_grMC_Param_c@l
 /* 809D9D30  3C 60 80 9E */	lis r3, l_HIO@ha

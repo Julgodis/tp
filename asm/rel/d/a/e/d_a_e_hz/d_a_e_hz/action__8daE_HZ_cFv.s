@@ -5,9 +5,9 @@ lbl_806EEEE4:
 /* 806EEEF0  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 806EEEF4  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 806EEEF8  7C 7F 1B 78 */	mr r31, r3
-/* 806EEEFC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806EEF00  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 806EEF04  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 806EEEFC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806EEF00  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 806EEF04  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 806EEF08  4B 92 B8 D8 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806EEF0C  D0 3F 06 A4 */	stfs f1, 0x6a4(r31)
 /* 806EEF10  7F E3 FB 78 */	mr r3, r31
@@ -118,11 +118,11 @@ lbl_806EF04C:
 /* 806EF074  4B C5 74 3C */	b PSMTXCopy
 /* 806EF078  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806EF07C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806EF080  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806EF080  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806EF084  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 806EF088  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806EF088  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806EF08C  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 806EF090  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806EF090  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806EF094  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 806EF098  3C 60 80 6F */	lis r3, lit_4263@ha
 /* 806EF09C  C0 03 08 C4 */	lfs f0, lit_4263@l(r3)
@@ -147,8 +147,8 @@ lbl_806EF0C0:
 /* 806EF0E4  28 00 00 00 */	cmplwi r0, 0
 /* 806EF0E8  41 82 00 1C */	beq lbl_806EF104
 /* 806EF0EC  38 7F 0A F8 */	addi r3, r31, 0xaf8
-/* 806EF0F0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806EF0F4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806EF0F0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806EF0F4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806EF0F8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806EF0FC  4B 98 79 B0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806EF100  48 00 00 10 */	b lbl_806EF110

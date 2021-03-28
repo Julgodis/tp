@@ -11,11 +11,11 @@ lbl_80AAA1E4:
 /* 80AAA208  3B C3 DB F0 */	addi r30, r3, lit_1109@l
 /* 80AAA20C  3C 60 80 AB */	lis r3, m__18daNpc_Post_Param_c@ha
 /* 80AAA210  3B E3 D1 EC */	addi r31, r3, m__18daNpc_Post_Param_c@l
-/* 80AAA214  C0 1F 00 D8 */	lfs f0, 0xd8(r31)	/* effective address: 80AAD2C4 */
+/* 80AAA214  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80AAA218  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80AAA21C  C0 3F 00 DC */	lfs f1, 0xdc(r31)	/* effective address: 80AAD2C8 */
+/* 80AAA21C  C0 3F 00 DC */	lfs f1, 0xdc(r31)
 /* 80AAA220  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 80AAA224  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 80AAD2A0 */
+/* 80AAA224  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
 /* 80AAA228  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80AAA22C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80AAA230  D0 21 00 38 */	stfs f1, 0x38(r1)

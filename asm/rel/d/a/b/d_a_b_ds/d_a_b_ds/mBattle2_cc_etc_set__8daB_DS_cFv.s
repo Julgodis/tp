@@ -13,8 +13,8 @@ lbl_805DA9A4:
 /* 805DA9D0  3B E0 00 00 */	li r31, 0
 /* 805DA9D4  3B A0 00 00 */	li r29, 0
 /* 805DA9D8  3B 80 00 00 */	li r28, 0
-/* 805DA9DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DA9E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805DA9DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DA9E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805DA9E4  3B 03 23 3C */	addi r24, r3, 0x233c
 /* 805DA9E8  3C 60 80 5E */	lis r3, data_805DD1E0@ha
 /* 805DA9EC  3B 43 D1 E0 */	addi r26, r3, data_805DD1E0@l

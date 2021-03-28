@@ -9,7 +9,7 @@ lbl_8049AF18:
 /* 8049AF34  3B C3 DF 60 */	addi r30, r3, lit_1109@l
 /* 8049AF38  3C 60 80 4A */	lis r3, lit_3768@ha
 /* 8049AF3C  3B E3 DC 84 */	addi r31, r3, lit_3768@l
-/* 8049AF40  88 1E 00 4C */	lbz r0, 0x4c(r30)	/* effective address: 8049DFAC */
+/* 8049AF40  88 1E 00 4C */	lbz r0, 0x4c(r30)
 /* 8049AF44  7C 00 07 75 */	extsb. r0, r0
 /* 8049AF48  40 82 00 38 */	bne lbl_8049AF80
 /* 8049AF4C  C0 1F 01 18 */	lfs f0, 0x118(r31)

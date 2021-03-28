@@ -7,11 +7,11 @@ lbl_80CA6B28:
 /* 80CA6B3C  7C 7C 1B 78 */	mr r28, r3
 /* 80CA6B40  3C 80 80 CA */	lis r4, cNullVec__6Z2Calc@ha
 /* 80CA6B44  3B C4 79 88 */	addi r30, r4, cNullVec__6Z2Calc@l
-/* 80CA6B48  83 FE 00 24 */	lwz r31, 0x24(r30)	/* effective address: 80CA79AC */
+/* 80CA6B48  83 FE 00 24 */	lwz r31, 0x24(r30)
 /* 80CA6B4C  48 00 04 9D */	bl getResName__15daObj_Oiltubo_cFv
 /* 80CA6B50  7F E4 FB 78 */	mr r4, r31
-/* 80CA6B54  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CA6B58  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CA6B54  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CA6B58  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CA6B5C  3F A5 00 02 */	addis r29, r5, 2
 /* 80CA6B60  3B BD C2 F8 */	addi r29, r29, -15624
 /* 80CA6B64  7F A5 EB 78 */	mr r5, r29

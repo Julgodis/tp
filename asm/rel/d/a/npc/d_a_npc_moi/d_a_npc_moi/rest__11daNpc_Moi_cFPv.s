@@ -49,9 +49,9 @@ lbl_80A7956C:
 /* 80A7956C  A8 1F 0D 1C */	lha r0, 0xd1c(r31)
 /* 80A79570  2C 00 00 00 */	cmpwi r0, 0
 /* 80A79574  40 82 00 78 */	bne lbl_80A795EC
-/* 80A79578  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A7957C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A79580  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80A79578  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A7957C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A79580  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A79584  28 00 00 00 */	cmplwi r0, 0
 /* 80A79588  40 82 00 2C */	bne lbl_80A795B4
 /* 80A7958C  3C 60 00 05 */	lis r3, 0x0005 /* 0x000500DF@ha */

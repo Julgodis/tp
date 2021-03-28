@@ -17,15 +17,15 @@ lbl_807455F4:
 /* 80745630  3B E3 BF 3C */	addi r31, r3, lit_3910@l
 /* 80745634  3C 60 80 75 */	lis r3, data_8074C3E8@ha
 /* 80745638  38 63 C3 E8 */	addi r3, r3, data_8074C3E8@l
-/* 8074563C  A8 63 00 00 */	lha r3, 0(r3)	/* effective address: 8074C3E8 */
+/* 8074563C  A8 63 00 00 */	lha r3, 0(r3)
 /* 80745640  3C 63 00 01 */	addis r3, r3, 1
 /* 80745644  38 03 80 00 */	addi r0, r3, -32768
 /* 80745648  B0 1B 06 02 */	sth r0, 0x602(r27)
-/* 8074564C  C0 5F 00 04 */	lfs f2, 4(r31)	/* effective address: 8074BF40 */
+/* 8074564C  C0 5F 00 04 */	lfs f2, 4(r31)
 /* 80745650  D0 41 00 44 */	stfs f2, 0x44(r1)
-/* 80745654  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 8074BF3C */
+/* 80745654  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 80745658  D0 21 00 48 */	stfs f1, 0x48(r1)
-/* 8074565C  C0 1F 00 DC */	lfs f0, 0xdc(r31)	/* effective address: 8074C018 */
+/* 8074565C  C0 1F 00 DC */	lfs f0, 0xdc(r31)
 /* 80745660  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 80745664  D0 41 00 38 */	stfs f2, 0x38(r1)
 /* 80745668  D0 41 00 3C */	stfs f2, 0x3c(r1)
@@ -38,7 +38,7 @@ lbl_807455F4:
 /* 80745684  D0 41 00 28 */	stfs f2, 0x28(r1)
 /* 80745688  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 8074568C  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80745690  C0 1F 00 30 */	lfs f0, 0x30(r31)	/* effective address: 8074BF6C */
+/* 80745690  C0 1F 00 30 */	lfs f0, 0x30(r31)
 /* 80745694  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80745698  38 7B 04 D0 */	addi r3, r27, 0x4d0
 /* 8074569C  4B 8C 76 C8 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -75,8 +75,8 @@ lbl_807455F4:
 /* 80745718  7F 23 CB 78 */	mr r3, r25
 /* 8074571C  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80745720  4B B2 26 08 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80745724  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80745728  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80745724  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80745728  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074572C  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 80745730  7F 43 D3 78 */	mr r3, r26
 /* 80745734  7F 24 CB 78 */	mr r4, r25

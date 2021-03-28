@@ -59,7 +59,7 @@ lbl_8072702C:
 /* 8072702C  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 80727030  3C 80 80 73 */	lis r4, l_HIO@ha
 /* 80727034  38 84 98 0C */	addi r4, r4, l_HIO@l
-/* 80727038  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80729820 */
+/* 80727038  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 8072703C  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 80727040  C0 7E 00 54 */	lfs f3, 0x54(r30)
 /* 80727044  4B B4 89 F8 */	b cLib_addCalc2__FPffff

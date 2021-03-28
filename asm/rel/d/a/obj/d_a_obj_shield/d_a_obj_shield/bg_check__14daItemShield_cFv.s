@@ -69,7 +69,7 @@ lbl_80CD76B8:
 /* 80CD76E8  90 01 00 08 */	stw r0, 8(r1)
 /* 80CD76EC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CD76F0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CD76F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CD76F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CD76F8  38 81 00 08 */	addi r4, r1, 8
 /* 80CD76FC  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80CD7700  38 C0 00 00 */	li r6, 0

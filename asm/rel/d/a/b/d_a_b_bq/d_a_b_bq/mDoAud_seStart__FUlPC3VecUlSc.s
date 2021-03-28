@@ -8,7 +8,7 @@ lbl_805BA34C:
 /* 805BA364  90 61 00 08 */	stw r3, 8(r1)
 /* 805BA368  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805BA36C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805BA370  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805BA370  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BA374  38 81 00 08 */	addi r4, r1, 8
 /* 805BA378  7D 05 43 78 */	mr r5, r8
 /* 805BA37C  7C 06 03 78 */	mr r6, r0

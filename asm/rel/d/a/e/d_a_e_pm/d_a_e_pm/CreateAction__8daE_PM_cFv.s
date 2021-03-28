@@ -41,21 +41,21 @@ lbl_80749C54:
 /* 80749CA0  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 /* 80749CA4  48 00 00 D4 */	b lbl_80749D78
 lbl_80749CA8:
-/* 80749CA8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80749CAC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80749CB0  80 A4 5D AC */	lwz r5, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80749CA8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80749CAC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80749CB0  80 A4 5D AC */	lwz r5, 0x5dac(r4)
 /* 80749CB4  3C 80 80 75 */	lis r4, data_8074C3E4@ha
 /* 80749CB8  38 84 C3 E4 */	addi r4, r4, data_8074C3E4@l
-/* 80749CBC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8074C3E4 */
-/* 80749CC0  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 8074C3EC */
+/* 80749CBC  80 84 00 00 */	lwz r4, 0(r4)
+/* 80749CC0  C0 24 00 08 */	lfs f1, 8(r4)
 /* 80749CC4  C0 7E 00 34 */	lfs f3, 0x34(r30)
 /* 80749CC8  C0 05 05 00 */	lfs f0, 0x500(r5)
 /* 80749CCC  EC 03 00 32 */	fmuls f0, f3, f0
 /* 80749CD0  EC A1 00 2A */	fadds f5, f1, f0
 /* 80749CD4  C0 3E 00 DC */	lfs f1, 0xdc(r30)
-/* 80749CD8  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 8074C3E8 */
+/* 80749CD8  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80749CDC  EC 81 00 2A */	fadds f4, f1, f0
-/* 80749CE0  C0 44 00 00 */	lfs f2, 0(r4)	/* effective address: 8074C3E4 */
+/* 80749CE0  C0 44 00 00 */	lfs f2, 0(r4)
 /* 80749CE4  C0 05 04 F8 */	lfs f0, 0x4f8(r5)
 /* 80749CE8  EC 03 00 32 */	fmuls f0, f3, f0
 /* 80749CEC  EC 02 00 2A */	fadds f0, f2, f0

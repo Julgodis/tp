@@ -6,18 +6,18 @@ lbl_80595FE0:
 /* 80595FF0  7C 7F 1B 78 */	mr r31, r3
 /* 80595FF4  3C 60 80 59 */	lis r3, l_brgBmdIdx@ha
 /* 80595FF8  38 83 7D 7C */	addi r4, r3, l_brgBmdIdx@l
-/* 80595FFC  80 64 00 60 */	lwz r3, 0x60(r4)	/* effective address: 80597DDC */
-/* 80596000  80 04 00 64 */	lwz r0, 0x64(r4)	/* effective address: 80597DE0 */
+/* 80595FFC  80 64 00 60 */	lwz r3, 0x60(r4)
+/* 80596000  80 04 00 64 */	lwz r0, 0x64(r4)
 /* 80596004  90 61 00 08 */	stw r3, 8(r1)
 /* 80596008  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8059600C  C0 24 00 68 */	lfs f1, 0x68(r4)	/* effective address: 80597DE4 */
+/* 8059600C  C0 24 00 68 */	lfs f1, 0x68(r4)
 /* 80596010  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 80596014  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 80596018  C0 04 00 6C */	lfs f0, 0x6c(r4)	/* effective address: 80597DE8 */
+/* 80596018  C0 04 00 6C */	lfs f0, 0x6c(r4)
 /* 8059601C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80596020  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80596024  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80596028  C0 04 00 70 */	lfs f0, 0x70(r4)	/* effective address: 80597DEC */
+/* 80596028  C0 04 00 70 */	lfs f0, 0x70(r4)
 /* 8059602C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80596030  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80596034  4B A7 6D 30 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -53,11 +53,11 @@ lbl_80595FE0:
 /* 805960AC  41 82 00 28 */	beq lbl_805960D4
 /* 805960B0  3C 60 80 3F */	lis r3, mLineCheck__11fopAcM_lc_c@ha
 /* 805960B4  38 63 1C 48 */	addi r3, r3, mLineCheck__11fopAcM_lc_c@l
-/* 805960B8  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 803F1C78 */
+/* 805960B8  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 805960BC  D0 1F 0B 0C */	stfs f0, 0xb0c(r31)
-/* 805960C0  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 803F1C7C */
+/* 805960C0  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 805960C4  D0 1F 0B 10 */	stfs f0, 0xb10(r31)
-/* 805960C8  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 803F1C80 */
+/* 805960C8  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 805960CC  D0 1F 0B 14 */	stfs f0, 0xb14(r31)
 /* 805960D0  48 00 00 1C */	b lbl_805960EC
 lbl_805960D4:

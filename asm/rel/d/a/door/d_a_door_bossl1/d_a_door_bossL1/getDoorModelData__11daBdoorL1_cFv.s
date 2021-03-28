@@ -10,8 +10,8 @@ lbl_804E21DC:
 /* 804E21FC  7F C3 F3 78 */	mr r3, r30
 /* 804E2200  4B FF FD A5 */	bl getArcName__11daBdoorL1_cFv
 /* 804E2204  7F E4 FB 78 */	mr r4, r31
-/* 804E2208  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804E220C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804E2208  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804E220C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804E2210  3C A5 00 02 */	addis r5, r5, 2
 /* 804E2214  38 C0 00 80 */	li r6, 0x80
 /* 804E2218  38 A5 C2 F8 */	addi r5, r5, -15624

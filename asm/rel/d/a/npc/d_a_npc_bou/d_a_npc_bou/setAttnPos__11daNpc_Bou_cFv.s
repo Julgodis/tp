@@ -9,11 +9,11 @@ lbl_8096E8A4:
 /* 8096E8C0  7C 7E 1B 78 */	mr r30, r3
 /* 8096E8C4  3C 60 80 97 */	lis r3, m__17daNpc_Bou_Param_c@ha
 /* 8096E8C8  3B E3 28 60 */	addi r31, r3, m__17daNpc_Bou_Param_c@l
-/* 8096E8CC  C0 1F 01 00 */	lfs f0, 0x100(r31)	/* effective address: 80972960 */
+/* 8096E8CC  C0 1F 01 00 */	lfs f0, 0x100(r31)
 /* 8096E8D0  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 8096E8D4  C0 1F 01 04 */	lfs f0, 0x104(r31)	/* effective address: 80972964 */
+/* 8096E8D4  C0 1F 01 04 */	lfs f0, 0x104(r31)
 /* 8096E8D8  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 8096E8DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80972928 */
+/* 8096E8DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 8096E8E0  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 8096E8E4  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 8096E8E8  38 80 00 00 */	li r4, 0

@@ -15,8 +15,8 @@ lbl_80D60D78:
 /* 80D60DAC  7F C3 F3 78 */	mr r3, r30
 /* 80D60DB0  48 00 02 95 */	bl getSwitchBit1__16daTag_ShopItem_cFv
 /* 80D60DB4  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60DB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D60DBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D60DB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60DBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60DC0  3B E3 09 58 */	addi r31, r3, 0x958
 /* 80D60DC4  7F E3 FB 78 */	mr r3, r31
 /* 80D60DC8  4B 2D 3A 98 */	b isSwitch__12dSv_memBit_cCFi

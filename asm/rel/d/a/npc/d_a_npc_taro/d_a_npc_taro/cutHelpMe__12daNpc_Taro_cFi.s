@@ -9,8 +9,8 @@ lbl_8056A120:
 /* 8056A13C  3B E0 00 00 */	li r31, 0
 /* 8056A140  3B C0 FF FF */	li r30, -1
 /* 8056A144  3B A0 00 00 */	li r29, 0
-/* 8056A148  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056A14C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8056A148  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056A14C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056A150  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8056A154  7F 63 DB 78 */	mr r3, r27
 /* 8056A158  3C A0 80 57 */	lis r5, struct_80571908+0x0@ha
@@ -117,7 +117,7 @@ lbl_8056A2A4:
 /* 8056A2C8  4E 80 04 21 */	bctrl 
 /* 8056A2CC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8056A2D0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8056A2D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8056A2D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8056A2D8  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8056A2DC  3C 80 01 00 */	lis r4, 0x0100 /* 0x010000A3@ha */
 /* 8056A2E0  38 84 00 A3 */	addi r4, r4, 0x00A3 /* 0x010000A3@l */

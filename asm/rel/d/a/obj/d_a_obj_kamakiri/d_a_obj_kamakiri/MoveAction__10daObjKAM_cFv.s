@@ -30,9 +30,9 @@ lbl_80C36388:
 /* 80C363A0  D0 21 00 40 */	stfs f1, 0x40(r1)
 /* 80C363A4  38 61 00 44 */	addi r3, r1, 0x44
 /* 80C363A8  4B 44 18 C0 */	b __ct__11dBgS_LinChkFv
-/* 80C363AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C363B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C363B4  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C363AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C363B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C363B4  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80C363B8  38 61 00 9C */	addi r3, r1, 0x9c
 /* 80C363BC  4B 44 2A AC */	b SetObj__16dBgS_PolyPassChkFv
 /* 80C363C0  88 1C 09 81 */	lbz r0, 0x981(r28)
@@ -50,8 +50,8 @@ lbl_80C363E8:
 /* 80C363E8  3C 60 80 C4 */	lis r3, stringBase0@ha
 /* 80C363EC  38 63 84 FC */	addi r3, r3, stringBase0@l
 /* 80C363F0  38 80 00 06 */	li r4, 6
-/* 80C363F4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C363F8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C363F4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C363F8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C363FC  3C A5 00 02 */	addis r5, r5, 2
 /* 80C36400  38 C0 00 80 */	li r6, 0x80
 /* 80C36404  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -354,8 +354,8 @@ lbl_80C367D0:
 /* 80C36840  3C 60 80 C4 */	lis r3, stringBase0@ha
 /* 80C36844  38 63 84 FC */	addi r3, r3, stringBase0@l
 /* 80C36848  38 80 00 07 */	li r4, 7
-/* 80C3684C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C36850  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C3684C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C36850  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C36854  3C A5 00 02 */	addis r5, r5, 2
 /* 80C36858  38 C0 00 80 */	li r6, 0x80
 /* 80C3685C  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -388,8 +388,8 @@ lbl_80C36888:
 /* 80C368C4  3C 60 80 C4 */	lis r3, stringBase0@ha
 /* 80C368C8  38 63 84 FC */	addi r3, r3, stringBase0@l
 /* 80C368CC  38 80 00 06 */	li r4, 6
-/* 80C368D0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C368D4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C368D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C368D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C368D8  3C A5 00 02 */	addis r5, r5, 2
 /* 80C368DC  38 C0 00 80 */	li r6, 0x80
 /* 80C368E0  38 A5 C2 F8 */	addi r5, r5, -15624

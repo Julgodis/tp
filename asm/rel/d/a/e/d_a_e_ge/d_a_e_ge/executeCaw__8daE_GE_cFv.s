@@ -11,9 +11,9 @@ lbl_806CB2F0:
 /* 806CB314  38 63 7D B8 */	addi r3, r3, s_arrow_sub__FPvPv@l
 /* 806CB318  7F C4 F3 78 */	mr r4, r30
 /* 806CB31C  4B 95 60 1C */	b fpcEx_Search__FPFPvPv_PvPv
-/* 806CB320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806CB324  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806CB328  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806CB320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806CB324  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806CB328  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 806CB32C  38 61 00 2C */	addi r3, r1, 0x2c
 /* 806CB330  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 806CB334  38 BE 04 A8 */	addi r5, r30, 0x4a8

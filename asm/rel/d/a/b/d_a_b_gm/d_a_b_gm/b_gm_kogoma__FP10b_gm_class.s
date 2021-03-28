@@ -11,7 +11,7 @@ lbl_805EF010:
 /* 805EF034  3B C3 41 88 */	addi r30, r3, lit_3774@l
 /* 805EF038  3C 60 80 5F */	lis r3, l_HIO@ha
 /* 805EF03C  3B E3 47 DC */	addi r31, r3, l_HIO@l
-/* 805EF040  C3 FF 00 10 */	lfs f31, 0x10(r31)	/* effective address: 805F47EC */
+/* 805EF040  C3 FF 00 10 */	lfs f31, 0x10(r31)
 /* 805EF044  80 7D 05 DC */	lwz r3, 0x5dc(r29)
 /* 805EF048  83 63 00 04 */	lwz r27, 4(r3)
 /* 805EF04C  80 7B 00 84 */	lwz r3, 0x84(r27)
@@ -22,11 +22,11 @@ lbl_805EF010:
 /* 805EF060  4B D5 74 50 */	b PSMTXCopy
 /* 805EF064  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805EF068  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 805EF06C  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 805EF06C  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 805EF070  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 805EF074  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 805EF074  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 805EF078  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 805EF07C  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 805EF07C  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 805EF080  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 805EF084  80 7B 00 84 */	lwz r3, 0x84(r27)
 /* 805EF088  80 63 00 0C */	lwz r3, 0xc(r3)
@@ -75,7 +75,7 @@ lbl_805EF120:
 /* 805EF12C  38 A0 00 02 */	li r5, 2
 /* 805EF130  3C C0 80 5F */	lis r6, l_HIO@ha
 /* 805EF134  38 C6 47 DC */	addi r6, r6, l_HIO@l
-/* 805EF138  C0 46 00 14 */	lfs f2, 0x14(r6)	/* effective address: 805F47F0 */
+/* 805EF138  C0 46 00 14 */	lfs f2, 0x14(r6)
 /* 805EF13C  4B FF E8 C1 */	bl anm_init__FP10b_gm_classifUcf
 /* 805EF140  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 805EF144  D0 1D 05 B8 */	stfs f0, 0x5b8(r29)

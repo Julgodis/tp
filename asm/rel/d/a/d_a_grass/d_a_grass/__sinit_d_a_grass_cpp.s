@@ -4,45 +4,45 @@ lbl_8051D7D0:
 /* 8051D7D8  38 A4 08 20 */	addi r5, r4, 0x820
 /* 8051D7DC  54 A0 5E 3E */	rlwinm r0, r5, 0xb, 0x18, 0x1f
 /* 8051D7E0  38 64 17 40 */	addi r3, r4, 0x1740
-/* 8051D7E4  98 03 00 11 */	stb r0, 0x11(r3)	/* effective address: 80524929 */
+/* 8051D7E4  98 03 00 11 */	stb r0, 0x11(r3)
 /* 8051D7E8  54 A0 9E 3E */	rlwinm r0, r5, 0x13, 0x18, 0x1f
-/* 8051D7EC  98 03 00 12 */	stb r0, 0x12(r3)	/* effective address: 8052492A */
+/* 8051D7EC  98 03 00 12 */	stb r0, 0x12(r3)
 /* 8051D7F0  54 A0 DE 3E */	rlwinm r0, r5, 0x1b, 0x18, 0x1f
-/* 8051D7F4  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 8052492B */
+/* 8051D7F4  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D7F8  38 04 00 20 */	addi r0, r4, 0x20
 /* 8051D7FC  54 05 5E 3E */	rlwinm r5, r0, 0xb, 0x18, 0x1f
 /* 8051D800  38 64 18 00 */	addi r3, r4, 0x1800
-/* 8051D804  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 805249E9 */
+/* 8051D804  98 A3 00 11 */	stb r5, 0x11(r3)
 /* 8051D808  54 06 9E 3E */	rlwinm r6, r0, 0x13, 0x18, 0x1f
-/* 8051D80C  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 805249EA */
+/* 8051D80C  98 C3 00 12 */	stb r6, 0x12(r3)
 /* 8051D810  54 00 DE 3E */	rlwinm r0, r0, 0x1b, 0x18, 0x1f
-/* 8051D814  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 805249EB */
+/* 8051D814  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D818  38 64 18 C0 */	addi r3, r4, 0x18c0
-/* 8051D81C  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 80524AA9 */
-/* 8051D820  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 80524AAA */
-/* 8051D824  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 80524AAB */
+/* 8051D81C  98 A3 00 11 */	stb r5, 0x11(r3)
+/* 8051D820  98 C3 00 12 */	stb r6, 0x12(r3)
+/* 8051D824  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D828  38 04 1A 00 */	addi r0, r4, 0x1a00
 /* 8051D82C  54 05 5E 3E */	rlwinm r5, r0, 0xb, 0x18, 0x1f
 /* 8051D830  38 64 29 00 */	addi r3, r4, 0x2900
-/* 8051D834  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 80525AE9 */
+/* 8051D834  98 A3 00 11 */	stb r5, 0x11(r3)
 /* 8051D838  54 06 9E 3E */	rlwinm r6, r0, 0x13, 0x18, 0x1f
-/* 8051D83C  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 80525AEA */
+/* 8051D83C  98 C3 00 12 */	stb r6, 0x12(r3)
 /* 8051D840  54 00 DE 3E */	rlwinm r0, r0, 0x1b, 0x18, 0x1f
-/* 8051D844  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 80525AEB */
+/* 8051D844  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D848  38 64 29 A0 */	addi r3, r4, 0x29a0
-/* 8051D84C  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 80525B89 */
-/* 8051D850  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 80525B8A */
-/* 8051D854  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 80525B8B */
+/* 8051D84C  98 A3 00 11 */	stb r5, 0x11(r3)
+/* 8051D850  98 C3 00 12 */	stb r6, 0x12(r3)
+/* 8051D854  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D858  38 04 2A 40 */	addi r0, r4, 0x2a40
 /* 8051D85C  54 05 5E 3E */	rlwinm r5, r0, 0xb, 0x18, 0x1f
 /* 8051D860  38 64 44 C0 */	addi r3, r4, 0x44c0
-/* 8051D864  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 805276A9 */
+/* 8051D864  98 A3 00 11 */	stb r5, 0x11(r3)
 /* 8051D868  54 06 9E 3E */	rlwinm r6, r0, 0x13, 0x18, 0x1f
-/* 8051D86C  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 805276AA */
+/* 8051D86C  98 C3 00 12 */	stb r6, 0x12(r3)
 /* 8051D870  54 00 DE 3E */	rlwinm r0, r0, 0x1b, 0x18, 0x1f
-/* 8051D874  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 805276AB */
+/* 8051D874  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D878  38 64 45 60 */	addi r3, r4, 0x4560
-/* 8051D87C  98 A3 00 11 */	stb r5, 0x11(r3)	/* effective address: 80527749 */
-/* 8051D880  98 C3 00 12 */	stb r6, 0x12(r3)	/* effective address: 8052774A */
-/* 8051D884  98 03 00 13 */	stb r0, 0x13(r3)	/* effective address: 8052774B */
+/* 8051D87C  98 A3 00 11 */	stb r5, 0x11(r3)
+/* 8051D880  98 C3 00 12 */	stb r6, 0x12(r3)
+/* 8051D884  98 03 00 13 */	stb r0, 0x13(r3)
 /* 8051D888  4E 80 00 20 */	blr 

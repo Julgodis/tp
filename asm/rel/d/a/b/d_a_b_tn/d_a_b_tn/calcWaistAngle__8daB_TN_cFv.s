@@ -21,9 +21,9 @@ lbl_8061EE14:
 /* 8061EE60  38 81 00 08 */	addi r4, r1, 8
 /* 8061EE64  4B 9E DD 9C */	b mDoMtx_MtxToRot__FPA4_CfP5csXyz
 /* 8061EE68  7F E3 FB 78 */	mr r3, r31
-/* 8061EE6C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8061EE70  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8061EE74  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8061EE6C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8061EE70  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8061EE74  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8061EE78  4B 9F B8 98 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8061EE7C  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 8061EE80  7C 00 18 50 */	subf r0, r0, r3

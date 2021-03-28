@@ -57,20 +57,20 @@ lbl_80AF0214:
 /* 80AF0244  93 DC 05 5C */	stw r30, 0x55c(r28)
 /* 80AF0248  3C 60 80 AF */	lis r3, m__22daNpc_SoldierA_Param_c@ha
 /* 80AF024C  38 83 26 E8 */	addi r4, r3, m__22daNpc_SoldierA_Param_c@l
-/* 80AF0250  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80AF26F0 */
+/* 80AF0250  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80AF0254  D0 1C 04 EC */	stfs f0, 0x4ec(r28)
 /* 80AF0258  D0 1C 04 F0 */	stfs f0, 0x4f0(r28)
 /* 80AF025C  D0 1C 04 F4 */	stfs f0, 0x4f4(r28)
 /* 80AF0260  38 7C 07 E4 */	addi r3, r28, 0x7e4
-/* 80AF0264  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80AF2704 */
+/* 80AF0264  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80AF0268  4B 58 5C D8 */	b SetWallR__12dBgS_AcchCirFf
 /* 80AF026C  3C 60 80 AF */	lis r3, m__22daNpc_SoldierA_Param_c@ha
 /* 80AF0270  38 83 26 E8 */	addi r4, r3, m__22daNpc_SoldierA_Param_c@l
-/* 80AF0274  C0 04 00 18 */	lfs f0, 0x18(r4)	/* effective address: 80AF2700 */
+/* 80AF0274  C0 04 00 18 */	lfs f0, 0x18(r4)
 /* 80AF0278  D0 1C 08 14 */	stfs f0, 0x814(r28)
-/* 80AF027C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF0280  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AF0284  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80AF027C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF0280  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AF0284  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80AF0288  28 00 00 00 */	cmplwi r0, 0
 /* 80AF028C  40 82 00 0C */	bne lbl_80AF0298
 /* 80AF0290  C0 04 00 04 */	lfs f0, 4(r4)

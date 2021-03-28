@@ -40,7 +40,7 @@ lbl_804AAB98:
 /* 804AAC30  7C 64 1B 78 */	mr r4, r3
 /* 804AAC34  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804AAC38  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804AAC3C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804AAC3C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804AAC40  4B B6 17 9C */	b mDoMtx_YrotS__FPA4_fs
 /* 804AAC44  C0 01 00 38 */	lfs f0, 0x38(r1)
 /* 804AAC48  EC 20 00 32 */	fmuls f1, f0, f0
@@ -59,7 +59,7 @@ lbl_804AAC6C:
 /* 804AAC78  7C 04 07 34 */	extsh r4, r0
 /* 804AAC7C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804AAC80  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804AAC84  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804AAC84  80 63 00 00 */	lwz r3, 0(r3)
 /* 804AAC88  4B B6 17 14 */	b mDoMtx_XrotM__FPA4_fs
 /* 804AAC8C  C0 1F 00 58 */	lfs f0, 0x58(r31)
 /* 804AAC90  D0 01 00 38 */	stfs f0, 0x38(r1)
@@ -90,12 +90,12 @@ lbl_804AACD8:
 /* 804AACEC  41 82 00 4C */	beq lbl_804AAD38
 /* 804AACF0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804AACF4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804AACF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804AACF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 804AACFC  A8 9C 06 C4 */	lha r4, 0x6c4(r28)
 /* 804AAD00  4B B6 16 DC */	b mDoMtx_YrotS__FPA4_fs
 /* 804AAD04  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804AAD08  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804AAD0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804AAD0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804AAD10  38 80 AC 04 */	li r4, -21500
 /* 804AAD14  4B B6 16 88 */	b mDoMtx_XrotM__FPA4_fs
 /* 804AAD18  C0 1F 00 58 */	lfs f0, 0x58(r31)
@@ -140,8 +140,8 @@ lbl_804AADA8:
 /* 804AADA8  C3 9C 0F 64 */	lfs f28, 0xf64(r28)
 /* 804AADAC  3A E0 00 01 */	li r23, 1
 /* 804AADB0  3B 60 00 0C */	li r27, 0xc
-/* 804AADB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804AADB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804AADB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804AADB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804AADBC  3B 03 0F 38 */	addi r24, r3, 0xf38
 /* 804AADC0  C3 FF 00 58 */	lfs f31, 0x58(r31)
 /* 804AADC4  3C 60 80 45 */	lis r3, calc_mtx@ha

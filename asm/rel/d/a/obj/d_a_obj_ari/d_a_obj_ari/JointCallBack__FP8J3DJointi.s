@@ -7,7 +7,7 @@ lbl_80BA2854:
 /* 80BA2868  40 82 00 24 */	bne lbl_80BA288C
 /* 80BA286C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BA2870  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80BA2874  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80BA2874  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80BA2878  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80BA287C  28 03 00 00 */	cmplwi r3, 0
 /* 80BA2880  41 82 00 0C */	beq lbl_80BA288C

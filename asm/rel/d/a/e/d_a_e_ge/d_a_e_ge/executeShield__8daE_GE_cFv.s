@@ -31,9 +31,9 @@ lbl_806CBAF4:
 /* 806CBB28  38 00 00 3C */	li r0, 0x3c
 /* 806CBB2C  B0 1F 0B 8E */	sth r0, 0xb8e(r31)
 /* 806CBB30  7F E3 FB 78 */	mr r3, r31
-/* 806CBB34  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806CBB38  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806CBB3C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806CBB34  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806CBB38  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806CBB3C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806CBB40  4B 94 EB D0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806CBB44  3C 63 00 01 */	addis r3, r3, 1
 /* 806CBB48  38 03 80 00 */	addi r0, r3, -32768

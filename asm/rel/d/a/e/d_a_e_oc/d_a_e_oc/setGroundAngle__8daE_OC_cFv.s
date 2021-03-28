@@ -27,8 +27,8 @@ lbl_8072DB10:
 /* 8072DB74  38 61 00 50 */	addi r3, r1, 0x50
 /* 8072DB78  38 81 00 44 */	addi r4, r1, 0x44
 /* 8072DB7C  4B B3 A1 AC */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 8072DB80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072DB84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072DB80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072DB84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072DB88  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8072DB8C  7F C3 F3 78 */	mr r3, r30
 /* 8072DB90  38 81 00 50 */	addi r4, r1, 0x50

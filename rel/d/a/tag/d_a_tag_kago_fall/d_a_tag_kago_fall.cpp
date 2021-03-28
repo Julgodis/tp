@@ -82,9 +82,9 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagKagoFall_Execute(daTagKagoFall_c*); // 2
-static void daTagKagoFall_Delete(daTagKagoFall_c*); // 2
-static void daTagKagoFall_Create(daTagKagoFall_c*); // 2
+void daTagKagoFall_Execute(daTagKagoFall_c*); // 2
+void daTagKagoFall_Delete(daTagKagoFall_c*); // 2
+void daTagKagoFall_Create(daTagKagoFall_c*); // 2
 
 extern "C" void create__15daTagKagoFall_cFv(); // 1
 extern "C" void execute__15daTagKagoFall_cFv(); // 1
@@ -92,10 +92,11 @@ extern "C" void setActionMode__15daTagKagoFall_cFUcUc(); // 1
 extern "C" void actionWaitRiver__15daTagKagoFall_cFv(); // 1
 extern "C" void actionWaitFall__15daTagKagoFall_cFv(); // 1
 extern "C" bool _delete__15daTagKagoFall_cFv(); // 1
-extern "C" static void daTagKagoFall_Execute__FP15daTagKagoFall_c(); // 1
-extern "C" static void daTagKagoFall_Delete__FP15daTagKagoFall_c(); // 1
-extern "C" static void daTagKagoFall_Create__FP15daTagKagoFall_c(); // 1
+extern "C" void daTagKagoFall_Execute__FP15daTagKagoFall_c(); // 1
+extern "C" void daTagKagoFall_Delete__FP15daTagKagoFall_c(); // 1
+extern "C" void daTagKagoFall_Create__FP15daTagKagoFall_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daTagKagoFall_Method[8];
 extern "C" extern void* g_profile_Tag_KagoFall[12];
 
 // 
@@ -136,13 +137,8 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 struct_8040AFC8[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 g_blackColor;
 extern "C" extern u8 struct_80450D64[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -247,33 +243,33 @@ bool daTagKagoFall_c::_delete() {
 }
 
 
-/* 80D5A684-80D5A6A4 0020+00 s=1 e=0 z=0  None .text      daTagKagoFall_Execute__FP15daTagKagoFall_c                   */
+/* 80D5A684-80D5A6A4 0020+00 s=0 e=0 z=0  None .text      daTagKagoFall_Execute__FP15daTagKagoFall_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagKagoFall_Execute(daTagKagoFall_c* param_0) {
+asm void daTagKagoFall_Execute(daTagKagoFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Execute__FP15daTagKagoFall_c.s"
 }
 #pragma pop
 
 
-/* 80D5A6A4-80D5A6C4 0020+00 s=1 e=0 z=0  None .text      daTagKagoFall_Delete__FP15daTagKagoFall_c                    */
+/* 80D5A6A4-80D5A6C4 0020+00 s=0 e=0 z=0  None .text      daTagKagoFall_Delete__FP15daTagKagoFall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagKagoFall_Delete(daTagKagoFall_c* param_0) {
+asm void daTagKagoFall_Delete(daTagKagoFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Delete__FP15daTagKagoFall_c.s"
 }
 #pragma pop
 
 
-/* 80D5A6C4-80D5A6E4 0020+00 s=1 e=0 z=0  None .text      daTagKagoFall_Create__FP15daTagKagoFall_c                    */
+/* 80D5A6C4-80D5A6E4 0020+00 s=0 e=0 z=0  None .text      daTagKagoFall_Create__FP15daTagKagoFall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagKagoFall_Create(daTagKagoFall_c* param_0) {
+asm void daTagKagoFall_Create(daTagKagoFall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kago_fall/d_a_tag_kago_fall/daTagKagoFall_Create__FP15daTagKagoFall_c.s"
 }
@@ -281,31 +277,31 @@ asm static void daTagKagoFall_Create(daTagKagoFall_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D5A714-80D5A734 0020+00 s=1 e=0 z=0  None .data      l_daTagKagoFall_Method                                       */
-SECTION_DATA static void* l_daTagKagoFall_Method[8] = {
-	/* 0    */ (void*)daTagKagoFall_Create__FP15daTagKagoFall_c,
-	/* 1    */ (void*)daTagKagoFall_Delete__FP15daTagKagoFall_c,
-	/* 2    */ (void*)daTagKagoFall_Execute__FP15daTagKagoFall_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5A714-80D5A734 0020+00 s=0 e=0 z=0  None .data      l_daTagKagoFall_Method                                       */
+SECTION_DATA void* l_daTagKagoFall_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5A734-80D5A764 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_KagoFall                                       */
+/* 80D5A734-80D5A764 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_KagoFall                                       */
 SECTION_DATA void* g_profile_Tag_KagoFall[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01810000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005FC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x022D0000,
-	/* 9    */ (void*)&l_daTagKagoFall_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01810000,
+	(void*)NULL,
+	(void*)0x000005FC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x022D0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

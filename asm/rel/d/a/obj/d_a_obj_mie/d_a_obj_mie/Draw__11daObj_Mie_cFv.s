@@ -31,10 +31,10 @@ lbl_80C95140:
 /* 80C951B4  4B 37 8B 10 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80C951B8  38 00 00 00 */	li r0, 0
 /* 80C951BC  90 01 00 08 */	stw r0, 8(r1)
-/* 80C951C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C951C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C951C8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80C951CC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80C951C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C951C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C951C8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80C951CC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80C951D0  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 80C951D4  7D 89 03 A6 */	mtctr r12
 /* 80C951D8  4E 80 04 21 */	bctrl 
@@ -54,16 +54,16 @@ lbl_80C951FC:
 /* 80C9520C  3C 60 80 C9 */	lis r3, __vt__8cM3dGPla@ha
 /* 80C95210  38 03 5C 34 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80C95214  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80C95218  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9521C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C95218  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9521C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C95220  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C95224  38 9E 07 E0 */	addi r4, r30, 0x7e0
 /* 80C95228  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80C9522C  4B 3D F5 18 */	b GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 80C95230  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C95234  41 82 00 34 */	beq lbl_80C95268
-/* 80C95238  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9523C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C95238  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9523C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C95240  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80C95244  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80C95248  C0 3E 0A 00 */	lfs f1, 0xa00(r30)

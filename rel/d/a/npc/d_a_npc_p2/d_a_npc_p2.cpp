@@ -11,17 +11,18 @@
 // Forward References:
 // 
 
-static bool daNpc_P2Create(void*); // 2
-static bool daNpc_P2Delete(void*); // 2
-static bool daNpc_P2Execute(void*); // 2
-static bool daNpc_P2Draw(void*); // 2
-static bool daNpc_P2IsDelete(void*); // 2
+bool daNpc_P2Create(void*); // 2
+bool daNpc_P2Delete(void*); // 2
+bool daNpc_P2Execute(void*); // 2
+bool daNpc_P2Draw(void*); // 2
+bool daNpc_P2IsDelete(void*); // 2
 
-extern "C" static bool daNpc_P2Create__FPv(); // 1
-extern "C" static bool daNpc_P2Delete__FPv(); // 1
-extern "C" static bool daNpc_P2Execute__FPv(); // 1
-extern "C" static bool daNpc_P2Draw__FPv(); // 1
-extern "C" static bool daNpc_P2IsDelete__FPv(); // 1
+extern "C" bool daNpc_P2Create__FPv(); // 1
+extern "C" bool daNpc_P2Delete__FPv(); // 1
+extern "C" bool daNpc_P2Execute__FPv(); // 1
+extern "C" bool daNpc_P2Draw__FPv(); // 1
+extern "C" bool daNpc_P2IsDelete__FPv(); // 1
+extern "C" extern void* daNpc_P2MethodTable[8];
 extern "C" extern void* g_profile_NPC_P2[12];
 
 // 
@@ -29,69 +30,67 @@ extern "C" extern void* g_profile_NPC_P2[12];
 // 
 
 
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 80A92BF8-80A92C00 0008+00 s=1 e=0 z=0  None .text      daNpc_P2Create__FPv                                          */
-static bool daNpc_P2Create(void* param_0) {
+/* 80A92BF8-80A92C00 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Create__FPv                                          */
+bool daNpc_P2Create(void* param_0) {
 	return true;
 }
 
 
-/* 80A92C00-80A92C08 0008+00 s=1 e=0 z=0  None .text      daNpc_P2Delete__FPv                                          */
-static bool daNpc_P2Delete(void* param_0) {
+/* 80A92C00-80A92C08 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Delete__FPv                                          */
+bool daNpc_P2Delete(void* param_0) {
 	return true;
 }
 
 
-/* 80A92C08-80A92C10 0008+00 s=1 e=0 z=0  None .text      daNpc_P2Execute__FPv                                         */
-static bool daNpc_P2Execute(void* param_0) {
+/* 80A92C08-80A92C10 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Execute__FPv                                         */
+bool daNpc_P2Execute(void* param_0) {
 	return true;
 }
 
 
-/* 80A92C10-80A92C18 0008+00 s=1 e=0 z=0  None .text      daNpc_P2Draw__FPv                                            */
-static bool daNpc_P2Draw(void* param_0) {
+/* 80A92C10-80A92C18 0008+00 s=0 e=0 z=0  None .text      daNpc_P2Draw__FPv                                            */
+bool daNpc_P2Draw(void* param_0) {
 	return true;
 }
 
 
-/* 80A92C18-80A92C20 0008+00 s=1 e=0 z=0  None .text      daNpc_P2IsDelete__FPv                                        */
-static bool daNpc_P2IsDelete(void* param_0) {
+/* 80A92C18-80A92C20 0008+00 s=0 e=0 z=0  None .text      daNpc_P2IsDelete__FPv                                        */
+bool daNpc_P2IsDelete(void* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80A92C28-80A92C48 0020+00 s=1 e=0 z=0  None .data      daNpc_P2MethodTable                                          */
-SECTION_DATA static void* daNpc_P2MethodTable[8] = {
-	/* 0    */ (void*)daNpc_P2Create__FPv,
-	/* 1    */ (void*)daNpc_P2Delete__FPv,
-	/* 2    */ (void*)daNpc_P2Execute__FPv,
-	/* 3    */ (void*)daNpc_P2IsDelete__FPv,
-	/* 4    */ (void*)daNpc_P2Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80A92C28-80A92C48 0020+00 s=0 e=0 z=0  None .data      daNpc_P2MethodTable                                          */
+SECTION_DATA void* daNpc_P2MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80A92C48-80A92C78 0030+00 s=0 e=0 z=1  None .data      g_profile_NPC_P2                                             */
+/* 80A92C48-80A92C78 0030+00 s=0 e=0 z=0  None .data      g_profile_NPC_P2                                             */
 SECTION_DATA void* g_profile_NPC_P2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02A90000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000001,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01AC0000,
-	/* 9    */ (void*)&daNpc_P2MethodTable,
-	/* 10   */ (void*)0x020C4407,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02A90000,
+	(void*)NULL,
+	(void*)0x00000001,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01AC0000,
+	(void*)NULL,
+	(void*)0x020C4407,
+	(void*)NULL,
 };
 

@@ -13,7 +13,7 @@ lbl_80C74DBC:
 /* 80C74DE8  90 01 00 08 */	stw r0, 8(r1)
 /* 80C74DEC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C74DF0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C74DF4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C74DF4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C74DF8  38 81 00 08 */	addi r4, r1, 8
 /* 80C74DFC  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C74E00  38 C0 00 00 */	li r6, 0

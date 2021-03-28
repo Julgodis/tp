@@ -29,9 +29,9 @@ lbl_808724EC:
 /* 80872528  80 7F 06 F8 */	lwz r3, 0x6f8(r31)
 /* 8087252C  4B 79 B7 98 */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_80872530:
-/* 80872530  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80872534  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80872538  80 63 5F 70 */	lwz r3, 0x5f70(r3)	/* effective address: 8040C130 */
+/* 80872530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80872534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80872538  80 63 5F 70 */	lwz r3, 0x5f70(r3)
 /* 8087253C  38 9F 05 70 */	addi r4, r31, 0x570
 /* 80872540  38 A0 00 00 */	li r5, 0
 /* 80872544  4B AB 2F 48 */	b entryImm__13J3DDrawBufferFP9J3DPacketUs

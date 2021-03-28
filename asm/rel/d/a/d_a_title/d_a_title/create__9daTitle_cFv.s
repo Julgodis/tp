@@ -99,7 +99,7 @@ lbl_80D66E08:
 /* 80D66E50  38 00 FF FF */	li r0, -1
 /* 80D66E54  3C 60 80 D6 */	lis r3, g_daTitHIO@ha
 /* 80D66E58  38 63 7D 8C */	addi r3, r3, g_daTitHIO@l
-/* 80D66E5C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80D67D90 */
+/* 80D66E5C  98 03 00 04 */	stb r0, 4(r3)
 /* 80D66E60  7F C3 F3 78 */	mr r3, r30
 lbl_80D66E64:
 /* 80D66E64  39 61 00 20 */	addi r11, r1, 0x20

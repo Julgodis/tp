@@ -174,7 +174,7 @@ lbl_807F3A10:
 /* 807F3A10  38 7E 06 98 */	addi r3, r30, 0x698
 /* 807F3A14  3C 80 80 7F */	lis r4, l_HIO@ha
 /* 807F3A18  38 84 7D 78 */	addi r4, r4, l_HIO@l
-/* 807F3A1C  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 807F7D88 */
+/* 807F3A1C  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 807F3A20  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807F3A24  C0 7F 00 50 */	lfs f3, 0x50(r31)
 /* 807F3A28  4B A7 C0 14 */	b cLib_addCalc2__FPffff

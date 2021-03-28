@@ -14,8 +14,8 @@ lbl_806EE820:
 /* 806EE850  40 80 00 08 */	bge lbl_806EE858
 /* 806EE854  48 00 01 10 */	b lbl_806EE964
 lbl_806EE858:
-/* 806EE858  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806EE85C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806EE858  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EE85C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806EE860  88 9F 06 EB */	lbz r4, 0x6eb(r31)
 /* 806EE864  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 806EE868  7C 05 07 74 */	extsb r5, r0

@@ -63,7 +63,7 @@ lbl_8068AF88:
 lbl_8068AFB4:
 /* 8068AFB4  3C 80 80 69 */	lis r4, l_HIO@ha
 /* 8068AFB8  38 84 DB 2C */	addi r4, r4, l_HIO@l
-/* 8068AFBC  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 8068DB38 */
+/* 8068AFBC  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8068AFC0  4B FF F9 4D */	bl pl_check__FP10e_bi_classf
 /* 8068AFC4  2C 03 00 00 */	cmpwi r3, 0
 /* 8068AFC8  41 82 00 10 */	beq lbl_8068AFD8

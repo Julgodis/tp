@@ -9,14 +9,14 @@ lbl_80A604E4:
 /* 80A60500  3B A3 38 AC */	addi r29, r3, m__19daNpc_Kyury_Param_c@l
 /* 80A60504  3C 60 80 A6 */	lis r3, l_bmdData@ha
 /* 80A60508  38 83 3A 34 */	addi r4, r3, l_bmdData@l
-/* 80A6050C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A63A38 */
+/* 80A6050C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A60510  54 00 10 3A */	slwi r0, r0, 2
 /* 80A60514  3C 60 80 A6 */	lis r3, l_resNameList@ha
 /* 80A60518  38 63 3A 64 */	addi r3, r3, l_resNameList@l
 /* 80A6051C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80A60520  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80A63A34 */
-/* 80A60524  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A60528  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A60520  80 84 00 00 */	lwz r4, 0(r4)
+/* 80A60524  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A60528  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A6052C  3F C5 00 02 */	addis r30, r5, 2
 /* 80A60530  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80A60534  7F C5 F3 78 */	mr r5, r30

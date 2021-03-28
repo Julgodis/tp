@@ -18,8 +18,8 @@ lbl_80CCC088:
 /* 80CCC0C8  C0 1F 00 14 */	lfs f0, 0x14(r31)
 /* 80CCC0CC  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80CCC0D0  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80CCC0D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCC0D8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80CCC0D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC0D8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80CCC0DC  38 7F 5B D4 */	addi r3, r31, 0x5bd4
 /* 80CCC0E0  38 80 00 05 */	li r4, 5
 /* 80CCC0E4  38 A0 00 1F */	li r5, 0x1f

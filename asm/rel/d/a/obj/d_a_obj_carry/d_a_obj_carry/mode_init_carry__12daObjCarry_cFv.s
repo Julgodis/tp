@@ -64,7 +64,7 @@ lbl_80473F88:
 /* 80473FC8  90 01 00 08 */	stw r0, 8(r1)
 /* 80473FCC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80473FD0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80473FD4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80473FD4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80473FD8  38 81 00 08 */	addi r4, r1, 8
 /* 80473FDC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80473FE0  38 C0 00 00 */	li r6, 0
@@ -97,9 +97,9 @@ lbl_80474034:
 /* 8047403C  80 1E 05 5C */	lwz r0, 0x55c(r30)
 /* 80474040  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a
 /* 80474044  90 1E 05 5C */	stw r0, 0x55c(r30)
-/* 80474048  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047404C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80474050  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80474048  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047404C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80474050  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80474054  28 1E 00 00 */	cmplwi r30, 0
 /* 80474058  41 82 00 0C */	beq lbl_80474064
 /* 8047405C  83 FE 00 04 */	lwz r31, 4(r30)
@@ -116,8 +116,8 @@ lbl_80474068:
 /* 80474080  88 1E 0C F0 */	lbz r0, 0xcf0(r30)
 /* 80474084  28 00 00 08 */	cmplwi r0, 8
 /* 80474088  40 82 00 84 */	bne lbl_8047410C
-/* 8047408C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80474090  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047408C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80474090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80474094  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80474098  7F E3 FB 78 */	mr r3, r31
 /* 8047409C  38 80 26 40 */	li r4, 0x2640
@@ -149,8 +149,8 @@ lbl_80474068:
 /* 80474104  4B BC 08 88 */	b onEventBit__11dSv_event_cFUs
 /* 80474108  48 00 00 80 */	b lbl_80474188
 lbl_8047410C:
-/* 8047410C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80474110  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047410C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80474110  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80474114  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80474118  7F E3 FB 78 */	mr r3, r31
 /* 8047411C  38 80 26 20 */	li r4, 0x2620

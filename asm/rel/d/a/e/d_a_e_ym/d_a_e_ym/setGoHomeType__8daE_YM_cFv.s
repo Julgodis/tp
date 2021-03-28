@@ -67,7 +67,7 @@ lbl_8080C32C:
 lbl_8080C344:
 /* 8080C344  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080C348  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080C34C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80815D48 */
+/* 8080C34C  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8080C350  D0 1F 05 2C */	stfs f0, 0x52c(r31)
 lbl_8080C354:
 /* 8080C354  7F E3 FB 78 */	mr r3, r31

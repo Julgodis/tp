@@ -11,8 +11,8 @@ lbl_80D1E468:
 /* 80D1E48C  80 9F 06 04 */	lwz r4, 0x604(r31)
 /* 80D1E490  28 04 00 00 */	cmplwi r4, 0
 /* 80D1E494  41 82 00 14 */	beq lbl_80D1E4A8
-/* 80D1E498  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D1E49C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D1E498  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1E49C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D1E4A0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D1E4A4  4B 35 5D AC */	b Release__4cBgSFP9dBgW_Base
 lbl_80D1E4A8:

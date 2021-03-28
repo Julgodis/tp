@@ -15,11 +15,11 @@ lbl_8049C700:
 /* 8049C734  90 1F 00 B0 */	stw r0, 0xb0(r31)
 /* 8049C738  3C 60 80 4A */	lis r3, lit_5369@ha
 /* 8049C73C  38 83 DE 5C */	addi r4, r3, lit_5369@l
-/* 8049C740  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8049DE5C */
-/* 8049C744  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8049DE60 */
+/* 8049C740  80 64 00 00 */	lwz r3, 0(r4)
+/* 8049C744  80 04 00 04 */	lwz r0, 4(r4)
 /* 8049C748  90 7F 0A 28 */	stw r3, 0xa28(r31)
 /* 8049C74C  90 1F 0A 2C */	stw r0, 0xa2c(r31)
-/* 8049C750  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8049DE64 */
+/* 8049C750  80 04 00 08 */	lwz r0, 8(r4)
 /* 8049C754  90 1F 0A 30 */	stw r0, 0xa30(r31)
 /* 8049C758  C0 1D 00 98 */	lfs f0, 0x98(r29)
 /* 8049C75C  D0 1F 05 2C */	stfs f0, 0x52c(r31)

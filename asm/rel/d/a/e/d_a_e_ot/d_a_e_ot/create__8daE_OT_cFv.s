@@ -119,7 +119,7 @@ lbl_8073C4C8:
 /* 8073C4E4  38 00 FF FF */	li r0, -1
 /* 8073C4E8  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 8073C4EC  38 63 D2 BC */	addi r3, r3, l_HIO@l
-/* 8073C4F0  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8073D2C0 */
+/* 8073C4F0  98 03 00 04 */	stb r0, 4(r3)
 lbl_8073C4F4:
 /* 8073C4F4  38 00 00 04 */	li r0, 4
 /* 8073C4F8  90 1A 05 5C */	stw r0, 0x55c(r26)

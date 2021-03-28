@@ -52,22 +52,23 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daE_BI_LEAF_Draw(e_bi_leaf_class*); // 2
+void daE_BI_LEAF_Draw(e_bi_leaf_class*); // 2
 static void action(e_bi_leaf_class*); // 2
 static void daE_BI_LEAF_Execute(e_bi_leaf_class*); // 2
-static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class*); // 2
-static void daE_BI_LEAF_Delete(e_bi_leaf_class*); // 2
+bool daE_BI_LEAF_IsDelete(e_bi_leaf_class*); // 2
+void daE_BI_LEAF_Delete(e_bi_leaf_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_BI_LEAF_Create(fopAc_ac_c*); // 2
+void daE_BI_LEAF_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daE_BI_LEAF_Draw__FP15e_bi_leaf_class(); // 1
+extern "C" void daE_BI_LEAF_Draw__FP15e_bi_leaf_class(); // 1
 extern "C" static void action__FP15e_bi_leaf_class(); // 1
 extern "C" static void daE_BI_LEAF_Execute__FP15e_bi_leaf_class(); // 1
-extern "C" static bool daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class(); // 1
-extern "C" static void daE_BI_LEAF_Delete__FP15e_bi_leaf_class(); // 1
+extern "C" bool daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class(); // 1
+extern "C" void daE_BI_LEAF_Delete__FP15e_bi_leaf_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_BI_LEAF_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_BI_LEAF_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_BI_LEAF_Method[8];
 extern "C" extern void* g_profile_E_BI_LEAF[12];
 
 // 
@@ -99,21 +100,19 @@ extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
 // 
 // Declarations:
 // 
 
-/* 8068DC58-8068DCD0 0078+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_Draw__FP15e_bi_leaf_class                        */
+/* 8068DC58-8068DCD0 0078+00 s=0 e=0 z=0  None .text      daE_BI_LEAF_Draw__FP15e_bi_leaf_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_BI_LEAF_Draw(e_bi_leaf_class* param_0) {
+asm void daE_BI_LEAF_Draw(e_bi_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bi_leaf/d_a_e_bi_leaf/daE_BI_LEAF_Draw__FP15e_bi_leaf_class.s"
 }
@@ -131,7 +130,7 @@ asm static void action(e_bi_leaf_class* param_0) {
 #pragma pop
 
 
-/* 8068DDD0-8068DE68 0098+00 s=2 e=0 z=0  None .text      daE_BI_LEAF_Execute__FP15e_bi_leaf_class                     */
+/* 8068DDD0-8068DE68 0098+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_Execute__FP15e_bi_leaf_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -142,8 +141,8 @@ asm static void daE_BI_LEAF_Execute(e_bi_leaf_class* param_0) {
 #pragma pop
 
 
-/* 8068DE68-8068DE70 0008+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class                    */
-static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class* param_0) {
+/* 8068DE68-8068DE70 0008+00 s=0 e=0 z=0  None .text      daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class                    */
+bool daE_BI_LEAF_IsDelete(e_bi_leaf_class* param_0) {
 	return true;
 }
 
@@ -158,11 +157,11 @@ SECTION_DEAD char const* const stringBase_8068DFE0 = "E_BI";
 SECTION_DEAD static char const* const pad_8068DFE5 = "\0\0";
 #pragma pop
 
-/* 8068DE70-8068DEA0 0030+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_Delete__FP15e_bi_leaf_class                      */
+/* 8068DE70-8068DEA0 0030+00 s=0 e=0 z=0  None .text      daE_BI_LEAF_Delete__FP15e_bi_leaf_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_BI_LEAF_Delete(e_bi_leaf_class* param_0) {
+asm void daE_BI_LEAF_Delete(e_bi_leaf_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bi_leaf/d_a_e_bi_leaf/daE_BI_LEAF_Delete__FP15e_bi_leaf_class.s"
 }
@@ -180,11 +179,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 8068DF24-8068DFD8 00B4+00 s=1 e=0 z=0  None .text      daE_BI_LEAF_Create__FP10fopAc_ac_c                           */
+/* 8068DF24-8068DFD8 00B4+00 s=0 e=0 z=0  None .text      daE_BI_LEAF_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_BI_LEAF_Create(fopAc_ac_c* param_0) {
+asm void daE_BI_LEAF_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_bi_leaf/d_a_e_bi_leaf/daE_BI_LEAF_Create__FP10fopAc_ac_c.s"
 }
@@ -192,31 +191,31 @@ asm static void daE_BI_LEAF_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8068DFE8-8068E008 0020+00 s=1 e=0 z=0  None .data      l_daE_BI_LEAF_Method                                         */
-SECTION_DATA static void* l_daE_BI_LEAF_Method[8] = {
-	/* 0    */ (void*)daE_BI_LEAF_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_BI_LEAF_Delete__FP15e_bi_leaf_class,
-	/* 2    */ (void*)daE_BI_LEAF_Execute__FP15e_bi_leaf_class,
-	/* 3    */ (void*)daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class,
-	/* 4    */ (void*)daE_BI_LEAF_Draw__FP15e_bi_leaf_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8068DFE8-8068E008 0020+00 s=0 e=0 z=0  None .data      l_daE_BI_LEAF_Method                                         */
+SECTION_DATA void* l_daE_BI_LEAF_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8068E008-8068E038 0030+00 s=0 e=0 z=1  None .data      g_profile_E_BI_LEAF                                          */
+/* 8068E008-8068E038 0030+00 s=0 e=0 z=0  None .data      g_profile_E_BI_LEAF                                          */
 SECTION_DATA void* g_profile_E_BI_LEAF[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03050000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005D0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00940000,
-	/* 9    */ (void*)&l_daE_BI_LEAF_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0009FFFD,
+	(void*)0x03050000,
+	(void*)NULL,
+	(void*)0x000005D0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00940000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)NULL,
 };
 

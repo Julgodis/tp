@@ -9,8 +9,8 @@ lbl_8049ACE0:
 /* 8049ACFC  4B B8 2F C0 */	b gndCheck__11fopAcM_gc_cFPC4cXyz
 /* 8049AD00  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8049AD04  41 82 00 40 */	beq lbl_8049AD44
-/* 8049AD08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049AD0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049AD08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049AD0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049AD10  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8049AD14  7F C3 F3 78 */	mr r3, r30
 /* 8049AD18  3C 80 80 3F */	lis r4, mGndCheck__11fopAcM_gc_c@ha

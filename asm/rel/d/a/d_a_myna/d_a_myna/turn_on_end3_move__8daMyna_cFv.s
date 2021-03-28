@@ -8,9 +8,9 @@ lbl_80948074:
 /* 8094808C  A8 9F 04 B6 */	lha r4, 0x4b6(r31)
 /* 80948090  3C A0 80 95 */	lis r5, l_HOSTIO@ha
 /* 80948094  38 E5 BA 3C */	addi r7, r5, l_HOSTIO@l
-/* 80948098  A8 A7 00 26 */	lha r5, 0x26(r7)	/* effective address: 8094BA62 */
-/* 8094809C  A8 C7 00 28 */	lha r6, 0x28(r7)	/* effective address: 8094BA64 */
-/* 809480A0  A8 E7 00 2A */	lha r7, 0x2a(r7)	/* effective address: 8094BA66 */
+/* 80948098  A8 A7 00 26 */	lha r5, 0x26(r7)
+/* 8094809C  A8 C7 00 28 */	lha r6, 0x28(r7)
+/* 809480A0  A8 E7 00 2A */	lha r7, 0x2a(r7)
 /* 809480A4  4B 92 84 9C */	b cLib_addCalcAngleS__FPsssss
 /* 809480A8  A8 7F 04 B6 */	lha r3, 0x4b6(r31)
 /* 809480AC  A8 1F 04 DE */	lha r0, 0x4de(r31)

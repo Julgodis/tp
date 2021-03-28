@@ -99,11 +99,11 @@ lbl_80B7A9A0:
 /* 80B7A9DC  4B 7C BA D4 */	b PSMTXCopy
 /* 80B7A9E0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B7A9E4  3B 63 D4 70 */	addi r27, r3, now__14mDoMtx_stack_c@l
-/* 80B7A9E8  C0 1B 00 0C */	lfs f0, 0xc(r27)	/* effective address: 803DD47C */
+/* 80B7A9E8  C0 1B 00 0C */	lfs f0, 0xc(r27)
 /* 80B7A9EC  D0 1F 08 54 */	stfs f0, 0x854(r31)
-/* 80B7A9F0  C0 1B 00 1C */	lfs f0, 0x1c(r27)	/* effective address: 803DD48C */
+/* 80B7A9F0  C0 1B 00 1C */	lfs f0, 0x1c(r27)
 /* 80B7A9F4  D0 1F 08 58 */	stfs f0, 0x858(r31)
-/* 80B7A9F8  C0 1B 00 2C */	lfs f0, 0x2c(r27)	/* effective address: 803DD49C */
+/* 80B7A9F8  C0 1B 00 2C */	lfs f0, 0x2c(r27)
 /* 80B7A9FC  D0 1F 08 5C */	stfs f0, 0x85c(r31)
 /* 80B7AA00  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80B7AA04  80 63 00 04 */	lwz r3, 4(r3)

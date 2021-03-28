@@ -100,11 +100,11 @@ lbl_8061196C:
 /* 80611990  4B D3 4B 20 */	b PSMTXCopy
 /* 80611994  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80611998  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 8061199C  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 8061199C  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 806119A0  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 806119A4  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 806119A4  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 806119A8  D0 01 00 44 */	stfs f0, 0x44(r1)
-/* 806119AC  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 806119AC  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 806119B0  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 806119B4  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 806119B8  80 63 00 04 */	lwz r3, 4(r3)
@@ -157,7 +157,7 @@ lbl_80611A68:
 /* 80611A6C  C0 3E 00 4C */	lfs f1, 0x4c(r30)
 /* 80611A70  3C 60 80 62 */	lis r3, l_HIO@ha
 /* 80611A74  38 63 B5 14 */	addi r3, r3, l_HIO@l
-/* 80611A78  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8061B520 */
+/* 80611A78  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80611A7C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80611A80  EC 02 00 2A */	fadds f0, f2, f0
 /* 80611A84  D0 1D 47 98 */	stfs f0, 0x4798(r29)
@@ -166,7 +166,7 @@ lbl_80611A8C:
 /* 80611A8C  C0 3D 47 98 */	lfs f1, 0x4798(r29)
 /* 80611A90  3C 60 80 62 */	lis r3, l_HIO@ha
 /* 80611A94  38 63 B5 14 */	addi r3, r3, l_HIO@l
-/* 80611A98  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8061B520 */
+/* 80611A98  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80611A9C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80611AA0  D0 1D 47 98 */	stfs f0, 0x4798(r29)
 lbl_80611AA4:
@@ -192,7 +192,7 @@ lbl_80611AD8:
 /* 80611AE8  C0 5E 00 50 */	lfs f2, 0x50(r30)
 /* 80611AEC  3C 80 80 62 */	lis r4, l_HIO@ha
 /* 80611AF0  38 84 B5 14 */	addi r4, r4, l_HIO@l
-/* 80611AF4  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8061B520 */
+/* 80611AF4  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80611AF8  EC 61 00 32 */	fmuls f3, f1, f0
 /* 80611AFC  4B C5 DF 40 */	b cLib_addCalc2__FPffff
 /* 80611B00  C0 3D 47 98 */	lfs f1, 0x4798(r29)

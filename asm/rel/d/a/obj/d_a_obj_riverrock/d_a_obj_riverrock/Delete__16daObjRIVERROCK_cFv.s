@@ -7,7 +7,7 @@ lbl_80CBD964:
 /* 80CBD978  38 7F 06 18 */	addi r3, r31, 0x618
 /* 80CBD97C  3C 80 80 CC */	lis r4, l_arcName@ha
 /* 80CBD980  38 84 DB 40 */	addi r4, r4, l_arcName@l
-/* 80CBD984  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CBDB40 */
+/* 80CBD984  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CBD988  4B 36 F6 80 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CBD98C  88 1F 07 98 */	lbz r0, 0x798(r31)
 /* 80CBD990  28 00 00 00 */	cmplwi r0, 0

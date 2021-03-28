@@ -15,13 +15,13 @@ lbl_8059E1B0:
 /* 8059E1E4  3C 60 80 5A */	lis r3, l_arcName@ha
 /* 8059E1E8  80 03 E8 58 */	lwz r0, l_arcName@l(r3)
 /* 8059E1EC  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 8059E1F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059E1F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8059E1F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059E1F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8059E1F8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8059E1FC  7F E4 FB 78 */	mr r4, r31
 /* 8059E200  3C A0 80 5A */	lis r5, l_evName@ha
 /* 8059E204  38 A5 E8 5C */	addi r5, r5, l_evName@l
-/* 8059E208  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 8059E85C */
+/* 8059E208  80 A5 00 00 */	lwz r5, 0(r5)
 /* 8059E20C  38 C0 00 FF */	li r6, 0xff
 /* 8059E210  4B AA 95 48 */	b getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 8059E214  B0 7F 05 78 */	sth r3, 0x578(r31)

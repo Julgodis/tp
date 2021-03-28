@@ -15,7 +15,7 @@ lbl_8098FB3C:
 /* 8098FB70  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8098FB74  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8098FB78  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8098FB7C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8098FB7C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8098FB80  38 81 00 14 */	addi r4, r1, 0x14
 /* 8098FB84  38 A0 00 00 */	li r5, 0
 /* 8098FB88  38 C0 00 00 */	li r6, 0
@@ -48,7 +48,7 @@ lbl_8098FBB8:
 /* 8098FBF0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8098FBF4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8098FBF8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8098FBFC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8098FBFC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8098FC00  38 81 00 10 */	addi r4, r1, 0x10
 /* 8098FC04  38 A0 00 00 */	li r5, 0
 /* 8098FC08  38 C0 00 00 */	li r6, 0
@@ -71,7 +71,7 @@ lbl_8098FC34:
 /* 8098FC48  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8098FC4C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8098FC50  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8098FC54  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8098FC54  80 63 00 00 */	lwz r3, 0(r3)
 /* 8098FC58  38 81 00 0C */	addi r4, r1, 0xc
 /* 8098FC5C  38 A0 00 00 */	li r5, 0
 /* 8098FC60  38 C0 00 00 */	li r6, 0
@@ -90,7 +90,7 @@ lbl_8098FC8C:
 /* 8098FC90  90 01 00 08 */	stw r0, 8(r1)
 /* 8098FC94  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8098FC98  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8098FC9C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8098FC9C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8098FCA0  38 81 00 08 */	addi r4, r1, 8
 /* 8098FCA4  38 A0 00 00 */	li r5, 0
 /* 8098FCA8  38 C0 00 00 */	li r6, 0

@@ -7,12 +7,12 @@ lbl_8066A1C4:
 /* 8066A1D8  7C 7F 1B 78 */	mr r31, r3
 /* 8066A1DC  3C 60 80 67 */	lis r3, lit_3662@ha
 /* 8066A1E0  3B C3 ED E8 */	addi r30, r3, lit_3662@l
-/* 8066A1E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066A1E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066A1EC  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8066A1E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066A1E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066A1EC  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 8066A1F0  38 00 00 01 */	li r0, 1
 /* 8066A1F4  98 1F 06 16 */	stb r0, 0x616(r31)
-/* 8066A1F8  C0 1E 00 C0 */	lfs f0, 0xc0(r30)	/* effective address: 8066EEA8 */
+/* 8066A1F8  C0 1E 00 C0 */	lfs f0, 0xc0(r30)
 /* 8066A1FC  D0 1F 06 48 */	stfs f0, 0x648(r31)
 /* 8066A200  A8 7F 05 F6 */	lha r3, 0x5f6(r31)
 /* 8066A204  2C 03 00 01 */	cmpwi r3, 1
@@ -69,7 +69,7 @@ lbl_8066A2AC:
 /* 8066A2C0  4B FF DA E9 */	bl anm_init__FP8do_classifUcf
 /* 8066A2C4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8066A2C8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8066A2CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8066A2CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066A2D0  A8 9D 04 E6 */	lha r4, 0x4e6(r29)
 /* 8066A2D4  4B 9A 21 08 */	b mDoMtx_YrotS__FPA4_fs
 /* 8066A2D8  C0 3E 00 1C */	lfs f1, 0x1c(r30)

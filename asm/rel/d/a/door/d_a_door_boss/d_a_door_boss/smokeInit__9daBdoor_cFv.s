@@ -21,9 +21,9 @@ lbl_8067002C:
 /* 80670078  90 01 00 08 */	stw r0, 8(r1)
 /* 8067007C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80670080  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80670084  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80670088  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8067008C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80670084  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80670088  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8067008C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80670090  3C 80 00 01 */	lis r4, 0x0001 /* 0x00008156@ha */
 /* 80670094  38 84 81 56 */	addi r4, r4, 0x8156 /* 0x00008156@l */
 /* 80670098  38 A8 06 9C */	addi r5, r8, 0x69c

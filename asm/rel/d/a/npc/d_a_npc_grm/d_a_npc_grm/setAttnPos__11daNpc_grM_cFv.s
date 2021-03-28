@@ -7,9 +7,9 @@ lbl_809D526C:
 /* 809D5280  7C 7E 1B 78 */	mr r30, r3
 /* 809D5284  3C 60 80 9D */	lis r3, m__17daNpc_grM_Param_c@ha
 /* 809D5288  3B E3 6D 70 */	addi r31, r3, m__17daNpc_grM_Param_c@l
-/* 809D528C  C0 3F 00 A8 */	lfs f1, 0xa8(r31)	/* effective address: 809D6E18 */
+/* 809D528C  C0 3F 00 A8 */	lfs f1, 0xa8(r31)
 /* 809D5290  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 809D5294  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 809D6E34 */
+/* 809D5294  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 809D5298  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 809D529C  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 809D52A0  38 7E 0D 08 */	addi r3, r30, 0xd08

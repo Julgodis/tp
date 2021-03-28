@@ -28,11 +28,11 @@ lbl_80A2874C:
 /* 80A28758  41 82 00 30 */	beq lbl_80A28788
 /* 80A2875C  3C 60 80 A3 */	lis r3, lit_5026@ha
 /* 80A28760  38 83 A5 DC */	addi r4, r3, lit_5026@l
-/* 80A28764  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2A5DC */
-/* 80A28768  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2A5E0 */
+/* 80A28764  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A28768  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A2876C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A28770  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A28774  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2A5E4 */
+/* 80A28774  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A28778  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A2877C  7F E3 FB 78 */	mr r3, r31
 /* 80A28780  38 81 00 08 */	addi r4, r1, 8

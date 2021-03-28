@@ -33,8 +33,8 @@ lbl_80461FC0:
 /* 80461FD8  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 80461FDC  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80461FE0  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 80461FE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80461FE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80461FE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80461FE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80461FEC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80461FF0  38 80 00 04 */	li r4, 4
 /* 80461FF4  38 A0 00 0F */	li r5, 0xf
@@ -45,10 +45,10 @@ lbl_80462004:
 /* 80462004  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80462008  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8046200C  40 82 02 78 */	bne lbl_80462284
-/* 80462010  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80462014  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80462018  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8046201C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80462010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80462014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80462018  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8046201C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80462020  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80462024  41 82 00 24 */	beq lbl_80462048
 /* 80462028  88 7D 06 72 */	lbz r3, 0x672(r29)
@@ -76,7 +76,7 @@ lbl_80462064:
 /* 80462074  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80462078  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8046207C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80462080  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80462080  80 63 00 00 */	lwz r3, 0(r3)
 /* 80462084  38 81 00 10 */	addi r4, r1, 0x10
 /* 80462088  38 BD 05 E0 */	addi r5, r29, 0x5e0
 /* 8046208C  38 C0 00 00 */	li r6, 0
@@ -106,18 +106,18 @@ lbl_804620CC:
 /* 804620E4  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 804620E8  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 804620EC  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 804620F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804620F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804620F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804620F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804620F8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804620FC  38 80 00 04 */	li r4, 4
 /* 80462100  38 A0 00 0F */	li r5, 0xf
 /* 80462104  38 C1 00 14 */	addi r6, r1, 0x14
 /* 80462108  4B C0 D9 1C */	b StartShock__12dVibration_cFii4cXyz
 lbl_8046210C:
-/* 8046210C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80462110  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80462114  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80462118  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8046210C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80462110  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80462114  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80462118  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8046211C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80462120  41 82 00 AC */	beq lbl_804621CC
 /* 80462124  C0 3F 00 54 */	lfs f1, 0x54(r31)
@@ -154,7 +154,7 @@ lbl_80462184:
 /* 80462194  93 81 00 0C */	stw r28, 0xc(r1)
 /* 80462198  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8046219C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804621A0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804621A0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804621A4  38 81 00 0C */	addi r4, r1, 0xc
 /* 804621A8  38 BD 05 38 */	addi r5, r29, 0x538
 /* 804621AC  38 C0 00 00 */	li r6, 0
@@ -206,7 +206,7 @@ lbl_80462240:
 /* 80462250  93 81 00 08 */	stw r28, 8(r1)
 /* 80462254  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80462258  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8046225C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8046225C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80462260  38 81 00 08 */	addi r4, r1, 8
 /* 80462264  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80462268  38 C0 00 00 */	li r6, 0

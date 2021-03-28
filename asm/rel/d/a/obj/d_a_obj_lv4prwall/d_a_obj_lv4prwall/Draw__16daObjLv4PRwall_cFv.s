@@ -17,21 +17,21 @@ lbl_80C696BC:
 /* 80C696F8  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C696FC  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80C69700  4B 53 B6 A0 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80C69704  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C69708  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C6970C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80C69704  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C69708  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C6970C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80C69710  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C69714  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80C69718  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80C6971C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80C69720  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80C69718  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80C6971C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80C69720  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80C69724  80 7E 06 08 */	lwz r3, 0x608(r30)
 /* 80C69728  4B 3A 45 9C */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80C6972C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C69730  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C69734  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C6972C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C69730  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C69734  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C69738  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80C6973C  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C6973C  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C69740  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80C69744  38 60 00 01 */	li r3, 1
 /* 80C69748  83 E1 00 0C */	lwz r31, 0xc(r1)

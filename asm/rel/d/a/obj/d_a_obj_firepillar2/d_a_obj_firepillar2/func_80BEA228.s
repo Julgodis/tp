@@ -91,7 +91,7 @@ lbl_80BEA36C:
 /* 80BEA380  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80BEA384  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BEA388  38 84 B5 48 */	addi r4, r4, l_arcName@l
-/* 80BEA38C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BEB548 */
+/* 80BEA38C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BEA390  4B 44 2B 2C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BEA394  7C 7E 1B 78 */	mr r30, r3
 /* 80BEA398  2C 1E 00 04 */	cmpwi r30, 4

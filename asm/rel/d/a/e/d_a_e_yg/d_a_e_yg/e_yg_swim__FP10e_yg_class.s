@@ -14,8 +14,8 @@ lbl_807F99D0:
 /* 807F9A00  3B A0 00 00 */	li r29, 0
 /* 807F9A04  3C 80 80 80 */	lis r4, l_HIO@ha
 /* 807F9A08  38 84 D0 6C */	addi r4, r4, l_HIO@l
-/* 807F9A0C  C3 E4 00 14 */	lfs f31, 0x14(r4)	/* effective address: 807FD080 */
-/* 807F9A10  C3 DE 00 08 */	lfs f30, 8(r30)	/* effective address: 807FCCBC */
+/* 807F9A0C  C3 E4 00 14 */	lfs f31, 0x14(r4)
+/* 807F9A10  C3 DE 00 08 */	lfs f30, 8(r30)
 /* 807F9A14  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807F9A18  2C 00 00 01 */	cmpwi r0, 1
 /* 807F9A1C  41 82 00 4C */	beq lbl_807F9A68

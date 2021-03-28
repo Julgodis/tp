@@ -35,12 +35,12 @@ lbl_80C3CB7C:
 /* 80C3CC00  38 7F 07 44 */	addi r3, r31, 0x744
 /* 80C3CC04  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CC08  38 84 D3 DC */	addi r4, r4, M_attr__15daObjKazeNeko_c@l
-/* 80C3CC0C  C0 44 00 18 */	lfs f2, 0x18(r4)	/* effective address: 80C3D3F4 */
+/* 80C3CC0C  C0 44 00 18 */	lfs f2, 0x18(r4)
 /* 80C3CC10  4B 63 3B 30 */	b cLib_chaseF__FPfff
 /* 80C3CC14  A8 9F 07 4C */	lha r4, 0x74c(r31)
 /* 80C3CC18  3C 60 80 C4 */	lis r3, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CC1C  38 63 D3 DC */	addi r3, r3, M_attr__15daObjKazeNeko_c@l
-/* 80C3CC20  A8 03 00 26 */	lha r0, 0x26(r3)	/* effective address: 80C3D402 */
+/* 80C3CC20  A8 03 00 26 */	lha r0, 0x26(r3)
 /* 80C3CC24  7C 04 02 14 */	add r0, r4, r0
 /* 80C3CC28  B0 1F 07 4C */	sth r0, 0x74c(r31)
 lbl_80C3CC2C:

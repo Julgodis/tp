@@ -7,9 +7,9 @@ lbl_8079E684:
 /* 8079E698  7C 7D 1B 78 */	mr r29, r3
 /* 8079E69C  3C 60 80 7A */	lis r3, lit_3903@ha
 /* 8079E6A0  3B C3 68 24 */	addi r30, r3, lit_3903@l
-/* 8079E6A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079E6A8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8079E6AC  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8079E6A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079E6A8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8079E6AC  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 8079E6B0  38 7D 0A 38 */	addi r3, r29, 0xa38
 /* 8079E6B4  4B 8E 51 7C */	b Move__10dCcD_GSttsFv
 /* 8079E6B8  A8 1D 06 8A */	lha r0, 0x68a(r29)

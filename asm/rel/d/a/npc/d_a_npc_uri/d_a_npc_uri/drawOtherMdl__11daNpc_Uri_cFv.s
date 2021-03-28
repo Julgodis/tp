@@ -8,8 +8,8 @@ lbl_80B284DC:
 /* 80B284F4  80 63 05 78 */	lwz r3, 0x578(r3)
 /* 80B284F8  83 A3 00 04 */	lwz r29, 4(r3)
 /* 80B284FC  38 00 00 00 */	li r0, 0
-/* 80B28500  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B28504  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B28500  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B28504  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B28508  3B E3 61 C0 */	addi r31, r3, 0x61c0
 /* 80B2850C  80 9E 0E 44 */	lwz r4, 0xe44(r30)
 /* 80B28510  28 04 00 00 */	cmplwi r4, 0

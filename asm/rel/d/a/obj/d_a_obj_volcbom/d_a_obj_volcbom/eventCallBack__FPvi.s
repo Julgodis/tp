@@ -2,9 +2,9 @@ lbl_80D24198:
 /* 80D24198  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80D2419C  7C 08 02 A6 */	mflr r0
 /* 80D241A0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80D241A4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D241A8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D241AC  80 04 5D AC */	lwz r0, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D241A4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D241A8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D241AC  80 04 5D AC */	lwz r0, 0x5dac(r4)
 /* 80D241B0  28 03 00 00 */	cmplwi r3, 0
 /* 80D241B4  41 82 00 18 */	beq lbl_80D241CC
 /* 80D241B8  7C 03 03 78 */	mr r3, r0

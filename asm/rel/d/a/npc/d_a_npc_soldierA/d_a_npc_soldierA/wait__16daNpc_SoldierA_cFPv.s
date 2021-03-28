@@ -74,10 +74,10 @@ lbl_80AF1818:
 /* 80AF1844  38 A5 26 54 */	addi r5, r5, srchAttnActor1__8daNpcF_cFPvPv@l
 /* 80AF1848  3C C0 80 AF */	lis r6, m__22daNpc_SoldierA_Param_c@ha
 /* 80AF184C  38 C6 26 E8 */	addi r6, r6, m__22daNpc_SoldierA_Param_c@l
-/* 80AF1850  C0 26 00 54 */	lfs f1, 0x54(r6)	/* effective address: 80AF273C */
-/* 80AF1854  C0 46 00 58 */	lfs f2, 0x58(r6)	/* effective address: 80AF2740 */
-/* 80AF1858  C0 66 00 5C */	lfs f3, 0x5c(r6)	/* effective address: 80AF2744 */
-/* 80AF185C  C0 86 00 50 */	lfs f4, 0x50(r6)	/* effective address: 80AF2738 */
+/* 80AF1850  C0 26 00 54 */	lfs f1, 0x54(r6)
+/* 80AF1854  C0 46 00 58 */	lfs f2, 0x58(r6)
+/* 80AF1858  C0 66 00 5C */	lfs f3, 0x5c(r6)
+/* 80AF185C  C0 86 00 50 */	lfs f4, 0x50(r6)
 /* 80AF1860  A8 DF 04 E6 */	lha r6, 0x4e6(r31)
 /* 80AF1864  38 E0 00 78 */	li r7, 0x78
 /* 80AF1868  39 00 00 01 */	li r8, 1

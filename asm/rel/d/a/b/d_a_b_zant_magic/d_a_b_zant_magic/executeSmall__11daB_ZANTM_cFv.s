@@ -62,14 +62,14 @@ lbl_8064FB18:
 /* 8064FB24  98 1E 05 F1 */	stb r0, 0x5f1(r30)
 /* 8064FB28  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 8064FB2C  D0 1E 05 E8 */	stfs f0, 0x5e8(r30)
-/* 8064FB30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8064FB34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8064FB38  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8064FB3C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 8064FB30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8064FB34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8064FB38  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8064FB3C  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8064FB40  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8064FB44  C0 63 04 D4 */	lfs f3, 0x4d4(r3)	/* effective address: 80406694 */
+/* 8064FB44  C0 63 04 D4 */	lfs f3, 0x4d4(r3)
 /* 8064FB48  D0 61 00 18 */	stfs f3, 0x18(r1)
-/* 8064FB4C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 8064FB4C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8064FB50  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8064FB54  C0 5F 00 20 */	lfs f2, 0x20(r31)
 /* 8064FB58  88 1E 05 F0 */	lbz r0, 0x5f0(r30)
@@ -123,7 +123,7 @@ lbl_8064FBB4:
 /* 8064FC14  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8064FC18  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8064FC1C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8064FC20  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8064FC20  80 63 00 00 */	lwz r3, 0(r3)
 /* 8064FC24  38 81 00 0C */	addi r4, r1, 0xc
 /* 8064FC28  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8064FC2C  38 C0 00 00 */	li r6, 0
@@ -140,7 +140,7 @@ lbl_8064FC4C:
 /* 8064FC54  90 01 00 08 */	stw r0, 8(r1)
 /* 8064FC58  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8064FC5C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8064FC60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8064FC60  80 63 00 00 */	lwz r3, 0(r3)
 /* 8064FC64  38 81 00 08 */	addi r4, r1, 8
 /* 8064FC68  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8064FC6C  38 C0 00 00 */	li r6, 0

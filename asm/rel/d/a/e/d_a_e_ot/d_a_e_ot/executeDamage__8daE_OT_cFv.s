@@ -113,7 +113,7 @@ lbl_8073B9F0:
 /* 8073B9F8  4B B2 BE 74 */	b cM_rnd__Fv
 /* 8073B9FC  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 8073BA00  38 63 D2 BC */	addi r3, r3, l_HIO@l
-/* 8073BA04  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8073D2C8 */
+/* 8073BA04  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8073BA08  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8073BA0C  40 80 01 78 */	bge lbl_8073BB84
 /* 8073BA10  38 7F 04 D0 */	addi r3, r31, 0x4d0
@@ -190,9 +190,9 @@ lbl_8073BABC:
 /* 8073BB18  4B B3 52 A8 */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 8073BB1C  3C 60 80 74 */	lis r3, struct_8073D2DC+0x0@ha
 /* 8073BB20  38 83 D2 DC */	addi r4, r3, struct_8073D2DC+0x0@l
-/* 8073BB24  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 8073D2DC */
+/* 8073BB24  88 64 00 00 */	lbz r3, 0(r4)
 /* 8073BB28  38 03 00 01 */	addi r0, r3, 1
-/* 8073BB2C  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 8073D2DC */
+/* 8073BB2C  98 04 00 00 */	stb r0, 0(r4)
 /* 8073BB30  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 8073BB34  28 00 00 05 */	cmplwi r0, 5
 /* 8073BB38  40 80 00 0C */	bge lbl_8073BB44
@@ -204,7 +204,7 @@ lbl_8073BB44:
 /* 8073BB4C  4B B2 BD 20 */	b cM_rnd__Fv
 /* 8073BB50  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 8073BB54  38 63 D2 BC */	addi r3, r3, l_HIO@l
-/* 8073BB58  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8073D2C8 */
+/* 8073BB58  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8073BB5C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8073BB60  40 80 00 24 */	bge lbl_8073BB84
 /* 8073BB64  38 7F 04 D0 */	addi r3, r31, 0x4d0

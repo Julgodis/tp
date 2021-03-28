@@ -7,9 +7,9 @@ lbl_80D28B7C:
 /* 80D28B90  3C 60 80 D3 */	lis r3, l_midna_wait_offset@ha
 /* 80D28B94  C4 03 96 08 */	lfsu f0, l_midna_wait_offset@l(r3)
 /* 80D28B98  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80D28B9C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80D30004 */
+/* 80D28B9C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80D28BA0  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D28BA4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D30008 */
+/* 80D28BA4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D28BA8  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80D28BAC  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80D28BB0  4B 2E 41 B4 */	b transS__14mDoMtx_stack_cFRC4cXyz

@@ -19,7 +19,6 @@ extern void* const data_804BB520[2];
 // 
 
 
-extern "C" void __sinit_d_a_mg_rod_cpp(); // 1
 
 // 
 // Declarations:

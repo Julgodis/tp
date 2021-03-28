@@ -7,10 +7,10 @@ lbl_80C99938:
 /* 80C9994C  7C 7F 1B 78 */	mr r31, r3
 /* 80C99950  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99954  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99958  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99958  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C9995C  38 80 00 15 */	li r4, 0x15
-/* 80C99960  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C99964  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C99960  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C99964  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C99968  3F C5 00 02 */	addis r30, r5, 2
 /* 80C9996C  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80C99970  7F C5 F3 78 */	mr r5, r30
@@ -27,18 +27,18 @@ lbl_80C99938:
 /* 80C9999C  38 60 00 00 */	li r3, 0
 /* 80C999A0  48 00 05 7C */	b lbl_80C99F1C
 lbl_80C999A4:
-/* 80C999A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C999A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C999A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C999A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C999AC  3B 83 07 F0 */	addi r28, r3, 0x7f0
 /* 80C999B0  7F 83 E3 78 */	mr r3, r28
 /* 80C999B4  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80C999B8  3B A4 72 88 */	addi r29, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80C999BC  A0 9D 02 C4 */	lhz r4, 0x2c4(r29)	/* effective address: 803A754C */
+/* 80C999BC  A0 9D 02 C4 */	lhz r4, 0x2c4(r29)
 /* 80C999C0  4B 39 AF FC */	b isEventBit__11dSv_event_cCFUs
 /* 80C999C4  7C 60 1B 79 */	or. r0, r3, r3
 /* 80C999C8  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C999CC  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C999D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C999D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C999D4  38 80 00 0E */	li r4, 0xe
 /* 80C999D8  41 82 00 08 */	beq lbl_80C999E0
 /* 80C999DC  38 80 00 0D */	li r4, 0xd
@@ -59,7 +59,7 @@ lbl_80C999E0:
 lbl_80C99A14:
 /* 80C99A14  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99A18  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99A1C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99A1C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99A20  38 80 00 0A */	li r4, 0xa
 /* 80C99A24  7F C5 F3 78 */	mr r5, r30
 /* 80C99A28  38 C0 00 80 */	li r6, 0x80
@@ -123,7 +123,7 @@ lbl_80C99AC0:
 lbl_80C99AFC:
 /* 80C99AFC  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99B00  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99B04  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99B04  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99B08  38 80 00 22 */	li r4, 0x22
 /* 80C99B0C  7F C5 F3 78 */	mr r5, r30
 /* 80C99B10  38 C0 00 80 */	li r6, 0x80
@@ -144,7 +144,7 @@ lbl_80C99B3C:
 /* 80C99B48  7C 60 1B 79 */	or. r0, r3, r3
 /* 80C99B4C  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99B50  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99B54  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99B54  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99B58  38 80 00 20 */	li r4, 0x20
 /* 80C99B5C  41 82 00 08 */	beq lbl_80C99B64
 /* 80C99B60  38 80 00 1F */	li r4, 0x1f
@@ -178,7 +178,7 @@ lbl_80C99B94:
 /* 80C99BC8  41 82 03 50 */	beq lbl_80C99F18
 /* 80C99BCC  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99BD0  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99BD4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99BD4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99BD8  38 80 00 14 */	li r4, 0x14
 /* 80C99BDC  7F C5 F3 78 */	mr r5, r30
 /* 80C99BE0  38 C0 00 80 */	li r6, 0x80
@@ -191,7 +191,7 @@ lbl_80C99B94:
 /* 80C99BFC  90 7F 05 70 */	stw r3, 0x570(r31)
 /* 80C99C00  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99C04  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99C08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99C08  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99C0C  38 80 00 19 */	li r4, 0x19
 /* 80C99C10  7F C5 F3 78 */	mr r5, r30
 /* 80C99C14  38 C0 00 80 */	li r6, 0x80
@@ -230,7 +230,7 @@ lbl_80C99C88:
 lbl_80C99C90:
 /* 80C99C90  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99C94  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99C98  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99C98  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99C9C  38 80 00 21 */	li r4, 0x21
 /* 80C99CA0  7F C5 F3 78 */	mr r5, r30
 /* 80C99CA4  38 C0 00 80 */	li r6, 0x80
@@ -247,7 +247,7 @@ lbl_80C99C90:
 lbl_80C99CD0:
 /* 80C99CD0  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99CD4  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99CD8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99CD8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99CDC  38 80 00 13 */	li r4, 0x13
 /* 80C99CE0  7F C5 F3 78 */	mr r5, r30
 /* 80C99CE4  38 C0 00 80 */	li r6, 0x80
@@ -259,7 +259,7 @@ lbl_80C99CD0:
 /* 80C99CFC  90 7F 05 74 */	stw r3, 0x574(r31)
 /* 80C99D00  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99D04  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99D08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99D08  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99D0C  38 80 00 11 */	li r4, 0x11
 /* 80C99D10  7F C5 F3 78 */	mr r5, r30
 /* 80C99D14  38 C0 00 80 */	li r6, 0x80
@@ -272,7 +272,7 @@ lbl_80C99CD0:
 /* 80C99D30  90 7F 05 78 */	stw r3, 0x578(r31)
 /* 80C99D34  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99D38  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99D3C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99D3C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99D40  38 80 00 1C */	li r4, 0x1c
 /* 80C99D44  7F C5 F3 78 */	mr r5, r30
 /* 80C99D48  38 C0 00 80 */	li r6, 0x80
@@ -311,7 +311,7 @@ lbl_80C99DBC:
 lbl_80C99DC4:
 /* 80C99DC4  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99DC8  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99DCC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99DCC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99DD0  38 80 00 12 */	li r4, 0x12
 /* 80C99DD4  7F C5 F3 78 */	mr r5, r30
 /* 80C99DD8  38 C0 00 80 */	li r6, 0x80
@@ -324,7 +324,7 @@ lbl_80C99DC4:
 /* 80C99DF4  90 7F 05 7C */	stw r3, 0x57c(r31)
 /* 80C99DF8  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99DFC  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99E00  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99E00  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99E04  38 80 00 18 */	li r4, 0x18
 /* 80C99E08  7F C5 F3 78 */	mr r5, r30
 /* 80C99E0C  38 C0 00 80 */	li r6, 0x80
@@ -363,7 +363,7 @@ lbl_80C99E80:
 lbl_80C99E88:
 /* 80C99E88  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C99E8C  38 63 B2 A4 */	addi r3, r3, l_arcName@l
-/* 80C99E90  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C9B2A4 */
+/* 80C99E90  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C99E94  38 80 00 09 */	li r4, 9
 /* 80C99E98  7F C5 F3 78 */	mr r5, r30
 /* 80C99E9C  38 C0 00 80 */	li r6, 0x80

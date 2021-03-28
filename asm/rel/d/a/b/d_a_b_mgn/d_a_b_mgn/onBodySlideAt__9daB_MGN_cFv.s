@@ -8,7 +8,7 @@ lbl_80607BB0:
 /* 80607BC8  38 00 00 0F */	li r0, 0xf
 /* 80607BCC  7C 09 03 A6 */	mtctr r0
 lbl_80607BD0:
-/* 80607BD0  88 08 00 00 */	lbz r0, 0(r8)	/* effective address: 8061018C */
+/* 80607BD0  88 08 00 00 */	lbz r0, 0(r8)
 /* 80607BD4  28 00 00 00 */	cmplwi r0, 0
 /* 80607BD8  41 82 00 14 */	beq lbl_80607BEC
 /* 80607BDC  7D 23 22 14 */	add r9, r3, r4

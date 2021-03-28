@@ -10,10 +10,10 @@ lbl_805BCD7C:
 /* 805BCD9C  7C 9E 23 78 */	mr r30, r4
 /* 805BCDA0  3C 60 80 5C */	lis r3, lit_3800@ha
 /* 805BCDA4  3B E3 6C 74 */	addi r31, r3, lit_3800@l
-/* 805BCDA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805BCDAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805BCDB0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805BCDB4  C3 FF 00 0C */	lfs f31, 0xc(r31)	/* effective address: 805C6C80 */
+/* 805BCDA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805BCDAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BCDB0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805BCDB4  C3 FF 00 0C */	lfs f31, 0xc(r31)
 /* 805BCDB8  88 1D 07 D1 */	lbz r0, 0x7d1(r29)
 /* 805BCDBC  28 00 00 01 */	cmplwi r0, 1
 /* 805BCDC0  40 82 00 1C */	bne lbl_805BCDDC

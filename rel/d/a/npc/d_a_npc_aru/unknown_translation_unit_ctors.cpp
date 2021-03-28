@@ -19,7 +19,6 @@ extern void* const data_809576BC[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_aru_cpp(); // 1
 
 // 
 // Declarations:

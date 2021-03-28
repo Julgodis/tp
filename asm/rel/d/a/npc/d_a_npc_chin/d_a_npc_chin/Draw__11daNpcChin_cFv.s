@@ -15,7 +15,7 @@ lbl_8098CD74:
 /* 8098CDA8  38 A0 00 00 */	li r5, 0
 /* 8098CDAC  3C C0 80 99 */	lis r6, m__17daNpcChin_Param_c@ha
 /* 8098CDB0  38 C6 19 0C */	addi r6, r6, m__17daNpcChin_Param_c@l
-/* 8098CDB4  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80991918 */
+/* 8098CDB4  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 8098CDB8  38 C0 00 00 */	li r6, 0
 /* 8098CDBC  38 E0 00 00 */	li r7, 0
 /* 8098CDC0  4B 7C 54 EC */	b draw__8daNpcF_cFiifP11_GXColorS10i

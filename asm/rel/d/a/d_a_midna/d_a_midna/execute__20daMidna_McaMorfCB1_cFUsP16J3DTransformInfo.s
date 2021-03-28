@@ -1,8 +1,8 @@
 lbl_804BC36C:
 /* 804BC36C  3C C0 80 45 */	lis r6, m_midnaActor__9daPy_py_c@ha
 /* 804BC370  38 C6 10 18 */	addi r6, r6, m_midnaActor__9daPy_py_c@l
-/* 804BC374  80 C6 00 00 */	lwz r6, 0(r6)	/* effective address: 80451018 */
-/* 804BC378  80 06 08 90 */	lwz r0, 0x890(r6)	/* effective address: 804518A8 */
+/* 804BC374  80 C6 00 00 */	lwz r6, 0(r6)
+/* 804BC378  80 06 08 90 */	lwz r0, 0x890(r6)
 /* 804BC37C  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
 /* 804BC380  40 82 00 58 */	bne lbl_804BC3D8
 /* 804BC384  54 84 04 3E */	clrlwi r4, r4, 0x10

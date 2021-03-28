@@ -7,14 +7,14 @@ lbl_80CBD7B4:
 /* 80CBD7C8  C0 E3 05 CC */	lfs f7, 0x5cc(r3)
 /* 80CBD7CC  C0 A3 05 C8 */	lfs f5, 0x5c8(r3)
 /* 80CBD7D0  C0 83 05 C4 */	lfs f4, 0x5c4(r3)
-/* 80CBD7D4  C0 64 00 B0 */	lfs f3, 0xb0(r4)	/* effective address: 80CBDB0C */
+/* 80CBD7D4  C0 64 00 B0 */	lfs f3, 0xb0(r4)
 /* 80CBD7D8  EC 23 01 32 */	fmuls f1, f3, f4
-/* 80CBD7DC  C0 04 00 A4 */	lfs f0, 0xa4(r4)	/* effective address: 80CBDB00 */
+/* 80CBD7DC  C0 04 00 A4 */	lfs f0, 0xa4(r4)
 /* 80CBD7E0  EC 40 01 72 */	fmuls f2, f0, f5
 /* 80CBD7E4  EC 63 01 F2 */	fmuls f3, f3, f7
-/* 80CBD7E8  C0 C4 00 48 */	lfs f6, 0x48(r4)	/* effective address: 80CBDAA4 */
+/* 80CBD7E8  C0 C4 00 48 */	lfs f6, 0x48(r4)
 /* 80CBD7EC  EC 86 01 32 */	fmuls f4, f6, f4
-/* 80CBD7F0  C0 04 00 B4 */	lfs f0, 0xb4(r4)	/* effective address: 80CBDB10 */
+/* 80CBD7F0  C0 04 00 B4 */	lfs f0, 0xb4(r4)
 /* 80CBD7F4  EC A0 01 72 */	fmuls f5, f0, f5
 /* 80CBD7F8  EC C6 01 F2 */	fmuls f6, f6, f7
 /* 80CBD7FC  4B 35 CD 4C */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff

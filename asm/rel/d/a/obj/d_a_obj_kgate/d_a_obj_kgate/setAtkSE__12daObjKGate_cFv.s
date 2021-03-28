@@ -13,7 +13,7 @@ lbl_805896F8:
 /* 80589724  90 01 00 08 */	stw r0, 8(r1)
 /* 80589728  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8058972C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80589730  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80589730  80 63 00 00 */	lwz r3, 0(r3)
 /* 80589734  38 81 00 08 */	addi r4, r1, 8
 /* 80589738  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8058973C  38 C0 00 00 */	li r6, 0

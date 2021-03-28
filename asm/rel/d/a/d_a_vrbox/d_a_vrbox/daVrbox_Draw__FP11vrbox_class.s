@@ -13,7 +13,7 @@ lbl_80498518:
 /* 80498544  48 00 01 75 */	bl daVrbox_color_set__FP11vrbox_class
 /* 80498548  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8049854C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80498550  88 03 12 D4 */	lbz r0, 0x12d4(r3)	/* effective address: 8042DD28 */
+/* 80498550  88 03 12 D4 */	lbz r0, 0x12d4(r3)
 /* 80498554  28 00 00 00 */	cmplwi r0, 0
 /* 80498558  41 82 00 0C */	beq lbl_80498564
 /* 8049855C  38 60 00 01 */	li r3, 1
@@ -23,8 +23,8 @@ lbl_80498564:
 /* 80498568  88 83 0D 64 */	lbz r4, struct_80450D64+0x0@l(r3)
 /* 8049856C  7C 84 07 75 */	extsb. r4, r4
 /* 80498570  41 80 00 28 */	blt lbl_80498598
-/* 80498574  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80498578  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80498574  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80498578  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049857C  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 80498580  4B B8 BE 04 */	b getStatusRoomDt__20dStage_roomControl_cFi
 /* 80498584  81 83 00 00 */	lwz r12, 0(r3)
@@ -37,9 +37,9 @@ lbl_80498598:
 /* 8049859C  41 82 00 08 */	beq lbl_804985A4
 /* 804985A0  C3 FD 00 04 */	lfs f31, 4(r29)
 lbl_804985A4:
-/* 804985A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804985A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804985AC  80 83 61 B0 */	lwz r4, 0x61b0(r3)	/* effective address: 8040C370 */
+/* 804985A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804985A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804985AC  80 83 61 B0 */	lwz r4, 0x61b0(r3)
 /* 804985B0  28 04 00 00 */	cmplwi r4, 0
 /* 804985B4  41 82 00 1C */	beq lbl_804985D0
 /* 804985B8  3C 60 80 4A */	lis r3, lit_3696@ha
@@ -86,21 +86,21 @@ lbl_80498644:
 lbl_8049864C:
 /* 8049864C  2C 1C 00 00 */	cmpwi r28, 0
 /* 80498650  40 80 FF C8 */	bge lbl_80498618
-/* 80498654  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80498658  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 8049865C  80 04 5F 64 */	lwz r0, 0x5f64(r4)	/* effective address: 8040C124 */
+/* 80498654  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80498658  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8049865C  80 04 5F 64 */	lwz r0, 0x5f64(r4)
 /* 80498660  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80498664  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 80498668  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 8049866C  80 04 5F 68 */	lwz r0, 0x5f68(r4)	/* effective address: 8040C128 */
-/* 80498670  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 80498668  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 8049866C  80 04 5F 68 */	lwz r0, 0x5f68(r4)
+/* 80498670  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80498674  7F E3 FB 78 */	mr r3, r31
 /* 80498678  4B B7 56 4C */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 8049867C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80498680  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80498684  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8049867C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80498680  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80498684  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80498688  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 8049868C  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8049868C  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80498690  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80498694  38 60 00 01 */	li r3, 1
 lbl_80498698:

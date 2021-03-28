@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JPABaseEmitter {
-};
-
 struct _GXColor {
 };
 
@@ -52,6 +49,9 @@ namespace JStudio {
 		/* 8028B568 */ TVariableValue();
 	};
 
+};
+
+struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {
@@ -183,36 +183,36 @@ extern "C" extern u8 data_80451200[8];
 /* ############################################################################################## */
 /* 803C5AF0-803C5B0C 001C+00 s=3 e=0 z=0  None .data      __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_ */
 SECTION_DATA static void* __vt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_[7] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv,
-	/* 3    */ (void*)execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
-	/* 5    */ (void*)draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_Fv,
+	(void*)execute__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
+	(void*)executeAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
+	(void*)draw__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
+	(void*)drawAfter__Q317JStudio_JParticle17TAdaptor_particle21TJPACallback_emitter_FP14JPABaseEmitter,
 };
 
 /* 803C5B0C-803C5B58 004C+00 s=2 e=0 z=0  None .data      __vt__Q217JStudio_JParticle17TAdaptor_particle               */
 SECTION_DATA static void* __vt__Q217JStudio_JParticle17TAdaptor_particle[19] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q217JStudio_JParticle17TAdaptor_particleFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv,
-	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	/* 5    */ (void*)adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv,
-	/* 6    */ (void*)adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl,
-	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	/* 8    */ (void*)adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 9    */ (void*)adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 10   */ (void*)adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 11   */ (void*)adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 12   */ (void*)adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 13   */ (void*)adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 14   */ (void*)adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 15   */ (void*)adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 16   */ (void*)adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 17   */ (void*)adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 18   */ (void*)adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q217JStudio_JParticle17TAdaptor_particleFv,
+	(void*)adaptor_do_prepare__Q217JStudio_JParticle17TAdaptor_particleFv,
+	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_end__Q217JStudio_JParticle17TAdaptor_particleFv,
+	(void*)adaptor_do_update__Q217JStudio_JParticle17TAdaptor_particleFUl,
+	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	(void*)adaptor_do_PARTICLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_BEGIN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_BEGIN_FADE_IN__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_END_FADE_OUT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_NODE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_ENABLE__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_FUNCTION__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_REPEAT__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_ON_EXIT_NOT_END__Q217JStudio_JParticle17TAdaptor_particleFQ37JStudio4data15TEOperationDataPCvUl,
 };
 
 /* 8028E60C-8028E700 00F4+00 s=0 e=1 z=0  None .text      __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject */

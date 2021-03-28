@@ -42,10 +42,10 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTagRetRm_create(daTagRetRm_c*); // 2
-static void daTagRetRm_Delete(daTagRetRm_c*); // 2
-static void daTagRetRm_execute(daTagRetRm_c*); // 2
-static void daTagRetRm_draw(daTagRetRm_c*); // 2
+void daTagRetRm_create(daTagRetRm_c*); // 2
+void daTagRetRm_Delete(daTagRetRm_c*); // 2
+void daTagRetRm_execute(daTagRetRm_c*); // 2
+void daTagRetRm_draw(daTagRetRm_c*); // 2
 
 extern "C" void __ct__12daTagRetRm_cFv(); // 1
 extern "C" void __dt__12daTagRetRm_cFv(); // 1
@@ -55,10 +55,11 @@ extern "C" bool draw__12daTagRetRm_cFv(); // 1
 extern "C" void execute__12daTagRetRm_cFv(); // 1
 extern "C" void init__12daTagRetRm_cFv(); // 1
 extern "C" void chkPlyrInTag__12daTagRetRm_cFv(); // 1
-extern "C" static void daTagRetRm_create__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_Delete__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_execute__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_draw__FP12daTagRetRm_c(); // 1
+extern "C" void daTagRetRm_create__FP12daTagRetRm_c(); // 1
+extern "C" void daTagRetRm_Delete__FP12daTagRetRm_c(); // 1
+extern "C" void daTagRetRm_execute__FP12daTagRetRm_c(); // 1
+extern "C" void daTagRetRm_draw__FP12daTagRetRm_c(); // 1
+extern "C" extern void* daTagRetRm_METHODS[8];
 extern "C" extern void* g_profile_Tag_RetRoom[12];
 
 // 
@@ -75,50 +76,47 @@ extern "C" void forceRestartRoom__9daPy_py_cFiUli(); // 1
 extern "C" void __mi__4cXyzCFRC3Vec(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXMultVec(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
 // 
 
 /* ############################################################################################## */
-/* 80D5F214-80D5F234 0020+00 s=1 e=0 z=0  None .data      daTagRetRm_METHODS                                           */
-SECTION_DATA static void* daTagRetRm_METHODS[8] = {
-	/* 0    */ (void*)daTagRetRm_create__FP12daTagRetRm_c,
-	/* 1    */ (void*)daTagRetRm_Delete__FP12daTagRetRm_c,
-	/* 2    */ (void*)daTagRetRm_execute__FP12daTagRetRm_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagRetRm_draw__FP12daTagRetRm_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5F214-80D5F234 0020+00 s=0 e=0 z=0  None .data      daTagRetRm_METHODS                                           */
+SECTION_DATA void* daTagRetRm_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5F234-80D5F264 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_RetRoom                                        */
+/* 80D5F234-80D5F264 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_RetRoom                                        */
 SECTION_DATA void* g_profile_Tag_RetRoom[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01890000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000057C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02DB0000,
-	/* 9    */ (void*)&daTagRetRm_METHODS,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01890000,
+	(void*)NULL,
+	(void*)0x0000057C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02DB0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80D5F264-80D5F270 000C+00 s=2 e=0 z=0  None .data      __vt__12daTagRetRm_c                                         */
 SECTION_DATA static void* __vt__12daTagRetRm_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daTagRetRm_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D5EE98-80D5EED4 003C+00 s=2 e=0 z=0  None .text      __ct__12daTagRetRm_cFv                                       */
@@ -132,7 +130,7 @@ asm daTagRetRm_c::daTagRetRm_c() {
 #pragma pop
 
 
-/* 80D5EED4-80D5EF34 0060+00 s=1 e=0 z=0  None .text      __dt__12daTagRetRm_cFv                                       */
+/* 80D5EED4-80D5EF34 0060+00 s=0 e=0 z=0  None .text      __dt__12daTagRetRm_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -212,44 +210,44 @@ asm void daTagRetRm_c::chkPlyrInTag() {
 #pragma pop
 
 
-/* 80D5F14C-80D5F1A0 0054+00 s=1 e=0 z=0  None .text      daTagRetRm_create__FP12daTagRetRm_c                          */
+/* 80D5F14C-80D5F1A0 0054+00 s=0 e=0 z=0  None .text      daTagRetRm_create__FP12daTagRetRm_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRetRm_create(daTagRetRm_c* param_0) {
+asm void daTagRetRm_create(daTagRetRm_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_create__FP12daTagRetRm_c.s"
 }
 #pragma pop
 
 
-/* 80D5F1A0-80D5F1C0 0020+00 s=1 e=0 z=0  None .text      daTagRetRm_Delete__FP12daTagRetRm_c                          */
+/* 80D5F1A0-80D5F1C0 0020+00 s=0 e=0 z=0  None .text      daTagRetRm_Delete__FP12daTagRetRm_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRetRm_Delete(daTagRetRm_c* param_0) {
+asm void daTagRetRm_Delete(daTagRetRm_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_Delete__FP12daTagRetRm_c.s"
 }
 #pragma pop
 
 
-/* 80D5F1C0-80D5F1E0 0020+00 s=1 e=0 z=0  None .text      daTagRetRm_execute__FP12daTagRetRm_c                         */
+/* 80D5F1C0-80D5F1E0 0020+00 s=0 e=0 z=0  None .text      daTagRetRm_execute__FP12daTagRetRm_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRetRm_execute(daTagRetRm_c* param_0) {
+asm void daTagRetRm_execute(daTagRetRm_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_execute__FP12daTagRetRm_c.s"
 }
 #pragma pop
 
 
-/* 80D5F1E0-80D5F200 0020+00 s=1 e=0 z=0  None .text      daTagRetRm_draw__FP12daTagRetRm_c                            */
+/* 80D5F1E0-80D5F200 0020+00 s=0 e=0 z=0  None .text      daTagRetRm_draw__FP12daTagRetRm_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRetRm_draw(daTagRetRm_c* param_0) {
+asm void daTagRetRm_draw(daTagRetRm_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_ret_room/d_a_tag_ret_room/daTagRetRm_draw__FP12daTagRetRm_c.s"
 }

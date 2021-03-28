@@ -21,7 +21,7 @@ lbl_807032D4:
 /* 807032E4  7C 1B E8 2E */	lwzx r0, r27, r29
 /* 807032E8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 807032EC  7C 63 02 14 */	add r3, r3, r0
-/* 807032F0  80 9C 00 00 */	lwz r4, 0(r28)	/* effective address: 80450768 */
+/* 807032F0  80 9C 00 00 */	lwz r4, 0(r28)
 /* 807032F4  4B C4 31 BC */	b PSMTXCopy
 /* 807032F8  2C 1F 00 01 */	cmpwi r31, 1
 /* 807032FC  41 81 00 1C */	bgt lbl_80703318

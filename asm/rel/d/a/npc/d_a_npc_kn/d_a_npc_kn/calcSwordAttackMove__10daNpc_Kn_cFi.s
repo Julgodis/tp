@@ -11,9 +11,9 @@ lbl_80A37D20:
 /* 80A37D44  3C 60 80 A4 */	lis r3, mCcDObjData__10daNpc_Kn_c@ha
 /* 80A37D48  3B C3 08 C8 */	addi r30, r3, mCcDObjData__10daNpc_Kn_c@l
 /* 80A37D4C  38 61 00 18 */	addi r3, r1, 0x18
-/* 80A37D50  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A37D54  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A37D58  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A37D50  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A37D54  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A37D58  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A37D5C  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80A37D60  38 BC 04 D0 */	addi r5, r28, 0x4d0
 /* 80A37D64  4B 82 ED D0 */	b __mi__4cXyzCFRC3Vec

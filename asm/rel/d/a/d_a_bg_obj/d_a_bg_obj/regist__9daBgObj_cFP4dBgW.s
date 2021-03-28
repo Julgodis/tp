@@ -5,8 +5,8 @@ lbl_80459BB4:
 /* 80459BC0  7C 65 1B 78 */	mr r5, r3
 /* 80459BC4  28 04 00 00 */	cmplwi r4, 0
 /* 80459BC8  41 82 00 14 */	beq lbl_80459BDC
-/* 80459BCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80459BD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80459BCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80459BD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80459BD4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80459BD8  4B C1 AE 30 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
 lbl_80459BDC:

@@ -395,7 +395,7 @@ static u8 mtx[480];
 
 /* 80450768-80450770 0004+04 s=6 e=2 z=695  None .sdata     calc_mtx                                                     */
 SECTION_SDATA void* calc_mtx[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&mtx,
+	(void*)&mtx,
 	/* padding */
 	NULL,
 };

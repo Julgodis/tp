@@ -114,11 +114,11 @@ lbl_80B4A8C4:
 /* 80B4A8CC  4B 60 01 4C */	b setAngle__8daNpcT_cFs
 /* 80B4A8D0  3C 60 80 B5 */	lis r3, lit_4469@ha
 /* 80B4A8D4  38 83 CF F4 */	addi r4, r3, lit_4469@l
-/* 80B4A8D8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B4CFF4 */
-/* 80B4A8DC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B4CFF8 */
+/* 80B4A8D8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B4A8DC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B4A8E0  90 61 00 08 */	stw r3, 8(r1)
 /* 80B4A8E4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B4A8E8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B4CFFC */
+/* 80B4A8E8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B4A8EC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B4A8F0  7F E3 FB 78 */	mr r3, r31
 /* 80B4A8F4  38 81 00 08 */	addi r4, r1, 8

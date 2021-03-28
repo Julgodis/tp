@@ -41,11 +41,11 @@ lbl_80ACC1A0:
 /* 80ACC1C8  B0 1F 0F 4E */	sth r0, 0xf4e(r31)
 /* 80ACC1CC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80ACC1D0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80ACC1D4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80ACC1D8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80ACC1D4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80ACC1D8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80ACC1DC  90 7F 0E 78 */	stw r3, 0xe78(r31)
 /* 80ACC1E0  90 1F 0E 7C */	stw r0, 0xe7c(r31)
-/* 80ACC1E4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80ACC1E4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80ACC1E8  90 1F 0E 80 */	stw r0, 0xe80(r31)
 /* 80ACC1EC  38 00 00 01 */	li r0, 1
 /* 80ACC1F0  98 1F 10 FD */	stb r0, 0x10fd(r31)

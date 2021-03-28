@@ -119,23 +119,23 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BB624-803BB630 000C+00 s=1 e=0 z=0  None .data      @3693                                                        */
 SECTION_DATA static void* lit_3693[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open_init__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open_init__8dScope_cFv,
 };
 
 /* 803BB630-803BB63C 000C+00 s=1 e=0 z=0  None .data      @3694                                                        */
 SECTION_DATA static void* lit_3694[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_init__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_init__8dScope_cFv,
 };
 
 /* 803BB63C-803BB648 000C+00 s=1 e=0 z=0  None .data      @3695                                                        */
 SECTION_DATA static void* lit_3695[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)close_init__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)close_init__8dScope_cFv,
 };
 
 /* 803BB648-803BB66C 0024+00 s=3 e=0 z=0  None .data      init_process                                                 */
@@ -147,23 +147,23 @@ SECTION_DATA static u8 init_process[36] = {
 
 /* 803BB66C-803BB678 000C+00 s=1 e=0 z=0  None .data      @3696                                                        */
 SECTION_DATA static void* lit_3696[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open_proc__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open_proc__8dScope_cFv,
 };
 
 /* 803BB678-803BB684 000C+00 s=1 e=0 z=0  None .data      @3697                                                        */
 SECTION_DATA static void* lit_3697[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)move_proc__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)move_proc__8dScope_cFv,
 };
 
 /* 803BB684-803BB690 000C+00 s=1 e=0 z=0  None .data      @3698                                                        */
 SECTION_DATA static void* lit_3698[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)close_proc__8dScope_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)close_proc__8dScope_cFv,
 };
 
 /* 803BB690-803BB6B4 0024+00 s=2 e=0 z=0  None .data      move_process                                                 */
@@ -175,26 +175,26 @@ SECTION_DATA static u8 move_process[36] = {
 
 /* 803BB6B4-803BB6D4 0020+00 s=2 e=0 z=0  None .data      __vt__8dScope_c                                              */
 SECTION_DATA static void* __vt__8dScope_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__8dScope_cFv,
-	/* 3    */ (void*)__dt__8dScope_cFv,
-	/* 4    */ (void*)_create__11dMeterSub_cFv,
-	/* 5    */ (void*)_execute__8dScope_cFUl,
-	/* 6    */ (void*)_delete__11dMeterSub_cFv,
-	/* 7    */ (void*)isDead__8dScope_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__8dScope_cFv,
+	(void*)__dt__8dScope_cFv,
+	(void*)_create__11dMeterSub_cFv,
+	(void*)_execute__8dScope_cFUl,
+	(void*)_delete__11dMeterSub_cFv,
+	(void*)isDead__8dScope_cFv,
 };
 
 /* 803BB6D4-803BB700 0020+0C s=3 e=6 z=0  None .data      __vt__11dMeterSub_c                                          */
 SECTION_DATA void* __vt__11dMeterSub_c[8 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dMeterSub_cFv,
-	/* 3    */ (void*)__dt__11dMeterSub_cFv,
-	/* 4    */ (void*)_create__11dMeterSub_cFv,
-	/* 5    */ (void*)_execute__11dMeterSub_cFUl,
-	/* 6    */ (void*)_delete__11dMeterSub_cFv,
-	/* 7    */ (void*)isDead__11dMeterSub_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dMeterSub_cFv,
+	(void*)__dt__11dMeterSub_cFv,
+	(void*)_create__11dMeterSub_cFv,
+	(void*)_execute__11dMeterSub_cFUl,
+	(void*)_delete__11dMeterSub_cFv,
+	(void*)isDead__11dMeterSub_cFv,
 	/* padding */
 	NULL,
 	NULL,

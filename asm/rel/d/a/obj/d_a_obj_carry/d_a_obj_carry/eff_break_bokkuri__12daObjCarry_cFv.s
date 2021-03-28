@@ -13,15 +13,15 @@ lbl_80477614:
 /* 80477640  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 80477644  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80477648  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 8047764C  C0 1F 0B 1C */	lfs f0, 0xb1c(r31)	/* effective address: 8047A428 */
+/* 8047764C  C0 1F 0B 1C */	lfs f0, 0xb1c(r31)
 /* 80477650  EC 01 00 2A */	fadds f0, f1, f0
 /* 80477654  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80477658  3C 60 80 48 */	lis r3, struct_8047A4BC+0x0@ha
 /* 8047765C  38 63 A4 BC */	addi r3, r3, struct_8047A4BC+0x0@l
 /* 80477660  38 63 01 79 */	addi r3, r3, 0x179
 /* 80477664  38 80 00 20 */	li r4, 0x20
-/* 80477668  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8047766C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80477668  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8047766C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80477670  3F 65 00 02 */	addis r27, r5, 2
 /* 80477674  3B 7B C2 F8 */	addi r27, r27, -15624
 /* 80477678  7F 65 DB 78 */	mr r5, r27
@@ -38,9 +38,9 @@ lbl_80477614:
 /* 804776A4  7C 7D 1B 78 */	mr r29, r3
 /* 804776A8  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 804776AC  7C 05 07 74 */	extsb r5, r0
-/* 804776B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804776B4  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 804776B8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 804776B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804776B4  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 804776B8  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 804776BC  3C 80 80 45 */	lis r4, mEcallback__18dPa_modelEcallBack@ha
 /* 804776C0  38 04 0E 90 */	addi r0, r4, mEcallback__18dPa_modelEcallBack@l
 /* 804776C4  90 01 00 08 */	stw r0, 8(r1)

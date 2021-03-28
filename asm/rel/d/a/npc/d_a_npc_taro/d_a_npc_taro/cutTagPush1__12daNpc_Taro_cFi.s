@@ -11,8 +11,8 @@ lbl_8056D310:
 /* 8056D334  7C 7F 1B 78 */	mr r31, r3
 /* 8056D338  3B C0 00 00 */	li r30, 0
 /* 8056D33C  3B A0 FF FF */	li r29, -1
-/* 8056D340  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056D344  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8056D340  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056D344  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056D348  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 8056D34C  7F 63 DB 78 */	mr r3, r27
 /* 8056D350  7F 44 D3 78 */	mr r4, r26
@@ -58,13 +58,13 @@ lbl_8056D3D0:
 /* 8056D3E0  4B BD F1 20 */	b daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz
 /* 8056D3E4  2C 03 00 00 */	cmpwi r3, 0
 /* 8056D3E8  41 82 01 18 */	beq lbl_8056D500
-/* 8056D3EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056D3F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8056D3F4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8056D3EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056D3F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8056D3F4  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8056D3F8  38 81 00 14 */	addi r4, r1, 0x14
 /* 8056D3FC  A8 A1 00 0E */	lha r5, 0xe(r1)
 /* 8056D400  38 C0 00 00 */	li r6, 0
-/* 8056D404  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8056D404  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8056D408  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 8056D40C  7D 89 03 A6 */	mtctr r12
 /* 8056D410  4E 80 04 21 */	bctrl 
@@ -125,9 +125,9 @@ lbl_8056D4D4:
 /* 8056D4D8  38 A0 00 00 */	li r5, 0
 /* 8056D4DC  4B BD E7 14 */	b initTalk__8daNpcT_cFiPP10fopAc_ac_c
 /* 8056D4E0  7F 83 E3 78 */	mr r3, r28
-/* 8056D4E4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8056D4E8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8056D4EC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8056D4E4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8056D4E8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8056D4EC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8056D4F0  4B AA D2 20 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8056D4F4  7C 64 1B 78 */	mr r4, r3
 /* 8056D4F8  7F 83 E3 78 */	mr r3, r28

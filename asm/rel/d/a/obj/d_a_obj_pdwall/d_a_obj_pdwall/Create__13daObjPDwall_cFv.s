@@ -13,8 +13,8 @@ lbl_80CACBA8:
 /* 80CACBD4  90 1E 0A 14 */	stw r0, 0xa14(r30)
 /* 80CACBD8  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80CACBDC  54 04 06 3E */	clrlwi r4, r0, 0x18
-/* 80CACBE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CACBE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CACBE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CACBE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CACBE8  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80CACBEC  7C 05 07 74 */	extsb r5, r0
 /* 80CACBF0  4B 38 87 70 */	b isSwitch__10dSv_info_cCFii

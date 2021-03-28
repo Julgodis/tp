@@ -30,11 +30,11 @@ lbl_80C91F28:
 /* 80C91F38  41 82 00 2C */	beq lbl_80C91F64
 /* 80C91F3C  3C 80 80 C9 */	lis r4, lit_3867@ha
 /* 80C91F40  38 C4 2D 2C */	addi r6, r4, lit_3867@l
-/* 80C91F44  80 86 00 00 */	lwz r4, 0(r6)	/* effective address: 80C92D2C */
-/* 80C91F48  80 06 00 04 */	lwz r0, 4(r6)	/* effective address: 80C92D30 */
+/* 80C91F44  80 86 00 00 */	lwz r4, 0(r6)
+/* 80C91F48  80 06 00 04 */	lwz r0, 4(r6)
 /* 80C91F4C  90 81 00 08 */	stw r4, 8(r1)
 /* 80C91F50  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C91F54  80 06 00 08 */	lwz r0, 8(r6)	/* effective address: 80C92D34 */
+/* 80C91F54  80 06 00 08 */	lwz r0, 8(r6)
 /* 80C91F58  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C91F5C  38 81 00 08 */	addi r4, r1, 8
 /* 80C91F60  4B FF FB F9 */	bl setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi

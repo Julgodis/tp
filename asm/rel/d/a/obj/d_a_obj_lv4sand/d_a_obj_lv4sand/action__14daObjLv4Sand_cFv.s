@@ -6,7 +6,7 @@ lbl_80C69F18:
 /* 80C69F28  38 E4 A3 E0 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80C69F2C  3C 80 80 C7 */	lis r4, data_80C6A508@ha
 /* 80C69F30  38 C4 A5 08 */	addi r6, r4, data_80C6A508@l
-/* 80C69F34  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80C6A508 */
+/* 80C69F34  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C69F38  7C 00 07 75 */	extsb. r0, r0
 /* 80C69F3C  40 82 00 58 */	bne lbl_80C69F94
 /* 80C69F40  80 87 00 24 */	lwz r4, 0x24(r7)

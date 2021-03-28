@@ -18,9 +18,9 @@ lbl_8084D144:
 /* 8084D144  88 1E 06 DF */	lbz r0, 0x6df(r30)
 /* 8084D148  28 00 00 00 */	cmplwi r0, 0
 /* 8084D14C  40 82 01 F0 */	bne lbl_8084D33C
-/* 8084D150  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084D154  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8084D158  80 03 0D D0 */	lwz r0, 0xdd0(r3)	/* effective address: 80406F90 */
+/* 8084D150  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084D154  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8084D158  80 03 0D D0 */	lwz r0, 0xdd0(r3)
 /* 8084D15C  54 00 07 3E */	clrlwi r0, r0, 0x1c
 /* 8084D160  28 00 00 0A */	cmplwi r0, 0xa
 /* 8084D164  40 82 01 D8 */	bne lbl_8084D33C
@@ -29,9 +29,9 @@ lbl_8084D144:
 /* 8084D170  40 82 01 7C */	bne lbl_8084D2EC
 /* 8084D174  7F C3 F3 78 */	mr r3, r30
 /* 8084D178  4B FF DD C9 */	bl createBalloonScore__8daKago_cFv
-/* 8084D17C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084D180  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8084D184  A8 03 4E 08 */	lha r0, 0x4e08(r3)	/* effective address: 8040AFC8 */
+/* 8084D17C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084D180  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8084D184  A8 03 4E 08 */	lha r0, 0x4e08(r3)
 /* 8084D188  7C 00 07 35 */	extsh. r0, r0
 /* 8084D18C  40 82 00 1C */	bne lbl_8084D1A8
 /* 8084D190  38 60 00 01 */	li r3, 1
@@ -102,8 +102,8 @@ lbl_8084D1C4:
 /* 8084D28C  88 1E 06 E7 */	lbz r0, 0x6e7(r30)
 /* 8084D290  28 00 00 00 */	cmplwi r0, 0
 /* 8084D294  40 82 00 34 */	bne lbl_8084D2C8
-/* 8084D298  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084D29C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084D298  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084D29C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8084D2A0  38 63 09 58 */	addi r3, r3, 0x958
 /* 8084D2A4  38 80 00 09 */	li r4, 9
 /* 8084D2A8  4B 7E 75 B8 */	b isSwitch__12dSv_memBit_cCFi

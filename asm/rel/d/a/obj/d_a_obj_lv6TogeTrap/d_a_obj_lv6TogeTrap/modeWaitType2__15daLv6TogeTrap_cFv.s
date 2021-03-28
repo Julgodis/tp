@@ -17,7 +17,7 @@ lbl_80C7B9A8:
 /* 80C7B9E4  90 01 00 08 */	stw r0, 8(r1)
 /* 80C7B9E8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C7B9EC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C7B9F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C7B9F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C7B9F4  38 81 00 08 */	addi r4, r1, 8
 /* 80C7B9F8  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C7B9FC  7F E7 FB 78 */	mr r7, r31

@@ -57,8 +57,8 @@ lbl_80CA7068:
 /* 80CA7144  38 1F 07 68 */	addi r0, r31, 0x768
 /* 80CA7148  90 1F 09 64 */	stw r0, 0x964(r31)
 /* 80CA714C  38 7F 05 90 */	addi r3, r31, 0x590
-/* 80CA7150  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CA7154  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80CA7150  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CA7154  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80CA7158  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80CA715C  4B 3C F9 50 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80CA7160  80 1F 06 6C */	lwz r0, 0x66c(r31)

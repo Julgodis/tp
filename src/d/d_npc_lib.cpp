@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -29,9 +32,6 @@ struct csXyz {
 	/* 80018BD0 */ ~csXyz();
 	/* 80112C80 */ csXyz();
 	/* 8026745C */ void operator+=(csXyz&);
-};
-
-struct J3DModel {
 };
 
 struct dNpcLib_lookat_c {
@@ -110,9 +110,9 @@ extern "C" extern u8 data_80451164[4];
 /* ############################################################################################## */
 /* 803C2B88-803C2B98 000C+04 s=2 e=0 z=0  None .data      __vt__16dNpcLib_lookat_c                                     */
 SECTION_DATA static void* __vt__16dNpcLib_lookat_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dNpcLib_lookat_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dNpcLib_lookat_cFv,
 	/* padding */
 	NULL,
 };

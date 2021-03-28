@@ -80,12 +80,12 @@ lbl_806840E4:
 /* 80684128  D0 1E 00 3C */	stfs f0, 0x3c(r30)
 /* 8068412C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80684130  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80684134  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80684134  80 63 00 00 */	lwz r3, 0(r3)
 /* 80684138  A8 9E 00 36 */	lha r4, 0x36(r30)
 /* 8068413C  4B 98 82 A0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80684140  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80684144  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80684148  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80684148  80 63 00 00 */	lwz r3, 0(r3)
 /* 8068414C  A8 9E 00 34 */	lha r4, 0x34(r30)
 /* 80684150  4B 98 82 4C */	b mDoMtx_XrotM__FPA4_fs
 /* 80684154  C0 1F 00 10 */	lfs f0, 0x10(r31)

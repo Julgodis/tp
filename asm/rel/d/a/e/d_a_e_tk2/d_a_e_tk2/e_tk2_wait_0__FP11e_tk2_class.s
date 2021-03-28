@@ -22,7 +22,7 @@ lbl_807BA980:
 /* 807BA988  40 82 00 30 */	bne lbl_807BA9B8
 /* 807BA98C  3C 80 80 7C */	lis r4, l_HIO@ha
 /* 807BA990  38 84 BF 50 */	addi r4, r4, l_HIO@l
-/* 807BA994  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 807BBF60 */
+/* 807BA994  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 807BA998  38 80 40 00 */	li r4, 0x4000
 /* 807BA99C  4B FF FE 0D */	bl pl_check__FP11e_tk2_classfs
 /* 807BA9A0  2C 03 00 00 */	cmpwi r3, 0

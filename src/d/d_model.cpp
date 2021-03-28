@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J3DModelData {
+struct dMdl_obj_c {
 };
 
-struct dMdl_obj_c {
+struct J3DModelData {
 };
 
 struct dKy_tevstr_c {
@@ -185,11 +185,11 @@ asm void dMdl_mng_c::create() {
 /* ############################################################################################## */
 /* 803AF978-803AF990 0014+04 s=2 e=0 z=1  None .data      __vt__6dMdl_c                                                */
 SECTION_DATA void* __vt__6dMdl_c[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__6dMdl_cFv,
-	/* 4    */ (void*)__dt__6dMdl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)entry__9J3DPacketFP13J3DDrawBuffer,
+	(void*)draw__6dMdl_cFv,
+	(void*)__dt__6dMdl_cFv,
 	/* padding */
 	NULL,
 };

@@ -7,14 +7,14 @@ lbl_805A07C8:
 /* 805A07DC  7C 7E 1B 78 */	mr r30, r3
 /* 805A07E0  3C 60 80 5A */	lis r3, lit_3769@ha
 /* 805A07E4  3B E3 11 58 */	addi r31, r3, lit_3769@l
-/* 805A07E8  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 805A1178 */
+/* 805A07E8  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 805A07EC  D0 01 00 08 */	stfs f0, 8(r1)
 /* 805A07F0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805A07F4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 805A07F8  38 7E 04 EC */	addi r3, r30, 0x4ec
-/* 805A07FC  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 805A1160 */
+/* 805A07FC  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 805A0800  FC 40 08 90 */	fmr f2, f1
-/* 805A0804  C0 7F 00 84 */	lfs f3, 0x84(r31)	/* effective address: 805A11DC */
+/* 805A0804  C0 7F 00 84 */	lfs f3, 0x84(r31)
 /* 805A0808  4B CC F2 34 */	b cLib_addCalc2__FPffff
 /* 805A080C  A8 7E 05 F6 */	lha r3, 0x5f6(r30)
 /* 805A0810  38 03 00 01 */	addi r0, r3, 1
@@ -67,7 +67,7 @@ lbl_805A086C:
 /* 805A08BC  C0 3E 04 EC */	lfs f1, 0x4ec(r30)
 /* 805A08C0  3C 60 80 5A */	lis r3, l_HIO@ha
 /* 805A08C4  3B A3 13 40 */	addi r29, r3, l_HIO@l
-/* 805A08C8  C0 1D 00 08 */	lfs f0, 8(r29)	/* effective address: 805A1348 */
+/* 805A08C8  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 805A08CC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 805A08D0  FC 40 08 90 */	fmr f2, f1
 /* 805A08D4  FC 60 08 90 */	fmr f3, f1
@@ -101,7 +101,7 @@ lbl_805A086C:
 /* 805A0944  38 63 00 60 */	addi r3, r3, 0x60
 /* 805A0948  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 805A094C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 805A0950  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 805A0950  80 84 00 00 */	lwz r4, 0(r4)
 /* 805A0954  4B DA 5B 5C */	b PSMTXCopy
 /* 805A0958  38 61 00 08 */	addi r3, r1, 8
 /* 805A095C  38 9E 05 38 */	addi r4, r30, 0x538
@@ -126,8 +126,8 @@ lbl_805A086C:
 /* 805A09A8  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 805A09AC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 805A09B0  4B CC ED 58 */	b SetR__8cM3dGSphFf
-/* 805A09B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A09B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A09B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A09B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A09BC  38 63 23 3C */	addi r3, r3, 0x233c
 /* 805A09C0  38 9E 08 C4 */	addi r4, r30, 0x8c4
 /* 805A09C4  4B CC 41 E4 */	b Set__4cCcSFP8cCcD_Obj

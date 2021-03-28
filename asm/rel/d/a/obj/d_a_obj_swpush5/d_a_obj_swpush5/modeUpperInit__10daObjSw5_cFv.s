@@ -13,7 +13,7 @@ lbl_8059C3C4:
 /* 8059C3F0  90 01 00 08 */	stw r0, 8(r1)
 /* 8059C3F4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8059C3F8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8059C3FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8059C3FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8059C400  38 81 00 08 */	addi r4, r1, 8
 /* 8059C404  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8059C408  38 C0 00 00 */	li r6, 0

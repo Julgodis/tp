@@ -11,7 +11,7 @@ lbl_809A0728:
 /* 809A074C  7C 7E 1B 78 */	mr r30, r3
 /* 809A0750  3C 60 80 9A */	lis r3, M_attr__12daNpcCoach_c@ha
 /* 809A0754  3B E3 4E D0 */	addi r31, r3, M_attr__12daNpcCoach_c@l
-/* 809A0758  C0 3F 00 A0 */	lfs f1, 0xa0(r31)	/* effective address: 809A4F70 */
+/* 809A0758  C0 3F 00 A0 */	lfs f1, 0xa0(r31)
 /* 809A075C  C0 1E 05 2C */	lfs f0, 0x52c(r30)
 /* 809A0760  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 809A0764  41 82 06 2C */	beq lbl_809A0D90
@@ -352,12 +352,12 @@ lbl_809A0ACC:
 /* 809A0C50  4B 67 C3 D0 */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
 /* 809A0C54  3B 60 00 00 */	li r27, 0
 /* 809A0C58  7F 7D DB 78 */	mr r29, r27
-/* 809A0C5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A0C60  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 809A0C5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A0C60  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 809A0C64  7F 39 07 34 */	extsh r25, r25
 /* 809A0C68  57 5A 06 3E */	clrlwi r26, r26, 0x18
 lbl_809A0C6C:
-/* 809A0C6C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 809A0C6C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 809A0C70  38 63 02 10 */	addi r3, r3, 0x210
 /* 809A0C74  38 1D 1D 84 */	addi r0, r29, 0x1d84
 /* 809A0C78  7C 9E 00 2E */	lwzx r4, r30, r0
@@ -412,12 +412,12 @@ lbl_809A0CAC:
 /* 809A0D34  4B 67 C2 EC */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
 /* 809A0D38  3B 20 00 00 */	li r25, 0
 /* 809A0D3C  3B E0 00 00 */	li r31, 0
-/* 809A0D40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A0D44  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 809A0D40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A0D44  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 809A0D48  7F 7B 07 34 */	extsh r27, r27
 /* 809A0D4C  57 5A 06 3E */	clrlwi r26, r26, 0x18
 lbl_809A0D50:
-/* 809A0D50  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 809A0D50  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 809A0D54  38 63 02 10 */	addi r3, r3, 0x210
 /* 809A0D58  38 1F 1D A8 */	addi r0, r31, 0x1da8
 /* 809A0D5C  7C 9E 00 2E */	lwzx r4, r30, r0

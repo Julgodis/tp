@@ -2,9 +2,9 @@ lbl_80BEBE64:
 /* 80BEBE64  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80BEBE68  3C 80 80 BF */	lis r4, M_attr__11daObjFlag_c@ha
 /* 80BEBE6C  38 84 C4 EC */	addi r4, r4, M_attr__11daObjFlag_c@l
-/* 80BEBE70  C0 04 00 60 */	lfs f0, 0x60(r4)	/* effective address: 80BEC54C */
+/* 80BEBE70  C0 04 00 60 */	lfs f0, 0x60(r4)
 /* 80BEBE74  EC 80 00 72 */	fmuls f4, f0, f1
-/* 80BEBE78  C0 04 00 64 */	lfs f0, 0x64(r4)	/* effective address: 80BEC550 */
+/* 80BEBE78  C0 04 00 64 */	lfs f0, 0x64(r4)
 /* 80BEBE7C  FC 04 00 40 */	fcmpo cr0, f4, f0
 /* 80BEBE80  40 81 00 08 */	ble lbl_80BEBE88
 /* 80BEBE84  FC 80 00 90 */	fmr f4, f0

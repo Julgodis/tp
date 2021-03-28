@@ -6,14 +6,14 @@ lbl_80C5D78C:
 /* 80C5D79C  7C 7F 1B 78 */	mr r31, r3
 /* 80C5D7A0  3C 60 80 C6 */	lis r3, l_HIO@ha
 /* 80C5D7A4  38 63 DC A4 */	addi r3, r3, l_HIO@l
-/* 80C5D7A8  88 03 00 04 */	lbz r0, 4(r3)	/* effective address: 80C5DCA8 */
+/* 80C5D7A8  88 03 00 04 */	lbz r0, 4(r3)
 /* 80C5D7AC  98 1F 05 89 */	stb r0, 0x589(r31)
 /* 80C5D7B0  3C 60 00 08 */	lis r3, 0x0008 /* 0x000801B8@ha */
 /* 80C5D7B4  38 03 01 B8 */	addi r0, r3, 0x01B8 /* 0x000801B8@l */
 /* 80C5D7B8  90 01 00 08 */	stw r0, 8(r1)
 /* 80C5D7BC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C5D7C0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C5D7C4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C5D7C4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C5D7C8  38 81 00 08 */	addi r4, r1, 8
 /* 80C5D7CC  38 A0 00 00 */	li r5, 0
 /* 80C5D7D0  38 C0 00 00 */	li r6, 0

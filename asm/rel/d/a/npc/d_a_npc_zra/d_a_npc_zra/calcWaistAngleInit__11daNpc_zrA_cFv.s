@@ -10,7 +10,7 @@ lbl_80B82238:
 /* 80B82258  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80B8225C  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B82260  38 63 C4 58 */	addi r3, r3, m__17daNpc_zrA_Param_c@l
-/* 80B82264  C0 03 00 8C */	lfs f0, 0x8c(r3)	/* effective address: 80B8C4E4 */
+/* 80B82264  C0 03 00 8C */	lfs f0, 0x8c(r3)
 /* 80B82268  FC 00 00 50 */	fneg f0, f0
 /* 80B8226C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80B82270  38 7F 08 F0 */	addi r3, r31, 0x8f0
@@ -19,11 +19,11 @@ lbl_80B82238:
 /* 80B8227C  4B 48 AB 58 */	b transM__14mDoMtx_stack_cFRC4cXyz
 /* 80B82280  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B82284  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B82288  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B82288  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B8228C  D0 1F 15 78 */	stfs f0, 0x1578(r31)
-/* 80B82290  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B82290  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B82294  D0 1F 15 7C */	stfs f0, 0x157c(r31)
-/* 80B82298  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B82298  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B8229C  D0 1F 15 80 */	stfs f0, 0x1580(r31)
 /* 80B822A0  38 7F 15 78 */	addi r3, r31, 0x1578
 /* 80B822A4  38 9F 04 D0 */	addi r4, r31, 0x4d0

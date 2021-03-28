@@ -7,8 +7,8 @@ lbl_805D02F8:
 /* 805D030C  88 83 08 59 */	lbz r4, 0x859(r3)
 /* 805D0310  28 04 00 FF */	cmplwi r4, 0xff
 /* 805D0314  41 82 00 4C */	beq lbl_805D0360
-/* 805D0318  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D031C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805D0318  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D031C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805D0320  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805D0324  7C 05 07 74 */	extsb r5, r0
 /* 805D0328  4B A6 4F 88 */	b offSwitch__10dSv_info_cFii

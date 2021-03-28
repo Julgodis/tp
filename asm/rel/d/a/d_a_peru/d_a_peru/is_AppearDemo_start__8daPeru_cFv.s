@@ -10,14 +10,14 @@ lbl_80D486A0:
 /* 80D486C0  41 82 00 48 */	beq lbl_80D48708
 /* 80D486C4  38 7F 0E 40 */	addi r3, r31, 0xe40
 /* 80D486C8  4B 3F D0 40 */	b getActorP__18daNpcT_ActorMngr_cFv
-/* 80D486CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D486D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D486D4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80D486D8  C0 04 04 D0 */	lfs f0, 0x4d0(r4)	/* effective address: 80406690 */
+/* 80D486CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D486D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D486D4  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 80D486D8  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
 /* 80D486DC  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80D486E0  C0 04 04 D4 */	lfs f0, 0x4d4(r4)	/* effective address: 80406694 */
+/* 80D486E0  C0 04 04 D4 */	lfs f0, 0x4d4(r4)
 /* 80D486E4  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D486E8  C0 04 04 D8 */	lfs f0, 0x4d8(r4)	/* effective address: 80406698 */
+/* 80D486E8  C0 04 04 D8 */	lfs f0, 0x4d8(r4)
 /* 80D486EC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80D486F0  38 81 00 08 */	addi r4, r1, 8
 /* 80D486F4  48 00 38 E1 */	bl chkPointInArea__15daTag_EvtArea_cF4cXyz

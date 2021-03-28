@@ -33,11 +33,11 @@ lbl_80817D48:
 /* 80817D64  4B B2 E7 4C */	b PSMTXCopy
 /* 80817D68  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80817D6C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80817D70  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80817D70  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80817D74  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80817D78  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80817D78  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80817D7C  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 80817D80  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80817D80  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80817D84  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80817D88  C0 1C 06 CC */	lfs f0, 0x6cc(r28)
 /* 80817D8C  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -45,14 +45,14 @@ lbl_80817D48:
 /* 80817D94  3B A0 00 00 */	li r29, 0
 /* 80817D98  3B 60 00 00 */	li r27, 0
 /* 80817D9C  3B 40 00 00 */	li r26, 0
-/* 80817DA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80817DA4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80817DA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80817DA4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80817DA8  3C 60 80 82 */	lis r3, data_80821C90@ha
 /* 80817DAC  3A E3 1C 90 */	addi r23, r3, data_80821C90@l
 /* 80817DB0  3C 60 80 82 */	lis r3, lit_3791@ha
 /* 80817DB4  3B 03 18 AC */	addi r24, r3, lit_3791@l
 lbl_80817DB8:
-/* 80817DB8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80817DB8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80817DBC  38 00 00 FF */	li r0, 0xff
 /* 80817DC0  90 01 00 08 */	stw r0, 8(r1)
 /* 80817DC4  38 80 00 00 */	li r4, 0
@@ -70,7 +70,7 @@ lbl_80817DB8:
 /* 80817DF4  39 1C 01 0C */	addi r8, r28, 0x10c
 /* 80817DF8  39 20 00 00 */	li r9, 0
 /* 80817DFC  39 40 00 00 */	li r10, 0
-/* 80817E00  C0 38 00 00 */	lfs f1, 0(r24)	/* effective address: 808218AC */
+/* 80817E00  C0 38 00 00 */	lfs f1, 0(r24)
 /* 80817E04  4B 83 56 C8 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80817E08  7C 7C C9 2E */	stwx r3, r28, r25
 /* 80817E0C  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)

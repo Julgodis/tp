@@ -65,10 +65,10 @@ lbl_80A3F430:
 /* 80A3F444  4B 64 50 1C */	b ChkTgHit__12dCcD_GObjInfFv
 /* 80A3F448  28 03 00 00 */	cmplwi r3, 0
 /* 80A3F44C  41 82 00 C8 */	beq lbl_80A3F514
-/* 80A3F450  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A3F454  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80A3F458  80 64 5D AC */	lwz r3, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80A3F45C  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80400568 */
+/* 80A3F450  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A3F454  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80A3F458  80 64 5D AC */	lwz r3, 0x5dac(r4)
+/* 80A3F45C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80A3F460  28 00 00 29 */	cmplwi r0, 0x29
 /* 80A3F464  41 82 00 B0 */	beq lbl_80A3F514
 /* 80A3F468  88 1E 15 AC */	lbz r0, 0x15ac(r30)

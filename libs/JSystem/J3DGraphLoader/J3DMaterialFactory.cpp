@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct J3DMaterialDLBlock {
+};
+
 struct J3DMaterial {
 	/* 803157A0 */ void createColorBlock(u32);
 	/* 803159A0 */ void createTexGenBlock(u32);
@@ -27,9 +30,6 @@ struct J3DMaterial {
 };
 
 struct J3DMaterialBlock {
-};
-
-struct J3DMaterialDLBlock {
 };
 
 struct J3DMaterialFactory {
@@ -85,24 +85,6 @@ struct J3DPEBlockNull {
 	/* 803329B0 */ ~J3DPEBlockNull();
 };
 
-struct J3DGXColorS10 {
-	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct J3DGXColor {
-	/* 8000E538 */ J3DGXColor();
-};
-
-struct J3DTevSwapModeTable {
-};
-
-struct J3DIndTevStage {
-	/* 8000E14C */ J3DIndTevStage();
-};
-
-struct J3DTevSwapModeInfo {
-};
-
 struct J3DTevStageInfo {
 };
 
@@ -111,8 +93,26 @@ struct J3DTevStage {
 	/* 8003AACC */ J3DTevStage(J3DTevStageInfo const&);
 };
 
+struct J3DIndTevStage {
+	/* 8000E14C */ J3DIndTevStage();
+};
+
 struct J3DTevOrder {
 	/* 8000E140 */ J3DTevOrder();
+};
+
+struct J3DTevSwapModeTable {
+};
+
+struct J3DGXColor {
+	/* 8000E538 */ J3DGXColor();
+};
+
+struct J3DGXColorS10 {
+	/* 8000E460 */ J3DGXColorS10();
+};
+
+struct J3DTevSwapModeInfo {
 };
 
 struct J3DTevBlock {
@@ -195,16 +195,16 @@ struct J3DColorBlockNull {
 	/* 80332B38 */ ~J3DColorBlockNull();
 };
 
-struct J3DFog {
-};
-
-struct J3DBlend {
+struct J3DZMode {
 };
 
 struct J3DAlphaComp {
 };
 
-struct J3DZMode {
+struct J3DFog {
+};
+
+struct J3DBlend {
 };
 
 struct J3DPEBlock {
@@ -277,11 +277,11 @@ struct J3DColorBlock {
 	/* 80317478 */ void setColorChanOffset(u32);
 };
 
-struct J3DNBTScale {
-};
-
 struct J3DTexCoord {
 	/* 8000E464 */ J3DTexCoord();
+};
+
+struct J3DNBTScale {
 };
 
 struct J3DTexMtx {
@@ -753,167 +753,167 @@ asm void J3DMaterialFactory::modifyPatchedCurrentMtx(J3DMaterial* param_0, int p
 /* ############################################################################################## */
 /* 803CEE90-803CEF0C 007C+00 s=2 e=0 z=0  None .data      __vt__14J3DPEBlockNull                                       */
 SECTION_DATA static void* __vt__14J3DPEBlockNull[31] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)reset__10J3DPEBlockFP10J3DPEBlock,
-	/* 3    */ (void*)load__14J3DPEBlockNullFv,
-	/* 4    */ (void*)patch__10J3DPEBlockFv,
-	/* 5    */ (void*)diff__10J3DPEBlockFUl,
-	/* 6    */ (void*)diffFog__10J3DPEBlockFv,
-	/* 7    */ (void*)diffBlend__10J3DPEBlockFv,
-	/* 8    */ (void*)countDLSize__10J3DPEBlockFv,
-	/* 9    */ (void*)getType__14J3DPEBlockNullFv,
-	/* 10   */ (void*)setFog__10J3DPEBlockF6J3DFog,
-	/* 11   */ (void*)setFog__10J3DPEBlockFP6J3DFog,
-	/* 12   */ (void*)getFog__10J3DPEBlockFv,
-	/* 13   */ (void*)setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp,
-	/* 14   */ (void*)setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp,
-	/* 15   */ (void*)getAlphaComp__10J3DPEBlockFv,
-	/* 16   */ (void*)setBlend__10J3DPEBlockFPC8J3DBlend,
-	/* 17   */ (void*)setBlend__10J3DPEBlockFRC8J3DBlend,
-	/* 18   */ (void*)getBlend__10J3DPEBlockFv,
-	/* 19   */ (void*)setZMode__10J3DPEBlockFPC8J3DZMode,
-	/* 20   */ (void*)setZMode__10J3DPEBlockF8J3DZMode,
-	/* 21   */ (void*)getZMode__10J3DPEBlockFv,
-	/* 22   */ (void*)setZCompLoc__10J3DPEBlockFPCUc,
-	/* 23   */ (void*)setZCompLoc__10J3DPEBlockFUc,
-	/* 24   */ (void*)getZCompLoc__10J3DPEBlockCFv,
-	/* 25   */ (void*)setDither__10J3DPEBlockFPCUc,
-	/* 26   */ (void*)setDither__10J3DPEBlockFUc,
-	/* 27   */ (void*)getDither__10J3DPEBlockCFv,
-	/* 28   */ (void*)getFogOffset__10J3DPEBlockCFv,
-	/* 29   */ (void*)setFogOffset__10J3DPEBlockFUl,
-	/* 30   */ (void*)__dt__14J3DPEBlockNullFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)reset__10J3DPEBlockFP10J3DPEBlock,
+	(void*)load__14J3DPEBlockNullFv,
+	(void*)patch__10J3DPEBlockFv,
+	(void*)diff__10J3DPEBlockFUl,
+	(void*)diffFog__10J3DPEBlockFv,
+	(void*)diffBlend__10J3DPEBlockFv,
+	(void*)countDLSize__10J3DPEBlockFv,
+	(void*)getType__14J3DPEBlockNullFv,
+	(void*)setFog__10J3DPEBlockF6J3DFog,
+	(void*)setFog__10J3DPEBlockFP6J3DFog,
+	(void*)getFog__10J3DPEBlockFv,
+	(void*)setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp,
+	(void*)setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp,
+	(void*)getAlphaComp__10J3DPEBlockFv,
+	(void*)setBlend__10J3DPEBlockFPC8J3DBlend,
+	(void*)setBlend__10J3DPEBlockFRC8J3DBlend,
+	(void*)getBlend__10J3DPEBlockFv,
+	(void*)setZMode__10J3DPEBlockFPC8J3DZMode,
+	(void*)setZMode__10J3DPEBlockF8J3DZMode,
+	(void*)getZMode__10J3DPEBlockFv,
+	(void*)setZCompLoc__10J3DPEBlockFPCUc,
+	(void*)setZCompLoc__10J3DPEBlockFUc,
+	(void*)getZCompLoc__10J3DPEBlockCFv,
+	(void*)setDither__10J3DPEBlockFPCUc,
+	(void*)setDither__10J3DPEBlockFUc,
+	(void*)getDither__10J3DPEBlockCFv,
+	(void*)getFogOffset__10J3DPEBlockCFv,
+	(void*)setFogOffset__10J3DPEBlockFUl,
+	(void*)__dt__14J3DPEBlockNullFv,
 };
 
 /* 803CEF0C-803CEFE8 00DC+00 s=2 e=0 z=0  None .data      __vt__15J3DTevBlockNull                                      */
 SECTION_DATA static void* __vt__15J3DTevBlockNull[55] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)reset__15J3DTevBlockNullFP11J3DTevBlock,
-	/* 3    */ (void*)load__11J3DTevBlockFv,
-	/* 4    */ (void*)diff__11J3DTevBlockFUl,
-	/* 5    */ (void*)diffTexNo__11J3DTevBlockFv,
-	/* 6    */ (void*)diffTevReg__11J3DTevBlockFv,
-	/* 7    */ (void*)diffTexCoordScale__11J3DTevBlockFv,
-	/* 8    */ (void*)diffTevStage__11J3DTevBlockFv,
-	/* 9    */ (void*)diffTevStageIndirect__11J3DTevBlockFv,
-	/* 10   */ (void*)patch__11J3DTevBlockFv,
-	/* 11   */ (void*)patchTexNo__11J3DTevBlockFv,
-	/* 12   */ (void*)patchTevReg__11J3DTevBlockFv,
-	/* 13   */ (void*)patchTexNoAndTexCoordScale__11J3DTevBlockFv,
-	/* 14   */ (void*)ptrToIndex__15J3DTevBlockNullFv,
-	/* 15   */ (void*)indexToPtr__15J3DTevBlockNullFv,
-	/* 16   */ (void*)getType__15J3DTevBlockNullFv,
-	/* 17   */ (void*)countDLSize__11J3DTevBlockFv,
-	/* 18   */ (void*)setTexNo__11J3DTevBlockFUlPCUs,
-	/* 19   */ (void*)setTexNo__11J3DTevBlockFUlUs,
-	/* 20   */ (void*)getTexNo__11J3DTevBlockCFUl,
-	/* 21   */ (void*)setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder,
-	/* 22   */ (void*)setTevOrder__11J3DTevBlockFUl11J3DTevOrder,
-	/* 23   */ (void*)getTevOrder__11J3DTevBlockFUl,
-	/* 24   */ (void*)setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10,
-	/* 25   */ (void*)setTevColor__11J3DTevBlockFUl13J3DGXColorS10,
-	/* 26   */ (void*)getTevColor__11J3DTevBlockFUl,
-	/* 27   */ (void*)setTevKColor__11J3DTevBlockFUlPC10J3DGXColor,
-	/* 28   */ (void*)setTevKColor__11J3DTevBlockFUl10J3DGXColor,
-	/* 29   */ (void*)getTevKColor__11J3DTevBlockFUl,
-	/* 30   */ (void*)setTevKColorSel__11J3DTevBlockFUlPCUc,
-	/* 31   */ (void*)setTevKColorSel__11J3DTevBlockFUlUc,
-	/* 32   */ (void*)getTevKColorSel__11J3DTevBlockFUl,
-	/* 33   */ (void*)setTevKAlphaSel__11J3DTevBlockFUlPCUc,
-	/* 34   */ (void*)setTevKAlphaSel__11J3DTevBlockFUlUc,
-	/* 35   */ (void*)getTevKAlphaSel__11J3DTevBlockFUl,
-	/* 36   */ (void*)setTevStageNum__11J3DTevBlockFPCUc,
-	/* 37   */ (void*)setTevStageNum__11J3DTevBlockFUc,
-	/* 38   */ (void*)getTevStageNum__11J3DTevBlockCFv,
-	/* 39   */ (void*)setTevStage__11J3DTevBlockFUlPC11J3DTevStage,
-	/* 40   */ (void*)setTevStage__11J3DTevBlockFUl11J3DTevStage,
-	/* 41   */ (void*)getTevStage__11J3DTevBlockFUl,
-	/* 42   */ (void*)setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo,
-	/* 43   */ (void*)setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo,
-	/* 44   */ (void*)setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable,
-	/* 45   */ (void*)setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable,
-	/* 46   */ (void*)getTevSwapModeTable__11J3DTevBlockFUl,
-	/* 47   */ (void*)setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage,
-	/* 48   */ (void*)setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage,
-	/* 49   */ (void*)getIndTevStage__11J3DTevBlockFUl,
-	/* 50   */ (void*)getTexNoOffset__11J3DTevBlockCFv,
-	/* 51   */ (void*)getTevRegOffset__11J3DTevBlockCFv,
-	/* 52   */ (void*)setTexNoOffset__11J3DTevBlockFUl,
-	/* 53   */ (void*)setTevRegOffset__11J3DTevBlockFUl,
-	/* 54   */ (void*)__dt__15J3DTevBlockNullFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)reset__15J3DTevBlockNullFP11J3DTevBlock,
+	(void*)load__11J3DTevBlockFv,
+	(void*)diff__11J3DTevBlockFUl,
+	(void*)diffTexNo__11J3DTevBlockFv,
+	(void*)diffTevReg__11J3DTevBlockFv,
+	(void*)diffTexCoordScale__11J3DTevBlockFv,
+	(void*)diffTevStage__11J3DTevBlockFv,
+	(void*)diffTevStageIndirect__11J3DTevBlockFv,
+	(void*)patch__11J3DTevBlockFv,
+	(void*)patchTexNo__11J3DTevBlockFv,
+	(void*)patchTevReg__11J3DTevBlockFv,
+	(void*)patchTexNoAndTexCoordScale__11J3DTevBlockFv,
+	(void*)ptrToIndex__15J3DTevBlockNullFv,
+	(void*)indexToPtr__15J3DTevBlockNullFv,
+	(void*)getType__15J3DTevBlockNullFv,
+	(void*)countDLSize__11J3DTevBlockFv,
+	(void*)setTexNo__11J3DTevBlockFUlPCUs,
+	(void*)setTexNo__11J3DTevBlockFUlUs,
+	(void*)getTexNo__11J3DTevBlockCFUl,
+	(void*)setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder,
+	(void*)setTevOrder__11J3DTevBlockFUl11J3DTevOrder,
+	(void*)getTevOrder__11J3DTevBlockFUl,
+	(void*)setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10,
+	(void*)setTevColor__11J3DTevBlockFUl13J3DGXColorS10,
+	(void*)getTevColor__11J3DTevBlockFUl,
+	(void*)setTevKColor__11J3DTevBlockFUlPC10J3DGXColor,
+	(void*)setTevKColor__11J3DTevBlockFUl10J3DGXColor,
+	(void*)getTevKColor__11J3DTevBlockFUl,
+	(void*)setTevKColorSel__11J3DTevBlockFUlPCUc,
+	(void*)setTevKColorSel__11J3DTevBlockFUlUc,
+	(void*)getTevKColorSel__11J3DTevBlockFUl,
+	(void*)setTevKAlphaSel__11J3DTevBlockFUlPCUc,
+	(void*)setTevKAlphaSel__11J3DTevBlockFUlUc,
+	(void*)getTevKAlphaSel__11J3DTevBlockFUl,
+	(void*)setTevStageNum__11J3DTevBlockFPCUc,
+	(void*)setTevStageNum__11J3DTevBlockFUc,
+	(void*)getTevStageNum__11J3DTevBlockCFv,
+	(void*)setTevStage__11J3DTevBlockFUlPC11J3DTevStage,
+	(void*)setTevStage__11J3DTevBlockFUl11J3DTevStage,
+	(void*)getTevStage__11J3DTevBlockFUl,
+	(void*)setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo,
+	(void*)setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo,
+	(void*)setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable,
+	(void*)setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable,
+	(void*)getTevSwapModeTable__11J3DTevBlockFUl,
+	(void*)setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage,
+	(void*)setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage,
+	(void*)getIndTevStage__11J3DTevBlockFUl,
+	(void*)getTexNoOffset__11J3DTevBlockCFv,
+	(void*)getTevRegOffset__11J3DTevBlockCFv,
+	(void*)setTexNoOffset__11J3DTevBlockFUl,
+	(void*)setTevRegOffset__11J3DTevBlockFUl,
+	(void*)__dt__15J3DTevBlockNullFv,
 };
 
 /* 803CEFE8-803CF054 006C+00 s=2 e=0 z=0  None .data      __vt__18J3DTexGenBlockNull                                   */
 SECTION_DATA static void* __vt__18J3DTexGenBlockNull[27] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)reset__14J3DTexGenBlockFP14J3DTexGenBlock,
-	/* 3    */ (void*)calc__18J3DTexGenBlockNullFPA4_Cf,
-	/* 4    */ (void*)calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
-	/* 5    */ (void*)calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf,
-	/* 6    */ (void*)calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
-	/* 7    */ (void*)load__18J3DTexGenBlockNullFv,
-	/* 8    */ (void*)patch__18J3DTexGenBlockNullFv,
-	/* 9    */ (void*)diff__18J3DTexGenBlockNullFUl,
-	/* 10   */ (void*)diffTexMtx__18J3DTexGenBlockNullFv,
-	/* 11   */ (void*)diffTexGen__18J3DTexGenBlockNullFv,
-	/* 12   */ (void*)countDLSize__14J3DTexGenBlockFv,
-	/* 13   */ (void*)getType__18J3DTexGenBlockNullFv,
-	/* 14   */ (void*)setTexGenNum__14J3DTexGenBlockFPCUl,
-	/* 15   */ (void*)setTexGenNum__14J3DTexGenBlockFUl,
-	/* 16   */ (void*)getTexGenNum__14J3DTexGenBlockCFv,
-	/* 17   */ (void*)setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord,
-	/* 18   */ (void*)getTexCoord__14J3DTexGenBlockFUl,
-	/* 19   */ (void*)setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx,
-	/* 20   */ (void*)getTexMtx__14J3DTexGenBlockFUl,
-	/* 21   */ (void*)setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale,
-	/* 22   */ (void*)setNBTScale__14J3DTexGenBlockF11J3DNBTScale,
-	/* 23   */ (void*)getNBTScale__14J3DTexGenBlockFv,
-	/* 24   */ (void*)getTexMtxOffset__14J3DTexGenBlockCFv,
-	/* 25   */ (void*)setTexMtxOffset__14J3DTexGenBlockFUl,
-	/* 26   */ (void*)__dt__18J3DTexGenBlockNullFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)reset__14J3DTexGenBlockFP14J3DTexGenBlock,
+	(void*)calc__18J3DTexGenBlockNullFPA4_Cf,
+	(void*)calcWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
+	(void*)calcPostTexMtx__18J3DTexGenBlockNullFPA4_Cf,
+	(void*)calcPostTexMtxWithoutViewMtx__18J3DTexGenBlockNullFPA4_Cf,
+	(void*)load__18J3DTexGenBlockNullFv,
+	(void*)patch__18J3DTexGenBlockNullFv,
+	(void*)diff__18J3DTexGenBlockNullFUl,
+	(void*)diffTexMtx__18J3DTexGenBlockNullFv,
+	(void*)diffTexGen__18J3DTexGenBlockNullFv,
+	(void*)countDLSize__14J3DTexGenBlockFv,
+	(void*)getType__18J3DTexGenBlockNullFv,
+	(void*)setTexGenNum__14J3DTexGenBlockFPCUl,
+	(void*)setTexGenNum__14J3DTexGenBlockFUl,
+	(void*)getTexGenNum__14J3DTexGenBlockCFv,
+	(void*)setTexCoord__14J3DTexGenBlockFUlPC11J3DTexCoord,
+	(void*)getTexCoord__14J3DTexGenBlockFUl,
+	(void*)setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx,
+	(void*)getTexMtx__14J3DTexGenBlockFUl,
+	(void*)setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale,
+	(void*)setNBTScale__14J3DTexGenBlockF11J3DNBTScale,
+	(void*)getNBTScale__14J3DTexGenBlockFv,
+	(void*)getTexMtxOffset__14J3DTexGenBlockCFv,
+	(void*)setTexMtxOffset__14J3DTexGenBlockFUl,
+	(void*)__dt__18J3DTexGenBlockNullFv,
 };
 
 /* 803CF054-803CF0E8 0090+04 s=2 e=0 z=0  None .data      __vt__17J3DColorBlockNull                                    */
 SECTION_DATA static void* __vt__17J3DColorBlockNull[36 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__13J3DColorBlockFv,
-	/* 3    */ (void*)reset__13J3DColorBlockFP13J3DColorBlock,
-	/* 4    */ (void*)patch__13J3DColorBlockFv,
-	/* 5    */ (void*)patchMatColor__13J3DColorBlockFv,
-	/* 6    */ (void*)patchLight__13J3DColorBlockFv,
-	/* 7    */ (void*)diff__13J3DColorBlockFUl,
-	/* 8    */ (void*)diffAmbColor__13J3DColorBlockFv,
-	/* 9    */ (void*)diffMatColor__13J3DColorBlockFv,
-	/* 10   */ (void*)diffColorChan__13J3DColorBlockFv,
-	/* 11   */ (void*)diffLightObj__13J3DColorBlockFUl,
-	/* 12   */ (void*)countDLSize__13J3DColorBlockFv,
-	/* 13   */ (void*)getType__17J3DColorBlockNullFv,
-	/* 14   */ (void*)setMatColor__13J3DColorBlockFUlPC10J3DGXColor,
-	/* 15   */ (void*)setMatColor__13J3DColorBlockFUl10J3DGXColor,
-	/* 16   */ (void*)getMatColor__13J3DColorBlockFUl,
-	/* 17   */ (void*)setAmbColor__13J3DColorBlockFUlPC10J3DGXColor,
-	/* 18   */ (void*)setAmbColor__13J3DColorBlockFUl10J3DGXColor,
-	/* 19   */ (void*)getAmbColor__13J3DColorBlockFUl,
-	/* 20   */ (void*)setColorChanNum__13J3DColorBlockFUc,
-	/* 21   */ (void*)setColorChanNum__13J3DColorBlockFPCUc,
-	/* 22   */ (void*)getColorChanNum__13J3DColorBlockCFv,
-	/* 23   */ (void*)setColorChan__13J3DColorBlockFUlRC12J3DColorChan,
-	/* 24   */ (void*)setColorChan__13J3DColorBlockFUlPC12J3DColorChan,
-	/* 25   */ (void*)getColorChan__13J3DColorBlockFUl,
-	/* 26   */ (void*)setLight__13J3DColorBlockFUlP11J3DLightObj,
-	/* 27   */ (void*)getLight__13J3DColorBlockFUl,
-	/* 28   */ (void*)setCullMode__13J3DColorBlockFPCUc,
-	/* 29   */ (void*)setCullMode__13J3DColorBlockFUc,
-	/* 30   */ (void*)getCullMode__13J3DColorBlockCFv,
-	/* 31   */ (void*)getMatColorOffset__13J3DColorBlockCFv,
-	/* 32   */ (void*)getColorChanOffset__13J3DColorBlockCFv,
-	/* 33   */ (void*)setMatColorOffset__13J3DColorBlockFUl,
-	/* 34   */ (void*)setColorChanOffset__13J3DColorBlockFUl,
-	/* 35   */ (void*)__dt__17J3DColorBlockNullFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__13J3DColorBlockFv,
+	(void*)reset__13J3DColorBlockFP13J3DColorBlock,
+	(void*)patch__13J3DColorBlockFv,
+	(void*)patchMatColor__13J3DColorBlockFv,
+	(void*)patchLight__13J3DColorBlockFv,
+	(void*)diff__13J3DColorBlockFUl,
+	(void*)diffAmbColor__13J3DColorBlockFv,
+	(void*)diffMatColor__13J3DColorBlockFv,
+	(void*)diffColorChan__13J3DColorBlockFv,
+	(void*)diffLightObj__13J3DColorBlockFUl,
+	(void*)countDLSize__13J3DColorBlockFv,
+	(void*)getType__17J3DColorBlockNullFv,
+	(void*)setMatColor__13J3DColorBlockFUlPC10J3DGXColor,
+	(void*)setMatColor__13J3DColorBlockFUl10J3DGXColor,
+	(void*)getMatColor__13J3DColorBlockFUl,
+	(void*)setAmbColor__13J3DColorBlockFUlPC10J3DGXColor,
+	(void*)setAmbColor__13J3DColorBlockFUl10J3DGXColor,
+	(void*)getAmbColor__13J3DColorBlockFUl,
+	(void*)setColorChanNum__13J3DColorBlockFUc,
+	(void*)setColorChanNum__13J3DColorBlockFPCUc,
+	(void*)getColorChanNum__13J3DColorBlockCFv,
+	(void*)setColorChan__13J3DColorBlockFUlRC12J3DColorChan,
+	(void*)setColorChan__13J3DColorBlockFUlPC12J3DColorChan,
+	(void*)getColorChan__13J3DColorBlockFUl,
+	(void*)setLight__13J3DColorBlockFUlP11J3DLightObj,
+	(void*)getLight__13J3DColorBlockFUl,
+	(void*)setCullMode__13J3DColorBlockFPCUc,
+	(void*)setCullMode__13J3DColorBlockFUc,
+	(void*)getCullMode__13J3DColorBlockCFv,
+	(void*)getMatColorOffset__13J3DColorBlockCFv,
+	(void*)getColorChanOffset__13J3DColorBlockCFv,
+	(void*)setMatColorOffset__13J3DColorBlockFUl,
+	(void*)setColorChanOffset__13J3DColorBlockFUl,
+	(void*)__dt__17J3DColorBlockNullFv,
 	/* padding */
 	NULL,
 };

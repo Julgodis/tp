@@ -10,12 +10,12 @@ lbl_80C4F3E8:
 lbl_80C4F408:
 /* 80C4F408  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C4F40C  38 84 F6 F8 */	addi r4, r4, l_arcName@l
-/* 80C4F410  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C4F6F8 */
+/* 80C4F410  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C4F414  4B 3D DB F4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C4F418  3B 60 00 00 */	li r27, 0
 /* 80C4F41C  3B E0 00 00 */	li r31, 0
-/* 80C4F420  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C4F424  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C4F420  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4F424  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C4F428  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80C4F42C  3B C0 00 01 */	li r30, 1
 lbl_80C4F430:

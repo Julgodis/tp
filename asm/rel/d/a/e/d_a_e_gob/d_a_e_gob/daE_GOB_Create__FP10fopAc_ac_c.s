@@ -25,8 +25,8 @@ lbl_806DE6E0:
 /* 806DE6F0  7C 7C 1B 78 */	mr r28, r3
 /* 806DE6F4  2C 1C 00 04 */	cmpwi r28, 4
 /* 806DE6F8  40 82 02 FC */	bne lbl_806DE9F4
-/* 806DE6FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806DE700  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806DE6FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806DE700  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806DE704  3B C3 09 58 */	addi r30, r3, 0x958
 /* 806DE708  7F C3 F3 78 */	mr r3, r30
 /* 806DE70C  38 80 00 03 */	li r4, 3
@@ -57,7 +57,7 @@ lbl_806DE74C:
 /* 806DE768  38 00 FF FF */	li r0, -1
 /* 806DE76C  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DE770  38 63 F2 D4 */	addi r3, r3, l_HIO@l
-/* 806DE774  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806DF2D8 */
+/* 806DE774  98 03 00 04 */	stb r0, 4(r3)
 lbl_806DE778:
 /* 806DE778  38 00 00 04 */	li r0, 4
 /* 806DE77C  90 1D 05 5C */	stw r0, 0x55c(r29)
@@ -182,7 +182,7 @@ lbl_806DE934:
 /* 806DE950  D0 1D 04 D8 */	stfs f0, 0x4d8(r29)
 /* 806DE954  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806DE958  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806DE95C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806DE95C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806DE960  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 806DE964  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100001D@ha */
 /* 806DE968  38 84 00 1D */	addi r4, r4, 0x001D /* 0x0100001D@l */
@@ -208,18 +208,18 @@ lbl_806DE9AC:
 /* 806DE9AC  38 60 00 05 */	li r3, 5
 /* 806DE9B0  38 80 FF FF */	li r4, -1
 /* 806DE9B4  4B 94 EF 98 */	b dComIfGs_onZoneSwitch__Fii
-/* 806DE9B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806DE9BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806DE9B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806DE9BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806DE9C0  3B C3 07 F0 */	addi r30, r3, 0x7f0
 /* 806DE9C4  7F C3 F3 78 */	mr r3, r30
 /* 806DE9C8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 806DE9CC  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 806DE9D0  A0 84 05 3E */	lhz r4, 0x53e(r4)	/* effective address: 803A77C6 */
+/* 806DE9D0  A0 84 05 3E */	lhz r4, 0x53e(r4)
 /* 806DE9D4  4B 95 5F D0 */	b offEventBit__11dSv_event_cFUs
 /* 806DE9D8  7F C3 F3 78 */	mr r3, r30
 /* 806DE9DC  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 806DE9E0  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 806DE9E4  A0 84 05 40 */	lhz r4, 0x540(r4)	/* effective address: 803A77C8 */
+/* 806DE9E4  A0 84 05 40 */	lhz r4, 0x540(r4)
 /* 806DE9E8  4B 95 5F BC */	b offEventBit__11dSv_event_cFUs
 /* 806DE9EC  7F A3 EB 78 */	mr r3, r29
 /* 806DE9F0  4B FF EE 11 */	bl daE_GOB_Execute__FP11e_gob_class

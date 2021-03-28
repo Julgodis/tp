@@ -11,14 +11,14 @@ lbl_80D506AC:
 /* 80D506D0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D506D4  38 DE 01 0C */	addi r6, r30, 0x10c
 /* 80D506D8  4B 45 30 EC */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80D506DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D506E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D506E4  80 03 5F 70 */	lwz r0, 0x5f70(r3)	/* effective address: 8040C130 */
+/* 80D506DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D506E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D506E4  80 03 5F 70 */	lwz r0, 0x5f70(r3)
 /* 80D506E8  3C 80 80 43 */	lis r4, j3dSys@ha
 /* 80D506EC  3B E4 4A C8 */	addi r31, r4, j3dSys@l
-/* 80D506F0  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80D506F4  80 03 5F 74 */	lwz r0, 0x5f74(r3)	/* effective address: 8040C134 */
-/* 80D506F8  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80D506F0  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80D506F4  80 03 5F 74 */	lwz r0, 0x5f74(r3)
+/* 80D506F8  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D506FC  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80D50700  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D50704  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -92,11 +92,11 @@ lbl_80D507E8:
 /* 80D50808  4B 45 45 98 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 80D5080C  80 7E 05 6C */	lwz r3, 0x56c(r30)
 /* 80D50810  4B 2B D4 B4 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 80D50814  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D50818  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D5081C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80D50814  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D50818  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5081C  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80D50820  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80D50824  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80D50824  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80D50828  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D5082C  38 60 00 01 */	li r3, 1
 /* 80D50830  39 61 00 20 */	addi r11, r1, 0x20

@@ -7,7 +7,7 @@ lbl_804D7890:
 /* 804D78A4  3C 60 80 4E */	lis r3, lit_4286@ha
 /* 804D78A8  84 03 9E D0 */	lwzu r0, lit_4286@l(r3)
 /* 804D78AC  90 01 00 08 */	stw r0, 8(r1)
-/* 804D78B0  A0 03 00 04 */	lhz r0, 4(r3)	/* effective address: 804E0004 */
+/* 804D78B0  A0 03 00 04 */	lhz r0, 4(r3)
 /* 804D78B4  B0 01 00 0C */	sth r0, 0xc(r1)
 /* 804D78B8  3C 60 80 4E */	lis r3, lit_4288@ha
 /* 804D78BC  C0 23 9E D8 */	lfs f1, lit_4288@l(r3)

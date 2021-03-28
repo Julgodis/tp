@@ -28,7 +28,7 @@ lbl_80C9AB90:
 /* 80C9AB90  38 7E 05 94 */	addi r3, r30, 0x594
 /* 80C9AB94  3C 80 80 CA */	lis r4, l_arcName@ha
 /* 80C9AB98  38 84 B2 A4 */	addi r4, r4, l_arcName@l
-/* 80C9AB9C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9B2A4 */
+/* 80C9AB9C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C9ABA0  4B 39 23 1C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C9ABA4  7C 7F 1B 78 */	mr r31, r3
 /* 80C9ABA8  2C 1F 00 04 */	cmpwi r31, 4

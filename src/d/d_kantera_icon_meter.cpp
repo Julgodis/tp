@@ -26,9 +26,6 @@ struct dDlst_KanteraIcon_c {
 	/* 801AED1C */ ~dDlst_KanteraIcon_c();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -39,6 +36,9 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -92,17 +92,17 @@ extern "C" extern u8 g_drawHIO[3880];
 /* ############################################################################################## */
 /* 803BC218-803BC228 0010+00 s=2 e=0 z=0  None .data      __vt__19dDlst_KanteraIcon_c                                  */
 SECTION_DATA static void* __vt__19dDlst_KanteraIcon_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__19dDlst_KanteraIcon_cFv,
-	/* 3    */ (void*)__dt__19dDlst_KanteraIcon_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__19dDlst_KanteraIcon_cFv,
+	(void*)__dt__19dDlst_KanteraIcon_cFv,
 };
 
 /* 803BC228-803BC238 000C+04 s=2 e=0 z=0  None .data      __vt__15dKantera_icon_c                                      */
 SECTION_DATA static void* __vt__15dKantera_icon_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dKantera_icon_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dKantera_icon_cFv,
 	/* padding */
 	NULL,
 };

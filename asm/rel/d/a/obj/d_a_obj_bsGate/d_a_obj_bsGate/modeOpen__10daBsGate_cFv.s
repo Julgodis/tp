@@ -19,7 +19,7 @@ lbl_80BC2CE0:
 /* 80BC2D24  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BC2D28  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BC2D2C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BC2D30  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BC2D30  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC2D34  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BC2D38  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BC2D3C  38 C0 00 00 */	li r6, 0
@@ -35,7 +35,7 @@ lbl_80BC2D58:
 /* 80BC2D60  C0 5F 00 18 */	lfs f2, 0x18(r31)
 /* 80BC2D64  3C 80 80 BC */	lis r4, l_HIO@ha
 /* 80BC2D68  38 84 32 DC */	addi r4, r4, l_HIO@l
-/* 80BC2D6C  C0 64 00 04 */	lfs f3, 4(r4)	/* effective address: 80BC32E0 */
+/* 80BC2D6C  C0 64 00 04 */	lfs f3, 4(r4)
 /* 80BC2D70  C0 9F 00 1C */	lfs f4, 0x1c(r31)
 /* 80BC2D74  4B 6A CC 08 */	b cLib_addCalc__FPfffff
 /* 80BC2D78  C0 1F 00 08 */	lfs f0, 8(r31)
@@ -53,7 +53,7 @@ lbl_80BC2D58:
 /* 80BC2DA8  90 01 00 08 */	stw r0, 8(r1)
 /* 80BC2DAC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BC2DB0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BC2DB4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BC2DB4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC2DB8  38 81 00 08 */	addi r4, r1, 8
 /* 80BC2DBC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BC2DC0  38 C0 00 00 */	li r6, 0
@@ -69,12 +69,12 @@ lbl_80BC2DDC:
 /* 80BC2DE4  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80BC2DE8  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BC2DEC  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80BC2DF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC2DF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BC2DF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC2DF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC2DF8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80BC2DFC  3C 80 80 BC */	lis r4, l_HIO@ha
 /* 80BC2E00  38 84 32 DC */	addi r4, r4, l_HIO@l
-/* 80BC2E04  88 84 00 0C */	lbz r4, 0xc(r4)	/* effective address: 80BC32E8 */
+/* 80BC2E04  88 84 00 0C */	lbz r4, 0xc(r4)
 /* 80BC2E08  38 A0 00 0F */	li r5, 0xf
 /* 80BC2E0C  38 C1 00 10 */	addi r6, r1, 0x10
 /* 80BC2E10  4B 4A CC 14 */	b StartShock__12dVibration_cFii4cXyz

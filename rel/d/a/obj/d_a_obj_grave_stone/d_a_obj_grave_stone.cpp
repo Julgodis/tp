@@ -77,15 +77,10 @@ struct dPa_control_c {
 
 };
 
-struct csXyz {
-};
-
 struct dKy_tevstr_c {
 };
 
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
+struct csXyz {
 };
 
 struct cBgS_PolyInfo {
@@ -94,6 +89,11 @@ struct cBgS_PolyInfo {
 struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
+};
+
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {
@@ -120,9 +120,6 @@ struct dBgW {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -178,11 +175,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daGraveStone_Draw(daGraveStone_c*); // 2
-static void daGraveStone_Execute(daGraveStone_c*); // 2
-static bool daGraveStone_IsDelete(daGraveStone_c*); // 2
-static void daGraveStone_Delete(daGraveStone_c*); // 2
-static void daGraveStone_create(fopAc_ac_c*); // 2
+void daGraveStone_Draw(daGraveStone_c*); // 2
+void daGraveStone_Execute(daGraveStone_c*); // 2
+bool daGraveStone_IsDelete(daGraveStone_c*); // 2
+void daGraveStone_Delete(daGraveStone_c*); // 2
+void daGraveStone_create(fopAc_ac_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 
 extern "C" void setBaseMtx__14daGraveStone_cFv(); // 1
@@ -201,15 +198,16 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void Execute__14daGraveStone_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daGraveStone_cFv(); // 1
 extern "C" void Delete__14daGraveStone_cFv(); // 1
-extern "C" static void daGraveStone_Draw__FP14daGraveStone_c(); // 1
-extern "C" static void daGraveStone_Execute__FP14daGraveStone_c(); // 1
-extern "C" static bool daGraveStone_IsDelete__FP14daGraveStone_c(); // 1
-extern "C" static void daGraveStone_Delete__FP14daGraveStone_c(); // 1
-extern "C" static void daGraveStone_create__FP10fopAc_ac_c(); // 1
+extern "C" void daGraveStone_Draw__FP14daGraveStone_c(); // 1
+extern "C" void daGraveStone_Execute__FP14daGraveStone_c(); // 1
+extern "C" bool daGraveStone_IsDelete__FP14daGraveStone_c(); // 1
+extern "C" void daGraveStone_Delete__FP14daGraveStone_c(); // 1
+extern "C" void daGraveStone_create__FP10fopAc_ac_c(); // 1
 extern "C" static void func_80C1321C(); // 1
-extern "C" static void func_80C13238(); // 1
-extern "C" static void func_80C13240(); // 1
+extern "C" void func_80C13238(); // 1
+extern "C" void func_80C13240(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daGraveStone_Method[8];
 extern "C" extern void* g_profile_Obj_GraveStone[12];
 
 // 
@@ -251,9 +249,6 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -278,24 +273,15 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -401,7 +387,7 @@ asm void daGraveStone_c::setRoomNo() {
 #pragma pop
 
 
-/* 80C12AD8-80C12CA4 01CC+00 s=1 e=0 z=0  None .text      Create__14daGraveStone_cFv                                   */
+/* 80C12AD8-80C12CA4 01CC+00 s=0 e=0 z=0  None .text      Create__14daGraveStone_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -413,7 +399,7 @@ asm void daGraveStone_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80C132E4-80C13301 001D+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80C132E4-80C13301 001D+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -423,9 +409,9 @@ SECTION_DEAD char const* const stringBase_80C132F6 = "H_Haka.dzb";
 #pragma pop
 
 /* 80C13304-80C13308 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80C12CA4-80C12D1C 0078+00 s=1 e=0 z=0  None .text      CreateHeap__14daGraveStone_cFv                               */
+/* 80C12CA4-80C12D1C 0078+00 s=0 e=0 z=0  None .text      CreateHeap__14daGraveStone_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,73 +423,73 @@ asm void daGraveStone_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 80C13308-80C13328 0020+00 s=1 e=0 z=0  None .data      l_daGraveStone_Method                                        */
-SECTION_DATA static void* l_daGraveStone_Method[8] = {
-	/* 0    */ (void*)daGraveStone_create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daGraveStone_Delete__FP14daGraveStone_c,
-	/* 2    */ (void*)daGraveStone_Execute__FP14daGraveStone_c,
-	/* 3    */ (void*)daGraveStone_IsDelete__FP14daGraveStone_c,
-	/* 4    */ (void*)daGraveStone_Draw__FP14daGraveStone_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C13308-80C13328 0020+00 s=0 e=0 z=0  None .data      l_daGraveStone_Method                                        */
+SECTION_DATA void* l_daGraveStone_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C13328-80C13358 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_GraveStone                                     */
+/* 80C13328-80C13358 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_GraveStone                                     */
 SECTION_DATA void* g_profile_Obj_GraveStone[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00870000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000AEC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x025F0000,
-	/* 9    */ (void*)&l_daGraveStone_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00870000,
+	(void*)NULL,
+	(void*)0x00000AEC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x025F0000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
 };
 
 /* 80C13358-80C13364 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C13364-80C13370 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C13370-80C13394 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80C13240,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80C13238,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C13394-80C133BC 0028+00 s=1 e=0 z=0  None .data      __vt__14daGraveStone_c                                       */
 SECTION_DATA static void* __vt__14daGraveStone_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__14daGraveStone_cFv,
-	/* 3    */ (void*)Create__14daGraveStone_cFv,
-	/* 4    */ (void*)Execute__14daGraveStone_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__14daGraveStone_cFv,
-	/* 6    */ (void*)Delete__14daGraveStone_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C12D1C-80C12EF0 01D4+00 s=1 e=0 z=0  None .text      create__14daGraveStone_cFv                                   */
@@ -534,7 +520,7 @@ daGraveStone_c::daObj_GrvStn_prtclMngr_c::daObj_GrvStn_prtclMngr_c() {
 }
 
 
-/* 80C12F30-80C12F78 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C12F30-80C12F78 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -545,7 +531,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C12F78-80C12FC0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C12F78-80C12FC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -556,7 +542,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C12FC0-80C13030 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C12FC0-80C13030 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -567,7 +553,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C13030-80C13078 0048+00 s=1 e=0 z=0  None .text      Execute__14daGraveStone_cFPPA3_A4_f                          */
+/* 80C13030-80C13078 0048+00 s=0 e=0 z=0  None .text      Execute__14daGraveStone_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -578,7 +564,7 @@ asm void daGraveStone_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C13078-80C1311C 00A4+00 s=1 e=0 z=0  None .text      Draw__14daGraveStone_cFv                                     */
+/* 80C13078-80C1311C 00A4+00 s=0 e=0 z=0  None .text      Draw__14daGraveStone_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -589,7 +575,7 @@ asm void daGraveStone_c::Draw() {
 #pragma pop
 
 
-/* 80C1311C-80C13188 006C+00 s=1 e=0 z=0  None .text      Delete__14daGraveStone_cFv                                   */
+/* 80C1311C-80C13188 006C+00 s=0 e=0 z=0  None .text      Delete__14daGraveStone_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -600,50 +586,50 @@ asm void daGraveStone_c::Delete() {
 #pragma pop
 
 
-/* 80C13188-80C131B4 002C+00 s=1 e=0 z=0  None .text      daGraveStone_Draw__FP14daGraveStone_c                        */
+/* 80C13188-80C131B4 002C+00 s=0 e=0 z=0  None .text      daGraveStone_Draw__FP14daGraveStone_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGraveStone_Draw(daGraveStone_c* param_0) {
+asm void daGraveStone_Draw(daGraveStone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/daGraveStone_Draw__FP14daGraveStone_c.s"
 }
 #pragma pop
 
 
-/* 80C131B4-80C131D4 0020+00 s=1 e=0 z=0  None .text      daGraveStone_Execute__FP14daGraveStone_c                     */
+/* 80C131B4-80C131D4 0020+00 s=0 e=0 z=0  None .text      daGraveStone_Execute__FP14daGraveStone_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGraveStone_Execute(daGraveStone_c* param_0) {
+asm void daGraveStone_Execute(daGraveStone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/daGraveStone_Execute__FP14daGraveStone_c.s"
 }
 #pragma pop
 
 
-/* 80C131D4-80C131DC 0008+00 s=1 e=0 z=0  None .text      daGraveStone_IsDelete__FP14daGraveStone_c                    */
-static bool daGraveStone_IsDelete(daGraveStone_c* param_0) {
+/* 80C131D4-80C131DC 0008+00 s=0 e=0 z=0  None .text      daGraveStone_IsDelete__FP14daGraveStone_c                    */
+bool daGraveStone_IsDelete(daGraveStone_c* param_0) {
 	return true;
 }
 
 
-/* 80C131DC-80C131FC 0020+00 s=1 e=0 z=0  None .text      daGraveStone_Delete__FP14daGraveStone_c                      */
+/* 80C131DC-80C131FC 0020+00 s=0 e=0 z=0  None .text      daGraveStone_Delete__FP14daGraveStone_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGraveStone_Delete(daGraveStone_c* param_0) {
+asm void daGraveStone_Delete(daGraveStone_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/daGraveStone_Delete__FP14daGraveStone_c.s"
 }
 #pragma pop
 
 
-/* 80C131FC-80C1321C 0020+00 s=1 e=0 z=0  None .text      daGraveStone_create__FP10fopAc_ac_c                          */
+/* 80C131FC-80C1321C 0020+00 s=0 e=0 z=0  None .text      daGraveStone_create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGraveStone_create(fopAc_ac_c* param_0) {
+asm void daGraveStone_create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/daGraveStone_create__FP10fopAc_ac_c.s"
 }
@@ -661,22 +647,22 @@ asm static void cLib_calcTimer__template0(s16* param_0) {
 #pragma pop
 
 
-/* 80C13238-80C13240 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C13238-80C13240 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C13238() {
+extern "C" asm void func_80C13238() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/func_80C13238.s"
 }
 #pragma pop
 
 
-/* 80C13240-80C13248 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C13240-80C13248 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C13240() {
+extern "C" asm void func_80C13240() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_grave_stone/d_a_obj_grave_stone/func_80C13240.s"
 }

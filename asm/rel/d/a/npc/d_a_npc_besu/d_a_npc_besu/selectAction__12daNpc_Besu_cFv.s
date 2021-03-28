@@ -9,11 +9,11 @@ lbl_80539994:
 /* 805399B0  3B E3 EB 5C */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 805399B4  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 805399B8  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 805399BC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 805399C0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 805399BC  80 64 00 00 */	lwz r3, 0(r4)
+/* 805399C0  80 04 00 04 */	lwz r0, 4(r4)
 /* 805399C4  90 7E 11 00 */	stw r3, 0x1100(r30)
 /* 805399C8  90 1E 11 04 */	stw r0, 0x1104(r30)
-/* 805399CC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 805399CC  80 04 00 08 */	lwz r0, 8(r4)
 /* 805399D0  90 1E 11 08 */	stw r0, 0x1108(r30)
 /* 805399D4  88 1E 10 C4 */	lbz r0, 0x10c4(r30)
 /* 805399D8  2C 00 00 08 */	cmpwi r0, 8

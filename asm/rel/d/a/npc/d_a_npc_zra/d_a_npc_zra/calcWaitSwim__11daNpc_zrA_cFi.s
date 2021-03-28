@@ -11,7 +11,7 @@ lbl_80B825FC:
 /* 80B82620  38 7C 04 DC */	addi r3, r28, 0x4dc
 /* 80B82624  38 80 00 00 */	li r4, 0
 /* 80B82628  3B DF 00 00 */	addi r30, r31, 0
-/* 80B8262C  A8 BE 00 74 */	lha r5, 0x74(r30)	/* effective address: 80B8C4CC */
+/* 80B8262C  A8 BE 00 74 */	lha r5, 0x74(r30)
 /* 80B82630  4B 6E E5 60 */	b cLib_chaseAngleS__FPsss
 /* 80B82634  38 7C 04 E0 */	addi r3, r28, 0x4e0
 /* 80B82638  38 80 00 00 */	li r4, 0

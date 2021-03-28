@@ -9,14 +9,14 @@ lbl_80818AE8:
 /* 80818B04  7C 7D 1B 78 */	mr r29, r3
 /* 80818B08  3C 80 80 82 */	lis r4, lit_3791@ha
 /* 80818B0C  3B C4 18 AC */	addi r30, r4, lit_3791@l
-/* 80818B10  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80818B14  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80818B18  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80818B1C  C0 04 04 D0 */	lfs f0, 0x4d0(r4)	/* effective address: 80406690 */
+/* 80818B10  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80818B14  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80818B18  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 80818B1C  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
 /* 80818B20  D0 01 00 A4 */	stfs f0, 0xa4(r1)
-/* 80818B24  C0 04 04 D4 */	lfs f0, 0x4d4(r4)	/* effective address: 80406694 */
+/* 80818B24  C0 04 04 D4 */	lfs f0, 0x4d4(r4)
 /* 80818B28  D0 01 00 A8 */	stfs f0, 0xa8(r1)
-/* 80818B2C  C0 04 04 D8 */	lfs f0, 0x4d8(r4)	/* effective address: 80406698 */
+/* 80818B2C  C0 04 04 D8 */	lfs f0, 0x4d8(r4)
 /* 80818B30  D0 01 00 AC */	stfs f0, 0xac(r1)
 /* 80818B34  4B 80 1B DC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80818B38  7C 7F 1B 78 */	mr r31, r3
@@ -384,7 +384,7 @@ lbl_8081902C:
 /* 80819058  38 7D 06 C8 */	addi r3, r29, 0x6c8
 /* 8081905C  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 80819060  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 80819064  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80821E70 */
+/* 80819064  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 80819068  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 8081906C  4B A5 76 D4 */	b cLib_chaseF__FPfff
 /* 80819070  48 00 00 24 */	b lbl_80819094
@@ -393,7 +393,7 @@ lbl_80819074:
 /* 80819078  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 8081907C  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 80819080  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 80819084  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80821E70 */
+/* 80819084  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80819088  EC 21 00 2A */	fadds f1, f1, f0
 /* 8081908C  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 80819090  4B A5 76 B0 */	b cLib_chaseF__FPfff

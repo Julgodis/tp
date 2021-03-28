@@ -7,9 +7,9 @@ lbl_80CAEE90:
 /* 80CAEEA4  3C 60 80 CB */	lis r3, l_PIC_AT_OFFSET_POS@ha
 /* 80CAEEA8  C4 03 F1 04 */	lfsu f0, l_PIC_AT_OFFSET_POS@l(r3)
 /* 80CAEEAC  D0 1F 0C 7C */	stfs f0, 0xc7c(r31)
-/* 80CAEEB0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CB0004 */
+/* 80CAEEB0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CAEEB4  D0 1F 0C 80 */	stfs f0, 0xc80(r31)
-/* 80CAEEB8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80CB0008 */
+/* 80CAEEB8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CAEEBC  D0 1F 0C 84 */	stfs f0, 0xc84(r31)
 /* 80CAEEC0  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 80CAEEC4  4B 35 DE A0 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -23,8 +23,8 @@ lbl_80CAEE90:
 /* 80CAEEE4  38 7F 09 D4 */	addi r3, r31, 0x9d4
 /* 80CAEEE8  38 9F 0C 7C */	addi r4, r31, 0xc7c
 /* 80CAEEEC  4B 5C 02 F0 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80CAEEF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAEEF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CAEEF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAEEF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAEEF8  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80CAEEFC  38 9F 08 B0 */	addi r4, r31, 0x8b0
 /* 80CAEF00  4B 5B 5C A8 */	b Set__4cCcSFP8cCcD_Obj

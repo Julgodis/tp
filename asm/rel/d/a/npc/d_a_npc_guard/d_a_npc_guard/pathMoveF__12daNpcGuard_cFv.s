@@ -15,7 +15,7 @@ lbl_809F0ED4:
 /* 809F0F08  7C 7E 1B 78 */	mr r30, r3
 /* 809F0F0C  3C 60 80 9F */	lis r3, lit_3900@ha
 /* 809F0F10  3B E3 2C 50 */	addi r31, r3, lit_3900@l
-/* 809F0F14  C3 FF 00 20 */	lfs f31, 0x20(r31)	/* effective address: 809F2C70 */
+/* 809F0F14  C3 FF 00 20 */	lfs f31, 0x20(r31)
 /* 809F0F18  FF C0 F8 90 */	fmr f30, f31
 /* 809F0F1C  80 1E 0D 9C */	lwz r0, 0xd9c(r30)
 /* 809F0F20  28 00 00 02 */	cmplwi r0, 2

@@ -16,8 +16,8 @@ lbl_804FB110:
 /* 804FB148  7C 00 07 74 */	extsb r0, r0
 /* 804FB14C  7C 1D 03 78 */	mr r29, r0
 /* 804FB150  3B 80 00 00 */	li r28, 0
-/* 804FB154  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804FB158  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804FB154  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804FB158  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804FB15C  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 804FB160  48 00 00 28 */	b lbl_804FB188
 lbl_804FB164:

@@ -86,7 +86,7 @@ lbl_80519F40:
 /* 80519F60  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 80519F64  3B A3 BC 20 */	addi r29, r3, l_HIO@l
 /* 80519F68  C0 3F 00 58 */	lfs f1, 0x58(r31)
-/* 80519F6C  C0 1D 00 08 */	lfs f0, 8(r29)	/* effective address: 8051BC28 */
+/* 80519F6C  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 80519F70  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80519F74  4B D4 DA 18 */	b cM_rndFX__Ff
 /* 80519F78  C0 1D 00 08 */	lfs f0, 8(r29)
@@ -95,7 +95,7 @@ lbl_80519F40:
 /* 80519F84  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 80519F88  3B A3 BC 20 */	addi r29, r3, l_HIO@l
 /* 80519F8C  C0 3F 00 58 */	lfs f1, 0x58(r31)
-/* 80519F90  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 8051BC2C */
+/* 80519F90  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 80519F94  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80519F98  4B D4 D9 F4 */	b cM_rndFX__Ff
 /* 80519F9C  C0 1D 00 0C */	lfs f0, 0xc(r29)
@@ -113,7 +113,7 @@ lbl_80519F40:
 lbl_80519FCC:
 /* 80519FCC  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 80519FD0  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 80519FD4  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8051BC34 */
+/* 80519FD4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80519FD8  D0 1E 05 E8 */	stfs f0, 0x5e8(r30)
 /* 80519FDC  C0 3E 05 E8 */	lfs f1, 0x5e8(r30)
 /* 80519FE0  4B D4 D9 AC */	b cM_rndFX__Ff

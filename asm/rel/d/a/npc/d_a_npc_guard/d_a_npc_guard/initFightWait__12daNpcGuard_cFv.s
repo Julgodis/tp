@@ -25,9 +25,9 @@ lbl_809F03FC:
 /* 809F0458  48 00 20 79 */	bl func_809F24D0
 /* 809F045C  D0 3E 0D 98 */	stfs f1, 0xd98(r30)
 /* 809F0460  7F C3 F3 78 */	mr r3, r30
-/* 809F0464  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809F0468  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809F046C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 809F0464  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809F0468  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809F046C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 809F0470  4B 62 A4 F4 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 809F0474  C0 1E 0D 98 */	lfs f0, 0xd98(r30)
 /* 809F0478  EC 21 00 28 */	fsubs f1, f1, f0

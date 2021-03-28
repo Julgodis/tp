@@ -11,16 +11,16 @@ lbl_806B28E4:
 /* 806B2908  7C 9F 23 78 */	mr r31, r4
 /* 806B290C  3C 60 80 6B */	lis r3, lit_3792@ha
 /* 806B2910  3B C3 5C D4 */	addi r30, r3, lit_3792@l
-/* 806B2914  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B2918  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806B291C  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 806B2914  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B2918  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806B291C  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 806B2920  7C 00 07 74 */	extsb r0, r0
 /* 806B2924  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 806B2928  7C 63 02 14 */	add r3, r3, r0
 /* 806B292C  80 63 5D 74 */	lwz r3, 0x5d74(r3)
 /* 806B2930  4B 96 B9 D8 */	b fopCamM_GetParam__FP12camera_class
-/* 806B2934  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806B2938  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806B2934  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806B2938  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806B293C  1C 03 00 38 */	mulli r0, r3, 0x38
 /* 806B2940  7C 64 02 14 */	add r3, r4, r0
 /* 806B2944  88 03 5D 78 */	lbz r0, 0x5d78(r3)

@@ -3,11 +3,11 @@ lbl_80B61710:
 /* 80B61714  38 C4 7F 40 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80B61718  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80B6171C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80B61720  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80B61724  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80B61720  80 85 00 00 */	lwz r4, 0(r5)
+/* 80B61724  80 05 00 04 */	lwz r0, 4(r5)
 /* 80B61728  90 83 0F D8 */	stw r4, 0xfd8(r3)
 /* 80B6172C  90 03 0F DC */	stw r0, 0xfdc(r3)
-/* 80B61730  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80B61730  80 05 00 08 */	lwz r0, 8(r5)
 /* 80B61734  90 03 0F E0 */	stw r0, 0xfe0(r3)
 /* 80B61738  88 03 0F 80 */	lbz r0, 0xf80(r3)
 /* 80B6173C  2C 00 00 02 */	cmpwi r0, 2

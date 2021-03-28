@@ -23,9 +23,9 @@ lbl_80D31810:
 /* 80D31864  80 9F 05 74 */	lwz r4, 0x574(r31)
 /* 80D31868  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 80D3186C  4B 47 35 34 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80D31870  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D31874  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D31878  80 63 5F 80 */	lwz r3, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80D31870  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D31874  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D31878  80 63 5F 80 */	lwz r3, 0x5f80(r3)
 /* 80D3187C  38 9F 05 78 */	addi r4, r31, 0x578
 /* 80D31880  38 A0 00 00 */	li r5, 0
 /* 80D31884  4B 5F 3C 08 */	b entryImm__13J3DDrawBufferFP9J3DPacketUs

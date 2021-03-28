@@ -9,7 +9,7 @@ lbl_8053198C:
 /* 805319A8  7C 7E 1B 78 */	mr r30, r3
 /* 805319AC  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 805319B0  3B E3 61 68 */	addi r31, r3, lit_3679@l
-/* 805319B4  C3 FF 00 18 */	lfs f31, 0x18(r31)	/* effective address: 80536180 */
+/* 805319B4  C3 FF 00 18 */	lfs f31, 0x18(r31)
 /* 805319B8  A8 1E 05 B8 */	lha r0, 0x5b8(r30)
 /* 805319BC  2C 00 00 01 */	cmpwi r0, 1
 /* 805319C0  41 82 00 8C */	beq lbl_80531A4C

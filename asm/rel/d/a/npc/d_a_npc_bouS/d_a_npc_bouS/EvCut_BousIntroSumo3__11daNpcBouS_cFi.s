@@ -8,8 +8,8 @@ lbl_80976654:
 /* 8097666C  7C 9B 23 78 */	mr r27, r4
 /* 80976670  3C 60 80 98 */	lis r3, m__17daNpcBouS_Param_c@ha
 /* 80976674  3B A3 84 10 */	addi r29, r3, m__17daNpcBouS_Param_c@l
-/* 80976678  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8097667C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80976678  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8097667C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80976680  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80976684  7F 83 E3 78 */	mr r3, r28
 /* 80976688  4B 6D 18 D4 */	b getMyNowCutName__16dEvent_manager_cFi
@@ -42,9 +42,9 @@ lbl_809766DC:
 /* 809766EC  B0 1A 0D F8 */	sth r0, 0xdf8(r26)
 lbl_809766F0:
 /* 809766F0  38 7A 0C 78 */	addi r3, r26, 0xc78
-/* 809766F4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809766F8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809766FC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 809766F4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809766F8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809766FC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80976700  4B 7D 9F BC */	b entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c
 /* 80976704  48 00 00 40 */	b lbl_80976744
 lbl_80976708:
@@ -221,11 +221,11 @@ lbl_80976934:
 /* 80976978  40 82 00 98 */	bne lbl_80976A10
 /* 8097697C  3C 60 80 98 */	lis r3, lit_5426@ha
 /* 80976980  38 83 8A 24 */	addi r4, r3, lit_5426@l
-/* 80976984  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80978A24 */
-/* 80976988  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80978A28 */
+/* 80976984  80 64 00 00 */	lwz r3, 0(r4)
+/* 80976988  80 04 00 04 */	lwz r0, 4(r4)
 /* 8097698C  90 61 00 28 */	stw r3, 0x28(r1)
 /* 80976990  90 01 00 2C */	stw r0, 0x2c(r1)
-/* 80976994  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80978A2C */
+/* 80976994  80 04 00 08 */	lwz r0, 8(r4)
 /* 80976998  90 01 00 30 */	stw r0, 0x30(r1)
 /* 8097699C  38 00 00 03 */	li r0, 3
 /* 809769A0  B0 1A 0D FC */	sth r0, 0xdfc(r26)
@@ -289,11 +289,11 @@ lbl_80976A4C:
 /* 80976A78  4B 7D D7 D8 */	b setAngle__8daNpcF_cFs
 /* 80976A7C  3C 60 80 98 */	lis r3, lit_5429@ha
 /* 80976A80  38 83 8A 30 */	addi r4, r3, lit_5429@l
-/* 80976A84  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80978A30 */
-/* 80976A88  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80978A34 */
+/* 80976A84  80 64 00 00 */	lwz r3, 0(r4)
+/* 80976A88  80 04 00 04 */	lwz r0, 4(r4)
 /* 80976A8C  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 80976A90  90 01 00 20 */	stw r0, 0x20(r1)
-/* 80976A94  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80978A38 */
+/* 80976A94  80 04 00 08 */	lwz r0, 8(r4)
 /* 80976A98  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80976A9C  38 00 00 03 */	li r0, 3
 /* 80976AA0  B0 1A 0D FC */	sth r0, 0xdfc(r26)

@@ -14,9 +14,8 @@
 struct JPAEmitterWorkData {
 };
 
-struct JPABaseParticle {
-	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
-	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
+struct JKRHeap {
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
 
 struct JPABaseEmitter {
@@ -24,8 +23,9 @@ struct JPABaseEmitter {
 	/* 8027EE14 */ void processTermination();
 };
 
-struct JKRHeap {
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+struct JPABaseParticle {
+	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
+	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
 struct JPAResource {
@@ -350,32 +350,32 @@ SECTION_DATA static u8 jpa_crd[32] = {
 
 /* 803C4240-803C426C 002C+00 s=1 e=0 z=0  None .data      @2829                                                        */
 SECTION_DATA static void* lit_2829[11] = {
-	/* 0    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1488),
-	/* 1    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x149C),
-	/* 2    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x13D0),
-	/* 3    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1430),
-	/* 4    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1430),
-	/* 5    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x14AC),
-	/* 6    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x14AC),
-	/* 7    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1474),
-	/* 8    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1474),
-	/* 9    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1460),
-	/* 10   */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1400),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1488),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x149C),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x13D0),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1430),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1430),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x14AC),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x14AC),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1474),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1474),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1460),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1400),
 };
 
 /* 803C426C-803C4298 002C+00 s=1 e=0 z=0  None .data      @2828                                                        */
 SECTION_DATA static void* lit_2828[11] = {
-	/* 0    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x112C),
-	/* 1    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1140),
-	/* 2    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1074),
-	/* 3    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10D4),
-	/* 4    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10D4),
-	/* 5    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1150),
-	/* 6    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1150),
-	/* 7    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1118),
-	/* 8    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1118),
-	/* 9    */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1104),
-	/* 10   */ (void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10A4),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x112C),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1140),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1074),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10D4),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10D4),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1150),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1150),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1118),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1118),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x1104),
+	(void*)(((char*)init__11JPAResourceFP7JKRHeap)+0x10A4),
 };
 
 /* 80274080-802755E8 1568+00 s=2 e=1 z=0  None .text      init__11JPAResourceFP7JKRHeap                                */
@@ -511,17 +511,17 @@ asm void JPAResource::calcField(JPAEmitterWorkData* param_0, JPABaseParticle* pa
 /* ############################################################################################## */
 /* 803C4298-803C42E0 002C+1C s=1 e=0 z=0  None .data      @3454                                                        */
 SECTION_DATA static void* lit_3454[11 + 7 /* padding */] = {
-	/* 0    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x90),
-	/* 1    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x9C),
-	/* 2    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x110),
-	/* 3    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xB4),
-	/* 4    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xC0),
-	/* 5    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x110),
-	/* 6    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xD8),
-	/* 7    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xE4),
-	/* 8    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xF0),
-	/* 9    */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xFC),
-	/* 10   */ (void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x108),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x90),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x9C),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x110),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xB4),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xC0),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x110),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xD8),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xE4),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xF0),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0xFC),
+	(void*)(((char*)calcKey__11JPAResourceFP18JPAEmitterWorkData)+0x108),
 	/* padding */
 	NULL,
 	NULL,

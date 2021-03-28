@@ -45,11 +45,11 @@ lbl_80D3E20C:
 /* 80D3E220  4B 60 82 90 */	b PSMTXCopy
 /* 80D3E224  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80D3E228  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80D3E22C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80D3E22C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80D3E230  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
-/* 80D3E234  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80D3E234  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80D3E238  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
-/* 80D3E23C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80D3E23C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80D3E240  D0 1E 04 D8 */	stfs f0, 0x4d8(r30)
 lbl_80D3E244:
 /* 80D3E244  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -235,7 +235,7 @@ lbl_8068394C:
 lbl_80683954:
 /* 80683954  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80683958  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8068395C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8068395C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683960  A8 9D 00 36 */	lha r4, 0x36(r29)
 /* 80683964  4B 98 8A 78 */	b mDoMtx_YrotS__FPA4_fs
 /* 80683968  C0 1F 00 10 */	lfs f0, 0x10(r31)
@@ -285,12 +285,12 @@ lbl_80683954:
 /* 80683A18  4B BE D4 8C */	b MtxScale__FfffUc
 /* 80683A1C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80683A20  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80683A24  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80683A24  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683A28  7F 64 DB 78 */	mr r4, r27
 /* 80683A2C  4B 98 8A A0 */	b mDoMtx_ZrotM__FPA4_fs
 /* 80683A30  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80683A34  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80683A38  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80683A38  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683A3C  7F 44 D3 78 */	mr r4, r26
 /* 80683A40  4B 98 89 5C */	b mDoMtx_XrotM__FPA4_fs
 /* 80683A44  38 61 00 38 */	addi r3, r1, 0x38
@@ -353,7 +353,7 @@ lbl_80683ACC:
 /* 80683B20  4B 98 88 7C */	b mDoMtx_XrotM__FPA4_fs
 /* 80683B24  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 80683B28  38 63 56 84 */	addi r3, r3, l_HIO@l
-/* 80683B2C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8068568C */
+/* 80683B2C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80683B30  C0 1D 00 40 */	lfs f0, 0x40(r29)
 /* 80683B34  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80683B38  FC 40 08 90 */	fmr f2, f1
@@ -481,7 +481,7 @@ lbl_80683C8C:
 /* 80683D08  7C 64 1B 78 */	mr r4, r3
 /* 80683D0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80683D10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80683D14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80683D14  80 63 00 00 */	lwz r3, 0(r3)
 /* 80683D18  4B 98 86 C4 */	b mDoMtx_YrotS__FPA4_fs
 /* 80683D1C  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80683D20  D0 01 00 38 */	stfs f0, 0x38(r1)

@@ -169,8 +169,8 @@ lbl_80648428:
 /* 80648470  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80648474  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80648478  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 8064847C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80648480  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8064847C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80648480  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80648484  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80648488  38 80 00 03 */	li r4, 3
 /* 8064848C  38 A0 00 1F */	li r5, 0x1f

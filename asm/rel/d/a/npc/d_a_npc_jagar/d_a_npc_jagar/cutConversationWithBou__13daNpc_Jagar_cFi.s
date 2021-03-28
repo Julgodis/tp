@@ -11,8 +11,8 @@ lbl_80A16EFC:
 /* 80A16F20  7C 7B 1B 78 */	mr r27, r3
 /* 80A16F24  3B E0 00 00 */	li r31, 0
 /* 80A16F28  3B C0 FF FF */	li r30, -1
-/* 80A16F2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A16F30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A16F2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A16F30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A16F34  3B 43 4F F8 */	addi r26, r3, 0x4ff8
 /* 80A16F38  7F 43 D3 78 */	mr r3, r26
 /* 80A16F3C  7F A4 EB 78 */	mr r4, r29
@@ -27,8 +27,8 @@ lbl_80A16EFC:
 lbl_80A16F60:
 /* 80A16F60  3C 60 80 A2 */	lis r3, lit_5412@ha
 /* 80A16F64  38 83 A4 5C */	addi r4, r3, lit_5412@l
-/* 80A16F68  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A1A45C */
-/* 80A16F6C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A1A460 */
+/* 80A16F68  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A16F6C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A16F70  90 61 00 08 */	stw r3, 8(r1)
 /* 80A16F74  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80A16F78  93 81 00 08 */	stw r28, 8(r1)
@@ -36,19 +36,19 @@ lbl_80A16F60:
 /* 80A16F80  4B 72 E7 88 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A16F84  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80A16F88  80 01 00 08 */	lwz r0, 8(r1)
-/* 80A16F8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A16F90  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A16F94  90 04 5E F0 */	stw r0, 0x5ef0(r4)	/* effective address: 8040C0B0 */
-/* 80A16F98  90 64 5E F4 */	stw r3, 0x5ef4(r4)	/* effective address: 8040C0B4 */
+/* 80A16F8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A16F90  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A16F94  90 04 5E F0 */	stw r0, 0x5ef0(r4)
+/* 80A16F98  90 64 5E F4 */	stw r3, 0x5ef4(r4)
 /* 80A16F9C  38 00 00 00 */	li r0, 0
-/* 80A16FA0  90 04 5E F8 */	stw r0, 0x5ef8(r4)	/* effective address: 8040C0B8 */
-/* 80A16FA4  90 04 5E FC */	stw r0, 0x5efc(r4)	/* effective address: 8040C0BC */
-/* 80A16FA8  90 04 5F 00 */	stw r0, 0x5f00(r4)	/* effective address: 8040C0C0 */
-/* 80A16FAC  90 04 5F 04 */	stw r0, 0x5f04(r4)	/* effective address: 8040C0C4 */
-/* 80A16FB0  90 04 5F 08 */	stw r0, 0x5f08(r4)	/* effective address: 8040C0C8 */
-/* 80A16FB4  90 04 5F 0C */	stw r0, 0x5f0c(r4)	/* effective address: 8040C0CC */
-/* 80A16FB8  90 04 5F 10 */	stw r0, 0x5f10(r4)	/* effective address: 8040C0D0 */
-/* 80A16FBC  90 04 5F 14 */	stw r0, 0x5f14(r4)	/* effective address: 8040C0D4 */
+/* 80A16FA0  90 04 5E F8 */	stw r0, 0x5ef8(r4)
+/* 80A16FA4  90 04 5E FC */	stw r0, 0x5efc(r4)
+/* 80A16FA8  90 04 5F 00 */	stw r0, 0x5f00(r4)
+/* 80A16FAC  90 04 5F 04 */	stw r0, 0x5f04(r4)
+/* 80A16FB0  90 04 5F 08 */	stw r0, 0x5f08(r4)
+/* 80A16FB4  90 04 5F 0C */	stw r0, 0x5f0c(r4)
+/* 80A16FB8  90 04 5F 10 */	stw r0, 0x5f10(r4)
+/* 80A16FBC  90 04 5F 14 */	stw r0, 0x5f14(r4)
 /* 80A16FC0  7F 43 D3 78 */	mr r3, r26
 /* 80A16FC4  7F A4 EB 78 */	mr r4, r29
 /* 80A16FC8  4B 63 0D 84 */	b getIsAddvance__16dEvent_manager_cFi

@@ -19,7 +19,7 @@ lbl_805061DC:
 /* 80506220  3C 60 80 52 */	lis r3, lit_4208@ha
 /* 80506224  3B E3 85 84 */	addi r31, r3, lit_4208@l
 /* 80506228  38 A0 00 00 */	li r5, 0
-/* 8050622C  90 BE 00 EC */	stw r5, 0xec(r30)	/* effective address: 8051922C */
+/* 8050622C  90 BE 00 EC */	stw r5, 0xec(r30)
 /* 80506230  7C A3 2B 78 */	mr r3, r5
 /* 80506234  38 9E 00 C4 */	addi r4, r30, 0xc4
 /* 80506238  38 00 00 0A */	li r0, 0xa
@@ -39,8 +39,8 @@ lbl_80506240:
 /* 8050626C  4B B1 B0 CC */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80506270  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 80506274  C3 DF 00 84 */	lfs f30, 0x84(r31)
-/* 80506278  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050627C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80506278  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050627C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80506280  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80506284  3C 80 80 52 */	lis r4, stringBase0@ha
 /* 80506288  38 84 89 68 */	addi r4, r4, stringBase0@l

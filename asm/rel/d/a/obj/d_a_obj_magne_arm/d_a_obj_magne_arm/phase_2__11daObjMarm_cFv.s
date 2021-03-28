@@ -36,8 +36,8 @@ lbl_80590364:
 /* 805903EC  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
 /* 805903F0  A8 01 00 10 */	lha r0, 0x10(r1)
 /* 805903F4  B0 1F 04 E8 */	sth r0, 0x4e8(r31)
-/* 805903F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805903FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805903F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805903FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80590400  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80590404  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80590408  88 1E 04 BA */	lbz r0, 0x4ba(r30)

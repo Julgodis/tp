@@ -31,11 +31,11 @@ lbl_80462B9C:
 /* 80462BC4  4B EE 38 EC */	b PSMTXCopy
 /* 80462BC8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80462BCC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80462BD0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80462BD0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80462BD4  D0 1F 05 E0 */	stfs f0, 0x5e0(r31)
-/* 80462BD8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80462BD8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80462BDC  D0 1F 05 E4 */	stfs f0, 0x5e4(r31)
-/* 80462BE0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80462BE0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80462BE4  D0 1F 05 E8 */	stfs f0, 0x5e8(r31)
 /* 80462BE8  48 00 00 30 */	b lbl_80462C18
 lbl_80462BEC:

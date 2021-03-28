@@ -9,7 +9,7 @@ lbl_8057B23C:
 /* 8057B258  38 7F 05 68 */	addi r3, r31, 0x568
 /* 8057B25C  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 8057B260  38 84 B6 78 */	addi r4, r4, l_arcName@l
-/* 8057B264  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8057B678 */
+/* 8057B264  80 84 00 00 */	lwz r4, 0(r4)
 /* 8057B268  4B AB 1D A0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8057B26C  38 60 00 01 */	li r3, 1
 /* 8057B270  83 E1 00 0C */	lwz r31, 0xc(r1)

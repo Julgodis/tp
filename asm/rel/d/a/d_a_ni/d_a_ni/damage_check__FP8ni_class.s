@@ -116,9 +116,9 @@ lbl_8094C424:
 /* 8094C450  2C 00 00 00 */	cmpwi r0, 0
 /* 8094C454  41 81 00 44 */	bgt lbl_8094C498
 /* 8094C458  B0 9F 05 62 */	sth r4, 0x562(r31)
-/* 8094C45C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094C460  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8094C464  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8094C45C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094C460  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8094C464  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8094C468  28 00 00 00 */	cmplwi r0, 0
 /* 8094C46C  40 82 00 2C */	bne lbl_8094C498
 /* 8094C470  3C 60 80 95 */	lis r3, s_play_sub__FPvPv@ha

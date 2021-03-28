@@ -16,11 +16,11 @@ lbl_80B1078C:
 /* 80B107C4  4B FF BF 95 */	bl __register_global_object
 /* 80B107C8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B107CC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B107D0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B107D4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B107D0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B107D4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B107D8  90 7F 00 84 */	stw r3, 0x84(r31)
 /* 80B107DC  90 1F 00 88 */	stw r0, 0x88(r31)
-/* 80B107E0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B107E0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B107E4  90 1F 00 8C */	stw r0, 0x8c(r31)
 /* 80B107E8  38 9F 00 84 */	addi r4, r31, 0x84
 /* 80B107EC  80 7F 00 60 */	lwz r3, 0x60(r31)

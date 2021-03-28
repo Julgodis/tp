@@ -7,9 +7,9 @@ lbl_8061BC6C:
 /* 8061BC80  7C 7D 1B 78 */	mr r29, r3
 /* 8061BC84  3C 60 80 62 */	lis r3, lit_3650@ha
 /* 8061BC88  3B E3 D9 D4 */	addi r31, r3, lit_3650@l
-/* 8061BC8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8061BC90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8061BC94  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8061BC8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8061BC90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8061BC94  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 8061BC98  A8 7D 0C A0 */	lha r3, 0xca0(r29)
 /* 8061BC9C  38 03 00 01 */	addi r0, r3, 1
 /* 8061BCA0  B0 1D 0C A0 */	sth r0, 0xca0(r29)
@@ -169,8 +169,8 @@ lbl_8061BED0:
 /* 8061BED8  40 82 01 38 */	bne lbl_8061C010
 /* 8061BEDC  3B 20 00 07 */	li r25, 7
 /* 8061BEE0  3B 80 08 88 */	li r28, 0x888
-/* 8061BEE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8061BEE8  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 8061BEE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8061BEE8  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 lbl_8061BEEC:
 /* 8061BEEC  3B 5C 0C EC */	addi r26, r28, 0xcec
 /* 8061BEF0  7F 5D D2 14 */	add r26, r29, r26
@@ -196,8 +196,8 @@ lbl_8061BEEC:
 /* 8061BF40  40 82 00 C0 */	bne lbl_8061C000
 /* 8061BF44  3C 60 80 62 */	lis r3, boss@ha
 /* 8061BF48  38 A3 DB D4 */	addi r5, r3, boss@l
-/* 8061BF4C  80 65 00 00 */	lwz r3, 0(r5)	/* effective address: 8061DBD4 */
-/* 8061BF50  88 03 47 44 */	lbz r0, 0x4744(r3)	/* effective address: 80624744 */
+/* 8061BF4C  80 65 00 00 */	lwz r3, 0(r5)
+/* 8061BF50  88 03 47 44 */	lbz r0, 0x4744(r3)
 /* 8061BF54  7C 00 07 75 */	extsb. r0, r0
 /* 8061BF58  40 82 00 A8 */	bne lbl_8061C000
 /* 8061BF5C  38 00 00 03 */	li r0, 3
@@ -234,7 +234,7 @@ lbl_8061BFBC:
 /* 8061BFD4  7C 67 1B 78 */	mr r7, r3
 /* 8061BFD8  3C 60 80 62 */	lis r3, boss@ha
 /* 8061BFDC  38 63 DB D4 */	addi r3, r3, boss@l
-/* 8061BFE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061DBD4 */
+/* 8061BFE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061BFE4  38 63 59 E0 */	addi r3, r3, 0x59e0
 /* 8061BFE8  38 81 00 08 */	addi r4, r1, 8
 /* 8061BFEC  80 1D 05 C8 */	lwz r0, 0x5c8(r29)

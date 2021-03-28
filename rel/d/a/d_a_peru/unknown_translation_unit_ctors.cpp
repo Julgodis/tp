@@ -19,7 +19,6 @@ extern void* const data_80D4C04C[2];
 // 
 
 
-extern "C" void __sinit_d_a_peru_cpp(); // 1
 
 // 
 // Declarations:

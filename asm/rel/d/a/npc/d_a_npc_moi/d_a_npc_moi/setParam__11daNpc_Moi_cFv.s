@@ -42,10 +42,10 @@ lbl_80A75274:
 /* 80A7527C  3B C0 00 05 */	li r30, 5
 /* 80A75280  3B 40 00 07 */	li r26, 7
 lbl_80A75284:
-/* 80A75284  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A75288  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A7528C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A75290  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80A75284  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A75288  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A7528C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A75290  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80A75294  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 80A75298  7D 89 03 A6 */	mtctr r12
 /* 80A7529C  4E 80 04 21 */	bctrl 

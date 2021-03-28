@@ -104,9 +104,9 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803CC168-803CC178 000C+04 s=2 e=0 z=0  None .data      __vt__11JKRAramHeap                                          */
 SECTION_DATA static void* __vt__11JKRAramHeap[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JKRAramHeapFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JKRAramHeapFv,
 	/* padding */
 	NULL,
 };

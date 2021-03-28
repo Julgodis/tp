@@ -86,9 +86,6 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -111,33 +108,34 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daObjCRVSTEEL_Create(fopAc_ac_c*); // 2
-static void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c*); // 2
-static void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c*); // 2
+void daObjCRVSTEEL_Create(fopAc_ac_c*); // 2
+void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c*); // 2
+void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c*); // 2
 static void daObjCRVSTEEL_Execute(daObjCRVSTEEL_c*); // 2
-static bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c*); // 2
+bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c*); // 2
 
-extern "C" static void daObjCRVSTEEL_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c(); // 1
+extern "C" void daObjCRVSTEEL_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c(); // 1
 extern "C" void OpenSet__15daObjCRVSTEEL_cFff(); // 1
 extern "C" void CloseSet__15daObjCRVSTEEL_cFf(); // 1
 extern "C" void CloseExecute__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void OpenExecute__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void Action__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void setBaseMtx__15daObjCRVSTEEL_cFv(); // 1
-extern "C" static void daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c(); // 1
+extern "C" void daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c(); // 1
 extern "C" static void daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c(); // 1
 extern "C" void CreateHeap__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void create__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static bool daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c(); // 1
+extern "C" bool daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c(); // 1
 extern "C" void Create__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void Execute__15daObjCRVSTEEL_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjCRVSTEEL_cFv(); // 1
 extern "C" void Delete__15daObjCRVSTEEL_cFv(); // 1
-extern "C" static void func_80BD61F0(); // 1
-extern "C" static void func_80BD61F8(); // 1
+extern "C" void func_80BD61F0(); // 1
+extern "C" void func_80BD61F8(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjCRVSTEEL_Method[8];
 extern "C" extern void* g_profile_Obj_CRVSTEEL[12];
 
 // 
@@ -170,9 +168,6 @@ extern "C" void __dt__9dBgS_AcchFv(); // 1
 extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -184,40 +179,34 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 
 // 
 // Declarations:
 // 
 
-/* 80BD5BB8-80BD5BD8 0020+00 s=1 e=0 z=0  None .text      daObjCRVSTEEL_Create__FP10fopAc_ac_c                         */
+/* 80BD5BB8-80BD5BD8 0020+00 s=0 e=0 z=0  None .text      daObjCRVSTEEL_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVSTEEL_Create(fopAc_ac_c* param_0) {
+asm void daObjCRVSTEEL_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BD5BD8-80BD5BFC 0024+00 s=1 e=0 z=0  None .text      daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c                    */
+/* 80BD5BD8-80BD5BFC 0024+00 s=0 e=0 z=0  None .text      daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c* param_0) {
+asm void daObjCRVSTEEL_Delete(daObjCRVSTEEL_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c.s"
 }
@@ -294,18 +283,18 @@ asm void daObjCRVSTEEL_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BD5D6C-80BD5D98 002C+00 s=1 e=0 z=0  None .text      daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c                      */
+/* 80BD5D6C-80BD5D98 002C+00 s=0 e=0 z=0  None .text      daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c* param_0) {
+asm void daObjCRVSTEEL_Draw(daObjCRVSTEEL_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c.s"
 }
 #pragma pop
 
 
-/* 80BD5D98-80BD5DB8 0020+00 s=2 e=0 z=0  None .text      daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c                   */
+/* 80BD5D98-80BD5DB8 0020+00 s=1 e=0 z=0  None .text      daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -355,7 +344,7 @@ SECTION_RODATA static u32 const lit_3949 = 0x447A0000;
 /* 80BD6238-80BD623C 0004+00 s=1 e=0 z=0  None .rodata    @3950                                                        */
 SECTION_RODATA static u32 const lit_3950 = 0x43FA0000;
 
-/* 80BD623C-80BD626B 002F+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BD623C-80BD626B 002F+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -365,9 +354,9 @@ SECTION_DEAD char const* const stringBase_80BD6258 = "U_CrvSteelGate.dzb";
 #pragma pop
 
 /* 80BD626C-80BD6270 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80BD5DB8-80BD5E30 0078+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjCRVSTEEL_cFv                              */
+/* 80BD5DB8-80BD5E30 0078+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjCRVSTEEL_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,59 +368,59 @@ asm void daObjCRVSTEEL_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 80BD6270-80BD6290 0020+00 s=1 e=0 z=0  None .data      l_daObjCRVSTEEL_Method                                       */
-SECTION_DATA static void* l_daObjCRVSTEEL_Method[8] = {
-	/* 0    */ (void*)daObjCRVSTEEL_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjCRVSTEEL_Delete__FP15daObjCRVSTEEL_c,
-	/* 2    */ (void*)daObjCRVSTEEL_Execute__FP15daObjCRVSTEEL_c,
-	/* 3    */ (void*)daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c,
-	/* 4    */ (void*)daObjCRVSTEEL_Draw__FP15daObjCRVSTEEL_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BD6270-80BD6290 0020+00 s=0 e=0 z=0  None .data      l_daObjCRVSTEEL_Method                                       */
+SECTION_DATA void* l_daObjCRVSTEEL_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BD6290-80BD62C0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_CRVSTEEL                                       */
+/* 80BD6290-80BD62C0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_CRVSTEEL                                       */
 SECTION_DATA void* g_profile_Obj_CRVSTEEL[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00720000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000848,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01D50000,
-	/* 9    */ (void*)&l_daObjCRVSTEEL_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00720000,
+	(void*)NULL,
+	(void*)0x00000848,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01D50000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80BD62C0-80BD62E4 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BD61F8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BD61F0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD62E4-80BD630C 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjCRVSTEEL_c                                      */
 SECTION_DATA static void* __vt__15daObjCRVSTEEL_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjCRVSTEEL_cFv,
-	/* 3    */ (void*)Create__15daObjCRVSTEEL_cFv,
-	/* 4    */ (void*)Execute__15daObjCRVSTEEL_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjCRVSTEEL_cFv,
-	/* 6    */ (void*)Delete__15daObjCRVSTEEL_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD5E30-80BD6030 0200+00 s=1 e=0 z=0  None .text      create__15daObjCRVSTEEL_cFv                                  */
@@ -445,7 +434,7 @@ asm void daObjCRVSTEEL_c::create() {
 #pragma pop
 
 
-/* 80BD6030-80BD60A0 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BD6030-80BD60A0 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,13 +445,13 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BD60A0-80BD60A8 0008+00 s=1 e=0 z=0  None .text      daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c                  */
-static bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c* param_0) {
+/* 80BD60A0-80BD60A8 0008+00 s=0 e=0 z=0  None .text      daObjCRVSTEEL_IsDelete__FP15daObjCRVSTEEL_c                  */
+bool daObjCRVSTEEL_IsDelete(daObjCRVSTEEL_c* param_0) {
 	return true;
 }
 
 
-/* 80BD60A8-80BD60EC 0044+00 s=1 e=0 z=0  None .text      Create__15daObjCRVSTEEL_cFv                                  */
+/* 80BD60A8-80BD60EC 0044+00 s=0 e=0 z=0  None .text      Create__15daObjCRVSTEEL_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -473,7 +462,7 @@ asm void daObjCRVSTEEL_c::Create() {
 #pragma pop
 
 
-/* 80BD60EC-80BD6138 004C+00 s=1 e=0 z=0  None .text      Execute__15daObjCRVSTEEL_cFPPA3_A4_f                         */
+/* 80BD60EC-80BD6138 004C+00 s=0 e=0 z=0  None .text      Execute__15daObjCRVSTEEL_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -484,7 +473,7 @@ asm void daObjCRVSTEEL_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BD6138-80BD61BC 0084+00 s=1 e=0 z=0  None .text      Draw__15daObjCRVSTEEL_cFv                                    */
+/* 80BD6138-80BD61BC 0084+00 s=0 e=0 z=0  None .text      Draw__15daObjCRVSTEEL_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -495,7 +484,7 @@ asm void daObjCRVSTEEL_c::Draw() {
 #pragma pop
 
 
-/* 80BD61BC-80BD61F0 0034+00 s=1 e=0 z=0  None .text      Delete__15daObjCRVSTEEL_cFv                                  */
+/* 80BD61BC-80BD61F0 0034+00 s=0 e=0 z=0  None .text      Delete__15daObjCRVSTEEL_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -506,22 +495,22 @@ asm void daObjCRVSTEEL_c::Delete() {
 #pragma pop
 
 
-/* 80BD61F0-80BD61F8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD61F0-80BD61F8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BD61F0() {
+extern "C" asm void func_80BD61F0() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD61F0.s"
 }
 #pragma pop
 
 
-/* 80BD61F8-80BD6200 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD61F8-80BD6200 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BD61F8() {
+extern "C" asm void func_80BD61F8() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvsteel/d_a_obj_crvsteel/func_80BD61F8.s"
 }

@@ -49,17 +49,17 @@ lbl_80BE28E8:
 /* 80BE28E8  38 7E 06 28 */	addi r3, r30, 0x628
 /* 80BE28EC  3C 80 80 BE */	lis r4, l_arcName@ha
 /* 80BE28F0  38 84 30 54 */	addi r4, r4, l_arcName@l
-/* 80BE28F4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BE3054 */
+/* 80BE28F4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BE28F8  4B 44 A5 C4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BE28FC  7C 7D 1B 78 */	mr r29, r3
 /* 80BE2900  2C 1D 00 04 */	cmpwi r29, 4
 /* 80BE2904  40 82 00 68 */	bne lbl_80BE296C
-/* 80BE2908  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE290C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE2908  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE290C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE2910  3C 63 00 02 */	addis r3, r3, 2
 /* 80BE2914  3C 80 80 BE */	lis r4, l_arcName@ha
 /* 80BE2918  38 84 30 54 */	addi r4, r4, l_arcName@l
-/* 80BE291C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BE3054 */
+/* 80BE291C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BE2920  3C A0 80 BE */	lis r5, stringBase0@ha
 /* 80BE2924  38 A5 30 20 */	addi r5, r5, stringBase0@l
 /* 80BE2928  38 A5 00 07 */	addi r5, r5, 7
@@ -69,7 +69,7 @@ lbl_80BE28E8:
 /* 80BE2938  7F C3 F3 78 */	mr r3, r30
 /* 80BE293C  3C 80 80 BE */	lis r4, l_arcName@ha
 /* 80BE2940  38 84 30 54 */	addi r4, r4, l_arcName@l
-/* 80BE2944  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BE3054 */
+/* 80BE2944  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BE2948  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80BE294C  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80BE2950  38 E0 10 60 */	li r7, 0x1060
@@ -104,8 +104,8 @@ lbl_80BE296C:
 /* 80BE29C0  C0 5F 00 5C */	lfs f2, 0x5c(r31)
 /* 80BE29C4  4B 49 35 94 */	b SetWall__12dBgS_AcchCirFff
 /* 80BE29C8  38 7E 06 74 */	addi r3, r30, 0x674
-/* 80BE29CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BE29D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80BE29CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BE29D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BE29D4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80BE29D8  4B 49 40 D4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80BE29DC  C0 1F 00 64 */	lfs f0, 0x64(r31)

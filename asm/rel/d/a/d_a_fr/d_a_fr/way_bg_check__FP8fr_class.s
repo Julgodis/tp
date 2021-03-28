@@ -13,12 +13,12 @@ lbl_80519D28:
 /* 80519D54  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 80519D58  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80519D5C  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80519D60  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 8051B9CC */
+/* 80519D60  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 80519D64  EC 01 00 2A */	fadds f0, f1, f0
 /* 80519D68  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80519D6C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80519D70  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80519D74  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80519D74  80 63 00 00 */	lwz r3, 0(r3)
 /* 80519D78  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 80519D7C  4B AF 26 60 */	b mDoMtx_YrotS__FPA4_fs
 /* 80519D80  C0 1F 00 1C */	lfs f0, 0x1c(r31)
@@ -40,8 +40,8 @@ lbl_80519D28:
 /* 80519DC0  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80519DC4  7F C6 F3 78 */	mr r6, r30
 /* 80519DC8  4B B5 DF 9C */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80519DCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80519DD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80519DCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80519DD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80519DD4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80519DD8  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80519DDC  4B B5 A5 D8 */	b LineCross__4cBgSFP11cBgS_LinChk

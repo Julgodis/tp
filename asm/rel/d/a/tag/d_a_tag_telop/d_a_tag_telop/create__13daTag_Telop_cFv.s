@@ -17,8 +17,8 @@ lbl_80490A84:
 lbl_80490A90:
 /* 80490A90  A8 1F 04 B8 */	lha r0, 0x4b8(r31)
 /* 80490A94  B0 1F 05 68 */	sth r0, 0x568(r31)
-/* 80490A98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80490A9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80490A98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80490A9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80490AA0  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80490AA4  38 80 13 01 */	li r4, 0x1301
 /* 80490AA8  4B BA 3F 14 */	b isEventBit__11dSv_event_cCFUs

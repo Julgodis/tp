@@ -41,17 +41,17 @@ lbl_80B7C798:
 /* 80B7C7B0  41 80 FF E8 */	blt lbl_80B7C798
 /* 80B7C7B4  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B7C7B8  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B7C7BC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B7C7C0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B7C7BC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B7C7C0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B7C7C4  90 7E 14 74 */	stw r3, 0x1474(r30)
 /* 80B7C7C8  90 1E 14 78 */	stw r0, 0x1478(r30)
-/* 80B7C7CC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B7C7CC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B7C7D0  90 1E 14 7C */	stw r0, 0x147c(r30)
-/* 80B7C7D4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B7C7D8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B7C7D4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B7C7D8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B7C7DC  90 7E 14 80 */	stw r3, 0x1480(r30)
 /* 80B7C7E0  90 1E 14 84 */	stw r0, 0x1484(r30)
-/* 80B7C7E4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B7C7E4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B7C7E8  90 1E 14 88 */	stw r0, 0x1488(r30)
 /* 80B7C7EC  38 60 00 00 */	li r3, 0
 /* 80B7C7F0  90 7E 14 D0 */	stw r3, 0x14d0(r30)
@@ -130,7 +130,7 @@ lbl_80B7C8F4:
 /* 80B7C908  40 82 00 18 */	bne lbl_80B7C920
 /* 80B7C90C  3C 60 80 B9 */	lis r3, l_myName@ha
 /* 80B7C910  38 63 D3 2C */	addi r3, r3, l_myName@l
-/* 80B7C914  80 03 00 08 */	lwz r0, 8(r3)	/* effective address: 80B8D334 */
+/* 80B7C914  80 03 00 08 */	lwz r0, 8(r3)
 /* 80B7C918  90 1E 14 FC */	stw r0, 0x14fc(r30)
 /* 80B7C91C  48 00 00 2C */	b lbl_80B7C948
 lbl_80B7C920:
@@ -138,7 +138,7 @@ lbl_80B7C920:
 /* 80B7C924  40 82 00 18 */	bne lbl_80B7C93C
 /* 80B7C928  3C 60 80 B9 */	lis r3, l_myName@ha
 /* 80B7C92C  38 63 D3 2C */	addi r3, r3, l_myName@l
-/* 80B7C930  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 80B8D338 */
+/* 80B7C930  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80B7C934  90 1E 14 FC */	stw r0, 0x14fc(r30)
 /* 80B7C938  48 00 00 10 */	b lbl_80B7C948
 lbl_80B7C93C:

@@ -5,8 +5,8 @@ lbl_80CDAC94:
 /* 80CDACA0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CDACA4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CDACA8  7C 7E 1B 78 */	mr r30, r3
-/* 80CDACAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDACB0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80CDACAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDACB0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80CDACB4  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80CDACB8  3C 80 80 CE */	lis r4, stringBase0@ha
 /* 80CDACBC  38 84 B8 90 */	addi r4, r4, stringBase0@l
@@ -16,8 +16,8 @@ lbl_80CDAC94:
 /* 80CDACCC  41 82 00 40 */	beq lbl_80CDAD0C
 /* 80CDACD0  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80CDACD4  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80CDACD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDACDC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDACD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDACDC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDACE0  38 63 09 58 */	addi r3, r3, 0x958
 /* 80CDACE4  4B 35 9A BC */	b onTbox__12dSv_memBit_cFi
 /* 80CDACE8  80 1E 00 B0 */	lwz r0, 0xb0(r30)

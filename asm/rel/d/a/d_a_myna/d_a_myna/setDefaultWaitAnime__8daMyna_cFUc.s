@@ -153,7 +153,7 @@ lbl_8094A81C:
 lbl_8094A82C:
 /* 8094A82C  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 8094A830  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094A834  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 8094BA5C */
+/* 8094A834  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8094A838  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8094A83C  40 80 00 2C */	bge lbl_8094A868
 /* 8094A840  4B 91 D0 2C */	b cM_rnd__Fv

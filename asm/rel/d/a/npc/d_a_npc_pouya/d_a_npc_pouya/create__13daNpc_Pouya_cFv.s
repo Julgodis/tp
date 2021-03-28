@@ -128,8 +128,8 @@ lbl_80AADFF0:
 /* 80AAE0C4  60 00 00 04 */	ori r0, r0, 4
 /* 80AAE0C8  90 1D 06 B8 */	stw r0, 0x6b8(r29)
 /* 80AAE0CC  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80AAE0D0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AAE0D4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AAE0D0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AAE0D4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AAE0D8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AAE0DC  4B 5C 89 D0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AAE0E0  80 1D 07 68 */	lwz r0, 0x768(r29)

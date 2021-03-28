@@ -7,13 +7,13 @@ lbl_80579E5C:
 /* 80579E70  7C 7D 1B 78 */	mr r29, r3
 /* 80579E74  3C 60 80 58 */	lis r3, l_hair_offset@ha
 /* 80579E78  3B E3 B3 60 */	addi r31, r3, l_hair_offset@l
-/* 80579E7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80579E80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80579E84  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80579E7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80579E80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80579E84  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80579E88  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)
 /* 80579E8C  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80579E90  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80579E94  C0 3F 00 E8 */	lfs f1, 0xe8(r31)	/* effective address: 8057B448 */
+/* 80579E94  C0 3F 00 E8 */	lfs f1, 0xe8(r31)
 /* 80579E98  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80579E9C  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 80579EA0  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)

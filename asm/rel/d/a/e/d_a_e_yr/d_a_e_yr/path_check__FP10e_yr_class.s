@@ -26,8 +26,8 @@ lbl_80822AFC:
 /* 80822B5C  80 7E 06 EC */	lwz r3, 0x6ec(r30)
 /* 80822B60  83 83 00 08 */	lwz r28, 8(r3)
 /* 80822B64  3B 60 00 00 */	li r27, 0
-/* 80822B68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80822B6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80822B68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80822B6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80822B70  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80822B74  48 00 00 74 */	b lbl_80822BE8
 lbl_80822B78:

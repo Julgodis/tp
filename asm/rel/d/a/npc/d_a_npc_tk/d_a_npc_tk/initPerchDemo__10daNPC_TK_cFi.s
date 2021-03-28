@@ -137,7 +137,7 @@ lbl_80B02800:
 lbl_80B028FC:
 /* 80B028FC  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B02900  38 63 C6 0C */	addi r3, r3, l_HIO@l
-/* 80B02904  88 03 00 3C */	lbz r0, 0x3c(r3)	/* effective address: 80B0C648 */
+/* 80B02904  88 03 00 3C */	lbz r0, 0x3c(r3)
 /* 80B02908  28 00 00 00 */	cmplwi r0, 0
 /* 80B0290C  41 82 00 64 */	beq lbl_80B02970
 /* 80B02910  C0 3F 00 78 */	lfs f1, 0x78(r31)
@@ -219,13 +219,13 @@ lbl_80B029CC:
 /* 80B02A2C  EC 20 08 28 */	fsubs f1, f0, f1
 /* 80B02A30  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B02A34  38 63 C6 0C */	addi r3, r3, l_HIO@l
-/* 80B02A38  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B0C624 */
+/* 80B02A38  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B02A3C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80B02A40  FC 00 00 1E */	fctiwz f0, f0
 /* 80B02A44  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 80B02A48  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80B02A4C  90 1E 06 B0 */	stw r0, 0x6b0(r30)
-/* 80B02A50  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 80B0C630 */
+/* 80B02A50  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 80B02A54  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80B02A58  48 00 00 EC */	b lbl_80B02B44
 lbl_80B02A5C:

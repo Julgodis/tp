@@ -273,8 +273,8 @@ lbl_80B276F8:
 lbl_80B27700:
 /* 80B27700  38 60 00 07 */	li r3, 7
 /* 80B27704  4B 62 54 28 */	b daNpcT_offTmpBit__FUl
-/* 80B27708  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B2770C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B27708  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B2770C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B27710  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80B27714  38 80 13 08 */	li r4, 0x1308
 /* 80B27718  4B 50 D2 8C */	b offEventBit__11dSv_event_cFUs

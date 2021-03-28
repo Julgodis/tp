@@ -49,8 +49,8 @@ lbl_80827A94:
 /* 80827AE4  88 9D 06 68 */	lbz r4, 0x668(r29)
 /* 80827AE8  28 04 00 00 */	cmplwi r4, 0
 /* 80827AEC  41 82 00 28 */	beq lbl_80827B14
-/* 80827AF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80827AF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80827AF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80827AF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80827AF8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80827AFC  7C 05 07 74 */	extsb r5, r0
 /* 80827B00  4B 80 D8 60 */	b isSwitch__10dSv_info_cCFii

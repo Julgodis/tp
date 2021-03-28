@@ -354,7 +354,7 @@ lbl_8057E01C:
 /* 8057E080  90 01 00 18 */	stw r0, 0x18(r1)
 /* 8057E084  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8057E088  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8057E08C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8057E08C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8057E090  38 81 00 18 */	addi r4, r1, 0x18
 /* 8057E094  38 B9 05 38 */	addi r5, r25, 0x538
 /* 8057E098  38 C0 00 00 */	li r6, 0
@@ -377,7 +377,7 @@ lbl_8057E0D0:
 /* 8057E0D4  40 82 00 98 */	bne lbl_8057E16C
 /* 8057E0D8  3C 60 80 58 */	lis r3, l_HIO@ha
 /* 8057E0DC  38 63 F8 E4 */	addi r3, r3, l_HIO@l
-/* 8057E0E0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8057F910 */
+/* 8057E0E0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8057E0E4  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8057E0E8  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 8057E0EC  D0 01 00 30 */	stfs f0, 0x30(r1)
@@ -402,7 +402,7 @@ lbl_8057E0D0:
 /* 8057E138  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8057E13C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8057E140  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8057E144  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8057E144  80 63 00 00 */	lwz r3, 0(r3)
 /* 8057E148  38 81 00 14 */	addi r4, r1, 0x14
 /* 8057E14C  38 B9 05 38 */	addi r5, r25, 0x538
 /* 8057E150  38 C0 00 00 */	li r6, 0

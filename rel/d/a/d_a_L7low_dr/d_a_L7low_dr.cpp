@@ -38,19 +38,19 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
+struct J3DModelData {
+};
+
 struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -100,17 +100,17 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-static void daL7lowDr_Delete(daL7lowDr_c*); // 2
+void daL7lowDr_Delete(daL7lowDr_c*); // 2
 static void daL7lowDr_Execute(daL7lowDr_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daL7lowDr_Create(daL7lowDr_c*); // 2
-static void daL7lowDr_Draw(daL7lowDr_c*); // 2
-static bool daL7lowDr_IsDelete(daL7lowDr_c*); // 2
+void daL7lowDr_Create(daL7lowDr_c*); // 2
+void daL7lowDr_Draw(daL7lowDr_c*); // 2
+bool daL7lowDr_IsDelete(daL7lowDr_c*); // 2
 
 extern "C" void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v(); // 1
 extern "C" void action__11daL7lowDr_cFv(); // 1
 extern "C" void _delete__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Delete__FP11daL7lowDr_c(); // 1
+extern "C" void daL7lowDr_Delete__FP11daL7lowDr_c(); // 1
 extern "C" void mtx_set__11daL7lowDr_cFv(); // 1
 extern "C" void fly__11daL7lowDr_cFv(); // 1
 extern "C" void execute__11daL7lowDr_cFv(); // 1
@@ -118,11 +118,12 @@ extern "C" static void daL7lowDr_Execute__FP11daL7lowDr_c(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__11daL7lowDr_cFv(); // 1
 extern "C" void create__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Create__FP11daL7lowDr_c(); // 1
+extern "C" void daL7lowDr_Create__FP11daL7lowDr_c(); // 1
 extern "C" void draw__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Draw__FP11daL7lowDr_c(); // 1
-extern "C" static bool daL7lowDr_IsDelete__FP11daL7lowDr_c(); // 1
+extern "C" void daL7lowDr_Draw__FP11daL7lowDr_c(); // 1
+extern "C" bool daL7lowDr_IsDelete__FP11daL7lowDr_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daL7lowDr_Method[8];
 extern "C" extern void* g_profile_L7lowDr[12];
 
 // 
@@ -172,13 +173,11 @@ extern "C" void __ptmf_test(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
@@ -272,11 +271,11 @@ asm void daL7lowDr_c::_delete() {
 #pragma pop
 
 
-/* 805AA798-805AA7B8 0020+00 s=1 e=0 z=0  None .text      daL7lowDr_Delete__FP11daL7lowDr_c                            */
+/* 805AA798-805AA7B8 0020+00 s=0 e=0 z=0  None .text      daL7lowDr_Delete__FP11daL7lowDr_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daL7lowDr_Delete(daL7lowDr_c* param_0) {
+asm void daL7lowDr_Delete(daL7lowDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7low_dr/d_a_L7low_dr/daL7lowDr_Delete__FP11daL7lowDr_c.s"
 }
@@ -294,7 +293,7 @@ asm void daL7lowDr_c::mtx_set() {
 #pragma pop
 
 
-/* 805AA828-805AABF8 03D0+00 s=1 e=0 z=0  None .text      fly__11daL7lowDr_cFv                                         */
+/* 805AA828-805AABF8 03D0+00 s=0 e=0 z=0  None .text      fly__11daL7lowDr_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -316,7 +315,7 @@ asm void daL7lowDr_c::execute() {
 #pragma pop
 
 
-/* 805AAC1C-805AAC3C 0020+00 s=2 e=0 z=0  None .text      daL7lowDr_Execute__FP11daL7lowDr_c                           */
+/* 805AAC1C-805AAC3C 0020+00 s=1 e=0 z=0  None .text      daL7lowDr_Execute__FP11daL7lowDr_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -352,9 +351,9 @@ asm void daL7lowDr_c::CreateHeap() {
 /* ############################################################################################## */
 /* 805AAFB8-805AAFC4 000C+00 s=1 e=0 z=0  None .data      @3832                                                        */
 SECTION_DATA static void* lit_3832[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fly__11daL7lowDr_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 805AAD58-805AAE88 0130+00 s=1 e=0 z=0  None .text      create__11daL7lowDr_cFv                                      */
@@ -368,11 +367,11 @@ asm void daL7lowDr_c::create() {
 #pragma pop
 
 
-/* 805AAE88-805AAEA8 0020+00 s=1 e=0 z=0  None .text      daL7lowDr_Create__FP11daL7lowDr_c                            */
+/* 805AAE88-805AAEA8 0020+00 s=0 e=0 z=0  None .text      daL7lowDr_Create__FP11daL7lowDr_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daL7lowDr_Create(daL7lowDr_c* param_0) {
+asm void daL7lowDr_Create(daL7lowDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7low_dr/d_a_L7low_dr/daL7lowDr_Create__FP11daL7lowDr_c.s"
 }
@@ -390,49 +389,49 @@ asm void daL7lowDr_c::draw() {
 #pragma pop
 
 
-/* 805AAF44-805AAF64 0020+00 s=1 e=0 z=0  None .text      daL7lowDr_Draw__FP11daL7lowDr_c                              */
+/* 805AAF44-805AAF64 0020+00 s=0 e=0 z=0  None .text      daL7lowDr_Draw__FP11daL7lowDr_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daL7lowDr_Draw(daL7lowDr_c* param_0) {
+asm void daL7lowDr_Draw(daL7lowDr_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_L7low_dr/d_a_L7low_dr/daL7lowDr_Draw__FP11daL7lowDr_c.s"
 }
 #pragma pop
 
 
-/* 805AAF64-805AAF6C 0008+00 s=1 e=0 z=0  None .text      daL7lowDr_IsDelete__FP11daL7lowDr_c                          */
-static bool daL7lowDr_IsDelete(daL7lowDr_c* param_0) {
+/* 805AAF64-805AAF6C 0008+00 s=0 e=0 z=0  None .text      daL7lowDr_IsDelete__FP11daL7lowDr_c                          */
+bool daL7lowDr_IsDelete(daL7lowDr_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 805AAFC4-805AAFE4 0020+00 s=1 e=0 z=0  None .data      l_daL7lowDr_Method                                           */
-SECTION_DATA static void* l_daL7lowDr_Method[8] = {
-	/* 0    */ (void*)daL7lowDr_Create__FP11daL7lowDr_c,
-	/* 1    */ (void*)daL7lowDr_Delete__FP11daL7lowDr_c,
-	/* 2    */ (void*)daL7lowDr_Execute__FP11daL7lowDr_c,
-	/* 3    */ (void*)daL7lowDr_IsDelete__FP11daL7lowDr_c,
-	/* 4    */ (void*)daL7lowDr_Draw__FP11daL7lowDr_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805AAFC4-805AAFE4 0020+00 s=0 e=0 z=0  None .data      l_daL7lowDr_Method                                           */
+SECTION_DATA void* l_daL7lowDr_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805AAFE4-805AB014 0030+00 s=0 e=0 z=1  None .data      g_profile_L7lowDr                                            */
+/* 805AAFE4-805AB014 0030+00 s=0 e=0 z=0  None .data      g_profile_L7lowDr                                            */
 SECTION_DATA void* g_profile_L7lowDr[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02040000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000644,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00CF0000,
-	/* 9    */ (void*)&l_daL7lowDr_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02040000,
+	(void*)NULL,
+	(void*)0x00000644,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00CF0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x020E0000,
 };
 

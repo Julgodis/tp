@@ -57,7 +57,7 @@ lbl_80695114:
 /* 80695140  4B 97 72 5C */	b mDoMtx_XrotM__FPA4_fs
 /* 80695144  3C 60 80 69 */	lis r3, l_HIO@ha
 /* 80695148  38 63 7E 7C */	addi r3, r3, l_HIO@l
-/* 8069514C  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80697E88 */
+/* 8069514C  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80695150  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80695154  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80695158  FC 40 08 90 */	fmr f2, f1

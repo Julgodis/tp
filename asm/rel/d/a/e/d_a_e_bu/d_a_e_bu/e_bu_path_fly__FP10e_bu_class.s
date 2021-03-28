@@ -187,7 +187,7 @@ lbl_806928B8:
 lbl_806928CC:
 /* 806928CC  3C 60 80 69 */	lis r3, l_HIO@ha
 /* 806928D0  38 63 49 68 */	addi r3, r3, l_HIO@l
-/* 806928D4  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80694974 */
+/* 806928D4  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 806928D8  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806928DC  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 806928E0  C0 1F 00 8C */	lfs f0, 0x8c(r31)

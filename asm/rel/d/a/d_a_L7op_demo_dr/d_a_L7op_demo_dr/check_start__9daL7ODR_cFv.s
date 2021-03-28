@@ -2,16 +2,16 @@ lbl_805ADA2C:
 /* 805ADA2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 805ADA30  3C 60 80 5B */	lis r3, lit_3850@ha
 /* 805ADA34  38 83 DF 50 */	addi r4, r3, lit_3850@l
-/* 805ADA38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805ADA3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805ADA40  80 A3 5D AC */	lwz r5, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805ADA38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805ADA3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805ADA40  80 A3 5D AC */	lwz r5, 0x5dac(r3)
 /* 805ADA44  C0 65 04 D0 */	lfs f3, 0x4d0(r5)
 /* 805ADA48  D0 61 00 08 */	stfs f3, 8(r1)
 /* 805ADA4C  C0 45 04 D4 */	lfs f2, 0x4d4(r5)
 /* 805ADA50  D0 41 00 0C */	stfs f2, 0xc(r1)
 /* 805ADA54  C0 25 04 D8 */	lfs f1, 0x4d8(r5)
 /* 805ADA58  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 805ADA5C  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 805ADF58 */
+/* 805ADA5C  C0 04 00 08 */	lfs f0, 8(r4)
 /* 805ADA60  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 805ADA64  40 82 00 50 */	bne lbl_805ADAB4
 /* 805ADA68  C0 04 01 48 */	lfs f0, 0x148(r4)

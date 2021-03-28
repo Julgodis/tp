@@ -10,10 +10,10 @@ lbl_80A43C64:
 /* 80A43C84  48 00 00 D5 */	bl srchActors__11daNpc_Knj_cFv
 /* 80A43C88  3C 60 80 A4 */	lis r3, m__17daNpc_Knj_Param_c@ha
 /* 80A43C8C  38 83 55 10 */	addi r4, r3, m__17daNpc_Knj_Param_c@l
-/* 80A43C90  AB C4 00 48 */	lha r30, 0x48(r4)	/* effective address: 80A45558 */
-/* 80A43C94  AB E4 00 4A */	lha r31, 0x4a(r4)	/* effective address: 80A4555A */
-/* 80A43C98  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 80A4555C */
-/* 80A43C9C  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 80A4555E */
+/* 80A43C90  AB C4 00 48 */	lha r30, 0x48(r4)
+/* 80A43C94  AB E4 00 4A */	lha r31, 0x4a(r4)
+/* 80A43C98  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 80A43C9C  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 80A43CA0  4B 70 8D 78 */	b daNpcT_getDistTableIdx__Fii
 /* 80A43CA4  98 7D 05 44 */	stb r3, 0x544(r29)
 /* 80A43CA8  88 1D 05 44 */	lbz r0, 0x544(r29)
@@ -26,33 +26,33 @@ lbl_80A43C64:
 /* 80A43CC4  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 80A43CC8  3C 60 80 A4 */	lis r3, m__17daNpc_Knj_Param_c@ha
 /* 80A43CCC  38 63 55 10 */	addi r3, r3, m__17daNpc_Knj_Param_c@l
-/* 80A43CD0  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80A45518 */
+/* 80A43CD0  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80A43CD4  D0 1D 04 EC */	stfs f0, 0x4ec(r29)
 /* 80A43CD8  D0 1D 04 F0 */	stfs f0, 0x4f0(r29)
 /* 80A43CDC  D0 1D 04 F4 */	stfs f0, 0x4f4(r29)
-/* 80A43CE0  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80A45520 */
+/* 80A43CE0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80A43CE4  FC 00 00 1E */	fctiwz f0, f0
 /* 80A43CE8  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80A43CEC  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80A43CF0  98 1D 08 78 */	stb r0, 0x878(r29)
-/* 80A43CF4  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80A45524 */
+/* 80A43CF4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80A43CF8  D0 1D 0D EC */	stfs f0, 0xdec(r29)
-/* 80A43CFC  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A4552C */
+/* 80A43CFC  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A43D00  D0 1D 0D F0 */	stfs f0, 0xdf0(r29)
 /* 80A43D04  38 7D 08 A0 */	addi r3, r29, 0x8a0
 /* 80A43D08  C0 3D 0D F0 */	lfs f1, 0xdf0(r29)
 /* 80A43D0C  4B 63 22 34 */	b SetWallR__12dBgS_AcchCirFf
 /* 80A43D10  3C 60 80 A4 */	lis r3, m__17daNpc_Knj_Param_c@ha
 /* 80A43D14  38 63 55 10 */	addi r3, r3, m__17daNpc_Knj_Param_c@l
-/* 80A43D18  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A45528 */
+/* 80A43D18  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A43D1C  D0 1D 08 D0 */	stfs f0, 0x8d0(r29)
-/* 80A43D20  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80A4551C */
+/* 80A43D20  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80A43D24  D0 1D 0D E8 */	stfs f0, 0xde8(r29)
-/* 80A43D28  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80A45514 */
+/* 80A43D28  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80A43D2C  D0 1D 05 30 */	stfs f0, 0x530(r29)
-/* 80A43D30  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80A4557C */
+/* 80A43D30  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80A43D34  D0 1D 0A 80 */	stfs f0, 0xa80(r29)
-/* 80A43D38  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80A45554 */
+/* 80A43D38  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80A43D3C  D0 1D 0A 84 */	stfs f0, 0xa84(r29)
 /* 80A43D40  39 61 00 20 */	addi r11, r1, 0x20
 /* 80A43D44  4B 91 E4 E4 */	b _restgpr_29

@@ -14,7 +14,7 @@ lbl_80C78638:
 /* 80C78668  41 82 04 0C */	beq lbl_80C78A74
 /* 80C7866C  3C 60 80 C8 */	lis r3, data_80C79D58@ha
 /* 80C78670  38 83 9D 58 */	addi r4, r3, data_80C79D58@l
-/* 80C78674  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80C79D58 */
+/* 80C78674  88 04 00 00 */	lbz r0, 0(r4)
 /* 80C78678  7C 00 07 75 */	extsb. r0, r0
 /* 80C7867C  40 82 00 E8 */	bne lbl_80C78764
 /* 80C78680  80 7E 00 AC */	lwz r3, 0xac(r30)

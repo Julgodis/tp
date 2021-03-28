@@ -12,7 +12,7 @@ lbl_8047FCE4:
 /* 8047FD0C  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 8047FD10  C0 1E 07 88 */	lfs f0, 0x788(r30)
 /* 8047FD14  EC 21 00 28 */	fsubs f1, f1, f0
-/* 8047FD18  C0 1F 01 C0 */	lfs f0, 0x1c0(r31)	/* effective address: 804810E8 */
+/* 8047FD18  C0 1F 01 C0 */	lfs f0, 0x1c0(r31)
 /* 8047FD1C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8047FD20  4C 41 13 82 */	cror 2, 1, 2
 /* 8047FD24  40 82 00 0C */	bne lbl_8047FD30

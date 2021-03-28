@@ -11,10 +11,10 @@ lbl_8050E9E8:
 /* 8050EA0C  B0 1E 09 72 */	sth r0, 0x972(r30)
 /* 8050EA10  38 00 00 00 */	li r0, 0
 /* 8050EA14  B0 1E 05 B4 */	sth r0, 0x5b4(r30)
-/* 8050EA18  C0 3F 00 A8 */	lfs f1, 0xa8(r31)	/* effective address: 8051862C */
+/* 8050EA18  C0 3F 00 A8 */	lfs f1, 0xa8(r31)
 /* 8050EA1C  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8050EA20  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 8050EA24  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 805191E0 */
+/* 8050EA24  C0 03 00 4C */	lfs f0, 0x4c(r3)
 /* 8050EA28  EC 01 00 2A */	fadds f0, f1, f0
 /* 8050EA2C  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 8050EA30  88 1E 09 BC */	lbz r0, 0x9bc(r30)
@@ -43,7 +43,7 @@ lbl_8050E9E8:
 lbl_8050EA8C:
 /* 8050EA8C  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8050EA90  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 8050EA94  C0 03 00 48 */	lfs f0, 0x48(r3)	/* effective address: 805191DC */
+/* 8050EA94  C0 03 00 48 */	lfs f0, 0x48(r3)
 /* 8050EA98  FC 00 00 50 */	fneg f0, f0
 /* 8050EA9C  D0 1E 09 EC */	stfs f0, 0x9ec(r30)
 lbl_8050EAA0:

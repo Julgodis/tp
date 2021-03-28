@@ -8,10 +8,10 @@ lbl_80C8C8E4:
 /* 80C8C8FC  3C 60 80 C9 */	lis r3, lit_3628@ha
 /* 80C8C900  3B E3 CB F0 */	addi r31, r3, lit_3628@l
 /* 80C8C904  38 7E 05 C0 */	addi r3, r30, 0x5c0
-/* 80C8C908  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80C8CBF0 */
-/* 80C8C90C  C0 5F 00 40 */	lfs f2, 0x40(r31)	/* effective address: 80C8CC30 */
+/* 80C8C908  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80C8C90C  C0 5F 00 40 */	lfs f2, 0x40(r31)
 /* 80C8C910  C0 7E 05 B4 */	lfs f3, 0x5b4(r30)
-/* 80C8C914  C0 9F 00 3C */	lfs f4, 0x3c(r31)	/* effective address: 80C8CC2C */
+/* 80C8C914  C0 9F 00 3C */	lfs f4, 0x3c(r31)
 /* 80C8C918  4B 5E 30 64 */	b cLib_addCalc__FPfffff
 /* 80C8C91C  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80C8C920  FC 00 08 00 */	fcmpu cr0, f0, f1
@@ -25,7 +25,7 @@ lbl_80C8C8E4:
 /* 80C8C940  90 01 00 08 */	stw r0, 8(r1)
 /* 80C8C944  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C8C948  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C8C94C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C8C94C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C8C950  38 81 00 08 */	addi r4, r1, 8
 /* 80C8C954  38 BE 04 A8 */	addi r5, r30, 0x4a8
 /* 80C8C958  38 C0 00 00 */	li r6, 0

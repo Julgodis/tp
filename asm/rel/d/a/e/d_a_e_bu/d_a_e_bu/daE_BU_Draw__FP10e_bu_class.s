@@ -26,7 +26,7 @@ lbl_80691458:
 /* 806914B8  C0 44 46 D0 */	lfs f2, lit_3889@l(r4)
 /* 806914BC  3C 80 80 69 */	lis r4, l_HIO@ha
 /* 806914C0  38 84 49 68 */	addi r4, r4, l_HIO@l
-/* 806914C4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80694970 */
+/* 806914C4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 806914C8  EC 42 00 32 */	fmuls f2, f2, f0
 /* 806914CC  38 9E 07 FC */	addi r4, r30, 0x7fc
 /* 806914D0  38 A0 00 00 */	li r5, 0

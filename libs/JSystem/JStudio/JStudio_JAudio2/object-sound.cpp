@@ -116,9 +116,6 @@ struct JAISoundParamsMove {
 	/* 802A2EBC */ void movePan(f32, u32);
 };
 
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -126,6 +123,9 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -271,34 +271,34 @@ extern "C" asm static void func_8028D800() {
 /* ############################################################################################## */
 /* 803C5A78-803C5A88 0010+00 s=2 e=0 z=0  None .data      __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_     */
 SECTION_DATA static void* __vt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor,
-	/* 3    */ (void*)__dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__cl__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_CFfPQ27JStudio8TAdaptor,
+	(void*)__dt__Q315JStudio_JAudio214TAdaptor_sound13TVVOSetValue_Fv,
 };
 
 /* 803C5A88-803C5AD8 0050+00 s=2 e=0 z=0  None .data      __vt__Q215JStudio_JAudio214TAdaptor_sound                    */
 SECTION_DATA static void* __vt__Q215JStudio_JAudio214TAdaptor_sound[20] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q215JStudio_JAudio214TAdaptor_soundFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv,
-	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	/* 5    */ (void*)adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv,
-	/* 6    */ (void*)adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl,
-	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	/* 8    */ (void*)adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 9    */ (void*)adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 10   */ (void*)adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 11   */ (void*)adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 12   */ (void*)adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 13   */ (void*)adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 14   */ (void*)adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 15   */ (void*)adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 16   */ (void*)adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 17   */ (void*)adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 18   */ (void*)adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 19   */ (void*)adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q215JStudio_JAudio214TAdaptor_soundFv,
+	(void*)adaptor_do_prepare__Q215JStudio_JAudio214TAdaptor_soundFv,
+	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_end__Q215JStudio_JAudio214TAdaptor_soundFv,
+	(void*)adaptor_do_update__Q215JStudio_JAudio214TAdaptor_soundFUl,
+	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	(void*)adaptor_do_SOUND__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_BEGIN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_BEGIN_FADE_IN__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_END_FADE_OUT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_NODE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_ENABLE__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_REPEAT__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_CONTINUOUS__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_LOCATED__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_ON_EXIT_NOT_END__Q215JStudio_JAudio214TAdaptor_soundFQ37JStudio4data15TEOperationDataPCvUl,
 };
 
 /* 8028D828-8028D8F4 00CC+00 s=0 e=1 z=0  None .text      __ct__Q215JStudio_JAudio214TAdaptor_soundFPQ215JStudio_JAudio213TCreateObject */

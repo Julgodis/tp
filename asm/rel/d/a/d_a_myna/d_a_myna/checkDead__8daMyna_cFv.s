@@ -9,8 +9,8 @@ lbl_80949C44:
 /* 80949C60  3B A0 00 00 */	li r29, 0
 /* 80949C64  3C 60 80 3A */	lis r3, saveBitLabels__16dSv_event_flag_c@ha
 /* 80949C68  3B 83 72 88 */	addi r28, r3, saveBitLabels__16dSv_event_flag_c@l
-/* 80949C6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80949C70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80949C6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80949C70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80949C74  3B 63 07 F0 */	addi r27, r3, 0x7f0
 lbl_80949C78:
 /* 80949C78  7F 5E EA 14 */	add r26, r30, r29

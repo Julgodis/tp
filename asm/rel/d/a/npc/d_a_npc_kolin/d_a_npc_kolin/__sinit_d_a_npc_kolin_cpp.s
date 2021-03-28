@@ -6,73 +6,73 @@ lbl_8055A25C:
 /* 8055A26C  38 83 A8 C8 */	addi r4, r3, cNullVec__6Z2Calc@l
 /* 8055A270  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8055A274  38 A3 21 80 */	addi r5, r3, __ptmf_null@l
-/* 8055A278  80 65 00 00 */	lwz r3, 0(r5)	/* effective address: 803A2180 */
-/* 8055A27C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
-/* 8055A280  90 64 07 94 */	stw r3, 0x794(r4)	/* effective address: 8055B05C */
-/* 8055A284  90 04 07 98 */	stw r0, 0x798(r4)	/* effective address: 8055B060 */
-/* 8055A288  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
-/* 8055A28C  90 04 07 9C */	stw r0, 0x79c(r4)	/* effective address: 8055B064 */
+/* 8055A278  80 65 00 00 */	lwz r3, 0(r5)
+/* 8055A27C  80 05 00 04 */	lwz r0, 4(r5)
+/* 8055A280  90 64 07 94 */	stw r3, 0x794(r4)
+/* 8055A284  90 04 07 98 */	stw r0, 0x798(r4)
+/* 8055A288  80 05 00 08 */	lwz r0, 8(r5)
+/* 8055A28C  90 04 07 9C */	stw r0, 0x79c(r4)
 /* 8055A290  38 64 07 94 */	addi r3, r4, 0x794
-/* 8055A294  80 A4 07 1C */	lwz r5, 0x71c(r4)	/* effective address: 8055AFE4 */
-/* 8055A298  80 04 07 20 */	lwz r0, 0x720(r4)	/* effective address: 8055AFE8 */
-/* 8055A29C  90 A3 00 0C */	stw r5, 0xc(r3)	/* effective address: 8055B068 */
-/* 8055A2A0  90 03 00 10 */	stw r0, 0x10(r3)	/* effective address: 8055B06C */
-/* 8055A2A4  80 04 07 24 */	lwz r0, 0x724(r4)	/* effective address: 8055AFEC */
-/* 8055A2A8  90 03 00 14 */	stw r0, 0x14(r3)	/* effective address: 8055B070 */
-/* 8055A2AC  80 A4 07 28 */	lwz r5, 0x728(r4)	/* effective address: 8055AFF0 */
-/* 8055A2B0  80 04 07 2C */	lwz r0, 0x72c(r4)	/* effective address: 8055AFF4 */
-/* 8055A2B4  90 A3 00 18 */	stw r5, 0x18(r3)	/* effective address: 8055B074 */
-/* 8055A2B8  90 03 00 1C */	stw r0, 0x1c(r3)	/* effective address: 8055B078 */
-/* 8055A2BC  80 04 07 30 */	lwz r0, 0x730(r4)	/* effective address: 8055AFF8 */
-/* 8055A2C0  90 03 00 20 */	stw r0, 0x20(r3)	/* effective address: 8055B07C */
-/* 8055A2C4  80 A4 07 34 */	lwz r5, 0x734(r4)	/* effective address: 8055AFFC */
-/* 8055A2C8  80 04 07 38 */	lwz r0, 0x738(r4)	/* effective address: 8055B000 */
-/* 8055A2CC  90 A3 00 24 */	stw r5, 0x24(r3)	/* effective address: 8055B080 */
-/* 8055A2D0  90 03 00 28 */	stw r0, 0x28(r3)	/* effective address: 8055B084 */
-/* 8055A2D4  80 04 07 3C */	lwz r0, 0x73c(r4)	/* effective address: 8055B004 */
-/* 8055A2D8  90 03 00 2C */	stw r0, 0x2c(r3)	/* effective address: 8055B088 */
-/* 8055A2DC  80 A4 07 40 */	lwz r5, 0x740(r4)	/* effective address: 8055B008 */
-/* 8055A2E0  80 04 07 44 */	lwz r0, 0x744(r4)	/* effective address: 8055B00C */
-/* 8055A2E4  90 A3 00 30 */	stw r5, 0x30(r3)	/* effective address: 8055B08C */
-/* 8055A2E8  90 03 00 34 */	stw r0, 0x34(r3)	/* effective address: 8055B090 */
-/* 8055A2EC  80 04 07 48 */	lwz r0, 0x748(r4)	/* effective address: 8055B010 */
-/* 8055A2F0  90 03 00 38 */	stw r0, 0x38(r3)	/* effective address: 8055B094 */
-/* 8055A2F4  80 A4 07 4C */	lwz r5, 0x74c(r4)	/* effective address: 8055B014 */
-/* 8055A2F8  80 04 07 50 */	lwz r0, 0x750(r4)	/* effective address: 8055B018 */
-/* 8055A2FC  90 A3 00 3C */	stw r5, 0x3c(r3)	/* effective address: 8055B098 */
-/* 8055A300  90 03 00 40 */	stw r0, 0x40(r3)	/* effective address: 8055B09C */
-/* 8055A304  80 04 07 54 */	lwz r0, 0x754(r4)	/* effective address: 8055B01C */
-/* 8055A308  90 03 00 44 */	stw r0, 0x44(r3)	/* effective address: 8055B0A0 */
-/* 8055A30C  80 A4 07 58 */	lwz r5, 0x758(r4)	/* effective address: 8055B020 */
-/* 8055A310  80 04 07 5C */	lwz r0, 0x75c(r4)	/* effective address: 8055B024 */
-/* 8055A314  90 A3 00 48 */	stw r5, 0x48(r3)	/* effective address: 8055B0A4 */
-/* 8055A318  90 03 00 4C */	stw r0, 0x4c(r3)	/* effective address: 8055B0A8 */
-/* 8055A31C  80 04 07 60 */	lwz r0, 0x760(r4)	/* effective address: 8055B028 */
-/* 8055A320  90 03 00 50 */	stw r0, 0x50(r3)	/* effective address: 8055B0AC */
-/* 8055A324  80 A4 07 64 */	lwz r5, 0x764(r4)	/* effective address: 8055B02C */
-/* 8055A328  80 04 07 68 */	lwz r0, 0x768(r4)	/* effective address: 8055B030 */
-/* 8055A32C  90 A3 00 54 */	stw r5, 0x54(r3)	/* effective address: 8055B0B0 */
-/* 8055A330  90 03 00 58 */	stw r0, 0x58(r3)	/* effective address: 8055B0B4 */
-/* 8055A334  80 04 07 6C */	lwz r0, 0x76c(r4)	/* effective address: 8055B034 */
-/* 8055A338  90 03 00 5C */	stw r0, 0x5c(r3)	/* effective address: 8055B0B8 */
-/* 8055A33C  80 A4 07 70 */	lwz r5, 0x770(r4)	/* effective address: 8055B038 */
-/* 8055A340  80 04 07 74 */	lwz r0, 0x774(r4)	/* effective address: 8055B03C */
-/* 8055A344  90 A3 00 60 */	stw r5, 0x60(r3)	/* effective address: 8055B0BC */
-/* 8055A348  90 03 00 64 */	stw r0, 0x64(r3)	/* effective address: 8055B0C0 */
-/* 8055A34C  80 04 07 78 */	lwz r0, 0x778(r4)	/* effective address: 8055B040 */
-/* 8055A350  90 03 00 68 */	stw r0, 0x68(r3)	/* effective address: 8055B0C4 */
-/* 8055A354  80 A4 07 7C */	lwz r5, 0x77c(r4)	/* effective address: 8055B044 */
-/* 8055A358  80 04 07 80 */	lwz r0, 0x780(r4)	/* effective address: 8055B048 */
-/* 8055A35C  90 A3 00 6C */	stw r5, 0x6c(r3)	/* effective address: 8055B0C8 */
-/* 8055A360  90 03 00 70 */	stw r0, 0x70(r3)	/* effective address: 8055B0CC */
-/* 8055A364  80 04 07 84 */	lwz r0, 0x784(r4)	/* effective address: 8055B04C */
-/* 8055A368  90 03 00 74 */	stw r0, 0x74(r3)	/* effective address: 8055B0D0 */
-/* 8055A36C  80 A4 07 88 */	lwz r5, 0x788(r4)	/* effective address: 8055B050 */
-/* 8055A370  80 04 07 8C */	lwz r0, 0x78c(r4)	/* effective address: 8055B054 */
-/* 8055A374  90 A3 00 78 */	stw r5, 0x78(r3)	/* effective address: 8055B0D4 */
-/* 8055A378  90 03 00 7C */	stw r0, 0x7c(r3)	/* effective address: 8055B0D8 */
-/* 8055A37C  80 04 07 90 */	lwz r0, 0x790(r4)	/* effective address: 8055B058 */
-/* 8055A380  90 03 00 80 */	stw r0, 0x80(r3)	/* effective address: 8055B0DC */
+/* 8055A294  80 A4 07 1C */	lwz r5, 0x71c(r4)
+/* 8055A298  80 04 07 20 */	lwz r0, 0x720(r4)
+/* 8055A29C  90 A3 00 0C */	stw r5, 0xc(r3)
+/* 8055A2A0  90 03 00 10 */	stw r0, 0x10(r3)
+/* 8055A2A4  80 04 07 24 */	lwz r0, 0x724(r4)
+/* 8055A2A8  90 03 00 14 */	stw r0, 0x14(r3)
+/* 8055A2AC  80 A4 07 28 */	lwz r5, 0x728(r4)
+/* 8055A2B0  80 04 07 2C */	lwz r0, 0x72c(r4)
+/* 8055A2B4  90 A3 00 18 */	stw r5, 0x18(r3)
+/* 8055A2B8  90 03 00 1C */	stw r0, 0x1c(r3)
+/* 8055A2BC  80 04 07 30 */	lwz r0, 0x730(r4)
+/* 8055A2C0  90 03 00 20 */	stw r0, 0x20(r3)
+/* 8055A2C4  80 A4 07 34 */	lwz r5, 0x734(r4)
+/* 8055A2C8  80 04 07 38 */	lwz r0, 0x738(r4)
+/* 8055A2CC  90 A3 00 24 */	stw r5, 0x24(r3)
+/* 8055A2D0  90 03 00 28 */	stw r0, 0x28(r3)
+/* 8055A2D4  80 04 07 3C */	lwz r0, 0x73c(r4)
+/* 8055A2D8  90 03 00 2C */	stw r0, 0x2c(r3)
+/* 8055A2DC  80 A4 07 40 */	lwz r5, 0x740(r4)
+/* 8055A2E0  80 04 07 44 */	lwz r0, 0x744(r4)
+/* 8055A2E4  90 A3 00 30 */	stw r5, 0x30(r3)
+/* 8055A2E8  90 03 00 34 */	stw r0, 0x34(r3)
+/* 8055A2EC  80 04 07 48 */	lwz r0, 0x748(r4)
+/* 8055A2F0  90 03 00 38 */	stw r0, 0x38(r3)
+/* 8055A2F4  80 A4 07 4C */	lwz r5, 0x74c(r4)
+/* 8055A2F8  80 04 07 50 */	lwz r0, 0x750(r4)
+/* 8055A2FC  90 A3 00 3C */	stw r5, 0x3c(r3)
+/* 8055A300  90 03 00 40 */	stw r0, 0x40(r3)
+/* 8055A304  80 04 07 54 */	lwz r0, 0x754(r4)
+/* 8055A308  90 03 00 44 */	stw r0, 0x44(r3)
+/* 8055A30C  80 A4 07 58 */	lwz r5, 0x758(r4)
+/* 8055A310  80 04 07 5C */	lwz r0, 0x75c(r4)
+/* 8055A314  90 A3 00 48 */	stw r5, 0x48(r3)
+/* 8055A318  90 03 00 4C */	stw r0, 0x4c(r3)
+/* 8055A31C  80 04 07 60 */	lwz r0, 0x760(r4)
+/* 8055A320  90 03 00 50 */	stw r0, 0x50(r3)
+/* 8055A324  80 A4 07 64 */	lwz r5, 0x764(r4)
+/* 8055A328  80 04 07 68 */	lwz r0, 0x768(r4)
+/* 8055A32C  90 A3 00 54 */	stw r5, 0x54(r3)
+/* 8055A330  90 03 00 58 */	stw r0, 0x58(r3)
+/* 8055A334  80 04 07 6C */	lwz r0, 0x76c(r4)
+/* 8055A338  90 03 00 5C */	stw r0, 0x5c(r3)
+/* 8055A33C  80 A4 07 70 */	lwz r5, 0x770(r4)
+/* 8055A340  80 04 07 74 */	lwz r0, 0x774(r4)
+/* 8055A344  90 A3 00 60 */	stw r5, 0x60(r3)
+/* 8055A348  90 03 00 64 */	stw r0, 0x64(r3)
+/* 8055A34C  80 04 07 78 */	lwz r0, 0x778(r4)
+/* 8055A350  90 03 00 68 */	stw r0, 0x68(r3)
+/* 8055A354  80 A4 07 7C */	lwz r5, 0x77c(r4)
+/* 8055A358  80 04 07 80 */	lwz r0, 0x780(r4)
+/* 8055A35C  90 A3 00 6C */	stw r5, 0x6c(r3)
+/* 8055A360  90 03 00 70 */	stw r0, 0x70(r3)
+/* 8055A364  80 04 07 84 */	lwz r0, 0x784(r4)
+/* 8055A368  90 03 00 74 */	stw r0, 0x74(r3)
+/* 8055A36C  80 A4 07 88 */	lwz r5, 0x788(r4)
+/* 8055A370  80 04 07 8C */	lwz r0, 0x78c(r4)
+/* 8055A374  90 A3 00 78 */	stw r5, 0x78(r3)
+/* 8055A378  90 03 00 7C */	stw r0, 0x7c(r3)
+/* 8055A37C  80 04 07 90 */	lwz r0, 0x790(r4)
+/* 8055A380  90 03 00 80 */	stw r0, 0x80(r3)
 /* 8055A384  3C 60 80 56 */	lis r3, __vt__19daNpc_Kolin_Param_c@ha
 /* 8055A388  38 03 B3 B8 */	addi r0, r3, __vt__19daNpc_Kolin_Param_c@l
 /* 8055A38C  3C 60 80 56 */	lis r3, l_HIO@ha

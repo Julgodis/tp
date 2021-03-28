@@ -8,9 +8,9 @@ lbl_80B90D48:
 /* 80B90D60  3C 60 80 B9 */	lis r3, cNullVec__6Z2Calc@ha
 /* 80B90D64  3B C3 36 E8 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 80B90D68  3B 80 00 00 */	li r28, 0
-/* 80B90D6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B90D70  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80B90D74  88 1F 4F AD */	lbz r0, 0x4fad(r31)	/* effective address: 8040B16D */
+/* 80B90D6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B90D70  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80B90D74  88 1F 4F AD */	lbz r0, 0x4fad(r31)
 /* 80B90D78  28 00 00 00 */	cmplwi r0, 0
 /* 80B90D7C  41 82 03 68 */	beq lbl_80B910E4
 /* 80B90D80  3B BF 4F F8 */	addi r29, r31, 0x4ff8
@@ -66,9 +66,9 @@ lbl_80B90E1C:
 /* 80B90E34  88 1B 0E 28 */	lbz r0, 0xe28(r27)
 /* 80B90E38  28 00 00 02 */	cmplwi r0, 2
 /* 80B90E3C  40 82 00 70 */	bne lbl_80B90EAC
-/* 80B90E40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B90E44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B90E48  88 03 4F B6 */	lbz r0, 0x4fb6(r3)	/* effective address: 8040B176 */
+/* 80B90E40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B90E44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B90E48  88 03 4F B6 */	lbz r0, 0x4fb6(r3)
 /* 80B90E4C  28 00 00 91 */	cmplwi r0, 0x91
 /* 80B90E50  40 82 00 5C */	bne lbl_80B90EAC
 /* 80B90E54  38 00 00 35 */	li r0, 0x35
@@ -255,11 +255,11 @@ lbl_80B910E4:
 /* 80B910F4  41 82 00 2C */	beq lbl_80B91120
 /* 80B910F8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B910FC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B91100  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B91104  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B91100  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B91104  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B91108  90 7B 0D DC */	stw r3, 0xddc(r27)
 /* 80B9110C  90 1B 0D E0 */	stw r0, 0xde0(r27)
-/* 80B91110  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B91110  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B91114  90 1B 0D E4 */	stw r0, 0xde4(r27)
 /* 80B91118  38 00 FF FF */	li r0, -1
 /* 80B9111C  90 1B 09 2C */	stw r0, 0x92c(r27)

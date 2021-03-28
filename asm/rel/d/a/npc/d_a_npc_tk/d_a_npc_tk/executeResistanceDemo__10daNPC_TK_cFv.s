@@ -633,11 +633,11 @@ lbl_80B0A328:
 /* 80B0A3A0  4B 50 29 FC */	b transM__14mDoMtx_stack_cFfff
 /* 80B0A3A4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B0A3A8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B0A3AC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B0A3AC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B0A3B0  D0 1D 04 D0 */	stfs f0, 0x4d0(r29)
-/* 80B0A3B4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B0A3B4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B0A3B8  D0 1D 04 D4 */	stfs f0, 0x4d4(r29)
-/* 80B0A3BC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B0A3BC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B0A3C0  D0 1D 04 D8 */	stfs f0, 0x4d8(r29)
 /* 80B0A3C4  80 61 00 14 */	lwz r3, 0x14(r1)
 /* 80B0A3C8  A8 63 04 E6 */	lha r3, 0x4e6(r3)

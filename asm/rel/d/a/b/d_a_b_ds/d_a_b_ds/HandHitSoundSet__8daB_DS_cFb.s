@@ -76,9 +76,9 @@ lbl_805CBE60:
 /* 805CBE84  38 A0 00 02 */	li r5, 2
 /* 805CBE88  38 C0 00 00 */	li r6, 0
 /* 805CBE8C  4B AB B6 88 */	b def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c
-/* 805CBE90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805CBE94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805CBE98  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 805CBE90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805CBE94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805CBE98  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 805CBE9C  38 80 00 02 */	li r4, 2
 /* 805CBEA0  7F C5 F3 78 */	mr r5, r30
 /* 805CBEA4  38 C1 00 28 */	addi r6, r1, 0x28

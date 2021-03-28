@@ -107,8 +107,8 @@ lbl_8055C78C:
 /* 8055C7A4  98 1F 00 FF */	stb r0, 0xff(r31)
 /* 8055C7A8  48 00 00 20 */	b lbl_8055C7C8
 lbl_8055C7AC:
-/* 8055C7AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055C7B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8055C7AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055C7B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8055C7B4  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 8055C7B8  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000FBFF@ha */
 /* 8055C7BC  38 84 FB FF */	addi r4, r4, 0xFBFF /* 0x0000FBFF@l */

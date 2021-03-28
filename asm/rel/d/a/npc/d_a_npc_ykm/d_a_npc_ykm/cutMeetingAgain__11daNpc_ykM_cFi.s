@@ -11,8 +11,8 @@ lbl_80B572C8:
 /* 80B572EC  3B A0 00 00 */	li r29, 0
 /* 80B572F0  3B 80 FF FF */	li r28, -1
 /* 80B572F4  3B 40 00 00 */	li r26, 0
-/* 80B572F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B572FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B572F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B572FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B57300  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80B57304  7F C3 F3 78 */	mr r3, r30
 /* 80B57308  3C A0 80 B6 */	lis r5, struct_80B5DA40+0x0@ha
@@ -69,9 +69,9 @@ lbl_80B573A0:
 /* 80B573C8  48 00 01 38 */	b lbl_80B57500
 lbl_80B573CC:
 /* 80B573CC  93 5B 0D C4 */	stw r26, 0xdc4(r27)
-/* 80B573D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B573D4  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
-/* 80B573D8  80 7A 5D AC */	lwz r3, 0x5dac(r26)	/* effective address: 8040BF6C */
+/* 80B573D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B573D4  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
+/* 80B573D8  80 7A 5D AC */	lwz r3, 0x5dac(r26)
 /* 80B573DC  7F 64 DB 78 */	mr r4, r27
 /* 80B573E0  4B 4C 33 30 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B573E4  B0 7B 15 6C */	sth r3, 0x156c(r27)
@@ -136,13 +136,13 @@ lbl_80B574C8:
 /* 80B574CC  80 9B 0A 7C */	lwz r4, 0xa7c(r27)
 /* 80B574D0  38 A0 00 00 */	li r5, 0
 /* 80B574D4  4B 5F 47 1C */	b initTalk__8daNpcT_cFiPP10fopAc_ac_c
-/* 80B574D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B574DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B574E0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B574D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B574DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B574E0  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80B574E4  38 9B 15 20 */	addi r4, r27, 0x1520
 /* 80B574E8  A8 BB 15 6C */	lha r5, 0x156c(r27)
 /* 80B574EC  38 C0 00 00 */	li r6, 0
-/* 80B574F0  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B574F0  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B574F4  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80B574F8  7D 89 03 A6 */	mtctr r12
 /* 80B574FC  4E 80 04 21 */	bctrl 

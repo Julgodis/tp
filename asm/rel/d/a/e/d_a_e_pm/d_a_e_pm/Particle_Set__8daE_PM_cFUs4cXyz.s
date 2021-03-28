@@ -5,9 +5,9 @@ lbl_80742600:
 /* 8074260C  7C 68 1B 78 */	mr r8, r3
 /* 80742610  7C 87 23 78 */	mr r7, r4
 /* 80742614  7C A6 2B 78 */	mr r6, r5
-/* 80742618  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074261C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80742620  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80742618  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074261C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80742620  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80742624  38 80 00 00 */	li r4, 0
 /* 80742628  90 81 00 08 */	stw r4, 8(r1)
 /* 8074262C  38 00 FF FF */	li r0, -1

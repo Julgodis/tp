@@ -9,7 +9,7 @@ lbl_806F6320:
 /* 806F633C  7C 7E 1B 78 */	mr r30, r3
 /* 806F6340  3C 80 80 6F */	lis r4, lit_3648@ha
 /* 806F6344  3B E4 7B 6C */	addi r31, r4, lit_3648@l
-/* 806F6348  C3 FF 00 14 */	lfs f31, 0x14(r31)	/* effective address: 806F7B80 */
+/* 806F6348  C3 FF 00 14 */	lfs f31, 0x14(r31)
 /* 806F634C  A8 03 06 94 */	lha r0, 0x694(r3)
 /* 806F6350  2C 00 00 01 */	cmpwi r0, 1
 /* 806F6354  41 82 00 34 */	beq lbl_806F6388
@@ -29,9 +29,9 @@ lbl_806F6368:
 lbl_806F6388:
 /* 806F6388  3C 60 80 6F */	lis r3, l_HIO@ha
 /* 806F638C  38 63 7D E0 */	addi r3, r3, l_HIO@l
-/* 806F6390  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 806F7DEC */
+/* 806F6390  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 806F6394  C0 3E 06 A8 */	lfs f1, 0x6a8(r30)
-/* 806F6398  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 806F7DF0 */
+/* 806F6398  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 806F639C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806F63A0  40 80 00 14 */	bge lbl_806F63B4
 /* 806F63A4  38 00 00 03 */	li r0, 3

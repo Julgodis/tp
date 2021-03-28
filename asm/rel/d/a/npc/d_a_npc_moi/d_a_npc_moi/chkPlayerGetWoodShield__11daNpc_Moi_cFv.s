@@ -2,8 +2,8 @@ lbl_80A766A0:
 /* 80A766A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80A766A4  7C 08 02 A6 */	mflr r0
 /* 80A766A8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A766AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A766B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A766AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A766B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A766B4  38 63 00 CC */	addi r3, r3, 0xcc
 /* 80A766B8  38 80 00 2A */	li r4, 0x2a
 /* 80A766BC  4B 5B D8 0C */	b isFirstBit__21dSv_player_get_item_cCFUc

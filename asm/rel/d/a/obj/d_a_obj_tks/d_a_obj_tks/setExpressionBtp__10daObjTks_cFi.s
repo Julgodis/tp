@@ -8,7 +8,7 @@ lbl_80D102D0:
 /* 80D102E8  7C 9F 23 78 */	mr r31, r4
 /* 80D102EC  3C 80 80 D1 */	lis r4, l_arcName@ha
 /* 80D102F0  38 84 29 54 */	addi r4, r4, l_arcName@l
-/* 80D102F4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D12954 */
+/* 80D102F4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D102F8  57 FD 18 38 */	slwi r29, r31, 3
 /* 80D102FC  3C A0 80 D1 */	lis r5, l_btpGetParamList@ha
 /* 80D10300  38 A5 29 40 */	addi r5, r5, l_btpGetParamList@l

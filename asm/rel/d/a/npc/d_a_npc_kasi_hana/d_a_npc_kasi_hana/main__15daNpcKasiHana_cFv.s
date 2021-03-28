@@ -39,8 +39,8 @@ lbl_80A1CAA4:
 /* 80A1CAF0  40 82 01 B4 */	bne lbl_80A1CCA4
 /* 80A1CAF4  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80A1CAF8  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
-/* 80A1CAFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A1CB00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A1CAFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A1CB00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A1CB04  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80A1CB08  7C 05 07 74 */	extsb r5, r0
 /* 80A1CB0C  4B 61 88 54 */	b isSwitch__10dSv_info_cCFii

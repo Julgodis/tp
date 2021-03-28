@@ -89,15 +89,15 @@ lbl_806C8254:
 /* 806C8270  4B C7 E2 40 */	b PSMTXCopy
 /* 806C8274  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806C8278  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806C827C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806C827C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806C8280  D0 01 00 08 */	stfs f0, 8(r1)
-/* 806C8284  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806C8284  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806C8288  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 806C828C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806C828C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806C8290  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 806C8294  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806C8298  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806C829C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 806C8294  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806C8298  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806C829C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 806C82A0  38 80 00 03 */	li r4, 3
 /* 806C82A4  7F C5 F3 78 */	mr r5, r30
 /* 806C82A8  38 C1 00 08 */	addi r6, r1, 8

@@ -9,8 +9,8 @@ lbl_8045B17C:
 /* 8045B198  3B C3 C9 B8 */	addi r30, r3, l_cyl_src@l
 /* 8045B19C  83 99 0C D4 */	lwz r28, 0xcd4(r25)
 /* 8045B1A0  83 79 0C D8 */	lwz r27, 0xcd8(r25)
-/* 8045B1A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045B1A8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8045B1A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045B1A8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8045B1AC  3F BF 00 02 */	addis r29, r31, 2
 /* 8045B1B0  3B 7B 00 04 */	addi r27, r27, 4
 /* 8045B1B4  3B BD C2 F8 */	addi r29, r29, -15624

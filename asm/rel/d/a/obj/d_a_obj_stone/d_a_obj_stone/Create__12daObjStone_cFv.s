@@ -95,8 +95,8 @@ lbl_80CE9654:
 /* 80CE96B0  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80CE96B4  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80CE96B8  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80CE96BC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CE96C0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80CE96BC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CE96C0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80CE96C4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80CE96C8  4B 38 D3 E4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80CE96CC  C0 01 00 1C */	lfs f0, 0x1c(r1)

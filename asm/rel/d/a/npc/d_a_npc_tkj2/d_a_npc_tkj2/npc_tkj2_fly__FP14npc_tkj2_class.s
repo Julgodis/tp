@@ -7,9 +7,9 @@ lbl_80B125D0:
 /* 80B125E4  7C 7F 1B 78 */	mr r31, r3
 /* 80B125E8  3C 80 80 B1 */	lis r4, lit_3648@ha
 /* 80B125EC  3B C4 42 DC */	addi r30, r4, lit_3648@l
-/* 80B125F0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B125F4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B125F8  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B125F0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B125F4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B125F8  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80B125FC  A8 03 06 0A */	lha r0, 0x60a(r3)
 /* 80B12600  2C 00 00 01 */	cmpwi r0, 1
 /* 80B12604  41 82 00 5C */	beq lbl_80B12660

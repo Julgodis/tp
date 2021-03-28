@@ -41,7 +41,7 @@ lbl_806C4580:
 /* 806C45AC  90 01 00 08 */	stw r0, 8(r1)
 /* 806C45B0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806C45B4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806C45B8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806C45B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 806C45BC  38 81 00 08 */	addi r4, r1, 8
 /* 806C45C0  38 BF 04 A8 */	addi r5, r31, 0x4a8
 /* 806C45C4  38 C0 00 00 */	li r6, 0

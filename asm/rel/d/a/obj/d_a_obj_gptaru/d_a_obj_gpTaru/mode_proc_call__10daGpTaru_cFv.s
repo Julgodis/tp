@@ -9,7 +9,7 @@ lbl_8057E494:
 /* 8057E4B0  3B E3 F6 88 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8057E4B4  3C 60 80 58 */	lis r3, data_8057F920@ha
 /* 8057E4B8  38 A3 F9 20 */	addi r5, r3, data_8057F920@l
-/* 8057E4BC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 8057F920 */
+/* 8057E4BC  88 05 00 00 */	lbz r0, 0(r5)
 /* 8057E4C0  7C 00 07 75 */	extsb. r0, r0
 /* 8057E4C4  40 82 00 B8 */	bne lbl_8057E57C
 /* 8057E4C8  80 7F 00 64 */	lwz r3, 0x64(r31)

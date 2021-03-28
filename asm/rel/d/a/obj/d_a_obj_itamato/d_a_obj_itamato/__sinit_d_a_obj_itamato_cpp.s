@@ -11,10 +11,10 @@ lbl_80C2AA90:
 /* 80C2AAB4  38 00 00 06 */	li r0, 6
 /* 80C2AAB8  7C 09 03 A6 */	mtctr r0
 lbl_80C2AABC:
-/* 80C2AABC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C2AB84 */
-/* 80C2AAC0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C2AB88 */
-/* 80C2AAC4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C2AC34 */
-/* 80C2AAC8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C2AC38 */
+/* 80C2AABC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C2AAC0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C2AAC4  90 65 00 04 */	stw r3, 4(r5)
+/* 80C2AAC8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C2AACC  42 00 FF F0 */	bdnz lbl_80C2AABC
 /* 80C2AAD0  3C 60 80 C3 */	lis r3, __vt__21daObj_ItaMato_Param_c@ha
 /* 80C2AAD4  38 03 AD 40 */	addi r0, r3, __vt__21daObj_ItaMato_Param_c@l

@@ -42,20 +42,20 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-static bool daE_ST_LINE_Draw(e_st_line_class*); // 2
+bool daE_ST_LINE_Draw(e_st_line_class*); // 2
 static bool daE_ST_LINE_Execute(e_st_line_class*); // 2
-static bool daE_ST_LINE_IsDelete(e_st_line_class*); // 2
-static void daE_ST_LINE_Delete(e_st_line_class*); // 2
+bool daE_ST_LINE_IsDelete(e_st_line_class*); // 2
+void daE_ST_LINE_Delete(e_st_line_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_ST_LINE_Create(fopAc_ac_c*); // 2
+void daE_ST_LINE_Create(fopAc_ac_c*); // 2
 
-extern "C" static bool daE_ST_LINE_Draw__FP15e_st_line_class(); // 1
+extern "C" bool daE_ST_LINE_Draw__FP15e_st_line_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static bool daE_ST_LINE_Execute__FP15e_st_line_class(); // 1
-extern "C" static bool daE_ST_LINE_IsDelete__FP15e_st_line_class(); // 1
-extern "C" static void daE_ST_LINE_Delete__FP15e_st_line_class(); // 1
+extern "C" bool daE_ST_LINE_IsDelete__FP15e_st_line_class(); // 1
+extern "C" void daE_ST_LINE_Delete__FP15e_st_line_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_ST_LINE_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_ST_LINE_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" extern u8 const lit_3705[4];
 extern "C" extern u32 const lit_3706;
@@ -77,6 +77,7 @@ extern "C" extern u32 const lit_4071;
 extern "C" extern u32 const lit_4072;
 extern "C" extern u32 const lit_4073;
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_ST_LINE_Method[8];
 extern "C" extern void* g_profile_E_ST_LINE[12];
 
 // 
@@ -104,15 +105,13 @@ extern "C" void __construct_array(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
 // 
 
-/* 807A6F58-807A6F60 0008+00 s=1 e=0 z=0  None .text      daE_ST_LINE_Draw__FP15e_st_line_class                        */
-static bool daE_ST_LINE_Draw(e_st_line_class* param_0) {
+/* 807A6F58-807A6F60 0008+00 s=0 e=0 z=0  None .text      daE_ST_LINE_Draw__FP15e_st_line_class                        */
+bool daE_ST_LINE_Draw(e_st_line_class* param_0) {
 	return true;
 }
 
@@ -128,14 +127,14 @@ asm cXyz::~cXyz() {
 #pragma pop
 
 
-/* 807A6F9C-807A6FA4 0008+00 s=2 e=0 z=0  None .text      daE_ST_LINE_Execute__FP15e_st_line_class                     */
+/* 807A6F9C-807A6FA4 0008+00 s=1 e=0 z=0  None .text      daE_ST_LINE_Execute__FP15e_st_line_class                     */
 static bool daE_ST_LINE_Execute(e_st_line_class* param_0) {
 	return true;
 }
 
 
-/* 807A6FA4-807A6FAC 0008+00 s=1 e=0 z=0  None .text      daE_ST_LINE_IsDelete__FP15e_st_line_class                    */
-static bool daE_ST_LINE_IsDelete(e_st_line_class* param_0) {
+/* 807A6FA4-807A6FAC 0008+00 s=0 e=0 z=0  None .text      daE_ST_LINE_IsDelete__FP15e_st_line_class                    */
+bool daE_ST_LINE_IsDelete(e_st_line_class* param_0) {
 	return true;
 }
 
@@ -232,11 +231,11 @@ SECTION_RODATA static u32 const lit_4170 = 0x432A0000;
 SECTION_DEAD char const* const stringBase_807A729C = "E_st";
 #pragma pop
 
-/* 807A6FAC-807A7008 005C+00 s=1 e=0 z=0  None .text      daE_ST_LINE_Delete__FP15e_st_line_class                      */
+/* 807A6FAC-807A7008 005C+00 s=0 e=0 z=0  None .text      daE_ST_LINE_Delete__FP15e_st_line_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_ST_LINE_Delete(e_st_line_class* param_0) {
+asm void daE_ST_LINE_Delete(e_st_line_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/daE_ST_LINE_Delete__FP15e_st_line_class.s"
 }
@@ -255,48 +254,48 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 807A72A4-807A72C4 0020+00 s=1 e=0 z=0  None .data      l_daE_ST_LINE_Method                                         */
-SECTION_DATA static void* l_daE_ST_LINE_Method[8] = {
-	/* 0    */ (void*)daE_ST_LINE_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_ST_LINE_Delete__FP15e_st_line_class,
-	/* 2    */ (void*)daE_ST_LINE_Execute__FP15e_st_line_class,
-	/* 3    */ (void*)daE_ST_LINE_IsDelete__FP15e_st_line_class,
-	/* 4    */ (void*)daE_ST_LINE_Draw__FP15e_st_line_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 807A72A4-807A72C4 0020+00 s=0 e=0 z=0  None .data      l_daE_ST_LINE_Method                                         */
+SECTION_DATA void* l_daE_ST_LINE_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 807A72C4-807A72F4 0030+00 s=0 e=0 z=1  None .data      g_profile_E_ST_LINE                                          */
+/* 807A72C4-807A72F4 0030+00 s=0 e=0 z=0  None .data      g_profile_E_ST_LINE                                          */
 SECTION_DATA void* g_profile_E_ST_LINE[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01C00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000CF8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00850000,
-	/* 9    */ (void*)&l_daE_ST_LINE_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01C00000,
+	(void*)NULL,
+	(void*)0x00000CF8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00850000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x020E0000,
 };
 
 /* 807A72F4-807A7308 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
 SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 807A707C-807A7220 01A4+00 s=1 e=0 z=0  None .text      daE_ST_LINE_Create__FP10fopAc_ac_c                           */
+/* 807A707C-807A7220 01A4+00 s=0 e=0 z=0  None .text      daE_ST_LINE_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_ST_LINE_Create(fopAc_ac_c* param_0) {
+asm void daE_ST_LINE_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_st_line/d_a_e_st_line/daE_ST_LINE_Create__FP10fopAc_ac_c.s"
 }

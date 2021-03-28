@@ -9,12 +9,12 @@ lbl_805D429C:
 /* 805D42B8  7C 7B 1B 78 */	mr r27, r3
 /* 805D42BC  3C 80 80 5E */	lis r4, lit_3932@ha
 /* 805D42C0  3B C4 CA 54 */	addi r30, r4, lit_3932@l
-/* 805D42C4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805D42C8  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 805D42CC  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 805D42C4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805D42C8  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 805D42CC  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 805D42D0  3C 80 80 5E */	lis r4, l_HIO@ha
 /* 805D42D4  38 84 DA BC */	addi r4, r4, l_HIO@l
-/* 805D42D8  C3 E4 00 1C */	lfs f31, 0x1c(r4)	/* effective address: 805DDAD8 */
+/* 805D42D8  C3 E4 00 1C */	lfs f31, 0x1c(r4)
 /* 805D42DC  4B FF FD 79 */	bl mRailInOutCheck__8daB_DS_cFv
 /* 805D42E0  7C 7C 1B 78 */	mr r28, r3
 /* 805D42E4  38 61 00 48 */	addi r3, r1, 0x48
@@ -144,7 +144,7 @@ lbl_805D444C:
 /* 805D44A4  7C 04 07 34 */	extsh r4, r0
 /* 805D44A8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805D44AC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805D44B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805D44B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 805D44B4  4B A3 7F 28 */	b mDoMtx_YrotS__FPA4_fs
 /* 805D44B8  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 805D44BC  D0 01 00 60 */	stfs f0, 0x60(r1)
@@ -452,13 +452,13 @@ lbl_805D48DC:
 /* 805D48F4  41 82 00 18 */	beq lbl_805D490C
 /* 805D48F8  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805D48FC  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805D4900  A8 03 00 34 */	lha r0, 0x34(r3)	/* effective address: 805DDAF0 */
+/* 805D4900  A8 03 00 34 */	lha r0, 0x34(r3)
 /* 805D4904  90 1B 06 90 */	stw r0, 0x690(r27)
 /* 805D4908  48 00 00 14 */	b lbl_805D491C
 lbl_805D490C:
 /* 805D490C  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805D4910  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805D4914  A8 03 00 32 */	lha r0, 0x32(r3)	/* effective address: 805DDAEE */
+/* 805D4914  A8 03 00 32 */	lha r0, 0x32(r3)
 /* 805D4918  90 1B 06 90 */	stw r0, 0x690(r27)
 lbl_805D491C:
 /* 805D491C  38 00 00 01 */	li r0, 1

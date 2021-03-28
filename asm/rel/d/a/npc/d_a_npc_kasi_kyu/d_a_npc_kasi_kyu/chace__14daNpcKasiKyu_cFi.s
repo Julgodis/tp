@@ -52,9 +52,9 @@ lbl_80A24030:
 /* 80A2405C  38 A0 08 00 */	li r5, 0x800
 /* 80A24060  48 00 0C B1 */	bl _turn_pos__14daNpcKasiKyu_cFRC4cXyzs
 /* 80A24064  7F A3 EB 78 */	mr r3, r29
-/* 80A24068  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A2406C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A24070  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A24068  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A2406C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A24070  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A24074  48 00 0C F9 */	bl actor_front_check__14daNpcKasiKyu_cFP10fopAc_ac_c
 /* 80A24078  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2407C  41 82 00 4C */	beq lbl_80A240C8
@@ -66,11 +66,11 @@ lbl_80A24030:
 /* 80A24094  40 80 00 60 */	bge lbl_80A240F4
 /* 80A24098  3C 60 80 A2 */	lis r3, lit_5043@ha
 /* 80A2409C  38 83 5E 58 */	addi r4, r3, lit_5043@l
-/* 80A240A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A25E58 */
-/* 80A240A4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A25E5C */
+/* 80A240A0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A240A4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A240A8  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80A240AC  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A240B0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A25E60 */
+/* 80A240B0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A240B4  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A240B8  7F A3 EB 78 */	mr r3, r29
 /* 80A240BC  38 81 00 14 */	addi r4, r1, 0x14
@@ -79,11 +79,11 @@ lbl_80A24030:
 lbl_80A240C8:
 /* 80A240C8  3C 60 80 A2 */	lis r3, lit_5046@ha
 /* 80A240CC  38 83 5E 64 */	addi r4, r3, lit_5046@l
-/* 80A240D0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A25E64 */
-/* 80A240D4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A25E68 */
+/* 80A240D0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A240D4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A240D8  90 61 00 08 */	stw r3, 8(r1)
 /* 80A240DC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A240E0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A25E6C */
+/* 80A240E0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A240E4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A240E8  7F A3 EB 78 */	mr r3, r29
 /* 80A240EC  38 81 00 08 */	addi r4, r1, 8

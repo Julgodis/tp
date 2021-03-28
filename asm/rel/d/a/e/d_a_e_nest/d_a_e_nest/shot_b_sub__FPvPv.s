@@ -10,9 +10,9 @@ lbl_80503668:
 /* 80503688  A8 1F 00 08 */	lha r0, 8(r31)
 /* 8050368C  2C 00 00 FE */	cmpwi r0, 0xfe
 /* 80503690  40 82 00 38 */	bne lbl_805036C8
-/* 80503694  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80503698  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8050369C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 80503694  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80503698  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8050369C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 805036A0  54 00 03 19 */	rlwinm. r0, r0, 0, 0xc, 0xc
 /* 805036A4  40 82 00 24 */	bne lbl_805036C8
 /* 805036A8  4B C5 C1 F4 */	b checkBoomerangCharge__9daPy_py_cFv

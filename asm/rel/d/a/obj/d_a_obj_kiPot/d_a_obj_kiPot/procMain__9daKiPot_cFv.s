@@ -4,19 +4,19 @@ lbl_80C44EF8:
 /* 80C44F00  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C44F04  3C 80 80 C4 */	lis r4, data_80C4525C@ha
 /* 80C44F08  38 E4 52 5C */	addi r7, r4, data_80C4525C@l
-/* 80C44F0C  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80C4525C */
+/* 80C44F0C  88 07 00 00 */	lbz r0, 0(r7)
 /* 80C44F10  7C 00 07 75 */	extsb. r0, r0
 /* 80C44F14  40 82 00 34 */	bne lbl_80C44F48
 /* 80C44F18  3C 80 80 C4 */	lis r4, data_80C451C8@ha
 /* 80C44F1C  38 C4 51 C8 */	addi r6, r4, data_80C451C8@l
 /* 80C44F20  3C 80 80 C4 */	lis r4, lit_3688@ha
 /* 80C44F24  38 A4 51 BC */	addi r5, r4, lit_3688@l
-/* 80C44F28  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80C451BC */
-/* 80C44F2C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80C451C0 */
-/* 80C44F30  90 86 00 00 */	stw r4, 0(r6)	/* effective address: 80C451C8 */
-/* 80C44F34  90 06 00 04 */	stw r0, 4(r6)	/* effective address: 80C451CC */
-/* 80C44F38  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80C451C4 */
-/* 80C44F3C  90 06 00 08 */	stw r0, 8(r6)	/* effective address: 80C451D0 */
+/* 80C44F28  80 85 00 00 */	lwz r4, 0(r5)
+/* 80C44F2C  80 05 00 04 */	lwz r0, 4(r5)
+/* 80C44F30  90 86 00 00 */	stw r4, 0(r6)
+/* 80C44F34  90 06 00 04 */	stw r0, 4(r6)
+/* 80C44F38  80 05 00 08 */	lwz r0, 8(r5)
+/* 80C44F3C  90 06 00 08 */	stw r0, 8(r6)
 /* 80C44F40  38 00 00 01 */	li r0, 1
 /* 80C44F44  98 07 00 00 */	stb r0, 0(r7)
 lbl_80C44F48:

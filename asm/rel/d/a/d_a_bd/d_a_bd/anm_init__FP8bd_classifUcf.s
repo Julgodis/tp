@@ -15,8 +15,8 @@ lbl_804D6CA4:
 /* 804D6CD8  FF E0 10 90 */	fmr f31, f2
 /* 804D6CDC  3C 60 80 4E */	lis r3, stringBase0@ha
 /* 804D6CE0  38 63 9F 6C */	addi r3, r3, stringBase0@l
-/* 804D6CE4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804D6CE8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804D6CE4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804D6CE8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804D6CEC  3C A5 00 02 */	addis r5, r5, 2
 /* 804D6CF0  38 C0 00 80 */	li r6, 0x80
 /* 804D6CF4  38 A5 C2 F8 */	addi r5, r5, -15624

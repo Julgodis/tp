@@ -17,7 +17,7 @@ lbl_807D6CE0:
 /* 807D6D1C  3B 83 35 78 */	addi r28, r3, lit_1109@l
 /* 807D6D20  3C 60 80 7E */	lis r3, lit_3882@ha
 /* 807D6D24  3B A3 29 8C */	addi r29, r3, lit_3882@l
-/* 807D6D28  88 1C 01 DC */	lbz r0, 0x1dc(r28)	/* effective address: 807E3754 */
+/* 807D6D28  88 1C 01 DC */	lbz r0, 0x1dc(r28)
 /* 807D6D2C  7C 00 07 75 */	extsb. r0, r0
 /* 807D6D30  40 82 00 80 */	bne lbl_807D6DB0
 /* 807D6D34  C0 5D 01 5C */	lfs f2, 0x15c(r29)
@@ -52,9 +52,9 @@ lbl_807D6CE0:
 /* 807D6DA8  38 00 00 01 */	li r0, 1
 /* 807D6DAC  98 1C 01 DC */	stb r0, 0x1dc(r28)
 lbl_807D6DB0:
-/* 807D6DB0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807D6DB4  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 807D6DB8  83 7E 5D AC */	lwz r27, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 807D6DB0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807D6DB4  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 807D6DB8  83 7E 5D AC */	lwz r27, 0x5dac(r30)
 /* 807D6DBC  7F E3 FB 78 */	mr r3, r31
 /* 807D6DC0  7F 64 DB 78 */	mr r4, r27
 /* 807D6DC4  4B 84 3B A0 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
@@ -293,9 +293,9 @@ lbl_807D7124:
 /* 807D7124  A8 1F 06 9E */	lha r0, 0x69e(r31)
 /* 807D7128  2C 00 00 00 */	cmpwi r0, 0
 /* 807D712C  40 82 05 34 */	bne lbl_807D7660
-/* 807D7130  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807D7134  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807D7138  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 807D7130  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807D7134  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807D7138  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 807D713C  28 00 00 00 */	cmplwi r0, 0
 /* 807D7140  40 82 05 20 */	bne lbl_807D7660
 /* 807D7144  38 00 00 02 */	li r0, 2
@@ -461,7 +461,7 @@ lbl_807D7350:
 /* 807D7394  4B A9 86 A8 */	b cLib_addCalc2__FPffff
 /* 807D7398  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807D739C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807D73A0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807D73A0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807D73A4  A8 9F 04 DE */	lha r4, 0x4de(r31)
 /* 807D73A8  4B 83 50 34 */	b mDoMtx_YrotS__FPA4_fs
 /* 807D73AC  C0 3F 04 D0 */	lfs f1, 0x4d0(r31)
@@ -784,8 +784,8 @@ lbl_807D7840:
 /* 807D7840  3A E0 00 00 */	li r23, 0
 /* 807D7844  3B 00 00 00 */	li r24, 0
 /* 807D7848  3B 20 00 00 */	li r25, 0
-/* 807D784C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807D7850  3A C3 61 C0 */	addi r22, r3, struct_804061C0+0x0@l
+/* 807D784C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807D7850  3A C3 61 C0 */	addi r22, r3, g_dComIfG_gameInfo@l
 /* 807D7854  3C 60 80 7E */	lis r3, data_807E2FE0@ha
 /* 807D7858  3B 43 2F E0 */	addi r26, r3, data_807E2FE0@l
 /* 807D785C  3C 60 80 7E */	lis r3, data_807E2FDC@ha
@@ -800,7 +800,7 @@ lbl_807D7864:
 /* 807D787C  3A BC 02 20 */	addi r21, r28, 0x220
 /* 807D7880  7E B5 C2 14 */	add r21, r21, r24
 lbl_807D7884:
-/* 807D7884  80 76 5D 3C */	lwz r3, 0x5d3c(r22)	/* effective address: 8040BEFC */
+/* 807D7884  80 76 5D 3C */	lwz r3, 0x5d3c(r22)
 /* 807D7888  38 80 00 00 */	li r4, 0
 /* 807D788C  90 81 00 08 */	stw r4, 8(r1)
 /* 807D7890  38 00 FF FF */	li r0, -1
@@ -835,7 +835,7 @@ lbl_807D78F8:
 /* 807D7900  90 01 00 28 */	stw r0, 0x28(r1)
 /* 807D7904  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807D7908  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807D790C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807D790C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807D7910  38 81 00 28 */	addi r4, r1, 0x28
 /* 807D7914  38 BC 01 AC */	addi r5, r28, 0x1ac
 /* 807D7918  38 C0 00 00 */	li r6, 0
@@ -851,7 +851,7 @@ lbl_807D78F8:
 /* 807D7940  90 01 00 24 */	stw r0, 0x24(r1)
 /* 807D7944  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807D7948  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807D794C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807D794C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807D7950  38 81 00 24 */	addi r4, r1, 0x24
 /* 807D7954  38 BC 01 C4 */	addi r5, r28, 0x1c4
 /* 807D7958  38 C0 00 00 */	li r6, 0

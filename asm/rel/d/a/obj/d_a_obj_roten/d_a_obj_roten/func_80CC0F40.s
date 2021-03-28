@@ -19,12 +19,12 @@ lbl_80CC0F7C:
 /* 80CC0F80  60 00 00 08 */	ori r0, r0, 8
 /* 80CC0F84  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80CC0F88:
-/* 80CC0F88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC0F8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC0F88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC0F8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC0F90  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80CC0F94  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80CC0F98  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80CC0F9C  A0 84 00 80 */	lhz r4, 0x80(r4)	/* effective address: 803A7308 */
+/* 80CC0F9C  A0 84 00 80 */	lhz r4, 0x80(r4)
 /* 80CC0FA0  4B 37 3A 1C */	b isEventBit__11dSv_event_cCFUs
 /* 80CC0FA4  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC0FA8  40 82 00 0C */	bne lbl_80CC0FB4
@@ -45,7 +45,7 @@ lbl_80CC0FB4:
 /* 80CC0FE0  7F E3 FB 78 */	mr r3, r31
 /* 80CC0FE4  3C A0 80 CC */	lis r5, l_dzbFileIdx@ha
 /* 80CC0FE8  38 A5 14 54 */	addi r5, r5, l_dzbFileIdx@l
-/* 80CC0FEC  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80CC1454 */
+/* 80CC0FEC  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80CC0FF0  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80CC0FF4  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80CC0FF8  38 E0 14 30 */	li r7, 0x1430

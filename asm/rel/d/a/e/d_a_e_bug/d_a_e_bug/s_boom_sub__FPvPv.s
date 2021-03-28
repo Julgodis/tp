@@ -23,9 +23,9 @@ lbl_80697160:
 /* 806971B4  3C 60 80 69 */	lis r3, at_pos@ha
 /* 806971B8  D4 03 7E 9C */	stfsu f0, at_pos@l(r3)
 /* 806971BC  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
-/* 806971C0  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80690004 */
+/* 806971C0  D0 03 00 04 */	stfs f0, 4(r3)
 /* 806971C4  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
-/* 806971C8  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80690008 */
+/* 806971C8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 806971CC  7F E3 FB 78 */	mr r3, r31
 /* 806971D0  48 00 00 08 */	b lbl_806971D8
 lbl_806971D4:

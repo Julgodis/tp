@@ -17,7 +17,7 @@ lbl_805A5508:
 lbl_805A5514:
 /* 805A5514  3C 60 80 45 */	lis r3, mTagMagne__12daTagMagne_c@ha
 /* 805A5518  38 63 0D BC */	addi r3, r3, mTagMagne__12daTagMagne_c@l
-/* 805A551C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DBC */
+/* 805A551C  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A5520  28 03 00 00 */	cmplwi r3, 0
 /* 805A5524  41 82 00 24 */	beq lbl_805A5548
 /* 805A5528  88 03 04 E2 */	lbz r0, 0x4e2(r3)

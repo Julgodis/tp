@@ -9,8 +9,8 @@ lbl_80C5076C:
 /* 80C50788  3C 60 80 C5 */	lis r3, __vt__8cM3dGPla@ha
 /* 80C5078C  38 03 0F 10 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80C50790  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80C50794  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C50798  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C50794  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C50798  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5079C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C507A0  38 9E 06 A4 */	addi r4, r30, 0x6a4
 /* 80C507A4  38 A1 00 08 */	addi r5, r1, 8

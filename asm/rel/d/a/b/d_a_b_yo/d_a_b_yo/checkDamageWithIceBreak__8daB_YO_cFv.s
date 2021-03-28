@@ -5,9 +5,9 @@ lbl_80634CEC:
 /* 80634CF8  39 61 00 30 */	addi r11, r1, 0x30
 /* 80634CFC  4B D2 D4 D0 */	b _savegpr_25
 /* 80634D00  7C 7F 1B 78 */	mr r31, r3
-/* 80634D04  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80634D08  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 80634D0C  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80634D04  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80634D08  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 80634D0C  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 80634D10  4B 9E 5A 00 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80634D14  7C 7B 1B 78 */	mr r27, r3
 /* 80634D18  38 7F 12 AC */	addi r3, r31, 0x12ac

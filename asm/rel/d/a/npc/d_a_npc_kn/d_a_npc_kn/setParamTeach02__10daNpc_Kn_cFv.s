@@ -8,10 +8,10 @@ lbl_80A3EB84:
 /* 80A3EB9C  3C 60 80 A4 */	lis r3, mCcDObjData__10daNpc_Kn_c@ha
 /* 80A3EBA0  3B E3 08 C8 */	addi r31, r3, mCcDObjData__10daNpc_Kn_c@l
 /* 80A3EBA4  38 9F 00 A8 */	addi r4, r31, 0xa8
-/* 80A3EBA8  AB 84 00 48 */	lha r28, 0x48(r4)	/* effective address: 80A409B8 */
-/* 80A3EBAC  AB A4 00 4A */	lha r29, 0x4a(r4)	/* effective address: 80A409BA */
-/* 80A3EBB0  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 80A409BC */
-/* 80A3EBB4  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 80A409BE */
+/* 80A3EBA8  AB 84 00 48 */	lha r28, 0x48(r4)
+/* 80A3EBAC  AB A4 00 4A */	lha r29, 0x4a(r4)
+/* 80A3EBB0  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 80A3EBB4  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 80A3EBB8  88 1E 15 AE */	lbz r0, 0x15ae(r30)
 /* 80A3EBBC  7C 00 07 74 */	extsb r0, r0
 /* 80A3EBC0  2C 00 00 05 */	cmpwi r0, 5
@@ -60,16 +60,16 @@ lbl_80A3EC18:
 /* 80A3EC64  4B 90 78 4C */	b PSMTXCopy
 /* 80A3EC68  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A3EC6C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80A3EC70  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80A3EC70  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80A3EC74  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80A3EC78  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80A3EC78  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A3EC7C  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80A3EC80  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80A3EC80  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80A3EC84  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80A3EC88  38 61 00 18 */	addi r3, r1, 0x18
-/* 80A3EC8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A3EC90  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A3EC94  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A3EC8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A3EC90  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A3EC94  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A3EC98  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80A3EC9C  38 A1 00 24 */	addi r5, r1, 0x24
 /* 80A3ECA0  4B 82 7E 94 */	b __mi__4cXyzCFRC3Vec

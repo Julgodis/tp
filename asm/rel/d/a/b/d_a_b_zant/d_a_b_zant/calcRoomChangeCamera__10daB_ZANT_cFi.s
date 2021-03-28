@@ -8,17 +8,17 @@ lbl_8064B49C:
 /* 8064B4B4  7C 9D 23 78 */	mr r29, r4
 /* 8064B4B8  3C 60 80 65 */	lis r3, lit_3757@ha
 /* 8064B4BC  3B C3 EB 1C */	addi r30, r3, lit_3757@l
-/* 8064B4C0  C0 3E 00 38 */	lfs f1, 0x38(r30)	/* effective address: 8064EB54 */
+/* 8064B4C0  C0 3E 00 38 */	lfs f1, 0x38(r30)
 /* 8064B4C4  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 8064B4C8  C0 1E 03 0C */	lfs f0, 0x30c(r30)	/* effective address: 8064EE28 */
+/* 8064B4C8  C0 1E 03 0C */	lfs f0, 0x30c(r30)
 /* 8064B4CC  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 8064B4D0  C0 1E 03 10 */	lfs f0, 0x310(r30)	/* effective address: 8064EE2C */
+/* 8064B4D0  C0 1E 03 10 */	lfs f0, 0x310(r30)
 /* 8064B4D4  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 8064B4D8  C0 1E 03 14 */	lfs f0, 0x314(r30)	/* effective address: 8064EE30 */
+/* 8064B4D8  C0 1E 03 14 */	lfs f0, 0x314(r30)
 /* 8064B4DC  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8064B4E0  C0 1E 03 18 */	lfs f0, 0x318(r30)	/* effective address: 8064EE34 */
+/* 8064B4E0  C0 1E 03 18 */	lfs f0, 0x318(r30)
 /* 8064B4E4  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8064B4E8  C0 1E 03 1C */	lfs f0, 0x31c(r30)	/* effective address: 8064EE38 */
+/* 8064B4E8  C0 1E 03 1C */	lfs f0, 0x31c(r30)
 /* 8064B4EC  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8064B4F0  2C 1D 00 01 */	cmpwi r29, 1
 /* 8064B4F4  40 82 00 38 */	bne lbl_8064B52C
@@ -54,11 +54,11 @@ lbl_8064B52C:
 /* 8064B568  4B 9C 18 6C */	b transM__14mDoMtx_stack_cFRC4cXyz
 /* 8064B56C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8064B570  3B E3 D4 70 */	addi r31, r3, now__14mDoMtx_stack_c@l
-/* 8064B574  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 803DD47C */
+/* 8064B574  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 8064B578  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 8064B57C  C0 5F 00 1C */	lfs f2, 0x1c(r31)	/* effective address: 803DD48C */
+/* 8064B57C  C0 5F 00 1C */	lfs f2, 0x1c(r31)
 /* 8064B580  D0 41 00 24 */	stfs f2, 0x24(r1)
-/* 8064B584  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 803DD49C */
+/* 8064B584  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 8064B588  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 8064B58C  C0 1E 01 38 */	lfs f0, 0x138(r30)
 /* 8064B590  EC 02 00 2A */	fadds f0, f2, f0

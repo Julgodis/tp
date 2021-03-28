@@ -6,12 +6,12 @@ lbl_809BE268:
 /* 809BE278  38 A3 E6 44 */	addi r5, r3, mCutList__11daNpc_Gnd_c@l
 /* 809BE27C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809BE280  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809BE284  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809BE288  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809BE28C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809BE644 */
-/* 809BE290  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809BE648 */
-/* 809BE294  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809BE298  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809BE64C */
+/* 809BE284  80 64 00 00 */	lwz r3, 0(r4)
+/* 809BE288  80 04 00 04 */	lwz r0, 4(r4)
+/* 809BE28C  90 65 00 00 */	stw r3, 0(r5)
+/* 809BE290  90 05 00 04 */	stw r0, 4(r5)
+/* 809BE294  80 04 00 08 */	lwz r0, 8(r4)
+/* 809BE298  90 05 00 08 */	stw r0, 8(r5)
 /* 809BE29C  3C 60 80 9C */	lis r3, __vt__17daNpc_Gnd_Param_c@ha
 /* 809BE2A0  38 03 E8 34 */	addi r0, r3, __vt__17daNpc_Gnd_Param_c@l
 /* 809BE2A4  3C 60 80 9C */	lis r3, l_HIO@ha

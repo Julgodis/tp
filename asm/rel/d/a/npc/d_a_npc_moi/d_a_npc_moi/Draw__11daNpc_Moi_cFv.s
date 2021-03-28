@@ -44,11 +44,11 @@ lbl_80A74A9C:
 /* 80A74AF0  D0 03 04 D8 */	stfs f0, 0x4d8(r3)
 /* 80A74AF4  3C 80 80 A8 */	lis r4, m__17daNpc_Moi_Param_c@ha
 /* 80A74AF8  38 A4 AE F0 */	addi r5, r4, m__17daNpc_Moi_Param_c@l
-/* 80A74AFC  A8 05 00 9C */	lha r0, 0x9c(r5)	/* effective address: 80A7AF8C */
+/* 80A74AFC  A8 05 00 9C */	lha r0, 0x9c(r5)
 /* 80A74B00  98 01 00 08 */	stb r0, 8(r1)
-/* 80A74B04  A8 05 00 9E */	lha r0, 0x9e(r5)	/* effective address: 80A7AF8E */
+/* 80A74B04  A8 05 00 9E */	lha r0, 0x9e(r5)
 /* 80A74B08  98 01 00 09 */	stb r0, 9(r1)
-/* 80A74B0C  A8 05 00 A0 */	lha r0, 0xa0(r5)	/* effective address: 80A7AF90 */
+/* 80A74B0C  A8 05 00 A0 */	lha r0, 0xa0(r5)
 /* 80A74B10  98 01 00 0A */	stb r0, 0xa(r1)
 /* 80A74B14  C0 03 05 C0 */	lfs f0, 0x5c0(r3)
 /* 80A74B18  FC 00 00 1E */	fctiwz f0, f0
@@ -57,7 +57,7 @@ lbl_80A74A9C:
 /* 80A74B24  98 01 00 0B */	stb r0, 0xb(r1)
 /* 80A74B28  38 7D 16 28 */	addi r3, r29, 0x1628
 /* 80A74B2C  38 81 00 08 */	addi r4, r1, 8
-/* 80A74B30  C0 25 00 A4 */	lfs f1, 0xa4(r5)	/* effective address: 80A7AF94 */
+/* 80A74B30  C0 25 00 A4 */	lfs f1, 0xa4(r5)
 /* 80A74B34  38 A0 00 01 */	li r5, 1
 /* 80A74B38  4B 73 52 28 */	b dKy_BossLight_set__FP4cXyzP8_GXColorfUc
 lbl_80A74B3C:

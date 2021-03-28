@@ -9,10 +9,10 @@ lbl_8082A390:
 /* 8082A3AC  3B E3 F2 08 */	addi r31, r3, lit_3778@l
 /* 8082A3B0  3B C0 00 00 */	li r30, 0
 /* 8082A3B4  3B 80 00 00 */	li r28, 0
-/* 8082A3B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082A3BC  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 8082A3B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082A3BC  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 lbl_8082A3C0:
-/* 8082A3C0  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 8082A3C0  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8082A3C4  38 80 00 00 */	li r4, 0
 /* 8082A3C8  90 81 00 08 */	stw r4, 8(r1)
 /* 8082A3CC  38 00 FF FF */	li r0, -1
@@ -29,7 +29,7 @@ lbl_8082A3C0:
 /* 8082A3F8  39 00 00 00 */	li r8, 0
 /* 8082A3FC  39 20 00 00 */	li r9, 0
 /* 8082A400  39 40 00 FF */	li r10, 0xff
-/* 8082A404  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 8082F208 */
+/* 8082A404  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8082A408  4B 82 26 88 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 8082A40C  7C 7B 1B 79 */	or. r27, r3, r3
 /* 8082A410  41 82 00 40 */	beq lbl_8082A450

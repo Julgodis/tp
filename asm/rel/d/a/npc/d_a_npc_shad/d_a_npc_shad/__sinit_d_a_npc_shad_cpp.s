@@ -5,17 +5,17 @@ lbl_80AE1550:
 /* 80AE155C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AE1560  3C 60 80 AE */	lis r3, cNullVec__6Z2Calc@ha
 /* 80AE1564  3B E3 26 20 */	addi r31, r3, cNullVec__6Z2Calc@l
-/* 80AE1568  80 1F 02 C0 */	lwz r0, 0x2c0(r31)	/* effective address: 80AE28E0 */
+/* 80AE1568  80 1F 02 C0 */	lwz r0, 0x2c0(r31)
 /* 80AE156C  38 7F 03 08 */	addi r3, r31, 0x308
-/* 80AE1570  90 03 00 0C */	stw r0, 0xc(r3)	/* effective address: 80AE2934 */
-/* 80AE1574  90 03 00 10 */	stw r0, 0x10(r3)	/* effective address: 80AE2938 */
-/* 80AE1578  90 03 00 14 */	stw r0, 0x14(r3)	/* effective address: 80AE293C */
-/* 80AE157C  90 03 00 18 */	stw r0, 0x18(r3)	/* effective address: 80AE2940 */
-/* 80AE1580  90 03 00 1C */	stw r0, 0x1c(r3)	/* effective address: 80AE2944 */
-/* 80AE1584  90 03 00 20 */	stw r0, 0x20(r3)	/* effective address: 80AE2948 */
-/* 80AE1588  90 03 00 24 */	stw r0, 0x24(r3)	/* effective address: 80AE294C */
-/* 80AE158C  90 03 00 28 */	stw r0, 0x28(r3)	/* effective address: 80AE2950 */
-/* 80AE1590  90 03 00 30 */	stw r0, 0x30(r3)	/* effective address: 80AE2958 */
+/* 80AE1570  90 03 00 0C */	stw r0, 0xc(r3)
+/* 80AE1574  90 03 00 10 */	stw r0, 0x10(r3)
+/* 80AE1578  90 03 00 14 */	stw r0, 0x14(r3)
+/* 80AE157C  90 03 00 18 */	stw r0, 0x18(r3)
+/* 80AE1580  90 03 00 1C */	stw r0, 0x1c(r3)
+/* 80AE1584  90 03 00 20 */	stw r0, 0x20(r3)
+/* 80AE1588  90 03 00 24 */	stw r0, 0x24(r3)
+/* 80AE158C  90 03 00 28 */	stw r0, 0x28(r3)
+/* 80AE1590  90 03 00 30 */	stw r0, 0x30(r3)
 /* 80AE1594  3C 60 80 AE */	lis r3, __vt__17daNpcShad_Param_c@ha
 /* 80AE1598  38 03 2C A4 */	addi r0, r3, __vt__17daNpcShad_Param_c@l
 /* 80AE159C  3C 60 80 AE */	lis r3, l_HIO@ha
@@ -27,11 +27,11 @@ lbl_80AE1550:
 /* 80AE15B4  4B FF 6B E5 */	bl __register_global_object
 /* 80AE15B8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AE15BC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AE15C0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AE15C4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AE15C0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AE15C4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AE15C8  90 7F 03 E0 */	stw r3, 0x3e0(r31)
 /* 80AE15CC  90 1F 03 E4 */	stw r0, 0x3e4(r31)
-/* 80AE15D0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AE15D0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AE15D4  90 1F 03 E8 */	stw r0, 0x3e8(r31)
 /* 80AE15D8  38 7F 03 E0 */	addi r3, r31, 0x3e0
 /* 80AE15DC  80 9F 03 44 */	lwz r4, 0x344(r31)

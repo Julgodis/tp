@@ -11,9 +11,9 @@ lbl_80B37FB8:
 /* 80B37FDC  3B A3 16 DC */	addi r29, r3, m__21daNpcWrestler_Param_c@l
 /* 80B37FE0  3C 60 80 B4 */	lis r3, cNullVec__6Z2Calc@ha
 /* 80B37FE4  3B C3 1D F8 */	addi r30, r3, cNullVec__6Z2Calc@l
-/* 80B37FE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B37FEC  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80B37FF0  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80B37FE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B37FEC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80B37FF0  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 80B37FF4  A0 1B 0E 96 */	lhz r0, 0xe96(r27)
 /* 80B37FF8  2C 00 00 02 */	cmpwi r0, 2
 /* 80B37FFC  41 82 01 A4 */	beq lbl_80B381A0
@@ -162,8 +162,8 @@ lbl_80B381A0:
 /* 80B38210  C0 1D 01 B4 */	lfs f0, 0x1b4(r29)
 /* 80B38214  D0 01 00 68 */	stfs f0, 0x68(r1)
 /* 80B38218  D0 21 00 6C */	stfs f1, 0x6c(r1)
-/* 80B3821C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B38220  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B3821C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B38220  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B38224  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80B38228  80 9B 0B D8 */	lwz r4, 0xbd8(r27)
 /* 80B3822C  80 84 00 74 */	lwz r4, 0x74(r4)

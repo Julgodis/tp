@@ -80,10 +80,10 @@ lbl_805A3BB8:
 /* 805A3C50  4B DA 28 60 */	b PSMTXCopy
 /* 805A3C54  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805A3C58  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805A3C5C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805A3C5C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805A3C60  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 805A3C64  EC 00 08 28 */	fsubs f0, f0, f1
-/* 805A3C68  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805A3C68  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 805A3C6C  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
 /* 805A3C70  EC 00 08 28 */	fsubs f0, f0, f1
 /* 805A3C74  D0 1D 04 D4 */	stfs f0, 0x4d4(r29)

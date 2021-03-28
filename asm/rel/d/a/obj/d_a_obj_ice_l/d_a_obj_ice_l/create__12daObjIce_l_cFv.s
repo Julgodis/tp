@@ -35,17 +35,17 @@ lbl_80C20148:
 /* 80C20148  38 7E 06 38 */	addi r3, r30, 0x638
 /* 80C2014C  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C20150  38 84 08 38 */	addi r4, r4, l_arcName@l
-/* 80C20154  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C20838 */
+/* 80C20154  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C20158  4B 40 CD 64 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C2015C  7C 7D 1B 78 */	mr r29, r3
 /* 80C20160  2C 1D 00 04 */	cmpwi r29, 4
 /* 80C20164  40 82 00 68 */	bne lbl_80C201CC
-/* 80C20168  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C2016C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C20168  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C2016C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C20170  3C 63 00 02 */	addis r3, r3, 2
 /* 80C20174  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C20178  38 84 08 38 */	addi r4, r4, l_arcName@l
-/* 80C2017C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C20838 */
+/* 80C2017C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C20180  3C A0 80 C2 */	lis r5, stringBase0@ha
 /* 80C20184  38 A5 08 1C */	addi r5, r5, stringBase0@l
 /* 80C20188  38 A5 00 08 */	addi r5, r5, 8
@@ -55,7 +55,7 @@ lbl_80C20148:
 /* 80C20198  7F C3 F3 78 */	mr r3, r30
 /* 80C2019C  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C201A0  38 84 08 38 */	addi r4, r4, l_arcName@l
-/* 80C201A4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C20838 */
+/* 80C201A4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C201A8  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C201AC  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80C201B0  38 E0 14 40 */	li r7, 0x1440
@@ -77,9 +77,9 @@ lbl_80C201E8:
 /* 80C201E8  88 1E 05 B0 */	lbz r0, 0x5b0(r30)
 /* 80C201EC  28 00 00 00 */	cmplwi r0, 0
 /* 80C201F0  41 82 00 2C */	beq lbl_80C2021C
-/* 80C201F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C201F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C201FC  88 03 00 16 */	lbz r0, 0x16(r3)	/* effective address: 804061D6 */
+/* 80C201F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C201F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C201FC  88 03 00 16 */	lbz r0, 0x16(r3)
 /* 80C20200  28 00 00 B3 */	cmplwi r0, 0xb3
 /* 80C20204  40 82 00 10 */	bne lbl_80C20214
 /* 80C20208  38 00 00 01 */	li r0, 1

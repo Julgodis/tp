@@ -19,14 +19,14 @@ lbl_80CF6A74:
 /* 80CF6AB8  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CF6ABC  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80CF6AC0  4B 4A E2 E0 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80CF6AC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF6AC8  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CF6ACC  80 04 5F 78 */	lwz r0, 0x5f78(r4)	/* effective address: 8040C138 */
+/* 80CF6AC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF6AC8  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CF6ACC  80 04 5F 78 */	lwz r0, 0x5f78(r4)
 /* 80CF6AD0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CF6AD4  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80CF6AD8  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80CF6ADC  80 04 5F 7C */	lwz r0, 0x5f7c(r4)	/* effective address: 8040C13C */
-/* 80CF6AE0  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80CF6AD8  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80CF6ADC  80 04 5F 7C */	lwz r0, 0x5f7c(r4)
+/* 80CF6AE0  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CF6AE4  80 7E 05 70 */	lwz r3, 0x570(r30)
 /* 80CF6AE8  80 63 00 04 */	lwz r3, 4(r3)
 /* 80CF6AEC  80 63 00 60 */	lwz r3, 0x60(r3)
@@ -85,11 +85,11 @@ lbl_80CF6B9C:
 /* 80CF6BBC  80 7E 05 70 */	lwz r3, 0x570(r30)
 /* 80CF6BC0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80CF6BC4  4B 31 72 2C */	b mDoExt_btkAnmRemove__FP12J3DModelData
-/* 80CF6BC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF6BCC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CF6BD0  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80CF6BC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF6BCC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CF6BD0  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CF6BD4  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80CF6BD8  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80CF6BD8  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80CF6BDC  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CF6BE0  38 60 00 01 */	li r3, 1
 /* 80CF6BE4  39 61 00 50 */	addi r11, r1, 0x50

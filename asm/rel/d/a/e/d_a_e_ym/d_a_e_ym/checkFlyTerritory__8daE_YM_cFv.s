@@ -10,7 +10,7 @@ lbl_8080E49C:
 /* 8080E4BC  C0 5E 06 78 */	lfs f2, 0x678(r30)
 /* 8080E4C0  C0 1E 06 70 */	lfs f0, 0x670(r30)
 /* 8080E4C4  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8080E4C8  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80815998 */
+/* 8080E4C8  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 8080E4CC  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 8080E4D0  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 8080E4D4  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)

@@ -21,9 +21,9 @@ lbl_806325DC:
 /* 806325DC  38 00 00 01 */	li r0, 1
 /* 806325E0  98 1D 0F AF */	stb r0, 0xfaf(r29)
 /* 806325E4  7F A3 EB 78 */	mr r3, r29
-/* 806325E8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806325EC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806325F0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806325E8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806325EC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806325F0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806325F4  4B 9E 81 1C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806325F8  7C 7F 1B 78 */	mr r31, r3
 /* 806325FC  C0 3E 01 5C */	lfs f1, 0x15c(r30)

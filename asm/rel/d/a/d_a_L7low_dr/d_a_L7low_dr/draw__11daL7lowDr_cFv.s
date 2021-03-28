@@ -5,12 +5,12 @@ lbl_805AAEA8:
 /* 805AAEB4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 805AAEB8  93 C1 00 08 */	stw r30, 8(r1)
 /* 805AAEBC  7C 7E 1B 78 */	mr r30, r3
-/* 805AAEC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AAEC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805AAEC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AAEC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AAEC8  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 805AAECC  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 805AAED0  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 805AAED4  A0 84 03 FC */	lhz r4, 0x3fc(r4)	/* effective address: 803A7684 */
+/* 805AAED4  A0 84 03 FC */	lhz r4, 0x3fc(r4)
 /* 805AAED8  4B A8 9A E4 */	b isEventBit__11dSv_event_cCFUs
 /* 805AAEDC  2C 03 00 00 */	cmpwi r3, 0
 /* 805AAEE0  40 82 00 0C */	bne lbl_805AAEEC

@@ -12,7 +12,7 @@ lbl_80512B40:
 /* 80512B68  40 82 00 30 */	bne lbl_80512B98
 /* 80512B6C  3C 60 80 52 */	lis r3, target_info_count@ha
 /* 80512B70  38 83 92 2C */	addi r4, r3, target_info_count@l
-/* 80512B74  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8051922C */
+/* 80512B74  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80512B78  2C 05 00 02 */	cmpwi r5, 2
 /* 80512B7C  40 80 00 1C */	bge lbl_80512B98
 /* 80512B80  54 A0 10 3A */	slwi r0, r5, 2

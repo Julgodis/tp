@@ -19,7 +19,7 @@ lbl_80D21730:
 /* 80D21730  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80D21734  3C 80 80 D2 */	lis r4, l_arcName@ha
 /* 80D21738  38 84 1A 24 */	addi r4, r4, l_arcName@l
-/* 80D2173C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D21A24 */
+/* 80D2173C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D21740  4B 30 B7 7C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D21744  7C 7F 1B 78 */	mr r31, r3
 /* 80D21748  2C 1F 00 04 */	cmpwi r31, 4

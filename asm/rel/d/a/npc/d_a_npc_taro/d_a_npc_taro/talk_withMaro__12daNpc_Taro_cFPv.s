@@ -10,9 +10,9 @@ lbl_8056F418:
 /* 8056F438  38 7A 10 C8 */	addi r3, r26, 0x10c8
 /* 8056F43C  4B BD 62 CC */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 8056F440  7C 7D 1B 78 */	mr r29, r3
-/* 8056F444  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056F448  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8056F44C  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8056F444  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056F448  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8056F44C  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 8056F450  38 7E 00 00 */	addi r3, r30, 0
 /* 8056F454  AB 63 00 8C */	lha r27, 0x8c(r3)
 /* 8056F458  A0 1A 0E 22 */	lhz r0, 0xe22(r26)

@@ -14,17 +14,17 @@
 struct cXyz {
 };
 
-struct JMSMesgEntry_c {
-};
-
-struct J2DPicture {
-};
-
 struct J2DTextBox {
 	/* 8021C7F4 */ void getFont() const;
 };
 
 struct JUTFont {
+};
+
+struct J2DPicture {
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -486,57 +486,57 @@ SECTION_DEAD char const* const stringBase_8039931C = "im_plus_metal_24ｘ24_00.b
 
 /* 803BF760-803BF7F4 0094+00 s=1 e=0 z=0  None .data      @4572                                                        */
 SECTION_DATA static void* lit_4572[37] = {
-	/* 0    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
-	/* 1    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 2    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 3    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 4    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 5    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 6    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 7    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
-	/* 8    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 9    */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 10   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 11   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 12   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 13   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 14   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 15   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 16   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 17   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 18   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 19   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 20   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 21   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 22   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 23   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 24   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 25   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 26   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 27   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x34),
-	/* 28   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x3C),
-	/* 29   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x44),
-	/* 30   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x4C),
-	/* 31   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
-	/* 32   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
-	/* 33   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
-	/* 34   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
-	/* 35   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
-	/* 36   */ (void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x5C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x24),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x34),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x3C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x44),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x4C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x2C),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x64),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x54),
+	(void*)(((char*)get2ndTexture__13dMeter2Info_cFUc)+0x5C),
 };
 
 /* 803BF7F4-803BF81C 0028+00 s=1 e=0 z=0  None .data      tex_name$5183                                                */
 SECTION_DATA static void* data_803BF7F4[10] = {
-	/* 0    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x1A),
-	/* 1    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x43),
-	/* 2    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x6C),
-	/* 3    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x95),
-	/* 4    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xBE),
-	/* 5    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xE7),
-	/* 6    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x110),
-	/* 7    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x139),
-	/* 8    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x162),
-	/* 9    */ (void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x18B),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x1A),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x43),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x6C),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x95),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xBE),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0xE7),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x110),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x139),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x162),
+	(void*)(((char*)&d_meter_d_meter2_info__stringBase0)+0x18B),
 };
 
 /* 803BF81C-803BFA1C 0200+00 s=3 e=6 z=0  None .data      letter_data__12dMenu_Letter                                  */
@@ -577,9 +577,9 @@ SECTION_DATA u8 letter_data__12dMenu_Letter[512] = {
 
 /* 803BFA1C-803BFA28 000C+00 s=2 e=0 z=0  None .data      __vt__13dMeter2Info_c                                        */
 SECTION_DATA static void* __vt__13dMeter2Info_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13dMeter2Info_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13dMeter2Info_cFv,
 };
 
 /* 8021BDDC-8021BE20 0044+00 s=1 e=0 z=0  None .text      __ct__13dMeter2Info_cFv                                      */

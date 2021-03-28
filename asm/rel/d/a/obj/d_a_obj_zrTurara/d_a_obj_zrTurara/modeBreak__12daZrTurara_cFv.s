@@ -11,9 +11,9 @@ lbl_80D410E0:
 /* 80D41104  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80D41108  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80D4110C  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80D41110  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D41114  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80D41118  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80D41110  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D41114  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80D41118  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80D4111C  38 00 00 FF */	li r0, 0xff
 /* 80D41120  90 01 00 08 */	stw r0, 8(r1)
 /* 80D41124  38 80 00 00 */	li r4, 0
@@ -31,7 +31,7 @@ lbl_80D410E0:
 /* 80D41154  39 00 00 00 */	li r8, 0
 /* 80D41158  39 20 00 00 */	li r9, 0
 /* 80D4115C  39 41 00 2C */	addi r10, r1, 0x2c
-/* 80D41160  C0 3C 00 34 */	lfs f1, 0x34(r28)	/* effective address: 80D415D0 */
+/* 80D41160  C0 3C 00 34 */	lfs f1, 0x34(r28)
 /* 80D41164  4B 30 C3 68 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80D41168  90 7E 07 64 */	stw r3, 0x764(r30)
 /* 80D4116C  88 7E 07 2B */	lbz r3, 0x72b(r30)
@@ -54,7 +54,7 @@ lbl_80D41184:
 /* 80D411AC  4B 52 67 E0 */	b cM_rndFX__Ff
 /* 80D411B0  3C 60 80 D4 */	lis r3, l_HIO@ha
 /* 80D411B4  3B A3 17 8C */	addi r29, r3, l_HIO@l
-/* 80D411B8  C0 1D 00 04 */	lfs f0, 4(r29)	/* effective address: 80D41790 */
+/* 80D411B8  C0 1D 00 04 */	lfs f0, 4(r29)
 /* 80D411BC  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80D411C0  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 80D411C4  EC 00 08 2A */	fadds f0, f0, f1
@@ -90,7 +90,7 @@ lbl_80D41184:
 /* 80D4123C  88 9E 07 68 */	lbz r4, 0x768(r30)
 /* 80D41240  3C 60 80 D4 */	lis r3, l_HIO@ha
 /* 80D41244  38 63 17 8C */	addi r3, r3, l_HIO@l
-/* 80D41248  88 03 00 08 */	lbz r0, 8(r3)	/* effective address: 80D41794 */
+/* 80D41248  88 03 00 08 */	lbz r0, 8(r3)
 /* 80D4124C  7C 04 00 40 */	cmplw r4, r0
 /* 80D41250  41 80 00 38 */	blt lbl_80D41288
 /* 80D41254  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)

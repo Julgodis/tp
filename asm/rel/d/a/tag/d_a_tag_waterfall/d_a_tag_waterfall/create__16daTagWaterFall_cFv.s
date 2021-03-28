@@ -25,7 +25,7 @@ lbl_80D64B58:
 /* 80D64B74  38 00 FF FF */	li r0, -1
 /* 80D64B78  3C 60 80 D6 */	lis r3, l_HIO@ha
 /* 80D64B7C  38 63 4E 10 */	addi r3, r3, l_HIO@l
-/* 80D64B80  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80D64E14 */
+/* 80D64B80  98 03 00 04 */	stb r0, 4(r3)
 lbl_80D64B84:
 /* 80D64B84  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D64B88  54 00 04 3E */	clrlwi r0, r0, 0x10
@@ -86,7 +86,7 @@ lbl_80D64C50:
 /* 80D64C58  B0 1F 04 DC */	sth r0, 0x4dc(r31)
 /* 80D64C5C  3C 60 80 D6 */	lis r3, m_master_id@ha
 /* 80D64C60  38 63 4D 94 */	addi r3, r3, m_master_id@l
-/* 80D64C64  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D64D94 */
+/* 80D64C64  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D64C68  3C 03 00 01 */	addis r0, r3, 1
 /* 80D64C6C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80D64C70  40 82 00 34 */	bne lbl_80D64CA4

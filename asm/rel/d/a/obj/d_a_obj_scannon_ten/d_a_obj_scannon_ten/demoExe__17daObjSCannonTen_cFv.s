@@ -5,8 +5,8 @@ lbl_80CCBDD0:
 /* 80CCBDDC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80CCBDE0  4B 69 63 FC */	b _savegpr_29
 /* 80CCBDE4  7C 7D 1B 78 */	mr r29, r3
-/* 80CCBDE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCBDEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCBDE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCBDEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCBDF0  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80CCBDF4  7F C3 F3 78 */	mr r3, r30
 /* 80CCBDF8  80 9D 05 E4 */	lwz r4, 0x5e4(r29)

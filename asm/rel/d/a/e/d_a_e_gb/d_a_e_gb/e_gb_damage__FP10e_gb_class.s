@@ -33,7 +33,7 @@ lbl_806C302C:
 lbl_806C3034:
 /* 806C3034  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806C3038  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806C303C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806C303C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806C3040  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 806C3044  4B 94 93 98 */	b mDoMtx_YrotS__FPA4_fs
 /* 806C3048  C0 1F 00 04 */	lfs f0, 4(r31)

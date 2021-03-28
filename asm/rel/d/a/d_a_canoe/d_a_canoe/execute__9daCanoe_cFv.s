@@ -11,9 +11,9 @@ lbl_804DC7B4:
 /* 804DC7D8  3B C3 D7 F8 */	addi r30, r3, lit_1109@l
 /* 804DC7DC  3C 60 80 4E */	lis r3, lit_3766@ha
 /* 804DC7E0  3B E3 D5 DC */	addi r31, r3, lit_3766@l
-/* 804DC7E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DC7E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804DC7EC  83 A3 5D B4 */	lwz r29, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804DC7E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DC7E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DC7EC  83 A3 5D B4 */	lwz r29, 0x5db4(r3)
 /* 804DC7F0  C0 1B 14 94 */	lfs f0, 0x1494(r27)
 /* 804DC7F4  D0 1B 14 AC */	stfs f0, 0x14ac(r27)
 /* 804DC7F8  C0 1B 14 98 */	lfs f0, 0x1498(r27)
@@ -520,8 +520,8 @@ lbl_804DCF44:
 /* 804DCF4C  7F 63 DB 78 */	mr r3, r27
 /* 804DCF50  4B FF E8 D9 */	bl frontBackBgCheck__9daCanoe_cFv
 /* 804DCF54  38 7B 07 F8 */	addi r3, r27, 0x7f8
-/* 804DCF58  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804DCF5C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804DCF58  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804DCF5C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804DCF60  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 804DCF64  4B B9 9B 48 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 804DCF68  88 1E 00 68 */	lbz r0, 0x68(r30)
@@ -550,9 +550,9 @@ lbl_804DCFA0:
 /* 804DCFC0  88 1D 05 6A */	lbz r0, 0x56a(r29)
 /* 804DCFC4  28 00 00 2D */	cmplwi r0, 0x2d
 /* 804DCFC8  40 82 00 3C */	bne lbl_804DD004
-/* 804DCFCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DCFD0  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 804DCFD4  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 804DCFCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DCFD0  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 804DCFD4  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 804DCFD8  38 63 02 10 */	addi r3, r3, 0x210
 /* 804DCFDC  80 9B 14 88 */	lwz r4, 0x1488(r27)
 /* 804DCFE0  4B B6 E9 38 */	b getEmitter__Q213dPa_control_c7level_cFUl
@@ -570,9 +570,9 @@ lbl_804DD004:
 /* 804DD00C  C0 1B 05 2C */	lfs f0, 0x52c(r27)
 /* 804DD010  FC 00 02 10 */	fabs f0, f0
 /* 804DD014  FC 20 00 18 */	frsp f1, f0
-/* 804DD018  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DD01C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804DD020  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804DD018  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DD01C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DD020  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804DD024  38 9B 14 78 */	addi r4, r27, 0x1478
 /* 804DD028  38 BB 09 78 */	addi r5, r27, 0x978
 /* 804DD02C  38 DB 04 D0 */	addi r6, r27, 0x4d0

@@ -8,8 +8,8 @@ lbl_80D22CD4:
 /* 80D22CEC  28 00 00 01 */	cmplwi r0, 1
 /* 80D22CF0  40 82 00 D8 */	bne lbl_80D22DC8
 /* 80D22CF4  40 82 00 2C */	bne lbl_80D22D20
-/* 80D22CF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D22CFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D22CF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D22CFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D22D00  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D22D04  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D22D08  88 1F 04 BA */	lbz r0, 0x4ba(r31)

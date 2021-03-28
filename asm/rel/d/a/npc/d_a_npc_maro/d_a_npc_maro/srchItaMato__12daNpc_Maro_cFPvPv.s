@@ -27,13 +27,13 @@ lbl_8055C1F4:
 /* 8055C208  40 82 00 28 */	bne lbl_8055C230
 /* 8055C20C  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 8055C210  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 8055C214  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 8055C214  80 85 00 00 */	lwz r4, 0(r5)
 /* 8055C218  54 80 10 3A */	slwi r0, r4, 2
 /* 8055C21C  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 8055C220  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 8055C224  7F E3 01 2E */	stwx r31, r3, r0
 /* 8055C228  38 04 00 01 */	addi r0, r4, 1
-/* 8055C22C  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 8055C22C  90 05 00 00 */	stw r0, 0(r5)
 lbl_8055C230:
 /* 8055C230  38 60 00 00 */	li r3, 0
 /* 8055C234  83 E1 00 0C */	lwz r31, 0xc(r1)

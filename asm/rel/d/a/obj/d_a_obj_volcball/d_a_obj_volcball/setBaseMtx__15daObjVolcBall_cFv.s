@@ -4,9 +4,9 @@ lbl_80D21BC0:
 /* 80D21BC8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D21BCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D21BD0  7C 7F 1B 78 */	mr r31, r3
-/* 80D21BD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D21BD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D21BDC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D21BD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D21BD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D21BDC  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80D21BE0  88 1F 06 00 */	lbz r0, 0x600(r31)
 /* 80D21BE4  28 00 00 00 */	cmplwi r0, 0
 /* 80D21BE8  40 82 00 1C */	bne lbl_80D21C04

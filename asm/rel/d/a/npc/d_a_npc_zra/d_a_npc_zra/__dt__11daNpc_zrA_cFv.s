@@ -61,7 +61,7 @@ lbl_80B798CC:
 /* 80B79904  7C 7E 1A 14 */	add r3, r30, r3
 /* 80B79908  3C 80 80 B9 */	lis r4, l_resNames@ha
 /* 80B7990C  38 84 D3 00 */	addi r4, r4, l_resNames@l
-/* 80B79910  80 84 00 28 */	lwz r4, 0x28(r4)	/* effective address: 80B8D328 */
+/* 80B79910  80 84 00 28 */	lwz r4, 0x28(r4)
 /* 80B79914  4B 4B 36 F4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80B79918  48 00 00 20 */	b lbl_80B79938
 lbl_80B7991C:
@@ -70,7 +70,7 @@ lbl_80B7991C:
 /* 80B79924  7C 7E 1A 14 */	add r3, r30, r3
 /* 80B79928  3C 80 80 B9 */	lis r4, l_resNames@ha
 /* 80B7992C  38 84 D3 00 */	addi r4, r4, l_resNames@l
-/* 80B79930  80 84 00 1C */	lwz r4, 0x1c(r4)	/* effective address: 80B8D31C */
+/* 80B79930  80 84 00 1C */	lwz r4, 0x1c(r4)
 /* 80B79934  4B 4B 36 D4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_80B79938:
 /* 80B79938  80 1E 00 F0 */	lwz r0, 0xf0(r30)

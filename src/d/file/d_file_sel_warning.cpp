@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JKRArchive {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRArchive {
 };
 
 struct dFile_warning_c {
@@ -47,10 +47,10 @@ struct dDlst_FileWarn_c {
 	/* 801923CC */ ~dDlst_FileWarn_c();
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
 struct J2DScreen {
@@ -159,16 +159,16 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BB41C-803BB428 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA static void* lit_3805[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__15dFile_warning_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeWait__15dFile_warning_cFv,
 };
 
 /* 803BB428-803BB434 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA static void* lit_3806[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMove__15dFile_warning_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeMove__15dFile_warning_cFv,
 };
 
 /* 803BB434-803BB44C 0018+00 s=2 e=0 z=0  None .data      fileWarningProc                                              */
@@ -179,10 +179,10 @@ SECTION_DATA static u8 fileWarningProc[24] = {
 
 /* 803BB44C-803BB480 0010+24 s=3 e=0 z=0  None .data      __vt__16dDlst_FileWarn_c                                     */
 SECTION_DATA static void* __vt__16dDlst_FileWarn_c[4 + 9 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__16dDlst_FileWarn_cFv,
-	/* 3    */ (void*)__dt__16dDlst_FileWarn_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__16dDlst_FileWarn_cFv,
+	(void*)__dt__16dDlst_FileWarn_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -197,9 +197,9 @@ SECTION_DATA static void* __vt__16dDlst_FileWarn_c[4 + 9 /* padding */] = {
 
 /* 803BB480-803BB498 000C+0C s=2 e=0 z=0  None .data      __vt__15dFile_warning_c                                      */
 SECTION_DATA static void* __vt__15dFile_warning_c[3 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dFile_warning_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dFile_warning_cFv,
 	/* padding */
 	NULL,
 	NULL,

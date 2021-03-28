@@ -6,28 +6,28 @@ lbl_805BAE6C:
 /* 805BAE7C  90 03 00 00 */	stw r0, 0(r3)
 /* 805BAE80  38 00 FF FF */	li r0, -1
 /* 805BAE84  98 03 00 04 */	stb r0, 4(r3)
-/* 805BAE88  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 805C6C74 */
+/* 805BAE88  C0 05 00 00 */	lfs f0, 0(r5)
 /* 805BAE8C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 805BAE90  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 805C6C78 */
+/* 805BAE90  C0 05 00 04 */	lfs f0, 4(r5)
 /* 805BAE94  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 805BAE98  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 805C6C7C */
+/* 805BAE98  C0 25 00 08 */	lfs f1, 8(r5)
 /* 805BAE9C  D0 23 00 10 */	stfs f1, 0x10(r3)
-/* 805BAEA0  C0 05 00 0C */	lfs f0, 0xc(r5)	/* effective address: 805C6C80 */
+/* 805BAEA0  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 805BAEA4  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 805BAEA8  C0 05 00 10 */	lfs f0, 0x10(r5)	/* effective address: 805C6C84 */
+/* 805BAEA8  C0 05 00 10 */	lfs f0, 0x10(r5)
 /* 805BAEAC  D0 03 00 1C */	stfs f0, 0x1c(r3)
-/* 805BAEB0  C0 05 00 14 */	lfs f0, 0x14(r5)	/* effective address: 805C6C88 */
+/* 805BAEB0  C0 05 00 14 */	lfs f0, 0x14(r5)
 /* 805BAEB4  D0 03 00 20 */	stfs f0, 0x20(r3)
 /* 805BAEB8  D0 23 00 24 */	stfs f1, 0x24(r3)
-/* 805BAEBC  C0 05 00 18 */	lfs f0, 0x18(r5)	/* effective address: 805C6C8C */
+/* 805BAEBC  C0 05 00 18 */	lfs f0, 0x18(r5)
 /* 805BAEC0  D0 03 00 28 */	stfs f0, 0x28(r3)
-/* 805BAEC4  C0 05 00 1C */	lfs f0, 0x1c(r5)	/* effective address: 805C6C90 */
+/* 805BAEC4  C0 05 00 1C */	lfs f0, 0x1c(r5)
 /* 805BAEC8  D0 03 00 30 */	stfs f0, 0x30(r3)
-/* 805BAECC  C0 05 00 20 */	lfs f0, 0x20(r5)	/* effective address: 805C6C94 */
+/* 805BAECC  C0 05 00 20 */	lfs f0, 0x20(r5)
 /* 805BAED0  D0 03 00 34 */	stfs f0, 0x34(r3)
-/* 805BAED4  C0 05 00 24 */	lfs f0, 0x24(r5)	/* effective address: 805C6C98 */
+/* 805BAED4  C0 05 00 24 */	lfs f0, 0x24(r5)
 /* 805BAED8  D0 03 00 2C */	stfs f0, 0x2c(r3)
-/* 805BAEDC  C0 05 00 28 */	lfs f0, 0x28(r5)	/* effective address: 805C6C9C */
+/* 805BAEDC  C0 05 00 28 */	lfs f0, 0x28(r5)
 /* 805BAEE0  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 805BAEE4  39 00 00 B4 */	li r8, 0xb4
 /* 805BAEE8  B1 03 00 38 */	sth r8, 0x38(r3)

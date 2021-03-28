@@ -127,9 +127,9 @@ SECTION_DATA static u8 map_icon_size[276] = {
 
 /* 803BD02C-803BD038 000C+00 s=2 e=0 z=0  None .data      __vt__16dMenuMapCommon_c                                     */
 SECTION_DATA static void* __vt__16dMenuMapCommon_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMenuMapCommon_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMenuMapCommon_cFv,
 };
 
 /* 804540D8-804540DC 0004+00 s=6 e=0 z=0  None .sdata2    @3703                                                        */

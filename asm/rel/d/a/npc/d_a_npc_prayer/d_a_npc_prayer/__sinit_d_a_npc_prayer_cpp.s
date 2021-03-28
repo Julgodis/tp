@@ -15,20 +15,20 @@ lbl_80AB5710:
 /* 80AB5744  38 A3 5A 0C */	addi r5, r3, mEvtSeqList__11daNpcPray_c@l
 /* 80AB5748  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AB574C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AB5750  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AB5754  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AB5758  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AB5A0C */
-/* 80AB575C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AB5A10 */
-/* 80AB5760  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AB5764  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AB5A14 */
+/* 80AB5750  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AB5754  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AB5758  90 65 00 00 */	stw r3, 0(r5)
+/* 80AB575C  90 05 00 04 */	stw r0, 4(r5)
+/* 80AB5760  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AB5764  90 05 00 08 */	stw r0, 8(r5)
 /* 80AB5768  3C 60 80 AB */	lis r3, lit_3804@ha
 /* 80AB576C  38 83 5A 00 */	addi r4, r3, lit_3804@l
-/* 80AB5770  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AB5A00 */
-/* 80AB5774  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AB5A04 */
-/* 80AB5778  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 80AB5A18 */
-/* 80AB577C  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 80AB5A1C */
-/* 80AB5780  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AB5A08 */
-/* 80AB5784  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 80AB5A20 */
+/* 80AB5770  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AB5774  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AB5778  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80AB577C  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80AB5780  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AB5784  90 05 00 14 */	stw r0, 0x14(r5)
 /* 80AB5788  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80AB578C  7C 08 03 A6 */	mtlr r0
 /* 80AB5790  38 21 00 10 */	addi r1, r1, 0x10

@@ -5,12 +5,12 @@ lbl_80A27E24:
 /* 80A27E30  39 61 00 20 */	addi r11, r1, 0x20
 /* 80A27E34  4B 93 A3 A8 */	b _savegpr_29
 /* 80A27E38  7C 7D 1B 78 */	mr r29, r3
-/* 80A27E3C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A27E40  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A27E44  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A27E3C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A27E40  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A27E44  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A27E48  3C A0 80 A3 */	lis r5, m__21daNpcKasiMich_Param_c@ha
 /* 80A27E4C  38 A5 A0 4C */	addi r5, r5, m__21daNpcKasiMich_Param_c@l
-/* 80A27E50  C0 25 00 50 */	lfs f1, 0x50(r5)	/* effective address: 80A2A09C */
+/* 80A27E50  C0 25 00 50 */	lfs f1, 0x50(r5)
 /* 80A27E54  4B 72 BB 9C */	b chkActorInSight__8daNpcF_cFP10fopAc_ac_cf
 /* 80A27E58  2C 03 00 00 */	cmpwi r3, 0
 /* 80A27E5C  40 82 00 14 */	bne lbl_80A27E70

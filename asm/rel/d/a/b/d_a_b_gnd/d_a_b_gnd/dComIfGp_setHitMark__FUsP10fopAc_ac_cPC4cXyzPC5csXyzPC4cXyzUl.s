@@ -9,9 +9,9 @@ lbl_80602418:
 /* 80602434  7C CA 33 78 */	mr r10, r6
 /* 80602438  7C E0 3B 78 */	mr r0, r7
 /* 8060243C  7D 09 43 78 */	mr r9, r8
-/* 80602440  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80602444  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80602448  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80602440  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80602444  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80602448  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8060244C  7F E4 FB 78 */	mr r4, r31
 /* 80602450  7D 85 63 78 */	mr r5, r12
 /* 80602454  7D 66 5B 78 */	mr r6, r11

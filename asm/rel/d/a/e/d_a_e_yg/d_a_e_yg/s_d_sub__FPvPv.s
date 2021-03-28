@@ -15,7 +15,7 @@ lbl_807F8A68:
 /* 807F8A9C  40 82 00 30 */	bne lbl_807F8ACC
 /* 807F8AA0  3C 60 80 80 */	lis r3, target_info_count@ha
 /* 807F8AA4  38 83 D1 24 */	addi r4, r3, target_info_count@l
-/* 807F8AA8  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 807FD124 */
+/* 807F8AA8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 807F8AAC  2C 05 00 14 */	cmpwi r5, 0x14
 /* 807F8AB0  40 80 00 1C */	bge lbl_807F8ACC
 /* 807F8AB4  54 A0 10 3A */	slwi r0, r5, 2

@@ -79,7 +79,7 @@ lbl_80520C54:
 /* 80520C60  40 80 00 48 */	bge lbl_80520CA8
 /* 80520C64  3C 60 80 45 */	lis r3, m_flower__9daGrass_c@ha
 /* 80520C68  38 63 0D B4 */	addi r3, r3, m_flower__9daGrass_c@l
-/* 80520C6C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB4 */
+/* 80520C6C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80520C70  48 00 22 D1 */	bl newAnm__16dFlower_packet_cFv
 /* 80520C74  2C 03 00 00 */	cmpwi r3, 0
 /* 80520C78  41 80 00 64 */	blt lbl_80520CDC

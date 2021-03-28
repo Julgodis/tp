@@ -14,9 +14,9 @@ lbl_804601D4:
 /* 80460204  4B FF F3 65 */	bl demoProc__10daKnob20_cFv
 /* 80460208  48 00 00 5C */	b lbl_80460264
 lbl_8046020C:
-/* 8046020C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80460210  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80460214  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 8046020C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80460210  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80460214  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 80460218  28 00 00 00 */	cmplwi r0, 0
 /* 8046021C  41 82 00 44 */	beq lbl_80460260
 /* 80460220  38 64 4F F8 */	addi r3, r4, 0x4ff8

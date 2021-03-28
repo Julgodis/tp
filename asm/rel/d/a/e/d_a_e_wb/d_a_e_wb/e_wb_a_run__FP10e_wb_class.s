@@ -88,7 +88,7 @@ lbl_807D8A04:
 /* 807D8A1C  C0 3F 00 0C */	lfs f1, 0xc(r31)
 /* 807D8A20  3C 80 80 7E */	lis r4, l_HIO@ha
 /* 807D8A24  38 84 35 C8 */	addi r4, r4, l_HIO@l
-/* 807D8A28  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 807E35DC */
+/* 807D8A28  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 807D8A2C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 807D8A30  C0 5F 00 60 */	lfs f2, 0x60(r31)
 /* 807D8A34  C0 7F 00 DC */	lfs f3, 0xdc(r31)

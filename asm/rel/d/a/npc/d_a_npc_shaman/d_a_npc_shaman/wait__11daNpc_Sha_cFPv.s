@@ -58,9 +58,9 @@ lbl_80AE4ED0:
 /* 80AE4EF4  38 00 00 00 */	li r0, 0
 /* 80AE4EF8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80AE4EFC  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80AE4F00  98 03 13 0A */	stb r0, 0x130a(r3)	/* effective address: 8042DD5E */
-/* 80AE4F04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE4F08  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AE4F00  98 03 13 0A */	stb r0, 0x130a(r3)
+/* 80AE4F04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE4F08  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AE4F0C  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80AE4F10  38 80 13 01 */	li r4, 0x1301
 /* 80AE4F14  4B 54 FA 90 */	b offEventBit__11dSv_event_cFUs

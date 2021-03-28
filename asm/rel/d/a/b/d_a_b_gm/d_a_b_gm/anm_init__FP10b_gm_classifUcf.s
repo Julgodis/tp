@@ -15,8 +15,8 @@ lbl_805ED9FC:
 /* 805EDA30  FF E0 10 90 */	fmr f31, f2
 /* 805EDA34  3C 60 80 5F */	lis r3, stringBase0@ha
 /* 805EDA38  38 63 43 88 */	addi r3, r3, stringBase0@l
-/* 805EDA3C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805EDA40  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805EDA3C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805EDA40  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805EDA44  3C A5 00 02 */	addis r5, r5, 2
 /* 805EDA48  38 C0 00 80 */	li r6, 0x80
 /* 805EDA4C  38 A5 C2 F8 */	addi r5, r5, -15624

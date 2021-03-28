@@ -39,7 +39,7 @@ lbl_8076CB94:
 /* 8076CBB0  C3 BF 00 7C */	lfs f29, 0x7c(r31)
 /* 8076CBB4  3C 60 80 78 */	lis r3, target_info_count@ha
 /* 8076CBB8  3B 43 A9 18 */	addi r26, r3, target_info_count@l
-/* 8076CBBC  80 1A 00 00 */	lwz r0, 0(r26)	/* effective address: 8077A918 */
+/* 8076CBBC  80 1A 00 00 */	lwz r0, 0(r26)
 /* 8076CBC0  2C 00 00 00 */	cmpwi r0, 0
 /* 8076CBC4  41 82 02 10 */	beq lbl_8076CDD4
 /* 8076CBC8  3B C0 00 00 */	li r30, 0
@@ -130,7 +130,7 @@ lbl_8076CCF4:
 lbl_8076CD08:
 /* 8076CD08  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8076CD0C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8076CD10  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8076CD10  80 63 00 00 */	lwz r3, 0(r3)
 /* 8076CD14  7C 04 00 D0 */	neg r0, r4
 /* 8076CD18  7C 04 07 34 */	extsh r4, r0
 /* 8076CD1C  4B 89 F6 C0 */	b mDoMtx_YrotS__FPA4_fs

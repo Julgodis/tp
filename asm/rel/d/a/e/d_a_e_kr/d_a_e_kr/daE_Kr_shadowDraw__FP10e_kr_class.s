@@ -9,7 +9,7 @@ lbl_80700174:
 /* 80700190  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 80700194  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80700198  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
-/* 8070019C  C0 0A 00 3C */	lfs f0, 0x3c(r10)	/* effective address: 80705B34 */
+/* 8070019C  C0 0A 00 3C */	lfs f0, 0x3c(r10)
 /* 807001A0  C0 7F 04 D4 */	lfs f3, 0x4d4(r31)
 /* 807001A4  EC 20 18 2A */	fadds f1, f0, f3
 /* 807001A8  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
@@ -19,13 +19,13 @@ lbl_80700174:
 /* 807001B8  80 7F 05 BC */	lwz r3, 0x5bc(r31)
 /* 807001BC  38 80 00 01 */	li r4, 1
 /* 807001C0  38 C1 00 08 */	addi r6, r1, 8
-/* 807001C4  C0 2A 00 40 */	lfs f1, 0x40(r10)	/* effective address: 80705B38 */
-/* 807001C8  C0 4A 00 04 */	lfs f2, 4(r10)	/* effective address: 80705AFC */
+/* 807001C4  C0 2A 00 40 */	lfs f1, 0x40(r10)
+/* 807001C8  C0 4A 00 04 */	lfs f2, 4(r10)
 /* 807001CC  C0 9F 07 DC */	lfs f4, 0x7dc(r31)
 /* 807001D0  38 FF 08 34 */	addi r7, r31, 0x834
 /* 807001D4  39 1F 01 0C */	addi r8, r31, 0x10c
 /* 807001D8  39 20 00 00 */	li r9, 0
-/* 807001DC  C0 AA 00 08 */	lfs f5, 8(r10)	/* effective address: 80705B00 */
+/* 807001DC  C0 AA 00 08 */	lfs f5, 8(r10)
 /* 807001E0  3D 40 80 42 */	lis r10, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 807001E4  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 807001E8  4B 92 E7 28 */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj

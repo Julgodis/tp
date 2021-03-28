@@ -133,8 +133,8 @@ lbl_80599568:
 /* 805995E4  38 1D 07 50 */	addi r0, r29, 0x750
 /* 805995E8  90 1D 08 4C */	stw r0, 0x84c(r29)
 /* 805995EC  38 7D 05 78 */	addi r3, r29, 0x578
-/* 805995F0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805995F4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805995F0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805995F4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805995F8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805995FC  4B AD D4 B0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80599600  80 1D 06 54 */	lwz r0, 0x654(r29)

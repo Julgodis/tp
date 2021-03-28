@@ -73,12 +73,12 @@ lbl_80691B20:
 /* 80691BAC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80691BB0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80691BB4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80691BB8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80691BB8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80691BBC  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 80691BC0  4B 97 A8 1C */	b mDoMtx_YrotS__FPA4_fs
 /* 80691BC4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80691BC8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80691BCC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80691BCC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80691BD0  A8 9C 04 DC */	lha r4, 0x4dc(r28)
 /* 80691BD4  4B 97 A7 C8 */	b mDoMtx_XrotM__FPA4_fs
 /* 80691BD8  38 61 00 08 */	addi r3, r1, 8

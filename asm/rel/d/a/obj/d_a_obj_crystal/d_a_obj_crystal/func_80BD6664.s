@@ -19,7 +19,7 @@ lbl_80BD66A0:
 /* 80BD66A0  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80BD66A4  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BD66A8  38 84 68 F0 */	addi r4, r4, l_arcName@l
-/* 80BD66AC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BD68F0 */
+/* 80BD66AC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BD66B0  4B 45 68 0C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BD66B4  7C 7F 1B 78 */	mr r31, r3
 /* 80BD66B8  2C 1F 00 04 */	cmpwi r31, 4

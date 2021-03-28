@@ -6,8 +6,8 @@ lbl_80D22724:
 /* 80D22734  F3 E1 00 18 */	psq_st f31, 24(r1), 0, 0 /* qr0 */
 /* 80D22738  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D2273C  7C 7F 1B 78 */	mr r31, r3
-/* 80D22740  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D22744  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D22740  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D22744  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D22748  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D2274C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D22750  88 1F 04 BA */	lbz r0, 0x4ba(r31)

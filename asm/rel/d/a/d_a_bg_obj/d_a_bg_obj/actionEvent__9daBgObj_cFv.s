@@ -5,8 +5,8 @@ lbl_8045BD50:
 /* 8045BD5C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045BD60  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045BD64  7C 7E 1B 78 */	mr r30, r3
-/* 8045BD68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045BD6C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8045BD68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045BD6C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8045BD70  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 8045BD74  A8 9E 0C C6 */	lha r4, 0xcc6(r30)
 /* 8045BD78  4B BE BD 00 */	b endCheck__16dEvent_manager_cFs

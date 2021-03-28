@@ -38,11 +38,11 @@ lbl_80A1E524:
 /* 80A1E530  41 82 00 30 */	beq lbl_80A1E560
 /* 80A1E534  3C 60 80 A2 */	lis r3, lit_5577@ha
 /* 80A1E538  38 83 16 38 */	addi r4, r3, lit_5577@l
-/* 80A1E53C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A21638 */
-/* 80A1E540  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2163C */
+/* 80A1E53C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1E540  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1E544  90 61 00 08 */	stw r3, 8(r1)
 /* 80A1E548  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A1E54C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A21640 */
+/* 80A1E54C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1E550  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1E554  7F E3 FB 78 */	mr r3, r31
 /* 80A1E558  38 81 00 08 */	addi r4, r1, 8

@@ -11,8 +11,8 @@ lbl_8053B530:
 /* 8053B554  3B A0 00 00 */	li r29, 0
 /* 8053B558  3B 80 00 00 */	li r28, 0
 /* 8053B55C  3B 60 00 00 */	li r27, 0
-/* 8053B560  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053B564  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8053B560  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053B564  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8053B568  3B 03 4F F8 */	addi r24, r3, 0x4ff8
 /* 8053B56C  7F 03 C3 78 */	mr r3, r24
 /* 8053B570  3C A0 80 54 */	lis r5, struct_8053E908+0x0@ha

@@ -7,7 +7,7 @@ lbl_80969B88:
 /* 80969B9C  40 82 00 24 */	bne lbl_80969BC0
 /* 80969BA0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80969BA4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80969BA8  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80969BA8  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80969BAC  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80969BB0  28 03 00 00 */	cmplwi r3, 0
 /* 80969BB4  41 82 00 0C */	beq lbl_80969BC0

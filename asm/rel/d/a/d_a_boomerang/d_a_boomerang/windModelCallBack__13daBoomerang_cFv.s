@@ -34,14 +34,14 @@ lbl_8049F280:
 /* 8049F300  4B EA 71 E4 */	b PSMTXConcat
 /* 8049F304  3C 60 80 43 */	lis r3, mCurrentMtx__6J3DSys@ha
 /* 8049F308  38 83 4B E4 */	addi r4, r3, mCurrentMtx__6J3DSys@l
-/* 8049F30C  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80434BF0 */
+/* 8049F30C  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8049F310  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8049F314  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8049F318  D0 03 00 0C */	stfs f0, 0xc(r3)	/* effective address: 803DD47C */
-/* 8049F31C  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 80434C00 */
-/* 8049F320  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 803DD48C */
-/* 8049F324  C0 04 00 2C */	lfs f0, 0x2c(r4)	/* effective address: 80434C10 */
-/* 8049F328  D0 03 00 2C */	stfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8049F318  D0 03 00 0C */	stfs f0, 0xc(r3)
+/* 8049F31C  C0 04 00 1C */	lfs f0, 0x1c(r4)
+/* 8049F320  D0 03 00 1C */	stfs f0, 0x1c(r3)
+/* 8049F324  C0 04 00 2C */	lfs f0, 0x2c(r4)
+/* 8049F328  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 8049F32C  4B EA 71 84 */	b PSMTXCopy
 /* 8049F330  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8049F334  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

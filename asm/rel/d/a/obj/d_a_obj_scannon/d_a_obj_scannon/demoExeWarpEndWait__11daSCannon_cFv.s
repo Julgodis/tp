@@ -24,7 +24,7 @@ lbl_80CC8714:
 /* 80CC876C  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC8770  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC8774  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC8778  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC8778  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC877C  38 81 00 08 */	addi r4, r1, 8
 /* 80CC8780  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80CC8784  38 C0 00 00 */	li r6, 0
@@ -46,8 +46,8 @@ lbl_80CC87B8:
 /* 80CC87BC  48 00 07 59 */	bl func_80CC8F14
 /* 80CC87C0  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC87C4  40 82 00 18 */	bne lbl_80CC87DC
-/* 80CC87C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC87CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC87C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC87CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC87D0  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC87D4  80 9E 06 04 */	lwz r4, 0x604(r30)
 /* 80CC87D8  4B 37 F9 A4 */	b cutEnd__16dEvent_manager_cFi

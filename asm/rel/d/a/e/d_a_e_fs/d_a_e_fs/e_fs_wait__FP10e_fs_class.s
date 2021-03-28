@@ -101,10 +101,10 @@ lbl_806BC1E0:
 /* 806BC218  C0 1E 00 50 */	lfs f0, 0x50(r30)
 /* 806BC21C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806BC220  40 81 00 2C */	ble lbl_806BC24C
-/* 806BC224  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BC228  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806BC22C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806BC230  C0 23 05 2C */	lfs f1, 0x52c(r3)	/* effective address: 804066EC */
+/* 806BC224  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BC228  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806BC22C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806BC230  C0 23 05 2C */	lfs f1, 0x52c(r3)
 /* 806BC234  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 806BC238  C0 1E 00 54 */	lfs f0, 0x54(r30)
 /* 806BC23C  EC 20 00 72 */	fmuls f1, f0, f1

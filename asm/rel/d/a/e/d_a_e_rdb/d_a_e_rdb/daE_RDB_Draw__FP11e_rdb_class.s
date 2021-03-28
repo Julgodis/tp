@@ -183,8 +183,8 @@ lbl_80765588:
 /* 807655C4  80 BD 06 78 */	lwz r5, 0x678(r29)
 /* 807655C8  28 05 00 00 */	cmplwi r5, 0
 /* 807655CC  41 82 00 18 */	beq lbl_807655E4
-/* 807655D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807655D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807655D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807655D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807655D8  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 807655DC  80 9D 06 B4 */	lwz r4, 0x6b4(r29)
 /* 807655E0  4B 8F 09 3C */	b addReal__21dDlst_shadowControl_cFUlP8J3DModel

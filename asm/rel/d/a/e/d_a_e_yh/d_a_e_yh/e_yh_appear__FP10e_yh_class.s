@@ -174,7 +174,7 @@ lbl_807FE450:
 /* 807FE450  38 7E 06 94 */	addi r3, r30, 0x694
 /* 807FE454  3C 80 80 80 */	lis r4, l_HIO@ha
 /* 807FE458  38 84 47 28 */	addi r4, r4, l_HIO@l
-/* 807FE45C  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80804738 */
+/* 807FE45C  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 807FE460  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807FE464  C0 7F 00 6C */	lfs f3, 0x6c(r31)
 /* 807FE468  4B A7 15 D4 */	b cLib_addCalc2__FPffff

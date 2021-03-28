@@ -8,27 +8,27 @@ lbl_8081C4EC:
 /* 8081C504  7C 9D 23 78 */	mr r29, r4
 /* 8081C508  3C 60 80 82 */	lis r3, lit_3791@ha
 /* 8081C50C  3B C3 18 AC */	addi r30, r3, lit_3791@l
-/* 8081C510  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 808218AC */
+/* 8081C510  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 8081C514  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 8081C518  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8081C51C  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 8081C520  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 8081C524  38 63 10 18 */	addi r3, r3, m_midnaActor__9daPy_py_c@l
-/* 8081C528  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451018 */
-/* 8081C52C  80 63 05 74 */	lwz r3, 0x574(r3)	/* effective address: 8045158C */
-/* 8081C530  80 63 00 84 */	lwz r3, 0x84(r3)	/* effective address: 8045109C */
-/* 8081C534  80 63 00 0C */	lwz r3, 0xc(r3)	/* effective address: 80451024 */
+/* 8081C528  80 63 00 00 */	lwz r3, 0(r3)
+/* 8081C52C  80 63 05 74 */	lwz r3, 0x574(r3)
+/* 8081C530  80 63 00 84 */	lwz r3, 0x84(r3)
+/* 8081C534  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8081C538  38 63 01 E0 */	addi r3, r3, 0x1e0
 /* 8081C53C  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
 /* 8081C540  38 84 D4 70 */	addi r4, r4, now__14mDoMtx_stack_c@l
 /* 8081C544  4B B2 9F 6C */	b PSMTXCopy
 /* 8081C548  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8081C54C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8081C550  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8081C550  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8081C554  D0 01 00 48 */	stfs f0, 0x48(r1)
-/* 8081C558  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8081C558  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8081C55C  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 8081C560  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8081C560  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8081C564  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 8081C568  38 61 00 30 */	addi r3, r1, 0x30
 /* 8081C56C  38 81 00 48 */	addi r4, r1, 0x48
@@ -61,9 +61,9 @@ lbl_8081C5C0:
 /* 8081C5D4  B0 A1 00 2C */	sth r5, 0x2c(r1)
 /* 8081C5D8  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8081C5DC  7C 00 07 74 */	extsb r0, r0
-/* 8081C5E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081C5E4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8081C5E8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 8081C5E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081C5E4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8081C5E8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 8081C5EC  90 A1 00 08 */	stw r5, 8(r1)
 /* 8081C5F0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8081C5F4  3C 80 80 82 */	lis r4, data_80821CF8@ha

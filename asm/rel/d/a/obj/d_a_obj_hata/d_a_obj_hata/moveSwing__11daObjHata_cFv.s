@@ -14,10 +14,10 @@ lbl_80C1919C:
 /* 80C191CC  3B 00 00 00 */	li r24, 0
 /* 80C191D0  3A C0 00 00 */	li r22, 0
 /* 80C191D4  3A A0 00 00 */	li r21, 0
-/* 80C191D8  CB DD 00 40 */	lfd f30, 0x40(r29)	/* effective address: 80C194B8 */
+/* 80C191D8  CB DD 00 40 */	lfd f30, 0x40(r29)
 /* 80C191DC  3F C0 43 30 */	lis r30, 0x4330
 /* 80C191E0  3B 5D 00 08 */	addi r26, r29, 8
-/* 80C191E4  C3 FD 00 2C */	lfs f31, 0x2c(r29)	/* effective address: 80C194A4 */
+/* 80C191E4  C3 FD 00 2C */	lfs f31, 0x2c(r29)
 /* 80C191E8  3B FD 00 20 */	addi r31, r29, 0x20
 lbl_80C191EC:
 /* 80C191EC  7F 97 AA 14 */	add r28, r23, r21

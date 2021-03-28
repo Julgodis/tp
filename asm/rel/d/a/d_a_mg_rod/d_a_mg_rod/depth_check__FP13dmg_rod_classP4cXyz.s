@@ -22,8 +22,8 @@ lbl_804ABFA4:
 /* 804ABFF4  38 61 00 14 */	addi r3, r1, 0x14
 /* 804ABFF8  38 81 00 08 */	addi r4, r1, 8
 /* 804ABFFC  4B DB BD 10 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 804AC000  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804AC004  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804AC000  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804AC004  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804AC008  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804AC00C  38 81 00 14 */	addi r4, r1, 0x14
 /* 804AC010  4B BC 84 90 */	b GroundCross__4cBgSFP11cBgS_GndChk

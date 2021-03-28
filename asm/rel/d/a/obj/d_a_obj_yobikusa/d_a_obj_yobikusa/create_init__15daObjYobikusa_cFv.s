@@ -46,8 +46,8 @@ lbl_8059CE7C:
 /* 8059CF2C  39 40 00 00 */	li r10, 0
 /* 8059CF30  4B AD 93 18 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 8059CF34  7F 63 DB 78 */	mr r3, r27
-/* 8059CF38  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8059CF3C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8059CF38  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8059CF3C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8059CF40  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8059CF44  4B AD 9B 68 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8059CF48  C0 01 00 E8 */	lfs f0, 0xe8(r1)

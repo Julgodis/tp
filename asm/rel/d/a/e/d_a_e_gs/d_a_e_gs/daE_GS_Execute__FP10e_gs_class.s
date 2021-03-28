@@ -11,10 +11,10 @@ lbl_806DF874:
 /* 806DF898  7C 7F 1B 78 */	mr r31, r3
 /* 806DF89C  3C 60 80 6E */	lis r3, lit_3646@ha
 /* 806DF8A0  3B C3 FD F4 */	addi r30, r3, lit_3646@l
-/* 806DF8A4  C3 FE 00 10 */	lfs f31, 0x10(r30)	/* effective address: 806DFE04 */
+/* 806DF8A4  C3 FE 00 10 */	lfs f31, 0x10(r30)
 /* 806DF8A8  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DF8AC  38 63 FE A8 */	addi r3, r3, l_HIO@l
-/* 806DF8B0  C3 C3 00 14 */	lfs f30, 0x14(r3)	/* effective address: 806DFEBC */
+/* 806DF8B0  C3 C3 00 14 */	lfs f30, 0x14(r3)
 /* 806DF8B4  4B A7 FB 70 */	b checkNowWolfEyeUp__9daPy_py_cFv
 /* 806DF8B8  2C 03 00 00 */	cmpwi r3, 0
 /* 806DF8BC  41 82 00 24 */	beq lbl_806DF8E0
@@ -24,12 +24,12 @@ lbl_806DF874:
 /* 806DF8CC  C3 FE 00 2C */	lfs f31, 0x2c(r30)
 /* 806DF8D0  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DF8D4  38 63 FE A8 */	addi r3, r3, l_HIO@l
-/* 806DF8D8  C3 C3 00 10 */	lfs f30, 0x10(r3)	/* effective address: 806DFEB8 */
+/* 806DF8D8  C3 C3 00 10 */	lfs f30, 0x10(r3)
 /* 806DF8DC  48 00 00 14 */	b lbl_806DF8F0
 lbl_806DF8E0:
 /* 806DF8E0  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DF8E4  38 63 FE A8 */	addi r3, r3, l_HIO@l
-/* 806DF8E8  A8 03 00 0C */	lha r0, 0xc(r3)	/* effective address: 806DFEB4 */
+/* 806DF8E8  A8 03 00 0C */	lha r0, 0xc(r3)
 /* 806DF8EC  B0 1F 06 8A */	sth r0, 0x68a(r31)
 lbl_806DF8F0:
 /* 806DF8F0  38 7F 05 D8 */	addi r3, r31, 0x5d8
@@ -40,9 +40,9 @@ lbl_806DF8F0:
 /* 806DF904  4B 93 89 A4 */	b cDmrNowMidnaTalk__Fv
 /* 806DF908  2C 03 00 00 */	cmpwi r3, 0
 /* 806DF90C  40 82 00 18 */	bne lbl_806DF924
-/* 806DF910  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806DF914  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806DF918  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 806DF910  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806DF914  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806DF918  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 806DF91C  28 00 00 00 */	cmplwi r0, 0
 /* 806DF920  41 82 00 0C */	beq lbl_806DF92C
 lbl_806DF924:
@@ -93,7 +93,7 @@ lbl_806DF978:
 /* 806DF9C4  4B 92 CB 08 */	b mDoMtx_ZrotM__FPA4_fs
 /* 806DF9C8  3C 60 80 6E */	lis r3, l_HIO@ha
 /* 806DF9CC  38 63 FE A8 */	addi r3, r3, l_HIO@l
-/* 806DF9D0  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 806DFEB0 */
+/* 806DF9D0  C0 23 00 08 */	lfs f1, 8(r3)
 /* 806DF9D4  FC 40 08 90 */	fmr f2, f1
 /* 806DF9D8  FC 60 08 90 */	fmr f3, f1
 /* 806DF9DC  4B 92 D4 5C */	b scaleM__14mDoMtx_stack_cFfff

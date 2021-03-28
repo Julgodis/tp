@@ -15,10 +15,10 @@ lbl_80BFA130:
 /* 80BFA164  40 82 00 64 */	bne lbl_80BFA1C8
 /* 80BFA168  3B 80 00 00 */	li r28, 0
 /* 80BFA16C  3B E0 00 00 */	li r31, 0
-/* 80BFA170  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BFA174  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80BFA170  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BFA174  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 lbl_80BFA178:
-/* 80BFA178  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80BFA178  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80BFA17C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80BFA180  3B BF 09 84 */	addi r29, r31, 0x984
 /* 80BFA184  7C 9B E8 2E */	lwzx r4, r27, r29

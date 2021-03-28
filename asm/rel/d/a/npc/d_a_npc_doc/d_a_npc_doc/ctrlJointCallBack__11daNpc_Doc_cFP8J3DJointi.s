@@ -7,7 +7,7 @@ lbl_809A75D0:
 /* 809A75E4  40 82 00 30 */	bne lbl_809A7614
 /* 809A75E8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 809A75EC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 809A75F0  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 809A75F0  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 809A75F4  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 809A75F8  28 03 00 00 */	cmplwi r3, 0
 /* 809A75FC  41 82 00 18 */	beq lbl_809A7614

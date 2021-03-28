@@ -214,54 +214,54 @@ extern "C" extern u32 ga4cSignature__Q37JStudio3stb4data[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803C56A0-803C56C0 0020+00 s=2 e=0 z=0  None .data      __vt__Q37JStudio3stb6TParse                                  */
 SECTION_DATA static void* __vt__Q37JStudio3stb6TParse[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q37JStudio3stb6TParseFv,
-	/* 3    */ (void*)parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl,
-	/* 4    */ (void*)parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl,
-	/* 5    */ (void*)parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl,
-	/* 6    */ (void*)parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl,
-	/* 7    */ (void*)parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q37JStudio3stb6TParseFv,
+	(void*)parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl,
+	(void*)parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl,
+	(void*)parseHeader__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl,
+	(void*)parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl,
+	(void*)parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl,
 };
 
 /* 803C56C0-803C56D4 0014+00 s=1 e=1 z=0  None .data      __vt__Q37JStudio3stb8TFactory                                */
 SECTION_DATA void* __vt__Q37JStudio3stb8TFactory[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q37JStudio3stb8TFactoryFv,
-	/* 3    */ (void*)create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object,
-	/* 4    */ (void*)destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q37JStudio3stb8TFactoryFv,
+	(void*)create__Q37JStudio3stb8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject,
 };
 
 /* 803C56D4-803C56E0 000C+00 s=2 e=0 z=0  None .data      __vt__Q37JStudio3stb8TControl                                */
 SECTION_DATA static void* __vt__Q37JStudio3stb8TControl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q37JStudio3stb8TControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q37JStudio3stb8TControlFv,
 };
 
 /* 803C56E0-803C5700 0020+00 s=3 e=0 z=0  None .data      __vt__Q37JStudio3stb15TObject_control                        */
 SECTION_DATA static void* __vt__Q37JStudio3stb15TObject_control[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q37JStudio3stb15TObject_controlFv,
-	/* 3    */ (void*)do_begin__Q37JStudio3stb7TObjectFv,
-	/* 4    */ (void*)do_end__Q37JStudio3stb7TObjectFv,
-	/* 5    */ (void*)do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl,
-	/* 6    */ (void*)do_wait__Q37JStudio3stb7TObjectFUl,
-	/* 7    */ (void*)do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q37JStudio3stb15TObject_controlFv,
+	(void*)do_begin__Q37JStudio3stb7TObjectFv,
+	(void*)do_end__Q37JStudio3stb7TObjectFv,
+	(void*)do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl,
+	(void*)do_wait__Q37JStudio3stb7TObjectFUl,
+	(void*)do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl,
 };
 
 /* 803C5700-803C5720 0020+00 s=3 e=0 z=0  None .data      __vt__Q37JStudio3stb7TObject                                 */
 SECTION_DATA static void* __vt__Q37JStudio3stb7TObject[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q37JStudio3stb7TObjectFv,
-	/* 3    */ (void*)do_begin__Q37JStudio3stb7TObjectFv,
-	/* 4    */ (void*)do_end__Q37JStudio3stb7TObjectFv,
-	/* 5    */ (void*)do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl,
-	/* 6    */ (void*)do_wait__Q37JStudio3stb7TObjectFUl,
-	/* 7    */ (void*)do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q37JStudio3stb7TObjectFv,
+	(void*)do_begin__Q37JStudio3stb7TObjectFv,
+	(void*)do_end__Q37JStudio3stb7TObjectFv,
+	(void*)do_paragraph__Q37JStudio3stb7TObjectFUlPCvUl,
+	(void*)do_wait__Q37JStudio3stb7TObjectFUl,
+	(void*)do_data__Q37JStudio3stb7TObjectFPCvUlPCvUl,
 };
 
 /* 80288A78-80288AC0 0048+00 s=1 e=0 z=0  None .text      __ct__Q37JStudio3stb7TObjectFUlPCvUl                         */

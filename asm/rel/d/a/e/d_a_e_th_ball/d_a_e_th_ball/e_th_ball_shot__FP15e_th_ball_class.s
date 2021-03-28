@@ -46,7 +46,7 @@ lbl_807B6798:
 /* 807B67D8  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 807B67DC  3C A0 80 7C */	lis r5, master@ha
 /* 807B67E0  38 A5 80 E0 */	addi r5, r5, master@l
-/* 807B67E4  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 807B80E0 */
+/* 807B67E4  80 A5 00 00 */	lwz r5, 0(r5)
 /* 807B67E8  38 A5 06 C0 */	addi r5, r5, 0x6c0
 /* 807B67EC  4B AB 03 48 */	b __mi__4cXyzCFRC3Vec
 /* 807B67F0  C0 21 00 08 */	lfs f1, 8(r1)

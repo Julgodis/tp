@@ -15,16 +15,16 @@ lbl_804990DC:
 /* 80499110  3B C3 9A 6C */	addi r30, r3, lit_3627@l
 /* 80499114  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80499118  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8049911C  83 7F 0E 74 */	lwz r27, 0xe74(r31)	/* effective address: 8042D8C8 */
-/* 80499120  A9 5F 10 CC */	lha r10, 0x10cc(r31)	/* effective address: 8042DB20 */
-/* 80499124  A9 3F 10 CA */	lha r9, 0x10ca(r31)	/* effective address: 8042DB1E */
-/* 80499128  A9 1F 10 C8 */	lha r8, 0x10c8(r31)	/* effective address: 8042DB1C */
-/* 8049912C  A8 FF 10 C4 */	lha r7, 0x10c4(r31)	/* effective address: 8042DB18 */
-/* 80499130  A8 DF 10 C2 */	lha r6, 0x10c2(r31)	/* effective address: 8042DB16 */
-/* 80499134  A8 BF 10 C0 */	lha r5, 0x10c0(r31)	/* effective address: 8042DB14 */
-/* 80499138  A8 9F 10 E4 */	lha r4, 0x10e4(r31)	/* effective address: 8042DB38 */
-/* 8049913C  A8 7F 10 E0 */	lha r3, 0x10e0(r31)	/* effective address: 8042DB34 */
-/* 80499140  A8 1F 10 E2 */	lha r0, 0x10e2(r31)	/* effective address: 8042DB36 */
+/* 8049911C  83 7F 0E 74 */	lwz r27, 0xe74(r31)
+/* 80499120  A9 5F 10 CC */	lha r10, 0x10cc(r31)
+/* 80499124  A9 3F 10 CA */	lha r9, 0x10ca(r31)
+/* 80499128  A9 1F 10 C8 */	lha r8, 0x10c8(r31)
+/* 8049912C  A8 FF 10 C4 */	lha r7, 0x10c4(r31)
+/* 80499130  A8 DF 10 C2 */	lha r6, 0x10c2(r31)
+/* 80499134  A8 BF 10 C0 */	lha r5, 0x10c0(r31)
+/* 80499138  A8 9F 10 E4 */	lha r4, 0x10e4(r31)
+/* 8049913C  A8 7F 10 E0 */	lha r3, 0x10e0(r31)
+/* 80499140  A8 1F 10 E2 */	lha r0, 0x10e2(r31)
 /* 80499144  7C 00 22 14 */	add r0, r0, r4
 /* 80499148  7C 00 2A 14 */	add r0, r0, r5
 /* 8049914C  7C 00 32 14 */	add r0, r0, r6
@@ -37,9 +37,9 @@ lbl_804990DC:
 /* 80499168  38 60 00 01 */	li r3, 1
 /* 8049916C  48 00 06 4C */	b lbl_804997B8
 lbl_80499170:
-/* 80499170  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80499174  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80499178  83 83 5D 74 */	lwz r28, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 80499170  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80499174  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80499178  83 83 5D 74 */	lwz r28, 0x5d74(r3)
 /* 8049917C  4B BC 19 64 */	b dKyw_get_wind_vec__Fv
 /* 80499180  7C 79 1B 78 */	mr r25, r3
 /* 80499184  4B BC 19 6C */	b dKyw_get_wind_pow__Fv
@@ -50,10 +50,10 @@ lbl_80499170:
 /* 80499198  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8049919C  C0 19 00 08 */	lfs f0, 8(r25)
 /* 804991A0  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 804991A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804991A8  3B 23 61 C0 */	addi r25, r3, struct_804061C0+0x0@l
+/* 804991A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804991A8  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
 /* 804991AC  38 79 4E 20 */	addi r3, r25, 0x4e20
-/* 804991B0  81 99 4E 20 */	lwz r12, 0x4e20(r25)	/* effective address: 8040AFE0 */
+/* 804991B0  81 99 4E 20 */	lwz r12, 0x4e20(r25)
 /* 804991B4  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 804991B8  7D 89 03 A6 */	mtctr r12
 /* 804991BC  4E 80 04 21 */	bctrl 
@@ -217,13 +217,13 @@ lbl_804993E0:
 /* 80499420  4E 80 04 21 */	bctrl 
 /* 80499424  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80499428  3B 23 CA 54 */	addi r25, r3, g_env_light@l
-/* 8049942C  A8 19 10 D0 */	lha r0, 0x10d0(r25)	/* effective address: 8042DB24 */
+/* 8049942C  A8 19 10 D0 */	lha r0, 0x10d0(r25)
 /* 80499430  98 01 00 08 */	stb r0, 8(r1)
-/* 80499434  A8 19 10 D2 */	lha r0, 0x10d2(r25)	/* effective address: 8042DB26 */
+/* 80499434  A8 19 10 D2 */	lha r0, 0x10d2(r25)
 /* 80499438  98 01 00 09 */	stb r0, 9(r1)
-/* 8049943C  A8 19 10 D4 */	lha r0, 0x10d4(r25)	/* effective address: 8042DB28 */
+/* 8049943C  A8 19 10 D4 */	lha r0, 0x10d4(r25)
 /* 80499440  98 01 00 0A */	stb r0, 0xa(r1)
-/* 80499444  A8 19 10 CE */	lha r0, 0x10ce(r25)	/* effective address: 8042DB22 */
+/* 80499444  A8 19 10 CE */	lha r0, 0x10ce(r25)
 /* 80499448  98 01 00 0B */	stb r0, 0xb(r1)
 /* 8049944C  80 7C 00 2C */	lwz r3, 0x2c(r28)
 /* 80499450  38 80 00 00 */	li r4, 0
@@ -234,13 +234,13 @@ lbl_804993E0:
 /* 80499464  4E 80 04 21 */	bctrl 
 /* 80499468  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8049946C  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80499470  A8 03 10 D8 */	lha r0, 0x10d8(r3)	/* effective address: 8042DB2C */
+/* 80499470  A8 03 10 D8 */	lha r0, 0x10d8(r3)
 /* 80499474  B0 01 00 0C */	sth r0, 0xc(r1)
-/* 80499478  A8 03 10 DA */	lha r0, 0x10da(r3)	/* effective address: 8042DB2E */
+/* 80499478  A8 03 10 DA */	lha r0, 0x10da(r3)
 /* 8049947C  B0 01 00 0E */	sth r0, 0xe(r1)
-/* 80499480  A8 03 10 DC */	lha r0, 0x10dc(r3)	/* effective address: 8042DB30 */
+/* 80499480  A8 03 10 DC */	lha r0, 0x10dc(r3)
 /* 80499484  B0 01 00 10 */	sth r0, 0x10(r1)
-/* 80499488  A8 19 10 CE */	lha r0, 0x10ce(r25)	/* effective address: 8042DB22 */
+/* 80499488  A8 19 10 CE */	lha r0, 0x10ce(r25)
 /* 8049948C  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80499490  B0 01 00 12 */	sth r0, 0x12(r1)
 /* 80499494  80 7C 00 2C */	lwz r3, 0x2c(r28)
@@ -268,13 +268,13 @@ lbl_804994B0:
 /* 804994E8  4E 80 04 21 */	bctrl 
 /* 804994EC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 804994F0  3B 83 CA 54 */	addi r28, r3, g_env_light@l
-/* 804994F4  A8 1C 10 D0 */	lha r0, 0x10d0(r28)	/* effective address: 8042DB24 */
+/* 804994F4  A8 1C 10 D0 */	lha r0, 0x10d0(r28)
 /* 804994F8  98 01 00 08 */	stb r0, 8(r1)
-/* 804994FC  A8 1C 10 D2 */	lha r0, 0x10d2(r28)	/* effective address: 8042DB26 */
+/* 804994FC  A8 1C 10 D2 */	lha r0, 0x10d2(r28)
 /* 80499500  98 01 00 09 */	stb r0, 9(r1)
-/* 80499504  A8 1C 10 D4 */	lha r0, 0x10d4(r28)	/* effective address: 8042DB28 */
+/* 80499504  A8 1C 10 D4 */	lha r0, 0x10d4(r28)
 /* 80499508  98 01 00 0A */	stb r0, 0xa(r1)
-/* 8049950C  A8 1C 10 CE */	lha r0, 0x10ce(r28)	/* effective address: 8042DB22 */
+/* 8049950C  A8 1C 10 CE */	lha r0, 0x10ce(r28)
 /* 80499510  98 01 00 0B */	stb r0, 0xb(r1)
 /* 80499514  80 79 00 2C */	lwz r3, 0x2c(r25)
 /* 80499518  38 80 00 00 */	li r4, 0
@@ -285,13 +285,13 @@ lbl_804994B0:
 /* 8049952C  4E 80 04 21 */	bctrl 
 /* 80499530  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80499534  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80499538  A8 03 10 D8 */	lha r0, 0x10d8(r3)	/* effective address: 8042DB2C */
+/* 80499538  A8 03 10 D8 */	lha r0, 0x10d8(r3)
 /* 8049953C  B0 01 00 0C */	sth r0, 0xc(r1)
-/* 80499540  A8 03 10 DA */	lha r0, 0x10da(r3)	/* effective address: 8042DB2E */
+/* 80499540  A8 03 10 DA */	lha r0, 0x10da(r3)
 /* 80499544  B0 01 00 0E */	sth r0, 0xe(r1)
-/* 80499548  A8 03 10 DC */	lha r0, 0x10dc(r3)	/* effective address: 8042DB30 */
+/* 80499548  A8 03 10 DC */	lha r0, 0x10dc(r3)
 /* 8049954C  B0 01 00 10 */	sth r0, 0x10(r1)
-/* 80499550  A8 1C 10 CE */	lha r0, 0x10ce(r28)	/* effective address: 8042DB22 */
+/* 80499550  A8 1C 10 CE */	lha r0, 0x10ce(r28)
 /* 80499554  B0 01 00 12 */	sth r0, 0x12(r1)
 /* 80499558  80 79 00 2C */	lwz r3, 0x2c(r25)
 /* 8049955C  38 80 00 00 */	li r4, 0
@@ -326,7 +326,7 @@ lbl_80499574:
 /* 804995CC  B0 01 00 10 */	sth r0, 0x10(r1)
 /* 804995D0  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 804995D4  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 804995D8  A8 03 10 E6 */	lha r0, 0x10e6(r3)	/* effective address: 8042DB3A */
+/* 804995D8  A8 03 10 E6 */	lha r0, 0x10e6(r3)
 /* 804995DC  B0 01 00 12 */	sth r0, 0x12(r1)
 /* 804995E0  80 79 00 2C */	lwz r3, 0x2c(r25)
 /* 804995E4  38 80 00 00 */	li r4, 0

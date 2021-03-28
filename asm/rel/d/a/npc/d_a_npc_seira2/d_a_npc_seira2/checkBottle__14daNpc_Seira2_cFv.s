@@ -5,8 +5,8 @@ lbl_80AD17C4:
 /* 80AD17D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80AD17D4  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80AD17D8  54 1F 06 3E */	clrlwi r31, r0, 0x18
-/* 80AD17DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AD17E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AD17DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AD17E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AD17E4  38 63 00 28 */	addi r3, r3, 0x28
 /* 80AD17E8  38 80 00 00 */	li r4, 0
 /* 80AD17EC  4B 56 13 C4 */	b isDarkClearLV__21dSv_player_status_b_cCFi

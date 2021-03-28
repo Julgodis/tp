@@ -10,8 +10,8 @@ lbl_8059C454:
 /* 8059C474  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8059C478  40 82 00 30 */	bne lbl_8059C4A8
 /* 8059C47C  4B FF FC 25 */	bl modeWaitLowerInit__10daObjSw5_cFv
-/* 8059C480  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059C484  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8059C480  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059C484  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8059C488  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 8059C48C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8059C490  88 1F 04 BA */	lbz r0, 0x4ba(r31)

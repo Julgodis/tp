@@ -48,10 +48,10 @@ lbl_8050E2A0:
 /* 8050E2C0  B0 1D 05 B4 */	sth r0, 0x5b4(r29)
 /* 8050E2C4  38 00 00 00 */	li r0, 0
 /* 8050E2C8  98 1D 09 BC */	stb r0, 0x9bc(r29)
-/* 8050E2CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050E2D0  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 8050E2D4  80 7C 5D AC */	lwz r3, 0x5dac(r28)	/* effective address: 8040BF6C */
-/* 8050E2D8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 8050E2CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050E2D0  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 8050E2D4  80 7C 5D AC */	lwz r3, 0x5dac(r28)
+/* 8050E2D8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8050E2DC  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8050E2E0  7D 89 03 A6 */	mtctr r12
 /* 8050E2E4  4E 80 04 21 */	bctrl 

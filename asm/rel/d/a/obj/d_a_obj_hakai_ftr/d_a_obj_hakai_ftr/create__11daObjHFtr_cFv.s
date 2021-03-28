@@ -43,8 +43,8 @@ lbl_80C17A04:
 /* 80C17A48  38 60 00 05 */	li r3, 5
 /* 80C17A4C  48 00 00 5C */	b lbl_80C17AA8
 lbl_80C17A50:
-/* 80C17A50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C17A54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C17A50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C17A54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C17A58  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C17A5C  80 9F 05 A4 */	lwz r4, 0x5a4(r31)
 /* 80C17A60  7F E5 FB 78 */	mr r5, r31

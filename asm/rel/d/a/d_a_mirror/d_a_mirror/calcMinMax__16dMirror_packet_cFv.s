@@ -4,7 +4,7 @@ lbl_80870CA0:
 /* 80870CA8  D0 03 01 64 */	stfs f0, 0x164(r3)
 /* 80870CAC  D0 03 01 68 */	stfs f0, 0x168(r3)
 /* 80870CB0  D0 03 01 6C */	stfs f0, 0x16c(r3)
-/* 80870CB4  C0 04 00 00 */	lfs f0, 0(r4)	/* effective address: 80450000 */
+/* 80870CB4  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80870CB8  FC 00 00 50 */	fneg f0, f0
 /* 80870CBC  D0 03 01 70 */	stfs f0, 0x170(r3)
 /* 80870CC0  D0 03 01 74 */	stfs f0, 0x174(r3)

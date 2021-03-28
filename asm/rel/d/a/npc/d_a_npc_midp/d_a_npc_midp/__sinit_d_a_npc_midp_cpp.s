@@ -6,12 +6,12 @@ lbl_80A73768:
 /* 80A73778  38 A3 3B 5C */	addi r5, r3, mCutList__12daNpc_midP_c@l
 /* 80A7377C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A73780  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A73784  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A73788  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80A7378C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80A73B5C */
-/* 80A73790  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80A73B60 */
-/* 80A73794  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80A73798  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80A73B64 */
+/* 80A73784  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A73788  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A7378C  90 65 00 00 */	stw r3, 0(r5)
+/* 80A73790  90 05 00 04 */	stw r0, 4(r5)
+/* 80A73794  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A73798  90 05 00 08 */	stw r0, 8(r5)
 /* 80A7379C  3C 60 80 A7 */	lis r3, __vt__18daNpc_midP_Param_c@ha
 /* 80A737A0  38 03 3D 3C */	addi r0, r3, __vt__18daNpc_midP_Param_c@l
 /* 80A737A4  3C 60 80 A7 */	lis r3, l_HIO@ha

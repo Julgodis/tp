@@ -7,8 +7,8 @@ lbl_806E8FEC:
 /* 806E9000  88 83 07 7C */	lbz r4, 0x77c(r3)
 /* 806E9004  28 04 00 FF */	cmplwi r4, 0xff
 /* 806E9008  41 82 00 78 */	beq lbl_806E9080
-/* 806E900C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806E9010  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806E900C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806E9010  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806E9014  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 806E9018  7C 05 07 74 */	extsb r5, r0
 /* 806E901C  4B 94 C3 44 */	b isSwitch__10dSv_info_cCFii

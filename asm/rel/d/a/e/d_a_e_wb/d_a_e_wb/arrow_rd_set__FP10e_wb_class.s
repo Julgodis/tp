@@ -9,7 +9,7 @@ lbl_807D6C2C:
 /* 807D6C48  3B E3 35 78 */	addi r31, r3, lit_1109@l
 /* 807D6C4C  3C 60 80 7E */	lis r3, lit_3882@ha
 /* 807D6C50  38 63 29 8C */	addi r3, r3, lit_3882@l
-/* 807D6C54  88 1F 01 90 */	lbz r0, 0x190(r31)	/* effective address: 807E3708 */
+/* 807D6C54  88 1F 01 90 */	lbz r0, 0x190(r31)
 /* 807D6C58  7C 00 07 75 */	extsb. r0, r0
 /* 807D6C5C  40 82 00 44 */	bne lbl_807D6CA0
 /* 807D6C60  C0 43 01 50 */	lfs f2, 0x150(r3)

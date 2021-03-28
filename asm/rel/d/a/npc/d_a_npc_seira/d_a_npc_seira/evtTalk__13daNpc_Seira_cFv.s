@@ -28,9 +28,9 @@ lbl_80ACCA48:
 /* 80ACCAB0  48 00 01 20 */	b lbl_80ACCBD0
 lbl_80ACCAB4:
 /* 80ACCAB4  38 00 00 00 */	li r0, 0
-/* 80ACCAB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACCABC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80ACCAC0  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80ACCAB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACCABC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ACCAC0  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 80ACCAC4  28 03 00 01 */	cmplwi r3, 1
 /* 80ACCAC8  41 82 00 0C */	beq lbl_80ACCAD4
 /* 80ACCACC  28 03 00 02 */	cmplwi r3, 2
@@ -40,8 +40,8 @@ lbl_80ACCAD4:
 lbl_80ACCAD8:
 /* 80ACCAD8  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 80ACCADC  41 82 00 1C */	beq lbl_80ACCAF8
-/* 80ACCAE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACCAE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ACCAE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACCAE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ACCAE8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80ACCAEC  4B 57 BD 04 */	b ChkPresentEnd__16dEvent_manager_cFv
 /* 80ACCAF0  2C 03 00 00 */	cmpwi r3, 0
@@ -78,9 +78,9 @@ lbl_80ACCB28:
 /* 80ACCB64  48 00 00 6C */	b lbl_80ACCBD0
 lbl_80ACCB68:
 /* 80ACCB68  38 00 00 00 */	li r0, 0
-/* 80ACCB6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACCB70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80ACCB74  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80ACCB6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACCB70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ACCB74  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 80ACCB78  28 03 00 01 */	cmplwi r3, 1
 /* 80ACCB7C  41 82 00 0C */	beq lbl_80ACCB88
 /* 80ACCB80  28 03 00 02 */	cmplwi r3, 2
@@ -90,8 +90,8 @@ lbl_80ACCB88:
 lbl_80ACCB8C:
 /* 80ACCB8C  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 80ACCB90  41 82 00 1C */	beq lbl_80ACCBAC
-/* 80ACCB94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACCB98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ACCB94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACCB98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ACCB9C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80ACCBA0  4B 57 BC 50 */	b ChkPresentEnd__16dEvent_manager_cFv
 /* 80ACCBA4  2C 03 00 00 */	cmpwi r3, 0

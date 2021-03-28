@@ -50,13 +50,13 @@ extern "C" asm void GXInitLightAttn() {
 /* ############################################################################################## */
 /* 803D2578-803D2598 001C+04 s=1 e=0 z=0  None .data      @145                                                         */
 SECTION_DATA static void* lit_145[7 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)GXInitLightSpot)+0x160),
-	/* 1    */ (void*)(((char*)GXInitLightSpot)+0x70),
-	/* 2    */ (void*)(((char*)GXInitLightSpot)+0x84),
-	/* 3    */ (void*)(((char*)GXInitLightSpot)+0xA4),
-	/* 4    */ (void*)(((char*)GXInitLightSpot)+0xC4),
-	/* 5    */ (void*)(((char*)GXInitLightSpot)+0xF0),
-	/* 6    */ (void*)(((char*)GXInitLightSpot)+0x124),
+	(void*)(((char*)GXInitLightSpot)+0x160),
+	(void*)(((char*)GXInitLightSpot)+0x70),
+	(void*)(((char*)GXInitLightSpot)+0x84),
+	(void*)(((char*)GXInitLightSpot)+0xA4),
+	(void*)(((char*)GXInitLightSpot)+0xC4),
+	(void*)(((char*)GXInitLightSpot)+0xF0),
+	(void*)(((char*)GXInitLightSpot)+0x124),
 	/* padding */
 	NULL,
 };

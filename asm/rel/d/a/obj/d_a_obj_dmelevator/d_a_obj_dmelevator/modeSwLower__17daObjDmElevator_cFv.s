@@ -6,7 +6,7 @@ lbl_80BDEC10:
 /* 80BDEC20  7C 7F 1B 78 */	mr r31, r3
 /* 80BDEC24  3C 60 80 BE */	lis r3, l_swOffset@ha
 /* 80BDEC28  38 63 F8 70 */	addi r3, r3, l_swOffset@l
-/* 80BDEC2C  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 80BDF88C */
+/* 80BDEC2C  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80BDEC30  C0 1F 06 38 */	lfs f0, 0x638(r31)
 /* 80BDEC34  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80BDEC38  40 82 00 48 */	bne lbl_80BDEC80
@@ -15,8 +15,8 @@ lbl_80BDEC10:
 /* 80BDEC44  C0 03 00 68 */	lfs f0, 0x68(r3)
 /* 80BDEC48  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BDEC4C  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80BDEC50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDEC54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDEC50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDEC54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BDEC58  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80BDEC5C  38 80 00 04 */	li r4, 4
 /* 80BDEC60  38 A0 00 1F */	li r5, 0x1f

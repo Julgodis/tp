@@ -63,7 +63,7 @@ lbl_80BC754C:
 /* 80BC7564  90 01 00 08 */	stw r0, 8(r1)
 /* 80BC7568  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BC756C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BC7570  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BC7570  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC7574  38 81 00 08 */	addi r4, r1, 8
 /* 80BC7578  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BC757C  38 C0 00 00 */	li r6, 0

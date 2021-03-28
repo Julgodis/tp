@@ -84,7 +84,7 @@ lbl_80A8E010:
 /* 80A8E010  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 80A8E014  3C 80 80 A9 */	lis r4, l_HIO@ha
 /* 80A8E018  38 84 2A D4 */	addi r4, r4, l_HIO@l
-/* 80A8E01C  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80A92AE8 */
+/* 80A8E01C  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 80A8E020  C0 5E 00 00 */	lfs f2, 0(r30)
 /* 80A8E024  C0 7E 00 70 */	lfs f3, 0x70(r30)
 /* 80A8E028  4B 7E 1A 14 */	b cLib_addCalc2__FPffff

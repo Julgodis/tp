@@ -20,13 +20,13 @@ lbl_80AB6674:
 /* 80AB66BC  40 82 00 28 */	bne lbl_80AB66E4
 /* 80AB66C0  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 80AB66C4  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 80AB66C8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 80AB66C8  80 85 00 00 */	lwz r4, 0(r5)
 /* 80AB66CC  54 80 10 3A */	slwi r0, r4, 2
 /* 80AB66D0  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 80AB66D4  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 80AB66D8  7F C3 01 2E */	stwx r30, r3, r0
 /* 80AB66DC  38 04 00 01 */	addi r0, r4, 1
-/* 80AB66E0  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 80AB66E0  90 05 00 00 */	stw r0, 0(r5)
 lbl_80AB66E4:
 /* 80AB66E4  38 60 00 00 */	li r3, 0
 /* 80AB66E8  83 E1 00 0C */	lwz r31, 0xc(r1)

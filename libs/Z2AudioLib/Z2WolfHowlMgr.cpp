@@ -45,7 +45,7 @@ struct JAISoundParamsMove {
 	/* 802A2E0C */ void movePitch(f32, u32);
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -57,7 +57,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct JAISoundStarter {
@@ -188,24 +188,24 @@ SECTION_DATA static u8 sNewSong3[18 + 2 /* padding */] = {
 
 /* 803CBCC0-803CBD08 0048+00 s=1 e=0 z=0  None .data      sGuideData                                                   */
 SECTION_DATA static void* sGuideData[18] = {
-	/* 0    */ (void*)0x04000000,
-	/* 1    */ (void*)&sHowlTobikusa,
-	/* 2    */ (void*)0x06000000,
-	/* 3    */ (void*)&sHowlUmakusa,
-	/* 4    */ (void*)0x06000000,
-	/* 5    */ (void*)&sHowlZeldaSong,
-	/* 6    */ (void*)0x06000000,
-	/* 7    */ (void*)&sHealingSong,
-	/* 8    */ (void*)0x06000000,
-	/* 9    */ (void*)&sHowlSoulRequiem,
-	/* 10   */ (void*)0x06000000,
-	/* 11   */ (void*)&sHowlLightPrelude,
-	/* 12   */ (void*)0x07000000,
-	/* 13   */ (void*)&sNewSong1,
-	/* 14   */ (void*)0x08000000,
-	/* 15   */ (void*)&sNewSong2,
-	/* 16   */ (void*)0x09000000,
-	/* 17   */ (void*)&sNewSong3,
+	(void*)0x04000000,
+	(void*)&sHowlTobikusa,
+	(void*)0x06000000,
+	(void*)&sHowlUmakusa,
+	(void*)0x06000000,
+	(void*)&sHowlZeldaSong,
+	(void*)0x06000000,
+	(void*)&sHealingSong,
+	(void*)0x06000000,
+	(void*)&sHowlSoulRequiem,
+	(void*)0x06000000,
+	(void*)&sHowlLightPrelude,
+	(void*)0x07000000,
+	(void*)&sNewSong1,
+	(void*)0x08000000,
+	(void*)&sNewSong2,
+	(void*)0x09000000,
+	(void*)&sNewSong3,
 };
 
 /* 80450880-80450884 0004+00 s=2 e=0 z=0  None .sdata     cPitchDown                                                   */

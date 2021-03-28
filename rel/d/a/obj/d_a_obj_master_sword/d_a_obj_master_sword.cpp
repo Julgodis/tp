@@ -185,17 +185,17 @@ struct cM3dGCir {
 // Forward References:
 // 
 
-static void daObjMasterSword_Create(fopAc_ac_c*); // 2
-static void daObjMasterSword_Delete(daObjMasterSword_c*); // 2
-static void daObjMasterSword_Execute(daObjMasterSword_c*); // 2
-static void daObjMasterSword_Draw(daObjMasterSword_c*); // 2
-static bool daObjMasterSword_IsDelete(daObjMasterSword_c*); // 2
+void daObjMasterSword_Create(fopAc_ac_c*); // 2
+void daObjMasterSword_Delete(daObjMasterSword_c*); // 2
+void daObjMasterSword_Execute(daObjMasterSword_c*); // 2
+void daObjMasterSword_Draw(daObjMasterSword_c*); // 2
+bool daObjMasterSword_IsDelete(daObjMasterSword_c*); // 2
 
 extern "C" void initWait__18daObjMasterSword_cFv(); // 1
 extern "C" void executeWait__18daObjMasterSword_cFv(); // 1
 extern "C" void createHeapCallBack__18daObjMasterSword_cFP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__18daObjMasterSword_cFv(); // 1
-extern "C" static void daObjMasterSword_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjMasterSword_Create__FP10fopAc_ac_c(); // 1
 extern "C" void create__18daObjMasterSword_cFv(); // 1
 extern "C" void create_init__18daObjMasterSword_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
@@ -204,18 +204,19 @@ extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daObjMasterSword_Delete__FP18daObjMasterSword_c(); // 1
+extern "C" void daObjMasterSword_Delete__FP18daObjMasterSword_c(); // 1
 extern "C" void __dt__18daObjMasterSword_cFv(); // 1
-extern "C" static void daObjMasterSword_Execute__FP18daObjMasterSword_c(); // 1
-extern "C" static void daObjMasterSword_Draw__FP18daObjMasterSword_c(); // 1
+extern "C" void daObjMasterSword_Execute__FP18daObjMasterSword_c(); // 1
+extern "C" void daObjMasterSword_Draw__FP18daObjMasterSword_c(); // 1
 extern "C" void draw__18daObjMasterSword_cFv(); // 1
-extern "C" static bool daObjMasterSword_IsDelete__FP18daObjMasterSword_c(); // 1
+extern "C" bool daObjMasterSword_IsDelete__FP18daObjMasterSword_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __sinit_d_a_obj_master_sword_cpp(); // 1
-extern "C" static void func_80C91924(); // 1
-extern "C" static void func_80C9192C(); // 1
+extern "C" void func_80C91924(); // 1
+extern "C" void func_80C9192C(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daObjMasterSword_Method[8];
 extern "C" extern void* g_profile_Obj_MasterSword[12];
 
 // 
@@ -296,39 +297,25 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern u8 const struct_803790C0[24];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern f32 data_8040628C[7];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF80[4];
-SECTION_BSS extern u8 struct_8040BFFC[4];
-SECTION_BSS extern u8 struct_8040C010[8];
-SECTION_BSS extern u8 struct_8040C074[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 data_80C91AD0[4];
 
 // 
 // Declarations:
 // 
 
-/* 80C90AF8-80C90B50 0058+00 s=1 e=0 z=0  None .text      initWait__18daObjMasterSword_cFv                             */
+/* 80C90AF8-80C90B50 0058+00 s=0 e=0 z=0  None .text      initWait__18daObjMasterSword_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -339,7 +326,7 @@ asm void daObjMasterSword_c::initWait() {
 #pragma pop
 
 
-/* 80C90B50-80C90C50 0100+00 s=1 e=0 z=0  None .text      executeWait__18daObjMasterSword_cFv                          */
+/* 80C90B50-80C90C50 0100+00 s=0 e=0 z=0  None .text      executeWait__18daObjMasterSword_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -373,33 +360,6 @@ SECTION_RODATA static u8 const lit_3710[12] = {
 /* 80C91950-80C91954 0004+00 s=2 e=0 z=0  None .rodata    @3759                                                        */
 SECTION_RODATA static u32 const lit_3759 = 0x3F800000;
 
-/* 80C91954-80C91958 0004+00 s=1 e=0 z=0  None .rodata    @3861                                                        */
-SECTION_RODATA static u32 const lit_3861 = 0x42C80000;
-
-/* 80C91958-80C9195C 0004+00 s=2 e=0 z=0  None .rodata    @3862                                                        */
-SECTION_RODATA static u32 const lit_3862 = 0x41200000;
-
-/* 80C9195C-80C91960 0004+00 s=1 e=0 z=0  None .rodata    @3863                                                        */
-SECTION_RODATA static u32 const lit_3863 = 0x41F00000;
-
-/* 80C91960-80C91968 0008+00 s=1 e=0 z=0  None .rodata    @4030                                                        */
-SECTION_RODATA static u8 const lit_4030[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80C91968-80C9196C 0004+00 s=1 e=0 z=0  None .rodata    @4091                                                        */
-SECTION_RODATA static u32 const lit_4091 = 0x42480000;
-
-/* 80C9196C-80C91970 0004+00 s=1 e=0 z=0  None .rodata    @4092                                                        */
-SECTION_RODATA static u32 const lit_4092 = 0x43480000;
-
-/* 80C91970-80C9197A 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C91970 = "MstrSword";
-#pragma pop
-
 /* 80C9197C-80C91988 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -413,7 +373,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80C9199C-80C919A0 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80C90C70-80C90D98 0128+00 s=1 e=0 z=0  None .text      CreateHeap__18daObjMasterSword_cFv                           */
 #pragma push
@@ -426,11 +386,11 @@ asm void daObjMasterSword_c::CreateHeap() {
 #pragma pop
 
 
-/* 80C90D98-80C90DB8 0020+00 s=1 e=0 z=0  None .text      daObjMasterSword_Create__FP10fopAc_ac_c                      */
+/* 80C90D98-80C90DB8 0020+00 s=0 e=0 z=0  None .text      daObjMasterSword_Create__FP10fopAc_ac_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMasterSword_Create(fopAc_ac_c* param_0) {
+asm void daObjMasterSword_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Create__FP10fopAc_ac_c.s"
 }
@@ -440,16 +400,16 @@ asm static void daObjMasterSword_Create(fopAc_ac_c* param_0) {
 /* ############################################################################################## */
 /* 80C919A0-80C919AC 000C+00 s=1 e=0 z=0  None .data      @3655                                                        */
 SECTION_DATA static void* lit_3655[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)initWait__18daObjMasterSword_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C919AC-80C919B8 000C+00 s=1 e=0 z=0  None .data      @3656                                                        */
 SECTION_DATA static void* lit_3656[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)executeWait__18daObjMasterSword_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C919B8-80C919D0 0018+00 s=2 e=0 z=0  None .data      ActionTable__18daObjMasterSword_c                            */
@@ -467,87 +427,87 @@ SECTION_DATA static u8 data_80C919D0[68] = {
 	0x43, 0x34, 0x00, 0x00,
 };
 
-/* 80C91A14-80C91A34 0020+00 s=1 e=0 z=0  None .data      l_daObjMasterSword_Method                                    */
-SECTION_DATA static void* l_daObjMasterSword_Method[8] = {
-	/* 0    */ (void*)daObjMasterSword_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjMasterSword_Delete__FP18daObjMasterSword_c,
-	/* 2    */ (void*)daObjMasterSword_Execute__FP18daObjMasterSword_c,
-	/* 3    */ (void*)daObjMasterSword_IsDelete__FP18daObjMasterSword_c,
-	/* 4    */ (void*)daObjMasterSword_Draw__FP18daObjMasterSword_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C91A14-80C91A34 0020+00 s=0 e=0 z=0  None .data      l_daObjMasterSword_Method                                    */
+SECTION_DATA void* l_daObjMasterSword_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C91A34-80C91A64 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_MasterSword                                    */
+/* 80C91A34-80C91A64 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_MasterSword                                    */
 SECTION_DATA void* g_profile_Obj_MasterSword[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01840000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000073C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02320000,
-	/* 9    */ (void*)&l_daObjMasterSword_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01840000,
+	(void*)NULL,
+	(void*)0x0000073C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02320000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80C91A64-80C91A70 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91A70-80C91A7C 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91A7C-80C91A88 000C+00 s=2 e=0 z=0  None .data      __vt__12dBgS_AcchCir                                         */
 SECTION_DATA static void* __vt__12dBgS_AcchCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_AcchCirFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91A88-80C91AAC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80C9192C,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80C91924,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91AAC-80C91AB8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91AB8-80C91AC4 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C91AC4-80C91AD0 000C+00 s=3 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C90DB8-80C90F6C 01B4+00 s=1 e=0 z=0  None .text      create__18daObjMasterSword_cFv                               */
@@ -561,6 +521,16 @@ asm void daObjMasterSword_c::create() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80C91954-80C91958 0004+00 s=1 e=0 z=0  None .rodata    @3861                                                        */
+SECTION_RODATA static u32 const lit_3861 = 0x42C80000;
+
+/* 80C91958-80C9195C 0004+00 s=2 e=0 z=0  None .rodata    @3862                                                        */
+SECTION_RODATA static u32 const lit_3862 = 0x41200000;
+
+/* 80C9195C-80C91960 0004+00 s=1 e=0 z=0  None .rodata    @3863                                                        */
+SECTION_RODATA static u32 const lit_3863 = 0x41F00000;
+
 /* 80C90F6C-80C9120C 02A0+00 s=1 e=0 z=0  None .text      create_init__18daObjMasterSword_cFv                          */
 #pragma push
 #pragma optimization_level 0
@@ -572,7 +542,7 @@ asm void daObjMasterSword_c::create_init() {
 #pragma pop
 
 
-/* 80C9120C-80C9127C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C9120C-80C9127C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -583,7 +553,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80C9127C-80C912EC 0070+00 s=1 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
+/* 80C9127C-80C912EC 0070+00 s=0 e=0 z=0  None .text      __dt__12dBgS_AcchCirFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -594,7 +564,7 @@ asm dBgS_AcchCir::~dBgS_AcchCir() {
 #pragma pop
 
 
-/* 80C912EC-80C91334 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C912EC-80C91334 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -605,7 +575,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C91334-80C9137C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C91334-80C9137C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -616,7 +586,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C9137C-80C913D8 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80C9137C-80C913D8 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -627,7 +597,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 80C913D8-80C91420 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C913D8-80C91420 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -638,11 +608,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C91420-80C91448 0028+00 s=1 e=0 z=0  None .text      daObjMasterSword_Delete__FP18daObjMasterSword_c              */
+/* 80C91420-80C91448 0028+00 s=0 e=0 z=0  None .text      daObjMasterSword_Delete__FP18daObjMasterSword_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMasterSword_Delete(daObjMasterSword_c* param_0) {
+asm void daObjMasterSword_Delete(daObjMasterSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Delete__FP18daObjMasterSword_c.s"
 }
@@ -660,27 +630,40 @@ asm daObjMasterSword_c::~daObjMasterSword_c() {
 #pragma pop
 
 
-/* 80C915E8-80C916F4 010C+00 s=1 e=0 z=0  None .text      daObjMasterSword_Execute__FP18daObjMasterSword_c             */
+/* ############################################################################################## */
+/* 80C91960-80C91968 0008+00 s=1 e=0 z=0  None .rodata    @4030                                                        */
+SECTION_RODATA static u8 const lit_4030[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80C915E8-80C916F4 010C+00 s=0 e=0 z=0  None .text      daObjMasterSword_Execute__FP18daObjMasterSword_c             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMasterSword_Execute(daObjMasterSword_c* param_0) {
+asm void daObjMasterSword_Execute(daObjMasterSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Execute__FP18daObjMasterSword_c.s"
 }
 #pragma pop
 
 
-/* 80C916F4-80C91714 0020+00 s=1 e=0 z=0  None .text      daObjMasterSword_Draw__FP18daObjMasterSword_c                */
+/* 80C916F4-80C91714 0020+00 s=0 e=0 z=0  None .text      daObjMasterSword_Draw__FP18daObjMasterSword_c                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjMasterSword_Draw(daObjMasterSword_c* param_0) {
+asm void daObjMasterSword_Draw(daObjMasterSword_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/daObjMasterSword_Draw__FP18daObjMasterSword_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C91968-80C9196C 0004+00 s=1 e=0 z=0  None .rodata    @4091                                                        */
+SECTION_RODATA static u32 const lit_4091 = 0x42480000;
+
+/* 80C9196C-80C91970 0004+00 s=1 e=0 z=0  None .rodata    @4092                                                        */
+SECTION_RODATA static u32 const lit_4092 = 0x43480000;
 
 /* 80C91714-80C91894 0180+00 s=1 e=0 z=0  None .text      draw__18daObjMasterSword_cFv                                 */
 #pragma push
@@ -693,13 +676,13 @@ asm void daObjMasterSword_c::draw() {
 #pragma pop
 
 
-/* 80C91894-80C9189C 0008+00 s=1 e=0 z=0  None .text      daObjMasterSword_IsDelete__FP18daObjMasterSword_c            */
-static bool daObjMasterSword_IsDelete(daObjMasterSword_c* param_0) {
+/* 80C91894-80C9189C 0008+00 s=0 e=0 z=0  None .text      daObjMasterSword_IsDelete__FP18daObjMasterSword_c            */
+bool daObjMasterSword_IsDelete(daObjMasterSword_c* param_0) {
 	return true;
 }
 
 
-/* 80C9189C-80C918E4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80C9189C-80C918E4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -710,7 +693,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80C918E4-80C91924 0040+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_master_sword_cpp                             */
+/* 80C918E4-80C91924 0040+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_master_sword_cpp                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -721,25 +704,33 @@ extern "C" asm void __sinit_d_a_obj_master_sword_cpp() {
 #pragma pop
 
 
-/* 80C91924-80C9192C 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C91924-80C9192C 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C91924() {
+extern "C" asm void func_80C91924() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/func_80C91924.s"
 }
 #pragma pop
 
 
-/* 80C9192C-80C91934 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C9192C-80C91934 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C9192C() {
+extern "C" asm void func_80C9192C() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_master_sword/d_a_obj_master_sword/func_80C9192C.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C91970-80C9197A 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C91970 = "MstrSword";
+#pragma pop
 

@@ -10,7 +10,7 @@ lbl_80596DEC:
 /* 80596E0C  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 80596E10  3C 80 80 59 */	lis r4, l_ropeArcName@ha
 /* 80596E14  38 84 7E 8C */	addi r4, r4, l_ropeArcName@l
-/* 80596E18  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80597E8C */
+/* 80596E18  80 84 00 00 */	lwz r4, 0(r4)
 /* 80596E1C  4B A9 60 A0 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80596E20  2C 03 00 04 */	cmpwi r3, 4
 /* 80596E24  41 82 00 08 */	beq lbl_80596E2C

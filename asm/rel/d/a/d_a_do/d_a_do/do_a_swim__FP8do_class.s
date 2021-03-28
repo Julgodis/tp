@@ -7,10 +7,10 @@ lbl_8066C894:
 /* 8066C8A8  7C 7E 1B 78 */	mr r30, r3
 /* 8066C8AC  3C 60 80 67 */	lis r3, lit_3662@ha
 /* 8066C8B0  3B E3 ED E8 */	addi r31, r3, lit_3662@l
-/* 8066C8B4  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 8066EE68 */
+/* 8066C8B4  C0 1F 00 80 */	lfs f0, 0x80(r31)
 /* 8066C8B8  D0 1E 06 48 */	stfs f0, 0x648(r30)
 /* 8066C8BC  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 8066C8C0  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 8066EDE8 */
+/* 8066C8C0  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8066C8C4  FC 40 08 90 */	fmr f2, f1
 /* 8066C8C8  4B C0 31 B8 */	b cLib_addCalc0__FPfff
 /* 8066C8CC  A8 1E 05 F6 */	lha r0, 0x5f6(r30)
@@ -27,7 +27,7 @@ lbl_8066C8E8:
 lbl_8066C8F4:
 /* 8066C8F4  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066C8F8  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 8066C8FC  A8 03 00 1E */	lha r0, 0x1e(r3)	/* effective address: 8066F2E2 */
+/* 8066C8FC  A8 03 00 1E */	lha r0, 0x1e(r3)
 /* 8066C900  2C 00 00 01 */	cmpwi r0, 1
 /* 8066C904  40 82 00 20 */	bne lbl_8066C924
 /* 8066C908  7F C3 F3 78 */	mr r3, r30
@@ -49,9 +49,9 @@ lbl_8066C93C:
 /* 8066C940  B0 1E 05 F6 */	sth r0, 0x5f6(r30)
 /* 8066C944  38 00 00 14 */	li r0, 0x14
 /* 8066C948  B0 1E 05 FC */	sth r0, 0x5fc(r30)
-/* 8066C94C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066C950  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066C954  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8066C94C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066C950  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066C954  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8066C958  38 80 00 00 */	li r4, 0
 /* 8066C95C  90 81 00 08 */	stw r4, 8(r1)
 /* 8066C960  38 00 FF FF */	li r0, -1
@@ -107,7 +107,7 @@ lbl_8066C9FC:
 lbl_8066CA24:
 /* 8066CA24  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066CA28  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 8066CA2C  A8 03 00 1E */	lha r0, 0x1e(r3)	/* effective address: 8066F2E2 */
+/* 8066CA2C  A8 03 00 1E */	lha r0, 0x1e(r3)
 /* 8066CA30  2C 00 00 01 */	cmpwi r0, 1
 /* 8066CA34  40 82 00 1C */	bne lbl_8066CA50
 /* 8066CA38  C0 3F 00 44 */	lfs f1, 0x44(r31)

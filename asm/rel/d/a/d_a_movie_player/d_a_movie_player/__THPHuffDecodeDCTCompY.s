@@ -9,7 +9,7 @@ lbl_80874D8C:
 /* 80874DA8  7C 00 FF EC */	dcbz 0, r31
 /* 80874DAC  3C 80 80 88 */	lis r4, Ydchuff@ha
 /* 80874DB0  38 84 9A 40 */	addi r4, r4, Ydchuff@l
-/* 80874DB4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80879A40 */
+/* 80874DB4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80874DB8  48 00 03 E1 */	bl __THPHuffDecodeTab
 /* 80874DBC  38 00 00 20 */	li r0, 0x20
 /* 80874DC0  7C 1F 07 EC */	dcbz r31, r0

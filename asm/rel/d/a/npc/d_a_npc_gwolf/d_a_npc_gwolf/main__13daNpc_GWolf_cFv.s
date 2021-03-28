@@ -34,12 +34,12 @@ lbl_809F43F4:
 lbl_809F4404:
 /* 809F4404  3C 60 80 A0 */	lis r3, m__19daNpc_GWolf_Param_c@ha
 /* 809F4408  38 63 84 F4 */	addi r3, r3, m__19daNpc_GWolf_Param_c@l
-/* 809F440C  88 03 00 6A */	lbz r0, 0x6a(r3)	/* effective address: 809F855E */
+/* 809F440C  88 03 00 6A */	lbz r0, 0x6a(r3)
 /* 809F4410  28 00 00 00 */	cmplwi r0, 0
 /* 809F4414  40 82 00 FC */	bne lbl_809F4510
-/* 809F4418  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F441C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809F4420  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 809F4418  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F441C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809F4420  88 63 4F AD */	lbz r3, 0x4fad(r3)
 /* 809F4424  28 03 00 00 */	cmplwi r3, 0
 /* 809F4428  41 82 00 30 */	beq lbl_809F4458
 /* 809F442C  88 1E 09 ED */	lbz r0, 0x9ed(r30)

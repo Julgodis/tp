@@ -8,7 +8,7 @@ lbl_80793B64:
 /* 80793B7C  3C 60 80 7A */	lis r3, lit_3920@ha
 /* 80793B80  3B E3 85 E0 */	addi r31, r3, lit_3920@l
 /* 80793B84  A8 7E 06 BC */	lha r3, 0x6bc(r30)
-/* 80793B88  C0 3F 00 C8 */	lfs f1, 0xc8(r31)	/* effective address: 807986A8 */
+/* 80793B88  C0 3F 00 C8 */	lfs f1, 0xc8(r31)
 /* 80793B8C  C0 1E 09 80 */	lfs f0, 0x980(r30)
 /* 80793B90  EC 21 00 2A */	fadds f1, f1, f0
 /* 80793B94  C0 1E 06 F0 */	lfs f0, 0x6f0(r30)

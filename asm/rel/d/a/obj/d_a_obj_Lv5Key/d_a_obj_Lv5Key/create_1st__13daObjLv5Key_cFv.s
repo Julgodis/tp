@@ -79,7 +79,7 @@ lbl_80B9C718:
 /* 80B9C718  38 7F 05 B0 */	addi r3, r31, 0x5b0
 /* 80B9C71C  3C 80 80 BA */	lis r4, l_arcName@ha
 /* 80B9C720  38 84 C9 B4 */	addi r4, r4, l_arcName@l
-/* 80B9C724  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B9C9B4 */
+/* 80B9C724  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B9C728  4B 49 07 94 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80B9C72C  7C 7E 1B 78 */	mr r30, r3
 /* 80B9C730  2C 1E 00 04 */	cmpwi r30, 4

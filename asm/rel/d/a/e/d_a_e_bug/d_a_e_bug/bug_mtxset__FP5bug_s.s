@@ -28,7 +28,7 @@ lbl_80694F94:
 /* 80694FFC  4B 97 73 A0 */	b mDoMtx_XrotM__FPA4_fs
 /* 80695000  3C 60 80 69 */	lis r3, l_HIO@ha
 /* 80695004  38 63 7E 7C */	addi r3, r3, l_HIO@l
-/* 80695008  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80697E84 */
+/* 80695008  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8069500C  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80695010  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80695014  FC 40 08 90 */	fmr f2, f1

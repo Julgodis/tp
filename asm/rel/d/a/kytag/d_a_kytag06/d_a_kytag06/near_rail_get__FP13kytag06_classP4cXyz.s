@@ -11,11 +11,11 @@ lbl_80857F8C:
 /* 80857FB0  7C 9C 23 78 */	mr r28, r4
 /* 80857FB4  3C 80 80 86 */	lis r4, lit_3740@ha
 /* 80857FB8  3B 44 9E 78 */	addi r26, r4, lit_3740@l
-/* 80857FBC  C3 DA 00 18 */	lfs f30, 0x18(r26)	/* effective address: 80859E90 */
+/* 80857FBC  C3 DA 00 18 */	lfs f30, 0x18(r26)
 /* 80857FC0  83 E3 05 68 */	lwz r31, 0x568(r3)
 /* 80857FC4  3B A0 00 00 */	li r29, 0
 /* 80857FC8  3B 60 00 00 */	li r27, 0
-/* 80857FCC  C3 FA 00 14 */	lfs f31, 0x14(r26)	/* effective address: 80859E8C */
+/* 80857FCC  C3 FA 00 14 */	lfs f31, 0x14(r26)
 /* 80857FD0  48 00 01 14 */	b lbl_808580E4
 lbl_80857FD4:
 /* 80857FD4  7F 83 E3 78 */	mr r3, r28

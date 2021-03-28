@@ -11,7 +11,7 @@ lbl_80770FFC:
 /* 80771020  38 63 02 10 */	addi r3, r3, 0x210
 /* 80771024  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80771028  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8077102C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8077102C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80771030  4B BD 54 80 */	b PSMTXCopy
 /* 80771034  3C 60 80 78 */	lis r3, lit_4019@ha
 /* 80771038  C0 03 9E 00 */	lfs f0, lit_4019@l(r3)
@@ -34,7 +34,7 @@ lbl_80770FFC:
 /* 8077107C  98 1F 0B CB */	stb r0, 0xbcb(r31)
 /* 80771080  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80771084  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80771088  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80771088  80 63 00 00 */	lwz r3, 0(r3)
 /* 8077108C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80771090  38 80 00 01 */	li r4, 1
 /* 80771094  4B B4 30 D0 */	b setBattleBgmOff__8Z2SeqMgrFb
@@ -47,8 +47,8 @@ lbl_807710A4:
 /* 807710A8  54 04 46 3E */	srwi r4, r0, 0x18
 /* 807710AC  2C 04 00 FF */	cmpwi r4, 0xff
 /* 807710B0  41 82 00 18 */	beq lbl_807710C8
-/* 807710B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807710B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807710B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807710B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807710BC  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 807710C0  7C 05 07 74 */	extsb r5, r0
 /* 807710C4  4B 8C 41 3C */	b onSwitch__10dSv_info_cFii

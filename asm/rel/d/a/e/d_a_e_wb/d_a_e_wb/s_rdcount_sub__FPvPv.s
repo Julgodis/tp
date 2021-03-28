@@ -21,9 +21,9 @@ lbl_807DA7F0:
 lbl_807DA83C:
 /* 807DA83C  3C 60 80 7E */	lis r3, rd_count@ha
 /* 807DA840  38 83 38 00 */	addi r4, r3, rd_count@l
-/* 807DA844  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807E3800 */
+/* 807DA844  80 64 00 00 */	lwz r3, 0(r4)
 /* 807DA848  38 03 00 01 */	addi r0, r3, 1
-/* 807DA84C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 807E3800 */
+/* 807DA84C  90 04 00 00 */	stw r0, 0(r4)
 lbl_807DA850:
 /* 807DA850  38 60 00 00 */	li r3, 0
 /* 807DA854  83 E1 00 0C */	lwz r31, 0xc(r1)

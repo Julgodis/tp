@@ -18,7 +18,7 @@ lbl_80714874:
 /* 807148B4  41 80 00 30 */	blt lbl_807148E4
 /* 807148B8  3C 60 80 72 */	lis r3, target_info_count@ha
 /* 807148BC  38 83 CB 8C */	addi r4, r3, target_info_count@l
-/* 807148C0  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8071CB8C */
+/* 807148C0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 807148C4  2C 05 00 14 */	cmpwi r5, 0x14
 /* 807148C8  40 80 00 1C */	bge lbl_807148E4
 /* 807148CC  54 A0 10 3A */	slwi r0, r5, 2

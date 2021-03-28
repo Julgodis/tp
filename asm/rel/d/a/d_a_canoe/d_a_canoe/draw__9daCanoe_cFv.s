@@ -23,23 +23,23 @@ lbl_804DD35C:
 /* 804DD3B0  4B CC 79 F0 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 804DD3B4  80 7E 05 70 */	lwz r3, 0x570(r30)
 /* 804DD3B8  4B B3 09 0C */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 804DD3BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DD3C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804DD3C4  80 03 5F 74 */	lwz r0, 0x5f74(r3)	/* effective address: 8040C134 */
+/* 804DD3BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DD3C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804DD3C4  80 03 5F 74 */	lwz r0, 0x5f74(r3)
 /* 804DD3C8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 804DD3CC  3B A3 4A C8 */	addi r29, r3, j3dSys@l
-/* 804DD3D0  90 1D 00 4C */	stw r0, 0x4c(r29)	/* effective address: 80434B14 */
+/* 804DD3D0  90 1D 00 4C */	stw r0, 0x4c(r29)
 /* 804DD3D4  80 7E 05 78 */	lwz r3, 0x578(r30)
 /* 804DD3D8  4B B3 08 EC */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 804DD3DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DD3E0  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 804DD3E4  80 04 5F 80 */	lwz r0, 0x5f80(r4)	/* effective address: 8040C140 */
+/* 804DD3DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DD3E0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 804DD3E4  80 04 5F 80 */	lwz r0, 0x5f80(r4)
 /* 804DD3E8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 804DD3EC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 804DD3F0  90 03 00 48 */	stw r0, 0x48(r3)	/* effective address: 80434B10 */
-/* 804DD3F4  80 04 5F 84 */	lwz r0, 0x5f84(r4)	/* effective address: 8040C144 */
+/* 804DD3F0  90 03 00 48 */	stw r0, 0x48(r3)
+/* 804DD3F4  80 04 5F 84 */	lwz r0, 0x5f84(r4)
 /* 804DD3F8  90 1D 00 4C */	stw r0, 0x4c(r29)
-/* 804DD3FC  83 A4 5D B4 */	lwz r29, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 804DD3FC  83 A4 5D B4 */	lwz r29, 0x5db4(r4)
 /* 804DD400  7F A3 EB 78 */	mr r3, r29
 /* 804DD404  81 9D 06 28 */	lwz r12, 0x628(r29)
 /* 804DD408  81 8C 01 0C */	lwz r12, 0x10c(r12)
@@ -117,8 +117,8 @@ lbl_804DD4E0:
 /* 804DD514  39 4A 48 D0 */	addi r10, r10, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 804DD518  4B B5 13 F8 */	b dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj
 /* 804DD51C  90 7E 14 74 */	stw r3, 0x1474(r30)
-/* 804DD520  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804DD524  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804DD520  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804DD524  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804DD528  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 804DD52C  80 9E 14 74 */	lwz r4, 0x1474(r30)
 /* 804DD530  80 BE 05 74 */	lwz r5, 0x574(r30)

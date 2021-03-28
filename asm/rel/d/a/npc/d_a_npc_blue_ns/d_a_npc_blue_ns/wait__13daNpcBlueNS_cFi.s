@@ -32,9 +32,9 @@ lbl_8096AC14:
 /* 8096AC48  48 00 01 0C */	b lbl_8096AD54
 lbl_8096AC4C:
 /* 8096AC4C  4B FF FE A5 */	bl chkFindPlayer__13daNpcBlueNS_cFv
-/* 8096AC50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8096AC54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8096AC58  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8096AC50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8096AC54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8096AC58  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8096AC5C  28 00 00 00 */	cmplwi r0, 0
 /* 8096AC60  41 82 00 B0 */	beq lbl_8096AD10
 /* 8096AC64  A0 1F 00 F8 */	lhz r0, 0xf8(r31)

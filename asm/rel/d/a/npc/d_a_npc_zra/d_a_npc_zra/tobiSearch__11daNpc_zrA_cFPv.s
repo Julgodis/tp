@@ -54,11 +54,11 @@ lbl_80B8A4E8:
 /* 80B8A504  48 1B 8E 10 */	b entryPointer__14daObjZraMark_cFP10fopAc_ac_c
 /* 80B8A508  3C 60 80 B9 */	lis r3, lit_11290@ha
 /* 80B8A50C  38 83 D8 88 */	addi r4, r3, lit_11290@l
-/* 80B8A510  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B8D888 */
-/* 80B8A514  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B8D88C */
+/* 80B8A510  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B8A514  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B8A518  90 61 00 08 */	stw r3, 8(r1)
 /* 80B8A51C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B8A520  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B8D890 */
+/* 80B8A520  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B8A524  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B8A528  7F E3 FB 78 */	mr r3, r31
 /* 80B8A52C  38 81 00 08 */	addi r4, r1, 8

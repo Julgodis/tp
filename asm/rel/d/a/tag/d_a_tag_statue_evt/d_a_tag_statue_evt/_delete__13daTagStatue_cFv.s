@@ -8,7 +8,7 @@ lbl_805A7FF8:
 /* 805A8010  38 7F 05 68 */	addi r3, r31, 0x568
 /* 805A8014  3C 80 80 5B */	lis r4, l_arcName@ha
 /* 805A8018  38 84 82 1C */	addi r4, r4, l_arcName@l
-/* 805A801C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805A821C */
+/* 805A801C  80 84 00 00 */	lwz r4, 0(r4)
 /* 805A8020  4B A8 4F E8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 805A8024  88 1F 05 97 */	lbz r0, 0x597(r31)
 /* 805A8028  54 00 10 3A */	slwi r0, r0, 2

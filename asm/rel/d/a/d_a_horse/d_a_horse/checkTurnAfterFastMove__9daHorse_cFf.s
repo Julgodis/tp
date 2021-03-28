@@ -44,7 +44,7 @@ lbl_80840A48:
 /* 80840A60  40 82 00 28 */	bne lbl_80840A88
 /* 80840A64  3C 60 80 84 */	lis r3, m__14daHorse_hio_c0@ha
 /* 80840A68  38 63 54 CC */	addi r3, r3, m__14daHorse_hio_c0@l
-/* 80840A6C  C0 23 00 40 */	lfs f1, 0x40(r3)	/* effective address: 8084550C */
+/* 80840A6C  C0 23 00 40 */	lfs f1, 0x40(r3)
 /* 80840A70  C0 1F 17 8C */	lfs f0, 0x178c(r31)
 /* 80840A74  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80840A78  D0 1F 05 2C */	stfs f0, 0x52c(r31)
@@ -67,10 +67,10 @@ lbl_80840AA8:
 /* 80840AB4  48 00 0C 55 */	bl procWaitInit__9daHorse_cFv
 /* 80840AB8  48 00 00 58 */	b lbl_80840B10
 lbl_80840ABC:
-/* 80840ABC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80840AC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80840AC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80840AC8  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)	/* effective address: 804091A8 */
+/* 80840ABC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80840AC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80840AC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80840AC8  A0 03 2F E8 */	lhz r0, 0x2fe8(r3)
 /* 80840ACC  28 00 00 3D */	cmplwi r0, 0x3d
 /* 80840AD0  40 82 00 3C */	bne lbl_80840B0C
 /* 80840AD4  7F E3 FB 78 */	mr r3, r31

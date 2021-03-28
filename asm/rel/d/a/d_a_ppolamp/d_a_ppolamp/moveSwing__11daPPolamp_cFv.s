@@ -16,7 +16,7 @@ lbl_80D4CFB0:
 /* 80D4CFE8  88 1E 05 9C */	lbz r0, 0x59c(r30)
 /* 80D4CFEC  7C 00 07 74 */	extsb r0, r0
 /* 80D4CFF0  7C 00 29 D6 */	mullw r0, r0, r5
-/* 80D4CFF4  C8 3F 00 40 */	lfd f1, 0x40(r31)	/* effective address: 80D4D2BC */
+/* 80D4CFF4  C8 3F 00 40 */	lfd f1, 0x40(r31)
 /* 80D4CFF8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80D4CFFC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D4D000  3C 80 43 30 */	lis r4, 0x4330

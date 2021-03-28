@@ -14,6 +14,12 @@
 struct J3DModelData {
 };
 
+struct cXyz {
+};
+
+struct dStage_startStage_c {
+};
+
 struct dTimer_c {
 	/* 8025D524 */ void deleteCheck();
 	/* 8025D618 */ void start(int, s16);
@@ -25,12 +31,6 @@ struct dTimer_c {
 };
 
 struct J3DModel {
-};
-
-struct cXyz {
-};
-
-struct dStage_startStage_c {
 };
 
 struct dComIfG_play_c {
@@ -1367,9 +1367,9 @@ static s32 phase_3(char* param_0) {
 /* ############################################################################################## */
 /* 803A71B8-803A71C4 000C+00 s=1 e=0 z=0  None .data      l_method$5017                                                */
 SECTION_DATA static void* data_803A71B8[3] = {
-	/* 0    */ (void*)phase_1__FPc,
-	/* 1    */ (void*)phase_2__FPc,
-	/* 2    */ (void*)phase_3__FPc,
+	(void*)phase_1__FPc,
+	(void*)phase_2__FPc,
+	(void*)phase_3__FPc,
 };
 
 /* 8002CEBC-8002CEFC 0040+00 s=0 e=7 z=550  None .text      dComIfG_resLoad__FP30request_of_phase_process_classPCc       */
@@ -1414,9 +1414,9 @@ static bool phase_03(phaseParam_c* param_0) {
 /* ############################################################################################## */
 /* 803A71C4-803A71D0 000C+00 s=1 e=0 z=0  None .data      l_method$5051                                                */
 SECTION_DATA static void* data_803A71C4[3] = {
-	/* 0    */ (void*)phase_01__FP12phaseParam_c,
-	/* 1    */ (void*)phase_02__FP12phaseParam_c,
-	/* 2    */ (void*)phase_03__FP12phaseParam_c,
+	(void*)phase_01__FP12phaseParam_c,
+	(void*)phase_02__FP12phaseParam_c,
+	(void*)phase_03__FP12phaseParam_c,
 };
 
 /* 8002CFC0-8002D008 0048+00 s=1 e=3 z=0  None .text      dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap */
@@ -2664,51 +2664,51 @@ asm cBgS_ChkElm::~cBgS_ChkElm() {
 /* ############################################################################################## */
 /* 803A71E8-803A71F4 000C+00 s=1 e=1 z=0  None .data      __vt__25mDoExt_McaMorfCallBack1_c                            */
 SECTION_DATA void* __vt__25mDoExt_McaMorfCallBack1_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A71F4-803A7200 000C+00 s=1 e=1 z=0  None .data      __vt__12dCcMassS_Obj                                         */
 SECTION_DATA void* __vt__12dCcMassS_Obj[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dCcMassS_ObjFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dCcMassS_ObjFv,
 };
 
 /* 803A7200-803A720C 000C+00 s=4 e=2 z=0  None .data      __vt__15cCcD_DivideArea                                      */
 SECTION_DATA void* __vt__15cCcD_DivideArea[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15cCcD_DivideAreaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15cCcD_DivideAreaFv,
 };
 
 /* 803A720C-803A7218 000C+00 s=3 e=11 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCylFv,
 };
 
 /* 803A7218-803A7224 000C+00 s=5 e=28 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGAabFv,
 };
 
 /* 803A7224-803A7230 000C+00 s=4 e=9 z=0  None .data      __vt__15cCcD_DivideInfo                                      */
 SECTION_DATA void* __vt__15cCcD_DivideInfo[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15cCcD_DivideInfoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15cCcD_DivideInfoFv,
 };
 
 /* 803A7230-803A7240 000C+04 s=2 e=1 z=0  None .data      __vt__12dCcMassS_Mng                                         */
 SECTION_DATA void* __vt__12dCcMassS_Mng[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dCcMassS_MngFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12dCcMassS_MngFv,
 	/* padding */
 	NULL,
 };

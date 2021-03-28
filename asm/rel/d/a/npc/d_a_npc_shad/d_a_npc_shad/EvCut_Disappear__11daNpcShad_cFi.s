@@ -8,8 +8,8 @@ lbl_80ADEEE4:
 /* 80ADEEFC  7C 9B 23 78 */	mr r27, r4
 /* 80ADEF00  3C 60 80 AE */	lis r3, m__17daNpcShad_Param_c@ha
 /* 80ADEF04  3B A3 1F DC */	addi r29, r3, m__17daNpcShad_Param_c@l
-/* 80ADEF08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADEF0C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80ADEF08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADEF0C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80ADEF10  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80ADEF14  7F 83 E3 78 */	mr r3, r28
 /* 80ADEF18  4B 56 90 44 */	b getMyNowCutName__16dEvent_manager_cFi
@@ -395,9 +395,9 @@ lbl_80ADF47C:
 /* 80ADF48C  48 00 02 40 */	b lbl_80ADF6CC
 lbl_80ADF490:
 /* 80ADF490  7F 43 D3 78 */	mr r3, r26
-/* 80ADF494  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80ADF498  3B 64 61 C0 */	addi r27, r4, struct_804061C0+0x0@l
-/* 80ADF49C  80 9B 5D AC */	lwz r4, 0x5dac(r27)	/* effective address: 8040BF6C */
+/* 80ADF494  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80ADF498  3B 64 61 C0 */	addi r27, r4, g_dComIfG_gameInfo@l
+/* 80ADF49C  80 9B 5D AC */	lwz r4, 0x5dac(r27)
 /* 80ADF4A0  4B 53 B2 70 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80ADF4A4  A8 9A 08 F2 */	lha r4, 0x8f2(r26)
 /* 80ADF4A8  7C 60 07 34 */	extsh r0, r3

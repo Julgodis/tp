@@ -17,11 +17,11 @@ lbl_80817FDC:
 /* 80818018  4B B2 E4 98 */	b PSMTXCopy
 /* 8081801C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80818020  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80818024  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80818024  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80818028  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 8081802C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8081802C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80818030  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80818034  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80818034  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80818038  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 8081803C  88 1F 02 88 */	lbz r0, 0x288(r31)
 /* 80818040  7C 00 07 75 */	extsb. r0, r0
@@ -41,14 +41,14 @@ lbl_80817FDC:
 lbl_80818078:
 /* 80818078  3B 20 00 00 */	li r25, 0
 /* 8081807C  3B A0 00 00 */	li r29, 0
-/* 80818080  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80818084  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80818080  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80818084  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80818088  3C 60 80 82 */	lis r3, data_80821C94@ha
 /* 8081808C  3B 63 1C 94 */	addi r27, r3, data_80821C94@l
 /* 80818090  3C 60 80 82 */	lis r3, lit_3791@ha
 /* 80818094  3B 83 18 AC */	addi r28, r3, lit_3791@l
 lbl_80818098:
-/* 80818098  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 80818098  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8081809C  38 80 00 00 */	li r4, 0
 /* 808180A0  90 81 00 08 */	stw r4, 8(r1)
 /* 808180A4  38 00 FF FF */	li r0, -1
@@ -63,7 +63,7 @@ lbl_80818098:
 /* 808180C8  39 00 00 00 */	li r8, 0
 /* 808180CC  39 3F 02 8C */	addi r9, r31, 0x28c
 /* 808180D0  39 40 00 FF */	li r10, 0xff
-/* 808180D4  C0 3C 00 00 */	lfs f1, 0(r28)	/* effective address: 808218AC */
+/* 808180D4  C0 3C 00 00 */	lfs f1, 0(r28)
 /* 808180D8  4B 83 49 B8 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 808180DC  3B 39 00 01 */	addi r25, r25, 1
 /* 808180E0  2C 19 00 02 */	cmpwi r25, 2
@@ -78,7 +78,7 @@ lbl_80818098:
 /* 80818104  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80818108  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081810C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80818110  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80818110  80 63 00 00 */	lwz r3, 0(r3)
 /* 80818114  38 81 00 20 */	addi r4, r1, 0x20
 /* 80818118  38 BE 05 38 */	addi r5, r30, 0x538
 /* 8081811C  38 C0 00 00 */	li r6, 0

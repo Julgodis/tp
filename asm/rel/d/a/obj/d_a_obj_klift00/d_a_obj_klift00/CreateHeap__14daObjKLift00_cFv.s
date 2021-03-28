@@ -7,12 +7,12 @@ lbl_8058B5EC:
 /* 8058B600  7C 7E 1B 78 */	mr r30, r3
 /* 8058B604  3C 60 80 59 */	lis r3, l_arcName@ha
 /* 8058B608  38 63 C3 F4 */	addi r3, r3, l_arcName@l
-/* 8058B60C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8058C3F4 */
+/* 8058B60C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8058B610  3C 80 80 59 */	lis r4, l_bmdidx@ha
 /* 8058B614  38 84 C3 80 */	addi r4, r4, l_bmdidx@l
-/* 8058B618  80 84 00 08 */	lwz r4, 8(r4)	/* effective address: 8058C388 */
-/* 8058B61C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8058B620  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8058B618  80 84 00 08 */	lwz r4, 8(r4)
+/* 8058B61C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8058B620  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8058B624  3F E5 00 02 */	addis r31, r5, 2
 /* 8058B628  3B FF C2 F8 */	addi r31, r31, -15624
 /* 8058B62C  7F E5 FB 78 */	mr r5, r31
@@ -34,10 +34,10 @@ lbl_8058B660:
 /* 8058B668  40 82 00 50 */	bne lbl_8058B6B8
 /* 8058B66C  3C 60 80 59 */	lis r3, l_arcName@ha
 /* 8058B670  38 63 C3 F4 */	addi r3, r3, l_arcName@l
-/* 8058B674  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8058C3F4 */
+/* 8058B674  80 63 00 00 */	lwz r3, 0(r3)
 /* 8058B678  3C 80 80 59 */	lis r4, l_bmdidx@ha
 /* 8058B67C  38 84 C3 80 */	addi r4, r4, l_bmdidx@l
-/* 8058B680  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8058C380 */
+/* 8058B680  80 84 00 00 */	lwz r4, 0(r4)
 /* 8058B684  7F E5 FB 78 */	mr r5, r31
 /* 8058B688  38 C0 00 80 */	li r6, 0x80
 /* 8058B68C  4B AB 0C 60 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
@@ -75,10 +75,10 @@ lbl_8058B6C0:
 lbl_8058B704:
 /* 8058B704  3C 60 80 59 */	lis r3, l_arcName@ha
 /* 8058B708  38 63 C3 F4 */	addi r3, r3, l_arcName@l
-/* 8058B70C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8058C3F4 */
+/* 8058B70C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8058B710  3C 80 80 59 */	lis r4, l_bmdidx@ha
 /* 8058B714  38 84 C3 80 */	addi r4, r4, l_bmdidx@l
-/* 8058B718  80 84 00 04 */	lwz r4, 4(r4)	/* effective address: 8058C384 */
+/* 8058B718  80 84 00 04 */	lwz r4, 4(r4)
 /* 8058B71C  7F E5 FB 78 */	mr r5, r31
 /* 8058B720  38 C0 00 80 */	li r6, 0x80
 /* 8058B724  4B AB 0B C8 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci

@@ -12,8 +12,8 @@ lbl_806A1F5C:
 /* 806A1F84  3C 60 80 6A */	lis r3, stringBase0@ha
 /* 806A1F88  38 63 21 18 */	addi r3, r3, stringBase0@l
 /* 806A1F8C  38 80 00 13 */	li r4, 0x13
-/* 806A1F90  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806A1F94  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806A1F90  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806A1F94  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806A1F98  3F 85 00 02 */	addis r28, r5, 2
 /* 806A1F9C  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 806A1FA0  7F 85 E3 78 */	mr r5, r28

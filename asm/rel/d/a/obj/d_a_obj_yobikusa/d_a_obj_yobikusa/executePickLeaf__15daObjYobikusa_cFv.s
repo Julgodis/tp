@@ -33,12 +33,12 @@ lbl_8059CD80:
 /* 8059CDFC  C0 24 DE BC */	lfs f1, lit_3699@l(r4)
 /* 8059CE00  3C 80 80 5A */	lis r4, M_attr__15daObjYobikusa_c@ha
 /* 8059CE04  38 84 DE 7C */	addi r4, r4, M_attr__15daObjYobikusa_c@l
-/* 8059CE08  C0 44 00 34 */	lfs f2, 0x34(r4)	/* effective address: 8059DEB0 */
+/* 8059CE08  C0 44 00 34 */	lfs f2, 0x34(r4)
 /* 8059CE0C  4B CD 39 34 */	b cLib_chaseF__FPfff
 /* 8059CE10  A8 9F 07 6A */	lha r4, 0x76a(r31)
 /* 8059CE14  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059CE18  38 63 DE 7C */	addi r3, r3, M_attr__15daObjYobikusa_c@l
-/* 8059CE1C  A8 03 00 3E */	lha r0, 0x3e(r3)	/* effective address: 8059DEBA */
+/* 8059CE1C  A8 03 00 3E */	lha r0, 0x3e(r3)
 /* 8059CE20  7C 04 02 14 */	add r0, r4, r0
 /* 8059CE24  B0 1F 07 6A */	sth r0, 0x76a(r31)
 /* 8059CE28  3C 60 80 5A */	lis r3, lit_3699@ha

@@ -25,8 +25,8 @@ lbl_8084C178:
 /* 8084C1D4  C0 46 4B 10 */	lfs f2, lit_3932@l(r6)
 /* 8084C1D8  4B FF D5 19 */	bl setBck__8daKago_cFiUcff
 lbl_8084C1DC:
-/* 8084C1DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084C1E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084C1DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084C1E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8084C1E4  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8084C1E8  38 80 00 1F */	li r4, 0x1f
 /* 8084C1EC  4B 82 3B A8 */	b StopQuake__12dVibration_cFi

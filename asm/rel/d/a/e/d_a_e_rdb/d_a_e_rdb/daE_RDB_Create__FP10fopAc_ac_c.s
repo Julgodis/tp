@@ -29,8 +29,8 @@ lbl_8076A648:
 /* 8076A660  98 1C 05 B6 */	stb r0, 0x5b6(r28)
 /* 8076A664  2C 1B 00 04 */	cmpwi r27, 4
 /* 8076A668  40 82 03 88 */	bne lbl_8076A9F0
-/* 8076A66C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076A670  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8076A66C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076A670  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8076A674  3B A3 4E 00 */	addi r29, r3, 0x4e00
 /* 8076A678  7F A3 EB 78 */	mr r3, r29
 /* 8076A67C  3C 80 80 77 */	lis r4, stringBase0@ha
@@ -39,8 +39,8 @@ lbl_8076A648:
 /* 8076A688  4B BF E3 0C */	b strcmp
 /* 8076A68C  2C 03 00 00 */	cmpwi r3, 0
 /* 8076A690  40 82 00 28 */	bne lbl_8076A6B8
-/* 8076A694  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076A698  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8076A694  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076A698  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8076A69C  38 63 09 58 */	addi r3, r3, 0x958
 /* 8076A6A0  38 80 00 07 */	li r4, 7
 /* 8076A6A4  4B 8C A2 90 */	b isDungeonItem__12dSv_memBit_cCFi
@@ -53,8 +53,8 @@ lbl_8076A6B8:
 /* 8076A6BC  54 04 46 3E */	srwi r4, r0, 0x18
 /* 8076A6C0  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8076A6C4  41 82 00 28 */	beq lbl_8076A6EC
-/* 8076A6C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076A6CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8076A6C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076A6CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8076A6D0  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8076A6D4  7C 05 07 74 */	extsb r5, r0
 /* 8076A6D8  4B 8C AC 88 */	b isSwitch__10dSv_info_cCFii
@@ -86,7 +86,7 @@ lbl_8076A710:
 /* 8076A738  38 00 FF FF */	li r0, -1
 /* 8076A73C  3C 60 80 77 */	lis r3, l_HIO@ha
 /* 8076A740  38 63 BA 14 */	addi r3, r3, l_HIO@l
-/* 8076A744  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8076BA18 */
+/* 8076A744  98 03 00 04 */	stb r0, 4(r3)
 lbl_8076A748:
 /* 8076A748  80 7C 05 C8 */	lwz r3, 0x5c8(r28)
 /* 8076A74C  80 63 00 04 */	lwz r3, 4(r3)

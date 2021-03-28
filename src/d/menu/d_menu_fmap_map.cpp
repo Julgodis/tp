@@ -18,9 +18,6 @@ struct dMenu_Fmap_region_data_c {
 	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
-struct dMenu_Fmap_world_data_c {
-};
-
 struct dDrawPath_c {
 	struct group_class {
 	};
@@ -40,6 +37,9 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
+};
+
+struct dMenu_Fmap_world_data_c {
 };
 
 struct renderingFmap_c {
@@ -580,62 +580,62 @@ asm void dMenu_FmapMap_c::setPointColor(f32 param_0) {
 /* ############################################################################################## */
 /* 803BD680-803BD6E8 0068+00 s=2 e=0 z=0  None .data      __vt__15dMenu_FmapMap_c                                      */
 SECTION_DATA static void* __vt__15dMenu_FmapMap_c[26] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15dMenu_FmapMap_cFv,
-	/* 3    */ (void*)__dt__15dMenu_FmapMap_cFv,
-	/* 4    */ (void*)isDrawType__15dMenu_FmapMap_cFi,
-	/* 5    */ (void*)getColor__15dMenu_FmapMap_cFi,
-	/* 6    */ (void*)getLineColor__15dMenu_FmapMap_cFii,
-	/* 7    */ (void*)getLineWidth__15dMenu_FmapMap_cFi,
-	/* 8    */ (void*)isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class,
-	/* 9    */ (void*)isRenderingFloor__15renderingFmap_cFi,
-	/* 10   */ (void*)getFirstRoomPointer__15renderingFmap_cFv,
-	/* 11   */ (void*)getNextRoomPointer__15renderingFmap_cFv,
-	/* 12   */ (void*)drawPath__11dDrawPath_cFv,
-	/* 13   */ (void*)rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class,
-	/* 14   */ (void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
-	/* 15   */ (void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
-	/* 16   */ (void*)beforeDrawPath__15renderingFmap_cFv,
-	/* 17   */ (void*)afterDrawPath__15renderingFmap_cFv,
-	/* 18   */ (void*)preDrawPath__15renderingFmap_cFv,
-	/* 19   */ (void*)postDrawPath__15renderingFmap_cFv,
-	/* 20   */ (void*)isDrawPath__15renderingFmap_cFv,
-	/* 21   */ (void*)preRenderingMap__18dRenderingFDAmap_cFv,
-	/* 22   */ (void*)postRenderingMap__15renderingFmap_cFv,
-	/* 23   */ (void*)getBackColor__15dMenu_FmapMap_cCFv,
-	/* 24   */ (void*)getDecoLineColor__18dRenderingFDAmap_cFii,
-	/* 25   */ (void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15dMenu_FmapMap_cFv,
+	(void*)__dt__15dMenu_FmapMap_cFv,
+	(void*)isDrawType__15dMenu_FmapMap_cFi,
+	(void*)getColor__15dMenu_FmapMap_cFi,
+	(void*)getLineColor__15dMenu_FmapMap_cFii,
+	(void*)getLineWidth__15dMenu_FmapMap_cFi,
+	(void*)isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class,
+	(void*)isRenderingFloor__15renderingFmap_cFi,
+	(void*)getFirstRoomPointer__15renderingFmap_cFv,
+	(void*)getNextRoomPointer__15renderingFmap_cFv,
+	(void*)drawPath__11dDrawPath_cFv,
+	(void*)rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class,
+	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
+	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
+	(void*)beforeDrawPath__15renderingFmap_cFv,
+	(void*)afterDrawPath__15renderingFmap_cFv,
+	(void*)preDrawPath__15renderingFmap_cFv,
+	(void*)postDrawPath__15renderingFmap_cFv,
+	(void*)isDrawPath__15renderingFmap_cFv,
+	(void*)preRenderingMap__18dRenderingFDAmap_cFv,
+	(void*)postRenderingMap__15renderingFmap_cFv,
+	(void*)getBackColor__15dMenu_FmapMap_cCFv,
+	(void*)getDecoLineColor__18dRenderingFDAmap_cFii,
+	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
 /* 803BD6E8-803BD750 0068+00 s=3 e=0 z=0  None .data      __vt__15renderingFmap_c                                      */
 SECTION_DATA static void* __vt__15renderingFmap_c[26] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_base_cFv,
-	/* 3    */ (void*)__dt__15renderingFmap_cFv,
-	/* 4    */ (void*)isDrawType__11dDrawPath_cFi,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)getLineColor__11dDrawPath_cFii,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class,
-	/* 9    */ (void*)isRenderingFloor__15renderingFmap_cFi,
-	/* 10   */ (void*)getFirstRoomPointer__15renderingFmap_cFv,
-	/* 11   */ (void*)getNextRoomPointer__15renderingFmap_cFv,
-	/* 12   */ (void*)drawPath__11dDrawPath_cFv,
-	/* 13   */ (void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class,
-	/* 14   */ (void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
-	/* 15   */ (void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
-	/* 16   */ (void*)beforeDrawPath__15renderingFmap_cFv,
-	/* 17   */ (void*)afterDrawPath__15renderingFmap_cFv,
-	/* 18   */ (void*)preDrawPath__15renderingFmap_cFv,
-	/* 19   */ (void*)postDrawPath__15renderingFmap_cFv,
-	/* 20   */ (void*)isDrawPath__15renderingFmap_cFv,
-	/* 21   */ (void*)preRenderingMap__18dRenderingFDAmap_cFv,
-	/* 22   */ (void*)postRenderingMap__15renderingFmap_cFv,
-	/* 23   */ (void*)NULL,
-	/* 24   */ (void*)getDecoLineColor__18dRenderingFDAmap_cFii,
-	/* 25   */ (void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__12dDlst_base_cFv,
+	(void*)__dt__15renderingFmap_cFv,
+	(void*)isDrawType__11dDrawPath_cFi,
+	(void*)NULL,
+	(void*)getLineColor__11dDrawPath_cFii,
+	(void*)NULL,
+	(void*)isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class,
+	(void*)isRenderingFloor__15renderingFmap_cFi,
+	(void*)getFirstRoomPointer__15renderingFmap_cFv,
+	(void*)getNextRoomPointer__15renderingFmap_cFv,
+	(void*)drawPath__11dDrawPath_cFv,
+	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class,
+	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class,
+	(void*)rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class,
+	(void*)beforeDrawPath__15renderingFmap_cFv,
+	(void*)afterDrawPath__15renderingFmap_cFv,
+	(void*)preDrawPath__15renderingFmap_cFv,
+	(void*)postDrawPath__15renderingFmap_cFv,
+	(void*)isDrawPath__15renderingFmap_cFv,
+	(void*)preRenderingMap__18dRenderingFDAmap_cFv,
+	(void*)postRenderingMap__15renderingFmap_cFv,
+	(void*)NULL,
+	(void*)getDecoLineColor__18dRenderingFDAmap_cFii,
+	(void*)getDecorationLineWidth__18dRenderingFDAmap_cFi,
 };
 
 /* 801CEC24-801CED38 0114+00 s=0 e=1 z=0  None .text      __ct__15dMenu_FmapMap_cFv                                    */

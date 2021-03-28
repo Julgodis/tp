@@ -8,8 +8,8 @@ lbl_80BF22AC:
 /* 80BF22C4  3C 60 80 BF */	lis r3, lit_3647@ha
 /* 80BF22C8  3B E3 2B 48 */	addi r31, r3, lit_3647@l
 /* 80BF22CC  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 80BF22D0  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80BF2B48 */
-/* 80BF22D4  C0 5F 00 14 */	lfs f2, 0x14(r31)	/* effective address: 80BF2B5C */
+/* 80BF22D0  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80BF22D4  C0 5F 00 14 */	lfs f2, 0x14(r31)
 /* 80BF22D8  4B 67 D7 A8 */	b cLib_addCalc0__FPfff
 /* 80BF22DC  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80BF22E0  D0 01 00 08 */	stfs f0, 8(r1)

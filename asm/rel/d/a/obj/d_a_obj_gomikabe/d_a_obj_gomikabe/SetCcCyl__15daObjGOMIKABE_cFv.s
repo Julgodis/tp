@@ -15,9 +15,9 @@ lbl_80BFE2CC:
 /* 80BFE300  7C 78 1B 78 */	mr r24, r3
 /* 80BFE304  3C 60 80 C0 */	lis r3, data_80BFFC1C@ha
 /* 80BFE308  3B A3 FC 1C */	addi r29, r3, data_80BFFC1C@l
-/* 80BFE30C  C3 9D 00 40 */	lfs f28, 0x40(r29)	/* effective address: 80BFFC5C */
+/* 80BFE30C  C3 9D 00 40 */	lfs f28, 0x40(r29)
 /* 80BFE310  D3 81 00 14 */	stfs f28, 0x14(r1)
-/* 80BFE314  C3 BD 00 44 */	lfs f29, 0x44(r29)	/* effective address: 80BFFC60 */
+/* 80BFE314  C3 BD 00 44 */	lfs f29, 0x44(r29)
 /* 80BFE318  D3 A1 00 18 */	stfs f29, 0x18(r1)
 /* 80BFE31C  D3 A1 00 1C */	stfs f29, 0x1c(r1)
 /* 80BFE320  D3 A1 00 08 */	stfs f29, 8(r1)
@@ -25,11 +25,11 @@ lbl_80BFE2CC:
 /* 80BFE328  D3 A1 00 10 */	stfs f29, 0x10(r1)
 /* 80BFE32C  3B 20 00 00 */	li r25, 0
 /* 80BFE330  3B E0 00 00 */	li r31, 0
-/* 80BFE334  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BFE338  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BFE334  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BFE338  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BFE33C  3B 83 23 3C */	addi r28, r3, 0x233c
-/* 80BFE340  C3 DD 00 48 */	lfs f30, 0x48(r29)	/* effective address: 80BFFC64 */
-/* 80BFE344  CB FD 00 50 */	lfd f31, 0x50(r29)	/* effective address: 80BFFC6C */
+/* 80BFE340  C3 DD 00 48 */	lfs f30, 0x48(r29)
+/* 80BFE344  CB FD 00 50 */	lfd f31, 0x50(r29)
 /* 80BFE348  3F C0 43 30 */	lis r30, 0x4330
 lbl_80BFE34C:
 /* 80BFE34C  6F 20 80 00 */	xoris r0, r25, 0x8000

@@ -34,7 +34,7 @@ lbl_80CCE3A8:
 /* 80CCE3C0  41 82 00 18 */	beq lbl_80CCE3D8
 /* 80CCE3C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CCE3C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CCE3CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CCE3CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CCE3D0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80CCE3D4  4B 5E 14 B0 */	b subBgmStop__8Z2SeqMgrFv
 lbl_80CCE3D8:

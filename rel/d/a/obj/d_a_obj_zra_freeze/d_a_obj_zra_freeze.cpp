@@ -62,17 +62,17 @@ struct dEvent_manager_c {
 	/* 80047758 */ void getEventIdx(fopAc_ac_c*, char const*, u8);
 };
 
-struct dKy_tevstr_c {
-};
-
-struct _GXColor {
-};
-
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -97,11 +97,11 @@ struct dScnKy_env_light_c {
 // 
 
 static void createSolidHeap(fopAc_ac_c*); // 2
-static void daZraFreeze_Draw(daZraFreeze_c*); // 2
-static void daZraFreeze_Execute(daZraFreeze_c*); // 2
-static bool daZraFreeze_IsDelete(daZraFreeze_c*); // 2
-static void daZraFreeze_Delete(daZraFreeze_c*); // 2
-static void daZraFreeze_create(fopAc_ac_c*); // 2
+void daZraFreeze_Draw(daZraFreeze_c*); // 2
+void daZraFreeze_Execute(daZraFreeze_c*); // 2
+bool daZraFreeze_IsDelete(daZraFreeze_c*); // 2
+void daZraFreeze_Delete(daZraFreeze_c*); // 2
+void daZraFreeze_create(fopAc_ac_c*); // 2
 
 extern "C" void setBaseMtx__13daZraFreeze_cFv(); // 1
 extern "C" void chkActorInScreen__13daZraFreeze_cFv(); // 1
@@ -112,15 +112,14 @@ extern "C" void setHitodamaPrtcl__13daZraFreeze_cFv(); // 1
 extern "C" void Execute__13daZraFreeze_cFv(); // 1
 extern "C" void Draw__13daZraFreeze_cFv(); // 1
 extern "C" void Delete__13daZraFreeze_cFv(); // 1
-extern "C" static void daZraFreeze_Draw__FP13daZraFreeze_c(); // 1
-extern "C" static void daZraFreeze_Execute__FP13daZraFreeze_c(); // 1
-extern "C" static bool daZraFreeze_IsDelete__FP13daZraFreeze_c(); // 1
-extern "C" static void daZraFreeze_Delete__FP13daZraFreeze_c(); // 1
-extern "C" static void daZraFreeze_create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_4050[8];
-extern "C" extern u8 const lit_4051[8];
-extern "C" extern u8 const lit_4052[8];
+extern "C" void daZraFreeze_Draw__FP13daZraFreeze_c(); // 1
+extern "C" void daZraFreeze_Execute__FP13daZraFreeze_c(); // 1
+extern "C" bool daZraFreeze_IsDelete__FP13daZraFreeze_c(); // 1
+extern "C" void daZraFreeze_Delete__FP13daZraFreeze_c(); // 1
+extern "C" void daZraFreeze_create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern u8 const struct_80D44B8C[56];
+extern "C" extern void* l_daZraFreeze_Method[8];
 extern "C" extern void* g_profile_OBJ_ZRAFREEZE[12];
 
 // 
@@ -173,15 +172,10 @@ extern "C" void _savegpr_24(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 
 // 
@@ -242,6 +236,40 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 /* 80D44B5C-80D44B60 0004+00 s=1 e=0 z=0  None .rodata    @3840                                                        */
 SECTION_RODATA static u32 const lit_3840 = 0x47800000;
 
+/* 80D44BC4-80D44BC8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)NULL;
+
+/* 80D442BC-80D4443C 0180+00 s=1 e=0 z=0  None .text      Create__13daZraFreeze_cFv                                    */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daZraFreeze_c::Create() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Create__13daZraFreeze_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
+/* 80D44BC8-80D44BD4 000C+00 s=1 e=0 z=0  None .data      l_bmdName$3845                                               */
+SECTION_DATA static void* data_80D44BC8[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D4443C-80D444C0 0084+00 s=1 e=0 z=0  None .text      CreateHeap__13daZraFreeze_cFv                                */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daZraFreeze_c::CreateHeap() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/CreateHeap__13daZraFreeze_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80D44B60-80D44B64 0004+00 s=1 e=0 z=0  None .rodata    id$3856                                                      */
 SECTION_RODATA static u8 const data_80D44B60[4] = {
 	0x84, 0x97, 0x84, 0x98,
@@ -256,72 +284,6 @@ SECTION_RODATA static u32 const lit_3918 = 0x40800000;
 /* 80D44B6C-80D44B70 0004+00 s=1 e=0 z=0  None .rodata    @3919                                                        */
 SECTION_RODATA static u32 const lit_3919 = 0x3F800000;
 
-/* 80D44B70-80D44B78 0008+00 s=0 e=0 z=0  None .rodata    @4050                                                        */
-SECTION_RODATA u8 const lit_4050[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D44B78-80D44B80 0008+00 s=0 e=0 z=0  None .rodata    @4051                                                        */
-SECTION_RODATA u8 const lit_4051[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D44B80-80D44B88 0008+00 s=0 e=0 z=0  None .rodata    @4052                                                        */
-SECTION_RODATA u8 const lit_4052[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D44B88-80D44B8C 0004+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D44B88 = "zrF";
-#pragma pop
-
-/* 80D44BC4-80D44BC8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80D442BC-80D4443C 0180+00 s=1 e=0 z=0  None .text      Create__13daZraFreeze_cFv                                    */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daZraFreeze_c::Create() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/Create__13daZraFreeze_cFv.s"
-}
-#pragma pop
-
-
-/* ############################################################################################## */
-/* 80D44B8C-80D44BC4 0038+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80D44B8C[56] = {
-	/* 80D44B8C 000D data_80D44B8C None */
-	0x7A, 0x72, 0x41, 0x5F, 0x61, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	/* 80D44B99 0010 data_80D44B99 None */
-	0x7A, 0x72, 0x41, 0x5F, 0x70, 0x61, 0x69, 0x6E, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00,
-	/* 80D44BA9 001B data_80D44BA9 None */
-	0x7A, 0x72, 0x41, 0x5F, 0x73, 0x6F, 0x6C, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x7A,
-	0x6F, 0x72, 0x61, 0x5F, 0x6B, 0x6F, 0x6F, 0x72, 0x69, 0x00, 0x00,
-};
-
-/* 80D44BC8-80D44BD4 000C+00 s=1 e=0 z=0  None .data      l_bmdName$3845                                               */
-SECTION_DATA static void* data_80D44BC8[3] = {
-	/* 0    */ (void*)(((char*)&struct_80D44B8C)+0x0) /* None */,
-	/* 1    */ (void*)(((char*)&struct_80D44B8C)+0xD) /* None */,
-	/* 2    */ (void*)(((char*)&struct_80D44B8C)+0x1D) /* None */,
-};
-
-/* 80D4443C-80D444C0 0084+00 s=1 e=0 z=0  None .text      CreateHeap__13daZraFreeze_cFv                                */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daZraFreeze_c::CreateHeap() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/CreateHeap__13daZraFreeze_cFv.s"
-}
-#pragma pop
-
-
 /* 80D444C0-80D44698 01D8+00 s=1 e=0 z=0  None .text      setHitodamaPrtcl__13daZraFreeze_cFv                          */
 #pragma push
 #pragma optimization_level 0
@@ -332,6 +294,29 @@ asm void daZraFreeze_c::setHitodamaPrtcl() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80D44B70-80D44B78 0008+00 s=1 e=0 z=0  None .rodata    @4050                                                        */
+SECTION_RODATA static u8 const lit_4050[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D44B78-80D44B80 0008+00 s=1 e=0 z=0  None .rodata    @4051                                                        */
+SECTION_RODATA static u8 const lit_4051[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D44B80-80D44B88 0008+00 s=1 e=0 z=0  None .rodata    @4052                                                        */
+SECTION_RODATA static u8 const lit_4052[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D44B88-80D44B8C 0004+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D44B88 = "zrF";
+#pragma pop
 
 /* 80D44698-80D449E0 0348+00 s=1 e=0 z=0  None .text      Execute__13daZraFreeze_cFv                                   */
 #pragma push
@@ -366,50 +351,50 @@ asm void daZraFreeze_c::Delete() {
 #pragma pop
 
 
-/* 80D44AB8-80D44AD8 0020+00 s=1 e=0 z=0  None .text      daZraFreeze_Draw__FP13daZraFreeze_c                          */
+/* 80D44AB8-80D44AD8 0020+00 s=0 e=0 z=0  None .text      daZraFreeze_Draw__FP13daZraFreeze_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daZraFreeze_Draw(daZraFreeze_c* param_0) {
+asm void daZraFreeze_Draw(daZraFreeze_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Draw__FP13daZraFreeze_c.s"
 }
 #pragma pop
 
 
-/* 80D44AD8-80D44AF8 0020+00 s=1 e=0 z=0  None .text      daZraFreeze_Execute__FP13daZraFreeze_c                       */
+/* 80D44AD8-80D44AF8 0020+00 s=0 e=0 z=0  None .text      daZraFreeze_Execute__FP13daZraFreeze_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daZraFreeze_Execute(daZraFreeze_c* param_0) {
+asm void daZraFreeze_Execute(daZraFreeze_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Execute__FP13daZraFreeze_c.s"
 }
 #pragma pop
 
 
-/* 80D44AF8-80D44B00 0008+00 s=1 e=0 z=0  None .text      daZraFreeze_IsDelete__FP13daZraFreeze_c                      */
-static bool daZraFreeze_IsDelete(daZraFreeze_c* param_0) {
+/* 80D44AF8-80D44B00 0008+00 s=0 e=0 z=0  None .text      daZraFreeze_IsDelete__FP13daZraFreeze_c                      */
+bool daZraFreeze_IsDelete(daZraFreeze_c* param_0) {
 	return true;
 }
 
 
-/* 80D44B00-80D44B20 0020+00 s=1 e=0 z=0  None .text      daZraFreeze_Delete__FP13daZraFreeze_c                        */
+/* 80D44B00-80D44B20 0020+00 s=0 e=0 z=0  None .text      daZraFreeze_Delete__FP13daZraFreeze_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daZraFreeze_Delete(daZraFreeze_c* param_0) {
+asm void daZraFreeze_Delete(daZraFreeze_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_Delete__FP13daZraFreeze_c.s"
 }
 #pragma pop
 
 
-/* 80D44B20-80D44B40 0020+00 s=1 e=0 z=0  None .text      daZraFreeze_create__FP10fopAc_ac_c                           */
+/* 80D44B20-80D44B40 0020+00 s=0 e=0 z=0  None .text      daZraFreeze_create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daZraFreeze_create(fopAc_ac_c* param_0) {
+asm void daZraFreeze_create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_freeze/d_a_obj_zra_freeze/daZraFreeze_create__FP10fopAc_ac_c.s"
 }
@@ -417,31 +402,42 @@ asm static void daZraFreeze_create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D44BD4-80D44BF4 0020+00 s=1 e=0 z=0  None .data      l_daZraFreeze_Method                                         */
-SECTION_DATA static void* l_daZraFreeze_Method[8] = {
-	/* 0    */ (void*)daZraFreeze_create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daZraFreeze_Delete__FP13daZraFreeze_c,
-	/* 2    */ (void*)daZraFreeze_Execute__FP13daZraFreeze_c,
-	/* 3    */ (void*)daZraFreeze_IsDelete__FP13daZraFreeze_c,
-	/* 4    */ (void*)daZraFreeze_Draw__FP13daZraFreeze_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D44B8C-80D44BC4 0038+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_80D44B8C[56] = {
+	/* 80D44B8C 000D data_80D44B8C None */
+	0x7A, 0x72, 0x41, 0x5F, 0x61, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00,
+	/* 80D44B99 0010 data_80D44B99 None */
+	0x7A, 0x72, 0x41, 0x5F, 0x70, 0x61, 0x69, 0x6E, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00,
+	/* 80D44BA9 001B data_80D44BA9 None */
+	0x7A, 0x72, 0x41, 0x5F, 0x73, 0x6F, 0x6C, 0x5F, 0x54, 0x57, 0x2E, 0x62, 0x6D, 0x64, 0x00, 0x7A,
+	0x6F, 0x72, 0x61, 0x5F, 0x6B, 0x6F, 0x6F, 0x72, 0x69, 0x00, 0x00,
 };
 
-/* 80D44BF4-80D44C24 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_ZRAFREEZE                                      */
+/* 80D44BD4-80D44BF4 0020+00 s=0 e=0 z=0  None .data      l_daZraFreeze_Method                                         */
+SECTION_DATA void* l_daZraFreeze_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80D44BF4-80D44C24 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_ZRAFREEZE                                      */
 SECTION_DATA void* g_profile_OBJ_ZRAFREEZE[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02820000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005E0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01840000,
-	/* 9    */ (void*)&l_daZraFreeze_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02820000,
+	(void*)NULL,
+	(void*)0x000005E0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01840000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
 };
 

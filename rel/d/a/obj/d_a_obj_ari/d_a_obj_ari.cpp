@@ -16,10 +16,10 @@ struct daObj_AriHIO_c {
 	/* 80BA5360 */ ~daObj_AriHIO_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjARI_c {
@@ -110,6 +110,9 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
+struct J3DModelData {
+};
+
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
@@ -118,13 +121,10 @@ struct Z2Creature {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfSO {
@@ -158,10 +158,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -267,11 +267,11 @@ struct cCcS {
 
 static void JointCallBack(J3DJoint*, int); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObjARI_Create(fopAc_ac_c*); // 2
-static void daObjARI_Delete(daObjARI_c*); // 2
-static void daObjARI_Draw(daObjARI_c*); // 2
+void daObjARI_Create(fopAc_ac_c*); // 2
+void daObjARI_Delete(daObjARI_c*); // 2
+void daObjARI_Draw(daObjARI_c*); // 2
 static void daObjARI_Execute(daObjARI_c*); // 2
-static bool daObjARI_IsDelete(daObjARI_c*); // 2
+bool daObjARI_IsDelete(daObjARI_c*); // 2
 
 extern "C" void __ct__14daObj_AriHIO_cFv(); // 1
 extern "C" void InitCcSph__10daObjARI_cFv(); // 1
@@ -281,8 +281,8 @@ extern "C" static void JointCallBack__FP8J3DJointi(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__10daObjARI_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daObjARI_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjARI_Delete__FP10daObjARI_c(); // 1
+extern "C" void daObjARI_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjARI_Delete__FP10daObjARI_c(); // 1
 extern "C" void WallWalk__10daObjARI_cFv(); // 1
 extern "C" void __dt__8cM3dGPlaFv(); // 1
 extern "C" void MoveAction__10daObjARI_cFv(); // 1
@@ -298,25 +298,23 @@ extern "C" void Execute__10daObjARI_cFv(); // 1
 extern "C" void Z_BufferChk__10daObjARI_cFv(); // 1
 extern "C" void Delete__10daObjARI_cFv(); // 1
 extern "C" void setBaseMtx__10daObjARI_cFv(); // 1
-extern "C" static void daObjARI_Draw__FP10daObjARI_c(); // 1
+extern "C" void daObjARI_Draw__FP10daObjARI_c(); // 1
 extern "C" static void daObjARI_Execute__FP10daObjARI_c(); // 1
 extern "C" void CreateChk__10daObjARI_cFv(); // 1
 extern "C" void create__10daObjARI_cFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static bool daObjARI_IsDelete__FP10daObjARI_c(); // 1
+extern "C" bool daObjARI_IsDelete__FP10daObjARI_c(); // 1
 extern "C" void __dt__14daObj_AriHIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_ari_cpp(); // 1
-extern "C" static void func_80BA53E4(); // 1
-extern "C" static void func_80BA53EC(); // 1
+extern "C" void func_80BA53E4(); // 1
+extern "C" void func_80BA53EC(); // 1
 extern "C" extern u32 const lit_3968;
 extern "C" extern u32 const lit_3970;
 extern "C" extern u32 const lit_3972;
-extern "C" extern u8 const lit_4113[8];
-extern "C" extern u8 const lit_4114[8];
-extern "C" extern u8 const lit_4115[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjARI_Method[8];
 extern "C" extern void* g_profile_Obj_Ari[12];
 
 // 
@@ -430,26 +428,18 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 struct_8040AFC8[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-extern "C" extern u8 data_8040C370[81040];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
 extern "C" extern u32 __float_nan;
 extern "C" void __register_global_object(); // 1
 
@@ -464,87 +454,87 @@ SECTION_RODATA static u32 const lit_3776 = 0x3FC00000;
 /* 80BA540C-80BA5410 0004+00 s=2 e=0 z=0  None .rodata    @3777                                                        */
 SECTION_RODATA static u32 const lit_3777 = 0x40000000;
 
-/* 80BA551C-80BA553C 0020+00 s=1 e=0 z=0  None .data      l_daObjARI_Method                                            */
-SECTION_DATA static void* l_daObjARI_Method[8] = {
-	/* 0    */ (void*)daObjARI_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjARI_Delete__FP10daObjARI_c,
-	/* 2    */ (void*)daObjARI_Execute__FP10daObjARI_c,
-	/* 3    */ (void*)daObjARI_IsDelete__FP10daObjARI_c,
-	/* 4    */ (void*)daObjARI_Draw__FP10daObjARI_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BA551C-80BA553C 0020+00 s=0 e=0 z=0  None .data      l_daObjARI_Method                                            */
+SECTION_DATA void* l_daObjARI_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BA553C-80BA556C 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Ari                                            */
+/* 80BA553C-80BA556C 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Ari                                            */
 SECTION_DATA void* g_profile_Obj_Ari[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01470000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000A78,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01E40000,
-	/* 9    */ (void*)&l_daObjARI_Method,
-	/* 10   */ (void*)0x000C0100,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01470000,
+	(void*)NULL,
+	(void*)0x00000A78,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01E40000,
+	(void*)NULL,
+	(void*)0x000C0100,
+	(void*)0x030E0000,
 };
 
 /* 80BA556C-80BA5590 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BA53EC,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BA53E4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA5590-80BA559C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA559C-80BA55A8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA55A8-80BA55B4 000C+00 s=1 e=0 z=0  None .data      __vt__10daObjARI_c                                           */
 SECTION_DATA static void* __vt__10daObjARI_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)Insect_Release__10daObjARI_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA55B4-80BA55C0 000C+00 s=6 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA55C0-80BA55CC 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA55CC-80BA55D8 000C+00 s=2 e=0 z=0  None .data      __vt__14daObj_AriHIO_c                                       */
 SECTION_DATA static void* __vt__14daObj_AriHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daObj_AriHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BA268C-80BA26BC 0030+00 s=1 e=0 z=0  None .text      __ct__14daObj_AriHIO_cFv                                     */
@@ -608,7 +598,7 @@ SECTION_RODATA static u32 const lit_3814[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80BA5460-80BA5468 0008+00 s=1 e=0 z=0  None .rodata    @3816                                                        */
+/* 80BA5460-80BA5468 0008+00 s=2 e=0 z=0  None .rodata    @3816                                                        */
 SECTION_RODATA static u8 const lit_3816[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -679,18 +669,18 @@ SECTION_RODATA static u32 const lit_4111 = 0x42480000;
 /* 80BA548C-80BA5490 0004+00 s=1 e=0 z=0  None .rodata    @4112                                                        */
 SECTION_RODATA static u32 const lit_4112 = 0x3E99999A;
 
-/* 80BA5490-80BA5498 0008+00 s=0 e=0 z=0  None .rodata    @4113                                                        */
-SECTION_RODATA u8 const lit_4113[8] = {
+/* 80BA5490-80BA5498 0008+00 s=5 e=0 z=0  None .rodata    @4113                                                        */
+SECTION_RODATA static u8 const lit_4113[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BA5498-80BA54A0 0008+00 s=0 e=0 z=0  None .rodata    @4114                                                        */
-SECTION_RODATA u8 const lit_4114[8] = {
+/* 80BA5498-80BA54A0 0008+00 s=5 e=0 z=0  None .rodata    @4114                                                        */
+SECTION_RODATA static u8 const lit_4114[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BA54A0-80BA54A8 0008+00 s=0 e=0 z=0  None .rodata    @4115                                                        */
-SECTION_RODATA u8 const lit_4115[8] = {
+/* 80BA54A0-80BA54A8 0008+00 s=5 e=0 z=0  None .rodata    @4115                                                        */
+SECTION_RODATA static u8 const lit_4115[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -713,7 +703,7 @@ SECTION_RODATA static u32 const lit_4215[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80BA54C0-80BA54C8 0008+00 s=1 e=0 z=0  None .rodata    @4257                                                        */
+/* 80BA54C0-80BA54C8 0008+00 s=2 e=0 z=0  None .rodata    @4257                                                        */
 SECTION_RODATA static u8 const lit_4257[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
@@ -788,7 +778,7 @@ asm void daObjARI_c::CreateHeap() {
 #pragma pop
 
 
-/* 80BA2C18-80BA2C60 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80BA2C18-80BA2C60 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,22 +789,22 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80BA2C60-80BA2C80 0020+00 s=1 e=0 z=0  None .text      daObjARI_Create__FP10fopAc_ac_c                              */
+/* 80BA2C60-80BA2C80 0020+00 s=0 e=0 z=0  None .text      daObjARI_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjARI_Create(fopAc_ac_c* param_0) {
+asm void daObjARI_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ari/d_a_obj_ari/daObjARI_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BA2C80-80BA2CA4 0024+00 s=1 e=0 z=0  None .text      daObjARI_Delete__FP10daObjARI_c                              */
+/* 80BA2C80-80BA2CA4 0024+00 s=0 e=0 z=0  None .text      daObjARI_Delete__FP10daObjARI_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjARI_Delete(daObjARI_c* param_0) {
+asm void daObjARI_Delete(daObjARI_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ari/d_a_obj_ari/daObjARI_Delete__FP10daObjARI_c.s"
 }
@@ -832,7 +822,7 @@ asm void daObjARI_c::WallWalk() {
 #pragma pop
 
 
-/* 80BA3228-80BA3270 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 80BA3228-80BA3270 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -865,7 +855,7 @@ asm void daObjARI_c::Action() {
 #pragma pop
 
 
-/* 80BA33F8-80BA3408 0010+00 s=1 e=0 z=0  None .text      Insect_Release__10daObjARI_cFv                               */
+/* 80BA33F8-80BA3408 0010+00 s=0 e=0 z=0  None .text      Insect_Release__10daObjARI_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -990,18 +980,18 @@ asm void daObjARI_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BA473C-80BA481C 00E0+00 s=1 e=0 z=0  None .text      daObjARI_Draw__FP10daObjARI_c                                */
+/* 80BA473C-80BA481C 00E0+00 s=0 e=0 z=0  None .text      daObjARI_Draw__FP10daObjARI_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjARI_Draw(daObjARI_c* param_0) {
+asm void daObjARI_Draw(daObjARI_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ari/d_a_obj_ari/daObjARI_Draw__FP10daObjARI_c.s"
 }
 #pragma pop
 
 
-/* 80BA481C-80BA483C 0020+00 s=2 e=0 z=0  None .text      daObjARI_Execute__FP10daObjARI_c                             */
+/* 80BA481C-80BA483C 0020+00 s=1 e=0 z=0  None .text      daObjARI_Execute__FP10daObjARI_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1041,7 +1031,7 @@ asm void daObjARI_c::create() {
 #pragma pop
 
 
-/* 80BA5258-80BA52C8 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BA5258-80BA52C8 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1052,7 +1042,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80BA52C8-80BA5310 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BA52C8-80BA5310 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1063,7 +1053,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BA5310-80BA5358 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BA5310-80BA5358 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1074,13 +1064,13 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BA5358-80BA5360 0008+00 s=1 e=0 z=0  None .text      daObjARI_IsDelete__FP10daObjARI_c                            */
-static bool daObjARI_IsDelete(daObjARI_c* param_0) {
+/* 80BA5358-80BA5360 0008+00 s=0 e=0 z=0  None .text      daObjARI_IsDelete__FP10daObjARI_c                            */
+bool daObjARI_IsDelete(daObjARI_c* param_0) {
 	return true;
 }
 
 
-/* 80BA5360-80BA53A8 0048+00 s=2 e=0 z=0  None .text      __dt__14daObj_AriHIO_cFv                                     */
+/* 80BA5360-80BA53A8 0048+00 s=1 e=0 z=0  None .text      __dt__14daObj_AriHIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1091,7 +1081,7 @@ asm daObj_AriHIO_c::~daObj_AriHIO_c() {
 #pragma pop
 
 
-/* 80BA53A8-80BA53E4 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_ari_cpp                                      */
+/* 80BA53A8-80BA53E4 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_ari_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1102,22 +1092,22 @@ extern "C" asm void __sinit_d_a_obj_ari_cpp() {
 #pragma pop
 
 
-/* 80BA53E4-80BA53EC 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BA53E4-80BA53EC 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BA53E4() {
+extern "C" asm void func_80BA53E4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ari/d_a_obj_ari/func_80BA53E4.s"
 }
 #pragma pop
 
 
-/* 80BA53EC-80BA53F4 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BA53EC-80BA53F4 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BA53EC() {
+extern "C" asm void func_80BA53EC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ari/d_a_obj_ari/func_80BA53EC.s"
 }

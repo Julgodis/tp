@@ -9,7 +9,7 @@ lbl_807C4B54:
 /* 807C4B70  3B E3 EC A8 */	addi r31, r3, lit_3907@l
 /* 807C4B74  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807C4B78  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807C4B7C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 807CF4CC */
+/* 807C4B7C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 807C4B80  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 807C4B84  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 807C4B88  D0 01 00 2C */	stfs f0, 0x2c(r1)
@@ -34,12 +34,12 @@ lbl_807C4BB4:
 /* 807C4BCC  3B 60 00 00 */	li r27, 0
 /* 807C4BD0  3B 80 00 00 */	li r28, 0
 /* 807C4BD4  3B A0 00 00 */	li r29, 0
-/* 807C4BD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C4BDC  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 807C4BD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C4BDC  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 807C4BE0  3C 60 80 7D */	lis r3, va_wepon_eff_id1@ha
 /* 807C4BE4  3B 23 F1 7C */	addi r25, r3, va_wepon_eff_id1@l
 lbl_807C4BE8:
-/* 807C4BE8  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 807C4BE8  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 807C4BEC  38 00 00 FF */	li r0, 0xff
 /* 807C4BF0  90 01 00 08 */	stw r0, 8(r1)
 /* 807C4BF4  38 80 00 00 */	li r4, 0
@@ -74,9 +74,9 @@ lbl_807C4C58:
 /* 807C4C64  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 807C4C68  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
 /* 807C4C6C  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 807C4C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C4C74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807C4C78  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 807C4C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C4C74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807C4C78  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 807C4C7C  38 00 00 FF */	li r0, 0xff
 /* 807C4C80  90 01 00 08 */	stw r0, 8(r1)
 /* 807C4C84  38 80 00 00 */	li r4, 0
@@ -122,12 +122,12 @@ lbl_807C4CD4:
 /* 807C4D20  3A E0 00 00 */	li r23, 0
 /* 807C4D24  3B A0 00 00 */	li r29, 0
 /* 807C4D28  3B 80 00 00 */	li r28, 0
-/* 807C4D2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C4D30  3B 23 61 C0 */	addi r25, r3, struct_804061C0+0x0@l
+/* 807C4D2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C4D30  3B 23 61 C0 */	addi r25, r3, g_dComIfG_gameInfo@l
 /* 807C4D34  3C 60 80 7D */	lis r3, va_wepon_eff_id2@ha
 /* 807C4D38  3B 43 F1 84 */	addi r26, r3, va_wepon_eff_id2@l
 lbl_807C4D3C:
-/* 807C4D3C  80 79 5D 3C */	lwz r3, 0x5d3c(r25)	/* effective address: 8040BEFC */
+/* 807C4D3C  80 79 5D 3C */	lwz r3, 0x5d3c(r25)
 /* 807C4D40  38 00 00 FF */	li r0, 0xff
 /* 807C4D44  90 01 00 08 */	stw r0, 8(r1)
 /* 807C4D48  38 80 00 00 */	li r4, 0

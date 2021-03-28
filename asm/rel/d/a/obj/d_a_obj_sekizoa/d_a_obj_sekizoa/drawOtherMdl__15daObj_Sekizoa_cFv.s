@@ -69,8 +69,8 @@ lbl_80CD04B4:
 /* 80CD04C4  80 9F 06 58 */	lwz r4, 0x658(r31)
 /* 80CD04C8  4B 65 F2 EC */	b removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey
 lbl_80CD04CC:
-/* 80CD04CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD04D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD04CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD04D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD04D4  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80CD04D8  80 9F 0D 94 */	lwz r4, 0xd94(r31)
 /* 80CD04DC  7F C5 F3 78 */	mr r5, r30

@@ -24,8 +24,8 @@ lbl_80CCC4E0:
 /* 80CCC4EC  48 00 05 81 */	bl func_80CCCA6C
 /* 80CCC4F0  2C 03 00 00 */	cmpwi r3, 0
 /* 80CCC4F4  40 82 00 20 */	bne lbl_80CCC514
-/* 80CCC4F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCC4FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCC4F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCC4FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCC500  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CCC504  80 9F 05 E4 */	lwz r4, 0x5e4(r31)
 /* 80CCC508  4B 37 BC 74 */	b cutEnd__16dEvent_manager_cFi

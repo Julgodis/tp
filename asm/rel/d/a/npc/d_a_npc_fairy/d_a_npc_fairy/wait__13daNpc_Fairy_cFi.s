@@ -69,11 +69,11 @@ lbl_809B4178:
 /* 809B4188  2C 03 00 00 */	cmpwi r3, 0
 /* 809B418C  41 82 01 B8 */	beq lbl_809B4344
 /* 809B4190  38 00 00 08 */	li r0, 8
-/* 809B4194  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809B4198  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809B419C  98 03 5E 24 */	stb r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
+/* 809B4194  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809B4198  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B419C  98 03 5E 24 */	stb r0, 0x5e24(r3)
 /* 809B41A0  38 00 00 00 */	li r0, 0
-/* 809B41A4  98 03 5E 4A */	stb r0, 0x5e4a(r3)	/* effective address: 8040C00A */
+/* 809B41A4  98 03 5E 4A */	stb r0, 0x5e4a(r3)
 /* 809B41A8  48 00 01 9C */	b lbl_809B4344
 lbl_809B41AC:
 /* 809B41AC  28 00 00 00 */	cmplwi r0, 0

@@ -114,7 +114,7 @@ lbl_805EDF44:
 /* 805EDF54  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 805EDF58  3C 60 80 5F */	lis r3, l_HIO@ha
 /* 805EDF5C  38 63 47 DC */	addi r3, r3, l_HIO@l
-/* 805EDF60  C0 83 00 08 */	lfs f4, 8(r3)	/* effective address: 805F47E4 */
+/* 805EDF60  C0 83 00 08 */	lfs f4, 8(r3)
 /* 805EDF64  EC 00 01 32 */	fmuls f0, f0, f4
 /* 805EDF68  EC 23 00 2A */	fadds f1, f3, f0
 /* 805EDF6C  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)

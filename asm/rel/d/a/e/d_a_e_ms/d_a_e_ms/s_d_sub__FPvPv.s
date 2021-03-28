@@ -15,7 +15,7 @@ lbl_80725FF0:
 /* 80726024  40 82 00 30 */	bne lbl_80726054
 /* 80726028  3C 60 80 73 */	lis r3, target_info_count@ha
 /* 8072602C  38 83 98 78 */	addi r4, r3, target_info_count@l
-/* 80726030  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80729878 */
+/* 80726030  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80726034  2C 05 00 14 */	cmpwi r5, 0x14
 /* 80726038  40 80 00 1C */	bge lbl_80726054
 /* 8072603C  54 A0 10 3A */	slwi r0, r5, 2

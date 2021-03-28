@@ -45,7 +45,7 @@ lbl_804FE238:
 /* 804FE28C  4E 80 04 21 */	bctrl 
 /* 804FE290  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804FE294  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804FE298  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804FE298  80 63 00 00 */	lwz r3, 0(r3)
 /* 804FE29C  A8 9E 06 80 */	lha r4, 0x680(r30)
 /* 804FE2A0  4B B0 E1 3C */	b mDoMtx_YrotS__FPA4_fs
 /* 804FE2A4  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -223,7 +223,7 @@ lbl_804FE508:
 /* 804FE510  EC 21 00 32 */	fmuls f1, f1, f0
 /* 804FE514  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804FE518  38 63 0E 70 */	addi r3, r3, l_HIO@l
-/* 804FE51C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80500E78 */
+/* 804FE51C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 804FE520  EF E1 00 32 */	fmuls f31, f1, f0
 /* 804FE524  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 804FE528  EC 00 F8 28 */	fsubs f0, f0, f31
@@ -232,8 +232,8 @@ lbl_804FE508:
 /* 804FE534  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 804FE538  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 /* 804FE53C  38 7E 10 54 */	addi r3, r30, 0x1054
-/* 804FE540  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804FE544  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804FE540  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804FE544  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804FE548  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 804FE54C  4B B7 85 60 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 804FE550  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)

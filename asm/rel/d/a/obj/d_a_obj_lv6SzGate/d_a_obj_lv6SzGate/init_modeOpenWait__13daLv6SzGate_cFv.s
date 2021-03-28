@@ -13,7 +13,7 @@ lbl_80C76010:
 /* 80C7603C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C76040  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C76044  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C76048  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C76048  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C7604C  38 81 00 08 */	addi r4, r1, 8
 /* 80C76050  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C76054  38 C0 00 00 */	li r6, 0

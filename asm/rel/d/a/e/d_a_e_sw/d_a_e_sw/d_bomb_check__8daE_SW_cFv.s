@@ -17,7 +17,7 @@ lbl_807AD134:
 /* 807AD144  4B 86 D6 9C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807AD148  3C 60 80 7B */	lis r3, l_HIO@ha
 /* 807AD14C  38 63 02 10 */	addi r3, r3, l_HIO@l
-/* 807AD150  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807B021C */
+/* 807AD150  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807AD154  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807AD158  40 80 00 0C */	bge lbl_807AD164
 /* 807AD15C  38 60 00 01 */	li r3, 1

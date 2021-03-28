@@ -7,7 +7,7 @@ lbl_80C278CC:
 /* 80C278E0  7C 7E 1B 78 */	mr r30, r3
 /* 80C278E4  3C 80 80 C3 */	lis r4, l_cyl_src@ha
 /* 80C278E8  3B E4 81 20 */	addi r31, r4, l_cyl_src@l
-/* 80C278EC  C0 1F 00 90 */	lfs f0, 0x90(r31)	/* effective address: 80C281B0 */
+/* 80C278EC  C0 1F 00 90 */	lfs f0, 0x90(r31)
 /* 80C278F0  D0 03 04 EC */	stfs f0, 0x4ec(r3)
 /* 80C278F4  D0 03 04 F0 */	stfs f0, 0x4f0(r3)
 /* 80C278F8  D0 03 04 F4 */	stfs f0, 0x4f4(r3)

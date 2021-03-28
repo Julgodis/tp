@@ -16,7 +16,7 @@ lbl_80D66F34:
 /* 80D66F6C  80 7F 06 00 */	lwz r3, 0x600(r31)
 /* 80D66F70  3C 80 80 D6 */	lis r4, g_daTitHIO@ha
 /* 80D66F74  38 84 7D 8C */	addi r4, r4, g_daTitHIO@l
-/* 80D66F78  88 84 00 19 */	lbz r4, 0x19(r4)	/* effective address: 80D67DA5 */
+/* 80D66F78  88 84 00 19 */	lbz r4, 0x19(r4)
 /* 80D66F7C  38 A0 00 00 */	li r5, 0
 /* 80D66F80  38 C0 00 FF */	li r6, 0xff
 /* 80D66F84  38 E0 00 00 */	li r7, 0
@@ -26,7 +26,7 @@ lbl_80D66F90:
 /* 80D66F90  80 7F 06 00 */	lwz r3, 0x600(r31)
 /* 80D66F94  3C 80 80 D6 */	lis r4, g_daTitHIO@ha
 /* 80D66F98  38 84 7D 8C */	addi r4, r4, g_daTitHIO@l
-/* 80D66F9C  88 84 00 19 */	lbz r4, 0x19(r4)	/* effective address: 80D67DA5 */
+/* 80D66F9C  88 84 00 19 */	lbz r4, 0x19(r4)
 /* 80D66FA0  38 A0 00 FF */	li r5, 0xff
 /* 80D66FA4  38 C0 00 80 */	li r6, 0x80
 /* 80D66FA8  38 E0 00 00 */	li r7, 0
@@ -45,7 +45,7 @@ lbl_80D66FB0:
 lbl_80D66FD8:
 /* 80D66FD8  3C 60 80 D6 */	lis r3, g_daTitHIO@ha
 /* 80D66FDC  38 63 7D 8C */	addi r3, r3, g_daTitHIO@l
-/* 80D66FE0  88 03 00 1A */	lbz r0, 0x1a(r3)	/* effective address: 80D67DA6 */
+/* 80D66FE0  88 03 00 1A */	lbz r0, 0x1a(r3)
 /* 80D66FE4  98 1F 06 04 */	stb r0, 0x604(r31)
 lbl_80D66FE8:
 /* 80D66FE8  88 7F 06 04 */	lbz r3, 0x604(r31)

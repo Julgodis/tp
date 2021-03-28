@@ -1,19 +1,19 @@
 lbl_806ECAEC:
 /* 806ECAEC  3C 80 80 6F */	lis r4, lit_3966@ha
 /* 806ECAF0  38 A4 08 60 */	addi r5, r4, lit_3966@l
-/* 806ECAF4  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 806F0894 */
+/* 806ECAF4  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 806ECAF8  D0 03 04 FC */	stfs f0, 0x4fc(r3)
 /* 806ECAFC  38 00 10 00 */	li r0, 0x1000
 /* 806ECB00  B0 03 06 B2 */	sth r0, 0x6b2(r3)
-/* 806ECB04  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806ECB08  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806ECB0C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 806ECB10  C0 24 04 D4 */	lfs f1, 0x4d4(r4)	/* effective address: 80406694 */
+/* 806ECB04  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806ECB08  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806ECB0C  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 806ECB10  C0 24 04 D4 */	lfs f1, 0x4d4(r4)
 /* 806ECB14  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 806ECB18  EC 01 00 28 */	fsubs f0, f1, f0
 /* 806ECB1C  FC 00 02 10 */	fabs f0, f0
 /* 806ECB20  FC 20 00 18 */	frsp f1, f0
-/* 806ECB24  C0 05 00 6C */	lfs f0, 0x6c(r5)	/* effective address: 806F08CC */
+/* 806ECB24  C0 05 00 6C */	lfs f0, 0x6c(r5)
 /* 806ECB28  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806ECB2C  4C 41 13 82 */	cror 2, 1, 2
 /* 806ECB30  40 82 00 10 */	bne lbl_806ECB40

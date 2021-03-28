@@ -20,7 +20,7 @@ lbl_806AFD60:
 /* 806AFD74  4B 97 15 C4 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 806AFD78  3C 60 80 6B */	lis r3, mDt_OtamaNum__6E_DT_n@ha
 /* 806AFD7C  38 63 62 DC */	addi r3, r3, mDt_OtamaNum__6E_DT_n@l
-/* 806AFD80  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806B62DC */
+/* 806AFD80  80 63 00 00 */	lwz r3, 0(r3)
 /* 806AFD84  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 806AFD88  7C 08 03 A6 */	mtlr r0
 /* 806AFD8C  38 21 00 10 */	addi r1, r1, 0x10

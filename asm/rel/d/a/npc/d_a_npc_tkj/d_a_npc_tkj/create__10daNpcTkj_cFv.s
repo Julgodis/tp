@@ -44,8 +44,8 @@ lbl_805738C0:
 /* 805738F0  4B BE 1D 44 */	b daNpcF_chkEvtBit__FUl
 /* 805738F4  2C 03 00 00 */	cmpwi r3, 0
 /* 805738F8  40 82 00 28 */	bne lbl_80573920
-/* 805738FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80573900  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805738FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80573900  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80573904  38 63 09 58 */	addi r3, r3, 0x958
 /* 80573908  38 80 00 06 */	li r4, 6
 /* 8057390C  4B AC 10 28 */	b isDungeonItem__12dSv_memBit_cCFi
@@ -111,8 +111,8 @@ lbl_80573984:
 /* 805739F0  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 805739F4  4B B0 28 54 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 805739F8  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 805739FC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80573A00  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805739FC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80573A00  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80573A04  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80573A08  4B B0 30 A4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80573A0C  80 1D 07 68 */	lwz r0, 0x768(r29)

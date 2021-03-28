@@ -13,7 +13,7 @@ lbl_80AFD250:
 /* 80AFD27C  38 A0 00 00 */	li r5, 0
 /* 80AFD280  3C C0 80 B0 */	lis r6, m__17daNpcTheB_Param_c@ha
 /* 80AFD284  38 C6 0D 6C */	addi r6, r6, m__17daNpcTheB_Param_c@l
-/* 80AFD288  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80B00D78 */
+/* 80AFD288  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80AFD28C  38 C0 00 00 */	li r6, 0
 /* 80AFD290  38 E0 00 00 */	li r7, 0
 /* 80AFD294  4B 65 50 18 */	b draw__8daNpcF_cFiifP11_GXColorS10i

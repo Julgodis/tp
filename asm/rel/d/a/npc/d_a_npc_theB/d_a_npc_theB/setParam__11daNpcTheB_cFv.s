@@ -13,10 +13,10 @@ lbl_80AFD938:
 /* 80AFD964  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80AFD968  3C 60 80 B0 */	lis r3, m__17daNpcTheB_Param_c@ha
 /* 80AFD96C  38 63 0D 6C */	addi r3, r3, m__17daNpcTheB_Param_c@l
-/* 80AFD970  AB 43 00 48 */	lha r26, 0x48(r3)	/* effective address: 80B00DB4 */
-/* 80AFD974  AB 63 00 4A */	lha r27, 0x4a(r3)	/* effective address: 80B00DB6 */
-/* 80AFD978  AB 83 00 4C */	lha r28, 0x4c(r3)	/* effective address: 80B00DB8 */
-/* 80AFD97C  AB A3 00 4E */	lha r29, 0x4e(r3)	/* effective address: 80B00DBA */
+/* 80AFD970  AB 43 00 48 */	lha r26, 0x48(r3)
+/* 80AFD974  AB 63 00 4A */	lha r27, 0x4a(r3)
+/* 80AFD978  AB 83 00 4C */	lha r28, 0x4c(r3)
+/* 80AFD97C  AB A3 00 4E */	lha r29, 0x4e(r3)
 /* 80AFD980  38 7F 0D C0 */	addi r3, r31, 0xdc0
 /* 80AFD984  38 81 00 08 */	addi r4, r1, 8
 /* 80AFD988  4B 86 46 C0 */	b __ptmf_cmpr
@@ -68,8 +68,8 @@ lbl_80AFDA30:
 /* 80AFDA30  80 1F 0D F4 */	lwz r0, 0xdf4(r31)
 /* 80AFDA34  2C 00 00 00 */	cmpwi r0, 0
 /* 80AFDA38  40 81 00 28 */	ble lbl_80AFDA60
-/* 80AFDA3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AFDA40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AFDA3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AFDA40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AFDA44  38 63 09 78 */	addi r3, r3, 0x978
 /* 80AFDA48  38 80 00 37 */	li r4, 0x37
 /* 80AFDA4C  4B 53 71 9C */	b isSwitch__12dSv_danBit_cCFi
@@ -81,13 +81,13 @@ lbl_80AFDA60:
 /* 80AFDA60  38 7F 07 E4 */	addi r3, r31, 0x7e4
 /* 80AFDA64  3C 80 80 B0 */	lis r4, m__17daNpcTheB_Param_c@ha
 /* 80AFDA68  38 84 0D 6C */	addi r4, r4, m__17daNpcTheB_Param_c@l
-/* 80AFDA6C  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80B00D88 */
+/* 80AFDA6C  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80AFDA70  4B 57 84 D0 */	b SetWallR__12dBgS_AcchCirFf
 /* 80AFDA74  3C 60 80 B0 */	lis r3, m__17daNpcTheB_Param_c@ha
 /* 80AFDA78  38 63 0D 6C */	addi r3, r3, m__17daNpcTheB_Param_c@l
-/* 80AFDA7C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B00D84 */
+/* 80AFDA7C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80AFDA80  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 80AFDA84  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80B00D70 */
+/* 80AFDA84  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80AFDA88  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80AFDA8C  39 61 00 40 */	addi r11, r1, 0x40
 /* 80AFDA90  4B 86 47 88 */	b _restgpr_25

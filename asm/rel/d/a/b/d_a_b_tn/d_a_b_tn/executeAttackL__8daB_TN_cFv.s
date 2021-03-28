@@ -9,9 +9,9 @@ lbl_806292F8:
 /* 80629314  7C 7C 1B 78 */	mr r28, r3
 /* 80629318  3C 80 80 63 */	lis r4, lit_3920@ha
 /* 8062931C  3B C4 E6 34 */	addi r30, r4, lit_3920@l
-/* 80629320  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80629324  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80629328  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80629320  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80629324  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80629328  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8062932C  4B 9F 13 E4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80629330  7C 7D 1B 78 */	mr r29, r3
 /* 80629334  7F 83 E3 78 */	mr r3, r28
@@ -62,7 +62,7 @@ lbl_806293C0:
 /* 806293D8  41 82 00 24 */	beq lbl_806293FC
 /* 806293DC  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 806293E0  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 806293E4  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8062F03C */
+/* 806293E4  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 806293E8  FC 00 00 1E */	fctiwz f0, f0
 /* 806293EC  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 806293F0  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -74,7 +74,7 @@ lbl_806293FC:
 /* 80629404  40 82 00 24 */	bne lbl_80629428
 /* 80629408  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 8062940C  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 80629410  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8062F040 */
+/* 80629410  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80629414  FC 00 00 1E */	fctiwz f0, f0
 /* 80629418  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 8062941C  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -83,7 +83,7 @@ lbl_806293FC:
 lbl_80629428:
 /* 80629428  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 8062942C  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 80629430  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8062F044 */
+/* 80629430  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80629434  FC 00 00 1E */	fctiwz f0, f0
 /* 80629438  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 8062943C  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -161,7 +161,7 @@ lbl_80629530:
 /* 8062953C  41 82 00 24 */	beq lbl_80629560
 /* 80629540  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 80629544  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 80629548  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8062F03C */
+/* 80629548  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8062954C  FC 00 00 1E */	fctiwz f0, f0
 /* 80629550  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 80629554  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -173,7 +173,7 @@ lbl_80629560:
 /* 80629568  40 82 00 24 */	bne lbl_8062958C
 /* 8062956C  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 80629570  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 80629574  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8062F040 */
+/* 80629574  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80629578  FC 00 00 1E */	fctiwz f0, f0
 /* 8062957C  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 80629580  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -182,7 +182,7 @@ lbl_80629560:
 lbl_8062958C:
 /* 8062958C  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 80629590  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 80629594  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8062F044 */
+/* 80629594  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80629598  FC 00 00 1E */	fctiwz f0, f0
 /* 8062959C  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 806295A0  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -278,7 +278,7 @@ lbl_806296D0:
 /* 806296EC  90 1C 06 F4 */	stw r0, 0x6f4(r28)
 /* 806296F0  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 806296F4  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 806296F8  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8062F054 */
+/* 806296F8  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 806296FC  FC 00 00 1E */	fctiwz f0, f0
 /* 80629700  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 80629704  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -401,7 +401,7 @@ lbl_8062988C:
 /* 806298B4  90 1C 06 F4 */	stw r0, 0x6f4(r28)
 /* 806298B8  3C 60 80 63 */	lis r3, l_HIO@ha
 /* 806298BC  38 63 F0 2C */	addi r3, r3, l_HIO@l
-/* 806298C0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 8062F058 */
+/* 806298C0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806298C4  FC 00 00 1E */	fctiwz f0, f0
 /* 806298C8  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 806298CC  80 01 00 34 */	lwz r0, 0x34(r1)

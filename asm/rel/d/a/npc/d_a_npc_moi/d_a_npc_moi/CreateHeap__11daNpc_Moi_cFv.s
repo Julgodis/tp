@@ -23,8 +23,8 @@ lbl_80A744A8:
 /* 80A744C4  38 63 B1 DC */	addi r3, r3, l_resNameList@l
 /* 80A744C8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80A744CC  7C 84 28 2E */	lwzx r4, r4, r5
-/* 80A744D0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A744D4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A744D0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A744D4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A744D8  3F C5 00 02 */	addis r30, r5, 2
 /* 80A744DC  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80A744E0  7F C5 F3 78 */	mr r5, r30

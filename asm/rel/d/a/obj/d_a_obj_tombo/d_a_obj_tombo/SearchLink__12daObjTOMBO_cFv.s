@@ -7,13 +7,13 @@ lbl_80D19C34:
 /* 80D19C48  7C 7F 1B 78 */	mr r31, r3
 /* 80D19C4C  3C 60 80 D2 */	lis r3, lit_3775@ha
 /* 80D19C50  3B C3 B6 D8 */	addi r30, r3, lit_3775@l
-/* 80D19C54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D19C58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D19C5C  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D19C54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D19C58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D19C5C  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80D19C60  C0 5F 04 D8 */	lfs f2, 0x4d8(r31)
 /* 80D19C64  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80D19C68  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D19C6C  C0 3E 00 58 */	lfs f1, 0x58(r30)	/* effective address: 80D1B730 */
+/* 80D19C6C  C0 3E 00 58 */	lfs f1, 0x58(r30)
 /* 80D19C70  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80D19C74  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 80D19C78  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
@@ -120,17 +120,17 @@ lbl_80D19D7C:
 /* 80D19DE8  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80D19DEC  C0 1E 00 58 */	lfs f0, 0x58(r30)
 /* 80D19DF0  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80D19DF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D19DF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D19DFC  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80D19DF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D19DF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D19DFC  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80D19E00  38 80 00 09 */	li r4, 9
-/* 80D19E04  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80D19E04  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80D19E08  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 80D19E0C  7D 89 03 A6 */	mtctr r12
 /* 80D19E10  4E 80 04 21 */	bctrl 
 /* 80D19E14  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80D19E18  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80D19E1C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80D19E1C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D19E20  4B 62 C6 90 */	b PSMTXCopy
 /* 80D19E24  38 61 00 24 */	addi r3, r1, 0x24
 /* 80D19E28  38 9F 07 3C */	addi r4, r31, 0x73c

@@ -68,7 +68,7 @@ lbl_80D3BC28:
 /* 80D3BC28  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80D3BC2C  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D3BC30  38 84 BF 2C */	addi r4, r4, l_arcName@l
-/* 80D3BC34  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D3BF2C */
+/* 80D3BC34  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D3BC38  4B 2F 12 84 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D3BC3C  7C 7E 1B 78 */	mr r30, r3
 /* 80D3BC40  2C 1E 00 04 */	cmpwi r30, 4

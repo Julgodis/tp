@@ -79,10 +79,10 @@ lbl_8051A9D8:
 /* 8051AA2C  A8 1E 09 94 */	lha r0, 0x994(r30)
 /* 8051AA30  2C 00 FF FF */	cmpwi r0, -1
 /* 8051AA34  41 82 00 1C */	beq lbl_8051AA50
-/* 8051AA38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051AA3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051AA40  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8051AA44  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8051AA38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051AA3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051AA40  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8051AA44  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8051AA48  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8051AA4C  40 82 00 38 */	bne lbl_8051AA84
 lbl_8051AA50:
@@ -92,7 +92,7 @@ lbl_8051AA50:
 /* 8051AA5C  C0 3E 05 D8 */	lfs f1, 0x5d8(r30)
 /* 8051AA60  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051AA64  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051AA68  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8051BC38 */
+/* 8051AA68  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8051AA6C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8051AA70  40 80 00 14 */	bge lbl_8051AA84
 /* 8051AA74  38 00 00 28 */	li r0, 0x28

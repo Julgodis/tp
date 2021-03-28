@@ -11,9 +11,9 @@ lbl_8049EF60:
 /* 8049EF84  7C 78 1B 78 */	mr r24, r3
 /* 8049EF88  3C 60 80 4A */	lis r3, lit_4078@ha
 /* 8049EF8C  3B E3 28 50 */	addi r31, r3, lit_4078@l
-/* 8049EF90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049EF94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049EF98  83 C3 5F 50 */	lwz r30, 0x5f50(r3)	/* effective address: 8040C110 */
+/* 8049EF90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049EF94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049EF98  83 C3 5F 50 */	lwz r30, 0x5f50(r3)
 /* 8049EF9C  3B B8 00 62 */	addi r29, r24, 0x62
 /* 8049EFA0  3B 20 00 00 */	li r25, 0
 /* 8049EFA4  3A E0 00 00 */	li r23, 0

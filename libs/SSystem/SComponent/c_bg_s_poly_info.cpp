@@ -53,9 +53,9 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C3FD0-803C3FE0 000C+04 s=2 e=0 z=0  None .data      __vt__13cBgS_PolyInfo                                        */
 SECTION_DATA static void* __vt__13cBgS_PolyInfo[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13cBgS_PolyInfoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13cBgS_PolyInfoFv,
 	/* padding */
 	NULL,
 };

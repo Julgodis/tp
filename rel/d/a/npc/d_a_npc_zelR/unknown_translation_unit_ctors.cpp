@@ -19,7 +19,6 @@ extern void* const data_80B71ACC[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_zelR_cpp(); // 1
 
 // 
 // Declarations:

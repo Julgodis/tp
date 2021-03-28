@@ -7,12 +7,12 @@ lbl_80767428:
 /* 8076743C  7C 7C 1B 78 */	mr r28, r3
 /* 80767440  3C 80 80 77 */	lis r4, lit_4007@ha
 /* 80767444  3B C4 B4 5C */	addi r30, r4, lit_4007@l
-/* 80767448  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8076744C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80767450  83 7F 5D AC */	lwz r27, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80767448  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8076744C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80767450  83 7F 5D AC */	lwz r27, 0x5dac(r31)
 /* 80767454  38 00 00 00 */	li r0, 0
 /* 80767458  98 03 06 C8 */	stb r0, 0x6c8(r3)
-/* 8076745C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8076745C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80767460  4B 8B 33 80 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80767464  D0 3C 06 AC */	stfs f1, 0x6ac(r28)
 /* 80767468  7F 83 E3 78 */	mr r3, r28
@@ -120,8 +120,8 @@ lbl_80767588:
 /* 807675CC  3B 40 00 01 */	li r26, 1
 /* 807675D0  48 00 00 44 */	b lbl_80767614
 lbl_807675D4:
-/* 807675D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807675D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807675D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807675D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807675DC  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 807675E0  3C 80 80 77 */	lis r4, stringBase0@ha
 /* 807675E4  38 84 B6 C4 */	addi r4, r4, stringBase0@l
@@ -137,8 +137,8 @@ lbl_807675D4:
 /* 8076760C  41 82 00 08 */	beq lbl_80767614
 /* 80767610  3B 40 00 01 */	li r26, 1
 lbl_80767614:
-/* 80767614  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80767618  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80767614  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80767618  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8076761C  3B A3 4E 00 */	addi r29, r3, 0x4e00
 /* 80767620  7F A3 EB 78 */	mr r3, r29
 /* 80767624  3C 80 80 77 */	lis r4, stringBase0@ha
@@ -304,9 +304,9 @@ lbl_8076785C:
 /* 8076785C  C0 1E 00 9C */	lfs f0, 0x9c(r30)
 /* 80767860  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80767864  40 80 00 54 */	bge lbl_807678B8
-/* 80767868  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076786C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80767870  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 80767868  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076786C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80767870  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 80767874  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 80767878  40 82 00 40 */	bne lbl_807678B8
 /* 8076787C  80 7F 5D AC */	lwz r3, 0x5dac(r31)
@@ -364,10 +364,10 @@ lbl_8076791C:
 /* 80767938  41 82 00 6C */	beq lbl_807679A4
 /* 8076793C  2C 19 00 00 */	cmpwi r25, 0
 /* 80767940  41 82 00 64 */	beq lbl_807679A4
-/* 80767944  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80767948  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8076794C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80767950  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80767944  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80767948  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8076794C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80767950  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80767954  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80767958  40 82 00 34 */	bne lbl_8076798C
 /* 8076795C  7F A3 EB 78 */	mr r3, r29
@@ -409,7 +409,7 @@ lbl_807679A4:
 /* 807679E4  D0 1C 05 30 */	stfs f0, 0x530(r28)
 /* 807679E8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807679EC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807679F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807679F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807679F4  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 807679F8  4B 8A 49 E4 */	b mDoMtx_YrotS__FPA4_fs
 /* 807679FC  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -418,7 +418,7 @@ lbl_807679A4:
 /* 80767A08  C0 5C 05 2C */	lfs f2, 0x52c(r28)
 /* 80767A0C  3C 60 80 77 */	lis r3, l_HIO@ha
 /* 80767A10  38 63 BA 14 */	addi r3, r3, l_HIO@l
-/* 80767A14  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8076BA1C */
+/* 80767A14  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80767A18  C0 1E 00 C0 */	lfs f0, 0xc0(r30)
 /* 80767A1C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80767A20  EC 02 00 32 */	fmuls f0, f2, f0
@@ -455,7 +455,7 @@ lbl_80767A78:
 /* 80767A98  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 80767A9C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80767AA0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80767AA4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80767AA4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80767AA8  A8 9C 06 E8 */	lha r4, 0x6e8(r28)
 /* 80767AAC  4B 8A 49 30 */	b mDoMtx_YrotS__FPA4_fs
 /* 80767AB0  38 61 00 58 */	addi r3, r1, 0x58

@@ -275,42 +275,42 @@ asm static void my_DVDConvertPathToEntrynum(char const* param_0) {
 /* ############################################################################################## */
 /* 803A34A8-803A34B8 0010+00 s=2 e=0 z=0  None .data      __vt__21mDoDvdThd_toMainRam_c                                */
 SECTION_DATA static void* __vt__21mDoDvdThd_toMainRam_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21mDoDvdThd_toMainRam_cFv,
-	/* 3    */ (void*)execute__21mDoDvdThd_toMainRam_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__21mDoDvdThd_toMainRam_cFv,
+	(void*)execute__21mDoDvdThd_toMainRam_cFv,
 };
 
 /* 803A34B8-803A34C8 0010+00 s=2 e=0 z=0  None .data      __vt__25mDoDvdThd_mountXArchive_c                            */
 SECTION_DATA static void* __vt__25mDoDvdThd_mountXArchive_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25mDoDvdThd_mountXArchive_cFv,
-	/* 3    */ (void*)execute__25mDoDvdThd_mountXArchive_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25mDoDvdThd_mountXArchive_cFv,
+	(void*)execute__25mDoDvdThd_mountXArchive_cFv,
 };
 
 /* 803A34C8-803A34D8 0010+00 s=2 e=0 z=0  None .data      __vt__24mDoDvdThd_mountArchive_c                             */
 SECTION_DATA static void* __vt__24mDoDvdThd_mountArchive_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__24mDoDvdThd_mountArchive_cFv,
-	/* 3    */ (void*)execute__24mDoDvdThd_mountArchive_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__24mDoDvdThd_mountArchive_cFv,
+	(void*)execute__24mDoDvdThd_mountArchive_cFv,
 };
 
 /* 803A34D8-803A34E8 0010+00 s=2 e=0 z=0  None .data      __vt__20mDoDvdThd_callback_c                                 */
 SECTION_DATA static void* __vt__20mDoDvdThd_callback_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20mDoDvdThd_callback_cFv,
-	/* 3    */ (void*)execute__20mDoDvdThd_callback_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20mDoDvdThd_callback_cFv,
+	(void*)execute__20mDoDvdThd_callback_cFv,
 };
 
 /* 803A34E8-803A34F8 0010+00 s=2 e=0 z=0  None .data      __vt__19mDoDvdThd_command_c                                  */
 SECTION_DATA static void* __vt__19mDoDvdThd_command_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19mDoDvdThd_command_cFv,
-	/* 3    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19mDoDvdThd_command_cFv,
+	(void*)NULL,
 };
 
 /* 800158FC-80015944 0048+00 s=5 e=0 z=0  None .text      __dt__19mDoDvdThd_command_cFv                                */

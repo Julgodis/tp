@@ -206,9 +206,9 @@ lbl_80644350:
 /* 8064436C  4B C2 B6 D0 */	b cLib_addCalc2__FPffff
 lbl_80644370:
 /* 80644370  7F 43 D3 78 */	mr r3, r26
-/* 80644374  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80644378  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8064437C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80644374  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80644378  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8064437C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80644380  4B 9D 64 60 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80644384  38 7A 04 D0 */	addi r3, r26, 0x4d0
 /* 80644388  38 9A 06 AC */	addi r4, r26, 0x6ac

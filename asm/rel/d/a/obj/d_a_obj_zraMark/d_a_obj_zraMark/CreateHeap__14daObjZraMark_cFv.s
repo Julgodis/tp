@@ -9,13 +9,13 @@ lbl_80D4287C:
 /* 80D42898  3B E3 3D 88 */	addi r31, r3, l_DATA@l
 /* 80D4289C  3C 60 80 D4 */	lis r3, l_arcName@ha
 /* 80D428A0  38 63 3F A4 */	addi r3, r3, l_arcName@l
-/* 80D428A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D43FA4 */
+/* 80D428A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D428A8  88 1D 07 2D */	lbz r0, 0x72d(r29)
 /* 80D428AC  54 00 10 3A */	slwi r0, r0, 2
 /* 80D428B0  38 9F 00 58 */	addi r4, r31, 0x58
 /* 80D428B4  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80D428B8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80D428BC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80D428B8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D428BC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80D428C0  3C A5 00 02 */	addis r5, r5, 2
 /* 80D428C4  38 C0 00 80 */	li r6, 0x80
 /* 80D428C8  38 A5 C2 F8 */	addi r5, r5, -15624

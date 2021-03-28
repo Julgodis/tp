@@ -8,7 +8,7 @@ lbl_8058C014:
 lbl_8058C02C:
 /* 8058C02C  3C 80 80 59 */	lis r4, l_arcName@ha
 /* 8058C030  38 84 C3 F4 */	addi r4, r4, l_arcName@l
-/* 8058C034  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8058C3F4 */
+/* 8058C034  80 84 00 00 */	lwz r4, 0(r4)
 /* 8058C038  4B AA 0F D0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8058C03C  38 60 00 01 */	li r3, 1
 /* 8058C040  80 01 00 14 */	lwz r0, 0x14(r1)

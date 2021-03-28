@@ -63,13 +63,13 @@ lbl_807FEC34:
 /* 807FEC9C  B0 1E 06 98 */	sth r0, 0x698(r30)
 /* 807FECA0  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 807FECA4  38 63 47 28 */	addi r3, r3, l_HIO@l
-/* 807FECA8  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80804738 */
+/* 807FECA8  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 807FECAC  D0 1E 06 94 */	stfs f0, 0x694(r30)
 /* 807FECB0  48 00 01 34 */	b lbl_807FEDE4
 lbl_807FECB4:
 /* 807FECB4  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 807FECB8  38 63 47 28 */	addi r3, r3, l_HIO@l
-/* 807FECBC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80804734 */
+/* 807FECBC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807FECC0  D0 1E 06 94 */	stfs f0, 0x694(r30)
 /* 807FECC4  48 00 01 20 */	b lbl_807FEDE4
 lbl_807FECC8:

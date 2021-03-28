@@ -15,8 +15,8 @@ lbl_804C7114:
 /* 804C7148  54 80 08 3C */	slwi r0, r4, 1
 /* 804C714C  38 9F 00 4C */	addi r4, r31, 0x4c
 /* 804C7150  7C 84 02 2E */	lhzx r4, r4, r0
-/* 804C7154  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804C7158  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804C7154  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804C7158  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804C715C  3F A5 00 02 */	addis r29, r5, 2
 /* 804C7160  3B BD C2 F8 */	addi r29, r29, -15624
 /* 804C7164  7F A5 EB 78 */	mr r5, r29

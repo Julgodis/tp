@@ -13,8 +13,8 @@ lbl_80D2A740:
 /* 80D2A76C  41 82 00 44 */	beq lbl_80D2A7B0
 /* 80D2A770  38 00 00 01 */	li r0, 1
 /* 80D2A774  98 1F 06 3B */	stb r0, 0x63b(r31)
-/* 80D2A778  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2A77C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2A778  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2A77C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2A780  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80D2A784  4B 31 7C E4 */	b reset__14dEvt_control_cFv
 /* 80D2A788  38 7F 05 B4 */	addi r3, r31, 0x5b4
@@ -26,7 +26,7 @@ lbl_80D2A740:
 /* 80D2A7A0  38 00 00 06 */	li r0, 6
 /* 80D2A7A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80D2A7A8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80D2A7AC  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
+/* 80D2A7AC  98 03 00 C1 */	stb r0, 0xc1(r3)
 lbl_80D2A7B0:
 /* 80D2A7B0  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80D2A7B4  80 01 00 24 */	lwz r0, 0x24(r1)

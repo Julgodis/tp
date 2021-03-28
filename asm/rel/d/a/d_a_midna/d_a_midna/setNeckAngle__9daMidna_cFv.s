@@ -5,9 +5,9 @@ lbl_804C2EBC:
 /* 804C2EC8  39 61 00 20 */	addi r11, r1, 0x20
 /* 804C2ECC  4B E9 F3 0C */	b _savegpr_28
 /* 804C2ED0  7C 7D 1B 78 */	mr r29, r3
-/* 804C2ED4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C2ED8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C2EDC  83 E3 5D B4 */	lwz r31, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804C2ED4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C2ED8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C2EDC  83 E3 5D B4 */	lwz r31, 0x5db4(r3)
 /* 804C2EE0  38 60 00 00 */	li r3, 0
 /* 804C2EE4  A0 1D 06 34 */	lhz r0, 0x634(r29)
 /* 804C2EE8  28 00 03 A4 */	cmplwi r0, 0x3a4
@@ -28,15 +28,15 @@ lbl_804C2F08:
 /* 804C2F20  88 1D 08 4E */	lbz r0, 0x84e(r29)
 /* 804C2F24  28 00 00 02 */	cmplwi r0, 2
 /* 804C2F28  41 82 00 A8 */	beq lbl_804C2FD0
-/* 804C2F2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C2F30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C2F2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C2F30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C2F34  38 63 00 28 */	addi r3, r3, 0x28
 /* 804C2F38  38 80 00 03 */	li r4, 3
 /* 804C2F3C  4B B6 FC B0 */	b isTransformLV__21dSv_player_status_b_cCFi
 /* 804C2F40  2C 03 00 00 */	cmpwi r3, 0
 /* 804C2F44  41 82 00 24 */	beq lbl_804C2F68
-/* 804C2F48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C2F4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C2F48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C2F4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C2F50  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 804C2F54  38 80 1E 08 */	li r4, 0x1e08
 /* 804C2F58  4B B7 1A 64 */	b isEventBit__11dSv_event_cCFUs
@@ -48,7 +48,7 @@ lbl_804C2F68:
 /* 804C2F6C  40 82 00 64 */	bne lbl_804C2FD0
 /* 804C2F70  3C 60 80 4C */	lis r3, m_anmDataTable__9daMidna_c@ha
 /* 804C2F74  38 63 65 E4 */	addi r3, r3, m_anmDataTable__9daMidna_c@l
-/* 804C2F78  A0 03 00 18 */	lhz r0, 0x18(r3)	/* effective address: 804C65FC */
+/* 804C2F78  A0 03 00 18 */	lhz r0, 0x18(r3)
 /* 804C2F7C  A0 BD 05 E4 */	lhz r5, 0x5e4(r29)
 /* 804C2F80  7C 00 28 40 */	cmplw r0, r5
 /* 804C2F84  41 82 00 4C */	beq lbl_804C2FD0
@@ -68,7 +68,7 @@ lbl_804C2FB0:
 /* 804C2FB4  40 82 00 30 */	bne lbl_804C2FE4
 /* 804C2FB8  3C 60 80 4C */	lis r3, m_anmDataTable__9daMidna_c@ha
 /* 804C2FBC  38 63 65 E4 */	addi r3, r3, m_anmDataTable__9daMidna_c@l
-/* 804C2FC0  A0 63 00 90 */	lhz r3, 0x90(r3)	/* effective address: 804C6674 */
+/* 804C2FC0  A0 63 00 90 */	lhz r3, 0x90(r3)
 /* 804C2FC4  54 A0 04 3E */	clrlwi r0, r5, 0x10
 /* 804C2FC8  7C 03 00 40 */	cmplw r3, r0
 /* 804C2FCC  40 82 00 18 */	bne lbl_804C2FE4
@@ -127,7 +127,7 @@ lbl_804C307C:
 /* 804C3084  41 82 00 54 */	beq lbl_804C30D8
 /* 804C3088  3C 60 80 4C */	lis r3, m_anmDataTable__9daMidna_c@ha
 /* 804C308C  38 83 65 E4 */	addi r4, r3, m_anmDataTable__9daMidna_c@l
-/* 804C3090  A0 04 00 48 */	lhz r0, 0x48(r4)	/* effective address: 804C662C */
+/* 804C3090  A0 04 00 48 */	lhz r0, 0x48(r4)
 /* 804C3094  54 A3 04 3E */	clrlwi r3, r5, 0x10
 /* 804C3098  7C 00 18 40 */	cmplw r0, r3
 /* 804C309C  41 82 00 3C */	beq lbl_804C30D8

@@ -26,7 +26,7 @@ lbl_807205D8:
 lbl_807205EC:
 /* 807205EC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807205F0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807205F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807205F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 807205F8  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 807205FC  4B 8E BD E0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80720600  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -50,8 +50,8 @@ lbl_807205EC:
 /* 80720648  38 61 00 20 */	addi r3, r1, 0x20
 /* 8072064C  38 81 00 08 */	addi r4, r1, 8
 /* 80720650  4B B4 76 D8 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80720654  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80720658  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80720654  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80720658  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072065C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80720660  38 81 00 20 */	addi r4, r1, 0x20
 /* 80720664  4B 95 3E 3C */	b GroundCross__4cBgSFP11cBgS_GndChk

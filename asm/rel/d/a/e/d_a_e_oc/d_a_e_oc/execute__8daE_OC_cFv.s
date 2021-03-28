@@ -63,14 +63,14 @@ lbl_8073499C:
 /* 807349B0  A8 1E 06 C8 */	lha r0, 0x6c8(r30)
 /* 807349B4  2C 00 00 00 */	cmpwi r0, 0
 /* 807349B8  40 82 00 F0 */	bne lbl_80734AA8
-/* 807349BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807349C0  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 807349C4  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 807349BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807349C0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 807349C4  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 807349C8  7C 00 07 74 */	extsb r0, r0
 /* 807349CC  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 807349D0  7C 64 02 14 */	add r3, r4, r0
 /* 807349D4  83 A3 5D 74 */	lwz r29, 0x5d74(r3)
-/* 807349D8  80 64 5D AC */	lwz r3, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807349D8  80 64 5D AC */	lwz r3, 0x5dac(r4)
 /* 807349DC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 807349E0  D0 1E 06 EC */	stfs f0, 0x6ec(r30)
 /* 807349E4  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
@@ -106,8 +106,8 @@ lbl_8073499C:
 /* 80734A5C  38 7D 02 48 */	addi r3, r29, 0x248
 /* 80734A60  38 80 00 00 */	li r4, 0
 /* 80734A64  4B A2 E5 A8 */	b SetTrimSize__9dCamera_cFl
-/* 80734A68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80734A6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80734A68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80734A6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80734A70  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80734A74  4B 90 D9 F4 */	b reset__14dEvt_control_cFv
 /* 80734A78  80 1E 04 9C */	lwz r0, 0x49c(r30)
@@ -139,11 +139,11 @@ lbl_80734AA8:
 /* 80734ADC  4B C1 19 D4 */	b PSMTXCopy
 /* 80734AE0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80734AE4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80734AE8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80734AE8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80734AEC  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80734AF0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80734AF0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80734AF4  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80734AF8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80734AF8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80734AFC  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80734B00  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80734B04  D0 21 00 20 */	stfs f1, 0x20(r1)

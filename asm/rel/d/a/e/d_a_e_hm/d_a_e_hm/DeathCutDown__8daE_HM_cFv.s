@@ -7,12 +7,12 @@ lbl_806E2EA0:
 /* 806E2EB4  7C 7E 1B 78 */	mr r30, r3
 /* 806E2EB8  3C 60 80 6E */	lis r3, lit_3791@ha
 /* 806E2EBC  3B E3 59 20 */	addi r31, r3, lit_3791@l
-/* 806E2EC0  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 806E5924 */
+/* 806E2EC0  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 806E2EC4  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 806E2EC8  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 806E2ECC  38 7E 05 E8 */	addi r3, r30, 0x5e8
 /* 806E2ED0  7C 64 1B 78 */	mr r4, r3
-/* 806E2ED4  C0 3F 00 C4 */	lfs f1, 0xc4(r31)	/* effective address: 806E59E4 */
+/* 806E2ED4  C0 3F 00 C4 */	lfs f1, 0xc4(r31)
 /* 806E2ED8  4B C6 42 00 */	b PSVECScale
 /* 806E2EDC  38 00 00 01 */	li r0, 1
 /* 806E2EE0  98 1E 06 0C */	stb r0, 0x60c(r30)

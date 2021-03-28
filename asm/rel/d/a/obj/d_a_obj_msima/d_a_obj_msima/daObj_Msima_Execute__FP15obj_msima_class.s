@@ -5,9 +5,9 @@ lbl_80C9C25C:
 /* 80C9C268  39 61 00 20 */	addi r11, r1, 0x20
 /* 80C9C26C  4B 6C 5F 70 */	b _savegpr_29
 /* 80C9C270  7C 7F 1B 78 */	mr r31, r3
-/* 80C9C274  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9C278  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C9C27C  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 80C9C274  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9C278  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C9C27C  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 80C9C280  28 00 00 00 */	cmplwi r0, 0
 /* 80C9C284  41 82 00 24 */	beq lbl_80C9C2A8
 /* 80C9C288  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha

@@ -22,14 +22,14 @@ lbl_80483A5C:
 /* 80483AAC  C0 03 05 D4 */	lfs f0, 0x5d4(r3)
 /* 80483AB0  EC 01 00 2A */	fadds f0, f1, f0
 /* 80483AB4  D0 03 05 D0 */	stfs f0, 0x5d0(r3)
-/* 80483AB8  C0 45 01 20 */	lfs f2, 0x120(r5)	/* effective address: 80484E30 */
-/* 80483ABC  C0 25 01 1C */	lfs f1, 0x11c(r5)	/* effective address: 80484E2C */
+/* 80483AB8  C0 45 01 20 */	lfs f2, 0x120(r5)
+/* 80483ABC  C0 25 01 1C */	lfs f1, 0x11c(r5)
 /* 80483AC0  C0 03 05 D0 */	lfs f0, 0x5d0(r3)
 /* 80483AC4  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80483AC8  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80483ACC  D0 03 05 D8 */	stfs f0, 0x5d8(r3)
 /* 80483AD0  C0 03 05 D8 */	lfs f0, 0x5d8(r3)
-/* 80483AD4  C0 45 01 30 */	lfs f2, 0x130(r5)	/* effective address: 80484E40 */
+/* 80483AD4  C0 45 01 30 */	lfs f2, 0x130(r5)
 /* 80483AD8  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 80483ADC  40 80 00 08 */	bge lbl_80483AE4
 /* 80483AE0  48 00 00 18 */	b lbl_80483AF8

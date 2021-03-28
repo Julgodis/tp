@@ -19,7 +19,7 @@ lbl_80520988:
 /* 805209CC  EC 21 00 28 */	fsubs f1, f1, f0
 /* 805209D0  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 805209D4  D0 41 00 08 */	stfs f2, 8(r1)
-/* 805209D8  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 8052302C */
+/* 805209D8  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 805209DC  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805209E0  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 805209E4  38 61 00 08 */	addi r3, r1, 8
@@ -48,7 +48,7 @@ lbl_80520A30:
 /* 80520A3C  40 80 00 48 */	bge lbl_80520A84
 /* 80520A40  3C 60 80 45 */	lis r3, m_flower__9daGrass_c@ha
 /* 80520A44  38 63 0D B4 */	addi r3, r3, m_flower__9daGrass_c@l
-/* 80520A48  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB4 */
+/* 80520A48  80 63 00 00 */	lwz r3, 0(r3)
 /* 80520A4C  48 00 24 F5 */	bl newAnm__16dFlower_packet_cFv
 /* 80520A50  2C 03 00 00 */	cmpwi r3, 0
 /* 80520A54  41 80 00 64 */	blt lbl_80520AB8

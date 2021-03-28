@@ -22,12 +22,12 @@ lbl_80BB0E0C:
 /* 80BB0E5C  7C 09 03 A6 */	mtctr r0
 lbl_80BB0E60:
 /* 80BB0E60  7C 3F 25 2E */	stfsx f1, r31, r4
-/* 80BB0E64  C0 06 00 00 */	lfs f0, 0(r6)	/* effective address: 80430CF4 */
+/* 80BB0E64  C0 06 00 00 */	lfs f0, 0(r6)
 /* 80BB0E68  7C BF 1A 14 */	add r5, r31, r3
 /* 80BB0E6C  D0 05 00 64 */	stfs f0, 0x64(r5)
-/* 80BB0E70  C0 06 00 04 */	lfs f0, 4(r6)	/* effective address: 80430CF8 */
+/* 80BB0E70  C0 06 00 04 */	lfs f0, 4(r6)
 /* 80BB0E74  D0 05 00 68 */	stfs f0, 0x68(r5)
-/* 80BB0E78  C0 06 00 08 */	lfs f0, 8(r6)	/* effective address: 80430CFC */
+/* 80BB0E78  C0 06 00 08 */	lfs f0, 8(r6)
 /* 80BB0E7C  D0 05 00 6C */	stfs f0, 0x6c(r5)
 /* 80BB0E80  38 63 00 0C */	addi r3, r3, 0xc
 /* 80BB0E84  38 84 00 04 */	addi r4, r4, 4

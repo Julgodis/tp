@@ -8,8 +8,8 @@ lbl_80ADE5F8:
 /* 80ADE610  7C 9B 23 78 */	mr r27, r4
 /* 80ADE614  3C 60 80 AE */	lis r3, m__17daNpcShad_Param_c@ha
 /* 80ADE618  3B A3 1F DC */	addi r29, r3, m__17daNpcShad_Param_c@l
-/* 80ADE61C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADE620  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80ADE61C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADE620  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80ADE624  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80ADE628  7F 83 E3 78 */	mr r3, r28
 /* 80ADE62C  4B 56 99 30 */	b getMyNowCutName__16dEvent_manager_cFi
@@ -39,14 +39,14 @@ lbl_80ADE674:
 /* 80ADE688  4B 56 42 8C */	b setSkipProc__14dEvt_control_cFPvPFPvi_ii
 /* 80ADE68C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADE690  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADE694  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80ADE694  80 63 00 00 */	lwz r3, 0(r3)
 /* 80ADE698  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80ADE69C  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200007C@ha */
 /* 80ADE6A0  38 84 00 7C */	addi r4, r4, 0x007C /* 0x0200007C@l */
 /* 80ADE6A4  4B 7D 14 F0 */	b bgmStreamPrepare__8Z2SeqMgrFUl
 /* 80ADE6A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADE6AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADE6B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80ADE6B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80ADE6B4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80ADE6B8  4B 7D 17 60 */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 80ADE6BC  7F 43 D3 78 */	mr r3, r26
@@ -168,8 +168,8 @@ lbl_80ADE86C:
 /* 80ADE870  B0 1A 0E 18 */	sth r0, 0xe18(r26)
 /* 80ADE874  90 1A 0C A8 */	stw r0, 0xca8(r26)
 lbl_80ADE878:
-/* 80ADE878  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADE87C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ADE878  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADE87C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ADE880  38 63 09 58 */	addi r3, r3, 0x958
 /* 80ADE884  38 80 00 4F */	li r4, 0x4f
 /* 80ADE888  4B 55 5F 88 */	b onSwitch__12dSv_memBit_cFi
@@ -183,7 +183,7 @@ lbl_80ADE89C:
 /* 80ADE8A4  41 82 00 68 */	beq lbl_80ADE90C
 /* 80ADE8A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADE8AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADE8B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80ADE8B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80ADE8B4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80ADE8B8  38 80 00 1E */	li r4, 0x1e
 /* 80ADE8BC  4B 7D 16 20 */	b bgmStreamStop__8Z2SeqMgrFUl

@@ -7,13 +7,13 @@ lbl_807A11EC:
 /* 807A1200  7C 7D 1B 78 */	mr r29, r3
 /* 807A1204  3C 80 80 7A */	lis r4, lit_3903@ha
 /* 807A1208  3B C4 68 24 */	addi r30, r4, lit_3903@l
-/* 807A120C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807A1210  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 807A1214  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 807A120C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807A1210  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 807A1214  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 807A1218  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
-/* 807A121C  C0 04 04 D4 */	lfs f0, 0x4d4(r4)	/* effective address: 804004D4 */
+/* 807A121C  C0 04 04 D4 */	lfs f0, 0x4d4(r4)
 /* 807A1220  EC 21 00 28 */	fsubs f1, f1, f0
-/* 807A1224  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 807A6828 */
+/* 807A1224  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 807A1228  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807A122C  4C 40 13 82 */	cror 2, 0, 2
 /* 807A1230  40 82 00 38 */	bne lbl_807A1268

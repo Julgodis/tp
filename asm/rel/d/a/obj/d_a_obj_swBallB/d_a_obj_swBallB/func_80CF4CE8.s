@@ -47,7 +47,7 @@ lbl_80CF4D90:
 /* 80CF4D90  38 7F 05 7C */	addi r3, r31, 0x57c
 /* 80CF4D94  3C 80 80 CF */	lis r4, l_arcName@ha
 /* 80CF4D98  38 84 5A 40 */	addi r4, r4, l_arcName@l
-/* 80CF4D9C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CF5A40 */
+/* 80CF4D9C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CF4DA0  4B 33 81 1C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CF4DA4  7C 7E 1B 78 */	mr r30, r3
 /* 80CF4DA8  2C 1E 00 04 */	cmpwi r30, 4

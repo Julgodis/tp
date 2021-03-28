@@ -10,7 +10,7 @@ lbl_80D4C9FC:
 lbl_80D4CA1C:
 /* 80D4CA1C  3C 80 80 D5 */	lis r4, l_arcName@ha
 /* 80D4CA20  38 84 D2 D0 */	addi r4, r4, l_arcName@l
-/* 80D4CA24  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D4D2D0 */
+/* 80D4CA24  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D4CA28  4B 2E 04 94 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D4CA2C  7C 7F 1B 78 */	mr r31, r3
 /* 80D4CA30  2C 1F 00 04 */	cmpwi r31, 4
@@ -34,11 +34,11 @@ lbl_80D4CA5C:
 /* 80D4CA74  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 80D4CA78  3C 60 80 D5 */	lis r3, lit_3757@ha
 /* 80D4CA7C  38 83 D2 7C */	addi r4, r3, lit_3757@l
-/* 80D4CA80  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4D27C */
-/* 80D4CA84  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4D280 */
+/* 80D4CA80  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D4CA84  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D4CA88  90 61 00 08 */	stw r3, 8(r1)
 /* 80D4CA8C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D4CA90  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4D284 */
+/* 80D4CA90  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D4CA94  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D4CA98  80 7E 05 74 */	lwz r3, 0x574(r30)
 /* 80D4CA9C  38 63 00 24 */	addi r3, r3, 0x24

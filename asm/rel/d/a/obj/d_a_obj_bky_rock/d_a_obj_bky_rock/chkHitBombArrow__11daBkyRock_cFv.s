@@ -10,8 +10,8 @@ lbl_80BB7690:
 /* 80BB76B0  2C 00 00 01 */	cmpwi r0, 1
 /* 80BB76B4  40 82 00 2C */	bne lbl_80BB76E0
 /* 80BB76B8  54 64 A6 3E */	rlwinm r4, r3, 0x14, 0x18, 0x1f
-/* 80BB76BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB76C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB76BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB76C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB76C4  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80BB76C8  7C 05 07 74 */	extsb r5, r0
 /* 80BB76CC  4B 47 DC 94 */	b isSwitch__10dSv_info_cCFii

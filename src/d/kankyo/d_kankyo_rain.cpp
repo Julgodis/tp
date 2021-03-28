@@ -73,10 +73,10 @@ struct dEvent_manager_c {
 	/* 800483E8 */ void getRunEventName();
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -1328,14 +1328,14 @@ asm static void dKr_cullVtx_Set() {
 /* ############################################################################################## */
 /* 803A9BB8-803A9BD8 0020+00 s=1 e=0 z=0  None .data      @7214                                                        */
 SECTION_DATA static void* lit_7214[8] = {
-	/* 0    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x150),
-	/* 1    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x15C),
-	/* 2    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x168),
-	/* 3    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x174),
-	/* 4    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x180),
-	/* 5    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x18C),
-	/* 6    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x198),
-	/* 7    */ (void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x1A4),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x150),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x15C),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x168),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x174),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x180),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x18C),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x198),
+	(void*)(((char*)dKyr_draw_rev_moon__FPA4_fPPUc)+0x1A4),
 };
 
 /* 80452454-80452458 0004+00 s=5 e=0 z=0  None .sdata2    @7208                                                        */
@@ -1370,14 +1370,14 @@ asm static void dKyr_draw_rev_moon(f32 (* param_0)[4], u8** param_1) {
 /* ############################################################################################## */
 /* 803A9BD8-803A9BF8 0020+00 s=1 e=0 z=0  None .data      @7549                                                        */
 SECTION_DATA static void* lit_7549[8] = {
-	/* 0    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x354),
-	/* 1    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x360),
-	/* 2    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x36C),
-	/* 3    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x378),
-	/* 4    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x384),
-	/* 5    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x390),
-	/* 6    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x39C),
-	/* 7    */ (void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x3A8),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x354),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x360),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x36C),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x378),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x384),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x390),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x39C),
+	(void*)(((char*)dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc)+0x3A8),
 };
 
 /* 8045246C-80452470 0004+00 s=2 e=0 z=0  None .sdata2    @7545                                                        */

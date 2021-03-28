@@ -109,7 +109,7 @@ lbl_805EEFD0:
 /* 805EEFDC  C0 7F 00 7C */	lfs f3, 0x7c(r31)
 /* 805EEFE0  3C 80 80 5F */	lis r4, l_HIO@ha
 /* 805EEFE4  38 84 47 DC */	addi r4, r4, l_HIO@l
-/* 805EEFE8  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 805F47EC */
+/* 805EEFE8  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 805EEFEC  EC 03 00 32 */	fmuls f0, f3, f0
 /* 805EEFF0  EC 62 00 2A */	fadds f3, f2, f0
 /* 805EEFF4  4B C8 0A 48 */	b cLib_addCalc2__FPffff

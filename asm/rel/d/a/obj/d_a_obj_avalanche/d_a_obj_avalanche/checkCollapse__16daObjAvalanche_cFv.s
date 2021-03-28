@@ -5,11 +5,11 @@ lbl_80BA7440:
 /* 80BA744C  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 80BA7450  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80BA7454  7C 7E 1B 78 */	mr r30, r3
-/* 80BA7458  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BA745C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BA7460  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80BA7464  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80BA7468  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80BA7458  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BA745C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BA7460  83 E3 5D AC */	lwz r31, 0x5dac(r3)
+/* 80BA7464  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80BA7468  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80BA746C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80BA7470  40 82 00 0C */	bne lbl_80BA747C
 /* 80BA7474  38 60 00 00 */	li r3, 0
@@ -27,15 +27,15 @@ lbl_80BA749C:
 /* 80BA749C  3C 60 80 BA */	lis r3, l_check_pos@ha
 /* 80BA74A0  C4 03 7D 04 */	lfsu f0, l_check_pos@l(r3)
 /* 80BA74A4  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80BA74A8  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80BA0004 */
+/* 80BA74A8  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BA74AC  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80BA74B0  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BA0008 */
+/* 80BA74B0  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BA74B4  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80BA74B8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80BA000C */
+/* 80BA74B8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80BA74BC  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80BA74C0  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80BA0010 */
+/* 80BA74C0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80BA74C4  D0 01 00 30 */	stfs f0, 0x30(r1)
-/* 80BA74C8  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80BA0014 */
+/* 80BA74C8  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80BA74CC  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80BA74D0  38 61 00 08 */	addi r3, r1, 8
 /* 80BA74D4  38 9F 04 D0 */	addi r4, r31, 0x4d0

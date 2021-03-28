@@ -86,8 +86,8 @@ lbl_80B20358:
 /* 80B203BC  4B 84 1C 8C */	b __ptmf_cmpr
 /* 80B203C0  2C 03 00 00 */	cmpwi r3, 0
 /* 80B203C4  41 82 00 18 */	beq lbl_80B203DC
-/* 80B203C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B203CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B203C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B203CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B203D0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80B203D4  38 9F 0E 48 */	addi r4, r31, 0xe48
 /* 80B203D8  4B 74 47 D0 */	b Set__4cCcSFP8cCcD_Obj

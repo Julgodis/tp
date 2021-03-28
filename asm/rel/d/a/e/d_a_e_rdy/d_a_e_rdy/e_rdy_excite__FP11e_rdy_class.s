@@ -9,7 +9,7 @@ lbl_80773070:
 /* 8077308C  7C 7E 1B 78 */	mr r30, r3
 /* 80773090  3C 80 80 78 */	lis r4, lit_4018@ha
 /* 80773094  3B E4 9D FC */	addi r31, r4, lit_4018@l
-/* 80773098  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80779E00 */
+/* 80773098  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8077309C  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807730A0  2C 00 00 02 */	cmpwi r0, 2
 /* 807730A4  41 82 01 84 */	beq lbl_80773228
@@ -43,9 +43,9 @@ lbl_807730C8:
 /* 8077310C  3C 60 80 78 */	lis r3, S_find_pos@ha
 /* 80773110  C4 03 A8 E4 */	lfsu f0, S_find_pos@l(r3)
 /* 80773114  D0 1E 05 BC */	stfs f0, 0x5bc(r30)
-/* 80773118  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80780004 */
+/* 80773118  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8077311C  D0 1E 05 C0 */	stfs f0, 0x5c0(r30)
-/* 80773120  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80780008 */
+/* 80773120  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80773124  D0 1E 05 C4 */	stfs f0, 0x5c4(r30)
 /* 80773128  48 00 02 E0 */	b lbl_80773408
 lbl_8077312C:
@@ -54,9 +54,9 @@ lbl_8077312C:
 /* 80773134  3C 80 80 78 */	lis r4, S_find_pos@ha
 /* 80773138  C4 04 A8 E4 */	lfsu f0, S_find_pos@l(r4)
 /* 8077313C  D0 1E 0A A4 */	stfs f0, 0xaa4(r30)
-/* 80773140  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80780004 */
+/* 80773140  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80773144  D0 1E 0A A8 */	stfs f0, 0xaa8(r30)
-/* 80773148  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80780008 */
+/* 80773148  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8077314C  D0 1E 0A AC */	stfs f0, 0xaac(r30)
 /* 80773150  A8 1E 0A 60 */	lha r0, 0xa60(r30)
 /* 80773154  2C 00 00 00 */	cmpwi r0, 0
@@ -125,7 +125,7 @@ lbl_80773228:
 /* 80773244  D0 1E 0A AC */	stfs f0, 0xaac(r30)
 /* 80773248  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8077324C  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 80773250  C3 E3 00 14 */	lfs f31, 0x14(r3)	/* effective address: 8077A898 */
+/* 80773250  C3 E3 00 14 */	lfs f31, 0x14(r3)
 /* 80773254  38 61 00 0C */	addi r3, r1, 0xc
 /* 80773258  38 9E 05 BC */	addi r4, r30, 0x5bc
 /* 8077325C  38 BE 04 D0 */	addi r5, r30, 0x4d0

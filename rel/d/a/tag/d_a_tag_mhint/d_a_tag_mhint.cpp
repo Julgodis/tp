@@ -67,20 +67,21 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagMhint_Create(fopAc_ac_c*); // 2
-static void daTagMhint_Delete(daTagMhint_c*); // 2
-static void daTagMhint_Execute(daTagMhint_c*); // 2
-static bool daTagMhint_Draw(daTagMhint_c*); // 2
+void daTagMhint_Create(fopAc_ac_c*); // 2
+void daTagMhint_Delete(daTagMhint_c*); // 2
+void daTagMhint_Execute(daTagMhint_c*); // 2
+bool daTagMhint_Draw(daTagMhint_c*); // 2
 
 extern "C" void create__12daTagMhint_cFv(); // 1
-extern "C" static void daTagMhint_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagMhint_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daTagMhint_cFv(); // 1
-extern "C" static void daTagMhint_Delete__FP12daTagMhint_c(); // 1
+extern "C" void daTagMhint_Delete__FP12daTagMhint_c(); // 1
 extern "C" void eventOrder__12daTagMhint_cFv(); // 1
 extern "C" void execute__12daTagMhint_cFv(); // 1
-extern "C" static void daTagMhint_Execute__FP12daTagMhint_c(); // 1
-extern "C" static bool daTagMhint_Draw__FP12daTagMhint_c(); // 1
+extern "C" void daTagMhint_Execute__FP12daTagMhint_c(); // 1
+extern "C" bool daTagMhint_Draw__FP12daTagMhint_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daTagMhint_Method[8];
 extern "C" extern void* g_profile_Tag_Mhint[12];
 
 // 
@@ -122,15 +123,9 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
-SECTION_BSS extern u8 g_meter2_info[8];
-extern "C" extern u8 struct_80430248[28];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -159,11 +154,11 @@ asm void daTagMhint_c::create() {
 #pragma pop
 
 
-/* 805A58C8-805A58E8 0020+00 s=1 e=0 z=0  None .text      daTagMhint_Create__FP10fopAc_ac_c                            */
+/* 805A58C8-805A58E8 0020+00 s=0 e=0 z=0  None .text      daTagMhint_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMhint_Create(fopAc_ac_c* param_0) {
+asm void daTagMhint_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Create__FP10fopAc_ac_c.s"
 }
@@ -181,11 +176,11 @@ asm daTagMhint_c::~daTagMhint_c() {
 #pragma pop
 
 
-/* 805A594C-805A5974 0028+00 s=1 e=0 z=0  None .text      daTagMhint_Delete__FP12daTagMhint_c                          */
+/* 805A594C-805A5974 0028+00 s=0 e=0 z=0  None .text      daTagMhint_Delete__FP12daTagMhint_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMhint_Delete(daTagMhint_c* param_0) {
+asm void daTagMhint_Delete(daTagMhint_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Delete__FP12daTagMhint_c.s"
 }
@@ -233,49 +228,49 @@ asm void daTagMhint_c::execute() {
 #pragma pop
 
 
-/* 805A6004-805A6024 0020+00 s=1 e=0 z=0  None .text      daTagMhint_Execute__FP12daTagMhint_c                         */
+/* 805A6004-805A6024 0020+00 s=0 e=0 z=0  None .text      daTagMhint_Execute__FP12daTagMhint_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagMhint_Execute(daTagMhint_c* param_0) {
+asm void daTagMhint_Execute(daTagMhint_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_mhint/d_a_tag_mhint/daTagMhint_Execute__FP12daTagMhint_c.s"
 }
 #pragma pop
 
 
-/* 805A6024-805A602C 0008+00 s=1 e=0 z=0  None .text      daTagMhint_Draw__FP12daTagMhint_c                            */
-static bool daTagMhint_Draw(daTagMhint_c* param_0) {
+/* 805A6024-805A602C 0008+00 s=0 e=0 z=0  None .text      daTagMhint_Draw__FP12daTagMhint_c                            */
+bool daTagMhint_Draw(daTagMhint_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 805A6054-805A6074 0020+00 s=1 e=0 z=0  None .data      l_daTagMhint_Method                                          */
-SECTION_DATA static void* l_daTagMhint_Method[8] = {
-	/* 0    */ (void*)daTagMhint_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagMhint_Delete__FP12daTagMhint_c,
-	/* 2    */ (void*)daTagMhint_Execute__FP12daTagMhint_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagMhint_Draw__FP12daTagMhint_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A6054-805A6074 0020+00 s=0 e=0 z=0  None .data      l_daTagMhint_Method                                          */
+SECTION_DATA void* l_daTagMhint_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A6074-805A60A4 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Mhint                                          */
+/* 805A6074-805A60A4 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Mhint                                          */
 SECTION_DATA void* g_profile_Tag_Mhint[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02C10000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005D4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00FE0000,
-	/* 9    */ (void*)&l_daTagMhint_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02C10000,
+	(void*)NULL,
+	(void*)0x000005D4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00FE0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x030E0000,
 };
 

@@ -8,8 +8,8 @@ lbl_806A42F0:
 /* 806A4308  3C 60 80 6A */	lis r3, lit_3903@ha
 /* 806A430C  3B E3 71 C4 */	addi r31, r3, lit_3903@l
 /* 806A4310  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 806A4314  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 806A71CC */
-/* 806A4318  C0 5F 00 64 */	lfs f2, 0x64(r31)	/* effective address: 806A7228 */
+/* 806A4314  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 806A4318  C0 5F 00 64 */	lfs f2, 0x64(r31)
 /* 806A431C  4B BC B7 64 */	b cLib_addCalc0__FPfff
 /* 806A4320  38 00 00 05 */	li r0, 5
 /* 806A4324  B0 1E 06 B2 */	sth r0, 0x6b2(r30)

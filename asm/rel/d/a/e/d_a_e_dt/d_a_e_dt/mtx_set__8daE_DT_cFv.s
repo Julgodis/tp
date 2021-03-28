@@ -51,11 +51,11 @@ lbl_806B49F0:
 /* 806B4AB4  4B 95 82 E8 */	b transM__14mDoMtx_stack_cFfff
 /* 806B4AB8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806B4ABC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806B4AC0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806B4AC0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806B4AC4  D0 01 00 08 */	stfs f0, 8(r1)
-/* 806B4AC8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806B4AC8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806B4ACC  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 806B4AD0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806B4AD0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806B4AD4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 806B4AD8  38 61 00 08 */	addi r3, r1, 8
 /* 806B4ADC  4B 95 82 88 */	b transS__14mDoMtx_stack_cFRC4cXyz

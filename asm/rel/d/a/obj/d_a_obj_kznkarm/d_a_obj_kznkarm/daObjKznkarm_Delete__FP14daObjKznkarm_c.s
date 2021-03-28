@@ -8,7 +8,7 @@ lbl_80C509B0:
 /* 80C509C8  38 7F 05 6C */	addi r3, r31, 0x56c
 /* 80C509CC  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C509D0  38 84 0D C4 */	addi r4, r4, l_arcName@l
-/* 80C509D4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C50DC4 */
+/* 80C509D4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C509D8  4B 3D C6 30 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C509DC  34 1F 05 B4 */	addic. r0, r31, 0x5b4
 /* 80C509E0  41 82 00 2C */	beq lbl_80C50A0C

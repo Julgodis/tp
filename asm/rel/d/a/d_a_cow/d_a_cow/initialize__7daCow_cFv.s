@@ -67,8 +67,8 @@ lbl_80661DFC:
 /* 80661E44  64 00 08 00 */	oris r0, r0, 0x800
 /* 80661E48  90 1D 04 9C */	stw r0, 0x49c(r29)
 /* 80661E4C  38 7D 06 0C */	addi r3, r29, 0x60c
-/* 80661E50  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80661E54  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80661E50  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80661E54  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80661E58  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80661E5C  4B A1 4C 50 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80661E60  C0 1D 06 A4 */	lfs f0, 0x6a4(r29)
@@ -111,8 +111,8 @@ lbl_80661DFC:
 /* 80661EF4  88 1D 0C 5F */	lbz r0, 0xc5f(r29)
 /* 80661EF8  28 00 00 00 */	cmplwi r0, 0
 /* 80661EFC  40 82 00 30 */	bne lbl_80661F2C
-/* 80661F00  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80661F04  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80661F00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80661F04  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80661F08  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80661F0C  38 80 0A 08 */	li r4, 0xa08
 /* 80661F10  4B 9D 2A AC */	b isEventBit__11dSv_event_cCFUs
@@ -257,7 +257,7 @@ lbl_806620E8:
 /* 80662114  40 80 00 28 */	bge lbl_8066213C
 /* 80662118  3C 60 80 66 */	lis r3, data_806634D4@ha
 /* 8066211C  38 83 34 D4 */	addi r4, r3, data_806634D4@l
-/* 80662120  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806634D4 */
+/* 80662120  80 64 00 00 */	lwz r3, 0(r4)
 /* 80662124  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 80662128  40 82 00 44 */	bne lbl_8066216C
 /* 8066212C  60 60 00 01 */	ori r0, r3, 1
@@ -271,7 +271,7 @@ lbl_8066213C:
 /* 80662148  40 82 00 24 */	bne lbl_8066216C
 /* 8066214C  3C 60 80 66 */	lis r3, data_806634D4@ha
 /* 80662150  38 83 34 D4 */	addi r4, r3, data_806634D4@l
-/* 80662154  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806634D4 */
+/* 80662154  80 64 00 00 */	lwz r3, 0(r4)
 /* 80662158  54 60 07 BD */	rlwinm. r0, r3, 0, 0x1e, 0x1e
 /* 8066215C  40 82 00 10 */	bne lbl_8066216C
 /* 80662160  60 60 00 02 */	ori r0, r3, 2
@@ -318,10 +318,10 @@ lbl_806621D8:
 /* 806621F0  38 00 00 00 */	li r0, 0
 /* 806621F4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 806621F8  38 83 01 88 */	addi r4, r3, g_meter2_info@l
-/* 806621FC  98 04 00 BC */	stb r0, 0xbc(r4)	/* effective address: 80430244 */
-/* 80662200  88 64 00 BB */	lbz r3, 0xbb(r4)	/* effective address: 80430243 */
+/* 806621FC  98 04 00 BC */	stb r0, 0xbc(r4)
+/* 80662200  88 64 00 BB */	lbz r3, 0xbb(r4)
 /* 80662204  38 03 00 01 */	addi r0, r3, 1
-/* 80662208  98 04 00 BB */	stb r0, 0xbb(r4)	/* effective address: 80430243 */
+/* 80662208  98 04 00 BB */	stb r0, 0xbb(r4)
 lbl_8066220C:
 /* 8066220C  38 60 00 01 */	li r3, 1
 /* 80662210  39 61 00 80 */	addi r11, r1, 0x80

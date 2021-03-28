@@ -10,9 +10,9 @@ lbl_80C9A040:
 /* 80C9A060  A8 05 00 08 */	lha r0, 8(r5)
 /* 80C9A064  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 80C9A068  40 82 01 D8 */	bne lbl_80C9A240
-/* 80C9A06C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9A070  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C9A074  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C9A06C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9A070  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C9A074  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80C9A078  80 7D 05 74 */	lwz r3, 0x574(r29)
 /* 80C9A07C  38 63 00 24 */	addi r3, r3, 0x24
 /* 80C9A080  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
@@ -22,10 +22,10 @@ lbl_80C9A040:
 /* 80C9A090  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 80C9A094  7C 64 1B 78 */	mr r4, r3
 /* 80C9A098  4B 6A C5 18 */	b PSMTXInverse
-/* 80C9A09C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9A0A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C9A0A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80C9A0A8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80C9A09C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9A0A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C9A0A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80C9A0A8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80C9A0AC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80C9A0B0  41 82 00 E4 */	beq lbl_80C9A194
 /* 80C9A0B4  3B 20 00 00 */	li r25, 0
@@ -35,7 +35,7 @@ lbl_80C9A040:
 /* 80C9A0C4  3B 83 B2 50 */	addi r28, r3, l_maxPos@l
 /* 80C9A0C8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C9A0CC  3B 63 D4 70 */	addi r27, r3, now__14mDoMtx_stack_c@l
-/* 80C9A0D0  C3 FA 00 00 */	lfs f31, 0(r26)	/* effective address: 80C9B244 */
+/* 80C9A0D0  C3 FA 00 00 */	lfs f31, 0(r26)
 lbl_80C9A0D4:
 /* 80C9A0D4  2C 19 00 02 */	cmpwi r25, 2
 /* 80C9A0D8  41 82 00 34 */	beq lbl_80C9A10C
@@ -100,7 +100,7 @@ lbl_80C9A194:
 /* 80C9A1A4  3B 83 B2 50 */	addi r28, r3, l_maxPos@l
 /* 80C9A1A8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C9A1AC  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80C9A1B0  C3 FB 00 00 */	lfs f31, 0(r27)	/* effective address: 80C9B244 */
+/* 80C9A1B0  C3 FB 00 00 */	lfs f31, 0(r27)
 lbl_80C9A1B4:
 /* 80C9A1B4  2C 1A 00 00 */	cmpwi r26, 0
 /* 80C9A1B8  40 82 00 0C */	bne lbl_80C9A1C4

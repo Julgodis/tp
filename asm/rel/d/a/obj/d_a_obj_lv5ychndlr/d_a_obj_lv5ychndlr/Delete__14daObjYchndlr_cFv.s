@@ -8,7 +8,7 @@ lbl_80C6E3C8:
 lbl_80C6E3E0:
 /* 80C6E3E0  3C 80 80 C7 */	lis r4, l_arcName@ha
 /* 80C6E3E4  38 84 E9 F4 */	addi r4, r4, l_arcName@l
-/* 80C6E3E8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C6E9F4 */
+/* 80C6E3E8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C6E3EC  4B 3B EC 1C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C6E3F0  38 60 00 01 */	li r3, 1
 /* 80C6E3F4  80 01 00 14 */	lwz r0, 0x14(r1)

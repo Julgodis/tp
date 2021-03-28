@@ -31,8 +31,8 @@ lbl_80C010D4:
 /* 80C01148  38 7F 08 D8 */	addi r3, r31, 0x8d8
 /* 80C0114C  3C 80 80 C1 */	lis r4, m__17daObj_GrA_Param_c@ha
 /* 80C01150  38 84 FA 7C */	addi r4, r4, m__17daObj_GrA_Param_c@l
-/* 80C01154  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80C0FA98 */
-/* 80C01158  C0 44 00 18 */	lfs f2, 0x18(r4)	/* effective address: 80C0FA94 */
+/* 80C01154  C0 24 00 1C */	lfs f1, 0x1c(r4)
+/* 80C01158  C0 44 00 18 */	lfs f2, 0x18(r4)
 /* 80C0115C  4B 47 4D FC */	b SetWall__12dBgS_AcchCirFff
 /* 80C01160  38 1F 04 E4 */	addi r0, r31, 0x4e4
 /* 80C01164  90 01 00 08 */	stw r0, 8(r1)
@@ -48,7 +48,7 @@ lbl_80C010D4:
 /* 80C0118C  38 7F 08 9C */	addi r3, r31, 0x89c
 /* 80C01190  3C 80 80 C1 */	lis r4, m__17daObj_GrA_Param_c@ha
 /* 80C01194  38 84 FA 7C */	addi r4, r4, m__17daObj_GrA_Param_c@l
-/* 80C01198  C0 04 00 20 */	lfs f0, 0x20(r4)	/* effective address: 80C0FA9C */
+/* 80C01198  C0 04 00 20 */	lfs f0, 0x20(r4)
 /* 80C0119C  FC 00 00 1E */	fctiwz f0, f0
 /* 80C011A0  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80C011A4  80 81 00 14 */	lwz r4, 0x14(r1)
@@ -106,8 +106,8 @@ lbl_80C010D4:
 /* 80C01274  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80C01278  90 1F 0E 44 */	stw r0, 0xe44(r31)
 /* 80C0127C  38 7F 05 6C */	addi r3, r31, 0x56c
-/* 80C01280  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C01284  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C01280  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C01284  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C01288  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C0128C  4B 47 58 20 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C01290  80 1F 06 48 */	lwz r0, 0x648(r31)
@@ -148,7 +148,7 @@ lbl_80C01318:
 /* 80C01318  38 7E 0A DC */	addi r3, r30, 0xadc
 /* 80C0131C  7C 7F 1A 14 */	add r3, r31, r3
 /* 80C01320  38 9F 05 6C */	addi r4, r31, 0x56c
-/* 80C01324  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80C0FB98 */
+/* 80C01324  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 80C01328  FC 40 08 90 */	fmr f2, f1
 /* 80C0132C  4B 44 F9 70 */	b init__7dPaPo_cFP9dBgS_Acchff
 /* 80C01330  3B 9C 00 01 */	addi r28, r28, 1

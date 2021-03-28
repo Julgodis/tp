@@ -10,8 +10,8 @@ lbl_80556DB4:
 /* 80556DD4  3B E3 A5 B4 */	addi r31, r3, m__19daNpc_Kolin_Param_c@l
 /* 80556DD8  3B C0 00 00 */	li r30, 0
 /* 80556DDC  3B A0 FF FF */	li r29, -1
-/* 80556DE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80556DE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80556DE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80556DE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80556DE8  3B 63 4F F8 */	addi r27, r3, 0x4ff8
 /* 80556DEC  7F 63 DB 78 */	mr r3, r27
 /* 80556DF0  3C A0 80 56 */	lis r5, struct_8055A77C+0x0@ha

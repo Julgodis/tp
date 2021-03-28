@@ -10,9 +10,9 @@ lbl_807C50A4:
 /* 807C50C4  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 807C50C8  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 807C50CC  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 807C50D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C50D4  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 807C50D8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 807C50D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C50D4  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 807C50D8  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 807C50DC  38 80 00 00 */	li r4, 0
 /* 807C50E0  90 81 00 08 */	stw r4, 8(r1)
 /* 807C50E4  38 00 FF FF */	li r0, -1

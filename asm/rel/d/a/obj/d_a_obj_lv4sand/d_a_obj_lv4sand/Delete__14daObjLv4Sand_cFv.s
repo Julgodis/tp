@@ -4,7 +4,7 @@ lbl_80C6A18C:
 /* 80C6A194  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C6A198  3C 80 80 C7 */	lis r4, l_arcName@ha
 /* 80C6A19C  38 84 A4 00 */	addi r4, r4, l_arcName@l
-/* 80C6A1A0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C6A400 */
+/* 80C6A1A0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C6A1A4  38 63 05 B0 */	addi r3, r3, 0x5b0
 /* 80C6A1A8  4B 3C 2E 60 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C6A1AC  38 60 00 01 */	li r3, 1

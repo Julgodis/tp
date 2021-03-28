@@ -87,13 +87,13 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -119,10 +119,6 @@ struct cBgS_PolyInfo {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -171,10 +167,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daBubbPilar_Draw(daBubbPilar_c*); // 2
-static void daBubbPilar_Execute(daBubbPilar_c*); // 2
-static void daBubbPilar_Delete(daBubbPilar_c*); // 2
-static void daBubbPilar_Create(fopAc_ac_c*); // 2
+void daBubbPilar_Draw(daBubbPilar_c*); // 2
+void daBubbPilar_Execute(daBubbPilar_c*); // 2
+void daBubbPilar_Delete(daBubbPilar_c*); // 2
+void daBubbPilar_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daBubbPilar_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -191,15 +187,16 @@ extern "C" void initModeEffOn__13daBubbPilar_cFv(); // 1
 extern "C" void modeEffOn__13daBubbPilar_cFv(); // 1
 extern "C" void Draw__13daBubbPilar_cFv(); // 1
 extern "C" void Delete__13daBubbPilar_cFv(); // 1
-extern "C" static void daBubbPilar_Draw__FP13daBubbPilar_c(); // 1
-extern "C" static void daBubbPilar_Execute__FP13daBubbPilar_c(); // 1
-extern "C" static void daBubbPilar_Delete__FP13daBubbPilar_c(); // 1
-extern "C" static void daBubbPilar_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daBubbPilar_Draw__FP13daBubbPilar_c(); // 1
+extern "C" void daBubbPilar_Execute__FP13daBubbPilar_c(); // 1
+extern "C" void daBubbPilar_Delete__FP13daBubbPilar_c(); // 1
+extern "C" void daBubbPilar_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__17daBubbPilar_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_bubblePilar_cpp(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daBubbPilar_Method[8];
 extern "C" extern void* g_profile_Obj_awaPlar[12];
 
 // 
@@ -234,10 +231,6 @@ extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXy
 extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -266,24 +259,15 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 extern void* const pad_80BC4068[2];
@@ -316,16 +300,16 @@ SECTION_DATA static u8 mCcDCyl__13daBubbPilar_c[68] = {
 
 /* 80BC4120-80BC412C 000C+00 s=1 e=0 z=0  None .data      @3843                                                        */
 SECTION_DATA static void* lit_3843[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__13daBubbPilar_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80BC412C-80BC4138 000C+00 s=1 e=0 z=0  None .data      @3844                                                        */
 SECTION_DATA static void* lit_3844[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeEffOn__13daBubbPilar_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80BC4138-80BC4150 0018+00 s=1 e=0 z=0  None .data      mode_proc$3842                                               */
@@ -334,88 +318,88 @@ SECTION_DATA static u8 data_80BC4138[24] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80BC4150-80BC4170 0020+00 s=1 e=0 z=0  None .data      l_daBubbPilar_Method                                         */
-SECTION_DATA static void* l_daBubbPilar_Method[8] = {
-	/* 0    */ (void*)daBubbPilar_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daBubbPilar_Delete__FP13daBubbPilar_c,
-	/* 2    */ (void*)daBubbPilar_Execute__FP13daBubbPilar_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daBubbPilar_Draw__FP13daBubbPilar_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BC4150-80BC4170 0020+00 s=0 e=0 z=0  None .data      l_daBubbPilar_Method                                         */
+SECTION_DATA void* l_daBubbPilar_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BC4170-80BC41A0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_awaPlar                                        */
+/* 80BC4170-80BC41A0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_awaPlar                                        */
 SECTION_DATA void* g_profile_Obj_awaPlar[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01920000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000750,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02930000,
-	/* 9    */ (void*)&l_daBubbPilar_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01920000,
+	(void*)NULL,
+	(void*)0x00000750,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02930000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 80BC41A0-80BC41AC 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC41AC-80BC41B8 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC41B8-80BC41C4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC41C4-80BC41D0 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC41D0-80BC41F8 0028+00 s=1 e=0 z=0  None .data      __vt__13daBubbPilar_c                                        */
 SECTION_DATA static void* __vt__13daBubbPilar_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daBubbPilar_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__13daBubbPilar_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daBubbPilar_cFv,
-	/* 6    */ (void*)Delete__13daBubbPilar_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC41F8-80BC4204 000C+00 s=2 e=0 z=0  None .data      __vt__17daBubbPilar_HIO_c                                    */
 SECTION_DATA static void* __vt__17daBubbPilar_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17daBubbPilar_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC4204-80BC4210 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BC33EC-80BC3418 002C+00 s=1 e=0 z=0  None .text      __ct__17daBubbPilar_HIO_cFv                                  */
@@ -429,7 +413,7 @@ asm daBubbPilar_HIO_c::daBubbPilar_HIO_c() {
 #pragma pop
 
 
-/* 80BC3418-80BC3460 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80BC3418-80BC3460 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -483,7 +467,7 @@ SECTION_RODATA static u8 const data_80BC40AC[6 + 2 /* padding */] = {
 SECTION_DEAD char const* const stringBase_80BC40B4 = "M_Crack";
 #pragma pop
 
-/* 80BC3518-80BC35D0 00B8+00 s=1 e=0 z=0  None .text      CreateHeap__13daBubbPilar_cFv                                */
+/* 80BC3518-80BC35D0 00B8+00 s=0 e=0 z=0  None .text      CreateHeap__13daBubbPilar_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -505,7 +489,7 @@ asm void daBubbPilar_c::create() {
 #pragma pop
 
 
-/* 80BC3848-80BC3890 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80BC3848-80BC3890 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -516,7 +500,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80BC3890-80BC38D8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BC3890-80BC38D8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -527,7 +511,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BC38D8-80BC3934 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80BC38D8-80BC3934 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -548,7 +532,7 @@ static u8 l_HIO[8];
 /* 80BC422C-80BC4230 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
 static u8 data_80BC422C[4];
 
-/* 80BC3934-80BC3AB8 0184+00 s=1 e=0 z=0  None .text      Execute__13daBubbPilar_cFPPA3_A4_f                           */
+/* 80BC3934-80BC3AB8 0184+00 s=0 e=0 z=0  None .text      Execute__13daBubbPilar_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -570,7 +554,7 @@ asm void daBubbPilar_c::initModeWait() {
 #pragma pop
 
 
-/* 80BC3AC4-80BC3C74 01B0+00 s=1 e=0 z=0  None .text      modeWait__13daBubbPilar_cFv                                  */
+/* 80BC3AC4-80BC3C74 01B0+00 s=0 e=0 z=0  None .text      modeWait__13daBubbPilar_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,7 +576,7 @@ asm void daBubbPilar_c::initModeEffOn() {
 #pragma pop
 
 
-/* 80BC3C98-80BC3DB0 0118+00 s=1 e=0 z=0  None .text      modeEffOn__13daBubbPilar_cFv                                 */
+/* 80BC3C98-80BC3DB0 0118+00 s=0 e=0 z=0  None .text      modeEffOn__13daBubbPilar_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -603,7 +587,7 @@ asm void daBubbPilar_c::modeEffOn() {
 #pragma pop
 
 
-/* 80BC3DB0-80BC3E8C 00DC+00 s=1 e=0 z=0  None .text      Draw__13daBubbPilar_cFv                                      */
+/* 80BC3DB0-80BC3E8C 00DC+00 s=0 e=0 z=0  None .text      Draw__13daBubbPilar_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,7 +598,7 @@ asm void daBubbPilar_c::Draw() {
 #pragma pop
 
 
-/* 80BC3E8C-80BC3EBC 0030+00 s=1 e=0 z=0  None .text      Delete__13daBubbPilar_cFv                                    */
+/* 80BC3E8C-80BC3EBC 0030+00 s=0 e=0 z=0  None .text      Delete__13daBubbPilar_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -625,51 +609,51 @@ asm void daBubbPilar_c::Delete() {
 #pragma pop
 
 
-/* 80BC3EBC-80BC3EE8 002C+00 s=1 e=0 z=0  None .text      daBubbPilar_Draw__FP13daBubbPilar_c                          */
+/* 80BC3EBC-80BC3EE8 002C+00 s=0 e=0 z=0  None .text      daBubbPilar_Draw__FP13daBubbPilar_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBubbPilar_Draw(daBubbPilar_c* param_0) {
+asm void daBubbPilar_Draw(daBubbPilar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Draw__FP13daBubbPilar_c.s"
 }
 #pragma pop
 
 
-/* 80BC3EE8-80BC3F08 0020+00 s=1 e=0 z=0  None .text      daBubbPilar_Execute__FP13daBubbPilar_c                       */
+/* 80BC3EE8-80BC3F08 0020+00 s=0 e=0 z=0  None .text      daBubbPilar_Execute__FP13daBubbPilar_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBubbPilar_Execute(daBubbPilar_c* param_0) {
+asm void daBubbPilar_Execute(daBubbPilar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Execute__FP13daBubbPilar_c.s"
 }
 #pragma pop
 
 
-/* 80BC3F08-80BC3F28 0020+00 s=1 e=0 z=0  None .text      daBubbPilar_Delete__FP13daBubbPilar_c                        */
+/* 80BC3F08-80BC3F28 0020+00 s=0 e=0 z=0  None .text      daBubbPilar_Delete__FP13daBubbPilar_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBubbPilar_Delete(daBubbPilar_c* param_0) {
+asm void daBubbPilar_Delete(daBubbPilar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Delete__FP13daBubbPilar_c.s"
 }
 #pragma pop
 
 
-/* 80BC3F28-80BC3F48 0020+00 s=1 e=0 z=0  None .text      daBubbPilar_Create__FP10fopAc_ac_c                           */
+/* 80BC3F28-80BC3F48 0020+00 s=0 e=0 z=0  None .text      daBubbPilar_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daBubbPilar_Create(fopAc_ac_c* param_0) {
+asm void daBubbPilar_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_bubblePilar/d_a_obj_bubblePilar/daBubbPilar_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BC3F48-80BC3F90 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80BC3F48-80BC3F90 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -680,7 +664,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80BC3F90-80BC3FEC 005C+00 s=2 e=0 z=0  None .text      __dt__17daBubbPilar_HIO_cFv                                  */
+/* 80BC3F90-80BC3FEC 005C+00 s=1 e=0 z=0  None .text      __dt__17daBubbPilar_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -691,7 +675,7 @@ asm daBubbPilar_HIO_c::~daBubbPilar_HIO_c() {
 #pragma pop
 
 
-/* 80BC3FEC-80BC405C 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_bubblePilar_cpp                              */
+/* 80BC3FEC-80BC405C 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_bubblePilar_cpp                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

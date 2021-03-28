@@ -15,7 +15,7 @@ lbl_80CF32F8:
 /* 80CF332C  40 82 00 30 */	bne lbl_80CF335C
 /* 80CF3330  3C 60 80 CF */	lis r3, l_target_info_count@ha
 /* 80CF3334  38 83 45 28 */	addi r4, r3, l_target_info_count@l
-/* 80CF3338  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80CF4528 */
+/* 80CF3338  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80CF333C  2C 05 00 08 */	cmpwi r5, 8
 /* 80CF3340  40 80 00 1C */	bge lbl_80CF335C
 /* 80CF3344  54 A0 10 3A */	slwi r0, r5, 2

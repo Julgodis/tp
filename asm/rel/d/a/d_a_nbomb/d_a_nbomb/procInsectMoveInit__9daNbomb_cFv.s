@@ -6,18 +6,18 @@ lbl_804CA688:
 /* 804CA698  7C 7F 1B 78 */	mr r31, r3
 /* 804CA69C  3C 60 80 4D */	lis r3, lit_5987@ha
 /* 804CA6A0  38 83 C5 84 */	addi r4, r3, lit_5987@l
-/* 804CA6A4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804CC584 */
-/* 804CA6A8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804CC588 */
+/* 804CA6A4  80 64 00 00 */	lwz r3, 0(r4)
+/* 804CA6A8  80 04 00 04 */	lwz r0, 4(r4)
 /* 804CA6AC  90 7F 0C 38 */	stw r3, 0xc38(r31)
 /* 804CA6B0  90 1F 0C 3C */	stw r0, 0xc3c(r31)
-/* 804CA6B4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804CC58C */
+/* 804CA6B4  80 04 00 08 */	lwz r0, 8(r4)
 /* 804CA6B8  90 1F 0C 40 */	stw r0, 0xc40(r31)
 /* 804CA6BC  38 00 00 07 */	li r0, 7
 /* 804CA6C0  90 1F 00 B0 */	stw r0, 0xb0(r31)
 /* 804CA6C4  4B BD 31 C0 */	b getAlinkArcName__9daAlink_cFv
 /* 804CA6C8  38 80 00 14 */	li r4, 0x14
-/* 804CA6CC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804CA6D0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804CA6CC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804CA6D0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804CA6D4  3C A5 00 02 */	addis r5, r5, 2
 /* 804CA6D8  38 C0 00 80 */	li r6, 0x80
 /* 804CA6DC  38 A5 C2 F8 */	addi r5, r5, -15624

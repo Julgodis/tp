@@ -59,8 +59,8 @@ lbl_80AA8394:
 /* 80AA83D8  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80AA83DC  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80AA83E0  40 82 00 18 */	bne lbl_80AA83F8
-/* 80AA83E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AA83E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AA83E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AA83E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AA83EC  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80AA83F0  38 9F 08 88 */	addi r4, r31, 0x888
 /* 80AA83F4  4B 7B C7 B4 */	b Set__4cCcSFP8cCcD_Obj

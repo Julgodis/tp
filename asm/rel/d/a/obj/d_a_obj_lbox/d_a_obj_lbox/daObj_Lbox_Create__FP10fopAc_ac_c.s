@@ -114,8 +114,8 @@ lbl_80C53CD0:
 /* 80C53CF0  38 60 00 05 */	li r3, 5
 /* 80C53CF4  48 00 01 08 */	b lbl_80C53DFC
 lbl_80C53CF8:
-/* 80C53CF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C53CFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C53CF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C53CFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C53D00  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C53D04  80 9B 0A 80 */	lwz r4, 0xa80(r27)
 /* 80C53D08  7F 65 DB 78 */	mr r5, r27
@@ -135,7 +135,7 @@ lbl_80C53D20:
 /* 80C53D3C  38 00 FF FF */	li r0, -1
 /* 80C53D40  3C 60 80 C5 */	lis r3, l_HIO@ha
 /* 80C53D44  38 63 40 F8 */	addi r3, r3, l_HIO@l
-/* 80C53D48  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80C540FC */
+/* 80C53D48  98 03 00 04 */	stb r0, 4(r3)
 lbl_80C53D4C:
 /* 80C53D4C  80 7B 05 74 */	lwz r3, 0x574(r27)
 /* 80C53D50  38 03 00 24 */	addi r0, r3, 0x24

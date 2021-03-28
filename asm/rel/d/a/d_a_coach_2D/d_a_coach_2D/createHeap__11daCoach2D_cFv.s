@@ -25,9 +25,9 @@ lbl_80656A78:
 lbl_80656A90:
 /* 80656A90  3C 60 80 65 */	lis r3, l_arcName@ha
 /* 80656A94  38 63 79 F4 */	addi r3, r3, l_arcName@l
-/* 80656A98  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806579F4 */
-/* 80656A9C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80656AA0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80656A98  80 63 00 00 */	lwz r3, 0(r3)
+/* 80656A9C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80656AA0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80656AA4  3F C4 00 02 */	addis r30, r4, 2
 /* 80656AA8  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80656AAC  7F C4 F3 78 */	mr r4, r30
@@ -44,7 +44,7 @@ lbl_80656A90:
 /* 80656AD8  4B BF E6 10 */	b dPaneClass_showNullPane__FP9J2DScreen
 /* 80656ADC  3C 60 80 65 */	lis r3, l_arcName@ha
 /* 80656AE0  38 63 79 F4 */	addi r3, r3, l_arcName@l
-/* 80656AE4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806579F4 */
+/* 80656AE4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80656AE8  3C 80 80 65 */	lis r4, stringBase0@ha
 /* 80656AEC  38 84 79 54 */	addi r4, r4, stringBase0@l
 /* 80656AF0  38 84 00 27 */	addi r4, r4, 0x27

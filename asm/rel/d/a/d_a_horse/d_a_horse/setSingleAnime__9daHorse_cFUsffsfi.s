@@ -24,8 +24,8 @@ lbl_8083A20C:
 /* 8083A264  41 82 00 34 */	beq lbl_8083A298
 /* 8083A268  3C 60 80 40 */	lis r3, mDemoArcName__20dStage_roomControl_c@ha
 /* 8083A26C  38 63 61 94 */	addi r3, r3, mDemoArcName__20dStage_roomControl_c@l
-/* 8083A270  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8083A274  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8083A270  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8083A274  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8083A278  3C A5 00 02 */	addis r5, r5, 2
 /* 8083A27C  38 C0 00 80 */	li r6, 0x80
 /* 8083A280  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -37,8 +37,8 @@ lbl_8083A20C:
 lbl_8083A298:
 /* 8083A298  38 7F 00 0C */	addi r3, r31, 0xc
 /* 8083A29C  57 64 04 3E */	clrlwi r4, r27, 0x10
-/* 8083A2A0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8083A2A4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8083A2A0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8083A2A4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8083A2A8  3C A5 00 02 */	addis r5, r5, 2
 /* 8083A2AC  38 C0 00 80 */	li r6, 0x80
 /* 8083A2B0  38 A5 C2 F8 */	addi r5, r5, -15624

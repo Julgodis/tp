@@ -6,11 +6,11 @@ lbl_8056747C:
 /* 8056748C  7C 7F 1B 78 */	mr r31, r3
 /* 80567490  3C 80 80 57 */	lis r4, lit_5164@ha
 /* 80567494  38 A4 2C D4 */	addi r5, r4, lit_5164@l
-/* 80567498  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80572CD4 */
-/* 8056749C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80572CD8 */
+/* 80567498  80 85 00 00 */	lwz r4, 0(r5)
+/* 8056749C  80 05 00 04 */	lwz r0, 4(r5)
 /* 805674A0  90 81 00 08 */	stw r4, 8(r1)
 /* 805674A4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805674A8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80572CDC */
+/* 805674A8  80 05 00 08 */	lwz r0, 8(r5)
 /* 805674AC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805674B0  38 81 00 08 */	addi r4, r1, 8
 /* 805674B4  48 00 13 75 */	bl chkAction__12daNpc_Taro_cFM12daNpc_Taro_cFPCvPvPv_i
@@ -18,9 +18,9 @@ lbl_8056747C:
 /* 805674BC  40 82 00 A8 */	bne lbl_80567564
 /* 805674C0  38 00 00 00 */	li r0, 0
 /* 805674C4  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 805674C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805674CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805674D0  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 805674C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805674CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805674D0  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 805674D4  28 04 00 01 */	cmplwi r4, 1
 /* 805674D8  41 82 00 0C */	beq lbl_805674E4
 /* 805674DC  28 04 00 02 */	cmplwi r4, 2

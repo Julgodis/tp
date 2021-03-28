@@ -17,8 +17,8 @@ lbl_80C48084:
 /* 80C48088  98 1F 06 1E */	stb r0, 0x61e(r31)
 /* 80C4808C  38 00 FF FF */	li r0, -1
 /* 80C48090  90 1F 06 14 */	stw r0, 0x614(r31)
-/* 80C48094  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C48098  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C48094  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C48098  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C4809C  88 9F 05 EB */	lbz r4, 0x5eb(r31)
 /* 80C480A0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C480A4  7C 05 07 74 */	extsb r5, r0

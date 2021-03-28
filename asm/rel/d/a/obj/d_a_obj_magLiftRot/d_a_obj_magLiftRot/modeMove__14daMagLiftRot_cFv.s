@@ -7,8 +7,8 @@ lbl_80C8F4A0:
 /* 80C8F4B4  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 80C8F4B8  3C 80 80 C9 */	lis r4, l_HIO@ha
 /* 80C8F4BC  38 84 FC CC */	addi r4, r4, l_HIO@l
-/* 80C8F4C0  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80C8FCDC */
-/* 80C8F4C4  C0 44 00 0C */	lfs f2, 0xc(r4)	/* effective address: 80C8FCD8 */
+/* 80C8F4C0  C0 24 00 10 */	lfs f1, 0x10(r4)
+/* 80C8F4C4  C0 44 00 0C */	lfs f2, 0xc(r4)
 /* 80C8F4C8  4B 5E 12 78 */	b cLib_chaseF__FPfff
 /* 80C8F4CC  38 7F 04 E0 */	addi r3, r31, 0x4e0
 /* 80C8F4D0  A8 9F 05 E2 */	lha r4, 0x5e2(r31)

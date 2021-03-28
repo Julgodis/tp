@@ -7,7 +7,7 @@ lbl_80B1F030:
 /* 80B1F044  40 82 00 30 */	bne lbl_80B1F074
 /* 80B1F048  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B1F04C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80B1F050  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80B1F050  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80B1F054  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80B1F058  28 03 00 00 */	cmplwi r3, 0
 /* 80B1F05C  41 82 00 18 */	beq lbl_80B1F074

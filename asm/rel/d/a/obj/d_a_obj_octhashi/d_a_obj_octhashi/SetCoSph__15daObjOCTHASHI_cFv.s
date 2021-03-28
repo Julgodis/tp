@@ -8,8 +8,8 @@ lbl_80CA4DFC:
 /* 80CA4E14  3B 20 00 00 */	li r25, 0
 /* 80CA4E18  3B E0 00 00 */	li r31, 0
 /* 80CA4E1C  3B C0 00 00 */	li r30, 0
-/* 80CA4E20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA4E24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA4E20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA4E24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA4E28  3B 83 23 3C */	addi r28, r3, 0x233c
 /* 80CA4E2C  3C 60 80 CA */	lis r3, lit_3713@ha
 /* 80CA4E30  3B A3 64 D8 */	addi r29, r3, lit_3713@l

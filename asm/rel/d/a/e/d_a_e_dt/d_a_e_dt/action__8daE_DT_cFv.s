@@ -146,12 +146,12 @@ lbl_806B4924:
 lbl_806B4930:
 /* 806B4930  2C 1E 00 00 */	cmpwi r30, 0
 /* 806B4934  41 82 00 1C */	beq lbl_806B4950
-/* 806B4938  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B493C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806B4940  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806B4944  80 03 05 88 */	lwz r0, 0x588(r3)	/* effective address: 80406748 */
+/* 806B4938  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B493C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806B4940  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806B4944  80 03 05 88 */	lwz r0, 0x588(r3)
 /* 806B4948  64 00 02 00 */	oris r0, r0, 0x200
-/* 806B494C  90 03 05 88 */	stw r0, 0x588(r3)	/* effective address: 80406748 */
+/* 806B494C  90 03 05 88 */	stw r0, 0x588(r3)
 lbl_806B4950:
 /* 806B4950  7F E3 FB 78 */	mr r3, r31
 /* 806B4954  4B FF F1 B5 */	bl calcCamera__8daE_DT_cFv
@@ -164,8 +164,8 @@ lbl_806B4950:
 /* 806B4970  28 00 00 00 */	cmplwi r0, 0
 /* 806B4974  40 82 00 18 */	bne lbl_806B498C
 /* 806B4978  38 7F 07 C4 */	addi r3, r31, 0x7c4
-/* 806B497C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806B4980  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806B497C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806B4980  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806B4984  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806B4988  4B 9C 21 24 */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_806B498C:

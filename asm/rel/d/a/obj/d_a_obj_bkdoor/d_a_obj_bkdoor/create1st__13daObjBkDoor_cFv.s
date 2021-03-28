@@ -10,7 +10,7 @@ lbl_80578F20:
 /* 80578F40  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80578F44  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 80578F48  38 84 95 44 */	addi r4, r4, l_arcName@l
-/* 80578F4C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80579544 */
+/* 80578F4C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80578F50  4B AB 3F 6C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80578F54  7C 60 1B 78 */	mr r0, r3
 /* 80578F58  2C 00 00 04 */	cmpwi r0, 4
@@ -18,7 +18,7 @@ lbl_80578F20:
 /* 80578F60  7F E3 FB 78 */	mr r3, r31
 /* 80578F64  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 80578F68  38 84 95 44 */	addi r4, r4, l_arcName@l
-/* 80578F6C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80579544 */
+/* 80578F6C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80578F70  88 1F 05 BC */	lbz r0, 0x5bc(r31)
 /* 80578F74  54 00 10 3A */	slwi r0, r0, 2
 /* 80578F78  3C A0 80 58 */	lis r5, l_dzb@ha

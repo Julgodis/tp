@@ -2,11 +2,11 @@ lbl_80D2D7B8:
 /* 80D2D7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80D2D7BC  3C 80 80 D3 */	lis r4, lit_3645@ha
 /* 80D2D7C0  38 84 E7 70 */	addi r4, r4, lit_3645@l
-/* 80D2D7C4  C0 64 00 84 */	lfs f3, 0x84(r4)	/* effective address: 80D2E7F4 */
-/* 80D2D7C8  C0 44 00 8C */	lfs f2, 0x8c(r4)	/* effective address: 80D2E7FC */
+/* 80D2D7C4  C0 64 00 84 */	lfs f3, 0x84(r4)
+/* 80D2D7C8  C0 44 00 8C */	lfs f2, 0x8c(r4)
 /* 80D2D7CC  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80D2D7D0  54 00 56 FE */	rlwinm r0, r0, 0xa, 0x1b, 0x1f
-/* 80D2D7D4  C8 24 00 98 */	lfd f1, 0x98(r4)	/* effective address: 80D2E808 */
+/* 80D2D7D4  C8 24 00 98 */	lfd f1, 0x98(r4)
 /* 80D2D7D8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80D2D7DC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D2D7E0  3C 00 43 30 */	lis r0, 0x4330
@@ -15,7 +15,7 @@ lbl_80D2D7B8:
 /* 80D2D7EC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80D2D7F0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80D2D7F4  EC 23 00 32 */	fmuls f1, f3, f0
-/* 80D2D7F8  C0 04 00 AC */	lfs f0, 0xac(r4)	/* effective address: 80D2E81C */
+/* 80D2D7F8  C0 04 00 AC */	lfs f0, 0xac(r4)
 /* 80D2D7FC  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80D2D800  D0 03 0B 04 */	stfs f0, 0xb04(r3)
 /* 80D2D804  88 03 0B 79 */	lbz r0, 0xb79(r3)

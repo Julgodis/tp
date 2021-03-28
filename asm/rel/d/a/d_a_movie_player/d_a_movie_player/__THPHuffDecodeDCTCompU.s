@@ -11,7 +11,7 @@ lbl_80875410:
 /* 80875434  7C 00 F7 EC */	dcbz 0, r30
 /* 80875438  3C 80 80 88 */	lis r4, Udchuff@ha
 /* 8087543C  38 84 9A 44 */	addi r4, r4, Udchuff@l
-/* 80875440  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80879A44 */
+/* 80875440  80 84 00 00 */	lwz r4, 0(r4)
 /* 80875444  4B FF FD 55 */	bl __THPHuffDecodeTab
 /* 80875448  38 00 00 20 */	li r0, 0x20
 /* 8087544C  7C 1E 07 EC */	dcbz r30, r0

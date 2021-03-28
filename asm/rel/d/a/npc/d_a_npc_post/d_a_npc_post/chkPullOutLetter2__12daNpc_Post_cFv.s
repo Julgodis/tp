@@ -9,12 +9,12 @@ lbl_80AAAB2C:
 /* 80AAAB48  40 82 00 40 */	bne lbl_80AAAB88
 /* 80AAAB4C  3C 80 80 AB */	lis r4, l_motionAnmData@ha
 /* 80AAAB50  38 A4 D5 E4 */	addi r5, r4, l_motionAnmData@l
-/* 80AAAB54  80 05 00 78 */	lwz r0, 0x78(r5)	/* effective address: 80AAD65C */
+/* 80AAAB54  80 05 00 78 */	lwz r0, 0x78(r5)
 /* 80AAAB58  54 00 10 3A */	slwi r0, r0, 2
 /* 80AAAB5C  3C 80 80 AB */	lis r4, l_resNameList@ha
 /* 80AAAB60  38 84 D4 14 */	addi r4, r4, l_resNameList@l
 /* 80AAAB64  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80AAAB68  80 A5 00 70 */	lwz r5, 0x70(r5)	/* effective address: 80AAD654 */
+/* 80AAAB68  80 A5 00 70 */	lwz r5, 0x70(r5)
 /* 80AAAB6C  4B 69 D4 EC */	b getTrnsfrmAnmP__8daNpcT_cFPCci
 /* 80AAAB70  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 80AAAB74  80 04 00 08 */	lwz r0, 8(r4)

@@ -34,7 +34,7 @@ lbl_8071495C:
 /* 80714978  C3 DE 00 4C */	lfs f30, 0x4c(r30)
 /* 8071497C  3C 60 80 72 */	lis r3, target_info_count@ha
 /* 80714980  3B E3 CB 8C */	addi r31, r3, target_info_count@l
-/* 80714984  80 1F 00 00 */	lwz r0, 0(r31)	/* effective address: 8071CB8C */
+/* 80714984  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80714988  2C 00 00 00 */	cmpwi r0, 0
 /* 8071498C  41 82 01 A8 */	beq lbl_80714B34
 /* 80714990  3B A0 00 00 */	li r29, 0

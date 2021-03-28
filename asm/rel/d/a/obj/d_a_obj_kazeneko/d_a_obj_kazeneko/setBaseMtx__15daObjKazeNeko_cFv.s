@@ -35,7 +35,7 @@ lbl_80C3C988:
 /* 80C3CA0C  C0 23 D4 18 */	lfs f1, lit_3890@l(r3)
 /* 80C3CA10  3C 60 80 C4 */	lis r3, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CA14  38 63 D3 DC */	addi r3, r3, M_attr__15daObjKazeNeko_c@l
-/* 80C3CA18  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 80C3D3F8 */
+/* 80C3CA18  C0 43 00 1C */	lfs f2, 0x1c(r3)
 /* 80C3CA1C  FC 60 08 90 */	fmr f3, f1
 /* 80C3CA20  4B 3D 03 7C */	b transM__14mDoMtx_stack_cFfff
 /* 80C3CA24  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

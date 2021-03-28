@@ -19,7 +19,6 @@ extern void* const data_809EF1E0[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_grz_cpp(); // 1
 
 // 
 // Declarations:

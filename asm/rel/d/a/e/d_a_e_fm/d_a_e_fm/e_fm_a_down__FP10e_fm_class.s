@@ -50,16 +50,16 @@ lbl_804F452C:
 /* 804F4544  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 804F4548  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 804F454C  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 804F4550  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804F4554  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804F4550  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804F4554  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804F4558  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 804F455C  38 80 00 05 */	li r4, 5
 /* 804F4560  38 A0 00 0F */	li r5, 0xf
 /* 804F4564  38 C1 00 2C */	addi r6, r1, 0x2c
 /* 804F4568  4B B7 B4 BC */	b StartShock__12dVibration_cFii4cXyz
-/* 804F456C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804F4570  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804F4574  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804F456C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804F4570  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804F4574  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804F4578  38 80 00 00 */	li r4, 0
 /* 804F457C  90 81 00 08 */	stw r4, 8(r1)
 /* 804F4580  38 00 FF FF */	li r0, -1
@@ -82,7 +82,7 @@ lbl_804F452C:
 /* 804F45C4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 804F45C8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804F45CC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804F45D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804F45D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F45D4  38 81 00 20 */	addi r4, r1, 0x20
 /* 804F45D8  38 A0 00 00 */	li r5, 0
 /* 804F45DC  38 C0 00 00 */	li r6, 0
@@ -135,7 +135,7 @@ lbl_804F4678:
 lbl_804F4694:
 /* 804F4694  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804F4698  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804F469C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804F469C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F46A0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 804F46A4  38 80 00 01 */	li r4, 1
 /* 804F46A8  4B DB B8 E4 */	b changeBgmStatus__8Z2SeqMgrFl
@@ -167,7 +167,7 @@ lbl_804F46D4:
 /* 804F4708  B0 1E 07 AC */	sth r0, 0x7ac(r30)
 /* 804F470C  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804F4710  38 63 AE A4 */	addi r3, r3, l_HIO@l
-/* 804F4714  A8 03 00 9C */	lha r0, 0x9c(r3)	/* effective address: 804FAF40 */
+/* 804F4714  A8 03 00 9C */	lha r0, 0x9c(r3)
 /* 804F4718  B0 1E 07 AE */	sth r0, 0x7ae(r30)
 lbl_804F471C:
 /* 804F471C  C0 1F 00 3C */	lfs f0, 0x3c(r31)

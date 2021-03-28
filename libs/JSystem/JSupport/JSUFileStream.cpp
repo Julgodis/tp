@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JSUStreamSeekFrom {
+struct JKRFile {
 };
 
-struct JKRFile {
+struct JSUStreamSeekFrom {
 };
 
 struct JSUFileInputStream {
@@ -66,15 +66,15 @@ extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803CC518-803CC540 0024+04 s=1 e=1 z=0  None .data      __vt__18JSUFileInputStream                                   */
 SECTION_DATA void* __vt__18JSUFileInputStream[9 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18JSUFileInputStreamFv,
-	/* 3    */ (void*)getAvailable__20JSURandomInputStreamCFv,
-	/* 4    */ (void*)skip__20JSURandomInputStreamFl,
-	/* 5    */ (void*)readData__18JSUFileInputStreamFPvl,
-	/* 6    */ (void*)getLength__18JSUFileInputStreamCFv,
-	/* 7    */ (void*)getPosition__18JSUFileInputStreamCFv,
-	/* 8    */ (void*)seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18JSUFileInputStreamFv,
+	(void*)getAvailable__20JSURandomInputStreamCFv,
+	(void*)skip__20JSURandomInputStreamFl,
+	(void*)readData__18JSUFileInputStreamFPvl,
+	(void*)getLength__18JSUFileInputStreamCFv,
+	(void*)getPosition__18JSUFileInputStreamCFv,
+	(void*)seekPos__18JSUFileInputStreamFl17JSUStreamSeekFrom,
 	/* padding */
 	NULL,
 };

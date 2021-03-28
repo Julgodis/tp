@@ -50,8 +50,8 @@ lbl_80D60EA8:
 /* 80D60EBC  7F E3 FB 78 */	mr r3, r31
 /* 80D60EC0  48 00 01 85 */	bl getSwitchBit1__16daTag_ShopItem_cFv
 /* 80D60EC4  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60EC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D60ECC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D60EC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60ECC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60ED0  38 63 09 58 */	addi r3, r3, 0x958
 /* 80D60ED4  4B 2D 39 8C */	b isSwitch__12dSv_memBit_cCFi
 /* 80D60ED8  2C 03 00 00 */	cmpwi r3, 0
@@ -65,8 +65,8 @@ lbl_80D60EE0:
 /* 80D60EF4  7F E3 FB 78 */	mr r3, r31
 /* 80D60EF8  48 00 01 59 */	bl getSwitchBit2__16daTag_ShopItem_cFv
 /* 80D60EFC  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60F00  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D60F04  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D60F00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60F04  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60F08  38 63 09 58 */	addi r3, r3, 0x958
 /* 80D60F0C  4B 2D 39 54 */	b isSwitch__12dSv_memBit_cCFi
 /* 80D60F10  2C 03 00 00 */	cmpwi r3, 0
@@ -107,8 +107,8 @@ lbl_80D60F78:
 /* 80D60F8C  7F E3 FB 78 */	mr r3, r31
 /* 80D60F90  48 00 00 B5 */	bl getSwitchBit1__16daTag_ShopItem_cFv
 /* 80D60F94  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60F98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D60F9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D60F98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60F9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60FA0  38 63 09 58 */	addi r3, r3, 0x958
 /* 80D60FA4  4B 2D 38 BC */	b isSwitch__12dSv_memBit_cCFi
 /* 80D60FA8  2C 03 00 00 */	cmpwi r3, 0
@@ -125,8 +125,8 @@ lbl_80D60FBC:
 /* 80D60FD0  7F E3 FB 78 */	mr r3, r31
 /* 80D60FD4  48 00 00 7D */	bl getSwitchBit2__16daTag_ShopItem_cFv
 /* 80D60FD8  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 80D60FDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D60FE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D60FDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D60FE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D60FE4  38 63 09 58 */	addi r3, r3, 0x958
 /* 80D60FE8  4B 2D 38 78 */	b isSwitch__12dSv_memBit_cCFi
 /* 80D60FEC  2C 03 00 00 */	cmpwi r3, 0

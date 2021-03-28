@@ -8,8 +8,8 @@ lbl_809A4078:
 /* 809A4090  3C 60 80 9A */	lis r3, M_attr__12daNpcCoach_c@ha
 /* 809A4094  3B E3 4E D0 */	addi r31, r3, M_attr__12daNpcCoach_c@l
 /* 809A4098  38 7D 24 CC */	addi r3, r29, 0x24cc
-/* 809A409C  C0 3F 02 3C */	lfs f1, 0x23c(r31)	/* effective address: 809A510C */
-/* 809A40A0  C0 5F 02 40 */	lfs f2, 0x240(r31)	/* effective address: 809A5110 */
+/* 809A409C  C0 3F 02 3C */	lfs f1, 0x23c(r31)
+/* 809A40A0  C0 5F 02 40 */	lfs f2, 0x240(r31)
 /* 809A40A4  4B 6D 1E B4 */	b SetWall__12dBgS_AcchCirFff
 /* 809A40A8  38 1D 04 E4 */	addi r0, r29, 0x4e4
 /* 809A40AC  90 01 00 08 */	stw r0, 8(r1)
@@ -35,8 +35,8 @@ lbl_809A4078:
 /* 809A40FC  60 00 40 00 */	ori r0, r0, 0x4000
 /* 809A4100  90 1D 05 A0 */	stw r0, 0x5a0(r29)
 /* 809A4104  38 7D 05 74 */	addi r3, r29, 0x574
-/* 809A4108  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809A410C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809A4108  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809A410C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809A4110  3B C4 0F 38 */	addi r30, r4, 0xf38
 /* 809A4114  7F C4 F3 78 */	mr r4, r30
 /* 809A4118  4B 6D 29 94 */	b CrrPos__9dBgS_AcchFR4dBgS

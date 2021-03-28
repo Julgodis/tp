@@ -240,44 +240,44 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803C304C-803C3058 000C+00 s=1 e=0 z=0  None .data      @3942                                                        */
 SECTION_DATA static void* lit_3942[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)FileSelectOpen__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectOpen__10dScnName_cFv,
 };
 
 /* 803C3058-803C3064 000C+00 s=1 e=0 z=0  None .data      @3943                                                        */
 SECTION_DATA static void* lit_3943[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)FileSelectMain__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectMain__10dScnName_cFv,
 };
 
 /* 803C3064-803C3070 000C+00 s=1 e=0 z=0  None .data      @3944                                                        */
 SECTION_DATA static void* lit_3944[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)FileSelectClose__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)FileSelectClose__10dScnName_cFv,
 };
 
 /* 803C3070-803C307C 000C+00 s=1 e=0 z=0  None .data      @3945                                                        */
 SECTION_DATA static void* lit_3945[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)brightCheckOpen__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)brightCheckOpen__10dScnName_cFv,
 };
 
 /* 803C307C-803C3088 000C+00 s=1 e=0 z=0  None .data      @3946                                                        */
 SECTION_DATA static void* lit_3946[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)brightCheck__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)brightCheck__10dScnName_cFv,
 };
 
 /* 803C3088-803C3094 000C+00 s=1 e=0 z=0  None .data      @3947                                                        */
 SECTION_DATA static void* lit_3947[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)changeGameScene__10dScnName_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)changeGameScene__10dScnName_cFv,
 };
 
 /* 803C3094-803C30DC 0048+00 s=2 e=0 z=0  None .data      MainProc                                                     */
@@ -291,53 +291,53 @@ SECTION_DATA static u8 MainProc[72] = {
 
 /* 803C30DC-803C30F0 0014+00 s=2 e=0 z=0  None .data      l_dScnName_Method                                            */
 SECTION_DATA static void* l_dScnName_Method[5] = {
-	/* 0    */ (void*)dScnName_Create__FP11scene_class,
-	/* 1    */ (void*)dScnName_Delete__FP10dScnName_c,
-	/* 2    */ (void*)dScnName_Execute__FP10dScnName_c,
-	/* 3    */ (void*)dScnName_IsDelete__FP10dScnName_c,
-	/* 4    */ (void*)dScnName_Draw__FP10dScnName_c,
+	(void*)dScnName_Create__FP11scene_class,
+	(void*)dScnName_Delete__FP10dScnName_c,
+	(void*)dScnName_Execute__FP10dScnName_c,
+	(void*)dScnName_IsDelete__FP10dScnName_c,
+	(void*)dScnName_Draw__FP10dScnName_c,
 };
 
-/* 803C30F0-803C3118 0028+00 s=0 e=0 z=1  None .data      g_profile_NAME_SCENE                                         */
+/* 803C30F0-803C3118 0028+00 s=0 e=0 z=0  None .data      g_profile_NAME_SCENE                                         */
 SECTION_DATA void* g_profile_NAME_SCENE[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x000D0000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)0x00000424,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)&l_dScnName_Method,
-	/* 9    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000D0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x00000424,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnName_Method,
+	(void*)NULL,
 };
 
-/* 803C3118-803C3140 0028+00 s=0 e=0 z=1  None .data      g_profile_NAMEEX_SCENE                                       */
+/* 803C3118-803C3140 0028+00 s=0 e=0 z=0  None .data      g_profile_NAMEEX_SCENE                                       */
 SECTION_DATA void* g_profile_NAMEEX_SCENE[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x000E0000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)0x00000424,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)&l_dScnName_Method,
-	/* 9    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000E0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x00000424,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnName_Method,
+	(void*)NULL,
 };
 
 /* 803C3140-803C314C 000C+00 s=3 e=0 z=0  None .data      __vt__17dScnName_camera_c                                    */
 SECTION_DATA static void* __vt__17dScnName_camera_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dScnName_camera_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dScnName_camera_cFv,
 };
 
 /* 803C314C-803C3158 000C+00 s=2 e=0 z=0  None .data      __vt__9dSn_HIO_c                                             */
 SECTION_DATA static void* __vt__9dSn_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9dSn_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9dSn_HIO_cFv,
 };
 
 /* 8025878C-802587A4 0018+00 s=1 e=0 z=0  None .text      __ct__9dSn_HIO_cFv                                           */
@@ -388,8 +388,8 @@ asm static void phase_2(char* param_0) {
 /* ############################################################################################## */
 /* 80450758-80450760 0008+00 s=1 e=0 z=0  None .sdata     l_method$3851                                                */
 SECTION_SDATA static void* data_80450758[2] = {
-	/* 0    */ (void*)phase_1__FPc,
-	/* 1    */ (void*)phase_2__FPc,
+	(void*)phase_1__FPc,
+	(void*)phase_2__FPc,
 };
 
 /* 80258878-802588A0 0028+00 s=1 e=0 z=0  None .text      resLoad__FP30request_of_phase_process_classPc                */

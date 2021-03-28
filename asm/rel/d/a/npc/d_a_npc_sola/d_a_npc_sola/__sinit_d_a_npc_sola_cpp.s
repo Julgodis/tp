@@ -6,12 +6,12 @@ lbl_80AEEED8:
 /* 80AEEEE8  38 A3 F2 98 */	addi r5, r3, mCutList__12daNpc_solA_c@l
 /* 80AEEEEC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AEEEF0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AEEEF4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AEEEF8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AEEEFC  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AEF298 */
-/* 80AEEF00  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AEF29C */
-/* 80AEEF04  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AEEF08  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AEF2A0 */
+/* 80AEEEF4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AEEEF8  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AEEEFC  90 65 00 00 */	stw r3, 0(r5)
+/* 80AEEF00  90 05 00 04 */	stw r0, 4(r5)
+/* 80AEEF04  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AEEF08  90 05 00 08 */	stw r0, 8(r5)
 /* 80AEEF0C  3C 60 80 AF */	lis r3, __vt__18daNpc_solA_Param_c@ha
 /* 80AEEF10  38 03 F4 6C */	addi r0, r3, __vt__18daNpc_solA_Param_c@l
 /* 80AEEF14  3C 60 80 AF */	lis r3, l_HIO@ha

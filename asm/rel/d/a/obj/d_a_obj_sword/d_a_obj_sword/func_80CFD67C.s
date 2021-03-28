@@ -73,8 +73,8 @@ lbl_80CFD788:
 lbl_80CFD794:
 /* 80CFD794  38 00 00 28 */	li r0, 0x28
 /* 80CFD798  98 1F 09 2A */	stb r0, 0x92a(r31)
-/* 80CFD79C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFD7A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFD79C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFD7A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFD7A4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CFD7A8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CFD7AC  88 1F 04 BA */	lbz r0, 0x4ba(r31)

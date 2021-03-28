@@ -27,7 +27,7 @@ lbl_80795588:
 /* 8079558C  90 1E 05 5C */	stw r0, 0x55c(r30)
 /* 80795590  3C 60 80 7A */	lis r3, data_807989E4@ha
 /* 80795594  38 63 89 E4 */	addi r3, r3, data_807989E4@l
-/* 80795598  A8 63 00 00 */	lha r3, 0(r3)	/* effective address: 807989E4 */
+/* 80795598  A8 63 00 00 */	lha r3, 0(r3)
 /* 8079559C  A8 1E 04 DE */	lha r0, 0x4de(r30)
 /* 807955A0  7C 03 00 50 */	subf r0, r3, r0
 /* 807955A4  7C 00 07 34 */	extsh r0, r0
@@ -140,15 +140,15 @@ lbl_807956E4:
 /* 80795738  88 9E 06 80 */	lbz r4, 0x680(r30)
 /* 8079573C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80795740  41 82 00 38 */	beq lbl_80795778
-/* 80795744  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80795748  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80795744  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80795748  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8079574C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80795750  7C 05 07 74 */	extsb r5, r0
 /* 80795754  4B 89 FC 0C */	b isSwitch__10dSv_info_cCFii
 /* 80795758  2C 03 00 00 */	cmpwi r3, 0
 /* 8079575C  40 82 00 1C */	bne lbl_80795778
-/* 80795760  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80795764  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80795760  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80795764  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80795768  88 9E 06 80 */	lbz r4, 0x680(r30)
 /* 8079576C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80795770  7C 05 07 74 */	extsb r5, r0
@@ -212,15 +212,15 @@ lbl_80795840:
 /* 80795840  88 9E 06 80 */	lbz r4, 0x680(r30)
 /* 80795844  28 04 00 FF */	cmplwi r4, 0xff
 /* 80795848  41 82 00 38 */	beq lbl_80795880
-/* 8079584C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80795850  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8079584C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80795850  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80795854  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80795858  7C 05 07 74 */	extsb r5, r0
 /* 8079585C  4B 89 FB 04 */	b isSwitch__10dSv_info_cCFii
 /* 80795860  2C 03 00 00 */	cmpwi r3, 0
 /* 80795864  40 82 00 1C */	bne lbl_80795880
-/* 80795868  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079586C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80795868  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079586C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80795870  88 9E 06 80 */	lbz r4, 0x680(r30)
 /* 80795874  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80795878  7C 05 07 74 */	extsb r5, r0

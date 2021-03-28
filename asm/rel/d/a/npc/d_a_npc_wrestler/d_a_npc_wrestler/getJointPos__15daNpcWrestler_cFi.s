@@ -15,11 +15,11 @@ lbl_80B358F0:
 /* 80B35924  4B 81 0B 8C */	b PSMTXCopy
 /* 80B35928  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B3592C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B35930  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B35930  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 80B35934  D0 41 00 08 */	stfs f2, 8(r1)
-/* 80B35938  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B35938  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80B3593C  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 80B35940  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B35940  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B35944  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80B35948  D0 5F 00 00 */	stfs f2, 0(r31)
 /* 80B3594C  D0 3F 00 04 */	stfs f1, 4(r31)

@@ -7,7 +7,7 @@ lbl_8054FD20:
 /* 8054FD34  40 82 00 30 */	bne lbl_8054FD64
 /* 8054FD38  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8054FD3C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8054FD40  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 8054FD40  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 8054FD44  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 8054FD48  28 03 00 00 */	cmplwi r3, 0
 /* 8054FD4C  41 82 00 18 */	beq lbl_8054FD64

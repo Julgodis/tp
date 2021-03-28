@@ -11,9 +11,9 @@ lbl_8065ADB0:
 /* 8065ADD4  38 60 00 00 */	li r3, 0
 /* 8065ADD8  48 00 00 98 */	b lbl_8065AE70
 lbl_8065ADDC:
-/* 8065ADDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065ADE0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8065ADE4  83 DF 5D AC */	lwz r30, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8065ADDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065ADE0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8065ADE4  83 DF 5D AC */	lwz r30, 0x5dac(r31)
 /* 8065ADE8  7F C3 F3 78 */	mr r3, r30
 /* 8065ADEC  81 9E 06 28 */	lwz r12, 0x628(r30)
 /* 8065ADF0  81 8C 01 88 */	lwz r12, 0x188(r12)

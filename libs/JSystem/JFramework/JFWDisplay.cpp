@@ -11,7 +11,13 @@
 // Types:
 // 
 
+struct _GXColor {
+};
+
 struct JKRHeap {
+};
+
+struct _GXRenderModeObj {
 };
 
 struct JUTXfb {
@@ -20,12 +26,6 @@ struct JUTXfb {
 
 	/* 802E53B8 */ void createManager(JKRHeap*, JUTXfb::EXfbNumber);
 	/* 802E5424 */ void destroyManager();
-};
-
-struct _GXColor {
-};
-
-struct _GXRenderModeObj {
 };
 
 struct JFWDisplay {
@@ -324,12 +324,12 @@ SECTION_DATA static u8 clear_z_TX[64] = {
 
 /* 803C40A0-803C40C0 0018+08 s=2 e=0 z=0  None .data      __vt__10JFWDisplay                                           */
 SECTION_DATA static void* __vt__10JFWDisplay[6 + 2 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)beginRender__10JFWDisplayFv,
-	/* 3    */ (void*)endRender__10JFWDisplayFv,
-	/* 4    */ (void*)endFrame__10JFWDisplayFv,
-	/* 5    */ (void*)__dt__10JFWDisplayFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)beginRender__10JFWDisplayFv,
+	(void*)endRender__10JFWDisplayFv,
+	(void*)endFrame__10JFWDisplayFv,
+	(void*)__dt__10JFWDisplayFv,
 	/* padding */
 	NULL,
 	NULL,

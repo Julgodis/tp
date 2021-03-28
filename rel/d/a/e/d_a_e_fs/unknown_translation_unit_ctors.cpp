@@ -19,7 +19,6 @@ extern void* const data_806BE478[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_fs_cpp(); // 1
 
 // 
 // Declarations:

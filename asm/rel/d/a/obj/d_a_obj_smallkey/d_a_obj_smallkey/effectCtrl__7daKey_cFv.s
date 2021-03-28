@@ -8,9 +8,9 @@ lbl_80CDB128:
 /* 80CDB140  3C 60 80 CE */	lis r3, l_cyl_src@ha
 /* 80CDB144  3B C3 B7 F4 */	addi r30, r3, l_cyl_src@l
 /* 80CDB148  38 7F 04 D0 */	addi r3, r31, 0x4d0
-/* 80CDB14C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CDB150  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80CDB154  80 84 5D 74 */	lwz r4, 0x5d74(r4)	/* effective address: 8040BF34 */
+/* 80CDB14C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CDB150  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CDB154  80 84 5D 74 */	lwz r4, 0x5d74(r4)
 /* 80CDB158  38 84 00 D8 */	addi r4, r4, 0xd8
 /* 80CDB15C  4B 66 C2 40 */	b PSVECSquareDistance
 /* 80CDB160  C0 1E 00 44 */	lfs f0, 0x44(r30)

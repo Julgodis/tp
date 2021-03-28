@@ -23,8 +23,8 @@ lbl_80CC6464:
 /* 80CC64B8  7D 89 03 A6 */	mtctr r12
 /* 80CC64BC  4E 80 04 21 */	bctrl 
 /* 80CC64C0  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 80CC64C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC64C8  38 03 61 C0 */	addi r0, r3, struct_804061C0+0x0@l
+/* 80CC64C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC64C8  38 03 61 C0 */	addi r0, r3, g_dComIfG_gameInfo@l
 /* 80CC64CC  7C 60 22 14 */	add r3, r0, r4
 /* 80CC64D0  3C 63 00 01 */	addis r3, r3, 1
 /* 80CC64D4  38 63 61 54 */	addi r3, r3, 0x6154

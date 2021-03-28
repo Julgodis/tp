@@ -26,8 +26,8 @@ lbl_809EFDA8:
 /* 809EFDB4  3C 60 80 9F */	lis r3, stringBase0@ha
 /* 809EFDB8  38 63 2D 48 */	addi r3, r3, stringBase0@l
 /* 809EFDBC  38 80 00 11 */	li r4, 0x11
-/* 809EFDC0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809EFDC4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809EFDC0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809EFDC4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809EFDC8  3C A5 00 02 */	addis r5, r5, 2
 /* 809EFDCC  38 C0 00 80 */	li r6, 0x80
 /* 809EFDD0  38 A5 C2 F8 */	addi r5, r5, -15624

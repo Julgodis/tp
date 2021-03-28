@@ -10,14 +10,14 @@ lbl_807EA474:
 /* 807EA494  80 03 07 34 */	lwz r0, 0x734(r3)
 /* 807EA498  2C 00 00 00 */	cmpwi r0, 0
 /* 807EA49C  40 82 03 B8 */	bne lbl_807EA854
-/* 807EA4A0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807EA4A4  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 807EA4A8  88 1C 5D B0 */	lbz r0, 0x5db0(r28)	/* effective address: 8040BF70 */
+/* 807EA4A0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807EA4A4  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 807EA4A8  88 1C 5D B0 */	lbz r0, 0x5db0(r28)
 /* 807EA4AC  7C 00 07 74 */	extsb r0, r0
 /* 807EA4B0  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 807EA4B4  7C 9C 02 14 */	add r4, r28, r0
 /* 807EA4B8  83 C4 5D 74 */	lwz r30, 0x5d74(r4)
-/* 807EA4BC  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 807EA4BC  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 807EA4C0  4B 83 02 50 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807EA4C4  A8 9E 02 32 */	lha r4, 0x232(r30)
 /* 807EA4C8  3C 84 00 01 */	addis r4, r4, 1

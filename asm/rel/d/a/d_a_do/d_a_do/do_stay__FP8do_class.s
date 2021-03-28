@@ -44,7 +44,7 @@ lbl_80668DEC:
 /* 80668DF8  C0 3E 05 C8 */	lfs f1, 0x5c8(r30)
 /* 80668DFC  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 80668E00  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 80668E04  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8066F2DC */
+/* 80668E04  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80668E08  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80668E0C  40 80 02 1C */	bge lbl_80669028
 /* 80668E10  A8 7E 05 F6 */	lha r3, 0x5f6(r30)
@@ -136,7 +136,7 @@ lbl_80668F4C:
 /* 80668F50  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 80668F54  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 80668F58  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 80668F5C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8066F2DC */
+/* 80668F5C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80668F60  EC 01 00 2A */	fadds f0, f1, f0
 /* 80668F64  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80668F68  40 81 00 C0 */	ble lbl_80669028

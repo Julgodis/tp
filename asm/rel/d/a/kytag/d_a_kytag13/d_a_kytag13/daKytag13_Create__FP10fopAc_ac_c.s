@@ -48,8 +48,8 @@ lbl_808602AC:
 /* 808602B4  7C 03 03 D6 */	divw r0, r3, r0
 /* 808602B8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 808602BC  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 808602C0  98 03 0E 90 */	stb r0, 0xe90(r3)	/* effective address: 8042D8E4 */
-/* 808602C4  88 03 0E 88 */	lbz r0, 0xe88(r3)	/* effective address: 8042D8DC */
+/* 808602C0  98 03 0E 90 */	stb r0, 0xe90(r3)
+/* 808602C4  88 03 0E 88 */	lbz r0, 0xe88(r3)
 /* 808602C8  28 00 00 00 */	cmplwi r0, 0
 /* 808602CC  41 82 00 3C */	beq lbl_80860308
 /* 808602D0  38 C0 00 00 */	li r6, 0

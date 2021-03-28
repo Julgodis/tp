@@ -14,7 +14,7 @@ lbl_80BEF278:
 /* 80BEF2A8  7D 1B 43 79 */	or. r27, r8, r8
 /* 80BEF2AC  3C 60 80 BF */	lis r3, M_attr__12daObjFlag3_c@ha
 /* 80BEF2B0  3B E3 04 58 */	addi r31, r3, M_attr__12daObjFlag3_c@l
-/* 80BEF2B4  C0 1F 00 B0 */	lfs f0, 0xb0(r31)	/* effective address: 80BF0508 */
+/* 80BEF2B4  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
 /* 80BEF2B8  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80BEF2BC  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 80BEF2C0  D0 01 00 50 */	stfs f0, 0x50(r1)
@@ -25,9 +25,9 @@ lbl_80BEF2D0:
 /* 80BEF2D0  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 80BEF2D4  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 80BEF2D8  D0 18 00 00 */	stfs f0, 0(r24)
-/* 80BEF2DC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 80BEF2DC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BEF2E0  D0 18 00 04 */	stfs f0, 4(r24)
-/* 80BEF2E4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80BEF2E4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BEF2E8  D0 18 00 08 */	stfs f0, 8(r24)
 /* 80BEF2EC  48 00 03 BC */	b lbl_80BEF6A8
 lbl_80BEF2F0:

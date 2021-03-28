@@ -16,8 +16,8 @@ lbl_80D14BD4:
 /* 80D14C0C  3B E0 00 00 */	li r31, 0
 /* 80D14C10  1C 1B 00 78 */	mulli r0, r27, 0x78
 /* 80D14C14  7F BA 02 14 */	add r29, r26, r0
-/* 80D14C18  C3 DE 00 04 */	lfs f30, 4(r30)	/* effective address: 80D155EC */
-/* 80D14C1C  C3 FE 00 84 */	lfs f31, 0x84(r30)	/* effective address: 80D1566C */
+/* 80D14C18  C3 DE 00 04 */	lfs f30, 4(r30)
+/* 80D14C1C  C3 FE 00 84 */	lfs f31, 0x84(r30)
 /* 80D14C20  48 00 00 A8 */	b lbl_80D14CC8
 lbl_80D14C24:
 /* 80D14C24  7C 7A FA 14 */	add r3, r26, r31

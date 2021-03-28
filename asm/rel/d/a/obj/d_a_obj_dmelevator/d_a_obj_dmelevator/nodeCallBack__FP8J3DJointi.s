@@ -9,7 +9,7 @@ lbl_80BDDCA0:
 /* 80BDDCBC  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 80BDDCC0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BDDCC4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80BDDCC8  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 80BDDCC8  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 80BDDCCC  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 80BDDCD0  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80BDDCD4  80 03 00 0C */	lwz r0, 0xc(r3)

@@ -16,11 +16,11 @@ lbl_80A882F4:
 /* 80A8832C  4B FF BA ED */	bl __register_global_object
 /* 80A88330  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A88334  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A88338  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A8833C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A88338  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A8833C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A88340  90 7F 01 7C */	stw r3, 0x17c(r31)
 /* 80A88344  90 1F 01 80 */	stw r0, 0x180(r31)
-/* 80A88348  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A88348  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A8834C  90 1F 01 84 */	stw r0, 0x184(r31)
 /* 80A88350  38 9F 01 7C */	addi r4, r31, 0x17c
 /* 80A88354  80 7F 01 4C */	lwz r3, 0x14c(r31)

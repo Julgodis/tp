@@ -19,7 +19,7 @@ lbl_8059E26C:
 /* 8059E26C  38 7E 05 68 */	addi r3, r30, 0x568
 /* 8059E270  3C 80 80 5A */	lis r4, l_arcName@ha
 /* 8059E274  38 84 E8 58 */	addi r4, r4, l_arcName@l
-/* 8059E278  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8059E858 */
+/* 8059E278  80 84 00 00 */	lwz r4, 0(r4)
 /* 8059E27C  4B A8 EC 40 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8059E280  7C 7F 1B 78 */	mr r31, r3
 /* 8059E284  2C 1F 00 04 */	cmpwi r31, 4

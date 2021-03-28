@@ -7,7 +7,7 @@ lbl_80D100B4:
 /* 80D100C8  40 82 00 24 */	bne lbl_80D100EC
 /* 80D100CC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D100D0  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80D100D4  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80D100D4  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80D100D8  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80D100DC  28 03 00 00 */	cmplwi r3, 0
 /* 80D100E0  41 82 00 0C */	beq lbl_80D100EC

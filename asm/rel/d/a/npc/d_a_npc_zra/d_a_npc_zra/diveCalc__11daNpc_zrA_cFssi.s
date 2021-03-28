@@ -11,11 +11,11 @@ lbl_80B83FA4:
 /* 80B83FC8  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B83FCC  3B C3 C4 58 */	addi r30, r3, m__17daNpc_zrA_Param_c@l
 /* 80B83FD0  38 7E 00 00 */	addi r3, r30, 0
-/* 80B83FD4  C0 23 00 84 */	lfs f1, 0x84(r3)	/* effective address: 80B8C4DC */
+/* 80B83FD4  C0 23 00 84 */	lfs f1, 0x84(r3)
 /* 80B83FD8  38 7F 15 6C */	addi r3, r31, 0x156c
-/* 80B83FDC  C0 1E 00 F0 */	lfs f0, 0xf0(r30)	/* effective address: 80B8C548 */
+/* 80B83FDC  C0 1E 00 F0 */	lfs f0, 0xf0(r30)
 /* 80B83FE0  EC 41 00 28 */	fsubs f2, f1, f0
-/* 80B83FE4  C0 1E 07 C0 */	lfs f0, 0x7c0(r30)	/* effective address: 80B8CC18 */
+/* 80B83FE4  C0 1E 07 C0 */	lfs f0, 0x7c0(r30)
 /* 80B83FE8  EC 42 00 24 */	fdivs f2, f2, f0
 /* 80B83FEC  4B 6E C7 54 */	b cLib_chaseF__FPfff
 /* 80B83FF0  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)

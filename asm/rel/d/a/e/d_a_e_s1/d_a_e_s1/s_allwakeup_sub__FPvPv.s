@@ -20,9 +20,9 @@ lbl_8077CAD0:
 /* 8077CB18  40 82 00 34 */	bne lbl_8077CB4C
 /* 8077CB1C  38 00 00 0C */	li r0, 0xc
 /* 8077CB20  B0 1E 06 98 */	sth r0, 0x698(r30)
-/* 8077CB24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077CB28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8077CB2C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8077CB24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077CB28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8077CB2C  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8077CB30  28 00 00 00 */	cmplwi r0, 0
 /* 8077CB34  41 82 00 10 */	beq lbl_8077CB44
 /* 8077CB38  38 00 00 32 */	li r0, 0x32

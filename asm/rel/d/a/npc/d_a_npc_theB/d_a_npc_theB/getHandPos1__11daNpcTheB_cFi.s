@@ -18,8 +18,8 @@ lbl_80AFD534:
 /* 80AFD544  38 00 00 03 */	li r0, 3
 /* 80AFD548  7C 09 03 A6 */	mtctr r0
 lbl_80AFD54C:
-/* 80AFD54C  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80B00E00 */
-/* 80AFD550  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80B00E04 */
+/* 80AFD54C  80 64 00 04 */	lwz r3, 4(r4)
+/* 80AFD550  84 04 00 08 */	lwzu r0, 8(r4)
 /* 80AFD554  90 66 00 04 */	stw r3, 4(r6)
 /* 80AFD558  94 06 00 08 */	stwu r0, 8(r6)
 /* 80AFD55C  42 00 FF F0 */	bdnz lbl_80AFD54C
@@ -45,11 +45,11 @@ lbl_80AFD570:
 /* 80AFD5A8  4B 50 F7 F4 */	b transM__14mDoMtx_stack_cFfff
 /* 80AFD5AC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80AFD5B0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80AFD5B4  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 80AFD5B4  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 80AFD5B8  D0 41 00 08 */	stfs f2, 8(r1)
-/* 80AFD5BC  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80AFD5BC  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80AFD5C0  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 80AFD5C4  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80AFD5C4  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80AFD5C8  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80AFD5CC  D0 5F 00 00 */	stfs f2, 0(r31)
 /* 80AFD5D0  D0 3F 00 04 */	stfs f1, 4(r31)

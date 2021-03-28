@@ -15,7 +15,7 @@ lbl_804E5CD0:
 /* 804E5D04  41 82 00 30 */	beq lbl_804E5D34
 /* 804E5D08  3C 60 80 4F */	lis r3, target_info_count@ha
 /* 804E5D0C  38 83 EF 8C */	addi r4, r3, target_info_count@l
-/* 804E5D10  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 804EEF8C */
+/* 804E5D10  80 A4 00 00 */	lwz r5, 0(r4)
 /* 804E5D14  2C 05 00 0A */	cmpwi r5, 0xa
 /* 804E5D18  40 80 00 1C */	bge lbl_804E5D34
 /* 804E5D1C  54 A0 10 3A */	slwi r0, r5, 2

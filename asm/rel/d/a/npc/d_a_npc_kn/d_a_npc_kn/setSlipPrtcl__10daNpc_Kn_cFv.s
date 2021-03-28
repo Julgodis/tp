@@ -15,11 +15,11 @@ lbl_80A37430:
 /* 80A37464  4B 90 F0 4C */	b PSMTXCopy
 /* 80A37468  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A3746C  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80A37470  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 803DD47C */
+/* 80A37470  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 80A37474  D0 1F 15 E4 */	stfs f0, 0x15e4(r31)
-/* 80A37478  C0 1E 00 1C */	lfs f0, 0x1c(r30)	/* effective address: 803DD48C */
+/* 80A37478  C0 1E 00 1C */	lfs f0, 0x1c(r30)
 /* 80A3747C  D0 1F 15 E8 */	stfs f0, 0x15e8(r31)
-/* 80A37480  C0 1E 00 2C */	lfs f0, 0x2c(r30)	/* effective address: 803DD49C */
+/* 80A37480  C0 1E 00 2C */	lfs f0, 0x2c(r30)
 /* 80A37484  D0 1F 15 EC */	stfs f0, 0x15ec(r31)
 /* 80A37488  C0 3F 15 E8 */	lfs f1, 0x15e8(r31)
 /* 80A3748C  3C 60 80 A4 */	lis r3, lit_4326@ha

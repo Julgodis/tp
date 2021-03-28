@@ -7,8 +7,8 @@ lbl_8045A2F0:
 /* 8045A304  7C 7B 1B 78 */	mr r27, r3
 /* 8045A308  3B 80 00 00 */	li r28, 0
 /* 8045A30C  3B 40 00 00 */	li r26, 0
-/* 8045A310  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045A314  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045A310  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045A314  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045A318  3F C3 00 02 */	addis r30, r3, 2
 /* 8045A31C  3B DE C2 F8 */	addi r30, r30, -15624
 lbl_8045A320:

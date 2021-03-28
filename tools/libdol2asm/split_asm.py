@@ -49,15 +49,16 @@ demangle.test()
 sys.exit(1)
 """
 
+
 class Dol2AsmSplitter:
 
-    def __init__(self, 
-        debug_logging, 
-        game_path, lib_path, src_path, 
-        asm_path, rel_path, inc_path, 
-        mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen, 
-        process_count, select_modules,
-        select_tu, select_asm):
+    def __init__(self,
+                 debug_logging,
+                 game_path, lib_path, src_path,
+                 asm_path, rel_path, inc_path,
+                 mk_gen, cpp_gen, asm_gen, sym_gen, rel_gen,
+                 process_count, select_modules,
+                 select_tu, select_asm):
         self.debug_logging = debug_logging
         self.game_path = game_path
         self.lib_path = lib_path
@@ -308,31 +309,26 @@ class Dol2AsmSplitter:
                             if len(symbol.data) % 4 != 0:
                                 continue
 
-                            count = len(symbol.data) // 4
-                            values = list(struct.unpack(
-                                ">" + "I" * count, symbol.data))
+                            values = Integer.u32_from(symbol.data)
                             is_symbols = [
-                                not not self.symbol_table[module.index, x] for x in values]
+                                self.symbol_table.has_symbol(module.index, x) 
+                                for x in values
+                            ]
 
                             if not any(is_symbols):
                                 relocations = section.relocations
                                 is_relocations = [
                                     x in relocations
-                                    for x in range(symbol.start,  # - section.addr,
-                                                   symbol.end,  # - section.addr,
-                                                   4)
+                                    for x in range(symbol.start, symbol.end, 4)
                                 ]
                                 if not any(is_relocations):
                                     continue
 
-                            values = Integer.u32_from(symbol.data)
-                            padding_values = Integer.u32_from(
-                                symbol.padding_data)
                             new_symbol = ReferenceArray.create(
                                 symbol.identifier,
                                 symbol.addr,
-                                values,
-                                padding_values)
+                                symbol.data,
+                                symbol.padding_data)
 
                             new_symbol.set_mlts(
                                 symbol._module, symbol._library, symbol._translation_unit, symbol._section)
@@ -464,7 +460,7 @@ class Dol2AsmSplitter:
                             if isinstance(symbol, ASMFunction):
                                 replace_offset = section.addr + relocation.offset
                                 key_addr, replace_symbol = self.symbol_table[-1,
-                                                                      relocation]
+                                                                             relocation]
                                 assert replace_symbol
 
                                 if not librel.apply_relocation(
@@ -485,6 +481,8 @@ class Dol2AsmSplitter:
         entrypoint = self.symbol_table[0, settings.ENTRY_POINT]
         entrypoint.add_reference(None)
 
+        valid_range = AddressRange(0x00000000, 0xFFFFFFFF)
+
         # these symbols are required to be external, because otherwise the linker will not find them
         __fini_cpp_exceptions = self.symbol_table[0, 0x8036283C]
         __init_cpp_exceptions = self.symbol_table[0, 0x80362870]
@@ -504,25 +502,19 @@ class Dol2AsmSplitter:
             task = progress.add_task(
                 f"processing...", total=total_rc_step_count)
             for module in self.modules:
+                if not module.index in self.gen_modules:
+                    continue
                 for lib in module.libraries.values():
                     for tu in lib.translation_units.values():
                         count = 0
                         for section in tu.sections.values():
                             for symbol in section.symbols:
-                                refs = set(symbol.internal_references(
-                                    self.context, self.symbol_table))
-                                relocs = set(symbol.relocation_symbols(
-                                    self.context, self.symbol_table, section))
-                                for reference in (refs | relocs):
+                                symbol.gather_references(self.context, valid_range)
+                                references = self.symbol_table.all(symbol.references)
+                                for reference in references:
                                     reference.add_reference(symbol)
-                                if isinstance(symbol, ASMFunction):
-                                    sda_hack_symbols = self.symbol_table.resolve_set(
-                                        symbol.sda_hack_references)
-                                    for reference in sda_hack_symbols:
-                                        reference.add_sda_hack(symbol)
                             count += len(section.symbols)
                         progress.update(task, advance=count)
-
 
     def library_paths(self):
         print(f"{self.step_count:2} Determine library paths")
@@ -610,8 +602,8 @@ class Dol2AsmSplitter:
         start_time = time.time()
         self.generate_symbol_table()
         self.combine_symbols()
-        self.search_for_reference_arrays()
         self.apply_relocations()
+        self.search_for_reference_arrays()
         self.resolve_symbols()
         self.reference_count()
         self.name_symbols()

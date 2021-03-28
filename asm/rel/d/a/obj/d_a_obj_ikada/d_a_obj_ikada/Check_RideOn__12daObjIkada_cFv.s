@@ -11,9 +11,9 @@ lbl_80C26A20:
 /* 80C26A44  7C 7C 1B 78 */	mr r28, r3
 /* 80C26A48  3C 60 80 C2 */	lis r3, lit_3668@ha
 /* 80C26A4C  3B E3 74 F0 */	addi r31, r3, lit_3668@l
-/* 80C26A50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C26A54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C26A58  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C26A50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C26A54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C26A58  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80C26A5C  3B 5E 04 D0 */	addi r26, r30, 0x4d0
 /* 80C26A60  3B A0 00 00 */	li r29, 0
 /* 80C26A64  38 00 00 01 */	li r0, 1

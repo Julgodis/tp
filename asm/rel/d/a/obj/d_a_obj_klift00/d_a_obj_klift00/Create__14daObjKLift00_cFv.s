@@ -24,15 +24,15 @@ lbl_8058B77C:
 /* 8058B7D4  80 9E 06 18 */	lwz r4, 0x618(r30)
 /* 8058B7D8  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 8058B7DC  38 A3 0C F4 */	addi r5, r3, Zero__4cXyz@l
-/* 8058B7E0  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80430CF4 */
+/* 8058B7E0  C0 05 00 00 */	lfs f0, 0(r5)
 /* 8058B7E4  D0 04 00 00 */	stfs f0, 0(r4)
-/* 8058B7E8  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80430CF8 */
+/* 8058B7E8  C0 05 00 04 */	lfs f0, 4(r5)
 /* 8058B7EC  D0 04 00 04 */	stfs f0, 4(r4)
-/* 8058B7F0  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80430CFC */
+/* 8058B7F0  C0 05 00 08 */	lfs f0, 8(r5)
 /* 8058B7F4  D0 04 00 08 */	stfs f0, 8(r4)
 /* 8058B7F8  38 C0 00 01 */	li r6, 1
 /* 8058B7FC  38 60 00 24 */	li r3, 0x24
-/* 8058B800  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 8058C3AC */
+/* 8058B800  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 8058B804  48 00 00 60 */	b lbl_8058B864
 lbl_8058B808:
 /* 8058B808  80 1E 06 18 */	lwz r0, 0x618(r30)

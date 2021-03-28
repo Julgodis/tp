@@ -7,14 +7,14 @@ lbl_805D203C:
 /* 805D2050  7C 7D 1B 78 */	mr r29, r3
 /* 805D2054  3C 60 80 5E */	lis r3, lit_3932@ha
 /* 805D2058  3B E3 CA 54 */	addi r31, r3, lit_3932@l
-/* 805D205C  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 805DCA5C */
+/* 805D205C  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 805D2060  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 805D2064  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 805D2068  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 805D206C  38 7D 07 D4 */	addi r3, r29, 0x7d4
-/* 805D2070  C0 3F 02 F0 */	lfs f1, 0x2f0(r31)	/* effective address: 805DCD44 */
-/* 805D2074  C0 5F 00 7C */	lfs f2, 0x7c(r31)	/* effective address: 805DCAD0 */
-/* 805D2078  C0 7F 02 B0 */	lfs f3, 0x2b0(r31)	/* effective address: 805DCD04 */
+/* 805D2070  C0 3F 02 F0 */	lfs f1, 0x2f0(r31)
+/* 805D2074  C0 5F 00 7C */	lfs f2, 0x7c(r31)
+/* 805D2078  C0 7F 02 B0 */	lfs f3, 0x2b0(r31)
 /* 805D207C  4B C9 D9 C0 */	b cLib_addCalc2__FPffff
 /* 805D2080  C0 1D 07 D4 */	lfs f0, 0x7d4(r29)
 /* 805D2084  FC 00 00 1E */	fctiwz f0, f0
@@ -25,12 +25,12 @@ lbl_805D203C:
 /* 805D2098  3B C0 00 00 */	li r30, 0
 /* 805D209C  3B 80 00 00 */	li r28, 0
 /* 805D20A0  3B 60 00 00 */	li r27, 0
-/* 805D20A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D20A8  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
+/* 805D20A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D20A8  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 /* 805D20AC  3C 60 80 5E */	lis r3, data_805DD5E8@ha
 /* 805D20B0  3B 23 D5 E8 */	addi r25, r3, data_805DD5E8@l
 lbl_805D20B4:
-/* 805D20B4  80 78 5D 3C */	lwz r3, 0x5d3c(r24)	/* effective address: 8040BEFC */
+/* 805D20B4  80 78 5D 3C */	lwz r3, 0x5d3c(r24)
 /* 805D20B8  38 00 00 FF */	li r0, 0xff
 /* 805D20BC  90 01 00 08 */	stw r0, 8(r1)
 /* 805D20C0  38 80 00 00 */	li r4, 0
@@ -81,7 +81,7 @@ lbl_805D2154:
 /* 805D2170  90 01 00 20 */	stw r0, 0x20(r1)
 /* 805D2174  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805D2178  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805D217C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805D217C  80 63 00 00 */	lwz r3, 0(r3)
 /* 805D2180  38 81 00 20 */	addi r4, r1, 0x20
 /* 805D2184  38 BD 07 54 */	addi r5, r29, 0x754
 /* 805D2188  38 C0 00 00 */	li r6, 0

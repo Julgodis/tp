@@ -7,9 +7,9 @@ lbl_8081DE84:
 /* 8081DE98  7C 7D 1B 78 */	mr r29, r3
 /* 8081DE9C  3C 80 80 82 */	lis r4, lit_3791@ha
 /* 8081DEA0  3B E4 18 AC */	addi r31, r4, lit_3791@l
-/* 8081DEA4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8081DEA8  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 8081DEAC  88 05 5D B0 */	lbz r0, 0x5db0(r5)	/* effective address: 8040BF70 */
+/* 8081DEA4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081DEA8  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 8081DEAC  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 8081DEB0  7C 00 07 74 */	extsb r0, r0
 /* 8081DEB4  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8081DEB8  7C 85 02 14 */	add r4, r5, r0
@@ -43,12 +43,12 @@ lbl_8081DEF4:
 /* 8081DF20  38 65 07 F0 */	addi r3, r5, 0x7f0
 /* 8081DF24  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8081DF28  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8081DF2C  A0 84 00 12 */	lhz r4, 0x12(r4)	/* effective address: 803A729A */
+/* 8081DF2C  A0 84 00 12 */	lhz r4, 0x12(r4)
 /* 8081DF30  4B 81 6A 8C */	b isEventBit__11dSv_event_cCFUs
 /* 8081DF34  2C 03 00 00 */	cmpwi r3, 0
 /* 8081DF38  41 82 06 64 */	beq lbl_8081E59C
-/* 8081DF3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081DF40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8081DF3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081DF40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8081DF44  3B 83 09 58 */	addi r28, r3, 0x958
 /* 8081DF48  7F 83 E3 78 */	mr r3, r28
 /* 8081DF4C  38 80 00 11 */	li r4, 0x11
@@ -65,13 +65,13 @@ lbl_8081DEF4:
 /* 8081DF78  98 1D 07 64 */	stb r0, 0x764(r29)
 /* 8081DF7C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081DF80  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081DF84  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081DF84  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081DF88  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8081DF8C  38 80 00 00 */	li r4, 0
 /* 8081DF90  4B A9 61 D4 */	b setBattleBgmOff__8Z2SeqMgrFb
 /* 8081DF94  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081DF98  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081DF9C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081DF9C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081DFA0  38 63 04 F4 */	addi r3, r3, 0x4f4
 /* 8081DFA4  38 80 00 01 */	li r4, 1
 /* 8081DFA8  38 A0 0B B8 */	li r5, 0xbb8
@@ -95,13 +95,13 @@ lbl_8081DFC4:
 /* 8081DFEC  4B FF 8A 91 */	bl setActionMode__9daE_YMB_cFii
 /* 8081DFF0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081DFF4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081DFF8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081DFF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081DFFC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8081E000  38 80 00 00 */	li r4, 0
 /* 8081E004  4B A9 61 60 */	b setBattleBgmOff__8Z2SeqMgrFb
 /* 8081E008  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081E00C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081E010  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081E010  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081E014  38 63 04 F4 */	addi r3, r3, 0x4f4
 /* 8081E018  38 80 00 01 */	li r4, 1
 /* 8081E01C  38 A0 0B B8 */	li r5, 0xbb8
@@ -123,7 +123,7 @@ lbl_8081E030:
 /* 8081E058  4B FF 8A 25 */	bl setActionMode__9daE_YMB_cFii
 /* 8081E05C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081E060  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081E064  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081E064  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081E068  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8081E06C  38 80 00 01 */	li r4, 1
 /* 8081E070  4B A9 60 F4 */	b setBattleBgmOff__8Z2SeqMgrFb
@@ -186,17 +186,17 @@ lbl_8081E0D0:
 /* 8081E148  B0 1D 06 E4 */	sth r0, 0x6e4(r29)
 /* 8081E14C  38 00 00 00 */	li r0, 0
 /* 8081E150  98 1D 07 10 */	stb r0, 0x710(r29)
-/* 8081E154  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081E158  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8081E154  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081E158  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8081E15C  38 63 09 58 */	addi r3, r3, 0x958
 /* 8081E160  38 80 00 0F */	li r4, 0xf
 /* 8081E164  4B 81 66 AC */	b onSwitch__12dSv_memBit_cFi
-/* 8081E168  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081E16C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8081E168  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081E16C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8081E170  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8081E174  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 8081E178  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 8081E17C  A0 84 00 EE */	lhz r4, 0xee(r4)	/* effective address: 803A7376 */
+/* 8081E17C  A0 84 00 EE */	lhz r4, 0xee(r4)
 /* 8081E180  4B 81 68 0C */	b onEventBit__11dSv_event_cFUs
 /* 8081E184  48 00 03 20 */	b lbl_8081E4A4
 lbl_8081E188:
@@ -395,7 +395,7 @@ lbl_8081E450:
 /* 8081E474  4B 82 3F F4 */	b reset__14dEvt_control_cFv
 /* 8081E478  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8081E47C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8081E480  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8081E480  80 63 00 00 */	lwz r3, 0(r3)
 /* 8081E484  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8081E488  38 80 00 01 */	li r4, 1
 /* 8081E48C  4B A9 5C D8 */	b setBattleBgmOff__8Z2SeqMgrFb

@@ -7,11 +7,11 @@ lbl_8095B164:
 /* 8095B178  7C 7E 1B 78 */	mr r30, r3
 /* 8095B17C  3C 80 80 96 */	lis r4, m__16daNpcAsh_Param_c@ha
 /* 8095B180  3B E4 D6 40 */	addi r31, r4, m__16daNpcAsh_Param_c@l
-/* 8095B184  C0 1F 02 60 */	lfs f0, 0x260(r31)	/* effective address: 8095D8A0 */
+/* 8095B184  C0 1F 02 60 */	lfs f0, 0x260(r31)
 /* 8095B188  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8095B18C  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 8095D6C0 */
+/* 8095B18C  C0 1F 00 80 */	lfs f0, 0x80(r31)
 /* 8095B190  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 8095B194  C0 1F 02 64 */	lfs f0, 0x264(r31)	/* effective address: 8095D8A4 */
+/* 8095B194  C0 1F 02 64 */	lfs f0, 0x264(r31)
 /* 8095B198  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8095B19C  A0 03 0F 5C */	lhz r0, 0xf5c(r3)
 /* 8095B1A0  2C 00 00 02 */	cmpwi r0, 2

@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct J2DScreen {
 };
 
 struct J2DPane {
@@ -19,7 +19,7 @@ struct J2DPane {
 	/* 802F7AC4 */ void getNextChildPane();
 };
 
-struct J2DScreen {
+struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -110,18 +110,18 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C2E18-803C2E28 0010+00 s=2 e=0 z=0  None .data      __vt__17CPaneMgrAlphaMorf                                    */
 SECTION_DATA static void* __vt__17CPaneMgrAlphaMorf[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17CPaneMgrAlphaMorfFv,
-	/* 3    */ (void*)setAlpha__13CPaneMgrAlphaFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17CPaneMgrAlphaMorfFv,
+	(void*)setAlpha__13CPaneMgrAlphaFUc,
 };
 
 /* 803C2E28-803C2E38 0010+00 s=3 e=0 z=0  None .data      __vt__13CPaneMgrAlpha                                        */
 SECTION_DATA static void* __vt__13CPaneMgrAlpha[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13CPaneMgrAlphaFv,
-	/* 3    */ (void*)setAlpha__13CPaneMgrAlphaFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13CPaneMgrAlphaFv,
+	(void*)setAlpha__13CPaneMgrAlphaFUc,
 };
 
 /* 802553EC-802553FC 0010+00 s=0 e=2 z=0  None .text      __ct__13CPaneMgrAlphaFv                                      */

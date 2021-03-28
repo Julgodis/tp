@@ -68,8 +68,8 @@ lbl_80CD7094:
 /* 80CD719C  98 1E 04 97 */	stb r0, 0x497(r30)
 /* 80CD71A0  7F C3 F3 78 */	mr r3, r30
 /* 80CD71A4  48 00 06 85 */	bl actionWaitInit__14daItemShield_cFv
-/* 80CD71A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD71AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD71A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD71AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD71B0  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80CD71B4  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80CD71B8  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -95,8 +95,8 @@ lbl_80CD7204:
 /* 80CD7204  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80CD7208  54 00 46 3E */	srwi r0, r0, 0x18
 /* 80CD720C  98 1E 09 4D */	stb r0, 0x94d(r30)
-/* 80CD7210  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD7214  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD7210  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD7214  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD7218  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CD721C  7F C4 F3 78 */	mr r4, r30
 /* 80CD7220  38 A0 00 00 */	li r5, 0

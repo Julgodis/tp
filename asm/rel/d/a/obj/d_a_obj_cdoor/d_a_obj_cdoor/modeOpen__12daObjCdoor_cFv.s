@@ -14,7 +14,7 @@ lbl_80BC77BC:
 /* 80BC77EC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BC77F0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BC77F4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BC77F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BC77F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC77FC  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BC7800  3B DF 04 D0 */	addi r30, r31, 0x4d0
 /* 80BC7804  7F C5 F3 78 */	mr r5, r30
@@ -40,7 +40,7 @@ lbl_80BC77BC:
 /* 80BC7854  90 01 00 08 */	stw r0, 8(r1)
 /* 80BC7858  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BC785C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BC7860  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BC7860  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BC7864  38 81 00 08 */	addi r4, r1, 8
 /* 80BC7868  7F C5 F3 78 */	mr r5, r30
 /* 80BC786C  38 C0 00 00 */	li r6, 0

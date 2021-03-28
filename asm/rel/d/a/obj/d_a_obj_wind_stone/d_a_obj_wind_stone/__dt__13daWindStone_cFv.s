@@ -16,7 +16,7 @@ lbl_80D37A68:
 lbl_80D37AA0:
 /* 80D37AA0  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D37AA4  38 84 86 34 */	addi r4, r4, l_arcName@l
-/* 80D37AA8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D38634 */
+/* 80D37AA8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D37AAC  4B 2F 55 5C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D37AB0  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80D37AB4  38 80 FF FF */	li r4, -1

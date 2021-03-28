@@ -15,8 +15,8 @@ lbl_808496F0:
 /* 80849724  4B FF FF 3D */	bl getBckName__8daKago_cFi
 /* 80849728  7C 64 1B 78 */	mr r4, r3
 /* 8084972C  80 7E 07 5C */	lwz r3, 0x75c(r30)
-/* 80849730  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80849734  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80849730  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80849734  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80849738  3C A5 00 02 */	addis r5, r5, 2
 /* 8084973C  38 C0 00 80 */	li r6, 0x80
 /* 80849740  38 A5 C2 F8 */	addi r5, r5, -15624

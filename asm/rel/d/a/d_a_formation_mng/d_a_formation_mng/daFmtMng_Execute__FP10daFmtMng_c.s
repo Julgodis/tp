@@ -19,10 +19,10 @@ lbl_80837258:
 /* 8083729C  4B 97 52 E0 */	b dKy_darkworld_check__Fv
 /* 808372A0  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 808372A4  40 82 00 1C */	bne lbl_808372C0
-/* 808372A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808372AC  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 808372B0  80 7E 5D B4 */	lwz r3, 0x5db4(r30)	/* effective address: 8040BF74 */
-/* 808372B4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 808372A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808372AC  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 808372B0  80 7E 5D B4 */	lwz r3, 0x5db4(r30)
+/* 808372B4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 808372B8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 808372BC  40 82 00 0C */	bne lbl_808372C8
 lbl_808372C0:

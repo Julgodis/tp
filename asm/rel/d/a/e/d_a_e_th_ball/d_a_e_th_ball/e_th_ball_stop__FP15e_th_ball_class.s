@@ -14,7 +14,7 @@ lbl_807B60CC:
 lbl_807B60FC:
 /* 807B60FC  3C 60 80 7C */	lis r3, master@ha
 /* 807B6100  80 83 80 E0 */	lwz r4, master@l(r3)
-/* 807B6104  88 64 06 8A */	lbz r3, 0x68a(r4)	/* effective address: 807B876A */
+/* 807B6104  88 64 06 8A */	lbz r3, 0x68a(r4)
 /* 807B6108  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 807B610C  41 82 00 1C */	beq lbl_807B6128
 /* 807B6110  54 60 00 3C */	rlwinm r0, r3, 0, 0, 0x1e

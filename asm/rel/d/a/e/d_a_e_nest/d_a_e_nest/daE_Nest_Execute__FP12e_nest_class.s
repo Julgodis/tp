@@ -153,7 +153,7 @@ lbl_80503B84:
 /* 80503BB0  B0 1C 00 34 */	sth r0, 0x34(r28)
 /* 80503BB4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80503BB8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80503BBC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80503BBC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80503BC0  A8 9C 00 36 */	lha r4, 0x36(r28)
 /* 80503BC4  4B B0 88 18 */	b mDoMtx_YrotS__FPA4_fs
 /* 80503BC8  C0 5F 00 04 */	lfs f2, 4(r31)

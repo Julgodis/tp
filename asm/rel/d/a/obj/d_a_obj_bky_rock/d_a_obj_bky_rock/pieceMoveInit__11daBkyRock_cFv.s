@@ -21,7 +21,7 @@ lbl_80BB7988:
 /* 80BB79D4  54 78 16 BA */	rlwinm r24, r3, 2, 0x1a, 0x1d
 /* 80BB79D8  38 7C 01 30 */	addi r3, r28, 0x130
 /* 80BB79DC  7C 03 C0 2E */	lwzx r0, r3, r24
-/* 80BB79E0  CB FC 00 F0 */	lfd f31, 0xf0(r28)	/* effective address: 80BB7FA0 */
+/* 80BB79E0  CB FC 00 F0 */	lfd f31, 0xf0(r28)
 /* 80BB79E4  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80BB79E8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BB79EC  3F A0 43 30 */	lis r29, 0x4330
@@ -42,7 +42,7 @@ lbl_80BB7988:
 /* 80BB7A28  54 1E 10 3A */	slwi r30, r0, 2
 /* 80BB7A2C  3B 5C 01 40 */	addi r26, r28, 0x140
 /* 80BB7A30  3B 3C 01 48 */	addi r25, r28, 0x148
-/* 80BB7A34  C3 9C 01 54 */	lfs f28, 0x154(r28)	/* effective address: 80BB8004 */
+/* 80BB7A34  C3 9C 01 54 */	lfs f28, 0x154(r28)
 lbl_80BB7A38:
 /* 80BB7A38  56 C0 07 FF */	clrlwi. r0, r22, 0x1f
 /* 80BB7A3C  3B E0 FF FF */	li r31, -1

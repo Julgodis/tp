@@ -26,7 +26,7 @@ lbl_80D3554C:
 /* 80D35564  90 01 00 08 */	stw r0, 8(r1)
 /* 80D35568  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D3556C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D35570  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D35570  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D35574  38 81 00 08 */	addi r4, r1, 8
 /* 80D35578  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80D3557C  38 C0 00 00 */	li r6, 0

@@ -13,8 +13,8 @@ lbl_80CD7D04:
 /* 80CD7D30  3C 04 00 01 */	addis r0, r4, 1
 /* 80CD7D34  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80CD7D38  41 82 00 30 */	beq lbl_80CD7D68
-/* 80CD7D3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD7D40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD7D3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD7D40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD7D44  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80CD7D48  4B 36 B9 A4 */	b setPtI_Id__14dEvt_control_cFUi
 /* 80CD7D4C  48 00 00 1C */	b lbl_80CD7D68

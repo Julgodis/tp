@@ -551,8 +551,8 @@ asm void daSetBgObj_c::getArcName(fopAc_ac_c* param_0) {
 /* ############################################################################################## */
 /* 80451D28-80451D30 0008+00 s=0 e=0 z=3  None .sdata2    M_dir_base__Q212daObjMovebox5Act_c                           */
 SECTION_SDATA2 void* M_dir_base__Q212daObjMovebox5Act_c[2] = {
-	/* 0    */ (void*)0x00004000,
-	/* 1    */ (void*)(((char*)mDoMch_Create__Fv)+0x2BC),
+	(void*)0x00004000,
+	(void*)(((char*)mDoMch_Create__Fv)+0x2BC),
 };
 
 /* 80451D30-80451D34 0004+00 s=0 e=0 z=3  None .sdata2    OPEN_SIZE__7daDsh_c                                          */

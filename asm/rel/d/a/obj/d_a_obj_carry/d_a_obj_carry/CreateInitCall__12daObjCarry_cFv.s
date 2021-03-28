@@ -6,7 +6,7 @@ lbl_80479664:
 /* 80479674  38 C4 A6 50 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80479678  3C 80 80 48 */	lis r4, struct_8047B1E0+0x2@ha
 /* 8047967C  38 A4 B1 E2 */	addi r5, r4, struct_8047B1E0+0x2@l
-/* 80479680  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 8047B1E2 */
+/* 80479680  88 05 00 00 */	lbz r0, 0(r5)
 /* 80479684  7C 00 07 75 */	extsb. r0, r0
 /* 80479688  40 82 01 60 */	bne lbl_804797E8
 /* 8047968C  80 86 09 70 */	lwz r4, 0x970(r6)

@@ -21,7 +21,7 @@ lbl_80B968E0:
 lbl_80B9692C:
 /* 80B9692C  3C 80 80 BA */	lis r4, m__17daNpc_zrZ_Param_c@ha
 /* 80B96930  38 84 AF EC */	addi r4, r4, m__17daNpc_zrZ_Param_c@l
-/* 80B96934  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 80B9B04E */
+/* 80B96934  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_80B96938:
 /* 80B96938  38 A0 00 01 */	li r5, 1
 /* 80B9693C  38 C0 00 00 */	li r6, 0

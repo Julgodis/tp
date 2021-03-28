@@ -94,10 +94,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -108,10 +108,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS {
@@ -133,9 +133,6 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -196,16 +193,16 @@ struct Z2CreatureFM {
 // Forward References:
 // 
 
-static void daObjHHASHI_Create(fopAc_ac_c*); // 2
-static void daObjHHASHI_Delete(daObjHHASHI_c*); // 2
-static void daObjHHASHI_Draw(daObjHHASHI_c*); // 2
+void daObjHHASHI_Create(fopAc_ac_c*); // 2
+void daObjHHASHI_Delete(daObjHHASHI_c*); // 2
+void daObjHHASHI_Draw(daObjHHASHI_c*); // 2
 static void daObjHHASHI_Execute(daObjHHASHI_c*); // 2
-static bool daObjHHASHI_IsDelete(daObjHHASHI_c*); // 2
+bool daObjHHASHI_IsDelete(daObjHHASHI_c*); // 2
 
 extern "C" void initCcCylinder__13daObjHHASHI_cFv(); // 1
 extern "C" void setCcCylinder__13daObjHHASHI_cFv(); // 1
-extern "C" static void daObjHHASHI_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjHHASHI_Delete__FP13daObjHHASHI_c(); // 1
+extern "C" void daObjHHASHI_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjHHASHI_Delete__FP13daObjHHASHI_c(); // 1
 extern "C" void Set_Hahen__13daObjHHASHI_cFP4cXyz(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
@@ -218,7 +215,7 @@ extern "C" void checkViewArea__13daObjHHASHI_cFi(); // 1
 extern "C" void Rolling__13daObjHHASHI_cFP4cXyzffSc(); // 1
 extern "C" void Roll_Set__13daObjHHASHI_cFP4cXyzfs(); // 1
 extern "C" void setBaseMtx__13daObjHHASHI_cFv(); // 1
-extern "C" static void daObjHHASHI_Draw__FP13daObjHHASHI_c(); // 1
+extern "C" void daObjHHASHI_Draw__FP13daObjHHASHI_c(); // 1
 extern "C" static void daObjHHASHI_Execute__FP13daObjHHASHI_c(); // 1
 extern "C" void CreateHeap__13daObjHHASHI_cFv(); // 1
 extern "C" void create__13daObjHHASHI_cFv(); // 1
@@ -226,16 +223,13 @@ extern "C" void __dt__8cM3dGCylFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static bool daObjHHASHI_IsDelete__FP13daObjHHASHI_c(); // 1
+extern "C" bool daObjHHASHI_IsDelete__FP13daObjHHASHI_c(); // 1
 extern "C" void Create__13daObjHHASHI_cFv(); // 1
 extern "C" void Execute__13daObjHHASHI_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjHHASHI_cFv(); // 1
 extern "C" void Delete__13daObjHHASHI_cFv(); // 1
-extern "C" extern u8 const lit_3931[8];
-extern "C" extern u8 const lit_4103[8];
-extern "C" extern u8 const lit_4104[8];
-extern "C" extern u8 const lit_4105[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjHHASHI_Method[8];
 extern "C" extern void* g_profile_Obj_HHASHI[12];
 
 // 
@@ -288,9 +282,6 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -332,26 +323,16 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -391,22 +372,22 @@ asm void daObjHHASHI_c::setCcCylinder() {
 #pragma pop
 
 
-/* 8057FA4C-8057FA6C 0020+00 s=1 e=0 z=0  None .text      daObjHHASHI_Create__FP10fopAc_ac_c                           */
+/* 8057FA4C-8057FA6C 0020+00 s=0 e=0 z=0  None .text      daObjHHASHI_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjHHASHI_Create(fopAc_ac_c* param_0) {
+asm void daObjHHASHI_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 8057FA6C-8057FA90 0024+00 s=1 e=0 z=0  None .text      daObjHHASHI_Delete__FP13daObjHHASHI_c                        */
+/* 8057FA6C-8057FA90 0024+00 s=0 e=0 z=0  None .text      daObjHHASHI_Delete__FP13daObjHHASHI_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjHHASHI_Delete(daObjHHASHI_c* param_0) {
+asm void daObjHHASHI_Delete(daObjHHASHI_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Delete__FP13daObjHHASHI_c.s"
 }
@@ -508,6 +489,11 @@ SECTION_RODATA static u32 const lit_3928[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 8058153C-80581544 0008+00 s=2 e=0 z=0  None .rodata    @3931                                                        */
+SECTION_RODATA static u8 const lit_3931[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 8057FDA8-805801B0 0408+00 s=1 e=0 z=0  None .text      Set_Speed__13daObjHHASHI_cFssffff                            */
 #pragma push
 #pragma optimization_level 0
@@ -520,11 +506,6 @@ asm void daObjHHASHI_c::Set_Speed(s16 param_0, s16 param_1, f32 param_2, f32 par
 
 
 /* ############################################################################################## */
-/* 8058153C-80581544 0008+00 s=0 e=0 z=0  None .rodata    @3931                                                        */
-SECTION_RODATA u8 const lit_3931[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80581544-80581548 0004+00 s=1 e=0 z=0  None .rodata    @3979                                                        */
 SECTION_RODATA static u32 const lit_3979 = 0x46800000;
 
@@ -591,18 +572,18 @@ asm void daObjHHASHI_c::Hahen_Motion(s16 param_0) {
 
 
 /* ############################################################################################## */
-/* 8058156C-80581574 0008+00 s=0 e=0 z=0  None .rodata    @4103                                                        */
-SECTION_RODATA u8 const lit_4103[8] = {
+/* 8058156C-80581574 0008+00 s=3 e=0 z=0  None .rodata    @4103                                                        */
+SECTION_RODATA static u8 const lit_4103[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80581574-8058157C 0008+00 s=0 e=0 z=0  None .rodata    @4104                                                        */
-SECTION_RODATA u8 const lit_4104[8] = {
+/* 80581574-8058157C 0008+00 s=3 e=0 z=0  None .rodata    @4104                                                        */
+SECTION_RODATA static u8 const lit_4104[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8058157C-80581584 0008+00 s=0 e=0 z=0  None .rodata    @4105                                                        */
-SECTION_RODATA u8 const lit_4105[8] = {
+/* 8058157C-80581584 0008+00 s=3 e=0 z=0  None .rodata    @4105                                                        */
+SECTION_RODATA static u8 const lit_4105[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -675,18 +656,18 @@ asm void daObjHHASHI_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80580D58-80580D84 002C+00 s=1 e=0 z=0  None .text      daObjHHASHI_Draw__FP13daObjHHASHI_c                          */
+/* 80580D58-80580D84 002C+00 s=0 e=0 z=0  None .text      daObjHHASHI_Draw__FP13daObjHHASHI_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjHHASHI_Draw(daObjHHASHI_c* param_0) {
+asm void daObjHHASHI_Draw(daObjHHASHI_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_hhashi/d_a_obj_hhashi/daObjHHASHI_Draw__FP13daObjHHASHI_c.s"
 }
 #pragma pop
 
 
-/* 80580D84-80580DA4 0020+00 s=2 e=0 z=0  None .text      daObjHHASHI_Execute__FP13daObjHHASHI_c                       */
+/* 80580D84-80580DA4 0020+00 s=1 e=0 z=0  None .text      daObjHHASHI_Execute__FP13daObjHHASHI_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -716,7 +697,7 @@ SECTION_RODATA static u32 const lit_4446 = 0x43FA0000;
 /* 805815A8-805815AC 0004+00 s=1 e=0 z=0  None .rodata    @4485                                                        */
 SECTION_RODATA static u32 const lit_4485 = 0x43480000;
 
-/* 805815AC-805815E2 0036+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 805815AC-805815E2 0036+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -727,9 +708,9 @@ SECTION_DEAD char const* const stringBase_805815D3 = "L_hhashi00.dzb";
 #pragma pop
 
 /* 805815E4-805815E8 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80580DA4-80580EA0 00FC+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjHHASHI_cFv                                */
+/* 80580DA4-80580EA0 00FC+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjHHASHI_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -741,60 +722,60 @@ asm void daObjHHASHI_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 805815E8-80581608 0020+00 s=1 e=0 z=0  None .data      l_daObjHHASHI_Method                                         */
-SECTION_DATA static void* l_daObjHHASHI_Method[8] = {
-	/* 0    */ (void*)daObjHHASHI_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjHHASHI_Delete__FP13daObjHHASHI_c,
-	/* 2    */ (void*)daObjHHASHI_Execute__FP13daObjHHASHI_c,
-	/* 3    */ (void*)daObjHHASHI_IsDelete__FP13daObjHHASHI_c,
-	/* 4    */ (void*)daObjHHASHI_Draw__FP13daObjHHASHI_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805815E8-80581608 0020+00 s=0 e=0 z=0  None .data      l_daObjHHASHI_Method                                         */
+SECTION_DATA void* l_daObjHHASHI_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80581608-80581638 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_HHASHI                                         */
+/* 80581608-80581638 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_HHASHI                                         */
 SECTION_DATA void* g_profile_Obj_HHASHI[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x006B0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000119C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01CE0000,
-	/* 9    */ (void*)&l_daObjHHASHI_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x006B0000,
+	(void*)NULL,
+	(void*)0x0000119C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01CE0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80581638-80581644 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80581644-80581650 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80581650-80581678 0028+00 s=1 e=0 z=0  None .data      __vt__13daObjHHASHI_c                                        */
 SECTION_DATA static void* __vt__13daObjHHASHI_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjHHASHI_cFv,
-	/* 3    */ (void*)Create__13daObjHHASHI_cFv,
-	/* 4    */ (void*)Execute__13daObjHHASHI_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjHHASHI_cFv,
-	/* 6    */ (void*)Delete__13daObjHHASHI_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80580EA0-8058112C 028C+00 s=1 e=0 z=0  None .text      create__13daObjHHASHI_cFv                                    */
@@ -808,7 +789,7 @@ asm void daObjHHASHI_c::create() {
 #pragma pop
 
 
-/* 8058112C-80581174 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 8058112C-80581174 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -819,7 +800,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80581174-805811BC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80581174-805811BC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -842,13 +823,13 @@ cXyz::cXyz() {
 }
 
 
-/* 805811C4-805811CC 0008+00 s=1 e=0 z=0  None .text      daObjHHASHI_IsDelete__FP13daObjHHASHI_c                      */
-static bool daObjHHASHI_IsDelete(daObjHHASHI_c* param_0) {
+/* 805811C4-805811CC 0008+00 s=0 e=0 z=0  None .text      daObjHHASHI_IsDelete__FP13daObjHHASHI_c                      */
+bool daObjHHASHI_IsDelete(daObjHHASHI_c* param_0) {
 	return true;
 }
 
 
-/* 805811CC-80581210 0044+00 s=1 e=0 z=0  None .text      Create__13daObjHHASHI_cFv                                    */
+/* 805811CC-80581210 0044+00 s=0 e=0 z=0  None .text      Create__13daObjHHASHI_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -859,7 +840,7 @@ asm void daObjHHASHI_c::Create() {
 #pragma pop
 
 
-/* 80581210-805812BC 00AC+00 s=1 e=0 z=0  None .text      Execute__13daObjHHASHI_cFPPA3_A4_f                           */
+/* 80581210-805812BC 00AC+00 s=0 e=0 z=0  None .text      Execute__13daObjHHASHI_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -870,7 +851,7 @@ asm void daObjHHASHI_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 805812BC-8058140C 0150+00 s=1 e=0 z=0  None .text      Draw__13daObjHHASHI_cFv                                      */
+/* 805812BC-8058140C 0150+00 s=0 e=0 z=0  None .text      Draw__13daObjHHASHI_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -881,7 +862,7 @@ asm void daObjHHASHI_c::Draw() {
 #pragma pop
 
 
-/* 8058140C-805814A4 0098+00 s=1 e=0 z=0  None .text      Delete__13daObjHHASHI_cFv                                    */
+/* 8058140C-805814A4 0098+00 s=0 e=0 z=0  None .text      Delete__13daObjHHASHI_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

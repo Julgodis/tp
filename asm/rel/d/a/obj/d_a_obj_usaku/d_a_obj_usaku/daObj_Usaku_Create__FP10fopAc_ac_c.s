@@ -46,8 +46,8 @@ lbl_80D2124C:
 /* 80D2124C  80 9E 05 B0 */	lwz r4, 0x5b0(r30)
 /* 80D21250  28 04 00 00 */	cmplwi r4, 0
 /* 80D21254  41 82 00 28 */	beq lbl_80D2127C
-/* 80D21258  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2125C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D21258  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2125C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D21260  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D21264  7F C5 F3 78 */	mr r5, r30
 /* 80D21268  4B 35 37 A0 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c

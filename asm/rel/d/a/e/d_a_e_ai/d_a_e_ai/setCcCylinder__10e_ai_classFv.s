@@ -10,8 +10,8 @@ lbl_80679284:
 /* 806792A4  38 7D 0C EC */	addi r3, r29, 0xcec
 /* 806792A8  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 806792AC  4B BF 5F 30 */	b SetC__8cM3dGCylFRC4cXyz
-/* 806792B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806792B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806792B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806792B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806792B8  3B C3 23 3C */	addi r30, r3, 0x233c
 /* 806792BC  7F C3 F3 78 */	mr r3, r30
 /* 806792C0  38 9D 0B C8 */	addi r4, r29, 0xbc8

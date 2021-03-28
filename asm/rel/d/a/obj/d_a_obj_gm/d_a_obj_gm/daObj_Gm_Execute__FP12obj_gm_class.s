@@ -65,8 +65,8 @@ lbl_80BFC94C:
 /* 80BFC990  88 9F 05 72 */	lbz r4, 0x572(r31)
 /* 80BFC994  28 04 00 00 */	cmplwi r4, 0
 /* 80BFC998  41 82 00 18 */	beq lbl_80BFC9B0
-/* 80BFC99C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BFC9A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BFC99C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BFC9A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BFC9A4  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80BFC9A8  7C 05 07 74 */	extsb r5, r0
 /* 80BFC9AC  4B 43 88 54 */	b onSwitch__10dSv_info_cFii

@@ -13,8 +13,8 @@ lbl_80A16544:
 /* 80A16570  3B 20 00 00 */	li r25, 0
 /* 80A16574  3B 00 00 00 */	li r24, 0
 /* 80A16578  3A E0 00 00 */	li r23, 0
-/* 80A1657C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A16580  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80A1657C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A16580  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80A16584  3B 9E 4F F8 */	addi r28, r30, 0x4ff8
 /* 80A16588  7F 83 E3 78 */	mr r3, r28
 /* 80A1658C  3C A0 80 A2 */	lis r5, struct_80A1A49C+0x0@ha

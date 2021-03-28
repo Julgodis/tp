@@ -3,8 +3,8 @@ lbl_8061A8DC:
 /* 8061A8E0  7C 08 02 A6 */	mflr r0
 /* 8061A8E4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8061A8E8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8061A8EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8061A8F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8061A8EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8061A8F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8061A8F4  3B E3 09 58 */	addi r31, r3, 0x958
 /* 8061A8F8  7F E3 FB 78 */	mr r3, r31
 /* 8061A8FC  38 80 00 03 */	li r4, 3

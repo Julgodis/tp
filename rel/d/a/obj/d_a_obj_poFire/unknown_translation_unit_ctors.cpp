@@ -19,7 +19,6 @@ extern void* const data_80CB3ED8[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_poFire_cpp(); // 1
 
 // 
 // Declarations:

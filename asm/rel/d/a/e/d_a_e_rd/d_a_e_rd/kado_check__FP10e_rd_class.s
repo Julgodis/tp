@@ -23,13 +23,13 @@ lbl_8050B0F4:
 /* 8050B148  3B 60 00 00 */	li r27, 0
 /* 8050B14C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8050B150  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8050B154  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8050B154  80 63 00 00 */	lwz r3, 0(r3)
 /* 8050B158  A8 9A 0A 0E */	lha r4, 0xa0e(r26)
 /* 8050B15C  4B B0 12 80 */	b mDoMtx_YrotS__FPA4_fs
 /* 8050B160  3B 40 00 00 */	li r26, 0
 /* 8050B164  3B E0 00 00 */	li r31, 0
-/* 8050B168  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050B16C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050B168  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050B16C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050B170  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8050B174  C3 7E 00 00 */	lfs f27, 0(r30)
 /* 8050B178  C3 9E 00 04 */	lfs f28, 4(r30)

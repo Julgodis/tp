@@ -28,8 +28,8 @@ lbl_80AB46B4:
 /* 80AB46D8  38 7E 0B 48 */	addi r3, r30, 0xb48
 /* 80AB46DC  38 80 00 02 */	li r4, 2
 /* 80AB46E0  4B 80 C7 38 */	b playVoice__17Z2CreatureCitizenFi
-/* 80AB46E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AB46E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AB46E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AB46E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AB46EC  38 63 09 78 */	addi r3, r3, 0x978
 /* 80AB46F0  38 80 00 3C */	li r4, 0x3c
 /* 80AB46F4  4B 58 04 A4 */	b onSwitch__12dSv_danBit_cFi

@@ -16,8 +16,8 @@ lbl_80C259C8:
 /* 80C25A00  38 00 00 01 */	li r0, 1
 /* 80C25A04  98 1F 09 28 */	stb r0, 0x928(r31)
 /* 80C25A08  48 00 00 C1 */	bl setFallSE__14daObjIceLeaf_cFv
-/* 80C25A0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C25A10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C25A0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C25A10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C25A14  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C25A18  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80C25A1C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

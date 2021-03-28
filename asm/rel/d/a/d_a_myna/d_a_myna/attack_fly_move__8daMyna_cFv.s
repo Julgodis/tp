@@ -17,8 +17,8 @@ lbl_80946BF4:
 /* 80946C30  A8 1F 09 26 */	lha r0, 0x926(r31)
 /* 80946C34  2C 00 00 00 */	cmpwi r0, 0
 /* 80946C38  40 81 00 28 */	ble lbl_80946C60
-/* 80946C3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80946C40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80946C3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80946C40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80946C44  38 63 09 58 */	addi r3, r3, 0x958
 /* 80946C48  38 80 00 3C */	li r4, 0x3c
 /* 80946C4C  4B 6E DC 14 */	b isSwitch__12dSv_memBit_cCFi
@@ -36,15 +36,15 @@ lbl_80946C60:
 /* 80946C78  7F E3 FB 78 */	mr r3, r31
 /* 80946C7C  3C 80 80 95 */	lis r4, daMyna_evtTagActor0@ha
 /* 80946C80  38 84 BA C8 */	addi r4, r4, daMyna_evtTagActor0@l
-/* 80946C84  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8094BAC8 */
+/* 80946C84  80 84 00 00 */	lwz r4, 0(r4)
 /* 80946C88  38 A1 00 08 */	addi r5, r1, 8
 /* 80946C8C  48 00 30 C9 */	bl chkPlayerInEvtArea__8daMyna_cFP10fopAc_ac_c4cXyz
 /* 80946C90  2C 03 00 00 */	cmpwi r3, 0
 /* 80946C94  41 82 00 60 */	beq lbl_80946CF4
-/* 80946C98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80946C9C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80946CA0  80 64 5D B4 */	lwz r3, 0x5db4(r4)	/* effective address: 8040BF74 */
-/* 80946CA4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 80946C98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80946C9C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80946CA0  80 64 5D B4 */	lwz r3, 0x5db4(r4)
+/* 80946CA4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80946CA8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80946CAC  40 82 00 48 */	bne lbl_80946CF4
 /* 80946CB0  38 64 09 58 */	addi r3, r4, 0x958

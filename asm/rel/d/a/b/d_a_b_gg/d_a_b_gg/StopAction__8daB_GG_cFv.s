@@ -9,9 +9,9 @@ lbl_805E8EE8:
 /* 805E8F04  3B C4 D6 C0 */	addi r30, r4, lit_1109@l
 /* 805E8F08  3C 80 80 5F */	lis r4, lit_3911@ha
 /* 805E8F0C  3B E4 D0 60 */	addi r31, r4, lit_3911@l
-/* 805E8F10  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805E8F14  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805E8F18  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805E8F10  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805E8F14  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805E8F18  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 805E8F1C  4B FF 62 5D */	bl other_bg_check__FP8daB_GG_cP10fopAc_ac_c
 /* 805E8F20  2C 03 00 00 */	cmpwi r3, 0
 /* 805E8F24  40 82 00 10 */	bne lbl_805E8F34
@@ -70,9 +70,9 @@ lbl_805E8FDC:
 /* 805E8FE0  4B FF CE 99 */	bl FookChk__8daB_GG_cFv
 /* 805E8FE4  48 00 00 20 */	b lbl_805E9004
 lbl_805E8FE8:
-/* 805E8FE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E8FEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805E8FF0  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 805E8FE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E8FEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805E8FF0  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 805E8FF4  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 805E8FF8  40 82 00 0C */	bne lbl_805E9004
 /* 805E8FFC  38 00 00 00 */	li r0, 0
@@ -174,9 +174,9 @@ lbl_805E911C:
 /* 805E9160  38 81 00 20 */	addi r4, r1, 0x20
 /* 805E9164  38 A1 00 2C */	addi r5, r1, 0x2c
 /* 805E9168  4B D5 DC 04 */	b PSMTXMultVec
-/* 805E916C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E9170  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805E9174  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 805E916C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E9170  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805E9174  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 805E9178  38 80 00 02 */	li r4, 2
 /* 805E917C  7F 85 E3 78 */	mr r5, r28
 /* 805E9180  38 C1 00 2C */	addi r6, r1, 0x2c

@@ -81,9 +81,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -122,10 +119,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjPDwall_create1st(daObjPDwall_c*); // 2
-static void daObjPDwall_MoveBGDelete(daObjPDwall_c*); // 2
-static void daObjPDwall_MoveBGExecute(daObjPDwall_c*); // 2
-static void daObjPDwall_MoveBGDraw(daObjPDwall_c*); // 2
+void daObjPDwall_create1st(daObjPDwall_c*); // 2
+void daObjPDwall_MoveBGDelete(daObjPDwall_c*); // 2
+void daObjPDwall_MoveBGExecute(daObjPDwall_c*); // 2
+void daObjPDwall_MoveBGDraw(daObjPDwall_c*); // 2
 
 extern "C" void create1st__13daObjPDwall_cFv(); // 1
 extern "C" void setMtx__13daObjPDwall_cFv(); // 1
@@ -134,12 +131,13 @@ extern "C" void Create__13daObjPDwall_cFv(); // 1
 extern "C" void Execute__13daObjPDwall_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daObjPDwall_cFv(); // 1
 extern "C" void Delete__13daObjPDwall_cFv(); // 1
-extern "C" static void daObjPDwall_create1st__FP13daObjPDwall_c(); // 1
-extern "C" static void daObjPDwall_MoveBGDelete__FP13daObjPDwall_c(); // 1
-extern "C" static void daObjPDwall_MoveBGExecute__FP13daObjPDwall_c(); // 1
-extern "C" static void daObjPDwall_MoveBGDraw__FP13daObjPDwall_c(); // 1
+extern "C" void daObjPDwall_create1st__FP13daObjPDwall_c(); // 1
+extern "C" void daObjPDwall_MoveBGDelete__FP13daObjPDwall_c(); // 1
+extern "C" void daObjPDwall_MoveBGExecute__FP13daObjPDwall_c(); // 1
+extern "C" void daObjPDwall_MoveBGDraw__FP13daObjPDwall_c(); // 1
 extern "C" void __dt__13daObjPDwall_cFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daObjPDwall_METHODS[8];
 extern "C" extern void* g_profile_Obj_PDwall[12];
 
 // 
@@ -171,9 +169,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -196,24 +191,31 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
 // Declarations:
 // 
+
+/* ############################################################################################## */
+/* 80CAD1FC-80CAD200 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName = (void*)NULL;
+
+/* 80CAC7F8-80CAC8DC 00E4+00 s=1 e=0 z=0  None .text      create1st__13daObjPDwall_cFv                                 */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm void daObjPDwall_c::create1st() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/create1st__13daObjPDwall_cFv.s"
+}
+#pragma pop
+
 
 /* ############################################################################################## */
 /* 80CAD1B8-80CAD1D0 0018+00 s=2 e=0 z=0  None .rodata    l_cull_box                                                   */
@@ -230,46 +232,10 @@ SECTION_RODATA static u8 const lit_3667[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CAD1D8-80CAD1E0 0008+00 s=1 e=0 z=0  None .rodata    @3669                                                        */
+/* 80CAD1D8-80CAD1E0 0008+00 s=3 e=0 z=0  None .rodata    @3669                                                        */
 SECTION_RODATA static u8 const lit_3669[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
-
-/* 80CAD1E0-80CAD1E4 0004+00 s=2 e=0 z=0  None .rodata    @3731                                                        */
-SECTION_RODATA static u32 const lit_3731 = 0xC1F00000;
-
-/* 80CAD1E4-80CAD1E8 0004+00 s=1 e=0 z=0  None .rodata    @3787                                                        */
-SECTION_RODATA static u32 const lit_3787 = 0x40A00000;
-
-/* 80CAD1E8-80CAD1EC 0004+00 s=1 e=0 z=0  None .rodata    @3788                                                        */
-SECTION_RODATA static u32 const lit_3788 = 0xBE4CCCCD;
-
-/* 80CAD1EC-80CAD1F0 0004+00 s=1 e=0 z=0  None .rodata    @3789                                                        */
-SECTION_RODATA static u32 const lit_3789 = 0x3F800000;
-
-/* 80CAD1F0-80CAD1F4 0004+00 s=1 e=0 z=0  None .rodata    @3790                                                        */
-SECTION_RODATA static u32 const lit_3790 = 0xBF800000;
-
-/* 80CAD1F4-80CAD1FC 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CAD1F4 = "P_Dwall";
-#pragma pop
-
-/* 80CAD1FC-80CAD200 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
-
-/* 80CAC7F8-80CAC8DC 00E4+00 s=1 e=0 z=0  None .text      create1st__13daObjPDwall_cFv                                 */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm void daObjPDwall_c::create1st() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/create1st__13daObjPDwall_cFv.s"
-}
-#pragma pop
-
 
 /* 80CAC8DC-80CACA44 0168+00 s=2 e=0 z=0  None .text      setMtx__13daObjPDwall_cFv                                    */
 #pragma push
@@ -282,7 +248,7 @@ asm void daObjPDwall_c::setMtx() {
 #pragma pop
 
 
-/* 80CACA44-80CACBA8 0164+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjPDwall_cFv                                */
+/* 80CACA44-80CACBA8 0164+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjPDwall_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -293,7 +259,11 @@ asm void daObjPDwall_c::CreateHeap() {
 #pragma pop
 
 
-/* 80CACBA8-80CACCE0 0138+00 s=1 e=0 z=0  None .text      Create__13daObjPDwall_cFv                                    */
+/* ############################################################################################## */
+/* 80CAD1E0-80CAD1E4 0004+00 s=2 e=0 z=0  None .rodata    @3731                                                        */
+SECTION_RODATA static u32 const lit_3731 = 0xC1F00000;
+
+/* 80CACBA8-80CACCE0 0138+00 s=0 e=0 z=0  None .text      Create__13daObjPDwall_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -304,7 +274,20 @@ asm void daObjPDwall_c::Create() {
 #pragma pop
 
 
-/* 80CACCE0-80CACF14 0234+00 s=1 e=0 z=0  None .text      Execute__13daObjPDwall_cFPPA3_A4_f                           */
+/* ############################################################################################## */
+/* 80CAD1E4-80CAD1E8 0004+00 s=1 e=0 z=0  None .rodata    @3787                                                        */
+SECTION_RODATA static u32 const lit_3787 = 0x40A00000;
+
+/* 80CAD1E8-80CAD1EC 0004+00 s=1 e=0 z=0  None .rodata    @3788                                                        */
+SECTION_RODATA static u32 const lit_3788 = 0xBE4CCCCD;
+
+/* 80CAD1EC-80CAD1F0 0004+00 s=1 e=0 z=0  None .rodata    @3789                                                        */
+SECTION_RODATA static u32 const lit_3789 = 0x3F800000;
+
+/* 80CAD1F0-80CAD1F4 0004+00 s=1 e=0 z=0  None .rodata    @3790                                                        */
+SECTION_RODATA static u32 const lit_3790 = 0xBF800000;
+
+/* 80CACCE0-80CACF14 0234+00 s=0 e=0 z=0  None .text      Execute__13daObjPDwall_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -315,7 +298,7 @@ asm void daObjPDwall_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80CACF14-80CACFD4 00C0+00 s=1 e=0 z=0  None .text      Draw__13daObjPDwall_cFv                                      */
+/* 80CACF14-80CACFD4 00C0+00 s=0 e=0 z=0  None .text      Draw__13daObjPDwall_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -326,7 +309,7 @@ asm void daObjPDwall_c::Draw() {
 #pragma pop
 
 
-/* 80CACFD4-80CAD074 00A0+00 s=1 e=0 z=0  None .text      Delete__13daObjPDwall_cFv                                    */
+/* 80CACFD4-80CAD074 00A0+00 s=0 e=0 z=0  None .text      Delete__13daObjPDwall_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -338,94 +321,94 @@ asm void daObjPDwall_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80CAD200-80CAD220 0020+00 s=1 e=0 z=0  None .data      daObjPDwall_METHODS                                          */
-SECTION_DATA static void* daObjPDwall_METHODS[8] = {
-	/* 0    */ (void*)daObjPDwall_create1st__FP13daObjPDwall_c,
-	/* 1    */ (void*)daObjPDwall_MoveBGDelete__FP13daObjPDwall_c,
-	/* 2    */ (void*)daObjPDwall_MoveBGExecute__FP13daObjPDwall_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjPDwall_MoveBGDraw__FP13daObjPDwall_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CAD200-80CAD220 0020+00 s=0 e=0 z=0  None .data      daObjPDwall_METHODS                                          */
+SECTION_DATA void* daObjPDwall_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CAD220-80CAD250 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_PDwall                                         */
+/* 80CAD220-80CAD250 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_PDwall                                         */
 SECTION_DATA void* g_profile_Obj_PDwall[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00CF0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000A18,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x029F0000,
-	/* 9    */ (void*)&daObjPDwall_METHODS,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00CF0000,
+	(void*)NULL,
+	(void*)0x00000A18,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x029F0000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
 };
 
 /* 80CAD250-80CAD27C 002C+00 s=2 e=0 z=0  None .data      __vt__13daObjPDwall_c                                        */
 SECTION_DATA static void* __vt__13daObjPDwall_c[11] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjPDwall_cFv,
-	/* 3    */ (void*)Create__13daObjPDwall_cFv,
-	/* 4    */ (void*)Execute__13daObjPDwall_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjPDwall_cFv,
-	/* 6    */ (void*)Delete__13daObjPDwall_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-	/* 10   */ (void*)__dt__13daObjPDwall_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CAD074-80CAD0D4 0060+00 s=1 e=0 z=0  None .text      daObjPDwall_create1st__FP13daObjPDwall_c                     */
+/* 80CAD074-80CAD0D4 0060+00 s=0 e=0 z=0  None .text      daObjPDwall_create1st__FP13daObjPDwall_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjPDwall_create1st(daObjPDwall_c* param_0) {
+asm void daObjPDwall_create1st(daObjPDwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_create1st__FP13daObjPDwall_c.s"
 }
 #pragma pop
 
 
-/* 80CAD0D4-80CAD0F4 0020+00 s=1 e=0 z=0  None .text      daObjPDwall_MoveBGDelete__FP13daObjPDwall_c                  */
+/* 80CAD0D4-80CAD0F4 0020+00 s=0 e=0 z=0  None .text      daObjPDwall_MoveBGDelete__FP13daObjPDwall_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjPDwall_MoveBGDelete(daObjPDwall_c* param_0) {
+asm void daObjPDwall_MoveBGDelete(daObjPDwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGDelete__FP13daObjPDwall_c.s"
 }
 #pragma pop
 
 
-/* 80CAD0F4-80CAD114 0020+00 s=1 e=0 z=0  None .text      daObjPDwall_MoveBGExecute__FP13daObjPDwall_c                 */
+/* 80CAD0F4-80CAD114 0020+00 s=0 e=0 z=0  None .text      daObjPDwall_MoveBGExecute__FP13daObjPDwall_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjPDwall_MoveBGExecute(daObjPDwall_c* param_0) {
+asm void daObjPDwall_MoveBGExecute(daObjPDwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGExecute__FP13daObjPDwall_c.s"
 }
 #pragma pop
 
 
-/* 80CAD114-80CAD140 002C+00 s=1 e=0 z=0  None .text      daObjPDwall_MoveBGDraw__FP13daObjPDwall_c                    */
+/* 80CAD114-80CAD140 002C+00 s=0 e=0 z=0  None .text      daObjPDwall_MoveBGDraw__FP13daObjPDwall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjPDwall_MoveBGDraw(daObjPDwall_c* param_0) {
+asm void daObjPDwall_MoveBGDraw(daObjPDwall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pdwall/d_a_obj_pdwall/daObjPDwall_MoveBGDraw__FP13daObjPDwall_c.s"
 }
 #pragma pop
 
 
-/* 80CAD140-80CAD1B0 0070+00 s=1 e=0 z=0  None .text      __dt__13daObjPDwall_cFv                                      */
+/* 80CAD140-80CAD1B0 0070+00 s=0 e=0 z=0  None .text      __dt__13daObjPDwall_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,4 +418,12 @@ asm daObjPDwall_c::~daObjPDwall_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CAD1F4-80CAD1FC 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CAD1F4 = "P_Dwall";
+#pragma pop
 

@@ -11,7 +11,7 @@ lbl_80BE538C:
 /* 80BE53B0  7C 7D 1B 78 */	mr r29, r3
 /* 80BE53B4  3C 60 80 BE */	lis r3, l_bmd@ha
 /* 80BE53B8  3B E3 5D 80 */	addi r31, r3, l_bmd@l
-/* 80BE53BC  C3 DF 00 90 */	lfs f30, 0x90(r31)	/* effective address: 80BE5E10 */
+/* 80BE53BC  C3 DF 00 90 */	lfs f30, 0x90(r31)
 /* 80BE53C0  FF E0 F0 90 */	fmr f31, f30
 /* 80BE53C4  38 00 00 00 */	li r0, 0
 /* 80BE53C8  90 01 00 1C */	stw r0, 0x1c(r1)
@@ -190,7 +190,7 @@ lbl_80BE55BC:
 /* 80BE564C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BE5650  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE5654  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE5658  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE5658  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE565C  38 81 00 14 */	addi r4, r1, 0x14
 /* 80BE5660  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80BE5664  7F C6 F3 78 */	mr r6, r30
@@ -210,7 +210,7 @@ lbl_80BE5684:
 /* 80BE5698  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80BE569C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE56A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE56A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE56A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE56A8  38 81 00 10 */	addi r4, r1, 0x10
 /* 80BE56AC  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80BE56B0  7F C6 F3 78 */	mr r6, r30
@@ -235,7 +235,7 @@ lbl_80BE56CC:
 /* 80BE56F8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BE56FC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE5700  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE5704  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE5704  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE5708  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BE570C  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80BE5710  38 C0 00 00 */	li r6, 0
@@ -279,7 +279,7 @@ lbl_80BE578C:
 /* 80BE579C  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80BE57A0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE57A4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE57A8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE57A8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE57AC  38 81 00 18 */	addi r4, r1, 0x18
 /* 80BE57B0  38 BD 0A D8 */	addi r5, r29, 0xad8
 /* 80BE57B4  38 C0 00 00 */	li r6, 0
@@ -297,7 +297,7 @@ lbl_80BE57D8:
 /* 80BE57E0  93 81 00 08 */	stw r28, 8(r1)
 /* 80BE57E4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE57E8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE57EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE57EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE57F0  38 81 00 08 */	addi r4, r1, 8
 /* 80BE57F4  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80BE57F8  38 C0 00 00 */	li r6, 0

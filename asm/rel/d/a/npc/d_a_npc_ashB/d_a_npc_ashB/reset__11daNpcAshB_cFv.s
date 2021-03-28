@@ -16,11 +16,11 @@ lbl_8095F0A4:
 /* 8095F0DC  90 BF 0D E0 */	stw r5, 0xde0(r31)
 /* 8095F0E0  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8095F0E4  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8095F0E8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8095F0EC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8095F0E8  80 64 00 00 */	lwz r3, 0(r4)
+/* 8095F0EC  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095F0F0  90 7F 0D C4 */	stw r3, 0xdc4(r31)
 /* 8095F0F4  90 1F 0D C8 */	stw r0, 0xdc8(r31)
-/* 8095F0F8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8095F0F8  80 04 00 08 */	lwz r0, 8(r4)
 /* 8095F0FC  90 1F 0D CC */	stw r0, 0xdcc(r31)
 /* 8095F100  38 80 FF FF */	li r4, -1
 /* 8095F104  B0 9F 0D E6 */	sth r4, 0xde6(r31)
@@ -79,11 +79,11 @@ lbl_8095F0A4:
 /* 8095F1D8  98 BF 0D EE */	stb r5, 0xdee(r31)
 /* 8095F1DC  3C 60 80 96 */	lis r3, lit_4500@ha
 /* 8095F1E0  38 83 25 E4 */	addi r4, r3, lit_4500@l
-/* 8095F1E4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 809625E4 */
-/* 8095F1E8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 809625E8 */
+/* 8095F1E4  80 64 00 00 */	lwz r3, 0(r4)
+/* 8095F1E8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095F1EC  90 61 00 08 */	stw r3, 8(r1)
 /* 8095F1F0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8095F1F4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 809625EC */
+/* 8095F1F4  80 04 00 08 */	lwz r0, 8(r4)
 /* 8095F1F8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8095F1FC  7F E3 FB 78 */	mr r3, r31
 /* 8095F200  38 81 00 08 */	addi r4, r1, 8

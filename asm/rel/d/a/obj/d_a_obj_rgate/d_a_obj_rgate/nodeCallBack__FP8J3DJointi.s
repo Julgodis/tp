@@ -9,7 +9,7 @@ lbl_80CB9CE8:
 /* 80CB9D04  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 80CB9D08  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CB9D0C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80CB9D10  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80CB9D10  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80CB9D14  83 DF 00 14 */	lwz r30, 0x14(r31)
 /* 80CB9D18  2C 04 00 01 */	cmpwi r4, 1
 /* 80CB9D1C  40 82 00 60 */	bne lbl_80CB9D7C

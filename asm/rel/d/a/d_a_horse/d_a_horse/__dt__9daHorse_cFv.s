@@ -16,9 +16,9 @@ lbl_8084478C:
 /* 808447C4  3C 80 80 84 */	lis r4, l_arcName@ha
 /* 808447C8  38 84 54 B8 */	addi r4, r4, l_arcName@l
 /* 808447CC  4B 7E 88 3C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
-/* 808447D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808447D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 808447D8  80 03 5D B8 */	lwz r0, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 808447D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808447D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 808447D8  80 03 5D B8 */	lwz r0, 0x5db8(r3)
 /* 808447DC  7C 00 F0 40 */	cmplw r0, r30
 /* 808447E0  40 82 00 0C */	bne lbl_808447EC
 /* 808447E4  38 00 00 00 */	li r0, 0

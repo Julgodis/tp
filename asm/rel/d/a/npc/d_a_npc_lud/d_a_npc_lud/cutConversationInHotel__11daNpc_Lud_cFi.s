@@ -11,8 +11,8 @@ lbl_80A6D160:
 /* 80A6D184  3B A0 00 00 */	li r29, 0
 /* 80A6D188  3B 80 00 00 */	li r28, 0
 /* 80A6D18C  3B 60 00 00 */	li r27, 0
-/* 80A6D190  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A6D194  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A6D190  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A6D194  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A6D198  3B 03 4F F8 */	addi r24, r3, 0x4ff8
 /* 80A6D19C  7F 03 C3 78 */	mr r3, r24
 /* 80A6D1A0  3C A0 80 A7 */	lis r5, struct_80A6FECC+0x0@ha

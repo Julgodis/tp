@@ -35,8 +35,8 @@ lbl_80CB7B84:
 /* 80CB7C08  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80CB7C0C  3B 60 00 00 */	li r27, 0
 /* 80CB7C10  3B E0 00 00 */	li r31, 0
-/* 80CB7C14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB7C18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB7C14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB7C18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB7C1C  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80CB7C20  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80CB7C24  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l

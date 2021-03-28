@@ -12,8 +12,8 @@ lbl_804AE778:
 /* 804AE7A0  3C 60 80 4C */	lis r3, lit_3879@ha
 /* 804AE7A4  3B E3 B5 34 */	addi r31, r3, lit_3879@l
 /* 804AE7A8  38 7D 05 2C */	addi r3, r29, 0x52c
-/* 804AE7AC  C0 3F 00 0C */	lfs f1, 0xc(r31)	/* effective address: 804BB540 */
-/* 804AE7B0  C0 5F 00 60 */	lfs f2, 0x60(r31)	/* effective address: 804BB594 */
+/* 804AE7AC  C0 3F 00 0C */	lfs f1, 0xc(r31)
+/* 804AE7B0  C0 5F 00 60 */	lfs f2, 0x60(r31)
 /* 804AE7B4  4B DC 12 CC */	b cLib_addCalc0__FPfff
 /* 804AE7B8  88 1D 0F 80 */	lbz r0, 0xf80(r29)
 /* 804AE7BC  7C 00 07 75 */	extsb. r0, r0

@@ -199,9 +199,9 @@ lbl_80D5E908:
 /* 80D5E908  38 60 00 00 */	li r3, 0
 /* 80D5E90C  48 00 00 C4 */	b lbl_80D5E9D0
 lbl_80D5E910:
-/* 80D5E910  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5E914  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D5E918  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D5E910  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5E914  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5E918  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80D5E91C  7C 1E E8 40 */	cmplw r30, r29
 /* 80D5E920  40 82 00 AC */	bne lbl_80D5E9CC
 /* 80D5E924  38 61 00 24 */	addi r3, r1, 0x24

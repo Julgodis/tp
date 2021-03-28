@@ -12,7 +12,7 @@ lbl_80AC57C4:
 /* 80AC57EC  48 00 01 05 */	bl srchActors__12daNpc_seiB_cFv
 /* 80AC57F0  3C 60 80 AC */	lis r3, m__18daNpc_seiB_Param_c@ha
 /* 80AC57F4  3B E3 70 24 */	addi r31, r3, m__18daNpc_seiB_Param_c@l
-/* 80AC57F8  C3 FF 00 90 */	lfs f31, 0x90(r31)	/* effective address: 80AC70B4 */
+/* 80AC57F8  C3 FF 00 90 */	lfs f31, 0x90(r31)
 /* 80AC57FC  38 60 00 28 */	li r3, 0x28
 /* 80AC5800  48 00 00 DD */	bl getDistTable__12dAttention_cFi
 /* 80AC5804  D3 E3 00 00 */	stfs f31, 0(r3)
@@ -33,33 +33,33 @@ lbl_80AC57C4:
 /* 80AC5840  90 1E 05 5C */	stw r0, 0x55c(r30)
 /* 80AC5844  3C 60 80 AC */	lis r3, m__18daNpc_seiB_Param_c@ha
 /* 80AC5848  38 63 70 24 */	addi r3, r3, m__18daNpc_seiB_Param_c@l
-/* 80AC584C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80AC702C */
+/* 80AC584C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80AC5850  D0 1E 04 EC */	stfs f0, 0x4ec(r30)
 /* 80AC5854  D0 1E 04 F0 */	stfs f0, 0x4f0(r30)
 /* 80AC5858  D0 1E 04 F4 */	stfs f0, 0x4f4(r30)
-/* 80AC585C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80AC7034 */
+/* 80AC585C  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80AC5860  FC 00 00 1E */	fctiwz f0, f0
 /* 80AC5864  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80AC5868  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80AC586C  98 1E 08 78 */	stb r0, 0x878(r30)
-/* 80AC5870  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80AC7038 */
+/* 80AC5870  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80AC5874  D0 1E 0D EC */	stfs f0, 0xdec(r30)
-/* 80AC5878  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80AC7040 */
+/* 80AC5878  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80AC587C  D0 1E 0D F0 */	stfs f0, 0xdf0(r30)
 /* 80AC5880  38 7E 08 A0 */	addi r3, r30, 0x8a0
 /* 80AC5884  C0 3E 0D F0 */	lfs f1, 0xdf0(r30)
 /* 80AC5888  4B 5B 06 B8 */	b SetWallR__12dBgS_AcchCirFf
 /* 80AC588C  3C 60 80 AC */	lis r3, m__18daNpc_seiB_Param_c@ha
 /* 80AC5890  38 63 70 24 */	addi r3, r3, m__18daNpc_seiB_Param_c@l
-/* 80AC5894  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80AC703C */
+/* 80AC5894  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80AC5898  D0 1E 08 D0 */	stfs f0, 0x8d0(r30)
-/* 80AC589C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80AC7030 */
+/* 80AC589C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80AC58A0  D0 1E 0D E8 */	stfs f0, 0xde8(r30)
-/* 80AC58A4  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80AC7028 */
+/* 80AC58A4  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80AC58A8  D0 1E 05 30 */	stfs f0, 0x530(r30)
-/* 80AC58AC  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80AC7090 */
+/* 80AC58AC  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80AC58B0  D0 1E 0A 80 */	stfs f0, 0xa80(r30)
-/* 80AC58B4  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80AC7068 */
+/* 80AC58B4  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80AC58B8  D0 1E 0A 84 */	stfs f0, 0xa84(r30)
 /* 80AC58BC  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */
 /* 80AC58C0  CB E1 00 20 */	lfd f31, 0x20(r1)

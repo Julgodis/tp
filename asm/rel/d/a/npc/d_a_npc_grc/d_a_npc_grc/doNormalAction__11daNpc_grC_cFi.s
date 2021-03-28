@@ -21,7 +21,7 @@ lbl_809CD960:
 lbl_809CD9AC:
 /* 809CD9AC  3C 80 80 9D */	lis r4, m__17daNpc_grC_Param_c@ha
 /* 809CD9B0  38 84 F5 1C */	addi r4, r4, m__17daNpc_grC_Param_c@l
-/* 809CD9B4  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 809CF57E */
+/* 809CD9B4  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_809CD9B8:
 /* 809CD9B8  38 A0 00 0E */	li r5, 0xe
 /* 809CD9BC  38 C0 00 00 */	li r6, 0

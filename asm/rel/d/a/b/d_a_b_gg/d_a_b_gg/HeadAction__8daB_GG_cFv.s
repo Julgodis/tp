@@ -56,8 +56,8 @@ lbl_805E9498:
 /* 805E94E4  38 BE 06 94 */	addi r5, r30, 0x694
 /* 805E94E8  38 C0 00 00 */	li r6, 0
 /* 805E94EC  4B A8 E8 78 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 805E94F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E94F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805E94F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E94F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805E94F8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 805E94FC  38 81 00 5C */	addi r4, r1, 0x5c
 /* 805E9500  4B A8 AE B4 */	b LineCross__4cBgSFP11cBgS_LinChk
@@ -74,7 +74,7 @@ lbl_805E9498:
 /* 805E952C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805E9530  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805E9534  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805E9538  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805E9538  80 63 00 00 */	lwz r3, 0(r3)
 /* 805E953C  38 81 00 10 */	addi r4, r1, 0x10
 /* 805E9540  38 BE 06 94 */	addi r5, r30, 0x694
 /* 805E9544  38 C0 00 00 */	li r6, 0
@@ -241,9 +241,9 @@ lbl_805E9784:
 /* 805E9798  D0 41 00 1C */	stfs f2, 0x1c(r1)
 /* 805E979C  3C 60 80 5F */	lis r3, data_805ED72C@ha
 /* 805E97A0  38 63 D7 2C */	addi r3, r3, data_805ED72C@l
-/* 805E97A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 805ED72C */
-/* 805E97A8  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 805ED734 */
-/* 805E97AC  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 805ED72C */
+/* 805E97A4  80 63 00 00 */	lwz r3, 0(r3)
+/* 805E97A8  C0 43 00 08 */	lfs f2, 8(r3)
+/* 805E97AC  C0 03 00 00 */	lfs f0, 0(r3)
 /* 805E97B0  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 805E97B4  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 805E97B8  D0 41 00 28 */	stfs f2, 0x28(r1)
@@ -330,7 +330,7 @@ lbl_805E98AC:
 /* 805E98D8  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 805E98DC  3C 60 80 5F */	lis r3, data_805ED72C@ha
 /* 805E98E0  38 63 D7 2C */	addi r3, r3, data_805ED72C@l
-/* 805E98E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 805ED72C */
+/* 805E98E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805E98E8  38 9E 06 94 */	addi r4, r30, 0x694
 /* 805E98EC  4B C8 73 18 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 805E98F0  7C 64 1B 78 */	mr r4, r3

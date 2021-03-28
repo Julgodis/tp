@@ -27,8 +27,8 @@ lbl_80CDAD80:
 lbl_80CDAD88:
 /* 80CDAD88  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CDAD8C  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
-/* 80CDAD90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDAD94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDAD90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDAD94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDAD98  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CDAD9C  7C 05 07 74 */	extsb r5, r0
 /* 80CDADA0  4B 35 A5 C0 */	b isSwitch__10dSv_info_cCFii

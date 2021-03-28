@@ -15,7 +15,7 @@ lbl_80D4357C:
 /* 80D435B0  3B E3 3D 88 */	addi r31, r3, l_DATA@l
 /* 80D435B4  3C 60 80 D4 */	lis r3, data_80D44024@ha
 /* 80D435B8  38 83 40 24 */	addi r4, r3, data_80D44024@l
-/* 80D435BC  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80D44024 */
+/* 80D435BC  88 04 00 00 */	lbz r0, 0(r4)
 /* 80D435C0  7C 00 07 75 */	extsb. r0, r0
 /* 80D435C4  40 82 00 18 */	bne lbl_80D435DC
 /* 80D435C8  38 00 FF FF */	li r0, -1
@@ -26,10 +26,10 @@ lbl_80D4357C:
 lbl_80D435DC:
 /* 80D435DC  3C 60 80 D4 */	lis r3, data_80D44020@ha
 /* 80D435E0  38 83 40 20 */	addi r4, r3, data_80D44020@l
-/* 80D435E4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D44020 */
+/* 80D435E4  80 64 00 00 */	lwz r3, 0(r4)
 /* 80D435E8  38 03 00 01 */	addi r0, r3, 1
 /* 80D435EC  54 00 07 BE */	clrlwi r0, r0, 0x1e
-/* 80D435F0  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80D44020 */
+/* 80D435F0  90 04 00 00 */	stw r0, 0(r4)
 /* 80D435F4  7F 9E 07 74 */	extsb r30, r28
 /* 80D435F8  38 60 00 07 */	li r3, 7
 /* 80D435FC  7C 1E 1B D6 */	divw r0, r30, r3

@@ -43,9 +43,9 @@ lbl_807C75AC:
 /* 807C75C8  2C 00 00 00 */	cmpwi r0, 0
 /* 807C75CC  40 82 00 34 */	bne lbl_807C7600
 /* 807C75D0  7F C3 F3 78 */	mr r3, r30
-/* 807C75D4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807C75D8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807C75DC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807C75D4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807C75D8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807C75DC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 807C75E0  4B 85 32 00 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807C75E4  C0 1F 00 8C */	lfs f0, 0x8c(r31)
 /* 807C75E8  FC 01 00 40 */	fcmpo cr0, f1, f0

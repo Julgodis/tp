@@ -19,10 +19,10 @@ lbl_80C577D8:
 /* 80C5781C  38 00 00 06 */	li r0, 6
 /* 80C57820  7C 09 03 A6 */	mtctr r0
 lbl_80C57824:
-/* 80C57824  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C5785C */
-/* 80C57828  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C57860 */
-/* 80C5782C  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C578CC */
-/* 80C57830  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C578D0 */
+/* 80C57824  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C57828  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C5782C  90 65 00 04 */	stw r3, 4(r5)
+/* 80C57830  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C57834  42 00 FF F0 */	bdnz lbl_80C57824
 /* 80C57838  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C5783C  7C 08 03 A6 */	mtlr r0

@@ -11,7 +11,7 @@ lbl_80669050:
 /* 80669074  7C 7D 1B 78 */	mr r29, r3
 /* 80669078  3C 80 80 67 */	lis r4, lit_3662@ha
 /* 8066907C  3B E4 ED E8 */	addi r31, r4, lit_3662@l
-/* 80669080  C0 1F 00 7C */	lfs f0, 0x7c(r31)	/* effective address: 8066EE64 */
+/* 80669080  C0 1F 00 7C */	lfs f0, 0x7c(r31)
 /* 80669084  D0 03 06 48 */	stfs f0, 0x648(r3)
 /* 80669088  A8 83 05 F6 */	lha r4, 0x5f6(r3)
 /* 8066908C  38 04 00 01 */	addi r0, r4, 1
@@ -33,7 +33,7 @@ lbl_806690B0:
 /* 806690C8  C0 3D 05 2C */	lfs f1, 0x52c(r29)
 /* 806690CC  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 806690D0  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 806690D4  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 8066F2D4 */
+/* 806690D4  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 806690D8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806690DC  4C 41 13 82 */	cror 2, 1, 2
 /* 806690E0  40 82 00 10 */	bne lbl_806690F0
@@ -261,7 +261,7 @@ lbl_806693C8:
 /* 80669404  4B C0 72 04 */	b cLib_addCalcAngleS2__FPssss
 /* 80669408  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 8066940C  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 80669410  C0 63 00 0C */	lfs f3, 0xc(r3)	/* effective address: 8066F2D0 */
+/* 80669410  C0 63 00 0C */	lfs f3, 0xc(r3)
 /* 80669414  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 80669418  C0 1D 05 E8 */	lfs f0, 0x5e8(r29)
 /* 8066941C  EC 20 00 F2 */	fmuls f1, f0, f3
@@ -455,7 +455,7 @@ lbl_80669698:
 /* 806696D0  C0 3D 05 C8 */	lfs f1, 0x5c8(r29)
 /* 806696D4  3C 60 80 67 */	lis r3, l_HIO@ha
 /* 806696D8  38 63 F2 C4 */	addi r3, r3, l_HIO@l
-/* 806696DC  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8066F2DC */
+/* 806696DC  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806696E0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806696E4  40 80 00 24 */	bge lbl_80669708
 /* 806696E8  7F A3 EB 78 */	mr r3, r29

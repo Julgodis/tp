@@ -11,8 +11,8 @@ lbl_807D8648:
 /* 807D866C  7C 7D 1B 78 */	mr r29, r3
 /* 807D8670  3C 80 80 7E */	lis r4, lit_3882@ha
 /* 807D8674  3B E4 29 8C */	addi r31, r4, lit_3882@l
-/* 807D8678  C3 FF 00 48 */	lfs f31, 0x48(r31)	/* effective address: 807E29D4 */
-/* 807D867C  C3 DF 00 FC */	lfs f30, 0xfc(r31)	/* effective address: 807E2A88 */
+/* 807D8678  C3 FF 00 48 */	lfs f31, 0x48(r31)
+/* 807D867C  C3 DF 00 FC */	lfs f30, 0xfc(r31)
 /* 807D8680  AB C3 04 DE */	lha r30, 0x4de(r3)
 /* 807D8684  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 807D8688  28 00 00 06 */	cmplwi r0, 6

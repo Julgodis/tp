@@ -54,8 +54,8 @@ lbl_80D21C78:
 /* 80D21D0C  88 1A 06 00 */	lbz r0, 0x600(r26)
 /* 80D21D10  28 00 00 00 */	cmplwi r0, 0
 /* 80D21D14  40 82 00 40 */	bne lbl_80D21D54
-/* 80D21D18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D21D1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D21D18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D21D1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D21D20  80 1A 00 B0 */	lwz r0, 0xb0(r26)
 /* 80D21D24  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D21D28  88 1A 04 BA */	lbz r0, 0x4ba(r26)

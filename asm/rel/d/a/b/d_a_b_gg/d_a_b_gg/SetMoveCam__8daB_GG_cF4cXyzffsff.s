@@ -11,9 +11,9 @@ lbl_805DFF4C:
 /* 805DFF70  7C 7E 1B 78 */	mr r30, r3
 /* 805DFF74  FF C0 18 90 */	fmr f30, f3
 /* 805DFF78  FF E0 20 90 */	fmr f31, f4
-/* 805DFF7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DFF80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805DFF84  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805DFF7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DFF80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805DFF84  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805DFF88  7C 00 07 74 */	extsb r0, r0
 /* 805DFF8C  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805DFF90  7C 63 02 14 */	add r3, r3, r0

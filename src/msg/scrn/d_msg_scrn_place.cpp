@@ -43,15 +43,15 @@ struct dMsgScrnBase_c {
 	/* 8023C574 */ void isTalkNow();
 };
 
-struct JKRExpHeap {
-};
-
 struct JKRArchive {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -157,28 +157,28 @@ SECTION_DATA static u8 data_803C12B0[56] = {
 
 /* 803C12E8-803C1340 0058+00 s=2 e=0 z=0  None .data      __vt__15dMsgScrnPlace_c                                      */
 SECTION_DATA static void* __vt__15dMsgScrnPlace_c[22] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMsgScrnBase_cFv,
-	/* 3    */ (void*)__dt__15dMsgScrnPlace_cFv,
-	/* 4    */ (void*)exec__15dMsgScrnPlace_cFv,
-	/* 5    */ (void*)multiDraw__14dMsgScrnBase_cFv,
-	/* 6    */ (void*)drawSelf__15dMsgScrnPlace_cFv,
-	/* 7    */ (void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
-	/* 8    */ (void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
-	/* 9    */ (void*)arwAnimeInit__14dMsgScrnBase_cFv,
-	/* 10   */ (void*)arwAnimeMove__14dMsgScrnBase_cFv,
-	/* 11   */ (void*)dotAnimeInit__14dMsgScrnBase_cFv,
-	/* 12   */ (void*)dotAnimeMove__14dMsgScrnBase_cFv,
-	/* 13   */ (void*)isSelect__14dMsgScrnBase_cFv,
-	/* 14   */ (void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
-	/* 15   */ (void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
-	/* 16   */ (void*)selectAnimeEnd__14dMsgScrnBase_cFv,
-	/* 17   */ (void*)fukiScale__15dMsgScrnPlace_cFf,
-	/* 18   */ (void*)fukiTrans__15dMsgScrnPlace_cFff,
-	/* 19   */ (void*)fukiAlpha__15dMsgScrnPlace_cFf,
-	/* 20   */ (void*)fontAlpha__15dMsgScrnPlace_cFf,
-	/* 21   */ (void*)fukiPosCalc__14dMsgScrnBase_cFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMsgScrnBase_cFv,
+	(void*)__dt__15dMsgScrnPlace_cFv,
+	(void*)exec__15dMsgScrnPlace_cFv,
+	(void*)multiDraw__14dMsgScrnBase_cFv,
+	(void*)drawSelf__15dMsgScrnPlace_cFv,
+	(void*)setSelectString__14dMsgScrnBase_cFPcPcPc,
+	(void*)setSelectRubyString__14dMsgScrnBase_cFPcPcPc,
+	(void*)arwAnimeInit__14dMsgScrnBase_cFv,
+	(void*)arwAnimeMove__14dMsgScrnBase_cFv,
+	(void*)dotAnimeInit__14dMsgScrnBase_cFv,
+	(void*)dotAnimeMove__14dMsgScrnBase_cFv,
+	(void*)isSelect__14dMsgScrnBase_cFv,
+	(void*)selectAnimeInit__14dMsgScrnBase_cFUcUcfUc,
+	(void*)selectAnimeMove__14dMsgScrnBase_cFUcUcb,
+	(void*)selectAnimeEnd__14dMsgScrnBase_cFv,
+	(void*)fukiScale__15dMsgScrnPlace_cFf,
+	(void*)fukiTrans__15dMsgScrnPlace_cFff,
+	(void*)fukiAlpha__15dMsgScrnPlace_cFf,
+	(void*)fontAlpha__15dMsgScrnPlace_cFf,
+	(void*)fukiPosCalc__14dMsgScrnBase_cFUc,
 };
 
 /* 80454CE8-80454CEC 0004+00 s=2 e=0 z=0  None .sdata2    @3998                                                        */

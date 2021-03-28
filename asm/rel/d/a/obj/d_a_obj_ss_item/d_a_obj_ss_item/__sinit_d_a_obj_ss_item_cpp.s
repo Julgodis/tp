@@ -8,9 +8,9 @@ lbl_80CE7E5C:
 /* 80CE7E74  38 00 00 06 */	li r0, 6
 /* 80CE7E78  7C 09 03 A6 */	mtctr r0
 lbl_80CE7E7C:
-/* 80CE7E7C  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80CE7EB0 */
-/* 80CE7E80  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80CE7EB4 */
-/* 80CE7E84  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80CE7F58 */
-/* 80CE7E88  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80CE7F5C */
+/* 80CE7E7C  80 64 00 04 */	lwz r3, 4(r4)
+/* 80CE7E80  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80CE7E84  90 65 00 04 */	stw r3, 4(r5)
+/* 80CE7E88  94 05 00 08 */	stwu r0, 8(r5)
 /* 80CE7E8C  42 00 FF F0 */	bdnz lbl_80CE7E7C
 /* 80CE7E90  4E 80 00 20 */	blr 

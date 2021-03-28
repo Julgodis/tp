@@ -9,9 +9,9 @@ lbl_80B3CA2C:
 /* 80B3CA48  7C 7B 1B 78 */	mr r27, r3
 /* 80B3CA4C  3C 60 80 B4 */	lis r3, m__21daNpcWrestler_Param_c@ha
 /* 80B3CA50  3B C3 16 DC */	addi r30, r3, m__21daNpcWrestler_Param_c@l
-/* 80B3CA54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B3CA58  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80B3CA5C  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80B3CA54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B3CA58  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80B3CA5C  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 80B3CA60  4B 64 4B E0 */	b dCam_getBody__Fv
 /* 80B3CA64  7C 7C 1B 78 */	mr r28, r3
 /* 80B3CA68  A0 1B 0E 96 */	lhz r0, 0xe96(r27)
@@ -39,7 +39,7 @@ lbl_80B3CA90:
 lbl_80B3CAB8:
 /* 80B3CAB8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B3CABC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B3CAC0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B3CAC0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B3CAC4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80B3CAC8  38 80 00 04 */	li r4, 4
 /* 80B3CACC  4B 77 53 28 */	b changeSubBgmStatus__8Z2SeqMgrFl
@@ -103,11 +103,11 @@ lbl_80B3CB30:
 /* 80B3CBA8  4B 80 99 08 */	b PSMTXCopy
 /* 80B3CBAC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B3CBB0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B3CBB4  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B3CBB4  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B3CBB8  D0 1B 0E 44 */	stfs f0, 0xe44(r27)
-/* 80B3CBBC  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B3CBBC  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B3CBC0  D0 1B 0E 48 */	stfs f0, 0xe48(r27)
-/* 80B3CBC4  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B3CBC4  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B3CBC8  D0 1B 0E 4C */	stfs f0, 0xe4c(r27)
 /* 80B3CBCC  38 61 00 50 */	addi r3, r1, 0x50
 /* 80B3CBD0  7F 84 E3 78 */	mr r4, r28
@@ -185,11 +185,11 @@ lbl_80B3CCC8:
 /* 80B3CCE8  4B 80 97 C8 */	b PSMTXCopy
 /* 80B3CCEC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B3CCF0  3B E3 D4 70 */	addi r31, r3, now__14mDoMtx_stack_c@l
-/* 80B3CCF4  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 803DD47C */
+/* 80B3CCF4  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80B3CCF8  D0 1B 0E 20 */	stfs f0, 0xe20(r27)
-/* 80B3CCFC  C0 1F 00 1C */	lfs f0, 0x1c(r31)	/* effective address: 803DD48C */
+/* 80B3CCFC  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 80B3CD00  D0 1B 0E 24 */	stfs f0, 0xe24(r27)
-/* 80B3CD04  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 803DD49C */
+/* 80B3CD04  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80B3CD08  D0 1B 0E 28 */	stfs f0, 0xe28(r27)
 /* 80B3CD0C  C0 3B 0E 24 */	lfs f1, 0xe24(r27)
 /* 80B3CD10  C0 1E 06 38 */	lfs f0, 0x638(r30)
@@ -356,19 +356,19 @@ lbl_80B3CF08:
 /* 80B3CF88  7F 83 E3 78 */	mr r3, r28
 /* 80B3CF8C  38 80 00 00 */	li r4, 0
 /* 80B3CF90  4B 62 60 7C */	b SetTrimSize__9dCamera_cFl
-/* 80B3CF94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B3CF98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B3CF94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B3CF98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B3CF9C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80B3CFA0  4B 50 54 C8 */	b reset__14dEvt_control_cFv
 /* 80B3CFA4  C0 1E 01 B8 */	lfs f0, 0x1b8(r30)
 /* 80B3CFA8  D0 1B 0E 8C */	stfs f0, 0xe8c(r27)
 /* 80B3CFAC  3C 60 80 B4 */	lis r3, lit_9878@ha
 /* 80B3CFB0  38 83 2C 60 */	addi r4, r3, lit_9878@l
-/* 80B3CFB4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B42C60 */
-/* 80B3CFB8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B42C64 */
+/* 80B3CFB4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B3CFB8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B3CFBC  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80B3CFC0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80B3CFC4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B42C68 */
+/* 80B3CFC4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B3CFC8  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80B3CFCC  38 00 00 03 */	li r0, 3
 /* 80B3CFD0  B0 1B 0E 96 */	sth r0, 0xe96(r27)

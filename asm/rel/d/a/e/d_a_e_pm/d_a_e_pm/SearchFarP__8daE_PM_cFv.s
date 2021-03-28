@@ -119,9 +119,9 @@ lbl_80742AF0:
 /* 80742B04  7F 9D E3 78 */	mr r29, r28
 /* 80742B08  3C 60 80 75 */	lis r3, data_8074C3E4@ha
 /* 80742B0C  38 63 C3 E4 */	addi r3, r3, data_8074C3E4@l
-/* 80742B10  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8074C3E4 */
-/* 80742B14  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 8074C3EC */
-/* 80742B18  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 8074C3E4 */
+/* 80742B10  80 63 00 00 */	lwz r3, 0(r3)
+/* 80742B14  C0 43 00 08 */	lfs f2, 8(r3)
+/* 80742B18  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80742B1C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80742B20  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 80742B24  D0 21 00 14 */	stfs f1, 0x14(r1)

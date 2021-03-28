@@ -129,8 +129,8 @@ lbl_80505C08:
 /* 80505C64  38 A1 00 18 */	addi r5, r1, 0x18
 /* 80505C68  7F C6 F3 78 */	mr r6, r30
 /* 80505C6C  4B B7 20 F8 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80505C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80505C74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80505C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80505C74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80505C78  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80505C7C  38 81 00 3C */	addi r4, r1, 0x3c
 /* 80505C80  4B B6 E7 34 */	b LineCross__4cBgSFP11cBgS_LinChk

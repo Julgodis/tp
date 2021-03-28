@@ -29,7 +29,7 @@ lbl_807B0F80:
 lbl_807B0F84:
 /* 807B0F84  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B0F88  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B0F8C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B0F8C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B0F90  4B 85 B4 4C */	b mDoMtx_YrotS__FPA4_fs
 /* 807B0F94  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 807B0F98  D0 01 00 18 */	stfs f0, 0x18(r1)

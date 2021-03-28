@@ -20,25 +20,25 @@ lbl_80C776A8:
 /* 80C776A8  40 81 00 24 */	ble lbl_80C776CC
 /* 80C776AC  3C 80 80 C7 */	lis r4, l_HIO@ha
 /* 80C776B0  38 84 7A DC */	addi r4, r4, l_HIO@l
-/* 80C776B4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C77AE4 */
+/* 80C776B4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C776B8  FC 00 00 50 */	fneg f0, f0
 /* 80C776BC  D0 03 05 C4 */	stfs f0, 0x5c4(r3)
-/* 80C776C0  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C77AE4 */
+/* 80C776C0  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C776C4  D0 03 05 C8 */	stfs f0, 0x5c8(r3)
 /* 80C776C8  48 00 00 24 */	b lbl_80C776EC
 lbl_80C776CC:
 /* 80C776CC  40 80 00 20 */	bge lbl_80C776EC
 /* 80C776D0  3C 80 80 C7 */	lis r4, l_HIO@ha
 /* 80C776D4  38 84 7A DC */	addi r4, r4, l_HIO@l
-/* 80C776D8  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C77AE4 */
+/* 80C776D8  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C776DC  D0 03 05 C4 */	stfs f0, 0x5c4(r3)
-/* 80C776E0  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C77AE4 */
+/* 80C776E0  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C776E4  FC 00 00 50 */	fneg f0, f0
 /* 80C776E8  D0 03 05 C8 */	stfs f0, 0x5c8(r3)
 lbl_80C776EC:
 /* 80C776EC  3C 80 80 C7 */	lis r4, l_HIO@ha
 /* 80C776F0  38 84 7A DC */	addi r4, r4, l_HIO@l
-/* 80C776F4  88 04 00 40 */	lbz r0, 0x40(r4)	/* effective address: 80C77B1C */
+/* 80C776F4  88 04 00 40 */	lbz r0, 0x40(r4)
 /* 80C776F8  98 03 05 CC */	stb r0, 0x5cc(r3)
 /* 80C776FC  3C 80 80 C7 */	lis r4, lit_3670@ha
 /* 80C77700  C0 04 79 B8 */	lfs f0, lit_3670@l(r4)

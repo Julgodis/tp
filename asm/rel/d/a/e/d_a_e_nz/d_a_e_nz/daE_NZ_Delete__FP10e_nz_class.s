@@ -26,14 +26,14 @@ lbl_8072B62C:
 /* 8072B634  41 82 00 34 */	beq lbl_8072B668
 /* 8072B638  3C 60 80 73 */	lis r3, data_8072C454@ha
 /* 8072B63C  38 A3 C4 54 */	addi r5, r3, data_8072C454@l
-/* 8072B640  88 85 00 00 */	lbz r4, 0(r5)	/* effective address: 8072C454 */
+/* 8072B640  88 85 00 00 */	lbz r4, 0(r5)
 /* 8072B644  3C 60 80 73 */	lis r3, stick_bit@ha
 /* 8072B648  38 63 C2 84 */	addi r3, r3, stick_bit@l
 /* 8072B64C  7C C0 07 74 */	extsb r0, r6
 /* 8072B650  7C 63 02 14 */	add r3, r3, r0
 /* 8072B654  88 03 FF FF */	lbz r0, -1(r3)
 /* 8072B658  7C 80 00 78 */	andc r0, r4, r0
-/* 8072B65C  98 05 00 00 */	stb r0, 0(r5)	/* effective address: 8072C454 */
+/* 8072B65C  98 05 00 00 */	stb r0, 0(r5)
 /* 8072B660  38 00 00 00 */	li r0, 0
 /* 8072B664  98 1F 06 AC */	stb r0, 0x6ac(r31)
 lbl_8072B668:

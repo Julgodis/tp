@@ -59,7 +59,7 @@ lbl_80BD4840:
 /* 80BD4840  38 7E 05 C8 */	addi r3, r30, 0x5c8
 /* 80BD4844  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BD4848  38 84 4D C4 */	addi r4, r4, l_arcName@l
-/* 80BD484C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BD4DC4 */
+/* 80BD484C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BD4850  4B 45 86 6C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BD4854  7C 7D 1B 78 */	mr r29, r3
 /* 80BD4858  2C 1D 00 04 */	cmpwi r29, 4
@@ -69,8 +69,8 @@ lbl_80BD4840:
 /* 80BD4868  88 9E 05 BC */	lbz r4, 0x5bc(r30)
 /* 80BD486C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80BD4870  41 82 00 28 */	beq lbl_80BD4898
-/* 80BD4874  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD4878  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD4874  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD4878  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD487C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BD4880  7C 05 07 74 */	extsb r5, r0
 /* 80BD4884  4B 46 0A DC */	b isSwitch__10dSv_info_cCFii
@@ -81,12 +81,12 @@ lbl_80BD4840:
 lbl_80BD4898:
 /* 80BD4898  C0 1F 00 58 */	lfs f0, 0x58(r31)
 /* 80BD489C  D0 1E 05 30 */	stfs f0, 0x530(r30)
-/* 80BD48A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD48A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD48A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD48A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD48A8  3C 63 00 02 */	addis r3, r3, 2
 /* 80BD48AC  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BD48B0  38 84 4D C4 */	addi r4, r4, l_arcName@l
-/* 80BD48B4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BD4DC4 */
+/* 80BD48B4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BD48B8  3C A0 80 BD */	lis r5, stringBase0@ha
 /* 80BD48BC  38 A5 4D 88 */	addi r5, r5, stringBase0@l
 /* 80BD48C0  38 A5 00 29 */	addi r5, r5, 0x29
@@ -96,7 +96,7 @@ lbl_80BD4898:
 /* 80BD48D0  7F C3 F3 78 */	mr r3, r30
 /* 80BD48D4  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BD48D8  38 84 4D C4 */	addi r4, r4, l_arcName@l
-/* 80BD48DC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BD4DC4 */
+/* 80BD48DC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BD48E0  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80BD48E4  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
 /* 80BD48E8  38 E0 0B 40 */	li r7, 0xb40

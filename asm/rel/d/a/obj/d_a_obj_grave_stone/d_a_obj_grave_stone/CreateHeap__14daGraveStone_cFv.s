@@ -6,12 +6,12 @@ lbl_80C12CA4:
 /* 80C12CB4  7C 7F 1B 78 */	mr r31, r3
 /* 80C12CB8  3C 60 80 C1 */	lis r3, l_arcName@ha
 /* 80C12CBC  38 63 33 04 */	addi r3, r3, l_arcName@l
-/* 80C12CC0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80C13304 */
+/* 80C12CC0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C12CC4  3C 80 80 C1 */	lis r4, stringBase0@ha
 /* 80C12CC8  38 84 32 E4 */	addi r4, r4, stringBase0@l
 /* 80C12CCC  38 84 00 07 */	addi r4, r4, 7
-/* 80C12CD0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C12CD4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C12CD0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C12CD4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C12CD8  3C A5 00 02 */	addis r5, r5, 2
 /* 80C12CDC  38 C0 00 80 */	li r6, 0x80
 /* 80C12CE0  38 A5 C2 F8 */	addi r5, r5, -15624

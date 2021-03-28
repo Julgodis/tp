@@ -21,8 +21,8 @@ lbl_804696A0:
 /* 804696A0  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 804696A4  60 00 00 02 */	ori r0, r0, 2
 /* 804696A8  B0 1E 00 FA */	sth r0, 0xfa(r30)
-/* 804696AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804696B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804696AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804696B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804696B4  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 804696B8  3C 80 80 47 */	lis r4, struct_8046B0D0+0x0@ha
 /* 804696BC  38 84 B0 D0 */	addi r4, r4, struct_8046B0D0+0x0@l

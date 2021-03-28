@@ -7,10 +7,10 @@ lbl_8077E870:
 /* 8077E884  7C 7C 1B 78 */	mr r28, r3
 /* 8077E888  3C 80 80 78 */	lis r4, lit_3903@ha
 /* 8077E88C  3B C4 0D C4 */	addi r30, r4, lit_3903@l
-/* 8077E890  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8077E894  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8077E898  83 7F 5D AC */	lwz r27, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 8077E89C  88 1F 5D B0 */	lbz r0, 0x5db0(r31)	/* effective address: 8040BF70 */
+/* 8077E890  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8077E894  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8077E898  83 7F 5D AC */	lwz r27, 0x5dac(r31)
+/* 8077E89C  88 1F 5D B0 */	lbz r0, 0x5db0(r31)
 /* 8077E8A0  7C 00 07 74 */	extsb r0, r0
 /* 8077E8A4  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8077E8A8  7C 9F 02 14 */	add r4, r31, r0
@@ -108,16 +108,16 @@ lbl_8077E94C:
 /* 8077EA0C  A8 1C 30 3A */	lha r0, 0x303a(r28)
 /* 8077EA10  2C 00 00 89 */	cmpwi r0, 0x89
 /* 8077EA14  40 82 02 7C */	bne lbl_8077EC90
-/* 8077EA18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077EA1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077EA18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077EA1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077EA20  88 9C 05 B7 */	lbz r4, 0x5b7(r28)
 /* 8077EA24  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8077EA28  7C 05 07 74 */	extsb r5, r0
 /* 8077EA2C  4B 8B 69 34 */	b isSwitch__10dSv_info_cCFii
 /* 8077EA30  2C 03 00 00 */	cmpwi r3, 0
 /* 8077EA34  40 82 00 1C */	bne lbl_8077EA50
-/* 8077EA38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077EA3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077EA38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077EA3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077EA40  88 9C 05 B7 */	lbz r4, 0x5b7(r28)
 /* 8077EA44  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8077EA48  7C 05 07 74 */	extsb r5, r0
@@ -128,8 +128,8 @@ lbl_8077EA50:
 /* 8077EA58  38 7D 02 48 */	addi r3, r29, 0x248
 /* 8077EA5C  38 80 00 00 */	li r4, 0
 /* 8077EA60  4B 9E 45 AC */	b SetTrimSize__9dCamera_cFl
-/* 8077EA64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077EA68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077EA64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077EA68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077EA6C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8077EA70  4B 8C 39 F8 */	b reset__14dEvt_control_cFv
 /* 8077EA74  7F 83 E3 78 */	mr r3, r28
@@ -255,8 +255,8 @@ lbl_8077EC28:
 /* 8077EC40  38 7D 02 48 */	addi r3, r29, 0x248
 /* 8077EC44  38 80 00 00 */	li r4, 0
 /* 8077EC48  4B 9E 43 C4 */	b SetTrimSize__9dCamera_cFl
-/* 8077EC4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077EC50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077EC4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077EC50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077EC54  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 8077EC58  4B 8C 38 10 */	b reset__14dEvt_control_cFv
 /* 8077EC5C  80 7F 5D AC */	lwz r3, 0x5dac(r31)
@@ -264,8 +264,8 @@ lbl_8077EC28:
 /* 8077EC64  B0 03 06 04 */	sth r0, 0x604(r3)
 /* 8077EC68  38 00 00 01 */	li r0, 1
 /* 8077EC6C  90 03 06 14 */	stw r0, 0x614(r3)
-/* 8077EC70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077EC74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077EC70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077EC74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077EC78  38 80 00 0E */	li r4, 0xe
 /* 8077EC7C  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 8077EC80  7C 05 07 74 */	extsb r5, r0
@@ -297,8 +297,8 @@ lbl_8077EC90:
 /* 8077ECE4  38 BC 30 3C */	addi r5, r28, 0x303c
 /* 8077ECE8  7F 86 E3 78 */	mr r6, r28
 /* 8077ECEC  4B 8F 90 78 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8077ECF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077ECF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8077ECF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077ECF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8077ECF8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8077ECFC  38 81 00 68 */	addi r4, r1, 0x68
 /* 8077ED00  4B 8F 56 B4 */	b LineCross__4cBgSFP11cBgS_LinChk

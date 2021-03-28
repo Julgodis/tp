@@ -25,7 +25,7 @@ lbl_80C3CA8C:
 /* 80C3CAE8  38 7F 07 14 */	addi r3, r31, 0x714
 /* 80C3CAEC  3C 80 80 C4 */	lis r4, M_attr__15daObjKazeNeko_c@ha
 /* 80C3CAF0  38 84 D3 DC */	addi r4, r4, M_attr__15daObjKazeNeko_c@l
-/* 80C3CAF4  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80C3D3E0 */
+/* 80C3CAF4  C0 24 00 04 */	lfs f1, 4(r4)
 /* 80C3CAF8  4B 63 27 00 */	b SetH__8cM3dGCylFf
 /* 80C3CAFC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80C3CB00  80 01 00 14 */	lwz r0, 0x14(r1)

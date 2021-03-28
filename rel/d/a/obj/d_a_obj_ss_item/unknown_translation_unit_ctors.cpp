@@ -19,7 +19,6 @@ extern void* const data_80CE7EA4[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_ss_item_cpp(); // 1
 
 // 
 // Declarations:

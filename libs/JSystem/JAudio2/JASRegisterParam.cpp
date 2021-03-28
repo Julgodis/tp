@@ -66,16 +66,16 @@ asm void JASRegisterParam::init() {
 /* ############################################################################################## */
 /* 803C5B90-803C5BB8 0028+00 s=1 e=0 z=0  None .data      @56                                                          */
 SECTION_DATA static void* lit_56[10] = {
-	/* 0    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
-	/* 1    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
-	/* 2    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x74),
-	/* 3    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x94),
-	/* 4    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xB4),
-	/* 5    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xD4),
-	/* 6    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xF4),
-	/* 7    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x104),
-	/* 8    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x114),
-	/* 9    */ (void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x124),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x50),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x64),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x74),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x94),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xB4),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xD4),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0xF4),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x104),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x114),
+	(void*)(((char*)write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl)+0x124),
 };
 
 /* 80293684-802937B8 0134+00 s=1 e=4 z=0  None .text      write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl       */
@@ -92,16 +92,16 @@ asm void JASRegisterParam::write(JASRegisterParam::RegID param_0, u32 param_1) {
 /* ############################################################################################## */
 /* 803C5BB8-803C5BE0 0028+00 s=1 e=0 z=0  None .data      @87                                                          */
 SECTION_DATA static void* lit_87[10] = {
-	/* 0    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
-	/* 1    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
-	/* 2    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x68),
-	/* 3    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x7C),
-	/* 4    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x8C),
-	/* 5    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xA0),
-	/* 6    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xB0),
-	/* 7    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xC4),
-	/* 8    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xD8),
-	/* 9    */ (void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xEC),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x3C),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x54),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x68),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x7C),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0x8C),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xA0),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xB0),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xC4),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xD8),
+	(void*)(((char*)read__16JASRegisterParamFQ216JASRegisterParam5RegID)+0xEC),
 };
 
 /* 802937B8-802938BC 0104+00 s=1 e=1 z=0  None .text      read__16JASRegisterParamFQ216JASRegisterParam5RegID          */

@@ -72,8 +72,8 @@ lbl_80540DC4:
 /* 80540DC4  88 1F 09 9A */	lbz r0, 0x99a(r31)
 /* 80540DC8  28 00 00 01 */	cmplwi r0, 1
 /* 80540DCC  40 82 00 24 */	bne lbl_80540DF0
-/* 80540DD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80540DD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80540DD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80540DD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80540DD8  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80540DDC  4B B0 16 8C */	b reset__14dEvt_control_cFv
 /* 80540DE0  38 00 00 00 */	li r0, 0

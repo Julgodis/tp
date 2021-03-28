@@ -7,7 +7,7 @@ lbl_807BE708:
 /* 807BE71C  7C 7E 1B 78 */	mr r30, r3
 /* 807BE720  3C 60 80 7C */	lis r3, lit_1109@ha
 /* 807BE724  3B E3 23 A0 */	addi r31, r3, lit_1109@l
-/* 807BE728  88 1F 00 C8 */	lbz r0, 0xc8(r31)	/* effective address: 807C2468 */
+/* 807BE728  88 1F 00 C8 */	lbz r0, 0xc8(r31)
 /* 807BE72C  7C 00 07 75 */	extsb. r0, r0
 /* 807BE730  40 82 00 34 */	bne lbl_807BE764
 /* 807BE734  3C 60 80 7C */	lis r3, lit_3929@ha
@@ -26,9 +26,9 @@ lbl_807BE764:
 /* 807BE764  88 1E 06 F6 */	lbz r0, 0x6f6(r30)
 /* 807BE768  28 00 00 00 */	cmplwi r0, 0
 /* 807BE76C  40 82 00 C0 */	bne lbl_807BE82C
-/* 807BE770  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BE774  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 807BE778  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 807BE770  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BE774  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 807BE778  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 807BE77C  38 00 00 FF */	li r0, 0xff
 /* 807BE780  90 01 00 08 */	stw r0, 8(r1)
 /* 807BE784  38 80 00 00 */	li r4, 0
@@ -74,9 +74,9 @@ lbl_807BE764:
 /* 807BE824  90 7E 0A C0 */	stw r3, 0xac0(r30)
 /* 807BE828  48 00 00 BC */	b lbl_807BE8E4
 lbl_807BE82C:
-/* 807BE82C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BE830  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 807BE834  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 807BE82C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BE830  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 807BE834  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 807BE838  38 00 00 FF */	li r0, 0xff
 /* 807BE83C  90 01 00 08 */	stw r0, 8(r1)
 /* 807BE840  38 80 00 00 */	li r4, 0
@@ -121,9 +121,9 @@ lbl_807BE82C:
 /* 807BE8DC  4B 88 EB F0 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 807BE8E0  90 7E 0A C0 */	stw r3, 0xac0(r30)
 lbl_807BE8E4:
-/* 807BE8E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BE8E8  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 807BE8EC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 807BE8E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BE8E8  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 807BE8EC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 807BE8F0  38 63 02 10 */	addi r3, r3, 0x210
 /* 807BE8F4  80 9E 0A BC */	lwz r4, 0xabc(r30)
 /* 807BE8F8  4B 88 D0 20 */	b getEmitter__Q213dPa_control_c7level_cFUl

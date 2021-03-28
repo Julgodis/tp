@@ -53,11 +53,11 @@ lbl_80B17FCC:
 /* 80B17FD0  41 82 00 8C */	beq lbl_80B1805C
 /* 80B17FD4  3C 60 80 B2 */	lis r3, lit_5698@ha
 /* 80B17FD8  38 83 E3 CC */	addi r4, r3, lit_5698@l
-/* 80B17FDC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E3CC */
-/* 80B17FE0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E3D0 */
+/* 80B17FDC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B17FE0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B17FE4  90 61 00 08 */	stw r3, 8(r1)
 /* 80B17FE8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B17FEC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E3D4 */
+/* 80B17FEC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B17FF0  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B17FF4  38 00 00 03 */	li r0, 3
 /* 80B17FF8  B0 1F 13 88 */	sth r0, 0x1388(r31)

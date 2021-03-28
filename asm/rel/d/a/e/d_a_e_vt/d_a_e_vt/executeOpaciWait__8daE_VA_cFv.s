@@ -56,7 +56,7 @@ lbl_807C8C0C:
 /* 807C8C48  90 1D 05 5C */	stw r0, 0x55c(r29)
 /* 807C8C4C  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807C8C50  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807C8C54  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 807CF4DC */
+/* 807C8C54  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 807C8C58  FC 00 00 1E */	fctiwz f0, f0
 /* 807C8C5C  D8 01 00 78 */	stfd f0, 0x78(r1)
 /* 807C8C60  80 01 00 7C */	lwz r0, 0x7c(r1)
@@ -70,7 +70,7 @@ lbl_807C8C0C:
 lbl_807C8C80:
 /* 807C8C80  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807C8C84  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807C8C88  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807C8C88  80 63 00 00 */	lwz r3, 0(r3)
 /* 807C8C8C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807C8C90  38 80 00 03 */	li r4, 3
 /* 807C8C94  4B AE 91 60 */	b changeSubBgmStatus__8Z2SeqMgrFl
@@ -128,22 +128,22 @@ lbl_807C8CD0:
 /* 807C8D5C  D0 21 00 70 */	stfs f1, 0x70(r1)
 /* 807C8D60  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 807C8D64  D0 01 00 74 */	stfs f0, 0x74(r1)
-/* 807C8D68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C8D6C  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 807C8D70  80 7C 5D AC */	lwz r3, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 807C8D68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C8D6C  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 807C8D70  80 7C 5D AC */	lwz r3, 0x5dac(r28)
 /* 807C8D74  38 81 00 6C */	addi r4, r1, 0x6c
 /* 807C8D78  38 A0 80 00 */	li r5, -32768
 /* 807C8D7C  38 C0 00 00 */	li r6, 0
-/* 807C8D80  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 807C8D80  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 807C8D84  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 807C8D88  7D 89 03 A6 */	mtctr r12
 /* 807C8D8C  4E 80 04 21 */	bctrl 
-/* 807C8D90  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 807C8D90  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 807C8D94  38 00 00 03 */	li r0, 3
 /* 807C8D98  B0 04 06 04 */	sth r0, 0x604(r4)
 /* 807C8D9C  38 60 00 00 */	li r3, 0
 /* 807C8DA0  90 64 06 0C */	stw r3, 0x60c(r4)
-/* 807C8DA4  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 807C8DA4  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 807C8DA8  38 00 00 17 */	li r0, 0x17
 /* 807C8DAC  90 04 06 14 */	stw r0, 0x614(r4)
 /* 807C8DB0  38 00 00 01 */	li r0, 1
@@ -259,8 +259,8 @@ lbl_807C8E70:
 /* 807C8F60  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 807C8F64  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 807C8F68  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 807C8F6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C8F70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807C8F6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C8F70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807C8F74  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807C8F78  38 80 00 02 */	li r4, 2
 /* 807C8F7C  38 A0 00 1F */	li r5, 0x1f
@@ -309,8 +309,8 @@ lbl_807C8F94:
 /* 807C9024  4B B5 F4 08 */	b checkPass__12J3DFrameCtrlFf
 /* 807C9028  2C 03 00 00 */	cmpwi r3, 0
 /* 807C902C  41 82 00 18 */	beq lbl_807C9044
-/* 807C9030  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C9034  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807C9030  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C9034  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807C9038  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807C903C  38 80 00 1F */	li r4, 0x1f
 /* 807C9040  4B 8A 6D 54 */	b StopQuake__12dVibration_cFi
@@ -349,13 +349,13 @@ lbl_807C906C:
 /* 807C90BC  7F C3 F3 78 */	mr r3, r30
 /* 807C90C0  38 80 00 00 */	li r4, 0
 /* 807C90C4  4B 99 9F 48 */	b SetTrimSize__9dCamera_cFl
-/* 807C90C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C90CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807C90C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C90CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807C90D0  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 807C90D4  4B 87 93 94 */	b reset__14dEvt_control_cFv
 /* 807C90D8  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807C90DC  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807C90E0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 807CF4DC */
+/* 807C90E0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 807C90E4  FC 00 00 1E */	fctiwz f0, f0
 /* 807C90E8  D8 01 00 78 */	stfd f0, 0x78(r1)
 /* 807C90EC  80 01 00 7C */	lwz r0, 0x7c(r1)

@@ -60,7 +60,7 @@ lbl_80464300:
 /* 80464300  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80464304  8C 03 0D 64 */	lbzu r0, struct_80450D64+0x0@l(r3)
 /* 80464308  98 1F 06 7D */	stb r0, 0x67d(r31)
-/* 8046430C  8B C3 00 00 */	lbz r30, 0(r3)	/* effective address: 80450000 */
+/* 8046430C  8B C3 00 00 */	lbz r30, 0(r3)
 /* 80464310  7F DE 07 74 */	extsb r30, r30
 /* 80464314  7F E3 FB 78 */	mr r3, r31
 /* 80464318  4B BD 5E A0 */	b getFRoomNo__13door_param2_cFP10fopAc_ac_c
@@ -75,8 +75,8 @@ lbl_80464334:
 /* 80464338  4B BD 5F 04 */	b getBLightInf__13door_param2_cFP10fopAc_ac_c
 lbl_8046433C:
 /* 8046433C  98 7F 04 70 */	stb r3, 0x470(r31)
-/* 80464340  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80464344  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80464340  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80464344  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80464348  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8046434C  3B DD 3E C8 */	addi r30, r29, 0x3ec8
 /* 80464350  7F C3 F3 78 */	mr r3, r30

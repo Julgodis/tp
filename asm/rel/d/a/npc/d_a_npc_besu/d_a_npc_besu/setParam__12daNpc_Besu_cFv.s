@@ -51,10 +51,10 @@ lbl_80538158:
 /* 80538158  3B 80 00 05 */	li r28, 5
 /* 8053815C  3B 40 00 05 */	li r26, 5
 lbl_80538160:
-/* 80538160  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80538164  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80538168  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8053816C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80538160  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80538164  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80538168  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8053816C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80538170  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 80538174  7D 89 03 A6 */	mtctr r12
 /* 80538178  4E 80 04 21 */	bctrl 

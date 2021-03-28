@@ -7,9 +7,9 @@ lbl_8062A71C:
 /* 8062A730  7C 7F 1B 78 */	mr r31, r3
 /* 8062A734  3C 80 80 63 */	lis r4, lit_3920@ha
 /* 8062A738  3B A4 E6 34 */	addi r29, r4, lit_3920@l
-/* 8062A73C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8062A740  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 8062A744  83 9E 5D AC */	lwz r28, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 8062A73C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8062A740  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 8062A744  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 8062A748  80 03 06 F4 */	lwz r0, 0x6f4(r3)
 /* 8062A74C  2C 00 00 0A */	cmpwi r0, 0xa
 /* 8062A750  41 82 00 A0 */	beq lbl_8062A7F0

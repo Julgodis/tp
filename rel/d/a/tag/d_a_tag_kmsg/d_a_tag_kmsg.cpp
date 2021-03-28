@@ -85,24 +85,25 @@ struct cSAngle {
 // Forward References:
 // 
 
-static void daTag_KMsg_Create(void*); // 2
-static void daTag_KMsg_Delete(void*); // 2
-static void daTag_KMsg_Execute(void*); // 2
-static void daTag_KMsg_Draw(void*); // 2
-static bool daTag_KMsg_IsDelete(void*); // 2
+void daTag_KMsg_Create(void*); // 2
+void daTag_KMsg_Delete(void*); // 2
+void daTag_KMsg_Execute(void*); // 2
+void daTag_KMsg_Draw(void*); // 2
+bool daTag_KMsg_IsDelete(void*); // 2
 
 extern "C" void create__12daTag_KMsg_cFv(); // 1
 extern "C" void Delete__12daTag_KMsg_cFv(); // 1
 extern "C" void Execute__12daTag_KMsg_cFv(); // 1
 extern "C" bool Draw__12daTag_KMsg_cFv(); // 1
 extern "C" void isDelete__12daTag_KMsg_cFv(); // 1
-extern "C" static void daTag_KMsg_Create__FPv(); // 1
-extern "C" static void daTag_KMsg_Delete__FPv(); // 1
-extern "C" static void daTag_KMsg_Execute__FPv(); // 1
-extern "C" static void daTag_KMsg_Draw__FPv(); // 1
-extern "C" static bool daTag_KMsg_IsDelete__FPv(); // 1
+extern "C" void daTag_KMsg_Create__FPv(); // 1
+extern "C" void daTag_KMsg_Delete__FPv(); // 1
+extern "C" void daTag_KMsg_Execute__FPv(); // 1
+extern "C" void daTag_KMsg_Draw__FPv(); // 1
+extern "C" bool daTag_KMsg_IsDelete__FPv(); // 1
 extern "C" void __dt__12daTag_KMsg_cFv(); // 1
-extern "C" extern u8 const lit_4211[8];
+extern "C" extern u8 const struct_8048EB08[36];
+extern "C" extern void* daTag_KMsg_MethodTable[8];
 extern "C" extern void* g_profile_TAG_KMSG[12];
 
 // 
@@ -158,15 +159,7 @@ extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void strlen(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 struct_8040BFE4[4];
-SECTION_BSS extern u8 struct_8040BFFC[4];
-extern "C" extern u8 struct_8040C000[12];
-SECTION_BSS extern u8 struct_8040C010[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
 
 // 
@@ -193,12 +186,12 @@ SECTION_RODATA static u32 const lit_4209[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8048EAF4-8048EAFC 0008+00 s=0 e=0 z=0  None .rodata    @4211                                                        */
-SECTION_RODATA u8 const lit_4211[8] = {
+/* 8048EAF4-8048EAFC 0008+00 s=1 e=0 z=0  None .rodata    @4211                                                        */
+SECTION_RODATA static u8 const lit_4211[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8048EAFC-8048EB08 000C+00 s=5 e=0 z=0  None .rodata    None                                                         */
+/* 8048EAFC-8048EB08 000C+00 s=3 e=0 z=0  None .rodata    None                                                         */
 SECTION_RODATA static u8 const struct_8048EAFC[12] = {
 	/* 8048EAFC 0001 stringBase_8048EAFC @stringBase0 */
 	0x00,
@@ -206,67 +199,56 @@ SECTION_RODATA static u8 const struct_8048EAFC[12] = {
 	0x45, 0x58, 0x54, 0x49, 0x4E, 0x43, 0x54, 0x49, 0x4F, 0x4E, 0x00,
 };
 
-/* 8048EB08-8048EB2C 0024+00 s=2 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_8048EB08[36] = {
-	/* 8048EB08 0009 data_8048EB08 None */
-	0x50, 0x55, 0x52, 0x43, 0x48, 0x41, 0x53, 0x45, 0x00,
-	/* 8048EB11 0006 data_8048EB11 None */
-	0x42, 0x61, 0x6E, 0x73, 0x31, 0x00,
-	/* 8048EB17 0015 data_8048EB17 None */
-	0x73, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x41, 0x00, 0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00,
-	0x4B, 0x4D, 0x73, 0x67, 0x00,
-};
-
 /* 8048EB2C-8048EB44 0018+00 s=1 e=0 z=0  None .data      l_evtList                                                    */
 SECTION_DATA static void* l_evtList[6] = {
-	/* 0    */ (void*)(((char*)&struct_8048EAFC)+0x0) /* @stringBase0 */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)(((char*)&struct_8048EAFC)+0x1) /* None */,
-	/* 3    */ (void*)0x00000002,
-	/* 4    */ (void*)(((char*)&struct_8048EB08)+0x0) /* None */,
-	/* 5    */ (void*)0x00000001,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00000002,
+	(void*)NULL,
+	(void*)0x00000001,
 };
 
 /* 8048EB44-8048EB50 000C+00 s=1 e=0 z=0  None .data      l_resNameList                                                */
 SECTION_DATA static void* l_resNameList[3] = {
-	/* 0    */ (void*)(((char*)&struct_8048EAFC)+0x0) /* @stringBase0 */,
-	/* 1    */ (void*)(((char*)&struct_8048EB08)+0x9) /* None */,
-	/* 2    */ (void*)(((char*)&struct_8048EB08)+0xF) /* None */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048EB50-8048EB70 0020+00 s=1 e=0 z=0  None .data      daTag_KMsg_MethodTable                                       */
-SECTION_DATA static void* daTag_KMsg_MethodTable[8] = {
-	/* 0    */ (void*)daTag_KMsg_Create__FPv,
-	/* 1    */ (void*)daTag_KMsg_Delete__FPv,
-	/* 2    */ (void*)daTag_KMsg_Execute__FPv,
-	/* 3    */ (void*)daTag_KMsg_IsDelete__FPv,
-	/* 4    */ (void*)daTag_KMsg_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8048EB50-8048EB70 0020+00 s=0 e=0 z=0  None .data      daTag_KMsg_MethodTable                                       */
+SECTION_DATA void* daTag_KMsg_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048EB70-8048EBA0 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_KMSG                                           */
+/* 8048EB70-8048EBA0 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_KMSG                                           */
 SECTION_DATA void* g_profile_TAG_KMSG[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02EB0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005CC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01220000,
-	/* 9    */ (void*)&daTag_KMsg_MethodTable,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02EB0000,
+	(void*)NULL,
+	(void*)0x000005CC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01220000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 8048EBA0-8048EBAC 000C+00 s=2 e=0 z=0  None .data      __vt__12daTag_KMsg_c                                         */
 SECTION_DATA static void* __vt__12daTag_KMsg_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daTag_KMsg_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8048DE78-8048DFDC 0164+00 s=1 e=0 z=0  None .text      create__12daTag_KMsg_cFv                                     */
@@ -319,57 +301,57 @@ asm void daTag_KMsg_c::isDelete() {
 #pragma pop
 
 
-/* 8048E9A8-8048E9C8 0020+00 s=1 e=0 z=0  None .text      daTag_KMsg_Create__FPv                                       */
+/* 8048E9A8-8048E9C8 0020+00 s=0 e=0 z=0  None .text      daTag_KMsg_Create__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_KMsg_Create(void* param_0) {
+asm void daTag_KMsg_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8048E9C8-8048E9E8 0020+00 s=1 e=0 z=0  None .text      daTag_KMsg_Delete__FPv                                       */
+/* 8048E9C8-8048E9E8 0020+00 s=0 e=0 z=0  None .text      daTag_KMsg_Delete__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_KMsg_Delete(void* param_0) {
+asm void daTag_KMsg_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048E9E8-8048EA08 0020+00 s=1 e=0 z=0  None .text      daTag_KMsg_Execute__FPv                                      */
+/* 8048E9E8-8048EA08 0020+00 s=0 e=0 z=0  None .text      daTag_KMsg_Execute__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_KMsg_Execute(void* param_0) {
+asm void daTag_KMsg_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8048EA08-8048EA28 0020+00 s=1 e=0 z=0  None .text      daTag_KMsg_Draw__FPv                                         */
+/* 8048EA08-8048EA28 0020+00 s=0 e=0 z=0  None .text      daTag_KMsg_Draw__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_KMsg_Draw(void* param_0) {
+asm void daTag_KMsg_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_kmsg/d_a_tag_kmsg/daTag_KMsg_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8048EA28-8048EA30 0008+00 s=1 e=0 z=0  None .text      daTag_KMsg_IsDelete__FPv                                     */
-static bool daTag_KMsg_IsDelete(void* param_0) {
+/* 8048EA28-8048EA30 0008+00 s=0 e=0 z=0  None .text      daTag_KMsg_IsDelete__FPv                                     */
+bool daTag_KMsg_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 8048EA30-8048EAD4 00A4+00 s=1 e=0 z=0  None .text      __dt__12daTag_KMsg_cFv                                       */
+/* 8048EA30-8048EAD4 00A4+00 s=0 e=0 z=0  None .text      __dt__12daTag_KMsg_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -379,4 +361,16 @@ asm daTag_KMsg_c::~daTag_KMsg_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8048EB08-8048EB2C 0024+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_8048EB08[36] = {
+	/* 8048EB08 0009 data_8048EB08 None */
+	0x50, 0x55, 0x52, 0x43, 0x48, 0x41, 0x53, 0x45, 0x00,
+	/* 8048EB11 0006 data_8048EB11 None */
+	0x42, 0x61, 0x6E, 0x73, 0x31, 0x00,
+	/* 8048EB17 0015 data_8048EB17 None */
+	0x73, 0x65, 0x6B, 0x69, 0x7A, 0x6F, 0x41, 0x00, 0x4C, 0x76, 0x36, 0x47, 0x61, 0x74, 0x65, 0x00,
+	0x4B, 0x4D, 0x73, 0x67, 0x00,
+};
 

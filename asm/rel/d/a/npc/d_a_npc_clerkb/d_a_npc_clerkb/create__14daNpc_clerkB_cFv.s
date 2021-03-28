@@ -117,8 +117,8 @@ lbl_80996194:
 /* 80996248  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 8099624C  90 1D 10 3C */	stw r0, 0x103c(r29)
 /* 80996250  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80996254  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80996258  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80996254  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80996258  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8099625C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80996260  4B 6E 08 4C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80996264  80 1D 07 68 */	lwz r0, 0x768(r29)

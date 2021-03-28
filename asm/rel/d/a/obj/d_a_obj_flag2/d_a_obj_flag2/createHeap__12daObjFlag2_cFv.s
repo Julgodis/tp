@@ -28,8 +28,8 @@ lbl_80BED480:
 /* 80BED4E8  3C 80 80 BF */	lis r4, stringBase0@ha
 /* 80BED4EC  38 84 E1 E8 */	addi r4, r4, stringBase0@l
 /* 80BED4F0  38 84 00 16 */	addi r4, r4, 0x16
-/* 80BED4F4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BED4F8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BED4F4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BED4F8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BED4FC  3C A5 00 02 */	addis r5, r5, 2
 /* 80BED500  38 C0 00 80 */	li r6, 0x80
 /* 80BED504  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -110,8 +110,8 @@ lbl_80BED61C:
 /* 80BED624  3C 80 80 BF */	lis r4, stringBase0@ha
 /* 80BED628  38 84 E1 E8 */	addi r4, r4, stringBase0@l
 /* 80BED62C  38 84 00 1F */	addi r4, r4, 0x1f
-/* 80BED630  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BED634  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BED630  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BED634  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BED638  3C A5 00 02 */	addis r5, r5, 2
 /* 80BED63C  38 C0 00 80 */	li r6, 0x80
 /* 80BED640  38 A5 C2 F8 */	addi r5, r5, -15624

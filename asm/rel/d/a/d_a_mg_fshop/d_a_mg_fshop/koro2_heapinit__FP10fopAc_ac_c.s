@@ -33,8 +33,8 @@ lbl_8086E864:
 /* 8086E864  3C 60 80 87 */	lis r3, stringBase0@ha
 /* 8086E868  38 63 02 7C */	addi r3, r3, stringBase0@l
 /* 8086E86C  38 80 00 25 */	li r4, 0x25
-/* 8086E870  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8086E874  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8086E870  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8086E874  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8086E878  3E 85 00 02 */	addis r20, r5, 2
 /* 8086E87C  3A 94 C2 F8 */	addi r20, r20, -15624
 /* 8086E880  7E 85 A3 78 */	mr r5, r20

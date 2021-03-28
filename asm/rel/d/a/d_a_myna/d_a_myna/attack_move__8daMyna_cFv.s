@@ -18,7 +18,7 @@ lbl_80946D94:
 /* 80946DA0  41 82 00 20 */	beq lbl_80946DC0
 /* 80946DA4  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80946DA8  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80946DAC  A8 03 00 30 */	lha r0, 0x30(r3)	/* effective address: 8094BA6C */
+/* 80946DAC  A8 03 00 30 */	lha r0, 0x30(r3)
 /* 80946DB0  B0 1F 09 26 */	sth r0, 0x926(r31)
 /* 80946DB4  80 1F 06 E4 */	lwz r0, 0x6e4(r31)
 /* 80946DB8  54 00 07 B6 */	rlwinm r0, r0, 0, 0x1e, 0x1b

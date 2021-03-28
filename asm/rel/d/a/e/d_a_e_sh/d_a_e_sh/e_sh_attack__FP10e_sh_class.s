@@ -194,7 +194,7 @@ lbl_8078F9D0:
 /* 8078F9F8  C0 3D 06 90 */	lfs f1, 0x690(r29)
 /* 8078F9FC  3C 60 80 79 */	lis r3, l_HIO@ha
 /* 8078FA00  38 63 21 08 */	addi r3, r3, l_HIO@l
-/* 8078FA04  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80792124 */
+/* 8078FA04  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8078FA08  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8078FA0C  40 81 00 14 */	ble lbl_8078FA20
 /* 8078FA10  38 00 00 02 */	li r0, 2

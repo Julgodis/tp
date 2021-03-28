@@ -12,7 +12,7 @@ lbl_80D19744:
 /* 80D1976C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80D19770  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 /* 80D19774  C0 3E 05 2C */	lfs f1, 0x52c(r30)
-/* 80D19778  C0 1F 00 58 */	lfs f0, 0x58(r31)	/* effective address: 80D1B730 */
+/* 80D19778  C0 1F 00 58 */	lfs f0, 0x58(r31)
 /* 80D1977C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80D19780  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80D19784  D0 21 00 1C */	stfs f1, 0x1c(r1)

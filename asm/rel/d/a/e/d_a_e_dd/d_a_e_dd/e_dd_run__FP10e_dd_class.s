@@ -67,9 +67,9 @@ lbl_806A3BB4:
 lbl_806A3BE0:
 /* 806A3BE0  3C 60 80 6A */	lis r3, l_HIO@ha
 /* 806A3BE4  38 63 74 C8 */	addi r3, r3, l_HIO@l
-/* 806A3BE8  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 806A74D8 */
+/* 806A3BE8  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 806A3BEC  C0 3E 06 A4 */	lfs f1, 0x6a4(r30)
-/* 806A3BF0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 806A74E0 */
+/* 806A3BF0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 806A3BF4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806A3BF8  40 80 00 1C */	bge lbl_806A3C14
 /* 806A3BFC  38 00 00 04 */	li r0, 4
@@ -97,7 +97,7 @@ lbl_806A3C40:
 /* 806A3C4C  C0 7F 00 54 */	lfs f3, 0x54(r31)
 /* 806A3C50  3C 80 80 6A */	lis r4, l_HIO@ha
 /* 806A3C54  38 84 74 C8 */	addi r4, r4, l_HIO@l
-/* 806A3C58  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 806A74D8 */
+/* 806A3C58  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 806A3C5C  EC 63 00 32 */	fmuls f3, f3, f0
 /* 806A3C60  4B BC BD DC */	b cLib_addCalc2__FPffff
 /* 806A3C64  C0 3F 00 00 */	lfs f1, 0(r31)
@@ -150,7 +150,7 @@ lbl_806A3CF8:
 /* 806A3D08  C0 3F 00 50 */	lfs f1, 0x50(r31)
 /* 806A3D0C  3C 80 80 6A */	lis r4, l_HIO@ha
 /* 806A3D10  38 84 74 C8 */	addi r4, r4, l_HIO@l
-/* 806A3D14  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 806A74DC */
+/* 806A3D14  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 806A3D18  EC 21 00 2A */	fadds f1, f1, f0
 /* 806A3D1C  38 80 7F FF */	li r4, 0x7fff
 /* 806A3D20  4B FF EA 0D */	bl pl_check__FP10e_dd_classfs

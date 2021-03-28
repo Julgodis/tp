@@ -248,7 +248,7 @@ lbl_80D330D4:
 /* 80D33138  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D3313C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D33140  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D33144  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D33144  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D33148  38 81 00 14 */	addi r4, r1, 0x14
 /* 80D3314C  38 BA 05 38 */	addi r5, r26, 0x538
 /* 80D33150  38 C0 00 00 */	li r6, 0

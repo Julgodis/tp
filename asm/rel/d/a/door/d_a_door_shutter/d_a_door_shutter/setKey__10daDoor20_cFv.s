@@ -11,8 +11,8 @@ lbl_80462EB4:
 /* 80462ED8  48 00 31 C5 */	bl chkMakeKey__10daDoor20_cFv
 /* 80462EDC  2C 03 00 01 */	cmpwi r3, 1
 /* 80462EE0  40 82 00 2C */	bne lbl_80462F0C
-/* 80462EE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80462EE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80462EE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80462EE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80462EEC  7F E4 FB 78 */	mr r4, r31
 /* 80462EF0  38 A0 FF FF */	li r5, -1
 /* 80462EF4  4B BD 24 6C */	b isSwitch__10dSv_info_cCFii

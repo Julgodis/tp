@@ -34,7 +34,7 @@ lbl_80B0B81C:
 /* 80B0B840  90 01 00 08 */	stw r0, 8(r1)
 /* 80B0B844  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B0B848  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B0B84C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B0B84C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B0B850  38 81 00 08 */	addi r4, r1, 8
 /* 80B0B854  38 A0 00 00 */	li r5, 0
 /* 80B0B858  38 C0 00 00 */	li r6, 0

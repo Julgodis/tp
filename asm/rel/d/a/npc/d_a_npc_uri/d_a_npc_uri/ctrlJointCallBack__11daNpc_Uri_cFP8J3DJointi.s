@@ -7,7 +7,7 @@ lbl_80B27194:
 /* 80B271A8  40 82 00 30 */	bne lbl_80B271D8
 /* 80B271AC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B271B0  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80B271B4  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80B271B4  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80B271B8  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80B271BC  28 03 00 00 */	cmplwi r3, 0
 /* 80B271C0  41 82 00 18 */	beq lbl_80B271D8

@@ -13,9 +13,9 @@ lbl_8079A28C:
 /* 8079A2B8  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 8079A2BC  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8079A2C0  7C 05 07 74 */	extsb r5, r0
-/* 8079A2C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8079A2C8  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 8079A2CC  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 8079A2C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8079A2C8  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 8079A2CC  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 8079A2D0  88 1D 05 B7 */	lbz r0, 0x5b7(r29)
 /* 8079A2D4  54 06 10 3A */	slwi r6, r0, 2
 /* 8079A2D8  38 80 00 00 */	li r4, 0

@@ -5,8 +5,8 @@ lbl_804D68A4:
 /* 804D68B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804D68B4  93 C1 00 08 */	stw r30, 8(r1)
 /* 804D68B8  7C 7E 1B 78 */	mr r30, r3
-/* 804D68BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D68C0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 804D68BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D68C0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 804D68C4  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 804D68C8  A8 9E 05 6A */	lha r4, 0x56a(r30)
 /* 804D68CC  4B B7 11 AC */	b endCheck__16dEvent_manager_cFs

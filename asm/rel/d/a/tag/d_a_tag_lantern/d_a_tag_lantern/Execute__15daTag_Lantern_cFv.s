@@ -5,10 +5,10 @@ lbl_8048EDDC:
 /* 8048EDE8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8048EDEC  4B ED 33 F0 */	b _savegpr_29
 /* 8048EDF0  7C 7F 1B 78 */	mr r31, r3
-/* 8048EDF4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8048EDF8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8048EDF4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8048EDF8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8048EDFC  3B C4 0F 38 */	addi r30, r4, 0xf38
-/* 8048EE00  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 8048EE00  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 8048EE04  28 00 00 00 */	cmplwi r0, 0
 /* 8048EE08  41 82 00 80 */	beq lbl_8048EE88
 /* 8048EE0C  A0 1F 00 F8 */	lhz r0, 0xf8(r31)

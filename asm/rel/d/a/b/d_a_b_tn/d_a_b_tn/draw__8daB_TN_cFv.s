@@ -117,8 +117,8 @@ lbl_8061F018:
 /* 8061F07C  3B C0 00 00 */	li r30, 0
 /* 8061F080  3B E0 00 00 */	li r31, 0
 /* 8061F084  3B 80 00 00 */	li r28, 0
-/* 8061F088  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8061F08C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8061F088  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8061F08C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8061F090  3B 63 61 C0 */	addi r27, r3, 0x61c0
 lbl_8061F094:
 /* 8061F094  3B 3C 09 FC */	addi r25, r28, 0x9fc
@@ -194,7 +194,7 @@ lbl_8061F140:
 /* 8061F19C  4E 80 04 21 */	bctrl 
 /* 8061F1A0  3C 80 80 63 */	lis r4, l_HIO@ha
 /* 8061F1A4  38 84 F0 2C */	addi r4, r4, l_HIO@l
-/* 8061F1A8  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8062F038 */
+/* 8061F1A8  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8061F1AC  FC 00 00 1E */	fctiwz f0, f0
 /* 8061F1B0  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 8061F1B4  80 01 00 2C */	lwz r0, 0x2c(r1)

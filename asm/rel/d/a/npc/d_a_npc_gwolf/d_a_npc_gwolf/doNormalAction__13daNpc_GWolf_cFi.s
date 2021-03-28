@@ -21,7 +21,7 @@ lbl_809F5770:
 lbl_809F57BC:
 /* 809F57BC  3C 80 80 A0 */	lis r4, m__19daNpc_GWolf_Param_c@ha
 /* 809F57C0  38 84 84 F4 */	addi r4, r4, m__19daNpc_GWolf_Param_c@l
-/* 809F57C4  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 809F8556 */
+/* 809F57C4  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_809F57C8:
 /* 809F57C8  38 A0 FF FF */	li r5, -1
 /* 809F57CC  38 C0 00 00 */	li r6, 0

@@ -29,7 +29,7 @@ lbl_8078D658:
 /* 8078D660  41 82 00 38 */	beq lbl_8078D698
 /* 8078D664  3C 60 80 79 */	lis r3, stick_pt@ha
 /* 8078D668  38 A3 E1 04 */	addi r5, r3, stick_pt@l
-/* 8078D66C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 8078E104 */
+/* 8078D66C  80 85 00 00 */	lwz r4, 0(r5)
 /* 8078D670  3C 60 80 79 */	lis r3, stick_bit@ha
 /* 8078D674  38 63 DE B4 */	addi r3, r3, stick_bit@l
 /* 8078D678  7C C0 07 74 */	extsb r0, r6
@@ -37,7 +37,7 @@ lbl_8078D658:
 /* 8078D680  7C 63 02 14 */	add r3, r3, r0
 /* 8078D684  80 03 FF FC */	lwz r0, -4(r3)
 /* 8078D688  7C 80 00 78 */	andc r0, r4, r0
-/* 8078D68C  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 8078E104 */
+/* 8078D68C  90 05 00 00 */	stw r0, 0(r5)
 /* 8078D690  38 00 00 00 */	li r0, 0
 /* 8078D694  98 1F 06 C4 */	stb r0, 0x6c4(r31)
 lbl_8078D698:

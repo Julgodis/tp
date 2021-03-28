@@ -30,18 +30,19 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagStream_Create(fopAc_ac_c*); // 2
-static void daTagStream_Delete(daTagStream_c*); // 2
-static void daTagStream_Execute(daTagStream_c*); // 2
-static bool daTagStream_Draw(daTagStream_c*); // 2
+void daTagStream_Create(fopAc_ac_c*); // 2
+void daTagStream_Delete(daTagStream_c*); // 2
+void daTagStream_Execute(daTagStream_c*); // 2
+bool daTagStream_Draw(daTagStream_c*); // 2
 
 extern "C" void create__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagStream_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Delete__FP13daTagStream_c(); // 1
+extern "C" void daTagStream_Delete__FP13daTagStream_c(); // 1
 extern "C" void execute__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Execute__FP13daTagStream_c(); // 1
-extern "C" static bool daTagStream_Draw__FP13daTagStream_c(); // 1
+extern "C" void daTagStream_Execute__FP13daTagStream_c(); // 1
+extern "C" bool daTagStream_Draw__FP13daTagStream_c(); // 1
+extern "C" extern void* l_daTagStream_Method[8];
 extern "C" extern void* g_profile_Tag_Stream[12];
 
 // 
@@ -54,10 +55,8 @@ extern "C" void __ct__10fopAc_ac_cFv(); // 1
 extern "C" void __dt__10fopAc_ac_cFv(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void __dl__FPv(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 m_top__13daTagStream_c[4];
 
 // 
@@ -79,11 +78,11 @@ asm void daTagStream_c::create() {
 #pragma pop
 
 
-/* 80D63A78-80D63A98 0020+00 s=1 e=0 z=0  None .text      daTagStream_Create__FP10fopAc_ac_c                           */
+/* 80D63A78-80D63A98 0020+00 s=0 e=0 z=0  None .text      daTagStream_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStream_Create(fopAc_ac_c* param_0) {
+asm void daTagStream_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Create__FP10fopAc_ac_c.s"
 }
@@ -101,11 +100,11 @@ asm daTagStream_c::~daTagStream_c() {
 #pragma pop
 
 
-/* 80D63B30-80D63B58 0028+00 s=1 e=0 z=0  None .text      daTagStream_Delete__FP13daTagStream_c                        */
+/* 80D63B30-80D63B58 0028+00 s=0 e=0 z=0  None .text      daTagStream_Delete__FP13daTagStream_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStream_Delete(daTagStream_c* param_0) {
+asm void daTagStream_Delete(daTagStream_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Delete__FP13daTagStream_c.s"
 }
@@ -123,49 +122,49 @@ asm void daTagStream_c::execute() {
 #pragma pop
 
 
-/* 80D63BC0-80D63BE0 0020+00 s=1 e=0 z=0  None .text      daTagStream_Execute__FP13daTagStream_c                       */
+/* 80D63BC0-80D63BE0 0020+00 s=0 e=0 z=0  None .text      daTagStream_Execute__FP13daTagStream_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagStream_Execute(daTagStream_c* param_0) {
+asm void daTagStream_Execute(daTagStream_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_stream/d_a_tag_stream/daTagStream_Execute__FP13daTagStream_c.s"
 }
 #pragma pop
 
 
-/* 80D63BE0-80D63BE8 0008+00 s=1 e=0 z=0  None .text      daTagStream_Draw__FP13daTagStream_c                          */
-static bool daTagStream_Draw(daTagStream_c* param_0) {
+/* 80D63BE0-80D63BE8 0008+00 s=0 e=0 z=0  None .text      daTagStream_Draw__FP13daTagStream_c                          */
+bool daTagStream_Draw(daTagStream_c* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80D63BF4-80D63C14 0020+00 s=1 e=0 z=0  None .data      l_daTagStream_Method                                         */
-SECTION_DATA static void* l_daTagStream_Method[8] = {
-	/* 0    */ (void*)daTagStream_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagStream_Delete__FP13daTagStream_c,
-	/* 2    */ (void*)daTagStream_Execute__FP13daTagStream_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagStream_Draw__FP13daTagStream_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D63BF4-80D63C14 0020+00 s=0 e=0 z=0  None .data      l_daTagStream_Method                                         */
+SECTION_DATA void* l_daTagStream_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D63C14-80D63C44 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Stream                                         */
+/* 80D63C14-80D63C44 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Stream                                         */
 SECTION_DATA void* g_profile_Tag_Stream[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02C50000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000578,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01030000,
-	/* 9    */ (void*)&l_daTagStream_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02C50000,
+	(void*)NULL,
+	(void*)0x00000578,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01030000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x030E0000,
 };
 

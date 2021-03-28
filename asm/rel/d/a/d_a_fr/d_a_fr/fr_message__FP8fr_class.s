@@ -33,9 +33,9 @@ lbl_8051AC98:
 /* 8051ACA0  C0 5F 00 54 */	lfs f2, 0x54(r31)
 /* 8051ACA4  4B D5 4D DC */	b cLib_addCalc0__FPfff
 /* 8051ACA8  7F C3 F3 78 */	mr r3, r30
-/* 8051ACAC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8051ACB0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8051ACB4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8051ACAC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8051ACB0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8051ACB4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8051ACB8  4B AF FA 58 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8051ACBC  7C 64 1B 78 */	mr r4, r3
 /* 8051ACC0  38 7E 04 DE */	addi r3, r30, 0x4de

@@ -9,7 +9,7 @@ lbl_80C46098:
 lbl_80C460B4:
 /* 80C460B4  3C 80 80 C4 */	lis r4, l_arcName@ha
 /* 80C460B8  38 84 65 8C */	addi r4, r4, l_arcName@l
-/* 80C460BC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C4658C */
+/* 80C460BC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C460C0  4B 3E 6D FC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C460C4  7C 60 1B 78 */	mr r0, r3
 /* 80C460C8  2C 00 00 04 */	cmpwi r0, 4
@@ -34,7 +34,7 @@ lbl_80C4610C:
 /* 80C4610C  7F E3 FB 78 */	mr r3, r31
 /* 80C46110  3C 80 80 C4 */	lis r4, l_arcName@ha
 /* 80C46114  38 84 65 8C */	addi r4, r4, l_arcName@l
-/* 80C46118  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C4658C */
+/* 80C46118  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C4611C  80 1F 06 0C */	lwz r0, 0x60c(r31)
 /* 80C46120  54 00 10 3A */	slwi r0, r0, 2
 /* 80C46124  3C A0 80 C4 */	lis r5, l_dzbidx@ha

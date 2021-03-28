@@ -9,8 +9,8 @@ lbl_80CE3018:
 /* 80CE3034  38 63 3B 60 */	addi r3, r3, stringBase0@l
 /* 80CE3038  38 63 00 08 */	addi r3, r3, 8
 /* 80CE303C  38 80 00 07 */	li r4, 7
-/* 80CE3040  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CE3044  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CE3040  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CE3044  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CE3048  3F A5 00 02 */	addis r29, r5, 2
 /* 80CE304C  3B BD C2 F8 */	addi r29, r29, -15624
 /* 80CE3050  7F A5 EB 78 */	mr r5, r29

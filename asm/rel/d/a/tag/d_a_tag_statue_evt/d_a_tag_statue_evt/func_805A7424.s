@@ -35,7 +35,7 @@ lbl_805A749C:
 /* 805A749C  38 7F 05 68 */	addi r3, r31, 0x568
 /* 805A74A0  3C 80 80 5B */	lis r4, l_arcName@ha
 /* 805A74A4  38 84 82 1C */	addi r4, r4, l_arcName@l
-/* 805A74A8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805A821C */
+/* 805A74A8  80 84 00 00 */	lwz r4, 0(r4)
 /* 805A74AC  4B A8 5A 10 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 805A74B0  7C 7E 1B 78 */	mr r30, r3
 /* 805A74B4  2C 1E 00 04 */	cmpwi r30, 4

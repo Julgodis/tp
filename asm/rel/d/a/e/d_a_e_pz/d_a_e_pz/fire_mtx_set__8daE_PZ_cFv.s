@@ -32,12 +32,12 @@ lbl_8075F578:
 /* 8075F5F0  3B 00 00 00 */	li r24, 0
 /* 8075F5F4  3B A0 00 00 */	li r29, 0
 /* 8075F5F8  3B 80 00 00 */	li r28, 0
-/* 8075F5FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8075F600  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 8075F5FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8075F600  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 8075F604  3C 60 80 76 */	lis r3, data_80761CD4@ha
 /* 8075F608  3B 63 1C D4 */	addi r27, r3, data_80761CD4@l
 lbl_8075F60C:
-/* 8075F60C  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 8075F60C  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 8075F610  38 00 00 FF */	li r0, 0xff
 /* 8075F614  90 01 00 08 */	stw r0, 8(r1)
 /* 8075F618  38 80 00 00 */	li r4, 0
@@ -102,8 +102,8 @@ lbl_8075F6E4:
 /* 8075F6FC  38 7E 0E AC */	addi r3, r30, 0xeac
 /* 8075F700  C0 3F 00 94 */	lfs f1, 0x94(r31)
 /* 8075F704  4B B1 00 04 */	b SetR__8cM3dGSphFf
-/* 8075F708  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8075F70C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8075F708  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8075F70C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8075F710  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8075F714  38 9E 0D 88 */	addi r4, r30, 0xd88
 /* 8075F718  4B B0 54 90 */	b Set__4cCcSFP8cCcD_Obj

@@ -31,8 +31,8 @@ lbl_80792720:
 /* 80792794  38 A1 00 08 */	addi r5, r1, 8
 /* 80792798  7F E6 FB 78 */	mr r6, r31
 /* 8079279C  4B 8E 55 C8 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 807927A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807927A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807927A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807927A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807927A8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807927AC  38 81 00 20 */	addi r4, r1, 0x20
 /* 807927B0  4B 8E 1C 04 */	b LineCross__4cBgSFP11cBgS_LinChk

@@ -7,8 +7,8 @@ lbl_809602E0:
 /* 809602F4  7C 7C 1B 78 */	mr r28, r3
 /* 809602F8  3C 80 80 96 */	lis r4, cNullVec__6Z2Calc@ha
 /* 809602FC  3B C4 24 18 */	addi r30, r4, cNullVec__6Z2Calc@l
-/* 80960300  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80960304  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
+/* 80960300  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80960304  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
 /* 80960308  3B BF 4F F8 */	addi r29, r31, 0x4ff8
 /* 8096030C  A0 03 0D E8 */	lhz r0, 0xde8(r3)
 /* 80960310  2C 00 00 02 */	cmpwi r0, 2

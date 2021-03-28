@@ -23,12 +23,12 @@ lbl_807B5C34:
 /* 807B5C88  4B 8C 18 F4 */	b __ct__11dBgS_GndChkFv
 /* 807B5C8C  3C 60 80 7C */	lis r3, master@ha
 /* 807B5C90  38 63 80 E0 */	addi r3, r3, master@l
-/* 807B5C94  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 807B80E0 */
-/* 807B5C98  C0 03 06 B4 */	lfs f0, 0x6b4(r3)	/* effective address: 807B8794 */
+/* 807B5C94  80 63 00 00 */	lwz r3, 0(r3)
+/* 807B5C98  C0 03 06 B4 */	lfs f0, 0x6b4(r3)
 /* 807B5C9C  D0 19 12 28 */	stfs f0, 0x1228(r25)
-/* 807B5CA0  C0 03 06 B8 */	lfs f0, 0x6b8(r3)	/* effective address: 807B8798 */
+/* 807B5CA0  C0 03 06 B8 */	lfs f0, 0x6b8(r3)
 /* 807B5CA4  D0 19 12 2C */	stfs f0, 0x122c(r25)
-/* 807B5CA8  C0 03 06 BC */	lfs f0, 0x6bc(r3)	/* effective address: 807B879C */
+/* 807B5CA8  C0 03 06 BC */	lfs f0, 0x6bc(r3)
 /* 807B5CAC  D0 19 12 30 */	stfs f0, 0x1230(r25)
 /* 807B5CB0  3B B9 12 34 */	addi r29, r25, 0x1234
 /* 807B5CB4  3B 99 14 14 */	addi r28, r25, 0x1414
@@ -39,8 +39,8 @@ lbl_807B5C34:
 /* 807B5CC8  D3 A1 00 24 */	stfs f29, 0x24(r1)
 /* 807B5CCC  D3 A1 00 28 */	stfs f29, 0x28(r1)
 /* 807B5CD0  3B C0 00 01 */	li r30, 1
-/* 807B5CD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B5CD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B5CD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B5CD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B5CDC  3A E3 0F 38 */	addi r23, r3, 0xf38
 /* 807B5CE0  C3 DF 00 64 */	lfs f30, 0x64(r31)
 /* 807B5CE4  3C 60 80 45 */	lis r3, calc_mtx@ha

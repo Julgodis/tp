@@ -152,12 +152,12 @@ lbl_804B13FC:
 /* 804B1404  B0 7C 00 1A */	sth r3, 0x1a(r28)
 /* 804B1408  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804B140C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804B1410  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804B1410  80 63 00 00 */	lwz r3, 0(r3)
 /* 804B1414  A8 9C 00 18 */	lha r4, 0x18(r28)
 /* 804B1418  4B B5 AF 2C */	b mDoMtx_XrotS__FPA4_fs
 /* 804B141C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804B1420  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804B1424  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804B1424  80 63 00 00 */	lwz r3, 0(r3)
 /* 804B1428  A8 9C 00 1A */	lha r4, 0x1a(r28)
 /* 804B142C  4B B5 B0 08 */	b mDoMtx_YrotM__FPA4_fs
 /* 804B1430  C0 1F 00 58 */	lfs f0, 0x58(r31)

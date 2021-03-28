@@ -19,7 +19,6 @@ extern void* const data_80C73CA8[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv6Lblock_cpp(); // 1
 
 // 
 // Declarations:

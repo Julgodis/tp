@@ -6,17 +6,17 @@ lbl_80BDD124:
 /* 80BDD134  7C 7F 1B 78 */	mr r31, r3
 /* 80BDD138  3C 60 80 BE */	lis r3, lit_3744@ha
 /* 80BDD13C  38 83 D6 C8 */	addi r4, r3, lit_3744@l
-/* 80BDD140  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80BDD6CC */
+/* 80BDD140  C0 44 00 04 */	lfs f2, 4(r4)
 /* 80BDD144  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 80BDD148  C0 1F 09 40 */	lfs f0, 0x940(r31)
 /* 80BDD14C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80BDD150  EC 22 00 2A */	fadds f1, f2, f0
-/* 80BDD154  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80BDD6D0 */
+/* 80BDD154  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80BDD158  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80BDD15C  FC 00 02 10 */	fabs f0, f0
 /* 80BDD160  FC 20 00 18 */	frsp f1, f0
 /* 80BDD164  FC 40 08 90 */	fmr f2, f1
-/* 80BDD168  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80BDD6D4 */
+/* 80BDD168  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80BDD16C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80BDD170  40 80 00 08 */	bge lbl_80BDD178
 /* 80BDD174  FC 40 00 90 */	fmr f2, f0

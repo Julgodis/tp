@@ -73,12 +73,12 @@ lbl_8080525C:
 /* 808052E8  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 808052EC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 808052F0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 808052F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 808052F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 808052F8  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 808052FC  4B 80 70 E0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80805300  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80805304  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80805308  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80805308  80 63 00 00 */	lwz r3, 0(r3)
 /* 8080530C  A8 9C 04 DC */	lha r4, 0x4dc(r28)
 /* 80805310  4B 80 70 8C */	b mDoMtx_XrotM__FPA4_fs
 /* 80805314  38 61 00 08 */	addi r3, r1, 8

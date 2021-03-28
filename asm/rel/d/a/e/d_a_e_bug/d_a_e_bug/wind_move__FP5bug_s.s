@@ -17,7 +17,7 @@ lbl_80695DE8:
 /* 80695E24  A8 7D 00 3E */	lha r3, 0x3e(r29)
 /* 80695E28  38 03 07 00 */	addi r0, r3, 0x700
 /* 80695E2C  B0 1D 00 3E */	sth r0, 0x3e(r29)
-/* 80695E30  C0 3F 00 80 */	lfs f1, 0x80(r31)	/* effective address: 80697D20 */
+/* 80695E30  C0 3F 00 80 */	lfs f1, 0x80(r31)
 /* 80695E34  57 C0 04 38 */	rlwinm r0, r30, 0, 0x10, 0x1c
 /* 80695E38  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80695E3C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
@@ -28,7 +28,7 @@ lbl_80695DE8:
 /* 80695E50  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80695E54  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80695E58  D0 1D 00 38 */	stfs f0, 0x38(r29)
-/* 80695E5C  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 80697CCC */
+/* 80695E5C  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80695E60  D0 1D 00 34 */	stfs f0, 0x34(r29)
 /* 80695E64  38 7D 00 18 */	addi r3, r29, 0x18
 /* 80695E68  38 9D 00 30 */	addi r4, r29, 0x30

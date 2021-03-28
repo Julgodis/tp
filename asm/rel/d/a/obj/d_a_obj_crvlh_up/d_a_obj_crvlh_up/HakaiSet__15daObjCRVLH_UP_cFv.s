@@ -12,8 +12,8 @@ lbl_80BD4F1C:
 /* 80BD4F44  4B 69 32 90 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80BD4F48  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80BD4F4C  41 82 00 34 */	beq lbl_80BD4F80
-/* 80BD4F50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD4F54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BD4F50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD4F54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BD4F58  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BD4F5C  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80BD4F60  4B 49 F2 F0 */	b Release__4cBgSFP9dBgW_Base

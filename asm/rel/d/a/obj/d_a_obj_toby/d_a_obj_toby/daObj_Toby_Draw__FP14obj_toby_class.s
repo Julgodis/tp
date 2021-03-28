@@ -16,8 +16,8 @@ lbl_80D137B0:
 /* 80D137E8  7C 00 07 74 */	extsb r0, r0
 /* 80D137EC  7C 1D 03 78 */	mr r29, r0
 /* 80D137F0  3B 80 00 00 */	li r28, 0
-/* 80D137F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D137F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D137F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D137F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D137FC  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80D13800  48 00 00 48 */	b lbl_80D13848
 lbl_80D13804:

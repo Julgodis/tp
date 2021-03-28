@@ -20,7 +20,7 @@ lbl_80AFE0BC:
 /* 80AFE104  41 80 00 28 */	blt lbl_80AFE12C
 /* 80AFE108  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFE10C  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFE110  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFE110  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFE114  4B 65 4A 54 */	b getTexPtrnAnmP__8daNpcF_cFPci
 /* 80AFE118  7C 64 1B 78 */	mr r4, r3
 /* 80AFE11C  3C 60 80 B0 */	lis r3, l_btpGetParamList@ha

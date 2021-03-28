@@ -22,8 +22,8 @@ lbl_80D64364:
 /* 80D64384  80 03 45 28 */	lwz r0, m_group_count@l(r3)
 /* 80D64388  2C 00 00 00 */	cmpwi r0, 0
 /* 80D6438C  40 82 00 24 */	bne lbl_80D643B0
-/* 80D64390  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D64394  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D64390  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D64394  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D64398  88 9F 05 68 */	lbz r4, 0x568(r31)
 /* 80D6439C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D643A0  7C 05 07 74 */	extsb r5, r0

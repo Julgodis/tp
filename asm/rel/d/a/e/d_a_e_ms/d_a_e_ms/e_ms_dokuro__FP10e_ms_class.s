@@ -196,7 +196,7 @@ lbl_80727374:
 lbl_807273C4:
 /* 807273C4  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 807273C8  38 63 98 0C */	addi r3, r3, l_HIO@l
-/* 807273CC  C3 C3 00 0C */	lfs f30, 0xc(r3)	/* effective address: 80729818 */
+/* 807273CC  C3 C3 00 0C */	lfs f30, 0xc(r3)
 /* 807273D0  48 00 00 8C */	b lbl_8072745C
 lbl_807273D4:
 /* 807273D4  C0 1F 00 98 */	lfs f0, 0x98(r31)
@@ -250,7 +250,7 @@ lbl_8072745C:
 /* 80727484  7F C3 F3 78 */	mr r3, r30
 /* 80727488  3C 80 80 73 */	lis r4, l_HIO@ha
 /* 8072748C  38 84 98 0C */	addi r4, r4, l_HIO@l
-/* 80727490  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 80729824 */
+/* 80727490  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 80727494  4B FF E7 ED */	bl pl_check__FP10e_ms_classf
 /* 80727498  2C 03 00 00 */	cmpwi r3, 0
 /* 8072749C  41 82 00 14 */	beq lbl_807274B0

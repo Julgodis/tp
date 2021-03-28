@@ -27,8 +27,8 @@ lbl_8048D3C8:
 /* 8048D3E4  7F A3 EB 78 */	mr r3, r29
 /* 8048D3E8  4B FF FF 81 */	bl getOffSwBit__14daTag_EvtMsg_cFv
 /* 8048D3EC  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 8048D3F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048D3F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048D3F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048D3F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048D3F8  7F E5 FB 78 */	mr r5, r31
 /* 8048D3FC  4B BA 7F 64 */	b isSwitch__10dSv_info_cCFii
 /* 8048D400  2C 03 00 00 */	cmpwi r3, 0

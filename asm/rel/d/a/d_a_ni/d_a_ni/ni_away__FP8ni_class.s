@@ -11,11 +11,11 @@ lbl_8094CE7C:
 /* 8094CEA0  7C 7D 1B 78 */	mr r29, r3
 /* 8094CEA4  3C 60 80 95 */	lis r3, lit_3958@ha
 /* 8094CEA8  3B C3 11 C0 */	addi r30, r3, lit_3958@l
-/* 8094CEAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8094CEB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8094CEB4  83 63 5D AC */	lwz r27, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8094CEB8  C3 FE 00 24 */	lfs f31, 0x24(r30)	/* effective address: 809511E4 */
-/* 8094CEBC  C3 DE 00 98 */	lfs f30, 0x98(r30)	/* effective address: 80951258 */
+/* 8094CEAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8094CEB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8094CEB4  83 63 5D AC */	lwz r27, 0x5dac(r3)
+/* 8094CEB8  C3 FE 00 24 */	lfs f31, 0x24(r30)
+/* 8094CEBC  C3 DE 00 98 */	lfs f30, 0x98(r30)
 /* 8094CEC0  3B 80 18 00 */	li r28, 0x1800
 /* 8094CEC4  80 1D 06 2C */	lwz r0, 0x62c(r29)
 /* 8094CEC8  90 01 00 0C */	stw r0, 0xc(r1)
@@ -149,7 +149,7 @@ lbl_8094D088:
 lbl_8094D090:
 /* 8094D090  3C 60 80 95 */	lis r3, l_HIO@ha
 /* 8094D094  38 63 15 9C */	addi r3, r3, l_HIO@l
-/* 8094D098  C3 E3 00 1C */	lfs f31, 0x1c(r3)	/* effective address: 809515B8 */
+/* 8094D098  C3 E3 00 1C */	lfs f31, 0x1c(r3)
 /* 8094D09C  80 7D 05 E8 */	lwz r3, 0x5e8(r29)
 /* 8094D0A0  38 63 00 0C */	addi r3, r3, 0xc
 /* 8094D0A4  C0 3E 00 20 */	lfs f1, 0x20(r30)
@@ -182,7 +182,7 @@ lbl_8094D0F8:
 /* 8094D108  C0 1E 00 50 */	lfs f0, 0x50(r30)
 /* 8094D10C  3C 60 80 95 */	lis r3, l_HIO@ha
 /* 8094D110  38 63 15 9C */	addi r3, r3, l_HIO@l
-/* 8094D114  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 809515B4 */
+/* 8094D114  C0 23 00 18 */	lfs f1, 0x18(r3)
 /* 8094D118  EC 00 08 2A */	fadds f0, f0, f1
 /* 8094D11C  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8094D120  40 81 00 14 */	ble lbl_8094D134
@@ -209,7 +209,7 @@ lbl_8094D158:
 /* 8094D16C  4B FF EB 3D */	bl anm_init__FP8ni_classifUcf
 /* 8094D170  3C 60 80 95 */	lis r3, l_HIO@ha
 /* 8094D174  38 63 15 9C */	addi r3, r3, l_HIO@l
-/* 8094D178  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 809515C0 */
+/* 8094D178  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 8094D17C  D0 1D 04 FC */	stfs f0, 0x4fc(r29)
 /* 8094D180  A8 7D 05 FC */	lha r3, 0x5fc(r29)
 /* 8094D184  38 03 00 01 */	addi r0, r3, 1
@@ -248,7 +248,7 @@ lbl_8094D19C:
 lbl_8094D204:
 /* 8094D204  3C 60 80 95 */	lis r3, l_HIO@ha
 /* 8094D208  38 63 15 9C */	addi r3, r3, l_HIO@l
-/* 8094D20C  C3 E3 00 20 */	lfs f31, 0x20(r3)	/* effective address: 809515BC */
+/* 8094D20C  C3 E3 00 20 */	lfs f31, 0x20(r3)
 /* 8094D210  3B 80 04 00 */	li r28, 0x400
 /* 8094D214  C3 DE 00 38 */	lfs f30, 0x38(r30)
 /* 8094D218  C0 3D 04 FC */	lfs f1, 0x4fc(r29)

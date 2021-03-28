@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct CSTControl {
+struct STControl {
 };
 
-struct STControl {
+struct CSTControl {
 };
 
 struct JKRExpHeap {
@@ -190,9 +190,9 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BD044-803BD050 000C+00 s=1 e=0 z=0  None .data      @3790                                                        */
 SECTION_DATA static void* lit_3790[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__15dMenu_Fishing_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__15dMenu_Fishing_cFv,
 };
 
 /* 803BD050-803BD05C 000C+00 s=3 e=0 z=0  None .data      map_init_process                                             */
@@ -202,9 +202,9 @@ SECTION_DATA static u8 map_init_process[12] = {
 
 /* 803BD05C-803BD068 000C+00 s=1 e=0 z=0  None .data      @3791                                                        */
 SECTION_DATA static void* lit_3791[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_move__15dMenu_Fishing_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_move__15dMenu_Fishing_cFv,
 };
 
 /* 803BD068-803BD074 000C+00 s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -214,10 +214,10 @@ SECTION_DATA static u8 map_move_process[12] = {
 
 /* 803BD074-803BD090 0010+0C s=2 e=0 z=0  None .data      __vt__15dMenu_Fishing_c                                      */
 SECTION_DATA static void* __vt__15dMenu_Fishing_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15dMenu_Fishing_cFv,
-	/* 3    */ (void*)__dt__15dMenu_Fishing_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15dMenu_Fishing_cFv,
+	(void*)__dt__15dMenu_Fishing_cFv,
 	/* padding */
 	NULL,
 	NULL,

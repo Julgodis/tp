@@ -38,8 +38,8 @@ lbl_8065326C:
 /* 8065326C  80 9F 05 C4 */	lwz r4, 0x5c4(r31)
 /* 80653270  28 04 00 00 */	cmplwi r4, 0
 /* 80653274  41 82 00 28 */	beq lbl_8065329C
-/* 80653278  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065327C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80653278  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065327C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80653280  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80653284  7F E5 FB 78 */	mr r5, r31
 /* 80653288  4B A2 17 80 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c

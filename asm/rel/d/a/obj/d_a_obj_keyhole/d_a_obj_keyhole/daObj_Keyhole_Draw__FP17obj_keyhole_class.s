@@ -38,8 +38,8 @@ lbl_80C413B4:
 lbl_80C413D8:
 /* 80C413D8  3B 60 00 00 */	li r27, 0
 /* 80C413DC  3B C0 00 00 */	li r30, 0
-/* 80C413E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C413E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C413E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C413E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C413E8  3B 83 0F 38 */	addi r28, r3, 0xf38
 lbl_80C413EC:
 /* 80C413EC  3B 5E 06 24 */	addi r26, r30, 0x624

@@ -8,8 +8,8 @@ lbl_80ADD720:
 /* 80ADD738  7C 9A 23 78 */	mr r26, r4
 /* 80ADD73C  3C 60 80 AE */	lis r3, m__17daNpcShad_Param_c@ha
 /* 80ADD740  3B A3 1F DC */	addi r29, r3, m__17daNpcShad_Param_c@l
-/* 80ADD744  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADD748  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80ADD744  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADD748  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80ADD74C  3B 7E 4F F8 */	addi r27, r30, 0x4ff8
 /* 80ADD750  7F 63 DB 78 */	mr r3, r27
 /* 80ADD754  4B 56 A8 08 */	b getMyNowCutName__16dEvent_manager_cFi
@@ -50,8 +50,8 @@ lbl_80ADD7BC:
 /* 80ADD7D8  40 80 02 F4 */	bge lbl_80ADDACC
 /* 80ADD7DC  48 00 01 C0 */	b lbl_80ADD99C
 lbl_80ADD7E0:
-/* 80ADD7E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ADD7E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ADD7E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ADD7E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ADD7E8  38 63 00 9C */	addi r3, r3, 0x9c
 /* 80ADD7EC  38 80 00 16 */	li r4, 0x16
 /* 80ADD7F0  38 A0 00 FF */	li r5, 0xff
@@ -113,19 +113,19 @@ lbl_80ADD870:
 lbl_80ADD8C0:
 /* 80ADD8C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADD8C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADD8C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80ADD8C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80ADD8CC  C0 7D 00 8C */	lfs f3, 0x8c(r29)
-/* 80ADD8D0  D0 63 04 04 */	stfs f3, 0x404(r3)	/* effective address: 8045176C */
+/* 80ADD8D0  D0 63 04 04 */	stfs f3, 0x404(r3)
 /* 80ADD8D4  C0 1D 00 90 */	lfs f0, 0x90(r29)
-/* 80ADD8D8  D0 03 04 08 */	stfs f0, 0x408(r3)	/* effective address: 80451770 */
+/* 80ADD8D8  D0 03 04 08 */	stfs f0, 0x408(r3)
 /* 80ADD8DC  38 00 00 00 */	li r0, 0
-/* 80ADD8E0  90 03 04 10 */	stw r0, 0x410(r3)	/* effective address: 80451778 */
-/* 80ADD8E4  D0 03 04 0C */	stfs f0, 0x40c(r3)	/* effective address: 80451774 */
-/* 80ADD8E8  C0 03 04 14 */	lfs f0, 0x414(r3)	/* effective address: 8045177C */
+/* 80ADD8E0  90 03 04 10 */	stw r0, 0x410(r3)
+/* 80ADD8E4  D0 03 04 0C */	stfs f0, 0x40c(r3)
+/* 80ADD8E8  C0 03 04 14 */	lfs f0, 0x414(r3)
 /* 80ADD8EC  38 00 00 46 */	li r0, 0x46
-/* 80ADD8F0  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADD8F0  90 03 04 20 */	stw r0, 0x420(r3)
 /* 80ADD8F4  EC 43 00 28 */	fsubs f2, f3, f0
-/* 80ADD8F8  80 03 04 20 */	lwz r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADD8F8  80 03 04 20 */	lwz r0, 0x420(r3)
 /* 80ADD8FC  C8 3D 04 A8 */	lfd f1, 0x4a8(r29)
 /* 80ADD900  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80ADD904  3C 00 43 30 */	lis r0, 0x4330
@@ -133,8 +133,8 @@ lbl_80ADD8C0:
 /* 80ADD90C  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 80ADD910  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80ADD914  EC 02 00 24 */	fdivs f0, f2, f0
-/* 80ADD918  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80451780 */
-/* 80ADD91C  D0 63 04 1C */	stfs f3, 0x41c(r3)	/* effective address: 80451784 */
+/* 80ADD918  D0 03 04 18 */	stfs f0, 0x418(r3)
+/* 80ADD91C  D0 63 04 1C */	stfs f3, 0x41c(r3)
 /* 80ADD920  7F 83 E3 78 */	mr r3, r28
 /* 80ADD924  A8 9C 0E 14 */	lha r4, 0xe14(r28)
 /* 80ADD928  38 A0 00 00 */	li r5, 0
@@ -255,19 +255,19 @@ lbl_80ADDACC:
 /* 80ADDAD4  41 82 00 B8 */	beq lbl_80ADDB8C
 /* 80ADDAD8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADDADC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADDAE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80ADDAE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80ADDAE4  C0 7D 00 8C */	lfs f3, 0x8c(r29)
-/* 80ADDAE8  D0 63 04 04 */	stfs f3, 0x404(r3)	/* effective address: 8045176C */
+/* 80ADDAE8  D0 63 04 04 */	stfs f3, 0x404(r3)
 /* 80ADDAEC  C0 1D 00 90 */	lfs f0, 0x90(r29)
-/* 80ADDAF0  D0 03 04 08 */	stfs f0, 0x408(r3)	/* effective address: 80451770 */
+/* 80ADDAF0  D0 03 04 08 */	stfs f0, 0x408(r3)
 /* 80ADDAF4  38 00 00 00 */	li r0, 0
-/* 80ADDAF8  90 03 04 10 */	stw r0, 0x410(r3)	/* effective address: 80451778 */
-/* 80ADDAFC  D0 03 04 0C */	stfs f0, 0x40c(r3)	/* effective address: 80451774 */
-/* 80ADDB00  C0 03 04 14 */	lfs f0, 0x414(r3)	/* effective address: 8045177C */
+/* 80ADDAF8  90 03 04 10 */	stw r0, 0x410(r3)
+/* 80ADDAFC  D0 03 04 0C */	stfs f0, 0x40c(r3)
+/* 80ADDB00  C0 03 04 14 */	lfs f0, 0x414(r3)
 /* 80ADDB04  38 00 00 46 */	li r0, 0x46
-/* 80ADDB08  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADDB08  90 03 04 20 */	stw r0, 0x420(r3)
 /* 80ADDB0C  EC 43 00 28 */	fsubs f2, f3, f0
-/* 80ADDB10  80 03 04 20 */	lwz r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADDB10  80 03 04 20 */	lwz r0, 0x420(r3)
 /* 80ADDB14  C8 3D 04 A8 */	lfd f1, 0x4a8(r29)
 /* 80ADDB18  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80ADDB1C  3C 00 43 30 */	lis r0, 0x4330
@@ -275,8 +275,8 @@ lbl_80ADDACC:
 /* 80ADDB24  C8 01 00 28 */	lfd f0, 0x28(r1)
 /* 80ADDB28  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80ADDB2C  EC 02 00 24 */	fdivs f0, f2, f0
-/* 80ADDB30  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80451780 */
-/* 80ADDB34  D0 63 04 1C */	stfs f3, 0x41c(r3)	/* effective address: 80451784 */
+/* 80ADDB30  D0 03 04 18 */	stfs f0, 0x418(r3)
+/* 80ADDB34  D0 63 04 1C */	stfs f3, 0x41c(r3)
 /* 80ADDB38  4B 67 7F B0 */	b daNpcF_clearMessageTmpBit__Fv
 /* 80ADDB3C  38 60 01 2F */	li r3, 0x12f
 /* 80ADDB40  4B 67 7B 34 */	b daNpcF_onEvtBit__FUl
@@ -418,9 +418,9 @@ lbl_80ADDD14:
 /* 80ADDD34  48 00 04 C4 */	b lbl_80ADE1F8
 lbl_80ADDD38:
 /* 80ADDD38  7F 83 E3 78 */	mr r3, r28
-/* 80ADDD3C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80ADDD40  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80ADDD44  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80ADDD3C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80ADDD40  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80ADDD44  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80ADDD48  4B 53 C9 C8 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80ADDD4C  7C 7E 1B 78 */	mr r30, r3
 /* 80ADDD50  80 1C 09 6C */	lwz r0, 0x96c(r28)
@@ -530,9 +530,9 @@ lbl_80ADDE88:
 /* 80ADDEDC  48 00 05 88 */	b lbl_80ADE464
 lbl_80ADDEE0:
 /* 80ADDEE0  7F 83 E3 78 */	mr r3, r28
-/* 80ADDEE4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80ADDEE8  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80ADDEEC  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80ADDEE4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80ADDEE8  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80ADDEEC  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 80ADDEF0  4B 53 C8 20 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80ADDEF4  A8 9C 08 F2 */	lha r4, 0x8f2(r28)
 /* 80ADDEF8  7C 60 07 34 */	extsh r0, r3
@@ -763,13 +763,13 @@ lbl_80ADE200:
 /* 80ADE234  41 82 00 4C */	beq lbl_80ADE280
 /* 80ADE238  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80ADE23C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80ADE240  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
-/* 80ADE244  C0 03 04 14 */	lfs f0, 0x414(r3)	/* effective address: 8045177C */
+/* 80ADE240  80 63 00 00 */	lwz r3, 0(r3)
+/* 80ADE244  C0 03 04 14 */	lfs f0, 0x414(r3)
 /* 80ADE248  38 00 00 BE */	li r0, 0xbe
-/* 80ADE24C  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADE24C  90 03 04 20 */	stw r0, 0x420(r3)
 /* 80ADE250  C0 7D 00 90 */	lfs f3, 0x90(r29)
 /* 80ADE254  EC 43 00 28 */	fsubs f2, f3, f0
-/* 80ADE258  80 03 04 20 */	lwz r0, 0x420(r3)	/* effective address: 80451788 */
+/* 80ADE258  80 03 04 20 */	lwz r0, 0x420(r3)
 /* 80ADE25C  C8 3D 04 A8 */	lfd f1, 0x4a8(r29)
 /* 80ADE260  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80ADE264  3C 00 43 30 */	lis r0, 0x4330
@@ -777,8 +777,8 @@ lbl_80ADE200:
 /* 80ADE26C  C8 01 00 30 */	lfd f0, 0x30(r1)
 /* 80ADE270  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80ADE274  EC 02 00 24 */	fdivs f0, f2, f0
-/* 80ADE278  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80451780 */
-/* 80ADE27C  D0 63 04 1C */	stfs f3, 0x41c(r3)	/* effective address: 80451784 */
+/* 80ADE278  D0 03 04 18 */	stfs f0, 0x418(r3)
+/* 80ADE27C  D0 63 04 1C */	stfs f3, 0x41c(r3)
 lbl_80ADE280:
 /* 80ADE280  3C 60 00 05 */	lis r3, 0x0005 /* 0x00050070@ha */
 /* 80ADE284  38 03 00 70 */	addi r0, r3, 0x0070 /* 0x00050070@l */

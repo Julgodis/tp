@@ -12,7 +12,7 @@ lbl_80CEC5BC:
 /* 80CEC5E4  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80CEC5E8  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80CEC5EC  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80CEC5F0  C0 1E 01 3C */	lfs f0, 0x13c(r30)	/* effective address: 80CECBF0 */
+/* 80CEC5F0  C0 1E 01 3C */	lfs f0, 0x13c(r30)
 /* 80CEC5F4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CEC5F8  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80CEC5FC  3C 60 80 CF */	lis r3, __vt__8cM3dGPla@ha
@@ -21,8 +21,8 @@ lbl_80CEC5BC:
 /* 80CEC608  38 61 00 14 */	addi r3, r1, 0x14
 /* 80CEC60C  4B 33 16 B0 */	b gndCheck__11fopAcM_gc_cFPC4cXyz
 /* 80CEC610  7C 7F 1B 78 */	mr r31, r3
-/* 80CEC614  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEC618  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEC614  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEC618  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEC61C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CEC620  3C 80 80 3F */	lis r4, mGndCheck__11fopAcM_gc_c@ha
 /* 80CEC624  38 84 1C C4 */	addi r4, r4, mGndCheck__11fopAcM_gc_c@l

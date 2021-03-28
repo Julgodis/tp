@@ -4,7 +4,7 @@ lbl_80878568:
 /* 80878570  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80878574  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 80878578  38 84 9B D0 */	addi r4, r4, daMP_ActivePlayer@l
-/* 8087857C  80 04 00 A0 */	lwz r0, 0xa0(r4)	/* effective address: 80879C70 */
+/* 8087857C  80 04 00 A0 */	lwz r0, 0xa0(r4)
 /* 80878580  2C 00 00 00 */	cmpwi r0, 0
 /* 80878584  41 82 00 18 */	beq lbl_8087859C
 /* 80878588  38 84 00 80 */	addi r4, r4, 0x80

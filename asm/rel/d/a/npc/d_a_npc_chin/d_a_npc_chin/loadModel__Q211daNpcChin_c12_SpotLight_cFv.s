@@ -7,10 +7,10 @@ lbl_8098BF0C:
 /* 8098BF20  7C 7C 1B 78 */	mr r28, r3
 /* 8098BF24  3C 60 80 99 */	lis r3, l_arcNames@ha
 /* 8098BF28  3B E3 20 A8 */	addi r31, r3, l_arcNames@l
-/* 8098BF2C  80 7F 00 14 */	lwz r3, 0x14(r31)	/* effective address: 809920BC */
+/* 8098BF2C  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 8098BF30  38 80 00 04 */	li r4, 4
-/* 8098BF34  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8098BF38  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8098BF34  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8098BF38  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8098BF3C  3F A5 00 02 */	addis r29, r5, 2
 /* 8098BF40  3B BD C2 F8 */	addi r29, r29, -15624
 /* 8098BF44  7F A5 EB 78 */	mr r5, r29

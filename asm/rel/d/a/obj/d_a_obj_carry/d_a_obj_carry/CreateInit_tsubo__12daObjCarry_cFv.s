@@ -12,8 +12,8 @@ lbl_804705DC:
 lbl_80470604:
 /* 80470604  7F E3 FB 78 */	mr r3, r31
 /* 80470608  48 00 2D E1 */	bl mode_init_wait__12daObjCarry_cFv
-/* 8047060C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80470610  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047060C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80470610  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80470614  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80470618  3C 80 80 48 */	lis r4, struct_8047A4BC+0x0@ha
 /* 8047061C  38 84 A4 BC */	addi r4, r4, struct_8047A4BC+0x0@l

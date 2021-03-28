@@ -157,7 +157,7 @@ lbl_807BABF0:
 /* 807BAC28  C0 3F 00 38 */	lfs f1, 0x38(r31)
 /* 807BAC2C  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807BAC30  38 63 BF 50 */	addi r3, r3, l_HIO@l
-/* 807BAC34  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807BBF5C */
+/* 807BAC34  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807BAC38  EC 01 00 32 */	fmuls f0, f1, f0
 /* 807BAC3C  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 807BAC40  40 81 00 10 */	ble lbl_807BAC50

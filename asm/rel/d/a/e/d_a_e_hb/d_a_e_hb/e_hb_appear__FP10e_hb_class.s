@@ -174,7 +174,7 @@ lbl_804FCAE8:
 /* 804FCAE8  38 7E 06 94 */	addi r3, r30, 0x694
 /* 804FCAEC  3C 80 80 50 */	lis r4, l_HIO@ha
 /* 804FCAF0  38 84 0E 70 */	addi r4, r4, l_HIO@l
-/* 804FCAF4  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80500E80 */
+/* 804FCAF4  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 804FCAF8  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 804FCAFC  C0 7F 00 4C */	lfs f3, 0x4c(r31)
 /* 804FCB00  4B D7 2F 3C */	b cLib_addCalc2__FPffff

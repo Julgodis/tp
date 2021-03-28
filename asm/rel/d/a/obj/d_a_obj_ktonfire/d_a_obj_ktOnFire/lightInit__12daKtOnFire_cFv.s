@@ -8,7 +8,7 @@ lbl_8058C960:
 /* 8058C978  C0 03 06 EC */	lfs f0, 0x6ec(r3)
 /* 8058C97C  D0 03 07 04 */	stfs f0, 0x704(r3)
 /* 8058C980  C0 23 07 00 */	lfs f1, 0x700(r3)
-/* 8058C984  C0 04 00 30 */	lfs f0, 0x30(r4)	/* effective address: 8058CFB8 */
+/* 8058C984  C0 04 00 30 */	lfs f0, 0x30(r4)
 /* 8058C988  EC 01 00 2A */	fadds f0, f1, f0
 /* 8058C98C  D0 03 07 00 */	stfs f0, 0x700(r3)
 /* 8058C990  C0 03 06 FC */	lfs f0, 0x6fc(r3)
@@ -23,8 +23,8 @@ lbl_8058C960:
 /* 8058C9B4  B0 03 07 16 */	sth r0, 0x716(r3)
 /* 8058C9B8  38 00 00 42 */	li r0, 0x42
 /* 8058C9BC  B0 03 07 18 */	sth r0, 0x718(r3)
-/* 8058C9C0  C0 04 00 40 */	lfs f0, 0x40(r4)	/* effective address: 8058CFC8 */
+/* 8058C9C0  C0 04 00 40 */	lfs f0, 0x40(r4)
 /* 8058C9C4  D0 03 07 1C */	stfs f0, 0x71c(r3)
-/* 8058C9C8  C0 04 00 44 */	lfs f0, 0x44(r4)	/* effective address: 8058CFCC */
+/* 8058C9C8  C0 04 00 44 */	lfs f0, 0x44(r4)
 /* 8058C9CC  D0 03 07 20 */	stfs f0, 0x720(r3)
 /* 8058C9D0  4E 80 00 20 */	blr 

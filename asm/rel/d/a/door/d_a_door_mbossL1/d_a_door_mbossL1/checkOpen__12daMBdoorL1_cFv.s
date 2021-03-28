@@ -5,16 +5,16 @@ lbl_80676308:
 /* 80676314  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80676318  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 8067631C  7C 7F 1B 78 */	mr r31, r3
-/* 80676320  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80676324  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80676328  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80676320  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80676324  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80676328  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 8067632C  4B FF CC 59 */	bl getDoorType__12daMBdoorL1_cFv
 /* 80676330  2C 03 00 02 */	cmpwi r3, 2
 /* 80676334  40 82 00 24 */	bne lbl_80676358
-/* 80676338  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067633C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80676340  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80676344  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80676338  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067633C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80676340  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80676344  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80676348  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8067634C  41 82 00 0C */	beq lbl_80676358
 /* 80676350  38 60 00 00 */	li r3, 0
@@ -29,9 +29,9 @@ lbl_80676358:
 /* 80676370  2C 03 00 00 */	cmpwi r3, 0
 /* 80676374  41 82 00 20 */	beq lbl_80676394
 lbl_80676378:
-/* 80676378  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067637C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80676380  88 03 09 74 */	lbz r0, 0x974(r3)	/* effective address: 80406B34 */
+/* 80676378  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067637C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80676380  88 03 09 74 */	lbz r0, 0x974(r3)
 /* 80676384  28 00 00 00 */	cmplwi r0, 0
 /* 80676388  40 82 00 0C */	bne lbl_80676394
 /* 8067638C  38 60 00 00 */	li r3, 0

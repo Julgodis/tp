@@ -7,9 +7,9 @@ lbl_80D365B8:
 /* 80D365CC  7C 7F 1B 78 */	mr r31, r3
 /* 80D365D0  3C 60 80 D3 */	lis r3, lit_3794@ha
 /* 80D365D4  3B C3 6A 0C */	addi r30, r3, lit_3794@l
-/* 80D365D8  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80D36A0C */
+/* 80D365D8  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 80D365DC  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80D365E0  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80D36A10 */
+/* 80D365E0  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 80D365E4  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80D365E8  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80D365EC  38 7F 04 D0 */	addi r3, r31, 0x4d0
@@ -23,9 +23,9 @@ lbl_80D365B8:
 /* 80D3660C  38 81 00 24 */	addi r4, r1, 0x24
 /* 80D36610  7C 85 23 78 */	mr r5, r4
 /* 80D36614  4B 61 07 58 */	b PSMTXMultVec
-/* 80D36618  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3661C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D36620  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D36618  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3661C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D36620  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80D36624  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
 /* 80D36628  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80D3662C  D0 01 00 0C */	stfs f0, 0xc(r1)

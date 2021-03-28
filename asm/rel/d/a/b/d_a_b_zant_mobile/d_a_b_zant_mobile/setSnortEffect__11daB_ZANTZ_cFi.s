@@ -14,7 +14,7 @@ lbl_80650854:
 /* 80650884  90 01 00 08 */	stw r0, 8(r1)
 /* 80650888  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8065088C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80650890  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80650890  80 63 00 00 */	lwz r3, 0(r3)
 /* 80650894  38 81 00 08 */	addi r4, r1, 8
 /* 80650898  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8065089C  38 C0 00 00 */	li r6, 0

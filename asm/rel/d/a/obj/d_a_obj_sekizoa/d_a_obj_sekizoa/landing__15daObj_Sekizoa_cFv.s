@@ -12,25 +12,25 @@ lbl_80CD14D8:
 /* 80CD1500  90 01 00 08 */	stw r0, 8(r1)
 /* 80CD1504  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CD1508  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CD150C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CD150C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CD1510  38 81 00 08 */	addi r4, r1, 8
 /* 80CD1514  38 A0 00 00 */	li r5, 0
 /* 80CD1518  38 C0 00 00 */	li r6, 0
 /* 80CD151C  38 E0 00 00 */	li r7, 0
-/* 80CD1520  C0 3E 00 CC */	lfs f1, 0xcc(r30)	/* effective address: 80CD5DC8 */
+/* 80CD1520  C0 3E 00 CC */	lfs f1, 0xcc(r30)
 /* 80CD1524  FC 40 08 90 */	fmr f2, f1
-/* 80CD1528  C0 7E 01 18 */	lfs f3, 0x118(r30)	/* effective address: 80CD5E14 */
+/* 80CD1528  C0 7E 01 18 */	lfs f3, 0x118(r30)
 /* 80CD152C  FC 80 18 90 */	fmr f4, f3
 /* 80CD1530  39 00 00 00 */	li r8, 0
 /* 80CD1534  4B 5D A4 50 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
-/* 80CD1538  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD153C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CD1540  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80CD1544  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80CD1538  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD153C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CD1540  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80CD1544  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80CD1548  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80CD154C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 80406694 */
+/* 80CD154C  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 80CD1550  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 80CD1554  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 80CD1554  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80CD1558  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80CD155C  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 80CD1560  D0 01 00 1C */	stfs f0, 0x1c(r1)
@@ -64,8 +64,8 @@ lbl_80CD15C4:
 /* 80CD15CC  C0 1E 00 CC */	lfs f0, 0xcc(r30)
 /* 80CD15D0  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80CD15D4  D0 21 00 30 */	stfs f1, 0x30(r1)
-/* 80CD15D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD15DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD15D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD15DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD15E0  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CD15E4  38 80 00 07 */	li r4, 7
 /* 80CD15E8  38 A0 00 0F */	li r5, 0xf

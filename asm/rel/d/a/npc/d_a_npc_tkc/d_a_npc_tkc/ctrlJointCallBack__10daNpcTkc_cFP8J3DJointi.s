@@ -7,7 +7,7 @@ lbl_80B0D2EC:
 /* 80B0D300  40 82 00 24 */	bne lbl_80B0D324
 /* 80B0D304  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80B0D308  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80B0D30C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80B0D30C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80B0D310  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80B0D314  28 03 00 00 */	cmplwi r3, 0
 /* 80B0D318  41 82 00 0C */	beq lbl_80B0D324

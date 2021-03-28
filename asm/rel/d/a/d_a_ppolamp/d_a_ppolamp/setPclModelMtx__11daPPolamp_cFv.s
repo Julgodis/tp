@@ -6,11 +6,11 @@ lbl_80D4CDA8:
 /* 80D4CDB8  7C 7F 1B 78 */	mr r31, r3
 /* 80D4CDBC  3C 60 80 D5 */	lis r3, lit_3859@ha
 /* 80D4CDC0  38 83 D2 98 */	addi r4, r3, lit_3859@l
-/* 80D4CDC4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4D298 */
-/* 80D4CDC8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4D29C */
+/* 80D4CDC4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D4CDC8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D4CDCC  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80D4CDD0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80D4CDD4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4D2A0 */
+/* 80D4CDD4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D4CDD8  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80D4CDDC  80 7F 05 74 */	lwz r3, 0x574(r31)
 /* 80D4CDE0  38 63 00 24 */	addi r3, r3, 0x24
@@ -23,9 +23,9 @@ lbl_80D4CDA8:
 /* 80D4CDFC  C0 41 00 30 */	lfs f2, 0x30(r1)
 /* 80D4CE00  C0 61 00 34 */	lfs f3, 0x34(r1)
 /* 80D4CE04  4B 5F 9A E4 */	b PSMTXTrans
-/* 80D4CE08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4CE0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D4CE10  80 83 5D 74 */	lwz r4, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 80D4CE08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4CE0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4CE10  80 83 5D 74 */	lwz r4, 0x5d74(r3)
 /* 80D4CE14  28 04 00 00 */	cmplwi r4, 0
 /* 80D4CE18  41 82 00 5C */	beq lbl_80D4CE74
 /* 80D4CE1C  38 61 00 08 */	addi r3, r1, 8

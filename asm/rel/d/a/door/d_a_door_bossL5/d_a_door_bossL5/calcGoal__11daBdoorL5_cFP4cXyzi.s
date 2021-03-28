@@ -10,9 +10,9 @@ lbl_80671954:
 /* 80671974  3C 60 80 67 */	lis r3, l_door_open_demo@ha
 /* 80671978  3B E3 24 C8 */	addi r31, r3, l_door_open_demo@l
 /* 8067197C  38 61 00 08 */	addi r3, r1, 8
-/* 80671980  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80671984  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80671988  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80671980  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80671984  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80671988  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8067198C  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80671990  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80671994  4B BF 51 A0 */	b __mi__4cXyzCFRC3Vec

@@ -70,9 +70,9 @@ lbl_807AA540:
 /* 807AA54C  80 1E 07 A4 */	lwz r0, 0x7a4(r30)
 /* 807AA550  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
 /* 807AA554  41 82 00 60 */	beq lbl_807AA5B4
-/* 807AA558  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807AA55C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807AA560  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 807AA558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807AA55C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807AA560  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 807AA564  38 00 00 FF */	li r0, 0xff
 /* 807AA568  90 01 00 08 */	stw r0, 8(r1)
 /* 807AA56C  38 80 00 00 */	li r4, 0

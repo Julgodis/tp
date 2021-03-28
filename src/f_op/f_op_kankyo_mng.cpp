@@ -17,7 +17,7 @@ struct cXyz {
 struct layer_class {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_levelEcallBack {
@@ -26,7 +26,7 @@ struct dPa_levelEcallBack {
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
 struct dPa_control_c {

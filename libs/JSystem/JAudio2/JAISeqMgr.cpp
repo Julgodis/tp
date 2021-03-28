@@ -11,10 +11,23 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISeqDataRegion {
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISeqMgr;
+struct JAISoundActivity {
+};
+
+struct JAIAudience {
 };
 
 struct JASSoundParams {
+};
+
+struct JAISoundID {
 };
 
 template <typename A0>
@@ -23,13 +36,6 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template1 {
 };
 
-struct JAIAudience {
-};
-
-struct JAISoundActivity {
-};
-
-struct JAISeqMgr;
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -44,12 +50,6 @@ struct JAISeq {
 	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);
 	/* 802A108C */ void JAISeqMgr_calc_();
 	/* 802A14FC */ void JAISeqMgr_mixOut_(JASSoundParams const&, JAISoundActivity);
-};
-
-struct JAISeqDataRegion {
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISeqMgr {
@@ -194,11 +194,11 @@ asm void JAISeqMgr::releaseSeqData(JAISeqDataRegion const& param_0) {
 /* ############################################################################################## */
 /* 803C9958-803C9970 0014+04 s=2 e=1 z=0  None .data      __vt__9JAISeqMgr                                             */
 SECTION_DATA void* __vt__9JAISeqMgr[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9JAISeqMgrFv,
-	/* 3    */ (void*)isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion,
-	/* 4    */ (void*)releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9JAISeqMgrFv,
+	(void*)isUsingSeqData__9JAISeqMgrFRC16JAISeqDataRegion,
+	(void*)releaseSeqData__9JAISeqMgrFRC16JAISeqDataRegion,
 	/* padding */
 	NULL,
 };

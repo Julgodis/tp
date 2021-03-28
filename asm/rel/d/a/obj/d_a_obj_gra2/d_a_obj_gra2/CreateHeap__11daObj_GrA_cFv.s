@@ -15,8 +15,8 @@ lbl_80C00614:
 /* 80C00648  38 7F 00 70 */	addi r3, r31, 0x70
 /* 80C0064C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80C00650  80 9F 00 84 */	lwz r4, 0x84(r31)
-/* 80C00654  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C00658  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C00654  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C00658  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C0065C  3C A5 00 02 */	addis r5, r5, 2
 /* 80C00660  38 C0 00 80 */	li r6, 0x80
 /* 80C00664  38 A5 C2 F8 */	addi r5, r5, -15624

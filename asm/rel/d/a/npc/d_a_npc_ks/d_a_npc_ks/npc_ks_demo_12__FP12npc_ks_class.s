@@ -94,7 +94,7 @@ lbl_80A57AD0:
 /* 80A57AF4  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A57AF8  3C 80 80 A6 */	lis r4, l_HIO@ha
 /* 80A57AFC  38 84 FE B8 */	addi r4, r4, l_HIO@l
-/* 80A57B00  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 80A5FED4 */
+/* 80A57B00  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 80A57B04  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 80A57B08  80 1D 05 D0 */	lwz r0, 0x5d0(r29)
 /* 80A57B0C  2C 00 00 1A */	cmpwi r0, 0x1a

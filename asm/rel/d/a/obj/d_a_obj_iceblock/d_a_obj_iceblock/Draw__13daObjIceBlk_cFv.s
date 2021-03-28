@@ -11,14 +11,14 @@ lbl_80C23CA4:
 /* 80C23CC8  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C23CCC  38 DF 01 0C */	addi r6, r31, 0x10c
 /* 80C23CD0  4B 57 FA F4 */	b settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c
-/* 80C23CD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C23CD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C23CDC  80 03 5F 70 */	lwz r0, 0x5f70(r3)	/* effective address: 8040C130 */
+/* 80C23CD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C23CD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C23CDC  80 03 5F 70 */	lwz r0, 0x5f70(r3)
 /* 80C23CE0  3C 80 80 43 */	lis r4, j3dSys@ha
 /* 80C23CE4  3B C4 4A C8 */	addi r30, r4, j3dSys@l
-/* 80C23CE8  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 80C23CEC  80 03 5F 74 */	lwz r0, 0x5f74(r3)	/* effective address: 8040C134 */
-/* 80C23CF0  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 80C23CE8  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 80C23CEC  80 03 5F 74 */	lwz r0, 0x5f74(r3)
+/* 80C23CF0  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80C23CF4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C23CF8  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80C23CFC  28 04 00 FF */	cmplwi r4, 0xff
@@ -53,11 +53,11 @@ lbl_80C23D4C:
 /* 80C23D6C  80 7F 05 AC */	lwz r3, 0x5ac(r31)
 /* 80C23D70  4B 40 DB DC */	b entry__10daMirror_cFP8J3DModel
 lbl_80C23D74:
-/* 80C23D74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C23D78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C23D7C  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C23D74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C23D78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C23D7C  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C23D80  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 80C23D84  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C23D84  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C23D88  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 80C23D8C  38 60 00 01 */	li r3, 1
 /* 80C23D90  83 E1 00 0C */	lwz r31, 0xc(r1)

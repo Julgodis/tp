@@ -64,19 +64,19 @@ lbl_80C75CF0:
 /* 80C75CF8  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 80C75CFC  3C 60 80 C7 */	lis r3, l_cull_box@ha
 /* 80C75D00  38 83 66 88 */	addi r4, r3, l_cull_box@l
-/* 80C75D04  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C76698 */
+/* 80C75D04  C0 A4 00 10 */	lfs f5, 0x10(r4)
 /* 80C75D08  7F C3 F3 78 */	mr r3, r30
-/* 80C75D0C  C0 24 00 00 */	lfs f1, 0(r4)	/* effective address: 80C76688 */
-/* 80C75D10  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C7668C */
-/* 80C75D14  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C76690 */
-/* 80C75D18  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C76694 */
+/* 80C75D0C  C0 24 00 00 */	lfs f1, 0(r4)
+/* 80C75D10  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C75D14  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C75D18  C0 84 00 0C */	lfs f4, 0xc(r4)
 /* 80C75D1C  FC C0 28 90 */	fmr f6, f5
 /* 80C75D20  4B 3A 48 28 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C75D24  80 9E 05 E8 */	lwz r4, 0x5e8(r30)
 /* 80C75D28  28 04 00 00 */	cmplwi r4, 0
 /* 80C75D2C  41 82 00 20 */	beq lbl_80C75D4C
-/* 80C75D30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C75D34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C75D30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C75D34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C75D38  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C75D3C  7F C5 F3 78 */	mr r5, r30
 /* 80C75D40  4B 3F EC C8 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -85,8 +85,8 @@ lbl_80C75CF0:
 lbl_80C75D4C:
 /* 80C75D4C  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C75D50  98 1E 05 E2 */	stb r0, 0x5e2(r30)
-/* 80C75D54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C75D58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C75D54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C75D58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C75D5C  88 9E 05 E2 */	lbz r4, 0x5e2(r30)
 /* 80C75D60  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C75D64  7C 05 07 74 */	extsb r5, r0
@@ -100,7 +100,7 @@ lbl_80C75D4C:
 /* 80C75D84  41 82 00 20 */	beq lbl_80C75DA4
 /* 80C75D88  3C 60 80 C7 */	lis r3, l_HIO@ha
 /* 80C75D8C  38 63 67 E4 */	addi r3, r3, l_HIO@l
-/* 80C75D90  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80C767F4 */
+/* 80C75D90  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80C75D94  D0 1E 05 E4 */	stfs f0, 0x5e4(r30)
 /* 80C75D98  7F C3 F3 78 */	mr r3, r30
 /* 80C75D9C  48 00 05 8D */	bl init_modeEnd__13daLv6SzGate_cFv

@@ -6,11 +6,11 @@ lbl_80CE60E8:
 /* 80CE60F8  7C 7F 1B 78 */	mr r31, r3
 /* 80CE60FC  3C 80 80 CE */	lis r4, lit_4284@ha
 /* 80CE6100  38 A4 6A 60 */	addi r5, r4, lit_4284@l
-/* 80CE6104  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CE6A60 */
-/* 80CE6108  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CE6A64 */
+/* 80CE6104  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CE6108  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CE610C  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE6110  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CE6114  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CE6A68 */
+/* 80CE6114  80 05 00 08 */	lwz r0, 8(r5)
 /* 80CE6118  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE611C  38 81 00 08 */	addi r4, r1, 8
 /* 80CE6120  4B FF FC 91 */	bl checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i

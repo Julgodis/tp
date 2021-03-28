@@ -143,8 +143,8 @@ lbl_806CBE44:
 /* 806CBE48  28 00 00 00 */	cmplwi r0, 0
 /* 806CBE4C  40 82 00 18 */	bne lbl_806CBE64
 /* 806CBE50  38 7F 06 9C */	addi r3, r31, 0x69c
-/* 806CBE54  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806CBE58  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806CBE54  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806CBE58  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806CBE5C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806CBE60  4B 9A AC 4C */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_806CBE64:

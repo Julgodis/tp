@@ -21,7 +21,7 @@ lbl_805BB540:
 /* 805BB58C  41 81 00 A8 */	bgt lbl_805BB634
 /* 805BB590  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805BB594  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805BB598  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805BB598  80 63 00 00 */	lwz r3, 0(r3)
 /* 805BB59C  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 805BB5A0  4B A5 0E 3C */	b mDoMtx_YrotS__FPA4_fs
 /* 805BB5A4  C0 1F 00 40 */	lfs f0, 0x40(r31)

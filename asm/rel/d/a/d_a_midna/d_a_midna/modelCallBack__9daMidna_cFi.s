@@ -22,9 +22,9 @@ lbl_804BC420:
 /* 804BC42C  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 804BC430  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804BC434  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804BC438  D0 03 00 0C */	stfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 804BC438  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 804BC43C  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
-/* 804BC440  D0 03 00 2C */	stfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 804BC440  D0 03 00 2C */	stfs f0, 0x2c(r3)
 lbl_804BC444:
 /* 804BC444  2C 1E 00 04 */	cmpwi r30, 4
 /* 804BC448  40 82 00 30 */	bne lbl_804BC478
@@ -78,9 +78,9 @@ lbl_804BC4F4:
 /* 804BC4F8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 804BC4FC  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 804BC500  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
-/* 804BC504  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80434BF0 */
-/* 804BC508  C0 44 00 1C */	lfs f2, 0x1c(r4)	/* effective address: 80434C00 */
-/* 804BC50C  C0 64 00 2C */	lfs f3, 0x2c(r4)	/* effective address: 80434C10 */
+/* 804BC504  C0 24 00 0C */	lfs f1, 0xc(r4)
+/* 804BC508  C0 44 00 1C */	lfs f2, 0x1c(r4)
+/* 804BC50C  C0 64 00 2C */	lfs f3, 0x2c(r4)
 /* 804BC510  4B E8 A3 D8 */	b PSMTXTrans
 /* 804BC514  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804BC518  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
@@ -94,7 +94,7 @@ lbl_804BC4F4:
 /* 804BC538  4B B4 FE 64 */	b mDoMtx_XrotM__FPA4_fs
 /* 804BC53C  3C 60 80 4C */	lis r3, m__14daMidna_hio_c0@ha
 /* 804BC540  38 63 65 60 */	addi r3, r3, m__14daMidna_hio_c0@l
-/* 804BC544  C0 23 00 14 */	lfs f1, 0x14(r3)	/* effective address: 804C6574 */
+/* 804BC544  C0 23 00 14 */	lfs f1, 0x14(r3)
 /* 804BC548  FC 40 08 90 */	fmr f2, f1
 /* 804BC54C  FC 60 08 90 */	fmr f3, f1
 /* 804BC550  4B B5 08 E8 */	b scaleM__14mDoMtx_stack_cFfff

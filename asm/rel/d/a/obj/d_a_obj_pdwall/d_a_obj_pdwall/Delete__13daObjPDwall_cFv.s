@@ -7,8 +7,8 @@ lbl_80CACFD4:
 /* 80CACFE8  7C 7B 1B 78 */	mr r27, r3
 /* 80CACFEC  3B 80 00 00 */	li r28, 0
 /* 80CACFF0  3B E0 00 00 */	li r31, 0
-/* 80CACFF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CACFF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CACFF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CACFF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CACFFC  3B C3 0F 38 */	addi r30, r3, 0xf38
 lbl_80CAD000:
 /* 80CAD000  3B BF 08 3C */	addi r29, r31, 0x83c
@@ -33,7 +33,7 @@ lbl_80CAD028:
 lbl_80CAD048:
 /* 80CAD048  3C 80 80 CB */	lis r4, l_arcName@ha
 /* 80CAD04C  38 84 D1 FC */	addi r4, r4, l_arcName@l
-/* 80CAD050  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CAD1FC */
+/* 80CAD050  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CAD054  4B 37 FF B4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CAD058  38 60 00 01 */	li r3, 1
 /* 80CAD05C  39 61 00 20 */	addi r11, r1, 0x20

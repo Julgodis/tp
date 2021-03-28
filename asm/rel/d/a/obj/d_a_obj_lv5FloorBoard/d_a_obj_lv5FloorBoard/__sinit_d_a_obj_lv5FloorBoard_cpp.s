@@ -19,10 +19,10 @@ lbl_80C6B0C4:
 /* 80C6B108  38 00 00 06 */	li r0, 6
 /* 80C6B10C  7C 09 03 A6 */	mtctr r0
 lbl_80C6B110:
-/* 80C6B110  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C6B14C */
-/* 80C6B114  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C6B150 */
-/* 80C6B118  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C6B1B8 */
-/* 80C6B11C  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C6B1BC */
+/* 80C6B110  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C6B114  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C6B118  90 65 00 04 */	stw r3, 4(r5)
+/* 80C6B11C  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C6B120  42 00 FF F0 */	bdnz lbl_80C6B110
 /* 80C6B124  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C6B128  7C 08 03 A6 */	mtlr r0

@@ -9,7 +9,7 @@ lbl_805CC6F4:
 /* 805CC710  7C 7C 1B 78 */	mr r28, r3
 /* 805CC714  3C 60 80 5E */	lis r3, lit_3932@ha
 /* 805CC718  3B C3 CA 54 */	addi r30, r3, lit_3932@l
-/* 805CC71C  C3 FE 00 08 */	lfs f31, 8(r30)	/* effective address: 805DCA5C */
+/* 805CC71C  C3 FE 00 08 */	lfs f31, 8(r30)
 /* 805CC720  88 1C 08 52 */	lbz r0, 0x852(r28)
 /* 805CC724  28 00 00 00 */	cmplwi r0, 0
 /* 805CC728  41 82 00 0C */	beq lbl_805CC734

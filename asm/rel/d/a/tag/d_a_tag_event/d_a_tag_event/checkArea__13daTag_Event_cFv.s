@@ -5,9 +5,9 @@ lbl_8048B378:
 /* 8048B384  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 8048B388  93 C1 00 48 */	stw r30, 0x48(r1)
 /* 8048B38C  7C 7E 1B 78 */	mr r30, r3
-/* 8048B390  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8048B394  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8048B398  83 E4 5D B4 */	lwz r31, 0x5db4(r4)	/* effective address: 8040BF74 */
+/* 8048B390  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8048B394  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8048B398  83 E4 5D B4 */	lwz r31, 0x5db4(r4)
 /* 8048B39C  4B FF FA 09 */	bl getAreaType__13daTag_Event_cFv
 /* 8048B3A0  54 60 04 3E */	clrlwi r0, r3, 0x10
 /* 8048B3A4  28 00 80 00 */	cmplwi r0, 0x8000

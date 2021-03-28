@@ -19,14 +19,14 @@ lbl_80AC1C4C:
 /* 80AC1C90  40 82 04 C4 */	bne lbl_80AC2154
 /* 80AC1C94  3C 60 80 AC */	lis r3, l_motionAnmData@ha
 /* 80AC1C98  38 83 47 3C */	addi r4, r3, l_motionAnmData@l
-/* 80AC1C9C  80 04 02 C4 */	lwz r0, 0x2c4(r4)	/* effective address: 80AC4A00 */
+/* 80AC1C9C  80 04 02 C4 */	lwz r0, 0x2c4(r4)
 /* 80AC1CA0  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC1CA4  3C 60 80 AC */	lis r3, l_resNameList@ha
 /* 80AC1CA8  38 63 46 FC */	addi r3, r3, l_resNameList@l
 /* 80AC1CAC  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC1CB0  80 84 02 BC */	lwz r4, 0x2bc(r4)	/* effective address: 80AC49F8 */
-/* 80AC1CB4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AC1CB8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AC1CB0  80 84 02 BC */	lwz r4, 0x2bc(r4)
+/* 80AC1CB4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AC1CB8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AC1CBC  3F C5 00 02 */	addis r30, r5, 2
 /* 80AC1CC0  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80AC1CC4  7F C5 F3 78 */	mr r5, r30
@@ -72,12 +72,12 @@ lbl_80AC1D1C:
 lbl_80AC1D60:
 /* 80AC1D60  3C 60 80 AC */	lis r3, l_motionAnmData@ha
 /* 80AC1D64  38 83 47 3C */	addi r4, r3, l_motionAnmData@l
-/* 80AC1D68  80 04 03 F8 */	lwz r0, 0x3f8(r4)	/* effective address: 80AC4B34 */
+/* 80AC1D68  80 04 03 F8 */	lwz r0, 0x3f8(r4)
 /* 80AC1D6C  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC1D70  3C 60 80 AC */	lis r3, l_resNameList@ha
 /* 80AC1D74  38 63 46 FC */	addi r3, r3, l_resNameList@l
 /* 80AC1D78  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC1D7C  80 84 03 F0 */	lwz r4, 0x3f0(r4)	/* effective address: 80AC4B2C */
+/* 80AC1D7C  80 84 03 F0 */	lwz r4, 0x3f0(r4)
 /* 80AC1D80  7F C5 F3 78 */	mr r5, r30
 /* 80AC1D84  38 C0 00 80 */	li r6, 0x80
 /* 80AC1D88  4B 57 A5 64 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
@@ -172,12 +172,12 @@ lbl_80AC1EAC:
 lbl_80AC1ED8:
 /* 80AC1ED8  3C 60 80 AC */	lis r3, l_motionAnmData@ha
 /* 80AC1EDC  38 83 47 3C */	addi r4, r3, l_motionAnmData@l
-/* 80AC1EE0  80 04 01 3C */	lwz r0, 0x13c(r4)	/* effective address: 80AC4878 */
+/* 80AC1EE0  80 04 01 3C */	lwz r0, 0x13c(r4)
 /* 80AC1EE4  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC1EE8  3C 60 80 AC */	lis r3, l_resNameList@ha
 /* 80AC1EEC  38 63 46 FC */	addi r3, r3, l_resNameList@l
 /* 80AC1EF0  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC1EF4  80 84 01 34 */	lwz r4, 0x134(r4)	/* effective address: 80AC4870 */
+/* 80AC1EF4  80 84 01 34 */	lwz r4, 0x134(r4)
 /* 80AC1EF8  7F C5 F3 78 */	mr r5, r30
 /* 80AC1EFC  38 C0 00 80 */	li r6, 0x80
 /* 80AC1F00  4B 57 A3 EC */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
@@ -203,12 +203,12 @@ lbl_80AC1ED8:
 lbl_80AC1F50:
 /* 80AC1F50  3C 60 80 AC */	lis r3, l_motionAnmData@ha
 /* 80AC1F54  38 83 47 3C */	addi r4, r3, l_motionAnmData@l
-/* 80AC1F58  80 04 04 30 */	lwz r0, 0x430(r4)	/* effective address: 80AC4B6C */
+/* 80AC1F58  80 04 04 30 */	lwz r0, 0x430(r4)
 /* 80AC1F5C  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC1F60  3C 60 80 AC */	lis r3, l_resNameList@ha
 /* 80AC1F64  38 63 46 FC */	addi r3, r3, l_resNameList@l
 /* 80AC1F68  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC1F6C  80 84 04 28 */	lwz r4, 0x428(r4)	/* effective address: 80AC4B64 */
+/* 80AC1F6C  80 84 04 28 */	lwz r4, 0x428(r4)
 /* 80AC1F70  7F C5 F3 78 */	mr r5, r30
 /* 80AC1F74  38 C0 00 80 */	li r6, 0x80
 /* 80AC1F78  4B 57 A3 74 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci
@@ -272,12 +272,12 @@ lbl_80AC2028:
 lbl_80AC2054:
 /* 80AC2054  3C 60 80 AC */	lis r3, l_motionAnmData@ha
 /* 80AC2058  38 83 47 3C */	addi r4, r3, l_motionAnmData@l
-/* 80AC205C  80 04 00 5C */	lwz r0, 0x5c(r4)	/* effective address: 80AC4798 */
+/* 80AC205C  80 04 00 5C */	lwz r0, 0x5c(r4)
 /* 80AC2060  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC2064  3C 60 80 AC */	lis r3, l_resNameList@ha
 /* 80AC2068  38 63 46 FC */	addi r3, r3, l_resNameList@l
 /* 80AC206C  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC2070  80 84 00 54 */	lwz r4, 0x54(r4)	/* effective address: 80AC4790 */
+/* 80AC2070  80 84 00 54 */	lwz r4, 0x54(r4)
 /* 80AC2074  7F C5 F3 78 */	mr r5, r30
 /* 80AC2078  38 C0 00 80 */	li r6, 0x80
 /* 80AC207C  4B 57 A2 70 */	b getRes__14dRes_control_cFPCclP11dRes_info_ci

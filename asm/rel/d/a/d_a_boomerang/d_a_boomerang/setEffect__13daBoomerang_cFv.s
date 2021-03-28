@@ -9,7 +9,7 @@ lbl_804A012C:
 /* 804A0148  3B 83 2C D0 */	addi r28, r3, lit_1109@l
 /* 804A014C  3C 60 80 4A */	lis r3, lit_4078@ha
 /* 804A0150  3B A3 28 50 */	addi r29, r3, lit_4078@l
-/* 804A0154  88 1C 00 41 */	lbz r0, 0x41(r28)	/* effective address: 804A2D11 */
+/* 804A0154  88 1C 00 41 */	lbz r0, 0x41(r28)
 /* 804A0158  7C 00 07 75 */	extsb. r0, r0
 /* 804A015C  40 82 00 24 */	bne lbl_804A0180
 /* 804A0160  C0 3D 00 54 */	lfs f1, 0x54(r29)
@@ -65,9 +65,9 @@ lbl_804A01F8:
 /* 804A0218  38 93 09 70 */	addi r4, r19, 0x970
 /* 804A021C  38 A0 01 FF */	li r5, 0x1ff
 /* 804A0220  4B FF FE 4D */	bl setEffectTraceMatrix__13daBoomerang_cFPUlUs
-/* 804A0224  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A0228  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 804A022C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 804A0224  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A0228  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 804A022C  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 804A0230  38 00 00 FF */	li r0, 0xff
 /* 804A0234  90 01 00 08 */	stw r0, 8(r1)
 /* 804A0238  38 80 00 00 */	li r4, 0
@@ -94,8 +94,8 @@ lbl_804A01F8:
 /* 804A028C  C0 13 04 D8 */	lfs f0, 0x4d8(r19)
 /* 804A0290  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 804A0294  38 73 07 40 */	addi r3, r19, 0x740
-/* 804A0298  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804A029C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804A0298  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804A029C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804A02A0  3A 24 0F 38 */	addi r17, r4, 0xf38
 /* 804A02A4  7E 24 8B 78 */	mr r4, r17
 /* 804A02A8  4B BD 68 04 */	b CrrPos__9dBgS_AcchFR4dBgS
@@ -443,9 +443,9 @@ lbl_804A07A0:
 /* 804A07AC  38 03 2C B4 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 804A07B0  90 01 00 6C */	stw r0, 0x6c(r1)
 lbl_804A07B4:
-/* 804A07B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A07B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A07BC  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 804A07B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A07B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A07BC  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 804A07C0  54 00 03 19 */	rlwinm. r0, r0, 0, 0xc, 0xc
 /* 804A07C4  41 82 00 24 */	beq lbl_804A07E8
 /* 804A07C8  80 13 00 B0 */	lwz r0, 0xb0(r19)
@@ -457,9 +457,9 @@ lbl_804A07B4:
 /* 804A07E0  4B FF F8 8D */	bl setEffectTraceMatrix__13daBoomerang_cFPUlUs
 /* 804A07E4  48 00 00 30 */	b lbl_804A0814
 lbl_804A07E8:
-/* 804A07E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A07EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A07F0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804A07E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A07EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A07F0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804A07F4  38 63 02 10 */	addi r3, r3, 0x210
 /* 804A07F8  80 93 09 68 */	lwz r4, 0x968(r19)
 /* 804A07FC  4B BA B1 1C */	b getEmitter__Q213dPa_control_c7level_cFUl

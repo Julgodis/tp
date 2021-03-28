@@ -25,7 +25,7 @@ lbl_80D477F4:
 /* 80D477FC  38 A0 00 00 */	li r5, 0
 /* 80D47800  3C C0 80 D5 */	lis r6, m__14daPeru_Param_c@ha
 /* 80D47804  38 C6 C0 60 */	addi r6, r6, m__14daPeru_Param_c@l
-/* 80D47808  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80D4C06C */
+/* 80D47808  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80D4780C  38 C0 00 00 */	li r6, 0
 /* 80D47810  3C E0 80 D5 */	lis r7, lit_4430@ha
 /* 80D47814  C0 47 C1 24 */	lfs f2, lit_4430@l(r7)

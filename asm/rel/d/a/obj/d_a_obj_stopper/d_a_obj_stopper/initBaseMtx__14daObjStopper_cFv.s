@@ -14,7 +14,7 @@ lbl_80CECF34:
 /* 80CECF64  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80CECF68  C0 1E 04 F4 */	lfs f0, 0x4f4(r30)
 /* 80CECF6C  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80CECF70  88 1F 00 4C */	lbz r0, 0x4c(r31)	/* effective address: 80CEF234 */
+/* 80CECF70  88 1F 00 4C */	lbz r0, 0x4c(r31)
 /* 80CECF74  7C 00 07 75 */	extsb. r0, r0
 /* 80CECF78  40 82 00 3C */	bne lbl_80CECFB4
 /* 80CECF7C  3C 60 80 CF */	lis r3, lit_3635@ha

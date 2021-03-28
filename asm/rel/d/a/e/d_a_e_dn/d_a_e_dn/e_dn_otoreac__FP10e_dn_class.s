@@ -9,7 +9,7 @@ lbl_804E6A8C:
 /* 804E6AA8  7C 7E 1B 78 */	mr r30, r3
 /* 804E6AAC  3C 60 80 4F */	lis r3, lit_3789@ha
 /* 804E6AB0  3B E3 E8 AC */	addi r31, r3, lit_3789@l
-/* 804E6AB4  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 804EE8B0 */
+/* 804E6AB4  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 804E6AB8  38 80 00 02 */	li r4, 2
 /* 804E6ABC  98 9E 06 F4 */	stb r4, 0x6f4(r30)
 /* 804E6AC0  A8 1E 05 B4 */	lha r0, 0x5b4(r30)
@@ -62,7 +62,7 @@ lbl_804E6B34:
 lbl_804E6B70:
 /* 804E6B70  3C 60 80 4F */	lis r3, l_HIO@ha
 /* 804E6B74  38 63 EF 3C */	addi r3, r3, l_HIO@l
-/* 804E6B78  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 804EEF4C */
+/* 804E6B78  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 804E6B7C  A8 7E 06 CC */	lha r3, 0x6cc(r30)
 /* 804E6B80  54 60 07 BF */	clrlwi. r0, r3, 0x1e
 /* 804E6B84  40 82 00 1C */	bne lbl_804E6BA0

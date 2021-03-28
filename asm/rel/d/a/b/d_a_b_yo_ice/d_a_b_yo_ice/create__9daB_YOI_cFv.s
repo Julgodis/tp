@@ -47,7 +47,7 @@ lbl_8063D65C:
 /* 8063D678  38 00 FF FF */	li r0, -1
 /* 8063D67C  3C 60 80 64 */	lis r3, l_HIO@ha
 /* 8063D680  38 63 DF F8 */	addi r3, r3, l_HIO@l
-/* 8063D684  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8063DFFC */
+/* 8063D684  98 03 00 04 */	stb r0, 4(r3)
 lbl_8063D688:
 /* 8063D688  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 8063D68C  54 00 06 3E */	clrlwi r0, r0, 0x18

@@ -300,8 +300,8 @@ lbl_805058C8:
 /* 80505930  88 1B 05 BC */	lbz r0, 0x5bc(r27)
 /* 80505934  28 00 00 01 */	cmplwi r0, 1
 /* 80505938  40 82 00 1C */	bne lbl_80505954
-/* 8050593C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80505940  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050593C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80505940  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80505944  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80505948  80 9B 09 88 */	lwz r4, 0x988(r27)
 /* 8050594C  80 BB 06 94 */	lwz r5, 0x694(r27)

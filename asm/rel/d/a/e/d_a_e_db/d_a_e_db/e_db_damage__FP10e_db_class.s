@@ -45,7 +45,7 @@ lbl_8069D7C0:
 /* 8069D814  4E 80 04 21 */	bctrl 
 /* 8069D818  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8069D81C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8069D820  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8069D820  80 63 00 00 */	lwz r3, 0(r3)
 /* 8069D824  A8 9E 06 80 */	lha r4, 0x680(r30)
 /* 8069D828  4B 96 EB B4 */	b mDoMtx_YrotS__FPA4_fs
 /* 8069D82C  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -223,7 +223,7 @@ lbl_8069DA90:
 /* 8069DA98  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8069DA9C  3C 60 80 6A */	lis r3, l_HIO@ha
 /* 8069DAA0  38 63 1D A8 */	addi r3, r3, l_HIO@l
-/* 8069DAA4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 806A1DB0 */
+/* 8069DAA4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8069DAA8  EF E1 00 32 */	fmuls f31, f1, f0
 /* 8069DAAC  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 8069DAB0  EC 00 F8 28 */	fsubs f0, f0, f31
@@ -232,8 +232,8 @@ lbl_8069DA90:
 /* 8069DABC  EC 00 F8 28 */	fsubs f0, f0, f31
 /* 8069DAC0  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 /* 8069DAC4  38 7E 10 5C */	addi r3, r30, 0x105c
-/* 8069DAC8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8069DACC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8069DAC8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8069DACC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8069DAD0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8069DAD4  4B 9D 8F D8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8069DAD8  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)

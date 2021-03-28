@@ -151,8 +151,8 @@ lbl_80C4FB50:
 /* 80C4FB80  7F E3 FB 78 */	mr r3, r31
 /* 80C4FB84  48 00 0B 85 */	bl setBaseMtx__14daObjKznkarm_cFv
 /* 80C4FB88  38 7F 05 B4 */	addi r3, r31, 0x5b4
-/* 80C4FB8C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C4FB90  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C4FB8C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C4FB90  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C4FB94  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C4FB98  4B 42 6F 14 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C4FB9C  E3 E1 00 28 */	psq_l f31, 40(r1), 0, 0 /* qr0 */

@@ -5,17 +5,17 @@ lbl_8050FB34:
 /* 8050FB40  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8050FB44  93 C1 00 08 */	stw r30, 8(r1)
 /* 8050FB48  7C 7E 1B 78 */	mr r30, r3
-/* 8050FB4C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8050FB50  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8050FB54  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8050FB4C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8050FB50  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8050FB54  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 8050FB58  4B B0 91 88 */	b fopAc_IsActor__FPv
 /* 8050FB5C  2C 03 00 00 */	cmpwi r3, 0
 /* 8050FB60  41 82 00 88 */	beq lbl_8050FBE8
 /* 8050FB64  A8 1E 00 08 */	lha r0, 8(r30)
 /* 8050FB68  2C 00 00 39 */	cmpwi r0, 0x39
 /* 8050FB6C  40 82 00 7C */	bne lbl_8050FBE8
-/* 8050FB70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050FB74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050FB70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050FB74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050FB78  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 8050FB7C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8050FB80  88 1E 04 BA */	lbz r0, 0x4ba(r30)

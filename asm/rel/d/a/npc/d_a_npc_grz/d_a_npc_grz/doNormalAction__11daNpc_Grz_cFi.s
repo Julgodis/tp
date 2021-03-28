@@ -21,7 +21,7 @@ lbl_809EBC04:
 lbl_809EBC50:
 /* 809EBC50  3C 80 80 9F */	lis r4, m__17daNpc_Grz_Param_c@ha
 /* 809EBC54  38 84 F1 F4 */	addi r4, r4, m__17daNpc_Grz_Param_c@l
-/* 809EBC58  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 809EF256 */
+/* 809EBC58  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_809EBC5C:
 /* 809EBC5C  38 A0 00 0A */	li r5, 0xa
 /* 809EBC60  38 C0 00 00 */	li r6, 0

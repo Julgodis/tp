@@ -5,9 +5,9 @@ lbl_8077AE38:
 /* 8077AE44  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8077AE48  93 C1 00 08 */	stw r30, 8(r1)
 /* 8077AE4C  7C 7E 1B 78 */	mr r30, r3
-/* 8077AE50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077AE54  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8077AE58  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8077AE50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077AE54  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8077AE58  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8077AE5C  C0 44 04 D0 */	lfs f2, 0x4d0(r4)
 /* 8077AE60  C0 1E 04 A8 */	lfs f0, 0x4a8(r30)
 /* 8077AE64  EC 62 00 28 */	fsubs f3, f2, f0

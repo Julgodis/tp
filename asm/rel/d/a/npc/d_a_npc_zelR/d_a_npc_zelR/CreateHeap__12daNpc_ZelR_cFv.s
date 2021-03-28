@@ -18,8 +18,8 @@ lbl_80B6F1F8:
 /* 80B6F238  38 63 1C 10 */	addi r3, r3, l_resNameList@l
 /* 80B6F23C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80B6F240  7C 84 28 2E */	lwzx r4, r4, r5
-/* 80B6F244  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80B6F248  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80B6F244  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80B6F248  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80B6F24C  3C A5 00 02 */	addis r5, r5, 2
 /* 80B6F250  38 C0 00 80 */	li r6, 0x80
 /* 80B6F254  38 A5 C2 F8 */	addi r5, r5, -15624

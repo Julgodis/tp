@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct JSUFileInputStream {
+};
+
 struct JKRHeap {
 	/* 802CE4D4 */ void alloc(u32, int);
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
-};
-
-struct JSUFileInputStream {
 };
 
 struct JKRAramStreamCommand {
@@ -144,10 +144,10 @@ SECTION_DATA static u8 sMessageQueue__13JKRAramStream[32] = {
 
 /* 803CC1B8-803CC1C8 0010+00 s=2 e=0 z=0  None .data      __vt__13JKRAramStream                                        */
 SECTION_DATA static void* __vt__13JKRAramStream[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13JKRAramStreamFv,
-	/* 3    */ (void*)run__13JKRAramStreamFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13JKRAramStreamFv,
+	(void*)run__13JKRAramStreamFv,
 };
 
 /* 802D3BB8-802D3C08 0050+00 s=1 e=0 z=0  None .text      __ct__13JKRAramStreamFl                                      */

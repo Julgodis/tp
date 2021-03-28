@@ -23,14 +23,14 @@ lbl_80C89C10:
 /* 80C89C64  83 43 00 04 */	lwz r26, 4(r3)
 /* 80C89C68  80 7A 00 60 */	lwz r3, 0x60(r26)
 /* 80C89C6C  83 E3 00 00 */	lwz r31, 0(r3)
-/* 80C89C70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C89C74  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C89C78  80 04 5F 78 */	lwz r0, 0x5f78(r4)	/* effective address: 8040C138 */
+/* 80C89C70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C89C74  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C89C78  80 04 5F 78 */	lwz r0, 0x5f78(r4)
 /* 80C89C7C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C89C80  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80C89C84  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80C89C88  80 04 5F 7C */	lwz r0, 0x5f7c(r4)	/* effective address: 8040C13C */
-/* 80C89C8C  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
+/* 80C89C84  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80C89C88  80 04 5F 7C */	lwz r0, 0x5f7c(r4)
+/* 80C89C8C  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C89C90  80 7F 00 28 */	lwz r3, 0x28(r31)
 /* 80C89C94  38 80 00 01 */	li r4, 1
 /* 80C89C98  81 83 00 00 */	lwz r12, 0(r3)
@@ -83,11 +83,11 @@ lbl_80C89D38:
 /* 80C89D50  38 7A 00 58 */	addi r3, r26, 0x58
 /* 80C89D54  80 9E 05 C0 */	lwz r4, 0x5c0(r30)
 /* 80C89D58  4B 6A 5A 5C */	b removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey
-/* 80C89D5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C89D60  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C89D64  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C89D5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C89D60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C89D64  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C89D68  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80C89D6C  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C89D6C  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C89D70  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C89D74  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 80C89D78  38 80 00 01 */	li r4, 1
@@ -97,11 +97,11 @@ lbl_80C89D38:
 /* 80C89D88  4E 80 04 21 */	bctrl 
 /* 80C89D8C  3C 80 80 C9 */	lis r4, l_HIO@ha
 /* 80C89D90  38 84 A1 F4 */	addi r4, r4, l_HIO@l
-/* 80C89D94  88 04 00 07 */	lbz r0, 7(r4)	/* effective address: 80C8A1FB */
+/* 80C89D94  88 04 00 07 */	lbz r0, 7(r4)
 /* 80C89D98  98 03 00 00 */	stb r0, 0(r3)
-/* 80C89D9C  88 04 00 08 */	lbz r0, 8(r4)	/* effective address: 80C8A1FC */
+/* 80C89D9C  88 04 00 08 */	lbz r0, 8(r4)
 /* 80C89DA0  98 03 00 01 */	stb r0, 1(r3)
-/* 80C89DA4  88 04 00 09 */	lbz r0, 9(r4)	/* effective address: 80C8A1FD */
+/* 80C89DA4  88 04 00 09 */	lbz r0, 9(r4)
 /* 80C89DA8  98 03 00 02 */	stb r0, 2(r3)
 /* 80C89DAC  38 60 00 01 */	li r3, 1
 /* 80C89DB0  39 61 00 50 */	addi r11, r1, 0x50

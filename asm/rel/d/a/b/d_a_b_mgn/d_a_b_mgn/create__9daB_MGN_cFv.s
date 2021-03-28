@@ -165,7 +165,7 @@ lbl_8060F334:
 /* 8060F350  38 00 FF FF */	li r0, -1
 /* 8060F354  3C 60 80 61 */	lis r3, l_HIO@ha
 /* 8060F358  38 63 04 50 */	addi r3, r3, l_HIO@l
-/* 8060F35C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80610454 */
+/* 8060F35C  98 03 00 04 */	stb r0, 4(r3)
 lbl_8060F360:
 /* 8060F360  38 00 00 00 */	li r0, 0
 /* 8060F364  90 1F 05 5C */	stw r0, 0x55c(r31)
@@ -279,9 +279,9 @@ lbl_8060F474:
 /* 8060F50C  38 00 00 01 */	li r0, 1
 /* 8060F510  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8060F514  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8060F518  98 03 12 C8 */	stb r0, 0x12c8(r3)	/* effective address: 8042DD1C */
-/* 8060F51C  98 03 12 C2 */	stb r0, 0x12c2(r3)	/* effective address: 8042DD16 */
-/* 8060F520  98 03 12 C3 */	stb r0, 0x12c3(r3)	/* effective address: 8042DD17 */
+/* 8060F518  98 03 12 C8 */	stb r0, 0x12c8(r3)
+/* 8060F51C  98 03 12 C2 */	stb r0, 0x12c2(r3)
+/* 8060F520  98 03 12 C3 */	stb r0, 0x12c3(r3)
 /* 8060F524  7F E3 FB 78 */	mr r3, r31
 /* 8060F528  4B FF F4 E9 */	bl daB_MGN_Execute__FP9daB_MGN_c
 lbl_8060F52C:

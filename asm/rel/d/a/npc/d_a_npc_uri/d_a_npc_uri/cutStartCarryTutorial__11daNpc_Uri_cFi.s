@@ -8,8 +8,8 @@ lbl_80B29198:
 /* 80B291B0  7C 9B 23 78 */	mr r27, r4
 /* 80B291B4  3B E0 00 00 */	li r31, 0
 /* 80B291B8  3B C0 FF FF */	li r30, -1
-/* 80B291BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B291C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B291BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B291C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B291C4  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80B291C8  7F 83 E3 78 */	mr r3, r28
 /* 80B291CC  3C A0 80 B3 */	lis r5, struct_80B2CF74+0x0@ha
@@ -43,13 +43,13 @@ lbl_80B2921C:
 /* 80B29230  4B 62 32 D0 */	b daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz
 /* 80B29234  2C 03 00 00 */	cmpwi r3, 0
 /* 80B29238  41 82 00 38 */	beq lbl_80B29270
-/* 80B2923C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B29240  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B29244  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B2923C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B29240  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B29244  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80B29248  38 81 00 10 */	addi r4, r1, 0x10
 /* 80B2924C  A8 A1 00 0A */	lha r5, 0xa(r1)
 /* 80B29250  38 C0 00 00 */	li r6, 0
-/* 80B29254  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B29254  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B29258  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80B2925C  7D 89 03 A6 */	mtctr r12
 /* 80B29260  4E 80 04 21 */	bctrl 
@@ -100,9 +100,9 @@ lbl_80B29304:
 /* 80B29304  38 00 00 00 */	li r0, 0
 /* 80B29308  98 1D 0C FF */	stb r0, 0xcff(r29)
 /* 80B2930C  7F A3 EB 78 */	mr r3, r29
-/* 80B29310  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B29314  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B29318  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B29310  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B29314  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B29318  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B2931C  4B 4F 13 F4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B29320  7C 64 1B 78 */	mr r4, r3
 /* 80B29324  7F A3 EB 78 */	mr r3, r29

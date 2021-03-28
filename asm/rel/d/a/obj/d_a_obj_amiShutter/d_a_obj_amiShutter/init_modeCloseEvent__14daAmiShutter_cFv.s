@@ -13,7 +13,7 @@ lbl_80BA1DCC:
 /* 80BA1DF8  90 01 00 08 */	stw r0, 8(r1)
 /* 80BA1DFC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BA1E00  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BA1E04  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BA1E04  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BA1E08  38 81 00 08 */	addi r4, r1, 8
 /* 80BA1E0C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80BA1E10  38 C0 00 00 */	li r6, 0
@@ -27,7 +27,7 @@ lbl_80BA1DCC:
 /* 80BA1E30  4B 70 9B 54 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 80BA1E34  3C 60 80 BA */	lis r3, l_HIO@ha
 /* 80BA1E38  38 63 25 6C */	addi r3, r3, l_HIO@l
-/* 80BA1E3C  88 03 00 10 */	lbz r0, 0x10(r3)	/* effective address: 80BA257C */
+/* 80BA1E3C  88 03 00 10 */	lbz r0, 0x10(r3)
 /* 80BA1E40  98 1F 05 D8 */	stb r0, 0x5d8(r31)
 /* 80BA1E44  38 00 00 03 */	li r0, 3
 /* 80BA1E48  98 1F 05 C4 */	stb r0, 0x5c4(r31)

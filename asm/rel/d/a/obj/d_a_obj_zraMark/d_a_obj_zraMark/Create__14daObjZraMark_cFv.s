@@ -79,7 +79,7 @@ lbl_80D42798:
 /* 80D427A4  3C 60 80 D4 */	lis r3, l_arcName@ha
 /* 80D427A8  38 83 3F A4 */	addi r4, r3, l_arcName@l
 /* 80D427AC  38 7E 05 68 */	addi r3, r30, 0x568
-/* 80D427B0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D43FA4 */
+/* 80D427B0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D427B4  4B 2E A7 08 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D427B8  7C 7D 1B 78 */	mr r29, r3
 /* 80D427BC  2C 1D 00 04 */	cmpwi r29, 4

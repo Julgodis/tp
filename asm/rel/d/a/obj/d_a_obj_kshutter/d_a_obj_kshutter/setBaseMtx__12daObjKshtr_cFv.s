@@ -48,11 +48,11 @@ lbl_80C47B98:
 /* 80C47BDC  4B 6F E8 D4 */	b PSMTXCopy
 /* 80C47BE0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C47BE4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C47BE8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C47BE8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80C47BEC  D0 1F 06 08 */	stfs f0, 0x608(r31)
-/* 80C47BF0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C47BF0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80C47BF4  D0 1F 06 0C */	stfs f0, 0x60c(r31)
-/* 80C47BF8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C47BF8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80C47BFC  D0 1F 06 10 */	stfs f0, 0x610(r31)
 lbl_80C47C00:
 /* 80C47C00  83 E1 00 0C */	lwz r31, 0xc(r1)

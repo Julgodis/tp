@@ -9,10 +9,10 @@ lbl_80CCFD80:
 /* 80CCFD9C  7C 7E 1B 78 */	mr r30, r3
 /* 80CCFDA0  3C 60 80 CD */	lis r3, m__21daObj_Sekizoa_Param_c@ha
 /* 80CCFDA4  3B E3 5C FC */	addi r31, r3, m__21daObj_Sekizoa_Param_c@l
-/* 80CCFDA8  C0 1F 00 D4 */	lfs f0, 0xd4(r31)	/* effective address: 80CD5DD0 */
+/* 80CCFDA8  C0 1F 00 D4 */	lfs f0, 0xd4(r31)
 /* 80CCFDAC  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80CCFDB0  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80CCFDB4  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 80CD5DBC */
+/* 80CCFDB4  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 80CCFDB8  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80CCFDBC  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80CCFDC0  38 80 00 00 */	li r4, 0

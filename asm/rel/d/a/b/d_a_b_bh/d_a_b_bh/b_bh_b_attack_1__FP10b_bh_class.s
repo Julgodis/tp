@@ -74,14 +74,14 @@ lbl_805AFDA0:
 /* 805AFDB8  C0 3F 00 30 */	lfs f1, 0x30(r31)
 /* 805AFDBC  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805AFDC0  38 63 33 FC */	addi r3, r3, l_HIO@l
-/* 805AFDC4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 805B3404 */
+/* 805AFDC4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 805AFDC8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 805AFDCC  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 805AFDD0  C0 1F 00 88 */	lfs f0, 0x88(r31)
 /* 805AFDD4  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 805AFDD8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805AFDDC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805AFDE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805AFDE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 805AFDE4  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 805AFDE8  4B A5 C5 F4 */	b mDoMtx_YrotS__FPA4_fs
 /* 805AFDEC  38 61 00 2C */	addi r3, r1, 0x2c
@@ -198,7 +198,7 @@ lbl_805AFF28:
 /* 805AFF98  C0 5F 00 30 */	lfs f2, 0x30(r31)
 /* 805AFF9C  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805AFFA0  38 63 33 FC */	addi r3, r3, l_HIO@l
-/* 805AFFA4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 805B3404 */
+/* 805AFFA4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 805AFFA8  EC 02 00 32 */	fmuls f0, f2, f0
 /* 805AFFAC  EC 03 00 2A */	fadds f0, f3, f0
 /* 805AFFB0  EC 00 08 2A */	fadds f0, f0, f1

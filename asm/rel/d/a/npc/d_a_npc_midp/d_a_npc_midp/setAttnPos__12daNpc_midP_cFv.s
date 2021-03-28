@@ -9,11 +9,11 @@ lbl_80A71E28:
 /* 80A71E44  7C 7E 1B 78 */	mr r30, r3
 /* 80A71E48  3C 60 80 A7 */	lis r3, m__18daNpc_midP_Param_c@ha
 /* 80A71E4C  3B E3 39 C0 */	addi r31, r3, m__18daNpc_midP_Param_c@l
-/* 80A71E50  C0 3F 00 B4 */	lfs f1, 0xb4(r31)	/* effective address: 80A73A74 */
+/* 80A71E50  C0 3F 00 B4 */	lfs f1, 0xb4(r31)
 /* 80A71E54  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 80A71E58  C0 1F 00 B8 */	lfs f0, 0xb8(r31)	/* effective address: 80A73A78 */
+/* 80A71E58  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 80A71E5C  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80A71E60  C0 1F 00 A0 */	lfs f0, 0xa0(r31)	/* effective address: 80A73A60 */
+/* 80A71E60  C0 1F 00 A0 */	lfs f0, 0xa0(r31)
 /* 80A71E64  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80A71E68  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 80A71E6C  D0 01 00 2C */	stfs f0, 0x2c(r1)

@@ -163,9 +163,9 @@ lbl_80AD3420:
 /* 80AD3438  2C 03 00 00 */	cmpwi r3, 0
 /* 80AD343C  40 82 00 B0 */	bne lbl_80AD34EC
 /* 80AD3440  7F C3 F3 78 */	mr r3, r30
-/* 80AD3444  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AD3448  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80AD344C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80AD3444  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AD3448  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80AD344C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80AD3450  4B 54 75 14 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80AD3454  C0 1F 00 F8 */	lfs f0, 0xf8(r31)
 /* 80AD3458  FC 01 00 40 */	fcmpo cr0, f1, f0

@@ -18,11 +18,11 @@ lbl_80540C88:
 /* 80540C8C  2C 03 00 00 */	cmpwi r3, 0
 /* 80540C90  41 82 00 1C */	beq lbl_80540CAC
 /* 80540C94  38 00 00 08 */	li r0, 8
-/* 80540C98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80540C9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80540CA0  98 03 5E 24 */	stb r0, 0x5e24(r3)	/* effective address: 8040BFE4 */
+/* 80540C98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80540C9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80540CA0  98 03 5E 24 */	stb r0, 0x5e24(r3)
 /* 80540CA4  38 00 00 00 */	li r0, 0
-/* 80540CA8  98 03 5E 4A */	stb r0, 0x5e4a(r3)	/* effective address: 8040C00A */
+/* 80540CA8  98 03 5E 4A */	stb r0, 0x5e4a(r3)
 lbl_80540CAC:
 /* 80540CAC  38 60 00 01 */	li r3, 1
 /* 80540CB0  80 01 00 14 */	lwz r0, 0x14(r1)

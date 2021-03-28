@@ -100,10 +100,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -174,7 +174,7 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-static void daObj_Key_Draw(obj_key_class*); // 2
+void daObj_Key_Draw(obj_key_class*); // 2
 static void s_count_sub(void*, void*); // 2
 static void s_master_sub(void*, void*); // 2
 static void masterkey_check(obj_key_class*); // 2
@@ -183,13 +183,13 @@ static void chain_control_00(obj_key_class*); // 2
 static void chain_control_01(obj_key_class*); // 2
 static void action(obj_key_class*); // 2
 static void daObj_Key_Execute(obj_key_class*); // 2
-static bool daObj_Key_IsDelete(obj_key_class*); // 2
-static void daObj_Key_Delete(obj_key_class*); // 2
+bool daObj_Key_IsDelete(obj_key_class*); // 2
+void daObj_Key_Delete(obj_key_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObj_Key_Create(fopAc_ac_c*); // 2
+void daObj_Key_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__15daObj_Key_HIO_cFv(); // 1
-extern "C" static void daObj_Key_Draw__FP13obj_key_class(); // 1
+extern "C" void daObj_Key_Draw__FP13obj_key_class(); // 1
 extern "C" static void s_count_sub__FPvPv(); // 1
 extern "C" static void s_master_sub__FPvPv(); // 1
 extern "C" static void masterkey_check__FP13obj_key_class(); // 1
@@ -199,10 +199,10 @@ extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void chain_control_01__FP13obj_key_class(); // 1
 extern "C" static void action__FP13obj_key_class(); // 1
 extern "C" static void daObj_Key_Execute__FP13obj_key_class(); // 1
-extern "C" static bool daObj_Key_IsDelete__FP13obj_key_class(); // 1
-extern "C" static void daObj_Key_Delete__FP13obj_key_class(); // 1
+extern "C" bool daObj_Key_IsDelete__FP13obj_key_class(); // 1
+extern "C" void daObj_Key_Delete__FP13obj_key_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daObj_Key_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObj_Key_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
@@ -211,13 +211,11 @@ extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __dt__15daObj_Key_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_key_cpp(); // 1
-extern "C" static void func_80C40FAC(); // 1
-extern "C" static void func_80C40FB4(); // 1
+extern "C" void func_80C40FAC(); // 1
+extern "C" void func_80C40FB4(); // 1
 extern "C" void setPos__7daKey_cF4cXyz(); // 1
-extern "C" extern u8 const lit_4361[8];
-extern "C" extern u8 const lit_4362[8];
-extern "C" extern u8 const lit_4363[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObj_Key_Method[8];
 extern "C" extern void* g_profile_OBJ_KEY[12];
 
 // 
@@ -334,20 +332,15 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 g_Counter[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
@@ -370,66 +363,66 @@ SECTION_DATA static u8 data_80C41094[4] = {
 	0x82, 0x7A, 0x82, 0x7B,
 };
 
-/* 80C41098-80C410B8 0020+00 s=1 e=0 z=0  None .data      l_daObj_Key_Method                                           */
-SECTION_DATA static void* l_daObj_Key_Method[8] = {
-	/* 0    */ (void*)daObj_Key_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObj_Key_Delete__FP13obj_key_class,
-	/* 2    */ (void*)daObj_Key_Execute__FP13obj_key_class,
-	/* 3    */ (void*)daObj_Key_IsDelete__FP13obj_key_class,
-	/* 4    */ (void*)daObj_Key_Draw__FP13obj_key_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C41098-80C410B8 0020+00 s=0 e=0 z=0  None .data      l_daObj_Key_Method                                           */
+SECTION_DATA void* l_daObj_Key_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C410B8-80C410E8 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_KEY                                            */
+/* 80C410B8-80C410E8 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_KEY                                            */
 SECTION_DATA void* g_profile_OBJ_KEY[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01130000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000009B8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x002C0000,
-	/* 9    */ (void*)&l_daObj_Key_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01130000,
+	(void*)NULL,
+	(void*)0x000009B8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x002C0000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
 };
 
 /* 80C410E8-80C410F4 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C410F4-80C41100 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C41100-80C41124 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80C40FB4,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80C40FAC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C41124-80C41130 000C+00 s=2 e=0 z=0  None .data      __vt__15daObj_Key_HIO_c                                      */
 SECTION_DATA static void* __vt__15daObj_Key_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15daObj_Key_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C3F40C-80C3F43C 0030+00 s=1 e=0 z=0  None .text      __ct__15daObj_Key_HIO_cFv                                    */
@@ -443,11 +436,11 @@ asm daObj_Key_HIO_c::daObj_Key_HIO_c() {
 #pragma pop
 
 
-/* 80C3F43C-80C3F4D4 0098+00 s=1 e=0 z=0  None .text      daObj_Key_Draw__FP13obj_key_class                            */
+/* 80C3F43C-80C3F4D4 0098+00 s=0 e=0 z=0  None .text      daObj_Key_Draw__FP13obj_key_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Key_Draw(obj_key_class* param_0) {
+asm void daObj_Key_Draw(obj_key_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Draw__FP13obj_key_class.s"
 }
@@ -611,18 +604,18 @@ SECTION_RODATA static u32 const lit_4360[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80C41054-80C4105C 0008+00 s=0 e=0 z=0  None .rodata    @4361                                                        */
-SECTION_RODATA u8 const lit_4361[8] = {
+/* 80C41054-80C4105C 0008+00 s=1 e=0 z=0  None .rodata    @4361                                                        */
+SECTION_RODATA static u8 const lit_4361[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C4105C-80C41064 0008+00 s=0 e=0 z=0  None .rodata    @4362                                                        */
-SECTION_RODATA u8 const lit_4362[8] = {
+/* 80C4105C-80C41064 0008+00 s=1 e=0 z=0  None .rodata    @4362                                                        */
+SECTION_RODATA static u8 const lit_4362[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C41064-80C4106C 0008+00 s=0 e=0 z=0  None .rodata    @4363                                                        */
-SECTION_RODATA u8 const lit_4363[8] = {
+/* 80C41064-80C4106C 0008+00 s=1 e=0 z=0  None .rodata    @4363                                                        */
+SECTION_RODATA static u8 const lit_4363[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -657,7 +650,7 @@ asm static void action(obj_key_class* param_0) {
 #pragma pop
 
 
-/* 80C408B4-80C4093C 0088+00 s=2 e=0 z=0  None .text      daObj_Key_Execute__FP13obj_key_class                         */
+/* 80C408B4-80C4093C 0088+00 s=1 e=0 z=0  None .text      daObj_Key_Execute__FP13obj_key_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -668,8 +661,8 @@ asm static void daObj_Key_Execute(obj_key_class* param_0) {
 #pragma pop
 
 
-/* 80C4093C-80C40944 0008+00 s=1 e=0 z=0  None .text      daObj_Key_IsDelete__FP13obj_key_class                        */
-static bool daObj_Key_IsDelete(obj_key_class* param_0) {
+/* 80C4093C-80C40944 0008+00 s=0 e=0 z=0  None .text      daObj_Key_IsDelete__FP13obj_key_class                        */
+bool daObj_Key_IsDelete(obj_key_class* param_0) {
 	return true;
 }
 
@@ -687,11 +680,11 @@ SECTION_DEAD char const* const stringBase_80C41084 = "F_SP118";
 SECTION_DEAD char const* const stringBase_80C4108C = "D_MN09";
 #pragma pop
 
-/* 80C40944-80C409AC 0068+00 s=1 e=0 z=0  None .text      daObj_Key_Delete__FP13obj_key_class                          */
+/* 80C40944-80C409AC 0068+00 s=0 e=0 z=0  None .text      daObj_Key_Delete__FP13obj_key_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Key_Delete(obj_key_class* param_0) {
+asm void daObj_Key_Delete(obj_key_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Delete__FP13obj_key_class.s"
 }
@@ -709,18 +702,18 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C40AB8-80C40DE4 032C+00 s=1 e=0 z=0  None .text      daObj_Key_Create__FP10fopAc_ac_c                             */
+/* 80C40AB8-80C40DE4 032C+00 s=0 e=0 z=0  None .text      daObj_Key_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Key_Create(fopAc_ac_c* param_0) {
+asm void daObj_Key_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/daObj_Key_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C40DE4-80C40E2C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80C40DE4-80C40E2C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -731,7 +724,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80C40E2C-80C40E74 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C40E2C-80C40E74 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -742,7 +735,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80C40E74-80C40EE4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80C40E74-80C40EE4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -776,7 +769,7 @@ cXyz::cXyz() {
 }
 
 
-/* 80C40F28-80C40F70 0048+00 s=2 e=0 z=0  None .text      __dt__15daObj_Key_HIO_cFv                                    */
+/* 80C40F28-80C40F70 0048+00 s=1 e=0 z=0  None .text      __dt__15daObj_Key_HIO_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -787,7 +780,7 @@ asm daObj_Key_HIO_c::~daObj_Key_HIO_c() {
 #pragma pop
 
 
-/* 80C40F70-80C40FAC 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_key_cpp                                      */
+/* 80C40F70-80C40FAC 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_key_cpp                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -798,22 +791,22 @@ extern "C" asm void __sinit_d_a_obj_key_cpp() {
 #pragma pop
 
 
-/* 80C40FAC-80C40FB4 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C40FAC-80C40FB4 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C40FAC() {
+extern "C" asm void func_80C40FAC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/func_80C40FAC.s"
 }
 #pragma pop
 
 
-/* 80C40FB4-80C40FBC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80C40FB4-80C40FBC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C40FB4() {
+extern "C" asm void func_80C40FB4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_key/d_a_obj_key/func_80C40FB4.s"
 }

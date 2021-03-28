@@ -131,7 +131,7 @@ lbl_8071654C:
 /* 80716558  98 1E 07 07 */	stb r0, 0x707(r30)
 /* 8071655C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80716560  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80716564  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80716564  80 63 00 00 */	lwz r3, 0(r3)
 /* 80716568  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8071656C  4B B9 98 AC */	b bgmStreamPlay__8Z2SeqMgrFv
 lbl_80716570:

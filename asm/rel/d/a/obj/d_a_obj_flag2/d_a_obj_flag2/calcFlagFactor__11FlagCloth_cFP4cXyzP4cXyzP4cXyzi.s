@@ -10,7 +10,7 @@ lbl_80BEC7CC:
 /* 80BEC7EC  7D 1F 43 78 */	mr r31, r8
 /* 80BEC7F0  3C 60 80 BF */	lis r3, M_attr__12daObjFlag2_c@ha
 /* 80BEC7F4  3B 63 E0 DC */	addi r27, r3, M_attr__12daObjFlag2_c@l
-/* 80BEC7F8  C0 1B 00 18 */	lfs f0, 0x18(r27)	/* effective address: 80BEE0F4 */
+/* 80BEC7F8  C0 1B 00 18 */	lfs f0, 0x18(r27)
 /* 80BEC7FC  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80BEC800  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80BEC804  D0 01 00 1C */	stfs f0, 0x1c(r1)
@@ -22,9 +22,9 @@ lbl_80BEC818:
 /* 80BEC818  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 80BEC81C  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 80BEC820  D0 1C 00 00 */	stfs f0, 0(r28)
-/* 80BEC824  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 80BEC824  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BEC828  D0 1C 00 04 */	stfs f0, 4(r28)
-/* 80BEC82C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80BEC82C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BEC830  D0 1C 00 08 */	stfs f0, 8(r28)
 /* 80BEC834  48 00 00 DC */	b lbl_80BEC910
 lbl_80BEC838:

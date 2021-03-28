@@ -105,7 +105,7 @@ lbl_8069BBE8:
 /* 8069BC10  38 7E 06 90 */	addi r3, r30, 0x690
 /* 8069BC14  3C 80 80 6A */	lis r4, l_HIO@ha
 /* 8069BC18  38 84 1D A8 */	addi r4, r4, l_HIO@l
-/* 8069BC1C  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 806A1DB8 */
+/* 8069BC1C  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8069BC20  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 8069BC24  C0 7F 00 88 */	lfs f3, 0x88(r31)
 /* 8069BC28  4B BD 3E 14 */	b cLib_addCalc2__FPffff

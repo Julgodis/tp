@@ -8,10 +8,10 @@ lbl_8065789C:
 /* 806578B4  7C 9F 23 78 */	mr r31, r4
 /* 806578B8  3C 60 80 65 */	lis r3, __vt__14mDoHIO_entry_c@ha
 /* 806578BC  38 03 7A 7C */	addi r0, r3, __vt__14mDoHIO_entry_c@l
-/* 806578C0  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80657A9C */
+/* 806578C0  90 04 00 00 */	stw r0, 0(r4)
 /* 806578C4  3C 60 80 65 */	lis r3, __vt__15daCoach2D_HIO_c@ha
 /* 806578C8  38 03 7A 70 */	addi r0, r3, __vt__15daCoach2D_HIO_c@l
-/* 806578CC  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80657A9C */
+/* 806578CC  90 04 00 00 */	stw r0, 0(r4)
 /* 806578D0  38 64 00 04 */	addi r3, r4, 4
 /* 806578D4  3C 80 80 65 */	lis r4, data_8065799C@ha
 /* 806578D8  38 84 79 9C */	addi r4, r4, data_8065799C@l

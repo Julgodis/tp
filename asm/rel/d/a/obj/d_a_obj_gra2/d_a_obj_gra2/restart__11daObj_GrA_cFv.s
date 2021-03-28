@@ -24,7 +24,7 @@ lbl_80C00EFC:
 /* 80C00F54  B0 03 09 1C */	sth r0, 0x91c(r3)
 /* 80C00F58  A8 03 04 E0 */	lha r0, 0x4e0(r3)
 /* 80C00F5C  B0 03 09 1E */	sth r0, 0x91e(r3)
-/* 80C00F60  C0 1F 01 1C */	lfs f0, 0x11c(r31)	/* effective address: 80C0FB98 */
+/* 80C00F60  C0 1F 01 1C */	lfs f0, 0x11c(r31)
 /* 80C00F64  D0 03 05 2C */	stfs f0, 0x52c(r3)
 /* 80C00F68  D0 03 04 F8 */	stfs f0, 0x4f8(r3)
 /* 80C00F6C  D0 03 04 FC */	stfs f0, 0x4fc(r3)
@@ -47,11 +47,11 @@ lbl_80C00FA4:
 lbl_80C00FAC:
 /* 80C00FAC  3C 60 80 C1 */	lis r3, lit_4591@ha
 /* 80C00FB0  38 83 00 5C */	addi r4, r3, lit_4591@l
-/* 80C00FB4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C1005C */
-/* 80C00FB8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10060 */
+/* 80C00FB4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C00FB8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C00FBC  90 61 00 08 */	stw r3, 8(r1)
 /* 80C00FC0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C00FC4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C10064 */
+/* 80C00FC4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C00FC8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C00FCC  7F C3 F3 78 */	mr r3, r30
 /* 80C00FD0  38 81 00 08 */	addi r4, r1, 8

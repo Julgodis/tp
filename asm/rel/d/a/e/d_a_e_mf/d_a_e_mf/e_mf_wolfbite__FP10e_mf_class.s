@@ -7,14 +7,14 @@ lbl_8070CCB8:
 /* 8070CCCC  7C 7E 1B 78 */	mr r30, r3
 /* 8070CCD0  3C 60 80 71 */	lis r3, lit_3828@ha
 /* 8070CCD4  3B E3 39 74 */	addi r31, r3, lit_3828@l
-/* 8070CCD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070CCDC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8070CCE0  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8070CCD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070CCDC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8070CCE0  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 8070CCE4  38 00 00 0A */	li r0, 0xa
 /* 8070CCE8  B0 1E 06 C8 */	sth r0, 0x6c8(r30)
 /* 8070CCEC  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 8070CCF0  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 8071397C */
-/* 8070CCF4  C0 5F 00 B8 */	lfs f2, 0xb8(r31)	/* effective address: 80713A2C */
+/* 8070CCF0  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 8070CCF4  C0 5F 00 B8 */	lfs f2, 0xb8(r31)
 /* 8070CCF8  4B B6 2D 88 */	b cLib_addCalc0__FPfff
 /* 8070CCFC  A8 1E 05 B4 */	lha r0, 0x5b4(r30)
 /* 8070CD00  2C 00 00 02 */	cmpwi r0, 2

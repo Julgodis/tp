@@ -36,8 +36,8 @@ lbl_805AADA0:
 /* 805AADD8  38 60 00 05 */	li r3, 5
 /* 805AADDC  48 00 00 94 */	b lbl_805AAE70
 lbl_805AADE0:
-/* 805AADE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AADE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805AADE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AADE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805AADE8  38 63 09 58 */	addi r3, r3, 0x958
 /* 805AADEC  38 80 00 03 */	li r4, 3
 /* 805AADF0  4B A8 9B 44 */	b isDungeonItem__12dSv_memBit_cCFi
@@ -61,11 +61,11 @@ lbl_805AAE04:
 /* 805AAE34  4B D1 62 60 */	b init__15Z2CreatureEnemyFP3VecP3VecUcUc
 /* 805AAE38  3C 60 80 5B */	lis r3, lit_3832@ha
 /* 805AAE3C  38 83 AF B8 */	addi r4, r3, lit_3832@l
-/* 805AAE40  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AAFB8 */
-/* 805AAE44  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AAFBC */
+/* 805AAE40  80 64 00 00 */	lwz r3, 0(r4)
+/* 805AAE44  80 04 00 04 */	lwz r0, 4(r4)
 /* 805AAE48  90 61 00 08 */	stw r3, 8(r1)
 /* 805AAE4C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805AAE50  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AAFC0 */
+/* 805AAE50  80 04 00 08 */	lwz r0, 8(r4)
 /* 805AAE54  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805AAE58  7F E3 FB 78 */	mr r3, r31
 /* 805AAE5C  38 81 00 08 */	addi r4, r1, 8

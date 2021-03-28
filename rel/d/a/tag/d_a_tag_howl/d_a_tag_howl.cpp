@@ -42,11 +42,11 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTag_Howl_Create(void*); // 2
-static void daTag_Howl_Delete(void*); // 2
-static void daTag_Howl_Execute(void*); // 2
-static void daTag_Howl_Draw(void*); // 2
-static bool daTag_Howl_IsDelete(void*); // 2
+void daTag_Howl_Create(void*); // 2
+void daTag_Howl_Delete(void*); // 2
+void daTag_Howl_Execute(void*); // 2
+void daTag_Howl_Draw(void*); // 2
+bool daTag_Howl_IsDelete(void*); // 2
 
 extern "C" void create__12daTag_Howl_cFv(); // 1
 extern "C" bool destroy__12daTag_Howl_cFv(); // 1
@@ -55,15 +55,13 @@ extern "C" bool draw__12daTag_Howl_cFv(); // 1
 extern "C" void isAreaCheck__12daTag_Howl_cFv(); // 1
 extern "C" void getParam__12daTag_Howl_cFv(); // 1
 extern "C" void getSwitchBit__12daTag_Howl_cFv(); // 1
-extern "C" static void daTag_Howl_Create__FPv(); // 1
-extern "C" static void daTag_Howl_Delete__FPv(); // 1
-extern "C" static void daTag_Howl_Execute__FPv(); // 1
-extern "C" static void daTag_Howl_Draw__FPv(); // 1
-extern "C" static bool daTag_Howl_IsDelete__FPv(); // 1
+extern "C" void daTag_Howl_Create__FPv(); // 1
+extern "C" void daTag_Howl_Delete__FPv(); // 1
+extern "C" void daTag_Howl_Execute__FPv(); // 1
+extern "C" void daTag_Howl_Draw__FPv(); // 1
+extern "C" bool daTag_Howl_IsDelete__FPv(); // 1
 extern "C" void __dt__12daTag_Howl_cFv(); // 1
-extern "C" extern u8 const lit_3740[8];
-extern "C" extern u8 const lit_3741[8];
-extern "C" extern u8 const lit_3742[8];
+extern "C" extern void* daTag_Howl_MethodTable[8];
 extern "C" extern void* g_profile_TAG_HOWL[12];
 
 // 
@@ -78,11 +76,7 @@ extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
 extern "C" void __mi__4cXyzCFRC3Vec(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSVECSquareMag(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 
@@ -91,39 +85,39 @@ extern "C" extern u8 struct_80450D64[4];
 // 
 
 /* ############################################################################################## */
-/* 8048DD88-8048DDA8 0020+00 s=1 e=0 z=0  None .data      daTag_Howl_MethodTable                                       */
-SECTION_DATA static void* daTag_Howl_MethodTable[8] = {
-	/* 0    */ (void*)daTag_Howl_Create__FPv,
-	/* 1    */ (void*)daTag_Howl_Delete__FPv,
-	/* 2    */ (void*)daTag_Howl_Execute__FPv,
-	/* 3    */ (void*)daTag_Howl_IsDelete__FPv,
-	/* 4    */ (void*)daTag_Howl_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8048DD88-8048DDA8 0020+00 s=0 e=0 z=0  None .data      daTag_Howl_MethodTable                                       */
+SECTION_DATA void* daTag_Howl_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048DDA8-8048DDD8 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_HOWL                                           */
+/* 8048DDA8-8048DDD8 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_HOWL                                           */
 SECTION_DATA void* g_profile_TAG_HOWL[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D40000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000570,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x011B0000,
-	/* 9    */ (void*)&daTag_Howl_MethodTable,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D40000,
+	(void*)NULL,
+	(void*)0x00000570,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x011B0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 8048DDD8-8048DDE4 000C+00 s=2 e=0 z=0  None .data      __vt__12daTag_Howl_c                                         */
 SECTION_DATA static void* __vt__12daTag_Howl_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daTag_Howl_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8048D958-8048D9BC 0064+00 s=1 e=0 z=0  None .text      create__12daTag_Howl_cFv                                     */
@@ -168,6 +162,21 @@ SECTION_RODATA static u8 const lit_3739[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
+/* 8048DD6C-8048DD74 0008+00 s=1 e=0 z=0  None .rodata    @3740                                                        */
+SECTION_RODATA static u8 const lit_3740[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048DD74-8048DD7C 0008+00 s=1 e=0 z=0  None .rodata    @3741                                                        */
+SECTION_RODATA static u8 const lit_3741[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048DD7C-8048DD84 0008+00 s=1 e=0 z=0  None .rodata    @3742                                                        */
+SECTION_RODATA static u8 const lit_3742[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8048DA2C-8048DC1C 01F0+00 s=1 e=0 z=0  None .text      isAreaCheck__12daTag_Howl_cFv                                */
 #pragma push
 #pragma optimization_level 0
@@ -180,21 +189,6 @@ asm void daTag_Howl_c::isAreaCheck() {
 
 
 /* ############################################################################################## */
-/* 8048DD6C-8048DD74 0008+00 s=0 e=0 z=0  None .rodata    @3740                                                        */
-SECTION_RODATA u8 const lit_3740[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8048DD74-8048DD7C 0008+00 s=0 e=0 z=0  None .rodata    @3741                                                        */
-SECTION_RODATA u8 const lit_3741[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8048DD7C-8048DD84 0008+00 s=0 e=0 z=0  None .rodata    @3742                                                        */
-SECTION_RODATA u8 const lit_3742[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 8048DD84-8048DD88 0004+00 s=1 e=0 z=0  None .rodata    @3752                                                        */
 SECTION_RODATA static u32 const lit_3752 = 0x42C80000;
 
@@ -220,57 +214,57 @@ asm void daTag_Howl_c::getSwitchBit() {
 #pragma pop
 
 
-/* 8048DC74-8048DC94 0020+00 s=1 e=0 z=0  None .text      daTag_Howl_Create__FPv                                       */
+/* 8048DC74-8048DC94 0020+00 s=0 e=0 z=0  None .text      daTag_Howl_Create__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Howl_Create(void* param_0) {
+asm void daTag_Howl_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8048DC94-8048DCB4 0020+00 s=1 e=0 z=0  None .text      daTag_Howl_Delete__FPv                                       */
+/* 8048DC94-8048DCB4 0020+00 s=0 e=0 z=0  None .text      daTag_Howl_Delete__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Howl_Delete(void* param_0) {
+asm void daTag_Howl_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048DCB4-8048DCD4 0020+00 s=1 e=0 z=0  None .text      daTag_Howl_Execute__FPv                                      */
+/* 8048DCB4-8048DCD4 0020+00 s=0 e=0 z=0  None .text      daTag_Howl_Execute__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Howl_Execute(void* param_0) {
+asm void daTag_Howl_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8048DCD4-8048DCF4 0020+00 s=1 e=0 z=0  None .text      daTag_Howl_Draw__FPv                                         */
+/* 8048DCD4-8048DCF4 0020+00 s=0 e=0 z=0  None .text      daTag_Howl_Draw__FPv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Howl_Draw(void* param_0) {
+asm void daTag_Howl_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_howl/d_a_tag_howl/daTag_Howl_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8048DCF4-8048DCFC 0008+00 s=1 e=0 z=0  None .text      daTag_Howl_IsDelete__FPv                                     */
-static bool daTag_Howl_IsDelete(void* param_0) {
+/* 8048DCF4-8048DCFC 0008+00 s=0 e=0 z=0  None .text      daTag_Howl_IsDelete__FPv                                     */
+bool daTag_Howl_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 8048DCFC-8048DD5C 0060+00 s=1 e=0 z=0  None .text      __dt__12daTag_Howl_cFv                                       */
+/* 8048DCFC-8048DD5C 0060+00 s=0 e=0 z=0  None .text      __dt__12daTag_Howl_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

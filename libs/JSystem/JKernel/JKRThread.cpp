@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct OSThread {
-};
-
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 	/* 802CE500 */ void free(void*, JKRHeap*);
 	/* 802CE83C */ void findFromRoot(void*);
 	/* 802CEBA8 */ void isSubHeap(JKRHeap*) const;
+};
+
+struct OSThread {
 };
 
 struct JKRThread {
@@ -168,19 +168,19 @@ extern "C" extern u8 sRootHeap__7JKRHeap[4];
 /* ############################################################################################## */
 /* 803CC100-803CC114 0014+00 s=2 e=0 z=0  None .data      __vt__15JKRThreadSwitch                                      */
 SECTION_DATA static void* __vt__15JKRThreadSwitch[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole,
-	/* 3    */ (void*)draw__15JKRThreadSwitchFP14JKRThreadName_,
-	/* 4    */ (void*)__dt__15JKRThreadSwitchFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole,
+	(void*)draw__15JKRThreadSwitchFP14JKRThreadName_,
+	(void*)__dt__15JKRThreadSwitchFv,
 };
 
 /* 803CC114-803CC128 0010+04 s=4 e=0 z=0  None .data      __vt__9JKRThread                                             */
 SECTION_DATA static void* __vt__9JKRThread[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9JKRThreadFv,
-	/* 3    */ (void*)run__9JKRThreadFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9JKRThreadFv,
+	(void*)run__9JKRThreadFv,
 	/* padding */
 	NULL,
 };

@@ -88,9 +88,9 @@ lbl_806F6050:
 /* 806F6080  A8 61 00 2A */	lha r3, 0x2a(r1)
 /* 806F6084  38 03 80 00 */	addi r0, r3, -32768
 /* 806F6088  B0 01 00 2A */	sth r0, 0x2a(r1)
-/* 806F608C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F6090  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806F6094  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 806F608C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F6090  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806F6094  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 806F6098  90 81 00 08 */	stw r4, 8(r1)
 /* 806F609C  38 00 FF FF */	li r0, -1
 /* 806F60A0  90 01 00 0C */	stw r0, 0xc(r1)

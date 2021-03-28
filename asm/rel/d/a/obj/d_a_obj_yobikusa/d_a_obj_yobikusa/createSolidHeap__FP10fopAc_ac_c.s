@@ -26,8 +26,8 @@ lbl_8059D56C:
 /* 8059D578  3B C3 00 34 */	addi r30, r3, 0x34
 lbl_8059D57C:
 /* 8059D57C  80 7F 07 60 */	lwz r3, 0x760(r31)
-/* 8059D580  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8059D584  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8059D580  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8059D584  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8059D588  3F 85 00 02 */	addis r28, r5, 2
 /* 8059D58C  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 8059D590  7F 85 E3 78 */	mr r5, r28

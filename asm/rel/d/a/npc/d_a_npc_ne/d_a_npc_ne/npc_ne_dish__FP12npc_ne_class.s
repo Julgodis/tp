@@ -26,8 +26,8 @@ lbl_80A8F140:
 /* 80A8F158  38 03 00 01 */	addi r0, r3, 1
 /* 80A8F15C  B0 1E 06 46 */	sth r0, 0x646(r30)
 lbl_80A8F160:
-/* 80A8F160  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A8F164  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A8F160  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A8F164  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A8F168  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80A8F16C  38 80 10 01 */	li r4, 0x1001
 /* 80A8F170  4B 5A 58 4C */	b isEventBit__11dSv_event_cCFUs

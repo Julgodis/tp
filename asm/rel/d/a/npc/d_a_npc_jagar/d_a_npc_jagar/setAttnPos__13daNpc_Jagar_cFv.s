@@ -11,11 +11,11 @@ lbl_80A15D68:
 /* 80A15D8C  3B C3 AD E0 */	addi r30, r3, lit_1109@l
 /* 80A15D90  3C 60 80 A2 */	lis r3, m__19daNpc_Jagar_Param_c@ha
 /* 80A15D94  3B E3 A3 30 */	addi r31, r3, m__19daNpc_Jagar_Param_c@l
-/* 80A15D98  C0 1F 00 DC */	lfs f0, 0xdc(r31)	/* effective address: 80A1A40C */
+/* 80A15D98  C0 1F 00 DC */	lfs f0, 0xdc(r31)
 /* 80A15D9C  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80A15DA0  C0 1F 00 E0 */	lfs f0, 0xe0(r31)	/* effective address: 80A1A410 */
+/* 80A15DA0  C0 1F 00 E0 */	lfs f0, 0xe0(r31)
 /* 80A15DA4  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80A15DA8  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 80A1A3F0 */
+/* 80A15DA8  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 80A15DAC  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80A15DB0  38 7D 0D 08 */	addi r3, r29, 0xd08
 /* 80A15DB4  38 80 00 00 */	li r4, 0

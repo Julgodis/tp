@@ -2,7 +2,7 @@ lbl_806AAD68:
 /* 806AAD68  3C 60 80 6B */	lis r3, lit_3764@ha
 /* 806AAD6C  39 03 D5 38 */	addi r8, r3, lit_3764@l
 /* 806AAD70  C0 89 04 FC */	lfs f4, 0x4fc(r9)
-/* 806AAD74  C0 68 00 20 */	lfs f3, 0x20(r8)	/* effective address: 806AD558 */
+/* 806AAD74  C0 68 00 20 */	lfs f3, 0x20(r8)
 /* 806AAD78  FC 04 18 00 */	fcmpu cr0, f4, f3
 /* 806AAD7C  4D 82 00 20 */	beqlr 
 /* 806AAD80  39 40 00 00 */	li r10, 0
@@ -17,7 +17,7 @@ lbl_806AAD68:
 /* 806AADA4  C0 03 00 04 */	lfs f0, 4(r3)
 /* 806AADA8  EC 01 00 2A */	fadds f0, f1, f0
 /* 806AADAC  EC 22 00 2A */	fadds f1, f2, f0
-/* 806AADB0  C0 08 00 60 */	lfs f0, 0x60(r8)	/* effective address: 806AD598 */
+/* 806AADB0  C0 08 00 60 */	lfs f0, 0x60(r8)
 /* 806AADB4  EC 41 00 24 */	fdivs f2, f1, f0
 /* 806AADB8  FC 04 18 40 */	fcmpo cr0, f4, f3
 /* 806AADBC  40 80 00 20 */	bge lbl_806AADDC

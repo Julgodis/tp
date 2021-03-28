@@ -6,7 +6,7 @@ lbl_80BAF29C:
 /* 80BAF2AC  38 E4 3A 74 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80BAF2B0  3C 80 80 BB */	lis r4, struct_80BB3F24+0x1@ha
 /* 80BAF2B4  38 C4 3F 25 */	addi r6, r4, struct_80BB3F24+0x1@l
-/* 80BAF2B8  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80BB3F25 */
+/* 80BAF2B8  88 06 00 00 */	lbz r0, 0(r6)
 /* 80BAF2BC  7C 00 07 75 */	extsb. r0, r0
 /* 80BAF2C0  40 82 00 40 */	bne lbl_80BAF300
 /* 80BAF2C4  80 87 01 38 */	lwz r4, 0x138(r7)

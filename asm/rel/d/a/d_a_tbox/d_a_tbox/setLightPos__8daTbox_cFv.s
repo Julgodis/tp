@@ -7,9 +7,9 @@ lbl_804912EC:
 /* 80491300  3C 60 80 49 */	lis r3, l_light_offset@ha
 /* 80491304  C4 03 68 E4 */	lfsu f0, l_light_offset@l(r3)
 /* 80491308  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8049130C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80490004 */
+/* 8049130C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80491310  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80491314  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80490008 */
+/* 80491314  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80491318  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8049131C  38 61 00 08 */	addi r3, r1, 8
 /* 80491320  38 9F 04 D0 */	addi r4, r31, 0x4d0

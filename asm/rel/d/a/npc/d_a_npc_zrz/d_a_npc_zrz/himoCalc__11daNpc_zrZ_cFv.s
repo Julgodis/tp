@@ -13,7 +13,7 @@ lbl_80B9A380:
 /* 80B9A3AC  D0 21 00 54 */	stfs f1, 0x54(r1)
 /* 80B9A3B0  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
 /* 80B9A3B4  D0 01 00 58 */	stfs f0, 0x58(r1)
-/* 80B9A3B8  C0 1F 02 2C */	lfs f0, 0x22c(r31)	/* effective address: 80B9B218 */
+/* 80B9A3B8  C0 1F 02 2C */	lfs f0, 0x22c(r31)
 /* 80B9A3BC  EC 01 00 2A */	fadds f0, f1, f0
 /* 80B9A3C0  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 80B9A3C4  38 61 00 2C */	addi r3, r1, 0x2c

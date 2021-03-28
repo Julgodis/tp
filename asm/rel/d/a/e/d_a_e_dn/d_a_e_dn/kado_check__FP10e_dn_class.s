@@ -23,13 +23,13 @@ lbl_804E97EC:
 /* 804E9840  3B 60 00 00 */	li r27, 0
 /* 804E9844  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804E9848  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804E984C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804E984C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804E9850  A8 9A 07 26 */	lha r4, 0x726(r26)
 /* 804E9854  4B B2 2B 88 */	b mDoMtx_YrotS__FPA4_fs
 /* 804E9858  3B 40 00 00 */	li r26, 0
 /* 804E985C  3B E0 00 00 */	li r31, 0
-/* 804E9860  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E9864  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804E9860  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E9864  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E9868  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 804E986C  C3 7E 00 00 */	lfs f27, 0(r30)
 /* 804E9870  C3 9E 00 04 */	lfs f28, 4(r30)

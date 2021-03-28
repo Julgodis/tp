@@ -12,7 +12,7 @@ lbl_807BDE5C:
 /* 807BDE84  38 00 00 00 */	li r0, 0
 /* 807BDE88  98 1D 06 FA */	stb r0, 0x6fa(r29)
 /* 807BDE8C  C0 3D 04 FC */	lfs f1, 0x4fc(r29)
-/* 807BDE90  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 807C1FBC */
+/* 807BDE90  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 807BDE94  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807BDE98  4C 40 13 82 */	cror 2, 0, 2
 /* 807BDE9C  40 82 00 A4 */	bne lbl_807BDF40
@@ -29,8 +29,8 @@ lbl_807BDE5C:
 /* 807BDEC8  38 7D 06 64 */	addi r3, r29, 0x664
 /* 807BDECC  38 81 00 08 */	addi r4, r1, 8
 /* 807BDED0  4B AA 9E 3C */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 807BDED4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BDED8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807BDED4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BDED8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807BDEDC  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 807BDEE0  7F C3 F3 78 */	mr r3, r30
 /* 807BDEE4  38 9D 06 64 */	addi r4, r29, 0x664

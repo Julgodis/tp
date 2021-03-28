@@ -6,7 +6,7 @@ lbl_80C5CBE8:
 /* 80C5CBF8  38 E4 D2 18 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80C5CBFC  3C 80 80 C6 */	lis r4, data_80C5D35C@ha
 /* 80C5CC00  38 C4 D3 5C */	addi r6, r4, data_80C5D35C@l
-/* 80C5CC04  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80C5D35C */
+/* 80C5CC04  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C5CC08  7C 00 07 75 */	extsb. r0, r0
 /* 80C5CC0C  40 82 00 70 */	bne lbl_80C5CC7C
 /* 80C5CC10  80 87 00 20 */	lwz r4, 0x20(r7)

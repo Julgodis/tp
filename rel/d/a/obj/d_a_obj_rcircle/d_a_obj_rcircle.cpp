@@ -76,10 +76,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -92,10 +92,10 @@ struct dScnKy_env_light_c {
 // 
 
 static void daObjRCircle_c_createHeap(fopAc_ac_c*); // 2
-static void daObjRCircle_create(daObjRCircle_c*); // 2
-static void daObjRCircle_Delete(daObjRCircle_c*); // 2
-static void daObjRCircle_execute(daObjRCircle_c*); // 2
-static void daObjRCircle_draw(daObjRCircle_c*); // 2
+void daObjRCircle_create(daObjRCircle_c*); // 2
+void daObjRCircle_Delete(daObjRCircle_c*); // 2
+void daObjRCircle_execute(daObjRCircle_c*); // 2
+void daObjRCircle_draw(daObjRCircle_c*); // 2
 
 extern "C" static void daObjRCircle_c_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__14daObjRCircle_cFv(); // 1
@@ -108,11 +108,12 @@ extern "C" void draw__14daObjRCircle_cFv(); // 1
 extern "C" void execute__14daObjRCircle_cFv(); // 1
 extern "C" void init__14daObjRCircle_cFv(); // 1
 extern "C" void setModelMtx__14daObjRCircle_cFv(); // 1
-extern "C" static void daObjRCircle_create__FP14daObjRCircle_c(); // 1
-extern "C" static void daObjRCircle_Delete__FP14daObjRCircle_c(); // 1
-extern "C" static void daObjRCircle_execute__FP14daObjRCircle_c(); // 1
-extern "C" static void daObjRCircle_draw__FP14daObjRCircle_c(); // 1
+extern "C" void daObjRCircle_create__FP14daObjRCircle_c(); // 1
+extern "C" void daObjRCircle_Delete__FP14daObjRCircle_c(); // 1
+extern "C" void daObjRCircle_execute__FP14daObjRCircle_c(); // 1
+extern "C" void daObjRCircle_draw__FP14daObjRCircle_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daObjRCircle_METHODS[8];
 extern "C" extern void* g_profile_Obj_RCircle[12];
 
 // 
@@ -152,18 +153,10 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -181,64 +174,49 @@ asm static void daObjRCircle_c_createHeap(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80CB8D00-80CB8D04 0004+00 s=2 e=0 z=0  None .rodata    @3701                                                        */
-SECTION_RODATA static u32 const lit_3701 = 0x3F800000;
-
-/* 80CB8D04-80CB8D08 0004+00 s=2 e=0 z=0  None .rodata    @3702                                                        */
-SECTION_RODATA static u8 const lit_3702[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB8D08-80CB8D10 0008+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80CB8D08 = "RCircle";
-#pragma pop
-
 /* 80CB8D10-80CB8D14 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80CB8D14-80CB8D34 0020+00 s=1 e=0 z=0  None .data      daObjRCircle_METHODS                                         */
-SECTION_DATA static void* daObjRCircle_METHODS[8] = {
-	/* 0    */ (void*)daObjRCircle_create__FP14daObjRCircle_c,
-	/* 1    */ (void*)daObjRCircle_Delete__FP14daObjRCircle_c,
-	/* 2    */ (void*)daObjRCircle_execute__FP14daObjRCircle_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjRCircle_draw__FP14daObjRCircle_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CB8D14-80CB8D34 0020+00 s=0 e=0 z=0  None .data      daObjRCircle_METHODS                                         */
+SECTION_DATA void* daObjRCircle_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CB8D34-80CB8D64 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_RCircle                                        */
+/* 80CB8D34-80CB8D64 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_RCircle                                        */
 SECTION_DATA void* g_profile_Obj_RCircle[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x019D0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005AC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02E40000,
-	/* 9    */ (void*)&daObjRCircle_METHODS,
-	/* 10   */ (void*)0x00044180,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x019D0000,
+	(void*)NULL,
+	(void*)0x000005AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02E40000,
+	(void*)NULL,
+	(void*)0x00044180,
+	(void*)0x030E0000,
 };
 
 /* 80CB8D64-80CB8D70 000C+00 s=2 e=0 z=0  None .data      __vt__14daObjRCircle_c                                       */
 SECTION_DATA static void* __vt__14daObjRCircle_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daObjRCircle_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CB8D70-80CB8D7C 000C+00 s=3 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CB8678-80CB8704 008C+00 s=2 e=0 z=0  None .text      __ct__14daObjRCircle_cFv                                     */
@@ -252,7 +230,7 @@ asm daObjRCircle_c::daObjRCircle_c() {
 #pragma pop
 
 
-/* 80CB8704-80CB874C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80CB8704-80CB874C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -263,7 +241,7 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80CB874C-80CB8814 00C8+00 s=1 e=0 z=0  None .text      __dt__14daObjRCircle_cFv                                     */
+/* 80CB874C-80CB8814 00C8+00 s=0 e=0 z=0  None .text      __dt__14daObjRCircle_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -273,6 +251,15 @@ asm daObjRCircle_c::~daObjRCircle_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CB8D00-80CB8D04 0004+00 s=2 e=0 z=0  None .rodata    @3701                                                        */
+SECTION_RODATA static u32 const lit_3701 = 0x3F800000;
+
+/* 80CB8D04-80CB8D08 0004+00 s=2 e=0 z=0  None .rodata    @3702                                                        */
+SECTION_RODATA static u8 const lit_3702[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80CB8814-80CB8928 0114+00 s=1 e=0 z=0  None .text      createHeap__14daObjRCircle_cFv                               */
 #pragma push
@@ -351,47 +338,55 @@ asm void daObjRCircle_c::setModelMtx() {
 #pragma pop
 
 
-/* 80CB8C44-80CB8C98 0054+00 s=1 e=0 z=0  None .text      daObjRCircle_create__FP14daObjRCircle_c                      */
+/* 80CB8C44-80CB8C98 0054+00 s=0 e=0 z=0  None .text      daObjRCircle_create__FP14daObjRCircle_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRCircle_create(daObjRCircle_c* param_0) {
+asm void daObjRCircle_create(daObjRCircle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_create__FP14daObjRCircle_c.s"
 }
 #pragma pop
 
 
-/* 80CB8C98-80CB8CB8 0020+00 s=1 e=0 z=0  None .text      daObjRCircle_Delete__FP14daObjRCircle_c                      */
+/* 80CB8C98-80CB8CB8 0020+00 s=0 e=0 z=0  None .text      daObjRCircle_Delete__FP14daObjRCircle_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRCircle_Delete(daObjRCircle_c* param_0) {
+asm void daObjRCircle_Delete(daObjRCircle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_Delete__FP14daObjRCircle_c.s"
 }
 #pragma pop
 
 
-/* 80CB8CB8-80CB8CD8 0020+00 s=1 e=0 z=0  None .text      daObjRCircle_execute__FP14daObjRCircle_c                     */
+/* 80CB8CB8-80CB8CD8 0020+00 s=0 e=0 z=0  None .text      daObjRCircle_execute__FP14daObjRCircle_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRCircle_execute(daObjRCircle_c* param_0) {
+asm void daObjRCircle_execute(daObjRCircle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_execute__FP14daObjRCircle_c.s"
 }
 #pragma pop
 
 
-/* 80CB8CD8-80CB8CF8 0020+00 s=1 e=0 z=0  None .text      daObjRCircle_draw__FP14daObjRCircle_c                        */
+/* 80CB8CD8-80CB8CF8 0020+00 s=0 e=0 z=0  None .text      daObjRCircle_draw__FP14daObjRCircle_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjRCircle_draw(daObjRCircle_c* param_0) {
+asm void daObjRCircle_draw(daObjRCircle_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rcircle/d_a_obj_rcircle/daObjRCircle_draw__FP14daObjRCircle_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CB8D08-80CB8D10 0008+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80CB8D08 = "RCircle";
+#pragma pop
 

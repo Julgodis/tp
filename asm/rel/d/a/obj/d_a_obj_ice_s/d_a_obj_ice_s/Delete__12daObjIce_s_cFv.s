@@ -7,7 +7,7 @@ lbl_80C21A08:
 /* 80C21A1C  38 7F 06 38 */	addi r3, r31, 0x638
 /* 80C21A20  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C21A24  38 84 1B A8 */	addi r4, r4, l_arcName@l
-/* 80C21A28  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C21BA8 */
+/* 80C21A28  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C21A2C  4B 40 B5 DC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C21A30  88 1F 06 40 */	lbz r0, 0x640(r31)
 /* 80C21A34  28 00 00 00 */	cmplwi r0, 0

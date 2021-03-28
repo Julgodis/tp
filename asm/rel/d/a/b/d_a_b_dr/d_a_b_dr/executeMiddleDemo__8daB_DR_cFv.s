@@ -5,14 +5,14 @@ lbl_805C3558:
 /* 805C3564  39 61 00 50 */	addi r11, r1, 0x50
 /* 805C3568  4B D9 EC 74 */	b _savegpr_29
 /* 805C356C  7C 7F 1B 78 */	mr r31, r3
-/* 805C3570  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805C3574  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 805C3578  88 05 5D B0 */	lbz r0, 0x5db0(r5)	/* effective address: 8040BF70 */
+/* 805C3570  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805C3574  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 805C3578  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 805C357C  7C 00 07 74 */	extsb r0, r0
 /* 805C3580  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805C3584  7C 85 02 14 */	add r4, r5, r0
 /* 805C3588  83 C4 5D 74 */	lwz r30, 0x5d74(r4)
-/* 805C358C  83 A5 5D AC */	lwz r29, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 805C358C  83 A5 5D AC */	lwz r29, 0x5dac(r5)
 /* 805C3590  80 03 07 0C */	lwz r0, 0x70c(r3)
 /* 805C3594  2C 00 00 01 */	cmpwi r0, 1
 /* 805C3598  41 82 00 38 */	beq lbl_805C35D0
@@ -36,7 +36,7 @@ lbl_805C35D0:
 /* 805C35D8  7C 64 1B 78 */	mr r4, r3
 /* 805C35DC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805C35E0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805C35E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805C35E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805C35E8  3C 84 00 01 */	addis r4, r4, 1
 /* 805C35EC  38 04 80 00 */	addi r0, r4, -32768
 /* 805C35F0  7C 04 07 34 */	extsh r4, r0

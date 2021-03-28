@@ -55,8 +55,8 @@ lbl_80CA2410:
 /* 80CA2434  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80CA2438  38 C0 00 00 */	li r6, 0
 /* 80CA243C  4B 3D 59 28 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80CA2440  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA2444  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA2440  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA2444  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA2448  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80CA244C  7F A3 EB 78 */	mr r3, r29
 /* 80CA2450  38 81 00 44 */	addi r4, r1, 0x44
@@ -176,11 +176,11 @@ lbl_80CA2598:
 /* 80CA25F0  B0 1F 07 D8 */	sth r0, 0x7d8(r31)
 /* 80CA25F4  3C 60 80 CA */	lis r3, lit_4614@ha
 /* 80CA25F8  38 83 33 94 */	addi r4, r3, lit_4614@l
-/* 80CA25FC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80CA3394 */
-/* 80CA2600  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80CA3398 */
+/* 80CA25FC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80CA2600  80 04 00 04 */	lwz r0, 4(r4)
 /* 80CA2604  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80CA2608  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80CA260C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80CA339C */
+/* 80CA260C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80CA2610  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CA2614  7F E3 FB 78 */	mr r3, r31
 /* 80CA2618  38 81 00 0C */	addi r4, r1, 0xc

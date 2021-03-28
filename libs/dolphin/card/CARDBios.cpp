@@ -277,10 +277,10 @@ SECTION_DATA static u8 lit_1[70 + 2 /* padding */] = {
 
 /* 803D1E80-803D1EA0 0010+10 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
 SECTION_DATA static void* ResetFunctionInfo[4 + 4 /* padding */] = {
-	/* 0    */ (void*)OnReset,
-	/* 1    */ (void*)0x0000007F,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)OnReset,
+	(void*)0x0000007F,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 	NULL,
@@ -290,7 +290,7 @@ SECTION_DATA static void* ResetFunctionInfo[4 + 4 /* padding */] = {
 
 /* 80450A60-80450A68 0004+04 s=1 e=0 z=0  None .sdata     __CARDVersion                                                */
 SECTION_SDATA static void* __CARDVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&lit_1,
+	(void*)&lit_1,
 	/* padding */
 	NULL,
 };

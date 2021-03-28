@@ -44,8 +44,8 @@ lbl_80665E40:
 /* 80665EB8  4B 9B 7D B0 */	b lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c
 /* 80665EBC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80665EC0  41 82 00 A4 */	beq lbl_80665F64
-/* 80665EC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80665EC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80665EC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80665EC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80665ECC  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80665ED0  7F A3 EB 78 */	mr r3, r29
 /* 80665ED4  3C 80 80 3F */	lis r4, mLineCheck__11fopAcM_lc_c@ha

@@ -10,9 +10,9 @@ lbl_8083AC7C:
 /* 8083AC9C  38 00 00 03 */	li r0, 3
 /* 8083ACA0  90 01 00 08 */	stw r0, 8(r1)
 /* 8083ACA4  38 81 00 08 */	addi r4, r1, 8
-/* 8083ACA8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8083ACAC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 8083ACB0  80 A5 5D B4 */	lwz r5, 0x5db4(r5)	/* effective address: 8040BF74 */
+/* 8083ACA8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8083ACAC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 8083ACB0  80 A5 5D B4 */	lwz r5, 0x5db4(r5)
 /* 8083ACB4  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 8083ACB8  48 00 00 35 */	bl setDemoMoveData__9daHorse_cFPUlPC4cXyz
 /* 8083ACBC  A8 1F 16 FC */	lha r0, 0x16fc(r31)

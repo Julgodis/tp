@@ -11,9 +11,9 @@ lbl_80D23188:
 /* 80D231AC  7C 7F 1B 78 */	mr r31, r3
 /* 80D231B0  3C 80 80 D2 */	lis r4, l_sph_src@ha
 /* 80D231B4  3B C4 3D CC */	addi r30, r4, l_sph_src@l
-/* 80D231B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D231BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D231C0  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D231B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D231BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D231C0  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80D231C4  3B 80 00 00 */	li r28, 0
 /* 80D231C8  4B FF E9 51 */	bl getData__15daObjVolcBall_cFv
 /* 80D231CC  C3 E3 00 0C */	lfs f31, 0xc(r3)

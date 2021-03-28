@@ -15,12 +15,12 @@ lbl_80A134F0:
 /* 80A13524  38 A3 43 98 */	addi r5, r3, mEvtSeqList__10daNpcIns_c@l
 /* 80A13528  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A1352C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A13530  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A13534  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80A13538  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80A14398 */
-/* 80A1353C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80A1439C */
-/* 80A13540  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80A13544  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80A143A0 */
+/* 80A13530  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A13534  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A13538  90 65 00 00 */	stw r3, 0(r5)
+/* 80A1353C  90 05 00 04 */	stw r0, 4(r5)
+/* 80A13540  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A13544  90 05 00 08 */	stw r0, 8(r5)
 /* 80A13548  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80A1354C  7C 08 03 A6 */	mtlr r0
 /* 80A13550  38 21 00 10 */	addi r1, r1, 0x10

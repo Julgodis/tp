@@ -9,12 +9,12 @@ lbl_80A4E000:
 /* 80A4E01C  3B A3 FE 48 */	addi r29, r3, lit_1109@l
 /* 80A4E020  3C 60 80 A6 */	lis r3, lit_4030@ha
 /* 80A4E024  3B C3 DE FC */	addi r30, r3, lit_4030@l
-/* 80A4E028  80 1D 00 58 */	lwz r0, 0x58(r29)	/* effective address: 80A5FEA0 */
+/* 80A4E028  80 1D 00 58 */	lwz r0, 0x58(r29)
 /* 80A4E02C  28 00 00 00 */	cmplwi r0, 0
 /* 80A4E030  41 82 07 B8 */	beq lbl_80A4E7E8
-/* 80A4E034  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4E038  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80A4E03C  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A4E034  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4E038  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80A4E03C  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 80A4E040  88 19 04 E2 */	lbz r0, 0x4e2(r25)
 /* 80A4E044  2C 00 00 04 */	cmpwi r0, 4
 /* 80A4E048  40 82 00 48 */	bne lbl_80A4E090
@@ -201,9 +201,9 @@ lbl_80A4E2D8:
 /* 80A4E2E4  80 19 05 B8 */	lwz r0, 0x5b8(r25)
 /* 80A4E2E8  2C 00 00 00 */	cmpwi r0, 0
 /* 80A4E2EC  40 82 01 2C */	bne lbl_80A4E418
-/* 80A4E2F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A4E2F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A4E2F8  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80A4E2F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A4E2F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A4E2F8  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A4E2FC  28 00 00 00 */	cmplwi r0, 0
 /* 80A4E300  40 82 01 18 */	bne lbl_80A4E418
 /* 80A4E304  A8 19 09 4E */	lha r0, 0x94e(r25)
@@ -227,7 +227,7 @@ lbl_80A4E2D8:
 /* 80A4E34C  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80A4E350  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A4E354  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A4E358  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A4E358  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A4E35C  A8 99 04 B6 */	lha r4, 0x4b6(r25)
 /* 80A4E360  4B 5B E0 7C */	b mDoMtx_YrotS__FPA4_fs
 /* 80A4E364  C0 1E 00 30 */	lfs f0, 0x30(r30)
@@ -384,7 +384,7 @@ lbl_80A4E510:
 lbl_80A4E5A0:
 /* 80A4E5A0  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 80A4E5A4  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 80A4E5A8  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
+/* 80A4E5A8  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 80A4E5AC  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80A4E5B0  41 82 01 68 */	beq lbl_80A4E718
 /* 80A4E5B4  A8 19 05 F2 */	lha r0, 0x5f2(r25)

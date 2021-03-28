@@ -33,7 +33,7 @@ lbl_80947E50:
 /* 80947ECC  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80947ED0  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80947ED4  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80947ED8  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 8094BA48 */
+/* 80947ED8  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80947EDC  EC 02 00 B2 */	fmuls f0, f2, f2
 /* 80947EE0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80947EE4  D0 01 00 44 */	stfs f0, 0x44(r1)
@@ -127,7 +127,7 @@ lbl_80948014:
 lbl_80948024:
 /* 80948024  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80948028  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094802C  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 8094BA5C */
+/* 8094802C  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 80948030  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80948034  40 80 00 24 */	bge lbl_80948058
 /* 80948038  C0 1F 04 A8 */	lfs f0, 0x4a8(r31)

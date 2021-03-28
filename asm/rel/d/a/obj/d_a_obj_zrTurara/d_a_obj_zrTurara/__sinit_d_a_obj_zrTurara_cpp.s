@@ -19,10 +19,10 @@ lbl_80D41518:
 /* 80D4155C  38 00 00 06 */	li r0, 6
 /* 80D41560  7C 09 03 A6 */	mtctr r0
 lbl_80D41564:
-/* 80D41564  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80D415A0 */
-/* 80D41568  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80D415A4 */
-/* 80D4156C  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80D41628 */
-/* 80D41570  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80D4162C */
+/* 80D41564  80 64 00 04 */	lwz r3, 4(r4)
+/* 80D41568  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80D4156C  90 65 00 04 */	stw r3, 4(r5)
+/* 80D41570  94 05 00 08 */	stwu r0, 8(r5)
 /* 80D41574  42 00 FF F0 */	bdnz lbl_80D41564
 /* 80D41578  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D4157C  7C 08 03 A6 */	mtlr r0

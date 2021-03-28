@@ -148,9 +148,9 @@ lbl_8096E608:
 /* 8096E610  7C 7C 1B 79 */	or. r28, r3, r3
 /* 8096E614  41 82 01 B4 */	beq lbl_8096E7C8
 /* 8096E618  7F A3 EB 78 */	mr r3, r29
-/* 8096E61C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8096E620  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8096E624  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8096E61C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8096E620  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8096E624  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8096E628  4B 6A C0 E8 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8096E62C  A8 1D 0D 7A */	lha r0, 0xd7a(r29)
 /* 8096E630  7C 00 18 50 */	subf r0, r0, r3

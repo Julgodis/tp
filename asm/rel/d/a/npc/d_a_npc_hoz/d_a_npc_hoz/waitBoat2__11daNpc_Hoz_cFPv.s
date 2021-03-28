@@ -105,12 +105,12 @@ lbl_80A03D34:
 /* 80A03D54  38 00 00 00 */	li r0, 0
 /* 80A03D58  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80A03D5C  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80A03D60  98 03 00 BC */	stb r0, 0xbc(r3)	/* effective address: 80430244 */
+/* 80A03D60  98 03 00 BC */	stb r0, 0xbc(r3)
 /* 80A03D64  38 80 00 00 */	li r4, 0
 /* 80A03D68  4B 81 A5 00 */	b setMiniGameCount__13dMeter2Info_cFSc
 lbl_80A03D6C:
-/* 80A03D6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A03D70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A03D6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A03D70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A03D74  38 63 09 78 */	addi r3, r3, 0x978
 /* 80A03D78  38 80 00 3E */	li r4, 0x3e
 /* 80A03D7C  4B 63 0E 6C */	b isSwitch__12dSv_danBit_cCFi

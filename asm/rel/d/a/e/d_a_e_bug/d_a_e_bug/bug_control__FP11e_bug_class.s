@@ -5,9 +5,9 @@ lbl_80696E84:
 /* 80696E90  39 61 00 30 */	addi r11, r1, 0x30
 /* 80696E94  4B CC B3 34 */	b _savegpr_24
 /* 80696E98  7C 7E 1B 78 */	mr r30, r3
-/* 80696E9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80696EA0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80696EA4  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80696E9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80696EA0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80696EA4  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 80696EA8  3B 9E 05 88 */	addi r28, r30, 0x588
 /* 80696EAC  3B 60 00 00 */	li r27, 0
 /* 80696EB0  3B 40 00 00 */	li r26, 0
@@ -131,7 +131,7 @@ lbl_80697040:
 lbl_8069705C:
 /* 8069705C  3C 60 80 69 */	lis r3, struct_80697E8C+0x0@ha
 /* 80697060  38 63 7E 8C */	addi r3, r3, struct_80697E8C+0x0@l
-/* 80697064  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80697E8C */
+/* 80697064  88 63 00 00 */	lbz r3, 0(r3)
 /* 80697068  7C 63 07 74 */	extsb r3, r3
 /* 8069706C  4B 99 60 00 */	b dComIfGp_getReverb__Fi
 /* 80697070  7C 65 1B 78 */	mr r5, r3

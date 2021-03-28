@@ -37,8 +37,8 @@ lbl_80C12AD8:
 /* 80C12B64  38 1F 07 84 */	addi r0, r31, 0x784
 /* 80C12B68  90 1F 08 44 */	stw r0, 0x844(r31)
 /* 80C12B6C  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 80C12B70  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C12B74  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C12B70  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C12B74  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C12B78  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C12B7C  4B 46 3F 30 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C12B80  80 1F 06 88 */	lwz r0, 0x688(r31)
@@ -87,7 +87,7 @@ lbl_80C12C28:
 /* 80C12C28  38 7E 09 9C */	addi r3, r30, 0x99c
 /* 80C12C2C  7C 7F 1A 14 */	add r3, r31, r3
 /* 80C12C30  38 9F 05 AC */	addi r4, r31, 0x5ac
-/* 80C12C34  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80C132C4 */
+/* 80C12C34  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 80C12C38  FC 40 08 90 */	fmr f2, f1
 /* 80C12C3C  4B 43 E0 60 */	b init__7dPaPo_cFP9dBgS_Acchff
 /* 80C12C40  3B 9C 00 01 */	addi r28, r28, 1

@@ -9,10 +9,10 @@ lbl_80A98FB4:
 /* 80A98FD0  7C 7E 1B 78 */	mr r30, r3
 /* 80A98FD4  3C 60 80 AA */	lis r3, m__24daNpc_Pachi_Maro_Param_c@ha
 /* 80A98FD8  3B E3 B8 8C */	addi r31, r3, m__24daNpc_Pachi_Maro_Param_c@l
-/* 80A98FDC  C0 1F 00 A4 */	lfs f0, 0xa4(r31)	/* effective address: 80A9B930 */
+/* 80A98FDC  C0 1F 00 A4 */	lfs f0, 0xa4(r31)
 /* 80A98FE0  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80A98FE4  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80A98FE8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80A9B950 */
+/* 80A98FE8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80A98FEC  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80A98FF0  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80A98FF4  38 80 00 00 */	li r4, 0

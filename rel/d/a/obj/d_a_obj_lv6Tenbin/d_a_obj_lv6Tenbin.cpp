@@ -85,10 +85,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -128,10 +124,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTenbin_Draw(daTenbin_c*); // 2
-static void daTenbin_Execute(daTenbin_c*); // 2
-static void daTenbin_Delete(daTenbin_c*); // 2
-static void daTenbin_Create(fopAc_ac_c*); // 2
+void daTenbin_Draw(daTenbin_c*); // 2
+void daTenbin_Execute(daTenbin_c*); // 2
+void daTenbin_Delete(daTenbin_c*); // 2
+void daTenbin_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daTenbin_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -147,13 +143,14 @@ extern "C" void modeWait__10daTenbin_cFv(); // 1
 extern "C" void balanceCheck__10daTenbin_cFv(); // 1
 extern "C" void Draw__10daTenbin_cFv(); // 1
 extern "C" void Delete__10daTenbin_cFv(); // 1
-extern "C" static void daTenbin_Draw__FP10daTenbin_c(); // 1
-extern "C" static void daTenbin_Execute__FP10daTenbin_c(); // 1
-extern "C" static void daTenbin_Delete__FP10daTenbin_c(); // 1
-extern "C" static void daTenbin_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTenbin_Draw__FP10daTenbin_c(); // 1
+extern "C" void daTenbin_Execute__FP10daTenbin_c(); // 1
+extern "C" void daTenbin_Delete__FP10daTenbin_c(); // 1
+extern "C" void daTenbin_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__14daTenbin_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv6Tenbin_cpp(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daTenbin_Method[8];
 extern "C" extern void* g_profile_Obj_Lv6Tenbin[12];
 
 // 
@@ -191,10 +188,6 @@ extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
 extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -214,21 +207,11 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -286,9 +269,9 @@ SECTION_DATA static u8 l_cull_box[24] = {
 
 /* 80C77A20-80C77A2C 000C+00 s=1 e=0 z=0  None .data      @3913                                                        */
 SECTION_DATA static void* lit_3913[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__10daTenbin_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C77A2C-80C77A38 000C+00 s=1 e=0 z=0  None .data      mode_proc$3912                                               */
@@ -296,60 +279,60 @@ SECTION_DATA static u8 data_80C77A2C[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C77A38-80C77A58 0020+00 s=1 e=0 z=0  None .data      l_daTenbin_Method                                            */
-SECTION_DATA static void* l_daTenbin_Method[8] = {
-	/* 0    */ (void*)daTenbin_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTenbin_Delete__FP10daTenbin_c,
-	/* 2    */ (void*)daTenbin_Execute__FP10daTenbin_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTenbin_Draw__FP10daTenbin_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C77A38-80C77A58 0020+00 s=0 e=0 z=0  None .data      l_daTenbin_Method                                            */
+SECTION_DATA void* l_daTenbin_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C77A58-80C77A88 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv6Tenbin                                      */
+/* 80C77A58-80C77A88 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv6Tenbin                                      */
 SECTION_DATA void* g_profile_Obj_Lv6Tenbin[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00950000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000654,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x026F0000,
-	/* 9    */ (void*)&l_daTenbin_Method,
-	/* 10   */ (void*)0x00060100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00950000,
+	(void*)NULL,
+	(void*)0x00000654,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x026F0000,
+	(void*)NULL,
+	(void*)0x00060100,
+	(void*)0x000E0000,
 };
 
 /* 80C77A88-80C77AB0 0028+00 s=1 e=0 z=0  None .data      __vt__10daTenbin_c                                           */
 SECTION_DATA static void* __vt__10daTenbin_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__10daTenbin_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__10daTenbin_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__10daTenbin_cFv,
-	/* 6    */ (void*)Delete__10daTenbin_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C77AB0-80C77ABC 000C+00 s=2 e=0 z=0  None .data      __vt__14daTenbin_HIO_c                                       */
 SECTION_DATA static void* __vt__14daTenbin_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daTenbin_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C77ABC-80C77AC8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C768EC-80C76988 009C+00 s=1 e=0 z=0  None .text      __ct__14daTenbin_HIO_cFv                                     */
@@ -363,7 +346,7 @@ asm daTenbin_HIO_c::daTenbin_HIO_c() {
 #pragma pop
 
 
-/* 80C76988-80C769D0 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C76988-80C769D0 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -418,7 +401,7 @@ SECTION_RODATA static u32 const lit_3974 = 0xBF800000;
 SECTION_DEAD char const* const stringBase_80C779FC = "L6Tenbin";
 #pragma pop
 
-/* 80C76BCC-80C76D10 0144+00 s=1 e=0 z=0  None .text      CreateHeap__10daTenbin_cFv                                   */
+/* 80C76BCC-80C76D10 0144+00 s=0 e=0 z=0  None .text      CreateHeap__10daTenbin_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -462,7 +445,7 @@ asm void daTenbin_c::rideCallBackLeft(dBgW* param_0, fopAc_ac_c* param_1, fopAc_
 #pragma pop
 
 
-/* 80C77200-80C772BC 00BC+00 s=1 e=0 z=0  None .text      Execute__10daTenbin_cFPPA3_A4_f                              */
+/* 80C77200-80C772BC 00BC+00 s=0 e=0 z=0  None .text      Execute__10daTenbin_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -499,7 +482,7 @@ asm void daTenbin_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C77470-80C77668 01F8+00 s=1 e=0 z=0  None .text      modeWait__10daTenbin_cFv                                     */
+/* 80C77470-80C77668 01F8+00 s=0 e=0 z=0  None .text      modeWait__10daTenbin_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -521,7 +504,7 @@ asm void daTenbin_c::balanceCheck() {
 #pragma pop
 
 
-/* 80C7772C-80C77810 00E4+00 s=1 e=0 z=0  None .text      Draw__10daTenbin_cFv                                         */
+/* 80C7772C-80C77810 00E4+00 s=0 e=0 z=0  None .text      Draw__10daTenbin_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -532,7 +515,7 @@ asm void daTenbin_c::Draw() {
 #pragma pop
 
 
-/* 80C77810-80C77878 0068+00 s=1 e=0 z=0  None .text      Delete__10daTenbin_cFv                                       */
+/* 80C77810-80C77878 0068+00 s=0 e=0 z=0  None .text      Delete__10daTenbin_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -543,51 +526,51 @@ asm void daTenbin_c::Delete() {
 #pragma pop
 
 
-/* 80C77878-80C778A4 002C+00 s=1 e=0 z=0  None .text      daTenbin_Draw__FP10daTenbin_c                                */
+/* 80C77878-80C778A4 002C+00 s=0 e=0 z=0  None .text      daTenbin_Draw__FP10daTenbin_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTenbin_Draw(daTenbin_c* param_0) {
+asm void daTenbin_Draw(daTenbin_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Draw__FP10daTenbin_c.s"
 }
 #pragma pop
 
 
-/* 80C778A4-80C778C4 0020+00 s=1 e=0 z=0  None .text      daTenbin_Execute__FP10daTenbin_c                             */
+/* 80C778A4-80C778C4 0020+00 s=0 e=0 z=0  None .text      daTenbin_Execute__FP10daTenbin_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTenbin_Execute(daTenbin_c* param_0) {
+asm void daTenbin_Execute(daTenbin_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Execute__FP10daTenbin_c.s"
 }
 #pragma pop
 
 
-/* 80C778C4-80C778E4 0020+00 s=1 e=0 z=0  None .text      daTenbin_Delete__FP10daTenbin_c                              */
+/* 80C778C4-80C778E4 0020+00 s=0 e=0 z=0  None .text      daTenbin_Delete__FP10daTenbin_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTenbin_Delete(daTenbin_c* param_0) {
+asm void daTenbin_Delete(daTenbin_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Delete__FP10daTenbin_c.s"
 }
 #pragma pop
 
 
-/* 80C778E4-80C77904 0020+00 s=1 e=0 z=0  None .text      daTenbin_Create__FP10fopAc_ac_c                              */
+/* 80C778E4-80C77904 0020+00 s=0 e=0 z=0  None .text      daTenbin_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTenbin_Create(fopAc_ac_c* param_0) {
+asm void daTenbin_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6Tenbin/d_a_obj_lv6Tenbin/daTenbin_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C77904-80C77960 005C+00 s=2 e=0 z=0  None .text      __dt__14daTenbin_HIO_cFv                                     */
+/* 80C77904-80C77960 005C+00 s=1 e=0 z=0  None .text      __dt__14daTenbin_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -598,7 +581,7 @@ asm daTenbin_HIO_c::~daTenbin_HIO_c() {
 #pragma pop
 
 
-/* 80C77960-80C7799C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv6Tenbin_cpp                                */
+/* 80C77960-80C7799C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv6Tenbin_cpp                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

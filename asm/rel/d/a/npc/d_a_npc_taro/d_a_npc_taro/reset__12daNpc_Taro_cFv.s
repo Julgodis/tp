@@ -110,8 +110,8 @@ lbl_80567138:
 /* 8056713C  98 1F 11 A5 */	stb r0, 0x11a5(r31)
 /* 80567140  48 00 00 50 */	b lbl_80567190
 lbl_80567144:
-/* 80567144  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80567148  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80567144  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80567148  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056714C  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80567150  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000FBFF@ha */
 /* 80567154  38 84 FB FF */	addi r4, r4, 0xFBFF /* 0x0000FBFF@l */

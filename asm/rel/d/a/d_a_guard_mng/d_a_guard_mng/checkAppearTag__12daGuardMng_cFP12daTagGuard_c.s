@@ -11,9 +11,9 @@ lbl_80837BEC:
 /* 80837C10  48 52 1B E8 */	b getAppearPoint__12daTagGuard_cFP3Vec
 /* 80837C14  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80837C18  41 82 00 3C */	beq lbl_80837C54
-/* 80837C1C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80837C20  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80837C24  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80837C1C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80837C20  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80837C24  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80837C28  38 83 04 D0 */	addi r4, r3, 0x4d0
 /* 80837C2C  38 61 00 08 */	addi r3, r1, 8
 /* 80837C30  7C 65 1B 78 */	mr r5, r3

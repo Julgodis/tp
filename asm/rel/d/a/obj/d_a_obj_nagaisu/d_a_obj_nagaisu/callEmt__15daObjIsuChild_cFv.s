@@ -23,11 +23,11 @@ lbl_80CA0180:
 /* 80CA01D4  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80CA01D8  3B 60 00 00 */	li r27, 0
 /* 80CA01DC  3B E0 00 00 */	li r31, 0
-/* 80CA01E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA01E4  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80CA01E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA01E4  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80CA01E8  3B DC 00 98 */	addi r30, r28, 0x98
 lbl_80CA01EC:
-/* 80CA01EC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80CA01EC  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80CA01F0  38 80 00 00 */	li r4, 0
 /* 80CA01F4  90 81 00 08 */	stw r4, 8(r1)
 /* 80CA01F8  38 00 FF FF */	li r0, -1

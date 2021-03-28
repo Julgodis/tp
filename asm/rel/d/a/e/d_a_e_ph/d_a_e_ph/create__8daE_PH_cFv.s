@@ -179,7 +179,7 @@ lbl_80741688:
 /* 807416C4  38 00 FF FF */	li r0, -1
 /* 807416C8  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 807416CC  38 63 1D D0 */	addi r3, r3, l_HIO@l
-/* 807416D0  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80741DD4 */
+/* 807416D0  98 03 00 04 */	stb r0, 4(r3)
 lbl_807416D4:
 /* 807416D4  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
 /* 807416D8  D0 1D 05 20 */	stfs f0, 0x520(r29)
@@ -355,8 +355,8 @@ lbl_8074193C:
 /* 8074195C  38 00 00 0E */	li r0, 0xe
 /* 80741960  90 1D 06 28 */	stw r0, 0x628(r29)
 lbl_80741964:
-/* 80741964  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80741968  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80741964  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80741968  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074196C  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80741970  3C 80 80 74 */	lis r4, stringBase0@ha
 /* 80741974  38 84 1D 0C */	addi r4, r4, stringBase0@l
@@ -375,14 +375,14 @@ lbl_80741964:
 /* 807419A8  40 82 00 3C */	bne lbl_807419E4
 /* 807419AC  38 00 00 00 */	li r0, 0
 /* 807419B0  98 1D 05 B2 */	stb r0, 0x5b2(r29)
-/* 807419B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807419B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807419B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807419B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807419BC  38 80 00 10 */	li r4, 0x10
 /* 807419C0  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 807419C4  7C 05 07 74 */	extsb r5, r0
 /* 807419C8  4B 8F 38 E8 */	b offSwitch__10dSv_info_cFii
-/* 807419CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807419D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807419CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807419D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807419D4  38 80 00 3F */	li r4, 0x3f
 /* 807419D8  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 807419DC  7C 05 07 74 */	extsb r5, r0
@@ -397,7 +397,7 @@ lbl_807419E4:
 /* 807419FC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80741A00  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 80741A04  38 63 1D D0 */	addi r3, r3, l_HIO@l
-/* 80741A08  D0 03 00 10 */	stfs f0, 0x10(r3)	/* effective address: 80741DE0 */
+/* 80741A08  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 80741A0C  38 00 00 00 */	li r0, 0
 /* 80741A10  98 1D 05 B1 */	stb r0, 0x5b1(r29)
 /* 80741A14  80 1D 04 9C */	lwz r0, 0x49c(r29)

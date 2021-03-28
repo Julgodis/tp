@@ -27,7 +27,7 @@ lbl_80805E1C:
 lbl_80805E40:
 /* 80805E40  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 80805E44  38 63 7F 08 */	addi r3, r3, l_HIO@l
-/* 80805E48  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80807F14 */
+/* 80805E48  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80805E4C  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 80805E50  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 80805E54  C0 1E 00 6C */	lfs f0, 0x6c(r30)

@@ -9,7 +9,7 @@ lbl_80C82D38:
 lbl_80C82D54:
 /* 80C82D54  3C 80 80 C8 */	lis r4, l_arcName@ha
 /* 80C82D58  38 84 38 54 */	addi r4, r4, l_arcName@l
-/* 80C82D5C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C83854 */
+/* 80C82D5C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C82D60  4B 3A A1 5C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C82D64  7C 60 1B 78 */	mr r0, r3
 /* 80C82D68  2C 00 00 04 */	cmpwi r0, 4
@@ -19,7 +19,7 @@ lbl_80C82D54:
 /* 80C82D78  7F E3 FB 78 */	mr r3, r31
 /* 80C82D7C  3C 80 80 C8 */	lis r4, l_arcName@ha
 /* 80C82D80  38 84 38 54 */	addi r4, r4, l_arcName@l
-/* 80C82D84  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C83854 */
+/* 80C82D84  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C82D88  38 A0 00 07 */	li r5, 7
 /* 80C82D8C  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C82D90  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l

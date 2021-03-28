@@ -7,7 +7,7 @@ lbl_807943C4:
 /* 807943D8  38 7F 04 DE */	addi r3, r31, 0x4de
 /* 807943DC  3C 80 80 7A */	lis r4, data_807989E4@ha
 /* 807943E0  38 84 89 E4 */	addi r4, r4, data_807989E4@l
-/* 807943E4  A8 84 00 00 */	lha r4, 0(r4)	/* effective address: 807989E4 */
+/* 807943E4  A8 84 00 00 */	lha r4, 0(r4)
 /* 807943E8  38 A0 00 08 */	li r5, 8
 /* 807943EC  38 C0 08 00 */	li r6, 0x800
 /* 807943F0  4B AD C2 18 */	b cLib_addCalcAngleS2__FPssss

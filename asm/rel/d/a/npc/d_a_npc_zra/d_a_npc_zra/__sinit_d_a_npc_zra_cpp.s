@@ -16,11 +16,11 @@ lbl_80B7F760:
 /* 80B7F798  4B FF 8D 01 */	bl __register_global_object
 /* 80B7F79C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B7F7A0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B7F7A4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B7F7A8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B7F7A4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B7F7A8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B7F7AC  90 7F 05 50 */	stw r3, 0x550(r31)
 /* 80B7F7B0  90 1F 05 54 */	stw r0, 0x554(r31)
-/* 80B7F7B4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B7F7B4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B7F7B8  90 1F 05 58 */	stw r0, 0x558(r31)
 /* 80B7F7BC  38 7F 05 50 */	addi r3, r31, 0x550
 /* 80B7F7C0  80 9F 04 D8 */	lwz r4, 0x4d8(r31)

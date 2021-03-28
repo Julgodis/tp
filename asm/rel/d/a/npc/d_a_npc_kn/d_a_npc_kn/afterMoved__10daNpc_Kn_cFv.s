@@ -10,8 +10,8 @@ lbl_80A2C4FC:
 /* 80A2C51C  C0 1E 0E 14 */	lfs f0, 0xe14(r30)
 /* 80A2C520  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80A2C524  41 82 00 30 */	beq lbl_80A2C554
-/* 80A2C528  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A2C52C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A2C528  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A2C52C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A2C530  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80A2C534  7F E3 FB 78 */	mr r3, r31
 /* 80A2C538  38 9E 09 78 */	addi r4, r30, 0x978

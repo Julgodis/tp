@@ -104,7 +104,7 @@ lbl_80C20DD8:
 /* 80C20E0C  40 82 00 10 */	bne lbl_80C20E1C
 /* 80C20E10  3C 60 80 C2 */	lis r3, l_HIO@ha
 /* 80C20E14  38 63 1C 48 */	addi r3, r3, l_HIO@l
-/* 80C20E18  C3 E3 00 08 */	lfs f31, 8(r3)	/* effective address: 80C21C50 */
+/* 80C20E18  C3 E3 00 08 */	lfs f31, 8(r3)
 lbl_80C20E1C:
 /* 80C20E1C  C0 5E 05 C8 */	lfs f2, 0x5c8(r30)
 /* 80C20E20  7F C3 F3 78 */	mr r3, r30

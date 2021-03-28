@@ -11,8 +11,8 @@ lbl_80A3BE64:
 /* 80A3BE88  38 00 00 06 */	li r0, 6
 /* 80A3BE8C  7C 09 03 A6 */	mtctr r0
 lbl_80A3BE90:
-/* 80A3BE90  80 65 00 04 */	lwz r3, 4(r5)	/* effective address: 80A408C8 */
-/* 80A3BE94  84 05 00 08 */	lwzu r0, 8(r5)	/* effective address: 80A408CC */
+/* 80A3BE90  80 65 00 04 */	lwz r3, 4(r5)
+/* 80A3BE94  84 05 00 08 */	lwzu r0, 8(r5)
 /* 80A3BE98  90 66 00 04 */	stw r3, 4(r6)
 /* 80A3BE9C  94 06 00 08 */	stwu r0, 8(r6)
 /* 80A3BEA0  42 00 FF F0 */	bdnz lbl_80A3BE90
@@ -38,11 +38,11 @@ lbl_80A3BED8:
 /* 80A3BEE8  42 00 FF F0 */	bdnz lbl_80A3BED8
 /* 80A3BEEC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A3BEF0  38 A3 21 80 */	addi r5, r3, __ptmf_null@l
-/* 80A3BEF4  80 65 00 00 */	lwz r3, 0(r5)	/* effective address: 803A2180 */
-/* 80A3BEF8  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80A3BEF4  80 65 00 00 */	lwz r3, 0(r5)
+/* 80A3BEF8  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A3BEFC  90 64 09 98 */	stw r3, 0x998(r4)
 /* 80A3BF00  90 04 09 9C */	stw r0, 0x99c(r4)
-/* 80A3BF04  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80A3BF04  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A3BF08  90 04 09 A0 */	stw r0, 0x9a0(r4)
 /* 80A3BF0C  38 64 09 98 */	addi r3, r4, 0x998
 /* 80A3BF10  80 A4 08 A8 */	lwz r5, 0x8a8(r4)

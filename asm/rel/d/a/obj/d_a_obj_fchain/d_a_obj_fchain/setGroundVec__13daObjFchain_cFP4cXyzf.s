@@ -13,7 +13,7 @@ lbl_80BE66B4:
 /* 80BE66E0  C0 24 00 08 */	lfs f1, 8(r4)
 /* 80BE66E4  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80BE66E8  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80BE66EC  C0 1F 00 40 */	lfs f0, 0x40(r31)	/* effective address: 80BE7478 */
+/* 80BE66EC  C0 1F 00 40 */	lfs f0, 0x40(r31)
 /* 80BE66F0  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80BE66F4  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 80BE66F8  38 61 00 0C */	addi r3, r1, 0xc

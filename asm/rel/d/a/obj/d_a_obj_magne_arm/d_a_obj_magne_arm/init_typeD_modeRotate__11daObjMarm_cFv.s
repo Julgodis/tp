@@ -2,7 +2,7 @@ lbl_80591A30:
 /* 80591A30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80591A34  3C 80 80 59 */	lis r4, l_stop_timer@ha
 /* 80591A38  38 84 28 7C */	addi r4, r4, l_stop_timer@l
-/* 80591A3C  88 04 00 03 */	lbz r0, 3(r4)	/* effective address: 8059287F */
+/* 80591A3C  88 04 00 03 */	lbz r0, 3(r4)
 /* 80591A40  98 03 0A 17 */	stb r0, 0xa17(r3)
 /* 80591A44  88 03 0A 1D */	lbz r0, 0xa1d(r3)
 /* 80591A48  28 00 00 00 */	cmplwi r0, 0

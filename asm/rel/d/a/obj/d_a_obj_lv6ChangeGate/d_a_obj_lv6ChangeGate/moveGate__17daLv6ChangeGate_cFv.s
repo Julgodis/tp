@@ -9,7 +9,7 @@ lbl_80C71494:
 /* 80C714B0  3B E3 21 AC */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80C714B4  3C 60 80 C7 */	lis r3, data_80C7239C@ha
 /* 80C714B8  38 A3 23 9C */	addi r5, r3, data_80C7239C@l
-/* 80C714BC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C7239C */
+/* 80C714BC  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C714C0  7C 00 07 75 */	extsb. r0, r0
 /* 80C714C4  40 82 00 70 */	bne lbl_80C71534
 /* 80C714C8  80 7F 00 64 */	lwz r3, 0x64(r31)

@@ -5,9 +5,9 @@ lbl_807FA2E4:
 /* 807FA2F0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 807FA2F4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 807FA2F8  7C 7F 1B 78 */	mr r31, r3
-/* 807FA2FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807FA300  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807FA304  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807FA2FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807FA300  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807FA304  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 807FA308  A8 1F 06 8E */	lha r0, 0x68e(r31)
 /* 807FA30C  2C 00 00 00 */	cmpwi r0, 0
 /* 807FA310  40 82 01 50 */	bne lbl_807FA460

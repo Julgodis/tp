@@ -20,7 +20,7 @@ lbl_8046DBB0:
 /* 8046DBB8  88 1F 05 68 */	lbz r0, 0x568(r31)
 /* 8046DBBC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8046DBC0  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8046DBC4  98 03 13 08 */	stb r0, 0x1308(r3)	/* effective address: 8042DD5C */
+/* 8046DBC4  98 03 13 08 */	stb r0, 0x1308(r3)
 /* 8046DBC8  38 60 00 04 */	li r3, 4
 /* 8046DBCC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8046DBD0  80 01 00 14 */	lwz r0, 0x14(r1)

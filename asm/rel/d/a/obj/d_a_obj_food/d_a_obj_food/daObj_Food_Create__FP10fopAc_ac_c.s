@@ -131,7 +131,7 @@ lbl_80BF1AA4:
 /* 80BF1AC0  38 00 FF FF */	li r0, -1
 /* 80BF1AC4  3C 60 80 BF */	lis r3, l_HIO@ha
 /* 80BF1AC8  38 63 1F 50 */	addi r3, r3, l_HIO@l
-/* 80BF1ACC  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80BF1F54 */
+/* 80BF1ACC  98 03 00 04 */	stb r0, 4(r3)
 lbl_80BF1AD0:
 /* 80BF1AD0  80 7B 05 74 */	lwz r3, 0x574(r27)
 /* 80BF1AD4  38 03 00 24 */	addi r0, r3, 0x24

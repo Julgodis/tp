@@ -108,8 +108,8 @@ lbl_80491D40:
 /* 80491D44  40 82 00 FC */	bne lbl_80491E40
 /* 80491D48  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80491D4C  54 04 A6 3E */	rlwinm r4, r0, 0x14, 0x18, 0x1f
-/* 80491D50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80491D54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80491D50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80491D54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80491D58  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80491D5C  7C 05 07 74 */	extsb r5, r0
 /* 80491D60  4B BA 36 00 */	b isSwitch__10dSv_info_cCFii

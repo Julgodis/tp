@@ -27,24 +27,24 @@ lbl_80D29EC8:
 /* 80D29EDC  40 80 00 08 */	bge lbl_80D29EE4
 /* 80D29EE0  48 00 00 5C */	b lbl_80D29F3C
 lbl_80D29EE4:
-/* 80D29EE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D29EE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D29EE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D29EE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D29EEC  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D29EF0  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D29EF4  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D29EF8  A0 84 00 FA */	lhz r4, 0xfa(r4)	/* effective address: 803A7382 */
+/* 80D29EF8  A0 84 00 FA */	lhz r4, 0xfa(r4)
 /* 80D29EFC  4B 30 AA C0 */	b isEventBit__11dSv_event_cCFUs
 /* 80D29F00  2C 03 00 00 */	cmpwi r3, 0
 /* 80D29F04  41 82 00 38 */	beq lbl_80D29F3C
 /* 80D29F08  38 60 00 05 */	li r3, 5
 /* 80D29F0C  48 00 00 E4 */	b lbl_80D29FF0
 lbl_80D29F10:
-/* 80D29F10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D29F14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D29F10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D29F14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D29F18  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D29F1C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D29F20  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D29F24  A0 84 00 FA */	lhz r4, 0xfa(r4)	/* effective address: 803A7382 */
+/* 80D29F24  A0 84 00 FA */	lhz r4, 0xfa(r4)
 /* 80D29F28  4B 30 AA 94 */	b isEventBit__11dSv_event_cCFUs
 /* 80D29F2C  2C 03 00 00 */	cmpwi r3, 0
 /* 80D29F30  40 82 00 0C */	bne lbl_80D29F3C
@@ -54,7 +54,7 @@ lbl_80D29F3C:
 /* 80D29F3C  38 7E 05 A0 */	addi r3, r30, 0x5a0
 /* 80D29F40  3C 80 80 D3 */	lis r4, l_arcName@ha
 /* 80D29F44  38 84 B9 34 */	addi r4, r4, l_arcName@l
-/* 80D29F48  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D2B934 */
+/* 80D29F48  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D29F4C  4B 30 2F 70 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D29F50  7C 64 1B 78 */	mr r4, r3
 /* 80D29F54  2C 04 00 04 */	cmpwi r4, 4
@@ -68,7 +68,7 @@ lbl_80D29F70:
 /* 80D29F70  7F C3 F3 78 */	mr r3, r30
 /* 80D29F74  3C 80 80 D3 */	lis r4, l_arcName@ha
 /* 80D29F78  38 84 B9 34 */	addi r4, r4, l_arcName@l
-/* 80D29F7C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D2B934 */
+/* 80D29F7C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D29F80  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
 /* 80D29F84  38 BF 00 08 */	addi r5, r31, 8
 /* 80D29F88  7C A5 00 2E */	lwzx r5, r5, r0

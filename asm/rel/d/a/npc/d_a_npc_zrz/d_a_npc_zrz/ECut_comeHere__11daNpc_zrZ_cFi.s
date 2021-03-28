@@ -6,10 +6,10 @@ lbl_80B97B78:
 /* 80B97B88  4B 7C A6 44 */	b _savegpr_25
 /* 80B97B8C  7C 7E 1B 78 */	mr r30, r3
 /* 80B97B90  7C 99 23 78 */	mr r25, r4
-/* 80B97B94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B97B98  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80B97B94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B97B98  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80B97B9C  3B 7D 4F F8 */	addi r27, r29, 0x4ff8
-/* 80B97BA0  83 9D 5D AC */	lwz r28, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 80B97BA0  83 9D 5D AC */	lwz r28, 0x5dac(r29)
 /* 80B97BA4  3B E0 00 00 */	li r31, 0
 /* 80B97BA8  3B 40 FF FF */	li r26, -1
 /* 80B97BAC  7F 63 DB 78 */	mr r3, r27

@@ -12,9 +12,9 @@ lbl_804F64A8:
 /* 804F64D0  40 82 00 18 */	bne lbl_804F64E8
 /* 804F64D4  3C 60 80 50 */	lis r3, ba_count@ha
 /* 804F64D8  38 83 AF 80 */	addi r4, r3, ba_count@l
-/* 804F64DC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804FAF80 */
+/* 804F64DC  80 64 00 00 */	lwz r3, 0(r4)
 /* 804F64E0  38 03 00 01 */	addi r0, r3, 1
-/* 804F64E4  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 804FAF80 */
+/* 804F64E4  90 04 00 00 */	stw r0, 0(r4)
 lbl_804F64E8:
 /* 804F64E8  38 60 00 00 */	li r3, 0
 /* 804F64EC  83 E1 00 0C */	lwz r31, 0xc(r1)

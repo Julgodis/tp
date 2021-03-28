@@ -59,9 +59,6 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -70,6 +67,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -248,44 +248,44 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803C0C0C-803C0C18 000C+00 s=1 e=0 z=0  None .data      @3754                                                        */
 SECTION_DATA static void* lit_3754[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open1Proc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open1Proc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C18-803C0C24 000C+00 s=1 e=0 z=0  None .data      @3755                                                        */
 SECTION_DATA static void* lit_3755[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)open2Proc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)open2Proc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C24-803C0C30 000C+00 s=1 e=0 z=0  None .data      @3756                                                        */
 SECTION_DATA static void* lit_3756[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)waitProc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)waitProc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C30-803C0C3C 000C+00 s=1 e=0 z=0  None .data      @3757                                                        */
 SECTION_DATA static void* lit_3757[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)selectProc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)selectProc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C3C-803C0C48 000C+00 s=1 e=0 z=0  None .data      @3758                                                        */
 SECTION_DATA static void* lit_3758[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)changeProc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)changeProc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C48-803C0C54 000C+00 s=1 e=0 z=0  None .data      @3759                                                        */
 SECTION_DATA static void* lit_3759[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)closeProc__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)closeProc__17dMsgScrn3Select_cFv,
 };
 
 /* 803C0C54-803C0CA0 0048+04 s=3 e=0 z=0  None .data      process                                                      */
@@ -311,9 +311,9 @@ SECTION_DATA u8 data_803C0CA0[24 + 48 /* padding */] = {
 
 /* 803C0CE8-803C0CF8 000C+04 s=2 e=0 z=0  None .data      __vt__17dMsgScrn3Select_c                                    */
 SECTION_DATA static void* __vt__17dMsgScrn3Select_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dMsgScrn3Select_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dMsgScrn3Select_cFv,
 	/* padding */
 	NULL,
 };

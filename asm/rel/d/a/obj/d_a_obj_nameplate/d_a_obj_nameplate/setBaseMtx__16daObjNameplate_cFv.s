@@ -12,7 +12,7 @@ lbl_8059417C:
 /* 805941A4  4B A7 82 90 */	b mDoMtx_YrotM__FPA4_fs
 /* 805941A8  3C 60 80 59 */	lis r3, M_attr__16daObjNameplate_c@ha
 /* 805941AC  38 63 4E 74 */	addi r3, r3, M_attr__16daObjNameplate_c@l
-/* 805941B0  88 03 00 1E */	lbz r0, 0x1e(r3)	/* effective address: 80594E92 */
+/* 805941B0  88 03 00 1E */	lbz r0, 0x1e(r3)
 /* 805941B4  2C 00 00 01 */	cmpwi r0, 1
 /* 805941B8  41 82 00 38 */	beq lbl_805941F0
 /* 805941BC  40 80 00 54 */	bge lbl_80594210

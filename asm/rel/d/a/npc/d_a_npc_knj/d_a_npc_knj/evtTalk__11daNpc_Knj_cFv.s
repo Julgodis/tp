@@ -6,11 +6,11 @@ lbl_80A43D5C:
 /* 80A43D6C  7C 7F 1B 78 */	mr r31, r3
 /* 80A43D70  3C 80 80 A4 */	lis r4, lit_4329@ha
 /* 80A43D74  38 A4 56 94 */	addi r5, r4, lit_4329@l
-/* 80A43D78  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A45694 */
-/* 80A43D7C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A45698 */
+/* 80A43D78  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A43D7C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A43D80  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A43D84  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A43D88  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A4569C */
+/* 80A43D88  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A43D8C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A43D90  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A43D94  48 00 05 85 */	bl chkAction__11daNpc_Knj_cFM11daNpc_Knj_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_80A43D5C:
 lbl_80A43DB8:
 /* 80A43DB8  38 00 00 00 */	li r0, 0
 /* 80A43DBC  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80A43DC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A43DC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A43DC8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80A43DC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A43DC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A43DC8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80A43DCC  28 04 00 01 */	cmplwi r4, 1
 /* 80A43DD0  41 82 00 0C */	beq lbl_80A43DDC
 /* 80A43DD4  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80A43E00:
 lbl_80A43E18:
 /* 80A43E18  3C 60 80 A4 */	lis r3, lit_4339@ha
 /* 80A43E1C  38 83 56 A0 */	addi r4, r3, lit_4339@l
-/* 80A43E20  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A456A0 */
-/* 80A43E24  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A456A4 */
+/* 80A43E20  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A43E24  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A43E28  90 61 00 08 */	stw r3, 8(r1)
 /* 80A43E2C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A43E30  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A456A8 */
+/* 80A43E30  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A43E34  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A43E38  7F E3 FB 78 */	mr r3, r31
 /* 80A43E3C  38 81 00 08 */	addi r4, r1, 8

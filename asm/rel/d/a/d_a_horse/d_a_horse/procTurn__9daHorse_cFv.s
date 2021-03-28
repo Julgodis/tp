@@ -9,7 +9,7 @@ lbl_80842AB0:
 /* 80842ACC  3B E3 54 AC */	addi r31, r3, lit_3894@l
 /* 80842AD0  3B DC 05 B0 */	addi r30, r28, 0x5b0
 /* 80842AD4  C0 3C 17 58 */	lfs f1, 0x1758(r28)
-/* 80842AD8  C0 1F 01 CC */	lfs f0, 0x1cc(r31)	/* effective address: 80845678 */
+/* 80842AD8  C0 1F 01 CC */	lfs f0, 0x1cc(r31)
 /* 80842ADC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80842AE0  41 81 00 0C */	bgt lbl_80842AEC
 /* 80842AE4  38 00 00 00 */	li r0, 0
@@ -75,8 +75,8 @@ lbl_80842BAC:
 /* 80842BC0  A8 1C 17 20 */	lha r0, 0x1720(r28)
 /* 80842BC4  2C 00 00 00 */	cmpwi r0, 0
 /* 80842BC8  41 82 00 28 */	beq lbl_80842BF0
-/* 80842BCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80842BD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80842BCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80842BD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80842BD4  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80842BD8  80 9C 17 2C */	lwz r4, 0x172c(r28)
 /* 80842BDC  4B 80 55 A0 */	b cutEnd__16dEvent_manager_cFi
@@ -96,8 +96,8 @@ lbl_80842C0C:
 /* 80842C0C  80 1C 17 40 */	lwz r0, 0x1740(r28)
 /* 80842C10  28 00 00 09 */	cmplwi r0, 9
 /* 80842C14  40 82 00 30 */	bne lbl_80842C44
-/* 80842C18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80842C1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80842C18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80842C1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80842C20  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80842C24  80 9C 17 2C */	lwz r4, 0x172c(r28)
 /* 80842C28  4B 80 55 54 */	b cutEnd__16dEvent_manager_cFi
@@ -163,9 +163,9 @@ lbl_80842CF0:
 /* 80842D00  80 9C 17 44 */	lwz r4, 0x1744(r28)
 /* 80842D04  54 80 02 97 */	rlwinm. r0, r4, 0, 0xa, 0xb
 /* 80842D08  41 82 00 18 */	beq lbl_80842D20
-/* 80842D0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80842D10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80842D14  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80842D0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80842D10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80842D14  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80842D18  28 00 00 00 */	cmplwi r0, 0
 /* 80842D1C  41 82 00 18 */	beq lbl_80842D34
 lbl_80842D20:

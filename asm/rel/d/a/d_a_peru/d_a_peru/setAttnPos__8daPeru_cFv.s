@@ -9,9 +9,9 @@ lbl_80D47F5C:
 /* 80D47F78  7C 7E 1B 78 */	mr r30, r3
 /* 80D47F7C  3C 60 80 D5 */	lis r3, m__14daPeru_Param_c@ha
 /* 80D47F80  3B E3 C0 60 */	addi r31, r3, m__14daPeru_Param_c@l
-/* 80D47F84  C0 1F 00 CC */	lfs f0, 0xcc(r31)	/* effective address: 80D4C12C */
+/* 80D47F84  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 80D47F88  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80D47F8C  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 80D4C108 */
+/* 80D47F8C  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 80D47F90  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 80D47F94  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80D47F98  38 7E 0D 08 */	addi r3, r30, 0xd08

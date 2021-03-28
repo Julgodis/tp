@@ -31,13 +31,14 @@ struct daNpcTheB_c {
 // Forward References:
 // 
 
-static void daTagTheBHint_Create(fopAc_ac_c*); // 2
-static void daTagTheBHint_Delete(daTagTheBHint_c*); // 2
-static void daTagTheBHint_Execute(daTagTheBHint_c*); // 2
+void daTagTheBHint_Create(fopAc_ac_c*); // 2
+void daTagTheBHint_Delete(daTagTheBHint_c*); // 2
+void daTagTheBHint_Execute(daTagTheBHint_c*); // 2
 
-extern "C" static void daTagTheBHint_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagTheBHint_Delete__FP15daTagTheBHint_c(); // 1
-extern "C" static void daTagTheBHint_Execute__FP15daTagTheBHint_c(); // 1
+extern "C" void daTagTheBHint_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagTheBHint_Delete__FP15daTagTheBHint_c(); // 1
+extern "C" void daTagTheBHint_Execute__FP15daTagTheBHint_c(); // 1
+extern "C" extern void* l_daTagTheBHint_Method[8];
 extern "C" extern void* g_profile_Tag_TheBHint[12];
 
 // 
@@ -57,10 +58,7 @@ extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void pow(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void setHintEvent__11daNpcTheB_cFlUsi(); // 1
 
 // 
@@ -80,33 +78,33 @@ SECTION_RODATA static u8 const lit_3832[8] = {
 	0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80D63CD8-80D63D4C 0074+00 s=1 e=0 z=0  None .text      daTagTheBHint_Create__FP10fopAc_ac_c                         */
+/* 80D63CD8-80D63D4C 0074+00 s=0 e=0 z=0  None .text      daTagTheBHint_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagTheBHint_Create(fopAc_ac_c* param_0) {
+asm void daTagTheBHint_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D63D4C-80D63D7C 0030+00 s=1 e=0 z=0  None .text      daTagTheBHint_Delete__FP15daTagTheBHint_c                    */
+/* 80D63D4C-80D63D7C 0030+00 s=0 e=0 z=0  None .text      daTagTheBHint_Delete__FP15daTagTheBHint_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagTheBHint_Delete(daTagTheBHint_c* param_0) {
+asm void daTagTheBHint_Delete(daTagTheBHint_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Delete__FP15daTagTheBHint_c.s"
 }
 #pragma pop
 
 
-/* 80D63D7C-80D63E4C 00D0+00 s=1 e=0 z=0  None .text      daTagTheBHint_Execute__FP15daTagTheBHint_c                   */
+/* 80D63D7C-80D63E4C 00D0+00 s=0 e=0 z=0  None .text      daTagTheBHint_Execute__FP15daTagTheBHint_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagTheBHint_Execute(daTagTheBHint_c* param_0) {
+asm void daTagTheBHint_Execute(daTagTheBHint_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_theB_hint/d_a_tag_theB_hint/daTagTheBHint_Execute__FP15daTagTheBHint_c.s"
 }
@@ -114,31 +112,31 @@ asm static void daTagTheBHint_Execute(daTagTheBHint_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D63E64-80D63E84 0020+00 s=1 e=0 z=0  None .data      l_daTagTheBHint_Method                                       */
-SECTION_DATA static void* l_daTagTheBHint_Method[8] = {
-	/* 0    */ (void*)daTagTheBHint_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagTheBHint_Delete__FP15daTagTheBHint_c,
-	/* 2    */ (void*)daTagTheBHint_Execute__FP15daTagTheBHint_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D63E64-80D63E84 0020+00 s=0 e=0 z=0  None .data      l_daTagTheBHint_Method                                       */
+SECTION_DATA void* l_daTagTheBHint_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D63E84-80D63EB4 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_TheBHint                                       */
+/* 80D63E84-80D63EB4 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_TheBHint                                       */
 SECTION_DATA void* g_profile_Tag_TheBHint[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02CC0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000056C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01090000,
-	/* 9    */ (void*)&l_daTagTheBHint_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02CC0000,
+	(void*)NULL,
+	(void*)0x0000056C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01090000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

@@ -16,11 +16,11 @@ lbl_8096C7AC:
 /* 8096C7E4  4B FF C1 15 */	bl __register_global_object
 /* 8096C7E8  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8096C7EC  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8096C7F0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8096C7F4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8096C7F0  80 64 00 00 */	lwz r3, 0(r4)
+/* 8096C7F4  80 04 00 04 */	lwz r0, 4(r4)
 /* 8096C7F8  90 7F 00 F8 */	stw r3, 0xf8(r31)
 /* 8096C7FC  90 1F 00 FC */	stw r0, 0xfc(r31)
-/* 8096C800  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8096C800  80 04 00 08 */	lwz r0, 8(r4)
 /* 8096C804  90 1F 01 00 */	stw r0, 0x100(r31)
 /* 8096C808  38 9F 00 F8 */	addi r4, r31, 0xf8
 /* 8096C80C  80 7F 00 B0 */	lwz r3, 0xb0(r31)

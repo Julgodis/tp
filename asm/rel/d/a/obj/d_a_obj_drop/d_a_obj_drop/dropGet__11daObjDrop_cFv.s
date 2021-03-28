@@ -8,17 +8,17 @@ lbl_80BE0358:
 /* 80BE0370  88 03 06 B9 */	lbz r0, 0x6b9(r3)
 /* 80BE0374  28 00 00 00 */	cmplwi r0, 0
 /* 80BE0378  41 82 00 A0 */	beq lbl_80BE0418
-/* 80BE037C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE0380  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE037C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE0380  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE0384  38 63 09 58 */	addi r3, r3, 0x958
 /* 80BE0388  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BE038C  54 04 06 BE */	clrlwi r4, r0, 0x1a
 /* 80BE0390  4B 45 44 10 */	b onTbox__12dSv_memBit_cFi
-/* 80BE0394  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE0398  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80BE0394  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE0398  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80BE039C  3B BE 01 14 */	addi r29, r30, 0x114
 /* 80BE03A0  7F A3 EB 78 */	mr r3, r29
-/* 80BE03A4  88 9E 4E 0C */	lbz r4, 0x4e0c(r30)	/* effective address: 8040AFCC */
+/* 80BE03A4  88 9E 4E 0C */	lbz r4, 0x4e0c(r30)
 /* 80BE03A8  4B 45 3F 98 */	b getLightDropNum__16dSv_light_drop_cCFUc
 /* 80BE03AC  7C 65 1B 78 */	mr r5, r3
 /* 80BE03B0  7F A3 EB 78 */	mr r3, r29
@@ -36,12 +36,12 @@ lbl_80BE0358:
 /* 80BE03E0  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80BE03E4  28 00 00 0F */	cmplwi r0, 0xf
 /* 80BE03E8  40 82 00 20 */	bne lbl_80BE0408
-/* 80BE03EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE03F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE03EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE03F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE03F4  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80BE03F8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80BE03FC  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80BE0400  A0 84 00 12 */	lhz r4, 0x12(r4)	/* effective address: 803A729A */
+/* 80BE0400  A0 84 00 12 */	lhz r4, 0x12(r4)
 /* 80BE0404  4B 45 45 88 */	b onEventBit__11dSv_event_cFUs
 lbl_80BE0408:
 /* 80BE0408  38 60 00 00 */	li r3, 0

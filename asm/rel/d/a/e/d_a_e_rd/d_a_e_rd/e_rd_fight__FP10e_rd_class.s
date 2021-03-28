@@ -34,7 +34,7 @@ lbl_8050784C:
 /* 8050785C  4B FF D3 79 */	bl anm_init__FP10e_rd_classifUcf
 /* 80507860  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 80507864  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 80507868  88 03 00 38 */	lbz r0, 0x38(r3)	/* effective address: 805191CC */
+/* 80507868  88 03 00 38 */	lbz r0, 0x38(r3)
 /* 8050786C  28 00 00 00 */	cmplwi r0, 0
 /* 80507870  40 82 00 10 */	bne lbl_80507880
 /* 80507874  38 00 00 19 */	li r0, 0x19
@@ -93,7 +93,7 @@ lbl_80507918:
 /* 80507930  38 A0 00 00 */	li r5, 0
 /* 80507934  3C C0 80 52 */	lis r6, l_HIO@ha
 /* 80507938  38 C6 91 94 */	addi r6, r6, l_HIO@l
-/* 8050793C  C0 46 00 20 */	lfs f2, 0x20(r6)	/* effective address: 805191B4 */
+/* 8050793C  C0 46 00 20 */	lfs f2, 0x20(r6)
 /* 80507940  4B FF D2 95 */	bl anm_init__FP10e_rd_classifUcf
 /* 80507944  C0 1F 00 64 */	lfs f0, 0x64(r31)
 /* 80507948  80 7E 05 D0 */	lwz r3, 0x5d0(r30)
@@ -139,7 +139,7 @@ lbl_805079B8:
 lbl_805079DC:
 /* 805079DC  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 805079E0  38 63 91 94 */	addi r3, r3, l_HIO@l
-/* 805079E4  88 03 00 38 */	lbz r0, 0x38(r3)	/* effective address: 805191CC */
+/* 805079E4  88 03 00 38 */	lbz r0, 0x38(r3)
 /* 805079E8  28 00 00 00 */	cmplwi r0, 0
 /* 805079EC  40 82 00 0C */	bne lbl_805079F8
 /* 805079F0  3B 80 00 40 */	li r28, 0x40
@@ -206,10 +206,10 @@ lbl_80507A98:
 /* 80507AC4  A8 03 00 08 */	lha r0, 8(r3)
 /* 80507AC8  2C 00 00 FD */	cmpwi r0, 0xfd
 /* 80507ACC  40 82 00 AC */	bne lbl_80507B78
-/* 80507AD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80507AD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80507AD8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80507ADC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80507AD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80507AD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80507AD8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80507ADC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80507AE0  81 8C 00 40 */	lwz r12, 0x40(r12)
 /* 80507AE4  7D 89 03 A6 */	mtctr r12
 /* 80507AE8  4E 80 04 21 */	bctrl 
@@ -223,8 +223,8 @@ lbl_80507A98:
 /* 80507B08  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80507B0C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80507B10  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 80507B14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80507B18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80507B14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80507B18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80507B1C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80507B20  38 80 00 04 */	li r4, 4
 /* 80507B24  38 A0 00 1F */	li r5, 0x1f

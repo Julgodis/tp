@@ -115,11 +115,11 @@ asm static void fopVw_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A3928-803A3940 0014+04 s=0 e=2 z=0  None .data      g_fopVw_Method                                               */
 SECTION_DATA void* g_fopVw_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopVw_Create__FPv,
-	/* 1    */ (void*)fopVw_Delete__FP10view_class,
-	/* 2    */ (void*)fopVw_Execute__FP10view_class,
-	/* 3    */ (void*)fopVw_IsDelete__FPv,
-	/* 4    */ (void*)fopVw_Draw__FP10view_class,
+	(void*)fopVw_Create__FPv,
+	(void*)fopVw_Delete__FP10view_class,
+	(void*)fopVw_Execute__FP10view_class,
+	(void*)fopVw_IsDelete__FPv,
+	(void*)fopVw_Draw__FP10view_class,
 	/* padding */
 	NULL,
 };

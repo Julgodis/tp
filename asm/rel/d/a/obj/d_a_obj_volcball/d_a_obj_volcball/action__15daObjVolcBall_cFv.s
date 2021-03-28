@@ -6,7 +6,7 @@ lbl_80D22484:
 /* 80D22494  38 84 3E 8C */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 80D22498  3C A0 80 D2 */	lis r5, data_80D24100@ha
 /* 80D2249C  38 E5 41 00 */	addi r7, r5, data_80D24100@l
-/* 80D224A0  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80D24100 */
+/* 80D224A0  88 07 00 00 */	lbz r0, 0(r7)
 /* 80D224A4  7C 00 07 75 */	extsb. r0, r0
 /* 80D224A8  40 82 00 A0 */	bne lbl_80D22548
 /* 80D224AC  80 A4 00 CC */	lwz r5, 0xcc(r4)

@@ -7,9 +7,9 @@ lbl_80CAFD64:
 /* 80CAFD78  7C 7D 1B 78 */	mr r29, r3
 /* 80CAFD7C  3C 60 80 CB */	lis r3, l_bmd@ha
 /* 80CAFD80  3B E3 09 D4 */	addi r31, r3, l_bmd@l
-/* 80CAFD84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAFD88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CAFD8C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CAFD84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAFD88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CAFD8C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80CAFD90  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80CAFD94  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80CAFD98  4B 69 76 04 */	b PSVECSquareDistance
@@ -80,10 +80,10 @@ lbl_80CAFE70:
 /* 80CAFE7C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80CAFE80:
 /* 80CAFE80  C0 1F 00 E0 */	lfs f0, 0xe0(r31)
-/* 80CAFE84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAFE88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CAFE8C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80CAFE90  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80CAFE84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAFE88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CAFE8C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80CAFE90  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80CAFE94  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80CAFE98  41 82 00 08 */	beq lbl_80CAFEA0
 /* 80CAFE9C  C0 1F 00 E4 */	lfs f0, 0xe4(r31)
@@ -97,8 +97,8 @@ lbl_80CAFEA0:
 /* 80CAFEB8  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80CAFEBC  41 82 00 44 */	beq lbl_80CAFF00
 lbl_80CAFEC0:
-/* 80CAFEC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CAFEC4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CAFEC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CAFEC4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CAFEC8  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80CAFECC  3C 80 80 CB */	lis r4, struct_80CB0ACC+0x0@ha
 /* 80CAFED0  38 84 0A CC */	addi r4, r4, struct_80CB0ACC+0x0@l

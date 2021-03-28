@@ -15,8 +15,8 @@ lbl_809E47B4:
 /* 809E47E8  3C 60 80 9F */	lis r3, l_resNames@ha
 /* 809E47EC  38 63 80 84 */	addi r3, r3, l_resNames@l
 /* 809E47F0  7C 63 00 2E */	lwzx r3, r3, r0
-/* 809E47F4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809E47F8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809E47F4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809E47F8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809E47FC  3C A5 00 02 */	addis r5, r5, 2
 /* 809E4800  38 C0 00 80 */	li r6, 0x80
 /* 809E4804  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -145,14 +145,14 @@ lbl_809E49BC:
 lbl_809E49D4:
 /* 809E49D4  3C 60 80 9E */	lis r3, l_bmdGetParamList@ha
 /* 809E49D8  38 83 7F E4 */	addi r4, r3, l_bmdGetParamList@l
-/* 809E49DC  80 04 00 0C */	lwz r0, 0xc(r4)	/* effective address: 809E7FF0 */
+/* 809E49DC  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 809E49E0  54 00 10 3A */	slwi r0, r0, 2
 /* 809E49E4  3C 60 80 9F */	lis r3, l_resNames@ha
 /* 809E49E8  38 63 80 84 */	addi r3, r3, l_resNames@l
 /* 809E49EC  7C 63 00 2E */	lwzx r3, r3, r0
-/* 809E49F0  80 84 00 08 */	lwz r4, 8(r4)	/* effective address: 809E7FEC */
-/* 809E49F4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809E49F8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809E49F0  80 84 00 08 */	lwz r4, 8(r4)
+/* 809E49F4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809E49F8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809E49FC  3C A5 00 02 */	addis r5, r5, 2
 /* 809E4A00  38 C0 00 80 */	li r6, 0x80
 /* 809E4A04  38 A5 C2 F8 */	addi r5, r5, -15624

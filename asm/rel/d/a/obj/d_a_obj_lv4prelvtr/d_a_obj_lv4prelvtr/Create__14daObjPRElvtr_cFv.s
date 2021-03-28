@@ -13,11 +13,11 @@ lbl_80C68768:
 /* 80C68794  7F E3 FB 78 */	mr r3, r31
 /* 80C68798  3C 80 80 C7 */	lis r4, l_cull_box@ha
 /* 80C6879C  C4 24 8B 68 */	lfsu f1, l_cull_box@l(r4)
-/* 80C687A0  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C70004 */
-/* 80C687A4  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C70008 */
-/* 80C687A8  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C7000C */
-/* 80C687AC  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C70010 */
-/* 80C687B0  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C70014 */
+/* 80C687A0  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C687A4  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C687A8  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C687AC  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C687B0  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C687B4  4B 3B 1D 94 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C687B8  38 60 00 01 */	li r3, 1
 /* 80C687BC  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -27,17 +27,17 @@ extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 803C3018-803C3040 0028+00 s=0 e=0 z=1  None .data      g_profile_MENU_SCENE                                         */
+/* 803C3018-803C3040 0028+00 s=0 e=0 z=0  None .data      g_profile_MENU_SCENE                                         */
 SECTION_DATA void* g_profile_MENU_SCENE[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x000A0000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000A0000,
+	(void*)&g_fpcNd_Method,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)NULL,
+	(void*)NULL,
 };
 

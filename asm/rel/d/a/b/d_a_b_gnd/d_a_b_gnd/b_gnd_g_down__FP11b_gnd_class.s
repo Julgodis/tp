@@ -97,11 +97,11 @@ lbl_805F95D4:
 /* 805F9610  4B D4 CE A0 */	b PSMTXCopy
 /* 805F9614  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805F9618  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805F961C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 805F961C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805F9620  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 805F9624  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805F9624  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805F9628  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 805F962C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 805F962C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805F9630  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 805F9634  38 7C 25 B4 */	addi r3, r28, 0x25b4
 /* 805F9638  38 9C 25 B8 */	addi r4, r28, 0x25b8
@@ -116,8 +116,8 @@ lbl_805F95D4:
 /* 805F965C  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 805F9660  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 805F9664  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 805F9668  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F966C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805F9668  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F966C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805F9670  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805F9674  38 80 00 06 */	li r4, 6
 /* 805F9678  38 A0 00 1F */	li r5, 0x1f
@@ -197,10 +197,10 @@ lbl_805F976C:
 lbl_805F9788:
 /* 805F9788  38 00 00 01 */	li r0, 1
 /* 805F978C  98 1F 39 65 */	stb r0, 0x3965(r31)
-/* 805F9790  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F9794  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805F9798  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805F979C  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 805F9790  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F9794  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805F9798  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805F979C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 805F97A0  28 00 00 27 */	cmplwi r0, 0x27
 /* 805F97A4  40 82 00 38 */	bne lbl_805F97DC
 /* 805F97A8  38 00 00 3C */	li r0, 0x3c
@@ -211,7 +211,7 @@ lbl_805F9788:
 /* 805F97BC  B0 1C 05 BC */	sth r0, 0x5bc(r28)
 /* 805F97C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805F97C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805F97C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805F97C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 805F97CC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805F97D0  38 80 00 1E */	li r4, 0x1e
 /* 805F97D4  38 A0 00 00 */	li r5, 0

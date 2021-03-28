@@ -7,9 +7,9 @@ lbl_8054518C:
 /* 805451A0  7C 7D 1B 78 */	mr r29, r3
 /* 805451A4  3C 80 80 55 */	lis r4, lit_3905@ha
 /* 805451A8  3B E4 A9 64 */	addi r31, r4, lit_3905@l
-/* 805451AC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805451B0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805451B4  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 805451AC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805451B0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805451B4  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 805451B8  7C 00 07 74 */	extsb r0, r0
 /* 805451BC  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805451C0  7C 84 02 14 */	add r4, r4, r0
@@ -68,19 +68,19 @@ lbl_80545280:
 /* 80545280  A8 1D 07 54 */	lha r0, 0x754(r29)
 /* 80545284  2C 00 00 02 */	cmpwi r0, 2
 /* 80545288  40 82 00 98 */	bne lbl_80545320
-/* 8054528C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80545290  38 A3 61 C0 */	addi r5, r3, struct_804061C0+0x0@l
-/* 80545294  80 C5 5D AC */	lwz r6, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 8054528C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80545290  38 A3 61 C0 */	addi r5, r3, g_dComIfG_gameInfo@l
+/* 80545294  80 C5 5D AC */	lwz r6, 0x5dac(r5)
 /* 80545298  38 80 00 03 */	li r4, 3
 /* 8054529C  B0 86 06 04 */	sth r4, 0x604(r6)
 /* 805452A0  38 60 00 00 */	li r3, 0
 /* 805452A4  90 66 06 0C */	stw r3, 0x60c(r6)
-/* 805452A8  80 A5 5D AC */	lwz r5, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 805452A8  80 A5 5D AC */	lwz r5, 0x5dac(r5)
 /* 805452AC  38 00 00 04 */	li r0, 4
-/* 805452B0  90 05 06 14 */	stw r0, 0x614(r5)	/* effective address: 804067D4 */
-/* 805452B4  90 85 06 0C */	stw r4, 0x60c(r5)	/* effective address: 804067CC */
-/* 805452B8  90 65 06 10 */	stw r3, 0x610(r5)	/* effective address: 804067D0 */
-/* 805452BC  B0 65 06 0A */	sth r3, 0x60a(r5)	/* effective address: 804067CA */
+/* 805452B0  90 05 06 14 */	stw r0, 0x614(r5)
+/* 805452B4  90 85 06 0C */	stw r4, 0x60c(r5)
+/* 805452B8  90 65 06 10 */	stw r3, 0x610(r5)
+/* 805452BC  B0 65 06 0A */	sth r3, 0x60a(r5)
 /* 805452C0  38 00 00 14 */	li r0, 0x14
 /* 805452C4  B0 1D 06 A2 */	sth r0, 0x6a2(r29)
 /* 805452C8  B0 7D 06 A4 */	sth r3, 0x6a4(r29)
@@ -127,13 +127,13 @@ lbl_80545320:
 /* 80545368  4B C3 B8 B0 */	b Reset__9dCamera_cF4cXyz4cXyz
 /* 8054536C  38 7E 02 48 */	addi r3, r30, 0x248
 /* 80545370  4B C1 C1 3C */	b Start__9dCamera_cFv
-/* 80545374  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80545378  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80545374  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80545378  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8054537C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80545380  4B AF D0 E8 */	b reset__14dEvt_control_cFv
-/* 80545384  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80545388  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8054538C  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80545384  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80545388  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8054538C  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80545390  38 00 00 02 */	li r0, 2
 /* 80545394  B0 04 06 04 */	sth r0, 0x604(r4)
 /* 80545398  38 00 00 01 */	li r0, 1
@@ -142,7 +142,7 @@ lbl_80545320:
 /* 805453A4  7F 83 E3 78 */	mr r3, r28
 /* 805453A8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 805453AC  3B E4 72 88 */	addi r31, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 805453B0  A0 9F 03 A0 */	lhz r4, 0x3a0(r31)	/* effective address: 803A7628 */
+/* 805453B0  A0 9F 03 A0 */	lhz r4, 0x3a0(r31)
 /* 805453B4  4B AE F6 08 */	b isEventBit__11dSv_event_cCFUs
 /* 805453B8  2C 03 00 00 */	cmpwi r3, 0
 /* 805453BC  40 82 00 20 */	bne lbl_805453DC
@@ -160,7 +160,7 @@ lbl_805453E4:
 /* 805453E4  7F 83 E3 78 */	mr r3, r28
 /* 805453E8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 805453EC  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 805453F0  A0 84 03 9E */	lhz r4, 0x39e(r4)	/* effective address: 803A7626 */
+/* 805453F0  A0 84 03 9E */	lhz r4, 0x39e(r4)
 /* 805453F4  4B AE F5 B0 */	b offEventBit__11dSv_event_cFUs
 /* 805453F8  7F 83 E3 78 */	mr r3, r28
 /* 805453FC  A0 9F 03 A0 */	lhz r4, 0x3a0(r31)

@@ -80,7 +80,7 @@ lbl_80BEB37C:
 /* 80BEB39C  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80BEB3A0  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BEB3A4  38 84 B5 48 */	addi r4, r4, l_arcName@l
-/* 80BEB3A8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BEB548 */
+/* 80BEB3A8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BEB3AC  4B 44 1C 5C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_80BEB3B0:
 /* 80BEB3B0  38 60 00 01 */	li r3, 1

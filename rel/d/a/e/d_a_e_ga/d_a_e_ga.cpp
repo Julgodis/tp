@@ -55,14 +55,14 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -73,33 +73,33 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daE_Ga_Draw(e_ga_class*); // 2
+void daE_Ga_Draw(e_ga_class*); // 2
 static void ga_fly(e_ga_class*, ga_s*); // 2
 static void bt_fly(e_ga_class*, ga_s*); // 2
 static void ga_control(e_ga_class*); // 2
 static void daE_Ga_Execute(e_ga_class*); // 2
-static bool daE_Ga_IsDelete(e_ga_class*); // 2
-static void daE_Ga_Delete(e_ga_class*); // 2
+bool daE_Ga_IsDelete(e_ga_class*); // 2
+void daE_Ga_Delete(e_ga_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_Ga_Create(fopAc_ac_c*); // 2
+void daE_Ga_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__12daE_Ga_HIO_cFv(); // 1
-extern "C" static void daE_Ga_Draw__FP10e_ga_class(); // 1
+extern "C" void daE_Ga_Draw__FP10e_ga_class(); // 1
 extern "C" static void ga_fly__FP10e_ga_classP4ga_s(); // 1
 extern "C" static void bt_fly__FP10e_ga_classP4ga_s(); // 1
 extern "C" static void ga_control__FP10e_ga_class(); // 1
 extern "C" static void daE_Ga_Execute__FP10e_ga_class(); // 1
-extern "C" static bool daE_Ga_IsDelete__FP10e_ga_class(); // 1
-extern "C" static void daE_Ga_Delete__FP10e_ga_class(); // 1
+extern "C" bool daE_Ga_IsDelete__FP10e_ga_class(); // 1
+extern "C" void daE_Ga_Delete__FP10e_ga_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_Ga_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_Ga_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__4ga_sFv(); // 1
 extern "C" void __ct__4ga_sFv(); // 1
 extern "C" void __dt__12daE_Ga_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_ga_cpp(); // 1
-extern "C" extern u8 const lit_3718[8];
 extern "C" extern u8 const data_804FBBC0[4];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_Ga_Method[8];
 extern "C" extern void* g_profile_E_GA[12];
 
 // 
@@ -154,12 +154,10 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -171,39 +169,39 @@ extern "C" void __register_global_object(); // 1
 /* 804FBB90-804FBB94 0004+00 s=5 e=0 z=0  None .rodata    @3646                                                        */
 SECTION_RODATA static u32 const lit_3646 = 0x3F800000;
 
-/* 804FBBE0-804FBC00 0020+00 s=1 e=0 z=0  None .data      l_daE_Ga_Method                                              */
-SECTION_DATA static void* l_daE_Ga_Method[8] = {
-	/* 0    */ (void*)daE_Ga_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_Ga_Delete__FP10e_ga_class,
-	/* 2    */ (void*)daE_Ga_Execute__FP10e_ga_class,
-	/* 3    */ (void*)daE_Ga_IsDelete__FP10e_ga_class,
-	/* 4    */ (void*)daE_Ga_Draw__FP10e_ga_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804FBBE0-804FBC00 0020+00 s=0 e=0 z=0  None .data      l_daE_Ga_Method                                              */
+SECTION_DATA void* l_daE_Ga_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804FBC00-804FBC30 0030+00 s=0 e=0 z=1  None .data      g_profile_E_GA                                               */
+/* 804FBC00-804FBC30 0030+00 s=0 e=0 z=0  None .data      g_profile_E_GA                                               */
 SECTION_DATA void* g_profile_E_GA[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01C70000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00004D7C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x008A0000,
-	/* 9    */ (void*)&l_daE_Ga_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01C70000,
+	(void*)NULL,
+	(void*)0x00004D7C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x008A0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 804FBC30-804FBC3C 000C+00 s=2 e=0 z=0  None .data      __vt__12daE_Ga_HIO_c                                         */
 SECTION_DATA static void* __vt__12daE_Ga_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12daE_Ga_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804FB0EC-804FB110 0024+00 s=1 e=0 z=0  None .text      __ct__12daE_Ga_HIO_cFv                                       */
@@ -217,11 +215,11 @@ asm daE_Ga_HIO_c::daE_Ga_HIO_c() {
 #pragma pop
 
 
-/* 804FB110-804FB1B0 00A0+00 s=1 e=0 z=0  None .text      daE_Ga_Draw__FP10e_ga_class                                  */
+/* 804FB110-804FB1B0 00A0+00 s=0 e=0 z=0  None .text      daE_Ga_Draw__FP10e_ga_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Ga_Draw(e_ga_class* param_0) {
+asm void daE_Ga_Draw(e_ga_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ga/d_a_e_ga/daE_Ga_Draw__FP10e_ga_class.s"
 }
@@ -245,6 +243,11 @@ SECTION_RODATA static u8 const lit_3716[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
+/* 804FBBA8-804FBBB0 0008+00 s=2 e=0 z=0  None .rodata    @3718                                                        */
+SECTION_RODATA static u8 const lit_3718[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 804FB1B0-804FB3A8 01F8+00 s=1 e=0 z=0  None .text      ga_fly__FP10e_ga_classP4ga_s                                 */
 #pragma push
 #pragma optimization_level 0
@@ -257,11 +260,6 @@ asm static void ga_fly(e_ga_class* param_0, ga_s* param_1) {
 
 
 /* ############################################################################################## */
-/* 804FBBA8-804FBBB0 0008+00 s=0 e=0 z=0  None .rodata    @3718                                                        */
-SECTION_RODATA u8 const lit_3718[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 804FBBB0-804FBBB4 0004+00 s=1 e=0 z=0  None .rodata    @3759                                                        */
 SECTION_RODATA static u32 const lit_3759 = 0x41400000;
 
@@ -297,7 +295,7 @@ asm static void ga_control(e_ga_class* param_0) {
 #pragma pop
 
 
-/* 804FB6F8-804FB71C 0024+00 s=2 e=0 z=0  None .text      daE_Ga_Execute__FP10e_ga_class                               */
+/* 804FB6F8-804FB71C 0024+00 s=1 e=0 z=0  None .text      daE_Ga_Execute__FP10e_ga_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,8 +306,8 @@ asm static void daE_Ga_Execute(e_ga_class* param_0) {
 #pragma pop
 
 
-/* 804FB71C-804FB724 0008+00 s=1 e=0 z=0  None .text      daE_Ga_IsDelete__FP10e_ga_class                              */
-static bool daE_Ga_IsDelete(e_ga_class* param_0) {
+/* 804FB71C-804FB724 0008+00 s=0 e=0 z=0  None .text      daE_Ga_IsDelete__FP10e_ga_class                              */
+bool daE_Ga_IsDelete(e_ga_class* param_0) {
 	return true;
 }
 
@@ -343,11 +341,11 @@ SECTION_DEAD char const* const stringBase_804FBBD9 = "E_Ga";
 /* 804FBC48-804FBC4C 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_804FBC48[4];
 
-/* 804FB724-804FB7C4 00A0+00 s=1 e=0 z=0  None .text      daE_Ga_Delete__FP10e_ga_class                                */
+/* 804FB724-804FB7C4 00A0+00 s=0 e=0 z=0  None .text      daE_Ga_Delete__FP10e_ga_class                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Ga_Delete(e_ga_class* param_0) {
+asm void daE_Ga_Delete(e_ga_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ga/d_a_e_ga/daE_Ga_Delete__FP10e_ga_class.s"
 }
@@ -372,11 +370,11 @@ static u8 lit_3641[12];
 /* 804FBC58-804FBC64 000C+00 s=2 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[12];
 
-/* 804FB874-804FBAB8 0244+00 s=1 e=0 z=0  None .text      daE_Ga_Create__FP10fopAc_ac_c                                */
+/* 804FB874-804FBAB8 0244+00 s=0 e=0 z=0  None .text      daE_Ga_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Ga_Create(fopAc_ac_c* param_0) {
+asm void daE_Ga_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_ga/d_a_e_ga/daE_Ga_Create__FP10fopAc_ac_c.s"
 }
@@ -400,7 +398,7 @@ ga_s::ga_s() {
 }
 
 
-/* 804FBAF8-804FBB40 0048+00 s=2 e=0 z=0  None .text      __dt__12daE_Ga_HIO_cFv                                       */
+/* 804FBAF8-804FBB40 0048+00 s=1 e=0 z=0  None .text      __dt__12daE_Ga_HIO_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -411,7 +409,7 @@ asm daE_Ga_HIO_c::~daE_Ga_HIO_c() {
 #pragma pop
 
 
-/* 804FBB40-804FBB7C 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_ga_cpp                                         */
+/* 804FBB40-804FBB7C 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_ga_cpp                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

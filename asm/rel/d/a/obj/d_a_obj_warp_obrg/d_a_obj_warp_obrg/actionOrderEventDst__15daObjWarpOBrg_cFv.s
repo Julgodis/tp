@@ -7,8 +7,8 @@ lbl_80D2A93C:
 /* 80D2A950  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80D2A954  28 00 00 02 */	cmplwi r0, 2
 /* 80D2A958  40 82 00 5C */	bne lbl_80D2A9B4
-/* 80D2A95C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2A960  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2A95C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2A960  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2A964  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D2A968  88 1F 04 99 */	lbz r0, 0x499(r31)
 /* 80D2A96C  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
@@ -19,8 +19,8 @@ lbl_80D2A93C:
 /* 80D2A980  38 C0 00 00 */	li r6, 0
 /* 80D2A984  4B 31 D1 98 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
 /* 80D2A988  90 7F 06 30 */	stw r3, 0x630(r31)
-/* 80D2A98C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2A990  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2A98C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2A990  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2A994  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D2A998  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D2A99C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

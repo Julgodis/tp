@@ -82,16 +82,16 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803ABA38-803ABA44 000C+00 s=2 e=0 z=0  None .data      __vt__16dBgS_PolyPassChk                                     */
 SECTION_DATA static void* __vt__16dBgS_PolyPassChk[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dBgS_PolyPassChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dBgS_PolyPassChkFv,
 };
 
 /* 803ABA44-803ABA50 000C+00 s=3 e=0 z=0  None .data      __vt__16cBgS_PolyPassChk                                     */
 SECTION_DATA static void* __vt__16cBgS_PolyPassChk[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16cBgS_PolyPassChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16cBgS_PolyPassChkFv,
 };
 
 /* 80078D64-80078DB0 004C+00 s=0 e=1 z=0  None .text      __ct__16dBgS_PolyPassChkFv                                   */

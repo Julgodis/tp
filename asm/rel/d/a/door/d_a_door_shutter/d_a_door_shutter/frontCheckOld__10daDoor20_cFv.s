@@ -4,9 +4,9 @@ lbl_80464BD8:
 /* 80464BE0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80464BE4  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80464BE8  7C 7F 1B 78 */	mr r31, r3
-/* 80464BEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80464BF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80464BF4  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80464BEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80464BF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80464BF4  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80464BF8  38 61 00 18 */	addi r3, r1, 0x18
 /* 80464BFC  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80464C00  38 BF 04 D0 */	addi r5, r31, 0x4d0

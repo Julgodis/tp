@@ -10,7 +10,7 @@ lbl_80C8550C:
 /* 80C8552C  C0 5F 04 D4 */	lfs f2, 0x4d4(r31)
 /* 80C85530  3C 80 80 C8 */	lis r4, l_HIO@ha
 /* 80C85534  38 84 62 CC */	addi r4, r4, l_HIO@l
-/* 80C85538  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 80C862E8 */
+/* 80C85538  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 80C8553C  EC 42 00 2A */	fadds f2, f2, f0
 /* 80C85540  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
 /* 80C85544  4B 6C 13 A4 */	b PSMTXTrans

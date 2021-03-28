@@ -8,7 +8,7 @@ lbl_8045BED0:
 /* 8045BEE8  38 C3 CA C4 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 8045BEEC  3C 60 80 46 */	lis r3, data_8045CE40@ha
 /* 8045BEF0  38 A3 CE 40 */	addi r5, r3, data_8045CE40@l
-/* 8045BEF4  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 8045CE40 */
+/* 8045BEF4  88 05 00 00 */	lbz r0, 0(r5)
 /* 8045BEF8  7C 00 07 75 */	extsb. r0, r0
 /* 8045BEFC  40 82 00 70 */	bne lbl_8045BF6C
 /* 8045BF00  80 66 02 10 */	lwz r3, 0x210(r6)

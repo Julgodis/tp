@@ -7,9 +7,9 @@ lbl_80D14584:
 /* 80D14598  7C 7F 1B 78 */	mr r31, r3
 /* 80D1459C  3C 80 80 D1 */	lis r4, lit_3806@ha
 /* 80D145A0  3B C4 55 E8 */	addi r30, r4, lit_3806@l
-/* 80D145A4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D145A8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D145AC  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 80D145A4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D145A8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D145AC  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 80D145B0  7C 00 07 74 */	extsb r0, r0
 /* 80D145B4  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80D145B8  7C 84 02 14 */	add r4, r4, r0
@@ -89,7 +89,7 @@ lbl_80D1463C:
 /* 80D146D0  90 01 00 08 */	stw r0, 8(r1)
 /* 80D146D4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D146D8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D146DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D146DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D146E0  38 81 00 08 */	addi r4, r1, 8
 /* 80D146E4  38 A0 00 00 */	li r5, 0
 /* 80D146E8  38 C0 00 00 */	li r6, 0
@@ -125,8 +125,8 @@ lbl_80D14708:
 /* 80D1475C  38 7D 02 48 */	addi r3, r29, 0x248
 /* 80D14760  38 80 00 00 */	li r4, 0
 /* 80D14764  4B 44 E8 A8 */	b SetTrimSize__9dCamera_cFl
-/* 80D14768  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D1476C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D14768  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1476C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D14770  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80D14774  4B 32 DC F4 */	b reset__14dEvt_control_cFv
 /* 80D14778  38 00 00 00 */	li r0, 0

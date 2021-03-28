@@ -2,9 +2,9 @@ lbl_807F3168:
 /* 807F3168  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 807F316C  7C 08 02 A6 */	mflr r0
 /* 807F3170  90 01 00 14 */	stw r0, 0x14(r1)
-/* 807F3174  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807F3178  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807F317C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807F3174  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807F3178  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807F317C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 807F3180  C0 03 06 8C */	lfs f0, 0x68c(r3)
 /* 807F3184  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 807F3188  40 80 00 24 */	bge lbl_807F31AC

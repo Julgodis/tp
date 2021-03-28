@@ -23,8 +23,8 @@ lbl_80A15138:
 /* 80A15140  4B 73 79 6C */	b daNpcT_chkEvtBit__FUl
 /* 80A15144  2C 03 00 00 */	cmpwi r3, 0
 /* 80A15148  40 82 00 28 */	bne lbl_80A15170
-/* 80A1514C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A15150  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A1514C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A15150  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A15154  38 63 01 00 */	addi r3, r3, 0x100
 /* 80A15158  38 80 00 02 */	li r4, 2
 /* 80A1515C  38 A0 00 00 */	li r5, 0

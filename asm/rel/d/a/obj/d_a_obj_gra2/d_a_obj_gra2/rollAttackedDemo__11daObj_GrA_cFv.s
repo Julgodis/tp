@@ -7,10 +7,10 @@ lbl_80C0AF94:
 /* 80C0AFA8  7C 7B 1B 78 */	mr r27, r3
 /* 80C0AFAC  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C0AFB0  3B E3 FA 7C */	addi r31, r3, m__17daObj_GrA_Param_c@l
-/* 80C0AFB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C0AFB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C0AFBC  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80C0AFC0  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 80C0AFB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C0AFB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C0AFBC  83 C3 5D AC */	lwz r30, 0x5dac(r3)
+/* 80C0AFC0  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 80C0AFC4  7C 00 07 74 */	extsb r0, r0
 /* 80C0AFC8  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80C0AFCC  7C 63 02 14 */	add r3, r3, r0
@@ -83,9 +83,9 @@ lbl_80C0B034:
 /* 80C0B0D0  C0 1B 20 7C */	lfs f0, 0x207c(r27)
 /* 80C0B0D4  D0 1B 20 60 */	stfs f0, 0x2060(r27)
 lbl_80C0B0D8:
-/* 80C0B0D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C0B0DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C0B0E0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80C0B0D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C0B0DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C0B0E0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80C0B0E4  28 00 00 00 */	cmplwi r0, 0
 /* 80C0B0E8  40 82 00 38 */	bne lbl_80C0B120
 /* 80C0B0EC  A0 1B 00 F8 */	lhz r0, 0xf8(r27)
@@ -659,8 +659,8 @@ lbl_80C0B8B8:
 /* 80C0B908  38 7D 02 48 */	addi r3, r29, 0x248
 /* 80C0B90C  38 80 00 00 */	li r4, 0
 /* 80C0B910  4B 55 76 FC */	b SetTrimSize__9dCamera_cFl
-/* 80C0B914  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C0B918  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C0B914  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C0B918  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C0B91C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80C0B920  4B 43 6B 48 */	b reset__14dEvt_control_cFv
 /* 80C0B924  38 00 00 00 */	li r0, 0

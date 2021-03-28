@@ -35,8 +35,8 @@ lbl_806510C0:
 /* 80651144  C0 1F 00 3C */	lfs f0, 0x3c(r31)
 /* 80651148  EC 01 00 2A */	fadds f0, f1, f0
 /* 8065114C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80651150  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80651154  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80651150  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80651154  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80651158  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8065115C  C3 DF 00 40 */	lfs f30, 0x40(r31)
 /* 80651160  C3 FF 00 2C */	lfs f31, 0x2c(r31)

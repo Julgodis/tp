@@ -185,7 +185,7 @@ lbl_8078BEC0:
 /* 8078BED4  C0 3E 06 94 */	lfs f1, 0x694(r30)
 /* 8078BED8  3C 80 80 79 */	lis r4, l_HIO@ha
 /* 8078BEDC  38 84 E0 EC */	addi r4, r4, l_HIO@l
-/* 8078BEE0  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 8078E0FC */
+/* 8078BEE0  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 8078BEE4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8078BEE8  C0 5F 00 1C */	lfs f2, 0x1c(r31)
 /* 8078BEEC  FC 60 F8 90 */	fmr f3, f31

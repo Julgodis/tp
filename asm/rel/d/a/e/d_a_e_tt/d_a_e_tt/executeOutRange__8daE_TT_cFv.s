@@ -41,9 +41,9 @@ lbl_807C0394:
 /* 807C03D0  4E 80 04 21 */	bctrl 
 lbl_807C03D4:
 /* 807C03D4  7F C3 F3 78 */	mr r3, r30
-/* 807C03D8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807C03DC  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 807C03E0  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 807C03D8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807C03DC  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 807C03E0  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 807C03E4  4B 85 A3 2C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807C03E8  7C 64 1B 78 */	mr r4, r3
 /* 807C03EC  38 7E 04 E6 */	addi r3, r30, 0x4e6
@@ -110,7 +110,7 @@ lbl_807C0478:
 /* 807C04D8  EC 20 08 28 */	fsubs f1, f0, f1
 /* 807C04DC  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807C04E0  38 63 23 EC */	addi r3, r3, l_HIO@l
-/* 807C04E4  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 807C2400 */
+/* 807C04E4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 807C04E8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807C04EC  40 81 00 2C */	ble lbl_807C0518
 /* 807C04F0  3C 60 80 7C */	lis r3, m_attack_tt@ha

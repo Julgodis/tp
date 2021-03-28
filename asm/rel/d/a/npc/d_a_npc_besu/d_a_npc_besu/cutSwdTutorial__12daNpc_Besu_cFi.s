@@ -10,8 +10,8 @@ lbl_8053A7A0:
 /* 8053A7C0  3B E3 E7 54 */	addi r31, r3, m__18daNpc_Besu_Param_c@l
 /* 8053A7C4  3B C0 00 00 */	li r30, 0
 /* 8053A7C8  3B 60 FF FF */	li r27, -1
-/* 8053A7CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053A7D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8053A7CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053A7D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8053A7D4  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 8053A7D8  7F 83 E3 78 */	mr r3, r28
 /* 8053A7DC  3C A0 80 54 */	lis r5, struct_8053E908+0x0@ha

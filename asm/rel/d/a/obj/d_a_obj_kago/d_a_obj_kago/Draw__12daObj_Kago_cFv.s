@@ -29,10 +29,10 @@ lbl_80C332D0:
 /* 80C3333C  4B 3D A9 88 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80C33340  38 00 00 00 */	li r0, 0
 /* 80C33344  90 01 00 08 */	stw r0, 8(r1)
-/* 80C33348  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C3334C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C33350  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80C33354  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80C33348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C3334C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C33350  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80C33354  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80C33358  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 80C3335C  7D 89 03 A6 */	mtctr r12
 /* 80C33360  4E 80 04 21 */	bctrl 

@@ -3,11 +3,11 @@ lbl_80AD2748:
 /* 80AD274C  38 C4 4B 90 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80AD2750  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80AD2754  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80AD2758  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80AD275C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80AD2758  80 85 00 00 */	lwz r4, 0(r5)
+/* 80AD275C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80AD2760  90 83 10 CC */	stw r4, 0x10cc(r3)
 /* 80AD2764  90 03 10 D0 */	stw r0, 0x10d0(r3)
-/* 80AD2768  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80AD2768  80 05 00 08 */	lwz r0, 8(r5)
 /* 80AD276C  90 03 10 D4 */	stw r0, 0x10d4(r3)
 /* 80AD2770  88 03 10 C1 */	lbz r0, 0x10c1(r3)
 /* 80AD2774  2C 00 00 03 */	cmpwi r0, 3

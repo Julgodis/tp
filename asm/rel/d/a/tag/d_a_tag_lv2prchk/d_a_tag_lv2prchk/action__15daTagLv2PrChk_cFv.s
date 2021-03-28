@@ -6,7 +6,7 @@ lbl_805A4D68:
 /* 805A4D78  38 E4 53 6C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 805A4D7C  3C 80 80 5A */	lis r4, data_805A5410@ha
 /* 805A4D80  38 C4 54 10 */	addi r6, r4, data_805A5410@l
-/* 805A4D84  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 805A5410 */
+/* 805A4D84  88 06 00 00 */	lbz r0, 0(r6)
 /* 805A4D88  7C 00 07 75 */	extsb. r0, r0
 /* 805A4D8C  40 82 00 40 */	bne lbl_805A4DCC
 /* 805A4D90  80 87 00 20 */	lwz r4, 0x20(r7)

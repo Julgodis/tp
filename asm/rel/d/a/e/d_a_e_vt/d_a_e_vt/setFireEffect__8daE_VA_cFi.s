@@ -12,9 +12,9 @@ lbl_807C4844:
 /* 807C486C  D0 21 00 24 */	stfs f1, 0x24(r1)
 /* 807C4870  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 807C4874  1C A7 00 03 */	mulli r5, r7, 3
-/* 807C4878  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C487C  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 807C4880  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 807C4878  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C487C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 807C4880  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 807C4884  38 00 00 FF */	li r0, 0xff
 /* 807C4888  90 01 00 08 */	stw r0, 8(r1)
 /* 807C488C  38 80 00 00 */	li r4, 0

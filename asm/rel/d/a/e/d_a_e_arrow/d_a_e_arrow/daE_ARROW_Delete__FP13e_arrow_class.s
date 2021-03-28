@@ -9,9 +9,9 @@ lbl_8067E30C:
 /* 8067E328  4B 9A EC E0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 8067E32C  38 7F 0A 18 */	addi r3, r31, 0xa18
 /* 8067E330  4B C3 FC C8 */	b deleteObject__14Z2SoundObjBaseFv
-/* 8067E334  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8067E338  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8067E33C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8067E334  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8067E338  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8067E33C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8067E340  38 63 02 10 */	addi r3, r3, 0x210
 /* 8067E344  80 9F 09 EC */	lwz r4, 0x9ec(r31)
 /* 8067E348  4B 9C D5 D0 */	b getEmitter__Q213dPa_control_c7level_cFUl

@@ -19,7 +19,6 @@ extern void* const data_80C8B998[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv8OptiLift_cpp(); // 1
 
 // 
 // Declarations:

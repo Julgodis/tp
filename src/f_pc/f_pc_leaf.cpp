@@ -154,13 +154,13 @@ asm static void fpcLf_Create(leafdraw_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 803A39E8-803A3A00 0014+04 s=0 e=27 z=756  None .data      g_fpcLf_Method                                               */
+/* 803A39E8-803A3A00 0014+04 s=0 e=27 z=0  None .data      g_fpcLf_Method                                               */
 SECTION_DATA void* g_fpcLf_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fpcLf_Create__FP14leafdraw_class,
-	/* 1    */ (void*)fpcLf_Delete__FP14leafdraw_class,
-	/* 2    */ (void*)fpcLf_Execute__FP14leafdraw_class,
-	/* 3    */ (void*)fpcLf_IsDelete__FP14leafdraw_class,
-	/* 4    */ (void*)fpcLf_Draw__FP14leafdraw_class,
+	(void*)fpcLf_Create__FP14leafdraw_class,
+	(void*)fpcLf_Delete__FP14leafdraw_class,
+	(void*)fpcLf_Execute__FP14leafdraw_class,
+	(void*)fpcLf_IsDelete__FP14leafdraw_class,
+	(void*)fpcLf_Draw__FP14leafdraw_class,
 	/* padding */
 	NULL,
 };

@@ -23,9 +23,9 @@ lbl_8070D120:
 /* 8070D120  A8 1D 00 08 */	lha r0, 8(r29)
 /* 8070D124  2C 00 00 FE */	cmpwi r0, 0xfe
 /* 8070D128  40 82 01 58 */	bne lbl_8070D280
-/* 8070D12C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070D130  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8070D134  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 8070D12C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070D130  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8070D134  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 8070D138  54 00 03 19 */	rlwinm. r0, r0, 0, 0xc, 0xc
 /* 8070D13C  40 82 01 44 */	bne lbl_8070D280
 /* 8070D140  4B A5 27 5C */	b checkBoomerangCharge__9daPy_py_cFv
@@ -119,9 +119,9 @@ lbl_8070D26C:
 /* 8070D278  7F A3 EB 78 */	mr r3, r29
 /* 8070D27C  48 00 00 34 */	b lbl_8070D2B0
 lbl_8070D280:
-/* 8070D280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070D284  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8070D288  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 8070D280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070D284  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8070D288  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 8070D28C  54 00 05 6B */	rlwinm. r0, r0, 0, 0x15, 0x15
 /* 8070D290  41 82 00 1C */	beq lbl_8070D2AC
 /* 8070D294  C0 3E 06 B0 */	lfs f1, 0x6b0(r30)

@@ -64,9 +64,9 @@ lbl_80A3CD9C:
 /* 80A3CDA4  38 00 00 01 */	li r0, 1
 /* 80A3CDA8  98 1F 0E 39 */	stb r0, 0xe39(r31)
 /* 80A3CDAC  7F E3 FB 78 */	mr r3, r31
-/* 80A3CDB0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A3CDB4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A3CDB8  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A3CDB0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A3CDB4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A3CDB8  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A3CDBC  4B 5D D9 54 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A3CDC0  7C 64 1B 78 */	mr r4, r3
 /* 80A3CDC4  38 7F 0D AE */	addi r3, r31, 0xdae

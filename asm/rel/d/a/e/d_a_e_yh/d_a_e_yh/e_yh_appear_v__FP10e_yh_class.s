@@ -105,7 +105,7 @@ lbl_807FE5EC:
 /* 807FE614  38 7E 06 94 */	addi r3, r30, 0x694
 /* 807FE618  3C 80 80 80 */	lis r4, l_HIO@ha
 /* 807FE61C  38 84 47 28 */	addi r4, r4, l_HIO@l
-/* 807FE620  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80804738 */
+/* 807FE620  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 807FE624  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807FE628  C0 7F 00 8C */	lfs f3, 0x8c(r31)
 /* 807FE62C  4B A7 14 10 */	b cLib_addCalc2__FPffff

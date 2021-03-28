@@ -39,10 +39,10 @@ lbl_807BDCD8:
 /* 807BDCDC  38 03 00 02 */	addi r0, r3, 0x0002 /* 0x04000002@l */
 /* 807BDCE0  7C 80 00 39 */	and. r0, r4, r0
 /* 807BDCE4  41 82 00 68 */	beq lbl_807BDD4C
-/* 807BDCE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807BDCEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807BDCF0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 807BDCF4  88 03 05 69 */	lbz r0, 0x569(r3)	/* effective address: 80406729 */
+/* 807BDCE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807BDCEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807BDCF0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 807BDCF4  88 03 05 69 */	lbz r0, 0x569(r3)
 /* 807BDCF8  28 00 00 04 */	cmplwi r0, 4
 /* 807BDCFC  40 80 00 10 */	bge lbl_807BDD0C
 /* 807BDD00  88 05 00 77 */	lbz r0, 0x77(r5)

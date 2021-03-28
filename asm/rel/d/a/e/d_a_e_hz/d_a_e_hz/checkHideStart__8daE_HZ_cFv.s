@@ -9,9 +9,9 @@ lbl_806EAB68:
 /* 806EAB84  3B C3 0B 30 */	addi r30, r3, lit_1109@l
 /* 806EAB88  3C 60 80 6F */	lis r3, lit_3966@ha
 /* 806EAB8C  3B E3 08 60 */	addi r31, r3, lit_3966@l
-/* 806EAB90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806EAB94  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 806EAB98  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806EAB90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EAB94  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 806EAB98  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 806EAB9C  A8 1C 06 DE */	lha r0, 0x6de(r28)
 /* 806EABA0  2C 00 00 00 */	cmpwi r0, 0
 /* 806EABA4  41 82 00 0C */	beq lbl_806EABB0

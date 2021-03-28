@@ -23,8 +23,8 @@ lbl_80829E44:
 /* 80829E98  3B C0 00 00 */	li r30, 0
 /* 80829E9C  3B 60 00 00 */	li r27, 0
 /* 80829EA0  7C 78 07 34 */	extsh r24, r3
-/* 80829EA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80829EA8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80829EA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80829EA8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80829EAC  3A E3 0F 38 */	addi r23, r3, 0xf38
 /* 80829EB0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80829EB4  3B 43 07 68 */	addi r26, r3, calc_mtx@l
@@ -32,7 +32,7 @@ lbl_80829E44:
 /* 80829EBC  C3 D9 00 1C */	lfs f30, 0x1c(r25)
 /* 80829EC0  C3 F9 00 70 */	lfs f31, 0x70(r25)
 lbl_80829EC4:
-/* 80829EC4  80 7A 00 00 */	lwz r3, 0(r26)	/* effective address: 80450768 */
+/* 80829EC4  80 7A 00 00 */	lwz r3, 0(r26)
 /* 80829EC8  7C 18 02 14 */	add r0, r24, r0
 /* 80829ECC  7C 04 07 34 */	extsh r4, r0
 /* 80829ED0  4B 7E 25 0C */	b mDoMtx_YrotS__FPA4_fs

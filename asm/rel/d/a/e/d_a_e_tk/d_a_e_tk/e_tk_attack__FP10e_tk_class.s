@@ -114,7 +114,7 @@ lbl_807B8F0C:
 /* 807B8F0C  7F E3 FB 78 */	mr r3, r31
 /* 807B8F10  3C 80 80 7C */	lis r4, l_HIO@ha
 /* 807B8F14  38 84 A4 48 */	addi r4, r4, l_HIO@l
-/* 807B8F18  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 807BA454 */
+/* 807B8F18  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 807B8F1C  38 80 40 00 */	li r4, 0x4000
 /* 807B8F20  4B FF F5 41 */	bl pl_check__FP10e_tk_classfs
 /* 807B8F24  2C 03 00 00 */	cmpwi r3, 0

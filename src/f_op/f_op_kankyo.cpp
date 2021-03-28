@@ -134,11 +134,11 @@ asm static void fopKy_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A3940-803A3958 0014+04 s=0 e=7 z=0  None .data      g_fopKy_Method                                               */
 SECTION_DATA void* g_fopKy_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopKy_Create__FPv,
-	/* 1    */ (void*)fopKy_Delete__FPv,
-	/* 2    */ (void*)fopKy_Execute__FPv,
-	/* 3    */ (void*)fopKy_IsDelete__FPv,
-	/* 4    */ (void*)fopKy_Draw__FPv,
+	(void*)fopKy_Create__FPv,
+	(void*)fopKy_Delete__FPv,
+	(void*)fopKy_Execute__FPv,
+	(void*)fopKy_IsDelete__FPv,
+	(void*)fopKy_Draw__FPv,
 	/* padding */
 	NULL,
 };

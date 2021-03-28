@@ -34,11 +34,11 @@ lbl_807CFBC4:
 /* 807CFC44  B0 1E 06 98 */	sth r0, 0x698(r30)
 /* 807CFC48  3C 60 80 7D */	lis r3, entry_no@ha
 /* 807CFC4C  38 83 23 84 */	addi r4, r3, entry_no@l
-/* 807CFC50  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 807D2384 */
+/* 807CFC50  80 04 00 00 */	lwz r0, 0(r4)
 /* 807CFC54  90 1E 05 B8 */	stw r0, 0x5b8(r30)
-/* 807CFC58  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807D2384 */
+/* 807CFC58  80 64 00 00 */	lwz r3, 0(r4)
 /* 807CFC5C  38 03 00 01 */	addi r0, r3, 1
-/* 807CFC60  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 807D2384 */
+/* 807CFC60  90 04 00 00 */	stw r0, 0(r4)
 /* 807CFC64  80 7F 06 4C */	lwz r3, 0x64c(r31)
 /* 807CFC68  38 03 00 01 */	addi r0, r3, 1
 /* 807CFC6C  90 1F 06 4C */	stw r0, 0x64c(r31)

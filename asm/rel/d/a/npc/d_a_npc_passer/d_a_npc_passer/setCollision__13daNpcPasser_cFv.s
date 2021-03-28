@@ -10,8 +10,8 @@ lbl_80AA48D8:
 /* 80AA48F8  80 1F 04 A0 */	lwz r0, 0x4a0(r31)
 /* 80AA48FC  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80AA4900  40 82 00 18 */	bne lbl_80AA4918
-/* 80AA4904  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AA4908  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AA4904  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AA4908  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AA490C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80AA4910  38 9F 08 8C */	addi r4, r31, 0x88c
 /* 80AA4914  4B 7C 02 94 */	b Set__4cCcSFP8cCcD_Obj

@@ -14,9 +14,9 @@ lbl_80CEBE24:
 /* 80CEBE54  D0 03 09 40 */	stfs f0, 0x940(r3)
 /* 80CEBE58  38 00 00 00 */	li r0, 0
 /* 80CEBE5C  90 03 09 0C */	stw r0, 0x90c(r3)
-/* 80CEBE60  C0 05 01 5C */	lfs f0, 0x15c(r5)	/* effective address: 80CECC10 */
+/* 80CEBE60  C0 05 01 5C */	lfs f0, 0x15c(r5)
 /* 80CEBE64  D0 03 05 30 */	stfs f0, 0x530(r3)
-/* 80CEBE68  C0 05 01 60 */	lfs f0, 0x160(r5)	/* effective address: 80CECC14 */
+/* 80CEBE68  C0 05 01 60 */	lfs f0, 0x160(r5)
 /* 80CEBE6C  D0 03 05 34 */	stfs f0, 0x534(r3)
 /* 80CEBE70  C0 03 07 40 */	lfs f0, 0x740(r3)
 /* 80CEBE74  D0 03 04 D4 */	stfs f0, 0x4d4(r3)

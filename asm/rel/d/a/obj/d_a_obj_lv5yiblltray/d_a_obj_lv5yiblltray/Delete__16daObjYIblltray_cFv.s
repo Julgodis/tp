@@ -23,7 +23,7 @@ lbl_80C70448:
 lbl_80C70458:
 /* 80C70458  3C 80 80 C7 */	lis r4, l_arcName@ha
 /* 80C7045C  38 84 0A 38 */	addi r4, r4, l_arcName@l
-/* 80C70460  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C70A38 */
+/* 80C70460  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C70464  4B 3B CB A4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C70468  38 60 00 01 */	li r3, 1
 /* 80C7046C  83 E1 00 1C */	lwz r31, 0x1c(r1)

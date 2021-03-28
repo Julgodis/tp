@@ -7,9 +7,9 @@ lbl_806F13A8:
 /* 806F13BC  7C 7C 1B 78 */	mr r28, r3
 /* 806F13C0  3C 60 80 6F */	lis r3, lit_3767@ha
 /* 806F13C4  3B C3 55 14 */	addi r30, r3, lit_3767@l
-/* 806F13C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F13CC  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 806F13D0  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 806F13C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F13CC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 806F13D0  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 806F13D4  38 00 00 05 */	li r0, 5
 /* 806F13D8  B0 1C 06 B4 */	sth r0, 0x6b4(r28)
 /* 806F13DC  3C 60 00 07 */	lis r3, 0x0007 /* 0x000704E2@ha */
@@ -34,7 +34,7 @@ lbl_806F13A8:
 lbl_806F1428:
 /* 806F1428  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806F142C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806F1430  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806F1430  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F1434  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 806F1438  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000086@ha */
 /* 806F143C  38 84 00 86 */	addi r4, r4, 0x0086 /* 0x01000086@l */
@@ -77,7 +77,7 @@ lbl_806F14A4:
 /* 806F14C8  4B B7 F1 40 */	b cLib_addCalcAngleS2__FPssss
 /* 806F14CC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806F14D0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806F14D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806F14D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F14D8  A8 9C 05 D0 */	lha r4, 0x5d0(r28)
 /* 806F14DC  4B 91 AF 00 */	b mDoMtx_YrotS__FPA4_fs
 /* 806F14E0  A8 9C 06 94 */	lha r4, 0x694(r28)
@@ -222,7 +222,7 @@ lbl_806F16E0:
 lbl_806F16EC:
 /* 806F16EC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806F16F0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806F16F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806F16F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F16F8  A8 9C 06 DC */	lha r4, 0x6dc(r28)
 /* 806F16FC  4B 91 AC E0 */	b mDoMtx_YrotS__FPA4_fs
 /* 806F1700  C0 1E 00 04 */	lfs f0, 4(r30)

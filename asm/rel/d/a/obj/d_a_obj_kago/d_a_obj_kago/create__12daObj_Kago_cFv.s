@@ -194,8 +194,8 @@ lbl_80C31FA0:
 /* 80C32024  38 1C 07 50 */	addi r0, r28, 0x750
 /* 80C32028  90 1C 09 88 */	stw r0, 0x988(r28)
 /* 80C3202C  38 7C 05 78 */	addi r3, r28, 0x578
-/* 80C32030  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C32034  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C32030  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C32034  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C32038  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C3203C  4B 44 4A 70 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C32040  80 1C 06 54 */	lwz r0, 0x654(r28)

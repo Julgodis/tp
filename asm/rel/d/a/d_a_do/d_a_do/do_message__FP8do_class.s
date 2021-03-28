@@ -7,7 +7,7 @@ lbl_8066CDEC:
 /* 8066CE00  7C 7E 1B 78 */	mr r30, r3
 /* 8066CE04  3C 80 80 67 */	lis r4, lit_3662@ha
 /* 8066CE08  3B E4 ED E8 */	addi r31, r4, lit_3662@l
-/* 8066CE0C  C0 1F 00 80 */	lfs f0, 0x80(r31)	/* effective address: 8066EE68 */
+/* 8066CE0C  C0 1F 00 80 */	lfs f0, 0x80(r31)
 /* 8066CE10  D0 03 06 48 */	stfs f0, 0x648(r3)
 /* 8066CE14  A8 03 05 F6 */	lha r0, 0x5f6(r3)
 /* 8066CE18  2C 00 00 01 */	cmpwi r0, 1
@@ -37,9 +37,9 @@ lbl_8066CE50:
 /* 8066CE70  38 A0 00 02 */	li r5, 2
 /* 8066CE74  38 C0 10 00 */	li r6, 0x1000
 /* 8066CE78  4B C0 37 90 */	b cLib_addCalcAngleS2__FPssss
-/* 8066CE7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066CE80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066CE84  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 8066CE7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066CE80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066CE84  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8066CE88  28 00 00 00 */	cmplwi r0, 0
 /* 8066CE8C  40 82 00 20 */	bne lbl_8066CEAC
 /* 8066CE90  C0 3E 05 C8 */	lfs f1, 0x5c8(r30)

@@ -5,8 +5,8 @@ lbl_80CB96CC:
 /* 80CB96D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CB96DC  7C 7F 1B 78 */	mr r31, r3
 /* 80CB96E0  48 00 00 89 */	bl setBreakEffect__10daRfHole_cFv
-/* 80CB96E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB96E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB96E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB96E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB96EC  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CB96F0  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CB96F4  88 1F 04 BA */	lbz r0, 0x4ba(r31)

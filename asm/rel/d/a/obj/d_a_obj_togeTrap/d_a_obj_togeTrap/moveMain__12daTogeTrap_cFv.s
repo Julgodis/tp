@@ -19,7 +19,7 @@ lbl_80D182C8:
 /* 80D1830C  3B E3 8E 98 */	addi r31, r3, lit_3655@l
 /* 80D18310  3C 60 80 D2 */	lis r3, data_80D190D4@ha
 /* 80D18314  38 A3 90 D4 */	addi r5, r3, data_80D190D4@l
-/* 80D18318  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80D190D4 */
+/* 80D18318  88 05 00 00 */	lbz r0, 0(r5)
 /* 80D1831C  7C 00 07 75 */	extsb. r0, r0
 /* 80D18320  40 82 00 70 */	bne lbl_80D18390
 /* 80D18324  80 7E 00 64 */	lwz r3, 0x64(r30)
@@ -69,8 +69,8 @@ lbl_80D183C4:
 lbl_80D183C8:
 /* 80D183C8  3A E0 00 00 */	li r23, 0
 /* 80D183CC  3B 80 00 00 */	li r28, 0
-/* 80D183D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D183D4  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 80D183D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D183D4  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 80D183D8  3C 60 80 D2 */	lis r3, l_HIO@ha
 /* 80D183DC  3B 43 90 B4 */	addi r26, r3, l_HIO@l
 lbl_80D183E0:
@@ -121,8 +121,8 @@ lbl_80D18474:
 lbl_80D18484:
 /* 80D18484  3A C0 00 00 */	li r22, 0
 /* 80D18488  3B 80 00 00 */	li r28, 0
-/* 80D1848C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D18490  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D1848C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D18490  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D18494  3B 23 23 3C */	addi r25, r3, 0x233c
 /* 80D18498  C3 9F 00 00 */	lfs f28, 0(r31)
 /* 80D1849C  C3 BF 00 50 */	lfs f29, 0x50(r31)

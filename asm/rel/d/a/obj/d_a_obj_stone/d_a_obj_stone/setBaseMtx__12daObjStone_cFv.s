@@ -42,11 +42,11 @@ lbl_80CE9468:
 /* 80CE9508  3C 60 80 3A */	lis r3, ZeroQuat@ha
 /* 80CE950C  C4 03 72 40 */	lfsu f0, ZeroQuat@l(r3)
 /* 80CE9510  D0 1F 09 20 */	stfs f0, 0x920(r31)
-/* 80CE9514  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803A0004 */
+/* 80CE9514  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CE9518  D0 1F 09 24 */	stfs f0, 0x924(r31)
-/* 80CE951C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803A0008 */
+/* 80CE951C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CE9520  D0 1F 09 28 */	stfs f0, 0x928(r31)
-/* 80CE9524  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803A000C */
+/* 80CE9524  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80CE9528  D0 1F 09 2C */	stfs f0, 0x92c(r31)
 /* 80CE952C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80CE9530  80 01 00 14 */	lwz r0, 0x14(r1)

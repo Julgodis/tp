@@ -19,8 +19,8 @@ lbl_80817164:
 /* 808171A8  38 7F 07 9C */	addi r3, r31, 0x79c
 /* 808171AC  38 81 00 08 */	addi r4, r1, 8
 /* 808171B0  4B A5 0B 78 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 808171B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808171B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808171B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808171B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808171BC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 808171C0  38 9F 07 9C */	addi r4, r31, 0x79c
 /* 808171C4  4B 85 D2 DC */	b GroundCross__4cBgSFP11cBgS_GndChk

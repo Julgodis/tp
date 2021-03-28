@@ -7,11 +7,11 @@ lbl_804E4158:
 /* 804E416C  7C 7D 1B 78 */	mr r29, r3
 /* 804E4170  3C 60 80 4E */	lis r3, l_staff_name@ha
 /* 804E4174  3B E3 4A 14 */	addi r31, r3, l_staff_name@l
-/* 804E4178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E417C  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 804E4180  83 DC 5D AC */	lwz r30, 0x5dac(r28)	/* effective address: 8040BF6C */
-/* 804E4184  80 7C 5D B4 */	lwz r3, 0x5db4(r28)	/* effective address: 8040BF74 */
-/* 804E4188  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 804E4178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E417C  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 804E4180  83 DC 5D AC */	lwz r30, 0x5dac(r28)
+/* 804E4184  80 7C 5D B4 */	lwz r3, 0x5db4(r28)
+/* 804E4188  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 804E418C  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 804E4190  41 82 00 58 */	beq lbl_804E41E8
 /* 804E4194  38 61 00 20 */	addi r3, r1, 0x20

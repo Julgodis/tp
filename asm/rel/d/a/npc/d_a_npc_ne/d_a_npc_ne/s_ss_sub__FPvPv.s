@@ -15,7 +15,7 @@ lbl_80A89A38:
 lbl_80A89A6C:
 /* 80A89A6C  3C 60 80 A9 */	lis r3, target_info_count@ha
 /* 80A89A70  38 83 2B 18 */	addi r4, r3, target_info_count@l
-/* 80A89A74  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80A92B18 */
+/* 80A89A74  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80A89A78  2C 05 00 05 */	cmpwi r5, 5
 /* 80A89A7C  40 80 00 1C */	bge lbl_80A89A98
 /* 80A89A80  54 A0 10 3A */	slwi r0, r5, 2

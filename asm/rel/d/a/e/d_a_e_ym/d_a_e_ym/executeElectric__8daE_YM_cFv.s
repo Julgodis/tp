@@ -89,7 +89,7 @@ lbl_80810F7C:
 /* 80810FA8  4E 80 04 21 */	bctrl 
 /* 80810FAC  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 80810FB0  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 80810FB4  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80815D44 */
+/* 80810FB4  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80810FB8  FC 00 00 1E */	fctiwz f0, f0
 /* 80810FBC  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 80810FC0  80 01 00 1C */	lwz r0, 0x1c(r1)

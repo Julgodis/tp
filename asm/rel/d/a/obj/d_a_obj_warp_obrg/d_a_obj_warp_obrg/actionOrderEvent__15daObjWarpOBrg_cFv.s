@@ -107,8 +107,8 @@ lbl_80D2A618:
 /* 80D2A64C  98 1E 06 3B */	stb r0, 0x63b(r30)
 /* 80D2A650  48 00 00 D8 */	b lbl_80D2A728
 lbl_80D2A654:
-/* 80D2A654  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2A658  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80D2A654  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2A658  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80D2A65C  3B 9D 4F F8 */	addi r28, r29, 0x4ff8
 /* 80D2A660  7F 83 E3 78 */	mr r3, r28
 /* 80D2A664  A8 9E 06 34 */	lha r4, 0x634(r30)

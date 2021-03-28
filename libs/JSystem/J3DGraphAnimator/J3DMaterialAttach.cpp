@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
 struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -42,16 +42,16 @@ struct J3DTexMtxInfo {
 	/* 80325718 */ void operator=(J3DTexMtxInfo const&);
 };
 
-struct J3DMatColorAnm {
-};
-
-struct J3DTevColorAnm {
+struct J3DTexMtxAnm {
 };
 
 struct J3DTexNoAnm {
 };
 
-struct J3DTexMtxAnm {
+struct J3DMatColorAnm {
+};
+
+struct J3DTevColorAnm {
 };
 
 struct J3DTevKColorAnm {
@@ -127,9 +127,9 @@ asm void J3DMaterialTable::clear() {
 /* ############################################################################################## */
 /* 803CEE80-803CEE90 000C+04 s=2 e=0 z=0  None .data      __vt__16J3DMaterialTable                                     */
 SECTION_DATA static void* __vt__16J3DMaterialTable[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16J3DMaterialTableFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J3DMaterialTableFv,
 	/* padding */
 	NULL,
 };

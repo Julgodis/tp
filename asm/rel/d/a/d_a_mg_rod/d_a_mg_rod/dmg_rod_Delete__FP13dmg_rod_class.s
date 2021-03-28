@@ -25,15 +25,15 @@ lbl_804BA184:
 lbl_804BA1A4:
 /* 804BA1A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 804BA1A8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 804BA1AC  A0 03 00 B4 */	lhz r0, 0xb4(r3)	/* effective address: 8043023C */
+/* 804BA1AC  A0 03 00 B4 */	lhz r0, 0xb4(r3)
 /* 804BA1B0  60 00 00 04 */	ori r0, r0, 4
-/* 804BA1B4  B0 03 00 B4 */	sth r0, 0xb4(r3)	/* effective address: 8043023C */
+/* 804BA1B4  B0 03 00 B4 */	sth r0, 0xb4(r3)
 /* 804BA1B8  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 804BA1BC  60 00 00 08 */	ori r0, r0, 8
-/* 804BA1C0  B0 03 00 B4 */	sth r0, 0xb4(r3)	/* effective address: 8043023C */
+/* 804BA1C0  B0 03 00 B4 */	sth r0, 0xb4(r3)
 /* 804BA1C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804BA1C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804BA1CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804BA1CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 804BA1D0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 804BA1D4  38 80 00 00 */	li r4, 0
 /* 804BA1D8  4B DF 88 B0 */	b changeFishingBgm__8Z2SeqMgrFl

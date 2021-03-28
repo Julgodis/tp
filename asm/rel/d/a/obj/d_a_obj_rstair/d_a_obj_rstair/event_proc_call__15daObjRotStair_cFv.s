@@ -6,7 +6,7 @@ lbl_80CC2024:
 /* 80CC2034  38 E4 27 3C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CC2038  3C 80 80 CC */	lis r4, struct_80CC2880+0x1@ha
 /* 80CC203C  38 C4 28 81 */	addi r6, r4, struct_80CC2880+0x1@l
-/* 80CC2040  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CC2881 */
+/* 80CC2040  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CC2044  7C 00 07 75 */	extsb. r0, r0
 /* 80CC2048  40 82 00 70 */	bne lbl_80CC20B8
 /* 80CC204C  80 87 00 60 */	lwz r4, 0x60(r7)

@@ -11,9 +11,9 @@ lbl_80B618FC:
 /* 80B61920  4B 5E 3D E8 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80B61924  7C 7F 1B 78 */	mr r31, r3
 /* 80B61928  38 61 00 08 */	addi r3, r1, 8
-/* 80B6192C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B61930  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B61934  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B6192C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B61930  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B61934  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B61938  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80B6193C  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80B61940  4B 70 51 F4 */	b __mi__4cXyzCFRC3Vec

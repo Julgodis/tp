@@ -27,7 +27,7 @@ lbl_806801C8:
 lbl_806801EC:
 /* 806801EC  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 806801F0  38 63 26 48 */	addi r3, r3, l_HIO@l
-/* 806801F4  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 80682654 */
+/* 806801F4  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 806801F8  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 806801FC  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 80680200  C0 1E 00 64 */	lfs f0, 0x64(r30)

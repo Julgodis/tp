@@ -209,34 +209,34 @@ asm static void fopScnRq_FadeRequest(s16 param_0, u16 param_1) {
 /* ############################################################################################## */
 /* 803A38C8-803A38D8 0010+00 s=1 e=0 z=0  None .data      submethod$2274                                               */
 SECTION_DATA static void* data_803A38C8[4] = {
-	/* 0    */ (void*)fopScnRq_Execute__FP19scene_request_class,
-	/* 1    */ (void*)fopScnRq_Cancel__FP19scene_request_class,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)fopScnRq_PostMethod__FPvP19scene_request_class,
+	(void*)fopScnRq_Execute__FP19scene_request_class,
+	(void*)fopScnRq_Cancel__FP19scene_request_class,
+	(void*)NULL,
+	(void*)fopScnRq_PostMethod__FPvP19scene_request_class,
 };
 
 /* 803A38D8-803A38F8 0020+00 s=1 e=0 z=0  None .data      noFadeFase$2275                                              */
 SECTION_DATA static void* data_803A38D8[8] = {
-	/* 0    */ (void*)fopScnRq_phase_Execute__FP19scene_request_class,
-	/* 1    */ (void*)fopScnRq_phase_Done__FP19scene_request_class,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)fopScnRq_phase_Execute__FP19scene_request_class,
+	(void*)fopScnRq_phase_Done__FP19scene_request_class,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A38F8-803A3918 0020+00 s=1 e=0 z=0  None .data      fadeFase$2276                                                */
 SECTION_DATA static void* data_803A38F8[8] = {
-	/* 0    */ (void*)fopScnRq_phase_IsDoingOverlap__FP19scene_request_class,
-	/* 1    */ (void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,
-	/* 2    */ (void*)fopScnRq_phase_Execute__FP19scene_request_class,
-	/* 3    */ (void*)fopScnRq_phase_ClearOverlap__FP19scene_request_class,
-	/* 4    */ (void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,
-	/* 5    */ (void*)fopScnRq_phase_Done__FP19scene_request_class,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)fopScnRq_phase_IsDoingOverlap__FP19scene_request_class,
+	(void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,
+	(void*)fopScnRq_phase_Execute__FP19scene_request_class,
+	(void*)fopScnRq_phase_ClearOverlap__FP19scene_request_class,
+	(void*)fopScnRq_phase_IsDoneOverlap__FP19scene_request_class,
+	(void*)fopScnRq_phase_Done__FP19scene_request_class,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8001F034-8001F0FC 00C8+00 s=0 e=3 z=0  None .text      fopScnRq_Request__FiP11scene_classsPvsUs                     */

@@ -9,12 +9,12 @@ lbl_80A8210C:
 /* 80A82128  41 82 00 A0 */	beq lbl_80A821C8
 /* 80A8212C  3C 80 80 A8 */	lis r4, l_btkGetParamList@ha
 /* 80A82130  38 A4 3A BC */	addi r5, r4, l_btkGetParamList@l
-/* 80A82134  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A83AC4 */
+/* 80A82134  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A82138  54 00 10 3A */	slwi r0, r0, 2
 /* 80A8213C  3C 80 80 A8 */	lis r4, l_arcNames@ha
 /* 80A82140  38 84 3A F8 */	addi r4, r4, l_arcNames@l
 /* 80A82144  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80A82148  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80A83ABC */
+/* 80A82148  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80A8214C  4B 6D 0A 58 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 80A82150  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 80A82154  7C 03 00 40 */	cmplw r3, r0

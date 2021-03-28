@@ -57,10 +57,10 @@ struct dSv_info_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -108,10 +108,10 @@ struct cM3dGCps {
 // Forward References:
 // 
 
-static void daObjTrnd2_Draw(daObjTrnd2_c*); // 2
-static void daObjTrnd2_Execute(daObjTrnd2_c*); // 2
-static void daObjTrnd2_Delete(daObjTrnd2_c*); // 2
-static void daObjTrnd2_Create(daObjTrnd2_c*); // 2
+void daObjTrnd2_Draw(daObjTrnd2_c*); // 2
+void daObjTrnd2_Execute(daObjTrnd2_c*); // 2
+void daObjTrnd2_Delete(daObjTrnd2_c*); // 2
+void daObjTrnd2_Create(daObjTrnd2_c*); // 2
 static void cLib_calcTimer__template0(s32*); // 2
 
 extern "C" void setPntWind__12daObjTrnd2_cFv(); // 1
@@ -130,15 +130,12 @@ extern "C" void startParticle__12daObjTrnd2_cFv(); // 1
 extern "C" void stopParticle__12daObjTrnd2_cFv(); // 1
 extern "C" bool draw__12daObjTrnd2_cFv(); // 1
 extern "C" void _delete__12daObjTrnd2_cFv(); // 1
-extern "C" static void daObjTrnd2_Draw__FP12daObjTrnd2_c(); // 1
-extern "C" static void daObjTrnd2_Execute__FP12daObjTrnd2_c(); // 1
-extern "C" static void daObjTrnd2_Delete__FP12daObjTrnd2_c(); // 1
-extern "C" static void daObjTrnd2_Create__FP12daObjTrnd2_c(); // 1
+extern "C" void daObjTrnd2_Draw__FP12daObjTrnd2_c(); // 1
+extern "C" void daObjTrnd2_Execute__FP12daObjTrnd2_c(); // 1
+extern "C" void daObjTrnd2_Delete__FP12daObjTrnd2_c(); // 1
+extern "C" void daObjTrnd2_Create__FP12daObjTrnd2_c(); // 1
 extern "C" static void func_80D1D3B0(); // 1
-extern "C" extern u8 const lit_3684[8];
-extern "C" extern u8 const lit_3685[8];
-extern "C" extern u8 const lit_3686[8];
-extern "C" extern u8 const lit_3733[8];
+extern "C" extern void* l_daObjTrnd2_Method[8];
 extern "C" extern void* g_profile_Obj_Tornado2[12];
 
 // 
@@ -190,21 +187,15 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cps[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CpsAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042D8C0[4];
-SECTION_BSS extern f32 Zero__4cXyz;
-SECTION_BSS extern u8 data_80430CF8[4];
-SECTION_BSS extern u8 data_80430CFC[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
 extern "C" extern u32 __float_nan;
 
 // 
@@ -297,6 +288,21 @@ SECTION_RODATA static u32 const lit_3682 = 0x3DCCCCCD;
 /* 80D1D418-80D1D41C 0004+00 s=3 e=0 z=0  None .rodata    @3683                                                        */
 SECTION_RODATA static u32 const lit_3683 = 0x3F000000;
 
+/* 80D1D41C-80D1D424 0008+00 s=1 e=0 z=0  None .rodata    @3684                                                        */
+SECTION_RODATA static u8 const lit_3684[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D1D424-80D1D42C 0008+00 s=1 e=0 z=0  None .rodata    @3685                                                        */
+SECTION_RODATA static u8 const lit_3685[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D1D42C-80D1D434 0008+00 s=1 e=0 z=0  None .rodata    @3686                                                        */
+SECTION_RODATA static u8 const lit_3686[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80D1C570-80D1C780 0210+00 s=1 e=0 z=0  None .text      movePntWind__12daObjTrnd2_cFv                                */
 #pragma push
 #pragma optimization_level 0
@@ -309,26 +315,16 @@ asm void daObjTrnd2_c::movePntWind() {
 
 
 /* ############################################################################################## */
-/* 80D1D41C-80D1D424 0008+00 s=0 e=0 z=0  None .rodata    @3684                                                        */
-SECTION_RODATA u8 const lit_3684[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D1D424-80D1D42C 0008+00 s=0 e=0 z=0  None .rodata    @3685                                                        */
-SECTION_RODATA u8 const lit_3685[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D1D42C-80D1D434 0008+00 s=0 e=0 z=0  None .rodata    @3686                                                        */
-SECTION_RODATA u8 const lit_3686[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80D1D434-80D1D438 0004+00 s=1 e=0 z=0  None .rodata    @3730                                                        */
 SECTION_RODATA static u32 const lit_3730 = 0x3D4CCCCD;
 
 /* 80D1D438-80D1D43C 0004+00 s=2 e=0 z=0  None .rodata    @3731                                                        */
 SECTION_RODATA static u32 const lit_3731 = 0x41200000;
+
+/* 80D1D43C-80D1D444 0008+00 s=1 e=0 z=0  None .rodata    @3733                                                        */
+SECTION_RODATA static u8 const lit_3733[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80D1C780-80D1C924 01A4+00 s=1 e=0 z=0  None .text      setCpsInfo__12daObjTrnd2_cFv                                 */
 #pragma push
@@ -364,11 +360,6 @@ asm void daObjTrnd2_c::setBaseMtx() {
 
 
 /* ############################################################################################## */
-/* 80D1D43C-80D1D444 0008+00 s=0 e=0 z=0  None .rodata    @3733                                                        */
-SECTION_RODATA u8 const lit_3733[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80D1D444-80D1D448 0004+00 s=1 e=0 z=0  None .rodata    @3819                                                        */
 SECTION_RODATA static u32 const lit_3819 = 0x43160000;
 
@@ -396,39 +387,39 @@ asm void daObjTrnd2_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80D1D4A4-80D1D4C4 0020+00 s=1 e=0 z=0  None .data      l_daObjTrnd2_Method                                          */
-SECTION_DATA static void* l_daObjTrnd2_Method[8] = {
-	/* 0    */ (void*)daObjTrnd2_Create__FP12daObjTrnd2_c,
-	/* 1    */ (void*)daObjTrnd2_Delete__FP12daObjTrnd2_c,
-	/* 2    */ (void*)daObjTrnd2_Execute__FP12daObjTrnd2_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjTrnd2_Draw__FP12daObjTrnd2_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D1D4A4-80D1D4C4 0020+00 s=0 e=0 z=0  None .data      l_daObjTrnd2_Method                                          */
+SECTION_DATA void* l_daObjTrnd2_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D1D4C4-80D1D4F4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Tornado2                                       */
+/* 80D1D4C4-80D1D4F4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Tornado2                                       */
 SECTION_DATA void* g_profile_Obj_Tornado2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x015C0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000788,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01BD0000,
-	/* 9    */ (void*)&l_daObjTrnd2_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x015C0000,
+	(void*)NULL,
+	(void*)0x00000788,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01BD0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 80D1D4F4-80D1D500 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D1CC80-80D1CD78 00F8+00 s=1 e=0 z=0  None .text      create__12daObjTrnd2_cFv                                     */
@@ -442,7 +433,7 @@ asm void daObjTrnd2_c::create() {
 #pragma pop
 
 
-/* 80D1CD78-80D1CDC0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80D1CD78-80D1CDC0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -535,44 +526,44 @@ asm void daObjTrnd2_c::_delete() {
 #pragma pop
 
 
-/* 80D1D330-80D1D350 0020+00 s=1 e=0 z=0  None .text      daObjTrnd2_Draw__FP12daObjTrnd2_c                            */
+/* 80D1D330-80D1D350 0020+00 s=0 e=0 z=0  None .text      daObjTrnd2_Draw__FP12daObjTrnd2_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjTrnd2_Draw(daObjTrnd2_c* param_0) {
+asm void daObjTrnd2_Draw(daObjTrnd2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Draw__FP12daObjTrnd2_c.s"
 }
 #pragma pop
 
 
-/* 80D1D350-80D1D370 0020+00 s=1 e=0 z=0  None .text      daObjTrnd2_Execute__FP12daObjTrnd2_c                         */
+/* 80D1D350-80D1D370 0020+00 s=0 e=0 z=0  None .text      daObjTrnd2_Execute__FP12daObjTrnd2_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjTrnd2_Execute(daObjTrnd2_c* param_0) {
+asm void daObjTrnd2_Execute(daObjTrnd2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Execute__FP12daObjTrnd2_c.s"
 }
 #pragma pop
 
 
-/* 80D1D370-80D1D390 0020+00 s=1 e=0 z=0  None .text      daObjTrnd2_Delete__FP12daObjTrnd2_c                          */
+/* 80D1D370-80D1D390 0020+00 s=0 e=0 z=0  None .text      daObjTrnd2_Delete__FP12daObjTrnd2_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjTrnd2_Delete(daObjTrnd2_c* param_0) {
+asm void daObjTrnd2_Delete(daObjTrnd2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Delete__FP12daObjTrnd2_c.s"
 }
 #pragma pop
 
 
-/* 80D1D390-80D1D3B0 0020+00 s=1 e=0 z=0  None .text      daObjTrnd2_Create__FP12daObjTrnd2_c                          */
+/* 80D1D390-80D1D3B0 0020+00 s=0 e=0 z=0  None .text      daObjTrnd2_Create__FP12daObjTrnd2_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjTrnd2_Create(daObjTrnd2_c* param_0) {
+asm void daObjTrnd2_Create(daObjTrnd2_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_tornado2/d_a_obj_tornado2/daObjTrnd2_Create__FP12daObjTrnd2_c.s"
 }

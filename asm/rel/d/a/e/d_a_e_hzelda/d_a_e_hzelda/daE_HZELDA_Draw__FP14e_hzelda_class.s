@@ -97,8 +97,8 @@ lbl_806F1120:
 /* 806F117C  80 BF 06 88 */	lwz r5, 0x688(r31)
 /* 806F1180  28 05 00 00 */	cmplwi r5, 0
 /* 806F1184  41 82 00 18 */	beq lbl_806F119C
-/* 806F1188  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F118C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806F1188  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F118C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806F1190  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 806F1194  80 9F 06 A8 */	lwz r4, 0x6a8(r31)
 /* 806F1198  4B 96 4D 84 */	b addReal__21dDlst_shadowControl_cFUlP8J3DModel

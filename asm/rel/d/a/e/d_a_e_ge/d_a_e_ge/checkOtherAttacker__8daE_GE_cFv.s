@@ -25,7 +25,7 @@ lbl_806C83A0:
 /* 806C83C8  C0 23 D0 68 */	lfs f1, lit_4166@l(r3)
 /* 806C83CC  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806C83D0  38 63 D3 68 */	addi r3, r3, l_HIO@l
-/* 806C83D4  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 806CD398 */
+/* 806C83D4  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 806C83D8  EC 01 00 28 */	fsubs f0, f1, f0
 /* 806C83DC  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 806C83E0  7C 00 00 26 */	mfcr r0

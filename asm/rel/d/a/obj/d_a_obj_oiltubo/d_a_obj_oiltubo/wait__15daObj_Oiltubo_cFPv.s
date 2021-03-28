@@ -16,8 +16,8 @@ lbl_80CA74FC:
 /* 80CA74FC  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
 /* 80CA7500  28 00 00 06 */	cmplwi r0, 6
 /* 80CA7504  41 82 00 3C */	beq lbl_80CA7540
-/* 80CA7508  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA750C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA7508  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA750C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA7510  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 80CA7514  7F E4 FB 78 */	mr r4, r31
 /* 80CA7518  38 A0 00 68 */	li r5, 0x68

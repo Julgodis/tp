@@ -15,8 +15,8 @@ lbl_80D35A44:
 /* 80D35A78  3C 60 80 D3 */	lis r3, data_80D361F8@ha
 /* 80D35A7C  98 03 61 F8 */	stb r0, data_80D361F8@l(r3)
 lbl_80D35A80:
-/* 80D35A80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D35A84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D35A80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D35A84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D35A88  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D35A8C  80 9F 05 F0 */	lwz r4, 0x5f0(r31)
 /* 80D35A90  4B 33 E7 C0 */	b Release__4cBgSFP9dBgW_Base

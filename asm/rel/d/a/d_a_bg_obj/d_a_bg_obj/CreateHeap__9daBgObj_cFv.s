@@ -9,8 +9,8 @@ lbl_8045A940:
 /* 8045A95C  83 E4 CB 38 */	lwz r31, l_specName@l(r4)
 /* 8045A960  4B BD 6F 10 */	b getArcName__12daSetBgObj_cFP10fopAc_ac_c
 /* 8045A964  7F E4 FB 78 */	mr r4, r31
-/* 8045A968  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8045A96C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8045A968  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8045A96C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8045A970  3C A5 00 02 */	addis r5, r5, 2
 /* 8045A974  38 C0 00 80 */	li r6, 0x80
 /* 8045A978  38 A5 C2 F8 */	addi r5, r5, -15624

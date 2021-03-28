@@ -73,7 +73,7 @@ lbl_80CFCB20:
 /* 80CFCB38  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CFCB3C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CFCB40  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CFCB44  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CFCB44  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CFCB48  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CFCB4C  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CFCB50  38 C0 00 00 */	li r6, 0
@@ -94,7 +94,7 @@ lbl_80CFCB70:
 /* 80CFCB88  90 01 00 08 */	stw r0, 8(r1)
 /* 80CFCB8C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CFCB90  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CFCB94  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CFCB94  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CFCB98  38 81 00 08 */	addi r4, r1, 8
 /* 80CFCB9C  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CFCBA0  38 C0 00 00 */	li r6, 0
@@ -131,8 +131,8 @@ lbl_80CFCBBC:
 /* 80CFCC18  C0 1F 00 68 */	lfs f0, 0x68(r31)
 /* 80CFCC1C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CFCC20  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80CFCC24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFCC28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFCC24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFCC28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFCC2C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CFCC30  38 80 00 04 */	li r4, 4
 /* 80CFCC34  38 A0 00 1F */	li r5, 0x1f
@@ -160,9 +160,9 @@ lbl_80CFCC48:
 /* 80CFCC88  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CFCC8C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CFCC90  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80CFCC94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFCC98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CFCC9C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CFCC94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFCC98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CFCC9C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CFCCA0  28 1E 00 00 */	cmplwi r30, 0
 /* 80CFCCA4  41 82 00 0C */	beq lbl_80CFCCB0
 /* 80CFCCA8  80 9E 00 04 */	lwz r4, 4(r30)

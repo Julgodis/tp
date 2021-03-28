@@ -13,8 +13,8 @@ lbl_80676B64:
 /* 80676B90  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80676B94  28 00 00 02 */	cmplwi r0, 2
 /* 80676B98  40 82 00 2C */	bne lbl_80676BC4
-/* 80676B9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676BA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80676B9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676BA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676BA4  54 84 06 3E */	clrlwi r4, r4, 0x18
 /* 80676BA8  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80676BAC  7C 05 07 74 */	extsb r5, r0

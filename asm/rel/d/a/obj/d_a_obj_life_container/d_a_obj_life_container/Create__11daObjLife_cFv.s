@@ -7,7 +7,7 @@ lbl_804CCC6C:
 /* 804CCC80  7C 7E 1B 78 */	mr r30, r3
 /* 804CCC84  3C 80 80 4D */	lis r4, l_cyl_src@ha
 /* 804CCC88  3B E4 E3 F4 */	addi r31, r4, l_cyl_src@l
-/* 804CCC8C  C0 1F 00 44 */	lfs f0, 0x44(r31)	/* effective address: 804CE438 */
+/* 804CCC8C  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 804CCC90  D0 03 04 F4 */	stfs f0, 0x4f4(r3)
 /* 804CCC94  D0 03 04 F0 */	stfs f0, 0x4f0(r3)
 /* 804CCC98  D0 03 04 EC */	stfs f0, 0x4ec(r3)

@@ -11,7 +11,7 @@ lbl_804872E4:
 lbl_80487308:
 /* 80487308  3C 80 80 48 */	lis r4, l_arcName@ha
 /* 8048730C  38 84 73 BC */	addi r4, r4, l_arcName@l
-/* 80487310  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 804873BC */
+/* 80487310  80 84 00 00 */	lwz r4, 0(r4)
 /* 80487314  4B BA 5C F4 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_80487318:
 /* 80487318  38 60 00 01 */	li r3, 1

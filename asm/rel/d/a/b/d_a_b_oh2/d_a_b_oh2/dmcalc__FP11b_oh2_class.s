@@ -33,12 +33,12 @@ lbl_8061DE4C:
 /* 8061DEC8  3B BC 07 DA */	addi r29, r28, 0x7da
 /* 8061DECC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DED0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DED4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DED4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DED8  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 8061DEDC  4B 9E E5 00 */	b mDoMtx_YrotS__FPA4_fs
 /* 8061DEE0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DEE4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DEE8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DEE8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DEEC  A8 9C 04 E4 */	lha r4, 0x4e4(r28)
 /* 8061DEF0  4B 9E E4 AC */	b mDoMtx_XrotM__FPA4_fs
 /* 8061DEF4  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -53,8 +53,8 @@ lbl_8061DE4C:
 lbl_8061DF18:
 /* 8061DF18  3C 60 80 62 */	lis r3, boss@ha
 /* 8061DF1C  38 63 EA E8 */	addi r3, r3, boss@l
-/* 8061DF20  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061EAE8 */
-/* 8061DF24  A8 03 47 52 */	lha r0, 0x4752(r3)	/* effective address: 8062323A */
+/* 8061DF20  80 63 00 00 */	lwz r3, 0(r3)
+/* 8061DF24  A8 03 47 52 */	lha r0, 0x4752(r3)
 /* 8061DF28  2C 00 00 65 */	cmpwi r0, 0x65
 /* 8061DF2C  40 82 00 10 */	bne lbl_8061DF3C
 /* 8061DF30  C0 1F 00 0C */	lfs f0, 0xc(r31)
@@ -79,8 +79,8 @@ lbl_8061DF4C:
 /* 8061DF74  C3 BF 00 14 */	lfs f29, 0x14(r31)
 /* 8061DF78  3C 60 80 62 */	lis r3, boss@ha
 /* 8061DF7C  38 63 EA E8 */	addi r3, r3, boss@l
-/* 8061DF80  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8061EAE8 */
-/* 8061DF84  C0 03 05 2C */	lfs f0, 0x52c(r3)	/* effective address: 8061F014 */
+/* 8061DF80  80 63 00 00 */	lwz r3, 0(r3)
+/* 8061DF84  C0 03 05 2C */	lfs f0, 0x52c(r3)
 /* 8061DF88  FC 00 F8 40 */	fcmpo cr0, f0, f31
 /* 8061DF8C  40 80 00 14 */	bge lbl_8061DFA0
 /* 8061DF90  C0 3F 00 0C */	lfs f1, 0xc(r31)
@@ -175,8 +175,8 @@ lbl_8061E03C:
 /* 8061E0E4  38 00 00 1E */	li r0, 0x1e
 /* 8061E0E8  7C 09 03 A6 */	mtctr r0
 lbl_8061E0EC:
-/* 8061E0EC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 8061EAE8 */
-/* 8061E0F0  C0 04 05 2C */	lfs f0, 0x52c(r4)	/* effective address: 8062052C */
+/* 8061E0EC  80 85 00 00 */	lwz r4, 0(r5)
+/* 8061E0F0  C0 04 05 2C */	lfs f0, 0x52c(r4)
 /* 8061E0F4  FC 00 10 40 */	fcmpo cr0, f0, f2
 /* 8061E0F8  40 81 00 38 */	ble lbl_8061E130
 /* 8061E0FC  A8 1C 05 DC */	lha r0, 0x5dc(r28)

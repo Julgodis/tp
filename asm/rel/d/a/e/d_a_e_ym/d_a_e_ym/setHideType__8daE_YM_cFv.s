@@ -23,7 +23,7 @@ lbl_80814AF0:
 /* 80814B44  4B 80 C7 F4 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80814B48  3C 60 80 81 */	lis r3, m_near_obj@ha
 /* 80814B4C  38 63 5D 5C */	addi r3, r3, m_near_obj@l
-/* 80814B50  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80815D5C */
+/* 80814B50  80 63 00 00 */	lwz r3, 0(r3)
 /* 80814B54  28 03 00 00 */	cmplwi r3, 0
 /* 80814B58  41 82 00 30 */	beq lbl_80814B88
 /* 80814B5C  C0 23 04 D0 */	lfs f1, 0x4d0(r3)

@@ -6,11 +6,11 @@ lbl_80A71AFC:
 /* 80A71B0C  7C 7F 1B 78 */	mr r31, r3
 /* 80A71B10  3C 80 80 A7 */	lis r4, lit_4604@ha
 /* 80A71B14  38 A4 3B 68 */	addi r5, r4, lit_4604@l
-/* 80A71B18  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A73B68 */
-/* 80A71B1C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A73B6C */
+/* 80A71B18  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A71B1C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A71B20  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A71B24  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A71B28  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A73B70 */
+/* 80A71B28  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A71B2C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A71B30  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A71B34  48 00 06 F5 */	bl chkAction__12daNpc_midP_cFM12daNpc_midP_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_80A71AFC:
 lbl_80A71B58:
 /* 80A71B58  38 00 00 00 */	li r0, 0
 /* 80A71B5C  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80A71B60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A71B64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A71B68  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80A71B60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A71B64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A71B68  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80A71B6C  28 04 00 01 */	cmplwi r4, 1
 /* 80A71B70  41 82 00 0C */	beq lbl_80A71B7C
 /* 80A71B74  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80A71BA0:
 lbl_80A71BB8:
 /* 80A71BB8  3C 60 80 A7 */	lis r3, lit_4614@ha
 /* 80A71BBC  38 83 3B 74 */	addi r4, r3, lit_4614@l
-/* 80A71BC0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A73B74 */
-/* 80A71BC4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A73B78 */
+/* 80A71BC0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A71BC4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A71BC8  90 61 00 08 */	stw r3, 8(r1)
 /* 80A71BCC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A71BD0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A73B7C */
+/* 80A71BD0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A71BD4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A71BD8  7F E3 FB 78 */	mr r3, r31
 /* 80A71BDC  38 81 00 08 */	addi r4, r1, 8

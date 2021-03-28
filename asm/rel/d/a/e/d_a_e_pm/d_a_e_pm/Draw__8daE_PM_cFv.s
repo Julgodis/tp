@@ -15,23 +15,23 @@ lbl_8074A6CC:
 /* 8074A700  41 82 00 6C */	beq lbl_8074A76C
 /* 8074A704  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074A708  38 83 C3 94 */	addi r4, r3, l_HIO@l
-/* 8074A70C  C0 04 00 38 */	lfs f0, 0x38(r4)	/* effective address: 8074C3CC */
+/* 8074A70C  C0 04 00 38 */	lfs f0, 0x38(r4)
 /* 8074A710  FC 00 00 1E */	fctiwz f0, f0
 /* 8074A714  D8 01 00 18 */	stfd f0, 0x18(r1)
 /* 8074A718  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8074A71C  98 01 00 08 */	stb r0, 8(r1)
-/* 8074A720  C0 04 00 3C */	lfs f0, 0x3c(r4)	/* effective address: 8074C3D0 */
+/* 8074A720  C0 04 00 3C */	lfs f0, 0x3c(r4)
 /* 8074A724  FC 00 00 1E */	fctiwz f0, f0
 /* 8074A728  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 8074A72C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8074A730  98 01 00 09 */	stb r0, 9(r1)
-/* 8074A734  C0 04 00 40 */	lfs f0, 0x40(r4)	/* effective address: 8074C3D4 */
+/* 8074A734  C0 04 00 40 */	lfs f0, 0x40(r4)
 /* 8074A738  FC 00 00 1E */	fctiwz f0, f0
 /* 8074A73C  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 8074A740  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8074A744  98 01 00 0A */	stb r0, 0xa(r1)
 /* 8074A748  38 7E 05 FC */	addi r3, r30, 0x5fc
-/* 8074A74C  C0 24 00 48 */	lfs f1, 0x48(r4)	/* effective address: 8074C3DC */
+/* 8074A74C  C0 24 00 48 */	lfs f1, 0x48(r4)
 /* 8074A750  C0 5F 00 28 */	lfs f2, 0x28(r31)
 /* 8074A754  4B B2 5F EC */	b cLib_chaseF__FPfff
 /* 8074A758  38 7E 06 E8 */	addi r3, r30, 0x6e8
@@ -116,7 +116,7 @@ lbl_8074A76C:
 /* 8074A890  4E 80 04 21 */	bctrl 
 /* 8074A894  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A898  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A89C  A8 04 00 14 */	lha r0, 0x14(r4)	/* effective address: 8074C3A8 */
+/* 8074A89C  A8 04 00 14 */	lha r0, 0x14(r4)
 /* 8074A8A0  B0 03 00 00 */	sth r0, 0(r3)
 /* 8074A8A4  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A8A8  38 80 00 01 */	li r4, 1
@@ -126,7 +126,7 @@ lbl_8074A76C:
 /* 8074A8B8  4E 80 04 21 */	bctrl 
 /* 8074A8BC  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A8C0  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A8C4  A8 04 00 16 */	lha r0, 0x16(r4)	/* effective address: 8074C3AA */
+/* 8074A8C4  A8 04 00 16 */	lha r0, 0x16(r4)
 /* 8074A8C8  B0 03 00 02 */	sth r0, 2(r3)
 /* 8074A8CC  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A8D0  38 80 00 01 */	li r4, 1
@@ -136,7 +136,7 @@ lbl_8074A76C:
 /* 8074A8E0  4E 80 04 21 */	bctrl 
 /* 8074A8E4  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A8E8  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A8EC  A8 04 00 18 */	lha r0, 0x18(r4)	/* effective address: 8074C3AC */
+/* 8074A8EC  A8 04 00 18 */	lha r0, 0x18(r4)
 /* 8074A8F0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8074A8F4  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A8F8  38 80 00 01 */	li r4, 1
@@ -146,7 +146,7 @@ lbl_8074A76C:
 /* 8074A908  4E 80 04 21 */	bctrl 
 /* 8074A90C  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A910  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A914  A8 04 00 20 */	lha r0, 0x20(r4)	/* effective address: 8074C3B4 */
+/* 8074A914  A8 04 00 20 */	lha r0, 0x20(r4)
 /* 8074A918  B0 03 00 06 */	sth r0, 6(r3)
 /* 8074A91C  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A920  38 80 00 02 */	li r4, 2
@@ -156,7 +156,7 @@ lbl_8074A76C:
 /* 8074A930  4E 80 04 21 */	bctrl 
 /* 8074A934  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A938  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A93C  A8 04 00 1A */	lha r0, 0x1a(r4)	/* effective address: 8074C3AE */
+/* 8074A93C  A8 04 00 1A */	lha r0, 0x1a(r4)
 /* 8074A940  B0 03 00 00 */	sth r0, 0(r3)
 /* 8074A944  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A948  38 80 00 02 */	li r4, 2
@@ -166,7 +166,7 @@ lbl_8074A76C:
 /* 8074A958  4E 80 04 21 */	bctrl 
 /* 8074A95C  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A960  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A964  A8 04 00 1C */	lha r0, 0x1c(r4)	/* effective address: 8074C3B0 */
+/* 8074A964  A8 04 00 1C */	lha r0, 0x1c(r4)
 /* 8074A968  B0 03 00 02 */	sth r0, 2(r3)
 /* 8074A96C  80 7F 00 2C */	lwz r3, 0x2c(r31)
 /* 8074A970  38 80 00 02 */	li r4, 2
@@ -176,7 +176,7 @@ lbl_8074A76C:
 /* 8074A980  4E 80 04 21 */	bctrl 
 /* 8074A984  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074A988  38 84 C3 94 */	addi r4, r4, l_HIO@l
-/* 8074A98C  A8 04 00 1E */	lha r0, 0x1e(r4)	/* effective address: 8074C3B2 */
+/* 8074A98C  A8 04 00 1E */	lha r0, 0x1e(r4)
 /* 8074A990  B0 03 00 04 */	sth r0, 4(r3)
 /* 8074A994  48 00 00 E4 */	b lbl_8074AA78
 lbl_8074A998:

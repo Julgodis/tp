@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
 struct Z2SoundHandlePool {
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -54,7 +54,12 @@ struct Z2SoundObjArrow {
 	/* 802BEB74 */ void init(Vec*, u8);
 };
 
-struct JAUSoundAnimationSound {
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
+};
+
+struct Z2SoundStarter {
+	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
 struct JGeometry {
@@ -66,12 +71,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct Z2SoundStarter {
-	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
+struct JAUSoundAnimationSound {
 };
 
 struct Z2SoundObjAnime {
@@ -226,62 +226,62 @@ extern "C" extern u8 data_80450B88[4];
 /* ############################################################################################## */
 /* 803CACD0-803CACF0 0020+00 s=1 e=1 z=0  None .data      __vt__15Z2SoundObjAnime                                      */
 SECTION_DATA void* __vt__15Z2SoundObjAnime[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__15Z2SoundObjAnimeFP3VecUc,
-	/* 6    */ (void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__14Z2SoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__15Z2SoundObjAnimeFP3VecUc,
+	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 803CACF0-803CAD10 0020+00 s=1 e=0 z=1  None .data      __vt__15Z2SoundObjArrow                                      */
 SECTION_DATA void* __vt__15Z2SoundObjArrow[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__21Z2DopplerSoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__15Z2SoundObjArrowFP3VecUc,
-	/* 6    */ (void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__21Z2DopplerSoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__15Z2SoundObjArrowFP3VecUc,
+	(void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	(void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 803CAD10-803CAD30 0020+00 s=1 e=3 z=14  None .data      __vt__16Z2SoundObjSimple                                     */
 SECTION_DATA void* __vt__16Z2SoundObjSimple[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__16Z2SoundObjSimpleFP3VecUc,
-	/* 6    */ (void*)startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__14Z2SoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__16Z2SoundObjSimpleFP3VecUc,
+	(void*)startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
+	(void*)startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc,
 };
 
 /* 803CAD30-803CAD50 0020+00 s=2 e=0 z=0  None .data      __vt__21Z2DopplerSoundObjBase                                */
 SECTION_DATA static void* __vt__21Z2DopplerSoundObjBase[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__21Z2DopplerSoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__21Z2DopplerSoundObjBaseFP3VecUc,
-	/* 6    */ (void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__21Z2DopplerSoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__21Z2DopplerSoundObjBaseFP3VecUc,
+	(void*)startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
+	(void*)startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 803CAD50-803CAD70 0020+00 s=2 e=0 z=0  None .data      __vt__14Z2SoundObjBase                                       */
 SECTION_DATA static void* __vt__14Z2SoundObjBase[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__14Z2SoundObjBaseFP3VecUc,
-	/* 6    */ (void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__14Z2SoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__14Z2SoundObjBaseFP3VecUc,
+	(void*)startSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 802BDEF0-802BDF48 0058+00 s=3 e=2 z=0  None .text      __ct__14Z2SoundObjBaseFv                                     */

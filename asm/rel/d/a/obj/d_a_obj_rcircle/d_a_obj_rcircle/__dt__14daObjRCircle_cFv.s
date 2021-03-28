@@ -16,7 +16,7 @@ lbl_80CB874C:
 lbl_80CB8784:
 /* 80CB8784  3C 80 80 CC */	lis r4, l_arcName@ha
 /* 80CB8788  38 84 8D 10 */	addi r4, r4, l_arcName@l
-/* 80CB878C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CB8D10 */
+/* 80CB878C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CB8790  4B 37 48 78 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CB8794  34 1E 05 8C */	addic. r0, r30, 0x58c
 /* 80CB8798  41 82 00 20 */	beq lbl_80CB87B8

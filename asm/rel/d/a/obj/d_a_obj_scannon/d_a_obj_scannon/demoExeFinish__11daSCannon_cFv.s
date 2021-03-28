@@ -22,7 +22,7 @@ lbl_80CC8538:
 /* 80CC8588  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC858C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC8590  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC8594  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC8594  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC8598  38 81 00 08 */	addi r4, r1, 8
 /* 80CC859C  38 A0 00 00 */	li r5, 0
 /* 80CC85A0  38 C0 00 00 */	li r6, 0
@@ -57,8 +57,8 @@ lbl_80CC85FC:
 /* 80CC8608  48 00 09 0D */	bl func_80CC8F14
 /* 80CC860C  2C 03 00 00 */	cmpwi r3, 0
 /* 80CC8610  40 82 00 20 */	bne lbl_80CC8630
-/* 80CC8614  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC8618  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC8614  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC8618  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC861C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC8620  80 9E 06 04 */	lwz r4, 0x604(r30)
 /* 80CC8624  4B 37 FB 58 */	b cutEnd__16dEvent_manager_cFi

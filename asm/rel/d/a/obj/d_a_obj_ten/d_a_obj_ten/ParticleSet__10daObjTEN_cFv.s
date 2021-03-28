@@ -34,9 +34,9 @@ lbl_80D0A1C0:
 /* 80D0A1D0  FC 60 08 90 */	fmr f3, f1
 /* 80D0A1D4  4B 56 58 68 */	b cLib_addCalc2__FPffff
 lbl_80D0A1D8:
-/* 80D0A1D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D0A1DC  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80D0A1E0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80D0A1D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D0A1DC  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80D0A1E0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80D0A1E4  38 00 00 FF */	li r0, 0xff
 /* 80D0A1E8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D0A1EC  38 80 00 00 */	li r4, 0

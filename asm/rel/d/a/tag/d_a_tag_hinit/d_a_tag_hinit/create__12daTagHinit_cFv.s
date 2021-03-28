@@ -20,8 +20,8 @@ lbl_805A3790:
 /* 805A3798  88 9F 05 69 */	lbz r4, 0x569(r31)
 /* 805A379C  28 04 00 FF */	cmplwi r4, 0xff
 /* 805A37A0  41 82 00 28 */	beq lbl_805A37C8
-/* 805A37A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A37A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805A37A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A37A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805A37AC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 805A37B0  7C 05 07 74 */	extsb r5, r0
 /* 805A37B4  4B A9 1B AC */	b isSwitch__10dSv_info_cCFii

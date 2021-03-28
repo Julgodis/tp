@@ -16,8 +16,8 @@ lbl_80C4827C:
 /* 80C482B4  4B 3D 15 44 */	b fopAcIt_Judge__FPFPvPv_PvPv
 /* 80C482B8  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80C482BC  41 82 00 48 */	beq lbl_80C48304
-/* 80C482C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C482C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C482C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C482C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C482C8  88 9E 05 EB */	lbz r4, 0x5eb(r30)
 /* 80C482CC  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C482D0  7C 05 07 74 */	extsb r5, r0

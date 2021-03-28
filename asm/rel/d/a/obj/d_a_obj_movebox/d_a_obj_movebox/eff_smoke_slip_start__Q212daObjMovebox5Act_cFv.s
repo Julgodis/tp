@@ -5,7 +5,7 @@ lbl_8047F5CC:
 /* 8047F5D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8047F5DC  3C 60 80 48 */	lis r3, lit_1109@ha
 /* 8047F5E0  3B E3 18 88 */	addi r31, r3, lit_1109@l
-/* 8047F5E4  88 1F 12 E0 */	lbz r0, 0x12e0(r31)	/* effective address: 80482B68 */
+/* 8047F5E4  88 1F 12 E0 */	lbz r0, 0x12e0(r31)
 /* 8047F5E8  7C 00 07 75 */	extsb. r0, r0
 /* 8047F5EC  40 82 00 34 */	bne lbl_8047F620
 /* 8047F5F0  3C 60 80 48 */	lis r3, lit_4514@ha

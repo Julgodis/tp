@@ -11,8 +11,8 @@ lbl_80AC216C:
 /* 80AC2190  3B C0 00 00 */	li r30, 0
 /* 80AC2194  3B 60 FF FF */	li r27, -1
 /* 80AC2198  3B 40 00 00 */	li r26, 0
-/* 80AC219C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC21A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AC219C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC21A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AC21A4  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 80AC21A8  7F 83 E3 78 */	mr r3, r28
 /* 80AC21AC  3C A0 80 AC */	lis r5, struct_80AC4654+0x0@ha

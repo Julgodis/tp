@@ -84,9 +84,9 @@ lbl_80A55580:
 lbl_80A55598:
 /* 80A55598  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A5559C  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A555A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A555A0  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A555A4  38 03 00 01 */	addi r0, r3, 1
-/* 80A555A8  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A555A8  90 04 00 00 */	stw r0, 0(r4)
 /* 80A555AC  38 00 00 0A */	li r0, 0xa
 /* 80A555B0  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A555B4  C0 1F 00 30 */	lfs f0, 0x30(r31)
@@ -105,7 +105,7 @@ lbl_80A555C0:
 /* 80A555E4  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A555E8  3C 60 80 A6 */	lis r3, l_HIO@ha
 /* 80A555EC  38 63 FE B8 */	addi r3, r3, l_HIO@l
-/* 80A555F0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A5FED4 */
+/* 80A555F0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A555F4  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 80A555F8  80 1D 05 D0 */	lwz r0, 0x5d0(r29)
 /* 80A555FC  2C 00 00 1A */	cmpwi r0, 0x1a
@@ -289,9 +289,9 @@ lbl_80A5586C:
 lbl_80A55880:
 /* 80A55880  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A55884  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A55888  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A55888  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A5588C  38 03 00 01 */	addi r0, r3, 1
-/* 80A55890  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A55890  90 04 00 00 */	stw r0, 0(r4)
 /* 80A55894  38 00 00 0A */	li r0, 0xa
 /* 80A55898  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 lbl_80A5589C:

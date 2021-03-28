@@ -106,7 +106,7 @@ lbl_804D7080:
 /* 804D7084  FC 00 02 10 */	fabs f0, f0
 /* 804D7088  3C 60 80 4E */	lis r3, l_HIO@ha
 /* 804D708C  3B 83 A3 6C */	addi r28, r3, l_HIO@l
-/* 804D7090  C0 7C 00 18 */	lfs f3, 0x18(r28)	/* effective address: 804DA384 */
+/* 804D7090  C0 7C 00 18 */	lfs f3, 0x18(r28)
 /* 804D7094  C0 5F 00 38 */	lfs f2, 0x38(r31)
 /* 804D7098  FC 00 00 18 */	frsp f0, f0
 /* 804D709C  EC 02 00 32 */	fmuls f0, f2, f0

@@ -21,11 +21,11 @@ lbl_8081D4D8:
 /* 8081D524  4B B2 8F 8C */	b PSMTXCopy
 /* 8081D528  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8081D52C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8081D530  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 8081D530  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 8081D534  D0 41 00 14 */	stfs f2, 0x14(r1)
-/* 8081D538  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8081D538  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 8081D53C  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 8081D540  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8081D540  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8081D544  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8081D548  D0 41 00 08 */	stfs f2, 8(r1)
 /* 8081D54C  D0 21 00 0C */	stfs f1, 0xc(r1)

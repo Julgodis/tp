@@ -84,8 +84,8 @@ lbl_80AC5274:
 /* 80AC52C0  39 5E 04 DC */	addi r10, r30, 0x4dc
 /* 80AC52C4  4B 5B 0F 84 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80AC52C8  38 7E 06 8C */	addi r3, r30, 0x68c
-/* 80AC52CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AC52D0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AC52CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AC52D0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AC52D4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AC52D8  4B 5B 17 D4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AC52DC  80 1E 07 68 */	lwz r0, 0x768(r30)
@@ -125,7 +125,7 @@ lbl_80AC5274:
 /* 80AC5364  38 7E 08 64 */	addi r3, r30, 0x864
 /* 80AC5368  3C 80 80 AC */	lis r4, m__18daNpc_seiB_Param_c@ha
 /* 80AC536C  38 84 70 24 */	addi r4, r4, m__18daNpc_seiB_Param_c@l
-/* 80AC5370  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80AC7034 */
+/* 80AC5370  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80AC5374  FC 00 00 1E */	fctiwz f0, f0
 /* 80AC5378  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80AC537C  80 81 00 14 */	lwz r4, 0x14(r1)

@@ -18,8 +18,8 @@ lbl_80CC7C84:
 /* 80CC7C84  3C 60 80 CD */	lis r3, l_staffName@ha
 /* 80CC7C88  80 83 93 34 */	lwz r4, l_staffName@l(r3)
 lbl_80CC7C8C:
-/* 80CC7C8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC7C90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC7C8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC7C90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC7C94  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80CC7C98  38 A0 00 00 */	li r5, 0
 /* 80CC7C9C  38 C0 00 00 */	li r6, 0

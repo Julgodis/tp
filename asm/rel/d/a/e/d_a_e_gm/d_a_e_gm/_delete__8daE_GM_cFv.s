@@ -33,7 +33,7 @@ lbl_806D69D4:
 lbl_806D69F4:
 /* 806D69F4  3C 60 80 6D */	lis r3, data_806D7B34@ha
 /* 806D69F8  38 63 7B 34 */	addi r3, r3, data_806D7B34@l
-/* 806D69FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806D7B34 */
+/* 806D69FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D6A00  28 1E 00 00 */	cmplwi r30, 0
 /* 806D6A04  41 82 00 0C */	beq lbl_806D6A10
 /* 806D6A08  80 1E 00 04 */	lwz r0, 4(r30)
@@ -51,7 +51,7 @@ lbl_806D6A14:
 lbl_806D6A30:
 /* 806D6A30  3C 60 80 6D */	lis r3, data_806D7B38@ha
 /* 806D6A34  38 63 7B 38 */	addi r3, r3, data_806D7B38@l
-/* 806D6A38  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 806D7B38 */
+/* 806D6A38  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D6A3C  28 1E 00 00 */	cmplwi r30, 0
 /* 806D6A40  41 82 00 0C */	beq lbl_806D6A4C
 /* 806D6A44  80 1E 00 04 */	lwz r0, 4(r30)

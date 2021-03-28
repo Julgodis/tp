@@ -9,8 +9,8 @@ lbl_80AEAE9C:
 /* 80AEAEB8  83 E4 BC 78 */	lwz r31, l_bmdFileName@l(r4)
 /* 80AEAEBC  48 00 02 D5 */	bl getResName__13daNpc_Shop0_cFv
 /* 80AEAEC0  7F E4 FB 78 */	mr r4, r31
-/* 80AEAEC4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AEAEC8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AEAEC4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AEAEC8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AEAECC  3C A5 00 02 */	addis r5, r5, 2
 /* 80AEAED0  38 C0 00 80 */	li r6, 0x80
 /* 80AEAED4  38 A5 C2 F8 */	addi r5, r5, -15624

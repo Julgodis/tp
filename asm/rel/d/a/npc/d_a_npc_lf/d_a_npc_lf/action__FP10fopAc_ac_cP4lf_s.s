@@ -33,12 +33,12 @@ lbl_80A6A220:
 lbl_80A6A228:
 /* 80A6A228  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A6A22C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A6A230  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A6A230  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A6A234  A8 9D 00 12 */	lha r4, 0x12(r29)
 /* 80A6A238  4B 5A 21 A4 */	b mDoMtx_YrotS__FPA4_fs
 /* 80A6A23C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A6A240  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A6A244  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A6A244  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A6A248  A8 9D 00 10 */	lha r4, 0x10(r29)
 /* 80A6A24C  4B 5A 21 50 */	b mDoMtx_XrotM__FPA4_fs
 /* 80A6A250  C0 1E 00 18 */	lfs f0, 0x18(r30)
@@ -47,7 +47,7 @@ lbl_80A6A228:
 /* 80A6A25C  C0 3D 00 44 */	lfs f1, 0x44(r29)
 /* 80A6A260  3C 60 80 A7 */	lis r3, l_HIO@ha
 /* 80A6A264  3B E3 AA A0 */	addi r31, r3, l_HIO@l
-/* 80A6A268  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80A6AAA8 */
+/* 80A6A268  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80A6A26C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80A6A270  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80A6A274  38 61 00 08 */	addi r3, r1, 8

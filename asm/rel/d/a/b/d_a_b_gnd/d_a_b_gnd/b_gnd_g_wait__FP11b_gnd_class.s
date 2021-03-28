@@ -9,7 +9,7 @@ lbl_805F7A10:
 /* 805F7A2C  7C 7B 1B 78 */	mr r27, r3
 /* 805F7A30  3C 60 80 60 */	lis r3, lit_3815@ha
 /* 805F7A34  3B A3 26 64 */	addi r29, r3, lit_3815@l
-/* 805F7A38  C3 FD 00 14 */	lfs f31, 0x14(r29)	/* effective address: 80602678 */
+/* 805F7A38  C3 FD 00 14 */	lfs f31, 0x14(r29)
 /* 805F7A3C  3B 80 04 00 */	li r28, 0x400
 /* 805F7A40  80 1B 1F B4 */	lwz r0, 0x1fb4(r27)
 /* 805F7A44  90 01 00 0C */	stw r0, 0xc(r1)

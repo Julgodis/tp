@@ -34,9 +34,9 @@ lbl_80512D14:
 /* 80512D94  B0 1F 09 90 */	sth r0, 0x990(r31)
 /* 80512D98  A8 1F 04 B6 */	lha r0, 0x4b6(r31)
 /* 80512D9C  B0 1F 05 CC */	sth r0, 0x5cc(r31)
-/* 80512DA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80512DA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80512DA8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80512DA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80512DA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80512DA8  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80512DAC  38 80 00 01 */	li r4, 1
 /* 80512DB0  7F E5 FB 78 */	mr r5, r31
 /* 80512DB4  38 DF 05 38 */	addi r6, r31, 0x538

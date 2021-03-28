@@ -10,7 +10,7 @@ lbl_805A0024:
 /* 805A0044  80 1F 08 F0 */	lwz r0, 0x8f0(r31)
 /* 805A0048  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 805A004C  90 1F 08 F0 */	stw r0, 0x8f0(r31)
-/* 805A0050  C0 1E 00 20 */	lfs f0, 0x20(r30)	/* effective address: 805A1178 */
+/* 805A0050  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 805A0054  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 805A0058  A8 7F 05 FA */	lha r3, 0x5fa(r31)
 /* 805A005C  2C 03 00 01 */	cmpwi r3, 1
@@ -63,9 +63,9 @@ lbl_805A00EC:
 /* 805A010C  B0 9F 05 FA */	sth r4, 0x5fa(r31)
 /* 805A0110  3C 60 80 5A */	lis r3, l_HIO@ha
 /* 805A0114  38 63 13 40 */	addi r3, r3, l_HIO@l
-/* 805A0118  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 805A1360 */
+/* 805A0118  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 805A011C  D0 1F 05 2C */	stfs f0, 0x52c(r31)
-/* 805A0120  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 805A1364 */
+/* 805A0120  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 805A0124  D0 1F 04 FC */	stfs f0, 0x4fc(r31)
 /* 805A0128  38 00 00 03 */	li r0, 3
 /* 805A012C  B0 1F 05 F8 */	sth r0, 0x5f8(r31)

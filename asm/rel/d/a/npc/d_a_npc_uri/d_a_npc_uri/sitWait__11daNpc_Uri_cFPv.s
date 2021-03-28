@@ -8,7 +8,7 @@ lbl_80B2B24C:
 /* 80B2B264  3C 60 80 B3 */	lis r3, m__17daNpc_Uri_Param_c@ha
 /* 80B2B268  3B E3 CE 14 */	addi r31, r3, m__17daNpc_Uri_Param_c@l
 /* 80B2B26C  38 7F 00 00 */	addi r3, r31, 0
-/* 80B2B270  AB 83 00 92 */	lha r28, 0x92(r3)	/* effective address: 80B2CEA6 */
+/* 80B2B270  AB 83 00 92 */	lha r28, 0x92(r3)
 /* 80B2B274  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 80B2B278  2C 00 00 02 */	cmpwi r0, 2
 /* 80B2B27C  41 82 02 40 */	beq lbl_80B2B4BC

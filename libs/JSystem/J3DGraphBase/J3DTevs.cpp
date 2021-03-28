@@ -247,18 +247,18 @@ SECTION_DATA static u8 data_803CEAF8[48] = {
 
 /* 803CEB28-803CEB58 0030+00 s=1 e=0 z=0  None .data      @1059                                                        */
 SECTION_DATA static void* lit_1059[12] = {
-	/* 0    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x2A4),
-	/* 1    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x1C8),
-	/* 2    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	/* 3    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	/* 4    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x260),
-	/* 5    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
-	/* 6    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x170),
-	/* 7    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
-	/* 8    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	/* 9    */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	/* 10   */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
-	/* 11   */ (void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x2A4),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x1C8),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x260),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x20C),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x170),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
+	(void*)(((char*)calcTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
 };
 
 /* 80323920-80323C0C 02EC+00 s=2 e=0 z=0  None .text      calcTexMtx__9J3DTexMtxFPA4_Cf                                */
@@ -289,18 +289,18 @@ SECTION_DATA static u8 data_803CEB88[48] = {
 
 /* 803CEBB8-803CEBE8 0030+00 s=1 e=0 z=0  None .data      @1131                                                        */
 SECTION_DATA static void* lit_1131[12] = {
-	/* 0    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x310),
-	/* 1    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x200),
-	/* 2    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
-	/* 3    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x288),
-	/* 4    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x2CC),
-	/* 5    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
-	/* 6    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x1B8),
-	/* 7    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
-	/* 8    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
-	/* 9    */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
-	/* 10   */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x150),
-	/* 11   */ (void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x310),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x200),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x288),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x2CC),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x234),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x1B8),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x108),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0xB0),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x150),
+	(void*)(((char*)calcPostTexMtx__9J3DTexMtxFPA4_Cf)+0x48),
 };
 
 /* 80323C0C-80323F64 0358+00 s=1 e=2 z=0  None .text      calcPostTexMtx__9J3DTexMtxFPA4_Cf                            */

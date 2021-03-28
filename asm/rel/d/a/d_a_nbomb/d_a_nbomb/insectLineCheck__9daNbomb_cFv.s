@@ -5,8 +5,8 @@ lbl_804C8928:
 /* 804C8934  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 804C8938  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 804C893C  7C 7E 1B 78 */	mr r30, r3
-/* 804C8940  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C8944  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C8940  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C8944  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C8948  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 804C894C  7F E3 FB 78 */	mr r3, r31
 /* 804C8950  38 9E 0A A0 */	addi r4, r30, 0xaa0
@@ -20,9 +20,9 @@ lbl_804C8928:
 /* 804C8970  38 9E 0A B4 */	addi r4, r30, 0xab4
 /* 804C8974  38 A1 00 08 */	addi r5, r1, 8
 /* 804C8978  4B BA BD CC */	b GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
-/* 804C897C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C8980  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C8984  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804C897C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C8980  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C8984  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 804C8988  4B C1 AE 98 */	b getBombInsectLimitAngle__9daAlink_cCFv
 /* 804C898C  7C 60 07 34 */	extsh r0, r3
 /* 804C8990  3C 60 80 4D */	lis r3, lit_4689@ha

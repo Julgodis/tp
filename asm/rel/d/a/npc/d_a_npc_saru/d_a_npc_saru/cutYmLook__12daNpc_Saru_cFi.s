@@ -9,8 +9,8 @@ lbl_80AC2598:
 /* 80AC25B4  3B E0 00 00 */	li r31, 0
 /* 80AC25B8  3B C0 FF FF */	li r30, -1
 /* 80AC25BC  3B 40 00 00 */	li r26, 0
-/* 80AC25C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC25C4  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 80AC25C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC25C4  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 80AC25C8  3B 7C 4F F8 */	addi r27, r28, 0x4ff8
 /* 80AC25CC  7F 63 DB 78 */	mr r3, r27
 /* 80AC25D0  3C A0 80 AC */	lis r5, struct_80AC4654+0x0@ha
@@ -60,7 +60,7 @@ lbl_80AC266C:
 /* 80AC266C  38 61 00 08 */	addi r3, r1, 8
 /* 80AC2670  3C 80 80 AC */	lis r4, l_evtList@ha
 /* 80AC2674  38 84 46 E4 */	addi r4, r4, l_evtList@l
-/* 80AC2678  80 84 00 10 */	lwz r4, 0x10(r4)	/* effective address: 80AC46F4 */
+/* 80AC2678  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80AC267C  4B 8A 64 B0 */	b strcpy
 /* 80AC2680  38 61 00 08 */	addi r3, r1, 8
 /* 80AC2684  3C 80 80 AC */	lis r4, struct_80AC4654+0x0@ha

@@ -33,9 +33,9 @@ lbl_80604744:
 /* 80604754  4B C6 B2 E8 */	b cLib_addCalc2__FPffff
 /* 80604758  3C 60 80 60 */	lis r3, boss@ha
 /* 8060475C  38 63 56 08 */	addi r3, r3, boss@l
-/* 80604760  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80605608 */
-/* 80604764  80 63 05 B4 */	lwz r3, 0x5b4(r3)	/* effective address: 80605BBC */
-/* 80604768  83 C3 00 04 */	lwz r30, 4(r3)	/* effective address: 8060560C */
+/* 80604760  80 63 00 00 */	lwz r3, 0(r3)
+/* 80604764  80 63 05 B4 */	lwz r3, 0x5b4(r3)
+/* 80604768  83 C3 00 04 */	lwz r30, 4(r3)
 /* 8060476C  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80604770  80 83 00 0C */	lwz r4, 0xc(r3)
 /* 80604774  80 1D 06 60 */	lwz r0, 0x660(r29)
@@ -48,7 +48,7 @@ lbl_80604744:
 /* 80604790  7C 64 02 14 */	add r3, r4, r0
 /* 80604794  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80604798  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8060479C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8060479C  80 84 00 00 */	lwz r4, 0(r4)
 /* 806047A0  4B D4 1D 10 */	b PSMTXCopy
 /* 806047A4  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 806047A8  D0 01 00 38 */	stfs f0, 0x38(r1)
@@ -74,7 +74,7 @@ lbl_80604744:
 /* 806047F8  7C 63 02 14 */	add r3, r3, r0
 /* 806047FC  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80604800  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80604804  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80604804  80 84 00 00 */	lwz r4, 0(r4)
 /* 80604808  4B D4 1C A8 */	b PSMTXCopy
 /* 8060480C  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80604810  D0 01 00 38 */	stfs f0, 0x38(r1)
@@ -116,8 +116,8 @@ lbl_80604860:
 /* 8060489C  38 7D 04 DE */	addi r3, r29, 0x4de
 /* 806048A0  3C 80 80 60 */	lis r4, boss@ha
 /* 806048A4  38 84 56 08 */	addi r4, r4, boss@l
-/* 806048A8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80605608 */
-/* 806048AC  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 80605AEE */
+/* 806048A8  80 84 00 00 */	lwz r4, 0(r4)
+/* 806048AC  A8 84 04 E6 */	lha r4, 0x4e6(r4)
 /* 806048B0  A8 1D 06 A0 */	lha r0, 0x6a0(r29)
 /* 806048B4  7C 04 02 14 */	add r0, r4, r0
 /* 806048B8  7C 04 07 34 */	extsh r4, r0

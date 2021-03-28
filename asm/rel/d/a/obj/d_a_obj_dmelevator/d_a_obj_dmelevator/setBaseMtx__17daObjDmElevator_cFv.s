@@ -80,11 +80,11 @@ lbl_80BDDE64:
 /* 80BDDEC4  4B 42 E5 70 */	b mDoMtx_YrotM__FPA4_fs
 /* 80BDDEC8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BDDECC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80BDDED0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80BDDED0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80BDDED4  D0 1F 06 1C */	stfs f0, 0x61c(r31)
-/* 80BDDED8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80BDDED8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80BDDEDC  D0 1F 06 20 */	stfs f0, 0x620(r31)
-/* 80BDDEE0  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80BDDEE0  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80BDDEE4  D0 1F 06 24 */	stfs f0, 0x624(r31)
 /* 80BDDEE8  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80BDDEEC  80 01 00 24 */	lwz r0, 0x24(r1)

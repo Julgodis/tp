@@ -12,8 +12,8 @@ lbl_8057A7C8:
 /* 8057A7F0  40 82 00 84 */	bne lbl_8057A874
 /* 8057A7F4  38 00 00 08 */	li r0, 8
 /* 8057A7F8  98 1E 05 90 */	stb r0, 0x590(r30)
-/* 8057A7FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057A800  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057A7FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057A800  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057A804  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8057A808  3C 80 80 58 */	lis r4, struct_8057B4EC+0x0@ha
 /* 8057A80C  38 84 B4 EC */	addi r4, r4, struct_8057B4EC+0x0@l

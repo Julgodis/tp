@@ -30,7 +30,7 @@ lbl_807F8B38:
 /* 807F8B50  C3 DF 00 00 */	lfs f30, 0(r31)
 /* 807F8B54  3C 60 80 80 */	lis r3, target_info_count@ha
 /* 807F8B58  3B 63 D1 24 */	addi r27, r3, target_info_count@l
-/* 807F8B5C  80 1B 00 00 */	lwz r0, 0(r27)	/* effective address: 807FD124 */
+/* 807F8B5C  80 1B 00 00 */	lwz r0, 0(r27)
 /* 807F8B60  2C 00 00 00 */	cmpwi r0, 0
 /* 807F8B64  41 82 00 C8 */	beq lbl_807F8C2C
 /* 807F8B68  3B 20 00 00 */	li r25, 0

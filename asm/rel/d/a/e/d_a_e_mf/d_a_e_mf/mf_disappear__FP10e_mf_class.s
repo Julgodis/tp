@@ -11,7 +11,7 @@ lbl_8070A77C:
 /* 8070A7A0  38 63 00 60 */	addi r3, r3, 0x60
 /* 8070A7A4  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8070A7A8  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8070A7AC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8070A7AC  80 84 00 00 */	lwz r4, 0(r4)
 /* 8070A7B0  4B C3 BD 00 */	b PSMTXCopy
 /* 8070A7B4  3C 60 80 71 */	lis r3, lit_3829@ha
 /* 8070A7B8  C0 03 39 78 */	lfs f0, lit_3829@l(r3)
@@ -33,8 +33,8 @@ lbl_8070A77C:
 /* 8070A7F8  54 04 46 3E */	srwi r4, r0, 0x18
 /* 8070A7FC  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8070A800  41 82 00 18 */	beq lbl_8070A818
-/* 8070A804  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070A808  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8070A804  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070A808  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8070A80C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8070A810  7C 05 07 74 */	extsb r5, r0
 /* 8070A814  4B 92 A9 EC */	b onSwitch__10dSv_info_cFii

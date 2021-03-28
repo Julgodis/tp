@@ -19,7 +19,6 @@ extern void* const data_8061AD70[2];
 // 
 
 
-extern "C" void __sinit_d_a_b_ob_cpp(); // 1
 
 // 
 // Declarations:

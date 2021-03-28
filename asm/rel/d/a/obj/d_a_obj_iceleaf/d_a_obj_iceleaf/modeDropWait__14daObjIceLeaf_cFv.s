@@ -7,13 +7,13 @@ lbl_80C2541C:
 /* 80C25430  7C 7D 1B 78 */	mr r29, r3
 /* 80C25434  3C 60 80 C2 */	lis r3, lit_3703@ha
 /* 80C25438  3B 83 5D 64 */	addi r28, r3, lit_3703@l
-/* 80C2543C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C25440  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C25444  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80C2543C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C25440  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C25444  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 80C25448  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80C2544C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80C25450  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80C25454  A0 84 02 68 */	lhz r4, 0x268(r4)	/* effective address: 803A74F0 */
+/* 80C25454  A0 84 02 68 */	lhz r4, 0x268(r4)
 /* 80C25458  4B 40 F5 64 */	b isEventBit__11dSv_event_cCFUs
 /* 80C2545C  2C 03 00 00 */	cmpwi r3, 0
 /* 80C25460  41 82 01 60 */	beq lbl_80C255C0
@@ -128,8 +128,8 @@ lbl_80C255DC:
 /* 80C255DC  38 7D 08 EC */	addi r3, r29, 0x8ec
 /* 80C255E0  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80C255E4  4B 64 9B F8 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80C255E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C255EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C255E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C255EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C255F0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80C255F4  38 9D 07 C8 */	addi r4, r29, 0x7c8
 /* 80C255F8  4B 63 F5 B0 */	b Set__4cCcSFP8cCcD_Obj

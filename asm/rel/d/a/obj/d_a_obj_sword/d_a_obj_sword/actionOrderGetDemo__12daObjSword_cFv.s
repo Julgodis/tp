@@ -13,8 +13,8 @@ lbl_80CFDB04:
 /* 80CFDB30  3C 04 00 01 */	addis r0, r4, 1
 /* 80CFDB34  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80CFDB38  41 82 00 30 */	beq lbl_80CFDB68
-/* 80CFDB3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFDB40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFDB3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFDB40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFDB44  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80CFDB48  4B 34 5B A4 */	b setPtI_Id__14dEvt_control_cFUi
 /* 80CFDB4C  48 00 00 1C */	b lbl_80CFDB68

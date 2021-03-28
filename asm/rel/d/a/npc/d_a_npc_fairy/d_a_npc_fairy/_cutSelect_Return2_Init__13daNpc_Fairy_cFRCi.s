@@ -17,7 +17,7 @@ lbl_809B7A60:
 lbl_809B7A70:
 /* 809B7A70  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B7A74  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B7A78  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B7A78  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B7A7C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B7A80  38 80 00 2D */	li r4, 0x2d
 /* 809B7A84  4B 8F 84 58 */	b bgmStreamStop__8Z2SeqMgrFUl

@@ -8,8 +8,8 @@ lbl_8046E0A0:
 /* 8046E0B8  3C 80 80 47 */	lis r4, stringBase0@ha
 /* 8046E0BC  38 84 E5 38 */	addi r4, r4, stringBase0@l
 /* 8046E0C0  4B BB EF 48 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
-/* 8046E0C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8046E0C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8046E0C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8046E0C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8046E0CC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8046E0D0  80 9F 07 38 */	lwz r4, 0x738(r31)
 /* 8046E0D4  4B C0 61 7C */	b Release__4cBgSFP9dBgW_Base

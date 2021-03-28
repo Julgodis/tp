@@ -82,8 +82,8 @@ lbl_805802C8:
 /* 805802DC  C0 1F 00 44 */	lfs f0, 0x44(r31)
 /* 805802E0  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 805802E4  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 805802E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805802EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805802E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805802EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805802F0  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805802F4  38 80 00 07 */	li r4, 7
 /* 805802F8  38 A0 00 01 */	li r5, 1

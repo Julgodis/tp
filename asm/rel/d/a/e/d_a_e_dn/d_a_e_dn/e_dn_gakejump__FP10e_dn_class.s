@@ -73,7 +73,7 @@ lbl_804E894C:
 /* 804E8950  98 1E 06 F4 */	stb r0, 0x6f4(r30)
 /* 804E8954  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804E8958  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804E895C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804E895C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804E8960  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 804E8964  4B B2 3A 78 */	b mDoMtx_YrotS__FPA4_fs
 /* 804E8968  C0 1F 00 04 */	lfs f0, 4(r31)

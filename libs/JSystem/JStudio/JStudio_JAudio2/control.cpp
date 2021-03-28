@@ -82,10 +82,10 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C5A68-803C5A78 0010+00 s=1 e=1 z=0  None .data      __vt__Q215JStudio_JAudio213TCreateObject                     */
 SECTION_DATA void* __vt__Q215JStudio_JAudio213TCreateObject[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q215JStudio_JAudio213TCreateObjectFv,
-	/* 3    */ (void*)create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q215JStudio_JAudio213TCreateObjectFv,
+	(void*)create__Q215JStudio_JAudio213TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
 };
 
 /* 8028D550-8028D5B0 0060+00 s=1 e=0 z=0  None .text      __dt__Q215JStudio_JAudio213TCreateObjectFv                   */

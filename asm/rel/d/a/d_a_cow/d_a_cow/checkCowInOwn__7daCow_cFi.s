@@ -49,18 +49,18 @@ lbl_8065BB64:
 /* 8065BBEC  40 80 00 60 */	bge lbl_8065BC4C
 /* 8065BBF0  3C 60 80 66 */	lis r3, struct_80662FB8+0x0@ha
 /* 8065BBF4  38 63 2F B8 */	addi r3, r3, struct_80662FB8+0x0@l
-/* 8065BBF8  A8 63 00 00 */	lha r3, 0(r3)	/* effective address: 80662FB8 */
+/* 8065BBF8  A8 63 00 00 */	lha r3, 0(r3)
 /* 8065BBFC  A8 9E 0C 34 */	lha r4, 0xc34(r30)
 /* 8065BC00  4B C1 52 24 */	b cLib_distanceAngleS__Fss
 /* 8065BC04  7C 03 F8 00 */	cmpw r3, r31
 /* 8065BC08  40 80 00 44 */	bge lbl_8065BC4C
 /* 8065BC0C  3C 60 80 66 */	lis r3, lit_5493@ha
 /* 8065BC10  38 83 31 D8 */	addi r4, r3, lit_5493@l
-/* 8065BC14  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806631D8 */
-/* 8065BC18  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 806631DC */
+/* 8065BC14  80 64 00 00 */	lwz r3, 0(r4)
+/* 8065BC18  80 04 00 04 */	lwz r0, 4(r4)
 /* 8065BC1C  90 61 00 08 */	stw r3, 8(r1)
 /* 8065BC20  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8065BC24  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 806631E0 */
+/* 8065BC24  80 04 00 08 */	lwz r0, 8(r4)
 /* 8065BC28  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8065BC2C  7F C3 F3 78 */	mr r3, r30
 /* 8065BC30  38 81 00 08 */	addi r4, r1, 8

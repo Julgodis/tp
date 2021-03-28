@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JASWaveInfo {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JASWaveInfo {
 };
 
 struct JASBasicWaveBank {
@@ -131,50 +131,50 @@ extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803C7728-803C773C 0014+00 s=2 e=0 z=0  None .data      __vt__Q216JASBasicWaveBank11TWaveHandle                      */
 SECTION_DATA static void* __vt__Q216JASBasicWaveBank11TWaveHandle[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q216JASBasicWaveBank11TWaveHandleFv,
-	/* 3    */ (void*)getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv,
-	/* 4    */ (void*)getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q216JASBasicWaveBank11TWaveHandleFv,
+	(void*)getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv,
+	(void*)getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv,
 };
 
 /* 803C773C-803C7754 0018+00 s=2 e=0 z=0  None .data      __vt__Q216JASBasicWaveBank10TWaveGroup                       */
 SECTION_DATA static void* __vt__Q216JASBasicWaveBank10TWaveGroup[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q216JASBasicWaveBank10TWaveGroupFv,
-	/* 3    */ (void*)onDispose__10JASWaveArcFv,
-	/* 4    */ (void*)onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv,
-	/* 5    */ (void*)onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q216JASBasicWaveBank10TWaveGroupFv,
+	(void*)onDispose__10JASWaveArcFv,
+	(void*)onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv,
+	(void*)onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv,
 };
 
 /* 803C7754-803C7768 0014+00 s=3 e=2 z=0  None .data      __vt__13JASWaveHandle                                        */
 SECTION_DATA void* __vt__13JASWaveHandle[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13JASWaveHandleFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13JASWaveHandleFv,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803C7768-803C7780 0018+00 s=2 e=0 z=0  None .data      __vt__16JASBasicWaveBank                                     */
 SECTION_DATA static void* __vt__16JASBasicWaveBank[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16JASBasicWaveBankFv,
-	/* 3    */ (void*)getWaveHandle__16JASBasicWaveBankCFUl,
-	/* 4    */ (void*)getWaveArc__16JASBasicWaveBankFUl,
-	/* 5    */ (void*)getArcCount__16JASBasicWaveBankCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16JASBasicWaveBankFv,
+	(void*)getWaveHandle__16JASBasicWaveBankCFUl,
+	(void*)getWaveArc__16JASBasicWaveBankFUl,
+	(void*)getArcCount__16JASBasicWaveBankCFv,
 };
 
 /* 803C7780-803C7798 0018+00 s=3 e=2 z=0  None .data      __vt__11JASWaveBank                                          */
 SECTION_DATA void* __vt__11JASWaveBank[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JASWaveBankFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JASWaveBankFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 802984F8-80298558 0060+00 s=0 e=1 z=0  None .text      __ct__16JASBasicWaveBankFv                                   */

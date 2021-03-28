@@ -4,7 +4,7 @@ lbl_80D2B6C0:
 /* 80D2B6C8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D2B6CC  3C 80 80 D3 */	lis r4, l_arcName@ha
 /* 80D2B6D0  38 84 B9 34 */	addi r4, r4, l_arcName@l
-/* 80D2B6D4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D2B934 */
+/* 80D2B6D4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D2B6D8  38 63 05 A0 */	addi r3, r3, 0x5a0
 /* 80D2B6DC  4B 30 19 2C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D2B6E0  38 60 00 01 */	li r3, 1

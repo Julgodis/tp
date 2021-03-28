@@ -54,20 +54,20 @@ lbl_80AF9400:
 /* 80AF9400  88 1F 0E 1E */	lbz r0, 0xe1e(r31)
 /* 80AF9404  28 00 00 02 */	cmplwi r0, 2
 /* 80AF9408  40 82 00 50 */	bne lbl_80AF9458
-/* 80AF940C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AF9410  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AF940C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AF9410  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AF9414  3B 63 07 F0 */	addi r27, r3, 0x7f0
 /* 80AF9418  7F 63 DB 78 */	mr r3, r27
 /* 80AF941C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80AF9420  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80AF9424  A0 84 00 88 */	lhz r4, 0x88(r4)	/* effective address: 803A7310 */
+/* 80AF9424  A0 84 00 88 */	lhz r4, 0x88(r4)
 /* 80AF9428  4B 53 B5 94 */	b isEventBit__11dSv_event_cCFUs
 /* 80AF942C  2C 03 00 00 */	cmpwi r3, 0
 /* 80AF9430  41 82 00 20 */	beq lbl_80AF9450
 /* 80AF9434  7F 63 DB 78 */	mr r3, r27
 /* 80AF9438  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80AF943C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80AF9440  A0 84 00 9C */	lhz r4, 0x9c(r4)	/* effective address: 803A7324 */
+/* 80AF9440  A0 84 00 9C */	lhz r4, 0x9c(r4)
 /* 80AF9444  4B 53 B5 78 */	b isEventBit__11dSv_event_cCFUs
 /* 80AF9448  2C 03 00 00 */	cmpwi r3, 0
 /* 80AF944C  41 82 00 0C */	beq lbl_80AF9458
@@ -179,8 +179,8 @@ lbl_80AF9574:
 /* 80AF95B0  38 7F 07 E4 */	addi r3, r31, 0x7e4
 /* 80AF95B4  3C 80 80 B0 */	lis r4, m__16daNpcThe_Param_c@ha
 /* 80AF95B8  3B A4 BE 0C */	addi r29, r4, m__16daNpcThe_Param_c@l
-/* 80AF95BC  C0 3D 00 1C */	lfs f1, 0x1c(r29)	/* effective address: 80AFBE28 */
-/* 80AF95C0  C0 5D 00 18 */	lfs f2, 0x18(r29)	/* effective address: 80AFBE24 */
+/* 80AF95BC  C0 3D 00 1C */	lfs f1, 0x1c(r29)
+/* 80AF95C0  C0 5D 00 18 */	lfs f2, 0x18(r29)
 /* 80AF95C4  4B 57 C9 94 */	b SetWall__12dBgS_AcchCirFff
 /* 80AF95C8  38 1F 04 E4 */	addi r0, r31, 0x4e4
 /* 80AF95CC  90 01 00 08 */	stw r0, 8(r1)
@@ -200,14 +200,14 @@ lbl_80AF9574:
 /* 80AF9604  60 00 04 00 */	ori r0, r0, 0x400
 /* 80AF9608  90 1F 05 FC */	stw r0, 0x5fc(r31)
 /* 80AF960C  38 7F 05 D0 */	addi r3, r31, 0x5d0
-/* 80AF9610  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AF9614  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AF9610  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AF9614  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AF9618  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AF961C  4B 57 D4 90 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AF9620  38 7F 07 A8 */	addi r3, r31, 0x7a8
 /* 80AF9624  3C 80 80 B0 */	lis r4, m__16daNpcThe_Param_c@ha
 /* 80AF9628  38 84 BE 0C */	addi r4, r4, m__16daNpcThe_Param_c@l
-/* 80AF962C  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80AFBE1C */
+/* 80AF962C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80AF9630  FC 00 00 1E */	fctiwz f0, f0
 /* 80AF9634  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80AF9638  80 81 00 14 */	lwz r4, 0x14(r1)
@@ -226,7 +226,7 @@ lbl_80AF9574:
 /* 80AF966C  38 7F 0D B8 */	addi r3, r31, 0xdb8
 /* 80AF9670  3C 80 80 B0 */	lis r4, m__16daNpcThe_Param_c@ha
 /* 80AF9674  38 84 BE 0C */	addi r4, r4, m__16daNpcThe_Param_c@l
-/* 80AF9678  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80AFBE20 */
+/* 80AF9678  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 80AF967C  4B 77 5B 7C */	b SetH__8cM3dGCylFf
 /* 80AF9680  38 7F 0D B8 */	addi r3, r31, 0xdb8
 /* 80AF9684  C0 3D 00 1C */	lfs f1, 0x1c(r29)

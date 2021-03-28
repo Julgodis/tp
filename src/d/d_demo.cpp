@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct fopAc_ac_c {
+struct Vec {
 };
 
-struct Vec {
+struct fopAc_ac_c {
 };
 
 struct dDemo_actor_c {
@@ -79,10 +79,10 @@ struct dDemo_ambient_c {
 	/* 800394C8 */ ~dDemo_ambient_c();
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
 struct JStage {
@@ -123,10 +123,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -255,10 +255,10 @@ struct dRes_control_c {
 	/* 8003C400 */ void getIDRes(char const*, u16, dRes_info_c*, int);
 };
 
-struct dPa_levelEcallBack {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct dPa_levelEcallBack {
 };
 
 struct dPa_control_c {
@@ -641,244 +641,244 @@ extern "C" extern u8 mEmitterMng__13dPa_control_c[4];
 /* ############################################################################################## */
 /* 803A7910-803A7928 0018+00 s=2 e=0 z=0  None .data      __vt__16dDemo_particle_c                                     */
 SECTION_DATA static void* __vt__16dDemo_particle_c[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dDemo_particle_cFv,
-	/* 3    */ (void*)create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
-	/* 4    */ (void*)emitter_create__16dDemo_particle_cFUl,
-	/* 5    */ (void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dDemo_particle_cFv,
+	(void*)create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)emitter_create__16dDemo_particle_cFUl,
+	(void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
 };
 
 /* 803A7928-803A7934 000C+00 s=1 e=1 z=0  None .data      __vt__17jmessage_tControl                                    */
 SECTION_DATA void* __vt__17jmessage_tControl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17jmessage_tControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17jmessage_tControlFv,
 };
 
 /* 803A7934-803A7944 0010+00 s=1 e=1 z=0  None .data      __vt__Q27JStudio13TCreateObject                              */
 SECTION_DATA void* __vt__Q27JStudio13TCreateObject[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A7944-803A7994 0050+00 s=2 e=0 z=0  None .data      __vt__14dDemo_system_c                                       */
 SECTION_DATA static void* __vt__14dDemo_system_c[20] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dDemo_system_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage7TSystemCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject,
-	/* 16   */ (void*)JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl,
-	/* 17   */ (void*)JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject,
-	/* 18   */ (void*)JSGGetSystemData__Q26JStage7TSystemFUl,
-	/* 19   */ (void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14dDemo_system_cFv,
+	(void*)JSGFGetType__Q26JStage7TSystemCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject,
+	(void*)JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl,
+	(void*)JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject,
+	(void*)JSGGetSystemData__Q26JStage7TSystemFUl,
+	(void*)JSGSetSystemData__Q26JStage7TSystemFUlUl,
 };
 
 /* 803A7994-803A79F0 005C+00 s=2 e=0 z=0  None .data      __vt__11dDemo_fog_c                                          */
 SECTION_DATA static void* __vt__11dDemo_fog_c[23] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dDemo_fog_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage4TFogCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetFogFunction__Q26JStage4TFogCFv,
-	/* 16   */ (void*)JSGSetFogFunction__11dDemo_fog_cF10_GXFogType,
-	/* 17   */ (void*)JSGGetStartZ__Q26JStage4TFogCFv,
-	/* 18   */ (void*)JSGSetStartZ__11dDemo_fog_cFf,
-	/* 19   */ (void*)JSGGetEndZ__Q26JStage4TFogCFv,
-	/* 20   */ (void*)JSGSetEndZ__11dDemo_fog_cFf,
-	/* 21   */ (void*)JSGGetColor__Q26JStage4TFogCFv,
-	/* 22   */ (void*)JSGSetColor__11dDemo_fog_cF8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dDemo_fog_cFv,
+	(void*)JSGFGetType__Q26JStage4TFogCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetFogFunction__Q26JStage4TFogCFv,
+	(void*)JSGSetFogFunction__11dDemo_fog_cF10_GXFogType,
+	(void*)JSGGetStartZ__Q26JStage4TFogCFv,
+	(void*)JSGSetStartZ__11dDemo_fog_cFf,
+	(void*)JSGGetEndZ__Q26JStage4TFogCFv,
+	(void*)JSGSetEndZ__11dDemo_fog_cFf,
+	(void*)JSGGetColor__Q26JStage4TFogCFv,
+	(void*)JSGSetColor__11dDemo_fog_cF8_GXColor,
 };
 
 /* 803A79F0-803A7A5C 006C+00 s=2 e=0 z=0  None .data      __vt__13dDemo_light_c                                        */
 SECTION_DATA static void* __vt__13dDemo_light_c[27] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13dDemo_light_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage6TLightCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetLightType__Q26JStage6TLightCFv,
-	/* 16   */ (void*)JSGSetLightType__13dDemo_light_cFQ26JStage7TELight,
-	/* 17   */ (void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
-	/* 18   */ (void*)JSGSetPosition__13dDemo_light_cFRC3Vec,
-	/* 19   */ (void*)JSGGetColor__Q26JStage6TLightCFv,
-	/* 20   */ (void*)JSGSetColor__13dDemo_light_cF8_GXColor,
-	/* 21   */ (void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
-	/* 22   */ (void*)JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn,
-	/* 23   */ (void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
-	/* 24   */ (void*)JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn,
-	/* 25   */ (void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
-	/* 26   */ (void*)JSGSetDirection__13dDemo_light_cFRC3Vec,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13dDemo_light_cFv,
+	(void*)JSGFGetType__Q26JStage6TLightCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetLightType__Q26JStage6TLightCFv,
+	(void*)JSGSetLightType__13dDemo_light_cFQ26JStage7TELight,
+	(void*)JSGGetPosition__Q26JStage6TLightCFP3Vec,
+	(void*)JSGSetPosition__13dDemo_light_cFRC3Vec,
+	(void*)JSGGetColor__Q26JStage6TLightCFv,
+	(void*)JSGSetColor__13dDemo_light_cF8_GXColor,
+	(void*)JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn,
+	(void*)JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn,
+	(void*)JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn,
+	(void*)JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn,
+	(void*)JSGGetDirection__Q26JStage6TLightCFP3Vec,
+	(void*)JSGSetDirection__13dDemo_light_cFRC3Vec,
 };
 
 /* 803A7A5C-803A7AA0 0044+00 s=2 e=0 z=0  None .data      __vt__15dDemo_ambient_c                                      */
 SECTION_DATA static void* __vt__15dDemo_ambient_c[17] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dDemo_ambient_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage13TAmbientLightCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetColor__Q26JStage13TAmbientLightCFv,
-	/* 16   */ (void*)JSGSetColor__15dDemo_ambient_cF8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dDemo_ambient_cFv,
+	(void*)JSGFGetType__Q26JStage13TAmbientLightCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetColor__Q26JStage13TAmbientLightCFv,
+	(void*)JSGSetColor__15dDemo_ambient_cF8_GXColor,
 };
 
 /* 803A7AA0-803A7B34 0094+00 s=2 e=0 z=0  None .data      __vt__14dDemo_camera_c                                       */
 SECTION_DATA static void* __vt__14dDemo_camera_c[37] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dDemo_camera_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage7TCameraCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetProjectionType__Q26JStage7TCameraCFv,
-	/* 16   */ (void*)JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection,
-	/* 17   */ (void*)JSGGetProjectionNear__14dDemo_camera_cCFv,
-	/* 18   */ (void*)JSGSetProjectionNear__14dDemo_camera_cFf,
-	/* 19   */ (void*)JSGGetProjectionFar__14dDemo_camera_cCFv,
-	/* 20   */ (void*)JSGSetProjectionFar__14dDemo_camera_cFf,
-	/* 21   */ (void*)JSGGetProjectionFovy__14dDemo_camera_cCFv,
-	/* 22   */ (void*)JSGSetProjectionFovy__14dDemo_camera_cFf,
-	/* 23   */ (void*)JSGGetProjectionAspect__14dDemo_camera_cCFv,
-	/* 24   */ (void*)JSGSetProjectionAspect__14dDemo_camera_cFf,
-	/* 25   */ (void*)JSGGetProjectionField__Q26JStage7TCameraCFPf,
-	/* 26   */ (void*)JSGSetProjectionField__Q26JStage7TCameraFPCf,
-	/* 27   */ (void*)JSGGetViewType__Q26JStage7TCameraCFv,
-	/* 28   */ (void*)JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView,
-	/* 29   */ (void*)JSGGetViewPosition__14dDemo_camera_cCFP3Vec,
-	/* 30   */ (void*)JSGSetViewPosition__14dDemo_camera_cFRC3Vec,
-	/* 31   */ (void*)JSGGetViewUpVector__14dDemo_camera_cCFP3Vec,
-	/* 32   */ (void*)JSGSetViewUpVector__14dDemo_camera_cFRC3Vec,
-	/* 33   */ (void*)JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec,
-	/* 34   */ (void*)JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec,
-	/* 35   */ (void*)JSGGetViewRoll__14dDemo_camera_cCFv,
-	/* 36   */ (void*)JSGSetViewRoll__14dDemo_camera_cFf,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14dDemo_camera_cFv,
+	(void*)JSGFGetType__Q26JStage7TCameraCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetProjectionType__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection,
+	(void*)JSGGetProjectionNear__14dDemo_camera_cCFv,
+	(void*)JSGSetProjectionNear__14dDemo_camera_cFf,
+	(void*)JSGGetProjectionFar__14dDemo_camera_cCFv,
+	(void*)JSGSetProjectionFar__14dDemo_camera_cFf,
+	(void*)JSGGetProjectionFovy__14dDemo_camera_cCFv,
+	(void*)JSGSetProjectionFovy__14dDemo_camera_cFf,
+	(void*)JSGGetProjectionAspect__14dDemo_camera_cCFv,
+	(void*)JSGSetProjectionAspect__14dDemo_camera_cFf,
+	(void*)JSGGetProjectionField__Q26JStage7TCameraCFPf,
+	(void*)JSGSetProjectionField__Q26JStage7TCameraFPCf,
+	(void*)JSGGetViewType__Q26JStage7TCameraCFv,
+	(void*)JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView,
+	(void*)JSGGetViewPosition__14dDemo_camera_cCFP3Vec,
+	(void*)JSGSetViewPosition__14dDemo_camera_cFRC3Vec,
+	(void*)JSGGetViewUpVector__14dDemo_camera_cCFP3Vec,
+	(void*)JSGSetViewUpVector__14dDemo_camera_cFRC3Vec,
+	(void*)JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec,
+	(void*)JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec,
+	(void*)JSGGetViewRoll__14dDemo_camera_cCFv,
+	(void*)JSGSetViewRoll__14dDemo_camera_cFf,
 };
 
 /* 803A7B34-803A7BC0 008C+00 s=2 e=0 z=0  None .data      __vt__13dDemo_actor_c                                        */
 SECTION_DATA static void* __vt__13dDemo_actor_c[35] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13dDemo_actor_cFv,
-	/* 3    */ (void*)JSGFGetType__Q26JStage6TActorCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__13dDemo_actor_cFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__13dDemo_actor_cCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f,
-	/* 15   */ (void*)JSGGetTranslation__13dDemo_actor_cCFP3Vec,
-	/* 16   */ (void*)JSGSetTranslation__13dDemo_actor_cFRC3Vec,
-	/* 17   */ (void*)JSGGetScaling__13dDemo_actor_cCFP3Vec,
-	/* 18   */ (void*)JSGSetScaling__13dDemo_actor_cFRC3Vec,
-	/* 19   */ (void*)JSGGetRotation__13dDemo_actor_cCFP3Vec,
-	/* 20   */ (void*)JSGSetRotation__13dDemo_actor_cFRC3Vec,
-	/* 21   */ (void*)JSGGetShape__Q26JStage6TActorCFv,
-	/* 22   */ (void*)JSGSetShape__13dDemo_actor_cFUl,
-	/* 23   */ (void*)JSGGetAnimation__Q26JStage6TActorCFv,
-	/* 24   */ (void*)JSGSetAnimation__13dDemo_actor_cFUl,
-	/* 25   */ (void*)JSGGetAnimationFrame__Q26JStage6TActorCFv,
-	/* 26   */ (void*)JSGSetAnimationFrame__13dDemo_actor_cFf,
-	/* 27   */ (void*)JSGGetAnimationFrameMax__13dDemo_actor_cCFv,
-	/* 28   */ (void*)JSGGetAnimationTransition__Q26JStage6TActorCFv,
-	/* 29   */ (void*)JSGSetAnimationTransition__13dDemo_actor_cFf,
-	/* 30   */ (void*)JSGGetTextureAnimation__Q26JStage6TActorCFv,
-	/* 31   */ (void*)JSGSetTextureAnimation__13dDemo_actor_cFUl,
-	/* 32   */ (void*)JSGGetTextureAnimationFrame__Q26JStage6TActorCFv,
-	/* 33   */ (void*)JSGSetTextureAnimationFrame__13dDemo_actor_cFf,
-	/* 34   */ (void*)JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13dDemo_actor_cFv,
+	(void*)JSGFGetType__Q26JStage6TActorCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__13dDemo_actor_cFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__13dDemo_actor_cCFPCc,
+	(void*)JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f,
+	(void*)JSGGetTranslation__13dDemo_actor_cCFP3Vec,
+	(void*)JSGSetTranslation__13dDemo_actor_cFRC3Vec,
+	(void*)JSGGetScaling__13dDemo_actor_cCFP3Vec,
+	(void*)JSGSetScaling__13dDemo_actor_cFRC3Vec,
+	(void*)JSGGetRotation__13dDemo_actor_cCFP3Vec,
+	(void*)JSGSetRotation__13dDemo_actor_cFRC3Vec,
+	(void*)JSGGetShape__Q26JStage6TActorCFv,
+	(void*)JSGSetShape__13dDemo_actor_cFUl,
+	(void*)JSGGetAnimation__Q26JStage6TActorCFv,
+	(void*)JSGSetAnimation__13dDemo_actor_cFUl,
+	(void*)JSGGetAnimationFrame__Q26JStage6TActorCFv,
+	(void*)JSGSetAnimationFrame__13dDemo_actor_cFf,
+	(void*)JSGGetAnimationFrameMax__13dDemo_actor_cCFv,
+	(void*)JSGGetAnimationTransition__Q26JStage6TActorCFv,
+	(void*)JSGSetAnimationTransition__13dDemo_actor_cFf,
+	(void*)JSGGetTextureAnimation__Q26JStage6TActorCFv,
+	(void*)JSGSetTextureAnimation__13dDemo_actor_cFUl,
+	(void*)JSGGetTextureAnimationFrame__Q26JStage6TActorCFv,
+	(void*)JSGSetTextureAnimationFrame__13dDemo_actor_cFf,
+	(void*)JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv,
 };
 
 /* 803A7BC0-803A7BE4 0024+00 s=1 e=1 z=0  None .data      __vt__Q27JStudio16TAdaptor_message                           */
 SECTION_DATA void* __vt__Q27JStudio16TAdaptor_message[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	/* 8    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	(void*)NULL,
 };
 
 /* 803A7BE4-803A7BF4 0010+00 s=2 e=0 z=0  None .data      __vt__Q220@unnamed@d_demo_cpp@29jstudio_tCreateObject_message */
 SECTION_DATA static void* data_803A7BE4[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80037E74,
-	/* 3    */ (void*)func_80037ED4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80037E74,
+	(void*)func_80037ED4,
 };
 
 /* 803A7BF4-803A7C18 0024+00 s=2 e=0 z=0  None .data      __vt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_message     */
 SECTION_DATA static void* data_803A7BF4[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80037DE4,
-	/* 3    */ (void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
-	/* 4    */ (void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
-	/* 5    */ (void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
-	/* 6    */ (void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
-	/* 7    */ (void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
-	/* 8    */ (void*)func_80037E44,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80037DE4,
+	(void*)adaptor_do_prepare__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_begin__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_end__Q27JStudio8TAdaptorFv,
+	(void*)adaptor_do_update__Q27JStudio8TAdaptorFUl,
+	(void*)adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl,
+	(void*)func_80037E44,
 };
 
 /* 80037DE4-80037E44 0060+00 s=1 e=0 z=0  None .text      __dt__Q220@unnamed@d_demo_cpp@24jstudio_tAdaptor_messageFv   */

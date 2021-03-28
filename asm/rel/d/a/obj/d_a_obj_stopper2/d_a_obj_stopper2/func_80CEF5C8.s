@@ -18,7 +18,7 @@ lbl_80CEF600:
 /* 80CEF600  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80CEF604  3C 80 80 CF */	lis r4, l_arcName@ha
 /* 80CEF608  38 84 FF 24 */	addi r4, r4, l_arcName@l
-/* 80CEF60C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CEFF24 */
+/* 80CEF60C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CEF610  4B 33 D8 AC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CEF614  2C 03 00 04 */	cmpwi r3, 4
 /* 80CEF618  41 82 00 08 */	beq lbl_80CEF620

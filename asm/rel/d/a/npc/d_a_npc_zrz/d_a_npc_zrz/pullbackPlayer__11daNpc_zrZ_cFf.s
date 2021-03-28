@@ -38,12 +38,12 @@ lbl_80B98CBC:
 /* 80B98CC0  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80B98CC4  4B 6D 7F 40 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80B98CC8  7C 65 1B 78 */	mr r5, r3
-/* 80B98CCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B98CD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B98CD4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B98CCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B98CD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B98CD4  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80B98CD8  38 81 00 14 */	addi r4, r1, 0x14
 /* 80B98CDC  38 C0 00 00 */	li r6, 0
-/* 80B98CE0  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B98CE0  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B98CE4  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80B98CE8  7D 89 03 A6 */	mtctr r12
 /* 80B98CEC  4E 80 04 21 */	bctrl 

@@ -131,11 +131,11 @@ asm static void fopCam_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A3860-803A3878 0014+04 s=0 e=2 z=0  None .data      g_fopCam_Method                                              */
 SECTION_DATA void* g_fopCam_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopCam_Create__FPv,
-	/* 1    */ (void*)fopCam_Delete__FP12camera_class,
-	/* 2    */ (void*)fopCam_Execute__FP12camera_class,
-	/* 3    */ (void*)fopCam_IsDelete__FP12camera_class,
-	/* 4    */ (void*)fopCam_Draw__FP12camera_class,
+	(void*)fopCam_Create__FPv,
+	(void*)fopCam_Delete__FP12camera_class,
+	(void*)fopCam_Execute__FP12camera_class,
+	(void*)fopCam_IsDelete__FP12camera_class,
+	(void*)fopCam_Draw__FP12camera_class,
 	/* padding */
 	NULL,
 };

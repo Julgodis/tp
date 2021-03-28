@@ -16,7 +16,7 @@ lbl_80CCB43C:
 lbl_80CCB474:
 /* 80CCB474  3C 80 80 CD */	lis r4, l_arcName@ha
 /* 80CCB478  38 84 CC F0 */	addi r4, r4, l_arcName@l
-/* 80CCB47C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CCCCF0 */
+/* 80CCB47C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CCB480  4B 36 1B 88 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CCB484  38 7E 05 98 */	addi r3, r30, 0x598
 /* 80CCB488  38 80 FF FF */	li r4, -1

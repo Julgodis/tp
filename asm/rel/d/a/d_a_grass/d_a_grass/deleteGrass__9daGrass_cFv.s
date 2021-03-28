@@ -4,7 +4,7 @@ lbl_8051BF68:
 /* 8051BF70  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8051BF74  3C 60 80 45 */	lis r3, m_grass__9daGrass_c@ha
 /* 8051BF78  38 63 0D B0 */	addi r3, r3, m_grass__9daGrass_c@l
-/* 8051BF7C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB0 */
+/* 8051BF7C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051BF80  28 03 00 00 */	cmplwi r3, 0
 /* 8051BF84  41 82 00 28 */	beq lbl_8051BFAC
 /* 8051BF88  41 82 00 18 */	beq lbl_8051BFA0

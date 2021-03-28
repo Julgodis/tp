@@ -10,13 +10,13 @@ lbl_80D0DCC8:
 /* 80D0DCE8  40 82 00 68 */	bne lbl_80D0DD50
 /* 80D0DCEC  38 00 00 02 */	li r0, 2
 /* 80D0DCF0  98 1E 05 AC */	stb r0, 0x5ac(r30)
-/* 80D0DCF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D0DCF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D0DCF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D0DCF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D0DCFC  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 80D0DD00  38 7F 40 C0 */	addi r3, r31, 0x40c0
 /* 80D0DD04  3C 80 80 D1 */	lis r4, l_staffName@ha
 /* 80D0DD08  38 84 E6 80 */	addi r4, r4, l_staffName@l
-/* 80D0DD0C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D0E680 */
+/* 80D0DD0C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D0DD10  38 A0 00 00 */	li r5, 0
 /* 80D0DD14  38 C0 00 00 */	li r6, 0
 /* 80D0DD18  4B 33 9E 04 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

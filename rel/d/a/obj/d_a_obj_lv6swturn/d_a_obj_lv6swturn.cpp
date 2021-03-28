@@ -84,9 +84,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -113,10 +110,10 @@ struct Z2SeMgr {
 // 
 
 static void PPCallBack(fopAc_ac_c*, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel); // 2
-static void daObjLv6SwTurn_create1st(daObjLv6SwTurn_c*); // 2
-static void daObjLv6SwTurn_MoveBGDelete(daObjLv6SwTurn_c*); // 2
-static void daObjLv6SwTurn_MoveBGExecute(daObjLv6SwTurn_c*); // 2
-static void daObjLv6SwTurn_MoveBGDraw(daObjLv6SwTurn_c*); // 2
+void daObjLv6SwTurn_create1st(daObjLv6SwTurn_c*); // 2
+void daObjLv6SwTurn_MoveBGDelete(daObjLv6SwTurn_c*); // 2
+void daObjLv6SwTurn_MoveBGExecute(daObjLv6SwTurn_c*); // 2
+void daObjLv6SwTurn_MoveBGDraw(daObjLv6SwTurn_c*); // 2
 
 extern "C" static void PPCallBack__FP10fopAc_ac_cP10fopAc_ac_csQ29dBgW_Base13PushPullLabel(); // 1
 extern "C" void initBaseMtx__16daObjLv6SwTurn_cFv(); // 1
@@ -132,13 +129,13 @@ extern "C" void init_modeRotate__16daObjLv6SwTurn_cFv(); // 1
 extern "C" void modeRotate__16daObjLv6SwTurn_cFv(); // 1
 extern "C" void Draw__16daObjLv6SwTurn_cFv(); // 1
 extern "C" void Delete__16daObjLv6SwTurn_cFv(); // 1
-extern "C" static void daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c(); // 1
-extern "C" static void daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c(); // 1
-extern "C" static void daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c(); // 1
-extern "C" static void daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c(); // 1
-extern "C" extern u8 const lit_3964[8];
+extern "C" void daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c(); // 1
+extern "C" void daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c(); // 1
+extern "C" void daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c(); // 1
+extern "C" void daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* daObjLv6SwTurn_METHODS[8];
 extern "C" extern void* g_profile_Obj_Lv6SwTurn[12];
 
 // 
@@ -173,9 +170,6 @@ extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -193,21 +187,11 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_80C847A0[4];
 
@@ -254,7 +238,7 @@ asm void daObjLv6SwTurn_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80C83B38-80C83C10 00D8+00 s=1 e=0 z=0  None .text      Create__16daObjLv6SwTurn_cFv                                 */
+/* 80C83B38-80C83C10 00D8+00 s=0 e=0 z=0  None .text      Create__16daObjLv6SwTurn_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -266,33 +250,6 @@ asm void daObjLv6SwTurn_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80C846A8-80C846AC 0004+00 s=2 e=0 z=0  None .rodata    @3960                                                        */
-SECTION_RODATA static u32 const lit_3960 = 0x3F800000;
-
-/* 80C846AC-80C846B0 0004+00 s=2 e=0 z=0  None .rodata    @3961                                                        */
-SECTION_RODATA static u32 const lit_3961 = 0xBF800000;
-
-/* 80C846B0-80C846B4 0004+00 s=1 e=0 z=0  None .rodata    @3962                                                        */
-SECTION_RODATA static u32 const lit_3962 = 0x41200000;
-
-/* 80C846B4-80C846BC 0008+00 s=0 e=0 z=0  None .rodata    @3964                                                        */
-SECTION_RODATA u8 const lit_3964[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80C846BC-80C846C0 0004+00 s=1 e=0 z=0  None .rodata    @4069                                                        */
-SECTION_RODATA static u32 const lit_4069 = 0x46800000;
-
-/* 80C846C0-80C846C4 0004+00 s=1 e=0 z=0  None .rodata    @4070                                                        */
-SECTION_RODATA static u32 const lit_4070 = 0x42B40000;
-
-/* 80C846C4-80C846CE 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C846C4 = "Obj_l6tsw";
-#pragma pop
-
 /* 80C846D0-80C846DC 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -306,9 +263,9 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80C846F0-80C846F4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80C83C10-80C83C80 0070+00 s=1 e=0 z=0  None .text      CreateHeap__16daObjLv6SwTurn_cFv                             */
+/* 80C83C10-80C83C80 0070+00 s=0 e=0 z=0  None .text      CreateHeap__16daObjLv6SwTurn_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -330,7 +287,7 @@ asm void daObjLv6SwTurn_c::create1st() {
 #pragma pop
 
 
-/* 80C83D04-80C83D94 0090+00 s=1 e=0 z=0  None .text      Execute__16daObjLv6SwTurn_cFPPA3_A4_f                        */
+/* 80C83D04-80C83D94 0090+00 s=0 e=0 z=0  None .text      Execute__16daObjLv6SwTurn_cFPPA3_A4_f                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -344,16 +301,16 @@ asm void daObjLv6SwTurn_c::Execute(f32 (** param_0)[3][4]) {
 /* ############################################################################################## */
 /* 80C846F4-80C84700 000C+00 s=1 e=0 z=0  None .data      @3777                                                        */
 SECTION_DATA static void* lit_3777[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__16daObjLv6SwTurn_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C84700-80C8470C 000C+00 s=1 e=0 z=0  None .data      @3778                                                        */
 SECTION_DATA static void* lit_3778[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeRotate__16daObjLv6SwTurn_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C8470C-80C84724 0018+00 s=1 e=0 z=0  None .data      l_func$3776                                                  */
@@ -384,7 +341,22 @@ asm void daObjLv6SwTurn_c::init_modeWait() {
 #pragma pop
 
 
-/* 80C83E58-80C84238 03E0+00 s=1 e=0 z=0  None .text      modeWait__16daObjLv6SwTurn_cFv                               */
+/* ############################################################################################## */
+/* 80C846A8-80C846AC 0004+00 s=2 e=0 z=0  None .rodata    @3960                                                        */
+SECTION_RODATA static u32 const lit_3960 = 0x3F800000;
+
+/* 80C846AC-80C846B0 0004+00 s=2 e=0 z=0  None .rodata    @3961                                                        */
+SECTION_RODATA static u32 const lit_3961 = 0xBF800000;
+
+/* 80C846B0-80C846B4 0004+00 s=1 e=0 z=0  None .rodata    @3962                                                        */
+SECTION_RODATA static u32 const lit_3962 = 0x41200000;
+
+/* 80C846B4-80C846BC 0008+00 s=2 e=0 z=0  None .rodata    @3964                                                        */
+SECTION_RODATA static u8 const lit_3964[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 80C83E58-80C84238 03E0+00 s=0 e=0 z=0  None .text      modeWait__16daObjLv6SwTurn_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -406,7 +378,14 @@ asm void daObjLv6SwTurn_c::init_modeRotate() {
 #pragma pop
 
 
-/* 80C8425C-80C844F8 029C+00 s=1 e=0 z=0  None .text      modeRotate__16daObjLv6SwTurn_cFv                             */
+/* ############################################################################################## */
+/* 80C846BC-80C846C0 0004+00 s=1 e=0 z=0  None .rodata    @4069                                                        */
+SECTION_RODATA static u32 const lit_4069 = 0x46800000;
+
+/* 80C846C0-80C846C4 0004+00 s=1 e=0 z=0  None .rodata    @4070                                                        */
+SECTION_RODATA static u32 const lit_4070 = 0x42B40000;
+
+/* 80C8425C-80C844F8 029C+00 s=0 e=0 z=0  None .text      modeRotate__16daObjLv6SwTurn_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -417,7 +396,7 @@ asm void daObjLv6SwTurn_c::modeRotate() {
 #pragma pop
 
 
-/* 80C844F8-80C8459C 00A4+00 s=1 e=0 z=0  None .text      Draw__16daObjLv6SwTurn_cFv                                   */
+/* 80C844F8-80C8459C 00A4+00 s=0 e=0 z=0  None .text      Draw__16daObjLv6SwTurn_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,7 +407,7 @@ asm void daObjLv6SwTurn_c::Draw() {
 #pragma pop
 
 
-/* 80C8459C-80C845D0 0034+00 s=1 e=0 z=0  None .text      Delete__16daObjLv6SwTurn_cFv                                 */
+/* 80C8459C-80C845D0 0034+00 s=0 e=0 z=0  None .text      Delete__16daObjLv6SwTurn_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -440,89 +419,97 @@ asm void daObjLv6SwTurn_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80C84724-80C84744 0020+00 s=1 e=0 z=0  None .data      daObjLv6SwTurn_METHODS                                       */
-SECTION_DATA static void* daObjLv6SwTurn_METHODS[8] = {
-	/* 0    */ (void*)daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c,
-	/* 1    */ (void*)daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c,
-	/* 2    */ (void*)daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C84724-80C84744 0020+00 s=0 e=0 z=0  None .data      daObjLv6SwTurn_METHODS                                       */
+SECTION_DATA void* daObjLv6SwTurn_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C84744-80C84774 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv6SwTurn                                      */
+/* 80C84744-80C84774 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv6SwTurn                                      */
 SECTION_DATA void* g_profile_Obj_Lv6SwTurn[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x001F0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005CC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x000F0000,
-	/* 9    */ (void*)&daObjLv6SwTurn_METHODS,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x001F0000,
+	(void*)NULL,
+	(void*)0x000005CC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x000F0000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80C84774-80C8479C 0028+00 s=1 e=0 z=0  None .data      __vt__16daObjLv6SwTurn_c                                     */
 SECTION_DATA static void* __vt__16daObjLv6SwTurn_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__16daObjLv6SwTurn_cFv,
-	/* 3    */ (void*)Create__16daObjLv6SwTurn_cFv,
-	/* 4    */ (void*)Execute__16daObjLv6SwTurn_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__16daObjLv6SwTurn_cFv,
-	/* 6    */ (void*)Delete__16daObjLv6SwTurn_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C845D0-80C84630 0060+00 s=1 e=0 z=0  None .text      daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c               */
+/* 80C845D0-80C84630 0060+00 s=0 e=0 z=0  None .text      daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv6SwTurn_create1st(daObjLv6SwTurn_c* param_0) {
+asm void daObjLv6SwTurn_create1st(daObjLv6SwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6swturn/d_a_obj_lv6swturn/daObjLv6SwTurn_create1st__FP16daObjLv6SwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80C84630-80C84650 0020+00 s=1 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c            */
+/* 80C84630-80C84650 0020+00 s=0 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv6SwTurn_MoveBGDelete(daObjLv6SwTurn_c* param_0) {
+asm void daObjLv6SwTurn_MoveBGDelete(daObjLv6SwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6swturn/d_a_obj_lv6swturn/daObjLv6SwTurn_MoveBGDelete__FP16daObjLv6SwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80C84650-80C84670 0020+00 s=1 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c           */
+/* 80C84650-80C84670 0020+00 s=0 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv6SwTurn_MoveBGExecute(daObjLv6SwTurn_c* param_0) {
+asm void daObjLv6SwTurn_MoveBGExecute(daObjLv6SwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6swturn/d_a_obj_lv6swturn/daObjLv6SwTurn_MoveBGExecute__FP16daObjLv6SwTurn_c.s"
 }
 #pragma pop
 
 
-/* 80C84670-80C8469C 002C+00 s=1 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c              */
+/* 80C84670-80C8469C 002C+00 s=0 e=0 z=0  None .text      daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv6SwTurn_MoveBGDraw(daObjLv6SwTurn_c* param_0) {
+asm void daObjLv6SwTurn_MoveBGDraw(daObjLv6SwTurn_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv6swturn/d_a_obj_lv6swturn/daObjLv6SwTurn_MoveBGDraw__FP16daObjLv6SwTurn_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C846C4-80C846CE 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C846C4 = "Obj_l6tsw";
+#pragma pop
 

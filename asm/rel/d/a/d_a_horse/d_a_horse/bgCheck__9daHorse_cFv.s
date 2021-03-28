@@ -95,8 +95,8 @@ lbl_808403F0:
 /* 80840460  38 A1 00 18 */	addi r5, r1, 0x18
 /* 80840464  7F 66 DB 78 */	mr r6, r27
 /* 80840468  4B 83 78 FC */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8084046C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80840470  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8084046C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80840470  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80840474  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80840478  7F A3 EB 78 */	mr r3, r29
 /* 8084047C  38 9B 08 D0 */	addi r4, r27, 0x8d0

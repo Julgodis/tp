@@ -19,7 +19,6 @@ extern void* const data_80C72138[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_lv6ChangeGate_cpp(); // 1
 
 // 
 // Declarations:

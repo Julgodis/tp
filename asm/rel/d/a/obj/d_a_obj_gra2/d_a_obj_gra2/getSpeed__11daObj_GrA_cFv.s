@@ -6,7 +6,7 @@ lbl_80C07CF0:
 /* 80C07D00  40 82 00 14 */	bne lbl_80C07D14
 /* 80C07D04  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C07D08  38 63 FA 7C */	addi r3, r3, m__17daObj_GrA_Param_c@l
-/* 80C07D0C  C0 23 00 84 */	lfs f1, 0x84(r3)	/* effective address: 80C0FB00 */
+/* 80C07D0C  C0 23 00 84 */	lfs f1, 0x84(r3)
 /* 80C07D10  48 00 00 20 */	b lbl_80C07D30
 lbl_80C07D14:
 /* 80C07D14  3C 60 80 C1 */	lis r3, lit_7443@ha

@@ -13,9 +13,9 @@ lbl_80BF89B0:
 /* 80BF89DC  80 03 07 80 */	lwz r0, 0x780(r3)
 /* 80BF89E0  28 00 00 00 */	cmplwi r0, 0
 /* 80BF89E4  40 82 00 5C */	bne lbl_80BF8A40
-/* 80BF89E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF89EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BF89F0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80BF89E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF89EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BF89F0  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80BF89F4  38 80 00 00 */	li r4, 0
 /* 80BF89F8  90 81 00 08 */	stw r4, 8(r1)
 /* 80BF89FC  38 00 FF FF */	li r0, -1

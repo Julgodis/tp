@@ -38,13 +38,13 @@ struct dSv_info_c {
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -66,27 +66,27 @@ static void dKy_event_proc(); // 2
 static void daKytag06_type_04_Execute(kytag06_class*); // 2
 static void set_path_info(fopAc_ac_c*); // 2
 static void near_rail_get(kytag06_class*, cXyz*); // 2
-static void daKytag06_Draw(kytag06_class*); // 2
+void daKytag06_Draw(kytag06_class*); // 2
 static void daKytag06_lv7_boss_wether_proc(kytag06_class*, u8); // 2
 static void daKytag06_Ganon_wether_proc(kytag06_class*, u8); // 2
 static void daKytag06_wether_proc(kytag06_class*, u8); // 2
 static void daKytag06_type_07_wether_Execute(kytag06_class*); // 2
-void daKytag06_type_07_Execute(kytag06_class*); // 2
-void daKytag06_type_06_Execute(kytag06_class*); // 2
-void daKytag06_type_08_Execute(kytag06_class*); // 2
-void daKytag06_type_09_Execute(kytag06_class*); // 2
-void daKytag06_type_10_Execute(kytag06_class*); // 2
-void daKytag06_type_11_Execute(kytag06_class*); // 2
-void daKytag06_type_05_Execute(kytag06_class*); // 2
-void daKytag06_type_03_Execute(kytag06_class*); // 2
-static void daKytag06_Execute(kytag06_class*); // 2
-static bool daKytag06_IsDelete(kytag06_class*); // 2
-static void daKytag06_Delete(kytag06_class*); // 2
-void daKytag06_type04_init(fopAc_ac_c*); // 2
-void daKytag06_type06_init(fopAc_ac_c*); // 2
-void daKytag06_type02_init(fopAc_ac_c*); // 2
-void daKytag06_type03_init(fopAc_ac_c*); // 2
-static void daKytag06_Create(fopAc_ac_c*); // 2
+static void daKytag06_type_07_Execute(kytag06_class*); // 2
+static void daKytag06_type_06_Execute(kytag06_class*); // 2
+static void daKytag06_type_08_Execute(kytag06_class*); // 2
+static void daKytag06_type_09_Execute(kytag06_class*); // 2
+static void daKytag06_type_10_Execute(kytag06_class*); // 2
+static void daKytag06_type_11_Execute(kytag06_class*); // 2
+static void daKytag06_type_05_Execute(kytag06_class*); // 2
+static void daKytag06_type_03_Execute(kytag06_class*); // 2
+void daKytag06_Execute(kytag06_class*); // 2
+bool daKytag06_IsDelete(kytag06_class*); // 2
+void daKytag06_Delete(kytag06_class*); // 2
+static void daKytag06_type04_init(fopAc_ac_c*); // 2
+static void daKytag06_type06_init(fopAc_ac_c*); // 2
+static void daKytag06_type02_init(fopAc_ac_c*); // 2
+static void daKytag06_type03_init(fopAc_ac_c*); // 2
+void daKytag06_Create(fopAc_ac_c*); // 2
 
 extern "C" static void dice_wether_init__FUcff(); // 1
 extern "C" static void dice_wether_execute__FUcff(); // 1
@@ -95,34 +95,31 @@ extern "C" static void dKy_event_proc__Fv(); // 1
 extern "C" static void daKytag06_type_04_Execute__FP13kytag06_class(); // 1
 extern "C" static void set_path_info__FP10fopAc_ac_c(); // 1
 extern "C" static void near_rail_get__FP13kytag06_classP4cXyz(); // 1
-extern "C" static void daKytag06_Draw__FP13kytag06_class(); // 1
+extern "C" void daKytag06_Draw__FP13kytag06_class(); // 1
 extern "C" static void daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc(); // 1
 extern "C" static void daKytag06_Ganon_wether_proc__FP13kytag06_classUc(); // 1
 extern "C" static void daKytag06_wether_proc__FP13kytag06_classUc(); // 1
 extern "C" static void daKytag06_type_07_wether_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_07_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_07_Execute__FP13kytag06_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void daKytag06_type_06_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_08_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_09_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_10_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_11_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_05_Execute__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type_03_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_Execute__FP13kytag06_class(); // 1
-extern "C" static bool daKytag06_IsDelete__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_Delete__FP13kytag06_class(); // 1
-extern "C" void daKytag06_type04_init__FP10fopAc_ac_c(); // 1
-extern "C" void daKytag06_type06_init__FP10fopAc_ac_c(); // 1
-extern "C" void daKytag06_type02_init__FP10fopAc_ac_c(); // 1
-extern "C" void daKytag06_type03_init__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag06_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3940[8];
-extern "C" extern u8 const lit_3941[8];
-extern "C" extern u8 const lit_3942[8];
-extern "C" extern u8 const lit_4613[8];
+extern "C" static void daKytag06_type_06_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_08_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_09_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_10_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_11_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_05_Execute__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type_03_Execute__FP13kytag06_class(); // 1
+extern "C" void daKytag06_Execute__FP13kytag06_class(); // 1
+extern "C" bool daKytag06_IsDelete__FP13kytag06_class(); // 1
+extern "C" void daKytag06_Delete__FP13kytag06_class(); // 1
+extern "C" static void daKytag06_type04_init__FP10fopAc_ac_c(); // 1
+extern "C" static void daKytag06_type06_init__FP10fopAc_ac_c(); // 1
+extern "C" static void daKytag06_type02_init__FP10fopAc_ac_c(); // 1
+extern "C" static void daKytag06_type03_init__FP10fopAc_ac_c(); // 1
+extern "C" void daKytag06_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daKytag06_Method[8];
 extern "C" extern void* g_profile_KYTAG06[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -215,36 +212,10 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern f32 data_804061F4;
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 data_8042D8D4[4];
-SECTION_BSS extern u8 data_8042D8DC[4];
-SECTION_BSS extern u8 data_8042D8E0[4];
-SECTION_BSS extern u8 struct_8042D8E4[4];
-SECTION_BSS extern u8 data_8042D8E8[4];
-SECTION_BSS extern u8 struct_8042D908[4];
-SECTION_BSS extern u8 data_8042D90C[4];
-extern "C" extern u8 data_8042D92C[68];
-SECTION_BSS extern u8 data_8042DC28[4];
-SECTION_BSS extern u8 data_8042DC2C[4];
-SECTION_BSS extern u8 data_8042DC34[4];
-SECTION_BSS extern u8 data_8042DCEC[4];
-SECTION_BSS extern u8 struct_8042DD14[4];
-SECTION_BSS extern u8 struct_8042DD18[4];
-SECTION_BSS extern u8 struct_8042DD1C[4];
-SECTION_BSS extern u8 struct_8042DD20[4];
-SECTION_BSS extern u8 struct_8042DD24[4];
-SECTION_BSS extern u8 data_8042DD2C[4];
-SECTION_BSS extern u8 struct_8042DD5C[4];
-extern "C" extern u8 g_mEnvSeMgr[352];
-SECTION_BSS extern u8 g_Counter[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 extern "C" void __register_global_object(); // 1
@@ -302,11 +273,6 @@ SECTION_RODATA static u32 const lit_3879 = 0x43340000;
 
 /* 80859E88-80859E8C 0004+00 s=1 e=0 z=0  None .rodata    @3880                                                        */
 SECTION_RODATA static u32 const lit_3880 = 0x40FFAE14;
-
-/* 80859E8C-80859E90 0004+00 s=8 e=0 z=0  None .rodata    @3881                                                        */
-SECTION_RODATA static u8 const lit_3881[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
 
 /* 80859FA0-80859FAC 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
@@ -385,16 +351,16 @@ SECTION_DATA static u8 data_8085A024[12] = {
 
 /* 8085A030-8085A04C 001C+00 s=1 e=0 z=0  None .data      @3883                                                        */
 SECTION_DATA static void* lit_3883[7] = {
-	/* 0    */ (void*)(((char*)dKy_event_proc__Fv)+0x378),
-	/* 1    */ (void*)(((char*)dKy_event_proc__Fv)+0x398),
-	/* 2    */ (void*)(((char*)dKy_event_proc__Fv)+0x3AC),
-	/* 3    */ (void*)(((char*)dKy_event_proc__Fv)+0x3E4),
-	/* 4    */ (void*)(((char*)dKy_event_proc__Fv)+0x404),
-	/* 5    */ (void*)(((char*)dKy_event_proc__Fv)+0x3DC),
-	/* 6    */ (void*)(((char*)dKy_event_proc__Fv)+0x418),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80857A50-80857F28 04D8+00 s=2 e=0 z=0  None .text      dKy_event_proc__Fv                                           */
+/* 80857A50-80857F28 04D8+00 s=1 e=0 z=0  None .text      dKy_event_proc__Fv                                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -428,11 +394,31 @@ asm static void set_path_info(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
+/* 80859E8C-80859E90 0004+00 s=7 e=0 z=0  None .rodata    @3881                                                        */
+SECTION_RODATA static u8 const lit_3881[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80859E90-80859E98 0004+04 s=1 e=0 z=0  None .rodata    @3939                                                        */
 SECTION_RODATA static u32 const lit_3939[1 + 1 /* padding */] = {
 	0x4CBEBC20,
 	/* padding */
 	0x00000000,
+};
+
+/* 80859E98-80859EA0 0008+00 s=2 e=0 z=0  None .rodata    @3940                                                        */
+SECTION_RODATA static u8 const lit_3940[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80859EA0-80859EA8 0008+00 s=2 e=0 z=0  None .rodata    @3941                                                        */
+SECTION_RODATA static u8 const lit_3941[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80859EA8-80859EB0 0008+00 s=2 e=0 z=0  None .rodata    @3942                                                        */
+SECTION_RODATA static u8 const lit_3942[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 80857F8C-8085811C 0190+00 s=1 e=0 z=0  None .text      near_rail_get__FP13kytag06_classP4cXyz                       */
@@ -446,11 +432,11 @@ asm static void near_rail_get(kytag06_class* param_0, cXyz* param_1) {
 #pragma pop
 
 
-/* 8085811C-8085814C 0030+00 s=1 e=0 z=0  None .text      daKytag06_Draw__FP13kytag06_class                            */
+/* 8085811C-8085814C 0030+00 s=0 e=0 z=0  None .text      daKytag06_Draw__FP13kytag06_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag06_Draw(kytag06_class* param_0) {
+asm void daKytag06_Draw(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Draw__FP13kytag06_class.s"
 }
@@ -469,21 +455,6 @@ asm static void daKytag06_lv7_boss_wether_proc(kytag06_class* param_0, u8 param_
 
 
 /* ############################################################################################## */
-/* 80859E98-80859EA0 0008+00 s=0 e=0 z=0  None .rodata    @3940                                                        */
-SECTION_RODATA u8 const lit_3940[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80859EA0-80859EA8 0008+00 s=0 e=0 z=0  None .rodata    @3941                                                        */
-SECTION_RODATA u8 const lit_3941[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80859EA8-80859EB0 0008+00 s=0 e=0 z=0  None .rodata    @3942                                                        */
-SECTION_RODATA u8 const lit_3942[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80859EB0-80859EB4 0004+00 s=2 e=0 z=0  None .rodata    @4006                                                        */
 SECTION_RODATA static u32 const lit_4006 = 0x3E99999A;
 
@@ -528,17 +499,17 @@ asm static void daKytag06_Ganon_wether_proc(kytag06_class* param_0, u8 param_1) 
 /* ############################################################################################## */
 /* 8085A04C-8085A06C 0020+00 s=1 e=0 z=0  None .data      @4064                                                        */
 SECTION_DATA static void* lit_4064[8] = {
-	/* 0    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x4C),
-	/* 1    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x6C),
-	/* 2    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x8C),
-	/* 3    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0xE0),
-	/* 4    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x114),
-	/* 5    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x150),
-	/* 6    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x178),
-	/* 7    */ (void*)(((char*)daKytag06_wether_proc__FP13kytag06_classUc)+0x1B0),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 808584B4-808586C4 0210+00 s=3 e=0 z=0  None .text      daKytag06_wether_proc__FP13kytag06_classUc                   */
+/* 808584B4-808586C4 0210+00 s=2 e=0 z=0  None .text      daKytag06_wether_proc__FP13kytag06_classUc                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -612,11 +583,11 @@ SECTION_RODATA static u32 const lit_4129 = 0x43570000;
 /* 80859F18-80859F1C 0004+00 s=1 e=0 z=0  None .rodata    @4130                                                        */
 SECTION_RODATA static u32 const lit_4130 = 0x431B0000;
 
-/* 808586F0-808589A4 02B4+00 s=0 e=0 z=0  None .text      daKytag06_type_07_Execute__FP13kytag06_class                 */
+/* 808586F0-808589A4 02B4+00 s=1 e=0 z=0  None .text      daKytag06_type_07_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_07_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_07_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_07_Execute__FP13kytag06_class.s"
 }
@@ -709,33 +680,33 @@ static u8 lit_4165[12 + 4 /* padding */];
 /* 8085A180-8085A18C 000C+00 s=1 e=0 z=0  None .bss       c_pos$4164                                                   */
 static u8 data_8085A180[12];
 
-/* 808589E0-80858CD4 02F4+00 s=0 e=0 z=0  None .text      daKytag06_type_06_Execute__FP13kytag06_class                 */
+/* 808589E0-80858CD4 02F4+00 s=1 e=0 z=0  None .text      daKytag06_type_06_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_06_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_06_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_06_Execute__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 80858CD4-80858D00 002C+00 s=0 e=0 z=0  None .text      daKytag06_type_08_Execute__FP13kytag06_class                 */
+/* 80858CD4-80858D00 002C+00 s=1 e=0 z=0  None .text      daKytag06_type_08_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_08_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_08_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_08_Execute__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 80858D00-80858D2C 002C+00 s=0 e=0 z=0  None .text      daKytag06_type_09_Execute__FP13kytag06_class                 */
+/* 80858D00-80858D2C 002C+00 s=1 e=0 z=0  None .text      daKytag06_type_09_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_09_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_09_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_09_Execute__FP13kytag06_class.s"
 }
@@ -791,22 +762,22 @@ SECTION_RODATA static u32 const lit_4350 = 0x427C0000;
 /* 80859F6C-80859F70 0004+00 s=2 e=0 z=0  None .rodata    @4351                                                        */
 SECTION_RODATA static u32 const lit_4351 = 0x42FE0000;
 
-/* 80858D2C-8085912C 0400+00 s=0 e=0 z=0  None .text      daKytag06_type_10_Execute__FP13kytag06_class                 */
+/* 80858D2C-8085912C 0400+00 s=1 e=0 z=0  None .text      daKytag06_type_10_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_10_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_10_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_10_Execute__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 8085912C-808591A4 0078+00 s=0 e=0 z=0  None .text      daKytag06_type_11_Execute__FP13kytag06_class                 */
+/* 8085912C-808591A4 0078+00 s=1 e=0 z=0  None .text      daKytag06_type_11_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_11_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_11_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_11_Execute__FP13kytag06_class.s"
 }
@@ -817,22 +788,22 @@ asm void daKytag06_type_11_Execute(kytag06_class* param_0) {
 /* 80859F70-80859F74 0004+00 s=1 e=0 z=0  None .rodata    @4406                                                        */
 SECTION_RODATA static u32 const lit_4406 = 0x459C4000;
 
-/* 808591A4-8085931C 0178+00 s=0 e=0 z=0  None .text      daKytag06_type_05_Execute__FP13kytag06_class                 */
+/* 808591A4-8085931C 0178+00 s=1 e=0 z=0  None .text      daKytag06_type_05_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_05_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_05_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_05_Execute__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 8085931C-80859528 020C+00 s=0 e=0 z=0  None .text      daKytag06_type_03_Execute__FP13kytag06_class                 */
+/* 8085931C-80859528 020C+00 s=1 e=0 z=0  None .text      daKytag06_type_03_Execute__FP13kytag06_class                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type_03_Execute(kytag06_class* param_0) {
+asm static void daKytag06_type_03_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type_03_Execute__FP13kytag06_class.s"
 }
@@ -850,8 +821,8 @@ SECTION_RODATA static u32 const lit_4610[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80859F80-80859F88 0008+00 s=0 e=0 z=0  None .rodata    @4613                                                        */
-SECTION_RODATA u8 const lit_4613[8] = {
+/* 80859F80-80859F88 0008+00 s=1 e=0 z=0  None .rodata    @4613                                                        */
+SECTION_RODATA static u8 const lit_4613[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
@@ -871,86 +842,86 @@ SECTION_DEAD char const* const stringBase_80859F98 = "T_MUKAO";
 
 /* 8085A074-8085A0A4 0030+00 s=1 e=0 z=0  None .data      @4611                                                        */
 SECTION_DATA static void* lit_4611[12] = {
-	/* 0    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x270),
-	/* 1    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x4C),
-	/* 2    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x1C0),
-	/* 3    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x208),
-	/* 4    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x544),
-	/* 5    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x210),
-	/* 6    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x218),
-	/* 7    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x220),
-	/* 8    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x228),
-	/* 9    */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x230),
-	/* 10   */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x238),
-	/* 11   */ (void*)(((char*)daKytag06_Execute__FP13kytag06_class)+0x268),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80859528-80859A88 0560+00 s=2 e=0 z=0  None .text      daKytag06_Execute__FP13kytag06_class                         */
+/* 80859528-80859A88 0560+00 s=0 e=0 z=0  None .text      daKytag06_Execute__FP13kytag06_class                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag06_Execute(kytag06_class* param_0) {
+asm void daKytag06_Execute(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Execute__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 80859A88-80859A90 0008+00 s=1 e=0 z=0  None .text      daKytag06_IsDelete__FP13kytag06_class                        */
-static bool daKytag06_IsDelete(kytag06_class* param_0) {
+/* 80859A88-80859A90 0008+00 s=0 e=0 z=0  None .text      daKytag06_IsDelete__FP13kytag06_class                        */
+bool daKytag06_IsDelete(kytag06_class* param_0) {
 	return true;
 }
 
 
-/* 80859A90-80859AD0 0040+00 s=1 e=0 z=0  None .text      daKytag06_Delete__FP13kytag06_class                          */
+/* 80859A90-80859AD0 0040+00 s=0 e=0 z=0  None .text      daKytag06_Delete__FP13kytag06_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag06_Delete(kytag06_class* param_0) {
+asm void daKytag06_Delete(kytag06_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Delete__FP13kytag06_class.s"
 }
 #pragma pop
 
 
-/* 80859AD0-80859AF0 0020+00 s=0 e=0 z=0  None .text      daKytag06_type04_init__FP10fopAc_ac_c                        */
+/* 80859AD0-80859AF0 0020+00 s=1 e=0 z=0  None .text      daKytag06_type04_init__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type04_init(fopAc_ac_c* param_0) {
+asm static void daKytag06_type04_init(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type04_init__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80859AF0-80859B14 0024+00 s=0 e=0 z=0  None .text      daKytag06_type06_init__FP10fopAc_ac_c                        */
+/* 80859AF0-80859B14 0024+00 s=1 e=0 z=0  None .text      daKytag06_type06_init__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type06_init(fopAc_ac_c* param_0) {
+asm static void daKytag06_type06_init(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type06_init__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80859B14-80859B34 0020+00 s=0 e=0 z=0  None .text      daKytag06_type02_init__FP10fopAc_ac_c                        */
+/* 80859B14-80859B34 0020+00 s=1 e=0 z=0  None .text      daKytag06_type02_init__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type02_init(fopAc_ac_c* param_0) {
+asm static void daKytag06_type02_init(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type02_init__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80859B34-80859C88 0154+00 s=0 e=0 z=0  None .text      daKytag06_type03_init__FP10fopAc_ac_c                        */
+/* 80859B34-80859C88 0154+00 s=1 e=0 z=0  None .text      daKytag06_type03_init__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void daKytag06_type03_init(fopAc_ac_c* param_0) {
+asm static void daKytag06_type03_init(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_type03_init__FP10fopAc_ac_c.s"
 }
@@ -960,25 +931,25 @@ asm void daKytag06_type03_init(fopAc_ac_c* param_0) {
 /* ############################################################################################## */
 /* 8085A0A4-8085A0D4 0030+00 s=1 e=0 z=0  None .data      @4772                                                        */
 SECTION_DATA static void* lit_4772[12] = {
-	/* 0    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x158),
-	/* 1    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x84),
-	/* 2    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xA0),
-	/* 3    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xAC),
-	/* 4    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xB8),
-	/* 5    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x1C8),
-	/* 6    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xC4),
-	/* 7    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xD0),
-	/* 8    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0xE4),
-	/* 9    */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x108),
-	/* 10   */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x114),
-	/* 11   */ (void*)(((char*)daKytag06_Create__FP10fopAc_ac_c)+0x14C),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80859C88-80859E68 01E0+00 s=2 e=0 z=0  None .text      daKytag06_Create__FP10fopAc_ac_c                             */
+/* 80859C88-80859E68 01E0+00 s=0 e=0 z=0  None .text      daKytag06_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daKytag06_Create(fopAc_ac_c* param_0) {
+asm void daKytag06_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/kytag/d_a_kytag06/d_a_kytag06/daKytag06_Create__FP10fopAc_ac_c.s"
 }
@@ -986,32 +957,32 @@ asm static void daKytag06_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8085A0D4-8085A0F4 0020+00 s=1 e=0 z=0  None .data      l_daKytag06_Method                                           */
-SECTION_DATA static void* l_daKytag06_Method[8] = {
-	/* 0    */ (void*)daKytag06_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daKytag06_Delete__FP13kytag06_class,
-	/* 2    */ (void*)daKytag06_Execute__FP13kytag06_class,
-	/* 3    */ (void*)daKytag06_IsDelete__FP13kytag06_class,
-	/* 4    */ (void*)daKytag06_Draw__FP13kytag06_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8085A0D4-8085A0F4 0020+00 s=0 e=0 z=0  None .data      l_daKytag06_Method                                           */
+SECTION_DATA void* l_daKytag06_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8085A0F4-8085A124 0030+00 s=0 e=0 z=1  None .data      g_profile_KYTAG06                                            */
+/* 8085A0F4-8085A124 0030+00 s=0 e=0 z=0  None .data      g_profile_KYTAG06                                            */
 SECTION_DATA void* g_profile_KYTAG06[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02B00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000059C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00640000,
-	/* 9    */ (void*)&l_daKytag06_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02B00000,
+	(void*)NULL,
+	(void*)0x0000059C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00640000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)NULL,
 };
 
 /* 8085A18C-8085A190 0004+00 s=0 e=0 z=0  None .bss       sInstance__40JASGlobalInstance<19JASDefaultBankTable>        */

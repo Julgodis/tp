@@ -105,8 +105,8 @@ lbl_804CD134:
 lbl_804CD174:
 /* 804CD174  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 804CD178  98 1F 09 2A */	stb r0, 0x92a(r31)
-/* 804CD17C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804CD180  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804CD17C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804CD180  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804CD184  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 804CD188  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 804CD18C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -120,8 +120,8 @@ lbl_804CD1A8:
 /* 804CD1A8  88 1F 09 2A */	lbz r0, 0x92a(r31)
 /* 804CD1AC  28 00 00 22 */	cmplwi r0, 0x22
 /* 804CD1B0  40 82 00 28 */	bne lbl_804CD1D8
-/* 804CD1B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804CD1B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804CD1B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804CD1B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804CD1BC  38 63 09 58 */	addi r3, r3, 0x958
 /* 804CD1C0  38 80 00 04 */	li r4, 4
 /* 804CD1C4  4B B6 77 70 */	b isDungeonItem__12dSv_memBit_cCFi

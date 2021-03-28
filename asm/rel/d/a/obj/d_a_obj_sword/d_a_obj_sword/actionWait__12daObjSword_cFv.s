@@ -4,9 +4,9 @@ lbl_80CFDA14:
 /* 80CFDA1C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CFDA20  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CFDA24  7C 7F 1B 78 */	mr r31, r3
-/* 80CFDA28  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CFDA2C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80CFDA30  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80CFDA28  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CFDA2C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CFDA30  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80CFDA34  80 03 04 9C */	lwz r0, 0x49c(r3)
 /* 80CFDA38  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 80CFDA3C  41 82 00 2C */	beq lbl_80CFDA68

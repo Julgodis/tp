@@ -8,7 +8,7 @@ lbl_80B8AB78:
 /* 80B8AB90  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B8AB94  3B E3 C4 58 */	addi r31, r3, m__17daNpc_zrA_Param_c@l
 /* 80B8AB98  3B DF 00 00 */	addi r30, r31, 0
-/* 80B8AB9C  A8 1E 00 74 */	lha r0, 0x74(r30)	/* effective address: 80B8C4CC */
+/* 80B8AB9C  A8 1E 00 74 */	lha r0, 0x74(r30)
 /* 80B8ABA0  54 00 08 3C */	slwi r0, r0, 1
 /* 80B8ABA4  7C 1D 07 34 */	extsh r29, r0
 /* 80B8ABA8  3B 80 00 04 */	li r28, 4
@@ -44,11 +44,11 @@ lbl_80B8ABF4:
 /* 80B8AC18  4B 48 22 58 */	b scaleM__14mDoMtx_stack_cFRC4cXyz
 /* 80B8AC1C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B8AC20  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B8AC24  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B8AC24  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B8AC28  D0 01 00 68 */	stfs f0, 0x68(r1)
-/* 80B8AC2C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B8AC2C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B8AC30  D0 01 00 6C */	stfs f0, 0x6c(r1)
-/* 80B8AC34  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B8AC34  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B8AC38  D0 01 00 70 */	stfs f0, 0x70(r1)
 /* 80B8AC3C  88 1B 15 3E */	lbz r0, 0x153e(r27)
 /* 80B8AC40  28 00 00 00 */	cmplwi r0, 0
@@ -232,11 +232,11 @@ lbl_80B8AEB8:
 /* 80B8AED4  40 82 01 38 */	bne lbl_80B8B00C
 /* 80B8AED8  3C 60 80 B9 */	lis r3, lit_11468@ha
 /* 80B8AEDC  38 83 D8 D0 */	addi r4, r3, lit_11468@l
-/* 80B8AEE0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B8D8D0 */
-/* 80B8AEE4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B8D8D4 */
+/* 80B8AEE0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B8AEE4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B8AEE8  90 61 00 44 */	stw r3, 0x44(r1)
 /* 80B8AEEC  90 01 00 48 */	stw r0, 0x48(r1)
-/* 80B8AEF0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B8D8D8 */
+/* 80B8AEF0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B8AEF4  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 80B8AEF8  7F 63 DB 78 */	mr r3, r27
 /* 80B8AEFC  38 81 00 44 */	addi r4, r1, 0x44

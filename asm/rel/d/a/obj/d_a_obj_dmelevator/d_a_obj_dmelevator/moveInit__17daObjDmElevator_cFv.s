@@ -7,7 +7,7 @@ lbl_80BDF320:
 /* 80BDF334  7C 7E 1B 78 */	mr r30, r3
 /* 80BDF338  3C 60 80 BE */	lis r3, l_swOffset@ha
 /* 80BDF33C  3B E3 F8 70 */	addi r31, r3, l_swOffset@l
-/* 80BDF340  C0 1F 00 10 */	lfs f0, 0x10(r31)	/* effective address: 80BDF880 */
+/* 80BDF340  C0 1F 00 10 */	lfs f0, 0x10(r31)
 /* 80BDF344  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 80BDF348  88 1E 05 E0 */	lbz r0, 0x5e0(r30)
 /* 80BDF34C  28 00 00 00 */	cmplwi r0, 0
@@ -21,7 +21,7 @@ lbl_80BDF320:
 /* 80BDF36C  90 01 00 08 */	stw r0, 8(r1)
 /* 80BDF370  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BDF374  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BDF378  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BDF378  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BDF37C  38 81 00 08 */	addi r4, r1, 8
 /* 80BDF380  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80BDF384  38 C0 00 00 */	li r6, 0

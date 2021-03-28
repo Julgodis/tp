@@ -74,8 +74,8 @@ lbl_805D9C34:
 /* 805D9C70  C0 3F 08 00 */	lfs f1, 0x800(r31)
 /* 805D9C74  4B A9 D4 A0 */	b SetGroundUpY__9dBgS_AcchFf
 /* 805D9C78  38 7F 08 B0 */	addi r3, r31, 0x8b0
-/* 805D9C7C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805D9C80  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805D9C7C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805D9C80  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805D9C84  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805D9C88  4B A9 CE 24 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 805D9C8C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)

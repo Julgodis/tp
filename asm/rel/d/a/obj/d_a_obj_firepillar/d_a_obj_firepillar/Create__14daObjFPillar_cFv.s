@@ -18,18 +18,18 @@ lbl_80BE9190:
 /* 80BE91D0  90 1F 08 0C */	stw r0, 0x80c(r31)
 /* 80BE91D4  3C 60 80 BF */	lis r3, l_cull_box@ha
 /* 80BE91D8  38 83 9A DC */	addi r4, r3, l_cull_box@l
-/* 80BE91DC  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80BE9AEC */
+/* 80BE91DC  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80BE91E0  C0 5F 04 F0 */	lfs f2, 0x4f0(r31)
 /* 80BE91E4  EC A0 00 B2 */	fmuls f5, f0, f2
 /* 80BE91E8  C0 9F 04 EC */	lfs f4, 0x4ec(r31)
 /* 80BE91EC  7F E3 FB 78 */	mr r3, r31
-/* 80BE91F0  C0 04 00 00 */	lfs f0, 0(r4)	/* effective address: 80BE9ADC */
+/* 80BE91F0  C0 04 00 00 */	lfs f0, 0(r4)
 /* 80BE91F4  EC 20 01 32 */	fmuls f1, f0, f4
-/* 80BE91F8  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80BE9AE0 */
+/* 80BE91F8  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80BE91FC  EC 40 00 B2 */	fmuls f2, f0, f2
-/* 80BE9200  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80BE9AE4 */
+/* 80BE9200  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80BE9204  EC 60 01 32 */	fmuls f3, f0, f4
-/* 80BE9208  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80BE9AE8 */
+/* 80BE9208  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80BE920C  EC 80 01 32 */	fmuls f4, f0, f4
 /* 80BE9210  FC C0 28 90 */	fmr f6, f5
 /* 80BE9214  4B 43 13 34 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff

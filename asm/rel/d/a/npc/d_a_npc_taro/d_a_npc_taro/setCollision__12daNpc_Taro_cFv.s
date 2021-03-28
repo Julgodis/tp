@@ -73,8 +73,8 @@ lbl_805683AC:
 /* 805683F8  38 7F 0F 70 */	addi r3, r31, 0xf70
 /* 805683FC  38 81 00 08 */	addi r4, r1, 8
 /* 80568400  4B D0 6D DC */	b SetC__8cM3dGCylFRC4cXyz
-/* 80568404  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80568408  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80568404  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80568408  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056840C  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 80568410  7F A3 EB 78 */	mr r3, r29
 /* 80568414  38 9F 0E 4C */	addi r4, r31, 0xe4c

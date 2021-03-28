@@ -16,14 +16,14 @@ lbl_8079F08C:
 /* 8079F0C4  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8079F0C8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8079F0CC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8079F0D0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8079F0D0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8079F0D4  A8 1F 06 9C */	lha r0, 0x69c(r31)
 /* 8079F0D8  7C 00 00 D0 */	neg r0, r0
 /* 8079F0DC  7C 04 07 34 */	extsh r4, r0
 /* 8079F0E0  4B 86 D2 64 */	b mDoMtx_XrotS__FPA4_fs
 /* 8079F0E4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8079F0E8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8079F0EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8079F0EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8079F0F0  A8 1F 06 9E */	lha r0, 0x69e(r31)
 /* 8079F0F4  7C 00 00 D0 */	neg r0, r0
 /* 8079F0F8  7C 04 07 34 */	extsh r4, r0

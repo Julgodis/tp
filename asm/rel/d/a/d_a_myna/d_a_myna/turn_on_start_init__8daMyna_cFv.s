@@ -10,8 +10,8 @@ lbl_80947A00:
 /* 80947A20  48 00 26 35 */	bl setAnimeType__8daMyna_cFUcf
 /* 80947A24  3C 60 80 95 */	lis r3, daMyna_LightActor@ha
 /* 80947A28  38 63 BA C0 */	addi r3, r3, daMyna_LightActor@l
-/* 80947A2C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8094BAC0 */
-/* 80947A30  88 03 05 79 */	lbz r0, 0x579(r3)	/* effective address: 8094C039 */
+/* 80947A2C  80 63 00 00 */	lwz r3, 0(r3)
+/* 80947A30  88 03 05 79 */	lbz r0, 0x579(r3)
 /* 80947A34  28 00 00 00 */	cmplwi r0, 0
 /* 80947A38  41 82 00 30 */	beq lbl_80947A68
 /* 80947A3C  3C 60 00 05 */	lis r3, 0x0005 /* 0x00050091@ha */

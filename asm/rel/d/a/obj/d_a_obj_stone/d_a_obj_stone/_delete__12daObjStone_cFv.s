@@ -7,8 +7,8 @@ lbl_80CEC948:
 /* 80CEC95C  38 7F 09 70 */	addi r3, r31, 0x970
 /* 80CEC960  4B 5D 16 98 */	b deleteObject__14Z2SoundObjBaseFv
 /* 80CEC964  A0 9F 04 94 */	lhz r4, 0x494(r31)
-/* 80CEC968  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEC96C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEC968  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEC96C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEC970  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CEC974  7C 05 07 74 */	extsb r5, r0
 /* 80CEC978  4B 34 8D 3C */	b offActor__10dSv_info_cFii

@@ -9,7 +9,7 @@ lbl_805D80F0:
 /* 805D810C  3B E3 CA 54 */	addi r31, r3, lit_3932@l
 /* 805D8110  3C 60 80 5E */	lis r3, data_805DE1A4@ha
 /* 805D8114  38 A3 E1 A4 */	addi r5, r3, data_805DE1A4@l
-/* 805D8118  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 805DE1A4 */
+/* 805D8118  88 05 00 00 */	lbz r0, 0(r5)
 /* 805D811C  7C 00 07 75 */	extsb. r0, r0
 /* 805D8120  40 82 00 2C */	bne lbl_805D814C
 /* 805D8124  3C 80 00 07 */	lis r4, 0x0007 /* 0x000704CF@ha */
@@ -17,9 +17,9 @@ lbl_805D80F0:
 /* 805D812C  3C 60 80 5E */	lis r3, data_805DE1A8@ha
 /* 805D8130  94 03 E1 A8 */	stwu r0, data_805DE1A8@l(r3)
 /* 805D8134  38 04 04 D0 */	addi r0, r4, 0x4d0
-/* 805D8138  90 03 00 04 */	stw r0, 4(r3)	/* effective address: 805E0004 */
+/* 805D8138  90 03 00 04 */	stw r0, 4(r3)
 /* 805D813C  38 04 04 D1 */	addi r0, r4, 0x4d1
-/* 805D8140  90 03 00 08 */	stw r0, 8(r3)	/* effective address: 805E0008 */
+/* 805D8140  90 03 00 08 */	stw r0, 8(r3)
 /* 805D8144  38 00 00 01 */	li r0, 1
 /* 805D8148  98 05 00 00 */	stb r0, 0(r5)
 lbl_805D814C:

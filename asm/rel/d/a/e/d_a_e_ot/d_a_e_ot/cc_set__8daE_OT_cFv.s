@@ -55,8 +55,8 @@ lbl_8073BE10:
 /* 8073BEE4  38 7E 0A 10 */	addi r3, r30, 0xa10
 /* 8073BEE8  C0 3F 00 60 */	lfs f1, 0x60(r31)
 /* 8073BEEC  4B B3 38 1C */	b SetR__8cM3dGSphFf
-/* 8073BEF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8073BEF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8073BEF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8073BEF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8073BEF8  3B 83 23 3C */	addi r28, r3, 0x233c
 /* 8073BEFC  7F 83 E3 78 */	mr r3, r28
 /* 8073BF00  38 9E 08 EC */	addi r4, r30, 0x8ec

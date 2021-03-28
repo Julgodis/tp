@@ -19,7 +19,6 @@ extern void* const data_80CE4CA8[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_spinLift_cpp(); // 1
 
 // 
 // Declarations:

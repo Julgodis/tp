@@ -12,8 +12,8 @@ lbl_8056C5B4:
 /* 8056C5DC  3B 80 FF FF */	li r28, -1
 /* 8056C5E0  3B 60 00 00 */	li r27, 0
 /* 8056C5E4  3B 40 00 00 */	li r26, 0
-/* 8056C5E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056C5EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8056C5E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056C5EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056C5F0  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8056C5F4  7F C3 F3 78 */	mr r3, r30
 /* 8056C5F8  3C A0 80 57 */	lis r5, struct_80571908+0x0@ha
@@ -66,21 +66,21 @@ lbl_8056C668:
 /* 8056C6A8  4B BD 90 60 */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 8056C6AC  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 8056C6B0  80 01 00 10 */	lwz r0, 0x10(r1)
-/* 8056C6B4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8056C6B8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8056C6BC  90 04 5E F0 */	stw r0, 0x5ef0(r4)	/* effective address: 8040C0B0 */
+/* 8056C6B4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8056C6B8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8056C6BC  90 04 5E F0 */	stw r0, 0x5ef0(r4)
 /* 8056C6C0  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8056C6C4  90 04 5E F4 */	stw r0, 0x5ef4(r4)	/* effective address: 8040C0B4 */
+/* 8056C6C4  90 04 5E F4 */	stw r0, 0x5ef4(r4)
 /* 8056C6C8  80 01 00 18 */	lwz r0, 0x18(r1)
-/* 8056C6CC  90 04 5E F8 */	stw r0, 0x5ef8(r4)	/* effective address: 8040C0B8 */
-/* 8056C6D0  90 64 5E FC */	stw r3, 0x5efc(r4)	/* effective address: 8040C0BC */
+/* 8056C6CC  90 04 5E F8 */	stw r0, 0x5ef8(r4)
+/* 8056C6D0  90 64 5E FC */	stw r3, 0x5efc(r4)
 /* 8056C6D4  38 00 00 00 */	li r0, 0
-/* 8056C6D8  90 04 5F 00 */	stw r0, 0x5f00(r4)	/* effective address: 8040C0C0 */
-/* 8056C6DC  90 04 5F 04 */	stw r0, 0x5f04(r4)	/* effective address: 8040C0C4 */
-/* 8056C6E0  90 04 5F 08 */	stw r0, 0x5f08(r4)	/* effective address: 8040C0C8 */
-/* 8056C6E4  90 04 5F 0C */	stw r0, 0x5f0c(r4)	/* effective address: 8040C0CC */
-/* 8056C6E8  90 04 5F 10 */	stw r0, 0x5f10(r4)	/* effective address: 8040C0D0 */
-/* 8056C6EC  90 04 5F 14 */	stw r0, 0x5f14(r4)	/* effective address: 8040C0D4 */
+/* 8056C6D8  90 04 5F 00 */	stw r0, 0x5f00(r4)
+/* 8056C6DC  90 04 5F 04 */	stw r0, 0x5f04(r4)
+/* 8056C6E0  90 04 5F 08 */	stw r0, 0x5f08(r4)
+/* 8056C6E4  90 04 5F 0C */	stw r0, 0x5f0c(r4)
+/* 8056C6E8  90 04 5F 10 */	stw r0, 0x5f10(r4)
+/* 8056C6EC  90 04 5F 14 */	stw r0, 0x5f14(r4)
 /* 8056C6F0  7F C3 F3 78 */	mr r3, r30
 /* 8056C6F4  7F 24 CB 78 */	mr r4, r25
 /* 8056C6F8  4B AD B6 54 */	b getIsAddvance__16dEvent_manager_cFi

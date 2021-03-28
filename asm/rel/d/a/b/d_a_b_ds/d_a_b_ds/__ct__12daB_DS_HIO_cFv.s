@@ -6,20 +6,20 @@ lbl_805CB22C:
 /* 805CB23C  90 03 00 00 */	stw r0, 0(r3)
 /* 805CB240  38 00 FF FF */	li r0, -1
 /* 805CB244  98 03 00 04 */	stb r0, 4(r3)
-/* 805CB248  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 805DCA5C */
+/* 805CB248  C0 05 00 08 */	lfs f0, 8(r5)
 /* 805CB24C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 805CB250  C0 25 00 2C */	lfs f1, 0x2c(r5)	/* effective address: 805DCA80 */
+/* 805CB250  C0 25 00 2C */	lfs f1, 0x2c(r5)
 /* 805CB254  D0 23 00 0C */	stfs f1, 0xc(r3)
-/* 805CB258  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 805DCA84 */
+/* 805CB258  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 805CB25C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 805CB260  D0 23 00 14 */	stfs f1, 0x14(r3)
-/* 805CB264  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 805DCA88 */
+/* 805CB264  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 805CB268  D0 03 00 18 */	stfs f0, 0x18(r3)
-/* 805CB26C  C0 05 00 38 */	lfs f0, 0x38(r5)	/* effective address: 805DCA8C */
+/* 805CB26C  C0 05 00 38 */	lfs f0, 0x38(r5)
 /* 805CB270  D0 03 00 1C */	stfs f0, 0x1c(r3)
-/* 805CB274  C0 05 00 3C */	lfs f0, 0x3c(r5)	/* effective address: 805DCA90 */
+/* 805CB274  C0 05 00 3C */	lfs f0, 0x3c(r5)
 /* 805CB278  D0 03 00 24 */	stfs f0, 0x24(r3)
-/* 805CB27C  C0 05 00 40 */	lfs f0, 0x40(r5)	/* effective address: 805DCA94 */
+/* 805CB27C  C0 05 00 40 */	lfs f0, 0x40(r5)
 /* 805CB280  D0 03 00 20 */	stfs f0, 0x20(r3)
 /* 805CB284  38 00 00 FA */	li r0, 0xfa
 /* 805CB288  B0 03 00 28 */	sth r0, 0x28(r3)

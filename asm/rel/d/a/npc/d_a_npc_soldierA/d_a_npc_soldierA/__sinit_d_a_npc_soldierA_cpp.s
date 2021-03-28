@@ -16,11 +16,11 @@ lbl_80AF25D8:
 /* 80AF2610  4B FF CF 09 */	bl __register_global_object
 /* 80AF2614  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AF2618  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AF261C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AF2620  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AF261C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AF2620  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AF2624  90 7F 00 D4 */	stw r3, 0xd4(r31)
 /* 80AF2628  90 1F 00 D8 */	stw r0, 0xd8(r31)
-/* 80AF262C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AF262C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AF2630  90 1F 00 DC */	stw r0, 0xdc(r31)
 /* 80AF2634  38 9F 00 D4 */	addi r4, r31, 0xd4
 /* 80AF2638  80 7F 00 BC */	lwz r3, 0xbc(r31)

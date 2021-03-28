@@ -7,9 +7,9 @@ lbl_80A56A1C:
 /* 80A56A30  7C 7D 1B 78 */	mr r29, r3
 /* 80A56A34  3C 80 80 A6 */	lis r4, lit_4030@ha
 /* 80A56A38  3B E4 DE FC */	addi r31, r4, lit_4030@l
-/* 80A56A3C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A56A40  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A56A44  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A56A3C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A56A40  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A56A44  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A56A48  4B 5C 3D 98 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A56A4C  D0 3D 05 C4 */	stfs f1, 0x5c4(r29)
 /* 80A56A50  3B C0 00 01 */	li r30, 1
@@ -91,9 +91,9 @@ lbl_80A56B4C:
 lbl_80A56B64:
 /* 80A56B64  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A56B68  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A56B6C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A56B6C  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A56B70  38 03 00 01 */	addi r0, r3, 1
-/* 80A56B74  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A56B74  90 04 00 00 */	stw r0, 0(r4)
 /* 80A56B78  38 00 00 0A */	li r0, 0xa
 /* 80A56B7C  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A56B80  C0 1F 00 30 */	lfs f0, 0x30(r31)
@@ -142,7 +142,7 @@ lbl_80A56C00:
 /* 80A56C24  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A56C28  3C 60 80 A6 */	lis r3, l_HIO@ha
 /* 80A56C2C  38 63 FE B8 */	addi r3, r3, l_HIO@l
-/* 80A56C30  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A5FED4 */
+/* 80A56C30  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A56C34  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 80A56C38  80 1D 05 D0 */	lwz r0, 0x5d0(r29)
 /* 80A56C3C  2C 00 00 1A */	cmpwi r0, 0x1a
@@ -398,9 +398,9 @@ lbl_80A56FBC:
 lbl_80A56FD4:
 /* 80A56FD4  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A56FD8  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A56FDC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A56FDC  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A56FE0  38 03 00 01 */	addi r0, r3, 1
-/* 80A56FE4  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A56FE4  90 04 00 00 */	stw r0, 0(r4)
 /* 80A56FE8  38 00 00 0A */	li r0, 0xa
 /* 80A56FEC  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 lbl_80A56FF0:

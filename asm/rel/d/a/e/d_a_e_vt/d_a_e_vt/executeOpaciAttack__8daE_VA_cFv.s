@@ -102,8 +102,8 @@ lbl_807CA490:
 /* 807CA4E4  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 807CA4E8  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 807CA4EC  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 807CA4F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807CA4F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807CA4F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807CA4F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807CA4F8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807CA4FC  38 80 00 05 */	li r4, 5
 /* 807CA500  38 A0 00 1F */	li r5, 0x1f
@@ -114,9 +114,9 @@ lbl_807CA50C:
 /* 807CA510  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 807CA514  40 80 00 38 */	bge lbl_807CA54C
 /* 807CA518  7F C3 F3 78 */	mr r3, r30
-/* 807CA51C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807CA520  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807CA524  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807CA51C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807CA520  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807CA524  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 807CA528  4B 85 01 E8 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807CA52C  7C 64 1B 78 */	mr r4, r3
 /* 807CA530  38 7E 04 E6 */	addi r3, r30, 0x4e6
@@ -237,7 +237,7 @@ lbl_807CA6CC:
 /* 807CA6DC  40 82 00 30 */	bne lbl_807CA70C
 /* 807CA6E0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807CA6E4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807CA6E8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807CA6E8  80 63 00 00 */	lwz r3, 0(r3)
 /* 807CA6EC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807CA6F0  38 80 00 01 */	li r4, 1
 /* 807CA6F4  4B AE 77 00 */	b changeSubBgmStatus__8Z2SeqMgrFl

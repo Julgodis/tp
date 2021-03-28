@@ -40,9 +40,9 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagSpring_Execute(daTagSpring_c*); // 2
-static void daTagSpring_Delete(daTagSpring_c*); // 2
-static void daTagSpring_Create(daTagSpring_c*); // 2
+void daTagSpring_Execute(daTagSpring_c*); // 2
+void daTagSpring_Delete(daTagSpring_c*); // 2
+void daTagSpring_Create(daTagSpring_c*); // 2
 
 extern "C" void initBaseMtx__13daTagSpring_cFv(); // 1
 extern "C" void setBaseMtx__13daTagSpring_cFv(); // 1
@@ -51,12 +51,10 @@ extern "C" void create__13daTagSpring_cFv(); // 1
 extern "C" void execute__13daTagSpring_cFv(); // 1
 extern "C" void checkArea__13daTagSpring_cFv(); // 1
 extern "C" bool _delete__13daTagSpring_cFv(); // 1
-extern "C" static void daTagSpring_Execute__FP13daTagSpring_c(); // 1
-extern "C" static void daTagSpring_Delete__FP13daTagSpring_c(); // 1
-extern "C" static void daTagSpring_Create__FP13daTagSpring_c(); // 1
-extern "C" extern u8 const lit_3774[8];
-extern "C" extern u8 const lit_3775[8];
-extern "C" extern u8 const lit_3776[8];
+extern "C" void daTagSpring_Execute__FP13daTagSpring_c(); // 1
+extern "C" void daTagSpring_Delete__FP13daTagSpring_c(); // 1
+extern "C" void daTagSpring_Create__FP13daTagSpring_c(); // 1
+extern "C" extern void* l_daTagSpring_Method[8];
 extern "C" extern void* g_profile_Tag_Spring[12];
 
 // 
@@ -71,15 +69,8 @@ extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz(); // 1
 extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareDistance(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF80[4];
-SECTION_BSS extern u8 struct_8040C074[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 
@@ -152,18 +143,18 @@ SECTION_RODATA static u8 const lit_3773[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805A6E74-805A6E7C 0008+00 s=0 e=0 z=0  None .rodata    @3774                                                        */
-SECTION_RODATA u8 const lit_3774[8] = {
+/* 805A6E74-805A6E7C 0008+00 s=1 e=0 z=0  None .rodata    @3774                                                        */
+SECTION_RODATA static u8 const lit_3774[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805A6E7C-805A6E84 0008+00 s=0 e=0 z=0  None .rodata    @3775                                                        */
-SECTION_RODATA u8 const lit_3775[8] = {
+/* 805A6E7C-805A6E84 0008+00 s=1 e=0 z=0  None .rodata    @3775                                                        */
+SECTION_RODATA static u8 const lit_3775[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805A6E84-805A6E8C 0008+00 s=0 e=0 z=0  None .rodata    @3776                                                        */
-SECTION_RODATA u8 const lit_3776[8] = {
+/* 805A6E84-805A6E8C 0008+00 s=1 e=0 z=0  None .rodata    @3776                                                        */
+SECTION_RODATA static u8 const lit_3776[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -187,33 +178,33 @@ bool daTagSpring_c::_delete() {
 }
 
 
-/* 805A6E04-805A6E24 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Execute__FP13daTagSpring_c                       */
+/* 805A6E04-805A6E24 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Execute__FP13daTagSpring_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSpring_Execute(daTagSpring_c* param_0) {
+asm void daTagSpring_Execute(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Execute__FP13daTagSpring_c.s"
 }
 #pragma pop
 
 
-/* 805A6E24-805A6E44 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Delete__FP13daTagSpring_c                        */
+/* 805A6E24-805A6E44 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Delete__FP13daTagSpring_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSpring_Delete(daTagSpring_c* param_0) {
+asm void daTagSpring_Delete(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Delete__FP13daTagSpring_c.s"
 }
 #pragma pop
 
 
-/* 805A6E44-805A6E64 0020+00 s=1 e=0 z=0  None .text      daTagSpring_Create__FP13daTagSpring_c                        */
+/* 805A6E44-805A6E64 0020+00 s=0 e=0 z=0  None .text      daTagSpring_Create__FP13daTagSpring_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagSpring_Create(daTagSpring_c* param_0) {
+asm void daTagSpring_Create(daTagSpring_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_spring/d_a_tag_spring/daTagSpring_Create__FP13daTagSpring_c.s"
 }
@@ -221,31 +212,31 @@ asm static void daTagSpring_Create(daTagSpring_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 805A6E90-805A6EB0 0020+00 s=1 e=0 z=0  None .data      l_daTagSpring_Method                                         */
-SECTION_DATA static void* l_daTagSpring_Method[8] = {
-	/* 0    */ (void*)daTagSpring_Create__FP13daTagSpring_c,
-	/* 1    */ (void*)daTagSpring_Delete__FP13daTagSpring_c,
-	/* 2    */ (void*)daTagSpring_Execute__FP13daTagSpring_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A6E90-805A6EB0 0020+00 s=0 e=0 z=0  None .data      l_daTagSpring_Method                                         */
+SECTION_DATA void* l_daTagSpring_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A6EB0-805A6EE0 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Spring                                         */
+/* 805A6EB0-805A6EE0 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Spring                                         */
 SECTION_DATA void* g_profile_Tag_Spring[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01AD0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000056C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x024B0000,
-	/* 9    */ (void*)&l_daTagSpring_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01AD0000,
+	(void*)NULL,
+	(void*)0x0000056C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x024B0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

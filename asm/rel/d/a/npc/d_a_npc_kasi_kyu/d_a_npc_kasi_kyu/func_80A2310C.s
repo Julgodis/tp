@@ -74,7 +74,7 @@ lbl_80A231D0:
 /* 80A23220  40 82 00 14 */	bne lbl_80A23234
 /* 80A23224  3C 60 80 A2 */	lis r3, m__20daNpcKasiKyu_Param_c@ha
 /* 80A23228  38 63 58 B8 */	addi r3, r3, m__20daNpcKasiKyu_Param_c@l
-/* 80A2322C  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 80A258FC */
+/* 80A2322C  C0 23 00 44 */	lfs f1, 0x44(r3)
 /* 80A23230  48 00 00 20 */	b lbl_80A23250
 lbl_80A23234:
 /* 80A23234  3C 60 80 A2 */	lis r3, lit_4449@ha

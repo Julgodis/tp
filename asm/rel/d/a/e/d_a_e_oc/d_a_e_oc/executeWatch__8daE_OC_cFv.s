@@ -170,9 +170,9 @@ lbl_80731910:
 /* 80731970  4E 80 04 21 */	bctrl 
 /* 80731974  48 00 00 58 */	b lbl_807319CC
 lbl_80731978:
-/* 80731978  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8073197C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80731980  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80731978  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8073197C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80731980  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80731984  4B 8E 8D 8C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80731988  B0 7E 06 D4 */	sth r3, 0x6d4(r30)
 /* 8073198C  80 7E 05 BC */	lwz r3, 0x5bc(r30)

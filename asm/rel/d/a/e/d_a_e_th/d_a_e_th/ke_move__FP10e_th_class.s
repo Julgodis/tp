@@ -18,7 +18,7 @@ lbl_807B0A6C:
 /* 807B0AAC  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 807B0AB0  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807B0AB4  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807B0AB8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807B0AB8  80 84 00 00 */	lwz r4, 0(r4)
 /* 807B0ABC  4B B9 59 F4 */	b PSMTXCopy
 /* 807B0AC0  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 807B0AC4  D0 21 00 20 */	stfs f1, 0x20(r1)

@@ -12,7 +12,7 @@ lbl_80BD2758:
 /* 80BD2780  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80BD2784  7C C3 04 2E */	lfsx f6, r3, r0
 /* 80BD2788  C0 7F 04 D8 */	lfs f3, 0x4d8(r31)
-/* 80BD278C  C0 24 00 E0 */	lfs f1, 0xe0(r4)	/* effective address: 80BD31A0 */
+/* 80BD278C  C0 24 00 E0 */	lfs f1, 0xe0(r4)
 /* 80BD2790  EC 01 01 B2 */	fmuls f0, f1, f6
 /* 80BD2794  EC A3 00 28 */	fsubs f5, f3, f0
 /* 80BD2798  C0 9F 04 D4 */	lfs f4, 0x4d4(r31)
@@ -24,10 +24,10 @@ lbl_80BD2758:
 /* 80BD27B0  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80BD27B4  D0 81 00 1C */	stfs f4, 0x1c(r1)
 /* 80BD27B8  D0 A1 00 20 */	stfs f5, 0x20(r1)
-/* 80BD27BC  C0 24 00 9C */	lfs f1, 0x9c(r4)	/* effective address: 80BD315C */
+/* 80BD27BC  C0 24 00 9C */	lfs f1, 0x9c(r4)
 /* 80BD27C0  EC 01 01 B2 */	fmuls f0, f1, f6
 /* 80BD27C4  EC A3 00 28 */	fsubs f5, f3, f0
-/* 80BD27C8  C0 04 00 A0 */	lfs f0, 0xa0(r4)	/* effective address: 80BD3160 */
+/* 80BD27C8  C0 04 00 A0 */	lfs f0, 0xa0(r4)
 /* 80BD27CC  EC 60 20 2A */	fadds f3, f0, f4
 /* 80BD27D0  EC 01 01 F2 */	fmuls f0, f1, f7
 /* 80BD27D4  EC 02 00 2A */	fadds f0, f2, f0

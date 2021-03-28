@@ -21,7 +21,10 @@ struct JASAramStream {
 	/* 802966CC */ void cancel();
 };
 
-struct JAISoundID {
+struct JAISoundActivity {
+};
+
+struct JAIAudience {
 };
 
 template <typename A0>
@@ -30,16 +33,13 @@ struct JAISoundStrategyMgr { };
 struct JAISoundStrategyMgr__template2 {
 };
 
+struct JAISoundID {
+};
+
 struct JASSoundParams {
 };
 
 struct JAIStreamMgr {
-};
-
-struct JAIAudience {
-};
-
-struct JAISoundActivity {
 };
 
 struct JGeometry {
@@ -184,18 +184,18 @@ asm static void JAIStream_JASAramStreamCallback_(u32 param_0, JASAramStream* par
 /* ############################################################################################## */
 /* 803C99D8-803C9A08 0030+00 s=1 e=1 z=0  None .data      __vt__9JAIStream                                             */
 SECTION_DATA void* __vt__9JAIStream[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getNumChild__9JAIStreamCFv,
-	/* 3    */ (void*)getChild__9JAIStreamFi,
-	/* 4    */ (void*)releaseChild__9JAIStreamFi,
-	/* 5    */ (void*)asSe__8JAISoundFv,
-	/* 6    */ (void*)asSeq__8JAISoundFv,
-	/* 7    */ (void*)asStream__9JAIStreamFv,
-	/* 8    */ (void*)getTrack__9JAIStreamFv,
-	/* 9    */ (void*)getChildTrack__9JAIStreamFi,
-	/* 10   */ (void*)getTempoMgr__9JAIStreamFv,
-	/* 11   */ (void*)JAISound_tryDie___9JAIStreamFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getNumChild__9JAIStreamCFv,
+	(void*)getChild__9JAIStreamFi,
+	(void*)releaseChild__9JAIStreamFi,
+	(void*)asSe__8JAISoundFv,
+	(void*)asSeq__8JAISoundFv,
+	(void*)asStream__9JAIStreamFv,
+	(void*)getTrack__9JAIStreamFv,
+	(void*)getChildTrack__9JAIStreamFi,
+	(void*)getTempoMgr__9JAIStreamFv,
+	(void*)JAISound_tryDie___9JAIStreamFv,
 };
 
 /* 802A3104-802A319C 0098+00 s=0 e=1 z=0  None .text      __ct__9JAIStreamFP12JAIStreamMgrP31JAISoundStrategyMgr<9JAIStream> */

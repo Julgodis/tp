@@ -9,7 +9,7 @@ lbl_80947CFC:
 /* 80947D18  41 82 00 1C */	beq lbl_80947D34
 /* 80947D1C  3C 60 80 95 */	lis r3, daMyna_LightActor@ha
 /* 80947D20  38 63 BA C0 */	addi r3, r3, daMyna_LightActor@l
-/* 80947D24  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8094BAC0 */
+/* 80947D24  80 63 00 00 */	lwz r3, 0(r3)
 /* 80947D28  48 41 51 18 */	b setTurnOnOffChange__17daTag_MynaLight_cFv
 /* 80947D2C  38 00 00 0D */	li r0, 0xd
 /* 80947D30  98 1F 09 2C */	stb r0, 0x92c(r31)

@@ -20,7 +20,7 @@ lbl_80D4DBF8:
 /* 80D4DC14  40 82 00 20 */	bne lbl_80D4DC34
 /* 80D4DC18  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D4DC1C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D4DC20  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D4DC20  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D4DC24  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80D4DC28  3C 80 01 00 */	lis r4, 0x0100 /* 0x0100006E@ha */
 /* 80D4DC2C  38 84 00 6E */	addi r4, r4, 0x006E /* 0x0100006E@l */

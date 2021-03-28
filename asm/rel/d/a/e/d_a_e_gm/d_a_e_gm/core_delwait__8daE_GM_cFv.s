@@ -18,7 +18,7 @@ lbl_806D3308:
 /* 806D3348  90 01 00 08 */	stw r0, 8(r1)
 /* 806D334C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806D3350  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806D3354  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806D3354  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D3358  38 81 00 08 */	addi r4, r1, 8
 /* 806D335C  38 BF 05 38 */	addi r5, r31, 0x538
 /* 806D3360  38 C0 00 00 */	li r6, 0
@@ -58,7 +58,7 @@ lbl_806D33B4:
 /* 806D33E4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 806D33E8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806D33EC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806D33F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806D33F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D33F4  38 81 00 0C */	addi r4, r1, 0xc
 /* 806D33F8  38 A0 00 00 */	li r5, 0
 /* 806D33FC  38 C0 00 00 */	li r6, 0
@@ -73,9 +73,9 @@ lbl_806D33B4:
 /* 806D3420  4B BD 85 64 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 806D3424  3C 60 80 6D */	lis r3, struct_806D7F1C+0x2@ha
 /* 806D3428  38 83 7F 1E */	addi r4, r3, struct_806D7F1C+0x2@l
-/* 806D342C  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 806D7F1E */
+/* 806D342C  88 64 00 00 */	lbz r3, 0(r4)
 /* 806D3430  38 03 00 01 */	addi r0, r3, 1
-/* 806D3434  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 806D7F1E */
+/* 806D3434  98 04 00 00 */	stb r0, 0(r4)
 lbl_806D3438:
 /* 806D3438  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 806D343C  80 01 00 24 */	lwz r0, 0x24(r1)

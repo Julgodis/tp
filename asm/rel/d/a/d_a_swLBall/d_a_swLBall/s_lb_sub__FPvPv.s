@@ -23,7 +23,7 @@ lbl_80D4EB40:
 /* 80D4EB44  41 82 00 30 */	beq lbl_80D4EB74
 /* 80D4EB48  3C 60 80 D5 */	lis r3, l_target_info_count@ha
 /* 80D4EB4C  38 83 F5 A8 */	addi r4, r3, l_target_info_count@l
-/* 80D4EB50  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80D4F5A8 */
+/* 80D4EB50  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80D4EB54  2C 05 00 02 */	cmpwi r5, 2
 /* 80D4EB58  40 80 00 1C */	bge lbl_80D4EB74
 /* 80D4EB5C  54 A0 10 3A */	slwi r0, r5, 2

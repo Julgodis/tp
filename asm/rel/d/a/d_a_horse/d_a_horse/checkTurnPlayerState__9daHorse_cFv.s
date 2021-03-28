@@ -4,9 +4,9 @@ lbl_8083CA80:
 /* 8083CA88  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8083CA8C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8083CA90  4B B2 57 4C */	b _savegpr_29
-/* 8083CA94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083CA98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8083CA9C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8083CA94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083CA98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8083CA9C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 8083CAA0  3B A0 00 00 */	li r29, 0
 /* 8083CAA4  7F BF EB 78 */	mr r31, r29
 /* 8083CAA8  A0 1E 2F E8 */	lhz r0, 0x2fe8(r30)

@@ -26,8 +26,8 @@ lbl_8083D774:
 /* 8083D7D4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8083D7D8  40 80 00 B4 */	bge lbl_8083D88C
 lbl_8083D7DC:
-/* 8083D7DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083D7E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8083D7DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083D7E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8083D7E4  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 8083D7E8  7F 83 E3 78 */	mr r3, r28
 /* 8083D7EC  38 9D 07 AC */	addi r4, r29, 0x7ac

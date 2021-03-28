@@ -7,8 +7,8 @@ lbl_8086F5C8:
 /* 8086F5DC  3C 60 80 87 */	lis r3, stringBase0@ha
 /* 8086F5E0  38 63 02 7C */	addi r3, r3, stringBase0@l
 /* 8086F5E4  38 80 00 09 */	li r4, 9
-/* 8086F5E8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8086F5EC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8086F5E8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8086F5EC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8086F5F0  3C A5 00 02 */	addis r5, r5, 2
 /* 8086F5F4  38 C0 00 80 */	li r6, 0x80
 /* 8086F5F8  38 A5 C2 F8 */	addi r5, r5, -15624

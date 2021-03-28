@@ -25,24 +25,24 @@ lbl_80D276F4:
 /* 80D2770C  40 80 00 08 */	bge lbl_80D27714
 /* 80D27710  48 00 00 5C */	b lbl_80D2776C
 lbl_80D27714:
-/* 80D27714  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27718  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D27714  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27718  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2771C  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D27720  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D27724  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D27728  A0 84 00 66 */	lhz r4, 0x66(r4)	/* effective address: 803A72EE */
+/* 80D27728  A0 84 00 66 */	lhz r4, 0x66(r4)
 /* 80D2772C  4B 30 D2 90 */	b isEventBit__11dSv_event_cCFUs
 /* 80D27730  2C 03 00 00 */	cmpwi r3, 0
 /* 80D27734  41 82 00 38 */	beq lbl_80D2776C
 /* 80D27738  38 60 00 05 */	li r3, 5
 /* 80D2773C  48 00 00 CC */	b lbl_80D27808
 lbl_80D27740:
-/* 80D27740  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27744  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D27740  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27744  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D27748  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D2774C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D27750  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D27754  A0 84 00 66 */	lhz r4, 0x66(r4)	/* effective address: 803A72EE */
+/* 80D27754  A0 84 00 66 */	lhz r4, 0x66(r4)
 /* 80D27758  4B 30 D2 64 */	b isEventBit__11dSv_event_cCFUs
 /* 80D2775C  2C 03 00 00 */	cmpwi r3, 0
 /* 80D27760  40 82 00 0C */	bne lbl_80D2776C
@@ -52,7 +52,7 @@ lbl_80D2776C:
 /* 80D2776C  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 80D27770  3C 80 80 D3 */	lis r4, l_evArcName@ha
 /* 80D27774  38 84 97 38 */	addi r4, r4, l_evArcName@l
-/* 80D27778  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29738 */
+/* 80D27778  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D2777C  4B 30 57 40 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D27780  2C 03 00 04 */	cmpwi r3, 4
 /* 80D27784  41 82 00 08 */	beq lbl_80D2778C

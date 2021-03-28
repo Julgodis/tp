@@ -16,7 +16,7 @@ lbl_807EDA78:
 /* 807EDAB0  4B 81 E8 EC */	b mDoMtx_XrotM__FPA4_fs
 /* 807EDAB4  3C 60 80 7F */	lis r3, l_HIO@ha
 /* 807EDAB8  38 63 FB CC */	addi r3, r3, l_HIO@l
-/* 807EDABC  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 807EFBD4 */
+/* 807EDABC  C0 23 00 08 */	lfs f1, 8(r3)
 /* 807EDAC0  FC 40 08 90 */	fmr f2, f1
 /* 807EDAC4  FC 60 08 90 */	fmr f3, f1
 /* 807EDAC8  4B 81 F3 70 */	b scaleM__14mDoMtx_stack_cFfff

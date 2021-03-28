@@ -9,9 +9,9 @@ lbl_80BD7788:
 /* 80BD77A4  3C 60 80 BE */	lis r3, l_chainOffset@ha
 /* 80BD77A8  C4 03 A3 4C */	lfsu f0, l_chainOffset@l(r3)
 /* 80BD77AC  D0 04 00 00 */	stfs f0, 0(r4)
-/* 80BD77B0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80BE0004 */
+/* 80BD77B0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BD77B4  D0 04 00 04 */	stfs f0, 4(r4)
-/* 80BD77B8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BE0008 */
+/* 80BD77B8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BD77BC  D0 04 00 08 */	stfs f0, 8(r4)
 /* 80BD77C0  38 7E 0F 38 */	addi r3, r30, 0xf38
 /* 80BD77C4  4B 43 55 A0 */	b transS__14mDoMtx_stack_cFRC4cXyz

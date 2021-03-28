@@ -8,8 +8,8 @@ lbl_809F70A8:
 /* 809F70C0  B0 03 09 D4 */	sth r0, 0x9d4(r3)
 /* 809F70C4  38 00 00 01 */	li r0, 1
 /* 809F70C8  98 03 0E 1D */	stb r0, 0xe1d(r3)
-/* 809F70CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F70D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809F70CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F70D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809F70D4  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 809F70D8  4B 64 B3 90 */	b reset__14dEvt_control_cFv
 /* 809F70DC  80 01 00 14 */	lwz r0, 0x14(r1)

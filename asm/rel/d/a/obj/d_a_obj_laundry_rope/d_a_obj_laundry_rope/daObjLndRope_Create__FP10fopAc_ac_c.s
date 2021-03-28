@@ -60,7 +60,7 @@ lbl_80C530D8:
 /* 80C530D8  38 7F 05 A4 */	addi r3, r31, 0x5a4
 /* 80C530DC  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C530E0  38 84 33 CC */	addi r4, r4, l_arcName@l
-/* 80C530E4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C533CC */
+/* 80C530E4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C530E8  4B 3D 9D D4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C530EC  7C 7E 1B 78 */	mr r30, r3
 /* 80C530F0  2C 1E 00 04 */	cmpwi r30, 4

@@ -105,7 +105,7 @@ lbl_804FCC84:
 /* 804FCCAC  38 7E 06 94 */	addi r3, r30, 0x694
 /* 804FCCB0  3C 80 80 50 */	lis r4, l_HIO@ha
 /* 804FCCB4  38 84 0E 70 */	addi r4, r4, l_HIO@l
-/* 804FCCB8  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80500E80 */
+/* 804FCCB8  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 804FCCBC  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 804FCCC0  C0 7F 00 7C */	lfs f3, 0x7c(r31)
 /* 804FCCC4  4B D7 2D 78 */	b cLib_addCalc2__FPffff

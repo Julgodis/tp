@@ -7,8 +7,8 @@ lbl_80CADFB0:
 /* 80CADFC4  7C 7B 1B 78 */	mr r27, r3
 /* 80CADFC8  3B 80 00 00 */	li r28, 0
 /* 80CADFCC  3B E0 00 00 */	li r31, 0
-/* 80CADFD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CADFD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CADFD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CADFD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CADFD8  3B C3 0F 38 */	addi r30, r3, 0xf38
 lbl_80CADFDC:
 /* 80CADFDC  2C 1C 00 01 */	cmpwi r28, 1

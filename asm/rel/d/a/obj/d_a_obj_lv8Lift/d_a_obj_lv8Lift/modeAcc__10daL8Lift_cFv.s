@@ -9,7 +9,7 @@ lbl_80C890B8:
 /* 80C890D4  3B E3 9F 60 */	addi r31, r3, lit_3627@l
 /* 80C890D8  C0 3D 05 E4 */	lfs f1, 0x5e4(r29)
 /* 80C890DC  38 7D 05 2C */	addi r3, r29, 0x52c
-/* 80C890E0  C0 1F 00 60 */	lfs f0, 0x60(r31)	/* effective address: 80C89FC0 */
+/* 80C890E0  C0 1F 00 60 */	lfs f0, 0x60(r31)
 /* 80C890E4  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80C890E8  4B 5E 76 58 */	b cLib_chaseF__FPfff
 /* 80C890EC  2C 03 00 01 */	cmpwi r3, 1
@@ -41,7 +41,7 @@ lbl_80C89110:
 /* 80C8914C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C89150  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C89154  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C89158  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C89158  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C8915C  38 81 00 08 */	addi r4, r1, 8
 /* 80C89160  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 80C89164  7F C7 F3 78 */	mr r7, r30

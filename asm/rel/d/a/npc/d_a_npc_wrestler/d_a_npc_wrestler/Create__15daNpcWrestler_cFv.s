@@ -134,8 +134,8 @@ lbl_80B2F774:
 /* 80B2F884  C0 24 00 08 */	lfs f1, 8(r4)
 /* 80B2F888  4B 73 F9 78 */	b SetR__8cM3dGCylFf
 /* 80B2F88C  38 7C 05 D0 */	addi r3, r28, 0x5d0
-/* 80B2F890  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B2F894  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80B2F890  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B2F894  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80B2F898  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80B2F89C  4B 54 72 10 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80B2F8A0  80 1C 06 AC */	lwz r0, 0x6ac(r28)

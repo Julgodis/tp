@@ -19,7 +19,6 @@ extern void* const data_80A1A31C[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_jagar_cpp(); // 1
 
 // 
 // Declarations:

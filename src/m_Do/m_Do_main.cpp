@@ -360,14 +360,14 @@ SECTION_DATA u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */] = {
 
 /* 803A2EF4-803A2F14 0020+00 s=2 e=0 z=0  None .data      HeapCheckTable                                               */
 SECTION_DATA static void* HeapCheckTable[8] = {
-	/* 0    */ (void*)&RootHeapCheck,
-	/* 1    */ (void*)&SystemHeapCheck,
-	/* 2    */ (void*)&ZeldaHeapCheck,
-	/* 3    */ (void*)&GameHeapCheck,
-	/* 4    */ (void*)&ArchiveHeapCheck,
-	/* 5    */ (void*)&J2dHeapCheck,
-	/* 6    */ (void*)&HostioHeapCheck,
-	/* 7    */ (void*)&CommandHeapCheck,
+	(void*)&RootHeapCheck,
+	(void*)&SystemHeapCheck,
+	(void*)&ZeldaHeapCheck,
+	(void*)&GameHeapCheck,
+	(void*)&ArchiveHeapCheck,
+	(void*)&J2dHeapCheck,
+	(void*)&HostioHeapCheck,
+	(void*)&CommandHeapCheck,
 };
 
 /* 803D32E0-803D3308 0028+00 s=3 e=0 z=0  None .bss       RootHeapCheck                                                */
@@ -441,20 +441,20 @@ asm void HeapCheck::heapDisplay() const {
 /* ############################################################################################## */
 /* 803A2F14-803A2F28 0014+00 s=1 e=0 z=0  None .data      desc1$3717                                                   */
 SECTION_DATA static void* data_803A2F14[5] = {
-	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
-	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
-	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x164),
-	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x150),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x15A),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x164),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x16E),
 };
 
 /* 803A2F28-803A2F40 0014+04 s=1 e=0 z=0  None .data      desc2$3718                                                   */
 SECTION_DATA static void* data_803A2F28[5 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
-	/* 1    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
-	/* 2    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
-	/* 3    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
-	/* 4    */ (void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x14F),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x178),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x182),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
+	(void*)(((char*)&m_Do_m_Do_main__stringBase0)+0x18C),
 	/* padding */
 	NULL,
 };

@@ -12,8 +12,8 @@ lbl_8068CB08:
 /* 8068CB30  3C 60 80 69 */	lis r3, stringBase0@ha
 /* 8068CB34  38 63 D8 D8 */	addi r3, r3, stringBase0@l
 /* 8068CB38  38 80 00 08 */	li r4, 8
-/* 8068CB3C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8068CB40  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8068CB3C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8068CB40  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8068CB44  3F 85 00 02 */	addis r28, r5, 2
 /* 8068CB48  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 8068CB4C  7F 85 E3 78 */	mr r5, r28

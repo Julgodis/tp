@@ -7,9 +7,9 @@ lbl_80607A2C:
 /* 80607A40  98 A3 0A FA */	stb r5, 0xafa(r3)
 /* 80607A44  38 00 00 00 */	li r0, 0
 /* 80607A48  98 03 05 CC */	stb r0, 0x5cc(r3)
-/* 80607A4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80607A50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80607A54  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80607A4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80607A50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80607A54  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80607A58  38 63 02 10 */	addi r3, r3, 0x210
 /* 80607A5C  80 86 26 18 */	lwz r4, 0x2618(r6)
 /* 80607A60  4B A4 3E B8 */	b getEmitter__Q213dPa_control_c7level_cFUl

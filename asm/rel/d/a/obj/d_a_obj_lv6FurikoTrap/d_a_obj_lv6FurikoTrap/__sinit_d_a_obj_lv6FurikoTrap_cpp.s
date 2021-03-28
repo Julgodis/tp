@@ -19,10 +19,10 @@ lbl_80C730AC:
 /* 80C730F0  38 00 00 06 */	li r0, 6
 /* 80C730F4  7C 09 03 A6 */	mtctr r0
 lbl_80C730F8:
-/* 80C730F8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C73138 */
-/* 80C730FC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C7313C */
-/* 80C73100  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C731A4 */
-/* 80C73104  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C731A8 */
+/* 80C730F8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C730FC  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C73100  90 65 00 04 */	stw r3, 4(r5)
+/* 80C73104  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C73108  42 00 FF F0 */	bdnz lbl_80C730F8
 /* 80C7310C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C73110  7C 08 03 A6 */	mtlr r0

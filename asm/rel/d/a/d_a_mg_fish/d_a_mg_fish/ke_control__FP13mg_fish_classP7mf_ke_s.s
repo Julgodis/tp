@@ -21,15 +21,15 @@ lbl_80533268:
 /* 805332B4  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 805332B8  3B E3 61 68 */	addi r31, r3, lit_3679@l
 /* 805332BC  3B 7A 00 0C */	addi r27, r26, 0xc
-/* 805332C0  C3 DF 00 00 */	lfs f30, 0(r31)	/* effective address: 80536168 */
+/* 805332C0  C3 DF 00 00 */	lfs f30, 0(r31)
 /* 805332C4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805332C8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805332CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805332CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 805332D0  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 805332D4  4B AD 91 08 */	b mDoMtx_YrotS__FPA4_fs
 /* 805332D8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805332DC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805332E0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805332E0  80 63 00 00 */	lwz r3, 0(r3)
 /* 805332E4  A8 9C 04 E4 */	lha r4, 0x4e4(r28)
 /* 805332E8  4B AD 90 B4 */	b mDoMtx_XrotM__FPA4_fs
 /* 805332EC  C0 1F 00 18 */	lfs f0, 0x18(r31)

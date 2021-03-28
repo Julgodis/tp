@@ -11,7 +11,7 @@ lbl_8050B2A8:
 /* 8050B2CC  38 63 02 10 */	addi r3, r3, 0x210
 /* 8050B2D0  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8050B2D4  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8050B2D8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8050B2D8  80 84 00 00 */	lwz r4, 0(r4)
 /* 8050B2DC  4B E3 B1 D4 */	b PSMTXCopy
 /* 8050B2E0  3C 60 80 52 */	lis r3, lit_4209@ha
 /* 8050B2E4  C0 03 85 88 */	lfs f0, lit_4209@l(r3)
@@ -50,8 +50,8 @@ lbl_8050B354:
 /* 8050B360  54 04 46 3E */	srwi r4, r0, 0x18
 /* 8050B364  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8050B368  41 82 00 18 */	beq lbl_8050B380
-/* 8050B36C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050B370  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050B36C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050B370  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050B374  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8050B378  7C 05 07 74 */	extsb r5, r0
 /* 8050B37C  4B B2 9E 84 */	b onSwitch__10dSv_info_cFii

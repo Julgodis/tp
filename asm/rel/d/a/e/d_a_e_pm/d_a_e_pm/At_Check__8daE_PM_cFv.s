@@ -42,7 +42,7 @@ lbl_8074A27C:
 /* 8074A2A8  EC 20 08 28 */	fsubs f1, f0, f1
 /* 8074A2AC  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074A2B0  38 63 C3 94 */	addi r3, r3, l_HIO@l
-/* 8074A2B4  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 8074C3C8 */
+/* 8074A2B4  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8074A2B8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074A2BC  4C 40 13 82 */	cror 2, 0, 2
 /* 8074A2C0  40 82 00 24 */	bne lbl_8074A2E4

@@ -36,8 +36,8 @@ lbl_80C361B4:
 /* 80C361B4  3C 60 80 C4 */	lis r3, stringBase0@ha
 /* 80C361B8  38 63 84 FC */	addi r3, r3, stringBase0@l
 /* 80C361BC  38 80 00 07 */	li r4, 7
-/* 80C361C0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C361C4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C361C0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C361C4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C361C8  3C A5 00 02 */	addis r5, r5, 2
 /* 80C361CC  38 C0 00 80 */	li r6, 0x80
 /* 80C361D0  38 A5 C2 F8 */	addi r5, r5, -15624

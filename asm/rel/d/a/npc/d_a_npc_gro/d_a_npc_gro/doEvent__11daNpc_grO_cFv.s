@@ -8,9 +8,9 @@ lbl_809DD070:
 /* 809DD088  3C 60 80 9E */	lis r3, cNullVec__6Z2Calc@ha
 /* 809DD08C  3B C3 F2 F8 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 809DD090  3B 80 00 00 */	li r28, 0
-/* 809DD094  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809DD098  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 809DD09C  88 1F 4F AD */	lbz r0, 0x4fad(r31)	/* effective address: 8040B16D */
+/* 809DD094  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809DD098  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 809DD09C  88 1F 4F AD */	lbz r0, 0x4fad(r31)
 /* 809DD0A0  28 00 00 00 */	cmplwi r0, 0
 /* 809DD0A4  41 82 02 DC */	beq lbl_809DD380
 /* 809DD0A8  3B BF 4F F8 */	addi r29, r31, 0x4ff8
@@ -48,9 +48,9 @@ lbl_809DD0D4:
 /* 809DD120  48 00 00 64 */	b lbl_809DD184
 lbl_809DD124:
 /* 809DD124  38 00 00 00 */	li r0, 0
-/* 809DD128  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809DD12C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809DD130  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 809DD128  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809DD12C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809DD130  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 809DD134  28 03 00 01 */	cmplwi r3, 1
 /* 809DD138  41 82 00 0C */	beq lbl_809DD144
 /* 809DD13C  28 03 00 02 */	cmplwi r3, 2
@@ -218,11 +218,11 @@ lbl_809DD380:
 /* 809DD390  41 82 00 2C */	beq lbl_809DD3BC
 /* 809DD394  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809DD398  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809DD39C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809DD3A0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809DD39C  80 64 00 00 */	lwz r3, 0(r4)
+/* 809DD3A0  80 04 00 04 */	lwz r0, 4(r4)
 /* 809DD3A4  90 7B 0D E0 */	stw r3, 0xde0(r27)
 /* 809DD3A8  90 1B 0D E4 */	stw r0, 0xde4(r27)
-/* 809DD3AC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809DD3AC  80 04 00 08 */	lwz r0, 8(r4)
 /* 809DD3B0  90 1B 0D E8 */	stw r0, 0xde8(r27)
 /* 809DD3B4  38 00 FF FF */	li r0, -1
 /* 809DD3B8  90 1B 09 2C */	stw r0, 0x92c(r27)

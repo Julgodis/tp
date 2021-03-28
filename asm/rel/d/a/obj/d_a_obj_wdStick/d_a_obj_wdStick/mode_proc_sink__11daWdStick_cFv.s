@@ -8,10 +8,10 @@ lbl_80D33D8C:
 /* 80D33DA4  3C 60 80 D3 */	lis r3, mCcDObjInfo__11daWdStick_c@ha
 /* 80D33DA8  3B E3 41 38 */	addi r31, r3, mCcDObjInfo__11daWdStick_c@l
 /* 80D33DAC  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80D33DB0  C0 3F 00 48 */	lfs f1, 0x48(r31)	/* effective address: 80D34180 */
-/* 80D33DB4  C0 5F 00 C8 */	lfs f2, 0xc8(r31)	/* effective address: 80D34200 */
-/* 80D33DB8  C0 7F 00 AC */	lfs f3, 0xac(r31)	/* effective address: 80D341E4 */
-/* 80D33DBC  C0 9F 00 CC */	lfs f4, 0xcc(r31)	/* effective address: 80D34204 */
+/* 80D33DB0  C0 3F 00 48 */	lfs f1, 0x48(r31)
+/* 80D33DB4  C0 5F 00 C8 */	lfs f2, 0xc8(r31)
+/* 80D33DB8  C0 7F 00 AC */	lfs f3, 0xac(r31)
+/* 80D33DBC  C0 9F 00 CC */	lfs f4, 0xcc(r31)
 /* 80D33DC0  4B 53 BB BC */	b cLib_addCalc__FPfffff
 /* 80D33DC4  C0 1E 04 FC */	lfs f0, 0x4fc(r30)
 /* 80D33DC8  C0 3F 00 94 */	lfs f1, 0x94(r31)

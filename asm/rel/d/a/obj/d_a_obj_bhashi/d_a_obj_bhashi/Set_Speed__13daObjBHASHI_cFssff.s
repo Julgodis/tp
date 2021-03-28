@@ -33,15 +33,15 @@ lbl_80576C50:
 /* 80576CCC  7C 9B 07 34 */	extsh r27, r4
 /* 80576CD0  7C BC 07 34 */	extsh r28, r5
 /* 80576CD4  3B BC FF D8 */	addi r29, r28, -40
-/* 80576CD8  C3 5E 00 54 */	lfs f26, 0x54(r30)	/* effective address: 80578ADC */
-/* 80576CDC  C3 7E 00 48 */	lfs f27, 0x48(r30)	/* effective address: 80578AD0 */
-/* 80576CE0  C3 9E 00 58 */	lfs f28, 0x58(r30)	/* effective address: 80578AE0 */
-/* 80576CE4  C3 BE 00 60 */	lfs f29, 0x60(r30)	/* effective address: 80578AE8 */
-/* 80576CE8  C3 FE 00 68 */	lfs f31, 0x68(r30)	/* effective address: 80578AF0 */
-/* 80576CEC  C3 DE 00 6C */	lfs f30, 0x6c(r30)	/* effective address: 80578AF4 */
-/* 80576CF0  CA FE 00 98 */	lfd f23, 0x98(r30)	/* effective address: 80578B20 */
+/* 80576CD8  C3 5E 00 54 */	lfs f26, 0x54(r30)
+/* 80576CDC  C3 7E 00 48 */	lfs f27, 0x48(r30)
+/* 80576CE0  C3 9E 00 58 */	lfs f28, 0x58(r30)
+/* 80576CE4  C3 BE 00 60 */	lfs f29, 0x60(r30)
+/* 80576CE8  C3 FE 00 68 */	lfs f31, 0x68(r30)
+/* 80576CEC  C3 DE 00 6C */	lfs f30, 0x6c(r30)
+/* 80576CF0  CA FE 00 98 */	lfd f23, 0x98(r30)
 /* 80576CF4  3F 40 43 30 */	lis r26, 0x4330
-/* 80576CF8  C3 1E 00 74 */	lfs f24, 0x74(r30)	/* effective address: 80578AFC */
+/* 80576CF8  C3 1E 00 74 */	lfs f24, 0x74(r30)
 /* 80576CFC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80576D00  3A E3 D4 70 */	addi r23, r3, now__14mDoMtx_stack_c@l
 /* 80576D04  1F 1B 00 34 */	mulli r24, r27, 0x34

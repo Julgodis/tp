@@ -7,10 +7,10 @@ lbl_8080D990:
 /* 8080D9A4  7C 7E 1B 78 */	mr r30, r3
 /* 8080D9A8  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080D9AC  3B E3 59 94 */	addi r31, r3, lit_3925@l
-/* 8080D9B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080D9B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8080D9B8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8080D9BC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8080D9B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080D9B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8080D9B8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8080D9BC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8080D9C0  81 8C 00 CC */	lwz r12, 0xcc(r12)
 /* 8080D9C4  7D 89 03 A6 */	mtctr r12
 /* 8080D9C8  4E 80 04 21 */	bctrl 
@@ -105,7 +105,7 @@ lbl_8080DB04:
 /* 8080DB04  C0 5F 00 70 */	lfs f2, 0x70(r31)
 /* 8080DB08  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080DB0C  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080DB10  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 80815D58 */
+/* 8080DB10  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8080DB14  EC 02 00 2A */	fadds f0, f2, f0
 /* 8080DB18  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8080DB1C  40 81 00 20 */	ble lbl_8080DB3C

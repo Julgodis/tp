@@ -82,9 +82,9 @@ lbl_806AA9C0:
 /* 806AA9CC  38 60 00 00 */	li r3, 0
 /* 806AA9D0  48 00 01 30 */	b lbl_806AAB00
 lbl_806AA9D4:
-/* 806AA9D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806AA9D8  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 806AA9DC  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 806AA9D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806AA9D8  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 806AA9DC  80 7E 5D AC */	lwz r3, 0x5dac(r30)
 /* 806AA9E0  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 806AA9E4  38 9F 04 A8 */	addi r4, r31, 0x4a8
 /* 806AA9E8  4B C9 C9 B4 */	b PSVECSquareDistance
@@ -156,7 +156,7 @@ lbl_806AAAC0:
 lbl_806AAAD0:
 /* 806AAAD0  3C 60 80 6B */	lis r3, l_HIO@ha
 /* 806AAAD4  38 63 D8 08 */	addi r3, r3, l_HIO@l
-/* 806AAAD8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 806AD814 */
+/* 806AAAD8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806AAADC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806AAAE0  40 81 00 0C */	ble lbl_806AAAEC
 /* 806AAAE4  38 60 00 00 */	li r3, 0

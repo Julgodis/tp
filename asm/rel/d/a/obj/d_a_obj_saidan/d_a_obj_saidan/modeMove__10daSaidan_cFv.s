@@ -13,11 +13,11 @@ lbl_80CC41BC:
 /* 80CC41E8  C0 3E 05 B0 */	lfs f1, 0x5b0(r30)
 /* 80CC41EC  3C 80 80 CC */	lis r4, l_HIO@ha
 /* 80CC41F0  38 84 46 5C */	addi r4, r4, l_HIO@l
-/* 80CC41F4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80CC4664 */
+/* 80CC41F4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80CC41F8  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80CC41FC  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80CC452C */
-/* 80CC4200  C0 64 00 04 */	lfs f3, 4(r4)	/* effective address: 80CC4660 */
-/* 80CC4204  C0 9F 00 0C */	lfs f4, 0xc(r31)	/* effective address: 80CC4530 */
+/* 80CC41FC  C0 5F 00 08 */	lfs f2, 8(r31)
+/* 80CC4200  C0 64 00 04 */	lfs f3, 4(r4)
+/* 80CC4204  C0 9F 00 0C */	lfs f4, 0xc(r31)
 /* 80CC4208  4B 5A B7 74 */	b cLib_addCalc__FPfffff
 /* 80CC420C  FF E0 08 90 */	fmr f31, f1
 /* 80CC4210  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
@@ -29,7 +29,7 @@ lbl_80CC41BC:
 /* 80CC4228  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC422C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC4230  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC4234  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC4234  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC4238  38 81 00 08 */	addi r4, r1, 8
 /* 80CC423C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80CC4240  38 C0 00 00 */	li r6, 0

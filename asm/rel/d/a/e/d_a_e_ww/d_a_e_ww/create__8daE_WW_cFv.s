@@ -192,7 +192,7 @@ lbl_807EE8D4:
 /* 807EE8F0  38 00 FF FF */	li r0, -1
 /* 807EE8F4  3C 60 80 7F */	lis r3, l_HIO@ha
 /* 807EE8F8  38 63 FB CC */	addi r3, r3, l_HIO@l
-/* 807EE8FC  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 807EFBD0 */
+/* 807EE8FC  98 03 00 04 */	stb r0, 4(r3)
 lbl_807EE900:
 /* 807EE900  80 7D 05 B4 */	lwz r3, 0x5b4(r29)
 /* 807EE904  80 63 00 04 */	lwz r3, 4(r3)

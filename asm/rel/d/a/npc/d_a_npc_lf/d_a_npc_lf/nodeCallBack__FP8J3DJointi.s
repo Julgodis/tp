@@ -9,7 +9,7 @@ lbl_80A69BB4:
 /* 80A69BD0  A3 83 00 14 */	lhz r28, 0x14(r3)
 /* 80A69BD4  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80A69BD8  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80A69BDC  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80A69BDC  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80A69BE0  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 80A69BE4  80 7F 00 84 */	lwz r3, 0x84(r31)
 /* 80A69BE8  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -17,13 +17,13 @@ lbl_80A69BB4:
 /* 80A69BF0  7C 60 F2 14 */	add r3, r0, r30
 /* 80A69BF4  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80A69BF8  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80A69BFC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80A69BFC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80A69C00  4B 8D C8 B0 */	b PSMTXCopy
 /* 80A69C04  2C 1C 00 01 */	cmpwi r28, 1
 /* 80A69C08  40 82 00 40 */	bne lbl_80A69C48
 /* 80A69C0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A69C10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A69C14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A69C14  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A69C18  A8 BD 00 52 */	lha r5, 0x52(r29)
 /* 80A69C1C  3C 80 80 A7 */	lis r4, lit_3771@ha
 /* 80A69C20  C0 24 A9 84 */	lfs f1, lit_3771@l(r4)
@@ -42,7 +42,7 @@ lbl_80A69C48:
 /* 80A69C50  41 81 00 38 */	bgt lbl_80A69C88
 /* 80A69C54  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A69C58  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A69C5C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A69C5C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A69C60  57 80 08 3C */	slwi r0, r28, 1
 /* 80A69C64  7C 9D 02 14 */	add r4, r29, r0
 /* 80A69C68  A8 84 00 50 */	lha r4, 0x50(r4)
@@ -56,14 +56,14 @@ lbl_80A69C48:
 lbl_80A69C88:
 /* 80A69C88  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A69C8C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A69C90  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A69C90  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A69C94  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 80A69C98  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 80A69C9C  7C 80 F2 14 */	add r4, r0, r30
 /* 80A69CA0  4B 8D C8 10 */	b PSMTXCopy
 /* 80A69CA4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80A69CA8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80A69CAC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80A69CAC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A69CB0  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 80A69CB4  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 80A69CB8  4B 8D C7 F8 */	b PSMTXCopy

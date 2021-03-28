@@ -10,11 +10,11 @@ lbl_80CE5BF0:
 /* 80CE5C10  80 83 05 8C */	lwz r4, 0x58c(r3)
 /* 80CE5C14  38 04 00 24 */	addi r0, r4, 0x24
 /* 80CE5C18  90 03 05 04 */	stw r0, 0x504(r3)
-/* 80CE5C1C  C0 3E 00 40 */	lfs f1, 0x40(r30)	/* effective address: 80CE6970 */
-/* 80CE5C20  C0 5E 00 44 */	lfs f2, 0x44(r30)	/* effective address: 80CE6974 */
+/* 80CE5C1C  C0 3E 00 40 */	lfs f1, 0x40(r30)
+/* 80CE5C20  C0 5E 00 44 */	lfs f2, 0x44(r30)
 /* 80CE5C24  FC 60 08 90 */	fmr f3, f1
-/* 80CE5C28  C0 9E 00 3C */	lfs f4, 0x3c(r30)	/* effective address: 80CE696C */
-/* 80CE5C2C  C0 BE 00 48 */	lfs f5, 0x48(r30)	/* effective address: 80CE6978 */
+/* 80CE5C28  C0 9E 00 3C */	lfs f4, 0x3c(r30)
+/* 80CE5C2C  C0 BE 00 48 */	lfs f5, 0x48(r30)
 /* 80CE5C30  FC C0 20 90 */	fmr f6, f4
 /* 80CE5C34  4B 33 49 14 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CE5C38  7F E3 FB 78 */	mr r3, r31
@@ -64,8 +64,8 @@ lbl_80CE5C7C:
 /* 80CE5CE4  38 1F 07 68 */	addi r0, r31, 0x768
 /* 80CE5CE8  90 1F 09 64 */	stw r0, 0x964(r31)
 /* 80CE5CEC  38 7F 05 90 */	addi r3, r31, 0x590
-/* 80CE5CF0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CE5CF4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80CE5CF0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CE5CF4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80CE5CF8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80CE5CFC  4B 39 0D B0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80CE5D00  80 1F 06 6C */	lwz r0, 0x66c(r31)

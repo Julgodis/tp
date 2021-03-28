@@ -5,9 +5,9 @@ lbl_8068E644:
 /* 8068E650  39 61 00 20 */	addi r11, r1, 0x20
 /* 8068E654  4B CD 3B 88 */	b _savegpr_29
 /* 8068E658  7C 7D 1B 78 */	mr r29, r3
-/* 8068E65C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8068E660  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 8068E664  80 C5 5D AC */	lwz r6, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 8068E65C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8068E660  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 8068E664  80 C5 5D AC */	lwz r6, 0x5dac(r5)
 /* 8068E668  C0 03 06 80 */	lfs f0, 0x680(r3)
 /* 8068E66C  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8068E670  40 80 00 48 */	bge lbl_8068E6B8

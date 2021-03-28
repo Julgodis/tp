@@ -134,18 +134,18 @@ SECTION_DATA u8 ZeroQuat[16] = {
 
 /* 803A7250-803A7260 0010+00 s=0 e=1 z=0  None .data      __vt__10CSTControl                                           */
 SECTION_DATA void* __vt__10CSTControl[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getValueStick__10CSTControlFv,
-	/* 3    */ (void*)getAngleStick__10CSTControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getValueStick__10CSTControlFv,
+	(void*)getAngleStick__10CSTControlFv,
 };
 
 /* 803A7260-803A7270 0010+00 s=1 e=1 z=0  None .data      __vt__9STControl                                             */
 SECTION_DATA void* __vt__9STControl[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getValueStick__9STControlFv,
-	/* 3    */ (void*)getAngleStick__9STControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getValueStick__9STControlFv,
+	(void*)getAngleStick__9STControlFv,
 };
 
 /* 80032044-80032088 0044+00 s=0 e=6 z=0  None .text      __ct__9STControlFssssffss                                    */

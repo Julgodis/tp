@@ -8,9 +8,9 @@ lbl_8065F37C:
 /* 8065F394  3C 80 80 66 */	lis r4, lit_3987@ha
 /* 8065F398  3B E4 2D B0 */	addi r31, r4, lit_3987@l
 /* 8065F39C  4B FF 99 35 */	bl setSeSnort__7daCow_cFv
-/* 8065F3A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065F3A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065F3A8  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8065F3A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065F3A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065F3A8  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 8065F3AC  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 8065F3B0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8065F3B4  4B CE 7F E8 */	b PSVECSquareDistance

@@ -19,7 +19,6 @@ extern void* const data_80D0F0D0[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_timeFire_cpp(); // 1
 
 // 
 // Declarations:

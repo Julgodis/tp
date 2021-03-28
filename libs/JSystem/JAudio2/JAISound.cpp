@@ -15,6 +15,9 @@ struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
 };
 
+struct JAIAudience {
+};
+
 struct JAISoundID {
 };
 
@@ -24,9 +27,6 @@ struct JASSoundParams {
 struct JASTrack {
 	/* 80291444 */ void setChannelMgrCount(u32);
 	/* 802919F4 */ void assignExtBuffer(u32, JASSoundParams*);
-};
-
-struct JAIAudience {
 };
 
 struct JGeometry {
@@ -180,18 +180,18 @@ asm void JAISoundParams::mixOutAll(JASSoundParams const& param_0, JASSoundParams
 /* ############################################################################################## */
 /* 803C9970-803C99A0 0030+00 s=1 e=0 z=0  None .data      __vt__8JAISound                                              */
 SECTION_DATA static void* __vt__8JAISound[12] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)asSe__8JAISoundFv,
-	/* 6    */ (void*)asSeq__8JAISoundFv,
-	/* 7    */ (void*)asStream__8JAISoundFv,
-	/* 8    */ (void*)NULL,
-	/* 9    */ (void*)NULL,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)asSe__8JAISoundFv,
+	(void*)asSeq__8JAISoundFv,
+	(void*)asStream__8JAISoundFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804557BC-804557C0 0004+00 s=2 e=0 z=0  None .sdata2    @697                                                         */

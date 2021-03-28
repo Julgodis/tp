@@ -38,9 +38,9 @@ lbl_804D0D48:
 /* 804D0D58  C0 03 16 50 */	lfs f0, lit_3795@l(r3)
 /* 804D0D5C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 804D0D60  40 80 00 30 */	bge lbl_804D0D90
-/* 804D0D64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D0D68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804D0D6C  A3 C3 00 02 */	lhz r30, 2(r3)	/* effective address: 804061C2 */
+/* 804D0D64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D0D68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D0D6C  A3 C3 00 02 */	lhz r30, 2(r3)
 /* 804D0D70  4B B5 CF 38 */	b dComIfGs_getMaxLifeGauge__Fv
 /* 804D0D74  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 804D0D78  57 C0 04 3E */	clrlwi r0, r30, 0x10
@@ -54,9 +54,9 @@ lbl_804D0D90:
 /* 804D0D94  B0 1F 05 D2 */	sth r0, 0x5d2(r31)
 /* 804D0D98  48 00 00 2C */	b lbl_804D0DC4
 lbl_804D0D9C:
-/* 804D0D9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D0DA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804D0DA4  A3 C3 00 02 */	lhz r30, 2(r3)	/* effective address: 804061C2 */
+/* 804D0D9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D0DA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804D0DA4  A3 C3 00 02 */	lhz r30, 2(r3)
 /* 804D0DA8  4B B5 CF 00 */	b dComIfGs_getMaxLifeGauge__Fv
 /* 804D0DAC  54 63 04 3E */	clrlwi r3, r3, 0x10
 /* 804D0DB0  57 C0 04 3E */	clrlwi r0, r30, 0x10

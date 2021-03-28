@@ -20,7 +20,7 @@ lbl_80D5CE40:
 /* 80D5CE88  41 82 01 B8 */	beq lbl_80D5D040
 /* 80D5CE8C  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80D5CE90  38 63 0D 64 */	addi r3, r3, struct_80450D64+0x0@l
-/* 80D5CE94  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80450D64 */
+/* 80D5CE94  88 63 00 00 */	lbz r3, 0(r3)
 /* 80D5CE98  7C 63 07 75 */	extsb. r3, r3
 /* 80D5CE9C  41 82 00 4C */	beq lbl_80D5CEE8
 /* 80D5CEA0  4B 2D 01 CC */	b dComIfGp_getReverb__Fi
@@ -30,7 +30,7 @@ lbl_80D5CE40:
 /* 80D5CEB0  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80D5CEB4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5CEB8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5CEBC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5CEBC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5CEC0  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80D5CEC4  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5CEC8  38 C0 00 00 */	li r6, 0
@@ -47,7 +47,7 @@ lbl_80D5CEE8:
 /* 80D5CEF0  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80D5CEF4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5CEF8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5CEFC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5CEFC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5CF00  38 81 00 28 */	addi r4, r1, 0x28
 /* 80D5CF04  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5CF08  38 C0 00 00 */	li r6, 0
@@ -85,9 +85,9 @@ lbl_80D5CF28:
 /* 80D5CF84  80 1E 05 70 */	lwz r0, 0x570(r30)
 /* 80D5CF88  28 00 00 00 */	cmplwi r0, 0
 /* 80D5CF8C  40 82 00 54 */	bne lbl_80D5CFE0
-/* 80D5CF90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5CF94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D5CF98  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80D5CF90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5CF94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5CF98  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80D5CF9C  38 80 00 00 */	li r4, 0
 /* 80D5CFA0  90 81 00 08 */	stw r4, 8(r1)
 /* 80D5CFA4  38 00 FF FF */	li r0, -1
@@ -109,9 +109,9 @@ lbl_80D5CFE0:
 /* 80D5CFE0  80 1E 05 74 */	lwz r0, 0x574(r30)
 /* 80D5CFE4  28 00 00 00 */	cmplwi r0, 0
 /* 80D5CFE8  40 82 01 44 */	bne lbl_80D5D12C
-/* 80D5CFEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5CFF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D5CFF4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80D5CFEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5CFF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D5CFF4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80D5CFF8  38 80 00 00 */	li r4, 0
 /* 80D5CFFC  90 81 00 08 */	stw r4, 8(r1)
 /* 80D5D000  38 00 FF FF */	li r0, -1
@@ -133,7 +133,7 @@ lbl_80D5CFE0:
 lbl_80D5D040:
 /* 80D5D040  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80D5D044  38 63 0D 64 */	addi r3, r3, struct_80450D64+0x0@l
-/* 80D5D048  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80450D64 */
+/* 80D5D048  88 63 00 00 */	lbz r3, 0(r3)
 /* 80D5D04C  7C 63 07 75 */	extsb. r3, r3
 /* 80D5D050  41 82 00 4C */	beq lbl_80D5D09C
 /* 80D5D054  4B 2D 00 18 */	b dComIfGp_getReverb__Fi
@@ -143,7 +143,7 @@ lbl_80D5D040:
 /* 80D5D064  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D5D068  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5D06C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5D070  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5D070  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5D074  38 81 00 24 */	addi r4, r1, 0x24
 /* 80D5D078  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5D07C  38 C0 00 00 */	li r6, 0
@@ -160,7 +160,7 @@ lbl_80D5D09C:
 /* 80D5D0A4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80D5D0A8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5D0AC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5D0B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5D0B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5D0B4  38 81 00 20 */	addi r4, r1, 0x20
 /* 80D5D0B8  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5D0BC  38 C0 00 00 */	li r6, 0

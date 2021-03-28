@@ -89,9 +89,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -120,10 +117,10 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjLv4Brg_create1st(daObjLv4Brg_c*); // 2
-static void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c*); // 2
-static void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c*); // 2
-static void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c*); // 2
+void daObjLv4Brg_create1st(daObjLv4Brg_c*); // 2
+void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c*); // 2
+void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c*); // 2
+void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c*); // 2
 
 extern "C" void initBaseMtx__13daObjLv4Brg_cFv(); // 1
 extern "C" void setBaseMtx__13daObjLv4Brg_cFv(); // 1
@@ -141,19 +138,20 @@ extern "C" void mode_dead__13daObjLv4Brg_cFv(); // 1
 extern "C" void eventStart__13daObjLv4Brg_cFv(); // 1
 extern "C" void Draw__13daObjLv4Brg_cFv(); // 1
 extern "C" void Delete__13daObjLv4Brg_cFv(); // 1
-extern "C" static void daObjLv4Brg_create1st__FP13daObjLv4Brg_c(); // 1
-extern "C" static void daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c(); // 1
-extern "C" static void daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c(); // 1
-extern "C" static void daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c(); // 1
+extern "C" void daObjLv4Brg_create1st__FP13daObjLv4Brg_c(); // 1
+extern "C" void daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c(); // 1
+extern "C" void daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c(); // 1
+extern "C" void daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c(); // 1
 extern "C" void __dt__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
 extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
 extern "C" void __dt__13daObjLv4Brg_cFv(); // 1
-extern "C" static void func_80C63158(); // 1
-extern "C" static void func_80C63160(); // 1
+extern "C" void func_80C63158(); // 1
+extern "C" void func_80C63160(); // 1
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* daObjLv4Brg_METHODS[8];
 extern "C" extern void* g_profile_Obj_Lv4Bridge[12];
 
 // 
@@ -188,9 +186,6 @@ extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
 extern "C" void StopQuake__12dVibration_cFi(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -205,19 +200,11 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void __ptmf_scall(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_80C632B8[4];
 
@@ -263,7 +250,7 @@ asm void daObjLv4Brg_c::setBaseMtx() {
 /* 80C6317C-80C63180 0004+00 s=2 e=0 z=0  None .rodata    @3676                                                        */
 SECTION_RODATA static u32 const lit_3676 = 0x44FA0000;
 
-/* 80C62994-80C62A2C 0098+00 s=1 e=0 z=0  None .text      Create__13daObjLv4Brg_cFv                                    */
+/* 80C62994-80C62A2C 0098+00 s=0 e=0 z=0  None .text      Create__13daObjLv4Brg_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -275,25 +262,6 @@ asm void daObjLv4Brg_c::Create() {
 
 
 /* ############################################################################################## */
-/* 80C63180-80C63184 0004+00 s=3 e=0 z=0  None .rodata    @3740                                                        */
-SECTION_RODATA static u32 const lit_3740 = 0x3F800000;
-
-/* 80C63184-80C63188 0004+00 s=1 e=0 z=0  None .rodata    @3766                                                        */
-SECTION_RODATA static u32 const lit_3766 = 0xBF800000;
-
-/* 80C63188-80C6318C 0004+00 s=1 e=0 z=0  None .rodata    @3767                                                        */
-SECTION_RODATA static u32 const lit_3767 = 0x41A00000;
-
-/* 80C6318C-80C63190 0004+00 s=1 e=0 z=0  None .rodata    @3768                                                        */
-SECTION_RODATA static u32 const lit_3768 = 0x40000000;
-
-/* 80C63190-80C6319A 000A+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80C63190 = "Obj_l4brg";
-#pragma pop
-
 /* 80C6319C-80C631A8 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -307,9 +275,9 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80C631BC-80C631C0 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80C62A2C-80C62A9C 0070+00 s=1 e=0 z=0  None .text      CreateHeap__13daObjLv4Brg_cFv                                */
+/* 80C62A2C-80C62A9C 0070+00 s=0 e=0 z=0  None .text      CreateHeap__13daObjLv4Brg_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -331,7 +299,7 @@ asm void daObjLv4Brg_c::create1st() {
 #pragma pop
 
 
-/* 80C62B20-80C62B6C 004C+00 s=1 e=0 z=0  None .text      Execute__13daObjLv4Brg_cFPPA3_A4_f                           */
+/* 80C62B20-80C62B6C 004C+00 s=0 e=0 z=0  None .text      Execute__13daObjLv4Brg_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -345,23 +313,23 @@ asm void daObjLv4Brg_c::Execute(f32 (** param_0)[3][4]) {
 /* ############################################################################################## */
 /* 80C631C0-80C631CC 000C+00 s=1 e=0 z=0  None .data      @3702                                                        */
 SECTION_DATA static void* lit_3702[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_wait__13daObjLv4Brg_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C631CC-80C631D8 000C+00 s=1 e=0 z=0  None .data      @3703                                                        */
 SECTION_DATA static void* lit_3703[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_move__13daObjLv4Brg_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C631D8-80C631E4 000C+00 s=1 e=0 z=0  None .data      @3704                                                        */
 SECTION_DATA static void* lit_3704[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_dead__13daObjLv4Brg_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80C631E4-80C63208 0024+00 s=1 e=0 z=0  None .data      l_func$3701                                                  */
@@ -393,7 +361,11 @@ asm void daObjLv4Brg_c::mode_init_wait() {
 #pragma pop
 
 
-/* 80C62C34-80C62CE4 00B0+00 s=1 e=0 z=0  None .text      mode_wait__13daObjLv4Brg_cFv                                 */
+/* ############################################################################################## */
+/* 80C63180-80C63184 0004+00 s=3 e=0 z=0  None .rodata    @3740                                                        */
+SECTION_RODATA static u32 const lit_3740 = 0x3F800000;
+
+/* 80C62C34-80C62CE4 00B0+00 s=0 e=0 z=0  None .text      mode_wait__13daObjLv4Brg_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -415,7 +387,17 @@ asm void daObjLv4Brg_c::mode_init_move() {
 #pragma pop
 
 
-/* 80C62CFC-80C62E24 0128+00 s=1 e=0 z=0  None .text      mode_move__13daObjLv4Brg_cFv                                 */
+/* ############################################################################################## */
+/* 80C63184-80C63188 0004+00 s=1 e=0 z=0  None .rodata    @3766                                                        */
+SECTION_RODATA static u32 const lit_3766 = 0xBF800000;
+
+/* 80C63188-80C6318C 0004+00 s=1 e=0 z=0  None .rodata    @3767                                                        */
+SECTION_RODATA static u32 const lit_3767 = 0x41A00000;
+
+/* 80C6318C-80C63190 0004+00 s=1 e=0 z=0  None .rodata    @3768                                                        */
+SECTION_RODATA static u32 const lit_3768 = 0x40000000;
+
+/* 80C62CFC-80C62E24 0128+00 s=0 e=0 z=0  None .text      mode_move__13daObjLv4Brg_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -437,13 +419,13 @@ asm void daObjLv4Brg_c::mode_init_dead() {
 #pragma pop
 
 
-/* 80C62E30-80C62E34 0004+00 s=1 e=0 z=0  None .text      mode_dead__13daObjLv4Brg_cFv                                 */
+/* 80C62E30-80C62E34 0004+00 s=0 e=0 z=0  None .text      mode_dead__13daObjLv4Brg_cFv                                 */
 void daObjLv4Brg_c::mode_dead() {
 	/* empty function */
 }
 
 
-/* 80C62E34-80C62EA0 006C+00 s=2 e=0 z=0  None .text      eventStart__13daObjLv4Brg_cFv                                */
+/* 80C62E34-80C62EA0 006C+00 s=1 e=0 z=0  None .text      eventStart__13daObjLv4Brg_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -454,7 +436,7 @@ asm void daObjLv4Brg_c::eventStart() {
 #pragma pop
 
 
-/* 80C62EA0-80C62F44 00A4+00 s=1 e=0 z=0  None .text      Draw__13daObjLv4Brg_cFv                                      */
+/* 80C62EA0-80C62F44 00A4+00 s=0 e=0 z=0  None .text      Draw__13daObjLv4Brg_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -465,7 +447,7 @@ asm void daObjLv4Brg_c::Draw() {
 #pragma pop
 
 
-/* 80C62F44-80C62F78 0034+00 s=1 e=0 z=0  None .text      Delete__13daObjLv4Brg_cFv                                    */
+/* 80C62F44-80C62F78 0034+00 s=0 e=0 z=0  None .text      Delete__13daObjLv4Brg_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -477,111 +459,111 @@ asm void daObjLv4Brg_c::Delete() {
 
 
 /* ############################################################################################## */
-/* 80C63208-80C63228 0020+00 s=1 e=0 z=0  None .data      daObjLv4Brg_METHODS                                          */
-SECTION_DATA static void* daObjLv4Brg_METHODS[8] = {
-	/* 0    */ (void*)daObjLv4Brg_create1st__FP13daObjLv4Brg_c,
-	/* 1    */ (void*)daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c,
-	/* 2    */ (void*)daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C63208-80C63228 0020+00 s=0 e=0 z=0  None .data      daObjLv4Brg_METHODS                                          */
+SECTION_DATA void* daObjLv4Brg_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C63228-80C63258 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4Bridge                                      */
+/* 80C63228-80C63258 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4Bridge                                      */
 SECTION_DATA void* g_profile_Obj_Lv4Bridge[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00C10000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005D0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02450000,
-	/* 9    */ (void*)&daObjLv4Brg_METHODS,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00C10000,
+	(void*)NULL,
+	(void*)0x000005D0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02450000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 80C63258-80C63270 0018+00 s=3 e=0 z=0  None .data      __vt__17dEvLib_callback_c                                    */
 SECTION_DATA static void* __vt__17dEvLib_callback_c[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dEvLib_callback_cFv,
-	/* 3    */ (void*)eventStart__17dEvLib_callback_cFv,
-	/* 4    */ (void*)eventRun__17dEvLib_callback_cFv,
-	/* 5    */ (void*)eventEnd__17dEvLib_callback_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C63270-80C632B8 0048+00 s=2 e=0 z=0  None .data      __vt__13daObjLv4Brg_c                                        */
 SECTION_DATA static void* __vt__13daObjLv4Brg_c[18] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daObjLv4Brg_cFv,
-	/* 3    */ (void*)Create__13daObjLv4Brg_cFv,
-	/* 4    */ (void*)Execute__13daObjLv4Brg_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daObjLv4Brg_cFv,
-	/* 6    */ (void*)Delete__13daObjLv4Brg_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-	/* 10   */ (void*)NULL,
-	/* 11   */ (void*)NULL,
-	/* 12   */ (void*)func_80C63160,
-	/* 13   */ (void*)func_80C63158,
-	/* 14   */ (void*)eventRun__17dEvLib_callback_cFv,
-	/* 15   */ (void*)eventEnd__17dEvLib_callback_cFv,
-	/* 16   */ (void*)__dt__13daObjLv4Brg_cFv,
-	/* 17   */ (void*)eventStart__13daObjLv4Brg_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C62F78-80C62FF8 0080+00 s=1 e=0 z=0  None .text      daObjLv4Brg_create1st__FP13daObjLv4Brg_c                     */
+/* 80C62F78-80C62FF8 0080+00 s=0 e=0 z=0  None .text      daObjLv4Brg_create1st__FP13daObjLv4Brg_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Brg_create1st(daObjLv4Brg_c* param_0) {
+asm void daObjLv4Brg_create1st(daObjLv4Brg_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_create1st__FP13daObjLv4Brg_c.s"
 }
 #pragma pop
 
 
-/* 80C62FF8-80C63018 0020+00 s=1 e=0 z=0  None .text      daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c                  */
+/* 80C62FF8-80C63018 0020+00 s=0 e=0 z=0  None .text      daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c* param_0) {
+asm void daObjLv4Brg_MoveBGDelete(daObjLv4Brg_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGDelete__FP13daObjLv4Brg_c.s"
 }
 #pragma pop
 
 
-/* 80C63018-80C63038 0020+00 s=1 e=0 z=0  None .text      daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c                 */
+/* 80C63018-80C63038 0020+00 s=0 e=0 z=0  None .text      daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c* param_0) {
+asm void daObjLv4Brg_MoveBGExecute(daObjLv4Brg_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGExecute__FP13daObjLv4Brg_c.s"
 }
 #pragma pop
 
 
-/* 80C63038-80C63064 002C+00 s=1 e=0 z=0  None .text      daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c                    */
+/* 80C63038-80C63064 002C+00 s=0 e=0 z=0  None .text      daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c* param_0) {
+asm void daObjLv4Brg_MoveBGDraw(daObjLv4Brg_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/daObjLv4Brg_MoveBGDraw__FP13daObjLv4Brg_c.s"
 }
 #pragma pop
 
 
-/* 80C63064-80C630AC 0048+00 s=1 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
+/* 80C63064-80C630AC 0048+00 s=0 e=0 z=0  None .text      __dt__17dEvLib_callback_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -592,25 +574,25 @@ asm dEvLib_callback_c::~dEvLib_callback_c() {
 #pragma pop
 
 
-/* 80C630AC-80C630B4 0008+00 s=1 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
+/* 80C630AC-80C630B4 0008+00 s=0 e=0 z=0  None .text      eventStart__17dEvLib_callback_cFv                            */
 bool dEvLib_callback_c::eventStart() {
 	return true;
 }
 
 
-/* 80C630B4-80C630BC 0008+00 s=2 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
+/* 80C630B4-80C630BC 0008+00 s=0 e=0 z=0  None .text      eventRun__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventRun() {
 	return true;
 }
 
 
-/* 80C630BC-80C630C4 0008+00 s=2 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
+/* 80C630BC-80C630C4 0008+00 s=0 e=0 z=0  None .text      eventEnd__17dEvLib_callback_cFv                              */
 bool dEvLib_callback_c::eventEnd() {
 	return true;
 }
 
 
-/* 80C630C4-80C63158 0094+00 s=2 e=0 z=0  None .text      __dt__13daObjLv4Brg_cFv                                      */
+/* 80C630C4-80C63158 0094+00 s=1 e=0 z=0  None .text      __dt__13daObjLv4Brg_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,25 +603,33 @@ asm daObjLv4Brg_c::~daObjLv4Brg_c() {
 #pragma pop
 
 
-/* 80C63158-80C63160 0008+00 s=1 e=0 z=0  None .text      @1440@eventStart__13daObjLv4Brg_cFv                          */
+/* 80C63158-80C63160 0008+00 s=0 e=0 z=0  None .text      @1440@eventStart__13daObjLv4Brg_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C63158() {
+extern "C" asm void func_80C63158() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/func_80C63158.s"
 }
 #pragma pop
 
 
-/* 80C63160-80C63168 0008+00 s=1 e=0 z=0  None .text      @1440@__dt__13daObjLv4Brg_cFv                                */
+/* 80C63160-80C63168 0008+00 s=0 e=0 z=0  None .text      @1440@__dt__13daObjLv4Brg_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80C63160() {
+extern "C" asm void func_80C63160() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4bridge/d_a_obj_lv4bridge/func_80C63160.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80C63190-80C6319A 000A+00 s=0 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80C63190 = "Obj_l4brg";
+#pragma pop
 

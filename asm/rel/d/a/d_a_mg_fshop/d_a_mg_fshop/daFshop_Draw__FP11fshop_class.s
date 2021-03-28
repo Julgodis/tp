@@ -68,9 +68,9 @@ lbl_8086C40C:
 /* 8086C40C  88 1A 04 E2 */	lbz r0, 0x4e2(r26)
 /* 8086C410  7C 00 07 74 */	extsb r0, r0
 /* 8086C414  7C 1C 03 78 */	mr r28, r0
-/* 8086C418  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086C41C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8086C420  82 83 5D 74 */	lwz r20, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 8086C418  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086C41C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8086C420  82 83 5D 74 */	lwz r20, 0x5d74(r3)
 /* 8086C424  3B 20 00 00 */	li r25, 0
 /* 8086C428  3A E0 00 00 */	li r23, 0
 /* 8086C42C  3B C3 0F 38 */	addi r30, r3, 0xf38
@@ -120,8 +120,8 @@ lbl_8086C4C0:
 /* 8086C4D0  3B 60 00 00 */	li r27, 0
 /* 8086C4D4  3B 20 00 00 */	li r25, 0
 /* 8086C4D8  3B 00 00 00 */	li r24, 0
-/* 8086C4DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086C4E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8086C4DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086C4E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8086C4E4  3B A3 5F 64 */	addi r29, r3, 0x5f64
 /* 8086C4E8  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8086C4EC  3A A3 CA 54 */	addi r21, r3, g_env_light@l

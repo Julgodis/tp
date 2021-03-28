@@ -15,7 +15,7 @@ lbl_80A559B4:
 /* 80A559E8  FC 00 00 1E */	fctiwz f0, f0
 /* 80A559EC  D8 01 00 40 */	stfd f0, 0x40(r1)
 /* 80A559F0  80 61 00 44 */	lwz r3, 0x44(r1)
-/* 80A559F4  C3 FF 00 30 */	lfs f31, 0x30(r31)	/* effective address: 80A5DF2C */
+/* 80A559F4  C3 FF 00 30 */	lfs f31, 0x30(r31)
 /* 80A559F8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80A559FC  2C 00 00 01 */	cmpwi r0, 1
 /* 80A55A00  40 82 00 14 */	bne lbl_80A55A14
@@ -101,9 +101,9 @@ lbl_80A55B08:
 lbl_80A55B20:
 /* 80A55B20  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A55B24  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A55B28  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A55B28  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A55B2C  38 03 00 01 */	addi r0, r3, 1
-/* 80A55B30  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A55B30  90 04 00 00 */	stw r0, 0(r4)
 /* 80A55B34  38 00 00 0A */	li r0, 0xa
 /* 80A55B38  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A55B3C  C0 1F 00 30 */	lfs f0, 0x30(r31)
@@ -166,7 +166,7 @@ lbl_80A55BF4:
 /* 80A55C18  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 /* 80A55C1C  3C 60 80 A6 */	lis r3, l_HIO@ha
 /* 80A55C20  38 63 FE B8 */	addi r3, r3, l_HIO@l
-/* 80A55C24  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A5FED4 */
+/* 80A55C24  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A55C28  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 80A55C2C  80 1D 05 D0 */	lwz r0, 0x5d0(r29)
 /* 80A55C30  2C 00 00 1A */	cmpwi r0, 0x1a
@@ -411,14 +411,14 @@ lbl_80A55F78:
 /* 80A55FA4  38 00 00 01 */	li r0, 1
 /* 80A55FA8  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 lbl_80A55FAC:
-/* 80A55FAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A55FB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A55FB4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A55FB8  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80A55FAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A55FB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A55FB4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A55FB8  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80A55FBC  C0 7F 04 28 */	lfs f3, 0x428(r31)
 /* 80A55FC0  EC A0 18 28 */	fsubs f5, f0, f3
 /* 80A55FC4  D0 A1 00 30 */	stfs f5, 0x30(r1)
-/* 80A55FC8  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 80A55FC8  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80A55FCC  C0 3F 04 2C */	lfs f1, 0x42c(r31)
 /* 80A55FD0  EC 40 08 28 */	fsubs f2, f0, f1
 /* 80A55FD4  D0 41 00 38 */	stfs f2, 0x38(r1)
@@ -545,9 +545,9 @@ lbl_80A56174:
 lbl_80A5618C:
 /* 80A5618C  3C 60 80 A6 */	lis r3, call_pt@ha
 /* 80A56190  38 83 FE A4 */	addi r4, r3, call_pt@l
-/* 80A56194  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A56194  80 64 00 00 */	lwz r3, 0(r4)
 /* 80A56198  38 03 00 01 */	addi r0, r3, 1
-/* 80A5619C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 80A5FEA4 */
+/* 80A5619C  90 04 00 00 */	stw r0, 0(r4)
 /* 80A561A0  38 00 00 0A */	li r0, 0xa
 /* 80A561A4  B0 1D 05 EA */	sth r0, 0x5ea(r29)
 lbl_80A561A8:

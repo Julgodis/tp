@@ -4,7 +4,7 @@ lbl_80D2194C:
 /* 80D21954  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D21958  3C 80 80 D2 */	lis r4, l_arcName@ha
 /* 80D2195C  38 84 1A 24 */	addi r4, r4, l_arcName@l
-/* 80D21960  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D21A24 */
+/* 80D21960  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D21964  38 63 05 68 */	addi r3, r3, 0x568
 /* 80D21968  4B 30 B6 A0 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D2196C  38 60 00 01 */	li r3, 1

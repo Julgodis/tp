@@ -48,7 +48,7 @@ lbl_80CE4304:
 /* 80CE4378  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80CE437C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CE4380  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CE4384  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CE4384  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE4388  38 81 00 24 */	addi r4, r1, 0x24
 /* 80CE438C  38 A1 00 3C */	addi r5, r1, 0x3c
 /* 80CE4390  38 C0 00 00 */	li r6, 0
@@ -76,7 +76,7 @@ lbl_80CE43D8:
 /* 80CE43E0  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80CE43E4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CE43E8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CE43EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CE43EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE43F0  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CE43F4  38 A0 00 00 */	li r5, 0
 /* 80CE43F8  38 C0 00 00 */	li r6, 0
@@ -92,12 +92,12 @@ lbl_80CE43D8:
 /* 80CE4420  C0 1E 00 64 */	lfs f0, 0x64(r30)
 /* 80CE4424  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80CE4428  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 80CE442C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE4430  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE442C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE4430  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE4434  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CE4438  3C 80 80 CE */	lis r4, l_HIO@ha
 /* 80CE443C  38 84 4E D4 */	addi r4, r4, l_HIO@l
-/* 80CE4440  88 84 00 0C */	lbz r4, 0xc(r4)	/* effective address: 80CE4EE0 */
+/* 80CE4440  88 84 00 0C */	lbz r4, 0xc(r4)
 /* 80CE4444  38 A0 00 0F */	li r5, 0xf
 /* 80CE4448  38 C1 00 30 */	addi r6, r1, 0x30
 /* 80CE444C  4B 38 B5 D8 */	b StartShock__12dVibration_cFii4cXyz
@@ -107,9 +107,9 @@ lbl_80CE43D8:
 /* 80CE445C  B0 01 00 2C */	sth r0, 0x2c(r1)
 /* 80CE4460  38 80 00 00 */	li r4, 0
 /* 80CE4464  B0 81 00 28 */	sth r4, 0x28(r1)
-/* 80CE4468  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE446C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80CE4470  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80CE4468  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE446C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80CE4470  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80CE4474  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE4478  38 00 FF FF */	li r0, -1
 /* 80CE447C  90 01 00 0C */	stw r0, 0xc(r1)

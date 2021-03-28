@@ -16,7 +16,7 @@ lbl_80BC7F74:
 lbl_80BC7FAC:
 /* 80BC7FAC  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BC7FB0  38 84 8D 64 */	addi r4, r4, l_arcName@l
-/* 80BC7FB4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BC8D64 */
+/* 80BC7FB4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BC7FB8  4B 46 50 50 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BC7FBC  28 1E 00 00 */	cmplwi r30, 0
 /* 80BC7FC0  41 82 00 1C */	beq lbl_80BC7FDC

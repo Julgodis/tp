@@ -101,7 +101,7 @@ lbl_80AD590C:
 /* 80AD5938  38 7E 08 64 */	addi r3, r30, 0x864
 /* 80AD593C  3C 80 80 AD */	lis r4, m__20daNpc_Seirei_Param_c@ha
 /* 80AD5940  38 84 7C A8 */	addi r4, r4, m__20daNpc_Seirei_Param_c@l
-/* 80AD5944  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80AD7CB8 */
+/* 80AD5944  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80AD5948  FC 00 00 1E */	fctiwz f0, f0
 /* 80AD594C  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 80AD5950  80 81 00 14 */	lwz r4, 0x14(r1)
@@ -109,8 +109,8 @@ lbl_80AD590C:
 /* 80AD5958  7F C6 F3 78 */	mr r6, r30
 /* 80AD595C  4B 5A DF 04 */	b Init__9dCcD_SttsFiiP10fopAc_ac_c
 /* 80AD5960  38 7E 06 8C */	addi r3, r30, 0x68c
-/* 80AD5964  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AD5968  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AD5964  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AD5968  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AD596C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AD5970  4B 5A 11 3C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AD5974  80 1E 07 68 */	lwz r0, 0x768(r30)

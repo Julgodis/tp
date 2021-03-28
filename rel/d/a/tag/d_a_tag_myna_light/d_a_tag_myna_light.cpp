@@ -28,19 +28,19 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
 };
 
-struct cXyz {
-};
-
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -62,11 +62,11 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTag_MynaLight_Create(void*); // 2
-static void daTag_MynaLight_Delete(void*); // 2
-static void daTag_MynaLight_Execute(void*); // 2
-static void daTag_MynaLight_Draw(void*); // 2
-static bool daTag_MynaLight_IsDelete(void*); // 2
+void daTag_MynaLight_Create(void*); // 2
+void daTag_MynaLight_Delete(void*); // 2
+void daTag_MynaLight_Execute(void*); // 2
+void daTag_MynaLight_Draw(void*); // 2
+bool daTag_MynaLight_IsDelete(void*); // 2
 
 extern "C" void create__17daTag_MynaLight_cFv(); // 1
 extern "C" void Delete__17daTag_MynaLight_cFv(); // 1
@@ -76,12 +76,13 @@ extern "C" void setTurnOnOffChange__17daTag_MynaLight_cFv(); // 1
 extern "C" void getTurnOnTime__17daTag_MynaLight_cFv(); // 1
 extern "C" void getTurnOffTime__17daTag_MynaLight_cFv(); // 1
 extern "C" void initialize__17daTag_MynaLight_cFv(); // 1
-extern "C" static void daTag_MynaLight_Create__FPv(); // 1
-extern "C" static void daTag_MynaLight_Delete__FPv(); // 1
-extern "C" static void daTag_MynaLight_Execute__FPv(); // 1
-extern "C" static void daTag_MynaLight_Draw__FPv(); // 1
-extern "C" static bool daTag_MynaLight_IsDelete__FPv(); // 1
+extern "C" void daTag_MynaLight_Create__FPv(); // 1
+extern "C" void daTag_MynaLight_Delete__FPv(); // 1
+extern "C" void daTag_MynaLight_Execute__FPv(); // 1
+extern "C" void daTag_MynaLight_Draw__FPv(); // 1
+extern "C" bool daTag_MynaLight_IsDelete__FPv(); // 1
 extern "C" void __dt__17daTag_MynaLight_cFv(); // 1
+extern "C" extern void* daTag_MynaLight_MethodTable[8];
 extern "C" extern void* g_profile_TAG_MNLIGHT[12];
 
 // 
@@ -106,11 +107,7 @@ extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_28(); // 1
 extern "C" void _restgpr_28(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern f32 data_804061F4;
-SECTION_BSS extern u8 data_8040BEFC[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -119,39 +116,39 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // 
 
 /* ############################################################################################## */
-/* 80D5D348-80D5D368 0020+00 s=1 e=0 z=0  None .data      daTag_MynaLight_MethodTable                                  */
-SECTION_DATA static void* daTag_MynaLight_MethodTable[8] = {
-	/* 0    */ (void*)daTag_MynaLight_Create__FPv,
-	/* 1    */ (void*)daTag_MynaLight_Delete__FPv,
-	/* 2    */ (void*)daTag_MynaLight_Execute__FPv,
-	/* 3    */ (void*)daTag_MynaLight_IsDelete__FPv,
-	/* 4    */ (void*)daTag_MynaLight_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5D348-80D5D368 0020+00 s=0 e=0 z=0  None .data      daTag_MynaLight_MethodTable                                  */
+SECTION_DATA void* daTag_MynaLight_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5D368-80D5D398 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_MNLIGHT                                        */
+/* 80D5D368-80D5D398 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_MNLIGHT                                        */
 SECTION_DATA void* g_profile_TAG_MNLIGHT[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01250000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000057C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00490000,
-	/* 9    */ (void*)&daTag_MynaLight_MethodTable,
-	/* 10   */ (void*)0x00064100,
-	/* 11   */ (void*)0x050E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01250000,
+	(void*)NULL,
+	(void*)0x0000057C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00490000,
+	(void*)NULL,
+	(void*)0x00064100,
+	(void*)0x050E0000,
 };
 
 /* 80D5D398-80D5D3A4 000C+00 s=2 e=0 z=0  None .data      __vt__17daTag_MynaLight_c                                    */
 SECTION_DATA static void* __vt__17daTag_MynaLight_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17daTag_MynaLight_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D5CB38-80D5CB9C 0064+00 s=1 e=0 z=0  None .text      create__17daTag_MynaLight_cFv                                */
@@ -302,57 +299,57 @@ asm void daTag_MynaLight_c::initialize() {
 #pragma pop
 
 
-/* 80D5D210-80D5D230 0020+00 s=1 e=0 z=0  None .text      daTag_MynaLight_Create__FPv                                  */
+/* 80D5D210-80D5D230 0020+00 s=0 e=0 z=0  None .text      daTag_MynaLight_Create__FPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_MynaLight_Create(void* param_0) {
+asm void daTag_MynaLight_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5D230-80D5D250 0020+00 s=1 e=0 z=0  None .text      daTag_MynaLight_Delete__FPv                                  */
+/* 80D5D230-80D5D250 0020+00 s=0 e=0 z=0  None .text      daTag_MynaLight_Delete__FPv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_MynaLight_Delete(void* param_0) {
+asm void daTag_MynaLight_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5D250-80D5D270 0020+00 s=1 e=0 z=0  None .text      daTag_MynaLight_Execute__FPv                                 */
+/* 80D5D250-80D5D270 0020+00 s=0 e=0 z=0  None .text      daTag_MynaLight_Execute__FPv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_MynaLight_Execute(void* param_0) {
+asm void daTag_MynaLight_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5D270-80D5D290 0020+00 s=1 e=0 z=0  None .text      daTag_MynaLight_Draw__FPv                                    */
+/* 80D5D270-80D5D290 0020+00 s=0 e=0 z=0  None .text      daTag_MynaLight_Draw__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_MynaLight_Draw(void* param_0) {
+asm void daTag_MynaLight_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_myna_light/d_a_tag_myna_light/daTag_MynaLight_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80D5D290-80D5D298 0008+00 s=1 e=0 z=0  None .text      daTag_MynaLight_IsDelete__FPv                                */
-static bool daTag_MynaLight_IsDelete(void* param_0) {
+/* 80D5D290-80D5D298 0008+00 s=0 e=0 z=0  None .text      daTag_MynaLight_IsDelete__FPv                                */
+bool daTag_MynaLight_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80D5D298-80D5D2F8 0060+00 s=1 e=0 z=0  None .text      __dt__17daTag_MynaLight_cFv                                  */
+/* 80D5D298-80D5D2F8 0060+00 s=0 e=0 z=0  None .text      __dt__17daTag_MynaLight_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

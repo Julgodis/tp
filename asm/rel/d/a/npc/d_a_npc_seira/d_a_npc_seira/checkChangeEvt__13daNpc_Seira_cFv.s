@@ -6,11 +6,11 @@ lbl_80ACC818:
 /* 80ACC828  7C 7F 1B 78 */	mr r31, r3
 /* 80ACC82C  3C 80 80 AD */	lis r4, lit_4679@ha
 /* 80ACC830  38 A4 07 24 */	addi r5, r4, lit_4679@l
-/* 80ACC834  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80AD0724 */
-/* 80ACC838  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80AD0728 */
+/* 80ACC834  80 85 00 00 */	lwz r4, 0(r5)
+/* 80ACC838  80 05 00 04 */	lwz r0, 4(r5)
 /* 80ACC83C  90 81 00 08 */	stw r4, 8(r1)
 /* 80ACC840  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80ACC844  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80AD072C */
+/* 80ACC844  80 05 00 08 */	lwz r0, 8(r5)
 /* 80ACC848  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80ACC84C  38 81 00 08 */	addi r4, r1, 8
 /* 80ACC850  48 00 10 B1 */	bl chkAction__13daNpc_Seira_cFM13daNpc_Seira_cFPCvPvPv_i

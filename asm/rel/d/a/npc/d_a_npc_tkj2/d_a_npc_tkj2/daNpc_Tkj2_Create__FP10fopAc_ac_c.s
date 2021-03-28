@@ -101,7 +101,7 @@ lbl_80B13FCC:
 /* 80B13FE8  38 00 FF FF */	li r0, -1
 /* 80B13FEC  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B13FF0  38 63 45 10 */	addi r3, r3, l_HIO@l
-/* 80B13FF4  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80B14514 */
+/* 80B13FF4  98 03 00 04 */	stb r0, 4(r3)
 lbl_80B13FF8:
 /* 80B13FF8  38 00 00 00 */	li r0, 0
 /* 80B13FFC  90 1E 05 5C */	stw r0, 0x55c(r30)

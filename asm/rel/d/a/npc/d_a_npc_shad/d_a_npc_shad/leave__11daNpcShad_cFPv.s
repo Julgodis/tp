@@ -7,11 +7,11 @@ lbl_80ADC3DC:
 /* 80ADC3F0  7C 7E 1B 78 */	mr r30, r3
 /* 80ADC3F4  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80ADC3F8  3B E4 1F DC */	addi r31, r4, m__17daNpcShad_Param_c@l
-/* 80ADC3FC  C0 1F 04 70 */	lfs f0, 0x470(r31)	/* effective address: 80AE244C */
+/* 80ADC3FC  C0 1F 04 70 */	lfs f0, 0x470(r31)
 /* 80ADC400  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80ADC404  C0 1F 00 90 */	lfs f0, 0x90(r31)	/* effective address: 80AE206C */
+/* 80ADC404  C0 1F 00 90 */	lfs f0, 0x90(r31)
 /* 80ADC408  D0 01 00 10 */	stfs f0, 0x10(r1)
-/* 80ADC40C  C0 1F 04 74 */	lfs f0, 0x474(r31)	/* effective address: 80AE2450 */
+/* 80ADC40C  C0 1F 04 74 */	lfs f0, 0x474(r31)
 /* 80ADC410  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80ADC414  A0 03 0E 1A */	lhz r0, 0xe1a(r3)
 /* 80ADC418  2C 00 00 02 */	cmpwi r0, 2

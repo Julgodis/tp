@@ -32,8 +32,8 @@ lbl_80D6444C:
 /* 80D64464  38 60 00 05 */	li r3, 5
 /* 80D64468  48 00 00 34 */	b lbl_80D6449C
 lbl_80D6446C:
-/* 80D6446C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D64470  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D6446C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D64470  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D64474  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80D64478  7C 05 07 74 */	extsb r5, r0
 /* 80D6447C  4B 2D 0E E4 */	b isSwitch__10dSv_info_cCFii

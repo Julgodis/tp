@@ -95,10 +95,10 @@ lbl_80A2F074:
 /* 80A2F0EC  4B 65 53 74 */	b ChkTgHit__12dCcD_GObjInfFv
 /* 80A2F0F0  28 03 00 00 */	cmplwi r3, 0
 /* 80A2F0F4  41 82 00 B8 */	beq lbl_80A2F1AC
-/* 80A2F0F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A2F0FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A2F100  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A2F104  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 80A2F0F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A2F0FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A2F100  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A2F104  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80A2F108  28 00 00 05 */	cmplwi r0, 5
 /* 80A2F10C  40 82 00 A0 */	bne lbl_80A2F1AC
 /* 80A2F110  38 63 04 D0 */	addi r3, r3, 0x4d0

@@ -23,8 +23,8 @@ lbl_80670D54:
 /* 80670D60  7F C3 F3 78 */	mr r3, r30
 /* 80670D64  4B FF FF 11 */	bl getAnmArcName__11daBdoorL5_cFv
 /* 80670D68  7F A4 EB 78 */	mr r4, r29
-/* 80670D6C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80670D70  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80670D6C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80670D70  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80670D74  3F E5 00 02 */	addis r31, r5, 2
 /* 80670D78  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80670D7C  7F E5 FB 78 */	mr r5, r31

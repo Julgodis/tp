@@ -149,7 +149,7 @@ lbl_804F0C84:
 /* 804F0CA0  7F C3 F3 78 */	mr r3, r30
 /* 804F0CA4  3C 80 80 50 */	lis r4, l_HIO@ha
 /* 804F0CA8  38 84 AE A4 */	addi r4, r4, l_HIO@l
-/* 804F0CAC  C0 24 00 24 */	lfs f1, 0x24(r4)	/* effective address: 804FAEC8 */
+/* 804F0CAC  C0 24 00 24 */	lfs f1, 0x24(r4)
 /* 804F0CB0  38 80 30 00 */	li r4, 0x3000
 /* 804F0CB4  4B FF F3 A9 */	bl pl_check__FP10e_fm_classfs
 /* 804F0CB8  2C 03 00 00 */	cmpwi r3, 0

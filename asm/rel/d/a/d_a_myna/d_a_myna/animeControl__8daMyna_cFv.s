@@ -38,7 +38,7 @@ lbl_80949F64:
 lbl_80949F6C:
 /* 80949F6C  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80949F70  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80949F74  C3 E3 00 08 */	lfs f31, 8(r3)	/* effective address: 8094BA44 */
+/* 80949F74  C3 E3 00 08 */	lfs f31, 8(r3)
 /* 80949F78  48 00 00 20 */	b lbl_80949F98
 lbl_80949F7C:
 /* 80949F7C  3B E0 00 00 */	li r31, 0

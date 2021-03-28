@@ -13,8 +13,8 @@ lbl_80831D8C:
 /* 80831D8C  88 9F 07 2A */	lbz r4, 0x72a(r31)
 /* 80831D90  28 04 00 FF */	cmplwi r4, 0xff
 /* 80831D94  41 82 00 28 */	beq lbl_80831DBC
-/* 80831D98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80831D9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80831D98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80831D9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80831DA0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80831DA4  7C 05 07 74 */	extsb r5, r0
 /* 80831DA8  4B 80 35 B8 */	b isSwitch__10dSv_info_cCFii

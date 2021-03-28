@@ -73,12 +73,12 @@ lbl_8067F5D0:
 /* 8067F65C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8067F660  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8067F664  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8067F668  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8067F668  80 63 00 00 */	lwz r3, 0(r3)
 /* 8067F66C  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 8067F670  4B 98 CD 6C */	b mDoMtx_YrotS__FPA4_fs
 /* 8067F674  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8067F678  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8067F67C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8067F67C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8067F680  A8 9C 04 DC */	lha r4, 0x4dc(r28)
 /* 8067F684  4B 98 CD 18 */	b mDoMtx_XrotM__FPA4_fs
 /* 8067F688  38 61 00 08 */	addi r3, r1, 8

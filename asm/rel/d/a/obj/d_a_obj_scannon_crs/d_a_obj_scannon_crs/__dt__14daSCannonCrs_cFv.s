@@ -16,7 +16,7 @@ lbl_80CC983C:
 lbl_80CC9874:
 /* 80CC9874  3C 80 80 CD */	lis r4, l_arcName@ha
 /* 80CC9878  38 84 B1 7C */	addi r4, r4, l_arcName@l
-/* 80CC987C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CCB17C */
+/* 80CC987C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CC9880  4B 36 37 88 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CC9884  34 1E 05 E8 */	addic. r0, r30, 0x5e8
 /* 80CC9888  41 82 00 20 */	beq lbl_80CC98A8

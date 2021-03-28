@@ -7,7 +7,7 @@ lbl_8081CC14:
 /* 8081CC28  7C 7E 1B 78 */	mr r30, r3
 /* 8081CC2C  3C 60 80 82 */	lis r3, lit_3791@ha
 /* 8081CC30  3B E3 18 AC */	addi r31, r3, lit_3791@l
-/* 8081CC34  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 808218B8 */
+/* 8081CC34  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 8081CC38  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 8081CC3C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 8081CC40  38 7E 04 D0 */	addi r3, r30, 0x4d0

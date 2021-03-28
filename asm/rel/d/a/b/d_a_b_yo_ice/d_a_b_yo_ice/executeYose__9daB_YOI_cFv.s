@@ -59,11 +59,11 @@ lbl_8063BBF0:
 /* 8063BC18  4E 80 04 21 */	bctrl 
 /* 8063BC1C  38 00 00 01 */	li r0, 1
 /* 8063BC20  98 1D 06 AD */	stb r0, 0x6ad(r29)
-/* 8063BC24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063BC28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063BC2C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8063BC30  C0 23 04 D8 */	lfs f1, 0x4d8(r3)	/* effective address: 80406698 */
-/* 8063BC34  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 8063BC24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063BC28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063BC2C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8063BC30  C0 23 04 D8 */	lfs f1, 0x4d8(r3)
+/* 8063BC34  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8063BC38  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 8063BC3C  C0 1F 00 14 */	lfs f0, 0x14(r31)
 /* 8063BC40  D0 01 00 68 */	stfs f0, 0x68(r1)

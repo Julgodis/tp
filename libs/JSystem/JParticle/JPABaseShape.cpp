@@ -848,9 +848,9 @@ SECTION_DATA static u8 jpa_dl_x[32] = {
 
 /* 803C4320-803C432C 000C+00 s=10 e=0 z=0  None .data      p_prj                                                        */
 SECTION_DATA static void* p_prj[3] = {
-	/* 0    */ (void*)noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf,
-	/* 1    */ (void*)loadPrj__FPC18JPAEmitterWorkDataPA4_Cf,
-	/* 2    */ (void*)loadPrjAnm__FPC18JPAEmitterWorkDataPA4_Cf,
+	(void*)noLoadPrj__FPC18JPAEmitterWorkDataPA4_Cf,
+	(void*)loadPrj__FPC18JPAEmitterWorkDataPA4_Cf,
+	(void*)loadPrjAnm__FPC18JPAEmitterWorkDataPA4_Cf,
 };
 
 /* 80277E88-80277F70 00E8+00 s=0 e=1 z=0  None .text      JPADrawBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle   */
@@ -1039,33 +1039,33 @@ asm static void basePlaneTypeX(f32 (* param_0)[4], f32 param_1, f32 param_2) {
 /* ############################################################################################## */
 /* 803C432C-803C4340 0014+00 s=5 e=0 z=0  None .data      p_direction                                                  */
 SECTION_DATA static void* p_direction[5] = {
-	/* 0    */ (void*)func_802782B4,
-	/* 1    */ (void*)func_802782D0,
-	/* 2    */ (void*)func_802782EC,
-	/* 3    */ (void*)func_80278320,
-	/* 4    */ (void*)func_8027833C,
+	(void*)func_802782B4,
+	(void*)func_802782D0,
+	(void*)func_802782EC,
+	(void*)func_80278320,
+	(void*)func_8027833C,
 };
 
 /* 803C4340-803C4354 0014+00 s=2 e=0 z=0  None .data      p_rot                                                        */
 SECTION_DATA static void* p_rot[5] = {
-	/* 0    */ (void*)rotTypeY__FffRA3_A4_f,
-	/* 1    */ (void*)rotTypeX__FffRA3_A4_f,
-	/* 2    */ (void*)rotTypeZ__FffRA3_A4_f,
-	/* 3    */ (void*)rotTypeXYZ__FffRA3_A4_f,
-	/* 4    */ (void*)rotTypeY__FffRA3_A4_f,
+	(void*)rotTypeY__FffRA3_A4_f,
+	(void*)rotTypeX__FffRA3_A4_f,
+	(void*)rotTypeZ__FffRA3_A4_f,
+	(void*)rotTypeXYZ__FffRA3_A4_f,
+	(void*)rotTypeY__FffRA3_A4_f,
 };
 
 /* 803C4354-803C4360 000C+00 s=3 e=0 z=0  None .data      p_plane                                                      */
 SECTION_DATA static void* p_plane[3] = {
-	/* 0    */ (void*)basePlaneTypeXY__FPA4_fff,
-	/* 1    */ (void*)basePlaneTypeXZ__FPA4_fff,
-	/* 2    */ (void*)basePlaneTypeX__FPA4_fff,
+	(void*)basePlaneTypeXY__FPA4_fff,
+	(void*)basePlaneTypeXZ__FPA4_fff,
+	(void*)basePlaneTypeX__FPA4_fff,
 };
 
 /* 804507A0-804507A8 0008+00 s=3 e=0 z=0  None .sdata     p_dl                                                         */
 SECTION_SDATA static void* p_dl[2] = {
-	/* 0    */ (void*)&jpa_dl,
-	/* 1    */ (void*)&jpa_dl_x,
+	(void*)&jpa_dl,
+	(void*)&jpa_dl_x,
 };
 
 /* 804552D8-804552DC 0004+00 s=6 e=0 z=0  None .sdata2    @3281                                                        */

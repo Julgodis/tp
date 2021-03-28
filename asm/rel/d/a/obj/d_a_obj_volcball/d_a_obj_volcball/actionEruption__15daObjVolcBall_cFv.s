@@ -9,8 +9,8 @@ lbl_80D22944:
 /* 80D22960  7C 7B 1B 78 */	mr r27, r3
 /* 80D22964  3C 60 80 D2 */	lis r3, l_sph_src@ha
 /* 80D22968  3B E3 3D CC */	addi r31, r3, l_sph_src@l
-/* 80D2296C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D22970  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2296C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D22970  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D22974  3B A3 5B D4 */	addi r29, r3, 0x5bd4
 /* 80D22978  7F A3 EB 78 */	mr r3, r29
 /* 80D2297C  4B 34 D4 E0 */	b CheckQuake__12dVibration_cFv
@@ -19,9 +19,9 @@ lbl_80D22944:
 /* 80D22988  7F 63 DB 78 */	mr r3, r27
 /* 80D2298C  48 00 0E DD */	bl startQuake__15daObjVolcBall_cFv
 lbl_80D22990:
-/* 80D22990  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D22994  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D22998  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80D22990  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D22994  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D22998  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 80D2299C  38 7B 06 04 */	addi r3, r27, 0x604
 /* 80D229A0  48 00 13 E9 */	bl func_80D23D88
 /* 80D229A4  3B C0 00 01 */	li r30, 1
@@ -32,8 +32,8 @@ lbl_80D22990:
 /* 80D229B8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D229BC  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D229C0  41 82 00 24 */	beq lbl_80D229E4
-/* 80D229C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D229C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D229C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D229C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D229CC  88 1B 04 BA */	lbz r0, 0x4ba(r27)
 /* 80D229D0  7C 05 07 74 */	extsb r5, r0
 /* 80D229D4  4B 31 29 8C */	b isSwitch__10dSv_info_cCFii
@@ -141,8 +141,8 @@ lbl_80D22A8C:
 /* 80D22B58  38 7B 28 5C */	addi r3, r27, 0x285c
 /* 80D22B5C  38 9B 25 10 */	addi r4, r27, 0x2510
 /* 80D22B60  4B 54 CA E8 */	b SetC__8cM3dGSphFRC4cXyz
-/* 80D22B64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D22B68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D22B64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D22B68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D22B6C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80D22B70  38 9B 27 38 */	addi r4, r27, 0x2738
 /* 80D22B74  4B 54 20 34 */	b Set__4cCcSFP8cCcD_Obj
@@ -193,7 +193,7 @@ lbl_80D22C00:
 /* 80D22C18  90 01 00 08 */	stw r0, 8(r1)
 /* 80D22C1C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D22C20  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D22C24  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D22C24  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D22C28  38 81 00 08 */	addi r4, r1, 8
 /* 80D22C2C  38 A0 00 00 */	li r5, 0
 /* 80D22C30  38 C0 00 00 */	li r6, 0

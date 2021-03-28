@@ -27,10 +27,10 @@ lbl_80D3D32C:
 /* 80D3D390  41 82 00 8C */	beq lbl_80D3D41C
 /* 80D3D394  38 00 00 00 */	li r0, 0
 /* 80D3D398  90 01 00 08 */	stw r0, 8(r1)
-/* 80D3D39C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3D3A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D3D3A4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80D3D3A8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80D3D39C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3D3A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D3D3A4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80D3D3A8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80D3D3AC  81 8C 00 FC */	lwz r12, 0xfc(r12)
 /* 80D3D3B0  7D 89 03 A6 */	mtctr r12
 /* 80D3D3B4  4E 80 04 21 */	bctrl 

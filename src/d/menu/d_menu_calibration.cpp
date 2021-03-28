@@ -61,10 +61,10 @@ struct CPaneMgrAlpha {
 	/* 80255828 */ void getAlphaRate();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -147,44 +147,44 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BC244-803BC250 000C+00 s=1 e=0 z=0  None .data      @3799                                                        */
 SECTION_DATA static void* lit_3799[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step1_wait_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step1_wait_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC250-803BC25C 000C+00 s=1 e=0 z=0  None .data      @3800                                                        */
 SECTION_DATA static void* lit_3800[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step1_move_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step1_move_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC25C-803BC268 000C+00 s=1 e=0 z=0  None .data      @3801                                                        */
 SECTION_DATA static void* lit_3801[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step2_wait_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step2_wait_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC268-803BC274 000C+00 s=1 e=0 z=0  None .data      @3802                                                        */
 SECTION_DATA static void* lit_3802[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step2_move_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step2_move_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC274-803BC280 000C+00 s=1 e=0 z=0  None .data      @3803                                                        */
 SECTION_DATA static void* lit_3803[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step3_wait_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step3_wait_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC280-803BC28C 000C+00 s=1 e=0 z=0  None .data      @3804                                                        */
 SECTION_DATA static void* lit_3804[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step3_move_init__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step3_move_init__19dMenu_Calibration_cFv,
 };
 
 /* 803BC28C-803BC2D4 0048+00 s=2 e=0 z=0  None .data      map_init_process                                             */
@@ -198,44 +198,44 @@ SECTION_DATA static u8 map_init_process[72] = {
 
 /* 803BC2D4-803BC2E0 000C+00 s=1 e=0 z=0  None .data      @3805                                                        */
 SECTION_DATA static void* lit_3805[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step1_wait_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step1_wait_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC2E0-803BC2EC 000C+00 s=1 e=0 z=0  None .data      @3806                                                        */
 SECTION_DATA static void* lit_3806[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step1_move_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step1_move_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC2EC-803BC2F8 000C+00 s=1 e=0 z=0  None .data      @3807                                                        */
 SECTION_DATA static void* lit_3807[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step2_wait_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step2_wait_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC2F8-803BC304 000C+00 s=1 e=0 z=0  None .data      @3808                                                        */
 SECTION_DATA static void* lit_3808[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step2_move_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step2_move_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC304-803BC310 000C+00 s=1 e=0 z=0  None .data      @3809                                                        */
 SECTION_DATA static void* lit_3809[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step3_wait_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step3_wait_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC310-803BC31C 000C+00 s=1 e=0 z=0  None .data      @3810                                                        */
 SECTION_DATA static void* lit_3810[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)step3_move_move__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)step3_move_move__19dMenu_Calibration_cFv,
 };
 
 /* 803BC31C-803BC364 0048+00 s=2 e=0 z=0  None .data      map_move_process                                             */
@@ -249,10 +249,10 @@ SECTION_DATA static u8 map_move_process[72] = {
 
 /* 803BC364-803BC380 0010+0C s=1 e=0 z=0  None .data      __vt__19dMenu_Calibration_c                                  */
 SECTION_DATA static void* __vt__19dMenu_Calibration_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__19dMenu_Calibration_cFv,
-	/* 3    */ (void*)__dt__19dMenu_Calibration_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__19dMenu_Calibration_cFv,
+	(void*)__dt__19dMenu_Calibration_cFv,
 	/* padding */
 	NULL,
 	NULL,

@@ -23,7 +23,7 @@ lbl_805F5F80:
 lbl_805F5F8C:
 /* 805F5F8C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805F5F90  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805F5F94  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805F5F94  80 63 00 00 */	lwz r3, 0(r3)
 /* 805F5F98  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805F5F9C  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200005D@ha */
 /* 805F5FA0  38 84 00 5D */	addi r4, r4, 0x005D /* 0x0200005D@l */

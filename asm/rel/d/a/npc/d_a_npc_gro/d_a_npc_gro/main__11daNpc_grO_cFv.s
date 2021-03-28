@@ -34,12 +34,12 @@ lbl_809DB658:
 lbl_809DB668:
 /* 809DB668  3C 60 80 9E */	lis r3, m__17daNpc_grO_Param_c@ha
 /* 809DB66C  38 63 EF 7C */	addi r3, r3, m__17daNpc_grO_Param_c@l
-/* 809DB670  88 03 00 6A */	lbz r0, 0x6a(r3)	/* effective address: 809DEFE6 */
+/* 809DB670  88 03 00 6A */	lbz r0, 0x6a(r3)
 /* 809DB674  28 00 00 00 */	cmplwi r0, 0
 /* 809DB678  40 82 00 AC */	bne lbl_809DB724
-/* 809DB67C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809DB680  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809DB684  88 63 4F AD */	lbz r3, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 809DB67C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809DB680  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809DB684  88 63 4F AD */	lbz r3, 0x4fad(r3)
 /* 809DB688  28 03 00 00 */	cmplwi r3, 0
 /* 809DB68C  41 82 00 30 */	beq lbl_809DB6BC
 /* 809DB690  88 1E 09 ED */	lbz r0, 0x9ed(r30)

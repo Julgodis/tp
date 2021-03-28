@@ -31,7 +31,7 @@ lbl_80782650:
 /* 807826C4  C0 26 4D E8 */	lfs f1, lit_3906@l(r6)
 /* 807826C8  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 807826CC  38 C6 4F 84 */	addi r6, r6, l_HIO@l
-/* 807826D0  C0 46 00 28 */	lfs f2, 0x28(r6)	/* effective address: 80784FAC */
+/* 807826D0  C0 46 00 28 */	lfs f2, 0x28(r6)
 /* 807826D4  4B FF F3 79 */	bl SetAnm__8daE_SB_cFiiff
 /* 807826D8  7F E3 FB 78 */	mr r3, r31
 /* 807826DC  3C 80 00 01 */	lis r4, 0x0001 /* 0x00008475@ha */

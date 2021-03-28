@@ -7,11 +7,11 @@ lbl_80A468E8:
 /* 80A468FC  7C 7F 1B 78 */	mr r31, r3
 /* 80A46900  3C 80 80 A5 */	lis r4, m__20daNpc_Kolinb_Param_c@ha
 /* 80A46904  3B C4 87 10 */	addi r30, r4, m__20daNpc_Kolinb_Param_c@l
-/* 80A46908  C0 1E 00 C4 */	lfs f0, 0xc4(r30)	/* effective address: 80A487D4 */
+/* 80A46908  C0 1E 00 C4 */	lfs f0, 0xc4(r30)
 /* 80A4690C  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80A46910  C0 1E 00 C8 */	lfs f0, 0xc8(r30)	/* effective address: 80A487D8 */
+/* 80A46910  C0 1E 00 C8 */	lfs f0, 0xc8(r30)
 /* 80A46914  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80A46918  C0 1E 00 AC */	lfs f0, 0xac(r30)	/* effective address: 80A487BC */
+/* 80A46918  C0 1E 00 AC */	lfs f0, 0xac(r30)
 /* 80A4691C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80A46920  4B 70 28 70 */	b setMtx__8daNpcT_cFv
 /* 80A46924  80 1F 0F B0 */	lwz r0, 0xfb0(r31)

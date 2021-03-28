@@ -10,11 +10,11 @@ lbl_80A7CEFC:
 /* 80A7CF1C  7C BF 2B 78 */	mr r31, r5
 /* 80A7CF20  3C 60 80 A8 */	lis r3, lit_4386@ha
 /* 80A7CF24  38 83 33 38 */	addi r4, r3, lit_4386@l
-/* 80A7CF28  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A83338 */
-/* 80A7CF2C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A8333C */
+/* 80A7CF28  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A7CF2C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A7CF30  90 61 00 08 */	stw r3, 8(r1)
 /* 80A7CF34  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A7CF38  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A83340 */
+/* 80A7CF38  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A7CF3C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A7CF40  2C 05 00 00 */	cmpwi r5, 0
 /* 80A7CF44  40 82 00 B0 */	bne lbl_80A7CFF4
@@ -28,11 +28,11 @@ lbl_80A7CEFC:
 /* 80A7CF64  4B 8C 95 4C */	b PSMTXCopy
 /* 80A7CF68  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A7CF6C  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80A7CF70  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 80A7CF70  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80A7CF74  D0 1D 08 54 */	stfs f0, 0x854(r29)
-/* 80A7CF78  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 80A7CF78  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 80A7CF7C  D0 1D 08 58 */	stfs f0, 0x858(r29)
-/* 80A7CF80  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 80A7CF80  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 80A7CF84  D0 1D 08 5C */	stfs f0, 0x85c(r29)
 /* 80A7CF88  80 7D 05 68 */	lwz r3, 0x568(r29)
 /* 80A7CF8C  80 63 00 04 */	lwz r3, 4(r3)
@@ -84,7 +84,7 @@ lbl_80A7D030:
 /* 80A7D038  38 A1 00 08 */	addi r5, r1, 8
 /* 80A7D03C  3C C0 80 A8 */	lis r6, m__17daNpcMoiR_Param_c@ha
 /* 80A7D040  38 C6 32 AC */	addi r6, r6, m__17daNpcMoiR_Param_c@l
-/* 80A7D044  C0 26 00 40 */	lfs f1, 0x40(r6)	/* effective address: 80A832EC */
+/* 80A7D044  C0 26 00 40 */	lfs f1, 0x40(r6)
 /* 80A7D048  4B 6D 63 34 */	b setLookatMtx__8daNpcF_cFiPif
 lbl_80A7D04C:
 /* 80A7D04C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

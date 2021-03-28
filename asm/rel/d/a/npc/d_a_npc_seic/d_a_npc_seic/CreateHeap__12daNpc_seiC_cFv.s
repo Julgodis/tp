@@ -7,14 +7,14 @@ lbl_80AC7828:
 /* 80AC783C  7C 7F 1B 78 */	mr r31, r3
 /* 80AC7840  3C 60 80 AD */	lis r3, l_bmdData@ha
 /* 80AC7844  38 83 93 10 */	addi r4, r3, l_bmdData@l
-/* 80AC7848  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AC9314 */
+/* 80AC7848  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AC784C  54 00 10 3A */	slwi r0, r0, 2
 /* 80AC7850  3C 60 80 AD */	lis r3, l_resNameList@ha
 /* 80AC7854  38 63 93 30 */	addi r3, r3, l_resNameList@l
 /* 80AC7858  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AC785C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80AC9310 */
-/* 80AC7860  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AC7864  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AC785C  80 84 00 00 */	lwz r4, 0(r4)
+/* 80AC7860  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AC7864  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AC7868  3C A5 00 02 */	addis r5, r5, 2
 /* 80AC786C  38 C0 00 80 */	li r6, 0x80
 /* 80AC7870  38 A5 C2 F8 */	addi r5, r5, -15624

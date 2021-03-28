@@ -327,7 +327,7 @@ lbl_805E7294:
 /* 805E72C8  38 7E 04 E6 */	addi r3, r30, 0x4e6
 /* 805E72CC  3C 80 80 5F */	lis r4, data_805ED730@ha
 /* 805E72D0  38 84 D7 30 */	addi r4, r4, data_805ED730@l
-/* 805E72D4  A8 84 00 00 */	lha r4, 0(r4)	/* effective address: 805ED730 */
+/* 805E72D4  A8 84 00 00 */	lha r4, 0(r4)
 /* 805E72D8  38 A0 00 0A */	li r5, 0xa
 /* 805E72DC  38 C0 10 00 */	li r6, 0x1000
 /* 805E72E0  4B C8 93 28 */	b cLib_addCalcAngleS2__FPssss

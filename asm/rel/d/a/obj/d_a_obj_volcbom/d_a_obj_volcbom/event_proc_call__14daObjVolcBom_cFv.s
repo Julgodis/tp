@@ -8,7 +8,7 @@ lbl_80D257E4:
 /* 80D257FC  38 83 6C 54 */	addi r4, r3, cNullVec__6Z2Calc@l
 /* 80D25800  3C 60 80 D2 */	lis r3, struct_80D26EA8+0x1@ha
 /* 80D25804  38 C3 6E A9 */	addi r6, r3, struct_80D26EA8+0x1@l
-/* 80D25808  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80D26EA9 */
+/* 80D25808  88 06 00 00 */	lbz r0, 0(r6)
 /* 80D2580C  7C 00 07 75 */	extsb. r0, r0
 /* 80D25810  40 82 00 A0 */	bne lbl_80D258B0
 /* 80D25814  80 64 00 D0 */	lwz r3, 0xd0(r4)

@@ -54,9 +54,9 @@ extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 /* ############################################################################################## */
 /* 803CC590-803CC5A0 000C+04 s=2 e=0 z=0  None .data      __vt__12JUTGraphFifo                                         */
 SECTION_DATA static void* __vt__12JUTGraphFifo[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JUTGraphFifoFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JUTGraphFifoFv,
 	/* padding */
 	NULL,
 };

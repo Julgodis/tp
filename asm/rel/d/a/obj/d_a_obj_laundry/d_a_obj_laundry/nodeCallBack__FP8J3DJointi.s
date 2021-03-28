@@ -12,7 +12,7 @@ lbl_80C51868:
 /* 80C51868  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 80C5186C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C51870  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80C51874  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 80C51874  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 80C51878  80 7E 00 14 */	lwz r3, 0x14(r30)
 /* 80C5187C  38 81 00 08 */	addi r4, r1, 8
 /* 80C51880  7F E5 FB 78 */	mr r5, r31

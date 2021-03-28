@@ -30,11 +30,11 @@ lbl_80C47368:
 /* 80C47368  3B 00 00 00 */	li r24, 0
 /* 80C4736C  3B A0 00 00 */	li r29, 0
 /* 80C47370  3B 80 00 00 */	li r28, 0
-/* 80C47374  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C47378  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80C47374  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C47378  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80C4737C  3B 7F 00 5C */	addi r27, r31, 0x5c
 lbl_80C47380:
-/* 80C47380  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 80C47380  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C47384  38 00 00 FF */	li r0, 0xff
 /* 80C47388  90 01 00 08 */	stw r0, 8(r1)
 /* 80C4738C  38 80 00 00 */	li r4, 0

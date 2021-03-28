@@ -8,9 +8,9 @@ lbl_809C2C3C:
 /* 809C2C54  3C 60 80 9D */	lis r3, cNullVec__6Z2Calc@ha
 /* 809C2C58  3B C3 A6 14 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 809C2C5C  3B 80 00 00 */	li r28, 0
-/* 809C2C60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C2C64  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 809C2C68  88 1F 4F AD */	lbz r0, 0x4fad(r31)	/* effective address: 8040B16D */
+/* 809C2C60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C2C64  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 809C2C68  88 1F 4F AD */	lbz r0, 0x4fad(r31)
 /* 809C2C6C  28 00 00 00 */	cmplwi r0, 0
 /* 809C2C70  41 82 03 A0 */	beq lbl_809C3010
 /* 809C2C74  3B BF 4F F8 */	addi r29, r31, 0x4ff8
@@ -46,9 +46,9 @@ lbl_809C2C98:
 /* 809C2CE4  48 00 00 C0 */	b lbl_809C2DA4
 lbl_809C2CE8:
 /* 809C2CE8  38 00 00 00 */	li r0, 0
-/* 809C2CEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C2CF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809C2CF4  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 809C2CEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C2CF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809C2CF4  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 809C2CF8  28 03 00 01 */	cmplwi r3, 1
 /* 809C2CFC  41 82 00 0C */	beq lbl_809C2D08
 /* 809C2D00  28 03 00 02 */	cmplwi r3, 2
@@ -276,11 +276,11 @@ lbl_809C3010:
 /* 809C3020  41 82 00 2C */	beq lbl_809C304C
 /* 809C3024  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809C3028  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809C302C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809C3030  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809C302C  80 64 00 00 */	lwz r3, 0(r4)
+/* 809C3030  80 04 00 04 */	lwz r0, 4(r4)
 /* 809C3034  90 7B 14 10 */	stw r3, 0x1410(r27)
 /* 809C3038  90 1B 14 14 */	stw r0, 0x1414(r27)
-/* 809C303C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809C303C  80 04 00 08 */	lwz r0, 8(r4)
 /* 809C3040  90 1B 14 18 */	stw r0, 0x1418(r27)
 /* 809C3044  38 00 FF FF */	li r0, -1
 /* 809C3048  90 1B 09 2C */	stw r0, 0x92c(r27)

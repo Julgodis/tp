@@ -19,7 +19,6 @@ extern void* const data_80D077F4[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_takaraDai_cpp(); // 1
 
 // 
 // Declarations:

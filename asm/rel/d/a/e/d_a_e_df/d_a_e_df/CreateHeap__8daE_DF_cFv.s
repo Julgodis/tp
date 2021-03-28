@@ -8,8 +8,8 @@ lbl_806A7710:
 /* 806A7728  3C 60 80 6B */	lis r3, stringBase0@ha
 /* 806A772C  38 63 9F FC */	addi r3, r3, stringBase0@l
 /* 806A7730  38 80 00 0D */	li r4, 0xd
-/* 806A7734  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806A7738  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806A7734  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806A7738  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806A773C  3F A5 00 02 */	addis r29, r5, 2
 /* 806A7740  3B BD C2 F8 */	addi r29, r29, -15624
 /* 806A7744  7F A5 EB 78 */	mr r5, r29

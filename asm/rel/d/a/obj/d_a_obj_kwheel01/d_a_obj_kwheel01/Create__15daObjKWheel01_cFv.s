@@ -14,8 +14,8 @@ lbl_80C4EF38:
 /* 80C4EF68  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C4EF6C  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80C4EF70  41 82 00 40 */	beq lbl_80C4EFB0
-/* 80C4EF74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C4EF78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C4EF74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4EF78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C4EF7C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C4EF80  7C 05 07 74 */	extsb r5, r0
 /* 80C4EF84  4B 3E 63 DC */	b isSwitch__10dSv_info_cCFii
@@ -34,11 +34,11 @@ lbl_80C4EFB0:
 /* 80C4EFB0  7F E3 FB 78 */	mr r3, r31
 /* 80C4EFB4  3C 80 80 C5 */	lis r4, l_cull_box@ha
 /* 80C4EFB8  C4 24 F6 CC */	lfsu f1, l_cull_box@l(r4)
-/* 80C4EFBC  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C50004 */
-/* 80C4EFC0  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C50008 */
-/* 80C4EFC4  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C5000C */
-/* 80C4EFC8  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C50010 */
-/* 80C4EFCC  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C50014 */
+/* 80C4EFBC  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C4EFC0  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C4EFC4  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C4EFC8  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C4EFCC  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C4EFD0  4B 3C B5 78 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C4EFD4  38 60 00 01 */	li r3, 1
 /* 80C4EFD8  83 E1 00 0C */	lwz r31, 0xc(r1)

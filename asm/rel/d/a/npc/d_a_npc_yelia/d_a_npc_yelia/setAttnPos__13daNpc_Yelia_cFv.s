@@ -9,11 +9,11 @@ lbl_80B4EAEC:
 /* 80B4EB08  7C 7E 1B 78 */	mr r30, r3
 /* 80B4EB0C  3C 60 80 B5 */	lis r3, m__19daNpc_Yelia_Param_c@ha
 /* 80B4EB10  3B E3 22 B4 */	addi r31, r3, m__19daNpc_Yelia_Param_c@l
-/* 80B4EB14  C0 1F 00 E4 */	lfs f0, 0xe4(r31)	/* effective address: 80B52398 */
+/* 80B4EB14  C0 1F 00 E4 */	lfs f0, 0xe4(r31)
 /* 80B4EB18  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80B4EB1C  C0 3F 00 E8 */	lfs f1, 0xe8(r31)	/* effective address: 80B5239C */
+/* 80B4EB1C  C0 3F 00 E8 */	lfs f1, 0xe8(r31)
 /* 80B4EB20  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 80B4EB24  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80B5237C */
+/* 80B4EB24  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 80B4EB28  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80B4EB2C  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80B4EB30  D0 21 00 38 */	stfs f1, 0x38(r1)

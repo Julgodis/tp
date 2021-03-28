@@ -74,6 +74,9 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
+struct layer_class {
+};
+
 struct request_of_phase_process_class {
 };
 
@@ -100,10 +103,10 @@ struct dEvt_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -143,7 +146,7 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daE_Warpappear_Draw(e_warpappear_class*); // 2
+void daE_Warpappear_Draw(e_warpappear_class*); // 2
 static void s_s1_sub(void*, void*); // 2
 static void s_s1drop_sub(void*, void*); // 2
 static void s_s1riv_sub(void*, void*); // 2
@@ -154,16 +157,16 @@ static void s_s1Yangset_sub(void*, void*); // 2
 static void s_s1start_sub(void*, void*); // 2
 static void action(e_warpappear_class*); // 2
 static void demo_camera(e_warpappear_class*); // 2
-void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*); // 2
-void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*); // 2
+static void dComIfGp_particle_set(u16, cXyz const*, csXyz const*, cXyz const*); // 2
+static void dComIfGp_particle_set(u32, u16, cXyz const*, csXyz const*, cXyz const*); // 2
 static void mtx_set(e_warpappear_class*); // 2
-static void daE_Warpappear_Execute(e_warpappear_class*); // 2
-static bool daE_Warpappear_IsDelete(e_warpappear_class*); // 2
-static void daE_Warpappear_Delete(e_warpappear_class*); // 2
+void daE_Warpappear_Execute(e_warpappear_class*); // 2
+bool daE_Warpappear_IsDelete(e_warpappear_class*); // 2
+void daE_Warpappear_Delete(e_warpappear_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_Warpappear_Create(fopAc_ac_c*); // 2
+void daE_Warpappear_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daE_Warpappear_Draw__FP18e_warpappear_class(); // 1
+extern "C" void daE_Warpappear_Draw__FP18e_warpappear_class(); // 1
 extern "C" static void s_s1_sub__FPvPv(); // 1
 extern "C" static void s_s1drop_sub__FPvPv(); // 1
 extern "C" static void s_s1riv_sub__FPvPv(); // 1
@@ -174,20 +177,18 @@ extern "C" static void s_s1Yangset_sub__FPvPv(); // 1
 extern "C" static void s_s1start_sub__FPvPv(); // 1
 extern "C" static void action__FP18e_warpappear_class(); // 1
 extern "C" static void demo_camera__FP18e_warpappear_class(); // 1
-extern "C" void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz(); // 1
-extern "C" void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz(); // 1
+extern "C" static void dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz(); // 1
+extern "C" static void dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz(); // 1
 extern "C" static void mtx_set__FP18e_warpappear_class(); // 1
-extern "C" static void daE_Warpappear_Execute__FP18e_warpappear_class(); // 1
-extern "C" static bool daE_Warpappear_IsDelete__FP18e_warpappear_class(); // 1
-extern "C" static void daE_Warpappear_Delete__FP18e_warpappear_class(); // 1
+extern "C" void daE_Warpappear_Execute__FP18e_warpappear_class(); // 1
+extern "C" bool daE_Warpappear_IsDelete__FP18e_warpappear_class(); // 1
+extern "C" void daE_Warpappear_Delete__FP18e_warpappear_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daE_Warpappear_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_Warpappear_Create__FP10fopAc_ac_c(); // 1
 extern "C" void changeDemoMode__9daPy_py_cFUliis(); // 1
-extern "C" extern u8 const lit_4025[8];
-extern "C" extern u8 const lit_4026[8];
-extern "C" extern u8 const lit_4027[8];
 extern "C" extern u32 const lit_4804;
+extern "C" extern u32 const lit_4805;
 extern "C" extern u32 const lit_4806;
 extern "C" extern u32 const lit_4807;
 extern "C" extern u32 const lit_4808;
@@ -279,6 +280,7 @@ extern "C" extern u32 const lit_4893;
 extern "C" extern u32 const lit_4894;
 extern "C" extern u32 const lit_4895;
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_Warpappear_Method[8];
 extern "C" extern void* g_profile_E_WAP[12];
 
 // 
@@ -296,6 +298,7 @@ void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
 void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
 void fpcEx_Search(void* (*)(void*, void*), void*); // 2
 void fpcSch_JudgeForPName(void*, void*); // 2
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
 void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
 void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
 void cLib_addCalc2(f32*, f32, f32, f32); // 2
@@ -322,6 +325,7 @@ extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
 extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
 extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
 extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void onEventBit__11dSv_event_cFUs(); // 1
@@ -362,24 +366,11 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-extern "C" extern u8 struct_803A7308[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 data_8040BF78[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 data_8040C148[4];
-SECTION_BSS extern u8 data_8040C14C[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -388,11 +379,11 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // Declarations:
 // 
 
-/* 807CF7D8-807CF8BC 00E4+00 s=1 e=0 z=0  None .text      daE_Warpappear_Draw__FP18e_warpappear_class                  */
+/* 807CF7D8-807CF8BC 00E4+00 s=0 e=0 z=0  None .text      daE_Warpappear_Draw__FP18e_warpappear_class                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Warpappear_Draw(e_warpappear_class* param_0) {
+asm void daE_Warpappear_Draw(e_warpappear_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Draw__FP18e_warpappear_class.s"
 }
@@ -439,7 +430,7 @@ asm static void s_s1_sub(void* param_0, void* param_1) {
 /* 807D20A4-807D20A8 0004+00 s=2 e=0 z=0  None .rodata    @3883                                                        */
 SECTION_RODATA static u32 const lit_3883 = 0x43C80000;
 
-/* 807D20A8-807D20AC 0004+00 s=3 e=0 z=0  None .rodata    @3884                                                        */
+/* 807D20A8-807D20AC 0004+00 s=2 e=0 z=0  None .rodata    @3884                                                        */
 SECTION_RODATA static u32 const lit_3884 = 0x40000000;
 
 /* 807CF9D0-807CFA74 00A4+00 s=1 e=0 z=0  None .text      s_s1drop_sub__FPvPv                                          */
@@ -465,7 +456,7 @@ SECTION_RODATA static u32 const lit_3912 = 0x47435000;
 /* 807D20B4-807D20B8 0004+00 s=1 e=0 z=0  None .rodata    @3913                                                        */
 SECTION_RODATA static u32 const lit_3913 = 0x453B8000;
 
-/* 807D20B8-807D20C0 0004+04 s=7 e=0 z=0  None .rodata    @3914                                                        */
+/* 807D20B8-807D20C0 0004+04 s=6 e=0 z=0  None .rodata    @3914                                                        */
 SECTION_RODATA static u32 const lit_3914[1 + 1 /* padding */] = {
 	0x3F800000,
 	/* padding */
@@ -536,18 +527,18 @@ asm static void s_s1Yangset_sub(void* param_0, void* param_1) {
 
 
 /* ############################################################################################## */
-/* 807D20C0-807D20C8 0008+00 s=0 e=0 z=0  None .rodata    @4025                                                        */
-SECTION_RODATA u8 const lit_4025[8] = {
+/* 807D20C0-807D20C8 0008+00 s=1 e=0 z=0  None .rodata    @4025                                                        */
+SECTION_RODATA static u8 const lit_4025[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 807D20C8-807D20D0 0008+00 s=0 e=0 z=0  None .rodata    @4026                                                        */
-SECTION_RODATA u8 const lit_4026[8] = {
+/* 807D20C8-807D20D0 0008+00 s=1 e=0 z=0  None .rodata    @4026                                                        */
+SECTION_RODATA static u8 const lit_4026[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 807D20D0-807D20D8 0008+00 s=0 e=0 z=0  None .rodata    @4027                                                        */
-SECTION_RODATA u8 const lit_4027[8] = {
+/* 807D20D0-807D20D8 0008+00 s=1 e=0 z=0  None .rodata    @4027                                                        */
+SECTION_RODATA static u8 const lit_4027[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -617,8 +608,8 @@ SECTION_RODATA static u32 const lit_4803 = 0x42C80000;
 /* 807D210C-807D2110 0004+00 s=0 e=0 z=0  None .rodata    @4804                                                        */
 SECTION_RODATA u32 const lit_4804 = 0x3DCCCCCD;
 
-/* 807D2110-807D2114 0004+00 s=1 e=0 z=0  None .rodata    @4805                                                        */
-SECTION_RODATA static u32 const lit_4805 = 0x41200000;
+/* 807D2110-807D2114 0004+00 s=0 e=0 z=0  None .rodata    @4805                                                        */
+SECTION_RODATA u32 const lit_4805 = 0x41200000;
 
 /* 807D2114-807D2118 0004+00 s=0 e=0 z=0  None .rodata    @4806                                                        */
 SECTION_RODATA u32 const lit_4806 = 0xBF800000;
@@ -910,33 +901,33 @@ SECTION_DATA static u8 data_807D2290[40] = {
 
 /* 807D22B8-807D2318 0060+00 s=1 e=0 z=0  None .data      @4896                                                        */
 SECTION_DATA static void* lit_4896[24] = {
-	/* 0    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 1    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x70),
-	/* 2    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x114),
-	/* 3    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x200),
-	/* 4    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x29C),
-	/* 5    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x4EC),
-	/* 6    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x4EC),
-	/* 7    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 8    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 9    */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 10   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0xBF8),
-	/* 11   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0xC9C),
-	/* 12   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0xE28),
-	/* 13   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0xED0),
-	/* 14   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 15   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 16   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 17   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 18   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 19   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1618),
-	/* 20   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x105C),
-	/* 21   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x10EC),
-	/* 22   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1450),
-	/* 23   */ (void*)(((char*)demo_camera__FP18e_warpappear_class)+0x1574),
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 807D032C-807D1A54 1728+00 s=2 e=0 z=0  None .text      demo_camera__FP18e_warpappear_class                          */
+/* 807D032C-807D1A54 1728+00 s=1 e=0 z=0  None .text      demo_camera__FP18e_warpappear_class                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -947,22 +938,22 @@ asm static void demo_camera(e_warpappear_class* param_0) {
 #pragma pop
 
 
-/* 807D1A54-807D1AC8 0074+00 s=0 e=0 z=0  None .text      dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz             */
+/* 807D1A54-807D1AC8 0074+00 s=1 e=0 z=0  None .text      dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_particle_set(u16 param_0, cXyz const* param_1, csXyz const* param_2, cXyz const* param_3) {
+asm static void dComIfGp_particle_set(u16 param_0, cXyz const* param_1, csXyz const* param_2, cXyz const* param_3) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/dComIfGp_particle_set__FUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
 #pragma pop
 
 
-/* 807D1AC8-807D1B48 0080+00 s=0 e=0 z=0  None .text      dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz           */
+/* 807D1AC8-807D1B48 0080+00 s=1 e=0 z=0  None .text      dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm void dComIfGp_particle_set(u32 param_0, u16 param_1, cXyz const* param_2, csXyz const* param_3, cXyz const* param_4) {
+asm static void dComIfGp_particle_set(u32 param_0, u16 param_1, cXyz const* param_2, csXyz const* param_3, cXyz const* param_4) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/dComIfGp_particle_set__FUlUsPC4cXyzPC5csXyzPC4cXyz.s"
 }
@@ -980,28 +971,28 @@ asm static void mtx_set(e_warpappear_class* param_0) {
 #pragma pop
 
 
-/* 807D1BAC-807D1C50 00A4+00 s=1 e=0 z=0  None .text      daE_Warpappear_Execute__FP18e_warpappear_class               */
+/* 807D1BAC-807D1C50 00A4+00 s=0 e=0 z=0  None .text      daE_Warpappear_Execute__FP18e_warpappear_class               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Warpappear_Execute(e_warpappear_class* param_0) {
+asm void daE_Warpappear_Execute(e_warpappear_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Execute__FP18e_warpappear_class.s"
 }
 #pragma pop
 
 
-/* 807D1C50-807D1C58 0008+00 s=1 e=0 z=0  None .text      daE_Warpappear_IsDelete__FP18e_warpappear_class              */
-static bool daE_Warpappear_IsDelete(e_warpappear_class* param_0) {
+/* 807D1C50-807D1C58 0008+00 s=0 e=0 z=0  None .text      daE_Warpappear_IsDelete__FP18e_warpappear_class              */
+bool daE_Warpappear_IsDelete(e_warpappear_class* param_0) {
 	return true;
 }
 
 
-/* 807D1C58-807D1C8C 0034+00 s=1 e=0 z=0  None .text      daE_Warpappear_Delete__FP18e_warpappear_class                */
+/* 807D1C58-807D1C8C 0034+00 s=0 e=0 z=0  None .text      daE_Warpappear_Delete__FP18e_warpappear_class                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Warpappear_Delete(e_warpappear_class* param_0) {
+asm void daE_Warpappear_Delete(e_warpappear_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Delete__FP18e_warpappear_class.s"
 }
@@ -1009,39 +1000,39 @@ asm static void daE_Warpappear_Delete(e_warpappear_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 807D2318-807D2338 0020+00 s=1 e=0 z=0  None .data      l_daE_Warpappear_Method                                      */
-SECTION_DATA static void* l_daE_Warpappear_Method[8] = {
-	/* 0    */ (void*)daE_Warpappear_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_Warpappear_Delete__FP18e_warpappear_class,
-	/* 2    */ (void*)daE_Warpappear_Execute__FP18e_warpappear_class,
-	/* 3    */ (void*)daE_Warpappear_IsDelete__FP18e_warpappear_class,
-	/* 4    */ (void*)daE_Warpappear_Draw__FP18e_warpappear_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 807D2318-807D2338 0020+00 s=0 e=0 z=0  None .data      l_daE_Warpappear_Method                                      */
+SECTION_DATA void* l_daE_Warpappear_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 807D2338-807D2368 0030+00 s=0 e=0 z=1  None .data      g_profile_E_WAP                                              */
+/* 807D2338-807D2368 0030+00 s=0 e=0 z=0  None .data      g_profile_E_WAP                                              */
 SECTION_DATA void* g_profile_E_WAP[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02170000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000650,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00E90000,
-	/* 9    */ (void*)&l_daE_Warpappear_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02170000,
+	(void*)NULL,
+	(void*)0x00000650,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00E90000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 807D2368-807D2374 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 807D1C8C-807D1EF8 026C+00 s=1 e=0 z=0  None .text      useHeapInit__FP10fopAc_ac_c                                  */
@@ -1055,7 +1046,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 807D1EF8-807D1F40 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 807D1EF8-807D1F40 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1066,11 +1057,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 807D1F40-807D206C 012C+00 s=1 e=0 z=0  None .text      daE_Warpappear_Create__FP10fopAc_ac_c                        */
+/* 807D1F40-807D206C 012C+00 s=0 e=0 z=0  None .text      daE_Warpappear_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Warpappear_Create(fopAc_ac_c* param_0) {
+asm void daE_Warpappear_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_warpappear/d_a_e_warpappear/daE_Warpappear_Create__FP10fopAc_ac_c.s"
 }

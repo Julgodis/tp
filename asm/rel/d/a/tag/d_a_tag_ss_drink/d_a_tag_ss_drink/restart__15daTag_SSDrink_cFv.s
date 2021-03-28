@@ -15,11 +15,11 @@ lbl_80D62FD4:
 /* 80D63008  B0 03 04 E8 */	sth r0, 0x4e8(r3)
 /* 80D6300C  3C 80 80 D6 */	lis r4, lit_3829@ha
 /* 80D63010  38 A4 37 D8 */	addi r5, r4, lit_3829@l
-/* 80D63014  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80D637D8 */
-/* 80D63018  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80D637DC */
+/* 80D63014  80 85 00 00 */	lwz r4, 0(r5)
+/* 80D63018  80 05 00 04 */	lwz r0, 4(r5)
 /* 80D6301C  90 81 00 08 */	stw r4, 8(r1)
 /* 80D63020  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D63024  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80D637E0 */
+/* 80D63024  80 05 00 08 */	lwz r0, 8(r5)
 /* 80D63028  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D6302C  38 81 00 08 */	addi r4, r1, 8
 /* 80D63030  48 00 00 B9 */	bl setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i

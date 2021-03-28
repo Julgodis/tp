@@ -9,15 +9,15 @@ lbl_807B69A4:
 /* 807B69C0  3B E3 7E B8 */	addi r31, r3, lit_3746@l
 /* 807B69C4  3C 60 80 7C */	lis r3, master@ha
 /* 807B69C8  38 63 80 E0 */	addi r3, r3, master@l
-/* 807B69CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 807B80E0 */
-/* 807B69D0  80 63 05 CC */	lwz r3, 0x5cc(r3)	/* effective address: 807B86AC */
-/* 807B69D4  80 63 00 04 */	lwz r3, 4(r3)	/* effective address: 807B80E4 */
-/* 807B69D8  80 63 00 84 */	lwz r3, 0x84(r3)	/* effective address: 807B8164 */
-/* 807B69DC  80 63 00 0C */	lwz r3, 0xc(r3)	/* effective address: 807B80EC */
+/* 807B69CC  80 63 00 00 */	lwz r3, 0(r3)
+/* 807B69D0  80 63 05 CC */	lwz r3, 0x5cc(r3)
+/* 807B69D4  80 63 00 04 */	lwz r3, 4(r3)
+/* 807B69D8  80 63 00 84 */	lwz r3, 0x84(r3)
+/* 807B69DC  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 807B69E0  38 63 03 C0 */	addi r3, r3, 0x3c0
 /* 807B69E4  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807B69E8  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807B69EC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807B69EC  80 84 00 00 */	lwz r4, 0(r4)
 /* 807B69F0  4B B8 FA C0 */	b PSMTXCopy
 /* 807B69F4  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 807B69F8  D0 01 00 0C */	stfs f0, 0xc(r1)
@@ -52,7 +52,7 @@ lbl_807B6A5C:
 lbl_807B6A68:
 /* 807B6A68  3C 60 80 7C */	lis r3, master@ha
 /* 807B6A6C  80 83 80 E0 */	lwz r4, master@l(r3)
-/* 807B6A70  88 64 06 8A */	lbz r3, 0x68a(r4)	/* effective address: 807B876A */
+/* 807B6A70  88 64 06 8A */	lbz r3, 0x68a(r4)
 /* 807B6A74  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 807B6A78  41 82 00 14 */	beq lbl_807B6A8C
 /* 807B6A7C  54 60 00 3C */	rlwinm r0, r3, 0, 0, 0x1e

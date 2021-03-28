@@ -10,9 +10,9 @@ lbl_8066FF04:
 /* 8066FF24  3C 60 80 67 */	lis r3, lit_3726@ha
 /* 8066FF28  3B E3 09 14 */	addi r31, r3, lit_3726@l
 /* 8066FF2C  38 61 00 08 */	addi r3, r1, 8
-/* 8066FF30  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8066FF34  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8066FF38  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8066FF30  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8066FF34  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8066FF38  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8066FF3C  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8066FF40  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 8066FF44  4B BF 6B F0 */	b __mi__4cXyzCFRC3Vec

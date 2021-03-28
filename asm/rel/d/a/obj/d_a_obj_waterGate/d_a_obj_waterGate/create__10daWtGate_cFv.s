@@ -72,8 +72,8 @@ lbl_80D2BD98:
 /* 80D2BE0C  48 00 04 45 */	bl init_modeEnd__10daWtGate_cFv
 /* 80D2BE10  48 00 00 48 */	b lbl_80D2BE58
 lbl_80D2BE14:
-/* 80D2BE14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2BE18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2BE14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2BE18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D2BE1C  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80D2BE20  7C 05 07 74 */	extsb r5, r0
 /* 80D2BE24  4B 30 95 3C */	b isSwitch__10dSv_info_cCFii

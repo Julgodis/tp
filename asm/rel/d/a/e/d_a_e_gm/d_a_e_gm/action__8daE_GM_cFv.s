@@ -12,11 +12,11 @@ lbl_806D136C:
 /* 806D1394  41 82 01 24 */	beq lbl_806D14B8
 /* 806D1398  3C 60 80 6D */	lis r3, lit_4075@ha
 /* 806D139C  38 83 7B 7C */	addi r4, r3, lit_4075@l
-/* 806D13A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806D7B7C */
-/* 806D13A4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 806D7B80 */
+/* 806D13A0  80 64 00 00 */	lwz r3, 0(r4)
+/* 806D13A4  80 04 00 04 */	lwz r0, 4(r4)
 /* 806D13A8  90 61 00 18 */	stw r3, 0x18(r1)
 /* 806D13AC  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 806D13B0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 806D7B84 */
+/* 806D13B0  80 04 00 08 */	lwz r0, 8(r4)
 /* 806D13B4  90 01 00 20 */	stw r0, 0x20(r1)
 /* 806D13B8  38 7E 0A 24 */	addi r3, r30, 0xa24
 /* 806D13BC  38 81 00 18 */	addi r4, r1, 0x18
@@ -25,11 +25,11 @@ lbl_806D136C:
 /* 806D13C8  41 82 00 38 */	beq lbl_806D1400
 /* 806D13CC  3C 60 80 6D */	lis r3, lit_4077@ha
 /* 806D13D0  38 83 7B 88 */	addi r4, r3, lit_4077@l
-/* 806D13D4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 806D7B88 */
-/* 806D13D8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 806D7B8C */
+/* 806D13D4  80 64 00 00 */	lwz r3, 0(r4)
+/* 806D13D8  80 04 00 04 */	lwz r0, 4(r4)
 /* 806D13DC  90 61 00 0C */	stw r3, 0xc(r1)
 /* 806D13E0  90 01 00 10 */	stw r0, 0x10(r1)
-/* 806D13E4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 806D7B90 */
+/* 806D13E4  80 04 00 08 */	lwz r0, 8(r4)
 /* 806D13E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 806D13EC  38 7E 0A 24 */	addi r3, r30, 0xa24
 /* 806D13F0  38 81 00 0C */	addi r4, r1, 0xc
@@ -65,7 +65,7 @@ lbl_806D1400:
 /* 806D1464  90 01 00 08 */	stw r0, 8(r1)
 /* 806D1468  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806D146C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806D1470  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806D1470  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D1474  38 81 00 08 */	addi r4, r1, 8
 /* 806D1478  38 BE 05 38 */	addi r5, r30, 0x538
 /* 806D147C  38 C0 00 00 */	li r6, 0
@@ -79,9 +79,9 @@ lbl_806D1400:
 /* 806D149C  4B 94 87 E0 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 806D14A0  3C 60 80 6D */	lis r3, struct_806D7F1C+0x2@ha
 /* 806D14A4  38 83 7F 1E */	addi r4, r3, struct_806D7F1C+0x2@l
-/* 806D14A8  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 806D7F1E */
+/* 806D14A8  88 64 00 00 */	lbz r3, 0(r4)
 /* 806D14AC  38 03 00 01 */	addi r0, r3, 1
-/* 806D14B0  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 806D7F1E */
+/* 806D14B0  98 04 00 00 */	stb r0, 0(r4)
 /* 806D14B4  48 00 00 14 */	b lbl_806D14C8
 lbl_806D14B8:
 /* 806D14B8  7F C3 F3 78 */	mr r3, r30

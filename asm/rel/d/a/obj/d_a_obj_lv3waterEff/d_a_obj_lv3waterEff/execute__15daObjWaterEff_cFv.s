@@ -49,15 +49,15 @@ lbl_80C5C730:
 /* 80C5C754  3B A3 C8 9C */	addi r29, r3, lit_3710@l
 lbl_80C5C758:
 /* 80C5C758  93 41 00 08 */	stw r26, 8(r1)
-/* 80C5C75C  80 7B 00 00 */	lwz r3, 0(r27)	/* effective address: 80451368 */
+/* 80C5C75C  80 7B 00 00 */	lwz r3, 0(r27)
 /* 80C5C760  38 81 00 08 */	addi r4, r1, 8
 /* 80C5C764  38 BE 05 68 */	addi r5, r30, 0x568
 /* 80C5C768  7C BF 2A 14 */	add r5, r31, r5
 /* 80C5C76C  38 C0 00 00 */	li r6, 0
 /* 80C5C770  38 E0 00 00 */	li r7, 0
-/* 80C5C774  C0 3C 00 00 */	lfs f1, 0(r28)	/* effective address: 80C5C880 */
+/* 80C5C774  C0 3C 00 00 */	lfs f1, 0(r28)
 /* 80C5C778  FC 40 08 90 */	fmr f2, f1
-/* 80C5C77C  C0 7D 00 00 */	lfs f3, 0(r29)	/* effective address: 80C5C89C */
+/* 80C5C77C  C0 7D 00 00 */	lfs f3, 0(r29)
 /* 80C5C780  FC 80 18 90 */	fmr f4, f3
 /* 80C5C784  39 00 00 00 */	li r8, 0
 /* 80C5C788  4B 64 FD 84 */	b seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc

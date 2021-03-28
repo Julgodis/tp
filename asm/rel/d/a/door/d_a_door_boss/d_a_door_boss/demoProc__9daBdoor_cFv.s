@@ -9,8 +9,8 @@ lbl_8066FB00:
 /* 8066FB1C  3B C4 09 14 */	addi r30, r4, lit_3726@l
 /* 8066FB20  4B FF FF 99 */	bl getDemoAction__9daBdoor_cFv
 /* 8066FB24  7C 7C 1B 78 */	mr r28, r3
-/* 8066FB28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066FB2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066FB28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066FB2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066FB30  3B 63 0F 38 */	addi r27, r3, 0xf38
 /* 8066FB34  3B BB 40 C0 */	addi r29, r27, 0x40c0
 /* 8066FB38  7F A3 EB 78 */	mr r3, r29
@@ -35,8 +35,8 @@ lbl_8066FB6C:
 /* 8066FB80  7F E3 FB 78 */	mr r3, r31
 /* 8066FB84  4B 9C A6 4C */	b getSwbit__13door_param2_cFP10fopAc_ac_c
 /* 8066FB88  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 8066FB8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066FB90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066FB8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066FB90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066FB94  7F 45 D3 78 */	mr r5, r26
 /* 8066FB98  4B 9C 56 68 */	b onSwitch__10dSv_info_cFii
 /* 8066FB9C  C0 1E 00 00 */	lfs f0, 0(r30)
@@ -55,7 +55,7 @@ lbl_8066FBAC:
 /* 8066FBCC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8066FBD0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8066FBD4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8066FBD8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8066FBD8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066FBDC  38 81 00 14 */	addi r4, r1, 0x14
 /* 8066FBE0  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8066FBE4  38 C0 00 00 */	li r6, 0
@@ -97,7 +97,7 @@ lbl_8066FC50:
 /* 8066FC68  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8066FC6C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8066FC70  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8066FC74  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8066FC74  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066FC78  38 81 00 10 */	addi r4, r1, 0x10
 /* 8066FC7C  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8066FC80  38 C0 00 00 */	li r6, 0
@@ -173,7 +173,7 @@ lbl_8066FD30:
 /* 8066FD7C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8066FD80  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8066FD84  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8066FD88  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8066FD88  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066FD8C  38 81 00 0C */	addi r4, r1, 0xc
 /* 8066FD90  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8066FD94  38 C0 00 00 */	li r6, 0
@@ -220,7 +220,7 @@ lbl_8066FDC0:
 /* 8066FE34  90 01 00 08 */	stw r0, 8(r1)
 /* 8066FE38  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8066FE3C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8066FE40  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8066FE40  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066FE44  38 81 00 08 */	addi r4, r1, 8
 /* 8066FE48  38 BF 05 38 */	addi r5, r31, 0x538
 /* 8066FE4C  38 C0 00 00 */	li r6, 0
@@ -238,9 +238,9 @@ lbl_8066FE78:
 /* 8066FE78  A8 1F 05 8C */	lha r0, 0x58c(r31)
 /* 8066FE7C  2C 00 00 00 */	cmpwi r0, 0
 /* 8066FE80  40 82 00 38 */	bne lbl_8066FEB8
-/* 8066FE84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066FE88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8066FE8C  83 43 5D AC */	lwz r26, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8066FE84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066FE88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8066FE8C  83 43 5D AC */	lwz r26, 0x5dac(r3)
 /* 8066FE90  7F E3 FB 78 */	mr r3, r31
 /* 8066FE94  4B 9C A3 90 */	b getExitNo__13door_param2_cFP10fopAc_ac_c
 /* 8066FE98  7C 64 1B 78 */	mr r4, r3

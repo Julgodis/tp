@@ -11,8 +11,8 @@ lbl_8045F29C:
 /* 8045F2C0  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 8045F2C4  28 00 00 3E */	cmplwi r0, 0x3e
 /* 8045F2C8  40 82 00 28 */	bne lbl_8045F2F0
-/* 8045F2CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045F2D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045F2CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045F2D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045F2D4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8045F2D8  3C 80 80 46 */	lis r4, struct_804606C4+0x0@ha
 /* 8045F2DC  38 84 06 C4 */	addi r4, r4, struct_804606C4+0x0@l
@@ -28,9 +28,9 @@ lbl_8045F2F0:
 /* 8045F300  7C 00 19 10 */	subfe r0, r0, r3
 /* 8045F304  54 00 06 3F */	clrlwi. r0, r0, 0x18
 /* 8045F308  41 82 00 1C */	beq lbl_8045F324
-/* 8045F30C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045F310  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045F314  80 63 5D BC */	lwz r3, 0x5dbc(r3)	/* effective address: 8040BF7C */
+/* 8045F30C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045F310  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045F314  80 63 5D BC */	lwz r3, 0x5dbc(r3)
 /* 8045F318  4B DD 7E CC */	b isPlaceMessage__12dMsgObject_cFv
 /* 8045F31C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 8045F320  40 82 00 F0 */	bne lbl_8045F410
@@ -71,10 +71,10 @@ lbl_8045F394:
 /* 8045F394  38 00 00 05 */	li r0, 5
 /* 8045F398  98 1E 05 B9 */	stb r0, 0x5b9(r30)
 lbl_8045F39C:
-/* 8045F39C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045F3A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045F3A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8045F3A8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8045F39C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045F3A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045F3A4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8045F3A8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8045F3AC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8045F3B0  40 82 00 60 */	bne lbl_8045F410
 /* 8045F3B4  7F C3 F3 78 */	mr r3, r30

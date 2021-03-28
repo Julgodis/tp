@@ -60,8 +60,8 @@ lbl_80AA3970:
 /* 80AA39A8  38 00 00 01 */	li r0, 1
 /* 80AA39AC  90 1E 0B 1C */	stw r0, 0xb1c(r30)
 lbl_80AA39B0:
-/* 80AA39B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AA39B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AA39B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AA39B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AA39B8  38 63 09 78 */	addi r3, r3, 0x978
 /* 80AA39BC  38 80 00 3C */	li r4, 0x3c
 /* 80AA39C0  4B 59 11 D8 */	b onSwitch__12dSv_danBit_cFi

@@ -162,8 +162,8 @@ lbl_806FE91C:
 /* 806FE928  88 9F 06 7B */	lbz r4, 0x67b(r31)
 /* 806FE92C  28 04 00 FF */	cmplwi r4, 0xff
 /* 806FE930  41 82 00 28 */	beq lbl_806FE958
-/* 806FE934  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806FE938  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806FE934  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806FE938  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806FE93C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 806FE940  7C 05 07 74 */	extsb r5, r0
 /* 806FE944  4B 93 6A 1C */	b isSwitch__10dSv_info_cCFii
@@ -182,7 +182,7 @@ lbl_806FE958:
 /* 806FE974  38 00 FF FF */	li r0, -1
 /* 806FE978  3C 60 80 70 */	lis r3, l_HIO@ha
 /* 806FE97C  38 63 F8 90 */	addi r3, r3, l_HIO@l
-/* 806FE980  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806FF894 */
+/* 806FE980  98 03 00 04 */	stb r0, 4(r3)
 lbl_806FE984:
 /* 806FE984  38 00 00 00 */	li r0, 0
 /* 806FE988  90 01 00 08 */	stw r0, 8(r1)
@@ -350,9 +350,9 @@ lbl_806FEBEC:
 /* 806FEBF8  38 00 00 01 */	li r0, 1
 /* 806FEBFC  98 1F 06 7D */	stb r0, 0x67d(r31)
 /* 806FEC00  7F E3 FB 78 */	mr r3, r31
-/* 806FEC04  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806FEC08  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806FEC0C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806FEC04  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806FEC08  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806FEC0C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806FEC10  4B 91 BB 00 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806FEC14  B0 7F 04 E6 */	sth r3, 0x4e6(r31)
 /* 806FEC18  B0 7F 04 DE */	sth r3, 0x4de(r31)
@@ -397,7 +397,7 @@ lbl_806FEC98:
 lbl_806FECAC:
 /* 806FECAC  3C 60 80 70 */	lis r3, l_HIO@ha
 /* 806FECB0  38 63 F8 90 */	addi r3, r3, l_HIO@l
-/* 806FECB4  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 806FF8A4 */
+/* 806FECB4  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 806FECB8  D0 1F 07 5C */	stfs f0, 0x75c(r31)
 /* 806FECBC  48 00 00 28 */	b lbl_806FECE4
 lbl_806FECC0:

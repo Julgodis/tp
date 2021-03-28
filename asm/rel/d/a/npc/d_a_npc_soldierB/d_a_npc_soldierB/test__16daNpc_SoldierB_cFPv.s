@@ -25,8 +25,8 @@ lbl_80AF5100:
 /* 80AF5100  7F E3 FB 78 */	mr r3, r31
 /* 80AF5104  3C 80 80 AF */	lis r4, m__22daNpc_SoldierB_Param_c@ha
 /* 80AF5108  38 A4 5A D4 */	addi r5, r4, m__22daNpc_SoldierB_Param_c@l
-/* 80AF510C  A8 85 00 66 */	lha r4, 0x66(r5)	/* effective address: 80AF5B3A */
-/* 80AF5110  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 80AF5B18 */
+/* 80AF510C  A8 85 00 66 */	lha r4, 0x66(r5)
+/* 80AF5110  C0 25 00 44 */	lfs f1, 0x44(r5)
 /* 80AF5114  38 A0 00 00 */	li r5, 0
 /* 80AF5118  81 9F 0B 44 */	lwz r12, 0xb44(r31)
 /* 80AF511C  81 8C 00 3C */	lwz r12, 0x3c(r12)
@@ -35,7 +35,7 @@ lbl_80AF5100:
 /* 80AF5128  7F E3 FB 78 */	mr r3, r31
 /* 80AF512C  3C 80 80 AF */	lis r4, m__22daNpc_SoldierB_Param_c@ha
 /* 80AF5130  38 84 5A D4 */	addi r4, r4, m__22daNpc_SoldierB_Param_c@l
-/* 80AF5134  A8 84 00 68 */	lha r4, 0x68(r4)	/* effective address: 80AF5B3C */
+/* 80AF5134  A8 84 00 68 */	lha r4, 0x68(r4)
 /* 80AF5138  4B FF F8 AD */	bl setLookMode__16daNpc_SoldierB_cFi
 /* 80AF513C  38 00 00 00 */	li r0, 0
 /* 80AF5140  B0 1F 09 E6 */	sth r0, 0x9e6(r31)

@@ -30,7 +30,7 @@ lbl_80A49F80:
 /* 80A49F9C  C3 DE 00 40 */	lfs f30, 0x40(r30)
 /* 80A49FA0  3C 60 80 A6 */	lis r3, target_info_count@ha
 /* 80A49FA4  3B E3 FF 18 */	addi r31, r3, target_info_count@l
-/* 80A49FA8  80 1F 00 00 */	lwz r0, 0(r31)	/* effective address: 80A5FF18 */
+/* 80A49FA8  80 1F 00 00 */	lwz r0, 0(r31)
 /* 80A49FAC  2C 00 00 00 */	cmpwi r0, 0
 /* 80A49FB0  41 82 01 80 */	beq lbl_80A4A130
 /* 80A49FB4  3B A0 00 00 */	li r29, 0

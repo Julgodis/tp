@@ -19,9 +19,9 @@ lbl_805ABCF8:
 /* 805ABD3C  C0 3E 00 50 */	lfs f1, 0x50(r30)
 /* 805ABD40  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 805ABD44  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
-/* 805ABD48  C0 03 04 04 */	lfs f0, 0x404(r3)	/* effective address: 80439E24 */
+/* 805ABD48  C0 03 04 04 */	lfs f0, 0x404(r3)
 /* 805ABD4C  EC 41 00 32 */	fmuls f2, f1, f0
-/* 805ABD50  C0 03 04 00 */	lfs f0, 0x400(r3)	/* effective address: 80439E20 */
+/* 805ABD50  C0 03 04 00 */	lfs f0, 0x400(r3)
 /* 805ABD54  EC 01 00 32 */	fmuls f0, f1, f0
 /* 805ABD58  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
 /* 805ABD5C  C0 1E 00 54 */	lfs f0, 0x54(r30)
@@ -35,8 +35,8 @@ lbl_805ABCF8:
 /* 805ABD7C  3C 60 80 5B */	lis r3, stringBase0@ha
 /* 805ABD80  38 63 E0 AC */	addi r3, r3, stringBase0@l
 /* 805ABD84  38 80 00 2F */	li r4, 0x2f
-/* 805ABD88  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805ABD8C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805ABD88  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805ABD8C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805ABD90  3C A5 00 02 */	addis r5, r5, 2
 /* 805ABD94  38 C0 00 80 */	li r6, 0x80
 /* 805ABD98  38 A5 C2 F8 */	addi r5, r5, -15624

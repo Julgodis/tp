@@ -117,15 +117,6 @@ struct J3DDisplayListObj {
 	/* 80312618 */ void callDL() const;
 };
 
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
-};
-
-struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
-};
-
 struct J3DShapePacket {
 	/* 80312FBC */ void drawFast();
 };
@@ -134,15 +125,22 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
+struct J3DPacket {
+};
+
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
+};
+
 // 
 // Forward References:
 // 
 
 static void daMirror_c_createHeap(fopAc_ac_c*); // 2
-static void daMirror_create(daMirror_c*); // 2
-static void daMirror_Delete(daMirror_c*); // 2
-static void daMirror_execute(daMirror_c*); // 2
-static void daMirror_draw(daMirror_c*); // 2
+void daMirror_create(daMirror_c*); // 2
+void daMirror_Delete(daMirror_c*); // 2
+void daMirror_execute(daMirror_c*); // 2
+void daMirror_draw(daMirror_c*); // 2
 
 extern "C" static void daMirror_c_createHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__16dMirror_packet_cFv(); // 1
@@ -159,15 +157,16 @@ extern "C" void __ct__10daMirror_cFv(); // 1
 extern "C" void __dt__16dMirror_packet_cFv(); // 1
 extern "C" void createHeap__10daMirror_cFv(); // 1
 extern "C" void setModelMtx__10daMirror_cFv(); // 1
-extern "C" static void daMirror_create__FP10daMirror_c(); // 1
+extern "C" void daMirror_create__FP10daMirror_c(); // 1
 extern "C" void create__10daMirror_cFv(); // 1
-extern "C" static void daMirror_Delete__FP10daMirror_c(); // 1
-extern "C" static void daMirror_execute__FP10daMirror_c(); // 1
+extern "C" void daMirror_Delete__FP10daMirror_c(); // 1
+extern "C" void daMirror_execute__FP10daMirror_c(); // 1
 extern "C" void execute__10daMirror_cFv(); // 1
-extern "C" static void daMirror_draw__FP10daMirror_c(); // 1
+extern "C" void daMirror_draw__FP10daMirror_c(); // 1
 extern "C" void entryModel__10daMirror_cFP8J3DModel(); // 1
-extern "C" extern u8 const lit_4355[8];
 extern "C" extern u8 const lit_4406[48];
+extern "C" extern u8 const struct_80872650[16];
+extern "C" extern void* daMirror_METHODS[8];
 extern "C" extern void* g_profile_MIRROR[12];
 
 // 
@@ -224,7 +223,6 @@ extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
 extern "C" void callDL__17J3DDisplayListObjCFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void drawFast__14J3DShapePacketFv(); // 1
 extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
@@ -281,22 +279,13 @@ extern "C" void _restgpr_21(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void tan(); // 1
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern u8 mClipper__14mDoLib_clipper[76];
-SECTION_BSS extern u8 data_803DD93C[4];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C36C[4];
-extern "C" extern u8 data_8040C370[81040];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 m_entryModel__10daMirror_c[12];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042DB5C[4];
-SECTION_BSS extern u8 struct_8042DB60[4];
-SECTION_BSS extern u8 j3dSys[4];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 g_clearColor[4];
 extern "C" extern u32 __float_max;
 extern "C" extern f32 mSystemFar__14mDoLib_clipper;
@@ -319,150 +308,54 @@ asm static void daMirror_c_createHeap(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8087258C-80872590 0004+00 s=3 e=0 z=0  None .rodata    @3884                                                        */
-SECTION_RODATA static u32 const lit_3884 = 0x000000FF;
-
-/* 80872590-80872598 0008+00 s=1 e=0 z=0  None .rodata    l_texCoord$3899                                              */
-SECTION_RODATA static u8 const data_80872590[8] = {
-	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
-};
-
-/* 80872598-8087259C 0004+00 s=4 e=0 z=0  None .rodata    @3945                                                        */
-SECTION_RODATA static u8 const lit_3945[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8087259C-808725A0 0004+00 s=1 e=0 z=0  None .rodata    @3946                                                        */
-SECTION_RODATA static u32 const lit_3946 = 0x42C80000;
-
-/* 808725A0-808725A4 0004+00 s=3 e=0 z=0  None .rodata    @3947                                                        */
-SECTION_RODATA static u32 const lit_3947 = 0x3F800000;
-
-/* 808725A4-808725A8 0004+00 s=1 e=0 z=0  None .rodata    @3948                                                        */
-SECTION_RODATA static u32 const lit_3948 = 0xC2C80000;
-
-/* 808725A8-808725AC 0004+00 s=1 e=0 z=0  None .rodata    @3956                                                        */
-SECTION_RODATA static u8 const lit_3956[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 808725AC-808725B0 0004+00 s=1 e=0 z=0  None .rodata    @4345                                                        */
-SECTION_RODATA static u32 const lit_4345 = 0x3C8EFA35;
-
-/* 808725B0-808725B4 0004+00 s=1 e=0 z=0  None .rodata    @4346                                                        */
-SECTION_RODATA static u32 const lit_4346 = 0x3F000000;
-
-/* 808725B4-808725B8 0004+00 s=1 e=0 z=0  None .rodata    @4347                                                        */
-SECTION_RODATA static u32 const lit_4347 = 0x40000000;
-
-/* 808725B8-808725BC 0004+00 s=1 e=0 z=0  None .rodata    @4348                                                        */
-SECTION_RODATA static u32 const lit_4348 = 0x43980000;
-
-/* 808725BC-808725C0 0004+00 s=1 e=0 z=0  None .rodata    @4349                                                        */
-SECTION_RODATA static u32 const lit_4349 = 0x44180000;
-
-/* 808725C0-808725C4 0004+00 s=1 e=0 z=0  None .rodata    @4350                                                        */
-SECTION_RODATA static u32 const lit_4350 = 0x43600000;
-
-/* 808725C4-808725C8 0004+00 s=1 e=0 z=0  None .rodata    @4351                                                        */
-SECTION_RODATA static u32 const lit_4351 = 0x43E00000;
-
-/* 808725C8-808725CC 0004+00 s=1 e=0 z=0  None .rodata    @4352                                                        */
-SECTION_RODATA static u32 const lit_4352 = 0x41000000;
-
-/* 808725CC-808725D4 0004+04 s=2 e=0 z=0  None .rodata    @4353                                                        */
-SECTION_RODATA static u32 const lit_4353[1 + 1 /* padding */] = {
-	0xBF800000,
-	/* padding */
-	0x00000000,
-};
-
-/* 808725D4-808725DC 0008+00 s=0 e=0 z=0  None .rodata    @4355                                                        */
-SECTION_RODATA u8 const lit_4355[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 808725DC-8087260C 0030+00 s=0 e=0 z=0  None .rodata    @4406                                                        */
-SECTION_RODATA u8 const lit_4406[48] = {
-	0xC2, 0x91, 0x00, 0x00, 0x43, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x91, 0x00, 0x00,
-	0x43, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0xC2, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8087260C-8087263C 0030+00 s=1 e=0 z=0  None .rodata    l_mirrorQuad$localstatic3$create__10daMirror_cFv             */
-SECTION_RODATA static u8 const data_8087260C[48] = {
-	0xC2, 0x48, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
-	0x42, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8087263C-80872648 000C+00 s=1 e=0 z=0  None .rodata    l_mirrorLook$localstatic4$create__10daMirror_cFv             */
-SECTION_RODATA static u8 const data_8087263C[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80872648-8087264C 0004+00 s=1 e=0 z=0  None .rodata    @4544                                                        */
-SECTION_RODATA static u32 const lit_4544 = 0x41200000;
-
-/* 8087264C-80872650 0004+00 s=1 e=0 z=0  None .rodata    @4574                                                        */
-SECTION_RODATA static u32 const lit_4574 = 0x471C4000;
-
-/* 80872650-80872660 0010+00 s=2 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80872650[16] = {
-	/* 80872650 0007 stringBase_80872650 @stringBase0 */
-	0x4D, 0x69, 0x72, 0x72, 0x6F, 0x72, 0x00,
-	/* 80872657 0009 data_80872657 None */
-	0x4D, 0x52, 0x2D, 0x54, 0x61, 0x62, 0x6C, 0x65, 0x00,
-};
-
 /* 80872660-80872664 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80872650)+0x0) /* @stringBase0 */;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80872664-80872668 0004+00 s=2 e=0 z=0  None .data      l_arcName2                                                   */
-SECTION_DATA static void* l_arcName2 = (void*)(((char*)&struct_80872650)+0x7) /* None */;
+SECTION_DATA static void* l_arcName2 = (void*)NULL;
 
 /* 80872668-80872674 000C+00 s=1 e=0 z=0  None .data      @4377                                                        */
 SECTION_DATA static void* lit_4377[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)entryModel__10daMirror_cFP8J3DModel,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 80872674-80872694 0020+00 s=1 e=0 z=0  None .data      daMirror_METHODS                                             */
-SECTION_DATA static void* daMirror_METHODS[8] = {
-	/* 0    */ (void*)daMirror_create__FP10daMirror_c,
-	/* 1    */ (void*)daMirror_Delete__FP10daMirror_c,
-	/* 2    */ (void*)daMirror_execute__FP10daMirror_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daMirror_draw__FP10daMirror_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80872674-80872694 0020+00 s=0 e=0 z=0  None .data      daMirror_METHODS                                             */
+SECTION_DATA void* daMirror_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80872694-808726C4 0030+00 s=0 e=0 z=1  None .data      g_profile_MIRROR                                             */
+/* 80872694-808726C4 0030+00 s=0 e=0 z=0  None .data      g_profile_MIRROR                                             */
 SECTION_DATA void* g_profile_MIRROR[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02DF0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000006FC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02F50000,
-	/* 9    */ (void*)&daMirror_METHODS,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02DF0000,
+	(void*)NULL,
+	(void*)0x000006FC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02F50000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 
 /* 808726C4-808726D8 0014+00 s=2 e=0 z=0  None .data      __vt__16dMirror_packet_c                                     */
 SECTION_DATA static void* __vt__16dMirror_packet_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__16dMirror_packet_cFv,
-	/* 4    */ (void*)__dt__16dMirror_packet_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80870BD8-80870C54 007C+00 s=1 e=0 z=0  None .text      __ct__16dMirror_packet_cFv                                   */
@@ -526,6 +419,29 @@ asm void dMirror_packet_c::entryModel(J3DModel* param_0) {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 8087258C-80872590 0004+00 s=3 e=0 z=0  None .rodata    @3884                                                        */
+SECTION_RODATA static u32 const lit_3884 = 0x000000FF;
+
+/* 80872590-80872598 0008+00 s=1 e=0 z=0  None .rodata    l_texCoord$3899                                              */
+SECTION_RODATA static u8 const data_80872590[8] = {
+	0x00, 0x00, 0x01, 0x00, 0x01, 0x01, 0x00, 0x01,
+};
+
+/* 80872598-8087259C 0004+00 s=4 e=0 z=0  None .rodata    @3945                                                        */
+SECTION_RODATA static u8 const lit_3945[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8087259C-808725A0 0004+00 s=1 e=0 z=0  None .rodata    @3946                                                        */
+SECTION_RODATA static u32 const lit_3946 = 0x42C80000;
+
+/* 808725A0-808725A4 0004+00 s=3 e=0 z=0  None .rodata    @3947                                                        */
+SECTION_RODATA static u32 const lit_3947 = 0x3F800000;
+
+/* 808725A4-808725A8 0004+00 s=1 e=0 z=0  None .rodata    @3948                                                        */
+SECTION_RODATA static u32 const lit_3948 = 0xC2C80000;
+
 /* 80870D88-80871268 04E0+00 s=1 e=0 z=0  None .text      mirrorZdraw__16dMirror_packet_cFPfPfffffff                   */
 #pragma push
 #pragma optimization_level 0
@@ -536,6 +452,12 @@ asm void dMirror_packet_c::mirrorZdraw(f32* param_0, f32* param_1, f32 param_2, 
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 808725A8-808725AC 0004+00 s=1 e=0 z=0  None .rodata    @3956                                                        */
+SECTION_RODATA static u8 const lit_3956[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
 
 /* 80871268-8087146C 0204+00 s=1 e=0 z=0  None .text      modelDraw__16dMirror_packet_cFP8J3DModelPA4_f                */
 #pragma push
@@ -548,6 +470,43 @@ asm void dMirror_packet_c::modelDraw(J3DModel* param_0, f32 (* param_1)[4]) {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 808725AC-808725B0 0004+00 s=1 e=0 z=0  None .rodata    @4345                                                        */
+SECTION_RODATA static u32 const lit_4345 = 0x3C8EFA35;
+
+/* 808725B0-808725B4 0004+00 s=1 e=0 z=0  None .rodata    @4346                                                        */
+SECTION_RODATA static u32 const lit_4346 = 0x3F000000;
+
+/* 808725B4-808725B8 0004+00 s=1 e=0 z=0  None .rodata    @4347                                                        */
+SECTION_RODATA static u32 const lit_4347 = 0x40000000;
+
+/* 808725B8-808725BC 0004+00 s=1 e=0 z=0  None .rodata    @4348                                                        */
+SECTION_RODATA static u32 const lit_4348 = 0x43980000;
+
+/* 808725BC-808725C0 0004+00 s=1 e=0 z=0  None .rodata    @4349                                                        */
+SECTION_RODATA static u32 const lit_4349 = 0x44180000;
+
+/* 808725C0-808725C4 0004+00 s=1 e=0 z=0  None .rodata    @4350                                                        */
+SECTION_RODATA static u32 const lit_4350 = 0x43600000;
+
+/* 808725C4-808725C8 0004+00 s=1 e=0 z=0  None .rodata    @4351                                                        */
+SECTION_RODATA static u32 const lit_4351 = 0x43E00000;
+
+/* 808725C8-808725CC 0004+00 s=1 e=0 z=0  None .rodata    @4352                                                        */
+SECTION_RODATA static u32 const lit_4352 = 0x41000000;
+
+/* 808725CC-808725D4 0004+04 s=2 e=0 z=0  None .rodata    @4353                                                        */
+SECTION_RODATA static u32 const lit_4353[1 + 1 /* padding */] = {
+	0xBF800000,
+	/* padding */
+	0x00000000,
+};
+
+/* 808725D4-808725DC 0008+00 s=1 e=0 z=0  None .rodata    @4355                                                        */
+SECTION_RODATA static u8 const lit_4355[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8087146C-80871D84 0918+00 s=1 e=0 z=1  None .text      mainDraw__16dMirror_packet_cFv                               */
 #pragma push
 #pragma optimization_level 0
@@ -559,7 +518,7 @@ asm void dMirror_packet_c::mainDraw() {
 #pragma pop
 
 
-/* 80871D84-80871E24 00A0+00 s=1 e=0 z=0  None .text      draw__16dMirror_packet_cFv                                   */
+/* 80871D84-80871E24 00A0+00 s=0 e=0 z=0  None .text      draw__16dMirror_packet_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -581,7 +540,7 @@ asm daMirror_c::daMirror_c() {
 #pragma pop
 
 
-/* 80871E84-80871F08 0084+00 s=1 e=0 z=0  None .text      __dt__16dMirror_packet_cFv                                   */
+/* 80871E84-80871F08 0084+00 s=0 e=0 z=0  None .text      __dt__16dMirror_packet_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -614,16 +573,39 @@ asm void daMirror_c::setModelMtx() {
 #pragma pop
 
 
-/* 80872018-8087206C 0054+00 s=1 e=0 z=0  None .text      daMirror_create__FP10daMirror_c                              */
+/* 80872018-8087206C 0054+00 s=0 e=0 z=0  None .text      daMirror_create__FP10daMirror_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMirror_create(daMirror_c* param_0) {
+asm void daMirror_create(daMirror_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_create__FP10daMirror_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 808725DC-8087260C 0030+00 s=0 e=0 z=0  None .rodata    @4406                                                        */
+SECTION_RODATA u8 const lit_4406[48] = {
+	0xC2, 0x91, 0x00, 0x00, 0x43, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x91, 0x00, 0x00,
+	0x43, 0x11, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0xC2, 0x91, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8087260C-8087263C 0030+00 s=1 e=0 z=0  None .rodata    l_mirrorQuad$localstatic3$create__10daMirror_cFv             */
+SECTION_RODATA static u8 const data_8087260C[48] = {
+	0xC2, 0x48, 0x00, 0x00, 0x42, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00,
+	0x42, 0xC8, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0xC2, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8087263C-80872648 000C+00 s=1 e=0 z=0  None .rodata    l_mirrorLook$localstatic4$create__10daMirror_cFv             */
+SECTION_RODATA static u8 const data_8087263C[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x42, 0x48, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80872648-8087264C 0004+00 s=1 e=0 z=0  None .rodata    @4544                                                        */
+SECTION_RODATA static u32 const lit_4544 = 0x41200000;
 
 /* 8087206C-80872344 02D8+00 s=2 e=0 z=0  None .text      create__10daMirror_cFv                                       */
 #pragma push
@@ -636,27 +618,31 @@ asm void daMirror_c::create() {
 #pragma pop
 
 
-/* 80872344-808723C4 0080+00 s=1 e=0 z=0  None .text      daMirror_Delete__FP10daMirror_c                              */
+/* 80872344-808723C4 0080+00 s=0 e=0 z=0  None .text      daMirror_Delete__FP10daMirror_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMirror_Delete(daMirror_c* param_0) {
+asm void daMirror_Delete(daMirror_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_Delete__FP10daMirror_c.s"
 }
 #pragma pop
 
 
-/* 808723C4-808723E4 0020+00 s=1 e=0 z=0  None .text      daMirror_execute__FP10daMirror_c                             */
+/* 808723C4-808723E4 0020+00 s=0 e=0 z=0  None .text      daMirror_execute__FP10daMirror_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMirror_execute(daMirror_c* param_0) {
+asm void daMirror_execute(daMirror_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_execute__FP10daMirror_c.s"
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 8087264C-80872650 0004+00 s=1 e=0 z=0  None .rodata    @4574                                                        */
+SECTION_RODATA static u32 const lit_4574 = 0x471C4000;
 
 /* 808723E4-808724C0 00DC+00 s=1 e=0 z=0  None .text      execute__10daMirror_cFv                                      */
 #pragma push
@@ -669,18 +655,18 @@ asm void daMirror_c::execute() {
 #pragma pop
 
 
-/* 808724C0-80872560 00A0+00 s=1 e=0 z=0  None .text      daMirror_draw__FP10daMirror_c                                */
+/* 808724C0-80872560 00A0+00 s=0 e=0 z=0  None .text      daMirror_draw__FP10daMirror_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMirror_draw(daMirror_c* param_0) {
+asm void daMirror_draw(daMirror_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mirror/d_a_mirror/daMirror_draw__FP10daMirror_c.s"
 }
 #pragma pop
 
 
-/* 80872560-80872584 0024+00 s=1 e=0 z=0  None .text      entryModel__10daMirror_cFP8J3DModel                          */
+/* 80872560-80872584 0024+00 s=0 e=0 z=0  None .text      entryModel__10daMirror_cFP8J3DModel                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -690,4 +676,13 @@ asm void daMirror_c::entryModel(J3DModel* param_0) {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80872650-80872660 0010+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_80872650[16] = {
+	/* 80872650 0007 stringBase_80872650 @stringBase0 */
+	0x4D, 0x69, 0x72, 0x72, 0x6F, 0x72, 0x00,
+	/* 80872657 0009 data_80872657 None */
+	0x4D, 0x52, 0x2D, 0x54, 0x61, 0x62, 0x6C, 0x65, 0x00,
+};
 

@@ -60,8 +60,8 @@ lbl_807693E8:
 /* 807693F4  7F E3 FB 78 */	mr r3, r31
 /* 807693F8  4B FF E0 31 */	bl action__FP11e_rdb_class
 /* 807693FC  38 7F 07 30 */	addi r3, r31, 0x730
-/* 80769400  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80769404  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80769400  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80769404  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80769408  3B 64 0F 38 */	addi r27, r4, 0xf38
 /* 8076940C  7F 64 DB 78 */	mr r4, r27
 /* 80769410  4B 90 D6 9C */	b CrrPos__9dBgS_AcchFR4dBgS
@@ -113,7 +113,7 @@ lbl_807693E8:
 /* 807694C8  38 63 01 20 */	addi r3, r3, 0x120
 /* 807694CC  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807694D0  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807694D4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807694D4  80 84 00 00 */	lwz r4, 0(r4)
 /* 807694D8  4B BD CF D8 */	b PSMTXCopy
 /* 807694DC  C0 1E 00 40 */	lfs f0, 0x40(r30)
 /* 807694E0  D0 01 01 9C */	stfs f0, 0x19c(r1)
@@ -166,7 +166,7 @@ lbl_80769558:
 /* 80769598  38 63 00 60 */	addi r3, r3, 0x60
 /* 8076959C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 807695A0  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 807695A4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 807695A4  80 84 00 00 */	lwz r4, 0(r4)
 /* 807695A8  4B BD CF 08 */	b PSMTXCopy
 /* 807695AC  38 61 01 9C */	addi r3, r1, 0x19c
 /* 807695B0  38 81 01 90 */	addi r4, r1, 0x190
@@ -192,7 +192,7 @@ lbl_80769558:
 /* 80769600  38 63 04 20 */	addi r3, r3, 0x420
 /* 80769604  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80769608  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8076960C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8076960C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80769610  4B BD CE A0 */	b PSMTXCopy
 /* 80769614  38 61 01 9C */	addi r3, r1, 0x19c
 /* 80769618  38 81 01 90 */	addi r4, r1, 0x190
@@ -211,8 +211,8 @@ lbl_80769558:
 /* 8076964C  4B B0 60 BC */	b SetR__8cM3dGSphFf
 /* 80769650  3A 80 00 00 */	li r20, 0
 /* 80769654  3A E0 00 00 */	li r23, 0
-/* 80769658  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076965C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80769658  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076965C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80769660  3B 23 23 3C */	addi r25, r3, 0x233c
 lbl_80769664:
 /* 80769664  7F 23 CB 78 */	mr r3, r25
@@ -225,7 +225,7 @@ lbl_80769664:
 /* 80769680  40 81 FF E4 */	ble lbl_80769664
 /* 80769684  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80769688  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8076968C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8076968C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80769690  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 80769694  4B 8A 2D 48 */	b mDoMtx_YrotS__FPA4_fs
 /* 80769698  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -261,11 +261,11 @@ lbl_80769664:
 /* 80769710  38 63 02 D0 */	addi r3, r3, 0x2d0
 /* 80769714  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80769718  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8076971C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8076971C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80769720  4B BD CD 90 */	b PSMTXCopy
 /* 80769724  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80769728  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8076972C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8076972C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80769730  80 9F 06 78 */	lwz r4, 0x678(r31)
 /* 80769734  38 84 00 24 */	addi r4, r4, 0x24
 /* 80769738  4B BD CD 78 */	b PSMTXCopy
@@ -1002,8 +1002,8 @@ lbl_8076A220:
 /* 8076A240  3B 40 00 00 */	li r26, 0
 /* 8076A244  3B 00 00 00 */	li r24, 0
 /* 8076A248  3A E0 00 00 */	li r23, 0
-/* 8076A24C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8076A250  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 8076A24C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8076A250  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 8076A254  C3 FE 02 00 */	lfs f31, 0x200(r30)
 /* 8076A258  3F 60 00 01 */	lis r27, 1
 /* 8076A25C  3C 60 00 08 */	lis r3, 0x0008 /* 0x000802C7@ha */

@@ -9,7 +9,7 @@ lbl_8086D55C:
 /* 8086D578  7C 7E 1B 78 */	mr r30, r3
 /* 8086D57C  3C 60 80 87 */	lis r3, lit_3829@ha
 /* 8086D580  3B E3 00 94 */	addi r31, r3, lit_3829@l
-/* 8086D584  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 80870098 */
+/* 8086D584  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 8086D588  D0 1E 04 EC */	stfs f0, 0x4ec(r30)
 /* 8086D58C  A8 1E 40 10 */	lha r0, 0x4010(r30)
 /* 8086D590  2C 00 00 01 */	cmpwi r0, 1
@@ -60,7 +60,7 @@ lbl_8086D624:
 /* 8086D634  40 82 01 AC */	bne lbl_8086D7E0
 /* 8086D638  3C 60 80 87 */	lis r3, data_80870AC4@ha
 /* 8086D63C  38 83 0A C4 */	addi r4, r3, data_80870AC4@l
-/* 8086D640  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80870AC4 */
+/* 8086D640  88 04 00 00 */	lbz r0, 0(r4)
 /* 8086D644  7C 00 07 75 */	extsb. r0, r0
 /* 8086D648  40 82 00 18 */	bne lbl_8086D660
 /* 8086D64C  C0 1F 00 1C */	lfs f0, 0x1c(r31)
@@ -71,7 +71,7 @@ lbl_8086D624:
 lbl_8086D660:
 /* 8086D660  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 8086D664  38 83 D2 E8 */	addi r4, r3, m_cpadInfo__8mDoCPd_c@l
-/* 8086D668  C0 44 00 10 */	lfs f2, 0x10(r4)	/* effective address: 803DD2F8 */
+/* 8086D668  C0 44 00 10 */	lfs f2, 0x10(r4)
 /* 8086D66C  C0 3F 00 B0 */	lfs f1, 0xb0(r31)
 /* 8086D670  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 8086D674  4C 41 13 82 */	cror 2, 1, 2
@@ -112,7 +112,7 @@ lbl_8086D6D4:
 /* 8086D6F0  4B A0 2F 18 */	b cLib_addCalcAngleS2__FPssss
 /* 8086D6F4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8086D6F8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8086D6FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8086D6FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8086D700  A8 1E 40 60 */	lha r0, 0x4060(r30)
 /* 8086D704  7C 00 00 D0 */	neg r0, r0
 /* 8086D708  7C 04 07 34 */	extsh r4, r0
@@ -122,7 +122,7 @@ lbl_8086D6D4:
 /* 8086D718  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8086D71C  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 8086D720  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 8086D724  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803E0004 */
+/* 8086D724  C0 03 00 04 */	lfs f0, 4(r3)
 /* 8086D728  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 8086D72C  38 61 00 14 */	addi r3, r1, 0x14
 /* 8086D730  38 81 00 08 */	addi r4, r1, 8

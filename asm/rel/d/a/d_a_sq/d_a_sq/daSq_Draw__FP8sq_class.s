@@ -43,7 +43,7 @@ lbl_8059F808:
 /* 8059F8AC  C0 5F 00 2C */	lfs f2, 0x2c(r31)
 /* 8059F8B0  3C E0 80 5A */	lis r7, l_HIO@ha
 /* 8059F8B4  38 E7 13 40 */	addi r7, r7, l_HIO@l
-/* 8059F8B8  C0 07 00 08 */	lfs f0, 8(r7)	/* effective address: 805A1348 */
+/* 8059F8B8  C0 07 00 08 */	lfs f0, 8(r7)
 /* 8059F8BC  EC 42 00 32 */	fmuls f2, f2, f0
 /* 8059F8C0  C0 9D 07 48 */	lfs f4, 0x748(r29)
 /* 8059F8C4  38 FD 07 A0 */	addi r7, r29, 0x7a0

@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct J3DTextureSRTInfo {
-};
-
-struct J2DAnmTextureSRTKey {
-	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
-};
-
 struct J2DAnmTexPattern {
 	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
 	/* 8030BF9C */ void getResTIMG(u16) const;
@@ -27,16 +20,23 @@ struct J2DAnmTexPattern {
 struct _GXColor {
 };
 
-struct J2DAnmColor {
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-};
-
 struct _GXColorS10 {
 };
 
 struct J2DAnmTevRegKey {
 	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
 	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
+};
+
+struct J2DAnmColor {
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
+};
+
+struct J3DTextureSRTInfo {
+};
+
+struct J2DAnmTextureSRTKey {
+	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
 };
 
 struct J2DMaterial {
@@ -63,11 +63,6 @@ struct J2DColorBlock {
 	/* 802EB424 */ void setGX();
 };
 
-struct J2DIndTexMtx {
-	/* 802EB2E4 */ ~J2DIndTexMtx();
-	/* 802EB320 */ J2DIndTexMtx();
-};
-
 struct J2DIndTexOrder {
 	/* 802EB378 */ J2DIndTexOrder();
 };
@@ -75,6 +70,11 @@ struct J2DIndTexOrder {
 struct J2DIndTexCoordScale {
 	/* 802EB290 */ ~J2DIndTexCoordScale();
 	/* 802EB2CC */ J2DIndTexCoordScale();
+};
+
+struct J2DIndTexMtx {
+	/* 802EB2E4 */ ~J2DIndTexMtx();
+	/* 802EB320 */ J2DIndTexMtx();
 };
 
 struct J2DIndBlock {
@@ -274,52 +274,52 @@ extern "C" extern u8 struct_804561AC[4];
 /* ############################################################################################## */
 /* 803CCA08-803CCA40 0038+00 s=2 e=0 z=0  None .data      __vt__15J2DIndBlockNull                                      */
 SECTION_DATA static void* __vt__15J2DIndBlockNull[14] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)initialize__11J2DIndBlockFv,
-	/* 3    */ (void*)setGX__15J2DIndBlockNullFv,
-	/* 4    */ (void*)getType__15J2DIndBlockNullFv,
-	/* 5    */ (void*)setIndTexStageNum__11J2DIndBlockFUc,
-	/* 6    */ (void*)getIndTexStageNum__11J2DIndBlockCFv,
-	/* 7    */ (void*)setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder,
-	/* 8    */ (void*)getIndTexOrder__11J2DIndBlockFUl,
-	/* 9    */ (void*)setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx,
-	/* 10   */ (void*)getIndTexMtx__11J2DIndBlockFUl,
-	/* 11   */ (void*)setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale,
-	/* 12   */ (void*)getIndTexCoordScale__11J2DIndBlockFUl,
-	/* 13   */ (void*)__dt__15J2DIndBlockNullFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)initialize__11J2DIndBlockFv,
+	(void*)setGX__15J2DIndBlockNullFv,
+	(void*)getType__15J2DIndBlockNullFv,
+	(void*)setIndTexStageNum__11J2DIndBlockFUc,
+	(void*)getIndTexStageNum__11J2DIndBlockCFv,
+	(void*)setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder,
+	(void*)getIndTexOrder__11J2DIndBlockFUl,
+	(void*)setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx,
+	(void*)getIndTexMtx__11J2DIndBlockFUl,
+	(void*)setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale,
+	(void*)getIndTexCoordScale__11J2DIndBlockFUl,
+	(void*)__dt__15J2DIndBlockNullFv,
 };
 
 /* 803CCA40-803CCA78 0038+00 s=3 e=1 z=0  None .data      __vt__11J2DIndBlock                                          */
 SECTION_DATA void* __vt__11J2DIndBlock[14] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)initialize__11J2DIndBlockFv,
-	/* 3    */ (void*)setGX__11J2DIndBlockFv,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)setIndTexStageNum__11J2DIndBlockFUc,
-	/* 6    */ (void*)getIndTexStageNum__11J2DIndBlockCFv,
-	/* 7    */ (void*)setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder,
-	/* 8    */ (void*)getIndTexOrder__11J2DIndBlockFUl,
-	/* 9    */ (void*)setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx,
-	/* 10   */ (void*)getIndTexMtx__11J2DIndBlockFUl,
-	/* 11   */ (void*)setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale,
-	/* 12   */ (void*)getIndTexCoordScale__11J2DIndBlockFUl,
-	/* 13   */ (void*)__dt__11J2DIndBlockFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)initialize__11J2DIndBlockFv,
+	(void*)setGX__11J2DIndBlockFv,
+	(void*)NULL,
+	(void*)setIndTexStageNum__11J2DIndBlockFUc,
+	(void*)getIndTexStageNum__11J2DIndBlockCFv,
+	(void*)setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder,
+	(void*)getIndTexOrder__11J2DIndBlockFUl,
+	(void*)setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx,
+	(void*)getIndTexMtx__11J2DIndBlockFUl,
+	(void*)setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale,
+	(void*)getIndTexCoordScale__11J2DIndBlockFUl,
+	(void*)__dt__11J2DIndBlockFv,
 };
 
 /* 803CCA78-803CCA84 000C+00 s=2 e=0 z=0  None .data      __vt__11J2DMaterial                                          */
 SECTION_DATA static void* __vt__11J2DMaterial[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11J2DMaterialFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11J2DMaterialFv,
 };
 
 /* 803CCA84-803CCA90 000C+00 s=3 e=0 z=0  None .data      __vt__13J2DColorBlock                                        */
 SECTION_DATA static void* __vt__13J2DColorBlock[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13J2DColorBlockFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13J2DColorBlockFv,
 };
 
 /* 802EA1AC-802EA2CC 0120+00 s=0 e=1 z=0  None .text      __ct__11J2DMaterialFv                                        */

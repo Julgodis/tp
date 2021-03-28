@@ -9,9 +9,9 @@ lbl_80BFB410:
 /* 80BFB42C  7C 7F 1B 78 */	mr r31, r3
 /* 80BFB430  3C 60 80 C0 */	lis r3, lit_3686@ha
 /* 80BFB434  3B A3 D3 2C */	addi r29, r3, lit_3686@l
-/* 80BFB438  C0 1D 00 04 */	lfs f0, 4(r29)	/* effective address: 80BFD330 */
+/* 80BFB438  C0 1D 00 04 */	lfs f0, 4(r29)
 /* 80BFB43C  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80BFB440  C0 3D 00 18 */	lfs f1, 0x18(r29)	/* effective address: 80BFD344 */
+/* 80BFB440  C0 3D 00 18 */	lfs f1, 0x18(r29)
 /* 80BFB444  88 1F 05 70 */	lbz r0, 0x570(r31)
 /* 80BFB448  54 00 10 3A */	slwi r0, r0, 2
 /* 80BFB44C  3C 60 80 C0 */	lis r3, obj_size_maji@ha
@@ -28,7 +28,7 @@ lbl_80BFB410:
 /* 80BFB478  3C 60 80 C0 */	lis r3, obj_size@ha
 /* 80BFB47C  3B A3 D3 E8 */	addi r29, r3, obj_size@l
 lbl_80BFB480:
-/* 80BFB480  80 7C 00 00 */	lwz r3, 0(r28)	/* effective address: 80450768 */
+/* 80BFB480  80 7C 00 00 */	lwz r3, 0(r28)
 /* 80BFB484  38 80 2A AA */	li r4, 0x2aaa
 /* 80BFB488  4B 41 0F AC */	b mDoMtx_YrotM__FPA4_fs
 /* 80BFB48C  88 1F 05 70 */	lbz r0, 0x570(r31)

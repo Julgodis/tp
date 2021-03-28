@@ -12,8 +12,8 @@ lbl_80C42518:
 /* 80C42540  38 00 00 0A */	li r0, 0xa
 /* 80C42544  B0 1E 06 18 */	sth r0, 0x618(r30)
 /* 80C42548  38 7E 2A F4 */	addi r3, r30, 0x2af4
-/* 80C4254C  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80C439E4 */
-/* 80C42550  C0 5F 00 74 */	lfs f2, 0x74(r31)	/* effective address: 80C43A58 */
+/* 80C4254C  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80C42550  C0 5F 00 74 */	lfs f2, 0x74(r31)
 /* 80C42554  4B 62 D5 2C */	b cLib_addCalc0__FPfff
 /* 80C42558  38 7E 2A F8 */	addi r3, r30, 0x2af8
 /* 80C4255C  C0 3F 00 00 */	lfs f1, 0(r31)
@@ -28,7 +28,7 @@ lbl_80C4257C:
 /* 80C4257C  C0 3F 00 7C */	lfs f1, 0x7c(r31)
 /* 80C42580  3C 60 80 C4 */	lis r3, l_HIO@ha
 /* 80C42584  38 63 3C F4 */	addi r3, r3, l_HIO@l
-/* 80C42588  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80C43CFC */
+/* 80C42588  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80C4258C  EF E1 00 32 */	fmuls f31, f1, f0
 lbl_80C42590:
 /* 80C42590  A8 1E 06 1E */	lha r0, 0x61e(r30)
@@ -47,7 +47,7 @@ lbl_80C425BC:
 /* 80C425BC  C0 3F 00 84 */	lfs f1, 0x84(r31)
 /* 80C425C0  3C 60 80 C4 */	lis r3, l_HIO@ha
 /* 80C425C4  38 63 3C F4 */	addi r3, r3, l_HIO@l
-/* 80C425C8  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80C43CFC */
+/* 80C425C8  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80C425CC  EF E1 00 32 */	fmuls f31, f1, f0
 lbl_80C425D0:
 /* 80C425D0  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
@@ -64,8 +64,8 @@ lbl_80C425D0:
 /* 80C425FC  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80C42600  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80C42604  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80C42608  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C4260C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C42608  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4260C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C42610  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80C42614  38 80 00 04 */	li r4, 4
 /* 80C42618  38 A0 00 1F */	li r5, 0x1f
@@ -99,7 +99,7 @@ lbl_80C42668:
 /* 80C42680  4B 3D A9 A0 */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
 /* 80C42684  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80C42688  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80C4268C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80C4268C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C42690  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80C42694  4B 3C 9D 48 */	b mDoMtx_YrotS__FPA4_fs
 /* 80C42698  C0 3F 00 00 */	lfs f1, 0(r31)

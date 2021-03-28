@@ -171,10 +171,10 @@ struct dPa_hermiteEcallBack_c {
 	/* 8004F6B8 */ void setOldPosP(cXyz const*, cXyz const*);
 };
 
-struct cBgS_PolyInfo {
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {
@@ -302,11 +302,11 @@ struct Z2CreatureLink {
 
 static void daArrow_createHeap(fopAc_ac_c*); // 2
 static void daArrow_atHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daArrow_execute(daArrow_c*); // 2
-static void daArrow_draw(daArrow_c*); // 2
+void daArrow_execute(daArrow_c*); // 2
+void daArrow_draw(daArrow_c*); // 2
 static void daAlink_searchHorseZelda(fopAc_ac_c*, void*); // 2
-static void daArrow_create(daArrow_c*); // 2
-static void daArrow_delete(daArrow_c*); // 2
+void daArrow_create(daArrow_c*); // 2
+void daArrow_delete(daArrow_c*); // 2
 static void cLib_calcTimer__template0(s16*); // 2
 
 extern "C" void createHeap__9daArrow_cFv(); // 1
@@ -342,9 +342,9 @@ extern "C" void procActorControllStop__9daArrow_cFv(); // 1
 extern "C" void procSlingHitInit__9daArrow_cFP4cXyzP12dCcD_GObjInf(); // 1
 extern "C" void procSlingHit__9daArrow_cFv(); // 1
 extern "C" void execute__9daArrow_cFv(); // 1
-extern "C" static void daArrow_execute__FP9daArrow_c(); // 1
+extern "C" void daArrow_execute__FP9daArrow_c(); // 1
 extern "C" void draw__9daArrow_cFv(); // 1
-extern "C" static void daArrow_draw__FP9daArrow_c(); // 1
+extern "C" void daArrow_draw__FP9daArrow_c(); // 1
 extern "C" static void daAlink_searchHorseZelda__FP10fopAc_ac_cPv(); // 1
 extern "C" void create__9daArrow_cFv(); // 1
 extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
@@ -352,21 +352,18 @@ extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" static void daArrow_create__FP9daArrow_c(); // 1
+extern "C" void daArrow_create__FP9daArrow_c(); // 1
 extern "C" void __dt__9daArrow_cFv(); // 1
-extern "C" static void daArrow_delete__FP9daArrow_c(); // 1
+extern "C" void daArrow_delete__FP9daArrow_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
 extern "C" static void func_8049DC58(); // 1
-extern "C" extern u8 const lit_4131[8];
-extern "C" extern u8 const lit_4132[8];
-extern "C" extern u8 const lit_4133[8];
-extern "C" extern u8 const lit_4582[8];
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daArrowMethodTable[8];
 extern "C" extern void* g_profile_ARROW[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -576,8 +573,6 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__22dPa_hermiteEcallBack_c[9];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cps[36];
@@ -587,19 +582,12 @@ extern "C" extern void* __vt__12cCcD_CpsAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern void* __vt__15Z2SoundObjArrow[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
-extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[76];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040BF78[4];
-extern "C" extern u8 struct_8040BFB4[24];
-SECTION_BSS extern u8 data_8040C0D8[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_max;
@@ -644,18 +632,18 @@ SECTION_RODATA static u8 const lit_4130[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8049DD24-8049DD2C 0008+00 s=0 e=0 z=0  None .rodata    @4131                                                        */
-SECTION_RODATA u8 const lit_4131[8] = {
+/* 8049DD24-8049DD2C 0008+00 s=4 e=0 z=0  None .rodata    @4131                                                        */
+SECTION_RODATA static u8 const lit_4131[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8049DD2C-8049DD34 0008+00 s=0 e=0 z=0  None .rodata    @4132                                                        */
-SECTION_RODATA u8 const lit_4132[8] = {
+/* 8049DD2C-8049DD34 0008+00 s=4 e=0 z=0  None .rodata    @4132                                                        */
+SECTION_RODATA static u8 const lit_4132[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 8049DD34-8049DD3C 0008+00 s=0 e=0 z=0  None .rodata    @4133                                                        */
-SECTION_RODATA u8 const lit_4133[8] = {
+/* 8049DD34-8049DD3C 0008+00 s=4 e=0 z=0  None .rodata    @4133                                                        */
+SECTION_RODATA static u8 const lit_4133[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -711,8 +699,8 @@ SECTION_RODATA static u32 const lit_4579[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8049DD8C-8049DD94 0008+00 s=0 e=0 z=0  None .rodata    @4582                                                        */
-SECTION_RODATA u8 const lit_4582[8] = {
+/* 8049DD8C-8049DD94 0008+00 s=3 e=0 z=0  None .rodata    @4582                                                        */
+SECTION_RODATA static u8 const lit_4582[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
@@ -1118,12 +1106,12 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 
 /* 8049DE2C-8049DE38 000C+00 s=1 e=0 z=0  None .data      @4777                                                        */
 SECTION_DATA static void* lit_4777[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMove__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 8049B45C-8049B764 0308+00 s=1 e=0 z=0  None .text      procWait__9daArrow_cFv                                       */
+/* 8049B45C-8049B764 0308+00 s=0 e=0 z=0  None .text      procWait__9daArrow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1137,141 +1125,141 @@ asm void daArrow_c::procWait() {
 /* ############################################################################################## */
 /* 8049DE38-8049DE44 000C+00 s=1 e=0 z=0  None .data      @4874                                                        */
 SECTION_DATA static void* lit_4874[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procActorControllStop__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE44-8049DE50 000C+00 s=1 e=0 z=0  None .data      @4974                                                        */
 SECTION_DATA static void* lit_4974[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procActorStop__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE50-8049DE5C 000C+00 s=1 e=0 z=0  None .data      @5004                                                        */
 SECTION_DATA static void* lit_5004[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procBGStop__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE5C-8049DE68 000C+00 s=1 e=0 z=0  None .data      @5369                                                        */
 SECTION_DATA static void* lit_5369[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procReturn__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE68-8049DE74 000C+00 s=1 e=0 z=0  None .data      @5506                                                        */
 SECTION_DATA static void* lit_5506[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procSlingHit__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE74-8049DE80 000C+00 s=1 e=0 z=0  None .data      @5714                                                        */
 SECTION_DATA static void* lit_5714[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMove__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 8049DE80-8049DE8C 000C+00 s=1 e=0 z=0  None .data      @5716                                                        */
 SECTION_DATA static void* lit_5716[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWait__9daArrow_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
-/* 8049DE8C-8049DEAC 0020+00 s=1 e=0 z=0  None .data      l_daArrowMethodTable                                         */
-SECTION_DATA static void* l_daArrowMethodTable[8] = {
-	/* 0    */ (void*)daArrow_create__FP9daArrow_c,
-	/* 1    */ (void*)daArrow_delete__FP9daArrow_c,
-	/* 2    */ (void*)daArrow_execute__FP9daArrow_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daArrow_draw__FP9daArrow_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8049DE8C-8049DEAC 0020+00 s=0 e=0 z=0  None .data      l_daArrowMethodTable                                         */
+SECTION_DATA void* l_daArrowMethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8049DEAC-8049DEDC 0030+00 s=0 e=0 z=1  None .data      g_profile_ARROW                                              */
+/* 8049DEAC-8049DEDC 0030+00 s=0 e=0 z=0  None .data      g_profile_ARROW                                              */
 SECTION_DATA void* g_profile_ARROW[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03080000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000A34,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02EE0000,
-	/* 9    */ (void*)&l_daArrowMethodTable,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x050E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0009FFFD,
+	(void*)0x03080000,
+	(void*)NULL,
+	(void*)0x00000A34,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02EE0000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x050E0000,
 };
 
 /* 8049DEDC-8049DEE8 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DEE8-8049DEF4 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DEF4-8049DF18 0024+00 s=3 e=0 z=0  None .data      __vt__18dPa_levelEcallBack                                   */
 SECTION_DATA static void* __vt__18dPa_levelEcallBack[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dPa_levelEcallBackFv,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)cleanup__18dPa_levelEcallBackFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DF18-8049DF34 001C+00 s=1 e=0 z=0  None .data      __vt__18JPAEmitterCallBack                                   */
 SECTION_DATA static void* __vt__18JPAEmitterCallBack[7] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)execute__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 4    */ (void*)executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 5    */ (void*)draw__18JPAEmitterCallBackFP14JPABaseEmitter,
-	/* 6    */ (void*)drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DF34-8049DF40 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DF40-8049DF4C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8049DF4C-8049DF58 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGPla                                              */
 SECTION_DATA static void* __vt__8cM3dGPla[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGPlaFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8049B764-8049C6B8 0F54+00 s=2 e=0 z=0  None .text      procMove__9daArrow_cFv                                       */
+/* 8049B764-8049C6B8 0F54+00 s=0 e=0 z=0  None .text      procMove__9daArrow_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1282,7 +1270,7 @@ asm void daArrow_c::procMove() {
 #pragma pop
 
 
-/* 8049C6B8-8049C700 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
+/* 8049C6B8-8049C700 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGPlaFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1304,7 +1292,7 @@ asm void daArrow_c::procReturnInit(int param_0) {
 #pragma pop
 
 
-/* 8049C874-8049CB70 02FC+00 s=1 e=0 z=0  None .text      procReturn__9daArrow_cFv                                     */
+/* 8049C874-8049CB70 02FC+00 s=0 e=0 z=0  None .text      procReturn__9daArrow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1315,7 +1303,7 @@ asm void daArrow_c::procReturn() {
 #pragma pop
 
 
-/* 8049CB70-8049CC60 00F0+00 s=1 e=0 z=0  None .text      procBGStop__9daArrow_cFv                                     */
+/* 8049CB70-8049CC60 00F0+00 s=0 e=0 z=0  None .text      procBGStop__9daArrow_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1326,7 +1314,7 @@ asm void daArrow_c::procBGStop() {
 #pragma pop
 
 
-/* 8049CC60-8049CCCC 006C+00 s=1 e=0 z=0  None .text      procActorStop__9daArrow_cFv                                  */
+/* 8049CC60-8049CCCC 006C+00 s=0 e=0 z=0  None .text      procActorStop__9daArrow_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1337,7 +1325,7 @@ asm void daArrow_c::procActorStop() {
 #pragma pop
 
 
-/* 8049CCCC-8049CCF0 0024+00 s=2 e=0 z=0  None .text      procActorControllStop__9daArrow_cFv                          */
+/* 8049CCCC-8049CCF0 0024+00 s=1 e=0 z=0  None .text      procActorControllStop__9daArrow_cFv                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1359,7 +1347,7 @@ asm void daArrow_c::procSlingHitInit(cXyz* param_0, dCcD_GObjInf* param_1) {
 #pragma pop
 
 
-/* 8049CE50-8049CEA0 0050+00 s=1 e=0 z=0  None .text      procSlingHit__9daArrow_cFv                                   */
+/* 8049CE50-8049CEA0 0050+00 s=0 e=0 z=0  None .text      procSlingHit__9daArrow_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1381,11 +1369,11 @@ asm void daArrow_c::execute() {
 #pragma pop
 
 
-/* 8049D0AC-8049D0CC 0020+00 s=1 e=0 z=0  None .text      daArrow_execute__FP9daArrow_c                                */
+/* 8049D0AC-8049D0CC 0020+00 s=0 e=0 z=0  None .text      daArrow_execute__FP9daArrow_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daArrow_execute(daArrow_c* param_0) {
+asm void daArrow_execute(daArrow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_execute__FP9daArrow_c.s"
 }
@@ -1403,11 +1391,11 @@ asm void daArrow_c::draw() {
 #pragma pop
 
 
-/* 8049D40C-8049D42C 0020+00 s=1 e=0 z=0  None .text      daArrow_draw__FP9daArrow_c                                   */
+/* 8049D40C-8049D42C 0020+00 s=0 e=0 z=0  None .text      daArrow_draw__FP9daArrow_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daArrow_draw(daArrow_c* param_0) {
+asm void daArrow_draw(daArrow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_draw__FP9daArrow_c.s"
 }
@@ -1436,13 +1424,13 @@ asm void daArrow_c::create() {
 #pragma pop
 
 
-/* 8049D808-8049D80C 0004+00 s=1 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
+/* 8049D808-8049D80C 0004+00 s=0 e=0 z=0  None .text      cleanup__18dPa_levelEcallBackFv                              */
 void dPa_levelEcallBack::cleanup() {
 	/* empty function */
 }
 
 
-/* 8049D80C-8049D880 0074+00 s=1 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
+/* 8049D80C-8049D880 0074+00 s=0 e=0 z=0  None .text      __dt__18dPa_levelEcallBackFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1453,7 +1441,7 @@ asm dPa_levelEcallBack::~dPa_levelEcallBack() {
 #pragma pop
 
 
-/* 8049D880-8049D8C8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 8049D880-8049D8C8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1464,7 +1452,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 8049D8C8-8049D910 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8049D8C8-8049D910 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1475,7 +1463,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 8049D910-8049D96C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 8049D910-8049D96C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1486,11 +1474,11 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 8049D96C-8049D98C 0020+00 s=1 e=0 z=0  None .text      daArrow_create__FP9daArrow_c                                 */
+/* 8049D96C-8049D98C 0020+00 s=0 e=0 z=0  None .text      daArrow_create__FP9daArrow_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daArrow_create(daArrow_c* param_0) {
+asm void daArrow_create(daArrow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_create__FP9daArrow_c.s"
 }
@@ -1508,18 +1496,18 @@ asm daArrow_c::~daArrow_c() {
 #pragma pop
 
 
-/* 8049DBD8-8049DC00 0028+00 s=1 e=0 z=0  None .text      daArrow_delete__FP9daArrow_c                                 */
+/* 8049DBD8-8049DC00 0028+00 s=0 e=0 z=0  None .text      daArrow_delete__FP9daArrow_c                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daArrow_delete(daArrow_c* param_0) {
+asm void daArrow_delete(daArrow_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_arrow/d_a_arrow/daArrow_delete__FP9daArrow_c.s"
 }
 #pragma pop
 
 
-/* 8049DC00-8049DC48 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 8049DC00-8049DC48 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1530,25 +1518,25 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 8049DC48-8049DC4C 0004+00 s=2 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
+/* 8049DC48-8049DC4C 0004+00 s=0 e=0 z=0  None .text      execute__18JPAEmitterCallBackFP14JPABaseEmitter              */
 void JPAEmitterCallBack::execute(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 8049DC4C-8049DC50 0004+00 s=2 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
+/* 8049DC4C-8049DC50 0004+00 s=0 e=0 z=0  None .text      executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter         */
 void JPAEmitterCallBack::executeAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 8049DC50-8049DC54 0004+00 s=2 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
+/* 8049DC50-8049DC54 0004+00 s=0 e=0 z=0  None .text      draw__18JPAEmitterCallBackFP14JPABaseEmitter                 */
 void JPAEmitterCallBack::draw(JPABaseEmitter* param_0) {
 	/* empty function */
 }
 
 
-/* 8049DC54-8049DC58 0004+00 s=2 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
+/* 8049DC54-8049DC58 0004+00 s=0 e=0 z=0  None .text      drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter            */
 void JPAEmitterCallBack::drawAfter(JPABaseEmitter* param_0) {
 	/* empty function */
 }

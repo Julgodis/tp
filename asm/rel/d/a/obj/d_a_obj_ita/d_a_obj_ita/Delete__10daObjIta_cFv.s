@@ -4,7 +4,7 @@ lbl_80C29150:
 /* 80C29158  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C2915C  3C 80 80 C3 */	lis r4, l_arcName@ha
 /* 80C29160  38 84 93 18 */	addi r4, r4, l_arcName@l
-/* 80C29164  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C29318 */
+/* 80C29164  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C29168  38 63 06 B8 */	addi r3, r3, 0x6b8
 /* 80C2916C  4B 40 3E 9C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C29170  38 60 00 01 */	li r3, 1

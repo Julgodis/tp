@@ -14,7 +14,7 @@ lbl_80853EF0:
 /* 80853F20  4B 7B 90 24 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80853F24  3C 60 80 85 */	lis r3, l_HIO@ha
 /* 80853F28  38 63 4F 78 */	addi r3, r3, l_HIO@l
-/* 80853F2C  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 80854F90 */
+/* 80853F2C  C0 23 00 18 */	lfs f1, 0x18(r3)
 /* 80853F30  FC 40 08 90 */	fmr f2, f1
 /* 80853F34  FC 60 08 90 */	fmr f3, f1
 /* 80853F38  4B 7B 8F 00 */	b scaleM__14mDoMtx_stack_cFfff

@@ -60,7 +60,7 @@ lbl_80C4EB40:
 lbl_80C4EB50:
 /* 80C4EB50  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C4EB54  38 84 F6 F8 */	addi r4, r4, l_arcName@l
-/* 80C4EB58  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C4F6F8 */
+/* 80C4EB58  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C4EB5C  4B 3D E3 60 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C4EB60  7C 7B 1B 78 */	mr r27, r3
 /* 80C4EB64  2C 1B 00 04 */	cmpwi r27, 4
@@ -72,18 +72,18 @@ lbl_80C4EB50:
 /* 80C4EB7C  7F E3 FB 78 */	mr r3, r31
 /* 80C4EB80  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C4EB84  38 84 F6 F8 */	addi r4, r4, l_arcName@l
-/* 80C4EB88  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C4F6F8 */
+/* 80C4EB88  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C4EB8C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C4EB90  54 00 2F FF */	rlwinm. r0, r0, 5, 0x1f, 0x1f
 /* 80C4EB94  41 82 00 14 */	beq lbl_80C4EBA8
 /* 80C4EB98  3C A0 80 C5 */	lis r5, l_dzbidx@ha
 /* 80C4EB9C  38 A5 F6 B8 */	addi r5, r5, l_dzbidx@l
-/* 80C4EBA0  80 A5 00 08 */	lwz r5, 8(r5)	/* effective address: 80C4F6C0 */
+/* 80C4EBA0  80 A5 00 08 */	lwz r5, 8(r5)
 /* 80C4EBA4  48 00 00 10 */	b lbl_80C4EBB4
 lbl_80C4EBA8:
 /* 80C4EBA8  3C A0 80 C5 */	lis r5, l_dzbidx@ha
 /* 80C4EBAC  38 A5 F6 B8 */	addi r5, r5, l_dzbidx@l
-/* 80C4EBB0  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80C4F6B8 */
+/* 80C4EBB0  80 A5 00 00 */	lwz r5, 0(r5)
 lbl_80C4EBB4:
 /* 80C4EBB4  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80C4EBB8  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l
@@ -97,8 +97,8 @@ lbl_80C4EBB4:
 lbl_80C4EBD8:
 /* 80C4EBD8  3B 40 00 00 */	li r26, 0
 /* 80C4EBDC  3B C0 00 00 */	li r30, 0
-/* 80C4EBE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C4EBE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C4EBE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4EBE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C4EBE8  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80C4EBEC  3B A0 00 01 */	li r29, 1
 lbl_80C4EBF0:

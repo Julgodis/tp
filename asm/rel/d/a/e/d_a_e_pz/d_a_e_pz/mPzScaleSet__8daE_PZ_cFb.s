@@ -12,7 +12,7 @@ lbl_80758A94:
 /* 80758ABC  38 7D 07 9C */	addi r3, r29, 0x79c
 /* 80758AC0  3C 80 80 76 */	lis r4, l_HIO@ha
 /* 80758AC4  3B E4 1E 0C */	addi r31, r4, l_HIO@l
-/* 80758AC8  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80761E14 */
+/* 80758AC8  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80758ACC  C0 5E 00 40 */	lfs f2, 0x40(r30)
 /* 80758AD0  C0 7E 00 08 */	lfs f3, 8(r30)
 /* 80758AD4  4B B1 6F 68 */	b cLib_addCalc2__FPffff

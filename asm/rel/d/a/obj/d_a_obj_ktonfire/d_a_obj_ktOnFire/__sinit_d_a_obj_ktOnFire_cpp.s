@@ -19,10 +19,10 @@ lbl_8058CF04:
 /* 8058CF48  38 00 00 06 */	li r0, 6
 /* 8058CF4C  7C 09 03 A6 */	mtctr r0
 lbl_8058CF50:
-/* 8058CF50  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 8058CF88 */
-/* 8058CF54  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 8058CF8C */
-/* 8058CF58  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 8058CFF4 */
-/* 8058CF5C  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 8058CFF8 */
+/* 8058CF50  80 64 00 04 */	lwz r3, 4(r4)
+/* 8058CF54  84 04 00 08 */	lwzu r0, 8(r4)
+/* 8058CF58  90 65 00 04 */	stw r3, 4(r5)
+/* 8058CF5C  94 05 00 08 */	stwu r0, 8(r5)
 /* 8058CF60  42 00 FF F0 */	bdnz lbl_8058CF50
 /* 8058CF64  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8058CF68  7C 08 03 A6 */	mtlr r0

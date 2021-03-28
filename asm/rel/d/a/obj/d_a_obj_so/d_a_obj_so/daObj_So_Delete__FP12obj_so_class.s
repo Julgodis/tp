@@ -19,8 +19,8 @@ lbl_80CE2F68:
 lbl_80CE2FAC:
 /* 80CE2FAC  3B A0 00 00 */	li r29, 0
 /* 80CE2FB0  3B E0 00 00 */	li r31, 0
-/* 80CE2FB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE2FB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE2FB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE2FB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE2FBC  3B C3 0F 38 */	addi r30, r3, 0xf38
 lbl_80CE2FC0:
 /* 80CE2FC0  38 1F 10 4C */	addi r0, r31, 0x104c

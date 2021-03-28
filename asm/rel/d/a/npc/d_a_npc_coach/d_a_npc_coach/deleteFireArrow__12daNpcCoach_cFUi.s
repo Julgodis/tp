@@ -28,10 +28,10 @@ lbl_8099DBC8:
 /* 8099DC08  4E 80 04 21 */	bctrl 
 /* 8099DC0C  3C 60 80 9A */	lis r3, M_attr__12daNpcCoach_c@ha
 /* 8099DC10  38 63 4E D0 */	addi r3, r3, M_attr__12daNpcCoach_c@l
-/* 8099DC14  80 03 00 74 */	lwz r0, 0x74(r3)	/* effective address: 809A4F44 */
+/* 8099DC14  80 03 00 74 */	lwz r0, 0x74(r3)
 /* 8099DC18  3B A0 00 14 */	li r29, 0x14
 /* 8099DC1C  7C 80 EB D6 */	divw r4, r0, r29
-/* 8099DC20  88 63 00 78 */	lbz r3, 0x78(r3)	/* effective address: 809A4F48 */
+/* 8099DC20  88 63 00 78 */	lbz r3, 0x78(r3)
 /* 8099DC24  80 1F 24 C4 */	lwz r0, 0x24c4(r31)
 /* 8099DC28  7C 00 23 D6 */	divw r0, r0, r4
 /* 8099DC2C  7C 03 00 50 */	subf r0, r3, r0

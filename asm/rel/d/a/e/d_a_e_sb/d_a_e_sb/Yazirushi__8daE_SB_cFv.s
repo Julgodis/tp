@@ -24,7 +24,7 @@ lbl_80784144:
 /* 8078419C  D0 03 05 58 */	stfs f0, 0x558(r3)
 /* 807841A0  3C 80 80 78 */	lis r4, data_80784FCC@ha
 /* 807841A4  38 84 4F CC */	addi r4, r4, data_80784FCC@l
-/* 807841A8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80784FCC */
+/* 807841A8  80 84 00 00 */	lwz r4, 0(r4)
 /* 807841AC  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 807841B0  4B AE CA 54 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 807841B4  3C 80 80 78 */	lis r4, data_80784FC8@ha

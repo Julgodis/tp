@@ -59,9 +59,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -79,25 +76,26 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daIzumiGate_Draw(daIzumiGate_c*); // 2
-static void daIzumiGate_Execute(daIzumiGate_c*); // 2
-static bool daIzumiGate_IsDelete(daIzumiGate_c*); // 2
-static void daIzumiGate_Delete(daIzumiGate_c*); // 2
-static void daIzumiGate_Create(fopAc_ac_c*); // 2
+void daIzumiGate_Draw(daIzumiGate_c*); // 2
+void daIzumiGate_Execute(daIzumiGate_c*); // 2
+bool daIzumiGate_IsDelete(daIzumiGate_c*); // 2
+void daIzumiGate_Delete(daIzumiGate_c*); // 2
+void daIzumiGate_Create(fopAc_ac_c*); // 2
 
 extern "C" void initBaseMtx__13daIzumiGate_cFv(); // 1
 extern "C" void setBaseMtx__13daIzumiGate_cFv(); // 1
-extern "C" static void daIzumiGate_Draw__FP13daIzumiGate_c(); // 1
-extern "C" static void daIzumiGate_Execute__FP13daIzumiGate_c(); // 1
-extern "C" static bool daIzumiGate_IsDelete__FP13daIzumiGate_c(); // 1
-extern "C" static void daIzumiGate_Delete__FP13daIzumiGate_c(); // 1
-extern "C" static void daIzumiGate_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daIzumiGate_Draw__FP13daIzumiGate_c(); // 1
+extern "C" void daIzumiGate_Execute__FP13daIzumiGate_c(); // 1
+extern "C" bool daIzumiGate_IsDelete__FP13daIzumiGate_c(); // 1
+extern "C" void daIzumiGate_Delete__FP13daIzumiGate_c(); // 1
+extern "C" void daIzumiGate_Create__FP10fopAc_ac_c(); // 1
 extern "C" void CreateHeap__13daIzumiGate_cFv(); // 1
 extern "C" void Create__13daIzumiGate_cFv(); // 1
 extern "C" void Execute__13daIzumiGate_cFPPA3_A4_f(); // 1
 extern "C" void Draw__13daIzumiGate_cFv(); // 1
 extern "C" void Delete__13daIzumiGate_cFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daIzumiGate_Method[8];
 extern "C" extern void* g_profile_Izumi_Gate[12];
 
 // 
@@ -119,27 +117,16 @@ extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
 extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
 extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
 extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
 extern "C" void PSMTXCopy(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -167,39 +154,39 @@ asm void daIzumiGate_c::setBaseMtx() {
 #pragma pop
 
 
-/* 8084910C-80849138 002C+00 s=1 e=0 z=0  None .text      daIzumiGate_Draw__FP13daIzumiGate_c                          */
+/* 8084910C-80849138 002C+00 s=0 e=0 z=0  None .text      daIzumiGate_Draw__FP13daIzumiGate_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daIzumiGate_Draw(daIzumiGate_c* param_0) {
+asm void daIzumiGate_Draw(daIzumiGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Draw__FP13daIzumiGate_c.s"
 }
 #pragma pop
 
 
-/* 80849138-80849158 0020+00 s=1 e=0 z=0  None .text      daIzumiGate_Execute__FP13daIzumiGate_c                       */
+/* 80849138-80849158 0020+00 s=0 e=0 z=0  None .text      daIzumiGate_Execute__FP13daIzumiGate_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daIzumiGate_Execute(daIzumiGate_c* param_0) {
+asm void daIzumiGate_Execute(daIzumiGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Execute__FP13daIzumiGate_c.s"
 }
 #pragma pop
 
 
-/* 80849158-80849160 0008+00 s=1 e=0 z=0  None .text      daIzumiGate_IsDelete__FP13daIzumiGate_c                      */
-static bool daIzumiGate_IsDelete(daIzumiGate_c* param_0) {
+/* 80849158-80849160 0008+00 s=0 e=0 z=0  None .text      daIzumiGate_IsDelete__FP13daIzumiGate_c                      */
+bool daIzumiGate_IsDelete(daIzumiGate_c* param_0) {
 	return true;
 }
 
 
-/* 80849160-80849184 0024+00 s=1 e=0 z=0  None .text      daIzumiGate_Delete__FP13daIzumiGate_c                        */
+/* 80849160-80849184 0024+00 s=0 e=0 z=0  None .text      daIzumiGate_Delete__FP13daIzumiGate_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daIzumiGate_Delete(daIzumiGate_c* param_0) {
+asm void daIzumiGate_Delete(daIzumiGate_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Delete__FP13daIzumiGate_c.s"
 }
@@ -207,7 +194,7 @@ asm static void daIzumiGate_Delete(daIzumiGate_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80849408-80849438 002E+02 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80849408-80849438 002E+02 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -219,62 +206,62 @@ SECTION_DEAD static char const* const pad_80849436 = "\0";
 #pragma pop
 
 /* 80849438-8084943C 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 8084943C-8084945C 0020+00 s=1 e=0 z=0  None .data      l_daIzumiGate_Method                                         */
-SECTION_DATA static void* l_daIzumiGate_Method[8] = {
-	/* 0    */ (void*)daIzumiGate_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daIzumiGate_Delete__FP13daIzumiGate_c,
-	/* 2    */ (void*)daIzumiGate_Execute__FP13daIzumiGate_c,
-	/* 3    */ (void*)daIzumiGate_IsDelete__FP13daIzumiGate_c,
-	/* 4    */ (void*)daIzumiGate_Draw__FP13daIzumiGate_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8084943C-8084945C 0020+00 s=0 e=0 z=0  None .data      l_daIzumiGate_Method                                         */
+SECTION_DATA void* l_daIzumiGate_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8084945C-8084948C 0030+00 s=0 e=0 z=1  None .data      g_profile_Izumi_Gate                                         */
+/* 8084945C-8084948C 0030+00 s=0 e=0 z=0  None .data      g_profile_Izumi_Gate                                         */
 SECTION_DATA void* g_profile_Izumi_Gate[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01570000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005AC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00260000,
-	/* 9    */ (void*)&l_daIzumiGate_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01570000,
+	(void*)NULL,
+	(void*)0x000005AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00260000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 8084948C-808494B4 0028+00 s=1 e=0 z=0  None .data      __vt__13daIzumiGate_c                                        */
 SECTION_DATA static void* __vt__13daIzumiGate_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__13daIzumiGate_cFv,
-	/* 3    */ (void*)Create__13daIzumiGate_cFv,
-	/* 4    */ (void*)Execute__13daIzumiGate_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__13daIzumiGate_cFv,
-	/* 6    */ (void*)Delete__13daIzumiGate_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80849184-80849260 00DC+00 s=1 e=0 z=0  None .text      daIzumiGate_Create__FP10fopAc_ac_c                           */
+/* 80849184-80849260 00DC+00 s=0 e=0 z=0  None .text      daIzumiGate_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daIzumiGate_Create(fopAc_ac_c* param_0) {
+asm void daIzumiGate_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_izumi_gate/d_a_izumi_gate/daIzumiGate_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80849260-808492D8 0078+00 s=1 e=0 z=0  None .text      CreateHeap__13daIzumiGate_cFv                                */
+/* 80849260-808492D8 0078+00 s=0 e=0 z=0  None .text      CreateHeap__13daIzumiGate_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -285,7 +272,7 @@ asm void daIzumiGate_c::CreateHeap() {
 #pragma pop
 
 
-/* 808492D8-808492FC 0024+00 s=1 e=0 z=0  None .text      Create__13daIzumiGate_cFv                                    */
+/* 808492D8-808492FC 0024+00 s=0 e=0 z=0  None .text      Create__13daIzumiGate_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -296,7 +283,7 @@ asm void daIzumiGate_c::Create() {
 #pragma pop
 
 
-/* 808492FC-80849328 002C+00 s=1 e=0 z=0  None .text      Execute__13daIzumiGate_cFPPA3_A4_f                           */
+/* 808492FC-80849328 002C+00 s=0 e=0 z=0  None .text      Execute__13daIzumiGate_cFPPA3_A4_f                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -307,7 +294,7 @@ asm void daIzumiGate_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80849328-808493CC 00A4+00 s=1 e=0 z=0  None .text      Draw__13daIzumiGate_cFv                                      */
+/* 80849328-808493CC 00A4+00 s=0 e=0 z=0  None .text      Draw__13daIzumiGate_cFv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -318,7 +305,7 @@ asm void daIzumiGate_c::Draw() {
 #pragma pop
 
 
-/* 808493CC-80849400 0034+00 s=1 e=0 z=0  None .text      Delete__13daIzumiGate_cFv                                    */
+/* 808493CC-80849400 0034+00 s=0 e=0 z=0  None .text      Delete__13daIzumiGate_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

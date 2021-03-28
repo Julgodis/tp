@@ -4,8 +4,8 @@ lbl_80489EDC:
 /* 80489EE4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80489EE8  3C 60 80 49 */	lis r3, data_8048A670@ha
 /* 80489EEC  38 63 A6 70 */	addi r3, r3, data_8048A670@l
-/* 80489EF0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8048A670 */
-/* 80489EF4  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 8048AC98 */
+/* 80489EF0  80 63 00 00 */	lwz r3, 0(r3)
+/* 80489EF4  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80489EF8  81 8C 02 54 */	lwz r12, 0x254(r12)
 /* 80489EFC  7D 89 03 A6 */	mtctr r12
 /* 80489F00  4E 80 04 21 */	bctrl 

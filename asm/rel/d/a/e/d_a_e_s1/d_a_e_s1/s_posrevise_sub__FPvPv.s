@@ -16,7 +16,7 @@ lbl_8077CB68:
 /* 8077CBA0  41 82 00 98 */	beq lbl_8077CC38
 /* 8077CBA4  3C 60 80 78 */	lis r3, s_check@ha
 /* 8077CBA8  38 83 14 C0 */	addi r4, r3, s_check@l
-/* 8077CBAC  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 807814C0 */
+/* 8077CBAC  80 04 00 00 */	lwz r0, 0(r4)
 /* 8077CBB0  2C 00 00 01 */	cmpwi r0, 1
 /* 8077CBB4  41 81 00 84 */	bgt lbl_8077CC38
 /* 8077CBB8  1C 00 00 0C */	mulli r0, r0, 0xc

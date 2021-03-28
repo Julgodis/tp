@@ -39,9 +39,9 @@ lbl_805AF758:
 /* 805AF770  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 805AF774  B0 1D 06 96 */	sth r0, 0x696(r29)
 lbl_805AF778:
-/* 805AF778  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805AF77C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805AF780  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 805AF778  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805AF77C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805AF780  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 805AF784  28 00 00 00 */	cmplwi r0, 0
 /* 805AF788  41 82 00 B4 */	beq lbl_805AF83C
 /* 805AF78C  88 1F 06 EC */	lbz r0, 0x6ec(r31)
@@ -110,7 +110,7 @@ lbl_805AF858:
 /* 805AF874  B0 1D 06 6C */	sth r0, 0x66c(r29)
 /* 805AF878  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805AF87C  3B E3 33 FC */	addi r31, r3, l_HIO@l
-/* 805AF880  A8 1F 00 12 */	lha r0, 0x12(r31)	/* effective address: 805B340E */
+/* 805AF880  A8 1F 00 12 */	lha r0, 0x12(r31)
 /* 805AF884  C8 3E 00 78 */	lfd f1, 0x78(r30)
 /* 805AF888  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 805AF88C  90 01 00 3C */	stw r0, 0x3c(r1)
@@ -161,7 +161,7 @@ lbl_805AF8DC:
 /* 805AF93C  C0 5E 00 30 */	lfs f2, 0x30(r30)
 /* 805AF940  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805AF944  38 63 33 FC */	addi r3, r3, l_HIO@l
-/* 805AF948  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 805B3404 */
+/* 805AF948  C0 03 00 08 */	lfs f0, 8(r3)
 /* 805AF94C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 805AF950  EC 03 00 2A */	fadds f0, f3, f0
 /* 805AF954  EC 00 08 2A */	fadds f0, f0, f1
@@ -176,9 +176,9 @@ lbl_805AF8DC:
 /* 805AF978  40 82 01 50 */	bne lbl_805AFAC8
 /* 805AF97C  38 61 00 1C */	addi r3, r1, 0x1c
 /* 805AF980  38 9D 06 B0 */	addi r4, r29, 0x6b0
-/* 805AF984  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805AF988  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
-/* 805AF98C  80 A5 5D AC */	lwz r5, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 805AF984  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805AF988  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
+/* 805AF98C  80 A5 5D AC */	lwz r5, 0x5dac(r5)
 /* 805AF990  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 805AF994  4B CB 71 A0 */	b __mi__4cXyzCFRC3Vec
 /* 805AF998  38 61 00 1C */	addi r3, r1, 0x1c

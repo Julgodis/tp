@@ -17,7 +17,7 @@ lbl_80B0FA5C:
 /* 80B0FA98  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
 /* 80B0FA9C  3C 80 80 B1 */	lis r4, m__16daNpcTkc_Param_c@ha
 /* 80B0FAA0  38 84 08 B4 */	addi r4, r4, m__16daNpcTkc_Param_c@l
-/* 80B0FAA4  C0 04 00 8C */	lfs f0, 0x8c(r4)	/* effective address: 80B10940 */
+/* 80B0FAA4  C0 04 00 8C */	lfs f0, 0x8c(r4)
 /* 80B0FAA8  EC 21 00 2A */	fadds f1, f1, f0
 /* 80B0FAAC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80B0FAB0  D0 1F 04 A8 */	stfs f0, 0x4a8(r31)

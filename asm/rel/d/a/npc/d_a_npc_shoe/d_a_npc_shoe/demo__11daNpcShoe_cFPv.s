@@ -28,9 +28,9 @@ lbl_80AE90D4:
 /* 80AE90F8  B0 1F 0E 18 */	sth r0, 0xe18(r31)
 /* 80AE90FC  48 00 01 48 */	b lbl_80AE9244
 lbl_80AE9100:
-/* 80AE9100  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE9104  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80AE9108  88 1E 4F AD */	lbz r0, 0x4fad(r30)	/* effective address: 8040B16D */
+/* 80AE9100  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE9104  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80AE9108  88 1E 4F AD */	lbz r0, 0x4fad(r30)
 /* 80AE910C  28 00 00 00 */	cmplwi r0, 0
 /* 80AE9110  41 82 01 34 */	beq lbl_80AE9244
 /* 80AE9114  A0 1F 00 F8 */	lhz r0, 0xf8(r31)

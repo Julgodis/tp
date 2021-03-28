@@ -22,9 +22,6 @@ struct dMsgScrnArrow_c {
 	/* 8023C010 */ void dotAnimeMove();
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -36,6 +33,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -112,9 +112,9 @@ SECTION_DEAD static char const* const pad_803998F1 = "\0\0\0\0\0\0";
 
 /* 803C0CF8-803C0D08 000C+04 s=2 e=0 z=0  None .data      __vt__15dMsgScrnArrow_c                                      */
 SECTION_DATA static void* __vt__15dMsgScrnArrow_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dMsgScrnArrow_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dMsgScrnArrow_cFv,
 	/* padding */
 	NULL,
 };

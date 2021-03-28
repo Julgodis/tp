@@ -7,11 +7,11 @@ lbl_80AD20A8:
 /* 80AD20BC  7C 7E 1B 78 */	mr r30, r3
 /* 80AD20C0  3C 60 80 AD */	lis r3, m__20daNpc_Seira2_Param_c@ha
 /* 80AD20C4  3B E3 4A 60 */	addi r31, r3, m__20daNpc_Seira2_Param_c@l
-/* 80AD20C8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80AD4B24 */
+/* 80AD20C8  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80AD20CC  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80AD20D0  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 80AD4B28 */
+/* 80AD20D0  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 80AD20D4  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80AD20D8  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 80AD4B08 */
+/* 80AD20D8  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 80AD20DC  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80AD20E0  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80AD20E4  38 80 00 00 */	li r4, 0

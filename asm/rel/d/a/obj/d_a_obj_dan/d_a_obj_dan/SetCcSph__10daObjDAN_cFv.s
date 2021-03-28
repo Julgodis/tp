@@ -11,8 +11,8 @@ lbl_80BDA620:
 /* 80BDA644  3C 80 80 BE */	lis r4, lit_3788@ha
 /* 80BDA648  C0 24 C3 F4 */	lfs f1, lit_3788@l(r4)
 /* 80BDA64C  4B 69 50 BC */	b SetR__8cM3dGSphFf
-/* 80BDA650  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDA654  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BDA650  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDA654  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BDA658  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80BDA65C  38 9F 05 CC */	addi r4, r31, 0x5cc
 /* 80BDA660  4B 68 A5 48 */	b Set__4cCcSFP8cCcD_Obj

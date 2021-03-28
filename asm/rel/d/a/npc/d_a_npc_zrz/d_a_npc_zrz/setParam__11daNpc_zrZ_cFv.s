@@ -16,10 +16,10 @@ lbl_80B95244:
 /* 80B9527C  88 1F 09 F4 */	lbz r0, 0x9f4(r31)
 /* 80B95280  28 00 00 00 */	cmplwi r0, 0
 /* 80B95284  40 82 00 20 */	bne lbl_80B952A4
-/* 80B95288  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B9528C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B95290  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80B95294  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80B95288  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B9528C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B95290  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80B95294  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B95298  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B9529C  41 82 00 08 */	beq lbl_80B952A4
 /* 80B952A0  3B A0 00 00 */	li r29, 0
@@ -60,18 +60,18 @@ lbl_80B952E0:
 /* 80B9531C  93 BF 05 5C */	stw r29, 0x55c(r31)
 /* 80B95320  3C 60 80 BA */	lis r3, m__17daNpc_zrZ_Param_c@ha
 /* 80B95324  38 83 AF EC */	addi r4, r3, m__17daNpc_zrZ_Param_c@l
-/* 80B95328  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80B9AFF4 */
+/* 80B95328  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80B9532C  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80B95330  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 80B95334  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
 /* 80B95338  38 7F 07 E4 */	addi r3, r31, 0x7e4
-/* 80B9533C  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80B9B008 */
+/* 80B9533C  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80B95340  4B 4E 0C 00 */	b SetWallR__12dBgS_AcchCirFf
 /* 80B95344  3C 60 80 BA */	lis r3, m__17daNpc_zrZ_Param_c@ha
 /* 80B95348  38 63 AF EC */	addi r3, r3, m__17daNpc_zrZ_Param_c@l
-/* 80B9534C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B9B004 */
+/* 80B9534C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B95350  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 80B95354  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80B9AFF0 */
+/* 80B95354  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80B95358  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80B9535C  A8 1F 04 6A */	lha r0, 0x46a(r31)
 /* 80B95360  1C 60 00 64 */	mulli r3, r0, 0x64

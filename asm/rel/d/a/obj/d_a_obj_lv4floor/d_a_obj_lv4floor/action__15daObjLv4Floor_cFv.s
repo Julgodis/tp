@@ -6,7 +6,7 @@ lbl_80C67A30:
 /* 80C67A40  38 E4 7D 9C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80C67A44  3C 80 80 C6 */	lis r4, data_80C67E80@ha
 /* 80C67A48  38 C4 7E 80 */	addi r6, r4, data_80C67E80@l
-/* 80C67A4C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80C67E80 */
+/* 80C67A4C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C67A50  7C 00 07 75 */	extsb. r0, r0
 /* 80C67A54  40 82 00 58 */	bne lbl_80C67AAC
 /* 80C67A58  80 87 00 24 */	lwz r4, 0x24(r7)

@@ -6,8 +6,8 @@ lbl_80CB214C:
 /* 80CB215C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80CB2160  7C 7E 1B 78 */	mr r30, r3
 /* 80CB2164  8B E3 05 D7 */	lbz r31, 0x5d7(r3)
-/* 80CB2168  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB216C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB2168  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB216C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB2170  88 9E 05 D4 */	lbz r4, 0x5d4(r30)
 /* 80CB2174  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80CB2178  7C 05 07 74 */	extsb r5, r0

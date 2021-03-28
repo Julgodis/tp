@@ -9,8 +9,8 @@ lbl_8047114C:
 /* 80471168  4B CE E5 C8 */	b checkCarryStartLightBallB__9daPy_py_cFv
 /* 8047116C  28 03 00 00 */	cmplwi r3, 0
 /* 80471170  41 82 01 08 */	beq lbl_80471278
-/* 80471174  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80471178  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80471174  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80471178  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047117C  3B 83 07 F0 */	addi r28, r3, 0x7f0
 /* 80471180  7F 83 E3 78 */	mr r3, r28
 /* 80471184  38 80 26 20 */	li r4, 0x2620
@@ -81,8 +81,8 @@ lbl_8047123C:
 /* 80471270  38 60 00 00 */	li r3, 0
 /* 80471274  48 00 03 1C */	b lbl_80471590
 lbl_80471278:
-/* 80471278  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047127C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80471278  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047127C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80471280  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80471284  7F E3 FB 78 */	mr r3, r31
 /* 80471288  38 80 26 20 */	li r4, 0x2620
@@ -199,8 +199,8 @@ lbl_80471418:
 /* 8047141C  88 03 0D 64 */	lbz r0, struct_80450D64+0x0@l(r3)
 /* 80471420  7C 00 07 75 */	extsb. r0, r0
 /* 80471424  40 82 00 C4 */	bne lbl_804714E8
-/* 80471428  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047142C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80471428  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047142C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80471430  38 80 00 3F */	li r4, 0x3f
 /* 80471434  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 80471438  7C 05 07 74 */	extsb r5, r0

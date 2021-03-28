@@ -117,8 +117,8 @@ lbl_80A97EC8:
 /* 80A97F7C  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 80A97F80  90 1D 0E E8 */	stw r0, 0xee8(r29)
 /* 80A97F84  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80A97F88  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A97F8C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80A97F88  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A97F8C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80A97F90  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80A97F94  4B 5D EB 18 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80A97F98  80 1D 07 68 */	lwz r0, 0x768(r29)

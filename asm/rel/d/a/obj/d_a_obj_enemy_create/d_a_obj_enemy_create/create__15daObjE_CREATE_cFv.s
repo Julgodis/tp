@@ -41,8 +41,8 @@ lbl_80BE37F8:
 /* 80BE37F8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BE37FC  54 00 46 3E */	srwi r0, r0, 0x18
 /* 80BE3800  98 1F 05 6C */	stb r0, 0x56c(r31)
-/* 80BE3804  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE3808  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE3804  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE3808  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE380C  88 9F 05 6C */	lbz r4, 0x56c(r31)
 /* 80BE3810  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80BE3814  7C 05 07 74 */	extsb r5, r0

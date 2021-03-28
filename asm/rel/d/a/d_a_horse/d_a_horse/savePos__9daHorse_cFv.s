@@ -13,8 +13,8 @@ lbl_8084116C:
 /* 80841198  40 82 00 28 */	bne lbl_808411C0
 /* 8084119C  88 06 04 E2 */	lbz r0, 0x4e2(r6)
 /* 808411A0  7C 07 07 74 */	extsb r7, r0
-/* 808411A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808411A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808411A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808411A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808411AC  38 83 4E 00 */	addi r4, r3, 0x4e00
 /* 808411B0  38 63 00 40 */	addi r3, r3, 0x40
 /* 808411B4  38 A6 04 D0 */	addi r5, r6, 0x4d0

@@ -10,7 +10,7 @@ lbl_80876E0C:
 /* 80876E2C  4B AE B3 94 */	b _savegpr_22
 /* 80876E30  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 80876E34  3B C4 9B D0 */	addi r30, r4, daMP_ActivePlayer@l
-/* 80876E38  80 1E 00 A0 */	lwz r0, 0xa0(r30)	/* effective address: 80879C70 */
+/* 80876E38  80 1E 00 A0 */	lwz r0, 0xa0(r30)
 /* 80876E3C  2C 00 00 00 */	cmpwi r0, 0
 /* 80876E40  41 82 02 00 */	beq lbl_80877040
 /* 80876E44  88 1E 00 A5 */	lbz r0, 0xa5(r30)

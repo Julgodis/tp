@@ -26,8 +26,8 @@ lbl_80661940:
 /* 806619A0  38 9E 07 E4 */	addi r4, r30, 0x7e4
 /* 806619A4  4B 9B 8D 28 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 806619A8  38 7E 06 0C */	addi r3, r30, 0x60c
-/* 806619AC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806619B0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806619AC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806619B0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806619B4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806619B8  4B A1 50 F4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806619BC  C0 1E 06 A4 */	lfs f0, 0x6a4(r30)

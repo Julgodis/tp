@@ -11,11 +11,11 @@ lbl_80D68078:
 /* 80D6809C  4B 5D E4 14 */	b PSMTXCopy
 /* 80D680A0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80D680A4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80D680A8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80D680A8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80D680AC  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
-/* 80D680B0  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80D680B0  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80D680B4  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)
-/* 80D680B8  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80D680B8  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80D680BC  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
 /* 80D680C0  38 60 00 01 */	li r3, 1
 /* 80D680C4  83 E1 00 0C */	lwz r31, 0xc(r1)

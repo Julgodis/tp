@@ -220,10 +220,10 @@ lbl_80A3D654:
 /* 80A3D658  4B FF E6 F1 */	bl func_80A3BD48
 /* 80A3D65C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A3D660  40 82 00 5C */	bne lbl_80A3D6BC
-/* 80A3D664  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A3D668  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A3D66C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A3D670  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 80A3D664  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A3D668  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A3D66C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A3D670  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80A3D674  28 00 00 27 */	cmplwi r0, 0x27
 /* 80A3D678  41 82 00 44 */	beq lbl_80A3D6BC
 /* 80A3D67C  A0 7E 05 8E */	lhz r3, 0x58e(r30)

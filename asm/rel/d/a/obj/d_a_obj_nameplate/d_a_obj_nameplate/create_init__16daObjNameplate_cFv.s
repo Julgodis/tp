@@ -7,12 +7,12 @@ lbl_80594098:
 /* 805940AC  7C 7E 1B 78 */	mr r30, r3
 /* 805940B0  3C 80 80 59 */	lis r4, M_attr__16daObjNameplate_c@ha
 /* 805940B4  3B E4 4E 74 */	addi r31, r4, M_attr__16daObjNameplate_c@l
-/* 805940B8  C0 3F 00 20 */	lfs f1, 0x20(r31)	/* effective address: 80594E94 */
-/* 805940BC  C0 5F 00 24 */	lfs f2, 0x24(r31)	/* effective address: 80594E98 */
-/* 805940C0  C0 7F 00 28 */	lfs f3, 0x28(r31)	/* effective address: 80594E9C */
-/* 805940C4  C0 9F 00 2C */	lfs f4, 0x2c(r31)	/* effective address: 80594EA0 */
-/* 805940C8  C0 BF 00 30 */	lfs f5, 0x30(r31)	/* effective address: 80594EA4 */
-/* 805940CC  C0 DF 00 34 */	lfs f6, 0x34(r31)	/* effective address: 80594EA8 */
+/* 805940B8  C0 3F 00 20 */	lfs f1, 0x20(r31)
+/* 805940BC  C0 5F 00 24 */	lfs f2, 0x24(r31)
+/* 805940C0  C0 7F 00 28 */	lfs f3, 0x28(r31)
+/* 805940C4  C0 9F 00 2C */	lfs f4, 0x2c(r31)
+/* 805940C8  C0 BF 00 30 */	lfs f5, 0x30(r31)
+/* 805940CC  C0 DF 00 34 */	lfs f6, 0x34(r31)
 /* 805940D0  4B A8 64 78 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 805940D4  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 805940D8  38 83 9A 20 */	addi r4, r3, sincosTable___5JMath@l

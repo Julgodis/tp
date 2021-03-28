@@ -78,11 +78,11 @@ struct cXyz {
 // 
 
 static void createHeapCallBack(fopAc_ac_c*); // 2
-static void daTag_Msg_Create(void*); // 2
-static void daTag_Msg_Delete(void*); // 2
-static void daTag_Msg_Execute(void*); // 2
-static void daTag_Msg_Draw(void*); // 2
-static bool daTag_Msg_IsDelete(void*); // 2
+void daTag_Msg_Create(void*); // 2
+void daTag_Msg_Delete(void*); // 2
+void daTag_Msg_Execute(void*); // 2
+void daTag_Msg_Draw(void*); // 2
+bool daTag_Msg_IsDelete(void*); // 2
 
 extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__11daTag_Msg_cFv(); // 1
@@ -96,15 +96,14 @@ extern "C" void otherCheck__11daTag_Msg_cFv(); // 1
 extern "C" void getResName__11daTag_Msg_cFv(); // 1
 extern "C" void getParam__11daTag_Msg_cFv(); // 1
 extern "C" void cut_speak__11daTag_Msg_cFii(); // 1
-extern "C" static void daTag_Msg_Create__FPv(); // 1
-extern "C" static void daTag_Msg_Delete__FPv(); // 1
-extern "C" static void daTag_Msg_Execute__FPv(); // 1
-extern "C" static void daTag_Msg_Draw__FPv(); // 1
-extern "C" static bool daTag_Msg_IsDelete__FPv(); // 1
+extern "C" void daTag_Msg_Create__FPv(); // 1
+extern "C" void daTag_Msg_Delete__FPv(); // 1
+extern "C" void daTag_Msg_Execute__FPv(); // 1
+extern "C" void daTag_Msg_Draw__FPv(); // 1
+extern "C" bool daTag_Msg_IsDelete__FPv(); // 1
 extern "C" void __dt__17daTag_Msg_Param_cFv(); // 1
-extern "C" extern u8 const lit_3814[8];
-extern "C" extern u8 const lit_3815[8];
-extern "C" extern u8 const lit_3816[8];
+extern "C" extern u8 const data_804901B8[12];
+extern "C" extern void* daTag_Msg_MethodTable[8];
 extern "C" extern void* g_profile_TAG_MSG[12];
 
 // 
@@ -147,12 +146,8 @@ extern "C" void PSVECSquareMag(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void strcpy(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 
@@ -172,112 +167,64 @@ asm static void createHeapCallBack(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80490178-8049017C 0001+03 s=1 e=0 z=0  None .rodata    m__17daTag_Msg_Param_c                                       */
-SECTION_RODATA static u8 const m__17daTag_Msg_Param_c[1 + 3 /* padding */] = {
-	0x00,
-	/* padding */
-	0x00, 0x00, 0x00,
-};
-
-/* 8049017C-80490180 0004+00 s=1 e=0 z=0  None .rodata    @3757                                                        */
-SECTION_RODATA static u32 const lit_3757 = 0x43160000;
-
-/* 80490180-80490188 0004+04 s=1 e=0 z=0  None .rodata    @3813                                                        */
-SECTION_RODATA static u8 const lit_3813[4 + 4 /* padding */] = {
-	0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80490188-80490190 0008+00 s=0 e=0 z=0  None .rodata    @3814                                                        */
-SECTION_RODATA u8 const lit_3814[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80490190-80490198 0008+00 s=0 e=0 z=0  None .rodata    @3815                                                        */
-SECTION_RODATA u8 const lit_3815[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80490198-804901A0 0008+00 s=0 e=0 z=0  None .rodata    @3816                                                        */
-SECTION_RODATA u8 const lit_3816[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 804901A0-804901A4 0004+00 s=1 e=0 z=0  None .rodata    @3880                                                        */
-SECTION_RODATA static u32 const lit_3880 = 0x42C80000;
-
-/* 804901A4-804901B8 0014+00 s=4 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_804901A4[20] = {
-	/* 804901A4 0007 stringBase_804901A4 @stringBase0 */
-	0x54, 0x61, 0x67, 0x4D, 0x73, 0x67, 0x00,
-	/* 804901AB 000D data_804901AB None */
-	0x53, 0x50, 0x45, 0x41, 0x4B, 0x00, 0x54, 0x61, 0x67, 0x5F, 0x6D, 0x73, 0x00,
-};
-
-/* 804901B8-804901C4 000C+00 s=1 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const data_804901B8[12] = {
-	0x50, 0x41, 0x55, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-};
-
 /* 804901C4-804901C8 0004+00 s=1 e=0 z=0  None .data      l_resName                                                    */
-SECTION_DATA static void* l_resName = (void*)(((char*)&struct_804901A4)+0x0) /* @stringBase0 */;
+SECTION_DATA static void* l_resName = (void*)NULL;
 
 /* 804901C8-804901D0 0008+00 s=1 e=0 z=0  None .data      l_evtNameTBL                                                 */
 SECTION_DATA static void* l_evtNameTBL[2] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)(((char*)&struct_804901A4)+0x7) /* None */,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804901D0-804901D8 0008+00 s=1 e=0 z=0  None .data      mEvtCutTBL__11daTag_Msg_c                                    */
 SECTION_DATA static void* mEvtCutTBL__11daTag_Msg_c[2] = {
-	/* 0    */ (void*)(((char*)&struct_804901A4)+0x7) /* None */,
-	/* 1    */ (void*)&data_804901B8,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804901D8-804901F8 0020+00 s=1 e=0 z=0  None .data      daTag_Msg_MethodTable                                        */
-SECTION_DATA static void* daTag_Msg_MethodTable[8] = {
-	/* 0    */ (void*)daTag_Msg_Create__FPv,
-	/* 1    */ (void*)daTag_Msg_Delete__FPv,
-	/* 2    */ (void*)daTag_Msg_Execute__FPv,
-	/* 3    */ (void*)daTag_Msg_IsDelete__FPv,
-	/* 4    */ (void*)daTag_Msg_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804901D8-804901F8 0020+00 s=0 e=0 z=0  None .data      daTag_Msg_MethodTable                                        */
+SECTION_DATA void* daTag_Msg_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804901F8-80490228 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_MSG                                            */
+/* 804901F8-80490228 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_MSG                                            */
 SECTION_DATA void* g_profile_TAG_MSG[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D50000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005E8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x011D0000,
-	/* 9    */ (void*)&daTag_Msg_MethodTable,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D50000,
+	(void*)NULL,
+	(void*)0x000005E8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x011D0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 80490228-80490234 000C+00 s=2 e=0 z=0  None .data      __vt__17daTag_Msg_Param_c                                    */
 SECTION_DATA static void* __vt__17daTag_Msg_Param_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17daTag_Msg_Param_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80490234-80490240 000C+00 s=2 e=0 z=0  None .data      __vt__11daTag_Msg_c                                          */
 SECTION_DATA static void* __vt__11daTag_Msg_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11daTag_Msg_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048F7F8-8048F878 0080+00 s=1 e=0 z=0  None .text      __dt__11daTag_Msg_cFv                                        */
+/* 8048F7F8-8048F878 0080+00 s=0 e=0 z=0  None .text      __dt__11daTag_Msg_cFv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -321,6 +268,17 @@ asm void daTag_Msg_c::destroy() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80490178-8049017C 0001+03 s=1 e=0 z=0  None .rodata    m__17daTag_Msg_Param_c                                       */
+SECTION_RODATA static u8 const m__17daTag_Msg_Param_c[1 + 3 /* padding */] = {
+	0x00,
+	/* padding */
+	0x00, 0x00, 0x00,
+};
+
+/* 8049017C-80490180 0004+00 s=1 e=0 z=0  None .rodata    @3757                                                        */
+SECTION_RODATA static u32 const lit_3757 = 0x43160000;
+
 /* 8048F9E8-8048FC68 0280+00 s=1 e=0 z=0  None .text      execute__11daTag_Msg_cFv                                     */
 #pragma push
 #pragma optimization_level 0
@@ -337,6 +295,29 @@ bool daTag_Msg_c::draw() {
 	return true;
 }
 
+
+/* ############################################################################################## */
+/* 80490180-80490188 0004+04 s=1 e=0 z=0  None .rodata    @3813                                                        */
+SECTION_RODATA static u8 const lit_3813[4 + 4 /* padding */] = {
+	0x00, 0x00, 0x00, 0x00,
+	/* padding */
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80490188-80490190 0008+00 s=1 e=0 z=0  None .rodata    @3814                                                        */
+SECTION_RODATA static u8 const lit_3814[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80490190-80490198 0008+00 s=1 e=0 z=0  None .rodata    @3815                                                        */
+SECTION_RODATA static u8 const lit_3815[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80490198-804901A0 0008+00 s=1 e=0 z=0  None .rodata    @3816                                                        */
+SECTION_RODATA static u8 const lit_3816[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
 
 /* 8048FC70-8048FE18 01A8+00 s=1 e=0 z=0  None .text      rangeCheck__11daTag_Msg_cFv                                  */
 #pragma push
@@ -371,6 +352,18 @@ asm void daTag_Msg_c::getResName() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 804901A0-804901A4 0004+00 s=1 e=0 z=0  None .rodata    @3880                                                        */
+SECTION_RODATA static u32 const lit_3880 = 0x42C80000;
+
+/* 804901A4-804901B8 0014+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_804901A4[20] = {
+	/* 804901A4 0007 stringBase_804901A4 @stringBase0 */
+	0x54, 0x61, 0x67, 0x4D, 0x73, 0x67, 0x00,
+	/* 804901AB 000D data_804901AB None */
+	0x53, 0x50, 0x45, 0x41, 0x4B, 0x00, 0x54, 0x61, 0x67, 0x5F, 0x6D, 0x73, 0x00,
+};
+
 /* 8048FF9C-8049004C 00B0+00 s=1 e=0 z=0  None .text      getParam__11daTag_Msg_cFv                                    */
 #pragma push
 #pragma optimization_level 0
@@ -393,57 +386,57 @@ asm void daTag_Msg_c::cut_speak(int param_0, int param_1) {
 #pragma pop
 
 
-/* 804900A0-804900C0 0020+00 s=1 e=0 z=0  None .text      daTag_Msg_Create__FPv                                        */
+/* 804900A0-804900C0 0020+00 s=0 e=0 z=0  None .text      daTag_Msg_Create__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Msg_Create(void* param_0) {
+asm void daTag_Msg_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 804900C0-804900E0 0020+00 s=1 e=0 z=0  None .text      daTag_Msg_Delete__FPv                                        */
+/* 804900C0-804900E0 0020+00 s=0 e=0 z=0  None .text      daTag_Msg_Delete__FPv                                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Msg_Delete(void* param_0) {
+asm void daTag_Msg_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 804900E0-80490100 0020+00 s=1 e=0 z=0  None .text      daTag_Msg_Execute__FPv                                       */
+/* 804900E0-80490100 0020+00 s=0 e=0 z=0  None .text      daTag_Msg_Execute__FPv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Msg_Execute(void* param_0) {
+asm void daTag_Msg_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 80490100-80490120 0020+00 s=1 e=0 z=0  None .text      daTag_Msg_Draw__FPv                                          */
+/* 80490100-80490120 0020+00 s=0 e=0 z=0  None .text      daTag_Msg_Draw__FPv                                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Msg_Draw(void* param_0) {
+asm void daTag_Msg_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_msg/d_a_tag_msg/daTag_Msg_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 80490120-80490128 0008+00 s=1 e=0 z=0  None .text      daTag_Msg_IsDelete__FPv                                      */
-static bool daTag_Msg_IsDelete(void* param_0) {
+/* 80490120-80490128 0008+00 s=0 e=0 z=0  None .text      daTag_Msg_IsDelete__FPv                                      */
+bool daTag_Msg_IsDelete(void* param_0) {
 	return true;
 }
 
 
-/* 80490128-80490170 0048+00 s=1 e=0 z=0  None .text      __dt__17daTag_Msg_Param_cFv                                  */
+/* 80490128-80490170 0048+00 s=0 e=0 z=0  None .text      __dt__17daTag_Msg_Param_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -453,4 +446,10 @@ asm daTag_Msg_Param_c::~daTag_Msg_Param_c() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 804901B8-804901C4 000C+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const data_804901B8[12] = {
+	0x50, 0x41, 0x55, 0x53, 0x45, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
+};
 

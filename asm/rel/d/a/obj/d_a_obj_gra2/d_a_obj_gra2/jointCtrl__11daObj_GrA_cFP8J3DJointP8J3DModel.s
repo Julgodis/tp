@@ -52,7 +52,7 @@ lbl_80C00B28:
 /* 80C00B8C  EC 00 10 28 */	fsubs f0, f0, f2
 /* 80C00B90  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C00B94  38 63 FA 7C */	addi r3, r3, m__17daObj_GrA_Param_c@l
-/* 80C00B98  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 80C0FAC0 */
+/* 80C00B98  C0 23 00 44 */	lfs f1, 0x44(r3)
 /* 80C00B9C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80C00BA0  FC 00 00 1E */	fctiwz f0, f0
 /* 80C00BA4  D8 01 00 80 */	stfd f0, 0x80(r1)

@@ -56,9 +56,9 @@ lbl_805B06C8:
 /* 805B06D0  41 82 03 7C */	beq lbl_805B0A4C
 /* 805B06D4  38 03 FF FF */	addi r0, r3, -1
 /* 805B06D8  98 1F 06 F9 */	stb r0, 0x6f9(r31)
-/* 805B06DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805B06E0  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 805B06E4  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 805B06DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805B06E0  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 805B06E4  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 805B06E8  38 80 00 00 */	li r4, 0
 /* 805B06EC  90 81 00 08 */	stw r4, 8(r1)
 /* 805B06F0  38 00 FF FF */	li r0, -1
@@ -101,7 +101,7 @@ lbl_805B06C8:
 /* 805B0784  90 01 00 20 */	stw r0, 0x20(r1)
 /* 805B0788  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805B078C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805B0790  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805B0790  80 63 00 00 */	lwz r3, 0(r3)
 /* 805B0794  38 81 00 20 */	addi r4, r1, 0x20
 /* 805B0798  38 BC 04 A8 */	addi r5, r28, 0x4a8
 /* 805B079C  38 C0 00 00 */	li r6, 0
@@ -151,7 +151,7 @@ lbl_805B0824:
 /* 805B0840  C0 3E 00 30 */	lfs f1, 0x30(r30)
 /* 805B0844  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805B0848  38 63 33 FC */	addi r3, r3, l_HIO@l
-/* 805B084C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 805B3404 */
+/* 805B084C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 805B0850  EC 01 00 32 */	fmuls f0, f1, f0
 /* 805B0854  EC 02 00 2A */	fadds f0, f2, f0
 /* 805B0858  D0 1C 06 78 */	stfs f0, 0x678(r28)
@@ -307,7 +307,7 @@ lbl_805B0A4C:
 /* 805B0A9C  40 82 00 50 */	bne lbl_805B0AEC
 /* 805B0AA0  3C 60 80 3E */	lis r3, m_cpadInfo__8mDoCPd_c@ha
 /* 805B0AA4  38 63 D2 E8 */	addi r3, r3, m_cpadInfo__8mDoCPd_c@l
-/* 805B0AA8  80 03 00 34 */	lwz r0, 0x34(r3)	/* effective address: 803DD31C */
+/* 805B0AA8  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 805B0AAC  54 00 04 E7 */	rlwinm. r0, r0, 0, 0x13, 0x13
 /* 805B0AB0  41 82 00 3C */	beq lbl_805B0AEC
 /* 805B0AB4  38 00 00 00 */	li r0, 0

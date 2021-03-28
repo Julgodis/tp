@@ -45,8 +45,8 @@ lbl_804A4624:
 /* 804A4644  80 7D 05 F8 */	lwz r3, 0x5f8(r29)
 /* 804A4648  38 81 00 10 */	addi r4, r1, 0x10
 /* 804A464C  4B DC 36 DC */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 804A4650  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A4654  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804A4650  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A4654  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804A4658  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804A465C  80 9D 05 F8 */	lwz r4, 0x5f8(r29)
 /* 804A4660  4B BC FE 40 */	b GroundCross__4cBgSFP11cBgS_GndChk
@@ -168,8 +168,8 @@ lbl_804A47D8:
 /* 804A4800  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 804A4804  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 804A4808  41 82 00 24 */	beq lbl_804A482C
-/* 804A480C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A4810  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804A480C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A4810  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804A4814  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804A4818  80 9D 05 F8 */	lwz r4, 0x5f8(r29)
 /* 804A481C  38 84 00 14 */	addi r4, r4, 0x14

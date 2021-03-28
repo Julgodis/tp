@@ -58,8 +58,8 @@ lbl_80597238:
 /* 8059723C  2C 1C 00 02 */	cmpwi r28, 2
 /* 80597240  3B BD 01 44 */	addi r29, r29, 0x144
 /* 80597244  41 80 FF B4 */	blt lbl_805971F8
-/* 80597248  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059724C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80597248  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059724C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80597250  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80597254  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80597258  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -82,7 +82,7 @@ lbl_80597280:
 /* 80597298  90 01 00 08 */	stw r0, 8(r1)
 /* 8059729C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805972A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805972A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805972A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805972A8  38 81 00 08 */	addi r4, r1, 8
 /* 805972AC  38 BE 0B 0C */	addi r5, r30, 0xb0c
 /* 805972B0  38 C0 00 00 */	li r6, 0
@@ -94,8 +94,8 @@ lbl_80597280:
 /* 805972C8  39 00 00 00 */	li r8, 0
 /* 805972CC  4B D1 46 B8 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 lbl_805972D0:
-/* 805972D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805972D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805972D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805972D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805972D8  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 805972DC  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 805972E0  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -106,8 +106,8 @@ lbl_805972D0:
 lbl_805972F4:
 /* 805972F4  3B 20 00 00 */	li r25, 0
 /* 805972F8  3B A0 00 00 */	li r29, 0
-/* 805972FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80597300  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805972FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80597300  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80597304  3B 63 23 3C */	addi r27, r3, 0x233c
 /* 80597308  C3 DF 00 80 */	lfs f30, 0x80(r31)
 /* 8059730C  3B 9F 00 20 */	addi r28, r31, 0x20

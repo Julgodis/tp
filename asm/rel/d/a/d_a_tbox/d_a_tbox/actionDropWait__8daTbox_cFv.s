@@ -19,8 +19,8 @@ lbl_80494F44:
 /* 80494F88  4B FF C4 49 */	bl clrDzb__8daTbox_cFv
 /* 80494F8C  38 00 00 00 */	li r0, 0
 /* 80494F90  98 1F 09 7D */	stb r0, 0x97d(r31)
-/* 80494F94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80494F98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80494F94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80494F98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80494F9C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80494FA0  80 9E 00 20 */	lwz r4, 0x20(r30)
 /* 80494FA4  38 A0 00 00 */	li r5, 0

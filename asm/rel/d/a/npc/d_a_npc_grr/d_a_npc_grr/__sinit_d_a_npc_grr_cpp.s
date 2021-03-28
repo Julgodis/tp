@@ -15,12 +15,12 @@ lbl_809E3800:
 /* 809E3834  38 A3 3D 44 */	addi r5, r3, mEvtCutList__11daNpc_grR_c@l
 /* 809E3838  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809E383C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809E3840  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809E3844  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 809E3848  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 809E3D44 */
-/* 809E384C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 809E3D48 */
-/* 809E3850  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 809E3854  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 809E3D4C */
+/* 809E3840  80 64 00 00 */	lwz r3, 0(r4)
+/* 809E3844  80 04 00 04 */	lwz r0, 4(r4)
+/* 809E3848  90 65 00 00 */	stw r3, 0(r5)
+/* 809E384C  90 05 00 04 */	stw r0, 4(r5)
+/* 809E3850  80 04 00 08 */	lwz r0, 8(r4)
+/* 809E3854  90 05 00 08 */	stw r0, 8(r5)
 /* 809E3858  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 809E385C  7C 08 03 A6 */	mtlr r0
 /* 809E3860  38 21 00 10 */	addi r1, r1, 0x10

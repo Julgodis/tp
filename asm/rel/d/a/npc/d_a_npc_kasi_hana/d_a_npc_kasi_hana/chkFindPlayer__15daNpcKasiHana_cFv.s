@@ -5,12 +5,12 @@ lbl_80A1DB1C:
 /* 80A1DB28  39 61 00 20 */	addi r11, r1, 0x20
 /* 80A1DB2C  4B 94 46 B0 */	b _savegpr_29
 /* 80A1DB30  7C 7D 1B 78 */	mr r29, r3
-/* 80A1DB34  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A1DB38  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A1DB3C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A1DB34  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A1DB38  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A1DB3C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A1DB40  3C A0 80 A2 */	lis r5, m__21daNpcKasiHana_Param_c@ha
 /* 80A1DB44  38 A5 10 C8 */	addi r5, r5, m__21daNpcKasiHana_Param_c@l
-/* 80A1DB48  C0 25 00 50 */	lfs f1, 0x50(r5)	/* effective address: 80A21118 */
+/* 80A1DB48  C0 25 00 50 */	lfs f1, 0x50(r5)
 /* 80A1DB4C  4B 73 5E A4 */	b chkActorInSight__8daNpcF_cFP10fopAc_ac_cf
 /* 80A1DB50  2C 03 00 00 */	cmpwi r3, 0
 /* 80A1DB54  40 82 00 14 */	bne lbl_80A1DB68

@@ -28,16 +28,16 @@ lbl_80548420:
 /* 80548458  B0 1F 00 FA */	sth r0, 0xfa(r31)
 /* 8054845C  3C 60 80 55 */	lis r3, lrl@ha
 /* 80548460  38 63 B0 04 */	addi r3, r3, lrl@l
-/* 80548464  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8054B004 */
+/* 80548464  80 63 00 00 */	lwz r3, 0(r3)
 /* 80548468  28 03 00 00 */	cmplwi r3, 0
 /* 8054846C  41 82 00 10 */	beq lbl_8054847C
 /* 80548470  A8 03 13 B4 */	lha r0, 0x13b4(r3)
 /* 80548474  2C 00 00 00 */	cmpwi r0, 0
 /* 80548478  40 82 01 B0 */	bne lbl_80548628
 lbl_8054847C:
-/* 8054847C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80548480  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80548484  88 1E 4F AD */	lbz r0, 0x4fad(r30)	/* effective address: 8040B16D */
+/* 8054847C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80548480  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80548484  88 1E 4F AD */	lbz r0, 0x4fad(r30)
 /* 80548488  28 00 00 00 */	cmplwi r0, 0
 /* 8054848C  41 82 01 60 */	beq lbl_805485EC
 /* 80548490  A0 1F 00 F8 */	lhz r0, 0xf8(r31)

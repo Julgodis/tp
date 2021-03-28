@@ -9,12 +9,12 @@ lbl_8098D198:
 /* 8098D1B4  41 82 00 A0 */	beq lbl_8098D254
 /* 8098D1B8  3C 80 80 99 */	lis r4, l_btkGetParamList@ha
 /* 8098D1BC  38 A4 20 3C */	addi r5, r4, l_btkGetParamList@l
-/* 8098D1C0  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80992044 */
+/* 8098D1C0  80 05 00 08 */	lwz r0, 8(r5)
 /* 8098D1C4  54 00 10 3A */	slwi r0, r0, 2
 /* 8098D1C8  3C 80 80 99 */	lis r4, l_arcNames@ha
 /* 8098D1CC  38 84 20 A8 */	addi r4, r4, l_arcNames@l
 /* 8098D1D0  7C 84 00 2E */	lwzx r4, r4, r0
-/* 8098D1D4  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 8099203C */
+/* 8098D1D4  80 A5 00 00 */	lwz r5, 0(r5)
 /* 8098D1D8  4B 7C 59 CC */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 8098D1DC  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 8098D1E0  7C 03 00 40 */	cmplw r3, r0

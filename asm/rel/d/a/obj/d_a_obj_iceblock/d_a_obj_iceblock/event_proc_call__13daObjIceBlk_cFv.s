@@ -6,7 +6,7 @@ lbl_80C23A50:
 /* 80C23A60  38 E4 44 D0 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80C23A64  3C 80 80 C2 */	lis r4, struct_80C24698+0x1@ha
 /* 80C23A68  38 C4 46 99 */	addi r6, r4, struct_80C24698+0x1@l
-/* 80C23A6C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80C24699 */
+/* 80C23A6C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80C23A70  7C 00 07 75 */	extsb. r0, r0
 /* 80C23A74  40 82 00 70 */	bne lbl_80C23AE4
 /* 80C23A78  80 87 00 54 */	lwz r4, 0x54(r7)

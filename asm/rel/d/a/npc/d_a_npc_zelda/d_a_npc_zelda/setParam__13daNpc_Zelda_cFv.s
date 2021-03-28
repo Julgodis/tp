@@ -10,10 +10,10 @@ lbl_80B75EE8:
 /* 80B75F08  48 00 01 6D */	bl srchActors__13daNpc_Zelda_cFv
 /* 80B75F0C  3C 60 80 B7 */	lis r3, m__19daNpc_Zelda_Param_c@ha
 /* 80B75F10  38 83 7F C8 */	addi r4, r3, m__19daNpc_Zelda_Param_c@l
-/* 80B75F14  AB A4 00 48 */	lha r29, 0x48(r4)	/* effective address: 80B78010 */
-/* 80B75F18  AB C4 00 4A */	lha r30, 0x4a(r4)	/* effective address: 80B78012 */
-/* 80B75F1C  A8 64 00 4C */	lha r3, 0x4c(r4)	/* effective address: 80B78014 */
-/* 80B75F20  A8 84 00 4E */	lha r4, 0x4e(r4)	/* effective address: 80B78016 */
+/* 80B75F14  AB A4 00 48 */	lha r29, 0x48(r4)
+/* 80B75F18  AB C4 00 4A */	lha r30, 0x4a(r4)
+/* 80B75F1C  A8 64 00 4C */	lha r3, 0x4c(r4)
+/* 80B75F20  A8 84 00 4E */	lha r4, 0x4e(r4)
 /* 80B75F24  4B 5D 6A F4 */	b daNpcT_getDistTableIdx__Fii
 /* 80B75F28  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 80B75F2C  88 1F 05 44 */	lbz r0, 0x544(r31)
@@ -26,35 +26,35 @@ lbl_80B75EE8:
 /* 80B75F48  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80B75F4C  3C 60 80 B7 */	lis r3, m__19daNpc_Zelda_Param_c@ha
 /* 80B75F50  38 63 7F C8 */	addi r3, r3, m__19daNpc_Zelda_Param_c@l
-/* 80B75F54  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80B77FD0 */
+/* 80B75F54  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80B75F58  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80B75F5C  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 80B75F60  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 80B75F64  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80B77FD8 */
+/* 80B75F64  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80B75F68  FC 00 00 1E */	fctiwz f0, f0
 /* 80B75F6C  D8 01 00 08 */	stfd f0, 8(r1)
 /* 80B75F70  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80B75F74  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 80B75F78  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80B77FDC */
+/* 80B75F78  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80B75F7C  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 80B75F80  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80B77FE4 */
+/* 80B75F80  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B75F84  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 80B75F88  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 80B78018 */
+/* 80B75F88  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 80B75F8C  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 80B75F90  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80B75F94  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 80B75F98  4B 4F FF A8 */	b SetWallR__12dBgS_AcchCirFf
 /* 80B75F9C  3C 60 80 B7 */	lis r3, m__19daNpc_Zelda_Param_c@ha
 /* 80B75FA0  38 63 7F C8 */	addi r3, r3, m__19daNpc_Zelda_Param_c@l
-/* 80B75FA4  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80B77FE0 */
+/* 80B75FA4  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80B75FA8  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 80B75FAC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80B77FD4 */
+/* 80B75FAC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B75FB0  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 80B75FB4  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80B78034 */
+/* 80B75FB4  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80B75FB8  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 80B75FBC  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80B7800C */
+/* 80B75FBC  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80B75FC0  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 80B75FC4  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80B77FCC */
+/* 80B75FC4  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80B75FC8  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80B75FCC  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 80B75FD0  28 00 00 00 */	cmplwi r0, 0

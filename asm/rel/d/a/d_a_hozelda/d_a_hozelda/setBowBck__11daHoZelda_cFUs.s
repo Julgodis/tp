@@ -9,8 +9,8 @@ lbl_80848118:
 /* 80848134  3C 60 80 85 */	lis r3, l_arcName@ha
 /* 80848138  38 63 8E 3C */	addi r3, r3, l_arcName@l
 /* 8084813C  54 84 04 3E */	clrlwi r4, r4, 0x10
-/* 80848140  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80848144  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80848140  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80848144  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80848148  3C A5 00 02 */	addis r5, r5, 2
 /* 8084814C  38 C0 00 80 */	li r6, 0x80
 /* 80848150  38 A5 C2 F8 */	addi r5, r5, -15624

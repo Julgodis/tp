@@ -19,10 +19,10 @@ lbl_80C7992C:
 /* 80C79970  38 00 00 06 */	li r0, 6
 /* 80C79974  7C 09 03 A6 */	mtctr r0
 lbl_80C79978:
-/* 80C79978  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C799F0 */
-/* 80C7997C  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C799F4 */
-/* 80C79980  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C79B0C */
-/* 80C79984  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C79B10 */
+/* 80C79978  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C7997C  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C79980  90 65 00 04 */	stw r3, 4(r5)
+/* 80C79984  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C79988  42 00 FF F0 */	bdnz lbl_80C79978
 /* 80C7998C  3C 60 80 C8 */	lis r3, mCcDCps__12daTogeRoll_c@ha
 /* 80C79990  38 63 9B 4C */	addi r3, r3, mCcDCps__12daTogeRoll_c@l
@@ -33,10 +33,10 @@ lbl_80C79978:
 /* 80C799A4  38 00 00 06 */	li r0, 6
 /* 80C799A8  7C 09 03 A6 */	mtctr r0
 lbl_80C799AC:
-/* 80C799AC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C79A20 */
-/* 80C799B0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C79A24 */
-/* 80C799B4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C79B4C */
-/* 80C799B8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C79B50 */
+/* 80C799AC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C799B0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C799B4  90 65 00 04 */	stw r3, 4(r5)
+/* 80C799B8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C799BC  42 00 FF F0 */	bdnz lbl_80C799AC
 /* 80C799C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C799C4  7C 08 03 A6 */	mtlr r0

@@ -12,9 +12,9 @@ lbl_805EE620:
 /* 805EE648  40 82 00 18 */	bne lbl_805EE660
 /* 805EE64C  3C 60 80 5F */	lis r3, ko_ct@ha
 /* 805EE650  38 83 48 28 */	addi r4, r3, ko_ct@l
-/* 805EE654  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805F4828 */
+/* 805EE654  80 64 00 00 */	lwz r3, 0(r4)
 /* 805EE658  38 03 00 01 */	addi r0, r3, 1
-/* 805EE65C  90 04 00 00 */	stw r0, 0(r4)	/* effective address: 805F4828 */
+/* 805EE65C  90 04 00 00 */	stw r0, 0(r4)
 lbl_805EE660:
 /* 805EE660  38 60 00 00 */	li r3, 0
 /* 805EE664  83 E1 00 0C */	lwz r31, 0xc(r1)

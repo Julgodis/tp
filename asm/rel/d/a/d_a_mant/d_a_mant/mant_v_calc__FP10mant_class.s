@@ -227,7 +227,7 @@ lbl_80862280:
 /* 808622DC  EC 1B 00 32 */	fmuls f0, f27, f0
 /* 808622E0  EC 01 00 2A */	fadds f0, f1, f0
 /* 808622E4  D0 1D 25 B0 */	stfs f0, 0x25b0(r29)
-/* 808622E8  80 7F 00 00 */	lwz r3, 0(r31)	/* effective address: 80450768 */
+/* 808622E8  80 7F 00 00 */	lwz r3, 0(r31)
 /* 808622EC  A8 81 00 0E */	lha r4, 0xe(r1)
 /* 808622F0  4B 7A A0 EC */	b mDoMtx_YrotS__FPA4_fs
 /* 808622F4  6F 60 80 00 */	xoris r0, r27, 0x8000

@@ -32,8 +32,8 @@ lbl_8082FA0C:
 /* 8082FA0C  88 9E 07 2A */	lbz r4, 0x72a(r30)
 /* 8082FA10  28 04 00 FF */	cmplwi r4, 0xff
 /* 8082FA14  41 82 00 28 */	beq lbl_8082FA3C
-/* 8082FA18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082FA1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082FA18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082FA1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082FA20  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 8082FA24  7C 05 07 74 */	extsb r5, r0
 /* 8082FA28  4B 80 59 38 */	b isSwitch__10dSv_info_cCFii
@@ -109,7 +109,7 @@ lbl_8082FB18:
 /* 8082FB30  C0 1E 06 F8 */	lfs f0, 0x6f8(r30)
 /* 8082FB34  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 8082FB38  38 63 2F 90 */	addi r3, r3, l_HIO@l
-/* 8082FB3C  C0 63 00 08 */	lfs f3, 8(r3)	/* effective address: 80832F98 */
+/* 8082FB3C  C0 63 00 08 */	lfs f3, 8(r3)
 /* 8082FB40  FC 00 18 00 */	fcmpu cr0, f0, f3
 /* 8082FB44  41 82 00 0C */	beq lbl_8082FB50
 /* 8082FB48  38 60 00 01 */	li r3, 1

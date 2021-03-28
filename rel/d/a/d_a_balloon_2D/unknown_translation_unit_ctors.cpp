@@ -19,7 +19,6 @@ extern void* const data_80655598[2];
 // 
 
 
-extern "C" void __sinit_d_a_balloon_2D_cpp(); // 1
 
 // 
 // Declarations:

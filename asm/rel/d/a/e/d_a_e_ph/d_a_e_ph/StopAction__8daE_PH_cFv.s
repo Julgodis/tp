@@ -7,9 +7,9 @@ lbl_8073FBDC:
 /* 8073FBF0  7C 7D 1B 78 */	mr r29, r3
 /* 8073FBF4  3C 80 80 74 */	lis r4, lit_3767@ha
 /* 8073FBF8  3B E4 1B F4 */	addi r31, r4, lit_3767@l
-/* 8073FBFC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8073FC00  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8073FC04  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8073FBFC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8073FC00  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8073FC04  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 8073FC08  88 03 05 B0 */	lbz r0, 0x5b0(r3)
 /* 8073FC0C  2C 00 00 01 */	cmpwi r0, 1
 /* 8073FC10  41 82 00 F4 */	beq lbl_8073FD04

@@ -27,10 +27,11 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-static void daSus_create(daSus_c*); // 2
+void daSus_create(daSus_c*); // 2
 
 extern "C" void create__7daSus_cFv(); // 1
-extern "C" static void daSus_create__FP7daSus_c(); // 1
+extern "C" void daSus_create__FP7daSus_c(); // 1
+extern "C" extern void* daSus_METHODS[8];
 extern "C" extern void* g_profile_SUSPEND[12];
 
 // 
@@ -40,8 +41,6 @@ extern "C" extern void* g_profile_SUSPEND[12];
 
 extern "C" void __ct__10fopAc_ac_cFv(); // 1
 extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 // 
 // Declarations:
@@ -71,11 +70,11 @@ asm void daSus_c::create() {
 #pragma pop
 
 
-/* 804D51E0-804D5234 0054+00 s=1 e=0 z=0  None .text      daSus_create__FP7daSus_c                                     */
+/* 804D51E0-804D5234 0054+00 s=0 e=0 z=0  None .text      daSus_create__FP7daSus_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSus_create(daSus_c* param_0) {
+asm void daSus_create(daSus_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_suspend/d_a_suspend/daSus_create__FP7daSus_c.s"
 }
@@ -83,31 +82,31 @@ asm static void daSus_create(daSus_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804D524C-804D526C 0020+00 s=1 e=0 z=0  None .data      daSus_METHODS                                                */
-SECTION_DATA static void* daSus_METHODS[8] = {
-	/* 0    */ (void*)daSus_create__FP7daSus_c,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804D524C-804D526C 0020+00 s=0 e=0 z=0  None .data      daSus_METHODS                                                */
+SECTION_DATA void* daSus_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804D526C-804D529C 0030+00 s=0 e=0 z=1  None .data      g_profile_SUSPEND                                            */
+/* 804D526C-804D529C 0030+00 s=0 e=0 z=0  None .data      g_profile_SUSPEND                                            */
 SECTION_DATA void* g_profile_SUSPEND[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000BFFFD,
-	/* 2    */ (void*)0x030F0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000568,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02FB0000,
-	/* 9    */ (void*)&daSus_METHODS,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x000BFFFD,
+	(void*)0x030F0000,
+	(void*)NULL,
+	(void*)0x00000568,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02FB0000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 

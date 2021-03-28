@@ -6,7 +6,7 @@ lbl_8059E2E4:
 /* 8059E2F4  38 E4 E8 38 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 8059E2F8  3C 80 80 5A */	lis r4, data_8059E920@ha
 /* 8059E2FC  38 C4 E9 20 */	addi r6, r4, data_8059E920@l
-/* 8059E300  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 8059E920 */
+/* 8059E300  88 06 00 00 */	lbz r0, 0(r6)
 /* 8059E304  7C 00 07 75 */	extsb. r0, r0
 /* 8059E308  40 82 00 70 */	bne lbl_8059E378
 /* 8059E30C  80 87 00 28 */	lwz r4, 0x28(r7)

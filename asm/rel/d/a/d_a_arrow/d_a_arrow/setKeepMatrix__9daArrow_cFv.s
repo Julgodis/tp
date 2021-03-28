@@ -40,10 +40,10 @@ lbl_8049B078:
 /* 8049B07C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
 /* 8049B080  38 80 80 00 */	li r4, -32768
 /* 8049B084  4B B7 13 58 */	b mDoMtx_YrotS__FPA4_fs
-/* 8049B088  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049B08C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049B090  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8049B094  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8049B088  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049B08C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049B090  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8049B094  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8049B098  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 8049B09C  7D 89 03 A6 */	mtctr r12
 /* 8049B0A0  4E 80 04 21 */	bctrl 

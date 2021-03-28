@@ -15,8 +15,8 @@ lbl_8045D504:
 /* 8045D538  7F C3 F3 78 */	mr r3, r30
 /* 8045D53C  4B FF FF 65 */	bl getBmdArcName__12daDbDoor00_cFv
 /* 8045D540  7F E4 FB 78 */	mr r4, r31
-/* 8045D544  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8045D548  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8045D544  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8045D548  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8045D54C  3C A5 00 02 */	addis r5, r5, 2
 /* 8045D550  38 C0 00 80 */	li r6, 0x80
 /* 8045D554  38 A5 C2 F8 */	addi r5, r5, -15624

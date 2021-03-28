@@ -18,8 +18,8 @@ lbl_80670F5C:
 /* 80670F9C  39 3D 04 F8 */	addi r9, r29, 0x4f8
 /* 80670FA0  39 40 00 00 */	li r10, 0
 /* 80670FA4  4B A0 52 A4 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
-/* 80670FA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80670FAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80670FA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80670FAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80670FB0  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80670FB4  7F C3 F3 78 */	mr r3, r30
 /* 80670FB8  80 9D 05 88 */	lwz r4, 0x588(r29)

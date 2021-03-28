@@ -11,8 +11,8 @@ lbl_8096FE40:
 /* 8096FE64  3B C0 00 00 */	li r30, 0
 /* 8096FE68  3B A0 FF FF */	li r29, -1
 /* 8096FE6C  3B 80 00 00 */	li r28, 0
-/* 8096FE70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8096FE74  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 8096FE70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8096FE74  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 8096FE78  3B 3A 4F F8 */	addi r25, r26, 0x4ff8
 /* 8096FE7C  7F 23 CB 78 */	mr r3, r25
 /* 8096FE80  3C A0 80 97 */	lis r5, struct_8097299C+0x0@ha

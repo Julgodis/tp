@@ -6,8 +6,8 @@ lbl_80599888:
 /* 80599898  7C 7F 1B 78 */	mr r31, r3
 /* 8059989C  48 00 02 C1 */	bl getResName__13daObj_Stick_cFv
 /* 805998A0  38 80 00 03 */	li r4, 3
-/* 805998A4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805998A8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805998A4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805998A8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805998AC  3C A5 00 02 */	addis r5, r5, 2
 /* 805998B0  38 C0 00 80 */	li r6, 0x80
 /* 805998B4  38 A5 C2 F8 */	addi r5, r5, -15624

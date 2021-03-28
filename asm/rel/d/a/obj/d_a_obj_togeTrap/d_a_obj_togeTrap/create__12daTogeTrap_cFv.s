@@ -43,8 +43,8 @@ lbl_80D17EA8:
 /* 80D17EB0  88 9E 0A DE */	lbz r4, 0xade(r30)
 /* 80D17EB4  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D17EB8  41 82 00 28 */	beq lbl_80D17EE0
-/* 80D17EBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D17EC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D17EBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D17EC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D17EC4  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80D17EC8  7C 05 07 74 */	extsb r5, r0
 /* 80D17ECC  4B 31 D4 94 */	b isSwitch__10dSv_info_cCFii

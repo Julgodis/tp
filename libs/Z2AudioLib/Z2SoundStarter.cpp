@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JGeometry {
@@ -23,7 +23,7 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct Z2SoundStarter {
@@ -106,11 +106,11 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 /* ############################################################################################## */
 /* 803C9D80-803C9D98 0014+04 s=2 e=6 z=0  None .data      __vt__14Z2SoundStarter                                       */
 SECTION_DATA void* __vt__14Z2SoundStarter[5 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14Z2SoundStarterFv,
-	/* 3    */ (void*)func_802AABF4,
-	/* 4    */ (void*)func_802AAC3C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14Z2SoundStarterFv,
+	(void*)func_802AABF4,
+	(void*)func_802AAC3C,
 	/* padding */
 	NULL,
 };

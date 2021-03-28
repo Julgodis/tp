@@ -9,14 +9,14 @@ lbl_80C5CEC0:
 /* 80C5CEDC  4B 3B FB 40 */	b fopAcM_myRoomSearchEnemy__FSc
 /* 80C5CEE0  28 03 00 00 */	cmplwi r3, 0
 /* 80C5CEE4  40 82 00 3C */	bne lbl_80C5CF20
-/* 80C5CEE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5CEEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5CEE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5CEEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5CEF0  88 9F 05 87 */	lbz r4, 0x587(r31)
 /* 80C5CEF4  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C5CEF8  7C 05 07 74 */	extsb r5, r0
 /* 80C5CEFC  4B 3D 83 04 */	b onSwitch__10dSv_info_cFii
-/* 80C5CF00  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5CF04  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5CF00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5CF04  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5CF08  88 9F 05 86 */	lbz r4, 0x586(r31)
 /* 80C5CF0C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C5CF10  7C 05 07 74 */	extsb r5, r0

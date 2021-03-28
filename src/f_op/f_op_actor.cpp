@@ -278,23 +278,23 @@ asm J3DLightObj::J3DLightObj() {
 
 
 /* ############################################################################################## */
-/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=756  None .data      g_fopAc_Method                                               */
+/* 803A35B0-803A35D0 0020+00 s=0 e=3 z=0  None .data      g_fopAc_Method                                               */
 SECTION_DATA void* g_fopAc_Method[8] = {
-	/* 0    */ (void*)fopAc_Create__FPv,
-	/* 1    */ (void*)fopAc_Delete__FPv,
-	/* 2    */ (void*)fopAc_Execute__FPv,
-	/* 3    */ (void*)fopAc_IsDelete__FPv,
-	/* 4    */ (void*)fopAc_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)fopAc_Create__FPv,
+	(void*)fopAc_Delete__FPv,
+	(void*)fopAc_Execute__FPv,
+	(void*)fopAc_IsDelete__FPv,
+	(void*)fopAc_Draw__FPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A35D0-803A35E0 000C+04 s=2 e=1 z=0  None .data      __vt__11dEvt_info_c                                          */
 SECTION_DATA void* __vt__11dEvt_info_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dEvt_info_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dEvt_info_cFv,
 	/* padding */
 	NULL,
 };

@@ -105,9 +105,9 @@ lbl_80B1FE04:
 /* 80B1FE20  38 81 00 08 */	addi r4, r1, 8
 /* 80B1FE24  48 00 09 19 */	bl setAction__12daNpc_Toby_cFM12daNpc_Toby_cFPCvPvPv_i
 lbl_80B1FE28:
-/* 80B1FE28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B1FE2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B1FE30  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80B1FE28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B1FE2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B1FE30  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80B1FE34  28 00 00 00 */	cmplwi r0, 0
 /* 80B1FE38  40 82 00 18 */	bne lbl_80B1FE50
 /* 80B1FE3C  88 1F 10 01 */	lbz r0, 0x1001(r31)

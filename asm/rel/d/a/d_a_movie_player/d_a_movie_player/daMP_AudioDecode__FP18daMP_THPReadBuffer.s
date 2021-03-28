@@ -10,7 +10,7 @@ lbl_80876240:
 /* 80876260  3B A4 00 08 */	addi r29, r4, 8
 /* 80876264  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80876268  3B E3 9B D0 */	addi r31, r3, daMP_ActivePlayer@l
-/* 8087626C  80 1F 00 6C */	lwz r0, 0x6c(r31)	/* effective address: 80879C3C */
+/* 8087626C  80 1F 00 6C */	lwz r0, 0x6c(r31)
 /* 80876270  54 03 10 3A */	slwi r3, r0, 2
 /* 80876274  3B 83 00 08 */	addi r28, r3, 8
 /* 80876278  7F 84 E2 14 */	add r28, r4, r28
@@ -32,7 +32,7 @@ lbl_808762AC:
 /* 808762B0  80 BD 00 00 */	lwz r5, 0(r29)
 /* 808762B4  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 808762B8  38 84 9B D0 */	addi r4, r4, daMP_ActivePlayer@l
-/* 808762BC  80 04 00 EC */	lwz r0, 0xec(r4)	/* effective address: 80879CBC */
+/* 808762BC  80 04 00 EC */	lwz r0, 0xec(r4)
 /* 808762C0  7C 05 01 D6 */	mullw r0, r5, r0
 /* 808762C4  7C 9C 02 14 */	add r4, r28, r0
 /* 808762C8  38 A0 00 00 */	li r5, 0

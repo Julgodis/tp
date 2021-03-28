@@ -71,8 +71,8 @@ lbl_80C90EC4:
 /* 80C90EC8  60 00 00 08 */	ori r0, r0, 8
 /* 80C90ECC  90 1F 04 A0 */	stw r0, 0x4a0(r31)
 lbl_80C90ED0:
-/* 80C90ED0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C90ED4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C90ED0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C90ED4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C90ED8  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80C90EDC  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C90EE0  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
@@ -88,7 +88,7 @@ lbl_80C90F04:
 /* 80C90F04  38 7F 05 6C */	addi r3, r31, 0x56c
 /* 80C90F08  3C 80 80 C9 */	lis r4, l_arcName@ha
 /* 80C90F0C  38 84 19 9C */	addi r4, r4, l_arcName@l
-/* 80C90F10  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C9199C */
+/* 80C90F10  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C90F14  4B 39 BF A8 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C90F18  7C 7E 1B 78 */	mr r30, r3
 /* 80C90F1C  2C 1E 00 04 */	cmpwi r30, 4

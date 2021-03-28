@@ -33,7 +33,7 @@ lbl_806BACEC:
 /* 806BAD68  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806BAD6C  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806BAD70  38 84 B9 1C */	addi r4, r4, l_HIO@l
-/* 806BAD74  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 806BB928 */
+/* 806BAD74  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 806BAD78  EC 01 00 32 */	fmuls f0, f1, f0
 /* 806BAD7C  FC 00 00 1E */	fctiwz f0, f0
 /* 806BAD80  D8 01 00 08 */	stfd f0, 8(r1)

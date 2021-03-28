@@ -11,7 +11,7 @@ lbl_80A22534:
 /* 80A22558  41 80 02 40 */	blt lbl_80A22798
 /* 80A2255C  3C 60 80 A2 */	lis r3, struct_80A26068+0x2@ha
 /* 80A22560  38 83 60 6A */	addi r4, r3, struct_80A26068+0x2@l
-/* 80A22564  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80A2606A */
+/* 80A22564  88 04 00 00 */	lbz r0, 0(r4)
 /* 80A22568  7C 00 07 75 */	extsb. r0, r0
 /* 80A2256C  40 82 01 F8 */	bne lbl_80A22764
 /* 80A22570  80 65 01 0C */	lwz r3, 0x10c(r5)
@@ -113,11 +113,11 @@ lbl_80A22534:
 /* 80A226F0  90 03 00 BC */	stw r0, 0xbc(r3)
 /* 80A226F4  3C C0 80 3A */	lis r6, __ptmf_null@ha
 /* 80A226F8  38 E6 21 80 */	addi r7, r6, __ptmf_null@l
-/* 80A226FC  80 C7 00 00 */	lwz r6, 0(r7)	/* effective address: 803A2180 */
-/* 80A22700  80 07 00 04 */	lwz r0, 4(r7)	/* effective address: 803A2184 */
+/* 80A226FC  80 C7 00 00 */	lwz r6, 0(r7)
+/* 80A22700  80 07 00 04 */	lwz r0, 4(r7)
 /* 80A22704  90 C3 00 C0 */	stw r6, 0xc0(r3)
 /* 80A22708  90 03 00 C4 */	stw r0, 0xc4(r3)
-/* 80A2270C  80 07 00 08 */	lwz r0, 8(r7)	/* effective address: 803A2188 */
+/* 80A2270C  80 07 00 08 */	lwz r0, 8(r7)
 /* 80A22710  90 03 00 C8 */	stw r0, 0xc8(r3)
 /* 80A22714  80 C5 01 CC */	lwz r6, 0x1cc(r5)
 /* 80A22718  80 05 01 D0 */	lwz r0, 0x1d0(r5)

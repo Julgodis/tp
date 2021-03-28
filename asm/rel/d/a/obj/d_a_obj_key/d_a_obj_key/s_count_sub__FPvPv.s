@@ -15,11 +15,11 @@ lbl_80C3F4D4:
 /* 80C3F508  41 82 00 20 */	beq lbl_80C3F528
 /* 80C3F50C  3C 60 80 C4 */	lis r3, target_info_count@ha
 /* 80C3F510  38 83 11 58 */	addi r4, r3, target_info_count@l
-/* 80C3F514  A8 04 00 00 */	lha r0, 0(r4)	/* effective address: 80C41158 */
+/* 80C3F514  A8 04 00 00 */	lha r0, 0(r4)
 /* 80C3F518  B0 1F 05 62 */	sth r0, 0x562(r31)
-/* 80C3F51C  A8 64 00 00 */	lha r3, 0(r4)	/* effective address: 80C41158 */
+/* 80C3F51C  A8 64 00 00 */	lha r3, 0(r4)
 /* 80C3F520  38 03 00 01 */	addi r0, r3, 1
-/* 80C3F524  B0 04 00 00 */	sth r0, 0(r4)	/* effective address: 80C41158 */
+/* 80C3F524  B0 04 00 00 */	sth r0, 0(r4)
 lbl_80C3F528:
 /* 80C3F528  38 60 00 00 */	li r3, 0
 /* 80C3F52C  83 E1 00 0C */	lwz r31, 0xc(r1)

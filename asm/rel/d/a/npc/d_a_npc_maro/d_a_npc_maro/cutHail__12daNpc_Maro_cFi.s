@@ -8,8 +8,8 @@ lbl_8055E414:
 /* 8055E42C  7C 9B 23 78 */	mr r27, r4
 /* 8055E430  3B E0 00 00 */	li r31, 0
 /* 8055E434  3B 80 FF FF */	li r28, -1
-/* 8055E438  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055E43C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8055E438  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055E43C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8055E440  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 8055E444  7F A3 EB 78 */	mr r3, r29
 /* 8055E448  3C A0 80 56 */	lis r5, struct_80564D58+0x0@ha

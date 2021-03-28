@@ -15,7 +15,7 @@ lbl_8095911C:
 /* 80959150  38 A0 00 00 */	li r5, 0
 /* 80959154  3C C0 80 96 */	lis r6, m__16daNpcAsh_Param_c@ha
 /* 80959158  38 C6 D6 40 */	addi r6, r6, m__16daNpcAsh_Param_c@l
-/* 8095915C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 8095D64C */
+/* 8095915C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80959160  38 C0 00 00 */	li r6, 0
 /* 80959164  38 E0 00 00 */	li r7, 0
 /* 80959168  4B 7F 91 44 */	b draw__8daNpcF_cFiifP11_GXColorS10i

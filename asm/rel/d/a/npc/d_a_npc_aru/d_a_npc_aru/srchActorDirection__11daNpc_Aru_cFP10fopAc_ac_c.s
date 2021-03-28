@@ -15,7 +15,7 @@ lbl_80953C84:
 /* 80953CB8  C0 23 77 F8 */	lfs f1, lit_5185@l(r3)
 /* 80953CBC  3C 60 80 95 */	lis r3, m__17daNpc_Aru_Param_c@ha
 /* 80953CC0  38 63 76 D0 */	addi r3, r3, m__17daNpc_Aru_Param_c@l
-/* 80953CC4  C0 03 00 9C */	lfs f0, 0x9c(r3)	/* effective address: 8095776C */
+/* 80953CC4  C0 03 00 9C */	lfs f0, 0x9c(r3)
 /* 80953CC8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80953CCC  FC 00 00 1E */	fctiwz f0, f0
 /* 80953CD0  D8 01 00 08 */	stfd f0, 8(r1)

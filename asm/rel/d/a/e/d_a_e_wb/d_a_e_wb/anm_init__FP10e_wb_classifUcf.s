@@ -24,8 +24,8 @@ lbl_807D2548:
 /* 807D25A0  38 80 00 21 */	li r4, 0x21
 lbl_807D25A4:
 /* 807D25A4  80 7E 05 B8 */	lwz r3, 0x5b8(r30)
-/* 807D25A8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 807D25AC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 807D25A8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 807D25AC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 807D25B0  3C A5 00 02 */	addis r5, r5, 2
 /* 807D25B4  38 C0 00 80 */	li r6, 0x80
 /* 807D25B8  38 A5 C2 F8 */	addi r5, r5, -15624

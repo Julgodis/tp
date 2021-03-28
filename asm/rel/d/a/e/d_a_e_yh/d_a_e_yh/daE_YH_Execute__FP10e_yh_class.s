@@ -20,9 +20,9 @@ lbl_80802D98:
 /* 80802DE0  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80802DE4  C0 1D 04 D8 */	lfs f0, 0x4d8(r29)
 /* 80802DE8  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80802DEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80802DF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80802DF4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80802DEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80802DF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80802DF4  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80802DF8  38 80 00 00 */	li r4, 0
 /* 80802DFC  90 81 00 08 */	stw r4, 8(r1)
 /* 80802E00  38 00 FF FF */	li r0, -1
@@ -98,7 +98,7 @@ lbl_80802E90:
 lbl_80802F08:
 /* 80802F08  3C 60 80 80 */	lis r3, l_HIO@ha
 /* 80802F0C  3B E3 47 28 */	addi r31, r3, l_HIO@l
-/* 80802F10  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80804730 */
+/* 80802F10  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80802F14  C0 1D 06 94 */	lfs f0, 0x694(r29)
 /* 80802F18  EC 41 00 32 */	fmuls f2, f1, f0
 /* 80802F1C  C0 7E 00 08 */	lfs f3, 8(r30)
@@ -149,7 +149,7 @@ lbl_80802F60:
 /* 80802FC4  38 63 00 30 */	addi r3, r3, 0x30
 /* 80802FC8  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80802FCC  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80802FD0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80802FD0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80802FD4  4B B4 34 DC */	b PSMTXCopy
 /* 80802FD8  C0 1E 00 50 */	lfs f0, 0x50(r30)
 /* 80802FDC  D0 01 00 5C */	stfs f0, 0x5c(r1)
@@ -218,8 +218,8 @@ lbl_808030AC:
 /* 808030C8  C0 1D 06 94 */	lfs f0, 0x694(r29)
 /* 808030CC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 808030D0  4B A6 C6 38 */	b SetR__8cM3dGSphFf
-/* 808030D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808030D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808030D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808030D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808030DC  3B 83 23 3C */	addi r28, r3, 0x233c
 /* 808030E0  7F 83 E3 78 */	mr r3, r28
 /* 808030E4  38 9D 08 A8 */	addi r4, r29, 0x8a8

@@ -21,8 +21,8 @@ lbl_80BEEF74:
 /* 80BEEFC0  38 00 00 04 */	li r0, 4
 /* 80BEEFC4  7C 09 03 A6 */	mtctr r0
 lbl_80BEEFC8:
-/* 80BEEFC8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BF048C */
-/* 80BEEFCC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BF0490 */
+/* 80BEEFC8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BEEFCC  84 04 00 08 */	lwzu r0, 8(r4)
 /* 80BEEFD0  90 66 00 04 */	stw r3, 4(r6)
 /* 80BEEFD4  94 06 00 08 */	stwu r0, 8(r6)
 /* 80BEEFD8  42 00 FF F0 */	bdnz lbl_80BEEFC8

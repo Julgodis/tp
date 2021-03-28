@@ -7,7 +7,7 @@ lbl_80D454AC:
 /* 80D454C0  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80D454C4  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D454C8  38 84 55 F0 */	addi r4, r4, l_arcName@l
-/* 80D454CC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D455F0 */
+/* 80D454CC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D454D0  4B 2E 7B 38 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D454D4  80 7F 05 68 */	lwz r3, 0x568(r31)
 /* 80D454D8  28 03 00 00 */	cmplwi r3, 0
@@ -15,8 +15,8 @@ lbl_80D454AC:
 /* 80D454E0  4B 52 2C F4 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80D454E4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D454E8  41 82 00 18 */	beq lbl_80D45500
-/* 80D454EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D454F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D454EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D454F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D454F4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D454F8  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80D454FC  4B 32 ED 54 */	b Release__4cBgSFP9dBgW_Base

@@ -20,8 +20,8 @@ lbl_80D27ED0:
 /* 80D27F18  4B 52 20 78 */	b init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c
 /* 80D27F1C  48 00 01 0C */	b lbl_80D28028
 lbl_80D27F20:
-/* 80D27F20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27F24  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80D27F20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27F24  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80D27F28  3B BE 4F F8 */	addi r29, r30, 0x4ff8
 /* 80D27F2C  7F A3 EB 78 */	mr r3, r29
 /* 80D27F30  88 1F 05 D8 */	lbz r0, 0x5d8(r31)
@@ -47,7 +47,7 @@ lbl_80D27F20:
 /* 80D27F80  7F A3 EB 78 */	mr r3, r29
 /* 80D27F84  3C 80 80 D3 */	lis r4, l_staff_name@ha
 /* 80D27F88  38 84 97 44 */	addi r4, r4, l_staff_name@l
-/* 80D27F8C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29744 */
+/* 80D27F8C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D27F90  38 A0 00 00 */	li r5, 0
 /* 80D27F94  38 C0 00 00 */	li r6, 0
 /* 80D27F98  4B 31 FB 84 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

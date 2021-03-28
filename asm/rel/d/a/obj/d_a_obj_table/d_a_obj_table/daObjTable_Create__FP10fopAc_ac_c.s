@@ -25,14 +25,14 @@ lbl_80D06504:
 /* 80D06504  38 7F 05 A4 */	addi r3, r31, 0x5a4
 /* 80D06508  3C 80 80 D0 */	lis r4, l_arcName@ha
 /* 80D0650C  38 84 6C 1C */	addi r4, r4, l_arcName@l
-/* 80D06510  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D06C1C */
+/* 80D06510  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D06514  4B 32 69 A8 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D06518  2C 03 00 04 */	cmpwi r3, 4
 /* 80D0651C  40 82 00 2C */	bne lbl_80D06548
 /* 80D06520  7F E3 FB 78 */	mr r3, r31
 /* 80D06524  3C 80 80 D0 */	lis r4, l_arcName@ha
 /* 80D06528  38 84 6C 1C */	addi r4, r4, l_arcName@l
-/* 80D0652C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D06C1C */
+/* 80D0652C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D06530  38 A0 00 08 */	li r5, 8
 /* 80D06534  38 C0 00 00 */	li r6, 0
 /* 80D06538  38 E0 40 00 */	li r7, 0x4000

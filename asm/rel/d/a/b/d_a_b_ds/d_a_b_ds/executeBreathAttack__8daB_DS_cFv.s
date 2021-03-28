@@ -111,10 +111,10 @@ lbl_805D2404:
 /* 805D2404  80 1E 08 1C */	lwz r0, 0x81c(r30)
 /* 805D2408  2C 00 00 00 */	cmpwi r0, 0
 /* 805D240C  41 82 00 1C */	beq lbl_805D2428
-/* 805D2410  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D2414  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805D2418  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805D241C  A8 03 05 6C */	lha r0, 0x56c(r3)	/* effective address: 8040672C */
+/* 805D2410  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D2414  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805D2418  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805D241C  A8 03 05 6C */	lha r0, 0x56c(r3)
 /* 805D2420  2C 00 00 0A */	cmpwi r0, 0xa
 /* 805D2424  40 81 00 44 */	ble lbl_805D2468
 lbl_805D2428:

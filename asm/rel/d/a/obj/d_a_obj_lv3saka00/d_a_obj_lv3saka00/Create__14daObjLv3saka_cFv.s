@@ -4,8 +4,8 @@ lbl_80C5BED8:
 /* 80C5BEE0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C5BEE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C5BEE8  7C 7F 1B 78 */	mr r31, r3
-/* 80C5BEEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5BEF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5BEEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5BEF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5BEF4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C5BEF8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C5BEFC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -17,14 +17,14 @@ lbl_80C5BED8:
 /* 80C5BF14  4B 60 C2 C0 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80C5BF18  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C5BF1C  41 82 00 18 */	beq lbl_80C5BF34
-/* 80C5BF20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5BF24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5BF20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5BF24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5BF28  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C5BF2C  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80C5BF30  4B 41 83 20 */	b Release__4cBgSFP9dBgW_Base
 lbl_80C5BF34:
-/* 80C5BF34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5BF38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5BF34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5BF38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5BF3C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C5BF40  80 9F 05 A8 */	lwz r4, 0x5a8(r31)
 /* 80C5BF44  7F E5 FB 78 */	mr r5, r31
@@ -34,8 +34,8 @@ lbl_80C5BF34:
 lbl_80C5BF54:
 /* 80C5BF54  7F E3 FB 78 */	mr r3, r31
 /* 80C5BF58  4B FF FF 01 */	bl initBaseMtx__14daObjLv3saka_cFv
-/* 80C5BF5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C5BF60  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C5BF5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C5BF60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C5BF64  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C5BF68  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C5BF6C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

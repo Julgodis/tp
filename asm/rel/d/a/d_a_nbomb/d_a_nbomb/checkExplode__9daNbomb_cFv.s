@@ -14,9 +14,9 @@ lbl_804C8304:
 /* 804C8304  A8 1F 0B 58 */	lha r0, 0xb58(r31)
 /* 804C8308  2C 00 00 00 */	cmpwi r0, 0
 /* 804C830C  40 81 00 FC */	ble lbl_804C8408
-/* 804C8310  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804C8314  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 804C8318  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 804C8310  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804C8314  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 804C8318  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 804C831C  28 00 00 00 */	cmplwi r0, 0
 /* 804C8320  40 82 00 94 */	bne lbl_804C83B4
 /* 804C8324  4B FF FF 71 */	bl checkTimerStop__9daNbomb_cFv
@@ -28,9 +28,9 @@ lbl_804C8304:
 /* 804C833C  80 1F 0B 4C */	lwz r0, 0xb4c(r31)
 /* 804C8340  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 804C8344  41 82 00 70 */	beq lbl_804C83B4
-/* 804C8348  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C834C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C8350  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804C8348  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C834C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C8350  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 804C8354  7F C3 F3 78 */	mr r3, r30
 /* 804C8358  4B C1 B4 08 */	b getBombExplodeTime__9daAlink_cCFv
 /* 804C835C  7C 63 07 34 */	extsh r3, r3

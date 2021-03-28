@@ -83,7 +83,7 @@ lbl_804D83D4:
 lbl_804D8410:
 /* 804D8410  3C 60 80 4E */	lis r3, l_HIO@ha
 /* 804D8414  38 63 A3 6C */	addi r3, r3, l_HIO@l
-/* 804D8418  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 804DA378 */
+/* 804D8418  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 804D841C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
 /* 804D8420  38 61 00 0C */	addi r3, r1, 0xc
 /* 804D8424  38 9E 05 C4 */	addi r4, r30, 0x5c4

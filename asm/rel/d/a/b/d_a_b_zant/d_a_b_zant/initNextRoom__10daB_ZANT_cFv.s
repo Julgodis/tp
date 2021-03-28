@@ -21,8 +21,8 @@ lbl_8064B69C:
 /* 8064B6E8  80 1E 0B B4 */	lwz r0, 0xbb4(r30)
 /* 8064B6EC  54 00 07 B8 */	rlwinm r0, r0, 0, 0x1e, 0x1c
 /* 8064B6F0  90 1E 0B B4 */	stw r0, 0xbb4(r30)
-/* 8064B6F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8064B6F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8064B6F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8064B6F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8064B6FC  3B 83 09 78 */	addi r28, r3, 0x978
 /* 8064B700  7F 83 E3 78 */	mr r3, r28
 /* 8064B704  38 80 00 14 */	li r4, 0x14

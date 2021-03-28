@@ -252,7 +252,7 @@ lbl_806EC6B8:
 /* 806EC6D4  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806EC6D8  3C 80 80 6F */	lis r4, l_HIO@ha
 /* 806EC6DC  3B A4 0B 7C */	addi r29, r4, l_HIO@l
-/* 806EC6E0  C0 3D 00 18 */	lfs f1, 0x18(r29)	/* effective address: 806F0B94 */
+/* 806EC6E0  C0 3D 00 18 */	lfs f1, 0x18(r29)
 /* 806EC6E4  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 806EC6E8  4B B8 40 58 */	b cLib_chaseF__FPfff
 /* 806EC6EC  C0 1F 00 6C */	lfs f0, 0x6c(r31)

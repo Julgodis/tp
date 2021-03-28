@@ -13,22 +13,22 @@ lbl_80D166E0:
 /* 80D1670C  4B 30 AC 2C */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80D16710  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D16714  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D16718  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D16718  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D1671C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80D16720  3C 80 02 00 */	lis r4, 0x0200 /* 0x02000023@ha */
 /* 80D16724  38 84 00 23 */	addi r4, r4, 0x0023 /* 0x02000023@l */
 /* 80D16728  4B 59 94 6C */	b bgmStreamPrepare__8Z2SeqMgrFUl
 /* 80D1672C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D16730  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D16734  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D16734  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D16738  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80D1673C  4B 59 96 DC */	b bgmStreamPlay__8Z2SeqMgrFv
-/* 80D16740  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D16744  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D16740  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D16744  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D16748  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D1674C  3C 80 80 D1 */	lis r4, l_staff_name@ha
 /* 80D16750  38 84 78 80 */	addi r4, r4, l_staff_name@l
-/* 80D16754  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D17880 */
+/* 80D16754  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D16758  38 A0 00 00 */	li r5, 0
 /* 80D1675C  38 C0 00 00 */	li r6, 0
 /* 80D16760  4B 33 13 BC */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

@@ -4,9 +4,9 @@ lbl_80ACC328:
 /* 80ACC330  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80ACC334  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80ACC338  7C 7F 1B 78 */	mr r31, r3
-/* 80ACC33C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACC340  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80ACC344  88 03 4E 00 */	lbz r0, 0x4e00(r3)	/* effective address: 8040AFC0 */
+/* 80ACC33C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACC340  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80ACC344  88 03 4E 00 */	lbz r0, 0x4e00(r3)
 /* 80ACC348  2C 00 00 46 */	cmpwi r0, 0x46
 /* 80ACC34C  40 82 00 0C */	bne lbl_80ACC358
 /* 80ACC350  38 60 00 05 */	li r3, 5

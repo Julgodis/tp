@@ -4,7 +4,7 @@ lbl_808776EC:
 /* 808776F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 808776F8  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808776FC  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 80877700  80 03 00 A0 */	lwz r0, 0xa0(r3)	/* effective address: 80879C70 */
+/* 80877700  80 03 00 A0 */	lwz r0, 0xa0(r3)
 /* 80877704  2C 00 00 00 */	cmpwi r0, 0
 /* 80877708  41 82 00 24 */	beq lbl_8087772C
 /* 8087770C  88 03 00 A4 */	lbz r0, 0xa4(r3)

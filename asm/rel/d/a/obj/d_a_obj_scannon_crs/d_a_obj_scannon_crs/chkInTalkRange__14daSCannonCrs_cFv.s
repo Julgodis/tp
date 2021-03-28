@@ -4,9 +4,9 @@ lbl_80CCAAC4:
 /* 80CCAACC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CCAAD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CCAAD4  7C 7F 1B 78 */	mr r31, r3
-/* 80CCAAD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCAADC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CCAAE0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CCAAD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCAADC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCAAE0  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CCAAE4  28 03 00 00 */	cmplwi r3, 0
 /* 80CCAAE8  40 82 00 0C */	bne lbl_80CCAAF4
 /* 80CCAAEC  38 60 00 00 */	li r3, 0

@@ -5,9 +5,9 @@ lbl_805EA74C:
 /* 805EA758  39 61 00 20 */	addi r11, r1, 0x20
 /* 805EA75C  4B D7 7A 78 */	b _savegpr_27
 /* 805EA760  7C 7D 1B 78 */	mr r29, r3
-/* 805EA764  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805EA768  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805EA76C  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805EA764  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805EA768  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805EA76C  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 805EA770  38 7D 11 44 */	addi r3, r29, 0x1144
 /* 805EA774  4B A9 D2 E4 */	b at_power_check__FP11dCcU_AtInfo
 /* 805EA778  90 7D 11 48 */	stw r3, 0x1148(r29)

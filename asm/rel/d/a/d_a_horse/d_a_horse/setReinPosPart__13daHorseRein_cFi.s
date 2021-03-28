@@ -12,11 +12,11 @@ lbl_808383A8:
 /* 808383D0  7C C0 3A 14 */	add r6, r0, r7
 /* 808383D4  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 808383D8  38 A3 0C F4 */	addi r5, r3, Zero__4cXyz@l
-/* 808383DC  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80430CF4 */
+/* 808383DC  C0 05 00 00 */	lfs f0, 0(r5)
 /* 808383E0  D0 06 00 00 */	stfs f0, 0(r6)
-/* 808383E4  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80430CF8 */
+/* 808383E4  C0 05 00 04 */	lfs f0, 4(r5)
 /* 808383E8  D0 06 00 04 */	stfs f0, 4(r6)
-/* 808383EC  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80430CFC */
+/* 808383EC  C0 05 00 08 */	lfs f0, 8(r5)
 /* 808383F0  D0 06 00 08 */	stfs f0, 8(r6)
 /* 808383F4  80 1E 00 00 */	lwz r0, 0(r30)
 /* 808383F8  7C C0 3A 14 */	add r6, r0, r7

@@ -10,8 +10,8 @@ lbl_80CFE154:
 /* 80CFE174  38 60 00 00 */	li r3, 0
 /* 80CFE178  48 00 00 24 */	b lbl_80CFE19C
 lbl_80CFE17C:
-/* 80CFE17C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFE180  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFE17C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFE180  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFE184  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 80CFE188  7C 05 07 74 */	extsb r5, r0
 /* 80CFE18C  4B 33 71 D4 */	b isSwitch__10dSv_info_cCFii

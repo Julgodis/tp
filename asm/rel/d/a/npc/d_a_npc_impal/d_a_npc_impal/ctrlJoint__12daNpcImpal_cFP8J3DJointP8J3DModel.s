@@ -10,11 +10,11 @@ lbl_80A085EC:
 /* 80A0860C  7C BF 2B 78 */	mr r31, r5
 /* 80A08610  3C 60 80 A1 */	lis r3, lit_4299@ha
 /* 80A08614  38 83 C2 F8 */	addi r4, r3, lit_4299@l
-/* 80A08618  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A0C2F8 */
-/* 80A0861C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A0C2FC */
+/* 80A08618  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A0861C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A08620  90 61 00 08 */	stw r3, 8(r1)
 /* 80A08624  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A08628  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A0C300 */
+/* 80A08628  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A0862C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A08630  2C 05 00 00 */	cmpwi r5, 0
 /* 80A08634  40 82 00 B0 */	bne lbl_80A086E4
@@ -28,11 +28,11 @@ lbl_80A085EC:
 /* 80A08654  4B 93 DE 5C */	b PSMTXCopy
 /* 80A08658  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A0865C  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80A08660  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 80A08660  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80A08664  D0 1D 08 54 */	stfs f0, 0x854(r29)
-/* 80A08668  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 80A08668  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 80A0866C  D0 1D 08 58 */	stfs f0, 0x858(r29)
-/* 80A08670  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 80A08670  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 80A08674  D0 1D 08 5C */	stfs f0, 0x85c(r29)
 /* 80A08678  80 7D 05 68 */	lwz r3, 0x568(r29)
 /* 80A0867C  80 63 00 04 */	lwz r3, 4(r3)
@@ -84,7 +84,7 @@ lbl_80A08720:
 /* 80A08728  38 A1 00 08 */	addi r5, r1, 8
 /* 80A0872C  3C C0 80 A1 */	lis r6, m__18daNpcImpal_Param_c@ha
 /* 80A08730  38 C6 C2 70 */	addi r6, r6, m__18daNpcImpal_Param_c@l
-/* 80A08734  C0 26 00 40 */	lfs f1, 0x40(r6)	/* effective address: 80A0C2B0 */
+/* 80A08734  C0 26 00 40 */	lfs f1, 0x40(r6)
 /* 80A08738  4B 74 AC 44 */	b setLookatMtx__8daNpcF_cFiPif
 lbl_80A0873C:
 /* 80A0873C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

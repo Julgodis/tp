@@ -14,10 +14,10 @@
 struct cXyz {
 };
 
-struct cM3dGSphS {
+struct cM3dGCyl {
 };
 
-struct cM3dGCyl {
+struct cM3dGSphS {
 };
 
 struct cM3dGSph {

@@ -161,14 +161,14 @@ extern "C" extern u8 g_meter2_info[248];
 /* ############################################################################################## */
 /* 803C1478-803C1498 0020+00 s=2 e=0 z=0  None .data      __vt__16dMsgStringBase_c                                     */
 SECTION_DATA static void* __vt__16dMsgStringBase_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
-	/* 3    */ (void*)getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
-	/* 4    */ (void*)getMessage__16dMsgStringBase_cFUlPc,
-	/* 5    */ (void*)resetStringLocal__16dMsgStringBase_cFP10J2DTextBox,
-	/* 6    */ (void*)drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf,
-	/* 7    */ (void*)drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
+	(void*)getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
+	(void*)getMessage__16dMsgStringBase_cFUlPc,
+	(void*)resetStringLocal__16dMsgStringBase_cFP10J2DTextBox,
+	(void*)drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf,
+	(void*)drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc,
 };
 
 /* 802493B4-80249528 0174+00 s=0 e=2 z=0  None .text      __ct__16dMsgStringBase_cFv                                   */

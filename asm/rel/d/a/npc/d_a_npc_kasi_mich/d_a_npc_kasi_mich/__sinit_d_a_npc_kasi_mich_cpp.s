@@ -15,12 +15,12 @@ lbl_80A29F74:
 /* 80A29FA8  38 A3 A3 B4 */	addi r5, r3, mEvtSeqList__15daNpcKasiMich_c@l
 /* 80A29FAC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A29FB0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A29FB4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A29FB8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80A29FBC  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80A2A3B4 */
-/* 80A29FC0  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80A2A3B8 */
-/* 80A29FC4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80A29FC8  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80A2A3BC */
+/* 80A29FB4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A29FB8  80 04 00 04 */	lwz r0, 4(r4)
+/* 80A29FBC  90 65 00 00 */	stw r3, 0(r5)
+/* 80A29FC0  90 05 00 04 */	stw r0, 4(r5)
+/* 80A29FC4  80 04 00 08 */	lwz r0, 8(r4)
+/* 80A29FC8  90 05 00 08 */	stw r0, 8(r5)
 /* 80A29FCC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80A29FD0  7C 08 03 A6 */	mtlr r0
 /* 80A29FD4  38 21 00 10 */	addi r1, r1, 0x10

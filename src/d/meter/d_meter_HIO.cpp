@@ -186,114 +186,114 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803BF0E8-803BF0F4 000C+00 s=2 e=0 z=0  None .data      __vt__18dMeter_cursorHIO_c                                   */
 SECTION_DATA static void* __vt__18dMeter_cursorHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dMeter_cursorHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18dMeter_cursorHIO_cFv,
 };
 
 /* 803BF0F4-803BF100 000C+00 s=2 e=0 z=0  None .data      __vt__16dMeter_fmapHIO_c                                     */
 SECTION_DATA static void* __vt__16dMeter_fmapHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMeter_fmapHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMeter_fmapHIO_cFv,
 };
 
 /* 803BF100-803BF10C 000C+00 s=3 e=0 z=0  None .data      __vt__19dMeter_mapIconHIO_c                                  */
 SECTION_DATA static void* __vt__19dMeter_mapIconHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dMeter_mapIconHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dMeter_mapIconHIO_cFv,
 };
 
 /* 803BF10C-803BF118 000C+00 s=2 e=0 z=0  None .data      __vt__16dMeter_ringHIO_c                                     */
 SECTION_DATA static void* __vt__16dMeter_ringHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMeter_ringHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMeter_ringHIO_cFv,
 };
 
 /* 803BF118-803BF124 000C+00 s=2 e=0 z=0  None .data      __vt__16dMeter_drawHIO_c                                     */
 SECTION_DATA static void* __vt__16dMeter_drawHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMeter_drawHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMeter_drawHIO_cFv,
 };
 
 /* 803BF124-803BF130 000C+00 s=3 e=0 z=0  None .data      __vt__25dMeter_drawLightDropHIO_c                            */
 SECTION_DATA static void* __vt__25dMeter_drawLightDropHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dMeter_drawLightDropHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dMeter_drawLightDropHIO_cFv,
 };
 
 /* 803BF130-803BF13C 000C+00 s=3 e=0 z=0  None .data      __vt__24dMeter_drawMiniGameHIO_c                             */
 SECTION_DATA static void* __vt__24dMeter_drawMiniGameHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__24dMeter_drawMiniGameHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__24dMeter_drawMiniGameHIO_cFv,
 };
 
 /* 803BF13C-803BF148 000C+00 s=3 e=0 z=0  None .data      __vt__25dMeter_drawEmpButtonHIO_c                            */
 SECTION_DATA static void* __vt__25dMeter_drawEmpButtonHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__25dMeter_drawEmpButtonHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__25dMeter_drawEmpButtonHIO_cFv,
 };
 
 /* 803BF148-803BF154 000C+00 s=3 e=0 z=0  None .data      __vt__21dMeter_drawSkillHIO_c                                */
 SECTION_DATA static void* __vt__21dMeter_drawSkillHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21dMeter_drawSkillHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__21dMeter_drawSkillHIO_cFv,
 };
 
 /* 803BF154-803BF160 000C+00 s=3 e=0 z=0  None .data      __vt__27dMeter_drawCalibrationHIO_c                          */
 SECTION_DATA static void* __vt__27dMeter_drawCalibrationHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__27dMeter_drawCalibrationHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__27dMeter_drawCalibrationHIO_cFv,
 };
 
 /* 803BF160-803BF16C 000C+00 s=3 e=0 z=0  None .data      __vt__22dMeter_drawInsectHIO_c                               */
 SECTION_DATA static void* __vt__22dMeter_drawInsectHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dMeter_drawInsectHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dMeter_drawInsectHIO_cFv,
 };
 
 /* 803BF16C-803BF178 000C+00 s=3 e=0 z=0  None .data      __vt__23dMeter_drawFishingHIO_c                              */
 SECTION_DATA static void* __vt__23dMeter_drawFishingHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__23dMeter_drawFishingHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__23dMeter_drawFishingHIO_cFv,
 };
 
 /* 803BF178-803BF184 000C+00 s=3 e=0 z=0  None .data      __vt__22dMeter_drawLetterHIO_c                               */
 SECTION_DATA static void* __vt__22dMeter_drawLetterHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dMeter_drawLetterHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dMeter_drawLetterHIO_cFv,
 };
 
 /* 803BF184-803BF190 000C+00 s=3 e=0 z=0  None .data      __vt__22dMeter_drawOptionHIO_c                               */
 SECTION_DATA static void* __vt__22dMeter_drawOptionHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dMeter_drawOptionHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dMeter_drawOptionHIO_cFv,
 };
 
 /* 803BF190-803BF19C 000C+00 s=3 e=0 z=0  None .data      __vt__23dMeter_drawCollectHIO_c                              */
 SECTION_DATA static void* __vt__23dMeter_drawCollectHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__23dMeter_drawCollectHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__23dMeter_drawCollectHIO_cFv,
 };
 
 /* 803BF19C-803BF1A8 000C+00 s=2 e=0 z=0  None .data      __vt__16dMeter_menuHIO_c                                     */
 SECTION_DATA static void* __vt__16dMeter_menuHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16dMeter_menuHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16dMeter_menuHIO_cFv,
 };
 
 /* 801FE330-801FE348 0018+00 s=1 e=0 z=0  None .text      __ct__16dMeter_menuHIO_cFv                                   */

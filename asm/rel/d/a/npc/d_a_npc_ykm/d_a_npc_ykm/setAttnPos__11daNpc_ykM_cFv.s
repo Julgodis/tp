@@ -25,11 +25,11 @@ lbl_80B55A64:
 /* 80B55AC0  7C 7E 1B 78 */	mr r30, r3
 /* 80B55AC4  3C 60 80 B6 */	lis r3, m__17daNpc_ykM_Param_c@ha
 /* 80B55AC8  3B E3 D7 94 */	addi r31, r3, m__17daNpc_ykM_Param_c@l
-/* 80B55ACC  C0 3F 01 7C */	lfs f1, 0x17c(r31)	/* effective address: 80B5D910 */
+/* 80B55ACC  C0 3F 01 7C */	lfs f1, 0x17c(r31)
 /* 80B55AD0  D0 21 00 5C */	stfs f1, 0x5c(r1)
-/* 80B55AD4  C0 1F 01 44 */	lfs f0, 0x144(r31)	/* effective address: 80B5D8D8 */
+/* 80B55AD4  C0 1F 01 44 */	lfs f0, 0x144(r31)
 /* 80B55AD8  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 80B55ADC  C0 1F 01 04 */	lfs f0, 0x104(r31)	/* effective address: 80B5D898 */
+/* 80B55ADC  C0 1F 01 04 */	lfs f0, 0x104(r31)
 /* 80B55AE0  D0 01 00 64 */	stfs f0, 0x64(r1)
 /* 80B55AE4  D0 21 00 50 */	stfs f1, 0x50(r1)
 /* 80B55AE8  D0 01 00 54 */	stfs f0, 0x54(r1)
@@ -253,11 +253,11 @@ lbl_80B55DB8:
 /* 80B55DF4  4B 7F 06 BC */	b PSMTXCopy
 /* 80B55DF8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B55DFC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B55E00  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B55E00  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B55E04  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80B55E08  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B55E08  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B55E0C  D0 01 00 3C */	stfs f0, 0x3c(r1)
-/* 80B55E10  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B55E10  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B55E14  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 80B55E18  38 81 00 68 */	addi r4, r1, 0x68
 /* 80B55E1C  4B 7F 06 94 */	b PSMTXCopy
@@ -276,7 +276,7 @@ lbl_80B55DB8:
 /* 80B55E50  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B55E54  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B55E58  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B55E5C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B55E5C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B55E60  38 81 00 10 */	addi r4, r1, 0x10
 /* 80B55E64  38 A1 00 38 */	addi r5, r1, 0x38
 /* 80B55E68  38 C0 00 00 */	li r6, 0

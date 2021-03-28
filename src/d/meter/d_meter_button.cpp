@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct JKRExpHeap {
-};
-
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
 struct J2DGrafContext {
 };
 
@@ -28,6 +21,13 @@ struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -205,10 +205,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -411,62 +411,62 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 /* ############################################################################################## */
 /* 803BF1A8-803BF200 0058+00 s=1 e=0 z=0  None .data      @7807                                                        */
 SECTION_DATA static void* lit_7807[22] = {
-	/* 0    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x12C),
-	/* 1    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x178),
-	/* 2    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x1C4),
-	/* 3    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x214),
-	/* 4    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x3DC),
-	/* 5    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x4C8),
-	/* 6    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x5A0),
-	/* 7    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x5EC),
-	/* 8    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x638),
-	/* 9    */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 10   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 11   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 12   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 13   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x684),
-	/* 14   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 15   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 16   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 17   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 18   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 19   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 20   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
-	/* 21   */ (void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x6D0),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x12C),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x178),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x1C4),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x214),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x3DC),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x4C8),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x5A0),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x5EC),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x638),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x684),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x714),
+	(void*)(((char*)getCenterPosCalc__14dMeterButton_cFUcPci)+0x6D0),
 };
 
 /* 803BF200-803BF258 0058+00 s=1 e=0 z=0  None .data      @7858                                                        */
 SECTION_DATA static void* lit_7858[22] = {
-	/* 0    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0xBC),
-	/* 1    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0xE4),
-	/* 2    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x10C),
-	/* 3    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x134),
-	/* 4    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x15C),
-	/* 5    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x194),
-	/* 6    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x1BC),
-	/* 7    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x1E8),
-	/* 8    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x210),
-	/* 9    */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 10   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 11   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 12   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 13   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x238),
-	/* 14   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 15   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 16   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 17   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 18   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 19   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 20   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
-	/* 21   */ (void*)(((char*)trans_button__14dMeterButton_cFif)+0x268),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0xBC),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0xE4),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x10C),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x134),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x15C),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x194),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x1BC),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x1E8),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x210),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x238),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x294),
+	(void*)(((char*)trans_button__14dMeterButton_cFif)+0x268),
 };
 
 /* 803BF258-803BF268 0010+00 s=2 e=0 z=0  None .data      __vt__14dMeterButton_c                                       */
 SECTION_DATA static void* __vt__14dMeterButton_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dMeterButton_cFv,
-	/* 3    */ (void*)__dt__14dMeterButton_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dMeterButton_cFv,
+	(void*)__dt__14dMeterButton_cFv,
 };
 
 /* 80201328-80201370 0048+00 s=0 e=1 z=1  None .text      __ct__14dMeterButton_cFv                                     */

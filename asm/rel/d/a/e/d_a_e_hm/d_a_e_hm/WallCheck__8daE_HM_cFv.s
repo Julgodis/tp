@@ -7,11 +7,11 @@ lbl_806E25E8:
 /* 806E25FC  7C 7E 1B 78 */	mr r30, r3
 /* 806E2600  3C 60 80 6E */	lis r3, lit_3791@ha
 /* 806E2604  3B E3 59 20 */	addi r31, r3, lit_3791@l
-/* 806E2608  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 806E5924 */
+/* 806E2608  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 806E260C  D0 01 00 08 */	stfs f0, 8(r1)
-/* 806E2610  C0 1F 00 F0 */	lfs f0, 0xf0(r31)	/* effective address: 806E5A10 */
+/* 806E2610  C0 1F 00 F0 */	lfs f0, 0xf0(r31)
 /* 806E2614  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 806E2618  C0 1F 01 04 */	lfs f0, 0x104(r31)	/* effective address: 806E5A24 */
+/* 806E2618  C0 1F 01 04 */	lfs f0, 0x104(r31)
 /* 806E261C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 806E2620  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 806E2624  4B 92 A7 40 */	b transS__14mDoMtx_stack_cFRC4cXyz

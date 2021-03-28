@@ -12,10 +12,10 @@ lbl_807C783C:
 /* 807C7864  80 7F 05 B4 */	lwz r3, 0x5b4(r31)
 /* 807C7868  C3 E3 00 1C */	lfs f31, 0x1c(r3)
 /* 807C786C  38 7F 04 D4 */	addi r3, r31, 0x4d4
-/* 807C7870  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 807CECAC */
-/* 807C7874  C0 5E 00 80 */	lfs f2, 0x80(r30)	/* effective address: 807CED28 */
-/* 807C7878  C0 7E 00 A0 */	lfs f3, 0xa0(r30)	/* effective address: 807CED48 */
-/* 807C787C  C0 9E 00 08 */	lfs f4, 8(r30)	/* effective address: 807CECB0 */
+/* 807C7870  C0 3E 00 04 */	lfs f1, 4(r30)
+/* 807C7874  C0 5E 00 80 */	lfs f2, 0x80(r30)
+/* 807C7878  C0 7E 00 A0 */	lfs f3, 0xa0(r30)
+/* 807C787C  C0 9E 00 08 */	lfs f4, 8(r30)
 /* 807C7880  4B AA 80 FC */	b cLib_addCalc__FPfffff
 /* 807C7884  80 1F 13 20 */	lwz r0, 0x1320(r31)
 /* 807C7888  2C 00 00 01 */	cmpwi r0, 1
@@ -88,8 +88,8 @@ lbl_807C7934:
 /* 807C7988  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 807C798C  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 807C7990  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 807C7994  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807C7998  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807C7994  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807C7998  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807C799C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807C79A0  38 80 00 05 */	li r4, 5
 /* 807C79A4  38 A0 00 1F */	li r5, 0x1f

@@ -25,7 +25,7 @@ lbl_80A01DF8:
 /* 80A01E00  38 A0 00 00 */	li r5, 0
 /* 80A01E04  3C C0 80 A0 */	lis r6, m__17daNpc_Hoz_Param_c@ha
 /* 80A01E08  38 C6 66 50 */	addi r6, r6, m__17daNpc_Hoz_Param_c@l
-/* 80A01E0C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80A0665C */
+/* 80A01E0C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80A01E10  38 C0 00 00 */	li r6, 0
 /* 80A01E14  3C E0 80 A0 */	lis r7, lit_4536@ha
 /* 80A01E18  C0 47 67 1C */	lfs f2, lit_4536@l(r7)

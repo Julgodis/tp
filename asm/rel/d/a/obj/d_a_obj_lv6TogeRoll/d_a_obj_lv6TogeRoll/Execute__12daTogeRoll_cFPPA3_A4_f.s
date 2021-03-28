@@ -108,8 +108,8 @@ lbl_80C7841C:
 lbl_80C78424:
 /* 80C78424  3A C0 00 00 */	li r22, 0
 /* 80C78428  3B 60 00 00 */	li r27, 0
-/* 80C7842C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C78430  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C7842C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C78430  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C78434  3A E3 23 3C */	addi r23, r3, 0x233c
 /* 80C78438  C3 9D 00 AC */	lfs f28, 0xac(r29)
 /* 80C7843C  C3 BD 00 B0 */	lfs f29, 0xb0(r29)

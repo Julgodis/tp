@@ -8,8 +8,8 @@ lbl_80569880:
 /* 80569898  7C 9B 23 78 */	mr r27, r4
 /* 8056989C  3B E0 00 00 */	li r31, 0
 /* 805698A0  3B C0 FF FF */	li r30, -1
-/* 805698A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805698A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805698A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805698A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805698AC  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 805698B0  7F 83 E3 78 */	mr r3, r28
 /* 805698B4  3C A0 80 57 */	lis r5, struct_80571908+0x0@ha
@@ -57,13 +57,13 @@ lbl_8056993C:
 /* 8056994C  4B BE 2B B4 */	b daNpcT_getPlayerInfoFromPlayerList__FiiP4cXyzP5csXyz
 /* 80569950  2C 03 00 00 */	cmpwi r3, 0
 /* 80569954  41 82 01 20 */	beq lbl_80569A74
-/* 80569958  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8056995C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80569960  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80569958  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8056995C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80569960  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80569964  38 81 00 10 */	addi r4, r1, 0x10
 /* 80569968  A8 A1 00 0A */	lha r5, 0xa(r1)
 /* 8056996C  38 C0 00 00 */	li r6, 0
-/* 80569970  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80569970  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80569974  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80569978  7D 89 03 A6 */	mtctr r12
 /* 8056997C  4E 80 04 21 */	bctrl 
@@ -126,9 +126,9 @@ lbl_80569A48:
 /* 80569A4C  38 A0 00 00 */	li r5, 0
 /* 80569A50  4B BE 21 A0 */	b initTalk__8daNpcT_cFiPP10fopAc_ac_c
 /* 80569A54  7F A3 EB 78 */	mr r3, r29
-/* 80569A58  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80569A5C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80569A60  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80569A58  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80569A5C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80569A60  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80569A64  4B AB 0C AC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80569A68  7C 64 1B 78 */	mr r4, r3
 /* 80569A6C  7F A3 EB 78 */	mr r3, r29

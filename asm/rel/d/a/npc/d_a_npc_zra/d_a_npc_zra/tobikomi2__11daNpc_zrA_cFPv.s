@@ -67,11 +67,11 @@ lbl_80B8A8BC:
 /* 80B8A8F4  4B 48 25 7C */	b scaleM__14mDoMtx_stack_cFRC4cXyz
 /* 80B8A8F8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B8A8FC  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B8A900  C0 43 00 0C */	lfs f2, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B8A900  C0 43 00 0C */	lfs f2, 0xc(r3)
 /* 80B8A904  D0 41 00 28 */	stfs f2, 0x28(r1)
-/* 80B8A908  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B8A908  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80B8A90C  D0 21 00 2C */	stfs f1, 0x2c(r1)
-/* 80B8A910  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B8A910  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B8A914  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80B8A918  C0 61 00 0C */	lfs f3, 0xc(r1)
 /* 80B8A91C  FC 01 18 40 */	fcmpo cr0, f1, f3
@@ -113,11 +113,11 @@ lbl_80B8A8BC:
 /* 80B8A9AC  4E 80 04 21 */	bctrl 
 /* 80B8A9B0  3C 60 80 B9 */	lis r3, lit_11372@ha
 /* 80B8A9B4  38 83 D8 AC */	addi r4, r3, lit_11372@l
-/* 80B8A9B8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B8D8AC */
-/* 80B8A9BC  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B8D8B0 */
+/* 80B8A9B8  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B8A9BC  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B8A9C0  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80B8A9C4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80B8A9C8  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B8D8B4 */
+/* 80B8A9C8  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B8A9CC  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80B8A9D0  7F C3 F3 78 */	mr r3, r30
 /* 80B8A9D4  38 81 00 10 */	addi r4, r1, 0x10

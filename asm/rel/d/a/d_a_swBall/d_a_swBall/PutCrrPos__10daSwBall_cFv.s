@@ -10,9 +10,9 @@ lbl_80D4E6C8:
 /* 80D4E6E8  80 1B 00 B0 */	lwz r0, 0xb0(r27)
 /* 80D4E6EC  54 00 27 BF */	rlwinm. r0, r0, 4, 0x1e, 0x1f
 /* 80D4E6F0  40 82 02 04 */	bne lbl_80D4E8F4
-/* 80D4E6F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4E6F8  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
-/* 80D4E6FC  83 9A 5D AC */	lwz r28, 0x5dac(r26)	/* effective address: 8040BF6C */
+/* 80D4E6F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4E6F8  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
+/* 80D4E6FC  83 9A 5D AC */	lwz r28, 0x5dac(r26)
 /* 80D4E700  38 7C 04 D0 */	addi r3, r28, 0x4d0
 /* 80D4E704  38 9B 04 D0 */	addi r4, r27, 0x4d0
 /* 80D4E708  4B 52 24 FC */	b cLib_targetAngleY__FPC3VecPC3Vec

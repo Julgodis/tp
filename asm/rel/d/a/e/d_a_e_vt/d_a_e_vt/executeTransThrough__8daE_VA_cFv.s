@@ -51,7 +51,7 @@ lbl_807C8B24:
 /* 807C8B38  40 82 00 2C */	bne lbl_807C8B64
 /* 807C8B3C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807C8B40  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807C8B44  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807C8B44  80 63 00 00 */	lwz r3, 0(r3)
 /* 807C8B48  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807C8B4C  38 80 00 01 */	li r4, 1
 /* 807C8B50  4B AE 92 A4 */	b changeSubBgmStatus__8Z2SeqMgrFl

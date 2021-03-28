@@ -9,11 +9,11 @@ lbl_80B76344:
 /* 80B76360  7C 7E 1B 78 */	mr r30, r3
 /* 80B76364  3C 60 80 B7 */	lis r3, m__19daNpc_Zelda_Param_c@ha
 /* 80B76368  3B E3 7F C8 */	addi r31, r3, m__19daNpc_Zelda_Param_c@l
-/* 80B7636C  C0 1F 00 C0 */	lfs f0, 0xc0(r31)	/* effective address: 80B78088 */
+/* 80B7636C  C0 1F 00 C0 */	lfs f0, 0xc0(r31)
 /* 80B76370  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80B76374  C0 1F 00 C4 */	lfs f0, 0xc4(r31)	/* effective address: 80B7808C */
+/* 80B76374  C0 1F 00 C4 */	lfs f0, 0xc4(r31)
 /* 80B76378  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80B7637C  C0 1F 00 A8 */	lfs f0, 0xa8(r31)	/* effective address: 80B78070 */
+/* 80B7637C  C0 1F 00 A8 */	lfs f0, 0xa8(r31)
 /* 80B76380  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80B76384  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80B76388  38 80 00 00 */	li r4, 0

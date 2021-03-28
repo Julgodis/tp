@@ -11,6 +11,25 @@
 // Types:
 // 
 
+struct sBgPc {
+};
+
+struct dBgPc {
+	/* 80074048 */ void setCode(sBgPc&);
+};
+
+struct cBgS_PolyPassChk {
+};
+
+struct cBgS_LinChk {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct dBgS_RoofChk {
+};
+
 struct cBgS_GndChk {
 };
 
@@ -24,27 +43,10 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct sBgPc {
-};
-
-struct dBgPc {
-	/* 80074048 */ void setCode(sBgPc&);
-};
-
-struct dBgS_SphChk {
-};
-
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct cXyz {
-};
-
-struct dBgS_RoofChk {
-};
-
 struct dBgS_SplGrpChk {
+};
+
+struct KC_PrismData {
 };
 
 struct cBgS_GrpPassChk {
@@ -53,19 +55,17 @@ struct cBgS_GrpPassChk {
 struct cBgS_ShdwDraw {
 };
 
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
+};
+
+struct dBgS_SphChk {
+};
+
+struct cXyz {
+};
+
 struct csXyz {
-};
-
-struct KC_PrismData {
-};
-
-struct cBgS_PolyPassChk {
-};
-
-struct dBgS_CaptPoly {
-};
-
-struct cBgS_LinChk {
 };
 
 struct dBgWKCol {
@@ -326,66 +326,66 @@ extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803ABDC8-803ABEB8 00F0+00 s=2 e=0 z=0  None .data      __vt__8dBgWKCol                                              */
 SECTION_DATA static void* __vt__8dBgWKCol[60] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8dBgWKColFv,
-	/* 3    */ (void*)ChkMemoryError__9dBgW_BaseFv,
-	/* 4    */ (void*)ChkNotReady__8dBgWKColCFv,
-	/* 5    */ (void*)ChkLock__8dBgWKColCFv,
-	/* 6    */ (void*)ChkMoveBg__8dBgWKColCFv,
-	/* 7    */ (void*)ChkMoveFlag__8dBgWKColCFv,
-	/* 8    */ (void*)GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo,
-	/* 9    */ (void*)GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
-	/* 10   */ (void*)GetBnd__8dBgWKColCFv,
-	/* 11   */ (void*)GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo,
-	/* 12   */ (void*)OffMoveFlag__8dBgWKColFv,
-	/* 13   */ (void*)GetTopUnder__8dBgWKColCFPfPf,
-	/* 14   */ (void*)SetOldShapeAngleY__9dBgW_BaseFs,
-	/* 15   */ (void*)LineCheck__8dBgWKColFP11cBgS_LinChk,
-	/* 16   */ (void*)GroundCross__8dBgWKColFP11cBgS_GndChk,
-	/* 17   */ (void*)ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw,
-	/* 18   */ (void*)CaptPoly__8dBgWKColFR13dBgS_CaptPoly,
-	/* 19   */ (void*)WallCorrect__8dBgWKColFP9dBgS_Acch,
-	/* 20   */ (void*)WallCorrectSort__8dBgWKColFP9dBgS_Acch,
-	/* 21   */ (void*)RoofChk__8dBgWKColFP12dBgS_RoofChk,
-	/* 22   */ (void*)SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk,
-	/* 23   */ (void*)SphChk__8dBgWKColFP11dBgS_SphChkPv,
-	/* 24   */ (void*)GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo,
-	/* 25   */ (void*)GetExitId__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 26   */ (void*)GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 27   */ (void*)GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 28   */ (void*)GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 29   */ (void*)GetSpecialCode__8dBgWKColFi,
-	/* 30   */ (void*)GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 31   */ (void*)GetPolyObjThrough__8dBgWKColFi,
-	/* 32   */ (void*)GetPolyCamThrough__8dBgWKColFi,
-	/* 33   */ (void*)GetPolyLinkThrough__8dBgWKColFi,
-	/* 34   */ (void*)GetPolyArrowThrough__8dBgWKColFi,
-	/* 35   */ (void*)GetPolyHSStick__8dBgWKColFi,
-	/* 36   */ (void*)GetPolyBoomerangThrough__8dBgWKColFi,
-	/* 37   */ (void*)GetPolyRopeThrough__8dBgWKColFi,
-	/* 38   */ (void*)GetPolyBombThrough__8dBgWKColFi,
-	/* 39   */ (void*)GetShdwThrough__8dBgWKColFi,
-	/* 40   */ (void*)GetUnderwaterRoofCode__8dBgWKColFi,
-	/* 41   */ (void*)GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 42   */ (void*)GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 43   */ (void*)GetWallCode__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 44   */ (void*)GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 45   */ (void*)GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 46   */ (void*)GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 47   */ (void*)GetIronBallThrough__8dBgWKColFi,
-	/* 48   */ (void*)GetAttackThrough__8dBgWKColFi,
-	/* 49   */ (void*)GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 50   */ (void*)GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 51   */ (void*)GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 52   */ (void*)GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 53   */ (void*)GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 54   */ (void*)GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo,
-	/* 55   */ (void*)CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	/* 56   */ (void*)TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	/* 57   */ (void*)MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
-	/* 58   */ (void*)CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c,
-	/* 59   */ (void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8dBgWKColFv,
+	(void*)ChkMemoryError__9dBgW_BaseFv,
+	(void*)ChkNotReady__8dBgWKColCFv,
+	(void*)ChkLock__8dBgWKColCFv,
+	(void*)ChkMoveBg__8dBgWKColCFv,
+	(void*)ChkMoveFlag__8dBgWKColCFv,
+	(void*)GetTriPla__8dBgWKColCFRC13cBgS_PolyInfo,
+	(void*)GetTriPnt__8dBgWKColCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz,
+	(void*)GetBnd__8dBgWKColCFv,
+	(void*)GetGrpInf__8dBgWKColCFRC13cBgS_PolyInfo,
+	(void*)OffMoveFlag__8dBgWKColFv,
+	(void*)GetTopUnder__8dBgWKColCFPfPf,
+	(void*)SetOldShapeAngleY__9dBgW_BaseFs,
+	(void*)LineCheck__8dBgWKColFP11cBgS_LinChk,
+	(void*)GroundCross__8dBgWKColFP11cBgS_GndChk,
+	(void*)ShdwDraw__8dBgWKColFP13cBgS_ShdwDraw,
+	(void*)CaptPoly__8dBgWKColFR13dBgS_CaptPoly,
+	(void*)WallCorrect__8dBgWKColFP9dBgS_Acch,
+	(void*)WallCorrectSort__8dBgWKColFP9dBgS_Acch,
+	(void*)RoofChk__8dBgWKColFP12dBgS_RoofChk,
+	(void*)SplGrpChk__8dBgWKColFP14dBgS_SplGrpChk,
+	(void*)SphChk__8dBgWKColFP11dBgS_SphChkPv,
+	(void*)GetGrpRoomIndex__8dBgWKColCFRC13cBgS_PolyInfo,
+	(void*)GetExitId__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetPolyColor__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetHorseNoEntry__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetSpecialCode__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetSpecialCode__8dBgWKColFi,
+	(void*)GetMagnetCode__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetPolyObjThrough__8dBgWKColFi,
+	(void*)GetPolyCamThrough__8dBgWKColFi,
+	(void*)GetPolyLinkThrough__8dBgWKColFi,
+	(void*)GetPolyArrowThrough__8dBgWKColFi,
+	(void*)GetPolyHSStick__8dBgWKColFi,
+	(void*)GetPolyBoomerangThrough__8dBgWKColFi,
+	(void*)GetPolyRopeThrough__8dBgWKColFi,
+	(void*)GetPolyBombThrough__8dBgWKColFi,
+	(void*)GetShdwThrough__8dBgWKColFi,
+	(void*)GetUnderwaterRoofCode__8dBgWKColFi,
+	(void*)GetMonkeyBarsCode__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetLinkNo__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetWallCode__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetPolyAtt0__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetPolyAtt1__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetGroundCode__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetIronBallThrough__8dBgWKColFi,
+	(void*)GetAttackThrough__8dBgWKColFi,
+	(void*)GetCamMoveBG__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetRoomCamId__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetRoomPathId__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetRoomPathPntNo__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetPolyGrpRoomInfId__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)GetGrpSoundId__8dBgWKColFRC13cBgS_PolyInfo,
+	(void*)CrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	(void*)TransPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	(void*)MatrixCrrPos__8dBgWKColFRC13cBgS_PolyInfoPvbP4cXyzP5csXyzP5csXyz,
+	(void*)CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c,
+	(void*)CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz,
 };
 
 /* 8007E6F4-8007E74C 0058+00 s=0 e=0 z=1  None .text      __ct__8dBgWKColFv                                            */

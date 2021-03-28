@@ -112,8 +112,8 @@ lbl_80D2C9EC:
 /* 80D2CB0C  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80D2CB10  D0 1C 0B 14 */	stfs f0, 0xb14(r28)
 /* 80D2CB14  38 7C 05 C4 */	addi r3, r28, 0x5c4
-/* 80D2CB18  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D2CB1C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80D2CB18  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D2CB1C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80D2CB20  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80D2CB24  4B 34 9F 88 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80D2CB28  80 1C 05 F0 */	lwz r0, 0x5f0(r28)

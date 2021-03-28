@@ -81,10 +81,10 @@ lbl_80A31A7C:
 /* 80A31A80  48 00 60 89 */	bl calcSlip__10daNpc_Kn_cFv
 /* 80A31A84  38 7D 08 C4 */	addi r3, r29, 0x8c4
 /* 80A31A88  4B 65 1D A8 */	b Move__10dCcD_GSttsFv
-/* 80A31A8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A31A90  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80A31A94  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 80A31A98  8B 83 05 68 */	lbz r28, 0x568(r3)	/* effective address: 80400568 */
+/* 80A31A8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A31A90  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80A31A94  80 7F 5D AC */	lwz r3, 0x5dac(r31)
+/* 80A31A98  8B 83 05 68 */	lbz r28, 0x568(r3)
 /* 80A31A9C  2C 1C 00 17 */	cmpwi r28, 0x17
 /* 80A31AA0  41 82 00 0C */	beq lbl_80A31AAC
 /* 80A31AA4  2C 1C 00 18 */	cmpwi r28, 0x18
@@ -297,9 +297,9 @@ lbl_80A31D8C:
 /* 80A31DA0  7D 89 03 A6 */	mtctr r12
 /* 80A31DA4  4E 80 04 21 */	bctrl 
 lbl_80A31DA8:
-/* 80A31DA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A31DAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A31DB0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80A31DA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A31DAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A31DB0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80A31DB4  28 00 00 00 */	cmplwi r0, 0
 /* 80A31DB8  41 82 00 1C */	beq lbl_80A31DD4
 /* 80A31DBC  C0 1E 00 38 */	lfs f0, 0x38(r30)

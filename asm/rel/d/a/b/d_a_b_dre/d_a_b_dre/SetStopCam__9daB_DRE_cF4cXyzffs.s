@@ -8,9 +8,9 @@ lbl_805C808C:
 /* 805C80A4  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 805C80A8  7C 7E 1B 78 */	mr r30, r3
 /* 805C80AC  FF E0 08 90 */	fmr f31, f1
-/* 805C80B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805C80B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805C80B8  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805C80B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C80B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805C80B8  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805C80BC  7C 00 07 74 */	extsb r0, r0
 /* 805C80C0  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805C80C4  7C 63 02 14 */	add r3, r3, r0

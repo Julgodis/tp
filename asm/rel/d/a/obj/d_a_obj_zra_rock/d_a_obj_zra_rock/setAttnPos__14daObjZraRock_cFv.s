@@ -6,11 +6,11 @@ lbl_80D44CB8:
 /* 80D44CC8  7C 7F 1B 78 */	mr r31, r3
 /* 80D44CCC  3C 60 80 D4 */	lis r3, lit_3814@ha
 /* 80D44CD0  38 63 55 C4 */	addi r3, r3, lit_3814@l
-/* 80D44CD4  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80D455C4 */
+/* 80D44CD4  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80D44CD8  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80D44CDC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80D455C8 */
+/* 80D44CDC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80D44CE0  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80D44CE4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D455CC */
+/* 80D44CE4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D44CE8  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80D44CEC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80D44CF0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l

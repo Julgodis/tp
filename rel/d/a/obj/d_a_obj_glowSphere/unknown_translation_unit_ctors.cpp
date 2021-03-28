@@ -19,7 +19,6 @@ extern void* const data_80BFA95C[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_glowSphere_cpp(); // 1
 
 // 
 // Declarations:

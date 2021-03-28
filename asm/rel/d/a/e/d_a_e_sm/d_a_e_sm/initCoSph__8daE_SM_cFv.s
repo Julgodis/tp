@@ -17,7 +17,7 @@ lbl_80797784:
 /* 807977C0  C0 3F 04 EC */	lfs f1, 0x4ec(r31)
 /* 807977C4  3C 60 80 7A */	lis r3, l_HIO@ha
 /* 807977C8  38 63 89 CC */	addi r3, r3, l_HIO@l
-/* 807977CC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 807989D4 */
+/* 807977CC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 807977D0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 807977D4  D0 1F 06 F0 */	stfs f0, 0x6f0(r31)
 /* 807977D8  38 7F 10 00 */	addi r3, r31, 0x1000

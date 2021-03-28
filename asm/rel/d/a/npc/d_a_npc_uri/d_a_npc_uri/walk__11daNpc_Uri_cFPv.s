@@ -9,9 +9,9 @@ lbl_80B2AB60:
 /* 80B2AB7C  3B C3 CE 14 */	addi r30, r3, m__17daNpc_Uri_Param_c@l
 /* 80B2AB80  3B A0 00 00 */	li r29, 0
 /* 80B2AB84  38 7E 00 00 */	addi r3, r30, 0
-/* 80B2AB88  AB 83 00 8C */	lha r28, 0x8c(r3)	/* effective address: 80B2CEA0 */
-/* 80B2AB8C  AB 63 00 8E */	lha r27, 0x8e(r3)	/* effective address: 80B2CEA2 */
-/* 80B2AB90  AB 43 00 90 */	lha r26, 0x90(r3)	/* effective address: 80B2CEA4 */
+/* 80B2AB88  AB 83 00 8C */	lha r28, 0x8c(r3)
+/* 80B2AB8C  AB 63 00 8E */	lha r27, 0x8e(r3)
+/* 80B2AB90  AB 43 00 90 */	lha r26, 0x90(r3)
 /* 80B2AB94  A0 19 0E 22 */	lhz r0, 0xe22(r25)
 /* 80B2AB98  2C 00 00 02 */	cmpwi r0, 2
 /* 80B2AB9C  41 82 00 38 */	beq lbl_80B2ABD4
@@ -35,9 +35,9 @@ lbl_80B2ABD4:
 /* 80B2ABDC  2C 03 00 00 */	cmpwi r3, 0
 /* 80B2ABE0  41 82 00 70 */	beq lbl_80B2AC50
 /* 80B2ABE4  7F 23 CB 78 */	mr r3, r25
-/* 80B2ABE8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B2ABEC  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80B2ABF0  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80B2ABE8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B2ABEC  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80B2ABF0  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80B2ABF4  4B 4E FB 1C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B2ABF8  80 7F 5D AC */	lwz r3, 0x5dac(r31)
 /* 80B2ABFC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
@@ -262,9 +262,9 @@ lbl_80B2AF20:
 /* 80B2AF30  2C 00 00 00 */	cmpwi r0, 0
 /* 80B2AF34  41 82 00 28 */	beq lbl_80B2AF5C
 /* 80B2AF38  38 79 0B 98 */	addi r3, r25, 0xb98
-/* 80B2AF3C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B2AF40  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B2AF44  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B2AF3C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B2AF40  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B2AF44  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B2AF48  4B 61 A7 98 */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 /* 80B2AF4C  80 79 0F F8 */	lwz r3, 0xff8(r25)
 /* 80B2AF50  38 03 FF FF */	addi r0, r3, -1

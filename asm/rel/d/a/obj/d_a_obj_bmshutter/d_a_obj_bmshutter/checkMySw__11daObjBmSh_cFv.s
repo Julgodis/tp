@@ -5,8 +5,8 @@ lbl_80BBA044:
 /* 80BBA050  7C 65 1B 78 */	mr r5, r3
 /* 80BBA054  A0 03 05 C8 */	lhz r0, 0x5c8(r3)
 /* 80BBA058  54 04 06 3E */	clrlwi r4, r0, 0x18
-/* 80BBA05C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BBA060  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BBA05C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BBA060  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BBA064  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 80BBA068  7C 05 07 74 */	extsb r5, r0
 /* 80BBA06C  4B 47 B2 F4 */	b isSwitch__10dSv_info_cCFii

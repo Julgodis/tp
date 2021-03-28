@@ -124,7 +124,7 @@ lbl_80715C78:
 /* 80715CE8  98 1F 07 06 */	stb r0, 0x706(r31)
 /* 80715CEC  3C 60 80 72 */	lis r3, data_8071CB90@ha
 /* 80715CF0  38 83 CB 90 */	addi r4, r3, data_8071CB90@l
-/* 80715CF4  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 8071CB90 */
+/* 80715CF4  88 04 00 00 */	lbz r0, 0(r4)
 /* 80715CF8  7C 00 07 75 */	extsb. r0, r0
 /* 80715CFC  40 82 00 18 */	bne lbl_80715D14
 /* 80715D00  38 60 00 01 */	li r3, 1

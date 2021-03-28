@@ -95,9 +95,9 @@ lbl_8081B8B4:
 /* 8081B8F0  38 E0 01 00 */	li r7, 0x100
 /* 8081B8F4  4B A5 4C 4C */	b cLib_addCalcAngleS__FPsssss
 /* 8081B8F8  7F C3 F3 78 */	mr r3, r30
-/* 8081B8FC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8081B900  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 8081B904  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 8081B8FC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081B900  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 8081B904  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 8081B908  4B 7F EE 08 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081B90C  7C 64 1B 78 */	mr r4, r3
 /* 8081B910  38 7E 04 E6 */	addi r3, r30, 0x4e6

@@ -18,7 +18,7 @@ lbl_80C78A8C:
 /* 80C78ACC  D0 1F 05 C4 */	stfs f0, 0x5c4(r31)
 /* 80C78AD0  3C 60 80 C8 */	lis r3, l_HIO@ha
 /* 80C78AD4  38 63 9D 44 */	addi r3, r3, l_HIO@l
-/* 80C78AD8  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80C79D54 */
+/* 80C78AD8  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80C78ADC  D0 1F 05 F8 */	stfs f0, 0x5f8(r31)
 /* 80C78AE0  38 61 00 14 */	addi r3, r1, 0x14
 /* 80C78AE4  38 9F 04 D0 */	addi r4, r31, 0x4d0
@@ -43,7 +43,7 @@ lbl_80C78A8C:
 /* 80C78B30  38 9F 05 B0 */	addi r4, r31, 0x5b0
 /* 80C78B34  3C A0 80 C8 */	lis r5, l_HIO@ha
 /* 80C78B38  38 A5 9D 44 */	addi r5, r5, l_HIO@l
-/* 80C78B3C  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C79D50 */
+/* 80C78B3C  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C78B40  38 A1 00 20 */	addi r5, r1, 0x20
 /* 80C78B44  4B 5E FA 6C */	b cM3d_InDivPos2__FPC3VecPC3VecfP3Vec
 /* 80C78B48  C0 01 00 20 */	lfs f0, 0x20(r1)

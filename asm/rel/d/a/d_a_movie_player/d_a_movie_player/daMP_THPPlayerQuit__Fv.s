@@ -9,8 +9,8 @@ lbl_808772CC:
 /* 808772E8  90 03 48 88 */	stw r0, daMP_Initialized@l(r3)
 /* 808772EC  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808772F0  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 808772F4  90 03 00 A8 */	stw r0, 0xa8(r3)	/* effective address: 80879C78 */
-/* 808772F8  90 03 00 AC */	stw r0, 0xac(r3)	/* effective address: 80879C7C */
+/* 808772F4  90 03 00 A8 */	stw r0, 0xa8(r3)
+/* 808772F8  90 03 00 AC */	stw r0, 0xac(r3)
 /* 808772FC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80877300  7C 08 03 A6 */	mtlr r0
 /* 80877304  38 21 00 10 */	addi r1, r1, 0x10

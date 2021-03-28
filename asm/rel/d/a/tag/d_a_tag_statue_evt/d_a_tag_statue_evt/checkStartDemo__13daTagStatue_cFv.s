@@ -7,9 +7,9 @@ lbl_805A7B78:
 /* 805A7B8C  7C 7D 1B 78 */	mr r29, r3
 /* 805A7B90  3C 80 80 5B */	lis r4, l_event_bit@ha
 /* 805A7B94  3B E4 81 04 */	addi r31, r4, l_event_bit@l
-/* 805A7B98  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805A7B9C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805A7BA0  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805A7B98  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805A7B9C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805A7BA0  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 805A7BA4  48 00 01 2D */	bl checkOnEffect__13daTagStatue_cFv
 /* 805A7BA8  2C 03 00 00 */	cmpwi r3, 0
 /* 805A7BAC  40 82 00 0C */	bne lbl_805A7BB8

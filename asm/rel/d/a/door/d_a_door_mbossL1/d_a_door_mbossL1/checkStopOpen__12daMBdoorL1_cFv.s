@@ -14,8 +14,8 @@ lbl_80676804:
 /* 80676804  4B 9C 39 D8 */	b getSwbit2__13door_param2_cFP10fopAc_ac_c
 /* 80676808  7C 60 1B 78 */	mr r0, r3
 lbl_8067680C:
-/* 8067680C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676810  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8067680C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676810  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80676814  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80676818  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 8067681C  7C 05 07 74 */	extsb r5, r0

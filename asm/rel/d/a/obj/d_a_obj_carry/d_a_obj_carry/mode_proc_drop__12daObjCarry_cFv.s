@@ -43,8 +43,8 @@ lbl_80474574:
 /* 804745E0  D0 1F 0A C8 */	stfs f0, 0xac8(r31)
 /* 804745E4  38 00 00 64 */	li r0, 0x64
 /* 804745E8  98 1F 0A 50 */	stb r0, 0xa50(r31)
-/* 804745EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804745F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804745EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804745F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804745F4  38 63 23 3C */	addi r3, r3, 0x233c
 /* 804745F8  38 9F 0A 3C */	addi r4, r31, 0xa3c
 /* 804745FC  4B DF 05 AC */	b Set__4cCcSFP8cCcD_Obj

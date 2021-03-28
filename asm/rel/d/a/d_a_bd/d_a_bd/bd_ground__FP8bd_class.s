@@ -9,7 +9,7 @@ lbl_804D78FC:
 /* 804D7918  7C 7E 1B 78 */	mr r30, r3
 /* 804D791C  3C 60 80 4E */	lis r3, lit_3942@ha
 /* 804D7920  3B E3 9E 64 */	addi r31, r3, lit_3942@l
-/* 804D7924  C3 FF 00 10 */	lfs f31, 0x10(r31)	/* effective address: 804D9E74 */
+/* 804D7924  C3 FF 00 10 */	lfs f31, 0x10(r31)
 /* 804D7928  38 61 00 24 */	addi r3, r1, 0x24
 /* 804D792C  4B B9 FC 50 */	b __ct__11dBgS_GndChkFv
 /* 804D7930  A8 1E 06 1C */	lha r0, 0x61c(r30)
@@ -41,8 +41,8 @@ lbl_804D7968:
 /* 804D7990  C0 1E 04 B0 */	lfs f0, 0x4b0(r30)
 /* 804D7994  EC 00 08 2A */	fadds f0, f0, f1
 /* 804D7998  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 804D799C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D79A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804D799C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D79A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804D79A4  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 804D79A8  38 7D 3E C8 */	addi r3, r29, 0x3ec8
 /* 804D79AC  3C 80 80 4E */	lis r4, stringBase0@ha
@@ -207,7 +207,7 @@ lbl_804D7BD8:
 lbl_804D7BFC:
 /* 804D7BFC  3C 60 80 4E */	lis r3, l_HIO@ha
 /* 804D7C00  38 63 A3 6C */	addi r3, r3, l_HIO@l
-/* 804D7C04  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 804DA37C */
+/* 804D7C04  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 804D7C08  38 7E 04 DE */	addi r3, r30, 0x4de
 /* 804D7C0C  A8 9E 05 D0 */	lha r4, 0x5d0(r30)
 /* 804D7C10  38 A0 00 04 */	li r5, 4
@@ -281,7 +281,7 @@ lbl_804D7CC8:
 lbl_804D7D14:
 /* 804D7D14  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 804D7D18  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 804D7D1C  C0 23 12 44 */	lfs f1, 0x1244(r3)	/* effective address: 8042DC98 */
+/* 804D7D1C  C0 23 12 44 */	lfs f1, 0x1244(r3)
 /* 804D7D20  C0 1F 00 8C */	lfs f0, 0x8c(r31)
 /* 804D7D24  EC 01 00 24 */	fdivs f0, f1, f0
 /* 804D7D28  FC 00 00 1E */	fctiwz f0, f0
@@ -321,7 +321,7 @@ lbl_804D7D4C:
 /* 804D7DA8  4B FF EE FD */	bl anm_init__FP8bd_classifUcf
 /* 804D7DAC  3C 60 80 4E */	lis r3, l_HIO@ha
 /* 804D7DB0  38 63 A3 6C */	addi r3, r3, l_HIO@l
-/* 804D7DB4  A8 03 00 1C */	lha r0, 0x1c(r3)	/* effective address: 804DA388 */
+/* 804D7DB4  A8 03 00 1C */	lha r0, 0x1c(r3)
 /* 804D7DB8  B0 1E 05 F4 */	sth r0, 0x5f4(r30)
 /* 804D7DBC  48 00 00 0C */	b lbl_804D7DC8
 lbl_804D7DC0:

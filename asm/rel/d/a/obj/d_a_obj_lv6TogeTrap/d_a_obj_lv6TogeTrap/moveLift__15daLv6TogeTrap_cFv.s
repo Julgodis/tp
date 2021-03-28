@@ -12,7 +12,7 @@ lbl_80C7A97C:
 /* 80C7A9A4  41 82 02 0C */	beq lbl_80C7ABB0
 /* 80C7A9A8  3C 60 80 C8 */	lis r3, data_80C7CA8C@ha
 /* 80C7A9AC  38 83 CA 8C */	addi r4, r3, data_80C7CA8C@l
-/* 80C7A9B0  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80C7CA8C */
+/* 80C7A9B0  88 04 00 00 */	lbz r0, 0(r4)
 /* 80C7A9B4  7C 00 07 75 */	extsb. r0, r0
 /* 80C7A9B8  40 82 01 60 */	bne lbl_80C7AB18
 /* 80C7A9BC  80 7F 00 B0 */	lwz r3, 0xb0(r31)

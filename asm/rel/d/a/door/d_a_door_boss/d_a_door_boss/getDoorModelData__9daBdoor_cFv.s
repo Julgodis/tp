@@ -15,8 +15,8 @@ lbl_8066F454:
 /* 8066F488  7F C3 F3 78 */	mr r3, r30
 /* 8066F48C  4B FF FF 8D */	bl getArcName__9daBdoor_cFv
 /* 8066F490  7F E4 FB 78 */	mr r4, r31
-/* 8066F494  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8066F498  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8066F494  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8066F498  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8066F49C  3C A5 00 02 */	addis r5, r5, 2
 /* 8066F4A0  38 C0 00 80 */	li r6, 0x80
 /* 8066F4A4  38 A5 C2 F8 */	addi r5, r5, -15624

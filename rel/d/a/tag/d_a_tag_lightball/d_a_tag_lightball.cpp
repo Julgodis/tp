@@ -37,10 +37,10 @@ struct DALKMIST_INFLUENCE {
 // Forward References:
 // 
 
-static void daTagLightBall_Draw(daTagLightBall_c*); // 2
-static void daTagLightBall_Execute(daTagLightBall_c*); // 2
-static void daTagLightBall_Delete(daTagLightBall_c*); // 2
-static void daTagLightBall_Create(fopAc_ac_c*); // 2
+void daTagLightBall_Draw(daTagLightBall_c*); // 2
+void daTagLightBall_Execute(daTagLightBall_c*); // 2
+void daTagLightBall_Delete(daTagLightBall_c*); // 2
+void daTagLightBall_Create(fopAc_ac_c*); // 2
 
 extern "C" void initBaseMtx__16daTagLightBall_cFv(); // 1
 extern "C" void setBaseMtx__16daTagLightBall_cFv(); // 1
@@ -49,10 +49,11 @@ extern "C" void create__16daTagLightBall_cFv(); // 1
 extern "C" void execute__16daTagLightBall_cFv(); // 1
 extern "C" bool draw__16daTagLightBall_cFv(); // 1
 extern "C" void _delete__16daTagLightBall_cFv(); // 1
-extern "C" static void daTagLightBall_Draw__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Execute__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Delete__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagLightBall_Draw__FP16daTagLightBall_c(); // 1
+extern "C" void daTagLightBall_Execute__FP16daTagLightBall_c(); // 1
+extern "C" void daTagLightBall_Delete__FP16daTagLightBall_c(); // 1
+extern "C" void daTagLightBall_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daTagLightBall_Method[8];
 extern "C" extern void* g_profile_Tag_LightBall[12];
 
 // 
@@ -70,10 +71,8 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE(); // 1
 extern "C" void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE(); // 1
 extern "C" void PSMTXTrans(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
@@ -155,44 +154,44 @@ asm void daTagLightBall_c::_delete() {
 #pragma pop
 
 
-/* 80D5ABF0-80D5AC10 0020+00 s=1 e=0 z=0  None .text      daTagLightBall_Draw__FP16daTagLightBall_c                    */
+/* 80D5ABF0-80D5AC10 0020+00 s=0 e=0 z=0  None .text      daTagLightBall_Draw__FP16daTagLightBall_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLightBall_Draw(daTagLightBall_c* param_0) {
+asm void daTagLightBall_Draw(daTagLightBall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Draw__FP16daTagLightBall_c.s"
 }
 #pragma pop
 
 
-/* 80D5AC10-80D5AC30 0020+00 s=1 e=0 z=0  None .text      daTagLightBall_Execute__FP16daTagLightBall_c                 */
+/* 80D5AC10-80D5AC30 0020+00 s=0 e=0 z=0  None .text      daTagLightBall_Execute__FP16daTagLightBall_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLightBall_Execute(daTagLightBall_c* param_0) {
+asm void daTagLightBall_Execute(daTagLightBall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Execute__FP16daTagLightBall_c.s"
 }
 #pragma pop
 
 
-/* 80D5AC30-80D5AC50 0020+00 s=1 e=0 z=0  None .text      daTagLightBall_Delete__FP16daTagLightBall_c                  */
+/* 80D5AC30-80D5AC50 0020+00 s=0 e=0 z=0  None .text      daTagLightBall_Delete__FP16daTagLightBall_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLightBall_Delete(daTagLightBall_c* param_0) {
+asm void daTagLightBall_Delete(daTagLightBall_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Delete__FP16daTagLightBall_c.s"
 }
 #pragma pop
 
 
-/* 80D5AC50-80D5AC70 0020+00 s=1 e=0 z=0  None .text      daTagLightBall_Create__FP10fopAc_ac_c                        */
+/* 80D5AC50-80D5AC70 0020+00 s=0 e=0 z=0  None .text      daTagLightBall_Create__FP10fopAc_ac_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagLightBall_Create(fopAc_ac_c* param_0) {
+asm void daTagLightBall_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lightball/d_a_tag_lightball/daTagLightBall_Create__FP10fopAc_ac_c.s"
 }
@@ -200,31 +199,31 @@ asm static void daTagLightBall_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D5AC7C-80D5AC9C 0020+00 s=1 e=0 z=0  None .data      l_daTagLightBall_Method                                      */
-SECTION_DATA static void* l_daTagLightBall_Method[8] = {
-	/* 0    */ (void*)daTagLightBall_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagLightBall_Delete__FP16daTagLightBall_c,
-	/* 2    */ (void*)daTagLightBall_Execute__FP16daTagLightBall_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagLightBall_Draw__FP16daTagLightBall_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5AC7C-80D5AC9C 0020+00 s=0 e=0 z=0  None .data      l_daTagLightBall_Method                                      */
+SECTION_DATA void* l_daTagLightBall_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5AC9C-80D5ACCC 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_LightBall                                      */
+/* 80D5AC9C-80D5ACCC 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_LightBall                                      */
 SECTION_DATA void* g_profile_Tag_LightBall[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x017C0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000580,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02230000,
-	/* 9    */ (void*)&l_daTagLightBall_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x017C0000,
+	(void*)NULL,
+	(void*)0x00000580,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02230000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 

@@ -6,7 +6,7 @@ lbl_80D672EC:
 /* 80D672FC  7C 7F 1B 78 */	mr r31, r3
 /* 80D67300  3C 80 80 3E */	lis r4, m_cpadInfo__8mDoCPd_c@ha
 /* 80D67304  38 84 D2 E8 */	addi r4, r4, m_cpadInfo__8mDoCPd_c@l
-/* 80D67308  80 84 00 34 */	lwz r4, 0x34(r4)	/* effective address: 803DD31C */
+/* 80D67308  80 84 00 34 */	lwz r4, 0x34(r4)
 /* 80D6730C  54 80 05 EF */	rlwinm. r0, r4, 0, 0x17, 0x17
 /* 80D67310  40 82 00 0C */	bne lbl_80D6731C
 /* 80D67314  54 80 04 E7 */	rlwinm. r0, r4, 0, 0x13, 0x13

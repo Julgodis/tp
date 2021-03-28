@@ -12,7 +12,7 @@ lbl_804EADD4:
 /* 804EADFC  38 03 80 00 */	addi r0, r3, -32768
 /* 804EAE00  7C 04 00 50 */	subf r0, r4, r0
 /* 804EAE04  B0 1F 07 50 */	sth r0, 0x750(r31)
-/* 804EAE08  C0 1E 00 C4 */	lfs f0, 0xc4(r30)	/* effective address: 804EE970 */
+/* 804EAE08  C0 1E 00 C4 */	lfs f0, 0xc4(r30)
 /* 804EAE0C  D0 1F 07 4C */	stfs f0, 0x74c(r31)
 /* 804EAE10  38 00 00 15 */	li r0, 0x15
 /* 804EAE14  B0 1F 06 CE */	sth r0, 0x6ce(r31)
@@ -20,7 +20,7 @@ lbl_804EADD4:
 /* 804EAE1C  B0 1F 05 B4 */	sth r0, 0x5b4(r31)
 /* 804EAE20  A8 1F 10 C2 */	lha r0, 0x10c2(r31)
 /* 804EAE24  B0 1F 07 26 */	sth r0, 0x726(r31)
-/* 804EAE28  C0 3E 00 60 */	lfs f1, 0x60(r30)	/* effective address: 804EE90C */
+/* 804EAE28  C0 3E 00 60 */	lfs f1, 0x60(r30)
 /* 804EAE2C  4B D7 CB 28 */	b cM_rndF__Ff
 /* 804EAE30  C0 1E 00 34 */	lfs f0, 0x34(r30)
 /* 804EAE34  EC 00 08 2A */	fadds f0, f0, f1

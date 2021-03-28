@@ -124,10 +124,10 @@ SECTION_DATA static u8 sMessageQueue__9JKRDecomp[32] = {
 
 /* 803CC4A0-803CC4B0 0010+00 s=2 e=0 z=0  None .data      __vt__9JKRDecomp                                             */
 SECTION_DATA static void* __vt__9JKRDecomp[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9JKRDecompFv,
-	/* 3    */ (void*)run__9JKRDecompFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9JKRDecompFv,
+	(void*)run__9JKRDecompFv,
 };
 
 /* 802DB6E0-802DB730 0050+00 s=1 e=0 z=0  None .text      __ct__9JKRDecompFl                                           */

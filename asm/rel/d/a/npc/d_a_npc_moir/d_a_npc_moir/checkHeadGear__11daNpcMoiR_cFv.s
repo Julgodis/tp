@@ -16,10 +16,10 @@ lbl_80A815D4:
 /* 80A8160C  40 82 01 48 */	bne lbl_80A81754
 /* 80A81610  3C 80 80 A8 */	lis r4, l_arcNames@ha
 /* 80A81614  3B 64 3A F8 */	addi r27, r4, l_arcNames@l
-/* 80A81618  80 9B 00 04 */	lwz r4, 4(r27)	/* effective address: 80A83AFC */
+/* 80A81618  80 9B 00 04 */	lwz r4, 4(r27)
 /* 80A8161C  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A81620  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81624  80 A5 01 68 */	lwz r5, 0x168(r5)	/* effective address: 80A83A38 */
+/* 80A81624  80 A5 01 68 */	lwz r5, 0x168(r5)
 /* 80A81628  4B 6D 15 04 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A8162C  7C 1D 18 40 */	cmplw r29, r3
 /* 80A81630  40 82 00 40 */	bne lbl_80A81670
@@ -43,7 +43,7 @@ lbl_80A81670:
 /* 80A81674  80 9B 00 04 */	lwz r4, 4(r27)
 /* 80A81678  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A8167C  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81680  80 A5 01 74 */	lwz r5, 0x174(r5)	/* effective address: 80A83A44 */
+/* 80A81680  80 A5 01 74 */	lwz r5, 0x174(r5)
 /* 80A81684  4B 6D 14 A8 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A81688  7C 1D 18 40 */	cmplw r29, r3
 /* 80A8168C  40 82 00 28 */	bne lbl_80A816B4
@@ -61,7 +61,7 @@ lbl_80A816B4:
 /* 80A816B8  80 9B 00 04 */	lwz r4, 4(r27)
 /* 80A816BC  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A816C0  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A816C4  80 A5 01 80 */	lwz r5, 0x180(r5)	/* effective address: 80A83A50 */
+/* 80A816C4  80 A5 01 80 */	lwz r5, 0x180(r5)
 /* 80A816C8  4B 6D 14 64 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A816CC  7C 1D 18 40 */	cmplw r29, r3
 /* 80A816D0  40 82 00 28 */	bne lbl_80A816F8
@@ -79,7 +79,7 @@ lbl_80A816F8:
 /* 80A816FC  80 9B 00 04 */	lwz r4, 4(r27)
 /* 80A81700  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A81704  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81708  80 A5 01 8C */	lwz r5, 0x18c(r5)	/* effective address: 80A83A5C */
+/* 80A81708  80 A5 01 8C */	lwz r5, 0x18c(r5)
 /* 80A8170C  4B 6D 14 20 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A81710  7C 1D 18 40 */	cmplw r29, r3
 /* 80A81714  40 82 01 88 */	bne lbl_80A8189C
@@ -103,10 +103,10 @@ lbl_80A81754:
 /* 80A81758  40 82 01 44 */	bne lbl_80A8189C
 /* 80A8175C  3C 80 80 A8 */	lis r4, l_arcNames@ha
 /* 80A81760  3B 64 3A F8 */	addi r27, r4, l_arcNames@l
-/* 80A81764  80 9B 00 08 */	lwz r4, 8(r27)	/* effective address: 80A83B00 */
+/* 80A81764  80 9B 00 08 */	lwz r4, 8(r27)
 /* 80A81768  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A8176C  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81770  80 A5 01 20 */	lwz r5, 0x120(r5)	/* effective address: 80A839F0 */
+/* 80A81770  80 A5 01 20 */	lwz r5, 0x120(r5)
 /* 80A81774  4B 6D 13 B8 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A81778  7C 1D 18 40 */	cmplw r29, r3
 /* 80A8177C  40 82 00 40 */	bne lbl_80A817BC
@@ -130,7 +130,7 @@ lbl_80A817BC:
 /* 80A817C0  80 9B 00 08 */	lwz r4, 8(r27)
 /* 80A817C4  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A817C8  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A817CC  80 A5 01 2C */	lwz r5, 0x12c(r5)	/* effective address: 80A839FC */
+/* 80A817CC  80 A5 01 2C */	lwz r5, 0x12c(r5)
 /* 80A817D0  4B 6D 13 5C */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A817D4  7C 1D 18 40 */	cmplw r29, r3
 /* 80A817D8  40 82 00 28 */	bne lbl_80A81800
@@ -148,7 +148,7 @@ lbl_80A81800:
 /* 80A81804  80 9B 00 08 */	lwz r4, 8(r27)
 /* 80A81808  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A8180C  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81810  80 A5 01 38 */	lwz r5, 0x138(r5)	/* effective address: 80A83A08 */
+/* 80A81810  80 A5 01 38 */	lwz r5, 0x138(r5)
 /* 80A81814  4B 6D 13 18 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A81818  7C 1D 18 40 */	cmplw r29, r3
 /* 80A8181C  40 82 00 28 */	bne lbl_80A81844
@@ -166,7 +166,7 @@ lbl_80A81844:
 /* 80A81848  80 9B 00 08 */	lwz r4, 8(r27)
 /* 80A8184C  3C A0 80 A8 */	lis r5, l_bckGetParamList@ha
 /* 80A81850  38 A5 38 D0 */	addi r5, r5, l_bckGetParamList@l
-/* 80A81854  80 A5 01 44 */	lwz r5, 0x144(r5)	/* effective address: 80A83A14 */
+/* 80A81854  80 A5 01 44 */	lwz r5, 0x144(r5)
 /* 80A81858  4B 6D 12 D4 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80A8185C  7C 1D 18 40 */	cmplw r29, r3
 /* 80A81860  40 82 00 3C */	bne lbl_80A8189C

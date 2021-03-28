@@ -5,8 +5,8 @@ lbl_8045E094:
 /* 8045E0A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045E0A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045E0A8  7C 7E 1B 78 */	mr r30, r3
-/* 8045E0AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E0B0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8045E0AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E0B0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8045E0B4  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 8045E0B8  3C 80 80 46 */	lis r4, struct_8045E56C+0x0@ha
 /* 8045E0BC  38 84 E5 6C */	addi r4, r4, struct_8045E56C+0x0@l

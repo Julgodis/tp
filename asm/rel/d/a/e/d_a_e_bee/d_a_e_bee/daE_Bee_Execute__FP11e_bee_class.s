@@ -6,7 +6,7 @@ lbl_80684A94:
 /* 80684AA4  7C 7F 1B 78 */	mr r31, r3
 /* 80684AA8  3C 80 80 68 */	lis r4, l_HIO@ha
 /* 80684AAC  38 84 56 84 */	addi r4, r4, l_HIO@l
-/* 80684AB0  88 04 00 0C */	lbz r0, 0xc(r4)	/* effective address: 80685690 */
+/* 80684AB0  88 04 00 0C */	lbz r0, 0xc(r4)
 /* 80684AB4  28 00 00 00 */	cmplwi r0, 0
 /* 80684AB8  41 82 00 08 */	beq lbl_80684AC0
 /* 80684ABC  4B 99 51 C0 */	b fopAcM_delete__FP10fopAc_ac_c
@@ -27,9 +27,9 @@ lbl_80684AD8:
 lbl_80684AF0:
 /* 80684AF0  38 63 00 02 */	addi r3, r3, 2
 /* 80684AF4  42 00 FF E4 */	bdnz lbl_80684AD8
-/* 80684AF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80684AFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80684B00  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80684AF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80684AFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80684B00  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80684B04  28 00 00 00 */	cmplwi r0, 0
 /* 80684B08  41 82 00 0C */	beq lbl_80684B14
 /* 80684B0C  38 00 00 3C */	li r0, 0x3c

@@ -6,8 +6,8 @@ lbl_80B43F0C:
 /* 80B43F1C  4B 81 E2 C0 */	b _savegpr_29
 /* 80B43F20  7C 7D 1B 78 */	mr r29, r3
 /* 80B43F24  3B C0 00 00 */	li r30, 0
-/* 80B43F28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B43F2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B43F28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B43F2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B43F30  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 80B43F34  7F E3 FB 78 */	mr r3, r31
 /* 80B43F38  3C 80 80 B4 */	lis r4, struct_80B4612C+0x0@ha

@@ -11,8 +11,8 @@ lbl_80BB9A58:
 /* 80BB9A7C  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80BB9A80  C0 1F 04 F4 */	lfs f0, 0x4f4(r31)
 /* 80BB9A84  D0 03 00 20 */	stfs f0, 0x20(r3)
-/* 80BB9A88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB9A8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB9A88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB9A8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB9A90  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80BB9A94  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BB9A98  88 1F 04 BA */	lbz r0, 0x4ba(r31)

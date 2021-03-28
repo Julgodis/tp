@@ -36,10 +36,10 @@ lbl_804E6680:
 /* 804E6688  4B B3 65 D4 */	b fopAcM_otoCheck__FPC10fopAc_ac_cf
 /* 804E668C  2C 03 00 00 */	cmpwi r3, 0
 /* 804E6690  40 82 00 1C */	bne lbl_804E66AC
-/* 804E6694  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E6698  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804E669C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 804E66A0  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 80406740 */
+/* 804E6694  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E6698  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804E669C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 804E66A0  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 804E66A4  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
 /* 804E66A8  41 82 03 6C */	beq lbl_804E6A14
 lbl_804E66AC:

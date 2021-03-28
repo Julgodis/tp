@@ -30,7 +30,7 @@ lbl_807260C0:
 /* 807260D8  C3 DF 00 00 */	lfs f30, 0(r31)
 /* 807260DC  3C 60 80 73 */	lis r3, target_info_count@ha
 /* 807260E0  3B 63 98 78 */	addi r27, r3, target_info_count@l
-/* 807260E4  80 1B 00 00 */	lwz r0, 0(r27)	/* effective address: 80729878 */
+/* 807260E4  80 1B 00 00 */	lwz r0, 0(r27)
 /* 807260E8  2C 00 00 00 */	cmpwi r0, 0
 /* 807260EC  41 82 00 C8 */	beq lbl_807261B4
 /* 807260F0  3B 20 00 00 */	li r25, 0

@@ -11,13 +11,13 @@ lbl_8076E418:
 /* 8076E43C  7C 7C 1B 78 */	mr r28, r3
 /* 8076E440  3C 80 80 78 */	lis r4, lit_4018@ha
 /* 8076E444  3B E4 9D FC */	addi r31, r4, lit_4018@l
-/* 8076E448  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80779E00 */
+/* 8076E448  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8076E44C  3C 80 80 78 */	lis r4, l_HIO@ha
 /* 8076E450  38 84 A8 84 */	addi r4, r4, l_HIO@l
-/* 8076E454  C3 C4 00 14 */	lfs f30, 0x14(r4)	/* effective address: 8077A898 */
-/* 8076E458  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8076E45C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8076E460  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8076E454  C3 C4 00 14 */	lfs f30, 0x14(r4)
+/* 8076E458  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8076E45C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8076E460  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8076E464  4B 8A C2 AC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8076E468  7C 7E 1B 78 */	mr r30, r3
 /* 8076E46C  3B A0 00 00 */	li r29, 0
@@ -116,7 +116,7 @@ lbl_8076E58C:
 /* 8076E5C4  C0 7C 0A 48 */	lfs f3, 0xa48(r28)
 /* 8076E5C8  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076E5CC  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 8076E5D0  C0 43 00 28 */	lfs f2, 0x28(r3)	/* effective address: 8077A8AC */
+/* 8076E5D0  C0 43 00 28 */	lfs f2, 0x28(r3)
 /* 8076E5D4  C0 3F 00 00 */	lfs f1, 0(r31)
 /* 8076E5D8  EC 02 08 28 */	fsubs f0, f2, f1
 /* 8076E5DC  FC 03 00 40 */	fcmpo cr0, f3, f0
@@ -140,7 +140,7 @@ lbl_8076E610:
 /* 8076E618  C0 3C 0A 48 */	lfs f1, 0xa48(r28)
 /* 8076E61C  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076E620  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 8076E624  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8077A8AC */
+/* 8076E624  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 8076E628  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8076E62C  3B DE 80 00 */	addi r30, r30, -32768
 /* 8076E630  41 81 00 1C */	bgt lbl_8076E64C
@@ -161,7 +161,7 @@ lbl_8076E65C:
 /* 8076E660  C0 3C 0A 48 */	lfs f1, 0xa48(r28)
 /* 8076E664  3C 60 80 78 */	lis r3, l_HIO@ha
 /* 8076E668  38 63 A8 84 */	addi r3, r3, l_HIO@l
-/* 8076E66C  C0 03 00 28 */	lfs f0, 0x28(r3)	/* effective address: 8077A8AC */
+/* 8076E66C  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 8076E670  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8076E674  40 80 00 08 */	bge lbl_8076E67C
 /* 8076E678  3B A0 00 01 */	li r29, 1

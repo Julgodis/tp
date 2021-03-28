@@ -14,11 +14,11 @@ lbl_80BE3D24:
 /* 80BE3D54  7C 9D 23 78 */	mr r29, r4
 /* 80BE3D58  3C 60 80 BE */	lis r3, lit_3677@ha
 /* 80BE3D5C  3B E3 4A B0 */	addi r31, r3, lit_3677@l
-/* 80BE3D60  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80BE4AB0 */
+/* 80BE3D60  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80BE3D64  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80BE3D68  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 80BE4AD0 */
+/* 80BE3D68  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80BE3D6C  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80BE3D70  C0 1F 00 24 */	lfs f0, 0x24(r31)	/* effective address: 80BE4AD4 */
+/* 80BE3D70  C0 1F 00 24 */	lfs f0, 0x24(r31)
 /* 80BE3D74  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80BE3D78  38 7C 04 D0 */	addi r3, r28, 0x4d0
 /* 80BE3D7C  4B 42 8F E8 */	b transS__14mDoMtx_stack_cFRC4cXyz
@@ -41,9 +41,9 @@ lbl_80BE3D24:
 /* 80BE3DC0  D0 1C 05 3C */	stfs f0, 0x53c(r28)
 /* 80BE3DC4  C0 01 00 30 */	lfs f0, 0x30(r1)
 /* 80BE3DC8  D0 1C 05 40 */	stfs f0, 0x540(r28)
-/* 80BE3DCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE3DD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BE3DD4  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BE3DCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE3DD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BE3DD4  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80BE3DD8  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 80BE3DDC  C0 01 00 2C */	lfs f0, 0x2c(r1)
 /* 80BE3DE0  EC 01 00 28 */	fsubs f0, f1, f0
@@ -212,8 +212,8 @@ lbl_80BE4008:
 /* 80BE401C  7F 86 E3 78 */	mr r6, r28
 /* 80BE4020  4B 49 3D 44 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
 /* 80BE4024  3B C0 00 00 */	li r30, 0
-/* 80BE4028  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE402C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE4028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE402C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE4030  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BE4034  38 81 00 34 */	addi r4, r1, 0x34
 /* 80BE4038  4B 49 03 7C */	b LineCross__4cBgSFP11cBgS_LinChk

@@ -11,15 +11,15 @@
 // Types:
 // 
 
+struct FlagJoint_c {
+	/* 80BEC3BC */ ~FlagJoint_c();
+	/* 80BEC4E0 */ FlagJoint_c();
+};
+
 struct csXyz {
 	/* 8026745C */ void operator+=(csXyz&);
 	/* 80267490 */ void operator-(csXyz&);
 	/* 802674E8 */ void operator*(f32);
-};
-
-struct FlagJoint_c {
-	/* 80BEC3BC */ ~FlagJoint_c();
-	/* 80BEC4E0 */ FlagJoint_c();
 };
 
 struct daObjFlag_c {
@@ -91,11 +91,11 @@ struct Z2SeMgr {
 
 static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjFlag_Draw(daObjFlag_c*); // 2
-static void daObjFlag_Execute(daObjFlag_c*); // 2
-static bool daObjFlag_IsDelete(daObjFlag_c*); // 2
-static void daObjFlag_Delete(daObjFlag_c*); // 2
-static void daObjFlag_Create(fopAc_ac_c*); // 2
+void daObjFlag_Draw(daObjFlag_c*); // 2
+void daObjFlag_Execute(daObjFlag_c*); // 2
+bool daObjFlag_IsDelete(daObjFlag_c*); // 2
+void daObjFlag_Delete(daObjFlag_c*); // 2
+void daObjFlag_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__11daObjFlag_cFv(); // 1
 extern "C" void initBaseMtx__11daObjFlag_cFv(); // 1
@@ -106,14 +106,15 @@ extern "C" void calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf(); // 1
 extern "C" void getSwingY__11daObjFlag_cFf(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjFlag_Draw__FP11daObjFlag_c(); // 1
-extern "C" static void daObjFlag_Execute__FP11daObjFlag_c(); // 1
-extern "C" static bool daObjFlag_IsDelete__FP11daObjFlag_c(); // 1
-extern "C" static void daObjFlag_Delete__FP11daObjFlag_c(); // 1
+extern "C" void daObjFlag_Draw__FP11daObjFlag_c(); // 1
+extern "C" void daObjFlag_Execute__FP11daObjFlag_c(); // 1
+extern "C" bool daObjFlag_IsDelete__FP11daObjFlag_c(); // 1
+extern "C" void daObjFlag_Delete__FP11daObjFlag_c(); // 1
 extern "C" void __dt__11FlagJoint_cFv(); // 1
-extern "C" static void daObjFlag_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjFlag_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__11FlagJoint_cFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjFlag_Method[8];
 extern "C" extern void* g_profile_Obj_Flag[12];
 
 // 
@@ -167,21 +168,12 @@ extern "C" void __cvt_fp2unsigned(); // 1
 extern "C" void _savegpr_26(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void sprintf(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
 // 
@@ -219,7 +211,7 @@ SECTION_RODATA static u32 const lit_3761 = 0x3F800000;
 /* 80BEC538-80BEC53C 0004+00 s=1 e=0 z=0  None .rodata    @3762                                                        */
 SECTION_RODATA static u32 const lit_3762 = 0xBF800000;
 
-/* 80BEC53C-80BEC544 0008+00 s=1 e=0 z=0  None .rodata    @3764                                                        */
+/* 80BEC53C-80BEC544 0008+00 s=4 e=0 z=0  None .rodata    @3764                                                        */
 SECTION_RODATA static u8 const lit_3764[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -345,39 +337,39 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80BEC234-80BEC300 00CC+00 s=1 e=0 z=0  None .text      daObjFlag_Draw__FP11daObjFlag_c                              */
+/* 80BEC234-80BEC300 00CC+00 s=0 e=0 z=0  None .text      daObjFlag_Draw__FP11daObjFlag_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjFlag_Draw(daObjFlag_c* param_0) {
+asm void daObjFlag_Draw(daObjFlag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Draw__FP11daObjFlag_c.s"
 }
 #pragma pop
 
 
-/* 80BEC300-80BEC338 0038+00 s=1 e=0 z=0  None .text      daObjFlag_Execute__FP11daObjFlag_c                           */
+/* 80BEC300-80BEC338 0038+00 s=0 e=0 z=0  None .text      daObjFlag_Execute__FP11daObjFlag_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjFlag_Execute(daObjFlag_c* param_0) {
+asm void daObjFlag_Execute(daObjFlag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Execute__FP11daObjFlag_c.s"
 }
 #pragma pop
 
 
-/* 80BEC338-80BEC340 0008+00 s=1 e=0 z=0  None .text      daObjFlag_IsDelete__FP11daObjFlag_c                          */
-static bool daObjFlag_IsDelete(daObjFlag_c* param_0) {
+/* 80BEC338-80BEC340 0008+00 s=0 e=0 z=0  None .text      daObjFlag_IsDelete__FP11daObjFlag_c                          */
+bool daObjFlag_IsDelete(daObjFlag_c* param_0) {
 	return true;
 }
 
 
-/* 80BEC340-80BEC3BC 007C+00 s=1 e=0 z=0  None .text      daObjFlag_Delete__FP11daObjFlag_c                            */
+/* 80BEC340-80BEC3BC 007C+00 s=0 e=0 z=0  None .text      daObjFlag_Delete__FP11daObjFlag_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjFlag_Delete(daObjFlag_c* param_0) {
+asm void daObjFlag_Delete(daObjFlag_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Delete__FP11daObjFlag_c.s"
 }
@@ -395,11 +387,11 @@ asm FlagJoint_c::~FlagJoint_c() {
 #pragma pop
 
 
-/* 80BEC3F8-80BEC4E0 00E8+00 s=1 e=0 z=0  None .text      daObjFlag_Create__FP10fopAc_ac_c                             */
+/* 80BEC3F8-80BEC4E0 00E8+00 s=0 e=0 z=0  None .text      daObjFlag_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjFlag_Create(fopAc_ac_c* param_0) {
+asm void daObjFlag_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_flag/d_a_obj_flag/daObjFlag_Create__FP10fopAc_ac_c.s"
 }
@@ -413,31 +405,31 @@ FlagJoint_c::FlagJoint_c() {
 
 
 /* ############################################################################################## */
-/* 80BEC580-80BEC5A0 0020+00 s=1 e=0 z=0  None .data      l_daObjFlag_Method                                           */
-SECTION_DATA static void* l_daObjFlag_Method[8] = {
-	/* 0    */ (void*)daObjFlag_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjFlag_Delete__FP11daObjFlag_c,
-	/* 2    */ (void*)daObjFlag_Execute__FP11daObjFlag_c,
-	/* 3    */ (void*)daObjFlag_IsDelete__FP11daObjFlag_c,
-	/* 4    */ (void*)daObjFlag_Draw__FP11daObjFlag_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BEC580-80BEC5A0 0020+00 s=0 e=0 z=0  None .data      l_daObjFlag_Method                                           */
+SECTION_DATA void* l_daObjFlag_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BEC5A0-80BEC5D0 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Flag                                           */
+/* 80BEC5A0-80BEC5D0 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Flag                                           */
 SECTION_DATA void* g_profile_Obj_Flag[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x013B0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005EC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x001A0000,
-	/* 9    */ (void*)&l_daObjFlag_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x013B0000,
+	(void*)NULL,
+	(void*)0x000005EC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x001A0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

@@ -90,7 +90,7 @@ lbl_807D8BAC:
 /* 807D8BB8  B0 1E 06 90 */	sth r0, 0x690(r30)
 /* 807D8BBC  3C 60 80 7E */	lis r3, l_HIO@ha
 /* 807D8BC0  38 63 35 C8 */	addi r3, r3, l_HIO@l
-/* 807D8BC4  A8 03 00 44 */	lha r0, 0x44(r3)	/* effective address: 807E360C */
+/* 807D8BC4  A8 03 00 44 */	lha r0, 0x44(r3)
 /* 807D8BC8  B0 1E 14 32 */	sth r0, 0x1432(r30)
 /* 807D8BCC  C0 1F 00 48 */	lfs f0, 0x48(r31)
 /* 807D8BD0  D0 1E 05 2C */	stfs f0, 0x52c(r30)

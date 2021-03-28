@@ -7,9 +7,9 @@ lbl_80574524:
 /* 80574538  7C 7E 1B 78 */	mr r30, r3
 /* 8057453C  3C 80 80 57 */	lis r4, m__17daNpc_Tkj_Param_c@ha
 /* 80574540  3B E4 65 98 */	addi r31, r4, m__17daNpc_Tkj_Param_c@l
-/* 80574544  C0 3F 00 9C */	lfs f1, 0x9c(r31)	/* effective address: 80576634 */
+/* 80574544  C0 3F 00 9C */	lfs f1, 0x9c(r31)
 /* 80574548  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 8057454C  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 8057664C */
+/* 8057454C  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
 /* 80574550  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80574554  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 80574558  80 83 05 78 */	lwz r4, 0x578(r3)
@@ -32,9 +32,9 @@ lbl_80574524:
 /* 8057459C  4E 80 04 21 */	bctrl 
 /* 805745A0  7C 67 1B 78 */	mr r7, r3
 /* 805745A4  39 5F 00 00 */	addi r10, r31, 0
-/* 805745A8  C0 0A 00 40 */	lfs f0, 0x40(r10)	/* effective address: 805765D8 */
+/* 805745A8  C0 0A 00 40 */	lfs f0, 0x40(r10)
 /* 805745AC  D0 01 00 08 */	stfs f0, 8(r1)
-/* 805745B0  C0 1F 00 9C */	lfs f0, 0x9c(r31)	/* effective address: 80576634 */
+/* 805745B0  C0 1F 00 9C */	lfs f0, 0x9c(r31)
 /* 805745B4  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 805745B8  38 7E 0B A8 */	addi r3, r30, 0xba8
 /* 805745BC  7F C4 F3 78 */	mr r4, r30
@@ -42,14 +42,14 @@ lbl_80574524:
 /* 805745C4  38 C1 00 28 */	addi r6, r1, 0x28
 /* 805745C8  7F A8 EB 78 */	mr r8, r29
 /* 805745CC  7F 89 E3 78 */	mr r9, r28
-/* 805745D0  C0 2A 00 24 */	lfs f1, 0x24(r10)	/* effective address: 805765BC */
-/* 805745D4  C0 4A 00 20 */	lfs f2, 0x20(r10)	/* effective address: 805765B8 */
-/* 805745D8  C0 6A 00 2C */	lfs f3, 0x2c(r10)	/* effective address: 805765C4 */
-/* 805745DC  C0 8A 00 28 */	lfs f4, 0x28(r10)	/* effective address: 805765C0 */
-/* 805745E0  C0 AA 00 34 */	lfs f5, 0x34(r10)	/* effective address: 805765CC */
-/* 805745E4  C0 CA 00 30 */	lfs f6, 0x30(r10)	/* effective address: 805765C8 */
-/* 805745E8  C0 EA 00 3C */	lfs f7, 0x3c(r10)	/* effective address: 805765D4 */
-/* 805745EC  C1 0A 00 38 */	lfs f8, 0x38(r10)	/* effective address: 805765D0 */
+/* 805745D0  C0 2A 00 24 */	lfs f1, 0x24(r10)
+/* 805745D4  C0 4A 00 20 */	lfs f2, 0x20(r10)
+/* 805745D8  C0 6A 00 2C */	lfs f3, 0x2c(r10)
+/* 805745DC  C0 8A 00 28 */	lfs f4, 0x28(r10)
+/* 805745E0  C0 AA 00 34 */	lfs f5, 0x34(r10)
+/* 805745E4  C0 CA 00 30 */	lfs f6, 0x30(r10)
+/* 805745E8  C0 EA 00 3C */	lfs f7, 0x3c(r10)
+/* 805745EC  C1 0A 00 38 */	lfs f8, 0x38(r10)
 /* 805745F0  39 40 00 00 */	li r10, 0
 /* 805745F4  4B BD 26 E4 */	b setParam__15daNpcT_JntAnm_cFP10fopAc_ac_cP8J3DModelP4cXyziiiffffffffffP4cXyz
 /* 805745F8  C0 5F 00 B8 */	lfs f2, 0xb8(r31)

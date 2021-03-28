@@ -25,7 +25,7 @@ lbl_80D4DD34:
 lbl_80D4DD54:
 /* 80D4DD54  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D4DD58  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D4DD5C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D4DD5C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D4DD60  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80D4DD64  4B 56 1B 20 */	b subBgmStop__8Z2SeqMgrFv
 lbl_80D4DD68:

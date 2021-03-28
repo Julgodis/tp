@@ -16,10 +16,10 @@ lbl_80C4FBEC:
 /* 80C4FC24  D0 03 05 3C */	stfs f0, 0x53c(r3)
 /* 80C4FC28  C0 03 05 58 */	lfs f0, 0x558(r3)
 /* 80C4FC2C  D0 03 05 40 */	stfs f0, 0x540(r3)
-/* 80C4FC30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C4FC34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C4FC38  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80C4FC3C  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 80406740 */
+/* 80C4FC30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C4FC34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C4FC38  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80C4FC3C  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 80C4FC40  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
 /* 80C4FC44  41 82 00 0C */	beq lbl_80C4FC50
 /* 80C4FC48  38 00 00 01 */	li r0, 1
@@ -43,9 +43,9 @@ lbl_80C4FC70:
 /* 80C4FC88  4B 3B D2 BC */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80C4FC8C  3C 60 80 C5 */	lis r3, M_attr__14daObjKznkarm_c@ha
 /* 80C4FC90  38 63 0D 08 */	addi r3, r3, M_attr__14daObjKznkarm_c@l
-/* 80C4FC94  C0 23 00 18 */	lfs f1, 0x18(r3)	/* effective address: 80C50D20 */
-/* 80C4FC98  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 80C50D24 */
-/* 80C4FC9C  C0 63 00 20 */	lfs f3, 0x20(r3)	/* effective address: 80C50D28 */
+/* 80C4FC94  C0 23 00 18 */	lfs f1, 0x18(r3)
+/* 80C4FC98  C0 43 00 1C */	lfs f2, 0x1c(r3)
+/* 80C4FC9C  C0 63 00 20 */	lfs f3, 0x20(r3)
 /* 80C4FCA0  4B 3B D0 FC */	b transM__14mDoMtx_stack_cFfff
 /* 80C4FCA4  48 00 00 4C */	b lbl_80C4FCF0
 lbl_80C4FCA8:
@@ -63,9 +63,9 @@ lbl_80C4FCA8:
 /* 80C4FCD4  4B 3B C6 C8 */	b mDoMtx_XrotM__FPA4_fs
 /* 80C4FCD8  3C 60 80 C5 */	lis r3, M_attr__14daObjKznkarm_c@ha
 /* 80C4FCDC  38 63 0D 08 */	addi r3, r3, M_attr__14daObjKznkarm_c@l
-/* 80C4FCE0  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 80C50D2C */
-/* 80C4FCE4  C0 43 00 28 */	lfs f2, 0x28(r3)	/* effective address: 80C50D30 */
-/* 80C4FCE8  C0 63 00 2C */	lfs f3, 0x2c(r3)	/* effective address: 80C50D34 */
+/* 80C4FCE0  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 80C4FCE4  C0 43 00 28 */	lfs f2, 0x28(r3)
+/* 80C4FCE8  C0 63 00 2C */	lfs f3, 0x2c(r3)
 /* 80C4FCEC  4B 3B D0 B0 */	b transM__14mDoMtx_stack_cFfff
 lbl_80C4FCF0:
 /* 80C4FCF0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

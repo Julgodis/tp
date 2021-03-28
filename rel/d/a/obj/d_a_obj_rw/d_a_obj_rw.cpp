@@ -153,27 +153,27 @@ struct Z2CreatureEnemy {
 // 
 
 static void nodeCallBack(J3DJoint*, int); // 2
-static void daOBJ_RW_Draw(obj_rw_class*); // 2
+void daOBJ_RW_Draw(obj_rw_class*); // 2
 static void damage_check(obj_rw_class*); // 2
 static void normal(obj_rw_class*); // 2
 static void action(obj_rw_class*); // 2
 static void daOBJ_RW_Execute(obj_rw_class*); // 2
-static bool daOBJ_RW_IsDelete(obj_rw_class*); // 2
-static void daOBJ_RW_Delete(obj_rw_class*); // 2
+bool daOBJ_RW_IsDelete(obj_rw_class*); // 2
+void daOBJ_RW_Delete(obj_rw_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daOBJ_RW_Create(fopAc_ac_c*); // 2
+void daOBJ_RW_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daOBJ_RW_HIO_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" static void daOBJ_RW_Draw__FP12obj_rw_class(); // 1
+extern "C" void daOBJ_RW_Draw__FP12obj_rw_class(); // 1
 extern "C" static void damage_check__FP12obj_rw_class(); // 1
 extern "C" static void normal__FP12obj_rw_class(); // 1
 extern "C" static void action__FP12obj_rw_class(); // 1
 extern "C" static void daOBJ_RW_Execute__FP12obj_rw_class(); // 1
-extern "C" static bool daOBJ_RW_IsDelete__FP12obj_rw_class(); // 1
-extern "C" static void daOBJ_RW_Delete__FP12obj_rw_class(); // 1
+extern "C" bool daOBJ_RW_IsDelete__FP12obj_rw_class(); // 1
+extern "C" void daOBJ_RW_Delete__FP12obj_rw_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daOBJ_RW_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daOBJ_RW_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8dCcD_CylFv(); // 1
 extern "C" void __ct__8dCcD_CylFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -183,8 +183,8 @@ extern "C" void __ct__8dCcD_SphFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__14daOBJ_RW_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_rw_cpp(); // 1
-extern "C" extern u8 const lit_3902[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daOBJ_RW_Method[8];
 extern "C" extern void* g_profile_OBJ_RW[12];
 
 // 
@@ -274,8 +274,6 @@ extern "C" void _restgpr_21(); // 1
 extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -283,16 +281,14 @@ extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" void __register_global_object(); // 1
 
@@ -331,60 +327,60 @@ SECTION_DATA static u8 data_80CC3BB4[68] = {
 	0x43, 0x7A, 0x00, 0x00,
 };
 
-/* 80CC3BF8-80CC3C18 0020+00 s=1 e=0 z=0  None .data      l_daOBJ_RW_Method                                            */
-SECTION_DATA static void* l_daOBJ_RW_Method[8] = {
-	/* 0    */ (void*)daOBJ_RW_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daOBJ_RW_Delete__FP12obj_rw_class,
-	/* 2    */ (void*)daOBJ_RW_Execute__FP12obj_rw_class,
-	/* 3    */ (void*)daOBJ_RW_IsDelete__FP12obj_rw_class,
-	/* 4    */ (void*)daOBJ_RW_Draw__FP12obj_rw_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80CC3BF8-80CC3C18 0020+00 s=0 e=0 z=0  None .data      l_daOBJ_RW_Method                                            */
+SECTION_DATA void* l_daOBJ_RW_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80CC3C18-80CC3C48 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_RW                                             */
+/* 80CC3C18-80CC3C48 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_RW                                             */
 SECTION_DATA void* g_profile_OBJ_RW[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02200000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000E3C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02C70000,
-	/* 9    */ (void*)&l_daOBJ_RW_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02200000,
+	(void*)NULL,
+	(void*)0x00000E3C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02C70000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x020E0000,
 };
 
 /* 80CC3C48-80CC3C54 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC3C54-80CC3C60 000C+00 s=5 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC3C60-80CC3C6C 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC3C6C-80CC3C78 000C+00 s=2 e=0 z=0  None .data      __vt__14daOBJ_RW_HIO_c                                       */
 SECTION_DATA static void* __vt__14daOBJ_RW_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daOBJ_RW_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80CC298C-80CC29B0 0024+00 s=1 e=0 z=0  None .text      __ct__14daOBJ_RW_HIO_cFv                                     */
@@ -421,11 +417,11 @@ SECTION_RODATA static u8 const lit_3723[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80CC2A74-80CC2BA4 0130+00 s=1 e=0 z=0  None .text      daOBJ_RW_Draw__FP12obj_rw_class                              */
+/* 80CC2A74-80CC2BA4 0130+00 s=0 e=0 z=0  None .text      daOBJ_RW_Draw__FP12obj_rw_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOBJ_RW_Draw(obj_rw_class* param_0) {
+asm void daOBJ_RW_Draw(obj_rw_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rw/d_a_obj_rw/daOBJ_RW_Draw__FP12obj_rw_class.s"
 }
@@ -510,6 +506,11 @@ SECTION_RODATA static u32 const lit_3899 = 0x435C0000;
 /* 80CC3B38-80CC3B3C 0004+00 s=1 e=0 z=0  None .rodata    @3900                                                        */
 SECTION_RODATA static u32 const lit_3900 = 0x474B2000;
 
+/* 80CC3B3C-80CC3B44 0008+00 s=1 e=0 z=0  None .rodata    @3902                                                        */
+SECTION_RODATA static u8 const lit_3902[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 80CC3C80-80CC3C84 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_80CC3C80[4];
 
@@ -519,7 +520,7 @@ static u8 lit_3644[12];
 /* 80CC3C90-80CC3CA4 0014+00 s=3 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[20];
 
-/* 80CC2F1C-80CC32EC 03D0+00 s=2 e=0 z=0  None .text      daOBJ_RW_Execute__FP12obj_rw_class                           */
+/* 80CC2F1C-80CC32EC 03D0+00 s=1 e=0 z=0  None .text      daOBJ_RW_Execute__FP12obj_rw_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -530,18 +531,13 @@ asm static void daOBJ_RW_Execute(obj_rw_class* param_0) {
 #pragma pop
 
 
-/* 80CC32EC-80CC32F4 0008+00 s=1 e=0 z=0  None .text      daOBJ_RW_IsDelete__FP12obj_rw_class                          */
-static bool daOBJ_RW_IsDelete(obj_rw_class* param_0) {
+/* 80CC32EC-80CC32F4 0008+00 s=0 e=0 z=0  None .text      daOBJ_RW_IsDelete__FP12obj_rw_class                          */
+bool daOBJ_RW_IsDelete(obj_rw_class* param_0) {
 	return true;
 }
 
 
 /* ############################################################################################## */
-/* 80CC3B3C-80CC3B44 0008+00 s=0 e=0 z=0  None .rodata    @3902                                                        */
-SECTION_RODATA u8 const lit_3902[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80CC3B44-80CC3B48 0004+00 s=1 e=0 z=0  None .rodata    @4035                                                        */
 SECTION_RODATA static u32 const lit_4035 = 0xC3FA0000;
 
@@ -555,11 +551,11 @@ SECTION_RODATA static u32 const lit_4036 = 0x43FA0000;
 SECTION_DEAD char const* const stringBase_80CC3B4C = "Obj_rw";
 #pragma pop
 
-/* 80CC32F4-80CC3368 0074+00 s=1 e=0 z=0  None .text      daOBJ_RW_Delete__FP12obj_rw_class                            */
+/* 80CC32F4-80CC3368 0074+00 s=0 e=0 z=0  None .text      daOBJ_RW_Delete__FP12obj_rw_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOBJ_RW_Delete(obj_rw_class* param_0) {
+asm void daOBJ_RW_Delete(obj_rw_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rw/d_a_obj_rw/daOBJ_RW_Delete__FP12obj_rw_class.s"
 }
@@ -577,11 +573,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80CC3400-80CC36E4 02E4+00 s=1 e=0 z=0  None .text      daOBJ_RW_Create__FP10fopAc_ac_c                              */
+/* 80CC3400-80CC36E4 02E4+00 s=0 e=0 z=0  None .text      daOBJ_RW_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daOBJ_RW_Create(fopAc_ac_c* param_0) {
+asm void daOBJ_RW_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_rw/d_a_obj_rw/daOBJ_RW_Create__FP10fopAc_ac_c.s"
 }
@@ -610,7 +606,7 @@ asm dCcD_Cyl::dCcD_Cyl() {
 #pragma pop
 
 
-/* 80CC3834-80CC387C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CC3834-80CC387C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -621,7 +617,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CC387C-80CC38C4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CC387C-80CC38C4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -654,7 +650,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80CC3A14-80CC3A5C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80CC3A14-80CC3A5C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -665,7 +661,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80CC3A5C-80CC3AA4 0048+00 s=2 e=0 z=0  None .text      __dt__14daOBJ_RW_HIO_cFv                                     */
+/* 80CC3A5C-80CC3AA4 0048+00 s=1 e=0 z=0  None .text      __dt__14daOBJ_RW_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -676,7 +672,7 @@ asm daOBJ_RW_HIO_c::~daOBJ_RW_HIO_c() {
 #pragma pop
 
 
-/* 80CC3AA4-80CC3AE0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_rw_cpp                                       */
+/* 80CC3AA4-80CC3AE0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_rw_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

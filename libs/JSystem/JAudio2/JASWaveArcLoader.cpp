@@ -189,20 +189,20 @@ asm void JASWaveArcLoader::getCurrentDir() {
 /* ############################################################################################## */
 /* 803C7820-803C7838 0018+00 s=2 e=0 z=0  None .data      __vt__10JASWaveArc                                           */
 SECTION_DATA static void* __vt__10JASWaveArc[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JASWaveArcFv,
-	/* 3    */ (void*)onDispose__10JASWaveArcFv,
-	/* 4    */ (void*)onLoadDone__10JASWaveArcFv,
-	/* 5    */ (void*)onEraseDone__10JASWaveArcFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JASWaveArcFv,
+	(void*)onDispose__10JASWaveArcFv,
+	(void*)onLoadDone__10JASWaveArcFv,
+	(void*)onEraseDone__10JASWaveArcFv,
 };
 
 /* 803C7838-803C7848 0010+00 s=3 e=0 z=0  None .data      __vt__11JASDisposer                                          */
 SECTION_DATA static void* __vt__11JASDisposer[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JASDisposerFv,
-	/* 3    */ (void*)onDispose__11JASDisposerFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JASDisposerFv,
+	(void*)onDispose__11JASDisposerFv,
 };
 
 /* 8029A13C-8029A1B4 0078+00 s=0 e=2 z=0  None .text      __ct__10JASWaveArcFv                                         */

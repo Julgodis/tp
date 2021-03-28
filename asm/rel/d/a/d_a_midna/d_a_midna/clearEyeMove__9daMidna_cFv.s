@@ -14,7 +14,7 @@ lbl_804C2A68:
 /* 804C2A98  28 00 00 00 */	cmplwi r0, 0
 /* 804C2A9C  4D 82 00 20 */	beqlr 
 /* 804C2AA0  38 00 00 00 */	li r0, 0
-/* 804C2AA4  98 03 00 00 */	stb r0, 0(r3)	/* effective address: 804C0000 */
+/* 804C2AA4  98 03 00 00 */	stb r0, 0(r3)
 /* 804C2AA8  38 00 00 03 */	li r0, 3
 /* 804C2AAC  3C 60 80 4C */	lis r3, struct_804C6CD8+0x1@ha
 /* 804C2AB0  98 03 6C D9 */	stb r0, struct_804C6CD8+0x1@l(r3)

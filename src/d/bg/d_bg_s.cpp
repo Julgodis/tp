@@ -26,29 +26,29 @@ struct cBgS_ChkElm {
 	/* 80074128 */ void Release();
 };
 
-struct cBgS_PolyInfo {
-	/* 802680F8 */ void ChkSetInfo() const;
-	/* 80268120 */ void ClearPi();
-	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
-	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
-	/* 802681AC */ void ChkBgIndex() const;
+struct cM3dGPla {
+};
+
+struct cBgS_LinChk {
+	/* 80267F40 */ void PreCalc();
+};
+
+struct cXyz {
 };
 
 struct cBgS_GndChk {
 	/* 80267D44 */ void PreCheck();
 };
 
-struct cXyz {
-};
-
-struct cM3dGPla {
-};
-
 struct cBgS_ShdwDraw {
 };
 
-struct cBgS_LinChk {
-	/* 80267F40 */ void PreCalc();
+struct cBgS_PolyInfo {
+	/* 802680F8 */ void ChkSetInfo() const;
+	/* 80268120 */ void ClearPi();
+	/* 8026816C */ void SetActorInfo(int, void*, unsigned int);
+	/* 8026817C */ void ChkSafe(void const*, unsigned int) const;
+	/* 802681AC */ void ChkBgIndex() const;
 };
 
 struct cBgS {
@@ -70,6 +70,10 @@ struct cBgS {
 	/* 800748AC */ void GetGrpInf(cBgS_PolyInfo const&) const;
 };
 
+struct dBgS_RoofChk {
+	/* 80079124 */ void Init();
+};
+
 struct dBgS_Acch {
 	/* 80077278 */ void SetNowActorInfo(int, void*, unsigned int);
 	/* 800772E8 */ void CalcMovePosWork();
@@ -83,10 +87,6 @@ struct dBgS_SphChk {
 };
 
 struct csXyz {
-};
-
-struct dBgS_RoofChk {
-	/* 80079124 */ void Init();
 };
 
 struct dBgS_SplGrpChk {
@@ -1021,28 +1021,28 @@ asm void dBgS_GetNY(cBgS_PolyInfo const& param_0) {
 /* ############################################################################################## */
 /* 803AB608-803AB61C 0014+00 s=0 e=3 z=0  None .data      __vt__4dBgS                                                  */
 SECTION_DATA void* __vt__4dBgS[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__4dBgSFv,
-	/* 3    */ (void*)Ct__4dBgSFv,
-	/* 4    */ (void*)Dt__4dBgSFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__4dBgSFv,
+	(void*)Ct__4dBgSFv,
+	(void*)Dt__4dBgSFv,
 };
 
 /* 803AB61C-803AB630 0014+00 s=0 e=4 z=0  None .data      __vt__4cBgS                                                  */
 SECTION_DATA void* __vt__4cBgS[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__4cBgSFv,
-	/* 3    */ (void*)Ct__4cBgSFv,
-	/* 4    */ (void*)Dt__4cBgSFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__4cBgSFv,
+	(void*)Ct__4cBgSFv,
+	(void*)Dt__4cBgSFv,
 };
 
 /* 803AB630-803AB640 0010+00 s=0 e=2 z=0  None .data      __vt__11cBgS_ChkElm                                          */
 SECTION_DATA void* __vt__11cBgS_ChkElm[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11cBgS_ChkElmFv,
-	/* 3    */ (void*)Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11cBgS_ChkElmFv,
+	(void*)Regist2__11cBgS_ChkElmFP9dBgW_BaseUiPv,
 };
 
 /* 80450F68-80450F70 0008+00 s=0 e=1 z=0  None .sbss      None                                                         */

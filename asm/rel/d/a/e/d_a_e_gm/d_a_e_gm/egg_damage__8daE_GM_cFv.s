@@ -10,9 +10,9 @@ lbl_806D25E8:
 /* 806D2608  80 1E 0A 3C */	lwz r0, 0xa3c(r30)
 /* 806D260C  2C 00 00 00 */	cmpwi r0, 0
 /* 806D2610  40 82 00 F4 */	bne lbl_806D2704
-/* 806D2614  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806D2618  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806D261C  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806D2614  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806D2618  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806D261C  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 806D2620  38 00 00 00 */	li r0, 0
 /* 806D2624  90 1E 08 18 */	stw r0, 0x818(r30)
 /* 806D2628  90 1E 08 30 */	stw r0, 0x830(r30)
@@ -86,8 +86,8 @@ lbl_806D2718:
 /* 806D2730  38 9E 07 CC */	addi r4, r30, 0x7cc
 /* 806D2734  4B 94 7F 98 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 806D2738  38 7E 05 F4 */	addi r3, r30, 0x5f4
-/* 806D273C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806D2740  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806D273C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806D2740  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806D2744  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806D2748  4B 9A 43 64 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806D274C  80 1E 06 20 */	lwz r0, 0x620(r30)
@@ -134,7 +134,7 @@ lbl_806D27A8:
 /* 806D27EC  90 01 00 08 */	stw r0, 8(r1)
 /* 806D27F0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806D27F4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806D27F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806D27F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 806D27FC  38 81 00 08 */	addi r4, r1, 8
 /* 806D2800  38 BE 05 38 */	addi r5, r30, 0x538
 /* 806D2804  38 C0 00 00 */	li r6, 0
@@ -150,9 +150,9 @@ lbl_806D27A8:
 /* 806D282C  4B 94 74 50 */	b fopAcM_delete__FP10fopAc_ac_c
 /* 806D2830  3C 60 80 6D */	lis r3, struct_806D7F1C+0x2@ha
 /* 806D2834  38 83 7F 1E */	addi r4, r3, struct_806D7F1C+0x2@l
-/* 806D2838  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 806D7F1E */
+/* 806D2838  88 64 00 00 */	lbz r3, 0(r4)
 /* 806D283C  38 03 00 01 */	addi r0, r3, 1
-/* 806D2840  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 806D7F1E */
+/* 806D2840  98 04 00 00 */	stb r0, 0(r4)
 /* 806D2844  48 00 00 40 */	b lbl_806D2884
 lbl_806D2848:
 /* 806D2848  A8 7E 04 DC */	lha r3, 0x4dc(r30)

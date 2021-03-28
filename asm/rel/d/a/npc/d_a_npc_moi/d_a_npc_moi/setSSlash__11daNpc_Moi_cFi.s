@@ -20,8 +20,8 @@ lbl_80A766DC:
 /* 80A76724  90 1D 0B 7C */	stw r0, 0xb7c(r29)
 /* 80A76728  C0 1F 00 E8 */	lfs f0, 0xe8(r31)
 /* 80A7672C  D0 1D 0B 8C */	stfs f0, 0xb8c(r29)
-/* 80A76730  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A76734  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A76730  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A76734  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A76738  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80A7673C  38 80 13 08 */	li r4, 0x1308
 /* 80A76740  4B 5B E2 7C */	b isEventBit__11dSv_event_cCFUs
@@ -51,9 +51,9 @@ lbl_80A76778:
 /* 80A7679C  4E 80 04 21 */	bctrl 
 lbl_80A767A0:
 /* 80A767A0  7F A3 EB 78 */	mr r3, r29
-/* 80A767A4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A767A8  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 80A767AC  80 9C 5D AC */	lwz r4, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80A767A4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A767A8  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 80A767AC  80 9C 5D AC */	lwz r4, 0x5dac(r28)
 /* 80A767B0  4B 5A 3F 60 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A767B4  B0 7D 16 64 */	sth r3, 0x1664(r29)
 /* 80A767B8  C0 3F 01 94 */	lfs f1, 0x194(r31)

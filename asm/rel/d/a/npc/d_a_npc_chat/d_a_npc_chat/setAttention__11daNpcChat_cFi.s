@@ -8,7 +8,7 @@ lbl_809814DC:
 /* 809814F4  7C 9D 23 78 */	mr r29, r4
 /* 809814F8  3C 60 80 99 */	lis r3, lit_1109@ha
 /* 809814FC  3B E3 BA 80 */	addi r31, r3, lit_1109@l
-/* 80981500  88 1F 00 5C */	lbz r0, 0x5c(r31)	/* effective address: 8098BADC */
+/* 80981500  88 1F 00 5C */	lbz r0, 0x5c(r31)
 /* 80981504  7C 00 07 75 */	extsb. r0, r0
 /* 80981508  40 82 07 88 */	bne lbl_80981C90
 /* 8098150C  3C 60 80 98 */	lis r3, lit_4248@ha

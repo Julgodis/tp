@@ -19,23 +19,23 @@ lbl_80C46264:
 /* 80C462A8  7F E3 FB 78 */	mr r3, r31
 /* 80C462AC  3C 80 80 C4 */	lis r4, l_cull_box@ha
 /* 80C462B0  C4 24 65 54 */	lfsu f1, l_cull_box@l(r4)
-/* 80C462B4  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C40004 */
-/* 80C462B8  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C40008 */
-/* 80C462BC  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C4000C */
-/* 80C462C0  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C40010 */
-/* 80C462C4  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C40014 */
+/* 80C462B4  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C462B8  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C462BC  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C462C0  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C462C4  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C462C8  4B 3D 42 80 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C462CC  48 00 00 2C */	b lbl_80C462F8
 lbl_80C462D0:
 /* 80C462D0  7F E3 FB 78 */	mr r3, r31
 /* 80C462D4  3C 80 80 C4 */	lis r4, l_cull_box@ha
 /* 80C462D8  38 84 65 54 */	addi r4, r4, l_cull_box@l
-/* 80C462DC  C0 24 00 18 */	lfs f1, 0x18(r4)	/* effective address: 80C4656C */
-/* 80C462E0  C0 44 00 1C */	lfs f2, 0x1c(r4)	/* effective address: 80C46570 */
-/* 80C462E4  C0 64 00 20 */	lfs f3, 0x20(r4)	/* effective address: 80C46574 */
-/* 80C462E8  C0 84 00 24 */	lfs f4, 0x24(r4)	/* effective address: 80C46578 */
-/* 80C462EC  C0 A4 00 28 */	lfs f5, 0x28(r4)	/* effective address: 80C4657C */
-/* 80C462F0  C0 C4 00 2C */	lfs f6, 0x2c(r4)	/* effective address: 80C46580 */
+/* 80C462DC  C0 24 00 18 */	lfs f1, 0x18(r4)
+/* 80C462E0  C0 44 00 1C */	lfs f2, 0x1c(r4)
+/* 80C462E4  C0 64 00 20 */	lfs f3, 0x20(r4)
+/* 80C462E8  C0 84 00 24 */	lfs f4, 0x24(r4)
+/* 80C462EC  C0 A4 00 28 */	lfs f5, 0x28(r4)
+/* 80C462F0  C0 C4 00 2C */	lfs f6, 0x2c(r4)
 /* 80C462F4  4B 3D 42 54 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 lbl_80C462F8:
 /* 80C462F8  38 60 00 01 */	li r3, 1

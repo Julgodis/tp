@@ -4,17 +4,17 @@ lbl_80519578:
 /* 80519580  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80519584  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80519588  7C 7F 1B 78 */	mr r31, r3
-/* 8051958C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80519590  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8051958C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80519590  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80519594  38 80 00 2E */	li r4, 0x2e
 /* 80519598  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8051959C  7C 05 07 74 */	extsb r5, r0
 /* 805195A0  4B B1 BD C0 */	b isSwitch__10dSv_info_cCFii
 /* 805195A4  2C 03 00 00 */	cmpwi r3, 0
 /* 805195A8  41 82 00 A8 */	beq lbl_80519650
-/* 805195AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805195B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805195B4  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 805195AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805195B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805195B4  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 805195B8  28 00 00 00 */	cmplwi r0, 0
 /* 805195BC  40 82 00 94 */	bne lbl_80519650
 /* 805195C0  38 00 00 00 */	li r0, 0
@@ -36,7 +36,7 @@ lbl_80519578:
 /* 80519600  88 03 97 E0 */	lbz r0, data_805197E0@l(r3)
 /* 80519604  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80519608  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8051960C  98 03 00 BB */	stb r0, 0xbb(r3)	/* effective address: 80430243 */
+/* 8051960C  98 03 00 BB */	stb r0, 0xbb(r3)
 /* 80519610  38 60 00 08 */	li r3, 8
 /* 80519614  38 80 00 00 */	li r4, 0
 /* 80519618  4B B1 5F 14 */	b dComIfG_TimerStart__Fis
@@ -54,7 +54,7 @@ lbl_8051963C:
 /* 80519640  88 03 97 E0 */	lbz r0, data_805197E0@l(r3)
 /* 80519644  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80519648  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 8051964C  98 03 00 BC */	stb r0, 0xbc(r3)	/* effective address: 80430244 */
+/* 8051964C  98 03 00 BC */	stb r0, 0xbc(r3)
 lbl_80519650:
 /* 80519650  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80519654  80 01 00 14 */	lwz r0, 0x14(r1)

@@ -117,11 +117,11 @@ asm static void fopOvlp_Create(void* param_0) {
 /* ############################################################################################## */
 /* 803A3878-803A3890 0014+04 s=0 e=10 z=0  None .data      g_fopOvlp_Method                                             */
 SECTION_DATA void* g_fopOvlp_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fopOvlp_Create__FPv,
-	/* 1    */ (void*)fopOvlp_Delete__FPv,
-	/* 2    */ (void*)fopOvlp_Execute__FPv,
-	/* 3    */ (void*)fopOvlp_IsDelete__FPv,
-	/* 4    */ (void*)fopOvlp_Draw__FPv,
+	(void*)fopOvlp_Create__FPv,
+	(void*)fopOvlp_Delete__FPv,
+	(void*)fopOvlp_Execute__FPv,
+	(void*)fopOvlp_IsDelete__FPv,
+	(void*)fopOvlp_Draw__FPv,
 	/* padding */
 	NULL,
 };

@@ -106,9 +106,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -161,10 +158,10 @@ struct Z2SeMgr {
 // 
 
 static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-static void daPillar_create1st(daPillar_c*); // 2
-static void daPillar_MoveBGDelete(daPillar_c*); // 2
-static void daPillar_MoveBGExecute(daPillar_c*); // 2
-static void daPillar_MoveBGDraw(daPillar_c*); // 2
+void daPillar_create1st(daPillar_c*); // 2
+void daPillar_MoveBGDelete(daPillar_c*); // 2
+void daPillar_MoveBGExecute(daPillar_c*); // 2
+void daPillar_MoveBGDraw(daPillar_c*); // 2
 
 extern "C" void __ct__14daPillar_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -189,17 +186,15 @@ extern "C" void actionEnd__10daPillar_cFv(); // 1
 extern "C" void Execute__10daPillar_cFPPA3_A4_f(); // 1
 extern "C" void Draw__10daPillar_cFv(); // 1
 extern "C" void Delete__10daPillar_cFv(); // 1
-extern "C" static void daPillar_create1st__FP10daPillar_c(); // 1
-extern "C" static void daPillar_MoveBGDelete__FP10daPillar_c(); // 1
-extern "C" static void daPillar_MoveBGExecute__FP10daPillar_c(); // 1
-extern "C" static void daPillar_MoveBGDraw__FP10daPillar_c(); // 1
+extern "C" void daPillar_create1st__FP10daPillar_c(); // 1
+extern "C" void daPillar_MoveBGDelete__FP10daPillar_c(); // 1
+extern "C" void daPillar_MoveBGExecute__FP10daPillar_c(); // 1
+extern "C" void daPillar_MoveBGDraw__FP10daPillar_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
 extern "C" void __dt__14daPillar_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_pillar_cpp(); // 1
-extern "C" extern u8 const lit_4116[8];
-extern "C" extern u8 const lit_4117[8];
-extern "C" extern u8 const lit_4118[8];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* daPillar_METHODS[8];
 extern "C" extern void* g_profile_Obj_Pillar[12];
 
 // 
@@ -239,9 +234,6 @@ extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
 extern "C" void StopQuake__12dVibration_cFi(); // 1
 extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -273,26 +265,16 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
@@ -346,6 +328,159 @@ SECTION_RODATA static u8 const lit_3664[4] = {
 /* 80CB0A6C-80CB0A70 0004+00 s=1 e=0 z=0  None .rodata    @3665                                                        */
 SECTION_RODATA static u32 const lit_3665 = 0xBF333333;
 
+/* 80CB0AE8-80CB0AF4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
+SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CB0AF4-80CB0B08 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
+SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
+	0x02000201,
+	/* padding */
+	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
+};
+
+/* 80CB0B08-80CB0B10 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
+SECTION_DATA static void* l_arcName[2] = {
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0B10-80CB0B1C 000C+00 s=1 e=0 z=0  None .data      @4193                                                        */
+SECTION_DATA static void* lit_4193[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
+};
+
+/* 80CB0B1C-80CB0B28 000C+00 s=1 e=0 z=0  None .data      @4194                                                        */
+SECTION_DATA static void* lit_4194[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
+};
+
+/* 80CB0B28-80CB0B34 000C+00 s=1 e=0 z=0  None .data      @4195                                                        */
+SECTION_DATA static void* lit_4195[3] = {
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
+};
+
+/* 80CB0B34-80CB0B58 0024+00 s=1 e=0 z=0  None .data      l_func$4192                                                  */
+SECTION_DATA static u8 data_80CB0B34[36] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CB0B58-80CB0B78 0020+00 s=0 e=0 z=0  None .data      daPillar_METHODS                                             */
+SECTION_DATA void* daPillar_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0B78-80CB0BA8 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Pillar                                         */
+SECTION_DATA void* g_profile_Obj_Pillar[12] = {
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00330000,
+	(void*)NULL,
+	(void*)0x00000750,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01B00000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
+};
+
+/* 80CB0BA8-80CB0BB4 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
+SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0BB4-80CB0BC0 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
+SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0BC0-80CB0BCC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
+SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0BCC-80CB0BD8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
+SECTION_DATA static void* __vt__8cM3dGAab[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0BD8-80CB0C00 0028+00 s=2 e=0 z=0  None .data      __vt__10daPillar_c                                           */
+SECTION_DATA static void* __vt__10daPillar_c[10] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0C00-80CB0C0C 000C+00 s=2 e=0 z=0  None .data      __vt__14daPillar_HIO_c                                       */
+SECTION_DATA static void* __vt__14daPillar_HIO_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CB0C0C-80CB0C18 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
+SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+};
+
+/* 80CAF32C-80CAF3B0 0084+00 s=1 e=0 z=0  None .text      __ct__14daPillar_HIO_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm daPillar_HIO_c::daPillar_HIO_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__ct__14daPillar_HIO_cFv.s"
+}
+#pragma pop
+
+
+/* 80CAF3B0-80CAF3F8 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+#pragma push
+#pragma optimization_level 0
+#pragma optimizewithasm off
+asm mDoHIO_entry_c::~mDoHIO_entry_c() {
+	nofralloc
+#include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__14mDoHIO_entry_cFv.s"
+}
+#pragma pop
+
+
+/* ############################################################################################## */
 /* 80CB0A70-80CB0A74 0004+00 s=1 e=0 z=0  None .rodata    @3681                                                        */
 SECTION_RODATA static u32 const lit_3681 = 0x46000000;
 
@@ -362,218 +497,6 @@ SECTION_RODATA static u32 const lit_3684[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80CB0A84-80CB0A8C 0008+00 s=1 e=0 z=0  None .rodata    @3716                                                        */
-SECTION_RODATA static u8 const lit_3716[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0A8C-80CB0A90 0004+00 s=1 e=0 z=0  None .rodata    @4060                                                        */
-SECTION_RODATA static u32 const lit_4060 = 0x3BB40000;
-
-/* 80CB0A90-80CB0A94 0004+00 s=1 e=0 z=0  None .rodata    @4061                                                        */
-SECTION_RODATA static u32 const lit_4061 = 0x43B3F333;
-
-/* 80CB0A94-80CB0A9C 0004+04 s=1 e=0 z=0  None .rodata    @4062                                                        */
-SECTION_RODATA static u32 const lit_4062[1 + 1 /* padding */] = {
-	0x41C00000,
-	/* padding */
-	0x00000000,
-};
-
-/* 80CB0A9C-80CB0AA4 0008+00 s=0 e=0 z=0  None .rodata    @4116                                                        */
-SECTION_RODATA u8 const lit_4116[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0AA4-80CB0AAC 0008+00 s=0 e=0 z=0  None .rodata    @4117                                                        */
-SECTION_RODATA u8 const lit_4117[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0AAC-80CB0AB4 0008+00 s=0 e=0 z=0  None .rodata    @4118                                                        */
-SECTION_RODATA u8 const lit_4118[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0AB4-80CB0AB8 0004+00 s=1 e=0 z=0  None .rodata    @4119                                                        */
-SECTION_RODATA static u32 const lit_4119 = 0x43160000;
-
-/* 80CB0AB8-80CB0ABC 0004+00 s=1 e=0 z=0  None .rodata    @4120                                                        */
-SECTION_RODATA static u32 const lit_4120 = 0x435C0000;
-
-/* 80CB0ABC-80CB0AC0 0004+00 s=1 e=0 z=0  None .rodata    @4178                                                        */
-SECTION_RODATA static u32 const lit_4178 = 0xBF800000;
-
-/* 80CB0AC0-80CB0AC4 0004+00 s=1 e=0 z=0  None .rodata    @4265                                                        */
-SECTION_RODATA static u32 const lit_4265 = 0x42AA0000;
-
-/* 80CB0AC4-80CB0AC8 0004+00 s=1 e=0 z=0  None .rodata    @4266                                                        */
-SECTION_RODATA static u32 const lit_4266 = 0x43480000;
-
-/* 80CB0AC8-80CB0ACC 0004+00 s=1 e=0 z=0  None .rodata    @4267                                                        */
-SECTION_RODATA static u32 const lit_4267 = 0xC2C80000;
-
-/* 80CB0ACC-80CB0AE8 001C+00 s=3 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80CB0ACC[28] = {
-	/* 80CB0ACC 000A stringBase_80CB0ACC @stringBase0 */
-	0x4B, 0x5F, 0x6D, 0x62, 0x68, 0x61, 0x73, 0x69, 0x30, 0x00,
-	/* 80CB0AD6 0012 data_80CB0AD6 None */
-	0x4B, 0x5F, 0x6D, 0x62, 0x68, 0x61, 0x73, 0x69, 0x31, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x35,
-	0x00, 0x00,
-};
-
-/* 80CB0AE8-80CB0AF4 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
-SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0AF4-80CB0B08 0004+10 s=0 e=0 z=0  None .data      @1787                                                        */
-SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
-	0x02000201,
-	/* padding */
-	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
-};
-
-/* 80CB0B08-80CB0B10 0008+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName[2] = {
-	/* 0    */ (void*)(((char*)&struct_80CB0ACC)+0x0) /* @stringBase0 */,
-	/* 1    */ (void*)(((char*)&struct_80CB0ACC)+0xA) /* None */,
-};
-
-/* 80CB0B10-80CB0B1C 000C+00 s=1 e=0 z=0  None .data      @4193                                                        */
-SECTION_DATA static void* lit_4193[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionSwOnWait__10daPillar_cFv,
-};
-
-/* 80CB0B1C-80CB0B28 000C+00 s=1 e=0 z=0  None .data      @4194                                                        */
-SECTION_DATA static void* lit_4194[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionSwOn__10daPillar_cFv,
-};
-
-/* 80CB0B28-80CB0B34 000C+00 s=1 e=0 z=0  None .data      @4195                                                        */
-SECTION_DATA static void* lit_4195[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEnd__10daPillar_cFv,
-};
-
-/* 80CB0B34-80CB0B58 0024+00 s=1 e=0 z=0  None .data      l_func$4192                                                  */
-SECTION_DATA static u8 data_80CB0B34[36] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80CB0B58-80CB0B78 0020+00 s=1 e=0 z=0  None .data      daPillar_METHODS                                             */
-SECTION_DATA static void* daPillar_METHODS[8] = {
-	/* 0    */ (void*)daPillar_create1st__FP10daPillar_c,
-	/* 1    */ (void*)daPillar_MoveBGDelete__FP10daPillar_c,
-	/* 2    */ (void*)daPillar_MoveBGExecute__FP10daPillar_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daPillar_MoveBGDraw__FP10daPillar_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 80CB0B78-80CB0BA8 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Pillar                                         */
-SECTION_DATA void* g_profile_Obj_Pillar[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00330000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000750,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01B00000,
-	/* 9    */ (void*)&daPillar_METHODS,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
-};
-
-/* 80CB0BA8-80CB0BB4 000C+00 s=2 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
-SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
-};
-
-/* 80CB0BB4-80CB0BC0 000C+00 s=1 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
-SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
-};
-
-/* 80CB0BC0-80CB0BCC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
-SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
-};
-
-/* 80CB0BCC-80CB0BD8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
-SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
-};
-
-/* 80CB0BD8-80CB0C00 0028+00 s=2 e=0 z=0  None .data      __vt__10daPillar_c                                           */
-SECTION_DATA static void* __vt__10daPillar_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__10daPillar_cFv,
-	/* 3    */ (void*)Create__10daPillar_cFv,
-	/* 4    */ (void*)Execute__10daPillar_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__10daPillar_cFv,
-	/* 6    */ (void*)Delete__10daPillar_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
-};
-
-/* 80CB0C00-80CB0C0C 000C+00 s=2 e=0 z=0  None .data      __vt__14daPillar_HIO_c                                       */
-SECTION_DATA static void* __vt__14daPillar_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daPillar_HIO_cFv,
-};
-
-/* 80CB0C0C-80CB0C18 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
-SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
-};
-
-/* 80CAF32C-80CAF3B0 0084+00 s=1 e=0 z=0  None .text      __ct__14daPillar_HIO_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm daPillar_HIO_c::daPillar_HIO_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__ct__14daPillar_HIO_cFv.s"
-}
-#pragma pop
-
-
-/* 80CAF3B0-80CAF3F8 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
-#pragma push
-#pragma optimization_level 0
-#pragma optimizewithasm off
-asm mDoHIO_entry_c::~mDoHIO_entry_c() {
-	nofralloc
-#include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/__dt__14mDoHIO_entry_cFv.s"
-}
-#pragma pop
-
-
 /* 80CAF3F8-80CAF4B4 00BC+00 s=1 e=0 z=0  None .text      rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c              */
 #pragma push
 #pragma optimization_level 0
@@ -584,6 +507,12 @@ asm static void rideCallBack(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* par
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CB0A84-80CB0A8C 0008+00 s=2 e=0 z=0  None .rodata    @3716                                                        */
+SECTION_RODATA static u8 const lit_3716[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
 
 /* 80CAF4B4-80CAF5EC 0138+00 s=2 e=0 z=0  None .text      setBaseMtx__10daPillar_cFv                                   */
 #pragma push
@@ -596,7 +525,7 @@ asm void daPillar_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80CAF5EC-80CAF7A8 01BC+00 s=1 e=0 z=0  None .text      Create__10daPillar_cFv                                       */
+/* 80CAF5EC-80CAF7A8 01BC+00 s=0 e=0 z=0  None .text      Create__10daPillar_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -607,7 +536,7 @@ asm void daPillar_c::Create() {
 #pragma pop
 
 
-/* 80CAF7A8-80CAF8A4 00FC+00 s=1 e=0 z=0  None .text      CreateHeap__10daPillar_cFv                                   */
+/* 80CAF7A8-80CAF8A4 00FC+00 s=0 e=0 z=0  None .text      CreateHeap__10daPillar_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -629,7 +558,7 @@ asm void daPillar_c::create1st() {
 #pragma pop
 
 
-/* 80CAFA58-80CAFAA0 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80CAFA58-80CAFAA0 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -640,7 +569,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80CAFAA0-80CAFAE8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80CAFAA0-80CAFAE8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -651,7 +580,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80CAFAE8-80CAFB44 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 80CAFAE8-80CAFB44 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -673,6 +602,20 @@ asm void daPillar_c::checkAttacked() {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 80CB0A8C-80CB0A90 0004+00 s=1 e=0 z=0  None .rodata    @4060                                                        */
+SECTION_RODATA static u32 const lit_4060 = 0x3BB40000;
+
+/* 80CB0A90-80CB0A94 0004+00 s=1 e=0 z=0  None .rodata    @4061                                                        */
+SECTION_RODATA static u32 const lit_4061 = 0x43B3F333;
+
+/* 80CB0A94-80CB0A9C 0004+04 s=1 e=0 z=0  None .rodata    @4062                                                        */
+SECTION_RODATA static u32 const lit_4062[1 + 1 /* padding */] = {
+	0x41C00000,
+	/* padding */
+	0x00000000,
+};
+
 /* 80CAFC08-80CAFD64 015C+00 s=1 e=0 z=0  None .text      on_switch__10daPillar_cFv                                    */
 #pragma push
 #pragma optimization_level 0
@@ -683,6 +626,49 @@ asm void daPillar_c::on_switch() {
 }
 #pragma pop
 
+
+/* ############################################################################################## */
+/* 80CB0A9C-80CB0AA4 0008+00 s=1 e=0 z=0  None .rodata    @4116                                                        */
+SECTION_RODATA static u8 const lit_4116[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CB0AA4-80CB0AAC 0008+00 s=1 e=0 z=0  None .rodata    @4117                                                        */
+SECTION_RODATA static u8 const lit_4117[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CB0AAC-80CB0AB4 0008+00 s=1 e=0 z=0  None .rodata    @4118                                                        */
+SECTION_RODATA static u8 const lit_4118[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80CB0AB4-80CB0AB8 0004+00 s=1 e=0 z=0  None .rodata    @4119                                                        */
+SECTION_RODATA static u32 const lit_4119 = 0x43160000;
+
+/* 80CB0AB8-80CB0ABC 0004+00 s=1 e=0 z=0  None .rodata    @4120                                                        */
+SECTION_RODATA static u32 const lit_4120 = 0x435C0000;
+
+/* 80CB0ABC-80CB0AC0 0004+00 s=1 e=0 z=0  None .rodata    @4178                                                        */
+SECTION_RODATA static u32 const lit_4178 = 0xBF800000;
+
+/* 80CB0AC0-80CB0AC4 0004+00 s=1 e=0 z=0  None .rodata    @4265                                                        */
+SECTION_RODATA static u32 const lit_4265 = 0x42AA0000;
+
+/* 80CB0AC4-80CB0AC8 0004+00 s=1 e=0 z=0  None .rodata    @4266                                                        */
+SECTION_RODATA static u32 const lit_4266 = 0x43480000;
+
+/* 80CB0AC8-80CB0ACC 0004+00 s=1 e=0 z=0  None .rodata    @4267                                                        */
+SECTION_RODATA static u32 const lit_4267 = 0xC2C80000;
+
+/* 80CB0ACC-80CB0AE8 001C+00 s=2 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80CB0ACC[28] = {
+	/* 80CB0ACC 000A stringBase_80CB0ACC @stringBase0 */
+	0x4B, 0x5F, 0x6D, 0x62, 0x68, 0x61, 0x73, 0x69, 0x30, 0x00,
+	/* 80CB0AD6 0012 data_80CB0AD6 None */
+	0x4B, 0x5F, 0x6D, 0x62, 0x68, 0x61, 0x73, 0x69, 0x31, 0x00, 0x44, 0x5F, 0x4D, 0x4E, 0x30, 0x35,
+	0x00, 0x00,
+};
 
 /* 80CAFD64-80CAFF60 01FC+00 s=1 e=0 z=0  None .text      checkShake__10daPillar_cFv                                   */
 #pragma push
@@ -749,7 +735,7 @@ asm void daPillar_c::switch_proc_call() {
 #pragma pop
 
 
-/* 80CB031C-80CB0378 005C+00 s=1 e=0 z=0  None .text      actionSwOnWait__10daPillar_cFv                               */
+/* 80CB031C-80CB0378 005C+00 s=0 e=0 z=0  None .text      actionSwOnWait__10daPillar_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -760,7 +746,7 @@ asm void daPillar_c::actionSwOnWait() {
 #pragma pop
 
 
-/* 80CB0378-80CB03CC 0054+00 s=2 e=0 z=0  None .text      actionSwOn__10daPillar_cFv                                   */
+/* 80CB0378-80CB03CC 0054+00 s=1 e=0 z=0  None .text      actionSwOn__10daPillar_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -771,13 +757,13 @@ asm void daPillar_c::actionSwOn() {
 #pragma pop
 
 
-/* 80CB03CC-80CB03D0 0004+00 s=1 e=0 z=0  None .text      actionEnd__10daPillar_cFv                                    */
+/* 80CB03CC-80CB03D0 0004+00 s=0 e=0 z=0  None .text      actionEnd__10daPillar_cFv                                    */
 void daPillar_c::actionEnd() {
 	/* empty function */
 }
 
 
-/* 80CB03D0-80CB0658 0288+00 s=1 e=0 z=0  None .text      Execute__10daPillar_cFPPA3_A4_f                              */
+/* 80CB03D0-80CB0658 0288+00 s=0 e=0 z=0  None .text      Execute__10daPillar_cFPPA3_A4_f                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,7 +774,7 @@ asm void daPillar_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80CB0658-80CB0740 00E8+00 s=1 e=0 z=0  None .text      Draw__10daPillar_cFv                                         */
+/* 80CB0658-80CB0740 00E8+00 s=0 e=0 z=0  None .text      Draw__10daPillar_cFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -799,7 +785,7 @@ asm void daPillar_c::Draw() {
 #pragma pop
 
 
-/* 80CB0740-80CB0780 0040+00 s=1 e=0 z=0  None .text      Delete__10daPillar_cFv                                       */
+/* 80CB0740-80CB0780 0040+00 s=0 e=0 z=0  None .text      Delete__10daPillar_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -810,51 +796,51 @@ asm void daPillar_c::Delete() {
 #pragma pop
 
 
-/* 80CB0780-80CB0874 00F4+00 s=1 e=0 z=0  None .text      daPillar_create1st__FP10daPillar_c                           */
+/* 80CB0780-80CB0874 00F4+00 s=0 e=0 z=0  None .text      daPillar_create1st__FP10daPillar_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daPillar_create1st(daPillar_c* param_0) {
+asm void daPillar_create1st(daPillar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_create1st__FP10daPillar_c.s"
 }
 #pragma pop
 
 
-/* 80CB0874-80CB0894 0020+00 s=1 e=0 z=0  None .text      daPillar_MoveBGDelete__FP10daPillar_c                        */
+/* 80CB0874-80CB0894 0020+00 s=0 e=0 z=0  None .text      daPillar_MoveBGDelete__FP10daPillar_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daPillar_MoveBGDelete(daPillar_c* param_0) {
+asm void daPillar_MoveBGDelete(daPillar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGDelete__FP10daPillar_c.s"
 }
 #pragma pop
 
 
-/* 80CB0894-80CB08B4 0020+00 s=1 e=0 z=0  None .text      daPillar_MoveBGExecute__FP10daPillar_c                       */
+/* 80CB0894-80CB08B4 0020+00 s=0 e=0 z=0  None .text      daPillar_MoveBGExecute__FP10daPillar_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daPillar_MoveBGExecute(daPillar_c* param_0) {
+asm void daPillar_MoveBGExecute(daPillar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGExecute__FP10daPillar_c.s"
 }
 #pragma pop
 
 
-/* 80CB08B4-80CB08E0 002C+00 s=1 e=0 z=0  None .text      daPillar_MoveBGDraw__FP10daPillar_c                          */
+/* 80CB08B4-80CB08E0 002C+00 s=0 e=0 z=0  None .text      daPillar_MoveBGDraw__FP10daPillar_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daPillar_MoveBGDraw(daPillar_c* param_0) {
+asm void daPillar_MoveBGDraw(daPillar_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_pillar/d_a_obj_pillar/daPillar_MoveBGDraw__FP10daPillar_c.s"
 }
 #pragma pop
 
 
-/* 80CB08E0-80CB0928 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 80CB08E0-80CB0928 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -865,7 +851,7 @@ asm cCcD_GStts::~cCcD_GStts() {
 #pragma pop
 
 
-/* 80CB0928-80CB0984 005C+00 s=2 e=0 z=0  None .text      __dt__14daPillar_HIO_cFv                                     */
+/* 80CB0928-80CB0984 005C+00 s=1 e=0 z=0  None .text      __dt__14daPillar_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -876,7 +862,7 @@ asm daPillar_HIO_c::~daPillar_HIO_c() {
 #pragma pop
 
 
-/* 80CB0984-80CB09C0 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_pillar_cpp                                   */
+/* 80CB0984-80CB09C0 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_pillar_cpp                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

@@ -8,9 +8,9 @@ lbl_806E2B80:
 /* 806E2B98  3C 60 80 6E */	lis r3, lit_3791@ha
 /* 806E2B9C  3B E3 59 20 */	addi r31, r3, lit_3791@l
 /* 806E2BA0  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 806E2BA4  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 806E5924 */
-/* 806E2BA8  C0 5F 01 08 */	lfs f2, 0x108(r31)	/* effective address: 806E5A28 */
-/* 806E2BAC  C0 7F 00 CC */	lfs f3, 0xcc(r31)	/* effective address: 806E59EC */
+/* 806E2BA4  C0 3F 00 04 */	lfs f1, 4(r31)
+/* 806E2BA8  C0 5F 01 08 */	lfs f2, 0x108(r31)
+/* 806E2BAC  C0 7F 00 CC */	lfs f3, 0xcc(r31)
 /* 806E2BB0  4B B8 CE 8C */	b cLib_addCalc2__FPffff
 /* 806E2BB4  7F C3 F3 78 */	mr r3, r30
 /* 806E2BB8  4B FF FA 31 */	bl WallCheck__8daE_HM_cFv

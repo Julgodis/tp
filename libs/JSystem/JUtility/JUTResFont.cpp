@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct JUtility {
+	struct TColor {
+	};
+
+};
+
+struct JKRHeap {
+};
+
+struct ResFONT {
+};
+
 struct JUTFont {
 	struct TWidth {
 	};
@@ -22,19 +34,7 @@ struct JUTFont {
 	/* 802E0118 */ void isLeadByte_ShiftJIS(int);
 };
 
-struct JUtility {
-	struct TColor {
-	};
-
-};
-
 struct _GXTexMapID {
-};
-
-struct ResFONT {
-};
-
-struct JKRHeap {
 };
 
 struct JUTResFont {
@@ -155,25 +155,25 @@ extern "C" extern void* __vt__7JUTFont[17];
 /* ############################################################################################## */
 /* 803CC5A0-803CC5F0 004C+04 s=3 e=0 z=0  None .data      __vt__10JUTResFont                                           */
 SECTION_DATA static void* __vt__10JUTResFont[19 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JUTResFontFv,
-	/* 3    */ (void*)setGX__10JUTResFontFv,
-	/* 4    */ (void*)setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor,
-	/* 5    */ (void*)drawChar_scale__10JUTResFontFffffib,
-	/* 6    */ (void*)getLeading__10JUTResFontCFv,
-	/* 7    */ (void*)getAscent__10JUTResFontCFv,
-	/* 8    */ (void*)getDescent__10JUTResFontCFv,
-	/* 9    */ (void*)getHeight__10JUTResFontCFv,
-	/* 10   */ (void*)getWidth__10JUTResFontCFv,
-	/* 11   */ (void*)getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth,
-	/* 12   */ (void*)getCellWidth__10JUTResFontCFv,
-	/* 13   */ (void*)getCellHeight__10JUTResFontCFv,
-	/* 14   */ (void*)getFontType__10JUTResFontCFv,
-	/* 15   */ (void*)getResFont__10JUTResFontCFv,
-	/* 16   */ (void*)isLeadByte__10JUTResFontCFi,
-	/* 17   */ (void*)loadImage__10JUTResFontFi11_GXTexMapID,
-	/* 18   */ (void*)setBlock__10JUTResFontFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JUTResFontFv,
+	(void*)setGX__10JUTResFontFv,
+	(void*)setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor,
+	(void*)drawChar_scale__10JUTResFontFffffib,
+	(void*)getLeading__10JUTResFontCFv,
+	(void*)getAscent__10JUTResFontCFv,
+	(void*)getDescent__10JUTResFontCFv,
+	(void*)getHeight__10JUTResFontCFv,
+	(void*)getWidth__10JUTResFontCFv,
+	(void*)getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth,
+	(void*)getCellWidth__10JUTResFontCFv,
+	(void*)getCellHeight__10JUTResFontCFv,
+	(void*)getFontType__10JUTResFontCFv,
+	(void*)getResFont__10JUTResFontCFv,
+	(void*)isLeadByte__10JUTResFontCFi,
+	(void*)loadImage__10JUTResFontFi11_GXTexMapID,
+	(void*)setBlock__10JUTResFontFv,
 	/* padding */
 	NULL,
 };
@@ -258,9 +258,9 @@ asm void JUTResFont::protected_initiate(ResFONT const* param_0, JKRHeap* param_1
 /* ############################################################################################## */
 /* 8039D390-8039D39C 000C+00 s=1 e=1 z=0  None .rodata    saoAboutEncoding___10JUTResFont                              */
 SECTION_RODATA void* const saoAboutEncoding___10JUTResFont[3] = {
-	/* 0    */ (void*)isLeadByte_1Byte__7JUTFontFi,
-	/* 1    */ (void*)isLeadByte_2Byte__7JUTFontFi,
-	/* 2    */ (void*)isLeadByte_ShiftJIS__7JUTFontFi,
+	(void*)isLeadByte_1Byte__7JUTFontFi,
+	(void*)isLeadByte_2Byte__7JUTFontFi,
+	(void*)isLeadByte_ShiftJIS__7JUTFontFi,
 };
 
 /* 8039D39C-8039D45C 00BE+02 s=1 e=0 z=0  None .rodata    halftofull$726                                               */

@@ -11,10 +11,10 @@ lbl_80D3DBAC:
 /* 80D3DBD0  38 00 00 06 */	li r0, 6
 /* 80D3DBD4  7C 09 03 A6 */	mtctr r0
 lbl_80D3DBD8:
-/* 80D3DBD8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80392680 */
-/* 80D3DBDC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80392684 */
-/* 80D3DBE0  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80D3DDB4 */
-/* 80D3DBE4  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80D3DDB8 */
+/* 80D3DBD8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80D3DBDC  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80D3DBE0  90 65 00 04 */	stw r3, 4(r5)
+/* 80D3DBE4  94 05 00 08 */	stwu r0, 8(r5)
 /* 80D3DBE8  42 00 FF F0 */	bdnz lbl_80D3DBD8
 /* 80D3DBEC  3C 60 80 D4 */	lis r3, __vt__18daObj_YBag_Param_c@ha
 /* 80D3DBF0  38 03 DE BC */	addi r0, r3, __vt__18daObj_YBag_Param_c@l

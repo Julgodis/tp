@@ -79,10 +79,10 @@ lbl_806EF57C:
 /* 806EF580  4B A9 1F 80 */	b GetForceLockOnActor__9dCamera_cFv
 /* 806EF584  7C 03 F8 40 */	cmplw r3, r31
 /* 806EF588  40 82 00 38 */	bne lbl_806EF5C0
-/* 806EF58C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806EF590  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806EF594  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806EF598  C0 43 04 D4 */	lfs f2, 0x4d4(r3)	/* effective address: 80406694 */
+/* 806EF58C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806EF590  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806EF594  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806EF598  C0 43 04 D4 */	lfs f2, 0x4d4(r3)
 /* 806EF59C  C0 3F 04 D4 */	lfs f1, 0x4d4(r31)
 /* 806EF5A0  3C 60 80 6F */	lis r3, lit_3966@ha
 /* 806EF5A4  C0 03 08 60 */	lfs f0, lit_3966@l(r3)

@@ -7,12 +7,12 @@ lbl_80C91714:
 /* 80C91728  7C 7E 1B 78 */	mr r30, r3
 /* 80C9172C  3C 60 80 C9 */	lis r3, mAttr__18daObjMasterSword_c@ha
 /* 80C91730  3B E3 19 40 */	addi r31, r3, mAttr__18daObjMasterSword_c@l
-/* 80C91734  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C91738  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C91734  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C91738  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9173C  38 63 0D D8 */	addi r3, r3, 0xdd8
-/* 80C91740  3C 80 80 38 */	lis r4, struct_803790C0+0x0@ha
-/* 80C91744  38 84 90 C0 */	addi r4, r4, struct_803790C0+0x0@l
-/* 80C91748  A0 84 00 92 */	lhz r4, 0x92(r4)	/* effective address: 80379152 */
+/* 80C91740  3C 80 80 38 */	lis r4, tempBitLabels__20dSv_event_tmp_flag_c@ha
+/* 80C91744  38 84 90 C0 */	addi r4, r4, tempBitLabels__20dSv_event_tmp_flag_c@l
+/* 80C91748  A0 84 00 92 */	lhz r4, 0x92(r4)
 /* 80C9174C  4B 3A 32 70 */	b isEventBit__11dSv_event_cCFUs
 /* 80C91750  2C 03 00 00 */	cmpwi r3, 0
 /* 80C91754  41 82 00 0C */	beq lbl_80C91760
@@ -33,14 +33,14 @@ lbl_80C91760:
 /* 80C9178C  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C91790  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80C91794  4B 51 36 0C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80C91798  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9179C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C917A0  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80C91798  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9179C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C917A0  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80C917A4  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C917A8  3B A3 4A C8 */	addi r29, r3, j3dSys@l
-/* 80C917AC  90 1D 00 48 */	stw r0, 0x48(r29)	/* effective address: 80434B10 */
-/* 80C917B0  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80C917B4  90 1D 00 4C */	stw r0, 0x4c(r29)	/* effective address: 80434B14 */
+/* 80C917AC  90 1D 00 48 */	stw r0, 0x48(r29)
+/* 80C917B0  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80C917B4  90 1D 00 4C */	stw r0, 0x4c(r29)
 /* 80C917B8  C0 3E 05 84 */	lfs f1, 0x584(r30)
 /* 80C917BC  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80C917C0  38 9C 00 58 */	addi r4, r28, 0x58
@@ -57,11 +57,11 @@ lbl_80C91760:
 /* 80C917EC  38 7C 00 58 */	addi r3, r28, 0x58
 /* 80C917F0  80 9E 05 A0 */	lwz r4, 0x5a0(r30)
 /* 80C917F4  4B 69 E0 8C */	b removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey
-/* 80C917F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C917FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C91800  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C917F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C917FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C91800  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C91804  90 1D 00 48 */	stw r0, 0x48(r29)
-/* 80C91808  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C91808  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C9180C  90 1D 00 4C */	stw r0, 0x4c(r29)
 /* 80C91810  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)
 /* 80C91814  C0 1F 00 28 */	lfs f0, 0x28(r31)

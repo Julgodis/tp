@@ -6,11 +6,11 @@ lbl_8055CB14:
 /* 8055CB24  7C 7F 1B 78 */	mr r31, r3
 /* 8055CB28  3C 80 80 56 */	lis r4, lit_5060@ha
 /* 8055CB2C  38 A4 56 98 */	addi r5, r4, lit_5060@l
-/* 8055CB30  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80565698 */
-/* 8055CB34  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 8056569C */
+/* 8055CB30  80 85 00 00 */	lwz r4, 0(r5)
+/* 8055CB34  80 05 00 04 */	lwz r0, 4(r5)
 /* 8055CB38  90 81 00 08 */	stw r4, 8(r1)
 /* 8055CB3C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8055CB40  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 805656A0 */
+/* 8055CB40  80 05 00 08 */	lwz r0, 8(r5)
 /* 8055CB44  90 01 00 10 */	stw r0, 0x10(r1)
 /* 8055CB48  38 81 00 08 */	addi r4, r1, 8
 /* 8055CB4C  48 00 11 BD */	bl chkAction__12daNpc_Maro_cFM12daNpc_Maro_cFPCvPvPv_i
@@ -18,9 +18,9 @@ lbl_8055CB14:
 /* 8055CB54  40 82 01 30 */	bne lbl_8055CC84
 /* 8055CB58  38 00 00 00 */	li r0, 0
 /* 8055CB5C  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 8055CB60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055CB64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8055CB68  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 8055CB60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055CB64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8055CB68  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 8055CB6C  28 04 00 01 */	cmplwi r4, 1
 /* 8055CB70  41 82 00 0C */	beq lbl_8055CB7C
 /* 8055CB74  28 04 00 02 */	cmplwi r4, 2

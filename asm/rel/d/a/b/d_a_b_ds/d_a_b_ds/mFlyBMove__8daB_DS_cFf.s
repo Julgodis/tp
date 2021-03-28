@@ -8,8 +8,8 @@ lbl_805D3900:
 /* 805D3918  3C 60 80 5E */	lis r3, lit_3932@ha
 /* 805D391C  3B E3 CA 54 */	addi r31, r3, lit_3932@l
 /* 805D3920  38 7E 07 F4 */	addi r3, r30, 0x7f4
-/* 805D3924  C0 5F 00 84 */	lfs f2, 0x84(r31)	/* effective address: 805DCAD8 */
-/* 805D3928  C0 7F 02 BC */	lfs f3, 0x2bc(r31)	/* effective address: 805DCD10 */
+/* 805D3924  C0 5F 00 84 */	lfs f2, 0x84(r31)
+/* 805D3928  C0 7F 02 BC */	lfs f3, 0x2bc(r31)
 /* 805D392C  4B C9 C1 10 */	b cLib_addCalc2__FPffff
 /* 805D3930  C0 3E 07 34 */	lfs f1, 0x734(r30)
 /* 805D3934  C0 1E 07 F4 */	lfs f0, 0x7f4(r30)

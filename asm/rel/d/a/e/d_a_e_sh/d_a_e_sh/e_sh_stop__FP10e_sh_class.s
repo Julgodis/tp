@@ -11,15 +11,15 @@ lbl_8078EA58:
 /* 8078EA7C  B0 1E 06 A0 */	sth r0, 0x6a0(r30)
 /* 8078EA80  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8078EA84  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8078EA88  C0 23 12 44 */	lfs f1, 0x1244(r3)	/* effective address: 8042DC98 */
-/* 8078EA8C  C0 1F 00 60 */	lfs f0, 0x60(r31)	/* effective address: 80791DD0 */
+/* 8078EA88  C0 23 12 44 */	lfs f1, 0x1244(r3)
+/* 8078EA8C  C0 1F 00 60 */	lfs f0, 0x60(r31)
 /* 8078EA90  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8078EA94  FC 00 00 1E */	fctiwz f0, f0
 /* 8078EA98  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 8078EA9C  80 81 00 34 */	lwz r4, 0x34(r1)
 /* 8078EAA0  3C 60 80 79 */	lis r3, l_HIO@ha
 /* 8078EAA4  38 63 21 08 */	addi r3, r3, l_HIO@l
-/* 8078EAA8  88 03 00 28 */	lbz r0, 0x28(r3)	/* effective address: 80792130 */
+/* 8078EAA8  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 8078EAAC  28 00 00 00 */	cmplwi r0, 0
 /* 8078EAB0  41 82 00 08 */	beq lbl_8078EAB8
 /* 8078EAB4  38 80 00 00 */	li r4, 0
@@ -63,17 +63,17 @@ lbl_8078EB08:
 /* 8078EB3C  B0 1E 04 E6 */	sth r0, 0x4e6(r30)
 /* 8078EB40  3C 60 80 79 */	lis r3, l_HIO@ha
 /* 8078EB44  38 63 21 08 */	addi r3, r3, l_HIO@l
-/* 8078EB48  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80792110 */
+/* 8078EB48  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8078EB4C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8078EB50  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 8078EB54  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 8078EB58  3B 40 00 00 */	li r26, 0
-/* 8078EB5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8078EB60  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 8078EB5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8078EB60  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 /* 8078EB64  3C 60 80 79 */	lis r3, data_80791F00@ha
 /* 8078EB68  3B A3 1F 00 */	addi r29, r3, data_80791F00@l
 lbl_8078EB6C:
-/* 8078EB6C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 8078EB6C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 8078EB70  38 80 00 00 */	li r4, 0
 /* 8078EB74  90 81 00 08 */	stw r4, 8(r1)
 /* 8078EB78  38 00 FF FF */	li r0, -1

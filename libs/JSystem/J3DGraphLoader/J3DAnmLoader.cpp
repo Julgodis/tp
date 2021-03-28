@@ -22,10 +22,8 @@ struct J3DAnmLoaderDataBase {
 	/* 80338134 */ void setResource(J3DAnmBase*, void const*);
 };
 
-struct J3DAnmTransformFullData {
-};
-
-struct J3DAnmClusterFullData {
+struct J3DAnmColorFull {
+	/* 8032A93C */ J3DAnmColorFull();
 };
 
 struct J3DAnmVisibilityFull {
@@ -33,34 +31,36 @@ struct J3DAnmVisibilityFull {
 	/* 803397F8 */ s32 getKind() const;
 };
 
-struct J3DAnmTexPatternFullData {
-};
-
-struct J3DAnmVtxColorFull {
-	/* 8032A30C */ J3DAnmVtxColorFull();
-};
-
-struct J3DAnmColorFull {
-	/* 8032A93C */ J3DAnmColorFull();
-};
-
-struct J3DAnmVtxColorFullData {
-};
-
-struct J3DAnmTransformFull {
+struct J3DAnmColorFullData {
 };
 
 struct J3DAnmTexPattern {
 	/* 8032AED8 */ J3DAnmTexPattern();
 };
 
-struct J3DAnmClusterFull {
+struct J3DAnmClusterFullData {
 };
 
-struct J3DAnmColorFullData {
+struct J3DAnmTransformFullData {
+};
+
+struct J3DAnmVtxColorFull {
+	/* 8032A30C */ J3DAnmVtxColorFull();
+};
+
+struct J3DAnmTexPatternFullData {
 };
 
 struct J3DAnmVisibilityFullData {
+};
+
+struct J3DAnmVtxColorFullData {
+};
+
+struct J3DAnmClusterFull {
+};
+
+struct J3DAnmTransformFull {
 };
 
 struct J3DAnmFullLoader_v15 {
@@ -82,31 +82,10 @@ struct J3DAnmFullLoader_v15 {
 	/* 80338BDC */ void setAnmVtxColor(J3DAnmVtxColorFull*, J3DAnmVtxColorFullData const*);
 };
 
-struct J3DAnmVtxColorKey {
-	/* 8032A4E0 */ J3DAnmVtxColorKey();
+struct J3DAnmClusterKeyData {
 };
 
-struct J3DAnmVtxColorKeyData {
-};
-
-struct J3DAnmTextureSRTKeyData {
-};
-
-struct J3DAnmTransformKey {
-};
-
-struct J3DAnmClusterKey {
-};
-
-struct J3DAnmTextureSRTKey {
-	/* 80329E5C */ J3DAnmTextureSRTKey();
-};
-
-struct J3DAnmColorKeyData {
-};
-
-struct J3DAnmColorKey {
-	/* 8032AB00 */ J3DAnmColorKey();
+struct J3DAnmTransformKeyData {
 };
 
 struct J3DAnmTevRegKeyData {
@@ -116,10 +95,31 @@ struct J3DAnmTevRegKey {
 	/* 8032AE18 */ J3DAnmTevRegKey();
 };
 
-struct J3DAnmTransformKeyData {
+struct J3DAnmColorKey {
+	/* 8032AB00 */ J3DAnmColorKey();
 };
 
-struct J3DAnmClusterKeyData {
+struct J3DAnmVtxColorKey {
+	/* 8032A4E0 */ J3DAnmVtxColorKey();
+};
+
+struct J3DAnmColorKeyData {
+};
+
+struct J3DAnmTextureSRTKey {
+	/* 80329E5C */ J3DAnmTextureSRTKey();
+};
+
+struct J3DAnmTextureSRTKeyData {
+};
+
+struct J3DAnmVtxColorKeyData {
+};
+
+struct J3DAnmTransformKey {
+};
+
+struct J3DAnmClusterKey {
 };
 
 struct J3DAnmKeyLoader_v15 {
@@ -285,37 +285,37 @@ SECTION_DEAD static char const* const pad_803A216D = "\0\0";
 
 /* 803CF238-803CF24C 0014+00 s=2 e=0 z=0  None .data      __vt__19J3DAnmKeyLoader_v15                                  */
 SECTION_DATA static void* __vt__19J3DAnmKeyLoader_v15[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__19J3DAnmKeyLoader_v15FPCv,
-	/* 3    */ (void*)setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv,
-	/* 4    */ (void*)__dt__19J3DAnmKeyLoader_v15Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__19J3DAnmKeyLoader_v15FPCv,
+	(void*)setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv,
+	(void*)__dt__19J3DAnmKeyLoader_v15Fv,
 };
 
 /* 803CF24C-803CF260 0014+00 s=2 e=0 z=0  None .data      __vt__20J3DAnmFullLoader_v15                                 */
 SECTION_DATA static void* __vt__20J3DAnmFullLoader_v15[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)load__20J3DAnmFullLoader_v15FPCv,
-	/* 3    */ (void*)setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv,
-	/* 4    */ (void*)__dt__20J3DAnmFullLoader_v15Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)load__20J3DAnmFullLoader_v15FPCv,
+	(void*)setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv,
+	(void*)__dt__20J3DAnmFullLoader_v15Fv,
 };
 
 /* 803CF260-803CF274 0014+00 s=5 e=0 z=0  None .data      __vt__12J3DAnmLoader                                         */
 SECTION_DATA static void* __vt__12J3DAnmLoader[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)__dt__12J3DAnmLoaderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DAnmLoaderFv,
 };
 
 /* 803CF274-803CF288 0010+04 s=2 e=0 z=0  None .data      __vt__20J3DAnmVisibilityFull                                 */
 SECTION_DATA static void* __vt__20J3DAnmVisibilityFull[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__20J3DAnmVisibilityFullFv,
-	/* 3    */ (void*)getKind__20J3DAnmVisibilityFullCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__20J3DAnmVisibilityFullFv,
+	(void*)getKind__20J3DAnmVisibilityFullCFv,
 	/* padding */
 	NULL,
 };

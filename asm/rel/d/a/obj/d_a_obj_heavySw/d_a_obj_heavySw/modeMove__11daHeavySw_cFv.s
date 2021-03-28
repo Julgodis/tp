@@ -31,7 +31,7 @@ lbl_80C1D5D0:
 /* 80C1D5F4  90 01 00 08 */	stw r0, 8(r1)
 /* 80C1D5F8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C1D5FC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C1D600  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C1D600  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C1D604  38 81 00 08 */	addi r4, r1, 8
 /* 80C1D608  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C1D60C  38 C0 00 00 */	li r6, 0

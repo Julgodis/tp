@@ -9,7 +9,7 @@ lbl_80B6CE80:
 /* 80B6CE9C  7C 7B 1B 78 */	mr r27, r3
 /* 80B6CEA0  3C 60 80 B7 */	lis r3, m__18daNpc_Zant_Param_c@ha
 /* 80B6CEA4  3B A3 E9 A8 */	addi r29, r3, m__18daNpc_Zant_Param_c@l
-/* 80B6CEA8  C0 1D 00 A0 */	lfs f0, 0xa0(r29)	/* effective address: 80B6EA48 */
+/* 80B6CEA8  C0 1D 00 A0 */	lfs f0, 0xa0(r29)
 /* 80B6CEAC  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80B6CEB0  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80B6CEB4  D0 01 00 30 */	stfs f0, 0x30(r1)

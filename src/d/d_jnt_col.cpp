@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct csXyz {
-};
-
-struct dJntColData_c {
-};
-
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -33,12 +24,21 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct fopAc_ac_c {
-};
-
 struct cM3dGLin {
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
+};
+
+struct csXyz {
+};
+
+struct dJntColData_c {
+};
+
+struct J3DModel {
+};
+
+struct fopAc_ac_c {
 };
 
 struct dJntCol_c {
@@ -194,16 +194,16 @@ asm void dJntCol_c::setNowLine(cM3dGLin* param_0, cXyz const* param_1, csXyz con
 /* ############################################################################################## */
 /* 803A78F8-803A7904 000C+00 s=4 e=21 z=0  None .data      __vt__8cM3dGLin                                              */
 SECTION_DATA void* __vt__8cM3dGLin[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGLinFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGLinFv,
 };
 
 /* 803A7904-803A7910 000C+00 s=2 e=10 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGSphFv,
 };
 
 /* 80451D64-80451D68 0004+00 s=1 e=0 z=0  None .sdata2    @4141                                                        */

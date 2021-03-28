@@ -23,9 +23,9 @@ lbl_804656F0:
 /* 80465744  60 00 00 08 */	ori r0, r0, 8
 /* 80465748  98 03 03 F4 */	stb r0, 0x3f4(r3)
 lbl_8046574C:
-/* 8046574C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80465750  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80465754  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8046574C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80465750  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80465754  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80465758  38 61 00 08 */	addi r3, r1, 8
 /* 8046575C  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80465760  38 BF 04 D0 */	addi r5, r31, 0x4d0
@@ -46,8 +46,8 @@ lbl_8046574C:
 /* 8046579C  48 00 00 81 */	bl getRestartPos__10daDoor20_cFP4cXyz
 /* 804657A0  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 804657A4  7C 06 07 74 */	extsb r6, r0
-/* 804657A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804657AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804657A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804657AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804657B0  38 63 0D B4 */	addi r3, r3, 0xdb4
 /* 804657B4  38 81 00 20 */	addi r4, r1, 0x20
 /* 804657B8  3C A0 80 46 */	lis r5, lit_4256@ha
@@ -65,7 +65,7 @@ lbl_804657E0:
 /* 804657E0  4B BC F7 A0 */	b setRoom__13dSv_restart_cFRC4cXyzsSc
 /* 804657E4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804657E8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804657EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804657EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 804657F0  38 63 04 A4 */	addi r3, r3, 0x4a4
 /* 804657F4  38 80 00 01 */	li r4, 1
 /* 804657F8  4B E5 10 E8 */	b setSceneExist__10Z2SceneMgrFb

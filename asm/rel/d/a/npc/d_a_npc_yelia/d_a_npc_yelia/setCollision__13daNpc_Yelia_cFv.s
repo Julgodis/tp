@@ -63,8 +63,8 @@ lbl_80B4EEB4:
 /* 80B4EF38  38 7F 0F 68 */	addi r3, r31, 0xf68
 /* 80B4EF3C  38 81 00 08 */	addi r4, r1, 8
 /* 80B4EF40  4B 72 02 9C */	b SetC__8cM3dGCylFRC4cXyz
-/* 80B4EF44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B4EF48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B4EF44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B4EF48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B4EF4C  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80B4EF50  38 9F 0E 44 */	addi r4, r31, 0xe44
 /* 80B4EF54  4B 71 5C 54 */	b Set__4cCcSFP8cCcD_Obj

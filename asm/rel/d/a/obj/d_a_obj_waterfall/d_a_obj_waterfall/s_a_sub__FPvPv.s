@@ -12,7 +12,7 @@ lbl_80D2ECA4:
 /* 80D2ECCC  40 82 00 30 */	bne lbl_80D2ECFC
 /* 80D2ECD0  3C 60 80 D3 */	lis r3, target_info_count@ha
 /* 80D2ECD4  38 83 FE 78 */	addi r4, r3, target_info_count@l
-/* 80D2ECD8  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80D2FE78 */
+/* 80D2ECD8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80D2ECDC  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80D2ECE0  40 80 00 1C */	bge lbl_80D2ECFC
 /* 80D2ECE4  54 A0 10 3A */	slwi r0, r5, 2

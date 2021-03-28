@@ -36,8 +36,8 @@ lbl_805DB2E8:
 /* 805DB2E8  3C 60 80 5E */	lis r3, stringBase0@ha
 /* 805DB2EC  38 63 D2 2C */	addi r3, r3, stringBase0@l
 /* 805DB2F0  38 80 00 46 */	li r4, 0x46
-/* 805DB2F4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 805DB2F8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 805DB2F4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 805DB2F8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 805DB2FC  3F C5 00 02 */	addis r30, r5, 2
 /* 805DB300  3B DE C2 F8 */	addi r30, r30, -15624
 /* 805DB304  7F C5 F3 78 */	mr r5, r30

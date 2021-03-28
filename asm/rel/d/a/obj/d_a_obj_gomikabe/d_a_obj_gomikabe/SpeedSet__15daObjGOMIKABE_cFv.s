@@ -13,7 +13,7 @@ lbl_80BFEB90:
 /* 80BFEBBC  3B A0 00 00 */	li r29, 0
 /* 80BFEBC0  3B 80 00 00 */	li r28, 0
 /* 80BFEBC4  3B 60 00 00 */	li r27, 0
-/* 80BFEBC8  C3 FA 00 58 */	lfs f31, 0x58(r26)	/* effective address: 80BFFC74 */
+/* 80BFEBC8  C3 FA 00 58 */	lfs f31, 0x58(r26)
 lbl_80BFEBCC:
 /* 80BFEBCC  7F 3E DA 14 */	add r25, r30, r27
 /* 80BFEBD0  C0 19 05 B0 */	lfs f0, 0x5b0(r25)

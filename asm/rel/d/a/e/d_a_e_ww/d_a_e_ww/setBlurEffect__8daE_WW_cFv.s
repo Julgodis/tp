@@ -5,9 +5,9 @@ lbl_807E8624:
 /* 807E8630  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 807E8634  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 807E8638  7C 7E 1B 78 */	mr r30, r3
-/* 807E863C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E8640  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 807E8644  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 807E863C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E8640  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 807E8644  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 807E8648  38 00 00 FF */	li r0, 0xff
 /* 807E864C  90 01 00 08 */	stw r0, 8(r1)
 /* 807E8650  38 80 00 00 */	li r4, 0

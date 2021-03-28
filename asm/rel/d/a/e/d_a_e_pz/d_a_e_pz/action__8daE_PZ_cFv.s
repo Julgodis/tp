@@ -8,7 +8,7 @@ lbl_8075F3A8:
 /* 8075F3C0  C0 24 15 30 */	lfs f1, lit_3929@l(r4)
 /* 8075F3C4  3C 80 80 76 */	lis r4, l_HIO@ha
 /* 8075F3C8  38 84 1E 0C */	addi r4, r4, l_HIO@l
-/* 8075F3CC  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80761E14 */
+/* 8075F3CC  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8075F3D0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8075F3D4  D0 03 07 CC */	stfs f0, 0x7cc(r3)
 /* 8075F3D8  4B FF 9A 2D */	bl damage_check__8daE_PZ_cFv
@@ -80,8 +80,8 @@ lbl_8075F4B0:
 /* 8075F4B4  C0 3F 07 BC */	lfs f1, 0x7bc(r31)
 /* 8075F4B8  4B 91 7C 5C */	b SetGroundUpY__9dBgS_AcchFf
 /* 8075F4BC  38 7F 08 90 */	addi r3, r31, 0x890
-/* 8075F4C0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8075F4C4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8075F4C0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8075F4C4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8075F4C8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8075F4CC  4B 91 75 E0 */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_8075F4D0:

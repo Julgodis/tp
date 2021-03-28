@@ -28,6 +28,13 @@ struct dAttDraw_CallBack_c {
 	/* 80070178 */ void execute(u16, J3DTransformInfo*);
 };
 
+struct cSAngle {
+	/* 80270F68 */ cSAngle(cSAngle const&);
+	/* 80270F98 */ cSAngle(s16);
+	/* 802710E8 */ void Inv() const;
+	/* 80271228 */ void operator-(s16) const;
+};
+
 struct Vec {
 };
 
@@ -36,13 +43,6 @@ struct cXyz {
 };
 
 struct fopAc_ac_c {
-};
-
-struct cSAngle {
-	/* 80270F68 */ cSAngle(cSAngle const&);
-	/* 80270F98 */ cSAngle(s16);
-	/* 802710E8 */ void Inv() const;
-	/* 80271228 */ void operator-(s16) const;
 };
 
 struct dAttention_c {
@@ -439,23 +439,23 @@ SECTION_DATA static u8 data_803A9C3C[12] = {
 
 /* 803A9C48-803A9C54 000C+00 s=1 e=1 z=0  None .data      __vt__19dAttDraw_CallBack_c                                  */
 SECTION_DATA void* __vt__19dAttDraw_CallBack_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo,
 };
 
 /* 803A9C54-803A9C60 000C+00 s=2 e=0 z=0  None .data      __vt__15dAttDrawParam_c                                      */
 SECTION_DATA static void* __vt__15dAttDrawParam_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dAttDrawParam_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dAttDrawParam_cFv,
 };
 
 /* 803A9C60-803A9C70 000C+04 s=3 e=1 z=0  None .data      __vt__11dAttParam_c                                          */
 SECTION_DATA void* __vt__11dAttParam_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dAttParam_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dAttParam_cFv,
 	/* padding */
 	NULL,
 };

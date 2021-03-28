@@ -8,18 +8,18 @@ lbl_80C77200:
 /* 80C77218  7C 9F 23 78 */	mr r31, r4
 /* 80C7721C  3C 80 80 C7 */	lis r4, l_cull_box@ha
 /* 80C77220  38 A4 7A 08 */	addi r5, r4, l_cull_box@l
-/* 80C77224  C0 A5 00 10 */	lfs f5, 0x10(r5)	/* effective address: 80C77A18 */
+/* 80C77224  C0 A5 00 10 */	lfs f5, 0x10(r5)
 /* 80C77228  3C 80 80 C7 */	lis r4, l_HIO@ha
 /* 80C7722C  38 84 7A DC */	addi r4, r4, l_HIO@l
-/* 80C77230  C0 24 00 04 */	lfs f1, 4(r4)	/* effective address: 80C77AE0 */
+/* 80C77230  C0 24 00 04 */	lfs f1, 4(r4)
 /* 80C77234  3C 80 80 C7 */	lis r4, lit_3908@ha
 /* 80C77238  C0 04 79 E8 */	lfs f0, lit_3908@l(r4)
 /* 80C7723C  EC 81 00 32 */	fmuls f4, f1, f0
-/* 80C77240  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80C77A08 */
+/* 80C77240  C0 05 00 00 */	lfs f0, 0(r5)
 /* 80C77244  EC 20 20 28 */	fsubs f1, f0, f4
-/* 80C77248  C0 45 00 04 */	lfs f2, 4(r5)	/* effective address: 80C77A0C */
-/* 80C7724C  C0 65 00 08 */	lfs f3, 8(r5)	/* effective address: 80C77A10 */
-/* 80C77250  C0 05 00 0C */	lfs f0, 0xc(r5)	/* effective address: 80C77A14 */
+/* 80C77248  C0 45 00 04 */	lfs f2, 4(r5)
+/* 80C7724C  C0 65 00 08 */	lfs f3, 8(r5)
+/* 80C77250  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 80C77254  EC 80 20 2A */	fadds f4, f0, f4
 /* 80C77258  FC C0 28 90 */	fmr f6, f5
 /* 80C7725C  4B 3A 32 EC */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff

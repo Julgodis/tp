@@ -35,7 +35,7 @@ lbl_80503160:
 /* 8050319C  C0 23 05 90 */	lfs f1, 0x590(r3)
 /* 805031A0  3C 80 80 50 */	lis r4, l_HIO@ha
 /* 805031A4  38 84 49 60 */	addi r4, r4, l_HIO@l
-/* 805031A8  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80504968 */
+/* 805031A8  C0 04 00 08 */	lfs f0, 8(r4)
 /* 805031AC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 805031B0  EC 02 00 32 */	fmuls f0, f2, f0
 /* 805031B4  EC 03 00 28 */	fsubs f0, f3, f0

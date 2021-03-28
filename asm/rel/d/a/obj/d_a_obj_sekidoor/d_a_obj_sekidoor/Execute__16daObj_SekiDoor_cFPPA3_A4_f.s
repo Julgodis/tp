@@ -64,8 +64,8 @@ lbl_80CCD324:
 /* 80CCD380  4B 5A 33 50 */	b cLib_chaseS__FPsss
 /* 80CCD384  2C 03 00 00 */	cmpwi r3, 0
 /* 80CCD388  41 82 00 18 */	beq lbl_80CCD3A0
-/* 80CCD38C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCD390  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCD38C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCD390  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCD394  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CCD398  38 80 00 0F */	li r4, 0xf
 /* 80CCD39C  4B 3A 29 F8 */	b StopQuake__12dVibration_cFi
@@ -101,7 +101,7 @@ lbl_80CCD3AC:
 /* 80CCD40C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CCD410  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CCD414  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CCD418  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CCD418  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CCD41C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CCD420  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 80CCD424  38 C0 00 00 */	li r6, 0
@@ -121,7 +121,7 @@ lbl_80CCD448:
 /* 80CCD458  90 01 00 08 */	stw r0, 8(r1)
 /* 80CCD45C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CCD460  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CCD464  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CCD464  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CCD468  38 81 00 08 */	addi r4, r1, 8
 /* 80CCD46C  38 A0 00 00 */	li r5, 0
 /* 80CCD470  38 C0 00 00 */	li r6, 0
@@ -137,8 +137,8 @@ lbl_80CCD448:
 /* 80CCD498  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80CCD49C  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CCD4A0  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80CCD4A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCD4A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CCD4A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCD4A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CCD4AC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CCD4B0  38 80 00 05 */	li r4, 5
 /* 80CCD4B4  38 A0 00 0F */	li r5, 0xf

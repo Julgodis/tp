@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JASWaveInfo {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JASWaveInfo {
 };
 
 struct JASSimpleWaveBank {
@@ -89,27 +89,27 @@ extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 /* ############################################################################################## */
 /* 803C7798-803C77AC 0014+00 s=2 e=0 z=0  None .data      __vt__Q217JASSimpleWaveBank11TWaveHandle                     */
 SECTION_DATA static void* __vt__Q217JASSimpleWaveBank11TWaveHandle[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q217JASSimpleWaveBank11TWaveHandleFv,
-	/* 3    */ (void*)getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv,
-	/* 4    */ (void*)getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q217JASSimpleWaveBank11TWaveHandleFv,
+	(void*)getWaveInfo__Q217JASSimpleWaveBank11TWaveHandleCFv,
+	(void*)getWavePtr__Q217JASSimpleWaveBank11TWaveHandleCFv,
 };
 
 /* 803C77AC-803C77E0 0030+04 s=2 e=0 z=0  None .data      __vt__17JASSimpleWaveBank                                    */
 SECTION_DATA static void* __vt__17JASSimpleWaveBank[12 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17JASSimpleWaveBankFv,
-	/* 3    */ (void*)getWaveHandle__17JASSimpleWaveBankCFUl,
-	/* 4    */ (void*)getWaveArc__17JASSimpleWaveBankFUl,
-	/* 5    */ (void*)getArcCount__17JASSimpleWaveBankCFv,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80298FA8,
-	/* 9    */ (void*)onDispose__10JASWaveArcFv,
-	/* 10   */ (void*)onLoadDone__10JASWaveArcFv,
-	/* 11   */ (void*)onEraseDone__10JASWaveArcFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17JASSimpleWaveBankFv,
+	(void*)getWaveHandle__17JASSimpleWaveBankCFUl,
+	(void*)getWaveArc__17JASSimpleWaveBankFUl,
+	(void*)getArcCount__17JASSimpleWaveBankCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80298FA8,
+	(void*)onDispose__10JASWaveArcFv,
+	(void*)onLoadDone__10JASWaveArcFv,
+	(void*)onEraseDone__10JASWaveArcFv,
 	/* padding */
 	NULL,
 };

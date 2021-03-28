@@ -30,13 +30,13 @@ lbl_8054FDC0:
 /* 8054FDE0  40 82 00 28 */	bne lbl_8054FE08
 /* 8054FDE4  3C 60 80 45 */	lis r3, mFindCount__8daNpcT_c@ha
 /* 8054FDE8  38 A3 0F DC */	addi r5, r3, mFindCount__8daNpcT_c@l
-/* 8054FDEC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80450FDC */
+/* 8054FDEC  80 85 00 00 */	lwz r4, 0(r5)
 /* 8054FDF0  54 80 10 3A */	slwi r0, r4, 2
 /* 8054FDF4  3C 60 80 42 */	lis r3, mFindActorPtrs__8daNpcT_c@ha
 /* 8054FDF8  38 63 57 08 */	addi r3, r3, mFindActorPtrs__8daNpcT_c@l
 /* 8054FDFC  7F E3 01 2E */	stwx r31, r3, r0
 /* 8054FE00  38 04 00 01 */	addi r0, r4, 1
-/* 8054FE04  90 05 00 00 */	stw r0, 0(r5)	/* effective address: 80450FDC */
+/* 8054FE04  90 05 00 00 */	stw r0, 0(r5)
 lbl_8054FE08:
 /* 8054FE08  38 60 00 00 */	li r3, 0
 /* 8054FE0C  83 E1 00 0C */	lwz r31, 0xc(r1)

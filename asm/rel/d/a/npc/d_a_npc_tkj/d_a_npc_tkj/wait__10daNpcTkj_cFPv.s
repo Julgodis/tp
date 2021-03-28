@@ -103,8 +103,8 @@ lbl_80574ADC:
 /* 80574AEC  3C 03 00 01 */	addis r0, r3, 1
 /* 80574AF0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80574AF4  40 82 00 20 */	bne lbl_80574B14
-/* 80574AF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80574AFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80574AF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80574AFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80574B00  38 63 09 58 */	addi r3, r3, 0x958
 /* 80574B04  38 80 00 06 */	li r4, 6
 /* 80574B08  4B AB FE 10 */	b onDungeonItem__12dSv_memBit_cFi

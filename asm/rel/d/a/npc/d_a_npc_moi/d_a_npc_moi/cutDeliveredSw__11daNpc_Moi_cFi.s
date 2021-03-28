@@ -12,8 +12,8 @@ lbl_80A77740:
 /* 80A77768  3B A0 FF FF */	li r29, -1
 /* 80A7776C  3B 80 00 00 */	li r28, 0
 /* 80A77770  3B 60 00 00 */	li r27, 0
-/* 80A77774  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A77778  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A77774  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A77778  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A7777C  3B 23 4F F8 */	addi r25, r3, 0x4ff8
 /* 80A77780  7F 23 CB 78 */	mr r3, r25
 /* 80A77784  3C A0 80 A8 */	lis r5, struct_80A7B0D8+0x0@ha

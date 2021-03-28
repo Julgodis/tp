@@ -9,7 +9,7 @@ lbl_80D15DA8:
 /* 80D15DC4  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 80D15DC8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D15DCC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80D15DD0  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 80D15DD0  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 80D15DD4  80 BF 00 14 */	lwz r5, 0x14(r31)
 /* 80D15DD8  A0 05 05 D8 */	lhz r0, 0x5d8(r5)
 /* 80D15DDC  7C 04 00 00 */	cmpw r4, r0
@@ -38,11 +38,11 @@ lbl_80D15DA8:
 /* 80D15E38  C0 01 00 08 */	lfs f0, 8(r1)
 /* 80D15E3C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80D15E40  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80D15E44  D0 03 00 0C */	stfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80D15E44  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80D15E48  C0 01 00 0C */	lfs f0, 0xc(r1)
-/* 80D15E4C  D0 03 00 1C */	stfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80D15E4C  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80D15E50  C0 01 00 10 */	lfs f0, 0x10(r1)
-/* 80D15E54  D0 03 00 2C */	stfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80D15E54  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 80D15E58  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 80D15E5C  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 80D15E60  7C 80 F2 14 */	add r4, r0, r30

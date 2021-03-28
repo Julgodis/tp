@@ -5,8 +5,8 @@ lbl_808609B4:
 /* 808609C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 808609C4  93 C1 00 08 */	stw r30, 8(r1)
 /* 808609C8  7C 7F 1B 78 */	mr r31, r3
-/* 808609CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808609D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808609CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808609D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808609D4  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 808609D8  3C 80 80 86 */	lis r4, stringBase0@ha
 /* 808609DC  38 84 0B 68 */	addi r4, r4, stringBase0@l

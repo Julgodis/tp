@@ -16,8 +16,8 @@ lbl_80595638:
 /* 80595670  3B C0 00 02 */	li r30, 2
 /* 80595674  3C 60 80 59 */	lis r3, M_attr__14daObjOnCloth_c@ha
 /* 80595678  38 63 5C B4 */	addi r3, r3, M_attr__14daObjOnCloth_c@l
-/* 8059567C  C3 C3 00 1C */	lfs f30, 0x1c(r3)	/* effective address: 80595CD0 */
-/* 80595680  C3 E3 00 20 */	lfs f31, 0x20(r3)	/* effective address: 80595CD4 */
+/* 8059567C  C3 C3 00 1C */	lfs f30, 0x1c(r3)
+/* 80595680  C3 E3 00 20 */	lfs f31, 0x20(r3)
 lbl_80595684:
 /* 80595684  38 61 00 08 */	addi r3, r1, 8
 /* 80595688  38 9D 00 24 */	addi r4, r29, 0x24
@@ -36,7 +36,7 @@ lbl_80595684:
 /* 805956BC  38 BF 06 54 */	addi r5, r31, 0x654
 /* 805956C0  3C 60 80 59 */	lis r3, M_attr__14daObjOnCloth_c@ha
 /* 805956C4  3B A3 5C B4 */	addi r29, r3, M_attr__14daObjOnCloth_c@l
-/* 805956C8  A8 7D 00 2A */	lha r3, 0x2a(r29)	/* effective address: 80595CDE */
+/* 805956C8  A8 7D 00 2A */	lha r3, 0x2a(r29)
 /* 805956CC  34 03 FF FF */	addic. r0, r3, -1
 /* 805956D0  7C 09 03 A6 */	mtctr r0
 /* 805956D4  40 81 00 18 */	ble lbl_805956EC
@@ -54,13 +54,13 @@ lbl_805956EC:
 /* 805956FC  7C 7F 02 14 */	add r3, r31, r0
 /* 80595700  D0 03 06 4C */	stfs f0, 0x64c(r3)
 /* 80595704  7F E3 FB 78 */	mr r3, r31
-/* 80595708  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8059570C  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80595710  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80595708  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8059570C  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80595710  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 80595714  4B A8 53 80 */	b fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80595718  3C 60 80 59 */	lis r3, M_attr__14daObjOnCloth_c@ha
 /* 8059571C  38 83 5C B4 */	addi r4, r3, M_attr__14daObjOnCloth_c@l
-/* 80595720  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 80595CC8 */
+/* 80595720  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 80595724  EC 00 00 32 */	fmuls f0, f0, f0
 /* 80595728  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8059572C  41 81 00 28 */	bgt lbl_80595754

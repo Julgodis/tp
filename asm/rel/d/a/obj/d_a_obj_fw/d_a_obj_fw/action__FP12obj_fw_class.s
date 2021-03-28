@@ -55,7 +55,7 @@ lbl_80BF24F8:
 /* 80BF2590  4B 41 9F 3C */	b mDoMtx_ZrotM__FPA4_fs
 /* 80BF2594  3C 60 80 BF */	lis r3, l_HIO@ha
 /* 80BF2598  38 63 2C 30 */	addi r3, r3, l_HIO@l
-/* 80BF259C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80BF2C38 */
+/* 80BF259C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80BF25A0  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 80BF25A4  FC 60 08 90 */	fmr f3, f1
 /* 80BF25A8  4B 41 A8 90 */	b scaleM__14mDoMtx_stack_cFfff

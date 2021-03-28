@@ -6,7 +6,7 @@ lbl_80BA1888:
 /* 80BA1898  38 84 23 DC */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 80BA189C  3C A0 80 BA */	lis r5, data_80BA2580@ha
 /* 80BA18A0  38 E5 25 80 */	addi r7, r5, data_80BA2580@l
-/* 80BA18A4  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80BA2580 */
+/* 80BA18A4  88 07 00 00 */	lbz r0, 0(r7)
 /* 80BA18A8  7C 00 07 75 */	extsb. r0, r0
 /* 80BA18AC  40 82 00 A0 */	bne lbl_80BA194C
 /* 80BA18B0  80 A4 00 20 */	lwz r5, 0x20(r4)

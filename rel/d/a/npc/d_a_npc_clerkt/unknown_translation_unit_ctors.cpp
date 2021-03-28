@@ -19,7 +19,6 @@ extern void* const data_8099D230[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_clerkt_cpp(); // 1
 
 // 
 // Declarations:

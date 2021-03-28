@@ -13,7 +13,7 @@ lbl_80C2B88C:
 /* 80C2B8B8  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80C2B8BC  C0 5E 05 2C */	lfs f2, 0x52c(r30)
 /* 80C2B8C0  C0 3E 04 FC */	lfs f1, 0x4fc(r30)
-/* 80C2B8C4  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80C2E164 */
+/* 80C2B8C4  C0 1F 00 54 */	lfs f0, 0x54(r31)
 /* 80C2B8C8  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80C2B8CC  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80C2B8D0  D0 41 00 1C */	stfs f2, 0x1c(r1)

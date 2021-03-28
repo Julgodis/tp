@@ -11,8 +11,8 @@ lbl_80D28040:
 /* 80D28064  4B 52 22 74 */	b doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
 /* 80D28068  2C 03 00 00 */	cmpwi r3, 0
 /* 80D2806C  41 82 00 4C */	beq lbl_80D280B8
-/* 80D28070  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D28074  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D28070  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D28074  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D28078  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80D2807C  4B 31 A3 EC */	b reset__14dEvt_control_cFv
 /* 80D28080  38 00 00 01 */	li r0, 1
@@ -26,7 +26,7 @@ lbl_80D28040:
 /* 80D280A0  38 00 00 06 */	li r0, 6
 /* 80D280A4  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80D280A8  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80D280AC  98 03 00 C1 */	stb r0, 0xc1(r3)	/* effective address: 80430249 */
+/* 80D280AC  98 03 00 C1 */	stb r0, 0xc1(r3)
 lbl_80D280B0:
 /* 80D280B0  38 00 00 05 */	li r0, 5
 /* 80D280B4  98 1F 05 CA */	stb r0, 0x5ca(r31)

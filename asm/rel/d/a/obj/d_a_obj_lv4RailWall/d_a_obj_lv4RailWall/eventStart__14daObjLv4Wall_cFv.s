@@ -11,8 +11,8 @@ lbl_80C613D0:
 /* 80C613F4  C0 03 1B A0 */	lfs f0, lit_3882@l(r3)
 /* 80C613F8  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80C613FC  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80C61400  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C61404  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C61400  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C61404  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C61408  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80C6140C  38 80 00 04 */	li r4, 4
 /* 80C61410  38 A0 00 0F */	li r5, 0xf

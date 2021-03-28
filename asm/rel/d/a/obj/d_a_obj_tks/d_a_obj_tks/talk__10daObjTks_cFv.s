@@ -103,11 +103,11 @@ lbl_80D1083C:
 /* 80D10870  41 82 00 90 */	beq lbl_80D10900
 /* 80D10874  3C 60 80 D1 */	lis r3, lit_4691@ha
 /* 80D10878  38 83 29 74 */	addi r4, r3, lit_4691@l
-/* 80D1087C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D12974 */
-/* 80D10880  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D12978 */
+/* 80D1087C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D10880  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D10884  90 61 00 24 */	stw r3, 0x24(r1)
 /* 80D10888  90 01 00 28 */	stw r0, 0x28(r1)
-/* 80D1088C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D1297C */
+/* 80D1088C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D10890  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80D10894  38 00 00 03 */	li r0, 3
 /* 80D10898  B0 1F 0D DE */	sth r0, 0xdde(r31)
@@ -140,11 +140,11 @@ lbl_80D108BC:
 lbl_80D10900:
 /* 80D10900  3C 60 80 D1 */	lis r3, lit_4694@ha
 /* 80D10904  38 83 29 80 */	addi r4, r3, lit_4694@l
-/* 80D10908  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D12980 */
-/* 80D1090C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D12984 */
+/* 80D10908  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D1090C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D10910  90 61 00 18 */	stw r3, 0x18(r1)
 /* 80D10914  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80D10918  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D12988 */
+/* 80D10918  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D1091C  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80D10920  38 00 00 03 */	li r0, 3
 /* 80D10924  B0 1F 0D DE */	sth r0, 0xdde(r31)
@@ -185,8 +185,8 @@ lbl_80D109A0:
 /* 80D109A0  4B 47 0C A0 */	b dCam_getBody__Fv
 /* 80D109A4  7F C4 F3 78 */	mr r4, r30
 /* 80D109A8  4B 37 82 14 */	b EndEventCamera__9dCamera_cFi
-/* 80D109AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D109B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D109AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D109B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D109B4  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80D109B8  4B 33 1A B0 */	b reset__14dEvt_control_cFv
 /* 80D109BC  7F E3 FB 78 */	mr r3, r31

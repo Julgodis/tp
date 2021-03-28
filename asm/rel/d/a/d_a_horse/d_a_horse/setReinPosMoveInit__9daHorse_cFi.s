@@ -20,7 +20,7 @@ lbl_8083F9AC:
 /* 8083F9F4  3B A3 5B B8 */	addi r29, r3, lit_1109@l
 /* 8083F9F8  3C 60 80 84 */	lis r3, lit_3894@ha
 /* 8083F9FC  3B C3 54 AC */	addi r30, r3, lit_3894@l
-/* 8083FA00  88 1D 01 08 */	lbz r0, 0x108(r29)	/* effective address: 80845CC0 */
+/* 8083FA00  88 1D 01 08 */	lbz r0, 0x108(r29)
 /* 8083FA04  7C 00 07 75 */	extsb. r0, r0
 /* 8083FA08  40 82 00 38 */	bne lbl_8083FA40
 /* 8083FA0C  C0 1E 02 A4 */	lfs f0, 0x2a4(r30)

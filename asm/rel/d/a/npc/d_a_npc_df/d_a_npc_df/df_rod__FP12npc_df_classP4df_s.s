@@ -10,12 +10,12 @@ lbl_809A59DC:
 /* 809A59FC  7C 9D 23 78 */	mr r29, r4
 /* 809A5A00  3C 60 80 9A */	lis r3, lit_3748@ha
 /* 809A5A04  3B E3 68 A4 */	addi r31, r3, lit_3748@l
-/* 809A5A08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A5A0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809A5A10  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 809A5A08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A5A0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809A5A10  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 809A5A14  3C 60 80 9A */	lis r3, lrl@ha
 /* 809A5A18  38 83 6A 50 */	addi r4, r3, lrl@l
-/* 809A5A1C  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 809A6A50 */
+/* 809A5A1C  80 04 00 00 */	lwz r0, 0(r4)
 /* 809A5A20  28 00 00 00 */	cmplwi r0, 0
 /* 809A5A24  40 82 00 B4 */	bne lbl_809A5AD8
 /* 809A5A28  38 00 00 01 */	li r0, 1
@@ -168,8 +168,8 @@ lbl_809A5C48:
 /* 809A5C58  38 7D 00 46 */	addi r3, r29, 0x46
 /* 809A5C5C  3C 80 80 9A */	lis r4, lrl@ha
 /* 809A5C60  38 84 6A 50 */	addi r4, r4, lrl@l
-/* 809A5C64  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 809A6A50 */
-/* 809A5C68  A8 84 06 C4 */	lha r4, 0x6c4(r4)	/* effective address: 809A7114 */
+/* 809A5C64  80 84 00 00 */	lwz r4, 0(r4)
+/* 809A5C68  A8 84 06 C4 */	lha r4, 0x6c4(r4)
 /* 809A5C6C  A8 1D 00 6E */	lha r0, 0x6e(r29)
 /* 809A5C70  7C 04 02 14 */	add r0, r4, r0
 /* 809A5C74  7C 04 07 34 */	extsh r4, r0
@@ -256,7 +256,7 @@ lbl_809A5D28:
 /* 809A5DA8  38 9C 0D 34 */	addi r4, r28, 0xd34
 /* 809A5DAC  3C A0 80 9A */	lis r5, lrl@ha
 /* 809A5DB0  38 A5 6A 50 */	addi r5, r5, lrl@l
-/* 809A5DB4  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 809A6A50 */
+/* 809A5DB4  80 A5 00 00 */	lwz r5, 0(r5)
 /* 809A5DB8  38 A5 06 04 */	addi r5, r5, 0x604
 /* 809A5DBC  4B 8C 0D 78 */	b __mi__4cXyzCFRC3Vec
 /* 809A5DC0  38 61 00 10 */	addi r3, r1, 0x10
@@ -332,8 +332,8 @@ lbl_809A5EAC:
 /* 809A5EB4  41 81 00 28 */	bgt lbl_809A5EDC
 /* 809A5EB8  3C 60 80 9A */	lis r3, lrl@ha
 /* 809A5EBC  38 63 6A 50 */	addi r3, r3, lrl@l
-/* 809A5EC0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 809A6A50 */
-/* 809A5EC4  C0 43 06 B0 */	lfs f2, 0x6b0(r3)	/* effective address: 809A7100 */
+/* 809A5EC0  80 63 00 00 */	lwz r3, 0(r3)
+/* 809A5EC4  C0 43 06 B0 */	lfs f2, 0x6b0(r3)
 /* 809A5EC8  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 809A5ECC  C0 1E 05 3C */	lfs f0, 0x53c(r30)
 /* 809A5ED0  EC 01 00 2A */	fadds f0, f1, f0

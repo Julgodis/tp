@@ -31,10 +31,10 @@ lbl_804C7F04:
 /* 804C7F24  41 82 00 4C */	beq lbl_804C7F70
 /* 804C7F28  3B 60 00 00 */	li r27, 0
 /* 804C7F2C  3B A0 00 00 */	li r29, 0
-/* 804C7F30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C7F34  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 804C7F30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C7F34  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 lbl_804C7F38:
-/* 804C7F38  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 804C7F38  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 804C7F3C  38 63 02 10 */	addi r3, r3, 0x210
 /* 804C7F40  38 1D 0B B8 */	addi r0, r29, 0xbb8
 /* 804C7F44  7C 9E 00 2E */	lwzx r4, r30, r0
@@ -60,9 +60,9 @@ lbl_804C7F70:
 /* 804C7F8C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 804C7F90  4B B6 50 78 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 lbl_804C7F94:
-/* 804C7F94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C7F98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C7F9C  80 83 5D B4 */	lwz r4, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804C7F94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C7F98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C7F9C  80 83 5D B4 */	lwz r4, 0x5db4(r3)
 /* 804C7FA0  28 04 00 00 */	cmplwi r4, 0
 /* 804C7FA4  41 82 00 44 */	beq lbl_804C7FE8
 /* 804C7FA8  80 7E 0B 4C */	lwz r3, 0xb4c(r30)
@@ -88,9 +88,9 @@ lbl_804C7FE8:
 /* 804C7FF0  80 1E 04 9C */	lwz r0, 0x49c(r30)
 /* 804C7FF4  54 00 03 14 */	rlwinm r0, r0, 0, 0xc, 0xa
 /* 804C7FF8  90 1E 04 9C */	stw r0, 0x49c(r30)
-/* 804C7FFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C8000  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C8004  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 804C7FFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C8000  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C8004  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 804C8008  38 63 02 10 */	addi r3, r3, 0x210
 /* 804C800C  80 9E 0B B8 */	lwz r4, 0xbb8(r30)
 /* 804C8010  4B B8 39 08 */	b getEmitter__Q213dPa_control_c7level_cFUl

@@ -5,8 +5,8 @@ lbl_80493518:
 /* 80493524  39 61 00 20 */	addi r11, r1, 0x20
 /* 80493528  4B EC EC B4 */	b _savegpr_29
 /* 8049352C  7C 7E 1B 78 */	mr r30, r3
-/* 80493530  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493534  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80493530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80493538  3B E3 4F F8 */	addi r31, r3, 0x4ff8
 /* 8049353C  7F E3 FB 78 */	mr r3, r31
 /* 80493540  80 9E 07 4C */	lwz r4, 0x74c(r30)
@@ -106,10 +106,10 @@ lbl_80493690:
 /* 80493690  88 1E 09 7E */	lbz r0, 0x97e(r30)
 /* 80493694  28 00 00 00 */	cmplwi r0, 0
 /* 80493698  41 82 00 28 */	beq lbl_804936C0
-/* 8049369C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804936A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804936A4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 804936A8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8049369C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804936A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804936A4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 804936A8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 804936AC  81 8C 00 E4 */	lwz r12, 0xe4(r12)
 /* 804936B0  7D 89 03 A6 */	mtctr r12
 /* 804936B4  4E 80 04 21 */	bctrl 
@@ -144,10 +144,10 @@ lbl_80493718:
 /* 80493718  88 1E 09 7E */	lbz r0, 0x97e(r30)
 /* 8049371C  28 00 00 00 */	cmplwi r0, 0
 /* 80493720  41 82 00 28 */	beq lbl_80493748
-/* 80493724  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493728  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8049372C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80493730  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80493724  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493728  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8049372C  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80493730  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80493734  81 8C 00 E4 */	lwz r12, 0xe4(r12)
 /* 80493738  7D 89 03 A6 */	mtctr r12
 /* 8049373C  4E 80 04 21 */	bctrl 

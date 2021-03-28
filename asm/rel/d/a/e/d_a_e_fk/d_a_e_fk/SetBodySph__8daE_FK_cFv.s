@@ -31,11 +31,11 @@ lbl_806B9670:
 /* 806B96E4  C0 24 B7 84 */	lfs f1, lit_3951@l(r4)
 /* 806B96E8  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806B96EC  3B C4 B9 1C */	addi r30, r4, l_HIO@l
-/* 806B96F0  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 806BB924 */
+/* 806B96F0  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 806B96F4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 806B96F8  4B BB 60 10 */	b SetR__8cM3dGSphFf
-/* 806B96FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B9700  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806B96FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B9700  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806B9704  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 806B9708  7F A3 EB 78 */	mr r3, r29
 /* 806B970C  38 9F 06 18 */	addi r4, r31, 0x618

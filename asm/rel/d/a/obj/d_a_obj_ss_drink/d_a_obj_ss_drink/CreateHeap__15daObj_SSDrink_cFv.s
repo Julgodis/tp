@@ -9,8 +9,8 @@ lbl_80CE53EC:
 /* 80CE5408  83 84 69 E8 */	lwz r28, l_bmdName@l(r4)
 /* 80CE540C  48 00 06 45 */	bl getResName__15daObj_SSDrink_cFv
 /* 80CE5410  7F 84 E3 78 */	mr r4, r28
-/* 80CE5414  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CE5418  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CE5414  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CE5418  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CE541C  3F C5 00 02 */	addis r30, r5, 2
 /* 80CE5420  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80CE5424  7F C5 F3 78 */	mr r5, r30
@@ -30,7 +30,7 @@ lbl_80CE53EC:
 lbl_80CE545C:
 /* 80CE545C  3C 60 80 CE */	lis r3, l_resFileName@ha
 /* 80CE5460  38 63 69 E4 */	addi r3, r3, l_resFileName@l
-/* 80CE5464  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CE69E4 */
+/* 80CE5464  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE5468  3C 80 80 CE */	lis r4, stringBase0@ha
 /* 80CE546C  38 84 69 90 */	addi r4, r4, stringBase0@l
 /* 80CE5470  38 84 00 16 */	addi r4, r4, 0x16
@@ -71,7 +71,7 @@ lbl_80CE54EC:
 lbl_80CE54F4:
 /* 80CE54F4  3C 60 80 CE */	lis r3, l_resFileName@ha
 /* 80CE54F8  38 63 69 E4 */	addi r3, r3, l_resFileName@l
-/* 80CE54FC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CE69E4 */
+/* 80CE54FC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CE5500  3C 80 80 CE */	lis r4, stringBase0@ha
 /* 80CE5504  38 84 69 90 */	addi r4, r4, stringBase0@l
 /* 80CE5508  38 84 00 24 */	addi r4, r4, 0x24

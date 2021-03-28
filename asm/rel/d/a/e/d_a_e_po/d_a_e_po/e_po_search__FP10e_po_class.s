@@ -9,14 +9,14 @@ lbl_8074D500:
 /* 8074D51C  7C 7D 1B 78 */	mr r29, r3
 /* 8074D520  3C 60 80 75 */	lis r3, lit_3917@ha
 /* 8074D524  3B C3 76 FC */	addi r30, r3, lit_3917@l
-/* 8074D528  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074D52C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8074D530  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 8074D534  C3 FE 00 04 */	lfs f31, 4(r30)	/* effective address: 80757700 */
-/* 8074D538  C0 1E 00 50 */	lfs f0, 0x50(r30)	/* effective address: 8075774C */
+/* 8074D528  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074D52C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8074D530  83 9F 5D AC */	lwz r28, 0x5dac(r31)
+/* 8074D534  C3 FE 00 04 */	lfs f31, 4(r30)
+/* 8074D538  C0 1E 00 50 */	lfs f0, 0x50(r30)
 /* 8074D53C  C0 5D 07 44 */	lfs f2, 0x744(r29)
 /* 8074D540  EC 20 00 B2 */	fmuls f1, f0, f2
-/* 8074D544  C0 1E 00 70 */	lfs f0, 0x70(r30)	/* effective address: 8075776C */
+/* 8074D544  C0 1E 00 70 */	lfs f0, 0x70(r30)
 /* 8074D548  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074D54C  40 81 00 08 */	ble lbl_8074D554
 /* 8074D550  FC 20 00 90 */	fmr f1, f0
@@ -90,9 +90,9 @@ lbl_8074D620:
 lbl_8074D64C:
 /* 8074D64C  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074D650  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074D654  C3 E3 00 14 */	lfs f31, 0x14(r3)	/* effective address: 80757E70 */
+/* 8074D654  C3 E3 00 14 */	lfs f31, 0x14(r3)
 /* 8074D658  C0 3E 00 68 */	lfs f1, 0x68(r30)
-/* 8074D65C  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80757E6C */
+/* 8074D65C  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8074D660  EC 01 00 2A */	fadds f0, f1, f0
 /* 8074D664  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 8074D668  40 80 03 A0 */	bge lbl_8074DA08
@@ -125,7 +125,7 @@ lbl_8074D6D0:
 /* 8074D6D0  C3 FE 00 7C */	lfs f31, 0x7c(r30)
 /* 8074D6D4  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074D6D8  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074D6DC  C0 23 00 10 */	lfs f1, 0x10(r3)	/* effective address: 80757E6C */
+/* 8074D6DC  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8074D6E0  FC 02 08 40 */	fcmpo cr0, f2, f1
 /* 8074D6E4  40 80 00 28 */	bge lbl_8074D70C
 /* 8074D6E8  C3 FE 00 80 */	lfs f31, 0x80(r30)
@@ -333,7 +333,7 @@ lbl_8074D9B0:
 lbl_8074D9C0:
 /* 8074D9C0  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074D9C4  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074D9C8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80757E74 */
+/* 8074D9C8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8074D9CC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074D9D0  40 80 00 24 */	bge lbl_8074D9F4
 /* 8074D9D4  7F A3 EB 78 */	mr r3, r29
@@ -364,7 +364,7 @@ lbl_8074DA08:
 /* 8074DA30  C0 5E 00 84 */	lfs f2, 0x84(r30)
 /* 8074DA34  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074DA38  38 84 7E 5C */	addi r4, r4, l_HIO@l
-/* 8074DA3C  C0 64 00 14 */	lfs f3, 0x14(r4)	/* effective address: 80757E70 */
+/* 8074DA3C  C0 64 00 14 */	lfs f3, 0x14(r4)
 /* 8074DA40  4B B2 1F FC */	b cLib_addCalc2__FPffff
 /* 8074DA44  48 00 00 20 */	b lbl_8074DA64
 lbl_8074DA48:
@@ -373,13 +373,13 @@ lbl_8074DA48:
 /* 8074DA50  C0 5E 00 84 */	lfs f2, 0x84(r30)
 /* 8074DA54  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074DA58  38 84 7E 5C */	addi r4, r4, l_HIO@l
-/* 8074DA5C  C0 64 00 14 */	lfs f3, 0x14(r4)	/* effective address: 80757E70 */
+/* 8074DA5C  C0 64 00 14 */	lfs f3, 0x14(r4)
 /* 8074DA60  4B B2 1F DC */	b cLib_addCalc2__FPffff
 lbl_8074DA64:
 /* 8074DA64  38 7D 07 D4 */	addi r3, r29, 0x7d4
 /* 8074DA68  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074DA6C  38 84 7E 5C */	addi r4, r4, l_HIO@l
-/* 8074DA70  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80757E70 */
+/* 8074DA70  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 8074DA74  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8074DA78  C0 7E 00 54 */	lfs f3, 0x54(r30)
 /* 8074DA7C  4B B2 1F C0 */	b cLib_addCalc2__FPffff
@@ -468,7 +468,7 @@ lbl_8074DB98:
 lbl_8074DBA8:
 /* 8074DBA8  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074DBAC  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074DBB0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80757E74 */
+/* 8074DBB0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8074DBB4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074DBB8  40 81 00 34 */	ble lbl_8074DBEC
 /* 8074DBBC  80 1D 05 B4 */	lwz r0, 0x5b4(r29)

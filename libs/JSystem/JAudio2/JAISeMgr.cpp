@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JAISoundActivity {
-};
-
-struct JAISoundID {
+struct JAISoundParamsMove {
 };
 
 struct JAISeqDataRegion {
 };
 
-struct JAISoundParamsMove {
+struct JAISoundActivity {
+};
+
+struct JAISoundID {
 };
 
 struct JAISeCategoryMgr {
@@ -49,6 +49,9 @@ struct JASMemPool__template0 {
 struct JAISeCategoryArrangement {
 };
 
+struct JAISoundHandle {
+};
+
 struct JAIAudience {
 };
 
@@ -62,9 +65,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct JAISeMgr {
@@ -380,11 +380,11 @@ asm void JAISeCategoryMgr::JAISeMgr_mixOut_(JAISoundParamsMove const& param_0, J
 /* ############################################################################################## */
 /* 803C98B0-803C98C4 0014+00 s=2 e=1 z=0  None .data      __vt__8JAISeMgr                                              */
 SECTION_DATA void* __vt__8JAISeMgr[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8JAISeMgrFv,
-	/* 3    */ (void*)isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion,
-	/* 4    */ (void*)releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8JAISeMgrFv,
+	(void*)isUsingSeqData__8JAISeMgrFRC16JAISeqDataRegion,
+	(void*)releaseSeqData__8JAISeMgrFRC16JAISeqDataRegion,
 };
 
 /* 802A0074-802A0168 00F4+00 s=0 e=1 z=0  None .text      __ct__8JAISeMgrFb                                            */
@@ -576,11 +576,11 @@ asm JAISeMgr::~JAISeMgr() {
 /* ############################################################################################## */
 /* 803C98C4-803C98D8 0014+00 s=1 e=1 z=0  None .data      __vt__16JAISeCategoryMgr                                     */
 SECTION_DATA void* __vt__16JAISeCategoryMgr[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16JAISeCategoryMgrFv,
-	/* 3    */ (void*)isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
-	/* 4    */ (void*)releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16JAISeCategoryMgrFv,
+	(void*)isUsingSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
+	(void*)releaseSeqData__16JAISeCategoryMgrFRC16JAISeqDataRegion,
 };
 
 /* 802A0994-802A0A6C 00D8+00 s=1 e=0 z=0  None .text      __ct__16JAISeCategoryMgrFv                                   */

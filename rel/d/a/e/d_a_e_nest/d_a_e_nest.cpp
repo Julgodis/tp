@@ -108,10 +108,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -123,11 +123,11 @@ struct dAttCatch_c {
 	/* 80073A08 */ void request(fopAc_ac_c*, u8, f32, f32, f32, s16, int);
 };
 
-struct cBgS_GndChk {
-	/* 80267D28 */ void SetPos(cXyz const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D28 */ void SetPos(cXyz const*);
 };
 
 struct cBgS {
@@ -257,7 +257,7 @@ static void hahen_draw(e_nest_class*); // 2
 static void s_bomb_sub(void*, void*); // 2
 static void hahen_normal(e_nest_class*, nest_hahen_s*); // 2
 static void hahen_move(e_nest_class*); // 2
-static void daE_Nest_Draw(e_nest_class*); // 2
+void daE_Nest_Draw(e_nest_class*); // 2
 static void mtx_cc_set(e_nest_class*); // 2
 static void e_nest_normal(e_nest_class*); // 2
 static void wall_angle_get(e_nest_class*); // 2
@@ -271,18 +271,18 @@ static void e_nest_hook(e_nest_class*); // 2
 static void bee_nest_action(e_nest_class*); // 2
 static void shot_b_sub(void*, void*); // 2
 static void demo_camera(e_nest_class*); // 2
-static void daE_Nest_Execute(e_nest_class*); // 2
-static bool daE_Nest_IsDelete(e_nest_class*); // 2
-static void daE_Nest_Delete(e_nest_class*); // 2
+void daE_Nest_Execute(e_nest_class*); // 2
+bool daE_Nest_IsDelete(e_nest_class*); // 2
+void daE_Nest_Delete(e_nest_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_Nest_Create(fopAc_ac_c*); // 2
+void daE_Nest_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__14daE_Nest_HIO_cFv(); // 1
 extern "C" static void hahen_draw__FP12e_nest_class(); // 1
 extern "C" static void s_bomb_sub__FPvPv(); // 1
 extern "C" static void hahen_normal__FP12e_nest_classP12nest_hahen_s(); // 1
 extern "C" static void hahen_move__FP12e_nest_class(); // 1
-extern "C" static void daE_Nest_Draw__FP12e_nest_class(); // 1
+extern "C" void daE_Nest_Draw__FP12e_nest_class(); // 1
 extern "C" static void mtx_cc_set__FP12e_nest_class(); // 1
 extern "C" static void e_nest_normal__FP12e_nest_class(); // 1
 extern "C" static void wall_angle_get__FP12e_nest_class(); // 1
@@ -296,11 +296,11 @@ extern "C" static void e_nest_hook__FP12e_nest_class(); // 1
 extern "C" static void bee_nest_action__FP12e_nest_class(); // 1
 extern "C" static void shot_b_sub__FPvPv(); // 1
 extern "C" static void demo_camera__FP12e_nest_class(); // 1
-extern "C" static void daE_Nest_Execute__FP12e_nest_class(); // 1
-extern "C" static bool daE_Nest_IsDelete__FP12e_nest_class(); // 1
-extern "C" static void daE_Nest_Delete__FP12e_nest_class(); // 1
+extern "C" void daE_Nest_Execute__FP12e_nest_class(); // 1
+extern "C" bool daE_Nest_IsDelete__FP12e_nest_class(); // 1
+extern "C" void daE_Nest_Delete__FP12e_nest_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_Nest_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_Nest_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12nest_hahen_sFv(); // 1
 extern "C" void __ct__12nest_hahen_sFv(); // 1
 extern "C" void __dt__8cM3dGCylFv(); // 1
@@ -309,13 +309,10 @@ extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__14daE_Nest_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_e_nest_cpp(); // 1
-extern "C" static void func_805046B8(); // 1
-extern "C" static void func_805046C0(); // 1
-extern "C" extern u8 const lit_4067[8];
-extern "C" extern u8 const lit_4068[8];
-extern "C" extern u8 const lit_4069[8];
-extern "C" extern u8 const lit_5402[8];
+extern "C" void func_805046B8(); // 1
+extern "C" void func_805046C0(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_Nest_Method[8];
 extern "C" extern void* g_profile_E_NEST[12];
 
 // 
@@ -471,9 +468,7 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
@@ -481,16 +476,11 @@ extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF70[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
@@ -545,73 +535,73 @@ SECTION_DATA static u8 data_80504860[68] = {
 	0x41, 0x20, 0x00, 0x00,
 };
 
-/* 805048A4-805048C4 0020+00 s=1 e=0 z=0  None .data      l_daE_Nest_Method                                            */
-SECTION_DATA static void* l_daE_Nest_Method[8] = {
-	/* 0    */ (void*)daE_Nest_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_Nest_Delete__FP12e_nest_class,
-	/* 2    */ (void*)daE_Nest_Execute__FP12e_nest_class,
-	/* 3    */ (void*)daE_Nest_IsDelete__FP12e_nest_class,
-	/* 4    */ (void*)daE_Nest_Draw__FP12e_nest_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805048A4-805048C4 0020+00 s=0 e=0 z=0  None .data      l_daE_Nest_Method                                            */
+SECTION_DATA void* l_daE_Nest_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805048C4-805048F4 0030+00 s=0 e=0 z=1  None .data      g_profile_E_NEST                                             */
+/* 805048C4-805048F4 0030+00 s=0 e=0 z=0  None .data      g_profile_E_NEST                                             */
 SECTION_DATA void* g_profile_E_NEST[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01E80000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000CF8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00B20000,
-	/* 9    */ (void*)&l_daE_Nest_Method,
-	/* 10   */ (void*)0x000D4100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01E80000,
+	(void*)NULL,
+	(void*)0x00000CF8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00B20000,
+	(void*)NULL,
+	(void*)0x000D4100,
+	(void*)0x000E0000,
 };
 
 /* 805048F4-80504900 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80504900-8050490C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8050490C-80504918 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80504918-8050493C 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_805046C0,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_805046B8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8050493C-80504948 000C+00 s=2 e=0 z=0  None .data      __vt__14daE_Nest_HIO_c                                       */
 SECTION_DATA static void* __vt__14daE_Nest_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14daE_Nest_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80500F8C-80500FB0 0024+00 s=1 e=0 z=0  None .text      __ct__14daE_Nest_HIO_cFv                                     */
@@ -642,18 +632,18 @@ SECTION_RODATA static u8 const lit_4066[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805046E4-805046EC 0008+00 s=0 e=0 z=0  None .rodata    @4067                                                        */
-SECTION_RODATA u8 const lit_4067[8] = {
+/* 805046E4-805046EC 0008+00 s=5 e=0 z=0  None .rodata    @4067                                                        */
+SECTION_RODATA static u8 const lit_4067[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805046EC-805046F4 0008+00 s=0 e=0 z=0  None .rodata    @4068                                                        */
-SECTION_RODATA u8 const lit_4068[8] = {
+/* 805046EC-805046F4 0008+00 s=5 e=0 z=0  None .rodata    @4068                                                        */
+SECTION_RODATA static u8 const lit_4068[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 805046F4-805046FC 0008+00 s=0 e=0 z=0  None .rodata    @4069                                                        */
-SECTION_RODATA u8 const lit_4069[8] = {
+/* 805046F4-805046FC 0008+00 s=5 e=0 z=0  None .rodata    @4069                                                        */
+SECTION_RODATA static u8 const lit_4069[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -724,6 +714,11 @@ SECTION_RODATA static u32 const lit_4213[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 80504744-8050474C 0008+00 s=3 e=0 z=0  None .rodata    @4215                                                        */
+SECTION_RODATA static u8 const lit_4215[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 805011CC-805017FC 0630+00 s=1 e=0 z=0  None .text      hahen_normal__FP12e_nest_classP12nest_hahen_s                */
 #pragma push
 #pragma optimization_level 0
@@ -756,11 +751,11 @@ static u8 lit_3994[12];
 /* 80504960-8050496C 000C+00 s=7 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[12];
 
-/* 80501930-80501A40 0110+00 s=1 e=0 z=0  None .text      daE_Nest_Draw__FP12e_nest_class                              */
+/* 80501930-80501A40 0110+00 s=0 e=0 z=0  None .text      daE_Nest_Draw__FP12e_nest_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Nest_Draw(e_nest_class* param_0) {
+asm void daE_Nest_Draw(e_nest_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Draw__FP12e_nest_class.s"
 }
@@ -768,11 +763,6 @@ asm static void daE_Nest_Draw(e_nest_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80504744-8050474C 0008+00 s=1 e=0 z=0  None .rodata    @4215                                                        */
-SECTION_RODATA static u8 const lit_4215[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 8050474C-80504750 0004+00 s=1 e=0 z=0  None .rodata    @4297                                                        */
 SECTION_RODATA static u32 const lit_4297 = 0xC2B40000;
 
@@ -899,8 +889,8 @@ SECTION_RODATA static u32 const lit_5399 = 0xC3960000;
 /* 805047E0-805047E4 0004+00 s=1 e=0 z=0  None .rodata    @5400                                                        */
 SECTION_RODATA static u32 const lit_5400 = 0x43960000;
 
-/* 805047E4-805047EC 0008+00 s=0 e=0 z=0  None .rodata    @5402                                                        */
-SECTION_RODATA u8 const lit_5402[8] = {
+/* 805047E4-805047EC 0008+00 s=1 e=0 z=0  None .rodata    @5402                                                        */
+SECTION_RODATA static u8 const lit_5402[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -1044,28 +1034,28 @@ asm static void demo_camera(e_nest_class* param_0) {
 #pragma pop
 
 
-/* 80503984-80503E24 04A0+00 s=1 e=0 z=0  None .text      daE_Nest_Execute__FP12e_nest_class                           */
+/* 80503984-80503E24 04A0+00 s=0 e=0 z=0  None .text      daE_Nest_Execute__FP12e_nest_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Nest_Execute(e_nest_class* param_0) {
+asm void daE_Nest_Execute(e_nest_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Execute__FP12e_nest_class.s"
 }
 #pragma pop
 
 
-/* 80503E24-80503E2C 0008+00 s=1 e=0 z=0  None .text      daE_Nest_IsDelete__FP12e_nest_class                          */
-static bool daE_Nest_IsDelete(e_nest_class* param_0) {
+/* 80503E24-80503E2C 0008+00 s=0 e=0 z=0  None .text      daE_Nest_IsDelete__FP12e_nest_class                          */
+bool daE_Nest_IsDelete(e_nest_class* param_0) {
 	return true;
 }
 
 
-/* 80503E2C-80503EA0 0074+00 s=1 e=0 z=0  None .text      daE_Nest_Delete__FP12e_nest_class                            */
+/* 80503E2C-80503EA0 0074+00 s=0 e=0 z=0  None .text      daE_Nest_Delete__FP12e_nest_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Nest_Delete(e_nest_class* param_0) {
+asm void daE_Nest_Delete(e_nest_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Delete__FP12e_nest_class.s"
 }
@@ -1083,11 +1073,11 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80503FCC-805044AC 04E0+00 s=1 e=0 z=0  None .text      daE_Nest_Create__FP10fopAc_ac_c                              */
+/* 80503FCC-805044AC 04E0+00 s=0 e=0 z=0  None .text      daE_Nest_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_Nest_Create(fopAc_ac_c* param_0) {
+asm void daE_Nest_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/daE_Nest_Create__FP10fopAc_ac_c.s"
 }
@@ -1111,7 +1101,7 @@ nest_hahen_s::nest_hahen_s() {
 }
 
 
-/* 805044EC-80504534 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 805044EC-80504534 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1122,7 +1112,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80504534-8050457C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80504534-8050457C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1133,7 +1123,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 8050457C-805045C4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 8050457C-805045C4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1144,7 +1134,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 805045C4-80504634 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 805045C4-80504634 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1155,7 +1145,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80504634-8050467C 0048+00 s=2 e=0 z=0  None .text      __dt__14daE_Nest_HIO_cFv                                     */
+/* 80504634-8050467C 0048+00 s=1 e=0 z=0  None .text      __dt__14daE_Nest_HIO_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1166,7 +1156,7 @@ asm daE_Nest_HIO_c::~daE_Nest_HIO_c() {
 #pragma pop
 
 
-/* 8050467C-805046B8 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_e_nest_cpp                                       */
+/* 8050467C-805046B8 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_e_nest_cpp                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1177,22 +1167,22 @@ extern "C" asm void __sinit_d_a_e_nest_cpp() {
 #pragma pop
 
 
-/* 805046B8-805046C0 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 805046B8-805046C0 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_805046B8() {
+extern "C" asm void func_805046B8() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/func_805046B8.s"
 }
 #pragma pop
 
 
-/* 805046C0-805046C8 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 805046C0-805046C8 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_805046C0() {
+extern "C" asm void func_805046C0() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_nest/d_a_e_nest/func_805046C0.s"
 }

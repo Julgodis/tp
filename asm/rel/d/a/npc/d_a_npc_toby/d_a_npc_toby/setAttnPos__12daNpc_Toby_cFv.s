@@ -11,9 +11,9 @@ lbl_80B1FF2C:
 /* 80B1FF50  3B C3 58 40 */	addi r30, r3, lit_1109@l
 /* 80B1FF54  3C 60 80 B2 */	lis r3, m__18daNpc_Toby_Param_c@ha
 /* 80B1FF58  3B E3 49 E4 */	addi r31, r3, m__18daNpc_Toby_Param_c@l
-/* 80B1FF5C  C0 3F 00 C8 */	lfs f1, 0xc8(r31)	/* effective address: 80B24AAC */
+/* 80B1FF5C  C0 3F 00 C8 */	lfs f1, 0xc8(r31)
 /* 80B1FF60  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 80B1FF64  C0 1F 00 F0 */	lfs f0, 0xf0(r31)	/* effective address: 80B24AD4 */
+/* 80B1FF64  C0 1F 00 F0 */	lfs f0, 0xf0(r31)
 /* 80B1FF68  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 80B1FF6C  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 80B1FF70  38 7D 0D 08 */	addi r3, r29, 0xd08

@@ -110,48 +110,48 @@ extern "C" asm void __construct_new_array() {
 /* ############################################################################################## */
 /* 80005660-8000566C 000C+00 s=1 e=0 z=0  None .extabindex @206                                                         */
 SECTION_EXTABINDEX static void* const lit_206[3] = {
-	/* 0    */ (void*)__destroy_new_array,
-	/* 1    */ (void*)0x0000007C,
-	/* 2    */ (void*)&_section_symbol_extab,
+	(void*)__destroy_new_array,
+	(void*)0x0000007C,
+	(void*)&_section_symbol_extab,
 };
 
 /* 8000566C-80005678 000C+00 s=0 e=0 z=0  None .extabindex @211                                                         */
 SECTION_EXTABINDEX void* const lit_211[3] = {
-	/* 0    */ (void*)__destroy_arr,
-	/* 1    */ (void*)0x00000078,
-	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x8),
+	(void*)__destroy_arr,
+	(void*)0x00000078,
+	(void*)(((char*)&_section_symbol_extab)+0x8),
 };
 
 /* 80005678-80005684 000C+00 s=0 e=0 z=0  None .extabindex @232                                                         */
 SECTION_EXTABINDEX void* const lit_232[3] = {
-	/* 0    */ (void*)__construct_array,
-	/* 1    */ (void*)0x000000FC,
-	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x10),
+	(void*)__construct_array,
+	(void*)0x000000FC,
+	(void*)(((char*)&_section_symbol_extab)+0x10),
 };
 
 /* 80005684-80005690 000C+00 s=0 e=0 z=0  None .extabindex @240                                                         */
 SECTION_EXTABINDEX void* const lit_240[3] = {
-	/* 0    */ (void*)__dt__26__partial_array_destructorFv,
-	/* 1    */ (void*)0x000000B8,
-	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x28),
+	(void*)__dt__26__partial_array_destructorFv,
+	(void*)0x000000B8,
+	(void*)(((char*)&_section_symbol_extab)+0x28),
 };
 
 /* 80005690-8000569C 000C+00 s=0 e=0 z=0  None .extabindex @263                                                         */
 SECTION_EXTABINDEX void* const lit_263[3] = {
-	/* 0    */ (void*)__construct_new_array,
-	/* 1    */ (void*)0x00000104,
-	/* 2    */ (void*)(((char*)&_section_symbol_extab)+0x30),
+	(void*)__construct_new_array,
+	(void*)0x00000104,
+	(void*)(((char*)&_section_symbol_extab)+0x30),
 };
 
-/* 8000569C-800056BC 0020+00 s=0 e=1 z=0  None .extabindex None                                                         */
+/* 8000569C-800056BC 0020+00 s=1 e=1 z=0  None .extabindex None                                                         */
 SECTION_EXTABINDEX void* const data_8000569C[8] = {
-	/* 0    */ (void*)&lit_206,
-	/* 1    */ (void*)&data_8000569C,
-	/* 2    */ (void*)__destroy_new_array,
-	/* 3    */ (void*)0x000003AC,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)&lit_206,
+	(void*)&data_8000569C,
+	(void*)__destroy_new_array,
+	(void*)0x000003AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 

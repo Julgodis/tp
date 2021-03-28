@@ -13,11 +13,11 @@ lbl_80C82EA8:
 /* 80C82ED4  7F E3 FB 78 */	mr r3, r31
 /* 80C82ED8  3C 80 80 C8 */	lis r4, l_cull_box@ha
 /* 80C82EDC  C4 24 38 10 */	lfsu f1, l_cull_box@l(r4)
-/* 80C82EE0  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C80004 */
-/* 80C82EE4  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C80008 */
-/* 80C82EE8  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C8000C */
-/* 80C82EEC  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C80010 */
-/* 80C82EF0  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80C80014 */
+/* 80C82EE0  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C82EE4  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C82EE8  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80C82EEC  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80C82EF0  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80C82EF4  4B 39 76 54 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C82EF8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C82EFC  54 04 06 3E */	clrlwi r4, r0, 0x18
@@ -31,8 +31,8 @@ lbl_80C82F14:
 /* 80C82F18  90 1F 06 1C */	stw r0, 0x61c(r31)
 /* 80C82F1C  48 00 00 64 */	b lbl_80C82F80
 lbl_80C82F20:
-/* 80C82F20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C82F24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C82F20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C82F24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C82F28  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C82F2C  7C 05 07 74 */	extsb r5, r0
 /* 80C82F30  4B 3B 24 30 */	b isSwitch__10dSv_info_cCFii
@@ -44,8 +44,8 @@ lbl_80C82F20:
 lbl_80C82F48:
 /* 80C82F48  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C82F4C  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80C82F50  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C82F54  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C82F50  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C82F54  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C82F58  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C82F5C  7C 05 07 74 */	extsb r5, r0
 /* 80C82F60  4B 3B 24 00 */	b isSwitch__10dSv_info_cCFii

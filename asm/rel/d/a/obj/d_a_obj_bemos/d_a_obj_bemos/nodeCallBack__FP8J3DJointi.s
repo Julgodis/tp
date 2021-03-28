@@ -9,7 +9,7 @@ lbl_80BAE4A8:
 /* 80BAE4C4  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 80BAE4C8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BAE4CC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80BAE4D0  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 80BAE4D0  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 80BAE4D4  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 80BAE4D8  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80BAE4DC  80 03 00 0C */	lwz r0, 0xc(r3)

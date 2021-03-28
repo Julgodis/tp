@@ -9,8 +9,8 @@ lbl_805C4130:
 /* 805C414C  38 9F 0A 08 */	addi r4, r31, 0xa08
 /* 805C4150  4B A5 65 7C */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 805C4154  38 7F 08 30 */	addi r3, r31, 0x830
-/* 805C4158  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805C415C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 805C4158  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805C415C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 805C4160  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 805C4164  4B AB 29 48 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 805C4168  88 1F 04 E2 */	lbz r0, 0x4e2(r31)

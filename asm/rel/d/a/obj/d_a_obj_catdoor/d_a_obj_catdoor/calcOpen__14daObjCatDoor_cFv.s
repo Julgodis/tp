@@ -41,8 +41,8 @@ lbl_80BC45DC:
 /* 80BC45E8  41 82 00 28 */	beq lbl_80BC4610
 /* 80BC45EC  2C 03 00 00 */	cmpwi r3, 0
 /* 80BC45F0  41 82 00 20 */	beq lbl_80BC4610
-/* 80BC45F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC45F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BC45F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC45F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC45FC  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BC4600  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80BC4604  88 1E 04 BA */	lbz r0, 0x4ba(r30)

@@ -19,14 +19,14 @@ lbl_80C65F04:
 /* 80C65F48  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C65F4C  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80C65F50  4B 53 EE 50 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80C65F54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C65F58  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C65F5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80C65F54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C65F58  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C65F5C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80C65F60  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80C65F64  3B 83 4A C8 */	addi r28, r3, j3dSys@l
-/* 80C65F68  90 1C 00 48 */	stw r0, 0x48(r28)	/* effective address: 80434B10 */
-/* 80C65F6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80C65F70  90 1C 00 4C */	stw r0, 0x4c(r28)	/* effective address: 80434B14 */
+/* 80C65F68  90 1C 00 48 */	stw r0, 0x48(r28)
+/* 80C65F6C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80C65F70  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C65F74  80 7E 06 08 */	lwz r3, 0x608(r30)
 /* 80C65F78  4B 3A 7D 4C */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80C65F7C  80 7E 06 0C */	lwz r3, 0x60c(r30)
@@ -79,11 +79,11 @@ lbl_80C6601C:
 /* 80C66020  7C 1A 00 00 */	cmpw r26, r0
 /* 80C66024  41 80 FF E0 */	blt lbl_80C66004
 lbl_80C66028:
-/* 80C66028  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C6602C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80C66030  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80C66028  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C6602C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80C66030  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80C66034  90 1C 00 48 */	stw r0, 0x48(r28)
-/* 80C66038  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80C66038  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80C6603C  90 1C 00 4C */	stw r0, 0x4c(r28)
 /* 80C66040  C0 1F 01 08 */	lfs f0, 0x108(r31)
 /* 80C66044  C0 7E 24 7C */	lfs f3, 0x247c(r30)

@@ -10,8 +10,8 @@ lbl_80470B5C:
 /* 80470B7C  7F C3 F3 78 */	mr r3, r30
 /* 80470B80  4B FF EB 3D */	bl getArcName__12daObjCarry_cFv
 /* 80470B84  7F E4 FB 78 */	mr r4, r31
-/* 80470B88  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80470B8C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80470B88  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80470B8C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80470B90  3C A5 00 02 */	addis r5, r5, 2
 /* 80470B94  38 C0 00 80 */	li r6, 0x80
 /* 80470B98  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -10,12 +10,12 @@ lbl_805EFDD4:
 /* 805EFDF4  83 A3 00 04 */	lwz r29, 4(r3)
 /* 805EFDF8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805EFDFC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805EFE00  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805EFE00  80 63 00 00 */	lwz r3, 0(r3)
 /* 805EFE04  A8 99 04 DE */	lha r4, 0x4de(r25)
 /* 805EFE08  4B A1 C5 D4 */	b mDoMtx_YrotS__FPA4_fs
 /* 805EFE0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805EFE10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 805EFE14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 805EFE14  80 63 00 00 */	lwz r3, 0(r3)
 /* 805EFE18  A8 99 04 DC */	lha r4, 0x4dc(r25)
 /* 805EFE1C  4B A1 C5 80 */	b mDoMtx_XrotM__FPA4_fs
 /* 805EFE20  3C 60 80 5F */	lis r3, lit_3794@ha

@@ -42,11 +42,11 @@ lbl_80C029DC:
 /* 80C02A0C  4B 74 43 60 */	b PSMTXMultVec
 /* 80C02A10  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C02A14  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C02A18  C0 63 00 0C */	lfs f3, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C02A18  C0 63 00 0C */	lfs f3, 0xc(r3)
 /* 80C02A1C  D0 61 00 08 */	stfs f3, 8(r1)
-/* 80C02A20  C0 43 00 1C */	lfs f2, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C02A20  C0 43 00 1C */	lfs f2, 0x1c(r3)
 /* 80C02A24  D0 41 00 0C */	stfs f2, 0xc(r1)
-/* 80C02A28  C0 23 00 2C */	lfs f1, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C02A28  C0 23 00 2C */	lfs f1, 0x2c(r3)
 /* 80C02A2C  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80C02A30  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80C02A34  EC 02 00 2A */	fadds f0, f2, f0

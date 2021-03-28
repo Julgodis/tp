@@ -6,8 +6,8 @@ lbl_807FA284:
 /* 807FA294  7C 7F 1B 78 */	mr r31, r3
 /* 807FA298  38 00 00 06 */	li r0, 6
 /* 807FA29C  B0 03 06 8E */	sth r0, 0x68e(r3)
-/* 807FA2A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807FA2A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807FA2A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807FA2A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807FA2A8  80 9F 05 B8 */	lwz r4, 0x5b8(r31)
 /* 807FA2AC  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 807FA2B0  7C 05 07 74 */	extsb r5, r0

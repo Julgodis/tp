@@ -14,9 +14,9 @@ lbl_80630BF0:
 /* 80630C20  C0 03 98 50 */	lfs f0, lit_4432@l(r3)
 /* 80630C24  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80630C28  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80630C2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80630C30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80630C34  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80630C2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80630C30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80630C34  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80630C38  38 00 00 FF */	li r0, 0xff
 /* 80630C3C  90 01 00 08 */	stw r0, 8(r1)
 /* 80630C40  38 80 00 00 */	li r4, 0

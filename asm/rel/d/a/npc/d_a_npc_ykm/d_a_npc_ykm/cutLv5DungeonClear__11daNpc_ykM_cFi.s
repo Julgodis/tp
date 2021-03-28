@@ -8,9 +8,9 @@ lbl_80B58A38:
 /* 80B58A50  7C 98 23 78 */	mr r24, r4
 /* 80B58A54  3C 60 80 B6 */	lis r3, m__17daNpc_ykM_Param_c@ha
 /* 80B58A58  3B C3 D7 94 */	addi r30, r3, m__17daNpc_ykM_Param_c@l
-/* 80B58A5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B58A60  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80B58A64  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80B58A5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B58A60  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80B58A64  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 80B58A68  3B 60 00 00 */	li r27, 0
 /* 80B58A6C  3B 40 FF FF */	li r26, -1
 /* 80B58A70  3B 20 00 00 */	li r25, 0
@@ -360,15 +360,15 @@ lbl_80B58F54:
 /* 80B58F54  93 37 0D C4 */	stw r25, 0xdc4(r23)
 /* 80B58F58  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 80B58F5C  38 63 10 18 */	addi r3, r3, m_midnaActor__9daPy_py_c@l
-/* 80B58F60  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451018 */
-/* 80B58F64  80 03 08 90 */	lwz r0, 0x890(r3)	/* effective address: 804518A8 */
+/* 80B58F60  80 63 00 00 */	lwz r3, 0(r3)
+/* 80B58F64  80 03 08 90 */	lwz r0, 0x890(r3)
 /* 80B58F68  64 00 80 00 */	oris r0, r0, 0x8000
-/* 80B58F6C  90 03 08 90 */	stw r0, 0x890(r3)	/* effective address: 804518A8 */
+/* 80B58F6C  90 03 08 90 */	stw r0, 0x890(r3)
 /* 80B58F70  48 00 01 C0 */	b lbl_80B59130
 lbl_80B58F74:
 /* 80B58F74  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B58F78  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B58F7C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B58F7C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B58F80  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80B58F84  38 80 00 28 */	li r4, 0x28
 /* 80B58F88  4B 75 6F 54 */	b bgmStreamStop__8Z2SeqMgrFUl

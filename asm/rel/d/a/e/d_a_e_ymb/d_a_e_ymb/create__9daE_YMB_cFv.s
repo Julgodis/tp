@@ -101,8 +101,8 @@ lbl_80820F4C:
 /* 80820F54  88 9F 06 C0 */	lbz r4, 0x6c0(r31)
 /* 80820F58  28 04 00 FF */	cmplwi r4, 0xff
 /* 80820F5C  41 82 00 28 */	beq lbl_80820F84
-/* 80820F60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80820F64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80820F60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80820F64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80820F68  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80820F6C  7C 05 07 74 */	extsb r5, r0
 /* 80820F70  4B 81 43 F0 */	b isSwitch__10dSv_info_cCFii
@@ -131,8 +131,8 @@ lbl_80820FC4:
 /* 80820FC4  80 9F 07 98 */	lwz r4, 0x798(r31)
 /* 80820FC8  28 04 00 00 */	cmplwi r4, 0
 /* 80820FCC  41 82 00 28 */	beq lbl_80820FF4
-/* 80820FD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80820FD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80820FD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80820FD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80820FD8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80820FDC  7F E5 FB 78 */	mr r5, r31
 /* 80820FE0  4B 85 3A 28 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -155,7 +155,7 @@ lbl_80820FF4:
 /* 80821020  38 00 FF FF */	li r0, -1
 /* 80821024  3C 60 80 82 */	lis r3, l_HIO@ha
 /* 80821028  38 63 1E 64 */	addi r3, r3, l_HIO@l
-/* 8082102C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80821E68 */
+/* 8082102C  98 03 00 04 */	stb r0, 4(r3)
 lbl_80821030:
 /* 80821030  38 00 00 04 */	li r0, 4
 /* 80821034  90 1F 05 5C */	stw r0, 0x55c(r31)
@@ -244,8 +244,8 @@ lbl_808210F0:
 /* 8082117C  80 9F 07 98 */	lwz r4, 0x798(r31)
 /* 80821180  28 04 00 00 */	cmplwi r4, 0
 /* 80821184  41 82 00 14 */	beq lbl_80821198
-/* 80821188  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082118C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80821188  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082118C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80821190  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80821194  4B 85 30 BC */	b Release__4cBgSFP9dBgW_Base
 lbl_80821198:

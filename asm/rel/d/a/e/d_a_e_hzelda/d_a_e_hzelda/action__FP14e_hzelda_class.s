@@ -11,12 +11,12 @@ lbl_806F2A3C:
 /* 806F2A60  7C 7E 1B 78 */	mr r30, r3
 /* 806F2A64  3C 80 80 6F */	lis r4, lit_3767@ha
 /* 806F2A68  3B E4 55 14 */	addi r31, r4, lit_3767@l
-/* 806F2A6C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806F2A70  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 806F2A74  83 9D 5D AC */	lwz r28, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 806F2A6C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806F2A70  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 806F2A74  83 9D 5D AC */	lwz r28, 0x5dac(r29)
 /* 806F2A78  38 00 00 00 */	li r0, 0
 /* 806F2A7C  98 03 06 BB */	stb r0, 0x6bb(r3)
-/* 806F2A80  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 806F2A80  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 806F2A84  4B 92 7D 5C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806F2A88  D0 3E 06 A0 */	stfs f1, 0x6a0(r30)
 /* 806F2A8C  7F C3 F3 78 */	mr r3, r30
@@ -84,12 +84,12 @@ lbl_806F2B48:
 /* 806F2B60  4B B7 DA A8 */	b cLib_addCalcAngleS2__FPssss
 /* 806F2B64  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806F2B68  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806F2B6C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806F2B6C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F2B70  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 806F2B74  4B 91 98 68 */	b mDoMtx_YrotS__FPA4_fs
 /* 806F2B78  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806F2B7C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806F2B80  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806F2B80  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F2B84  A8 9E 04 DC */	lha r4, 0x4dc(r30)
 /* 806F2B88  4B 91 98 14 */	b mDoMtx_XrotM__FPA4_fs
 /* 806F2B8C  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -182,7 +182,7 @@ lbl_806F2CA0:
 /* 806F2CD4  40 82 01 B0 */	bne lbl_806F2E84
 /* 806F2CD8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806F2CDC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806F2CE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806F2CE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 806F2CE4  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 806F2CE8  7C 00 00 D0 */	neg r0, r0
 /* 806F2CEC  7C 04 07 34 */	extsh r4, r0

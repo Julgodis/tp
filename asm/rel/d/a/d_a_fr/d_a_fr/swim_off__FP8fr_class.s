@@ -8,8 +8,8 @@ lbl_8051AA9C:
 /* 8051AAB4  3C 60 80 52 */	lis r3, lit_3649@ha
 /* 8051AAB8  3B E3 B9 C8 */	addi r31, r3, lit_3649@l
 /* 8051AABC  38 7E 05 F4 */	addi r3, r30, 0x5f4
-/* 8051AAC0  C0 3F 00 94 */	lfs f1, 0x94(r31)	/* effective address: 8051BA5C */
-/* 8051AAC4  C0 5F 00 24 */	lfs f2, 0x24(r31)	/* effective address: 8051B9EC */
+/* 8051AAC0  C0 3F 00 94 */	lfs f1, 0x94(r31)
+/* 8051AAC4  C0 5F 00 24 */	lfs f2, 0x24(r31)
 /* 8051AAC8  4B D5 4F B8 */	b cLib_addCalc0__FPfff
 /* 8051AACC  38 00 00 00 */	li r0, 0
 /* 8051AAD0  B0 1E 04 E8 */	sth r0, 0x4e8(r30)
@@ -63,7 +63,7 @@ lbl_8051AB3C:
 /* 8051AB80  90 01 00 08 */	stw r0, 8(r1)
 /* 8051AB84  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8051AB88  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8051AB8C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8051AB8C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051AB90  38 81 00 08 */	addi r4, r1, 8
 /* 8051AB94  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 8051AB98  38 C0 00 00 */	li r6, 0
@@ -79,10 +79,10 @@ lbl_8051ABBC:
 /* 8051ABBC  A8 1E 09 94 */	lha r0, 0x994(r30)
 /* 8051ABC0  2C 00 FF FF */	cmpwi r0, -1
 /* 8051ABC4  41 82 00 1C */	beq lbl_8051ABE0
-/* 8051ABC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051ABCC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051ABD0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8051ABD4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 8051ABC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051ABCC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051ABD0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8051ABD4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 8051ABD8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 8051ABDC  40 82 00 38 */	bne lbl_8051AC14
 lbl_8051ABE0:
@@ -92,7 +92,7 @@ lbl_8051ABE0:
 /* 8051ABEC  C0 3E 05 D8 */	lfs f1, 0x5d8(r30)
 /* 8051ABF0  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051ABF4  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051ABF8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 8051BC38 */
+/* 8051ABF8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8051ABFC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8051AC00  40 80 00 14 */	bge lbl_8051AC14
 /* 8051AC04  38 00 00 05 */	li r0, 5

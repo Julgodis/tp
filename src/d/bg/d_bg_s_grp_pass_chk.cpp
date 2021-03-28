@@ -44,16 +44,16 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803AB7A8-803AB7B4 000C+00 s=2 e=0 z=0  None .data      __vt__15dBgS_GrpPassChk                                      */
 SECTION_DATA static void* __vt__15dBgS_GrpPassChk[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dBgS_GrpPassChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dBgS_GrpPassChkFv,
 };
 
 /* 803AB7B4-803AB7C0 000C+00 s=3 e=0 z=0  None .data      __vt__15cBgS_GrpPassChk                                      */
 SECTION_DATA static void* __vt__15cBgS_GrpPassChk[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15cBgS_GrpPassChkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15cBgS_GrpPassChkFv,
 };
 
 /* 80077BA0-80077BC4 0024+00 s=0 e=1 z=0  None .text      __ct__15dBgS_GrpPassChkFv                                    */

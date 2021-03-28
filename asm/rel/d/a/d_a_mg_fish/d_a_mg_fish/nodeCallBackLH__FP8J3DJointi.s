@@ -9,7 +9,7 @@ lbl_8052AFA0:
 /* 8052AFBC  A0 83 00 14 */	lhz r4, 0x14(r3)
 /* 8052AFC0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8052AFC4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8052AFC8  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 8052AFC8  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 8052AFCC  83 BF 00 14 */	lwz r29, 0x14(r31)
 /* 8052AFD0  28 1D 00 00 */	cmplwi r29, 0
 /* 8052AFD4  41 82 00 80 */	beq lbl_8052B054
@@ -21,7 +21,7 @@ lbl_8052AFA0:
 /* 8052AFEC  7C 60 F2 14 */	add r3, r0, r30
 /* 8052AFF0  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8052AFF4  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8052AFF8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8052AFF8  80 84 00 00 */	lwz r4, 0(r4)
 /* 8052AFFC  4B E1 B4 B4 */	b PSMTXCopy
 /* 8052B000  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 8052B004  C0 23 61 68 */	lfs f1, lit_3679@l(r3)
@@ -33,14 +33,14 @@ lbl_8052AFA0:
 /* 8052B01C  4B D4 5E 88 */	b MtxScale__FfffUc
 /* 8052B020  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052B024  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052B028  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052B028  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052B02C  80 9F 00 84 */	lwz r4, 0x84(r31)
 /* 8052B030  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 8052B034  7C 80 F2 14 */	add r4, r0, r30
 /* 8052B038  4B E1 B4 78 */	b PSMTXCopy
 /* 8052B03C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052B040  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052B044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052B044  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052B048  3C 80 80 43 */	lis r4, mCurrentMtx__6J3DSys@ha
 /* 8052B04C  38 84 4B E4 */	addi r4, r4, mCurrentMtx__6J3DSys@l
 /* 8052B050  4B E1 B4 60 */	b PSMTXCopy

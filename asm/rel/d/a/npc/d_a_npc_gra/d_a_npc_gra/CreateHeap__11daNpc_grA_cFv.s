@@ -11,7 +11,7 @@ lbl_809BF0A8:
 /* 809BF0CC  41 82 00 4C */	beq lbl_809BF118
 /* 809BF0D0  3C 60 80 9D */	lis r3, l_bmdGetParamList@ha
 /* 809BF0D4  38 63 A6 34 */	addi r3, r3, l_bmdGetParamList@l
-/* 809BF0D8  80 83 00 08 */	lwz r4, 8(r3)	/* effective address: 809CA63C */
+/* 809BF0D8  80 83 00 08 */	lwz r4, 8(r3)
 /* 809BF0DC  2C 04 00 00 */	cmpwi r4, 0
 /* 809BF0E0  41 80 00 78 */	blt lbl_809BF158
 /* 809BF0E4  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -19,8 +19,8 @@ lbl_809BF0A8:
 /* 809BF0EC  3C 60 80 9D */	lis r3, l_resNames@ha
 /* 809BF0F0  38 63 AA D4 */	addi r3, r3, l_resNames@l
 /* 809BF0F4  7C 63 00 2E */	lwzx r3, r3, r0
-/* 809BF0F8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809BF0FC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809BF0F8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809BF0FC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809BF100  3C A5 00 02 */	addis r5, r5, 2
 /* 809BF104  38 C0 00 80 */	li r6, 0x80
 /* 809BF108  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -37,8 +37,8 @@ lbl_809BF118:
 /* 809BF130  3C 60 80 9D */	lis r3, l_resNames@ha
 /* 809BF134  38 63 AA D4 */	addi r3, r3, l_resNames@l
 /* 809BF138  7C 63 00 2E */	lwzx r3, r3, r0
-/* 809BF13C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809BF140  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809BF13C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809BF140  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809BF144  3C A5 00 02 */	addis r5, r5, 2
 /* 809BF148  38 C0 00 80 */	li r6, 0x80
 /* 809BF14C  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -134,8 +134,8 @@ lbl_809BF268:
 /* 809BF28C  38 63 AA D4 */	addi r3, r3, l_resNames@l
 /* 809BF290  7C 63 00 2E */	lwzx r3, r3, r0
 /* 809BF294  7C 84 28 2E */	lwzx r4, r4, r5
-/* 809BF298  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809BF29C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809BF298  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809BF29C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809BF2A0  3C A5 00 02 */	addis r5, r5, 2
 /* 809BF2A4  38 C0 00 80 */	li r6, 0x80
 /* 809BF2A8  38 A5 C2 F8 */	addi r5, r5, -15624

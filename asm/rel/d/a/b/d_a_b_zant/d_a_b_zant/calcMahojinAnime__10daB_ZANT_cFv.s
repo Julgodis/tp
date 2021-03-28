@@ -127,8 +127,8 @@ lbl_8064B424:
 /* 8064B434  3C 60 80 65 */	lis r3, stringBase0@ha
 /* 8064B438  38 63 EE 60 */	addi r3, r3, stringBase0@l
 /* 8064B43C  38 80 00 4F */	li r4, 0x4f
-/* 8064B440  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8064B444  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8064B440  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8064B444  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8064B448  3C A5 00 02 */	addis r5, r5, 2
 /* 8064B44C  38 C0 00 80 */	li r6, 0x80
 /* 8064B450  38 A5 C2 F8 */	addi r5, r5, -15624

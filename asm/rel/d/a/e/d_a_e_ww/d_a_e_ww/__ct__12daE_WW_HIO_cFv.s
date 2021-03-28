@@ -6,17 +6,17 @@ lbl_807E76EC:
 /* 807E76FC  90 03 00 00 */	stw r0, 0(r3)
 /* 807E7700  38 00 FF FF */	li r0, -1
 /* 807E7704  98 03 00 04 */	stb r0, 4(r3)
-/* 807E7708  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 807EF778 */
+/* 807E7708  C0 05 00 08 */	lfs f0, 8(r5)
 /* 807E770C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 807E7710  C0 05 00 2C */	lfs f0, 0x2c(r5)	/* effective address: 807EF79C */
+/* 807E7710  C0 05 00 2C */	lfs f0, 0x2c(r5)
 /* 807E7714  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 807E7718  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 807EF7A0 */
+/* 807E7718  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 807E771C  D0 03 00 10 */	stfs f0, 0x10(r3)
-/* 807E7720  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 807EF7A4 */
+/* 807E7720  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 807E7724  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 807E7728  C0 25 00 38 */	lfs f1, 0x38(r5)	/* effective address: 807EF7A8 */
+/* 807E7728  C0 25 00 38 */	lfs f1, 0x38(r5)
 /* 807E772C  D0 23 00 18 */	stfs f1, 0x18(r3)
-/* 807E7730  C0 05 00 3C */	lfs f0, 0x3c(r5)	/* effective address: 807EF7AC */
+/* 807E7730  C0 05 00 3C */	lfs f0, 0x3c(r5)
 /* 807E7734  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 807E7738  D0 23 00 20 */	stfs f1, 0x20(r3)
 /* 807E773C  38 00 00 00 */	li r0, 0

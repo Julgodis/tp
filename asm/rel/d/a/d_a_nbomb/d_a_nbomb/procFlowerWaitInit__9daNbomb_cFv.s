@@ -1,11 +1,11 @@
 lbl_804CA268:
 /* 804CA268  3C 80 80 4D */	lis r4, lit_5886@ha
 /* 804CA26C  38 A4 C5 60 */	addi r5, r4, lit_5886@l
-/* 804CA270  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 804CC560 */
-/* 804CA274  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 804CC564 */
+/* 804CA270  80 85 00 00 */	lwz r4, 0(r5)
+/* 804CA274  80 05 00 04 */	lwz r0, 4(r5)
 /* 804CA278  90 83 0C 38 */	stw r4, 0xc38(r3)
 /* 804CA27C  90 03 0C 3C */	stw r0, 0xc3c(r3)
-/* 804CA280  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 804CC568 */
+/* 804CA280  80 05 00 08 */	lwz r0, 8(r5)
 /* 804CA284  90 03 0C 40 */	stw r0, 0xc40(r3)
 /* 804CA288  80 03 07 F8 */	lwz r0, 0x7f8(r3)
 /* 804CA28C  60 00 00 01 */	ori r0, r0, 1

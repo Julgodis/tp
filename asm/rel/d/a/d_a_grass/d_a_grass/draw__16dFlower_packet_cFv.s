@@ -83,8 +83,8 @@ lbl_80521DAC:
 /* 80521EF0  3E FF 00 01 */	addis r23, r31, 1
 /* 80521EF4  3B 20 00 00 */	li r25, 0
 /* 80521EF8  3A 80 00 00 */	li r20, 0
-/* 80521EFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80521F00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80521EFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80521F00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80521F04  3B 03 4E C4 */	addi r24, r3, 0x4ec4
 /* 80521F08  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80521F0C  3B 83 CA 54 */	addi r28, r3, g_env_light@l

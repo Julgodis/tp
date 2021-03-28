@@ -7,10 +7,10 @@ lbl_80CF37FC:
 /* 80CF3810  7C 7F 1B 78 */	mr r31, r3
 /* 80CF3814  3C 60 80 CF */	lis r3, l_arcName@ha
 /* 80CF3818  38 63 44 38 */	addi r3, r3, l_arcName@l
-/* 80CF381C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CF4438 */
+/* 80CF381C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF3820  38 80 00 04 */	li r4, 4
-/* 80CF3824  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CF3828  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CF3824  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CF3828  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CF382C  3F C5 00 02 */	addis r30, r5, 2
 /* 80CF3830  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80CF3834  7F C5 F3 78 */	mr r5, r30
@@ -30,7 +30,7 @@ lbl_80CF37FC:
 lbl_80CF386C:
 /* 80CF386C  3C 60 80 CF */	lis r3, l_arcName@ha
 /* 80CF3870  38 63 44 38 */	addi r3, r3, l_arcName@l
-/* 80CF3874  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CF4438 */
+/* 80CF3874  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF3878  38 80 00 07 */	li r4, 7
 /* 80CF387C  7F C5 F3 78 */	mr r5, r30
 /* 80CF3880  38 C0 00 80 */	li r6, 0x80

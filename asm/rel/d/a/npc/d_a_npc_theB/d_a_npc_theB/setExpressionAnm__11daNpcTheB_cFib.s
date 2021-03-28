@@ -20,7 +20,7 @@ lbl_80AFDEC0:
 /* 80AFDF08  41 80 00 28 */	blt lbl_80AFDF30
 /* 80AFDF0C  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFDF10  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFDF14  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFDF14  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFDF18  4B 65 4C 14 */	b getTrnsfrmKeyAnmP__8daNpcF_cFPci
 /* 80AFDF1C  7C 7F 1B 78 */	mr r31, r3
 /* 80AFDF20  3C 60 80 B0 */	lis r3, l_bckGetParamList@ha

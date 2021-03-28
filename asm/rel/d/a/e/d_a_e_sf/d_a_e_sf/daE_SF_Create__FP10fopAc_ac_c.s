@@ -115,8 +115,8 @@ lbl_8078911C:
 /* 80789144  80 99 05 BC */	lwz r4, 0x5bc(r25)
 /* 80789148  2C 04 00 FF */	cmpwi r4, 0xff
 /* 8078914C  41 82 00 28 */	beq lbl_80789174
-/* 80789150  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80789154  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80789150  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80789154  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80789158  88 19 04 E2 */	lbz r0, 0x4e2(r25)
 /* 8078915C  7C 05 07 74 */	extsb r5, r0
 /* 80789160  4B 8A C2 00 */	b isSwitch__10dSv_info_cCFii

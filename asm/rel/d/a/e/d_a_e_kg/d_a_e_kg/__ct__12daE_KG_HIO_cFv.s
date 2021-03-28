@@ -6,10 +6,10 @@ lbl_806F7EEC:
 /* 806F7EFC  90 03 00 00 */	stw r0, 0(r3)
 /* 806F7F00  38 00 FF FF */	li r0, -1
 /* 806F7F04  98 03 00 04 */	stb r0, 4(r3)
-/* 806F7F08  C0 05 00 2C */	lfs f0, 0x2c(r5)	/* effective address: 806FA3D0 */
+/* 806F7F08  C0 05 00 2C */	lfs f0, 0x2c(r5)
 /* 806F7F0C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 806F7F10  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 806FA3D4 */
+/* 806F7F10  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 806F7F14  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 806F7F18  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 806FA3D8 */
+/* 806F7F18  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 806F7F1C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 806F7F20  4E 80 00 20 */	blr 

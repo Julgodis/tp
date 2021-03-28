@@ -17,9 +17,9 @@ lbl_80841FB8:
 /* 80841FB8  80 1D 17 44 */	lwz r0, 0x1744(r29)
 /* 80841FBC  54 00 05 29 */	rlwinm. r0, r0, 0, 0x14, 0x14
 /* 80841FC0  41 82 00 38 */	beq lbl_80841FF8
-/* 80841FC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80841FC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80841FCC  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80841FC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80841FC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80841FCC  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80841FD0  4B 8A AF 8C */	b checkHorseSubjectivity__9daAlink_cCFv
 /* 80841FD4  2C 03 00 00 */	cmpwi r3, 0
 /* 80841FD8  40 82 00 20 */	bne lbl_80841FF8
@@ -261,11 +261,11 @@ lbl_80842308:
 /* 8084232C  A8 1D 17 16 */	lha r0, 0x1716(r29)
 /* 80842330  2C 00 00 00 */	cmpwi r0, 0
 /* 80842334  41 82 00 54 */	beq lbl_80842388
-/* 80842338  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8084233C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80842340  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80842344  C0 43 04 D8 */	lfs f2, 0x4d8(r3)	/* effective address: 80406698 */
-/* 80842348  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80842338  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8084233C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80842340  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80842344  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
+/* 80842348  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8084234C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80842350  C0 3E 01 50 */	lfs f1, 0x150(r30)
 /* 80842354  D0 21 00 10 */	stfs f1, 0x10(r1)

@@ -8,9 +8,9 @@ lbl_809D21B8:
 /* 809D21D0  3C 60 80 9D */	lis r3, cNullVec__6Z2Calc@ha
 /* 809D21D4  3B E3 3C 14 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 809D21D8  3B A0 00 00 */	li r29, 0
-/* 809D21DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809D21E0  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 809D21E4  88 1B 4F AD */	lbz r0, 0x4fad(r27)	/* effective address: 8040B16D */
+/* 809D21DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809D21E0  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 809D21E4  88 1B 4F AD */	lbz r0, 0x4fad(r27)
 /* 809D21E8  28 00 00 00 */	cmplwi r0, 0
 /* 809D21EC  41 82 02 2C */	beq lbl_809D2418
 /* 809D21F0  3B DB 4F F8 */	addi r30, r27, 0x4ff8
@@ -45,9 +45,9 @@ lbl_809D2210:
 /* 809D225C  48 00 00 64 */	b lbl_809D22C0
 lbl_809D2260:
 /* 809D2260  38 00 00 00 */	li r0, 0
-/* 809D2264  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809D2268  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809D226C  88 63 4F B5 */	lbz r3, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 809D2264  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809D2268  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809D226C  88 63 4F B5 */	lbz r3, 0x4fb5(r3)
 /* 809D2270  28 03 00 01 */	cmplwi r3, 1
 /* 809D2274  41 82 00 0C */	beq lbl_809D2280
 /* 809D2278  28 03 00 02 */	cmplwi r3, 2
@@ -171,11 +171,11 @@ lbl_809D2418:
 /* 809D2428  41 82 00 2C */	beq lbl_809D2454
 /* 809D242C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 809D2430  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 809D2434  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 809D2438  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 809D2434  80 64 00 00 */	lwz r3, 0(r4)
+/* 809D2438  80 04 00 04 */	lwz r0, 4(r4)
 /* 809D243C  90 7C 0D DC */	stw r3, 0xddc(r28)
 /* 809D2440  90 1C 0D E0 */	stw r0, 0xde0(r28)
-/* 809D2444  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 809D2444  80 04 00 08 */	lwz r0, 8(r4)
 /* 809D2448  90 1C 0D E4 */	stw r0, 0xde4(r28)
 /* 809D244C  38 00 FF FF */	li r0, -1
 /* 809D2450  90 1C 09 2C */	stw r0, 0x92c(r28)

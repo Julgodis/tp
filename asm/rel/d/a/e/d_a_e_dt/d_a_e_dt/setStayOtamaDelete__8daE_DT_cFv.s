@@ -12,7 +12,7 @@ lbl_806AFEAC:
 /* 806AFED4  3B C3 FD 94 */	addi r30, r3, s_fall_otama__FPvPv@l
 /* 806AFED8  3B E0 00 06 */	li r31, 6
 lbl_806AFEDC:
-/* 806AFEDC  93 9D 00 00 */	stw r28, 0(r29)	/* effective address: 806B6330 */
+/* 806AFEDC  93 9D 00 00 */	stw r28, 0(r29)
 /* 806AFEE0  7F C3 F3 78 */	mr r3, r30
 /* 806AFEE4  7F 64 DB 78 */	mr r4, r27
 /* 806AFEE8  4B 97 14 50 */	b fpcEx_Search__FPFPvPv_PvPv

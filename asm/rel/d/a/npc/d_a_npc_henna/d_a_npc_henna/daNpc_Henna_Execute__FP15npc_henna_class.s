@@ -58,9 +58,9 @@ lbl_80548978:
 /* 80548984  38 60 00 01 */	li r3, 1
 /* 80548988  48 00 08 FC */	b lbl_80549284
 lbl_8054898C:
-/* 8054898C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80548990  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80548994  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 8054898C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80548990  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80548994  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 80548998  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 8054899C  41 82 00 0C */	beq lbl_805489A8
 /* 805489A0  38 00 00 64 */	li r0, 0x64
@@ -135,11 +135,11 @@ lbl_80548A40:
 /* 80548A98  4B DF DA 18 */	b PSMTXCopy
 /* 80548A9C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80548AA0  38 83 D4 70 */	addi r4, r3, now__14mDoMtx_stack_c@l
-/* 80548AA4  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 803DD47C */
+/* 80548AA4  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80548AA8  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
-/* 80548AAC  C0 04 00 1C */	lfs f0, 0x1c(r4)	/* effective address: 803DD48C */
+/* 80548AAC  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 80548AB0  D0 1F 04 D4 */	stfs f0, 0x4d4(r31)
-/* 80548AB4  C0 04 00 2C */	lfs f0, 0x2c(r4)	/* effective address: 803DD49C */
+/* 80548AB4  C0 04 00 2C */	lfs f0, 0x2c(r4)
 /* 80548AB8  D0 1F 04 D8 */	stfs f0, 0x4d8(r31)
 /* 80548ABC  A8 1B 04 E6 */	lha r0, 0x4e6(r27)
 /* 80548AC0  B0 1F 04 DE */	sth r0, 0x4de(r31)
@@ -221,7 +221,7 @@ lbl_80548BC4:
 /* 80548BDC  90 01 00 08 */	stw r0, 8(r1)
 /* 80548BE0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80548BE4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80548BE8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80548BE8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80548BEC  38 81 00 08 */	addi r4, r1, 8
 /* 80548BF0  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80548BF4  38 C0 00 00 */	li r6, 0
@@ -512,11 +512,11 @@ lbl_80549004:
 /* 8054902C  4B DF D4 84 */	b PSMTXCopy
 /* 80549030  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80549034  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80549038  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80549038  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8054903C  D0 1F 05 38 */	stfs f0, 0x538(r31)
-/* 80549040  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80549040  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80549044  D0 1F 05 3C */	stfs f0, 0x53c(r31)
-/* 80549048  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80549048  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8054904C  D0 1F 05 40 */	stfs f0, 0x540(r31)
 /* 80549050  C0 1F 05 38 */	lfs f0, 0x538(r31)
 /* 80549054  D0 1F 05 50 */	stfs f0, 0x550(r31)
@@ -547,9 +547,9 @@ lbl_805490A8:
 /* 805490B0  88 1F 07 E1 */	lbz r0, 0x7e1(r31)
 /* 805490B4  7C 00 07 75 */	extsb. r0, r0
 /* 805490B8  40 82 00 BC */	bne lbl_80549174
-/* 805490BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805490C0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805490C4  83 63 5D 74 */	lwz r27, 0x5d74(r3)	/* effective address: 8040BF34 */
+/* 805490BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805490C0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805490C4  83 63 5D 74 */	lwz r27, 0x5d74(r3)
 /* 805490C8  C0 3B 00 E4 */	lfs f1, 0xe4(r27)
 /* 805490CC  C0 1B 00 D8 */	lfs f0, 0xd8(r27)
 /* 805490D0  EC 21 00 28 */	fsubs f1, f1, f0
@@ -601,7 +601,7 @@ lbl_80549174:
 /* 8054917C  41 82 01 04 */	beq lbl_80549280
 /* 80549180  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80549184  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80549188  88 03 12 FE */	lbz r0, 0x12fe(r3)	/* effective address: 8042DD52 */
+/* 80549188  88 03 12 FE */	lbz r0, 0x12fe(r3)
 /* 8054918C  28 00 00 02 */	cmplwi r0, 2
 /* 80549190  40 82 00 2C */	bne lbl_805491BC
 /* 80549194  38 7C 00 4C */	addi r3, r28, 0x4c
@@ -642,7 +642,7 @@ lbl_80549210:
 /* 80549214  98 01 00 17 */	stb r0, 0x17(r1)
 /* 80549218  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8054921C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80549220  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80549220  80 63 00 00 */	lwz r3, 0(r3)
 /* 80549224  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 80549228  1C 05 00 B6 */	mulli r0, r5, 0xb6
 /* 8054922C  7C 04 02 14 */	add r0, r4, r0

@@ -8,13 +8,13 @@ lbl_80A2B278:
 /* 80A2B290  3C 60 80 A4 */	lis r3, cNullVec__6Z2Calc@ha
 /* 80A2B294  3B E3 0D 34 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80A2B298  38 7F 00 A4 */	addi r3, r31, 0xa4
-/* 80A2B29C  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 80A40DE4 */
-/* 80A2B2A0  80 83 00 08 */	lwz r4, 8(r3)	/* effective address: 80A40DE0 */
+/* 80A2B29C  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80A2B2A0  80 83 00 08 */	lwz r4, 8(r3)
 /* 80A2B2A4  54 00 10 3A */	slwi r0, r0, 2
 /* 80A2B2A8  38 7F 01 8C */	addi r3, r31, 0x18c
 /* 80A2B2AC  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80A2B2B0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A2B2B4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80A2B2B0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A2B2B4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80A2B2B8  3F A5 00 02 */	addis r29, r5, 2
 /* 80A2B2BC  3B BD C2 F8 */	addi r29, r29, -15624
 /* 80A2B2C0  7F A5 EB 78 */	mr r5, r29

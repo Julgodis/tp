@@ -15,8 +15,8 @@ lbl_8066F7EC:
 /* 8066F820  39 3F 04 F8 */	addi r9, r31, 0x4f8
 /* 8066F824  39 40 00 00 */	li r10, 0
 /* 8066F828  4B A0 6A 20 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
-/* 8066F82C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066F830  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066F82C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066F830  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066F834  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8066F838  80 9F 05 7C */	lwz r4, 0x57c(r31)
 /* 8066F83C  7F E5 FB 78 */	mr r5, r31
@@ -40,8 +40,8 @@ lbl_8066F7EC:
 /* 8066F884  7F E3 FB 78 */	mr r3, r31
 /* 8066F888  4B 9C A9 48 */	b getSwbit__13door_param2_cFP10fopAc_ac_c
 /* 8066F88C  54 64 06 3E */	clrlwi r4, r3, 0x18
-/* 8066F890  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066F894  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066F890  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066F894  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066F898  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8066F89C  7C 05 07 74 */	extsb r5, r0
 /* 8066F8A0  4B 9C 5A C0 */	b isSwitch__10dSv_info_cCFii

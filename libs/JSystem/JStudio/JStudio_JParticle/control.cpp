@@ -55,7 +55,7 @@ struct JStudio_JParticle {
 
 };
 
-struct JPAParticleCallBack {
+struct JPAEmitterCallBack {
 };
 
 struct JGeometry {
@@ -67,7 +67,7 @@ struct JGeometry {
 
 };
 
-struct JPAEmitterCallBack {
+struct JPAParticleCallBack {
 };
 
 struct JPAEmitterManager {
@@ -111,12 +111,12 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C5AD8-803C5AF0 0018+00 s=1 e=1 z=0  None .data      __vt__Q217JStudio_JParticle13TCreateObject                   */
 SECTION_DATA void* __vt__Q217JStudio_JParticle13TCreateObject[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q217JStudio_JParticle13TCreateObjectFv,
-	/* 3    */ (void*)create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
-	/* 4    */ (void*)emitter_create__Q217JStudio_JParticle13TCreateObjectFUl,
-	/* 5    */ (void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q217JStudio_JParticle13TCreateObjectFv,
+	(void*)create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)emitter_create__Q217JStudio_JParticle13TCreateObjectFUl,
+	(void*)emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter,
 };
 
 /* 8028E3A0-8028E400 0060+00 s=1 e=1 z=0  None .text      __dt__Q217JStudio_JParticle13TCreateObjectFv                 */

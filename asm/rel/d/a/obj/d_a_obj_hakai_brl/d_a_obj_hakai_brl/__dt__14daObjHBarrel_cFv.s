@@ -16,7 +16,7 @@ lbl_80C16918:
 lbl_80C16950:
 /* 80C16950  3C 80 80 C1 */	lis r4, l_arcName@ha
 /* 80C16954  38 84 73 7C */	addi r4, r4, l_arcName@l
-/* 80C16958  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C1737C */
+/* 80C16958  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C1695C  4B 41 66 AC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C16960  34 1E 06 F0 */	addic. r0, r30, 0x6f0
 /* 80C16964  41 82 00 1C */	beq lbl_80C16980

@@ -6,7 +6,7 @@ lbl_80CF6144:
 /* 80CF6154  38 E4 6D 90 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CF6158  3C 80 80 CF */	lis r4, data_80CF6F18@ha
 /* 80CF615C  38 C4 6F 18 */	addi r6, r4, data_80CF6F18@l
-/* 80CF6160  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CF6F18 */
+/* 80CF6160  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CF6164  7C 00 07 75 */	extsb. r0, r0
 /* 80CF6168  40 82 00 70 */	bne lbl_80CF61D8
 /* 80CF616C  80 87 00 2C */	lwz r4, 0x2c(r7)

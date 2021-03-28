@@ -9,8 +9,8 @@ lbl_8046D474:
 /* 8046D490  38 63 DA 50 */	addi r3, r3, stringBase0@l
 /* 8046D494  38 63 00 16 */	addi r3, r3, 0x16
 /* 8046D498  38 80 00 05 */	li r4, 5
-/* 8046D49C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8046D4A0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8046D49C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8046D4A0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8046D4A4  3F A5 00 02 */	addis r29, r5, 2
 /* 8046D4A8  3B BD C2 F8 */	addi r29, r29, -15624
 /* 8046D4AC  7F A5 EB 78 */	mr r5, r29

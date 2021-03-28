@@ -34,7 +34,7 @@ lbl_80501984:
 /* 805019AC  40 82 00 78 */	bne lbl_80501A24
 /* 805019B0  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 805019B4  38 63 49 60 */	addi r3, r3, l_HIO@l
-/* 805019B8  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80504968 */
+/* 805019B8  C0 23 00 08 */	lfs f1, 8(r3)
 /* 805019BC  C0 1E 04 EC */	lfs f0, 0x4ec(r30)
 /* 805019C0  EC 81 00 32 */	fmuls f4, f1, f0
 /* 805019C4  C0 5E 04 D8 */	lfs f2, 0x4d8(r30)

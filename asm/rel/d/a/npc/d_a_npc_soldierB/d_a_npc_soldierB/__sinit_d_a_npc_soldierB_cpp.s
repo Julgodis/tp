@@ -15,20 +15,20 @@ lbl_80AF59E0:
 /* 80AF5A14  38 A3 5C A8 */	addi r5, r3, mEvtCutList__16daNpc_SoldierB_c@l
 /* 80AF5A18  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AF5A1C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AF5A20  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AF5A24  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AF5A28  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AF5CA8 */
-/* 80AF5A2C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AF5CAC */
-/* 80AF5A30  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AF5A34  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AF5CB0 */
+/* 80AF5A20  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AF5A24  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AF5A28  90 65 00 00 */	stw r3, 0(r5)
+/* 80AF5A2C  90 05 00 04 */	stw r0, 4(r5)
+/* 80AF5A30  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AF5A34  90 05 00 08 */	stw r0, 8(r5)
 /* 80AF5A38  3C 60 80 AF */	lis r3, lit_4024@ha
 /* 80AF5A3C  38 83 5C 9C */	addi r4, r3, lit_4024@l
-/* 80AF5A40  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AF5C9C */
-/* 80AF5A44  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AF5CA0 */
-/* 80AF5A48  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 80AF5CB4 */
-/* 80AF5A4C  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 80AF5CB8 */
-/* 80AF5A50  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AF5CA4 */
-/* 80AF5A54  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 80AF5CBC */
+/* 80AF5A40  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AF5A44  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AF5A48  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80AF5A4C  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80AF5A50  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AF5A54  90 05 00 14 */	stw r0, 0x14(r5)
 /* 80AF5A58  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80AF5A5C  7C 08 03 A6 */	mtlr r0
 /* 80AF5A60  38 21 00 10 */	addi r1, r1, 0x10

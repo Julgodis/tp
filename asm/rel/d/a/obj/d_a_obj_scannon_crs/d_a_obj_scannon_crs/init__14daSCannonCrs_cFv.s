@@ -7,12 +7,12 @@ lbl_80CCA74C:
 /* 80CCA760  7C 7E 1B 78 */	mr r30, r3
 /* 80CCA764  3C 60 80 CD */	lis r3, DISAP_PARTICLE_NAME@ha
 /* 80CCA768  3B E3 B0 80 */	addi r31, r3, DISAP_PARTICLE_NAME@l
-/* 80CCA76C  C0 1F 00 60 */	lfs f0, 0x60(r31)	/* effective address: 80CCB0E0 */
+/* 80CCA76C  C0 1F 00 60 */	lfs f0, 0x60(r31)
 /* 80CCA770  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80CCA774  38 7F 00 60 */	addi r3, r31, 0x60
-/* 80CCA778  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CCB0E4 */
+/* 80CCA778  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CCA77C  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80CCA780  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80CCB0E8 */
+/* 80CCA780  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80CCA784  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80CCA788  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80CCA78C  4B 34 25 D8 */	b transS__14mDoMtx_stack_cFRC4cXyz

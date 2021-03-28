@@ -202,61 +202,61 @@ asm void dOvlpFd2_dlst_c::draw() {
 /* ############################################################################################## */
 /* 803C2CF0-803C2CFC 000C+00 s=1 e=0 z=0  None .data      @3695                                                        */
 SECTION_DATA static void* lit_3695[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)execFirstSnap__10dOvlpFd2_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFirstSnap__10dOvlpFd2_cFv,
 };
 
 /* 803C2CFC-803C2D08 000C+00 s=1 e=0 z=0  None .data      @3721                                                        */
 SECTION_DATA static void* lit_3721[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)execFadeOut__10dOvlpFd2_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFadeOut__10dOvlpFd2_cFv,
 };
 
 /* 803C2D08-803C2D14 000C+00 s=1 e=0 z=0  None .data      @3736                                                        */
 SECTION_DATA static void* lit_3736[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)execNextSnap__10dOvlpFd2_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execNextSnap__10dOvlpFd2_cFv,
 };
 
 /* 803C2D14-803C2D20 000C+00 s=1 e=0 z=0  None .data      @3765                                                        */
 SECTION_DATA static void* lit_3765[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)execFadeIn__10dOvlpFd2_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)execFadeIn__10dOvlpFd2_cFv,
 };
 
 /* 803C2D20-803C2D34 0014+00 s=1 e=0 z=0  None .data      l_dOvlpFd2_Method                                            */
 SECTION_DATA static void* l_dOvlpFd2_Method[5] = {
-	/* 0    */ (void*)dOvlpFd2_Create__FPv,
-	/* 1    */ (void*)dOvlpFd2_Delete__FP10dOvlpFd2_c,
-	/* 2    */ (void*)dOvlpFd2_Execute__FP10dOvlpFd2_c,
-	/* 3    */ (void*)dOvlpFd2_IsDelete__FP10dOvlpFd2_c,
-	/* 4    */ (void*)dOvlpFd2_Draw__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_Create__FPv,
+	(void*)dOvlpFd2_Delete__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_Execute__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_IsDelete__FP10dOvlpFd2_c,
+	(void*)dOvlpFd2_Draw__FP10dOvlpFd2_c,
 };
 
-/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=1  None .data      g_profile_OVERLAP2                                           */
+/* 803C2D34-803C2D5C 0028+00 s=0 e=0 z=0  None .data      g_profile_OVERLAP2                                           */
 SECTION_DATA void* g_profile_OVERLAP2[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0002FFFD,
-	/* 2    */ (void*)0x00110000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000120,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopOvlp_Method,
-	/* 8    */ (void*)0x03070000,
-	/* 9    */ (void*)&l_dOvlpFd2_Method,
+	(void*)NULL,
+	(void*)0x0002FFFD,
+	(void*)0x00110000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000120,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopOvlp_Method,
+	(void*)0x03070000,
+	(void*)&l_dOvlpFd2_Method,
 };
 
 /* 803C2D5C-803C2D70 0010+04 s=2 e=0 z=0  None .data      __vt__15dOvlpFd2_dlst_c                                      */
 SECTION_DATA static void* __vt__15dOvlpFd2_dlst_c[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15dOvlpFd2_dlst_cFv,
-	/* 3    */ (void*)__dt__15dOvlpFd2_dlst_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15dOvlpFd2_dlst_cFv,
+	(void*)__dt__15dOvlpFd2_dlst_cFv,
 	/* padding */
 	NULL,
 };

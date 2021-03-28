@@ -2,9 +2,9 @@ lbl_80BB5614:
 /* 80BB5614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80BB5618  7C 08 02 A6 */	mflr r0
 /* 80BB561C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80BB5620  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB5624  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BB5628  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BB5620  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB5624  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB5628  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80BB562C  88 04 05 DE */	lbz r0, 0x5de(r4)
 /* 80BB5630  28 00 00 00 */	cmplwi r0, 0
 /* 80BB5634  40 82 00 2C */	bne lbl_80BB5660

@@ -7,8 +7,8 @@ lbl_80D03384:
 /* 80D03398  38 9F 05 CC */	addi r4, r31, 0x5cc
 /* 80D0339C  4B 31 73 30 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 80D033A0  38 7F 07 BC */	addi r3, r31, 0x7bc
-/* 80D033A4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D033A8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80D033A4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D033A8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80D033AC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80D033B0  4B 37 36 FC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80D033B4  7F E3 FB 78 */	mr r3, r31

@@ -15,14 +15,14 @@ lbl_80B120DC:
 /* 80B12110  7C 7F 1B 78 */	mr r31, r3
 /* 80B12114  3C 60 80 B1 */	lis r3, lit_3648@ha
 /* 80B12118  3B C3 42 DC */	addi r30, r3, lit_3648@l
-/* 80B1211C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B12120  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B12124  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B1211C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B12120  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B12124  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 80B12128  38 61 00 20 */	addi r3, r1, 0x20
 /* 80B1212C  4B 56 54 50 */	b __ct__11dBgS_GndChkFv
 /* 80B12130  3B 60 00 00 */	li r27, 0
-/* 80B12134  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B12138  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B12134  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B12138  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B1213C  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80B12140  C3 9E 00 08 */	lfs f28, 8(r30)
 /* 80B12144  C3 BE 00 10 */	lfs f29, 0x10(r30)
@@ -33,7 +33,7 @@ lbl_80B12150:
 /* 80B12154  40 82 00 1C */	bne lbl_80B12170
 /* 80B12158  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B1215C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B12160  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B12160  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B12164  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 80B12168  4B 4F A2 74 */	b mDoMtx_YrotS__FPA4_fs
 /* 80B1216C  48 00 00 48 */	b lbl_80B121B4
@@ -42,7 +42,7 @@ lbl_80B12170:
 /* 80B12174  40 82 00 24 */	bne lbl_80B12198
 /* 80B12178  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B1217C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B12180  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B12180  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B12184  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 80B12188  38 04 C0 00 */	addi r0, r4, -16384
 /* 80B1218C  7C 04 07 34 */	extsh r4, r0
@@ -51,7 +51,7 @@ lbl_80B12170:
 lbl_80B12198:
 /* 80B12198  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B1219C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B121A0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B121A0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B121A4  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 80B121A8  38 04 40 00 */	addi r0, r4, 0x4000
 /* 80B121AC  7C 04 07 34 */	extsh r4, r0

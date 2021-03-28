@@ -22,8 +22,8 @@ lbl_80D4D998:
 /* 80D4D9E8  7C 05 07 74 */	extsb r5, r0
 /* 80D4D9EC  38 C0 00 00 */	li r6, 0
 /* 80D4D9F0  4B 40 2F 6C */	b setPathInfo__13daNpcF_Path_cFUcScUc
-/* 80D4D9F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4D9F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4D9F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4D9F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4D9FC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D4DA00  4B 2D F1 DC */	b getTimerPtr__14dComIfG_play_cFv
 /* 80D4DA04  28 03 00 00 */	cmplwi r3, 0

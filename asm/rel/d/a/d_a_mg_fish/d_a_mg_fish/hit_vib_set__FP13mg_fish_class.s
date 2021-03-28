@@ -38,8 +38,8 @@ lbl_80529DFC:
 /* 80529E04  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80529E08  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80529E0C  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 80529E10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529E14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80529E10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529E14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80529E18  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80529E1C  54 00 10 3A */	slwi r0, r0, 2
 /* 80529E20  3C 80 80 53 */	lis r4, data_805364CC@ha

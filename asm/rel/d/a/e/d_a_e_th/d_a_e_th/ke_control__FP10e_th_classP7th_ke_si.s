@@ -30,12 +30,12 @@ lbl_807B0630:
 /* 807B06A0  3B 59 00 C0 */	addi r26, r25, 0xc0
 /* 807B06A4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B06A8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B06AC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B06AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B06B0  A8 84 01 6A */	lha r4, 0x16a(r4)
 /* 807B06B4  4B 85 BD 28 */	b mDoMtx_YrotS__FPA4_fs
 /* 807B06B8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B06BC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B06C0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B06C0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B06C4  A8 99 01 68 */	lha r4, 0x168(r25)
 /* 807B06C8  4B 85 BC D4 */	b mDoMtx_XrotM__FPA4_fs
 /* 807B06CC  C0 1D 00 04 */	lfs f0, 4(r29)

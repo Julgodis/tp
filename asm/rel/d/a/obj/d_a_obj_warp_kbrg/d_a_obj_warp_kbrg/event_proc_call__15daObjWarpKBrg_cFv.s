@@ -8,7 +8,7 @@ lbl_80D27890:
 /* 80D278A8  38 A3 97 10 */	addi r5, r3, cNullVec__6Z2Calc@l
 /* 80D278AC  3C 60 80 D3 */	lis r3, data_80D29928@ha
 /* 80D278B0  38 83 99 28 */	addi r4, r3, data_80D29928@l
-/* 80D278B4  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80D29928 */
+/* 80D278B4  88 04 00 00 */	lbz r0, 0(r4)
 /* 80D278B8  7C 00 07 75 */	extsb. r0, r0
 /* 80D278BC  40 82 01 18 */	bne lbl_80D279D4
 /* 80D278C0  80 65 00 38 */	lwz r3, 0x38(r5)

@@ -200,7 +200,7 @@ lbl_807FE128:
 /* 807FE13C  38 7E 06 94 */	addi r3, r30, 0x694
 /* 807FE140  3C 80 80 80 */	lis r4, l_HIO@ha
 /* 807FE144  38 84 47 28 */	addi r4, r4, l_HIO@l
-/* 807FE148  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80804734 */
+/* 807FE148  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 807FE14C  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807FE150  C0 7F 00 7C */	lfs f3, 0x7c(r31)
 /* 807FE154  4B A7 18 E8 */	b cLib_addCalc2__FPffff

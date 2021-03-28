@@ -104,14 +104,14 @@ lbl_8051B708:
 /* 8051B724  38 00 FF FF */	li r0, -1
 /* 8051B728  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051B72C  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051B730  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8051BC24 */
+/* 8051B730  98 03 00 04 */	stb r0, 4(r3)
 lbl_8051B734:
 /* 8051B734  38 00 00 00 */	li r0, 0
 /* 8051B738  B0 1E 05 D2 */	sth r0, 0x5d2(r30)
 /* 8051B73C  C0 1F 00 B8 */	lfs f0, 0xb8(r31)
 /* 8051B740  D0 1E 04 EC */	stfs f0, 0x4ec(r30)
-/* 8051B744  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051B748  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8051B744  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051B748  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8051B74C  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8051B750  3C 80 80 52 */	lis r4, stringBase0@ha
 /* 8051B754  38 84 BA 88 */	addi r4, r4, stringBase0@l

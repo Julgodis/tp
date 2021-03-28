@@ -8,10 +8,10 @@ lbl_80BE4700:
 /* 80BE4718  3C 80 80 BE */	lis r4, lit_3677@ha
 /* 80BE471C  3B E4 4A B0 */	addi r31, r4, lit_3677@l
 /* 80BE4720  3B A0 00 00 */	li r29, 0
-/* 80BE4724  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BE4728  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BE472C  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80BE4730  80 04 5F 1C */	lwz r0, 0x5f1c(r4)	/* effective address: 8040C0DC */
+/* 80BE4724  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BE4728  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BE472C  83 C4 5D AC */	lwz r30, 0x5dac(r4)
+/* 80BE4730  80 04 5F 1C */	lwz r0, 0x5f1c(r4)
 /* 80BE4734  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80BE4738  41 82 00 4C */	beq lbl_80BE4784
 /* 80BE473C  7F C4 F3 78 */	mr r4, r30

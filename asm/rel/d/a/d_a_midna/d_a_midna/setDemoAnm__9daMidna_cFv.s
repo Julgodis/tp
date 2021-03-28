@@ -7,7 +7,7 @@ lbl_804C0238:
 /* 804C024C  7C 7F 1B 78 */	mr r31, r3
 /* 804C0250  3C 60 80 45 */	lis r3, m_object__7dDemo_c@ha
 /* 804C0254  38 63 0E 20 */	addi r3, r3, m_object__7dDemo_c@l
-/* 804C0258  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450E20 */
+/* 804C0258  80 63 00 00 */	lwz r3, 0(r3)
 /* 804C025C  88 9F 04 98 */	lbz r4, 0x498(r31)
 /* 804C0260  4B B7 8E 28 */	b getActor__14dDemo_object_cFUc
 /* 804C0264  7C 7E 1B 79 */	or. r30, r3, r3
@@ -17,8 +17,8 @@ lbl_804C0238:
 lbl_804C0274:
 /* 804C0274  3B 60 00 00 */	li r27, 0
 /* 804C0278  3B 80 00 00 */	li r28, 0
-/* 804C027C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C0280  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C027C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C0280  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C0284  3F A3 00 02 */	addis r29, r3, 2
 /* 804C0288  3B BD C2 F8 */	addi r29, r29, -15624
 /* 804C028C  48 00 07 E4 */	b lbl_804C0A70

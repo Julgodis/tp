@@ -98,8 +98,8 @@ lbl_80AE7E10:
 /* 80AE7EB4  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 80AE7EB8  4B 58 E3 90 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80AE7EBC  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 80AE7EC0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AE7EC4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AE7EC0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AE7EC4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AE7EC8  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AE7ECC  4B 58 EB E0 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AE7ED0  38 7D 07 A8 */	addi r3, r29, 0x7a8

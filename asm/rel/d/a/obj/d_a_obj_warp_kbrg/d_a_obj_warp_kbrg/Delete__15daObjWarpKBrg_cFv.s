@@ -17,7 +17,7 @@ lbl_80D29448:
 /* 80D29484  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 80D29488  3C 80 80 D3 */	lis r4, l_evArcName@ha
 /* 80D2948C  38 84 97 38 */	addi r4, r4, l_evArcName@l
-/* 80D29490  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29738 */
+/* 80D29490  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D29494  4B 30 3B 74 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D29498  38 60 00 01 */	li r3, 1
 /* 80D2949C  83 E1 00 0C */	lwz r31, 0xc(r1)

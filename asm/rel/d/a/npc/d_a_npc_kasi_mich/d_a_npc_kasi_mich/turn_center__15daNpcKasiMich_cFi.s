@@ -39,11 +39,11 @@ lbl_80A28BE8:
 /* 80A28BF8  41 82 00 30 */	beq lbl_80A28C28
 /* 80A28BFC  3C 60 80 A3 */	lis r3, lit_5148@ha
 /* 80A28C00  38 83 A6 24 */	addi r4, r3, lit_5148@l
-/* 80A28C04  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2A624 */
-/* 80A28C08  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2A628 */
+/* 80A28C04  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A28C08  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A28C0C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A28C10  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A28C14  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2A62C */
+/* 80A28C14  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A28C18  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A28C1C  7F E3 FB 78 */	mr r3, r31
 /* 80A28C20  38 81 00 08 */	addi r4, r1, 8

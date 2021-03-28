@@ -12,8 +12,8 @@ lbl_80AE1320:
 /* 80AE1348  83 E3 00 04 */	lwz r31, 4(r3)
 /* 80AE134C  3B C0 00 00 */	li r30, 0
 /* 80AE1350  38 64 00 00 */	addi r3, r4, 0
-/* 80AE1354  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 80AE2000 */
-/* 80AE1358  C0 43 00 20 */	lfs f2, 0x20(r3)	/* effective address: 80AE1FFC */
+/* 80AE1354  C0 23 00 24 */	lfs f1, 0x24(r3)
+/* 80AE1358  C0 43 00 20 */	lfs f2, 0x20(r3)
 /* 80AE135C  88 1C 0E 20 */	lbz r0, 0xe20(r28)
 /* 80AE1360  28 00 00 01 */	cmplwi r0, 1
 /* 80AE1364  40 82 00 0C */	bne lbl_80AE1370
@@ -82,9 +82,9 @@ lbl_80AE144C:
 /* 80AE144C  3B C0 00 01 */	li r30, 1
 /* 80AE1450  48 00 00 18 */	b lbl_80AE1468
 lbl_80AE1454:
-/* 80AE1454  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE1458  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AE145C  80 A3 5D AC */	lwz r5, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80AE1454  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE1458  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE145C  80 A3 5D AC */	lwz r5, 0x5dac(r3)
 /* 80AE1460  48 00 00 08 */	b lbl_80AE1468
 lbl_80AE1464:
 /* 80AE1464  80 BC 0C A8 */	lwz r5, 0xca8(r28)

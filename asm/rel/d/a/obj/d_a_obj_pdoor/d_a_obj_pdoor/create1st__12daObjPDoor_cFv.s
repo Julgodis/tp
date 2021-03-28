@@ -7,7 +7,7 @@ lbl_80CAA1BC:
 /* 80CAA1D0  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80CAA1D4  3C 80 80 CB */	lis r4, l_arcName@ha
 /* 80CAA1D8  38 84 AB 6C */	addi r4, r4, l_arcName@l
-/* 80CAA1DC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CAAB6C */
+/* 80CAA1DC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CAA1E0  4B 38 2C DC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CAA1E4  7C 60 1B 78 */	mr r0, r3
 /* 80CAA1E8  2C 00 00 04 */	cmpwi r0, 4
@@ -15,7 +15,7 @@ lbl_80CAA1BC:
 /* 80CAA1F0  7F E3 FB 78 */	mr r3, r31
 /* 80CAA1F4  3C 80 80 CB */	lis r4, l_arcName@ha
 /* 80CAA1F8  38 84 AB 6C */	addi r4, r4, l_arcName@l
-/* 80CAA1FC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CAAB6C */
+/* 80CAA1FC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CAA200  38 A0 00 08 */	li r5, 8
 /* 80CAA204  38 C0 00 00 */	li r6, 0
 /* 80CAA208  38 E0 42 30 */	li r7, 0x4230

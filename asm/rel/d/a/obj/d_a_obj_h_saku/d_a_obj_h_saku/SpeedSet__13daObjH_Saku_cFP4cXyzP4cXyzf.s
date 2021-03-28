@@ -10,7 +10,7 @@ lbl_80C15810:
 /* 80C15830  3C 60 80 C1 */	lis r3, lit_3703@ha
 /* 80C15834  3B E3 64 C8 */	addi r31, r3, lit_3703@l
 /* 80C15838  C0 3D 05 C4 */	lfs f1, 0x5c4(r29)
-/* 80C1583C  C0 1F 00 0C */	lfs f0, 0xc(r31)	/* effective address: 80C164D4 */
+/* 80C1583C  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80C15840  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C15844  D0 1D 05 C4 */	stfs f0, 0x5c4(r29)
 /* 80C15848  C0 04 00 00 */	lfs f0, 0(r4)
@@ -38,8 +38,8 @@ lbl_80C15810:
 /* 80C158A0  7F C5 F3 78 */	mr r5, r30
 /* 80C158A4  38 C0 00 00 */	li r6, 0
 /* 80C158A8  4B 46 24 BC */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80C158AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C158B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C158AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C158B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C158B4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C158B8  38 81 00 30 */	addi r4, r1, 0x30
 /* 80C158BC  4B 45 EA F8 */	b LineCross__4cBgSFP11cBgS_LinChk
@@ -55,9 +55,9 @@ lbl_80C15810:
 /* 80C158E4  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80C158E8  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80C158EC  D0 1C 00 04 */	stfs f0, 4(r28)
-/* 80C158F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C158F4  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80C158F8  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 80C158F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C158F4  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80C158F8  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 80C158FC  38 80 00 00 */	li r4, 0
 /* 80C15900  90 81 00 08 */	stw r4, 8(r1)
 /* 80C15904  38 00 FF FF */	li r0, -1
@@ -116,7 +116,7 @@ lbl_80C15810:
 /* 80C159D8  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80C159DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C159E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C159E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C159E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C159E8  38 81 00 20 */	addi r4, r1, 0x20
 /* 80C159EC  7F C5 F3 78 */	mr r5, r30
 /* 80C159F0  38 C0 00 00 */	li r6, 0

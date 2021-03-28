@@ -46,7 +46,7 @@ lbl_80B2646C:
 /* 80B26488  38 00 FF FF */	li r0, -1
 /* 80B2648C  3C 60 80 B2 */	lis r3, l_HIO@ha
 /* 80B26490  38 63 66 88 */	addi r3, r3, l_HIO@l
-/* 80B26494  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80B2668C */
+/* 80B26494  98 03 00 04 */	stb r0, 4(r3)
 lbl_80B26498:
 /* 80B26498  80 7F 05 B8 */	lwz r3, 0x5b8(r31)
 /* 80B2649C  38 03 00 24 */	addi r0, r3, 0x24

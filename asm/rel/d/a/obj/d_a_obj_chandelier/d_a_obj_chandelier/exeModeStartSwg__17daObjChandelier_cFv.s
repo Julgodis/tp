@@ -6,10 +6,10 @@ lbl_80BC834C:
 /* 80BC835C  7C 7F 1B 78 */	mr r31, r3
 /* 80BC8360  3C 80 80 BD */	lis r4, lit_3731@ha
 /* 80BC8364  38 84 8C DC */	addi r4, r4, lit_3731@l
-/* 80BC8368  C0 24 00 08 */	lfs f1, 8(r4)	/* effective address: 80BC8CE4 */
-/* 80BC836C  C0 44 00 0C */	lfs f2, 0xc(r4)	/* effective address: 80BC8CE8 */
-/* 80BC8370  C0 64 00 10 */	lfs f3, 0x10(r4)	/* effective address: 80BC8CEC */
-/* 80BC8374  C0 84 00 14 */	lfs f4, 0x14(r4)	/* effective address: 80BC8CF0 */
+/* 80BC8368  C0 24 00 08 */	lfs f1, 8(r4)
+/* 80BC836C  C0 44 00 0C */	lfs f2, 0xc(r4)
+/* 80BC8370  C0 64 00 10 */	lfs f3, 0x10(r4)
+/* 80BC8374  C0 84 00 14 */	lfs f4, 0x14(r4)
 /* 80BC8378  48 00 04 09 */	bl moveSwing__17daObjChandelier_cFffff
 /* 80BC837C  80 7F 06 00 */	lwz r3, 0x600(r31)
 /* 80BC8380  2C 03 00 5A */	cmpwi r3, 0x5a

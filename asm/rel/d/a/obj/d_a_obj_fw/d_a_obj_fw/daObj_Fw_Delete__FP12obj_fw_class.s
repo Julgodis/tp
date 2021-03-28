@@ -15,8 +15,8 @@ lbl_80BF2720:
 /* 80BF2754  3C 60 80 BF */	lis r3, data_80BF2C20@ha
 /* 80BF2758  98 03 2C 20 */	stb r0, data_80BF2C20@l(r3)
 lbl_80BF275C:
-/* 80BF275C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF2760  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF275C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF2760  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF2764  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BF2768  80 9F 05 E8 */	lwz r4, 0x5e8(r31)
 /* 80BF276C  4B 48 1A E4 */	b Release__4cBgSFP9dBgW_Base

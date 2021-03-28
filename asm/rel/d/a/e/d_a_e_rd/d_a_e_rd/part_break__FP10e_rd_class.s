@@ -46,7 +46,7 @@ lbl_8050ED54:
 /* 8050EDD4  7C 64 1B 78 */	mr r4, r3
 /* 8050EDD8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8050EDDC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8050EDE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8050EDE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8050EDE4  4B AF D5 F8 */	b mDoMtx_YrotS__FPA4_fs
 /* 8050EDE8  C0 3F 00 58 */	lfs f1, 0x58(r31)
 /* 8050EDEC  4B D5 8B A0 */	b cM_rndFX__Ff
@@ -79,9 +79,9 @@ lbl_8050ED54:
 /* 8050EE58  80 01 00 34 */	lwz r0, 0x34(r1)
 /* 8050EE5C  7C 7D DA 14 */	add r3, r29, r27
 /* 8050EE60  B0 03 08 6C */	sth r0, 0x86c(r3)
-/* 8050EE64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050EE68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8050EE6C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8050EE64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050EE68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8050EE6C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8050EE70  88 1D 12 57 */	lbz r0, 0x1257(r29)
 /* 8050EE74  7C 00 07 75 */	extsb. r0, r0
 /* 8050EE78  38 80 00 01 */	li r4, 1

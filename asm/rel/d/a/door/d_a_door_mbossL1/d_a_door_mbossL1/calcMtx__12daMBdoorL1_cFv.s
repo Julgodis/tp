@@ -6,12 +6,12 @@ lbl_806735F8:
 /* 80673608  7C 7F 1B 78 */	mr r31, r3
 /* 8067360C  3C 80 80 67 */	lis r4, l_staff_name@ha
 /* 80673610  38 84 75 58 */	addi r4, r4, l_staff_name@l
-/* 80673614  C0 04 00 68 */	lfs f0, 0x68(r4)	/* effective address: 806775C0 */
+/* 80673614  C0 04 00 68 */	lfs f0, 0x68(r4)
 /* 80673618  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 8067361C  C0 24 00 40 */	lfs f1, 0x40(r4)	/* effective address: 80677598 */
+/* 8067361C  C0 24 00 40 */	lfs f1, 0x40(r4)
 /* 80673620  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80673624  D0 21 00 1C */	stfs f1, 0x1c(r1)
-/* 80673628  C0 04 00 6C */	lfs f0, 0x6c(r4)	/* effective address: 806775C4 */
+/* 80673628  C0 04 00 6C */	lfs f0, 0x6c(r4)
 /* 8067362C  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80673630  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80673634  D0 21 00 10 */	stfs f1, 0x10(r1)

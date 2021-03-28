@@ -21,11 +21,11 @@ lbl_808200A0:
 /* 808200EC  4B 7E CC B0 */	b transM__14mDoMtx_stack_cFfff
 /* 808200F0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 808200F4  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 808200F8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 808200F8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 808200FC  D0 1E 00 00 */	stfs f0, 0(r30)
-/* 80820100  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80820100  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80820104  D0 1E 00 04 */	stfs f0, 4(r30)
-/* 80820108  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80820108  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8082010C  D0 1E 00 08 */	stfs f0, 8(r30)
 /* 80820110  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80820114  83 C1 00 08 */	lwz r30, 8(r1)

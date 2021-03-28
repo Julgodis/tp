@@ -44,10 +44,10 @@ lbl_8050E4C8:
 /* 8050E4CC  40 80 01 84 */	bge lbl_8050E650
 /* 8050E4D0  48 00 01 60 */	b lbl_8050E630
 lbl_8050E4D4:
-/* 8050E4D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050E4D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8050E4DC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8050E4E0  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 8050E4D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050E4D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8050E4DC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8050E4E0  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8050E4E4  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 8050E4E8  7D 89 03 A6 */	mtctr r12
 /* 8050E4EC  4E 80 04 21 */	bctrl 
@@ -69,7 +69,7 @@ lbl_8050E4D4:
 /* 8050E52C  B0 1F 16 9E */	sth r0, 0x169e(r31)
 /* 8050E530  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8050E534  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8050E538  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8050E538  80 63 00 00 */	lwz r3, 0(r3)
 /* 8050E53C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8050E540  38 80 00 1E */	li r4, 0x1e
 /* 8050E544  38 A0 00 00 */	li r5, 0

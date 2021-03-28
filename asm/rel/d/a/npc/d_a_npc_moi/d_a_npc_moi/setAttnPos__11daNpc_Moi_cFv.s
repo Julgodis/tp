@@ -9,11 +9,11 @@ lbl_80A75AB8:
 /* 80A75AD4  7C 7E 1B 78 */	mr r30, r3
 /* 80A75AD8  3C 60 80 A8 */	lis r3, m__17daNpc_Moi_Param_c@ha
 /* 80A75ADC  3B E3 AE F0 */	addi r31, r3, m__17daNpc_Moi_Param_c@l
-/* 80A75AE0  C0 1F 01 28 */	lfs f0, 0x128(r31)	/* effective address: 80A7B018 */
+/* 80A75AE0  C0 1F 01 28 */	lfs f0, 0x128(r31)
 /* 80A75AE4  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80A75AE8  C0 1F 01 2C */	lfs f0, 0x12c(r31)	/* effective address: 80A7B01C */
+/* 80A75AE8  C0 1F 01 2C */	lfs f0, 0x12c(r31)
 /* 80A75AEC  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80A75AF0  C0 1F 00 E8 */	lfs f0, 0xe8(r31)	/* effective address: 80A7AFD8 */
+/* 80A75AF0  C0 1F 00 E8 */	lfs f0, 0xe8(r31)
 /* 80A75AF4  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80A75AF8  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80A75AFC  38 80 00 00 */	li r4, 0

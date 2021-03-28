@@ -34,7 +34,7 @@ lbl_804A6D80:
 /* 804A6D98  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 804A6D9C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804A6DA0  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804A6DA4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804A6DA4  80 84 00 00 */	lwz r4, 0(r4)
 /* 804A6DA8  4B E9 F7 08 */	b PSMTXCopy
 /* 804A6DAC  3B A0 00 00 */	li r29, 0
 /* 804A6DB0  3B 60 00 00 */	li r27, 0
@@ -61,7 +61,7 @@ lbl_804A6DC8:
 /* 804A6E00  40 80 00 5C */	bge lbl_804A6E5C
 /* 804A6E04  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A6E08  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804A6E0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804A6E0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A6E10  3C 80 80 4B */	lis r4, data_804A8A3C@ha
 /* 804A6E14  38 84 8A 3C */	addi r4, r4, data_804A8A3C@l
 /* 804A6E18  7C 04 D2 AE */	lhax r0, r4, r26
@@ -84,7 +84,7 @@ lbl_804A6DC8:
 lbl_804A6E5C:
 /* 804A6E5C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804A6E60  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804A6E64  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804A6E64  80 63 00 00 */	lwz r3, 0(r3)
 /* 804A6E68  3C 80 80 4B */	lis r4, data_804A8A3C@ha
 /* 804A6E6C  38 84 8A 3C */	addi r4, r4, data_804A8A3C@l
 /* 804A6E70  7C 04 D2 AE */	lhax r0, r4, r26

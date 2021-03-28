@@ -43,8 +43,8 @@ lbl_80BAFC08:
 /* 80BAFCAC  3C 60 80 BB */	lis r3, __vt__8cM3dGPla@ha
 /* 80BAFCB0  38 03 3E 40 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80BAFCB4  90 01 00 90 */	stw r0, 0x90(r1)
-/* 80BAFCB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BAFCBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BAFCB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BAFCBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BAFCC0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BAFCC4  3C 80 80 3F */	lis r4, mLineCheck__11fopAcM_lc_c@ha
 /* 80BAFCC8  38 84 1C 48 */	addi r4, r4, mLineCheck__11fopAcM_lc_c@l
@@ -178,8 +178,8 @@ lbl_80BAFE04:
 /* 80BAFE9C  3C 60 80 BB */	lis r3, __vt__8cM3dGPla@ha
 /* 80BAFEA0  38 03 3E 40 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80BAFEA4  90 01 00 7C */	stw r0, 0x7c(r1)
-/* 80BAFEA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BAFEAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BAFEA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BAFEAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BAFEB0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BAFEB4  3C 80 80 3F */	lis r4, mLineCheck__11fopAcM_lc_c@ha
 /* 80BAFEB8  38 84 1C 48 */	addi r4, r4, mLineCheck__11fopAcM_lc_c@l
@@ -195,11 +195,11 @@ lbl_80BAFE04:
 /* 80BAFEE0  41 82 00 24 */	beq lbl_80BAFF04
 /* 80BAFEE4  3C 60 80 3F */	lis r3, mLineCheck__11fopAcM_lc_c@ha
 /* 80BAFEE8  38 63 1C 48 */	addi r3, r3, mLineCheck__11fopAcM_lc_c@l
-/* 80BAFEEC  C0 03 00 30 */	lfs f0, 0x30(r3)	/* effective address: 803F1C78 */
+/* 80BAFEEC  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 80BAFEF0  D0 01 00 48 */	stfs f0, 0x48(r1)
-/* 80BAFEF4  C0 03 00 34 */	lfs f0, 0x34(r3)	/* effective address: 803F1C7C */
+/* 80BAFEF4  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 80BAFEF8  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 80BAFEFC  C0 03 00 38 */	lfs f0, 0x38(r3)	/* effective address: 803F1C80 */
+/* 80BAFEFC  C0 03 00 38 */	lfs f0, 0x38(r3)
 /* 80BAFF00  D0 01 00 50 */	stfs f0, 0x50(r1)
 lbl_80BAFF04:
 /* 80BAFF04  38 7E 10 48 */	addi r3, r30, 0x1048

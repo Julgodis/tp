@@ -14,8 +14,8 @@ lbl_8045FA98:
 /* 8045FAC8  7F A4 00 2E */	lwzx r29, r4, r0
 /* 8045FACC  4B FF ED BD */	bl getAlwaysArcName__10daKnob20_cFv
 /* 8045FAD0  7F A4 EB 78 */	mr r4, r29
-/* 8045FAD4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8045FAD8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8045FAD4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8045FAD8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8045FADC  3C A5 00 02 */	addis r5, r5, 2
 /* 8045FAE0  38 C0 00 80 */	li r6, 0x80
 /* 8045FAE4  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -45,7 +45,7 @@ lbl_8045FA98:
 /* 8045FB44  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8045FB48  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8045FB4C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8045FB50  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8045FB50  80 63 00 00 */	lwz r3, 0(r3)
 /* 8045FB54  38 81 00 0C */	addi r4, r1, 0xc
 /* 8045FB58  38 BE 05 38 */	addi r5, r30, 0x538
 /* 8045FB5C  38 C0 00 00 */	li r6, 0
@@ -57,8 +57,8 @@ lbl_8045FA98:
 /* 8045FB74  4B E4 BE 10 */	b seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc
 /* 8045FB78  48 00 00 64 */	b lbl_8045FBDC
 lbl_8045FB7C:
-/* 8045FB7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045FB80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045FB7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045FB80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045FB84  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8045FB88  80 9E 05 A0 */	lwz r4, 0x5a0(r30)
 /* 8045FB8C  4B C1 46 C4 */	b Release__4cBgSFP9dBgW_Base
@@ -71,7 +71,7 @@ lbl_8045FB7C:
 /* 8045FBA8  90 01 00 08 */	stw r0, 8(r1)
 /* 8045FBAC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8045FBB0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8045FBB4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8045FBB4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8045FBB8  38 81 00 08 */	addi r4, r1, 8
 /* 8045FBBC  38 BE 05 38 */	addi r5, r30, 0x538
 /* 8045FBC0  38 C0 00 00 */	li r6, 0

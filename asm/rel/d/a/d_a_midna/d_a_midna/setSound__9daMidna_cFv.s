@@ -220,9 +220,9 @@ lbl_804C4ED4:
 /* 804C4ED8  41 82 00 48 */	beq lbl_804C4F20
 /* 804C4EDC  57 C5 18 38 */	slwi r5, r30, 3
 /* 804C4EE0  38 9F 05 34 */	addi r4, r31, 0x534
-/* 804C4EE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C4EE8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C4EEC  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 804C4EE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C4EE8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C4EEC  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 804C4EF0  54 00 77 7A */	rlwinm r0, r0, 0xe, 0x1d, 0x1d
 /* 804C4EF4  7C 05 02 14 */	add r0, r5, r0
 /* 804C4EF8  7C 04 00 2E */	lwzx r0, r4, r0
@@ -246,15 +246,15 @@ lbl_804C4F20:
 /* 804C4F3C  4B DF B7 94 */	b updateAnime__10Z2CreatureFff
 lbl_804C4F40:
 /* 804C4F40  3B C0 00 00 */	li r30, 0
-/* 804C4F44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C4F48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C4F44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C4F48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C4F4C  38 63 00 28 */	addi r3, r3, 0x28
 /* 804C4F50  38 80 00 03 */	li r4, 3
 /* 804C4F54  4B B6 DC 98 */	b isTransformLV__21dSv_player_status_b_cCFi
 /* 804C4F58  2C 03 00 00 */	cmpwi r3, 0
 /* 804C4F5C  41 82 00 24 */	beq lbl_804C4F80
-/* 804C4F60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C4F64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804C4F60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C4F64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804C4F68  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 804C4F6C  38 80 1E 08 */	li r4, 0x1e08
 /* 804C4F70  4B B6 FA 4C */	b isEventBit__11dSv_event_cCFUs
@@ -264,9 +264,9 @@ lbl_804C4F40:
 lbl_804C4F80:
 /* 804C4F80  57 C0 06 3F */	clrlwi. r0, r30, 0x18
 /* 804C4F84  41 82 00 40 */	beq lbl_804C4FC4
-/* 804C4F88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804C4F8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804C4F90  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 804C4F88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804C4F8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804C4F90  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 804C4F94  54 00 00 85 */	rlwinm. r0, r0, 0, 2, 2
 /* 804C4F98  40 82 00 2C */	bne lbl_804C4FC4
 /* 804C4F9C  3C 60 00 05 */	lis r3, 0x0005 /* 0x000501F0@ha */

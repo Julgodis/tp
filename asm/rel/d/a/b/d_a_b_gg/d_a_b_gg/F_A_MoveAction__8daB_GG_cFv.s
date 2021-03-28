@@ -9,12 +9,12 @@ lbl_805E5808:
 /* 805E5824  3B C3 D6 C0 */	addi r30, r3, lit_1109@l
 /* 805E5828  3C 60 80 5F */	lis r3, lit_3911@ha
 /* 805E582C  3B E3 D0 60 */	addi r31, r3, lit_3911@l
-/* 805E5830  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 805ED064 */
+/* 805E5830  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 805E5834  D0 1D 05 30 */	stfs f0, 0x530(r29)
 /* 805E5838  D0 01 00 4C */	stfs f0, 0x4c(r1)
-/* 805E583C  C0 1F 01 8C */	lfs f0, 0x18c(r31)	/* effective address: 805ED1EC */
+/* 805E583C  C0 1F 01 8C */	lfs f0, 0x18c(r31)
 /* 805E5840  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 805E5844  C0 1F 02 CC */	lfs f0, 0x2cc(r31)	/* effective address: 805ED32C */
+/* 805E5844  C0 1F 02 CC */	lfs f0, 0x2cc(r31)
 /* 805E5848  D0 01 00 54 */	stfs f0, 0x54(r1)
 /* 805E584C  3C 60 00 07 */	lis r3, 0x0007 /* 0x00070507@ha */
 /* 805E5850  38 03 05 07 */	addi r0, r3, 0x0507 /* 0x00070507@l */

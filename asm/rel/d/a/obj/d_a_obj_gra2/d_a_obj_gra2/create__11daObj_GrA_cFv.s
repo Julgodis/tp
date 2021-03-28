@@ -111,8 +111,8 @@ lbl_80C00544:
 /* 80C00550  7D 89 03 A6 */	mtctr r12
 /* 80C00554  4E 80 04 21 */	bctrl 
 /* 80C00558  7C 64 1B 78 */	mr r4, r3
-/* 80C0055C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C00560  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C0055C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C00560  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C00564  3C 63 00 02 */	addis r3, r3, 2
 /* 80C00568  3C A0 80 C1 */	lis r5, stringBase0@ha
 /* 80C0056C  38 A5 FE 14 */	addi r5, r5, stringBase0@l

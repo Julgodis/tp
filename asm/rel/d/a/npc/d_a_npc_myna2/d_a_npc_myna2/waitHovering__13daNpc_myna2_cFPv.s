@@ -7,9 +7,9 @@ lbl_80A85C60:
 /* 80A85C74  7C 7C 1B 78 */	mr r28, r3
 /* 80A85C78  3C 80 80 A9 */	lis r4, m__19daNpc_myna2_Param_c@ha
 /* 80A85C7C  3B C4 84 34 */	addi r30, r4, m__19daNpc_myna2_Param_c@l
-/* 80A85C80  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A85C84  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A85C88  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A85C80  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A85C84  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A85C88  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 80A85C8C  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80A85C90  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 80A85C94  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
@@ -208,8 +208,8 @@ lbl_80A85F34:
 /* 80A85F48  80 1C 04 A0 */	lwz r0, 0x4a0(r28)
 /* 80A85F4C  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 80A85F50  41 82 00 34 */	beq lbl_80A85F84
-/* 80A85F54  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A85F58  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A85F54  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A85F58  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A85F5C  88 9C 0E 0D */	lbz r4, 0xe0d(r28)
 /* 80A85F60  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80A85F64  7C 05 07 74 */	extsb r5, r0
@@ -225,10 +225,10 @@ lbl_80A85F84:
 /* 80A85F88  4B 6C F6 AC */	b daNpcF_chkEvtBit__FUl
 /* 80A85F8C  2C 03 00 00 */	cmpwi r3, 0
 /* 80A85F90  40 82 01 90 */	bne lbl_80A86120
-/* 80A85F94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A85F98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A85F9C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80A85FA0  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80A85F94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A85F98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A85F9C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80A85FA0  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80A85FA4  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80A85FA8  41 82 01 78 */	beq lbl_80A86120
 /* 80A85FAC  38 61 00 2C */	addi r3, r1, 0x2c

@@ -7,9 +7,9 @@ lbl_80CDBBEC:
 /* 80CDBC00  7C 7F 1B 78 */	mr r31, r3
 /* 80CDBC04  3C 60 80 CE */	lis r3, lit_3705@ha
 /* 80CDBC08  3B C3 CB F4 */	addi r30, r3, lit_3705@l
-/* 80CDBC0C  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80CDCBF4 */
+/* 80CDBC0C  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 80CDBC10  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80CDBC14  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80CDCBF8 */
+/* 80CDBC14  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 80CDBC18  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80CDBC1C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80CDBC20  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

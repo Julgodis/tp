@@ -21,8 +21,8 @@ lbl_80CA8F38:
 /* 80CA8F84  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80CA8F88  D0 1E 05 90 */	stfs f0, 0x590(r30)
 /* 80CA8F8C  38 7E 05 A4 */	addi r3, r30, 0x5a4
-/* 80CA8F90  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CA8F94  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80CA8F90  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CA8F94  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80CA8F98  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80CA8F9C  4B 3C DB 10 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80CA8FA0  38 61 00 08 */	addi r3, r1, 8
@@ -104,8 +104,8 @@ lbl_80CA90AC:
 /* 80CA90C4  38 7E 09 1C */	addi r3, r30, 0x91c
 /* 80CA90C8  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80CA90CC  4B 5C 61 10 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80CA90D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA90D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CA90D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA90D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CA90D8  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80CA90DC  38 9E 07 F8 */	addi r4, r30, 0x7f8
 /* 80CA90E0  4B 5B BA C8 */	b Set__4cCcSFP8cCcD_Obj
@@ -117,14 +117,14 @@ lbl_80CA90AC:
 /* 80CA90F8  A8 9E 09 34 */	lha r4, 0x934(r30)
 /* 80CA90FC  3C 60 80 CB */	lis r3, l_HIO@ha
 /* 80CA9100  38 63 9D F4 */	addi r3, r3, l_HIO@l
-/* 80CA9104  A8 03 00 04 */	lha r0, 4(r3)	/* effective address: 80CA9DF8 */
+/* 80CA9104  A8 03 00 04 */	lha r0, 4(r3)
 /* 80CA9108  1C 00 00 1E */	mulli r0, r0, 0x1e
 /* 80CA910C  7C 00 07 34 */	extsh r0, r0
 /* 80CA9110  7C 04 00 00 */	cmpw r4, r0
 /* 80CA9114  40 80 00 48 */	bge lbl_80CA915C
-/* 80CA9118  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CA911C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CA9120  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80CA9118  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CA911C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CA9120  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80CA9124  28 00 00 00 */	cmplwi r0, 0
 /* 80CA9128  40 82 00 0C */	bne lbl_80CA9134
 /* 80CA912C  38 04 00 01 */	addi r0, r4, 1

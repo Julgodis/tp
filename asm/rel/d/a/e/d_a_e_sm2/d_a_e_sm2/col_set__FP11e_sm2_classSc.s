@@ -26,7 +26,7 @@ lbl_8079BD14:
 lbl_8079BD74:
 /* 8079BD74  3C 60 80 7A */	lis r3, l_HIO@ha
 /* 8079BD78  38 83 DB D4 */	addi r4, r3, l_HIO@l
-/* 8079BD7C  88 04 00 08 */	lbz r0, 8(r4)	/* effective address: 8079DBDC */
+/* 8079BD7C  88 04 00 08 */	lbz r0, 8(r4)
 /* 8079BD80  28 00 00 00 */	cmplwi r0, 0
 /* 8079BD84  41 82 00 CC */	beq lbl_8079BE50
 /* 8079BD88  38 7F 06 B8 */	addi r3, r31, 0x6b8
@@ -47,7 +47,7 @@ lbl_8079BD74:
 /* 8079BDC4  38 7F 06 BC */	addi r3, r31, 0x6bc
 /* 8079BDC8  3C 80 80 7A */	lis r4, l_HIO@ha
 /* 8079BDCC  38 84 DB D4 */	addi r4, r4, l_HIO@l
-/* 8079BDD0  A8 04 00 0C */	lha r0, 0xc(r4)	/* effective address: 8079DBE0 */
+/* 8079BDD0  A8 04 00 0C */	lha r0, 0xc(r4)
 /* 8079BDD4  3C 80 80 7A */	lis r4, lit_5184@ha
 /* 8079BDD8  C8 24 D6 E0 */	lfd f1, lit_5184@l(r4)
 /* 8079BDDC  6C 00 80 00 */	xoris r0, r0, 0x8000
@@ -64,7 +64,7 @@ lbl_8079BD74:
 /* 8079BE08  38 7F 06 C0 */	addi r3, r31, 0x6c0
 /* 8079BE0C  3C 80 80 7A */	lis r4, l_HIO@ha
 /* 8079BE10  38 84 DB D4 */	addi r4, r4, l_HIO@l
-/* 8079BE14  A8 04 00 0E */	lha r0, 0xe(r4)	/* effective address: 8079DBE2 */
+/* 8079BE14  A8 04 00 0E */	lha r0, 0xe(r4)
 /* 8079BE18  3C 80 80 7A */	lis r4, lit_5184@ha
 /* 8079BE1C  C8 24 D6 E0 */	lfd f1, lit_5184@l(r4)
 /* 8079BE20  6C 00 80 00 */	xoris r0, r0, 0x8000

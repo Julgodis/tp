@@ -22,7 +22,7 @@ lbl_807AB884:
 /* 807AB8D4  C0 03 FD 34 */	lfs f0, lit_3911@l(r3)
 /* 807AB8D8  3C 60 80 7B */	lis r3, l_HIO@ha
 /* 807AB8DC  38 63 02 10 */	addi r3, r3, l_HIO@l
-/* 807AB8E0  C0 43 00 08 */	lfs f2, 8(r3)	/* effective address: 807B0218 */
+/* 807AB8E0  C0 43 00 08 */	lfs f2, 8(r3)
 /* 807AB8E4  FC 00 10 00 */	fcmpu cr0, f0, f2
 /* 807AB8E8  41 82 00 08 */	beq lbl_807AB8F0
 /* 807AB8EC  FC 20 10 90 */	fmr f1, f2

@@ -101,12 +101,12 @@ lbl_80700440:
 /* 807004CC  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 807004D0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807004D4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807004D8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807004D8  80 63 00 00 */	lwz r3, 0(r3)
 /* 807004DC  A8 9F 04 DE */	lha r4, 0x4de(r31)
 /* 807004E0  4B 90 BE FC */	b mDoMtx_YrotS__FPA4_fs
 /* 807004E4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807004E8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807004EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807004EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 807004F0  A8 9F 04 DC */	lha r4, 0x4dc(r31)
 /* 807004F4  4B 90 BE A8 */	b mDoMtx_XrotM__FPA4_fs
 /* 807004F8  38 61 00 08 */	addi r3, r1, 8

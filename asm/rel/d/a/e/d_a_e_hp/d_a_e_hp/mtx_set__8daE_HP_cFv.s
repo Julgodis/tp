@@ -21,7 +21,7 @@ lbl_806E89C0:
 /* 806E8A0C  4B 92 45 38 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 806E8A10  3C 60 80 6F */	lis r3, l_HIO@ha
 /* 806E8A14  3B A3 A4 F8 */	addi r29, r3, l_HIO@l
-/* 806E8A18  C0 3D 00 08 */	lfs f1, 8(r29)	/* effective address: 806EA500 */
+/* 806E8A18  C0 3D 00 08 */	lfs f1, 8(r29)
 /* 806E8A1C  FC 40 08 90 */	fmr f2, f1
 /* 806E8A20  FC 60 08 90 */	fmr f3, f1
 /* 806E8A24  4B 92 44 14 */	b scaleM__14mDoMtx_stack_cFfff
@@ -227,9 +227,9 @@ lbl_806E8CFC:
 /* 806E8D14  4B A7 67 10 */	b checkNowWolfEyeUp__9daPy_py_cFv
 /* 806E8D18  2C 03 00 00 */	cmpwi r3, 0
 /* 806E8D1C  41 82 00 AC */	beq lbl_806E8DC8
-/* 806E8D20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806E8D24  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 806E8D28  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 806E8D20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806E8D24  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 806E8D28  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 806E8D2C  38 00 00 FF */	li r0, 0xff
 /* 806E8D30  90 01 00 08 */	stw r0, 8(r1)
 /* 806E8D34  38 80 00 00 */	li r4, 0

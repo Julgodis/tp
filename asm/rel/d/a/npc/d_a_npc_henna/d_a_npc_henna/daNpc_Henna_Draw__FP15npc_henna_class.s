@@ -22,16 +22,16 @@ lbl_80543384:
 /* 8054339C  88 1F 06 94 */	lbz r0, 0x694(r31)
 /* 805433A0  7C 00 07 75 */	extsb. r0, r0
 /* 805433A4  40 82 00 D4 */	bne lbl_80543478
-/* 805433A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805433AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805433B0  80 63 5D 74 */	lwz r3, 0x5d74(r3)	/* effective address: 8040BF34 */
-/* 805433B4  C0 23 00 D8 */	lfs f1, 0xd8(r3)	/* effective address: 80406298 */
+/* 805433A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805433AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805433B0  80 63 5D 74 */	lwz r3, 0x5d74(r3)
+/* 805433B4  C0 23 00 D8 */	lfs f1, 0xd8(r3)
 /* 805433B8  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)
 /* 805433BC  EC 41 00 28 */	fsubs f2, f1, f0
-/* 805433C0  C0 23 00 DC */	lfs f1, 0xdc(r3)	/* effective address: 8040629C */
+/* 805433C0  C0 23 00 DC */	lfs f1, 0xdc(r3)
 /* 805433C4  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 805433C8  EC 61 00 28 */	fsubs f3, f1, f0
-/* 805433CC  C0 23 00 E0 */	lfs f1, 0xe0(r3)	/* effective address: 804062A0 */
+/* 805433CC  C0 23 00 E0 */	lfs f1, 0xe0(r3)
 /* 805433D0  C0 1F 04 D8 */	lfs f0, 0x4d8(r31)
 /* 805433D4  EC 81 00 28 */	fsubs f4, f1, f0
 /* 805433D8  C0 1E 00 28 */	lfs f0, 0x28(r30)

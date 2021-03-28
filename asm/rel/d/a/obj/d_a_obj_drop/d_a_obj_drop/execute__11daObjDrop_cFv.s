@@ -9,7 +9,7 @@ lbl_80BE1BC4:
 /* 80BE1BE0  3B E3 20 60 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80BE1BE4  3C 60 80 BE */	lis r3, struct_80BE2238+0x0@ha
 /* 80BE1BE8  38 A3 22 38 */	addi r5, r3, struct_80BE2238+0x0@l
-/* 80BE1BEC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80BE2238 */
+/* 80BE1BEC  88 05 00 00 */	lbz r0, 0(r5)
 /* 80BE1BF0  7C 00 07 75 */	extsb. r0, r0
 /* 80BE1BF4  40 82 00 70 */	bne lbl_80BE1C64
 /* 80BE1BF8  80 7F 00 20 */	lwz r3, 0x20(r31)
@@ -42,7 +42,7 @@ lbl_80BE1BC4:
 lbl_80BE1C64:
 /* 80BE1C64  3C 60 80 BE */	lis r3, struct_80BE2238+0x1@ha
 /* 80BE1C68  38 A3 22 39 */	addi r5, r3, struct_80BE2238+0x1@l
-/* 80BE1C6C  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80BE2239 */
+/* 80BE1C6C  88 05 00 00 */	lbz r0, 0(r5)
 /* 80BE1C70  7C 00 07 75 */	extsb. r0, r0
 /* 80BE1C74  40 82 00 88 */	bne lbl_80BE1CFC
 /* 80BE1C78  80 7F 00 80 */	lwz r3, 0x80(r31)

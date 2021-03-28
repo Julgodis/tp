@@ -53,7 +53,7 @@ lbl_8051D948:
 /* 8051D954  40 80 00 48 */	bge lbl_8051D99C
 /* 8051D958  3C 60 80 45 */	lis r3, m_grass__9daGrass_c@ha
 /* 8051D95C  38 63 0D B0 */	addi r3, r3, m_grass__9daGrass_c@l
-/* 8051D960  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB0 */
+/* 8051D960  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051D964  48 00 2F 35 */	bl newAnm__15dGrass_packet_cFv
 /* 8051D968  2C 03 00 00 */	cmpwi r3, 0
 /* 8051D96C  41 80 00 94 */	blt lbl_8051DA00

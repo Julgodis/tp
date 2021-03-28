@@ -10,7 +10,7 @@ lbl_8080A57C:
 /* 8080A59C  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080A5A0  3B E3 59 94 */	addi r31, r3, lit_3925@l
 /* 8080A5A4  C0 3D 06 E0 */	lfs f1, 0x6e0(r29)
-/* 8080A5A8  C0 1F 00 70 */	lfs f0, 0x70(r31)	/* effective address: 80815A04 */
+/* 8080A5A8  C0 1F 00 70 */	lfs f0, 0x70(r31)
 /* 8080A5AC  EF E1 00 28 */	fsubs f31, f1, f0
 /* 8080A5B0  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 8080A5B4  40 80 00 08 */	bge lbl_8080A5BC

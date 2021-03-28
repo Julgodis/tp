@@ -17,11 +17,11 @@ lbl_80A24654:
 /* 80A2465C  41 82 00 30 */	beq lbl_80A2468C
 /* 80A24660  3C 80 80 A2 */	lis r4, lit_5201@ha
 /* 80A24664  38 A4 5E A0 */	addi r5, r4, lit_5201@l
-/* 80A24668  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A25EA0 */
-/* 80A2466C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A25EA4 */
+/* 80A24668  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A2466C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A24670  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A24674  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A24678  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A25EA8 */
+/* 80A24678  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A2467C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A24680  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A24684  4B FF EC 01 */	bl setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i
@@ -44,11 +44,11 @@ lbl_80A24698:
 lbl_80A246C0:
 /* 80A246C0  3C 80 80 A2 */	lis r4, lit_5209@ha
 /* 80A246C4  38 A4 5E AC */	addi r5, r4, lit_5209@l
-/* 80A246C8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A25EAC */
-/* 80A246CC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A25EB0 */
+/* 80A246C8  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A246CC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A246D0  90 81 00 08 */	stw r4, 8(r1)
 /* 80A246D4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A246D8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A25EB4 */
+/* 80A246D8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A246DC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A246E0  38 81 00 08 */	addi r4, r1, 8
 /* 80A246E4  4B FF EB A1 */	bl setAction__14daNpcKasiKyu_cFM14daNpcKasiKyu_cFPCvPvi_i

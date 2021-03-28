@@ -4,8 +4,8 @@ lbl_80D3D4C4:
 /* 80D3D4CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D3D4D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D3D4D4  7C 7F 1B 78 */	mr r31, r3
-/* 80D3D4D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3D4DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D3D4D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3D4DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D3D4E0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D3D4E4  38 9F 09 2C */	addi r4, r31, 0x92c
 /* 80D3D4E8  4B 33 7C 18 */	b GetRoomId__4dBgSFRC13cBgS_PolyInfo

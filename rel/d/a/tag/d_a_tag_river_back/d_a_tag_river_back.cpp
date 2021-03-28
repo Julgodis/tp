@@ -63,9 +63,9 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagRiverBack_Execute(daTagRiverBack_c*); // 2
-static void daTagRiverBack_Delete(daTagRiverBack_c*); // 2
-static void daTagRiverBack_Create(daTagRiverBack_c*); // 2
+void daTagRiverBack_Execute(daTagRiverBack_c*); // 2
+void daTagRiverBack_Delete(daTagRiverBack_c*); // 2
+void daTagRiverBack_Create(daTagRiverBack_c*); // 2
 static void cLib_calcTimer__template0(u8*); // 2
 
 extern "C" void Create__16daTagRiverBack_cFv(); // 1
@@ -78,11 +78,12 @@ extern "C" void actionEvent__16daTagRiverBack_cFv(); // 1
 extern "C" void actionDead__16daTagRiverBack_cFv(); // 1
 extern "C" void demoProc__16daTagRiverBack_cFv(); // 1
 extern "C" void _delete__16daTagRiverBack_cFv(); // 1
-extern "C" static void daTagRiverBack_Execute__FP16daTagRiverBack_c(); // 1
-extern "C" static void daTagRiverBack_Delete__FP16daTagRiverBack_c(); // 1
-extern "C" static void daTagRiverBack_Create__FP16daTagRiverBack_c(); // 1
+extern "C" void daTagRiverBack_Execute__FP16daTagRiverBack_c(); // 1
+extern "C" void daTagRiverBack_Delete__FP16daTagRiverBack_c(); // 1
+extern "C" void daTagRiverBack_Create__FP16daTagRiverBack_c(); // 1
 extern "C" static void func_80D5F920(); // 1
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_daTagRiverBack_Method[8];
 extern "C" extern void* g_profile_Tag_RiverBack[12];
 
 // 
@@ -114,11 +115,7 @@ extern "C" void _savegpr_28(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_80D5FA68[4];
 
@@ -127,32 +124,6 @@ extern "C" extern u8 data_80D5FA68[4];
 // 
 
 /* ############################################################################################## */
-/* 80D5F944-80D5F948 0004+00 s=1 e=0 z=0  None .rodata    @3813                                                        */
-SECTION_RODATA static u32 const lit_3813 = 0x3F800000;
-
-/* 80D5F948-80D5F94C 0004+00 s=1 e=0 z=0  None .rodata    @3814                                                        */
-SECTION_RODATA static u32 const lit_3814 = 0xBF800000;
-
-/* 80D5F94C-80D5F950 0004+00 s=1 e=0 z=0  None .rodata    @3815                                                        */
-SECTION_RODATA static u8 const lit_3815[4] = {
-	0x00, 0x00, 0x00, 0x00,
-};
-
-/* 80D5F950-80D5F980 0030+00 s=5 e=0 z=0  None .rodata    None                                                         */
-SECTION_RODATA static u8 const struct_80D5F950[48] = {
-	/* 80D5F950 0007 stringBase_80D5F950 @stringBase0 */
-	0x52, 0x76, 0x42, 0x61, 0x63, 0x6B, 0x00,
-	/* 80D5F957 000B data_80D5F957 None */
-	0x52, 0x49, 0x56, 0x45, 0x52, 0x5F, 0x42, 0x41, 0x43, 0x4B, 0x00,
-	/* 80D5F962 0007 data_80D5F962 None */
-	0x72, 0x76, 0x62, 0x61, 0x63, 0x6B, 0x00,
-	/* 80D5F969 0005 data_80D5F969 None */
-	0x57, 0x41, 0x49, 0x54, 0x00,
-	/* 80D5F96E 0012 data_80D5F96E None */
-	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
-	0x00, 0x00,
-};
-
 /* 80D5F980-80D5F98C 000C+00 s=1 e=0 z=0  None .data      cNullVec__6Z2Calc                                            */
 SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -166,10 +137,10 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 };
 
 /* 80D5F9A0-80D5F9A4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)(((char*)&struct_80D5F950)+0x0) /* @stringBase0 */;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
 /* 80D5F9A4-80D5F9A8 0004+00 s=1 e=0 z=0  None .data      l_evName                                                     */
-SECTION_DATA static void* l_evName = (void*)(((char*)&struct_80D5F950)+0x7) /* None */;
+SECTION_DATA static void* l_evName = (void*)NULL;
 
 /* 80D5F2F8-80D5F360 0068+00 s=1 e=0 z=0  None .text      Create__16daTagRiverBack_cFv                                 */
 #pragma push
@@ -206,34 +177,34 @@ asm void daTagRiverBack_c::execute() {
 
 /* ############################################################################################## */
 /* 80D5F9A8-80D5F9AC 0004+00 s=1 e=0 z=0  None .data      l_staffName                                                  */
-SECTION_DATA static void* l_staffName = (void*)(((char*)&struct_80D5F950)+0x12) /* None */;
+SECTION_DATA static void* l_staffName = (void*)NULL;
 
 /* 80D5F9AC-80D5F9B8 000C+00 s=1 e=0 z=0  None .data      @3712                                                        */
 SECTION_DATA static void* lit_3712[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionWait__16daTagRiverBack_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D5F9B8-80D5F9C4 000C+00 s=1 e=0 z=0  None .data      @3713                                                        */
 SECTION_DATA static void* lit_3713[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionOrderEvent__16daTagRiverBack_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D5F9C4-80D5F9D0 000C+00 s=1 e=0 z=0  None .data      @3714                                                        */
 SECTION_DATA static void* lit_3714[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionEvent__16daTagRiverBack_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D5F9D0-80D5F9DC 000C+00 s=1 e=0 z=0  None .data      @3715                                                        */
 SECTION_DATA static void* lit_3715[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)actionDead__16daTagRiverBack_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)NULL,
 };
 
 /* 80D5F9DC-80D5FA0C 0030+00 s=1 e=0 z=0  None .data      l_func$3711                                                  */
@@ -254,7 +225,7 @@ asm void daTagRiverBack_c::event_proc_call() {
 #pragma pop
 
 
-/* 80D5F548-80D5F5BC 0074+00 s=1 e=0 z=0  None .text      actionWait__16daTagRiverBack_cFv                             */
+/* 80D5F548-80D5F5BC 0074+00 s=0 e=0 z=0  None .text      actionWait__16daTagRiverBack_cFv                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -265,7 +236,7 @@ asm void daTagRiverBack_c::actionWait() {
 #pragma pop
 
 
-/* 80D5F5BC-80D5F66C 00B0+00 s=1 e=0 z=0  None .text      actionOrderEvent__16daTagRiverBack_cFv                       */
+/* 80D5F5BC-80D5F66C 00B0+00 s=0 e=0 z=0  None .text      actionOrderEvent__16daTagRiverBack_cFv                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -276,7 +247,7 @@ asm void daTagRiverBack_c::actionOrderEvent() {
 #pragma pop
 
 
-/* 80D5F66C-80D5F70C 00A0+00 s=1 e=0 z=0  None .text      actionEvent__16daTagRiverBack_cFv                            */
+/* 80D5F66C-80D5F70C 00A0+00 s=0 e=0 z=0  None .text      actionEvent__16daTagRiverBack_cFv                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -287,17 +258,43 @@ asm void daTagRiverBack_c::actionEvent() {
 #pragma pop
 
 
-/* 80D5F70C-80D5F710 0004+00 s=1 e=0 z=0  None .text      actionDead__16daTagRiverBack_cFv                             */
+/* 80D5F70C-80D5F710 0004+00 s=0 e=0 z=0  None .text      actionDead__16daTagRiverBack_cFv                             */
 void daTagRiverBack_c::actionDead() {
 	/* empty function */
 }
 
 
 /* ############################################################################################## */
+/* 80D5F944-80D5F948 0004+00 s=1 e=0 z=0  None .rodata    @3813                                                        */
+SECTION_RODATA static u32 const lit_3813 = 0x3F800000;
+
+/* 80D5F948-80D5F94C 0004+00 s=1 e=0 z=0  None .rodata    @3814                                                        */
+SECTION_RODATA static u32 const lit_3814 = 0xBF800000;
+
+/* 80D5F94C-80D5F950 0004+00 s=1 e=0 z=0  None .rodata    @3815                                                        */
+SECTION_RODATA static u8 const lit_3815[4] = {
+	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80D5F950-80D5F980 0030+00 s=1 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA static u8 const struct_80D5F950[48] = {
+	/* 80D5F950 0007 stringBase_80D5F950 @stringBase0 */
+	0x52, 0x76, 0x42, 0x61, 0x63, 0x6B, 0x00,
+	/* 80D5F957 000B data_80D5F957 None */
+	0x52, 0x49, 0x56, 0x45, 0x52, 0x5F, 0x42, 0x41, 0x43, 0x4B, 0x00,
+	/* 80D5F962 0007 data_80D5F962 None */
+	0x72, 0x76, 0x62, 0x61, 0x63, 0x6B, 0x00,
+	/* 80D5F969 0005 data_80D5F969 None */
+	0x57, 0x41, 0x49, 0x54, 0x00,
+	/* 80D5F96E 0012 data_80D5F96E None */
+	0x53, 0x43, 0x45, 0x4E, 0x45, 0x5F, 0x43, 0x48, 0x47, 0x00, 0x54, 0x69, 0x6D, 0x65, 0x72, 0x00,
+	0x00, 0x00,
+};
+
 /* 80D5FA0C-80D5FA14 0008+00 s=1 e=0 z=0  None .data      action_table$3769                                            */
 SECTION_DATA static void* data_80D5FA0C[2] = {
-	/* 0    */ (void*)(((char*)&struct_80D5F950)+0x19) /* None */,
-	/* 1    */ (void*)(((char*)&struct_80D5F950)+0x1E) /* None */,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D5F710-80D5F88C 017C+00 s=2 e=0 z=0  None .text      demoProc__16daTagRiverBack_cFv                               */
@@ -322,33 +319,33 @@ asm void daTagRiverBack_c::_delete() {
 #pragma pop
 
 
-/* 80D5F8C0-80D5F8E0 0020+00 s=1 e=0 z=0  None .text      daTagRiverBack_Execute__FP16daTagRiverBack_c                 */
+/* 80D5F8C0-80D5F8E0 0020+00 s=0 e=0 z=0  None .text      daTagRiverBack_Execute__FP16daTagRiverBack_c                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRiverBack_Execute(daTagRiverBack_c* param_0) {
+asm void daTagRiverBack_Execute(daTagRiverBack_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Execute__FP16daTagRiverBack_c.s"
 }
 #pragma pop
 
 
-/* 80D5F8E0-80D5F900 0020+00 s=1 e=0 z=0  None .text      daTagRiverBack_Delete__FP16daTagRiverBack_c                  */
+/* 80D5F8E0-80D5F900 0020+00 s=0 e=0 z=0  None .text      daTagRiverBack_Delete__FP16daTagRiverBack_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRiverBack_Delete(daTagRiverBack_c* param_0) {
+asm void daTagRiverBack_Delete(daTagRiverBack_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Delete__FP16daTagRiverBack_c.s"
 }
 #pragma pop
 
 
-/* 80D5F900-80D5F920 0020+00 s=1 e=0 z=0  None .text      daTagRiverBack_Create__FP16daTagRiverBack_c                  */
+/* 80D5F900-80D5F920 0020+00 s=0 e=0 z=0  None .text      daTagRiverBack_Create__FP16daTagRiverBack_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagRiverBack_Create(daTagRiverBack_c* param_0) {
+asm void daTagRiverBack_Create(daTagRiverBack_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_river_back/d_a_tag_river_back/daTagRiverBack_Create__FP16daTagRiverBack_c.s"
 }
@@ -367,31 +364,31 @@ asm static void cLib_calcTimer__template0(u8* param_0) {
 
 
 /* ############################################################################################## */
-/* 80D5FA14-80D5FA34 0020+00 s=1 e=0 z=0  None .data      l_daTagRiverBack_Method                                      */
-SECTION_DATA static void* l_daTagRiverBack_Method[8] = {
-	/* 0    */ (void*)daTagRiverBack_Create__FP16daTagRiverBack_c,
-	/* 1    */ (void*)daTagRiverBack_Delete__FP16daTagRiverBack_c,
-	/* 2    */ (void*)daTagRiverBack_Execute__FP16daTagRiverBack_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D5FA14-80D5FA34 0020+00 s=0 e=0 z=0  None .data      l_daTagRiverBack_Method                                      */
+SECTION_DATA void* l_daTagRiverBack_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D5FA34-80D5FA64 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_RiverBack                                      */
+/* 80D5FA34-80D5FA64 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_RiverBack                                      */
 SECTION_DATA void* g_profile_Tag_RiverBack[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01800000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000057C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x022C0000,
-	/* 9    */ (void*)&l_daTagRiverBack_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01800000,
+	(void*)NULL,
+	(void*)0x0000057C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x022C0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 

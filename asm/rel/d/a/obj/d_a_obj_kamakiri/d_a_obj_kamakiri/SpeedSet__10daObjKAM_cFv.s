@@ -13,7 +13,7 @@ lbl_80C35BE4:
 /* 80C35C10  D0 1E 04 FC */	stfs f0, 0x4fc(r30)
 /* 80C35C14  C0 5E 05 2C */	lfs f2, 0x52c(r30)
 /* 80C35C18  C0 3E 04 FC */	lfs f1, 0x4fc(r30)
-/* 80C35C1C  C0 1F 00 50 */	lfs f0, 0x50(r31)	/* effective address: 80C38458 */
+/* 80C35C1C  C0 1F 00 50 */	lfs f0, 0x50(r31)
 /* 80C35C20  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80C35C24  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80C35C28  D0 41 00 1C */	stfs f2, 0x1c(r1)

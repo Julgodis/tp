@@ -11,7 +11,7 @@ lbl_8085824C:
 /* 80858270  38 00 00 00 */	li r0, 0
 /* 80858274  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858278  3B E3 CA 54 */	addi r31, r3, g_env_light@l
-/* 8085827C  90 1F 0E D8 */	stw r0, 0xed8(r31)	/* effective address: 8042D92C */
+/* 8085827C  90 1F 0E D8 */	stw r0, 0xed8(r31)
 /* 80858280  38 60 00 00 */	li r3, 0
 /* 80858284  38 80 C0 00 */	li r4, -16384
 /* 80858288  4B 80 33 94 */	b dKyw_evt_wind_set__Fss
@@ -31,9 +31,9 @@ lbl_808582B8:
 /* 808582B8  38 00 00 0A */	li r0, 0xa
 /* 808582BC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 808582C0  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 808582C4  98 03 0E B5 */	stb r0, 0xeb5(r3)	/* effective address: 8042D909 */
+/* 808582C4  98 03 0E B5 */	stb r0, 0xeb5(r3)
 /* 808582C8  38 00 00 32 */	li r0, 0x32
-/* 808582CC  90 03 0E B8 */	stw r0, 0xeb8(r3)	/* effective address: 8042D90C */
+/* 808582CC  90 03 0E B8 */	stw r0, 0xeb8(r3)
 /* 808582D0  38 7D 05 6C */	addi r3, r29, 0x56c
 /* 808582D4  C0 3E 00 38 */	lfs f1, 0x38(r30)
 /* 808582D8  C0 5E 00 3C */	lfs f2, 0x3c(r30)
@@ -49,9 +49,9 @@ lbl_808582F4:
 /* 808582FC  38 00 00 0A */	li r0, 0xa
 /* 80858300  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858304  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80858308  98 03 0E B5 */	stb r0, 0xeb5(r3)	/* effective address: 8042D909 */
+/* 80858308  98 03 0E B5 */	stb r0, 0xeb5(r3)
 /* 8085830C  38 00 00 32 */	li r0, 0x32
-/* 80858310  90 03 0E B8 */	stw r0, 0xeb8(r3)	/* effective address: 8042D90C */
+/* 80858310  90 03 0E B8 */	stw r0, 0xeb8(r3)
 /* 80858314  38 7D 05 6C */	addi r3, r29, 0x56c
 /* 80858318  C0 3E 00 48 */	lfs f1, 0x48(r30)
 /* 8085831C  C0 5E 00 3C */	lfs f2, 0x3c(r30)
@@ -67,9 +67,9 @@ lbl_80858338:
 /* 80858340  38 00 00 0A */	li r0, 0xa
 /* 80858344  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858348  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8085834C  98 03 0E B5 */	stb r0, 0xeb5(r3)	/* effective address: 8042D909 */
+/* 8085834C  98 03 0E B5 */	stb r0, 0xeb5(r3)
 /* 80858350  38 00 00 32 */	li r0, 0x32
-/* 80858354  90 03 0E B8 */	stw r0, 0xeb8(r3)	/* effective address: 8042D90C */
+/* 80858354  90 03 0E B8 */	stw r0, 0xeb8(r3)
 /* 80858358  38 7D 05 6C */	addi r3, r29, 0x56c
 /* 8085835C  C0 3E 00 48 */	lfs f1, 0x48(r30)
 /* 80858360  C0 5E 00 3C */	lfs f2, 0x3c(r30)
@@ -83,7 +83,7 @@ lbl_8085837C:
 /* 8085837C  38 00 00 32 */	li r0, 0x32
 /* 80858380  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80858384  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 80858388  90 03 0E B8 */	stw r0, 0xeb8(r3)	/* effective address: 8042D90C */
+/* 80858388  90 03 0E B8 */	stw r0, 0xeb8(r3)
 /* 8085838C  88 1D 05 90 */	lbz r0, 0x590(r29)
 /* 80858390  2C 00 00 02 */	cmpwi r0, 2
 /* 80858394  41 82 00 A4 */	beq lbl_80858438
@@ -152,9 +152,9 @@ lbl_80858478:
 /* 80858478  C0 3D 05 6C */	lfs f1, 0x56c(r29)
 /* 8085847C  4B 80 31 90 */	b dKyw_custom_windpower__Ff
 lbl_80858480:
-/* 80858480  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80858484  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80858488  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80858480  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80858484  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80858488  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 8085848C  28 00 00 00 */	cmplwi r0, 0
 /* 80858490  41 82 00 0C */	beq lbl_8085849C
 /* 80858494  38 00 00 01 */	li r0, 1

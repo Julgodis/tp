@@ -19,10 +19,10 @@ lbl_80C754A0:
 /* 80C754E4  38 00 00 06 */	li r0, 6
 /* 80C754E8  7C 09 03 A6 */	mtctr r0
 lbl_80C754EC:
-/* 80C754EC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C75530 */
-/* 80C754F0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C75534 */
-/* 80C754F4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C755B8 */
-/* 80C754F8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C755BC */
+/* 80C754EC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C754F0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C754F4  90 65 00 04 */	stw r3, 4(r5)
+/* 80C754F8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C754FC  42 00 FF F0 */	bdnz lbl_80C754EC
 /* 80C75500  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C75504  7C 08 03 A6 */	mtlr r0

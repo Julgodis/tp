@@ -83,9 +83,9 @@ lbl_80A24BEC:
 /* 80A24C00  B0 1F 04 DE */	sth r0, 0x4de(r31)
 /* 80A24C04  A8 1F 08 F2 */	lha r0, 0x8f2(r31)
 /* 80A24C08  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
-/* 80A24C0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A24C10  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80A24C14  88 1E 4F AD */	lbz r0, 0x4fad(r30)	/* effective address: 8040B16D */
+/* 80A24C0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A24C10  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80A24C14  88 1E 4F AD */	lbz r0, 0x4fad(r30)
 /* 80A24C18  28 00 00 00 */	cmplwi r0, 0
 /* 80A24C1C  41 82 00 58 */	beq lbl_80A24C74
 /* 80A24C20  A0 1F 00 F8 */	lhz r0, 0xf8(r31)

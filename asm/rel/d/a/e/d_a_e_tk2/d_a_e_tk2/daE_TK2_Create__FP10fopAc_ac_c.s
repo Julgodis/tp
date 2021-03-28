@@ -104,7 +104,7 @@ lbl_807BBABC:
 /* 807BBAD8  38 00 FF FF */	li r0, -1
 /* 807BBADC  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807BBAE0  38 63 BF 50 */	addi r3, r3, l_HIO@l
-/* 807BBAE4  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 807BBF54 */
+/* 807BBAE4  98 03 00 04 */	stb r0, 4(r3)
 lbl_807BBAE8:
 /* 807BBAE8  38 00 00 04 */	li r0, 4
 /* 807BBAEC  90 1E 05 5C */	stw r0, 0x55c(r30)

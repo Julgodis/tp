@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct cXyz {
+struct cSAngle {
 };
 
-struct cSAngle {
+struct cXyz {
 };
 
 struct dCamMath {
@@ -244,23 +244,23 @@ asm void dCamMath::xyzHorizontalDistance(cXyz& param_0, cXyz& param_1) {
 /* ############################################################################################## */
 /* 803AC500-803AC50C 000C+00 s=2 e=0 z=0  None .data      __vt__11dCamSetup_c                                          */
 SECTION_DATA static void* __vt__11dCamSetup_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dCamSetup_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dCamSetup_cFv,
 };
 
 /* 803AC50C-803AC518 000C+00 s=2 e=0 z=0  None .data      __vt__11dCamParam_c                                          */
 SECTION_DATA static void* __vt__11dCamParam_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11dCamParam_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11dCamParam_cFv,
 };
 
 /* 803AC518-803AC528 000C+04 s=3 e=0 z=0  None .data      __vt__9dCstick_c                                             */
 SECTION_DATA static void* __vt__9dCstick_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9dCstick_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9dCstick_cFv,
 	/* padding */
 	NULL,
 };

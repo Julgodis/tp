@@ -42,15 +42,16 @@ struct dRes_control_c {
 // Forward References:
 // 
 
-static void daSetBgObj_Delete(daSetBgObj_c*); // 2
-static void daSetBgObj_Create(fopAc_ac_c*); // 2
+void daSetBgObj_Delete(daSetBgObj_c*); // 2
+void daSetBgObj_Create(fopAc_ac_c*); // 2
 
 extern "C" void CreateInit__12daSetBgObj_cFv(); // 1
 extern "C" void create__12daSetBgObj_cFv(); // 1
 extern "C" void Delete__12daSetBgObj_cFv(); // 1
-extern "C" static void daSetBgObj_Delete__FP12daSetBgObj_c(); // 1
-extern "C" static void daSetBgObj_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daSetBgObj_Delete__FP12daSetBgObj_c(); // 1
+extern "C" void daSetBgObj_Create__FP10fopAc_ac_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daSetBgObj_Method[8];
 extern "C" extern void* g_profile_SET_BG_OBJ[12];
 
 // 
@@ -68,9 +69,7 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c(); // 1
 extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
 extern "C" void sprintf(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
@@ -132,22 +131,22 @@ asm void daSetBgObj_c::Delete() {
 #pragma pop
 
 
-/* 80485EB8-80485ED8 0020+00 s=1 e=0 z=0  None .text      daSetBgObj_Delete__FP12daSetBgObj_c                          */
+/* 80485EB8-80485ED8 0020+00 s=0 e=0 z=0  None .text      daSetBgObj_Delete__FP12daSetBgObj_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSetBgObj_Delete(daSetBgObj_c* param_0) {
+asm void daSetBgObj_Delete(daSetBgObj_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/daSetBgObj_Delete__FP12daSetBgObj_c.s"
 }
 #pragma pop
 
 
-/* 80485ED8-80485EF8 0020+00 s=1 e=0 z=0  None .text      daSetBgObj_Create__FP10fopAc_ac_c                            */
+/* 80485ED8-80485EF8 0020+00 s=0 e=0 z=0  None .text      daSetBgObj_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daSetBgObj_Create(fopAc_ac_c* param_0) {
+asm void daSetBgObj_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_set_bgobj/d_a_set_bgobj/daSetBgObj_Create__FP10fopAc_ac_c.s"
 }
@@ -155,31 +154,31 @@ asm static void daSetBgObj_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80485F1C-80485F3C 0020+00 s=1 e=0 z=0  None .data      l_daSetBgObj_Method                                          */
-SECTION_DATA static void* l_daSetBgObj_Method[8] = {
-	/* 0    */ (void*)daSetBgObj_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daSetBgObj_Delete__FP12daSetBgObj_c,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80485F1C-80485F3C 0020+00 s=0 e=0 z=0  None .data      l_daSetBgObj_Method                                          */
+SECTION_DATA void* l_daSetBgObj_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80485F3C-80485F6C 0030+00 s=0 e=0 z=1  None .data      g_profile_SET_BG_OBJ                                         */
+/* 80485F3C-80485F6C 0030+00 s=0 e=0 z=0  None .data      g_profile_SET_BG_OBJ                                         */
 SECTION_DATA void* g_profile_SET_BG_OBJ[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02DD0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000580,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02F20000,
-	/* 9    */ (void*)&l_daSetBgObj_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02DD0000,
+	(void*)NULL,
+	(void*)0x00000580,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02F20000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 

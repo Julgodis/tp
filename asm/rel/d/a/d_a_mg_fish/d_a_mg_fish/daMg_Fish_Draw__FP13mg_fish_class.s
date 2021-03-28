@@ -283,8 +283,8 @@ lbl_8052B894:
 /* 8052B8E0  7D 89 03 A6 */	mtctr r12
 /* 8052B8E4  4E 80 04 21 */	bctrl 
 /* 8052B8E8  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 8052B8EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8052B8F0  38 03 61 C0 */	addi r0, r3, struct_804061C0+0x0@l
+/* 8052B8EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8052B8F0  38 03 61 C0 */	addi r0, r3, g_dComIfG_gameInfo@l
 /* 8052B8F4  7C 60 22 14 */	add r3, r0, r4
 /* 8052B8F8  3C 63 00 01 */	addis r3, r3, 1
 /* 8052B8FC  38 63 61 54 */	addi r3, r3, 0x6154

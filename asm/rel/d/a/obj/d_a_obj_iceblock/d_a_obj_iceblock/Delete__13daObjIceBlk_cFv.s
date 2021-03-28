@@ -28,8 +28,8 @@ lbl_80C23DF4:
 /* 80C23E08  4B 64 43 CC */	b ChkUsed__9cBgW_BgIdCFv
 /* 80C23E0C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80C23E10  41 82 00 18 */	beq lbl_80C23E28
-/* 80C23E14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C23E18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C23E14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C23E18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C23E1C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C23E20  80 9F 09 44 */	lwz r4, 0x944(r31)
 /* 80C23E24  4B 45 04 2C */	b Release__4cBgSFP9dBgW_Base
@@ -42,7 +42,7 @@ lbl_80C23E28:
 /* 80C23E3C  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80C23E40  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C23E44  38 84 44 F0 */	addi r4, r4, l_arcName@l
-/* 80C23E48  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C244F0 */
+/* 80C23E48  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C23E4C  4B 40 91 BC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80C23E50  38 60 00 01 */	li r3, 1
 /* 80C23E54  83 E1 00 0C */	lwz r31, 0xc(r1)

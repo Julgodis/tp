@@ -20,7 +20,7 @@ lbl_8087730C:
 lbl_80877354:
 /* 80877354  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877358  3B C3 9B D0 */	addi r30, r3, daMP_ActivePlayer@l
-/* 8087735C  80 1E 00 A0 */	lwz r0, 0xa0(r30)	/* effective address: 80879C70 */
+/* 8087735C  80 1E 00 A0 */	lwz r0, 0xa0(r30)
 /* 80877360  2C 00 00 00 */	cmpwi r0, 0
 /* 80877364  41 82 00 20 */	beq lbl_80877384
 /* 80877368  3C 60 80 88 */	lis r3, stringBase0@ha
@@ -107,7 +107,7 @@ lbl_8087743C:
 lbl_808774A0:
 /* 808774A0  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808774A4  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 808774A8  80 83 00 40 */	lwz r4, 0x40(r3)	/* effective address: 80879C10 */
+/* 808774A8  80 83 00 40 */	lwz r4, 0x40(r3)
 /* 808774AC  3C 04 FF FF */	addis r0, r4, 0xffff
 /* 808774B0  28 00 10 00 */	cmplwi r0, 0x1000
 /* 808774B4  41 82 00 2C */	beq lbl_808774E0
@@ -153,7 +153,7 @@ lbl_8087752C:
 /* 8087754C  38 00 00 00 */	li r0, 0
 /* 80877550  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877554  3B 63 9B D0 */	addi r27, r3, daMP_ActivePlayer@l
-/* 80877558  98 1B 00 A7 */	stb r0, 0xa7(r27)	/* effective address: 80879C77 */
+/* 80877558  98 1B 00 A7 */	stb r0, 0xa7(r27)
 /* 8087755C  3A E0 00 00 */	li r23, 0
 /* 80877560  7F 7A DB 78 */	mr r26, r27
 /* 80877564  3B 18 00 14 */	addi r24, r24, 0x14
@@ -244,17 +244,17 @@ lbl_8087768C:
 /* 80877698  38 A0 00 00 */	li r5, 0
 /* 8087769C  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808776A0  38 83 9B D0 */	addi r4, r3, daMP_ActivePlayer@l
-/* 808776A4  98 A4 00 A5 */	stb r5, 0xa5(r4)	/* effective address: 80879C75 */
-/* 808776A8  98 A4 00 A4 */	stb r5, 0xa4(r4)	/* effective address: 80879C74 */
-/* 808776AC  98 A4 00 A6 */	stb r5, 0xa6(r4)	/* effective address: 80879C76 */
-/* 808776B0  93 E4 00 B0 */	stw r31, 0xb0(r4)	/* effective address: 80879C80 */
+/* 808776A4  98 A4 00 A5 */	stb r5, 0xa5(r4)
+/* 808776A8  98 A4 00 A4 */	stb r5, 0xa4(r4)
+/* 808776AC  98 A4 00 A6 */	stb r5, 0xa6(r4)
+/* 808776B0  93 E4 00 B0 */	stw r31, 0xb0(r4)
 /* 808776B4  38 00 00 01 */	li r0, 1
 /* 808776B8  90 1E 00 A0 */	stw r0, 0xa0(r30)
 /* 808776BC  3C 60 80 88 */	lis r3, lit_4983@ha
 /* 808776C0  C0 03 91 18 */	lfs f0, lit_4983@l(r3)
-/* 808776C4  D0 04 00 DC */	stfs f0, 0xdc(r4)	/* effective address: 80879CAC */
-/* 808776C8  D0 04 00 E0 */	stfs f0, 0xe0(r4)	/* effective address: 80879CB0 */
-/* 808776CC  90 A4 00 E8 */	stw r5, 0xe8(r4)	/* effective address: 80879CB8 */
+/* 808776C4  D0 04 00 DC */	stfs f0, 0xdc(r4)
+/* 808776C8  D0 04 00 E0 */	stfs f0, 0xe0(r4)
+/* 808776CC  90 A4 00 E8 */	stw r5, 0xe8(r4)
 /* 808776D0  38 60 00 01 */	li r3, 1
 lbl_808776D4:
 /* 808776D4  39 61 00 30 */	addi r11, r1, 0x30

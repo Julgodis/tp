@@ -74,8 +74,8 @@ lbl_805DAEC4:
 /* 805DAED0  4B C9 57 38 */	b cLib_addCalcAngleS2__FPssss
 /* 805DAED4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805DAED8  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 805DAEDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DAEE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805DAEDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DAEE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805DAEE4  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 805DAEE8  C3 DD 05 24 */	lfs f30, 0x524(r29)
 /* 805DAEEC  C3 FD 00 5C */	lfs f31, 0x5c(r29)

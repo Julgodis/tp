@@ -106,8 +106,8 @@ lbl_80CCA0C4:
 /* 80CCA0FC  4B 36 59 9C */	b dComIfGp_TargetWarpPt_set__FUc
 /* 80CCA100  48 00 01 28 */	b lbl_80CCA228
 lbl_80CCA104:
-/* 80CCA104  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCA108  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80CCA104  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCA108  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80CCA10C  3B 9D 4F F8 */	addi r28, r29, 0x4ff8
 /* 80CCA110  7F 83 E3 78 */	mr r3, r28
 /* 80CCA114  A8 9E 06 4C */	lha r4, 0x64c(r30)
@@ -117,9 +117,9 @@ lbl_80CCA104:
 /* 80CCA124  38 7D 4E C8 */	addi r3, r29, 0x4ec8
 /* 80CCA128  7F C4 F3 78 */	mr r4, r30
 /* 80CCA12C  4B 37 95 30 */	b setPt2__14dEvt_control_cFPv
-/* 80CCA130  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCA134  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CCA138  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CCA130  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCA134  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCA138  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CCA13C  28 03 00 00 */	cmplwi r3, 0
 /* 80CCA140  41 82 00 38 */	beq lbl_80CCA178
 /* 80CCA144  C0 1F 00 20 */	lfs f0, 0x20(r31)
@@ -139,7 +139,7 @@ lbl_80CCA178:
 /* 80CCA178  7F 83 E3 78 */	mr r3, r28
 /* 80CCA17C  3C 80 80 CD */	lis r4, l_staffName@ha
 /* 80CCA180  38 84 B1 84 */	addi r4, r4, l_staffName@l
-/* 80CCA184  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CCB184 */
+/* 80CCA184  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CCA188  38 A0 00 00 */	li r5, 0
 /* 80CCA18C  38 C0 00 00 */	li r6, 0
 /* 80CCA190  4B 37 D9 8C */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci
@@ -151,9 +151,9 @@ lbl_80CCA1A4:
 /* 80CCA1A4  A0 1E 00 FA */	lhz r0, 0xfa(r30)
 /* 80CCA1A8  60 00 00 01 */	ori r0, r0, 1
 /* 80CCA1AC  B0 1E 00 FA */	sth r0, 0xfa(r30)
-/* 80CCA1B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCA1B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CCA1B8  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80CCA1B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCA1B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CCA1B8  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80CCA1BC  28 03 00 00 */	cmplwi r3, 0
 /* 80CCA1C0  41 82 00 44 */	beq lbl_80CCA204
 /* 80CCA1C4  81 83 06 28 */	lwz r12, 0x628(r3)

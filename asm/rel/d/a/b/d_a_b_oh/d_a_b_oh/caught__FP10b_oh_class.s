@@ -44,18 +44,18 @@ lbl_8061C0CC:
 /* 8061C110  38 00 00 15 */	li r0, 0x15
 /* 8061C114  3C 60 80 62 */	lis r3, boss@ha
 /* 8061C118  38 83 DB D4 */	addi r4, r3, boss@l
-/* 8061C11C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8061DBD4 */
-/* 8061C120  90 03 47 38 */	stw r0, 0x4738(r3)	/* effective address: 80624738 */
+/* 8061C11C  80 64 00 00 */	lwz r3, 0(r4)
+/* 8061C120  90 03 47 38 */	stw r0, 0x4738(r3)
 /* 8061C124  38 00 00 00 */	li r0, 0
-/* 8061C128  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8061DBD4 */
-/* 8061C12C  98 03 47 3C */	stb r0, 0x473c(r3)	/* effective address: 8062473C */
+/* 8061C128  80 64 00 00 */	lwz r3, 0(r4)
+/* 8061C12C  98 03 47 3C */	stb r0, 0x473c(r3)
 /* 8061C130  3C 60 00 07 */	lis r3, 0x0007 /* 0x0007034D@ha */
 /* 8061C134  38 03 03 4D */	addi r0, r3, 0x034D /* 0x0007034D@l */
 /* 8061C138  90 01 00 08 */	stw r0, 8(r1)
-/* 8061C13C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8061DBD4 */
+/* 8061C13C  80 64 00 00 */	lwz r3, 0(r4)
 /* 8061C140  38 81 00 08 */	addi r4, r1, 8
 /* 8061C144  38 A0 FF FF */	li r5, -1
-/* 8061C148  85 83 59 E0 */	lwzu r12, 0x59e0(r3)	/* effective address: 000759E0 */
+/* 8061C148  85 83 59 E0 */	lwzu r12, 0x59e0(r3)
 /* 8061C14C  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 8061C150  7D 89 03 A6 */	mtctr r12
 /* 8061C154  4E 80 04 21 */	bctrl 
@@ -68,8 +68,8 @@ lbl_8061C158:
 /* 8061C16C  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8061C170  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8061C174  D0 21 00 14 */	stfs f1, 0x14(r1)
-/* 8061C178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8061C17C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8061C178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8061C17C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8061C180  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8061C184  38 80 00 03 */	li r4, 3
 /* 8061C188  38 A0 00 1F */	li r5, 0x1f
@@ -81,8 +81,8 @@ lbl_8061C194:
 /* 8061C19C  40 82 00 44 */	bne lbl_8061C1E0
 /* 8061C1A0  3C 60 80 62 */	lis r3, boss@ha
 /* 8061C1A4  38 83 DB D4 */	addi r4, r3, boss@l
-/* 8061C1A8  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8061DBD4 */
-/* 8061C1AC  A8 03 5C 80 */	lha r0, 0x5c80(r3)	/* effective address: 80625C80 */
+/* 8061C1A8  80 64 00 00 */	lwz r3, 0(r4)
+/* 8061C1AC  A8 03 5C 80 */	lha r0, 0x5c80(r3)
 /* 8061C1B0  2C 00 00 00 */	cmpwi r0, 0
 /* 8061C1B4  41 82 00 18 */	beq lbl_8061C1CC
 /* 8061C1B8  38 00 00 03 */	li r0, 3

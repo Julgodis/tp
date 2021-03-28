@@ -8,7 +8,7 @@ lbl_80B0D5A4:
 /* 80B0D5BC  7C 9F 23 78 */	mr r31, r4
 /* 80B0D5C0  3C 80 80 B1 */	lis r4, l_arcName@ha
 /* 80B0D5C4  38 84 0A B8 */	addi r4, r4, l_arcName@l
-/* 80B0D5C8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B10AB8 */
+/* 80B0D5C8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B0D5CC  57 FD 18 38 */	slwi r29, r31, 3
 /* 80B0D5D0  3C A0 80 B1 */	lis r5, l_btpGetParamList@ha
 /* 80B0D5D4  38 A5 0A 98 */	addi r5, r5, l_btpGetParamList@l

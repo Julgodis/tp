@@ -9,13 +9,13 @@ lbl_80CAE510:
 /* 80CAE52C  3B E3 F0 1C */	addi r31, r3, l_dzbIdx@l
 /* 80CAE530  38 00 00 00 */	li r0, 0
 /* 80CAE534  98 1E 0D 24 */	stb r0, 0xd24(r30)
-/* 80CAE538  C0 1F 00 78 */	lfs f0, 0x78(r31)	/* effective address: 80CAF094 */
+/* 80CAE538  C0 1F 00 78 */	lfs f0, 0x78(r31)
 /* 80CAE53C  D0 1E 05 30 */	stfs f0, 0x530(r30)
-/* 80CAE540  80 7F 00 6C */	lwz r3, 0x6c(r31)	/* effective address: 80CAF088 */
-/* 80CAE544  80 1F 00 70 */	lwz r0, 0x70(r31)	/* effective address: 80CAF08C */
+/* 80CAE540  80 7F 00 6C */	lwz r3, 0x6c(r31)
+/* 80CAE544  80 1F 00 70 */	lwz r0, 0x70(r31)
 /* 80CAE548  90 61 00 08 */	stw r3, 8(r1)
 /* 80CAE54C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CAE550  80 1F 00 74 */	lwz r0, 0x74(r31)	/* effective address: 80CAF090 */
+/* 80CAE550  80 1F 00 74 */	lwz r0, 0x74(r31)
 /* 80CAE554  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CAE558  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80CAE55C  4B 35 E8 08 */	b transS__14mDoMtx_stack_cFRC4cXyz

@@ -7,9 +7,9 @@ lbl_80BE24F8:
 /* 80BE250C  7C 7E 1B 78 */	mr r30, r3
 /* 80BE2510  3C 60 80 BE */	lis r3, lit_3673@ha
 /* 80BE2514  3B E3 2F 98 */	addi r31, r3, lit_3673@l
-/* 80BE2518  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE251C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BE2520  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BE2518  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE251C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BE2520  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80BE2524  3B 80 00 00 */	li r28, 0
 /* 80BE2528  38 00 00 00 */	li r0, 0
 /* 80BE252C  98 1E 06 30 */	stb r0, 0x630(r30)

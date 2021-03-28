@@ -200,7 +200,7 @@ lbl_8069B724:
 /* 8069B738  38 7E 06 90 */	addi r3, r30, 0x690
 /* 8069B73C  3C 80 80 6A */	lis r4, l_HIO@ha
 /* 8069B740  38 84 1D A8 */	addi r4, r4, l_HIO@l
-/* 8069B744  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 806A1DB4 */
+/* 8069B744  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8069B748  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 8069B74C  C0 7F 00 78 */	lfs f3, 0x78(r31)
 /* 8069B750  4B BD 42 EC */	b cLib_addCalc2__FPffff

@@ -7,7 +7,7 @@ lbl_80B1376C:
 /* 80B13780  7C 7D 1B 78 */	mr r29, r3
 /* 80B13784  3C 60 80 B1 */	lis r3, lit_3648@ha
 /* 80B13788  3B E3 42 DC */	addi r31, r3, lit_3648@l
-/* 80B1378C  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80B142E4 */
+/* 80B1378C  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80B13790  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80B13794  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80B13798  D0 01 00 24 */	stfs f0, 0x24(r1)
@@ -54,7 +54,7 @@ lbl_80B13824:
 /* 80B13828  4B 4F 97 1C */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 80B1382C  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B13830  38 63 45 10 */	addi r3, r3, l_HIO@l
-/* 80B13834  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80B14518 */
+/* 80B13834  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80B13838  FC 40 08 90 */	fmr f2, f1
 /* 80B1383C  FC 60 08 90 */	fmr f3, f1
 /* 80B13840  4B 4F 95 F8 */	b scaleM__14mDoMtx_stack_cFfff
@@ -206,7 +206,7 @@ lbl_80B13A44:
 /* 80B13A6C  38 63 03 30 */	addi r3, r3, 0x330
 /* 80B13A70  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80B13A74  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80B13A78  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80B13A78  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B13A7C  4B 83 2A 34 */	b PSMTXCopy
 /* 80B13A80  38 61 00 1C */	addi r3, r1, 0x1c
 /* 80B13A84  38 9D 05 38 */	addi r4, r29, 0x538
@@ -230,7 +230,7 @@ lbl_80B13A44:
 /* 80B13ACC  C0 3F 00 20 */	lfs f1, 0x20(r31)
 /* 80B13AD0  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B13AD4  3B C3 45 10 */	addi r30, r3, l_HIO@l
-/* 80B13AD8  C0 1E 00 0C */	lfs f0, 0xc(r30)	/* effective address: 80B1451C */
+/* 80B13AD8  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 80B13ADC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80B13AE0  EC 02 00 2A */	fadds f0, f2, f0
 /* 80B13AE4  D0 01 00 14 */	stfs f0, 0x14(r1)
@@ -242,8 +242,8 @@ lbl_80B13A44:
 /* 80B13AFC  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 80B13B00  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80B13B04  4B 75 BC 04 */	b SetR__8cM3dGSphFf
-/* 80B13B08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B13B0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B13B08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B13B0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B13B10  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80B13B14  38 9D 08 8C */	addi r4, r29, 0x88c
 /* 80B13B18  4B 75 10 90 */	b Set__4cCcSFP8cCcD_Obj

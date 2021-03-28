@@ -82,8 +82,8 @@ lbl_80AE02A8:
 lbl_80AE02EC:
 /* 80AE02EC  38 00 00 0A */	li r0, 0xa
 /* 80AE02F0  90 1F 05 5C */	stw r0, 0x55c(r31)
-/* 80AE02F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE02F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AE02F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE02F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AE02FC  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80AE0300  3C 80 80 AE */	lis r4, struct_80AE24C4+0x0@ha
 /* 80AE0304  38 84 24 C4 */	addi r4, r4, struct_80AE24C4+0x0@l
@@ -91,9 +91,9 @@ lbl_80AE02EC:
 /* 80AE030C  4B 88 86 88 */	b strcmp
 /* 80AE0310  2C 03 00 00 */	cmpwi r3, 0
 /* 80AE0314  40 82 00 30 */	bne lbl_80AE0344
-/* 80AE0318  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AE031C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AE0320  88 03 4E 0A */	lbz r0, 0x4e0a(r3)	/* effective address: 8040AFCA */
+/* 80AE0318  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AE031C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AE0320  88 03 4E 0A */	lbz r0, 0x4e0a(r3)
 /* 80AE0324  2C 00 00 05 */	cmpwi r0, 5
 /* 80AE0328  40 82 00 1C */	bne lbl_80AE0344
 /* 80AE032C  38 60 00 00 */	li r3, 0
@@ -138,8 +138,8 @@ lbl_80AE03B8:
 /* 80AE03B8  7F E3 FB 78 */	mr r3, r31
 /* 80AE03BC  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80AE03C0  38 A4 1F DC */	addi r5, r4, m__17daNpcShad_Param_c@l
-/* 80AE03C4  A8 85 00 4C */	lha r4, 0x4c(r5)	/* effective address: 80AE2028 */
-/* 80AE03C8  A8 A5 00 4E */	lha r5, 0x4e(r5)	/* effective address: 80AE202A */
+/* 80AE03C4  A8 85 00 4C */	lha r4, 0x4c(r5)
+/* 80AE03C8  A8 A5 00 4E */	lha r5, 0x4e(r5)
 /* 80AE03CC  4B 67 3E AC */	b getDistTableIdx__8daNpcF_cFii
 /* 80AE03D0  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 80AE03D4  88 1F 05 44 */	lbz r0, 0x544(r31)
@@ -147,21 +147,21 @@ lbl_80AE03B8:
 /* 80AE03DC  7F E3 FB 78 */	mr r3, r31
 /* 80AE03E0  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80AE03E4  38 A4 1F DC */	addi r5, r4, m__17daNpcShad_Param_c@l
-/* 80AE03E8  A8 85 00 48 */	lha r4, 0x48(r5)	/* effective address: 80AE2024 */
-/* 80AE03EC  A8 A5 00 4A */	lha r5, 0x4a(r5)	/* effective address: 80AE2026 */
+/* 80AE03E8  A8 85 00 48 */	lha r4, 0x48(r5)
+/* 80AE03EC  A8 A5 00 4A */	lha r5, 0x4a(r5)
 /* 80AE03F0  4B 67 3E 88 */	b getDistTableIdx__8daNpcF_cFii
 /* 80AE03F4  98 7F 05 47 */	stb r3, 0x547(r31)
 lbl_80AE03F8:
 /* 80AE03F8  38 7F 07 E4 */	addi r3, r31, 0x7e4
 /* 80AE03FC  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80AE0400  38 84 1F DC */	addi r4, r4, m__17daNpcShad_Param_c@l
-/* 80AE0404  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 80AE1FF8 */
+/* 80AE0404  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80AE0408  4B 59 5B 38 */	b SetWallR__12dBgS_AcchCirFf
 /* 80AE040C  3C 60 80 AE */	lis r3, m__17daNpcShad_Param_c@ha
 /* 80AE0410  38 63 1F DC */	addi r3, r3, m__17daNpcShad_Param_c@l
-/* 80AE0414  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80AE1FF4 */
+/* 80AE0414  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80AE0418  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 80AE041C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80AE1FE0 */
+/* 80AE041C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80AE0420  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80AE0424  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80AE0428  80 01 00 24 */	lwz r0, 0x24(r1)

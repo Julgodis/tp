@@ -9,7 +9,7 @@ lbl_80D25B04:
 /* 80D25B20  3B C4 6B 5C */	addi r30, r4, l_midna_offset@l
 /* 80D25B24  3C 80 80 45 */	lis r4, m_midnaActor__9daPy_py_c@ha
 /* 80D25B28  38 84 10 18 */	addi r4, r4, m_midnaActor__9daPy_py_c@l
-/* 80D25B2C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80451018 */
+/* 80D25B2C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D25B30  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 80D25B34  28 00 00 01 */	cmplwi r0, 1
 /* 80D25B38  40 82 01 4C */	bne lbl_80D25C84

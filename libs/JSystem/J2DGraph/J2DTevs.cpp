@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct J2DTextureSRTInfo {
+struct Vec {
 };
 
-struct Vec {
+struct J2DTextureSRTInfo {
 };
 
 struct J2DTexMtx {

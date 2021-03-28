@@ -11,7 +11,7 @@ lbl_80877FB8:
 /* 80877FDC  7C BD 2B 78 */	mr r29, r5
 /* 80877FE0  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877FE4  3B C3 9B D0 */	addi r30, r3, daMP_ActivePlayer@l
-/* 80877FE8  80 1E 00 A0 */	lwz r0, 0xa0(r30)	/* effective address: 80879C70 */
+/* 80877FE8  80 1E 00 A0 */	lwz r0, 0xa0(r30)
 /* 80877FEC  2C 00 00 00 */	cmpwi r0, 0
 /* 80877FF0  41 82 02 8C */	beq lbl_8087827C
 /* 80877FF4  88 1E 00 A4 */	lbz r0, 0xa4(r30)
@@ -54,15 +54,15 @@ lbl_80878030:
 lbl_80878084:
 /* 80878084  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80878088  38 83 9B D0 */	addi r4, r3, daMP_ActivePlayer@l
-/* 8087808C  80 04 00 64 */	lwz r0, 0x64(r4)	/* effective address: 80879C34 */
+/* 8087808C  80 04 00 64 */	lwz r0, 0x64(r4)
 /* 80878090  3C 60 80 94 */	lis r3, daMP_WorkBuffer@ha
 /* 80878094  84 A3 48 A0 */	lwzu r5, daMP_WorkBuffer@l(r3)
 /* 80878098  7C 00 2A 14 */	add r0, r0, r5
-/* 8087809C  90 04 00 B8 */	stw r0, 0xb8(r4)	/* effective address: 80879C88 */
-/* 808780A0  93 E4 00 C0 */	stw r31, 0xc0(r4)	/* effective address: 80879C90 */
-/* 808780A4  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: 80940004 */
+/* 8087809C  90 04 00 B8 */	stw r0, 0xb8(r4)
+/* 808780A0  93 E4 00 C0 */	stw r31, 0xc0(r4)
+/* 808780A4  80 03 00 04 */	lwz r0, 4(r3)
 /* 808780A8  7C 05 00 50 */	subf r0, r5, r0
-/* 808780AC  90 04 00 BC */	stw r0, 0xbc(r4)	/* effective address: 80879C8C */
+/* 808780AC  90 04 00 BC */	stw r0, 0xbc(r4)
 /* 808780B0  48 00 00 34 */	b lbl_808780E4
 lbl_808780B4:
 /* 808780B4  3C 60 80 88 */	lis r3, stringBase0@ha
@@ -81,7 +81,7 @@ lbl_808780D0:
 lbl_808780E4:
 /* 808780E4  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 808780E8  3B E3 9B D0 */	addi r31, r3, daMP_ActivePlayer@l
-/* 808780EC  88 1F 00 A7 */	lbz r0, 0xa7(r31)	/* effective address: 80879C77 */
+/* 808780EC  88 1F 00 A7 */	lbz r0, 0xa7(r31)
 /* 808780F0  28 00 00 00 */	cmplwi r0, 0
 /* 808780F4  41 82 00 38 */	beq lbl_8087812C
 /* 808780F8  2C 1D 00 00 */	cmpwi r29, 0
@@ -103,10 +103,10 @@ lbl_8087812C:
 /* 8087812C  57 80 07 FE */	clrlwi r0, r28, 0x1f
 /* 80878130  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80878134  3B 83 9B D0 */	addi r28, r3, daMP_ActivePlayer@l
-/* 80878138  98 1C 00 A6 */	stb r0, 0xa6(r28)	/* effective address: 80879C76 */
+/* 80878138  98 1C 00 A6 */	stb r0, 0xa6(r28)
 /* 8087813C  38 00 00 00 */	li r0, 0
-/* 80878140  90 1C 00 D8 */	stw r0, 0xd8(r28)	/* effective address: 80879CA8 */
-/* 80878144  80 1C 00 B0 */	lwz r0, 0xb0(r28)	/* effective address: 80879C80 */
+/* 80878140  90 1C 00 D8 */	stw r0, 0xd8(r28)
+/* 80878144  80 1C 00 B0 */	lwz r0, 0xb0(r28)
 /* 80878148  2C 00 00 00 */	cmpwi r0, 0
 /* 8087814C  41 82 00 84 */	beq lbl_808781D0
 /* 80878150  7F 83 E3 78 */	mr r3, r28
@@ -129,7 +129,7 @@ lbl_8087818C:
 /* 80878190  80 9C 00 B4 */	lwz r4, 0xb4(r28)
 /* 80878194  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80878198  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 8087819C  80 03 00 B8 */	lwz r0, 0xb8(r3)	/* effective address: 80879C88 */
+/* 8087819C  80 03 00 B8 */	lwz r0, 0xb8(r3)
 /* 808781A0  7C 04 02 14 */	add r0, r4, r0
 /* 808781A4  7F A5 00 50 */	subf r29, r5, r0
 /* 808781A8  38 60 00 14 */	li r3, 0x14
@@ -179,11 +179,11 @@ lbl_80878238:
 /* 80878240  38 00 00 00 */	li r0, 0
 /* 80878244  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80878248  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 8087824C  98 03 00 A5 */	stb r0, 0xa5(r3)	/* effective address: 80879C75 */
-/* 80878250  90 03 00 F8 */	stw r0, 0xf8(r3)	/* effective address: 80879CC8 */
-/* 80878254  90 03 00 FC */	stw r0, 0xfc(r3)	/* effective address: 80879CCC */
-/* 80878258  90 03 00 F0 */	stw r0, 0xf0(r3)	/* effective address: 80879CC0 */
-/* 8087825C  90 03 00 F4 */	stw r0, 0xf4(r3)	/* effective address: 80879CC4 */
+/* 8087824C  98 03 00 A5 */	stb r0, 0xa5(r3)
+/* 80878250  90 03 00 F8 */	stw r0, 0xf8(r3)
+/* 80878254  90 03 00 FC */	stw r0, 0xfc(r3)
+/* 80878258  90 03 00 F0 */	stw r0, 0xf0(r3)
+/* 8087825C  90 03 00 F4 */	stw r0, 0xf4(r3)
 /* 80878260  3C 60 80 87 */	lis r3, daMP_PlayControl__FUl@ha
 /* 80878264  38 63 7C 8C */	addi r3, r3, daMP_PlayControl__FUl@l
 /* 80878268  4B AD 3F BC */	b VISetPostRetraceCallback

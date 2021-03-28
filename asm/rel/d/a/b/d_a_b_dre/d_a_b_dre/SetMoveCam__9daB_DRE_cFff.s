@@ -11,9 +11,9 @@ lbl_805C8458:
 /* 805C847C  7C 7E 1B 78 */	mr r30, r3
 /* 805C8480  FF C0 08 90 */	fmr f30, f1
 /* 805C8484  FF E0 10 90 */	fmr f31, f2
-/* 805C8488  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805C848C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805C8490  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805C8488  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C848C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805C8490  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805C8494  7C 00 07 74 */	extsb r0, r0
 /* 805C8498  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805C849C  7C 63 02 14 */	add r3, r3, r0

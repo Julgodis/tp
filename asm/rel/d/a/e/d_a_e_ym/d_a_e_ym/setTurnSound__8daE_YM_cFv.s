@@ -9,7 +9,7 @@ lbl_80809EF0:
 /* 80809F0C  3B E3 59 94 */	addi r31, r3, lit_3925@l
 /* 80809F10  80 7E 05 B4 */	lwz r3, 0x5b4(r30)
 /* 80809F14  38 63 00 0C */	addi r3, r3, 0xc
-/* 80809F18  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 8081599C */
+/* 80809F18  C0 3F 00 08 */	lfs f1, 8(r31)
 /* 80809F1C  4B B1 E5 10 */	b checkPass__12J3DFrameCtrlFf
 /* 80809F20  2C 03 00 00 */	cmpwi r3, 0
 /* 80809F24  40 82 00 34 */	bne lbl_80809F58

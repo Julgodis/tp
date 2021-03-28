@@ -39,8 +39,8 @@ lbl_80C2350C:
 /* 80C235A0  4B 72 3B 38 */	b PSVECScale
 /* 80C235A4  3A E0 00 00 */	li r23, 0
 /* 80C235A8  3B 60 00 00 */	li r27, 0
-/* 80C235AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C235B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C235AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C235B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C235B4  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 80C235B8  3B 01 00 98 */	addi r24, r1, 0x98
 /* 80C235BC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

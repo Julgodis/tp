@@ -74,7 +74,7 @@ lbl_80A279D0:
 /* 80A27A20  40 82 00 14 */	bne lbl_80A27A34
 /* 80A27A24  3C 60 80 A3 */	lis r3, m__21daNpcKasiMich_Param_c@ha
 /* 80A27A28  38 63 A0 4C */	addi r3, r3, m__21daNpcKasiMich_Param_c@l
-/* 80A27A2C  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 80A2A090 */
+/* 80A27A2C  C0 23 00 44 */	lfs f1, 0x44(r3)
 /* 80A27A30  48 00 00 20 */	b lbl_80A27A50
 lbl_80A27A34:
 /* 80A27A34  3C 60 80 A3 */	lis r3, lit_4449@ha

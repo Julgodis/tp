@@ -8,7 +8,7 @@ lbl_80C60E90:
 /* 80C60EA8  38 C3 1B BC */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80C60EAC  3C 60 80 C6 */	lis r3, data_80C61D38@ha
 /* 80C60EB0  38 A3 1D 38 */	addi r5, r3, data_80C61D38@l
-/* 80C60EB4  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C61D38 */
+/* 80C60EB4  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C60EB8  7C 00 07 75 */	extsb. r0, r0
 /* 80C60EBC  40 82 00 58 */	bne lbl_80C60F14
 /* 80C60EC0  80 66 00 24 */	lwz r3, 0x24(r6)

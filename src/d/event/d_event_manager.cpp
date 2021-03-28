@@ -17,6 +17,18 @@ struct dEvent_exception_c {
 	/* 80046480 */ void getEventName();
 };
 
+struct dEvDtStaff_c {
+	/* 80044134 */ void init();
+};
+
+struct dEvDtEvent_c {
+	/* 80043E78 */ void finishCheck();
+	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
+};
+
+struct dEvDtData_c {
+};
+
 struct Vec {
 };
 
@@ -25,18 +37,6 @@ struct cXyz {
 };
 
 struct fopAc_ac_c {
-};
-
-struct dEvDtData_c {
-};
-
-struct dEvDtStaff_c {
-	/* 80044134 */ void init();
-};
-
-struct dEvDtEvent_c {
-	/* 80043E78 */ void finishCheck();
-	/* 80043F70 */ void specialStaffProc(dEvDtStaff_c*);
 };
 
 struct dEvent_manager_c {
@@ -368,20 +368,20 @@ SECTION_DEAD static char const* const pad_8037A104 = "\0\0\0";
 
 /* 803A8270-803A82A8 0038+00 s=1 e=0 z=0  None .data      soecial_names$3966                                           */
 SECTION_DATA static void* data_803A8270[14] = {
-	/* 0    */ (void*)&d_event_d_event_manager__stringBase0,
-	/* 1    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x10),
-	/* 2    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x1E),
-	/* 3    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x2C),
-	/* 4    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x3F),
-	/* 5    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x50),
-	/* 6    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x63),
-	/* 7    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x6E),
-	/* 8    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x7B),
-	/* 9    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x89),
-	/* 10   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x94),
-	/* 11   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xA3),
-	/* 12   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xB2),
-	/* 13   */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0xC3),
+	(void*)&d_event_d_event_manager__stringBase0,
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x10),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x1E),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x2C),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x3F),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x50),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x63),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x6E),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x7B),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x89),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x94),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0xA3),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0xB2),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0xC3),
 };
 
 /* 80046480-800465E8 0168+00 s=1 e=0 z=0  None .text      getEventName__18dEvent_exception_cFv                         */
@@ -970,9 +970,9 @@ asm void dEvent_manager_c::specialCast(char const* param_0, int param_1) {
 /* ############################################################################################## */
 /* 803A82A8-803A82B8 000C+04 s=1 e=0 z=0  None .data      action_table$5100                                            */
 SECTION_DATA static void* data_803A82A8[3 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x18B),
-	/* 1    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x190),
-	/* 2    */ (void*)(((char*)&d_event_d_event_manager__stringBase0)+0x196),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x18B),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x190),
+	(void*)(((char*)&d_event_d_event_manager__stringBase0)+0x196),
 	/* padding */
 	NULL,
 };

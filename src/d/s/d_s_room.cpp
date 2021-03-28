@@ -450,11 +450,11 @@ asm static void phase_4(room_of_scene_class* param_0) {
 /* ############################################################################################## */
 /* 803C3260-803C3274 0014+00 s=1 e=0 z=0  None .data      l_method$4056                                                */
 SECTION_DATA static void* data_803C3260[5] = {
-	/* 0    */ (void*)phase_0__FP19room_of_scene_class,
-	/* 1    */ (void*)phase_1__FP19room_of_scene_class,
-	/* 2    */ (void*)phase_2__FP19room_of_scene_class,
-	/* 3    */ (void*)phase_3__FP19room_of_scene_class,
-	/* 4    */ (void*)phase_4__FP19room_of_scene_class,
+	(void*)phase_0__FP19room_of_scene_class,
+	(void*)phase_1__FP19room_of_scene_class,
+	(void*)phase_2__FP19room_of_scene_class,
+	(void*)phase_3__FP19room_of_scene_class,
+	(void*)phase_4__FP19room_of_scene_class,
 };
 
 /* 8025BB48-8025BB78 0030+00 s=1 e=0 z=0  None .text      dScnRoom_Create__FP11scene_class                             */
@@ -471,24 +471,24 @@ asm static void dScnRoom_Create(scene_class* param_0) {
 /* ############################################################################################## */
 /* 803C3274-803C3288 0014+00 s=1 e=0 z=0  None .data      l_dScnRoom_Method                                            */
 SECTION_DATA static void* l_dScnRoom_Method[5] = {
-	/* 0    */ (void*)dScnRoom_Create__FP11scene_class,
-	/* 1    */ (void*)dScnRoom_Delete__FP19room_of_scene_class,
-	/* 2    */ (void*)dScnRoom_Execute__FP19room_of_scene_class,
-	/* 3    */ (void*)dScnRoom_IsDelete__FP19room_of_scene_class,
-	/* 4    */ (void*)dScnRoom_Draw__FP19room_of_scene_class,
+	(void*)dScnRoom_Create__FP11scene_class,
+	(void*)dScnRoom_Delete__FP19room_of_scene_class,
+	(void*)dScnRoom_Execute__FP19room_of_scene_class,
+	(void*)dScnRoom_IsDelete__FP19room_of_scene_class,
+	(void*)dScnRoom_Draw__FP19room_of_scene_class,
 };
 
-/* 803C3288-803C32B0 0028+00 s=0 e=0 z=1  None .data      g_profile_ROOM_SCENE                                         */
+/* 803C3288-803C32B0 0028+00 s=0 e=0 z=0  None .data      g_profile_ROOM_SCENE                                         */
 SECTION_DATA void* g_profile_ROOM_SCENE[10] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0000FFFD,
-	/* 2    */ (void*)0x00120000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)0x000001DC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)&l_dScnRoom_Method,
-	/* 9    */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0000FFFD,
+	(void*)0x00120000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000001DC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnRoom_Method,
+	(void*)NULL,
 };
 

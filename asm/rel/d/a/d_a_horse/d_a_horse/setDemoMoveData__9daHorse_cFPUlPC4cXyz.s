@@ -42,8 +42,8 @@ lbl_8083AD60:
 /* 8083AD88  80 9D 17 2C */	lwz r4, 0x172c(r29)
 /* 8083AD8C  2C 04 FF FF */	cmpwi r4, -1
 /* 8083AD90  41 82 01 18 */	beq lbl_8083AEA8
-/* 8083AD94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083AD98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8083AD94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083AD98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8083AD9C  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8083ADA0  4B 80 D3 DC */	b cutEnd__16dEvent_manager_cFi
 /* 8083ADA4  48 00 01 04 */	b lbl_8083AEA8

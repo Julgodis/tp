@@ -19,7 +19,6 @@ extern void* const data_80C1DA80[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_heavySw_cpp(); // 1
 
 // 
 // Declarations:

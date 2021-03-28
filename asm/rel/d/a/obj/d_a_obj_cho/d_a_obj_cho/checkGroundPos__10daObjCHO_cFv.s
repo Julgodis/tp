@@ -13,8 +13,8 @@ lbl_80BCB2AC:
 /* 80BCB2D8  38 7F 09 28 */	addi r3, r31, 0x928
 /* 80BCB2DC  38 81 00 08 */	addi r4, r1, 8
 /* 80BCB2E0  4B 69 CA 48 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80BCB2E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BCB2E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BCB2E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BCB2E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BCB2EC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80BCB2F0  38 9F 09 28 */	addi r4, r31, 0x928
 /* 80BCB2F4  4B 4A 91 AC */	b GroundCross__4cBgSFP11cBgS_GndChk

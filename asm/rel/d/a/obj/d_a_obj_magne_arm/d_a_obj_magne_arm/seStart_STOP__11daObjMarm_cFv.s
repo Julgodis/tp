@@ -8,7 +8,7 @@ lbl_80591EE8:
 /* 80591F00  90 01 00 08 */	stw r0, 8(r1)
 /* 80591F04  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80591F08  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80591F0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80591F0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80591F10  38 81 00 08 */	addi r4, r1, 8
 /* 80591F14  38 A5 0A 44 */	addi r5, r5, 0xa44
 /* 80591F18  38 C0 00 00 */	li r6, 0

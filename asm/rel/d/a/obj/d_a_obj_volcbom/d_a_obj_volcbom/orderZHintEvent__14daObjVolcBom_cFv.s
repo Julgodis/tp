@@ -5,9 +5,9 @@ lbl_80D25914:
 /* 80D25920  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D25924  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80D25928  7C 7F 1B 78 */	mr r31, r3
-/* 80D2592C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D25930  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D25934  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D2592C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D25930  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D25934  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 80D25938  4B FF F9 91 */	bl checkTalkDistance__14daObjVolcBom_cFv
 /* 80D2593C  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D25940  41 82 00 B0 */	beq lbl_80D259F0
@@ -21,8 +21,8 @@ lbl_80D25914:
 /* 80D25960  4E 80 04 21 */	bctrl 
 /* 80D25964  28 03 00 00 */	cmplwi r3, 0
 /* 80D25968  40 82 00 88 */	bne lbl_80D259F0
-/* 80D2596C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D25970  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D2596C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D25970  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D25974  38 63 5B 48 */	addi r3, r3, 0x5b48
 /* 80D25978  7F E4 FB 78 */	mr r4, r31
 /* 80D2597C  38 A0 01 FF */	li r5, 0x1ff
@@ -39,7 +39,7 @@ lbl_80D25914:
 /* 80D259A8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D259AC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D259B0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D259B4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D259B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D259B8  38 81 00 08 */	addi r4, r1, 8
 /* 80D259BC  38 A0 00 00 */	li r5, 0
 /* 80D259C0  38 C0 00 00 */	li r6, 0

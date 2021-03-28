@@ -34,10 +34,10 @@ lbl_80C9FD90:
 /* 80C9FDC4  4B 6A 66 EC */	b PSMTXCopy
 /* 80C9FDC8  3C 60 80 CA */	lis r3, l_arcName@ha
 /* 80C9FDCC  38 63 04 08 */	addi r3, r3, l_arcName@l
-/* 80C9FDD0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CA0408 */
+/* 80C9FDD0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C9FDD4  38 80 00 07 */	li r4, 7
-/* 80C9FDD8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C9FDDC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C9FDD8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C9FDDC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C9FDE0  3C A5 00 02 */	addis r5, r5, 2
 /* 80C9FDE4  38 C0 00 80 */	li r6, 0x80
 /* 80C9FDE8  38 A5 C2 F8 */	addi r5, r5, -15624

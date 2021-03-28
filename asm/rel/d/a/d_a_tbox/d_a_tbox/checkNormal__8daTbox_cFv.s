@@ -21,8 +21,8 @@ lbl_8049157C:
 /* 80491588  38 60 00 00 */	li r3, 0
 /* 8049158C  48 00 00 20 */	b lbl_804915AC
 lbl_80491590:
-/* 80491590  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80491594  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80491590  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80491594  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80491598  88 05 04 E2 */	lbz r0, 0x4e2(r5)
 /* 8049159C  7C 05 07 74 */	extsb r5, r0
 /* 804915A0  4B BA 3D C0 */	b isSwitch__10dSv_info_cCFii

@@ -56,9 +56,9 @@ lbl_80A1E2C8:
 /* 80A1E2F4  38 A0 08 00 */	li r5, 0x800
 /* 80A1E2F8  48 00 0E ED */	bl _turn_pos__15daNpcKasiHana_cFRC4cXyzs
 /* 80A1E2FC  7F E3 FB 78 */	mr r3, r31
-/* 80A1E300  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A1E304  3B C4 61 C0 */	addi r30, r4, struct_804061C0+0x0@l
-/* 80A1E308  80 9E 5D AC */	lwz r4, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80A1E300  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A1E304  3B C4 61 C0 */	addi r30, r4, g_dComIfG_gameInfo@l
+/* 80A1E308  80 9E 5D AC */	lwz r4, 0x5dac(r30)
 /* 80A1E30C  48 00 0F 35 */	bl actor_front_check__15daNpcKasiHana_cFP10fopAc_ac_c
 /* 80A1E310  2C 03 00 00 */	cmpwi r3, 0
 /* 80A1E314  41 82 00 50 */	beq lbl_80A1E364
@@ -71,11 +71,11 @@ lbl_80A1E2C8:
 /* 80A1E330  40 80 00 60 */	bge lbl_80A1E390
 /* 80A1E334  3C 60 80 A2 */	lis r3, lit_5502@ha
 /* 80A1E338  38 83 16 20 */	addi r4, r3, lit_5502@l
-/* 80A1E33C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A21620 */
-/* 80A1E340  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A21624 */
+/* 80A1E33C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1E340  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1E344  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80A1E348  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A1E34C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A21628 */
+/* 80A1E34C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1E350  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A1E354  7F E3 FB 78 */	mr r3, r31
 /* 80A1E358  38 81 00 14 */	addi r4, r1, 0x14
@@ -84,11 +84,11 @@ lbl_80A1E2C8:
 lbl_80A1E364:
 /* 80A1E364  3C 60 80 A2 */	lis r3, lit_5505@ha
 /* 80A1E368  38 83 16 2C */	addi r4, r3, lit_5505@l
-/* 80A1E36C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2162C */
-/* 80A1E370  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A21630 */
+/* 80A1E36C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1E370  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1E374  90 61 00 08 */	stw r3, 8(r1)
 /* 80A1E378  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A1E37C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A21634 */
+/* 80A1E37C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1E380  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1E384  7F E3 FB 78 */	mr r3, r31
 /* 80A1E388  38 81 00 08 */	addi r4, r1, 8

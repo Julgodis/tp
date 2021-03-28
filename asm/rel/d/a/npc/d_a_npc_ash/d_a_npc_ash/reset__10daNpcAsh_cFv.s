@@ -25,18 +25,18 @@ lbl_80959944:
 /* 80959968  90 BF 0F 54 */	stw r5, 0xf54(r31)
 /* 8095996C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80959970  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80959974  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80959978  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80959974  80 64 00 00 */	lwz r3, 0(r4)
+/* 80959978  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095997C  90 7F 0F 30 */	stw r3, 0xf30(r31)
 /* 80959980  90 1F 0F 34 */	stw r0, 0xf34(r31)
-/* 80959984  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80959984  80 04 00 08 */	lwz r0, 8(r4)
 /* 80959988  90 1F 0F 38 */	stw r0, 0xf38(r31)
 /* 8095998C  38 80 FF FF */	li r4, -1
 /* 80959990  B0 9F 0F 5A */	sth r4, 0xf5a(r31)
 /* 80959994  B0 BF 0F 5C */	sth r5, 0xf5c(r31)
 /* 80959998  3C 60 80 96 */	lis r3, m__16daNpcAsh_Param_c@ha
 /* 8095999C  38 63 D6 40 */	addi r3, r3, m__16daNpcAsh_Param_c@l
-/* 809599A0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 8095D644 */
+/* 809599A0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 809599A4  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 809599A8  C0 1F 04 A8 */	lfs f0, 0x4a8(r31)
 /* 809599AC  D0 1F 04 D0 */	stfs f0, 0x4d0(r31)
@@ -110,11 +110,11 @@ lbl_80959AA8:
 /* 80959AB0  40 82 00 34 */	bne lbl_80959AE4
 /* 80959AB4  3C 60 80 96 */	lis r3, lit_4605@ha
 /* 80959AB8  38 83 DB 8C */	addi r4, r3, lit_4605@l
-/* 80959ABC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8095DB8C */
-/* 80959AC0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8095DB90 */
+/* 80959ABC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80959AC0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80959AC4  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80959AC8  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80959ACC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8095DB94 */
+/* 80959ACC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80959AD0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80959AD4  7F E3 FB 78 */	mr r3, r31
 /* 80959AD8  38 81 00 14 */	addi r4, r1, 0x14
@@ -123,11 +123,11 @@ lbl_80959AA8:
 lbl_80959AE4:
 /* 80959AE4  3C 60 80 96 */	lis r3, lit_4608@ha
 /* 80959AE8  38 83 DB 98 */	addi r4, r3, lit_4608@l
-/* 80959AEC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 8095DB98 */
-/* 80959AF0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8095DB9C */
+/* 80959AEC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80959AF0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80959AF4  90 61 00 08 */	stw r3, 8(r1)
 /* 80959AF8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80959AFC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 8095DBA0 */
+/* 80959AFC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80959B00  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80959B04  7F E3 FB 78 */	mr r3, r31
 /* 80959B08  38 81 00 08 */	addi r4, r1, 8

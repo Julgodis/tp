@@ -7,8 +7,8 @@ lbl_80BEB778:
 /* 80BEB78C  4B 44 60 E4 */	b getArcName__12daSetBgObj_cFP10fopAc_ac_c
 /* 80BEB790  3C 80 80 BF */	lis r4, stringBase0@ha
 /* 80BEB794  38 84 C5 54 */	addi r4, r4, stringBase0@l
-/* 80BEB798  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BEB79C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BEB798  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BEB79C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BEB7A0  3C A5 00 02 */	addis r5, r5, 2
 /* 80BEB7A4  38 C0 00 80 */	li r6, 0x80
 /* 80BEB7A8  38 A5 C2 F8 */	addi r5, r5, -15624

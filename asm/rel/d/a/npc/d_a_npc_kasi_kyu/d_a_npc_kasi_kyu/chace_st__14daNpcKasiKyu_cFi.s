@@ -28,11 +28,11 @@ lbl_80A23F4C:
 /* 80A23F58  41 82 00 30 */	beq lbl_80A23F88
 /* 80A23F5C  3C 60 80 A2 */	lis r3, lit_5026@ha
 /* 80A23F60  38 83 5E 4C */	addi r4, r3, lit_5026@l
-/* 80A23F64  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A25E4C */
-/* 80A23F68  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A25E50 */
+/* 80A23F64  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A23F68  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A23F6C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A23F70  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A23F74  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A25E54 */
+/* 80A23F74  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A23F78  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A23F7C  7F E3 FB 78 */	mr r3, r31
 /* 80A23F80  38 81 00 08 */	addi r4, r1, 8

@@ -187,7 +187,7 @@ lbl_807F6F3C:
 /* 807F6F58  38 00 FF FF */	li r0, -1
 /* 807F6F5C  3C 60 80 7F */	lis r3, l_HIO@ha
 /* 807F6F60  38 63 7D 78 */	addi r3, r3, l_HIO@l
-/* 807F6F64  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 807F7D7C */
+/* 807F6F64  98 03 00 04 */	stb r0, 4(r3)
 lbl_807F6F68:
 /* 807F6F68  38 00 00 04 */	li r0, 4
 /* 807F6F6C  90 1F 05 5C */	stw r0, 0x55c(r31)
@@ -274,7 +274,7 @@ lbl_807F6FF8:
 /* 807F70AC  B0 1F 06 6C */	sth r0, 0x66c(r31)
 /* 807F70B0  3C 60 80 7F */	lis r3, l_HIO@ha
 /* 807F70B4  38 63 7D 78 */	addi r3, r3, l_HIO@l
-/* 807F70B8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807F7D84 */
+/* 807F70B8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807F70BC  D0 1F 06 98 */	stfs f0, 0x698(r31)
 /* 807F70C0  88 1F 05 B4 */	lbz r0, 0x5b4(r31)
 /* 807F70C4  28 00 00 02 */	cmplwi r0, 2

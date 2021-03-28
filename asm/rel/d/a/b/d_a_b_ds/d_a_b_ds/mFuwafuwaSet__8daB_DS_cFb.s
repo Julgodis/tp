@@ -15,7 +15,7 @@ lbl_805D39A4:
 /* 805D39D8  EC 01 00 28 */	fsubs f0, f1, f0
 /* 805D39DC  FC 00 02 10 */	fabs f0, f0
 /* 805D39E0  FC 20 00 18 */	frsp f1, f0
-/* 805D39E4  C0 1F 02 B4 */	lfs f0, 0x2b4(r31)	/* effective address: 805DCD08 */
+/* 805D39E4  C0 1F 02 B4 */	lfs f0, 0x2b4(r31)
 /* 805D39E8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805D39EC  40 80 01 60 */	bge lbl_805D3B4C
 /* 805D39F0  80 1D 08 2C */	lwz r0, 0x82c(r29)
@@ -125,9 +125,9 @@ lbl_805D3B4C:
 /* 805D3B8C  4E 80 04 21 */	bctrl 
 /* 805D3B90  57 C0 06 3F */	clrlwi. r0, r30, 0x18
 /* 805D3B94  41 82 01 60 */	beq lbl_805D3CF4
-/* 805D3B98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D3B9C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 805D3BA0  83 9E 5D AC */	lwz r28, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 805D3B98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D3B9C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 805D3BA0  83 9E 5D AC */	lwz r28, 0x5dac(r30)
 /* 805D3BA4  38 61 00 0C */	addi r3, r1, 0xc
 /* 805D3BA8  4B AA 39 D4 */	b __ct__11dBgS_GndChkFv
 /* 805D3BAC  C3 FF 00 50 */	lfs f31, 0x50(r31)
@@ -170,7 +170,7 @@ lbl_805D3C30:
 /* 805D3C38  C0 3C 04 D4 */	lfs f1, 0x4d4(r28)
 /* 805D3C3C  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805D3C40  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805D3C44  C0 03 00 24 */	lfs f0, 0x24(r3)	/* effective address: 805DDAE0 */
+/* 805D3C44  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 805D3C48  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805D3C4C  40 80 00 64 */	bge lbl_805D3CB0
 /* 805D3C50  80 1D 08 34 */	lwz r0, 0x834(r29)
@@ -184,9 +184,9 @@ lbl_805D3C30:
 /* 805D3C70  80 9D 2E 18 */	lwz r4, 0x2e18(r29)
 /* 805D3C74  28 04 00 00 */	cmplwi r4, 0
 /* 805D3C78  41 82 00 44 */	beq lbl_805D3CBC
-/* 805D3C7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D3C80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805D3C84  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 805D3C7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D3C80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805D3C84  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 805D3C88  38 63 02 10 */	addi r3, r3, 0x210
 /* 805D3C8C  4B A7 7C 8C */	b getEmitter__Q213dPa_control_c7level_cFUl
 /* 805D3C90  28 03 00 00 */	cmplwi r3, 0

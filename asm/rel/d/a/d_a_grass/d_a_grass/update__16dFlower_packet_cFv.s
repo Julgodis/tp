@@ -140,9 +140,9 @@ lbl_80522C74:
 /* 80522C78  2C 1B 03 E8 */	cmpwi r27, 0x3e8
 /* 80522C7C  3B BD 00 48 */	addi r29, r29, 0x48
 /* 80522C80  41 80 FE 84 */	blt lbl_80522B04
-/* 80522C84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80522C88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80522C8C  80 63 5F 90 */	lwz r3, 0x5f90(r3)	/* effective address: 8040C150 */
+/* 80522C84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80522C88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80522C8C  80 63 5F 90 */	lwz r3, 0x5f90(r3)
 /* 80522C90  7F 44 D3 78 */	mr r4, r26
 /* 80522C94  38 A0 00 00 */	li r5, 0
 /* 80522C98  4B E0 27 F4 */	b entryImm__13J3DDrawBufferFP9J3DPacketUs

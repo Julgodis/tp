@@ -54,7 +54,7 @@ lbl_80604BFC:
 /* 80604C40  4B A0 77 5C */	b mDoMtx_XrotM__FPA4_fs
 /* 80604C44  3C 60 80 60 */	lis r3, l_HIO@ha
 /* 80604C48  38 63 56 1C */	addi r3, r3, l_HIO@l
-/* 80604C4C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80605624 */
+/* 80604C4C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80604C50  FC 40 08 90 */	fmr f2, f1
 /* 80604C54  FC 60 08 90 */	fmr f3, f1
 /* 80604C58  4B A0 81 E0 */	b scaleM__14mDoMtx_stack_cFfff
@@ -85,8 +85,8 @@ lbl_80604BFC:
 /* 80604CBC  38 7F 0C 8C */	addi r3, r31, 0xc8c
 /* 80604CC0  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80604CC4  4B C6 A5 18 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80604CC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80604CCC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80604CC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80604CCC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80604CD0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80604CD4  38 9F 0B 68 */	addi r4, r31, 0xb68
 /* 80604CD8  4B C5 FE D0 */	b Set__4cCcSFP8cCcD_Obj

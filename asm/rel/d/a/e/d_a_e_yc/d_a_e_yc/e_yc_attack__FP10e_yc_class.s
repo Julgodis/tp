@@ -9,9 +9,9 @@ lbl_807F0C40:
 /* 807F0C5C  7C 7D 1B 78 */	mr r29, r3
 /* 807F0C60  3C 60 80 7F */	lis r3, lit_3715@ha
 /* 807F0C64  3B C3 28 64 */	addi r30, r3, lit_3715@l
-/* 807F0C68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807F0C6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807F0C70  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 807F0C68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807F0C6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807F0C70  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 807F0C74  80 1D 06 AC */	lwz r0, 0x6ac(r29)
 /* 807F0C78  90 01 00 0C */	stw r0, 0xc(r1)
 /* 807F0C7C  3C 60 80 02 */	lis r3, fpcSch_JudgeByID__FPvPv@ha

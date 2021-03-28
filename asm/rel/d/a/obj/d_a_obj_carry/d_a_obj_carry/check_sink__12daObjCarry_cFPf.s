@@ -12,7 +12,7 @@ lbl_80472D8C:
 /* 80472DB4  3B E4 99 0C */	addi r31, r4, l_cyl_info@l
 /* 80472DB8  3B C0 00 00 */	li r30, 0
 /* 80472DBC  C3 E3 07 40 */	lfs f31, 0x740(r3)
-/* 80472DC0  C0 1F 0A 48 */	lfs f0, 0xa48(r31)	/* effective address: 8047A354 */
+/* 80472DC0  C0 1F 0A 48 */	lfs f0, 0xa48(r31)
 /* 80472DC4  D0 1D 00 00 */	stfs f0, 0(r29)
 /* 80472DC8  80 03 05 A0 */	lwz r0, 0x5a0(r3)
 /* 80472DCC  54 00 05 29 */	rlwinm. r0, r0, 0, 0x14, 0x14

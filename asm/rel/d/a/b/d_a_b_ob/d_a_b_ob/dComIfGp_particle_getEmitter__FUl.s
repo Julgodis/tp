@@ -3,9 +3,9 @@ lbl_80618540:
 /* 80618544  7C 08 02 A6 */	mflr r0
 /* 80618548  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8061854C  7C 64 1B 78 */	mr r4, r3
-/* 80618550  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80618554  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80618558  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80618550  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80618554  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80618558  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8061855C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80618560  4B A3 33 B8 */	b getEmitter__Q213dPa_control_c7level_cFUl
 /* 80618564  80 01 00 14 */	lwz r0, 0x14(r1)

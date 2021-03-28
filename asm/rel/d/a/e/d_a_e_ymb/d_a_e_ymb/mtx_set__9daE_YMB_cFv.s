@@ -17,7 +17,7 @@ lbl_8081FF88:
 /* 8081FFC4  4B 7E CF 80 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8081FFC8  3C 60 80 82 */	lis r3, l_HIO@ha
 /* 8081FFCC  38 63 1E 64 */	addi r3, r3, l_HIO@l
-/* 8081FFD0  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80821E6C */
+/* 8081FFD0  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8081FFD4  FC 40 08 90 */	fmr f2, f1
 /* 8081FFD8  FC 60 08 90 */	fmr f3, f1
 /* 8081FFDC  4B 7E CE 5C */	b scaleM__14mDoMtx_stack_cFfff

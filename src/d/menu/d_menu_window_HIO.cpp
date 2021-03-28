@@ -66,16 +66,16 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 /* ############################################################################################## */
 /* 803BE8E0-803BE8EC 000C+00 s=2 e=0 z=0  None .data      __vt__10dMw_DHIO_c                                           */
 SECTION_DATA static void* __vt__10dMw_DHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dMw_DHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dMw_DHIO_cFv,
 };
 
 /* 803BE8EC-803BE8F8 000C+00 s=2 e=0 z=0  None .data      __vt__9dMw_HIO_c                                             */
 SECTION_DATA static void* __vt__9dMw_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__9dMw_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__9dMw_HIO_cFv,
 };
 
 /* 801F9AFC-801F9B38 003C+00 s=1 e=0 z=0  None .text      __ct__9dMw_HIO_cFv                                           */

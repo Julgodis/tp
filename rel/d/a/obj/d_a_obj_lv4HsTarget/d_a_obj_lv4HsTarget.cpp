@@ -62,10 +62,6 @@ struct csXyz {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -83,10 +79,10 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daLv4HsTarget_Draw(daLv4HsTarget_c*); // 2
-static void daLv4HsTarget_Execute(daLv4HsTarget_c*); // 2
-static void daLv4HsTarget_Delete(daLv4HsTarget_c*); // 2
-static void daLv4HsTarget_Create(fopAc_ac_c*); // 2
+void daLv4HsTarget_Draw(daLv4HsTarget_c*); // 2
+void daLv4HsTarget_Execute(daLv4HsTarget_c*); // 2
+void daLv4HsTarget_Delete(daLv4HsTarget_c*); // 2
+void daLv4HsTarget_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__19daLv4HsTarget_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -96,13 +92,14 @@ extern "C" void create__15daLv4HsTarget_cFv(); // 1
 extern "C" void Execute__15daLv4HsTarget_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daLv4HsTarget_cFv(); // 1
 extern "C" void Delete__15daLv4HsTarget_cFv(); // 1
-extern "C" static void daLv4HsTarget_Draw__FP15daLv4HsTarget_c(); // 1
-extern "C" static void daLv4HsTarget_Execute__FP15daLv4HsTarget_c(); // 1
-extern "C" static void daLv4HsTarget_Delete__FP15daLv4HsTarget_c(); // 1
-extern "C" static void daLv4HsTarget_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daLv4HsTarget_Draw__FP15daLv4HsTarget_c(); // 1
+extern "C" void daLv4HsTarget_Execute__FP15daLv4HsTarget_c(); // 1
+extern "C" void daLv4HsTarget_Delete__FP15daLv4HsTarget_c(); // 1
+extern "C" void daLv4HsTarget_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__19daLv4HsTarget_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv4HsTarget_cpp(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daLv4HsTarget_Method[8];
 extern "C" extern void* g_profile_Obj_Lv4HsTarget[12];
 
 // 
@@ -127,10 +124,6 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -139,11 +132,9 @@ extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP
 extern "C" void __dl__FPv(); // 1
 extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 extern "C" void __register_global_object(); // 1
 
 // 
@@ -151,60 +142,60 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 80C5FA48-80C5FA68 0020+00 s=1 e=0 z=0  None .data      l_daLv4HsTarget_Method                                       */
-SECTION_DATA static void* l_daLv4HsTarget_Method[8] = {
-	/* 0    */ (void*)daLv4HsTarget_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daLv4HsTarget_Delete__FP15daLv4HsTarget_c,
-	/* 2    */ (void*)daLv4HsTarget_Execute__FP15daLv4HsTarget_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daLv4HsTarget_Draw__FP15daLv4HsTarget_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C5FA48-80C5FA68 0020+00 s=0 e=0 z=0  None .data      l_daLv4HsTarget_Method                                       */
+SECTION_DATA void* l_daLv4HsTarget_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C5FA68-80C5FA98 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv4HsTarget                                    */
+/* 80C5FA68-80C5FA98 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv4HsTarget                                    */
 SECTION_DATA void* g_profile_Obj_Lv4HsTarget[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x009F0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005AC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02800000,
-	/* 9    */ (void*)&l_daLv4HsTarget_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x009F0000,
+	(void*)NULL,
+	(void*)0x000005AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02800000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80C5FA98-80C5FAC0 0028+00 s=1 e=0 z=0  None .data      __vt__15daLv4HsTarget_c                                      */
 SECTION_DATA static void* __vt__15daLv4HsTarget_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daLv4HsTarget_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__15daLv4HsTarget_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daLv4HsTarget_cFv,
-	/* 6    */ (void*)Delete__15daLv4HsTarget_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C5FAC0-80C5FACC 000C+00 s=2 e=0 z=0  None .data      __vt__19daLv4HsTarget_HIO_c                                  */
 SECTION_DATA static void* __vt__19daLv4HsTarget_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19daLv4HsTarget_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C5FACC-80C5FAD8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C5F62C-80C5F648 001C+00 s=1 e=0 z=0  None .text      __ct__19daLv4HsTarget_HIO_cFv                                */
@@ -218,7 +209,7 @@ asm daLv4HsTarget_HIO_c::daLv4HsTarget_HIO_c() {
 #pragma pop
 
 
-/* 80C5F648-80C5F690 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C5F648-80C5F690 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -250,7 +241,7 @@ SECTION_DEAD char const* const stringBase_80C5FA3C = "L4HsMato";
 SECTION_DEAD static char const* const pad_80C5FA45 = "\0\0";
 #pragma pop
 
-/* 80C5F718-80C5F784 006C+00 s=1 e=0 z=0  None .text      CreateHeap__15daLv4HsTarget_cFv                              */
+/* 80C5F718-80C5F784 006C+00 s=0 e=0 z=0  None .text      CreateHeap__15daLv4HsTarget_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -272,7 +263,7 @@ asm void daLv4HsTarget_c::create() {
 #pragma pop
 
 
-/* 80C5F85C-80C5F870 0014+00 s=1 e=0 z=0  None .text      Execute__15daLv4HsTarget_cFPPA3_A4_f                         */
+/* 80C5F85C-80C5F870 0014+00 s=0 e=0 z=0  None .text      Execute__15daLv4HsTarget_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -283,7 +274,7 @@ asm void daLv4HsTarget_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C5F870-80C5F8D4 0064+00 s=1 e=0 z=0  None .text      Draw__15daLv4HsTarget_cFv                                    */
+/* 80C5F870-80C5F8D4 0064+00 s=0 e=0 z=0  None .text      Draw__15daLv4HsTarget_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -294,7 +285,7 @@ asm void daLv4HsTarget_c::Draw() {
 #pragma pop
 
 
-/* 80C5F8D4-80C5F904 0030+00 s=1 e=0 z=0  None .text      Delete__15daLv4HsTarget_cFv                                  */
+/* 80C5F8D4-80C5F904 0030+00 s=0 e=0 z=0  None .text      Delete__15daLv4HsTarget_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -305,51 +296,51 @@ asm void daLv4HsTarget_c::Delete() {
 #pragma pop
 
 
-/* 80C5F904-80C5F930 002C+00 s=1 e=0 z=0  None .text      daLv4HsTarget_Draw__FP15daLv4HsTarget_c                      */
+/* 80C5F904-80C5F930 002C+00 s=0 e=0 z=0  None .text      daLv4HsTarget_Draw__FP15daLv4HsTarget_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv4HsTarget_Draw(daLv4HsTarget_c* param_0) {
+asm void daLv4HsTarget_Draw(daLv4HsTarget_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4HsTarget/d_a_obj_lv4HsTarget/daLv4HsTarget_Draw__FP15daLv4HsTarget_c.s"
 }
 #pragma pop
 
 
-/* 80C5F930-80C5F950 0020+00 s=1 e=0 z=0  None .text      daLv4HsTarget_Execute__FP15daLv4HsTarget_c                   */
+/* 80C5F930-80C5F950 0020+00 s=0 e=0 z=0  None .text      daLv4HsTarget_Execute__FP15daLv4HsTarget_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv4HsTarget_Execute(daLv4HsTarget_c* param_0) {
+asm void daLv4HsTarget_Execute(daLv4HsTarget_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4HsTarget/d_a_obj_lv4HsTarget/daLv4HsTarget_Execute__FP15daLv4HsTarget_c.s"
 }
 #pragma pop
 
 
-/* 80C5F950-80C5F970 0020+00 s=1 e=0 z=0  None .text      daLv4HsTarget_Delete__FP15daLv4HsTarget_c                    */
+/* 80C5F950-80C5F970 0020+00 s=0 e=0 z=0  None .text      daLv4HsTarget_Delete__FP15daLv4HsTarget_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv4HsTarget_Delete(daLv4HsTarget_c* param_0) {
+asm void daLv4HsTarget_Delete(daLv4HsTarget_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4HsTarget/d_a_obj_lv4HsTarget/daLv4HsTarget_Delete__FP15daLv4HsTarget_c.s"
 }
 #pragma pop
 
 
-/* 80C5F970-80C5F990 0020+00 s=1 e=0 z=0  None .text      daLv4HsTarget_Create__FP10fopAc_ac_c                         */
+/* 80C5F970-80C5F990 0020+00 s=0 e=0 z=0  None .text      daLv4HsTarget_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv4HsTarget_Create(fopAc_ac_c* param_0) {
+asm void daLv4HsTarget_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv4HsTarget/d_a_obj_lv4HsTarget/daLv4HsTarget_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C5F990-80C5F9EC 005C+00 s=2 e=0 z=0  None .text      __dt__19daLv4HsTarget_HIO_cFv                                */
+/* 80C5F990-80C5F9EC 005C+00 s=1 e=0 z=0  None .text      __dt__19daLv4HsTarget_HIO_cFv                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -367,7 +358,7 @@ static u8 lit_3618[12];
 /* 80C5FAEC-80C5FAF0 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 80C5F9EC-80C5FA28 003C+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv4HsTarget_cpp                              */
+/* 80C5F9EC-80C5FA28 003C+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv4HsTarget_cpp                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

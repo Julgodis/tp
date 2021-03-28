@@ -7,10 +7,10 @@ lbl_804A365C:
 /* 804A3670  7C 7E 1B 78 */	mr r30, r3
 /* 804A3674  3C 60 80 4A */	lis r3, lit_3759@ha
 /* 804A3678  3B E3 40 EC */	addi r31, r3, lit_3759@l
-/* 804A367C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A3680  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A3684  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 804A3688  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 804A367C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A3680  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A3684  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 804A3688  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 804A368C  81 8C 02 A0 */	lwz r12, 0x2a0(r12)
 /* 804A3690  7D 89 03 A6 */	mtctr r12
 /* 804A3694  4E 80 04 21 */	bctrl 

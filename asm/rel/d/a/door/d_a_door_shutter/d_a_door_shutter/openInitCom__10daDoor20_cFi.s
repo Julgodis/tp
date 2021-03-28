@@ -44,7 +44,7 @@ lbl_804656B8:
 /* 804656BC  4B BB ED 68 */	b setNextStayNo__20dStage_roomControl_cFi
 /* 804656C0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804656C4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804656C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804656C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 804656CC  38 63 04 A4 */	addi r3, r3, 0x4a4
 /* 804656D0  38 80 00 00 */	li r4, 0
 /* 804656D4  4B E5 12 0C */	b setSceneExist__10Z2SceneMgrFb

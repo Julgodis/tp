@@ -36,8 +36,8 @@ lbl_80B564A0:
 /* 80B564A4  4B 4B AD 1C */	b entryDL__16mDoExt_McaMorfSOFv
 /* 80B564A8  80 7B 0E 40 */	lwz r3, 0xe40(r27)
 /* 80B564AC  80 A3 00 04 */	lwz r5, 4(r3)
-/* 80B564B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B564B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B564B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B564B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B564B8  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80B564BC  80 9B 0D 94 */	lwz r4, 0xd94(r27)
 /* 80B564C0  4B 4F FA 5C */	b addReal__21dDlst_shadowControl_cFUlP8J3DModel
@@ -72,8 +72,8 @@ lbl_80B56520:
 lbl_80B56528:
 /* 80B56528  3B 80 00 00 */	li r28, 0
 /* 80B5652C  3B 40 00 00 */	li r26, 0
-/* 80B56530  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B56534  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B56530  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B56534  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B56538  3B C3 61 C0 */	addi r30, r3, 0x61c0
 lbl_80B5653C:
 /* 80B5653C  3B BA 0E 4C */	addi r29, r26, 0xe4c

@@ -26,9 +26,9 @@ lbl_804F5990:
 /* 804F59F0  7C 00 07 75 */	extsb. r0, r0
 /* 804F59F4  41 82 04 C8 */	beq lbl_804F5EBC
 lbl_804F59F8:
-/* 804F59F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804F59FC  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
-/* 804F5A00  83 DA 5D AC */	lwz r30, 0x5dac(r26)	/* effective address: 8040BF6C */
+/* 804F59F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804F59FC  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
+/* 804F5A00  83 DA 5D AC */	lwz r30, 0x5dac(r26)
 /* 804F5A04  38 61 00 50 */	addi r3, r1, 0x50
 /* 804F5A08  4B B8 1B 74 */	b __ct__11dBgS_GndChkFv
 /* 804F5A0C  88 18 61 7C */	lbz r0, 0x617c(r24)
@@ -41,7 +41,7 @@ lbl_804F59F8:
 /* 804F5A28  4E 80 04 21 */	bctrl 
 /* 804F5A2C  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804F5A30  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804F5A34  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804F5A34  80 84 00 00 */	lwz r4, 0(r4)
 /* 804F5A38  4B E5 0A 78 */	b PSMTXCopy
 /* 804F5A3C  C0 1F 00 3C */	lfs f0, 0x3c(r31)
 /* 804F5A40  D0 01 00 44 */	stfs f0, 0x44(r1)
@@ -97,7 +97,7 @@ lbl_804F5AC8:
 /* 804F5AFC  4B D7 9F 40 */	b cLib_addCalc2__FPffff
 /* 804F5B00  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804F5B04  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804F5B08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804F5B08  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F5B0C  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 804F5B10  4B B1 68 CC */	b mDoMtx_YrotS__FPA4_fs
 /* 804F5B14  C0 1F 02 10 */	lfs f0, 0x210(r31)
@@ -152,7 +152,7 @@ lbl_804F5BCC:
 /* 804F5BD4  41 82 00 88 */	beq lbl_804F5C5C
 /* 804F5BD8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804F5BDC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804F5BE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804F5BE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 804F5BE4  80 18 61 D0 */	lwz r0, 0x61d0(r24)
 /* 804F5BE8  1C 00 00 06 */	mulli r0, r0, 6
 /* 804F5BEC  7C 98 02 14 */	add r4, r24, r0
@@ -238,7 +238,7 @@ lbl_804F5CF4:
 /* 804F5D1C  D3 E1 00 48 */	stfs f31, 0x48(r1)
 /* 804F5D20  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804F5D24  38 63 AE A4 */	addi r3, r3, l_HIO@l
-/* 804F5D28  C0 03 00 4C */	lfs f0, 0x4c(r3)	/* effective address: 804FAEF0 */
+/* 804F5D28  C0 03 00 4C */	lfs f0, 0x4c(r3)
 /* 804F5D2C  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 804F5D30  7C 1D 03 78 */	mr r29, r0
 /* 804F5D34  3C 60 80 45 */	lis r3, calc_mtx@ha

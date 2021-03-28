@@ -19,7 +19,6 @@ extern void* const data_80A68E90[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_len_cpp(); // 1
 
 // 
 // Declarations:

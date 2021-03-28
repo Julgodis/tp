@@ -106,9 +106,9 @@ lbl_80CE5338:
 /* 80CE5360  48 00 08 15 */	bl getValue__15daObj_SSDrink_cFv
 /* 80CE5364  B0 7F 05 74 */	sth r3, 0x574(r31)
 /* 80CE5368  38 61 00 08 */	addi r3, r1, 8
-/* 80CE536C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CE5370  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80CE5374  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80CE536C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CE5370  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CE5374  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80CE5378  48 00 13 C5 */	bl getLeftHandPos__9daPy_py_cCFv
 /* 80CE537C  C0 01 00 0C */	lfs f0, 0xc(r1)
 /* 80CE5380  D0 1F 0B 00 */	stfs f0, 0xb00(r31)

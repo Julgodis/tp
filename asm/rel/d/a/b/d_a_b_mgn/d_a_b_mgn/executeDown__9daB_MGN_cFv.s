@@ -97,8 +97,8 @@ lbl_8060A880:
 /* 8060A888  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 8060A88C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8060A890  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 8060A894  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8060A898  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8060A894  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8060A898  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8060A89C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A8A0  38 80 00 08 */	li r4, 8
 /* 8060A8A4  38 A0 00 1F */	li r5, 0x1f
@@ -134,8 +134,8 @@ lbl_8060A904:
 /* 8060A914  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 8060A918  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 8060A91C  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 8060A920  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8060A924  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8060A920  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8060A924  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8060A928  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060A92C  38 80 00 03 */	li r4, 3
 /* 8060A930  38 A0 00 1F */	li r5, 0x1f
@@ -229,8 +229,8 @@ lbl_8060AA48:
 /* 8060AA6C  90 1E 22 44 */	stw r0, 0x2244(r30)
 /* 8060AA70  7F C3 F3 78 */	mr r3, r30
 /* 8060AA74  4B FF D1 89 */	bl offBodySlideAt__9daB_MGN_cFv
-/* 8060AA78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8060AA7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8060AA78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8060AA7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8060AA80  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8060AA84  38 80 00 1F */	li r4, 0x1f
 /* 8060AA88  4B A6 53 0C */	b StopQuake__12dVibration_cFi
@@ -262,10 +262,10 @@ lbl_8060AAE0:
 /* 8060AAE0  38 00 00 06 */	li r0, 6
 /* 8060AAE4  98 1E 0A FA */	stb r0, 0xafa(r30)
 lbl_8060AAE8:
-/* 8060AAE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8060AAEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8060AAF0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8060AAF4  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 8060AAE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8060AAEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8060AAF0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8060AAF4  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 8060AAF8  28 00 00 39 */	cmplwi r0, 0x39
 /* 8060AAFC  41 82 01 A4 */	beq lbl_8060ACA0
 /* 8060AB00  80 1E 0A A0 */	lwz r0, 0xaa0(r30)

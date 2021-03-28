@@ -8,7 +8,7 @@ lbl_80D24A2C:
 /* 80D24A44  38 C3 6C 54 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80D24A48  3C 60 80 D2 */	lis r3, struct_80D26EA8+0x0@ha
 /* 80D24A4C  38 A3 6E A8 */	addi r5, r3, struct_80D26EA8+0x0@l
-/* 80D24A50  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80D26EA8 */
+/* 80D24A50  88 05 00 00 */	lbz r0, 0(r5)
 /* 80D24A54  7C 00 07 75 */	extsb. r0, r0
 /* 80D24A58  40 82 00 70 */	bne lbl_80D24AC8
 /* 80D24A5C  80 66 00 70 */	lwz r3, 0x70(r6)

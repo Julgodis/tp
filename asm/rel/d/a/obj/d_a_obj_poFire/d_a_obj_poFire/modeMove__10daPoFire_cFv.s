@@ -9,11 +9,11 @@ lbl_80CB3730:
 /* 80CB374C  7C 7F 1B 78 */	mr r31, r3
 /* 80CB3750  3C 60 80 CB */	lis r3, lit_3662@ha
 /* 80CB3754  3B C3 3E EC */	addi r30, r3, lit_3662@l
-/* 80CB3758  C0 5E 00 3C */	lfs f2, 0x3c(r30)	/* effective address: 80CB3F28 */
+/* 80CB3758  C0 5E 00 3C */	lfs f2, 0x3c(r30)
 /* 80CB375C  C0 3F 05 EC */	lfs f1, 0x5ec(r31)
 /* 80CB3760  3C 60 80 CB */	lis r3, l_HIO@ha
 /* 80CB3764  38 63 41 14 */	addi r3, r3, l_HIO@l
-/* 80CB3768  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80CB4128 */
+/* 80CB3768  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80CB376C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CB3770  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80CB3774  FC 00 00 1E */	fctiwz f0, f0
@@ -23,7 +23,7 @@ lbl_80CB3730:
 /* 80CB3784  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80CB3788  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80CB378C  7C 23 04 2E */	lfsx f1, r3, r0
-/* 80CB3790  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80CB3EEC */
+/* 80CB3790  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 80CB3794  EC 00 08 2A */	fadds f0, f0, f1
 /* 80CB3798  D0 1F 05 E8 */	stfs f0, 0x5e8(r31)
 /* 80CB379C  38 61 00 08 */	addi r3, r1, 8
@@ -34,7 +34,7 @@ lbl_80CB3730:
 /* 80CB37B0  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 80CB37B4  3C A0 80 CB */	lis r5, l_HIO@ha
 /* 80CB37B8  38 A5 41 14 */	addi r5, r5, l_HIO@l
-/* 80CB37BC  C0 45 00 1C */	lfs f2, 0x1c(r5)	/* effective address: 80CB4130 */
+/* 80CB37BC  C0 45 00 1C */	lfs f2, 0x1c(r5)
 /* 80CB37C0  C0 1F 05 E8 */	lfs f0, 0x5e8(r31)
 /* 80CB37C4  EC 42 00 32 */	fmuls f2, f2, f0
 /* 80CB37C8  C0 7E 00 28 */	lfs f3, 0x28(r30)
@@ -43,7 +43,7 @@ lbl_80CB3730:
 /* 80CB37D4  C0 3F 05 EC */	lfs f1, 0x5ec(r31)
 /* 80CB37D8  3C 60 80 CB */	lis r3, l_HIO@ha
 /* 80CB37DC  38 63 41 14 */	addi r3, r3, l_HIO@l
-/* 80CB37E0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80CB412C */
+/* 80CB37E0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80CB37E4  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CB37E8  D0 1F 05 EC */	stfs f0, 0x5ec(r31)
 /* 80CB37EC  C0 1E 00 40 */	lfs f0, 0x40(r30)
@@ -64,7 +64,7 @@ lbl_80CB381C:
 /* 80CB3820  C0 3F 05 F0 */	lfs f1, 0x5f0(r31)
 /* 80CB3824  3C 60 80 CB */	lis r3, l_HIO@ha
 /* 80CB3828  38 83 41 14 */	addi r4, r3, l_HIO@l
-/* 80CB382C  C0 04 00 20 */	lfs f0, 0x20(r4)	/* effective address: 80CB4134 */
+/* 80CB382C  C0 04 00 20 */	lfs f0, 0x20(r4)
 /* 80CB3830  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CB3834  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80CB3838  FC 00 00 1E */	fctiwz f0, f0
@@ -74,13 +74,13 @@ lbl_80CB381C:
 /* 80CB3848  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 80CB384C  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
 /* 80CB3850  7C 63 04 2E */	lfsx f3, r3, r0
-/* 80CB3854  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 80CB413C */
+/* 80CB3854  C0 24 00 28 */	lfs f1, 0x28(r4)
 /* 80CB3858  C0 1F 06 08 */	lfs f0, 0x608(r31)
 /* 80CB385C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CB3860  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 80CB3864  D0 1F 05 F8 */	stfs f0, 0x5f8(r31)
 /* 80CB3868  C0 3F 05 F0 */	lfs f1, 0x5f0(r31)
-/* 80CB386C  C0 04 00 20 */	lfs f0, 0x20(r4)	/* effective address: 80CB4134 */
+/* 80CB386C  C0 04 00 20 */	lfs f0, 0x20(r4)
 /* 80CB3870  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CB3874  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80CB3878  FC 00 00 1E */	fctiwz f0, f0
@@ -88,13 +88,13 @@ lbl_80CB381C:
 /* 80CB3880  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80CB3884  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80CB3888  7C 43 04 2E */	lfsx f2, r3, r0
-/* 80CB388C  C0 24 00 28 */	lfs f1, 0x28(r4)	/* effective address: 80CB413C */
+/* 80CB388C  C0 24 00 28 */	lfs f1, 0x28(r4)
 /* 80CB3890  C0 1F 06 08 */	lfs f0, 0x608(r31)
 /* 80CB3894  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CB3898  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80CB389C  D0 1F 05 FC */	stfs f0, 0x5fc(r31)
 /* 80CB38A0  C0 3F 05 F0 */	lfs f1, 0x5f0(r31)
-/* 80CB38A4  C0 04 00 24 */	lfs f0, 0x24(r4)	/* effective address: 80CB4138 */
+/* 80CB38A4  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 80CB38A8  EC 01 00 2A */	fadds f0, f1, f0
 /* 80CB38AC  D0 1F 05 F0 */	stfs f0, 0x5f0(r31)
 /* 80CB38B0  C0 1E 00 20 */	lfs f0, 0x20(r30)

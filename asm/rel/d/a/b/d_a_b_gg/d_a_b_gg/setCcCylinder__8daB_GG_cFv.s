@@ -22,11 +22,11 @@ lbl_805DE7A4:
 /* 805DE7F4  C0 3E 00 00 */	lfs f1, 0(r30)
 /* 805DE7F8  3C 80 80 5F */	lis r4, l_HIO@ha
 /* 805DE7FC  3B E4 D7 0C */	addi r31, r4, l_HIO@l
-/* 805DE800  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 805ED714 */
+/* 805DE800  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 805DE804  EC 21 00 32 */	fmuls f1, f1, f0
 /* 805DE808  4B C9 09 F8 */	b SetR__8cM3dGCylFf
-/* 805DE80C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DE810  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805DE80C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DE810  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805DE814  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 805DE818  7F A3 EB 78 */	mr r3, r29
 /* 805DE81C  38 9B 06 D8 */	addi r4, r27, 0x6d8

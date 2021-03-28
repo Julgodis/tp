@@ -9,9 +9,9 @@ lbl_804953D4:
 /* 804953F0  3C 60 80 43 */	lis r3, BaseX__4cXyz@ha
 /* 804953F4  C4 03 0D 0C */	lfsu f0, BaseX__4cXyz@l(r3)
 /* 804953F8  D0 1F 09 B8 */	stfs f0, 0x9b8(r31)
-/* 804953FC  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 804953FC  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80495400  D0 1F 09 BC */	stfs f0, 0x9bc(r31)
-/* 80495404  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80495404  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80495408  D0 1F 09 C0 */	stfs f0, 0x9c0(r31)
 /* 8049540C  38 7F 09 88 */	addi r3, r31, 0x988
 /* 80495410  4B EB 10 74 */	b PSMTXIdentity

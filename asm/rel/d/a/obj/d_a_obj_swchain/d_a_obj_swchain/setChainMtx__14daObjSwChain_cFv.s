@@ -9,9 +9,9 @@ lbl_80CFA124:
 /* 80CFA140  7C 7A 1B 78 */	mr r26, r3
 /* 80CFA144  3C 80 80 D0 */	lis r4, lit_3734@ha
 /* 80CFA148  3B C4 B6 EC */	addi r30, r4, lit_3734@l
-/* 80CFA14C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CFA150  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80CFA154  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80CFA14C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CFA150  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CFA154  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80CFA158  88 03 0A 62 */	lbz r0, 0xa62(r3)
 /* 80CFA15C  28 00 00 00 */	cmplwi r0, 0
 /* 80CFA160  41 82 00 18 */	beq lbl_80CFA178

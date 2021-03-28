@@ -8,8 +8,8 @@ lbl_8048F2C4:
 /* 8048F2DC  54 00 C6 3E */	rlwinm r0, r0, 0x18, 0x18, 0x1f
 /* 8048F2E0  28 00 00 FF */	cmplwi r0, 0xff
 /* 8048F2E4  41 82 00 1C */	beq lbl_8048F300
-/* 8048F2E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048F2EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8048F2E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048F2EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8048F2F0  7C 84 02 14 */	add r4, r4, r0
 /* 8048F2F4  88 05 04 BA */	lbz r0, 0x4ba(r5)
 /* 8048F2F8  7C 05 07 74 */	extsb r5, r0

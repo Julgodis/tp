@@ -44,9 +44,9 @@ lbl_8051E254:
 /* 8051E26C  4B FF F7 B5 */	bl WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj
 /* 8051E270  48 00 08 C4 */	b lbl_8051EB34
 lbl_8051E274:
-/* 8051E274  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051E278  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8051E27C  83 7F 5D AC */	lwz r27, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8051E274  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051E278  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8051E27C  83 7F 5D AC */	lwz r27, 0x5dac(r31)
 /* 8051E280  80 1C 00 10 */	lwz r0, 0x10(r28)
 /* 8051E284  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
 /* 8051E288  41 82 01 28 */	beq lbl_8051E3B0
@@ -549,7 +549,7 @@ lbl_8051E944:
 /* 8051E954  38 80 00 00 */	li r4, 0
 /* 8051E958  3C 60 80 45 */	lis r3, m_grass__9daGrass_c@ha
 /* 8051E95C  38 63 0D B0 */	addi r3, r3, m_grass__9daGrass_c@l
-/* 8051E960  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB0 */
+/* 8051E960  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051E964  3C 63 00 02 */	addis r3, r3, 2
 /* 8051E968  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8051E96C  7C 63 02 14 */	add r3, r3, r0
@@ -625,9 +625,9 @@ lbl_8051EA1C:
 /* 8051EA74  7C 60 46 70 */	srawi r0, r3, 8
 /* 8051EA78  98 01 00 3C */	stb r0, 0x3c(r1)
 /* 8051EA7C  98 61 00 3D */	stb r3, 0x3d(r1)
-/* 8051EA80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051EA84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051EA88  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8051EA80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051EA84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051EA88  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8051EA8C  3C 80 80 45 */	lis r4, mLight8EcallBack__13dPa_control_c@ha
 /* 8051EA90  38 04 0E AC */	addi r0, r4, mLight8EcallBack__13dPa_control_c@l
 /* 8051EA94  90 01 00 08 */	stw r0, 8(r1)
@@ -660,7 +660,7 @@ lbl_8051EA1C:
 /* 8051EB00  90 01 00 38 */	stw r0, 0x38(r1)
 /* 8051EB04  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8051EB08  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8051EB0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8051EB0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051EB10  38 81 00 38 */	addi r4, r1, 0x38
 /* 8051EB14  38 B5 00 0C */	addi r5, r21, 0xc
 /* 8051EB18  38 C0 00 00 */	li r6, 0

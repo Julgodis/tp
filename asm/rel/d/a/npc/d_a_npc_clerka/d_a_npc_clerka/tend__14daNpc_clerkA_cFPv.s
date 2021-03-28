@@ -8,7 +8,7 @@ lbl_80993F84:
 /* 80993F9C  3C 60 80 99 */	lis r3, m__20daNpc_clerkA_Param_c@ha
 /* 80993FA0  3B E3 58 70 */	addi r31, r3, m__20daNpc_clerkA_Param_c@l
 /* 80993FA4  38 7F 00 00 */	addi r3, r31, 0
-/* 80993FA8  AB 83 00 8C */	lha r28, 0x8c(r3)	/* effective address: 809958FC */
+/* 80993FA8  AB 83 00 8C */	lha r28, 0x8c(r3)
 /* 80993FAC  A0 1E 0E 22 */	lhz r0, 0xe22(r30)
 /* 80993FB0  2C 00 00 02 */	cmpwi r0, 2
 /* 80993FB4  41 82 00 CC */	beq lbl_80994080

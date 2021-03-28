@@ -7,7 +7,7 @@ lbl_805D0584:
 /* 805D0598  7C 7E 1B 78 */	mr r30, r3
 /* 805D059C  3C 60 80 5E */	lis r3, lit_3932@ha
 /* 805D05A0  3B E3 CA 54 */	addi r31, r3, lit_3932@l
-/* 805D05A4  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 805DCA5C */
+/* 805D05A4  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 805D05A8  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 805D05AC  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 805D05B0  D0 01 00 30 */	stfs f0, 0x30(r1)
@@ -83,12 +83,12 @@ lbl_805D0680:
 /* 805D06B0  3B 00 00 00 */	li r24, 0
 /* 805D06B4  3B A0 00 00 */	li r29, 0
 /* 805D06B8  3B 80 00 00 */	li r28, 0
-/* 805D06BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805D06C0  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 805D06BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805D06C0  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 805D06C4  3C 60 80 5E */	lis r3, eff_smoke_id@ha
 /* 805D06C8  3B 63 D4 70 */	addi r27, r3, eff_smoke_id@l
 lbl_805D06CC:
-/* 805D06CC  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 805D06CC  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 805D06D0  38 00 00 FF */	li r0, 0xff
 /* 805D06D4  90 01 00 08 */	stw r0, 8(r1)
 /* 805D06D8  38 80 00 00 */	li r4, 0

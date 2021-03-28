@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct JPTraceParticleCallBack4 {
@@ -117,11 +117,11 @@ asm void cDmrNowMidnaTalk() {
 /* ############################################################################################## */
 /* 803A3568-803A357C 0014+00 s=2 e=0 z=0  None .data      __vt__24JPTraceParticleCallBack4                             */
 SECTION_DATA static void* __vt__24JPTraceParticleCallBack4[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__24JPTraceParticleCallBack4Fv,
-	/* 3    */ (void*)execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__24JPTraceParticleCallBack4Fv,
+	(void*)execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 80018328-80018388 0060+00 s=2 e=0 z=0  None .text      __dt__24JPTraceParticleCallBack4Fv                           */
@@ -138,11 +138,11 @@ asm JPTraceParticleCallBack4::~JPTraceParticleCallBack4() {
 /* ############################################################################################## */
 /* 803A357C-803A3590 0014+00 s=1 e=3 z=0  None .data      __vt__19JPAParticleCallBack                                  */
 SECTION_DATA void* __vt__19JPAParticleCallBack[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
-	/* 4    */ (void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
+	(void*)draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle,
 };
 
 /* 803F0F40-803F0F50 000C+04 s=1 e=0 z=0  None .bss       @3741                                                        */

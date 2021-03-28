@@ -19,8 +19,8 @@ lbl_80AEB32C:
 /* 80AEB370  4B FF FE 21 */	bl getResName__13daNpc_Shop0_cFv
 /* 80AEB374  3C 80 80 AF */	lis r4, l_fileName@ha
 /* 80AEB378  38 84 BD C0 */	addi r4, r4, l_fileName@l
-/* 80AEB37C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AEB380  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AEB37C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AEB380  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AEB384  3C A5 00 02 */	addis r5, r5, 2
 /* 80AEB388  38 C0 00 80 */	li r6, 0x80
 /* 80AEB38C  38 A5 C2 F8 */	addi r5, r5, -15624

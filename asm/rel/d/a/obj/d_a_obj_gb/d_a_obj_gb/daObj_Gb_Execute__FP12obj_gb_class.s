@@ -52,7 +52,7 @@ lbl_80BF649C:
 /* 80BF64B0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BF64B4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BF64B8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BF64BC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BF64BC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BF64C0  38 81 00 14 */	addi r4, r1, 0x14
 /* 80BF64C4  38 BD 05 94 */	addi r5, r29, 0x594
 /* 80BF64C8  7C BE 2A 14 */	add r5, r30, r5
@@ -93,7 +93,7 @@ lbl_80BF6534:
 /* 80BF654C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80BF6550  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BF6554  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BF6558  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BF6558  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BF655C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BF6560  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BF6564  38 C0 00 00 */	li r6, 0
@@ -110,7 +110,7 @@ lbl_80BF6584:
 /* 80BF658C  90 01 00 08 */	stw r0, 8(r1)
 /* 80BF6590  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BF6594  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BF6598  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BF6598  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BF659C  38 81 00 08 */	addi r4, r1, 8
 /* 80BF65A0  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BF65A4  38 C0 00 00 */	li r6, 0
@@ -127,24 +127,24 @@ lbl_80BF65C4:
 /* 80BF65CC  C0 5F 00 04 */	lfs f2, 4(r31)
 /* 80BF65D0  FC 60 10 90 */	fmr f3, f2
 /* 80BF65D4  4B 67 94 68 */	b cLib_addCalc2__FPffff
-/* 80BF65D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF65DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF65D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF65DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF65E0  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80BF65E4  3C 80 80 BF */	lis r4, stringBase0@ha
 /* 80BF65E8  38 84 6D EC */	addi r4, r4, stringBase0@l
 /* 80BF65EC  4B 77 23 A8 */	b strcmp
 /* 80BF65F0  2C 03 00 00 */	cmpwi r3, 0
 /* 80BF65F4  41 82 00 AC */	beq lbl_80BF66A0
-/* 80BF65F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF65FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF65F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF65FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF6600  80 9E 05 84 */	lwz r4, 0x584(r30)
 /* 80BF6604  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BF6608  7C 05 07 74 */	extsb r5, r0
 /* 80BF660C  4B 43 ED 54 */	b isSwitch__10dSv_info_cCFii
 /* 80BF6610  2C 03 00 00 */	cmpwi r3, 0
 /* 80BF6614  40 82 00 24 */	bne lbl_80BF6638
-/* 80BF6618  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF661C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF6618  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF661C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF6620  80 9E 05 80 */	lwz r4, 0x580(r30)
 /* 80BF6624  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BF6628  7C 05 07 74 */	extsb r5, r0
@@ -161,16 +161,16 @@ lbl_80BF6644:
 /* 80BF664C  C0 5F 00 04 */	lfs f2, 4(r31)
 /* 80BF6650  FC 60 10 90 */	fmr f3, f2
 /* 80BF6654  4B 67 93 E8 */	b cLib_addCalc2__FPffff
-/* 80BF6658  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF665C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF6658  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF665C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF6660  80 9E 05 84 */	lwz r4, 0x584(r30)
 /* 80BF6664  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BF6668  7C 05 07 74 */	extsb r5, r0
 /* 80BF666C  4B 43 EC F4 */	b isSwitch__10dSv_info_cCFii
 /* 80BF6670  2C 03 00 00 */	cmpwi r3, 0
 /* 80BF6674  40 82 00 2C */	bne lbl_80BF66A0
-/* 80BF6678  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF667C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF6678  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF667C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF6680  80 9E 05 80 */	lwz r4, 0x580(r30)
 /* 80BF6684  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80BF6688  7C 05 07 74 */	extsb r5, r0

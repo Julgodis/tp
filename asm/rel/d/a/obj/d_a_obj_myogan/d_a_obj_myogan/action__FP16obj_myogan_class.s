@@ -16,7 +16,7 @@ lbl_80C9ECA0:
 /* 80C9ECA4  C0 3F 04 AC */	lfs f1, 0x4ac(r31)
 /* 80C9ECA8  3C 80 80 CA */	lis r4, l_HIO@ha
 /* 80C9ECAC  38 84 F3 28 */	addi r4, r4, l_HIO@l
-/* 80C9ECB0  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80C9F334 */
+/* 80C9ECB0  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80C9ECB4  EC 21 00 2A */	fadds f1, f1, f0
 /* 80C9ECB8  3C 80 80 CA */	lis r4, lit_3823@ha
 /* 80C9ECBC  C0 44 F2 90 */	lfs f2, lit_3823@l(r4)
@@ -36,7 +36,7 @@ lbl_80C9ECCC:
 /* 80C9ECF0  4B 36 D7 44 */	b mDoMtx_YrotM__FPA4_fs
 /* 80C9ECF4  3C 60 80 CA */	lis r3, l_HIO@ha
 /* 80C9ECF8  38 63 F3 28 */	addi r3, r3, l_HIO@l
-/* 80C9ECFC  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80C9F330 */
+/* 80C9ECFC  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80C9ED00  FC 40 08 90 */	fmr f2, f1
 /* 80C9ED04  FC 60 08 90 */	fmr f3, f1
 /* 80C9ED08  4B 36 E1 30 */	b scaleM__14mDoMtx_stack_cFfff

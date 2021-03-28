@@ -11,8 +11,8 @@ lbl_80C3DA18:
 /* 80C3DA3C  60 00 00 01 */	ori r0, r0, 1
 /* 80C3DA40  90 1E 08 40 */	stw r0, 0x840(r30)
 /* 80C3DA44  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80C3DA48  C0 3F 00 18 */	lfs f1, 0x18(r31)	/* effective address: 80C3F070 */
-/* 80C3DA4C  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 80C3F058 */
+/* 80C3DA48  C0 3F 00 18 */	lfs f1, 0x18(r31)
+/* 80C3DA4C  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 80C3DA50  4B 63 20 30 */	b cLib_addCalc0__FPfff
 /* 80C3DA54  80 1E 05 5C */	lwz r0, 0x55c(r30)
 /* 80C3DA58  60 00 00 10 */	ori r0, r0, 0x10

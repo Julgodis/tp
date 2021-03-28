@@ -47,7 +47,7 @@ lbl_8059C148:
 /* 8059C170  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8059C174  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8059C178  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8059C17C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8059C17C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8059C180  38 81 00 0C */	addi r4, r1, 0xc
 /* 8059C184  38 BD 05 38 */	addi r5, r29, 0x538
 /* 8059C188  38 C0 00 00 */	li r6, 0
@@ -75,7 +75,7 @@ lbl_8059C1B0:
 /* 8059C1D8  90 01 00 08 */	stw r0, 8(r1)
 /* 8059C1DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8059C1E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8059C1E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8059C1E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 8059C1E8  38 81 00 08 */	addi r4, r1, 8
 /* 8059C1EC  38 BD 05 38 */	addi r5, r29, 0x538
 /* 8059C1F0  38 C0 00 00 */	li r6, 0

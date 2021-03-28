@@ -12,7 +12,7 @@ lbl_80D3C970:
 /* 80D3C998  80 1B 04 9C */	lwz r0, 0x49c(r27)
 /* 80D3C99C  54 1E 9F FE */	rlwinm r30, r0, 0x13, 0x1f, 0x1f
 /* 80D3C9A0  3B FD 00 30 */	addi r31, r29, 0x30
-/* 80D3C9A4  C0 1F 00 08 */	lfs f0, 8(r31)	/* effective address: 80D3DCC4 */
+/* 80D3C9A4  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80D3C9A8  D0 1B 04 EC */	stfs f0, 0x4ec(r27)
 /* 80D3C9AC  D0 1B 04 F0 */	stfs f0, 0x4f0(r27)
 /* 80D3C9B0  D0 1B 04 F4 */	stfs f0, 0x4f4(r27)
@@ -21,7 +21,7 @@ lbl_80D3C970:
 /* 80D3C9BC  38 00 00 06 */	li r0, 6
 /* 80D3C9C0  98 1B 05 48 */	stb r0, 0x548(r27)
 /* 80D3C9C4  38 7B 07 9C */	addi r3, r27, 0x79c
-/* 80D3C9C8  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 80D3DCD8 */
+/* 80D3C9C8  C0 3F 00 1C */	lfs f1, 0x1c(r31)
 /* 80D3C9CC  4B 33 95 74 */	b SetWallR__12dBgS_AcchCirFf
 /* 80D3C9D0  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 80D3C9D4  D0 1B 07 CC */	stfs f0, 0x7cc(r27)
@@ -547,8 +547,8 @@ lbl_80D3D164:
 /* 80D3D180  4B 2E 00 74 */	b fopAcM_riverStream__FP4cXyzPsPff
 lbl_80D3D184:
 /* 80D3D184  38 7B 05 88 */	addi r3, r27, 0x588
-/* 80D3D188  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D3D18C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80D3D188  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D3D18C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80D3D190  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80D3D194  4B 33 99 18 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80D3D198  80 1B 06 64 */	lwz r0, 0x664(r27)
@@ -632,8 +632,8 @@ lbl_80D3D240:
 /* 80D3D2CC  38 7B 09 00 */	addi r3, r27, 0x900
 /* 80D3D2D0  38 9B 04 D0 */	addi r4, r27, 0x4d0
 /* 80D3D2D4  4B 53 1F 08 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80D3D2D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3D2DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D3D2D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3D2DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D3D2E0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80D3D2E4  38 9B 07 DC */	addi r4, r27, 0x7dc
 /* 80D3D2E8  4B 52 78 C0 */	b Set__4cCcSFP8cCcD_Obj

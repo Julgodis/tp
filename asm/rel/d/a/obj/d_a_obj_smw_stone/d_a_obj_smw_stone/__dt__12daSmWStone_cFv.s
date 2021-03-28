@@ -16,7 +16,7 @@ lbl_80CDE588:
 lbl_80CDE5C0:
 /* 80CDE5C0  3C 80 80 CE */	lis r4, l_arcName@ha
 /* 80CDE5C4  38 84 EF 1C */	addi r4, r4, l_arcName@l
-/* 80CDE5C8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CDEF1C */
+/* 80CDE5C8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CDE5CC  4B 34 EA 3C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CDE5D0  38 7E 05 74 */	addi r3, r30, 0x574
 /* 80CDE5D4  38 80 FF FF */	li r4, -1

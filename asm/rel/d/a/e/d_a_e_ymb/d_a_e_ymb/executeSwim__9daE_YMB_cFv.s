@@ -7,15 +7,15 @@ lbl_8081A88C:
 /* 8081A8A0  7C 7C 1B 78 */	mr r28, r3
 /* 8081A8A4  3C 80 80 82 */	lis r4, lit_3791@ha
 /* 8081A8A8  3B C4 18 AC */	addi r30, r4, lit_3791@l
-/* 8081A8AC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8081A8B0  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8081A8B4  88 1F 5D B0 */	lbz r0, 0x5db0(r31)	/* effective address: 8040BF70 */
+/* 8081A8AC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8081A8B0  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8081A8B4  88 1F 5D B0 */	lbz r0, 0x5db0(r31)
 /* 8081A8B8  7C 00 07 74 */	extsb r0, r0
 /* 8081A8BC  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8081A8C0  7C 9F 02 14 */	add r4, r31, r0
 /* 8081A8C4  80 84 5D 74 */	lwz r4, 0x5d74(r4)
 /* 8081A8C8  AB A4 02 32 */	lha r29, 0x232(r4)
-/* 8081A8CC  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8081A8CC  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8081A8D0  4B 7F FE 40 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8081A8D4  7C 03 E8 50 */	subf r0, r3, r29
 /* 8081A8D8  7C 1D 07 34 */	extsh r29, r0
@@ -101,7 +101,7 @@ lbl_8081A9D8:
 /* 8081AA0C  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8081AA10  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 8081AA14  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 8081AA18  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80821E74 */
+/* 8081AA18  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8081AA1C  C0 5E 00 90 */	lfs f2, 0x90(r30)
 /* 8081AA20  4B A5 5D 20 */	b cLib_chaseF__FPfff
 /* 8081AA24  38 7C 04 FC */	addi r3, r28, 0x4fc
@@ -326,7 +326,7 @@ lbl_8081AD5C:
 /* 8081AD5C  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8081AD60  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 8081AD64  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 8081AD68  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80821E74 */
+/* 8081AD68  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8081AD6C  C0 5E 00 90 */	lfs f2, 0x90(r30)
 /* 8081AD70  4B A5 59 D0 */	b cLib_chaseF__FPfff
 /* 8081AD74  C0 1E 00 18 */	lfs f0, 0x18(r30)
@@ -640,7 +640,7 @@ lbl_8081B1CC:
 /* 8081B1E0  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8081B1E4  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 8081B1E8  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 8081B1EC  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80821E74 */
+/* 8081B1EC  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8081B1F0  C0 5E 00 90 */	lfs f2, 0x90(r30)
 /* 8081B1F4  4B A5 55 4C */	b cLib_chaseF__FPfff
 /* 8081B1F8  38 7C 04 D0 */	addi r3, r28, 0x4d0
@@ -661,8 +661,8 @@ lbl_8081B1CC:
 /* 8081B234  2C 00 00 00 */	cmpwi r0, 0
 /* 8081B238  40 82 05 3C */	bne lbl_8081B774
 /* 8081B23C  3B E0 00 00 */	li r31, 0
-/* 8081B240  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081B244  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8081B240  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081B244  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8081B248  3B C3 56 B8 */	addi r30, r3, 0x56b8
 /* 8081B24C  7F C3 F3 78 */	mr r3, r30
 /* 8081B250  4B 85 85 94 */	b LockonTruth__12dAttention_cFv
@@ -756,7 +756,7 @@ lbl_8081B35C:
 /* 8081B398  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 8081B39C  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 8081B3A0  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 8081B3A4  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 80821E74 */
+/* 8081B3A4  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 8081B3A8  C0 5E 00 90 */	lfs f2, 0x90(r30)
 /* 8081B3AC  4B A5 53 94 */	b cLib_chaseF__FPfff
 /* 8081B3B0  38 7C 04 D4 */	addi r3, r28, 0x4d4
@@ -888,7 +888,7 @@ lbl_8081B538:
 /* 8081B580  4B A5 51 C0 */	b cLib_chaseF__FPfff
 /* 8081B584  3C 60 80 82 */	lis r3, l_HIO@ha
 /* 8081B588  3B A3 1E 64 */	addi r29, r3, l_HIO@l
-/* 8081B58C  C0 1D 00 10 */	lfs f0, 0x10(r29)	/* effective address: 80821E74 */
+/* 8081B58C  C0 1D 00 10 */	lfs f0, 0x10(r29)
 /* 8081B590  D0 1C 06 C8 */	stfs f0, 0x6c8(r28)
 /* 8081B594  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 8081B598  38 63 9A 20 */	addi r3, r3, sincosTable___5JMath@l
@@ -956,7 +956,7 @@ lbl_8081B640:
 /* 8081B68C  38 7C 06 C8 */	addi r3, r28, 0x6c8
 /* 8081B690  3C 80 80 82 */	lis r4, l_HIO@ha
 /* 8081B694  38 84 1E 64 */	addi r4, r4, l_HIO@l
-/* 8081B698  C0 24 00 0C */	lfs f1, 0xc(r4)	/* effective address: 80821E70 */
+/* 8081B698  C0 24 00 0C */	lfs f1, 0xc(r4)
 /* 8081B69C  C0 5E 00 38 */	lfs f2, 0x38(r30)
 /* 8081B6A0  4B A5 50 A0 */	b cLib_chaseF__FPfff
 /* 8081B6A4  48 00 00 14 */	b lbl_8081B6B8

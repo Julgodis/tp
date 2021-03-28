@@ -58,9 +58,9 @@ extern "C" extern u8 g_meter2_info[248];
 /* ############################################################################################## */
 /* 803C0BF0-803C0C00 000C+04 s=2 e=0 z=0  None .data      __vt__10dMsgUnit_c                                           */
 SECTION_DATA static void* __vt__10dMsgUnit_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dMsgUnit_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10dMsgUnit_cFv,
 	/* padding */
 	NULL,
 };

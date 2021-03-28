@@ -9,8 +9,8 @@ lbl_80CB3024:
 /* 80CB3040  38 61 00 20 */	addi r3, r1, 0x20
 /* 80CB3044  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 80CB3048  4B 5B 4C E0 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80CB304C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB3050  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CB304C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB3050  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CB3054  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CB3058  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CB305C  4B 3C 14 44 */	b GroundCross__4cBgSFP11cBgS_GndChk

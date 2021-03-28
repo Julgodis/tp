@@ -5,7 +5,7 @@ lbl_8063CD14:
 /* 8063CD20  3C 80 80 64 */	lis r4, lit_3776@ha
 /* 8063CD24  38 84 DC 84 */	addi r4, r4, lit_3776@l
 /* 8063CD28  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
-/* 8063CD2C  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 8063DC98 */
+/* 8063CD2C  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 8063CD30  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8063CD34  4C 40 13 82 */	cror 2, 0, 2
 /* 8063CD38  40 82 00 3C */	bne lbl_8063CD74

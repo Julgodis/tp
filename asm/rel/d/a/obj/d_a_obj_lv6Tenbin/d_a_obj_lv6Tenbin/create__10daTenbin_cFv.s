@@ -45,12 +45,12 @@ lbl_80C76DA8:
 /* 80C76DB0  90 1E 05 04 */	stw r0, 0x504(r30)
 /* 80C76DB4  3C 60 80 C7 */	lis r3, l_cull_box@ha
 /* 80C76DB8  38 83 7A 08 */	addi r4, r3, l_cull_box@l
-/* 80C76DBC  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80C77A18 */
+/* 80C76DBC  C0 A4 00 10 */	lfs f5, 0x10(r4)
 /* 80C76DC0  7F C3 F3 78 */	mr r3, r30
-/* 80C76DC4  C0 24 00 00 */	lfs f1, 0(r4)	/* effective address: 80C77A08 */
-/* 80C76DC8  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80C77A0C */
-/* 80C76DCC  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80C77A10 */
-/* 80C76DD0  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80C77A14 */
+/* 80C76DC4  C0 24 00 00 */	lfs f1, 0(r4)
+/* 80C76DC8  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80C76DCC  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80C76DD0  C0 84 00 0C */	lfs f4, 0xc(r4)
 /* 80C76DD4  FC C0 28 90 */	fmr f6, f5
 /* 80C76DD8  4B 3A 37 70 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80C76DDC  3C 60 80 C7 */	lis r3, rideCallBackLeft__10daTenbin_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c@ha
@@ -100,8 +100,8 @@ lbl_80C76DA8:
 /* 80C76E8C  80 9E 06 1C */	lwz r4, 0x61c(r30)
 /* 80C76E90  28 04 00 00 */	cmplwi r4, 0
 /* 80C76E94  41 82 00 20 */	beq lbl_80C76EB4
-/* 80C76E98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C76E9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C76E98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C76E9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C76EA0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C76EA4  7F C5 F3 78 */	mr r5, r30
 /* 80C76EA8  4B 3F DB 60 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c

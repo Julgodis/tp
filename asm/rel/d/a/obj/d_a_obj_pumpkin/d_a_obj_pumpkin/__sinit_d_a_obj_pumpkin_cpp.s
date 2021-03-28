@@ -11,10 +11,10 @@ lbl_80CB8290:
 /* 80CB82B4  38 00 00 06 */	li r0, 6
 /* 80CB82B8  7C 09 03 A6 */	mtctr r0
 lbl_80CB82BC:
-/* 80CB82BC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80CB83A4 */
-/* 80CB82C0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80CB83A8 */
-/* 80CB82C4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80CB849C */
-/* 80CB82C8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80CB84A0 */
+/* 80CB82BC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80CB82C0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80CB82C4  90 65 00 04 */	stw r3, 4(r5)
+/* 80CB82C8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80CB82CC  42 00 FF F0 */	bdnz lbl_80CB82BC
 /* 80CB82D0  3C 60 80 CC */	lis r3, __vt__21daObj_Pumpkin_Param_c@ha
 /* 80CB82D4  38 03 85 BC */	addi r0, r3, __vt__21daObj_Pumpkin_Param_c@l

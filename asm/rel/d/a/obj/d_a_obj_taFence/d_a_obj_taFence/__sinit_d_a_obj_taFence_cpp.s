@@ -19,10 +19,10 @@ lbl_80D0605C:
 /* 80D060A0  38 00 00 06 */	li r0, 6
 /* 80D060A4  7C 09 03 A6 */	mtctr r0
 lbl_80D060A8:
-/* 80D060A8  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80D06114 */
-/* 80D060AC  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80D06118 */
-/* 80D060B0  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80D061C4 */
-/* 80D060B4  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80D061C8 */
+/* 80D060A8  80 64 00 04 */	lwz r3, 4(r4)
+/* 80D060AC  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80D060B0  90 65 00 04 */	stw r3, 4(r5)
+/* 80D060B4  94 05 00 08 */	stwu r0, 8(r5)
 /* 80D060B8  42 00 FF F0 */	bdnz lbl_80D060A8
 /* 80D060BC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D060C0  7C 08 03 A6 */	mtlr r0

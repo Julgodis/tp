@@ -9,9 +9,9 @@ lbl_80727A20:
 /* 80727A3C  7C 7C 1B 78 */	mr r28, r3
 /* 80727A40  3C 80 80 73 */	lis r4, lit_3800@ha
 /* 80727A44  3B C4 95 04 */	addi r30, r4, lit_3800@l
-/* 80727A48  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80727A4C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80727A50  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80727A48  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80727A4C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80727A50  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80727A54  4B 8F 2D 8C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80727A58  D0 3C 06 80 */	stfs f1, 0x680(r28)
 /* 80727A5C  7F 83 E3 78 */	mr r3, r28
@@ -40,8 +40,8 @@ lbl_80727A20:
 /* 80727AB8  38 61 00 54 */	addi r3, r1, 0x54
 /* 80727ABC  38 81 00 48 */	addi r4, r1, 0x48
 /* 80727AC0  4B B4 02 68 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80727AC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80727AC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80727AC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80727AC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80727ACC  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 80727AD0  7F A3 EB 78 */	mr r3, r29
 /* 80727AD4  38 81 00 54 */	addi r4, r1, 0x54
@@ -274,7 +274,7 @@ lbl_80727DC4:
 /* 80727DFC  4B B4 88 0C */	b cLib_addCalcAngleS2__FPssss
 /* 80727E00  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80727E04  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80727E08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80727E08  80 63 00 00 */	lwz r3, 0(r3)
 /* 80727E0C  A8 9C 04 DE */	lha r4, 0x4de(r28)
 /* 80727E10  4B 8E 45 CC */	b mDoMtx_YrotS__FPA4_fs
 /* 80727E14  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -293,7 +293,7 @@ lbl_80727DC4:
 /* 80727E48  38 9C 04 F8 */	addi r4, r28, 0x4f8
 /* 80727E4C  3C A0 80 73 */	lis r5, l_HIO@ha
 /* 80727E50  38 A5 98 0C */	addi r5, r5, l_HIO@l
-/* 80727E54  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 80729814 */
+/* 80727E54  C0 25 00 08 */	lfs f1, 8(r5)
 /* 80727E58  4B B3 ED 2C */	b __ml__4cXyzCFf
 /* 80727E5C  38 7C 04 D0 */	addi r3, r28, 0x4d0
 /* 80727E60  38 81 00 0C */	addi r4, r1, 0xc

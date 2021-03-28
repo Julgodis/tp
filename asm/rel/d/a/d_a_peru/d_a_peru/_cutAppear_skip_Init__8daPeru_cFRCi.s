@@ -38,11 +38,11 @@ lbl_80D4AA44:
 /* 80D4AAA4  4B 40 1F 88 */	b daNpcT_onEvtBit__FUl
 /* 80D4AAA8  3C 60 80 D5 */	lis r3, lit_5846@ha
 /* 80D4AAAC  38 83 C6 10 */	addi r4, r3, lit_5846@l
-/* 80D4AAB0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4C610 */
-/* 80D4AAB4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4C614 */
+/* 80D4AAB0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D4AAB4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D4AAB8  90 61 00 08 */	stw r3, 8(r1)
 /* 80D4AABC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D4AAC0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80D4C618 */
+/* 80D4AAC0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80D4AAC4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D4AAC8  7F E3 FB 78 */	mr r3, r31
 /* 80D4AACC  38 81 00 08 */	addi r4, r1, 8

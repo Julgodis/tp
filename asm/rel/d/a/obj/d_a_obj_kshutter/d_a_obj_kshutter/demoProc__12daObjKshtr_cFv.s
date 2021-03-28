@@ -6,7 +6,7 @@ lbl_80C49158:
 /* 80C49168  38 84 9E 60 */	addi r4, r4, cNullVec__6Z2Calc@l
 /* 80C4916C  3C A0 80 C5 */	lis r5, struct_80C4A0E8+0x3@ha
 /* 80C49170  38 E5 A0 EB */	addi r7, r5, struct_80C4A0E8+0x3@l
-/* 80C49174  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80C4A0EB */
+/* 80C49174  88 07 00 00 */	lbz r0, 0(r7)
 /* 80C49178  7C 00 07 75 */	extsb. r0, r0
 /* 80C4917C  40 82 00 40 */	bne lbl_80C491BC
 /* 80C49180  80 A4 01 A0 */	lwz r5, 0x1a0(r4)
@@ -27,7 +27,7 @@ lbl_80C49158:
 lbl_80C491BC:
 /* 80C491BC  3C A0 80 C5 */	lis r5, data_80C4A0EC@ha
 /* 80C491C0  38 E5 A0 EC */	addi r7, r5, data_80C4A0EC@l
-/* 80C491C4  88 07 00 00 */	lbz r0, 0(r7)	/* effective address: 80C4A0EC */
+/* 80C491C4  88 07 00 00 */	lbz r0, 0(r7)
 /* 80C491C8  7C 00 07 75 */	extsb. r0, r0
 /* 80C491CC  40 82 00 40 */	bne lbl_80C4920C
 /* 80C491D0  80 A4 01 D0 */	lwz r5, 0x1d0(r4)

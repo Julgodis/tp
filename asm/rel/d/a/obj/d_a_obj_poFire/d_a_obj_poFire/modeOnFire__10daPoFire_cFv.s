@@ -10,9 +10,9 @@ lbl_80CB39E0:
 /* 80CB3A00  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80CB3A04  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80CB3A08  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80CB3A0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB3A10  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80CB3A14  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80CB3A0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB3A10  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80CB3A14  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80CB3A18  38 00 00 FF */	li r0, 0xff
 /* 80CB3A1C  90 01 00 08 */	stw r0, 8(r1)
 /* 80CB3A20  38 80 00 00 */	li r4, 0

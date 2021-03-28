@@ -7,7 +7,7 @@ lbl_80A2247C:
 /* 80A22490  40 82 00 24 */	bne lbl_80A224B4
 /* 80A22494  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80A22498  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80A2249C  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80A2249C  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80A224A0  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80A224A4  28 03 00 00 */	cmplwi r3, 0
 /* 80A224A8  41 82 00 0C */	beq lbl_80A224B4

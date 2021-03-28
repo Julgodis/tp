@@ -33,8 +33,8 @@ lbl_80472EF0:
 /* 80472F6C  38 61 00 14 */	addi r3, r1, 0x14
 /* 80472F70  4B BA AD 4C */	b gndCheck__11fopAcM_gc_cFPC4cXyz
 /* 80472F74  7C 7F 1B 78 */	mr r31, r3
-/* 80472F78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80472F7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80472F78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80472F7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80472F80  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80472F84  3C 80 80 3F */	lis r4, mGndCheck__11fopAcM_gc_c@ha
 /* 80472F88  38 84 1C C4 */	addi r4, r4, mGndCheck__11fopAcM_gc_c@l

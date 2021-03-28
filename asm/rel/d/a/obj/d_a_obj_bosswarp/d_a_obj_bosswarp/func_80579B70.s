@@ -22,7 +22,7 @@ lbl_80579BB8:
 /* 80579BB8  38 7E 05 68 */	addi r3, r30, 0x568
 /* 80579BBC  3C 80 80 58 */	lis r4, l_arcName@ha
 /* 80579BC0  38 84 B6 78 */	addi r4, r4, l_arcName@l
-/* 80579BC4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8057B678 */
+/* 80579BC4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80579BC8  4B AB 32 F4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80579BCC  7C 7F 1B 78 */	mr r31, r3
 /* 80579BD0  2C 1F 00 04 */	cmpwi r31, 4

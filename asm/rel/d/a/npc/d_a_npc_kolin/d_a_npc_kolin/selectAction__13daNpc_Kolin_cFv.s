@@ -9,11 +9,11 @@ lbl_80555E38:
 /* 80555E54  3B C3 A8 C8 */	addi r30, r3, cNullVec__6Z2Calc@l
 /* 80555E58  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80555E5C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80555E60  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80555E64  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80555E60  80 64 00 00 */	lwz r3, 0(r4)
+/* 80555E64  80 04 00 04 */	lwz r0, 4(r4)
 /* 80555E68  90 7F 0F D8 */	stw r3, 0xfd8(r31)
 /* 80555E6C  90 1F 0F DC */	stw r0, 0xfdc(r31)
-/* 80555E70  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80555E70  80 04 00 08 */	lwz r0, 8(r4)
 /* 80555E74  90 1F 0F E0 */	stw r0, 0xfe0(r31)
 /* 80555E78  88 1F 0F 84 */	lbz r0, 0xf84(r31)
 /* 80555E7C  2C 00 00 0A */	cmpwi r0, 0xa

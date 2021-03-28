@@ -13,10 +13,10 @@ lbl_804EF99C:
 /* 804EF9C8  7C B8 2B 78 */	mr r24, r5
 /* 804EF9CC  3C 60 80 50 */	lis r3, lit_3777@ha
 /* 804EF9D0  3B 83 A6 BC */	addi r28, r3, lit_3777@l
-/* 804EF9D4  C0 3C 00 8C */	lfs f1, 0x8c(r28)	/* effective address: 804FA748 */
+/* 804EF9D4  C0 3C 00 8C */	lfs f1, 0x8c(r28)
 /* 804EF9D8  C0 04 61 74 */	lfs f0, 0x6174(r4)
 /* 804EF9DC  EF C1 00 32 */	fmuls f30, f1, f0
-/* 804EF9E0  C0 1C 00 90 */	lfs f0, 0x90(r28)	/* effective address: 804FA74C */
+/* 804EF9E0  C0 1C 00 90 */	lfs f0, 0x90(r28)
 /* 804EF9E4  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 804EF9E8  40 81 00 08 */	ble lbl_804EF9F0
 /* 804EF9EC  FF C0 00 90 */	fmr f30, f0
@@ -78,7 +78,7 @@ lbl_804EFA8C:
 lbl_804EFABC:
 /* 804EFABC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804EFAC0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804EFAC4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804EFAC4  80 63 00 00 */	lwz r3, 0(r3)
 /* 804EFAC8  4B B1 CA 04 */	b mDoMtx_ZrotM__FPA4_fs
 lbl_804EFACC:
 /* 804EFACC  C0 3D 00 48 */	lfs f1, 0x48(r29)

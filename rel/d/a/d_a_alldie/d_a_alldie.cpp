@@ -47,11 +47,11 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-static bool daAlldie_Draw(daAlldie_c*); // 2
-static void daAlldie_Execute(daAlldie_c*); // 2
-static bool daAlldie_IsDelete(daAlldie_c*); // 2
-static void daAlldie_Delete(daAlldie_c*); // 2
-static void daAlldie_Create(fopAc_ac_c*); // 2
+bool daAlldie_Draw(daAlldie_c*); // 2
+void daAlldie_Execute(daAlldie_c*); // 2
+bool daAlldie_IsDelete(daAlldie_c*); // 2
+void daAlldie_Delete(daAlldie_c*); // 2
+void daAlldie_Create(fopAc_ac_c*); // 2
 
 extern "C" void getEventNo__10daAlldie_cFv(); // 1
 extern "C" void getSwbit__10daAlldie_cFv(); // 1
@@ -62,11 +62,12 @@ extern "C" void actionOrder__10daAlldie_cFv(); // 1
 extern "C" void actionEvent__10daAlldie_cFv(); // 1
 extern "C" void actionNext__10daAlldie_cFv(); // 1
 extern "C" void execute__10daAlldie_cFv(); // 1
-extern "C" static bool daAlldie_Draw__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Execute__FP10daAlldie_c(); // 1
-extern "C" static bool daAlldie_IsDelete__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Delete__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Create__FP10fopAc_ac_c(); // 1
+extern "C" bool daAlldie_Draw__FP10daAlldie_c(); // 1
+extern "C" void daAlldie_Execute__FP10daAlldie_c(); // 1
+extern "C" bool daAlldie_IsDelete__FP10daAlldie_c(); // 1
+extern "C" void daAlldie_Delete__FP10daAlldie_c(); // 1
+extern "C" void daAlldie_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daAlldie_Method[8];
 extern "C" extern void* g_profile_ALLDIE[12];
 
 // 
@@ -88,9 +89,7 @@ extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
 extern "C" void endCheck__16dEvent_manager_cFs(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 
 // Declarations:
@@ -190,45 +189,45 @@ asm void daAlldie_c::execute() {
 #pragma pop
 
 
-/* 804D5B8C-804D5B94 0008+00 s=1 e=0 z=0  None .text      daAlldie_Draw__FP10daAlldie_c                                */
-static bool daAlldie_Draw(daAlldie_c* param_0) {
+/* 804D5B8C-804D5B94 0008+00 s=0 e=0 z=0  None .text      daAlldie_Draw__FP10daAlldie_c                                */
+bool daAlldie_Draw(daAlldie_c* param_0) {
 	return true;
 }
 
 
-/* 804D5B94-804D5BB8 0024+00 s=1 e=0 z=0  None .text      daAlldie_Execute__FP10daAlldie_c                             */
+/* 804D5B94-804D5BB8 0024+00 s=0 e=0 z=0  None .text      daAlldie_Execute__FP10daAlldie_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAlldie_Execute(daAlldie_c* param_0) {
+asm void daAlldie_Execute(daAlldie_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Execute__FP10daAlldie_c.s"
 }
 #pragma pop
 
 
-/* 804D5BB8-804D5BC0 0008+00 s=1 e=0 z=0  None .text      daAlldie_IsDelete__FP10daAlldie_c                            */
-static bool daAlldie_IsDelete(daAlldie_c* param_0) {
+/* 804D5BB8-804D5BC0 0008+00 s=0 e=0 z=0  None .text      daAlldie_IsDelete__FP10daAlldie_c                            */
+bool daAlldie_IsDelete(daAlldie_c* param_0) {
 	return true;
 }
 
 
-/* 804D5BC0-804D5BF0 0030+00 s=1 e=0 z=0  None .text      daAlldie_Delete__FP10daAlldie_c                              */
+/* 804D5BC0-804D5BF0 0030+00 s=0 e=0 z=0  None .text      daAlldie_Delete__FP10daAlldie_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAlldie_Delete(daAlldie_c* param_0) {
+asm void daAlldie_Delete(daAlldie_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Delete__FP10daAlldie_c.s"
 }
 #pragma pop
 
 
-/* 804D5BF0-804D5D1C 012C+00 s=1 e=0 z=0  None .text      daAlldie_Create__FP10fopAc_ac_c                              */
+/* 804D5BF0-804D5D1C 012C+00 s=0 e=0 z=0  None .text      daAlldie_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daAlldie_Create(fopAc_ac_c* param_0) {
+asm void daAlldie_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_alldie/d_a_alldie/daAlldie_Create__FP10fopAc_ac_c.s"
 }
@@ -236,31 +235,31 @@ asm static void daAlldie_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 804D5D24-804D5D44 0020+00 s=1 e=0 z=0  None .data      l_daAlldie_Method                                            */
-SECTION_DATA static void* l_daAlldie_Method[8] = {
-	/* 0    */ (void*)daAlldie_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daAlldie_Delete__FP10daAlldie_c,
-	/* 2    */ (void*)daAlldie_Execute__FP10daAlldie_c,
-	/* 3    */ (void*)daAlldie_IsDelete__FP10daAlldie_c,
-	/* 4    */ (void*)daAlldie_Draw__FP10daAlldie_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804D5D24-804D5D44 0020+00 s=0 e=0 z=0  None .data      l_daAlldie_Method                                            */
+SECTION_DATA void* l_daAlldie_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804D5D44-804D5D74 0030+00 s=0 e=0 z=1  None .data      g_profile_ALLDIE                                             */
+/* 804D5D44-804D5D74 0030+00 s=0 e=0 z=0  None .data      g_profile_ALLDIE                                             */
 SECTION_DATA void* g_profile_ALLDIE[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0002FFFD,
-	/* 2    */ (void*)0x00140000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000574,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01160000,
-	/* 9    */ (void*)&l_daAlldie_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0002FFFD,
+	(void*)0x00140000,
+	(void*)NULL,
+	(void*)0x00000574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01160000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x00060000,
 };
 

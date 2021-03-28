@@ -6,11 +6,11 @@ lbl_80B72E7C:
 /* 80B72E8C  7C 7F 1B 78 */	mr r31, r3
 /* 80B72E90  3C 80 80 B7 */	lis r4, lit_4609@ha
 /* 80B72E94  38 A4 4E 38 */	addi r5, r4, lit_4609@l
-/* 80B72E98  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80B74E38 */
-/* 80B72E9C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80B74E3C */
+/* 80B72E98  80 85 00 00 */	lwz r4, 0(r5)
+/* 80B72E9C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80B72EA0  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80B72EA4  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B72EA8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80B74E40 */
+/* 80B72EA8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80B72EAC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B72EB0  38 81 00 14 */	addi r4, r1, 0x14
 /* 80B72EB4  48 00 06 F9 */	bl chkAction__13daNpc_ZelRo_cFM13daNpc_ZelRo_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_80B72E7C:
 lbl_80B72ED8:
 /* 80B72ED8  38 00 00 00 */	li r0, 0
 /* 80B72EDC  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80B72EE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B72EE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B72EE8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80B72EE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B72EE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B72EE8  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80B72EEC  28 04 00 01 */	cmplwi r4, 1
 /* 80B72EF0  41 82 00 0C */	beq lbl_80B72EFC
 /* 80B72EF4  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80B72F20:
 lbl_80B72F38:
 /* 80B72F38  3C 60 80 B7 */	lis r3, lit_4619@ha
 /* 80B72F3C  38 83 4E 44 */	addi r4, r3, lit_4619@l
-/* 80B72F40  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B74E44 */
-/* 80B72F44  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B74E48 */
+/* 80B72F40  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B72F44  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B72F48  90 61 00 08 */	stw r3, 8(r1)
 /* 80B72F4C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B72F50  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B74E4C */
+/* 80B72F50  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B72F54  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B72F58  7F E3 FB 78 */	mr r3, r31
 /* 80B72F5C  38 81 00 08 */	addi r4, r1, 8

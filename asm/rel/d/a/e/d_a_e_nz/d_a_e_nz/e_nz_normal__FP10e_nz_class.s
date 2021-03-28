@@ -9,7 +9,7 @@ lbl_80729C24:
 /* 80729C40  7C 7E 1B 78 */	mr r30, r3
 /* 80729C44  3C 60 80 73 */	lis r3, lit_3789@ha
 /* 80729C48  3B E3 C1 80 */	addi r31, r3, lit_3789@l
-/* 80729C4C  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 8072C184 */
+/* 80729C4C  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 80729C50  A8 1E 06 98 */	lha r0, 0x698(r30)
 /* 80729C54  54 00 06 FF */	clrlwi. r0, r0, 0x1b
 /* 80729C58  40 82 00 40 */	bne lbl_80729C98
@@ -78,7 +78,7 @@ lbl_80729D20:
 /* 80729D44  40 82 00 14 */	bne lbl_80729D58
 /* 80729D48  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 80729D4C  38 63 C4 34 */	addi r3, r3, l_HIO@l
-/* 80729D50  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 8072C440 */
+/* 80729D50  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 80729D54  D3 FE 05 2C */	stfs f31, 0x52c(r30)
 lbl_80729D58:
 /* 80729D58  80 7E 05 E0 */	lwz r3, 0x5e0(r30)
@@ -238,13 +238,13 @@ lbl_80729F8C:
 /* 80729FA0  38 00 00 08 */	li r0, 8
 /* 80729FA4  7C 09 03 A6 */	mtctr r0
 lbl_80729FA8:
-/* 80729FA8  88 A3 00 00 */	lbz r5, 0(r3)	/* effective address: 8072C284 */
+/* 80729FA8  88 A3 00 00 */	lbz r5, 0(r3)
 /* 80729FAC  7C 80 28 39 */	and. r0, r4, r5
 /* 80729FB0  40 82 00 20 */	bne lbl_80729FD0
 /* 80729FB4  3C 60 80 73 */	lis r3, data_8072C454@ha
 /* 80729FB8  8C 03 C4 54 */	lbzu r0, data_8072C454@l(r3)
 /* 80729FBC  7C 00 2B 78 */	or r0, r0, r5
-/* 80729FC0  98 03 00 00 */	stb r0, 0(r3)	/* effective address: 80730000 */
+/* 80729FC0  98 03 00 00 */	stb r0, 0(r3)
 /* 80729FC4  38 06 00 01 */	addi r0, r6, 1
 /* 80729FC8  98 1E 06 AC */	stb r0, 0x6ac(r30)
 /* 80729FCC  48 00 00 10 */	b lbl_80729FDC
@@ -269,7 +269,7 @@ lbl_80729FEC:
 /* 8072A00C  C0 7F 00 78 */	lfs f3, 0x78(r31)
 /* 8072A010  3C 80 80 73 */	lis r4, l_HIO@ha
 /* 8072A014  38 84 C4 34 */	addi r4, r4, l_HIO@l
-/* 8072A018  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 8072C440 */
+/* 8072A018  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 8072A01C  EC 63 00 32 */	fmuls f3, f3, f0
 /* 8072A020  4B B4 5A 1C */	b cLib_addCalc2__FPffff
 /* 8072A024  E3 E1 00 38 */	psq_l f31, 56(r1), 0, 0 /* qr0 */

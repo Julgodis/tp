@@ -25,9 +25,9 @@ lbl_80A3AFAC:
 /* 80A3AFBC  2C 03 00 00 */	cmpwi r3, 0
 /* 80A3AFC0  41 82 00 18 */	beq lbl_80A3AFD8
 /* 80A3AFC4  38 7F 0B CC */	addi r3, r31, 0xbcc
-/* 80A3AFC8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A3AFCC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A3AFD0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A3AFC8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A3AFCC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A3AFD0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A3AFD4  4B 70 A7 0C */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
 lbl_80A3AFD8:
 /* 80A3AFD8  38 7F 0B CC */	addi r3, r31, 0xbcc

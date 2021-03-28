@@ -62,9 +62,9 @@ lbl_80723110:
 /* 80723138  38 81 00 0C */	addi r4, r1, 0xc
 /* 8072313C  38 A1 00 18 */	addi r5, r1, 0x18
 /* 80723140  4B C2 3C 2C */	b PSMTXMultVec
-/* 80723144  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80723148  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8072314C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80723144  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80723148  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8072314C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80723150  28 1E 00 00 */	cmplwi r30, 0
 /* 80723154  41 82 00 0C */	beq lbl_80723160
 /* 80723158  80 9E 00 04 */	lwz r4, 4(r30)
@@ -83,13 +83,13 @@ lbl_80723180:
 /* 80723180  88 1E 06 8A */	lbz r0, 0x68a(r30)
 /* 80723184  28 00 00 00 */	cmplwi r0, 0
 /* 80723188  41 82 00 CC */	beq lbl_80723254
-/* 8072318C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80723190  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80723194  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8072318C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80723190  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80723194  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80723198  7F C4 F3 78 */	mr r4, r30
 /* 8072319C  38 A0 00 00 */	li r5, 0
 /* 807231A0  38 C0 00 01 */	li r6, 1
-/* 807231A4  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 807231A4  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 807231A8  81 8C 01 04 */	lwz r12, 0x104(r12)
 /* 807231AC  7D 89 03 A6 */	mtctr r12
 /* 807231B0  4E 80 04 21 */	bctrl 
@@ -113,7 +113,7 @@ lbl_80723180:
 /* 807231F8  90 01 00 08 */	stw r0, 8(r1)
 /* 807231FC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80723200  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80723204  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80723204  80 63 00 00 */	lwz r3, 0(r3)
 /* 80723208  38 81 00 08 */	addi r4, r1, 8
 /* 8072320C  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80723210  38 C0 00 00 */	li r6, 0

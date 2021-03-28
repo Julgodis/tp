@@ -19,7 +19,6 @@ extern void* const data_80BAC95C[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_batta_cpp(); // 1
 
 // 
 // Declarations:

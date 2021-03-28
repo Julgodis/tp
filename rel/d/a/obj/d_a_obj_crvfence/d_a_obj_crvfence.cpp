@@ -97,10 +97,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -111,10 +111,10 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct dBgW_Base {
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct dBgW_Base {
 };
 
 struct cBgS {
@@ -146,9 +146,6 @@ struct dBgS_LinChk {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -187,18 +184,18 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjCRVFENCE_Create(fopAc_ac_c*); // 2
-static void daObjCRVFENCE_Delete(daObjCRVFENCE_c*); // 2
+void daObjCRVFENCE_Create(fopAc_ac_c*); // 2
+void daObjCRVFENCE_Delete(daObjCRVFENCE_c*); // 2
 static void s_obj_sub(void*, void*); // 2
-static void daObjCRVFENCE_Draw(daObjCRVFENCE_c*); // 2
+void daObjCRVFENCE_Draw(daObjCRVFENCE_c*); // 2
 static void daObjCRVFENCE_Execute(daObjCRVFENCE_c*); // 2
-static bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c*); // 2
+bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c*); // 2
 
 extern "C" void CheckVec__15daObjCRVFENCE_cFv(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" void Wall_Check__15daObjCRVFENCE_cF4cXyz4cXyz(); // 1
-extern "C" static void daObjCRVFENCE_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c(); // 1
+extern "C" void daObjCRVFENCE_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c(); // 1
 extern "C" void BgRelease__15daObjCRVFENCE_cFv(); // 1
 extern "C" void PosSet__15daObjCRVFENCE_cFP4cXyz(); // 1
 extern "C" void FenceMove__15daObjCRVFENCE_cFRUcP4cXyzP5csXyzP4cXyzRs(); // 1
@@ -208,7 +205,7 @@ extern "C" void NormalAction__15daObjCRVFENCE_cFv(); // 1
 extern "C" void checkViewArea__15daObjCRVFENCE_cFP4cXyz(); // 1
 extern "C" void Action__15daObjCRVFENCE_cFv(); // 1
 extern "C" void setBaseMtx__15daObjCRVFENCE_cFv(); // 1
-extern "C" static void daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c(); // 1
+extern "C" void daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c(); // 1
 extern "C" static void daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c(); // 1
 extern "C" void CreateHeap__15daObjCRVFENCE_cFv(); // 1
 extern "C" void create__15daObjCRVFENCE_cFv(); // 1
@@ -218,14 +215,15 @@ extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static bool daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c(); // 1
+extern "C" bool daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c(); // 1
 extern "C" void Create__15daObjCRVFENCE_cFv(); // 1
 extern "C" void Execute__15daObjCRVFENCE_cFPPA3_A4_f(); // 1
 extern "C" void Draw__15daObjCRVFENCE_cFv(); // 1
 extern "C" void Delete__15daObjCRVFENCE_cFv(); // 1
-extern "C" static void func_80BD0170(); // 1
-extern "C" static void func_80BD0178(); // 1
+extern "C" void func_80BD0170(); // 1
+extern "C" void func_80BD0178(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjCRVFENCE_Method[8];
 extern "C" extern void* g_profile_Obj_CRVFENCE[12];
 
 // 
@@ -284,9 +282,6 @@ extern "C" void __ct__11dBgS_LinChkFv(); // 1
 extern "C" void __dt__11dBgS_LinChkFv(); // 1
 extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -312,23 +307,15 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
@@ -375,22 +362,22 @@ asm void daObjCRVFENCE_c::Wall_Check(cXyz param_0, cXyz param_1) {
 #pragma pop
 
 
-/* 80BCEE1C-80BCEE3C 0020+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_Create__FP10fopAc_ac_c                         */
+/* 80BCEE1C-80BCEE3C 0020+00 s=0 e=0 z=0  None .text      daObjCRVFENCE_Create__FP10fopAc_ac_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVFENCE_Create(fopAc_ac_c* param_0) {
+asm void daObjCRVFENCE_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80BCEE3C-80BCEE60 0024+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c                    */
+/* 80BCEE3C-80BCEE60 0024+00 s=0 e=0 z=0  None .text      daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVFENCE_Delete(daObjCRVFENCE_c* param_0) {
+asm void daObjCRVFENCE_Delete(daObjCRVFENCE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c.s"
 }
@@ -494,7 +481,7 @@ SECTION_RODATA static u32 const lit_4122 = 0x43E10000;
 /* 80BD0208-80BD020C 0004+00 s=1 e=0 z=0  None .rodata    @4219                                                        */
 SECTION_RODATA static u32 const lit_4219 = 0xC47A0000;
 
-/* 80BD020C-80BD025F 0053+00 s=4 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80BD020C-80BD025F 0053+00 s=3 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -604,18 +591,18 @@ asm void daObjCRVFENCE_c::setBaseMtx() {
 #pragma pop
 
 
-/* 80BCF998-80BCF9C4 002C+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c                      */
+/* 80BCF998-80BCF9C4 002C+00 s=0 e=0 z=0  None .text      daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjCRVFENCE_Draw(daObjCRVFENCE_c* param_0) {
+asm void daObjCRVFENCE_Draw(daObjCRVFENCE_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c.s"
 }
 #pragma pop
 
 
-/* 80BCF9C4-80BCF9E4 0020+00 s=2 e=0 z=0  None .text      daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c                   */
+/* 80BCF9C4-80BCF9E4 0020+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -628,9 +615,9 @@ asm static void daObjCRVFENCE_Execute(daObjCRVFENCE_c* param_0) {
 
 /* ############################################################################################## */
 /* 80BD0260-80BD0264 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80BCF9E4-80BCFAE4 0100+00 s=1 e=0 z=0  None .text      CreateHeap__15daObjCRVFENCE_cFv                              */
+/* 80BCF9E4-80BCFAE4 0100+00 s=0 e=0 z=0  None .text      CreateHeap__15daObjCRVFENCE_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -642,73 +629,73 @@ asm void daObjCRVFENCE_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 80BD0264-80BD0284 0020+00 s=1 e=0 z=0  None .data      l_daObjCRVFENCE_Method                                       */
-SECTION_DATA static void* l_daObjCRVFENCE_Method[8] = {
-	/* 0    */ (void*)daObjCRVFENCE_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjCRVFENCE_Delete__FP15daObjCRVFENCE_c,
-	/* 2    */ (void*)daObjCRVFENCE_Execute__FP15daObjCRVFENCE_c,
-	/* 3    */ (void*)daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c,
-	/* 4    */ (void*)daObjCRVFENCE_Draw__FP15daObjCRVFENCE_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80BD0264-80BD0284 0020+00 s=0 e=0 z=0  None .data      l_daObjCRVFENCE_Method                                       */
+SECTION_DATA void* l_daObjCRVFENCE_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80BD0284-80BD02B4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_CRVFENCE                                       */
+/* 80BD0284-80BD02B4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_CRVFENCE                                       */
 SECTION_DATA void* g_profile_Obj_CRVFENCE[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00700000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000103C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01D30000,
-	/* 9    */ (void*)&l_daObjCRVFENCE_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00700000,
+	(void*)NULL,
+	(void*)0x0000103C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01D30000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80BD02B4-80BD02C0 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD02C0-80BD02CC 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD02CC-80BD02F0 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80BD0178,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80BD0170,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BD02F0-80BD0318 0028+00 s=1 e=0 z=0  None .data      __vt__15daObjCRVFENCE_c                                      */
 SECTION_DATA static void* __vt__15daObjCRVFENCE_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__15daObjCRVFENCE_cFv,
-	/* 3    */ (void*)Create__15daObjCRVFENCE_cFv,
-	/* 4    */ (void*)Execute__15daObjCRVFENCE_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__15daObjCRVFENCE_cFv,
-	/* 6    */ (void*)Delete__15daObjCRVFENCE_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80BCFAE4-80BCFD6C 0288+00 s=1 e=0 z=0  None .text      create__15daObjCRVFENCE_cFv                                  */
@@ -744,7 +731,7 @@ asm dCcD_Sph::dCcD_Sph() {
 #pragma pop
 
 
-/* 80BCFEBC-80BCFF04 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 80BCFEBC-80BCFF04 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -755,7 +742,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 80BCFF04-80BCFF4C 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80BCFF04-80BCFF4C 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -766,7 +753,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 80BCFF4C-80BCFFBC 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80BCFF4C-80BCFFBC 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -783,13 +770,13 @@ cXyz::cXyz() {
 }
 
 
-/* 80BCFFC0-80BCFFC8 0008+00 s=1 e=0 z=0  None .text      daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c                  */
-static bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c* param_0) {
+/* 80BCFFC0-80BCFFC8 0008+00 s=0 e=0 z=0  None .text      daObjCRVFENCE_IsDelete__FP15daObjCRVFENCE_c                  */
+bool daObjCRVFENCE_IsDelete(daObjCRVFENCE_c* param_0) {
 	return true;
 }
 
 
-/* 80BCFFC8-80BD000C 0044+00 s=1 e=0 z=0  None .text      Create__15daObjCRVFENCE_cFv                                  */
+/* 80BCFFC8-80BD000C 0044+00 s=0 e=0 z=0  None .text      Create__15daObjCRVFENCE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -800,7 +787,7 @@ asm void daObjCRVFENCE_c::Create() {
 #pragma pop
 
 
-/* 80BD000C-80BD0058 004C+00 s=1 e=0 z=0  None .text      Execute__15daObjCRVFENCE_cFPPA3_A4_f                         */
+/* 80BD000C-80BD0058 004C+00 s=0 e=0 z=0  None .text      Execute__15daObjCRVFENCE_cFPPA3_A4_f                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -811,7 +798,7 @@ asm void daObjCRVFENCE_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80BD0058-80BD013C 00E4+00 s=1 e=0 z=0  None .text      Draw__15daObjCRVFENCE_cFv                                    */
+/* 80BD0058-80BD013C 00E4+00 s=0 e=0 z=0  None .text      Draw__15daObjCRVFENCE_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -822,7 +809,7 @@ asm void daObjCRVFENCE_c::Draw() {
 #pragma pop
 
 
-/* 80BD013C-80BD0170 0034+00 s=1 e=0 z=0  None .text      Delete__15daObjCRVFENCE_cFv                                  */
+/* 80BD013C-80BD0170 0034+00 s=0 e=0 z=0  None .text      Delete__15daObjCRVFENCE_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -833,22 +820,22 @@ asm void daObjCRVFENCE_c::Delete() {
 #pragma pop
 
 
-/* 80BD0170-80BD0178 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD0170-80BD0178 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BD0170() {
+extern "C" asm void func_80BD0170() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BD0170.s"
 }
 #pragma pop
 
 
-/* 80BD0178-80BD0180 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80BD0178-80BD0180 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80BD0178() {
+extern "C" asm void func_80BD0178() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_crvfence/d_a_obj_crvfence/func_80BD0178.s"
 }

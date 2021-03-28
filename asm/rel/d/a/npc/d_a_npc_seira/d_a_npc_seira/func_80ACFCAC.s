@@ -54,11 +54,11 @@ lbl_80ACFCAC:
 /* 80ACFD7C  90 7E 0E AC */	stw r3, 0xeac(r30)
 /* 80ACFD80  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80ACFD84  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80ACFD88  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80ACFD8C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80ACFD88  80 64 00 00 */	lwz r3, 0(r4)
+/* 80ACFD8C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80ACFD90  90 7E 0E 78 */	stw r3, 0xe78(r30)
 /* 80ACFD94  90 1E 0E 7C */	stw r0, 0xe7c(r30)
-/* 80ACFD98  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80ACFD98  80 04 00 08 */	lwz r0, 8(r4)
 /* 80ACFD9C  90 1E 0E 80 */	stw r0, 0xe80(r30)
 /* 80ACFDA0  7F C3 F3 78 */	mr r3, r30
 /* 80ACFDA4  4B 6C 75 94 */	b initShopSystem__13dShopSystem_cFv

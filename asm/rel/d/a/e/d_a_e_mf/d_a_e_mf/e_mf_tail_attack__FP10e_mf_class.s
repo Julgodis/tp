@@ -47,7 +47,7 @@ lbl_8070E7EC:
 /* 8070E80C  98 1E 06 CE */	stb r0, 0x6ce(r30)
 /* 8070E810  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070E814  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070E818  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070E818  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070E81C  A8 9E 06 B4 */	lha r4, 0x6b4(r30)
 /* 8070E820  4B 8F DB BC */	b mDoMtx_YrotS__FPA4_fs
 /* 8070E824  C0 1F 00 04 */	lfs f0, 4(r31)

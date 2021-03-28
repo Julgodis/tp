@@ -53,7 +53,7 @@ lbl_807964D8:
 /* 80796554  C0 5E 00 04 */	lfs f2, 4(r30)
 /* 80796558  3C A0 80 7A */	lis r5, data_807989E4@ha
 /* 8079655C  38 A5 89 E4 */	addi r5, r5, data_807989E4@l
-/* 80796560  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 807989E4 */
+/* 80796560  A8 A5 00 00 */	lha r5, 0(r5)
 /* 80796564  4B FF FC A1 */	bl SetStopCam__8daE_SM_cF4cXyzffs
 /* 80796568  38 00 00 0A */	li r0, 0xa
 /* 8079656C  B0 1F 06 C0 */	sth r0, 0x6c0(r31)

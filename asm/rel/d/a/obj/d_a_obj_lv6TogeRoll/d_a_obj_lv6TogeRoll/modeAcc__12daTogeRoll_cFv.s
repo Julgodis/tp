@@ -11,7 +11,7 @@ lbl_80C78CB4:
 /* 80C78CD8  38 7C 05 2C */	addi r3, r28, 0x52c
 /* 80C78CDC  3C 80 80 C8 */	lis r4, l_HIO@ha
 /* 80C78CE0  38 84 9D 44 */	addi r4, r4, l_HIO@l
-/* 80C78CE4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80C79D4C */
+/* 80C78CE4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80C78CE8  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80C78CEC  4B 5F 7A 54 */	b cLib_chaseF__FPfff
 /* 80C78CF0  7C 7F 1B 78 */	mr r31, r3
@@ -33,7 +33,7 @@ lbl_80C78CB4:
 /* 80C78D30  90 01 00 08 */	stw r0, 8(r1)
 /* 80C78D34  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C78D38  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C78D3C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C78D3C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C78D40  38 81 00 08 */	addi r4, r1, 8
 /* 80C78D44  38 BC 04 D0 */	addi r5, r28, 0x4d0
 /* 80C78D48  7F A7 EB 78 */	mr r7, r29

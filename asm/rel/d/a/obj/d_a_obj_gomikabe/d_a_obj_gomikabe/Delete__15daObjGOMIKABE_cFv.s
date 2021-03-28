@@ -7,7 +7,7 @@ lbl_80BFFB1C:
 /* 80BFFB30  38 7F 0F B0 */	addi r3, r31, 0xfb0
 /* 80BFFB34  3C 80 80 C0 */	lis r4, l_arcName@ha
 /* 80BFFB38  38 84 FD 30 */	addi r4, r4, l_arcName@l
-/* 80BFFB3C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BFFD30 */
+/* 80BFFB3C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BFFB40  4B 42 D4 C8 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BFFB44  88 1F 13 C0 */	lbz r0, 0x13c0(r31)
 /* 80BFFB48  28 00 00 00 */	cmplwi r0, 0

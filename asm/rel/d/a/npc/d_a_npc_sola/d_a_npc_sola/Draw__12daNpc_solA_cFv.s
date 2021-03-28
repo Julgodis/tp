@@ -25,7 +25,7 @@ lbl_80AED19C:
 /* 80AED1A4  38 A0 00 00 */	li r5, 0
 /* 80AED1A8  3C C0 80 AF */	lis r6, m__18daNpc_solA_Param_c@ha
 /* 80AED1AC  38 C6 F1 00 */	addi r6, r6, m__18daNpc_solA_Param_c@l
-/* 80AED1B0  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80AEF10C */
+/* 80AED1B0  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80AED1B4  38 C0 00 00 */	li r6, 0
 /* 80AED1B8  3C E0 80 AF */	lis r7, lit_4469@ha
 /* 80AED1BC  C0 47 F1 AC */	lfs f2, lit_4469@l(r7)

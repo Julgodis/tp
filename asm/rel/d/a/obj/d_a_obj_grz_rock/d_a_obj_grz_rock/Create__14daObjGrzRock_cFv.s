@@ -37,8 +37,8 @@ lbl_80C14DA0:
 /* 80C14E2C  39 5F 04 DC */	addi r10, r31, 0x4dc
 /* 80C14E30  4B 46 14 18 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80C14E34  38 7F 05 AC */	addi r3, r31, 0x5ac
-/* 80C14E38  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C14E3C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C14E38  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C14E3C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C14E40  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C14E44  4B 46 1C 68 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C14E48  80 1F 06 88 */	lwz r0, 0x688(r31)

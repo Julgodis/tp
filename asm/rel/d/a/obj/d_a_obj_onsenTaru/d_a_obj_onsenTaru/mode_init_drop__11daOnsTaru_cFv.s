@@ -4,7 +4,7 @@ lbl_80CA93C0:
 /* 80CA93C8  90 03 07 F8 */	stw r0, 0x7f8(r3)
 /* 80CA93CC  3C 80 80 CB */	lis r4, l_HIO@ha
 /* 80CA93D0  38 84 9D F4 */	addi r4, r4, l_HIO@l
-/* 80CA93D4  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 80CA9E00 */
+/* 80CA93D4  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80CA93D8  D0 03 09 44 */	stfs f0, 0x944(r3)
 /* 80CA93DC  80 03 05 5C */	lwz r0, 0x55c(r3)
 /* 80CA93E0  54 00 07 34 */	rlwinm r0, r0, 0, 0x1c, 0x1a

@@ -25,11 +25,11 @@ lbl_80AD99E8:
 /* 80AD9A0C  90 BF 0E 10 */	stw r5, 0xe10(r31)
 /* 80AD9A10  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AD9A14  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AD9A18  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AD9A1C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80AD9A18  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AD9A1C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80AD9A20  90 7F 0D EC */	stw r3, 0xdec(r31)
 /* 80AD9A24  90 1F 0D F0 */	stw r0, 0xdf0(r31)
-/* 80AD9A28  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80AD9A28  80 04 00 08 */	lwz r0, 8(r4)
 /* 80AD9A2C  90 1F 0D F4 */	stw r0, 0xdf4(r31)
 /* 80AD9A30  38 00 FF FF */	li r0, -1
 /* 80AD9A34  B0 1F 0E 18 */	sth r0, 0xe18(r31)
@@ -72,8 +72,8 @@ lbl_80AD9AC0:
 /* 80AD9AC0  7F E3 FB 78 */	mr r3, r31
 /* 80AD9AC4  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80AD9AC8  38 A4 1F DC */	addi r5, r4, m__17daNpcShad_Param_c@l
-/* 80AD9ACC  A8 85 00 4C */	lha r4, 0x4c(r5)	/* effective address: 80AE2028 */
-/* 80AD9AD0  A8 A5 00 4E */	lha r5, 0x4e(r5)	/* effective address: 80AE202A */
+/* 80AD9ACC  A8 85 00 4C */	lha r4, 0x4c(r5)
+/* 80AD9AD0  A8 A5 00 4E */	lha r5, 0x4e(r5)
 /* 80AD9AD4  4B 67 A7 A4 */	b getDistTableIdx__8daNpcF_cFii
 /* 80AD9AD8  98 7F 05 44 */	stb r3, 0x544(r31)
 /* 80AD9ADC  88 1F 05 44 */	lbz r0, 0x544(r31)
@@ -81,8 +81,8 @@ lbl_80AD9AC0:
 /* 80AD9AE4  7F E3 FB 78 */	mr r3, r31
 /* 80AD9AE8  3C 80 80 AE */	lis r4, m__17daNpcShad_Param_c@ha
 /* 80AD9AEC  38 A4 1F DC */	addi r5, r4, m__17daNpcShad_Param_c@l
-/* 80AD9AF0  A8 85 00 48 */	lha r4, 0x48(r5)	/* effective address: 80AE2024 */
-/* 80AD9AF4  A8 A5 00 4A */	lha r5, 0x4a(r5)	/* effective address: 80AE2026 */
+/* 80AD9AF0  A8 85 00 48 */	lha r4, 0x48(r5)
+/* 80AD9AF4  A8 A5 00 4A */	lha r5, 0x4a(r5)
 /* 80AD9AF8  4B 67 A7 80 */	b getDistTableIdx__8daNpcF_cFii
 /* 80AD9AFC  98 7F 05 47 */	stb r3, 0x547(r31)
 lbl_80AD9B00:

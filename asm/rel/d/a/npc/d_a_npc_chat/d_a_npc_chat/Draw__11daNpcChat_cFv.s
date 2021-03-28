@@ -6,7 +6,7 @@ lbl_809824CC:
 /* 809824DC  38 A0 00 00 */	li r5, 0
 /* 809824E0  3C C0 80 98 */	lis r6, m__17daNpcChat_Param_c@ha
 /* 809824E4  38 C6 6D 3C */	addi r6, r6, m__17daNpcChat_Param_c@l
-/* 809824E8  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80986D48 */
+/* 809824E8  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 809824EC  38 C0 00 00 */	li r6, 0
 /* 809824F0  38 E0 00 00 */	li r7, 0
 /* 809824F4  48 00 00 19 */	bl draw__11daNpcChat_cFiifP11_GXColorS10i

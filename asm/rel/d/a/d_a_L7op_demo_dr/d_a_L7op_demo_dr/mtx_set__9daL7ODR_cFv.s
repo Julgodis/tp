@@ -15,11 +15,11 @@ lbl_805AB230:
 /* 805AB264  4B D9 B2 4C */	b PSMTXCopy
 /* 805AB268  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 805AB26C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 805AB270  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 805AB270  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 805AB274  D0 1E 08 30 */	stfs f0, 0x830(r30)
-/* 805AB278  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 805AB278  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805AB27C  D0 1E 08 34 */	stfs f0, 0x834(r30)
-/* 805AB280  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 805AB280  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 805AB284  D0 1E 08 38 */	stfs f0, 0x838(r30)
 /* 805AB288  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 805AB28C  4B A6 1A D8 */	b transS__14mDoMtx_stack_cFRC4cXyz

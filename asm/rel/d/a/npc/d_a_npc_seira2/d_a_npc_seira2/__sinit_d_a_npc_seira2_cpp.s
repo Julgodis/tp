@@ -6,12 +6,12 @@ lbl_80AD4750:
 /* 80AD4760  38 A3 52 B8 */	addi r5, r3, mCutList__14daNpc_Seira2_c@l
 /* 80AD4764  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AD4768  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AD476C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AD4770  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AD4774  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AD52B8 */
-/* 80AD4778  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AD52BC */
-/* 80AD477C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AD4780  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AD52C0 */
+/* 80AD476C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AD4770  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AD4774  90 65 00 00 */	stw r3, 0(r5)
+/* 80AD4778  90 05 00 04 */	stw r0, 4(r5)
+/* 80AD477C  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AD4780  90 05 00 08 */	stw r0, 8(r5)
 /* 80AD4784  3C 60 80 AD */	lis r3, __vt__20daNpc_Seira2_Param_c@ha
 /* 80AD4788  38 03 56 00 */	addi r0, r3, __vt__20daNpc_Seira2_Param_c@l
 /* 80AD478C  3C 60 80 AD */	lis r3, l_HIO@ha

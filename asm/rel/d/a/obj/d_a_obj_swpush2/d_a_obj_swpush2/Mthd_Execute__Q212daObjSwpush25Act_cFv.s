@@ -11,7 +11,7 @@ lbl_80CFF568:
 /* 80CFF58C  3B E3 FB F4 */	addi r31, r3, M_arcname__Q212daObjSwpush25Act_c@l
 /* 80CFF590  3C 60 80 D0 */	lis r3, struct_80CFFEF8+0x0@ha
 /* 80CFF594  38 A3 FE F8 */	addi r5, r3, struct_80CFFEF8+0x0@l
-/* 80CFF598  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CFFEF8 */
+/* 80CFF598  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CFF59C  7C 00 07 75 */	extsb. r0, r0
 /* 80CFF5A0  40 82 00 88 */	bne lbl_80CFF628
 /* 80CFF5A4  80 7E 00 20 */	lwz r3, 0x20(r30)
@@ -59,7 +59,7 @@ lbl_80CFF628:
 /* 80CFF648  4B FF F6 05 */	bl set_push_flag__Q212daObjSwpush25Act_cFv
 /* 80CFF64C  3C 60 80 D0 */	lis r3, struct_80CFFEF8+0x1@ha
 /* 80CFF650  38 A3 FE F9 */	addi r5, r3, struct_80CFFEF8+0x1@l
-/* 80CFF654  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CFFEF9 */
+/* 80CFF654  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CFF658  7C 00 07 75 */	extsb. r0, r0
 /* 80CFF65C  40 82 00 70 */	bne lbl_80CFF6CC
 /* 80CFF660  80 7E 00 98 */	lwz r3, 0x98(r30)
@@ -116,16 +116,16 @@ lbl_80CFF6CC:
 /* 80CFF728  38 A0 00 08 */	li r5, 8
 /* 80CFF72C  48 00 04 A5 */	bl func_80CFFBD0
 /* 80CFF730  7C 64 1B 78 */	mr r4, r3
-/* 80CFF734  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFF738  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CFF734  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFF738  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CFF73C  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 80CFF740  7C 05 07 74 */	extsb r5, r0
 /* 80CFF744  4B 33 5C 1C */	b isSwitch__10dSv_info_cCFii
 /* 80CFF748  2C 03 00 00 */	cmpwi r3, 0
 /* 80CFF74C  40 82 01 38 */	bne lbl_80CFF884
-/* 80CFF750  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFF754  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CFF758  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CFF750  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFF754  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CFF758  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80CFF75C  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 80CFF760  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80CFF764  4B 64 7C 38 */	b PSVECSquareDistance

@@ -93,11 +93,11 @@ struct dVibration_c {
 	/* 8006FA24 */ void StartShock(int, int, cXyz);
 };
 
-struct cBgS_GndChk {
-	/* 80267D0C */ void SetPos(Vec const*);
+struct cBgS_LinChk {
 };
 
-struct cBgS_LinChk {
+struct cBgS_GndChk {
+	/* 80267D0C */ void SetPos(Vec const*);
 };
 
 struct cBgS {
@@ -188,7 +188,7 @@ struct cCcS {
 // 
 
 static void chain_draw(e_th_ball_class*); // 2
-static void daE_TH_BALL_Draw(e_th_ball_class*); // 2
+void daE_TH_BALL_Draw(e_th_ball_class*); // 2
 static void chain_control_01(e_th_ball_class*); // 2
 static void chain_control_02(e_th_ball_class*); // 2
 static void chain_control_03(e_th_ball_class*); // 2
@@ -206,13 +206,13 @@ static void e_th_ball_end(e_th_ball_class*); // 2
 static void action(e_th_ball_class*); // 2
 static void get_demo(e_th_ball_class*); // 2
 static void daE_TH_BALL_Execute(e_th_ball_class*); // 2
-static bool daE_TH_BALL_IsDelete(e_th_ball_class*); // 2
-static void daE_TH_BALL_Delete(e_th_ball_class*); // 2
+bool daE_TH_BALL_IsDelete(e_th_ball_class*); // 2
+void daE_TH_BALL_Delete(e_th_ball_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_TH_BALL_Create(fopAc_ac_c*); // 2
+void daE_TH_BALL_Create(fopAc_ac_c*); // 2
 
 extern "C" static void chain_draw__FP15e_th_ball_class(); // 1
-extern "C" static void daE_TH_BALL_Draw__FP15e_th_ball_class(); // 1
+extern "C" void daE_TH_BALL_Draw__FP15e_th_ball_class(); // 1
 extern "C" static void chain_control_01__FP15e_th_ball_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void chain_control_02__FP15e_th_ball_class(); // 1
@@ -231,10 +231,10 @@ extern "C" static void e_th_ball_end__FP15e_th_ball_class(); // 1
 extern "C" static void action__FP15e_th_ball_class(); // 1
 extern "C" static void get_demo__FP15e_th_ball_class(); // 1
 extern "C" static void daE_TH_BALL_Execute__FP15e_th_ball_class(); // 1
-extern "C" static bool daE_TH_BALL_IsDelete__FP15e_th_ball_class(); // 1
-extern "C" static void daE_TH_BALL_Delete__FP15e_th_ball_class(); // 1
+extern "C" bool daE_TH_BALL_IsDelete__FP15e_th_ball_class(); // 1
+extern "C" void daE_TH_BALL_Delete__FP15e_th_ball_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_TH_BALL_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daE_TH_BALL_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__15e_th_ball_classFv(); // 1
 extern "C" void __dt__8cM3dGSphFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
@@ -242,12 +242,10 @@ extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
 extern "C" void __dt__5csXyzFv(); // 1
 extern "C" void __ct__5csXyzFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void func_807B7EA0(); // 1
-extern "C" static void func_807B7EA8(); // 1
-extern "C" extern u8 const lit_3971[8];
-extern "C" extern u8 const lit_3972[8];
-extern "C" extern u8 const lit_3973[8];
+extern "C" void func_807B7EA0(); // 1
+extern "C" void func_807B7EA8(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daE_TH_BALL_Method[8];
 extern "C" extern void* g_profile_E_TH_BALL[12];
 
 // 
@@ -374,26 +372,17 @@ extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_SphAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-SECTION_BSS extern u8 m_cpadInfo__8mDoCPd_c[4];
-SECTION_BSS extern u8 struct_803DD31C[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD47C[4];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern f32 data_803DD49C;
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 struct_8040BFFC[4];
-SECTION_BSS extern u8 struct_8040C010[8];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 
@@ -431,11 +420,11 @@ asm static void chain_draw(e_th_ball_class* param_0) {
 /* 807B7EC4-807B7EC8 0004+00 s=2 e=0 z=0  None .rodata    @3759                                                        */
 SECTION_RODATA static u32 const lit_3759 = 0x425C0000;
 
-/* 807B4C40-807B4CEC 00AC+00 s=1 e=0 z=0  None .text      daE_TH_BALL_Draw__FP15e_th_ball_class                        */
+/* 807B4C40-807B4CEC 00AC+00 s=0 e=0 z=0  None .text      daE_TH_BALL_Draw__FP15e_th_ball_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_TH_BALL_Draw(e_th_ball_class* param_0) {
+asm void daE_TH_BALL_Draw(e_th_ball_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Draw__FP15e_th_ball_class.s"
 }
@@ -491,18 +480,18 @@ SECTION_RODATA static u32 const lit_3970[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 807B7EE8-807B7EF0 0008+00 s=0 e=0 z=0  None .rodata    @3971                                                        */
-SECTION_RODATA u8 const lit_3971[8] = {
+/* 807B7EE8-807B7EF0 0008+00 s=4 e=0 z=0  None .rodata    @3971                                                        */
+SECTION_RODATA static u8 const lit_3971[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 807B7EF0-807B7EF8 0008+00 s=0 e=0 z=0  None .rodata    @3972                                                        */
-SECTION_RODATA u8 const lit_3972[8] = {
+/* 807B7EF0-807B7EF8 0008+00 s=4 e=0 z=0  None .rodata    @3972                                                        */
+SECTION_RODATA static u8 const lit_3972[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 807B7EF8-807B7F00 0008+00 s=0 e=0 z=0  None .rodata    @3973                                                        */
-SECTION_RODATA u8 const lit_3973[8] = {
+/* 807B7EF8-807B7F00 0008+00 s=4 e=0 z=0  None .rodata    @3973                                                        */
+SECTION_RODATA static u8 const lit_3973[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -530,6 +519,12 @@ asm static void chain_control_02(e_th_ball_class* param_0) {
 #pragma pop
 
 
+/* ############################################################################################## */
+/* 807B7F10-807B7F18 0008+00 s=2 e=0 z=0  None .rodata    @4027                                                        */
+SECTION_RODATA static u8 const lit_4027[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 807B54B4-807B56A4 01F0+00 s=1 e=0 z=0  None .text      chain_control_03__FP15e_th_ball_class                        */
 #pragma push
 #pragma optimization_level 0
@@ -542,11 +537,6 @@ asm static void chain_control_03(e_th_ball_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 807B7F10-807B7F18 0008+00 s=1 e=0 z=0  None .rodata    @4027                                                        */
-SECTION_RODATA static u8 const lit_4027[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 807B7F18-807B7F1C 0004+00 s=4 e=0 z=0  None .rodata    @4090                                                        */
 SECTION_RODATA static u32 const lit_4090 = 0x41200000;
 
@@ -836,7 +826,7 @@ asm static void get_demo(e_th_ball_class* param_0) {
 #pragma pop
 
 
-/* 807B753C-807B7744 0208+00 s=2 e=0 z=0  None .text      daE_TH_BALL_Execute__FP15e_th_ball_class                     */
+/* 807B753C-807B7744 0208+00 s=1 e=0 z=0  None .text      daE_TH_BALL_Execute__FP15e_th_ball_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -847,17 +837,17 @@ asm static void daE_TH_BALL_Execute(e_th_ball_class* param_0) {
 #pragma pop
 
 
-/* 807B7744-807B774C 0008+00 s=1 e=0 z=0  None .text      daE_TH_BALL_IsDelete__FP15e_th_ball_class                    */
-static bool daE_TH_BALL_IsDelete(e_th_ball_class* param_0) {
+/* 807B7744-807B774C 0008+00 s=0 e=0 z=0  None .text      daE_TH_BALL_IsDelete__FP15e_th_ball_class                    */
+bool daE_TH_BALL_IsDelete(e_th_ball_class* param_0) {
 	return true;
 }
 
 
-/* 807B774C-807B77AC 0060+00 s=1 e=0 z=0  None .text      daE_TH_BALL_Delete__FP15e_th_ball_class                      */
+/* 807B774C-807B77AC 0060+00 s=0 e=0 z=0  None .text      daE_TH_BALL_Delete__FP15e_th_ball_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_TH_BALL_Delete(e_th_ball_class* param_0) {
+asm void daE_TH_BALL_Delete(e_th_ball_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Delete__FP15e_th_ball_class.s"
 }
@@ -892,11 +882,11 @@ SECTION_DATA static u8 data_807B8010[64] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x42, 0x5C, 0x00, 0x00,
 };
 
-/* 807B792C-807B7AA8 017C+00 s=1 e=0 z=0  None .text      daE_TH_BALL_Create__FP10fopAc_ac_c                           */
+/* 807B792C-807B7AA8 017C+00 s=0 e=0 z=0  None .text      daE_TH_BALL_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daE_TH_BALL_Create(fopAc_ac_c* param_0) {
+asm void daE_TH_BALL_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/daE_TH_BALL_Create__FP10fopAc_ac_c.s"
 }
@@ -904,59 +894,59 @@ asm static void daE_TH_BALL_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 807B8050-807B8070 0020+00 s=1 e=0 z=0  None .data      l_daE_TH_BALL_Method                                         */
-SECTION_DATA static void* l_daE_TH_BALL_Method[8] = {
-	/* 0    */ (void*)daE_TH_BALL_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daE_TH_BALL_Delete__FP15e_th_ball_class,
-	/* 2    */ (void*)daE_TH_BALL_Execute__FP15e_th_ball_class,
-	/* 3    */ (void*)daE_TH_BALL_IsDelete__FP15e_th_ball_class,
-	/* 4    */ (void*)daE_TH_BALL_Draw__FP15e_th_ball_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 807B8050-807B8070 0020+00 s=0 e=0 z=0  None .data      l_daE_TH_BALL_Method                                         */
+SECTION_DATA void* l_daE_TH_BALL_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 807B8070-807B80A0 0030+00 s=0 e=0 z=1  None .data      g_profile_E_TH_BALL                                          */
+/* 807B8070-807B80A0 0030+00 s=0 e=0 z=0  None .data      g_profile_E_TH_BALL                                          */
 SECTION_DATA void* g_profile_E_TH_BALL[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02E80000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00001A90,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00870000,
-	/* 9    */ (void*)&l_daE_TH_BALL_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x020E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02E80000,
+	(void*)NULL,
+	(void*)0x00001A90,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00870000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x020E0000,
 };
 
 /* 807B80A0-807B80AC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGSph                                              */
 SECTION_DATA static void* __vt__8cM3dGSph[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGSphFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 807B80AC-807B80B8 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 807B80B8-807B80DC 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_807B7EA8,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_807B7EA0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 807B7AA8-807B7D5C 02B4+00 s=1 e=0 z=0  None .text      __ct__15e_th_ball_classFv                                    */
@@ -970,7 +960,7 @@ asm e_th_ball_class::e_th_ball_class() {
 #pragma pop
 
 
-/* 807B7D5C-807B7DA4 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
+/* 807B7D5C-807B7DA4 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGSphFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -981,7 +971,7 @@ asm cM3dGSph::~cM3dGSph() {
 #pragma pop
 
 
-/* 807B7DA4-807B7DEC 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 807B7DA4-807B7DEC 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -992,7 +982,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 807B7DEC-807B7E5C 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 807B7DEC-807B7E5C 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -1026,22 +1016,22 @@ cXyz::cXyz() {
 }
 
 
-/* 807B7EA0-807B7EA8 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 807B7EA0-807B7EA8 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_807B7EA0() {
+extern "C" asm void func_807B7EA0() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/func_807B7EA0.s"
 }
 #pragma pop
 
 
-/* 807B7EA8-807B7EB0 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 807B7EA8-807B7EB0 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_807B7EA8() {
+extern "C" asm void func_807B7EA8() {
 	nofralloc
 #include "asm/rel/d/a/e/d_a_e_th_ball/d_a_e_th_ball/func_807B7EA8.s"
 }

@@ -66,8 +66,8 @@ lbl_80748A34:
 lbl_80748A48:
 /* 80748A48  4B FF DB DD */	bl DemoBossStart__8daE_PM_cFv
 lbl_80748A4C:
-/* 80748A4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80748A50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80748A4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80748A50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80748A54  3B C3 4E C8 */	addi r30, r3, 0x4ec8
 /* 80748A58  7F C3 F3 78 */	mr r3, r30
 /* 80748A5C  4B 8F 9F 4C */	b onSkipFade__14dEvt_control_cFv
@@ -81,11 +81,11 @@ lbl_80748A78:
 /* 80748A78  88 1F 06 D8 */	lbz r0, 0x6d8(r31)
 /* 80748A7C  28 00 00 00 */	cmplwi r0, 0
 /* 80748A80  41 82 00 44 */	beq lbl_80748AC4
-/* 80748A84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80748A88  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80748A8C  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80748A84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80748A88  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80748A8C  80 7E 5D AC */	lwz r3, 0x5dac(r30)
 /* 80748A90  7F E4 FB 78 */	mr r4, r31
-/* 80748A94  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 80748A94  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80748A98  81 8C 00 EC */	lwz r12, 0xec(r12)
 /* 80748A9C  7D 89 03 A6 */	mtctr r12
 /* 80748AA0  4E 80 04 21 */	bctrl 

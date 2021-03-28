@@ -15,9 +15,9 @@ lbl_805CC454:
 /* 805CC488  7C 7D 1B 78 */	mr r29, r3
 /* 805CC48C  3C 80 80 5E */	lis r4, lit_3932@ha
 /* 805CC490  3B C4 CA 54 */	addi r30, r4, lit_3932@l
-/* 805CC494  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805CC498  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 805CC49C  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 805CC494  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805CC498  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 805CC49C  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 805CC4A0  4B A4 E2 70 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805CC4A4  7C 79 1B 78 */	mr r25, r3
 /* 805CC4A8  38 61 00 30 */	addi r3, r1, 0x30
@@ -53,8 +53,8 @@ lbl_805CC508:
 /* 805CC514  3A E0 00 00 */	li r23, 0
 /* 805CC518  3B 80 00 00 */	li r28, 0
 /* 805CC51C  3B 60 00 00 */	li r27, 0
-/* 805CC520  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805CC524  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805CC520  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805CC524  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805CC528  3B 03 0F 38 */	addi r24, r3, 0xf38
 /* 805CC52C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 805CC530  3B 23 07 68 */	addi r25, r3, calc_mtx@l
@@ -64,7 +64,7 @@ lbl_805CC508:
 /* 805CC540  C3 DE 00 2C */	lfs f30, 0x2c(r30)
 /* 805CC544  C3 FE 00 5C */	lfs f31, 0x5c(r30)
 lbl_805CC548:
-/* 805CC548  80 79 00 00 */	lwz r3, 0(r25)	/* effective address: 80450768 */
+/* 805CC548  80 79 00 00 */	lwz r3, 0(r25)
 /* 805CC54C  7C 9A DA AE */	lhax r4, r26, r27
 /* 805CC550  4B A3 FE 8C */	b mDoMtx_YrotS__FPA4_fs
 /* 805CC554  D3 81 00 24 */	stfs f28, 0x24(r1)
@@ -138,7 +138,7 @@ lbl_805CC614:
 /* 805CC658  4B A4 E1 88 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805CC65C  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805CC660  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805CC664  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 805DDACC */
+/* 805CC664  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 805CC668  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805CC66C  40 81 00 1C */	ble lbl_805CC688
 lbl_805CC670:
@@ -154,7 +154,7 @@ lbl_805CC688:
 /* 805CC690  4B A4 E1 50 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805CC694  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805CC698  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805CC69C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 805DDAD0 */
+/* 805CC69C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 805CC6A0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 805CC6A4  40 80 00 0C */	bge lbl_805CC6B0
 /* 805CC6A8  38 00 00 01 */	li r0, 1

@@ -11,7 +11,7 @@ lbl_806E1118:
 /* 806E113C  3B E3 59 20 */	addi r31, r3, lit_3791@l
 /* 806E1140  88 7E 05 DA */	lbz r3, 0x5da(r30)
 /* 806E1144  38 03 00 01 */	addi r0, r3, 1
-/* 806E1148  C8 3F 00 A8 */	lfd f1, 0xa8(r31)	/* effective address: 806E59C8 */
+/* 806E1148  C8 3F 00 A8 */	lfd f1, 0xa8(r31)
 /* 806E114C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 806E1150  90 01 00 0C */	stw r0, 0xc(r1)
 /* 806E1154  3C 00 43 30 */	lis r0, 0x4330
@@ -20,7 +20,7 @@ lbl_806E1118:
 /* 806E1160  EC 20 08 28 */	fsubs f1, f0, f1
 /* 806E1164  38 7E 04 E8 */	addi r3, r30, 0x4e8
 /* 806E1168  38 80 00 00 */	li r4, 0
-/* 806E116C  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 806E59E8 */
+/* 806E116C  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 806E1170  EF E0 00 72 */	fmuls f31, f0, f1
 /* 806E1174  FC 00 F8 1E */	fctiwz f0, f31
 /* 806E1178  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -132,8 +132,8 @@ lbl_806E12F8:
 /* 806E1304  3C 60 80 6E */	lis r3, stringBase0@ha
 /* 806E1308  38 63 5A 74 */	addi r3, r3, stringBase0@l
 /* 806E130C  38 80 00 08 */	li r4, 8
-/* 806E1310  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806E1314  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806E1310  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806E1314  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806E1318  3C A5 00 02 */	addis r5, r5, 2
 /* 806E131C  38 C0 00 80 */	li r6, 0x80
 /* 806E1320  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -33,7 +33,7 @@ lbl_807A7BC8:
 /* 807A7C10  4B 87 2B D0 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807A7C14  3C 60 80 7B */	lis r3, data_807B01FC@ha
 /* 807A7C18  38 83 01 FC */	addi r4, r3, data_807B01FC@l
-/* 807A7C1C  C0 04 00 00 */	lfs f0, 0(r4)	/* effective address: 807B01FC */
+/* 807A7C1C  C0 04 00 00 */	lfs f0, 0(r4)
 /* 807A7C20  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807A7C24  40 80 00 10 */	bge lbl_807A7C34
 /* 807A7C28  3C 60 80 7B */	lis r3, data_807B01F8@ha

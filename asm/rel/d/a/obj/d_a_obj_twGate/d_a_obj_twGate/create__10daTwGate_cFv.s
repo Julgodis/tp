@@ -55,8 +55,8 @@ lbl_80D1FDEC:
 /* 80D1FE10  38 60 00 05 */	li r3, 5
 /* 80D1FE14  48 00 00 E8 */	b lbl_80D1FEFC
 lbl_80D1FE18:
-/* 80D1FE18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D1FE1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D1FE18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1FE1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D1FE20  38 63 00 28 */	addi r3, r3, 0x28
 /* 80D1FE24  38 9F 00 D4 */	addi r4, r31, 0xd4
 /* 80D1FE28  7C 84 28 2E */	lwzx r4, r4, r5

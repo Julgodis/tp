@@ -38,8 +38,8 @@ lbl_804A1860:
 /* 804A18A0  4B B7 C4 7C */	b roofCheck__11fopAcM_rc_cFPC4cXyz
 /* 804A18A4  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 804A18A8  41 82 00 30 */	beq lbl_804A18D8
-/* 804A18AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A18B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804A18AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A18B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804A18B4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 804A18B8  3C 80 80 3F */	lis r4, mRoofCheck__11fopAcM_rc_c@ha
 /* 804A18BC  38 84 1D 24 */	addi r4, r4, mRoofCheck__11fopAcM_rc_c@l
@@ -85,9 +85,9 @@ lbl_804A192C:
 /* 804A194C  38 03 FF FF */	addi r0, r3, -1
 /* 804A1950  B0 1C 09 62 */	sth r0, 0x962(r28)
 lbl_804A1954:
-/* 804A1954  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A1958  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A195C  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 804A1954  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A1958  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A195C  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 804A1960  7C 00 07 74 */	extsb r0, r0
 /* 804A1964  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 804A1968  7C 63 02 14 */	add r3, r3, r0
@@ -123,15 +123,15 @@ lbl_804A19D4:
 /* 804A19D4  88 1C 09 50 */	lbz r0, 0x950(r28)
 /* 804A19D8  7C 19 00 00 */	cmpw r25, r0
 /* 804A19DC  41 80 FF AC */	blt lbl_804A1988
-/* 804A19E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A19E4  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 804A19E8  83 5B 5D B4 */	lwz r26, 0x5db4(r27)	/* effective address: 8040BF74 */
+/* 804A19E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A19E4  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 804A19E8  83 5B 5D B4 */	lwz r26, 0x5db4(r27)
 /* 804A19EC  38 7B 4E 20 */	addi r3, r27, 0x4e20
-/* 804A19F0  81 9B 4E 20 */	lwz r12, 0x4e20(r27)	/* effective address: 8040AFE0 */
+/* 804A19F0  81 9B 4E 20 */	lwz r12, 0x4e20(r27)
 /* 804A19F4  81 8C 00 BC */	lwz r12, 0xbc(r12)
 /* 804A19F8  7D 89 03 A6 */	mtctr r12
 /* 804A19FC  4E 80 04 21 */	bctrl 
-/* 804A1A00  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 8040AFEC */
+/* 804A1A00  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 804A1A04  54 00 87 7E */	rlwinm r0, r0, 0x10, 0x1d, 0x1f
 /* 804A1A08  28 00 00 03 */	cmplwi r0, 3
 /* 804A1A0C  41 82 00 BC */	beq lbl_804A1AC8

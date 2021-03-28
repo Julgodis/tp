@@ -25,12 +25,12 @@ lbl_8080056C:
 /* 808005C8  D0 1D 06 A4 */	stfs f0, 0x6a4(r29)
 /* 808005CC  C0 1D 04 B0 */	lfs f0, 0x4b0(r29)
 /* 808005D0  D0 1D 06 A8 */	stfs f0, 0x6a8(r29)
-/* 808005D4  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 80804280 */
+/* 808005D4  C0 23 00 04 */	lfs f1, 4(r3)
 /* 808005D8  D0 21 00 38 */	stfs f1, 0x38(r1)
 /* 808005DC  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 808005E0  C0 1D 08 44 */	lfs f0, 0x844(r29)
 /* 808005E4  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 808005E8  C3 C3 00 3C */	lfs f30, 0x3c(r3)	/* effective address: 808042B8 */
+/* 808005E8  C3 C3 00 3C */	lfs f30, 0x3c(r3)
 /* 808005EC  D0 21 00 20 */	stfs f1, 0x20(r1)
 /* 808005F0  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 808005F4  A8 1D 06 6E */	lha r0, 0x66e(r29)
@@ -108,12 +108,12 @@ lbl_808006BC:
 /* 808006FC  41 82 00 48 */	beq lbl_80800744
 /* 80800700  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80800704  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80800708  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80800708  80 63 00 00 */	lwz r3, 0(r3)
 /* 8080070C  A8 9D 04 E6 */	lha r4, 0x4e6(r29)
 /* 80800710  4B 80 BC CC */	b mDoMtx_YrotS__FPA4_fs
 /* 80800714  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80800718  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8080071C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8080071C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80800720  3C 80 80 80 */	lis r4, data_80804424@ha
 /* 80800724  38 04 44 24 */	addi r0, r4, data_80804424@l
 /* 80800728  7C 80 E2 14 */	add r4, r0, r28
@@ -126,12 +126,12 @@ lbl_808006BC:
 lbl_80800744:
 /* 80800744  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80800748  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8080074C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8080074C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80800750  A8 9D 04 E6 */	lha r4, 0x4e6(r29)
 /* 80800754  4B 80 BC 88 */	b mDoMtx_YrotS__FPA4_fs
 /* 80800758  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8080075C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80800760  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80800760  80 63 00 00 */	lwz r3, 0(r3)
 /* 80800764  3C 80 80 80 */	lis r4, data_80804424@ha
 /* 80800768  38 04 44 24 */	addi r0, r4, data_80804424@l
 /* 8080076C  7C 80 E2 14 */	add r4, r0, r28

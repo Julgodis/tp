@@ -8,14 +8,14 @@ lbl_80742FB4:
 /* 80742FCC  3B A0 00 00 */	li r29, 0
 /* 80742FD0  3B 60 00 00 */	li r27, 0
 /* 80742FD4  3B 40 00 00 */	li r26, 0
-/* 80742FD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80742FDC  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80742FD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80742FDC  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 /* 80742FE0  3C 60 80 75 */	lis r3, data_8074C188@ha
 /* 80742FE4  3B E3 C1 88 */	addi r31, r3, data_8074C188@l
 /* 80742FE8  3C 60 80 75 */	lis r3, lit_3912@ha
 /* 80742FEC  3B 03 BF 44 */	addi r24, r3, lit_3912@l
 lbl_80742FF0:
-/* 80742FF0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80742FF0  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80742FF4  38 00 00 FF */	li r0, 0xff
 /* 80742FF8  90 01 00 08 */	stw r0, 8(r1)
 /* 80742FFC  38 80 00 00 */	li r4, 0
@@ -33,7 +33,7 @@ lbl_80742FF0:
 /* 8074302C  39 00 00 00 */	li r8, 0
 /* 80743030  39 20 00 00 */	li r9, 0
 /* 80743034  39 40 00 00 */	li r10, 0
-/* 80743038  C0 38 00 00 */	lfs f1, 0(r24)	/* effective address: 8074BF44 */
+/* 80743038  C0 38 00 00 */	lfs f1, 0(r24)
 /* 8074303C  4B 90 A4 90 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80743040  7C 7C C9 2E */	stwx r3, r28, r25
 /* 80743044  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
@@ -49,11 +49,11 @@ lbl_80742FF0:
 /* 8074306C  38 63 00 60 */	addi r3, r3, 0x60
 /* 80743070  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80743074  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80743078  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80743078  80 84 00 00 */	lwz r4, 0(r4)
 /* 8074307C  4B C0 34 34 */	b PSMTXCopy
 /* 80743080  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80743084  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80743088  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80743088  80 63 00 00 */	lwz r3, 0(r3)
 /* 8074308C  38 99 00 68 */	addi r4, r25, 0x68
 /* 80743090  38 B9 00 A4 */	addi r5, r25, 0xa4
 /* 80743094  4B B3 D7 4C */	b func_802807E0

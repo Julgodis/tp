@@ -10,10 +10,10 @@ lbl_80A65278:
 /* 80A65298  48 00 03 8D */	bl srchActors__11daNpc_Len_cFv
 /* 80A6529C  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A652A0  38 63 8E A4 */	addi r3, r3, m__17daNpc_Len_Param_c@l
-/* 80A652A4  AB C3 00 48 */	lha r30, 0x48(r3)	/* effective address: 80A68EEC */
-/* 80A652A8  AB A3 00 4A */	lha r29, 0x4a(r3)	/* effective address: 80A68EEE */
-/* 80A652AC  AB 83 00 4C */	lha r28, 0x4c(r3)	/* effective address: 80A68EF0 */
-/* 80A652B0  AB 63 00 4E */	lha r27, 0x4e(r3)	/* effective address: 80A68EF2 */
+/* 80A652A4  AB C3 00 48 */	lha r30, 0x48(r3)
+/* 80A652A8  AB A3 00 4A */	lha r29, 0x4a(r3)
+/* 80A652AC  AB 83 00 4C */	lha r28, 0x4c(r3)
+/* 80A652B0  AB 63 00 4E */	lha r27, 0x4e(r3)
 /* 80A652B4  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 80A652B8  2C 00 00 03 */	cmpwi r0, 3
 /* 80A652BC  41 82 00 4C */	beq lbl_80A65308
@@ -47,10 +47,10 @@ lbl_80A65308:
 lbl_80A6531C:
 /* 80A6531C  3B A0 00 04 */	li r29, 4
 lbl_80A65320:
-/* 80A65320  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A65324  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80A65328  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80A6532C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80A65320  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A65324  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80A65328  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80A6532C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80A65330  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 80A65334  7D 89 03 A6 */	mtctr r12
 /* 80A65338  4E 80 04 21 */	bctrl 
@@ -80,7 +80,7 @@ lbl_80A65364:
 /* 80A65390  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 80A65394  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A65398  38 63 8E A4 */	addi r3, r3, m__17daNpc_Len_Param_c@l
-/* 80A6539C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80A68EAC */
+/* 80A6539C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80A653A0  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 80A653A4  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 80A653A8  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
@@ -99,9 +99,9 @@ lbl_80A653C4:
 lbl_80A653D8:
 /* 80A653D8  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A653DC  38 63 8E A4 */	addi r3, r3, m__17daNpc_Len_Param_c@l
-/* 80A653E0  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80A68EB8 */
+/* 80A653E0  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 80A653E4  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 80A653E8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A68EC0 */
+/* 80A653E8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80A653EC  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
 /* 80A653F0  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 80A653F4  28 00 00 01 */	cmplwi r0, 1
@@ -112,22 +112,22 @@ lbl_80A653D8:
 lbl_80A65408:
 /* 80A65408  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A6540C  38 63 8E A4 */	addi r3, r3, m__17daNpc_Len_Param_c@l
-/* 80A65410  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 80A68EF4 */
+/* 80A65410  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 80A65414  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 80A65418  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 80A6541C  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 80A65420  4B 61 0B 20 */	b SetWallR__12dBgS_AcchCirFf
 /* 80A65424  3C 60 80 A7 */	lis r3, m__17daNpc_Len_Param_c@ha
 /* 80A65428  38 63 8E A4 */	addi r3, r3, m__17daNpc_Len_Param_c@l
-/* 80A6542C  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A68EBC */
+/* 80A6542C  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80A65430  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 80A65434  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80A68EB0 */
+/* 80A65434  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80A65438  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 80A6543C  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80A68F10 */
+/* 80A6543C  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80A65440  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 80A65444  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80A68EE8 */
+/* 80A65444  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 80A65448  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 80A6544C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80A68EA8 */
+/* 80A6544C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80A65450  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80A65454  39 61 00 30 */	addi r11, r1, 0x30
 /* 80A65458  4B 8F CD C8 */	b _restgpr_27

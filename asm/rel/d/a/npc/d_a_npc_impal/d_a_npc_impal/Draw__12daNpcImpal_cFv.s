@@ -19,7 +19,7 @@ lbl_80A0859C:
 /* 80A085BC  38 A0 00 00 */	li r5, 0
 /* 80A085C0  3C C0 80 A1 */	lis r6, m__18daNpcImpal_Param_c@ha
 /* 80A085C4  38 C6 C2 70 */	addi r6, r6, m__18daNpcImpal_Param_c@l
-/* 80A085C8  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80A0C27C */
+/* 80A085C8  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80A085CC  38 C0 00 00 */	li r6, 0
 /* 80A085D0  38 E0 00 00 */	li r7, 0
 /* 80A085D4  4B 74 9C D8 */	b draw__8daNpcF_cFiifP11_GXColorS10i

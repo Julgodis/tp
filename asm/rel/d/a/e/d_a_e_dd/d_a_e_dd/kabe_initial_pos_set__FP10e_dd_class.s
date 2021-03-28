@@ -19,8 +19,8 @@ lbl_806A6400:
 /* 806A6444  4B 9D 18 24 */	b __ct__11dBgS_LinChkFv
 /* 806A6448  3B 00 00 00 */	li r24, 0
 /* 806A644C  3B C0 00 00 */	li r30, 0
-/* 806A6450  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806A6454  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806A6450  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A6454  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806A6458  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 806A645C  C3 9A 00 80 */	lfs f28, 0x80(r26)
 /* 806A6460  3C 60 80 45 */	lis r3, calc_mtx@ha

@@ -5,9 +5,9 @@ lbl_806700C4:
 /* 806700D0  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 806700D4  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 806700D8  7C 7E 1B 78 */	mr r30, r3
-/* 806700DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806700E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806700E4  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806700DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806700E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806700E4  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 806700E8  38 61 00 08 */	addi r3, r1, 8
 /* 806700EC  38 9F 04 D0 */	addi r4, r31, 0x4d0
 /* 806700F0  38 BE 04 D0 */	addi r5, r30, 0x4d0

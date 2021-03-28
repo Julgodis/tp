@@ -6,12 +6,12 @@ lbl_80AC6F0C:
 /* 80AC6F1C  38 A3 72 2C */	addi r5, r3, mCutList__12daNpc_seiB_c@l
 /* 80AC6F20  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AC6F24  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AC6F28  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AC6F2C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AC6F30  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AC722C */
-/* 80AC6F34  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AC7230 */
-/* 80AC6F38  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AC6F3C  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AC7234 */
+/* 80AC6F28  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AC6F2C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AC6F30  90 65 00 00 */	stw r3, 0(r5)
+/* 80AC6F34  90 05 00 04 */	stw r0, 4(r5)
+/* 80AC6F38  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AC6F3C  90 05 00 08 */	stw r0, 8(r5)
 /* 80AC6F40  3C 60 80 AC */	lis r3, __vt__18daNpc_seiB_Param_c@ha
 /* 80AC6F44  38 03 74 28 */	addi r0, r3, __vt__18daNpc_seiB_Param_c@l
 /* 80AC6F48  3C 60 80 AC */	lis r3, l_HIO@ha

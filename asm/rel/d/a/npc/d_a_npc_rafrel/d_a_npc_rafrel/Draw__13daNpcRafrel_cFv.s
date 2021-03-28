@@ -16,7 +16,7 @@ lbl_80ABA3D8:
 /* 80ABA410  38 A0 00 00 */	li r5, 0
 /* 80ABA414  3C C0 80 AC */	lis r6, m__19daNpcRafrel_Param_c@ha
 /* 80ABA418  38 C6 F9 E0 */	addi r6, r6, m__19daNpcRafrel_Param_c@l
-/* 80ABA41C  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80ABF9EC */
+/* 80ABA41C  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80ABA420  38 C0 00 00 */	li r6, 0
 /* 80ABA424  38 E0 00 00 */	li r7, 0
 /* 80ABA428  4B 69 7E 84 */	b draw__8daNpcF_cFiifP11_GXColorS10i

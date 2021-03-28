@@ -26,19 +26,19 @@ lbl_808410BC:
 /* 808410DC  C0 03 55 F4 */	lfs f0, lit_4304@l(r3)
 /* 808410E0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 808410E4  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 808410E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808410EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808410E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808410EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808410F0  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 808410F4  7F E4 FB 78 */	mr r4, r31
 /* 808410F8  38 A0 00 01 */	li r5, 1
 /* 808410FC  38 C1 00 08 */	addi r6, r1, 8
 /* 80841100  4B 82 E9 24 */	b StartShock__12dVibration_cFii4cXyz
-/* 80841104  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80841108  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8084110C  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80841104  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80841108  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8084110C  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80841110  3C 80 00 06 */	lis r4, 0x0006 /* 0x00060037@ha */
 /* 80841114  38 84 00 37 */	addi r4, r4, 0x0037 /* 0x00060037@l */
-/* 80841118  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80841118  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 8084111C  81 8C 01 18 */	lwz r12, 0x118(r12)
 /* 80841120  7D 89 03 A6 */	mtctr r12
 /* 80841124  4E 80 04 21 */	bctrl 

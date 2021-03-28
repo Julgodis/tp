@@ -8,10 +8,10 @@ lbl_80C5E518:
 /* 80C5E530  3C 60 80 C6 */	lis r3, lit_3634@ha
 /* 80C5E534  3B E3 E8 DC */	addi r31, r3, lit_3634@l
 /* 80C5E538  38 7E 05 D0 */	addi r3, r30, 0x5d0
-/* 80C5E53C  C0 3F 00 1C */	lfs f1, 0x1c(r31)	/* effective address: 80C5E8F8 */
-/* 80C5E540  C0 5F 00 14 */	lfs f2, 0x14(r31)	/* effective address: 80C5E8F0 */
+/* 80C5E53C  C0 3F 00 1C */	lfs f1, 0x1c(r31)
+/* 80C5E540  C0 5F 00 14 */	lfs f2, 0x14(r31)
 /* 80C5E544  C0 7E 05 D8 */	lfs f3, 0x5d8(r30)
-/* 80C5E548  C0 9F 00 18 */	lfs f4, 0x18(r31)	/* effective address: 80C5E8F4 */
+/* 80C5E548  C0 9F 00 18 */	lfs f4, 0x18(r31)
 /* 80C5E54C  4B 61 14 30 */	b cLib_addCalc__FPfffff
 /* 80C5E550  C0 1F 00 1C */	lfs f0, 0x1c(r31)
 /* 80C5E554  FC 00 08 00 */	fcmpu cr0, f0, f1

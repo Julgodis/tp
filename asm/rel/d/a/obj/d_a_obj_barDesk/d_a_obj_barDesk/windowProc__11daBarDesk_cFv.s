@@ -6,7 +6,7 @@ lbl_80BA95F4:
 /* 80BA9604  38 E4 9B BC */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80BA9608  3C 80 80 BB */	lis r4, data_80BA9D2C@ha
 /* 80BA960C  38 C4 9D 2C */	addi r6, r4, data_80BA9D2C@l
-/* 80BA9610  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80BA9D2C */
+/* 80BA9610  88 06 00 00 */	lbz r0, 0(r6)
 /* 80BA9614  7C 00 07 75 */	extsb. r0, r0
 /* 80BA9618  40 82 00 40 */	bne lbl_80BA9658
 /* 80BA961C  80 87 00 64 */	lwz r4, 0x64(r7)

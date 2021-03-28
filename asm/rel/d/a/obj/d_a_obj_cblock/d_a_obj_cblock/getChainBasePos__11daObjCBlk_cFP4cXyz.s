@@ -9,9 +9,9 @@ lbl_80BC65CC:
 /* 80BC65E8  3C 60 80 BC */	lis r3, l_chainOffset@ha
 /* 80BC65EC  C4 03 6C 9C */	lfsu f0, l_chainOffset@l(r3)
 /* 80BC65F0  D0 04 00 00 */	stfs f0, 0(r4)
-/* 80BC65F4  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80BC0004 */
+/* 80BC65F4  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BC65F8  D0 04 00 04 */	stfs f0, 4(r4)
-/* 80BC65FC  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80BC0008 */
+/* 80BC65FC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BC6600  D0 04 00 08 */	stfs f0, 8(r4)
 /* 80BC6604  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80BC6608  4B 44 67 5C */	b transS__14mDoMtx_stack_cFRC4cXyz

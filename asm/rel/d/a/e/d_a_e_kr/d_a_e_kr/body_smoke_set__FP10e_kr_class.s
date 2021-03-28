@@ -11,7 +11,7 @@ lbl_8070320C:
 /* 80703230  38 63 00 30 */	addi r3, r3, 0x30
 /* 80703234  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80703238  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8070323C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8070323C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80703240  4B C4 32 70 */	b PSMTXCopy
 /* 80703244  3C 60 80 70 */	lis r3, lit_3904@ha
 /* 80703248  C0 03 5A FC */	lfs f0, lit_3904@l(r3)

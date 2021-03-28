@@ -65,11 +65,11 @@ struct dMsgFlow_c {
 // Forward References:
 // 
 
-static void daTag_Lantern_Create(void*); // 2
-static void daTag_Lantern_Delete(void*); // 2
-static void daTag_Lantern_Execute(void*); // 2
-static void daTag_Lantern_Draw(void*); // 2
-static bool daTag_Lantern_IsDelete(void*); // 2
+void daTag_Lantern_Create(void*); // 2
+void daTag_Lantern_Delete(void*); // 2
+void daTag_Lantern_Execute(void*); // 2
+void daTag_Lantern_Draw(void*); // 2
+bool daTag_Lantern_IsDelete(void*); // 2
 
 extern "C" void __dt__15daTag_Lantern_cFv(); // 1
 extern "C" void create__15daTag_Lantern_cFv(); // 1
@@ -77,13 +77,14 @@ extern "C" void Delete__15daTag_Lantern_cFv(); // 1
 extern "C" void Execute__15daTag_Lantern_cFv(); // 1
 extern "C" bool Draw__15daTag_Lantern_cFv(); // 1
 extern "C" void initialize__15daTag_Lantern_cFv(); // 1
-extern "C" static void daTag_Lantern_Create__FPv(); // 1
-extern "C" static void daTag_Lantern_Delete__FPv(); // 1
-extern "C" static void daTag_Lantern_Execute__FPv(); // 1
-extern "C" static void daTag_Lantern_Draw__FPv(); // 1
-extern "C" static bool daTag_Lantern_IsDelete__FPv(); // 1
+extern "C" void daTag_Lantern_Create__FPv(); // 1
+extern "C" void daTag_Lantern_Delete__FPv(); // 1
+extern "C" void daTag_Lantern_Execute__FPv(); // 1
+extern "C" void daTag_Lantern_Draw__FPv(); // 1
+extern "C" bool daTag_Lantern_IsDelete__FPv(); // 1
 extern "C" void __sinit_d_a_tag_lantern_cpp(); // 1
 extern "C" void __dt__21daTag_Lantern_Param_cFv(); // 1
+extern "C" extern void* daTag_Lantern_MethodTable[8];
 extern "C" extern void* g_profile_TAG_LANTERN[12];
 
 // 
@@ -112,10 +113,7 @@ extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" void __register_global_object(); // 1
 
@@ -124,42 +122,42 @@ extern "C" void __register_global_object(); // 1
 // 
 
 /* ############################################################################################## */
-/* 8048F154-8048F174 0020+00 s=1 e=0 z=0  None .data      daTag_Lantern_MethodTable                                    */
-SECTION_DATA static void* daTag_Lantern_MethodTable[8] = {
-	/* 0    */ (void*)daTag_Lantern_Create__FPv,
-	/* 1    */ (void*)daTag_Lantern_Delete__FPv,
-	/* 2    */ (void*)daTag_Lantern_Execute__FPv,
-	/* 3    */ (void*)daTag_Lantern_IsDelete__FPv,
-	/* 4    */ (void*)daTag_Lantern_Draw__FPv,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8048F154-8048F174 0020+00 s=0 e=0 z=0  None .data      daTag_Lantern_MethodTable                                    */
+SECTION_DATA void* daTag_Lantern_MethodTable[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048F174-8048F1A4 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_LANTERN                                        */
+/* 8048F174-8048F1A4 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_LANTERN                                        */
 SECTION_DATA void* g_profile_TAG_LANTERN[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D60000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000060C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x011E0000,
-	/* 9    */ (void*)&daTag_Lantern_MethodTable,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D60000,
+	(void*)NULL,
+	(void*)0x0000060C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x011E0000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 8048F1A4-8048F1B0 000C+00 s=2 e=0 z=0  None .data      __vt__15daTag_Lantern_c                                      */
 SECTION_DATA static void* __vt__15daTag_Lantern_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15daTag_Lantern_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048ECAC-8048ED28 007C+00 s=1 e=0 z=0  None .text      __dt__15daTag_Lantern_cFv                                    */
+/* 8048ECAC-8048ED28 007C+00 s=0 e=0 z=0  None .text      __dt__15daTag_Lantern_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -233,52 +231,52 @@ asm void daTag_Lantern_c::initialize() {
 #pragma pop
 
 
-/* 8048F024-8048F044 0020+00 s=1 e=0 z=0  None .text      daTag_Lantern_Create__FPv                                    */
+/* 8048F024-8048F044 0020+00 s=0 e=0 z=0  None .text      daTag_Lantern_Create__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Lantern_Create(void* param_0) {
+asm void daTag_Lantern_Create(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Create__FPv.s"
 }
 #pragma pop
 
 
-/* 8048F044-8048F064 0020+00 s=1 e=0 z=0  None .text      daTag_Lantern_Delete__FPv                                    */
+/* 8048F044-8048F064 0020+00 s=0 e=0 z=0  None .text      daTag_Lantern_Delete__FPv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Lantern_Delete(void* param_0) {
+asm void daTag_Lantern_Delete(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Delete__FPv.s"
 }
 #pragma pop
 
 
-/* 8048F064-8048F084 0020+00 s=1 e=0 z=0  None .text      daTag_Lantern_Execute__FPv                                   */
+/* 8048F064-8048F084 0020+00 s=0 e=0 z=0  None .text      daTag_Lantern_Execute__FPv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Lantern_Execute(void* param_0) {
+asm void daTag_Lantern_Execute(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Execute__FPv.s"
 }
 #pragma pop
 
 
-/* 8048F084-8048F0A4 0020+00 s=1 e=0 z=0  None .text      daTag_Lantern_Draw__FPv                                      */
+/* 8048F084-8048F0A4 0020+00 s=0 e=0 z=0  None .text      daTag_Lantern_Draw__FPv                                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Lantern_Draw(void* param_0) {
+asm void daTag_Lantern_Draw(void* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_lantern/d_a_tag_lantern/daTag_Lantern_Draw__FPv.s"
 }
 #pragma pop
 
 
-/* 8048F0A4-8048F0AC 0008+00 s=1 e=0 z=0  None .text      daTag_Lantern_IsDelete__FPv                                  */
-static bool daTag_Lantern_IsDelete(void* param_0) {
+/* 8048F0A4-8048F0AC 0008+00 s=0 e=0 z=0  None .text      daTag_Lantern_IsDelete__FPv                                  */
+bool daTag_Lantern_IsDelete(void* param_0) {
 	return true;
 }
 
@@ -286,9 +284,9 @@ static bool daTag_Lantern_IsDelete(void* param_0) {
 /* ############################################################################################## */
 /* 8048F1B0-8048F1BC 000C+00 s=2 e=0 z=0  None .data      __vt__21daTag_Lantern_Param_c                                */
 SECTION_DATA static void* __vt__21daTag_Lantern_Param_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21daTag_Lantern_Param_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8048F1C8-8048F1D4 000C+00 s=1 e=0 z=0  None .bss       @3622                                                        */
@@ -297,7 +295,7 @@ static u8 lit_3622[12];
 /* 8048F1D4-8048F1D8 0004+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[4];
 
-/* 8048F0AC-8048F0EC 0040+00 s=0 e=1 z=0  None .text      __sinit_d_a_tag_lantern_cpp                                  */
+/* 8048F0AC-8048F0EC 0040+00 s=0 e=0 z=0  None .text      __sinit_d_a_tag_lantern_cpp                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -308,7 +306,7 @@ extern "C" asm void __sinit_d_a_tag_lantern_cpp() {
 #pragma pop
 
 
-/* 8048F0EC-8048F134 0048+00 s=2 e=0 z=0  None .text      __dt__21daTag_Lantern_Param_cFv                              */
+/* 8048F0EC-8048F134 0048+00 s=1 e=0 z=0  None .text      __dt__21daTag_Lantern_Param_cFv                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

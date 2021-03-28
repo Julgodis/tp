@@ -4,8 +4,8 @@ lbl_804E43A0:
 /* 804E43A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804E43AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804E43B0  7C 7F 1B 78 */	mr r31, r3
-/* 804E43B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804E43B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804E43B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804E43B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804E43BC  38 63 09 58 */	addi r3, r3, 0x958
 /* 804E43C0  38 80 00 02 */	li r4, 2
 /* 804E43C4  4B B5 05 70 */	b isDungeonItem__12dSv_memBit_cCFi

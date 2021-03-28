@@ -7,9 +7,9 @@ lbl_805F92FC:
 /* 805F9310  7C 7E 1B 78 */	mr r30, r3
 /* 805F9314  3C 60 80 60 */	lis r3, lit_3815@ha
 /* 805F9318  3B E3 26 64 */	addi r31, r3, lit_3815@l
-/* 805F931C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F9320  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805F9324  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805F931C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F9320  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805F9324  83 83 5D AC */	lwz r28, 0x5dac(r3)
 /* 805F9328  80 7E 05 D0 */	lwz r3, 0x5d0(r30)
 /* 805F932C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 805F9330  FC 00 00 1E */	fctiwz f0, f0

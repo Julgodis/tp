@@ -4,9 +4,9 @@ lbl_80BE1930:
 /* 80BE1938  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BE193C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BE1940  7C 7F 1B 78 */	mr r31, r3
-/* 80BE1944  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BE1948  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BE194C  88 04 5D B0 */	lbz r0, 0x5db0(r4)	/* effective address: 8040BF70 */
+/* 80BE1944  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BE1948  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BE194C  88 04 5D B0 */	lbz r0, 0x5db0(r4)
 /* 80BE1950  7C 00 07 74 */	extsb r0, r0
 /* 80BE1954  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80BE1958  7C 84 02 14 */	add r4, r4, r0

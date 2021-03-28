@@ -64,9 +64,9 @@ lbl_80A2E604:
 /* 80A2E60C  38 00 00 01 */	li r0, 1
 /* 80A2E610  98 1F 0E 39 */	stb r0, 0xe39(r31)
 /* 80A2E614  7F E3 FB 78 */	mr r3, r31
-/* 80A2E618  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A2E61C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A2E620  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80A2E618  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A2E61C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A2E620  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80A2E624  4B 5E C0 EC */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80A2E628  7C 64 1B 78 */	mr r4, r3
 /* 80A2E62C  38 7F 0D AE */	addi r3, r31, 0xdae

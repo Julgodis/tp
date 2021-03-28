@@ -25,7 +25,7 @@ lbl_8066A5DC:
 /* 8066A638  7C 64 1B 78 */	mr r4, r3
 /* 8066A63C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8066A640  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8066A644  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8066A644  80 63 00 00 */	lwz r3, 0(r3)
 /* 8066A648  4B 9A 1D 94 */	b mDoMtx_YrotS__FPA4_fs
 /* 8066A64C  C0 1E 00 14 */	lfs f0, 0x14(r30)
 /* 8066A650  D0 01 00 50 */	stfs f0, 0x50(r1)
@@ -51,8 +51,8 @@ lbl_8066A5DC:
 /* 8066A6A0  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 8066A6A4  3B 40 00 00 */	li r26, 0
 /* 8066A6A8  3B E0 00 00 */	li r31, 0
-/* 8066A6AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8066A6B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8066A6AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8066A6B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8066A6B4  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8066A6B8  C3 FE 00 18 */	lfs f31, 0x18(r30)
 lbl_8066A6BC:

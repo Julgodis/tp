@@ -18,10 +18,10 @@ lbl_80584884:
 /* 805848C4  D0 03 05 58 */	stfs f0, 0x558(r3)
 /* 805848C8  38 00 00 02 */	li r0, 2
 /* 805848CC  98 03 05 67 */	stb r0, 0x567(r3)
-/* 805848D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805848D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805848D8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805848DC  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 80406740 */
+/* 805848D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805848D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805848D8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805848DC  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 805848E0  54 00 04 21 */	rlwinm. r0, r0, 0, 0x10, 0x10
 /* 805848E4  41 82 00 1C */	beq lbl_80584900
 /* 805848E8  38 00 00 01 */	li r0, 1

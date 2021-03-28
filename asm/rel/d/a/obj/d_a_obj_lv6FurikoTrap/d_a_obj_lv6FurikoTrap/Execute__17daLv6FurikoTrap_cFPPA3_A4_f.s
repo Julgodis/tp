@@ -28,8 +28,8 @@ lbl_80C729B4:
 /* 80C72A1C  4B FF FA F5 */	bl setBaseMtx__17daLv6FurikoTrap_cFv
 /* 80C72A20  3B A0 00 00 */	li r29, 0
 /* 80C72A24  3B 40 00 00 */	li r26, 0
-/* 80C72A28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C72A2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C72A28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C72A2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C72A30  3B C3 23 3C */	addi r30, r3, 0x233c
 /* 80C72A34  C3 5F 00 38 */	lfs f26, 0x38(r31)
 /* 80C72A38  C3 7F 00 3C */	lfs f27, 0x3c(r31)

@@ -7,9 +7,9 @@ lbl_80D25CA0:
 /* 80D25CB4  7C 7F 1B 78 */	mr r31, r3
 /* 80D25CB8  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 80D25CBC  83 63 10 18 */	lwz r27, m_midnaActor__9daPy_py_c@l(r3)
-/* 80D25CC0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D25CC4  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80D25CC8  83 BE 5D AC */	lwz r29, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80D25CC0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D25CC4  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80D25CC8  83 BE 5D AC */	lwz r29, 0x5dac(r30)
 /* 80D25CCC  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
 /* 80D25CD0  28 00 00 01 */	cmplwi r0, 1
 /* 80D25CD4  40 82 00 28 */	bne lbl_80D25CFC
@@ -38,7 +38,7 @@ lbl_80D25CFC:
 /* 80D25D2C  7F 83 E3 78 */	mr r3, r28
 /* 80D25D30  3C 80 80 D2 */	lis r4, l_staff_name@ha
 /* 80D25D34  38 84 6C 7C */	addi r4, r4, l_staff_name@l
-/* 80D25D38  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D26C7C */
+/* 80D25D38  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D25D3C  38 A0 00 00 */	li r5, 0
 /* 80D25D40  38 C0 00 00 */	li r6, 0
 /* 80D25D44  4B 32 1D D8 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

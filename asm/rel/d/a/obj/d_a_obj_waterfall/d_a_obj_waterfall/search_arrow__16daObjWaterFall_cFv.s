@@ -37,7 +37,7 @@ lbl_80D2F0A0:
 /* 80D2F0B8  4B 2F 22 80 */	b fpcEx_Search__FPFPvPv_PvPv
 /* 80D2F0BC  3C 60 80 D3 */	lis r3, target_info_count@ha
 /* 80D2F0C0  3B 83 FE 78 */	addi r28, r3, target_info_count@l
-/* 80D2F0C4  80 1C 00 00 */	lwz r0, 0(r28)	/* effective address: 80D2FE78 */
+/* 80D2F0C4  80 1C 00 00 */	lwz r0, 0(r28)
 /* 80D2F0C8  2C 00 00 00 */	cmpwi r0, 0
 /* 80D2F0CC  41 82 02 30 */	beq lbl_80D2F2FC
 /* 80D2F0D0  3B 40 00 00 */	li r26, 0

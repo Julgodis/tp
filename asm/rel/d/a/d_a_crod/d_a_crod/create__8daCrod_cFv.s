@@ -103,8 +103,8 @@ lbl_804A3064:
 /* 804A309C  83 C3 00 04 */	lwz r30, 4(r3)
 /* 804A30A0  4B BF A7 E4 */	b getAlinkArcName__9daAlink_cFv
 /* 804A30A4  38 80 00 40 */	li r4, 0x40
-/* 804A30A8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804A30AC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804A30A8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804A30AC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804A30B0  3F A5 00 02 */	addis r29, r5, 2
 /* 804A30B4  3B BD C2 F8 */	addi r29, r29, -15624
 /* 804A30B8  7F A5 EB 78 */	mr r5, r29
@@ -131,10 +131,10 @@ lbl_804A3064:
 /* 804A310C  4B E8 CB B8 */	b entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey
 /* 804A3110  7F E3 FB 78 */	mr r3, r31
 /* 804A3114  4B B7 67 B0 */	b fopAcM_setStageLayer__FPv
-/* 804A3118  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A311C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A3120  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 804A3124  80 83 07 08 */	lwz r4, 0x708(r3)	/* effective address: 804068C8 */
+/* 804A3118  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A311C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A3120  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 804A3124  80 83 07 08 */	lwz r4, 0x708(r3)
 /* 804A3128  28 04 00 00 */	cmplwi r4, 0
 /* 804A312C  41 82 00 10 */	beq lbl_804A313C
 /* 804A3130  80 64 00 84 */	lwz r3, 0x84(r4)

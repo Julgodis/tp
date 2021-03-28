@@ -11,9 +11,9 @@ lbl_806EAEDC:
 /* 806EAF00  3B 84 08 60 */	addi r28, r4, lit_3966@l
 /* 806EAF04  38 00 00 00 */	li r0, 0
 /* 806EAF08  98 03 06 E9 */	stb r0, 0x6e9(r3)
-/* 806EAF0C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806EAF10  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 806EAF14  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 806EAF0C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806EAF10  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 806EAF14  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 806EAF18  4B 92 FA 4C */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806EAF1C  C0 1C 00 00 */	lfs f0, 0(r28)
 /* 806EAF20  FC 01 00 40 */	fcmpo cr0, f1, f0

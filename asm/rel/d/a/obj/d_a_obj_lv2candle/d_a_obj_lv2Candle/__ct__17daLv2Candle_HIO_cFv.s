@@ -9,13 +9,13 @@ lbl_8058E04C:
 /* 8058E068  90 03 00 00 */	stw r0, 0(r3)
 /* 8058E06C  38 00 00 1E */	li r0, 0x1e
 /* 8058E070  98 03 00 04 */	stb r0, 4(r3)
-/* 8058E074  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 8058F130 */
+/* 8058E074  C0 05 00 00 */	lfs f0, 0(r5)
 /* 8058E078  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8058E07C  C0 45 00 04 */	lfs f2, 4(r5)	/* effective address: 8058F134 */
+/* 8058E07C  C0 45 00 04 */	lfs f2, 4(r5)
 /* 8058E080  D0 43 00 10 */	stfs f2, 0x10(r3)
-/* 8058E084  C0 25 00 08 */	lfs f1, 8(r5)	/* effective address: 8058F138 */
+/* 8058E084  C0 25 00 08 */	lfs f1, 8(r5)
 /* 8058E088  D0 23 00 14 */	stfs f1, 0x14(r3)
-/* 8058E08C  C0 05 00 0C */	lfs f0, 0xc(r5)	/* effective address: 8058F13C */
+/* 8058E08C  C0 05 00 0C */	lfs f0, 0xc(r5)
 /* 8058E090  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 8058E094  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8058E098  D0 23 00 20 */	stfs f1, 0x20(r3)
@@ -29,7 +29,7 @@ lbl_8058E04C:
 /* 8058E0B8  98 83 00 2C */	stb r4, 0x2c(r3)
 /* 8058E0BC  38 00 00 03 */	li r0, 3
 /* 8058E0C0  98 03 00 2D */	stb r0, 0x2d(r3)
-/* 8058E0C4  C0 05 00 10 */	lfs f0, 0x10(r5)	/* effective address: 8058F140 */
+/* 8058E0C4  C0 05 00 10 */	lfs f0, 0x10(r5)
 /* 8058E0C8  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8058E0CC  38 A0 00 BC */	li r5, 0xbc
 /* 8058E0D0  98 A3 00 2E */	stb r5, 0x2e(r3)

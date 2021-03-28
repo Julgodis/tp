@@ -13,10 +13,10 @@ lbl_80CAD908:
 /* 80CAD934  54 1E 07 FE */	clrlwi r30, r0, 0x1f
 /* 80CAD938  3C 60 80 CB */	lis r3, l_arcName@ha
 /* 80CAD93C  38 63 F0 E8 */	addi r3, r3, l_arcName@l
-/* 80CAD940  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CAF0E8 */
+/* 80CAD940  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CAD944  38 80 00 05 */	li r4, 5
-/* 80CAD948  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CAD94C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CAD948  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CAD94C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CAD950  3F E5 00 02 */	addis r31, r5, 2
 /* 80CAD954  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80CAD958  7F E5 FB 78 */	mr r5, r31
@@ -139,7 +139,7 @@ lbl_80CADAF4:
 lbl_80CADB08:
 /* 80CADB08  3C 60 80 CB */	lis r3, l_arcName@ha
 /* 80CADB0C  38 63 F0 E8 */	addi r3, r3, l_arcName@l
-/* 80CADB10  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80CAF0E8 */
+/* 80CADB10  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CADB14  57 C0 10 3A */	slwi r0, r30, 2
 /* 80CADB18  38 95 00 08 */	addi r4, r21, 8
 /* 80CADB1C  7C 84 00 2E */	lwzx r4, r4, r0

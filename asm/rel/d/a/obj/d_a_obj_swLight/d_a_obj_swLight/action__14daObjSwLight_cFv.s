@@ -13,7 +13,7 @@ lbl_80CF73E0:
 /* 80CF740C  3B E3 83 A0 */	addi r31, r3, l_sph_src_at@l
 /* 80CF7410  3C 60 80 D0 */	lis r3, data_80CF8630@ha
 /* 80CF7414  38 A3 86 30 */	addi r5, r3, data_80CF8630@l
-/* 80CF7418  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CF8630 */
+/* 80CF7418  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CF741C  7C 00 07 75 */	extsb. r0, r0
 /* 80CF7420  40 82 00 70 */	bne lbl_80CF7490
 /* 80CF7424  80 66 00 80 */	lwz r3, 0x80(r6)
@@ -62,8 +62,8 @@ lbl_80CF7490:
 /* 80CF74CC  D0 41 00 14 */	stfs f2, 0x14(r1)
 /* 80CF74D0  3B 40 00 00 */	li r26, 0
 /* 80CF74D4  3B A0 00 00 */	li r29, 0
-/* 80CF74D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF74DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF74D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF74DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF74E0  3B 63 23 3C */	addi r27, r3, 0x233c
 lbl_80CF74E4:
 /* 80CF74E4  7F 9E EA 14 */	add r28, r30, r29
@@ -128,7 +128,7 @@ lbl_80CF7588:
 /* 80CF75C8  90 01 00 08 */	stw r0, 8(r1)
 /* 80CF75CC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CF75D0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CF75D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CF75D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF75D8  38 81 00 08 */	addi r4, r1, 8
 /* 80CF75DC  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CF75E0  57 46 06 3E */	clrlwi r6, r26, 0x18

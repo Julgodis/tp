@@ -71,7 +71,7 @@ lbl_80D1F570:
 /* 80D1F5A4  7C 46 04 2E */	lfsx f2, r6, r0
 /* 80D1F5A8  3C 60 80 D2 */	lis r3, l_HIO@ha
 /* 80D1F5AC  38 A3 F9 9C */	addi r5, r3, l_HIO@l
-/* 80D1F5B0  A8 05 00 04 */	lha r0, 4(r5)	/* effective address: 80D1F9A0 */
+/* 80D1F5B0  A8 05 00 04 */	lha r0, 4(r5)
 /* 80D1F5B4  C8 3E 00 18 */	lfd f1, 0x18(r30)
 /* 80D1F5B8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80D1F5BC  90 01 00 1C */	stw r0, 0x1c(r1)
@@ -88,7 +88,7 @@ lbl_80D1F570:
 /* 80D1F5E8  54 00 04 38 */	rlwinm r0, r0, 0, 0x10, 0x1c
 /* 80D1F5EC  7C 66 02 14 */	add r3, r6, r0
 /* 80D1F5F0  C0 43 00 04 */	lfs f2, 4(r3)
-/* 80D1F5F4  A8 05 00 04 */	lha r0, 4(r5)	/* effective address: 80D1F9A0 */
+/* 80D1F5F4  A8 05 00 04 */	lha r0, 4(r5)
 /* 80D1F5F8  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80D1F5FC  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D1F600  90 81 00 08 */	stw r4, 8(r1)

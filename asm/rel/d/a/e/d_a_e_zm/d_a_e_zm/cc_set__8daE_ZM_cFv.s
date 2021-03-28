@@ -15,9 +15,9 @@ lbl_80831B9C:
 /* 80831BD0  2C 00 00 03 */	cmpwi r0, 3
 /* 80831BD4  40 82 00 90 */	bne lbl_80831C64
 lbl_80831BD8:
-/* 80831BD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80831BDC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80831BE0  83 A3 5D AC */	lwz r29, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80831BD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80831BDC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80831BE0  83 A3 5D AC */	lwz r29, 0x5dac(r3)
 /* 80831BE4  80 7C 00 84 */	lwz r3, 0x84(r28)
 /* 80831BE8  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80831BEC  3C 80 80 3E */	lis r4, now__14mDoMtx_stack_c@ha
@@ -61,7 +61,7 @@ lbl_80831C64:
 /* 80831C80  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 80831C84  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 80831C88  3B A3 2F 90 */	addi r29, r3, l_HIO@l
-/* 80831C8C  C0 1D 00 08 */	lfs f0, 8(r29)	/* effective address: 80832F98 */
+/* 80831C8C  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 80831C90  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80831C94  EC 01 00 2A */	fadds f0, f1, f0
 /* 80831C98  D0 1E 05 3C */	stfs f0, 0x53c(r30)
@@ -72,7 +72,7 @@ lbl_80831C64:
 /* 80831CAC  C0 1E 05 40 */	lfs f0, 0x540(r30)
 /* 80831CB0  D0 1E 05 58 */	stfs f0, 0x558(r30)
 /* 80831CB4  C0 3E 05 54 */	lfs f1, 0x554(r30)
-/* 80831CB8  C0 1D 00 08 */	lfs f0, 8(r29)	/* effective address: 80832F98 */
+/* 80831CB8  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 80831CBC  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80831CC0  EC 01 00 2A */	fadds f0, f1, f0
 /* 80831CC4  D0 1E 05 54 */	stfs f0, 0x554(r30)
@@ -104,8 +104,8 @@ lbl_80831C64:
 /* 80831D2C  C0 1D 00 08 */	lfs f0, 8(r29)
 /* 80831D30  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80831D34  4B A3 D4 CC */	b SetR__8cM3dGCylFf
-/* 80831D38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80831D3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80831D38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80831D3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80831D40  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80831D44  38 9E 09 90 */	addi r4, r30, 0x990
 /* 80831D48  4B A3 2E 60 */	b Set__4cCcSFP8cCcD_Obj

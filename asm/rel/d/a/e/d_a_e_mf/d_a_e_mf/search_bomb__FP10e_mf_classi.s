@@ -33,7 +33,7 @@ lbl_8070B2C4:
 /* 8070B2E0  C3 BD 00 44 */	lfs f29, 0x44(r29)
 /* 8070B2E4  3C 60 80 71 */	lis r3, target_info_count@ha
 /* 8070B2E8  3B C3 3F C0 */	addi r30, r3, target_info_count@l
-/* 8070B2EC  80 1E 00 00 */	lwz r0, 0(r30)	/* effective address: 80713FC0 */
+/* 8070B2EC  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8070B2F0  2C 00 00 00 */	cmpwi r0, 0
 /* 8070B2F4  41 82 03 B0 */	beq lbl_8070B6A4
 /* 8070B2F8  3B 60 00 00 */	li r27, 0
@@ -244,7 +244,7 @@ lbl_8070B5C4:
 lbl_8070B5D8:
 /* 8070B5D8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070B5DC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070B5E0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070B5E0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070B5E4  7C 04 00 D0 */	neg r0, r4
 /* 8070B5E8  7C 04 07 34 */	extsh r4, r0
 /* 8070B5EC  4B 90 0D F0 */	b mDoMtx_YrotS__FPA4_fs

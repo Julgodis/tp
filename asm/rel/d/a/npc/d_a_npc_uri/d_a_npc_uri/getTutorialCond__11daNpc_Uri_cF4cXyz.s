@@ -31,7 +31,7 @@ lbl_80B28910:
 /* 80B28984  C0 01 00 9C */	lfs f0, 0x9c(r1)
 /* 80B28988  D0 01 00 C0 */	stfs f0, 0xc0(r1)
 /* 80B2898C  D0 21 00 40 */	stfs f1, 0x40(r1)
-/* 80B28990  C0 3F 00 D8 */	lfs f1, 0xd8(r31)	/* effective address: 80B2CEEC */
+/* 80B28990  C0 3F 00 D8 */	lfs f1, 0xd8(r31)
 /* 80B28994  D0 21 00 44 */	stfs f1, 0x44(r1)
 /* 80B28998  D0 01 00 48 */	stfs f0, 0x48(r1)
 /* 80B2899C  C0 5B 00 08 */	lfs f2, 8(r27)

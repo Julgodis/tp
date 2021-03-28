@@ -111,9 +111,6 @@ struct dBgS_Acch {
 
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -143,11 +140,11 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-static void daObjZraRock_Draw(daObjZraRock_c*); // 2
-static void daObjZraRock_Execute(daObjZraRock_c*); // 2
-static bool daObjZraRock_IsDelete(daObjZraRock_c*); // 2
-static void daObjZraRock_Delete(daObjZraRock_c*); // 2
-static void daObjZraRock_create(fopAc_ac_c*); // 2
+void daObjZraRock_Draw(daObjZraRock_c*); // 2
+void daObjZraRock_Execute(daObjZraRock_c*); // 2
+bool daObjZraRock_IsDelete(daObjZraRock_c*); // 2
+void daObjZraRock_Delete(daObjZraRock_c*); // 2
+void daObjZraRock_create(fopAc_ac_c*); // 2
 
 extern "C" void setAttnPos__14daObjZraRock_cFv(); // 1
 extern "C" void setBaseMtx__14daObjZraRock_cFv(); // 1
@@ -161,14 +158,15 @@ extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" void Execute__14daObjZraRock_cFPPA3_A4_f(); // 1
 extern "C" void Draw__14daObjZraRock_cFv(); // 1
 extern "C" void Delete__14daObjZraRock_cFv(); // 1
-extern "C" static void daObjZraRock_Draw__FP14daObjZraRock_c(); // 1
-extern "C" static void daObjZraRock_Execute__FP14daObjZraRock_c(); // 1
-extern "C" static bool daObjZraRock_IsDelete__FP14daObjZraRock_c(); // 1
-extern "C" static void daObjZraRock_Delete__FP14daObjZraRock_c(); // 1
-extern "C" static void daObjZraRock_create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80D455AC(); // 1
-extern "C" static void func_80D455B4(); // 1
+extern "C" void daObjZraRock_Draw__FP14daObjZraRock_c(); // 1
+extern "C" void daObjZraRock_Execute__FP14daObjZraRock_c(); // 1
+extern "C" bool daObjZraRock_IsDelete__FP14daObjZraRock_c(); // 1
+extern "C" void daObjZraRock_Delete__FP14daObjZraRock_c(); // 1
+extern "C" void daObjZraRock_create__FP10fopAc_ac_c(); // 1
+extern "C" void func_80D455AC(); // 1
+extern "C" void func_80D455B4(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjZraRock_Method[8];
 extern "C" extern void* g_profile_Obj_ZraRock[12];
 
 // 
@@ -209,9 +207,6 @@ extern "C" void __ct__9dBgS_AcchFv(); // 1
 extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
 extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -229,18 +224,10 @@ extern "C" void PSMTXMultVec(); // 1
 extern "C" void PSVECAdd(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -302,7 +289,7 @@ asm void daObjZraRock_c::setRoomNo() {
 #pragma pop
 
 
-/* 80D44E68-80D44FB0 0148+00 s=1 e=0 z=0  None .text      Create__14daObjZraRock_cFv                                   */
+/* 80D44E68-80D44FB0 0148+00 s=0 e=0 z=0  None .text      Create__14daObjZraRock_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,18 +304,10 @@ asm void daObjZraRock_c::Create() {
 /* 80D455D0-80D455D4 0004+00 s=1 e=0 z=0  None .rodata    @3903                                                        */
 SECTION_RODATA static u32 const lit_3903 = 0x3F800000;
 
-/* 80D455D4-80D455ED 0019+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
-#pragma push
-#pragma force_active on
-#pragma section ".dead"
-SECTION_DEAD char const* const stringBase_80D455D4 = "H_ZraRock";
-SECTION_DEAD char const* const stringBase_80D455DE = "H_ZoraRock.dzb";
-#pragma pop
-
 /* 80D455F0-80D455F4 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80D44FB0-80D450E0 0130+00 s=1 e=0 z=0  None .text      CreateHeap__14daObjZraRock_cFv                               */
+/* 80D44FB0-80D450E0 0130+00 s=0 e=0 z=0  None .text      CreateHeap__14daObjZraRock_cFv                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -340,66 +319,74 @@ asm void daObjZraRock_c::CreateHeap() {
 
 
 /* ############################################################################################## */
-/* 80D455F4-80D45614 0020+00 s=1 e=0 z=0  None .data      l_daObjZraRock_Method                                        */
-SECTION_DATA static void* l_daObjZraRock_Method[8] = {
-	/* 0    */ (void*)daObjZraRock_create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjZraRock_Delete__FP14daObjZraRock_c,
-	/* 2    */ (void*)daObjZraRock_Execute__FP14daObjZraRock_c,
-	/* 3    */ (void*)daObjZraRock_IsDelete__FP14daObjZraRock_c,
-	/* 4    */ (void*)daObjZraRock_Draw__FP14daObjZraRock_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80D455D4-80D455ED 0019+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
+#pragma push
+#pragma force_active on
+#pragma section ".dead"
+SECTION_DEAD char const* const stringBase_80D455D4 = "H_ZraRock";
+SECTION_DEAD char const* const stringBase_80D455DE = "H_ZoraRock.dzb";
+#pragma pop
+
+/* 80D455F4-80D45614 0020+00 s=0 e=0 z=0  None .data      l_daObjZraRock_Method                                        */
+SECTION_DATA void* l_daObjZraRock_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80D45614-80D45644 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_ZraRock                                        */
+/* 80D45614-80D45644 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_ZraRock                                        */
 SECTION_DATA void* g_profile_Obj_ZraRock[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00880000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000820,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02600000,
-	/* 9    */ (void*)&l_daObjZraRock_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00880000,
+	(void*)NULL,
+	(void*)0x00000820,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02600000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x000E0000,
 };
 
 /* 80D45644-80D45668 0024+00 s=2 e=0 z=0  None .data      __vt__12dBgS_ObjAcch                                         */
 SECTION_DATA static void* __vt__12dBgS_ObjAcch[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12dBgS_ObjAcchFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)func_80D455B4,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-	/* 8    */ (void*)func_80D455AC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D45668-80D45674 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D45674-80D4569C 0028+00 s=1 e=0 z=0  None .data      __vt__14daObjZraRock_c                                       */
 SECTION_DATA static void* __vt__14daObjZraRock_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__14daObjZraRock_cFv,
-	/* 3    */ (void*)Create__14daObjZraRock_cFv,
-	/* 4    */ (void*)Execute__14daObjZraRock_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__14daObjZraRock_cFv,
-	/* 6    */ (void*)Delete__14daObjZraRock_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80D450E0-80D45264 0184+00 s=1 e=0 z=0  None .text      create__14daObjZraRock_cFv                                   */
@@ -413,7 +400,7 @@ asm void daObjZraRock_c::create() {
 #pragma pop
 
 
-/* 80D45264-80D452D4 0070+00 s=3 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
+/* 80D45264-80D452D4 0070+00 s=2 e=0 z=0  None .text      __dt__12dBgS_ObjAcchFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -424,7 +411,7 @@ asm dBgS_ObjAcch::~dBgS_ObjAcch() {
 #pragma pop
 
 
-/* 80D452D4-80D4531C 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80D452D4-80D4531C 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -435,7 +422,7 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80D4531C-80D45374 0058+00 s=1 e=0 z=0  None .text      Execute__14daObjZraRock_cFPPA3_A4_f                          */
+/* 80D4531C-80D45374 0058+00 s=0 e=0 z=0  None .text      Execute__14daObjZraRock_cFPPA3_A4_f                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -446,7 +433,7 @@ asm void daObjZraRock_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80D45374-80D454AC 0138+00 s=1 e=0 z=0  None .text      Draw__14daObjZraRock_cFv                                     */
+/* 80D45374-80D454AC 0138+00 s=0 e=0 z=0  None .text      Draw__14daObjZraRock_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -457,7 +444,7 @@ asm void daObjZraRock_c::Draw() {
 #pragma pop
 
 
-/* 80D454AC-80D45518 006C+00 s=1 e=0 z=0  None .text      Delete__14daObjZraRock_cFv                                   */
+/* 80D454AC-80D45518 006C+00 s=0 e=0 z=0  None .text      Delete__14daObjZraRock_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -468,72 +455,72 @@ asm void daObjZraRock_c::Delete() {
 #pragma pop
 
 
-/* 80D45518-80D45544 002C+00 s=1 e=0 z=0  None .text      daObjZraRock_Draw__FP14daObjZraRock_c                        */
+/* 80D45518-80D45544 002C+00 s=0 e=0 z=0  None .text      daObjZraRock_Draw__FP14daObjZraRock_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZraRock_Draw(daObjZraRock_c* param_0) {
+asm void daObjZraRock_Draw(daObjZraRock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Draw__FP14daObjZraRock_c.s"
 }
 #pragma pop
 
 
-/* 80D45544-80D45564 0020+00 s=1 e=0 z=0  None .text      daObjZraRock_Execute__FP14daObjZraRock_c                     */
+/* 80D45544-80D45564 0020+00 s=0 e=0 z=0  None .text      daObjZraRock_Execute__FP14daObjZraRock_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZraRock_Execute(daObjZraRock_c* param_0) {
+asm void daObjZraRock_Execute(daObjZraRock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Execute__FP14daObjZraRock_c.s"
 }
 #pragma pop
 
 
-/* 80D45564-80D4556C 0008+00 s=1 e=0 z=0  None .text      daObjZraRock_IsDelete__FP14daObjZraRock_c                    */
-static bool daObjZraRock_IsDelete(daObjZraRock_c* param_0) {
+/* 80D45564-80D4556C 0008+00 s=0 e=0 z=0  None .text      daObjZraRock_IsDelete__FP14daObjZraRock_c                    */
+bool daObjZraRock_IsDelete(daObjZraRock_c* param_0) {
 	return true;
 }
 
 
-/* 80D4556C-80D4558C 0020+00 s=1 e=0 z=0  None .text      daObjZraRock_Delete__FP14daObjZraRock_c                      */
+/* 80D4556C-80D4558C 0020+00 s=0 e=0 z=0  None .text      daObjZraRock_Delete__FP14daObjZraRock_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZraRock_Delete(daObjZraRock_c* param_0) {
+asm void daObjZraRock_Delete(daObjZraRock_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_Delete__FP14daObjZraRock_c.s"
 }
 #pragma pop
 
 
-/* 80D4558C-80D455AC 0020+00 s=1 e=0 z=0  None .text      daObjZraRock_create__FP10fopAc_ac_c                          */
+/* 80D4558C-80D455AC 0020+00 s=0 e=0 z=0  None .text      daObjZraRock_create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjZraRock_create(fopAc_ac_c* param_0) {
+asm void daObjZraRock_create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/daObjZraRock_create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80D455AC-80D455B4 0008+00 s=1 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D455AC-80D455B4 0008+00 s=0 e=0 z=0  None .text      @36@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80D455AC() {
+extern "C" asm void func_80D455AC() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D455AC.s"
 }
 #pragma pop
 
 
-/* 80D455B4-80D455BC 0008+00 s=1 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
+/* 80D455B4-80D455BC 0008+00 s=0 e=0 z=0  None .text      @20@__dt__12dBgS_ObjAcchFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-extern "C" asm static void func_80D455B4() {
+extern "C" asm void func_80D455B4() {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_zra_rock/d_a_obj_zra_rock/func_80D455B4.s"
 }

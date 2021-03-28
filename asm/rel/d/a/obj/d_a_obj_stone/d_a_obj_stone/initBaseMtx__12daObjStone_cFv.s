@@ -5,20 +5,20 @@ lbl_80CE93C4:
 /* 80CE93D0  3C 80 80 43 */	lis r4, Zero__4cXyz@ha
 /* 80CE93D4  C4 04 0C F4 */	lfsu f0, Zero__4cXyz@l(r4)
 /* 80CE93D8  D0 03 09 10 */	stfs f0, 0x910(r3)
-/* 80CE93DC  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 80430004 */
+/* 80CE93DC  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80CE93E0  D0 03 09 14 */	stfs f0, 0x914(r3)
-/* 80CE93E4  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 80430008 */
+/* 80CE93E4  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80CE93E8  D0 03 09 18 */	stfs f0, 0x918(r3)
 /* 80CE93EC  38 00 00 00 */	li r0, 0
 /* 80CE93F0  B0 03 09 1C */	sth r0, 0x91c(r3)
 /* 80CE93F4  3C 80 80 3A */	lis r4, ZeroQuat@ha
 /* 80CE93F8  C4 04 72 40 */	lfsu f0, ZeroQuat@l(r4)
 /* 80CE93FC  D0 03 09 30 */	stfs f0, 0x930(r3)
-/* 80CE9400  C0 04 00 04 */	lfs f0, 4(r4)	/* effective address: 803A0004 */
+/* 80CE9400  C0 04 00 04 */	lfs f0, 4(r4)
 /* 80CE9404  D0 03 09 34 */	stfs f0, 0x934(r3)
-/* 80CE9408  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 803A0008 */
+/* 80CE9408  C0 04 00 08 */	lfs f0, 8(r4)
 /* 80CE940C  D0 03 09 38 */	stfs f0, 0x938(r3)
-/* 80CE9410  C0 04 00 0C */	lfs f0, 0xc(r4)	/* effective address: 803A000C */
+/* 80CE9410  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 80CE9414  D0 03 09 3C */	stfs f0, 0x93c(r3)
 /* 80CE9418  C0 03 09 30 */	lfs f0, 0x930(r3)
 /* 80CE941C  D0 03 09 20 */	stfs f0, 0x920(r3)

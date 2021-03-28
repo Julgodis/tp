@@ -53,8 +53,8 @@ lbl_80736594:
 /* 807365D8  38 9E 08 84 */	addi r4, r30, 0x884
 /* 807365DC  4B 8E 40 F0 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 807365E0  38 7E 06 AC */	addi r3, r30, 0x6ac
-/* 807365E4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807365E8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 807365E4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807365E8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 807365EC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 807365F0  4B 94 04 BC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 807365F4  38 7E 05 BC */	addi r3, r30, 0x5bc

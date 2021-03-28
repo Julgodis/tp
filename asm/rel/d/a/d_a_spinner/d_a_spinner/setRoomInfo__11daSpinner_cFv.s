@@ -10,8 +10,8 @@ lbl_804D21E0:
 /* 804D2200  C0 1D 06 E4 */	lfs f0, 0x6e4(r29)
 /* 804D2204  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 804D2208  41 82 00 34 */	beq lbl_804D223C
-/* 804D220C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804D2210  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804D220C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804D2210  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804D2214  3B E3 0F 38 */	addi r31, r3, 0xf38
 /* 804D2218  7F E3 FB 78 */	mr r3, r31
 /* 804D221C  38 9D 07 3C */	addi r4, r29, 0x73c

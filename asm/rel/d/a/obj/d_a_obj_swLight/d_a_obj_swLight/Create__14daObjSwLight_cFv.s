@@ -7,8 +7,8 @@ lbl_80CF7038:
 /* 80CF704C  7C 7F 1B 78 */	mr r31, r3
 /* 80CF7050  3C 60 80 D0 */	lis r3, l_sph_src_at@ha
 /* 80CF7054  3B 83 83 A0 */	addi r28, r3, l_sph_src_at@l
-/* 80CF7058  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF705C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF7058  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF705C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF7060  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CF7064  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80CF7068  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -67,11 +67,11 @@ lbl_80CF70E4:
 /* 80CF7130  7F E3 FB 78 */	mr r3, r31
 /* 80CF7134  3C 80 80 D0 */	lis r4, l_cull_box@ha
 /* 80CF7138  C4 24 84 8C */	lfsu f1, l_cull_box@l(r4)
-/* 80CF713C  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80D00004 */
-/* 80CF7140  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80D00008 */
-/* 80CF7144  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80D0000C */
-/* 80CF7148  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80D00010 */
-/* 80CF714C  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80D00014 */
+/* 80CF713C  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80CF7140  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80CF7144  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80CF7148  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80CF714C  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80CF7150  4B 32 33 F8 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CF7154  3C 60 00 01 */	lis r3, 0x0001 /* 0x0000FFFF@ha */
 /* 80CF7158  38 03 FF FF */	addi r0, r3, 0xFFFF /* 0x0000FFFF@l */

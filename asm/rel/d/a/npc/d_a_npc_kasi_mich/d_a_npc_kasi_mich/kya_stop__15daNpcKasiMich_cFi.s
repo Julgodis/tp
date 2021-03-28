@@ -17,11 +17,11 @@ lbl_80A28E54:
 /* 80A28E5C  41 82 00 30 */	beq lbl_80A28E8C
 /* 80A28E60  3C 80 80 A3 */	lis r4, lit_5201@ha
 /* 80A28E64  38 A4 A6 30 */	addi r5, r4, lit_5201@l
-/* 80A28E68  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A2A630 */
-/* 80A28E6C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A2A634 */
+/* 80A28E68  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A28E6C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A28E70  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A28E74  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A28E78  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A2A638 */
+/* 80A28E78  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A28E7C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A28E80  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A28E84  4B FF EC 01 */	bl setAction__15daNpcKasiMich_cFM15daNpcKasiMich_cFPCvPvi_i
@@ -44,11 +44,11 @@ lbl_80A28E98:
 lbl_80A28EC0:
 /* 80A28EC0  3C 80 80 A3 */	lis r4, lit_5209@ha
 /* 80A28EC4  38 A4 A6 3C */	addi r5, r4, lit_5209@l
-/* 80A28EC8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A2A63C */
-/* 80A28ECC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A2A640 */
+/* 80A28EC8  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A28ECC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A28ED0  90 81 00 08 */	stw r4, 8(r1)
 /* 80A28ED4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A28ED8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A2A644 */
+/* 80A28ED8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A28EDC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A28EE0  38 81 00 08 */	addi r4, r1, 8
 /* 80A28EE4  4B FF EB A1 */	bl setAction__15daNpcKasiMich_cFM15daNpcKasiMich_cFPCvPvi_i

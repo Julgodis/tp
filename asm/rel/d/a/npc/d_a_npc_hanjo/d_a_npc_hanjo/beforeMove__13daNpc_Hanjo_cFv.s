@@ -51,8 +51,8 @@ lbl_809FA930:
 lbl_809FA938:
 /* 809FA938  3B A0 00 00 */	li r29, 0
 /* 809FA93C  3B 60 00 00 */	li r27, 0
-/* 809FA940  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809FA944  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809FA940  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809FA944  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809FA948  3B E3 0F 38 */	addi r31, r3, 0xf38
 lbl_809FA94C:
 /* 809FA94C  7F DC DA 14 */	add r30, r28, r27

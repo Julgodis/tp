@@ -9,10 +9,10 @@ lbl_80BAAD30:
 /* 80BAAD4C  7C 7D 1B 78 */	mr r29, r3
 /* 80BAAD50  3C 60 80 BB */	lis r3, lit_3774@ha
 /* 80BAAD54  3B E3 C9 70 */	addi r31, r3, lit_3774@l
-/* 80BAAD58  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BAAD5C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BAAD60  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80BAAD64  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80BAAD58  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BAAD5C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BAAD60  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80BAAD64  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80BAAD68  81 8C 01 C8 */	lwz r12, 0x1c8(r12)
 /* 80BAAD6C  7D 89 03 A6 */	mtctr r12
 /* 80BAAD70  4E 80 04 21 */	bctrl 
@@ -23,8 +23,8 @@ lbl_80BAAD30:
 /* 80BAAD84  3C 60 80 BB */	lis r3, stringBase0@ha
 /* 80BAAD88  38 63 CA 64 */	addi r3, r3, stringBase0@l
 /* 80BAAD8C  38 80 00 06 */	li r4, 6
-/* 80BAAD90  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BAAD94  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BAAD90  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BAAD94  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BAAD98  3C A5 00 02 */	addis r5, r5, 2
 /* 80BAAD9C  38 C0 00 80 */	li r6, 0x80
 /* 80BAADA0  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -319,11 +319,11 @@ lbl_80BAB174:
 lbl_80BAB1BC:
 /* 80BAB1BC  3C 60 80 BB */	lis r3, lit_4246@ha
 /* 80BAB1C0  38 83 CB 18 */	addi r4, r3, lit_4246@l
-/* 80BAB1C4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80BACB18 */
-/* 80BAB1C8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80BACB1C */
+/* 80BAB1C4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80BAB1C8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80BAB1CC  90 61 00 44 */	stw r3, 0x44(r1)
 /* 80BAB1D0  90 01 00 48 */	stw r0, 0x48(r1)
-/* 80BAB1D4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80BACB20 */
+/* 80BAB1D4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80BAB1D8  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 80BAB1DC  7F A3 EB 78 */	mr r3, r29
 /* 80BAB1E0  38 81 00 44 */	addi r4, r1, 0x44

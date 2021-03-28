@@ -193,11 +193,11 @@ asm static void fpcNd_Create(process_node_class* param_0) {
 /* ############################################################################################## */
 /* 803A3A20-803A3A38 0014+04 s=0 e=9 z=0  None .data      g_fpcNd_Method                                               */
 SECTION_DATA void* g_fpcNd_Method[5 + 1 /* padding */] = {
-	/* 0    */ (void*)fpcNd_Create__FP18process_node_class,
-	/* 1    */ (void*)fpcNd_Delete__FP18process_node_class,
-	/* 2    */ (void*)fpcNd_Execute__FP18process_node_class,
-	/* 3    */ (void*)fpcNd_IsDelete__FP18process_node_class,
-	/* 4    */ (void*)fpcNd_Draw__FP18process_node_class,
+	(void*)fpcNd_Create__FP18process_node_class,
+	(void*)fpcNd_Delete__FP18process_node_class,
+	(void*)fpcNd_Execute__FP18process_node_class,
+	(void*)fpcNd_IsDelete__FP18process_node_class,
+	(void*)fpcNd_Draw__FP18process_node_class,
 	/* padding */
 	NULL,
 };

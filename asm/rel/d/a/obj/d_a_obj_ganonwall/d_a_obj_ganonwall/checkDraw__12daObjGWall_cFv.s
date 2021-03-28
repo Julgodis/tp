@@ -7,8 +7,8 @@ lbl_80BF50CC:
 /* 80BF50E0  A0 03 05 7A */	lhz r0, 0x57a(r3)
 /* 80BF50E4  28 00 03 FF */	cmplwi r0, 0x3ff
 /* 80BF50E8  41 82 00 2C */	beq lbl_80BF5114
-/* 80BF50EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF50F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF50EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF50F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF50F4  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80BF50F8  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 80BF50FC  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
@@ -21,8 +21,8 @@ lbl_80BF5114:
 /* 80BF5114  A0 1F 05 78 */	lhz r0, 0x578(r31)
 /* 80BF5118  28 00 03 FF */	cmplwi r0, 0x3ff
 /* 80BF511C  41 82 00 34 */	beq lbl_80BF5150
-/* 80BF5120  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF5124  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF5120  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF5124  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF5128  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80BF512C  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 80BF5130  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha

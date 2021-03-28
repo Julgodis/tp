@@ -6,7 +6,7 @@ lbl_80D16560:
 /* 80D16570  38 E4 78 58 */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80D16574  3C 80 80 D1 */	lis r4, struct_80D179FC+0x1@ha
 /* 80D16578  38 C4 79 FD */	addi r6, r4, struct_80D179FC+0x1@l
-/* 80D1657C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80D179FD */
+/* 80D1657C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80D16580  7C 00 07 75 */	extsb. r0, r0
 /* 80D16584  40 82 00 70 */	bne lbl_80D165F4
 /* 80D16588  80 87 00 34 */	lwz r4, 0x34(r7)

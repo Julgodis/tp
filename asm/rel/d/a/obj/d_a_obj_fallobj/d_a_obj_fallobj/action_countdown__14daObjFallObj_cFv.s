@@ -7,9 +7,9 @@ lbl_80BE43E4:
 /* 80BE43F8  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 80BE43FC  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80BE4400  7C 7E 1B 78 */	mr r30, r3
-/* 80BE4404  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BE4408  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BE440C  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BE4404  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BE4408  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BE440C  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 80BE4410  4B FF F7 99 */	bl getFallTime__14daObjFallObj_cFv
 /* 80BE4414  7C 60 07 34 */	extsh r0, r3
 /* 80BE4418  3C 60 80 BE */	lis r3, lit_3930@ha

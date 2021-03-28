@@ -20,7 +20,7 @@ lbl_80797274:
 /* 807972BC  4B 87 52 10 */	b mDoMtx_ZrotM__FPA4_fs
 /* 807972C0  3C 60 80 7A */	lis r3, l_HIO@ha
 /* 807972C4  38 63 89 CC */	addi r3, r3, l_HIO@l
-/* 807972C8  C0 23 00 10 */	lfs f1, 0x10(r3)	/* effective address: 807989DC */
+/* 807972C8  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 807972CC  FC 40 08 90 */	fmr f2, f1
 /* 807972D0  FC 60 08 90 */	fmr f3, f1
 /* 807972D4  4B 87 5B 64 */	b scaleM__14mDoMtx_stack_cFfff

@@ -34,7 +34,7 @@ lbl_80C50AD4:
 /* 80C50AD4  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80C50AD8  3C 80 80 C5 */	lis r4, l_arcName@ha
 /* 80C50ADC  38 84 0D C4 */	addi r4, r4, l_arcName@l
-/* 80C50AE0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C50DC4 */
+/* 80C50AE0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C50AE4  4B 3D C3 D8 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C50AE8  7C 7F 1B 78 */	mr r31, r3
 /* 80C50AEC  2C 1F 00 04 */	cmpwi r31, 4

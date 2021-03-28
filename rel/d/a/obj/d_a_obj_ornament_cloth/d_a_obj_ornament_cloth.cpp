@@ -96,11 +96,11 @@ struct dScnKy_env_light_c {
 
 static void nodeCallBack(J3DJoint*, int); // 2
 static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjOnCloth_Draw(daObjOnCloth_c*); // 2
-static void daObjOnCloth_Execute(daObjOnCloth_c*); // 2
-static bool daObjOnCloth_IsDelete(daObjOnCloth_c*); // 2
-static void daObjOnCloth_Delete(daObjOnCloth_c*); // 2
-static void daObjOnCloth_Create(fopAc_ac_c*); // 2
+void daObjOnCloth_Draw(daObjOnCloth_c*); // 2
+void daObjOnCloth_Execute(daObjOnCloth_c*); // 2
+bool daObjOnCloth_IsDelete(daObjOnCloth_c*); // 2
+void daObjOnCloth_Delete(daObjOnCloth_c*); // 2
+void daObjOnCloth_Create(fopAc_ac_c*); // 2
 
 extern "C" void create_init__14daObjOnCloth_cFv(); // 1
 extern "C" void initBaseMtx__14daObjOnCloth_cFv(); // 1
@@ -111,18 +111,15 @@ extern "C" void checkPlayerMove__14daObjOnCloth_cFv(); // 1
 extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
 extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daObjOnCloth_Draw__FP14daObjOnCloth_c(); // 1
-extern "C" static void daObjOnCloth_Execute__FP14daObjOnCloth_c(); // 1
-extern "C" static bool daObjOnCloth_IsDelete__FP14daObjOnCloth_c(); // 1
-extern "C" static void daObjOnCloth_Delete__FP14daObjOnCloth_c(); // 1
+extern "C" void daObjOnCloth_Draw__FP14daObjOnCloth_c(); // 1
+extern "C" void daObjOnCloth_Execute__FP14daObjOnCloth_c(); // 1
+extern "C" bool daObjOnCloth_IsDelete__FP14daObjOnCloth_c(); // 1
+extern "C" void daObjOnCloth_Delete__FP14daObjOnCloth_c(); // 1
 extern "C" void __dt__12ClothJoint_cFv(); // 1
-extern "C" static void daObjOnCloth_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObjOnCloth_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __ct__12ClothJoint_cFv(); // 1
-extern "C" extern u8 const lit_3678[8];
-extern "C" extern u8 const lit_3785[8];
-extern "C" extern u8 const lit_3786[8];
-extern "C" extern u8 const lit_3787[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObjOnCloth_Method[8];
 extern "C" extern void* g_profile_Obj_OnCloth[12];
 
 // 
@@ -190,22 +187,12 @@ extern "C" void _restgpr_22(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_28(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B00[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 mCurrentMtx__6J3DSys[12];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 
 // 
@@ -238,6 +225,11 @@ SECTION_RODATA static u32 const lit_3675 = 0xBF800000;
 /* 80595CF8-80595CFC 0004+00 s=4 e=0 z=0  None .rodata    @3676                                                        */
 SECTION_RODATA static u8 const lit_3676[4] = {
 	0x00, 0x00, 0x00, 0x00,
+};
+
+/* 80595CFC-80595D04 0008+00 s=1 e=0 z=0  None .rodata    @3678                                                        */
+SECTION_RODATA static u8 const lit_3678[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
 /* 80595038-80595158 0120+00 s=1 e=0 z=0  None .text      create_init__14daObjOnCloth_cFv                              */
@@ -274,23 +266,18 @@ asm void daObjOnCloth_c::setBaseMtx() {
 
 
 /* ############################################################################################## */
-/* 80595CFC-80595D04 0008+00 s=0 e=0 z=0  None .rodata    @3678                                                        */
-SECTION_RODATA u8 const lit_3678[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
-/* 80595D04-80595D0C 0008+00 s=0 e=0 z=0  None .rodata    @3785                                                        */
-SECTION_RODATA u8 const lit_3785[8] = {
+/* 80595D04-80595D0C 0008+00 s=1 e=0 z=0  None .rodata    @3785                                                        */
+SECTION_RODATA static u8 const lit_3785[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80595D0C-80595D14 0008+00 s=0 e=0 z=0  None .rodata    @3786                                                        */
-SECTION_RODATA u8 const lit_3786[8] = {
+/* 80595D0C-80595D14 0008+00 s=1 e=0 z=0  None .rodata    @3786                                                        */
+SECTION_RODATA static u8 const lit_3786[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80595D14-80595D1C 0008+00 s=0 e=0 z=0  None .rodata    @3787                                                        */
-SECTION_RODATA u8 const lit_3787[8] = {
+/* 80595D14-80595D1C 0008+00 s=1 e=0 z=0  None .rodata    @3787                                                        */
+SECTION_RODATA static u8 const lit_3787[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -317,6 +304,11 @@ SECTION_RODATA static u32 const lit_3832[1 + 1 /* padding */] = {
 	0x40800000,
 	/* padding */
 	0x00000000,
+};
+
+/* 80595D2C-80595D34 0008+00 s=2 e=0 z=0  None .rodata    @3834                                                        */
+SECTION_RODATA static u8 const lit_3834[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
 /* 805954B0-80595638 0188+00 s=1 e=0 z=0  None .text      calcJointAngle__14daObjOnCloth_cFv                           */
@@ -353,15 +345,10 @@ asm static void nodeCallBack(J3DJoint* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80595D2C-80595D34 0008+00 s=1 e=0 z=0  None .rodata    @3834                                                        */
-SECTION_RODATA static u8 const lit_3834[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80595D34-80595D38 0004+00 s=1 e=0 z=0  None .rodata    @3973                                                        */
 SECTION_RODATA static u32 const lit_3973 = 0x3F800000;
 
-/* 80595D38-80595D5E 0026+00 s=2 e=0 z=0  None .rodata    @stringBase0                                                 */
+/* 80595D38-80595D5E 0026+00 s=1 e=0 z=0  None .rodata    @stringBase0                                                 */
 #pragma push
 #pragma force_active on
 #pragma section ".dead"
@@ -371,41 +358,41 @@ SECTION_DEAD char const* const stringBase_80595D50 = "J_Necktie.btk";
 #pragma pop
 
 /* 80595D60-80595D64 0004+00 s=3 e=0 z=0  None .data      l_arcName                                                    */
-SECTION_DATA static void* l_arcName = (void*)&stringBase0;
+SECTION_DATA static void* l_arcName = (void*)NULL;
 
-/* 80595D64-80595D84 0020+00 s=1 e=0 z=0  None .data      l_daObjOnCloth_Method                                        */
-SECTION_DATA static void* l_daObjOnCloth_Method[8] = {
-	/* 0    */ (void*)daObjOnCloth_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObjOnCloth_Delete__FP14daObjOnCloth_c,
-	/* 2    */ (void*)daObjOnCloth_Execute__FP14daObjOnCloth_c,
-	/* 3    */ (void*)daObjOnCloth_IsDelete__FP14daObjOnCloth_c,
-	/* 4    */ (void*)daObjOnCloth_Draw__FP14daObjOnCloth_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80595D64-80595D84 0020+00 s=0 e=0 z=0  None .data      l_daObjOnCloth_Method                                        */
+SECTION_DATA void* l_daObjOnCloth_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80595D84-80595DB4 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_OnCloth                                        */
+/* 80595D84-80595DB4 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_OnCloth                                        */
 SECTION_DATA void* g_profile_Obj_OnCloth[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01510000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000006C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00210000,
-	/* 9    */ (void*)&l_daObjOnCloth_Method,
-	/* 10   */ (void*)0x00040180,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01510000,
+	(void*)NULL,
+	(void*)0x000006C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00210000,
+	(void*)NULL,
+	(void*)0x00040180,
+	(void*)0x000E0000,
 };
 
 /* 80595DB4-80595DC0 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80595850-805959E8 0198+00 s=1 e=0 z=0  None .text      createSolidHeap__FP10fopAc_ac_c                              */
@@ -419,7 +406,7 @@ asm static void createSolidHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 805959E8-80595A30 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 805959E8-80595A30 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -430,39 +417,39 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80595A30-80595AEC 00BC+00 s=1 e=0 z=0  None .text      daObjOnCloth_Draw__FP14daObjOnCloth_c                        */
+/* 80595A30-80595AEC 00BC+00 s=0 e=0 z=0  None .text      daObjOnCloth_Draw__FP14daObjOnCloth_c                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjOnCloth_Draw(daObjOnCloth_c* param_0) {
+asm void daObjOnCloth_Draw(daObjOnCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Draw__FP14daObjOnCloth_c.s"
 }
 #pragma pop
 
 
-/* 80595AEC-80595B2C 0040+00 s=1 e=0 z=0  None .text      daObjOnCloth_Execute__FP14daObjOnCloth_c                     */
+/* 80595AEC-80595B2C 0040+00 s=0 e=0 z=0  None .text      daObjOnCloth_Execute__FP14daObjOnCloth_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjOnCloth_Execute(daObjOnCloth_c* param_0) {
+asm void daObjOnCloth_Execute(daObjOnCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Execute__FP14daObjOnCloth_c.s"
 }
 #pragma pop
 
 
-/* 80595B2C-80595B34 0008+00 s=1 e=0 z=0  None .text      daObjOnCloth_IsDelete__FP14daObjOnCloth_c                    */
-static bool daObjOnCloth_IsDelete(daObjOnCloth_c* param_0) {
+/* 80595B2C-80595B34 0008+00 s=0 e=0 z=0  None .text      daObjOnCloth_IsDelete__FP14daObjOnCloth_c                    */
+bool daObjOnCloth_IsDelete(daObjOnCloth_c* param_0) {
 	return true;
 }
 
 
-/* 80595B34-80595B9C 0068+00 s=1 e=0 z=0  None .text      daObjOnCloth_Delete__FP14daObjOnCloth_c                      */
+/* 80595B34-80595B9C 0068+00 s=0 e=0 z=0  None .text      daObjOnCloth_Delete__FP14daObjOnCloth_c                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjOnCloth_Delete(daObjOnCloth_c* param_0) {
+asm void daObjOnCloth_Delete(daObjOnCloth_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Delete__FP14daObjOnCloth_c.s"
 }
@@ -480,11 +467,11 @@ asm ClothJoint_c::~ClothJoint_c() {
 #pragma pop
 
 
-/* 80595BD8-80595CA8 00D0+00 s=1 e=0 z=0  None .text      daObjOnCloth_Create__FP10fopAc_ac_c                          */
+/* 80595BD8-80595CA8 00D0+00 s=0 e=0 z=0  None .text      daObjOnCloth_Create__FP10fopAc_ac_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObjOnCloth_Create(fopAc_ac_c* param_0) {
+asm void daObjOnCloth_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_ornament_cloth/d_a_obj_ornament_cloth/daObjOnCloth_Create__FP10fopAc_ac_c.s"
 }

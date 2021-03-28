@@ -23,7 +23,7 @@ lbl_80C7ACA0:
 /* 80C7ACF4  38 9F 05 B0 */	addi r4, r31, 0x5b0
 /* 80C7ACF8  3C A0 80 C8 */	lis r5, l_HIO@ha
 /* 80C7ACFC  38 A5 CA 64 */	addi r5, r5, l_HIO@l
-/* 80C7AD00  C0 25 00 10 */	lfs f1, 0x10(r5)	/* effective address: 80C7CA74 */
+/* 80C7AD00  C0 25 00 10 */	lfs f1, 0x10(r5)
 /* 80C7AD04  38 A1 00 08 */	addi r5, r1, 8
 /* 80C7AD08  4B 5E D8 A8 */	b cM3d_InDivPos2__FPC3VecPC3VecfP3Vec
 /* 80C7AD0C  C0 01 00 08 */	lfs f0, 8(r1)

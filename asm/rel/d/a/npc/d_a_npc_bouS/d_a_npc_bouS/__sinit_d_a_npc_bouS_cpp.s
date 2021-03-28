@@ -10,10 +10,10 @@ lbl_80977AD0:
 /* 80977AF0  3B E3 87 A4 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80977AF4  3C 60 80 98 */	lis r3, lit_5753@ha
 /* 80977AF8  C0 03 87 54 */	lfs f0, lit_5753@l(r3)
-/* 80977AFC  D0 1E 00 4C */	stfs f0, 0x4c(r30)	/* effective address: 80978BC4 */
+/* 80977AFC  D0 1E 00 4C */	stfs f0, 0x4c(r30)
 /* 80977B00  38 7E 00 4C */	addi r3, r30, 0x4c
-/* 80977B04  D0 03 00 04 */	stfs f0, 4(r3)	/* effective address: 80978BC8 */
-/* 80977B08  D0 03 00 08 */	stfs f0, 8(r3)	/* effective address: 80978BCC */
+/* 80977B04  D0 03 00 04 */	stfs f0, 4(r3)
+/* 80977B08  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80977B0C  3C 80 80 97 */	lis r4, __dt__4cXyzFv@ha
 /* 80977B10  38 84 7D 54 */	addi r4, r4, __dt__4cXyzFv@l
 /* 80977B14  38 BE 00 40 */	addi r5, r30, 0x40
@@ -28,11 +28,11 @@ lbl_80977AD0:
 /* 80977B38  4B FF B9 A1 */	bl __register_global_object
 /* 80977B3C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80977B40  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80977B44  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80977B48  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80977B44  80 64 00 00 */	lwz r3, 0(r4)
+/* 80977B48  80 04 00 04 */	lwz r0, 4(r4)
 /* 80977B4C  90 7F 01 BC */	stw r3, 0x1bc(r31)
 /* 80977B50  90 1F 01 C0 */	stw r0, 0x1c0(r31)
-/* 80977B54  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80977B54  80 04 00 08 */	lwz r0, 8(r4)
 /* 80977B58  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 80977B5C  38 9F 01 BC */	addi r4, r31, 0x1bc
 /* 80977B60  80 7F 01 98 */	lwz r3, 0x198(r31)

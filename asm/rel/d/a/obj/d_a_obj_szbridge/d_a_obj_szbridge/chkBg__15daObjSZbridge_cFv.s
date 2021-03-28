@@ -37,8 +37,8 @@ lbl_80D04598:
 /* 80D04624  4B 56 37 04 */	b SetPos__11cBgS_GndChkFPC4cXyz
 /* 80D04628  80 1A 00 04 */	lwz r0, 4(r26)
 /* 80D0462C  90 01 00 70 */	stw r0, 0x70(r1)
-/* 80D04630  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D04634  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D04630  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D04634  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D04638  3B 63 0F 38 */	addi r27, r3, 0xf38
 /* 80D0463C  7F 63 DB 78 */	mr r3, r27
 /* 80D04640  38 81 00 68 */	addi r4, r1, 0x68

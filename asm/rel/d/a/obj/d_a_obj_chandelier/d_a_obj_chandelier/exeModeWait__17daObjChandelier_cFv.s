@@ -10,8 +10,8 @@ lbl_80BC82C0:
 /* 80BC82E0  48 00 02 3D */	bl exeModeHookSwg__17daObjChandelier_cFv
 /* 80BC82E4  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80BC82E8  54 04 E6 3E */	rlwinm r4, r0, 0x1c, 0x18, 0x1f
-/* 80BC82EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BC82F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BC82EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BC82F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BC82F4  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80BC82F8  7C 05 07 74 */	extsb r5, r0
 /* 80BC82FC  4B 46 D0 64 */	b isSwitch__10dSv_info_cCFii

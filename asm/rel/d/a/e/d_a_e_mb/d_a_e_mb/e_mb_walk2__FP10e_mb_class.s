@@ -169,7 +169,7 @@ lbl_807071D4:
 /* 807071F4  3C 60 80 71 */	lis r3, l_HIO@ha
 /* 807071F8  3B A3 8C 3C */	addi r29, r3, l_HIO@l
 /* 807071FC  C0 3F 00 6C */	lfs f1, 0x6c(r31)
-/* 80707200  C0 1D 00 18 */	lfs f0, 0x18(r29)	/* effective address: 80708C54 */
+/* 80707200  C0 1D 00 18 */	lfs f0, 0x18(r29)
 /* 80707204  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80707208  4B B6 07 4C */	b cM_rndF__Ff
 /* 8070720C  C0 1D 00 18 */	lfs f0, 0x18(r29)

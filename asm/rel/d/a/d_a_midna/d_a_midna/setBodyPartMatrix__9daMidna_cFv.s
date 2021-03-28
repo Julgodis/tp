@@ -161,19 +161,19 @@ lbl_804BE65C:
 /* 804BE6DC  4B B4 DA 88 */	b mDoMtx_XYZrotM__FPA4_fsss
 /* 804BE6E0  48 00 00 94 */	b lbl_804BE774
 lbl_804BE6E4:
-/* 804BE6E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804BE6E8  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 804BE6EC  80 7C 5D B4 */	lwz r3, 0x5db4(r28)	/* effective address: 8040BF74 */
+/* 804BE6E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BE6E8  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 804BE6EC  80 7C 5D B4 */	lwz r3, 0x5db4(r28)
 /* 804BE6F0  4B C7 AA EC */	b getWolfLockActorEnd__9daAlink_cFv
 /* 804BE6F4  28 03 00 00 */	cmplwi r3, 0
 /* 804BE6F8  41 82 00 7C */	beq lbl_804BE774
 /* 804BE6FC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 804BE700  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 804BE704  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 804BE704  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 804BE708  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 804BE70C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 804BE70C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 804BE710  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 804BE714  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 804BE714  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 804BE718  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 804BE71C  80 7C 5D B4 */	lwz r3, 0x5db4(r28)
 /* 804BE720  4B C7 AA BC */	b getWolfLockActorEnd__9daAlink_cFv
@@ -259,9 +259,9 @@ lbl_804BE7EC:
 /* 804BE84C  80 1F 08 98 */	lwz r0, 0x898(r31)
 /* 804BE850  54 00 06 73 */	rlwinm. r0, r0, 0, 0x19, 0x19
 /* 804BE854  40 82 00 18 */	bne lbl_804BE86C
-/* 804BE858  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804BE85C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804BE860  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
+/* 804BE858  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804BE85C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804BE860  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
 /* 804BE864  54 00 02 11 */	rlwinm. r0, r0, 0, 8, 8
 /* 804BE868  41 82 00 48 */	beq lbl_804BE8B0
 lbl_804BE86C:

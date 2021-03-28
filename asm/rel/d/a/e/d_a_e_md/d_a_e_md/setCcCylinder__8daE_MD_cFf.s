@@ -17,8 +17,8 @@ lbl_80708E70:
 /* 80708EAC  38 7F 0A 10 */	addi r3, r31, 0xa10
 /* 80708EB0  FC 20 F8 90 */	fmr f1, f31
 /* 80708EB4  4B B6 63 44 */	b SetH__8cM3dGCylFf
-/* 80708EB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80708EBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80708EB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80708EBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80708EC0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80708EC4  38 9F 08 EC */	addi r4, r31, 0x8ec
 /* 80708EC8  4B B5 BC E0 */	b Set__4cCcSFP8cCcD_Obj

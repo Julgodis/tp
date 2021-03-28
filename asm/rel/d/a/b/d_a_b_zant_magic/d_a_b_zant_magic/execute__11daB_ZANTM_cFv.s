@@ -20,8 +20,8 @@ lbl_8064FE94:
 /* 8064FEB0  38 9F 08 0C */	addi r4, r31, 0x80c
 /* 8064FEB4  4B 9C A8 18 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 8064FEB8  38 7F 06 34 */	addi r3, r31, 0x634
-/* 8064FEBC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8064FEC0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8064FEBC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8064FEC0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8064FEC4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8064FEC8  4B A2 6B E4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8064FECC  7F E3 FB 78 */	mr r3, r31

@@ -25,13 +25,13 @@ lbl_80976C00:
 /* 80976C5C  38 7F 07 E4 */	addi r3, r31, 0x7e4
 /* 80976C60  3C 80 80 98 */	lis r4, m__17daNpcBouS_Param_c@ha
 /* 80976C64  38 84 84 10 */	addi r4, r4, m__17daNpcBouS_Param_c@l
-/* 80976C68  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 8097842C */
+/* 80976C68  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 80976C6C  4B 6F F2 D4 */	b SetWallR__12dBgS_AcchCirFf
 /* 80976C70  3C 60 80 98 */	lis r3, m__17daNpcBouS_Param_c@ha
 /* 80976C74  38 63 84 10 */	addi r3, r3, m__17daNpcBouS_Param_c@l
-/* 80976C78  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80978428 */
+/* 80976C78  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80976C7C  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 80976C80  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80978414 */
+/* 80976C80  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80976C84  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 80976C88  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80976C8C  80 01 00 14 */	lwz r0, 0x14(r1)

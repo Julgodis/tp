@@ -129,8 +129,8 @@ lbl_80A6031C:
 /* 80A60400  90 1D 06 B8 */	stw r0, 0x6b8(r29)
 lbl_80A60404:
 /* 80A60404  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80A60408  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A6040C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80A60408  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A6040C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80A60410  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80A60414  4B 61 66 98 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80A60418  80 1D 07 68 */	lwz r0, 0x768(r29)

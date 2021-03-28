@@ -101,8 +101,8 @@ lbl_8083441C:
 /* 80834420  38 9F 08 8C */	addi r4, r31, 0x88c
 /* 80834424  4B 7E 62 A8 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 80834428  38 7F 06 B4 */	addi r3, r31, 0x6b4
-/* 8083442C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80834430  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8083442C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80834430  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80834434  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80834438  4B 84 26 74 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8083443C  88 1F 06 73 */	lbz r0, 0x673(r31)

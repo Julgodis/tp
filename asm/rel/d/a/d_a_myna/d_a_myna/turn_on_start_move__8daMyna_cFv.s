@@ -9,12 +9,12 @@ lbl_80947AA4:
 /* 80947AC0  3B C3 B1 B0 */	addi r30, r3, mCcDSph__8daMyna_c@l
 /* 80947AC4  3C 60 80 95 */	lis r3, daMyna_LightActor@ha
 /* 80947AC8  38 63 BA C0 */	addi r3, r3, daMyna_LightActor@l
-/* 80947ACC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8094BAC0 */
-/* 80947AD0  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 8094BF90 */
+/* 80947ACC  80 63 00 00 */	lwz r3, 0(r3)
+/* 80947AD0  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80947AD4  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80947AD8  C0 1F 04 D4 */	lfs f0, 0x4d4(r31)
 /* 80947ADC  D0 01 00 40 */	stfs f0, 0x40(r1)
-/* 80947AE0  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 8094BF98 */
+/* 80947AE0  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 80947AE4  D0 01 00 44 */	stfs f0, 0x44(r1)
 /* 80947AE8  38 61 00 18 */	addi r3, r1, 0x18
 /* 80947AEC  38 81 00 3C */	addi r4, r1, 0x3c
@@ -42,7 +42,7 @@ lbl_80947AA4:
 /* 80947B44  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 80947B48  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80947B4C  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80947B50  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 8094BA48 */
+/* 80947B50  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 80947B54  EC 02 00 B2 */	fmuls f0, f2, f2
 /* 80947B58  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80947B5C  D0 01 00 50 */	stfs f0, 0x50(r1)
@@ -136,7 +136,7 @@ lbl_80947C8C:
 lbl_80947C9C:
 /* 80947C9C  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 80947CA0  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 80947CA4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8094BA58 */
+/* 80947CA4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80947CA8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80947CAC  40 80 00 0C */	bge lbl_80947CB8
 /* 80947CB0  38 00 00 0C */	li r0, 0xc

@@ -35,7 +35,7 @@ lbl_8077E678:
 /* 8077E694  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 8077E698  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8077E69C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 8077E6A0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 8077E6A0  80 84 00 00 */	lwz r4, 0(r4)
 /* 8077E6A4  4B BC 7E 0C */	b PSMTXCopy
 /* 8077E6A8  3B A0 00 00 */	li r29, 0
 /* 8077E6AC  3B 60 00 00 */	li r27, 0
@@ -62,7 +62,7 @@ lbl_8077E6C4:
 /* 8077E6FC  40 80 00 5C */	bge lbl_8077E758
 /* 8077E700  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8077E704  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8077E708  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8077E708  80 63 00 00 */	lwz r3, 0(r3)
 /* 8077E70C  3C 80 80 78 */	lis r4, data_80781108@ha
 /* 8077E710  38 84 11 08 */	addi r4, r4, data_80781108@l
 /* 8077E714  7C 04 D2 AE */	lhax r0, r4, r26
@@ -85,7 +85,7 @@ lbl_8077E6C4:
 lbl_8077E758:
 /* 8077E758  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8077E75C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8077E760  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8077E760  80 63 00 00 */	lwz r3, 0(r3)
 /* 8077E764  3C 80 80 78 */	lis r4, data_80781108@ha
 /* 8077E768  38 84 11 08 */	addi r4, r4, data_80781108@l
 /* 8077E76C  7C 04 D2 AE */	lhax r0, r4, r26

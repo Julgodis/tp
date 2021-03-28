@@ -9,10 +9,10 @@ lbl_80B0FD18:
 /* 80B0FD34  41 82 00 98 */	beq lbl_80B0FDCC
 /* 80B0FD38  3C 80 80 B1 */	lis r4, l_arcName@ha
 /* 80B0FD3C  38 84 0A B8 */	addi r4, r4, l_arcName@l
-/* 80B0FD40  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B10AB8 */
+/* 80B0FD40  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B0FD44  3C A0 80 B1 */	lis r5, l_btkGetParamList@ha
 /* 80B0FD48  38 A5 0A A0 */	addi r5, r5, l_btkGetParamList@l
-/* 80B0FD4C  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80B10AA0 */
+/* 80B0FD4C  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80B0FD50  4B 64 2E 54 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 80B0FD54  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 80B0FD58  7C 03 00 40 */	cmplw r3, r0

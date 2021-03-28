@@ -43,7 +43,7 @@ lbl_80C3D680:
 lbl_80C3D6D0:
 /* 80C3D6D0  3C 60 80 C4 */	lis r3, l_HIO@ha
 /* 80C3D6D4  38 63 F2 94 */	addi r3, r3, l_HIO@l
-/* 80C3D6D8  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80C3F29C */
+/* 80C3D6D8  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80C3D6DC  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80C3D6E0  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80C3D6E4  EC 01 00 32 */	fmuls f0, f1, f0

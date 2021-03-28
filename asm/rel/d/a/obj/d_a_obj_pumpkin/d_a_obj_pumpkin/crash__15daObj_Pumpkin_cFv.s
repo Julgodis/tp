@@ -55,9 +55,9 @@ lbl_80CB7EF4:
 /* 80CB7FC8  38 A1 00 34 */	addi r5, r1, 0x34
 /* 80CB7FCC  3C C0 80 A2 */	lis r6, m__19daNpc_Jagar_Param_c@ha
 /* 80CB7FD0  38 C6 A3 30 */	addi r6, r6, m__19daNpc_Jagar_Param_c@l
-/* 80CB7FD4  C0 26 00 8C */	lfs f1, 0x8c(r6)	/* effective address: 80A1A3BC */
-/* 80CB7FD8  C0 46 00 90 */	lfs f2, 0x90(r6)	/* effective address: 80A1A3C0 */
-/* 80CB7FDC  C0 66 00 94 */	lfs f3, 0x94(r6)	/* effective address: 80A1A3C4 */
+/* 80CB7FD4  C0 26 00 8C */	lfs f1, 0x8c(r6)
+/* 80CB7FD8  C0 46 00 90 */	lfs f2, 0x90(r6)
+/* 80CB7FDC  C0 66 00 94 */	lfs f3, 0x94(r6)
 /* 80CB7FE0  38 C0 00 00 */	li r6, 0
 /* 80CB7FE4  4B 49 2D 0C */	b chkPointInArea__8daNpcT_cF4cXyz4cXyzfffs
 /* 80CB7FE8  2C 03 00 00 */	cmpwi r3, 0
@@ -77,7 +77,7 @@ lbl_80CB8004:
 /* 80CB801C  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80CB8020  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CB8024  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CB8028  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CB8028  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CB802C  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CB8030  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CB8034  38 C0 00 00 */	li r6, 0
@@ -90,9 +90,9 @@ lbl_80CB8004:
 /* 80CB8050  88 1E 0B A8 */	lbz r0, 0xba8(r30)
 /* 80CB8054  28 00 00 00 */	cmplwi r0, 0
 /* 80CB8058  41 82 00 AC */	beq lbl_80CB8104
-/* 80CB805C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB8060  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80CB8064  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80CB805C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB8060  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80CB8064  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80CB8068  38 00 00 FF */	li r0, 0xff
 /* 80CB806C  90 01 00 08 */	stw r0, 8(r1)
 /* 80CB8070  38 80 00 00 */	li r4, 0
@@ -133,9 +133,9 @@ lbl_80CB8004:
 /* 80CB80FC  C0 3F 00 6C */	lfs f1, 0x6c(r31)
 /* 80CB8100  4B 39 53 CC */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 lbl_80CB8104:
-/* 80CB8104  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CB8108  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CB810C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80CB8104  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CB8108  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CB810C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80CB8110  38 00 00 FF */	li r0, 0xff
 /* 80CB8114  90 01 00 08 */	stw r0, 8(r1)
 /* 80CB8118  38 80 00 00 */	li r4, 0

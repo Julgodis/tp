@@ -15,11 +15,11 @@ lbl_80C48AC8:
 /* 80C48AFC  38 00 00 01 */	li r0, 1
 /* 80C48B00  98 03 2C A4 */	stb r0, 0x2ca4(r3)
 lbl_80C48B04:
-/* 80C48B04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C48B08  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C48B0C  A8 64 5D C8 */	lha r3, 0x5dc8(r4)	/* effective address: 8040BF88 */
+/* 80C48B04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C48B08  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C48B0C  A8 64 5D C8 */	lha r3, 0x5dc8(r4)
 /* 80C48B10  38 03 FF FF */	addi r0, r3, -1
-/* 80C48B14  B0 04 5D C8 */	sth r0, 0x5dc8(r4)	/* effective address: 8040BF88 */
+/* 80C48B14  B0 04 5D C8 */	sth r0, 0x5dc8(r4)
 /* 80C48B18  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80C48B1C  7C 03 07 74 */	extsb r3, r0
 /* 80C48B20  4B 3E 45 4C */	b dComIfGp_getReverb__Fi
@@ -29,7 +29,7 @@ lbl_80C48B04:
 /* 80C48B30  90 01 00 08 */	stw r0, 8(r1)
 /* 80C48B34  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C48B38  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C48B3C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C48B3C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C48B40  38 81 00 08 */	addi r4, r1, 8
 /* 80C48B44  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80C48B48  38 C0 00 00 */	li r6, 0

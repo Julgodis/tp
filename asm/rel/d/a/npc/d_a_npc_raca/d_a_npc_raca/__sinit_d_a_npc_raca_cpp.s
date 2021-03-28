@@ -6,12 +6,12 @@ lbl_80AB8C64:
 /* 80AB8C74  38 A3 93 14 */	addi r5, r3, mCutList__12daNpc_Raca_c@l
 /* 80AB8C78  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80AB8C7C  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80AB8C80  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80AB8C84  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80AB8C88  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80AB9314 */
-/* 80AB8C8C  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80AB9318 */
-/* 80AB8C90  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80AB8C94  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80AB931C */
+/* 80AB8C80  80 64 00 00 */	lwz r3, 0(r4)
+/* 80AB8C84  80 04 00 04 */	lwz r0, 4(r4)
+/* 80AB8C88  90 65 00 00 */	stw r3, 0(r5)
+/* 80AB8C8C  90 05 00 04 */	stw r0, 4(r5)
+/* 80AB8C90  80 04 00 08 */	lwz r0, 8(r4)
+/* 80AB8C94  90 05 00 08 */	stw r0, 8(r5)
 /* 80AB8C98  3C 60 80 AC */	lis r3, __vt__18daNpc_Raca_Param_c@ha
 /* 80AB8C9C  38 03 95 18 */	addi r0, r3, __vt__18daNpc_Raca_Param_c@l
 /* 80AB8CA0  3C 60 80 AC */	lis r3, l_HIO@ha

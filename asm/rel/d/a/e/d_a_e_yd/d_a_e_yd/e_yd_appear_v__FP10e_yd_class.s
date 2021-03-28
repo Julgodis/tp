@@ -105,7 +105,7 @@ lbl_807F3BAC:
 /* 807F3BD4  38 7E 06 98 */	addi r3, r30, 0x698
 /* 807F3BD8  3C 80 80 7F */	lis r4, l_HIO@ha
 /* 807F3BDC  38 84 7D 78 */	addi r4, r4, l_HIO@l
-/* 807F3BE0  C0 24 00 10 */	lfs f1, 0x10(r4)	/* effective address: 807F7D88 */
+/* 807F3BE0  C0 24 00 10 */	lfs f1, 0x10(r4)
 /* 807F3BE4  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 807F3BE8  C0 7F 00 80 */	lfs f3, 0x80(r31)
 /* 807F3BEC  4B A7 BE 50 */	b cLib_addCalc2__FPffff

@@ -9,9 +9,9 @@ lbl_804946A4:
 /* 804946C0  3B C4 64 94 */	addi r30, r4, cNullVec__6Z2Calc@l
 /* 804946C4  3C 80 80 45 */	lis r4, m_midnaActor__9daPy_py_c@ha
 /* 804946C8  83 A4 10 18 */	lwz r29, m_midnaActor__9daPy_py_c@l(r4)
-/* 804946CC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804946D0  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 804946D4  83 7F 5D AC */	lwz r27, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 804946CC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804946D0  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 804946D4  83 7F 5D AC */	lwz r27, 0x5dac(r31)
 /* 804946D8  A0 03 00 F8 */	lhz r0, 0xf8(r3)
 /* 804946DC  28 00 00 03 */	cmplwi r0, 3
 /* 804946E0  40 82 00 F4 */	bne lbl_804947D4
@@ -93,10 +93,10 @@ lbl_804947D4:
 /* 80494808  4B BA EC 20 */	b setEventName__11dEvt_info_cFPc
 /* 8049480C  48 00 00 A4 */	b lbl_804948B0
 lbl_80494810:
-/* 80494810  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80494814  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80494818  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 8049481C  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80494810  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80494814  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80494818  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 8049481C  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80494820  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80494824  41 82 00 34 */	beq lbl_80494858
 /* 80494828  7F A3 EB 78 */	mr r3, r29

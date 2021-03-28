@@ -14,9 +14,9 @@ lbl_80C956EC:
 /* 80C9571C  38 FE 01 0C */	addi r7, r30, 0x10c
 /* 80C95720  39 00 00 01 */	li r8, 1
 /* 80C95724  4B 38 78 FC */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
-/* 80C95728  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9572C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80C95730  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80C95728  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9572C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80C95730  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80C95734  38 63 02 10 */	addi r3, r3, 0x210
 /* 80C95738  80 9E 0A 38 */	lwz r4, 0xa38(r30)
 /* 80C9573C  4B 3B 61 78 */	b forceOnEventMove__Q213dPa_control_c7level_cFUl

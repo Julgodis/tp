@@ -13,9 +13,9 @@ lbl_8063FAB4:
 /* 8063FAE0  38 60 00 00 */	li r3, 0
 /* 8063FAE4  48 00 04 70 */	b lbl_8063FF54
 lbl_8063FAE8:
-/* 8063FAE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063FAEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063FAF0  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8063FAE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063FAEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063FAF0  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 8063FAF4  3C 60 80 64 */	lis r3, s_obj_sub__FPvPv@ha
 /* 8063FAF8  38 63 F9 70 */	addi r3, r3, s_obj_sub__FPvPv@l
 /* 8063FAFC  7F 84 E3 78 */	mr r4, r28
@@ -25,9 +25,9 @@ lbl_8063FAE8:
 /* 8063FB0C  38 60 00 01 */	li r3, 1
 /* 8063FB10  48 00 04 44 */	b lbl_8063FF54
 lbl_8063FB14:
-/* 8063FB14  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063FB18  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063FB1C  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 8063FB14  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063FB18  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063FB1C  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 8063FB20  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 8063FB24  41 82 01 50 */	beq lbl_8063FC74
 /* 8063FB28  7F C3 F3 78 */	mr r3, r30
@@ -130,9 +130,9 @@ lbl_8063FC74:
 /* 8063FC84  4E 80 04 21 */	bctrl 
 /* 8063FC88  7C 7B 1B 79 */	or. r27, r3, r3
 /* 8063FC8C  41 82 01 7C */	beq lbl_8063FE08
-/* 8063FC90  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063FC94  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8063FC98  83 43 5D B4 */	lwz r26, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8063FC90  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063FC94  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8063FC98  83 43 5D B4 */	lwz r26, 0x5db4(r3)
 /* 8063FC9C  7F 43 D3 78 */	mr r3, r26
 /* 8063FCA0  4B AD 27 D4 */	b checkIronBallThrowMode__9daAlink_cCFv
 /* 8063FCA4  54 60 06 3F */	clrlwi. r0, r3, 0x18

@@ -16,11 +16,11 @@ lbl_8095CCA0:
 /* 8095CCD8  4B FF B5 A1 */	bl __register_global_object
 /* 8095CCDC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8095CCE0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8095CCE4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8095CCE8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8095CCE4  80 64 00 00 */	lwz r3, 0(r4)
+/* 8095CCE8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8095CCEC  90 7F 01 94 */	stw r3, 0x194(r31)
 /* 8095CCF0  90 1F 01 98 */	stw r0, 0x198(r31)
-/* 8095CCF4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8095CCF4  80 04 00 08 */	lwz r0, 8(r4)
 /* 8095CCF8  90 1F 01 9C */	stw r0, 0x19c(r31)
 /* 8095CCFC  38 9F 01 94 */	addi r4, r31, 0x194
 /* 8095CD00  80 7F 01 58 */	lwz r3, 0x158(r31)

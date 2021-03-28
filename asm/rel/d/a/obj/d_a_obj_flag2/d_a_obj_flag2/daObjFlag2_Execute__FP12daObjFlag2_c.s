@@ -30,7 +30,7 @@ lbl_80BEDDF4:
 /* 80BEDE2C  7C 66 1B 78 */	mr r6, r3
 /* 80BEDE30  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BEDE34  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BEDE38  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BEDE38  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BEDE3C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80BEDE40  38 BE 10 A0 */	addi r5, r30, 0x10a0
 /* 80BEDE44  38 E0 00 00 */	li r7, 0

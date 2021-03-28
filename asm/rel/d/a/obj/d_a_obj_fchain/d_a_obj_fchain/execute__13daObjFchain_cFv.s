@@ -15,9 +15,9 @@ lbl_80BE6868:
 /* 80BE689C  7C 78 1B 78 */	mr r24, r3
 /* 80BE68A0  3C 60 80 BE */	lis r3, l_arcName@ha
 /* 80BE68A4  3B E3 74 38 */	addi r31, r3, l_arcName@l
-/* 80BE68A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE68AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BE68B0  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80BE68A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE68AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BE68B0  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80BE68B4  28 00 00 00 */	cmplwi r0, 0
 /* 80BE68B8  41 82 00 64 */	beq lbl_80BE691C
 /* 80BE68BC  3B 23 4F F8 */	addi r25, r3, 0x4ff8
@@ -57,9 +57,9 @@ lbl_80BE6924:
 lbl_80BE693C:
 /* 80BE693C  3B 98 06 94 */	addi r28, r24, 0x694
 /* 80BE6940  3B B8 07 9C */	addi r29, r24, 0x79c
-/* 80BE6944  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE6948  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BE694C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80BE6944  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE6948  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BE694C  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 80BE6950  80 1E 05 74 */	lwz r0, 0x574(r30)
 /* 80BE6954  54 19 01 8C */	rlwinm r25, r0, 0, 6, 6
 /* 80BE6958  3B 60 00 00 */	li r27, 0
@@ -593,11 +593,11 @@ lbl_80BE70C4:
 /* 80BE7108  38 00 00 16 */	li r0, 0x16
 /* 80BE710C  7C 09 03 A6 */	mtctr r0
 lbl_80BE7110:
-/* 80BE7110  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 80430CF4 */
+/* 80BE7110  C0 03 00 00 */	lfs f0, 0(r3)
 /* 80BE7114  D0 04 00 00 */	stfs f0, 0(r4)
-/* 80BE7118  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430CF8 */
+/* 80BE7118  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80BE711C  D0 04 00 04 */	stfs f0, 4(r4)
-/* 80BE7120  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430CFC */
+/* 80BE7120  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80BE7124  D0 04 00 08 */	stfs f0, 8(r4)
 /* 80BE7128  38 84 00 0C */	addi r4, r4, 0xc
 /* 80BE712C  42 00 FF E4 */	bdnz lbl_80BE7110

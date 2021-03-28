@@ -9,11 +9,11 @@ lbl_80A1FF78:
 /* 80A1FF94  7C BC 2B 78 */	mr r28, r5
 /* 80A1FF98  3C 60 80 A2 */	lis r3, lit_3908@ha
 /* 80A1FF9C  3B C3 10 80 */	addi r30, r3, lit_3908@l
-/* 80A1FFA0  80 7E 02 98 */	lwz r3, 0x298(r30)	/* effective address: 80A21318 */
-/* 80A1FFA4  80 1E 02 9C */	lwz r0, 0x29c(r30)	/* effective address: 80A2131C */
+/* 80A1FFA0  80 7E 02 98 */	lwz r3, 0x298(r30)
+/* 80A1FFA4  80 1E 02 9C */	lwz r0, 0x29c(r30)
 /* 80A1FFA8  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A1FFAC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A1FFB0  80 1E 02 A0 */	lwz r0, 0x2a0(r30)	/* effective address: 80A21320 */
+/* 80A1FFB0  80 1E 02 A0 */	lwz r0, 0x2a0(r30)
 /* 80A1FFB4  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A1FFB8  38 7F 14 48 */	addi r3, r31, 0x1448
 /* 80A1FFBC  4B 73 07 30 */	b getActorP__18daNpcF_ActorMngr_cFv

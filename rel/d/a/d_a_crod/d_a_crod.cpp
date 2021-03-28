@@ -180,10 +180,10 @@ struct J3DMaterialTable {
 // 
 
 static void daCrod_createHeap(fopAc_ac_c*); // 2
-static void daCrod_Create(fopAc_ac_c*); // 2
-static void daCrod_Delete(daCrod_c*); // 2
-static void daCrod_Execute(daCrod_c*); // 2
-static void daCrod_Draw(daCrod_c*); // 2
+void daCrod_Create(fopAc_ac_c*); // 2
+void daCrod_Delete(daCrod_c*); // 2
+void daCrod_Execute(daCrod_c*); // 2
+void daCrod_Draw(daCrod_c*); // 2
 
 extern "C" void createHeap__8daCrod_cFv(); // 1
 extern "C" static void daCrod_createHeap__FP10fopAc_ac_c(); // 1
@@ -191,9 +191,9 @@ extern "C" void create__8daCrod_cFv(); // 1
 extern "C" void __dt__8cM3dGAabFv(); // 1
 extern "C" void __dt__10dCcD_GSttsFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daCrod_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daCrod_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8daCrod_cFv(); // 1
-extern "C" static void daCrod_Delete__FP8daCrod_c(); // 1
+extern "C" void daCrod_Delete__FP8daCrod_c(); // 1
 extern "C" void setRoomInfo__8daCrod_cFv(); // 1
 extern "C" void setMatrix__8daCrod_cFv(); // 1
 extern "C" void posMove__8daCrod_cFv(); // 1
@@ -201,13 +201,11 @@ extern "C" void setBckAnm__8daCrod_cFUs(); // 1
 extern "C" void setReturn__8daCrod_cFv(); // 1
 extern "C" void setLightPower__8daCrod_cFv(); // 1
 extern "C" void execute__8daCrod_cFv(); // 1
-extern "C" static void daCrod_Execute__FP8daCrod_c(); // 1
+extern "C" void daCrod_Execute__FP8daCrod_c(); // 1
 extern "C" void draw__8daCrod_cFv(); // 1
-extern "C" static void daCrod_Draw__FP8daCrod_c(); // 1
+extern "C" void daCrod_Draw__FP8daCrod_c(); // 1
 extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" extern u8 const lit_4777[8];
-extern "C" extern u8 const lit_4778[8];
-extern "C" extern u8 const lit_4779[8];
+extern "C" extern void* l_daCrod_Method[8];
 extern "C" extern void* g_profile_CROD[12];
 
 // 
@@ -284,19 +282,15 @@ extern "C" void _savegpr_27(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cps[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CpsAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C0D8[4];
-SECTION_BSS extern u8 g_env_light[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 data_804A4218[4];
@@ -356,60 +350,60 @@ SECTION_DATA static u8 data_804A4188[12] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804A4194-804A41B4 0020+00 s=1 e=0 z=0  None .data      l_daCrod_Method                                              */
-SECTION_DATA static void* l_daCrod_Method[8] = {
-	/* 0    */ (void*)daCrod_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daCrod_Delete__FP8daCrod_c,
-	/* 2    */ (void*)daCrod_Execute__FP8daCrod_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daCrod_Draw__FP8daCrod_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 804A4194-804A41B4 0020+00 s=0 e=0 z=0  None .data      l_daCrod_Method                                              */
+SECTION_DATA void* l_daCrod_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 804A41B4-804A41E4 0030+00 s=0 e=0 z=1  None .data      g_profile_CROD                                               */
+/* 804A41B4-804A41E4 0030+00 s=0 e=0 z=0  None .data      g_profile_CROD                                               */
 SECTION_DATA void* g_profile_CROD[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02F40000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000750,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02B00000,
-	/* 9    */ (void*)&l_daCrod_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x05000000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02F40000,
+	(void*)NULL,
+	(void*)0x00000750,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02B00000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x05000000,
 };
 
 /* 804A41E4-804A41F0 000C+00 s=3 e=0 z=0  None .data      __vt__10cCcD_GStts                                           */
 SECTION_DATA static void* __vt__10cCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10cCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A41F0-804A41FC 000C+00 s=2 e=0 z=0  None .data      __vt__10dCcD_GStts                                           */
 SECTION_DATA static void* __vt__10dCcD_GStts[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10dCcD_GSttsFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A41FC-804A4208 000C+00 s=3 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A4208-804A4214 000C+00 s=3 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 804A2F18-804A31F8 02E0+00 s=1 e=0 z=0  None .text      create__8daCrod_cFv                                          */
@@ -423,7 +417,7 @@ asm void daCrod_c::create() {
 #pragma pop
 
 
-/* 804A31F8-804A3240 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 804A31F8-804A3240 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -434,7 +428,7 @@ asm cM3dGAab::~cM3dGAab() {
 #pragma pop
 
 
-/* 804A3240-804A329C 005C+00 s=1 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
+/* 804A3240-804A329C 005C+00 s=0 e=0 z=0  None .text      __dt__10dCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -445,7 +439,7 @@ asm dCcD_GStts::~dCcD_GStts() {
 #pragma pop
 
 
-/* 804A329C-804A32E4 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 804A329C-804A32E4 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -456,11 +450,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 804A32E4-804A3304 0020+00 s=1 e=0 z=0  None .text      daCrod_Create__FP10fopAc_ac_c                                */
+/* 804A32E4-804A3304 0020+00 s=0 e=0 z=0  None .text      daCrod_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daCrod_Create(fopAc_ac_c* param_0) {
+asm void daCrod_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Create__FP10fopAc_ac_c.s"
 }
@@ -478,11 +472,11 @@ asm daCrod_c::~daCrod_c() {
 #pragma pop
 
 
-/* 804A3488-804A34B0 0028+00 s=1 e=0 z=0  None .text      daCrod_Delete__FP8daCrod_c                                   */
+/* 804A3488-804A34B0 0028+00 s=0 e=0 z=0  None .text      daCrod_Delete__FP8daCrod_c                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daCrod_Delete(daCrod_c* param_0) {
+asm void daCrod_Delete(daCrod_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Delete__FP8daCrod_c.s"
 }
@@ -576,6 +570,21 @@ SECTION_RODATA static u32 const lit_4776[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 804A4124-804A412C 0008+00 s=1 e=0 z=0  None .rodata    @4777                                                        */
+SECTION_RODATA static u8 const lit_4777[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804A412C-804A4134 0008+00 s=1 e=0 z=0  None .rodata    @4778                                                        */
+SECTION_RODATA static u8 const lit_4778[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 804A4134-804A413C 0008+00 s=1 e=0 z=0  None .rodata    @4779                                                        */
+SECTION_RODATA static u8 const lit_4779[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 804A36D8-804A3FB4 08DC+00 s=1 e=0 z=0  None .text      execute__8daCrod_cFv                                         */
 #pragma push
 #pragma optimization_level 0
@@ -587,11 +596,11 @@ asm void daCrod_c::execute() {
 #pragma pop
 
 
-/* 804A3FB4-804A3FD4 0020+00 s=1 e=0 z=0  None .text      daCrod_Execute__FP8daCrod_c                                  */
+/* 804A3FB4-804A3FD4 0020+00 s=0 e=0 z=0  None .text      daCrod_Execute__FP8daCrod_c                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daCrod_Execute(daCrod_c* param_0) {
+asm void daCrod_Execute(daCrod_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Execute__FP8daCrod_c.s"
 }
@@ -609,18 +618,18 @@ asm void daCrod_c::draw() {
 #pragma pop
 
 
-/* 804A407C-804A409C 0020+00 s=1 e=0 z=0  None .text      daCrod_Draw__FP8daCrod_c                                     */
+/* 804A407C-804A409C 0020+00 s=0 e=0 z=0  None .text      daCrod_Draw__FP8daCrod_c                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daCrod_Draw(daCrod_c* param_0) {
+asm void daCrod_Draw(daCrod_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_crod/d_a_crod/daCrod_Draw__FP8daCrod_c.s"
 }
 #pragma pop
 
 
-/* 804A409C-804A40E4 0048+00 s=1 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
+/* 804A409C-804A40E4 0048+00 s=0 e=0 z=0  None .text      __dt__10cCcD_GSttsFv                                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -630,20 +639,4 @@ asm cCcD_GStts::~cCcD_GStts() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 804A4124-804A412C 0008+00 s=0 e=0 z=0  None .rodata    @4777                                                        */
-SECTION_RODATA u8 const lit_4777[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 804A412C-804A4134 0008+00 s=0 e=0 z=0  None .rodata    @4778                                                        */
-SECTION_RODATA u8 const lit_4778[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 804A4134-804A413C 0008+00 s=0 e=0 z=0  None .rodata    @4779                                                        */
-SECTION_RODATA u8 const lit_4779[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
 

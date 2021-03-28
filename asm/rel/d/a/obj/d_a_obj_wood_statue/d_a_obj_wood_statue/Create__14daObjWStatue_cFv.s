@@ -79,13 +79,13 @@ lbl_80D3A2F0:
 /* 80D3A424  3C 60 80 D4 */	lis r3, l_arcName@ha
 /* 80D3A428  80 03 B7 3C */	lwz r0, l_arcName@l(r3)
 /* 80D3A42C  90 1E 01 00 */	stw r0, 0x100(r30)
-/* 80D3A430  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D3A434  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D3A430  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D3A434  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D3A438  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D3A43C  7F C4 F3 78 */	mr r4, r30
 /* 80D3A440  3C A0 80 D4 */	lis r5, l_eventName@ha
 /* 80D3A444  38 A5 B7 40 */	addi r5, r5, l_eventName@l
-/* 80D3A448  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80D3B740 */
+/* 80D3A448  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80D3A44C  38 C0 00 FF */	li r6, 0xff
 /* 80D3A450  4B 30 D3 08 */	b getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 80D3A454  B0 7E 09 48 */	sth r3, 0x948(r30)

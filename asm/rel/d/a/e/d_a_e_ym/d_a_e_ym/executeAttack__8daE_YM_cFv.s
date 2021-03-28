@@ -7,9 +7,9 @@ lbl_8080D2C8:
 /* 8080D2DC  7C 7D 1B 78 */	mr r29, r3
 /* 8080D2E0  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080D2E4  3B C3 59 94 */	addi r30, r3, lit_3925@l
-/* 8080D2E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080D2EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8080D2F0  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8080D2E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080D2EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8080D2F0  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 8080D2F4  38 61 00 24 */	addi r3, r1, 0x24
 /* 8080D2F8  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 8080D2FC  38 BD 06 70 */	addi r5, r29, 0x670
@@ -99,7 +99,7 @@ lbl_8080D424:
 /* 8080D424  C0 5E 00 6C */	lfs f2, 0x6c(r30)
 /* 8080D428  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080D42C  3B E3 5D 38 */	addi r31, r3, l_HIO@l
-/* 8080D430  C0 1F 00 20 */	lfs f0, 0x20(r31)	/* effective address: 80815D58 */
+/* 8080D430  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 8080D434  EC 02 00 2A */	fadds f0, f2, f0
 /* 8080D438  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8080D43C  4C 40 13 82 */	cror 2, 0, 2
@@ -145,8 +145,8 @@ lbl_8080D4C8:
 /* 8080D4CC  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 8080D4D0  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8080D4D4  41 82 00 44 */	beq lbl_8080D518
-/* 8080D4D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8080D4DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8080D4D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8080D4DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8080D4E0  3B 83 56 B8 */	addi r28, r3, 0x56b8
 /* 8080D4E4  7F 83 E3 78 */	mr r3, r28
 /* 8080D4E8  4B 86 62 FC */	b LockonTruth__12dAttention_cFv
@@ -408,7 +408,7 @@ lbl_8080D864:
 /* 8080D894  4E 80 04 21 */	bctrl 
 /* 8080D898  3C 60 80 81 */	lis r3, l_HIO@ha
 /* 8080D89C  38 63 5D 38 */	addi r3, r3, l_HIO@l
-/* 8080D8A0  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80815D44 */
+/* 8080D8A0  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8080D8A4  FC 00 00 1E */	fctiwz f0, f0
 /* 8080D8A8  D8 01 00 40 */	stfd f0, 0x40(r1)
 /* 8080D8AC  80 01 00 44 */	lwz r0, 0x44(r1)

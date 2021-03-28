@@ -7,8 +7,8 @@ lbl_80D4F6C8:
 /* 80D4F6DC  88 83 05 6A */	lbz r4, 0x56a(r3)
 /* 80D4F6E0  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D4F6E4  41 82 00 28 */	beq lbl_80D4F70C
-/* 80D4F6E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4F6EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4F6E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4F6EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4F6F0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4F6F4  7C 05 07 74 */	extsb r5, r0
 /* 80D4F6F8  4B 2E 5C 68 */	b isSwitch__10dSv_info_cCFii
@@ -24,8 +24,8 @@ lbl_80D4F70C:
 /* 80D4F71C  4B 45 03 20 */	b dKy_getdaytime_minute__Fv
 /* 80D4F720  2C 03 00 00 */	cmpwi r3, 0
 /* 80D4F724  40 82 00 1C */	bne lbl_80D4F740
-/* 80D4F728  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4F72C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4F728  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4F72C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D4F730  88 9F 05 69 */	lbz r4, 0x569(r31)
 /* 80D4F734  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80D4F738  7C 05 07 74 */	extsb r5, r0

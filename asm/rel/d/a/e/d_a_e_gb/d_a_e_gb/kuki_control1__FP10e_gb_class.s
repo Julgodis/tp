@@ -25,14 +25,14 @@ lbl_806C3558:
 /* 806C35B4  D0 1B 06 E8 */	stfs f0, 0x6e8(r27)
 /* 806C35B8  C0 1B 06 DC */	lfs f0, 0x6dc(r27)
 /* 806C35BC  D0 1B 06 EC */	stfs f0, 0x6ec(r27)
-/* 806C35C0  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 806C74EC */
+/* 806C35C0  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 806C35C4  D3 E1 00 38 */	stfs f31, 0x38(r1)
 /* 806C35C8  D3 E1 00 3C */	stfs f31, 0x3c(r1)
 /* 806C35CC  C0 1B 09 3C */	lfs f0, 0x93c(r27)
 /* 806C35D0  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 806C35D4  D3 E1 00 20 */	stfs f31, 0x20(r1)
 /* 806C35D8  D3 E1 00 28 */	stfs f31, 0x28(r1)
-/* 806C35DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)	/* effective address: 806C75B0 */
+/* 806C35DC  C0 1F 00 C8 */	lfs f0, 0xc8(r31)
 /* 806C35E0  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 806C35E4  C3 7B 09 44 */	lfs f27, 0x944(r27)
 /* 806C35E8  3B A0 00 01 */	li r29, 1
@@ -95,7 +95,7 @@ lbl_806C3678:
 lbl_806C36C4:
 /* 806C36C4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806C36C8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806C36CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806C36CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 806C36D0  A8 9B 04 DE */	lha r4, 0x4de(r27)
 /* 806C36D4  4B 94 8D 08 */	b mDoMtx_YrotS__FPA4_fs
 /* 806C36D8  88 1B 06 E0 */	lbz r0, 0x6e0(r27)
@@ -103,7 +103,7 @@ lbl_806C36C4:
 /* 806C36E0  41 82 00 24 */	beq lbl_806C3704
 /* 806C36E4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806C36E8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806C36EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806C36EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 806C36F0  38 9E 00 60 */	addi r4, r30, 0x60
 /* 806C36F4  38 1A FF FE */	addi r0, r26, -2
 /* 806C36F8  7C 84 02 AE */	lhax r4, r4, r0
@@ -112,7 +112,7 @@ lbl_806C36C4:
 lbl_806C3704:
 /* 806C3704  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 806C3708  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 806C370C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 806C370C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806C3710  38 9E 00 3C */	addi r4, r30, 0x3c
 /* 806C3714  38 1A FF FE */	addi r0, r26, -2
 /* 806C3718  7C 84 02 AE */	lhax r4, r4, r0

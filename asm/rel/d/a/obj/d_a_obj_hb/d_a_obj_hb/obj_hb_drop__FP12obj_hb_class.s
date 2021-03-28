@@ -8,8 +8,8 @@ lbl_80C19DA8:
 /* 80C19DC0  3C 60 80 C2 */	lis r3, lit_3665@ha
 /* 80C19DC4  3B E3 B6 00 */	addi r31, r3, lit_3665@l
 /* 80C19DC8  38 7E 06 AC */	addi r3, r30, 0x6ac
-/* 80C19DCC  C0 3F 00 0C */	lfs f1, 0xc(r31)	/* effective address: 80C1B60C */
-/* 80C19DD0  C0 5F 00 34 */	lfs f2, 0x34(r31)	/* effective address: 80C1B634 */
+/* 80C19DCC  C0 3F 00 0C */	lfs f1, 0xc(r31)
+/* 80C19DD0  C0 5F 00 34 */	lfs f2, 0x34(r31)
 /* 80C19DD4  4B 65 5C AC */	b cLib_addCalc0__FPfff
 /* 80C19DD8  A8 1E 06 54 */	lha r0, 0x654(r30)
 /* 80C19DDC  2C 00 00 05 */	cmpwi r0, 5
@@ -150,7 +150,7 @@ lbl_80C19FB4:
 lbl_80C19FDC:
 /* 80C19FDC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80C19FE0  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80C19FE4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80C19FE4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C19FE8  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 80C19FEC  4B 3F 23 F0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80C19FF0  C0 1F 00 08 */	lfs f0, 8(r31)
@@ -369,12 +369,12 @@ lbl_80C1A300:
 /* 80C1A310  41 82 01 68 */	beq lbl_80C1A478
 /* 80C1A314  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80C1A318  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80C1A31C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80C1A31C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C1A320  A8 81 00 14 */	lha r4, 0x14(r1)
 /* 80C1A324  4B 3F 20 20 */	b mDoMtx_XrotS__FPA4_fs
 /* 80C1A328  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80C1A32C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80C1A330  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80C1A330  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C1A334  A8 81 00 18 */	lha r4, 0x18(r1)
 /* 80C1A338  4B 3F 21 94 */	b mDoMtx_ZrotM__FPA4_fs
 /* 80C1A33C  C0 3F 00 08 */	lfs f1, 8(r31)

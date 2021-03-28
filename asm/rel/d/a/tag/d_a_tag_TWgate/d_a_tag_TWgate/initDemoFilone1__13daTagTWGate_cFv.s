@@ -10,8 +10,8 @@ lbl_80D528F0:
 /* 80D52910  38 A3 57 B0 */	addi r5, r3, l_zevParamTbl@l
 /* 80D52914  7C 05 00 2E */	lwzx r0, r5, r0
 /* 80D52918  90 1F 01 00 */	stw r0, 0x100(r31)
-/* 80D5291C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D52920  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5291C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D52920  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D52924  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D52928  7F E4 FB 78 */	mr r4, r31
 /* 80D5292C  88 1F 05 E2 */	lbz r0, 0x5e2(r31)

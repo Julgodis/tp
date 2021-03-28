@@ -31,8 +31,8 @@ lbl_807A2970:
 /* 807A29E4  7F 63 DB 78 */	mr r3, r27
 /* 807A29E8  38 81 00 08 */	addi r4, r1, 8
 /* 807A29EC  4B AC 53 20 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 807A29F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A29F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807A29F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A29F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807A29F8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807A29FC  7F 64 DB 78 */	mr r4, r27
 /* 807A2A00  4B 8D 1A A0 */	b GroundCross__4cBgSFP11cBgS_GndChk

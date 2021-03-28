@@ -39,7 +39,7 @@ lbl_809B4B54:
 /* 809B4B60  4B 7F 3C 84 */	b dKy_change_colpat__FUc
 /* 809B4B64  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B4B68  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B4B6C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B4B6C  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B4B70  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B4B74  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200003F@ha */
 /* 809B4B78  38 84 00 3F */	addi r4, r4, 0x003F /* 0x0200003F@l */
@@ -54,7 +54,7 @@ lbl_809B4B84:
 /* 809B4B98  4B 7F 3C 4C */	b dKy_change_colpat__FUc
 /* 809B4B9C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B4BA0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B4BA4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B4BA4  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B4BA8  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B4BAC  4B 8F B2 6C */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 809B4BB0  48 00 00 2C */	b lbl_809B4BDC
@@ -66,7 +66,7 @@ lbl_809B4BB4:
 lbl_809B4BC4:
 /* 809B4BC4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B4BC8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B4BCC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B4BCC  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B4BD0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B4BD4  38 80 00 2D */	li r4, 0x2d
 /* 809B4BD8  4B 8F B3 04 */	b bgmStreamStop__8Z2SeqMgrFUl

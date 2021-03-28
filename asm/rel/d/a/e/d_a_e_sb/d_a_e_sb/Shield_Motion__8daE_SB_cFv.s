@@ -10,8 +10,8 @@ lbl_80781DD4:
 /* 80781DF4  3C 60 80 78 */	lis r3, stringBase0@ha
 /* 80781DF8  38 63 4E 64 */	addi r3, r3, stringBase0@l
 /* 80781DFC  38 80 00 0B */	li r4, 0xb
-/* 80781E00  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80781E04  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80781E00  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80781E04  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80781E08  3C A5 00 02 */	addis r5, r5, 2
 /* 80781E0C  38 C0 00 80 */	li r6, 0x80
 /* 80781E10  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -22,7 +22,7 @@ lbl_80781DD4:
 /* 80781E24  C0 3F 00 80 */	lfs f1, 0x80(r31)
 /* 80781E28  3C C0 80 78 */	lis r6, l_HIO@ha
 /* 80781E2C  38 C6 4F 84 */	addi r6, r6, l_HIO@l
-/* 80781E30  C0 46 00 2C */	lfs f2, 0x2c(r6)	/* effective address: 80784FB0 */
+/* 80781E30  C0 46 00 2C */	lfs f2, 0x2c(r6)
 /* 80781E34  C0 7F 00 70 */	lfs f3, 0x70(r31)
 /* 80781E38  C0 9F 00 74 */	lfs f4, 0x74(r31)
 /* 80781E3C  4B 88 F0 34 */	b setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff
@@ -31,7 +31,7 @@ lbl_80781DD4:
 /* 80781E48  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80781E4C  3C 80 80 78 */	lis r4, data_80784FCC@ha
 /* 80781E50  38 84 4F CC */	addi r4, r4, data_80784FCC@l
-/* 80781E54  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80784FCC */
+/* 80781E54  80 84 00 00 */	lwz r4, 0(r4)
 /* 80781E58  4B AE ED AC */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80781E5C  B0 7E 04 DE */	sth r3, 0x4de(r30)
 /* 80781E60  C0 1F 00 84 */	lfs f0, 0x84(r31)
@@ -43,9 +43,9 @@ lbl_80781DD4:
 /* 80781E78  80 1E 0A 5C */	lwz r0, 0xa5c(r30)
 /* 80781E7C  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80781E80  90 1E 0A 5C */	stw r0, 0xa5c(r30)
-/* 80781E84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80781E88  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80781E8C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80781E84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80781E88  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80781E8C  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80781E90  90 81 00 08 */	stw r4, 8(r1)
 /* 80781E94  38 00 FF FF */	li r0, -1
 /* 80781E98  90 01 00 0C */	stw r0, 0xc(r1)

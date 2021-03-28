@@ -10,11 +10,11 @@ lbl_8059E408:
 /* 8059E428  38 00 00 02 */	li r0, 2
 /* 8059E42C  98 1F 05 7B */	stb r0, 0x57b(r31)
 /* 8059E430  48 00 00 D9 */	bl demoProc__10daScExit_cFv
-/* 8059E434  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8059E438  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8059E43C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
+/* 8059E434  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8059E438  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8059E43C  80 03 5F 1C */	lwz r0, 0x5f1c(r3)
 /* 8059E440  64 00 04 00 */	oris r0, r0, 0x400
-/* 8059E444  90 03 5F 1C */	stw r0, 0x5f1c(r3)	/* effective address: 8040C0DC */
+/* 8059E444  90 03 5F 1C */	stw r0, 0x5f1c(r3)
 /* 8059E448  48 00 00 2C */	b lbl_8059E474
 lbl_8059E44C:
 /* 8059E44C  A8 9F 05 78 */	lha r4, 0x578(r31)

@@ -13,7 +13,7 @@ lbl_80CDFC40:
 /* 80CDFC6C  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CDFC70  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CDFC74  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CDFC78  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CDFC78  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CDFC7C  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CDFC80  38 BF 05 80 */	addi r5, r31, 0x580
 /* 80CDFC84  38 C0 00 00 */	li r6, 0
@@ -34,7 +34,7 @@ lbl_80CDFC40:
 /* 80CDFCC0  90 01 00 08 */	stw r0, 8(r1)
 /* 80CDFCC4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CDFCC8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CDFCCC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CDFCCC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CDFCD0  38 81 00 08 */	addi r4, r1, 8
 /* 80CDFCD4  38 BF 05 74 */	addi r5, r31, 0x574
 /* 80CDFCD8  38 C0 00 00 */	li r6, 0
@@ -55,12 +55,12 @@ lbl_80CDFC40:
 /* 80CDFD14  48 00 00 E0 */	b lbl_80CDFDF4
 /* 80CDFD18  48 00 00 DC */	b lbl_80CDFDF4
 lbl_80CDFD1C:
-/* 80CDFD1C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDFD20  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDFD1C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDFD20  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDFD24  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80CDFD28  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80CDFD2C  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80CDFD30  A0 84 00 0E */	lhz r4, 0xe(r4)	/* effective address: 803A7296 */
+/* 80CDFD30  A0 84 00 0E */	lhz r4, 0xe(r4)
 /* 80CDFD34  4B 35 4C 88 */	b isEventBit__11dSv_event_cCFUs
 /* 80CDFD38  2C 03 00 00 */	cmpwi r3, 0
 /* 80CDFD3C  41 82 00 B8 */	beq lbl_80CDFDF4
@@ -83,12 +83,12 @@ lbl_80CDFD1C:
 /* 80CDFD80  38 60 00 01 */	li r3, 1
 /* 80CDFD84  48 00 00 7C */	b lbl_80CDFE00
 lbl_80CDFD88:
-/* 80CDFD88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDFD8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDFD88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDFD8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDFD90  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80CDFD94  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80CDFD98  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80CDFD9C  A0 84 00 10 */	lhz r4, 0x10(r4)	/* effective address: 803A7298 */
+/* 80CDFD9C  A0 84 00 10 */	lhz r4, 0x10(r4)
 /* 80CDFDA0  4B 35 4C 1C */	b isEventBit__11dSv_event_cCFUs
 /* 80CDFDA4  2C 03 00 00 */	cmpwi r3, 0
 /* 80CDFDA8  41 82 00 4C */	beq lbl_80CDFDF4

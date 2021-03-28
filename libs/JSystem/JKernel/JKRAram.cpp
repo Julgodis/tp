@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct JKRHeap {
-	/* 802CE4D4 */ void alloc(u32, int);
-	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
-	/* 802CE500 */ void free(void*, JKRHeap*);
+struct JKRAramBlock {
 };
 
 struct JKRExpandSwitch {
 };
 
-struct JKRAramBlock {
+struct JKRHeap {
+	/* 802CE4D4 */ void alloc(u32, int);
+	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
+	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct JKRAram {
@@ -197,10 +197,10 @@ SECTION_DATA u8 sMessageQueue__7JKRAram[32] = {
 
 /* 803CC158-803CC168 0010+00 s=2 e=0 z=0  None .data      __vt__7JKRAram                                               */
 SECTION_DATA static void* __vt__7JKRAram[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7JKRAramFv,
-	/* 3    */ (void*)run__7JKRAramFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7JKRAramFv,
+	(void*)run__7JKRAramFv,
 };
 
 /* 802D2040-802D214C 010C+00 s=1 e=0 z=0  None .text      __ct__7JKRAramFUlUll                                         */

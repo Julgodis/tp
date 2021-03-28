@@ -33,12 +33,12 @@ lbl_8094A0F0:
 lbl_8094A10C:
 /* 8094A10C  3C 60 80 95 */	lis r3, daMyna_LightActor@ha
 /* 8094A110  38 63 BA C0 */	addi r3, r3, daMyna_LightActor@l
-/* 8094A114  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 8094BAC0 */
-/* 8094A118  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 8094BF90 */
+/* 8094A114  80 63 00 00 */	lwz r3, 0(r3)
+/* 8094A118  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8094A11C  D0 01 00 A4 */	stfs f0, 0xa4(r1)
 /* 8094A120  C0 1E 04 AC */	lfs f0, 0x4ac(r30)
 /* 8094A124  D0 01 00 A8 */	stfs f0, 0xa8(r1)
-/* 8094A128  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 8094BF98 */
+/* 8094A128  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8094A12C  D0 01 00 AC */	stfs f0, 0xac(r1)
 /* 8094A130  38 61 00 38 */	addi r3, r1, 0x38
 /* 8094A134  38 81 00 A4 */	addi r4, r1, 0xa4
@@ -136,7 +136,7 @@ lbl_8094A24C:
 /* 8094A280  D0 01 00 9C */	stfs f0, 0x9c(r1)
 /* 8094A284  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 8094A288  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094A28C  C0 23 00 10 */	lfs f1, 0x10(r3)	/* effective address: 8094BA4C */
+/* 8094A28C  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8094A290  EC 02 00 B2 */	fmuls f0, f2, f2
 /* 8094A294  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8094A298  D0 01 00 A0 */	stfs f0, 0xa0(r1)
@@ -263,7 +263,7 @@ lbl_8094A3F8:
 /* 8094A454  D0 01 00 6C */	stfs f0, 0x6c(r1)
 /* 8094A458  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 8094A45C  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094A460  C0 23 00 10 */	lfs f1, 0x10(r3)	/* effective address: 8094BA4C */
+/* 8094A460  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 8094A464  EC 02 00 B2 */	fmuls f0, f2, f2
 /* 8094A468  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8094A46C  D0 01 00 70 */	stfs f0, 0x70(r1)
@@ -357,7 +357,7 @@ lbl_8094A59C:
 lbl_8094A5AC:
 /* 8094A5AC  3C 60 80 95 */	lis r3, l_HOSTIO@ha
 /* 8094A5B0  38 63 BA 3C */	addi r3, r3, l_HOSTIO@l
-/* 8094A5B4  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 8094BA5C */
+/* 8094A5B4  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8094A5B8  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8094A5BC  40 80 00 2C */	bge lbl_8094A5E8
 /* 8094A5C0  C0 1E 04 A8 */	lfs f0, 0x4a8(r30)

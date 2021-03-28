@@ -103,8 +103,8 @@ lbl_80C85798:
 /* 80C8579C  48 00 03 6D */	bl init_modeWait__9daPropY_cFv
 /* 80C857A0  48 00 00 54 */	b lbl_80C857F4
 lbl_80C857A4:
-/* 80C857A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C857A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C857A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C857A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C857AC  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80C857B0  7C 05 07 74 */	extsb r5, r0
 /* 80C857B4  4B 3A FB AC */	b isSwitch__10dSv_info_cCFii

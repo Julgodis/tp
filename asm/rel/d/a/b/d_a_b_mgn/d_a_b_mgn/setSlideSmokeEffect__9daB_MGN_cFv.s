@@ -28,8 +28,8 @@ lbl_806062C0:
 /* 80606328  3B 80 00 00 */	li r28, 0
 /* 8060632C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80606330  3B 43 D4 70 */	addi r26, r3, now__14mDoMtx_stack_c@l
-/* 80606334  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80606338  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80606334  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80606338  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8060633C  3B 23 0F 38 */	addi r25, r3, 0xf38
 /* 80606340  3C 60 80 61 */	lis r3, data_806101BC@ha
 /* 80606344  3B 63 01 BC */	addi r27, r3, data_806101BC@l

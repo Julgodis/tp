@@ -64,10 +64,10 @@ lbl_80A2F320:
 /* 80A2F334  4B 65 51 2C */	b ChkTgHit__12dCcD_GObjInfFv
 /* 80A2F338  28 03 00 00 */	cmplwi r3, 0
 /* 80A2F33C  41 82 02 34 */	beq lbl_80A2F570
-/* 80A2F340  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A2F344  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80A2F348  80 7F 5D AC */	lwz r3, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 80A2F34C  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80400568 */
+/* 80A2F340  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A2F344  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80A2F348  80 7F 5D AC */	lwz r3, 0x5dac(r31)
+/* 80A2F34C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 80A2F350  28 00 00 29 */	cmplwi r0, 0x29
 /* 80A2F354  41 82 02 1C */	beq lbl_80A2F570
 /* 80A2F358  88 1D 15 AC */	lbz r0, 0x15ac(r29)

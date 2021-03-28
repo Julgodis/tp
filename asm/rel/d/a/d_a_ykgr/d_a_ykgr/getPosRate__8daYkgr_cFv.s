@@ -23,14 +23,14 @@ lbl_805A85D4:
 lbl_805A8628:
 /* 805A8628  3C 60 80 45 */	lis r3, __float_max@ha
 /* 805A862C  C3 83 0A E8 */	lfs f28, __float_max@l(r3)
-/* 805A8630  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A8634  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A8638  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805A863C  C0 23 04 D0 */	lfs f1, 0x4d0(r3)	/* effective address: 80406690 */
+/* 805A8630  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A8634  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A8638  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805A863C  C0 23 04 D0 */	lfs f1, 0x4d0(r3)
 /* 805A8640  D0 21 00 30 */	stfs f1, 0x30(r1)
-/* 805A8644  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 80406694 */
+/* 805A8644  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 805A8648  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 805A864C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 80406698 */
+/* 805A864C  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 805A8650  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 805A8654  83 C4 00 08 */	lwz r30, 8(r4)
 /* 805A8658  A3 A4 00 00 */	lhz r29, 0(r4)
@@ -131,7 +131,7 @@ lbl_805A87A0:
 /* 805A87A4  41 80 FE CC */	blt lbl_805A8670
 /* 805A87A8  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805A87AC  38 63 91 04 */	addi r3, r3, l_HIO@l
-/* 805A87B0  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 805A9124 */
+/* 805A87B0  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 805A87B4  FC 1C 00 40 */	fcmpo cr0, f28, f0
 /* 805A87B8  40 81 00 0C */	ble lbl_805A87C4
 /* 805A87BC  FF 80 00 90 */	fmr f28, f0
@@ -144,7 +144,7 @@ lbl_805A87C4:
 lbl_805A87D4:
 /* 805A87D4  3C 60 80 5B */	lis r3, l_HIO@ha
 /* 805A87D8  38 63 91 04 */	addi r3, r3, l_HIO@l
-/* 805A87DC  C0 43 00 24 */	lfs f2, 0x24(r3)	/* effective address: 805A9128 */
+/* 805A87DC  C0 43 00 24 */	lfs f2, 0x24(r3)
 /* 805A87E0  EC 3C 10 28 */	fsubs f1, f28, f2
 /* 805A87E4  EC 00 10 28 */	fsubs f0, f0, f2
 /* 805A87E8  EC 21 00 24 */	fdivs f1, f1, f0

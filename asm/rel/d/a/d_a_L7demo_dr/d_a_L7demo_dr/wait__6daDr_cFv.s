@@ -27,14 +27,14 @@ lbl_805A9478:
 lbl_805A94DC:
 /* 805A94DC  2C 00 FF FF */	cmpwi r0, -1
 /* 805A94E0  41 82 01 44 */	beq lbl_805A9624
-/* 805A94E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A94E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A94EC  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805A94E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A94E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A94EC  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805A94F0  7C 00 07 74 */	extsb r0, r0
 /* 805A94F4  38 63 5D 74 */	addi r3, r3, 0x5d74
 /* 805A94F8  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805A94FC  7F C3 00 2E */	lwzx r30, r3, r0
-/* 805A9500  83 A3 00 00 */	lwz r29, 0(r3)	/* effective address: 8040BF34 */
+/* 805A9500  83 A3 00 00 */	lwz r29, 0(r3)
 /* 805A9504  A0 1F 00 F8 */	lhz r0, 0xf8(r31)
 /* 805A9508  28 00 00 02 */	cmplwi r0, 2
 /* 805A950C  40 82 00 A4 */	bne lbl_805A95B0
@@ -43,24 +43,24 @@ lbl_805A94DC:
 /* 805A9518  38 7E 02 48 */	addi r3, r30, 0x248
 /* 805A951C  38 80 00 03 */	li r4, 3
 /* 805A9520  4B BB 9A EC */	b SetTrimSize__9dCamera_cFl
-/* 805A9524  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A9528  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A952C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805A9524  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A9528  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A952C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 805A9530  38 00 00 03 */	li r0, 3
-/* 805A9534  B0 03 06 04 */	sth r0, 0x604(r3)	/* effective address: 804067C4 */
+/* 805A9534  B0 03 06 04 */	sth r0, 0x604(r3)
 /* 805A9538  38 00 00 00 */	li r0, 0
-/* 805A953C  90 03 06 0C */	stw r0, 0x60c(r3)	/* effective address: 804067CC */
+/* 805A953C  90 03 06 0C */	stw r0, 0x60c(r3)
 /* 805A9540  38 60 00 00 */	li r3, 0
 /* 805A9544  4B A8 34 38 */	b getLayerNo__14dComIfG_play_cFi
 /* 805A9548  2C 03 00 03 */	cmpwi r3, 3
 /* 805A954C  41 82 00 34 */	beq lbl_805A9580
 /* 805A9550  3C 60 80 5B */	lis r3, lit_3830@ha
 /* 805A9554  38 83 A4 D0 */	addi r4, r3, lit_3830@l
-/* 805A9558  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AA4D0 */
-/* 805A955C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AA4D4 */
+/* 805A9558  80 64 00 00 */	lwz r3, 0(r4)
+/* 805A955C  80 04 00 04 */	lwz r0, 4(r4)
 /* 805A9560  90 61 00 14 */	stw r3, 0x14(r1)
 /* 805A9564  90 01 00 18 */	stw r0, 0x18(r1)
-/* 805A9568  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AA4D8 */
+/* 805A9568  80 04 00 08 */	lwz r0, 8(r4)
 /* 805A956C  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 805A9570  7F E3 FB 78 */	mr r3, r31
 /* 805A9574  38 81 00 14 */	addi r4, r1, 0x14
@@ -69,11 +69,11 @@ lbl_805A94DC:
 lbl_805A9580:
 /* 805A9580  3C 60 80 5B */	lis r3, lit_3833@ha
 /* 805A9584  38 83 A4 DC */	addi r4, r3, lit_3833@l
-/* 805A9588  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 805AA4DC */
-/* 805A958C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 805AA4E0 */
+/* 805A9588  80 64 00 00 */	lwz r3, 0(r4)
+/* 805A958C  80 04 00 04 */	lwz r0, 4(r4)
 /* 805A9590  90 61 00 08 */	stw r3, 8(r1)
 /* 805A9594  90 01 00 0C */	stw r0, 0xc(r1)
-/* 805A9598  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 805AA4E4 */
+/* 805A9598  80 04 00 08 */	lwz r0, 8(r4)
 /* 805A959C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 805A95A0  7F E3 FB 78 */	mr r3, r31
 /* 805A95A4  38 81 00 08 */	addi r4, r1, 8

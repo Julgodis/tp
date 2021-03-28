@@ -185,13 +185,13 @@ asm JPADynamicsBlock::JPADynamicsBlock(u8 const* param_0) {
 /* ############################################################################################## */
 /* 803C4488-803C44A8 001C+04 s=1 e=0 z=0  None .data      @2631                                                        */
 SECTION_DATA static void* lit_2631[7 + 1 /* padding */] = {
-	/* 0    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x2C),
-	/* 1    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x3C),
-	/* 2    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x4C),
-	/* 3    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x5C),
-	/* 4    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x6C),
-	/* 5    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x7C),
-	/* 6    */ (void*)(((char*)init__16JPADynamicsBlockFv)+0x8C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x2C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x3C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x4C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x5C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x6C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x7C),
+	(void*)(((char*)init__16JPADynamicsBlockFv)+0x8C),
 	/* padding */
 	NULL,
 };

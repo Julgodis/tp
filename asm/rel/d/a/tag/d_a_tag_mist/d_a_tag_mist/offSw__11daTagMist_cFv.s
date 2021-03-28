@@ -9,8 +9,8 @@ lbl_8048F258:
 /* 8048F274  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 8048F278  54 1D 86 3E */	rlwinm r29, r0, 0x10, 0x18, 0x1f
 /* 8048F27C  3B 80 00 00 */	li r28, 0
-/* 8048F280  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048F284  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8048F280  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048F284  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8048F288  48 00 00 1C */	b lbl_8048F2A4
 lbl_8048F28C:
 /* 8048F28C  7F E3 FB 78 */	mr r3, r31

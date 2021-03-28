@@ -7,9 +7,9 @@ lbl_80D5A218:
 /* 80D5A22C  7C 7D 1B 78 */	mr r29, r3
 /* 80D5A230  3C 80 80 D6 */	lis r4, lit_3907@ha
 /* 80D5A234  3B E4 A6 EC */	addi r31, r4, lit_3907@l
-/* 80D5A238  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D5A23C  3B 84 61 C0 */	addi r28, r4, struct_804061C0+0x0@l
-/* 80D5A240  83 DC 5D AC */	lwz r30, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80D5A238  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D5A23C  3B 84 61 C0 */	addi r28, r4, g_dComIfG_gameInfo@l
+/* 80D5A240  83 DC 5D AC */	lwz r30, 0x5dac(r28)
 /* 80D5A244  88 03 05 F6 */	lbz r0, 0x5f6(r3)
 /* 80D5A248  2C 00 00 03 */	cmpwi r0, 3
 /* 80D5A24C  41 82 03 54 */	beq lbl_80D5A5A0
@@ -57,7 +57,7 @@ lbl_80D5A278:
 lbl_80D5A2EC:
 /* 80D5A2EC  3C 60 80 D6 */	lis r3, m_master_id@ha
 /* 80D5A2F0  38 63 A7 10 */	addi r3, r3, m_master_id@l
-/* 80D5A2F4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D5A710 */
+/* 80D5A2F4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5A2F8  28 1D 00 00 */	cmplwi r29, 0
 /* 80D5A2FC  41 82 00 0C */	beq lbl_80D5A308
 /* 80D5A300  80 1D 00 04 */	lwz r0, 4(r29)
@@ -106,7 +106,7 @@ lbl_80D5A354:
 /* 80D5A39C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D5A3A0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5A3A4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5A3A8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5A3A8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5A3AC  38 81 00 14 */	addi r4, r1, 0x14
 /* 80D5A3B0  38 A0 00 00 */	li r5, 0
 /* 80D5A3B4  38 C0 00 00 */	li r6, 0
@@ -159,7 +159,7 @@ lbl_80D5A444:
 /* 80D5A468  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D5A46C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5A470  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5A474  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5A474  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5A478  38 81 00 10 */	addi r4, r1, 0x10
 /* 80D5A47C  38 A0 00 00 */	li r5, 0
 /* 80D5A480  38 C0 00 00 */	li r6, 0
@@ -224,8 +224,8 @@ lbl_80D5A500:
 /* 80D5A560  38 BD 05 E4 */	addi r5, r29, 0x5e4
 /* 80D5A564  38 C0 00 00 */	li r6, 0
 /* 80D5A568  4B 31 D7 FC */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 80D5A56C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5A570  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5A56C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5A570  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5A574  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D5A578  38 81 00 24 */	addi r4, r1, 0x24
 /* 80D5A57C  4B 31 9E 38 */	b LineCross__4cBgSFP11cBgS_LinChk

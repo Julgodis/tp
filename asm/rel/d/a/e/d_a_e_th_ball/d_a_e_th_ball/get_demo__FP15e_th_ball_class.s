@@ -37,15 +37,15 @@ lbl_807B74C0:
 /* 807B74D4  3C 04 00 01 */	addis r0, r4, 1
 /* 807B74D8  28 00 FF FF */	cmplwi r0, 0xffff
 /* 807B74DC  41 82 00 14 */	beq lbl_807B74F0
-/* 807B74E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B74E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B74E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B74E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B74E8  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 807B74EC  4B 88 C2 00 */	b setPtI_Id__14dEvt_control_cFUi
 lbl_807B74F0:
 /* 807B74F0  38 00 00 01 */	li r0, 1
 /* 807B74F4  98 1F 1A 8E */	stb r0, 0x1a8e(r31)
-/* 807B74F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807B74FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807B74F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807B74FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807B7500  38 63 09 58 */	addi r3, r3, 0x958
 /* 807B7504  38 80 00 5F */	li r4, 0x5f
 /* 807B7508  4B 87 D3 08 */	b onSwitch__12dSv_memBit_cFi

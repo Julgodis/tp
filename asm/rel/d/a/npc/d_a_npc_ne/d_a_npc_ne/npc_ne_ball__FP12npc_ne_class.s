@@ -255,7 +255,7 @@ lbl_80A8BE98:
 /* 80A8BEA4  4B 7E 3B 98 */	b cLib_addCalc2__FPffff
 /* 80A8BEA8  3C 60 80 A9 */	lis r3, l_HIO@ha
 /* 80A8BEAC  38 63 2A D4 */	addi r3, r3, l_HIO@l
-/* 80A8BEB0  C0 63 00 0C */	lfs f3, 0xc(r3)	/* effective address: 80A92AE0 */
+/* 80A8BEB0  C0 63 00 0C */	lfs f3, 0xc(r3)
 /* 80A8BEB4  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 80A8BEB8  C0 1D 06 38 */	lfs f0, 0x638(r29)
 /* 80A8BEBC  EC 20 00 F2 */	fmuls f1, f0, f3
@@ -347,7 +347,7 @@ lbl_80A8BFE4:
 /* 80A8BFF8  4B 7E 3A 44 */	b cLib_addCalc2__FPffff
 /* 80A8BFFC  3C 60 80 A9 */	lis r3, l_HIO@ha
 /* 80A8C000  38 63 2A D4 */	addi r3, r3, l_HIO@l
-/* 80A8C004  C0 63 00 10 */	lfs f3, 0x10(r3)	/* effective address: 80A92AE4 */
+/* 80A8C004  C0 63 00 10 */	lfs f3, 0x10(r3)
 /* 80A8C008  38 7D 05 2C */	addi r3, r29, 0x52c
 /* 80A8C00C  C0 1D 06 38 */	lfs f0, 0x638(r29)
 /* 80A8C010  EC 20 00 F2 */	fmuls f1, f0, f3

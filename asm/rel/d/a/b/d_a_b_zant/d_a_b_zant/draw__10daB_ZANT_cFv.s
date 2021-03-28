@@ -99,8 +99,8 @@ lbl_8063E404:
 /* 8063E424  4B B6 69 7C */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 8063E428  80 7F 05 B8 */	lwz r3, 0x5b8(r31)
 /* 8063E42C  4B 9C F8 98 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 8063E430  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8063E434  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8063E430  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8063E434  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8063E438  3B A3 61 C0 */	addi r29, r3, 0x61c0
 /* 8063E43C  7F A3 EB 78 */	mr r3, r29
 /* 8063E440  80 9F 06 E0 */	lwz r4, 0x6e0(r31)

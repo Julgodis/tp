@@ -25,7 +25,7 @@ lbl_80C17C1C:
 /* 80C17C2C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80C17C30  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C17C34  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C17C38  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C17C38  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C17C3C  38 81 00 08 */	addi r4, r1, 8
 /* 80C17C40  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80C17C44  38 C0 00 00 */	li r6, 0
@@ -46,8 +46,8 @@ lbl_80C17C78:
 /* 80C17C7C  48 00 01 95 */	bl setModelMtx__11daObjHFtr_cFv
 /* 80C17C80  3B 80 00 00 */	li r28, 0
 /* 80C17C84  3B C0 00 00 */	li r30, 0
-/* 80C17C88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C17C8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C17C88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C17C8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C17C90  3B A3 23 3C */	addi r29, r3, 0x233c
 lbl_80C17C94:
 /* 80C17C94  7F A3 EB 78 */	mr r3, r29

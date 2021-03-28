@@ -52,9 +52,9 @@ lbl_80A28830:
 /* 80A2885C  38 A0 08 00 */	li r5, 0x800
 /* 80A28860  48 00 0C 45 */	bl _turn_pos__15daNpcKasiMich_cFRC4cXyzs
 /* 80A28864  7F A3 EB 78 */	mr r3, r29
-/* 80A28868  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A2886C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80A28870  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A28868  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A2886C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80A28870  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 80A28874  48 00 0C 8D */	bl actor_front_check__15daNpcKasiMich_cFP10fopAc_ac_c
 /* 80A28878  2C 03 00 00 */	cmpwi r3, 0
 /* 80A2887C  41 82 00 4C */	beq lbl_80A288C8
@@ -66,11 +66,11 @@ lbl_80A28830:
 /* 80A28894  40 80 00 60 */	bge lbl_80A288F4
 /* 80A28898  3C 60 80 A3 */	lis r3, lit_5043@ha
 /* 80A2889C  38 83 A5 E8 */	addi r4, r3, lit_5043@l
-/* 80A288A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2A5E8 */
-/* 80A288A4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2A5EC */
+/* 80A288A0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A288A4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A288A8  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80A288AC  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A288B0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2A5F0 */
+/* 80A288B0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A288B4  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A288B8  7F A3 EB 78 */	mr r3, r29
 /* 80A288BC  38 81 00 14 */	addi r4, r1, 0x14
@@ -79,11 +79,11 @@ lbl_80A28830:
 lbl_80A288C8:
 /* 80A288C8  3C 60 80 A3 */	lis r3, lit_5046@ha
 /* 80A288CC  38 83 A5 F4 */	addi r4, r3, lit_5046@l
-/* 80A288D0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2A5F4 */
-/* 80A288D4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2A5F8 */
+/* 80A288D0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A288D4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A288D8  90 61 00 08 */	stw r3, 8(r1)
 /* 80A288DC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A288E0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2A5FC */
+/* 80A288E0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A288E4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A288E8  7F A3 EB 78 */	mr r3, r29
 /* 80A288EC  38 81 00 08 */	addi r4, r1, 8

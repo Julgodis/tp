@@ -25,7 +25,7 @@ lbl_8083ED88:
 /* 8083EDE4  3B E4 54 AC */	addi r31, r4, lit_3894@l
 /* 8083EDE8  FC 00 DA 10 */	fabs f0, f27
 /* 8083EDEC  FC 20 00 18 */	frsp f1, f0
-/* 8083EDF0  C0 1F 01 98 */	lfs f0, 0x198(r31)	/* effective address: 80845644 */
+/* 8083EDF0  C0 1F 01 98 */	lfs f0, 0x198(r31)
 /* 8083EDF4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8083EDF8  41 80 00 1C */	blt lbl_8083EE14
 /* 8083EDFC  2C 19 00 00 */	cmpwi r25, 0

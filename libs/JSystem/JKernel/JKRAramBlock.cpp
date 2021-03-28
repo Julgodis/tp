@@ -69,9 +69,9 @@ extern "C" void _restgpr_27(); // 1
 /* ############################################################################################## */
 /* 803CC178-803CC188 000C+04 s=2 e=0 z=0  None .data      __vt__12JKRAramBlock                                         */
 SECTION_DATA static void* __vt__12JKRAramBlock[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JKRAramBlockFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JKRAramBlockFv,
 	/* padding */
 	NULL,
 };

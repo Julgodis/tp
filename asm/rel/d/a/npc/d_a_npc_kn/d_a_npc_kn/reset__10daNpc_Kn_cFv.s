@@ -96,7 +96,7 @@ lbl_80A2BB48:
 /* 80A2BB48  38 7E 16 04 */	addi r3, r30, 0x1604
 /* 80A2BB4C  7C 7F 1A 14 */	add r3, r31, r3
 /* 80A2BB50  38 9F 06 D0 */	addi r4, r31, 0x6d0
-/* 80A2BB54  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80A40900 */
+/* 80A2BB54  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 80A2BB58  FC 40 08 90 */	fmr f2, f1
 /* 80A2BB5C  4B 62 51 40 */	b init__7dPaPo_cFP9dBgS_Acchff
 /* 80A2BB60  3B 9C 00 01 */	addi r28, r28, 1

@@ -23,8 +23,8 @@ lbl_8069ABE0:
 /* 8069AC34  3C 60 80 6A */	lis r3, stringBase0@ha
 /* 8069AC38  38 63 1A 6C */	addi r3, r3, stringBase0@l
 /* 8069AC3C  7F A4 EB 78 */	mr r4, r29
-/* 8069AC40  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8069AC44  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8069AC40  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8069AC44  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8069AC48  3C A5 00 02 */	addis r5, r5, 2
 /* 8069AC4C  38 C0 00 80 */	li r6, 0x80
 /* 8069AC50  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -9,8 +9,8 @@ lbl_80497790:
 /* 804977AC  38 80 00 00 */	li r4, 0
 /* 804977B0  4B B8 2F 1C */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 804977B4  38 7F 07 2C */	addi r3, r31, 0x72c
-/* 804977B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 804977BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 804977B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 804977BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 804977C0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 804977C4  4B BD F2 E8 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 804977C8  C0 1F 04 D0 */	lfs f0, 0x4d0(r31)

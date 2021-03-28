@@ -34,10 +34,10 @@ lbl_809F42CC:
 /* 809F42CC  38 00 00 00 */	li r0, 0
 /* 809F42D0  90 1F 0D F8 */	stw r0, 0xdf8(r31)
 /* 809F42D4  90 1F 0D FC */	stw r0, 0xdfc(r31)
-/* 809F42D8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F42DC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809F42E0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 809F42E4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 809F42D8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F42DC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809F42E0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 809F42E4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 809F42E8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 809F42EC  40 82 00 08 */	bne lbl_809F42F4
 /* 809F42F0  3B A0 00 00 */	li r29, 0
@@ -57,20 +57,20 @@ lbl_809F42F4:
 /* 809F4324  93 BF 05 5C */	stw r29, 0x55c(r31)
 /* 809F4328  3C 60 80 A0 */	lis r3, m__19daNpc_GWolf_Param_c@ha
 /* 809F432C  38 83 84 F4 */	addi r4, r3, m__19daNpc_GWolf_Param_c@l
-/* 809F4330  C0 04 00 08 */	lfs f0, 8(r4)	/* effective address: 809F84FC */
+/* 809F4330  C0 04 00 08 */	lfs f0, 8(r4)
 /* 809F4334  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 809F4338  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 809F433C  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
 /* 809F4340  38 7F 07 E4 */	addi r3, r31, 0x7e4
-/* 809F4344  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 809F8510 */
+/* 809F4344  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 809F4348  4B 68 1B F8 */	b SetWallR__12dBgS_AcchCirFf
 /* 809F434C  3C 60 80 A0 */	lis r3, m__19daNpc_GWolf_Param_c@ha
 /* 809F4350  38 83 84 F4 */	addi r4, r3, m__19daNpc_GWolf_Param_c@l
-/* 809F4354  C0 04 00 18 */	lfs f0, 0x18(r4)	/* effective address: 809F850C */
+/* 809F4354  C0 04 00 18 */	lfs f0, 0x18(r4)
 /* 809F4358  D0 1F 08 14 */	stfs f0, 0x814(r31)
-/* 809F435C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F4360  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809F4364  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 809F435C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F4360  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809F4364  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 809F4368  28 00 00 00 */	cmplwi r0, 0
 /* 809F436C  40 82 00 0C */	bne lbl_809F4378
 /* 809F4370  C0 04 00 04 */	lfs f0, 4(r4)

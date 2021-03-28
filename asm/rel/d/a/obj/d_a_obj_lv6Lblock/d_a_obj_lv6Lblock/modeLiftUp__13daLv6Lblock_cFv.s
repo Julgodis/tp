@@ -13,11 +13,11 @@ lbl_80C7386C:
 /* 80C73898  C0 3E 05 B4 */	lfs f1, 0x5b4(r30)
 /* 80C7389C  C0 1E 05 B0 */	lfs f0, 0x5b0(r30)
 /* 80C738A0  EC 21 00 2A */	fadds f1, f1, f0
-/* 80C738A4  C0 5F 00 08 */	lfs f2, 8(r31)	/* effective address: 80C73CC4 */
+/* 80C738A4  C0 5F 00 08 */	lfs f2, 8(r31)
 /* 80C738A8  3C 80 80 C7 */	lis r4, l_HIO@ha
 /* 80C738AC  38 84 3D FC */	addi r4, r4, l_HIO@l
-/* 80C738B0  C0 64 00 04 */	lfs f3, 4(r4)	/* effective address: 80C73E00 */
-/* 80C738B4  C0 9F 00 0C */	lfs f4, 0xc(r31)	/* effective address: 80C73CC8 */
+/* 80C738B0  C0 64 00 04 */	lfs f3, 4(r4)
+/* 80C738B4  C0 9F 00 0C */	lfs f4, 0xc(r31)
 /* 80C738B8  4B 5F C0 C4 */	b cLib_addCalc__FPfffff
 /* 80C738BC  FF E0 08 90 */	fmr f31, f1
 /* 80C738C0  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
@@ -29,7 +29,7 @@ lbl_80C7386C:
 /* 80C738D8  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C738DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C738E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C738E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C738E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C738E8  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C738EC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C738F0  38 C0 00 00 */	li r6, 0
@@ -51,7 +51,7 @@ lbl_80C7386C:
 /* 80C73930  90 01 00 08 */	stw r0, 8(r1)
 /* 80C73934  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C73938  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C7393C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C7393C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C73940  38 81 00 08 */	addi r4, r1, 8
 /* 80C73944  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80C73948  38 C0 00 00 */	li r6, 0

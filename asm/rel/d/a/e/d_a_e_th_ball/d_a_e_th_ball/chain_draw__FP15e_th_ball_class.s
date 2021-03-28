@@ -72,7 +72,7 @@ lbl_807B4A20:
 /* 807B4A24  41 80 FF 40 */	blt lbl_807B4964
 /* 807B4A28  3C 60 80 7C */	lis r3, master@ha
 /* 807B4A2C  38 63 80 E0 */	addi r3, r3, master@l
-/* 807B4A30  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 807B80E0 */
+/* 807B4A30  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B4A34  28 03 00 00 */	cmplwi r3, 0
 /* 807B4A38  41 82 00 10 */	beq lbl_807B4A48
 /* 807B4A3C  88 03 0D 8E */	lbz r0, 0xd8e(r3)

@@ -23,13 +23,13 @@ lbl_8070ED10:
 /* 8070ED64  3B 60 00 00 */	li r27, 0
 /* 8070ED68  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070ED6C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070ED70  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070ED70  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070ED74  A8 9A 07 06 */	lha r4, 0x706(r26)
 /* 8070ED78  4B 8F D6 64 */	b mDoMtx_YrotS__FPA4_fs
 /* 8070ED7C  3B 40 00 00 */	li r26, 0
 /* 8070ED80  3B E0 00 00 */	li r31, 0
-/* 8070ED84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070ED88  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8070ED84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070ED88  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8070ED8C  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8070ED90  C3 7E 00 00 */	lfs f27, 0(r30)
 /* 8070ED94  C3 9E 00 04 */	lfs f28, 4(r30)

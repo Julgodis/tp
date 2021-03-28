@@ -7,10 +7,10 @@ lbl_80D5CBF4:
 /* 80D5CC08  7C 7E 1B 78 */	mr r30, r3
 /* 80D5CC0C  3C 80 80 D6 */	lis r4, lit_3694@ha
 /* 80D5CC10  3B E4 D3 00 */	addi r31, r4, lit_3694@l
-/* 80D5CC14  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D5CC18  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D5CC1C  C0 24 00 34 */	lfs f1, 0x34(r4)	/* effective address: 804061F4 */
-/* 80D5CC20  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80D5D300 */
+/* 80D5CC14  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D5CC18  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D5CC1C  C0 24 00 34 */	lfs f1, 0x34(r4)
+/* 80D5CC20  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80D5CC24  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80D5CC28  FC 00 00 1E */	fctiwz f0, f0
 /* 80D5CC2C  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -63,7 +63,7 @@ lbl_80D5CCD0:
 /* 80D5CCD8  41 82 00 A0 */	beq lbl_80D5CD78
 /* 80D5CCDC  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80D5CCE0  38 63 0D 64 */	addi r3, r3, struct_80450D64+0x0@l
-/* 80D5CCE4  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80450D64 */
+/* 80D5CCE4  88 63 00 00 */	lbz r3, 0(r3)
 /* 80D5CCE8  7C 63 07 75 */	extsb. r3, r3
 /* 80D5CCEC  41 82 00 4C */	beq lbl_80D5CD38
 /* 80D5CCF0  4B 2D 03 7C */	b dComIfGp_getReverb__Fi
@@ -73,7 +73,7 @@ lbl_80D5CCD0:
 /* 80D5CD00  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D5CD04  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5CD08  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5CD0C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5CD0C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5CD10  38 81 00 0C */	addi r4, r1, 0xc
 /* 80D5CD14  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5CD18  38 C0 00 00 */	li r6, 0
@@ -90,7 +90,7 @@ lbl_80D5CD38:
 /* 80D5CD40  90 01 00 08 */	stw r0, 8(r1)
 /* 80D5CD44  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D5CD48  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D5CD4C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D5CD4C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D5CD50  38 81 00 08 */	addi r4, r1, 8
 /* 80D5CD54  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80D5CD58  38 C0 00 00 */	li r6, 0

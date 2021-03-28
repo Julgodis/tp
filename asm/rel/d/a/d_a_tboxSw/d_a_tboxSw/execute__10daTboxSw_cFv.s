@@ -4,16 +4,16 @@ lbl_80D668C8:
 /* 80D668D0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D668D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D668D8  7C 7F 1B 78 */	mr r31, r3
-/* 80D668DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D668E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D668DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D668E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D668E4  38 63 09 58 */	addi r3, r3, 0x958
 /* 80D668E8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D668EC  54 04 06 BE */	clrlwi r4, r0, 0x1a
 /* 80D668F0  4B 2C DE F8 */	b isTbox__12dSv_memBit_cCFi
 /* 80D668F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80D668F8  41 82 00 28 */	beq lbl_80D66920
-/* 80D668FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D66900  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D668FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D66900  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D66904  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D66908  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D6690C  88 1F 04 BA */	lbz r0, 0x4ba(r31)

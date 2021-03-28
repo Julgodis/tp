@@ -11,7 +11,7 @@ lbl_806CFB60:
 /* 806CFB84  4B 93 D3 C0 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 806CFB88  3C 60 80 6D */	lis r3, l_HIO@ha
 /* 806CFB8C  38 63 11 38 */	addi r3, r3, l_HIO@l
-/* 806CFB90  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 806D1140 */
+/* 806CFB90  C0 23 00 08 */	lfs f1, 8(r3)
 /* 806CFB94  FC 40 08 90 */	fmr f2, f1
 /* 806CFB98  FC 60 08 90 */	fmr f3, f1
 /* 806CFB9C  4B 93 D2 9C */	b scaleM__14mDoMtx_stack_cFfff

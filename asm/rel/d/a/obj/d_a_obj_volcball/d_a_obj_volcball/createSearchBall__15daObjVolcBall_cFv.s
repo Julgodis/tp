@@ -11,9 +11,9 @@ lbl_80D23034:
 /* 80D23058  39 61 00 20 */	addi r11, r1, 0x20
 /* 80D2305C  4B 63 F1 80 */	b _savegpr_29
 /* 80D23060  7C 7D 1B 78 */	mr r29, r3
-/* 80D23064  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D23068  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D2306C  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D23064  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D23068  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D2306C  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 80D23070  3B C0 00 00 */	li r30, 0
 /* 80D23074  88 03 28 82 */	lbz r0, 0x2882(r3)
 /* 80D23078  28 00 00 00 */	cmplwi r0, 0

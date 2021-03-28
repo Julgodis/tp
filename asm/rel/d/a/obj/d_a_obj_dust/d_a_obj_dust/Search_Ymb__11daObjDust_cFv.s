@@ -9,14 +9,14 @@ lbl_80BE22B8:
 /* 80BE22D4  3B E3 2F 98 */	addi r31, r3, lit_3673@l
 /* 80BE22D8  3C 60 80 BE */	lis r3, data_80BE30FC@ha
 /* 80BE22DC  38 63 30 FC */	addi r3, r3, data_80BE30FC@l
-/* 80BE22E0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BE30FC */
-/* 80BE22E4  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80BE3104 */
+/* 80BE22E0  80 63 00 00 */	lwz r3, 0(r3)
+/* 80BE22E4  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80BE22E8  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 80BE22EC  EC 61 00 28 */	fsubs f3, f1, f0
-/* 80BE22F0  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 80BE3100 */
+/* 80BE22F0  C0 23 00 04 */	lfs f1, 4(r3)
 /* 80BE22F4  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 80BE22F8  EC 41 00 28 */	fsubs f2, f1, f0
-/* 80BE22FC  C0 23 00 00 */	lfs f1, 0(r3)	/* effective address: 80BE30FC */
+/* 80BE22FC  C0 23 00 00 */	lfs f1, 0(r3)
 /* 80BE2300  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 80BE2304  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80BE2308  D0 01 00 0C */	stfs f0, 0xc(r1)
@@ -53,8 +53,8 @@ lbl_80BE22B8:
 /* 80BE2384  40 80 00 EC */	bge lbl_80BE2470
 /* 80BE2388  3C 60 80 BE */	lis r3, data_80BE30F8@ha
 /* 80BE238C  38 63 30 F8 */	addi r3, r3, data_80BE30F8@l
-/* 80BE2390  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80BE30F8 */
-/* 80BE2394  C0 43 05 2C */	lfs f2, 0x52c(r3)	/* effective address: 80BE3624 */
+/* 80BE2390  80 63 00 00 */	lwz r3, 0(r3)
+/* 80BE2394  C0 43 05 2C */	lfs f2, 0x52c(r3)
 /* 80BE2398  C0 9F 00 00 */	lfs f4, 0(r31)
 /* 80BE239C  FC 02 20 40 */	fcmpo cr0, f2, f4
 /* 80BE23A0  40 81 00 D8 */	ble lbl_80BE2478
@@ -96,7 +96,7 @@ lbl_80BE22B8:
 /* 80BE2430  90 01 00 08 */	stw r0, 8(r1)
 /* 80BE2434  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BE2438  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BE243C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BE243C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BE2440  38 81 00 08 */	addi r4, r1, 8
 /* 80BE2444  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80BE2448  38 C0 00 00 */	li r6, 0

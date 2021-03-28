@@ -7,7 +7,7 @@ lbl_80C521F8:
 /* 80C5220C  7C 7E 1B 78 */	mr r30, r3
 /* 80C52210  3C 60 80 C5 */	lis r3, M_attr__14daObjLndRope_c@ha
 /* 80C52214  3B E3 33 04 */	addi r31, r3, M_attr__14daObjLndRope_c@l
-/* 80C52218  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80C53304 */
+/* 80C52218  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80C5221C  D0 1E 05 30 */	stfs f0, 0x530(r30)
 /* 80C52220  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80C52224  54 03 C6 3E */	rlwinm r3, r0, 0x18, 0x18, 0x1f

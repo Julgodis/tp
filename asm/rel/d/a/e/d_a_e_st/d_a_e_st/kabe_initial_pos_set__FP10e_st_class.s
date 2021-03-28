@@ -19,8 +19,8 @@ lbl_807A5618:
 /* 807A565C  D0 18 04 D4 */	stfs f0, 0x4d4(r24)
 /* 807A5660  3B 20 00 00 */	li r25, 0
 /* 807A5664  3B E0 00 00 */	li r31, 0
-/* 807A5668  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A566C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807A5668  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A566C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807A5670  3B 43 0F 38 */	addi r26, r3, 0xf38
 /* 807A5674  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807A5678  3B 83 07 68 */	addi r28, r3, calc_mtx@l

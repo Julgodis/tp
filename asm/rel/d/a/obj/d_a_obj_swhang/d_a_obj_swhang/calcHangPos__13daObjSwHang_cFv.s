@@ -4,9 +4,9 @@ lbl_80CFC04C:
 /* 80CFC054  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CFC058  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80CFC05C  7C 7F 1B 78 */	mr r31, r3
-/* 80CFC060  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CFC064  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CFC068  80 A3 5D AC */	lwz r5, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80CFC060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CFC064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CFC068  80 A3 5D AC */	lwz r5, 0x5dac(r3)
 /* 80CFC06C  88 1F 07 30 */	lbz r0, 0x730(r31)
 /* 80CFC070  1C 80 00 0C */	mulli r4, r0, 0xc
 /* 80CFC074  3C 60 80 D0 */	lis r3, l_hang_offset@ha

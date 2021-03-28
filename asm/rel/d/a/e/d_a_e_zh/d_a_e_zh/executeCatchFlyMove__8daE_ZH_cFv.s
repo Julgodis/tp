@@ -68,7 +68,7 @@ lbl_8082C740:
 lbl_8082C768:
 /* 8082C768  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 8082C76C  38 63 F7 34 */	addi r3, r3, l_HIO@l
-/* 8082C770  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 8082F740 */
+/* 8082C770  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8082C774  FC 60 08 90 */	fmr f3, f1
 /* 8082C778  80 1E 07 84 */	lwz r0, 0x784(r30)
 /* 8082C77C  2C 00 00 01 */	cmpwi r0, 1
@@ -176,7 +176,7 @@ lbl_8082C8AC:
 lbl_8082C8F8:
 /* 8082C8F8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8082C8FC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8082C900  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8082C900  80 63 00 00 */	lwz r3, 0(r3)
 /* 8082C904  A8 9E 04 DE */	lha r4, 0x4de(r30)
 /* 8082C908  4B 7D FA D4 */	b mDoMtx_YrotS__FPA4_fs
 /* 8082C90C  C0 1F 00 10 */	lfs f0, 0x10(r31)
@@ -212,8 +212,8 @@ lbl_8082C8F8:
 /* 8082C984  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 8082C988  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8082C98C  D0 21 00 24 */	stfs f1, 0x24(r1)
-/* 8082C990  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082C994  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082C990  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082C994  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082C998  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 8082C99C  38 80 00 05 */	li r4, 5
 /* 8082C9A0  38 A0 00 1F */	li r5, 0x1f
@@ -282,8 +282,8 @@ lbl_8082CA70:
 /* 8082CA90  88 1E 07 A9 */	lbz r0, 0x7a9(r30)
 /* 8082CA94  28 00 00 10 */	cmplwi r0, 0x10
 /* 8082CA98  40 82 00 50 */	bne lbl_8082CAE8
-/* 8082CA9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082CAA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082CA9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082CAA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082CAA4  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 8082CAA8  7F E3 FB 78 */	mr r3, r31
 /* 8082CAAC  38 80 26 40 */	li r4, 0x2640
@@ -302,8 +302,8 @@ lbl_8082CA70:
 /* 8082CAE0  4B 80 7E C4 */	b offEventBit__11dSv_event_cFUs
 /* 8082CAE4  48 00 00 4C */	b lbl_8082CB30
 lbl_8082CAE8:
-/* 8082CAE8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082CAEC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082CAE8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082CAEC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082CAF0  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 8082CAF4  7F E3 FB 78 */	mr r3, r31
 /* 8082CAF8  38 80 26 20 */	li r4, 0x2620
@@ -439,8 +439,8 @@ lbl_8082CCC0:
 /* 8082CCD0  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 8082CCD4  7C 04 07 74 */	extsb r4, r0
 /* 8082CCD8  4B 80 0D C4 */	b dComIfGs_onOneZoneSwitch__Fii
-/* 8082CCDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8082CCE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8082CCDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8082CCE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8082CCE4  38 63 09 78 */	addi r3, r3, 0x978
 /* 8082CCE8  38 80 00 28 */	li r4, 0x28
 /* 8082CCEC  4B 80 7E AC */	b onSwitch__12dSv_danBit_cFi

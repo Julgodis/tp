@@ -48,7 +48,7 @@ lbl_80D370C4:
 /* 80D37104  38 63 03 00 */	addi r3, r3, 0x300
 /* 80D37108  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 80D3710C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80D37110  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80D37110  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D37114  4B 60 F3 9C */	b PSMTXCopy
 /* 80D37118  A8 1E 08 36 */	lha r0, 0x836(r30)
 /* 80D3711C  1C 00 15 18 */	mulli r0, r0, 0x1518
@@ -58,7 +58,7 @@ lbl_80D370C4:
 /* 80D3712C  7C 43 04 2E */	lfsx f2, r3, r0
 /* 80D37130  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80D37134  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80D37138  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80D37138  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D3713C  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 80D37140  C0 1E 05 2C */	lfs f0, 0x52c(r30)
 /* 80D37144  EC 00 00 B2 */	fmuls f0, f0, f2
@@ -69,7 +69,7 @@ lbl_80D370C4:
 /* 80D37158  4B 2D 52 44 */	b mDoMtx_XrotM__FPA4_fs
 /* 80D3715C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80D37160  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80D37164  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80D37164  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D37168  80 9E 05 70 */	lwz r4, 0x570(r30)
 /* 80D3716C  38 84 00 24 */	addi r4, r4, 0x24
 /* 80D37170  4B 60 F3 40 */	b PSMTXCopy

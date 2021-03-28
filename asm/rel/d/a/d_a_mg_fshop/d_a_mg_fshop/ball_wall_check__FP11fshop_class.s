@@ -28,8 +28,8 @@ lbl_8086D87C:
 /* 8086D8B8  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 8086D8BC  3B 60 00 00 */	li r27, 0
 /* 8086D8C0  3B 40 00 00 */	li r26, 0
-/* 8086D8C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086D8C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8086D8C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086D8C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8086D8CC  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 8086D8D0  3C 60 80 87 */	lis r3, data_808707A4@ha
 /* 8086D8D4  3B C3 07 A4 */	addi r30, r3, data_808707A4@l

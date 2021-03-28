@@ -19,11 +19,11 @@ lbl_806065D4:
 /* 80606618  4B D3 FE 98 */	b PSMTXCopy
 /* 8060661C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80606620  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 80606624  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 803DD47C */
+/* 80606624  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 80606628  D0 01 00 08 */	stfs f0, 8(r1)
-/* 8060662C  C0 3D 00 1C */	lfs f1, 0x1c(r29)	/* effective address: 803DD48C */
+/* 8060662C  C0 3D 00 1C */	lfs f1, 0x1c(r29)
 /* 80606630  D0 21 00 0C */	stfs f1, 0xc(r1)
-/* 80606634  C0 1D 00 2C */	lfs f0, 0x2c(r29)	/* effective address: 803DD49C */
+/* 80606634  C0 1D 00 2C */	lfs f0, 0x2c(r29)
 /* 80606638  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8060663C  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80606640  EC 01 00 2A */	fadds f0, f1, f0
@@ -31,8 +31,8 @@ lbl_806065D4:
 /* 80606648  38 61 00 14 */	addi r3, r1, 0x14
 /* 8060664C  38 81 00 08 */	addi r4, r1, 8
 /* 80606650  4B C6 16 D8 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80606654  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80606658  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80606654  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80606658  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8060665C  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80606660  7F 83 E3 78 */	mr r3, r28
 /* 80606664  38 81 00 14 */	addi r4, r1, 0x14

@@ -14,8 +14,8 @@ lbl_80CBEB38:
 /* 80CBEB68  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80CBEB6C  38 9D 00 04 */	addi r4, r29, 4
 /* 80CBEB70  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80CBEB74  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CBEB78  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CBEB74  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CBEB78  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CBEB7C  3F E5 00 02 */	addis r31, r5, 2
 /* 80CBEB80  3B FF C2 F8 */	addi r31, r31, -15624
 /* 80CBEB84  7F E5 FB 78 */	mr r5, r31

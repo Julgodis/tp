@@ -11,7 +11,7 @@ lbl_80AA44A4:
 /* 80AA44C8  7C 7D 1B 78 */	mr r29, r3
 /* 80AA44CC  3C 60 80 AA */	lis r3, lit_4109@ha
 /* 80AA44D0  3B E3 69 8C */	addi r31, r3, lit_4109@l
-/* 80AA44D4  C3 FF 00 14 */	lfs f31, 0x14(r31)	/* effective address: 80AA69A0 */
+/* 80AA44D4  C3 FF 00 14 */	lfs f31, 0x14(r31)
 /* 80AA44D8  FF C0 F8 90 */	fmr f30, f31
 /* 80AA44DC  3B DD 08 50 */	addi r30, r29, 0x850
 /* 80AA44E0  80 1D 0B 1C */	lwz r0, 0xb1c(r29)

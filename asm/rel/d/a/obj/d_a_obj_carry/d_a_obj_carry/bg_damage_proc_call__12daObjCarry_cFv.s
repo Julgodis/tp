@@ -8,7 +8,7 @@ lbl_80478D78:
 /* 80478D90  38 A3 A6 50 */	addi r5, r3, cNullVec__6Z2Calc@l
 /* 80478D94  3C 60 80 48 */	lis r3, struct_8047B1DC+0x1@ha
 /* 80478D98  38 83 B1 DD */	addi r4, r3, struct_8047B1DC+0x1@l
-/* 80478D9C  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 8047B1DD */
+/* 80478D9C  88 04 00 00 */	lbz r0, 0(r4)
 /* 80478DA0  7C 00 07 75 */	extsb. r0, r0
 /* 80478DA4  40 82 01 60 */	bne lbl_80478F04
 /* 80478DA8  80 65 02 70 */	lwz r3, 0x270(r5)

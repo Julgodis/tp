@@ -8,6 +8,7 @@ from ...builder import AsyncBuilder
 from ...disassemble import AccessCollector
 from ... import util
 from ..base import *
+from ..symbol import *
 from .base import *
 
 """
@@ -61,35 +62,19 @@ class ASMFunction(Function):
     asm: bool = True
     data: bytearray = None
 
-    ref_addrs: Dict[int, int] = field(default_factory=dict, repr=False)
-
-    @property
-    def sda_hack_references(self):
-        return set()
-        #refs = set()
-        #for block in self.blocks:
-        #    refs.update(
-        #        block.sda_hack_references if block.sda_hack_references else set())
-        #return refs
-
-    def _get_internal_references(self, context, symbol_table):
+    def gather_references(self, context, valid_range):
         addrs = static_analyze.function(self.data, self.addr, self.size)
-        refs = set()
-        for k, addr in addrs.items():
-            self.ref_addrs[k] = addr
-            symbol = symbol_table[-1, addr]
-            if not symbol:
-                continue
-            refs.add((symbol._module, symbol.addr))
-        #refs = set()
-        #for block in self.blocks:
-        #    refs.update(block.internal_references_addr(context, symbol_table))
-        return refs
-      
-    def set_mlts(self, module: int, library: str, translation_unit: str, section: str):
-        super().set_mlts(module, library, translation_unit, section)
-        #for block in self.blocks:
-            #block.set_mlts(module, library, translation_unit, section)
+        if self.addr == 0x80361c3c:
+            context.debug(self.identifier)
+            for k,v in addrs.items():
+                context.debug(f"{k:08X}: {v:08X}")
+
+        function_range = AddressRange(self.start, self.end)
+        self.references = [ 
+            addr 
+            for addr in addrs.values() 
+            if addr in valid_range and not addr in function_range
+        ]
 
     async def export_function_body(self, exporter, builder: AsyncBuilder):
         await builder.write(f" {{")

@@ -42,7 +42,7 @@ lbl_805FA37C:
 /* 805FA394  38 BF 26 A8 */	addi r5, r31, 0x26a8
 /* 805FA398  7C BB 2A 14 */	add r5, r27, r5
 /* 805FA39C  38 DB 04 E4 */	addi r6, r27, 0x4e4
-/* 805FA3A0  C0 3D 00 00 */	lfs f1, 0(r29)	/* effective address: 80602720 */
+/* 805FA3A0  C0 3D 00 00 */	lfs f1, 0(r29)
 /* 805FA3A4  38 FB 01 0C */	addi r7, r27, 0x10c
 /* 805FA3A8  39 00 00 00 */	li r8, 0
 /* 805FA3AC  4B A2 2C 74 */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci

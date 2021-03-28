@@ -19,7 +19,6 @@ extern void* const data_80D12728[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_tks_cpp(); // 1
 
 // 
 // Declarations:

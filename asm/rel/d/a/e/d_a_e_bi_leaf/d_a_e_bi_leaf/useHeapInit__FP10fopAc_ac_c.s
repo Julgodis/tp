@@ -10,8 +10,8 @@ lbl_8068DEA0:
 /* 8068DEC0  3C 60 80 69 */	lis r3, stringBase0@ha
 /* 8068DEC4  38 63 DF E0 */	addi r3, r3, stringBase0@l
 /* 8068DEC8  38 80 00 0F */	li r4, 0xf
-/* 8068DECC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8068DED0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8068DECC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8068DED0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8068DED4  3C A5 00 02 */	addis r5, r5, 2
 /* 8068DED8  38 C0 00 80 */	li r6, 0x80
 /* 8068DEDC  38 A5 C2 F8 */	addi r5, r5, -15624

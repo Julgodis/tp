@@ -9,20 +9,20 @@ lbl_80AC15B4:
 /* 80AC15D0  7C 7E 1B 78 */	mr r30, r3
 /* 80AC15D4  3C 60 80 AC */	lis r3, m__18daNpc_Saru_Param_c@ha
 /* 80AC15D8  3B E3 44 F8 */	addi r31, r3, m__18daNpc_Saru_Param_c@l
-/* 80AC15DC  C0 1F 00 D8 */	lfs f0, 0xd8(r31)	/* effective address: 80AC45D0 */
+/* 80AC15DC  C0 1F 00 D8 */	lfs f0, 0xd8(r31)
 /* 80AC15E0  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80AC15E4  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 80AC45AC */
+/* 80AC15E4  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
 /* 80AC15E8  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 80AC15EC  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80AC15F0  88 1E 0F D8 */	lbz r0, 0xfd8(r30)
 /* 80AC15F4  28 00 00 00 */	cmplwi r0, 0
 /* 80AC15F8  41 82 00 1C */	beq lbl_80AC1614
-/* 80AC15FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AC1600  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AC1604  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80AC1608  80 03 05 8C */	lwz r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 80AC15FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AC1600  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AC1604  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80AC1608  80 03 05 8C */	lwz r0, 0x58c(r3)
 /* 80AC160C  60 00 02 00 */	ori r0, r0, 0x200
-/* 80AC1610  90 03 05 8C */	stw r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 80AC1610  90 03 05 8C */	stw r0, 0x58c(r3)
 lbl_80AC1614:
 /* 80AC1614  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 80AC1618  38 80 00 00 */	li r4, 0
@@ -108,11 +108,11 @@ lbl_80AC1614:
 /* 80AC1758  4B 88 56 14 */	b PSMTXMultVec
 /* 80AC175C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80AC1760  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80AC1764  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80AC1764  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80AC1768  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 80AC176C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80AC176C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80AC1770  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 80AC1774  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80AC1774  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80AC1778  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80AC177C  C0 1F 00 E0 */	lfs f0, 0xe0(r31)
 /* 80AC1780  D0 1E 0E 0C */	stfs f0, 0xe0c(r30)

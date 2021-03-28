@@ -14,11 +14,11 @@ lbl_80BE7194:
 /* 80BE71C4  80 04 00 A0 */	lwz r0, 0xa0(r4)
 /* 80BE71C8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BE71CC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80BE71D0  90 03 01 0C */	stw r0, 0x10c(r3)	/* effective address: 80434BD4 */
+/* 80BE71D0  90 03 01 0C */	stw r0, 0x10c(r3)
 /* 80BE71D4  80 04 00 A4 */	lwz r0, 0xa4(r4)
-/* 80BE71D8  90 03 01 10 */	stw r0, 0x110(r3)	/* effective address: 80434BD8 */
+/* 80BE71D8  90 03 01 10 */	stw r0, 0x110(r3)
 /* 80BE71DC  80 04 00 AC */	lwz r0, 0xac(r4)
-/* 80BE71E0  90 03 01 14 */	stw r0, 0x114(r3)	/* effective address: 80434BDC */
+/* 80BE71E0  90 03 01 14 */	stw r0, 0x114(r3)
 /* 80BE71E4  38 00 00 00 */	li r0, 0
 /* 80BE71E8  3C 60 80 45 */	lis r3, sOldVcdVatCmd__8J3DShape@ha
 /* 80BE71EC  90 03 15 D0 */	stw r0, sOldVcdVatCmd__8J3DShape@l(r3)
@@ -54,8 +54,8 @@ lbl_80BE7194:
 /* 80BE7264  38 7C 00 34 */	addi r3, r28, 0x34
 /* 80BE7268  38 80 00 01 */	li r4, 1
 /* 80BE726C  4B 77 66 78 */	b GXLoadLightObjImm
-/* 80BE7270  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BE7274  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BE7270  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BE7274  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BE7278  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80BE727C  38 80 05 10 */	li r4, 0x510
 /* 80BE7280  4B 44 D7 3C */	b isEventBit__11dSv_event_cCFUs

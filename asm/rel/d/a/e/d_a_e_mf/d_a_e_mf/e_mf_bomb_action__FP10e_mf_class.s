@@ -149,7 +149,7 @@ lbl_8070C4EC:
 /* 8070C4EC  3F BD 00 01 */	addis r29, r29, 1
 /* 8070C4F0  3C 60 80 71 */	lis r3, l_HIO@ha
 /* 8070C4F4  38 63 3F 74 */	addi r3, r3, l_HIO@l
-/* 8070C4F8  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 80713F84 */
+/* 8070C4F8  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 8070C4FC  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 8070C500  EC 20 00 32 */	fmuls f1, f0, f0
 /* 8070C504  C0 01 00 28 */	lfs f0, 0x28(r1)
@@ -209,7 +209,7 @@ lbl_8070C5C8:
 /* 8070C5CC  98 1C 06 D2 */	stb r0, 0x6d2(r28)
 /* 8070C5D0  3C 60 80 71 */	lis r3, l_HIO@ha
 /* 8070C5D4  38 63 3F 74 */	addi r3, r3, l_HIO@l
-/* 8070C5D8  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 80713F84 */
+/* 8070C5D8  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 8070C5DC  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 8070C5E0  EC 20 00 32 */	fmuls f1, f0, f0
 /* 8070C5E4  C0 01 00 28 */	lfs f0, 0x28(r1)
@@ -264,7 +264,7 @@ lbl_8070C688:
 /* 8070C69C  41 80 00 94 */	blt lbl_8070C730
 /* 8070C6A0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8070C6A4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8070C6A8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8070C6A8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8070C6AC  7F A4 EB 78 */	mr r4, r29
 /* 8070C6B0  4B 8F FD 2C */	b mDoMtx_YrotS__FPA4_fs
 /* 8070C6B4  C0 1F 00 A0 */	lfs f0, 0xa0(r31)

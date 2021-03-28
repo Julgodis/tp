@@ -7,11 +7,11 @@ lbl_80AB4B20:
 /* 80AB4B34  7C 7E 1B 78 */	mr r30, r3
 /* 80AB4B38  3C 60 80 AB */	lis r3, m__17daNpcPray_Param_c@ha
 /* 80AB4B3C  3B E3 58 08 */	addi r31, r3, m__17daNpcPray_Param_c@l
-/* 80AB4B40  C0 1F 01 38 */	lfs f0, 0x138(r31)	/* effective address: 80AB5940 */
+/* 80AB4B40  C0 1F 01 38 */	lfs f0, 0x138(r31)
 /* 80AB4B44  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80AB4B48  C0 1F 01 3C */	lfs f0, 0x13c(r31)	/* effective address: 80AB5944 */
+/* 80AB4B48  C0 1F 01 3C */	lfs f0, 0x13c(r31)
 /* 80AB4B4C  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80AB4B50  C0 1F 01 40 */	lfs f0, 0x140(r31)	/* effective address: 80AB5948 */
+/* 80AB4B50  C0 1F 01 40 */	lfs f0, 0x140(r31)
 /* 80AB4B54  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80AB4B58  38 61 00 08 */	addi r3, r1, 8
 /* 80AB4B5C  38 80 00 00 */	li r4, 0

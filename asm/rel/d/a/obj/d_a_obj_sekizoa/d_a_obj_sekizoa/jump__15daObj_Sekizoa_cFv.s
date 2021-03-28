@@ -229,8 +229,8 @@ lbl_80CD121C:
 /* 80CD1254  C0 1F 00 CC */	lfs f0, 0xcc(r31)
 /* 80CD1258  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 80CD125C  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 80CD1260  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD1264  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD1260  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD1264  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD1268  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CD126C  38 80 00 05 */	li r4, 5
 /* 80CD1270  38 A0 00 0F */	li r5, 0xf

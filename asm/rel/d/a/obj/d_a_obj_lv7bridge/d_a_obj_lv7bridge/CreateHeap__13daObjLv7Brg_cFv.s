@@ -14,8 +14,8 @@ lbl_80C867CC:
 /* 80C867FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80C86800  38 9F 00 00 */	addi r4, r31, 0
 /* 80C86804  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80C86808  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80C8680C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80C86808  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80C8680C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80C86810  3F C5 00 02 */	addis r30, r5, 2
 /* 80C86814  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80C86818  7F C5 F3 78 */	mr r5, r30

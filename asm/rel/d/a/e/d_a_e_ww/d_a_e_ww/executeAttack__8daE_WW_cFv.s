@@ -9,9 +9,9 @@ lbl_807E9C1C:
 /* 807E9C38  7C 7C 1B 78 */	mr r28, r3
 /* 807E9C3C  3C 80 80 7F */	lis r4, lit_3905@ha
 /* 807E9C40  3B C4 F7 70 */	addi r30, r4, lit_3905@l
-/* 807E9C44  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807E9C48  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 807E9C4C  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 807E9C44  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807E9C48  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 807E9C4C  83 BF 5D AC */	lwz r29, 0x5dac(r31)
 /* 807E9C50  80 03 06 BC */	lwz r0, 0x6bc(r3)
 /* 807E9C54  28 00 00 1A */	cmplwi r0, 0x1a
 /* 807E9C58  41 81 07 AC */	bgt lbl_807EA404
@@ -27,7 +27,7 @@ lbl_807E9C74:
 /* 807E9C7C  C0 3E 00 5C */	lfs f1, 0x5c(r30)
 /* 807E9C80  3C C0 80 7F */	lis r6, l_HIO@ha
 /* 807E9C84  38 C6 FB CC */	addi r6, r6, l_HIO@l
-/* 807E9C88  C0 46 00 10 */	lfs f2, 0x10(r6)	/* effective address: 807EFBDC */
+/* 807E9C88  C0 46 00 10 */	lfs f2, 0x10(r6)
 /* 807E9C8C  4B FF DE 51 */	bl setBck__8daE_WW_cFiUcff
 /* 807E9C90  38 00 00 01 */	li r0, 1
 /* 807E9C94  90 1C 06 BC */	stw r0, 0x6bc(r28)
@@ -35,7 +35,7 @@ lbl_807E9C74:
 /* 807E9C9C  90 1C 07 28 */	stw r0, 0x728(r28)
 /* 807E9CA0  3C 60 80 7F */	lis r3, l_HIO@ha
 /* 807E9CA4  38 63 FB CC */	addi r3, r3, l_HIO@l
-/* 807E9CA8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 807EFBE4 */
+/* 807E9CA8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 807E9CAC  D0 1C 05 2C */	stfs f0, 0x52c(r28)
 /* 807E9CB0  38 00 01 2C */	li r0, 0x12c
 /* 807E9CB4  90 1C 07 2C */	stw r0, 0x72c(r28)
@@ -480,8 +480,8 @@ lbl_807EA2D8:
 /* 807EA338  38 61 00 38 */	addi r3, r1, 0x38
 /* 807EA33C  38 81 00 20 */	addi r4, r1, 0x20
 /* 807EA340  4B A7 D9 E8 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 807EA344  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807EA348  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807EA344  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807EA348  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807EA34C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807EA350  38 81 00 38 */	addi r4, r1, 0x38
 /* 807EA354  4B 88 A1 4C */	b GroundCross__4cBgSFP11cBgS_GndChk

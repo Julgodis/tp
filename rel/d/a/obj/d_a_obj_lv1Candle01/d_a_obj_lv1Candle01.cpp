@@ -66,14 +66,17 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
 	/* 8004D1B8 */ void setSimple(u16, cXyz const*, dKy_tevstr_c const*, u8, _GXColor const&, _GXColor const&, int, f32);
+};
+
+struct dBgW {
 };
 
 struct cBgS_PolyInfo {
@@ -82,15 +85,8 @@ struct cBgS_PolyInfo {
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 	/* 80078950 */ void MoveBGExecute();
@@ -160,10 +156,10 @@ struct Z2SoundObjSimple {
 // Forward References:
 // 
 
-static void daLv1Cdl01_Draw(daLv1Cdl01_c*); // 2
-static void daLv1Cdl01_Execute(daLv1Cdl01_c*); // 2
-static void daLv1Cdl01_Delete(daLv1Cdl01_c*); // 2
-static void daLv1Cdl01_Create(fopAc_ac_c*); // 2
+void daLv1Cdl01_Draw(daLv1Cdl01_c*); // 2
+void daLv1Cdl01_Execute(daLv1Cdl01_c*); // 2
+void daLv1Cdl01_Delete(daLv1Cdl01_c*); // 2
+void daLv1Cdl01_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__16daLv1Cdl01_HIO_cFv(); // 1
 extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
@@ -179,13 +175,14 @@ extern "C" void pointLightProc__12daLv1Cdl01_cFv(); // 1
 extern "C" void Execute__12daLv1Cdl01_cFPPA3_A4_f(); // 1
 extern "C" void Draw__12daLv1Cdl01_cFv(); // 1
 extern "C" void Delete__12daLv1Cdl01_cFv(); // 1
-extern "C" static void daLv1Cdl01_Draw__FP12daLv1Cdl01_c(); // 1
-extern "C" static void daLv1Cdl01_Execute__FP12daLv1Cdl01_c(); // 1
-extern "C" static void daLv1Cdl01_Delete__FP12daLv1Cdl01_c(); // 1
-extern "C" static void daLv1Cdl01_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daLv1Cdl01_Draw__FP12daLv1Cdl01_c(); // 1
+extern "C" void daLv1Cdl01_Execute__FP12daLv1Cdl01_c(); // 1
+extern "C" void daLv1Cdl01_Delete__FP12daLv1Cdl01_c(); // 1
+extern "C" void daLv1Cdl01_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__16daLv1Cdl01_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_lv1Candle01_cpp(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daLv1Cdl01_Method[8];
 extern "C" extern void* g_profile_Obj_Lv1Cdl01[12];
 
 // 
@@ -215,10 +212,6 @@ extern "C" void dComIfGp_getReverb__Fi(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
@@ -252,24 +245,15 @@ extern "C" void PSMTXCopy(); // 1
 extern "C" void PSMTXTrans(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
 extern "C" extern void* __vt__9dCcD_Stts[11];
 extern "C" extern void* __vt__12cCcD_CylAttr[25];
 extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
 extern "C" extern void* __vt__9cCcD_Stts[8];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u32 g_whiteColor;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" void __register_global_object(); // 1
@@ -289,74 +273,74 @@ SECTION_DATA static u8 mCcDCyl__12daLv1Cdl01_c[68] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C57910-80C57930 0020+00 s=1 e=0 z=0  None .data      l_daLv1Cdl01_Method                                          */
-SECTION_DATA static void* l_daLv1Cdl01_Method[8] = {
-	/* 0    */ (void*)daLv1Cdl01_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daLv1Cdl01_Delete__FP12daLv1Cdl01_c,
-	/* 2    */ (void*)daLv1Cdl01_Execute__FP12daLv1Cdl01_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daLv1Cdl01_Draw__FP12daLv1Cdl01_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C57910-80C57930 0020+00 s=0 e=0 z=0  None .data      l_daLv1Cdl01_Method                                          */
+SECTION_DATA void* l_daLv1Cdl01_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C57930-80C57960 0030+00 s=0 e=0 z=1  None .data      g_profile_Obj_Lv1Cdl01                                       */
+/* 80C57930-80C57960 0030+00 s=0 e=0 z=0  None .data      g_profile_Obj_Lv1Cdl01                                       */
 SECTION_DATA void* g_profile_Obj_Lv1Cdl01[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x003A0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000078C,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01EF0000,
-	/* 9    */ (void*)&l_daLv1Cdl01_Method,
-	/* 10   */ (void*)0x00060000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x003A0000,
+	(void*)NULL,
+	(void*)0x0000078C,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01EF0000,
+	(void*)NULL,
+	(void*)0x00060000,
+	(void*)0x000E0000,
 };
 
 /* 80C57960-80C5796C 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCyl                                              */
 SECTION_DATA static void* __vt__8cM3dGCyl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCylFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C5796C-80C57978 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGAab                                              */
 SECTION_DATA static void* __vt__8cM3dGAab[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGAabFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C57978-80C579A0 0028+00 s=1 e=0 z=0  None .data      __vt__12daLv1Cdl01_c                                         */
 SECTION_DATA static void* __vt__12daLv1Cdl01_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__12daLv1Cdl01_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__12daLv1Cdl01_cFPPA3_A4_f,
-	/* 5    */ (void*)Draw__12daLv1Cdl01_cFv,
-	/* 6    */ (void*)Delete__12daLv1Cdl01_cFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C579A0-80C579AC 000C+00 s=2 e=0 z=0  None .data      __vt__16daLv1Cdl01_HIO_c                                     */
 SECTION_DATA static void* __vt__16daLv1Cdl01_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16daLv1Cdl01_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C579AC-80C579B8 000C+00 s=3 e=0 z=0  None .data      __vt__14mDoHIO_entry_c                                       */
 SECTION_DATA static void* __vt__14mDoHIO_entry_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14mDoHIO_entry_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C56CAC-80C56CD8 002C+00 s=1 e=0 z=0  None .text      __ct__16daLv1Cdl01_HIO_cFv                                   */
@@ -370,7 +354,7 @@ asm daLv1Cdl01_HIO_c::daLv1Cdl01_HIO_c() {
 #pragma pop
 
 
-/* 80C56CD8-80C56D20 0048+00 s=1 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
+/* 80C56CD8-80C56D20 0048+00 s=0 e=0 z=0  None .text      __dt__14mDoHIO_entry_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -448,7 +432,7 @@ SECTION_RODATA static u32 const lit_3916 = 0x43020000;
 SECTION_DEAD char const* const stringBase_80C578C0 = "lv1cdl01";
 #pragma pop
 
-/* 80C56DA8-80C56E14 006C+00 s=1 e=0 z=0  None .text      CreateHeap__12daLv1Cdl01_cFv                                 */
+/* 80C56DA8-80C56E14 006C+00 s=0 e=0 z=0  None .text      CreateHeap__12daLv1Cdl01_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -470,7 +454,7 @@ asm void daLv1Cdl01_c::create() {
 #pragma pop
 
 
-/* 80C57048-80C57090 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
+/* 80C57048-80C57090 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGCylFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -481,7 +465,7 @@ asm cM3dGCyl::~cM3dGCyl() {
 #pragma pop
 
 
-/* 80C57090-80C570D8 0048+00 s=1 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
+/* 80C57090-80C570D8 0048+00 s=0 e=0 z=0  None .text      __dt__8cM3dGAabFv                                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -536,7 +520,7 @@ asm void daLv1Cdl01_c::pointLightProc() {
 #pragma pop
 
 
-/* 80C57274-80C575F4 0380+00 s=1 e=0 z=0  None .text      Execute__12daLv1Cdl01_cFPPA3_A4_f                            */
+/* 80C57274-80C575F4 0380+00 s=0 e=0 z=0  None .text      Execute__12daLv1Cdl01_cFPPA3_A4_f                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -547,7 +531,7 @@ asm void daLv1Cdl01_c::Execute(f32 (** param_0)[3][4]) {
 #pragma pop
 
 
-/* 80C575F4-80C57698 00A4+00 s=1 e=0 z=0  None .text      Draw__12daLv1Cdl01_cFv                                       */
+/* 80C575F4-80C57698 00A4+00 s=0 e=0 z=0  None .text      Draw__12daLv1Cdl01_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -558,7 +542,7 @@ asm void daLv1Cdl01_c::Draw() {
 #pragma pop
 
 
-/* 80C57698-80C576F0 0058+00 s=1 e=0 z=0  None .text      Delete__12daLv1Cdl01_cFv                                     */
+/* 80C57698-80C576F0 0058+00 s=0 e=0 z=0  None .text      Delete__12daLv1Cdl01_cFv                                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -569,51 +553,51 @@ asm void daLv1Cdl01_c::Delete() {
 #pragma pop
 
 
-/* 80C576F0-80C5771C 002C+00 s=1 e=0 z=0  None .text      daLv1Cdl01_Draw__FP12daLv1Cdl01_c                            */
+/* 80C576F0-80C5771C 002C+00 s=0 e=0 z=0  None .text      daLv1Cdl01_Draw__FP12daLv1Cdl01_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv1Cdl01_Draw(daLv1Cdl01_c* param_0) {
+asm void daLv1Cdl01_Draw(daLv1Cdl01_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Draw__FP12daLv1Cdl01_c.s"
 }
 #pragma pop
 
 
-/* 80C5771C-80C5773C 0020+00 s=1 e=0 z=0  None .text      daLv1Cdl01_Execute__FP12daLv1Cdl01_c                         */
+/* 80C5771C-80C5773C 0020+00 s=0 e=0 z=0  None .text      daLv1Cdl01_Execute__FP12daLv1Cdl01_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv1Cdl01_Execute(daLv1Cdl01_c* param_0) {
+asm void daLv1Cdl01_Execute(daLv1Cdl01_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Execute__FP12daLv1Cdl01_c.s"
 }
 #pragma pop
 
 
-/* 80C5773C-80C5775C 0020+00 s=1 e=0 z=0  None .text      daLv1Cdl01_Delete__FP12daLv1Cdl01_c                          */
+/* 80C5773C-80C5775C 0020+00 s=0 e=0 z=0  None .text      daLv1Cdl01_Delete__FP12daLv1Cdl01_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv1Cdl01_Delete(daLv1Cdl01_c* param_0) {
+asm void daLv1Cdl01_Delete(daLv1Cdl01_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Delete__FP12daLv1Cdl01_c.s"
 }
 #pragma pop
 
 
-/* 80C5775C-80C5777C 0020+00 s=1 e=0 z=0  None .text      daLv1Cdl01_Create__FP10fopAc_ac_c                            */
+/* 80C5775C-80C5777C 0020+00 s=0 e=0 z=0  None .text      daLv1Cdl01_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daLv1Cdl01_Create(fopAc_ac_c* param_0) {
+asm void daLv1Cdl01_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lv1Candle01/d_a_obj_lv1Candle01/daLv1Cdl01_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80C5777C-80C577D8 005C+00 s=2 e=0 z=0  None .text      __dt__16daLv1Cdl01_HIO_cFv                                   */
+/* 80C5777C-80C577D8 005C+00 s=1 e=0 z=0  None .text      __dt__16daLv1Cdl01_HIO_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -631,7 +615,7 @@ static u8 lit_3620[12];
 /* 80C579CC-80C579D4 0008+00 s=1 e=0 z=0  None .bss       l_HIO                                                        */
 static u8 l_HIO[8];
 
-/* 80C577D8-80C57848 0070+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_lv1Candle01_cpp                              */
+/* 80C577D8-80C57848 0070+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_lv1Candle01_cpp                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

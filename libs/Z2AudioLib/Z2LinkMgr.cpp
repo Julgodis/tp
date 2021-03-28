@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
 struct Z2SoundHandlePool {
 };
 
 struct Vec {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundObjBase {
@@ -61,6 +61,9 @@ struct Z2CreatureLink {
 	/* 802C48D8 */ void setResumeAttack(bool);
 };
 
+struct JAISoundHandle {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -68,9 +71,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
 };
 
 struct Z2LinkSoundStarter {
@@ -364,76 +364,76 @@ asm void Z2CreatureLink::setLinkBootsType(s32 param_0) {
 /* ############################################################################################## */
 /* 803CB8F0-803CB910 0020+00 s=1 e=0 z=1  None .data      __vt__15Z2SoundObjCoach                                      */
 SECTION_DATA void* __vt__15Z2SoundObjCoach[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)framework__14Z2SoundObjBaseFUlSc,
-	/* 3    */ (void*)dispose__14Z2SoundObjBaseFv,
-	/* 4    */ (void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
-	/* 5    */ (void*)init__15Z2SoundObjCoachFP3VecUc,
-	/* 6    */ (void*)startSound__15Z2SoundObjCoachF10JAISoundIDUlSc,
-	/* 7    */ (void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)framework__14Z2SoundObjBaseFUlSc,
+	(void*)dispose__14Z2SoundObjBaseFv,
+	(void*)stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool,
+	(void*)init__15Z2SoundObjCoachFP3VecUc,
+	(void*)startSound__15Z2SoundObjCoachF10JAISoundIDUlSc,
+	(void*)startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc,
 };
 
 /* 803CB910-803CB924 0014+00 s=3 e=0 z=0  None .data      __vt__18Z2RideSoundStarter                                   */
 SECTION_DATA static void* __vt__18Z2RideSoundStarter[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18Z2RideSoundStarterFv,
-	/* 3    */ (void*)func_802AABF4,
-	/* 4    */ (void*)func_802C5284,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18Z2RideSoundStarterFv,
+	(void*)func_802AABF4,
+	(void*)func_802C5284,
 };
 
 /* 803CB924-803CB96C 0048+00 s=2 e=0 z=0  None .data      __vt__14Z2CreatureRide                                       */
 SECTION_DATA static void* __vt__14Z2CreatureRide[18] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)deleteObject__14Z2CreatureRideFv,
-	/* 3    */ (void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
-	/* 4    */ (void*)framework__10Z2CreatureFUlSc,
-	/* 5    */ (void*)startCreatureSound__10Z2CreatureF10JAISoundIDUlSc,
-	/* 6    */ (void*)startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
-	/* 7    */ (void*)startCreatureVoice__10Z2CreatureF10JAISoundIDSc,
-	/* 8    */ (void*)startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc,
-	/* 9    */ (void*)startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc,
-	/* 10   */ (void*)startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
-	/* 11   */ (void*)startCollisionSE__10Z2CreatureFUlUl,
-	/* 12   */ (void*)NULL,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)func_802C5894,
-	/* 15   */ (void*)func_802AABF4,
-	/* 16   */ (void*)func_802C5284,
-	/* 17   */ (void*)__dt__14Z2CreatureRideFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)deleteObject__14Z2CreatureRideFv,
+	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
+	(void*)framework__10Z2CreatureFUlSc,
+	(void*)startCreatureSound__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureVoice__10Z2CreatureF10JAISoundIDSc,
+	(void*)startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc,
+	(void*)startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCollisionSE__10Z2CreatureFUlUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802C5894,
+	(void*)func_802AABF4,
+	(void*)func_802C5284,
+	(void*)__dt__14Z2CreatureRideFv,
 };
 
 /* 803CB96C-803CB980 0014+00 s=3 e=0 z=0  None .data      __vt__18Z2LinkSoundStarter                                   */
 SECTION_DATA static void* __vt__18Z2LinkSoundStarter[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18Z2LinkSoundStarterFv,
-	/* 3    */ (void*)func_802AABF4,
-	/* 4    */ (void*)func_802C4928,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18Z2LinkSoundStarterFv,
+	(void*)func_802AABF4,
+	(void*)func_802C4928,
 };
 
 /* 803CB980-803CB9C8 0048+00 s=2 e=0 z=0  None .data      __vt__14Z2CreatureLink                                       */
 SECTION_DATA static void* __vt__14Z2CreatureLink[18] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)deleteObject__14Z2CreatureLinkFv,
-	/* 3    */ (void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
-	/* 4    */ (void*)framework__14Z2CreatureLinkFUlSc,
-	/* 5    */ (void*)startCreatureSound__10Z2CreatureF10JAISoundIDUlSc,
-	/* 6    */ (void*)startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
-	/* 7    */ (void*)startCreatureVoice__10Z2CreatureF10JAISoundIDSc,
-	/* 8    */ (void*)startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc,
-	/* 9    */ (void*)startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc,
-	/* 10   */ (void*)startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
-	/* 11   */ (void*)startCollisionSE__14Z2CreatureLinkFUlUl,
-	/* 12   */ (void*)NULL,
-	/* 13   */ (void*)NULL,
-	/* 14   */ (void*)func_802C588C,
-	/* 15   */ (void*)func_802AABF4,
-	/* 16   */ (void*)func_802C4928,
-	/* 17   */ (void*)__dt__14Z2CreatureLinkFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)deleteObject__14Z2CreatureLinkFv,
+	(void*)setSoundStarter__10Z2CreatureFP14Z2SoundStarter,
+	(void*)framework__14Z2CreatureLinkFUlSc,
+	(void*)startCreatureSound__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureVoice__10Z2CreatureF10JAISoundIDSc,
+	(void*)startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc,
+	(void*)startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc,
+	(void*)startCollisionSE__14Z2CreatureLinkFUlUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802C588C,
+	(void*)func_802AABF4,
+	(void*)func_802C4928,
+	(void*)__dt__14Z2CreatureLinkFv,
 };
 
 /* 80451360-80451368 0004+04 s=3 e=15 z=0  None .sbss      mLinkPtr__14Z2CreatureLink                                   */

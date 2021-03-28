@@ -14,7 +14,7 @@ lbl_80AFDAA4:
 /* 80AFDAD4  41 80 00 18 */	blt lbl_80AFDAEC
 /* 80AFDAD8  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFDADC  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFDAE0  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFDAE0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFDAE4  4B 65 50 C0 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 80AFDAE8  7C 66 1B 78 */	mr r6, r3
 lbl_80AFDAEC:

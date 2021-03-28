@@ -9,7 +9,7 @@ lbl_8065E888:
 /* 8065E8A4  7C 7E 1B 78 */	mr r30, r3
 /* 8065E8A8  3C 80 80 66 */	lis r4, lit_3987@ha
 /* 8065E8AC  3B E4 2D B0 */	addi r31, r4, lit_3987@l
-/* 8065E8B0  C3 FF 01 04 */	lfs f31, 0x104(r31)	/* effective address: 80662EB4 */
+/* 8065E8B0  C3 FF 01 04 */	lfs f31, 0x104(r31)
 /* 8065E8B4  88 83 0C 60 */	lbz r4, 0xc60(r3)
 /* 8065E8B8  2C 04 00 02 */	cmpwi r4, 2
 /* 8065E8BC  41 82 00 BC */	beq lbl_8065E978
@@ -48,10 +48,10 @@ lbl_8065E914:
 /* 8065E934  38 00 00 01 */	li r0, 1
 /* 8065E938  98 1E 0C 60 */	stb r0, 0xc60(r30)
 lbl_8065E93C:
-/* 8065E93C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065E940  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065E944  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8065E948  C0 03 05 2C */	lfs f0, 0x52c(r3)	/* effective address: 804066EC */
+/* 8065E93C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065E940  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065E944  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8065E948  C0 03 05 2C */	lfs f0, 0x52c(r3)
 /* 8065E94C  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 8065E950  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8065E954  40 82 00 E8 */	bne lbl_8065EA3C
@@ -136,10 +136,10 @@ lbl_8065EA60:
 lbl_8065EA78:
 /* 8065EA78  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
 /* 8065EA7C  41 82 00 3C */	beq lbl_8065EAB8
-/* 8065EA80  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8065EA84  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8065EA88  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8065EA8C  C0 23 05 2C */	lfs f1, 0x52c(r3)	/* effective address: 804066EC */
+/* 8065EA80  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8065EA84  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8065EA88  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8065EA8C  C0 23 05 2C */	lfs f1, 0x52c(r3)
 /* 8065EA90  C0 1F 00 18 */	lfs f0, 0x18(r31)
 /* 8065EA94  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 8065EA98  40 82 00 14 */	bne lbl_8065EAAC

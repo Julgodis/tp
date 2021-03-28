@@ -179,10 +179,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct csXyz {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct csXyz {
 };
 
 struct dPa_control_c {
@@ -960,22 +960,22 @@ SECTION_DATA static u8 lightMaskData[16] = {
 
 /* 803BBEBC-803BBEFC 0040+00 s=1 e=0 z=0  None .data      @4322                                                        */
 SECTION_DATA static void* lit_4322[16] = {
-	/* 0    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x1BC),
-	/* 1    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x38),
-	/* 2    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x54),
-	/* 3    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x70),
-	/* 4    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x8C),
-	/* 5    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xA8),
-	/* 6    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xC4),
-	/* 7    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xE0),
-	/* 8    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xFC),
-	/* 9    */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x118),
-	/* 10   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x150),
-	/* 11   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x134),
-	/* 12   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x134),
-	/* 13   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x16C),
-	/* 14   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x188),
-	/* 15   */ (void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x1A4),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x1BC),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x38),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x54),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x70),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x8C),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xA8),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xC4),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xE0),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0xFC),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x118),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x150),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x134),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x134),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x16C),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x188),
+	(void*)(((char*)dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10)+0x1A4),
 };
 
 /* 8019CB0C-8019CCDC 01D0+00 s=3 e=0 z=0  None .text      dKy_WolfPowerup_BgAmbCol__FP11_GXColorS10                    */
@@ -992,22 +992,22 @@ asm static void dKy_WolfPowerup_BgAmbCol(_GXColorS10* param_0) {
 /* ############################################################################################## */
 /* 803BBEFC-803BBF3C 0040+00 s=1 e=0 z=0  None .data      @4364                                                        */
 SECTION_DATA static void* lit_4364[16] = {
-	/* 0    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x168),
-	/* 1    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x40),
-	/* 2    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x54),
-	/* 3    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x68),
-	/* 4    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x7C),
-	/* 5    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x90),
-	/* 6    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xA4),
-	/* 7    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xB8),
-	/* 8    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xCC),
-	/* 9    */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xE0),
-	/* 10   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xF4),
-	/* 11   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x108),
-	/* 12   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x11C),
-	/* 13   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x130),
-	/* 14   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x144),
-	/* 15   */ (void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x158),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x168),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x40),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x54),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x68),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x7C),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x90),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xA4),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xB8),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xCC),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xE0),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0xF4),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x108),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x11C),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x130),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x144),
+	(void*)(((char*)dKy_WolfPowerup_FogNearFar__FPfPf)+0x158),
 };
 
 /* 80453BC0-80453BC4 0004+00 s=1 e=0 z=0  None .sdata2    @4345                                                        */
@@ -1157,13 +1157,13 @@ asm static void dKy_lightdir_set(f32 param_0, f32 param_1, Vec* param_2) {
 /* ############################################################################################## */
 /* 803BBF3C-803BBF58 001C+00 s=1 e=0 z=0  None .data      @4511                                                        */
 SECTION_DATA static void* lit_4511[7] = {
-	/* 0    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x158),
-	/* 1    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x78),
-	/* 2    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x8C),
-	/* 3    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xA8),
-	/* 4    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xC4),
-	/* 5    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xF0),
-	/* 6    */ (void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x120),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x158),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x78),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x8C),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xA8),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xC4),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0xF0),
+	(void*)(((char*)dKy_GXInitLightSpot__FP12J3DLightInfofUc)+0x120),
 };
 
 /* 80453C3C-80453C40 0004+00 s=1 e=0 z=0  None .sdata2    @4502                                                        */
@@ -1609,26 +1609,26 @@ asm void dKy_clear_game_init() {
 /* ############################################################################################## */
 /* 803BBFD0-803BBFF0 0020+00 s=1 e=0 z=0  None .data      @5842                                                        */
 SECTION_DATA static void* lit_5842[8] = {
-	/* 0    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3D8),
-	/* 1    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3E0),
-	/* 2    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3E8),
-	/* 3    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3F0),
-	/* 4    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3F8),
-	/* 5    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x400),
-	/* 6    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x408),
-	/* 7    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x410),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3D8),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3E0),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3E8),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3F0),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x3F8),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x400),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x408),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x410),
 };
 
 /* 803BBFF0-803BC010 0020+00 s=1 e=0 z=0  None .data      @5841                                                        */
 SECTION_DATA static void* lit_5841[8] = {
-	/* 0    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x168),
-	/* 1    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x170),
-	/* 2    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x178),
-	/* 3    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x180),
-	/* 4    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x188),
-	/* 5    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x190),
-	/* 6    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x198),
-	/* 7    */ (void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x1A0),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x168),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x170),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x178),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x180),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x188),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x190),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x198),
+	(void*)(((char*)setLight_palno_get__18dScnKy_env_light_cFPUcPUcPUcPUcPUcPUcPUcPUcPfPiPiPfPUc)+0x1A0),
 };
 
 /* 803BC010-803BC028 0018+00 s=1 e=0 z=0  None .data      now_shadow_alpha$5927                                        */
@@ -1639,28 +1639,28 @@ SECTION_DATA static u8 data_803BC010[24] = {
 
 /* 803BC028-803BC050 0028+00 s=1 e=0 z=0  None .data      @6776                                                        */
 SECTION_DATA static void* lit_6776[10] = {
-	/* 0    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x72C),
-	/* 1    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x4D4),
-	/* 2    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x528),
-	/* 3    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x558),
-	/* 4    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x4F0),
-	/* 5    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x50C),
-	/* 6    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x6A8),
-	/* 7    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x5B0),
-	/* 8    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x72C),
-	/* 9    */ (void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x584),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x72C),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x4D4),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x528),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x558),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x4F0),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x50C),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x6A8),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x5B0),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x72C),
+	(void*)(((char*)settingTevStruct_plightcol_plus__18dScnKy_env_light_cFP4cXyzP12dKy_tevstr_c11_GXColorS1011_GXColorS10Uc)+0x584),
 };
 
 /* 803BC050-803BC070 0020+00 s=1 e=0 z=0  None .data      @7029                                                        */
 SECTION_DATA static void* lit_7029[8] = {
-	/* 0    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x8F8),
-	/* 1    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x904),
-	/* 2    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x910),
-	/* 3    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x91C),
-	/* 4    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x928),
-	/* 5    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x934),
-	/* 6    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x940),
-	/* 7    */ (void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x94C),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x8F8),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x904),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x910),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x91C),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x928),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x934),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x940),
+	(void*)(((char*)settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c)+0x94C),
 };
 
 /* 803BC070-803BC080 0010+00 s=1 e=0 z=0  None .data      flush_col$7304                                               */
@@ -1680,25 +1680,25 @@ SECTION_DATA static u8 data_803BC090[16] = {
 
 /* 803BC0A0-803BC0B4 0014+00 s=1 e=0 z=0  None .data      l_dKy_Method                                                 */
 SECTION_DATA static void* l_dKy_Method[5] = {
-	/* 0    */ (void*)dKy_Create__FPv,
-	/* 1    */ (void*)dKy_Delete__FP17sub_kankyo__class,
-	/* 2    */ (void*)dKy_Execute__FP17sub_kankyo__class,
-	/* 3    */ (void*)dKy_IsDelete__FP17sub_kankyo__class,
-	/* 4    */ (void*)dKy_Draw__FP17sub_kankyo__class,
+	(void*)dKy_Create__FPv,
+	(void*)dKy_Delete__FP17sub_kankyo__class,
+	(void*)dKy_Execute__FP17sub_kankyo__class,
+	(void*)dKy_IsDelete__FP17sub_kankyo__class,
+	(void*)dKy_Draw__FP17sub_kankyo__class,
 };
 
-/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=1  None .data      g_profile_KANKYO                                             */
+/* 803BC0B4-803BC0DC 0028+00 s=0 e=0 z=0  None .data      g_profile_KANKYO                                             */
 SECTION_DATA void* g_profile_KANKYO[10] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x00130000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000000F8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopKy_Method,
-	/* 8    */ (void*)0x00020000,
-	/* 9    */ (void*)&l_dKy_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x0001FFFD,
+	(void*)0x00130000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000000F8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x00020000,
+	(void*)&l_dKy_Method,
 };
 
 /* 803BC0DC-803BC13C 0030+30 s=1 e=0 z=0  None .data      parcent_tabel$9036                                           */
@@ -1714,9 +1714,9 @@ SECTION_DATA static u8 data_803BC0DC[48 + 48 /* padding */] = {
 
 /* 803BC13C-803BC158 000C+10 s=2 e=0 z=0  None .data      __vt__18dScnKy_env_light_c                                   */
 SECTION_DATA static void* __vt__18dScnKy_env_light_c[3 + 4 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18dScnKy_env_light_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18dScnKy_env_light_cFv,
 	/* padding */
 	NULL,
 	NULL,

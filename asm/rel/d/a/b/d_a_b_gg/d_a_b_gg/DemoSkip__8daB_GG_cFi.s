@@ -7,11 +7,11 @@ lbl_805DFACC:
 /* 805DFAE0  7C 7E 1B 78 */	mr r30, r3
 /* 805DFAE4  3C 60 80 5F */	lis r3, lit_3911@ha
 /* 805DFAE8  3B E3 D0 60 */	addi r31, r3, lit_3911@l
-/* 805DFAEC  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 805ED064 */
+/* 805DFAEC  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 805DFAF0  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 805DFAF4  C0 1F 01 78 */	lfs f0, 0x178(r31)	/* effective address: 805ED1D8 */
+/* 805DFAF4  C0 1F 01 78 */	lfs f0, 0x178(r31)
 /* 805DFAF8  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 805DFAFC  C0 1F 01 68 */	lfs f0, 0x168(r31)	/* effective address: 805ED1C8 */
+/* 805DFAFC  C0 1F 01 68 */	lfs f0, 0x168(r31)
 /* 805DFB00  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 805DFB04  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 805DFB08  D0 21 00 18 */	stfs f1, 0x18(r1)
@@ -33,7 +33,7 @@ lbl_805DFACC:
 /* 805DFB48  4B A4 76 28 */	b dStage_changeScene__FifUlScsi
 /* 805DFB4C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805DFB50  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805DFB54  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805DFB54  80 63 00 00 */	lwz r3, 0(r3)
 /* 805DFB58  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805DFB5C  4B CC FD 28 */	b subBgmStop__8Z2SeqMgrFv
 /* 805DFB60  48 00 00 98 */	b lbl_805DFBF8
@@ -45,10 +45,10 @@ lbl_805DFB64:
 /* 805DFB74  38 61 00 08 */	addi r3, r1, 8
 /* 805DFB78  3C 80 80 5F */	lis r4, data_805ED72C@ha
 /* 805DFB7C  38 84 D7 2C */	addi r4, r4, data_805ED72C@l
-/* 805DFB80  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 805ED72C */
+/* 805DFB80  80 84 00 00 */	lwz r4, 0(r4)
 /* 805DFB84  3C A0 80 5F */	lis r5, data_805ED730@ha
 /* 805DFB88  38 A5 D7 30 */	addi r5, r5, data_805ED730@l
-/* 805DFB8C  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 805ED730 */
+/* 805DFB8C  A8 A5 00 00 */	lha r5, 0(r5)
 /* 805DFB90  38 C1 00 20 */	addi r6, r1, 0x20
 /* 805DFB94  4B C9 12 2C */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 805DFB98  C0 01 00 08 */	lfs f0, 8(r1)
@@ -76,8 +76,8 @@ lbl_805DFB64:
 /* 805DFBF0  C0 1E 04 D8 */	lfs f0, 0x4d8(r30)
 /* 805DFBF4  D0 1E 04 C4 */	stfs f0, 0x4c4(r30)
 lbl_805DFBF8:
-/* 805DFBF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805DFBFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805DFBF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805DFBFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805DFC00  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 805DFC04  38 80 00 1F */	li r4, 0x1f
 /* 805DFC08  4B A9 01 8C */	b StopQuake__12dVibration_cFi

@@ -9,7 +9,7 @@ lbl_80C3DE3C:
 /* 80C3DE58  3B E3 F0 58 */	addi r31, r3, lit_3648@l
 /* 80C3DE5C  3B C0 00 01 */	li r30, 1
 /* 80C3DE60  C0 3D 05 2C */	lfs f1, 0x52c(r29)
-/* 80C3DE64  C0 1F 00 28 */	lfs f0, 0x28(r31)	/* effective address: 80C3F080 */
+/* 80C3DE64  C0 1F 00 28 */	lfs f0, 0x28(r31)
 /* 80C3DE68  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80C3DE6C  40 81 00 3C */	ble lbl_80C3DEA8
 /* 80C3DE70  A8 1D 05 7E */	lha r0, 0x57e(r29)

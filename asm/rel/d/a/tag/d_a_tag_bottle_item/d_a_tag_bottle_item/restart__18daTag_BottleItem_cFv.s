@@ -15,11 +15,11 @@ lbl_80D56100:
 /* 80D56134  B0 03 04 E8 */	sth r0, 0x4e8(r3)
 /* 80D56138  3C 80 80 D5 */	lis r4, lit_3683@ha
 /* 80D5613C  38 A4 66 70 */	addi r5, r4, lit_3683@l
-/* 80D56140  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80D56670 */
-/* 80D56144  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80D56674 */
+/* 80D56140  80 85 00 00 */	lwz r4, 0(r5)
+/* 80D56144  80 05 00 04 */	lwz r0, 4(r5)
 /* 80D56148  90 81 00 08 */	stw r4, 8(r1)
 /* 80D5614C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80D56150  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80D56678 */
+/* 80D56150  80 05 00 08 */	lwz r0, 8(r5)
 /* 80D56154  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D56158  38 81 00 08 */	addi r4, r1, 8
 /* 80D5615C  48 00 00 B9 */	bl setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i

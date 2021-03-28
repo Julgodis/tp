@@ -10,8 +10,8 @@ lbl_807331CC:
 /* 807331EC  A8 1E 04 E6 */	lha r0, 0x4e6(r30)
 /* 807331F0  B0 1E 06 D4 */	sth r0, 0x6d4(r30)
 /* 807331F4  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 807331F8  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80735B2C */
-/* 807331FC  C0 5F 00 E8 */	lfs f2, 0xe8(r31)	/* effective address: 80735C10 */
+/* 807331F8  C0 3F 00 04 */	lfs f1, 4(r31)
+/* 807331FC  C0 5F 00 E8 */	lfs f2, 0xe8(r31)
 /* 80733200  4B B3 D5 40 */	b cLib_chaseF__FPfff
 /* 80733204  80 1E 06 B0 */	lwz r0, 0x6b0(r30)
 /* 80733208  2C 00 00 01 */	cmpwi r0, 1

@@ -36,9 +36,9 @@ lbl_80C033AC:
 /* 80C033DC  48 00 01 C0 */	b lbl_80C0359C
 lbl_80C033E0:
 /* 80C033E0  38 7D 04 D0 */	addi r3, r29, 0x4d0
-/* 80C033E4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C033E8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80C033EC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80C033E4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C033E8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80C033EC  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80C033F0  38 84 04 D0 */	addi r4, r4, 0x4d0
 /* 80C033F4  4B 66 D8 10 */	b cLib_targetAngleY__FPC3VecPC3Vec
 /* 80C033F8  7C 64 1B 78 */	mr r4, r3
@@ -60,7 +60,7 @@ lbl_80C033E0:
 /* 80C03438  38 80 00 00 */	li r4, 0
 /* 80C0343C  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C03440  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C03444  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C03444  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C03448  4B FF E3 45 */	bl setBaseMotion__11daObj_GrA_cFif
 /* 80C0344C  7F A3 EB 78 */	mr r3, r29
 /* 80C03450  38 80 00 00 */	li r4, 0
@@ -127,7 +127,7 @@ lbl_80C034F4:
 /* 80C0352C  7C 84 02 2E */	lhzx r4, r4, r0
 /* 80C03530  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C03534  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C03538  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C03538  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C0353C  4B FF E2 51 */	bl setBaseMotion__11daObj_GrA_cFif
 lbl_80C03540:
 /* 80C03540  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -148,8 +148,8 @@ lbl_80C0356C:
 /* 80C03578  48 00 14 95 */	bl setFaceTalkAfter__11daObj_GrA_cFv
 /* 80C0357C  48 00 00 20 */	b lbl_80C0359C
 lbl_80C03580:
-/* 80C03580  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C03584  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C03580  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C03584  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C03588  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80C0358C  4B 43 EE DC */	b reset__14dEvt_control_cFv
 /* 80C03590  3B C0 00 01 */	li r30, 1

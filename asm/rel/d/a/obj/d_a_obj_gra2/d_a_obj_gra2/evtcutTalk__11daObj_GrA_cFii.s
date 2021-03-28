@@ -45,7 +45,7 @@ lbl_80C04960:
 /* 80C0499C  7C 84 02 2E */	lhzx r4, r4, r0
 /* 80C049A0  3C A0 80 C1 */	lis r5, m__17daObj_GrA_Param_c@ha
 /* 80C049A4  38 A5 FA 7C */	addi r5, r5, m__17daObj_GrA_Param_c@l
-/* 80C049A8  C0 25 00 0C */	lfs f1, 0xc(r5)	/* effective address: 80C0FA88 */
+/* 80C049A8  C0 25 00 0C */	lfs f1, 0xc(r5)
 /* 80C049AC  4B FF CD E1 */	bl setBaseMotion__11daObj_GrA_cFif
 lbl_80C049B0:
 /* 80C049B0  80 01 00 0C */	lwz r0, 0xc(r1)

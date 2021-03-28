@@ -44,8 +44,8 @@ lbl_80D199F4:
 /* 80D19A9C  7F A3 EB 78 */	mr r3, r29
 /* 80D19AA0  38 81 00 08 */	addi r4, r1, 8
 /* 80D19AA4  4B 54 E2 84 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80D19AA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D19AAC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D19AA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D19AAC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D19AB0  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D19AB4  7F A4 EB 78 */	mr r4, r29
 /* 80D19AB8  4B 35 A9 E8 */	b GroundCross__4cBgSFP11cBgS_GndChk

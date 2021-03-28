@@ -21,7 +21,7 @@ lbl_80AFCB88:
 /* 80AFCB88  38 7D 0D D8 */	addi r3, r29, 0xdd8
 /* 80AFCB8C  3C 80 80 B0 */	lis r4, l_arcName@ha
 /* 80AFCB90  38 84 10 E4 */	addi r4, r4, l_arcName@l
-/* 80AFCB94  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B010E4 */
+/* 80AFCB94  80 84 00 00 */	lwz r4, 0(r4)
 /* 80AFCB98  4B 53 03 24 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80AFCB9C  2C 03 00 04 */	cmpwi r3, 4
 /* 80AFCBA0  40 82 01 E0 */	bne lbl_80AFCD80
@@ -84,8 +84,8 @@ lbl_80AFCBF0:
 /* 80AFCC78  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 80AFCC7C  4B 57 95 CC */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80AFCC80  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 80AFCC84  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AFCC88  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AFCC84  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AFCC88  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AFCC8C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AFCC90  4B 57 9E 1C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AFCC94  80 1D 06 AC */	lwz r0, 0x6ac(r29)

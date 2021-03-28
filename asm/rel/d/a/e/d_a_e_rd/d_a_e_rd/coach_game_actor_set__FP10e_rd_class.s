@@ -9,10 +9,10 @@ lbl_80516980:
 /* 8051699C  3B E3 91 40 */	addi r31, r3, lit_1109@l
 /* 805169A0  3C 60 80 52 */	lis r3, lit_4208@ha
 /* 805169A4  3B A3 85 84 */	addi r29, r3, lit_4208@l
-/* 805169A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805169AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805169B0  83 83 5D AC */	lwz r28, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805169B4  88 1F 02 A0 */	lbz r0, 0x2a0(r31)	/* effective address: 805193E0 */
+/* 805169A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805169AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805169B0  83 83 5D AC */	lwz r28, 0x5dac(r3)
+/* 805169B4  88 1F 02 A0 */	lbz r0, 0x2a0(r31)
 /* 805169B8  7C 00 07 75 */	extsb. r0, r0
 /* 805169BC  40 82 00 BC */	bne lbl_80516A78
 /* 805169C0  C0 5D 03 C4 */	lfs f2, 0x3c4(r29)

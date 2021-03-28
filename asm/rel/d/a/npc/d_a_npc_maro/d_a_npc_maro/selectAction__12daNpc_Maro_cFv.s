@@ -9,11 +9,11 @@ lbl_8055DBF0:
 /* 8055DC0C  3B E3 4F 90 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8055DC10  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 8055DC14  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 8055DC18  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 8055DC1C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 8055DC18  80 64 00 00 */	lwz r3, 0(r4)
+/* 8055DC1C  80 04 00 04 */	lwz r0, 4(r4)
 /* 8055DC20  90 7E 11 0C */	stw r3, 0x110c(r30)
 /* 8055DC24  90 1E 11 10 */	stw r0, 0x1110(r30)
-/* 8055DC28  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 8055DC28  80 04 00 08 */	lwz r0, 8(r4)
 /* 8055DC2C  90 1E 11 14 */	stw r0, 0x1114(r30)
 /* 8055DC30  88 1E 10 C0 */	lbz r0, 0x10c0(r30)
 /* 8055DC34  2C 00 00 08 */	cmpwi r0, 8

@@ -12,9 +12,9 @@ lbl_804A35FC:
 lbl_804A3624:
 /* 804A3624  38 00 00 05 */	li r0, 5
 /* 804A3628  90 1F 00 B0 */	stw r0, 0xb0(r31)
-/* 804A362C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804A3630  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804A3634  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 804A362C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804A3630  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804A3634  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 804A3638  4B C3 DC E8 */	b getCopyRodBallReturnSpeed__9daAlink_cCFv
 /* 804A363C  D0 3F 05 2C */	stfs f1, 0x52c(r31)
 /* 804A3640  38 7F 07 40 */	addi r3, r31, 0x740

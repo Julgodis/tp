@@ -9,8 +9,8 @@ lbl_80D1BC40:
 /* 80D1BC5C  3B E3 C3 54 */	addi r31, r3, lit_3628@l
 /* 80D1BC60  38 7E 07 04 */	addi r3, r30, 0x704
 /* 80D1BC64  C0 3E 07 3C */	lfs f1, 0x73c(r30)
-/* 80D1BC68  C0 7F 00 38 */	lfs f3, 0x38(r31)	/* effective address: 80D1C38C */
-/* 80D1BC6C  C0 5F 00 3C */	lfs f2, 0x3c(r31)	/* effective address: 80D1C390 */
+/* 80D1BC68  C0 7F 00 38 */	lfs f3, 0x38(r31)
+/* 80D1BC6C  C0 5F 00 3C */	lfs f2, 0x3c(r31)
 /* 80D1BC70  C0 1E 04 F0 */	lfs f0, 0x4f0(r30)
 /* 80D1BC74  EC 02 00 32 */	fmuls f0, f2, f0
 /* 80D1BC78  EC 43 00 32 */	fmuls f2, f3, f0
@@ -62,9 +62,9 @@ lbl_80D1BD2C:
 /* 80D1BD2C  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 80D1BD30  C4 03 0C F4 */	lfsu f0, Zero__4cXyz@l(r3)
 /* 80D1BD34  D0 01 00 24 */	stfs f0, 0x24(r1)
-/* 80D1BD38  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 80D1BD38  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80D1BD3C  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80D1BD40  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80D1BD40  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D1BD44  D0 01 00 2C */	stfs f0, 0x2c(r1)
 lbl_80D1BD48:
 /* 80D1BD48  38 61 00 24 */	addi r3, r1, 0x24
@@ -98,7 +98,7 @@ lbl_80D1BD48:
 /* 80D1BDB8  90 01 00 08 */	stw r0, 8(r1)
 /* 80D1BDBC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D1BDC0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D1BDC4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D1BDC4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D1BDC8  38 81 00 08 */	addi r4, r1, 8
 /* 80D1BDCC  38 A0 00 00 */	li r5, 0
 /* 80D1BDD0  38 E0 00 00 */	li r7, 0

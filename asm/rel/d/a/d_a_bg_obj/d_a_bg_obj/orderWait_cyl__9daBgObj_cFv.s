@@ -107,8 +107,8 @@ lbl_8045B984:
 /* 8045B990  7D 89 03 A6 */	mtctr r12
 /* 8045B994  4E 80 04 21 */	bctrl 
 lbl_8045B998:
-/* 8045B998  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045B99C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045B998  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045B99C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045B9A0  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8045B9A4  38 9F 0B 88 */	addi r4, r31, 0xb88
 /* 8045B9A8  4B E0 92 00 */	b Set__4cCcSFP8cCcD_Obj

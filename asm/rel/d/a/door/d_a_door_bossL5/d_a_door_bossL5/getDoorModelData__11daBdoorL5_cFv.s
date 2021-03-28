@@ -10,8 +10,8 @@ lbl_80670C94:
 /* 80670CB4  7F C3 F3 78 */	mr r3, r30
 /* 80670CB8  4B FF FF 81 */	bl getArcName__11daBdoorL5_cFv
 /* 80670CBC  7F E4 FB 78 */	mr r4, r31
-/* 80670CC0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80670CC4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80670CC0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80670CC4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80670CC8  3C A5 00 02 */	addis r5, r5, 2
 /* 80670CCC  38 C0 00 80 */	li r6, 0x80
 /* 80670CD0  38 A5 C2 F8 */	addi r5, r5, -15624

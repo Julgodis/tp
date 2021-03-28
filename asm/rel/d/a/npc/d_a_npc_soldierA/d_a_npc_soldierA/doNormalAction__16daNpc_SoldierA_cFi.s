@@ -21,7 +21,7 @@ lbl_80AF10A4:
 lbl_80AF10F0:
 /* 80AF10F0  3C 80 80 AF */	lis r4, m__22daNpc_SoldierA_Param_c@ha
 /* 80AF10F4  38 84 26 E8 */	addi r4, r4, m__22daNpc_SoldierA_Param_c@l
-/* 80AF10F8  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 80AF274A */
+/* 80AF10F8  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_80AF10FC:
 /* 80AF10FC  38 A0 FF FF */	li r5, -1
 /* 80AF1100  38 C0 00 00 */	li r6, 0

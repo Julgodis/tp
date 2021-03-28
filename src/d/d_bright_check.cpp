@@ -41,10 +41,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {
@@ -122,16 +122,16 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BB5BC-803BB5C8 000C+00 s=1 e=0 z=0  None .data      @3797                                                        */
 SECTION_DATA static void* lit_3797[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeWait__14dBrightCheck_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeWait__14dBrightCheck_cFv,
 };
 
 /* 803BB5C8-803BB5D4 000C+00 s=1 e=0 z=0  None .data      @3798                                                        */
 SECTION_DATA static void* lit_3798[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)modeMove__14dBrightCheck_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)modeMove__14dBrightCheck_cFv,
 };
 
 /* 803BB5D4-803BB5EC 0018+00 s=2 e=0 z=0  None .data      brightChackProc                                              */
@@ -142,17 +142,17 @@ SECTION_DATA static u8 brightChackProc[24] = {
 
 /* 803BB5EC-803BB5FC 0010+00 s=3 e=0 z=0  None .data      __vt__19dDlst_BrightCheck_c                                  */
 SECTION_DATA static void* __vt__19dDlst_BrightCheck_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__19dDlst_BrightCheck_cFv,
-	/* 3    */ (void*)__dt__19dDlst_BrightCheck_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__19dDlst_BrightCheck_cFv,
+	(void*)__dt__19dDlst_BrightCheck_cFv,
 };
 
 /* 803BB5FC-803BB618 000C+10 s=2 e=0 z=0  None .data      __vt__14dBrightCheck_c                                       */
 SECTION_DATA static void* __vt__14dBrightCheck_c[3 + 4 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14dBrightCheck_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14dBrightCheck_cFv,
 	/* padding */
 	NULL,
 	NULL,

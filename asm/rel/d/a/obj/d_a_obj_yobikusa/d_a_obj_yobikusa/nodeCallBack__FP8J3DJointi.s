@@ -13,7 +13,7 @@ lbl_8059D1E8:
 /* 8059D1EC  7C 9D 23 78 */	mr r29, r4
 /* 8059D1F0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8059D1F4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8059D1F8  83 E3 00 38 */	lwz r31, 0x38(r3)	/* effective address: 80434B00 */
+/* 8059D1F8  83 E3 00 38 */	lwz r31, 0x38(r3)
 /* 8059D1FC  83 9F 00 14 */	lwz r28, 0x14(r31)
 /* 8059D200  80 7F 00 84 */	lwz r3, 0x84(r31)
 /* 8059D204  80 03 00 0C */	lwz r0, 0xc(r3)

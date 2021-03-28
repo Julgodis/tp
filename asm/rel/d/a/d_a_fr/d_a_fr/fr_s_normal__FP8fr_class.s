@@ -39,7 +39,7 @@ lbl_8051A354:
 /* 8051A3A8  C0 1F 05 2C */	lfs f0, 0x52c(r31)
 /* 8051A3AC  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051A3B0  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051A3B4  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 8051BC44 */
+/* 8051A3B4  C0 23 00 24 */	lfs f1, 0x24(r3)
 /* 8051A3B8  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 8051A3BC  40 81 01 84 */	ble lbl_8051A540
 /* 8051A3C0  D0 3F 05 2C */	stfs f1, 0x52c(r31)
@@ -58,7 +58,7 @@ lbl_8051A3C8:
 /* 8051A3F0  41 81 01 14 */	bgt lbl_8051A504
 /* 8051A3F4  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051A3F8  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051A3FC  C0 23 00 24 */	lfs f1, 0x24(r3)	/* effective address: 8051BC44 */
+/* 8051A3FC  C0 23 00 24 */	lfs f1, 0x24(r3)
 /* 8051A400  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 8051A404  C0 5E 00 24 */	lfs f2, 0x24(r30)
 /* 8051A408  C0 1E 00 74 */	lfs f0, 0x74(r30)
@@ -90,7 +90,7 @@ lbl_8051A3C8:
 lbl_8051A470:
 /* 8051A470  3C 60 80 52 */	lis r3, l_HIO@ha
 /* 8051A474  38 63 BC 20 */	addi r3, r3, l_HIO@l
-/* 8051A478  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 8051BC34 */
+/* 8051A478  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 8051A47C  D0 1F 05 E8 */	stfs f0, 0x5e8(r31)
 /* 8051A480  C0 3F 05 E8 */	lfs f1, 0x5e8(r31)
 /* 8051A484  4B D4 D5 08 */	b cM_rndFX__Ff
@@ -133,7 +133,7 @@ lbl_8051A504:
 /* 8051A50C  C0 5E 00 78 */	lfs f2, 0x78(r30)
 /* 8051A510  3C 80 80 52 */	lis r4, l_HIO@ha
 /* 8051A514  38 84 BC 20 */	addi r4, r4, l_HIO@l
-/* 8051A518  C0 04 00 24 */	lfs f0, 0x24(r4)	/* effective address: 8051BC44 */
+/* 8051A518  C0 04 00 24 */	lfs f0, 0x24(r4)
 /* 8051A51C  EC 42 00 32 */	fmuls f2, f2, f0
 /* 8051A520  4B D5 55 60 */	b cLib_addCalc0__FPfff
 /* 8051A524  A8 1F 05 DC */	lha r0, 0x5dc(r31)

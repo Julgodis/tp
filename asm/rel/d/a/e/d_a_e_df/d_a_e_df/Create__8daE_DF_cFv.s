@@ -67,8 +67,8 @@ lbl_806A9750:
 /* 806A9774  88 9D 08 19 */	lbz r4, 0x819(r29)
 /* 806A9778  28 04 00 FF */	cmplwi r4, 0xff
 /* 806A977C  41 82 00 28 */	beq lbl_806A97A4
-/* 806A9780  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806A9784  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806A9780  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A9784  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806A9788  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 806A978C  7C 05 07 74 */	extsb r5, r0
 /* 806A9790  4B 98 BB D0 */	b isSwitch__10dSv_info_cCFii
@@ -97,7 +97,7 @@ lbl_806A97C8:
 /* 806A97E4  38 00 FF FF */	li r0, -1
 /* 806A97E8  3C 60 80 6B */	lis r3, l_HIO@ha
 /* 806A97EC  38 63 A0 E0 */	addi r3, r3, l_HIO@l
-/* 806A97F0  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806AA0E4 */
+/* 806A97F0  98 03 00 04 */	stb r0, 4(r3)
 lbl_806A97F4:
 /* 806A97F4  38 00 00 04 */	li r0, 4
 /* 806A97F8  90 1D 05 5C */	stw r0, 0x55c(r29)

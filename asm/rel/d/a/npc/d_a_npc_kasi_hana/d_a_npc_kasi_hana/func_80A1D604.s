@@ -74,7 +74,7 @@ lbl_80A1D6C8:
 /* 80A1D718  40 82 00 14 */	bne lbl_80A1D72C
 /* 80A1D71C  3C 60 80 A2 */	lis r3, m__21daNpcKasiHana_Param_c@ha
 /* 80A1D720  38 63 10 C8 */	addi r3, r3, m__21daNpcKasiHana_Param_c@l
-/* 80A1D724  C0 23 00 44 */	lfs f1, 0x44(r3)	/* effective address: 80A2110C */
+/* 80A1D724  C0 23 00 44 */	lfs f1, 0x44(r3)
 /* 80A1D728  48 00 00 20 */	b lbl_80A1D748
 lbl_80A1D72C:
 /* 80A1D72C  3C 60 80 A2 */	lis r3, lit_3908@ha

@@ -8,8 +8,8 @@ lbl_80C6A034:
 /* 80C6A04C  3C 60 80 C7 */	lis r3, lit_3679@ha
 /* 80C6A050  3B E3 A3 B8 */	addi r31, r3, lit_3679@l
 /* 80C6A054  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 80C6A058  C0 3F 00 14 */	lfs f1, 0x14(r31)	/* effective address: 80C6A3CC */
-/* 80C6A05C  C0 5F 00 18 */	lfs f2, 0x18(r31)	/* effective address: 80C6A3D0 */
+/* 80C6A058  C0 3F 00 14 */	lfs f1, 0x14(r31)
+/* 80C6A05C  C0 5F 00 18 */	lfs f2, 0x18(r31)
 /* 80C6A060  4B 60 66 E0 */	b cLib_chaseF__FPfff
 /* 80C6A064  38 7E 05 C0 */	addi r3, r30, 0x5c0
 /* 80C6A068  C0 3F 00 00 */	lfs f1, 0(r31)

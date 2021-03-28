@@ -31,7 +31,7 @@ lbl_80CEB35C:
 /* 80CEB3D0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CEB3D4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEB3D8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEB3DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEB3DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEB3E0  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CEB3E4  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80CEB3E8  38 C0 00 00 */	li r6, 0
@@ -54,7 +54,7 @@ lbl_80CEB410:
 /* 80CEB428  90 01 00 08 */	stw r0, 8(r1)
 /* 80CEB42C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEB430  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEB434  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEB434  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEB438  38 81 00 08 */	addi r4, r1, 8
 /* 80CEB43C  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80CEB440  38 C0 00 00 */	li r6, 0

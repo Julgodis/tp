@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct J3DMatColorAnm {
-};
-
-struct J3DTevColorAnm {
+struct J3DTexMtxAnm {
 };
 
 struct J3DTexNoAnm {
 };
 
-struct J3DTexMtxAnm {
+struct J3DMatColorAnm {
+};
+
+struct J3DTevColorAnm {
 };
 
 struct J3DMaterial {
@@ -47,10 +47,10 @@ struct J3DAnmTextureSRTKey {
 	/* 80329F14 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
 };
 
-struct _GXColorS10 {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct _GXColorS10 {
 };
 
 struct J3DAnmTevRegKey {
@@ -168,9 +168,9 @@ asm void J3DMaterialAnm::setTevKColorAnm(int param_0, J3DTevKColorAnm* param_1) 
 /* ############################################################################################## */
 /* 803CEE60-803CEE70 0010+00 s=0 e=10 z=74  None .data      __vt__14J3DMaterialAnm                                       */
 SECTION_DATA void* __vt__14J3DMaterialAnm[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J3DMaterialAnmFv,
-	/* 3    */ (void*)calc__14J3DMaterialAnmCFP11J3DMaterial,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J3DMaterialAnmFv,
+	(void*)calc__14J3DMaterialAnmCFP11J3DMaterial,
 };
 

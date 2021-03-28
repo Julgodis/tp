@@ -62,10 +62,10 @@ lbl_809C74DC:
 /* 809C74E0  B0 1E 09 E6 */	sth r0, 0x9e6(r30)
 /* 809C74E4  48 00 02 0C */	b lbl_809C76F0
 lbl_809C74E8:
-/* 809C74E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809C74EC  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 809C74F0  80 7D 5D AC */	lwz r3, 0x5dac(r29)	/* effective address: 8040BF6C */
-/* 809C74F4  C0 23 04 D4 */	lfs f1, 0x4d4(r3)	/* effective address: 804004D4 */
+/* 809C74E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809C74EC  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 809C74F0  80 7D 5D AC */	lwz r3, 0x5dac(r29)
+/* 809C74F4  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
 /* 809C74F8  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
 /* 809C74FC  EC 21 00 28 */	fsubs f1, f1, f0
 /* 809C7500  C0 1F 06 EC */	lfs f0, 0x6ec(r31)

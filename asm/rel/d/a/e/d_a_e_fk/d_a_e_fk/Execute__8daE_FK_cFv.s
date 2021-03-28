@@ -9,10 +9,10 @@ lbl_806BA6EC:
 /* 806BA708  3B C3 B8 D0 */	addi r30, r3, lit_1109@l
 /* 806BA70C  3C 60 80 6C */	lis r3, lit_3826@ha
 /* 806BA710  3B E3 B6 D0 */	addi r31, r3, lit_3826@l
-/* 806BA714  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BA718  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806BA714  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BA718  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806BA71C  3B A3 0F 38 */	addi r29, r3, 0xf38
-/* 806BA720  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 806BA720  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 806BA724  28 00 00 00 */	cmplwi r0, 0
 /* 806BA728  41 82 00 0C */	beq lbl_806BA734
 /* 806BA72C  38 60 00 01 */	li r3, 1
@@ -29,9 +29,9 @@ lbl_806BA734:
 /* 806BA754  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 806BA758  7D 89 03 A6 */	mtctr r12
 /* 806BA75C  4E 80 04 21 */	bctrl 
-/* 806BA760  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BA764  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806BA768  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806BA760  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BA764  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806BA768  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 806BA76C  38 83 04 D0 */	addi r4, r3, 0x4d0
 /* 806BA770  90 9E 00 64 */	stw r4, 0x64(r30)
 /* 806BA774  38 7C 04 D0 */	addi r3, r28, 0x4d0
@@ -107,9 +107,9 @@ lbl_806BA860:
 /* 806BA86C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_806BA870:
 /* 806BA870  D0 3E 00 60 */	stfs f1, 0x60(r30)
-/* 806BA874  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BA878  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806BA87C  80 63 5D B8 */	lwz r3, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 806BA874  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BA878  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806BA87C  80 63 5D B8 */	lwz r3, 0x5db8(r3)
 /* 806BA880  28 03 00 00 */	cmplwi r3, 0
 /* 806BA884  41 82 00 0C */	beq lbl_806BA890
 /* 806BA888  A8 03 04 DE */	lha r0, 0x4de(r3)

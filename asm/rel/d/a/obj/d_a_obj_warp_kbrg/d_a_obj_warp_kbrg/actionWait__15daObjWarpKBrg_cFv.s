@@ -7,8 +7,8 @@ lbl_80D27B2C:
 /* 80D27B40  7C 7E 1B 78 */	mr r30, r3
 /* 80D27B44  3C 60 80 45 */	lis r3, m_midnaActor__9daPy_py_c@ha
 /* 80D27B48  83 E3 10 18 */	lwz r31, m_midnaActor__9daPy_py_c@l(r3)
-/* 80D27B4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27B50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D27B4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27B50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D27B54  80 1E 00 B0 */	lwz r0, 0xb0(r30)
 /* 80D27B58  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D27B5C  88 1E 04 BA */	lbz r0, 0x4ba(r30)
@@ -16,12 +16,12 @@ lbl_80D27B2C:
 /* 80D27B64  4B 30 D7 FC */	b isSwitch__10dSv_info_cCFii
 /* 80D27B68  2C 03 00 00 */	cmpwi r3, 0
 /* 80D27B6C  41 82 00 38 */	beq lbl_80D27BA4
-/* 80D27B70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27B74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D27B70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27B74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D27B78  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D27B7C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D27B80  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D27B84  A0 84 00 6C */	lhz r4, 0x6c(r4)	/* effective address: 803A72F4 */
+/* 80D27B84  A0 84 00 6C */	lhz r4, 0x6c(r4)
 /* 80D27B88  4B 30 CE 34 */	b isEventBit__11dSv_event_cCFUs
 /* 80D27B8C  2C 03 00 00 */	cmpwi r3, 0
 /* 80D27B90  41 82 00 14 */	beq lbl_80D27BA4
@@ -30,8 +30,8 @@ lbl_80D27B2C:
 /* 80D27B9C  7F C3 F3 78 */	mr r3, r30
 /* 80D27BA0  48 00 00 CD */	bl actionOrderEvent__15daObjWarpKBrg_cFv
 lbl_80D27BA4:
-/* 80D27BA4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D27BA8  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80D27BA4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D27BA8  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80D27BAC  3B 9D 4F F8 */	addi r28, r29, 0x4ff8
 /* 80D27BB0  7F 83 E3 78 */	mr r3, r28
 /* 80D27BB4  88 1E 05 D8 */	lbz r0, 0x5d8(r30)
@@ -65,7 +65,7 @@ lbl_80D27BA4:
 /* 80D27C24  7F 83 E3 78 */	mr r3, r28
 /* 80D27C28  3C 80 80 D3 */	lis r4, l_staff_name@ha
 /* 80D27C2C  38 84 97 44 */	addi r4, r4, l_staff_name@l
-/* 80D27C30  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D29744 */
+/* 80D27C30  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D27C34  38 A0 00 00 */	li r5, 0
 /* 80D27C38  38 C0 00 00 */	li r6, 0
 /* 80D27C3C  4B 31 FE E0 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

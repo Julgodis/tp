@@ -4,12 +4,12 @@ lbl_80D248F4:
 /* 80D248FC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D24900  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D24904  7C 7F 1B 78 */	mr r31, r3
-/* 80D24908  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2490C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D24908  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2490C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D24910  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80D24914  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80D24918  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80D2491C  A0 84 00 82 */	lhz r4, 0x82(r4)	/* effective address: 803A730A */
+/* 80D2491C  A0 84 00 82 */	lhz r4, 0x82(r4)
 /* 80D24920  4B 31 00 9C */	b isEventBit__11dSv_event_cCFUs
 /* 80D24924  2C 03 00 00 */	cmpwi r3, 0
 /* 80D24928  41 82 00 0C */	beq lbl_80D24934
@@ -31,7 +31,7 @@ lbl_80D24960:
 /* 80D24960  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80D24964  3C 80 80 D2 */	lis r4, l_arcName@ha
 /* 80D24968  38 84 6C 74 */	addi r4, r4, l_arcName@l
-/* 80D2496C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D26C74 */
+/* 80D2496C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D24970  4B 30 85 4C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D24974  7C 60 1B 78 */	mr r0, r3
 /* 80D24978  2C 00 00 04 */	cmpwi r0, 4
@@ -39,7 +39,7 @@ lbl_80D24960:
 /* 80D24980  7F E3 FB 78 */	mr r3, r31
 /* 80D24984  3C 80 80 D2 */	lis r4, l_arcName@ha
 /* 80D24988  38 84 6C 74 */	addi r4, r4, l_arcName@l
-/* 80D2498C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D26C74 */
+/* 80D2498C  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D24990  38 A0 00 18 */	li r5, 0x18
 /* 80D24994  3C C0 80 07 */	lis r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@ha
 /* 80D24998  38 C6 5A D8 */	addi r6, r6, dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz@l

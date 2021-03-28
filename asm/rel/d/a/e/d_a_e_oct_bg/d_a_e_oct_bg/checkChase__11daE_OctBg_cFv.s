@@ -23,9 +23,9 @@ lbl_80736DF4:
 /* 80736DF8  98 1F 0B AC */	stb r0, 0xbac(r31)
 /* 80736DFC  3C 60 80 74 */	lis r3, data_8073A171@ha
 /* 80736E00  38 83 A1 71 */	addi r4, r3, data_8073A171@l
-/* 80736E04  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 8073A171 */
+/* 80736E04  88 64 00 00 */	lbz r3, 0(r4)
 /* 80736E08  38 03 FF FF */	addi r0, r3, -1
-/* 80736E0C  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 8073A171 */
+/* 80736E0C  98 04 00 00 */	stb r0, 0(r4)
 /* 80736E10  38 60 00 00 */	li r3, 0
 /* 80736E14  48 00 00 08 */	b lbl_80736E1C
 lbl_80736E18:

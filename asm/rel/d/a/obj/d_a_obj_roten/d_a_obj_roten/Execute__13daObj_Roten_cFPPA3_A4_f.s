@@ -11,7 +11,7 @@ lbl_80CC1038:
 /* 80CC105C  41 82 00 B0 */	beq lbl_80CC110C
 /* 80CC1060  3C 60 80 45 */	lis r3, struct_80450D64+0x0@ha
 /* 80CC1064  38 63 0D 64 */	addi r3, r3, struct_80450D64+0x0@l
-/* 80CC1068  88 63 00 00 */	lbz r3, 0(r3)	/* effective address: 80450D64 */
+/* 80CC1068  88 63 00 00 */	lbz r3, 0(r3)
 /* 80CC106C  7C 63 07 75 */	extsb. r3, r3
 /* 80CC1070  41 82 00 54 */	beq lbl_80CC10C4
 /* 80CC1074  4B 36 BF F8 */	b dComIfGp_getReverb__Fi
@@ -21,7 +21,7 @@ lbl_80CC1038:
 /* 80CC1084  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80CC1088  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC108C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC1090  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC1090  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC1094  38 81 00 0C */	addi r4, r1, 0xc
 /* 80CC1098  38 BE 05 B8 */	addi r5, r30, 0x5b8
 /* 80CC109C  38 C0 00 00 */	li r6, 0
@@ -40,7 +40,7 @@ lbl_80CC10C4:
 /* 80CC10CC  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC10D0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC10D4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC10D8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC10D8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC10DC  38 81 00 08 */	addi r4, r1, 8
 /* 80CC10E0  38 BE 05 B8 */	addi r5, r30, 0x5b8
 /* 80CC10E4  38 C0 00 00 */	li r6, 0

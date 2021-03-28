@@ -11,7 +11,15 @@
 // Types:
 // 
 
-struct JKRExpHeap {
+struct JKRArchive {
+};
+
+struct JSURandomInputStream {
+	/* 80255328 */ ~JSURandomInputStream();
+};
+
+struct J2DScreen {
+	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
 };
 
 struct JUtility {
@@ -31,15 +39,7 @@ struct J2DPane {
 	/* 802F7AFC */ void getParentPane();
 };
 
-struct JKRArchive {
-};
-
-struct JSURandomInputStream {
-	/* 80255328 */ ~JSURandomInputStream();
-};
-
-struct J2DScreen {
-	/* 802F8748 */ void setPriority(JSURandomInputStream*, u32, JKRArchive*);
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -216,17 +216,17 @@ extern "C" extern void* __vt__13J2DOrthoGraph[10];
 /* ############################################################################################## */
 /* 803C2DF8-803C2E04 000C+00 s=2 e=4 z=0  None .data      __vt__10JSUIosBase                                           */
 SECTION_DATA void* __vt__10JSUIosBase[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JSUIosBaseFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JSUIosBaseFv,
 };
 
 /* 803C2E04-803C2E18 0010+04 s=3 e=0 z=0  None .data      __vt__8CPaneMgr                                              */
 SECTION_DATA static void* __vt__8CPaneMgr[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8CPaneMgrFv,
-	/* 3    */ (void*)setAlpha__8CPaneMgrFUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8CPaneMgrFv,
+	(void*)setAlpha__8CPaneMgrFUc,
 	/* padding */
 	NULL,
 };

@@ -46,9 +46,9 @@ lbl_80B0D6D8:
 /* 80B0D720  54 00 06 3E */	clrlwi r0, r0, 0x18
 /* 80B0D724  28 00 00 02 */	cmplwi r0, 2
 /* 80B0D728  40 82 00 F8 */	bne lbl_80B0D820
-/* 80B0D72C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B0D730  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80B0D734  83 7C 5D AC */	lwz r27, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80B0D72C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B0D730  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80B0D734  83 7C 5D AC */	lwz r27, 0x5dac(r28)
 /* 80B0D738  38 7B 04 D0 */	addi r3, r27, 0x4d0
 /* 80B0D73C  4B 4F F6 28 */	b transS__14mDoMtx_stack_cFRC4cXyz
 /* 80B0D740  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
@@ -66,11 +66,11 @@ lbl_80B0D6D8:
 /* 80B0D770  4B 4F F6 2C */	b transM__14mDoMtx_stack_cFfff
 /* 80B0D774  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80B0D778  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80B0D77C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80B0D77C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80B0D780  D0 1D 04 A8 */	stfs f0, 0x4a8(r29)
-/* 80B0D784  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80B0D784  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80B0D788  D0 1D 04 AC */	stfs f0, 0x4ac(r29)
-/* 80B0D78C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80B0D78C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80B0D790  D0 1D 04 B0 */	stfs f0, 0x4b0(r29)
 /* 80B0D794  C0 1D 04 A8 */	lfs f0, 0x4a8(r29)
 /* 80B0D798  D0 1D 04 BC */	stfs f0, 0x4bc(r29)
@@ -143,11 +143,11 @@ lbl_80B0D87C:
 /* 80B0D890  90 BD 0D 60 */	stw r5, 0xd60(r29)
 /* 80B0D894  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B0D898  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B0D89C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B0D8A0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80B0D89C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B0D8A0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B0D8A4  90 7D 0D 20 */	stw r3, 0xd20(r29)
 /* 80B0D8A8  90 1D 0D 24 */	stw r0, 0xd24(r29)
-/* 80B0D8AC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80B0D8AC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B0D8B0  90 1D 0D 28 */	stw r0, 0xd28(r29)
 /* 80B0D8B4  38 00 FF FF */	li r0, -1
 /* 80B0D8B8  B0 1D 0D 74 */	sth r0, 0xd74(r29)

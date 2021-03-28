@@ -11,8 +11,8 @@ lbl_80C9D148:
 /* 80C9D16C  80 83 05 A8 */	lwz r4, 0x5a8(r3)
 /* 80C9D170  80 84 00 04 */	lwz r4, 4(r4)
 /* 80C9D174  4B 37 D4 04 */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
-/* 80C9D178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9D17C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9D178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9D17C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9D180  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80C9D184  7F E4 FB 78 */	mr r4, r31
 /* 80C9D188  80 1F 00 B0 */	lwz r0, 0xb0(r31)
@@ -22,8 +22,8 @@ lbl_80C9D148:
 /* 80C9D198  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D19C  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 80C9D1A0  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
-/* 80C9D1A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9D1A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9D1A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9D1A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9D1AC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D1B0  7C 05 07 74 */	extsb r5, r0
 /* 80C9D1B4  4B 39 81 AC */	b isSwitch__10dSv_info_cCFii
@@ -46,8 +46,8 @@ lbl_80C9D1F0:
 /* 80C9D1F0  38 00 00 00 */	li r0, 0
 /* 80C9D1F4  98 1F 06 3D */	stb r0, 0x63d(r31)
 lbl_80C9D1F8:
-/* 80C9D1F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9D1FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9D1F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9D1FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9D200  7F C4 F3 78 */	mr r4, r30
 /* 80C9D204  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C9D208  7C 05 07 74 */	extsb r5, r0
@@ -72,8 +72,8 @@ lbl_80C9D240:
 lbl_80C9D248:
 /* 80C9D248  7F E3 FB 78 */	mr r3, r31
 /* 80C9D24C  4B FF FE 4D */	bl initBaseMtx__12daObjStair_cFv
-/* 80C9D250  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9D254  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9D250  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9D254  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C9D258  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C9D25C  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C9D260  88 1F 04 BA */	lbz r0, 0x4ba(r31)

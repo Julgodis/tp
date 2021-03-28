@@ -9,8 +9,8 @@ lbl_80657490:
 /* 806574AC  41 82 00 5C */	beq lbl_80657508
 /* 806574B0  3C 60 80 65 */	lis r3, l_HOSTIO@ha
 /* 806574B4  38 63 7A 9C */	addi r3, r3, l_HOSTIO@l
-/* 806574B8  C0 83 00 38 */	lfs f4, 0x38(r3)	/* effective address: 80657AD4 */
-/* 806574BC  C0 03 00 3C */	lfs f0, 0x3c(r3)	/* effective address: 80657AD8 */
+/* 806574B8  C0 83 00 38 */	lfs f4, 0x38(r3)
+/* 806574BC  C0 03 00 3C */	lfs f0, 0x3c(r3)
 /* 806574C0  EC 60 20 28 */	fsubs f3, f0, f4
 /* 806574C4  3C 60 80 65 */	lis r3, lit_4056@ha
 /* 806574C8  C8 43 79 4C */	lfd f2, lit_4056@l(r3)

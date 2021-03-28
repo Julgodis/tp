@@ -7,10 +7,10 @@ lbl_80787FE0:
 /* 80787FF4  7C 7C 1B 78 */	mr r28, r3
 /* 80787FF8  3C 80 80 79 */	lis r4, lit_3908@ha
 /* 80787FFC  3B C4 9C 38 */	addi r30, r4, lit_3908@l
-/* 80788000  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80788004  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 80788008  83 5F 5D AC */	lwz r26, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 8078800C  88 1F 5D B0 */	lbz r0, 0x5db0(r31)	/* effective address: 8040BF70 */
+/* 80788000  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80788004  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 80788008  83 5F 5D AC */	lwz r26, 0x5dac(r31)
+/* 8078800C  88 1F 5D B0 */	lbz r0, 0x5db0(r31)
 /* 80788010  7C 00 07 74 */	extsb r0, r0
 /* 80788014  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 80788018  7C 9F 02 14 */	add r4, r31, r0
@@ -60,8 +60,8 @@ lbl_80788098:
 /* 807880B8  38 7D 02 48 */	addi r3, r29, 0x248
 /* 807880BC  38 80 00 03 */	li r4, 3
 /* 807880C0  4B 9D AF 4C */	b SetTrimSize__9dCamera_cFl
-/* 807880C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807880C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807880C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807880C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807880CC  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 807880D0  7F 84 E3 78 */	mr r4, r28
 /* 807880D4  3C A0 80 04 */	lis r5, dEv_noFinishSkipProc__FPvi@ha
@@ -84,7 +84,7 @@ lbl_80788098:
 lbl_80788118:
 /* 80788118  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8078811C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80788120  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80788120  80 63 00 00 */	lwz r3, 0(r3)
 /* 80788124  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 80788128  4B 88 42 B4 */	b mDoMtx_YrotS__FPA4_fs
 /* 8078812C  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -189,7 +189,7 @@ lbl_8078827C:
 /* 807882A4  B0 7C 04 E6 */	sth r3, 0x4e6(r28)
 /* 807882A8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807882AC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807882B0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807882B0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807882B4  A8 9C 04 E6 */	lha r4, 0x4e6(r28)
 /* 807882B8  4B 88 41 24 */	b mDoMtx_YrotS__FPA4_fs
 /* 807882BC  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -275,7 +275,7 @@ lbl_807883EC:
 /* 807883EC  3B 60 00 01 */	li r27, 1
 /* 807883F0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807883F4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807883F8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807883F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 807883FC  A8 9A 04 E6 */	lha r4, 0x4e6(r26)
 /* 80788400  4B 88 3F DC */	b mDoMtx_YrotS__FPA4_fs
 /* 80788404  C0 1E 00 04 */	lfs f0, 4(r30)
@@ -321,8 +321,8 @@ lbl_80788450:
 /* 807884A0  38 7D 02 48 */	addi r3, r29, 0x248
 /* 807884A4  38 80 00 00 */	li r4, 0
 /* 807884A8  4B 9D AB 64 */	b SetTrimSize__9dCamera_cFl
-/* 807884AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807884B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807884AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807884B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807884B4  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 807884B8  4B 8B 9F B0 */	b reset__14dEvt_control_cFv
 /* 807884BC  80 7F 5D AC */	lwz r3, 0x5dac(r31)

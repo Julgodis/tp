@@ -64,8 +64,8 @@ lbl_80842694:
 /* 808426A0  28 00 00 10 */	cmplwi r0, 0x10
 /* 808426A4  40 82 00 1C */	bne lbl_808426C0
 lbl_808426A8:
-/* 808426A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 808426AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 808426A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 808426AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 808426B0  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 808426B4  80 9C 17 2C */	lwz r4, 0x172c(r28)
 /* 808426B8  4B 80 5A C4 */	b cutEnd__16dEvent_manager_cFi

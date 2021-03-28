@@ -6,7 +6,7 @@ lbl_80CD7E00:
 /* 80CD7E10  38 E4 83 3C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CD7E14  3C 80 80 CE */	lis r4, struct_80CD8520+0x1@ha
 /* 80CD7E18  38 C4 85 21 */	addi r6, r4, struct_80CD8520+0x1@l
-/* 80CD7E1C  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CD8521 */
+/* 80CD7E1C  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CD7E20  7C 00 07 75 */	extsb. r0, r0
 /* 80CD7E24  40 82 00 70 */	bne lbl_80CD7E94
 /* 80CD7E28  80 87 00 80 */	lwz r4, 0x80(r7)

@@ -16,9 +16,9 @@ lbl_80465490:
 /* 804654C8  FF C0 08 90 */	fmr f30, f1
 /* 804654CC  FF E0 10 90 */	fmr f31, f2
 /* 804654D0  FF 80 18 90 */	fmr f28, f3
-/* 804654D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804654D8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 804654DC  83 E3 5D AC */	lwz r31, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 804654D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804654D8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 804654DC  83 E3 5D AC */	lwz r31, 0x5dac(r3)
 /* 804654E0  C0 1F 05 50 */	lfs f0, 0x550(r31)
 /* 804654E4  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 804654E8  C0 1F 05 54 */	lfs f0, 0x554(r31)

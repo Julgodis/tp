@@ -34,9 +34,9 @@ lbl_807CF8BC:
 lbl_807CF93C:
 /* 807CF93C  C0 3F 00 0C */	lfs f1, 0xc(r31)
 /* 807CF940  C0 5F 00 10 */	lfs f2, 0x10(r31)
-/* 807CF944  C0 1E 04 A8 */	lfs f0, 0x4a8(r30)	/* effective address: 807D2820 */
+/* 807CF944  C0 1E 04 A8 */	lfs f0, 0x4a8(r30)
 /* 807CF948  EC 21 00 28 */	fsubs f1, f1, f0
-/* 807CF94C  C0 1E 04 B0 */	lfs f0, 0x4b0(r30)	/* effective address: 807D2828 */
+/* 807CF94C  C0 1E 04 B0 */	lfs f0, 0x4b0(r30)
 /* 807CF950  EC 42 00 28 */	fsubs f2, f2, f0
 /* 807CF954  EC 21 00 72 */	fmuls f1, f1, f1
 /* 807CF958  EC 02 00 B2 */	fmuls f0, f2, f2
@@ -46,7 +46,7 @@ lbl_807CF93C:
 /* 807CF968  40 80 00 10 */	bge lbl_807CF978
 /* 807CF96C  3C 60 80 7D */	lis r3, master_ns@ha
 /* 807CF970  38 63 23 78 */	addi r3, r3, master_ns@l
-/* 807CF974  93 C3 00 04 */	stw r30, 4(r3)	/* effective address: 807D237C */
+/* 807CF974  93 C3 00 04 */	stw r30, 4(r3)
 lbl_807CF978:
 /* 807CF978  C0 3F 00 14 */	lfs f1, 0x14(r31)
 /* 807CF97C  C0 5F 00 18 */	lfs f2, 0x18(r31)
@@ -62,7 +62,7 @@ lbl_807CF978:
 /* 807CF9A4  40 80 00 10 */	bge lbl_807CF9B4
 /* 807CF9A8  3C 60 80 7D */	lis r3, master_ns@ha
 /* 807CF9AC  38 63 23 78 */	addi r3, r3, master_ns@l
-/* 807CF9B0  93 C3 00 08 */	stw r30, 8(r3)	/* effective address: 807D2380 */
+/* 807CF9B0  93 C3 00 08 */	stw r30, 8(r3)
 lbl_807CF9B4:
 /* 807CF9B4  38 60 00 00 */	li r3, 0
 /* 807CF9B8  83 E1 00 0C */	lwz r31, 0xc(r1)

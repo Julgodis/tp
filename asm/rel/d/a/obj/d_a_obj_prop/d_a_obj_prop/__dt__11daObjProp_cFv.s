@@ -16,7 +16,7 @@ lbl_80CB5234:
 lbl_80CB526C:
 /* 80CB526C  3C 80 80 CB */	lis r4, l_arcName@ha
 /* 80CB5270  38 84 56 28 */	addi r4, r4, l_arcName@l
-/* 80CB5274  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CB5628 */
+/* 80CB5274  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CB5278  4B 37 7D 90 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CB527C  7F C3 F3 78 */	mr r3, r30
 /* 80CB5280  38 80 00 00 */	li r4, 0

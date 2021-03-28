@@ -45,7 +45,7 @@ lbl_80C2D474:
 /* 80C2D520  38 A0 00 00 */	li r5, 0
 /* 80C2D524  3C C0 80 C3 */	lis r6, l_HIO@ha
 /* 80C2D528  38 C6 E3 00 */	addi r6, r6, l_HIO@l
-/* 80C2D52C  C0 66 00 10 */	lfs f3, 0x10(r6)	/* effective address: 80C2E310 */
+/* 80C2D52C  C0 66 00 10 */	lfs f3, 0x10(r6)
 /* 80C2D530  3C C0 80 42 */	lis r6, mSimpleTexObj__21dDlst_shadowControl_c@ha
 /* 80C2D534  38 C6 48 D0 */	addi r6, r6, mSimpleTexObj__21dDlst_shadowControl_c@l
 /* 80C2D538  4B 3F FB 7C */	b dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj

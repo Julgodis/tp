@@ -7,9 +7,9 @@ lbl_80BF75C4:
 /* 80BF75D8  7C 7E 1B 78 */	mr r30, r3
 /* 80BF75DC  3C 80 80 C0 */	lis r4, l_dzb@ha
 /* 80BF75E0  3B E4 8F E8 */	addi r31, r4, l_dzb@l
-/* 80BF75E4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BF75E8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BF75EC  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BF75E4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BF75E8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BF75EC  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 80BF75F0  A0 03 07 66 */	lhz r0, 0x766(r3)
 /* 80BF75F4  54 00 C7 3F */	rlwinm. r0, r0, 0x18, 0x1c, 0x1f
 /* 80BF75F8  40 82 00 24 */	bne lbl_80BF761C

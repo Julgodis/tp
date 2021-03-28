@@ -34,8 +34,8 @@ lbl_80CF4A54:
 /* 80CF4A6C  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80CF4A70  7C 00 07 75 */	extsb. r0, r0
 /* 80CF4A74  40 82 00 9C */	bne lbl_80CF4B10
-/* 80CF4A78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF4A7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF4A78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF4A7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF4A80  38 80 00 3F */	li r4, 0x3f
 /* 80CF4A84  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF4A88  7C 05 07 74 */	extsb r5, r0
@@ -57,15 +57,15 @@ lbl_80CF4A54:
 /* 80CF4AC8  54 80 27 3E */	srwi r0, r4, 0x1c
 /* 80CF4ACC  28 00 00 01 */	cmplwi r0, 1
 /* 80CF4AD0  40 82 00 1C */	bne lbl_80CF4AEC
-/* 80CF4AD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF4AD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF4AD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF4AD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF4ADC  54 84 C6 3E */	rlwinm r4, r4, 0x18, 0x18, 0x1f
 /* 80CF4AE0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80CF4AE4  7C 05 07 74 */	extsb r5, r0
 /* 80CF4AE8  4B 34 07 18 */	b onSwitch__10dSv_info_cFii
 lbl_80CF4AEC:
-/* 80CF4AEC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF4AF0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF4AEC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF4AF0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF4AF4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80CF4AF8  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80CF4AFC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -87,9 +87,9 @@ lbl_80CF4B10:
 /* 80CF4B38  3C 80 80 CF */	lis r4, l_color@ha
 /* 80CF4B3C  8C 04 59 D0 */	lbzu r0, l_color@l(r4)
 /* 80CF4B40  98 03 00 00 */	stb r0, 0(r3)
-/* 80CF4B44  88 04 00 01 */	lbz r0, 1(r4)	/* effective address: 80CF0001 */
+/* 80CF4B44  88 04 00 01 */	lbz r0, 1(r4)
 /* 80CF4B48  98 03 00 01 */	stb r0, 1(r3)
-/* 80CF4B4C  88 04 00 02 */	lbz r0, 2(r4)	/* effective address: 80CF0002 */
+/* 80CF4B4C  88 04 00 02 */	lbz r0, 2(r4)
 /* 80CF4B50  98 03 00 02 */	stb r0, 2(r3)
 /* 80CF4B54  7F E3 FB 78 */	mr r3, r31
 /* 80CF4B58  48 00 02 B1 */	bl execute__14daObjSwBallB_cFv

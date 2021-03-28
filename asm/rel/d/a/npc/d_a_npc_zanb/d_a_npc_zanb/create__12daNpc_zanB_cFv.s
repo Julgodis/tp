@@ -135,8 +135,8 @@ lbl_80B6915C:
 /* 80B6924C  90 1D 06 B8 */	stw r0, 0x6b8(r29)
 lbl_80B69250:
 /* 80B69250  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80B69254  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B69258  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80B69254  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B69258  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80B6925C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80B69260  4B 50 D8 4C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80B69264  80 1D 07 68 */	lwz r0, 0x768(r29)

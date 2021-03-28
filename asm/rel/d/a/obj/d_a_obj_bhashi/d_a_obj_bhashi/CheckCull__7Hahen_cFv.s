@@ -7,17 +7,17 @@ lbl_80577C1C:
 /* 80577C30  7C 7E 1B 78 */	mr r30, r3
 /* 80577C34  3C 60 80 58 */	lis r3, data_80578A88@ha
 /* 80577C38  3B E3 8A 88 */	addi r31, r3, data_80578A88@l
-/* 80577C3C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80577C40  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80577C44  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80577C3C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80577C40  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80577C44  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80577C48  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 80577C4C  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 80577C50  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80577C54  C0 3F 00 74 */	lfs f1, 0x74(r31)	/* effective address: 80578AFC */
+/* 80577C54  C0 3F 00 74 */	lfs f1, 0x74(r31)
 /* 80577C58  D0 21 00 10 */	stfs f1, 0x10(r1)
 /* 80577C5C  D0 41 00 14 */	stfs f2, 0x14(r1)
-/* 80577C60  C0 43 04 D8 */	lfs f2, 0x4d8(r3)	/* effective address: 80406698 */
-/* 80577C64  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 80577C60  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
+/* 80577C64  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 80577C68  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 80577C6C  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 80577C70  D0 41 00 20 */	stfs f2, 0x20(r1)

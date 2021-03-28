@@ -24,7 +24,7 @@ lbl_806829A8:
 /* 80682A00  4B 98 9A CC */	b mDoMtx_ZrotM__FPA4_fs
 /* 80682A04  3C 60 80 68 */	lis r3, l_HIO@ha
 /* 80682A08  38 63 56 84 */	addi r3, r3, l_HIO@l
-/* 80682A0C  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 8068568C */
+/* 80682A0C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80682A10  C0 1F 00 40 */	lfs f0, 0x40(r31)
 /* 80682A14  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80682A18  FC 40 08 90 */	fmr f2, f1

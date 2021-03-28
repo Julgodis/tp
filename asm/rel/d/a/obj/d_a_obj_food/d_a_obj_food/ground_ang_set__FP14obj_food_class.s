@@ -27,8 +27,8 @@ lbl_80BF0854:
 /* 80BF08B8  38 61 00 20 */	addi r3, r1, 0x20
 /* 80BF08BC  38 81 00 14 */	addi r4, r1, 0x14
 /* 80BF08C0  4B 67 74 4C */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 80BF08C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF08C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF08C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF08C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF08CC  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80BF08D0  7F C3 F3 78 */	mr r3, r30
 /* 80BF08D4  38 81 00 20 */	addi r4, r1, 0x20

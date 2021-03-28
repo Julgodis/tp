@@ -244,8 +244,8 @@ lbl_809A3160:
 /* 809A3270  7D 89 03 A6 */	mtctr r12
 /* 809A3274  4E 80 04 21 */	bctrl 
 /* 809A3278  1C 83 00 14 */	mulli r4, r3, 0x14
-/* 809A327C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A3280  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809A327C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A3280  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809A3284  3B 83 5F 64 */	addi r28, r3, 0x5f64
 /* 809A3288  3C 64 00 01 */	addis r3, r4, 1
 /* 809A328C  38 63 61 54 */	addi r3, r3, 0x6154

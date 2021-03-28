@@ -7,12 +7,12 @@ lbl_806A8938:
 /* 806A894C  7C 7E 1B 78 */	mr r30, r3
 /* 806A8950  3C 80 80 6B */	lis r4, lit_3916@ha
 /* 806A8954  3B E4 9F 30 */	addi r31, r4, lit_3916@l
-/* 806A8958  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806A895C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806A8960  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806A8958  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806A895C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806A8960  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 806A8964  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
 /* 806A8968  C0 23 04 D4 */	lfs f1, 0x4d4(r3)
-/* 806A896C  C0 1F 00 B0 */	lfs f0, 0xb0(r31)	/* effective address: 806A9FE0 */
+/* 806A896C  C0 1F 00 B0 */	lfs f0, 0xb0(r31)
 /* 806A8970  EC 21 00 28 */	fsubs f1, f1, f0
 /* 806A8974  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 806A8978  D0 01 00 34 */	stfs f0, 0x34(r1)
@@ -142,9 +142,9 @@ lbl_806A8B04:
 /* 806A8B54  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 806A8B58  7D 89 03 A6 */	mtctr r12
 /* 806A8B5C  4E 80 04 21 */	bctrl 
-/* 806A8B60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806A8B64  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 806A8B68  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 806A8B60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A8B64  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 806A8B68  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 806A8B6C  38 80 00 00 */	li r4, 0
 /* 806A8B70  90 81 00 08 */	stw r4, 8(r1)
 /* 806A8B74  38 00 FF FF */	li r0, -1
@@ -192,8 +192,8 @@ lbl_806A8BF8:
 /* 806A8C18  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 806A8C1C  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 806A8C20  D0 21 00 30 */	stfs f1, 0x30(r1)
-/* 806A8C24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806A8C28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806A8C24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A8C28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806A8C2C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 806A8C30  38 80 00 02 */	li r4, 2
 /* 806A8C34  38 A0 00 1F */	li r5, 0x1f

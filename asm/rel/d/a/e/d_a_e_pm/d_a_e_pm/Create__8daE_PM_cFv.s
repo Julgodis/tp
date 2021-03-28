@@ -98,7 +98,7 @@ lbl_8074B634:
 /* 8074B650  38 00 FF FF */	li r0, -1
 /* 8074B654  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074B658  38 63 C3 94 */	addi r3, r3, l_HIO@l
-/* 8074B65C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 8074C398 */
+/* 8074B65C  98 03 00 04 */	stb r0, 4(r3)
 lbl_8074B660:
 /* 8074B660  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 8074B664  98 1D 06 1A */	stb r0, 0x61a(r29)

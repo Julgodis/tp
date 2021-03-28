@@ -86,8 +86,8 @@ lbl_8053CCE8:
 /* 8053CCEC  41 82 00 D0 */	beq lbl_8053CDBC
 /* 8053CCF0  48 00 01 3C */	b lbl_8053CE2C
 lbl_8053CCF4:
-/* 8053CCF4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8053CCF8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8053CCF4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8053CCF8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8053CCFC  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 8053CD00  7F C3 F3 78 */	mr r3, r30
 /* 8053CD04  4B B0 B6 E4 */	b getRunEventName__16dEvent_manager_cFv

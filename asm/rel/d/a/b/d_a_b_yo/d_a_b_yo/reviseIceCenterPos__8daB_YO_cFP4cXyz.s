@@ -10,7 +10,7 @@ lbl_80636E9C:
 /* 80636EBC  3C 80 80 64 */	lis r4, lit_3788@ha
 /* 80636EC0  3B E4 97 F4 */	addi r31, r4, lit_3788@l
 /* 80636EC4  C0 43 0F 4C */	lfs f2, 0xf4c(r3)
-/* 80636EC8  C0 1F 00 E8 */	lfs f0, 0xe8(r31)	/* effective address: 806398DC */
+/* 80636EC8  C0 1F 00 E8 */	lfs f0, 0xe8(r31)
 /* 80636ECC  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80636ED0  40 81 00 08 */	ble lbl_80636ED8
 /* 80636ED4  FC 40 00 90 */	fmr f2, f0

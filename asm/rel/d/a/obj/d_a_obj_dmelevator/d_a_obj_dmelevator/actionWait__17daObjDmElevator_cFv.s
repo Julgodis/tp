@@ -12,9 +12,9 @@ lbl_80BDEECC:
 /* 80BDEEF4  48 00 04 2D */	bl moveInit__17daObjDmElevator_cFv
 /* 80BDEEF8  48 00 00 54 */	b lbl_80BDEF4C
 lbl_80BDEEFC:
-/* 80BDEEFC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BDEF00  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BDEF04  88 04 4F AD */	lbz r0, 0x4fad(r4)	/* effective address: 8040B16D */
+/* 80BDEEFC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BDEF00  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BDEF04  88 04 4F AD */	lbz r0, 0x4fad(r4)
 /* 80BDEF08  28 00 00 00 */	cmplwi r0, 0
 /* 80BDEF0C  40 82 00 40 */	bne lbl_80BDEF4C
 /* 80BDEF10  88 1F 06 2D */	lbz r0, 0x62d(r31)

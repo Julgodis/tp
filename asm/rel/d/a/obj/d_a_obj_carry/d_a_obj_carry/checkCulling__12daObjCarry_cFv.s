@@ -38,8 +38,8 @@ lbl_804723A4:
 /* 804723BC  54 00 06 BE */	clrlwi r0, r0, 0x1a
 /* 804723C0  7C 04 03 78 */	mr r4, r0
 lbl_804723C4:
-/* 804723C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804723C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804723C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804723C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804723CC  38 63 4E C4 */	addi r3, r3, 0x4ec4
 /* 804723D0  4B BB 21 18 */	b checkRoomDisp__20dStage_roomControl_cCFi
 /* 804723D4  2C 03 00 00 */	cmpwi r3, 0
@@ -65,8 +65,8 @@ lbl_80472408:
 /* 80472418  54 04 D6 3E */	rlwinm r4, r0, 0x1a, 0x18, 0x1f
 /* 8047241C  28 04 00 FF */	cmplwi r4, 0xff
 /* 80472420  41 82 00 24 */	beq lbl_80472444
-/* 80472424  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80472428  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80472424  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80472428  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047242C  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80472430  7C 05 07 74 */	extsb r5, r0
 /* 80472434  4B BC 2F 2C */	b isSwitch__10dSv_info_cCFii

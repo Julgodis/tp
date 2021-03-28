@@ -118,8 +118,8 @@ lbl_8070A1F8:
 /* 8070A1F8  88 9D 05 D0 */	lbz r4, 0x5d0(r29)
 /* 8070A1FC  28 04 00 FF */	cmplwi r4, 0xff
 /* 8070A200  41 82 00 28 */	beq lbl_8070A228
-/* 8070A204  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070A208  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8070A204  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070A208  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8070A20C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 8070A210  7C 05 07 74 */	extsb r5, r0
 /* 8070A214  4B 92 B1 4C */	b isSwitch__10dSv_info_cCFii
@@ -128,8 +128,8 @@ lbl_8070A1F8:
 /* 8070A220  38 60 00 05 */	li r3, 5
 /* 8070A224  48 00 01 90 */	b lbl_8070A3B4
 lbl_8070A228:
-/* 8070A228  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070A22C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8070A228  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070A22C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8070A230  38 63 09 58 */	addi r3, r3, 0x958
 /* 8070A234  38 80 00 07 */	li r4, 7
 /* 8070A238  4B 92 A6 FC */	b isDungeonItem__12dSv_memBit_cCFi

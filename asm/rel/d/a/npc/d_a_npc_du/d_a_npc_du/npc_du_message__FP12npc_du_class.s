@@ -72,9 +72,9 @@ lbl_809B0848:
 /* 809B0874  38 C0 10 00 */	li r6, 0x1000
 lbl_809B0878:
 /* 809B0878  4B 8B FD 90 */	b cLib_addCalcAngleS2__FPssss
-/* 809B087C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809B0880  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809B0884  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 809B087C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809B0880  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B0884  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 809B0888  28 00 00 00 */	cmplwi r0, 0
 /* 809B088C  40 82 00 3C */	bne lbl_809B08C8
 /* 809B0890  C0 3F 05 B8 */	lfs f1, 0x5b8(r31)

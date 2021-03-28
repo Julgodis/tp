@@ -325,12 +325,12 @@ asm static void fpcNdRq_Create(u32 param_0) {
 /* ############################################################################################## */
 /* 803A3AA8-803A3AC0 0018+00 s=1 e=0 z=0  None .data      methods$2376                                                 */
 SECTION_DATA static void* data_803A3AA8[6] = {
-	/* 0    */ (void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
-	/* 1    */ (void*)fpcNdRq_phase_Delete__FP19node_create_request,
-	/* 2    */ (void*)fpcNdRq_phase_IsDeleted__FP19node_create_request,
-	/* 3    */ (void*)fpcNdRq_phase_Create__FP19node_create_request,
-	/* 4    */ (void*)fpcNdRq_phase_IsCreated__FP19node_create_request,
-	/* 5    */ (void*)NULL,
+	(void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
+	(void*)fpcNdRq_phase_Delete__FP19node_create_request,
+	(void*)fpcNdRq_phase_IsDeleted__FP19node_create_request,
+	(void*)fpcNdRq_phase_Create__FP19node_create_request,
+	(void*)fpcNdRq_phase_IsCreated__FP19node_create_request,
+	(void*)NULL,
 };
 
 /* 80022E14-80022EB0 009C+00 s=1 e=0 z=0  None .text      fpcNdRq_ChangeNode__FUlP18process_node_classsPv              */
@@ -347,10 +347,10 @@ asm static void fpcNdRq_ChangeNode(u32 param_0, process_node_class* param_1, s16
 /* ############################################################################################## */
 /* 803A3AC0-803A3AD0 0010+00 s=1 e=0 z=0  None .data      methods$2386                                                 */
 SECTION_DATA static void* data_803A3AC0[4] = {
-	/* 0    */ (void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
-	/* 1    */ (void*)fpcNdRq_phase_Delete__FP19node_create_request,
-	/* 2    */ (void*)fpcNdRq_phase_IsDeleted__FP19node_create_request,
-	/* 3    */ (void*)NULL,
+	(void*)fpcNdRq_phase_IsDeleteTiming__FP19node_create_request,
+	(void*)fpcNdRq_phase_Delete__FP19node_create_request,
+	(void*)fpcNdRq_phase_IsDeleted__FP19node_create_request,
+	(void*)NULL,
 };
 
 /* 80022EB0-80022F3C 008C+00 s=1 e=0 z=0  None .text      fpcNdRq_DeleteNode__FUlP18process_node_class                 */
@@ -367,9 +367,9 @@ asm static void fpcNdRq_DeleteNode(u32 param_0, process_node_class* param_1) {
 /* ############################################################################################## */
 /* 803A3AD0-803A3AE0 000C+04 s=1 e=0 z=0  None .data      methods$2397                                                 */
 SECTION_DATA static void* data_803A3AD0[3 + 1 /* padding */] = {
-	/* 0    */ (void*)fpcNdRq_phase_Create__FP19node_create_request,
-	/* 1    */ (void*)fpcNdRq_phase_IsCreated__FP19node_create_request,
-	/* 2    */ (void*)NULL,
+	(void*)fpcNdRq_phase_Create__FP19node_create_request,
+	(void*)fpcNdRq_phase_IsCreated__FP19node_create_request,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

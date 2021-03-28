@@ -12,8 +12,8 @@ lbl_8045CED8:
 /* 8045CF00  3C 60 80 46 */	lis r3, l_arcName@ha
 /* 8045CF04  38 63 D2 90 */	addi r3, r3, l_arcName@l
 /* 8045CF08  38 80 00 04 */	li r4, 4
-/* 8045CF0C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8045CF10  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8045CF0C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8045CF10  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8045CF14  3F 85 00 02 */	addis r28, r5, 2
 /* 8045CF18  3B 9C C2 F8 */	addi r28, r28, -15624
 /* 8045CF1C  7F 85 E3 78 */	mr r5, r28

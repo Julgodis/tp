@@ -6,8 +6,8 @@ lbl_80D5ADF4:
 /* 80D5AE04  48 00 00 A1 */	bl isAreaCheck__15daTag_Lv5Soup_cFv
 /* 80D5AE08  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80D5AE0C  41 82 00 78 */	beq lbl_80D5AE84
-/* 80D5AE10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5AE14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5AE10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5AE14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5AE18  3B E3 07 F0 */	addi r31, r3, 0x7f0
 /* 80D5AE1C  7F E3 FB 78 */	mr r3, r31
 /* 80D5AE20  38 80 00 20 */	li r4, 0x20

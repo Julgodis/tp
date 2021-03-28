@@ -107,7 +107,7 @@ lbl_80584C34:
 lbl_80584C5C:
 /* 80584C5C  3C 60 80 58 */	lis r3, l_HIO@ha
 /* 80584C60  38 63 5C C4 */	addi r3, r3, l_HIO@l
-/* 80584C64  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80585CCC */
+/* 80584C64  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80584C68  FC 40 08 90 */	fmr f2, f1
 /* 80584C6C  FC 60 08 90 */	fmr f3, f1
 /* 80584C70  4B A8 81 C8 */	b scaleM__14mDoMtx_stack_cFfff

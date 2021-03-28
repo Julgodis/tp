@@ -19,10 +19,10 @@ lbl_80C71F54:
 /* 80C71F98  38 00 00 06 */	li r0, 6
 /* 80C71F9C  7C 09 03 A6 */	mtctr r0
 lbl_80C71FA0:
-/* 80C71FA0  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80C72154 */
-/* 80C71FA4  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80C72158 */
-/* 80C71FA8  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80C721CC */
-/* 80C71FAC  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80C721D0 */
+/* 80C71FA0  80 64 00 04 */	lwz r3, 4(r4)
+/* 80C71FA4  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80C71FA8  90 65 00 04 */	stw r3, 4(r5)
+/* 80C71FAC  94 05 00 08 */	stwu r0, 8(r5)
 /* 80C71FB0  42 00 FF F0 */	bdnz lbl_80C71FA0
 /* 80C71FB4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80C71FB8  7C 08 03 A6 */	mtlr r0

@@ -39,9 +39,9 @@ lbl_80A02530:
 /* 80A02558  4B 81 B8 C0 */	b setMiniGameItem__13dMeter2Info_cFUc
 /* 80A0255C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80A02560  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80A02564  A0 03 00 98 */	lhz r0, 0x98(r3)	/* effective address: 80430220 */
+/* 80A02564  A0 03 00 98 */	lhz r0, 0x98(r3)
 /* 80A02568  60 00 00 04 */	ori r0, r0, 4
-/* 80A0256C  B0 03 00 98 */	sth r0, 0x98(r3)	/* effective address: 80430220 */
+/* 80A0256C  B0 03 00 98 */	sth r0, 0x98(r3)
 /* 80A02570  48 00 00 84 */	b lbl_80A025F4
 lbl_80A02574:
 /* 80A02574  38 00 00 01 */	li r0, 1

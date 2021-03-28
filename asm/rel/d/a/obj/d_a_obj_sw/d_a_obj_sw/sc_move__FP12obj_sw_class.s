@@ -87,9 +87,9 @@ lbl_80CF1170:
 /* 80CF1184  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80CF1188  40 81 01 B0 */	ble lbl_80CF1338
 /* 80CF118C  38 61 00 28 */	addi r3, r1, 0x28
-/* 80CF1190  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80CF1194  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80CF1198  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80CF1190  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80CF1194  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80CF1198  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80CF119C  48 00 1E 41 */	bl getLeftHandPos__9daPy_py_cCFv
 /* 80CF11A0  38 61 00 1C */	addi r3, r1, 0x1c
 /* 80CF11A4  38 9E 05 38 */	addi r4, r30, 0x538
@@ -195,8 +195,8 @@ lbl_80CF12C0:
 /* 80CF1310  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80CF1314  D0 01 00 14 */	stfs f0, 0x14(r1)
 /* 80CF1318  D0 21 00 18 */	stfs f1, 0x18(r1)
-/* 80CF131C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF1320  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF131C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF1320  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF1324  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CF1328  38 80 00 03 */	li r4, 3
 /* 80CF132C  38 A0 00 1F */	li r5, 0x1f

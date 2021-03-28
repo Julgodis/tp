@@ -23,7 +23,7 @@ lbl_80CF4600:
 /* 80CF4604  41 82 00 30 */	beq lbl_80CF4634
 /* 80CF4608  3C 60 80 CF */	lis r3, l_target_info_count@ha
 /* 80CF460C  38 83 5B 18 */	addi r4, r3, l_target_info_count@l
-/* 80CF4610  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80CF5B18 */
+/* 80CF4610  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80CF4614  2C 05 00 02 */	cmpwi r5, 2
 /* 80CF4618  40 80 00 1C */	bge lbl_80CF4634
 /* 80CF461C  54 A0 10 3A */	slwi r0, r5, 2

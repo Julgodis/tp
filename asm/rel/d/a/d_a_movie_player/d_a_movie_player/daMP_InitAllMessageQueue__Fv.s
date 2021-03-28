@@ -7,7 +7,7 @@ lbl_80877A08:
 /* 80877A1C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80877A20  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877A24  3B E3 9B D0 */	addi r31, r3, daMP_ActivePlayer@l
-/* 80877A28  80 1F 00 B0 */	lwz r0, 0xb0(r31)	/* effective address: 80879C80 */
+/* 80877A28  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80877A2C  2C 00 00 00 */	cmpwi r0, 0
 /* 80877A30  40 82 00 20 */	bne lbl_80877A50
 /* 80877A34  3B A0 00 00 */	li r29, 0
@@ -32,7 +32,7 @@ lbl_80877A60:
 /* 80877A74  41 80 FF EC */	blt lbl_80877A60
 /* 80877A78  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877A7C  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 80877A80  88 03 00 A7 */	lbz r0, 0xa7(r3)	/* effective address: 80879C77 */
+/* 80877A80  88 03 00 A7 */	lbz r0, 0xa7(r3)
 /* 80877A84  28 00 00 00 */	cmplwi r0, 0
 /* 80877A88  41 82 00 20 */	beq lbl_80877AA8
 /* 80877A8C  3B E0 00 00 */	li r31, 0

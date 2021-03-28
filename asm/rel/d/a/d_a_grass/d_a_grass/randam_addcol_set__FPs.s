@@ -16,20 +16,20 @@ lbl_8051BD4C:
 /* 8051BD84  7C 1D 07 34 */	extsh r29, r0
 /* 8051BD88  54 80 B6 FE */	rlwinm r0, r4, 0x16, 0x1b, 0x1f
 /* 8051BD8C  7C 1C 07 34 */	extsh r28, r0
-/* 8051BD90  C0 7F 00 1C */	lfs f3, 0x1c(r31)	/* effective address: 80523044 */
-/* 8051BD94  C0 5F 01 1C */	lfs f2, 0x11c(r31)	/* effective address: 80523144 */
-/* 8051BD98  C8 3F 00 38 */	lfd f1, 0x38(r31)	/* effective address: 80523060 */
+/* 8051BD90  C0 7F 00 1C */	lfs f3, 0x1c(r31)
+/* 8051BD94  C0 5F 01 1C */	lfs f2, 0x11c(r31)
+/* 8051BD98  C8 3F 00 38 */	lfd f1, 0x38(r31)
 /* 8051BD9C  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8051BDA0  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8051BDA4  3C 00 43 30 */	lis r0, 0x4330
 /* 8051BDA8  90 01 00 08 */	stw r0, 8(r1)
 /* 8051BDAC  C8 01 00 08 */	lfd f0, 8(r1)
 /* 8051BDB0  EC 20 08 28 */	fsubs f1, f0, f1
-/* 8051BDB4  C0 1F 01 84 */	lfs f0, 0x184(r31)	/* effective address: 805231AC */
+/* 8051BDB4  C0 1F 01 84 */	lfs f0, 0x184(r31)
 /* 8051BDB8  EC 01 00 24 */	fdivs f0, f1, f0
 /* 8051BDBC  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8051BDC0  EF E3 00 2A */	fadds f31, f3, f0
-/* 8051BDC4  C0 3F 00 FC */	lfs f1, 0xfc(r31)	/* effective address: 80523124 */
+/* 8051BDC4  C0 3F 00 FC */	lfs f1, 0xfc(r31)
 /* 8051BDC8  4B D4 BB 8C */	b cM_rndF__Ff
 /* 8051BDCC  EF FF 00 72 */	fmuls f31, f31, f1
 /* 8051BDD0  7F C0 07 34 */	extsh r0, r30

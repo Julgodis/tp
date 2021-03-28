@@ -9,8 +9,8 @@ lbl_80838F98:
 /* 80838FB4  3B E3 54 AC */	addi r31, r3, lit_3894@l
 /* 80838FB8  38 7F 00 0C */	addi r3, r31, 0xc
 /* 80838FBC  38 80 00 26 */	li r4, 0x26
-/* 80838FC0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80838FC4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80838FC0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80838FC4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80838FC8  3F C5 00 02 */	addis r30, r5, 2
 /* 80838FCC  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80838FD0  7F C5 F3 78 */	mr r5, r30

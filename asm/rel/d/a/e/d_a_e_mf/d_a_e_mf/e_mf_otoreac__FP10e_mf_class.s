@@ -9,7 +9,7 @@ lbl_8070BF94:
 /* 8070BFB0  7C 7E 1B 78 */	mr r30, r3
 /* 8070BFB4  3C 60 80 71 */	lis r3, lit_3828@ha
 /* 8070BFB8  3B E3 39 74 */	addi r31, r3, lit_3828@l
-/* 8070BFBC  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80713978 */
+/* 8070BFBC  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8070BFC0  38 80 00 02 */	li r4, 2
 /* 8070BFC4  98 9E 06 D4 */	stb r4, 0x6d4(r30)
 /* 8070BFC8  A8 1E 05 B4 */	lha r0, 0x5b4(r30)
@@ -62,7 +62,7 @@ lbl_8070C03C:
 lbl_8070C078:
 /* 8070C078  3C 60 80 71 */	lis r3, l_HIO@ha
 /* 8070C07C  38 63 3F 74 */	addi r3, r3, l_HIO@l
-/* 8070C080  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 80713F84 */
+/* 8070C080  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 8070C084  A8 7E 06 AC */	lha r3, 0x6ac(r30)
 /* 8070C088  54 60 07 BF */	clrlwi. r0, r3, 0x1e
 /* 8070C08C  40 82 00 1C */	bne lbl_8070C0A8

@@ -21,16 +21,16 @@ lbl_80AEB078:
 /* 80AEB0C4  3C 60 80 AF */	lis r3, __vt__8cM3dGPla@ha
 /* 80AEB0C8  38 03 BD 00 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80AEB0CC  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80AEB0D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AEB0D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AEB0D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AEB0D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AEB0D8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80AEB0DC  38 9E 06 04 */	addi r4, r30, 0x604
 /* 80AEB0E0  38 A1 00 08 */	addi r5, r1, 8
 /* 80AEB0E4  4B 58 96 60 */	b GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 80AEB0E8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80AEB0EC  41 82 00 34 */	beq lbl_80AEB120
-/* 80AEB0F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AEB0F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80AEB0F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AEB0F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80AEB0F8  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80AEB0FC  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80AEB100  C0 3E 05 EC */	lfs f1, 0x5ec(r30)

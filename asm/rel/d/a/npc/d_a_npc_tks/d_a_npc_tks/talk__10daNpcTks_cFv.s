@@ -46,9 +46,9 @@ lbl_80B16C14:
 /* 80B16C18  B0 1E 13 88 */	sth r0, 0x1388(r30)
 /* 80B16C1C  48 00 03 A8 */	b lbl_80B16FC4
 lbl_80B16C20:
-/* 80B16C20  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B16C24  3B A4 61 C0 */	addi r29, r4, struct_804061C0+0x0@l
-/* 80B16C28  80 9D 5D AC */	lwz r4, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 80B16C20  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B16C24  3B A4 61 C0 */	addi r29, r4, g_dComIfG_gameInfo@l
+/* 80B16C28  80 9D 5D AC */	lwz r4, 0x5dac(r29)
 /* 80B16C2C  4B 50 3A E4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B16C30  A8 9E 08 F2 */	lha r4, 0x8f2(r30)
 /* 80B16C34  7C 60 07 34 */	extsh r0, r3
@@ -85,10 +85,10 @@ lbl_80B16C20:
 /* 80B16CB0  3C 03 00 01 */	addis r0, r3, 1
 /* 80B16CB4  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80B16CB8  41 82 00 6C */	beq lbl_80B16D24
-/* 80B16CBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B16CC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B16CC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80B16CC8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80B16CBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B16CC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B16CC4  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80B16CC8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B16CCC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B16CD0  3C 60 80 B2 */	lis r3, stringBase0@ha
 /* 80B16CD4  38 63 E0 48 */	addi r3, r3, stringBase0@l
@@ -96,8 +96,8 @@ lbl_80B16C20:
 /* 80B16CDC  41 82 00 08 */	beq lbl_80B16CE4
 /* 80B16CE0  38 A3 00 37 */	addi r5, r3, 0x37
 lbl_80B16CE4:
-/* 80B16CE4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B16CE8  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
+/* 80B16CE4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B16CE8  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
 /* 80B16CEC  38 7D 4F F8 */	addi r3, r29, 0x4ff8
 /* 80B16CF0  7F C4 F3 78 */	mr r4, r30
 /* 80B16CF4  38 C0 00 FF */	li r6, 0xff
@@ -115,11 +115,11 @@ lbl_80B16CE4:
 lbl_80B16D24:
 /* 80B16D24  3C 60 80 B2 */	lis r3, lit_5371@ha
 /* 80B16D28  38 83 E2 DC */	addi r4, r3, lit_5371@l
-/* 80B16D2C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E2DC */
-/* 80B16D30  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E2E0 */
+/* 80B16D2C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B16D30  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B16D34  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80B16D38  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B16D3C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E2E4 */
+/* 80B16D3C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B16D40  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B16D44  38 00 00 03 */	li r0, 3
 /* 80B16D48  B0 1E 13 88 */	sth r0, 0x1388(r30)

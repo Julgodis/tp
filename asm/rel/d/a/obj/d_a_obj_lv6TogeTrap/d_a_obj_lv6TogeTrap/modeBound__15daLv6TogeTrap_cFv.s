@@ -9,9 +9,9 @@ lbl_80C7AD40:
 /* 80C7AD5C  3B E3 C6 18 */	addi r31, r3, lit_3631@l
 /* 80C7AD60  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80C7AD64  38 9E 05 B0 */	addi r4, r30, 0x5b0
-/* 80C7AD68  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80C7C61C */
+/* 80C7AD68  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 80C7AD6C  C0 5E 05 D4 */	lfs f2, 0x5d4(r30)
-/* 80C7AD70  C0 7F 01 08 */	lfs f3, 0x108(r31)	/* effective address: 80C7C720 */
+/* 80C7AD70  C0 7F 01 08 */	lfs f3, 0x108(r31)
 /* 80C7AD74  4B 5F 4D 44 */	b cLib_addCalcPos__FP4cXyzRC4cXyzfff
 /* 80C7AD78  C0 1F 00 D0 */	lfs f0, 0xd0(r31)
 /* 80C7AD7C  FC 00 08 00 */	fcmpu cr0, f0, f1

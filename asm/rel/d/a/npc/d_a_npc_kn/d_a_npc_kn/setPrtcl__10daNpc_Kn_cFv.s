@@ -9,8 +9,8 @@ lbl_80A372D0:
 /* 80A372EC  3B 63 08 C8 */	addi r27, r3, mCcDObjData__10daNpc_Kn_c@l
 /* 80A372F0  3B E0 00 00 */	li r31, 0
 /* 80A372F4  3B A0 00 00 */	li r29, 0
-/* 80A372F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A372FC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
+/* 80A372F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A372FC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
 lbl_80A37300:
 /* 80A37300  20 1F 00 02 */	subfic r0, r31, 2
 /* 80A37304  7C 00 00 34 */	cntlzw r0, r0

@@ -7,14 +7,14 @@ lbl_8060BE6C:
 /* 8060BE80  7C 7F 1B 78 */	mr r31, r3
 /* 8060BE84  3C 60 80 61 */	lis r3, lit_3928@ha
 /* 8060BE88  3B A3 FD E0 */	addi r29, r3, lit_3928@l
-/* 8060BE8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8060BE90  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 8060BE94  88 1E 5D B0 */	lbz r0, 0x5db0(r30)	/* effective address: 8040BF70 */
+/* 8060BE8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8060BE90  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 8060BE94  88 1E 5D B0 */	lbz r0, 0x5db0(r30)
 /* 8060BE98  7C 00 07 74 */	extsb r0, r0
 /* 8060BE9C  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 8060BEA0  7C 7E 02 14 */	add r3, r30, r0
 /* 8060BEA4  83 83 5D 74 */	lwz r28, 0x5d74(r3)
-/* 8060BEA8  C0 1D 00 04 */	lfs f0, 4(r29)	/* effective address: 8060FDE4 */
+/* 8060BEA8  C0 1D 00 04 */	lfs f0, 4(r29)
 /* 8060BEAC  D0 1F 0A F0 */	stfs f0, 0xaf0(r31)
 /* 8060BEB0  38 7E 5B D4 */	addi r3, r30, 0x5bd4
 /* 8060BEB4  38 80 00 1F */	li r4, 0x1f
@@ -30,8 +30,8 @@ lbl_8060BE6C:
 /* 8060BEDC  38 63 00 84 */	addi r3, r3, stringBase0@l
 /* 8060BEE0  38 63 00 07 */	addi r3, r3, 7
 /* 8060BEE4  38 80 00 33 */	li r4, 0x33
-/* 8060BEE8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8060BEEC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8060BEE8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8060BEEC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8060BEF0  3C A5 00 02 */	addis r5, r5, 2
 /* 8060BEF4  38 C0 00 80 */	li r6, 0x80
 /* 8060BEF8  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -90,13 +90,13 @@ lbl_8060BE6C:
 /* 8060BFCC  D0 1F 0A F4 */	stfs f0, 0xaf4(r31)
 /* 8060BFD0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8060BFD4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8060BFD8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8060BFD8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8060BFDC  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8060BFE0  38 80 00 1E */	li r4, 0x1e
 /* 8060BFE4  4B CA 3E F8 */	b bgmStreamStop__8Z2SeqMgrFUl
 /* 8060BFE8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8060BFEC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8060BFF0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8060BFF0  80 63 00 00 */	lwz r3, 0(r3)
 /* 8060BFF4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 8060BFF8  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000087@ha */
 /* 8060BFFC  38 84 00 87 */	addi r4, r4, 0x0087 /* 0x01000087@l */

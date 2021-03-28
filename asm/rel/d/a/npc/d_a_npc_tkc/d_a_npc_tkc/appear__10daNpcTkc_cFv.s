@@ -54,11 +54,11 @@ lbl_80B0E834:
 /* 80B0E848  41 82 00 8C */	beq lbl_80B0E8D4
 /* 80B0E84C  3C 60 80 B1 */	lis r3, lit_5086@ha
 /* 80B0E850  38 83 0B 98 */	addi r4, r3, lit_5086@l
-/* 80B0E854  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B10B98 */
-/* 80B0E858  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B10B9C */
+/* 80B0E854  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B0E858  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B0E85C  90 61 00 08 */	stw r3, 8(r1)
 /* 80B0E860  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B0E864  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B10BA0 */
+/* 80B0E864  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B0E868  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B0E86C  38 00 00 03 */	li r0, 3
 /* 80B0E870  B0 1F 0D 76 */	sth r0, 0xd76(r31)

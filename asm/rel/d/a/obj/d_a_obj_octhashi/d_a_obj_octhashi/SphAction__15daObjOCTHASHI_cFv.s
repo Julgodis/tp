@@ -72,7 +72,7 @@ lbl_80CA55F0:
 /* 80CA56D8  90 01 00 08 */	stw r0, 8(r1)
 /* 80CA56DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CA56E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CA56E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CA56E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CA56E8  38 81 00 08 */	addi r4, r1, 8
 /* 80CA56EC  7F C5 F3 78 */	mr r5, r30
 /* 80CA56F0  38 C0 00 00 */	li r6, 0

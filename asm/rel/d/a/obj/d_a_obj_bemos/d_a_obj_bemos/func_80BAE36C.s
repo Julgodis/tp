@@ -12,8 +12,8 @@ lbl_80BAE36C:
 /* 80BAE394  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80BAE398  54 1E 47 3E */	rlwinm r30, r0, 8, 0x1c, 0x1f
 /* 80BAE39C  41 82 00 F0 */	beq lbl_80BAE48C
-/* 80BAE3A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BAE3A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BAE3A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BAE3A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BAE3A8  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80BAE3AC  7C 05 07 74 */	extsb r5, r0
 /* 80BAE3B0  4B 48 6F B0 */	b isSwitch__10dSv_info_cCFii

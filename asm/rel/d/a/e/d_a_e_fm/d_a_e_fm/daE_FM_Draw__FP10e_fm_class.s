@@ -130,7 +130,7 @@ lbl_804EFDF0:
 /* 804EFE38  C0 3F 00 B0 */	lfs f1, 0xb0(r31)
 /* 804EFE3C  3C E0 80 50 */	lis r7, l_HIO@ha
 /* 804EFE40  38 E7 AE A4 */	addi r7, r7, l_HIO@l
-/* 804EFE44  C0 07 00 08 */	lfs f0, 8(r7)	/* effective address: 804FAEAC */
+/* 804EFE44  C0 07 00 08 */	lfs f0, 8(r7)
 /* 804EFE48  EC 21 00 32 */	fmuls f1, f1, f0
 /* 804EFE4C  C0 5F 00 3C */	lfs f2, 0x3c(r31)
 /* 804EFE50  C0 9D 08 E4 */	lfs f4, 0x8e4(r29)

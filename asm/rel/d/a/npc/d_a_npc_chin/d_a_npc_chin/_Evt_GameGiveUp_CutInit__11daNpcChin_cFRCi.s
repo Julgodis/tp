@@ -29,9 +29,9 @@ lbl_80990884:
 /* 809908BC  7D 89 03 A6 */	mtctr r12
 /* 809908C0  4E 80 04 21 */	bctrl 
 /* 809908C4  7F E3 FB 78 */	mr r3, r31
-/* 809908C8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809908CC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 809908D0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 809908C8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809908CC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 809908D0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 809908D4  4B 68 9E 3C */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 809908D8  7C 64 1B 78 */	mr r4, r3
 /* 809908DC  7F E3 FB 78 */	mr r3, r31

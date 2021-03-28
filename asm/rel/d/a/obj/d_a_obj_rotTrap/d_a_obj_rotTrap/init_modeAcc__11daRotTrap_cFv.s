@@ -10,8 +10,8 @@ lbl_80CC0180:
 /* 80CC01A0  80 9F 17 38 */	lwz r4, 0x1738(r31)
 /* 80CC01A4  28 04 00 00 */	cmplwi r4, 0
 /* 80CC01A8  41 82 00 1C */	beq lbl_80CC01C4
-/* 80CC01AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC01B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC01AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC01B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC01B4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC01B8  4B 3B 40 98 */	b Release__4cBgSFP9dBgW_Base
 /* 80CC01BC  80 7F 17 38 */	lwz r3, 0x1738(r31)
@@ -20,8 +20,8 @@ lbl_80CC01C4:
 /* 80CC01C4  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80CC01C8  28 04 00 00 */	cmplwi r4, 0
 /* 80CC01CC  41 82 00 18 */	beq lbl_80CC01E4
-/* 80CC01D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC01D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC01D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC01D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC01D8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC01DC  7F E5 FB 78 */	mr r5, r31
 /* 80CC01E0  4B 3B 48 28 */	b Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c
@@ -31,12 +31,12 @@ lbl_80CC01E4:
 /* 80CC01EC  C0 1E 00 3C */	lfs f0, 0x3c(r30)
 /* 80CC01F0  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80CC01F4  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80CC01F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC01FC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC01F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC01FC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC0200  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80CC0204  3C 80 80 CC */	lis r4, l_HIO@ha
 /* 80CC0208  38 84 0A C4 */	addi r4, r4, l_HIO@l
-/* 80CC020C  88 84 00 0E */	lbz r4, 0xe(r4)	/* effective address: 80CC0AD2 */
+/* 80CC020C  88 84 00 0E */	lbz r4, 0xe(r4)
 /* 80CC0210  38 A0 00 0F */	li r5, 0xf
 /* 80CC0214  38 C1 00 08 */	addi r6, r1, 8
 /* 80CC0218  4B 3A F8 0C */	b StartShock__12dVibration_cFii4cXyz
@@ -45,7 +45,7 @@ lbl_80CC01E4:
 /* 80CC0224  C0 3E 00 48 */	lfs f1, 0x48(r30)
 /* 80CC0228  3C 60 80 CC */	lis r3, l_HIO@ha
 /* 80CC022C  38 63 0A C4 */	addi r3, r3, l_HIO@l
-/* 80CC0230  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CC0AC8 */
+/* 80CC0230  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CC0234  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CC0238  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80CC023C  EC 03 00 32 */	fmuls f0, f3, f0

@@ -45,11 +45,11 @@ lbl_80B174BC:
 /* 80B174C0  41 82 00 8C */	beq lbl_80B1754C
 /* 80B174C4  3C 60 80 B2 */	lis r3, lit_5511@ha
 /* 80B174C8  38 83 E3 30 */	addi r4, r3, lit_5511@l
-/* 80B174CC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E330 */
-/* 80B174D0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E334 */
+/* 80B174CC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B174D0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B174D4  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80B174D8  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80B174DC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E338 */
+/* 80B174DC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B174E0  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80B174E4  38 00 00 03 */	li r0, 3
 /* 80B174E8  B0 1F 13 88 */	sth r0, 0x1388(r31)
@@ -84,11 +84,11 @@ lbl_80B1754C:
 /* 80B17554  40 82 00 8C */	bne lbl_80B175E0
 /* 80B17558  3C 60 80 B2 */	lis r3, lit_5515@ha
 /* 80B1755C  38 83 E3 3C */	addi r4, r3, lit_5515@l
-/* 80B17560  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E33C */
-/* 80B17564  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E340 */
+/* 80B17560  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B17564  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B17568  90 61 00 08 */	stw r3, 8(r1)
 /* 80B1756C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B17570  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E344 */
+/* 80B17570  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B17574  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B17578  38 00 00 03 */	li r0, 3
 /* 80B1757C  B0 1F 13 88 */	sth r0, 0x1388(r31)

@@ -5,13 +5,13 @@ lbl_80D52BF0:
 /* 80D52BFC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80D52C00  4B 60 F5 D4 */	b _savegpr_27
 /* 80D52C04  7C 7C 1B 78 */	mr r28, r3
-/* 80D52C08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D52C0C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D52C08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D52C0C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D52C10  3B DF 4F F8 */	addi r30, r31, 0x4ff8
 /* 80D52C14  7F C3 F3 78 */	mr r3, r30
 /* 80D52C18  3C 80 80 D5 */	lis r4, l_myName@ha
 /* 80D52C1C  38 84 59 94 */	addi r4, r4, l_myName@l
-/* 80D52C20  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D55994 */
+/* 80D52C20  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D52C24  38 A0 00 00 */	li r5, 0
 /* 80D52C28  38 C0 00 00 */	li r6, 0
 /* 80D52C2C  4B 2F 4E F0 */	b getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci

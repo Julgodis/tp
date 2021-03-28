@@ -8,7 +8,7 @@ lbl_80CF4E08:
 /* 80CF4E20  38 C3 5A 20 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80CF4E24  3C 60 80 CF */	lis r3, data_80CF5B1C@ha
 /* 80CF4E28  38 A3 5B 1C */	addi r5, r3, data_80CF5B1C@l
-/* 80CF4E2C  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CF5B1C */
+/* 80CF4E2C  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CF4E30  7C 00 07 75 */	extsb. r0, r0
 /* 80CF4E34  40 82 00 40 */	bne lbl_80CF4E74
 /* 80CF4E38  80 66 00 24 */	lwz r3, 0x24(r6)

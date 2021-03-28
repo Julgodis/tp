@@ -22,12 +22,12 @@ lbl_8047DAEC:
 /* 8047DB3C  7C 09 03 A6 */	mtctr r0
 lbl_8047DB40:
 /* 8047DB40  7C 3F 25 2E */	stfsx f1, r31, r4
-/* 8047DB44  C0 06 00 00 */	lfs f0, 0(r6)	/* effective address: 80430CF4 */
+/* 8047DB44  C0 06 00 00 */	lfs f0, 0(r6)
 /* 8047DB48  7C BF 1A 14 */	add r5, r31, r3
 /* 8047DB4C  D0 05 00 64 */	stfs f0, 0x64(r5)
-/* 8047DB50  C0 06 00 04 */	lfs f0, 4(r6)	/* effective address: 80430CF8 */
+/* 8047DB50  C0 06 00 04 */	lfs f0, 4(r6)
 /* 8047DB54  D0 05 00 68 */	stfs f0, 0x68(r5)
-/* 8047DB58  C0 06 00 08 */	lfs f0, 8(r6)	/* effective address: 80430CFC */
+/* 8047DB58  C0 06 00 08 */	lfs f0, 8(r6)
 /* 8047DB5C  D0 05 00 6C */	stfs f0, 0x6c(r5)
 /* 8047DB60  38 63 00 0C */	addi r3, r3, 0xc
 /* 8047DB64  38 84 00 04 */	addi r4, r4, 4

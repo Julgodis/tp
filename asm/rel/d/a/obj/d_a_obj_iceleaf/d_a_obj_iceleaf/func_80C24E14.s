@@ -68,7 +68,7 @@ lbl_80C24F14:
 /* 80C24F14  38 7F 05 68 */	addi r3, r31, 0x568
 /* 80C24F18  3C 80 80 C2 */	lis r4, l_arcName@ha
 /* 80C24F1C  38 84 5D D0 */	addi r4, r4, l_arcName@l
-/* 80C24F20  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80C25DD0 */
+/* 80C24F20  80 84 00 00 */	lwz r4, 0(r4)
 /* 80C24F24  4B 40 7F 98 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80C24F28  7C 7E 1B 78 */	mr r30, r3
 /* 80C24F2C  2C 1E 00 04 */	cmpwi r30, 4

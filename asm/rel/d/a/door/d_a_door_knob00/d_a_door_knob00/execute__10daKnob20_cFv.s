@@ -77,9 +77,9 @@ lbl_804603DC:
 /* 80460408  4B FF F1 61 */	bl demoProc__10daKnob20_cFv
 /* 8046040C  3C 60 80 43 */	lis r3, g_meter2_info@ha
 /* 80460410  38 63 01 88 */	addi r3, r3, g_meter2_info@l
-/* 80460414  A0 03 00 B0 */	lhz r0, 0xb0(r3)	/* effective address: 80430238 */
+/* 80460414  A0 03 00 B0 */	lhz r0, 0xb0(r3)
 /* 80460418  60 00 00 02 */	ori r0, r0, 2
-/* 8046041C  B0 03 00 B0 */	sth r0, 0xb0(r3)	/* effective address: 80430238 */
+/* 8046041C  B0 03 00 B0 */	sth r0, 0xb0(r3)
 /* 80460420  48 00 00 20 */	b lbl_80460440
 lbl_80460424:
 /* 80460424  7F C3 F3 78 */	mr r3, r30

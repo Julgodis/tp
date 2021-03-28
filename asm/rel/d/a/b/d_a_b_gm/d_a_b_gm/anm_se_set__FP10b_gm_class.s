@@ -344,24 +344,24 @@ lbl_805F042C:
 /* 805F043C  B0 81 00 54 */	sth r4, 0x54(r1)
 /* 805F0440  3C 60 80 5F */	lis r3, l_HIO@ha
 /* 805F0444  39 63 47 DC */	addi r11, r3, l_HIO@l
-/* 805F0448  A8 0B 00 28 */	lha r0, 0x28(r11)	/* effective address: 805F4804 */
+/* 805F0448  A8 0B 00 28 */	lha r0, 0x28(r11)
 /* 805F044C  98 01 00 4C */	stb r0, 0x4c(r1)
-/* 805F0450  A8 0B 00 2A */	lha r0, 0x2a(r11)	/* effective address: 805F4806 */
+/* 805F0450  A8 0B 00 2A */	lha r0, 0x2a(r11)
 /* 805F0454  98 01 00 4D */	stb r0, 0x4d(r1)
-/* 805F0458  A8 0B 00 2C */	lha r0, 0x2c(r11)	/* effective address: 805F4808 */
+/* 805F0458  A8 0B 00 2C */	lha r0, 0x2c(r11)
 /* 805F045C  98 01 00 4E */	stb r0, 0x4e(r1)
 /* 805F0460  38 60 00 FF */	li r3, 0xff
 /* 805F0464  98 61 00 4F */	stb r3, 0x4f(r1)
-/* 805F0468  A8 0B 00 2E */	lha r0, 0x2e(r11)	/* effective address: 805F480A */
+/* 805F0468  A8 0B 00 2E */	lha r0, 0x2e(r11)
 /* 805F046C  98 01 00 48 */	stb r0, 0x48(r1)
-/* 805F0470  A8 0B 00 30 */	lha r0, 0x30(r11)	/* effective address: 805F480C */
+/* 805F0470  A8 0B 00 30 */	lha r0, 0x30(r11)
 /* 805F0474  98 01 00 49 */	stb r0, 0x49(r1)
-/* 805F0478  A8 0B 00 32 */	lha r0, 0x32(r11)	/* effective address: 805F480E */
+/* 805F0478  A8 0B 00 32 */	lha r0, 0x32(r11)
 /* 805F047C  98 01 00 4A */	stb r0, 0x4a(r1)
 /* 805F0480  98 61 00 4B */	stb r3, 0x4b(r1)
-/* 805F0484  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805F0488  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 805F048C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)	/* effective address: 8040BEFC */
+/* 805F0484  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805F0488  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 805F048C  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 805F0490  90 81 00 08 */	stw r4, 8(r1)
 /* 805F0494  38 00 FF FF */	li r0, -1
 /* 805F0498  90 01 00 0C */	stw r0, 0xc(r1)
@@ -377,9 +377,9 @@ lbl_805F042C:
 /* 805F04C0  38 FD 01 0C */	addi r7, r29, 0x10c
 /* 805F04C4  39 01 00 50 */	addi r8, r1, 0x50
 /* 805F04C8  39 20 00 00 */	li r9, 0
-/* 805F04CC  A8 0B 00 34 */	lha r0, 0x34(r11)	/* effective address: 805F4810 */
+/* 805F04CC  A8 0B 00 34 */	lha r0, 0x34(r11)
 /* 805F04D0  54 0A 06 3E */	clrlwi r10, r0, 0x18
-/* 805F04D4  C0 2B 00 38 */	lfs f1, 0x38(r11)	/* effective address: 805F4814 */
+/* 805F04D4  C0 2B 00 38 */	lfs f1, 0x38(r11)
 /* 805F04D8  4B A5 C5 B8 */	b set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 805F04DC  80 7C 5D 3C */	lwz r3, 0x5d3c(r28)
 /* 805F04E0  38 80 00 00 */	li r4, 0

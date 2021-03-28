@@ -351,7 +351,7 @@ lbl_8052FF24:
 /* 8052FF6C  D0 1D 04 D8 */	stfs f0, 0x4d8(r29)
 /* 8052FF70  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8052FF74  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8052FF78  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8052FF78  80 63 00 00 */	lwz r3, 0(r3)
 /* 8052FF7C  A8 9D 05 F6 */	lha r4, 0x5f6(r29)
 /* 8052FF80  4B AD C4 5C */	b mDoMtx_YrotS__FPA4_fs
 /* 8052FF84  A8 1D 06 28 */	lha r0, 0x628(r29)
@@ -427,7 +427,7 @@ lbl_80530034:
 /* 80530084  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80530088  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 8053008C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80530090  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80530090  80 63 00 00 */	lwz r3, 0(r3)
 /* 80530094  38 81 00 20 */	addi r4, r1, 0x20
 /* 80530098  38 BD 04 D0 */	addi r5, r29, 0x4d0
 /* 8053009C  38 C0 00 14 */	li r6, 0x14
@@ -494,7 +494,7 @@ lbl_805300BC:
 lbl_8053018C:
 /* 8053018C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80530190  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80530194  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80530194  80 63 00 00 */	lwz r3, 0(r3)
 /* 80530198  A8 9D 05 F4 */	lha r4, 0x5f4(r29)
 /* 8053019C  4B AD C2 40 */	b mDoMtx_YrotS__FPA4_fs
 /* 805301A0  C0 1E 00 18 */	lfs f0, 0x18(r30)
@@ -525,12 +525,12 @@ lbl_8053018C:
 /* 80530204  39 00 00 00 */	li r8, 0
 /* 80530208  39 20 00 00 */	li r9, 0
 /* 8053020C  4B AE C0 34 */	b fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi
-/* 80530210  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80530214  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80530210  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80530214  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80530218  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8053021C  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 80530220  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 80530224  A0 84 03 AC */	lhz r4, 0x3ac(r4)	/* effective address: 803A7634 */
+/* 80530224  A0 84 03 AC */	lhz r4, 0x3ac(r4)
 /* 80530228  4B B0 47 64 */	b onEventBit__11dSv_event_cFUs
 lbl_8053022C:
 /* 8053022C  38 7D 04 DE */	addi r3, r29, 0x4de

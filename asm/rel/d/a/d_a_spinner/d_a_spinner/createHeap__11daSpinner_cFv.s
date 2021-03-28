@@ -7,8 +7,8 @@ lbl_804D198C:
 /* 804D19A0  7C 7E 1B 78 */	mr r30, r3
 /* 804D19A4  4B BC BE E0 */	b getAlinkArcName__9daAlink_cFv
 /* 804D19A8  38 80 00 21 */	li r4, 0x21
-/* 804D19AC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804D19B0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804D19AC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804D19B0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804D19B4  3F E5 00 02 */	addis r31, r5, 2
 /* 804D19B8  3B FF C2 F8 */	addi r31, r31, -15624
 /* 804D19BC  7F E5 FB 78 */	mr r5, r31

@@ -10,8 +10,8 @@ lbl_80D44698:
 /* 80D446B8  88 9D 05 B0 */	lbz r4, 0x5b0(r29)
 /* 80D446BC  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D446C0  41 82 00 20 */	beq lbl_80D446E0
-/* 80D446C4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D446C8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D446C4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D446C8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D446CC  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D446D0  7C 05 07 74 */	extsb r5, r0
 /* 80D446D4  4B 2F 0C 8C */	b isSwitch__10dSv_info_cCFii
@@ -38,15 +38,15 @@ lbl_80D446E0:
 /* 80D44724  88 9D 05 B1 */	lbz r4, 0x5b1(r29)
 /* 80D44728  28 04 00 FF */	cmplwi r4, 0xff
 /* 80D4472C  41 82 02 98 */	beq lbl_80D449C4
-/* 80D44730  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D44734  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D44730  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D44734  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D44738  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D4473C  7C 05 07 74 */	extsb r5, r0
 /* 80D44740  4B 2F 0C 20 */	b isSwitch__10dSv_info_cCFii
 /* 80D44744  2C 03 00 00 */	cmpwi r3, 0
 /* 80D44748  41 82 02 7C */	beq lbl_80D449C4
-/* 80D4474C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D44750  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D4474C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D44750  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D44754  88 9D 05 B2 */	lbz r4, 0x5b2(r29)
 /* 80D44758  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D4475C  7C 05 07 74 */	extsb r5, r0
@@ -61,9 +61,9 @@ lbl_80D446E0:
 /* 80D44780  41 82 02 44 */	beq lbl_80D449C4
 /* 80D44784  38 61 00 20 */	addi r3, r1, 0x20
 /* 80D44788  38 9D 04 D0 */	addi r4, r29, 0x4d0
-/* 80D4478C  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80D44790  3B E5 61 C0 */	addi r31, r5, struct_804061C0+0x0@l
-/* 80D44794  80 BF 5D AC */	lwz r5, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80D4478C  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80D44790  3B E5 61 C0 */	addi r31, r5, g_dComIfG_gameInfo@l
+/* 80D44794  80 BF 5D AC */	lwz r5, 0x5dac(r31)
 /* 80D44798  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 80D4479C  4B 52 23 98 */	b __mi__4cXyzCFRC3Vec
 /* 80D447A0  C0 41 00 20 */	lfs f2, 0x20(r1)
@@ -151,8 +151,8 @@ lbl_80D448B4:
 /* 80D448C4  4B FF F8 61 */	bl chkActorInScreen__13daZraFreeze_cFv
 /* 80D448C8  2C 03 00 00 */	cmpwi r3, 0
 /* 80D448CC  41 82 00 F8 */	beq lbl_80D449C4
-/* 80D448D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D448D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D448D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D448D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D448D8  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 80D448DC  7F A4 EB 78 */	mr r4, r29
 /* 80D448E0  3C A0 80 D4 */	lis r5, stringBase0@ha
@@ -169,8 +169,8 @@ lbl_80D448B4:
 /* 80D4490C  38 E0 00 04 */	li r7, 4
 /* 80D44910  39 00 00 01 */	li r8, 1
 /* 80D44914  4B 2D 6D 68 */	b fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs
-/* 80D44918  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4491C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D44918  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4491C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D44920  88 9D 05 B2 */	lbz r4, 0x5b2(r29)
 /* 80D44924  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 80D44928  7C 05 07 74 */	extsb r5, r0
@@ -185,9 +185,9 @@ lbl_80D448B4:
 /* 80D4494C  98 1D 05 CF */	stb r0, 0x5cf(r29)
 /* 80D44950  48 00 00 74 */	b lbl_80D449C4
 lbl_80D44954:
-/* 80D44954  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D44958  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D4495C  88 03 4F AD */	lbz r0, 0x4fad(r3)	/* effective address: 8040B16D */
+/* 80D44954  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D44958  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D4495C  88 03 4F AD */	lbz r0, 0x4fad(r3)
 /* 80D44960  28 00 00 00 */	cmplwi r0, 0
 /* 80D44964  41 82 00 44 */	beq lbl_80D449A8
 /* 80D44968  A0 1D 00 F8 */	lhz r0, 0xf8(r29)

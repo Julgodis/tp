@@ -221,30 +221,30 @@ SECTION_RODATA static u8 const lit_745[12] = {
 
 /* 803C4AC0-803C4AE0 0020+00 s=2 e=0 z=0  None .data      __vt__Q27JStudio6TParse                                      */
 SECTION_DATA static void* __vt__Q27JStudio6TParse[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio6TParseFv,
-	/* 3    */ (void*)parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl,
-	/* 4    */ (void*)parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl,
-	/* 5    */ (void*)parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl,
-	/* 6    */ (void*)parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl,
-	/* 7    */ (void*)parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio6TParseFv,
+	(void*)parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl,
+	(void*)parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl,
+	(void*)parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl,
+	(void*)parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl,
+	(void*)parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl,
 };
 
 /* 803C4AE0-803C4AF4 0014+00 s=1 e=1 z=0  None .data      __vt__Q27JStudio8TFactory                                    */
 SECTION_DATA void* __vt__Q27JStudio8TFactory[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio8TFactoryFv,
-	/* 3    */ (void*)create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object,
-	/* 4    */ (void*)destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio8TFactoryFv,
+	(void*)create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object,
+	(void*)destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject,
 };
 
 /* 803C4AF4-803C4B00 000C+00 s=2 e=0 z=0  None .data      __vt__Q27JStudio8TControl                                    */
 SECTION_DATA static void* __vt__Q27JStudio8TControl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q27JStudio8TControlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q27JStudio8TControlFv,
 };
 
 /* 80455458-8045545C 0004+00 s=2 e=0 z=0  None .sdata2    @748                                                         */

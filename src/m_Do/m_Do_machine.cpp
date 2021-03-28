@@ -498,7 +498,7 @@ SECTION_DATA u8 g_ntscZeldaProg[60] = {
 
 /* 804505A0-804505A8 0004+04 s=1 e=3 z=0  None .sdata     mRenderModeObj__15mDoMch_render_c                            */
 SECTION_SDATA void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&g_ntscZeldaIntDf,
+	(void*)&g_ntscZeldaIntDf,
 	/* padding */
 	NULL,
 };

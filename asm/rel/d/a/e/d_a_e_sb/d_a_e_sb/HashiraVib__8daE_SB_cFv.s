@@ -3,18 +3,18 @@ lbl_80783FBC:
 /* 80783FC0  3C 80 80 78 */	lis r4, lit_3658@ha
 /* 80783FC4  38 C4 4D 68 */	addi r6, r4, lit_3658@l
 /* 80783FC8  C0 23 05 D4 */	lfs f1, 0x5d4(r3)
-/* 80783FCC  C0 06 00 D8 */	lfs f0, 0xd8(r6)	/* effective address: 80784E40 */
+/* 80783FCC  C0 06 00 D8 */	lfs f0, 0xd8(r6)
 /* 80783FD0  EC 01 00 2A */	fadds f0, f1, f0
 /* 80783FD4  D0 03 05 D4 */	stfs f0, 0x5d4(r3)
 /* 80783FD8  A8 03 05 D2 */	lha r0, 0x5d2(r3)
-/* 80783FDC  C8 46 00 E8 */	lfd f2, 0xe8(r6)	/* effective address: 80784E50 */
+/* 80783FDC  C8 46 00 E8 */	lfd f2, 0xe8(r6)
 /* 80783FE0  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 80783FE4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80783FE8  3C A0 43 30 */	lis r5, 0x4330
 /* 80783FEC  90 A1 00 08 */	stw r5, 8(r1)
 /* 80783FF0  C8 01 00 08 */	lfd f0, 8(r1)
 /* 80783FF4  EC 20 10 28 */	fsubs f1, f0, f2
-/* 80783FF8  C0 06 00 DC */	lfs f0, 0xdc(r6)	/* effective address: 80784E44 */
+/* 80783FF8  C0 06 00 DC */	lfs f0, 0xdc(r6)
 /* 80783FFC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80784000  FC 00 00 1E */	fctiwz f0, f0
 /* 80784004  D8 01 00 10 */	stfd f0, 0x10(r1)
@@ -41,7 +41,7 @@ lbl_80783FBC:
 /* 80784058  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 8078405C  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 80784060  B0 03 05 D8 */	sth r0, 0x5d8(r3)
-/* 80784064  C0 26 00 E0 */	lfs f1, 0xe0(r6)	/* effective address: 80784E48 */
+/* 80784064  C0 26 00 E0 */	lfs f1, 0xe0(r6)
 /* 80784068  C0 03 05 D4 */	lfs f0, 0x5d4(r3)
 /* 8078406C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80784070  FC 00 00 1E */	fctiwz f0, f0

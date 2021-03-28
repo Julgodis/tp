@@ -1,9 +1,9 @@
 lbl_80510D2C:
 /* 80510D2C  3C 80 80 52 */	lis r4, lit_4208@ha
 /* 80510D30  38 A4 85 84 */	addi r5, r4, lit_4208@l
-/* 80510D34  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80510D38  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80510D3C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80510D34  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80510D38  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80510D3C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80510D40  38 00 00 00 */	li r0, 0
 /* 80510D44  98 03 09 AD */	stb r0, 0x9ad(r3)
 /* 80510D48  38 00 00 0A */	li r0, 0xa

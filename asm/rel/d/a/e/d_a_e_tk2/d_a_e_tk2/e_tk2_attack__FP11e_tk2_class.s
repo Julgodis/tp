@@ -106,7 +106,7 @@ lbl_807BAE70:
 /* 807BAE70  C0 3E 00 48 */	lfs f1, 0x48(r30)
 /* 807BAE74  3C 80 80 7C */	lis r4, l_HIO@ha
 /* 807BAE78  38 84 BF 50 */	addi r4, r4, l_HIO@l
-/* 807BAE7C  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 807BBF60 */
+/* 807BAE7C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 807BAE80  EC 21 00 2A */	fadds f1, f1, f0
 /* 807BAE84  38 80 60 00 */	li r4, 0x6000
 /* 807BAE88  4B FF F9 21 */	bl pl_check__FP11e_tk2_classfs

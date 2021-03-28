@@ -171,8 +171,8 @@ lbl_80CEB958:
 /* 80CEB994  38 61 00 4C */	addi r3, r1, 0x4c
 /* 80CEB998  4B 33 23 24 */	b gndCheck__11fopAcM_gc_cFPC4cXyz
 /* 80CEB99C  7C 7D 1B 78 */	mr r29, r3
-/* 80CEB9A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEB9A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CEB9A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEB9A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CEB9A8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CEB9AC  3C 80 80 3F */	lis r4, mGndCheck__11fopAcM_gc_c@ha
 /* 80CEB9B0  38 84 1C C4 */	addi r4, r4, mGndCheck__11fopAcM_gc_c@l

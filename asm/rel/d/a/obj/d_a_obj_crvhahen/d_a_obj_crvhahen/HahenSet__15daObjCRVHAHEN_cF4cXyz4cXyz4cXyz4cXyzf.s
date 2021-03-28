@@ -23,7 +23,7 @@ lbl_80BD342C:
 /* 80BD3480  3B C0 00 00 */	li r30, 0
 /* 80BD3484  3B 00 00 00 */	li r24, 0
 /* 80BD3488  3A E0 00 00 */	li r23, 0
-/* 80BD348C  C3 FF 00 00 */	lfs f31, 0(r31)	/* effective address: 80BD3FF0 */
+/* 80BD348C  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 80BD3490  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80BD3494  3A C3 D4 70 */	addi r22, r3, now__14mDoMtx_stack_c@l
 lbl_80BD3498:

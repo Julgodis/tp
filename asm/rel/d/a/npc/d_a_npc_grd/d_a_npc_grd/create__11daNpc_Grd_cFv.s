@@ -140,8 +140,8 @@ lbl_809D0274:
 /* 809D033C  38 03 26 14 */	addi r0, r3, tgHitCallBack__8daNpcF_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 809D0340  90 1E 0D 38 */	stw r0, 0xd38(r30)
 /* 809D0344  38 7E 05 D0 */	addi r3, r30, 0x5d0
-/* 809D0348  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809D034C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809D0348  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809D034C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809D0350  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809D0354  4B 6A 67 58 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809D0358  80 1E 06 AC */	lwz r0, 0x6ac(r30)

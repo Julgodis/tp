@@ -7,11 +7,11 @@ lbl_80A98A98:
 /* 80A98AAC  7C 7F 1B 78 */	mr r31, r3
 /* 80A98AB0  3C 80 80 AA */	lis r4, lit_4688@ha
 /* 80A98AB4  38 A4 BF 8C */	addi r5, r4, lit_4688@l
-/* 80A98AB8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80A9BF8C */
-/* 80A98ABC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80A9BF90 */
+/* 80A98AB8  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A98ABC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A98AC0  90 81 00 14 */	stw r4, 0x14(r1)
 /* 80A98AC4  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A98AC8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80A9BF94 */
+/* 80A98AC8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A98ACC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A98AD0  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A98AD4  48 00 0A 5D */	bl chkAction__18daNpc_Pachi_Maro_cFM18daNpc_Pachi_Maro_cFPCvPvPv_i
@@ -26,10 +26,10 @@ lbl_80A98A98:
 lbl_80A98AF8:
 /* 80A98AF8  38 00 00 00 */	li r0, 0
 /* 80A98AFC  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 80A98B00  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A98B04  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A98B00  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A98B04  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A98B08  3B C3 4E C8 */	addi r30, r3, 0x4ec8
-/* 80A98B0C  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 80A98B0C  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 80A98B10  28 04 00 01 */	cmplwi r4, 1
 /* 80A98B14  41 82 00 0C */	beq lbl_80A98B20
 /* 80A98B18  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_80A98B44:
 lbl_80A98B54:
 /* 80A98B54  3C 60 80 AA */	lis r3, lit_4698@ha
 /* 80A98B58  38 83 BF 98 */	addi r4, r3, lit_4698@l
-/* 80A98B5C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A9BF98 */
-/* 80A98B60  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A9BF9C */
+/* 80A98B5C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A98B60  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A98B64  90 61 00 08 */	stw r3, 8(r1)
 /* 80A98B68  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A98B6C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A9BFA0 */
+/* 80A98B6C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A98B70  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A98B74  7F E3 FB 78 */	mr r3, r31
 /* 80A98B78  38 81 00 08 */	addi r4, r1, 8

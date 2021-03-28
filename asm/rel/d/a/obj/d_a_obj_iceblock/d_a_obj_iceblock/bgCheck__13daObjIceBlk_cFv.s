@@ -26,8 +26,8 @@ lbl_80C2380C:
 /* 80C2380C  80 1E 09 54 */	lwz r0, 0x954(r30)
 /* 80C23810  60 00 00 02 */	ori r0, r0, 2
 /* 80C23814  90 1E 09 54 */	stw r0, 0x954(r30)
-/* 80C23818  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C2381C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C23818  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C2381C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C23820  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C23824  38 9E 09 7C */	addi r4, r30, 0x97c
 /* 80C23828  7F C5 F3 78 */	mr r5, r30

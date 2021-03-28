@@ -9,9 +9,9 @@ lbl_80C60450:
 /* 80C6046C  3B E3 08 04 */	addi r31, r3, lit_3629@l
 /* 80C60470  3C 60 80 C6 */	lis r3, l_HIO@ha
 /* 80C60474  38 63 09 C4 */	addi r3, r3, l_HIO@l
-/* 80C60478  C0 23 00 20 */	lfs f1, 0x20(r3)	/* effective address: 80C609E4 */
+/* 80C60478  C0 23 00 20 */	lfs f1, 0x20(r3)
 /* 80C6047C  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80C60480  C0 1F 00 2C */	lfs f0, 0x2c(r31)	/* effective address: 80C60830 */
+/* 80C60480  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80C60484  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80C60488  4B 61 02 B8 */	b cLib_chaseF__FPfff
 /* 80C6048C  38 7E 05 B4 */	addi r3, r30, 0x5b4

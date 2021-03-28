@@ -9,7 +9,7 @@ lbl_8068E8C4:
 /* 8068E8E0  7C 7E 1B 78 */	mr r30, r3
 /* 8068E8E4  3C 80 80 69 */	lis r4, lit_3788@ha
 /* 8068E8E8  3B E4 0D D8 */	addi r31, r4, lit_3788@l
-/* 8068E8EC  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80690DDC */
+/* 8068E8EC  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8068E8F0  3B A0 40 00 */	li r29, 0x4000
 /* 8068E8F4  A8 03 05 B4 */	lha r0, 0x5b4(r3)
 /* 8068E8F8  2C 00 00 03 */	cmpwi r0, 3
@@ -99,7 +99,7 @@ lbl_8068EA2C:
 lbl_8068EA34:
 /* 8068EA34  3C 60 80 69 */	lis r3, l_HIO@ha
 /* 8068EA38  38 63 10 A0 */	addi r3, r3, l_HIO@l
-/* 8068EA3C  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 806910AC */
+/* 8068EA3C  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 8068EA40  38 7E 04 DE */	addi r3, r30, 0x4de
 /* 8068EA44  A8 9E 05 C8 */	lha r4, 0x5c8(r30)
 /* 8068EA48  38 A0 00 08 */	li r5, 8

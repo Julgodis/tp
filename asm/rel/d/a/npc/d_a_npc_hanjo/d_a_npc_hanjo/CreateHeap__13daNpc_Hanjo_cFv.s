@@ -9,14 +9,14 @@ lbl_809F9578:
 /* 809F9594  3B A3 06 00 */	addi r29, r3, m__19daNpc_Hanjo_Param_c@l
 /* 809F9598  3C 60 80 A0 */	lis r3, l_bmdData@ha
 /* 809F959C  38 83 09 60 */	addi r4, r3, l_bmdData@l
-/* 809F95A0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A00964 */
+/* 809F95A0  80 04 00 04 */	lwz r0, 4(r4)
 /* 809F95A4  54 00 10 3A */	slwi r0, r0, 2
 /* 809F95A8  3C 60 80 A0 */	lis r3, l_resNameList@ha
 /* 809F95AC  38 63 09 D8 */	addi r3, r3, l_resNameList@l
 /* 809F95B0  7C 63 00 2E */	lwzx r3, r3, r0
-/* 809F95B4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80A00960 */
-/* 809F95B8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 809F95BC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 809F95B4  80 84 00 00 */	lwz r4, 0(r4)
+/* 809F95B8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 809F95BC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 809F95C0  3F C5 00 02 */	addis r30, r5, 2
 /* 809F95C4  3B DE C2 F8 */	addi r30, r30, -15624
 /* 809F95C8  7F C5 F3 78 */	mr r5, r30

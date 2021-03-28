@@ -46,23 +46,17 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgW {
+};
+
 struct cBgS_PolyInfo {
 };
 
 struct csXyz {
 };
 
-struct dBgW {
-};
-
 struct dBgS_MoveBgActor {
 	/* 80078624 */ dBgS_MoveBgActor();
-	/* 80078690 */ bool Create();
-	/* 80078698 */ bool Execute(f32 (** )[3][4]);
-	/* 800786A8 */ bool Delete();
-	/* 800786B0 */ bool IsDelete();
-	/* 800786B8 */ bool ToFore();
-	/* 800786C0 */ bool ToBack();
 	/* 800787BC */ void MoveBGCreate(char const*, int, void (*)(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*), u32, f32 (* )[3][4]);
 	/* 800788DC */ void MoveBGDelete();
 };
@@ -79,20 +73,21 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daTagHjump_Create(fopAc_ac_c*); // 2
-static void daTagHjump_Delete(daTagHjump_c*); // 2
-static void daTagHjump_Execute(daTagHjump_c*); // 2
-static void daTagHjump_Draw(daTagHjump_c*); // 2
+void daTagHjump_Create(fopAc_ac_c*); // 2
+void daTagHjump_Delete(daTagHjump_c*); // 2
+void daTagHjump_Execute(daTagHjump_c*); // 2
+void daTagHjump_Draw(daTagHjump_c*); // 2
 
 extern "C" void CreateHeap__12daTagHjump_cFv(); // 1
 extern "C" void create__12daTagHjump_cFv(); // 1
-extern "C" static void daTagHjump_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daTagHjump_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12daTagHjump_cFv(); // 1
-extern "C" static void daTagHjump_Delete__FP12daTagHjump_c(); // 1
+extern "C" void daTagHjump_Delete__FP12daTagHjump_c(); // 1
 extern "C" void execute__12daTagHjump_cFv(); // 1
-extern "C" static void daTagHjump_Execute__FP12daTagHjump_c(); // 1
+extern "C" void daTagHjump_Execute__FP12daTagHjump_c(); // 1
 extern "C" void Draw__12daTagHjump_cFv(); // 1
-extern "C" static void daTagHjump_Draw__FP12daTagHjump_c(); // 1
+extern "C" void daTagHjump_Draw__FP12daTagHjump_c(); // 1
+extern "C" extern void* l_daTagHjump_Method[8];
 extern "C" extern void* g_profile_Tag_Hjump[12];
 
 // 
@@ -121,12 +116,6 @@ extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
 extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
 extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
 extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
-extern "C" bool Delete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
 extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
 extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
 extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
@@ -139,23 +128,13 @@ extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void abs(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[36];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF78[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 
 // Declarations:
@@ -169,7 +148,7 @@ SECTION_RODATA static u8 const l_arcName[7 + 1 /* padding */] = {
 	0x00,
 };
 
-/* 805A3AB8-805A3B24 006C+00 s=1 e=0 z=0  None .text      CreateHeap__12daTagHjump_cFv                                 */
+/* 805A3AB8-805A3B24 006C+00 s=0 e=0 z=0  None .text      CreateHeap__12daTagHjump_cFv                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -210,46 +189,46 @@ SECTION_RODATA static u32 const lit_3754 = 0x42480000;
 /* 805A4260-805A4264 0004+00 s=1 e=0 z=0  None .rodata    @3755                                                        */
 SECTION_RODATA static u32 const lit_3755 = 0x40A00000;
 
-/* 805A426C-805A428C 0020+00 s=1 e=0 z=0  None .data      l_daTagHjump_Method                                          */
-SECTION_DATA static void* l_daTagHjump_Method[8] = {
-	/* 0    */ (void*)daTagHjump_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTagHjump_Delete__FP12daTagHjump_c,
-	/* 2    */ (void*)daTagHjump_Execute__FP12daTagHjump_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daTagHjump_Draw__FP12daTagHjump_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 805A426C-805A428C 0020+00 s=0 e=0 z=0  None .data      l_daTagHjump_Method                                          */
+SECTION_DATA void* l_daTagHjump_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 805A428C-805A42BC 0030+00 s=0 e=0 z=1  None .data      g_profile_Tag_Hjump                                          */
+/* 805A428C-805A42BC 0030+00 s=0 e=0 z=0  None .data      g_profile_Tag_Hjump                                          */
 SECTION_DATA void* g_profile_Tag_Hjump[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x00EA0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005BC,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01B20000,
-	/* 9    */ (void*)&l_daTagHjump_Method,
-	/* 10   */ (void*)0x00044100,
-	/* 11   */ (void*)0x030E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x00EA0000,
+	(void*)NULL,
+	(void*)0x000005BC,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01B20000,
+	(void*)NULL,
+	(void*)0x00044100,
+	(void*)0x030E0000,
 };
 
 /* 805A42BC-805A42E4 0028+00 s=2 e=0 z=0  None .data      __vt__12daTagHjump_c                                         */
 SECTION_DATA static void* __vt__12daTagHjump_c[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__12daTagHjump_cFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__16dBgS_MoveBgActorFPPA3_A4_f,
-	/* 5    */ (void*)Draw__12daTagHjump_cFv,
-	/* 6    */ (void*)Delete__16dBgS_MoveBgActorFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 805A3B24-805A3D80 025C+00 s=1 e=0 z=0  None .text      create__12daTagHjump_cFv                                     */
@@ -263,11 +242,11 @@ asm void daTagHjump_c::create() {
 #pragma pop
 
 
-/* 805A3D80-805A3DA0 0020+00 s=1 e=0 z=0  None .text      daTagHjump_Create__FP10fopAc_ac_c                            */
+/* 805A3D80-805A3DA0 0020+00 s=0 e=0 z=0  None .text      daTagHjump_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHjump_Create(fopAc_ac_c* param_0) {
+asm void daTagHjump_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Create__FP10fopAc_ac_c.s"
 }
@@ -285,11 +264,11 @@ asm daTagHjump_c::~daTagHjump_c() {
 #pragma pop
 
 
-/* 805A3E34-805A3E70 003C+00 s=1 e=0 z=0  None .text      daTagHjump_Delete__FP12daTagHjump_c                          */
+/* 805A3E34-805A3E70 003C+00 s=0 e=0 z=0  None .text      daTagHjump_Delete__FP12daTagHjump_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHjump_Delete(daTagHjump_c* param_0) {
+asm void daTagHjump_Delete(daTagHjump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Delete__FP12daTagHjump_c.s"
 }
@@ -314,18 +293,18 @@ asm void daTagHjump_c::execute() {
 #pragma pop
 
 
-/* 805A4134-805A4154 0020+00 s=1 e=0 z=0  None .text      daTagHjump_Execute__FP12daTagHjump_c                         */
+/* 805A4134-805A4154 0020+00 s=0 e=0 z=0  None .text      daTagHjump_Execute__FP12daTagHjump_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHjump_Execute(daTagHjump_c* param_0) {
+asm void daTagHjump_Execute(daTagHjump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Execute__FP12daTagHjump_c.s"
 }
 #pragma pop
 
 
-/* 805A4154-805A4204 00B0+00 s=1 e=0 z=0  None .text      Draw__12daTagHjump_cFv                                       */
+/* 805A4154-805A4204 00B0+00 s=0 e=0 z=0  None .text      Draw__12daTagHjump_cFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -336,11 +315,11 @@ asm void daTagHjump_c::Draw() {
 #pragma pop
 
 
-/* 805A4204-805A4230 002C+00 s=1 e=0 z=0  None .text      daTagHjump_Draw__FP12daTagHjump_c                            */
+/* 805A4204-805A4230 002C+00 s=0 e=0 z=0  None .text      daTagHjump_Draw__FP12daTagHjump_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTagHjump_Draw(daTagHjump_c* param_0) {
+asm void daTagHjump_Draw(daTagHjump_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_hjump/d_a_tag_hjump/daTagHjump_Draw__FP12daTagHjump_c.s"
 }

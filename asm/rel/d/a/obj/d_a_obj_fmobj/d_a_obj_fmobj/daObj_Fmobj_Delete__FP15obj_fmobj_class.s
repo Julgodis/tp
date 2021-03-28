@@ -8,8 +8,8 @@ lbl_8057CC8C:
 /* 8057CCA4  3C 80 80 58 */	lis r4, stringBase0@ha
 /* 8057CCA8  38 84 CF 74 */	addi r4, r4, stringBase0@l
 /* 8057CCAC  4B AB 03 5C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
-/* 8057CCB0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057CCB4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057CCB0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057CCB4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057CCB8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8057CCBC  80 9F 05 B8 */	lwz r4, 0x5b8(r31)
 /* 8057CCC0  4B AF 75 90 */	b Release__4cBgSFP9dBgW_Base

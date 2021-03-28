@@ -9,16 +9,16 @@ lbl_80740E70:
 /* 80740E8C  3B E3 1B F4 */	addi r31, r3, lit_3767@l
 /* 80740E90  3C 60 80 74 */	lis r3, l_HIO@ha
 /* 80740E94  38 63 1D D0 */	addi r3, r3, l_HIO@l
-/* 80740E98  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80741DD8 */
-/* 80740E9C  C0 1F 00 54 */	lfs f0, 0x54(r31)	/* effective address: 80741C48 */
+/* 80740E98  C0 23 00 08 */	lfs f1, 8(r3)
+/* 80740E9C  C0 1F 00 54 */	lfs f0, 0x54(r31)
 /* 80740EA0  EC 21 00 28 */	fsubs f1, f1, f0
-/* 80740EA4  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 80741BF4 */
+/* 80740EA4  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80740EA8  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80740EAC  D0 21 00 28 */	stfs f1, 0x28(r1)
 /* 80740EB0  D0 01 00 2C */	stfs f0, 0x2c(r1)
-/* 80740EB4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80740EB8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80740EBC  80 03 5F 18 */	lwz r0, 0x5f18(r3)	/* effective address: 8040C0D8 */
+/* 80740EB4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80740EB8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80740EBC  80 03 5F 18 */	lwz r0, 0x5f18(r3)
 /* 80740EC0  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 80740EC4  41 82 00 14 */	beq lbl_80740ED8
 /* 80740EC8  80 1E 0A 10 */	lwz r0, 0xa10(r30)
@@ -33,9 +33,9 @@ lbl_80740EE4:
 /* 80740EE4  A8 1E 05 AE */	lha r0, 0x5ae(r30)
 /* 80740EE8  2C 00 00 00 */	cmpwi r0, 0
 /* 80740EEC  40 81 00 90 */	ble lbl_80740F7C
-/* 80740EF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80740EF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80740EF8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80740EF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80740EF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80740EF8  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80740EFC  28 1E 00 00 */	cmplwi r30, 0
 /* 80740F00  41 82 00 0C */	beq lbl_80740F0C
 /* 80740F04  80 9E 00 04 */	lwz r4, 4(r30)
@@ -110,9 +110,9 @@ lbl_80740FF8:
 /* 80741008  FC 40 08 90 */	fmr f2, f1
 /* 8074100C  4B FF CB 1D */	bl SetAnm__8daE_PH_cFiiff
 lbl_80741010:
-/* 80741010  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80741014  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80741018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80741010  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80741014  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80741018  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8074101C  38 80 00 00 */	li r4, 0
 /* 80741020  90 81 00 08 */	stw r4, 8(r1)
 /* 80741024  38 00 FF FF */	li r0, -1

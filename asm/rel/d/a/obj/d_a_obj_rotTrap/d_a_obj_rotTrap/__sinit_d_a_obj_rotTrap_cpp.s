@@ -19,10 +19,10 @@ lbl_80CC0784:
 /* 80CC07C8  38 00 00 06 */	li r0, 6
 /* 80CC07CC  7C 09 03 A6 */	mtctr r0
 lbl_80CC07D0:
-/* 80CC07D0  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80CC080C */
-/* 80CC07D4  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80CC0810 */
-/* 80CC07D8  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80CC0880 */
-/* 80CC07DC  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80CC0884 */
+/* 80CC07D0  80 64 00 04 */	lwz r3, 4(r4)
+/* 80CC07D4  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80CC07D8  90 65 00 04 */	stw r3, 4(r5)
+/* 80CC07DC  94 05 00 08 */	stwu r0, 8(r5)
 /* 80CC07E0  42 00 FF F0 */	bdnz lbl_80CC07D0
 /* 80CC07E4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CC07E8  7C 08 03 A6 */	mtlr r0

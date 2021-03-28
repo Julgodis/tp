@@ -454,8 +454,8 @@ lbl_8073454C:
 /* 80734550  38 9E 09 20 */	addi r4, r30, 0x920
 /* 80734554  4B 8E 61 78 */	b fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz
 /* 80734558  38 7E 07 48 */	addi r3, r30, 0x748
-/* 8073455C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80734560  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8073455C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80734560  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80734564  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80734568  4B 94 25 44 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8073456C  C0 7E 05 38 */	lfs f3, 0x538(r30)

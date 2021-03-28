@@ -5,8 +5,8 @@ lbl_80969F54:
 /* 80969F60  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80969F64  93 C1 00 08 */	stw r30, 8(r1)
 /* 80969F68  7C 7F 1B 78 */	mr r31, r3
-/* 80969F6C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80969F70  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80969F6C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80969F70  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80969F74  38 80 00 58 */	li r4, 0x58
 /* 80969F78  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80969F7C  7C 05 07 74 */	extsb r5, r0
@@ -17,8 +17,8 @@ lbl_80969F54:
 /* 80969F90  38 80 00 01 */	li r4, 1
 /* 80969F94  4B FF F5 71 */	bl create_Yamijin__13daNpcBlueNS_cFi
 /* 80969F98  90 7F 0E 00 */	stw r3, 0xe00(r31)
-/* 80969F9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80969FA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80969F9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80969FA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80969FA4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80969FA8  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80969FAC  88 1F 04 BA */	lbz r0, 0x4ba(r31)

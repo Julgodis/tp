@@ -8,7 +8,7 @@ lbl_805985B4:
 /* 805985CC  38 C3 8F C8 */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 805985D0  3C 60 80 5A */	lis r3, data_80599120@ha
 /* 805985D4  38 A3 91 20 */	addi r5, r3, data_80599120@l
-/* 805985D8  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80599120 */
+/* 805985D8  88 05 00 00 */	lbz r0, 0(r5)
 /* 805985DC  7C 00 07 75 */	extsb. r0, r0
 /* 805985E0  40 82 00 70 */	bne lbl_80598650
 /* 805985E4  80 66 00 28 */	lwz r3, 0x28(r6)

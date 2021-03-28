@@ -11,9 +11,9 @@ lbl_80BD7288:
 /* 80BD72AC  7C 7D 1B 78 */	mr r29, r3
 /* 80BD72B0  3C 60 80 BE */	lis r3, l_wallBmd@ha
 /* 80BD72B4  3B E3 9F A4 */	addi r31, r3, l_wallBmd@l
-/* 80BD72B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD72BC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80BD72C0  83 DC 5D AC */	lwz r30, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80BD72B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD72BC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80BD72C0  83 DC 5D AC */	lwz r30, 0x5dac(r28)
 /* 80BD72C4  C3 DD 0F 54 */	lfs f30, 0xf54(r29)
 /* 80BD72C8  38 00 00 00 */	li r0, 0
 /* 80BD72CC  98 1D 0E 91 */	stb r0, 0xe91(r29)

@@ -162,13 +162,13 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
+struct dKy_tevstr_c {
+};
+
 struct dPa_levelEcallBack {
 };
 
 struct _GXColor {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -619,16 +619,16 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803B9DAC-803B9DB8 000C+00 s=1 e=0 z=0  None .data      @4679                                                        */
 SECTION_DATA static void* lit_4679[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_wait__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mode_wait__8daItem_cFv,
 };
 
 /* 803B9DB8-803B9DC4 000C+00 s=1 e=0 z=0  None .data      @4680                                                        */
 SECTION_DATA static void* lit_4680[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)mode_water__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)mode_water__8daItem_cFv,
 };
 
 /* 803B9DC4-803B9DDC 0018+00 s=1 e=0 z=0  None .data      mode_proc$4678                                               */
@@ -639,93 +639,93 @@ SECTION_DATA static u8 data_803B9DC4[24] = {
 
 /* 803B9DDC-803B9E04 0028+00 s=1 e=0 z=0  None .data      @5171                                                        */
 SECTION_DATA static void* lit_5171[10] = {
-	/* 0    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
-	/* 1    */ (void*)(((char*)initFlag__8daItem_cFv)+0x50),
-	/* 2    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
-	/* 3    */ (void*)(((char*)initFlag__8daItem_cFv)+0x78),
-	/* 4    */ (void*)(((char*)initFlag__8daItem_cFv)+0x114),
-	/* 5    */ (void*)(((char*)initFlag__8daItem_cFv)+0xA0),
-	/* 6    */ (void*)(((char*)initFlag__8daItem_cFv)+0xC8),
-	/* 7    */ (void*)(((char*)initFlag__8daItem_cFv)+0xF0),
-	/* 8    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
-	/* 9    */ (void*)(((char*)initFlag__8daItem_cFv)+0x28),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x28),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x50),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x28),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x78),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x114),
+	(void*)(((char*)initFlag__8daItem_cFv)+0xA0),
+	(void*)(((char*)initFlag__8daItem_cFv)+0xC8),
+	(void*)(((char*)initFlag__8daItem_cFv)+0xF0),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x28),
+	(void*)(((char*)initFlag__8daItem_cFv)+0x28),
 };
 
 /* 803B9E04-803B9E2C 0028+00 s=1 e=0 z=0  None .data      @5193                                                        */
 SECTION_DATA static void* lit_5193[10] = {
-	/* 0    */ (void*)(((char*)initScale__8daItem_cFv)+0x28),
-	/* 1    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 2    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 3    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 4    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 5    */ (void*)(((char*)initScale__8daItem_cFv)+0x28),
-	/* 6    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 7    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
-	/* 8    */ (void*)(((char*)initScale__8daItem_cFv)+0x28),
-	/* 9    */ (void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x28),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x28),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
+	(void*)(((char*)initScale__8daItem_cFv)+0x28),
+	(void*)(((char*)initScale__8daItem_cFv)+0x3C),
 };
 
 /* 803B9E2C-803B9E38 000C+00 s=1 e=0 z=0  None .data      @5240                                                        */
 SECTION_DATA static void* lit_5240[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainNormal__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainNormal__8daItem_cFv,
 };
 
 /* 803B9E38-803B9E44 000C+00 s=1 e=0 z=0  None .data      @5241                                                        */
 SECTION_DATA static void* lit_5241[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainEnemyCarry__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainEnemyCarry__8daItem_cFv,
 };
 
 /* 803B9E44-803B9E50 000C+00 s=1 e=0 z=0  None .data      @5242                                                        */
 SECTION_DATA static void* lit_5242[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainSimpleGetDemo__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainSimpleGetDemo__8daItem_cFv,
 };
 
 /* 803B9E50-803B9E5C 000C+00 s=1 e=0 z=0  None .data      @5243                                                        */
 SECTION_DATA static void* lit_5243[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procWaitGetDemoEvent__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procWaitGetDemoEvent__8daItem_cFv,
 };
 
 /* 803B9E5C-803B9E68 000C+00 s=1 e=0 z=0  None .data      @5244                                                        */
 SECTION_DATA static void* lit_5244[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainGetDemoEvent__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainGetDemoEvent__8daItem_cFv,
 };
 
 /* 803B9E68-803B9E74 000C+00 s=1 e=0 z=0  None .data      @5245                                                        */
 SECTION_DATA static void* lit_5245[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainBoomerangCarry__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainBoomerangCarry__8daItem_cFv,
 };
 
 /* 803B9E74-803B9E80 000C+00 s=1 e=0 z=0  None .data      @5246                                                        */
 SECTION_DATA static void* lit_5246[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainSwOnWait__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainSwOnWait__8daItem_cFv,
 };
 
 /* 803B9E80-803B9E8C 000C+00 s=1 e=0 z=0  None .data      @5247                                                        */
 SECTION_DATA static void* lit_5247[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainBoomHitWait__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainBoomHitWait__8daItem_cFv,
 };
 
 /* 803B9E8C-803B9E98 000C+00 s=1 e=0 z=0  None .data      @5248                                                        */
 SECTION_DATA static void* lit_5248[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)procMainForceGet__8daItem_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)procMainForceGet__8daItem_cFv,
 };
 
 /* 803B9E98-803B9F10 0078+00 s=2 e=0 z=0  None .data      mFuncPtr__8daItem_c                                          */
@@ -795,51 +795,51 @@ asm void daItem_c::setCullInfo() {
 /* ############################################################################################## */
 /* 803B9F54-803B9F74 0020+00 s=1 e=0 z=0  None .data      l_daItem_Method                                              */
 SECTION_DATA static void* l_daItem_Method[8] = {
-	/* 0    */ (void*)daItem_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daItem_Delete__FP8daItem_c,
-	/* 2    */ (void*)daItem_Execute__FP8daItem_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)daItem_Draw__FP8daItem_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)daItem_Create__FP10fopAc_ac_c,
+	(void*)daItem_Delete__FP8daItem_c,
+	(void*)daItem_Execute__FP8daItem_c,
+	(void*)NULL,
+	(void*)daItem_Draw__FP8daItem_c,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=1  None .data      g_profile_ITEM                                               */
+/* 803B9F74-803B9FA4 0030+00 s=0 e=0 z=0  None .data      g_profile_ITEM                                               */
 SECTION_DATA void* g_profile_ITEM[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02180000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000009C4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00EC0000,
-	/* 9    */ (void*)&l_daItem_Method,
-	/* 10   */ (void*)0x000C0100,
-	/* 11   */ (void*)0x000F0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02180000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x000009C4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopAc_Method,
+	(void*)0x00EC0000,
+	(void*)&l_daItem_Method,
+	(void*)0x000C0100,
+	(void*)0x000F0000,
 };
 
 /* 803B9FA4-803BA078 0044+90 s=1 e=0 z=0  None .data      __vt__8daItem_c                                              */
 SECTION_DATA static void* __vt__8daItem_c[17 + 36 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)DrawBase__12daItemBase_cFv,
-	/* 3    */ (void*)setListStart__12daItemBase_cFv,
-	/* 4    */ (void*)settingBeforeDraw__12daItemBase_cFv,
-	/* 5    */ (void*)setTevStr__8daItem_cFv,
-	/* 6    */ (void*)setShadow__12daItemBase_cFv,
-	/* 7    */ (void*)animEntry__12daItemBase_cFv,
-	/* 8    */ (void*)RotateYBase__12daItemBase_cFv,
-	/* 9    */ (void*)clothCreate__12daItemBase_cFv,
-	/* 10   */ (void*)__CreateHeap__12daItemBase_cFv,
-	/* 11   */ (void*)chkFlag__12daItemBase_cFi,
-	/* 12   */ (void*)getTevFrm__12daItemBase_cFv,
-	/* 13   */ (void*)getBtpFrm__12daItemBase_cFv,
-	/* 14   */ (void*)getShadowSize__12daItemBase_cFv,
-	/* 15   */ (void*)getCollisionH__12daItemBase_cFv,
-	/* 16   */ (void*)getCollisionR__12daItemBase_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)DrawBase__12daItemBase_cFv,
+	(void*)setListStart__12daItemBase_cFv,
+	(void*)settingBeforeDraw__12daItemBase_cFv,
+	(void*)setTevStr__8daItem_cFv,
+	(void*)setShadow__12daItemBase_cFv,
+	(void*)animEntry__12daItemBase_cFv,
+	(void*)RotateYBase__12daItemBase_cFv,
+	(void*)clothCreate__12daItemBase_cFv,
+	(void*)__CreateHeap__12daItemBase_cFv,
+	(void*)chkFlag__12daItemBase_cFi,
+	(void*)getTevFrm__12daItemBase_cFv,
+	(void*)getBtpFrm__12daItemBase_cFv,
+	(void*)getShadowSize__12daItemBase_cFv,
+	(void*)getCollisionH__12daItemBase_cFv,
+	(void*)getCollisionR__12daItemBase_cFv,
 	/* padding */
 	NULL,
 	NULL,

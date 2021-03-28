@@ -9,7 +9,7 @@ lbl_80CA9184:
 /* 80CA91A0  3B E3 9C 18 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80CA91A4  3C 60 80 CB */	lis r3, data_80CA9E04@ha
 /* 80CA91A8  38 A3 9E 04 */	addi r5, r3, data_80CA9E04@l
-/* 80CA91AC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80CA9E04 */
+/* 80CA91AC  88 05 00 00 */	lbz r0, 0(r5)
 /* 80CA91B0  7C 00 07 75 */	extsb. r0, r0
 /* 80CA91B4  40 82 00 88 */	bne lbl_80CA923C
 /* 80CA91B8  80 7F 00 64 */	lwz r3, 0x64(r31)

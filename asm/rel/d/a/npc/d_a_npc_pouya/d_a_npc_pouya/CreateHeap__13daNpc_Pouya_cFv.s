@@ -33,8 +33,8 @@ lbl_80AAE200:
 /* 80AAE21C  38 63 22 70 */	addi r3, r3, l_resNameList@l
 /* 80AAE220  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80AAE224  7C 84 28 2E */	lwzx r4, r4, r5
-/* 80AAE228  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AAE22C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AAE228  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AAE22C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AAE230  3F C5 00 02 */	addis r30, r5, 2
 /* 80AAE234  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80AAE238  7F C5 F3 78 */	mr r5, r30

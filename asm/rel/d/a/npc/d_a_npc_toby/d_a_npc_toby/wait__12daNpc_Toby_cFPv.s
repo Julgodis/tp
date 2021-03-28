@@ -140,10 +140,10 @@ lbl_80B228A4:
 /* 80B228B0  88 1E 0E 25 */	lbz r0, 0xe25(r30)
 /* 80B228B4  28 00 00 00 */	cmplwi r0, 0
 /* 80B228B8  40 82 02 70 */	bne lbl_80B22B28
-/* 80B228BC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B228C0  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80B228C4  80 7D 5D B4 */	lwz r3, 0x5db4(r29)	/* effective address: 8040BF74 */
-/* 80B228C8  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 80B228BC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B228C0  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80B228C4  80 7D 5D B4 */	lwz r3, 0x5db4(r29)
+/* 80B228C8  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80B228CC  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80B228D0  41 82 02 58 */	beq lbl_80B22B28
 /* 80B228D4  38 61 00 40 */	addi r3, r1, 0x40

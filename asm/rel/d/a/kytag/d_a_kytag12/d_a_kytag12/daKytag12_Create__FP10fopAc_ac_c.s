@@ -33,9 +33,9 @@ lbl_8085EEA8:
 /* 8085EEBC  98 1F 05 75 */	stb r0, 0x575(r31)
 /* 8085EEC0  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8085EEC4  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8085EEC8  90 03 10 54 */	stw r0, 0x1054(r3)	/* effective address: 8042DAA8 */
+/* 8085EEC8  90 03 10 54 */	stw r0, 0x1054(r3)
 /* 8085EECC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
-/* 8085EED0  98 03 10 51 */	stb r0, 0x1051(r3)	/* effective address: 8042DAA5 */
+/* 8085EED0  98 03 10 51 */	stb r0, 0x1051(r3)
 /* 8085EED4  4B 80 EA 40 */	b dKyr_evil_init__Fv
 /* 8085EED8  38 60 00 04 */	li r3, 4
 /* 8085EEDC  83 E1 00 0C */	lwz r31, 0xc(r1)

@@ -4,7 +4,7 @@ lbl_80BF5530:
 /* 80BF5538  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BF553C  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BF5540  38 84 56 E4 */	addi r4, r4, l_arcName@l
-/* 80BF5544  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF56E4 */
+/* 80BF5544  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF5548  38 63 05 68 */	addi r3, r3, 0x568
 /* 80BF554C  4B 43 7A BC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BF5550  38 60 00 01 */	li r3, 1

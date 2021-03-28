@@ -8,9 +8,9 @@ lbl_8045B9C4:
 /* 8045B9DC  3C 80 80 46 */	lis r4, l_cyl_src@ha
 /* 8045B9E0  3B E4 C9 B8 */	addi r31, r4, l_cyl_src@l
 /* 8045B9E4  4B FF F9 BD */	bl setSe__9daBgObj_cFv
-/* 8045B9E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045B9EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045B9F0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8045B9E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045B9EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045B9F0  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 8045B9F4  28 03 00 00 */	cmplwi r3, 0
 /* 8045B9F8  41 82 01 18 */	beq lbl_8045BB10
 /* 8045B9FC  C0 03 04 D0 */	lfs f0, 0x4d0(r3)

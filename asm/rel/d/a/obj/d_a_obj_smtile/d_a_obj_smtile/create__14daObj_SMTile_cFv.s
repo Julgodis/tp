@@ -74,8 +74,8 @@ lbl_80CDD4B8:
 /* 80CDD500  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80CDD504  28 04 00 FF */	cmplwi r4, 0xff
 /* 80CDD508  41 82 00 28 */	beq lbl_80CDD530
-/* 80CDD50C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDD510  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CDD50C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDD510  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CDD514  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80CDD518  7C 05 07 74 */	extsb r5, r0
 /* 80CDD51C  4B 35 7E 44 */	b isSwitch__10dSv_info_cCFii

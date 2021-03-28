@@ -36,10 +36,10 @@ lbl_8070BB88:
 /* 8070BB90  4B 91 10 CC */	b fopAcM_otoCheck__FPC10fopAc_ac_cf
 /* 8070BB94  2C 03 00 00 */	cmpwi r3, 0
 /* 8070BB98  40 82 00 1C */	bne lbl_8070BBB4
-/* 8070BB9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8070BBA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8070BBA4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8070BBA8  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 80406740 */
+/* 8070BB9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8070BBA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8070BBA4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8070BBA8  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 8070BBAC  54 00 00 01 */	rlwinm. r0, r0, 0, 0, 0
 /* 8070BBB0  41 82 03 6C */	beq lbl_8070BF1C
 lbl_8070BBB4:

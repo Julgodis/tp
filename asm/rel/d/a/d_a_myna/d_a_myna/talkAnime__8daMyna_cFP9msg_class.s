@@ -8,10 +8,10 @@ lbl_80948E84:
 /* 80948E9C  7C 9D 23 79 */	or. r29, r4, r4
 /* 80948EA0  3B C0 00 00 */	li r30, 0
 /* 80948EA4  41 82 00 90 */	beq lbl_80948F34
-/* 80948EA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80948EAC  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
+/* 80948EA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80948EAC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
 /* 80948EB0  38 64 4E C8 */	addi r3, r4, 0x4ec8
-/* 80948EB4  80 84 4F 94 */	lwz r4, 0x4f94(r4)	/* effective address: 8040B154 */
+/* 80948EB4  80 84 4F 94 */	lwz r4, 0x4f94(r4)
 /* 80948EB8  4B 6F A4 34 */	b convPId__14dEvt_control_cFUi
 /* 80948EBC  7C 1F 18 40 */	cmplw r31, r3
 /* 80948EC0  40 82 00 74 */	bne lbl_80948F34
@@ -39,9 +39,9 @@ lbl_80948EF8:
 /* 80948F0C  41 82 00 28 */	beq lbl_80948F34
 /* 80948F10  38 00 00 00 */	li r0, 0
 /* 80948F14  90 1F 08 1C */	stw r0, 0x81c(r31)
-/* 80948F18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80948F1C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80948F20  88 03 5E 7A */	lbz r0, 0x5e7a(r3)	/* effective address: 8040C03A */
+/* 80948F18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80948F1C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80948F20  88 03 5E 7A */	lbz r0, 0x5e7a(r3)
 /* 80948F24  90 1F 08 20 */	stw r0, 0x820(r31)
 /* 80948F28  80 1D 00 EC */	lwz r0, 0xec(r29)
 /* 80948F2C  90 1F 08 24 */	stw r0, 0x824(r31)

@@ -122,9 +122,9 @@ lbl_8072CAE8:
 /* 8072CAEC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8072CAF0  40 80 00 28 */	bge lbl_8072CB18
 /* 8072CAF4  7F 83 E3 78 */	mr r3, r28
-/* 8072CAF8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8072CAFC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8072CB00  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8072CAF8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8072CAFC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8072CB00  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8072CB04  4B 8E DC DC */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8072CB08  C0 1C 06 94 */	lfs f0, 0x694(r28)
 /* 8072CB0C  FC 01 00 40 */	fcmpo cr0, f1, f0

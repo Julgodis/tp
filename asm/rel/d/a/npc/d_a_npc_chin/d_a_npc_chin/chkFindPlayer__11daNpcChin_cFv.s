@@ -5,12 +5,12 @@ lbl_8098EA00:
 /* 8098EA0C  39 61 00 20 */	addi r11, r1, 0x20
 /* 8098EA10  4B 9D 37 CC */	b _savegpr_29
 /* 8098EA14  7C 7D 1B 78 */	mr r29, r3
-/* 8098EA18  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8098EA1C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8098EA20  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8098EA18  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8098EA1C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8098EA20  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8098EA24  3C A0 80 99 */	lis r5, m__17daNpcChin_Param_c@ha
 /* 8098EA28  38 A5 19 0C */	addi r5, r5, m__17daNpcChin_Param_c@l
-/* 8098EA2C  C0 25 00 50 */	lfs f1, 0x50(r5)	/* effective address: 8099195C */
+/* 8098EA2C  C0 25 00 50 */	lfs f1, 0x50(r5)
 /* 8098EA30  4B 7C 4F C0 */	b chkActorInSight__8daNpcF_cFP10fopAc_ac_cf
 /* 8098EA34  2C 03 00 00 */	cmpwi r3, 0
 /* 8098EA38  40 82 00 14 */	bne lbl_8098EA4C

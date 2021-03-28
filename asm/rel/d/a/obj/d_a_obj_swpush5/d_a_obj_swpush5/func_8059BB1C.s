@@ -21,7 +21,7 @@ lbl_8059BB60:
 /* 8059BB60  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 8059BB64  3C 80 80 5A */	lis r4, l_arcName@ha
 /* 8059BB68  38 84 C6 FC */	addi r4, r4, l_arcName@l
-/* 8059BB6C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8059C6FC */
+/* 8059BB6C  80 84 00 00 */	lwz r4, 0(r4)
 /* 8059BB70  4B A9 13 4C */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 8059BB74  7C 60 1B 78 */	mr r0, r3
 /* 8059BB78  2C 00 00 04 */	cmpwi r0, 4
@@ -29,10 +29,10 @@ lbl_8059BB60:
 /* 8059BB80  7F E3 FB 78 */	mr r3, r31
 /* 8059BB84  3C 80 80 5A */	lis r4, l_arcName@ha
 /* 8059BB88  38 84 C6 FC */	addi r4, r4, l_arcName@l
-/* 8059BB8C  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8059C6FC */
+/* 8059BB8C  80 84 00 00 */	lwz r4, 0(r4)
 /* 8059BB90  3C A0 80 5A */	lis r5, l_dzbIdx@ha
 /* 8059BB94  38 A5 C6 A4 */	addi r5, r5, l_dzbIdx@l
-/* 8059BB98  80 A5 00 04 */	lwz r5, 4(r5)	/* effective address: 8059C6A8 */
+/* 8059BB98  80 A5 00 04 */	lwz r5, 4(r5)
 /* 8059BB9C  38 C0 00 00 */	li r6, 0
 /* 8059BBA0  38 E0 10 60 */	li r7, 0x1060
 /* 8059BBA4  39 00 00 00 */	li r8, 0

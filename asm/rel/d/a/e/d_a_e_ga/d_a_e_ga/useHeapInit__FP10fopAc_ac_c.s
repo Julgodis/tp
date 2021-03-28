@@ -9,8 +9,8 @@ lbl_804FB7C4:
 /* 804FB7E0  38 63 BB D4 */	addi r3, r3, stringBase0@l
 /* 804FB7E4  38 63 00 05 */	addi r3, r3, 5
 /* 804FB7E8  38 80 00 03 */	li r4, 3
-/* 804FB7EC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804FB7F0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804FB7EC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804FB7F0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804FB7F4  3C A5 00 02 */	addis r5, r5, 2
 /* 804FB7F8  38 C0 00 80 */	li r6, 0x80
 /* 804FB7FC  38 A5 C2 F8 */	addi r5, r5, -15624

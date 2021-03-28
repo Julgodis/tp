@@ -14,8 +14,8 @@ lbl_8052A114:
 /* 8052A144  7C BF 2B 78 */	mr r31, r5
 /* 8052A148  FF E0 10 90 */	fmr f31, f2
 /* 8052A14C  80 63 05 FC */	lwz r3, 0x5fc(r3)
-/* 8052A150  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8052A154  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8052A150  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8052A154  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8052A158  3C A5 00 02 */	addis r5, r5, 2
 /* 8052A15C  38 C0 00 80 */	li r6, 0x80
 /* 8052A160  38 A5 C2 F8 */	addi r5, r5, -15624

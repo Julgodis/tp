@@ -88,8 +88,8 @@ lbl_804A21C0:
 /* 804A21CC  42 00 FF F4 */	bdnz lbl_804A21C0
 /* 804A21D0  4B BF B6 B4 */	b getAlinkArcName__9daAlink_cFv
 /* 804A21D4  38 80 00 48 */	li r4, 0x48
-/* 804A21D8  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 804A21DC  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 804A21D8  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 804A21DC  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 804A21E0  3F A5 00 02 */	addis r29, r5, 2
 /* 804A21E4  3B BD C2 F8 */	addi r29, r29, -15624
 /* 804A21E8  7F A5 EB 78 */	mr r5, r29

@@ -26,7 +26,7 @@ lbl_80CEBF1C:
 /* 80CEBF7C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80CEBF80  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEBF84  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEBF88  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEBF88  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEBF8C  38 81 00 24 */	addi r4, r1, 0x24
 /* 80CEBF90  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CEBF94  38 C0 00 00 */	li r6, 0
@@ -47,7 +47,7 @@ lbl_80CEBFB4:
 /* 80CEBFCC  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80CEBFD0  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CEBFD4  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CEBFD8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CEBFD8  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CEBFDC  38 81 00 20 */	addi r4, r1, 0x20
 /* 80CEBFE0  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CEBFE4  38 C0 00 00 */	li r6, 0
@@ -76,8 +76,8 @@ lbl_80CEC030:
 /* 80CEC034  38 63 CC 3C */	addi r3, r3, stringBase0@l
 /* 80CEC038  38 63 00 10 */	addi r3, r3, 0x10
 /* 80CEC03C  38 80 00 1B */	li r4, 0x1b
-/* 80CEC040  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80CEC044  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80CEC040  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80CEC044  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80CEC048  3C A5 00 02 */	addis r5, r5, 2
 /* 80CEC04C  38 C0 00 80 */	li r6, 0x80
 /* 80CEC050  38 A5 C2 F8 */	addi r5, r5, -15624
@@ -85,9 +85,9 @@ lbl_80CEC030:
 /* 80CEC058  7C 7C 1B 78 */	mr r28, r3
 /* 80CEC05C  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80CEC060  7C 05 07 74 */	extsb r5, r0
-/* 80CEC064  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEC068  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
-/* 80CEC06C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 80CEC064  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEC068  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
+/* 80CEC06C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 80CEC070  3C 80 80 45 */	lis r4, mEcallback__18dPa_modelEcallBack@ha
 /* 80CEC074  38 04 0E 90 */	addi r0, r4, mEcallback__18dPa_modelEcallBack@l
 /* 80CEC078  90 01 00 08 */	stw r0, 8(r1)

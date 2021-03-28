@@ -7,13 +7,13 @@ lbl_80BB776C:
 /* 80BB7780  7C 7E 1B 78 */	mr r30, r3
 /* 80BB7784  3C 60 80 BB */	lis r3, VIBMODE_POWER@ha
 /* 80BB7788  3B E3 7E B0 */	addi r31, r3, VIBMODE_POWER@l
-/* 80BB778C  C0 3F 01 00 */	lfs f1, 0x100(r31)	/* effective address: 80BB7FB0 */
+/* 80BB778C  C0 3F 01 00 */	lfs f1, 0x100(r31)
 /* 80BB7790  D0 21 00 08 */	stfs f1, 8(r1)
-/* 80BB7794  C0 1F 00 F8 */	lfs f0, 0xf8(r31)	/* effective address: 80BB7FA8 */
+/* 80BB7794  C0 1F 00 F8 */	lfs f0, 0xf8(r31)
 /* 80BB7798  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80BB779C  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80BB77A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB77A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB77A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB77A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB77A8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80BB77AC  88 1E 05 78 */	lbz r0, 0x578(r30)
 /* 80BB77B0  54 00 10 3A */	slwi r0, r0, 2

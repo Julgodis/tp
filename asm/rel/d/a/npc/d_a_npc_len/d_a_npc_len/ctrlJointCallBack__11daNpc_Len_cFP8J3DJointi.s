@@ -7,7 +7,7 @@ lbl_80A64CE8:
 /* 80A64CFC  40 82 00 30 */	bne lbl_80A64D2C
 /* 80A64D00  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80A64D04  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80A64D08  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 80A64D08  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80A64D0C  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 80A64D10  28 03 00 00 */	cmplwi r3, 0
 /* 80A64D14  41 82 00 18 */	beq lbl_80A64D2C

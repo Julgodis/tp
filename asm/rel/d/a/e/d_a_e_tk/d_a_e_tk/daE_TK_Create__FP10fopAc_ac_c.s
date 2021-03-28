@@ -128,7 +128,7 @@ lbl_807B9F80:
 /* 807B9F9C  38 00 FF FF */	li r0, -1
 /* 807B9FA0  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807B9FA4  38 63 A4 48 */	addi r3, r3, l_HIO@l
-/* 807B9FA8  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 807BA44C */
+/* 807B9FA8  98 03 00 04 */	stb r0, 4(r3)
 lbl_807B9FAC:
 /* 807B9FAC  38 00 00 04 */	li r0, 4
 /* 807B9FB0  90 1E 05 5C */	stw r0, 0x55c(r30)

@@ -35,10 +35,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct mDoExt_3DlineMat0_c {
@@ -104,37 +104,33 @@ struct dBgS_ObjGndChk_Spl {
 // Forward References:
 // 
 
-static void daObj_Lp_Draw(obj_lp_class*); // 2
+void daObj_Lp_Draw(obj_lp_class*); // 2
 static void s_ks_sub(void*, void*); // 2
 static void hit_check(obj_lp_class*, wd_ss*); // 2
 static void hasu_action(obj_lp_class*, wd_ss*); // 2
 static void set_out_check(obj_lp_class*, cXyz*); // 2
 static void daObj_Lp_Execute(obj_lp_class*); // 2
-static bool daObj_Lp_IsDelete(obj_lp_class*); // 2
-static void daObj_Lp_Delete(obj_lp_class*); // 2
+bool daObj_Lp_IsDelete(obj_lp_class*); // 2
+void daObj_Lp_Delete(obj_lp_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
 static void set_pos_check(obj_lp_class*, int); // 2
-static void daObj_Lp_Create(fopAc_ac_c*); // 2
+void daObj_Lp_Create(fopAc_ac_c*); // 2
 
-extern "C" static void daObj_Lp_Draw__FP12obj_lp_class(); // 1
+extern "C" void daObj_Lp_Draw__FP12obj_lp_class(); // 1
 extern "C" static void s_ks_sub__FPvPv(); // 1
 extern "C" static void hit_check__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void hasu_action__FP12obj_lp_classP5wd_ss(); // 1
 extern "C" static void set_out_check__FP12obj_lp_classP4cXyz(); // 1
 extern "C" static void daObj_Lp_Execute__FP12obj_lp_class(); // 1
-extern "C" static bool daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
-extern "C" static void daObj_Lp_Delete__FP12obj_lp_class(); // 1
+extern "C" bool daObj_Lp_IsDelete__FP12obj_lp_class(); // 1
+extern "C" void daObj_Lp_Delete__FP12obj_lp_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" static void set_pos_check__FP12obj_lp_classi(); // 1
-extern "C" static void daObj_Lp_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObj_Lp_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__5wd_ssFv(); // 1
 extern "C" void __ct__5wd_ssFv(); // 1
-extern "C" extern u8 const lit_4057[8];
-extern "C" extern u8 const lit_4058[8];
-extern "C" extern u8 const lit_4059[8];
-extern "C" extern u8 const lit_4130[8];
-extern "C" extern u8 const lit_4221[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObj_Lp_Method[8];
 extern "C" extern void* g_profile_OBJ_LP[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -268,20 +264,10 @@ extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
 extern "C" void strcmp(); // 1
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-extern "C" extern f32 data_803DD47C[4];
-extern "C" extern f32 data_803DD48C[4];
-SECTION_BSS extern f32 data_803DD49C;
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040AFE0[88];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 struct_8042DD50[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 
@@ -295,11 +281,11 @@ SECTION_DATA static u8 data_80C55AD8[4] = {
 	0x14, 0x0A, 0x0A, 0xFF,
 };
 
-/* 80C54198-80C542FC 0164+00 s=1 e=0 z=0  None .text      daObj_Lp_Draw__FP12obj_lp_class                              */
+/* 80C54198-80C542FC 0164+00 s=0 e=0 z=0  None .text      daObj_Lp_Draw__FP12obj_lp_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Lp_Draw(obj_lp_class* param_0) {
+asm void daObj_Lp_Draw(obj_lp_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Draw__FP12obj_lp_class.s"
 }
@@ -454,18 +440,18 @@ SECTION_RODATA static u32 const lit_4056[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 80C55A60-80C55A68 0008+00 s=0 e=0 z=0  None .rodata    @4057                                                        */
-SECTION_RODATA u8 const lit_4057[8] = {
+/* 80C55A60-80C55A68 0008+00 s=3 e=0 z=0  None .rodata    @4057                                                        */
+SECTION_RODATA static u8 const lit_4057[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C55A68-80C55A70 0008+00 s=0 e=0 z=0  None .rodata    @4058                                                        */
-SECTION_RODATA u8 const lit_4058[8] = {
+/* 80C55A68-80C55A70 0008+00 s=3 e=0 z=0  None .rodata    @4058                                                        */
+SECTION_RODATA static u8 const lit_4058[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80C55A70-80C55A78 0008+00 s=0 e=0 z=0  None .rodata    @4059                                                        */
-SECTION_RODATA u8 const lit_4059[8] = {
+/* 80C55A70-80C55A78 0008+00 s=3 e=0 z=0  None .rodata    @4059                                                        */
+SECTION_RODATA static u8 const lit_4059[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -499,6 +485,11 @@ asm static void hasu_action(obj_lp_class* param_0, wd_ss* param_1) {
 /* 80C55A8C-80C55A90 0004+00 s=3 e=0 z=0  None .rodata    @4128                                                        */
 SECTION_RODATA static u32 const lit_4128 = 0x42C80000;
 
+/* 80C55A90-80C55A98 0008+00 s=2 e=0 z=0  None .rodata    @4130                                                        */
+SECTION_RODATA static u8 const lit_4130[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 80C54B20-80C54D40 0220+00 s=1 e=0 z=0  None .text      set_out_check__FP12obj_lp_classP4cXyz                        */
 #pragma push
 #pragma optimization_level 0
@@ -511,19 +502,14 @@ asm static void set_out_check(obj_lp_class* param_0, cXyz* param_1) {
 
 
 /* ############################################################################################## */
-/* 80C55A90-80C55A98 0008+00 s=0 e=0 z=0  None .rodata    @4130                                                        */
-SECTION_RODATA u8 const lit_4130[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 80C55A98-80C55A9C 0004+00 s=1 e=0 z=0  None .rodata    @4218                                                        */
 SECTION_RODATA static u32 const lit_4218 = 0x459C4000;
 
 /* 80C55A9C-80C55AA0 0004+00 s=2 e=0 z=0  None .rodata    @4219                                                        */
 SECTION_RODATA static u32 const lit_4219 = 0x41200000;
 
-/* 80C55AA0-80C55AA8 0008+00 s=0 e=0 z=0  None .rodata    @4221                                                        */
-SECTION_RODATA u8 const lit_4221[8] = {
+/* 80C55AA0-80C55AA8 0008+00 s=1 e=0 z=0  None .rodata    @4221                                                        */
+SECTION_RODATA static u8 const lit_4221[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
 
@@ -554,7 +540,7 @@ SECTION_DEAD char const* const stringBase_80C55AC7 = "Obj_lp";
 SECTION_DEAD char const* const stringBase_80C55ACE = "F_SP127";
 #pragma pop
 
-/* 80C54D40-80C550F0 03B0+00 s=2 e=0 z=0  None .text      daObj_Lp_Execute__FP12obj_lp_class                           */
+/* 80C54D40-80C550F0 03B0+00 s=1 e=0 z=0  None .text      daObj_Lp_Execute__FP12obj_lp_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -565,17 +551,17 @@ asm static void daObj_Lp_Execute(obj_lp_class* param_0) {
 #pragma pop
 
 
-/* 80C550F0-80C550F8 0008+00 s=1 e=0 z=0  None .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
-static bool daObj_Lp_IsDelete(obj_lp_class* param_0) {
+/* 80C550F0-80C550F8 0008+00 s=0 e=0 z=0  None .text      daObj_Lp_IsDelete__FP12obj_lp_class                          */
+bool daObj_Lp_IsDelete(obj_lp_class* param_0) {
 	return true;
 }
 
 
-/* 80C550F8-80C5518C 0094+00 s=1 e=0 z=0  None .text      daObj_Lp_Delete__FP12obj_lp_class                            */
+/* 80C550F8-80C5518C 0094+00 s=0 e=0 z=0  None .text      daObj_Lp_Delete__FP12obj_lp_class                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Lp_Delete(obj_lp_class* param_0) {
+asm void daObj_Lp_Delete(obj_lp_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Delete__FP12obj_lp_class.s"
 }
@@ -605,48 +591,48 @@ asm static void set_pos_check(obj_lp_class* param_0, int param_1) {
 
 
 /* ############################################################################################## */
-/* 80C55ADC-80C55AFC 0020+00 s=1 e=0 z=0  None .data      l_daObj_Lp_Method                                            */
-SECTION_DATA static void* l_daObj_Lp_Method[8] = {
-	/* 0    */ (void*)daObj_Lp_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObj_Lp_Delete__FP12obj_lp_class,
-	/* 2    */ (void*)daObj_Lp_Execute__FP12obj_lp_class,
-	/* 3    */ (void*)daObj_Lp_IsDelete__FP12obj_lp_class,
-	/* 4    */ (void*)daObj_Lp_Draw__FP12obj_lp_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C55ADC-80C55AFC 0020+00 s=0 e=0 z=0  None .data      l_daObj_Lp_Method                                            */
+SECTION_DATA void* l_daObj_Lp_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C55AFC-80C55B2C 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_LP                                             */
+/* 80C55AFC-80C55B2C 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_LP                                             */
 SECTION_DATA void* g_profile_OBJ_LP[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x01160000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x0000ADB8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x02C40000,
-	/* 9    */ (void*)&l_daObj_Lp_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x01160000,
+	(void*)NULL,
+	(void*)0x0000ADB8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x02C40000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)0x000E0000,
 };
 
 /* 80C55B2C-80C55B40 0014+00 s=1 e=0 z=0  None .data      __vt__18mDoExt_3DlineMat_c                                   */
 SECTION_DATA static void* __vt__18mDoExt_3DlineMat_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C55488-80C559C8 0540+00 s=1 e=0 z=0  None .text      daObj_Lp_Create__FP10fopAc_ac_c                              */
+/* 80C55488-80C559C8 0540+00 s=0 e=0 z=0  None .text      daObj_Lp_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Lp_Create(fopAc_ac_c* param_0) {
+asm void daObj_Lp_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_lp/d_a_obj_lp/daObj_Lp_Create__FP10fopAc_ac_c.s"
 }

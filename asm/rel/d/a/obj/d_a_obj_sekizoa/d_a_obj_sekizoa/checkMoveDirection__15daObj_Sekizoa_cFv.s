@@ -9,8 +9,8 @@ lbl_80CD0BDC:
 /* 80CD0BF8  7C 7F 1B 78 */	mr r31, r3
 /* 80CD0BFC  3C 60 80 CD */	lis r3, m__21daObj_Sekizoa_Param_c@ha
 /* 80CD0C00  3B A3 5C FC */	addi r29, r3, m__21daObj_Sekizoa_Param_c@l
-/* 80CD0C04  C0 3D 01 28 */	lfs f1, 0x128(r29)	/* effective address: 80CD5E24 */
-/* 80CD0C08  C0 1D 00 00 */	lfs f0, 0(r29)	/* effective address: 80CD5CFC */
+/* 80CD0C04  C0 3D 01 28 */	lfs f1, 0x128(r29)
+/* 80CD0C08  C0 1D 00 00 */	lfs f0, 0(r29)
 /* 80CD0C0C  EF E1 00 32 */	fmuls f31, f1, f0
 /* 80CD0C10  38 7F 10 E4 */	addi r3, r31, 0x10e4
 /* 80CD0C14  4B 47 4A F4 */	b getActorP__18daNpcT_ActorMngr_cFv
@@ -64,8 +64,8 @@ lbl_80CD0BDC:
 /* 80CD0CD4  38 7F 09 30 */	addi r3, r31, 0x930
 /* 80CD0CD8  38 81 00 2C */	addi r4, r1, 0x2c
 /* 80CD0CDC  4B 59 70 4C */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80CD0CE0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CD0CE4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CD0CE0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CD0CE4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CD0CE8  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80CD0CEC  7F C3 F3 78 */	mr r3, r30
 /* 80CD0CF0  38 9F 09 30 */	addi r4, r31, 0x930

@@ -13,8 +13,8 @@ lbl_80C9307C:
 /* 80C930A8  3B C0 00 01 */	li r30, 1
 /* 80C930AC  28 04 00 FF */	cmplwi r4, 0xff
 /* 80C930B0  41 82 00 24 */	beq lbl_80C930D4
-/* 80C930B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C930B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C930B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C930B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C930BC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80C930C0  7C 05 07 74 */	extsb r5, r0
 /* 80C930C4  4B 3A 22 9C */	b isSwitch__10dSv_info_cCFii

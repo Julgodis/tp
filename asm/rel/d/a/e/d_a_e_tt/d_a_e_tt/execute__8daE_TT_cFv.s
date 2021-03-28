@@ -51,11 +51,11 @@ lbl_807C1094:
 /* 807C10D8  4B 84 BC C4 */	b transM__14mDoMtx_stack_cFfff
 /* 807C10DC  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 807C10E0  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 807C10E4  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 807C10E4  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807C10E8  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 807C10EC  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 807C10EC  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 807C10F0  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 807C10F4  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 807C10F4  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 807C10F8  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 807C10FC  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 807C1100  D0 01 00 08 */	stfs f0, 8(r1)

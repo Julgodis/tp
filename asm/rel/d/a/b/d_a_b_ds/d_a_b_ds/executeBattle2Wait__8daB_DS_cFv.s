@@ -16,7 +16,7 @@ lbl_805D41F8:
 /* 805D4200  B0 1F 07 CE */	sth r0, 0x7ce(r31)
 /* 805D4204  3C 80 80 5E */	lis r4, l_HIO@ha
 /* 805D4208  38 84 DA BC */	addi r4, r4, l_HIO@l
-/* 805D420C  A8 04 00 30 */	lha r0, 0x30(r4)	/* effective address: 805DDAEC */
+/* 805D420C  A8 04 00 30 */	lha r0, 0x30(r4)
 /* 805D4210  90 1F 08 34 */	stw r0, 0x834(r31)
 /* 805D4214  38 00 00 00 */	li r0, 0
 /* 805D4218  98 1F 08 5F */	stb r0, 0x85f(r31)
@@ -34,7 +34,7 @@ lbl_805D41F8:
 /* 805D4248  4B FF 78 81 */	bl setBck__8daB_DS_cFiUcff
 /* 805D424C  3C 60 80 5E */	lis r3, l_HIO@ha
 /* 805D4250  38 63 DA BC */	addi r3, r3, l_HIO@l
-/* 805D4254  A8 03 00 32 */	lha r0, 0x32(r3)	/* effective address: 805DDAEE */
+/* 805D4254  A8 03 00 32 */	lha r0, 0x32(r3)
 /* 805D4258  90 1F 06 90 */	stw r0, 0x690(r31)
 /* 805D425C  38 00 00 00 */	li r0, 0
 /* 805D4260  98 1F 08 60 */	stb r0, 0x860(r31)

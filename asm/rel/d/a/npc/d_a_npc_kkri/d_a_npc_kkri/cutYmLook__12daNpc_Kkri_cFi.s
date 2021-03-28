@@ -9,8 +9,8 @@ lbl_80550F70:
 /* 80550F8C  3B A0 00 00 */	li r29, 0
 /* 80550F90  3B 80 FF FF */	li r28, -1
 /* 80550F94  3B 60 00 00 */	li r27, 0
-/* 80550F98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80550F9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80550F98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80550F9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80550FA0  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80550FA4  7F C3 F3 78 */	mr r3, r30
 /* 80550FA8  3C A0 80 55 */	lis r5, struct_805535A4+0x0@ha

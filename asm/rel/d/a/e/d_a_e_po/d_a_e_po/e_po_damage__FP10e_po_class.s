@@ -27,8 +27,8 @@ lbl_8074E530:
 /* 8074E54C  88 9E 05 BF */	lbz r4, 0x5bf(r30)
 /* 8074E550  28 04 00 FF */	cmplwi r4, 0xff
 /* 8074E554  41 82 00 18 */	beq lbl_8074E56C
-/* 8074E558  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074E55C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8074E558  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074E55C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074E560  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 8074E564  7C 05 07 74 */	extsb r5, r0
 /* 8074E568  4B 8E 6D 48 */	b offSwitch__10dSv_info_cFii

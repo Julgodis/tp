@@ -7,11 +7,11 @@ lbl_807E4AB8:
 /* 807E4ACC  7C 7E 1B 78 */	mr r30, r3
 /* 807E4AD0  3C 60 80 7E */	lis r3, lit_3802@ha
 /* 807E4AD4  3B E3 73 00 */	addi r31, r3, lit_3802@l
-/* 807E4AD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E4ADC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807E4AE0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 807E4AD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E4ADC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807E4AE0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 807E4AE4  38 80 00 00 */	li r4, 0
-/* 807E4AE8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 807E4AE8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 807E4AEC  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 807E4AF0  7D 89 03 A6 */	mtctr r12
 /* 807E4AF4  4E 80 04 21 */	bctrl 
@@ -20,11 +20,11 @@ lbl_807E4AB8:
 /* 807E4B00  4B B6 19 B0 */	b PSMTXCopy
 /* 807E4B04  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 807E4B08  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 807E4B0C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 807E4B0C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807E4B10  D0 01 00 58 */	stfs f0, 0x58(r1)
-/* 807E4B14  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 807E4B14  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 807E4B18  D0 01 00 5C */	stfs f0, 0x5c(r1)
-/* 807E4B1C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 807E4B1C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 807E4B20  D0 01 00 60 */	stfs f0, 0x60(r1)
 /* 807E4B24  80 1E 06 80 */	lwz r0, 0x680(r30)
 /* 807E4B28  2C 00 00 02 */	cmpwi r0, 2
@@ -106,7 +106,7 @@ lbl_807E4C40:
 /* 807E4C48  40 82 00 3C */	bne lbl_807E4C84
 /* 807E4C4C  3C 60 80 7E */	lis r3, l_HIO@ha
 /* 807E4C50  38 63 75 C8 */	addi r3, r3, l_HIO@l
-/* 807E4C54  C0 23 00 20 */	lfs f1, 0x20(r3)	/* effective address: 807E75E8 */
+/* 807E4C54  C0 23 00 20 */	lfs f1, 0x20(r3)
 /* 807E4C58  C0 1E 06 78 */	lfs f0, 0x678(r30)
 /* 807E4C5C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 807E4C60  D0 1E 05 2C */	stfs f0, 0x52c(r30)

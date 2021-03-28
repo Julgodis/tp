@@ -6,12 +6,12 @@ lbl_80999618:
 /* 80999628  38 A3 9E 20 */	addi r5, r3, mCutList__14daNpc_clerkB_c@l
 /* 8099962C  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80999630  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80999634  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80999638  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 8099963C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80999E20 */
-/* 80999640  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80999E24 */
-/* 80999644  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80999648  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80999E28 */
+/* 80999634  80 64 00 00 */	lwz r3, 0(r4)
+/* 80999638  80 04 00 04 */	lwz r0, 4(r4)
+/* 8099963C  90 65 00 00 */	stw r3, 0(r5)
+/* 80999640  90 05 00 04 */	stw r0, 4(r5)
+/* 80999644  80 04 00 08 */	lwz r0, 8(r4)
+/* 80999648  90 05 00 08 */	stw r0, 8(r5)
 /* 8099964C  3C 60 80 9A */	lis r3, __vt__20daNpc_clerkB_Param_c@ha
 /* 80999650  38 03 A0 30 */	addi r0, r3, __vt__20daNpc_clerkB_Param_c@l
 /* 80999654  3C 60 80 9A */	lis r3, l_HIO@ha

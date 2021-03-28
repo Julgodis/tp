@@ -21,7 +21,7 @@ lbl_80B90C34:
 lbl_80B90C80:
 /* 80B90C80  3C 80 80 B9 */	lis r4, m__17daNpc_zrC_Param_c@ha
 /* 80B90C84  38 84 31 FC */	addi r4, r4, m__17daNpc_zrC_Param_c@l
-/* 80B90C88  A8 84 00 62 */	lha r4, 0x62(r4)	/* effective address: 80B9325E */
+/* 80B90C88  A8 84 00 62 */	lha r4, 0x62(r4)
 lbl_80B90C8C:
 /* 80B90C8C  38 A0 00 11 */	li r5, 0x11
 /* 80B90C90  38 C0 00 00 */	li r6, 0

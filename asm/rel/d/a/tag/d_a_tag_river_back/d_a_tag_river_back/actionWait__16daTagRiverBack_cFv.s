@@ -4,9 +4,9 @@ lbl_80D5F548:
 /* 80D5F550  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D5F554  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D5F558  7C 7F 1B 78 */	mr r31, r3
-/* 80D5F55C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D5F560  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D5F564  80 04 5F 18 */	lwz r0, 0x5f18(r4)	/* effective address: 8040C0D8 */
+/* 80D5F55C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D5F560  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D5F564  80 04 5F 18 */	lwz r0, 0x5f18(r4)
 /* 80D5F568  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 80D5F56C  41 82 00 3C */	beq lbl_80D5F5A8
 /* 80D5F570  38 00 00 00 */	li r0, 0

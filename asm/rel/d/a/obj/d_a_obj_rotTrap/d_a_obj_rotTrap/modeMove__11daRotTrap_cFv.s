@@ -16,7 +16,7 @@ lbl_80CC0360:
 /* 80CC0398  90 01 00 08 */	stw r0, 8(r1)
 /* 80CC039C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CC03A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CC03A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CC03A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CC03A8  38 81 00 08 */	addi r4, r1, 8
 /* 80CC03AC  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80CC03B0  38 C0 00 00 */	li r6, 0
@@ -31,7 +31,7 @@ lbl_80CC0360:
 /* 80CC03D4  C0 3F 00 48 */	lfs f1, 0x48(r31)
 /* 80CC03D8  3C 60 80 CC */	lis r3, l_HIO@ha
 /* 80CC03DC  38 63 0A C4 */	addi r3, r3, l_HIO@l
-/* 80CC03E0  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CC0AC8 */
+/* 80CC03E0  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CC03E4  EC 01 00 32 */	fmuls f0, f1, f0
 /* 80CC03E8  EC 02 00 24 */	fdivs f0, f2, f0
 /* 80CC03EC  EC 03 00 32 */	fmuls f0, f3, f0
@@ -40,7 +40,7 @@ lbl_80CC0360:
 /* 80CC03F8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80CC03FC  B0 1E 05 B0 */	sth r0, 0x5b0(r30)
 /* 80CC0400  C0 3F 00 38 */	lfs f1, 0x38(r31)
-/* 80CC0404  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80CC0AC8 */
+/* 80CC0404  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80CC0408  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80CC040C  41 82 00 14 */	beq lbl_80CC0420
 /* 80CC0410  A8 7E 04 E6 */	lha r3, 0x4e6(r30)

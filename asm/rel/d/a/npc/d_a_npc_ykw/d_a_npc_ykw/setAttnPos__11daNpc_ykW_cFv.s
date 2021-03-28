@@ -29,9 +29,9 @@ lbl_80B60F08:
 /* 80B60F74  3B C3 7C 38 */	addi r30, r3, m__17daNpc_ykW_Param_c@l
 /* 80B60F78  3C 60 80 B6 */	lis r3, cNullVec__6Z2Calc@ha
 /* 80B60F7C  3B E3 7F 40 */	addi r31, r3, cNullVec__6Z2Calc@l
-/* 80B60F80  C0 3E 00 E0 */	lfs f1, 0xe0(r30)	/* effective address: 80B67D18 */
+/* 80B60F80  C0 3E 00 E0 */	lfs f1, 0xe0(r30)
 /* 80B60F84  D0 21 00 34 */	stfs f1, 0x34(r1)
-/* 80B60F88  C0 1E 01 1C */	lfs f0, 0x11c(r30)	/* effective address: 80B67D54 */
+/* 80B60F88  C0 1E 01 1C */	lfs f0, 0x11c(r30)
 /* 80B60F8C  D0 01 00 38 */	stfs f0, 0x38(r1)
 /* 80B60F90  D0 21 00 3C */	stfs f1, 0x3c(r1)
 /* 80B60F94  88 1C 10 6A */	lbz r0, 0x106a(r28)

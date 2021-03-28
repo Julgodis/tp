@@ -36,7 +36,7 @@ lbl_809B6974:
 /* 809B6980  4B 7F 1E 64 */	b dKy_change_colpat__FUc
 /* 809B6984  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B6988  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B698C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B698C  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B6990  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B6994  3C 80 02 00 */	lis r4, 0x0200 /* 0x0200003F@ha */
 /* 809B6998  38 84 00 3F */	addi r4, r4, 0x003F /* 0x0200003F@l */
@@ -49,7 +49,7 @@ lbl_809B69A4:
 /* 809B69B0  B0 1F 0F 90 */	sth r0, 0xf90(r31)
 /* 809B69B4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B69B8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B69BC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B69BC  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B69C0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B69C4  4B 8F 94 54 */	b bgmStreamPlay__8Z2SeqMgrFv
 /* 809B69C8  38 60 00 0C */	li r3, 0xc
@@ -100,11 +100,11 @@ lbl_809B6A48:
 /* 809B6A6C  C0 1E 00 E8 */	lfs f0, 0xe8(r30)
 /* 809B6A70  D0 1F 0B 68 */	stfs f0, 0xb68(r31)
 lbl_809B6A74:
-/* 809B6A74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809B6A78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809B6A7C  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 809B6A74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809B6A78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809B6A7C  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 809B6A80  C0 3E 00 E0 */	lfs f1, 0xe0(r30)
-/* 809B6A84  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 809B6A84  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809B6A88  81 8C 00 E8 */	lwz r12, 0xe8(r12)
 /* 809B6A8C  7D 89 03 A6 */	mtctr r12
 /* 809B6A90  4E 80 04 21 */	bctrl 
@@ -116,7 +116,7 @@ lbl_809B6A74:
 lbl_809B6AA8:
 /* 809B6AA8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 809B6AAC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 809B6AB0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 809B6AB0  80 63 00 00 */	lwz r3, 0(r3)
 /* 809B6AB4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 809B6AB8  38 80 00 2D */	li r4, 0x2d
 /* 809B6ABC  4B 8F 94 20 */	b bgmStreamStop__8Z2SeqMgrFUl

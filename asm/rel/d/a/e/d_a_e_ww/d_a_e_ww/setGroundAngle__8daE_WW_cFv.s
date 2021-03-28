@@ -69,8 +69,8 @@ lbl_807E80D0:
 /* 807E8154  38 61 00 20 */	addi r3, r1, 0x20
 /* 807E8158  38 81 00 08 */	addi r4, r1, 8
 /* 807E815C  4B A7 FB B0 */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 807E8160  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E8164  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807E8160  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E8164  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807E8168  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 807E816C  38 81 00 20 */	addi r4, r1, 0x20
 /* 807E8170  4B 88 C3 30 */	b GroundCross__4cBgSFP11cBgS_GndChk
@@ -122,8 +122,8 @@ lbl_807E81F0:
 /* 807E8218  38 61 00 20 */	addi r3, r1, 0x20
 /* 807E821C  38 81 00 08 */	addi r4, r1, 8
 /* 807E8220  4B A7 FA EC */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 807E8224  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807E8228  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807E8224  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807E8228  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807E822C  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 807E8230  7F A3 EB 78 */	mr r3, r29
 /* 807E8234  38 81 00 20 */	addi r4, r1, 0x20

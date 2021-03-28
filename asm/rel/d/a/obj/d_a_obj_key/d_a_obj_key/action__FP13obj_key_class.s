@@ -46,8 +46,8 @@ lbl_80C40754:
 /* 80C4078C  EC 00 08 2A */	fadds f0, f0, f1
 /* 80C40790  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 /* 80C40794  38 7E 06 60 */	addi r3, r30, 0x660
-/* 80C40798  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C4079C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C40798  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C4079C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C407A0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C407A4  4B 43 63 08 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C407A8  C0 1E 04 D4 */	lfs f0, 0x4d4(r30)
@@ -58,9 +58,9 @@ lbl_80C40754:
 /* 80C407BC  EC 00 08 28 */	fsubs f0, f0, f1
 /* 80C407C0  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 /* 80C407C4  7F C3 F3 78 */	mr r3, r30
-/* 80C407C8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C407CC  3B 44 61 C0 */	addi r26, r4, struct_804061C0+0x0@l
-/* 80C407D0  80 9A 5D AC */	lwz r4, 0x5dac(r26)	/* effective address: 8040BF6C */
+/* 80C407C8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C407CC  3B 44 61 C0 */	addi r26, r4, g_dComIfG_gameInfo@l
+/* 80C407D0  80 9A 5D AC */	lwz r4, 0x5dac(r26)
 /* 80C407D4  4B 3D A0 0C */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80C407D8  C0 1F 00 2C */	lfs f0, 0x2c(r31)
 /* 80C407DC  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -85,12 +85,12 @@ lbl_80C40810:
 /* 80C40818  3B 00 00 00 */	li r24, 0
 /* 80C4081C  3B A0 00 00 */	li r29, 0
 /* 80C40820  3B 80 00 00 */	li r28, 0
-/* 80C40824  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C40828  3B 43 61 C0 */	addi r26, r3, struct_804061C0+0x0@l
+/* 80C40824  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C40828  3B 43 61 C0 */	addi r26, r3, g_dComIfG_gameInfo@l
 /* 80C4082C  3C 60 80 C4 */	lis r3, data_80C41094@ha
 /* 80C40830  3B 63 10 94 */	addi r27, r3, data_80C41094@l
 lbl_80C40834:
-/* 80C40834  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)	/* effective address: 8040BEFC */
+/* 80C40834  80 7A 5D 3C */	lwz r3, 0x5d3c(r26)
 /* 80C40838  38 00 00 FF */	li r0, 0xff
 /* 80C4083C  90 01 00 08 */	stw r0, 8(r1)
 /* 80C40840  38 80 00 00 */	li r4, 0

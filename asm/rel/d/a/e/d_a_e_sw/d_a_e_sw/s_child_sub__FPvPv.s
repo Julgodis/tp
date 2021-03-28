@@ -34,9 +34,9 @@ lbl_807AAD94:
 /* 807AAD98  40 82 00 18 */	bne lbl_807AADB0
 /* 807AAD9C  3C 60 80 7B */	lis r3, struct_807B0200+0x1@ha
 /* 807AADA0  38 83 02 01 */	addi r4, r3, struct_807B0200+0x1@l
-/* 807AADA4  88 64 00 00 */	lbz r3, 0(r4)	/* effective address: 807B0201 */
+/* 807AADA4  88 64 00 00 */	lbz r3, 0(r4)
 /* 807AADA8  38 03 00 01 */	addi r0, r3, 1
-/* 807AADAC  98 04 00 00 */	stb r0, 0(r4)	/* effective address: 807B0201 */
+/* 807AADAC  98 04 00 00 */	stb r0, 0(r4)
 lbl_807AADB0:
 /* 807AADB0  38 60 00 00 */	li r3, 0
 /* 807AADB4  83 E1 00 0C */	lwz r31, 0xc(r1)

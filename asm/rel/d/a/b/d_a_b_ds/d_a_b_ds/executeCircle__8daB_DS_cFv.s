@@ -7,9 +7,9 @@ lbl_805D0194:
 /* 805D01A8  7C 7D 1B 78 */	mr r29, r3
 /* 805D01AC  3C 80 80 5E */	lis r4, lit_3932@ha
 /* 805D01B0  3B C4 CA 54 */	addi r30, r4, lit_3932@l
-/* 805D01B4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805D01B8  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 805D01BC  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 805D01B4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805D01B8  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 805D01BC  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 805D01C0  4B A4 A5 50 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 805D01C4  A8 1D 04 E6 */	lha r0, 0x4e6(r29)
 /* 805D01C8  7C 03 00 50 */	subf r0, r3, r0

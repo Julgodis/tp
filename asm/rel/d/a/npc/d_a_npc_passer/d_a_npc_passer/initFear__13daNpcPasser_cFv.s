@@ -20,9 +20,9 @@ lbl_80AA3D4C:
 /* 80AA3D94  38 C0 00 00 */	li r6, 0
 /* 80AA3D98  38 E0 FF FF */	li r7, -1
 /* 80AA3D9C  4B 6B 51 64 */	b setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
-/* 80AA3DA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80AA3DA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80AA3DA8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80AA3DA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80AA3DA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80AA3DA8  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80AA3DAC  38 63 04 D0 */	addi r3, r3, 0x4d0
 /* 80AA3DB0  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80AA3DB4  4B 7C CE 50 */	b cLib_targetAngleY__FPC3VecPC3Vec

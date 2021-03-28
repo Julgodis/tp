@@ -19,7 +19,6 @@ extern void* const data_80CB4FAC[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_poTbox_cpp(); // 1
 
 // 
 // Declarations:

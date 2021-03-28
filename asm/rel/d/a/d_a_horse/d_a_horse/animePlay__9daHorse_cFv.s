@@ -8,14 +8,14 @@ lbl_8083A3C4:
 /* 8083A3DC  3C 80 80 84 */	lis r4, lit_3894@ha
 /* 8083A3E0  3B E4 54 AC */	addi r31, r4, lit_3894@l
 /* 8083A3E4  C0 23 05 EC */	lfs f1, 0x5ec(r3)
-/* 8083A3E8  C0 1F 01 98 */	lfs f0, 0x198(r31)	/* effective address: 80845644 */
+/* 8083A3E8  C0 1F 01 98 */	lfs f0, 0x198(r31)
 /* 8083A3EC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8083A3F0  40 80 00 08 */	bge lbl_8083A3F8
 /* 8083A3F4  48 00 68 B1 */	bl resetNeckAnime__9daHorse_cFv
 lbl_8083A3F8:
-/* 8083A3F8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083A3FC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 8083A400  83 7C 5D B4 */	lwz r27, 0x5db4(r28)	/* effective address: 8040BF74 */
+/* 8083A3F8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083A3FC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 8083A400  83 7C 5D B4 */	lwz r27, 0x5db4(r28)
 /* 8083A404  3B A0 00 00 */	li r29, 0
 /* 8083A408  A0 1B 2F E8 */	lhz r0, 0x2fe8(r27)
 /* 8083A40C  28 00 01 48 */	cmplwi r0, 0x148

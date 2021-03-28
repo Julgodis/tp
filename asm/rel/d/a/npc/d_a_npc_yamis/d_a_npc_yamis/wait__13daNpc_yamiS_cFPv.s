@@ -113,7 +113,7 @@ lbl_80B47DDC:
 /* 80B47E1C  90 01 00 08 */	stw r0, 8(r1)
 /* 80B47E20  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80B47E24  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80B47E28  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80B47E28  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B47E2C  38 81 00 08 */	addi r4, r1, 8
 /* 80B47E30  38 A1 00 0C */	addi r5, r1, 0xc
 /* 80B47E34  38 C0 00 00 */	li r6, 0

@@ -6,9 +6,9 @@ lbl_805BA274:
 /* 805BA284  7C 87 23 78 */	mr r7, r4
 /* 805BA288  7C A8 2B 78 */	mr r8, r5
 /* 805BA28C  7C C9 33 78 */	mr r9, r6
-/* 805BA290  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805BA294  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805BA298  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 805BA290  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805BA294  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BA298  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 805BA29C  38 80 00 00 */	li r4, 0
 /* 805BA2A0  90 81 00 08 */	stw r4, 8(r1)
 /* 805BA2A4  38 00 FF FF */	li r0, -1

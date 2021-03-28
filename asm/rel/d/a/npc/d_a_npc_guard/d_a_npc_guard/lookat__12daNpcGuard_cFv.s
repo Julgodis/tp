@@ -247,11 +247,11 @@ lbl_809F1BD0:
 /* 809F1BEC  B0 01 00 7C */	sth r0, 0x7c(r1)
 /* 809F1BF0  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 809F1BF4  3B C3 0C F4 */	addi r30, r3, Zero__4cXyz@l
-/* 809F1BF8  C0 1E 00 00 */	lfs f0, 0(r30)	/* effective address: 80430CF4 */
+/* 809F1BF8  C0 1E 00 00 */	lfs f0, 0(r30)
 /* 809F1BFC  D0 01 00 50 */	stfs f0, 0x50(r1)
-/* 809F1C00  C0 1E 00 04 */	lfs f0, 4(r30)	/* effective address: 80430CF8 */
+/* 809F1C00  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 809F1C04  D0 01 00 54 */	stfs f0, 0x54(r1)
-/* 809F1C08  C0 1E 00 08 */	lfs f0, 8(r30)	/* effective address: 80430CFC */
+/* 809F1C08  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 809F1C0C  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 809F1C10  7F E3 FB 78 */	mr r3, r31
 /* 809F1C14  4B 76 64 94 */	b isM___10daNpcCd2_cFv

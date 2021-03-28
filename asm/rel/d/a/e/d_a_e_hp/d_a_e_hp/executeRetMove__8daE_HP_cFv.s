@@ -136,7 +136,7 @@ lbl_806E7084:
 /* 806E70C4  88 9E 07 1F */	lbz r4, 0x71f(r30)
 /* 806E70C8  3C 60 80 6F */	lis r3, l_HIO@ha
 /* 806E70CC  38 63 A4 F8 */	addi r3, r3, l_HIO@l
-/* 806E70D0  A8 03 00 10 */	lha r0, 0x10(r3)	/* effective address: 806EA508 */
+/* 806E70D0  A8 03 00 10 */	lha r0, 0x10(r3)
 /* 806E70D4  7C 04 00 00 */	cmpw r4, r0
 /* 806E70D8  40 80 00 10 */	bge lbl_806E70E8
 /* 806E70DC  C0 1F 00 04 */	lfs f0, 4(r31)

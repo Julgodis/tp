@@ -16,14 +16,14 @@ struct dSelect_cursorHIO_c {
 	/* 80195978 */ ~dSelect_cursorHIO_c();
 };
 
-struct J2DAnmTransformKey {
-	/* 801959C0 */ ~J2DAnmTransformKey();
+struct J2DAnmColor {
 };
 
 struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmColor {
+struct J2DAnmTransformKey {
+	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
 struct JKRArchive {
@@ -56,9 +56,6 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct JKRExpHeap {
-};
-
 struct J2DGrafContext {
 };
 
@@ -67,6 +64,9 @@ struct J2DScreen {
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgr {
@@ -217,42 +217,42 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BB70C-803BB71C 0010+00 s=1 e=0 z=0  None .data      blo_name$3684                                                */
 SECTION_DATA static void* data_803BB70C[4] = {
-	/* 0    */ (void*)&d_d_select_cursor__stringBase0,
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x1F),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x3B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x5C),
+	(void*)&d_d_select_cursor__stringBase0,
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x1F),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x3B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x5C),
 };
 
 /* 803BB71C-803BB72C 0010+00 s=1 e=0 z=0  None .data      bck_name$3685                                                */
 SECTION_DATA static void* data_803BB71C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7C),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7C),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 };
 
 /* 803BB72C-803BB73C 0010+00 s=1 e=0 z=0  None .data      bpk_name$3686                                                */
 SECTION_DATA static void* data_803BB72C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x98),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xB7),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xD3),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0xF4),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x98),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0xB7),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0xD3),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0xF4),
 };
 
 /* 803BB73C-803BB74C 0010+00 s=1 e=0 z=0  None .data      btk_name$3687                                                */
 SECTION_DATA static void* data_803BB73C[4] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x113),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x132),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x113),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x132),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 };
 
 /* 803BB74C-803BB78C 0010+30 s=1 e=0 z=0  None .data      btk2_name$3688                                               */
 SECTION_DATA static void* data_803BB74C[4 + 12 /* padding */] = {
-	/* 0    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 1    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x14E),
-	/* 2    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
-	/* 3    */ (void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x14E),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
+	(void*)(((char*)&d_d_select_cursor__stringBase0)+0x7B),
 	/* padding */
 	NULL,
 	NULL,
@@ -270,10 +270,10 @@ SECTION_DATA static void* data_803BB74C[4 + 12 /* padding */] = {
 
 /* 803BB78C-803BB7A8 0010+0C s=2 e=0 z=0  None .data      __vt__16dSelect_cursor_c                                     */
 SECTION_DATA static void* __vt__16dSelect_cursor_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__16dSelect_cursor_cFv,
-	/* 3    */ (void*)__dt__16dSelect_cursor_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__16dSelect_cursor_cFv,
+	(void*)__dt__16dSelect_cursor_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -282,9 +282,9 @@ SECTION_DATA static void* __vt__16dSelect_cursor_c[4 + 3 /* padding */] = {
 
 /* 803BB7A8-803BB7B8 000C+04 s=2 e=0 z=0  None .data      __vt__19dSelect_cursorHIO_c                                  */
 SECTION_DATA static void* __vt__19dSelect_cursorHIO_c[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19dSelect_cursorHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19dSelect_cursorHIO_cFv,
 	/* padding */
 	NULL,
 };

@@ -123,7 +123,7 @@ lbl_80D3269C:
 /* 80D32880  98 9E 0A AC */	stb r4, 0xaac(r30)
 /* 80D32884  3C 60 80 D3 */	lis r3, l_HIO@ha
 /* 80D32888  38 63 44 24 */	addi r3, r3, l_HIO@l
-/* 80D3288C  A8 03 00 06 */	lha r0, 6(r3)	/* effective address: 80D3442A */
+/* 80D3288C  A8 03 00 06 */	lha r0, 6(r3)
 /* 80D32890  1C 00 00 1E */	mulli r0, r0, 0x1e
 /* 80D32894  B0 1E 0A AE */	sth r0, 0xaae(r30)
 /* 80D32898  98 9E 08 69 */	stb r4, 0x869(r30)
@@ -136,7 +136,7 @@ lbl_80D3269C:
 /* 80D328B4  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D328B8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D328BC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D328C0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D328C0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D328C4  38 81 00 0C */	addi r4, r1, 0xc
 /* 80D328C8  38 BE 0A 64 */	addi r5, r30, 0xa64
 /* 80D328CC  38 C0 00 00 */	li r6, 0
@@ -168,7 +168,7 @@ lbl_80D328F0:
 /* 80D32930  98 9E 0A AD */	stb r4, 0xaad(r30)
 /* 80D32934  3C 60 80 D3 */	lis r3, l_HIO@ha
 /* 80D32938  38 63 44 24 */	addi r3, r3, l_HIO@l
-/* 80D3293C  A8 03 00 06 */	lha r0, 6(r3)	/* effective address: 80D3442A */
+/* 80D3293C  A8 03 00 06 */	lha r0, 6(r3)
 /* 80D32940  1C 00 00 1E */	mulli r0, r0, 0x1e
 /* 80D32944  B0 1E 0A B0 */	sth r0, 0xab0(r30)
 /* 80D32948  98 9E 09 A1 */	stb r4, 0x9a1(r30)
@@ -181,7 +181,7 @@ lbl_80D328F0:
 /* 80D32964  90 01 00 08 */	stw r0, 8(r1)
 /* 80D32968  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D3296C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D32970  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D32970  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D32974  38 81 00 08 */	addi r4, r1, 8
 /* 80D32978  38 BE 0A 70 */	addi r5, r30, 0xa70
 /* 80D3297C  38 C0 00 00 */	li r6, 0
@@ -209,8 +209,8 @@ lbl_80D329A0:
 /* 80D329D0  38 7E 0A 50 */	addi r3, r30, 0xa50
 /* 80D329D4  38 9E 0A 70 */	addi r4, r30, 0xa70
 /* 80D329D8  4B 53 CC 70 */	b SetC__8cM3dGSphFRC4cXyz
-/* 80D329DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D329E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D329DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D329E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D329E4  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 80D329E8  7F A3 EB 78 */	mr r3, r29
 /* 80D329EC  38 9E 07 F4 */	addi r4, r30, 0x7f4

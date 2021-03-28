@@ -13,7 +13,7 @@ lbl_80B2F4A0:
 /* 80B2F4CC  38 7E 0E 64 */	addi r3, r30, 0xe64
 /* 80B2F4D0  3C 80 80 B4 */	lis r4, l_resALink@ha
 /* 80B2F4D4  38 84 1E 18 */	addi r4, r4, l_resALink@l
-/* 80B2F4D8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80B41E18 */
+/* 80B2F4D8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80B2F4DC  4B 4F DB 2C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80B2F4E0  38 7E 0E 6C */	addi r3, r30, 0xe6c
 /* 80B2F4E4  88 1E 0E 9B */	lbz r0, 0xe9b(r30)

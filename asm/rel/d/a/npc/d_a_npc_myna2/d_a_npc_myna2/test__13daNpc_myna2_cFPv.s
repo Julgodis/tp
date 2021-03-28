@@ -25,8 +25,8 @@ lbl_80A86650:
 /* 80A86650  7F E3 FB 78 */	mr r3, r31
 /* 80A86654  3C 80 80 A9 */	lis r4, m__19daNpc_myna2_Param_c@ha
 /* 80A86658  38 A4 84 34 */	addi r5, r4, m__19daNpc_myna2_Param_c@l
-/* 80A8665C  A8 85 00 66 */	lha r4, 0x66(r5)	/* effective address: 80A8849A */
-/* 80A86660  C0 25 00 44 */	lfs f1, 0x44(r5)	/* effective address: 80A88478 */
+/* 80A8665C  A8 85 00 66 */	lha r4, 0x66(r5)
+/* 80A86660  C0 25 00 44 */	lfs f1, 0x44(r5)
 /* 80A86664  38 A0 00 00 */	li r5, 0
 /* 80A86668  81 9F 0B 44 */	lwz r12, 0xb44(r31)
 /* 80A8666C  81 8C 00 3C */	lwz r12, 0x3c(r12)
@@ -35,7 +35,7 @@ lbl_80A86650:
 /* 80A86678  7F E3 FB 78 */	mr r3, r31
 /* 80A8667C  3C 80 80 A9 */	lis r4, m__19daNpc_myna2_Param_c@ha
 /* 80A86680  38 84 84 34 */	addi r4, r4, m__19daNpc_myna2_Param_c@l
-/* 80A86684  A8 84 00 68 */	lha r4, 0x68(r4)	/* effective address: 80A8849C */
+/* 80A86684  A8 84 00 68 */	lha r4, 0x68(r4)
 /* 80A86688  4B FF F5 1D */	bl setLookMode__13daNpc_myna2_cFi
 /* 80A8668C  38 00 00 00 */	li r0, 0
 /* 80A86690  B0 1F 09 E6 */	sth r0, 0x9e6(r31)

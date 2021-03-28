@@ -8,7 +8,7 @@ lbl_80C561C0:
 /* 80C561D8  C0 03 06 F4 */	lfs f0, 0x6f4(r3)
 /* 80C561DC  D0 03 07 04 */	stfs f0, 0x704(r3)
 /* 80C561E0  C0 23 07 00 */	lfs f1, 0x700(r3)
-/* 80C561E4  C0 04 00 34 */	lfs f0, 0x34(r4)	/* effective address: 80C56A84 */
+/* 80C561E4  C0 04 00 34 */	lfs f0, 0x34(r4)
 /* 80C561E8  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C561EC  D0 03 07 00 */	stfs f0, 0x700(r3)
 /* 80C561F0  88 03 07 08 */	lbz r0, 0x708(r3)

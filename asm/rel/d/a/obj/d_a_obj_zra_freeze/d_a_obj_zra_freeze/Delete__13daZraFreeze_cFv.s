@@ -4,7 +4,7 @@ lbl_80D44A84:
 /* 80D44A8C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80D44A90  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D44A94  38 84 4B C4 */	addi r4, r4, l_arcName@l
-/* 80D44A98  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D44BC4 */
+/* 80D44A98  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D44A9C  38 63 05 68 */	addi r3, r3, 0x568
 /* 80D44AA0  4B 2E 85 68 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D44AA4  38 60 00 01 */	li r3, 1

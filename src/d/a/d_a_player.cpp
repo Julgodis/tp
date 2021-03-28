@@ -692,14 +692,14 @@ SECTION_RODATA static u8 const data_80393DB4[10 + 2 /* padding */] = {
 
 /* 803BA0A0-803BA0C0 0020+00 s=1 e=0 z=0  None .data      arcName$4622                                                 */
 SECTION_DATA static void* data_803BA0A0[8] = {
-	/* 0    */ (void*)&data_80453648,
-	/* 1    */ (void*)&data_80453650,
-	/* 2    */ (void*)&data_80393DA8,
-	/* 3    */ (void*)&data_80393DB4,
-	/* 4    */ (void*)&data_80453658,
-	/* 5    */ (void*)&data_80453660,
-	/* 6    */ (void*)&data_80453668,
-	/* 7    */ (void*)&data_80453670,
+	(void*)&data_80453648,
+	(void*)&data_80453650,
+	(void*)&data_80393DA8,
+	(void*)&data_80393DB4,
+	(void*)&data_80453658,
+	(void*)&data_80453660,
+	(void*)&data_80453668,
+	(void*)&data_80453670,
 };
 
 /* 80453648-80453650 0008+00 s=1 e=0 z=0  None .sdata2    sumouArcName$4614                                            */
@@ -1127,10 +1127,10 @@ asm void daPy_addCalcShort(s16* param_0, s16 param_1, s16 param_2, s16 param_3, 
 /* ############################################################################################## */
 /* 803BA14C-803BA160 0010+04 s=0 e=4 z=0  None .data      __vt__18daPy_sightPacket_c                                   */
 SECTION_DATA void* __vt__18daPy_sightPacket_c[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__18daPy_sightPacket_cFv,
-	/* 3    */ (void*)__dt__18daPy_sightPacket_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__18daPy_sightPacket_cFv,
+	(void*)__dt__18daPy_sightPacket_cFv,
 	/* padding */
 	NULL,
 };

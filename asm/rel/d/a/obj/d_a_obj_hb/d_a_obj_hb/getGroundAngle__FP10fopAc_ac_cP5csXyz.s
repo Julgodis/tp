@@ -23,8 +23,8 @@ lbl_80C19BEC:
 /* 80C19C40  38 61 00 20 */	addi r3, r1, 0x20
 /* 80C19C44  38 81 00 08 */	addi r4, r1, 8
 /* 80C19C48  4B 64 E0 E0 */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80C19C4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C19C50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C19C4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C19C50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C19C54  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80C19C58  7F C3 F3 78 */	mr r3, r30
 /* 80C19C5C  38 81 00 20 */	addi r4, r1, 0x20

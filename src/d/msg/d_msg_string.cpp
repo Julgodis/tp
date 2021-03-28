@@ -80,14 +80,14 @@ extern "C" void getGlbVtx__7J2DPaneCFUc(); // 1
 /* ############################################################################################## */
 /* 803C1498-803C14B8 0020+00 s=3 e=0 z=0  None .data      __vt__12dMsgString_c                                         */
 SECTION_DATA static void* __vt__12dMsgString_c[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
-	/* 3    */ (void*)getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
-	/* 4    */ (void*)getMessage__16dMsgStringBase_cFUlPc,
-	/* 5    */ (void*)resetStringLocal__12dMsgString_cFP10J2DTextBox,
-	/* 6    */ (void*)drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf,
-	/* 7    */ (void*)drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getString__12dMsgString_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
+	(void*)getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc,
+	(void*)getMessage__16dMsgStringBase_cFUlPc,
+	(void*)resetStringLocal__12dMsgString_cFP10J2DTextBox,
+	(void*)drawOutFontLocal__12dMsgString_cFP10J2DTextBoxf,
+	(void*)drawFontLocal__12dMsgString_cFP10J2DTextBoxUcffffUlUc,
 };
 
 /* 80249C20-80249CA0 0080+00 s=0 e=15 z=0  None .text      __ct__12dMsgString_cFv                                       */

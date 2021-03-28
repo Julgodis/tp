@@ -10,7 +10,7 @@ lbl_80792C20:
 /* 80792C40  3C 80 80 7A */	lis r4, lit_3920@ha
 /* 80792C44  3B E4 85 E0 */	addi r31, r4, lit_3920@l
 /* 80792C48  A8 83 06 BC */	lha r4, 0x6bc(r3)
-/* 80792C4C  C0 3F 00 2C */	lfs f1, 0x2c(r31)	/* effective address: 8079860C */
+/* 80792C4C  C0 3F 00 2C */	lfs f1, 0x2c(r31)
 /* 80792C50  C0 03 09 80 */	lfs f0, 0x980(r3)
 /* 80792C54  EC 21 00 2A */	fadds f1, f1, f0
 /* 80792C58  C0 03 06 F0 */	lfs f0, 0x6f0(r3)

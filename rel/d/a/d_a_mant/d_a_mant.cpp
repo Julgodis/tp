@@ -70,53 +70,49 @@ struct J3DSys {
 	/* 8031073C */ void reinitGX();
 };
 
-struct J3DPacket;
-struct J3DDrawBuffer {
-	/* 8032548C */ void entryImm(J3DPacket*, u16);
+struct J3DPacket {
 };
 
-struct J3DPacket {
-	/* 80312750 */ bool entry(J3DDrawBuffer*);
+struct J3DDrawBuffer {
+	/* 8032548C */ void entryImm(J3DPacket*, u16);
 };
 
 // 
 // Forward References:
 // 
 
-static void daMant_Draw(mant_class*); // 2
+void daMant_Draw(mant_class*); // 2
 static void joint_control(mant_class*, mant_j_s*, int, f32, f32); // 2
 static void mant_v_calc(mant_class*); // 2
 static void mant_move(mant_class*); // 2
 static void daMant_Execute(mant_class*); // 2
-static bool daMant_IsDelete(mant_class*); // 2
-static bool daMant_Delete(mant_class*); // 2
-static void daMant_Create(fopAc_ac_c*); // 2
+bool daMant_IsDelete(mant_class*); // 2
+bool daMant_Delete(mant_class*); // 2
+void daMant_Create(fopAc_ac_c*); // 2
 
 extern "C" void draw__15daMant_packet_cFv(); // 1
-extern "C" static void daMant_Draw__FP10mant_class(); // 1
+extern "C" void daMant_Draw__FP10mant_class(); // 1
 extern "C" static void joint_control__FP10mant_classP8mant_j_siff(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
 extern "C" static void mant_v_calc__FP10mant_class(); // 1
 extern "C" static void mant_move__FP10mant_class(); // 1
 extern "C" static void daMant_Execute__FP10mant_class(); // 1
-extern "C" static bool daMant_IsDelete__FP10mant_class(); // 1
-extern "C" static bool daMant_Delete__FP10mant_class(); // 1
-extern "C" static void daMant_Create__FP10fopAc_ac_c(); // 1
+extern "C" bool daMant_IsDelete__FP10mant_class(); // 1
+extern "C" bool daMant_Delete__FP10mant_class(); // 1
+extern "C" void daMant_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__8mant_j_sFv(); // 1
 extern "C" void __ct__8mant_j_sFv(); // 1
 extern "C" void __dt__15daMant_packet_cFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
-extern "C" extern u8 const lit_4130[8];
-extern "C" extern u8 const lit_4240[8];
-extern "C" extern u8 const lit_4241[8];
-extern "C" extern u8 const lit_4242[8];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 l_Egnd_mantPAL[96];
 extern "C" extern u8 l_pos[2028];
 extern "C" extern u8 l_normal[12];
 extern "C" extern u8 l_texCoord[1352];
 extern "C" extern u8 l_Egnd_mantDL[1004];
 extern "C" extern void* pal_d;
 extern "C" extern void* tex_d[2];
+extern "C" extern void* l_daMant_Method[8];
 extern "C" extern void* g_profile_MANT[12];
 
 // 
@@ -177,7 +173,6 @@ extern "C" void MtxTrans__FfffUc(); // 1
 extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
 extern "C" void __dl__FPv(); // 1
 extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
 extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
 extern "C" void DCStoreRangeNoSync(); // 1
 extern "C" void PSMTXConcat(); // 1
@@ -227,14 +222,11 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_27(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
@@ -277,7 +269,7 @@ SECTION_DATA u32 lit_1787[1 + 4 /* padding */] = {
 	0x40080000, 0x00000000, 0x3FE00000, 0x00000000,
 };
 
-/* 80862D40-80866D40 4000+00 s=2 e=0 z=0  None .data      l_Egnd_mantTEX                                               */
+/* 80862D40-80866D40 4000+00 s=1 e=0 z=0  None .data      l_Egnd_mantTEX                                               */
 SECTION_DATA static u8 l_Egnd_mantTEX[16384] = {
 	0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -1305,7 +1297,7 @@ SECTION_DATA static u8 l_Egnd_mantTEX[16384] = {
 	0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 };
 
-/* 80866D40-8086AD40 4000+00 s=4 e=0 z=0  None .data      l_Egnd_mantTEX_U                                             */
+/* 80866D40-8086AD40 4000+00 s=3 e=0 z=0  None .data      l_Egnd_mantTEX_U                                             */
 SECTION_DATA static u8 l_Egnd_mantTEX_U[16384] = {
 	0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
 	0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x07, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06, 0x06,
@@ -2336,7 +2328,7 @@ SECTION_DATA static u8 l_Egnd_mantTEX_U[16384] = {
 /* 8086BF70-8086BF74 0004+00 s=3 e=0 z=0  None .bss       None                                                         */
 static u8 data_8086BF70[4];
 
-/* 80861298-808616B8 0420+00 s=1 e=0 z=0  None .text      draw__15daMant_packet_cFv                                    */
+/* 80861298-808616B8 0420+00 s=0 e=0 z=0  None .text      draw__15daMant_packet_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2347,11 +2339,11 @@ asm void daMant_packet_c::draw() {
 #pragma pop
 
 
-/* 808616B8-8086176C 00B4+00 s=1 e=0 z=0  None .text      daMant_Draw__FP10mant_class                                  */
+/* 808616B8-8086176C 00B4+00 s=0 e=0 z=0  None .text      daMant_Draw__FP10mant_class                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMant_Draw(mant_class* param_0) {
+asm void daMant_Draw(mant_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Draw__FP10mant_class.s"
 }
@@ -2411,8 +2403,13 @@ SECTION_RODATA static u32 const lit_4128[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8086AD40-8086ADA0 0060+00 s=1 e=0 z=0  None .data      l_Egnd_mantPAL                                               */
-SECTION_DATA static u8 l_Egnd_mantPAL[96] = {
+/* 80862CA4-80862CAC 0008+00 s=2 e=0 z=0  None .rodata    @4130                                                        */
+SECTION_RODATA static u8 const lit_4130[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
+/* 8086AD40-8086ADA0 0060+00 s=0 e=0 z=0  None .data      l_Egnd_mantPAL                                               */
+SECTION_DATA u8 l_Egnd_mantPAL[96] = {
 	0x01, 0x11, 0x03, 0x21, 0x04, 0x32, 0x80, 0x00, 0x80, 0x02, 0x80, 0x42, 0x88, 0x42, 0x88, 0x44,
 	0x90, 0x42, 0x90, 0x44, 0x90, 0x82, 0x90, 0x84, 0x98, 0x82, 0x98, 0x84, 0x98, 0xC4, 0x98, 0xC6,
 	0xA0, 0xC4, 0xA0, 0xC6, 0xA1, 0x06, 0xA1, 0x08, 0xA8, 0xC6, 0xA9, 0x04, 0xA9, 0x06, 0xA9, 0x08,
@@ -2714,12 +2711,12 @@ SECTION_DATA u8 l_Egnd_mantDL[1004] = {
 };
 
 /* 8086BECC-8086BED0 0004+00 s=0 e=0 z=0  None .data      pal_d                                                        */
-SECTION_DATA void* pal_d = (void*)&l_Egnd_mantPAL;
+SECTION_DATA void* pal_d = (void*)NULL;
 
 /* 8086BED0-8086BED8 0008+00 s=0 e=0 z=0  None .data      tex_d                                                        */
 SECTION_DATA void* tex_d[2] = {
-	/* 0    */ (void*)&l_Egnd_mantTEX,
-	/* 1    */ (void*)&l_Egnd_mantTEX_U,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8086BED8-8086BF08 0030+00 s=1 e=0 z=0  None .data      d_p$3889                                                     */
@@ -2752,29 +2749,24 @@ asm cXyz::~cXyz() {
 
 
 /* ############################################################################################## */
-/* 80862CA4-80862CAC 0008+00 s=0 e=0 z=0  None .rodata    @4130                                                        */
-SECTION_RODATA u8 const lit_4130[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80862CAC-80862CB0 0004+00 s=1 e=0 z=0  None .rodata    @4238                                                        */
 SECTION_RODATA static u32 const lit_4238 = 0x41400000;
 
 /* 80862CB0-80862CB4 0004+00 s=1 e=0 z=0  None .rodata    @4239                                                        */
 SECTION_RODATA static u32 const lit_4239 = 0x3F666666;
 
-/* 80862CB4-80862CBC 0008+00 s=0 e=0 z=0  None .rodata    @4240                                                        */
-SECTION_RODATA u8 const lit_4240[8] = {
+/* 80862CB4-80862CBC 0008+00 s=1 e=0 z=0  None .rodata    @4240                                                        */
+SECTION_RODATA static u8 const lit_4240[8] = {
 	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80862CBC-80862CC4 0008+00 s=0 e=0 z=0  None .rodata    @4241                                                        */
-SECTION_RODATA u8 const lit_4241[8] = {
+/* 80862CBC-80862CC4 0008+00 s=1 e=0 z=0  None .rodata    @4241                                                        */
+SECTION_RODATA static u8 const lit_4241[8] = {
 	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80862CC4-80862CCC 0008+00 s=0 e=0 z=0  None .rodata    @4242                                                        */
-SECTION_RODATA u8 const lit_4242[8] = {
+/* 80862CC4-80862CCC 0008+00 s=1 e=0 z=0  None .rodata    @4242                                                        */
+SECTION_RODATA static u8 const lit_4242[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -2855,7 +2847,7 @@ SECTION_RODATA static u32 const lit_4482 = 0x42800000;
 /* 8086BF74-8086BF78 0004+00 s=1 e=0 z=0  None .bss       mant_cut_type                                                */
 static u8 mant_cut_type[4];
 
-/* 808624E8-80862908 0420+00 s=2 e=0 z=0  None .text      daMant_Execute__FP10mant_class                               */
+/* 808624E8-80862908 0420+00 s=1 e=0 z=0  None .text      daMant_Execute__FP10mant_class                               */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2866,14 +2858,14 @@ asm static void daMant_Execute(mant_class* param_0) {
 #pragma pop
 
 
-/* 80862908-80862910 0008+00 s=1 e=0 z=0  None .text      daMant_IsDelete__FP10mant_class                              */
-static bool daMant_IsDelete(mant_class* param_0) {
+/* 80862908-80862910 0008+00 s=0 e=0 z=0  None .text      daMant_IsDelete__FP10mant_class                              */
+bool daMant_IsDelete(mant_class* param_0) {
 	return true;
 }
 
 
-/* 80862910-80862918 0008+00 s=1 e=0 z=0  None .text      daMant_Delete__FP10mant_class                                */
-static bool daMant_Delete(mant_class* param_0) {
+/* 80862910-80862918 0008+00 s=0 e=0 z=0  None .text      daMant_Delete__FP10mant_class                                */
+bool daMant_Delete(mant_class* param_0) {
 	return true;
 }
 
@@ -2891,48 +2883,48 @@ SECTION_RODATA static u32 const lit_4538 = 0x41F00000;
 /* 80862D1C-80862D20 0004+00 s=1 e=0 z=0  None .rodata    @4539                                                        */
 SECTION_RODATA static u32 const lit_4539 = 0x3F333333;
 
-/* 8086BF08-8086BF28 0020+00 s=1 e=0 z=0  None .data      l_daMant_Method                                              */
-SECTION_DATA static void* l_daMant_Method[8] = {
-	/* 0    */ (void*)daMant_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daMant_Delete__FP10mant_class,
-	/* 2    */ (void*)daMant_Execute__FP10mant_class,
-	/* 3    */ (void*)daMant_IsDelete__FP10mant_class,
-	/* 4    */ (void*)daMant_Draw__FP10mant_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 8086BF08-8086BF28 0020+00 s=0 e=0 z=0  None .data      l_daMant_Method                                              */
+SECTION_DATA void* l_daMant_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8086BF28-8086BF58 0030+00 s=0 e=0 z=1  None .data      g_profile_MANT                                               */
+/* 8086BF28-8086BF58 0030+00 s=0 e=0 z=0  None .data      g_profile_MANT                                               */
 SECTION_DATA void* g_profile_MANT[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0008FFFD,
-	/* 2    */ (void*)0x02F30000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000039A4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00EA0000,
-	/* 9    */ (void*)&l_daMant_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0008FFFD,
+	(void*)0x02F30000,
+	(void*)NULL,
+	(void*)0x000039A4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00EA0000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 8086BF58-8086BF6C 0014+00 s=2 e=0 z=0  None .data      __vt__15daMant_packet_c                                      */
 SECTION_DATA static void* __vt__15daMant_packet_c[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)entry__9J3DPacketFP13J3DDrawBuffer,
-	/* 3    */ (void*)draw__15daMant_packet_cFv,
-	/* 4    */ (void*)__dt__15daMant_packet_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80862918-80862AC0 01A8+00 s=1 e=0 z=0  None .text      daMant_Create__FP10fopAc_ac_c                                */
+/* 80862918-80862AC0 01A8+00 s=0 e=0 z=0  None .text      daMant_Create__FP10fopAc_ac_c                                */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daMant_Create(fopAc_ac_c* param_0) {
+asm void daMant_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_mant/d_a_mant/daMant_Create__FP10fopAc_ac_c.s"
 }
@@ -2961,7 +2953,7 @@ asm mant_j_s::mant_j_s() {
 #pragma pop
 
 
-/* 80862BA4-80862C40 009C+00 s=1 e=0 z=0  None .text      __dt__15daMant_packet_cFv                                    */
+/* 80862BA4-80862C40 009C+00 s=0 e=0 z=0  None .text      __dt__15daMant_packet_cFv                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

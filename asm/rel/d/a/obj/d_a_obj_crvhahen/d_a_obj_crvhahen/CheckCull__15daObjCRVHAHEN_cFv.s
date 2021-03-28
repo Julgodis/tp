@@ -9,13 +9,13 @@ lbl_80BD38DC:
 /* 80BD38F8  7C 7D 1B 78 */	mr r29, r3
 /* 80BD38FC  3C 60 80 BD */	lis r3, lit_3703@ha
 /* 80BD3900  3B 63 3F F0 */	addi r27, r3, lit_3703@l
-/* 80BD3904  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BD3908  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BD390C  83 43 5D AC */	lwz r26, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BD3904  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BD3908  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BD390C  83 43 5D AC */	lwz r26, 0x5dac(r3)
 /* 80BD3910  3B E0 00 01 */	li r31, 1
 /* 80BD3914  3B C0 00 00 */	li r30, 0
 /* 80BD3918  3B 80 00 00 */	li r28, 0
-/* 80BD391C  C3 FB 00 20 */	lfs f31, 0x20(r27)	/* effective address: 80BD4010 */
+/* 80BD391C  C3 FB 00 20 */	lfs f31, 0x20(r27)
 lbl_80BD3920:
 /* 80BD3920  7F 3D E2 14 */	add r25, r29, r28
 /* 80BD3924  C0 39 05 70 */	lfs f1, 0x570(r25)

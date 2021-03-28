@@ -74,8 +74,8 @@ lbl_8059EAAC:
 lbl_8059EAB8:
 /* 8059EAB8  3C 60 80 5A */	lis r3, stringBase0@ha
 /* 8059EABC  38 63 F4 8C */	addi r3, r3, stringBase0@l
-/* 8059EAC0  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8059EAC4  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8059EAC0  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8059EAC4  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8059EAC8  38 84 4E 00 */	addi r4, r4, 0x4e00
 /* 8059EACC  4B DC 9E C8 */	b strcmp
 /* 8059EAD0  2C 03 00 00 */	cmpwi r3, 0

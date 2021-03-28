@@ -10,7 +10,7 @@ lbl_80656D18:
 lbl_80656D38:
 /* 80656D38  3C 80 80 65 */	lis r4, l_arcName@ha
 /* 80656D3C  38 84 79 F4 */	addi r4, r4, l_arcName@l
-/* 80656D40  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 806579F4 */
+/* 80656D40  80 84 00 00 */	lwz r4, 0(r4)
 /* 80656D44  4B 9D 61 78 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80656D48  7C 7F 1B 78 */	mr r31, r3
 /* 80656D4C  2C 1F 00 04 */	cmpwi r31, 4

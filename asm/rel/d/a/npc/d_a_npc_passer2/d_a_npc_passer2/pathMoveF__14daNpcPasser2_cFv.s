@@ -15,7 +15,7 @@ lbl_80AA7918:
 /* 80AA794C  7C 7D 1B 78 */	mr r29, r3
 /* 80AA7950  3C 60 80 AB */	lis r3, lit_3963@ha
 /* 80AA7954  3B E3 8A 18 */	addi r31, r3, lit_3963@l
-/* 80AA7958  C3 FF 00 08 */	lfs f31, 8(r31)	/* effective address: 80AA8A20 */
+/* 80AA7958  C3 FF 00 08 */	lfs f31, 8(r31)
 /* 80AA795C  FF C0 F8 90 */	fmr f30, f31
 /* 80AA7960  3B DD 08 4C */	addi r30, r29, 0x84c
 /* 80AA7964  80 1D 0A 3C */	lwz r0, 0xa3c(r29)

@@ -19,8 +19,8 @@ lbl_80582894:
 /* 805828D8  38 61 00 14 */	addi r3, r1, 0x14
 /* 805828DC  38 81 00 08 */	addi r4, r1, 8
 /* 805828E0  4B CE 54 2C */	b SetPos__11cBgS_GndChkFPC3Vec
-/* 805828E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805828E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805828E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805828E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805828EC  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 805828F0  38 81 00 14 */	addi r4, r1, 0x14
 /* 805828F4  4B AF 1B AC */	b GroundCross__4cBgSFP11cBgS_GndChk

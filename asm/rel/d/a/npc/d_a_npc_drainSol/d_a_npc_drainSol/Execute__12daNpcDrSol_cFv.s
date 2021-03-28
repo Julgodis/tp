@@ -19,8 +19,8 @@ lbl_809AE550:
 /* 809AE594  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 809AE598  2C 04 00 FF */	cmpwi r4, 0xff
 /* 809AE59C  41 82 00 18 */	beq lbl_809AE5B4
-/* 809AE5A0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809AE5A4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809AE5A0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809AE5A4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809AE5A8  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 809AE5AC  7C 05 07 74 */	extsb r5, r0
 /* 809AE5B0  4B 68 6C 50 */	b onSwitch__10dSv_info_cFii

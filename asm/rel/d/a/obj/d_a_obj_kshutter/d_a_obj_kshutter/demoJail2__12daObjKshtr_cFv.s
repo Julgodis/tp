@@ -31,11 +31,11 @@ lbl_80C49504:
 lbl_80C49514:
 /* 80C49514  38 00 00 01 */	li r0, 1
 /* 80C49518  98 1F 05 E9 */	stb r0, 0x5e9(r31)
-/* 80C4951C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C49520  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80C49524  A8 64 5D C8 */	lha r3, 0x5dc8(r4)	/* effective address: 8040BF88 */
+/* 80C4951C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C49520  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80C49524  A8 64 5D C8 */	lha r3, 0x5dc8(r4)
 /* 80C49528  38 03 FF FF */	addi r0, r3, -1
-/* 80C4952C  B0 04 5D C8 */	sth r0, 0x5dc8(r4)	/* effective address: 8040BF88 */
+/* 80C4952C  B0 04 5D C8 */	sth r0, 0x5dc8(r4)
 /* 80C49530  48 00 00 5C */	b lbl_80C4958C
 lbl_80C49534:
 /* 80C49534  28 03 00 00 */	cmplwi r3, 0

@@ -9,7 +9,7 @@ lbl_80C7375C:
 /* 80C73778  3B E3 3C E4 */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 80C7377C  3C 60 80 C7 */	lis r3, data_80C73E0C@ha
 /* 80C73780  38 A3 3E 0C */	addi r5, r3, data_80C73E0C@l
-/* 80C73784  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80C73E0C */
+/* 80C73784  88 05 00 00 */	lbz r0, 0(r5)
 /* 80C73788  7C 00 07 75 */	extsb. r0, r0
 /* 80C7378C  40 82 00 58 */	bne lbl_80C737E4
 /* 80C73790  80 7F 00 28 */	lwz r3, 0x28(r31)

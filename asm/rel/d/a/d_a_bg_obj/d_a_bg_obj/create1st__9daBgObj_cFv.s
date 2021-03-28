@@ -36,8 +36,8 @@ lbl_8045AA40:
 /* 8045AA6C  7F E3 FB 78 */	mr r3, r31
 /* 8045AA70  4B BD 6E 00 */	b getArcName__12daSetBgObj_cFP10fopAc_ac_c
 /* 8045AA74  7C 64 1B 78 */	mr r4, r3
-/* 8045AA78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045AA7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045AA78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045AA7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045AA80  3C 63 00 02 */	addis r3, r3, 2
 /* 8045AA84  7F C5 F3 78 */	mr r5, r30
 /* 8045AA88  38 63 C2 F8 */	addi r3, r3, -15624

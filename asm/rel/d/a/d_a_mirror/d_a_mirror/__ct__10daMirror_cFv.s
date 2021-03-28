@@ -11,12 +11,12 @@ lbl_80871E24:
 /* 80871E48  38 A3 45 7C */	addi r5, r3, m_entryModel__10daMirror_c@l
 /* 80871E4C  3C 60 80 87 */	lis r3, lit_4377@ha
 /* 80871E50  38 83 26 68 */	addi r4, r3, lit_4377@l
-/* 80871E54  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80872668 */
-/* 80871E58  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8087266C */
-/* 80871E5C  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 8042457C */
-/* 80871E60  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80424580 */
-/* 80871E64  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80872670 */
-/* 80871E68  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80424584 */
+/* 80871E54  80 64 00 00 */	lwz r3, 0(r4)
+/* 80871E58  80 04 00 04 */	lwz r0, 4(r4)
+/* 80871E5C  90 65 00 00 */	stw r3, 0(r5)
+/* 80871E60  90 05 00 04 */	stw r0, 4(r5)
+/* 80871E64  80 04 00 08 */	lwz r0, 8(r4)
+/* 80871E68  90 05 00 08 */	stw r0, 8(r5)
 /* 80871E6C  7F E3 FB 78 */	mr r3, r31
 /* 80871E70  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80871E74  80 01 00 14 */	lwz r0, 0x14(r1)

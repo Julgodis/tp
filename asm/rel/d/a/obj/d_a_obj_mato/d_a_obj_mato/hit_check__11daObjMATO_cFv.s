@@ -36,11 +36,11 @@ lbl_80C91E14:
 /* 80C91E68  48 00 03 41 */	bl getRupee__11daObjMATO_cFi
 /* 80C91E6C  3C 60 80 C9 */	lis r3, lit_3843@ha
 /* 80C91E70  38 83 2D 20 */	addi r4, r3, lit_3843@l
-/* 80C91E74  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C92D20 */
-/* 80C91E78  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C92D24 */
+/* 80C91E74  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C91E78  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C91E7C  90 61 00 08 */	stw r3, 8(r1)
 /* 80C91E80  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C91E84  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C92D28 */
+/* 80C91E84  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C91E88  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C91E8C  7F 63 DB 78 */	mr r3, r27
 /* 80C91E90  38 81 00 08 */	addi r4, r1, 8

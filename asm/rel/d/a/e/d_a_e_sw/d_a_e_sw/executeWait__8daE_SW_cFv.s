@@ -8,7 +8,7 @@ lbl_807A7F88:
 /* 807A7FA0  3C 80 80 7B */	lis r4, lit_3909@ha
 /* 807A7FA4  3B C4 FD 2C */	addi r30, r4, lit_3909@l
 /* 807A7FA8  C0 23 05 2C */	lfs f1, 0x52c(r3)
-/* 807A7FAC  C0 1E 00 48 */	lfs f0, 0x48(r30)	/* effective address: 807AFD74 */
+/* 807A7FAC  C0 1E 00 48 */	lfs f0, 0x48(r30)
 /* 807A7FB0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807A7FB4  40 81 00 08 */	ble lbl_807A7FBC
 /* 807A7FB8  4B FF F8 FD */	bl setSmokeEffect__8daE_SW_cFv
@@ -113,11 +113,11 @@ lbl_807A8108:
 /* 807A8114  4B FF FB BD */	bl bomb_check__8daE_SW_cFv
 /* 807A8118  2C 03 00 00 */	cmpwi r3, 0
 /* 807A811C  40 82 01 5C */	bne lbl_807A8278
-/* 807A8120  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807A8124  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 807A8128  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 807A812C  C0 43 04 D8 */	lfs f2, 0x4d8(r3)	/* effective address: 80406698 */
-/* 807A8130  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 807A8120  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807A8124  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 807A8128  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 807A812C  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
+/* 807A8130  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 807A8134  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 807A8138  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 807A813C  D0 21 00 10 */	stfs f1, 0x10(r1)

@@ -8,11 +8,11 @@ lbl_80A9F440:
 /* 80A9F458  7C 9F 23 78 */	mr r31, r4
 /* 80A9F45C  3C 60 80 AA */	lis r3, lit_5700@ha
 /* 80A9F460  38 83 17 A0 */	addi r4, r3, lit_5700@l
-/* 80A9F464  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80AA17A0 */
-/* 80A9F468  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80AA17A4 */
+/* 80A9F464  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A9F468  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A9F46C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A9F470  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A9F474  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80AA17A8 */
+/* 80A9F474  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A9F478  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A9F47C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80A9F480  38 7E 0F 8C */	addi r3, r30, 0xf8c

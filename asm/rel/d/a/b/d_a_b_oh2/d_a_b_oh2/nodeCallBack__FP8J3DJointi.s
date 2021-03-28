@@ -9,7 +9,7 @@ lbl_8061DCB8:
 /* 8061DCD4  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 8061DCD8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8061DCDC  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 8061DCE0  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 8061DCE0  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 8061DCE4  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 8061DCE8  28 1C 00 00 */	cmplwi r28, 0
 /* 8061DCEC  41 82 00 A8 */	beq lbl_8061DD94
@@ -22,20 +22,20 @@ lbl_8061DCB8:
 /* 8061DD08  4B C5 31 54 */	b MtxTrans__FfffUc
 /* 8061DD0C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DD10  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DD14  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DD14  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DD18  1F BF 00 06 */	mulli r29, r31, 6
 /* 8061DD1C  7C 9C EA 14 */	add r4, r28, r29
 /* 8061DD20  A8 84 07 D6 */	lha r4, 0x7d6(r4)
 /* 8061DD24  4B 9E E7 10 */	b mDoMtx_YrotM__FPA4_fs
 /* 8061DD28  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DD2C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DD30  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DD30  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DD34  7C 9C EA 14 */	add r4, r28, r29
 /* 8061DD38  A8 84 07 D4 */	lha r4, 0x7d4(r4)
 /* 8061DD3C  4B 9E E6 60 */	b mDoMtx_XrotM__FPA4_fs
 /* 8061DD40  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DD44  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DD48  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DD48  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DD4C  38 80 C0 00 */	li r4, -16384
 /* 8061DD50  4B 9E E6 E4 */	b mDoMtx_YrotM__FPA4_fs
 /* 8061DD54  57 E0 10 3A */	slwi r0, r31, 2
@@ -48,7 +48,7 @@ lbl_8061DCB8:
 /* 8061DD70  4B C5 31 34 */	b MtxScale__FfffUc
 /* 8061DD74  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8061DD78  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8061DD7C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8061DD7C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8061DD80  80 9E 00 84 */	lwz r4, 0x84(r30)
 /* 8061DD84  80 84 00 0C */	lwz r4, 0xc(r4)
 /* 8061DD88  1C 1F 00 30 */	mulli r0, r31, 0x30

@@ -15,11 +15,11 @@ lbl_80CE5B80:
 /* 80CE5BB4  B0 03 04 E8 */	sth r0, 0x4e8(r3)
 /* 80CE5BB8  3C 80 80 CE */	lis r4, lit_4164@ha
 /* 80CE5BBC  38 A4 6A 48 */	addi r5, r4, lit_4164@l
-/* 80CE5BC0  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CE6A48 */
-/* 80CE5BC4  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CE6A4C */
+/* 80CE5BC0  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CE5BC4  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CE5BC8  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE5BCC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CE5BD0  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CE6A50 */
+/* 80CE5BD0  80 05 00 08 */	lwz r0, 8(r5)
 /* 80CE5BD4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE5BD8  38 81 00 08 */	addi r4, r1, 8
 /* 80CE5BDC  48 00 02 01 */	bl setProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i

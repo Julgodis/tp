@@ -55,8 +55,8 @@ lbl_80D005D4:
 /* 80D005D8  38 03 00 01 */	addi r0, r3, 1
 /* 80D005DC  B0 1F 05 F0 */	sth r0, 0x5f0(r31)
 lbl_80D005E0:
-/* 80D005E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D005E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D005E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D005E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D005E8  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D005EC  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D005F0  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -105,7 +105,7 @@ lbl_80D0066C:
 /* 80D00690  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80D00694  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D00698  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D0069C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D0069C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D006A0  38 81 00 10 */	addi r4, r1, 0x10
 /* 80D006A4  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80D006A8  38 C0 00 00 */	li r6, 0
@@ -126,8 +126,8 @@ lbl_80D006C8:
 /* 80D006E0  A8 1F 05 EE */	lha r0, 0x5ee(r31)
 /* 80D006E4  2C 00 0B B8 */	cmpwi r0, 0xbb8
 /* 80D006E8  40 81 00 24 */	ble lbl_80D0070C
-/* 80D006EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D006F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D006EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D006F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D006F4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D006F8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D006FC  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -135,8 +135,8 @@ lbl_80D006C8:
 /* 80D00704  4B 33 4A FC */	b onSwitch__10dSv_info_cFii
 /* 80D00708  48 00 00 40 */	b lbl_80D00748
 lbl_80D0070C:
-/* 80D0070C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D00710  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D0070C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D00710  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D00714  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D00718  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D0071C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -144,8 +144,8 @@ lbl_80D0070C:
 /* 80D00724  4B 33 4B 8C */	b offSwitch__10dSv_info_cFii
 /* 80D00728  48 00 00 20 */	b lbl_80D00748
 lbl_80D0072C:
-/* 80D0072C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D00730  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D0072C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D00730  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D00734  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D00738  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80D0073C  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -167,7 +167,7 @@ lbl_80D00748:
 /* 80D00778  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80D0077C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D00780  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D00784  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D00784  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D00788  38 81 00 0C */	addi r4, r1, 0xc
 /* 80D0078C  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80D00790  38 C0 00 00 */	li r6, 0
@@ -190,7 +190,7 @@ lbl_80D007AC:
 /* 80D007D0  90 01 00 08 */	stw r0, 8(r1)
 /* 80D007D4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D007D8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D007DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D007DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D007E0  38 81 00 08 */	addi r4, r1, 8
 /* 80D007E4  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80D007E8  7F 86 E3 78 */	mr r6, r28
@@ -217,8 +217,8 @@ lbl_80D00804:
 /* 80D00838  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 80D0083C  EC 01 00 28 */	fsubs f0, f1, f0
 /* 80D00840  D0 1F 05 54 */	stfs f0, 0x554(r31)
-/* 80D00844  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D00848  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D00844  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D00848  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D0084C  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D00850  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 80D00854  88 1F 04 BA */	lbz r0, 0x4ba(r31)

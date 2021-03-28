@@ -9,9 +9,9 @@ lbl_807BF358:
 /* 807BF374  7C 7D 1B 78 */	mr r29, r3
 /* 807BF378  3C 80 80 7C */	lis r4, lit_3908@ha
 /* 807BF37C  3B C4 1F B8 */	addi r30, r4, lit_3908@l
-/* 807BF380  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807BF384  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 807BF388  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 807BF380  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807BF384  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 807BF388  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 807BF38C  4B 85 B4 54 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 807BF390  FF E0 08 90 */	fmr f31, f1
 /* 807BF394  80 1D 06 BC */	lwz r0, 0x6bc(r29)
@@ -174,7 +174,7 @@ lbl_807BF5A8:
 /* 807BF5D0  B0 1D 04 DE */	sth r0, 0x4de(r29)
 /* 807BF5D4  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807BF5D8  38 63 23 EC */	addi r3, r3, l_HIO@l
-/* 807BF5DC  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 807C23FC */
+/* 807BF5DC  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 807BF5E0  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 807BF5E4  40 81 00 28 */	ble lbl_807BF60C
 /* 807BF5E8  38 00 00 05 */	li r0, 5
@@ -220,7 +220,7 @@ lbl_807BF62C:
 /* 807BF680  EC 20 08 28 */	fsubs f1, f0, f1
 /* 807BF684  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807BF688  38 63 23 EC */	addi r3, r3, l_HIO@l
-/* 807BF68C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 807C2400 */
+/* 807BF68C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 807BF690  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807BF694  40 81 02 60 */	ble lbl_807BF8F4
 /* 807BF698  3C 60 80 7C */	lis r3, m_attack_tt@ha
@@ -288,7 +288,7 @@ lbl_807BF75C:
 /* 807BF784  C0 3E 00 A8 */	lfs f1, 0xa8(r30)
 /* 807BF788  3C 60 80 7C */	lis r3, l_HIO@ha
 /* 807BF78C  38 63 23 EC */	addi r3, r3, l_HIO@l
-/* 807BF790  C0 43 00 10 */	lfs f2, 0x10(r3)	/* effective address: 807C23FC */
+/* 807BF790  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 807BF794  EC 01 10 2A */	fadds f0, f1, f2
 /* 807BF798  FC 1F 00 40 */	fcmpo cr0, f31, f0
 /* 807BF79C  40 80 00 4C */	bge lbl_807BF7E8

@@ -11,9 +11,9 @@ lbl_80BB5380:
 /* 80BB53A4  7C 7C 1B 78 */	mr r28, r3
 /* 80BB53A8  3C 60 80 BB */	lis r3, lit_3655@ha
 /* 80BB53AC  3B E3 5F 00 */	addi r31, r3, lit_3655@l
-/* 80BB53B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB53B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BB53B8  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80BB53B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB53B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB53B8  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 80BB53BC  3B 5E 04 D0 */	addi r26, r30, 0x4d0
 /* 80BB53C0  3B A0 00 00 */	li r29, 0
 /* 80BB53C4  38 00 00 01 */	li r0, 1

@@ -10,8 +10,8 @@ lbl_80C92380:
 /* 80C923A0  41 82 00 70 */	beq lbl_80C92410
 /* 80C923A4  3B 20 00 00 */	li r25, 0
 /* 80C923A8  3B E0 00 00 */	li r31, 0
-/* 80C923AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C923B0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C923AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C923B0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C923B4  3F 83 00 02 */	addis r28, r3, 2
 /* 80C923B8  3B 63 0F 38 */	addi r27, r3, 0xf38
 /* 80C923BC  3C 60 80 C9 */	lis r3, stringBase0@ha

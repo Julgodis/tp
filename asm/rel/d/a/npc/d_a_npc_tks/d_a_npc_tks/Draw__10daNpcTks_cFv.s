@@ -13,7 +13,7 @@ lbl_80B15430:
 /* 80B1545C  38 A0 00 00 */	li r5, 0
 /* 80B15460  3C C0 80 B2 */	lis r6, m__16daNpcTks_Param_c@ha
 /* 80B15464  38 C6 DD 58 */	addi r6, r6, m__16daNpcTks_Param_c@l
-/* 80B15468  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80B1DD64 */
+/* 80B15468  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80B1546C  38 C0 00 00 */	li r6, 0
 /* 80B15470  38 E0 00 00 */	li r7, 0
 /* 80B15474  4B 63 CE 38 */	b draw__8daNpcF_cFiifP11_GXColorS10i

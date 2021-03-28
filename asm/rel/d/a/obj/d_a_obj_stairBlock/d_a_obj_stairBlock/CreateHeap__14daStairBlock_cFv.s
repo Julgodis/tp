@@ -14,17 +14,17 @@ lbl_80CE82A0:
 /* 80CE82D0  3B A0 00 00 */	li r29, 0
 /* 80CE82D4  3B 60 00 00 */	li r27, 0
 /* 80CE82D8  3B 40 00 00 */	li r26, 0
-/* 80CE82DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE82E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE82DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE82E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE82E4  3F C3 00 02 */	addis r30, r3, 2
 /* 80CE82E8  3C 60 80 CF */	lis r3, stringBase0@ha
 /* 80CE82EC  3A A3 8E CC */	addi r21, r3, stringBase0@l
 /* 80CE82F0  3A DF 00 34 */	addi r22, r31, 0x34
 /* 80CE82F4  3E E0 11 00 */	lis r23, 0x1100
 /* 80CE82F8  3B 1F 00 5C */	addi r24, r31, 0x5c
-/* 80CE82FC  CB DF 01 00 */	lfd f30, 0x100(r31)	/* effective address: 80CE8EBC */
+/* 80CE82FC  CB DF 01 00 */	lfd f30, 0x100(r31)
 /* 80CE8300  3F 20 43 30 */	lis r25, 0x4330
-/* 80CE8304  C3 FF 00 FC */	lfs f31, 0xfc(r31)	/* effective address: 80CE8EB8 */
+/* 80CE8304  C3 FF 00 FC */	lfs f31, 0xfc(r31)
 /* 80CE8308  3B DE C2 F8 */	addi r30, r30, -15624
 lbl_80CE830C:
 /* 80CE830C  7E A3 AB 78 */	mr r3, r21

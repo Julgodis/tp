@@ -7,13 +7,13 @@ lbl_805A2744:
 /* 805A2758  7C 7D 1B 78 */	mr r29, r3
 /* 805A275C  3C 60 80 5A */	lis r3, lit_3713@ha
 /* 805A2760  3B E3 28 80 */	addi r31, r3, lit_3713@l
-/* 805A2764  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A2768  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A276C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805A2764  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A2768  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A276C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 805A2770  C0 3E 04 D4 */	lfs f1, 0x4d4(r30)
 /* 805A2774  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
 /* 805A2778  EC 61 00 28 */	fsubs f3, f1, f0
-/* 805A277C  C0 5F 00 00 */	lfs f2, 0(r31)	/* effective address: 805A2880 */
+/* 805A277C  C0 5F 00 00 */	lfs f2, 0(r31)
 /* 805A2780  FC 03 10 40 */	fcmpo cr0, f3, f2
 /* 805A2784  4C 41 13 82 */	cror 2, 1, 2
 /* 805A2788  40 82 00 AC */	bne lbl_805A2834

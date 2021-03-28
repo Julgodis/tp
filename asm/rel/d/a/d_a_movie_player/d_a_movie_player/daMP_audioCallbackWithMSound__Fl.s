@@ -7,7 +7,7 @@ lbl_80877074:
 /* 80877088  7C 7E 1B 78 */	mr r30, r3
 /* 8087708C  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877090  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 80877094  80 03 00 A0 */	lwz r0, 0xa0(r3)	/* effective address: 80879C70 */
+/* 80877094  80 03 00 A0 */	lwz r0, 0xa0(r3)
 /* 80877098  2C 00 00 00 */	cmpwi r0, 0
 /* 8087709C  41 82 00 1C */	beq lbl_808770B8
 /* 808770A0  88 03 00 A5 */	lbz r0, 0xa5(r3)
@@ -25,7 +25,7 @@ lbl_808770C0:
 /* 808770C8  3C 60 80 94 */	lis r3, daMP_SoundBufferIndex@ha
 /* 808770CC  84 03 49 34 */	lwzu r0, daMP_SoundBufferIndex@l(r3)
 /* 808770D0  68 00 00 01 */	xori r0, r0, 1
-/* 808770D4  90 03 00 00 */	stw r0, 0(r3)	/* effective address: 80940000 */
+/* 808770D4  90 03 00 00 */	stw r0, 0(r3)
 /* 808770D8  1C 80 08 C0 */	mulli r4, r0, 0x8c0
 /* 808770DC  3C 60 80 94 */	lis r3, daMP_SoundBuffer@ha
 /* 808770E0  38 03 49 60 */	addi r0, r3, daMP_SoundBuffer@l

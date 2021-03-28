@@ -22,7 +22,7 @@ lbl_80D018E4:
 /* 80D01900  90 01 00 08 */	stw r0, 8(r1)
 /* 80D01904  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D01908  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D0190C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D0190C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D01910  38 81 00 08 */	addi r4, r1, 8
 /* 80D01914  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80D01918  38 C0 00 00 */	li r6, 0

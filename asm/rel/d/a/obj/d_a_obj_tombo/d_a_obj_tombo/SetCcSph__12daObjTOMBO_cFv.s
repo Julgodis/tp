@@ -11,8 +11,8 @@ lbl_80D1926C:
 /* 80D19290  3C 80 80 D2 */	lis r4, lit_3789@ha
 /* 80D19294  C0 24 B7 24 */	lfs f1, lit_3789@l(r4)
 /* 80D19298  4B 55 64 70 */	b SetR__8cM3dGSphFf
-/* 80D1929C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D192A0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D1929C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D192A0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D192A4  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80D192A8  38 9F 05 CC */	addi r4, r31, 0x5cc
 /* 80D192AC  4B 54 B8 FC */	b Set__4cCcSFP8cCcD_Obj

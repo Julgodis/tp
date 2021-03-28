@@ -9,7 +9,7 @@ lbl_807592F4:
 /* 80759310  40 82 00 A8 */	bne lbl_807593B8
 /* 80759314  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80759318  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8075931C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8075931C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80759320  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80759324  3C 80 01 00 */	lis r4, 0x0100 /* 0x01000085@ha */
 /* 80759328  38 84 00 85 */	addi r4, r4, 0x0085 /* 0x01000085@l */

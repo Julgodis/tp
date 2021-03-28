@@ -3,8 +3,8 @@ lbl_8045DA68:
 /* 8045DA6C  7C 08 02 A6 */	mflr r0
 /* 8045DA70  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045DA74  7C 64 1B 78 */	mr r4, r3
-/* 8045DA78  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045DA7C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045DA78  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045DA7C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045DA80  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8045DA84  80 84 05 98 */	lwz r4, 0x598(r4)
 /* 8045DA88  3C A0 80 46 */	lis r5, data_8045E688@ha

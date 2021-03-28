@@ -129,7 +129,7 @@ SECTION_DATA static u8 lit_21[9 + 3 /* padding */] = {
 
 /* 80450A58-80450A60 0004+04 s=1 e=0 z=0  None .sdata     __DSPVersion                                                 */
 SECTION_SDATA static void* __DSPVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&lit_1,
+	(void*)&lit_1,
 	/* padding */
 	NULL,
 };

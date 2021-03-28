@@ -19,7 +19,7 @@ lbl_809A38C0:
 /* 809A38C0  38 7E 25 48 */	addi r3, r30, 0x2548
 /* 809A38C4  3C 80 80 9A */	lis r4, l_arcName@ha
 /* 809A38C8  38 84 51 30 */	addi r4, r4, l_arcName@l
-/* 809A38CC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 809A5130 */
+/* 809A38CC  80 84 00 00 */	lwz r4, 0(r4)
 /* 809A38D0  4B 68 95 EC */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 809A38D4  7C 7F 1B 78 */	mr r31, r3
 /* 809A38D8  2C 1F 00 04 */	cmpwi r31, 4

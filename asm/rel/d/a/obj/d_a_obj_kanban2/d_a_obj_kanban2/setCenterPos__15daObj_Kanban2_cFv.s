@@ -9,14 +9,14 @@ lbl_80582C40:
 /* 80582C5C  7C 7D 1B 78 */	mr r29, r3
 /* 80582C60  3C 60 80 58 */	lis r3, lit_3970@ha
 /* 80582C64  3B E3 56 20 */	addi r31, r3, lit_3970@l
-/* 80582C68  C3 FF 00 0C */	lfs f31, 0xc(r31)	/* effective address: 8058562C */
+/* 80582C68  C3 FF 00 0C */	lfs f31, 0xc(r31)
 /* 80582C6C  D3 E1 00 14 */	stfs f31, 0x14(r1)
 /* 80582C70  D3 E1 00 18 */	stfs f31, 0x18(r1)
 /* 80582C74  D3 E1 00 1C */	stfs f31, 0x1c(r1)
 /* 80582C78  3B C0 00 00 */	li r30, 0
 /* 80582C7C  3B 40 00 01 */	li r26, 1
 /* 80582C80  93 5D 06 20 */	stw r26, 0x620(r29)
-/* 80582C84  C0 1F 00 70 */	lfs f0, 0x70(r31)	/* effective address: 80585690 */
+/* 80582C84  C0 1F 00 70 */	lfs f0, 0x70(r31)
 /* 80582C88  D0 1D 06 00 */	stfs f0, 0x600(r29)
 /* 80582C8C  80 1D 06 0C */	lwz r0, 0x60c(r29)
 /* 80582C90  2C 00 00 00 */	cmpwi r0, 0

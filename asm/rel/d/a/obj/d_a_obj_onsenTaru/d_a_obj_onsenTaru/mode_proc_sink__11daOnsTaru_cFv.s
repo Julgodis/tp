@@ -8,10 +8,10 @@ lbl_80CA9530:
 /* 80CA9548  3C 60 80 CB */	lis r3, lit_3655@ha
 /* 80CA954C  3B E3 9B 78 */	addi r31, r3, lit_3655@l
 /* 80CA9550  38 7E 05 2C */	addi r3, r30, 0x52c
-/* 80CA9554  C0 3F 00 60 */	lfs f1, 0x60(r31)	/* effective address: 80CA9BD8 */
-/* 80CA9558  C0 5F 00 64 */	lfs f2, 0x64(r31)	/* effective address: 80CA9BDC */
-/* 80CA955C  C0 7F 00 5C */	lfs f3, 0x5c(r31)	/* effective address: 80CA9BD4 */
-/* 80CA9560  C0 9F 00 68 */	lfs f4, 0x68(r31)	/* effective address: 80CA9BE0 */
+/* 80CA9554  C0 3F 00 60 */	lfs f1, 0x60(r31)
+/* 80CA9558  C0 5F 00 64 */	lfs f2, 0x64(r31)
+/* 80CA955C  C0 7F 00 5C */	lfs f3, 0x5c(r31)
+/* 80CA9560  C0 9F 00 68 */	lfs f4, 0x68(r31)
 /* 80CA9564  4B 5C 64 18 */	b cLib_addCalc__FPfffff
 /* 80CA9568  C0 1E 04 FC */	lfs f0, 0x4fc(r30)
 /* 80CA956C  C0 3F 00 54 */	lfs f1, 0x54(r31)

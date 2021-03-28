@@ -5,8 +5,8 @@ lbl_80D167BC:
 /* 80D167C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80D167CC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80D167D0  7C 7E 1B 78 */	mr r30, r3
-/* 80D167D4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D167D8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D167D4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D167D8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D167DC  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80D167E0  80 1E 05 D0 */	lwz r0, 0x5d0(r30)
 /* 80D167E4  54 00 08 3C */	slwi r0, r0, 1

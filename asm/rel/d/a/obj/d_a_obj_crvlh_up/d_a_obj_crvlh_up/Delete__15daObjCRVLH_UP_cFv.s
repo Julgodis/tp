@@ -4,7 +4,7 @@ lbl_80BD59C0:
 /* 80BD59C8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BD59CC  3C 80 80 BD */	lis r4, l_arcName@ha
 /* 80BD59D0  38 84 5A 9C */	addi r4, r4, l_arcName@l
-/* 80BD59D4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BD5A9C */
+/* 80BD59D4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BD59D8  38 63 05 EC */	addi r3, r3, 0x5ec
 /* 80BD59DC  4B 45 76 2C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80BD59E0  38 60 00 01 */	li r3, 1

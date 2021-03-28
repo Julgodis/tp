@@ -63,8 +63,8 @@ lbl_8055D980:
 /* 8055DA04  38 7F 10 A4 */	addi r3, r31, 0x10a4
 /* 8055DA08  38 81 00 08 */	addi r4, r1, 8
 /* 8055DA0C  4B D1 17 D0 */	b SetC__8cM3dGCylFRC4cXyz
-/* 8055DA10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055DA14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8055DA10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055DA14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8055DA18  38 63 23 3C */	addi r3, r3, 0x233c
 /* 8055DA1C  38 9F 0F 80 */	addi r4, r31, 0xf80
 /* 8055DA20  4B D0 71 88 */	b Set__4cCcSFP8cCcD_Obj

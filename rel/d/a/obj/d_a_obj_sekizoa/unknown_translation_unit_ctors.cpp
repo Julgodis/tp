@@ -19,7 +19,6 @@ extern void* const data_80CD5CE8[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_sekizoa_cpp(); // 1
 
 // 
 // Declarations:

@@ -11,7 +11,7 @@ lbl_8097ABE8:
 /* 8097AC0C  7C 7D 1B 78 */	mr r29, r3
 /* 8097AC10  3C 60 80 98 */	lis r3, lit_4037@ha
 /* 8097AC14  3B E3 F5 40 */	addi r31, r3, lit_4037@l
-/* 8097AC18  C3 FF 00 00 */	lfs f31, 0(r31)	/* effective address: 8097F540 */
+/* 8097AC18  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 8097AC1C  FF C0 F8 90 */	fmr f30, f31
 /* 8097AC20  3B DD 08 50 */	addi r30, r29, 0x850
 /* 8097AC24  80 1D 0B 68 */	lwz r0, 0xb68(r29)

@@ -53,10 +53,10 @@ lbl_806F8F98:
 /* 806F8FC4  38 03 64 FF */	addi r0, r3, 0x64FF /* 0x000564FF@l */
 /* 806F8FC8  90 1F 06 A0 */	stw r0, 0x6a0(r31)
 lbl_806F8FCC:
-/* 806F8FCC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806F8FD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806F8FD4  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806F8FD8  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 80406740 */
+/* 806F8FCC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806F8FD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806F8FD4  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806F8FD8  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 806F8FDC  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 806F8FE0  41 82 00 0C */	beq lbl_806F8FEC
 /* 806F8FE4  38 00 00 02 */	li r0, 2

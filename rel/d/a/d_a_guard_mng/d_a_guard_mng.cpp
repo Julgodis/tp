@@ -38,18 +38,19 @@ struct dSv_danBit_c {
 // 
 
 static void s_sub(void*, void*); // 2
-static void daGuardMng_Execute(daGuardMng_c*); // 2
-static bool daGuardMng_IsDelete(daGuardMng_c*); // 2
-static void daGuardMng_Delete(daGuardMng_c*); // 2
-static void daGuardMng_Create(fopAc_ac_c*); // 2
+void daGuardMng_Execute(daGuardMng_c*); // 2
+bool daGuardMng_IsDelete(daGuardMng_c*); // 2
+void daGuardMng_Delete(daGuardMng_c*); // 2
+void daGuardMng_Create(fopAc_ac_c*); // 2
 
 extern "C" static void s_sub__FPvPv(); // 1
 extern "C" void checkMerchantNum__12daGuardMng_cFv(); // 1
 extern "C" void checkAppearTag__12daGuardMng_cFP12daTagGuard_c(); // 1
-extern "C" static void daGuardMng_Execute__FP12daGuardMng_c(); // 1
-extern "C" static bool daGuardMng_IsDelete__FP12daGuardMng_c(); // 1
-extern "C" static void daGuardMng_Delete__FP12daGuardMng_c(); // 1
-extern "C" static void daGuardMng_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daGuardMng_Execute__FP12daGuardMng_c(); // 1
+extern "C" bool daGuardMng_IsDelete__FP12daGuardMng_c(); // 1
+extern "C" void daGuardMng_Delete__FP12daGuardMng_c(); // 1
+extern "C" void daGuardMng_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daGuardMng_Method[8];
 extern "C" extern void* g_profile_GUARD_MNG[12];
 
 // 
@@ -66,12 +67,7 @@ extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
 extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
 extern "C" void PSVECSubtract(); // 1
 extern "C" void PSVECSquareMag(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 data_80406B38[1084];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" void getAppearPoint__12daTagGuard_cFP3Vec(); // 1
 extern "C" void createGuard__12daTagGuard_cFUl(); // 1
 
@@ -121,39 +117,39 @@ asm void daGuardMng_c::checkAppearTag(daTagGuard_c* param_0) {
 #pragma pop
 
 
-/* 80837C6C-80837D44 00D8+00 s=1 e=0 z=0  None .text      daGuardMng_Execute__FP12daGuardMng_c                         */
+/* 80837C6C-80837D44 00D8+00 s=0 e=0 z=0  None .text      daGuardMng_Execute__FP12daGuardMng_c                         */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGuardMng_Execute(daGuardMng_c* param_0) {
+asm void daGuardMng_Execute(daGuardMng_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Execute__FP12daGuardMng_c.s"
 }
 #pragma pop
 
 
-/* 80837D44-80837D4C 0008+00 s=1 e=0 z=0  None .text      daGuardMng_IsDelete__FP12daGuardMng_c                        */
-static bool daGuardMng_IsDelete(daGuardMng_c* param_0) {
+/* 80837D44-80837D4C 0008+00 s=0 e=0 z=0  None .text      daGuardMng_IsDelete__FP12daGuardMng_c                        */
+bool daGuardMng_IsDelete(daGuardMng_c* param_0) {
 	return true;
 }
 
 
-/* 80837D4C-80837D7C 0030+00 s=1 e=0 z=0  None .text      daGuardMng_Delete__FP12daGuardMng_c                          */
+/* 80837D4C-80837D7C 0030+00 s=0 e=0 z=0  None .text      daGuardMng_Delete__FP12daGuardMng_c                          */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGuardMng_Delete(daGuardMng_c* param_0) {
+asm void daGuardMng_Delete(daGuardMng_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Delete__FP12daGuardMng_c.s"
 }
 #pragma pop
 
 
-/* 80837D7C-80837DDC 0060+00 s=1 e=0 z=0  None .text      daGuardMng_Create__FP10fopAc_ac_c                            */
+/* 80837D7C-80837DDC 0060+00 s=0 e=0 z=0  None .text      daGuardMng_Create__FP10fopAc_ac_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daGuardMng_Create(fopAc_ac_c* param_0) {
+asm void daGuardMng_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_guard_mng/d_a_guard_mng/daGuardMng_Create__FP10fopAc_ac_c.s"
 }
@@ -161,31 +157,31 @@ asm static void daGuardMng_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80837DF0-80837E10 0020+00 s=1 e=0 z=0  None .data      l_daGuardMng_Method                                          */
-SECTION_DATA static void* l_daGuardMng_Method[8] = {
-	/* 0    */ (void*)daGuardMng_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daGuardMng_Delete__FP12daGuardMng_c,
-	/* 2    */ (void*)daGuardMng_Execute__FP12daGuardMng_c,
-	/* 3    */ (void*)daGuardMng_IsDelete__FP12daGuardMng_c,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80837DF0-80837E10 0020+00 s=0 e=0 z=0  None .data      l_daGuardMng_Method                                          */
+SECTION_DATA void* l_daGuardMng_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80837E10-80837E40 0030+00 s=0 e=0 z=1  None .data      g_profile_GUARD_MNG                                          */
+/* 80837E10-80837E40 0030+00 s=0 e=0 z=0  None .data      g_profile_GUARD_MNG                                          */
 SECTION_DATA void* g_profile_GUARD_MNG[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02950000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000574,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01970000,
-	/* 9    */ (void*)&l_daGuardMng_Method,
-	/* 10   */ (void*)0x00040100,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02950000,
+	(void*)NULL,
+	(void*)0x00000574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01970000,
+	(void*)NULL,
+	(void*)0x00040100,
+	(void*)NULL,
 };
 

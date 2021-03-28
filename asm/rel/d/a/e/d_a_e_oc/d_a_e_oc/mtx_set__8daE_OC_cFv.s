@@ -21,7 +21,7 @@ lbl_807345D8:
 /* 80734624  4B 8D 7E 10 */	b mDoMtx_YrotM__FPA4_fs
 /* 80734628  3C 60 80 73 */	lis r3, l_HIO@ha
 /* 8073462C  38 63 60 60 */	addi r3, r3, l_HIO@l
-/* 80734630  C0 23 00 1C */	lfs f1, 0x1c(r3)	/* effective address: 8073607C */
+/* 80734630  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 80734634  FC 40 08 90 */	fmr f2, f1
 /* 80734638  FC 60 08 90 */	fmr f3, f1
 /* 8073463C  4B 8D 87 FC */	b scaleM__14mDoMtx_stack_cFfff

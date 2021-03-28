@@ -224,11 +224,11 @@ lbl_80C548EC:
 /* 80C54A24  40 82 00 E4 */	bne lbl_80C54B08
 /* 80C54A28  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C54A2C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 80C54A30  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 80C54A30  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80C54A34  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80C54A38  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 80C54A38  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 80C54A3C  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80C54A40  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 80C54A40  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 80C54A44  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 80C54A48  80 64 AD 94 */	lwz r3, -0x526c(r4)
 /* 80C54A4C  80 1E 00 50 */	lwz r0, 0x50(r30)

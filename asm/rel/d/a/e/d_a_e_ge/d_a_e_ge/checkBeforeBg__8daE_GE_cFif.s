@@ -20,11 +20,11 @@ lbl_806C7CAC:
 /* 806C7CF4  4B BA 90 CC */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 806C7CF8  48 00 00 50 */	b lbl_806C7D48
 lbl_806C7CFC:
-/* 806C7CFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806C7D00  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806C7D04  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 806C7CFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806C7D00  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806C7D04  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 806C7D08  38 80 00 00 */	li r4, 0
-/* 806C7D0C  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 806C7D0C  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 806C7D10  81 8C 01 30 */	lwz r12, 0x130(r12)
 /* 806C7D14  7D 89 03 A6 */	mtctr r12
 /* 806C7D18  4E 80 04 21 */	bctrl 
@@ -33,11 +33,11 @@ lbl_806C7CFC:
 /* 806C7D24  4B C7 E7 8C */	b PSMTXCopy
 /* 806C7D28  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806C7D2C  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806C7D30  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806C7D30  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806C7D34  D0 01 00 14 */	stfs f0, 0x14(r1)
-/* 806C7D38  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806C7D38  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806C7D3C  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 806C7D40  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806C7D40  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806C7D44  D0 01 00 1C */	stfs f0, 0x1c(r1)
 lbl_806C7D48:
 /* 806C7D48  38 61 00 20 */	addi r3, r1, 0x20
@@ -47,8 +47,8 @@ lbl_806C7D48:
 /* 806C7D58  38 A1 00 14 */	addi r5, r1, 0x14
 /* 806C7D5C  38 C0 00 00 */	li r6, 0
 /* 806C7D60  4B 9B 00 04 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 806C7D64  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806C7D68  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806C7D64  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806C7D68  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806C7D6C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 806C7D70  38 81 00 20 */	addi r4, r1, 0x20
 /* 806C7D74  4B 9A C6 40 */	b LineCross__4cBgSFP11cBgS_LinChk

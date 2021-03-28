@@ -7,9 +7,9 @@ lbl_807CA73C:
 /* 807CA750  7C 7D 1B 78 */	mr r29, r3
 /* 807CA754  3C 80 80 7D */	lis r4, lit_3907@ha
 /* 807CA758  3B E4 EC A8 */	addi r31, r4, lit_3907@l
-/* 807CA75C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807CA760  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807CA764  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807CA75C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807CA760  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807CA764  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 807CA768  80 03 1E 04 */	lwz r0, 0x1e04(r3)
 /* 807CA76C  60 00 00 01 */	ori r0, r0, 1
 /* 807CA770  90 03 1E 04 */	stw r0, 0x1e04(r3)
@@ -36,7 +36,7 @@ lbl_807CA7AC:
 /* 807CA7BC  4B FF 90 5D */	bl setBck__8daE_VA_cFiUcff
 /* 807CA7C0  3C 60 80 7D */	lis r3, l_HIO@ha
 /* 807CA7C4  38 63 F4 C4 */	addi r3, r3, l_HIO@l
-/* 807CA7C8  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 807CF4E0 */
+/* 807CA7C8  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 807CA7CC  FC 00 00 1E */	fctiwz f0, f0
 /* 807CA7D0  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 807CA7D4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -126,7 +126,7 @@ lbl_807CA904:
 /* 807CA90C  40 82 00 30 */	bne lbl_807CA93C
 /* 807CA910  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807CA914  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807CA918  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807CA918  80 63 00 00 */	lwz r3, 0(r3)
 /* 807CA91C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807CA920  38 80 00 01 */	li r4, 1
 /* 807CA924  4B AE 74 D0 */	b changeSubBgmStatus__8Z2SeqMgrFl
@@ -159,7 +159,7 @@ lbl_807CA95C:
 /* 807CA988  EC 20 08 28 */	fsubs f1, f0, f1
 /* 807CA98C  3C 80 80 7D */	lis r4, l_HIO@ha
 /* 807CA990  38 84 F4 C4 */	addi r4, r4, l_HIO@l
-/* 807CA994  C0 04 00 20 */	lfs f0, 0x20(r4)	/* effective address: 807CF4E4 */
+/* 807CA994  C0 04 00 20 */	lfs f0, 0x20(r4)
 /* 807CA998  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807CA99C  41 81 00 10 */	bgt lbl_807CA9AC
 /* 807CA9A0  88 1D 13 84 */	lbz r0, 0x1384(r29)

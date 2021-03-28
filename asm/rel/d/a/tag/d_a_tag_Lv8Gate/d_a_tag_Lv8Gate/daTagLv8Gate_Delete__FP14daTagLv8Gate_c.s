@@ -8,7 +8,7 @@ lbl_80D52474:
 /* 80D5248C  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80D52490  3C 80 80 D5 */	lis r4, l_arcName@ha
 /* 80D52494  38 84 25 10 */	addi r4, r4, l_arcName@l
-/* 80D52498  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D52510 */
+/* 80D52498  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D5249C  4B 2D AB 6C */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80D524A0  7F E3 FB 78 */	mr r3, r31
 /* 80D524A4  38 80 00 00 */	li r4, 0

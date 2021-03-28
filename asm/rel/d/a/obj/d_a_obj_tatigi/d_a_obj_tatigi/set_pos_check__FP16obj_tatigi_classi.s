@@ -17,8 +17,8 @@ lbl_80D07E24:
 /* 80D07E60  1C 7F 01 60 */	mulli r3, r31, 0x160
 /* 80D07E64  3B 63 05 80 */	addi r27, r3, 0x580
 /* 80D07E68  7F 7E DA 14 */	add r27, r30, r27
-/* 80D07E6C  C3 FC 00 18 */	lfs f31, 0x18(r28)	/* effective address: 80D085D8 */
-/* 80D07E70  C3 DC 00 38 */	lfs f30, 0x38(r28)	/* effective address: 80D085F8 */
+/* 80D07E6C  C3 FC 00 18 */	lfs f31, 0x18(r28)
+/* 80D07E70  C3 DC 00 38 */	lfs f30, 0x38(r28)
 /* 80D07E74  48 00 01 30 */	b lbl_80D07FA4
 lbl_80D07E78:
 /* 80D07E78  38 61 00 0C */	addi r3, r1, 0xc

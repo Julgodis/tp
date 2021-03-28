@@ -13,7 +13,7 @@ lbl_8060E158:
 /* 8060E184  4B 9F ED C0 */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 8060E188  3C 60 80 61 */	lis r3, l_HIO@ha
 /* 8060E18C  38 63 04 50 */	addi r3, r3, l_HIO@l
-/* 8060E190  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80610458 */
+/* 8060E190  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8060E194  FC 40 08 90 */	fmr f2, f1
 /* 8060E198  FC 60 08 90 */	fmr f3, f1
 /* 8060E19C  4B 9F EC 9C */	b scaleM__14mDoMtx_stack_cFfff

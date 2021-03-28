@@ -13,7 +13,7 @@ lbl_80CB578C:
 /* 80CB57B8  38 7E 05 6C */	addi r3, r30, 0x56c
 /* 80CB57BC  3C 80 80 CC */	lis r4, l_bmdData@ha
 /* 80CB57C0  38 84 84 8C */	addi r4, r4, l_bmdData@l
-/* 80CB57C4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80CB8490 */
+/* 80CB57C4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80CB57C8  54 00 10 3A */	slwi r0, r0, 2
 /* 80CB57CC  3C 80 80 CC */	lis r4, l_resNameList@ha
 /* 80CB57D0  38 84 84 94 */	addi r4, r4, l_resNameList@l

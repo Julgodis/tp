@@ -11,8 +11,8 @@ lbl_8052CAA0:
 /* 8052CAC4  7C 7E 1B 78 */	mr r30, r3
 /* 8052CAC8  3C 80 80 53 */	lis r4, lit_3679@ha
 /* 8052CACC  3B E4 61 68 */	addi r31, r4, lit_3679@l
-/* 8052CAD0  C3 FF 00 18 */	lfs f31, 0x18(r31)	/* effective address: 80536180 */
-/* 8052CAD4  C3 DF 00 94 */	lfs f30, 0x94(r31)	/* effective address: 805361FC */
+/* 8052CAD0  C3 FF 00 18 */	lfs f31, 0x18(r31)
+/* 8052CAD4  C3 DF 00 94 */	lfs f30, 0x94(r31)
 /* 8052CAD8  A8 03 05 B8 */	lha r0, 0x5b8(r3)
 /* 8052CADC  2C 00 00 01 */	cmpwi r0, 1
 /* 8052CAE0  41 82 00 5C */	beq lbl_8052CB3C

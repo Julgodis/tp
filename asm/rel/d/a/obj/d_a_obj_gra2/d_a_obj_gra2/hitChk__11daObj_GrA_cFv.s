@@ -30,7 +30,7 @@ lbl_80C030B8:
 /* 80C030F8  41 82 00 6C */	beq lbl_80C03164
 /* 80C030FC  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C03100  38 63 FA 7C */	addi r3, r3, m__17daObj_GrA_Param_c@l
-/* 80C03104  A8 03 00 54 */	lha r0, 0x54(r3)	/* effective address: 80C0FAD0 */
+/* 80C03104  A8 03 00 54 */	lha r0, 0x54(r3)
 /* 80C03108  90 1F 0A A4 */	stw r0, 0xaa4(r31)
 /* 80C0310C  38 7F 0F 50 */	addi r3, r31, 0xf50
 /* 80C03110  4B 48 13 E8 */	b GetTgHitObj__12dCcD_GObjInfFv
@@ -41,11 +41,11 @@ lbl_80C030B8:
 /* 80C03124  4B 48 43 F0 */	b def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c
 /* 80C03128  3C 60 80 C1 */	lis r3, lit_5987@ha
 /* 80C0312C  38 83 01 54 */	addi r4, r3, lit_5987@l
-/* 80C03130  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C10154 */
-/* 80C03134  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10158 */
+/* 80C03130  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C03134  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C03138  90 61 00 14 */	stw r3, 0x14(r1)
 /* 80C0313C  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80C03140  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C1015C */
+/* 80C03140  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C03144  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80C03148  7F E3 FB 78 */	mr r3, r31
 /* 80C0314C  38 81 00 14 */	addi r4, r1, 0x14
@@ -67,11 +67,11 @@ lbl_80C03164:
 /* 80C03188  41 82 00 30 */	beq lbl_80C031B8
 /* 80C0318C  3C 60 80 C1 */	lis r3, lit_5992@ha
 /* 80C03190  38 83 01 60 */	addi r4, r3, lit_5992@l
-/* 80C03194  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80C10160 */
-/* 80C03198  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80C10164 */
+/* 80C03194  80 64 00 00 */	lwz r3, 0(r4)
+/* 80C03198  80 04 00 04 */	lwz r0, 4(r4)
 /* 80C0319C  90 61 00 08 */	stw r3, 8(r1)
 /* 80C031A0  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C031A4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80C10168 */
+/* 80C031A4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80C031A8  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C031AC  7F E3 FB 78 */	mr r3, r31
 /* 80C031B0  38 81 00 08 */	addi r4, r1, 8

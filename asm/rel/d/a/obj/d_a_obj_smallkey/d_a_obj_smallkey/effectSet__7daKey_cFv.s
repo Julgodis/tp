@@ -26,9 +26,9 @@ lbl_80CDAFB4:
 /* 80CDB014  B0 1F 09 64 */	sth r0, 0x964(r31)
 /* 80CDB018  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80CDB01C  7C 04 07 74 */	extsb r4, r0
-/* 80CDB020  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CDB024  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 80CDB028  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)	/* effective address: 8040BEFC */
+/* 80CDB020  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CDB024  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 80CDB028  80 7E 5D 3C */	lwz r3, 0x5d3c(r30)
 /* 80CDB02C  38 1F 09 3C */	addi r0, r31, 0x93c
 /* 80CDB030  90 01 00 08 */	stw r0, 8(r1)
 /* 80CDB034  90 81 00 0C */	stw r4, 0xc(r1)

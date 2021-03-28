@@ -575,46 +575,46 @@ asm void dTimer_c::isStart() {
 /* ############################################################################################## */
 /* 803C33C0-803C33E4 0024+00 s=1 e=0 z=0  None .data      @5239                                                        */
 SECTION_DATA static void* lit_5239[9] = {
-	/* 0    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x2B8),
-	/* 1    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x250),
-	/* 2    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x258),
-	/* 3    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x260),
-	/* 4    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x268),
-	/* 5    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x274),
-	/* 6    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x280),
-	/* 7    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x288),
-	/* 8    */ (void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x294),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x2B8),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x250),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x258),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x260),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x268),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x274),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x280),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x288),
+	(void*)(((char*)createGetIn__21dDlst_TimerScrnDraw_cF4cXyz)+0x294),
 };
 
 /* 803C33E4-803C33F8 0014+00 s=1 e=0 z=0  None .data      l_dTimer_Method                                              */
 SECTION_DATA static void* l_dTimer_Method[5] = {
-	/* 0    */ (void*)dTimer_Create__FP9msg_class,
-	/* 1    */ (void*)dTimer_Delete__FP8dTimer_c,
-	/* 2    */ (void*)dTimer_Execute__FP8dTimer_c,
-	/* 3    */ (void*)dTimer_IsDelete__FP8dTimer_c,
-	/* 4    */ (void*)dTimer_Draw__FP8dTimer_c,
+	(void*)dTimer_Create__FP9msg_class,
+	(void*)dTimer_Delete__FP8dTimer_c,
+	(void*)dTimer_Execute__FP8dTimer_c,
+	(void*)dTimer_IsDelete__FP8dTimer_c,
+	(void*)dTimer_Draw__FP8dTimer_c,
 };
 
-/* 803C33F8-803C3420 0028+00 s=0 e=0 z=1  None .data      g_profile_TIMER                                              */
+/* 803C33F8-803C3420 0028+00 s=0 e=0 z=0  None .data      g_profile_TIMER                                              */
 SECTION_DATA void* g_profile_TIMER[10] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x000CFFFD,
-	/* 2    */ (void*)0x03150000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000170,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopMsg_Method,
-	/* 8    */ (void*)0x03000000,
-	/* 9    */ (void*)&l_dTimer_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x000CFFFD,
+	(void*)0x03150000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000170,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopMsg_Method,
+	(void*)0x03000000,
+	(void*)&l_dTimer_Method,
 };
 
 /* 803C3420-803C3430 0010+00 s=2 e=0 z=0  None .data      __vt__21dDlst_TimerScrnDraw_c                                */
 SECTION_DATA static void* __vt__21dDlst_TimerScrnDraw_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__21dDlst_TimerScrnDraw_cFv,
-	/* 3    */ (void*)__dt__21dDlst_TimerScrnDraw_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__21dDlst_TimerScrnDraw_cFv,
+	(void*)__dt__21dDlst_TimerScrnDraw_cFv,
 };
 
 /* 8025DB38-8025DBE0 00A8+00 s=1 e=0 z=0  None .text      __ct__21dDlst_TimerScrnDraw_cFv                              */

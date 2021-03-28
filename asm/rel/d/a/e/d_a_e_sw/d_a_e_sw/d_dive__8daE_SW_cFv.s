@@ -76,11 +76,11 @@ lbl_807AEA68:
 /* 807AEA7C  D0 1E 06 D8 */	stfs f0, 0x6d8(r30)
 /* 807AEA80  3C 60 80 7B */	lis r3, lit_6959@ha
 /* 807AEA84  38 83 01 08 */	addi r4, r3, lit_6959@l
-/* 807AEA88  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807B0108 */
-/* 807AEA8C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 807B010C */
+/* 807AEA88  80 64 00 00 */	lwz r3, 0(r4)
+/* 807AEA8C  80 04 00 04 */	lwz r0, 4(r4)
 /* 807AEA90  90 61 00 0C */	stw r3, 0xc(r1)
 /* 807AEA94  90 01 00 10 */	stw r0, 0x10(r1)
-/* 807AEA98  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 807B0110 */
+/* 807AEA98  80 04 00 08 */	lwz r0, 8(r4)
 /* 807AEA9C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 807AEAA0  7F C3 F3 78 */	mr r3, r30
 /* 807AEAA4  38 81 00 0C */	addi r4, r1, 0xc

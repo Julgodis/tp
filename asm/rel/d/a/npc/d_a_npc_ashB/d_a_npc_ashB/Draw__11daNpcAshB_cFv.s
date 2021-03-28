@@ -13,7 +13,7 @@ lbl_8095E96C:
 /* 8095E998  38 A0 00 00 */	li r5, 0
 /* 8095E99C  3C C0 80 96 */	lis r6, m__17daNpcAshB_Param_c@ha
 /* 8095E9A0  38 C6 20 E4 */	addi r6, r6, m__17daNpcAshB_Param_c@l
-/* 8095E9A4  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 809620F0 */
+/* 8095E9A4  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 8095E9A8  38 C0 00 00 */	li r6, 0
 /* 8095E9AC  38 E0 00 00 */	li r7, 0
 /* 8095E9B0  4B 7F 38 FC */	b draw__8daNpcF_cFiifP11_GXColorS10i

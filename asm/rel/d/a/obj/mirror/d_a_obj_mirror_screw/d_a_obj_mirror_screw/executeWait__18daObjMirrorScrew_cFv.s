@@ -32,8 +32,8 @@ lbl_80C98AE4:
 /* 80C98B5C  C0 1E 00 20 */	lfs f0, 0x20(r30)
 /* 80C98B60  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 80C98B64  D0 21 00 10 */	stfs f1, 0x10(r1)
-/* 80C98B68  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C98B6C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C98B68  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C98B6C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C98B70  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80C98B74  38 80 00 04 */	li r4, 4
 /* 80C98B78  38 A0 00 0F */	li r5, 0xf
@@ -60,8 +60,8 @@ lbl_80C98AE4:
 lbl_80C98BCC:
 /* 80C98BCC  38 00 00 00 */	li r0, 0
 /* 80C98BD0  90 1F 05 CC */	stw r0, 0x5cc(r31)
-/* 80C98BD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C98BD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C98BD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C98BD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C98BDC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80C98BE0  38 80 00 1F */	li r4, 0x1f
 /* 80C98BE4  4B 3D 71 B0 */	b StopQuake__12dVibration_cFi

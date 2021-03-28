@@ -103,6 +103,9 @@ struct cM_rnd_c {
 	/* 80053E60 */ void getValue(f32, f32);
 };
 
+struct _GXColor {
+};
+
 struct Vec {
 };
 
@@ -112,9 +115,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct _GXColor {
 };
 
 struct dDlst_effectLine_c {
@@ -133,10 +133,10 @@ struct dDlst_shadowPoly_c {
 	/* 800543B4 */ void draw();
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct dDlst_shadowReal_c {
@@ -186,10 +186,10 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
-struct J3DPacket {
+struct dDlst_base_c {
 };
 
-struct dDlst_base_c {
+struct J3DPacket {
 };
 
 struct J3DDrawBuffer {
@@ -853,75 +853,75 @@ SECTION_DATA u8 data_803A8D9C[48] = {
 
 /* 803A8DCC-803A8DDC 0010+00 s=1 e=0 z=0  None .data      __vt__18dDlst_shadowPoly_c                                   */
 SECTION_DATA static void* __vt__18dDlst_shadowPoly_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 803A8DDC-803A8DEC 0010+00 s=2 e=0 z=0  None .data      __vt__22dDlst_shadowRealPoly_c                               */
 SECTION_DATA static void* __vt__22dDlst_shadowRealPoly_c[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getTri__22dDlst_shadowRealPoly_cFv,
-	/* 3    */ (void*)getTriMax__22dDlst_shadowRealPoly_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getTri__22dDlst_shadowRealPoly_cFv,
+	(void*)getTriMax__22dDlst_shadowRealPoly_cFv,
 };
 
 /* 803A8DEC-803A8DF8 000C+00 s=2 e=0 z=0  None .data      __vt__14ShdwDrawPoly_c                                       */
 SECTION_DATA static void* __vt__14ShdwDrawPoly_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14ShdwDrawPoly_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14ShdwDrawPoly_cFv,
 };
 
 /* 803A8DF8-803A8E04 000C+00 s=0 e=2 z=0  None .data      __vt__18dDlst_effectLine_c                                   */
 SECTION_DATA void* __vt__18dDlst_effectLine_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__18dDlst_effectLine_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__18dDlst_effectLine_cFv,
 };
 
 /* 803A8E04-803A8E14 0010+00 s=1 e=14 z=0  None .data      __vt__10J2DAnmBase                                           */
 SECTION_DATA void* __vt__10J2DAnmBase[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10J2DAnmBaseFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10J2DAnmBaseFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
 };
 
 /* 803A8E14-803A8E20 000C+00 s=0 e=0 z=0  None .data      __vt__11dDlst_blo_c                                          */
 SECTION_DATA void* __vt__11dDlst_blo_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dDlst_blo_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dDlst_blo_cFv,
 };
 
 /* 803A8E20-803A8E2C 000C+00 s=1 e=1 z=0  None .data      __vt__10dDlst_2D_c                                           */
 SECTION_DATA void* __vt__10dDlst_2D_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__10dDlst_2D_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__10dDlst_2D_cFv,
 };
 
 /* 803A8E2C-803A8E38 000C+00 s=0 e=0 z=0  None .data      __vt__12dDlst_2DMt_c                                         */
 SECTION_DATA void* __vt__12dDlst_2DMt_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_2DMt_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__12dDlst_2DMt_cFv,
 };
 
 /* 803A8E38-803A8E44 000C+00 s=0 e=0 z=0  None .data      __vt__11dDlst_2Dm_c                                          */
 SECTION_DATA void* __vt__11dDlst_2Dm_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dDlst_2Dm_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dDlst_2Dm_cFv,
 };
 
 /* 803A8E44-803A8E5C 000C+0C s=0 e=0 z=0  None .data      __vt__11dDlst_2DM_c                                          */
 SECTION_DATA void* __vt__11dDlst_2DM_c[3 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dDlst_2DM_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dDlst_2DM_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -930,9 +930,9 @@ SECTION_DATA void* __vt__11dDlst_2DM_c[3 + 3 /* padding */] = {
 
 /* 803A8E5C-803A8E68 000C+00 s=1 e=0 z=0  None .data      __vt__12dDlst_2DT2_c                                         */
 SECTION_DATA static void* __vt__12dDlst_2DT2_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_2DT2_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__12dDlst_2DT2_cFv,
 };
 
 /* 80456B68-80456B70 0004+04 s=1 e=0 z=0  None .sbss2     @4275                                                        */
@@ -1931,30 +1931,30 @@ extern "C" asm void __sinit_d_drawlist_cpp() {
 /* ############################################################################################## */
 /* 803A8E68-803A8E74 000C+00 s=0 e=0 z=0  None .data      __vt__11dDlst_2DT_c                                          */
 SECTION_DATA void* __vt__11dDlst_2DT_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__11dDlst_2DT_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__11dDlst_2DT_cFv,
 };
 
 /* 803A8E74-803A8E80 000C+00 s=0 e=0 z=0  None .data      __vt__15dDlst_2DPoint_c                                      */
 SECTION_DATA void* __vt__15dDlst_2DPoint_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__15dDlst_2DPoint_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__15dDlst_2DPoint_cFv,
 };
 
 /* 803A8E80-803A8E8C 000C+00 s=0 e=0 z=0  None .data      __vt__14dDlst_2DQuad_c                                       */
 SECTION_DATA void* __vt__14dDlst_2DQuad_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__14dDlst_2DQuad_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__14dDlst_2DQuad_cFv,
 };
 
 /* 803A8E8C-803A8E98 000C+00 s=0 e=0 z=0  None .data      __vt__13dDlst_2DTri_c                                        */
 SECTION_DATA void* __vt__13dDlst_2DTri_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__13dDlst_2DTri_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__13dDlst_2DTri_cFv,
 };
 
 /* 80450EE0-80450EE8 0008+00 s=0 e=1 z=0  None .sbss      None                                                         */

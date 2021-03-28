@@ -14,14 +14,14 @@ lbl_80579C30:
 /* 80579C60  C0 1B 04 D8 */	lfs f0, 0x4d8(r27)
 /* 80579C64  D0 1B 05 C4 */	stfs f0, 0x5c4(r27)
 /* 80579C68  C0 3B 05 C0 */	lfs f1, 0x5c0(r27)
-/* 80579C6C  C0 1E 00 D0 */	lfs f0, 0xd0(r30)	/* effective address: 8057B430 */
+/* 80579C6C  C0 1E 00 D0 */	lfs f0, 0xd0(r30)
 /* 80579C70  EC 01 00 2A */	fadds f0, f1, f0
 /* 80579C74  D0 1B 05 C0 */	stfs f0, 0x5c0(r27)
 /* 80579C78  3B 80 00 00 */	li r28, 0
 /* 80579C7C  3B 40 00 00 */	li r26, 0
 /* 80579C80  3B 20 00 00 */	li r25, 0
-/* 80579C84  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80579C88  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80579C84  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80579C88  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80579C8C:
 /* 80579C8C  3B B9 05 80 */	addi r29, r25, 0x580
 /* 80579C90  7C 1B E8 2E */	lwzx r0, r27, r29

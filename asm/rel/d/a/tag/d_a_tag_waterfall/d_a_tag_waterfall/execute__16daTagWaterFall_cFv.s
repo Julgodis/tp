@@ -7,7 +7,7 @@ lbl_80D648B4:
 /* 80D648C8  7C 7F 1B 79 */	or. r31, r3, r3
 /* 80D648CC  3C 60 80 D6 */	lis r3, m_master_id@ha
 /* 80D648D0  38 63 4D 94 */	addi r3, r3, m_master_id@l
-/* 80D648D4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80D64D94 */
+/* 80D648D4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D648D8  41 82 00 0C */	beq lbl_80D648E4
 /* 80D648DC  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80D648E0  48 00 00 08 */	b lbl_80D648E8
@@ -21,14 +21,14 @@ lbl_80D648E8:
 /* 80D648F8  41 82 00 40 */	beq lbl_80D64938
 /* 80D648FC  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80D64900  38 83 CA 54 */	addi r4, r3, g_env_light@l
-/* 80D64904  C0 04 11 E4 */	lfs f0, 0x11e4(r4)	/* effective address: 8042DC38 */
+/* 80D64904  C0 04 11 E4 */	lfs f0, 0x11e4(r4)
 /* 80D64908  D0 1F 05 74 */	stfs f0, 0x574(r31)
-/* 80D6490C  C0 04 11 E8 */	lfs f0, 0x11e8(r4)	/* effective address: 8042DC3C */
+/* 80D6490C  C0 04 11 E8 */	lfs f0, 0x11e8(r4)
 /* 80D64910  D0 1F 05 78 */	stfs f0, 0x578(r31)
 /* 80D64914  88 7F 05 81 */	lbz r3, 0x581(r31)
 /* 80D64918  38 03 FF FF */	addi r0, r3, -1
 /* 80D6491C  98 1F 05 81 */	stb r0, 0x581(r31)
-/* 80D64920  88 04 12 C8 */	lbz r0, 0x12c8(r4)	/* effective address: 8042DD1C */
+/* 80D64920  88 04 12 C8 */	lbz r0, 0x12c8(r4)
 /* 80D64924  98 1F 05 82 */	stb r0, 0x582(r31)
 /* 80D64928  3C 60 80 D6 */	lis r3, lit_3803@ha
 /* 80D6492C  C0 03 4D 80 */	lfs f0, lit_3803@l(r3)
@@ -80,7 +80,7 @@ lbl_80D649C4:
 /* 80D649CC  C0 24 4D 80 */	lfs f1, lit_3803@l(r4)
 /* 80D649D0  3C 80 80 D6 */	lis r4, l_HIO@ha
 /* 80D649D4  38 84 4E 10 */	addi r4, r4, l_HIO@l
-/* 80D649D8  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 80D64E20 */
+/* 80D649D8  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 80D649DC  EC 41 00 24 */	fdivs f2, f1, f0
 /* 80D649E0  4B 50 BD 60 */	b cLib_chaseF__FPfff
 /* 80D649E4  88 1F 05 80 */	lbz r0, 0x580(r31)
@@ -99,7 +99,7 @@ lbl_80D64A04:
 lbl_80D64A14:
 /* 80D64A14  3C 60 80 D6 */	lis r3, l_HIO@ha
 /* 80D64A18  38 63 4E 10 */	addi r3, r3, l_HIO@l
-/* 80D64A1C  88 03 00 05 */	lbz r0, 5(r3)	/* effective address: 80D64E15 */
+/* 80D64A1C  88 03 00 05 */	lbz r0, 5(r3)
 /* 80D64A20  28 00 00 00 */	cmplwi r0, 0
 /* 80D64A24  41 82 00 78 */	beq lbl_80D64A9C
 /* 80D64A28  88 1F 05 80 */	lbz r0, 0x580(r31)
@@ -122,12 +122,12 @@ lbl_80D64A60:
 /* 80D64A64  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 80D64A68  3C 60 80 D6 */	lis r3, l_HIO@ha
 /* 80D64A6C  38 63 4E 10 */	addi r3, r3, l_HIO@l
-/* 80D64A70  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80D64E18 */
+/* 80D64A70  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80D64A74  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 80D64A78  EC 21 00 2A */	fadds f1, f1, f0
 /* 80D64A7C  C0 1F 05 78 */	lfs f0, 0x578(r31)
 /* 80D64A80  EC 40 00 B2 */	fmuls f2, f0, f2
-/* 80D64A84  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80D64E1C */
+/* 80D64A84  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80D64A88  EC 00 00 F2 */	fmuls f0, f0, f3
 /* 80D64A8C  EC 42 00 2A */	fadds f2, f2, f0
 /* 80D64A90  3C 60 80 D6 */	lis r3, lit_3803@ha

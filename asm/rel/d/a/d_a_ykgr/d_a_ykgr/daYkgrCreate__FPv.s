@@ -37,9 +37,9 @@ lbl_805A889C:
 /* 805A88A8  80 03 0D 98 */	lwz r0, m_emitter__8daYkgr_c@l(r3)
 /* 805A88AC  28 00 00 00 */	cmplwi r0, 0
 /* 805A88B0  40 82 01 40 */	bne lbl_805A89F0
-/* 805A88B4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805A88B8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805A88BC  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 805A88B4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805A88B8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805A88BC  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 805A88C0  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
 /* 805A88C4  38 DD 04 D0 */	addi r6, r29, 0x4d0
 /* 805A88C8  D0 1D 04 D0 */	stfs f0, 0x4d0(r29)
@@ -47,7 +47,7 @@ lbl_805A889C:
 /* 805A88D0  D0 1D 04 D4 */	stfs f0, 0x4d4(r29)
 /* 805A88D4  C0 04 04 D8 */	lfs f0, 0x4d8(r4)
 /* 805A88D8  D0 1D 04 D8 */	stfs f0, 0x4d8(r29)
-/* 805A88DC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 805A88DC  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 805A88E0  38 80 00 00 */	li r4, 0
 /* 805A88E4  90 81 00 08 */	stw r4, 8(r1)
 /* 805A88E8  38 00 FF FF */	li r0, -1
@@ -88,13 +88,13 @@ lbl_805A8954:
 /* 805A896C  98 03 0D 8E */	stb r0, struct_80450D8C+0x2@l(r3)
 /* 805A8970  3C 60 80 45 */	lis r3, m_emitter__8daYkgr_c@ha
 /* 805A8974  38 83 0D 98 */	addi r4, r3, m_emitter__8daYkgr_c@l
-/* 805A8978  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80450D98 */
-/* 805A897C  98 03 00 BB */	stb r0, 0xbb(r3)	/* effective address: 804500BB */
+/* 805A8978  80 64 00 00 */	lwz r3, 0(r4)
+/* 805A897C  98 03 00 BB */	stb r0, 0xbb(r3)
 /* 805A8980  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 805A8984  D0 1D 05 A4 */	stfs f0, 0x5a4(r29)
 /* 805A8988  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 805A898C  D0 1D 05 A8 */	stfs f0, 0x5a8(r29)
-/* 805A8990  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 80450D98 */
+/* 805A8990  80 04 00 00 */	lwz r0, 0(r4)
 /* 805A8994  28 00 00 00 */	cmplwi r0, 0
 /* 805A8998  41 82 00 94 */	beq lbl_805A8A2C
 /* 805A899C  38 00 00 01 */	li r0, 1
@@ -107,13 +107,13 @@ lbl_805A89AC:
 /* 805A89B4  98 A3 0D 8E */	stb r5, struct_80450D8C+0x2@l(r3)
 /* 805A89B8  3C 60 80 45 */	lis r3, m_emitter__8daYkgr_c@ha
 /* 805A89BC  38 83 0D 98 */	addi r4, r3, m_emitter__8daYkgr_c@l
-/* 805A89C0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80450D98 */
-/* 805A89C4  98 A3 00 BB */	stb r5, 0xbb(r3)	/* effective address: 804500BB */
+/* 805A89C0  80 64 00 00 */	lwz r3, 0(r4)
+/* 805A89C4  98 A3 00 BB */	stb r5, 0xbb(r3)
 /* 805A89C8  C0 1E 00 0C */	lfs f0, 0xc(r30)
 /* 805A89CC  D0 1D 05 A4 */	stfs f0, 0x5a4(r29)
 /* 805A89D0  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 805A89D4  D0 1D 05 A8 */	stfs f0, 0x5a8(r29)
-/* 805A89D8  80 04 00 00 */	lwz r0, 0(r4)	/* effective address: 80450D98 */
+/* 805A89D8  80 04 00 00 */	lwz r0, 0(r4)
 /* 805A89DC  28 00 00 00 */	cmplwi r0, 0
 /* 805A89E0  41 82 00 4C */	beq lbl_805A8A2C
 /* 805A89E4  3C 60 80 45 */	lis r3, struct_80450D8C+0x1@ha

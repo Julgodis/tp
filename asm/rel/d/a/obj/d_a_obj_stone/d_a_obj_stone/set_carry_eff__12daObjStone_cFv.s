@@ -27,11 +27,11 @@ lbl_80CEC728:
 /* 80CEC734  3B 20 00 00 */	li r25, 0
 /* 80CEC738  3B C0 00 00 */	li r30, 0
 /* 80CEC73C  3B A0 00 00 */	li r29, 0
-/* 80CEC740  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CEC744  3B 63 61 C0 */	addi r27, r3, struct_804061C0+0x0@l
+/* 80CEC740  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CEC744  3B 63 61 C0 */	addi r27, r3, g_dComIfG_gameInfo@l
 /* 80CEC748  3B 9A 01 80 */	addi r28, r26, 0x180
 lbl_80CEC74C:
-/* 80CEC74C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)	/* effective address: 8040BEFC */
+/* 80CEC74C  80 7B 5D 3C */	lwz r3, 0x5d3c(r27)
 /* 80CEC750  38 80 00 00 */	li r4, 0
 /* 80CEC754  90 81 00 08 */	stw r4, 8(r1)
 /* 80CEC758  38 00 FF FF */	li r0, -1

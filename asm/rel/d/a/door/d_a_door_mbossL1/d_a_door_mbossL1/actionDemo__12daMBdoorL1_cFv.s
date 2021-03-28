@@ -5,8 +5,8 @@ lbl_80676E40:
 /* 80676E4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80676E50  93 C1 00 08 */	stw r30, 8(r1)
 /* 80676E54  7C 7E 1B 78 */	mr r30, r3
-/* 80676E58  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80676E5C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80676E58  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80676E5C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80676E60  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80676E64  A8 9E 05 D2 */	lha r4, 0x5d2(r30)
 /* 80676E68  4B 9D 0C 10 */	b endCheck__16dEvent_manager_cFs

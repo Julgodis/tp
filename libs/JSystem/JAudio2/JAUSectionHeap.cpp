@@ -11,13 +11,16 @@
 // Types:
 // 
 
-struct JAISoundID {
-};
-
 struct JAISeqDataUser {
 };
 
 struct JAISeqData {
+};
+
+struct JAISoundID {
+};
+
+struct JKRArchive {
 };
 
 struct JKRHeap {
@@ -28,9 +31,6 @@ struct JKRHeap {
 
 struct JKRSolidHeap {
 	/* 802D0A24 */ void create(u32, JKRHeap*, bool);
-};
-
-struct JKRArchive {
 };
 
 struct JAUSectionHeap {
@@ -369,51 +369,51 @@ asm void JAUSection::TSectionData::resetRegisteredWaveBankTables() {
 /* ############################################################################################## */
 /* 803C9AC0-803C9AF4 0034+00 s=2 e=0 z=0  None .data      __vt__14JAUSectionHeap                                       */
 SECTION_DATA static void* __vt__14JAUSectionHeap[13] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14JAUSectionHeapFv,
-	/* 3    */ (void*)dispose__10JAUSectionFv,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)func_802A6698,
-	/* 7    */ (void*)func_802A6690,
-	/* 8    */ (void*)func_802A6688,
-	/* 9    */ (void*)func_802A6680,
-	/* 10   */ (void*)setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser,
-	/* 11   */ (void*)getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData,
-	/* 12   */ (void*)releaseSeqData__14JAUSectionHeapFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14JAUSectionHeapFv,
+	(void*)dispose__10JAUSectionFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802A6698,
+	(void*)func_802A6690,
+	(void*)func_802A6688,
+	(void*)func_802A6680,
+	(void*)setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser,
+	(void*)getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData,
+	(void*)releaseSeqData__14JAUSectionHeapFv,
 };
 
 /* 803C9AF4-803C9B08 0014+00 s=1 e=0 z=0  None .data      __vt__16JAUBankTableLink                                     */
 SECTION_DATA static void* __vt__16JAUBankTableLink[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)getBank__12JAUBankTableCFUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getBank__12JAUBankTableCFUl,
 };
 
 /* 803C9B08-803C9B14 000C+00 s=1 e=0 z=0  None .data      __vt__12JAUBankTable                                         */
 SECTION_DATA static void* __vt__12JAUBankTable[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)getBank__12JAUBankTableCFUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)getBank__12JAUBankTableCFUl,
 };
 
 /* 803C9B14-803C9B24 0010+00 s=2 e=0 z=0  None .data      __vt__Q228@unnamed@JAUSectionHeap_cpp@14TStreamDataMgr       */
 SECTION_DATA static void* data_803C9B14[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_802A6440,
-	/* 3    */ (void*)func_802A6574,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_802A6440,
+	(void*)func_802A6574,
 };
 
 /* 803C9B24-803C9B38 0010+04 s=3 e=0 z=0  None .data      __vt__10JAUSection                                           */
 SECTION_DATA static void* __vt__10JAUSection[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JAUSectionFv,
-	/* 3    */ (void*)dispose__10JAUSectionFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JAUSectionFv,
+	(void*)dispose__10JAUSectionFv,
 	/* padding */
 	NULL,
 };

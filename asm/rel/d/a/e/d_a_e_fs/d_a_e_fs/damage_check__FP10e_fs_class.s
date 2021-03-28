@@ -79,10 +79,10 @@ lbl_806BCD24:
 /* 806BCD54  4E 80 04 21 */	bctrl 
 /* 806BCD58  C0 1F 00 9C */	lfs f0, 0x9c(r31)
 /* 806BCD5C  D0 1E 05 2C */	stfs f0, 0x52c(r30)
-/* 806BCD60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BCD64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806BCD68  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806BCD6C  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 806BCD60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BCD64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806BCD68  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806BCD6C  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 806BCD70  28 00 00 0A */	cmplwi r0, 0xa
 /* 806BCD74  40 82 00 2C */	bne lbl_806BCDA0
 /* 806BCD78  81 83 06 28 */	lwz r12, 0x628(r3)

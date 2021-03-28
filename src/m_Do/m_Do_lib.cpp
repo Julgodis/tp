@@ -181,9 +181,9 @@ asm void mDoLib_pos2camera(Vec* param_0, Vec* param_1) {
 /* ############################################################################################## */
 /* 803A3498-803A34A8 000C+04 s=2 e=0 z=0  None .data      __vt__11J3DUClipper                                          */
 SECTION_DATA static void* __vt__11J3DUClipper[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11J3DUClipperFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11J3DUClipperFv,
 	/* padding */
 	NULL,
 };

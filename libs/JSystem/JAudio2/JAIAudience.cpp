@@ -38,14 +38,14 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C9838-803C9858 0020+00 s=1 e=1 z=0  None .data      __vt__11JAIAudience                                          */
 SECTION_DATA void* __vt__11JAIAudience[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JAIAudienceFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JAIAudienceFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8029EFF4-8029F03C 0048+00 s=1 e=1 z=0  None .text      __dt__11JAIAudienceFv                                        */

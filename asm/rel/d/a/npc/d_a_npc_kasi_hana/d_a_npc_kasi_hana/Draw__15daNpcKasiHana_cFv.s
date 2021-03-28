@@ -9,7 +9,7 @@ lbl_80A1C78C:
 /* 80A1C7A8  38 A0 00 00 */	li r5, 0
 /* 80A1C7AC  3C C0 80 A2 */	lis r6, m__21daNpcKasiHana_Param_c@ha
 /* 80A1C7B0  38 C6 10 C8 */	addi r6, r6, m__21daNpcKasiHana_Param_c@l
-/* 80A1C7B4  C0 26 00 0C */	lfs f1, 0xc(r6)	/* effective address: 80A210D4 */
+/* 80A1C7B4  C0 26 00 0C */	lfs f1, 0xc(r6)
 /* 80A1C7B8  38 C0 00 00 */	li r6, 0
 /* 80A1C7BC  38 E0 00 00 */	li r7, 0
 /* 80A1C7C0  4B 73 5A EC */	b draw__8daNpcF_cFiifP11_GXColorS10i

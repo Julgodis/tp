@@ -11,9 +11,9 @@ lbl_80D5C0A8:
 /* 80D5C0CC  3B E4 C5 80 */	addi r31, r4, lit_3841@l
 /* 80D5C0D0  3C 80 80 45 */	lis r4, m_midnaActor__9daPy_py_c@ha
 /* 80D5C0D4  83 A4 10 18 */	lwz r29, m_midnaActor__9daPy_py_c@l(r4)
-/* 80D5C0D8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D5C0DC  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 80D5C0E0  83 C5 5D B4 */	lwz r30, 0x5db4(r5)	/* effective address: 8040BF74 */
+/* 80D5C0D8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D5C0DC  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 80D5C0E0  83 C5 5D B4 */	lwz r30, 0x5db4(r5)
 /* 80D5C0E4  28 1D 00 00 */	cmplwi r29, 0
 /* 80D5C0E8  40 82 00 0C */	bne lbl_80D5C0F4
 /* 80D5C0EC  38 60 00 01 */	li r3, 1
@@ -52,8 +52,8 @@ lbl_80D5C154:
 /* 80D5C164  4B 4E E1 74 */	b doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci
 /* 80D5C168  2C 03 00 00 */	cmpwi r3, 0
 /* 80D5C16C  41 82 03 C0 */	beq lbl_80D5C52C
-/* 80D5C170  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5C174  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5C170  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5C174  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5C178  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80D5C17C  4B 2E 62 EC */	b reset__14dEvt_control_cFv
 /* 80D5C180  88 1C 05 6C */	lbz r0, 0x56c(r28)
@@ -238,8 +238,8 @@ lbl_80D5C3A4:
 /* 80D5C414  4C 40 13 82 */	cror 2, 0, 2
 /* 80D5C418  41 82 00 24 */	beq lbl_80D5C43C
 lbl_80D5C41C:
-/* 80D5C41C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5C420  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5C41C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5C420  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5C424  88 9C 05 69 */	lbz r4, 0x569(r28)
 /* 80D5C428  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80D5C42C  7C 05 07 74 */	extsb r5, r0
@@ -252,8 +252,8 @@ lbl_80D5C43C:
 /* 80D5C444  38 03 FB FF */	addi r0, r3, 0xFBFF /* 0x77FFFBFF@l */
 /* 80D5C448  7C 80 00 38 */	and r0, r4, r0
 /* 80D5C44C  90 1D 08 90 */	stw r0, 0x890(r29)
-/* 80D5C450  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D5C454  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D5C450  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D5C454  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D5C458  88 9C 05 69 */	lbz r4, 0x569(r28)
 /* 80D5C45C  88 1C 04 BA */	lbz r0, 0x4ba(r28)
 /* 80D5C460  7C 05 07 74 */	extsb r5, r0

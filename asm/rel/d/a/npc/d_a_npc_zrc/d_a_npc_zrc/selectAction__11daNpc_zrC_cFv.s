@@ -3,15 +3,15 @@ lbl_80B90B40:
 /* 80B90B44  38 C4 36 E8 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80B90B48  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80B90B4C  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80B90B50  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80B90B54  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80B90B50  80 85 00 00 */	lwz r4, 0(r5)
+/* 80B90B54  80 05 00 04 */	lwz r0, 4(r5)
 /* 80B90B58  90 83 0D D0 */	stw r4, 0xdd0(r3)
 /* 80B90B5C  90 03 0D D4 */	stw r0, 0xdd4(r3)
-/* 80B90B60  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80B90B60  80 05 00 08 */	lwz r0, 8(r5)
 /* 80B90B64  90 03 0D D8 */	stw r0, 0xdd8(r3)
 /* 80B90B68  3C 80 80 B9 */	lis r4, m__17daNpc_zrC_Param_c@ha
 /* 80B90B6C  38 84 31 FC */	addi r4, r4, m__17daNpc_zrC_Param_c@l
-/* 80B90B70  88 04 00 6A */	lbz r0, 0x6a(r4)	/* effective address: 80B93266 */
+/* 80B90B70  88 04 00 6A */	lbz r0, 0x6a(r4)
 /* 80B90B74  28 00 00 00 */	cmplwi r0, 0
 /* 80B90B78  41 82 00 20 */	beq lbl_80B90B98
 /* 80B90B7C  80 86 03 74 */	lwz r4, 0x374(r6)

@@ -10,7 +10,7 @@ lbl_8058DAA0:
 /* 8058DAC0  3B E3 DD AC */	addi r31, r3, cNullVec__6Z2Calc@l
 /* 8058DAC4  3C 60 80 59 */	lis r3, data_8058DF50@ha
 /* 8058DAC8  38 A3 DF 50 */	addi r5, r3, data_8058DF50@l
-/* 8058DACC  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 8058DF50 */
+/* 8058DACC  88 05 00 00 */	lbz r0, 0(r5)
 /* 8058DAD0  7C 00 07 75 */	extsb. r0, r0
 /* 8058DAD4  40 82 00 88 */	bne lbl_8058DB5C
 /* 8058DAD8  80 7F 00 50 */	lwz r3, 0x50(r31)

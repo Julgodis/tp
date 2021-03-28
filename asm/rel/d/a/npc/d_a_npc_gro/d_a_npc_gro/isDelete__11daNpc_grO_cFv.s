@@ -4,8 +4,8 @@ lbl_809DC43C:
 /* 809DC444  90 01 00 14 */	stw r0, 0x14(r1)
 /* 809DC448  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 809DC44C  7C 7F 1B 78 */	mr r31, r3
-/* 809DC450  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809DC454  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809DC450  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809DC454  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809DC458  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 809DC45C  3C 80 80 9E */	lis r4, stringBase0@ha
 /* 809DC460  38 84 F2 B8 */	addi r4, r4, stringBase0@l

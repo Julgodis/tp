@@ -32,10 +32,10 @@ lbl_80D354A4:
 /* 80D354B0  38 00 00 3C */	li r0, 0x3c
 /* 80D354B4  B0 04 05 A8 */	sth r0, 0x5a8(r4)
 lbl_80D354B8:
-/* 80D354B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D354BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D354C0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 80D354C4  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
+/* 80D354B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D354BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D354C0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 80D354C4  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 80D354C8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80D354CC  41 82 00 10 */	beq lbl_80D354DC
 /* 80D354D0  38 00 00 78 */	li r0, 0x78

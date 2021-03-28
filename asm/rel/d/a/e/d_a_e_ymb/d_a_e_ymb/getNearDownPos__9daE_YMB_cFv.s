@@ -9,7 +9,7 @@ lbl_8081BC10:
 /* 8081BC2C  7C 7B 1B 78 */	mr r27, r3
 /* 8081BC30  3C 60 80 82 */	lis r3, lit_3791@ha
 /* 8081BC34  3B C3 18 AC */	addi r30, r3, lit_3791@l
-/* 8081BC38  C0 1E 00 F0 */	lfs f0, 0xf0(r30)	/* effective address: 8082199C */
+/* 8081BC38  C0 1E 00 F0 */	lfs f0, 0xf0(r30)
 /* 8081BC3C  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 8081BC40  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 8081BC44  D0 01 00 38 */	stfs f0, 0x38(r1)
@@ -21,7 +21,7 @@ lbl_8081BC10:
 /* 8081BC5C  3B 40 00 00 */	li r26, 0
 /* 8081BC60  3C 60 80 82 */	lis r3, data_80821F38@ha
 /* 8081BC64  3B E3 1F 38 */	addi r31, r3, data_80821F38@l
-/* 8081BC68  C3 FE 00 18 */	lfs f31, 0x18(r30)	/* effective address: 808218C4 */
+/* 8081BC68  C3 FE 00 18 */	lfs f31, 0x18(r30)
 lbl_8081BC6C:
 /* 8081BC6C  38 7B 04 D0 */	addi r3, r27, 0x4d0
 /* 8081BC70  7F 3F D2 14 */	add r25, r31, r26

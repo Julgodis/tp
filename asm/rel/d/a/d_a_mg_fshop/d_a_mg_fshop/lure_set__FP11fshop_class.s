@@ -12,8 +12,8 @@ lbl_8086C6E4:
 /* 8086C70C  3A E4 00 94 */	addi r23, r4, lit_3829@l
 /* 8086C710  3A A3 05 74 */	addi r21, r3, 0x574
 /* 8086C714  3A 80 00 00 */	li r20, 0
-/* 8086C718  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086C71C  3B 03 61 C0 */	addi r24, r3, struct_804061C0+0x0@l
+/* 8086C718  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086C71C  3B 03 61 C0 */	addi r24, r3, g_dComIfG_gameInfo@l
 /* 8086C720  3C 60 80 44 */	lis r3, sincosTable___5JMath@ha
 /* 8086C724  3B 23 9A 20 */	addi r25, r3, sincosTable___5JMath@l
 /* 8086C728  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
@@ -24,8 +24,8 @@ lbl_8086C6E4:
 /* 8086C73C  7F 5E D3 78 */	mr r30, r26
 /* 8086C740  7F 5F D3 78 */	mr r31, r26
 lbl_8086C744:
-/* 8086C744  80 78 5D AC */	lwz r3, 0x5dac(r24)	/* effective address: 8040BF6C */
-/* 8086C748  80 03 05 80 */	lwz r0, 0x580(r3)	/* effective address: 803E0580 */
+/* 8086C744  80 78 5D AC */	lwz r3, 0x5dac(r24)
+/* 8086C748  80 03 05 80 */	lwz r0, 0x580(r3)
 /* 8086C74C  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 8086C750  41 82 00 5C */	beq lbl_8086C7AC
 /* 8086C754  C0 37 00 20 */	lfs f1, 0x20(r23)

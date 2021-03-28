@@ -67,10 +67,10 @@ lbl_80563288:
 /* 8056328C  4B BE 24 7C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80563290  28 03 00 00 */	cmplwi r3, 0
 /* 80563294  41 82 00 50 */	beq lbl_805632E4
-/* 80563298  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8056329C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805632A0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 805632A4  A0 04 00 FA */	lhz r0, 0xfa(r4)	/* effective address: 804062BA */
+/* 80563298  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8056329C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805632A0  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 805632A4  A0 04 00 FA */	lhz r0, 0xfa(r4)
 /* 805632A8  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 805632AC  41 82 00 38 */	beq lbl_805632E4
 /* 805632B0  C0 04 04 D0 */	lfs f0, 0x4d0(r4)
@@ -101,8 +101,8 @@ lbl_80563304:
 /* 80563308  4B BE 97 A4 */	b daNpcT_chkEvtBit__FUl
 /* 8056330C  2C 03 00 00 */	cmpwi r3, 0
 /* 80563310  40 82 00 4C */	bne lbl_8056335C
-/* 80563314  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80563318  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80563314  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80563318  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8056331C  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 80563320  7F C3 F3 78 */	mr r3, r30
 /* 80563324  4B AC 98 B8 */	b getTimerPtr__14dComIfG_play_cFv

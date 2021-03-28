@@ -11,8 +11,8 @@ lbl_80A1705C:
 /* 80A17080  3B 80 00 00 */	li r28, 0
 /* 80A17084  3B 60 FF FF */	li r27, -1
 /* 80A17088  3B 40 00 00 */	li r26, 0
-/* 80A1708C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A17090  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80A1708C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A17090  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80A17094  3B BF 4F F8 */	addi r29, r31, 0x4ff8
 /* 80A17098  7F A3 EB 78 */	mr r3, r29
 /* 80A1709C  3C A0 80 A2 */	lis r5, struct_80A1A49C+0x0@ha
@@ -44,19 +44,19 @@ lbl_80A170E4:
 /* 80A170FC  4B 72 E6 0C */	b getActorP__18daNpcT_ActorMngr_cFv
 /* 80A17100  90 61 00 0C */	stw r3, 0xc(r1)
 /* 80A17104  80 01 00 08 */	lwz r0, 8(r1)
-/* 80A17108  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80A1710C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80A17110  90 04 5E F0 */	stw r0, 0x5ef0(r4)	/* effective address: 8040C0B0 */
-/* 80A17114  90 64 5E F4 */	stw r3, 0x5ef4(r4)	/* effective address: 8040C0B4 */
+/* 80A17108  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80A1710C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80A17110  90 04 5E F0 */	stw r0, 0x5ef0(r4)
+/* 80A17114  90 64 5E F4 */	stw r3, 0x5ef4(r4)
 /* 80A17118  38 00 00 00 */	li r0, 0
-/* 80A1711C  90 04 5E F8 */	stw r0, 0x5ef8(r4)	/* effective address: 8040C0B8 */
-/* 80A17120  90 04 5E FC */	stw r0, 0x5efc(r4)	/* effective address: 8040C0BC */
-/* 80A17124  90 04 5F 00 */	stw r0, 0x5f00(r4)	/* effective address: 8040C0C0 */
-/* 80A17128  90 04 5F 04 */	stw r0, 0x5f04(r4)	/* effective address: 8040C0C4 */
-/* 80A1712C  90 04 5F 08 */	stw r0, 0x5f08(r4)	/* effective address: 8040C0C8 */
-/* 80A17130  90 04 5F 0C */	stw r0, 0x5f0c(r4)	/* effective address: 8040C0CC */
-/* 80A17134  90 04 5F 10 */	stw r0, 0x5f10(r4)	/* effective address: 8040C0D0 */
-/* 80A17138  90 04 5F 14 */	stw r0, 0x5f14(r4)	/* effective address: 8040C0D4 */
+/* 80A1711C  90 04 5E F8 */	stw r0, 0x5ef8(r4)
+/* 80A17120  90 04 5E FC */	stw r0, 0x5efc(r4)
+/* 80A17124  90 04 5F 00 */	stw r0, 0x5f00(r4)
+/* 80A17128  90 04 5F 04 */	stw r0, 0x5f04(r4)
+/* 80A1712C  90 04 5F 08 */	stw r0, 0x5f08(r4)
+/* 80A17130  90 04 5F 0C */	stw r0, 0x5f0c(r4)
+/* 80A17134  90 04 5F 10 */	stw r0, 0x5f10(r4)
+/* 80A17138  90 04 5F 14 */	stw r0, 0x5f14(r4)
 /* 80A1713C  7F A3 EB 78 */	mr r3, r29
 /* 80A17140  7F 24 CB 78 */	mr r4, r25
 /* 80A17144  4B 63 0C 08 */	b getIsAddvance__16dEvent_manager_cFi

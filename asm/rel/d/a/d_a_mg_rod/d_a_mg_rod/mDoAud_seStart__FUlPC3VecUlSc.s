@@ -8,7 +8,7 @@ lbl_804BB318:
 /* 804BB330  90 61 00 08 */	stw r3, 8(r1)
 /* 804BB334  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804BB338  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804BB33C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804BB33C  80 63 00 00 */	lwz r3, 0(r3)
 /* 804BB340  38 81 00 08 */	addi r4, r1, 8
 /* 804BB344  7D 05 43 78 */	mr r5, r8
 /* 804BB348  7C 06 03 78 */	mr r6, r0

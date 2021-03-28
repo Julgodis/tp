@@ -7,8 +7,8 @@ lbl_80BE5FF8:
 /* 80BE600C  3C 60 80 BE */	lis r3, l_arcName@ha
 /* 80BE6010  38 63 74 38 */	addi r3, r3, l_arcName@l
 /* 80BE6014  38 80 00 03 */	li r4, 3
-/* 80BE6018  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80BE601C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80BE6018  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80BE601C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80BE6020  3C A5 00 02 */	addis r5, r5, 2
 /* 80BE6024  38 C0 00 80 */	li r6, 0x80
 /* 80BE6028  38 A5 C2 F8 */	addi r5, r5, -15624

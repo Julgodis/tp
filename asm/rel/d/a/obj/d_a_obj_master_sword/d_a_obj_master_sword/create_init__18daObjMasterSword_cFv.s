@@ -12,17 +12,17 @@ lbl_80C90F6C:
 /* 80C90F94  4B 38 95 E4 */	b fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData
 /* 80C90F98  3C 60 80 C9 */	lis r3, data_80C91AD0@ha
 /* 80C90F9C  38 83 1A D0 */	addi r4, r3, data_80C91AD0@l
-/* 80C90FA0  88 04 00 00 */	lbz r0, 0(r4)	/* effective address: 80C91AD0 */
+/* 80C90FA0  88 04 00 00 */	lbz r0, 0(r4)
 /* 80C90FA4  7C 00 07 75 */	extsb. r0, r0
 /* 80C90FA8  40 82 00 2C */	bne lbl_80C90FD4
 /* 80C90FAC  C0 1C 04 D0 */	lfs f0, 0x4d0(r28)
 /* 80C90FB0  3C 60 80 C9 */	lis r3, data_80C919D0@ha
 /* 80C90FB4  38 63 19 D0 */	addi r3, r3, data_80C919D0@l
-/* 80C90FB8  D0 03 00 30 */	stfs f0, 0x30(r3)	/* effective address: 80C91A00 */
+/* 80C90FB8  D0 03 00 30 */	stfs f0, 0x30(r3)
 /* 80C90FBC  C0 1C 04 D4 */	lfs f0, 0x4d4(r28)
-/* 80C90FC0  D0 03 00 34 */	stfs f0, 0x34(r3)	/* effective address: 80C91A04 */
+/* 80C90FC0  D0 03 00 34 */	stfs f0, 0x34(r3)
 /* 80C90FC4  C0 1C 04 D8 */	lfs f0, 0x4d8(r28)
-/* 80C90FC8  D0 03 00 38 */	stfs f0, 0x38(r3)	/* effective address: 80C91A08 */
+/* 80C90FC8  D0 03 00 38 */	stfs f0, 0x38(r3)
 /* 80C90FCC  38 00 00 01 */	li r0, 1
 /* 80C90FD0  98 04 00 00 */	stb r0, 0(r4)
 lbl_80C90FD4:
@@ -119,8 +119,8 @@ lbl_80C90FD4:
 /* 80C9113C  39 40 00 00 */	li r10, 0
 /* 80C91140  4B 3E 51 08 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80C91144  7F 63 DB 78 */	mr r3, r27
-/* 80C91148  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80C9114C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80C91148  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80C9114C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80C91150  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80C91154  4B 3E 59 58 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80C91158  C0 01 00 F4 */	lfs f0, 0xf4(r1)

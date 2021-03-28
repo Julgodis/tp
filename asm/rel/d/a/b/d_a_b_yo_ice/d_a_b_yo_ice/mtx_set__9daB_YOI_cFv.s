@@ -10,10 +10,10 @@ lbl_8063D0C8:
 /* 8063D0E8  7C 7F 1B 78 */	mr r31, r3
 /* 8063D0EC  3C 60 80 64 */	lis r3, l_HIO@ha
 /* 8063D0F0  38 63 DF F8 */	addi r3, r3, l_HIO@l
-/* 8063D0F4  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 8063E000 */
+/* 8063D0F4  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8063D0F8  C0 3F 06 80 */	lfs f1, 0x680(r31)
 /* 8063D0FC  EF E0 00 72 */	fmuls f31, f0, f1
-/* 8063D100  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8063E004 */
+/* 8063D100  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8063D104  EF C0 00 72 */	fmuls f30, f0, f1
 /* 8063D108  38 7F 04 D0 */	addi r3, r31, 0x4d0
 /* 8063D10C  4B 9C FC 58 */	b transS__14mDoMtx_stack_cFRC4cXyz

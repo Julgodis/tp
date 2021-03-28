@@ -9,7 +9,7 @@ lbl_80D1F190:
 /* 80D1F1AC  A3 E3 00 14 */	lhz r31, 0x14(r3)
 /* 80D1F1B0  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D1F1B4  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80D1F1B8  83 C3 00 38 */	lwz r30, 0x38(r3)	/* effective address: 80434B00 */
+/* 80D1F1B8  83 C3 00 38 */	lwz r30, 0x38(r3)
 /* 80D1F1BC  83 9E 00 14 */	lwz r28, 0x14(r30)
 /* 80D1F1C0  80 7E 00 84 */	lwz r3, 0x84(r30)
 /* 80D1F1C4  80 03 00 0C */	lwz r0, 0xc(r3)

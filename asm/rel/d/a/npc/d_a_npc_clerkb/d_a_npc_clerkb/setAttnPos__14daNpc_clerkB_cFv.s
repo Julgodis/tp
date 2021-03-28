@@ -9,11 +9,11 @@ lbl_809977C4:
 /* 809977E0  7C 7E 1B 78 */	mr r30, r3
 /* 809977E4  3C 60 80 9A */	lis r3, m__20daNpc_clerkB_Param_c@ha
 /* 809977E8  3B E3 99 78 */	addi r31, r3, m__20daNpc_clerkB_Param_c@l
-/* 809977EC  C0 1F 00 E8 */	lfs f0, 0xe8(r31)	/* effective address: 80999A60 */
+/* 809977EC  C0 1F 00 E8 */	lfs f0, 0xe8(r31)
 /* 809977F0  D0 01 00 34 */	stfs f0, 0x34(r1)
-/* 809977F4  C0 3F 00 EC */	lfs f1, 0xec(r31)	/* effective address: 80999A64 */
+/* 809977F4  C0 3F 00 EC */	lfs f1, 0xec(r31)
 /* 809977F8  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 809977FC  C0 1F 00 B4 */	lfs f0, 0xb4(r31)	/* effective address: 80999A2C */
+/* 809977FC  C0 1F 00 B4 */	lfs f0, 0xb4(r31)
 /* 80997800  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 80997804  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80997808  D0 21 00 2C */	stfs f1, 0x2c(r1)

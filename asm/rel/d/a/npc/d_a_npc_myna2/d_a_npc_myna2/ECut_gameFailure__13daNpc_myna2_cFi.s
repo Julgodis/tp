@@ -8,8 +8,8 @@ lbl_80A8684C:
 /* 80A86864  7C 9B 23 78 */	mr r27, r4
 /* 80A86868  3C 60 80 A9 */	lis r3, m__19daNpc_myna2_Param_c@ha
 /* 80A8686C  3B E3 84 34 */	addi r31, r3, m__19daNpc_myna2_Param_c@l
-/* 80A86870  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A86874  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A86870  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A86874  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A86878  3B C3 4F F8 */	addi r30, r3, 0x4ff8
 /* 80A8687C  3B A0 00 00 */	li r29, 0
 /* 80A86880  3B 80 FF FF */	li r28, -1

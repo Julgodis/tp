@@ -30,11 +30,11 @@ lbl_8077D8A8:
 /* 8077D918  3A 83 0D C4 */	addi r20, r3, lit_3903@l
 /* 8077D91C  3B 79 00 0C */	addi r27, r25, 0xc
 /* 8077D920  3B 59 00 CC */	addi r26, r25, 0xcc
-/* 8077D924  C0 14 00 04 */	lfs f0, 4(r20)	/* effective address: 80780DC8 */
+/* 8077D924  C0 14 00 04 */	lfs f0, 4(r20)
 /* 8077D928  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 8077D92C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 8077D930  D0 21 00 28 */	stfs f1, 0x28(r1)
-/* 8077D934  C0 34 00 A4 */	lfs f1, 0xa4(r20)	/* effective address: 80780E68 */
+/* 8077D934  C0 34 00 A4 */	lfs f1, 0xa4(r20)
 /* 8077D938  4B AE A1 94 */	b cM_rndF2__Ff
 /* 8077D93C  FC 00 08 1E */	fctiwz f0, f1
 /* 8077D940  D8 01 00 30 */	stfd f0, 0x30(r1)

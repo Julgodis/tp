@@ -11,7 +11,7 @@ lbl_80CF09A8:
 /* 80CF09CC  3B E3 30 00 */	addi r31, r3, lit_3850@l
 /* 80CF09D0  3B DC 05 A8 */	addi r30, r28, 0x5a8
 /* 80CF09D4  3B A0 00 00 */	li r29, 0
-/* 80CF09D8  C3 FF 00 24 */	lfs f31, 0x24(r31)	/* effective address: 80CF3024 */
+/* 80CF09D8  C3 FF 00 24 */	lfs f31, 0x24(r31)
 lbl_80CF09DC:
 /* 80CF09DC  88 7E 00 34 */	lbz r3, 0x34(r30)
 /* 80CF09E0  7C 60 07 75 */	extsb. r0, r3
@@ -183,7 +183,7 @@ lbl_80CF0C18:
 /* 80CF0C58  4B 57 F9 B0 */	b cLib_addCalcAngleS2__FPssss
 /* 80CF0C5C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80CF0C60  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80CF0C64  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80CF0C64  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF0C68  7F 64 DB 78 */	mr r4, r27
 /* 80CF0C6C  4B 31 B7 70 */	b mDoMtx_YrotS__FPA4_fs
 /* 80CF0C70  C0 01 00 58 */	lfs f0, 0x58(r1)
@@ -203,7 +203,7 @@ lbl_80CF0C98:
 /* 80CF0CA4  7C 04 07 34 */	extsh r4, r0
 /* 80CF0CA8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80CF0CAC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80CF0CB0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80CF0CB0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF0CB4  4B 31 B6 E8 */	b mDoMtx_XrotM__FPA4_fs
 /* 80CF0CB8  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 80CF0CBC  D0 01 00 58 */	stfs f0, 0x58(r1)
@@ -327,7 +327,7 @@ lbl_80CF0E6C:
 /* 80CF0E88  4B 57 F7 80 */	b cLib_addCalcAngleS2__FPssss
 /* 80CF0E8C  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80CF0E90  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80CF0E94  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80CF0E94  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CF0E98  A8 9E 00 2A */	lha r4, 0x2a(r30)
 /* 80CF0E9C  4B 31 B5 40 */	b mDoMtx_YrotS__FPA4_fs
 /* 80CF0EA0  C0 1F 00 00 */	lfs f0, 0(r31)
@@ -397,8 +397,8 @@ lbl_80CF0E6C:
 /* 80CF0FA0  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80CF0FA4  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80CF0FA8  41 82 00 18 */	beq lbl_80CF0FC0
-/* 80CF0FAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CF0FB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CF0FAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CF0FB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CF0FB4  88 1C 04 E2 */	lbz r0, 0x4e2(r28)
 /* 80CF0FB8  7C 05 07 74 */	extsb r5, r0
 /* 80CF0FBC  4B 34 42 44 */	b onSwitch__10dSv_info_cFii

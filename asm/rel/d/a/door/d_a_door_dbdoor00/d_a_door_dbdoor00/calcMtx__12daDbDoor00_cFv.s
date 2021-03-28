@@ -63,11 +63,11 @@ lbl_8045D744:
 /* 8045D838  4B BA F5 64 */	b transM__14mDoMtx_stack_cFfff
 /* 8045D83C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8045D840  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8045D844  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8045D844  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8045D848  D0 1E 05 9C */	stfs f0, 0x59c(r30)
-/* 8045D84C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8045D84C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8045D850  D0 1E 05 A0 */	stfs f0, 0x5a0(r30)
-/* 8045D854  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8045D854  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8045D858  D0 1E 05 A4 */	stfs f0, 0x5a4(r30)
 /* 8045D85C  4B BA F4 B8 */	b pop__14mDoMtx_stack_cFv
 /* 8045D860  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
@@ -90,11 +90,11 @@ lbl_8045D874:
 /* 8045D8A0  4B BA F4 FC */	b transM__14mDoMtx_stack_cFfff
 /* 8045D8A4  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8045D8A8  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8045D8AC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 8045D8AC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8045D8B0  D0 1E 05 9C */	stfs f0, 0x59c(r30)
-/* 8045D8B4  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8045D8B4  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8045D8B8  D0 1E 05 A0 */	stfs f0, 0x5a0(r30)
-/* 8045D8BC  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8045D8BC  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8045D8C0  D0 1E 05 A4 */	stfs f0, 0x5a4(r30)
 /* 8045D8C4  4B BA F4 50 */	b pop__14mDoMtx_stack_cFv
 /* 8045D8C8  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

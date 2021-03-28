@@ -465,7 +465,7 @@ lbl_8084BFFC:
 /* 8084C018  40 82 00 24 */	bne lbl_8084C03C
 /* 8084C01C  3C 60 80 85 */	lis r3, l_HIO@ha
 /* 8084C020  38 63 4F 78 */	addi r3, r3, l_HIO@l
-/* 8084C024  C0 03 00 58 */	lfs f0, 0x58(r3)	/* effective address: 80854FD0 */
+/* 8084C024  C0 03 00 58 */	lfs f0, 0x58(r3)
 /* 8084C028  FC 00 00 1E */	fctiwz f0, f0
 /* 8084C02C  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8084C030  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -474,7 +474,7 @@ lbl_8084BFFC:
 lbl_8084C03C:
 /* 8084C03C  3C 60 80 85 */	lis r3, l_HIO@ha
 /* 8084C040  38 63 4F 78 */	addi r3, r3, l_HIO@l
-/* 8084C044  C0 03 00 54 */	lfs f0, 0x54(r3)	/* effective address: 80854FCC */
+/* 8084C044  C0 03 00 54 */	lfs f0, 0x54(r3)
 /* 8084C048  FC 00 00 1E */	fctiwz f0, f0
 /* 8084C04C  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8084C050  80 01 00 14 */	lwz r0, 0x14(r1)

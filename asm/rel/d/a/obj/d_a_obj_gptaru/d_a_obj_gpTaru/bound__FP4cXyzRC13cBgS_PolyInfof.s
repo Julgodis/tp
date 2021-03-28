@@ -15,8 +15,8 @@ lbl_8057D7F8:
 /* 8057D82C  3C 60 80 58 */	lis r3, __vt__8cM3dGPla@ha
 /* 8057D830  38 03 F8 24 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 8057D834  90 01 00 5C */	stw r0, 0x5c(r1)
-/* 8057D838  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057D83C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057D838  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057D83C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057D840  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8057D844  38 A1 00 4C */	addi r5, r1, 0x4c
 /* 8057D848  4B AF 6E FC */	b GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla

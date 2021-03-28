@@ -10,8 +10,8 @@ lbl_8096F9A4:
 /* 8096F9C4  3B E3 28 60 */	addi r31, r3, m__17daNpc_Bou_Param_c@l
 /* 8096F9C8  3B 80 00 00 */	li r28, 0
 /* 8096F9CC  3B 60 FF FF */	li r27, -1
-/* 8096F9D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8096F9D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8096F9D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8096F9D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8096F9D8  3B A3 4F F8 */	addi r29, r3, 0x4ff8
 /* 8096F9DC  7F A3 EB 78 */	mr r3, r29
 /* 8096F9E0  3C A0 80 97 */	lis r5, struct_8097299C+0x0@ha

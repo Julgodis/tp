@@ -248,7 +248,7 @@ lbl_8078B990:
 /* 8078B9A4  C0 3D 06 94 */	lfs f1, 0x694(r29)
 /* 8078B9A8  3C 80 80 79 */	lis r4, l_HIO@ha
 /* 8078B9AC  38 84 E0 EC */	addi r4, r4, l_HIO@l
-/* 8078B9B0  C0 04 00 10 */	lfs f0, 0x10(r4)	/* effective address: 8078E0FC */
+/* 8078B9B0  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 8078B9B4  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8078B9B8  C0 5E 00 1C */	lfs f2, 0x1c(r30)
 /* 8078B9BC  FC 60 F8 90 */	fmr f3, f31

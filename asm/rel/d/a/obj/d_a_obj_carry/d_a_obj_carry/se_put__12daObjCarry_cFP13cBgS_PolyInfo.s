@@ -14,7 +14,7 @@ lbl_80477990:
 /* 804779C0  93 E1 00 08 */	stw r31, 8(r1)
 /* 804779C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804779C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804779CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804779CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 804779D0  38 81 00 08 */	addi r4, r1, 8
 /* 804779D4  38 BE 05 38 */	addi r5, r30, 0x538
 /* 804779D8  38 C0 00 00 */	li r6, 0

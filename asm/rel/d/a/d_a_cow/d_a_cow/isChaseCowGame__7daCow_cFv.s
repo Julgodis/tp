@@ -2,8 +2,8 @@ lbl_80658AA4:
 /* 80658AA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80658AA8  7C 08 02 A6 */	mflr r0
 /* 80658AAC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80658AB0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80658AB4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80658AB0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80658AB4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80658AB8  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 80658ABC  3C 80 80 66 */	lis r4, stringBase0@ha
 /* 80658AC0  38 84 2F 18 */	addi r4, r4, stringBase0@l

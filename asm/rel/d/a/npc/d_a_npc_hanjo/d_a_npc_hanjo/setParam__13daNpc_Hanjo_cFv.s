@@ -10,10 +10,10 @@ lbl_809FA050:
 /* 809FA070  48 00 03 ED */	bl srchActors__13daNpc_Hanjo_cFv
 /* 809FA074  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FA078  38 63 06 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l
-/* 809FA07C  AB A3 00 48 */	lha r29, 0x48(r3)	/* effective address: 80A00648 */
-/* 809FA080  AB 83 00 4A */	lha r28, 0x4a(r3)	/* effective address: 80A0064A */
-/* 809FA084  AB 63 00 4C */	lha r27, 0x4c(r3)	/* effective address: 80A0064C */
-/* 809FA088  AB C3 00 4E */	lha r30, 0x4e(r3)	/* effective address: 80A0064E */
+/* 809FA07C  AB A3 00 48 */	lha r29, 0x48(r3)
+/* 809FA080  AB 83 00 4A */	lha r28, 0x4a(r3)
+/* 809FA084  AB 63 00 4C */	lha r27, 0x4c(r3)
+/* 809FA088  AB C3 00 4E */	lha r30, 0x4e(r3)
 /* 809FA08C  88 1F 17 21 */	lbz r0, 0x1721(r31)
 /* 809FA090  28 00 00 00 */	cmplwi r0, 0
 /* 809FA094  41 82 00 10 */	beq lbl_809FA0A4
@@ -27,10 +27,10 @@ lbl_809FA0A4:
 /* 809FA0B0  3B A0 00 04 */	li r29, 4
 /* 809FA0B4  3B 80 00 06 */	li r28, 6
 lbl_809FA0B8:
-/* 809FA0B8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809FA0BC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809FA0C0  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 809FA0C4  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 809FA0B8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809FA0BC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809FA0C0  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 809FA0C4  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 809FA0C8  81 8C 01 88 */	lwz r12, 0x188(r12)
 /* 809FA0CC  7D 89 03 A6 */	mtctr r12
 /* 809FA0D0  4E 80 04 21 */	bctrl 
@@ -60,35 +60,35 @@ lbl_809FA0FC:
 /* 809FA128  90 1F 05 5C */	stw r0, 0x55c(r31)
 /* 809FA12C  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FA130  38 63 06 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l
-/* 809FA134  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80A00608 */
+/* 809FA134  C0 03 00 08 */	lfs f0, 8(r3)
 /* 809FA138  D0 1F 04 EC */	stfs f0, 0x4ec(r31)
 /* 809FA13C  D0 1F 04 F0 */	stfs f0, 0x4f0(r31)
 /* 809FA140  D0 1F 04 F4 */	stfs f0, 0x4f4(r31)
-/* 809FA144  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80A00610 */
+/* 809FA144  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 809FA148  FC 00 00 1E */	fctiwz f0, f0
 /* 809FA14C  D8 01 00 08 */	stfd f0, 8(r1)
 /* 809FA150  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 809FA154  98 1F 08 78 */	stb r0, 0x878(r31)
-/* 809FA158  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 80A00614 */
+/* 809FA158  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 809FA15C  D0 1F 0D EC */	stfs f0, 0xdec(r31)
-/* 809FA160  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 80A0061C */
+/* 809FA160  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 809FA164  D0 1F 0D F0 */	stfs f0, 0xdf0(r31)
-/* 809FA168  C0 03 00 50 */	lfs f0, 0x50(r3)	/* effective address: 80A00650 */
+/* 809FA168  C0 03 00 50 */	lfs f0, 0x50(r3)
 /* 809FA16C  D0 1F 0D F8 */	stfs f0, 0xdf8(r31)
 /* 809FA170  38 7F 08 A0 */	addi r3, r31, 0x8a0
 /* 809FA174  C0 3F 0D F0 */	lfs f1, 0xdf0(r31)
 /* 809FA178  4B 67 BD C8 */	b SetWallR__12dBgS_AcchCirFf
 /* 809FA17C  3C 60 80 A0 */	lis r3, m__19daNpc_Hanjo_Param_c@ha
 /* 809FA180  38 63 06 00 */	addi r3, r3, m__19daNpc_Hanjo_Param_c@l
-/* 809FA184  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80A00618 */
+/* 809FA184  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 809FA188  D0 1F 08 D0 */	stfs f0, 0x8d0(r31)
-/* 809FA18C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 80A0060C */
+/* 809FA18C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 809FA190  D0 1F 0D E8 */	stfs f0, 0xde8(r31)
-/* 809FA194  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80A0066C */
+/* 809FA194  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 809FA198  D0 1F 0A 80 */	stfs f0, 0xa80(r31)
-/* 809FA19C  C0 03 00 44 */	lfs f0, 0x44(r3)	/* effective address: 80A00644 */
+/* 809FA19C  C0 03 00 44 */	lfs f0, 0x44(r3)
 /* 809FA1A0  D0 1F 0A 84 */	stfs f0, 0xa84(r31)
-/* 809FA1A4  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80A00604 */
+/* 809FA1A4  C0 03 00 04 */	lfs f0, 4(r3)
 /* 809FA1A8  D0 1F 05 30 */	stfs f0, 0x530(r31)
 /* 809FA1AC  39 61 00 30 */	addi r11, r1, 0x30
 /* 809FA1B0  4B 96 80 70 */	b _restgpr_27

@@ -52,7 +52,7 @@ lbl_804F1578:
 /* 804F1588  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 804F158C  3C 60 80 50 */	lis r3, l_HIO@ha
 /* 804F1590  3B A3 AE A4 */	addi r29, r3, l_HIO@l
-/* 804F1594  A8 1D 00 98 */	lha r0, 0x98(r29)	/* effective address: 804FAF3C */
+/* 804F1594  A8 1D 00 98 */	lha r0, 0x98(r29)
 /* 804F1598  7C 04 00 00 */	cmpw r4, r0
 /* 804F159C  41 80 00 84 */	blt lbl_804F1620
 /* 804F15A0  D8 01 00 10 */	stfd f0, 0x10(r1)

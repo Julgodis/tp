@@ -6,7 +6,7 @@ lbl_80B05BD0:
 /* 80B05BE0  7C 7F 1B 78 */	mr r31, r3
 /* 80B05BE4  3C 60 80 B1 */	lis r3, lit_3999@ha
 /* 80B05BE8  38 A3 C1 C4 */	addi r5, r3, lit_3999@l
-/* 80B05BEC  C0 25 00 30 */	lfs f1, 0x30(r5)	/* effective address: 80B0C1F4 */
+/* 80B05BEC  C0 25 00 30 */	lfs f1, 0x30(r5)
 /* 80B05BF0  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 80B05BF4  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 80B05BF8  D0 21 00 1C */	stfs f1, 0x1c(r1)

@@ -19,10 +19,10 @@ lbl_80D03CA0:
 /* 80D03CE4  38 00 00 06 */	li r0, 6
 /* 80D03CE8  7C 09 03 A6 */	mtctr r0
 lbl_80D03CEC:
-/* 80D03CEC  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80D03FB8 */
-/* 80D03CF0  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80D03FBC */
-/* 80D03CF4  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80D0405C */
-/* 80D03CF8  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80D04060 */
+/* 80D03CEC  80 64 00 04 */	lwz r3, 4(r4)
+/* 80D03CF0  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80D03CF4  90 65 00 04 */	stw r3, 4(r5)
+/* 80D03CF8  94 05 00 08 */	stwu r0, 8(r5)
 /* 80D03CFC  42 00 FF F0 */	bdnz lbl_80D03CEC
 /* 80D03D00  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80D03D04  7C 08 03 A6 */	mtlr r0

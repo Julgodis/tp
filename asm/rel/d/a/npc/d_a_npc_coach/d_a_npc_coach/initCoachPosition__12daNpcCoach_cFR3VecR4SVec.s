@@ -47,11 +47,11 @@ lbl_8099DE18:
 /* 8099DECC  4B 66 EE D0 */	b transM__14mDoMtx_stack_cFfff
 /* 8099DED0  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8099DED4  3B A3 D4 70 */	addi r29, r3, now__14mDoMtx_stack_c@l
-/* 8099DED8  C0 1D 00 0C */	lfs f0, 0xc(r29)	/* effective address: 803DD47C */
+/* 8099DED8  C0 1D 00 0C */	lfs f0, 0xc(r29)
 /* 8099DEDC  D0 1E 15 5C */	stfs f0, 0x155c(r30)
-/* 8099DEE0  C0 1D 00 1C */	lfs f0, 0x1c(r29)	/* effective address: 803DD48C */
+/* 8099DEE0  C0 1D 00 1C */	lfs f0, 0x1c(r29)
 /* 8099DEE4  D0 1E 15 60 */	stfs f0, 0x1560(r30)
-/* 8099DEE8  C0 1D 00 2C */	lfs f0, 0x2c(r29)	/* effective address: 803DD49C */
+/* 8099DEE8  C0 1D 00 2C */	lfs f0, 0x2c(r29)
 /* 8099DEEC  D0 1E 15 64 */	stfs f0, 0x1564(r30)
 /* 8099DEF0  C0 1E 15 5C */	lfs f0, 0x155c(r30)
 /* 8099DEF4  D0 1E 15 68 */	stfs f0, 0x1568(r30)

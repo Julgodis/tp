@@ -6,11 +6,11 @@ lbl_809BC4AC:
 /* 809BC4BC  7C 7F 1B 78 */	mr r31, r3
 /* 809BC4C0  3C 80 80 9C */	lis r4, lit_4607@ha
 /* 809BC4C4  38 A4 E6 50 */	addi r5, r4, lit_4607@l
-/* 809BC4C8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 809BE650 */
-/* 809BC4CC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 809BE654 */
+/* 809BC4C8  80 85 00 00 */	lwz r4, 0(r5)
+/* 809BC4CC  80 05 00 04 */	lwz r0, 4(r5)
 /* 809BC4D0  90 81 00 14 */	stw r4, 0x14(r1)
 /* 809BC4D4  90 01 00 18 */	stw r0, 0x18(r1)
-/* 809BC4D8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 809BE658 */
+/* 809BC4D8  80 05 00 08 */	lwz r0, 8(r5)
 /* 809BC4DC  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 809BC4E0  38 81 00 14 */	addi r4, r1, 0x14
 /* 809BC4E4  48 00 08 4D */	bl chkAction__11daNpc_Gnd_cFM11daNpc_Gnd_cFPCvPvPv_i
@@ -25,9 +25,9 @@ lbl_809BC4AC:
 lbl_809BC508:
 /* 809BC508  38 00 00 00 */	li r0, 0
 /* 809BC50C  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 809BC510  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809BC514  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809BC518  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 809BC510  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809BC514  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809BC518  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 809BC51C  28 04 00 01 */	cmplwi r4, 1
 /* 809BC520  41 82 00 0C */	beq lbl_809BC52C
 /* 809BC524  28 04 00 02 */	cmplwi r4, 2
@@ -53,11 +53,11 @@ lbl_809BC550:
 lbl_809BC568:
 /* 809BC568  3C 60 80 9C */	lis r3, lit_4617@ha
 /* 809BC56C  38 83 E6 5C */	addi r4, r3, lit_4617@l
-/* 809BC570  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 809BE65C */
-/* 809BC574  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 809BE660 */
+/* 809BC570  80 64 00 00 */	lwz r3, 0(r4)
+/* 809BC574  80 04 00 04 */	lwz r0, 4(r4)
 /* 809BC578  90 61 00 08 */	stw r3, 8(r1)
 /* 809BC57C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 809BC580  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 809BE664 */
+/* 809BC580  80 04 00 08 */	lwz r0, 8(r4)
 /* 809BC584  90 01 00 10 */	stw r0, 0x10(r1)
 /* 809BC588  7F E3 FB 78 */	mr r3, r31
 /* 809BC58C  38 81 00 08 */	addi r4, r1, 8

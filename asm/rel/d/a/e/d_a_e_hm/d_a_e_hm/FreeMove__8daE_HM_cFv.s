@@ -9,7 +9,7 @@ lbl_806E34C8:
 /* 806E34E4  3B E3 59 20 */	addi r31, r3, lit_3791@l
 /* 806E34E8  80 7E 06 18 */	lwz r3, 0x618(r30)
 /* 806E34EC  C0 23 00 1C */	lfs f1, 0x1c(r3)
-/* 806E34F0  C0 1F 01 38 */	lfs f0, 0x138(r31)	/* effective address: 806E5A58 */
+/* 806E34F0  C0 1F 01 38 */	lfs f0, 0x138(r31)
 /* 806E34F4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806E34F8  40 81 00 1C */	ble lbl_806E3514
 /* 806E34FC  38 7E 05 2C */	addi r3, r30, 0x52c

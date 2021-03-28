@@ -7,19 +7,19 @@ lbl_806B1F78:
 /* 806B1F8C  7C 7C 1B 78 */	mr r28, r3
 /* 806B1F90  3C 80 80 6B */	lis r4, lit_3792@ha
 /* 806B1F94  3B E4 5C D4 */	addi r31, r4, lit_3792@l
-/* 806B1F98  C0 3F 00 60 */	lfs f1, 0x60(r31)	/* effective address: 806B5D34 */
+/* 806B1F98  C0 3F 00 60 */	lfs f1, 0x60(r31)
 /* 806B1F9C  D0 21 00 CC */	stfs f1, 0xcc(r1)
 /* 806B1FA0  D0 21 00 D0 */	stfs f1, 0xd0(r1)
-/* 806B1FA4  C0 1F 01 1C */	lfs f0, 0x11c(r31)	/* effective address: 806B5DF0 */
+/* 806B1FA4  C0 1F 01 1C */	lfs f0, 0x11c(r31)
 /* 806B1FA8  D0 01 00 D4 */	stfs f0, 0xd4(r1)
-/* 806B1FAC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806B1FB0  38 A4 61 C0 */	addi r5, r4, struct_804061C0+0x0@l
-/* 806B1FB4  88 05 5D B0 */	lbz r0, 0x5db0(r5)	/* effective address: 8040BF70 */
+/* 806B1FAC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806B1FB0  38 A4 61 C0 */	addi r5, r4, g_dComIfG_gameInfo@l
+/* 806B1FB4  88 05 5D B0 */	lbz r0, 0x5db0(r5)
 /* 806B1FB8  7C 00 07 74 */	extsb r0, r0
 /* 806B1FBC  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 806B1FC0  7C 85 02 14 */	add r4, r5, r0
 /* 806B1FC4  83 C4 5D 74 */	lwz r30, 0x5d74(r4)
-/* 806B1FC8  83 A5 5D AC */	lwz r29, 0x5dac(r5)	/* effective address: 8040BF6C */
+/* 806B1FC8  83 A5 5D AC */	lwz r29, 0x5dac(r5)
 /* 806B1FCC  80 03 07 0C */	lwz r0, 0x70c(r3)
 /* 806B1FD0  28 00 00 06 */	cmplwi r0, 6
 /* 806B1FD4  41 81 08 F8 */	bgt lbl_806B28CC
@@ -162,20 +162,20 @@ lbl_806B20BC:
 /* 806B21E4  90 1C 07 58 */	stw r0, 0x758(r28)
 /* 806B21E8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806B21EC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806B21F0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806B21F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 806B21F4  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 806B21F8  4B BF D6 8C */	b subBgmStop__8Z2SeqMgrFv
 /* 806B21FC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806B2200  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806B2204  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806B2204  80 63 00 00 */	lwz r3, 0(r3)
 /* 806B2208  C0 1F 00 60 */	lfs f0, 0x60(r31)
-/* 806B220C  D0 03 04 14 */	stfs f0, 0x414(r3)	/* effective address: 8045177C */
-/* 806B2210  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80451780 */
+/* 806B220C  D0 03 04 14 */	stfs f0, 0x414(r3)
+/* 806B2210  D0 03 04 18 */	stfs f0, 0x418(r3)
 /* 806B2214  38 00 00 00 */	li r0, 0
-/* 806B2218  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80451788 */
-/* 806B221C  D0 03 04 1C */	stfs f0, 0x41c(r3)	/* effective address: 80451784 */
-/* 806B2220  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B2224  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806B2218  90 03 04 20 */	stw r0, 0x420(r3)
+/* 806B221C  D0 03 04 1C */	stfs f0, 0x41c(r3)
+/* 806B2220  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B2224  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806B2228  38 63 09 58 */	addi r3, r3, 0x958
 /* 806B222C  38 80 00 07 */	li r4, 7
 /* 806B2230  4B 98 26 E8 */	b onDungeonItem__12dSv_memBit_cFi
@@ -251,11 +251,11 @@ lbl_806B22FC:
 /* 806B2338  4B C9 41 78 */	b PSMTXCopy
 /* 806B233C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 806B2340  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 806B2344  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803DD47C */
+/* 806B2344  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 806B2348  D0 1C 06 AC */	stfs f0, 0x6ac(r28)
-/* 806B234C  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 806B234C  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 806B2350  D0 1C 06 B0 */	stfs f0, 0x6b0(r28)
-/* 806B2354  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 806B2354  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 806B2358  D0 1C 06 B4 */	stfs f0, 0x6b4(r28)
 /* 806B235C  C0 1F 01 10 */	lfs f0, 0x110(r31)
 /* 806B2360  D0 1C 06 BC */	stfs f0, 0x6bc(r28)
@@ -597,25 +597,25 @@ lbl_806B2778:
 /* 806B2848  38 7E 02 48 */	addi r3, r30, 0x248
 /* 806B284C  38 80 00 00 */	li r4, 0
 /* 806B2850  4B AB 07 BC */	b SetTrimSize__9dCamera_cFl
-/* 806B2854  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806B2858  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806B2854  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806B2858  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806B285C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 806B2860  4B 98 FC 08 */	b reset__14dEvt_control_cFv
 /* 806B2864  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 806B2868  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 806B286C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 806B286C  80 63 00 00 */	lwz r3, 0(r3)
 /* 806B2870  C0 7F 00 28 */	lfs f3, 0x28(r31)
-/* 806B2874  D0 63 04 04 */	stfs f3, 0x404(r3)	/* effective address: 8045176C */
+/* 806B2874  D0 63 04 04 */	stfs f3, 0x404(r3)
 /* 806B2878  C0 1F 00 60 */	lfs f0, 0x60(r31)
-/* 806B287C  D0 03 04 08 */	stfs f0, 0x408(r3)	/* effective address: 80451770 */
+/* 806B287C  D0 03 04 08 */	stfs f0, 0x408(r3)
 /* 806B2880  38 00 00 00 */	li r0, 0
-/* 806B2884  90 03 04 10 */	stw r0, 0x410(r3)	/* effective address: 80451778 */
-/* 806B2888  D0 03 04 0C */	stfs f0, 0x40c(r3)	/* effective address: 80451774 */
-/* 806B288C  C0 03 04 14 */	lfs f0, 0x414(r3)	/* effective address: 8045177C */
+/* 806B2884  90 03 04 10 */	stw r0, 0x410(r3)
+/* 806B2888  D0 03 04 0C */	stfs f0, 0x40c(r3)
+/* 806B288C  C0 03 04 14 */	lfs f0, 0x414(r3)
 /* 806B2890  38 00 00 2D */	li r0, 0x2d
-/* 806B2894  90 03 04 20 */	stw r0, 0x420(r3)	/* effective address: 80451788 */
+/* 806B2894  90 03 04 20 */	stw r0, 0x420(r3)
 /* 806B2898  EC 43 00 28 */	fsubs f2, f3, f0
-/* 806B289C  80 03 04 20 */	lwz r0, 0x420(r3)	/* effective address: 80451788 */
+/* 806B289C  80 03 04 20 */	lwz r0, 0x420(r3)
 /* 806B28A0  C8 3F 01 50 */	lfd f1, 0x150(r31)
 /* 806B28A4  90 01 00 DC */	stw r0, 0xdc(r1)
 /* 806B28A8  3C 00 43 30 */	lis r0, 0x4330
@@ -623,8 +623,8 @@ lbl_806B2778:
 /* 806B28B0  C8 01 00 D8 */	lfd f0, 0xd8(r1)
 /* 806B28B4  EC 00 08 28 */	fsubs f0, f0, f1
 /* 806B28B8  EC 02 00 24 */	fdivs f0, f2, f0
-/* 806B28BC  D0 03 04 18 */	stfs f0, 0x418(r3)	/* effective address: 80451780 */
-/* 806B28C0  D0 63 04 1C */	stfs f3, 0x41c(r3)	/* effective address: 80451784 */
+/* 806B28BC  D0 03 04 18 */	stfs f0, 0x418(r3)
+/* 806B28C0  D0 63 04 1C */	stfs f3, 0x41c(r3)
 /* 806B28C4  7F 83 E3 78 */	mr r3, r28
 /* 806B28C8  4B 96 73 B4 */	b fopAcM_delete__FP10fopAc_ac_c
 lbl_806B28CC:

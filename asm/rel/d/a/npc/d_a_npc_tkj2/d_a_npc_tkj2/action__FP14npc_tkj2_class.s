@@ -7,10 +7,10 @@ lbl_80B12E88:
 /* 80B12E9C  7C 7C 1B 78 */	mr r28, r3
 /* 80B12EA0  3C 60 80 B1 */	lis r3, lit_3648@ha
 /* 80B12EA4  3B C3 42 DC */	addi r30, r3, lit_3648@l
-/* 80B12EA8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B12EAC  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80B12EB0  83 BF 5D AC */	lwz r29, 0x5dac(r31)	/* effective address: 8040BF6C */
-/* 80B12EB4  C0 1E 00 90 */	lfs f0, 0x90(r30)	/* effective address: 80B1436C */
+/* 80B12EA8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B12EAC  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80B12EB0  83 BF 5D AC */	lwz r29, 0x5dac(r31)
+/* 80B12EB4  C0 1E 00 90 */	lfs f0, 0x90(r30)
 /* 80B12EB8  D0 1C 05 D0 */	stfs f0, 0x5d0(r28)
 /* 80B12EBC  38 00 00 00 */	li r0, 0
 /* 80B12EC0  B0 1C 04 E0 */	sth r0, 0x4e0(r28)
@@ -200,9 +200,9 @@ lbl_80B13164:
 /* 80B1316C  41 82 00 A0 */	beq lbl_80B1320C
 /* 80B13170  38 00 00 00 */	li r0, 0
 /* 80B13174  98 1C 05 EA */	stb r0, 0x5ea(r28)
-/* 80B13178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B1317C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B13180  80 63 5F 1C */	lwz r3, 0x5f1c(r3)	/* effective address: 8040C0DC */
+/* 80B13178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B1317C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B13180  80 63 5F 1C */	lwz r3, 0x5f1c(r3)
 /* 80B13184  54 60 01 8D */	rlwinm. r0, r3, 0, 6, 6
 /* 80B13188  40 82 00 0C */	bne lbl_80B13194
 /* 80B1318C  54 60 03 DF */	rlwinm. r0, r3, 0, 0xf, 0xf
@@ -353,8 +353,8 @@ lbl_80B133AC:
 /* 80B133AC  7F 20 07 75 */	extsb. r0, r25
 /* 80B133B0  41 82 00 18 */	beq lbl_80B133C8
 /* 80B133B4  38 7C 06 74 */	addi r3, r28, 0x674
-/* 80B133B8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B133BC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80B133B8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B133BC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80B133C0  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80B133C4  4B 56 36 E8 */	b CrrPos__9dBgS_AcchFR4dBgS
 lbl_80B133C8:

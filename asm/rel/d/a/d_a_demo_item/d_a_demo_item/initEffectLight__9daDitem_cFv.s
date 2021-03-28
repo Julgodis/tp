@@ -2,9 +2,9 @@ lbl_804E1098:
 /* 804E1098  3C 80 80 4E */	lis r4, l_light_color@ha
 /* 804E109C  8C 04 19 D4 */	lbzu r0, l_light_color@l(r4)
 /* 804E10A0  B0 03 09 54 */	sth r0, 0x954(r3)
-/* 804E10A4  88 04 00 01 */	lbz r0, 1(r4)	/* effective address: 804E0001 */
+/* 804E10A4  88 04 00 01 */	lbz r0, 1(r4)
 /* 804E10A8  B0 03 09 56 */	sth r0, 0x956(r3)
-/* 804E10AC  88 04 00 02 */	lbz r0, 2(r4)	/* effective address: 804E0002 */
+/* 804E10AC  88 04 00 02 */	lbz r0, 2(r4)
 /* 804E10B0  B0 03 09 58 */	sth r0, 0x958(r3)
 /* 804E10B4  3C 80 80 4E */	lis r4, lit_3813@ha
 /* 804E10B8  C0 04 19 DC */	lfs f0, lit_3813@l(r4)

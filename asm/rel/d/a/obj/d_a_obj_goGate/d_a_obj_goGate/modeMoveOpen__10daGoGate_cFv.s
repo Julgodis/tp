@@ -36,7 +36,7 @@ lbl_80BFDAF4:
 /* 80BFDB7C  90 01 00 08 */	stw r0, 8(r1)
 /* 80BFDB80  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BFDB84  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BFDB88  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BFDB88  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BFDB8C  38 81 00 08 */	addi r4, r1, 8
 /* 80BFDB90  38 BE 04 D0 */	addi r5, r30, 0x4d0
 /* 80BFDB94  38 C0 00 00 */	li r6, 0
@@ -51,7 +51,7 @@ lbl_80BFDAF4:
 /* 80BFDBB8  C0 5F 00 18 */	lfs f2, 0x18(r31)
 /* 80BFDBBC  3C 80 80 C0 */	lis r4, l_HIO@ha
 /* 80BFDBC0  38 84 E1 1C */	addi r4, r4, l_HIO@l
-/* 80BFDBC4  C0 64 00 04 */	lfs f3, 4(r4)	/* effective address: 80BFE120 */
+/* 80BFDBC4  C0 64 00 04 */	lfs f3, 4(r4)
 /* 80BFDBC8  C0 9F 00 1C */	lfs f4, 0x1c(r31)
 /* 80BFDBCC  4B 67 1D B0 */	b cLib_addCalc__FPfffff
 /* 80BFDBD0  C0 1F 00 04 */	lfs f0, 4(r31)

@@ -11,7 +11,7 @@ lbl_80843A44:
 /* 80843A68  3B E3 54 AC */	addi r31, r3, lit_3894@l
 /* 80843A6C  3C 60 80 45 */	lis r3, m_object__7dDemo_c@ha
 /* 80843A70  38 63 0E 20 */	addi r3, r3, m_object__7dDemo_c@l
-/* 80843A74  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450E20 */
+/* 80843A74  80 63 00 00 */	lwz r3, 0(r3)
 /* 80843A78  88 9D 04 98 */	lbz r4, 0x498(r29)
 /* 80843A7C  4B 7F 56 0C */	b getActor__14dDemo_object_cFUc
 /* 80843A80  7C 7E 1B 79 */	or. r30, r3, r3

@@ -11,7 +11,7 @@
 // Types:
 // 
 
-struct _GXTexMapID {
+struct JUTTransparency {
 };
 
 struct _GXTlut {
@@ -20,15 +20,15 @@ struct _GXTlut {
 struct _GXTlutFmt {
 };
 
-struct JUTTransparency {
-};
-
 struct JUTPalette {
 	/* 802DE91C */ void storeTLUT(_GXTlut, _GXTlutFmt, JUTTransparency, u16, void*);
 	/* 802DE95C */ void load();
 };
 
 struct ResTIMG {
+};
+
+struct _GXTexMapID {
 };
 
 struct JUTTexture {

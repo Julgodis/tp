@@ -11,13 +11,13 @@ lbl_806A8030:
 /* 806A8054  D0 01 00 08 */	stfs f0, 8(r1)
 /* 806A8058  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 806A805C  D0 41 00 10 */	stfs f2, 0x10(r1)
-/* 806A8060  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806A8064  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806A8068  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 806A8060  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806A8064  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806A8068  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 806A806C  38 81 00 08 */	addi r4, r1, 8
 /* 806A8070  38 A0 00 00 */	li r5, 0
 /* 806A8074  38 C0 00 00 */	li r6, 0
-/* 806A8078  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 806A8078  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 806A807C  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 806A8080  7D 89 03 A6 */	mtctr r12
 /* 806A8084  4E 80 04 21 */	bctrl 

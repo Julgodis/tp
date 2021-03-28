@@ -165,8 +165,8 @@ lbl_8046BC60:
 /* 8046BC64  ED 29 00 32 */	fmuls f9, f9, f0
 /* 8046BC68  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8046BC6C  38 83 CA 54 */	addi r4, r3, g_env_light@l
-/* 8046BC70  88 64 12 C6 */	lbz r3, 0x12c6(r4)	/* effective address: 8042DD1A */
-/* 8046BC74  88 04 12 C7 */	lbz r0, 0x12c7(r4)	/* effective address: 8042DD1B */
+/* 8046BC70  88 64 12 C6 */	lbz r3, 0x12c6(r4)
+/* 8046BC74  88 04 12 C7 */	lbz r0, 0x12c7(r4)
 /* 8046BC78  7C 03 00 40 */	cmplw r3, r0
 /* 8046BC7C  40 82 00 C4 */	bne lbl_8046BD40
 /* 8046BC80  38 60 00 01 */	li r3, 1
@@ -211,7 +211,7 @@ lbl_8046BD0C:
 /* 8046BD0C  38 00 00 01 */	li r0, 1
 /* 8046BD10  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8046BD14  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8046BD18  98 03 12 CE */	stb r0, 0x12ce(r3)	/* effective address: 8042DD22 */
+/* 8046BD18  98 03 12 CE */	stb r0, 0x12ce(r3)
 /* 8046BD1C  48 00 00 24 */	b lbl_8046BD40
 lbl_8046BD20:
 /* 8046BD20  38 00 00 00 */	li r0, 0

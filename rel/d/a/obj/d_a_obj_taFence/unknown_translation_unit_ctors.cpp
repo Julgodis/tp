@@ -19,7 +19,6 @@ extern void* const data_80D060CC[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_taFence_cpp(); // 1
 
 // 
 // Declarations:

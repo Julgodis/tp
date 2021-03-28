@@ -7,7 +7,7 @@ lbl_80C0536C:
 /* 80C05380  C0 23 FC E0 */	lfs f1, lit_6330@l(r3)
 /* 80C05384  3C 60 80 C1 */	lis r3, m__17daObj_GrA_Param_c@ha
 /* 80C05388  38 63 FA 7C */	addi r3, r3, m__17daObj_GrA_Param_c@l
-/* 80C0538C  C0 03 00 6C */	lfs f0, 0x6c(r3)	/* effective address: 80C0FAE8 */
+/* 80C0538C  C0 03 00 6C */	lfs f0, 0x6c(r3)
 /* 80C05390  EC 21 00 32 */	fmuls f1, f1, f0
 /* 80C05394  48 00 00 28 */	b lbl_80C053BC
 lbl_80C05398:

@@ -16,11 +16,11 @@ lbl_80A20F80:
 /* 80A20FB8  4B FF 9F 81 */	bl __register_global_object
 /* 80A20FBC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80A20FC0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80A20FC4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80A20FC8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
+/* 80A20FC4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A20FC8  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A20FCC  90 7F 01 44 */	stw r3, 0x144(r31)
 /* 80A20FD0  90 1F 01 48 */	stw r0, 0x148(r31)
-/* 80A20FD4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
+/* 80A20FD4  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A20FD8  90 1F 01 4C */	stw r0, 0x14c(r31)
 /* 80A20FDC  38 9F 01 44 */	addi r4, r31, 0x144
 /* 80A20FE0  80 7F 01 08 */	lwz r3, 0x108(r31)

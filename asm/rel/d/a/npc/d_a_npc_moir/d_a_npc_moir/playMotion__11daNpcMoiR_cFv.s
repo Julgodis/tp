@@ -4,439 +4,439 @@ lbl_80A818B4:
 /* 80A818BC  90 01 03 54 */	stw r0, 0x354(r1)
 /* 80A818C0  3C 80 80 A8 */	lis r4, m__17daNpcMoiR_Param_c@ha
 /* 80A818C4  38 84 32 AC */	addi r4, r4, m__17daNpcMoiR_Param_c@l
-/* 80A818C8  80 A4 01 98 */	lwz r5, 0x198(r4)	/* effective address: 80A83444 */
-/* 80A818CC  80 04 01 9C */	lwz r0, 0x19c(r4)	/* effective address: 80A83448 */
+/* 80A818C8  80 A4 01 98 */	lwz r5, 0x198(r4)
+/* 80A818CC  80 04 01 9C */	lwz r0, 0x19c(r4)
 /* 80A818D0  90 A1 02 90 */	stw r5, 0x290(r1)
 /* 80A818D4  90 01 02 94 */	stw r0, 0x294(r1)
-/* 80A818D8  80 04 01 A0 */	lwz r0, 0x1a0(r4)	/* effective address: 80A8344C */
+/* 80A818D8  80 04 01 A0 */	lwz r0, 0x1a0(r4)
 /* 80A818DC  90 01 02 98 */	stw r0, 0x298(r1)
 /* 80A818E0  38 A4 00 00 */	addi r5, r4, 0
-/* 80A818E4  C0 05 00 44 */	lfs f0, 0x44(r5)	/* effective address: 80A832F0 */
+/* 80A818E4  C0 05 00 44 */	lfs f0, 0x44(r5)
 /* 80A818E8  D0 01 02 94 */	stfs f0, 0x294(r1)
-/* 80A818EC  80 04 01 A4 */	lwz r0, 0x1a4(r4)	/* effective address: 80A83450 */
+/* 80A818EC  80 04 01 A4 */	lwz r0, 0x1a4(r4)
 /* 80A818F0  90 01 00 3C */	stw r0, 0x3c(r1)
 /* 80A818F4  38 01 02 90 */	addi r0, r1, 0x290
 /* 80A818F8  90 01 00 3C */	stw r0, 0x3c(r1)
-/* 80A818FC  80 A4 01 A8 */	lwz r5, 0x1a8(r4)	/* effective address: 80A83454 */
-/* 80A81900  80 04 01 AC */	lwz r0, 0x1ac(r4)	/* effective address: 80A83458 */
+/* 80A818FC  80 A4 01 A8 */	lwz r5, 0x1a8(r4)
+/* 80A81900  80 04 01 AC */	lwz r0, 0x1ac(r4)
 /* 80A81904  90 A1 02 84 */	stw r5, 0x284(r1)
 /* 80A81908  90 01 02 88 */	stw r0, 0x288(r1)
-/* 80A8190C  80 04 01 B0 */	lwz r0, 0x1b0(r4)	/* effective address: 80A8345C */
+/* 80A8190C  80 04 01 B0 */	lwz r0, 0x1b0(r4)
 /* 80A81910  90 01 02 8C */	stw r0, 0x28c(r1)
 /* 80A81914  D0 01 02 88 */	stfs f0, 0x288(r1)
-/* 80A81918  80 A4 01 B4 */	lwz r5, 0x1b4(r4)	/* effective address: 80A83460 */
-/* 80A8191C  80 04 01 B8 */	lwz r0, 0x1b8(r4)	/* effective address: 80A83464 */
+/* 80A81918  80 A4 01 B4 */	lwz r5, 0x1b4(r4)
+/* 80A8191C  80 04 01 B8 */	lwz r0, 0x1b8(r4)
 /* 80A81920  90 A1 02 78 */	stw r5, 0x278(r1)
 /* 80A81924  90 01 02 7C */	stw r0, 0x27c(r1)
-/* 80A81928  80 04 01 BC */	lwz r0, 0x1bc(r4)	/* effective address: 80A83468 */
+/* 80A81928  80 04 01 BC */	lwz r0, 0x1bc(r4)
 /* 80A8192C  90 01 02 80 */	stw r0, 0x280(r1)
-/* 80A81930  80 A4 01 C0 */	lwz r5, 0x1c0(r4)	/* effective address: 80A8346C */
-/* 80A81934  80 04 01 C4 */	lwz r0, 0x1c4(r4)	/* effective address: 80A83470 */
+/* 80A81930  80 A4 01 C0 */	lwz r5, 0x1c0(r4)
+/* 80A81934  80 04 01 C4 */	lwz r0, 0x1c4(r4)
 /* 80A81938  90 A1 00 A8 */	stw r5, 0xa8(r1)
 /* 80A8193C  90 01 00 AC */	stw r0, 0xac(r1)
 /* 80A81940  38 01 02 84 */	addi r0, r1, 0x284
 /* 80A81944  90 01 00 A8 */	stw r0, 0xa8(r1)
 /* 80A81948  38 01 02 78 */	addi r0, r1, 0x278
 /* 80A8194C  90 01 00 AC */	stw r0, 0xac(r1)
-/* 80A81950  80 A4 01 C8 */	lwz r5, 0x1c8(r4)	/* effective address: 80A83474 */
-/* 80A81954  80 04 01 CC */	lwz r0, 0x1cc(r4)	/* effective address: 80A83478 */
+/* 80A81950  80 A4 01 C8 */	lwz r5, 0x1c8(r4)
+/* 80A81954  80 04 01 CC */	lwz r0, 0x1cc(r4)
 /* 80A81958  90 A1 02 6C */	stw r5, 0x26c(r1)
 /* 80A8195C  90 01 02 70 */	stw r0, 0x270(r1)
-/* 80A81960  80 04 01 D0 */	lwz r0, 0x1d0(r4)	/* effective address: 80A8347C */
+/* 80A81960  80 04 01 D0 */	lwz r0, 0x1d0(r4)
 /* 80A81964  90 01 02 74 */	stw r0, 0x274(r1)
 /* 80A81968  D0 01 02 70 */	stfs f0, 0x270(r1)
-/* 80A8196C  80 04 01 D4 */	lwz r0, 0x1d4(r4)	/* effective address: 80A83480 */
+/* 80A8196C  80 04 01 D4 */	lwz r0, 0x1d4(r4)
 /* 80A81970  90 01 00 38 */	stw r0, 0x38(r1)
 /* 80A81974  38 01 02 6C */	addi r0, r1, 0x26c
 /* 80A81978  90 01 00 38 */	stw r0, 0x38(r1)
-/* 80A8197C  80 A4 01 D8 */	lwz r5, 0x1d8(r4)	/* effective address: 80A83484 */
-/* 80A81980  80 04 01 DC */	lwz r0, 0x1dc(r4)	/* effective address: 80A83488 */
+/* 80A8197C  80 A4 01 D8 */	lwz r5, 0x1d8(r4)
+/* 80A81980  80 04 01 DC */	lwz r0, 0x1dc(r4)
 /* 80A81984  90 A1 02 60 */	stw r5, 0x260(r1)
 /* 80A81988  90 01 02 64 */	stw r0, 0x264(r1)
-/* 80A8198C  80 04 01 E0 */	lwz r0, 0x1e0(r4)	/* effective address: 80A8348C */
+/* 80A8198C  80 04 01 E0 */	lwz r0, 0x1e0(r4)
 /* 80A81990  90 01 02 68 */	stw r0, 0x268(r1)
 /* 80A81994  D0 01 02 64 */	stfs f0, 0x264(r1)
-/* 80A81998  80 04 01 E4 */	lwz r0, 0x1e4(r4)	/* effective address: 80A83490 */
+/* 80A81998  80 04 01 E4 */	lwz r0, 0x1e4(r4)
 /* 80A8199C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80A819A0  38 01 02 60 */	addi r0, r1, 0x260
 /* 80A819A4  90 01 00 34 */	stw r0, 0x34(r1)
-/* 80A819A8  80 A4 01 E8 */	lwz r5, 0x1e8(r4)	/* effective address: 80A83494 */
-/* 80A819AC  80 04 01 EC */	lwz r0, 0x1ec(r4)	/* effective address: 80A83498 */
+/* 80A819A8  80 A4 01 E8 */	lwz r5, 0x1e8(r4)
+/* 80A819AC  80 04 01 EC */	lwz r0, 0x1ec(r4)
 /* 80A819B0  90 A1 02 54 */	stw r5, 0x254(r1)
 /* 80A819B4  90 01 02 58 */	stw r0, 0x258(r1)
-/* 80A819B8  80 04 01 F0 */	lwz r0, 0x1f0(r4)	/* effective address: 80A8349C */
+/* 80A819B8  80 04 01 F0 */	lwz r0, 0x1f0(r4)
 /* 80A819BC  90 01 02 5C */	stw r0, 0x25c(r1)
 /* 80A819C0  D0 01 02 58 */	stfs f0, 0x258(r1)
-/* 80A819C4  80 A4 01 F4 */	lwz r5, 0x1f4(r4)	/* effective address: 80A834A0 */
-/* 80A819C8  80 04 01 F8 */	lwz r0, 0x1f8(r4)	/* effective address: 80A834A4 */
+/* 80A819C4  80 A4 01 F4 */	lwz r5, 0x1f4(r4)
+/* 80A819C8  80 04 01 F8 */	lwz r0, 0x1f8(r4)
 /* 80A819CC  90 A1 02 48 */	stw r5, 0x248(r1)
 /* 80A819D0  90 01 02 4C */	stw r0, 0x24c(r1)
-/* 80A819D4  80 04 01 FC */	lwz r0, 0x1fc(r4)	/* effective address: 80A834A8 */
+/* 80A819D4  80 04 01 FC */	lwz r0, 0x1fc(r4)
 /* 80A819D8  90 01 02 50 */	stw r0, 0x250(r1)
-/* 80A819DC  80 A4 02 00 */	lwz r5, 0x200(r4)	/* effective address: 80A834AC */
-/* 80A819E0  80 04 02 04 */	lwz r0, 0x204(r4)	/* effective address: 80A834B0 */
+/* 80A819DC  80 A4 02 00 */	lwz r5, 0x200(r4)
+/* 80A819E0  80 04 02 04 */	lwz r0, 0x204(r4)
 /* 80A819E4  90 A1 00 A0 */	stw r5, 0xa0(r1)
 /* 80A819E8  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 80A819EC  38 01 02 54 */	addi r0, r1, 0x254
 /* 80A819F0  90 01 00 A0 */	stw r0, 0xa0(r1)
 /* 80A819F4  38 01 02 48 */	addi r0, r1, 0x248
 /* 80A819F8  90 01 00 A4 */	stw r0, 0xa4(r1)
-/* 80A819FC  80 A4 02 08 */	lwz r5, 0x208(r4)	/* effective address: 80A834B4 */
-/* 80A81A00  80 04 02 0C */	lwz r0, 0x20c(r4)	/* effective address: 80A834B8 */
+/* 80A819FC  80 A4 02 08 */	lwz r5, 0x208(r4)
+/* 80A81A00  80 04 02 0C */	lwz r0, 0x20c(r4)
 /* 80A81A04  90 A1 02 3C */	stw r5, 0x23c(r1)
 /* 80A81A08  90 01 02 40 */	stw r0, 0x240(r1)
-/* 80A81A0C  80 04 02 10 */	lwz r0, 0x210(r4)	/* effective address: 80A834BC */
+/* 80A81A0C  80 04 02 10 */	lwz r0, 0x210(r4)
 /* 80A81A10  90 01 02 44 */	stw r0, 0x244(r1)
 /* 80A81A14  D0 01 02 40 */	stfs f0, 0x240(r1)
-/* 80A81A18  80 04 02 14 */	lwz r0, 0x214(r4)	/* effective address: 80A834C0 */
+/* 80A81A18  80 04 02 14 */	lwz r0, 0x214(r4)
 /* 80A81A1C  90 01 00 30 */	stw r0, 0x30(r1)
 /* 80A81A20  38 01 02 3C */	addi r0, r1, 0x23c
 /* 80A81A24  90 01 00 30 */	stw r0, 0x30(r1)
-/* 80A81A28  80 A4 02 18 */	lwz r5, 0x218(r4)	/* effective address: 80A834C4 */
-/* 80A81A2C  80 04 02 1C */	lwz r0, 0x21c(r4)	/* effective address: 80A834C8 */
+/* 80A81A28  80 A4 02 18 */	lwz r5, 0x218(r4)
+/* 80A81A2C  80 04 02 1C */	lwz r0, 0x21c(r4)
 /* 80A81A30  90 A1 02 30 */	stw r5, 0x230(r1)
 /* 80A81A34  90 01 02 34 */	stw r0, 0x234(r1)
-/* 80A81A38  80 04 02 20 */	lwz r0, 0x220(r4)	/* effective address: 80A834CC */
+/* 80A81A38  80 04 02 20 */	lwz r0, 0x220(r4)
 /* 80A81A3C  90 01 02 38 */	stw r0, 0x238(r1)
 /* 80A81A40  D0 01 02 34 */	stfs f0, 0x234(r1)
-/* 80A81A44  80 04 02 24 */	lwz r0, 0x224(r4)	/* effective address: 80A834D0 */
+/* 80A81A44  80 04 02 24 */	lwz r0, 0x224(r4)
 /* 80A81A48  90 01 00 2C */	stw r0, 0x2c(r1)
 /* 80A81A4C  38 01 02 30 */	addi r0, r1, 0x230
 /* 80A81A50  90 01 00 2C */	stw r0, 0x2c(r1)
-/* 80A81A54  80 A4 02 28 */	lwz r5, 0x228(r4)	/* effective address: 80A834D4 */
-/* 80A81A58  80 04 02 2C */	lwz r0, 0x22c(r4)	/* effective address: 80A834D8 */
+/* 80A81A54  80 A4 02 28 */	lwz r5, 0x228(r4)
+/* 80A81A58  80 04 02 2C */	lwz r0, 0x22c(r4)
 /* 80A81A5C  90 A1 02 24 */	stw r5, 0x224(r1)
 /* 80A81A60  90 01 02 28 */	stw r0, 0x228(r1)
-/* 80A81A64  80 04 02 30 */	lwz r0, 0x230(r4)	/* effective address: 80A834DC */
+/* 80A81A64  80 04 02 30 */	lwz r0, 0x230(r4)
 /* 80A81A68  90 01 02 2C */	stw r0, 0x22c(r1)
 /* 80A81A6C  D0 01 02 28 */	stfs f0, 0x228(r1)
-/* 80A81A70  80 A4 02 34 */	lwz r5, 0x234(r4)	/* effective address: 80A834E0 */
-/* 80A81A74  80 04 02 38 */	lwz r0, 0x238(r4)	/* effective address: 80A834E4 */
+/* 80A81A70  80 A4 02 34 */	lwz r5, 0x234(r4)
+/* 80A81A74  80 04 02 38 */	lwz r0, 0x238(r4)
 /* 80A81A78  90 A1 02 18 */	stw r5, 0x218(r1)
 /* 80A81A7C  90 01 02 1C */	stw r0, 0x21c(r1)
-/* 80A81A80  80 04 02 3C */	lwz r0, 0x23c(r4)	/* effective address: 80A834E8 */
+/* 80A81A80  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 80A81A84  90 01 02 20 */	stw r0, 0x220(r1)
-/* 80A81A88  80 A4 02 40 */	lwz r5, 0x240(r4)	/* effective address: 80A834EC */
-/* 80A81A8C  80 04 02 44 */	lwz r0, 0x244(r4)	/* effective address: 80A834F0 */
+/* 80A81A88  80 A4 02 40 */	lwz r5, 0x240(r4)
+/* 80A81A8C  80 04 02 44 */	lwz r0, 0x244(r4)
 /* 80A81A90  90 A1 00 98 */	stw r5, 0x98(r1)
 /* 80A81A94  90 01 00 9C */	stw r0, 0x9c(r1)
 /* 80A81A98  38 01 02 24 */	addi r0, r1, 0x224
 /* 80A81A9C  90 01 00 98 */	stw r0, 0x98(r1)
 /* 80A81AA0  38 01 02 18 */	addi r0, r1, 0x218
 /* 80A81AA4  90 01 00 9C */	stw r0, 0x9c(r1)
-/* 80A81AA8  80 A4 02 48 */	lwz r5, 0x248(r4)	/* effective address: 80A834F4 */
-/* 80A81AAC  80 04 02 4C */	lwz r0, 0x24c(r4)	/* effective address: 80A834F8 */
+/* 80A81AA8  80 A4 02 48 */	lwz r5, 0x248(r4)
+/* 80A81AAC  80 04 02 4C */	lwz r0, 0x24c(r4)
 /* 80A81AB0  90 A1 02 0C */	stw r5, 0x20c(r1)
 /* 80A81AB4  90 01 02 10 */	stw r0, 0x210(r1)
-/* 80A81AB8  80 04 02 50 */	lwz r0, 0x250(r4)	/* effective address: 80A834FC */
+/* 80A81AB8  80 04 02 50 */	lwz r0, 0x250(r4)
 /* 80A81ABC  90 01 02 14 */	stw r0, 0x214(r1)
 /* 80A81AC0  D0 01 02 10 */	stfs f0, 0x210(r1)
-/* 80A81AC4  80 04 02 54 */	lwz r0, 0x254(r4)	/* effective address: 80A83500 */
+/* 80A81AC4  80 04 02 54 */	lwz r0, 0x254(r4)
 /* 80A81AC8  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80A81ACC  38 01 02 0C */	addi r0, r1, 0x20c
 /* 80A81AD0  90 01 00 28 */	stw r0, 0x28(r1)
-/* 80A81AD4  80 A4 02 58 */	lwz r5, 0x258(r4)	/* effective address: 80A83504 */
-/* 80A81AD8  80 04 02 5C */	lwz r0, 0x25c(r4)	/* effective address: 80A83508 */
+/* 80A81AD4  80 A4 02 58 */	lwz r5, 0x258(r4)
+/* 80A81AD8  80 04 02 5C */	lwz r0, 0x25c(r4)
 /* 80A81ADC  90 A1 02 00 */	stw r5, 0x200(r1)
 /* 80A81AE0  90 01 02 04 */	stw r0, 0x204(r1)
-/* 80A81AE4  80 04 02 60 */	lwz r0, 0x260(r4)	/* effective address: 80A8350C */
+/* 80A81AE4  80 04 02 60 */	lwz r0, 0x260(r4)
 /* 80A81AE8  90 01 02 08 */	stw r0, 0x208(r1)
-/* 80A81AEC  80 A4 02 64 */	lwz r5, 0x264(r4)	/* effective address: 80A83510 */
-/* 80A81AF0  80 04 02 68 */	lwz r0, 0x268(r4)	/* effective address: 80A83514 */
+/* 80A81AEC  80 A4 02 64 */	lwz r5, 0x264(r4)
+/* 80A81AF0  80 04 02 68 */	lwz r0, 0x268(r4)
 /* 80A81AF4  90 A1 01 F4 */	stw r5, 0x1f4(r1)
 /* 80A81AF8  90 01 01 F8 */	stw r0, 0x1f8(r1)
-/* 80A81AFC  80 04 02 6C */	lwz r0, 0x26c(r4)	/* effective address: 80A83518 */
+/* 80A81AFC  80 04 02 6C */	lwz r0, 0x26c(r4)
 /* 80A81B00  90 01 01 FC */	stw r0, 0x1fc(r1)
-/* 80A81B04  80 A4 02 70 */	lwz r5, 0x270(r4)	/* effective address: 80A8351C */
-/* 80A81B08  80 04 02 74 */	lwz r0, 0x274(r4)	/* effective address: 80A83520 */
+/* 80A81B04  80 A4 02 70 */	lwz r5, 0x270(r4)
+/* 80A81B08  80 04 02 74 */	lwz r0, 0x274(r4)
 /* 80A81B0C  90 A1 00 90 */	stw r5, 0x90(r1)
 /* 80A81B10  90 01 00 94 */	stw r0, 0x94(r1)
 /* 80A81B14  38 01 02 00 */	addi r0, r1, 0x200
 /* 80A81B18  90 01 00 90 */	stw r0, 0x90(r1)
 /* 80A81B1C  38 01 01 F4 */	addi r0, r1, 0x1f4
 /* 80A81B20  90 01 00 94 */	stw r0, 0x94(r1)
-/* 80A81B24  80 A4 02 78 */	lwz r5, 0x278(r4)	/* effective address: 80A83524 */
-/* 80A81B28  80 04 02 7C */	lwz r0, 0x27c(r4)	/* effective address: 80A83528 */
+/* 80A81B24  80 A4 02 78 */	lwz r5, 0x278(r4)
+/* 80A81B28  80 04 02 7C */	lwz r0, 0x27c(r4)
 /* 80A81B2C  90 A1 01 E8 */	stw r5, 0x1e8(r1)
 /* 80A81B30  90 01 01 EC */	stw r0, 0x1ec(r1)
-/* 80A81B34  80 04 02 80 */	lwz r0, 0x280(r4)	/* effective address: 80A8352C */
+/* 80A81B34  80 04 02 80 */	lwz r0, 0x280(r4)
 /* 80A81B38  90 01 01 F0 */	stw r0, 0x1f0(r1)
 /* 80A81B3C  D0 01 01 EC */	stfs f0, 0x1ec(r1)
-/* 80A81B40  80 A4 02 84 */	lwz r5, 0x284(r4)	/* effective address: 80A83530 */
-/* 80A81B44  80 04 02 88 */	lwz r0, 0x288(r4)	/* effective address: 80A83534 */
+/* 80A81B40  80 A4 02 84 */	lwz r5, 0x284(r4)
+/* 80A81B44  80 04 02 88 */	lwz r0, 0x288(r4)
 /* 80A81B48  90 A1 01 DC */	stw r5, 0x1dc(r1)
 /* 80A81B4C  90 01 01 E0 */	stw r0, 0x1e0(r1)
-/* 80A81B50  80 04 02 8C */	lwz r0, 0x28c(r4)	/* effective address: 80A83538 */
+/* 80A81B50  80 04 02 8C */	lwz r0, 0x28c(r4)
 /* 80A81B54  90 01 01 E4 */	stw r0, 0x1e4(r1)
-/* 80A81B58  80 A4 02 90 */	lwz r5, 0x290(r4)	/* effective address: 80A8353C */
-/* 80A81B5C  80 04 02 94 */	lwz r0, 0x294(r4)	/* effective address: 80A83540 */
+/* 80A81B58  80 A4 02 90 */	lwz r5, 0x290(r4)
+/* 80A81B5C  80 04 02 94 */	lwz r0, 0x294(r4)
 /* 80A81B60  90 A1 00 88 */	stw r5, 0x88(r1)
 /* 80A81B64  90 01 00 8C */	stw r0, 0x8c(r1)
 /* 80A81B68  38 01 01 E8 */	addi r0, r1, 0x1e8
 /* 80A81B6C  90 01 00 88 */	stw r0, 0x88(r1)
 /* 80A81B70  38 01 01 DC */	addi r0, r1, 0x1dc
 /* 80A81B74  90 01 00 8C */	stw r0, 0x8c(r1)
-/* 80A81B78  80 A4 02 98 */	lwz r5, 0x298(r4)	/* effective address: 80A83544 */
-/* 80A81B7C  80 04 02 9C */	lwz r0, 0x29c(r4)	/* effective address: 80A83548 */
+/* 80A81B78  80 A4 02 98 */	lwz r5, 0x298(r4)
+/* 80A81B7C  80 04 02 9C */	lwz r0, 0x29c(r4)
 /* 80A81B80  90 A1 01 D0 */	stw r5, 0x1d0(r1)
 /* 80A81B84  90 01 01 D4 */	stw r0, 0x1d4(r1)
-/* 80A81B88  80 04 02 A0 */	lwz r0, 0x2a0(r4)	/* effective address: 80A8354C */
+/* 80A81B88  80 04 02 A0 */	lwz r0, 0x2a0(r4)
 /* 80A81B8C  90 01 01 D8 */	stw r0, 0x1d8(r1)
 /* 80A81B90  D0 01 01 D4 */	stfs f0, 0x1d4(r1)
-/* 80A81B94  80 04 02 A4 */	lwz r0, 0x2a4(r4)	/* effective address: 80A83550 */
+/* 80A81B94  80 04 02 A4 */	lwz r0, 0x2a4(r4)
 /* 80A81B98  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80A81B9C  38 01 01 D0 */	addi r0, r1, 0x1d0
 /* 80A81BA0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80A81BA4  80 A4 02 A8 */	lwz r5, 0x2a8(r4)	/* effective address: 80A83554 */
-/* 80A81BA8  80 04 02 AC */	lwz r0, 0x2ac(r4)	/* effective address: 80A83558 */
+/* 80A81BA4  80 A4 02 A8 */	lwz r5, 0x2a8(r4)
+/* 80A81BA8  80 04 02 AC */	lwz r0, 0x2ac(r4)
 /* 80A81BAC  90 A1 01 C4 */	stw r5, 0x1c4(r1)
 /* 80A81BB0  90 01 01 C8 */	stw r0, 0x1c8(r1)
-/* 80A81BB4  80 04 02 B0 */	lwz r0, 0x2b0(r4)	/* effective address: 80A8355C */
+/* 80A81BB4  80 04 02 B0 */	lwz r0, 0x2b0(r4)
 /* 80A81BB8  90 01 01 CC */	stw r0, 0x1cc(r1)
 /* 80A81BBC  D0 01 01 C8 */	stfs f0, 0x1c8(r1)
-/* 80A81BC0  80 A4 02 B4 */	lwz r5, 0x2b4(r4)	/* effective address: 80A83560 */
-/* 80A81BC4  80 04 02 B8 */	lwz r0, 0x2b8(r4)	/* effective address: 80A83564 */
+/* 80A81BC0  80 A4 02 B4 */	lwz r5, 0x2b4(r4)
+/* 80A81BC4  80 04 02 B8 */	lwz r0, 0x2b8(r4)
 /* 80A81BC8  90 A1 01 B8 */	stw r5, 0x1b8(r1)
 /* 80A81BCC  90 01 01 BC */	stw r0, 0x1bc(r1)
-/* 80A81BD0  80 04 02 BC */	lwz r0, 0x2bc(r4)	/* effective address: 80A83568 */
+/* 80A81BD0  80 04 02 BC */	lwz r0, 0x2bc(r4)
 /* 80A81BD4  90 01 01 C0 */	stw r0, 0x1c0(r1)
-/* 80A81BD8  80 A4 02 C0 */	lwz r5, 0x2c0(r4)	/* effective address: 80A8356C */
-/* 80A81BDC  80 04 02 C4 */	lwz r0, 0x2c4(r4)	/* effective address: 80A83570 */
+/* 80A81BD8  80 A4 02 C0 */	lwz r5, 0x2c0(r4)
+/* 80A81BDC  80 04 02 C4 */	lwz r0, 0x2c4(r4)
 /* 80A81BE0  90 A1 00 80 */	stw r5, 0x80(r1)
 /* 80A81BE4  90 01 00 84 */	stw r0, 0x84(r1)
 /* 80A81BE8  38 01 01 C4 */	addi r0, r1, 0x1c4
 /* 80A81BEC  90 01 00 80 */	stw r0, 0x80(r1)
 /* 80A81BF0  38 01 01 B8 */	addi r0, r1, 0x1b8
 /* 80A81BF4  90 01 00 84 */	stw r0, 0x84(r1)
-/* 80A81BF8  80 A4 02 C8 */	lwz r5, 0x2c8(r4)	/* effective address: 80A83574 */
-/* 80A81BFC  80 04 02 CC */	lwz r0, 0x2cc(r4)	/* effective address: 80A83578 */
+/* 80A81BF8  80 A4 02 C8 */	lwz r5, 0x2c8(r4)
+/* 80A81BFC  80 04 02 CC */	lwz r0, 0x2cc(r4)
 /* 80A81C00  90 A1 01 AC */	stw r5, 0x1ac(r1)
 /* 80A81C04  90 01 01 B0 */	stw r0, 0x1b0(r1)
-/* 80A81C08  80 04 02 D0 */	lwz r0, 0x2d0(r4)	/* effective address: 80A8357C */
+/* 80A81C08  80 04 02 D0 */	lwz r0, 0x2d0(r4)
 /* 80A81C0C  90 01 01 B4 */	stw r0, 0x1b4(r1)
 /* 80A81C10  D0 01 01 B0 */	stfs f0, 0x1b0(r1)
-/* 80A81C14  80 A4 02 D4 */	lwz r5, 0x2d4(r4)	/* effective address: 80A83580 */
-/* 80A81C18  80 04 02 D8 */	lwz r0, 0x2d8(r4)	/* effective address: 80A83584 */
+/* 80A81C14  80 A4 02 D4 */	lwz r5, 0x2d4(r4)
+/* 80A81C18  80 04 02 D8 */	lwz r0, 0x2d8(r4)
 /* 80A81C1C  90 A1 01 A0 */	stw r5, 0x1a0(r1)
 /* 80A81C20  90 01 01 A4 */	stw r0, 0x1a4(r1)
-/* 80A81C24  80 04 02 DC */	lwz r0, 0x2dc(r4)	/* effective address: 80A83588 */
+/* 80A81C24  80 04 02 DC */	lwz r0, 0x2dc(r4)
 /* 80A81C28  90 01 01 A8 */	stw r0, 0x1a8(r1)
-/* 80A81C2C  80 A4 02 E0 */	lwz r5, 0x2e0(r4)	/* effective address: 80A8358C */
-/* 80A81C30  80 04 02 E4 */	lwz r0, 0x2e4(r4)	/* effective address: 80A83590 */
+/* 80A81C2C  80 A4 02 E0 */	lwz r5, 0x2e0(r4)
+/* 80A81C30  80 04 02 E4 */	lwz r0, 0x2e4(r4)
 /* 80A81C34  90 A1 00 78 */	stw r5, 0x78(r1)
 /* 80A81C38  90 01 00 7C */	stw r0, 0x7c(r1)
 /* 80A81C3C  38 01 01 AC */	addi r0, r1, 0x1ac
 /* 80A81C40  90 01 00 78 */	stw r0, 0x78(r1)
 /* 80A81C44  38 01 01 A0 */	addi r0, r1, 0x1a0
 /* 80A81C48  90 01 00 7C */	stw r0, 0x7c(r1)
-/* 80A81C4C  80 A4 02 E8 */	lwz r5, 0x2e8(r4)	/* effective address: 80A83594 */
-/* 80A81C50  80 04 02 EC */	lwz r0, 0x2ec(r4)	/* effective address: 80A83598 */
+/* 80A81C4C  80 A4 02 E8 */	lwz r5, 0x2e8(r4)
+/* 80A81C50  80 04 02 EC */	lwz r0, 0x2ec(r4)
 /* 80A81C54  90 A1 01 94 */	stw r5, 0x194(r1)
 /* 80A81C58  90 01 01 98 */	stw r0, 0x198(r1)
-/* 80A81C5C  80 04 02 F0 */	lwz r0, 0x2f0(r4)	/* effective address: 80A8359C */
+/* 80A81C5C  80 04 02 F0 */	lwz r0, 0x2f0(r4)
 /* 80A81C60  90 01 01 9C */	stw r0, 0x19c(r1)
 /* 80A81C64  D0 01 01 98 */	stfs f0, 0x198(r1)
-/* 80A81C68  80 A4 02 F4 */	lwz r5, 0x2f4(r4)	/* effective address: 80A835A0 */
-/* 80A81C6C  80 04 02 F8 */	lwz r0, 0x2f8(r4)	/* effective address: 80A835A4 */
+/* 80A81C68  80 A4 02 F4 */	lwz r5, 0x2f4(r4)
+/* 80A81C6C  80 04 02 F8 */	lwz r0, 0x2f8(r4)
 /* 80A81C70  90 A1 01 88 */	stw r5, 0x188(r1)
 /* 80A81C74  90 01 01 8C */	stw r0, 0x18c(r1)
-/* 80A81C78  80 04 02 FC */	lwz r0, 0x2fc(r4)	/* effective address: 80A835A8 */
+/* 80A81C78  80 04 02 FC */	lwz r0, 0x2fc(r4)
 /* 80A81C7C  90 01 01 90 */	stw r0, 0x190(r1)
-/* 80A81C80  80 A4 03 00 */	lwz r5, 0x300(r4)	/* effective address: 80A835AC */
-/* 80A81C84  80 04 03 04 */	lwz r0, 0x304(r4)	/* effective address: 80A835B0 */
+/* 80A81C80  80 A4 03 00 */	lwz r5, 0x300(r4)
+/* 80A81C84  80 04 03 04 */	lwz r0, 0x304(r4)
 /* 80A81C88  90 A1 00 70 */	stw r5, 0x70(r1)
 /* 80A81C8C  90 01 00 74 */	stw r0, 0x74(r1)
 /* 80A81C90  38 01 01 94 */	addi r0, r1, 0x194
 /* 80A81C94  90 01 00 70 */	stw r0, 0x70(r1)
 /* 80A81C98  38 01 01 88 */	addi r0, r1, 0x188
 /* 80A81C9C  90 01 00 74 */	stw r0, 0x74(r1)
-/* 80A81CA0  80 A4 03 08 */	lwz r5, 0x308(r4)	/* effective address: 80A835B4 */
-/* 80A81CA4  80 04 03 0C */	lwz r0, 0x30c(r4)	/* effective address: 80A835B8 */
+/* 80A81CA0  80 A4 03 08 */	lwz r5, 0x308(r4)
+/* 80A81CA4  80 04 03 0C */	lwz r0, 0x30c(r4)
 /* 80A81CA8  90 A1 01 7C */	stw r5, 0x17c(r1)
 /* 80A81CAC  90 01 01 80 */	stw r0, 0x180(r1)
-/* 80A81CB0  80 04 03 10 */	lwz r0, 0x310(r4)	/* effective address: 80A835BC */
+/* 80A81CB0  80 04 03 10 */	lwz r0, 0x310(r4)
 /* 80A81CB4  90 01 01 84 */	stw r0, 0x184(r1)
 /* 80A81CB8  D0 01 01 80 */	stfs f0, 0x180(r1)
-/* 80A81CBC  80 04 03 14 */	lwz r0, 0x314(r4)	/* effective address: 80A835C0 */
+/* 80A81CBC  80 04 03 14 */	lwz r0, 0x314(r4)
 /* 80A81CC0  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80A81CC4  38 01 01 7C */	addi r0, r1, 0x17c
 /* 80A81CC8  90 01 00 20 */	stw r0, 0x20(r1)
-/* 80A81CCC  80 A4 03 18 */	lwz r5, 0x318(r4)	/* effective address: 80A835C4 */
-/* 80A81CD0  80 04 03 1C */	lwz r0, 0x31c(r4)	/* effective address: 80A835C8 */
+/* 80A81CCC  80 A4 03 18 */	lwz r5, 0x318(r4)
+/* 80A81CD0  80 04 03 1C */	lwz r0, 0x31c(r4)
 /* 80A81CD4  90 A1 01 70 */	stw r5, 0x170(r1)
 /* 80A81CD8  90 01 01 74 */	stw r0, 0x174(r1)
-/* 80A81CDC  80 04 03 20 */	lwz r0, 0x320(r4)	/* effective address: 80A835CC */
+/* 80A81CDC  80 04 03 20 */	lwz r0, 0x320(r4)
 /* 80A81CE0  90 01 01 78 */	stw r0, 0x178(r1)
 /* 80A81CE4  D0 01 01 74 */	stfs f0, 0x174(r1)
-/* 80A81CE8  80 A4 03 24 */	lwz r5, 0x324(r4)	/* effective address: 80A835D0 */
-/* 80A81CEC  80 04 03 28 */	lwz r0, 0x328(r4)	/* effective address: 80A835D4 */
+/* 80A81CE8  80 A4 03 24 */	lwz r5, 0x324(r4)
+/* 80A81CEC  80 04 03 28 */	lwz r0, 0x328(r4)
 /* 80A81CF0  90 A1 01 64 */	stw r5, 0x164(r1)
 /* 80A81CF4  90 01 01 68 */	stw r0, 0x168(r1)
-/* 80A81CF8  80 04 03 2C */	lwz r0, 0x32c(r4)	/* effective address: 80A835D8 */
+/* 80A81CF8  80 04 03 2C */	lwz r0, 0x32c(r4)
 /* 80A81CFC  90 01 01 6C */	stw r0, 0x16c(r1)
-/* 80A81D00  80 A4 03 30 */	lwz r5, 0x330(r4)	/* effective address: 80A835DC */
-/* 80A81D04  80 04 03 34 */	lwz r0, 0x334(r4)	/* effective address: 80A835E0 */
+/* 80A81D00  80 A4 03 30 */	lwz r5, 0x330(r4)
+/* 80A81D04  80 04 03 34 */	lwz r0, 0x334(r4)
 /* 80A81D08  90 A1 00 68 */	stw r5, 0x68(r1)
 /* 80A81D0C  90 01 00 6C */	stw r0, 0x6c(r1)
 /* 80A81D10  38 01 01 70 */	addi r0, r1, 0x170
 /* 80A81D14  90 01 00 68 */	stw r0, 0x68(r1)
 /* 80A81D18  38 01 01 64 */	addi r0, r1, 0x164
 /* 80A81D1C  90 01 00 6C */	stw r0, 0x6c(r1)
-/* 80A81D20  80 A4 03 38 */	lwz r5, 0x338(r4)	/* effective address: 80A835E4 */
-/* 80A81D24  80 04 03 3C */	lwz r0, 0x33c(r4)	/* effective address: 80A835E8 */
+/* 80A81D20  80 A4 03 38 */	lwz r5, 0x338(r4)
+/* 80A81D24  80 04 03 3C */	lwz r0, 0x33c(r4)
 /* 80A81D28  90 A1 01 58 */	stw r5, 0x158(r1)
 /* 80A81D2C  90 01 01 5C */	stw r0, 0x15c(r1)
-/* 80A81D30  80 04 03 40 */	lwz r0, 0x340(r4)	/* effective address: 80A835EC */
+/* 80A81D30  80 04 03 40 */	lwz r0, 0x340(r4)
 /* 80A81D34  90 01 01 60 */	stw r0, 0x160(r1)
 /* 80A81D38  D0 01 01 5C */	stfs f0, 0x15c(r1)
-/* 80A81D3C  80 A4 03 44 */	lwz r5, 0x344(r4)	/* effective address: 80A835F0 */
-/* 80A81D40  80 04 03 48 */	lwz r0, 0x348(r4)	/* effective address: 80A835F4 */
+/* 80A81D3C  80 A4 03 44 */	lwz r5, 0x344(r4)
+/* 80A81D40  80 04 03 48 */	lwz r0, 0x348(r4)
 /* 80A81D44  90 A1 01 4C */	stw r5, 0x14c(r1)
 /* 80A81D48  90 01 01 50 */	stw r0, 0x150(r1)
-/* 80A81D4C  80 04 03 4C */	lwz r0, 0x34c(r4)	/* effective address: 80A835F8 */
+/* 80A81D4C  80 04 03 4C */	lwz r0, 0x34c(r4)
 /* 80A81D50  90 01 01 54 */	stw r0, 0x154(r1)
-/* 80A81D54  80 A4 03 50 */	lwz r5, 0x350(r4)	/* effective address: 80A835FC */
-/* 80A81D58  80 04 03 54 */	lwz r0, 0x354(r4)	/* effective address: 80A83600 */
+/* 80A81D54  80 A4 03 50 */	lwz r5, 0x350(r4)
+/* 80A81D58  80 04 03 54 */	lwz r0, 0x354(r4)
 /* 80A81D5C  90 A1 00 60 */	stw r5, 0x60(r1)
 /* 80A81D60  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80A81D64  38 01 01 58 */	addi r0, r1, 0x158
 /* 80A81D68  90 01 00 60 */	stw r0, 0x60(r1)
 /* 80A81D6C  38 01 01 4C */	addi r0, r1, 0x14c
 /* 80A81D70  90 01 00 64 */	stw r0, 0x64(r1)
-/* 80A81D74  80 A4 03 58 */	lwz r5, 0x358(r4)	/* effective address: 80A83604 */
-/* 80A81D78  80 04 03 5C */	lwz r0, 0x35c(r4)	/* effective address: 80A83608 */
+/* 80A81D74  80 A4 03 58 */	lwz r5, 0x358(r4)
+/* 80A81D78  80 04 03 5C */	lwz r0, 0x35c(r4)
 /* 80A81D7C  90 A1 01 40 */	stw r5, 0x140(r1)
 /* 80A81D80  90 01 01 44 */	stw r0, 0x144(r1)
-/* 80A81D84  80 04 03 60 */	lwz r0, 0x360(r4)	/* effective address: 80A8360C */
+/* 80A81D84  80 04 03 60 */	lwz r0, 0x360(r4)
 /* 80A81D88  90 01 01 48 */	stw r0, 0x148(r1)
 /* 80A81D8C  D0 01 01 44 */	stfs f0, 0x144(r1)
-/* 80A81D90  80 04 03 64 */	lwz r0, 0x364(r4)	/* effective address: 80A83610 */
+/* 80A81D90  80 04 03 64 */	lwz r0, 0x364(r4)
 /* 80A81D94  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 80A81D98  38 01 01 40 */	addi r0, r1, 0x140
 /* 80A81D9C  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80A81DA0  80 A4 03 68 */	lwz r5, 0x368(r4)	/* effective address: 80A83614 */
-/* 80A81DA4  80 04 03 6C */	lwz r0, 0x36c(r4)	/* effective address: 80A83618 */
+/* 80A81DA0  80 A4 03 68 */	lwz r5, 0x368(r4)
+/* 80A81DA4  80 04 03 6C */	lwz r0, 0x36c(r4)
 /* 80A81DA8  90 A1 01 34 */	stw r5, 0x134(r1)
 /* 80A81DAC  90 01 01 38 */	stw r0, 0x138(r1)
-/* 80A81DB0  80 04 03 70 */	lwz r0, 0x370(r4)	/* effective address: 80A8361C */
+/* 80A81DB0  80 04 03 70 */	lwz r0, 0x370(r4)
 /* 80A81DB4  90 01 01 3C */	stw r0, 0x13c(r1)
 /* 80A81DB8  D0 01 01 38 */	stfs f0, 0x138(r1)
-/* 80A81DBC  80 04 03 74 */	lwz r0, 0x374(r4)	/* effective address: 80A83620 */
+/* 80A81DBC  80 04 03 74 */	lwz r0, 0x374(r4)
 /* 80A81DC0  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A81DC4  38 01 01 34 */	addi r0, r1, 0x134
 /* 80A81DC8  90 01 00 18 */	stw r0, 0x18(r1)
-/* 80A81DCC  80 A4 03 78 */	lwz r5, 0x378(r4)	/* effective address: 80A83624 */
-/* 80A81DD0  80 04 03 7C */	lwz r0, 0x37c(r4)	/* effective address: 80A83628 */
+/* 80A81DCC  80 A4 03 78 */	lwz r5, 0x378(r4)
+/* 80A81DD0  80 04 03 7C */	lwz r0, 0x37c(r4)
 /* 80A81DD4  90 A1 01 28 */	stw r5, 0x128(r1)
 /* 80A81DD8  90 01 01 2C */	stw r0, 0x12c(r1)
-/* 80A81DDC  80 04 03 80 */	lwz r0, 0x380(r4)	/* effective address: 80A8362C */
+/* 80A81DDC  80 04 03 80 */	lwz r0, 0x380(r4)
 /* 80A81DE0  90 01 01 30 */	stw r0, 0x130(r1)
-/* 80A81DE4  80 A4 03 84 */	lwz r5, 0x384(r4)	/* effective address: 80A83630 */
-/* 80A81DE8  80 04 03 88 */	lwz r0, 0x388(r4)	/* effective address: 80A83634 */
+/* 80A81DE4  80 A4 03 84 */	lwz r5, 0x384(r4)
+/* 80A81DE8  80 04 03 88 */	lwz r0, 0x388(r4)
 /* 80A81DEC  90 A1 01 1C */	stw r5, 0x11c(r1)
 /* 80A81DF0  90 01 01 20 */	stw r0, 0x120(r1)
-/* 80A81DF4  80 04 03 8C */	lwz r0, 0x38c(r4)	/* effective address: 80A83638 */
+/* 80A81DF4  80 04 03 8C */	lwz r0, 0x38c(r4)
 /* 80A81DF8  90 01 01 24 */	stw r0, 0x124(r1)
-/* 80A81DFC  80 A4 03 90 */	lwz r5, 0x390(r4)	/* effective address: 80A8363C */
-/* 80A81E00  80 04 03 94 */	lwz r0, 0x394(r4)	/* effective address: 80A83640 */
+/* 80A81DFC  80 A4 03 90 */	lwz r5, 0x390(r4)
+/* 80A81E00  80 04 03 94 */	lwz r0, 0x394(r4)
 /* 80A81E04  90 A1 00 58 */	stw r5, 0x58(r1)
 /* 80A81E08  90 01 00 5C */	stw r0, 0x5c(r1)
 /* 80A81E0C  38 01 01 28 */	addi r0, r1, 0x128
 /* 80A81E10  90 01 00 58 */	stw r0, 0x58(r1)
 /* 80A81E14  38 01 01 1C */	addi r0, r1, 0x11c
 /* 80A81E18  90 01 00 5C */	stw r0, 0x5c(r1)
-/* 80A81E1C  80 A4 03 98 */	lwz r5, 0x398(r4)	/* effective address: 80A83644 */
-/* 80A81E20  80 04 03 9C */	lwz r0, 0x39c(r4)	/* effective address: 80A83648 */
+/* 80A81E1C  80 A4 03 98 */	lwz r5, 0x398(r4)
+/* 80A81E20  80 04 03 9C */	lwz r0, 0x39c(r4)
 /* 80A81E24  90 A1 01 10 */	stw r5, 0x110(r1)
 /* 80A81E28  90 01 01 14 */	stw r0, 0x114(r1)
-/* 80A81E2C  80 04 03 A0 */	lwz r0, 0x3a0(r4)	/* effective address: 80A8364C */
+/* 80A81E2C  80 04 03 A0 */	lwz r0, 0x3a0(r4)
 /* 80A81E30  90 01 01 18 */	stw r0, 0x118(r1)
-/* 80A81E34  80 A4 03 A4 */	lwz r5, 0x3a4(r4)	/* effective address: 80A83650 */
-/* 80A81E38  80 04 03 A8 */	lwz r0, 0x3a8(r4)	/* effective address: 80A83654 */
+/* 80A81E34  80 A4 03 A4 */	lwz r5, 0x3a4(r4)
+/* 80A81E38  80 04 03 A8 */	lwz r0, 0x3a8(r4)
 /* 80A81E3C  90 A1 01 04 */	stw r5, 0x104(r1)
 /* 80A81E40  90 01 01 08 */	stw r0, 0x108(r1)
-/* 80A81E44  80 04 03 AC */	lwz r0, 0x3ac(r4)	/* effective address: 80A83658 */
+/* 80A81E44  80 04 03 AC */	lwz r0, 0x3ac(r4)
 /* 80A81E48  90 01 01 0C */	stw r0, 0x10c(r1)
-/* 80A81E4C  80 A4 03 B0 */	lwz r5, 0x3b0(r4)	/* effective address: 80A8365C */
-/* 80A81E50  80 04 03 B4 */	lwz r0, 0x3b4(r4)	/* effective address: 80A83660 */
+/* 80A81E4C  80 A4 03 B0 */	lwz r5, 0x3b0(r4)
+/* 80A81E50  80 04 03 B4 */	lwz r0, 0x3b4(r4)
 /* 80A81E54  90 A1 00 50 */	stw r5, 0x50(r1)
 /* 80A81E58  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80A81E5C  38 01 01 10 */	addi r0, r1, 0x110
 /* 80A81E60  90 01 00 50 */	stw r0, 0x50(r1)
 /* 80A81E64  38 01 01 04 */	addi r0, r1, 0x104
 /* 80A81E68  90 01 00 54 */	stw r0, 0x54(r1)
-/* 80A81E6C  80 A4 03 B8 */	lwz r5, 0x3b8(r4)	/* effective address: 80A83664 */
-/* 80A81E70  80 04 03 BC */	lwz r0, 0x3bc(r4)	/* effective address: 80A83668 */
+/* 80A81E6C  80 A4 03 B8 */	lwz r5, 0x3b8(r4)
+/* 80A81E70  80 04 03 BC */	lwz r0, 0x3bc(r4)
 /* 80A81E74  90 A1 00 F8 */	stw r5, 0xf8(r1)
 /* 80A81E78  90 01 00 FC */	stw r0, 0xfc(r1)
-/* 80A81E7C  80 04 03 C0 */	lwz r0, 0x3c0(r4)	/* effective address: 80A8366C */
+/* 80A81E7C  80 04 03 C0 */	lwz r0, 0x3c0(r4)
 /* 80A81E80  90 01 01 00 */	stw r0, 0x100(r1)
-/* 80A81E84  80 04 03 C4 */	lwz r0, 0x3c4(r4)	/* effective address: 80A83670 */
+/* 80A81E84  80 04 03 C4 */	lwz r0, 0x3c4(r4)
 /* 80A81E88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A81E8C  38 01 00 F8 */	addi r0, r1, 0xf8
 /* 80A81E90  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A81E94  80 A4 03 C8 */	lwz r5, 0x3c8(r4)	/* effective address: 80A83674 */
-/* 80A81E98  80 04 03 CC */	lwz r0, 0x3cc(r4)	/* effective address: 80A83678 */
+/* 80A81E94  80 A4 03 C8 */	lwz r5, 0x3c8(r4)
+/* 80A81E98  80 04 03 CC */	lwz r0, 0x3cc(r4)
 /* 80A81E9C  90 A1 00 EC */	stw r5, 0xec(r1)
 /* 80A81EA0  90 01 00 F0 */	stw r0, 0xf0(r1)
-/* 80A81EA4  80 04 03 D0 */	lwz r0, 0x3d0(r4)	/* effective address: 80A8367C */
+/* 80A81EA4  80 04 03 D0 */	lwz r0, 0x3d0(r4)
 /* 80A81EA8  90 01 00 F4 */	stw r0, 0xf4(r1)
 /* 80A81EAC  D0 01 00 F0 */	stfs f0, 0xf0(r1)
-/* 80A81EB0  80 A4 03 D4 */	lwz r5, 0x3d4(r4)	/* effective address: 80A83680 */
-/* 80A81EB4  80 04 03 D8 */	lwz r0, 0x3d8(r4)	/* effective address: 80A83684 */
+/* 80A81EB0  80 A4 03 D4 */	lwz r5, 0x3d4(r4)
+/* 80A81EB4  80 04 03 D8 */	lwz r0, 0x3d8(r4)
 /* 80A81EB8  90 A1 00 E0 */	stw r5, 0xe0(r1)
 /* 80A81EBC  90 01 00 E4 */	stw r0, 0xe4(r1)
-/* 80A81EC0  80 04 03 DC */	lwz r0, 0x3dc(r4)	/* effective address: 80A83688 */
+/* 80A81EC0  80 04 03 DC */	lwz r0, 0x3dc(r4)
 /* 80A81EC4  90 01 00 E8 */	stw r0, 0xe8(r1)
-/* 80A81EC8  80 A4 03 E0 */	lwz r5, 0x3e0(r4)	/* effective address: 80A8368C */
-/* 80A81ECC  80 04 03 E4 */	lwz r0, 0x3e4(r4)	/* effective address: 80A83690 */
+/* 80A81EC8  80 A4 03 E0 */	lwz r5, 0x3e0(r4)
+/* 80A81ECC  80 04 03 E4 */	lwz r0, 0x3e4(r4)
 /* 80A81ED0  90 A1 00 48 */	stw r5, 0x48(r1)
 /* 80A81ED4  90 01 00 4C */	stw r0, 0x4c(r1)
 /* 80A81ED8  38 01 00 EC */	addi r0, r1, 0xec
 /* 80A81EDC  90 01 00 48 */	stw r0, 0x48(r1)
 /* 80A81EE0  38 01 00 E0 */	addi r0, r1, 0xe0
 /* 80A81EE4  90 01 00 4C */	stw r0, 0x4c(r1)
-/* 80A81EE8  80 A4 03 E8 */	lwz r5, 0x3e8(r4)	/* effective address: 80A83694 */
-/* 80A81EEC  80 04 03 EC */	lwz r0, 0x3ec(r4)	/* effective address: 80A83698 */
+/* 80A81EE8  80 A4 03 E8 */	lwz r5, 0x3e8(r4)
+/* 80A81EEC  80 04 03 EC */	lwz r0, 0x3ec(r4)
 /* 80A81EF0  90 A1 00 D4 */	stw r5, 0xd4(r1)
 /* 80A81EF4  90 01 00 D8 */	stw r0, 0xd8(r1)
-/* 80A81EF8  80 04 03 F0 */	lwz r0, 0x3f0(r4)	/* effective address: 80A8369C */
+/* 80A81EF8  80 04 03 F0 */	lwz r0, 0x3f0(r4)
 /* 80A81EFC  90 01 00 DC */	stw r0, 0xdc(r1)
-/* 80A81F00  80 A4 03 F4 */	lwz r5, 0x3f4(r4)	/* effective address: 80A836A0 */
-/* 80A81F04  80 04 03 F8 */	lwz r0, 0x3f8(r4)	/* effective address: 80A836A4 */
+/* 80A81F00  80 A4 03 F4 */	lwz r5, 0x3f4(r4)
+/* 80A81F04  80 04 03 F8 */	lwz r0, 0x3f8(r4)
 /* 80A81F08  90 A1 00 40 */	stw r5, 0x40(r1)
 /* 80A81F0C  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80A81F10  38 01 00 D4 */	addi r0, r1, 0xd4
 /* 80A81F14  90 01 00 40 */	stw r0, 0x40(r1)
-/* 80A81F18  80 A4 03 FC */	lwz r5, 0x3fc(r4)	/* effective address: 80A836A8 */
-/* 80A81F1C  80 04 04 00 */	lwz r0, 0x400(r4)	/* effective address: 80A836AC */
+/* 80A81F18  80 A4 03 FC */	lwz r5, 0x3fc(r4)
+/* 80A81F1C  80 04 04 00 */	lwz r0, 0x400(r4)
 /* 80A81F20  90 A1 00 C8 */	stw r5, 0xc8(r1)
 /* 80A81F24  90 01 00 CC */	stw r0, 0xcc(r1)
-/* 80A81F28  80 04 04 04 */	lwz r0, 0x404(r4)	/* effective address: 80A836B0 */
+/* 80A81F28  80 04 04 04 */	lwz r0, 0x404(r4)
 /* 80A81F2C  90 01 00 D0 */	stw r0, 0xd0(r1)
 /* 80A81F30  D0 01 00 CC */	stfs f0, 0xcc(r1)
-/* 80A81F34  80 04 04 08 */	lwz r0, 0x408(r4)	/* effective address: 80A836B4 */
+/* 80A81F34  80 04 04 08 */	lwz r0, 0x408(r4)
 /* 80A81F38  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A81F3C  38 01 00 C8 */	addi r0, r1, 0xc8
 /* 80A81F40  90 01 00 10 */	stw r0, 0x10(r1)
-/* 80A81F44  80 A4 04 0C */	lwz r5, 0x40c(r4)	/* effective address: 80A836B8 */
-/* 80A81F48  80 04 04 10 */	lwz r0, 0x410(r4)	/* effective address: 80A836BC */
+/* 80A81F44  80 A4 04 0C */	lwz r5, 0x40c(r4)
+/* 80A81F48  80 04 04 10 */	lwz r0, 0x410(r4)
 /* 80A81F4C  90 A1 00 BC */	stw r5, 0xbc(r1)
 /* 80A81F50  90 01 00 C0 */	stw r0, 0xc0(r1)
-/* 80A81F54  80 04 04 14 */	lwz r0, 0x414(r4)	/* effective address: 80A836C0 */
+/* 80A81F54  80 04 04 14 */	lwz r0, 0x414(r4)
 /* 80A81F58  90 01 00 C4 */	stw r0, 0xc4(r1)
-/* 80A81F5C  80 04 04 18 */	lwz r0, 0x418(r4)	/* effective address: 80A836C4 */
+/* 80A81F5C  80 04 04 18 */	lwz r0, 0x418(r4)
 /* 80A81F60  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80A81F64  38 01 00 BC */	addi r0, r1, 0xbc
 /* 80A81F68  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A81F6C  80 A4 04 1C */	lwz r5, 0x41c(r4)	/* effective address: 80A836C8 */
-/* 80A81F70  80 04 04 20 */	lwz r0, 0x420(r4)	/* effective address: 80A836CC */
+/* 80A81F6C  80 A4 04 1C */	lwz r5, 0x41c(r4)
+/* 80A81F70  80 04 04 20 */	lwz r0, 0x420(r4)
 /* 80A81F74  90 A1 00 B0 */	stw r5, 0xb0(r1)
 /* 80A81F78  90 01 00 B4 */	stw r0, 0xb4(r1)
-/* 80A81F7C  80 04 04 24 */	lwz r0, 0x424(r4)	/* effective address: 80A836D0 */
+/* 80A81F7C  80 04 04 24 */	lwz r0, 0x424(r4)
 /* 80A81F80  90 01 00 B8 */	stw r0, 0xb8(r1)
 /* 80A81F84  D0 01 00 B4 */	stfs f0, 0xb4(r1)
-/* 80A81F88  80 04 04 28 */	lwz r0, 0x428(r4)	/* effective address: 80A836D4 */
+/* 80A81F88  80 04 04 28 */	lwz r0, 0x428(r4)
 /* 80A81F8C  90 01 00 08 */	stw r0, 8(r1)
 /* 80A81F90  38 01 00 B0 */	addi r0, r1, 0xb0
 /* 80A81F94  90 01 00 08 */	stw r0, 8(r1)
@@ -445,8 +445,8 @@ lbl_80A818B4:
 /* 80A81FA0  38 00 00 15 */	li r0, 0x15
 /* 80A81FA4  7C 09 03 A6 */	mtctr r0
 lbl_80A81FA8:
-/* 80A81FA8  80 85 00 04 */	lwz r4, 4(r5)	/* effective address: 80A836D8 */
-/* 80A81FAC  84 05 00 08 */	lwzu r0, 8(r5)	/* effective address: 80A836DC */
+/* 80A81FA8  80 85 00 04 */	lwz r4, 4(r5)
+/* 80A81FAC  84 05 00 08 */	lwzu r0, 8(r5)
 /* 80A81FB0  90 86 00 04 */	stw r4, 4(r6)
 /* 80A81FB4  94 06 00 08 */	stwu r0, 8(r6)
 /* 80A81FB8  42 00 FF F0 */	bdnz lbl_80A81FA8

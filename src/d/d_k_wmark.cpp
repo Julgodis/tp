@@ -48,10 +48,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct cBgS_PolyInfo {
+struct cM3dGPla {
 };
 
-struct cM3dGPla {
+struct cBgS_PolyInfo {
 };
 
 struct cBgS {
@@ -308,25 +308,25 @@ asm static void dkWmark_Draw(dkWmark_c* param_0) {
 /* ############################################################################################## */
 /* 803C3430-803C3444 0014+00 s=1 e=0 z=0  None .data      l_dkWmark_Method                                             */
 SECTION_DATA static void* l_dkWmark_Method[5] = {
-	/* 0    */ (void*)dkWmark_Create__FP12kankyo_class,
-	/* 1    */ (void*)dkWmark_Delete__FP9dkWmark_c,
-	/* 2    */ (void*)dkWmark_Execute__FP9dkWmark_c,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)dkWmark_Draw__FP9dkWmark_c,
+	(void*)dkWmark_Create__FP12kankyo_class,
+	(void*)dkWmark_Delete__FP9dkWmark_c,
+	(void*)dkWmark_Execute__FP9dkWmark_c,
+	(void*)NULL,
+	(void*)dkWmark_Draw__FP9dkWmark_c,
 };
 
-/* 803C3444-803C3470 0028+04 s=0 e=0 z=1  None .data      g_profile_WMARK                                              */
+/* 803C3444-803C3470 0028+04 s=0 e=0 z=0  None .data      g_profile_WMARK                                              */
 SECTION_DATA void* g_profile_WMARK[10 + 1 /* padding */] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0009FFFD,
-	/* 2    */ (void*)0x03030000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000498,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopKy_Method,
-	/* 8    */ (void*)0x02F80000,
-	/* 9    */ (void*)&l_dkWmark_Method,
+	(void*)0xFFFFFFFD,
+	(void*)0x0009FFFD,
+	(void*)0x03030000,
+	(void*)&g_fpcLf_Method,
+	(void*)0x00000498,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopKy_Method,
+	(void*)0x02F80000,
+	(void*)&l_dkWmark_Method,
 	/* padding */
 	NULL,
 };

@@ -21,12 +21,12 @@ lbl_806D9D84:
 /* 806D9D8C  B0 1E 06 58 */	sth r0, 0x658(r30)
 /* 806D9D90  38 00 00 1E */	li r0, 0x1e
 /* 806D9D94  B0 1E 06 7E */	sth r0, 0x67e(r30)
-/* 806D9D98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806D9D9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 806D9D98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806D9D9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 806D9DA0  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 806D9DA4  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
 /* 806D9DA8  38 84 72 88 */	addi r4, r4, saveBitLabels__16dSv_event_flag_c@l
-/* 806D9DAC  A0 84 05 40 */	lhz r4, 0x540(r4)	/* effective address: 803A77C8 */
+/* 806D9DAC  A0 84 05 40 */	lhz r4, 0x540(r4)
 /* 806D9DB0  4B 95 AB DC */	b onEventBit__11dSv_event_cFUs
 lbl_806D9DB4:
 /* 806D9DB4  38 7E 05 2C */	addi r3, r30, 0x52c

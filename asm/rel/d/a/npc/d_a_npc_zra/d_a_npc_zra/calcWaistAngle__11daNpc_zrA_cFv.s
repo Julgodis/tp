@@ -12,7 +12,7 @@ lbl_80B8204C:
 /* 80B82074  38 80 00 00 */	li r4, 0
 /* 80B82078  3C A0 80 B9 */	lis r5, m__17daNpc_zrA_Param_c@ha
 /* 80B8207C  3B C5 C4 58 */	addi r30, r5, m__17daNpc_zrA_Param_c@l
-/* 80B82080  A8 1E 00 74 */	lha r0, 0x74(r30)	/* effective address: 80B8C4CC */
+/* 80B82080  A8 1E 00 74 */	lha r0, 0x74(r30)
 /* 80B82084  7C 00 0E 70 */	srawi r0, r0, 1
 /* 80B82088  7C 00 01 94 */	addze r0, r0
 /* 80B8208C  7C 05 07 34 */	extsh r5, r0
@@ -50,7 +50,7 @@ lbl_80B820D0:
 /* 80B82108  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80B8210C  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B82110  3B C3 C4 58 */	addi r30, r3, m__17daNpc_zrA_Param_c@l
-/* 80B82114  C0 1E 00 8C */	lfs f0, 0x8c(r30)	/* effective address: 80B8C4E4 */
+/* 80B82114  C0 1E 00 8C */	lfs f0, 0x8c(r30)
 /* 80B82118  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80B8211C  38 61 00 08 */	addi r3, r1, 8
 /* 80B82120  4B 48 AD EC */	b ZXYrotS__14mDoMtx_stack_cFRC5csXyz
@@ -68,7 +68,7 @@ lbl_80B820D0:
 /* 80B82150  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80B82154  3C 60 80 B9 */	lis r3, m__17daNpc_zrA_Param_c@ha
 /* 80B82158  38 63 C4 58 */	addi r3, r3, m__17daNpc_zrA_Param_c@l
-/* 80B8215C  C0 03 00 90 */	lfs f0, 0x90(r3)	/* effective address: 80B8C4E8 */
+/* 80B8215C  C0 03 00 90 */	lfs f0, 0x90(r3)
 /* 80B82160  D0 01 00 30 */	stfs f0, 0x30(r1)
 /* 80B82164  38 7F 04 DC */	addi r3, r31, 0x4dc
 /* 80B82168  4B 48 AD A4 */	b ZXYrotS__14mDoMtx_stack_cFRC5csXyz

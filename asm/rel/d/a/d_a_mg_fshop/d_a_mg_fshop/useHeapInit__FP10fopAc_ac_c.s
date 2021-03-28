@@ -27,8 +27,8 @@ lbl_8086ECC8:
 /* 8086ED2C  4B 9F 8C A8 */	b cM_initRnd2__Fiii
 /* 8086ED30  3A 80 00 00 */	li r20, 0
 /* 8086ED34  3A 20 00 00 */	li r17, 0
-/* 8086ED38  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086ED3C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8086ED38  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086ED3C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8086ED40  3F A3 00 02 */	addis r29, r3, 2
 /* 8086ED44  3B BD C2 F8 */	addi r29, r29, -15624
 /* 8086ED48  C3 5F 01 40 */	lfs f26, 0x140(r31)
@@ -573,8 +573,8 @@ lbl_8086F4FC:
 /* 8086F50C  2C 19 00 06 */	cmpwi r25, 6
 /* 8086F510  3A 52 00 04 */	addi r18, r18, 4
 /* 8086F514  41 80 FF 94 */	blt lbl_8086F4A8
-/* 8086F518  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8086F51C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8086F518  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8086F51C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8086F520  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 8086F524  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F47F@ha */
 /* 8086F528  38 84 F4 7F */	addi r4, r4, 0xF47F /* 0x0000F47F@l */

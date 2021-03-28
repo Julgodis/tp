@@ -109,32 +109,32 @@ lbl_80B234C8:
 /* 80B234CC  28 00 00 01 */	cmplwi r0, 1
 /* 80B234D0  40 82 00 34 */	bne lbl_80B23504
 /* 80B234D4  38 7E 0B 98 */	addi r3, r30, 0xb98
-/* 80B234D8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B234DC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B234E0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B234D8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B234DC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B234E0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B234E4  4B 62 21 FC */	b entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c
-/* 80B234E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B234EC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B234E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B234EC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B234F0  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80B234F4  4B 51 EF 74 */	b reset__14dEvt_control_cFv
 /* 80B234F8  38 00 00 03 */	li r0, 3
 /* 80B234FC  B0 1E 0E 22 */	sth r0, 0xe22(r30)
 /* 80B23500  48 00 00 3C */	b lbl_80B2353C
 lbl_80B23504:
-/* 80B23504  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B23508  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80B2350C  80 A4 5D AC */	lwz r5, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B23504  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B23508  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80B2350C  80 A4 5D AC */	lwz r5, 0x5dac(r4)
 /* 80B23510  38 00 00 03 */	li r0, 3
 /* 80B23514  B0 05 06 04 */	sth r0, 0x604(r5)
 /* 80B23518  38 60 00 00 */	li r3, 0
 /* 80B2351C  90 65 06 0C */	stw r3, 0x60c(r5)
-/* 80B23520  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B23520  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B23524  38 00 00 06 */	li r0, 6
-/* 80B23528  90 04 06 14 */	stw r0, 0x614(r4)	/* effective address: 804067D4 */
-/* 80B2352C  90 64 06 0C */	stw r3, 0x60c(r4)	/* effective address: 804067CC */
+/* 80B23528  90 04 06 14 */	stw r0, 0x614(r4)
+/* 80B2352C  90 64 06 0C */	stw r3, 0x60c(r4)
 /* 80B23530  38 00 00 01 */	li r0, 1
-/* 80B23534  90 04 06 10 */	stw r0, 0x610(r4)	/* effective address: 804067D0 */
-/* 80B23538  B0 64 06 0A */	sth r3, 0x60a(r4)	/* effective address: 804067CA */
+/* 80B23534  90 04 06 10 */	stw r0, 0x610(r4)
+/* 80B23538  B0 64 06 0A */	sth r3, 0x60a(r4)
 lbl_80B2353C:
 /* 80B2353C  80 1E 0C E0 */	lwz r0, 0xce0(r30)
 /* 80B23540  2C 00 00 01 */	cmpwi r0, 1

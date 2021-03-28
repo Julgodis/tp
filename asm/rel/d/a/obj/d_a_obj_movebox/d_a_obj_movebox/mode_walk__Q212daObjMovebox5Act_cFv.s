@@ -11,7 +11,7 @@ lbl_8047F8F4:
 /* 8047F918  3B C3 18 88 */	addi r30, r3, lit_1109@l
 /* 8047F91C  3C 60 80 48 */	lis r3, M_lin5__Q212daObjMovebox5Bgc_c@ha
 /* 8047F920  3B E3 0F 28 */	addi r31, r3, M_lin5__Q212daObjMovebox5Bgc_c@l
-/* 8047F924  88 1E 12 FC */	lbz r0, 0x12fc(r30)	/* effective address: 80482B84 */
+/* 8047F924  88 1E 12 FC */	lbz r0, 0x12fc(r30)
 /* 8047F928  7C 00 07 75 */	extsb. r0, r0
 /* 8047F92C  40 82 00 E8 */	bne lbl_8047FA14
 /* 8047F930  C0 3F 01 C0 */	lfs f1, 0x1c0(r31)
@@ -142,11 +142,11 @@ lbl_8047FA14:
 /* 8047FB20  4B B8 D2 7C */	b transM__14mDoMtx_stack_cFfff
 /* 8047FB24  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8047FB28  38 63 D4 70 */	addi r3, r3, now__14mDoMtx_stack_c@l
-/* 8047FB2C  C0 23 00 0C */	lfs f1, 0xc(r3)	/* effective address: 803DD47C */
+/* 8047FB2C  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 8047FB30  D0 21 00 38 */	stfs f1, 0x38(r1)
-/* 8047FB34  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 803DD48C */
+/* 8047FB34  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8047FB38  D0 01 00 3C */	stfs f0, 0x3c(r1)
-/* 8047FB3C  C0 03 00 2C */	lfs f0, 0x2c(r3)	/* effective address: 803DD49C */
+/* 8047FB3C  C0 03 00 2C */	lfs f0, 0x2c(r3)
 /* 8047FB40  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 8047FB44  D0 3C 04 D0 */	stfs f1, 0x4d0(r28)
 /* 8047FB48  D0 1C 04 D8 */	stfs f0, 0x4d8(r28)
@@ -233,12 +233,12 @@ lbl_8047FC68:
 /* 8047FC74  38 03 FF FF */	addi r0, r3, -1
 /* 8047FC78  90 1C 08 DC */	stw r0, 0x8dc(r28)
 lbl_8047FC7C:
-/* 8047FC7C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047FC80  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8047FC84  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8047FC88  80 03 05 70 */	lwz r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8047FC7C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047FC80  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8047FC84  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8047FC88  80 03 05 70 */	lwz r0, 0x570(r3)
 /* 8047FC8C  54 00 05 66 */	rlwinm r0, r0, 0, 0x15, 0x13
-/* 8047FC90  90 03 05 70 */	stw r0, 0x570(r3)	/* effective address: 80406730 */
+/* 8047FC90  90 03 05 70 */	stw r0, 0x570(r3)
 /* 8047FC94  7F 83 E3 78 */	mr r3, r28
 /* 8047FC98  4B FF F9 9D */	bl mode_wait_init__Q212daObjMovebox5Act_cFv
 lbl_8047FC9C:

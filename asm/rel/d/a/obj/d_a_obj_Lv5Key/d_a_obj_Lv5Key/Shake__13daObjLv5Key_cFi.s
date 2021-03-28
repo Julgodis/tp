@@ -70,11 +70,11 @@ lbl_80B9C318:
 /* 80B9C368  41 81 00 34 */	bgt lbl_80B9C39C
 /* 80B9C36C  3C 60 80 BA */	lis r3, lit_3947@ha
 /* 80B9C370  38 83 C9 F4 */	addi r4, r3, lit_3947@l
-/* 80B9C374  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B9C9F4 */
-/* 80B9C378  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B9C9F8 */
+/* 80B9C374  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B9C378  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B9C37C  90 61 00 08 */	stw r3, 8(r1)
 /* 80B9C380  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B9C384  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B9C9FC */
+/* 80B9C384  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B9C388  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B9C38C  7F E3 FB 78 */	mr r3, r31
 /* 80B9C390  38 81 00 08 */	addi r4, r1, 8

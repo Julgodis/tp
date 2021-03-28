@@ -43,8 +43,8 @@ lbl_80576B78:
 /* 80576C1C  4B CF 15 B8 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80576C20  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80576C24  41 82 00 18 */	beq lbl_80576C3C
-/* 80576C28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80576C2C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80576C28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80576C2C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80576C30  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80576C34  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80576C38  4B AF D6 18 */	b Release__4cBgSFP9dBgW_Base

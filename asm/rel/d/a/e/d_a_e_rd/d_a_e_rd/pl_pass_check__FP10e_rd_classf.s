@@ -22,7 +22,7 @@ lbl_80505CD4:
 /* 80505D24  D0 01 00 28 */	stfs f0, 0x28(r1)
 /* 80505D28  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80505D2C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80505D30  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80505D30  80 63 00 00 */	lwz r3, 0(r3)
 /* 80505D34  A8 1F 04 E6 */	lha r0, 0x4e6(r31)
 /* 80505D38  7C 00 00 D0 */	neg r0, r0
 /* 80505D3C  7C 04 07 34 */	extsh r4, r0

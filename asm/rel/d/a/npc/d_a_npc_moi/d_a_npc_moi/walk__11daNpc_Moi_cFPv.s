@@ -53,8 +53,8 @@ lbl_80A78EB8:
 /* 80A78EC8  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80A78ECC  28 04 00 FF */	cmplwi r4, 0xff
 /* 80A78ED0  41 82 00 40 */	beq lbl_80A78F10
-/* 80A78ED4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A78ED8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A78ED4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A78ED8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A78EDC  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80A78EE0  7C 05 07 74 */	extsb r5, r0
 /* 80A78EE4  4B 5B C4 7C */	b isSwitch__10dSv_info_cCFii

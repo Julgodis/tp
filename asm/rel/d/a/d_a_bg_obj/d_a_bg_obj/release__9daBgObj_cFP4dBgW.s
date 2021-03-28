@@ -9,8 +9,8 @@ lbl_80459B64:
 /* 80459B80  4B E0 E6 54 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80459B84  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80459B88  41 82 00 18 */	beq lbl_80459BA0
-/* 80459B8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80459B90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80459B8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80459B90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80459B94  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80459B98  7F E4 FB 78 */	mr r4, r31
 /* 80459B9C  4B C1 A6 B4 */	b Release__4cBgSFP9dBgW_Base

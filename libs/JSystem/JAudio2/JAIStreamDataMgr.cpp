@@ -44,19 +44,19 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C9A08-803C9A1C 0014+00 s=1 e=1 z=0  None .data      __vt__16JAIStreamAramMgr                                     */
 SECTION_DATA void* __vt__16JAIStreamAramMgr[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)__dt__16JAIStreamAramMgrFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16JAIStreamAramMgrFv,
 };
 
 /* 803C9A1C-803C9A30 0010+04 s=1 e=2 z=0  None .data      __vt__16JAIStreamDataMgr                                     */
 SECTION_DATA void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)__dt__16JAIStreamDataMgrFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16JAIStreamDataMgrFv,
 	/* padding */
 	NULL,
 };

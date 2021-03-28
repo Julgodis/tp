@@ -10,7 +10,7 @@ lbl_8046BD60:
 /* 8046BD80  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 8046BD84  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 8046BD88  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 8046BD8C  80 03 12 9C */	lwz r0, 0x129c(r3)	/* effective address: 8042DCF0 */
+/* 8046BD8C  80 03 12 9C */	lwz r0, 0x129c(r3)
 /* 8046BD90  7C 04 00 00 */	cmpw r4, r0
 /* 8046BD94  40 81 00 08 */	ble lbl_8046BD9C
 /* 8046BD98  90 83 0E 80 */	stw r4, 0xe80(r3)

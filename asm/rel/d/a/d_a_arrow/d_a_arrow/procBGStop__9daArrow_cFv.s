@@ -8,8 +8,8 @@ lbl_8049CB70:
 /* 8049CB88  88 03 09 44 */	lbz r0, 0x944(r3)
 /* 8049CB8C  28 00 00 00 */	cmplwi r0, 0
 /* 8049CB90  40 82 00 24 */	bne lbl_8049CBB4
-/* 8049CB94  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049CB98  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049CB94  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049CB98  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049CB9C  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8049CBA0  7F C3 F3 78 */	mr r3, r30
 /* 8049CBA4  38 9C 05 80 */	addi r4, r28, 0x580

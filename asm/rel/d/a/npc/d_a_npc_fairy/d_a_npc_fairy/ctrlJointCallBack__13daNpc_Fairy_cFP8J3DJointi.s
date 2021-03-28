@@ -7,7 +7,7 @@ lbl_809B3094:
 /* 809B30A8  40 82 00 30 */	bne lbl_809B30D8
 /* 809B30AC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 809B30B0  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 809B30B4  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 809B30B4  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 809B30B8  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 809B30BC  28 03 00 00 */	cmplwi r3, 0
 /* 809B30C0  41 82 00 18 */	beq lbl_809B30D8

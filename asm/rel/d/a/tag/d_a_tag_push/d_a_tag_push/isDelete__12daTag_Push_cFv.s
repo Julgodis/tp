@@ -9,8 +9,8 @@ lbl_804906C4:
 /* 804906E0  54 04 C6 3E */	rlwinm r4, r0, 0x18, 0x18, 0x1f
 /* 804906E4  28 04 00 FF */	cmplwi r4, 0xff
 /* 804906E8  41 82 00 24 */	beq lbl_8049070C
-/* 804906EC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804906F0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804906EC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804906F0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804906F4  88 05 04 E2 */	lbz r0, 0x4e2(r5)
 /* 804906F8  7C 05 07 74 */	extsb r5, r0
 /* 804906FC  4B BA 4C 64 */	b isSwitch__10dSv_info_cCFii

@@ -19,9 +19,9 @@ lbl_8071D084:
 /* 8071D0C8  38 60 00 01 */	li r3, 1
 /* 8071D0CC  48 00 05 B0 */	b lbl_8071D67C
 lbl_8071D0D0:
-/* 8071D0D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8071D0D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8071D0D8  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8071D0D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8071D0D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8071D0D8  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 8071D0DC  A8 1D 05 DC */	lha r0, 0x5dc(r29)
 /* 8071D0E0  2C 00 00 01 */	cmpwi r0, 1
 /* 8071D0E4  41 82 01 04 */	beq lbl_8071D1E8
@@ -347,9 +347,9 @@ lbl_8071D54C:
 /* 8071D56C  B0 1D 05 DA */	sth r0, 0x5da(r29)
 /* 8071D570  38 00 00 00 */	li r0, 0
 /* 8071D574  B0 1D 05 DC */	sth r0, 0x5dc(r29)
-/* 8071D578  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8071D57C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8071D580  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8071D578  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8071D57C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8071D580  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8071D584  38 80 00 03 */	li r4, 3
 /* 8071D588  7F A5 EB 78 */	mr r5, r29
 /* 8071D58C  38 DD 04 D0 */	addi r6, r29, 0x4d0
@@ -368,12 +368,12 @@ lbl_8071D5B8:
 /* 8071D5BC  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 8071D5C0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8071D5C4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8071D5C8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8071D5C8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8071D5CC  A8 9D 04 DE */	lha r4, 0x4de(r29)
 /* 8071D5D0  4B 8E EE 0C */	b mDoMtx_YrotS__FPA4_fs
 /* 8071D5D4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8071D5D8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8071D5DC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8071D5DC  80 63 00 00 */	lwz r3, 0(r3)
 /* 8071D5E0  A8 9D 04 DC */	lha r4, 0x4dc(r29)
 /* 8071D5E4  4B 8E ED B8 */	b mDoMtx_XrotM__FPA4_fs
 /* 8071D5E8  C0 1F 00 00 */	lfs f0, 0(r31)

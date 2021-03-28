@@ -54,7 +54,7 @@ lbl_80CDC3F8:
 /* 80CDC440  90 01 00 08 */	stw r0, 8(r1)
 /* 80CDC444  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80CDC448  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80CDC44C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80CDC44C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80CDC450  38 81 00 08 */	addi r4, r1, 8
 /* 80CDC454  38 BE 05 38 */	addi r5, r30, 0x538
 /* 80CDC458  38 C0 00 00 */	li r6, 0

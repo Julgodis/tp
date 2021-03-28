@@ -13,8 +13,8 @@ lbl_80C44F80:
 /* 80C44FAC  A0 1E 00 F8 */	lhz r0, 0xf8(r30)
 /* 80C44FB0  28 00 00 06 */	cmplwi r0, 6
 /* 80C44FB4  41 82 00 3C */	beq lbl_80C44FF0
-/* 80C44FB8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C44FBC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C44FB8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C44FBC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C44FC0  38 63 5B 54 */	addi r3, r3, 0x5b54
 /* 80C44FC4  7F C4 F3 78 */	mr r4, r30
 /* 80C44FC8  38 A0 00 6A */	li r5, 0x6a

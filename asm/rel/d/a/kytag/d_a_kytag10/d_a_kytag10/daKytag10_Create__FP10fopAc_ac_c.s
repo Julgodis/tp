@@ -65,9 +65,9 @@ lbl_80529308:
 /* 80529330  7F C3 F3 78 */	mr r3, r30
 /* 80529334  4B FF F9 D9 */	bl set_path_info__FP10fopAc_ac_c
 /* 80529338  90 7E 05 68 */	stw r3, 0x568(r30)
-/* 8052933C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80529340  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80529344  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 8052933C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80529340  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80529344  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80529348  38 80 00 00 */	li r4, 0
 /* 8052934C  90 81 00 08 */	stw r4, 8(r1)
 /* 80529350  38 00 FF FF */	li r0, -1

@@ -11,9 +11,9 @@ lbl_806540BC:
 /* 806540E0  38 80 00 63 */	li r4, 0x63
 lbl_806540E4:
 /* 806540E4  98 9F 07 44 */	stb r4, 0x744(r31)
-/* 806540E8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806540EC  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 806540F0  83 BE 5D 30 */	lwz r29, 0x5d30(r30)	/* effective address: 8040BEF0 */
+/* 806540E8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806540EC  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 806540F0  83 BE 5D 30 */	lwz r29, 0x5d30(r30)
 /* 806540F4  54 9C 06 3E */	clrlwi r28, r4, 0x18
 /* 806540F8  38 00 00 0A */	li r0, 0xa
 /* 806540FC  7C 7C 03 D6 */	divw r3, r28, r0

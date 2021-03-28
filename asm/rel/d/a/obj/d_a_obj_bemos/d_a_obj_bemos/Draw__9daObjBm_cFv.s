@@ -17,14 +17,14 @@ lbl_80BB2AB0:
 /* 80BB2AEC  80 84 00 04 */	lwz r4, 4(r4)
 /* 80BB2AF0  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80BB2AF4  4B 5F 22 AC */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80BB2AF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB2AFC  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80BB2B00  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80BB2AF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB2AFC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BB2B00  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80BB2B04  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80BB2B08  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80BB2B0C  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80BB2B10  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80BB2B14  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80BB2B0C  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80BB2B10  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80BB2B14  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BB2B18  80 7E 0F B4 */	lwz r3, 0xfb4(r30)
 /* 80BB2B1C  83 A3 00 08 */	lwz r29, 8(r3)
 /* 80BB2B20  88 1E 0F F7 */	lbz r0, 0xff7(r30)
@@ -59,11 +59,11 @@ lbl_80BB2B38:
 /* 80BB2B90  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 80BB2B94  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 80BB2B98  90 1D 00 0C */	stw r0, 0xc(r29)
-/* 80BB2B9C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB2BA0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80BB2BA4  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80BB2B9C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB2BA0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80BB2BA4  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80BB2BA8  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80BB2BAC  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80BB2BAC  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80BB2BB0  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80BB2BB4  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 80BB2BB8  38 63 CA 54 */	addi r3, r3, g_env_light@l

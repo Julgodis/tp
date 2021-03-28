@@ -28,7 +28,7 @@ lbl_80BEB9AC:
 /* 80BEBA14  7C 66 1B 78 */	mr r6, r3
 /* 80BEBA18  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BEBA1C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BEBA20  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BEBA20  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BEBA24  38 81 00 08 */	addi r4, r1, 8
 /* 80BEBA28  38 BB 05 D0 */	addi r5, r27, 0x5d0
 /* 80BEBA2C  38 E0 00 00 */	li r7, 0

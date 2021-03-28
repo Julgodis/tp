@@ -30,9 +30,9 @@ lbl_80C9B60C:
 /* 80C9B67C  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 80C9B680  B0 1E 04 E8 */	sth r0, 0x4e8(r30)
 /* 80C9B684  38 7E 05 9C */	addi r3, r30, 0x59c
-/* 80C9B688  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80C9CD54 */
-/* 80C9B68C  C0 5F 00 0C */	lfs f2, 0xc(r31)	/* effective address: 80C9CD58 */
-/* 80C9B690  C0 7F 00 10 */	lfs f3, 0x10(r31)	/* effective address: 80C9CD5C */
+/* 80C9B688  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80C9B68C  C0 5F 00 0C */	lfs f2, 0xc(r31)
+/* 80C9B690  C0 7F 00 10 */	lfs f3, 0x10(r31)
 /* 80C9B694  4B 5D 43 A8 */	b cLib_addCalc2__FPffff
 /* 80C9B698  A8 1E 05 84 */	lha r0, 0x584(r30)
 /* 80C9B69C  2C 00 00 01 */	cmpwi r0, 1
@@ -64,7 +64,7 @@ lbl_80C9B6F8:
 /* 80C9B6FC  C0 3E 05 8C */	lfs f1, 0x58c(r30)
 /* 80C9B700  3C 60 80 CA */	lis r3, l_HIO@ha
 /* 80C9B704  38 63 CE B4 */	addi r3, r3, l_HIO@l
-/* 80C9B708  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80C9CEC4 */
+/* 80C9B708  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80C9B70C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80C9B710  FC 02 00 40 */	fcmpo cr0, f2, f0
 /* 80C9B714  40 80 01 64 */	bge lbl_80C9B878
@@ -80,9 +80,9 @@ lbl_80C9B6F8:
 /* 80C9B73C  D0 01 00 2C */	stfs f0, 0x2c(r1)
 /* 80C9B740  C0 1F 00 20 */	lfs f0, 0x20(r31)
 /* 80C9B744  D0 01 00 28 */	stfs f0, 0x28(r1)
-/* 80C9B748  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C9B74C  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80C9B750  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)	/* effective address: 8040BEFC */
+/* 80C9B748  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C9B74C  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80C9B750  80 7D 5D 3C */	lwz r3, 0x5d3c(r29)
 /* 80C9B754  38 80 00 00 */	li r4, 0
 /* 80C9B758  90 81 00 08 */	stw r4, 8(r1)
 /* 80C9B75C  38 00 FF FF */	li r0, -1
@@ -145,7 +145,7 @@ lbl_80C9B6F8:
 /* 80C9B840  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80C9B844  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C9B848  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C9B84C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C9B84C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C9B850  38 81 00 20 */	addi r4, r1, 0x20
 /* 80C9B854  3C A0 80 CA */	lis r5, c_pos@ha
 /* 80C9B858  38 A5 CE D4 */	addi r5, r5, c_pos@l

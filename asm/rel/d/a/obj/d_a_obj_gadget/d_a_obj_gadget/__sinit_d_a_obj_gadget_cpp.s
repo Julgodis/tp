@@ -11,10 +11,10 @@ lbl_80BF4864:
 /* 80BF4888  38 00 00 06 */	li r0, 6
 /* 80BF488C  7C 09 03 A6 */	mtctr r0
 lbl_80BF4890:
-/* 80BF4890  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BF4970 */
-/* 80BF4894  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BF4974 */
-/* 80BF4898  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BF4A64 */
-/* 80BF489C  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BF4A68 */
+/* 80BF4890  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BF4894  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80BF4898  90 65 00 04 */	stw r3, 4(r5)
+/* 80BF489C  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BF48A0  42 00 FF F0 */	bdnz lbl_80BF4890
 /* 80BF48A4  3C 60 80 BF */	lis r3, __vt__20daObj_Gadget_Param_c@ha
 /* 80BF48A8  38 03 4B 84 */	addi r0, r3, __vt__20daObj_Gadget_Param_c@l

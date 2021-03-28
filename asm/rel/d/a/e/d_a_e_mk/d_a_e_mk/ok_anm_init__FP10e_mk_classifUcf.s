@@ -14,8 +14,8 @@ lbl_80714228:
 /* 80714258  FF E0 10 90 */	fmr f31, f2
 /* 8071425C  3C 60 80 72 */	lis r3, stringBase0@ha
 /* 80714260  38 63 C7 E8 */	addi r3, r3, stringBase0@l
-/* 80714264  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80714268  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80714264  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80714268  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8071426C  3C A5 00 02 */	addis r5, r5, 2
 /* 80714270  38 C0 00 80 */	li r6, 0x80
 /* 80714274  38 A5 C2 F8 */	addi r5, r5, -15624

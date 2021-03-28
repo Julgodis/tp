@@ -17,9 +17,9 @@ lbl_805C4FB4:
 /* 805C4FF0  80 01 00 08 */	lwz r0, 8(r1)
 /* 805C4FF4  28 00 00 00 */	cmplwi r0, 0
 /* 805C4FF8  41 82 00 AC */	beq lbl_805C50A4
-/* 805C4FFC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805C5000  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805C5004  88 03 5D B0 */	lbz r0, 0x5db0(r3)	/* effective address: 8040BF70 */
+/* 805C4FFC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805C5000  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805C5004  88 03 5D B0 */	lbz r0, 0x5db0(r3)
 /* 805C5008  7C 00 07 74 */	extsb r0, r0
 /* 805C500C  1C 00 00 38 */	mulli r0, r0, 0x38
 /* 805C5010  7C 63 02 14 */	add r3, r3, r0
@@ -35,13 +35,13 @@ lbl_805C4FB4:
 /* 805C5038  4B A6 21 38 */	b dStage_changeScene__FifUlScsi
 /* 805C503C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805C5040  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805C5044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805C5044  80 63 00 00 */	lwz r3, 0(r3)
 /* 805C5048  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805C504C  4B CE A8 38 */	b subBgmStop__8Z2SeqMgrFv
 /* 805C5050  38 00 00 01 */	li r0, 1
 /* 805C5054  3C 60 80 43 */	lis r3, g_env_light@ha
 /* 805C5058  38 63 CA 54 */	addi r3, r3, g_env_light@l
-/* 805C505C  98 03 12 CC */	stb r0, 0x12cc(r3)	/* effective address: 8042DD20 */
+/* 805C505C  98 03 12 CC */	stb r0, 0x12cc(r3)
 /* 805C5060  3C 60 80 45 */	lis r3, struct_80450C98+0x0@ha
 /* 805C5064  98 03 0C 98 */	stb r0, struct_80450C98+0x0@l(r3)
 /* 805C5068  38 60 00 00 */	li r3, 0

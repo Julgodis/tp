@@ -11,8 +11,8 @@ lbl_8045E31C:
 /* 8045E340  88 1F 05 84 */	lbz r0, 0x584(r31)
 /* 8045E344  28 00 00 00 */	cmplwi r0, 0
 /* 8045E348  41 82 00 20 */	beq lbl_8045E368
-/* 8045E34C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E350  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045E34C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E350  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045E354  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8045E358  80 9F 05 80 */	lwz r4, 0x580(r31)
 /* 8045E35C  4B C1 5E F4 */	b Release__4cBgSFP9dBgW_Base
@@ -25,8 +25,8 @@ lbl_8045E370:
 /* 8045E370  88 1F 05 84 */	lbz r0, 0x584(r31)
 /* 8045E374  28 00 00 00 */	cmplwi r0, 0
 /* 8045E378  40 82 00 24 */	bne lbl_8045E39C
-/* 8045E37C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E380  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045E37C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E380  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045E384  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8045E388  80 9F 05 80 */	lwz r4, 0x580(r31)
 /* 8045E38C  7F E5 FB 78 */	mr r5, r31
@@ -46,21 +46,21 @@ lbl_8045E39C:
 /* 8045E3C0  80 84 00 04 */	lwz r4, 4(r4)
 /* 8045E3C4  38 BF 01 0C */	addi r5, r31, 0x10c
 /* 8045E3C8  4B D4 69 D8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 8045E3CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E3D0  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 8045E3D4  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 8045E3CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E3D0  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8045E3D4  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 8045E3D8  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8045E3DC  3B C3 4A C8 */	addi r30, r3, j3dSys@l
-/* 8045E3E0  90 1E 00 48 */	stw r0, 0x48(r30)	/* effective address: 80434B10 */
-/* 8045E3E4  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 8045E3E8  90 1E 00 4C */	stw r0, 0x4c(r30)	/* effective address: 80434B14 */
+/* 8045E3E0  90 1E 00 48 */	stw r0, 0x48(r30)
+/* 8045E3E4  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 8045E3E8  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 8045E3EC  80 7F 05 7C */	lwz r3, 0x57c(r31)
 /* 8045E3F0  4B BA F8 D4 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 8045E3F4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045E3F8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8045E3FC  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8045E3F4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045E3F8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8045E3FC  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8045E400  90 1E 00 48 */	stw r0, 0x48(r30)
-/* 8045E404  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8045E404  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 8045E408  90 1E 00 4C */	stw r0, 0x4c(r30)
 /* 8045E40C  38 60 00 01 */	li r3, 1
 lbl_8045E410:

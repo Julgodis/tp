@@ -93,8 +93,8 @@ lbl_80661530:
 /* 80661534  38 A0 00 08 */	li r5, 8
 /* 80661538  38 C0 08 00 */	li r6, 0x800
 /* 8066153C  4B C0 F0 CC */	b cLib_addCalcAngleS2__FPssss
-/* 80661540  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80661544  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80661540  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80661544  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80661548  38 63 5B 6C */	addi r3, r3, 0x5b6c
 /* 8066154C  7F C4 F3 78 */	mr r4, r30
 /* 80661550  C0 3F 00 98 */	lfs f1, 0x98(r31)

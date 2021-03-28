@@ -36,7 +36,7 @@ lbl_80CC67B8:
 /* 80CC67B8  38 7F 05 A4 */	addi r3, r31, 0x5a4
 /* 80CC67BC  3C 80 80 CC */	lis r4, l_arcName@ha
 /* 80CC67C0  38 84 69 98 */	addi r4, r4, l_arcName@l
-/* 80CC67C4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CC6998 */
+/* 80CC67C4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CC67C8  4B 36 66 F4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80CC67CC  7C 7E 1B 78 */	mr r30, r3
 /* 80CC67D0  2C 1E 00 04 */	cmpwi r30, 4

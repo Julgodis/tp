@@ -7,9 +7,9 @@ lbl_8083FEB4:
 /* 8083FEC8  7C 7A 1B 78 */	mr r26, r3
 /* 8083FECC  7C 9B 23 78 */	mr r27, r4
 /* 8083FED0  4B FF FA DD */	bl setReinPosMoveInit__9daHorse_cFi
-/* 8083FED4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083FED8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8083FEDC  83 C3 5D B4 */	lwz r30, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 8083FED4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083FED8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8083FEDC  83 C3 5D B4 */	lwz r30, 0x5db4(r3)
 /* 8083FEE0  A8 1A 17 12 */	lha r0, 0x1712(r26)
 /* 8083FEE4  7C 00 00 D0 */	neg r0, r0
 /* 8083FEE8  1C 00 00 05 */	mulli r0, r0, 5

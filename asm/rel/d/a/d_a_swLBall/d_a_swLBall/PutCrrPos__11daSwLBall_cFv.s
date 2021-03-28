@@ -10,9 +10,9 @@ lbl_80D4F224:
 /* 80D4F244  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 80D4F248  54 00 27 BF */	rlwinm. r0, r0, 4, 0x1e, 0x1f
 /* 80D4F24C  40 82 01 E0 */	bne lbl_80D4F42C
-/* 80D4F250  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D4F254  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 80D4F258  83 DC 5D AC */	lwz r30, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 80D4F250  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D4F254  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 80D4F258  83 DC 5D AC */	lwz r30, 0x5dac(r28)
 /* 80D4F25C  38 7E 04 D0 */	addi r3, r30, 0x4d0
 /* 80D4F260  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80D4F264  4B 52 19 A0 */	b cLib_targetAngleY__FPC3VecPC3Vec

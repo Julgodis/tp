@@ -122,8 +122,8 @@ lbl_80AE2FFC:
 /* 80AE30B8  38 03 7F A4 */	addi r0, r3, tgHitCallBack__8daNpcT_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 80AE30BC  90 1D 0E E8 */	stw r0, 0xee8(r29)
 /* 80AE30C0  38 7D 06 8C */	addi r3, r29, 0x68c
-/* 80AE30C4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80AE30C8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80AE30C4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80AE30C8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80AE30CC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80AE30D0  4B 59 39 DC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80AE30D4  80 1D 07 68 */	lwz r0, 0x768(r29)

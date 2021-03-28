@@ -23,9 +23,9 @@ lbl_8057CA10:
 /* 8057CA24  40 82 00 58 */	bne lbl_8057CA7C
 /* 8057CA28  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 8057CA2C  7C 04 07 74 */	extsb r4, r0
-/* 8057CA30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057CA34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8057CA38  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 8057CA30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057CA34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8057CA38  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 8057CA3C  38 00 00 00 */	li r0, 0
 /* 8057CA40  90 01 00 08 */	stw r0, 8(r1)
 /* 8057CA44  90 81 00 0C */	stw r4, 0xc(r1)

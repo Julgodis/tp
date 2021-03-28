@@ -119,7 +119,7 @@ lbl_809B15B4:
 /* 809B15D0  38 00 FF FF */	li r0, -1
 /* 809B15D4  3C 60 80 9B */	lis r3, l_HIO@ha
 /* 809B15D8  38 63 19 F8 */	addi r3, r3, l_HIO@l
-/* 809B15DC  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 809B19FC */
+/* 809B15DC  98 03 00 04 */	stb r0, 4(r3)
 lbl_809B15E0:
 /* 809B15E0  38 00 00 00 */	li r0, 0
 /* 809B15E4  B0 1E 05 CE */	sth r0, 0x5ce(r30)

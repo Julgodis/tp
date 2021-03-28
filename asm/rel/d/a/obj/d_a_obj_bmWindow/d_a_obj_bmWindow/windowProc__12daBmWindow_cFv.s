@@ -9,7 +9,7 @@ lbl_80BB8930:
 /* 80BB894C  38 C3 98 0C */	addi r6, r3, cNullVec__6Z2Calc@l
 /* 80BB8950  3C 60 80 BC */	lis r3, data_80BB99D8@ha
 /* 80BB8954  38 A3 99 D8 */	addi r5, r3, data_80BB99D8@l
-/* 80BB8958  88 05 00 00 */	lbz r0, 0(r5)	/* effective address: 80BB99D8 */
+/* 80BB8958  88 05 00 00 */	lbz r0, 0(r5)
 /* 80BB895C  7C 00 07 75 */	extsb. r0, r0
 /* 80BB8960  40 82 00 58 */	bne lbl_80BB89B8
 /* 80BB8964  80 66 00 64 */	lwz r3, 0x64(r6)

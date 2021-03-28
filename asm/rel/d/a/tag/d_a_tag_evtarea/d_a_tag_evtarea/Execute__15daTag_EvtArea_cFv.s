@@ -56,14 +56,14 @@ lbl_8048C7CC:
 /* 8048C800  7C 60 00 78 */	andc r0, r3, r0
 /* 8048C804  2C 00 00 0F */	cmpwi r0, 0xf
 /* 8048C808  40 82 00 60 */	bne lbl_8048C868
-/* 8048C80C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8048C810  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 8048C814  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
-/* 8048C818  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 804004D0 */
+/* 8048C80C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8048C810  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 8048C814  80 7E 5D AC */	lwz r3, 0x5dac(r30)
+/* 8048C818  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8048C81C  D0 01 00 08 */	stfs f0, 8(r1)
-/* 8048C820  C0 03 04 D4 */	lfs f0, 0x4d4(r3)	/* effective address: 804004D4 */
+/* 8048C820  C0 03 04 D4 */	lfs f0, 0x4d4(r3)
 /* 8048C824  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 8048C828  C0 03 04 D8 */	lfs f0, 0x4d8(r3)	/* effective address: 804004D8 */
+/* 8048C828  C0 03 04 D8 */	lfs f0, 0x4d8(r3)
 /* 8048C82C  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 8048C830  7F E3 FB 78 */	mr r3, r31
 /* 8048C834  38 81 00 08 */	addi r4, r1, 8

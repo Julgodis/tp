@@ -19,7 +19,6 @@ extern void* const data_80690DC4[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_bs_cpp(); // 1
 
 // 
 // Declarations:

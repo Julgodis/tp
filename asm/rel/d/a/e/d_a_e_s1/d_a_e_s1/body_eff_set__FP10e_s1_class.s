@@ -7,9 +7,9 @@ lbl_8077F250:
 /* 8077F264  7C 7D 1B 78 */	mr r29, r3
 /* 8077F268  80 63 05 D4 */	lwz r3, 0x5d4(r3)
 /* 8077F26C  83 C3 00 04 */	lwz r30, 4(r3)
-/* 8077F270  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8077F274  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8077F278  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 8077F270  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8077F274  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8077F278  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 8077F27C  38 00 00 FF */	li r0, 0xff
 /* 8077F280  90 01 00 08 */	stw r0, 8(r1)
 /* 8077F284  38 80 00 00 */	li r4, 0

@@ -85,7 +85,7 @@ lbl_80C682E4:
 /* 80C68320  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80C68324  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C68328  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C6832C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C6832C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C68330  38 81 00 0C */	addi r4, r1, 0xc
 /* 80C68334  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80C68338  7F C6 F3 78 */	mr r6, r30
@@ -108,7 +108,7 @@ lbl_80C68358:
 /* 80C68378  90 01 00 08 */	stw r0, 8(r1)
 /* 80C6837C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C68380  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C68384  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C68384  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C68388  38 81 00 08 */	addi r4, r1, 8
 /* 80C6838C  38 BD 05 38 */	addi r5, r29, 0x538
 /* 80C68390  7F C6 F3 78 */	mr r6, r30

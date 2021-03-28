@@ -59,8 +59,8 @@ lbl_80D1D160:
 lbl_80D1D16C:
 /* 80D1D16C  3B 60 00 00 */	li r27, 0
 /* 80D1D170  3B E0 00 00 */	li r31, 0
-/* 80D1D174  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D1D178  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
+/* 80D1D174  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D1D178  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
 lbl_80D1D17C:
 /* 80D1D17C  A0 BC 00 00 */	lhz r5, 0(r28)
 /* 80D1D180  28 05 FF FF */	cmplwi r5, 0xffff

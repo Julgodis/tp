@@ -8,8 +8,8 @@ lbl_8071EF24:
 /* 8071EF3C  3C 60 80 72 */	lis r3, stringBase0@ha
 /* 8071EF40  38 63 F6 D8 */	addi r3, r3, stringBase0@l
 /* 8071EF44  38 80 00 2E */	li r4, 0x2e
-/* 8071EF48  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8071EF4C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8071EF48  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8071EF4C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8071EF50  3F E5 00 02 */	addis r31, r5, 2
 /* 8071EF54  3B FF C2 F8 */	addi r31, r31, -15624
 /* 8071EF58  7F E5 FB 78 */	mr r5, r31

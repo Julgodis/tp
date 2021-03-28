@@ -6,9 +6,9 @@ lbl_80BC6648:
 /* 80BC6658  F3 E1 00 38 */	psq_st f31, 56(r1), 0, 0 /* qr0 */
 /* 80BC665C  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80BC6660  FF E0 08 90 */	fmr f31, f1
-/* 80BC6664  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BC6668  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80BC666C  83 E4 5D AC */	lwz r31, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80BC6664  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BC6668  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80BC666C  83 E4 5D AC */	lwz r31, 0x5dac(r4)
 /* 80BC6670  80 A3 0C 18 */	lwz r5, 0xc18(r3)
 /* 80BC6674  38 61 00 08 */	addi r3, r1, 8
 /* 80BC6678  38 85 00 44 */	addi r4, r5, 0x44

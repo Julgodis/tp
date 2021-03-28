@@ -31,7 +31,7 @@ lbl_80968DA8:
 /* 80968DAC  3C 60 80 97 */	lis r3, l_arcNames@ha
 /* 80968DB0  38 83 CC 2C */	addi r4, r3, l_arcNames@l
 /* 80968DB4  38 7D 0D D0 */	addi r3, r29, 0xdd0
-/* 80968DB8  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8096CC2C */
+/* 80968DB8  80 84 00 00 */	lwz r4, 0(r4)
 /* 80968DBC  4B 6C 41 00 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80968DC0  7C 7E 1B 78 */	mr r30, r3
 /* 80968DC4  2C 1E 00 04 */	cmpwi r30, 4
@@ -95,8 +95,8 @@ lbl_80968E10:
 /* 80968EA0  39 5D 04 DC */	addi r10, r29, 0x4dc
 /* 80968EA4  4B 70 D3 A4 */	b Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz
 /* 80968EA8  38 7D 05 D0 */	addi r3, r29, 0x5d0
-/* 80968EAC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80968EB0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80968EAC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80968EB0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80968EB4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80968EB8  4B 70 DB F4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80968EBC  38 7D 07 A8 */	addi r3, r29, 0x7a8

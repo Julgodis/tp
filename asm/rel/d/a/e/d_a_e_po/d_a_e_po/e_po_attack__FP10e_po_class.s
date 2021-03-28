@@ -9,15 +9,15 @@ lbl_8074DC40:
 /* 8074DC5C  7C 7D 1B 78 */	mr r29, r3
 /* 8074DC60  3C 80 80 75 */	lis r4, lit_3917@ha
 /* 8074DC64  3B C4 76 FC */	addi r30, r4, lit_3917@l
-/* 8074DC68  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8074DC6C  3B E4 61 C0 */	addi r31, r4, struct_804061C0+0x0@l
-/* 8074DC70  83 9F 5D AC */	lwz r28, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8074DC68  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8074DC6C  3B E4 61 C0 */	addi r31, r4, g_dComIfG_gameInfo@l
+/* 8074DC70  83 9F 5D AC */	lwz r28, 0x5dac(r31)
 /* 8074DC74  80 83 05 D4 */	lwz r4, 0x5d4(r3)
 /* 8074DC78  C0 04 00 1C */	lfs f0, 0x1c(r4)
 /* 8074DC7C  FC 00 00 1E */	fctiwz f0, f0
 /* 8074DC80  D8 01 00 30 */	stfd f0, 0x30(r1)
 /* 8074DC84  83 61 00 34 */	lwz r27, 0x34(r1)
-/* 8074DC88  C3 FE 00 04 */	lfs f31, 4(r30)	/* effective address: 80757700 */
+/* 8074DC88  C3 FE 00 04 */	lfs f31, 4(r30)
 /* 8074DC8C  38 80 00 00 */	li r4, 0
 /* 8074DC90  4B FF E9 5D */	bl mArg0Check__FP10e_po_classs
 /* 8074DC94  2C 03 00 00 */	cmpwi r3, 0
@@ -63,7 +63,7 @@ lbl_8074DD14:
 /* 8074DD28  4B FF E9 39 */	bl anm_init__FP10e_po_classifUcf
 /* 8074DD2C  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074DD30  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074DD34  A8 03 00 34 */	lha r0, 0x34(r3)	/* effective address: 80757E90 */
+/* 8074DD34  A8 03 00 34 */	lha r0, 0x34(r3)
 /* 8074DD38  B0 1D 07 4A */	sth r0, 0x74a(r29)
 /* 8074DD3C  80 7D 05 B4 */	lwz r3, 0x5b4(r29)
 /* 8074DD40  38 03 00 01 */	addi r0, r3, 1
@@ -208,8 +208,8 @@ lbl_8074DF04:
 /* 8074DF3C  88 9D 05 BF */	lbz r4, 0x5bf(r29)
 /* 8074DF40  28 04 00 FF */	cmplwi r4, 0xff
 /* 8074DF44  41 82 02 04 */	beq lbl_8074E148
-/* 8074DF48  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8074DF4C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8074DF48  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8074DF4C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074DF50  88 1D 04 BA */	lbz r0, 0x4ba(r29)
 /* 8074DF54  7C 05 07 74 */	extsb r5, r0
 /* 8074DF58  4B 8E 72 A8 */	b onSwitch__10dSv_info_cFii
@@ -315,7 +315,7 @@ lbl_8074E0B0:
 lbl_8074E0C0:
 /* 8074E0C0  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 8074E0C4  38 63 7E 5C */	addi r3, r3, l_HIO@l
-/* 8074E0C8  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80757E74 */
+/* 8074E0C8  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 8074E0CC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8074E0D0  41 81 00 10 */	bgt lbl_8074E0E0
 /* 8074E0D4  88 1D 05 C1 */	lbz r0, 0x5c1(r29)
@@ -345,7 +345,7 @@ lbl_8074E0E4:
 /* 8074E12C  38 7D 07 D4 */	addi r3, r29, 0x7d4
 /* 8074E130  3C 80 80 75 */	lis r4, l_HIO@ha
 /* 8074E134  38 84 7E 5C */	addi r4, r4, l_HIO@l
-/* 8074E138  C0 24 00 14 */	lfs f1, 0x14(r4)	/* effective address: 80757E70 */
+/* 8074E138  C0 24 00 14 */	lfs f1, 0x14(r4)
 /* 8074E13C  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8074E140  C0 7E 00 54 */	lfs f3, 0x54(r30)
 /* 8074E144  4B B2 18 F8 */	b cLib_addCalc2__FPffff

@@ -15,12 +15,12 @@ lbl_807CFA74:
 /* 807CFAA8  40 82 00 B4 */	bne lbl_807CFB5C
 /* 807CFAAC  3C 60 80 7D */	lis r3, master_ns@ha
 /* 807CFAB0  38 83 23 78 */	addi r4, r3, master_ns@l
-/* 807CFAB4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807D2378 */
-/* 807CFAB8  C0 03 04 A8 */	lfs f0, 0x4a8(r3)	/* effective address: 807D04A8 */
+/* 807CFAB4  80 64 00 00 */	lwz r3, 0(r4)
+/* 807CFAB8  C0 03 04 A8 */	lfs f0, 0x4a8(r3)
 /* 807CFABC  D0 1E 04 D0 */	stfs f0, 0x4d0(r30)
-/* 807CFAC0  C0 03 04 AC */	lfs f0, 0x4ac(r3)	/* effective address: 807D04AC */
+/* 807CFAC0  C0 03 04 AC */	lfs f0, 0x4ac(r3)
 /* 807CFAC4  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
-/* 807CFAC8  C0 03 04 B0 */	lfs f0, 0x4b0(r3)	/* effective address: 807D04B0 */
+/* 807CFAC8  C0 03 04 B0 */	lfs f0, 0x4b0(r3)
 /* 807CFACC  D0 1E 04 D8 */	stfs f0, 0x4d8(r30)
 /* 807CFAD0  C0 1E 04 D0 */	lfs f0, 0x4d0(r30)
 /* 807CFAD4  D0 1E 04 BC */	stfs f0, 0x4bc(r30)
@@ -42,7 +42,7 @@ lbl_807CFA74:
 /* 807CFB14  D0 5E 04 FC */	stfs f2, 0x4fc(r30)
 /* 807CFB18  38 00 00 0A */	li r0, 0xa
 /* 807CFB1C  B0 1E 06 98 */	sth r0, 0x698(r30)
-/* 807CFB20  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 807D2378 */
+/* 807CFB20  80 64 00 00 */	lwz r3, 0(r4)
 /* 807CFB24  7C 1E 18 40 */	cmplw r30, r3
 /* 807CFB28  41 82 00 1C */	beq lbl_807CFB44
 /* 807CFB2C  C0 3F 00 28 */	lfs f1, 0x28(r31)

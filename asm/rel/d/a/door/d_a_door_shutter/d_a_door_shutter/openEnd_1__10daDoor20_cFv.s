@@ -13,7 +13,7 @@ lbl_804622AC:
 /* 804622D8  90 01 00 08 */	stw r0, 8(r1)
 /* 804622DC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 804622E0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 804622E4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 804622E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 804622E8  38 81 00 08 */	addi r4, r1, 8
 /* 804622EC  38 BF 05 E0 */	addi r5, r31, 0x5e0
 /* 804622F0  38 C0 00 00 */	li r6, 0

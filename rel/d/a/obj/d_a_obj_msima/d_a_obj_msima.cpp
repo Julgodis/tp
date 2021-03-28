@@ -104,10 +104,10 @@ struct dRes_control_c {
 struct dKy_tevstr_c {
 };
 
-struct _GXColor {
+struct dPa_levelEcallBack {
 };
 
-struct dPa_levelEcallBack {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -160,7 +160,7 @@ struct Z2SoundObjSimple {
 // 
 
 static void ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-static void daObj_Msima_Draw(obj_msima_class*); // 2
+void daObj_Msima_Draw(obj_msima_class*); // 2
 static void msima_start(obj_msima_class*); // 2
 static void msima_drop(obj_msima_class*); // 2
 static void msima_float(obj_msima_class*); // 2
@@ -168,14 +168,14 @@ static void action(obj_msima_class*); // 2
 static void chain_move(obj_msima_class*, ms_chain_s*, int); // 2
 static void chain_move2(obj_msima_class*, ms_chain_s*, int); // 2
 static void daObj_Msima_Execute(obj_msima_class*); // 2
-static bool daObj_Msima_IsDelete(obj_msima_class*); // 2
-static void daObj_Msima_Delete(obj_msima_class*); // 2
+bool daObj_Msima_IsDelete(obj_msima_class*); // 2
+void daObj_Msima_Delete(obj_msima_class*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daObj_Msima_Create(fopAc_ac_c*); // 2
+void daObj_Msima_Create(fopAc_ac_c*); // 2
 
 extern "C" void __ct__17daObj_Msima_HIO_cFv(); // 1
 extern "C" static void ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" static void daObj_Msima_Draw__FP15obj_msima_class(); // 1
+extern "C" void daObj_Msima_Draw__FP15obj_msima_class(); // 1
 extern "C" static void msima_start__FP15obj_msima_class(); // 1
 extern "C" static void msima_drop__FP15obj_msima_class(); // 1
 extern "C" void __dt__4cXyzFv(); // 1
@@ -184,17 +184,17 @@ extern "C" static void action__FP15obj_msima_class(); // 1
 extern "C" static void chain_move__FP15obj_msima_classP10ms_chain_si(); // 1
 extern "C" static void chain_move2__FP15obj_msima_classP10ms_chain_si(); // 1
 extern "C" static void daObj_Msima_Execute__FP15obj_msima_class(); // 1
-extern "C" static bool daObj_Msima_IsDelete__FP15obj_msima_class(); // 1
-extern "C" static void daObj_Msima_Delete__FP15obj_msima_class(); // 1
+extern "C" bool daObj_Msima_IsDelete__FP15obj_msima_class(); // 1
+extern "C" void daObj_Msima_Delete__FP15obj_msima_class(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daObj_Msima_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daObj_Msima_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__10ms_chain_sFv(); // 1
 extern "C" void __ct__10ms_chain_sFv(); // 1
 extern "C" void __dt__17daObj_Msima_HIO_cFv(); // 1
 extern "C" void __sinit_d_a_obj_msima_cpp(); // 1
-extern "C" extern u8 const lit_4177[8];
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daObj_Msima_Method[8];
 extern "C" extern void* g_profile_OBJ_MSIMA[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -334,23 +334,11 @@ extern "C" void _restgpr_24(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void _restgpr_26(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-extern "C" extern u8 struct_8040B16C[68];
-SECTION_BSS extern u8 data_8040BEFC[8];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040BF74[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
-extern "C" extern u8 sincosTable___5JMath[5444];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 struct_80450C98[4];
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -367,46 +355,46 @@ SECTION_RODATA static u32 const lit_3863 = 0x3F800000;
 /* 80C9CD50-80C9CD54 0004+00 s=1 e=0 z=0  None .rodata    @3864                                                        */
 SECTION_RODATA static u32 const lit_3864 = 0x44480000;
 
-/* 80C9CDF8-80C9CE18 0020+00 s=1 e=0 z=0  None .data      l_daObj_Msima_Method                                         */
-SECTION_DATA static void* l_daObj_Msima_Method[8] = {
-	/* 0    */ (void*)daObj_Msima_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daObj_Msima_Delete__FP15obj_msima_class,
-	/* 2    */ (void*)daObj_Msima_Execute__FP15obj_msima_class,
-	/* 3    */ (void*)daObj_Msima_IsDelete__FP15obj_msima_class,
-	/* 4    */ (void*)daObj_Msima_Draw__FP15obj_msima_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80C9CDF8-80C9CE18 0020+00 s=0 e=0 z=0  None .data      l_daObj_Msima_Method                                         */
+SECTION_DATA void* l_daObj_Msima_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80C9CE18-80C9CE48 0030+00 s=0 e=0 z=1  None .data      g_profile_OBJ_MSIMA                                          */
+/* 80C9CE18-80C9CE48 0030+00 s=0 e=0 z=0  None .data      g_profile_OBJ_MSIMA                                          */
 SECTION_DATA void* g_profile_OBJ_MSIMA[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x007B0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000008A4,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00330000,
-	/* 9    */ (void*)&l_daObj_Msima_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x007B0000,
+	(void*)NULL,
+	(void*)0x000008A4,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00330000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x000E0000,
 };
 
 /* 80C9CE48-80C9CE54 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C9CE54-80C9CE60 000C+00 s=2 e=0 z=0  None .data      __vt__17daObj_Msima_HIO_c                                    */
 SECTION_DATA static void* __vt__17daObj_Msima_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17daObj_Msima_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80C9B40C-80C9B44C 0040+00 s=1 e=0 z=0  None .text      __ct__17daObj_Msima_HIO_cFv                                  */
@@ -431,11 +419,11 @@ asm static void ride_call_back(dBgW* param_0, fopAc_ac_c* param_1, fopAc_ac_c* p
 #pragma pop
 
 
-/* 80C9B4A8-80C9B5F8 0150+00 s=1 e=0 z=0  None .text      daObj_Msima_Draw__FP15obj_msima_class                        */
+/* 80C9B4A8-80C9B5F8 0150+00 s=0 e=0 z=0  None .text      daObj_Msima_Draw__FP15obj_msima_class                        */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Msima_Draw(obj_msima_class* param_0) {
+asm void daObj_Msima_Draw(obj_msima_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Draw__FP15obj_msima_class.s"
 }
@@ -612,6 +600,11 @@ SECTION_RODATA static u32 const lit_4174[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
+/* 80C9CDA4-80C9CDAC 0008+00 s=2 e=0 z=0  None .rodata    @4177                                                        */
+SECTION_RODATA static u8 const lit_4177[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
+};
+
 /* 80C9BA30-80C9BEB0 0480+00 s=1 e=0 z=0  None .text      action__FP15obj_msima_class                                  */
 #pragma push
 #pragma optimization_level 0
@@ -624,11 +617,6 @@ asm static void action(obj_msima_class* param_0) {
 
 
 /* ############################################################################################## */
-/* 80C9CDA4-80C9CDAC 0008+00 s=0 e=0 z=0  None .rodata    @4177                                                        */
-SECTION_RODATA u8 const lit_4177[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
-};
-
 /* 80C9CDAC-80C9CDB0 0004+00 s=2 e=0 z=0  None .rodata    @4214                                                        */
 SECTION_RODATA static u32 const lit_4214 = 0x453B8000;
 
@@ -706,7 +694,7 @@ asm static void chain_move2(obj_msima_class* param_0, ms_chain_s* param_1, int p
 #pragma pop
 
 
-/* 80C9C25C-80C9C3A8 014C+00 s=2 e=0 z=0  None .text      daObj_Msima_Execute__FP15obj_msima_class                     */
+/* 80C9C25C-80C9C3A8 014C+00 s=1 e=0 z=0  None .text      daObj_Msima_Execute__FP15obj_msima_class                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -717,8 +705,8 @@ asm static void daObj_Msima_Execute(obj_msima_class* param_0) {
 #pragma pop
 
 
-/* 80C9C3A8-80C9C3B0 0008+00 s=1 e=0 z=0  None .text      daObj_Msima_IsDelete__FP15obj_msima_class                    */
-static bool daObj_Msima_IsDelete(obj_msima_class* param_0) {
+/* 80C9C3A8-80C9C3B0 0008+00 s=0 e=0 z=0  None .text      daObj_Msima_IsDelete__FP15obj_msima_class                    */
+bool daObj_Msima_IsDelete(obj_msima_class* param_0) {
 	return true;
 }
 
@@ -755,11 +743,11 @@ SECTION_RODATA static u32 const lit_4605 = 0x457A0000;
 SECTION_DEAD char const* const stringBase_80C9CDEC = "MAGNESIMA";
 #pragma pop
 
-/* 80C9C3B0-80C9C42C 007C+00 s=1 e=0 z=0  None .text      daObj_Msima_Delete__FP15obj_msima_class                      */
+/* 80C9C3B0-80C9C42C 007C+00 s=0 e=0 z=0  None .text      daObj_Msima_Delete__FP15obj_msima_class                      */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Msima_Delete(obj_msima_class* param_0) {
+asm void daObj_Msima_Delete(obj_msima_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Delete__FP15obj_msima_class.s"
 }
@@ -777,7 +765,7 @@ asm static void useHeapInit(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80C9C720-80C9C768 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80C9C720-80C9C768 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -788,11 +776,11 @@ asm J3DFrameCtrl::~J3DFrameCtrl() {
 #pragma pop
 
 
-/* 80C9C768-80C9CA60 02F8+00 s=1 e=0 z=0  None .text      daObj_Msima_Create__FP10fopAc_ac_c                           */
+/* 80C9C768-80C9CA60 02F8+00 s=0 e=0 z=0  None .text      daObj_Msima_Create__FP10fopAc_ac_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daObj_Msima_Create(fopAc_ac_c* param_0) {
+asm void daObj_Msima_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/obj/d_a_obj_msima/d_a_obj_msima/daObj_Msima_Create__FP10fopAc_ac_c.s"
 }
@@ -816,7 +804,7 @@ ms_chain_s::ms_chain_s() {
 }
 
 
-/* 80C9CAA0-80C9CAE8 0048+00 s=2 e=0 z=0  None .text      __dt__17daObj_Msima_HIO_cFv                                  */
+/* 80C9CAA0-80C9CAE8 0048+00 s=1 e=0 z=0  None .text      __dt__17daObj_Msima_HIO_cFv                                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -827,7 +815,7 @@ asm daObj_Msima_HIO_c::~daObj_Msima_HIO_c() {
 #pragma pop
 
 
-/* 80C9CAE8-80C9CD38 0250+00 s=0 e=1 z=0  None .text      __sinit_d_a_obj_msima_cpp                                    */
+/* 80C9CAE8-80C9CD38 0250+00 s=0 e=0 z=0  None .text      __sinit_d_a_obj_msima_cpp                                    */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

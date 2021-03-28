@@ -35,13 +35,13 @@ lbl_8057FDA8:
 /* 8057FE2C  7C 9C 07 34 */	extsh r28, r4
 /* 8057FE30  7C BD 07 34 */	extsh r29, r5
 /* 8057FE34  3B DD FF EC */	addi r30, r29, -20
-/* 8057FE38  C3 9F 00 58 */	lfs f28, 0x58(r31)	/* effective address: 80581504 */
-/* 8057FE3C  C3 BF 00 60 */	lfs f29, 0x60(r31)	/* effective address: 8058150C */
-/* 8057FE40  C3 DF 00 68 */	lfs f30, 0x68(r31)	/* effective address: 80581514 */
-/* 8057FE44  CB FF 00 90 */	lfd f31, 0x90(r31)	/* effective address: 8058153C */
+/* 8057FE38  C3 9F 00 58 */	lfs f28, 0x58(r31)
+/* 8057FE3C  C3 BF 00 60 */	lfs f29, 0x60(r31)
+/* 8057FE40  C3 DF 00 68 */	lfs f30, 0x68(r31)
+/* 8057FE44  CB FF 00 90 */	lfd f31, 0x90(r31)
 /* 8057FE48  3E E0 43 30 */	lis r23, 0x4330
-/* 8057FE4C  C2 FF 00 6C */	lfs f23, 0x6c(r31)	/* effective address: 80581518 */
-/* 8057FE50  C3 1F 00 74 */	lfs f24, 0x74(r31)	/* effective address: 80581520 */
+/* 8057FE4C  C2 FF 00 6C */	lfs f23, 0x6c(r31)
+/* 8057FE50  C3 1F 00 74 */	lfs f24, 0x74(r31)
 /* 8057FE54  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 8057FE58  3B 03 D4 70 */	addi r24, r3, now__14mDoMtx_stack_c@l
 /* 8057FE5C  1F 3C 00 0C */	mulli r25, r28, 0xc

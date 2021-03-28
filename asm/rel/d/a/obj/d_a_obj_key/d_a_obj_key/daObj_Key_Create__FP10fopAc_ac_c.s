@@ -100,8 +100,8 @@ lbl_80C40C28:
 /* 80C40C38  7C 7D 1B 78 */	mr r29, r3
 /* 80C40C3C  2C 1D 00 04 */	cmpwi r29, 4
 /* 80C40C40  40 82 01 88 */	bne lbl_80C40DC8
-/* 80C40C44  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C40C48  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C40C44  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C40C48  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C40C4C  3B 83 4E 00 */	addi r28, r3, 0x4e00
 /* 80C40C50  7F 83 E3 78 */	mr r3, r28
 /* 80C40C54  3C 80 80 C4 */	lis r4, stringBase0@ha
@@ -117,8 +117,8 @@ lbl_80C40C28:
 /* 80C40C7C  4B 72 7D 18 */	b strcmp
 /* 80C40C80  2C 03 00 00 */	cmpwi r3, 0
 /* 80C40C84  40 82 00 28 */	bne lbl_80C40CAC
-/* 80C40C88  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C40C8C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C40C88  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C40C8C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C40C90  38 63 09 58 */	addi r3, r3, 0x958
 /* 80C40C94  38 80 00 07 */	li r4, 7
 /* 80C40C98  4B 3F 3C 9C */	b isDungeonItem__12dSv_memBit_cCFi
@@ -131,8 +131,8 @@ lbl_80C40CAC:
 /* 80C40CB0  54 04 46 3E */	srwi r4, r0, 0x18
 /* 80C40CB4  2C 04 00 FF */	cmpwi r4, 0xff
 /* 80C40CB8  41 82 00 28 */	beq lbl_80C40CE0
-/* 80C40CBC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C40CC0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C40CBC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C40CC0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C40CC4  88 1E 04 E2 */	lbz r0, 0x4e2(r30)
 /* 80C40CC8  7C 05 07 74 */	extsb r5, r0
 /* 80C40CCC  4B 3F 46 94 */	b isSwitch__10dSv_info_cCFii
@@ -161,7 +161,7 @@ lbl_80C40D04:
 /* 80C40D20  38 00 FF FF */	li r0, -1
 /* 80C40D24  3C 60 80 C4 */	lis r3, l_HIO@ha
 /* 80C40D28  38 63 11 48 */	addi r3, r3, l_HIO@l
-/* 80C40D2C  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 80C4114C */
+/* 80C40D2C  98 03 00 04 */	stb r0, 4(r3)
 lbl_80C40D30:
 /* 80C40D30  80 7E 05 70 */	lwz r3, 0x570(r30)
 /* 80C40D34  38 03 00 24 */	addi r0, r3, 0x24

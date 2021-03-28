@@ -84,9 +84,9 @@ lbl_80746008:
 /* 80746008  80 1D 06 1C */	lwz r0, 0x61c(r29)
 /* 8074600C  2C 00 00 06 */	cmpwi r0, 6
 /* 80746010  40 82 00 60 */	bne lbl_80746070
-/* 80746014  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80746018  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8074601C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)	/* effective address: 8040BEFC */
+/* 80746014  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80746018  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8074601C  80 63 5D 3C */	lwz r3, 0x5d3c(r3)
 /* 80746020  38 00 00 FF */	li r0, 0xff
 /* 80746024  90 01 00 08 */	stw r0, 8(r1)
 /* 80746028  38 80 00 00 */	li r4, 0
@@ -215,7 +215,7 @@ lbl_807461E0:
 /* 807461FC  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80746200  3C A0 80 75 */	lis r5, data_8074C3E8@ha
 /* 80746204  38 A5 C3 E8 */	addi r5, r5, data_8074C3E8@l
-/* 80746208  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 8074C3E8 */
+/* 80746208  A8 A5 00 00 */	lha r5, 0(r5)
 /* 8074620C  38 C1 00 84 */	addi r6, r1, 0x84
 /* 80746210  4B B2 AB B0 */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 80746214  38 7D 06 B0 */	addi r3, r29, 0x6b0
@@ -247,8 +247,8 @@ lbl_80746258:
 /* 80746278  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 8074627C  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 80746280  D0 21 00 5C */	stfs f1, 0x5c(r1)
-/* 80746284  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80746288  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80746284  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80746288  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8074628C  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80746290  38 80 00 02 */	li r4, 2
 /* 80746294  38 A0 00 1F */	li r5, 0x1f
@@ -279,8 +279,8 @@ lbl_807462D4:
 /* 807462F0  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 807462F4  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 807462F8  D0 21 00 50 */	stfs f1, 0x50(r1)
-/* 807462FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80746300  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807462FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80746300  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80746304  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80746308  38 80 00 02 */	li r4, 2
 /* 8074630C  38 A0 00 1F */	li r5, 0x1f
@@ -323,8 +323,8 @@ lbl_8074637C:
 /* 80746398  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 8074639C  D0 01 00 40 */	stfs f0, 0x40(r1)
 /* 807463A0  D0 21 00 44 */	stfs f1, 0x44(r1)
-/* 807463A4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 807463A8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 807463A4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 807463A8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 807463AC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 807463B0  38 80 00 04 */	li r4, 4
 /* 807463B4  38 A0 00 1F */	li r5, 0x1f
@@ -343,7 +343,7 @@ lbl_807463C0:
 /* 807463E4  38 81 00 6C */	addi r4, r1, 0x6c
 /* 807463E8  3C A0 80 75 */	lis r5, data_8074C3E8@ha
 /* 807463EC  38 A5 C3 E8 */	addi r5, r5, data_8074C3E8@l
-/* 807463F0  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 8074C3E8 */
+/* 807463F0  A8 A5 00 00 */	lha r5, 0(r5)
 /* 807463F4  38 C1 00 84 */	addi r6, r1, 0x84
 /* 807463F8  4B B2 A9 C8 */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 807463FC  48 00 01 F8 */	b lbl_807465F4
@@ -427,7 +427,7 @@ lbl_807464E0:
 /* 80746520  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 80746524  3C A0 80 75 */	lis r5, data_8074C3E8@ha
 /* 80746528  38 A5 C3 E8 */	addi r5, r5, data_8074C3E8@l
-/* 8074652C  A8 A5 00 00 */	lha r5, 0(r5)	/* effective address: 8074C3E8 */
+/* 8074652C  A8 A5 00 00 */	lha r5, 0(r5)
 /* 80746530  38 C1 00 78 */	addi r6, r1, 0x78
 /* 80746534  4B B2 A8 8C */	b cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz
 /* 80746538  48 00 00 BC */	b lbl_807465F4
@@ -473,7 +473,7 @@ lbl_807465A8:
 /* 807465CC  98 1D 05 DC */	stb r0, 0x5dc(r29)
 /* 807465D0  3C 60 80 75 */	lis r3, l_HIO@ha
 /* 807465D4  38 63 C3 94 */	addi r3, r3, l_HIO@l
-/* 807465D8  A8 03 00 22 */	lha r0, 0x22(r3)	/* effective address: 8074C3B6 */
+/* 807465D8  A8 03 00 22 */	lha r0, 0x22(r3)
 /* 807465DC  B0 1D 06 26 */	sth r0, 0x626(r29)
 lbl_807465E0:
 /* 807465E0  38 00 00 01 */	li r0, 1

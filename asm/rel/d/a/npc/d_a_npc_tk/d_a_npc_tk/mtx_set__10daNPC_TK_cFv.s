@@ -51,7 +51,7 @@ lbl_80B0B65C:
 lbl_80B0B68C:
 /* 80B0B68C  3C 60 80 B1 */	lis r3, l_HIO@ha
 /* 80B0B690  38 63 C6 0C */	addi r3, r3, l_HIO@l
-/* 80B0B694  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 80B0C614 */
+/* 80B0B694  C0 23 00 08 */	lfs f1, 8(r3)
 /* 80B0B698  FC 40 08 90 */	fmr f2, f1
 /* 80B0B69C  FC 60 08 90 */	fmr f3, f1
 /* 80B0B6A0  4B 50 17 98 */	b scaleM__14mDoMtx_stack_cFfff

@@ -19,7 +19,7 @@ lbl_80D2EC18:
 /* 80D2EC5C  41 82 00 30 */	beq lbl_80D2EC8C
 /* 80D2EC60  3C 60 80 D3 */	lis r3, target_info_count@ha
 /* 80D2EC64  38 83 FE 78 */	addi r4, r3, target_info_count@l
-/* 80D2EC68  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 80D2FE78 */
+/* 80D2EC68  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80D2EC6C  2C 05 00 0A */	cmpwi r5, 0xa
 /* 80D2EC70  40 80 00 1C */	bge lbl_80D2EC8C
 /* 80D2EC74  54 A0 10 3A */	slwi r0, r5, 2

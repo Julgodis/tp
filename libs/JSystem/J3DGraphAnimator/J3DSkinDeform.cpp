@@ -20,16 +20,16 @@ struct J3DSkinNList {
 struct Vec {
 };
 
-struct J3DVertexBuffer {
+struct J3DMtxBuffer {
 };
 
 struct J3DModelData {
 };
 
-struct J3DMtxBuffer {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DVertexBuffer {
 };
 
 struct J3DSkinDeform {
@@ -194,10 +194,10 @@ asm void J3DSkinNList::calcSkin_VtxNrmF32(f32 (* param_0)[4], void* param_1, voi
 /* ############################################################################################## */
 /* 803CEE70-803CEE80 0010+00 s=2 e=0 z=0  None .data      __vt__13J3DSkinDeform                                        */
 SECTION_DATA static void* __vt__13J3DSkinDeform[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer,
-	/* 3    */ (void*)__dt__13J3DSkinDeformFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer,
+	(void*)__dt__13J3DSkinDeformFv,
 };
 
 /* 8032C96C-8032C9B0 0044+00 s=0 e=0 z=2  None .text      __ct__13J3DSkinDeformFv                                      */

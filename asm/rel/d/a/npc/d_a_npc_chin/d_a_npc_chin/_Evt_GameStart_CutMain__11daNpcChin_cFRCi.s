@@ -19,8 +19,8 @@ lbl_8098FF6C:
 /* 8098FF6C  38 60 00 01 */	li r3, 1
 /* 8098FF70  48 00 00 4C */	b lbl_8098FFBC
 lbl_8098FF74:
-/* 8098FF74  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8098FF78  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8098FF74  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8098FF78  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8098FF7C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8098FF80  4B 69 CC 5C */	b getTimerPtr__14dComIfG_play_cFv
 /* 8098FF84  28 03 00 00 */	cmplwi r3, 0

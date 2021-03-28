@@ -122,15 +122,15 @@ extern "C" extern void* __vt__7JKRFile[8];
 /* ############################################################################################## */
 /* 803CC438-803CC460 0024+04 s=4 e=0 z=0  None .data      __vt__10JKRDvdFile                                           */
 SECTION_DATA static void* __vt__10JKRDvdFile[9 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__10JKRDvdFileFv,
-	/* 3    */ (void*)open__10JKRDvdFileFPCc,
-	/* 4    */ (void*)close__10JKRDvdFileFv,
-	/* 5    */ (void*)readData__10JKRDvdFileFPvll,
-	/* 6    */ (void*)writeData__10JKRDvdFileFPCvll,
-	/* 7    */ (void*)getFileSize__10JKRDvdFileCFv,
-	/* 8    */ (void*)open__10JKRDvdFileFl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__10JKRDvdFileFv,
+	(void*)open__10JKRDvdFileFPCc,
+	(void*)close__10JKRDvdFileFv,
+	(void*)readData__10JKRDvdFileFPvll,
+	(void*)writeData__10JKRDvdFileFPCvll,
+	(void*)getFileSize__10JKRDvdFileCFv,
+	(void*)open__10JKRDvdFileFl,
 	/* padding */
 	NULL,
 };

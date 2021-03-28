@@ -14,8 +14,8 @@ lbl_80CC05EC:
 /* 80CC061C  4B 5A 7B B8 */	b ChkUsed__9cBgW_BgIdCFv
 /* 80CC0620  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80CC0624  41 82 00 18 */	beq lbl_80CC063C
-/* 80CC0628  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC062C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CC0628  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC062C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CC0630  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CC0634  80 9F 17 38 */	lwz r4, 0x1738(r31)
 /* 80CC0638  4B 3B 3C 18 */	b Release__4cBgSFP9dBgW_Base

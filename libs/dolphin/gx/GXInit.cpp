@@ -274,17 +274,17 @@ SECTION_DATA static u8 GXTexRegionAddrTable[192] = {
 
 /* 803D226C-803D2280 0010+04 s=1 e=0 z=0  None .data      GXResetFuncInfo                                              */
 SECTION_DATA static void* GXResetFuncInfo[4 + 1 /* padding */] = {
-	/* 0    */ (void*)__GXShutdown,
-	/* 1    */ (void*)0x0000007F,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)__GXShutdown,
+	(void*)0x0000007F,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };
 
 /* 80450A78-80450A80 0004+04 s=1 e=0 z=0  None .sdata     __GXVersion                                                  */
 SECTION_SDATA static void* __GXVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&lit_1,
+	(void*)&lit_1,
 	/* padding */
 	NULL,
 };

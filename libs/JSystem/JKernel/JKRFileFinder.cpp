@@ -66,26 +66,26 @@ extern "C" bool DVDCloseDir(); // 1
 /* ############################################################################################## */
 /* 803CC208-803CC218 0010+00 s=2 e=0 z=0  None .data      __vt__12JKRDvdFinder                                         */
 SECTION_DATA static void* __vt__12JKRDvdFinder[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JKRDvdFinderFv,
-	/* 3    */ (void*)findNextFile__12JKRDvdFinderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JKRDvdFinderFv,
+	(void*)findNextFile__12JKRDvdFinderFv,
 };
 
 /* 803CC218-803CC228 0010+00 s=2 e=0 z=0  None .data      __vt__12JKRArcFinder                                         */
 SECTION_DATA static void* __vt__12JKRArcFinder[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JKRArcFinderFv,
-	/* 3    */ (void*)findNextFile__12JKRArcFinderFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JKRArcFinderFv,
+	(void*)findNextFile__12JKRArcFinderFv,
 };
 
 /* 803CC228-803CC238 0010+00 s=5 e=0 z=0  None .data      __vt__13JKRFileFinder                                        */
 SECTION_DATA static void* __vt__13JKRFileFinder[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__13JKRFileFinderFv,
-	/* 3    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__13JKRFileFinderFv,
+	(void*)NULL,
 };
 
 /* 802D4638-802D46C4 008C+00 s=0 e=1 z=0  None .text      __ct__12JKRArcFinderFP10JKRArchivell                         */

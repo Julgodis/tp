@@ -5,8 +5,8 @@ lbl_8058A294:
 /* 8058A2A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8058A2A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8058A2A8  7C 7E 1B 78 */	mr r30, r3
-/* 8058A2AC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8058A2B0  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 8058A2AC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8058A2B0  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 8058A2B4  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 8058A2B8  A8 9E 0B A6 */	lha r4, 0xba6(r30)
 /* 8058A2BC  4B AB D7 BC */	b endCheck__16dEvent_manager_cFs

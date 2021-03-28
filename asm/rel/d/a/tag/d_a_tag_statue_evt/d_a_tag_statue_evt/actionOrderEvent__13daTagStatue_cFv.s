@@ -11,7 +11,7 @@ lbl_805A7714:
 /* 805A7738  98 1F 05 94 */	stb r0, 0x594(r31)
 /* 805A773C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805A7740  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805A7744  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805A7744  80 63 00 00 */	lwz r3, 0(r3)
 /* 805A7748  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 805A774C  3C 80 01 00 */	lis r4, 0x0100 /* 0x010000A4@ha */
 /* 805A7750  38 84 00 A4 */	addi r4, r4, 0x00A4 /* 0x010000A4@l */

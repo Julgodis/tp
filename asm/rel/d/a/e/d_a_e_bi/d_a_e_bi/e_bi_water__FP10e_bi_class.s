@@ -83,8 +83,8 @@ lbl_8068B880:
 /* 8068B898  EC 01 00 2A */	fadds f0, f1, f0
 /* 8068B89C  D0 1E 04 D8 */	stfs f0, 0x4d8(r30)
 /* 8068B8A0  38 7E 09 CC */	addi r3, r30, 0x9cc
-/* 8068B8A4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8068B8A8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8068B8A4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8068B8A8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 8068B8AC  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8068B8B0  4B 9E B1 FC */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8068B8B4  C0 1E 04 F8 */	lfs f0, 0x4f8(r30)

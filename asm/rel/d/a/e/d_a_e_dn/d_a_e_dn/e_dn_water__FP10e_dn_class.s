@@ -14,7 +14,7 @@ lbl_804EA854:
 /* 804EA884  38 63 00 60 */	addi r3, r3, 0x60
 /* 804EA888  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 804EA88C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 804EA890  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 804EA890  80 84 00 00 */	lwz r4, 0(r4)
 /* 804EA894  4B E5 BC 1C */	b PSMTXCopy
 /* 804EA898  C0 1E 00 04 */	lfs f0, 4(r30)
 /* 804EA89C  D0 01 00 20 */	stfs f0, 0x20(r1)

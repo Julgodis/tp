@@ -17,9 +17,9 @@ lbl_8072D1DC:
 /* 8072D218  38 60 00 00 */	li r3, 0
 /* 8072D21C  48 00 00 B4 */	b lbl_8072D2D0
 lbl_8072D220:
-/* 8072D220  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072D224  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 8072D228  80 9F 5D AC */	lwz r4, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 8072D220  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072D224  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 8072D228  80 9F 5D AC */	lwz r4, 0x5dac(r31)
 /* 8072D22C  88 04 05 68 */	lbz r0, 0x568(r4)
 /* 8072D230  28 00 00 00 */	cmplwi r0, 0
 /* 8072D234  41 82 00 4C */	beq lbl_8072D280

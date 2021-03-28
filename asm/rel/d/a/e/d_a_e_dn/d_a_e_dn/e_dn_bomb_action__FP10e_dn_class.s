@@ -152,7 +152,7 @@ lbl_804E6FF0:
 /* 804E6FF0  3F BD 00 01 */	addis r29, r29, 1
 /* 804E6FF4  3C 60 80 4F */	lis r3, l_HIO@ha
 /* 804E6FF8  38 63 EF 3C */	addi r3, r3, l_HIO@l
-/* 804E6FFC  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 804EEF4C */
+/* 804E6FFC  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 804E7000  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 804E7004  EC 20 00 32 */	fmuls f1, f0, f0
 /* 804E7008  C0 01 00 28 */	lfs f0, 0x28(r1)
@@ -212,7 +212,7 @@ lbl_804E70CC:
 /* 804E70D0  98 1C 06 F2 */	stb r0, 0x6f2(r28)
 /* 804E70D4  3C 60 80 4F */	lis r3, l_HIO@ha
 /* 804E70D8  38 63 EF 3C */	addi r3, r3, l_HIO@l
-/* 804E70DC  C3 E3 00 10 */	lfs f31, 0x10(r3)	/* effective address: 804EEF4C */
+/* 804E70DC  C3 E3 00 10 */	lfs f31, 0x10(r3)
 /* 804E70E0  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 804E70E4  EC 20 00 32 */	fmuls f1, f0, f0
 /* 804E70E8  C0 01 00 28 */	lfs f0, 0x28(r1)
@@ -267,7 +267,7 @@ lbl_804E718C:
 /* 804E71A0  41 80 00 94 */	blt lbl_804E7234
 /* 804E71A4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 804E71A8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 804E71AC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 804E71AC  80 63 00 00 */	lwz r3, 0(r3)
 /* 804E71B0  7F A4 EB 78 */	mr r4, r29
 /* 804E71B4  4B B2 52 28 */	b mDoMtx_YrotS__FPA4_fs
 /* 804E71B8  C0 1F 00 A8 */	lfs f0, 0xa8(r31)

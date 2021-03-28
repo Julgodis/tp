@@ -13,8 +13,8 @@ lbl_80B219F4:
 /* 80B21A20  3B 20 00 00 */	li r25, 0
 /* 80B21A24  3B 00 00 00 */	li r24, 0
 /* 80B21A28  3A E0 00 00 */	li r23, 0
-/* 80B21A2C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B21A30  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B21A2C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B21A30  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B21A34  3B 83 0F 38 */	addi r28, r3, 0xf38
 /* 80B21A38  3B BC 40 C0 */	addi r29, r28, 0x40c0
 /* 80B21A3C  7F A3 EB 78 */	mr r3, r29
@@ -187,13 +187,13 @@ lbl_80B21B4C:
 /* 80B21CB8  38 9F 09 30 */	addi r4, r31, 0x930
 /* 80B21CBC  4B 55 27 E4 */	b GroundCross__4cBgSFP11cBgS_GndChk
 /* 80B21CC0  D0 21 00 50 */	stfs f1, 0x50(r1)
-/* 80B21CC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B21CC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80B21CCC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80B21CC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B21CC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80B21CCC  80 63 5D AC */	lwz r3, 0x5dac(r3)
 /* 80B21CD0  38 81 00 4C */	addi r4, r1, 0x4c
 /* 80B21CD4  A8 A1 00 16 */	lha r5, 0x16(r1)
 /* 80B21CD8  38 C0 00 00 */	li r6, 0
-/* 80B21CDC  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80B21CDC  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80B21CE0  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80B21CE4  7D 89 03 A6 */	mtctr r12
 /* 80B21CE8  4E 80 04 21 */	bctrl 
@@ -205,9 +205,9 @@ lbl_80B21CEC:
 /* 80B21CFC  48 00 01 60 */	b lbl_80B21E5C
 lbl_80B21D00:
 /* 80B21D00  7F E3 FB 78 */	mr r3, r31
-/* 80B21D04  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80B21D08  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80B21D0C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80B21D04  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80B21D08  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80B21D0C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80B21D10  4B 4F 8A 00 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80B21D14  B0 7F 0D C8 */	sth r3, 0xdc8(r31)
 /* 80B21D18  48 00 01 44 */	b lbl_80B21E5C

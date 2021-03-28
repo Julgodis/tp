@@ -117,30 +117,30 @@ struct dScnKy_env_light_c {
 // Forward References:
 // 
 
-static void daB_ZANTS_Draw(daB_ZANTS_c*); // 2
+void daB_ZANTS_Draw(daB_ZANTS_c*); // 2
 static void zants_ride_call_back(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
 static void daB_ZANTS_Execute(daB_ZANTS_c*); // 2
-static bool daB_ZANTS_IsDelete(daB_ZANTS_c*); // 2
-static void daB_ZANTS_Delete(daB_ZANTS_c*); // 2
+bool daB_ZANTS_IsDelete(daB_ZANTS_c*); // 2
+void daB_ZANTS_Delete(daB_ZANTS_c*); // 2
 static void useHeapInit(fopAc_ac_c*); // 2
-static void daB_ZANTS_Create(daB_ZANTS_c*); // 2
+void daB_ZANTS_Create(daB_ZANTS_c*); // 2
 
 extern "C" void draw__11daB_ZANTS_cFv(); // 1
-extern "C" static void daB_ZANTS_Draw__FP11daB_ZANTS_c(); // 1
+extern "C" void daB_ZANTS_Draw__FP11daB_ZANTS_c(); // 1
 extern "C" static void zants_ride_call_back__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
 extern "C" void action__11daB_ZANTS_cFv(); // 1
 extern "C" void execute__11daB_ZANTS_cFv(); // 1
 extern "C" static void daB_ZANTS_Execute__FP11daB_ZANTS_c(); // 1
-extern "C" static bool daB_ZANTS_IsDelete__FP11daB_ZANTS_c(); // 1
+extern "C" bool daB_ZANTS_IsDelete__FP11daB_ZANTS_c(); // 1
 extern "C" void _delete__11daB_ZANTS_cFv(); // 1
-extern "C" static void daB_ZANTS_Delete__FP11daB_ZANTS_c(); // 1
+extern "C" void daB_ZANTS_Delete__FP11daB_ZANTS_c(); // 1
 extern "C" void CreateHeap__11daB_ZANTS_cFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
 extern "C" void create__11daB_ZANTS_cFv(); // 1
-extern "C" static void daB_ZANTS_Create__FP11daB_ZANTS_c(); // 1
-extern "C" extern u8 const lit_3801[8];
+extern "C" void daB_ZANTS_Create__FP11daB_ZANTS_c(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daB_ZANTS_Method[8];
 extern "C" extern void* g_profile_B_ZANTS[12];
 
 // 
@@ -204,19 +204,10 @@ extern "C" void PSMTXTrans(); // 1
 extern "C" void PSVECSquareDistance(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF6C[4];
-SECTION_BSS extern u8 data_8040C130[4];
-SECTION_BSS extern u8 data_8040C134[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
 // 
 // Declarations:
@@ -233,11 +224,11 @@ asm void daB_ZANTS_c::draw() {
 #pragma pop
 
 
-/* 80652AAC-80652ACC 0020+00 s=1 e=0 z=0  None .text      daB_ZANTS_Draw__FP11daB_ZANTS_c                              */
+/* 80652AAC-80652ACC 0020+00 s=0 e=0 z=0  None .text      daB_ZANTS_Draw__FP11daB_ZANTS_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daB_ZANTS_Draw(daB_ZANTS_c* param_0) {
+asm void daB_ZANTS_Draw(daB_ZANTS_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Draw__FP11daB_ZANTS_c.s"
 }
@@ -263,8 +254,8 @@ SECTION_RODATA static u8 const lit_3800[4 + 4 /* padding */] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
-/* 80653334-8065333C 0008+00 s=0 e=0 z=0  None .rodata    @3801                                                        */
-SECTION_RODATA u8 const lit_3801[8] = {
+/* 80653334-8065333C 0008+00 s=1 e=0 z=0  None .rodata    @3801                                                        */
+SECTION_RODATA static u8 const lit_3801[8] = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
@@ -306,7 +297,7 @@ asm void daB_ZANTS_c::execute() {
 #pragma pop
 
 
-/* 80652E98-80652EB8 0020+00 s=2 e=0 z=0  None .text      daB_ZANTS_Execute__FP11daB_ZANTS_c                           */
+/* 80652E98-80652EB8 0020+00 s=1 e=0 z=0  None .text      daB_ZANTS_Execute__FP11daB_ZANTS_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -317,8 +308,8 @@ asm static void daB_ZANTS_Execute(daB_ZANTS_c* param_0) {
 #pragma pop
 
 
-/* 80652EB8-80652EC0 0008+00 s=1 e=0 z=0  None .text      daB_ZANTS_IsDelete__FP11daB_ZANTS_c                          */
-static bool daB_ZANTS_IsDelete(daB_ZANTS_c* param_0) {
+/* 80652EB8-80652EC0 0008+00 s=0 e=0 z=0  None .text      daB_ZANTS_IsDelete__FP11daB_ZANTS_c                          */
+bool daB_ZANTS_IsDelete(daB_ZANTS_c* param_0) {
 	return true;
 }
 
@@ -357,11 +348,11 @@ asm void daB_ZANTS_c::_delete() {
 #pragma pop
 
 
-/* 80652F18-80652F38 0020+00 s=1 e=0 z=0  None .text      daB_ZANTS_Delete__FP11daB_ZANTS_c                            */
+/* 80652F18-80652F38 0020+00 s=0 e=0 z=0  None .text      daB_ZANTS_Delete__FP11daB_ZANTS_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daB_ZANTS_Delete(daB_ZANTS_c* param_0) {
+asm void daB_ZANTS_Delete(daB_ZANTS_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Delete__FP11daB_ZANTS_c.s"
 }
@@ -369,39 +360,39 @@ asm static void daB_ZANTS_Delete(daB_ZANTS_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80653370-80653390 0020+00 s=1 e=0 z=0  None .data      l_daB_ZANTS_Method                                           */
-SECTION_DATA static void* l_daB_ZANTS_Method[8] = {
-	/* 0    */ (void*)daB_ZANTS_Create__FP11daB_ZANTS_c,
-	/* 1    */ (void*)daB_ZANTS_Delete__FP11daB_ZANTS_c,
-	/* 2    */ (void*)daB_ZANTS_Execute__FP11daB_ZANTS_c,
-	/* 3    */ (void*)daB_ZANTS_IsDelete__FP11daB_ZANTS_c,
-	/* 4    */ (void*)daB_ZANTS_Draw__FP11daB_ZANTS_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80653370-80653390 0020+00 s=0 e=0 z=0  None .data      l_daB_ZANTS_Method                                           */
+SECTION_DATA void* l_daB_ZANTS_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80653390-806533C0 0030+00 s=0 e=0 z=1  None .data      g_profile_B_ZANTS                                            */
+/* 80653390-806533C0 0030+00 s=0 e=0 z=0  None .data      g_profile_B_ZANTS                                            */
 SECTION_DATA void* g_profile_B_ZANTS[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0003FFFD,
-	/* 2    */ (void*)0x007D0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005C8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00E50000,
-	/* 9    */ (void*)&l_daB_ZANTS_Method,
-	/* 10   */ (void*)0x00040000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0003FFFD,
+	(void*)0x007D0000,
+	(void*)NULL,
+	(void*)0x000005C8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00E50000,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)0x000E0000,
 };
 
 /* 806533C0-806533CC 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80652F38-80653180 0248+00 s=1 e=0 z=0  None .text      CreateHeap__11daB_ZANTS_cFv                                  */
@@ -415,7 +406,7 @@ asm void daB_ZANTS_c::CreateHeap() {
 #pragma pop
 
 
-/* 80653180-806531C8 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80653180-806531C8 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -448,11 +439,11 @@ asm void daB_ZANTS_c::create() {
 #pragma pop
 
 
-/* 80653304-80653324 0020+00 s=1 e=0 z=0  None .text      daB_ZANTS_Create__FP11daB_ZANTS_c                            */
+/* 80653304-80653324 0020+00 s=0 e=0 z=0  None .text      daB_ZANTS_Create__FP11daB_ZANTS_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daB_ZANTS_Create(daB_ZANTS_c* param_0) {
+asm void daB_ZANTS_Create(daB_ZANTS_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/b/d_a_b_zant_sima/d_a_b_zant_sima/daB_ZANTS_Create__FP11daB_ZANTS_c.s"
 }

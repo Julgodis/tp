@@ -9,14 +9,14 @@ lbl_80AA90B0:
 /* 80AA90CC  3B A3 D1 EC */	addi r29, r3, m__18daNpc_Post_Param_c@l
 /* 80AA90D0  3C 60 80 AB */	lis r3, l_bmdData@ha
 /* 80AA90D4  38 63 D3 CC */	addi r3, r3, l_bmdData@l
-/* 80AA90D8  80 03 00 04 */	lwz r0, 4(r3)	/* effective address: 80AAD3D0 */
-/* 80AA90DC  80 83 00 00 */	lwz r4, 0(r3)	/* effective address: 80AAD3CC */
+/* 80AA90D8  80 03 00 04 */	lwz r0, 4(r3)
+/* 80AA90DC  80 83 00 00 */	lwz r4, 0(r3)
 /* 80AA90E0  54 00 10 3A */	slwi r0, r0, 2
 /* 80AA90E4  3C 60 80 AB */	lis r3, l_resNameList@ha
 /* 80AA90E8  38 63 D4 14 */	addi r3, r3, l_resNameList@l
 /* 80AA90EC  7C 63 00 2E */	lwzx r3, r3, r0
-/* 80AA90F0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AA90F4  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AA90F0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AA90F4  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AA90F8  3F C5 00 02 */	addis r30, r5, 2
 /* 80AA90FC  3B DE C2 F8 */	addi r30, r30, -15624
 /* 80AA9100  7F C5 F3 78 */	mr r5, r30
@@ -141,8 +141,8 @@ lbl_80AA92A8:
 lbl_80AA92C0:
 /* 80AA92C0  3C 60 80 AB */	lis r3, l_bmdData@ha
 /* 80AA92C4  38 63 D3 CC */	addi r3, r3, l_bmdData@l
-/* 80AA92C8  80 03 00 0C */	lwz r0, 0xc(r3)	/* effective address: 80AAD3D8 */
-/* 80AA92CC  80 83 00 08 */	lwz r4, 8(r3)	/* effective address: 80AAD3D4 */
+/* 80AA92C8  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 80AA92CC  80 83 00 08 */	lwz r4, 8(r3)
 /* 80AA92D0  54 00 10 3A */	slwi r0, r0, 2
 /* 80AA92D4  3C 60 80 AB */	lis r3, l_resNameList@ha
 /* 80AA92D8  38 63 D4 14 */	addi r3, r3, l_resNameList@l

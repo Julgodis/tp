@@ -15,14 +15,14 @@ lbl_80C9243C:
 /* 80C92470  38 83 2C 50 */	addi r4, r3, l_B_ling_bmd_table@l
 /* 80C92474  3B 40 00 00 */	li r26, 0
 /* 80C92478  3B E0 00 00 */	li r31, 0
-/* 80C9247C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C92480  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C9247C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C92480  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C92484  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 80C92488  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80C9248C  3B C3 D4 70 */	addi r30, r3, now__14mDoMtx_stack_c@l
-/* 80C92490  C3 A4 00 78 */	lfs f29, 0x78(r4)	/* effective address: 80C92CC8 */
-/* 80C92494  C3 C4 00 7C */	lfs f30, 0x7c(r4)	/* effective address: 80C92CCC */
-/* 80C92498  C3 E4 00 80 */	lfs f31, 0x80(r4)	/* effective address: 80C92CD0 */
+/* 80C92490  C3 A4 00 78 */	lfs f29, 0x78(r4)
+/* 80C92494  C3 C4 00 7C */	lfs f30, 0x7c(r4)
+/* 80C92498  C3 E4 00 80 */	lfs f31, 0x80(r4)
 /* 80C9249C  48 00 00 A8 */	b lbl_80C92544
 lbl_80C924A0:
 /* 80C924A0  7F 99 FA 14 */	add r28, r25, r31

@@ -4,8 +4,8 @@ lbl_8057A778:
 /* 8057A780  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8057A784  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8057A788  7C 7F 1B 78 */	mr r31, r3
-/* 8057A78C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8057A790  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8057A78C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8057A790  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8057A794  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8057A798  A8 9F 05 96 */	lha r4, 0x596(r31)
 /* 8057A79C  4B AC D2 DC */	b endCheck__16dEvent_manager_cFs

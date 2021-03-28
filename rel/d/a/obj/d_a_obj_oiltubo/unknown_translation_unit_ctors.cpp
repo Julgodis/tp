@@ -19,7 +19,6 @@ extern void* const data_80CA78E8[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_oiltubo_cpp(); // 1
 
 // 
 // Declarations:

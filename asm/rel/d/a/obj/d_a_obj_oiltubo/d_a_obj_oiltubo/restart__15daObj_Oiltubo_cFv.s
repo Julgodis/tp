@@ -15,11 +15,11 @@ lbl_80CA6FF8:
 /* 80CA702C  B0 03 04 E8 */	sth r0, 0x4e8(r3)
 /* 80CA7030  3C 80 80 CA */	lis r4, lit_3897@ha
 /* 80CA7034  38 A4 79 FC */	addi r5, r4, lit_3897@l
-/* 80CA7038  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CA79FC */
-/* 80CA703C  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CA7A00 */
+/* 80CA7038  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CA703C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CA7040  90 81 00 08 */	stw r4, 8(r1)
 /* 80CA7044  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CA7048  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CA7A04 */
+/* 80CA7048  80 05 00 08 */	lwz r0, 8(r5)
 /* 80CA704C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CA7050  38 81 00 08 */	addi r4, r1, 8
 /* 80CA7054  48 00 01 B9 */	bl setProcess__15daObj_Oiltubo_cFM15daObj_Oiltubo_cFPCvPvPv_i

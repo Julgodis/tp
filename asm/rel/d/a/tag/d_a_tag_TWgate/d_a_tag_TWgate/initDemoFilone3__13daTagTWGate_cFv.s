@@ -7,10 +7,10 @@ lbl_80D52DB4:
 /* 80D52DC8  7C 7D 1B 78 */	mr r29, r3
 /* 80D52DCC  38 00 00 01 */	li r0, 1
 /* 80D52DD0  98 03 05 DE */	stb r0, 0x5de(r3)
-/* 80D52DD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D52DD8  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80D52DDC  80 7F 5D B4 */	lwz r3, 0x5db4(r31)	/* effective address: 8040BF74 */
-/* 80D52DE0  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80400574 */
+/* 80D52DD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D52DD8  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80D52DDC  80 7F 5D B4 */	lwz r3, 0x5db4(r31)
+/* 80D52DE0  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80D52DE4  54 00 3F FE */	rlwinm r0, r0, 7, 0x1f, 0x1f
 /* 80D52DE8  98 1D 05 DF */	stb r0, 0x5df(r29)
 /* 80D52DEC  88 1D 05 E2 */	lbz r0, 0x5e2(r29)

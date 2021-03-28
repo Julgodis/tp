@@ -4,9 +4,9 @@ lbl_80D252C8:
 /* 80D252D0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D252D4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D252D8  7C 7F 1B 78 */	mr r31, r3
-/* 80D252DC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80D252E0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80D252E4  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80D252DC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80D252E0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80D252E4  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80D252E8  4B 2F 56 7C */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80D252EC  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80D252F0  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f

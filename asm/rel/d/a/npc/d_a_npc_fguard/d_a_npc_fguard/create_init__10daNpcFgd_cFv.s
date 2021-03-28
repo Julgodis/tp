@@ -7,20 +7,20 @@ lbl_809BA730:
 /* 809BA744  7C 7E 1B 78 */	mr r30, r3
 /* 809BA748  3C 80 80 9C */	lis r4, lit_3979@ha
 /* 809BA74C  3B E4 B4 04 */	addi r31, r4, lit_3979@l
-/* 809BA750  C0 1F 00 00 */	lfs f0, 0(r31)	/* effective address: 809BB404 */
+/* 809BA750  C0 1F 00 00 */	lfs f0, 0(r31)
 /* 809BA754  D0 03 05 30 */	stfs f0, 0x530(r3)
-/* 809BA758  C0 1F 00 04 */	lfs f0, 4(r31)	/* effective address: 809BB408 */
+/* 809BA758  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 809BA75C  D0 03 05 34 */	stfs f0, 0x534(r3)
 /* 809BA760  80 83 05 8C */	lwz r4, 0x58c(r3)
 /* 809BA764  80 84 00 04 */	lwz r4, 4(r4)
 /* 809BA768  38 04 00 24 */	addi r0, r4, 0x24
 /* 809BA76C  90 03 05 04 */	stw r0, 0x504(r3)
-/* 809BA770  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 809BB40C */
-/* 809BA774  C0 5F 00 0C */	lfs f2, 0xc(r31)	/* effective address: 809BB410 */
-/* 809BA778  C0 7F 00 10 */	lfs f3, 0x10(r31)	/* effective address: 809BB414 */
-/* 809BA77C  C0 9F 00 14 */	lfs f4, 0x14(r31)	/* effective address: 809BB418 */
-/* 809BA780  C0 BF 00 18 */	lfs f5, 0x18(r31)	/* effective address: 809BB41C */
-/* 809BA784  C0 DF 00 1C */	lfs f6, 0x1c(r31)	/* effective address: 809BB420 */
+/* 809BA770  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 809BA774  C0 5F 00 0C */	lfs f2, 0xc(r31)
+/* 809BA778  C0 7F 00 10 */	lfs f3, 0x10(r31)
+/* 809BA77C  C0 9F 00 14 */	lfs f4, 0x14(r31)
+/* 809BA780  C0 BF 00 18 */	lfs f5, 0x18(r31)
+/* 809BA784  C0 DF 00 1C */	lfs f6, 0x1c(r31)
 /* 809BA788  4B 65 FD C0 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 809BA78C  80 BE 0A 98 */	lwz r5, 0xa98(r30)
 /* 809BA790  2C 05 00 10 */	cmpwi r5, 0x10
@@ -73,8 +73,8 @@ lbl_809BA7FC:
 /* 809BA83C  60 00 04 00 */	ori r0, r0, 0x400
 /* 809BA840  90 1E 06 64 */	stw r0, 0x664(r30)
 /* 809BA844  38 7E 06 38 */	addi r3, r30, 0x638
-/* 809BA848  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809BA84C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809BA848  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809BA84C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809BA850  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809BA854  4B 6B C2 58 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809BA858  7F C3 F3 78 */	mr r3, r30

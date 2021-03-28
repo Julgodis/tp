@@ -9,7 +9,7 @@ lbl_8052C230:
 /* 8052C24C  7C 7E 1B 78 */	mr r30, r3
 /* 8052C250  3C 80 80 53 */	lis r4, lit_3679@ha
 /* 8052C254  3B E4 61 68 */	addi r31, r4, lit_3679@l
-/* 8052C258  C3 FF 00 00 */	lfs f31, 0(r31)	/* effective address: 80536168 */
+/* 8052C258  C3 FF 00 00 */	lfs f31, 0(r31)
 /* 8052C25C  A8 03 05 B8 */	lha r0, 0x5b8(r3)
 /* 8052C260  2C 00 00 02 */	cmpwi r0, 2
 /* 8052C264  41 82 00 E4 */	beq lbl_8052C348

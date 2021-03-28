@@ -229,10 +229,10 @@ extern "C" asm void PADRecalibrate() {
 /* ############################################################################################## */
 /* 803D1B90-803D1BA0 0010+00 s=1 e=0 z=0  None .data      ResetFunctionInfo                                            */
 SECTION_DATA static void* ResetFunctionInfo[4] = {
-	/* 0    */ (void*)OnReset,
-	/* 1    */ (void*)0x0000007F,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)NULL,
+	(void*)OnReset,
+	(void*)0x0000007F,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 8044CBB0-8044CBC0 0010+00 s=1 e=0 z=0  None .bss       CmdProbeDevice                                               */

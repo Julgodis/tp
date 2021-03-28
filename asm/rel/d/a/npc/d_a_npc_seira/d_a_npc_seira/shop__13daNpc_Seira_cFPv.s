@@ -42,8 +42,8 @@ lbl_80ACEB40:
 /* 80ACEB54  80 1F 10 F8 */	lwz r0, 0x10f8(r31)
 /* 80ACEB58  2C 00 00 00 */	cmpwi r0, 0
 /* 80ACEB5C  41 82 01 70 */	beq lbl_80ACECCC
-/* 80ACEB60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACEB64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ACEB60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACEB64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ACEB68  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80ACEB6C  4B 57 38 FC */	b reset__14dEvt_control_cFv
 /* 80ACEB70  38 00 00 01 */	li r0, 1

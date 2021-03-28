@@ -4,12 +4,12 @@ lbl_80BDE868:
 /* 80BDE870  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80BDE874  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80BDE878  7C 7F 1B 78 */	mr r31, r3
-/* 80BDE87C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BDE880  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80BDE884  80 64 5D AC */	lwz r3, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80BDE888  80 03 05 8C */	lwz r0, 0x58c(r3)	/* effective address: 8040058C */
+/* 80BDE87C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BDE880  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80BDE884  80 64 5D AC */	lwz r3, 0x5dac(r4)
+/* 80BDE888  80 03 05 8C */	lwz r0, 0x58c(r3)
 /* 80BDE88C  60 00 02 00 */	ori r0, r0, 0x200
-/* 80BDE890  90 03 05 8C */	stw r0, 0x58c(r3)	/* effective address: 8040058C */
+/* 80BDE890  90 03 05 8C */	stw r0, 0x58c(r3)
 /* 80BDE894  88 7F 06 2A */	lbz r3, 0x62a(r31)
 /* 80BDE898  38 03 FF FF */	addi r0, r3, -1
 /* 80BDE89C  98 1F 06 2A */	stb r0, 0x62a(r31)

@@ -11,11 +11,11 @@ lbl_80CFD600:
 /* 80CFD624  7F E3 FB 78 */	mr r3, r31
 /* 80CFD628  3C 80 80 D0 */	lis r4, l_cull_box@ha
 /* 80CFD62C  C4 24 DE B4 */	lfsu f1, l_cull_box@l(r4)
-/* 80CFD630  C0 44 00 04 */	lfs f2, 4(r4)	/* effective address: 80D00004 */
-/* 80CFD634  C0 64 00 08 */	lfs f3, 8(r4)	/* effective address: 80D00008 */
-/* 80CFD638  C0 84 00 0C */	lfs f4, 0xc(r4)	/* effective address: 80D0000C */
-/* 80CFD63C  C0 A4 00 10 */	lfs f5, 0x10(r4)	/* effective address: 80D00010 */
-/* 80CFD640  C0 C4 00 14 */	lfs f6, 0x14(r4)	/* effective address: 80D00014 */
+/* 80CFD630  C0 44 00 04 */	lfs f2, 4(r4)
+/* 80CFD634  C0 64 00 08 */	lfs f3, 8(r4)
+/* 80CFD638  C0 84 00 0C */	lfs f4, 0xc(r4)
+/* 80CFD63C  C0 A4 00 10 */	lfs f5, 0x10(r4)
+/* 80CFD640  C0 C4 00 14 */	lfs f6, 0x14(r4)
 /* 80CFD644  4B 31 CF 04 */	b fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff
 /* 80CFD648  88 1F 04 9A */	lbz r0, 0x49a(r31)
 /* 80CFD64C  60 00 00 30 */	ori r0, r0, 0x30

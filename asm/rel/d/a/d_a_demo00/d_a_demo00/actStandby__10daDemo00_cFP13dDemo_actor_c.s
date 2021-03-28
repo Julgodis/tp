@@ -69,11 +69,11 @@ lbl_804A5798:
 lbl_804A58A4:
 /* 804A58A4  3C 60 80 4B */	lis r3, lit_4676@ha
 /* 804A58A8  38 83 8A 04 */	addi r4, r3, lit_4676@l
-/* 804A58AC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804A8A04 */
-/* 804A58B0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804A8A08 */
+/* 804A58AC  80 64 00 00 */	lwz r3, 0(r4)
+/* 804A58B0  80 04 00 04 */	lwz r0, 4(r4)
 /* 804A58B4  90 7E 05 7C */	stw r3, 0x57c(r30)
 /* 804A58B8  90 1E 05 80 */	stw r0, 0x580(r30)
-/* 804A58BC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804A8A0C */
+/* 804A58BC  80 04 00 08 */	lwz r0, 8(r4)
 /* 804A58C0  90 1E 05 84 */	stw r0, 0x584(r30)
 /* 804A58C4  7F C3 F3 78 */	mr r3, r30
 /* 804A58C8  7F E4 FB 78 */	mr r4, r31

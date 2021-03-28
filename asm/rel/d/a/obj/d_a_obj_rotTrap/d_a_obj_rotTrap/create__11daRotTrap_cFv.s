@@ -95,8 +95,8 @@ lbl_80CBFBF0:
 /* 80CBFC2C  48 00 07 21 */	bl init_modeMove__11daRotTrap_cFv
 /* 80CBFC30  48 00 00 34 */	b lbl_80CBFC64
 lbl_80CBFC34:
-/* 80CBFC34  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CBFC38  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CBFC34  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CBFC38  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CBFC3C  88 1E 04 BA */	lbz r0, 0x4ba(r30)
 /* 80CBFC40  7C 05 07 74 */	extsb r5, r0
 /* 80CBFC44  4B 37 57 1C */	b isSwitch__10dSv_info_cCFii

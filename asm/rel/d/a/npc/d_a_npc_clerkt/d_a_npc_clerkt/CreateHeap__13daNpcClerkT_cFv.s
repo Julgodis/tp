@@ -7,14 +7,14 @@ lbl_8099A530:
 /* 8099A544  7C 7F 1B 78 */	mr r31, r3
 /* 8099A548  3C 60 80 9A */	lis r3, l_bmdData@ha
 /* 8099A54C  38 83 D3 78 */	addi r4, r3, l_bmdData@l
-/* 8099A550  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 8099D37C */
+/* 8099A550  80 04 00 04 */	lwz r0, 4(r4)
 /* 8099A554  54 00 10 3A */	slwi r0, r0, 2
 /* 8099A558  3C 60 80 9A */	lis r3, l_resNameList@ha
 /* 8099A55C  38 63 D3 90 */	addi r3, r3, l_resNameList@l
 /* 8099A560  7C 63 00 2E */	lwzx r3, r3, r0
-/* 8099A564  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 8099D378 */
-/* 8099A568  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 8099A56C  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 8099A564  80 84 00 00 */	lwz r4, 0(r4)
+/* 8099A568  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 8099A56C  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 8099A570  3C A5 00 02 */	addis r5, r5, 2
 /* 8099A574  38 C0 00 80 */	li r6, 0x80
 /* 8099A578  38 A5 C2 F8 */	addi r5, r5, -15624

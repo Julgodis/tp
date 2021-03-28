@@ -4,7 +4,7 @@ lbl_804997E8:
 /* 804997F0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804997F4  3C 80 80 43 */	lis r4, g_env_light@ha
 /* 804997F8  38 84 CA 54 */	addi r4, r4, g_env_light@l
-/* 804997FC  C0 24 12 44 */	lfs f1, 0x1244(r4)	/* effective address: 8042DC98 */
+/* 804997FC  C0 24 12 44 */	lfs f1, 0x1244(r4)
 /* 80499800  3C 80 80 4A */	lis r4, lit_3837@ha
 /* 80499804  C0 04 9A 7C */	lfs f0, lit_3837@l(r4)
 /* 80499808  FC 01 00 40 */	fcmpo cr0, f1, f0

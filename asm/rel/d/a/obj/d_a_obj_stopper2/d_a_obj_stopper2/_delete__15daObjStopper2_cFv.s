@@ -4,7 +4,7 @@ lbl_80CEFDB8:
 /* 80CEFDC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80CEFDC4  3C 80 80 CF */	lis r4, l_arcName@ha
 /* 80CEFDC8  38 84 FF 24 */	addi r4, r4, l_arcName@l
-/* 80CEFDCC  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80CEFF24 */
+/* 80CEFDCC  80 84 00 00 */	lwz r4, 0(r4)
 /* 80CEFDD0  38 63 05 68 */	addi r3, r3, 0x568
 /* 80CEFDD4  4B 33 D2 34 */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80CEFDD8  38 60 00 01 */	li r3, 1

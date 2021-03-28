@@ -141,8 +141,8 @@ lbl_809DFE18:
 /* 809DFEE0  38 03 26 14 */	addi r0, r3, tgHitCallBack__8daNpcF_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf@l
 /* 809DFEE4  90 1E 0D 30 */	stw r0, 0xd30(r30)
 /* 809DFEE8  38 7E 05 D0 */	addi r3, r30, 0x5d0
-/* 809DFEEC  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 809DFEF0  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 809DFEEC  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 809DFEF0  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 809DFEF4  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 809DFEF8  4B 69 6B B4 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 809DFEFC  80 1E 06 AC */	lwz r0, 0x6ac(r30)

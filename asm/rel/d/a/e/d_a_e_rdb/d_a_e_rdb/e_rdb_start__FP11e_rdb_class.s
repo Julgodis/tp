@@ -14,7 +14,7 @@ lbl_80766A1C:
 /* 80766A4C  FC 00 00 1E */	fctiwz f0, f0
 /* 80766A50  D8 01 00 28 */	stfd f0, 0x28(r1)
 /* 80766A54  80 A1 00 2C */	lwz r5, 0x2c(r1)
-/* 80766A58  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 8076B460 */
+/* 80766A58  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 80766A5C  38 00 00 03 */	li r0, 3
 /* 80766A60  B0 03 06 C0 */	sth r0, 0x6c0(r3)
 /* 80766A64  A8 03 05 B4 */	lha r0, 0x5b4(r3)
@@ -114,9 +114,9 @@ lbl_80766BA4:
 /* 80766BAC  EC 01 00 2A */	fadds f0, f1, f0
 /* 80766BB0  D0 1E 04 D4 */	stfs f0, 0x4d4(r30)
 /* 80766BB4  D3 FE 04 FC */	stfs f31, 0x4fc(r30)
-/* 80766BB8  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80766BBC  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80766BC0  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80766BB8  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80766BBC  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80766BC0  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80766BC4  4B 8B 3D A0 */	b fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80766BC8  C0 1F 00 9C */	lfs f0, 0x9c(r31)
 /* 80766BCC  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -173,8 +173,8 @@ lbl_80766C3C:
 /* 80766C94  C0 1F 00 08 */	lfs f0, 8(r31)
 /* 80766C98  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 80766C9C  D0 21 00 20 */	stfs f1, 0x20(r1)
-/* 80766CA0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80766CA4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80766CA0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80766CA4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80766CA8  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80766CAC  38 80 00 08 */	li r4, 8
 /* 80766CB0  38 A0 00 4F */	li r5, 0x4f
@@ -185,7 +185,7 @@ lbl_80766C3C:
 /* 80766CC4  90 01 00 08 */	stw r0, 8(r1)
 /* 80766CC8  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80766CCC  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80766CD0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80766CD0  80 63 00 00 */	lwz r3, 0(r3)
 /* 80766CD4  38 81 00 08 */	addi r4, r1, 8
 /* 80766CD8  38 A0 00 00 */	li r5, 0
 /* 80766CDC  38 C0 00 00 */	li r6, 0

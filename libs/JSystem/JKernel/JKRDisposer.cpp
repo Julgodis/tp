@@ -58,9 +58,9 @@ extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
 /* ############################################################################################## */
 /* 803CC0F0-803CC100 000C+04 s=2 e=0 z=0  None .data      __vt__11JKRDisposer                                          */
 SECTION_DATA static void* __vt__11JKRDisposer[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11JKRDisposerFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11JKRDisposerFv,
 	/* padding */
 	NULL,
 };

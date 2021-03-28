@@ -9,9 +9,9 @@ lbl_807ADE50:
 /* 807ADE6C  3B C4 FE 7C */	addi r30, r4, cNullVec__6Z2Calc@l
 /* 807ADE70  3C 80 80 7B */	lis r4, lit_3909@ha
 /* 807ADE74  3B E4 FD 2C */	addi r31, r4, lit_3909@l
-/* 807ADE78  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 807ADE7C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 807ADE80  83 A4 5D AC */	lwz r29, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 807ADE78  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 807ADE7C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 807ADE80  83 A4 5D AC */	lwz r29, 0x5dac(r4)
 /* 807ADE84  A8 03 06 80 */	lha r0, 0x680(r3)
 /* 807ADE88  2C 00 00 02 */	cmpwi r0, 2
 /* 807ADE8C  41 82 03 A4 */	beq lbl_807AE230

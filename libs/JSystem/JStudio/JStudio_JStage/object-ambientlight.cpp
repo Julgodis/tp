@@ -95,14 +95,14 @@ extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
 /* ############################################################################################## */
 /* 803C5888-803C58A8 0020+00 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage21TAdaptor_ambientLight              */
 SECTION_DATA static void* __vt__Q214JStudio_JStage21TAdaptor_ambientLight[8] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q214JStudio_JStage21TAdaptor_ambientLightFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv,
-	/* 4    */ (void*)adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv,
-	/* 5    */ (void*)adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv,
-	/* 6    */ (void*)adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl,
-	/* 7    */ (void*)adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q214JStudio_JStage21TAdaptor_ambientLightFv,
+	(void*)adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv,
+	(void*)adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv,
+	(void*)adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv,
+	(void*)adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl,
+	(void*)adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl,
 };
 
 /* 8028B610-8028B6AC 009C+00 s=0 e=1 z=0  None .text      __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight */

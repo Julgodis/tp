@@ -17,8 +17,8 @@ lbl_80576AC4:
 /* 80576B00  38 7F 14 48 */	addi r3, r31, 0x1448
 /* 80576B04  38 81 00 08 */	addi r4, r1, 8
 /* 80576B08  4B CF 86 D4 */	b SetC__8cM3dGCylFRC4cXyz
-/* 80576B0C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80576B10  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80576B0C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80576B10  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80576B14  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80576B18  38 9F 13 24 */	addi r4, r31, 0x1324
 /* 80576B1C  4B CE E0 8C */	b Set__4cCcSFP8cCcD_Obj

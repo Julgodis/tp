@@ -14,9 +14,9 @@ lbl_805879F4:
 /* 80587A24  38 FE 01 0C */	addi r7, r30, 0x10c
 /* 80587A28  39 00 00 01 */	li r8, 1
 /* 80587A2C  4B A9 55 F4 */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci
-/* 80587A30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80587A34  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80587A38  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80587A30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80587A34  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80587A38  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80587A3C  38 63 02 10 */	addi r3, r3, 0x210
 /* 80587A40  80 9E 0A 3C */	lwz r4, 0xa3c(r30)
 /* 80587A44  4B AC 3E 70 */	b forceOnEventMove__Q213dPa_control_c7level_cFUl

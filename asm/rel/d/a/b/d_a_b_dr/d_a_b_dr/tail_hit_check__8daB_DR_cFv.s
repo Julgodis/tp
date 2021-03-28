@@ -7,12 +7,12 @@ lbl_805BCA10:
 /* 805BCA24  A8 03 05 62 */	lha r0, 0x562(r3)
 /* 805BCA28  2C 00 00 00 */	cmpwi r0, 0
 /* 805BCA2C  40 81 00 94 */	ble lbl_805BCAC0
-/* 805BCA30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805BCA34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805BCA38  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 805BCA3C  80 03 05 88 */	lwz r0, 0x588(r3)	/* effective address: 80406748 */
+/* 805BCA30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805BCA34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805BCA38  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 805BCA3C  80 03 05 88 */	lwz r0, 0x588(r3)
 /* 805BCA40  64 00 02 00 */	oris r0, r0, 0x200
-/* 805BCA44  90 03 05 88 */	stw r0, 0x588(r3)	/* effective address: 80406748 */
+/* 805BCA44  90 03 05 88 */	stw r0, 0x588(r3)
 /* 805BCA48  80 1F 04 9C */	lwz r0, 0x49c(r31)
 /* 805BCA4C  54 00 02 95 */	rlwinm. r0, r0, 0, 0xa, 0xa
 /* 805BCA50  41 82 00 70 */	beq lbl_805BCAC0

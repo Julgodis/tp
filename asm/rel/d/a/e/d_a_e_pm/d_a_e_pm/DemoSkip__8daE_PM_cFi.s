@@ -7,8 +7,8 @@ lbl_80741FB4:
 /* 80741FC8  38 00 00 01 */	li r0, 1
 /* 80741FCC  3C 60 80 45 */	lis r3, struct_80450C98+0x0@ha
 /* 80741FD0  98 03 0C 98 */	stb r0, struct_80450C98+0x0@l(r3)
-/* 80741FD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80741FD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80741FD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80741FD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80741FDC  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80741FE0  38 80 00 1F */	li r4, 0x1f
 /* 80741FE4  4B 92 DD B0 */	b StopQuake__12dVibration_cFi

@@ -543,20 +543,20 @@ asm void dEvt_control_c::change() {
 /* ############################################################################################## */
 /* 803A7F78-803A7FB0 0038+00 s=1 e=0 z=0  None .data      @4719                                                        */
 SECTION_DATA static void* lit_4719[14] = {
-	/* 0    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x70),
-	/* 1    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
-	/* 2    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x94),
-	/* 3    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xDC),
-	/* 4    */ (void*)(((char*)entry__14dEvt_control_cFv)+0xF4),
-	/* 5    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x118),
-	/* 6    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
-	/* 7    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
-	/* 8    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	/* 9    */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	/* 10   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x160),
-	/* 11   */ (void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
-	/* 12   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
-	/* 13   */ (void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x70),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x94),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0xDC),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0xF4),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x118),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x13C),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x160),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0xB8),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
+	(void*)(((char*)entry__14dEvt_control_cFv)+0x184),
 };
 
 /* 800422C0-80042468 01A8+00 s=2 e=0 z=0  None .text      entry__14dEvt_control_cFv                                    */

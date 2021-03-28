@@ -119,7 +119,7 @@ lbl_809A62B4:
 /* 809A62B8  40 82 00 30 */	bne lbl_809A62E8
 /* 809A62BC  3C 60 80 9A */	lis r3, lrl@ha
 /* 809A62C0  38 63 6A 50 */	addi r3, r3, lrl@l
-/* 809A62C4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 809A6A50 */
+/* 809A62C4  80 63 00 00 */	lwz r3, 0(r3)
 /* 809A62C8  28 03 00 00 */	cmplwi r3, 0
 /* 809A62CC  41 82 00 1C */	beq lbl_809A62E8
 /* 809A62D0  C0 03 06 04 */	lfs f0, 0x604(r3)

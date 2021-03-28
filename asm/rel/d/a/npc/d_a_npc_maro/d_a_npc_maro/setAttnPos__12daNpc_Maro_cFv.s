@@ -9,20 +9,20 @@ lbl_8055D688:
 /* 8055D6A4  7C 7E 1B 78 */	mr r30, r3
 /* 8055D6A8  3C 60 80 56 */	lis r3, m__18daNpc_Maro_Param_c@ha
 /* 8055D6AC  3B E3 4B AC */	addi r31, r3, m__18daNpc_Maro_Param_c@l
-/* 8055D6B0  C0 1F 00 F4 */	lfs f0, 0xf4(r31)	/* effective address: 80564CA0 */
+/* 8055D6B0  C0 1F 00 F4 */	lfs f0, 0xf4(r31)
 /* 8055D6B4  D0 01 00 34 */	stfs f0, 0x34(r1)
 /* 8055D6B8  D0 01 00 38 */	stfs f0, 0x38(r1)
-/* 8055D6BC  C0 1F 01 24 */	lfs f0, 0x124(r31)	/* effective address: 80564CD0 */
+/* 8055D6BC  C0 1F 01 24 */	lfs f0, 0x124(r31)
 /* 8055D6C0  D0 01 00 3C */	stfs f0, 0x3c(r1)
 /* 8055D6C4  88 1E 11 33 */	lbz r0, 0x1133(r30)
 /* 8055D6C8  28 00 00 00 */	cmplwi r0, 0
 /* 8055D6CC  41 82 00 1C */	beq lbl_8055D6E8
-/* 8055D6D0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8055D6D4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8055D6D8  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8055D6DC  80 03 05 8C */	lwz r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 8055D6D0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8055D6D4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8055D6D8  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8055D6DC  80 03 05 8C */	lwz r0, 0x58c(r3)
 /* 8055D6E0  60 00 02 00 */	ori r0, r0, 0x200
-/* 8055D6E4  90 03 05 8C */	stw r0, 0x58c(r3)	/* effective address: 8040674C */
+/* 8055D6E4  90 03 05 8C */	stw r0, 0x58c(r3)
 lbl_8055D6E8:
 /* 8055D6E8  38 7E 0D 08 */	addi r3, r30, 0xd08
 /* 8055D6EC  38 80 00 00 */	li r4, 0

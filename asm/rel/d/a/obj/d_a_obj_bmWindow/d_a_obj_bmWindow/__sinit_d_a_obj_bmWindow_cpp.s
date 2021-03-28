@@ -19,10 +19,10 @@ lbl_80BB96B8:
 /* 80BB96FC  38 00 00 06 */	li r0, 6
 /* 80BB9700  7C 09 03 A6 */	mtctr r0
 lbl_80BB9704:
-/* 80BB9704  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80BB9760 */
-/* 80BB9708  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80BB9764 */
-/* 80BB970C  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80BB982C */
-/* 80BB9710  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80BB9830 */
+/* 80BB9704  80 64 00 04 */	lwz r3, 4(r4)
+/* 80BB9708  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80BB970C  90 65 00 04 */	stw r3, 4(r5)
+/* 80BB9710  94 05 00 08 */	stwu r0, 8(r5)
 /* 80BB9714  42 00 FF F0 */	bdnz lbl_80BB9704
 /* 80BB9718  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80BB971C  7C 08 03 A6 */	mtlr r0

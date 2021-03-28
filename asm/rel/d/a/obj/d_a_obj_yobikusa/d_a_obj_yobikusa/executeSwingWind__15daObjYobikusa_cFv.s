@@ -15,10 +15,10 @@ lbl_8059CA8C:
 /* 8059CAC0  7C 23 04 2E */	lfsx f1, r3, r0
 /* 8059CAC4  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059CAC8  38 63 DE 7C */	addi r3, r3, M_attr__15daObjYobikusa_c@l
-/* 8059CACC  C0 03 00 1C */	lfs f0, 0x1c(r3)	/* effective address: 8059DE98 */
+/* 8059CACC  C0 03 00 1C */	lfs f0, 0x1c(r3)
 /* 8059CAD0  EC 40 00 72 */	fmuls f2, f0, f1
 /* 8059CAD4  C0 21 00 08 */	lfs f1, 8(r1)
-/* 8059CAD8  C0 03 00 00 */	lfs f0, 0(r3)	/* effective address: 8059DE7C */
+/* 8059CAD8  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8059CADC  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8059CAE0  EC 22 00 2A */	fadds f1, f2, f0
 /* 8059CAE4  3C 60 80 5A */	lis r3, lit_3699@ha
@@ -50,11 +50,11 @@ lbl_8059CAF8:
 /* 8059CB48  7C 23 04 2E */	lfsx f1, r3, r0
 /* 8059CB4C  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059CB50  38 63 DE 7C */	addi r3, r3, M_attr__15daObjYobikusa_c@l
-/* 8059CB54  C0 03 00 20 */	lfs f0, 0x20(r3)	/* effective address: 8059DE9C */
+/* 8059CB54  C0 03 00 20 */	lfs f0, 0x20(r3)
 /* 8059CB58  EC 40 00 72 */	fmuls f2, f0, f1
-/* 8059CB5C  C0 63 00 10 */	lfs f3, 0x10(r3)	/* effective address: 8059DE8C */
+/* 8059CB5C  C0 63 00 10 */	lfs f3, 0x10(r3)
 /* 8059CB60  C0 21 00 08 */	lfs f1, 8(r1)
-/* 8059CB64  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8059DE88 */
+/* 8059CB64  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8059CB68  EC 00 18 28 */	fsubs f0, f0, f3
 /* 8059CB6C  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8059CB70  EC 03 00 2A */	fadds f0, f3, f0
@@ -86,9 +86,9 @@ lbl_8059CB8C:
 /* 8059CBD4  A8 BF 07 64 */	lha r5, 0x764(r31)
 /* 8059CBD8  3C 60 80 5A */	lis r3, M_attr__15daObjYobikusa_c@ha
 /* 8059CBDC  38 83 DE 7C */	addi r4, r3, M_attr__15daObjYobikusa_c@l
-/* 8059CBE0  C0 44 00 18 */	lfs f2, 0x18(r4)	/* effective address: 8059DE94 */
+/* 8059CBE0  C0 44 00 18 */	lfs f2, 0x18(r4)
 /* 8059CBE4  C0 21 00 08 */	lfs f1, 8(r1)
-/* 8059CBE8  C0 04 00 14 */	lfs f0, 0x14(r4)	/* effective address: 8059DE90 */
+/* 8059CBE8  C0 04 00 14 */	lfs f0, 0x14(r4)
 /* 8059CBEC  EC 00 10 28 */	fsubs f0, f0, f2
 /* 8059CBF0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8059CBF4  EC 02 00 2A */	fadds f0, f2, f0
@@ -98,7 +98,7 @@ lbl_8059CB8C:
 /* 8059CC04  7C 05 02 14 */	add r0, r5, r0
 /* 8059CC08  B0 1F 07 64 */	sth r0, 0x764(r31)
 /* 8059CC0C  A8 7F 07 66 */	lha r3, 0x766(r31)
-/* 8059CC10  A8 04 00 3A */	lha r0, 0x3a(r4)	/* effective address: 8059DEB6 */
+/* 8059CC10  A8 04 00 3A */	lha r0, 0x3a(r4)
 /* 8059CC14  7C 03 02 14 */	add r0, r3, r0
 /* 8059CC18  B0 1F 07 66 */	sth r0, 0x766(r31)
 /* 8059CC1C  7F E3 FB 78 */	mr r3, r31

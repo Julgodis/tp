@@ -18,8 +18,8 @@ lbl_80B61AA4:
 /* 80B61AE4  3B E3 7C 38 */	addi r31, r3, m__17daNpc_ykW_Param_c@l
 /* 80B61AE8  38 00 00 00 */	li r0, 0
 /* 80B61AEC  90 01 00 08 */	stw r0, 8(r1)
-/* 80B61AF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B61AF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B61AF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B61AF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B61AF8  38 63 09 58 */	addi r3, r3, 0x958
 /* 80B61AFC  38 80 00 04 */	li r4, 4
 /* 80B61B00  4B 4D 2E 34 */	b isDungeonItem__12dSv_memBit_cCFi

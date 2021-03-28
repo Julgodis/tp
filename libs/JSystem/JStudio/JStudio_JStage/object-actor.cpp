@@ -11,6 +11,18 @@
 // Types:
 // 
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TObject {
+	};
+
+};
+
 struct Vec {
 };
 
@@ -51,18 +63,6 @@ namespace JStudio {
 
 	struct TAdaptor_actor {
 		/* 802868B0 */ ~TAdaptor_actor();
-	};
-
-};
-
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TObject {
 	};
 
 };
@@ -250,34 +250,34 @@ SECTION_DATA static u8 lit_1098[12] = {
 
 /* 803C57B4-803C57C4 0010+00 s=2 e=0 z=0  None .data      __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_ */
 SECTION_DATA static void* __vt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor,
-	/* 3    */ (void*)__dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__cl__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_CFfPQ27JStudio8TAdaptor,
+	(void*)__dt__Q314JStudio_JStage14TAdaptor_actor26TVVOutput_ANIMATION_FRAME_Fv,
 };
 
 /* 803C57C4-803C5864 0050+50 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage14TAdaptor_actor                     */
 SECTION_DATA static void* __vt__Q214JStudio_JStage14TAdaptor_actor[20 + 20 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q214JStudio_JStage14TAdaptor_actorFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv,
-	/* 4    */ (void*)adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv,
-	/* 5    */ (void*)adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv,
-	/* 6    */ (void*)adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl,
-	/* 7    */ (void*)adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl,
-	/* 8    */ (void*)adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 9    */ (void*)adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 10   */ (void*)adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 11   */ (void*)adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 12   */ (void*)adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 13   */ (void*)adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 14   */ (void*)adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 15   */ (void*)adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 16   */ (void*)adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 17   */ (void*)adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 18   */ (void*)adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 19   */ (void*)adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q214JStudio_JStage14TAdaptor_actorFv,
+	(void*)adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_actorFv,
+	(void*)adaptor_do_begin__Q214JStudio_JStage14TAdaptor_actorFv,
+	(void*)adaptor_do_end__Q214JStudio_JStage14TAdaptor_actorFv,
+	(void*)adaptor_do_update__Q214JStudio_JStage14TAdaptor_actorFUl,
+	(void*)adaptor_do_data__Q214JStudio_JStage14TAdaptor_actorFPCvUlPCvUl,
+	(void*)adaptor_do_PARENT__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_PARENT_FUNCTION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_RELATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_RELATION_NODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_RELATION_ENABLE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_SHAPE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_TEXTURE_ANIMATION__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_TEXTURE_ANIMATION_MODE__Q214JStudio_JStage14TAdaptor_actorFQ37JStudio4data15TEOperationDataPCvUl,
 	/* padding */
 	NULL,
 	NULL,
@@ -598,10 +598,10 @@ asm JStudio_JStage::TAdaptor_actor::TVVOutput_ANIMATION_FRAME_::~TVVOutput_ANIMA
 /* ############################################################################################## */
 /* 803C5864-803C5888 0010+14 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage81TVariableValueOutput_object_<Q214JStudio_JStage14TAdaptor_actor,Q26JStage6TActor> */
 SECTION_DATA static void* data_803C5864[4 + 5 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_8028B5E0,
-	/* 3    */ (void*)func_8028B580,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_8028B5E0,
+	(void*)func_8028B580,
 	/* padding */
 	NULL,
 	NULL,

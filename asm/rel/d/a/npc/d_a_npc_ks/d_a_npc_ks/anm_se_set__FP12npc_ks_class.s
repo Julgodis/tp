@@ -311,7 +311,7 @@ lbl_80A59EE0:
 /* 80A59F20  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A59F24  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A59F28  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A59F2C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A59F2C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A59F30  38 81 00 18 */	addi r4, r1, 0x18
 /* 80A59F34  38 BE 0C 04 */	addi r5, r30, 0xc04
 /* 80A59F38  38 C0 00 00 */	li r6, 0
@@ -381,7 +381,7 @@ lbl_80A59FB0:
 /* 80A5A030  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80A5A034  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A5A038  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A5A03C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A5A03C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A5A040  38 81 00 14 */	addi r4, r1, 0x14
 /* 80A5A044  38 BE 0C 04 */	addi r5, r30, 0xc04
 /* 80A5A048  38 C0 00 00 */	li r6, 0
@@ -597,7 +597,7 @@ lbl_80A5A314:
 /* 80A5A36C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A5A370  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A5A374  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A5A378  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A5A378  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A5A37C  38 81 00 10 */	addi r4, r1, 0x10
 /* 80A5A380  38 BE 0C 04 */	addi r5, r30, 0xc04
 /* 80A5A384  38 C0 00 00 */	li r6, 0
@@ -650,7 +650,7 @@ lbl_80A5A42C:
 /* 80A5A434  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80A5A438  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A5A43C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A5A440  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A5A440  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A5A444  38 81 00 0C */	addi r4, r1, 0xc
 /* 80A5A448  38 BE 0C 04 */	addi r5, r30, 0xc04
 /* 80A5A44C  38 C0 00 00 */	li r6, 0
@@ -786,7 +786,7 @@ lbl_80A5A60C:
 /* 80A5A63C  90 01 00 08 */	stw r0, 8(r1)
 /* 80A5A640  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A5A644  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A5A648  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A5A648  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A5A64C  38 81 00 08 */	addi r4, r1, 8
 /* 80A5A650  38 BE 0C 04 */	addi r5, r30, 0xc04
 /* 80A5A654  38 C0 00 00 */	li r6, 0

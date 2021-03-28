@@ -15,7 +15,7 @@ lbl_80D38A98:
 /* 80D38A98  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80D38A9C  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D38AA0  38 84 92 84 */	addi r4, r4, l_arcName@l
-/* 80D38AA4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D39284 */
+/* 80D38AA4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D38AA8  4B 2F 44 14 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80D38AAC  7C 60 1B 78 */	mr r0, r3
 /* 80D38AB0  2C 00 00 04 */	cmpwi r0, 4
@@ -23,7 +23,7 @@ lbl_80D38A98:
 /* 80D38AB8  7F E3 FB 78 */	mr r3, r31
 /* 80D38ABC  3C 80 80 D4 */	lis r4, l_arcName@ha
 /* 80D38AC0  38 84 92 84 */	addi r4, r4, l_arcName@l
-/* 80D38AC4  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80D39284 */
+/* 80D38AC4  80 84 00 00 */	lwz r4, 0(r4)
 /* 80D38AC8  38 A0 00 0C */	li r5, 0xc
 /* 80D38ACC  38 C0 00 00 */	li r6, 0
 /* 80D38AD0  38 E0 0E E0 */	li r7, 0xee0

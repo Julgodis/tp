@@ -11,7 +11,7 @@ lbl_80742810:
 /* 80742834  38 63 00 C0 */	addi r3, r3, 0xc0
 /* 80742838  3C 80 80 45 */	lis r4, calc_mtx@ha
 /* 8074283C  38 84 07 68 */	addi r4, r4, calc_mtx@l
-/* 80742840  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80450768 */
+/* 80742840  80 84 00 00 */	lwz r4, 0(r4)
 /* 80742844  4B C0 3C 6C */	b PSMTXCopy
 /* 80742848  3C 60 80 75 */	lis r3, lit_3911@ha
 /* 8074284C  C0 03 BF 40 */	lfs f0, lit_3911@l(r3)

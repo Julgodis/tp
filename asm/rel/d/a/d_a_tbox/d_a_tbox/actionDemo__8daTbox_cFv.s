@@ -6,8 +6,8 @@ lbl_804939FC:
 /* 80493A0C  4B EC E7 D0 */	b _savegpr_29
 /* 80493A10  7C 7E 1B 78 */	mr r30, r3
 /* 80493A14  A8 83 00 FC */	lha r4, 0xfc(r3)
-/* 80493A18  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493A1C  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80493A18  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493A1C  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80493A20  38 7F 4F F8 */	addi r3, r31, 0x4ff8
 /* 80493A24  4B BB 40 54 */	b endCheck__16dEvent_manager_cFs
 /* 80493A28  2C 03 00 00 */	cmpwi r3, 0
@@ -23,21 +23,21 @@ lbl_804939FC:
 /* 80493A50  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 80493A54  3C 60 80 49 */	lis r3, lit_5194@ha
 /* 80493A58  38 83 65 DC */	addi r4, r3, lit_5194@l
-/* 80493A5C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804965DC */
-/* 80493A60  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804965E0 */
+/* 80493A5C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80493A60  80 04 00 04 */	lwz r0, 4(r4)
 /* 80493A64  90 7E 07 40 */	stw r3, 0x740(r30)
 /* 80493A68  90 1E 07 44 */	stw r0, 0x744(r30)
-/* 80493A6C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804965E4 */
+/* 80493A6C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80493A70  90 1E 07 48 */	stw r0, 0x748(r30)
 /* 80493A74  48 00 00 24 */	b lbl_80493A98
 lbl_80493A78:
 /* 80493A78  3C 60 80 49 */	lis r3, lit_5197@ha
 /* 80493A7C  38 83 65 E8 */	addi r4, r3, lit_5197@l
-/* 80493A80  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 804965E8 */
-/* 80493A84  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 804965EC */
+/* 80493A80  80 64 00 00 */	lwz r3, 0(r4)
+/* 80493A84  80 04 00 04 */	lwz r0, 4(r4)
 /* 80493A88  90 7E 07 40 */	stw r3, 0x740(r30)
 /* 80493A8C  90 1E 07 44 */	stw r0, 0x744(r30)
-/* 80493A90  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 804965F0 */
+/* 80493A90  80 04 00 08 */	lwz r0, 8(r4)
 /* 80493A94  90 1E 07 48 */	stw r0, 0x748(r30)
 lbl_80493A98:
 /* 80493A98  3B BF 4E C8 */	addi r29, r31, 0x4ec8
@@ -76,8 +76,8 @@ lbl_80493A98:
 /* 80493B1C  40 80 00 44 */	bge lbl_80493B60
 /* 80493B20  48 00 00 7C */	b lbl_80493B9C
 lbl_80493B24:
-/* 80493B24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493B28  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80493B24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493B28  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80493B2C  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 80493B30  7F A3 EB 78 */	mr r3, r29
 /* 80493B34  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000EDFF@ha */
@@ -92,8 +92,8 @@ lbl_80493B24:
 /* 80493B58  4B BA 0E 88 */	b setEventReg__11dSv_event_cFUsUc
 /* 80493B5C  48 00 01 44 */	b lbl_80493CA0
 lbl_80493B60:
-/* 80493B60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493B64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80493B60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493B64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80493B68  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 80493B6C  7F A3 EB 78 */	mr r3, r29
 /* 80493B70  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000EBFF@ha */
@@ -123,8 +123,8 @@ lbl_80493BB4:
 /* 80493BC8  41 82 00 08 */	beq lbl_80493BD0
 /* 80493BCC  48 00 00 40 */	b lbl_80493C0C
 lbl_80493BD0:
-/* 80493BD0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493BD4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80493BD0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493BD4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80493BD8  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 80493BDC  7F A3 EB 78 */	mr r3, r29
 /* 80493BE0  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F0FF@ha */
@@ -160,8 +160,8 @@ lbl_80493C24:
 /* 80493C50  54 00 D6 BE */	rlwinm r0, r0, 0x1a, 0x1a, 0x1f
 /* 80493C54  2C 00 00 15 */	cmpwi r0, 0x15
 /* 80493C58  40 82 00 48 */	bne lbl_80493CA0
-/* 80493C5C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80493C60  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80493C5C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80493C60  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80493C64  3B A3 07 F0 */	addi r29, r3, 0x7f0
 /* 80493C68  7F A3 EB 78 */	mr r3, r29
 /* 80493C6C  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000EFFF@ha */

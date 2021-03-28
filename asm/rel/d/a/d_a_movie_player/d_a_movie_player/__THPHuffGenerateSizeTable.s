@@ -6,7 +6,7 @@ lbl_8087375C:
 /* 8087376C  3C 60 80 88 */	lis r3, __THPHuffmanBits@ha
 /* 80873770  38 C3 9B 60 */	addi r6, r3, __THPHuffmanBits@l
 lbl_80873774:
-/* 80873774  80 66 00 00 */	lwz r3, 0(r6)	/* effective address: 80879B60 */
+/* 80873774  80 66 00 00 */	lwz r3, 0(r6)
 /* 80873778  38 08 FF FF */	addi r0, r8, -1
 /* 8087377C  7C 03 00 AE */	lbzx r0, r3, r0
 /* 80873780  7C 03 03 78 */	mr r3, r0
@@ -57,6 +57,6 @@ lbl_80873818:
 /* 80873824  38 00 00 00 */	li r0, 0
 /* 80873828  3C 60 80 88 */	lis r3, __THPHuffmanSizeTab@ha
 /* 8087382C  38 63 9B 64 */	addi r3, r3, __THPHuffmanSizeTab@l
-/* 80873830  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80879B64 */
+/* 80873830  80 63 00 00 */	lwz r3, 0(r3)
 /* 80873834  7C 03 39 AE */	stbx r0, r3, r7
 /* 80873838  4E 80 00 20 */	blr 

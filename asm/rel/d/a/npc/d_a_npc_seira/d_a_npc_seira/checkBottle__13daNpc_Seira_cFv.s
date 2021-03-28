@@ -5,8 +5,8 @@ lbl_80ACC440:
 /* 80ACC44C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80ACC450  80 03 00 B0 */	lwz r0, 0xb0(r3)
 /* 80ACC454  54 1F 06 3E */	clrlwi r31, r0, 0x18
-/* 80ACC458  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACC45C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ACC458  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACC45C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ACC460  38 63 00 28 */	addi r3, r3, 0x28
 /* 80ACC464  38 80 00 00 */	li r4, 0
 /* 80ACC468  4B 56 67 48 */	b isDarkClearLV__21dSv_player_status_b_cCFi

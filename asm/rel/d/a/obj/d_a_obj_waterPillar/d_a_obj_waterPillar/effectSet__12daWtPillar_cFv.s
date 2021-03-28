@@ -41,14 +41,14 @@ lbl_80D2CF98:
 /* 80D2D034  3B 00 00 00 */	li r24, 0
 /* 80D2D038  3B A0 00 00 */	li r29, 0
 /* 80D2D03C  3B 80 00 00 */	li r28, 0
-/* 80D2D040  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D2D044  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80D2D040  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D2D044  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 /* 80D2D048  3C 60 80 D3 */	lis r3, data_80D2EA04@ha
 /* 80D2D04C  3B 43 EA 04 */	addi r26, r3, data_80D2EA04@l
 /* 80D2D050  3C 60 80 D3 */	lis r3, lit_3645@ha
 /* 80D2D054  3B 63 E7 70 */	addi r27, r3, lit_3645@l
 lbl_80D2D058:
-/* 80D2D058  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80D2D058  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80D2D05C  38 00 00 FF */	li r0, 0xff
 /* 80D2D060  90 01 00 08 */	stw r0, 8(r1)
 /* 80D2D064  38 80 00 00 */	li r4, 0
@@ -66,7 +66,7 @@ lbl_80D2D058:
 /* 80D2D094  39 00 00 00 */	li r8, 0
 /* 80D2D098  39 20 00 00 */	li r9, 0
 /* 80D2D09C  39 40 00 00 */	li r10, 0
-/* 80D2D0A0  C0 3B 00 00 */	lfs f1, 0(r27)	/* effective address: 80D2E770 */
+/* 80D2D0A0  C0 3B 00 00 */	lfs f1, 0(r27)
 /* 80D2D0A4  4B 32 04 28 */	b set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf
 /* 80D2D0A8  7C 7E C9 2E */	stwx r3, r30, r25
 /* 80D2D0AC  3B 18 00 01 */	addi r24, r24, 1
@@ -91,7 +91,7 @@ lbl_80D2D058:
 /* 80D2D0F8  38 A0 00 00 */	li r5, 0
 /* 80D2D0FC  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
 /* 80D2D100  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
-/* 80D2D104  A0 C6 00 06 */	lhz r6, 6(r6)	/* effective address: 80D2EA0A */
+/* 80D2D104  A0 C6 00 06 */	lhz r6, 6(r6)
 /* 80D2D108  38 FE 0B 6C */	addi r7, r30, 0xb6c
 /* 80D2D10C  39 00 00 00 */	li r8, 0
 /* 80D2D110  39 20 00 00 */	li r9, 0
@@ -118,7 +118,7 @@ lbl_80D2D128:
 /* 80D2D160  38 A0 00 00 */	li r5, 0
 /* 80D2D164  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
 /* 80D2D168  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
-/* 80D2D16C  A0 C6 00 08 */	lhz r6, 8(r6)	/* effective address: 80D2EA0C */
+/* 80D2D16C  A0 C6 00 08 */	lhz r6, 8(r6)
 /* 80D2D170  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 80D2D174  39 00 00 00 */	li r8, 0
 /* 80D2D178  39 20 00 00 */	li r9, 0
@@ -145,7 +145,7 @@ lbl_80D2D190:
 /* 80D2D1C8  38 A0 00 00 */	li r5, 0
 /* 80D2D1CC  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
 /* 80D2D1D0  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
-/* 80D2D1D4  A0 C6 00 0A */	lhz r6, 0xa(r6)	/* effective address: 80D2EA0E */
+/* 80D2D1D4  A0 C6 00 0A */	lhz r6, 0xa(r6)
 /* 80D2D1D8  38 FE 04 D0 */	addi r7, r30, 0x4d0
 /* 80D2D1DC  39 00 00 00 */	li r8, 0
 /* 80D2D1E0  39 20 00 00 */	li r9, 0
@@ -172,7 +172,7 @@ lbl_80D2D1F8:
 /* 80D2D230  38 A0 00 00 */	li r5, 0
 /* 80D2D234  3C C0 80 D3 */	lis r6, data_80D2EA04@ha
 /* 80D2D238  38 C6 EA 04 */	addi r6, r6, data_80D2EA04@l
-/* 80D2D23C  A0 C6 00 0C */	lhz r6, 0xc(r6)	/* effective address: 80D2EA10 */
+/* 80D2D23C  A0 C6 00 0C */	lhz r6, 0xc(r6)
 /* 80D2D240  38 FE 0B 6C */	addi r7, r30, 0xb6c
 /* 80D2D244  39 00 00 00 */	li r8, 0
 /* 80D2D248  39 20 00 00 */	li r9, 0

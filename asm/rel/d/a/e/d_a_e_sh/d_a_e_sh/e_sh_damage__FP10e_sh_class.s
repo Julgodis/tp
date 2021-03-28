@@ -9,7 +9,7 @@ lbl_8078FBC8:
 /* 8078FBE4  3B E4 1D 70 */	addi r31, r4, lit_3902@l
 /* 8078FBE8  38 00 00 06 */	li r0, 6
 /* 8078FBEC  B0 03 06 A0 */	sth r0, 0x6a0(r3)
-/* 8078FBF0  C0 3F 00 04 */	lfs f1, 4(r31)	/* effective address: 80791D74 */
+/* 8078FBF0  C0 3F 00 04 */	lfs f1, 4(r31)
 /* 8078FBF4  D0 23 05 2C */	stfs f1, 0x52c(r3)
 /* 8078FBF8  A8 03 06 78 */	lha r0, 0x678(r3)
 /* 8078FBFC  2C 00 00 01 */	cmpwi r0, 1

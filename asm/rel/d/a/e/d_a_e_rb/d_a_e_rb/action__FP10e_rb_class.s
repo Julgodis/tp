@@ -73,7 +73,7 @@ lbl_807632C8:
 lbl_807632E4:
 /* 807632E4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807632E8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807632EC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807632EC  80 63 00 00 */	lwz r3, 0(r3)
 /* 807632F0  A8 9B 04 DE */	lha r4, 0x4de(r27)
 /* 807632F4  4B 8A 90 E8 */	b mDoMtx_YrotS__FPA4_fs
 /* 807632F8  C0 1F 00 04 */	lfs f0, 4(r31)
@@ -126,7 +126,7 @@ lbl_80763340:
 /* 807633AC  D0 01 00 1C */	stfs f0, 0x1c(r1)
 /* 807633B0  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807633B4  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807633B8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807633B8  80 63 00 00 */	lwz r3, 0(r3)
 /* 807633BC  A8 9B 0A 50 */	lha r4, 0xa50(r27)
 /* 807633C0  4B 8A 90 1C */	b mDoMtx_YrotS__FPA4_fs
 /* 807633C4  38 61 00 14 */	addi r3, r1, 0x14
@@ -157,8 +157,8 @@ lbl_807633F0:
 /* 80763424  D0 1B 04 D8 */	stfs f0, 0x4d8(r27)
 lbl_80763428:
 /* 80763428  38 7B 05 F8 */	addi r3, r27, 0x5f8
-/* 8076342C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80763430  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8076342C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80763430  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80763434  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80763438  4B 91 36 74 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8076343C  7F C0 07 75 */	extsb. r0, r30
@@ -186,7 +186,7 @@ lbl_80763464:
 /* 8076348C  C0 3F 00 98 */	lfs f1, 0x98(r31)
 /* 80763490  3C E0 80 76 */	lis r7, l_HIO@ha
 /* 80763494  38 E7 4F 90 */	addi r7, r7, l_HIO@l
-/* 80763498  C0 07 00 08 */	lfs f0, 8(r7)	/* effective address: 80764F98 */
+/* 80763498  C0 07 00 08 */	lfs f0, 8(r7)
 /* 8076349C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 807634A0  38 FB 01 0C */	addi r7, r27, 0x10c
 /* 807634A4  39 00 00 01 */	li r8, 1
@@ -208,7 +208,7 @@ lbl_807634B0:
 /* 807634E0  38 C0 00 00 */	li r6, 0
 /* 807634E4  3C E0 80 76 */	lis r7, l_HIO@ha
 /* 807634E8  38 E7 4F 90 */	addi r7, r7, l_HIO@l
-/* 807634EC  C0 27 00 08 */	lfs f1, 8(r7)	/* effective address: 80764F98 */
+/* 807634EC  C0 27 00 08 */	lfs f1, 8(r7)
 /* 807634F0  38 FB 01 0C */	addi r7, r27, 0x10c
 /* 807634F4  39 00 00 00 */	li r8, 0
 /* 807634F8  4B 8B 9B 28 */	b fopAcM_effSmokeSet1__FPUlPUlPC4cXyzPC5csXyzfPC12dKy_tevstr_ci

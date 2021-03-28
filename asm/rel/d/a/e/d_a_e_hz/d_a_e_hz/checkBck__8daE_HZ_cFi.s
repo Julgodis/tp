@@ -6,8 +6,8 @@ lbl_806EA734:
 /* 806EA744  7C 7F 1B 78 */	mr r31, r3
 /* 806EA748  3C 60 80 6F */	lis r3, stringBase0@ha
 /* 806EA74C  38 63 09 5C */	addi r3, r3, stringBase0@l
-/* 806EA750  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806EA754  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 806EA750  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806EA754  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 806EA758  3C A5 00 02 */	addis r5, r5, 2
 /* 806EA75C  38 C0 00 80 */	li r6, 0x80
 /* 806EA760  38 A5 C2 F8 */	addi r5, r5, -15624

@@ -8,8 +8,8 @@ lbl_8080BCFC:
 /* 8080BD14  3C 60 80 81 */	lis r3, lit_3925@ha
 /* 8080BD18  3B E3 59 94 */	addi r31, r3, lit_3925@l
 /* 8080BD1C  38 7E 04 FC */	addi r3, r30, 0x4fc
-/* 8080BD20  C0 3F 00 88 */	lfs f1, 0x88(r31)	/* effective address: 80815A1C */
-/* 8080BD24  C0 5F 00 80 */	lfs f2, 0x80(r31)	/* effective address: 80815A14 */
+/* 8080BD20  C0 3F 00 88 */	lfs f1, 0x88(r31)
+/* 8080BD24  C0 5F 00 80 */	lfs f2, 0x80(r31)
 /* 8080BD28  4B A6 4A 18 */	b cLib_chaseF__FPfff
 /* 8080BD2C  80 1E 06 98 */	lwz r0, 0x698(r30)
 /* 8080BD30  2C 00 00 02 */	cmpwi r0, 2

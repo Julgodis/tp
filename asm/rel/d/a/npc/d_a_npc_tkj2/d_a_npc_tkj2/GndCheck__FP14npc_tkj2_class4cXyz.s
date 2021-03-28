@@ -8,7 +8,7 @@ lbl_80B11C48:
 /* 80B11C60  7C 9F 23 78 */	mr r31, r4
 /* 80B11C64  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80B11C68  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80B11C6C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80B11C6C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80B11C70  A8 9E 05 C4 */	lha r4, 0x5c4(r30)
 /* 80B11C74  4B 4F A7 68 */	b mDoMtx_YrotS__FPA4_fs
 /* 80B11C78  7F E3 FB 78 */	mr r3, r31

@@ -25,7 +25,7 @@ lbl_80BB7364:
 /* 80BB73C0  90 01 00 08 */	stw r0, 8(r1)
 /* 80BB73C4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80BB73C8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80BB73CC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80BB73CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80BB73D0  38 81 00 08 */	addi r4, r1, 8
 /* 80BB73D4  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80BB73D8  38 C0 00 00 */	li r6, 0
@@ -44,8 +44,8 @@ lbl_80BB7404:
 /* 80BB7408  4B FF FB 5D */	bl setModelMtx__11daBkyRock_cFv
 /* 80BB740C  3B 80 00 00 */	li r28, 0
 /* 80BB7410  3B C0 00 00 */	li r30, 0
-/* 80BB7414  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BB7418  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BB7414  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BB7418  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BB741C  3B A3 23 3C */	addi r29, r3, 0x233c
 lbl_80BB7420:
 /* 80BB7420  7F A3 EB 78 */	mr r3, r29

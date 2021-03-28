@@ -9,9 +9,9 @@ lbl_80CFEBE4:
 /* 80CFEC00  3B E3 FB F4 */	addi r31, r3, M_arcname__Q212daObjSwpush25Act_c@l
 /* 80CFEC04  38 7E 05 E8 */	addi r3, r30, 0x5e8
 /* 80CFEC08  C0 3E 05 EC */	lfs f1, 0x5ec(r30)
-/* 80CFEC0C  C0 5F 01 08 */	lfs f2, 0x108(r31)	/* effective address: 80CFFCFC */
-/* 80CFEC10  C0 7F 01 0C */	lfs f3, 0x10c(r31)	/* effective address: 80CFFD00 */
-/* 80CFEC14  C0 9F 01 10 */	lfs f4, 0x110(r31)	/* effective address: 80CFFD04 */
+/* 80CFEC0C  C0 5F 01 08 */	lfs f2, 0x108(r31)
+/* 80CFEC10  C0 7F 01 0C */	lfs f3, 0x10c(r31)
+/* 80CFEC14  C0 9F 01 10 */	lfs f4, 0x110(r31)
 /* 80CFEC18  4B 57 0D 64 */	b cLib_addCalc__FPfffff
 /* 80CFEC1C  C0 5F 01 14 */	lfs f2, 0x114(r31)
 /* 80CFEC20  C0 3F 00 EC */	lfs f1, 0xec(r31)

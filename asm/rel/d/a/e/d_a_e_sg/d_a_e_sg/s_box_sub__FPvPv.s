@@ -12,7 +12,7 @@ lbl_8078A67C:
 /* 8078A6A4  40 82 00 30 */	bne lbl_8078A6D4
 /* 8078A6A8  3C 60 80 79 */	lis r3, target_info_count@ha
 /* 8078A6AC  38 83 E1 C0 */	addi r4, r3, target_info_count@l
-/* 8078A6B0  80 A4 00 00 */	lwz r5, 0(r4)	/* effective address: 8078E1C0 */
+/* 8078A6B0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 8078A6B4  2C 05 00 0A */	cmpwi r5, 0xa
 /* 8078A6B8  40 80 00 1C */	bge lbl_8078A6D4
 /* 8078A6BC  54 A0 10 3A */	slwi r0, r5, 2

@@ -4,8 +4,8 @@ lbl_80C69FC8:
 /* 80C69FD0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80C69FD4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80C69FD8  7C 7F 1B 78 */	mr r31, r3
-/* 80C69FDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C69FE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C69FDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C69FE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C69FE4  80 1F 00 B0 */	lwz r0, 0xb0(r31)
 /* 80C69FE8  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 80C69FEC  88 1F 04 BA */	lbz r0, 0x4ba(r31)

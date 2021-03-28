@@ -35,22 +35,19 @@ struct daPy_py_c {
 // Forward References:
 // 
 
-static bool daTag_Chk_Draw(daTag_Chk_c*); // 2
-static void daTag_Chk_Execute(daTag_Chk_c*); // 2
-static bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
-static void daTag_Chk_Delete(daTag_Chk_c*); // 2
-static void daTag_Chk_Create(fopAc_ac_c*); // 2
+bool daTag_Chk_Draw(daTag_Chk_c*); // 2
+void daTag_Chk_Execute(daTag_Chk_c*); // 2
+bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
+void daTag_Chk_Delete(daTag_Chk_c*); // 2
+void daTag_Chk_Create(fopAc_ac_c*); // 2
 
 extern "C" void execute__11daTag_Chk_cFv(); // 1
-extern "C" static bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
-extern "C" static bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
-extern "C" extern u8 const lit_3844[8];
-extern "C" extern u8 const lit_3845[8];
-extern "C" extern u8 const lit_3846[8];
-extern "C" extern u8 const lit_3930[8];
+extern "C" bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
+extern "C" void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
+extern "C" bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
+extern "C" void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
+extern "C" void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
+extern "C" extern void* l_daTag_Chk_Method[8];
 extern "C" extern void* g_profile_TAG_CHKPOINT[12];
 
 // 
@@ -64,10 +61,7 @@ extern "C" void isSwitch__10dSv_info_cCFii(); // 1
 extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
 extern "C" void _savegpr_29(); // 1
 extern "C" void _restgpr_29(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040BF74[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
 
@@ -88,6 +82,21 @@ SECTION_RODATA static u8 const lit_3843[4] = {
 	0x00, 0x00, 0x00, 0x00,
 };
 
+/* 8048AC38-8048AC40 0008+00 s=1 e=0 z=0  None .rodata    @3844                                                        */
+SECTION_RODATA static u8 const lit_3844[8] = {
+	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048AC40-8048AC48 0008+00 s=1 e=0 z=0  None .rodata    @3845                                                        */
+SECTION_RODATA static u8 const lit_3845[8] = {
+	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048AC48-8048AC50 0008+00 s=1 e=0 z=0  None .rodata    @3846                                                        */
+SECTION_RODATA static u8 const lit_3846[8] = {
+	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
 /* 8048A6F8-8048A9EC 02F4+00 s=1 e=0 z=0  None .text      execute__11daTag_Chk_cFv                                     */
 #pragma push
 #pragma optimization_level 0
@@ -99,34 +108,34 @@ asm void daTag_Chk_c::execute() {
 #pragma pop
 
 
-/* 8048A9EC-8048A9F4 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
-static bool daTag_Chk_Draw(daTag_Chk_c* param_0) {
+/* 8048A9EC-8048A9F4 0008+00 s=0 e=0 z=0  None .text      daTag_Chk_Draw__FP11daTag_Chk_c                              */
+bool daTag_Chk_Draw(daTag_Chk_c* param_0) {
 	return true;
 }
 
 
-/* 8048A9F4-8048AA18 0024+00 s=1 e=0 z=0  None .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
+/* 8048A9F4-8048AA18 0024+00 s=0 e=0 z=0  None .text      daTag_Chk_Execute__FP11daTag_Chk_c                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Chk_Execute(daTag_Chk_c* param_0) {
+asm void daTag_Chk_Execute(daTag_Chk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Execute__FP11daTag_Chk_c.s"
 }
 #pragma pop
 
 
-/* 8048AA18-8048AA20 0008+00 s=1 e=0 z=0  None .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
-static bool daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
+/* 8048AA18-8048AA20 0008+00 s=0 e=0 z=0  None .text      daTag_Chk_IsDelete__FP11daTag_Chk_c                          */
+bool daTag_Chk_IsDelete(daTag_Chk_c* param_0) {
 	return true;
 }
 
 
-/* 8048AA20-8048AA50 0030+00 s=1 e=0 z=0  None .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */
+/* 8048AA20-8048AA50 0030+00 s=0 e=0 z=0  None .text      daTag_Chk_Delete__FP11daTag_Chk_c                            */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Chk_Delete(daTag_Chk_c* param_0) {
+asm void daTag_Chk_Delete(daTag_Chk_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Delete__FP11daTag_Chk_c.s"
 }
@@ -134,21 +143,6 @@ asm static void daTag_Chk_Delete(daTag_Chk_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048AC38-8048AC40 0008+00 s=0 e=0 z=0  None .rodata    @3844                                                        */
-SECTION_RODATA u8 const lit_3844[8] = {
-	0x3F, 0xE0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8048AC40-8048AC48 0008+00 s=0 e=0 z=0  None .rodata    @3845                                                        */
-SECTION_RODATA u8 const lit_3845[8] = {
-	0x40, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
-/* 8048AC48-8048AC50 0008+00 s=0 e=0 z=0  None .rodata    @3846                                                        */
-SECTION_RODATA u8 const lit_3846[8] = {
-	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-};
-
 /* 8048AC50-8048AC54 0004+00 s=1 e=0 z=0  None .rodata    @3925                                                        */
 SECTION_RODATA static u32 const lit_3925 = 0x42480000;
 
@@ -161,11 +155,16 @@ SECTION_RODATA static u32 const lit_3927 = 0x41200000;
 /* 8048AC5C-8048AC60 0004+00 s=1 e=0 z=0  None .rodata    @3928                                                        */
 SECTION_RODATA static u32 const lit_3928 = 0x3F000000;
 
-/* 8048AA50-8048AC20 01D0+00 s=1 e=0 z=0  None .text      daTag_Chk_Create__FP10fopAc_ac_c                             */
+/* 8048AC60-8048AC68 0008+00 s=1 e=0 z=0  None .rodata    @3930                                                        */
+SECTION_RODATA static u8 const lit_3930[8] = {
+	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+};
+
+/* 8048AA50-8048AC20 01D0+00 s=0 e=0 z=0  None .text      daTag_Chk_Create__FP10fopAc_ac_c                             */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daTag_Chk_Create(fopAc_ac_c* param_0) {
+asm void daTag_Chk_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/tag/d_a_tag_chkpoint/d_a_tag_chkpoint/daTag_Chk_Create__FP10fopAc_ac_c.s"
 }
@@ -173,36 +172,31 @@ asm static void daTag_Chk_Create(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 8048AC60-8048AC68 0008+00 s=0 e=0 z=0  None .rodata    @3930                                                        */
-SECTION_RODATA u8 const lit_3930[8] = {
-	0x43, 0x30, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+/* 8048AC68-8048AC88 0020+00 s=0 e=0 z=0  None .data      l_daTag_Chk_Method                                           */
+SECTION_DATA void* l_daTag_Chk_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 8048AC68-8048AC88 0020+00 s=1 e=0 z=0  None .data      l_daTag_Chk_Method                                           */
-SECTION_DATA static void* l_daTag_Chk_Method[8] = {
-	/* 0    */ (void*)daTag_Chk_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daTag_Chk_Delete__FP11daTag_Chk_c,
-	/* 2    */ (void*)daTag_Chk_Execute__FP11daTag_Chk_c,
-	/* 3    */ (void*)daTag_Chk_IsDelete__FP11daTag_Chk_c,
-	/* 4    */ (void*)daTag_Chk_Draw__FP11daTag_Chk_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
-};
-
-/* 8048AC88-8048ACB8 0030+00 s=0 e=0 z=1  None .data      g_profile_TAG_CHKPOINT                                       */
+/* 8048AC88-8048ACB8 0030+00 s=0 e=0 z=0  None .data      g_profile_TAG_CHKPOINT                                       */
 SECTION_DATA void* g_profile_TAG_CHKPOINT[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02D00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000588,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x01180000,
-	/* 9    */ (void*)&l_daTag_Chk_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)0x00060000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02D00000,
+	(void*)NULL,
+	(void*)0x00000588,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x01180000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)0x00060000,
 };
 

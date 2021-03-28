@@ -541,68 +541,68 @@ SECTION_DATA static u8 data_803C3188[10 + 2 /* padding */] = {
 
 /* 803C3194-803C31C0 002C+00 s=1 e=0 z=0  None .data      l_method$4860                                                */
 SECTION_DATA static void* data_803C3194[11] = {
-	/* 0    */ (void*)phase_00__FP9dScnPly_c,
-	/* 1    */ (void*)phase_1__FP9dScnPly_c,
-	/* 2    */ (void*)phase_1_0__FP9dScnPly_c,
-	/* 3    */ (void*)phase_01__FP9dScnPly_c,
-	/* 4    */ (void*)phase_0__FP9dScnPly_c,
-	/* 5    */ (void*)phase_2__FP9dScnPly_c,
-	/* 6    */ (void*)phase_3__FP9dScnPly_c,
-	/* 7    */ (void*)phase_4__FP9dScnPly_c,
-	/* 8    */ (void*)phase_5__FP9dScnPly_c,
-	/* 9    */ (void*)phase_6__FP9dScnPly_c,
-	/* 10   */ (void*)phase_compleate__FPv,
+	(void*)phase_00__FP9dScnPly_c,
+	(void*)phase_1__FP9dScnPly_c,
+	(void*)phase_1_0__FP9dScnPly_c,
+	(void*)phase_01__FP9dScnPly_c,
+	(void*)phase_0__FP9dScnPly_c,
+	(void*)phase_2__FP9dScnPly_c,
+	(void*)phase_3__FP9dScnPly_c,
+	(void*)phase_4__FP9dScnPly_c,
+	(void*)phase_5__FP9dScnPly_c,
+	(void*)phase_6__FP9dScnPly_c,
+	(void*)phase_compleate__FPv,
 };
 
 /* 803C31C0-803C31D4 0014+00 s=2 e=0 z=0  None .data      l_dScnPly_Method                                             */
 SECTION_DATA static void* l_dScnPly_Method[5] = {
-	/* 0    */ (void*)dScnPly_Create__FP11scene_class,
-	/* 1    */ (void*)dScnPly_Delete__FP9dScnPly_c,
-	/* 2    */ (void*)dScnPly_Execute__FP9dScnPly_c,
-	/* 3    */ (void*)dScnPly_IsDelete__F9dScnPly_c,
-	/* 4    */ (void*)dScnPly_Draw__FP9dScnPly_c,
+	(void*)dScnPly_Create__FP11scene_class,
+	(void*)dScnPly_Delete__FP9dScnPly_c,
+	(void*)dScnPly_Execute__FP9dScnPly_c,
+	(void*)dScnPly_IsDelete__F9dScnPly_c,
+	(void*)dScnPly_Draw__FP9dScnPly_c,
 };
 
-/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=1  None .data      g_profile_PLAY_SCENE                                         */
+/* 803C31D4-803C31FC 0028+00 s=0 e=0 z=0  None .data      g_profile_PLAY_SCENE                                         */
 SECTION_DATA void* g_profile_PLAY_SCENE[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x000B0000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)0x000001D8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)&l_dScnPly_Method,
-	/* 9    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000B0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000001D8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnPly_Method,
+	(void*)NULL,
 };
 
-/* 803C31FC-803C3224 0028+00 s=0 e=0 z=1  None .data      g_profile_OPENING_SCENE                                      */
+/* 803C31FC-803C3224 0028+00 s=0 e=0 z=0  None .data      g_profile_OPENING_SCENE                                      */
 SECTION_DATA void* g_profile_OPENING_SCENE[10] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0x0001FFFD,
-	/* 2    */ (void*)0x000C0000,
-	/* 3    */ (void*)&g_fpcNd_Method,
-	/* 4    */ (void*)0x000001D8,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopScn_Method,
-	/* 8    */ (void*)&l_dScnPly_Method,
-	/* 9    */ (void*)NULL,
+	(void*)NULL,
+	(void*)0x0001FFFD,
+	(void*)0x000C0000,
+	(void*)&g_fpcNd_Method,
+	(void*)0x000001D8,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)&g_fopScn_Method,
+	(void*)&l_dScnPly_Method,
+	(void*)NULL,
 };
 
 /* 803C3224-803C3230 000C+00 s=3 e=0 z=0  None .data      __vt__22dScnPly_env_debugHIO_c                               */
 SECTION_DATA static void* __vt__22dScnPly_env_debugHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dScnPly_env_debugHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dScnPly_env_debugHIO_cFv,
 };
 
 /* 803C3230-803C323C 000C+00 s=3 e=0 z=0  None .data      __vt__22dScnPly_env_otherHIO_c                               */
 SECTION_DATA static void* __vt__22dScnPly_env_otherHIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__22dScnPly_env_otherHIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__22dScnPly_env_otherHIO_cFv,
 };
 
 /* 80454F18-80454F1C 0002+02 s=1 e=0 z=0  None .sdata2    T_JOINT_dylKeyTbl                                            */
@@ -695,10 +695,10 @@ extern "C" u16 T_JOINT_dylKeyTbl[1 + 1 /* padding */];
 
 /* 8039A2C8-8039A2D8 0010+00 s=4 e=0 z=0  None .rodata    PreLoadInfoT                                                 */
 SECTION_RODATA static void* const PreLoadInfoT[4] = {
-	/* 0    */ (void*)(((char*)&d_s_d_s_play__stringBase0)+0x7),
-	/* 1    */ (void*)&T_JOINT_dylKeyTbl,
-	/* 2    */ (void*)&T_JOINT_resName,
-	/* 3    */ (void*)0x01010000,
+	(void*)(((char*)&d_s_d_s_play__stringBase0)+0x7),
+	(void*)&T_JOINT_dylKeyTbl,
+	(void*)&T_JOINT_resName,
+	(void*)0x01010000,
 };
 
 /* 8039A2D8-8039A388 00A9+07 s=5 e=0 z=0  None .rodata    @stringBase0                                                 */
@@ -944,23 +944,23 @@ asm dScnPly_env_otherHIO_c::~dScnPly_env_otherHIO_c() {
 /* ############################################################################################## */
 /* 803C323C-803C3248 000C+00 s=2 e=0 z=0  None .data      __vt__17dScnPly_env_HIO_c                                    */
 SECTION_DATA static void* __vt__17dScnPly_env_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dScnPly_env_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dScnPly_env_HIO_cFv,
 };
 
 /* 803C3248-803C3254 000C+00 s=2 e=0 z=0  None .data      __vt__17dScnPly_reg_HIO_c                                    */
 SECTION_DATA static void* __vt__17dScnPly_reg_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dScnPly_reg_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dScnPly_reg_HIO_cFv,
 };
 
 /* 803C3254-803C3260 000C+00 s=2 e=0 z=0  None .data      __vt__21dScnPly_preLoad_HIO_c                                */
 SECTION_DATA static void* __vt__21dScnPly_preLoad_HIO_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__21dScnPly_preLoad_HIO_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__21dScnPly_preLoad_HIO_cFv,
 };
 
 /* 80451128-80451130 0004+04 s=1 e=0 z=0  None .sbss      g_regHIO                                                     */

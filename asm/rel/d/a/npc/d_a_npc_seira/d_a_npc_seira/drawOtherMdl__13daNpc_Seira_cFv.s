@@ -7,11 +7,11 @@ lbl_80ACD380:
 /* 80ACD394  4B 6C B5 BC */	b itemRotate__13dShopSystem_cFv
 /* 80ACD398  3C 60 80 43 */	lis r3, g_cursorHIO@ha
 /* 80ACD39C  38 63 01 10 */	addi r3, r3, g_cursorHIO@l
-/* 80ACD3A0  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430118 */
+/* 80ACD3A0  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80ACD3A4  D0 01 00 08 */	stfs f0, 8(r1)
-/* 80ACD3A8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 8043011C */
+/* 80ACD3A8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80ACD3AC  D0 01 00 0C */	stfs f0, 0xc(r1)
-/* 80ACD3B0  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 80430120 */
+/* 80ACD3B0  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 80ACD3B4  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80ACD3B8  7F E3 FB 78 */	mr r3, r31
 /* 80ACD3BC  38 81 00 08 */	addi r4, r1, 8

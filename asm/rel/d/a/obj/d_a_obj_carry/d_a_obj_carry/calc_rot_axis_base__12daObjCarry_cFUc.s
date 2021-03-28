@@ -15,11 +15,11 @@ lbl_80477B1C:
 /* 80477B50  3C 60 80 3A */	lis r3, ZeroQuat@ha
 /* 80477B54  C4 03 72 40 */	lfsu f0, ZeroQuat@l(r3)
 /* 80477B58  D0 1D 0D 4C */	stfs f0, 0xd4c(r29)
-/* 80477B5C  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 803A0004 */
+/* 80477B5C  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80477B60  D0 1D 0D 50 */	stfs f0, 0xd50(r29)
-/* 80477B64  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 803A0008 */
+/* 80477B64  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80477B68  D0 1D 0D 54 */	stfs f0, 0xd54(r29)
-/* 80477B6C  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 803A000C */
+/* 80477B6C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 80477B70  D0 1D 0D 58 */	stfs f0, 0xd58(r29)
 /* 80477B74  80 1D 04 9C */	lwz r0, 0x49c(r29)
 /* 80477B78  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
@@ -27,10 +27,10 @@ lbl_80477B1C:
 /* 80477B80  88 7D 0D 7B */	lbz r3, 0xd7b(r29)
 /* 80477B84  7C 60 07 75 */	extsb. r0, r3
 /* 80477B88  40 80 00 40 */	bge lbl_80477BC8
-/* 80477B8C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80477B90  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80477B94  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80477B98  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 804067E8 */
+/* 80477B8C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80477B90  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80477B94  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80477B98  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 80477B9C  81 8C 00 E0 */	lwz r12, 0xe0(r12)
 /* 80477BA0  7D 89 03 A6 */	mtctr r12
 /* 80477BA4  4E 80 04 21 */	bctrl 
@@ -97,9 +97,9 @@ lbl_80477C80:
 /* 80477C88  3C 60 80 43 */	lis r3, BaseX__4cXyz@ha
 /* 80477C8C  C4 03 0D 0C */	lfsu f0, BaseX__4cXyz@l(r3)
 /* 80477C90  D0 1D 0C F4 */	stfs f0, 0xcf4(r29)
-/* 80477C94  C0 03 00 04 */	lfs f0, 4(r3)	/* effective address: 80430004 */
+/* 80477C94  C0 03 00 04 */	lfs f0, 4(r3)
 /* 80477C98  D0 1D 0C F8 */	stfs f0, 0xcf8(r29)
-/* 80477C9C  C0 03 00 08 */	lfs f0, 8(r3)	/* effective address: 80430008 */
+/* 80477C9C  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80477CA0  D0 1D 0C FC */	stfs f0, 0xcfc(r29)
 lbl_80477CA4:
 /* 80477CA4  88 1D 0D B8 */	lbz r0, 0xdb8(r29)

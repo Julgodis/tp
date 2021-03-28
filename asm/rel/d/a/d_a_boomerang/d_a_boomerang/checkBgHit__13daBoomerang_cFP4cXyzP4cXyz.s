@@ -10,8 +10,8 @@ lbl_8049FE6C:
 /* 8049FE8C  38 7F 0C FC */	addi r3, r31, 0xcfc
 /* 8049FE90  7F E6 FB 78 */	mr r6, r31
 /* 8049FE94  4B BD 7E D0 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8049FE98  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8049FE9C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8049FE98  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8049FE9C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8049FEA0  3B C3 0F 38 */	addi r30, r3, 0xf38
 /* 8049FEA4  7F C3 F3 78 */	mr r3, r30
 /* 8049FEA8  38 9F 0C FC */	addi r4, r31, 0xcfc

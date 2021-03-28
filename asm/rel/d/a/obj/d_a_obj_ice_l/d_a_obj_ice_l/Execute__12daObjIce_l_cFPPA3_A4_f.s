@@ -10,15 +10,15 @@ lbl_80C203C4:
 /* 80C203E4  3B E3 07 8C */	addi r31, r3, lit_3675@l
 /* 80C203E8  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
 /* 80C203EC  C0 3D 04 D4 */	lfs f1, 0x4d4(r29)
-/* 80C203F0  C0 1F 00 4C */	lfs f0, 0x4c(r31)	/* effective address: 80C207D8 */
+/* 80C203F0  C0 1F 00 4C */	lfs f0, 0x4c(r31)
 /* 80C203F4  EC 21 00 28 */	fsubs f1, f1, f0
 /* 80C203F8  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
 /* 80C203FC  D0 01 00 08 */	stfs f0, 8(r1)
 /* 80C20400  D0 21 00 0C */	stfs f1, 0xc(r1)
 /* 80C20404  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 80C20408  38 7D 05 A4 */	addi r3, r29, 0x5a4
-/* 80C2040C  C0 3F 00 00 */	lfs f1, 0(r31)	/* effective address: 80C2078C */
-/* 80C20410  C0 5F 00 68 */	lfs f2, 0x68(r31)	/* effective address: 80C207F4 */
+/* 80C2040C  C0 3F 00 00 */	lfs f1, 0(r31)
+/* 80C20410  C0 5F 00 68 */	lfs f2, 0x68(r31)
 /* 80C20414  4B 65 03 2C */	b cLib_chaseF__FPfff
 /* 80C20418  A8 1D 05 D4 */	lha r0, 0x5d4(r29)
 /* 80C2041C  C8 9F 00 08 */	lfd f4, 8(r31)

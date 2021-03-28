@@ -6,20 +6,20 @@ lbl_80B45DEC:
 /* 80B45DFC  38 A3 62 58 */	addi r5, r3, mCutList__13daNpc_yamiD_c@l
 /* 80B45E00  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B45E04  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B45E08  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B45E0C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80B45E10  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80B46258 */
-/* 80B45E14  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80B4625C */
-/* 80B45E18  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80B45E1C  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80B46260 */
+/* 80B45E08  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B45E0C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B45E10  90 65 00 00 */	stw r3, 0(r5)
+/* 80B45E14  90 05 00 04 */	stw r0, 4(r5)
+/* 80B45E18  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B45E1C  90 05 00 08 */	stw r0, 8(r5)
 /* 80B45E20  3C 60 80 B4 */	lis r3, lit_3815@ha
 /* 80B45E24  38 83 62 4C */	addi r4, r3, lit_3815@l
-/* 80B45E28  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B4624C */
-/* 80B45E2C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B46250 */
-/* 80B45E30  90 65 00 0C */	stw r3, 0xc(r5)	/* effective address: 80B46264 */
-/* 80B45E34  90 05 00 10 */	stw r0, 0x10(r5)	/* effective address: 80B46268 */
-/* 80B45E38  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B46254 */
-/* 80B45E3C  90 05 00 14 */	stw r0, 0x14(r5)	/* effective address: 80B4626C */
+/* 80B45E28  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B45E2C  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B45E30  90 65 00 0C */	stw r3, 0xc(r5)
+/* 80B45E34  90 05 00 10 */	stw r0, 0x10(r5)
+/* 80B45E38  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B45E3C  90 05 00 14 */	stw r0, 0x14(r5)
 /* 80B45E40  3C 60 80 B4 */	lis r3, __vt__19daNpc_yamiD_Param_c@ha
 /* 80B45E44  38 03 64 5C */	addi r0, r3, __vt__19daNpc_yamiD_Param_c@l
 /* 80B45E48  3C 60 80 B4 */	lis r3, l_HIO@ha

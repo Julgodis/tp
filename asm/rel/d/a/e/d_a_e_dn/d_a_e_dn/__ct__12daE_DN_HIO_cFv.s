@@ -6,15 +6,15 @@ lbl_804E51AC:
 /* 804E51BC  90 03 00 00 */	stw r0, 0(r3)
 /* 804E51C0  38 00 FF FF */	li r0, -1
 /* 804E51C4  98 03 00 04 */	stb r0, 4(r3)
-/* 804E51C8  C0 05 00 2C */	lfs f0, 0x2c(r5)	/* effective address: 804EE8D8 */
+/* 804E51C8  C0 05 00 2C */	lfs f0, 0x2c(r5)
 /* 804E51CC  D0 03 00 08 */	stfs f0, 8(r3)
-/* 804E51D0  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 804EE8DC */
+/* 804E51D0  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 804E51D4  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 804E51D8  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 804EE8E0 */
+/* 804E51D8  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 804E51DC  D0 03 00 10 */	stfs f0, 0x10(r3)
-/* 804E51E0  C0 05 00 38 */	lfs f0, 0x38(r5)	/* effective address: 804EE8E4 */
+/* 804E51E0  C0 05 00 38 */	lfs f0, 0x38(r5)
 /* 804E51E4  D0 03 00 14 */	stfs f0, 0x14(r3)
-/* 804E51E8  C0 05 00 3C */	lfs f0, 0x3c(r5)	/* effective address: 804EE8E8 */
+/* 804E51E8  C0 05 00 3C */	lfs f0, 0x3c(r5)
 /* 804E51EC  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 804E51F0  38 00 00 03 */	li r0, 3
 /* 804E51F4  B0 03 00 1C */	sth r0, 0x1c(r3)

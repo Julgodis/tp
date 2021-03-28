@@ -9,10 +9,10 @@ lbl_80AB348C:
 /* 80AB34A8  3B E3 58 08 */	addi r31, r3, m__17daNpcPray_Param_c@l
 /* 80AB34AC  3C 60 80 AB */	lis r3, l_arcNames@ha
 /* 80AB34B0  38 63 59 EC */	addi r3, r3, l_arcNames@l
-/* 80AB34B4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80AB59EC */
+/* 80AB34B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80AB34B8  38 80 00 09 */	li r4, 9
-/* 80AB34BC  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80AB34C0  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80AB34BC  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80AB34C0  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80AB34C4  3C A5 00 02 */	addis r5, r5, 2
 /* 80AB34C8  38 C0 00 80 */	li r6, 0x80
 /* 80AB34CC  38 A5 C2 F8 */	addi r5, r5, -15624

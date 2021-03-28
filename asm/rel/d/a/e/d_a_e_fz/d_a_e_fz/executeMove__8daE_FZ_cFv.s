@@ -17,11 +17,11 @@ lbl_806BF8E8:
 lbl_806BF924:
 /* 806BF924  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BF928  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806BF92C  C0 23 00 34 */	lfs f1, 0x34(r3)	/* effective address: 806C1BE4 */
+/* 806BF92C  C0 23 00 34 */	lfs f1, 0x34(r3)
 /* 806BF930  4B BA 80 5C */	b cM_rndFX__Ff
 /* 806BF934  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BF938  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806BF93C  A8 03 00 08 */	lha r0, 8(r3)	/* effective address: 806C1BB8 */
+/* 806BF93C  A8 03 00 08 */	lha r0, 8(r3)
 /* 806BF940  C8 5E 00 78 */	lfd f2, 0x78(r30)
 /* 806BF944  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 806BF948  90 01 00 0C */	stw r0, 0xc(r1)
@@ -45,7 +45,7 @@ lbl_806BF978:
 /* 806BF98C  38 7F 05 2C */	addi r3, r31, 0x52c
 /* 806BF990  3C 80 80 6C */	lis r4, l_HIO@ha
 /* 806BF994  38 84 1B B0 */	addi r4, r4, l_HIO@l
-/* 806BF998  C0 24 00 1C */	lfs f1, 0x1c(r4)	/* effective address: 806C1BCC */
+/* 806BF998  C0 24 00 1C */	lfs f1, 0x1c(r4)
 /* 806BF99C  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 806BF9A0  C0 7E 00 4C */	lfs f3, 0x4c(r30)
 /* 806BF9A4  4B BB 00 98 */	b cLib_addCalc2__FPffff
@@ -79,13 +79,13 @@ lbl_806BFA08:
 /* 806BFA08  A8 1F 04 DE */	lha r0, 0x4de(r31)
 /* 806BFA0C  B0 1F 04 E6 */	sth r0, 0x4e6(r31)
 /* 806BFA10  7F E3 FB 78 */	mr r3, r31
-/* 806BFA14  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806BFA18  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806BFA1C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 806BFA14  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806BFA18  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806BFA1C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 806BFA20  4B 95 AD C0 */	b fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 806BFA24  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806BFA28  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806BFA2C  C0 03 00 14 */	lfs f0, 0x14(r3)	/* effective address: 806C1BC4 */
+/* 806BFA2C  C0 03 00 14 */	lfs f0, 0x14(r3)
 /* 806BFA30  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 806BFA34  4C 40 13 82 */	cror 2, 0, 2
 /* 806BFA38  40 82 00 14 */	bne lbl_806BFA4C

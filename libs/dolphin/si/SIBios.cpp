@@ -201,7 +201,7 @@ extern "C" asm void SIUnregisterPollingHandler() {
 /* ############################################################################################## */
 /* 804509C8-804509D0 0004+04 s=1 e=0 z=0  None .sdata     __SIVersion                                                  */
 SECTION_SDATA static void* __SIVersion[1 + 1 /* padding */] = {
-	/* 0    */ (void*)&lit_1,
+	(void*)&lit_1,
 	/* padding */
 	NULL,
 };

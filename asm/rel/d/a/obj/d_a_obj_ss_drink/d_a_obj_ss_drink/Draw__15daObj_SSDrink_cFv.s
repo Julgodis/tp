@@ -9,11 +9,11 @@ lbl_80CE5858:
 /* 80CE5874  3B E4 69 30 */	addi r31, r4, mCcDObjInfo__15daObj_SSDrink_c@l
 /* 80CE5878  3C 80 80 CE */	lis r4, lit_4063@ha
 /* 80CE587C  38 A4 6A 3C */	addi r5, r4, lit_4063@l
-/* 80CE5880  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80CE6A3C */
-/* 80CE5884  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80CE6A40 */
+/* 80CE5880  80 85 00 00 */	lwz r4, 0(r5)
+/* 80CE5884  80 05 00 04 */	lwz r0, 4(r5)
 /* 80CE5888  90 81 00 08 */	stw r4, 8(r1)
 /* 80CE588C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80CE5890  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80CE6A44 */
+/* 80CE5890  80 05 00 08 */	lwz r0, 8(r5)
 /* 80CE5894  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80CE5898  38 81 00 08 */	addi r4, r1, 8
 /* 80CE589C  48 00 05 15 */	bl checkProcess__15daObj_SSDrink_cFM15daObj_SSDrink_cFPCvPvPv_i
@@ -49,16 +49,16 @@ lbl_80CE58B0:
 /* 80CE5910  3C 60 80 CE */	lis r3, __vt__8cM3dGPla@ha
 /* 80CE5914  38 03 6A F8 */	addi r0, r3, __vt__8cM3dGPla@l
 /* 80CE5918  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80CE591C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE5920  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE591C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE5920  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE5924  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80CE5928  38 9E 0A 70 */	addi r4, r30, 0xa70
 /* 80CE592C  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80CE5930  4B 38 EE 14 */	b GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla
 /* 80CE5934  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80CE5938  41 82 00 34 */	beq lbl_80CE596C
-/* 80CE593C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CE5940  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80CE593C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CE5940  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80CE5944  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 80CE5948  38 9E 04 D0 */	addi r4, r30, 0x4d0
 /* 80CE594C  C0 3E 0A FC */	lfs f1, 0xafc(r30)

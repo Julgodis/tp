@@ -27,10 +27,10 @@ lbl_807B50B0:
 /* 807B5114  D0 18 09 78 */	stfs f0, 0x978(r24)
 /* 807B5118  3B 78 09 64 */	addi r27, r24, 0x964
 /* 807B511C  3B 58 0C F4 */	addi r26, r24, 0xcf4
-/* 807B5120  C0 3E 00 04 */	lfs f1, 4(r30)	/* effective address: 807B7EBC */
+/* 807B5120  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 807B5124  D0 21 00 54 */	stfs f1, 0x54(r1)
 /* 807B5128  D0 21 00 58 */	stfs f1, 0x58(r1)
-/* 807B512C  C0 1E 00 18 */	lfs f0, 0x18(r30)	/* effective address: 807B7ED0 */
+/* 807B512C  C0 1E 00 18 */	lfs f0, 0x18(r30)
 /* 807B5130  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 807B5134  D0 21 00 30 */	stfs f1, 0x30(r1)
 /* 807B5138  D0 21 00 34 */	stfs f1, 0x34(r1)
@@ -38,7 +38,7 @@ lbl_807B50B0:
 /* 807B5140  3B 20 00 00 */	li r25, 0
 /* 807B5144  3C 60 80 7C */	lis r3, master@ha
 /* 807B5148  38 63 80 E0 */	addi r3, r3, master@l
-/* 807B514C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 807B80E0 */
+/* 807B514C  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B5150  28 03 00 00 */	cmplwi r3, 0
 /* 807B5154  41 82 00 14 */	beq lbl_807B5168
 /* 807B5158  88 03 0D 8E */	lbz r0, 0xd8e(r3)
@@ -59,7 +59,7 @@ lbl_807B5188:
 /* 807B518C  41 82 00 50 */	beq lbl_807B51DC
 /* 807B5190  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807B5194  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807B5198  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807B5198  80 63 00 00 */	lwz r3, 0(r3)
 /* 807B519C  A8 98 04 DE */	lha r4, 0x4de(r24)
 /* 807B51A0  4B 85 72 3C */	b mDoMtx_YrotS__FPA4_fs
 /* 807B51A4  C0 3E 00 24 */	lfs f1, 0x24(r30)

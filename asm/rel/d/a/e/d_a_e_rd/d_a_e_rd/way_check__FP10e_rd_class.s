@@ -13,8 +13,8 @@ lbl_80506890:
 /* 805068BC  7C 7C 1B 78 */	mr r28, r3
 /* 805068C0  3C 60 80 52 */	lis r3, lit_4208@ha
 /* 805068C4  3B C3 85 84 */	addi r30, r3, lit_4208@l
-/* 805068C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805068CC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805068C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805068CC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805068D0  3B A3 0F 38 */	addi r29, r3, 0xf38
 /* 805068D4  38 7D 3E C8 */	addi r3, r29, 0x3ec8
 /* 805068D8  3C 80 80 52 */	lis r4, stringBase0@ha
@@ -62,7 +62,7 @@ lbl_8050692C:
 lbl_8050697C:
 /* 8050697C  3B C0 00 00 */	li r30, 0
 lbl_80506980:
-/* 80506980  80 7F 00 00 */	lwz r3, 0(r31)	/* effective address: 80450768 */
+/* 80506980  80 7F 00 00 */	lwz r3, 0(r31)
 /* 80506984  7F 64 DB 78 */	mr r4, r27
 /* 80506988  4B B0 5A 54 */	b mDoMtx_YrotS__FPA4_fs
 /* 8050698C  D3 C1 00 20 */	stfs f30, 0x20(r1)

@@ -14,11 +14,11 @@ lbl_804C3168:
 /* 804C3198  4B E8 3B D4 */	b PSMTXMultVec
 /* 804C319C  3C 60 80 43 */	lis r3, Zero__4cXyz@ha
 /* 804C31A0  38 A3 0C F4 */	addi r5, r3, Zero__4cXyz@l
-/* 804C31A4  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80430CF4 */
+/* 804C31A4  C0 05 00 00 */	lfs f0, 0(r5)
 /* 804C31A8  D0 1E 09 1C */	stfs f0, 0x91c(r30)
-/* 804C31AC  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80430CF8 */
+/* 804C31AC  C0 05 00 04 */	lfs f0, 4(r5)
 /* 804C31B0  D0 1E 09 20 */	stfs f0, 0x920(r30)
-/* 804C31B4  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80430CFC */
+/* 804C31B4  C0 05 00 08 */	lfs f0, 8(r5)
 /* 804C31B8  D0 1E 09 24 */	stfs f0, 0x924(r30)
 /* 804C31BC  38 00 00 00 */	li r0, 0
 /* 804C31C0  B0 1E 08 5C */	sth r0, 0x85c(r30)
@@ -46,11 +46,11 @@ lbl_804C31F8:
 /* 804C3214  C0 06 08 E4 */	lfs f0, 0x8e4(r6)
 /* 804C3218  EC 00 08 28 */	fsubs f0, f0, f1
 /* 804C321C  D0 06 08 E4 */	stfs f0, 0x8e4(r6)
-/* 804C3220  C0 05 00 00 */	lfs f0, 0(r5)	/* effective address: 80430CF4 */
+/* 804C3220  C0 05 00 00 */	lfs f0, 0(r5)
 /* 804C3224  D0 06 09 1C */	stfs f0, 0x91c(r6)
-/* 804C3228  C0 05 00 04 */	lfs f0, 4(r5)	/* effective address: 80430CF8 */
+/* 804C3228  C0 05 00 04 */	lfs f0, 4(r5)
 /* 804C322C  D0 06 09 20 */	stfs f0, 0x920(r6)
-/* 804C3230  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 80430CFC */
+/* 804C3230  C0 05 00 08 */	lfs f0, 8(r5)
 /* 804C3234  D0 06 09 24 */	stfs f0, 0x924(r6)
 /* 804C3238  38 00 00 00 */	li r0, 0
 /* 804C323C  7C FE 1A 14 */	add r7, r30, r3

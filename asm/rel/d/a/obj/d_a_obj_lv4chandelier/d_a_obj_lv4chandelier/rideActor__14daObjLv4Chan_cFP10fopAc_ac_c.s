@@ -12,7 +12,7 @@ lbl_80C639B4:
 /* 80C639DC  3B E3 68 60 */	addi r31, r3, l_bmdidx@l
 /* 80C639E0  38 00 00 01 */	li r0, 1
 /* 80C639E4  98 1D 24 98 */	stb r0, 0x2498(r29)
-/* 80C639E8  C3 FF 00 0C */	lfs f31, 0xc(r31)	/* effective address: 80C6686C */
+/* 80C639E8  C3 FF 00 0C */	lfs f31, 0xc(r31)
 /* 80C639EC  80 1D 23 D4 */	lwz r0, 0x23d4(r29)
 /* 80C639F0  2C 00 00 08 */	cmpwi r0, 8
 /* 80C639F4  41 80 00 24 */	blt lbl_80C63A18

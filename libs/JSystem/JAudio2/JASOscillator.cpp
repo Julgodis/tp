@@ -175,10 +175,10 @@ SECTION_RODATA static u8 const sCurveTableSquare__13JASOscillator[68] = {
 
 /* 803C78A8-803C78B8 0010+00 s=1 e=0 z=0  None .data      table_list$151                                               */
 SECTION_DATA static void* data_803C78A8[4] = {
-	/* 0    */ (void*)&sCurveTableLinear__13JASOscillator,
-	/* 1    */ (void*)&sCurveTableSquare__13JASOscillator,
-	/* 2    */ (void*)&sCurveTableSqRoot__13JASOscillator,
-	/* 3    */ (void*)&sCurveTableSampleCell__13JASOscillator,
+	(void*)&sCurveTableLinear__13JASOscillator,
+	(void*)&sCurveTableSquare__13JASOscillator,
+	(void*)&sCurveTableSqRoot__13JASOscillator,
+	(void*)&sCurveTableSampleCell__13JASOscillator,
 };
 
 /* 80455710-80455718 0004+04 s=1 e=0 z=0  None .sdata2    @154                                                         */

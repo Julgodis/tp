@@ -11,18 +11,18 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct CSTControl {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct CSTControl {
 };
 
 struct JKRHeap {
@@ -157,14 +157,14 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
+struct J3DMaterialTable {
+};
+
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -941,135 +941,135 @@ SECTION_DATA static u8 cNullVec__6Z2Calc[12] = {
 
 /* 803BC38C-803BC398 000C+00 s=1 e=0 z=0  None .data      @4422                                                        */
 SECTION_DATA static void* lit_4422[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC398-803BC3A4 000C+00 s=1 e=0 z=0  None .data      @4423                                                        */
 SECTION_DATA static void* lit_4423[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3A4-803BC3B0 000C+00 s=1 e=0 z=0  None .data      @4424                                                        */
 SECTION_DATA static void* lit_4424[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3B0-803BC3BC 000C+00 s=1 e=0 z=0  None .data      @4425                                                        */
 SECTION_DATA static void* lit_4425[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3BC-803BC3C8 000C+00 s=1 e=0 z=0  None .data      @4426                                                        */
 SECTION_DATA static void* lit_4426[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3C8-803BC3D4 000C+00 s=1 e=0 z=0  None .data      @4427                                                        */
 SECTION_DATA static void* lit_4427[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3D4-803BC3E0 000C+00 s=1 e=0 z=0  None .data      @4428                                                        */
 SECTION_DATA static void* lit_4428[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3E0-803BC3EC 000C+00 s=1 e=0 z=0  None .data      @4429                                                        */
 SECTION_DATA static void* lit_4429[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3EC-803BC3F8 000C+00 s=1 e=0 z=0  None .data      @4430                                                        */
 SECTION_DATA static void* lit_4430[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC3F8-803BC404 000C+00 s=1 e=0 z=0  None .data      @4431                                                        */
 SECTION_DATA static void* lit_4431[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC404-803BC410 000C+00 s=1 e=0 z=0  None .data      @4432                                                        */
 SECTION_DATA static void* lit_4432[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC410-803BC41C 000C+00 s=1 e=0 z=0  None .data      @4433                                                        */
 SECTION_DATA static void* lit_4433[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC41C-803BC428 000C+00 s=1 e=0 z=0  None .data      @4434                                                        */
 SECTION_DATA static void* lit_4434[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC428-803BC434 000C+00 s=1 e=0 z=0  None .data      @4435                                                        */
 SECTION_DATA static void* lit_4435[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC434-803BC440 000C+00 s=1 e=0 z=0  None .data      @4436                                                        */
 SECTION_DATA static void* lit_4436[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC440-803BC44C 000C+00 s=1 e=0 z=0  None .data      @4437                                                        */
 SECTION_DATA static void* lit_4437[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC44C-803BC458 000C+00 s=1 e=0 z=0  None .data      @4438                                                        */
 SECTION_DATA static void* lit_4438[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_open_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_open_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC458-803BC464 000C+00 s=1 e=0 z=0  None .data      @4439                                                        */
 SECTION_DATA static void* lit_4439[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_move_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_move_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC464-803BC470 000C+00 s=1 e=0 z=0  None .data      @4440                                                        */
 SECTION_DATA static void* lit_4440[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_close_init__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_close_init__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC470-803BC554 00E4+00 s=3 e=0 z=0  None .data      init                                                         */
@@ -1093,135 +1093,135 @@ SECTION_DATA static u8 init[228] = {
 
 /* 803BC554-803BC560 000C+00 s=1 e=0 z=0  None .data      @4441                                                        */
 SECTION_DATA static void* lit_4441[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)wait_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)wait_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC560-803BC56C 000C+00 s=1 e=0 z=0  None .data      @4442                                                        */
 SECTION_DATA static void* lit_4442[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC56C-803BC578 000C+00 s=1 e=0 z=0  None .data      @4443                                                        */
 SECTION_DATA static void* lit_4443[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC578-803BC584 000C+00 s=1 e=0 z=0  None .data      @4444                                                        */
 SECTION_DATA static void* lit_4444[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)save_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)save_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC584-803BC590 000C+00 s=1 e=0 z=0  None .data      @4445                                                        */
 SECTION_DATA static void* lit_4445[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC590-803BC59C 000C+00 s=1 e=0 z=0  None .data      @4446                                                        */
 SECTION_DATA static void* lit_4446[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC59C-803BC5A8 000C+00 s=1 e=0 z=0  None .data      @4447                                                        */
 SECTION_DATA static void* lit_4447[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)option_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)option_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5A8-803BC5B4 000C+00 s=1 e=0 z=0  None .data      @4448                                                        */
 SECTION_DATA static void* lit_4448[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5B4-803BC5C0 000C+00 s=1 e=0 z=0  None .data      @4449                                                        */
 SECTION_DATA static void* lit_4449[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5C0-803BC5CC 000C+00 s=1 e=0 z=0  None .data      @4450                                                        */
 SECTION_DATA static void* lit_4450[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)letter_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)letter_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5CC-803BC5D8 000C+00 s=1 e=0 z=0  None .data      @4451                                                        */
 SECTION_DATA static void* lit_4451[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5D8-803BC5E4 000C+00 s=1 e=0 z=0  None .data      @4452                                                        */
 SECTION_DATA static void* lit_4452[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5E4-803BC5F0 000C+00 s=1 e=0 z=0  None .data      @4453                                                        */
 SECTION_DATA static void* lit_4453[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)fishing_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)fishing_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5F0-803BC5FC 000C+00 s=1 e=0 z=0  None .data      @4454                                                        */
 SECTION_DATA static void* lit_4454[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC5FC-803BC608 000C+00 s=1 e=0 z=0  None .data      @4455                                                        */
 SECTION_DATA static void* lit_4455[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC608-803BC614 000C+00 s=1 e=0 z=0  None .data      @4456                                                        */
 SECTION_DATA static void* lit_4456[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)skill_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)skill_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC614-803BC620 000C+00 s=1 e=0 z=0  None .data      @4457                                                        */
 SECTION_DATA static void* lit_4457[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_open_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_open_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC620-803BC62C 000C+00 s=1 e=0 z=0  None .data      @4458                                                        */
 SECTION_DATA static void* lit_4458[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_move_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_move_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC62C-803BC638 000C+00 s=1 e=0 z=0  None .data      @4459                                                        */
 SECTION_DATA static void* lit_4459[3] = {
-	/* 0    */ (void*)NULL,
-	/* 1    */ (void*)0xFFFFFFFF,
-	/* 2    */ (void*)insect_close_proc__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)0xFFFFFFFF,
+	(void*)insect_close_proc__17dMenu_Collect2D_cFv,
 };
 
 /* 803BC638-803BC71C 00E4+00 s=2 e=0 z=0  None .data      process                                                      */
@@ -1245,49 +1245,49 @@ SECTION_DATA static u8 process[228] = {
 
 /* 803BC71C-803BC72C 0010+00 s=1 e=0 z=0  None .data      bck_name$7583                                                */
 SECTION_DATA static void* data_803BC71C[4] = {
-	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x75),
-	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x8E),
-	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xA7),
-	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xC0),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x75),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x8E),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xA7),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xC0),
 };
 
 /* 803BC72C-803BC73C 0010+00 s=1 e=0 z=0  None .data      brk_name$7584                                                */
 SECTION_DATA static void* data_803BC72C[4] = {
-	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xD9),
-	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
-	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
-	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x10D),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xD9),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0xF2),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x10D),
 };
 
 /* 803BC73C-803BC74C 0010+00 s=1 e=0 z=0  None .data      bck_name$7687                                                */
 SECTION_DATA static void* data_803BC73C[4] = {
-	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x135),
-	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x14E),
-	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x167),
-	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x180),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x135),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x14E),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x167),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x180),
 };
 
 /* 803BC74C-803BC75C 0010+00 s=1 e=0 z=0  None .data      brk_name$7688                                                */
 SECTION_DATA static void* data_803BC74C[4] = {
-	/* 0    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x199),
-	/* 1    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
-	/* 2    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
-	/* 3    */ (void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x199),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
+	(void*)(((char*)&d_menu_d_menu_collect__stringBase0)+0x1B2),
 };
 
 /* 803BC75C-803BC768 000C+00 s=2 e=0 z=0  None .data      __vt__15dMenu_Collect_c                                      */
 SECTION_DATA static void* __vt__15dMenu_Collect_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15dMenu_Collect_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15dMenu_Collect_cFv,
 };
 
 /* 803BC768-803BC790 0010+18 s=2 e=0 z=0  None .data      __vt__20dMenu_Collect2DTop_c                                 */
 SECTION_DATA static void* __vt__20dMenu_Collect2DTop_c[4 + 6 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__20dMenu_Collect2DTop_cFv,
-	/* 3    */ (void*)__dt__20dMenu_Collect2DTop_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__20dMenu_Collect2DTop_cFv,
+	(void*)__dt__20dMenu_Collect2DTop_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -1299,9 +1299,9 @@ SECTION_DATA static void* __vt__20dMenu_Collect2DTop_c[4 + 6 /* padding */] = {
 
 /* 803BC790-803BC7C4 000C+28 s=2 e=0 z=0  None .data      __vt__17dMenu_Collect3D_c                                    */
 SECTION_DATA static void* __vt__17dMenu_Collect3D_c[3 + 10 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17dMenu_Collect3D_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17dMenu_Collect3D_cFv,
 	/* padding */
 	NULL,
 	NULL,
@@ -1317,10 +1317,10 @@ SECTION_DATA static void* __vt__17dMenu_Collect3D_c[3 + 10 /* padding */] = {
 
 /* 803BC7C4-803BC7E0 0010+0C s=2 e=0 z=0  None .data      __vt__17dMenu_Collect2D_c                                    */
 SECTION_DATA static void* __vt__17dMenu_Collect2D_c[4 + 3 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__17dMenu_Collect2D_cFv,
-	/* 3    */ (void*)__dt__17dMenu_Collect2D_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)draw__17dMenu_Collect2D_cFv,
+	(void*)__dt__17dMenu_Collect2D_cFv,
 	/* padding */
 	NULL,
 	NULL,

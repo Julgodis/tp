@@ -11,15 +11,6 @@
 // Types:
 // 
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TLight {
-	};
-
-};
-
 struct _GXColor {
 };
 
@@ -51,6 +42,15 @@ namespace JStudio {
 
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TLight {
 	};
 
 };
@@ -142,24 +142,24 @@ extern "C" extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding
 /* ############################################################################################## */
 /* 803C5A30-803C5A40 0010+00 s=2 e=0 z=0  None .data      __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_ */
 SECTION_DATA static void* __vt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor,
-	/* 3    */ (void*)__dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor,
+	(void*)__dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv,
 };
 
 /* 803C5A40-803C5A68 0028+00 s=2 e=0 z=0  None .data      __vt__Q214JStudio_JStage14TAdaptor_light                     */
 SECTION_DATA static void* __vt__Q214JStudio_JStage14TAdaptor_light[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__Q214JStudio_JStage14TAdaptor_lightFv,
-	/* 3    */ (void*)adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv,
-	/* 4    */ (void*)adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv,
-	/* 5    */ (void*)adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv,
-	/* 6    */ (void*)adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl,
-	/* 7    */ (void*)adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl,
-	/* 8    */ (void*)adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl,
-	/* 9    */ (void*)adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__Q214JStudio_JStage14TAdaptor_lightFv,
+	(void*)adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv,
+	(void*)adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv,
+	(void*)adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv,
+	(void*)adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl,
+	(void*)adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl,
+	(void*)adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl,
+	(void*)adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl,
 };
 
 /* 8028CB50-8028CBF4 00A4+00 s=0 e=1 z=0  None .text      __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight */

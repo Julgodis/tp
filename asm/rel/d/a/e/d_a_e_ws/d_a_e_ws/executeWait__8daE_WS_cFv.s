@@ -109,7 +109,7 @@ lbl_807E4864:
 /* 807E48A0  4B FF F7 0D */	bl calcTargetDist__8daE_WS_cF4cXyz4cXyz
 /* 807E48A4  3C 60 80 7E */	lis r3, l_HIO@ha
 /* 807E48A8  38 63 75 C8 */	addi r3, r3, l_HIO@l
-/* 807E48AC  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807E75D4 */
+/* 807E48AC  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807E48B0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807E48B4  4C 41 13 82 */	cror 2, 1, 2
 /* 807E48B8  7C 00 00 26 */	mfcr r0
@@ -216,7 +216,7 @@ lbl_807E49E4:
 /* 807E4A34  4B FF F5 79 */	bl calcTargetDist__8daE_WS_cF4cXyz4cXyz
 /* 807E4A38  3C 60 80 7E */	lis r3, l_HIO@ha
 /* 807E4A3C  38 63 75 C8 */	addi r3, r3, l_HIO@l
-/* 807E4A40  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 807E75D4 */
+/* 807E4A40  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 807E4A44  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 807E4A48  4C 41 13 82 */	cror 2, 1, 2
 /* 807E4A4C  7C 00 00 26 */	mfcr r0

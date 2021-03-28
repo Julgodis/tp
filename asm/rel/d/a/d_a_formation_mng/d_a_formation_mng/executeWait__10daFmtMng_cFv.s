@@ -130,10 +130,10 @@ lbl_80835CD0:
 /* 80835CE4  4B 97 68 98 */	b dKy_darkworld_check__Fv
 /* 80835CE8  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80835CEC  40 82 00 24 */	bne lbl_80835D10
-/* 80835CF0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80835CF4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80835CF8  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80835CFC  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80835CF0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80835CF4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80835CF8  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80835CFC  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80835D00  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80835D04  41 82 00 0C */	beq lbl_80835D10
 /* 80835D08  7F E3 FB 78 */	mr r3, r31

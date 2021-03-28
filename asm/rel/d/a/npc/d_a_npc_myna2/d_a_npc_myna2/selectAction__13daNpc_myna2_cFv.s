@@ -3,15 +3,15 @@ lbl_80A856BC:
 /* 80A856C0  38 C4 86 B4 */	addi r6, r4, cNullVec__6Z2Calc@l
 /* 80A856C4  3C 80 80 3A */	lis r4, __ptmf_null@ha
 /* 80A856C8  38 A4 21 80 */	addi r5, r4, __ptmf_null@l
-/* 80A856CC  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 803A2180 */
-/* 80A856D0  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 803A2184 */
+/* 80A856CC  80 85 00 00 */	lwz r4, 0(r5)
+/* 80A856D0  80 05 00 04 */	lwz r0, 4(r5)
 /* 80A856D4  90 83 0D C0 */	stw r4, 0xdc0(r3)
 /* 80A856D8  90 03 0D C4 */	stw r0, 0xdc4(r3)
-/* 80A856DC  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 803A2188 */
+/* 80A856DC  80 05 00 08 */	lwz r0, 8(r5)
 /* 80A856E0  90 03 0D C8 */	stw r0, 0xdc8(r3)
 /* 80A856E4  3C 80 80 A9 */	lis r4, m__19daNpc_myna2_Param_c@ha
 /* 80A856E8  38 84 84 34 */	addi r4, r4, m__19daNpc_myna2_Param_c@l
-/* 80A856EC  88 04 00 6A */	lbz r0, 0x6a(r4)	/* effective address: 80A8849E */
+/* 80A856EC  88 04 00 6A */	lbz r0, 0x6a(r4)
 /* 80A856F0  28 00 00 00 */	cmplwi r0, 0
 /* 80A856F4  41 82 00 20 */	beq lbl_80A85714
 /* 80A856F8  80 86 01 C4 */	lwz r4, 0x1c4(r6)

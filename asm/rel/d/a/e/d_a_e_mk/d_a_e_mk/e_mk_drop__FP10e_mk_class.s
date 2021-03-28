@@ -37,7 +37,7 @@ lbl_80715D98:
 /* 80715DB0  B0 1E 05 B4 */	sth r0, 0x5b4(r30)
 /* 80715DB4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80715DB8  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80715DBC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80715DBC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80715DC0  A8 9E 04 E6 */	lha r4, 0x4e6(r30)
 /* 80715DC4  4B 8F 66 18 */	b mDoMtx_YrotS__FPA4_fs
 /* 80715DC8  C0 1F 00 0C */	lfs f0, 0xc(r31)
@@ -75,8 +75,8 @@ lbl_80715E14:
 /* 80715E40  D0 01 00 10 */	stfs f0, 0x10(r1)
 /* 80715E44  D0 21 00 14 */	stfs f1, 0x14(r1)
 /* 80715E48  D0 01 00 18 */	stfs f0, 0x18(r1)
-/* 80715E4C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80715E50  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80715E4C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80715E50  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80715E54  38 63 5B D4 */	addi r3, r3, 0x5bd4
 /* 80715E58  38 80 00 05 */	li r4, 5
 /* 80715E5C  38 A0 00 0F */	li r5, 0xf
@@ -99,7 +99,7 @@ lbl_80715E14:
 /* 80715EA0  98 1E 07 19 */	stb r0, 0x719(r30)
 /* 80715EA4  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80715EA8  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80715EAC  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80715EAC  80 63 00 00 */	lwz r3, 0(r3)
 /* 80715EB0  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80715EB4  38 80 00 01 */	li r4, 1
 /* 80715EB8  4B B9 BF 3C */	b changeSubBgmStatus__8Z2SeqMgrFl
@@ -221,7 +221,7 @@ lbl_80716008:
 /* 80716060  40 81 00 20 */	ble lbl_80716080
 /* 80716064  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80716068  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8071606C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8071606C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80716070  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80716074  38 80 00 02 */	li r4, 2
 /* 80716078  4B B9 BD 7C */	b changeSubBgmStatus__8Z2SeqMgrFl
@@ -229,7 +229,7 @@ lbl_80716008:
 lbl_80716080:
 /* 80716080  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80716084  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80716088  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80716088  80 63 00 00 */	lwz r3, 0(r3)
 /* 8071608C  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 80716090  38 80 00 03 */	li r4, 3
 /* 80716094  4B B9 BD 60 */	b changeSubBgmStatus__8Z2SeqMgrFl

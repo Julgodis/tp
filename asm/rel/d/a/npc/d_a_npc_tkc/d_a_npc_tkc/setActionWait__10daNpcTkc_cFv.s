@@ -4,11 +4,11 @@ lbl_80B0D338:
 /* 80B0D340  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80B0D344  3C 80 80 B1 */	lis r4, lit_4439@ha
 /* 80B0D348  38 A4 0B 14 */	addi r5, r4, lit_4439@l
-/* 80B0D34C  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80B10B14 */
-/* 80B0D350  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80B10B18 */
+/* 80B0D34C  80 85 00 00 */	lwz r4, 0(r5)
+/* 80B0D350  80 05 00 04 */	lwz r0, 4(r5)
 /* 80B0D354  90 81 00 08 */	stw r4, 8(r1)
 /* 80B0D358  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B0D35C  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80B10B1C */
+/* 80B0D35C  80 05 00 08 */	lwz r0, 8(r5)
 /* 80B0D360  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B0D364  38 81 00 08 */	addi r4, r1, 8
 /* 80B0D368  48 00 08 61 */	bl setAction__10daNpcTkc_cFM10daNpcTkc_cFPCvPv_v

@@ -15,7 +15,7 @@ lbl_8047E350:
 /* 8047E384  3B C3 18 88 */	addi r30, r3, lit_1109@l
 /* 8047E388  3C 60 80 48 */	lis r3, M_lin5__Q212daObjMovebox5Bgc_c@ha
 /* 8047E38C  3B E3 0F 28 */	addi r31, r3, M_lin5__Q212daObjMovebox5Bgc_c@l
-/* 8047E390  88 1E 12 60 */	lbz r0, 0x1260(r30)	/* effective address: 80482AE8 */
+/* 8047E390  88 1E 12 60 */	lbz r0, 0x1260(r30)
 /* 8047E394  7C 00 07 75 */	extsb. r0, r0
 /* 8047E398  40 82 00 24 */	bne lbl_8047E3BC
 /* 8047E39C  38 7E 12 64 */	addi r3, r30, 0x1264
@@ -133,8 +133,8 @@ lbl_8047E3BC:
 /* 8047E558  38 A1 00 38 */	addi r5, r1, 0x38
 /* 8047E55C  7F 86 E3 78 */	mr r6, r28
 /* 8047E560  4B BF 98 04 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8047E564  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8047E568  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8047E564  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8047E568  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8047E56C  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8047E570  38 9E 12 64 */	addi r4, r30, 0x1264
 /* 8047E574  4B BF 5E 40 */	b LineCross__4cBgSFP11cBgS_LinChk

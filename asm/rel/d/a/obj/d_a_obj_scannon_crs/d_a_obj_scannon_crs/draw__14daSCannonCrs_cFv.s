@@ -17,14 +17,14 @@ lbl_80CC9B80:
 /* 80CC9BBC  80 84 00 04 */	lwz r4, 4(r4)
 /* 80CC9BC0  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80CC9BC4  4B 4D B1 DC */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80CC9BC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC9BCC  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CC9BD0  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80CC9BC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC9BCC  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CC9BD0  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80CC9BD4  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80CC9BD8  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80CC9BDC  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80CC9BE0  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80CC9BE4  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80CC9BDC  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80CC9BE0  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80CC9BE4  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CC9BE8  80 7E 06 00 */	lwz r3, 0x600(r30)
 /* 80CC9BEC  80 83 00 04 */	lwz r4, 4(r3)
 /* 80CC9BF0  38 7E 05 CC */	addi r3, r30, 0x5cc
@@ -43,11 +43,11 @@ lbl_80CC9B80:
 /* 80CC9C24  38 63 00 58 */	addi r3, r3, 0x58
 /* 80CC9C28  80 9E 05 FC */	lwz r4, 0x5fc(r30)
 /* 80CC9C2C  4B 66 5B 88 */	b removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey
-/* 80CC9C30  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CC9C34  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80CC9C38  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80CC9C30  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CC9C34  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80CC9C38  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80CC9C3C  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80CC9C40  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80CC9C40  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80CC9C44  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80CC9C48  38 60 00 01 */	li r3, 1
 /* 80CC9C4C  83 E1 00 0C */	lwz r31, 0xc(r1)

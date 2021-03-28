@@ -92,8 +92,8 @@ lbl_80A9CE9C:
 /* 80A9CEB8  98 1F 0F E2 */	stb r0, 0xfe2(r31)
 /* 80A9CEBC  98 1F 0F E3 */	stb r0, 0xfe3(r31)
 /* 80A9CEC0  98 7F 0F E8 */	stb r3, 0xfe8(r31)
-/* 80A9CEC4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80A9CEC8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80A9CEC4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80A9CEC8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80A9CECC  38 63 0D D8 */	addi r3, r3, 0xdd8
 /* 80A9CED0  3C 80 00 01 */	lis r4, 0x0001 /* 0x0000F4FF@ha */
 /* 80A9CED4  38 84 F4 FF */	addi r4, r4, 0xF4FF /* 0x0000F4FF@l */

@@ -12,7 +12,7 @@ lbl_8070FF98:
 /* 8070FFC0  38 03 80 00 */	addi r0, r3, -32768
 /* 8070FFC4  7C 04 00 50 */	subf r0, r4, r0
 /* 8070FFC8  B0 1F 07 30 */	sth r0, 0x730(r31)
-/* 8070FFCC  C0 1E 00 BC */	lfs f0, 0xbc(r30)	/* effective address: 80713A30 */
+/* 8070FFCC  C0 1E 00 BC */	lfs f0, 0xbc(r30)
 /* 8070FFD0  D0 1F 07 2C */	stfs f0, 0x72c(r31)
 /* 8070FFD4  38 00 00 15 */	li r0, 0x15
 /* 8070FFD8  B0 1F 06 AE */	sth r0, 0x6ae(r31)
@@ -20,7 +20,7 @@ lbl_8070FF98:
 /* 8070FFE0  B0 1F 05 B4 */	sth r0, 0x5b4(r31)
 /* 8070FFE4  A8 1F 10 A2 */	lha r0, 0x10a2(r31)
 /* 8070FFE8  B0 1F 07 06 */	sth r0, 0x706(r31)
-/* 8070FFEC  C0 3E 00 60 */	lfs f1, 0x60(r30)	/* effective address: 807139D4 */
+/* 8070FFEC  C0 3E 00 60 */	lfs f1, 0x60(r30)
 /* 8070FFF0  4B B5 79 64 */	b cM_rndF__Ff
 /* 8070FFF4  C0 1E 00 E8 */	lfs f0, 0xe8(r30)
 /* 8070FFF8  EC 00 08 2A */	fadds f0, f0, f1

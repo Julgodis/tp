@@ -16,13 +16,13 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -135,16 +135,16 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 /* ############################################################################################## */
 /* 803AB9A0-803AB9C8 0028+00 s=1 e=0 z=34  None .data      __vt__16dBgS_MoveBgActor                                     */
 SECTION_DATA void* __vt__16dBgS_MoveBgActor[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)CreateHeap__16dBgS_MoveBgActorFv,
-	/* 3    */ (void*)Create__16dBgS_MoveBgActorFv,
-	/* 4    */ (void*)Execute__16dBgS_MoveBgActorFPPA3_A4_f,
-	/* 5    */ (void*)Draw__16dBgS_MoveBgActorFv,
-	/* 6    */ (void*)Delete__16dBgS_MoveBgActorFv,
-	/* 7    */ (void*)IsDelete__16dBgS_MoveBgActorFv,
-	/* 8    */ (void*)ToFore__16dBgS_MoveBgActorFv,
-	/* 9    */ (void*)ToBack__16dBgS_MoveBgActorFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)CreateHeap__16dBgS_MoveBgActorFv,
+	(void*)Create__16dBgS_MoveBgActorFv,
+	(void*)Execute__16dBgS_MoveBgActorFPPA3_A4_f,
+	(void*)Draw__16dBgS_MoveBgActorFv,
+	(void*)Delete__16dBgS_MoveBgActorFv,
+	(void*)IsDelete__16dBgS_MoveBgActorFv,
+	(void*)ToFore__16dBgS_MoveBgActorFv,
+	(void*)ToBack__16dBgS_MoveBgActorFv,
 };
 
 /* 80078624-80078668 0044+00 s=0 e=0 z=173  None .text      __ct__16dBgS_MoveBgActorFv                                   */
@@ -169,49 +169,49 @@ asm static void CheckCreateHeap(fopAc_ac_c* param_0) {
 #pragma pop
 
 
-/* 80078688-80078690 0008+00 s=1 e=0 z=2  None .text      CreateHeap__16dBgS_MoveBgActorFv                             */
+/* 80078688-80078690 0008+00 s=1 e=0 z=0  None .text      CreateHeap__16dBgS_MoveBgActorFv                             */
 bool dBgS_MoveBgActor::CreateHeap() {
 	return true;
 }
 
 
-/* 80078690-80078698 0008+00 s=1 e=0 z=60  None .text      Create__16dBgS_MoveBgActorFv                                 */
+/* 80078690-80078698 0008+00 s=1 e=0 z=0  None .text      Create__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::Create() {
 	return true;
 }
 
 
-/* 80078698-800786A0 0008+00 s=1 e=0 z=3  None .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
+/* 80078698-800786A0 0008+00 s=1 e=0 z=0  None .text      Execute__16dBgS_MoveBgActorFPPA3_A4_f                        */
 bool dBgS_MoveBgActor::Execute(f32 (** param_0)[3][4]) {
 	return true;
 }
 
 
-/* 800786A0-800786A8 0008+00 s=1 e=0 z=2  None .text      Draw__16dBgS_MoveBgActorFv                                   */
+/* 800786A0-800786A8 0008+00 s=1 e=0 z=0  None .text      Draw__16dBgS_MoveBgActorFv                                   */
 bool dBgS_MoveBgActor::Draw() {
 	return true;
 }
 
 
-/* 800786A8-800786B0 0008+00 s=1 e=0 z=6  None .text      Delete__16dBgS_MoveBgActorFv                                 */
+/* 800786A8-800786B0 0008+00 s=1 e=0 z=0  None .text      Delete__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::Delete() {
 	return true;
 }
 
 
-/* 800786B0-800786B8 0008+00 s=1 e=0 z=171  None .text      IsDelete__16dBgS_MoveBgActorFv                               */
+/* 800786B0-800786B8 0008+00 s=1 e=0 z=0  None .text      IsDelete__16dBgS_MoveBgActorFv                               */
 bool dBgS_MoveBgActor::IsDelete() {
 	return true;
 }
 
 
-/* 800786B8-800786C0 0008+00 s=1 e=0 z=171  None .text      ToFore__16dBgS_MoveBgActorFv                                 */
+/* 800786B8-800786C0 0008+00 s=1 e=0 z=0  None .text      ToFore__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::ToFore() {
 	return true;
 }
 
 
-/* 800786C0-800786C8 0008+00 s=1 e=0 z=171  None .text      ToBack__16dBgS_MoveBgActorFv                                 */
+/* 800786C0-800786C8 0008+00 s=1 e=0 z=0  None .text      ToBack__16dBgS_MoveBgActorFv                                 */
 bool dBgS_MoveBgActor::ToBack() {
 	return true;
 }

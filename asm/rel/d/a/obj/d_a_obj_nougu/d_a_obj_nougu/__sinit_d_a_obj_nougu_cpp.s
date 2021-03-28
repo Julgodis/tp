@@ -11,10 +11,10 @@ lbl_80CA48D8:
 /* 80CA48FC  38 00 00 06 */	li r0, 6
 /* 80CA4900  7C 09 03 A6 */	mtctr r0
 lbl_80CA4904:
-/* 80CA4904  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 80392680 */
-/* 80CA4908  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 80392684 */
-/* 80CA490C  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 80CA4A00 */
-/* 80CA4910  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 80CA4A04 */
+/* 80CA4904  80 64 00 04 */	lwz r3, 4(r4)
+/* 80CA4908  84 04 00 08 */	lwzu r0, 8(r4)
+/* 80CA490C  90 65 00 04 */	stw r3, 4(r5)
+/* 80CA4910  94 05 00 08 */	stwu r0, 8(r5)
 /* 80CA4914  42 00 FF F0 */	bdnz lbl_80CA4904
 /* 80CA4918  3C 60 80 CA */	lis r3, __vt__19daObj_Nougu_Param_c@ha
 /* 80CA491C  38 03 4B 00 */	addi r0, r3, __vt__19daObj_Nougu_Param_c@l

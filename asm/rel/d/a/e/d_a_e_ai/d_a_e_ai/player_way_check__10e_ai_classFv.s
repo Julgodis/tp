@@ -1,8 +1,8 @@
 lbl_806794F4:
-/* 806794F4  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806794F8  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 806794FC  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 80679500  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 804066A6 */
+/* 806794F4  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806794F8  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 806794FC  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 80679500  A8 84 04 E6 */	lha r4, 0x4e6(r4)
 /* 80679504  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 80679508  7C 04 00 50 */	subf r0, r4, r0
 /* 8067950C  7C 00 07 35 */	extsh. r0, r0

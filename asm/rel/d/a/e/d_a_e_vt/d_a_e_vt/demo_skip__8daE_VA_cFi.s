@@ -6,7 +6,7 @@ lbl_807C5338:
 /* 807C5348  7C 7F 1B 78 */	mr r31, r3
 /* 807C534C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 807C5350  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 807C5354  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 807C5354  80 63 00 00 */	lwz r3, 0(r3)
 /* 807C5358  38 63 03 D0 */	addi r3, r3, 0x3d0
 /* 807C535C  38 80 00 1E */	li r4, 0x1e
 /* 807C5360  4B AE AB 7C */	b bgmStreamStop__8Z2SeqMgrFUl

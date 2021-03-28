@@ -10,11 +10,11 @@ lbl_80A26AD0:
 /* 80A26AF0  7C BF 2B 78 */	mr r31, r5
 /* 80A26AF4  3C 60 80 A3 */	lis r3, lit_4270@ha
 /* 80A26AF8  38 83 A0 DC */	addi r4, r3, lit_4270@l
-/* 80A26AFC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A2A0DC */
-/* 80A26B00  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A2A0E0 */
+/* 80A26AFC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A26B00  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A26B04  90 61 00 08 */	stw r3, 8(r1)
 /* 80A26B08  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A26B0C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2A0E4 */
+/* 80A26B0C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A26B10  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A26B14  2C 05 00 00 */	cmpwi r5, 0
 /* 80A26B18  40 82 00 B0 */	bne lbl_80A26BC8
@@ -28,11 +28,11 @@ lbl_80A26AD0:
 /* 80A26B38  4B 91 F9 78 */	b PSMTXCopy
 /* 80A26B3C  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha
 /* 80A26B40  3B 83 D4 70 */	addi r28, r3, now__14mDoMtx_stack_c@l
-/* 80A26B44  C0 1C 00 0C */	lfs f0, 0xc(r28)	/* effective address: 803DD47C */
+/* 80A26B44  C0 1C 00 0C */	lfs f0, 0xc(r28)
 /* 80A26B48  D0 1D 08 54 */	stfs f0, 0x854(r29)
-/* 80A26B4C  C0 1C 00 1C */	lfs f0, 0x1c(r28)	/* effective address: 803DD48C */
+/* 80A26B4C  C0 1C 00 1C */	lfs f0, 0x1c(r28)
 /* 80A26B50  D0 1D 08 58 */	stfs f0, 0x858(r29)
-/* 80A26B54  C0 1C 00 2C */	lfs f0, 0x2c(r28)	/* effective address: 803DD49C */
+/* 80A26B54  C0 1C 00 2C */	lfs f0, 0x2c(r28)
 /* 80A26B58  D0 1D 08 5C */	stfs f0, 0x85c(r29)
 /* 80A26B5C  80 7D 05 68 */	lwz r3, 0x568(r29)
 /* 80A26B60  80 63 00 04 */	lwz r3, 4(r3)
@@ -80,7 +80,7 @@ lbl_80A26BF8:
 /* 80A26C00  38 A1 00 08 */	addi r5, r1, 8
 /* 80A26C04  3C C0 80 A3 */	lis r6, m__21daNpcKasiMich_Param_c@ha
 /* 80A26C08  38 C6 A0 4C */	addi r6, r6, m__21daNpcKasiMich_Param_c@l
-/* 80A26C0C  C0 26 00 40 */	lfs f1, 0x40(r6)	/* effective address: 80A2A08C */
+/* 80A26C0C  C0 26 00 40 */	lfs f1, 0x40(r6)
 /* 80A26C10  4B 72 C7 6C */	b setLookatMtx__8daNpcF_cFiPif
 lbl_80A26C14:
 /* 80A26C14  3C 60 80 3E */	lis r3, now__14mDoMtx_stack_c@ha

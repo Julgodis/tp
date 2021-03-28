@@ -19,9 +19,9 @@ lbl_80A3AD50:
 /* 80A3AD94  3B C3 08 C8 */	addi r30, r3, mCcDObjData__10daNpc_Kn_c@l
 /* 80A3AD98  38 61 00 20 */	addi r3, r1, 0x20
 /* 80A3AD9C  7F 44 D3 78 */	mr r4, r26
-/* 80A3ADA0  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80A3ADA4  3B E5 61 C0 */	addi r31, r5, struct_804061C0+0x0@l
-/* 80A3ADA8  80 BF 5D AC */	lwz r5, 0x5dac(r31)	/* effective address: 8040BF6C */
+/* 80A3ADA0  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80A3ADA4  3B E5 61 C0 */	addi r31, r5, g_dComIfG_gameInfo@l
+/* 80A3ADA8  80 BF 5D AC */	lwz r5, 0x5dac(r31)
 /* 80A3ADAC  48 00 02 55 */	bl getAttnPos__10daNpc_Kn_cFP10fopAc_ac_c
 /* 80A3ADB0  C0 01 00 20 */	lfs f0, 0x20(r1)
 /* 80A3ADB4  D0 01 00 2C */	stfs f0, 0x2c(r1)

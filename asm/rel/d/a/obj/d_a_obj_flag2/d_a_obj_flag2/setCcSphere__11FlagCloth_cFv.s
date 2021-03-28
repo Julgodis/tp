@@ -37,8 +37,8 @@ lbl_80BECD58:
 /* 80BECD64  38 7F 05 18 */	addi r3, r31, 0x518
 /* 80BECD68  38 81 00 08 */	addi r4, r1, 8
 /* 80BECD6C  4B 68 28 DC */	b SetC__8cM3dGSphFRC4cXyz
-/* 80BECD70  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BECD74  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BECD70  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BECD74  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BECD78  38 63 23 3C */	addi r3, r3, 0x233c
 /* 80BECD7C  38 9F 03 F4 */	addi r4, r31, 0x3f4
 /* 80BECD80  4B 67 7E 28 */	b Set__4cCcSFP8cCcD_Obj

@@ -63,13 +63,13 @@ lbl_8069C230:
 /* 8069C298  B0 1E 06 94 */	sth r0, 0x694(r30)
 /* 8069C29C  3C 60 80 6A */	lis r3, l_HIO@ha
 /* 8069C2A0  38 63 1D A8 */	addi r3, r3, l_HIO@l
-/* 8069C2A4  C0 03 00 10 */	lfs f0, 0x10(r3)	/* effective address: 806A1DB8 */
+/* 8069C2A4  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8069C2A8  D0 1E 06 90 */	stfs f0, 0x690(r30)
 /* 8069C2AC  48 00 01 34 */	b lbl_8069C3E0
 lbl_8069C2B0:
 /* 8069C2B0  3C 60 80 6A */	lis r3, l_HIO@ha
 /* 8069C2B4  38 63 1D A8 */	addi r3, r3, l_HIO@l
-/* 8069C2B8  C0 03 00 0C */	lfs f0, 0xc(r3)	/* effective address: 806A1DB4 */
+/* 8069C2B8  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 8069C2BC  D0 1E 06 90 */	stfs f0, 0x690(r30)
 /* 8069C2C0  48 00 01 20 */	b lbl_8069C3E0
 lbl_8069C2C4:

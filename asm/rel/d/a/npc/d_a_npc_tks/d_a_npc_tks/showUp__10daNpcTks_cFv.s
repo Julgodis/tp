@@ -45,11 +45,11 @@ lbl_80B17690:
 /* 80B17694  41 82 00 8C */	beq lbl_80B17720
 /* 80B17698  3C 60 80 B2 */	lis r3, lit_5544@ha
 /* 80B1769C  38 83 E3 48 */	addi r4, r3, lit_5544@l
-/* 80B176A0  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80B1E348 */
-/* 80B176A4  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80B1E34C */
+/* 80B176A0  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B176A4  80 04 00 04 */	lwz r0, 4(r4)
 /* 80B176A8  90 61 00 08 */	stw r3, 8(r1)
 /* 80B176AC  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80B176B0  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80B1E350 */
+/* 80B176B0  80 04 00 08 */	lwz r0, 8(r4)
 /* 80B176B4  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80B176B8  38 00 00 03 */	li r0, 3
 /* 80B176BC  B0 1F 13 88 */	sth r0, 0x1388(r31)

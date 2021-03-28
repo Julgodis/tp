@@ -6,8 +6,8 @@ lbl_80486FC0:
 /* 80486FD0  7C 7F 1B 78 */	mr r31, r3
 /* 80486FD4  4B FF F0 25 */	bl getSwNo__10daSwhit0_cFv
 /* 80486FD8  7C 64 1B 78 */	mr r4, r3
-/* 80486FDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80486FE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80486FDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80486FE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80486FE4  88 1F 04 BA */	lbz r0, 0x4ba(r31)
 /* 80486FE8  7C 05 07 74 */	extsb r5, r0
 /* 80486FEC  4B BA E3 74 */	b isSwitch__10dSv_info_cCFii
@@ -38,7 +38,7 @@ lbl_80487020:
 /* 80487048  90 01 00 08 */	stw r0, 8(r1)
 /* 8048704C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80487050  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80487054  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80487054  80 63 00 00 */	lwz r3, 0(r3)
 /* 80487058  38 81 00 08 */	addi r4, r1, 8
 /* 8048705C  38 BF 05 38 */	addi r5, r31, 0x538
 /* 80487060  38 C0 00 00 */	li r6, 0

@@ -34,9 +34,9 @@ lbl_8097A828:
 /* 8097A85C  4B 7D E6 A4 */	b setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii
 lbl_8097A860:
 /* 8097A860  7F A3 EB 78 */	mr r3, r29
-/* 8097A864  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8097A868  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8097A86C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 8097A864  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8097A868  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8097A86C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8097A870  4B 69 FE A0 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 8097A874  B0 7D 0B 92 */	sth r3, 0xb92(r29)
 /* 8097A878  80 7D 05 8C */	lwz r3, 0x58c(r29)

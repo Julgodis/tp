@@ -7,7 +7,7 @@ lbl_807425B4:
 /* 807425C8  40 82 00 24 */	bne lbl_807425EC
 /* 807425CC  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 807425D0  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 807425D4  80 A3 00 38 */	lwz r5, 0x38(r3)	/* effective address: 80434B00 */
+/* 807425D4  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 807425D8  80 65 00 14 */	lwz r3, 0x14(r5)
 /* 807425DC  28 03 00 00 */	cmplwi r3, 0
 /* 807425E0  41 82 00 0C */	beq lbl_807425EC

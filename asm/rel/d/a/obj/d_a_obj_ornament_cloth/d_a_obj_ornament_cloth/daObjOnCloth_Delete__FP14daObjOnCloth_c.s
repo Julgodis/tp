@@ -8,7 +8,7 @@ lbl_80595B34:
 /* 80595B4C  38 7F 05 70 */	addi r3, r31, 0x570
 /* 80595B50  3C 80 80 59 */	lis r4, l_arcName@ha
 /* 80595B54  38 84 5D 60 */	addi r4, r4, l_arcName@l
-/* 80595B58  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80595D60 */
+/* 80595B58  80 84 00 00 */	lwz r4, 0(r4)
 /* 80595B5C  4B A9 74 AC */	b dComIfG_resDelete__FP30request_of_phase_process_classPCc
 /* 80595B60  38 7F 05 A8 */	addi r3, r31, 0x5a8
 /* 80595B64  3C 80 80 59 */	lis r4, __dt__12ClothJoint_cFv@ha

@@ -9,11 +9,11 @@ lbl_804A4948:
 /* 804A4964  3B E3 88 60 */	addi r31, r3, lit_3727@l
 /* 804A4968  80 7C 05 D4 */	lwz r3, 0x5d4(r28)
 /* 804A496C  83 C3 00 04 */	lwz r30, 4(r3)
-/* 804A4970  C0 1F 00 38 */	lfs f0, 0x38(r31)	/* effective address: 804A8898 */
+/* 804A4970  C0 1F 00 38 */	lfs f0, 0x38(r31)
 /* 804A4974  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 804A4978  D0 01 00 5C */	stfs f0, 0x5c(r1)
 /* 804A497C  D0 01 00 60 */	stfs f0, 0x60(r1)
-/* 804A4980  C0 1F 00 3C */	lfs f0, 0x3c(r31)	/* effective address: 804A889C */
+/* 804A4980  C0 1F 00 3C */	lfs f0, 0x3c(r31)
 /* 804A4984  D0 01 00 4C */	stfs f0, 0x4c(r1)
 /* 804A4988  D0 01 00 50 */	stfs f0, 0x50(r1)
 /* 804A498C  D0 01 00 54 */	stfs f0, 0x54(r1)

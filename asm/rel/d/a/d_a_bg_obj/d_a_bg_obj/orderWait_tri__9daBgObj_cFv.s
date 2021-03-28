@@ -123,8 +123,8 @@ lbl_8045B79C:
 lbl_8045B7A8:
 /* 8045B7A8  3B 60 00 00 */	li r27, 0
 /* 8045B7AC  3B C0 00 00 */	li r30, 0
-/* 8045B7B0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045B7B4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045B7B0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045B7B4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045B7B8  3B A3 23 3C */	addi r29, r3, 0x233c
 /* 8045B7BC  48 00 00 1C */	b lbl_8045B7D8
 lbl_8045B7C0:

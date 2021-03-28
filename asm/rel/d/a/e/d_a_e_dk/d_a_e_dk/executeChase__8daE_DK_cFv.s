@@ -73,9 +73,9 @@ lbl_806AB75C:
 lbl_806AB790:
 /* 806AB790  38 61 00 1C */	addi r3, r1, 0x1c
 /* 806AB794  38 9E 04 D0 */	addi r4, r30, 0x4d0
-/* 806AB798  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 806AB79C  3B A5 61 C0 */	addi r29, r5, struct_804061C0+0x0@l
-/* 806AB7A0  80 BD 5D AC */	lwz r5, 0x5dac(r29)	/* effective address: 8040BF6C */
+/* 806AB798  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 806AB79C  3B A5 61 C0 */	addi r29, r5, g_dComIfG_gameInfo@l
+/* 806AB7A0  80 BD 5D AC */	lwz r5, 0x5dac(r29)
 /* 806AB7A4  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 806AB7A8  4B BB B3 8C */	b __mi__4cXyzCFRC3Vec
 /* 806AB7AC  C0 01 00 1C */	lfs f0, 0x1c(r1)

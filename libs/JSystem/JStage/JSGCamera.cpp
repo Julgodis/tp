@@ -15,10 +15,10 @@ struct Vec {
 };
 
 struct JStage {
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -124,43 +124,43 @@ extern "C" extern u32 __float_max;
 /* ############################################################################################## */
 /* 803C4680-803C4718 0094+04 s=1 e=1 z=0  None .data      __vt__Q26JStage7TCamera                                      */
 SECTION_DATA void* __vt__Q26JStage7TCamera[37 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
-	/* 3    */ (void*)JSGFGetType__Q26JStage7TCameraCFv,
-	/* 4    */ (void*)JSGGetName__Q26JStage7TObjectCFv,
-	/* 5    */ (void*)JSGUpdate__Q26JStage7TObjectFv,
-	/* 6    */ (void*)JSGGetFlag__Q26JStage7TObjectCFv,
-	/* 7    */ (void*)JSGSetFlag__Q26JStage7TObjectFUl,
-	/* 8    */ (void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
-	/* 9    */ (void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
-	/* 10   */ (void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
-	/* 11   */ (void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
-	/* 12   */ (void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
-	/* 13   */ (void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
-	/* 14   */ (void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
-	/* 15   */ (void*)JSGGetProjectionType__Q26JStage7TCameraCFv,
-	/* 16   */ (void*)JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection,
-	/* 17   */ (void*)JSGGetProjectionNear__Q26JStage7TCameraCFv,
-	/* 18   */ (void*)JSGSetProjectionNear__Q26JStage7TCameraFf,
-	/* 19   */ (void*)JSGGetProjectionFar__Q26JStage7TCameraCFv,
-	/* 20   */ (void*)JSGSetProjectionFar__Q26JStage7TCameraFf,
-	/* 21   */ (void*)JSGGetProjectionFovy__Q26JStage7TCameraCFv,
-	/* 22   */ (void*)JSGSetProjectionFovy__Q26JStage7TCameraFf,
-	/* 23   */ (void*)JSGGetProjectionAspect__Q26JStage7TCameraCFv,
-	/* 24   */ (void*)JSGSetProjectionAspect__Q26JStage7TCameraFf,
-	/* 25   */ (void*)JSGGetProjectionField__Q26JStage7TCameraCFPf,
-	/* 26   */ (void*)JSGSetProjectionField__Q26JStage7TCameraFPCf,
-	/* 27   */ (void*)JSGGetViewType__Q26JStage7TCameraCFv,
-	/* 28   */ (void*)JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView,
-	/* 29   */ (void*)JSGGetViewPosition__Q26JStage7TCameraCFP3Vec,
-	/* 30   */ (void*)JSGSetViewPosition__Q26JStage7TCameraFRC3Vec,
-	/* 31   */ (void*)JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec,
-	/* 32   */ (void*)JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec,
-	/* 33   */ (void*)JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec,
-	/* 34   */ (void*)JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec,
-	/* 35   */ (void*)JSGGetViewRoll__Q26JStage7TCameraCFv,
-	/* 36   */ (void*)JSGSetViewRoll__Q26JStage7TCameraFf,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)JSGFGetType__Q26JStage7TCameraCFv,
+	(void*)JSGGetName__Q26JStage7TObjectCFv,
+	(void*)JSGUpdate__Q26JStage7TObjectFv,
+	(void*)JSGGetFlag__Q26JStage7TObjectCFv,
+	(void*)JSGSetFlag__Q26JStage7TObjectFUl,
+	(void*)JSGGetData__Q26JStage7TObjectCFUlPvUl,
+	(void*)JSGSetData__Q26JStage7TObjectFUlPCvUl,
+	(void*)JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl,
+	(void*)JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl,
+	(void*)JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl,
+	(void*)JSGFindNodeID__Q26JStage7TObjectCFPCc,
+	(void*)JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f,
+	(void*)JSGGetProjectionType__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection,
+	(void*)JSGGetProjectionNear__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionNear__Q26JStage7TCameraFf,
+	(void*)JSGGetProjectionFar__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionFar__Q26JStage7TCameraFf,
+	(void*)JSGGetProjectionFovy__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionFovy__Q26JStage7TCameraFf,
+	(void*)JSGGetProjectionAspect__Q26JStage7TCameraCFv,
+	(void*)JSGSetProjectionAspect__Q26JStage7TCameraFf,
+	(void*)JSGGetProjectionField__Q26JStage7TCameraCFPf,
+	(void*)JSGSetProjectionField__Q26JStage7TCameraFPCf,
+	(void*)JSGGetViewType__Q26JStage7TCameraCFv,
+	(void*)JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView,
+	(void*)JSGGetViewPosition__Q26JStage7TCameraCFP3Vec,
+	(void*)JSGSetViewPosition__Q26JStage7TCameraFRC3Vec,
+	(void*)JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec,
+	(void*)JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec,
+	(void*)JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec,
+	(void*)JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec,
+	(void*)JSGGetViewRoll__Q26JStage7TCameraCFv,
+	(void*)JSGSetViewRoll__Q26JStage7TCameraFf,
 	/* padding */
 	NULL,
 };

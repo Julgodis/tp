@@ -6,12 +6,12 @@ lbl_80B6E798:
 /* 80B6E7A8  38 A3 EB 3C */	addi r5, r3, mCutList__12daNpc_Zant_c@l
 /* 80B6E7AC  3C 60 80 3A */	lis r3, __ptmf_null@ha
 /* 80B6E7B0  38 83 21 80 */	addi r4, r3, __ptmf_null@l
-/* 80B6E7B4  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 803A2180 */
-/* 80B6E7B8  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 803A2184 */
-/* 80B6E7BC  90 65 00 00 */	stw r3, 0(r5)	/* effective address: 80B6EB3C */
-/* 80B6E7C0  90 05 00 04 */	stw r0, 4(r5)	/* effective address: 80B6EB40 */
-/* 80B6E7C4  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 803A2188 */
-/* 80B6E7C8  90 05 00 08 */	stw r0, 8(r5)	/* effective address: 80B6EB44 */
+/* 80B6E7B4  80 64 00 00 */	lwz r3, 0(r4)
+/* 80B6E7B8  80 04 00 04 */	lwz r0, 4(r4)
+/* 80B6E7BC  90 65 00 00 */	stw r3, 0(r5)
+/* 80B6E7C0  90 05 00 04 */	stw r0, 4(r5)
+/* 80B6E7C4  80 04 00 08 */	lwz r0, 8(r4)
+/* 80B6E7C8  90 05 00 08 */	stw r0, 8(r5)
 /* 80B6E7CC  3C 60 80 B7 */	lis r3, __vt__18daNpc_Zant_Param_c@ha
 /* 80B6E7D0  38 03 ED 10 */	addi r0, r3, __vt__18daNpc_Zant_Param_c@l
 /* 80B6E7D4  3C 60 80 B7 */	lis r3, l_HIO@ha

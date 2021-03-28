@@ -28,11 +28,11 @@ lbl_80A1E1D4:
 /* 80A1E1E0  41 82 00 30 */	beq lbl_80A1E210
 /* 80A1E1E4  3C 60 80 A2 */	lis r3, lit_5485@ha
 /* 80A1E1E8  38 83 16 14 */	addi r4, r3, lit_5485@l
-/* 80A1E1EC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A21614 */
-/* 80A1E1F0  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A21618 */
+/* 80A1E1EC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A1E1F0  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A1E1F4  90 61 00 08 */	stw r3, 8(r1)
 /* 80A1E1F8  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80A1E1FC  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A2161C */
+/* 80A1E1FC  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A1E200  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80A1E204  7F E3 FB 78 */	mr r3, r31
 /* 80A1E208  38 81 00 08 */	addi r4, r1, 8

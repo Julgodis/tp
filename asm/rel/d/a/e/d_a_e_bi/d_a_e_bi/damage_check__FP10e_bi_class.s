@@ -5,9 +5,9 @@ lbl_8068A96C:
 /* 8068A978  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8068A97C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8068A980  7C 7F 1B 78 */	mr r31, r3
-/* 8068A984  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068A988  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8068A98C  83 C3 5D AC */	lwz r30, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 8068A984  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068A988  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8068A98C  83 C3 5D AC */	lwz r30, 0x5dac(r3)
 /* 8068A990  A8 1F 06 92 */	lha r0, 0x692(r31)
 /* 8068A994  2C 00 00 00 */	cmpwi r0, 0
 /* 8068A998  40 82 02 28 */	bne lbl_8068ABC0

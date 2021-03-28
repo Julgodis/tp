@@ -177,7 +177,7 @@ static void dComIfGd_set2DOpa(dDlst_base_c*); // 2
 static void fopAcM_OnCondition(fopAc_ac_c*, u32); // 2
 static void* operator new(u32, void*); // 2
 static void fopAcM_CheckCondition(fopAc_ac_c*, u32); // 2
-static bool daMP_Callback_Dummy(daMP_c*); // 2
+bool daMP_Callback_Dummy(daMP_c*); // 2
 
 extern "C" static void THPAudioDecode(); // 1
 extern "C" static void __THPAudioGetNewSample(); // 1
@@ -309,13 +309,14 @@ extern "C" static void fopAcM_CheckCondition__FP10fopAc_ac_cUl(); // 1
 extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c(); // 1
 extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c(); // 1
-extern "C" static bool daMP_Callback_Dummy__FP6daMP_c(); // 1
+extern "C" bool daMP_Callback_Dummy__FP6daMP_c(); // 1
 extern "C" void __sinit_d_a_movie_player_cpp(); // 1
 extern "C" void __ct__16daMP_Dlst_base_cFv(); // 1
 extern "C" void __ct__12dDlst_base_cFv(); // 1
 extern "C" void draw__12dDlst_base_cFv(); // 1
 extern "C" extern u32 const lit_4466;
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* daMP_METHODS[8];
 extern "C" extern void* g_profile_MOVIE_PLAYER[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
 extern "C" extern u8 lit_1105[1 + 3 /* padding */];
@@ -482,10 +483,7 @@ extern "C" void _restgpr_27(); // 1
 extern "C" void __div2i(); // 1
 extern "C" void sprintf(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 data_8040C124[4];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_clearColor[4];
 extern "C" extern u8 struct_80450BE4[4];
 extern "C" extern u8 m_myObj__6daMP_c[4];
@@ -1134,7 +1132,7 @@ SECTION_RODATA static u32 const lit_4811[1 + 1 /* padding */] = {
 	0x00000000,
 };
 
-/* 8087910C-80879114 0008+00 s=2 e=0 z=0  None .rodata    @4814                                                        */
+/* 8087910C-80879114 0008+00 s=3 e=0 z=0  None .rodata    @4814                                                        */
 SECTION_RODATA static u8 const lit_4814[8] = {
 	0x43, 0x30, 0x00, 0x00, 0x80, 0x00, 0x00, 0x00,
 };
@@ -2200,7 +2198,7 @@ asm void daMP_c::daMP_c_Main() {
 #pragma pop
 
 
-/* 80878DB8-80878DD8 0020+00 s=1 e=0 z=0  None .text      draw__16daMP_Dlst_base_cFv                                   */
+/* 80878DB8-80878DD8 0020+00 s=0 e=0 z=0  None .text      draw__16daMP_Dlst_base_cFv                                   */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2248,7 +2246,7 @@ asm void dDlst_list_c::set2DOpa(dDlst_base_c* param_0) {
 #pragma pop
 
 
-/* 80878E60-80878EC4 0064+00 s=1 e=0 z=0  None .text      daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c                  */
+/* 80878E60-80878EC4 0064+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c                  */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2303,7 +2301,7 @@ asm static void fopAcM_CheckCondition(fopAc_ac_c* param_0, u32 param_1) {
 #pragma pop
 
 
-/* 80878F18-80878F38 0020+00 s=1 e=0 z=0  None .text      daMP_c_Callback_Finish__6daMP_cFP6daMP_c                     */
+/* 80878F18-80878F38 0020+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Finish__6daMP_cFP6daMP_c                     */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2314,7 +2312,7 @@ asm void daMP_c::daMP_c_Callback_Finish(daMP_c* param_0) {
 #pragma pop
 
 
-/* 80878F38-80878F70 0038+00 s=1 e=0 z=0  None .text      daMP_c_Callback_Main__6daMP_cFP6daMP_c                       */
+/* 80878F38-80878F70 0038+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Main__6daMP_cFP6daMP_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2325,7 +2323,7 @@ asm void daMP_c::daMP_c_Callback_Main(daMP_c* param_0) {
 #pragma pop
 
 
-/* 80878F70-80878FA8 0038+00 s=1 e=0 z=0  None .text      daMP_c_Callback_Draw__6daMP_cFP6daMP_c                       */
+/* 80878F70-80878FA8 0038+00 s=0 e=0 z=0  None .text      daMP_c_Callback_Draw__6daMP_cFP6daMP_c                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2336,13 +2334,13 @@ asm void daMP_c::daMP_c_Callback_Draw(daMP_c* param_0) {
 #pragma pop
 
 
-/* 80878FA8-80878FB0 0008+00 s=1 e=0 z=0  None .text      daMP_Callback_Dummy__FP6daMP_c                               */
-static bool daMP_Callback_Dummy(daMP_c* param_0) {
+/* 80878FA8-80878FB0 0008+00 s=0 e=0 z=0  None .text      daMP_Callback_Dummy__FP6daMP_c                               */
+bool daMP_Callback_Dummy(daMP_c* param_0) {
 	return true;
 }
 
 
-/* 80878FB0-80878FD8 0028+00 s=0 e=1 z=0  None .text      __sinit_d_a_movie_player_cpp                                 */
+/* 80878FB0-80878FD8 0028+00 s=0 e=0 z=0  None .text      __sinit_d_a_movie_player_cpp                                 */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
@@ -2354,39 +2352,39 @@ extern "C" asm void __sinit_d_a_movie_player_cpp() {
 
 
 /* ############################################################################################## */
-/* 80879534-80879554 0020+00 s=1 e=0 z=0  None .data      daMP_METHODS                                                 */
-SECTION_DATA static void* daMP_METHODS[8] = {
-	/* 0    */ (void*)daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c,
-	/* 1    */ (void*)daMP_c_Callback_Finish__6daMP_cFP6daMP_c,
-	/* 2    */ (void*)daMP_c_Callback_Main__6daMP_cFP6daMP_c,
-	/* 3    */ (void*)daMP_Callback_Dummy__FP6daMP_c,
-	/* 4    */ (void*)daMP_c_Callback_Draw__6daMP_cFP6daMP_c,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80879534-80879554 0020+00 s=0 e=0 z=0  None .data      daMP_METHODS                                                 */
+SECTION_DATA void* daMP_METHODS[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80879554-80879584 0030+00 s=0 e=0 z=1  None .data      g_profile_MOVIE_PLAYER                                       */
+/* 80879554-80879584 0030+00 s=0 e=0 z=0  None .data      g_profile_MOVIE_PLAYER                                       */
 SECTION_DATA void* g_profile_MOVIE_PLAYER[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02E00000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x00000580,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00090000,
-	/* 9    */ (void*)&daMP_METHODS,
-	/* 10   */ (void*)0x0006C000,
-	/* 11   */ (void*)0x000E0000,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02E00000,
+	(void*)NULL,
+	(void*)0x00000580,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00090000,
+	(void*)NULL,
+	(void*)0x0006C000,
+	(void*)0x000E0000,
 };
 
 /* 80879584-80879590 000C+00 s=1 e=0 z=0  None .data      __vt__16daMP_Dlst_base_c                                     */
 SECTION_DATA static void* __vt__16daMP_Dlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__16daMP_Dlst_base_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80878FD8-80879014 003C+00 s=1 e=0 z=0  None .text      __ct__16daMP_Dlst_base_cFv                                   */
@@ -2403,9 +2401,9 @@ asm daMP_Dlst_base_c::daMP_Dlst_base_c() {
 /* ############################################################################################## */
 /* 80879590-8087959C 000C+00 s=1 e=0 z=0  None .data      __vt__12dDlst_base_c                                         */
 SECTION_DATA static void* __vt__12dDlst_base_c[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)draw__12dDlst_base_cFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80879014-80879024 0010+00 s=1 e=0 z=0  None .text      __ct__12dDlst_base_cFv                                       */
@@ -2419,7 +2417,7 @@ asm dDlst_base_c::dDlst_base_c() {
 #pragma pop
 
 
-/* 80879024-80879028 0004+00 s=1 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
+/* 80879024-80879028 0004+00 s=0 e=0 z=0  None .text      draw__12dDlst_base_cFv                                       */
 void dDlst_base_c::draw() {
 	/* empty function */
 }

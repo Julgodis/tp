@@ -8,7 +8,7 @@ lbl_8056F7E8:
 /* 8056F800  3C 60 80 57 */	lis r3, m__18daNpc_Taro_Param_c@ha
 /* 8056F804  3B E3 16 C8 */	addi r31, r3, m__18daNpc_Taro_Param_c@l
 /* 8056F808  38 7F 00 00 */	addi r3, r31, 0
-/* 8056F80C  AB C3 00 8E */	lha r30, 0x8e(r3)	/* effective address: 80571756 */
+/* 8056F80C  AB C3 00 8E */	lha r30, 0x8e(r3)
 /* 8056F810  3B A0 00 00 */	li r29, 0
 /* 8056F814  A0 1C 0E 22 */	lhz r0, 0xe22(r28)
 /* 8056F818  2C 00 00 02 */	cmpwi r0, 2

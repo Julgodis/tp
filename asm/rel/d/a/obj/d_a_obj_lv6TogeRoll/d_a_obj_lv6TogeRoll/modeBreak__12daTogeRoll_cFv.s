@@ -12,9 +12,9 @@ lbl_80C793C8:
 /* 80C793F0  38 80 00 00 */	li r4, 0
 /* 80C793F4  B0 81 00 20 */	sth r4, 0x20(r1)
 /* 80C793F8  B0 81 00 24 */	sth r4, 0x24(r1)
-/* 80C793FC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C79400  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
-/* 80C79404  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)	/* effective address: 8040BEFC */
+/* 80C793FC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C79400  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
+/* 80C79404  80 7F 5D 3C */	lwz r3, 0x5d3c(r31)
 /* 80C79408  90 81 00 08 */	stw r4, 8(r1)
 /* 80C7940C  38 00 FF FF */	li r0, -1
 /* 80C79410  90 01 00 0C */	stw r0, 0xc(r1)

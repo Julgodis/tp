@@ -8,8 +8,8 @@ lbl_80BF5AB4:
 /* 80BF5ACC  54 00 05 BE */	clrlwi r0, r0, 0x16
 /* 80BF5AD0  28 00 03 FF */	cmplwi r0, 0x3ff
 /* 80BF5AD4  41 82 00 34 */	beq lbl_80BF5B08
-/* 80BF5AD8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80BF5ADC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80BF5AD8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80BF5ADC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80BF5AE0  38 63 07 F0 */	addi r3, r3, 0x7f0
 /* 80BF5AE4  54 00 0B FC */	rlwinm r0, r0, 1, 0xf, 0x1e
 /* 80BF5AE8  3C 80 80 3A */	lis r4, saveBitLabels__16dSv_event_flag_c@ha
@@ -24,7 +24,7 @@ lbl_80BF5B08:
 /* 80BF5B08  38 7F 05 A0 */	addi r3, r31, 0x5a0
 /* 80BF5B0C  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BF5B10  38 84 62 0C */	addi r4, r4, l_arcName@l
-/* 80BF5B14  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF620C */
+/* 80BF5B14  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF5B18  4B 43 73 A4 */	b dComIfG_resLoad__FP30request_of_phase_process_classPCc
 /* 80BF5B1C  7C 60 1B 78 */	mr r0, r3
 /* 80BF5B20  2C 00 00 04 */	cmpwi r0, 4
@@ -32,7 +32,7 @@ lbl_80BF5B08:
 /* 80BF5B28  7F E3 FB 78 */	mr r3, r31
 /* 80BF5B2C  3C 80 80 BF */	lis r4, l_arcName@ha
 /* 80BF5B30  38 84 62 0C */	addi r4, r4, l_arcName@l
-/* 80BF5B34  80 84 00 00 */	lwz r4, 0(r4)	/* effective address: 80BF620C */
+/* 80BF5B34  80 84 00 00 */	lwz r4, 0(r4)
 /* 80BF5B38  38 A0 00 0B */	li r5, 0xb
 /* 80BF5B3C  38 C0 00 00 */	li r6, 0
 /* 80BF5B40  38 E0 61 00 */	li r7, 0x6100

@@ -18,8 +18,8 @@ lbl_80840B88:
 /* 80840BC8  3C 60 80 84 */	lis r3, l_arcName@ha
 /* 80840BCC  38 63 54 B8 */	addi r3, r3, l_arcName@l
 /* 80840BD0  54 84 04 3E */	clrlwi r4, r4, 0x10
-/* 80840BD4  3C A0 80 40 */	lis r5, struct_804061C0+0x0@ha
-/* 80840BD8  38 A5 61 C0 */	addi r5, r5, struct_804061C0+0x0@l
+/* 80840BD4  3C A0 80 40 */	lis r5, g_dComIfG_gameInfo@ha
+/* 80840BD8  38 A5 61 C0 */	addi r5, r5, g_dComIfG_gameInfo@l
 /* 80840BDC  3C A5 00 02 */	addis r5, r5, 2
 /* 80840BE0  38 C0 00 80 */	li r6, 0x80
 /* 80840BE4  38 A5 C2 F8 */	addi r5, r5, -15624

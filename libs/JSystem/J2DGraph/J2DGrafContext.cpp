@@ -118,16 +118,16 @@ extern "C" void ceil(); // 1
 /* ############################################################################################## */
 /* 803CC9B8-803CC9E0 0028+00 s=2 e=13 z=0  None .data      __vt__14J2DGrafContext                                       */
 SECTION_DATA void* __vt__14J2DGrafContext[10] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J2DGrafContextFv,
-	/* 3    */ (void*)func_802E90E4,
-	/* 4    */ (void*)place__14J2DGrafContextFffff,
-	/* 5    */ (void*)setPort__14J2DGrafContextFv,
-	/* 6    */ (void*)setup2D__14J2DGrafContextFv,
-	/* 7    */ (void*)setScissor__14J2DGrafContextFv,
-	/* 8    */ (void*)getGrafType__14J2DGrafContextCFv,
-	/* 9    */ (void*)setLookat__14J2DGrafContextFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J2DGrafContextFv,
+	(void*)func_802E90E4,
+	(void*)place__14J2DGrafContextFffff,
+	(void*)setPort__14J2DGrafContextFv,
+	(void*)setup2D__14J2DGrafContextFv,
+	(void*)setScissor__14J2DGrafContextFv,
+	(void*)getGrafType__14J2DGrafContextCFv,
+	(void*)setLookat__14J2DGrafContextFv,
 };
 
 /* 802E8B08-802E8BB4 00AC+00 s=0 e=2 z=0  None .text      __ct__14J2DGrafContextFffff                                  */

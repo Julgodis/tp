@@ -32,8 +32,8 @@ lbl_80D4CB84:
 /* 80D4CBFC  40 82 00 24 */	bne lbl_80D4CC20
 /* 80D4CC00  3C 60 80 D5 */	lis r3, lit_3797@ha
 /* 80D4CC04  38 83 D2 88 */	addi r4, r3, lit_3797@l
-/* 80D4CC08  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4D288 */
-/* 80D4CC0C  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4D28C */
+/* 80D4CC08  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D4CC0C  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D4CC10  90 7F 00 40 */	stw r3, 0x40(r31)
 /* 80D4CC14  90 1F 00 44 */	stw r0, 0x44(r31)
 /* 80D4CC18  38 00 00 01 */	li r0, 1
@@ -44,8 +44,8 @@ lbl_80D4CC20:
 /* 80D4CC28  40 82 00 24 */	bne lbl_80D4CC4C
 /* 80D4CC2C  3C 60 80 D5 */	lis r3, lit_3802@ha
 /* 80D4CC30  38 83 D2 90 */	addi r4, r3, lit_3802@l
-/* 80D4CC34  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80D4D290 */
-/* 80D4CC38  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80D4D294 */
+/* 80D4CC34  80 64 00 00 */	lwz r3, 0(r4)
+/* 80D4CC38  80 04 00 04 */	lwz r0, 4(r4)
 /* 80D4CC3C  90 7F 00 4C */	stw r3, 0x4c(r31)
 /* 80D4CC40  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80D4CC44  38 00 00 01 */	li r0, 1

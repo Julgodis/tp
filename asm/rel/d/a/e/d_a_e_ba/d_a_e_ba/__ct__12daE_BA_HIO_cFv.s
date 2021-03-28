@@ -6,13 +6,13 @@ lbl_8067ECEC:
 /* 8067ECFC  90 03 00 00 */	stw r0, 0(r3)
 /* 8067ED00  38 00 FF FF */	li r0, -1
 /* 8067ED04  98 03 00 04 */	stb r0, 4(r3)
-/* 8067ED08  C0 05 00 08 */	lfs f0, 8(r5)	/* effective address: 806823C4 */
+/* 8067ED08  C0 05 00 08 */	lfs f0, 8(r5)
 /* 8067ED0C  D0 03 00 08 */	stfs f0, 8(r3)
-/* 8067ED10  C0 25 00 2C */	lfs f1, 0x2c(r5)	/* effective address: 806823E8 */
+/* 8067ED10  C0 25 00 2C */	lfs f1, 0x2c(r5)
 /* 8067ED14  D0 23 00 0C */	stfs f1, 0xc(r3)
-/* 8067ED18  C0 05 00 30 */	lfs f0, 0x30(r5)	/* effective address: 806823EC */
+/* 8067ED18  C0 05 00 30 */	lfs f0, 0x30(r5)
 /* 8067ED1C  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8067ED20  D0 23 00 14 */	stfs f1, 0x14(r3)
-/* 8067ED24  C0 05 00 34 */	lfs f0, 0x34(r5)	/* effective address: 806823F0 */
+/* 8067ED24  C0 05 00 34 */	lfs f0, 0x34(r5)
 /* 8067ED28  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 8067ED2C  4E 80 00 20 */	blr 

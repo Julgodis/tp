@@ -12,9 +12,9 @@ lbl_80622B60:
 /* 80622B88  4B C4 4A EC */	b cM_atan2s__Fff
 /* 80622B8C  7C 7F 1B 78 */	mr r31, r3
 /* 80622B90  7F C3 F3 78 */	mr r3, r30
-/* 80622B94  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80622B98  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80622B9C  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80622B94  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80622B98  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80622B9C  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 80622BA0  4B 9F 7B 70 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80622BA4  7C 1F 18 50 */	subf r0, r31, r3
 /* 80622BA8  7C 03 07 34 */	extsh r3, r0

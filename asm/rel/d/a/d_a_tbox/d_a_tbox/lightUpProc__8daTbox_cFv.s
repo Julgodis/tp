@@ -4,10 +4,10 @@ lbl_80492398:
 /* 804923A0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804923A4  3C 80 80 49 */	lis r4, l_cull_size_box@ha
 /* 804923A8  38 84 61 D4 */	addi r4, r4, l_cull_size_box@l
-/* 804923AC  C0 24 00 58 */	lfs f1, 0x58(r4)	/* effective address: 8049622C */
-/* 804923B0  C0 44 00 F0 */	lfs f2, 0xf0(r4)	/* effective address: 804962C4 */
-/* 804923B4  C0 64 00 80 */	lfs f3, 0x80(r4)	/* effective address: 80496254 */
-/* 804923B8  C0 84 00 70 */	lfs f4, 0x70(r4)	/* effective address: 80496244 */
+/* 804923AC  C0 24 00 58 */	lfs f1, 0x58(r4)
+/* 804923B0  C0 44 00 F0 */	lfs f2, 0xf0(r4)
+/* 804923B4  C0 64 00 80 */	lfs f3, 0x80(r4)
+/* 804923B8  C0 84 00 70 */	lfs f4, 0x70(r4)
 /* 804923BC  38 63 09 E4 */	addi r3, r3, 0x9e4
 /* 804923C0  4B DD D5 BC */	b cLib_addCalc__FPfffff
 /* 804923C4  80 01 00 14 */	lwz r0, 0x14(r1)

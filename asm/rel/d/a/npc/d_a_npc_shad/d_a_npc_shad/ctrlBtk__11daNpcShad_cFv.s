@@ -9,12 +9,12 @@ lbl_80AE0ED0:
 /* 80AE0EEC  41 82 00 A8 */	beq lbl_80AE0F94
 /* 80AE0EF0  3C 80 80 AE */	lis r4, l_btkGetParamList@ha
 /* 80AE0EF4  38 A4 28 74 */	addi r5, r4, l_btkGetParamList@l
-/* 80AE0EF8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80AE287C */
+/* 80AE0EF8  80 05 00 08 */	lwz r0, 8(r5)
 /* 80AE0EFC  54 00 10 3A */	slwi r0, r0, 2
 /* 80AE0F00  3C 80 80 AE */	lis r4, l_arcNames@ha
 /* 80AE0F04  38 84 28 E0 */	addi r4, r4, l_arcNames@l
 /* 80AE0F08  7C 84 00 2E */	lwzx r4, r4, r0
-/* 80AE0F0C  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80AE2874 */
+/* 80AE0F0C  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80AE0F10  4B 67 1C 94 */	b getTexSRTKeyAnmP__8daNpcF_cFPci
 /* 80AE0F14  80 1F 05 B4 */	lwz r0, 0x5b4(r31)
 /* 80AE0F18  7C 03 00 40 */	cmplw r3, r0

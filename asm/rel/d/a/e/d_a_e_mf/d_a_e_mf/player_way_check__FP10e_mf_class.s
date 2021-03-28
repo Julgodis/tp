@@ -1,8 +1,8 @@
 lbl_8070B728:
-/* 8070B728  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 8070B72C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 8070B730  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
-/* 8070B734  A8 84 04 E6 */	lha r4, 0x4e6(r4)	/* effective address: 804066A6 */
+/* 8070B728  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 8070B72C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 8070B730  80 84 5D AC */	lwz r4, 0x5dac(r4)
+/* 8070B734  A8 84 04 E6 */	lha r4, 0x4e6(r4)
 /* 8070B738  A8 03 04 E6 */	lha r0, 0x4e6(r3)
 /* 8070B73C  7C 04 00 50 */	subf r0, r4, r0
 /* 8070B740  7C 00 07 35 */	extsh. r0, r0

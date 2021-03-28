@@ -21,11 +21,11 @@ lbl_80D31418:
 /* 80D31464  80 04 00 A0 */	lwz r0, 0xa0(r4)
 /* 80D31468  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D3146C  38 63 4A C8 */	addi r3, r3, j3dSys@l
-/* 80D31470  90 03 01 0C */	stw r0, 0x10c(r3)	/* effective address: 80434BD4 */
+/* 80D31470  90 03 01 0C */	stw r0, 0x10c(r3)
 /* 80D31474  80 04 00 A4 */	lwz r0, 0xa4(r4)
-/* 80D31478  90 03 01 10 */	stw r0, 0x110(r3)	/* effective address: 80434BD8 */
+/* 80D31478  90 03 01 10 */	stw r0, 0x110(r3)
 /* 80D3147C  80 04 00 AC */	lwz r0, 0xac(r4)
-/* 80D31480  90 03 01 14 */	stw r0, 0x114(r3)	/* effective address: 80434BDC */
+/* 80D31480  90 03 01 14 */	stw r0, 0x114(r3)
 /* 80D31484  38 00 00 00 */	li r0, 0
 /* 80D31488  3C 60 80 45 */	lis r3, sOldVcdVatCmd__8J3DShape@ha
 /* 80D3148C  90 03 15 D0 */	stw r0, sOldVcdVatCmd__8J3DShape@l(r3)

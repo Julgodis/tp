@@ -23,14 +23,14 @@ lbl_80D412B0:
 /* 80D41304  80 84 00 04 */	lwz r4, 4(r4)
 /* 80D41308  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80D4130C  4B 46 3A 94 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80D41310  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D41314  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80D41318  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80D41310  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D41314  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80D41318  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80D4131C  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D41320  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80D41324  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80D41328  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80D4132C  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80D41324  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80D41328  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80D4132C  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D41330  80 7E 07 20 */	lwz r3, 0x720(r30)
 /* 80D41334  4B 2C C9 90 */	b mDoExt_modelUpdateDL__FP8J3DModel
 /* 80D41338  88 1E 07 2A */	lbz r0, 0x72a(r30)
@@ -39,11 +39,11 @@ lbl_80D412B0:
 /* 80D41344  80 7E 07 24 */	lwz r3, 0x724(r30)
 /* 80D41348  4B 2C C9 7C */	b mDoExt_modelUpdateDL__FP8J3DModel
 lbl_80D4134C:
-/* 80D4134C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D41350  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D41354  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 80D4134C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D41350  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D41354  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 80D41358  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80D4135C  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 80D4135C  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 80D41360  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D41364  38 60 00 01 */	li r3, 1
 /* 80D41368  83 E1 00 0C */	lwz r31, 0xc(r1)

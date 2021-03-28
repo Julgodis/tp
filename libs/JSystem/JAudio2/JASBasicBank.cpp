@@ -14,10 +14,10 @@
 struct JASInst {
 };
 
-struct JASInstParam {
+struct JKRHeap {
 };
 
-struct JKRHeap {
+struct JASInstParam {
 };
 
 struct JASBasicBank {
@@ -73,20 +73,20 @@ extern "C" void _restgpr_29(); // 1
 /* ############################################################################################## */
 /* 803C76A8-803C76BC 0014+00 s=2 e=0 z=0  None .data      __vt__12JASBasicBank                                         */
 SECTION_DATA static void* __vt__12JASBasicBank[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12JASBasicBankFv,
-	/* 3    */ (void*)getInstParam__12JASBasicBankCFiiiP12JASInstParam,
-	/* 4    */ (void*)getType__12JASBasicBankCFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12JASBasicBankFv,
+	(void*)getInstParam__12JASBasicBankCFiiiP12JASInstParam,
+	(void*)getType__12JASBasicBankCFv,
 };
 
 /* 803C76BC-803C76D0 0014+00 s=3 e=2 z=0  None .data      __vt__7JASBank                                               */
 SECTION_DATA void* __vt__7JASBank[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7JASBankFv,
-	/* 3    */ (void*)NULL,
-	/* 4    */ (void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7JASBankFv,
+	(void*)NULL,
+	(void*)NULL,
 };
 
 /* 80297D78-80297DA4 002C+00 s=0 e=2 z=0  None .text      __ct__12JASBasicBankFv                                       */

@@ -182,8 +182,8 @@ lbl_80BA5BA0:
 /* 80BA5C54  60 00 00 04 */	ori r0, r0, 4
 /* 80BA5C58  90 1C 06 4C */	stw r0, 0x64c(r28)
 /* 80BA5C5C  38 7C 06 20 */	addi r3, r28, 0x620
-/* 80BA5C60  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80BA5C64  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80BA5C60  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80BA5C64  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80BA5C68  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80BA5C6C  4B 4D 0E 40 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 80BA5C70  80 1C 06 FC */	lwz r0, 0x6fc(r28)

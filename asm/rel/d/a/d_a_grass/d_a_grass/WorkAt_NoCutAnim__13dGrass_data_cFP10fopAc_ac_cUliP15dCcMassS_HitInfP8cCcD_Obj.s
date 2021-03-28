@@ -125,7 +125,7 @@ lbl_8051DBF0:
 /* 8051DBFC  40 80 00 48 */	bge lbl_8051DC44
 /* 8051DC00  3C 60 80 45 */	lis r3, m_grass__9daGrass_c@ha
 /* 8051DC04  38 63 0D B0 */	addi r3, r3, m_grass__9daGrass_c@l
-/* 8051DC08  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450DB0 */
+/* 8051DC08  80 63 00 00 */	lwz r3, 0(r3)
 /* 8051DC0C  48 00 2C 8D */	bl newAnm__15dGrass_packet_cFv
 /* 8051DC10  2C 03 00 00 */	cmpwi r3, 0
 /* 8051DC14  41 80 03 18 */	blt lbl_8051DF2C
@@ -246,10 +246,10 @@ lbl_8051DD7C:
 /* 8051DDCC  B0 1D 00 04 */	sth r0, 4(r29)
 /* 8051DDD0  48 00 01 54 */	b lbl_8051DF24
 lbl_8051DDD4:
-/* 8051DDD4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051DDD8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8051DDDC  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8051DDE0  88 03 05 68 */	lbz r0, 0x568(r3)	/* effective address: 80406728 */
+/* 8051DDD4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051DDD8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8051DDDC  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8051DDE0  88 03 05 68 */	lbz r0, 0x568(r3)
 /* 8051DDE4  28 00 00 01 */	cmplwi r0, 1
 /* 8051DDE8  41 80 00 6C */	blt lbl_8051DE54
 /* 8051DDEC  28 00 00 07 */	cmplwi r0, 7

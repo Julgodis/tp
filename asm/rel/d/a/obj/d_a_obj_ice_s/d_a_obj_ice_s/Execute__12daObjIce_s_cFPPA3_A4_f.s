@@ -11,7 +11,7 @@ lbl_80C21634:
 /* 80C21658  3C 60 80 C2 */	lis r3, lit_3644@ha
 /* 80C2165C  3B E3 1A F8 */	addi r31, r3, lit_3644@l
 /* 80C21660  C0 5D 04 D8 */	lfs f2, 0x4d8(r29)
-/* 80C21664  C0 3F 00 64 */	lfs f1, 0x64(r31)	/* effective address: 80C21B5C */
+/* 80C21664  C0 3F 00 64 */	lfs f1, 0x64(r31)
 /* 80C21668  C0 1D 04 D4 */	lfs f0, 0x4d4(r29)
 /* 80C2166C  EC 21 00 2A */	fadds f1, f1, f0
 /* 80C21670  C0 1D 04 D0 */	lfs f0, 0x4d0(r29)
@@ -20,10 +20,10 @@ lbl_80C21634:
 /* 80C2167C  D0 41 00 10 */	stfs f2, 0x10(r1)
 /* 80C21680  3C 60 80 C2 */	lis r3, l_HIO@ha
 /* 80C21684  38 63 1C 48 */	addi r3, r3, l_HIO@l
-/* 80C21688  C3 E3 00 0C */	lfs f31, 0xc(r3)	/* effective address: 80C21C54 */
+/* 80C21688  C3 E3 00 0C */	lfs f31, 0xc(r3)
 /* 80C2168C  38 7D 05 A4 */	addi r3, r29, 0x5a4
-/* 80C21690  C0 3F 00 08 */	lfs f1, 8(r31)	/* effective address: 80C21B00 */
-/* 80C21694  C0 5F 00 70 */	lfs f2, 0x70(r31)	/* effective address: 80C21B68 */
+/* 80C21690  C0 3F 00 08 */	lfs f1, 8(r31)
+/* 80C21694  C0 5F 00 70 */	lfs f2, 0x70(r31)
 /* 80C21698  4B 64 F0 A8 */	b cLib_chaseF__FPfff
 /* 80C2169C  38 7D 05 D8 */	addi r3, r29, 0x5d8
 /* 80C216A0  38 80 00 00 */	li r4, 0

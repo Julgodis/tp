@@ -7,9 +7,9 @@ lbl_805E18E8:
 /* 805E18FC  7C 7D 1B 78 */	mr r29, r3
 /* 805E1900  3C 80 80 5F */	lis r4, lit_3911@ha
 /* 805E1904  3B E4 D0 60 */	addi r31, r4, lit_3911@l
-/* 805E1908  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 805E190C  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 805E1910  83 C4 5D AC */	lwz r30, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 805E1908  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 805E190C  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 805E1910  83 C4 5D AC */	lwz r30, 0x5dac(r4)
 /* 805E1914  88 03 05 CB */	lbz r0, 0x5cb(r3)
 /* 805E1918  2C 00 00 01 */	cmpwi r0, 1
 /* 805E191C  41 82 01 D4 */	beq lbl_805E1AF0
@@ -113,16 +113,16 @@ lbl_805E1930:
 /* 805E1AA0  88 1D 05 CE */	lbz r0, 0x5ce(r29)
 /* 805E1AA4  28 00 00 FF */	cmplwi r0, 0xff
 /* 805E1AA8  41 82 00 3C */	beq lbl_805E1AE4
-/* 805E1AAC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E1AB0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805E1AAC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E1AB0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805E1AB4  38 80 00 8E */	li r4, 0x8e
 /* 805E1AB8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 805E1ABC  7C 05 07 74 */	extsb r5, r0
 /* 805E1AC0  4B A5 38 A0 */	b isSwitch__10dSv_info_cCFii
 /* 805E1AC4  2C 03 00 00 */	cmpwi r3, 0
 /* 805E1AC8  41 82 00 1C */	beq lbl_805E1AE4
-/* 805E1ACC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805E1AD0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 805E1ACC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805E1AD0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 805E1AD4  38 80 00 8E */	li r4, 0x8e
 /* 805E1AD8  88 1D 04 E2 */	lbz r0, 0x4e2(r29)
 /* 805E1ADC  7C 05 07 74 */	extsb r5, r0
@@ -178,8 +178,8 @@ lbl_805E1AF0:
 /* 805E1B9C  D0 01 00 20 */	stfs f0, 0x20(r1)
 /* 805E1BA0  3C 60 80 5F */	lis r3, data_805ED72C@ha
 /* 805E1BA4  38 63 D7 2C */	addi r3, r3, data_805ED72C@l
-/* 805E1BA8  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 805ED72C */
-/* 805E1BAC  C0 23 00 04 */	lfs f1, 4(r3)	/* effective address: 805ED730 */
+/* 805E1BA8  80 63 00 00 */	lwz r3, 0(r3)
+/* 805E1BAC  C0 23 00 04 */	lfs f1, 4(r3)
 /* 805E1BB0  C0 1F 00 04 */	lfs f0, 4(r31)
 /* 805E1BB4  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 805E1BB8  D0 21 00 1C */	stfs f1, 0x1c(r1)

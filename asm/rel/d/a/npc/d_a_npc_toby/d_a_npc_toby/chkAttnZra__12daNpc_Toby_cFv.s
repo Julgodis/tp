@@ -22,8 +22,8 @@ lbl_80B22614:
 lbl_80B22664:
 /* 80B22664  57 E0 06 3F */	clrlwi. r0, r31, 0x18
 /* 80B22668  41 82 00 2C */	beq lbl_80B22694
-/* 80B2266C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80B22670  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80B2266C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80B22670  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80B22674  80 1D 00 B0 */	lwz r0, 0xb0(r29)
 /* 80B22678  54 04 86 3E */	rlwinm r4, r0, 0x10, 0x18, 0x1f
 /* 80B2267C  88 1D 04 E2 */	lbz r0, 0x4e2(r29)

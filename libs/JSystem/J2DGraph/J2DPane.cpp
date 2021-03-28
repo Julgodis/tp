@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct J2DAnmTextureSRTKey {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -28,34 +25,43 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct _GXCullMode {
-};
-
-struct JKRArchive {
-};
-
-struct J2DAnmVtxColor {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DBasePosition {
-};
-
-struct J2DAnmBase {
+struct J2DAnmTransform {
 };
 
 struct J2DRotateAxis {
 };
 
-struct ResFONT {
+struct _GXCullMode {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmVtxColor {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct ResTIMG {
+};
+
+struct ResFONT {
+};
+
+struct JKRArchive {
 };
 
 struct JSUStreamSeekFrom {
@@ -67,13 +73,7 @@ struct JSURandomInputStream {
 	/* 802DC4DC */ void seek(s32, JSUStreamSeekFrom);
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct ResTIMG {
+struct J2DBasePosition {
 };
 
 struct J2DPane {
@@ -287,55 +287,55 @@ extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 /* ############################################################################################## */
 /* 803CCFB0-803CCFD0 0020+00 s=1 e=0 z=0  None .data      @2709                                                        */
 SECTION_DATA static void* lit_2709[8] = {
-	/* 0    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x38),
-	/* 1    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x4C),
-	/* 2    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x88),
-	/* 3    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0xC0),
-	/* 4    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x74),
-	/* 5    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0xB0),
-	/* 6    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x9C),
-	/* 7    */ (void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x60),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x38),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x4C),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x88),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0xC0),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x74),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0xB0),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x9C),
+	(void*)(((char*)setAnimation__7J2DPaneFP10J2DAnmBase)+0x60),
 };
 
 /* 803CCFD0-803CD068 0094+04 s=5 e=0 z=0  None .data      __vt__7J2DPane                                               */
 SECTION_DATA static void* __vt__7J2DPane[37 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__7J2DPaneFv,
-	/* 3    */ (void*)getTypeID__7J2DPaneCFv,
-	/* 4    */ (void*)move__7J2DPaneFff,
-	/* 5    */ (void*)add__7J2DPaneFff,
-	/* 6    */ (void*)resize__7J2DPaneFff,
-	/* 7    */ (void*)setCullBack__7J2DPaneFb,
-	/* 8    */ (void*)setCullBack__7J2DPaneF11_GXCullMode,
-	/* 9    */ (void*)setAlpha__7J2DPaneFUc,
-	/* 10   */ (void*)setConnectParent__7J2DPaneFb,
-	/* 11   */ (void*)calcMtx__7J2DPaneFv,
-	/* 12   */ (void*)update__7J2DPaneFv,
-	/* 13   */ (void*)drawSelf__7J2DPaneFff,
-	/* 14   */ (void*)drawSelf__7J2DPaneFffPA3_A4_f,
-	/* 15   */ (void*)search__7J2DPaneFUx,
-	/* 16   */ (void*)searchUserInfo__7J2DPaneFUx,
-	/* 17   */ (void*)makeMatrix__7J2DPaneFff,
-	/* 18   */ (void*)makeMatrix__7J2DPaneFffff,
-	/* 19   */ (void*)isUsed__7J2DPaneFPC7ResTIMG,
-	/* 20   */ (void*)isUsed__7J2DPaneFPC7ResFONT,
-	/* 21   */ (void*)clearAnmTransform__7J2DPaneFv,
-	/* 22   */ (void*)rewriteAlpha__7J2DPaneFv,
-	/* 23   */ (void*)setAnimation__7J2DPaneFP10J2DAnmBase,
-	/* 24   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
-	/* 25   */ (void*)setAnimation__7J2DPaneFP11J2DAnmColor,
-	/* 26   */ (void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
-	/* 27   */ (void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
-	/* 28   */ (void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
-	/* 29   */ (void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 30   */ (void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 31   */ (void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
-	/* 32   */ (void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 33   */ (void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
-	/* 34   */ (void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
-	/* 35   */ (void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
-	/* 36   */ (void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__7J2DPaneFv,
+	(void*)getTypeID__7J2DPaneCFv,
+	(void*)move__7J2DPaneFff,
+	(void*)add__7J2DPaneFff,
+	(void*)resize__7J2DPaneFff,
+	(void*)setCullBack__7J2DPaneFb,
+	(void*)setCullBack__7J2DPaneF11_GXCullMode,
+	(void*)setAlpha__7J2DPaneFUc,
+	(void*)setConnectParent__7J2DPaneFb,
+	(void*)calcMtx__7J2DPaneFv,
+	(void*)update__7J2DPaneFv,
+	(void*)drawSelf__7J2DPaneFff,
+	(void*)drawSelf__7J2DPaneFffPA3_A4_f,
+	(void*)search__7J2DPaneFUx,
+	(void*)searchUserInfo__7J2DPaneFUx,
+	(void*)makeMatrix__7J2DPaneFff,
+	(void*)makeMatrix__7J2DPaneFffff,
+	(void*)isUsed__7J2DPaneFPC7ResTIMG,
+	(void*)isUsed__7J2DPaneFPC7ResFONT,
+	(void*)clearAnmTransform__7J2DPaneFv,
+	(void*)rewriteAlpha__7J2DPaneFv,
+	(void*)setAnimation__7J2DPaneFP10J2DAnmBase,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTransform,
+	(void*)setAnimation__7J2DPaneFP11J2DAnmColor,
+	(void*)setAnimation__7J2DPaneFP16J2DAnmTexPattern,
+	(void*)setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey,
+	(void*)setAnimation__7J2DPaneFP15J2DAnmTevRegKey,
+	(void*)setAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationTransform__7J2DPaneFPC15J2DAnmTransform,
+	(void*)setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull,
+	(void*)setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)setAnimationVC__7J2DPaneFP14J2DAnmVtxColor,
+	(void*)animationPane__7J2DPaneFPC15J2DAnmTransform,
 	/* padding */
 	NULL,
 };

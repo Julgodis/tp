@@ -7,9 +7,9 @@ lbl_80CCBC08:
 /* 80CCBC1C  80 03 04 9C */	lwz r0, 0x49c(r3)
 /* 80CCBC20  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 80CCBC24  41 82 00 78 */	beq lbl_80CCBC9C
-/* 80CCBC28  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80CCBC2C  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80CCBC30  80 04 5F 1C */	lwz r0, 0x5f1c(r4)	/* effective address: 8040C0DC */
+/* 80CCBC28  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80CCBC2C  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80CCBC30  80 04 5F 1C */	lwz r0, 0x5f1c(r4)
 /* 80CCBC34  54 00 06 F7 */	rlwinm. r0, r0, 0, 0x1b, 0x1b
 /* 80CCBC38  41 82 00 64 */	beq lbl_80CCBC9C
 /* 80CCBC3C  3C 60 80 CD */	lis r3, l_arcName@ha
@@ -19,7 +19,7 @@ lbl_80CCBC08:
 /* 80CCBC4C  7F E4 FB 78 */	mr r4, r31
 /* 80CCBC50  3C A0 80 CD */	lis r5, l_eventName@ha
 /* 80CCBC54  38 A5 CC F8 */	addi r5, r5, l_eventName@l
-/* 80CCBC58  80 A5 00 00 */	lwz r5, 0(r5)	/* effective address: 80CCCCF8 */
+/* 80CCBC58  80 A5 00 00 */	lwz r5, 0(r5)
 /* 80CCBC5C  38 C0 00 FF */	li r6, 0xff
 /* 80CCBC60  4B 37 BA F8 */	b getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc
 /* 80CCBC64  B0 7F 05 EC */	sth r3, 0x5ec(r31)

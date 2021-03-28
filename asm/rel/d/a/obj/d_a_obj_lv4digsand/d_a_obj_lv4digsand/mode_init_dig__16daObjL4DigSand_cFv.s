@@ -24,8 +24,8 @@ lbl_80C66EAC:
 /* 80C66F04  7F 63 DB 78 */	mr r3, r27
 /* 80C66F08  38 9C 04 D0 */	addi r4, r28, 0x4d0
 /* 80C66F0C  4B 60 0E 1C */	b SetPos__11cBgS_GndChkFPC4cXyz
-/* 80C66F10  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80C66F14  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80C66F10  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80C66F14  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80C66F18  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80C66F1C  7F 64 DB 78 */	mr r4, r27
 /* 80C66F20  4B 40 D5 80 */	b GroundCross__4cBgSFP11cBgS_GndChk

@@ -57,8 +57,8 @@ lbl_80734698:
 /* 80734774  38 7F 0A 80 */	addi r3, r31, 0xa80
 /* 80734778  C0 3E 00 AC */	lfs f1, 0xac(r30)
 /* 8073477C  4B B3 AF 8C */	b SetR__8cM3dGSphFf
-/* 80734780  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80734784  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80734780  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80734784  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80734788  3B 83 23 3C */	addi r28, r3, 0x233c
 /* 8073478C  7F 83 E3 78 */	mr r3, r28
 /* 80734790  38 9F 09 5C */	addi r4, r31, 0x95c

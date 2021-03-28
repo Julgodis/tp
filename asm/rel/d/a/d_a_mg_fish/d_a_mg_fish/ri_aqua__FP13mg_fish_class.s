@@ -11,8 +11,8 @@ lbl_80531CD4:
 /* 80531CF8  7C 7E 1B 78 */	mr r30, r3
 /* 80531CFC  3C 60 80 53 */	lis r3, lit_3679@ha
 /* 80531D00  3B E3 61 68 */	addi r31, r3, lit_3679@l
-/* 80531D04  C3 FF 00 18 */	lfs f31, 0x18(r31)	/* effective address: 80536180 */
-/* 80531D08  C3 DF 00 94 */	lfs f30, 0x94(r31)	/* effective address: 805361FC */
+/* 80531D04  C3 FF 00 18 */	lfs f31, 0x18(r31)
+/* 80531D08  C3 DF 00 94 */	lfs f30, 0x94(r31)
 /* 80531D0C  A8 1E 05 B8 */	lha r0, 0x5b8(r30)
 /* 80531D10  2C 00 00 03 */	cmpwi r0, 3
 /* 80531D14  41 82 02 44 */	beq lbl_80531F58

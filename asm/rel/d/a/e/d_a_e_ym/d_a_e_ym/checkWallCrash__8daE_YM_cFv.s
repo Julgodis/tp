@@ -10,9 +10,9 @@ lbl_80808E34:
 /* 80808E54  88 1F 06 A0 */	lbz r0, 0x6a0(r31)
 /* 80808E58  28 00 00 01 */	cmplwi r0, 1
 /* 80808E5C  40 82 01 88 */	bne lbl_80808FE4
-/* 80808E60  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80808E64  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80808E68  80 83 5D AC */	lwz r4, 0x5dac(r3)	/* effective address: 8040BF6C */
+/* 80808E60  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80808E64  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80808E68  80 83 5D AC */	lwz r4, 0x5dac(r3)
 /* 80808E6C  80 04 05 80 */	lwz r0, 0x580(r4)
 /* 80808E70  54 00 04 A5 */	rlwinm. r0, r0, 0, 0x12, 0x12
 /* 80808E74  40 82 00 10 */	bne lbl_80808E84

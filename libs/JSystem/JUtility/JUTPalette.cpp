@@ -14,13 +14,13 @@
 struct ResTLUT {
 };
 
+struct JUTTransparency {
+};
+
 struct _GXTlut {
 };
 
 struct _GXTlutFmt {
-};
-
-struct JUTTransparency {
 };
 
 struct JUTPalette {

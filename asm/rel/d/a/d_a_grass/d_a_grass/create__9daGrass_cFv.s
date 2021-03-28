@@ -28,7 +28,7 @@ lbl_8051C304:
 /* 8051C36C  80 01 01 F4 */	lwz r0, 0x1f4(r1)
 /* 8051C370  94 03 88 54 */	stwu r0, struct_80528854+0x0@l(r3)
 /* 8051C374  A0 01 01 F8 */	lhz r0, 0x1f8(r1)
-/* 8051C378  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051C378  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C37C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C380  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C384  38 BF 0C 34 */	addi r5, r31, 0xc34
@@ -41,9 +41,9 @@ lbl_8051C304:
 /* 8051C3A0  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C3A4  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C3A8  80 01 01 EC */	lwz r0, 0x1ec(r1)
-/* 8051C3AC  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 8052885A */
+/* 8051C3AC  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051C3B0  A0 01 01 F0 */	lhz r0, 0x1f0(r1)
-/* 8051C3B4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C3B4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C3B8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C3BC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C3C0  38 BF 0C 40 */	addi r5, r31, 0xc40
@@ -56,9 +56,9 @@ lbl_8051C304:
 /* 8051C3DC  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C3E0  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C3E4  80 01 01 E4 */	lwz r0, 0x1e4(r1)
-/* 8051C3E8  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 80528860 */
+/* 8051C3E8  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051C3EC  A0 01 01 E8 */	lhz r0, 0x1e8(r1)
-/* 8051C3F0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C3F0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C3F4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C3F8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C3FC  38 BF 0C 4C */	addi r5, r31, 0xc4c
@@ -71,9 +71,9 @@ lbl_8051C304:
 /* 8051C418  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C41C  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C420  80 01 01 DC */	lwz r0, 0x1dc(r1)
-/* 8051C424  94 03 00 12 */	stwu r0, 0x12(r3)	/* effective address: 80528866 */
+/* 8051C424  94 03 00 12 */	stwu r0, 0x12(r3)
 /* 8051C428  A0 01 01 E0 */	lhz r0, 0x1e0(r1)
-/* 8051C42C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C42C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C430  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C434  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C438  38 BF 0C 58 */	addi r5, r31, 0xc58
@@ -86,9 +86,9 @@ lbl_8051C304:
 /* 8051C454  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C458  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C45C  80 01 01 D4 */	lwz r0, 0x1d4(r1)
-/* 8051C460  94 03 00 18 */	stwu r0, 0x18(r3)	/* effective address: 8052886C */
+/* 8051C460  94 03 00 18 */	stwu r0, 0x18(r3)
 /* 8051C464  A0 01 01 D8 */	lhz r0, 0x1d8(r1)
-/* 8051C468  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C468  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C46C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C470  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C474  38 BF 0C 64 */	addi r5, r31, 0xc64
@@ -101,9 +101,9 @@ lbl_8051C304:
 /* 8051C490  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C494  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C498  80 01 01 CC */	lwz r0, 0x1cc(r1)
-/* 8051C49C  94 03 00 1E */	stwu r0, 0x1e(r3)	/* effective address: 80528872 */
+/* 8051C49C  94 03 00 1E */	stwu r0, 0x1e(r3)
 /* 8051C4A0  A0 01 01 D0 */	lhz r0, 0x1d0(r1)
-/* 8051C4A4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C4A4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C4A8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C4AC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C4B0  38 BF 0C 70 */	addi r5, r31, 0xc70
@@ -116,9 +116,9 @@ lbl_8051C304:
 /* 8051C4CC  3C 60 80 53 */	lis r3, struct_80528854+0x0@ha
 /* 8051C4D0  38 63 88 54 */	addi r3, r3, struct_80528854+0x0@l
 /* 8051C4D4  80 01 01 C4 */	lwz r0, 0x1c4(r1)
-/* 8051C4D8  94 03 00 24 */	stwu r0, 0x24(r3)	/* effective address: 80528878 */
+/* 8051C4D8  94 03 00 24 */	stwu r0, 0x24(r3)
 /* 8051C4DC  A0 01 01 C8 */	lhz r0, 0x1c8(r1)
-/* 8051C4E0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528858 */
+/* 8051C4E0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C4E4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C4E8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C4EC  38 BF 0C 7C */	addi r5, r31, 0xc7c
@@ -140,7 +140,7 @@ lbl_8051C500:
 /* 8051C528  80 01 01 BC */	lwz r0, 0x1bc(r1)
 /* 8051C52C  94 03 88 80 */	stwu r0, struct_80528880+0x0@l(r3)
 /* 8051C530  A0 01 01 C0 */	lhz r0, 0x1c0(r1)
-/* 8051C534  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051C534  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C538  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C53C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C540  38 BF 0C 88 */	addi r5, r31, 0xc88
@@ -153,9 +153,9 @@ lbl_8051C500:
 /* 8051C55C  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C560  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C564  80 01 01 B4 */	lwz r0, 0x1b4(r1)
-/* 8051C568  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 80528886 */
+/* 8051C568  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051C56C  A0 01 01 B8 */	lhz r0, 0x1b8(r1)
-/* 8051C570  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C570  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C574  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C578  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C57C  38 BF 0C 94 */	addi r5, r31, 0xc94
@@ -168,9 +168,9 @@ lbl_8051C500:
 /* 8051C598  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C59C  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C5A0  80 01 01 AC */	lwz r0, 0x1ac(r1)
-/* 8051C5A4  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 8052888C */
+/* 8051C5A4  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051C5A8  A0 01 01 B0 */	lhz r0, 0x1b0(r1)
-/* 8051C5AC  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C5AC  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C5B0  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C5B4  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C5B8  38 BF 0C A0 */	addi r5, r31, 0xca0
@@ -183,9 +183,9 @@ lbl_8051C500:
 /* 8051C5D4  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C5D8  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C5DC  80 01 01 A4 */	lwz r0, 0x1a4(r1)
-/* 8051C5E0  94 03 00 12 */	stwu r0, 0x12(r3)	/* effective address: 80528892 */
+/* 8051C5E0  94 03 00 12 */	stwu r0, 0x12(r3)
 /* 8051C5E4  A0 01 01 A8 */	lhz r0, 0x1a8(r1)
-/* 8051C5E8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C5E8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C5EC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C5F0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C5F4  38 BF 0C AC */	addi r5, r31, 0xcac
@@ -198,9 +198,9 @@ lbl_8051C500:
 /* 8051C610  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C614  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C618  80 01 01 9C */	lwz r0, 0x19c(r1)
-/* 8051C61C  94 03 00 18 */	stwu r0, 0x18(r3)	/* effective address: 80528898 */
+/* 8051C61C  94 03 00 18 */	stwu r0, 0x18(r3)
 /* 8051C620  A0 01 01 A0 */	lhz r0, 0x1a0(r1)
-/* 8051C624  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C624  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C628  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C62C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C630  38 BF 0C B8 */	addi r5, r31, 0xcb8
@@ -213,9 +213,9 @@ lbl_8051C500:
 /* 8051C64C  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C650  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C654  80 01 01 94 */	lwz r0, 0x194(r1)
-/* 8051C658  94 03 00 1E */	stwu r0, 0x1e(r3)	/* effective address: 8052889E */
+/* 8051C658  94 03 00 1E */	stwu r0, 0x1e(r3)
 /* 8051C65C  A0 01 01 98 */	lhz r0, 0x198(r1)
-/* 8051C660  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C660  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C664  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C668  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C66C  38 BF 0C C4 */	addi r5, r31, 0xcc4
@@ -228,9 +228,9 @@ lbl_8051C500:
 /* 8051C688  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C68C  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C690  80 01 01 8C */	lwz r0, 0x18c(r1)
-/* 8051C694  94 03 00 24 */	stwu r0, 0x24(r3)	/* effective address: 805288A4 */
+/* 8051C694  94 03 00 24 */	stwu r0, 0x24(r3)
 /* 8051C698  A0 01 01 90 */	lhz r0, 0x190(r1)
-/* 8051C69C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C69C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C6A0  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C6A4  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C6A8  38 BF 0C D0 */	addi r5, r31, 0xcd0
@@ -243,9 +243,9 @@ lbl_8051C500:
 /* 8051C6C4  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C6C8  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C6CC  80 01 01 84 */	lwz r0, 0x184(r1)
-/* 8051C6D0  94 03 00 2A */	stwu r0, 0x2a(r3)	/* effective address: 805288AA */
+/* 8051C6D0  94 03 00 2A */	stwu r0, 0x2a(r3)
 /* 8051C6D4  A0 01 01 88 */	lhz r0, 0x188(r1)
-/* 8051C6D8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C6D8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C6DC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C6E0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C6E4  38 BF 0C DC */	addi r5, r31, 0xcdc
@@ -258,9 +258,9 @@ lbl_8051C500:
 /* 8051C700  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C704  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C708  80 01 01 7C */	lwz r0, 0x17c(r1)
-/* 8051C70C  94 03 00 30 */	stwu r0, 0x30(r3)	/* effective address: 805288B0 */
+/* 8051C70C  94 03 00 30 */	stwu r0, 0x30(r3)
 /* 8051C710  A0 01 01 80 */	lhz r0, 0x180(r1)
-/* 8051C714  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C714  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C718  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C71C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C720  38 BF 0C E8 */	addi r5, r31, 0xce8
@@ -273,9 +273,9 @@ lbl_8051C500:
 /* 8051C73C  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C740  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C744  80 01 01 74 */	lwz r0, 0x174(r1)
-/* 8051C748  94 03 00 36 */	stwu r0, 0x36(r3)	/* effective address: 805288B6 */
+/* 8051C748  94 03 00 36 */	stwu r0, 0x36(r3)
 /* 8051C74C  A0 01 01 78 */	lhz r0, 0x178(r1)
-/* 8051C750  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C750  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C754  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C758  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C75C  38 BF 0C F4 */	addi r5, r31, 0xcf4
@@ -288,9 +288,9 @@ lbl_8051C500:
 /* 8051C778  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C77C  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C780  80 01 01 6C */	lwz r0, 0x16c(r1)
-/* 8051C784  94 03 00 3C */	stwu r0, 0x3c(r3)	/* effective address: 805288BC */
+/* 8051C784  94 03 00 3C */	stwu r0, 0x3c(r3)
 /* 8051C788  A0 01 01 70 */	lhz r0, 0x170(r1)
-/* 8051C78C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C78C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C790  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C794  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C798  38 BF 0D 00 */	addi r5, r31, 0xd00
@@ -303,9 +303,9 @@ lbl_8051C500:
 /* 8051C7B4  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C7B8  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C7BC  80 01 01 64 */	lwz r0, 0x164(r1)
-/* 8051C7C0  94 03 00 42 */	stwu r0, 0x42(r3)	/* effective address: 805288C2 */
+/* 8051C7C0  94 03 00 42 */	stwu r0, 0x42(r3)
 /* 8051C7C4  A0 01 01 68 */	lhz r0, 0x168(r1)
-/* 8051C7C8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C7C8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C7CC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C7D0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C7D4  38 BF 0D 0C */	addi r5, r31, 0xd0c
@@ -318,9 +318,9 @@ lbl_8051C500:
 /* 8051C7F0  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C7F4  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C7F8  80 01 01 5C */	lwz r0, 0x15c(r1)
-/* 8051C7FC  94 03 00 48 */	stwu r0, 0x48(r3)	/* effective address: 805288C8 */
+/* 8051C7FC  94 03 00 48 */	stwu r0, 0x48(r3)
 /* 8051C800  A0 01 01 60 */	lhz r0, 0x160(r1)
-/* 8051C804  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C804  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C808  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C80C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C810  38 BF 0D 18 */	addi r5, r31, 0xd18
@@ -333,9 +333,9 @@ lbl_8051C500:
 /* 8051C82C  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C830  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C834  80 01 01 54 */	lwz r0, 0x154(r1)
-/* 8051C838  94 03 00 4E */	stwu r0, 0x4e(r3)	/* effective address: 805288CE */
+/* 8051C838  94 03 00 4E */	stwu r0, 0x4e(r3)
 /* 8051C83C  A0 01 01 58 */	lhz r0, 0x158(r1)
-/* 8051C840  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C840  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C844  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C848  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C84C  38 BF 0D 24 */	addi r5, r31, 0xd24
@@ -348,9 +348,9 @@ lbl_8051C500:
 /* 8051C868  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C86C  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C870  80 01 01 4C */	lwz r0, 0x14c(r1)
-/* 8051C874  94 03 00 54 */	stwu r0, 0x54(r3)	/* effective address: 805288D4 */
+/* 8051C874  94 03 00 54 */	stwu r0, 0x54(r3)
 /* 8051C878  A0 01 01 50 */	lhz r0, 0x150(r1)
-/* 8051C87C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C87C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C880  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C884  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C888  38 BF 0D 30 */	addi r5, r31, 0xd30
@@ -363,9 +363,9 @@ lbl_8051C500:
 /* 8051C8A4  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C8A8  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C8AC  80 01 01 44 */	lwz r0, 0x144(r1)
-/* 8051C8B0  94 03 00 5A */	stwu r0, 0x5a(r3)	/* effective address: 805288DA */
+/* 8051C8B0  94 03 00 5A */	stwu r0, 0x5a(r3)
 /* 8051C8B4  A0 01 01 48 */	lhz r0, 0x148(r1)
-/* 8051C8B8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C8B8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C8BC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C8C0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C8C4  38 BF 0D 3C */	addi r5, r31, 0xd3c
@@ -378,9 +378,9 @@ lbl_8051C500:
 /* 8051C8E0  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C8E4  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C8E8  80 01 01 3C */	lwz r0, 0x13c(r1)
-/* 8051C8EC  94 03 00 60 */	stwu r0, 0x60(r3)	/* effective address: 805288E0 */
+/* 8051C8EC  94 03 00 60 */	stwu r0, 0x60(r3)
 /* 8051C8F0  A0 01 01 40 */	lhz r0, 0x140(r1)
-/* 8051C8F4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C8F4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C8F8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C8FC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C900  38 BF 0D 48 */	addi r5, r31, 0xd48
@@ -393,9 +393,9 @@ lbl_8051C500:
 /* 8051C91C  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C920  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C924  80 01 01 34 */	lwz r0, 0x134(r1)
-/* 8051C928  94 03 00 66 */	stwu r0, 0x66(r3)	/* effective address: 805288E6 */
+/* 8051C928  94 03 00 66 */	stwu r0, 0x66(r3)
 /* 8051C92C  A0 01 01 38 */	lhz r0, 0x138(r1)
-/* 8051C930  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C930  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C934  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C938  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C93C  38 BF 0D 54 */	addi r5, r31, 0xd54
@@ -408,9 +408,9 @@ lbl_8051C500:
 /* 8051C958  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C95C  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C960  80 01 01 2C */	lwz r0, 0x12c(r1)
-/* 8051C964  94 03 00 6C */	stwu r0, 0x6c(r3)	/* effective address: 805288EC */
+/* 8051C964  94 03 00 6C */	stwu r0, 0x6c(r3)
 /* 8051C968  A0 01 01 30 */	lhz r0, 0x130(r1)
-/* 8051C96C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C96C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C970  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C974  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C978  38 BF 0D 60 */	addi r5, r31, 0xd60
@@ -423,9 +423,9 @@ lbl_8051C500:
 /* 8051C994  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C998  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C99C  80 01 01 24 */	lwz r0, 0x124(r1)
-/* 8051C9A0  94 03 00 72 */	stwu r0, 0x72(r3)	/* effective address: 805288F2 */
+/* 8051C9A0  94 03 00 72 */	stwu r0, 0x72(r3)
 /* 8051C9A4  A0 01 01 28 */	lhz r0, 0x128(r1)
-/* 8051C9A8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C9A8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C9AC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C9B0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C9B4  38 BF 0D 6C */	addi r5, r31, 0xd6c
@@ -438,9 +438,9 @@ lbl_8051C500:
 /* 8051C9D0  3C 60 80 53 */	lis r3, struct_80528880+0x0@ha
 /* 8051C9D4  38 63 88 80 */	addi r3, r3, struct_80528880+0x0@l
 /* 8051C9D8  80 01 01 1C */	lwz r0, 0x11c(r1)
-/* 8051C9DC  94 03 00 78 */	stwu r0, 0x78(r3)	/* effective address: 805288F8 */
+/* 8051C9DC  94 03 00 78 */	stwu r0, 0x78(r3)
 /* 8051C9E0  A0 01 01 20 */	lhz r0, 0x120(r1)
-/* 8051C9E4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528884 */
+/* 8051C9E4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051C9E8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051C9EC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051C9F0  38 BF 0D 78 */	addi r5, r31, 0xd78
@@ -462,7 +462,7 @@ lbl_8051CA04:
 /* 8051CA2C  80 01 01 14 */	lwz r0, 0x114(r1)
 /* 8051CA30  94 03 89 00 */	stwu r0, struct_80528900+0x0@l(r3)
 /* 8051CA34  A0 01 01 18 */	lhz r0, 0x118(r1)
-/* 8051CA38  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051CA38  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CA3C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CA40  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CA44  38 BF 0D 84 */	addi r5, r31, 0xd84
@@ -475,9 +475,9 @@ lbl_8051CA04:
 /* 8051CA60  3C 60 80 53 */	lis r3, struct_80528900+0x0@ha
 /* 8051CA64  38 63 89 00 */	addi r3, r3, struct_80528900+0x0@l
 /* 8051CA68  80 01 01 0C */	lwz r0, 0x10c(r1)
-/* 8051CA6C  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 80528906 */
+/* 8051CA6C  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051CA70  A0 01 01 10 */	lhz r0, 0x110(r1)
-/* 8051CA74  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528904 */
+/* 8051CA74  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CA78  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CA7C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CA80  38 BF 0D 90 */	addi r5, r31, 0xd90
@@ -490,9 +490,9 @@ lbl_8051CA04:
 /* 8051CA9C  3C 60 80 53 */	lis r3, struct_80528900+0x0@ha
 /* 8051CAA0  38 63 89 00 */	addi r3, r3, struct_80528900+0x0@l
 /* 8051CAA4  80 01 01 04 */	lwz r0, 0x104(r1)
-/* 8051CAA8  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 8052890C */
+/* 8051CAA8  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051CAAC  A0 01 01 08 */	lhz r0, 0x108(r1)
-/* 8051CAB0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528904 */
+/* 8051CAB0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CAB4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CAB8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CABC  38 BF 0D 9C */	addi r5, r31, 0xd9c
@@ -514,7 +514,7 @@ lbl_8051CAD0:
 /* 8051CAF8  80 01 00 FC */	lwz r0, 0xfc(r1)
 /* 8051CAFC  94 03 89 14 */	stwu r0, struct_80528914+0x0@l(r3)
 /* 8051CB00  A0 01 01 00 */	lhz r0, 0x100(r1)
-/* 8051CB04  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051CB04  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CB08  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CB0C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CB10  38 BF 0D A8 */	addi r5, r31, 0xda8
@@ -527,9 +527,9 @@ lbl_8051CAD0:
 /* 8051CB2C  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CB30  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CB34  80 01 00 F4 */	lwz r0, 0xf4(r1)
-/* 8051CB38  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 8052891A */
+/* 8051CB38  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051CB3C  A0 01 00 F8 */	lhz r0, 0xf8(r1)
-/* 8051CB40  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CB40  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CB44  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CB48  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CB4C  38 BF 0D B4 */	addi r5, r31, 0xdb4
@@ -542,9 +542,9 @@ lbl_8051CAD0:
 /* 8051CB68  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CB6C  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CB70  80 01 00 EC */	lwz r0, 0xec(r1)
-/* 8051CB74  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 80528920 */
+/* 8051CB74  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051CB78  A0 01 00 F0 */	lhz r0, 0xf0(r1)
-/* 8051CB7C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CB7C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CB80  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CB84  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CB88  38 BF 0D C0 */	addi r5, r31, 0xdc0
@@ -557,9 +557,9 @@ lbl_8051CAD0:
 /* 8051CBA4  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CBA8  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CBAC  80 01 00 E4 */	lwz r0, 0xe4(r1)
-/* 8051CBB0  94 03 00 12 */	stwu r0, 0x12(r3)	/* effective address: 80528926 */
+/* 8051CBB0  94 03 00 12 */	stwu r0, 0x12(r3)
 /* 8051CBB4  A0 01 00 E8 */	lhz r0, 0xe8(r1)
-/* 8051CBB8  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CBB8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CBBC  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CBC0  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CBC4  38 BF 0D CC */	addi r5, r31, 0xdcc
@@ -572,9 +572,9 @@ lbl_8051CAD0:
 /* 8051CBE0  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CBE4  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CBE8  80 01 00 DC */	lwz r0, 0xdc(r1)
-/* 8051CBEC  94 03 00 18 */	stwu r0, 0x18(r3)	/* effective address: 8052892C */
+/* 8051CBEC  94 03 00 18 */	stwu r0, 0x18(r3)
 /* 8051CBF0  A0 01 00 E0 */	lhz r0, 0xe0(r1)
-/* 8051CBF4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CBF4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CBF8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CBFC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CC00  38 BF 0D D8 */	addi r5, r31, 0xdd8
@@ -587,9 +587,9 @@ lbl_8051CAD0:
 /* 8051CC1C  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CC20  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CC24  80 01 00 D4 */	lwz r0, 0xd4(r1)
-/* 8051CC28  94 03 00 1E */	stwu r0, 0x1e(r3)	/* effective address: 80528932 */
+/* 8051CC28  94 03 00 1E */	stwu r0, 0x1e(r3)
 /* 8051CC2C  A0 01 00 D8 */	lhz r0, 0xd8(r1)
-/* 8051CC30  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CC30  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CC34  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CC38  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CC3C  38 BF 0D E4 */	addi r5, r31, 0xde4
@@ -602,9 +602,9 @@ lbl_8051CAD0:
 /* 8051CC58  3C 60 80 53 */	lis r3, struct_80528914+0x0@ha
 /* 8051CC5C  38 63 89 14 */	addi r3, r3, struct_80528914+0x0@l
 /* 8051CC60  80 01 00 CC */	lwz r0, 0xcc(r1)
-/* 8051CC64  94 03 00 24 */	stwu r0, 0x24(r3)	/* effective address: 80528938 */
+/* 8051CC64  94 03 00 24 */	stwu r0, 0x24(r3)
 /* 8051CC68  A0 01 00 D0 */	lhz r0, 0xd0(r1)
-/* 8051CC6C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528918 */
+/* 8051CC6C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CC70  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CC74  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CC78  38 BF 0D F0 */	addi r5, r31, 0xdf0
@@ -626,7 +626,7 @@ lbl_8051CC8C:
 /* 8051CCB4  80 01 00 C4 */	lwz r0, 0xc4(r1)
 /* 8051CCB8  94 03 89 40 */	stwu r0, struct_80528940+0x0@l(r3)
 /* 8051CCBC  A0 01 00 C8 */	lhz r0, 0xc8(r1)
-/* 8051CCC0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051CCC0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CCC4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CCC8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CCCC  38 BF 0D FC */	addi r5, r31, 0xdfc
@@ -639,9 +639,9 @@ lbl_8051CC8C:
 /* 8051CCE8  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CCEC  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CCF0  80 01 00 BC */	lwz r0, 0xbc(r1)
-/* 8051CCF4  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 80528946 */
+/* 8051CCF4  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051CCF8  A0 01 00 C0 */	lhz r0, 0xc0(r1)
-/* 8051CCFC  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CCFC  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CD00  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CD04  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CD08  38 BF 0E 08 */	addi r5, r31, 0xe08
@@ -654,9 +654,9 @@ lbl_8051CC8C:
 /* 8051CD24  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CD28  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CD2C  80 01 00 B4 */	lwz r0, 0xb4(r1)
-/* 8051CD30  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 8052894C */
+/* 8051CD30  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051CD34  A0 01 00 B8 */	lhz r0, 0xb8(r1)
-/* 8051CD38  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CD38  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CD3C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CD40  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CD44  38 BF 0E 14 */	addi r5, r31, 0xe14
@@ -669,9 +669,9 @@ lbl_8051CC8C:
 /* 8051CD60  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CD64  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CD68  80 01 00 AC */	lwz r0, 0xac(r1)
-/* 8051CD6C  94 03 00 12 */	stwu r0, 0x12(r3)	/* effective address: 80528952 */
+/* 8051CD6C  94 03 00 12 */	stwu r0, 0x12(r3)
 /* 8051CD70  A0 01 00 B0 */	lhz r0, 0xb0(r1)
-/* 8051CD74  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CD74  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CD78  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CD7C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CD80  38 BF 0E 20 */	addi r5, r31, 0xe20
@@ -684,9 +684,9 @@ lbl_8051CC8C:
 /* 8051CD9C  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CDA0  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CDA4  80 01 00 A4 */	lwz r0, 0xa4(r1)
-/* 8051CDA8  94 03 00 18 */	stwu r0, 0x18(r3)	/* effective address: 80528958 */
+/* 8051CDA8  94 03 00 18 */	stwu r0, 0x18(r3)
 /* 8051CDAC  A0 01 00 A8 */	lhz r0, 0xa8(r1)
-/* 8051CDB0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CDB0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CDB4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CDB8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CDBC  38 BF 0E 2C */	addi r5, r31, 0xe2c
@@ -699,9 +699,9 @@ lbl_8051CC8C:
 /* 8051CDD8  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CDDC  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CDE0  80 01 00 9C */	lwz r0, 0x9c(r1)
-/* 8051CDE4  94 03 00 1E */	stwu r0, 0x1e(r3)	/* effective address: 8052895E */
+/* 8051CDE4  94 03 00 1E */	stwu r0, 0x1e(r3)
 /* 8051CDE8  A0 01 00 A0 */	lhz r0, 0xa0(r1)
-/* 8051CDEC  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CDEC  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CDF0  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CDF4  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CDF8  38 BF 0E 38 */	addi r5, r31, 0xe38
@@ -714,9 +714,9 @@ lbl_8051CC8C:
 /* 8051CE14  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CE18  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CE1C  80 01 00 94 */	lwz r0, 0x94(r1)
-/* 8051CE20  94 03 00 24 */	stwu r0, 0x24(r3)	/* effective address: 80528964 */
+/* 8051CE20  94 03 00 24 */	stwu r0, 0x24(r3)
 /* 8051CE24  A0 01 00 98 */	lhz r0, 0x98(r1)
-/* 8051CE28  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CE28  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CE2C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CE30  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CE34  38 BF 0E 44 */	addi r5, r31, 0xe44
@@ -729,9 +729,9 @@ lbl_8051CC8C:
 /* 8051CE50  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CE54  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CE58  80 01 00 8C */	lwz r0, 0x8c(r1)
-/* 8051CE5C  94 03 00 2A */	stwu r0, 0x2a(r3)	/* effective address: 8052896A */
+/* 8051CE5C  94 03 00 2A */	stwu r0, 0x2a(r3)
 /* 8051CE60  A0 01 00 90 */	lhz r0, 0x90(r1)
-/* 8051CE64  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CE64  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CE68  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CE6C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CE70  38 BF 0E 50 */	addi r5, r31, 0xe50
@@ -744,9 +744,9 @@ lbl_8051CC8C:
 /* 8051CE8C  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CE90  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CE94  80 01 00 84 */	lwz r0, 0x84(r1)
-/* 8051CE98  94 03 00 30 */	stwu r0, 0x30(r3)	/* effective address: 80528970 */
+/* 8051CE98  94 03 00 30 */	stwu r0, 0x30(r3)
 /* 8051CE9C  A0 01 00 88 */	lhz r0, 0x88(r1)
-/* 8051CEA0  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CEA0  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CEA4  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CEA8  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CEAC  38 BF 0E 5C */	addi r5, r31, 0xe5c
@@ -759,9 +759,9 @@ lbl_8051CC8C:
 /* 8051CEC8  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CECC  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CED0  80 01 00 7C */	lwz r0, 0x7c(r1)
-/* 8051CED4  94 03 00 36 */	stwu r0, 0x36(r3)	/* effective address: 80528976 */
+/* 8051CED4  94 03 00 36 */	stwu r0, 0x36(r3)
 /* 8051CED8  A0 01 00 80 */	lhz r0, 0x80(r1)
-/* 8051CEDC  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CEDC  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CEE0  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CEE4  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CEE8  38 BF 0E 68 */	addi r5, r31, 0xe68
@@ -774,9 +774,9 @@ lbl_8051CC8C:
 /* 8051CF04  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CF08  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CF0C  80 01 00 74 */	lwz r0, 0x74(r1)
-/* 8051CF10  94 03 00 3C */	stwu r0, 0x3c(r3)	/* effective address: 8052897C */
+/* 8051CF10  94 03 00 3C */	stwu r0, 0x3c(r3)
 /* 8051CF14  A0 01 00 78 */	lhz r0, 0x78(r1)
-/* 8051CF18  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CF18  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CF1C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CF20  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CF24  38 BF 0E 74 */	addi r5, r31, 0xe74
@@ -789,9 +789,9 @@ lbl_8051CC8C:
 /* 8051CF40  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CF44  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CF48  80 01 00 6C */	lwz r0, 0x6c(r1)
-/* 8051CF4C  94 03 00 42 */	stwu r0, 0x42(r3)	/* effective address: 80528982 */
+/* 8051CF4C  94 03 00 42 */	stwu r0, 0x42(r3)
 /* 8051CF50  A0 01 00 70 */	lhz r0, 0x70(r1)
-/* 8051CF54  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CF54  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CF58  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CF5C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CF60  38 BF 0E 80 */	addi r5, r31, 0xe80
@@ -804,9 +804,9 @@ lbl_8051CC8C:
 /* 8051CF7C  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CF80  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CF84  80 01 00 64 */	lwz r0, 0x64(r1)
-/* 8051CF88  94 03 00 48 */	stwu r0, 0x48(r3)	/* effective address: 80528988 */
+/* 8051CF88  94 03 00 48 */	stwu r0, 0x48(r3)
 /* 8051CF8C  A0 01 00 68 */	lhz r0, 0x68(r1)
-/* 8051CF90  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CF90  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CF94  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CF98  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CF9C  38 BF 0E 8C */	addi r5, r31, 0xe8c
@@ -819,9 +819,9 @@ lbl_8051CC8C:
 /* 8051CFB8  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CFBC  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CFC0  80 01 00 5C */	lwz r0, 0x5c(r1)
-/* 8051CFC4  94 03 00 4E */	stwu r0, 0x4e(r3)	/* effective address: 8052898E */
+/* 8051CFC4  94 03 00 4E */	stwu r0, 0x4e(r3)
 /* 8051CFC8  A0 01 00 60 */	lhz r0, 0x60(r1)
-/* 8051CFCC  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051CFCC  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051CFD0  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051CFD4  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051CFD8  38 BF 0E 98 */	addi r5, r31, 0xe98
@@ -834,9 +834,9 @@ lbl_8051CC8C:
 /* 8051CFF4  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051CFF8  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051CFFC  80 01 00 54 */	lwz r0, 0x54(r1)
-/* 8051D000  94 03 00 54 */	stwu r0, 0x54(r3)	/* effective address: 80528994 */
+/* 8051D000  94 03 00 54 */	stwu r0, 0x54(r3)
 /* 8051D004  A0 01 00 58 */	lhz r0, 0x58(r1)
-/* 8051D008  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051D008  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D00C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D010  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D014  38 BF 0E A4 */	addi r5, r31, 0xea4
@@ -849,9 +849,9 @@ lbl_8051CC8C:
 /* 8051D030  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051D034  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051D038  80 01 00 4C */	lwz r0, 0x4c(r1)
-/* 8051D03C  94 03 00 5A */	stwu r0, 0x5a(r3)	/* effective address: 8052899A */
+/* 8051D03C  94 03 00 5A */	stwu r0, 0x5a(r3)
 /* 8051D040  A0 01 00 50 */	lhz r0, 0x50(r1)
-/* 8051D044  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051D044  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D048  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D04C  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D050  38 BF 0E B0 */	addi r5, r31, 0xeb0
@@ -864,9 +864,9 @@ lbl_8051CC8C:
 /* 8051D06C  3C 60 80 53 */	lis r3, struct_80528940+0x0@ha
 /* 8051D070  38 63 89 40 */	addi r3, r3, struct_80528940+0x0@l
 /* 8051D074  80 01 00 44 */	lwz r0, 0x44(r1)
-/* 8051D078  94 03 00 60 */	stwu r0, 0x60(r3)	/* effective address: 805289A0 */
+/* 8051D078  94 03 00 60 */	stwu r0, 0x60(r3)
 /* 8051D07C  A0 01 00 48 */	lhz r0, 0x48(r1)
-/* 8051D080  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80528944 */
+/* 8051D080  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D084  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D088  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D08C  38 BF 0E BC */	addi r5, r31, 0xebc
@@ -888,7 +888,7 @@ lbl_8051D0A0:
 /* 8051D0C8  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 8051D0CC  94 03 89 A8 */	stwu r0, data_805289A8@l(r3)
 /* 8051D0D0  A0 01 00 40 */	lhz r0, 0x40(r1)
-/* 8051D0D4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 80530004 */
+/* 8051D0D4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D0D8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D0DC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D0E0  38 BF 0E C8 */	addi r5, r31, 0xec8
@@ -901,9 +901,9 @@ lbl_8051D0A0:
 /* 8051D0FC  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D100  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D104  80 01 00 34 */	lwz r0, 0x34(r1)
-/* 8051D108  94 03 00 06 */	stwu r0, 6(r3)	/* effective address: 805289AE */
+/* 8051D108  94 03 00 06 */	stwu r0, 6(r3)
 /* 8051D10C  A0 01 00 38 */	lhz r0, 0x38(r1)
-/* 8051D110  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D110  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D114  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D118  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D11C  38 BF 0E D4 */	addi r5, r31, 0xed4
@@ -916,9 +916,9 @@ lbl_8051D0A0:
 /* 8051D138  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D13C  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D140  80 01 00 2C */	lwz r0, 0x2c(r1)
-/* 8051D144  94 03 00 0C */	stwu r0, 0xc(r3)	/* effective address: 805289B4 */
+/* 8051D144  94 03 00 0C */	stwu r0, 0xc(r3)
 /* 8051D148  A0 01 00 30 */	lhz r0, 0x30(r1)
-/* 8051D14C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D14C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D150  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D154  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D158  38 BF 0E E0 */	addi r5, r31, 0xee0
@@ -931,9 +931,9 @@ lbl_8051D0A0:
 /* 8051D174  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D178  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D17C  80 01 00 24 */	lwz r0, 0x24(r1)
-/* 8051D180  94 03 00 12 */	stwu r0, 0x12(r3)	/* effective address: 805289BA */
+/* 8051D180  94 03 00 12 */	stwu r0, 0x12(r3)
 /* 8051D184  A0 01 00 28 */	lhz r0, 0x28(r1)
-/* 8051D188  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D188  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D18C  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D190  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D194  38 BF 0E EC */	addi r5, r31, 0xeec
@@ -946,9 +946,9 @@ lbl_8051D0A0:
 /* 8051D1B0  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D1B4  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D1B8  80 01 00 1C */	lwz r0, 0x1c(r1)
-/* 8051D1BC  94 03 00 18 */	stwu r0, 0x18(r3)	/* effective address: 805289C0 */
+/* 8051D1BC  94 03 00 18 */	stwu r0, 0x18(r3)
 /* 8051D1C0  A0 01 00 20 */	lhz r0, 0x20(r1)
-/* 8051D1C4  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D1C4  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D1C8  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D1CC  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D1D0  38 BF 0E F8 */	addi r5, r31, 0xef8
@@ -961,9 +961,9 @@ lbl_8051D0A0:
 /* 8051D1EC  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D1F0  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D1F4  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8051D1F8  94 03 00 1E */	stwu r0, 0x1e(r3)	/* effective address: 805289C6 */
+/* 8051D1F8  94 03 00 1E */	stwu r0, 0x1e(r3)
 /* 8051D1FC  A0 01 00 18 */	lhz r0, 0x18(r1)
-/* 8051D200  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D200  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D204  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D208  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D20C  38 BF 0F 04 */	addi r5, r31, 0xf04
@@ -976,9 +976,9 @@ lbl_8051D0A0:
 /* 8051D228  3C 60 80 53 */	lis r3, data_805289A8@ha
 /* 8051D22C  38 63 89 A8 */	addi r3, r3, data_805289A8@l
 /* 8051D230  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 8051D234  94 03 00 24 */	stwu r0, 0x24(r3)	/* effective address: 805289CC */
+/* 8051D234  94 03 00 24 */	stwu r0, 0x24(r3)
 /* 8051D238  A0 01 00 10 */	lhz r0, 0x10(r1)
-/* 8051D23C  B0 03 00 04 */	sth r0, 4(r3)	/* effective address: 805289AC */
+/* 8051D23C  B0 03 00 04 */	sth r0, 4(r3)
 /* 8051D240  3C 80 80 52 */	lis r4, __dt__5csXyzFv@ha
 /* 8051D244  38 84 EB 4C */	addi r4, r4, __dt__5csXyzFv@l
 /* 8051D248  38 BF 0F 10 */	addi r5, r31, 0xf10
@@ -1026,8 +1026,8 @@ lbl_8051D2B8:
 /* 8051D2E4  4B C8 B8 54 */	b dKy_get_dayofweek__Fv
 /* 8051D2E8  2C 03 00 06 */	cmpwi r3, 6
 /* 8051D2EC  40 82 01 04 */	bne lbl_8051D3F0
-/* 8051D2F0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8051D2F4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8051D2F0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8051D2F4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8051D2F8  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8051D2FC  3C 80 80 52 */	lis r4, stringBase0@ha
 /* 8051D300  38 84 31 C0 */	addi r4, r4, stringBase0@l

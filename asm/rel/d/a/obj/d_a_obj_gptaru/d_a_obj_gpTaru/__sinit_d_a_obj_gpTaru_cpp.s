@@ -19,10 +19,10 @@ lbl_8057F4C4:
 /* 8057F508  38 00 00 06 */	li r0, 6
 /* 8057F50C  7C 09 03 A6 */	mtctr r0
 lbl_8057F510:
-/* 8057F510  80 64 00 04 */	lwz r3, 4(r4)	/* effective address: 8057F584 */
-/* 8057F514  84 04 00 08 */	lwzu r0, 8(r4)	/* effective address: 8057F588 */
-/* 8057F518  90 65 00 04 */	stw r3, 4(r5)	/* effective address: 8057F6A8 */
-/* 8057F51C  94 05 00 08 */	stwu r0, 8(r5)	/* effective address: 8057F6AC */
+/* 8057F510  80 64 00 04 */	lwz r3, 4(r4)
+/* 8057F514  84 04 00 08 */	lwzu r0, 8(r4)
+/* 8057F518  90 65 00 04 */	stw r3, 4(r5)
+/* 8057F51C  94 05 00 08 */	stwu r0, 8(r5)
 /* 8057F520  42 00 FF F0 */	bdnz lbl_8057F510
 /* 8057F524  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8057F528  7C 08 03 A6 */	mtlr r0

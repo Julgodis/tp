@@ -29,8 +29,8 @@ lbl_80ACA4F4:
 /* 80ACA508  4B 68 17 70 */	b talkProc__8daNpcT_cFPiiPP10fopAc_ac_ci
 /* 80ACA50C  2C 03 00 00 */	cmpwi r3, 0
 /* 80ACA510  41 82 00 1C */	beq lbl_80ACA52C
-/* 80ACA514  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80ACA518  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80ACA514  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80ACA518  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80ACA51C  38 63 4E C8 */	addi r3, r3, 0x4ec8
 /* 80ACA520  4B 57 7F 48 */	b reset__14dEvt_control_cFv
 /* 80ACA524  38 00 00 03 */	li r0, 3

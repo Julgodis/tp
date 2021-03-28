@@ -8,8 +8,8 @@ lbl_809F6BFC:
 /* 809F6C14  7C 9A 23 78 */	mr r26, r4
 /* 809F6C18  3C 60 80 A0 */	lis r3, m__19daNpc_GWolf_Param_c@ha
 /* 809F6C1C  3B E3 84 F4 */	addi r31, r3, m__19daNpc_GWolf_Param_c@l
-/* 809F6C20  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809F6C24  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 809F6C20  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809F6C24  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 809F6C28  3B 83 4F F8 */	addi r28, r3, 0x4ff8
 /* 809F6C2C  3B C0 00 00 */	li r30, 0
 /* 809F6C30  3B 60 FF FF */	li r27, -1

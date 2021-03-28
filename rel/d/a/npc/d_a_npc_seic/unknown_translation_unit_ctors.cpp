@@ -19,7 +19,6 @@ extern void* const data_80AC9208[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_seic_cpp(); // 1
 
 // 
 // Declarations:

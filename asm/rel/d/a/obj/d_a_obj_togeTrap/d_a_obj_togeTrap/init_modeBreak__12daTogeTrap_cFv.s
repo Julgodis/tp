@@ -4,21 +4,21 @@ lbl_80D18994:
 /* 80D1899C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80D189A0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80D189A4  7C 7F 1B 78 */	mr r31, r3
-/* 80D189A8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D189AC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80D189B0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
+/* 80D189A8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D189AC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80D189B0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
 /* 80D189B4  4B 44 6E 14 */	b getSpinnerRideSpeed__9daPy_py_cCFv
 /* 80D189B8  3C 60 80 D2 */	lis r3, l_HIO@ha
 /* 80D189BC  38 63 90 B4 */	addi r3, r3, l_HIO@l
-/* 80D189C0  C0 03 00 18 */	lfs f0, 0x18(r3)	/* effective address: 80D190CC */
+/* 80D189C0  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 80D189C4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80D189C8  4C 41 13 82 */	cror 2, 1, 2
 /* 80D189CC  40 82 00 20 */	bne lbl_80D189EC
 /* 80D189D0  80 9F 05 68 */	lwz r4, 0x568(r31)
 /* 80D189D4  28 04 00 00 */	cmplwi r4, 0
 /* 80D189D8  41 82 00 14 */	beq lbl_80D189EC
-/* 80D189DC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D189E0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80D189DC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D189E0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80D189E4  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 80D189E8  4B 35 B8 68 */	b Release__4cBgSFP9dBgW_Base
 lbl_80D189EC:
@@ -31,7 +31,7 @@ lbl_80D189EC:
 /* 80D18A04  90 01 00 08 */	stw r0, 8(r1)
 /* 80D18A08  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80D18A0C  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80D18A10  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80D18A10  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D18A14  38 81 00 08 */	addi r4, r1, 8
 /* 80D18A18  38 BF 04 D0 */	addi r5, r31, 0x4d0
 /* 80D18A1C  38 C0 00 00 */	li r6, 0

@@ -252,8 +252,8 @@ lbl_804787C0:
 /* 804787C0  38 7D 0C A4 */	addi r3, r29, 0xca4
 /* 804787C4  38 9D 04 D0 */	addi r4, r29, 0x4d0
 /* 804787C8  4B DF 6A 14 */	b SetC__8cM3dGCylFRC4cXyz
-/* 804787CC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 804787D0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 804787CC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 804787D0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 804787D4  38 63 23 3C */	addi r3, r3, 0x233c
 /* 804787D8  38 9D 0B 80 */	addi r4, r29, 0xb80
 /* 804787DC  4B DE C3 CC */	b Set__4cCcSFP8cCcD_Obj

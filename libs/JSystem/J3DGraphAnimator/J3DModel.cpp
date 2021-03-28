@@ -243,22 +243,22 @@ asm void J3DModel::initialize() {
 /* ############################################################################################## */
 /* 803CED20-803CED44 0024+00 s=1 e=3 z=0  None .data      __vt__8J3DModel                                              */
 SECTION_DATA void* __vt__8J3DModel[9] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)update__8J3DModelFv,
-	/* 3    */ (void*)entry__8J3DModelFv,
-	/* 4    */ (void*)calc__8J3DModelFv,
-	/* 5    */ (void*)calcMaterial__8J3DModelFv,
-	/* 6    */ (void*)calcDiffTexMtx__8J3DModelFv,
-	/* 7    */ (void*)viewCalc__8J3DModelFv,
-	/* 8    */ (void*)__dt__8J3DModelFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)update__8J3DModelFv,
+	(void*)entry__8J3DModelFv,
+	(void*)calc__8J3DModelFv,
+	(void*)calcMaterial__8J3DModelFv,
+	(void*)calcDiffTexMtx__8J3DModelFv,
+	(void*)viewCalc__8J3DModelFv,
+	(void*)__dt__8J3DModelFv,
 };
 
 /* 803CED44-803CED50 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DMtxBuffer                                         */
 SECTION_DATA static void* __vt__12J3DMtxBuffer[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DMtxBufferFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__12J3DMtxBufferFv,
 };
 
 /* 80327184-80327300 017C+00 s=0 e=3 z=0  None .text      entryModelData__8J3DModelFP12J3DModelDataUlUl                */

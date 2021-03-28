@@ -172,10 +172,10 @@ lbl_806BC030:
 /* 806BC05C  40 81 00 34 */	ble lbl_806BC090
 /* 806BC060  A8 1E 05 C6 */	lha r0, 0x5c6(r30)
 /* 806BC064  B0 1E 04 DE */	sth r0, 0x4de(r30)
-/* 806BC068  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 806BC06C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 806BC070  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 806BC074  C0 23 05 2C */	lfs f1, 0x52c(r3)	/* effective address: 804066EC */
+/* 806BC068  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 806BC06C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 806BC070  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 806BC074  C0 23 05 2C */	lfs f1, 0x52c(r3)
 /* 806BC078  38 7E 05 2C */	addi r3, r30, 0x52c
 /* 806BC07C  C0 1F 00 54 */	lfs f0, 0x54(r31)
 /* 806BC080  EC 20 00 72 */	fmuls f1, f0, f1

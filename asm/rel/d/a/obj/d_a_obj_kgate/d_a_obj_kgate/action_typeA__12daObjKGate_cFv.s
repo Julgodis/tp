@@ -9,9 +9,9 @@ lbl_805898A0:
 /* 805898BC  3B A3 AB 30 */	addi r29, r3, l_gateBmdIdx@l
 /* 805898C0  80 1A 00 B0 */	lwz r0, 0xb0(r26)
 /* 805898C4  54 1B 06 3E */	clrlwi r27, r0, 0x18
-/* 805898C8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805898CC  3B 83 61 C0 */	addi r28, r3, struct_804061C0+0x0@l
-/* 805898D0  83 3C 5D AC */	lwz r25, 0x5dac(r28)	/* effective address: 8040BF6C */
+/* 805898C8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805898CC  3B 83 61 C0 */	addi r28, r3, g_dComIfG_gameInfo@l
+/* 805898D0  83 3C 5D AC */	lwz r25, 0x5dac(r28)
 /* 805898D4  7F 83 E3 78 */	mr r3, r28
 /* 805898D8  7F 64 DB 78 */	mr r4, r27
 /* 805898DC  88 1A 04 BA */	lbz r0, 0x4ba(r26)
@@ -79,9 +79,9 @@ lbl_805899B8:
 /* 805899B8  38 00 01 F4 */	li r0, 0x1f4
 /* 805899BC  B0 1A 0B A2 */	sth r0, 0xba2(r26)
 lbl_805899C0:
-/* 805899C0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 805899C4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 805899C8  83 23 5D B8 */	lwz r25, 0x5db8(r3)	/* effective address: 8040BF78 */
+/* 805899C0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 805899C4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 805899C8  83 23 5D B8 */	lwz r25, 0x5db8(r3)
 /* 805899CC  28 19 00 00 */	cmplwi r25, 0
 /* 805899D0  41 82 00 9C */	beq lbl_80589A6C
 /* 805899D4  C0 3D 00 AC */	lfs f1, 0xac(r29)
@@ -363,10 +363,10 @@ lbl_80589D90:
 /* 80589DC0  41 82 00 80 */	beq lbl_80589E40
 lbl_80589DC4:
 /* 80589DC4  80 9C 5D AC */	lwz r4, 0x5dac(r28)
-/* 80589DC8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80589DCC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 80589DD0  80 63 5D B4 */	lwz r3, 0x5db4(r3)	/* effective address: 8040BF74 */
-/* 80589DD4  80 03 05 74 */	lwz r0, 0x574(r3)	/* effective address: 80406734 */
+/* 80589DC8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80589DCC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 80589DD0  80 63 5D B4 */	lwz r3, 0x5db4(r3)
+/* 80589DD4  80 03 05 74 */	lwz r0, 0x574(r3)
 /* 80589DD8  54 00 01 8D */	rlwinm. r0, r0, 0, 6, 6
 /* 80589DDC  41 82 00 3C */	beq lbl_80589E18
 /* 80589DE0  80 04 05 84 */	lwz r0, 0x584(r4)

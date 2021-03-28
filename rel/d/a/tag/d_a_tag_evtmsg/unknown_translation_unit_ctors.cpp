@@ -19,7 +19,6 @@ extern void* const data_8048D7DC[2];
 // 
 
 
-extern "C" void __sinit_d_a_tag_evtmsg_cpp(); // 1
 
 // 
 // Declarations:

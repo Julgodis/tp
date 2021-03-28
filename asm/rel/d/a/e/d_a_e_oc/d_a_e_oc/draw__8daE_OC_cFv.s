@@ -111,8 +111,8 @@ lbl_8072C858:
 /* 8072C8D8  4B A7 84 C8 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
 /* 8072C8DC  80 7F 05 C0 */	lwz r3, 0x5c0(r31)
 /* 8072C8E0  4B 8E 13 E4 */	b mDoExt_modelUpdateDL__FP8J3DModel
-/* 8072C8E4  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8072C8E8  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8072C8E4  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8072C8E8  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8072C8EC  38 63 61 C0 */	addi r3, r3, 0x61c0
 /* 8072C8F0  80 9F 06 B8 */	lwz r4, 0x6b8(r31)
 /* 8072C8F4  80 BF 05 C0 */	lwz r5, 0x5c0(r31)

@@ -22,7 +22,7 @@ lbl_8068E534:
 /* 8068E584  D0 01 00 18 */	stfs f0, 0x18(r1)
 /* 8068E588  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 8068E58C  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 8068E590  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 8068E590  80 63 00 00 */	lwz r3, 0(r3)
 /* 8068E594  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 8068E598  4B 97 DE 44 */	b mDoMtx_YrotS__FPA4_fs
 /* 8068E59C  3C 60 80 69 */	lis r3, lit_3789@ha
@@ -42,8 +42,8 @@ lbl_8068E534:
 /* 8068E5D4  38 A1 00 08 */	addi r5, r1, 8
 /* 8068E5D8  7F E6 FB 78 */	mr r6, r31
 /* 8068E5DC  4B 9E 97 88 */	b Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c
-/* 8068E5E0  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8068E5E4  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8068E5E0  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8068E5E4  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8068E5E8  38 63 0F 38 */	addi r3, r3, 0xf38
 /* 8068E5EC  38 81 00 2C */	addi r4, r1, 0x2c
 /* 8068E5F0  4B 9E 5D C4 */	b LineCross__4cBgSFP11cBgS_LinChk

@@ -64,24 +64,25 @@ struct Vec {
 // 
 
 static void texScrollCheck(f32&); // 2
-static void daVrbox2_Draw(vrbox2_class*); // 2
+void daVrbox2_Draw(vrbox2_class*); // 2
 static void daVrbox2_color_set(vrbox2_class*); // 2
-static void daVrbox2_Execute(vrbox2_class*); // 2
-static bool daVrbox2_IsDelete(vrbox2_class*); // 2
-static bool daVrbox2_Delete(vrbox2_class*); // 2
+void daVrbox2_Execute(vrbox2_class*); // 2
+bool daVrbox2_IsDelete(vrbox2_class*); // 2
+bool daVrbox2_Delete(vrbox2_class*); // 2
 static void daVrbox2_solidHeapCB(fopAc_ac_c*); // 2
-static void daVrbox2_Create(fopAc_ac_c*); // 2
+void daVrbox2_Create(fopAc_ac_c*); // 2
 
 extern "C" static void texScrollCheck__FRf(); // 1
-extern "C" static void daVrbox2_Draw__FP12vrbox2_class(); // 1
+extern "C" void daVrbox2_Draw__FP12vrbox2_class(); // 1
 extern "C" static void daVrbox2_color_set__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_Execute__FP12vrbox2_class(); // 1
-extern "C" static bool daVrbox2_IsDelete__FP12vrbox2_class(); // 1
-extern "C" static bool daVrbox2_Delete__FP12vrbox2_class(); // 1
+extern "C" void daVrbox2_Execute__FP12vrbox2_class(); // 1
+extern "C" bool daVrbox2_IsDelete__FP12vrbox2_class(); // 1
+extern "C" bool daVrbox2_Delete__FP12vrbox2_class(); // 1
 extern "C" static void daVrbox2_solidHeapCB__FP10fopAc_ac_c(); // 1
-extern "C" static void daVrbox2_Create__FP10fopAc_ac_c(); // 1
+extern "C" void daVrbox2_Create__FP10fopAc_ac_c(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" extern char const* const stringBase0;
+extern "C" extern void* l_daVrbox2_Method[8];
 extern "C" extern void* g_profile_VRBOX2[12];
 
 // 
@@ -140,27 +141,10 @@ extern "C" void _savegpr_25(); // 1
 extern "C" void _restgpr_17(); // 1
 extern "C" void _restgpr_25(); // 1
 extern "C" void strcmp(); // 1
-extern "C" extern void* g_fopAc_Method[8];
-extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" extern u8 now__14mDoMtx_stack_c[12];
-SECTION_BSS extern u8 struct_804061C0[4];
-SECTION_BSS extern u8 struct_804061C4[4];
-SECTION_BSS extern u8 struct_804061C8[4];
-extern "C" extern u8 struct_8040AFE0[88];
-SECTION_BSS extern u8 data_8040BF34[4];
-SECTION_BSS extern u8 data_8040C124[4];
-SECTION_BSS extern u8 data_8040C128[4];
-SECTION_BSS extern u8 data_8040C140[4];
-SECTION_BSS extern u8 data_8040C144[4];
-extern "C" extern u8 data_8040C370[81040];
-SECTION_BSS extern u8 g_env_light[4];
-SECTION_BSS extern u8 data_8042D8C8[4];
-SECTION_BSS extern u8 data_8042D8CC[4];
-SECTION_BSS extern f32 data_8042DADC;
-SECTION_BSS extern u8 data_8042DC98[4];
-SECTION_BSS extern u8 j3dSys[4];
-SECTION_BSS extern u8 data_80434B10[4];
-SECTION_BSS extern u8 data_80434B14[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 struct_80450D64[4];
 
 // 
@@ -264,11 +248,11 @@ SECTION_DEAD char const* const stringBase_80499B06 = "vrbox_kasumiM.bmd";
 /* 80499B78-80499B7C 0002+02 s=1 e=0 z=0  None .bss       mangZ$3688                                                   */
 static u8 data_80499B78[2 + 2 /* padding */];
 
-/* 80498ACC-804990DC 0610+00 s=1 e=0 z=0  None .text      daVrbox2_Draw__FP12vrbox2_class                              */
+/* 80498ACC-804990DC 0610+00 s=0 e=0 z=0  None .text      daVrbox2_Draw__FP12vrbox2_class                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daVrbox2_Draw(vrbox2_class* param_0) {
+asm void daVrbox2_Draw(vrbox2_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Draw__FP12vrbox2_class.s"
 }
@@ -286,25 +270,25 @@ asm static void daVrbox2_color_set(vrbox2_class* param_0) {
 #pragma pop
 
 
-/* 804997E8-8049982C 0044+00 s=1 e=0 z=0  None .text      daVrbox2_Execute__FP12vrbox2_class                           */
+/* 804997E8-8049982C 0044+00 s=0 e=0 z=0  None .text      daVrbox2_Execute__FP12vrbox2_class                           */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daVrbox2_Execute(vrbox2_class* param_0) {
+asm void daVrbox2_Execute(vrbox2_class* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Execute__FP12vrbox2_class.s"
 }
 #pragma pop
 
 
-/* 8049982C-80499834 0008+00 s=1 e=0 z=0  None .text      daVrbox2_IsDelete__FP12vrbox2_class                          */
-static bool daVrbox2_IsDelete(vrbox2_class* param_0) {
+/* 8049982C-80499834 0008+00 s=0 e=0 z=0  None .text      daVrbox2_IsDelete__FP12vrbox2_class                          */
+bool daVrbox2_IsDelete(vrbox2_class* param_0) {
 	return true;
 }
 
 
-/* 80499834-8049983C 0008+00 s=1 e=0 z=0  None .text      daVrbox2_Delete__FP12vrbox2_class                            */
-static bool daVrbox2_Delete(vrbox2_class* param_0) {
+/* 80499834-8049983C 0008+00 s=0 e=0 z=0  None .text      daVrbox2_Delete__FP12vrbox2_class                            */
+bool daVrbox2_Delete(vrbox2_class* param_0) {
 	return true;
 }
 
@@ -321,53 +305,53 @@ asm static void daVrbox2_solidHeapCB(fopAc_ac_c* param_0) {
 
 
 /* ############################################################################################## */
-/* 80499B18-80499B38 0020+00 s=1 e=0 z=0  None .data      l_daVrbox2_Method                                            */
-SECTION_DATA static void* l_daVrbox2_Method[8] = {
-	/* 0    */ (void*)daVrbox2_Create__FP10fopAc_ac_c,
-	/* 1    */ (void*)daVrbox2_Delete__FP12vrbox2_class,
-	/* 2    */ (void*)daVrbox2_Execute__FP12vrbox2_class,
-	/* 3    */ (void*)daVrbox2_IsDelete__FP12vrbox2_class,
-	/* 4    */ (void*)daVrbox2_Draw__FP12vrbox2_class,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)NULL,
+/* 80499B18-80499B38 0020+00 s=0 e=0 z=0  None .data      l_daVrbox2_Method                                            */
+SECTION_DATA void* l_daVrbox2_Method[8] = {
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80499B38-80499B68 0030+00 s=0 e=0 z=1  None .data      g_profile_VRBOX2                                             */
+/* 80499B38-80499B68 0030+00 s=0 e=0 z=0  None .data      g_profile_VRBOX2                                             */
 SECTION_DATA void* g_profile_VRBOX2[12] = {
-	/* 0    */ (void*)0xFFFFFFFD,
-	/* 1    */ (void*)0x0007FFFD,
-	/* 2    */ (void*)0x02DB0000,
-	/* 3    */ (void*)&g_fpcLf_Method,
-	/* 4    */ (void*)0x000005A0,
-	/* 5    */ (void*)NULL,
-	/* 6    */ (void*)NULL,
-	/* 7    */ (void*)&g_fopAc_Method,
-	/* 8    */ (void*)0x00040000,
-	/* 9    */ (void*)&l_daVrbox2_Method,
-	/* 10   */ (void*)0x00044000,
-	/* 11   */ (void*)NULL,
+	(void*)0xFFFFFFFD,
+	(void*)0x0007FFFD,
+	(void*)0x02DB0000,
+	(void*)NULL,
+	(void*)0x000005A0,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)0x00040000,
+	(void*)NULL,
+	(void*)0x00044000,
+	(void*)NULL,
 };
 
 /* 80499B68-80499B74 000C+00 s=2 e=0 z=0  None .data      __vt__12J3DFrameCtrl                                         */
 SECTION_DATA static void* __vt__12J3DFrameCtrl[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__12J3DFrameCtrlFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)NULL,
 };
 
-/* 80499978-80499A1C 00A4+00 s=1 e=0 z=0  None .text      daVrbox2_Create__FP10fopAc_ac_c                              */
+/* 80499978-80499A1C 00A4+00 s=0 e=0 z=0  None .text      daVrbox2_Create__FP10fopAc_ac_c                              */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off
-asm static void daVrbox2_Create(fopAc_ac_c* param_0) {
+asm void daVrbox2_Create(fopAc_ac_c* param_0) {
 	nofralloc
 #include "asm/rel/d/a/d_a_vrbox2/d_a_vrbox2/daVrbox2_Create__FP10fopAc_ac_c.s"
 }
 #pragma pop
 
 
-/* 80499A1C-80499A64 0048+00 s=1 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
+/* 80499A1C-80499A64 0048+00 s=0 e=0 z=0  None .text      __dt__12J3DFrameCtrlFv                                       */
 #pragma push
 #pragma optimization_level 0
 #pragma optimizewithasm off

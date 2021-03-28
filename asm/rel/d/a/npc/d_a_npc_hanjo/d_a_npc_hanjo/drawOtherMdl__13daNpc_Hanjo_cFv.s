@@ -98,12 +98,12 @@ lbl_809FB428:
 /* 809FB428  7F E3 FB 78 */	mr r3, r31
 /* 809FB42C  3C 80 80 A0 */	lis r4, l_motionAnmData@ha
 /* 809FB430  38 A4 0B 34 */	addi r5, r4, l_motionAnmData@l
-/* 809FB434  80 05 01 90 */	lwz r0, 0x190(r5)	/* effective address: 80A00CC4 */
+/* 809FB434  80 05 01 90 */	lwz r0, 0x190(r5)
 /* 809FB438  54 00 10 3A */	slwi r0, r0, 2
 /* 809FB43C  3C 80 80 A0 */	lis r4, l_resNameList@ha
 /* 809FB440  38 84 09 D8 */	addi r4, r4, l_resNameList@l
 /* 809FB444  7C 84 00 2E */	lwzx r4, r4, r0
-/* 809FB448  80 A5 01 88 */	lwz r5, 0x188(r5)	/* effective address: 80A00CBC */
+/* 809FB448  80 A5 01 88 */	lwz r5, 0x188(r5)
 /* 809FB44C  4B 74 CC 48 */	b getTrnsfrmKeyAnmP__8daNpcT_cFPCci
 /* 809FB450  80 9F 05 78 */	lwz r4, 0x578(r31)
 /* 809FB454  80 04 00 08 */	lwz r0, 8(r4)

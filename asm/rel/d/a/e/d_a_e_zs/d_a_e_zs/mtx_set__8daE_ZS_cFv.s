@@ -22,7 +22,7 @@ lbl_80834478:
 /* 808344C8  4B 7D 8A 7C */	b ZXYrotM__14mDoMtx_stack_cFRC5csXyz
 /* 808344CC  3C 60 80 83 */	lis r3, l_HIO@ha
 /* 808344D0  38 63 54 B0 */	addi r3, r3, l_HIO@l
-/* 808344D4  C0 23 00 08 */	lfs f1, 8(r3)	/* effective address: 808354B8 */
+/* 808344D4  C0 23 00 08 */	lfs f1, 8(r3)
 /* 808344D8  FC 40 08 90 */	fmr f2, f1
 /* 808344DC  FC 60 08 90 */	fmr f3, f1
 /* 808344E0  4B 7D 89 58 */	b scaleM__14mDoMtx_stack_cFfff

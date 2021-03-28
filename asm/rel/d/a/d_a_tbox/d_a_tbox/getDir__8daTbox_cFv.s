@@ -11,8 +11,8 @@ lbl_80492BC8:
 /* 80492BEC  40 82 00 2C */	bne lbl_80492C18
 /* 80492BF0  80 1B 00 B0 */	lwz r0, 0xb0(r27)
 /* 80492BF4  54 04 A6 3E */	rlwinm r4, r0, 0x14, 0x18, 0x1f
-/* 80492BF8  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80492BFC  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 80492BF8  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80492BFC  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 80492C00  88 1B 04 E2 */	lbz r0, 0x4e2(r27)
 /* 80492C04  7C 05 07 74 */	extsb r5, r0
 /* 80492C08  4B BA 27 58 */	b isSwitch__10dSv_info_cCFii
@@ -23,8 +23,8 @@ lbl_80492C18:
 /* 80492C18  3B C0 00 01 */	li r30, 1
 /* 80492C1C  3B A0 00 00 */	li r29, 0
 /* 80492C20  3B 80 00 00 */	li r28, 0
-/* 80492C24  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80492C28  3B E3 61 C0 */	addi r31, r3, struct_804061C0+0x0@l
+/* 80492C24  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80492C28  3B E3 61 C0 */	addi r31, r3, g_dComIfG_gameInfo@l
 lbl_80492C2C:
 /* 80492C2C  7F E3 FB 78 */	mr r3, r31
 /* 80492C30  80 1B 00 B0 */	lwz r0, 0xb0(r27)

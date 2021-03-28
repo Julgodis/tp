@@ -39,11 +39,11 @@ lbl_80834180:
 /* 80834190  C0 46 00 50 */	lfs f2, 0x50(r6)
 /* 80834194  4B FF F0 51 */	bl setBck__8daE_ZS_cFiUcff
 lbl_80834198:
-/* 80834198  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8083419C  3B C3 61 C0 */	addi r30, r3, struct_804061C0+0x0@l
-/* 808341A0  80 7E 5D AC */	lwz r3, 0x5dac(r30)	/* effective address: 8040BF6C */
+/* 80834198  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8083419C  3B C3 61 C0 */	addi r30, r3, g_dComIfG_gameInfo@l
+/* 808341A0  80 7E 5D AC */	lwz r3, 0x5dac(r30)
 /* 808341A4  7F E4 FB 78 */	mr r4, r31
-/* 808341A8  81 83 06 28 */	lwz r12, 0x628(r3)	/* effective address: 80400628 */
+/* 808341A8  81 83 06 28 */	lwz r12, 0x628(r3)
 /* 808341AC  81 8C 00 EC */	lwz r12, 0xec(r12)
 /* 808341B0  7D 89 03 A6 */	mtctr r12
 /* 808341B4  4E 80 04 21 */	bctrl 

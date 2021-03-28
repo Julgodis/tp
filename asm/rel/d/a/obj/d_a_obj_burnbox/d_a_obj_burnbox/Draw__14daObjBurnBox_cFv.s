@@ -17,14 +17,14 @@ lbl_8046EABC:
 /* 8046EAF8  80 84 00 04 */	lwz r4, 4(r4)
 /* 8046EAFC  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 8046EB00  4B D3 62 A0 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 8046EB04  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8046EB08  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 8046EB0C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 8046EB04  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8046EB08  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 8046EB0C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 8046EB10  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 8046EB14  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 8046EB18  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 8046EB1C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 8046EB20  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 8046EB18  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 8046EB1C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 8046EB20  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8046EB24  80 7E 05 A8 */	lwz r3, 0x5a8(r30)
 /* 8046EB28  83 A3 00 04 */	lwz r29, 4(r3)
 /* 8046EB2C  3B 80 00 00 */	li r28, 0
@@ -75,11 +75,11 @@ lbl_8046EBCC:
 /* 8046EBD0  A0 1D 00 5C */	lhz r0, 0x5c(r29)
 /* 8046EBD4  7C 03 00 40 */	cmplw r3, r0
 /* 8046EBD8  41 80 FF C0 */	blt lbl_8046EB98
-/* 8046EBDC  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8046EBE0  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8046EBE4  80 03 5F 80 */	lwz r0, 0x5f80(r3)	/* effective address: 8040C140 */
+/* 8046EBDC  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8046EBE0  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8046EBE4  80 03 5F 80 */	lwz r0, 0x5f80(r3)
 /* 8046EBE8  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 8046EBEC  80 03 5F 84 */	lwz r0, 0x5f84(r3)	/* effective address: 8040C144 */
+/* 8046EBEC  80 03 5F 84 */	lwz r0, 0x5f84(r3)
 /* 8046EBF0  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 8046EBF4  38 60 00 01 */	li r3, 1
 /* 8046EBF8  39 61 00 20 */	addi r11, r1, 0x20

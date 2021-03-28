@@ -7,11 +7,11 @@ lbl_80875EA0:
 /* 80875EB4  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80875EB8  3C 80 80 88 */	lis r4, daMP_ActivePlayer@ha
 /* 80875EBC  3B E4 9B D0 */	addi r31, r4, daMP_ActivePlayer@l
-/* 80875EC0  83 DF 00 BC */	lwz r30, 0xbc(r31)	/* effective address: 80879C8C */
+/* 80875EC0  83 DF 00 BC */	lwz r30, 0xbc(r31)
 /* 80875EC4  90 61 00 08 */	stw r3, 8(r1)
 /* 80875EC8  3B A0 00 00 */	li r29, 0
 lbl_80875ECC:
-/* 80875ECC  88 1F 00 A7 */	lbz r0, 0xa7(r31)	/* effective address: 80879C77 */
+/* 80875ECC  88 1F 00 A7 */	lbz r0, 0xa7(r31)
 /* 80875ED0  28 00 00 00 */	cmplwi r0, 0
 /* 80875ED4  41 82 00 84 */	beq lbl_80875F58
 /* 80875ED8  48 00 00 74 */	b lbl_80875F4C

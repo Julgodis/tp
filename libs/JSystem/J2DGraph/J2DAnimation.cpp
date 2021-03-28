@@ -25,10 +25,10 @@ struct J2DAnmTransformKey {
 	/* 8030CD7C */ void getTransform(u16, J3DTransformInfo*) const;
 };
 
-struct _GXColor {
+struct J2DScreen {
 };
 
-struct J2DScreen {
+struct _GXColor {
 };
 
 struct J2DAnmColor {
@@ -107,13 +107,13 @@ struct JUTResReference {
 	/* 802DE120 */ void getResource(void const*, u32, JKRArchive*);
 };
 
+struct JUTTransparency {
+};
+
 struct _GXTlut {
 };
 
 struct _GXTlutFmt {
-};
-
-struct JUTTransparency {
 };
 
 struct JUTPalette {
@@ -490,18 +490,18 @@ asm J2DAnmTexPattern::J2DAnmTexPatternTIMGPointer::~J2DAnmTexPatternTIMGPointer(
 /* ############################################################################################## */
 /* 803CD728-803CD738 0010+00 s=0 e=2 z=0  None .data      __vt__15J2DAnmTevRegKey                                      */
 SECTION_DATA void* __vt__15J2DAnmTevRegKey[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15J2DAnmTevRegKeyFv,
-	/* 3    */ (void*)searchUpdateMaterialID__15J2DAnmTevRegKeyFP9J2DScreen,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15J2DAnmTevRegKeyFv,
+	(void*)searchUpdateMaterialID__15J2DAnmTevRegKeyFP9J2DScreen,
 };
 
 /* 803CD738-803CD748 0010+00 s=1 e=1 z=0  None .data      __vt__16J2DAnmTexPattern                                     */
 SECTION_DATA void* __vt__16J2DAnmTexPattern[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__16J2DAnmTexPatternFv,
-	/* 3    */ (void*)searchUpdateMaterialID__16J2DAnmTexPatternFP9J2DScreen,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__16J2DAnmTexPatternFv,
+	(void*)searchUpdateMaterialID__16J2DAnmTexPatternFP9J2DScreen,
 };
 
 /* 8030CB90-8030CC20 0090+00 s=1 e=0 z=0  None .text      __dt__16J2DAnmTexPatternFv                                   */
@@ -518,19 +518,19 @@ asm J2DAnmTexPattern::~J2DAnmTexPattern() {
 /* ############################################################################################## */
 /* 803CD748-803CD758 0010+00 s=0 e=2 z=0  None .data      __vt__19J2DAnmTextureSRTKey                                  */
 SECTION_DATA void* __vt__19J2DAnmTextureSRTKey[4] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J2DAnmTextureSRTKeyFv,
-	/* 3    */ (void*)searchUpdateMaterialID__19J2DAnmTextureSRTKeyFP9J2DScreen,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19J2DAnmTextureSRTKeyFv,
+	(void*)searchUpdateMaterialID__19J2DAnmTextureSRTKeyFP9J2DScreen,
 };
 
 /* 803CD758-803CD76C 0014+00 s=1 e=1 z=0  None .data      __vt__17J2DAnmVtxColorKey                                    */
 SECTION_DATA void* __vt__17J2DAnmVtxColorKey[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__17J2DAnmVtxColorKeyFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
-	/* 4    */ (void*)getColor__17J2DAnmVtxColorKeyCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__17J2DAnmVtxColorKeyFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)getColor__17J2DAnmVtxColorKeyCFUcUsP8_GXColor,
 };
 
 /* 8030CC20-8030CC8C 006C+00 s=1 e=0 z=0  None .text      __dt__17J2DAnmVtxColorKeyFv                                  */
@@ -547,11 +547,11 @@ asm J2DAnmVtxColorKey::~J2DAnmVtxColorKey() {
 /* ############################################################################################## */
 /* 803CD76C-803CD780 0014+00 s=1 e=1 z=0  None .data      __vt__18J2DAnmVtxColorFull                                   */
 SECTION_DATA void* __vt__18J2DAnmVtxColorFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18J2DAnmVtxColorFullFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
-	/* 4    */ (void*)getColor__18J2DAnmVtxColorFullCFUcUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18J2DAnmVtxColorFullFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)getColor__18J2DAnmVtxColorFullCFUcUsP8_GXColor,
 };
 
 /* 8030CC8C-8030CCF8 006C+00 s=1 e=0 z=0  None .text      __dt__18J2DAnmVtxColorFullFv                                 */
@@ -568,29 +568,29 @@ asm J2DAnmVtxColorFull::~J2DAnmVtxColorFull() {
 /* ############################################################################################## */
 /* 803CD780-803CD794 0014+00 s=0 e=2 z=0  None .data      __vt__14J2DAnmColorKey                                       */
 SECTION_DATA void* __vt__14J2DAnmColorKey[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__14J2DAnmColorKeyFv,
-	/* 3    */ (void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
-	/* 4    */ (void*)getColor__14J2DAnmColorKeyCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__14J2DAnmColorKeyFv,
+	(void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
+	(void*)getColor__14J2DAnmColorKeyCFUsP8_GXColor,
 };
 
 /* 803CD794-803CD7A8 0014+00 s=1 e=1 z=0  None .data      __vt__15J2DAnmColorFull                                      */
 SECTION_DATA void* __vt__15J2DAnmColorFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__15J2DAnmColorFullFv,
-	/* 3    */ (void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
-	/* 4    */ (void*)getColor__15J2DAnmColorFullCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__15J2DAnmColorFullFv,
+	(void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
+	(void*)getColor__15J2DAnmColorFullCFUsP8_GXColor,
 };
 
 /* 803CD7A8-803CD7BC 0014+00 s=1 e=3 z=0  None .data      __vt__11J2DAnmColor                                          */
 SECTION_DATA void* __vt__11J2DAnmColor[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__11J2DAnmColorFv,
-	/* 3    */ (void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
-	/* 4    */ (void*)getColor__11J2DAnmColorCFUsP8_GXColor,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__11J2DAnmColorFv,
+	(void*)searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen,
+	(void*)getColor__11J2DAnmColorCFUsP8_GXColor,
 };
 
 /* 8030CCF8-8030CD7C 0084+00 s=1 e=0 z=0  None .text      __dt__15J2DAnmColorFullFv                                    */
@@ -618,21 +618,21 @@ asm void J2DAnmTransformKey::getTransform(u16 param_0, J3DTransformInfo* param_1
 /* ############################################################################################## */
 /* 803CD7BC-803CD7D4 0018+00 s=0 e=2 z=0  None .data      __vt__18J2DAnmTransformKey                                   */
 SECTION_DATA void* __vt__18J2DAnmTransformKey[6] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__18J2DAnmTransformKeyFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
-	/* 4    */ (void*)getTransform__18J2DAnmTransformKeyCFUsP16J3DTransformInfo,
-	/* 5    */ (void*)calcTransform__18J2DAnmTransformKeyCFfUsP16J3DTransformInfo,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__18J2DAnmTransformKeyFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)getTransform__18J2DAnmTransformKeyCFUsP16J3DTransformInfo,
+	(void*)calcTransform__18J2DAnmTransformKeyCFfUsP16J3DTransformInfo,
 };
 
 /* 803CD7D4-803CD7E8 0014+00 s=1 e=1 z=0  None .data      __vt__19J2DAnmTransformFull                                  */
 SECTION_DATA void* __vt__19J2DAnmTransformFull[5] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__19J2DAnmTransformFullFv,
-	/* 3    */ (void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
-	/* 4    */ (void*)getTransform__19J2DAnmTransformFullCFUsP16J3DTransformInfo,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__19J2DAnmTransformFullFv,
+	(void*)searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen,
+	(void*)getTransform__19J2DAnmTransformFullCFUsP16J3DTransformInfo,
 };
 
 /* 8030CDAC-8030CE18 006C+00 s=1 e=0 z=0  None .text      __dt__19J2DAnmTransformFullFv                                */

@@ -5,8 +5,8 @@ lbl_80599934:
 /* 80599940  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80599944  7C 7F 1B 78 */	mr r31, r3
 /* 80599948  38 7F 05 78 */	addi r3, r31, 0x578
-/* 8059994C  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80599950  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 8059994C  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80599950  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80599954  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 80599958  4B AD D1 54 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 8059995C  80 1F 06 54 */	lwz r0, 0x654(r31)

@@ -314,8 +314,8 @@ lbl_80470520:
 /* 80470588  D0 1E 04 C0 */	stfs f0, 0x4c0(r30)
 lbl_8047058C:
 /* 8047058C  38 7E 05 74 */	addi r3, r30, 0x574
-/* 80470590  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80470594  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 80470590  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80470594  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 80470598  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 8047059C  4B C0 65 10 */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 804705A0  7F C3 F3 78 */	mr r3, r30

@@ -11,20 +11,20 @@
 // Types:
 // 
 
-struct J2DTextBoxVBinding {
-};
-
-struct J2DTextBoxHBinding {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
 };
 
+struct J2DTextBoxHBinding {
+};
+
 struct JUTFont {
 	/* 802DEDC4 */ void setGradColor(JUtility::TColor, JUtility::TColor);
+};
+
+struct J2DTextBoxVBinding {
 };
 
 struct J2DPrint {
@@ -133,37 +133,37 @@ extern "C" asm static void J2DPrint_print_alpha_va() {
 /* ############################################################################################## */
 /* 803CCF40-803CCFA0 0060+00 s=1 e=0 z=0  None .data      @938                                                         */
 SECTION_DATA static void* lit_938[24] = {
-	/* 0    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x28),
-	/* 1    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x44),
-	/* 2    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x9C),
-	/* 3    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 4    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 5    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0xC0),
-	/* 6    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 7    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 8    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 9    */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 10   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 11   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 12   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 13   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 14   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 15   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 16   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 17   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 18   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 19   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
-	/* 20   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0xD4),
-	/* 21   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0xE8),
-	/* 22   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0xFC),
-	/* 23   */ (void*)(((char*)doCtrlCode__8J2DPrintFi)+0x110),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x28),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x44),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x9C),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0xC0),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x120),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0xD4),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0xE8),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0xFC),
+	(void*)(((char*)doCtrlCode__8J2DPrintFi)+0x110),
 };
 
 /* 803CCFA0-803CCFB0 000C+04 s=2 e=0 z=0  None .data      __vt__8J2DPrint                                              */
 SECTION_DATA static void* __vt__8J2DPrint[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8J2DPrintFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8J2DPrintFv,
 	/* padding */
 	NULL,
 };

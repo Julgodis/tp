@@ -46,16 +46,16 @@ extern "C" void __dl__FPv(); // 1
 /* ############################################################################################## */
 /* 803C3FE0-803C3FEC 000C+00 s=2 e=0 z=0  None .data      __vt__8cM3dGCir                                              */
 SECTION_DATA static void* __vt__8cM3dGCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM3dGCirFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM3dGCirFv,
 };
 
 /* 803C3FEC-803C3FF8 000C+00 s=3 e=0 z=0  None .data      __vt__8cM2dGCir                                              */
 SECTION_DATA static void* __vt__8cM2dGCir[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)__dt__8cM2dGCirFv,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)__dt__8cM2dGCirFv,
 };
 
 /* 8026EEB4-8026EED0 001C+00 s=0 e=1 z=0  None .text      __ct__8cM3dGCirFv                                            */

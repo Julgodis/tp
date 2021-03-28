@@ -6,7 +6,7 @@ lbl_80CAA290:
 /* 80CAA2A0  38 E4 AB 4C */	addi r7, r4, cNullVec__6Z2Calc@l
 /* 80CAA2A4  3C 80 80 CB */	lis r4, data_80CAAC30@ha
 /* 80CAA2A8  38 C4 AC 30 */	addi r6, r4, data_80CAAC30@l
-/* 80CAA2AC  88 06 00 00 */	lbz r0, 0(r6)	/* effective address: 80CAAC30 */
+/* 80CAA2AC  88 06 00 00 */	lbz r0, 0(r6)
 /* 80CAA2B0  7C 00 07 75 */	extsb. r0, r0
 /* 80CAA2B4  40 82 00 40 */	bne lbl_80CAA2F4
 /* 80CAA2B8  80 87 00 3C */	lwz r4, 0x3c(r7)

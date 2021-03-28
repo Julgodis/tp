@@ -19,7 +19,6 @@ extern void* const data_8094B19C[2];
 // 
 
 
-extern "C" void __sinit_d_a_myna_cpp(); // 1
 
 // 
 // Declarations:

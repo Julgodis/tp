@@ -4,7 +4,7 @@ lbl_80877ADC:
 /* 80877AE4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80877AE8  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80877AEC  38 63 9B D0 */	addi r3, r3, daMP_ActivePlayer@l
-/* 80877AF0  80 63 00 88 */	lwz r3, 0x88(r3)	/* effective address: 80879C58 */
+/* 80877AF0  80 63 00 88 */	lwz r3, 0x88(r3)
 /* 80877AF4  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 80877AF8  41 82 00 18 */	beq lbl_80877B10
 /* 80877AFC  4B AD 5E 6C */	b VIGetNextField

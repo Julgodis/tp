@@ -160,7 +160,7 @@ lbl_80581ED4:
 /* 80581F40  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80581F44  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80581F48  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80581F4C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80581F4C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80581F50  38 81 00 10 */	addi r4, r1, 0x10
 /* 80581F54  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 80581F58  38 C0 00 00 */	li r6, 0
@@ -257,7 +257,7 @@ lbl_80582078:
 /* 80582098  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8058209C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805820A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805820A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805820A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805820A8  38 81 00 0C */	addi r4, r1, 0xc
 /* 805820AC  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 805820B0  38 C0 00 00 */	li r6, 0
@@ -288,9 +288,9 @@ lbl_80582104:
 /* 80582108  48 00 00 68 */	b lbl_80582170
 lbl_8058210C:
 /* 8058210C  7F 63 DB 78 */	mr r3, r27
-/* 80582110  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 80582114  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
-/* 80582118  80 84 5D AC */	lwz r4, 0x5dac(r4)	/* effective address: 8040BF6C */
+/* 80582110  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 80582114  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
+/* 80582118  80 84 5D AC */	lwz r4, 0x5dac(r4)
 /* 8058211C  4B A9 85 F4 */	b fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c
 /* 80582120  7C 64 1B 78 */	mr r4, r3
 /* 80582124  A8 7B 04 E6 */	lha r3, 0x4e6(r27)
@@ -327,7 +327,7 @@ lbl_80582170:
 /* 80582198  90 01 00 08 */	stw r0, 8(r1)
 /* 8058219C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 805821A0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 805821A4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 805821A4  80 63 00 00 */	lwz r3, 0(r3)
 /* 805821A8  38 81 00 08 */	addi r4, r1, 8
 /* 805821AC  38 BB 04 D0 */	addi r5, r27, 0x4d0
 /* 805821B0  38 C0 00 00 */	li r6, 0

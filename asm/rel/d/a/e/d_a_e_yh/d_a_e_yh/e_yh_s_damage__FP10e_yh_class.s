@@ -42,7 +42,7 @@ lbl_807FFF74:
 /* 807FFFD4  41 82 00 28 */	beq lbl_807FFFFC
 /* 807FFFD8  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 807FFFDC  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 807FFFE0  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 807FFFE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 807FFFE4  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 807FFFE8  3C 84 00 01 */	addis r4, r4, 1
 /* 807FFFEC  38 04 80 00 */	addi r0, r4, -32768
@@ -52,7 +52,7 @@ lbl_807FFF74:
 lbl_807FFFFC:
 /* 807FFFFC  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80800000  38 63 07 68 */	addi r3, r3, calc_mtx@l
-/* 80800004  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80450768 */
+/* 80800004  80 63 00 00 */	lwz r3, 0(r3)
 /* 80800008  A8 9F 04 E6 */	lha r4, 0x4e6(r31)
 /* 8080000C  4B 80 C3 D0 */	b mDoMtx_YrotS__FPA4_fs
 lbl_80800010:

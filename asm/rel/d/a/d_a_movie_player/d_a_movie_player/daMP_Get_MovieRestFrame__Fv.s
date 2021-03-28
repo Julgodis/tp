@@ -16,7 +16,7 @@ lbl_80878A98:
 lbl_80878AA0:
 /* 80878AA0  3C 60 80 88 */	lis r3, daMP_ActivePlayer@ha
 /* 80878AA4  38 A3 9B D0 */	addi r5, r3, daMP_ActivePlayer@l
-/* 80878AA8  80 05 00 A0 */	lwz r0, 0xa0(r5)	/* effective address: 80879C70 */
+/* 80878AA8  80 05 00 A0 */	lwz r0, 0xa0(r5)
 /* 80878AAC  2C 00 00 00 */	cmpwi r0, 0
 /* 80878AB0  41 82 00 30 */	beq lbl_80878AE0
 /* 80878AB4  80 65 00 F8 */	lwz r3, 0xf8(r5)

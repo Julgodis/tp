@@ -77,11 +77,11 @@ lbl_80C9215C:
 /* 80C92164  40 82 00 2C */	bne lbl_80C92190
 /* 80C92168  3C 80 80 C9 */	lis r4, lit_3924@ha
 /* 80C9216C  38 C4 2D 44 */	addi r6, r4, lit_3924@l
-/* 80C92170  80 86 00 00 */	lwz r4, 0(r6)	/* effective address: 80C92D44 */
-/* 80C92174  80 06 00 04 */	lwz r0, 4(r6)	/* effective address: 80C92D48 */
+/* 80C92170  80 86 00 00 */	lwz r4, 0(r6)
+/* 80C92174  80 06 00 04 */	lwz r0, 4(r6)
 /* 80C92178  90 81 00 08 */	stw r4, 8(r1)
 /* 80C9217C  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80C92180  80 06 00 08 */	lwz r0, 8(r6)	/* effective address: 80C92D4C */
+/* 80C92180  80 06 00 08 */	lwz r0, 8(r6)
 /* 80C92184  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80C92188  38 81 00 08 */	addi r4, r1, 8
 /* 80C9218C  4B FF F9 CD */	bl setAction__11daObjMATO_cFM11daObjMATO_cFPCvPvi_vi

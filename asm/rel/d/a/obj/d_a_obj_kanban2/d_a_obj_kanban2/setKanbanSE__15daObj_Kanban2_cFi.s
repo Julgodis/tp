@@ -19,7 +19,7 @@ lbl_80581970:
 /* 80581970  90 81 00 08 */	stw r4, 8(r1)
 /* 80581974  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80581978  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 8058197C  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 8058197C  80 63 00 00 */	lwz r3, 0(r3)
 /* 80581980  38 81 00 08 */	addi r4, r1, 8
 /* 80581984  38 A5 04 D0 */	addi r5, r5, 0x4d0
 /* 80581988  38 E0 00 00 */	li r7, 0

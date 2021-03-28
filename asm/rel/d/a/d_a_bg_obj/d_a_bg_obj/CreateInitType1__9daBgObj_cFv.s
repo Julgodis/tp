@@ -4,8 +4,8 @@ lbl_8045A160:
 /* 8045A168  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8045A16C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045A170  7C 7F 1B 78 */	mr r31, r3
-/* 8045A174  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045A178  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045A174  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045A178  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045A17C  A0 1F 0C CC */	lhz r0, 0xccc(r31)
 /* 8045A180  54 04 06 3E */	clrlwi r4, r0, 0x18
 /* 8045A184  88 1F 04 BA */	lbz r0, 0x4ba(r31)
@@ -70,8 +70,8 @@ lbl_8045A240:
 /* 8045A25C  7F E3 FB 78 */	mr r3, r31
 /* 8045A260  88 9F 0C C8 */	lbz r4, 0xcc8(r31)
 /* 8045A264  4B FF FC B1 */	bl settingCullSizeBoxForCull__9daBgObj_cFi
-/* 8045A268  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8045A26C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8045A268  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8045A26C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8045A270  38 63 4F F8 */	addi r3, r3, 0x4ff8
 /* 8045A274  7F E4 FB 78 */	mr r4, r31
 /* 8045A278  80 1F 00 B0 */	lwz r0, 0xb0(r31)

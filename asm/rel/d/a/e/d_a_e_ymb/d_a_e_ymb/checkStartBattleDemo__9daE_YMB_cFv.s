@@ -13,11 +13,11 @@ lbl_8081F140:
 /* 8081F16C  4B 94 02 B8 */	b checkNowWolfEyeUp__9daPy_py_cFv
 /* 8081F170  2C 03 00 00 */	cmpwi r3, 0
 /* 8081F174  41 82 01 50 */	beq lbl_8081F2C4
-/* 8081F178  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8081F17C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 8081F180  80 63 5D AC */	lwz r3, 0x5dac(r3)	/* effective address: 8040BF6C */
-/* 8081F184  C0 43 04 D8 */	lfs f2, 0x4d8(r3)	/* effective address: 80406698 */
-/* 8081F188  C0 03 04 D0 */	lfs f0, 0x4d0(r3)	/* effective address: 80406690 */
+/* 8081F178  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8081F17C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 8081F180  80 63 5D AC */	lwz r3, 0x5dac(r3)
+/* 8081F184  C0 43 04 D8 */	lfs f2, 0x4d8(r3)
+/* 8081F188  C0 03 04 D0 */	lfs f0, 0x4d0(r3)
 /* 8081F18C  D0 01 00 0C */	stfs f0, 0xc(r1)
 /* 8081F190  C0 3F 00 18 */	lfs f1, 0x18(r31)
 /* 8081F194  D0 21 00 10 */	stfs f1, 0x10(r1)

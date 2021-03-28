@@ -6,11 +6,11 @@ lbl_80550398:
 /* 805503A8  7C 7F 1B 78 */	mr r31, r3
 /* 805503AC  3C 80 80 55 */	lis r4, lit_4635@ha
 /* 805503B0  38 A4 3C D4 */	addi r5, r4, lit_4635@l
-/* 805503B4  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 80553CD4 */
-/* 805503B8  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 80553CD8 */
+/* 805503B4  80 85 00 00 */	lwz r4, 0(r5)
+/* 805503B8  80 05 00 04 */	lwz r0, 4(r5)
 /* 805503BC  90 81 00 14 */	stw r4, 0x14(r1)
 /* 805503C0  90 01 00 18 */	stw r0, 0x18(r1)
-/* 805503C4  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 80553CDC */
+/* 805503C4  80 05 00 08 */	lwz r0, 8(r5)
 /* 805503C8  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 805503CC  38 81 00 14 */	addi r4, r1, 0x14
 /* 805503D0  48 00 09 75 */	bl chkAction__12daNpc_Kkri_cFM12daNpc_Kkri_cFPCvPvPv_i
@@ -25,11 +25,11 @@ lbl_80550398:
 lbl_805503F4:
 /* 805503F4  3C 60 80 55 */	lis r3, lit_4640@ha
 /* 805503F8  38 83 3C E0 */	addi r4, r3, lit_4640@l
-/* 805503FC  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80553CE0 */
-/* 80550400  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80553CE4 */
+/* 805503FC  80 64 00 00 */	lwz r3, 0(r4)
+/* 80550400  80 04 00 04 */	lwz r0, 4(r4)
 /* 80550404  90 61 00 08 */	stw r3, 8(r1)
 /* 80550408  90 01 00 0C */	stw r0, 0xc(r1)
-/* 8055040C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80553CE8 */
+/* 8055040C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80550410  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80550414  7F E3 FB 78 */	mr r3, r31
 /* 80550418  38 81 00 08 */	addi r4, r1, 8

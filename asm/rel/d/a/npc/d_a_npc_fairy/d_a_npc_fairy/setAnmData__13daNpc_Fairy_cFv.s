@@ -10,7 +10,7 @@ lbl_809B2B44:
 /* 809B2B64  83 A4 00 04 */	lwz r29, 4(r4)
 /* 809B2B68  3C 80 80 9C */	lis r4, l_resNameList@ha
 /* 809B2B6C  3B C4 95 F8 */	addi r30, r4, l_resNameList@l
-/* 809B2B70  80 9E 00 04 */	lwz r4, 4(r30)	/* effective address: 809B95FC */
+/* 809B2B70  80 9E 00 04 */	lwz r4, 4(r30)
 /* 809B2B74  38 A0 00 25 */	li r5, 0x25
 /* 809B2B78  4B 79 56 0C */	b getColorAnmP__8daNpcT_cFPCci
 /* 809B2B7C  7C 64 1B 79 */	or. r4, r3, r3

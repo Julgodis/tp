@@ -133,7 +133,7 @@ lbl_806C0EB4:
 /* 806C0ED0  38 00 FF FF */	li r0, -1
 /* 806C0ED4  3C 60 80 6C */	lis r3, l_HIO@ha
 /* 806C0ED8  38 63 1B B0 */	addi r3, r3, l_HIO@l
-/* 806C0EDC  98 03 00 04 */	stb r0, 4(r3)	/* effective address: 806C1BB4 */
+/* 806C0EDC  98 03 00 04 */	stb r0, 4(r3)
 lbl_806C0EE0:
 /* 806C0EE0  38 00 00 04 */	li r0, 4
 /* 806C0EE4  90 1D 05 5C */	stw r0, 0x55c(r29)
@@ -221,8 +221,8 @@ lbl_806C1010:
 /* 806C101C  4B 9B 4F 3C */	b SetWall__12dBgS_AcchCirFff
 lbl_806C1020:
 /* 806C1020  38 7D 07 6C */	addi r3, r29, 0x76c
-/* 806C1024  3C 80 80 40 */	lis r4, struct_804061C0+0x0@ha
-/* 806C1028  38 84 61 C0 */	addi r4, r4, struct_804061C0+0x0@l
+/* 806C1024  3C 80 80 40 */	lis r4, g_dComIfG_gameInfo@ha
+/* 806C1028  38 84 61 C0 */	addi r4, r4, g_dComIfG_gameInfo@l
 /* 806C102C  38 84 0F 38 */	addi r4, r4, 0xf38
 /* 806C1030  4B 9B 5A 7C */	b CrrPos__9dBgS_AcchFR4dBgS
 /* 806C1034  38 7D 09 80 */	addi r3, r29, 0x980

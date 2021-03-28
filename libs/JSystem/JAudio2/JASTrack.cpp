@@ -11,14 +11,7 @@
 // Types:
 // 
 
-struct JASDsp {
-	struct TChannel {
-		/* 8029E00C */ void setFilterMode(u16);
-		/* 8029E044 */ void setIIRFilterParam(s16*);
-		/* 8029E06C */ void setFIR8FilterParam(s16*);
-		/* 8029E094 */ void setDistFilter(s16);
-	};
-
+struct JASSoundParams {
 };
 
 struct JASOscillator {
@@ -30,15 +23,22 @@ struct JASOscillator {
 
 };
 
-struct JASSoundParams {
-};
-
 struct JASChannel {
 	/* 8029AAD0 */ void release(u16);
 	/* 8029AB64 */ void setOscInit(u32, JASOscillator::Data const*);
 	/* 8029AB98 */ void setMixConfig(u32, u16);
 	/* 8029ACD4 */ void setKeySweepTarget(s32, u32);
 	/* 8029BBFC */ void free();
+};
+
+struct JASDsp {
+	struct TChannel {
+		/* 8029E00C */ void setFilterMode(u16);
+		/* 8029E044 */ void setIIRFilterParam(s16*);
+		/* 8029E06C */ void setFIR8FilterParam(s16*);
+		/* 8029E094 */ void setDistFilter(s16);
+	};
+
 };
 
 struct JASTrack {
@@ -1124,23 +1124,23 @@ asm JASMemPool_MultiThreaded__template1::~JASMemPool_MultiThreaded__template1() 
 /* ############################################################################################## */
 /* 803C5B68-803C5B74 000C+00 s=2 e=0 z=0  None .data      __vt__19JASDefaultBankTable                                  */
 SECTION_DATA static void* __vt__19JASDefaultBankTable[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80293528,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80293528,
 };
 
 /* 803C5B74-803C5B80 000C+00 s=1 e=0 z=0  None .data      __vt__17JASBankTable<256>                                    */
 SECTION_DATA static void* data_803C5B74[3] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)func_80293528,
+	(void*)NULL,
+	(void*)NULL,
+	(void*)func_80293528,
 };
 
 /* 803C5B80-803C5B90 000C+04 s=1 e=1 z=0  None .data      __vt__11JASBankList                                          */
 SECTION_DATA void* __vt__11JASBankList[3 + 1 /* padding */] = {
-	/* 0    */ (void*)NULL /* RTTI */,
-	/* 1    */ (void*)NULL,
-	/* 2    */ (void*)NULL,
+	(void*)NULL /* RTTI */,
+	(void*)NULL,
+	(void*)NULL,
 	/* padding */
 	NULL,
 };

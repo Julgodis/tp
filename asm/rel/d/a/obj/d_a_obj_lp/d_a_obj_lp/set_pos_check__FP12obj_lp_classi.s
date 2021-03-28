@@ -12,7 +12,7 @@ lbl_80C552C0:
 /* 80C552E8  7C 9F 23 78 */	mr r31, r4
 /* 80C552EC  3C 60 80 C5 */	lis r3, lit_3916@ha
 /* 80C552F0  3B 83 5A 10 */	addi r28, r3, lit_3916@l
-/* 80C552F4  C3 DC 00 9C */	lfs f30, 0x9c(r28)	/* effective address: 80C55AAC */
+/* 80C552F4  C3 DC 00 9C */	lfs f30, 0x9c(r28)
 /* 80C552F8  88 1E 05 72 */	lbz r0, 0x572(r30)
 /* 80C552FC  28 00 00 01 */	cmplwi r0, 1
 /* 80C55300  40 82 00 0C */	bne lbl_80C5530C

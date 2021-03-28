@@ -9,7 +9,7 @@ lbl_80878938:
 /* 80878954  4B FF ED 99 */	bl daMP_THPPlayerClose__Fv
 /* 80878958  3C 60 80 94 */	lis r3, daMP_buffer@ha
 /* 8087895C  38 63 5B 04 */	addi r3, r3, daMP_buffer@l
-/* 80878960  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80945B04 */
+/* 80878960  80 63 00 00 */	lwz r3, 0(r3)
 /* 80878964  28 03 00 00 */	cmplwi r3, 0
 /* 80878968  41 82 00 08 */	beq lbl_80878970
 /* 8087896C  4B FF FF A9 */	bl JKRFree__FPv

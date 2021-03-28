@@ -7,11 +7,11 @@ lbl_80A7FEE8:
 /* 80A7FEFC  7C 7E 1B 78 */	mr r30, r3
 /* 80A7FF00  3C 80 80 A8 */	lis r4, m__17daNpcMoiR_Param_c@ha
 /* 80A7FF04  3B E4 32 AC */	addi r31, r4, m__17daNpcMoiR_Param_c@l
-/* 80A7FF08  C0 1F 05 38 */	lfs f0, 0x538(r31)	/* effective address: 80A837E4 */
+/* 80A7FF08  C0 1F 05 38 */	lfs f0, 0x538(r31)
 /* 80A7FF0C  D0 01 00 1C */	stfs f0, 0x1c(r1)
-/* 80A7FF10  C0 1F 00 88 */	lfs f0, 0x88(r31)	/* effective address: 80A83334 */
+/* 80A7FF10  C0 1F 00 88 */	lfs f0, 0x88(r31)
 /* 80A7FF14  D0 01 00 20 */	stfs f0, 0x20(r1)
-/* 80A7FF18  C0 1F 05 3C */	lfs f0, 0x53c(r31)	/* effective address: 80A837E8 */
+/* 80A7FF18  C0 1F 05 3C */	lfs f0, 0x53c(r31)
 /* 80A7FF1C  D0 01 00 24 */	stfs f0, 0x24(r1)
 /* 80A7FF20  38 00 00 00 */	li r0, 0
 /* 80A7FF24  90 01 00 0C */	stw r0, 0xc(r1)
@@ -91,11 +91,11 @@ lbl_80A7FFC0:
 /* 80A80040  4E 80 04 21 */	bctrl 
 /* 80A80044  3C 60 80 A8 */	lis r3, lit_4762@ha
 /* 80A80048  38 83 3B C0 */	addi r4, r3, lit_4762@l
-/* 80A8004C  80 64 00 00 */	lwz r3, 0(r4)	/* effective address: 80A83BC0 */
-/* 80A80050  80 04 00 04 */	lwz r0, 4(r4)	/* effective address: 80A83BC4 */
+/* 80A8004C  80 64 00 00 */	lwz r3, 0(r4)
+/* 80A80050  80 04 00 04 */	lwz r0, 4(r4)
 /* 80A80054  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80A80058  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80A8005C  80 04 00 08 */	lwz r0, 8(r4)	/* effective address: 80A83BC8 */
+/* 80A8005C  80 04 00 08 */	lwz r0, 8(r4)
 /* 80A80060  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80A80064  38 61 00 10 */	addi r3, r1, 0x10
 /* 80A80068  38 9E 0D DC */	addi r4, r30, 0xddc

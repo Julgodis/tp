@@ -30,14 +30,14 @@ lbl_80D292FC:
 /* 80D29308  80 84 00 04 */	lwz r4, 4(r4)
 /* 80D2930C  38 BE 01 0C */	addi r5, r30, 0x10c
 /* 80D29310  4B 47 BA 90 */	b setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c
-/* 80D29314  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D29318  38 83 61 C0 */	addi r4, r3, struct_804061C0+0x0@l
-/* 80D2931C  80 04 5F 70 */	lwz r0, 0x5f70(r4)	/* effective address: 8040C130 */
+/* 80D29314  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D29318  38 83 61 C0 */	addi r4, r3, g_dComIfG_gameInfo@l
+/* 80D2931C  80 04 5F 70 */	lwz r0, 0x5f70(r4)
 /* 80D29320  3C 60 80 43 */	lis r3, j3dSys@ha
 /* 80D29324  3B E3 4A C8 */	addi r31, r3, j3dSys@l
-/* 80D29328  90 1F 00 48 */	stw r0, 0x48(r31)	/* effective address: 80434B10 */
-/* 80D2932C  80 04 5F 74 */	lwz r0, 0x5f74(r4)	/* effective address: 8040C134 */
-/* 80D29330  90 1F 00 4C */	stw r0, 0x4c(r31)	/* effective address: 80434B14 */
+/* 80D29328  90 1F 00 48 */	stw r0, 0x48(r31)
+/* 80D2932C  80 04 5F 74 */	lwz r0, 0x5f74(r4)
+/* 80D29330  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D29334  88 1E 05 C8 */	lbz r0, 0x5c8(r30)
 /* 80D29338  28 00 00 00 */	cmplwi r0, 0
 /* 80D2933C  41 82 00 20 */	beq lbl_80D2935C
@@ -66,11 +66,11 @@ lbl_80D2937C:
 /* 80D29390  80 63 00 00 */	lwz r3, 0(r3)
 /* 80D29394  38 00 00 00 */	li r0, 0
 /* 80D29398  90 03 00 54 */	stw r0, 0x54(r3)
-/* 80D2939C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 80D293A0  3B A3 61 C0 */	addi r29, r3, struct_804061C0+0x0@l
-/* 80D293A4  80 1D 5F 80 */	lwz r0, 0x5f80(r29)	/* effective address: 8040C140 */
+/* 80D2939C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 80D293A0  3B A3 61 C0 */	addi r29, r3, g_dComIfG_gameInfo@l
+/* 80D293A4  80 1D 5F 80 */	lwz r0, 0x5f80(r29)
 /* 80D293A8  90 1F 00 48 */	stw r0, 0x48(r31)
-/* 80D293AC  80 1D 5F 84 */	lwz r0, 0x5f84(r29)	/* effective address: 8040C144 */
+/* 80D293AC  80 1D 5F 84 */	lwz r0, 0x5f84(r29)
 /* 80D293B0  90 1F 00 4C */	stw r0, 0x4c(r31)
 /* 80D293B4  80 7E 05 BC */	lwz r3, 0x5bc(r30)
 /* 80D293B8  28 03 00 00 */	cmplwi r3, 0

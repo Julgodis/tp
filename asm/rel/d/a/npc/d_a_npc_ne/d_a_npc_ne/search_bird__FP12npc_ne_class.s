@@ -16,7 +16,7 @@ lbl_80A89AB0:
 /* 80A89AE8  3C 60 80 A9 */	lis r3, lit_3990@ha
 /* 80A89AEC  3B E3 24 1C */	addi r31, r3, lit_3990@l
 /* 80A89AF0  38 C0 00 00 */	li r6, 0
-/* 80A89AF4  90 DE 00 90 */	stw r6, 0x90(r30)	/* effective address: 80A92B18 */
+/* 80A89AF4  90 DE 00 90 */	stw r6, 0x90(r30)
 /* 80A89AF8  7C C3 33 78 */	mr r3, r6
 /* 80A89AFC  38 BE 00 68 */	addi r5, r30, 0x68
 /* 80A89B00  38 9E 00 7C */	addi r4, r30, 0x7c

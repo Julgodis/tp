@@ -97,6 +97,15 @@ class GlobalSymbolTable:
     def resolve_set(self, addrs):
         return [y for y in [ self.at(*x) for x in addrs ] if y]
 
+    def all(self, addrs):
+        return set([ 
+            symbol 
+            for symbol in [ 
+                self.at(-1, addr) 
+                for addr in addrs 
+            ] 
+            if symbol ])
+
     def add_symbol(self, symbol: "Symbol"):
         if symbol.size > 0:
             self.symbols.addi(symbol.start, symbol.end, symbol)

@@ -8,7 +8,7 @@ lbl_80C8C274:
 /* 80C8C28C  98 03 05 C4 */	stb r0, 0x5c4(r3)
 /* 80C8C290  3C 60 80 C9 */	lis r3, l_HIO@ha
 /* 80C8C294  38 63 CD 8C */	addi r3, r3, l_HIO@l
-/* 80C8C298  88 03 00 14 */	lbz r0, 0x14(r3)	/* effective address: 80C8CDA0 */
+/* 80C8C298  88 03 00 14 */	lbz r0, 0x14(r3)
 /* 80C8C29C  98 1F 05 C5 */	stb r0, 0x5c5(r31)
 /* 80C8C2A0  88 1F 04 E2 */	lbz r0, 0x4e2(r31)
 /* 80C8C2A4  7C 03 07 74 */	extsb r3, r0
@@ -19,7 +19,7 @@ lbl_80C8C274:
 /* 80C8C2B8  90 01 00 08 */	stw r0, 8(r1)
 /* 80C8C2BC  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80C8C2C0  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80C8C2C4  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80C8C2C4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80C8C2C8  38 81 00 08 */	addi r4, r1, 8
 /* 80C8C2CC  38 BF 04 A8 */	addi r5, r31, 0x4a8
 /* 80C8C2D0  38 C0 00 00 */	li r6, 0

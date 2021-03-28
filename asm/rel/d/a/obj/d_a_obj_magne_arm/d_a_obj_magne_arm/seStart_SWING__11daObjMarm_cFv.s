@@ -8,7 +8,7 @@ lbl_80592020:
 /* 80592038  90 01 00 08 */	stw r0, 8(r1)
 /* 8059203C  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80592040  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80592044  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80592044  80 63 00 00 */	lwz r3, 0(r3)
 /* 80592048  38 81 00 08 */	addi r4, r1, 8
 /* 8059204C  38 A5 0A 5C */	addi r5, r5, 0xa5c
 /* 80592050  38 C0 00 00 */	li r6, 0

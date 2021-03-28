@@ -8,7 +8,7 @@ lbl_80A5DE54:
 /* 80A5DE6C  90 61 00 08 */	stw r3, 8(r1)
 /* 80A5DE70  3C 60 80 45 */	lis r3, mAudioMgrPtr__10Z2AudioMgr@ha
 /* 80A5DE74  38 63 13 68 */	addi r3, r3, mAudioMgrPtr__10Z2AudioMgr@l
-/* 80A5DE78  80 63 00 00 */	lwz r3, 0(r3)	/* effective address: 80451368 */
+/* 80A5DE78  80 63 00 00 */	lwz r3, 0(r3)
 /* 80A5DE7C  38 81 00 08 */	addi r4, r1, 8
 /* 80A5DE80  7D 05 43 78 */	mr r5, r8
 /* 80A5DE84  7C 06 03 78 */	mr r6, r0

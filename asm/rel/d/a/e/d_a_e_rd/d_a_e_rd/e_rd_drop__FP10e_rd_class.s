@@ -9,7 +9,7 @@ lbl_8050C630:
 /* 8050C64C  7C 7E 1B 78 */	mr r30, r3
 /* 8050C650  3C 60 80 52 */	lis r3, lit_4208@ha
 /* 8050C654  3B E3 85 84 */	addi r31, r3, lit_4208@l
-/* 8050C658  C3 FF 00 04 */	lfs f31, 4(r31)	/* effective address: 80518588 */
+/* 8050C658  C3 FF 00 04 */	lfs f31, 4(r31)
 /* 8050C65C  A8 1E 05 B4 */	lha r0, 0x5b4(r30)
 /* 8050C660  2C 00 00 02 */	cmpwi r0, 2
 /* 8050C664  41 82 01 74 */	beq lbl_8050C7D8
@@ -87,8 +87,8 @@ lbl_8050C73C:
 /* 8050C774  B0 1E 05 CC */	sth r0, 0x5cc(r30)
 /* 8050C778  48 00 00 44 */	b lbl_8050C7BC
 lbl_8050C77C:
-/* 8050C77C  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 8050C780  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
+/* 8050C77C  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 8050C780  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
 /* 8050C784  38 63 4E 00 */	addi r3, r3, 0x4e00
 /* 8050C788  3C 80 80 52 */	lis r4, stringBase0@ha
 /* 8050C78C  38 84 89 68 */	addi r4, r4, stringBase0@l

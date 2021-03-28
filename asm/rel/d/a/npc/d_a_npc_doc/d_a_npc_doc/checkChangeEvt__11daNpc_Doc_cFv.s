@@ -6,11 +6,11 @@ lbl_809A7ABC:
 /* 809A7ACC  7C 7F 1B 78 */	mr r31, r3
 /* 809A7AD0  3C 80 80 9B */	lis r4, lit_4547@ha
 /* 809A7AD4  38 A4 A8 B4 */	addi r5, r4, lit_4547@l
-/* 809A7AD8  80 85 00 00 */	lwz r4, 0(r5)	/* effective address: 809AA8B4 */
-/* 809A7ADC  80 05 00 04 */	lwz r0, 4(r5)	/* effective address: 809AA8B8 */
+/* 809A7AD8  80 85 00 00 */	lwz r4, 0(r5)
+/* 809A7ADC  80 05 00 04 */	lwz r0, 4(r5)
 /* 809A7AE0  90 81 00 08 */	stw r4, 8(r1)
 /* 809A7AE4  90 01 00 0C */	stw r0, 0xc(r1)
-/* 809A7AE8  80 05 00 08 */	lwz r0, 8(r5)	/* effective address: 809AA8BC */
+/* 809A7AE8  80 05 00 08 */	lwz r0, 8(r5)
 /* 809A7AEC  90 01 00 10 */	stw r0, 0x10(r1)
 /* 809A7AF0  38 81 00 08 */	addi r4, r1, 8
 /* 809A7AF4  48 00 0B 2D */	bl chkAction__11daNpc_Doc_cFM11daNpc_Doc_cFPCvPvPv_i
@@ -18,9 +18,9 @@ lbl_809A7ABC:
 /* 809A7AFC  40 82 00 B0 */	bne lbl_809A7BAC
 /* 809A7B00  38 00 00 00 */	li r0, 0
 /* 809A7B04  98 1F 0E 2E */	stb r0, 0xe2e(r31)
-/* 809A7B08  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A7B0C  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809A7B10  88 83 4F B5 */	lbz r4, 0x4fb5(r3)	/* effective address: 8040B175 */
+/* 809A7B08  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A7B0C  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809A7B10  88 83 4F B5 */	lbz r4, 0x4fb5(r3)
 /* 809A7B14  28 04 00 01 */	cmplwi r4, 1
 /* 809A7B18  41 82 00 0C */	beq lbl_809A7B24
 /* 809A7B1C  28 04 00 02 */	cmplwi r4, 2
@@ -34,9 +34,9 @@ lbl_809A7B28:
 /* 809A7B34  4B 6A 0C BC */	b ChkPresentEnd__16dEvent_manager_cFv
 /* 809A7B38  2C 03 00 00 */	cmpwi r3, 0
 /* 809A7B3C  41 82 00 68 */	beq lbl_809A7BA4
-/* 809A7B40  3C 60 80 40 */	lis r3, struct_804061C0+0x0@ha
-/* 809A7B44  38 63 61 C0 */	addi r3, r3, struct_804061C0+0x0@l
-/* 809A7B48  88 03 4F B6 */	lbz r0, 0x4fb6(r3)	/* effective address: 8040B176 */
+/* 809A7B40  3C 60 80 40 */	lis r3, g_dComIfG_gameInfo@ha
+/* 809A7B44  38 63 61 C0 */	addi r3, r3, g_dComIfG_gameInfo@l
+/* 809A7B48  88 03 4F B6 */	lbz r0, 0x4fb6(r3)
 /* 809A7B4C  98 1F 0E 2E */	stb r0, 0xe2e(r31)
 /* 809A7B50  88 1F 0F 80 */	lbz r0, 0xf80(r31)
 /* 809A7B54  28 00 00 01 */	cmplwi r0, 1
