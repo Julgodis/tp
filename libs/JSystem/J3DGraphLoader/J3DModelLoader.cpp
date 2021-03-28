@@ -131,19 +131,19 @@ struct J3DModelLoaderDataBase {
 	/* 803346BC */ void load(void const*, u32);
 };
 
-struct J3DDrawBlock {
-};
-
-struct J3DEnvelopeBlock {
-};
-
-struct J3DMaterialDLBlock {
+struct J3DModelInfoBlock {
 };
 
 struct J3DJointBlock {
 };
 
-struct J3DModelInfoBlock {
+struct J3DMaterialDLBlock {
+};
+
+struct J3DDrawBlock {
+};
+
+struct J3DEnvelopeBlock {
 };
 
 struct J3DModelLoader {
@@ -230,138 +230,147 @@ struct J3DJointFactory {
 // Forward References:
 // 
 
-static void getFmtType(_GXVtxAttrFmtList*, _GXAttr); // 2
-static void JSUConvertOffsetToPtr__template66(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template67(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template68(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template69(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template70(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
-void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
+static void getFmtType(_GXVtxAttrFmtList*, _GXAttr);
+static void JSUConvertOffsetToPtr__template66(void const*, void const*);
+static void JSUConvertOffsetToPtr__template67(void const*, void const*);
+static void JSUConvertOffsetToPtr__template68(void const*, void const*);
+static void JSUConvertOffsetToPtr__template69(void const*, void const*);
+void JSUConvertOffsetToPtr__template70(void const*, void const*);
+void JSUConvertOffsetToPtr__template71(void const*, u32);
+void JSUConvertOffsetToPtr__template72(void const*, u32);
+extern "C" extern char const* const J3DModelLoader__stringBase0;
 
-extern "C" void __ct__14J3DModelLoaderFv(); // 1
-extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
-extern "C" void load__14J3DModelLoaderFPCvUl(); // 1
-extern "C" void loadMaterialTable__14J3DModelLoaderFPCv(); // 1
-extern "C" void loadBinaryDisplayList__14J3DModelLoaderFPCvUl(); // 1
-extern "C" void setupBBoardInfo__14J3DModelLoaderFv(); // 1
-extern "C" void readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl(); // 1
-extern "C" static void getFmtType__FP17_GXVtxAttrFmtList7_GXAttr(); // 1
-extern "C" void readVertex__14J3DModelLoaderFPC14J3DVertexBlock(); // 1
-extern "C" void readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock(); // 1
-extern "C" void readDraw__14J3DModelLoaderFPC12J3DDrawBlock(); // 1
-extern "C" void readJoint__14J3DModelLoaderFPC13J3DJointBlock(); // 1
-extern "C" void readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl(); // 1
-extern "C" void readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul(); // 1
-extern "C" void readShape__14J3DModelLoaderFPC13J3DShapeBlockUl(); // 1
-extern "C" void readTexture__14J3DModelLoaderFPC15J3DTextureBlock(); // 1
-extern "C" void readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl(); // 1
-extern "C" void readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul(); // 1
-extern "C" void readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock(); // 1
-extern "C" void readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
-extern "C" void readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl(); // 1
-extern "C" void modifyMaterial__14J3DModelLoaderFUl(); // 1
-extern "C" void __dt__18J3DModelLoader_v26Fv(); // 1
-extern "C" void __dt__18J3DModelLoader_v21Fv(); // 1
-extern "C" void __dt__14J3DModelLoaderFv(); // 1
-extern "C" void readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul(); // 1
-extern "C" void readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
-extern "C" void readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul(); // 1
-extern "C" void readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
-extern "C" bool calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
-extern "C" bool calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl(); // 1
-extern "C" void func_803364B8(); // 1
-extern "C" void func_80336524(); // 1
-extern "C" void func_8033656C(); // 1
-extern "C" void func_80336594(); // 1
-extern "C" void func_80336600(); // 1
-extern "C" void func_80336628(); // 1
-extern "C" void __ct__11J3DMaterialFv(); // 1
-extern "C" void __dt__10J3DTextureFv(); // 1
-extern "C" static void func_803366EC(); // 1
-extern "C" static void func_80336704(); // 1
-extern "C" static void func_8033671C(); // 1
-extern "C" static void func_80336734(); // 1
-extern "C" void func_8033674C(); // 1
-extern "C" void func_80336764(); // 1
-extern "C" void func_8033677C(); // 1
+extern "C" void __ct__14J3DModelLoaderFv();
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
+extern "C" void load__14J3DModelLoaderFPCvUl();
+extern "C" void loadMaterialTable__14J3DModelLoaderFPCv();
+extern "C" void loadBinaryDisplayList__14J3DModelLoaderFPCvUl();
+extern "C" void setupBBoardInfo__14J3DModelLoaderFv();
+extern "C" void readInformation__14J3DModelLoaderFPC17J3DModelInfoBlockUl();
+extern "C" static void getFmtType__FP17_GXVtxAttrFmtList7_GXAttr();
+extern "C" void readVertex__14J3DModelLoaderFPC14J3DVertexBlock();
+extern "C" void readEnvelop__14J3DModelLoaderFPC16J3DEnvelopeBlock();
+extern "C" void readDraw__14J3DModelLoaderFPC12J3DDrawBlock();
+extern "C" void readJoint__14J3DModelLoaderFPC13J3DJointBlock();
+extern "C" void readMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void readMaterial_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul();
+extern "C" void readShape__14J3DModelLoaderFPC13J3DShapeBlockUl();
+extern "C" void readTexture__14J3DModelLoaderFPC15J3DTextureBlock();
+extern "C" void readMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void readMaterialTable_v21__18J3DModelLoader_v21FPC20J3DMaterialBlock_v21Ul();
+extern "C" void readTextureTable__14J3DModelLoaderFPC15J3DTextureBlock();
+extern "C" void readPatchedMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" void readMaterialDL__14J3DModelLoaderFPC18J3DMaterialDLBlockUl();
+extern "C" void modifyMaterial__14J3DModelLoaderFUl();
+extern "C" void __dt__18J3DModelLoader_v26Fv();
+extern "C" void __dt__18J3DModelLoader_v21Fv();
+extern "C" void __dt__14J3DModelLoaderFv();
+extern "C" void readMaterial_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul();
+extern "C" void readMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" void readMaterialTable_v21__14J3DModelLoaderFPC20J3DMaterialBlock_v21Ul();
+extern "C" void readMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" bool calcSizeMaterial__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" bool calcSizeMaterialTable__14J3DModelLoaderFPC16J3DMaterialBlockUl();
+extern "C" void func_803364B8();
+extern "C" void func_80336524();
+extern "C" void func_8033656C();
+extern "C" void func_80336594();
+extern "C" void func_80336600();
+extern "C" void func_80336628();
+extern "C" void __ct__11J3DMaterialFv();
+extern "C" void __dt__10J3DTextureFv();
+extern "C" static void func_803366EC();
+extern "C" static void func_80336704();
+extern "C" static void func_8033671C();
+extern "C" static void func_80336734();
+extern "C" void func_8033674C();
+extern "C" void func_80336764();
+extern "C" void func_8033677C();
 extern "C" extern char const* const J3DModelLoader__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+void JSUConvertOffsetToPtr__template24(void const*, void const*);
+void JSUConvertOffsetToPtr__template28(void const*, void const*);
+void JSUConvertOffsetToPtr__template39(void const*, void const*);
+void JSUConvertOffsetToPtr__template41(void const*, void const*);
+extern "C" extern void* data_803A3360[11];
+extern "C" extern void* __vt__19J3DMtxCalcNoAnmBase[11];
+extern "C" extern void* __vt__10J3DMtxCalc[11 + 1 /* padding */];
+extern "C" extern void* __vt__11J3DMaterial[12];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 mCurrentS__6J3DSys[12];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 mJoint__10J3DMtxCalc[4];
 
-extern "C" void OSReport(); // 1
-extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform(); // 1
-extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform(); // 1
-extern "C" bool getAnmTransform__10J3DMtxCalcFUc(); // 1
-extern "C" bool getAnmTransform__10J3DMtxCalcFv(); // 1
-extern "C" void setWeight__10J3DMtxCalcFUcf(); // 1
-extern "C" void getWeight__10J3DMtxCalcCFUc(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void func_802F4260(); // 1
-extern "C" void func_802F42C0(); // 1
-extern "C" void func_8030A530(); // 1
-extern "C" void func_8030A560(); // 1
-extern "C" void initialize__11J3DMaterialFv(); // 1
-extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData(); // 1
-extern "C" void sortVcdVatCmd__13J3DShapeTableFv(); // 1
-extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable(); // 1
-extern "C" void findImportantMtxIndex__12J3DJointTreeFv(); // 1
-extern "C" void clear__12J3DModelDataFv(); // 1
-extern "C" void __ct__12J3DModelDataFv(); // 1
-extern "C" void indexToPtr__12J3DModelDataFv(); // 1
-extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf(); // 1
-extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo(); // 1
-extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo(); // 1
-extern "C" void clear__16J3DMaterialTableFv(); // 1
-extern "C" void __ct__16J3DMaterialTableFv(); // 1
-extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock(); // 1
-extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock(); // 1
-extern "C" void countUniqueMaterials__18J3DMaterialFactoryFv(); // 1
-extern "C" void create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl(); // 1
-extern "C" void modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali(); // 1
-extern "C" void __dt__11J3DMaterialFv(); // 1
-extern "C" void __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21(); // 1
-extern "C" void countUniqueMaterials__22J3DMaterialFactory_v21Fv(); // 1
-extern "C" void create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl(); // 1
-extern "C" void countMaterialNum__14J3DModelLoaderFPCv(); // 1
-extern "C" void calcLoadSize__14J3DModelLoaderFPCvUl(); // 1
-extern "C" void calcLoadMaterialTableSize__14J3DModelLoaderFPCv(); // 1
-extern "C" void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl(); // 1
-extern "C" void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl(); // 1
-extern "C" void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl(); // 1
-extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock(); // 1
-extern "C" void create__15J3DJointFactoryFi(); // 1
-extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock(); // 1
-extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList(); // 1
-extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSReport();
+extern "C" void setAnmTransform__10J3DMtxCalcFUcP15J3DAnmTransform();
+extern "C" void setAnmTransform__10J3DMtxCalcFP15J3DAnmTransform();
+extern "C" bool getAnmTransform__10J3DMtxCalcFUc();
+extern "C" bool getAnmTransform__10J3DMtxCalcFv();
+extern "C" void setWeight__10J3DMtxCalcFUcf();
+extern "C" void getWeight__10J3DMtxCalcCFUc();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" void func_802F4260();
+extern "C" void func_802F42C0();
+extern "C" void func_8030A530();
+extern "C" void func_8030A560();
+extern "C" void initialize__11J3DMaterialFv();
+extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
+extern "C" void sortVcdVatCmd__13J3DShapeTableFv();
+extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
+extern "C" void findImportantMtxIndex__12J3DJointTreeFv();
+extern "C" void clear__12J3DModelDataFv();
+extern "C" void __ct__12J3DModelDataFv();
+extern "C" void indexToPtr__12J3DModelDataFv();
+extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
+extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
+extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
+extern "C" void clear__16J3DMaterialTableFv();
+extern "C" void __ct__16J3DMaterialTableFv();
+extern "C" void __ct__18J3DMaterialFactoryFRC16J3DMaterialBlock();
+extern "C" void __ct__18J3DMaterialFactoryFRC18J3DMaterialDLBlock();
+extern "C" void countUniqueMaterials__18J3DMaterialFactoryFv();
+extern "C" void create__18J3DMaterialFactoryCFP11J3DMaterialQ218J3DMaterialFactory12MaterialTypeiUl();
+extern "C" void modifyPatchedCurrentMtx__18J3DMaterialFactoryCFP11J3DMateriali();
+extern "C" void __dt__11J3DMaterialFv();
+extern "C" void __ct__22J3DMaterialFactory_v21FRC20J3DMaterialBlock_v21();
+extern "C" void countUniqueMaterials__22J3DMaterialFactory_v21Fv();
+extern "C" void create__22J3DMaterialFactory_v21CFP11J3DMaterialiUl();
+extern "C" void countMaterialNum__14J3DModelLoaderFPCv();
+extern "C" void calcLoadSize__14J3DModelLoaderFPCvUl();
+extern "C" void calcLoadMaterialTableSize__14J3DModelLoaderFPCv();
+extern "C" void calcLoadBinaryDisplayListSize__14J3DModelLoaderFPCvUl();
+extern "C" void calcSizeMaterial__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void calcSizeMaterialTable__18J3DModelLoader_v26FPC16J3DMaterialBlockUl();
+extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock();
+extern "C" void create__15J3DJointFactoryFi();
+extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList();
+extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+extern "C" void PSMTXCopy();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* data_803A3360[11];
 extern "C" extern void* __vt__19J3DMtxCalcNoAnmBase[11];
 extern "C" extern void* __vt__10J3DMtxCalc[11 + 1 /* padding */];

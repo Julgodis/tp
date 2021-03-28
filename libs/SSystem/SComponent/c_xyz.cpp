@@ -40,26 +40,30 @@ struct cXyz {
 // Forward References:
 // 
 
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 BaseX__4cXyz[12];
+extern "C" extern u8 BaseY__4cXyz[12];
+extern "C" extern u8 BaseZ__4cXyz[12];
 
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __ml__4cXyzCFRC3Vec(); // 1
-extern "C" void __dv__4cXyzCFf(); // 1
-extern "C" void getCrossProduct__4cXyzCFRC3Vec(); // 1
-extern "C" void outprod__4cXyzCFRC3Vec(); // 1
-extern "C" void norm__4cXyzCFv(); // 1
-extern "C" void normZP__4cXyzCFv(); // 1
-extern "C" void normZC__4cXyzCFv(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void normalizeRS__4cXyzFv(); // 1
-extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
-extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
-extern "C" void isZero__4cXyzCFv(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void __sinit_c_xyz_cpp(); // 1
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __ml__4cXyzCFRC3Vec();
+extern "C" void __dv__4cXyzCFf();
+extern "C" void getCrossProduct__4cXyzCFRC3Vec();
+extern "C" void outprod__4cXyzCFRC3Vec();
+extern "C" void norm__4cXyzCFv();
+extern "C" void normZP__4cXyzCFv();
+extern "C" void normZC__4cXyzCFv();
+extern "C" void normalize__4cXyzFv();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void normalizeRS__4cXyzFv();
+extern "C" bool __eq__4cXyzCFRC3Vec();
+extern "C" bool __ne__4cXyzCFRC3Vec();
+extern "C" void isZero__4cXyzCFv();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void atan2sY_XZ__4cXyzCFv();
+extern "C" void __sinit_c_xyz_cpp();
 extern "C" extern f32 Zero__4cXyz[3];
 extern "C" extern u8 BaseX__4cXyz[12];
 extern "C" extern u8 BaseY__4cXyz[12];
@@ -69,17 +73,19 @@ extern "C" extern u8 BaseZ__4cXyz[12];
 // External References:
 // 
 
-void cM_atan2s(f32, f32); // 2
+void cM_atan2s(f32, f32);
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECCrossProduct();
+extern "C" void __register_global_object();
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_epsilon;
 

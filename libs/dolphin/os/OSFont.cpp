@@ -12,9 +12,9 @@
 // 
 
 
-extern "C" static void GetFontCode(); // 1
-extern "C" void OSGetFontEncode(); // 1
-extern "C" static void ParseStringS(); // 1
+extern "C" static void GetFontCode();
+extern "C" void OSGetFontEncode();
+extern "C" static void ParseStringS();
 
 // 
 // External References:

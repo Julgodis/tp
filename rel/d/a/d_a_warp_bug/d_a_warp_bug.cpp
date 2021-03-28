@@ -60,22 +60,24 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daWarpBug_Draw(daWarpBug_c*); // 2
-static void daWarpBug_Execute(daWarpBug_c*); // 2
-static bool daWarpBug_IsDelete(daWarpBug_c*); // 2
-static void daWarpBug_Delete(daWarpBug_c*); // 2
-static void daWarpBug_Create(fopAc_ac_c*); // 2
+static void createSolidHeap(fopAc_ac_c*);
+static void daWarpBug_Draw(daWarpBug_c*);
+static void daWarpBug_Execute(daWarpBug_c*);
+static bool daWarpBug_IsDelete(daWarpBug_c*);
+static void daWarpBug_Delete(daWarpBug_c*);
+static void daWarpBug_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_WarpBug[12];
 
-extern "C" void create_init__11daWarpBug_cFv(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daWarpBug_Draw__FP11daWarpBug_c(); // 1
-extern "C" void draw__11daWarpBug_cFv(); // 1
-extern "C" static void daWarpBug_Execute__FP11daWarpBug_c(); // 1
-extern "C" static bool daWarpBug_IsDelete__FP11daWarpBug_c(); // 1
-extern "C" static void daWarpBug_Delete__FP11daWarpBug_c(); // 1
-extern "C" static void daWarpBug_Create__FP10fopAc_ac_c(); // 1
+extern "C" void create_init__11daWarpBug_cFv();
+extern "C" static void createSolidHeap__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" static void daWarpBug_Draw__FP11daWarpBug_c();
+extern "C" void draw__11daWarpBug_cFv();
+extern "C" static void daWarpBug_Execute__FP11daWarpBug_c();
+extern "C" static bool daWarpBug_IsDelete__FP11daWarpBug_c();
+extern "C" static void daWarpBug_Delete__FP11daWarpBug_c();
+extern "C" static void daWarpBug_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_WarpBug[12];
 
@@ -83,28 +85,32 @@ extern "C" extern void* g_profile_WarpBug[12];
 // External References:
 // 
 
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

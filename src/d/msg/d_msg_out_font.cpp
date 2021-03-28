@@ -54,46 +54,49 @@ struct COutFontSet_c {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_msg_d_msg_out_font__stringBase0;
 
-extern "C" void __ct__13COutFontSet_cFv(); // 1
-extern "C" void __dt__13COutFontSet_cFv(); // 1
-extern "C" void initialize__13COutFontSet_cFv(); // 1
-extern "C" void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc(); // 1
-extern "C" void __ct__10COutFont_cFUc(); // 1
-extern "C" void __dt__10COutFont_cFv(); // 1
-extern "C" void setPane__10COutFont_cFP10J2DPicture(); // 1
-extern "C" void createPane__10COutFont_cFv(); // 1
-extern "C" void initialize__10COutFont_cFv(); // 1
-extern "C" void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc(); // 1
-extern "C" void setAlphaRatio__10COutFont_cFf(); // 1
-extern "C" void draw__10COutFont_cFP10J2DTextBoxfff(); // 1
-extern "C" void reset__10COutFont_cFP10J2DTextBox(); // 1
-extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures(); // 1
-extern "C" void getBtiName__10COutFont_cFi(); // 1
+extern "C" void __ct__13COutFontSet_cFv();
+extern "C" void __dt__13COutFontSet_cFv();
+extern "C" void initialize__13COutFontSet_cFv();
+extern "C" void drawFont__13COutFontSet_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void __ct__10COutFont_cFUc();
+extern "C" void __dt__10COutFont_cFv();
+extern "C" void setPane__10COutFont_cFP10J2DPicture();
+extern "C" void createPane__10COutFont_cFv();
+extern "C" void initialize__10COutFont_cFv();
+extern "C" void drawFont__10COutFont_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void setAlphaRatio__10COutFont_cFf();
+extern "C" void draw__10COutFont_cFP10J2DTextBoxfff();
+extern "C" void reset__10COutFont_cFP10J2DTextBox();
+extern "C" void setBlendAnime__10COutFont_cFP10J2DPictures();
+extern "C" void getBtiName__10COutFont_cFi();
 extern "C" extern char const* const d_msg_d_msg_out_font__stringBase0;
 
 // 
 // External References:
 // 
 
-void fopMsgM_valueIncrease(int, int, u8); // 2
-void dMeter2Info_getNumberTextureName(int); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void fopMsgM_valueIncrease(int, int, u8);
+void dMeter2Info_getNumberTextureName(int);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
-extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
-extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void getParentPane__7J2DPaneFv(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fopMsgM_valueIncrease__FiiUc();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_MsgObject_HIO_c[1040];
 

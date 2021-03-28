@@ -31,19 +31,20 @@ namespace JGadget {
 // 
 
 
-extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 
 // 

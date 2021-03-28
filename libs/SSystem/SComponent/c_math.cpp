@@ -11,38 +11,39 @@
 // Forward References:
 // 
 
-void cM_rad2s(f32); // 2
-static void U_GetAtanTable(f32, f32); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_atan2f(f32, f32); // 2
-void cM_initRnd(int, int, int); // 2
-void cM_rnd(); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cM_initRnd2(int, int, int); // 2
-static void cM_rnd2(); // 2
-void cM_rndF2(f32); // 2
-void cM_rndFX2(f32); // 2
+void cM_rad2s(f32);
+static void U_GetAtanTable(f32, f32);
+void cM_atan2s(f32, f32);
+void cM_atan2f(f32, f32);
+void cM_initRnd(int, int, int);
+void cM_rnd();
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cM_initRnd2(int, int, int);
+static void cM_rnd2();
+void cM_rndF2(f32);
+void cM_rndFX2(f32);
 
-extern "C" void cM_rad2s__Ff(); // 1
-extern "C" static void U_GetAtanTable__Fff(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_atan2f__Fff(); // 1
-extern "C" void cM_initRnd__Fiii(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cM_initRnd2__Fiii(); // 1
-extern "C" static void cM_rnd2__Fv(); // 1
-extern "C" void cM_rndF2__Ff(); // 1
-extern "C" void cM_rndFX2__Ff(); // 1
+extern "C" void cM_rad2s__Ff();
+extern "C" static void U_GetAtanTable__Fff();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_atan2f__Fff();
+extern "C" void cM_initRnd__Fiii();
+extern "C" void cM_rnd__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cM_initRnd2__Fiii();
+extern "C" static void cM_rnd2__Fv();
+extern "C" void cM_rndF2__Ff();
+extern "C" void cM_rndFX2__Ff();
 
 // 
 // External References:
 // 
 
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void fmod(); // 1
+extern "C" void fmod();
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 // 

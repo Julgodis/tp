@@ -31,29 +31,33 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daAndsw_Execute(daAndsw_c*); // 2
-static void daAndsw_Delete(daAndsw_c*); // 2
-static void daAndsw_Create(fopAc_ac_c*); // 2
+static void daAndsw_Execute(daAndsw_c*);
+static void daAndsw_Delete(daAndsw_c*);
+static void daAndsw_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_ANDSW[12];
 
-extern "C" void Create__9daAndsw_cFv(); // 1
-extern "C" void create__9daAndsw_cFv(); // 1
-extern "C" void execute__9daAndsw_cFv(); // 1
-extern "C" bool _delete__9daAndsw_cFv(); // 1
-extern "C" static void daAndsw_Execute__FP9daAndsw_c(); // 1
-extern "C" static void daAndsw_Delete__FP9daAndsw_c(); // 1
-extern "C" static void daAndsw_Create__FP10fopAc_ac_c(); // 1
+extern "C" void Create__9daAndsw_cFv();
+extern "C" void create__9daAndsw_cFv();
+extern "C" void execute__9daAndsw_cFv();
+extern "C" bool _delete__9daAndsw_cFv();
+extern "C" static void daAndsw_Execute__FP9daAndsw_c();
+extern "C" static void daAndsw_Delete__FP9daAndsw_c();
+extern "C" static void daAndsw_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_ANDSW[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

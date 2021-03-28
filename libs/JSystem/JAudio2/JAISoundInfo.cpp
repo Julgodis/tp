@@ -21,16 +21,17 @@ struct JAISoundInfo {
 // 
 
 
-extern "C" void __ct__12JAISoundInfoFb(); // 1
-extern "C" void __dt__12JAISoundInfoFv(); // 1
+extern "C" void __ct__12JAISoundInfoFb();
+extern "C" void __dt__12JAISoundInfoFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B5C[4];
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 extern "C" extern u8 data_80450B5C[4];
 
 // 

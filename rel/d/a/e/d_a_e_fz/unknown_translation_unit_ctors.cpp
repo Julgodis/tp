@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_806C1924[2];
 
 extern void* const data_806C1924[2];
 
@@ -19,7 +20,7 @@ extern void* const data_806C1924[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_fz_cpp(); // 1
+extern "C" void __sinit_d_a_e_fz_cpp();
 
 // 
 // Declarations:

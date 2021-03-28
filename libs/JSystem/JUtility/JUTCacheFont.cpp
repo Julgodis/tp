@@ -103,77 +103,80 @@ struct JKRAram {
 // Forward References:
 // 
 
+extern "C" extern char const* const JUTCacheFont__stringBase0;
 
-extern "C" void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap(); // 1
-extern "C" void __dt__12JUTCacheFontFv(); // 1
-extern "C" void deleteMemBlocks_CacheFont__12JUTCacheFontFv(); // 1
-extern "C" void initialize_state__12JUTCacheFontFv(); // 1
-extern "C" void getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl(); // 1
-extern "C" void initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap(); // 1
-extern "C" void internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap(); // 1
-extern "C" void allocArea__12JUTCacheFontFPvUlP7JKRHeap(); // 1
-extern "C" void allocArray__12JUTCacheFontFP7JKRHeap(); // 1
-extern "C" void setBlock__12JUTCacheFontFv(); // 1
-extern "C" void determineBlankPage__12JUTCacheFontFv(); // 1
-extern "C" void getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi(); // 1
-extern "C" void loadImage__12JUTCacheFontFi11_GXTexMapID(); // 1
-extern "C" void loadCache_char_subroutine__12JUTCacheFontFPib(); // 1
-extern "C" void invalidiateAllCache__12JUTCacheFontFv(); // 1
-extern "C" void unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo(); // 1
-extern "C" void prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo(); // 1
-extern "C" void getResFont__10JUTResFontCFv(); // 1
-extern "C" void getFontType__10JUTResFontCFv(); // 1
-extern "C" void getLeading__10JUTResFontCFv(); // 1
-extern "C" void getWidth__10JUTResFontCFv(); // 1
-extern "C" void getAscent__10JUTResFontCFv(); // 1
-extern "C" void getDescent__10JUTResFontCFv(); // 1
-extern "C" void getHeight__10JUTResFontCFv(); // 1
+extern "C" void __ct__12JUTCacheFontFPC7ResFONTUlP7JKRHeap();
+extern "C" void __dt__12JUTCacheFontFv();
+extern "C" void deleteMemBlocks_CacheFont__12JUTCacheFontFv();
+extern "C" void initialize_state__12JUTCacheFontFv();
+extern "C" void getMemorySize__12JUTCacheFontFPC7ResFONTPUsPUlPUsPUlPUsPUlPUl();
+extern "C" void initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap();
+extern "C" void internal_initiate__12JUTCacheFontFPC7ResFONTPvUlP7JKRHeap();
+extern "C" void allocArea__12JUTCacheFontFPvUlP7JKRHeap();
+extern "C" void allocArray__12JUTCacheFontFP7JKRHeap();
+extern "C" void setBlock__12JUTCacheFontFv();
+extern "C" void determineBlankPage__12JUTCacheFontFv();
+extern "C" void getGlyphFromAram__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfoPQ212JUTCacheFont10TCachePagePiPi();
+extern "C" void loadImage__12JUTCacheFontFi11_GXTexMapID();
+extern "C" void loadCache_char_subroutine__12JUTCacheFontFPib();
+extern "C" void invalidiateAllCache__12JUTCacheFontFv();
+extern "C" void unlink__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo();
+extern "C" void prepend__12JUTCacheFontFPQ212JUTCacheFont15TGlyphCacheInfo();
+extern "C" void getResFont__10JUTResFontCFv();
+extern "C" void getFontType__10JUTResFontCFv();
+extern "C" void getLeading__10JUTResFontCFv();
+extern "C" void getWidth__10JUTResFontCFv();
+extern "C" void getAscent__10JUTResFontCFv();
+extern "C" void getDescent__10JUTResFontCFv();
+extern "C" void getHeight__10JUTResFontCFv();
 extern "C" extern char const* const JUTCacheFont__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern void* const saoAboutEncoding___10JUTResFont[3];
+extern "C" extern u8 sAramObject__7JKRAram[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
-extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
-extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode(); // 1
-extern "C" void initialize_state__7JUTFontFv(); // 1
-extern "C" void __ct__10JUTResFontFv(); // 1
-extern "C" void __dt__10JUTResFontFv(); // 1
-extern "C" void deleteMemBlocks_ResFont__10JUTResFontFv(); // 1
-extern "C" void initialize_state__10JUTResFontFv(); // 1
-extern "C" void setGX__10JUTResFontFv(); // 1
-extern "C" void setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void drawChar_scale__10JUTResFontFffffib(); // 1
-extern "C" void getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth(); // 1
-extern "C" void getCellWidth__10JUTResFontCFv(); // 1
-extern "C" void getCellHeight__10JUTResFontCFv(); // 1
-extern "C" void isLeadByte__10JUTResFontCFi(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void JUTReportConsole(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
+extern "C" void initialize_state__7JUTFontFv();
+extern "C" void __ct__10JUTResFontFv();
+extern "C" void __dt__10JUTResFontFv();
+extern "C" void deleteMemBlocks_ResFont__10JUTResFontFv();
+extern "C" void initialize_state__10JUTResFontFv();
+extern "C" void setGX__10JUTResFontFv();
+extern "C" void setGX__10JUTResFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void drawChar_scale__10JUTResFontFffffib();
+extern "C" void getWidthEntry__10JUTResFontCFiPQ27JUTFont6TWidth();
+extern "C" void getCellWidth__10JUTResFontCFv();
+extern "C" void getCellHeight__10JUTResFontCFv();
+extern "C" void isLeadByte__10JUTResFontCFi();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void JUTReportConsole();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* const saoAboutEncoding___10JUTResFont[3];
 extern "C" extern u8 sAramObject__7JKRAram[4];
 

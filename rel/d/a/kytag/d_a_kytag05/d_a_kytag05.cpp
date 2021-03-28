@@ -22,25 +22,28 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-static bool daKytag05_Draw(kytag05_class*); // 2
-static bool daKytag05_Execute(kytag05_class*); // 2
-static bool daKytag05_IsDelete(kytag05_class*); // 2
-static bool daKytag05_Delete(kytag05_class*); // 2
-static void daKytag05_Create(fopAc_ac_c*); // 2
+static bool daKytag05_Draw(kytag05_class*);
+static bool daKytag05_Execute(kytag05_class*);
+static bool daKytag05_IsDelete(kytag05_class*);
+static bool daKytag05_Delete(kytag05_class*);
+static void daKytag05_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG05[12];
 
-extern "C" static bool daKytag05_Draw__FP13kytag05_class(); // 1
-extern "C" static bool daKytag05_Execute__FP13kytag05_class(); // 1
-extern "C" static bool daKytag05_IsDelete__FP13kytag05_class(); // 1
-extern "C" static bool daKytag05_Delete__FP13kytag05_class(); // 1
-extern "C" static void daKytag05_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag05_Draw__FP13kytag05_class();
+extern "C" static bool daKytag05_Execute__FP13kytag05_class();
+extern "C" static bool daKytag05_IsDelete__FP13kytag05_class();
+extern "C" static bool daKytag05_Delete__FP13kytag05_class();
+extern "C" static void daKytag05_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG05[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 

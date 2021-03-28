@@ -26,89 +26,92 @@ struct cXyz {
 // Forward References:
 // 
 
-void cLib_memCpy(void*, void const*, u32); // 2
-void cLib_memSet(void*, int, u32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void cLib_addCalc0(f32*, f32, f32); // 2
-void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32); // 2
-void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32); // 2
-void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
-void cLib_addCalcPosXZ2(cXyz*, cXyz const&, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void cLib_chaseUC(u8*, u8, u8); // 2
-void cLib_chaseS(s16*, s16, s16); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_chasePos(cXyz*, cXyz const&, f32); // 2
-void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
-void cLib_chaseAngleS(s16*, s16, s16); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_targetAngleY(Vec const&, Vec const&); // 2
-void cLib_targetAngleX(cXyz const*, cXyz const*); // 2
-void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void MtxInit(); // 2
-void MtxTrans(f32, f32, f32, u8); // 2
-void MtxScale(f32, f32, f32, u8); // 2
-void MtxPosition(cXyz*, cXyz*); // 2
-void MtxPush(); // 2
-void MtxPull(); // 2
+void cLib_memCpy(void*, void const*, u32);
+void cLib_memSet(void*, int, u32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_addCalc0(f32*, f32, f32);
+void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
+void cLib_addCalcPosXZ2(cXyz*, cXyz const&, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_chaseUC(u8*, u8, u8);
+void cLib_chaseS(s16*, s16, s16);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_chasePos(cXyz*, cXyz const&, f32);
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32);
+void cLib_chaseAngleS(s16*, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_targetAngleY(Vec const&, Vec const&);
+void cLib_targetAngleX(cXyz const*, cXyz const*);
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
+void cLib_distanceAngleS(s16, s16);
+void MtxInit();
+void MtxTrans(f32, f32, f32, u8);
+void MtxScale(f32, f32, f32, u8);
+void MtxPosition(cXyz*, cXyz*);
+void MtxPush();
+void MtxPull();
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 
-extern "C" void cLib_memCpy__FPvPCvUl(); // 1
-extern "C" void cLib_memSet__FPviUl(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void cLib_addCalc0__FPfff(); // 1
-extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff(); // 1
-extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff(); // 1
-extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff(); // 1
-extern "C" void cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
-extern "C" void cLib_chaseS__FPsss(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_chasePos__FP4cXyzRC4cXyzf(); // 1
-extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf(); // 1
-extern "C" void cLib_chaseAngleS__FPsss(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_targetAngleY__FRC3VecRC3Vec(); // 1
-extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz(); // 1
-extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void MtxInit__Fv(); // 1
-extern "C" void MtxTrans__FfffUc(); // 1
-extern "C" void MtxScale__FfffUc(); // 1
-extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
-extern "C" void MtxPush__Fv(); // 1
-extern "C" void MtxPull__Fv(); // 1
+extern "C" void cLib_memCpy__FPvPCvUl();
+extern "C" void cLib_memSet__FPviUl();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_addCalcPosXZ2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void cLib_chaseS__FPsss();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_chasePos__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chaseAngleS__FPsss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_targetAngleY__FRC3VecRC3Vec();
+extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz();
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void MtxInit__Fv();
+extern "C" void MtxTrans__FfffUc();
+extern "C" void MtxScale__FfffUc();
+extern "C" void MtxPosition__FP4cXyzP4cXyz();
+extern "C" void MtxPush__Fv();
+extern "C" void MtxPull__Fv();
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void cM_atan2s(f32, f32); // 2
+void cM_atan2s(f32, f32);
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void normZP__4cXyzCFv(); // 1
-extern "C" bool __eq__4cXyzCFRC3Vec(); // 1
-extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void abs(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void normZP__4cXyzCFv();
+extern "C" bool __eq__4cXyzCFRC3Vec();
+extern "C" bool __ne__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void abs();
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 

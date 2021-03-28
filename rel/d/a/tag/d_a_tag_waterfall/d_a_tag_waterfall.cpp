@@ -41,61 +41,67 @@ struct daTagWaterFall_HIO_c {
 // Forward References:
 // 
 
-static void daTagWaterFall_Draw(daTagWaterFall_c*); // 2
-static void s_waterfall(void*, void*); // 2
-static void daTagWaterFall_Execute(daTagWaterFall_c*); // 2
-static bool daTagWaterFall_IsDelete(daTagWaterFall_c*); // 2
-static void daTagWaterFall_Delete(daTagWaterFall_c*); // 2
-static void daTagWaterFall_Create(daTagWaterFall_c*); // 2
+static void daTagWaterFall_Draw(daTagWaterFall_c*);
+static void s_waterfall(void*, void*);
+static void daTagWaterFall_Execute(daTagWaterFall_c*);
+static bool daTagWaterFall_IsDelete(daTagWaterFall_c*);
+static void daTagWaterFall_Delete(daTagWaterFall_c*);
+static void daTagWaterFall_Create(daTagWaterFall_c*);
+extern "C" extern void* g_profile_Tag_WaterFall[12];
 
-extern "C" void __ct__20daTagWaterFall_HIO_cFv(); // 1
-extern "C" bool draw__16daTagWaterFall_cFv(); // 1
-extern "C" static void daTagWaterFall_Draw__FP16daTagWaterFall_c(); // 1
-extern "C" static void s_waterfall__FPvPv(); // 1
-extern "C" void getEllipseY__16daTagWaterFall_cFf(); // 1
-extern "C" void checkHitWaterFall__16daTagWaterFall_cF4cXyz(); // 1
-extern "C" void checkHitWaterFallCamera__16daTagWaterFall_cFv(); // 1
-extern "C" void execute__16daTagWaterFall_cFv(); // 1
-extern "C" static void daTagWaterFall_Execute__FP16daTagWaterFall_c(); // 1
-extern "C" static bool daTagWaterFall_IsDelete__FP16daTagWaterFall_c(); // 1
-extern "C" void _delete__16daTagWaterFall_cFv(); // 1
-extern "C" static void daTagWaterFall_Delete__FP16daTagWaterFall_c(); // 1
-extern "C" void create__16daTagWaterFall_cFv(); // 1
-extern "C" static void daTagWaterFall_Create__FP16daTagWaterFall_c(); // 1
-extern "C" void __dt__20daTagWaterFall_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_tag_waterfall_cpp(); // 1
+extern "C" void __ct__20daTagWaterFall_HIO_cFv();
+extern "C" bool draw__16daTagWaterFall_cFv();
+extern "C" static void daTagWaterFall_Draw__FP16daTagWaterFall_c();
+extern "C" static void s_waterfall__FPvPv();
+extern "C" void getEllipseY__16daTagWaterFall_cFf();
+extern "C" void checkHitWaterFall__16daTagWaterFall_cF4cXyz();
+extern "C" void checkHitWaterFallCamera__16daTagWaterFall_cFv();
+extern "C" void execute__16daTagWaterFall_cFv();
+extern "C" static void daTagWaterFall_Execute__FP16daTagWaterFall_c();
+extern "C" static bool daTagWaterFall_IsDelete__FP16daTagWaterFall_c();
+extern "C" void _delete__16daTagWaterFall_cFv();
+extern "C" static void daTagWaterFall_Delete__FP16daTagWaterFall_c();
+extern "C" void create__16daTagWaterFall_cFv();
+extern "C" static void daTagWaterFall_Create__FP16daTagWaterFall_c();
+extern "C" void __dt__20daTagWaterFall_HIO_cFv();
+extern "C" void __sinit_d_a_tag_waterfall_cpp();
 extern "C" extern void* g_profile_Tag_WaterFall[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAc_IsActor(void*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcM_IsCreating(unsigned int); // 2
-void dKy_fog_startendz_set(f32, f32, f32); // 2
-void dKy_custom_colset(u8, u8, f32); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcM_IsCreating__FUi(); // 1
-extern "C" void dKy_fog_startendz_set__Ffff(); // 1
-extern "C" void dKy_custom_colset__FUcUcf(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void fopAc_IsActor(void*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcM_IsCreating(unsigned int);
+void dKy_fog_startendz_set(f32, f32, f32);
+void dKy_custom_colset(u8, u8, f32);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcM_IsCreating__FUi();
+extern "C" void dKy_fog_startendz_set__Ffff();
+extern "C" void dKy_custom_colset__FUcUcf();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

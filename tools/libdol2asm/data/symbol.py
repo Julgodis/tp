@@ -60,6 +60,7 @@ class Symbol:
     _translation_unit: str = None
     _section: str = None
 
+    demangled_name: NamedType = None
     references: Set[int] = field(default_factory=set)
 
     def __hash__(self):
@@ -113,12 +114,6 @@ class Symbol:
     def gather_references(self, context, valid_range):
         pass
 
-    def relocation_symbols(self, context, symbol_table, section):
-        return set()
-
-    def resolve_references(self, context, symbol_table, section):
-        pass
-
     def types(self):
         return set()
 
@@ -154,13 +149,6 @@ class Symbol:
                 assert False
         else:
             await builder.write_nonewline("extern \"C\" ")
-        """
-        elif self._section == ".sbss2":
-            # metrowerks cannot generate symbols in the .sbss2 section from code. Because it requries
-            # every constant symbol to be initialized. (.sbss2 hold constant uninitialized data)
-            # Thus, we force the compiler to put the symbol in the right place
-            await builder.write_nonewline("SECTION_SBSS2 ")
-        """
 
     async def export_section(self, builder: AsyncBuilder):
         section = ""
@@ -203,7 +191,7 @@ class Symbol:
     async def export_static(self, builder: AsyncBuilder):
         await builder.write_nonewline(f"static ")
 
-    async def export_readonly(self, builder: AsyncBuilder):
+    async def export_readonly(self, builder: AsyncBuilder): 
         if self._section == ".rodata":
             await builder.write_nonewline(f"const ")
         elif self._section == ".extab":

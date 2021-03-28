@@ -38,21 +38,22 @@ struct cM3dGCps {
 // 
 
 
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void __dt__8cM3dGCpsFv(); // 1
-extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf(); // 1
-extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS(); // 1
-extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps(); // 1
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
+extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS();
+extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGLin[3];
 
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__8cM3dGLin[3];
 
 // 

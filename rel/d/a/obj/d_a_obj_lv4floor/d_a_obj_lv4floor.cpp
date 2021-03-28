@@ -41,10 +41,10 @@ struct dSv_info_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -62,10 +62,10 @@ struct dRes_control_c {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -85,29 +85,32 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjLv4Floor_create1st(daObjLv4Floor_c*); // 2
-static void daObjLv4Floor_MoveBGDelete(daObjLv4Floor_c*); // 2
-static void daObjLv4Floor_MoveBGExecute(daObjLv4Floor_c*); // 2
-static void daObjLv4Floor_MoveBGDraw(daObjLv4Floor_c*); // 2
+static void daObjLv4Floor_create1st(daObjLv4Floor_c*);
+static void daObjLv4Floor_MoveBGDelete(daObjLv4Floor_c*);
+static void daObjLv4Floor_MoveBGExecute(daObjLv4Floor_c*);
+static void daObjLv4Floor_MoveBGDraw(daObjLv4Floor_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Lv4Floor[12];
 
-extern "C" void initBaseMtx__15daObjLv4Floor_cFv(); // 1
-extern "C" void setBaseMtx__15daObjLv4Floor_cFv(); // 1
-extern "C" void Create__15daObjLv4Floor_cFv(); // 1
-extern "C" void CreateHeap__15daObjLv4Floor_cFv(); // 1
-extern "C" void create1st__15daObjLv4Floor_cFv(); // 1
-extern "C" void Execute__15daObjLv4Floor_cFPPA3_A4_f(); // 1
-extern "C" void action__15daObjLv4Floor_cFv(); // 1
-extern "C" void mode_wait__15daObjLv4Floor_cFv(); // 1
-extern "C" void mode_init_move__15daObjLv4Floor_cFv(); // 1
-extern "C" void mode_move__15daObjLv4Floor_cFv(); // 1
-extern "C" void mode_init_dead__15daObjLv4Floor_cFv(); // 1
-extern "C" void mode_dead__15daObjLv4Floor_cFv(); // 1
-extern "C" void Draw__15daObjLv4Floor_cFv(); // 1
-extern "C" void Delete__15daObjLv4Floor_cFv(); // 1
-extern "C" static void daObjLv4Floor_create1st__FP15daObjLv4Floor_c(); // 1
-extern "C" static void daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c(); // 1
-extern "C" static void daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c(); // 1
-extern "C" static void daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c(); // 1
+extern "C" void initBaseMtx__15daObjLv4Floor_cFv();
+extern "C" void setBaseMtx__15daObjLv4Floor_cFv();
+extern "C" void Create__15daObjLv4Floor_cFv();
+extern "C" void CreateHeap__15daObjLv4Floor_cFv();
+extern "C" void create1st__15daObjLv4Floor_cFv();
+extern "C" void Execute__15daObjLv4Floor_cFPPA3_A4_f();
+extern "C" void action__15daObjLv4Floor_cFv();
+extern "C" void mode_wait__15daObjLv4Floor_cFv();
+extern "C" void mode_init_move__15daObjLv4Floor_cFv();
+extern "C" void mode_move__15daObjLv4Floor_cFv();
+extern "C" void mode_init_dead__15daObjLv4Floor_cFv();
+extern "C" void mode_dead__15daObjLv4Floor_cFv();
+extern "C" void Draw__15daObjLv4Floor_cFv();
+extern "C" void Delete__15daObjLv4Floor_cFv();
+extern "C" static void daObjLv4Floor_create1st__FP15daObjLv4Floor_c();
+extern "C" static void daObjLv4Floor_MoveBGDelete__FP15daObjLv4Floor_c();
+extern "C" static void daObjLv4Floor_MoveBGExecute__FP15daObjLv4Floor_c();
+extern "C" static void daObjLv4Floor_MoveBGDraw__FP15daObjLv4Floor_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Lv4Floor[12];
@@ -116,37 +119,44 @@ extern "C" extern void* g_profile_Obj_Lv4Floor[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_delete(fopAc_ac_c*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void cLib_chaseF(f32*, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 data_80C67E80[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

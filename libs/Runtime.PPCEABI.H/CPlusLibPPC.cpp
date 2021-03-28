@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __copy(); // 1
+extern "C" void __copy();
 
 // 
 // External References:

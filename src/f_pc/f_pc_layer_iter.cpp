@@ -33,37 +33,37 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
-void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*); // 2
-void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
-void fpcLyIt_AllJudge(void* (*)(void*, void*), void*); // 2
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*);
+void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*);
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*);
+void fpcLyIt_AllJudge(void* (*)(void*, void*), void*);
 
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
 
 // 
 // External References:
 // 
 
-void fpcLy_RootLayer(); // 2
-void fpcLy_SetCurrentLayer(layer_class*); // 2
-void fpcLy_CurrentLayer(); // 2
-void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
-void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*); // 2
-void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
-void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
+void fpcLy_RootLayer();
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLy_CurrentLayer();
+void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*);
+void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*);
+void cTgIt_MethodCall(create_tag_class*, method_filter*);
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
 
-extern "C" void fpcLy_RootLayer__Fv(); // 1
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
-extern "C" void fpcLy_CurrentLayer__Fv(); // 1
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
-extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
-extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void fpcLy_RootLayer__Fv();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

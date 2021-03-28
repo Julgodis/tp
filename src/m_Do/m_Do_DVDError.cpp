@@ -37,41 +37,42 @@ struct JKRHeap {
 // Forward References:
 // 
 
-void mDoDvdErr_ThdInit(); // 2
-void mDoDvdErr_ThdCleanup(); // 2
-static void mDoDvdErr_Watch(void*); // 2
-static void AlarmHandler(OSAlarm*, OSContext*); // 2
+void mDoDvdErr_ThdInit();
+void mDoDvdErr_ThdCleanup();
+static void mDoDvdErr_Watch(void*);
+static void AlarmHandler(OSAlarm*, OSContext*);
 
-extern "C" void mDoDvdErr_ThdInit__Fv(); // 1
-extern "C" void mDoDvdErr_ThdCleanup__Fv(); // 1
-extern "C" static void mDoDvdErr_Watch__FPv(); // 1
-extern "C" static void AlarmHandler__FP7OSAlarmP9OSContext(); // 1
+extern "C" void mDoDvdErr_ThdInit__Fv();
+extern "C" void mDoDvdErr_ThdCleanup__Fv();
+extern "C" static void mDoDvdErr_Watch__FPv();
+extern "C" static void AlarmHandler__FP7OSAlarmP9OSContext();
 
 // 
 // External References:
 // 
 
-void mDoExt_getAssertHeap(); // 2
+void mDoExt_getAssertHeap();
+extern "C" extern u8 data_80450C88[8];
 
-extern "C" void mDoExt_getAssertHeap__Fv(); // 1
-extern "C" void suspend__9mDoDvdThdFv(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetPeriodicAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_getAssertHeap__Fv();
+extern "C" void suspend__9mDoDvdThdFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void OSCreateAlarm();
+extern "C" void OSSetPeriodicAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCreateThread();
+extern "C" void OSCancelThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetThreadPriority();
+extern "C" void OSGetTime();
+extern "C" void DVDGetDriveStatus();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80450C88[8];
 
 // 

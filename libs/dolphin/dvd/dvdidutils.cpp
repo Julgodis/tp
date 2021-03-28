@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void DVDCompareDiskID(); // 1
+extern "C" void DVDCompareDiskID();
 
 // 
 // External References:
 // 
 
 
-extern "C" void strncmp(); // 1
+extern "C" void strncmp();
 
 // 
 // Declarations:

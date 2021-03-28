@@ -52,16 +52,19 @@ struct J3DJoint {
 // Forward References:
 // 
 
+extern "C" extern u8 mMtxBuffer__10J3DMtxCalc[4];
+extern "C" extern u8 mJoint__10J3DMtxCalc[4];
+extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
-extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf(); // 1
-extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf(); // 1
-extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo(); // 1
-extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo(); // 1
-extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo(); // 1
-extern "C" void appendChild__8J3DJointFP8J3DJoint(); // 1
-extern "C" void __ct__8J3DJointFv(); // 1
-extern "C" void entryIn__8J3DJointFv(); // 1
-extern "C" void recursiveCalc__8J3DJointFv(); // 1
+extern "C" void init__25J3DMtxCalcJ3DSysInitBasicFRC3VecRA3_A4_Cf();
+extern "C" void init__24J3DMtxCalcJ3DSysInitMayaFRC3VecRA3_A4_Cf();
+extern "C" void calcTransform__28J3DMtxCalcCalcTransformBasicFRC16J3DTransformInfo();
+extern "C" void calcTransform__32J3DMtxCalcCalcTransformSoftimageFRC16J3DTransformInfo();
+extern "C" void calcTransform__27J3DMtxCalcCalcTransformMayaFRC16J3DTransformInfo();
+extern "C" void appendChild__8J3DJointFP8J3DJoint();
+extern "C" void __ct__8J3DJointFv();
+extern "C" void entryIn__8J3DJointFv();
+extern "C" void recursiveCalc__8J3DJointFv();
 extern "C" extern u8 mMtxBuffer__10J3DMtxCalc[4];
 extern "C" extern u8 mJoint__10J3DMtxCalc[4];
 extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
@@ -70,18 +73,24 @@ extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 // External References:
 // 
 
-void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]); // 2
-void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]); // 2
-void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32); // 2
+void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]);
+void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]);
+void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32);
+extern "C" extern u8 const j3dDefaultTransformInfo[32];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 mCurrentS__6J3DSys[12];
+extern "C" extern u8 mParentS__6J3DSys[12];
+extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 
-extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f(); // 1
-extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f(); // 1
-extern "C" void setCurrentMtx__11J3DMaterialFv(); // 1
-extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
+extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
+extern "C" void setCurrentMtx__11J3DMaterialFv();
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern u8 const j3dDefaultTransformInfo[32];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mCurrentMtx__6J3DSys[48];

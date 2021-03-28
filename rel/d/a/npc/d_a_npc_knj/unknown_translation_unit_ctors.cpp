@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_80A454FC[2];
 
 extern void* const data_80A454FC[2];
 
@@ -19,7 +20,7 @@ extern void* const data_80A454FC[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_knj_cpp(); // 1
+extern "C" void __sinit_d_a_npc_knj_cpp();
 
 // 
 // Declarations:

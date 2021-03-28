@@ -44,36 +44,36 @@ struct cBgS_PolyPassChk {
 // 
 
 
-extern "C" void __ct__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __dt__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetArrow__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetBomb__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrBomb__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetBoomerang__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetRope__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetUnderwaterRoof__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetHorse__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetStatue__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrStatue__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetIronBall__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrIronBall__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __dt__16cBgS_PolyPassChkFv(); // 1
+extern "C" void __ct__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16dBgS_PolyPassChkFv();
+extern "C" void SetPassChkInfo__16dBgS_PolyPassChkFR16dBgS_PolyPassChk();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void ClrObj__16dBgS_PolyPassChkFv();
+extern "C" void SetCam__16dBgS_PolyPassChkFv();
+extern "C" void ClrCam__16dBgS_PolyPassChkFv();
+extern "C" void SetLink__16dBgS_PolyPassChkFv();
+extern "C" void ClrLink__16dBgS_PolyPassChkFv();
+extern "C" void SetArrow__16dBgS_PolyPassChkFv();
+extern "C" void SetBomb__16dBgS_PolyPassChkFv();
+extern "C" void ClrBomb__16dBgS_PolyPassChkFv();
+extern "C" void SetBoomerang__16dBgS_PolyPassChkFv();
+extern "C" void SetRope__16dBgS_PolyPassChkFv();
+extern "C" void SetUnderwaterRoof__16dBgS_PolyPassChkFv();
+extern "C" void SetHorse__16dBgS_PolyPassChkFv();
+extern "C" void ChkNoHorse__16dBgS_PolyPassChkFv();
+extern "C" void SetStatue__16dBgS_PolyPassChkFv();
+extern "C" void ClrStatue__16dBgS_PolyPassChkFv();
+extern "C" void SetIronBall__16dBgS_PolyPassChkFv();
+extern "C" void ClrIronBall__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16cBgS_PolyPassChkFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

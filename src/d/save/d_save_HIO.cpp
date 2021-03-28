@@ -129,71 +129,73 @@ struct dSvBit_HIO_c {
 // Forward References:
 // 
 
+extern "C" extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
 
-extern "C" void __ct__29dSvBit_childSwPerfectionHIO_cFv(); // 1
-extern "C" void init__29dSvBit_childSwPerfectionHIO_cFv(); // 1
-extern "C" void __ct__26dSvBit_childSwDungeonHIO_cFv(); // 1
-extern "C" void init__26dSvBit_childSwDungeonHIO_cFv(); // 1
-extern "C" void __ct__23dSvBit_childSwZoneHIO_cFv(); // 1
-extern "C" void init__23dSvBit_childSwZoneHIO_cFv(); // 1
-extern "C" void __ct__26dSvBit_childSwOneZoneHIO_cFv(); // 1
-extern "C" void init__26dSvBit_childSwOneZoneHIO_cFv(); // 1
-extern "C" void __ct__29dSvBit_childItPerfectionHIO_cFv(); // 1
-extern "C" void init__29dSvBit_childItPerfectionHIO_cFv(); // 1
-extern "C" void __ct__26dSvBit_childItDungeonHIO_cFv(); // 1
-extern "C" void init__26dSvBit_childItDungeonHIO_cFv(); // 1
-extern "C" void __ct__23dSvBit_childItZoneHIO_cFv(); // 1
-extern "C" void init__23dSvBit_childItZoneHIO_cFv(); // 1
-extern "C" void __ct__26dSvBit_childItOneZoneHIO_cFv(); // 1
-extern "C" void init__26dSvBit_childItOneZoneHIO_cFv(); // 1
-extern "C" void __ct__29dSvBit_childTbPerfectionHIO_cFv(); // 1
-extern "C" void init__29dSvBit_childTbPerfectionHIO_cFv(); // 1
-extern "C" void __ct__25dSvBit_childDarknessHIO_cFv(); // 1
-extern "C" void init__25dSvBit_childDarknessHIO_cFv(); // 1
-extern "C" void __ct__26dSvBit_childTransformHIO_cFv(); // 1
-extern "C" void init__26dSvBit_childTransformHIO_cFv(); // 1
-extern "C" void __ct__22dSvBit_childOtherHIO_cFv(); // 1
-extern "C" void init__22dSvBit_childOtherHIO_cFv(); // 1
-extern "C" void init__12dSvBit_HIO_cFv(); // 1
-extern "C" void __dt__22dSvBit_childOtherHIO_cFv(); // 1
-extern "C" void __dt__26dSvBit_childTransformHIO_cFv(); // 1
-extern "C" void __dt__25dSvBit_childDarknessHIO_cFv(); // 1
-extern "C" void __dt__29dSvBit_childTbPerfectionHIO_cFv(); // 1
-extern "C" void __dt__26dSvBit_childItOneZoneHIO_cFv(); // 1
-extern "C" void __dt__23dSvBit_childItZoneHIO_cFv(); // 1
-extern "C" void __dt__26dSvBit_childItDungeonHIO_cFv(); // 1
-extern "C" void __dt__29dSvBit_childItPerfectionHIO_cFv(); // 1
-extern "C" void __dt__26dSvBit_childSwOneZoneHIO_cFv(); // 1
-extern "C" void __dt__23dSvBit_childSwZoneHIO_cFv(); // 1
-extern "C" void __dt__26dSvBit_childSwDungeonHIO_cFv(); // 1
-extern "C" void __dt__29dSvBit_childSwPerfectionHIO_cFv(); // 1
-extern "C" void __sinit_d_save_HIO_cpp(); // 1
-extern "C" void __dt__12dSvBit_HIO_cFv(); // 1
-extern "C" void __dt__25dSvBit_childTreasureHIO_cFv(); // 1
-extern "C" void __dt__21dSvBit_childItemHIO_cFv(); // 1
-extern "C" void __dt__23dSvBit_childSwitchHIO_cFv(); // 1
+extern "C" void __ct__29dSvBit_childSwPerfectionHIO_cFv();
+extern "C" void init__29dSvBit_childSwPerfectionHIO_cFv();
+extern "C" void __ct__26dSvBit_childSwDungeonHIO_cFv();
+extern "C" void init__26dSvBit_childSwDungeonHIO_cFv();
+extern "C" void __ct__23dSvBit_childSwZoneHIO_cFv();
+extern "C" void init__23dSvBit_childSwZoneHIO_cFv();
+extern "C" void __ct__26dSvBit_childSwOneZoneHIO_cFv();
+extern "C" void init__26dSvBit_childSwOneZoneHIO_cFv();
+extern "C" void __ct__29dSvBit_childItPerfectionHIO_cFv();
+extern "C" void init__29dSvBit_childItPerfectionHIO_cFv();
+extern "C" void __ct__26dSvBit_childItDungeonHIO_cFv();
+extern "C" void init__26dSvBit_childItDungeonHIO_cFv();
+extern "C" void __ct__23dSvBit_childItZoneHIO_cFv();
+extern "C" void init__23dSvBit_childItZoneHIO_cFv();
+extern "C" void __ct__26dSvBit_childItOneZoneHIO_cFv();
+extern "C" void init__26dSvBit_childItOneZoneHIO_cFv();
+extern "C" void __ct__29dSvBit_childTbPerfectionHIO_cFv();
+extern "C" void init__29dSvBit_childTbPerfectionHIO_cFv();
+extern "C" void __ct__25dSvBit_childDarknessHIO_cFv();
+extern "C" void init__25dSvBit_childDarknessHIO_cFv();
+extern "C" void __ct__26dSvBit_childTransformHIO_cFv();
+extern "C" void init__26dSvBit_childTransformHIO_cFv();
+extern "C" void __ct__22dSvBit_childOtherHIO_cFv();
+extern "C" void init__22dSvBit_childOtherHIO_cFv();
+extern "C" void init__12dSvBit_HIO_cFv();
+extern "C" void __dt__22dSvBit_childOtherHIO_cFv();
+extern "C" void __dt__26dSvBit_childTransformHIO_cFv();
+extern "C" void __dt__25dSvBit_childDarknessHIO_cFv();
+extern "C" void __dt__29dSvBit_childTbPerfectionHIO_cFv();
+extern "C" void __dt__26dSvBit_childItOneZoneHIO_cFv();
+extern "C" void __dt__23dSvBit_childItZoneHIO_cFv();
+extern "C" void __dt__26dSvBit_childItDungeonHIO_cFv();
+extern "C" void __dt__29dSvBit_childItPerfectionHIO_cFv();
+extern "C" void __dt__26dSvBit_childSwOneZoneHIO_cFv();
+extern "C" void __dt__23dSvBit_childSwZoneHIO_cFv();
+extern "C" void __dt__26dSvBit_childSwDungeonHIO_cFv();
+extern "C" void __dt__29dSvBit_childSwPerfectionHIO_cFv();
+extern "C" void __sinit_d_save_HIO_cpp();
+extern "C" void __dt__12dSvBit_HIO_cFv();
+extern "C" void __dt__25dSvBit_childTreasureHIO_cFv();
+extern "C" void __dt__21dSvBit_childItemHIO_cFv();
+extern "C" void __dt__23dSvBit_childSwitchHIO_cFv();
 extern "C" extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
-extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
-extern "C" void isItem__12dSv_memBit_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
-extern "C" void isItem__12dSv_danBit_cCFi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void isItem__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void isItem__12dSv_danBit_cCFi();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

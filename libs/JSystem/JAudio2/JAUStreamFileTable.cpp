@@ -34,24 +34,25 @@ struct JAIStreamDataMgr {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
 
-extern "C" void __ct__18JAUStreamFileTableFv(); // 1
-extern "C" void init__18JAUStreamFileTableFPCv(); // 1
-extern "C" void getNumFiles__18JAUStreamFileTableCFv(); // 1
-extern "C" void getFilePath__18JAUStreamFileTableCFi(); // 1
-extern "C" void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID(); // 1
-extern "C" void __dt__32JAUStreamDataMgr_StreamFileTableFv(); // 1
+extern "C" void __ct__18JAUStreamFileTableFv();
+extern "C" void init__18JAUStreamFileTableFPCv();
+extern "C" void getNumFiles__18JAUStreamFileTableCFv();
+extern "C" void getFilePath__18JAUStreamFileTableCFi();
+extern "C" void getStreamFileEntry__32JAUStreamDataMgr_StreamFileTableF10JAISoundID();
+extern "C" void __dt__32JAUStreamDataMgr_StreamFileTableFv();
 extern "C" extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void DVDConvertPathToEntrynum();
 
 // 
 // Declarations:

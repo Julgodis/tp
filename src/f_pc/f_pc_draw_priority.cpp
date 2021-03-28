@@ -18,13 +18,13 @@ struct draw_priority_class {
 // Forward References:
 // 
 
-void fpcDwPi_Get(draw_priority_class const*); // 2
-static void fpcDwPi_Set(draw_priority_class*, s16); // 2
-void fpcDwPi_Init(draw_priority_class*, s16); // 2
+void fpcDwPi_Get(draw_priority_class const*);
+static void fpcDwPi_Set(draw_priority_class*, s16);
+void fpcDwPi_Init(draw_priority_class*, s16);
 
-extern "C" void fpcDwPi_Get__FPC19draw_priority_class(); // 1
-extern "C" static void fpcDwPi_Set__FP19draw_priority_classs(); // 1
-extern "C" void fpcDwPi_Init__FP19draw_priority_classs(); // 1
+extern "C" void fpcDwPi_Get__FPC19draw_priority_class();
+extern "C" static void fpcDwPi_Set__FP19draw_priority_classs();
+extern "C" void fpcDwPi_Init__FP19draw_priority_classs();
 
 // 
 // External References:

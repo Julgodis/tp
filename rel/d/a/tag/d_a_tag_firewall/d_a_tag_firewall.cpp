@@ -37,13 +37,13 @@ struct dVibration_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -108,60 +108,71 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static bool daTag_FWall_Draw(daTag_FWall_c*); // 2
-static void daTag_FWall_Execute(daTag_FWall_c*); // 2
-static void daTag_FWall_IsDelete(daTag_FWall_c*); // 2
-static bool daTag_FWall_Delete(daTag_FWall_c*); // 2
-static void daTag_FWall_Create(daTag_FWall_c*); // 2
+static bool daTag_FWall_Draw(daTag_FWall_c*);
+static void daTag_FWall_Execute(daTag_FWall_c*);
+static void daTag_FWall_IsDelete(daTag_FWall_c*);
+static bool daTag_FWall_Delete(daTag_FWall_c*);
+static void daTag_FWall_Create(daTag_FWall_c*);
+extern "C" extern void* g_profile_Tag_FWall[12];
 
-extern "C" static bool daTag_FWall_Draw__FP13daTag_FWall_c(); // 1
-extern "C" void execute__13daTag_FWall_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daTag_FWall_Execute__FP13daTag_FWall_c(); // 1
-extern "C" bool _delete__13daTag_FWall_cFv(); // 1
-extern "C" static void daTag_FWall_IsDelete__FP13daTag_FWall_c(); // 1
-extern "C" static bool daTag_FWall_Delete__FP13daTag_FWall_c(); // 1
-extern "C" void create__13daTag_FWall_cFv(); // 1
-extern "C" void __dt__8dCcD_SphFv(); // 1
-extern "C" void __ct__8dCcD_SphFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static void daTag_FWall_Create__FP13daTag_FWall_c(); // 1
+extern "C" static bool daTag_FWall_Draw__FP13daTag_FWall_c();
+extern "C" void execute__13daTag_FWall_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" static void daTag_FWall_Execute__FP13daTag_FWall_c();
+extern "C" bool _delete__13daTag_FWall_cFv();
+extern "C" static void daTag_FWall_IsDelete__FP13daTag_FWall_c();
+extern "C" static bool daTag_FWall_Delete__FP13daTag_FWall_c();
+extern "C" void create__13daTag_FWall_cFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" static void daTag_FWall_Create__FP13daTag_FWall_c();
 extern "C" extern void* g_profile_Tag_FWall[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*); // 2
-void dCam_getBody(); // 2
-void cLib_chaseUC(u8*, u8, u8); // 2
-void operator delete(void*); // 2
+void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*);
+void dCam_getBody();
+void cLib_chaseUC(u8*, u8, u8);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void Eye__9dCamera_cFv(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _restgpr_16(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void dCam_getBody__Fv();
+extern "C" void Eye__9dCamera_cFv();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareMag();
+extern "C" void __construct_array();
+extern "C" void _savegpr_16();
+extern "C" void _restgpr_16();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];

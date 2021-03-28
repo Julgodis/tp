@@ -18,21 +18,21 @@ struct request_of_phase_process_class {
 // Forward References:
 // 
 
-void cPhs_Reset(request_of_phase_process_class*); // 2
-void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
-static void cPhs_UnCompleate(request_of_phase_process_class*); // 2
-static void cPhs_Compleate(request_of_phase_process_class*); // 2
-static void cPhs_Next(request_of_phase_process_class*); // 2
-void cPhs_Do(request_of_phase_process_class*, void*); // 2
-void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*); // 2
+void cPhs_Reset(request_of_phase_process_class*);
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*));
+static void cPhs_UnCompleate(request_of_phase_process_class*);
+static void cPhs_Compleate(request_of_phase_process_class*);
+static void cPhs_Next(request_of_phase_process_class*);
+void cPhs_Do(request_of_phase_process_class*, void*);
+void cPhs_Handler(request_of_phase_process_class*, int (**)(void*), void*);
 
-extern "C" void cPhs_Reset__FP30request_of_phase_process_class(); // 1
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
-extern "C" static void cPhs_UnCompleate__FP30request_of_phase_process_class(); // 1
-extern "C" static void cPhs_Compleate__FP30request_of_phase_process_class(); // 1
-extern "C" static void cPhs_Next__FP30request_of_phase_process_class(); // 1
-extern "C" void cPhs_Do__FP30request_of_phase_process_classPv(); // 1
-extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
+extern "C" void cPhs_Reset__FP30request_of_phase_process_class();
+extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+extern "C" static void cPhs_UnCompleate__FP30request_of_phase_process_class();
+extern "C" static void cPhs_Compleate__FP30request_of_phase_process_class();
+extern "C" static void cPhs_Next__FP30request_of_phase_process_class();
+extern "C" void cPhs_Do__FP30request_of_phase_process_classPv();
+extern "C" void cPhs_Handler__FP30request_of_phase_process_classPPFPv_iPv();
 
 // 
 // External References:

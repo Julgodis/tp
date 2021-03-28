@@ -85,70 +85,74 @@ struct JASCalc {
 // Forward References:
 // 
 
+extern "C" extern char const* const JASAiCtrl__stringBase0;
 
-extern "C" void initAI__9JASDriverFPFv_v(); // 1
-extern "C" void startDMA__9JASDriverFv(); // 1
-extern "C" void stopDMA__9JASDriverFv(); // 1
-extern "C" void setOutputRate__9JASDriverF13JASOutputRate(); // 1
-extern "C" void updateDac__9JASDriverFv(); // 1
-extern "C" void updateDSP__9JASDriverFv(); // 1
-extern "C" void readDspBuffer__9JASDriverFPsUl(); // 1
-extern "C" void finishDSPFrame__9JASDriverFv(); // 1
-extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode(); // 1
-extern "C" void getDacRate__9JASDriverFv(); // 1
-extern "C" void getSubFrames__9JASDriverFv(); // 1
-extern "C" void getDacSize__9JASDriverFv(); // 1
-extern "C" void getFrameSamples__9JASDriverFv(); // 1
-extern "C" void mixMonoTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" void mixExtraTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps(); // 1
-extern "C" void getSubFrameCounter__9JASDriverFv(); // 1
+extern "C" void initAI__9JASDriverFPFv_v();
+extern "C" void startDMA__9JASDriverFv();
+extern "C" void stopDMA__9JASDriverFv();
+extern "C" void setOutputRate__9JASDriverF13JASOutputRate();
+extern "C" void updateDac__9JASDriverFv();
+extern "C" void updateDSP__9JASDriverFv();
+extern "C" void readDspBuffer__9JASDriverFPsUl();
+extern "C" void finishDSPFrame__9JASDriverFv();
+extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode();
+extern "C" void getDacRate__9JASDriverFv();
+extern "C" void getSubFrames__9JASDriverFv();
+extern "C" void getDacSize__9JASDriverFv();
+extern "C" void getFrameSamples__9JASDriverFv();
+extern "C" void mixMonoTrack__9JASDriverFPsUlPFl_Ps();
+extern "C" void mixMonoTrackWide__9JASDriverFPsUlPFl_Ps();
+extern "C" void mixExtraTrack__9JASDriverFPsUlPFl_Ps();
+extern "C" void mixInterleaveTrack__9JASDriverFPsUlPFl_Ps();
+extern "C" void getSubFrameCounter__9JASDriverFv();
 extern "C" extern char const* const JASAiCtrl__stringBase0;
 
 // 
 // External References:
 // 
 
-void JASReport(char const*, ...); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
+void JASReport(char const*, ...);
+void* operator new[](u32, JKRHeap*, int);
+extern "C" extern u8 sFreeRunLfo__6JASLfo[24];
+extern "C" extern u8 JASDram[4];
+extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
-extern "C" void imixcopy__7JASCalcFPCsPCsPsUl(); // 1
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void func_8028F69C(); // 1
-extern "C" void start__8JASProbeFlPCc(); // 1
-extern "C" void stop__8JASProbeFl(); // 1
-extern "C" void JASReport__FPCce(); // 1
-extern "C" void execAllCommand__10JASPortCmdFv(); // 1
-extern "C" void initBankDisposeMsgQueue__10JASChannelFv(); // 1
-extern "C" void receiveBankDisposeMsg__10JASChannelFv(); // 1
-extern "C" void incCounter__6JASLfoFf(); // 1
-extern "C" void updateAll__13JASDSPChannelFv(); // 1
-extern "C" void killActiveChannel__13JASDSPChannelFv(); // 1
-extern "C" void syncFrame__6JASDspFUlUlUl(); // 1
-extern "C" void invalChannelAll__6JASDspFv(); // 1
-extern "C" void subframeCallback__9JASDriverFv(); // 1
-extern "C" void DSPSyncCallback__9JASDriverFv(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void AIRegisterDMACallback(); // 1
-extern "C" void AIInitDMA(); // 1
-extern "C" void AIStartDMA(); // 1
-extern "C" void AIStopDMA(); // 1
-extern "C" void AISetDSPSampleRate(); // 1
-extern "C" void AIInit(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void imixcopy__7JASCalcFPCsPCsPsUl();
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void func_8028F69C();
+extern "C" void start__8JASProbeFlPCc();
+extern "C" void stop__8JASProbeFl();
+extern "C" void JASReport__FPCce();
+extern "C" void execAllCommand__10JASPortCmdFv();
+extern "C" void initBankDisposeMsgQueue__10JASChannelFv();
+extern "C" void receiveBankDisposeMsg__10JASChannelFv();
+extern "C" void incCounter__6JASLfoFf();
+extern "C" void updateAll__13JASDSPChannelFv();
+extern "C" void killActiveChannel__13JASDSPChannelFv();
+extern "C" void syncFrame__6JASDspFUlUlUl();
+extern "C" void invalChannelAll__6JASDspFv();
+extern "C" void subframeCallback__9JASDriverFv();
+extern "C" void DSPSyncCallback__9JASDriverFv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void DCInvalidateRange();
+extern "C" void DCStoreRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSGetTick();
+extern "C" void AIRegisterDMACallback();
+extern "C" void AIInitDMA();
+extern "C" void AIStartDMA();
+extern "C" void AIStopDMA();
+extern "C" void AISetDSPSampleRate();
+extern "C" void AIInit();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sFreeRunLfo__6JASLfo[24];
 extern "C" extern u8 JASDram[4];
 extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];

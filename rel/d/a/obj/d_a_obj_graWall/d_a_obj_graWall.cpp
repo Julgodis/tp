@@ -75,44 +75,54 @@ struct cCcS {
 // Forward References:
 // 
 
-static void daObjGraWall_Execute(daObjGraWall_c*); // 2
-static bool daObjGraWall_IsDelete(daObjGraWall_c*); // 2
-static void daObjGraWall_Delete(daObjGraWall_c*); // 2
-static void daObjGraWall_create(fopAc_ac_c*); // 2
+static void daObjGraWall_Execute(daObjGraWall_c*);
+static bool daObjGraWall_IsDelete(daObjGraWall_c*);
+static void daObjGraWall_Delete(daObjGraWall_c*);
+static void daObjGraWall_create(fopAc_ac_c*);
+extern "C" extern void* g_profile_GRA_WALL[12];
 
-extern "C" void Create__14daObjGraWall_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void Execute__14daObjGraWall_cFv(); // 1
-extern "C" bool Delete__14daObjGraWall_cFv(); // 1
-extern "C" void col_init__14daObjGraWall_cFv(); // 1
-extern "C" void col_set__14daObjGraWall_cFv(); // 1
-extern "C" static void daObjGraWall_Execute__FP14daObjGraWall_c(); // 1
-extern "C" static bool daObjGraWall_IsDelete__FP14daObjGraWall_c(); // 1
-extern "C" static void daObjGraWall_Delete__FP14daObjGraWall_c(); // 1
-extern "C" static void daObjGraWall_create__FP10fopAc_ac_c(); // 1
+extern "C" void Create__14daObjGraWall_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__14daObjGraWall_cFv();
+extern "C" bool Delete__14daObjGraWall_cFv();
+extern "C" void col_init__14daObjGraWall_cFv();
+extern "C" void col_set__14daObjGraWall_cFv();
+extern "C" static void daObjGraWall_Execute__FP14daObjGraWall_c();
+extern "C" static bool daObjGraWall_IsDelete__FP14daObjGraWall_c();
+extern "C" static void daObjGraWall_Delete__FP14daObjGraWall_c();
+extern "C" static void daObjGraWall_create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_GRA_WALL[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void __dl__FPv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

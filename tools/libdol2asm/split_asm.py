@@ -340,6 +340,7 @@ class Dol2AsmSplitter:
                             #require_resolve.append((section, new_symbol))
 
     def resolve_symbols(self):
+        """
         print(f"{self.step_count:2} Resolve symbol references")
         self.step_count += 1
 
@@ -356,6 +357,7 @@ class Dol2AsmSplitter:
 
         for section, symbol in require_resolve:
             symbol.resolve_references(self.context, self.symbol_table, section)
+        """
 
     def validate_symbols(self):
         # TODO: Move

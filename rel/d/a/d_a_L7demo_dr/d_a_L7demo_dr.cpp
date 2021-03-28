@@ -17,10 +17,10 @@ struct stage_tgsc_class {
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -28,16 +28,16 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -127,33 +127,35 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-static void daDr_Draw(daDr_c*); // 2
-static void daDr_Execute(daDr_c*); // 2
-static bool daDr_IsDelete(daDr_c*); // 2
-static void daDr_Delete(daDr_c*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daDr_Create(daDr_c*); // 2
+static void daDr_Draw(daDr_c*);
+static void daDr_Execute(daDr_c*);
+static bool daDr_IsDelete(daDr_c*);
+static void daDr_Delete(daDr_c*);
+static void useHeapInit(fopAc_ac_c*);
+static void daDr_Create(daDr_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_DR[12];
 
-extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v(); // 1
-extern "C" void action__6daDr_cFv(); // 1
-extern "C" void mtx_set__6daDr_cFv(); // 1
-extern "C" void draw__6daDr_cFv(); // 1
-extern "C" static void daDr_Draw__FP6daDr_c(); // 1
-extern "C" void wait__6daDr_cFv(); // 1
-extern "C" void pl_walk__6daDr_cFv(); // 1
-extern "C" void pl_turn__6daDr_cFv(); // 1
-extern "C" void bridge_destroy__6daDr_cFv(); // 1
-extern "C" void bridge_destroy2__6daDr_cFv(); // 1
-extern "C" void execute__6daDr_cFv(); // 1
-extern "C" static void daDr_Execute__FP6daDr_c(); // 1
-extern "C" static bool daDr_IsDelete__FP6daDr_c(); // 1
-extern "C" void _delete__6daDr_cFv(); // 1
-extern "C" static void daDr_Delete__FP6daDr_c(); // 1
-extern "C" void CreateHeap__6daDr_cFv(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void check_start__6daDr_cFv(); // 1
-extern "C" void create__6daDr_cFv(); // 1
-extern "C" static void daDr_Create__FP6daDr_c(); // 1
+extern "C" void setAction__6daDr_cFM6daDr_cFPCvPv_v();
+extern "C" void action__6daDr_cFv();
+extern "C" void mtx_set__6daDr_cFv();
+extern "C" void draw__6daDr_cFv();
+extern "C" static void daDr_Draw__FP6daDr_c();
+extern "C" void wait__6daDr_cFv();
+extern "C" void pl_walk__6daDr_cFv();
+extern "C" void pl_turn__6daDr_cFv();
+extern "C" void bridge_destroy__6daDr_cFv();
+extern "C" void bridge_destroy2__6daDr_cFv();
+extern "C" void execute__6daDr_cFv();
+extern "C" static void daDr_Execute__FP6daDr_c();
+extern "C" static bool daDr_IsDelete__FP6daDr_c();
+extern "C" void _delete__6daDr_cFv();
+extern "C" static void daDr_Delete__FP6daDr_c();
+extern "C" void CreateHeap__6daDr_cFv();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" void check_start__6daDr_cFv();
+extern "C" void create__6daDr_cFv();
+extern "C" static void daDr_Create__FP6daDr_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_DR[12];
 
@@ -161,61 +163,66 @@ extern "C" extern void* g_profile_DR[12];
 // External References:
 // 
 
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
-void fopOvlpM_IsPeek(); // 2
-void fpcSch_JudgeForPName(void*, void*); // 2
-void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void* operator new(u32); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16);
+void fopOvlpM_IsPeek();
+void fpcSch_JudgeForPName(void*, void*);
+void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void* operator new(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
-extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
-extern "C" void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void Start__9dCamera_cFv(); // 1
-extern "C" void Stop__9dCamera_cFv(); // 1
-extern "C" void SetTrimSize__9dCamera_cFl(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyz(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__15Z2CreatureEnemyFv(); // 1
-extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fpcSch_JudgeForPName__FPvPv();
+extern "C" void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void Start__9dCamera_cFv();
+extern "C" void Stop__9dCamera_cFv();
+extern "C" void SetTrimSize__9dCamera_cFl();
+extern "C" void Set__9dCamera_cF4cXyz4cXyz();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__15Z2CreatureEnemyFv();
+extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc();
+extern "C" void* __nw__FUl();
+extern "C" void PSMTXCopy();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

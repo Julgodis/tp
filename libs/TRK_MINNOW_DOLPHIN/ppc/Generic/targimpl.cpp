@@ -11,36 +11,40 @@
 // Forward References:
 // 
 
+extern "C" extern u8 gTRKRestoreFlags[9 + 3 /* padding */];
+SECTION_BSS u8 TRK_saved_exceptionID[2 + 2 /* padding */];
+extern "C" extern u8 gTRKState[164];
+extern "C" extern u8 gTRKCPUState[1072];
 
-extern "C" void __TRK_get_MSR(); // 1
-extern "C" static void __TRK_set_MSR(); // 1
-extern "C" static void TRK_ppc_memcpy(); // 1
-extern "C" void TRKInterruptHandler(); // 1
-extern "C" static void TRKExceptionHandler(); // 1
-extern "C" void TRKSwapAndGo(); // 1
-extern "C" static void TRKInterruptHandlerEnableInterrupts(); // 1
-extern "C" static void ReadFPSCR(); // 1
-extern "C" static void WriteFPSCR(); // 1
-extern "C" void TRKTargetAccessARAM(); // 1
-extern "C" void TRKTargetSetInputPendingPtr(); // 1
-extern "C" void TRKTargetStop(); // 1
-extern "C" void TRKTargetSetStopped(); // 1
-extern "C" void TRKTargetStopped(); // 1
-extern "C" void TRKTargetSupportRequest(); // 1
-extern "C" void TRKTargetGetPC(); // 1
-extern "C" void TRKTargetStepOutOfRange(); // 1
-extern "C" void TRKTargetSingleStep(); // 1
-extern "C" void TRKTargetAddExceptionInfo(); // 1
-extern "C" void TRKTargetAddStopInfo(); // 1
-extern "C" void TRKTargetInterrupt(); // 1
-extern "C" static void TRKPostInterruptEvent(); // 1
-extern "C" void TRKTargetAccessExtended2(); // 1
-extern "C" void TRKTargetAccessExtended1(); // 1
-extern "C" void TRKTargetAccessFP(); // 1
-extern "C" void TRKTargetAccessDefault(); // 1
-extern "C" static void TRKTargetReadInstruction(); // 1
-extern "C" void TRKTargetAccessMemory(); // 1
-extern "C" static void TRKValidMemory32(); // 1
+extern "C" void __TRK_get_MSR();
+extern "C" static void __TRK_set_MSR();
+extern "C" static void TRK_ppc_memcpy();
+extern "C" void TRKInterruptHandler();
+extern "C" static void TRKExceptionHandler();
+extern "C" void TRKSwapAndGo();
+extern "C" static void TRKInterruptHandlerEnableInterrupts();
+extern "C" static void ReadFPSCR();
+extern "C" static void WriteFPSCR();
+extern "C" void TRKTargetAccessARAM();
+extern "C" void TRKTargetSetInputPendingPtr();
+extern "C" void TRKTargetStop();
+extern "C" void TRKTargetSetStopped();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetSupportRequest();
+extern "C" void TRKTargetGetPC();
+extern "C" void TRKTargetStepOutOfRange();
+extern "C" void TRKTargetSingleStep();
+extern "C" void TRKTargetAddExceptionInfo();
+extern "C" void TRKTargetAddStopInfo();
+extern "C" void TRKTargetInterrupt();
+extern "C" static void TRKPostInterruptEvent();
+extern "C" void TRKTargetAccessExtended2();
+extern "C" void TRKTargetAccessExtended1();
+extern "C" void TRKTargetAccessFP();
+extern "C" void TRKTargetAccessDefault();
+extern "C" static void TRKTargetReadInstruction();
+extern "C" void TRKTargetAccessMemory();
+extern "C" static void TRKValidMemory32();
 extern "C" extern u8 gTRKRestoreFlags[9 + 3 /* padding */];
 SECTION_BSS u8 TRK_saved_exceptionID[2 + 2 /* padding */];
 extern "C" extern u8 gTRKState[164];
@@ -51,27 +55,27 @@ extern "C" extern u8 gTRKCPUState[1072];
 // 
 
 
-SECTION_INIT void memset(); // 1
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKReadBuffer_ui32(); // 1
-extern "C" void TRKReadBuffer1_ui64(); // 1
-extern "C" void TRKAppendBuffer_ui32(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer1_ui64(); // 1
-extern "C" void HandlePositionFileSupportRequest(); // 1
-extern "C" void HandleCloseFileSupportRequest(); // 1
-extern "C" void HandleOpenFileSupportRequest(); // 1
-extern "C" void TRKSuppAccessFile(); // 1
-extern "C" void TRKDoNotifyStopped(); // 1
-extern "C" void TRK_flush_cache(); // 1
-extern "C" void TRKSaveExtended1Block(); // 1
-extern "C" void TRKRestoreExtended1Block(); // 1
-extern "C" void TRK__write_aram(); // 1
-extern "C" void TRK__read_aram(); // 1
-extern "C" void TRKTargetTranslate(); // 1
-extern "C" void TRKUARTInterruptHandler(); // 1
-extern "C" void MWTRACE(); // 1
+SECTION_INIT void memset();
+extern "C" void TRKConstructEvent();
+extern "C" void TRKPostEvent();
+extern "C" void TRKReadBuffer_ui32();
+extern "C" void TRKReadBuffer1_ui64();
+extern "C" void TRKAppendBuffer_ui32();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKAppendBuffer1_ui64();
+extern "C" void HandlePositionFileSupportRequest();
+extern "C" void HandleCloseFileSupportRequest();
+extern "C" void HandleOpenFileSupportRequest();
+extern "C" void TRKSuppAccessFile();
+extern "C" void TRKDoNotifyStopped();
+extern "C" void TRK_flush_cache();
+extern "C" void TRKSaveExtended1Block();
+extern "C" void TRKRestoreExtended1Block();
+extern "C" void TRK__write_aram();
+extern "C" void TRK__read_aram();
+extern "C" void TRKTargetTranslate();
+extern "C" void TRKUARTInterruptHandler();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

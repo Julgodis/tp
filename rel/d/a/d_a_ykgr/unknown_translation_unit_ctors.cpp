@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_805A8FA8[2];
 
 extern void* const data_805A8FA8[2];
 
@@ -19,7 +20,7 @@ extern void* const data_805A8FA8[2];
 // 
 
 
-extern "C" void __sinit_d_a_ykgr_cpp(); // 1
+extern "C" void __sinit_d_a_ykgr_cpp();
 
 // 
 // Declarations:

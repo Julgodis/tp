@@ -12,8 +12,8 @@
 // 
 
 
-extern "C" void __unregister_fragment(); // 1
-extern "C" void __register_fragment(); // 1
+extern "C" void __unregister_fragment();
+extern "C" void __register_fragment();
 
 // 
 // External References:

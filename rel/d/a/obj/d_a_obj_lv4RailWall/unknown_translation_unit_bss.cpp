@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern u8 data_80C61D38[4];
 
 extern "C" extern u8 data_80C61D38[4];
 

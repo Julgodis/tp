@@ -21,9 +21,9 @@ struct _GXColorS10 {
 // Forward References:
 // 
 
-void GFSetTevColorS10(_GXTevRegID, _GXColorS10); // 2
+void GFSetTevColorS10(_GXTevRegID, _GXColorS10);
 
-extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
+extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10();
 
 // 
 // External References:

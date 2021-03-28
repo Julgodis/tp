@@ -15,10 +15,10 @@ struct Vec {
 };
 
 struct JStage {
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -69,52 +69,54 @@ struct JStage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q26JStage7TCamera[37 + 1 /* padding */];
 
-extern "C" void __dt__Q26JStage7TCameraFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv(); // 1
-extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection(); // 1
-extern "C" void JSGGetProjectionNear__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionNear__Q26JStage7TCameraFf(); // 1
-extern "C" void JSGGetProjectionFar__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionFar__Q26JStage7TCameraFf(); // 1
-extern "C" void JSGGetProjectionFovy__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionFovy__Q26JStage7TCameraFf(); // 1
-extern "C" void JSGGetProjectionAspect__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionAspect__Q26JStage7TCameraFf(); // 1
-extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf(); // 1
-extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf(); // 1
-extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView(); // 1
-extern "C" void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec(); // 1
-extern "C" void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec(); // 1
-extern "C" void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec(); // 1
-extern "C" void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec(); // 1
-extern "C" void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec(); // 1
-extern "C" void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec(); // 1
-extern "C" void JSGGetViewRoll__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetViewRoll__Q26JStage7TCameraFf(); // 1
+extern "C" void __dt__Q26JStage7TCameraFv();
+extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv();
+extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
+extern "C" void JSGGetProjectionNear__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionNear__Q26JStage7TCameraFf();
+extern "C" void JSGGetProjectionFar__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionFar__Q26JStage7TCameraFf();
+extern "C" void JSGGetProjectionFovy__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionFovy__Q26JStage7TCameraFf();
+extern "C" void JSGGetProjectionAspect__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionAspect__Q26JStage7TCameraFf();
+extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf();
+extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf();
+extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
+extern "C" void JSGGetViewPosition__Q26JStage7TCameraCFP3Vec();
+extern "C" void JSGSetViewPosition__Q26JStage7TCameraFRC3Vec();
+extern "C" void JSGGetViewUpVector__Q26JStage7TCameraCFP3Vec();
+extern "C" void JSGSetViewUpVector__Q26JStage7TCameraFRC3Vec();
+extern "C" void JSGGetViewTargetPosition__Q26JStage7TCameraCFP3Vec();
+extern "C" void JSGSetViewTargetPosition__Q26JStage7TCameraFRC3Vec();
+extern "C" void JSGGetViewRoll__Q26JStage7TCameraCFv();
+extern "C" void JSGSetViewRoll__Q26JStage7TCameraFf();
 extern "C" extern void* __vt__Q26JStage7TCamera[37 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 __float_max;
 
-extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 extern "C" extern u32 __float_max;
 
 // 

@@ -64,36 +64,36 @@ struct JGeometry {
 struct J2DRotateAxis {
 };
 
-struct J2DGrafContext {
-	/* 802E8E20 */ void setScissor();
-	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DBasePosition {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmVtxColor {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DBasePosition {
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmBase {
 };
 
-struct J2DAnmColor {
-};
-
 struct J2DAnmTexPattern {
 };
 
-struct J2DAnmVisibilityFull {
+struct J2DGrafContext {
+	/* 802E8E20 */ void setScissor();
+	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
 struct J2DPane {
@@ -175,108 +175,110 @@ struct J2DDataManage {
 // 
 
 
-extern "C" void __ct__7J2DPaneFv(); // 1
-extern "C" void initiate__7J2DPaneFv(); // 1
-extern "C" void func_802F5D40(); // 1
-extern "C" void func_802F5DD0(); // 1
-extern "C" void func_802F5E88(); // 1
-extern "C" void func_802F5F08(); // 1
-extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc(); // 1
-extern "C" void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream(); // 1
-extern "C" void changeUseTrans__7J2DPaneFP7J2DPane(); // 1
-extern "C" void __dt__7J2DPaneFv(); // 1
-extern "C" void appendChild__7J2DPaneFP7J2DPane(); // 1
-extern "C" void insertChild__7J2DPaneFP7J2DPaneP7J2DPane(); // 1
-extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb(); // 1
-extern "C" void func_802F6D18(); // 1
-extern "C" void move__7J2DPaneFff(); // 1
-extern "C" void add__7J2DPaneFff(); // 1
-extern "C" void resize__7J2DPaneFff(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void rotate__7J2DPaneFf(); // 1
-extern "C" void func_802F7264(); // 1
-extern "C" void search__7J2DPaneFUx(); // 1
-extern "C" void searchUserInfo__7J2DPaneFUx(); // 1
-extern "C" void isUsed__7J2DPaneFPC7ResTIMG(); // 1
-extern "C" void isUsed__7J2DPaneFPC7ResFONT(); // 1
-extern "C" void makeMatrix__7J2DPaneFffff(); // 1
-extern "C" void setCullBack__7J2DPaneF11_GXCullMode(); // 1
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
-extern "C" void setInfluencedAlpha__7J2DPaneFbb(); // 1
-extern "C" void getGlbVtx__7J2DPaneCFUc(); // 1
-extern "C" void getFirstChildPane__7J2DPaneFv(); // 1
-extern "C" void getNextChildPane__7J2DPaneFv(); // 1
-extern "C" void getParentPane__7J2DPaneFv(); // 1
-extern "C" void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream(); // 1
-extern "C" void J2DCast_F32_to_S16__7J2DPaneFfUc(); // 1
-extern "C" void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive(); // 1
-extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase(); // 1
-extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void clearAnmTransform__7J2DPaneFv(); // 1
-extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform(); // 1
-extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
-extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform(); // 1
-extern "C" void updateTransform__7J2DPaneFPC15J2DAnmTransform(); // 1
-extern "C" void drawSelf__7J2DPaneFffPA3_A4_f(); // 1
-extern "C" void rewriteAlpha__7J2DPaneFv(); // 1
-extern "C" void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor(); // 1
-extern "C" void setCullBack__7J2DPaneFb(); // 1
-extern "C" void setConnectParent__7J2DPaneFb(); // 1
-extern "C" void update__7J2DPaneFv(); // 1
-extern "C" void drawSelf__7J2DPaneFff(); // 1
-extern "C" void __sinit_J2DPane_cpp(); // 1
+extern "C" void __ct__7J2DPaneFv();
+extern "C" void initiate__7J2DPaneFv();
+extern "C" void func_802F5D40();
+extern "C" void func_802F5DD0();
+extern "C" void func_802F5E88();
+extern "C" void func_802F5F08();
+extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc();
+extern "C" void makePaneStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+extern "C" void changeUseTrans__7J2DPaneFP7J2DPane();
+extern "C" void __dt__7J2DPaneFv();
+extern "C" void appendChild__7J2DPaneFP7J2DPane();
+extern "C" void insertChild__7J2DPaneFP7J2DPaneP7J2DPane();
+extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb();
+extern "C" void func_802F6D18();
+extern "C" void move__7J2DPaneFff();
+extern "C" void add__7J2DPaneFff();
+extern "C" void resize__7J2DPaneFff();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void rotate__7J2DPaneFf();
+extern "C" void func_802F7264();
+extern "C" void search__7J2DPaneFUx();
+extern "C" void searchUserInfo__7J2DPaneFUx();
+extern "C" void isUsed__7J2DPaneFPC7ResTIMG();
+extern "C" void isUsed__7J2DPaneFPC7ResFONT();
+extern "C" void makeMatrix__7J2DPaneFffff();
+extern "C" void setCullBack__7J2DPaneF11_GXCullMode();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void setInfluencedAlpha__7J2DPaneFbb();
+extern "C" void getGlbVtx__7J2DPaneCFUc();
+extern "C" void getFirstChildPane__7J2DPaneFv();
+extern "C" void getNextChildPane__7J2DPaneFv();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void makePaneExStream__7J2DPaneFP7J2DPaneP20JSURandomInputStream();
+extern "C" void J2DCast_F32_to_S16__7J2DPaneFfUc();
+extern "C" void getPointer__7J2DPaneFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void clearAnmTransform__7J2DPaneFv();
+extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void updateTransform__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void drawSelf__7J2DPaneFffPA3_A4_f();
+extern "C" void rewriteAlpha__7J2DPaneFv();
+extern "C" void setAnimationVF__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimationVC__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setCullBack__7J2DPaneFb();
+extern "C" void setConnectParent__7J2DPaneFb();
+extern "C" void update__7J2DPaneFv();
+extern "C" void drawSelf__7J2DPaneFff();
+extern "C" void __sinit_J2DPane_cpp();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 
-extern "C" void setAlpha__7J2DPaneFUc(); // 1
-extern "C" void calcMtx__7J2DPaneFv(); // 1
-extern "C" void makeMatrix__7J2DPaneFff(); // 1
-extern "C" s32 getTypeID__7J2DPaneCFv(); // 1
-extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey(); // 1
-extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor(); // 1
-extern "C" void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
-extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void align__20JSURandomInputStreamFl(); // 1
-extern "C" void peek__20JSURandomInputStreamFPvl(); // 1
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
-extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive(); // 1
-extern "C" void setScissor__14J2DGrafContextFv(); // 1
-extern "C" void func_802E90C0(); // 1
-extern "C" void func_802E987C(); // 1
-extern "C" void get__13J2DDataManageFP14JSUInputStream(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void PSMTXScaleApply(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void setAlpha__7J2DPaneFUc();
+extern "C" void calcMtx__7J2DPaneFv();
+extern "C" void makeMatrix__7J2DPaneFff();
+extern "C" s32 getTypeID__7J2DPaneCFv();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey();
+extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor();
+extern "C" void setAnimation__7J2DPaneFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void align__20JSURandomInputStreamFl();
+extern "C" void peek__20JSURandomInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive();
+extern "C" void setScissor__14J2DGrafContextFv();
+extern "C" void func_802E90C0();
+extern "C" void func_802E987C();
+extern "C" void get__13J2DDataManageFP14JSUInputStream();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXRotRad();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXTransApply();
+extern "C" void PSMTXScaleApply();
+extern "C" void GXSetCullMode();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 

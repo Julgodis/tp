@@ -31,31 +31,35 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daSwTime_Execute(daSwTime_c*); // 2
-static void daSwTime_Delete(daSwTime_c*); // 2
-static void daSwTime_Create(daSwTime_c*); // 2
+static void daSwTime_Execute(daSwTime_c*);
+static void daSwTime_Delete(daSwTime_c*);
+static void daSwTime_Create(daSwTime_c*);
+extern "C" extern void* g_profile_SwTime[12];
 
-extern "C" void Create__10daSwTime_cFv(); // 1
-extern "C" void create__10daSwTime_cFv(); // 1
-extern "C" void execute__10daSwTime_cFv(); // 1
-extern "C" bool _delete__10daSwTime_cFv(); // 1
-extern "C" static void daSwTime_Execute__FP10daSwTime_c(); // 1
-extern "C" static void daSwTime_Delete__FP10daSwTime_c(); // 1
-extern "C" static void daSwTime_Create__FP10daSwTime_c(); // 1
+extern "C" void Create__10daSwTime_cFv();
+extern "C" void create__10daSwTime_cFv();
+extern "C" void execute__10daSwTime_cFv();
+extern "C" bool _delete__10daSwTime_cFv();
+extern "C" static void daSwTime_Execute__FP10daSwTime_c();
+extern "C" static void daSwTime_Delete__FP10daSwTime_c();
+extern "C" static void daSwTime_Create__FP10daSwTime_c();
 extern "C" extern void* g_profile_SwTime[12];
 
 // 
 // External References:
 // 
 
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

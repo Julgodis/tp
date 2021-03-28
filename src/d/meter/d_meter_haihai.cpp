@@ -15,10 +15,10 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmTransformKey {
 };
 
-struct J2DAnmTransformKey {
+struct J2DAnmTextureSRTKey {
 };
 
 struct J2DAnmColor {
@@ -85,50 +85,55 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_meter_d_meter_haihai__stringBase0;
 
-extern "C" void __ct__14dMeterHaihai_cFUc(); // 1
-extern "C" void __dt__14dMeterHaihai_cFv(); // 1
-extern "C" void _create__14dMeterHaihai_cFv(); // 1
-extern "C" void _execute__14dMeterHaihai_cFUl(); // 1
-extern "C" void draw__14dMeterHaihai_cFv(); // 1
-extern "C" void drawHaihai__14dMeterHaihai_cFUc(); // 1
-extern "C" void drawHaihai__14dMeterHaihai_cFUcffff(); // 1
-extern "C" void drawHaihaiLeft__14dMeterHaihai_cFff(); // 1
-extern "C" void drawHaihaiRight__14dMeterHaihai_cFff(); // 1
-extern "C" void drawHaihaiTop__14dMeterHaihai_cFff(); // 1
-extern "C" void drawHaihaiBottom__14dMeterHaihai_cFff(); // 1
-extern "C" void setScale__14dMeterHaihai_cFf(); // 1
-extern "C" void _delete__14dMeterHaihai_cFv(); // 1
-extern "C" void alphaAnimeHaihai__14dMeterHaihai_cFUl(); // 1
-extern "C" void updateHaihai__14dMeterHaihai_cFv(); // 1
-extern "C" void playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey(); // 1
-extern "C" void playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor(); // 1
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void __dt__14dMeterHaihai_cFv();
+extern "C" void _create__14dMeterHaihai_cFv();
+extern "C" void _execute__14dMeterHaihai_cFUl();
+extern "C" void draw__14dMeterHaihai_cFv();
+extern "C" void drawHaihai__14dMeterHaihai_cFUc();
+extern "C" void drawHaihai__14dMeterHaihai_cFUcffff();
+extern "C" void drawHaihaiLeft__14dMeterHaihai_cFff();
+extern "C" void drawHaihaiRight__14dMeterHaihai_cFff();
+extern "C" void drawHaihaiTop__14dMeterHaihai_cFff();
+extern "C" void drawHaihaiBottom__14dMeterHaihai_cFff();
+extern "C" void setScale__14dMeterHaihai_cFf();
+extern "C" void _delete__14dMeterHaihai_cFv();
+extern "C" void alphaAnimeHaihai__14dMeterHaihai_cFUl();
+extern "C" void updateHaihai__14dMeterHaihai_cFv();
+extern "C" void playBckAnime__14dMeterHaihai_cFP18J2DAnmTransformKey();
+extern "C" void playBtkAnime__14dMeterHaihai_cFP19J2DAnmTextureSRTKey();
+extern "C" void playBpkAnime__14dMeterHaihai_cFP11J2DAnmColor();
 extern "C" extern char const* const d_meter_d_meter_haihai__stringBase0;
 
 // 
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
 
-extern "C" bool isDead__11dMeterSub_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" bool isDead__11dMeterSub_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

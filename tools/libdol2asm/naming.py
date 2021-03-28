@@ -131,9 +131,39 @@ def nameFix(context, label_collisions, reference_collisions, dollar_names, symbo
             else:
                 symbol.identifier.override_name = f"{match.group(1)}_{match.group(2)}"
 
+    # TODO: Support demangled names for variables
+    """
+    if symbol.identifier.name and (not "@" in symbol.identifier.name) and not isinstance(symbol, Function):
+        try:
+            name = symbol.identifier.name
+            p = libdemangle.ParseCtx(name)
+            p.demangle_variable()
 
-    if (symbol.identifier.name and
-            (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
+            if len(p.to_str()) > 0 and p.to_str() != name:
+                #context.debug(p.to_str())
+
+                types = [
+                    type_from_demangled_param(x)
+                    for x in p.demangled
+                ]
+
+                valid = True
+                for type in types:
+                    if type == None:
+                        valid = False
+                        break
+
+                if valid: 
+                    symbol.demangled_name = named_type_from_qulified_name(p.full_name)
+        except Exception as e:
+            context.error(f"demangle error: '{name}'")
+            context.error(f"\t{e}")
+            context.error(f"\t{p.func_name}")
+            context.error(f"\t{p.class_name}")
+            context.error(f"\t{p.to_str()}")
+    """
+    
+    if (symbol.identifier.name and (not "@" in symbol.identifier.name) and isinstance(symbol, Function)):
         name = symbol.identifier.name
         try:
             p = libdemangle.ParseCtx(name)
@@ -176,7 +206,7 @@ def nameFix(context, label_collisions, reference_collisions, dollar_names, symbo
                     context.warning(
                         [x[1] for x in zip(types, p.demangled) if not x[0]])
 
-        except Exception as e:  # demangle.ParseError as e:
+        except Exception as e:
             context.error(f"demangle error: '{name}'")
             context.error(f"\t{e}")
             context.error(f"\t{p.func_name}")

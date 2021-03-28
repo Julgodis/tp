@@ -40,25 +40,26 @@ struct Vec {
 // 
 
 
-extern "C" void __ct__8cM3dGCylFPC4cXyzff(); // 1
-extern "C" void Set__8cM3dGCylFRC9cM3dGCylS(); // 1
-extern "C" void Set__8cM3dGCylFRC4cXyzff(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz(); // 1
-extern "C" void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz(); // 1
-extern "C" void calcMinMax__8cM3dGCylFP4cXyzP4cXyz(); // 1
+extern "C" void __ct__8cM3dGCylFPC4cXyzff();
+extern "C" void Set__8cM3dGCylFRC9cM3dGCylS();
+extern "C" void Set__8cM3dGCylFRC4cXyzff();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGSphP4cXyz();
+extern "C" void cross__8cM3dGCylCFPC8cM3dGCylP4cXyz();
+extern "C" void calcMinMax__8cM3dGCylFP4cXyzP4cXyz();
 
 // 
 // External References:
 // 
 
-void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*); // 2
-void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*); // 2
+void cM3d_Cross_CylSph(cM3dGCyl const*, cM3dGSph const*, Vec*, f32*);
+void cM3d_Cross_CylCyl(cM3dGCyl const*, cM3dGCyl const*, Vec*);
+extern "C" extern void* __vt__8cM3dGCyl[3];
 
-extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf(); // 1
-extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec(); // 1
+extern "C" void cM3d_Cross_CylSph__FPC8cM3dGCylPC8cM3dGSphP3VecPf();
+extern "C" void cM3d_Cross_CylCyl__FPC8cM3dGCylPC8cM3dGCylP3Vec();
 extern "C" extern void* __vt__8cM3dGCyl[3];
 
 // 

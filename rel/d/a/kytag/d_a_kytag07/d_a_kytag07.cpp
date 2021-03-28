@@ -25,35 +25,39 @@ struct LIGHT_INFLUENCE {
 // Forward References:
 // 
 
-static bool daKytag07_Draw(kytag07_class*); // 2
-static void daKytag07_Execute(kytag07_class*); // 2
-static void daKytag07_IsDelete(kytag07_class*); // 2
-static void daKytag07_Delete(kytag07_class*); // 2
-static void daKytag07_Create(fopAc_ac_c*); // 2
+static bool daKytag07_Draw(kytag07_class*);
+static void daKytag07_Execute(kytag07_class*);
+static void daKytag07_IsDelete(kytag07_class*);
+static void daKytag07_Delete(kytag07_class*);
+static void daKytag07_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG07[12];
 
-extern "C" static bool daKytag07_Draw__FP13kytag07_class(); // 1
-extern "C" static void daKytag07_Execute__FP13kytag07_class(); // 1
-extern "C" static void daKytag07_IsDelete__FP13kytag07_class(); // 1
-extern "C" static void daKytag07_Delete__FP13kytag07_class(); // 1
-extern "C" static void daKytag07_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag07_Draw__FP13kytag07_class();
+extern "C" static void daKytag07_Execute__FP13kytag07_class();
+extern "C" static void daKytag07_IsDelete__FP13kytag07_class();
+extern "C" static void daKytag07_Delete__FP13kytag07_class();
+extern "C" static void daKytag07_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG07[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopOvlpM_IsDoingReq(); // 2
-void dKy_plight_priority_set(LIGHT_INFLUENCE*); // 2
-void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopOvlpM_IsDoingReq();
+void dKy_plight_priority_set(LIGHT_INFLUENCE*);
+void dKy_plight_cut(LIGHT_INFLUENCE*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
-extern "C" void dKy_plight_priority_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopOvlpM_IsDoingReq__Fv();
+extern "C" void dKy_plight_priority_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void cLib_addCalc__FPfffff();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 struct_80450D64[4];

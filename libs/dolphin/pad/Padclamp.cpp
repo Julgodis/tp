@@ -12,10 +12,10 @@
 // 
 
 
-extern "C" static void ClampStick(); // 1
-extern "C" static void ClampCircle(); // 1
-extern "C" void PADClamp(); // 1
-extern "C" void PADClampCircle(); // 1
+extern "C" static void ClampStick();
+extern "C" static void ClampCircle();
+extern "C" void PADClamp();
+extern "C" void PADClampCircle();
 
 // 
 // External References:

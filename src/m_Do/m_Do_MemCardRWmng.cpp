@@ -21,46 +21,49 @@ struct CARDFileInfo {
 // Forward References:
 // 
 
-void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32); // 2
-void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32); // 2
-static void mDoMemCdRWm_BuildHeader(mDoMemCdRWm_HeaderData*); // 2
-static void mDoMemCdRWm_SetCardStat(CARDFileInfo*); // 2
-static void mDoMemCdRWm_CheckCardStat(CARDFileInfo*); // 2
-static void mDoMemCdRWm_CalcCheckSum(void*, u32); // 2
-static void mDoMemCdRWm_CalcCheckSumGameData(void*, u32); // 2
-void mDoMemCdRWm_TestCheckSumGameData(void*); // 2
-void mDoMemCdRWm_SetCheckSumGameData(u8*, u8); // 2
+void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32);
+void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32);
+static void mDoMemCdRWm_BuildHeader(mDoMemCdRWm_HeaderData*);
+static void mDoMemCdRWm_SetCardStat(CARDFileInfo*);
+static void mDoMemCdRWm_CheckCardStat(CARDFileInfo*);
+static void mDoMemCdRWm_CalcCheckSum(void*, u32);
+static void mDoMemCdRWm_CalcCheckSumGameData(void*, u32);
+void mDoMemCdRWm_TestCheckSumGameData(void*);
+void mDoMemCdRWm_SetCheckSumGameData(u8*, u8);
+extern "C" extern char const* const m_Do_m_Do_MemCardRWmng__stringBase0;
 
-extern "C" void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl(); // 1
-extern "C" void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl(); // 1
-extern "C" static void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData(); // 1
-extern "C" static void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo(); // 1
-extern "C" static void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo(); // 1
-extern "C" static void mDoMemCdRWm_CalcCheckSum__FPvUl(); // 1
-extern "C" static void mDoMemCdRWm_CalcCheckSumGameData__FPvUl(); // 1
-extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv(); // 1
-extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc(); // 1
+extern "C" void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
+extern "C" void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
+extern "C" static void mDoMemCdRWm_BuildHeader__FP22mDoMemCdRWm_HeaderData();
+extern "C" static void mDoMemCdRWm_SetCardStat__FP12CARDFileInfo();
+extern "C" static void mDoMemCdRWm_CheckCardStat__FP12CARDFileInfo();
+extern "C" static void mDoMemCdRWm_CalcCheckSum__FPvUl();
+extern "C" static void mDoMemCdRWm_CalcCheckSumGameData__FPvUl();
+extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv();
+extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
 extern "C" extern char const* const m_Do_m_Do_MemCardRWmng__stringBase0;
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 g_mDoMemCd_control[8192];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void CARDRead(); // 1
-extern "C" void CARDWrite(); // 1
-extern "C" void CARDGetStatus(); // 1
-extern "C" void CARDSetStatus(); // 1
-extern "C" void CARDGetSerialNo(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void snprintf(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void OSTicksToCalendarTime();
+extern "C" void CARDRead();
+extern "C" void CARDWrite();
+extern "C" void CARDGetStatus();
+extern "C" void CARDSetStatus();
+extern "C" void CARDGetSerialNo();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_28();
+extern "C" void snprintf();
 extern "C" extern u8 g_mDoMemCd_control[8192];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 

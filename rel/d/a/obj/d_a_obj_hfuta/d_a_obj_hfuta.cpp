@@ -43,10 +43,10 @@ struct dSv_event_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -64,12 +64,12 @@ struct dRes_control_c {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
-};
-
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 	/* 80C1EAFC */ ~csXyz();
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -89,28 +89,71 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjFuta_create1st(daObjFuta_c*); // 2
-static void daObjFuta_MoveBGDelete(daObjFuta_c*); // 2
-static void daObjFuta_MoveBGExecute(daObjFuta_c*); // 2
-static void daObjFuta_MoveBGDraw(daObjFuta_c*); // 2
+static void daObjFuta_create1st(daObjFuta_c*);
+static void daObjFuta_MoveBGDelete(daObjFuta_c*);
+static void daObjFuta_MoveBGExecute(daObjFuta_c*);
+static void daObjFuta_MoveBGDraw(daObjFuta_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Hfuta[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_80C1F2DC[4];
+extern "C" extern u8 data_80C1F2E0[4];
+extern "C" extern u8 data_80C1F2E4[4];
+extern "C" extern u8 data_80C1F2E8[4];
+extern "C" extern u8 data_80C1F2EC[4];
+extern "C" extern u8 data_80C1F2F0[4];
+extern "C" extern u8 data_80C1F2F4[4];
+extern "C" extern u8 data_80C1F2F8[4];
+extern "C" extern u8 data_80C1F2FC[4];
+extern "C" extern u8 data_80C1F300[4];
+extern "C" extern u8 data_80C1F304[4];
+extern "C" extern u8 data_80C1F308[4];
+extern "C" extern u8 data_80C1F30C[4];
+extern "C" extern u8 data_80C1F310[4];
+extern "C" extern u8 data_80C1F314[4];
+extern "C" extern u8 data_80C1F318[4];
+extern "C" extern u8 data_80C1F31C[4];
+extern "C" extern u8 data_80C1F320[4];
+extern "C" extern u8 data_80C1F324[4];
+extern "C" extern u8 data_80C1F328[4];
+extern "C" extern u8 data_80C1F32C[4];
+extern "C" extern u8 data_80C1F330[4];
+extern "C" extern u8 data_80C1F334[4];
+extern "C" extern u8 data_80C1F338[4];
+extern "C" extern u8 data_80C1F33C[4];
 
-extern "C" void initBaseMtx__11daObjFuta_cFv(); // 1
-extern "C" void setBaseMtx__11daObjFuta_cFv(); // 1
-extern "C" void Create__11daObjFuta_cFv(); // 1
-extern "C" void CreateHeap__11daObjFuta_cFv(); // 1
-extern "C" void create1st__11daObjFuta_cFv(); // 1
-extern "C" void Execute__11daObjFuta_cFPPA3_A4_f(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void mode_proc_call__11daObjFuta_cFv(); // 1
-extern "C" void mode_wait__11daObjFuta_cFv(); // 1
-extern "C" void mode_move__11daObjFuta_cFv(); // 1
-extern "C" void mode_end__11daObjFuta_cFv(); // 1
-extern "C" void Draw__11daObjFuta_cFv(); // 1
-extern "C" void Delete__11daObjFuta_cFv(); // 1
-extern "C" static void daObjFuta_create1st__FP11daObjFuta_c(); // 1
-extern "C" static void daObjFuta_MoveBGDelete__FP11daObjFuta_c(); // 1
-extern "C" static void daObjFuta_MoveBGExecute__FP11daObjFuta_c(); // 1
-extern "C" static void daObjFuta_MoveBGDraw__FP11daObjFuta_c(); // 1
+extern "C" void initBaseMtx__11daObjFuta_cFv();
+extern "C" void setBaseMtx__11daObjFuta_cFv();
+extern "C" void Create__11daObjFuta_cFv();
+extern "C" void CreateHeap__11daObjFuta_cFv();
+extern "C" void create1st__11daObjFuta_cFv();
+extern "C" void Execute__11daObjFuta_cFPPA3_A4_f();
+extern "C" void __dt__5csXyzFv();
+extern "C" void mode_proc_call__11daObjFuta_cFv();
+extern "C" void mode_wait__11daObjFuta_cFv();
+extern "C" void mode_move__11daObjFuta_cFv();
+extern "C" void mode_end__11daObjFuta_cFv();
+extern "C" void Draw__11daObjFuta_cFv();
+extern "C" void Delete__11daObjFuta_cFv();
+extern "C" static void daObjFuta_create1st__FP11daObjFuta_c();
+extern "C" static void daObjFuta_MoveBGDelete__FP11daObjFuta_c();
+extern "C" static void daObjFuta_MoveBGExecute__FP11daObjFuta_c();
+extern "C" static void daObjFuta_MoveBGDraw__FP11daObjFuta_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Hfuta[12];
@@ -159,45 +202,16 @@ extern "C" extern u8 data_80C1F33C[4];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
@@ -208,7 +222,46 @@ extern "C" extern f32 Zero__4cXyz[3];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 Zero__5csXyz[4];
 extern "C" extern u8 data_80451164[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 Zero__5csXyz[4];
+extern "C" extern u8 data_80451164[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

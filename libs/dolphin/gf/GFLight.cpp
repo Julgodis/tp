@@ -21,9 +21,9 @@ struct _GXChannelID {
 // Forward References:
 // 
 
-void GFSetChanAmbColor(_GXChannelID, _GXColor); // 2
+void GFSetChanAmbColor(_GXChannelID, _GXColor);
 
-extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor(); // 1
+extern "C" void GFSetChanAmbColor__F12_GXChannelID8_GXColor();
 
 // 
 // External References:

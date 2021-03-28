@@ -32,17 +32,25 @@ struct _GXColor {
 // Forward References:
 // 
 
-static bool daKytag16_Draw(kytag16_class*); // 2
-static void daKytag16_Execute(kytag16_class*); // 2
-static bool daKytag16_IsDelete(kytag16_class*); // 2
-static bool daKytag16_Delete(kytag16_class*); // 2
-static void daKytag16_Create(fopAc_ac_c*); // 2
+static bool daKytag16_Draw(kytag16_class*);
+static void daKytag16_Execute(kytag16_class*);
+static bool daKytag16_IsDelete(kytag16_class*);
+static bool daKytag16_Delete(kytag16_class*);
+static void daKytag16_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_3906;
+extern "C" extern u32 const lit_3907;
+extern "C" extern u32 const lit_3908;
+extern "C" extern u32 const lit_3909;
+extern "C" extern u32 const lit_3910;
+extern "C" extern u32 const lit_3911[1 + 1 /* padding */];
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_KYTAG16[12];
 
-extern "C" static bool daKytag16_Draw__FP13kytag16_class(); // 1
-extern "C" static void daKytag16_Execute__FP13kytag16_class(); // 1
-extern "C" static bool daKytag16_IsDelete__FP13kytag16_class(); // 1
-extern "C" static bool daKytag16_Delete__FP13kytag16_class(); // 1
-extern "C" static void daKytag16_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag16_Draw__FP13kytag16_class();
+extern "C" static void daKytag16_Execute__FP13kytag16_class();
+extern "C" static bool daKytag16_IsDelete__FP13kytag16_class();
+extern "C" static bool daKytag16_Delete__FP13kytag16_class();
+extern "C" static void daKytag16_Create__FP10fopAc_ac_c();
 extern "C" extern u32 const lit_3906;
 extern "C" extern u32 const lit_3907;
 extern "C" extern u32 const lit_3908;
@@ -56,20 +64,26 @@ extern "C" extern void* g_profile_KYTAG16[12];
 // External References:
 // 
 
-void dKy_getdaytime_hour(); // 2
-void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
-void cM_rndFX(f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void dKy_getdaytime_hour();
+void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
+void cM_rndFX(f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

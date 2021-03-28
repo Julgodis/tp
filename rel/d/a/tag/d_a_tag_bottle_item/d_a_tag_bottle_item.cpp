@@ -53,55 +53,59 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTag_BottleItem_Create(void*); // 2
-static void daTag_BottleItem_Delete(void*); // 2
-static void daTag_BottleItem_Execute(void*); // 2
-static void daTag_BottleItem_Draw(void*); // 2
-static bool daTag_BottleItem_IsDelete(void*); // 2
+static void daTag_BottleItem_Create(void*);
+static void daTag_BottleItem_Delete(void*);
+static void daTag_BottleItem_Execute(void*);
+static void daTag_BottleItem_Draw(void*);
+static bool daTag_BottleItem_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_BTLITM[12];
 
-extern "C" void create__18daTag_BottleItem_cFv(); // 1
-extern "C" bool Delete__18daTag_BottleItem_cFv(); // 1
-extern "C" void Execute__18daTag_BottleItem_cFv(); // 1
-extern "C" bool Draw__18daTag_BottleItem_cFv(); // 1
-extern "C" void setTypeFromParam__18daTag_BottleItem_cFv(); // 1
-extern "C" void restart__18daTag_BottleItem_cFv(); // 1
-extern "C" void initialize__18daTag_BottleItem_cFv(); // 1
-extern "C" void checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
-extern "C" void setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i(); // 1
-extern "C" void setAttnPos__18daTag_BottleItem_cFv(); // 1
-extern "C" void chkEvent__18daTag_BottleItem_cFv(); // 1
-extern "C" void orderEvent__18daTag_BottleItem_cFv(); // 1
-extern "C" void makeSoup__18daTag_BottleItem_cFv(); // 1
-extern "C" void wait__18daTag_BottleItem_cFPv(); // 1
-extern "C" static void daTag_BottleItem_Create__FPv(); // 1
-extern "C" static void daTag_BottleItem_Delete__FPv(); // 1
-extern "C" static void daTag_BottleItem_Execute__FPv(); // 1
-extern "C" static void daTag_BottleItem_Draw__FPv(); // 1
-extern "C" static bool daTag_BottleItem_IsDelete__FPv(); // 1
-extern "C" void __dt__18daTag_BottleItem_cFv(); // 1
+extern "C" void create__18daTag_BottleItem_cFv();
+extern "C" bool Delete__18daTag_BottleItem_cFv();
+extern "C" void Execute__18daTag_BottleItem_cFv();
+extern "C" bool Draw__18daTag_BottleItem_cFv();
+extern "C" void setTypeFromParam__18daTag_BottleItem_cFv();
+extern "C" void restart__18daTag_BottleItem_cFv();
+extern "C" void initialize__18daTag_BottleItem_cFv();
+extern "C" void checkProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i();
+extern "C" void setProcess__18daTag_BottleItem_cFM18daTag_BottleItem_cFPCvPvPv_i();
+extern "C" void setAttnPos__18daTag_BottleItem_cFv();
+extern "C" void chkEvent__18daTag_BottleItem_cFv();
+extern "C" void orderEvent__18daTag_BottleItem_cFv();
+extern "C" void makeSoup__18daTag_BottleItem_cFv();
+extern "C" void wait__18daTag_BottleItem_cFPv();
+extern "C" static void daTag_BottleItem_Create__FPv();
+extern "C" static void daTag_BottleItem_Delete__FPv();
+extern "C" static void daTag_BottleItem_Execute__FPv();
+extern "C" static void daTag_BottleItem_Draw__FPv();
+extern "C" static bool daTag_BottleItem_IsDelete__FPv();
+extern "C" void __dt__18daTag_BottleItem_cFv();
 extern "C" extern void* g_profile_TAG_BTLITM[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void isBottleItem(u8); // 2
-void operator delete(void*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void isBottleItem(u8);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
-extern "C" void isBottleItem__FUc(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+extern "C" void isBottleItem__FUc();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_cmpr();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

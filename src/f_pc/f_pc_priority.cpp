@@ -36,58 +36,59 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcPi_IsInQueue(process_priority_class*); // 2
-static void fpcPi_QueueTo(process_priority_class*); // 2
-static void fpcPi_ToQueue(process_priority_class*); // 2
-static void fpcPi_GetFromQueue(); // 2
-void fpcPi_Delete(process_priority_class*); // 2
-static void fpcPi_IsNormal(unsigned int, u16, u16); // 2
-void fpcPi_Change(process_priority_class*, unsigned int, u16, u16); // 2
-void fpcPi_Handler(); // 2
-void fpcPi_Init(process_priority_class*, void*, unsigned int, u16, u16); // 2
+void fpcPi_IsInQueue(process_priority_class*);
+static void fpcPi_QueueTo(process_priority_class*);
+static void fpcPi_ToQueue(process_priority_class*);
+static void fpcPi_GetFromQueue();
+void fpcPi_Delete(process_priority_class*);
+static void fpcPi_IsNormal(unsigned int, u16, u16);
+void fpcPi_Change(process_priority_class*, unsigned int, u16, u16);
+void fpcPi_Handler();
+void fpcPi_Init(process_priority_class*, void*, unsigned int, u16, u16);
+extern "C" extern u8 data_804505F0[8];
 
-extern "C" void fpcPi_IsInQueue__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_QueueTo__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_ToQueue__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_GetFromQueue__Fv(); // 1
-extern "C" void fpcPi_Delete__FP22process_priority_class(); // 1
-extern "C" static void fpcPi_IsNormal__FUiUsUs(); // 1
-extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs(); // 1
-extern "C" void fpcPi_Handler__Fv(); // 1
-extern "C" void fpcPi_Init__FP22process_priority_classPvUiUsUs(); // 1
+extern "C" void fpcPi_IsInQueue__FP22process_priority_class();
+extern "C" static void fpcPi_QueueTo__FP22process_priority_class();
+extern "C" static void fpcPi_ToQueue__FP22process_priority_class();
+extern "C" static void fpcPi_GetFromQueue__Fv();
+extern "C" void fpcPi_Delete__FP22process_priority_class();
+extern "C" static void fpcPi_IsNormal__FUiUsUs();
+extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs();
+extern "C" void fpcPi_Handler__Fv();
+extern "C" void fpcPi_Init__FP22process_priority_classPvUiUsUs();
 extern "C" extern u8 data_804505F0[8];
 
 // 
 // External References:
 // 
 
-void fpcLy_CancelQTo(process_method_tag_class*); // 2
-void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*); // 2
-void fpcLy_Layer(unsigned int); // 2
-void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16); // 2
-void fpcLnTg_Move(line_tag*, int); // 2
-void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
-void cTg_IsUse(create_tag_class*); // 2
-void cTg_GetFirst(node_list_class*); // 2
-void cTg_SingleCut(create_tag_class*); // 2
-void cTg_Addition(node_list_class*, create_tag_class*); // 2
-void cTg_Create(create_tag_class*, void*); // 2
+void fpcLy_CancelQTo(process_method_tag_class*);
+void fpcLy_ToCancelQ(layer_class*, process_method_tag_class*);
+void fpcLy_Layer(unsigned int);
+void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16);
+void fpcLnTg_Move(line_tag*, int);
+void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*);
+void cTg_IsUse(create_tag_class*);
+void cTg_GetFirst(node_list_class*);
+void cTg_SingleCut(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
 
-extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class(); // 1
-extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class(); // 1
-extern "C" void fpcLy_Layer__FUi(); // 1
-extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs(); // 1
-extern "C" void fpcLnTg_Move__FP8line_tagi(); // 1
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
-extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
-extern "C" void cTg_GetFirst__FP15node_list_class(); // 1
-extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
-extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void fpcLy_CancelQTo__FP24process_method_tag_class();
+extern "C" void fpcLy_ToCancelQ__FP11layer_classP24process_method_tag_class();
+extern "C" void fpcLy_Layer__FUi();
+extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLnTg_Move__FP8line_tagi();
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
+extern "C" void cTg_IsUse__FP16create_tag_class();
+extern "C" void cTg_GetFirst__FP15node_list_class();
+extern "C" void cTg_SingleCut__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:

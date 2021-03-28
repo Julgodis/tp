@@ -47,10 +47,10 @@ struct JASGenericMemPool {
 	/* 80290994 */ void free(void*, u32);
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JAIStreamMgr {
@@ -65,9 +65,6 @@ struct JAIStreamMgr {
 	/* 802A4174 */ void newStream_();
 };
 
-struct JAIAudience {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
@@ -75,6 +72,9 @@ struct JAISoundStrategyMgr__template2 {
 };
 
 struct JAISoundActivity {
+};
+
+struct JAIAudience {
 };
 
 struct JAIStream {
@@ -94,46 +94,51 @@ struct JAISound {
 // Forward References:
 // 
 
+extern "C" extern u8 data_804340FC[16 + 4 /* padding */];
 
-extern "C" void __ct__12JAIStreamMgrFb(); // 1
-extern "C" void func_802A3C3C(); // 1
-extern "C" void freeDeadStream___12JAIStreamMgrFv(); // 1
-extern "C" void func_802A3E68(); // 1
-extern "C" void calc__12JAIStreamMgrFv(); // 1
-extern "C" void stop__12JAIStreamMgrFv(); // 1
-extern "C" void stop__12JAIStreamMgrFUl(); // 1
-extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID(); // 1
-extern "C" void mixOut__12JAIStreamMgrFv(); // 1
-extern "C" void newStream___12JAIStreamMgrFv(); // 1
+extern "C" void __ct__12JAIStreamMgrFb();
+extern "C" void func_802A3C3C();
+extern "C" void freeDeadStream___12JAIStreamMgrFv();
+extern "C" void func_802A3E68();
+extern "C" void calc__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFUl();
+extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID();
+extern "C" void mixOut__12JAIStreamMgrFv();
+extern "C" void newStream___12JAIStreamMgrFv();
 extern "C" extern u8 data_804340FC[16 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__9JAIStream[12];
+extern "C" extern u8 data_80450B5C[4];
+extern "C" extern u8 data_80450B64[4];
+extern "C" extern u8 data_80451328[8];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void __dt__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void attachHandle__8JAISoundFP14JAISoundHandle(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" void func_802A3104(); // 1
-extern "C" void func_802A319C(); // 1
-extern "C" void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void JAIStreamMgr_calc___9JAIStreamFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" void func_802A3104();
+extern "C" void func_802A319C();
+extern "C" void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
+extern "C" void JAIStreamMgr_calc___9JAIStreamFv();
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__9JAIStream[12];
 extern "C" extern u8 data_80450B5C[4];
 extern "C" extern u8 data_80450B64[4];

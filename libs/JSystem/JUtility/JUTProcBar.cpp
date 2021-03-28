@@ -42,52 +42,62 @@ struct JKRHeap {
 // Forward References:
 // 
 
-static void addrToXPos(void*, int); // 2
-static void byteToXLen(int, int); // 2
-static void heapBar(JKRHeap*, int, int, int, int, int); // 2
+static void addrToXPos(void*, int);
+static void byteToXLen(int, int);
+static void heapBar(JKRHeap*, int, int, int, int, int);
+extern "C" extern u8 sManager__10JUTProcBar[4];
 
-extern "C" void __ct__10JUTProcBarFv(); // 1
-extern "C" void __dt__10JUTProcBarFv(); // 1
-extern "C" void create__10JUTProcBarFv(); // 1
-extern "C" void destroy__10JUTProcBarFv(); // 1
-extern "C" void clear__10JUTProcBarFv(); // 1
-extern "C" void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void adjustMeterLength__10JUTProcBarFUlPfffPi(); // 1
-extern "C" void draw__10JUTProcBarFv(); // 1
-extern "C" void drawProcessBar__10JUTProcBarFv(); // 1
-extern "C" static void addrToXPos__FPvi(); // 1
-extern "C" static void byteToXLen__Fii(); // 1
-extern "C" static void heapBar__FP7JKRHeapiiiii(); // 1
-extern "C" void drawHeapBar__10JUTProcBarFv(); // 1
-extern "C" void __ct__Q210JUTProcBar5CTimeFv(); // 1
+extern "C" void __ct__10JUTProcBarFv();
+extern "C" void __dt__10JUTProcBarFv();
+extern "C" void create__10JUTProcBarFv();
+extern "C" void destroy__10JUTProcBarFv();
+extern "C" void clear__10JUTProcBarFv();
+extern "C" void bar_subroutine__10JUTProcBarFiiiiiiiQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void adjustMeterLength__10JUTProcBarFUlPfffPi();
+extern "C" void draw__10JUTProcBarFv();
+extern "C" void drawProcessBar__10JUTProcBarFv();
+extern "C" static void addrToXPos__FPvi();
+extern "C" static void byteToXLen__Fii();
+extern "C" static void heapBar__FP7JKRHeapiiiii();
+extern "C" void drawHeapBar__10JUTProcBarFv();
+extern "C" void __ct__Q210JUTProcBar5CTimeFv();
 extern "C" extern u8 sManager__10JUTProcBar[4];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+void* operator new(u32);
+void operator delete(void*);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sRootHeap__7JKRHeap[4];
+extern "C" extern u8 mCodeStart__7JKRHeap[4];
+extern "C" extern u8 mCodeEnd__7JKRHeap[4];
+extern "C" extern u8 mUserRamStart__7JKRHeap[4];
+extern "C" extern u8 mUserRamEnd__7JKRHeap[4];
+extern "C" extern u8 mMemorySize__7JKRHeap[4];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+extern "C" void OSGetTick();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 extern "C" extern u8 sRootHeap__7JKRHeap[4];

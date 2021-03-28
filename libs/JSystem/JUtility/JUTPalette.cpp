@@ -33,10 +33,11 @@ struct JUTPalette {
 // Forward References:
 // 
 
+extern "C" extern char const* const JUTPalette__stringBase0;
 
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT(); // 1
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
-extern "C" void load__10JUTPaletteFv(); // 1
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+extern "C" void load__10JUTPaletteFv();
 extern "C" extern char const* const JUTPalette__stringBase0;
 
 // 
@@ -44,11 +45,11 @@ extern "C" extern char const* const JUTPalette__stringBase0;
 // 
 
 
-extern "C" void OSPanic(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void GXLoadTlut(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSPanic();
+extern "C" void GXInitTlutObj();
+extern "C" void GXLoadTlut();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

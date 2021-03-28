@@ -34,13 +34,13 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -82,22 +82,24 @@ struct cBgS {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
+extern "C" extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" bool CreateHeap__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f(); // 1
-extern "C" bool Draw__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Delete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" bool CreateHeap__16dBgS_MoveBgActorFv();
+extern "C" bool Create__16dBgS_MoveBgActorFv();
+extern "C" bool Execute__16dBgS_MoveBgActorFPPA3_A4_f();
+extern "C" bool Draw__16dBgS_MoveBgActorFv();
+extern "C" bool Delete__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreateHeap__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
 extern "C" extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 
@@ -105,26 +107,28 @@ extern "C" extern u8 m_set_func__16dBgS_MoveBgActor[4 + 4 /* padding */];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void* operator new(u32); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void* operator new(u32);
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+extern "C" void __ct__4dBgWFv();
+extern "C" void Move__4dBgWFv();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void* __nw__FUl();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 

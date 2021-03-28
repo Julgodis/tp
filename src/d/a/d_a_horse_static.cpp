@@ -29,14 +29,15 @@ struct Z2CreatureRide {
 // Forward References:
 // 
 
+extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 
-extern "C" void checkWait__10e_wb_classFv(); // 1
-extern "C" void setPlayerRideNow__10e_wb_classFv(); // 1
-extern "C" void setPlayerRide__10e_wb_classFv(); // 1
-extern "C" void getOff__10e_wb_classFv(); // 1
-extern "C" void checkDownDamage__10e_wb_classFv(); // 1
-extern "C" void checkNormalRideMode__10e_wb_classCFv(); // 1
-extern "C" void setRunRideMode__10e_wb_classFv(); // 1
+extern "C" void checkWait__10e_wb_classFv();
+extern "C" void setPlayerRideNow__10e_wb_classFv();
+extern "C" void setPlayerRide__10e_wb_classFv();
+extern "C" void getOff__10e_wb_classFv();
+extern "C" void checkDownDamage__10e_wb_classFv();
+extern "C" void checkNormalRideMode__10e_wb_classCFv();
+extern "C" void setRunRideMode__10e_wb_classFv();
 extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 
 // 
@@ -44,7 +45,7 @@ extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
 // 
 
 
-extern "C" void setLinkRiding__14Z2CreatureRideFb(); // 1
+extern "C" void setLinkRiding__14Z2CreatureRideFb();
 
 // 
 // Declarations:

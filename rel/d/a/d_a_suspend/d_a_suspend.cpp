@@ -27,19 +27,22 @@ struct daSus_c {
 // Forward References:
 // 
 
-static void daSus_create(daSus_c*); // 2
+static void daSus_create(daSus_c*);
+extern "C" extern void* g_profile_SUSPEND[12];
 
-extern "C" void create__7daSus_cFv(); // 1
-extern "C" static void daSus_create__FP7daSus_c(); // 1
+extern "C" void create__7daSus_cFv();
+extern "C" static void daSus_create__FP7daSus_c();
 extern "C" extern void* g_profile_SUSPEND[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 

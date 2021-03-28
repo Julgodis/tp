@@ -29,36 +29,39 @@ struct daTag_ShopCamera_c {
 // Forward References:
 // 
 
-static void daTag_ShopCamera_Create(void*); // 2
-static void daTag_ShopCamera_Delete(void*); // 2
-static void daTag_ShopCamera_Execute(void*); // 2
-static void daTag_ShopCamera_Draw(void*); // 2
-static bool daTag_ShopCamera_IsDelete(void*); // 2
+static void daTag_ShopCamera_Create(void*);
+static void daTag_ShopCamera_Delete(void*);
+static void daTag_ShopCamera_Execute(void*);
+static void daTag_ShopCamera_Draw(void*);
+static bool daTag_ShopCamera_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_SHOPCAM[12];
 
-extern "C" void create__18daTag_ShopCamera_cFv(); // 1
-extern "C" bool Delete__18daTag_ShopCamera_cFv(); // 1
-extern "C" bool Execute__18daTag_ShopCamera_cFv(); // 1
-extern "C" bool Draw__18daTag_ShopCamera_cFv(); // 1
-extern "C" void initialize__18daTag_ShopCamera_cFv(); // 1
-extern "C" static void daTag_ShopCamera_Create__FPv(); // 1
-extern "C" static void daTag_ShopCamera_Delete__FPv(); // 1
-extern "C" static void daTag_ShopCamera_Execute__FPv(); // 1
-extern "C" static void daTag_ShopCamera_Draw__FPv(); // 1
-extern "C" static bool daTag_ShopCamera_IsDelete__FPv(); // 1
-extern "C" void __dt__18daTag_ShopCamera_cFv(); // 1
+extern "C" void create__18daTag_ShopCamera_cFv();
+extern "C" bool Delete__18daTag_ShopCamera_cFv();
+extern "C" bool Execute__18daTag_ShopCamera_cFv();
+extern "C" bool Draw__18daTag_ShopCamera_cFv();
+extern "C" void initialize__18daTag_ShopCamera_cFv();
+extern "C" static void daTag_ShopCamera_Create__FPv();
+extern "C" static void daTag_ShopCamera_Delete__FPv();
+extern "C" static void daTag_ShopCamera_Execute__FPv();
+extern "C" static void daTag_ShopCamera_Draw__FPv();
+extern "C" static bool daTag_ShopCamera_IsDelete__FPv();
+extern "C" void __dt__18daTag_ShopCamera_cFv();
 extern "C" extern void* g_profile_TAG_SHOPCAM[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void __dl__FPv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 

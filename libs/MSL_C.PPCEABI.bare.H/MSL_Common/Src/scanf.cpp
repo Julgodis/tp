@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __StringRead(); // 1
+extern "C" void __StringRead();
 
 // 
 // External References:

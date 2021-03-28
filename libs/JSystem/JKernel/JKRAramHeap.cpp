@@ -61,41 +61,41 @@ struct JKRAramBlock {
 // 
 
 
-extern "C" void __ct__11JKRAramHeapFUlUl(); // 1
-extern "C" void __dt__11JKRAramHeapFv(); // 1
-extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode(); // 1
-extern "C" void allocFromHead__11JKRAramHeapFUl(); // 1
-extern "C" void allocFromTail__11JKRAramHeapFUl(); // 1
-extern "C" void getFreeSize__11JKRAramHeapFv(); // 1
-extern "C" void getTotalFreeSize__11JKRAramHeapFv(); // 1
-extern "C" void dump__11JKRAramHeapFv(); // 1
-extern "C" void __sinit_JKRAramHeap_cpp(); // 1
-extern "C" void func_802D32B0(); // 1
+extern "C" void __ct__11JKRAramHeapFUlUl();
+extern "C" void __dt__11JKRAramHeapFv();
+extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
+extern "C" void allocFromHead__11JKRAramHeapFUl();
+extern "C" void allocFromTail__11JKRAramHeapFUl();
+extern "C" void getFreeSize__11JKRAramHeapFv();
+extern "C" void getTotalFreeSize__11JKRAramHeapFv();
+extern "C" void dump__11JKRAramHeapFv();
+extern "C" void __sinit_JKRAramHeap_cpp();
+extern "C" void func_802D32B0();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
 
-extern "C" void findFromRoot__7JKRHeapFPv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__12JKRAramBlockFUlUlUlUcb(); // 1
-extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
-extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__12JKRAramBlockFUlUlUlUcb();
+extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

@@ -25,11 +25,12 @@ struct J3DUClipper {
 // Forward References:
 // 
 
+extern "C" extern char const* const J3DUClipper__stringBase0;
 
-extern "C" void init__11J3DUClipperFv(); // 1
-extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
-extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec(); // 1
+extern "C" void init__11J3DUClipperFv();
+extern "C" void calcViewFrustum__11J3DUClipperFv();
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
+extern "C" void clip__11J3DUClipperCFPA4_CfP3VecP3Vec();
 extern "C" extern char const* const J3DUClipper__stringBase0;
 
 // 
@@ -37,12 +38,12 @@ extern "C" extern char const* const J3DUClipper__stringBase0;
 // 
 
 
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void tan(); // 1
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECCrossProduct();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void tan();
 
 // 
 // Declarations:

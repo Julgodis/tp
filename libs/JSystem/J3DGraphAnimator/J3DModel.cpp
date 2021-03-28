@@ -122,97 +122,101 @@ struct J3DDisplayListObj {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__8J3DModel[9];
 
-extern "C" void initialize__8J3DModelFv(); // 1
-extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl(); // 1
-extern "C" void createShapePacket__8J3DModelFP12J3DModelData(); // 1
-extern "C" void createMatPacket__8J3DModelFP12J3DModelDataUl(); // 1
-extern "C" void newDifferedDisplayList__8J3DModelFUl(); // 1
-extern "C" void lock__8J3DModelFv(); // 1
-extern "C" void unlock__8J3DModelFv(); // 1
-extern "C" void calcMaterial__8J3DModelFv(); // 1
-extern "C" void calcDiffTexMtx__8J3DModelFv(); // 1
-extern "C" void diff__8J3DModelFv(); // 1
-extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl(); // 1
-extern "C" void setSkinDeform__8J3DModelFP13J3DSkinDeformUl(); // 1
-extern "C" void calcAnmMtx__8J3DModelFv(); // 1
-extern "C" void calcWeightEnvelopeMtx__8J3DModelFv(); // 1
-extern "C" void update__8J3DModelFv(); // 1
-extern "C" void calc__8J3DModelFv(); // 1
-extern "C" void entry__8J3DModelFv(); // 1
-extern "C" void viewCalc__8J3DModelFv(); // 1
-extern "C" void calcNrmMtx__8J3DModelFv(); // 1
-extern "C" void calcBumpMtx__8J3DModelFv(); // 1
-extern "C" void calcBBoardMtx__8J3DModelFv(); // 1
-extern "C" void prepareShapePackets__8J3DModelFv(); // 1
-extern "C" void __dt__8J3DModelFv(); // 1
-extern "C" void __dt__12J3DMtxBufferFv(); // 1
+extern "C" void initialize__8J3DModelFv();
+extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl();
+extern "C" void createShapePacket__8J3DModelFP12J3DModelData();
+extern "C" void createMatPacket__8J3DModelFP12J3DModelDataUl();
+extern "C" void newDifferedDisplayList__8J3DModelFUl();
+extern "C" void lock__8J3DModelFv();
+extern "C" void unlock__8J3DModelFv();
+extern "C" void calcMaterial__8J3DModelFv();
+extern "C" void calcDiffTexMtx__8J3DModelFv();
+extern "C" void diff__8J3DModelFv();
+extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl();
+extern "C" void setSkinDeform__8J3DModelFP13J3DSkinDeformUl();
+extern "C" void calcAnmMtx__8J3DModelFv();
+extern "C" void calcWeightEnvelopeMtx__8J3DModelFv();
+extern "C" void update__8J3DModelFv();
+extern "C" void calc__8J3DModelFv();
+extern "C" void entry__8J3DModelFv();
+extern "C" void viewCalc__8J3DModelFv();
+extern "C" void calcNrmMtx__8J3DModelFv();
+extern "C" void calcBumpMtx__8J3DModelFv();
+extern "C" void calcBBoardMtx__8J3DModelFv();
+extern "C" void prepareShapePackets__8J3DModelFv();
+extern "C" void __dt__8J3DModelFv();
+extern "C" void __dt__12J3DMtxBufferFv();
 extern "C" extern void* __vt__8J3DModel[9];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
-void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+void J3DCalcViewBaseMtx(f32 (* )[4], Vec const&, f32 const (& )[3][4], f32 (* )[4]);
+extern "C" extern u8 const j3dDefaultScale[12];
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData(); // 1
-extern "C" void __dt__15J3DVertexBufferFv(); // 1
-extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl(); // 1
-extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv(); // 1
-extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv(); // 1
-extern "C" void single_To_Double__17J3DDisplayListObjFv(); // 1
-extern "C" void newDisplayList__13J3DDrawPacketFUl(); // 1
-extern "C" void newSingleDisplayList__13J3DDrawPacketFUl(); // 1
-extern "C" void __ct__12J3DMatPacketFv(); // 1
-extern "C" void __dt__12J3DMatPacketFv(); // 1
-extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket(); // 1
-extern "C" void __ct__14J3DShapePacketFv(); // 1
-extern "C" void __dt__14J3DShapePacketFv(); // 1
-extern "C" void newDifferedDisplayList__14J3DShapePacketFUl(); // 1
-extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f(); // 1
-extern "C" void countDLSize__11J3DMaterialFv(); // 1
-extern "C" void newSharedDisplayList__11J3DMaterialFUl(); // 1
-extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl(); // 1
-extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
-extern "C" void initialize__12J3DMtxBufferFv(); // 1
-extern "C" void create__12J3DMtxBufferFP12J3DModelDataUl(); // 1
-extern "C" void calcWeightEnvelopeMtx__12J3DMtxBufferFv(); // 1
-extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf(); // 1
-extern "C" void calcNrmMtx__12J3DMtxBufferFv(); // 1
-extern "C" void calcBBoardMtx__12J3DMtxBufferFv(); // 1
-extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f(); // 1
-extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void deform__13J3DSkinDeformFP8J3DModel(); // 1
-extern "C" void calc__15J3DVtxColorCalcFP8J3DModel(); // 1
-extern "C" void offAllFlag__13J3DDeformDataFUl(); // 1
-extern "C" void deform__13J3DDeformDataFP8J3DModel(); // 1
-extern "C" void entryIn__8J3DJointFv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData();
+extern "C" void __dt__15J3DVertexBufferFv();
+extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl();
+extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv();
+extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
+extern "C" void single_To_Double__17J3DDisplayListObjFv();
+extern "C" void newDisplayList__13J3DDrawPacketFUl();
+extern "C" void newSingleDisplayList__13J3DDrawPacketFUl();
+extern "C" void __ct__12J3DMatPacketFv();
+extern "C" void __dt__12J3DMatPacketFv();
+extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+extern "C" void __ct__14J3DShapePacketFv();
+extern "C" void __dt__14J3DShapePacketFv();
+extern "C" void newDifferedDisplayList__14J3DShapePacketFUl();
+extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
+extern "C" void countDLSize__11J3DMaterialFv();
+extern "C" void newSharedDisplayList__11J3DMaterialFUl();
+extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl();
+extern "C" void syncJ3DSysFlags__12J3DModelDataCFv();
+extern "C" void initialize__12J3DMtxBufferFv();
+extern "C" void create__12J3DMtxBufferFP12J3DModelDataUl();
+extern "C" void calcWeightEnvelopeMtx__12J3DMtxBufferFv();
+extern "C" void calcDrawMtx__12J3DMtxBufferFUlRC3VecRA3_A4_Cf();
+extern "C" void calcNrmMtx__12J3DMtxBufferFv();
+extern "C" void calcBBoardMtx__12J3DMtxBufferFv();
+extern "C" void J3DCalcViewBaseMtx__FPA4_fRC3VecRA3_A4_CfPA4_f();
+extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
+extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
+extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData();
+extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData();
+extern "C" void deform__13J3DSkinDeformFP8J3DModel();
+extern "C" void calc__15J3DVtxColorCalcFP8J3DModel();
+extern "C" void offAllFlag__13J3DDeformDataFUl();
+extern "C" void deform__13J3DDeformDataFP8J3DModel();
+extern "C" void entryIn__8J3DJointFv();
+extern "C" void DCStoreRange();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const j3dDefaultScale[12];
 extern "C" extern u8 const j3dDefaultMtx[48];
 extern "C" extern u8 j3dSys[284];

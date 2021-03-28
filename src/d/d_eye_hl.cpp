@@ -33,12 +33,16 @@ struct JUTNameTab {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_eye_hl__stringBase0;
+extern "C" extern u8 struct_80450FB0[8];
+extern "C" extern u8 struct_80450FB8[4];
+extern "C" extern u8 struct_80450FBC[4];
 
-extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc(); // 1
-extern "C" void remove__8dEyeHL_cFv(); // 1
-extern "C" void update__12dEyeHL_mng_cFv(); // 1
-extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
-extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c(); // 1
+extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc();
+extern "C" void remove__8dEyeHL_cFv();
+extern "C" void update__12dEyeHL_mng_cFv();
+extern "C" void entry__12dEyeHL_mng_cFP8dEyeHL_c();
+extern "C" void remove__12dEyeHL_mng_cFP8dEyeHL_c();
 extern "C" extern char const* const d_d_eye_hl__stringBase0;
 extern "C" extern u8 struct_80450FB0[8];
 extern "C" extern u8 struct_80450FB8[4];
@@ -48,12 +52,14 @@ extern "C" extern u8 struct_80450FBC[4];
 // External References:
 // 
 
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_envHIO[68];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void OSReport_Error();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void strcmp();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_envHIO[68];
 

@@ -12,32 +12,33 @@
 // 
 
 
-extern "C" void TRKReadBuffer_ui32(); // 1
-extern "C" void TRKReadBuffer_ui8(); // 1
-extern "C" void TRKReadBuffer1_ui64(); // 1
-extern "C" void TRKAppendBuffer_ui32(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer1_ui64(); // 1
-extern "C" void TRKReadBuffer(); // 1
-extern "C" void TRKAppendBuffer(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKResetBuffer(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKInitializeMessageBuffers(); // 1
+extern "C" void TRKReadBuffer_ui32();
+extern "C" void TRKReadBuffer_ui8();
+extern "C" void TRKReadBuffer1_ui64();
+extern "C" void TRKAppendBuffer_ui32();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKAppendBuffer1_ui64();
+extern "C" void TRKReadBuffer();
+extern "C" void TRKAppendBuffer();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKResetBuffer();
+extern "C" void TRKReleaseBuffer();
+extern "C" void TRKGetBuffer();
+extern "C" void TRKGetFreeBuffer();
+extern "C" void TRKInitializeMessageBuffers();
 
 // 
 // External References:
 // 
 
+SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
-SECTION_INIT void TRK_memset(); // 1
-SECTION_INIT void TRK_memcpy(); // 1
-extern "C" void usr_puts_serial(); // 1
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
+SECTION_INIT void TRK_memset();
+SECTION_INIT void TRK_memcpy();
+extern "C" void usr_puts_serial();
+extern "C" bool TRKReleaseMutex();
+extern "C" bool TRKAcquireMutex();
+extern "C" bool TRKInitializeMutex();
 SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
 // 

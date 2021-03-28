@@ -26,18 +26,20 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void dKyeff_Draw(dKyeff_c*); // 2
-static void dKyeff_Execute(dKyeff_c*); // 2
-static bool dKyeff_IsDelete(dKyeff_c*); // 2
-static void dKyeff_Delete(dKyeff_c*); // 2
-static void dKyeff_Create(kankyo_class*); // 2
+static void dKyeff_Draw(dKyeff_c*);
+static void dKyeff_Execute(dKyeff_c*);
+static bool dKyeff_IsDelete(dKyeff_c*);
+static void dKyeff_Delete(dKyeff_c*);
+static void dKyeff_Create(kankyo_class*);
+extern "C" extern char const* const d_d_kyeff__stringBase0;
+extern "C" extern void* g_profile_KYEFF[10 + 1 /* padding */];
 
-extern "C" static void dKyeff_Draw__FP8dKyeff_c(); // 1
-extern "C" void execute__8dKyeff_cFv(); // 1
-extern "C" static void dKyeff_Execute__FP8dKyeff_c(); // 1
-extern "C" static bool dKyeff_IsDelete__FP8dKyeff_c(); // 1
-extern "C" static void dKyeff_Delete__FP8dKyeff_c(); // 1
-extern "C" static void dKyeff_Create__FP12kankyo_class(); // 1
+extern "C" static void dKyeff_Draw__FP8dKyeff_c();
+extern "C" void execute__8dKyeff_cFv();
+extern "C" static void dKyeff_Execute__FP8dKyeff_c();
+extern "C" static bool dKyeff_IsDelete__FP8dKyeff_c();
+extern "C" static void dKyeff_Delete__FP8dKyeff_c();
+extern "C" static void dKyeff_Create__FP12kankyo_class();
 extern "C" extern char const* const d_d_kyeff__stringBase0;
 extern "C" extern void* g_profile_KYEFF[10 + 1 /* padding */];
 
@@ -45,23 +47,28 @@ extern "C" extern void* g_profile_KYEFF[10 + 1 /* padding */];
 // External References:
 // 
 
-void dKyw_wether_init(); // 2
-void dKyw_wether_delete(); // 2
-void dKyw_wether_move(); // 2
-void dKyw_wether_move_draw(); // 2
-void dKyw_wether_draw(); // 2
-void dKy_FiveSenses_fullthrottle_dark(); // 2
+void dKyw_wether_init();
+void dKyw_wether_delete();
+void dKyw_wether_move();
+void dKyw_wether_move_draw();
+void dKyw_wether_draw();
+void dKy_FiveSenses_fullthrottle_dark();
+extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
 
-extern "C" void dKyw_wether_init__Fv(); // 1
-extern "C" void dKyw_wether_delete__Fv(); // 1
-extern "C" void dKyw_wether_move__Fv(); // 1
-extern "C" void dKyw_wether_move_draw__Fv(); // 1
-extern "C" void dKyw_wether_draw__Fv(); // 1
-extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv(); // 1
-extern "C" void framework__10Z2EnvSeMgrFv(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void dKyw_wether_init__Fv();
+extern "C" void dKyw_wether_delete__Fv();
+extern "C" void dKyw_wether_move__Fv();
+extern "C" void dKyw_wether_move_draw__Fv();
+extern "C" void dKyw_wether_draw__Fv();
+extern "C" void dKy_FiveSenses_fullthrottle_dark__Fv();
+extern "C" void framework__10Z2EnvSeMgrFv();
+extern "C" void OSGetTime();
+extern "C" void OSTicksToCalendarTime();
+extern "C" void strcmp();
 extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

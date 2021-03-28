@@ -40,29 +40,29 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__12dBgS_RoofChkFv(); // 1
-extern "C" void __dt__12dBgS_RoofChkFv(); // 1
-extern "C" void Init__12dBgS_RoofChkFv(); // 1
-extern "C" static void func_8007914C(); // 1
-extern "C" static void func_80079154(); // 1
-extern "C" static void func_8007915C(); // 1
+extern "C" void __ct__12dBgS_RoofChkFv();
+extern "C" void __dt__12dBgS_RoofChkFv();
+extern "C" void Init__12dBgS_RoofChkFv();
+extern "C" static void func_8007914C();
+extern "C" static void func_80079154();
+extern "C" static void func_8007915C();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __ct__8dBgS_ChkFv(); // 1
-extern "C" void __dt__8dBgS_ChkFv(); // 1
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

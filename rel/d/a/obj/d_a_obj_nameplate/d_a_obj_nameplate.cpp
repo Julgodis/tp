@@ -122,32 +122,34 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjNameplate_Draw(daObjNameplate_c*); // 2
-static void daObjNameplate_Execute(daObjNameplate_c*); // 2
-static bool daObjNameplate_IsDelete(daObjNameplate_c*); // 2
-static void daObjNameplate_Delete(daObjNameplate_c*); // 2
-static void daObjNameplate_Create(fopAc_ac_c*); // 2
+static void createSolidHeap(fopAc_ac_c*);
+static void daObjNameplate_Draw(daObjNameplate_c*);
+static void daObjNameplate_Execute(daObjNameplate_c*);
+static bool daObjNameplate_IsDelete(daObjNameplate_c*);
+static void daObjNameplate_Delete(daObjNameplate_c*);
+static void daObjNameplate_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_NamePlate[12];
 
-extern "C" void create_init__16daObjNameplate_cFv(); // 1
-extern "C" void initBaseMtx__16daObjNameplate_cFv(); // 1
-extern "C" void setBaseMtx__16daObjNameplate_cFv(); // 1
-extern "C" void initCcSphere__16daObjNameplate_cFv(); // 1
-extern "C" void setCcSphere__16daObjNameplate_cFv(); // 1
-extern "C" void calcAngle__16daObjNameplate_cFv(); // 1
-extern "C" void calcSpring__16daObjNameplate_cFv(); // 1
-extern "C" void checkHitAngle__16daObjNameplate_cFv(); // 1
-extern "C" void messageProc__16daObjNameplate_cFv(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjNameplate_Draw__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Execute__FP16daObjNameplate_c(); // 1
-extern "C" static bool daObjNameplate_IsDelete__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Delete__FP16daObjNameplate_c(); // 1
-extern "C" static void daObjNameplate_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" void create_init__16daObjNameplate_cFv();
+extern "C" void initBaseMtx__16daObjNameplate_cFv();
+extern "C" void setBaseMtx__16daObjNameplate_cFv();
+extern "C" void initCcSphere__16daObjNameplate_cFv();
+extern "C" void setCcSphere__16daObjNameplate_cFv();
+extern "C" void calcAngle__16daObjNameplate_cFv();
+extern "C" void calcSpring__16daObjNameplate_cFv();
+extern "C" void checkHitAngle__16daObjNameplate_cFv();
+extern "C" void messageProc__16daObjNameplate_cFv();
+extern "C" static void createSolidHeap__FP10fopAc_ac_c();
+extern "C" static void daObjNameplate_Draw__FP16daObjNameplate_c();
+extern "C" static void daObjNameplate_Execute__FP16daObjNameplate_c();
+extern "C" static bool daObjNameplate_IsDelete__FP16daObjNameplate_c();
+extern "C" static void daObjNameplate_Delete__FP16daObjNameplate_c();
+extern "C" static void daObjNameplate_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_NamePlate[12];
 
@@ -155,61 +157,73 @@ extern "C" extern void* g_profile_Obj_NamePlate[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_distanceAngleS(s16, s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void ChkCoHit__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void abs();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];

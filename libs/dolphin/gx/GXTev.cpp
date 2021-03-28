@@ -11,23 +11,26 @@
 // Forward References:
 // 
 
+extern "C" extern u8 TEVCOpTableST1[20];
+extern "C" extern u8 TEVAOpTableST0[20];
+extern "C" extern u8 TEVAOpTableST1[20];
 
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetZTexture(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
 extern "C" extern u8 TEVCOpTableST1[20];
 extern "C" extern u8 TEVAOpTableST0[20];
 extern "C" extern u8 TEVAOpTableST1[20];
@@ -36,6 +39,7 @@ extern "C" extern u8 TEVAOpTableST1[20];
 // External References:
 // 
 
+extern "C" extern void* __GXData;
 
 extern "C" extern void* __GXData;
 

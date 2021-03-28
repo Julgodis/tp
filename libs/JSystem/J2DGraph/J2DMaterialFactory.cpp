@@ -81,88 +81,100 @@ struct J2DDataManage {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template14(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template15(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template16(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template17(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template18(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template19(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template20(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template21(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template22(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template23(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template25(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template26(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template27(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template29(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template14(void const*, void const*);
+static void JSUConvertOffsetToPtr__template15(void const*, void const*);
+static void JSUConvertOffsetToPtr__template16(void const*, void const*);
+static void JSUConvertOffsetToPtr__template17(void const*, void const*);
+static void JSUConvertOffsetToPtr__template18(void const*, void const*);
+void JSUConvertOffsetToPtr__template19(void const*, void const*);
+static void JSUConvertOffsetToPtr__template20(void const*, void const*);
+static void JSUConvertOffsetToPtr__template21(void const*, void const*);
+static void JSUConvertOffsetToPtr__template22(void const*, void const*);
+static void JSUConvertOffsetToPtr__template23(void const*, void const*);
+void JSUConvertOffsetToPtr__template24(void const*, void const*);
+void JSUConvertOffsetToPtr__template25(void const*, void const*);
+void JSUConvertOffsetToPtr__template26(void const*, void const*);
+static void JSUConvertOffsetToPtr__template27(void const*, void const*);
+void JSUConvertOffsetToPtr__template28(void const*, void const*);
+static void JSUConvertOffsetToPtr__template29(void const*, void const*);
 
-extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock(); // 1
-extern "C" void countStages__18J2DMaterialFactoryCFi(); // 1
-extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive(); // 1
-extern "C" void newMatColor__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newColorChanNum__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newColorChan__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTexGenNum__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newTexCoord__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTexMtx__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newCullMode__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newTexNo__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newFontNo__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newTevOrder__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTevColor__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTevKColor__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTevStageNum__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newTevStage__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newTevSwapModeTable__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newIndTexStageNum__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newIndTexOrder__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newIndTexMtx__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newIndTevStage__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newIndTexCoordScale__18J2DMaterialFactoryCFii(); // 1
-extern "C" void newAlphaComp__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newBlend__18J2DMaterialFactoryCFi(); // 1
-extern "C" void newDither__18J2DMaterialFactoryCFi(); // 1
-extern "C" void __ct__11J2DTevStageFRC15J2DTevStageInfo(); // 1
-extern "C" static void func_802F4170(); // 1
-extern "C" static void func_802F4188(); // 1
-extern "C" static void func_802F41A0(); // 1
-extern "C" static void func_802F41B8(); // 1
-extern "C" static void func_802F41D0(); // 1
-extern "C" void func_802F41E8(); // 1
-extern "C" static void func_802F4200(); // 1
-extern "C" static void func_802F4218(); // 1
-extern "C" static void func_802F4230(); // 1
-extern "C" static void func_802F4248(); // 1
-extern "C" void func_802F4260(); // 1
-extern "C" void func_802F4278(); // 1
-extern "C" void func_802F4290(); // 1
-extern "C" static void func_802F42A8(); // 1
-extern "C" void func_802F42C0(); // 1
-extern "C" static void func_802F42D8(); // 1
+extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock();
+extern "C" void countStages__18J2DMaterialFactoryCFi();
+extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive();
+extern "C" void newMatColor__18J2DMaterialFactoryCFii();
+extern "C" void newColorChanNum__18J2DMaterialFactoryCFi();
+extern "C" void newColorChan__18J2DMaterialFactoryCFii();
+extern "C" void newTexGenNum__18J2DMaterialFactoryCFi();
+extern "C" void newTexCoord__18J2DMaterialFactoryCFii();
+extern "C" void newTexMtx__18J2DMaterialFactoryCFii();
+extern "C" void newCullMode__18J2DMaterialFactoryCFi();
+extern "C" void newTexNo__18J2DMaterialFactoryCFii();
+extern "C" void newFontNo__18J2DMaterialFactoryCFi();
+extern "C" void newTevOrder__18J2DMaterialFactoryCFii();
+extern "C" void newTevColor__18J2DMaterialFactoryCFii();
+extern "C" void newTevKColor__18J2DMaterialFactoryCFii();
+extern "C" void newTevStageNum__18J2DMaterialFactoryCFi();
+extern "C" void newTevStage__18J2DMaterialFactoryCFii();
+extern "C" void newTevSwapModeTable__18J2DMaterialFactoryCFii();
+extern "C" void newIndTexStageNum__18J2DMaterialFactoryCFi();
+extern "C" void newIndTexOrder__18J2DMaterialFactoryCFii();
+extern "C" void newIndTexMtx__18J2DMaterialFactoryCFii();
+extern "C" void newIndTevStage__18J2DMaterialFactoryCFii();
+extern "C" void newIndTexCoordScale__18J2DMaterialFactoryCFii();
+extern "C" void newAlphaComp__18J2DMaterialFactoryCFi();
+extern "C" void newBlend__18J2DMaterialFactoryCFi();
+extern "C" void newDither__18J2DMaterialFactoryCFi();
+extern "C" void __ct__11J2DTevStageFRC15J2DTevStageInfo();
+extern "C" static void func_802F4170();
+extern "C" static void func_802F4188();
+extern "C" static void func_802F41A0();
+extern "C" static void func_802F41B8();
+extern "C" static void func_802F41D0();
+extern "C" void func_802F41E8();
+extern "C" static void func_802F4200();
+extern "C" static void func_802F4218();
+extern "C" static void func_802F4230();
+extern "C" static void func_802F4248();
+extern "C" void func_802F4260();
+extern "C" void func_802F4278();
+extern "C" void func_802F4290();
+extern "C" static void func_802F42A8();
+extern "C" void func_802F42C0();
+extern "C" static void func_802F42D8();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
+void* operator new(u32);
+extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
+extern "C" extern u8 const j2dDefaultIndTevStageInfo[12];
+extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
+extern "C" extern u32 j2dDefaultTevOrderInfoNull;
+extern "C" extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
+extern "C" extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
+extern "C" extern u8 j2dDefaultTevSwapMode[4];
+extern "C" extern u32 j2dDefaultTevSwapModeTable;
+extern "C" extern u32 j2dDefaultBlendInfo;
+extern "C" extern u32 j2dDefaultColorChanInfo;
+extern "C" extern u8 struct_804561AC[4];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1
-extern "C" void calc__9J2DTexMtxFv(); // 1
-extern "C" void createTevBlock__11J2DMaterialFib(); // 1
-extern "C" void createIndBlock__11J2DMaterialFib(); // 1
-extern "C" void __ct__11J2DTevStageFv(); // 1
-extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo(); // 1
-extern "C" void get__13J2DDataManageFPCc(); // 1
-extern "C" void getResReference__15J2DResReferenceCFUs(); // 1
-extern "C" void getName__15J2DResReferenceCFUs(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
+extern "C" void calc__9J2DTexMtxFv();
+extern "C" void createTevBlock__11J2DMaterialFib();
+extern "C" void createIndBlock__11J2DMaterialFib();
+extern "C" void __ct__11J2DTevStageFv();
+extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo();
+extern "C" void get__13J2DDataManageFPCc();
+extern "C" void getResReference__15J2DResReferenceCFUs();
+extern "C" void getName__15J2DResReferenceCFUs();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
 extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
 extern "C" extern u8 const j2dDefaultIndTevStageInfo[12];

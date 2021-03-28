@@ -44,10 +44,10 @@ struct dSv_info_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -71,10 +71,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -88,37 +88,39 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void getStopName(); // 2
-static void daObjStopper2_Draw(daObjStopper2_c*); // 2
-static void daObjStopper2_Execute(daObjStopper2_c*); // 2
-static void daObjStopper2_Delete(daObjStopper2_c*); // 2
-static void daObjStopper2_Create(daObjStopper2_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+static void getStopName();
+static void daObjStopper2_Draw(daObjStopper2_c*);
+static void daObjStopper2_Execute(daObjStopper2_c*);
+static void daObjStopper2_Delete(daObjStopper2_c*);
+static void daObjStopper2_Create(daObjStopper2_c*);
+static void cLib_calcTimer__template0(u8*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Stopper2[12];
 
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void getStopName__Fv(); // 1
-extern "C" void getStopModelData__15daObjStopper2_cFv(); // 1
-extern "C" void initBaseMtx__15daObjStopper2_cFv(); // 1
-extern "C" void setBaseMtx__15daObjStopper2_cFv(); // 1
-extern "C" void getMaxOffsetY__15daObjStopper2_cFv(); // 1
-extern "C" void Create__15daObjStopper2_cFv(); // 1
-extern "C" void CreateHeap__15daObjStopper2_cFv(); // 1
-extern "C" void create__15daObjStopper2_cFv(); // 1
-extern "C" void execute__15daObjStopper2_cFv(); // 1
-extern "C" void event_proc_call__15daObjStopper2_cFv(); // 1
-extern "C" void actionWait__15daObjStopper2_cFv(); // 1
-extern "C" void actionOrderEvent__15daObjStopper2_cFv(); // 1
-extern "C" void actionEvent__15daObjStopper2_cFv(); // 1
-extern "C" void actionDead__15daObjStopper2_cFv(); // 1
-extern "C" void demoProc__15daObjStopper2_cFv(); // 1
-extern "C" void draw__15daObjStopper2_cFv(); // 1
-extern "C" void _delete__15daObjStopper2_cFv(); // 1
-extern "C" static void daObjStopper2_Draw__FP15daObjStopper2_c(); // 1
-extern "C" static void daObjStopper2_Execute__FP15daObjStopper2_c(); // 1
-extern "C" static void daObjStopper2_Delete__FP15daObjStopper2_c(); // 1
-extern "C" static void daObjStopper2_Create__FP15daObjStopper2_c(); // 1
-extern "C" static void func_80CEFE6C(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" static void getStopName__Fv();
+extern "C" void getStopModelData__15daObjStopper2_cFv();
+extern "C" void initBaseMtx__15daObjStopper2_cFv();
+extern "C" void setBaseMtx__15daObjStopper2_cFv();
+extern "C" void getMaxOffsetY__15daObjStopper2_cFv();
+extern "C" void Create__15daObjStopper2_cFv();
+extern "C" void CreateHeap__15daObjStopper2_cFv();
+extern "C" void create__15daObjStopper2_cFv();
+extern "C" void execute__15daObjStopper2_cFv();
+extern "C" void event_proc_call__15daObjStopper2_cFv();
+extern "C" void actionWait__15daObjStopper2_cFv();
+extern "C" void actionOrderEvent__15daObjStopper2_cFv();
+extern "C" void actionEvent__15daObjStopper2_cFv();
+extern "C" void actionDead__15daObjStopper2_cFv();
+extern "C" void demoProc__15daObjStopper2_cFv();
+extern "C" void draw__15daObjStopper2_cFv();
+extern "C" void _delete__15daObjStopper2_cFv();
+extern "C" static void daObjStopper2_Draw__FP15daObjStopper2_c();
+extern "C" static void daObjStopper2_Execute__FP15daObjStopper2_c();
+extern "C" static void daObjStopper2_Delete__FP15daObjStopper2_c();
+extern "C" static void daObjStopper2_Create__FP15daObjStopper2_c();
+extern "C" static void func_80CEFE6C();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Stopper2[12];
 
@@ -126,53 +128,60 @@ extern "C" extern void* g_profile_Obj_Stopper2[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfG_getStageRes(char const*);
+void cLib_chaseF(f32*, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_80CEFFF8[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

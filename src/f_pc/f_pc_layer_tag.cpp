@@ -24,35 +24,35 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16); // 2
-void fpcLyTg_QueueTo(layer_management_tag_class*); // 2
-void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16); // 2
-void fpcLyTg_Init(layer_management_tag_class*, unsigned int, void*); // 2
+void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16);
+void fpcLyTg_QueueTo(layer_management_tag_class*);
+void fpcLyTg_Move(layer_management_tag_class*, unsigned int, u16, u16);
+void fpcLyTg_Init(layer_management_tag_class*, unsigned int, void*);
 
-extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs(); // 1
-extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class(); // 1
-extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs(); // 1
-extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv(); // 1
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+extern "C" void fpcLyTg_Move__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_Init__FP26layer_management_tag_classUiPv();
 
 // 
 // External References:
 // 
 
-void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int); // 2
-void fpcLy_ToQueue(layer_class*, int, create_tag_class*); // 2
-void fpcLy_QueueTo(layer_class*, create_tag_class*); // 2
-void fpcLy_Layer(unsigned int); // 2
-void cTg_Create(create_tag_class*, void*); // 2
+void fpcLy_IntoQueue(layer_class*, int, create_tag_class*, int);
+void fpcLy_ToQueue(layer_class*, int, create_tag_class*);
+void fpcLy_QueueTo(layer_class*, create_tag_class*);
+void fpcLy_Layer(unsigned int);
+void cTg_Create(create_tag_class*, void*);
 
-extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi(); // 1
-extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class(); // 1
-extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class(); // 1
-extern "C" void fpcLy_Layer__FUi(); // 1
-extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void fpcLy_IntoQueue__FP11layer_classiP16create_tag_classi();
+extern "C" void fpcLy_ToQueue__FP11layer_classiP16create_tag_class();
+extern "C" void fpcLy_QueueTo__FP11layer_classP16create_tag_class();
+extern "C" void fpcLy_Layer__FUi();
+extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

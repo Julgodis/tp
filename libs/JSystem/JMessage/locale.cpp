@@ -24,8 +24,8 @@ struct JMessage {
 // 
 
 
-extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc(); // 1
-extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc(); // 1
+extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
+extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
 
 // 
 // External References:

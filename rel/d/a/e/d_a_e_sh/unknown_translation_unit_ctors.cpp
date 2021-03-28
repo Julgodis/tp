@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_80791D5C[2];
 
 extern void* const data_80791D5C[2];
 
@@ -19,7 +20,7 @@ extern void* const data_80791D5C[2];
 // 
 
 
-extern "C" void __sinit_d_a_e_sh_cpp(); // 1
+extern "C" void __sinit_d_a_e_sh_cpp();
 
 // 
 // Declarations:

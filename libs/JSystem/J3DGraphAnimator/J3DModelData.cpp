@@ -55,41 +55,44 @@ struct J3DDrawMtxData {
 // 
 
 
-extern "C" void clear__12J3DModelDataFv(); // 1
-extern "C" void __ct__12J3DModelDataFv(); // 1
-extern "C" void newSharedDisplayList__12J3DModelDataFUl(); // 1
-extern "C" void indexToPtr__12J3DModelDataFv(); // 1
-extern "C" void makeSharedDL__12J3DModelDataFv(); // 1
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
-extern "C" void syncJ3DSysPointers__12J3DModelDataCFv(); // 1
-extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
-extern "C" void __dt__13J3DShapeTableFv(); // 1
-extern "C" void __dt__12J3DModelDataFv(); // 1
+extern "C" void clear__12J3DModelDataFv();
+extern "C" void __ct__12J3DModelDataFv();
+extern "C" void newSharedDisplayList__12J3DModelDataFUl();
+extern "C" void indexToPtr__12J3DModelDataFv();
+extern "C" void makeSharedDL__12J3DModelDataFv();
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" void syncJ3DSysPointers__12J3DModelDataCFv();
+extern "C" void syncJ3DSysFlags__12J3DModelDataCFv();
+extern "C" void __dt__13J3DShapeTableFv();
+extern "C" void __dt__12J3DModelDataFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__12J3DJointTree[4 + 1 /* padding */];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 __GDCurrentDL[4];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__13J3DVertexDataFv(); // 1
-extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
-extern "C" void countDLSize__11J3DMaterialFv(); // 1
-extern "C" void newSharedDisplayList__11J3DMaterialFUl(); // 1
-extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl(); // 1
-extern "C" void __ct__12J3DJointTreeFv(); // 1
-extern "C" void __ct__16J3DMaterialTableFv(); // 1
-extern "C" void __dt__16J3DMaterialTableFv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__13J3DVertexDataFv();
+extern "C" void __dt__14J3DDrawMtxDataFv();
+extern "C" void countDLSize__11J3DMaterialFv();
+extern "C" void newSharedDisplayList__11J3DMaterialFUl();
+extern "C" void newSingleSharedDisplayList__11J3DMaterialFUl();
+extern "C" void __ct__12J3DJointTreeFv();
+extern "C" void __ct__16J3DMaterialTableFv();
+extern "C" void __dt__16J3DMaterialTableFv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSDisableScheduler();
+extern "C" void OSEnableScheduler();
+extern "C" void GDInitGDLObj();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__12J3DJointTree[4 + 1 /* padding */];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 __GDCurrentDL[4];

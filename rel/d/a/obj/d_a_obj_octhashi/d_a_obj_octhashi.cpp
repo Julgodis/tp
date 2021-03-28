@@ -14,16 +14,16 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
-	/* 80CA54A8 */ ~cXyz();
-	/* 80CA6250 */ cXyz();
-};
-
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 	/* 80CA624C */ csXyz();
 	/* 8026745C */ void operator+=(csXyz&);
 	/* 80CA546C */ ~csXyz();
+};
+
+struct cXyz {
+	/* 80CA54A8 */ ~cXyz();
+	/* 80CA6250 */ cXyz();
 };
 
 struct mDoMtx_stack_c {
@@ -182,10 +182,10 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -204,48 +204,56 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjOCTHASHI_Create(fopAc_ac_c*); // 2
-static void daObjOCTHASHI_Delete(daObjOCTHASHI_c*); // 2
-static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-static void daObjOCTHASHI_Draw(daObjOCTHASHI_c*); // 2
-static void daObjOCTHASHI_Execute(daObjOCTHASHI_c*); // 2
-static bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c*); // 2
+static void daObjOCTHASHI_Create(fopAc_ac_c*);
+static void daObjOCTHASHI_Delete(daObjOCTHASHI_c*);
+static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+static void daObjOCTHASHI_Draw(daObjOCTHASHI_c*);
+static void daObjOCTHASHI_Execute(daObjOCTHASHI_c*);
+static bool daObjOCTHASHI_IsDelete(daObjOCTHASHI_c*);
+extern "C" extern u8 const lit_3887[8];
+extern "C" extern u8 const lit_3888[8];
+extern "C" extern u8 const lit_3889[8];
+extern "C" extern u32 const lit_3890;
+extern "C" extern u32 const lit_3903;
+extern "C" extern u32 const lit_3904;
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_OCTHASHI[12];
 
-extern "C" void initCcCylinder__15daObjOCTHASHI_cFv(); // 1
-extern "C" static void daObjOCTHASHI_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c(); // 1
-extern "C" void SetCoSph__15daObjOCTHASHI_cFv(); // 1
-extern "C" void SetCoCyl__15daObjOCTHASHI_cFv(); // 1
-extern "C" void HakaiSet2__15daObjOCTHASHI_cFi(); // 1
-extern "C" void HakaiMotion2__15daObjOCTHASHI_cFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void CylAction__15daObjOCTHASHI_cFv(); // 1
-extern "C" void SphAction__15daObjOCTHASHI_cFv(); // 1
-extern "C" void SphAction2__15daObjOCTHASHI_cFv(); // 1
-extern "C" void Action__15daObjOCTHASHI_cFv(); // 1
-extern "C" void setBaseMtx__15daObjOCTHASHI_cFv(); // 1
-extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" static void daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c(); // 1
-extern "C" static void daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c(); // 1
-extern "C" void CreateHeap__15daObjOCTHASHI_cFv(); // 1
-extern "C" void create__15daObjOCTHASHI_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__8dCcD_SphFv(); // 1
-extern "C" void __ct__8dCcD_SphFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__9dCcD_SttsFv(); // 1
-extern "C" void __ct__9dCcD_SttsFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static bool daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void Create__15daObjOCTHASHI_cFv(); // 1
-extern "C" void Execute__15daObjOCTHASHI_cFPPA3_A4_f(); // 1
-extern "C" void Draw__15daObjOCTHASHI_cFv(); // 1
-extern "C" void Delete__15daObjOCTHASHI_cFv(); // 1
+extern "C" void initCcCylinder__15daObjOCTHASHI_cFv();
+extern "C" static void daObjOCTHASHI_Create__FP10fopAc_ac_c();
+extern "C" static void daObjOCTHASHI_Delete__FP15daObjOCTHASHI_c();
+extern "C" void SetCoSph__15daObjOCTHASHI_cFv();
+extern "C" void SetCoCyl__15daObjOCTHASHI_cFv();
+extern "C" void HakaiSet2__15daObjOCTHASHI_cFi();
+extern "C" void HakaiMotion2__15daObjOCTHASHI_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void CylAction__15daObjOCTHASHI_cFv();
+extern "C" void SphAction__15daObjOCTHASHI_cFv();
+extern "C" void SphAction2__15daObjOCTHASHI_cFv();
+extern "C" void Action__15daObjOCTHASHI_cFv();
+extern "C" void setBaseMtx__15daObjOCTHASHI_cFv();
+extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" static void daObjOCTHASHI_Draw__FP15daObjOCTHASHI_c();
+extern "C" static void daObjOCTHASHI_Execute__FP15daObjOCTHASHI_c();
+extern "C" void CreateHeap__15daObjOCTHASHI_cFv();
+extern "C" void create__15daObjOCTHASHI_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__9dCcD_SttsFv();
+extern "C" void __ct__9dCcD_SttsFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" static bool daObjOCTHASHI_IsDelete__FP15daObjOCTHASHI_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void Create__15daObjOCTHASHI_cFv();
+extern "C" void Execute__15daObjOCTHASHI_cFPPA3_A4_f();
+extern "C" void Draw__15daObjOCTHASHI_cFv();
+extern "C" void Delete__15daObjOCTHASHI_cFv();
 extern "C" extern u8 const lit_3887[8];
 extern "C" extern u8 const lit_3888[8];
 extern "C" extern u8 const lit_3889[8];
@@ -259,91 +267,107 @@ extern "C" extern void* g_profile_OCTHASHI[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*); // 2
-void cM_rndFX(f32); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void def_se_set(Z2Creature*, cCcD_Obj*, u32, fopAc_ac_c*);
+void cM_rndFX(f32);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_80CA6680[4];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetCoHitObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void GetAc__8cCcD_ObjFv(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void __apl__5csXyzFR5csXyz(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecUcUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv();
+extern "C" void ChkCoHit__12dCcD_GObjInfFv();
+extern "C" void GetCoHitObj__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void def_se_set__FP10Z2CreatureP8cCcD_ObjUlP10fopAc_ac_c();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void GetAc__8cCcD_ObjFv();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void __apl__5csXyzFR5csXyz();
+extern "C" void cM_rndFX__Ff();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void init__10Z2CreatureFP3VecP3VecUcUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];

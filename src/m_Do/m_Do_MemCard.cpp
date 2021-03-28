@@ -54,31 +54,33 @@ struct CARDFileInfo {
 // Forward References:
 // 
 
-static void mDoMemCd_main(void*); // 2
+static void mDoMemCd_main(void*);
+extern "C" extern char const* const m_Do_m_Do_MemCard__stringBase0;
+extern "C" extern u8 g_mDoMemCd_control[8192];
 
-extern "C" void __ct__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void main__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void update__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void load__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void restore__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl(); // 1
-extern "C" void save__15mDoMemCd_Ctrl_cFPvUlUl(); // 1
-extern "C" void store__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void SaveSync__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void getStatus__15mDoMemCd_Ctrl_cFUl(); // 1
-extern "C" void command_format__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void format__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void FormatSync__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void attach__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void command_attach__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void detach__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void mount__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void loadfile__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void checkspace__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void setCardState__15mDoMemCd_Ctrl_cFl(); // 1
-extern "C" static void mDoMemCd_main__FPv(); // 1
-extern "C" void __sinit_m_Do_MemCard_cpp(); // 1
+extern "C" void __ct__15mDoMemCd_Ctrl_cFv();
+extern "C" void ThdInit__15mDoMemCd_Ctrl_cFv();
+extern "C" void main__15mDoMemCd_Ctrl_cFv();
+extern "C" void update__15mDoMemCd_Ctrl_cFv();
+extern "C" void load__15mDoMemCd_Ctrl_cFv();
+extern "C" void restore__15mDoMemCd_Ctrl_cFv();
+extern "C" void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void save__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void store__15mDoMemCd_Ctrl_cFv();
+extern "C" void SaveSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void getStatus__15mDoMemCd_Ctrl_cFUl();
+extern "C" void command_format__15mDoMemCd_Ctrl_cFv();
+extern "C" void format__15mDoMemCd_Ctrl_cFv();
+extern "C" void FormatSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void attach__15mDoMemCd_Ctrl_cFv();
+extern "C" void command_attach__15mDoMemCd_Ctrl_cFv();
+extern "C" void detach__15mDoMemCd_Ctrl_cFv();
+extern "C" void mount__15mDoMemCd_Ctrl_cFv();
+extern "C" void loadfile__15mDoMemCd_Ctrl_cFv();
+extern "C" void checkspace__15mDoMemCd_Ctrl_cFv();
+extern "C" void setCardState__15mDoMemCd_Ctrl_cFl();
+extern "C" static void mDoMemCd_main__FPv();
+extern "C" void __sinit_m_Do_MemCard_cpp();
 extern "C" extern char const* const m_Do_m_Do_MemCard__stringBase0;
 extern "C" extern u8 g_mDoMemCd_control[8192];
 
@@ -86,43 +88,44 @@ extern "C" extern u8 g_mDoMemCd_control[8192];
 // External References:
 // 
 
-void mDoExt_getAssertHeap(); // 2
-void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32); // 2
-void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32); // 2
+void mDoExt_getAssertHeap();
+void mDoMemCdRWm_Store(CARDFileInfo*, void*, u32);
+void mDoMemCdRWm_Restore(CARDFileInfo*, void*, u32);
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void mDoExt_getAssertHeap__Fv(); // 1
-extern "C" void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl(); // 1
-extern "C" void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSTryLockMutex(); // 1
-extern "C" void OSInitCond(); // 1
-extern "C" void OSWaitCond(); // 1
-extern "C" void OSSignalCond(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSGetThreadPriority(); // 1
-extern "C" void CARDInit(); // 1
-extern "C" void CARDFreeBlocks(); // 1
-extern "C" void CARDCheck(); // 1
-extern "C" void CARDProbe(); // 1
-extern "C" void CARDProbeEx(); // 1
-extern "C" void CARDMount(); // 1
-extern "C" void CARDUnmount(); // 1
-extern "C" void CARDFormat(); // 1
-extern "C" void CARDOpen(); // 1
-extern "C" void CARDClose(); // 1
-extern "C" void CARDCreate(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+SECTION_INIT void memcpy();
+extern "C" void mDoExt_getAssertHeap__Fv();
+extern "C" void mDoMemCdRWm_Store__FP12CARDFileInfoPvUl();
+extern "C" void mDoMemCdRWm_Restore__FP12CARDFileInfoPvUl();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void OSTryLockMutex();
+extern "C" void OSInitCond();
+extern "C" void OSWaitCond();
+extern "C" void OSSignalCond();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCreateThread();
+extern "C" void OSResumeThread();
+extern "C" void OSGetThreadPriority();
+extern "C" void CARDInit();
+extern "C" void CARDFreeBlocks();
+extern "C" void CARDCheck();
+extern "C" void CARDProbe();
+extern "C" void CARDProbeEx();
+extern "C" void CARDMount();
+extern "C" void CARDUnmount();
+extern "C" void CARDFormat();
+extern "C" void CARDOpen();
+extern "C" void CARDClose();
+extern "C" void CARDCreate();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
 // 

@@ -26,10 +26,10 @@ struct dBomb_c {
 // 
 
 
-extern "C" void checkStateCarry__7dBomb_cFv(); // 1
-extern "C" void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c(); // 1
-extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c(); // 1
-extern "C" void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c(); // 1
+extern "C" void checkStateCarry__7dBomb_cFv();
+extern "C" void checkFlowerBombWait__7dBomb_cFP10fopAc_ac_c();
+extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+extern "C" void checkInsectBombMove__7dBomb_cFP10fopAc_ac_c();
 
 // 
 // External References:

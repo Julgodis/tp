@@ -30,20 +30,21 @@ struct cM3dGLin {
 // 
 
 
-extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
-extern "C" void CalcPos__8cM3dGLinCFP3Vecf(); // 1
-extern "C" void SetEnd__8cM3dGLinFRC4cXyz(); // 1
+extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" void CalcPos__8cM3dGLinCFP3Vecf();
+extern "C" void SetEnd__8cM3dGLinFRC4cXyz();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __vt__8cM3dGLin[3];
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
 extern "C" extern void* __vt__8cM3dGLin[3];
 
 // 

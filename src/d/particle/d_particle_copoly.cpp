@@ -11,16 +11,16 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
+struct cXyz {
+};
+
+struct cBgS_PolyInfo {
 };
 
 struct dPa_control_c {
@@ -76,27 +76,30 @@ struct cBgS {
 // Forward References:
 // 
 
+extern "C" extern u8 m_emitterTwoData__8dPaPoT_c[36];
+extern "C" extern u8 m_typeFourData__8dPaPoF_c[60];
+extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
 
-extern "C" void init__7dPaPo_cFP9dBgS_Acchff(); // 1
-extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff(); // 1
-extern "C" void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc(); // 1
-extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void clearID__7dPaPo_cFPUlPUc(); // 1
-extern "C" void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void clearTwoAllID__8dPaPoT_cFv(); // 1
-extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void clearFourAllID__8dPaPoF_cFv(); // 1
-extern "C" void getRightEffType__8dPaPoT_cCFi(); // 1
-extern "C" void getLeftEffType__8dPaPoT_cCFi(); // 1
-extern "C" void getCenterEffType__7dPaPo_cCFi(); // 1
-extern "C" void getRightEmitter__8dPaPoT_cFii(); // 1
-extern "C" void getLeftEmitter__8dPaPoT_cFii(); // 1
-extern "C" void getCenterEmitter__7dPaPo_cFii(); // 1
-extern "C" void getBackRightEffType__8dPaPoF_cCFi(); // 1
-extern "C" void getBackLeftEffType__8dPaPoF_cCFi(); // 1
-extern "C" void getBackRightEmitter__8dPaPoF_cFii(); // 1
-extern "C" void getBackLeftEmitter__8dPaPoF_cFii(); // 1
-extern "C" void __sinit_d_particle_copoly_cpp(); // 1
+extern "C" void init__7dPaPo_cFP9dBgS_Acchff();
+extern "C" void checkWaterIn__7dPaPo_cFP4cXyzPC4cXyzPC12dKy_tevstr_cUlScff();
+extern "C" void setEffect__7dPaPo_cFPUliPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzScPUcPUc();
+extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearID__7dPaPo_cFPUlPUc();
+extern "C" void setEffectTwo__8dPaPoT_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearTwoAllID__8dPaPoT_cFv();
+extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearFourAllID__8dPaPoF_cFv();
+extern "C" void getRightEffType__8dPaPoT_cCFi();
+extern "C" void getLeftEffType__8dPaPoT_cCFi();
+extern "C" void getCenterEffType__7dPaPo_cCFi();
+extern "C" void getRightEmitter__8dPaPoT_cFii();
+extern "C" void getLeftEmitter__8dPaPoT_cFii();
+extern "C" void getCenterEmitter__7dPaPo_cFii();
+extern "C" void getBackRightEffType__8dPaPoF_cCFi();
+extern "C" void getBackLeftEffType__8dPaPoF_cCFi();
+extern "C" void getBackRightEmitter__8dPaPoF_cFii();
+extern "C" void getBackLeftEmitter__8dPaPoF_cFii();
+extern "C" void __sinit_d_particle_copoly_cpp();
 extern "C" extern u8 m_emitterTwoData__8dPaPoT_c[36];
 extern "C" extern u8 m_typeFourData__8dPaPoF_c[60];
 extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
@@ -105,23 +108,24 @@ extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
 // External References:
 // 
 
-void fopKyM_createWpillar(cXyz const*, f32, int); // 2
+void fopKyM_createWpillar(cXyz const*, f32, int);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc(); // 1
-extern "C" void setStopContinue__13dPa_control_cFUl(); // 1
-extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc(); // 1
-extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+extern "C" void setStopContinue__13dPa_control_cFUl();
+extern "C" void setCommonPoly__13dPa_control_cFPUlP13cBgS_PolyInfoPC4cXyzPC4cXyzPC12dKy_tevstr_cUlUlPC5csXyzPC4cXyzSc();
+extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

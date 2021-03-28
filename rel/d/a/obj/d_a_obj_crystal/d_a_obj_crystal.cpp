@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -88,25 +88,27 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daObjCrystal_Draw(daObjCrystal_c*); // 2
-static void daObjCrystal_Execute(daObjCrystal_c*); // 2
-static void daObjCrystal_Delete(daObjCrystal_c*); // 2
-static void daObjCrystal_Create(daObjCrystal_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+static void daObjCrystal_Draw(daObjCrystal_c*);
+static void daObjCrystal_Execute(daObjCrystal_c*);
+static void daObjCrystal_Delete(daObjCrystal_c*);
+static void daObjCrystal_Create(daObjCrystal_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_Crystal[12];
 
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void initBaseMtx__14daObjCrystal_cFv(); // 1
-extern "C" void setBaseMtx__14daObjCrystal_cFv(); // 1
-extern "C" void Create__14daObjCrystal_cFv(); // 1
-extern "C" void CreateHeap__14daObjCrystal_cFv(); // 1
-extern "C" void create__14daObjCrystal_cFv(); // 1
-extern "C" void execute__14daObjCrystal_cFv(); // 1
-extern "C" void draw__14daObjCrystal_cFv(); // 1
-extern "C" void _delete__14daObjCrystal_cFv(); // 1
-extern "C" static void daObjCrystal_Draw__FP14daObjCrystal_c(); // 1
-extern "C" static void daObjCrystal_Execute__FP14daObjCrystal_c(); // 1
-extern "C" static void daObjCrystal_Delete__FP14daObjCrystal_c(); // 1
-extern "C" static void daObjCrystal_Create__FP14daObjCrystal_c(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__14daObjCrystal_cFv();
+extern "C" void setBaseMtx__14daObjCrystal_cFv();
+extern "C" void Create__14daObjCrystal_cFv();
+extern "C" void CreateHeap__14daObjCrystal_cFv();
+extern "C" void create__14daObjCrystal_cFv();
+extern "C" void execute__14daObjCrystal_cFv();
+extern "C" void draw__14daObjCrystal_cFv();
+extern "C" void _delete__14daObjCrystal_cFv();
+extern "C" static void daObjCrystal_Draw__FP14daObjCrystal_c();
+extern "C" static void daObjCrystal_Execute__FP14daObjCrystal_c();
+extern "C" static void daObjCrystal_Delete__FP14daObjCrystal_c();
+extern "C" static void daObjCrystal_Create__FP14daObjCrystal_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_Crystal[12];
 
@@ -114,35 +116,40 @@ extern "C" extern void* g_profile_Obj_Crystal[12];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void func_802807E0();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void PSMTXCopy();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

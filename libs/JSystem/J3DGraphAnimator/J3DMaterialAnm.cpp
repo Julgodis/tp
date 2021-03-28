@@ -32,10 +32,10 @@ struct J3DTevKColorAnm {
 struct J3DTevColorAnm {
 };
 
-struct J3DMaterial {
+struct J3DMatColorAnm {
 };
 
-struct J3DMatColorAnm {
+struct J3DMaterial {
 };
 
 struct J3DMaterialAnm {
@@ -62,14 +62,15 @@ struct J3DAnmTevRegKey {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__14J3DMaterialAnm[4];
 
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial(); // 1
-extern "C" void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm(); // 1
-extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm(); // 1
-extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm(); // 1
-extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm(); // 1
-extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm(); // 1
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial();
+extern "C" void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
 extern "C" extern void* __vt__14J3DMaterialAnm[4];
 
 // 
@@ -77,12 +78,12 @@ extern "C" extern void* __vt__14J3DMaterialAnm[4];
 // 
 
 
-extern "C" void __dt__14J3DMaterialAnmFv(); // 1
-extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo(); // 1
-extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10(); // 1
-extern "C" void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void __dt__14J3DMaterialAnmFv();
+extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:

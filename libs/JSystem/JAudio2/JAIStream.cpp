@@ -53,19 +53,19 @@ struct JASAramStream {
 struct JAIStreamMgr {
 };
 
-struct JAIAudience {
-};
-
 template <typename A0>
 struct JAISoundStrategyMgr { };
 /* JAISoundStrategyMgr<JAIStream> */
 struct JAISoundStrategyMgr__template2 {
 };
 
+struct JAISoundID {
+};
+
 struct JAISoundActivity {
 };
 
-struct JAISoundID {
+struct JAIAudience {
 };
 
 struct JAIStream {
@@ -110,59 +110,62 @@ struct JAISound {
 // Forward References:
 // 
 
-static void JAIStream_JASAramStreamCallback_(u32, JASAramStream*, void*); // 2
+static void JAIStream_JASAramStreamCallback_(u32, JASAramStream*, void*);
+extern "C" extern void* __vt__9JAIStream[12];
 
-extern "C" static void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv(); // 1
-extern "C" void func_802A3104(); // 1
-extern "C" void func_802A319C(); // 1
-extern "C" void prepare_prepareStream___9JAIStreamFv(); // 1
-extern "C" void prepare___9JAIStreamFv(); // 1
-extern "C" void prepare_startStream___9JAIStreamFv(); // 1
-extern "C" void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void die_JAIStream___9JAIStreamFv(); // 1
-extern "C" void JAISound_tryDie___9JAIStreamFv(); // 1
-extern "C" void JAIStreamMgr_calc___9JAIStreamFv(); // 1
-extern "C" s32 getNumChild__9JAIStreamCFv(); // 1
-extern "C" void getChild__9JAIStreamFi(); // 1
-extern "C" void releaseChild__9JAIStreamFi(); // 1
-extern "C" bool getTrack__9JAIStreamFv(); // 1
-extern "C" bool getChildTrack__9JAIStreamFi(); // 1
-extern "C" void asStream__9JAIStreamFv(); // 1
-extern "C" bool getTempoMgr__9JAIStreamFv(); // 1
+extern "C" static void JAIStream_JASAramStreamCallback___FUlP13JASAramStreamPv();
+extern "C" void func_802A3104();
+extern "C" void func_802A319C();
+extern "C" void prepare_prepareStream___9JAIStreamFv();
+extern "C" void prepare___9JAIStreamFv();
+extern "C" void prepare_startStream___9JAIStreamFv();
+extern "C" void JAIStreamMgr_mixOut___9JAIStreamFRC14JASSoundParams16JAISoundActivity();
+extern "C" void die_JAIStream___9JAIStreamFv();
+extern "C" void JAISound_tryDie___9JAIStreamFv();
+extern "C" void JAIStreamMgr_calc___9JAIStreamFv();
+extern "C" s32 getNumChild__9JAIStreamCFv();
+extern "C" void getChild__9JAIStreamFi();
+extern "C" void releaseChild__9JAIStreamFi();
+extern "C" bool getTrack__9JAIStreamFv();
+extern "C" bool getChildTrack__9JAIStreamFi();
+extern "C" void asStream__9JAIStreamFv();
+extern "C" bool getTempoMgr__9JAIStreamFv();
 extern "C" extern void* __vt__9JAIStream[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_804340B0[16];
+extern "C" extern u8 data_80451318[8];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void __ct__13JASAramStreamFv(); // 1
-extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv(); // 1
-extern "C" void prepare__13JASAramStreamFli(); // 1
-extern "C" void start__13JASAramStreamFv(); // 1
-extern "C" void stop__13JASAramStreamFUs(); // 1
-extern "C" void pause__13JASAramStreamFb(); // 1
-extern "C" void cancel__13JASAramStreamFv(); // 1
-extern "C" void func_802A1268(); // 1
-extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf(); // 1
-extern "C" void __ct__8JAISoundFv(); // 1
-extern "C" void func_802A2328(); // 1
-extern "C" bool asSe__8JAISoundFv(); // 1
-extern "C" bool asSeq__8JAISoundFv(); // 1
-extern "C" void die_JAISound___8JAISoundFv(); // 1
-extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
-extern "C" void calc_JAISound___8JAISoundFv(); // 1
-extern "C" void init__13JAISoundChildFv(); // 1
-extern "C" void calc__13JAISoundChildFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void __ct__13JASAramStreamFv();
+extern "C" void init__13JASAramStreamFUlUlPFUlP13JASAramStreamPv_vPv();
+extern "C" void prepare__13JASAramStreamFli();
+extern "C" void start__13JASAramStreamFv();
+extern "C" void stop__13JASAramStreamFUs();
+extern "C" void pause__13JASAramStreamFb();
+extern "C" void cancel__13JASAramStreamFv();
+extern "C" void func_802A1268();
+extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+extern "C" void __ct__8JAISoundFv();
+extern "C" void func_802A2328();
+extern "C" bool asSe__8JAISoundFv();
+extern "C" bool asSeq__8JAISoundFv();
+extern "C" void die_JAISound___8JAISoundFv();
+extern "C" void increasePrepareCount_JAISound___8JAISoundFv();
+extern "C" void calc_JAISound___8JAISoundFv();
+extern "C" void init__13JAISoundChildFv();
+extern "C" void calc__13JAISoundChildFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_804340B0[16];
 extern "C" extern u8 data_80451318[8];
 

@@ -30,30 +30,36 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagStream_Create(fopAc_ac_c*); // 2
-static void daTagStream_Delete(daTagStream_c*); // 2
-static void daTagStream_Execute(daTagStream_c*); // 2
-static bool daTagStream_Draw(daTagStream_c*); // 2
+static void daTagStream_Create(fopAc_ac_c*);
+static void daTagStream_Delete(daTagStream_c*);
+static void daTagStream_Execute(daTagStream_c*);
+static bool daTagStream_Draw(daTagStream_c*);
+extern "C" extern void* g_profile_Tag_Stream[12];
 
-extern "C" void create__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Delete__FP13daTagStream_c(); // 1
-extern "C" void execute__13daTagStream_cFv(); // 1
-extern "C" static void daTagStream_Execute__FP13daTagStream_c(); // 1
-extern "C" static bool daTagStream_Draw__FP13daTagStream_c(); // 1
+extern "C" void create__13daTagStream_cFv();
+extern "C" static void daTagStream_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagStream_cFv();
+extern "C" static void daTagStream_Delete__FP13daTagStream_c();
+extern "C" void execute__13daTagStream_cFv();
+extern "C" static void daTagStream_Execute__FP13daTagStream_c();
+extern "C" static bool daTagStream_Draw__FP13daTagStream_c();
 extern "C" extern void* g_profile_Tag_Stream[12];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 m_top__13daTagStream_c[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __dl__FPv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

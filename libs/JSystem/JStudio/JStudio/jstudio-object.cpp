@@ -186,83 +186,153 @@ namespace JStudio {
 // Forward References:
 // 
 
+extern "C" extern u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
+extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio15TAdaptor_camera[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
+extern "C" extern u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_3_COLOR_RGB__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio17TAdaptor_particle[16];
+extern "C" extern u8 const sauVariableValue_3_COLOR1_RGB__Q27JStudio17TAdaptor_particle[12];
+extern "C" extern u8 const sauVariableValue_4_COLOR1_RGBA__Q27JStudio17TAdaptor_particle[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_sound[12];
+extern "C" extern char const* const jstudio_object__stringBase0;
+extern "C" extern u8 lit_1308[12];
+extern "C" extern u8 lit_1310[12];
+extern "C" extern u8 lit_1312[12];
+extern "C" extern u8 lit_1314[12];
+extern "C" extern u8 lit_1316[12];
+extern "C" extern u8 lit_1318[12];
+extern "C" extern u8 lit_1320[12];
+extern "C" extern u8 lit_1323[12];
+extern "C" extern u8 lit_1325[12];
+extern "C" extern u8 lit_1327[12];
+extern "C" extern u8 lit_1329[12];
+extern "C" extern u8 lit_1444[12];
+extern "C" extern u8 lit_1446[12];
+extern "C" extern u8 lit_1449[12];
+extern "C" extern u8 lit_1451[12];
+extern "C" extern u8 lit_1453[12];
+extern "C" extern u8 lit_1455[12];
+extern "C" extern u8 lit_1686[12];
+extern "C" extern u8 lit_1688[12];
+extern "C" extern u8 lit_1690[12];
+extern "C" extern u8 lit_1692[12];
+extern "C" extern u8 lit_1694[12];
+extern "C" extern u8 lit_1696[12];
+extern "C" extern u8 lit_1698[12];
+extern "C" extern u8 lit_1701[12];
+extern "C" extern u8 lit_1703[12];
+extern "C" extern u8 lit_1705[12];
+extern "C" extern u8 lit_1779[12];
+extern "C" extern u8 lit_1781[12];
+extern "C" extern u8 lit_1783[12];
+extern "C" extern u8 lit_1785[12];
+extern "C" extern u8 lit_1787[12];
+extern "C" extern u8 lit_1789[12];
+extern "C" extern u8 lit_1791[12];
+extern "C" extern u8 lit_1794[12];
+extern "C" extern u8 lit_1796[12];
+extern "C" extern u8 lit_1798[12];
+extern "C" extern u8 lit_1800[12];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_sound[20];
+extern "C" extern void* __vt__Q27JStudio17TAdaptor_particle[19];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_light[10];
+extern "C" extern void* __vt__Q27JStudio12TAdaptor_fog[8];
+extern "C" extern void* __vt__Q27JStudio15TAdaptor_camera[15];
+extern "C" extern void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_actor[20];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
+extern "C" extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+extern "C" extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
+extern "C" extern u8 data_804511F8[8];
+extern "C" extern u8 data_80451200[8];
 
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
-extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor(); // 1
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
-extern "C" void update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
-extern "C" void update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
-extern "C" void __dt__Q37JStudio14TVariableValue13TOutput_none_Fv(); // 1
-extern "C" void __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor(); // 1
-extern "C" void __dt__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl(); // 1
-extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl(); // 1
-extern "C" void adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate(); // 1
-extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec(); // 1
-extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl(); // 1
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
-extern "C" void adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl(); // 1
-extern "C" void adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
-extern "C" void adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio7TObjectFv(); // 1
-extern "C" void forward_value__Q27JStudio7TObjectFUl(); // 1
-extern "C" void do_begin__Q27JStudio7TObjectFv(); // 1
-extern "C" void do_end__Q27JStudio7TObjectFv(); // 1
-extern "C" void do_wait__Q27JStudio7TObjectFUl(); // 1
-extern "C" void do_data__Q27JStudio7TObjectFPCvUlPCvUl(); // 1
-extern "C" void __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor(); // 1
-extern "C" void __dt__Q27JStudio14TAdaptor_actorFv(); // 1
-extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor(); // 1
-extern "C" void do_paragraph__Q27JStudio13TObject_actorFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv(); // 1
-extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight(); // 1
-extern "C" void do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio15TAdaptor_cameraFv(); // 1
-extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera(); // 1
-extern "C" void do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio12TAdaptor_fogFv(); // 1
-extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog(); // 1
-extern "C" void do_paragraph__Q27JStudio11TObject_fogFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio14TAdaptor_lightFv(); // 1
-extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light(); // 1
-extern "C" void do_paragraph__Q27JStudio13TObject_lightFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio16TAdaptor_messageFv(); // 1
-extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message(); // 1
-extern "C" void do_paragraph__Q27JStudio15TObject_messageFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio17TAdaptor_particleFv(); // 1
-extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle(); // 1
-extern "C" void do_paragraph__Q27JStudio16TObject_particleFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio14TAdaptor_soundFv(); // 1
-extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound(); // 1
-extern "C" void do_paragraph__Q27JStudio13TObject_soundFUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio13TObject_soundFv(); // 1
-extern "C" void __dt__Q27JStudio16TObject_particleFv(); // 1
-extern "C" void __dt__Q27JStudio15TObject_messageFv(); // 1
-extern "C" void __dt__Q27JStudio13TObject_lightFv(); // 1
-extern "C" void __dt__Q27JStudio11TObject_fogFv(); // 1
-extern "C" void __dt__Q27JStudio14TObject_cameraFv(); // 1
-extern "C" void __dt__Q27JStudio20TObject_ambientLightFv(); // 1
-extern "C" void __dt__Q27JStudio13TObject_actorFv(); // 1
-extern "C" void func_80288204(); // 1
-extern "C" static void func_802885DC(); // 1
-extern "C" static void func_8028863C(); // 1
-extern "C" static void func_8028869C(); // 1
-extern "C" static void func_802886FC(); // 1
-extern "C" static void func_8028875C(); // 1
-extern "C" static void func_802887BC(); // 1
-extern "C" static void func_80288818(); // 1
-extern "C" static void func_80288874(); // 1
-extern "C" static void func_802888D0(); // 1
-extern "C" static void func_8028892C(); // 1
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
+extern "C" void update__Q27JStudio14TVariableValueFdPQ27JStudio8TAdaptor();
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void update_time___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void update_functionValue___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void __dt__Q37JStudio14TVariableValue13TOutput_none_Fv();
+extern "C" void __cl__Q37JStudio14TVariableValue13TOutput_none_CFfPQ27JStudio8TAdaptor();
+extern "C" void __dt__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl();
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
+extern "C" void adaptor_setVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUlQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_setVariableValue_n__Q27JStudio8TAdaptorFPQ27JStudio8TControlPCUlUlQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_setVariableValue_immediate__Q27JStudio8TAdaptorFPCQ37JStudio8TAdaptor27TSetVariableValue_immediate();
+extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void adaptor_updateVariableValue__Q27JStudio8TAdaptorFPQ27JStudio8TControlUl();
+extern "C" void adaptor_setVariableValue_VOID___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
+extern "C" void adaptor_setVariableValue_IMMEDIATE___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
+extern "C" void adaptor_setVariableValue_TIME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
+extern "C" void adaptor_setVariableValue_FVR_NAME___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
+extern "C" void adaptor_setVariableValue_FVR_INDEX___Q27JStudio8TAdaptorFPQ27JStudio8TAdaptorPQ27JStudio8TControlUlPCvUl();
+extern "C" void __dt__Q27JStudio7TObjectFv();
+extern "C" void forward_value__Q27JStudio7TObjectFUl();
+extern "C" void do_begin__Q27JStudio7TObjectFv();
+extern "C" void do_end__Q27JStudio7TObjectFv();
+extern "C" void do_wait__Q27JStudio7TObjectFUl();
+extern "C" void do_data__Q27JStudio7TObjectFPCvUlPCvUl();
+extern "C" void __ct__Q27JStudio7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio8TAdaptor();
+extern "C" void __dt__Q27JStudio14TAdaptor_actorFv();
+extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor();
+extern "C" void do_paragraph__Q27JStudio13TObject_actorFUlPCvUl();
+extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv();
+extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight();
+extern "C" void do_paragraph__Q27JStudio20TObject_ambientLightFUlPCvUl();
+extern "C" void __dt__Q27JStudio15TAdaptor_cameraFv();
+extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera();
+extern "C" void do_paragraph__Q27JStudio14TObject_cameraFUlPCvUl();
+extern "C" void __dt__Q27JStudio12TAdaptor_fogFv();
+extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog();
+extern "C" void do_paragraph__Q27JStudio11TObject_fogFUlPCvUl();
+extern "C" void __dt__Q27JStudio14TAdaptor_lightFv();
+extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light();
+extern "C" void do_paragraph__Q27JStudio13TObject_lightFUlPCvUl();
+extern "C" void __dt__Q27JStudio16TAdaptor_messageFv();
+extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message();
+extern "C" void do_paragraph__Q27JStudio15TObject_messageFUlPCvUl();
+extern "C" void __dt__Q27JStudio17TAdaptor_particleFv();
+extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
+extern "C" void do_paragraph__Q27JStudio16TObject_particleFUlPCvUl();
+extern "C" void __dt__Q27JStudio14TAdaptor_soundFv();
+extern "C" void __ct__Q27JStudio13TObject_soundFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_sound();
+extern "C" void do_paragraph__Q27JStudio13TObject_soundFUlPCvUl();
+extern "C" void __dt__Q27JStudio13TObject_soundFv();
+extern "C" void __dt__Q27JStudio16TObject_particleFv();
+extern "C" void __dt__Q27JStudio15TObject_messageFv();
+extern "C" void __dt__Q27JStudio13TObject_lightFv();
+extern "C" void __dt__Q27JStudio11TObject_fogFv();
+extern "C" void __dt__Q27JStudio14TObject_cameraFv();
+extern "C" void __dt__Q27JStudio20TObject_ambientLightFv();
+extern "C" void __dt__Q27JStudio13TObject_actorFv();
+extern "C" void func_80288204();
+extern "C" static void func_802885DC();
+extern "C" static void func_8028863C();
+extern "C" static void func_8028869C();
+extern "C" static void func_802886FC();
+extern "C" static void func_8028875C();
+extern "C" static void func_802887BC();
+extern "C" static void func_80288818();
+extern "C" static void func_80288874();
+extern "C" static void func_802888D0();
+extern "C" static void func_8028892C();
 extern "C" extern u8 const sauVariableValue_3_TRANSLATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 extern "C" extern u8 const sauVariableValue_3_ROTATION_XYZ__Q27JStudio14TAdaptor_actor[12];
 extern "C" extern u8 const sauVariableValue_3_SCALING_XYZ__Q27JStudio14TAdaptor_actor[12];
@@ -338,21 +408,23 @@ extern "C" extern u8 data_80451200[8];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* __vt__Q27JStudio16TAdaptor_message[9];
 
-extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl(); // 1
-extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl(); // 1
-extern "C" void __ct__Q37JStudio3stb7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
-extern "C" void __dt__Q37JStudio3stb7TObjectFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl();
+extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl();
+extern "C" void __ct__Q37JStudio3stb7TObjectFRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void __dt__Q37JStudio3stb7TObjectFv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* __vt__Q27JStudio16TAdaptor_message[9];
 

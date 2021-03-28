@@ -11,6 +11,27 @@
 // Types:
 // 
 
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TActor {
+	};
+
+	struct TAmbientLight {
+	};
+
+	struct TCamera {
+	};
+
+	struct TFog {
+	};
+
+	struct TLight {
+	};
+
+};
+
 namespace JStudio {
 	struct TObject {
 	};
@@ -65,27 +86,6 @@ namespace JStudio {
 
 };
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TActor {
-	};
-
-	struct TAmbientLight {
-	};
-
-	struct TCamera {
-	};
-
-	struct TFog {
-	};
-
-	struct TLight {
-	};
-
-};
-
 struct JStudio_JStage {
 	struct TCreateObject {
 		/* 80289B00 */ ~TCreateObject();
@@ -118,38 +118,39 @@ struct JStudio_JStage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q214JStudio_JStage13TCreateObject[4];
 
-extern "C" void __dt__Q214JStudio_JStage13TCreateObjectFv(); // 1
-extern "C" void create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
-extern "C" static void func_80289CE4(); // 1
-extern "C" static void func_80289DE8(); // 1
-extern "C" static void func_80289EEC(); // 1
-extern "C" static void func_80289FF0(); // 1
-extern "C" static void func_8028A0F4(); // 1
+extern "C" void __dt__Q214JStudio_JStage13TCreateObjectFv();
+extern "C" void create__Q214JStudio_JStage13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" static void func_80289CE4();
+extern "C" static void func_80289DE8();
+extern "C" static void func_80289EEC();
+extern "C" static void func_80289FF0();
+extern "C" static void func_8028A0F4();
 extern "C" extern void* __vt__Q214JStudio_JStage13TCreateObject[4];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
 
-extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
-extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor(); // 1
-extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight(); // 1
-extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera(); // 1
-extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog(); // 1
-extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light(); // 1
-extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor(); // 1
-extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight(); // 1
-extern "C" void __ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera(); // 1
-extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog(); // 1
-extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void __ct__Q27JStudio13TObject_actorFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_actor();
+extern "C" void __ct__Q27JStudio20TObject_ambientLightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio21TAdaptor_ambientLight();
+extern "C" void __ct__Q27JStudio14TObject_cameraFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio15TAdaptor_camera();
+extern "C" void __ct__Q27JStudio11TObject_fogFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio12TAdaptor_fog();
+extern "C" void __ct__Q27JStudio13TObject_lightFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio14TAdaptor_light();
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_actorFPCQ26JStage7TSystemPQ26JStage6TActor();
+extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
+extern "C" void __ct__Q214JStudio_JStage15TAdaptor_cameraFPCQ26JStage7TSystemPQ26JStage7TCamera();
+extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog();
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

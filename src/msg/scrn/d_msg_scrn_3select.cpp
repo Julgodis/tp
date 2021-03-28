@@ -103,35 +103,37 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const msg_scrn_d_msg_scrn_3select__stringBase0;
+extern "C" extern u8 data_803C0CA0[24 + 48 /* padding */];
 
-extern "C" void __ct__17dMsgScrn3Select_cFv(); // 1
-extern "C" void __dt__17dMsgScrn3Select_cFv(); // 1
-extern "C" void __dt__14J2DAnmColorKeyFv(); // 1
-extern "C" void isSelect__17dMsgScrn3Select_cFv(); // 1
-extern "C" void setString__17dMsgScrn3Select_cFPcPcPc(); // 1
-extern "C" void setRubyString__17dMsgScrn3Select_cFPcPcPc(); // 1
-extern "C" void translate__17dMsgScrn3Select_cFff(); // 1
-extern "C" void draw__17dMsgScrn3Select_cFff(); // 1
-extern "C" void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc(); // 1
-extern "C" void selAnimeMove__17dMsgScrn3Select_cFUcUcb(); // 1
-extern "C" void selAnimeEnd__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getTextBoxWidth__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getFontSize__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getRubyFontSize__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getCharSpace__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getRubyCharSpace__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getTextBoxGlobalPosX__17dMsgScrn3Select_cFi(); // 1
-extern "C" void getTextBoxGlobalPosY__17dMsgScrn3Select_cFi(); // 1
-extern "C" void open1Proc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void open2Proc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void waitProc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void selectProc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void changeProc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void closeProc__17dMsgScrn3Select_cFv(); // 1
-extern "C" void selectScale__17dMsgScrn3Select_cFv(); // 1
-extern "C" void selectTrans__17dMsgScrn3Select_cFv(); // 1
-extern "C" void selectAnimeTransform__17dMsgScrn3Select_cFi(); // 1
-extern "C" void __sinit_d_msg_scrn_3select_cpp(); // 1
+extern "C" void __ct__17dMsgScrn3Select_cFv();
+extern "C" void __dt__17dMsgScrn3Select_cFv();
+extern "C" void __dt__14J2DAnmColorKeyFv();
+extern "C" void isSelect__17dMsgScrn3Select_cFv();
+extern "C" void setString__17dMsgScrn3Select_cFPcPcPc();
+extern "C" void setRubyString__17dMsgScrn3Select_cFPcPcPc();
+extern "C" void translate__17dMsgScrn3Select_cFff();
+extern "C" void draw__17dMsgScrn3Select_cFff();
+extern "C" void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc();
+extern "C" void selAnimeMove__17dMsgScrn3Select_cFUcUcb();
+extern "C" void selAnimeEnd__17dMsgScrn3Select_cFv();
+extern "C" void getTextBoxWidth__17dMsgScrn3Select_cFv();
+extern "C" void getFontSize__17dMsgScrn3Select_cFv();
+extern "C" void getRubyFontSize__17dMsgScrn3Select_cFv();
+extern "C" void getCharSpace__17dMsgScrn3Select_cFv();
+extern "C" void getRubyCharSpace__17dMsgScrn3Select_cFv();
+extern "C" void getTextBoxGlobalPosX__17dMsgScrn3Select_cFi();
+extern "C" void getTextBoxGlobalPosY__17dMsgScrn3Select_cFi();
+extern "C" void open1Proc__17dMsgScrn3Select_cFv();
+extern "C" void open2Proc__17dMsgScrn3Select_cFv();
+extern "C" void waitProc__17dMsgScrn3Select_cFv();
+extern "C" void selectProc__17dMsgScrn3Select_cFv();
+extern "C" void changeProc__17dMsgScrn3Select_cFv();
+extern "C" void closeProc__17dMsgScrn3Select_cFv();
+extern "C" void selectScale__17dMsgScrn3Select_cFv();
+extern "C" void selectTrans__17dMsgScrn3Select_cFv();
+extern "C" void selectAnimeTransform__17dMsgScrn3Select_cFi();
+extern "C" void __sinit_d_msg_scrn_3select_cpp();
 extern "C" extern char const* const msg_scrn_d_msg_scrn_3select__stringBase0;
 extern "C" extern u8 data_803C0CA0[24 + 48 /* padding */];
 
@@ -139,51 +141,57 @@ extern "C" extern u8 data_803C0CA0[24 + 48 /* padding */];
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__10J2DAnmBase[4];
+extern "C" extern void* __vt__10JUTNameTab[3];
+extern "C" extern void* __vt__14J2DAnmColorKey[5];
+extern "C" extern void* __vt__11J2DAnmColor[5];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void getGlobalPosX__8CPaneMgrFv(); // 1
-extern "C" void getGlobalPosY__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void paneScale__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void getGlobalPosX__8CPaneMgrFv();
+extern "C" void getGlobalPosY__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void paneScale__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 extern "C" extern void* __vt__10J2DAnmBase[4];
 extern "C" extern void* __vt__10JUTNameTab[3];
 extern "C" extern void* __vt__14J2DAnmColorKey[5];

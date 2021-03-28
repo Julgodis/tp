@@ -88,10 +88,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -228,58 +228,61 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void bound(cXyz*, cBgS_PolyInfo const&, f32); // 2
-static void daWdStick_Draw(daWdStick_c*); // 2
-static void daWdStick_Execute(daWdStick_c*); // 2
-static void daWdStick_Delete(daWdStick_c*); // 2
-static void daWdStick_Create(fopAc_ac_c*); // 2
+static void bound(cXyz*, cBgS_PolyInfo const&, f32);
+static void daWdStick_Draw(daWdStick_c*);
+static void daWdStick_Execute(daWdStick_c*);
+static void daWdStick_Delete(daWdStick_c*);
+static void daWdStick_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_WdStick[12];
 
-extern "C" void __ct__15daWdStick_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__11daWdStick_cFv(); // 1
-extern "C" void CreateHeap__11daWdStick_cFv(); // 1
-extern "C" void create__11daWdStick_cFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void createHeapCallBack__11daWdStick_cFP10fopAc_ac_c(); // 1
-extern "C" void lightInit__11daWdStick_cFv(); // 1
-extern "C" void setLight__11daWdStick_cFv(); // 1
-extern "C" void setFire__11daWdStick_cFv(); // 1
-extern "C" void Execute__11daWdStick_cFv(); // 1
-extern "C" static void bound__FP4cXyzRC13cBgS_PolyInfof(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void bgCheck__11daWdStick_cFv(); // 1
-extern "C" void setBoundSe__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_call__11daWdStick_cFv(); // 1
-extern "C" void mode_init_wait__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_wait__11daWdStick_cFv(); // 1
-extern "C" void mode_init_carry__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_carry__11daWdStick_cFv(); // 1
-extern "C" void mode_init_drop__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_drop__11daWdStick_cFv(); // 1
-extern "C" void mode_init_roll__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_roll__11daWdStick_cFv(); // 1
-extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" void chkWaterLineIn__11daWdStick_cFv(); // 1
-extern "C" void mode_init_sink__11daWdStick_cFv(); // 1
-extern "C" void mode_proc_sink__11daWdStick_cFv(); // 1
-extern "C" void Draw__11daWdStick_cFv(); // 1
-extern "C" void Delete__11daWdStick_cFv(); // 1
-extern "C" static void daWdStick_Draw__FP11daWdStick_c(); // 1
-extern "C" static void daWdStick_Execute__FP11daWdStick_c(); // 1
-extern "C" static void daWdStick_Delete__FP11daWdStick_c(); // 1
-extern "C" static void daWdStick_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void __dt__15daWdStick_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_wdStick_cpp(); // 1
-extern "C" static void func_80D340FC(); // 1
-extern "C" static void func_80D34104(); // 1
-extern "C" static void func_80D3410C(); // 1
-extern "C" static void func_80D34114(); // 1
-extern "C" static void func_80D3411C(); // 1
+extern "C" void __ct__15daWdStick_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__11daWdStick_cFv();
+extern "C" void CreateHeap__11daWdStick_cFv();
+extern "C" void create__11daWdStick_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void createHeapCallBack__11daWdStick_cFP10fopAc_ac_c();
+extern "C" void lightInit__11daWdStick_cFv();
+extern "C" void setLight__11daWdStick_cFv();
+extern "C" void setFire__11daWdStick_cFv();
+extern "C" void Execute__11daWdStick_cFv();
+extern "C" static void bound__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void bgCheck__11daWdStick_cFv();
+extern "C" void setBoundSe__11daWdStick_cFv();
+extern "C" void mode_proc_call__11daWdStick_cFv();
+extern "C" void mode_init_wait__11daWdStick_cFv();
+extern "C" void mode_proc_wait__11daWdStick_cFv();
+extern "C" void mode_init_carry__11daWdStick_cFv();
+extern "C" void mode_proc_carry__11daWdStick_cFv();
+extern "C" void mode_init_drop__11daWdStick_cFv();
+extern "C" void mode_proc_drop__11daWdStick_cFv();
+extern "C" void mode_init_roll__11daWdStick_cFv();
+extern "C" void mode_proc_roll__11daWdStick_cFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void chkWaterLineIn__11daWdStick_cFv();
+extern "C" void mode_init_sink__11daWdStick_cFv();
+extern "C" void mode_proc_sink__11daWdStick_cFv();
+extern "C" void Draw__11daWdStick_cFv();
+extern "C" void Delete__11daWdStick_cFv();
+extern "C" static void daWdStick_Draw__FP11daWdStick_c();
+extern "C" static void daWdStick_Execute__FP11daWdStick_c();
+extern "C" static void daWdStick_Delete__FP11daWdStick_c();
+extern "C" static void daWdStick_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__15daWdStick_HIO_cFv();
+extern "C" void __sinit_d_a_obj_wdStick_cpp();
+extern "C" static void func_80D340FC();
+extern "C" static void func_80D34104();
+extern "C" static void func_80D3410C();
+extern "C" static void func_80D34114();
+extern "C" static void func_80D3411C();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_WdStick[12];
@@ -288,91 +291,20 @@ extern "C" extern void* g_profile_Obj_WdStick[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
-void fopKyM_createWpillar(cXyz const*, f32, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotS__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void GetWallCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
-extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void C_VECReflect(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
+void fopKyM_createWpillar(cXyz const*, f32, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void cM_atan2s(f32, f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];
@@ -388,7 +320,94 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+extern void* const pad_80D34130[2];
+
+extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void GetWallCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void __ct__14dBgS_ObjLinChkFv();
+extern "C" void __dt__14dBgS_ObjLinChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void GetTgHitGObj__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void cM_atan2s__Fff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECDotProduct();
+extern "C" void C_VECReflect();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 extern void* const pad_80D34130[2];
 
 // 

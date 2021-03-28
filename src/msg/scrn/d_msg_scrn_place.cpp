@@ -73,62 +73,65 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const msg_scrn_d_msg_scrn_place__stringBase0;
 
-extern "C" void __ct__15dMsgScrnPlace_cFv(); // 1
-extern "C" void __dt__15dMsgScrnPlace_cFv(); // 1
-extern "C" void exec__15dMsgScrnPlace_cFv(); // 1
-extern "C" void drawSelf__15dMsgScrnPlace_cFv(); // 1
-extern "C" void fukiAlpha__15dMsgScrnPlace_cFf(); // 1
-extern "C" void fukiScale__15dMsgScrnPlace_cFf(); // 1
-extern "C" void fukiTrans__15dMsgScrnPlace_cFff(); // 1
-extern "C" void fontAlpha__15dMsgScrnPlace_cFf(); // 1
+extern "C" void __ct__15dMsgScrnPlace_cFv();
+extern "C" void __dt__15dMsgScrnPlace_cFv();
+extern "C" void exec__15dMsgScrnPlace_cFv();
+extern "C" void drawSelf__15dMsgScrnPlace_cFv();
+extern "C" void fukiAlpha__15dMsgScrnPlace_cFf();
+extern "C" void fukiScale__15dMsgScrnPlace_cFf();
+extern "C" void fukiTrans__15dMsgScrnPlace_cFff();
+extern "C" void fontAlpha__15dMsgScrnPlace_cFf();
 extern "C" extern char const* const msg_scrn_d_msg_scrn_place__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getRubyFont(); // 2
-void dCam_getBody(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getRubyFont();
+void dCam_getBody();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
-extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
-extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
-extern "C" void __dt__14dMsgScrnBase_cFv(); // 1
-extern "C" void init__14dMsgScrnBase_cFv(); // 1
-extern "C" void multiDraw__14dMsgScrnBase_cFv(); // 1
-extern "C" void draw__14dMsgScrnBase_cFv(); // 1
-extern "C" void drawOutFont__14dMsgScrnBase_cFfff(); // 1
-extern "C" void isTalkNow__14dMsgScrnBase_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void getGlobalPosX__8CPaneMgrFv(); // 1
-extern "C" void getGlobalPosY__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" bool isSelect__14dMsgScrnBase_cFv();
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void __ct__14dMsgScrnBase_cFv();
+extern "C" void __dt__14dMsgScrnBase_cFv();
+extern "C" void init__14dMsgScrnBase_cFv();
+extern "C" void multiDraw__14dMsgScrnBase_cFv();
+extern "C" void draw__14dMsgScrnBase_cFv();
+extern "C" void drawOutFont__14dMsgScrnBase_cFfff();
+extern "C" void isTalkNow__14dMsgScrnBase_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void getGlobalPosX__8CPaneMgrFv();
+extern "C" void getGlobalPosY__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_MsgObject_HIO_c[1040];
 

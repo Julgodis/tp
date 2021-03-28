@@ -25,9 +25,11 @@ namespace std {
 // Forward References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 asinAcosTable___5JMath[4128];
 
-extern "C" void __sinit_JMATrigonometric_cpp(); // 1
-extern "C" void func_80339CB0(); // 1
+extern "C" void __sinit_JMATrigonometric_cpp();
+extern "C" void func_80339CB0();
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 asinAcosTable___5JMath[4128];
 
@@ -36,13 +38,13 @@ extern "C" extern u8 asinAcosTable___5JMath[4128];
 // 
 
 
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void atan(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void asin(); // 1
+extern "C" void __construct_array();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void atan();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void asin();
 
 // 
 // Declarations:

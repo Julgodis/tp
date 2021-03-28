@@ -19,18 +19,19 @@ struct mDoCPd_c {
 // Forward References:
 // 
 
-void cAPICPad_recalibrate(); // 2
-void cAPICPad_ANY_BUTTON(u32); // 2
+void cAPICPad_recalibrate();
+void cAPICPad_ANY_BUTTON(u32);
 
-extern "C" void cAPICPad_recalibrate__Fv(); // 1
-extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
+extern "C" void cAPICPad_recalibrate__Fv();
+extern "C" void cAPICPad_ANY_BUTTON__FUl();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
-extern "C" void recalibrate__8mDoCPd_cFv(); // 1
+extern "C" void recalibrate__8mDoCPd_cFv();
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
 // 

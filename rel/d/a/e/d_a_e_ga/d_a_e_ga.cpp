@@ -36,14 +36,14 @@ struct daE_Ga_HIO_c {
 	/* 804FBAF8 */ ~daE_Ga_HIO_c();
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -73,30 +73,33 @@ struct dComIfG_play_c {
 // Forward References:
 // 
 
-static void daE_Ga_Draw(e_ga_class*); // 2
-static void ga_fly(e_ga_class*, ga_s*); // 2
-static void bt_fly(e_ga_class*, ga_s*); // 2
-static void ga_control(e_ga_class*); // 2
-static void daE_Ga_Execute(e_ga_class*); // 2
-static bool daE_Ga_IsDelete(e_ga_class*); // 2
-static void daE_Ga_Delete(e_ga_class*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_Ga_Create(fopAc_ac_c*); // 2
+static void daE_Ga_Draw(e_ga_class*);
+static void ga_fly(e_ga_class*, ga_s*);
+static void bt_fly(e_ga_class*, ga_s*);
+static void ga_control(e_ga_class*);
+static void daE_Ga_Execute(e_ga_class*);
+static bool daE_Ga_IsDelete(e_ga_class*);
+static void daE_Ga_Delete(e_ga_class*);
+static void useHeapInit(fopAc_ac_c*);
+static void daE_Ga_Create(fopAc_ac_c*);
+extern "C" extern u8 const data_804FBBC0[4];
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_E_GA[12];
 
-extern "C" void __ct__12daE_Ga_HIO_cFv(); // 1
-extern "C" static void daE_Ga_Draw__FP10e_ga_class(); // 1
-extern "C" static void ga_fly__FP10e_ga_classP4ga_s(); // 1
-extern "C" static void bt_fly__FP10e_ga_classP4ga_s(); // 1
-extern "C" static void ga_control__FP10e_ga_class(); // 1
-extern "C" static void daE_Ga_Execute__FP10e_ga_class(); // 1
-extern "C" static bool daE_Ga_IsDelete__FP10e_ga_class(); // 1
-extern "C" static void daE_Ga_Delete__FP10e_ga_class(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_Ga_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__4ga_sFv(); // 1
-extern "C" void __ct__4ga_sFv(); // 1
-extern "C" void __dt__12daE_Ga_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_e_ga_cpp(); // 1
+extern "C" void __ct__12daE_Ga_HIO_cFv();
+extern "C" static void daE_Ga_Draw__FP10e_ga_class();
+extern "C" static void ga_fly__FP10e_ga_classP4ga_s();
+extern "C" static void bt_fly__FP10e_ga_classP4ga_s();
+extern "C" static void ga_control__FP10e_ga_class();
+extern "C" static void daE_Ga_Execute__FP10e_ga_class();
+extern "C" static bool daE_Ga_IsDelete__FP10e_ga_class();
+extern "C" static void daE_Ga_Delete__FP10e_ga_class();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void daE_Ga_Create__FP10fopAc_ac_c();
+extern "C" void __dt__4ga_sFv();
+extern "C" void __ct__4ga_sFv();
+extern "C" void __dt__12daE_Ga_HIO_cFv();
+extern "C" void __sinit_d_a_e_ga_cpp();
 extern "C" extern u8 const data_804FBBC0[4];
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_E_GA[12];
@@ -105,54 +108,19 @@ extern "C" extern void* g_profile_E_GA[12];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void MtxPosition(cXyz*, cXyz*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc(); // 1
-extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai(); // 1
-extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void MtxPosition(cXyz*, cXyz*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -160,7 +128,49 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern void* calc_mtx[1 + 1 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc();
+extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai();
+extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void MtxPosition__FP4cXyzP4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECAdd();
+extern "C" void __construct_array();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

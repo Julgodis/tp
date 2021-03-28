@@ -47,32 +47,33 @@ struct dEvLib_callback_c {
 // 
 
 
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void setEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void func_80048970(); // 1
-extern "C" void initAction__17dEvLib_callback_cFv(); // 1
-extern "C" void executeAction__17dEvLib_callback_cFv(); // 1
-extern "C" void initStart__17dEvLib_callback_cFv(); // 1
-extern "C" void executeStart__17dEvLib_callback_cFv(); // 1
-extern "C" void initRun__17dEvLib_callback_cFv(); // 1
-extern "C" void executeRun__17dEvLib_callback_cFv(); // 1
-extern "C" void __sinit_d_event_lib_cpp(); // 1
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void setEvent__17dEvLib_callback_cFiii();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void func_80048970();
+extern "C" void initAction__17dEvLib_callback_cFv();
+extern "C" void executeAction__17dEvLib_callback_cFv();
+extern "C" void initStart__17dEvLib_callback_cFv();
+extern "C" void executeStart__17dEvLib_callback_cFv();
+extern "C" void initRun__17dEvLib_callback_cFv();
+extern "C" void executeRun__17dEvLib_callback_cFv();
+extern "C" void __sinit_d_event_lib_cpp();
 
 // 
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderMapToolEvent(fopAc_ac_c*, u8, s16, u16, u16, u16);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_orderMapToolEvent__FP10fopAc_ac_cUcsUsUsUs();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

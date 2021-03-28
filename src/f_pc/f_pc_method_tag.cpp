@@ -24,29 +24,29 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fpcMtdTg_Do(process_method_tag_class*); // 2
-void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*); // 2
-void fpcMtdTg_MethodQTo(process_method_tag_class*); // 2
-void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*); // 2
+void fpcMtdTg_Do(process_method_tag_class*);
+void fpcMtdTg_ToMethodQ(node_list_class*, process_method_tag_class*);
+void fpcMtdTg_MethodQTo(process_method_tag_class*);
+void fpcMtdTg_Init(process_method_tag_class*, int (*)(void*), void*);
 
-extern "C" void fpcMtdTg_Do__FP24process_method_tag_class(); // 1
-extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class(); // 1
-extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class(); // 1
-extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv(); // 1
+extern "C" void fpcMtdTg_Do__FP24process_method_tag_class();
+extern "C" void fpcMtdTg_ToMethodQ__FP15node_list_classP24process_method_tag_class();
+extern "C" void fpcMtdTg_MethodQTo__FP24process_method_tag_class();
+extern "C" void fpcMtdTg_Init__FP24process_method_tag_classPFPv_iPv();
 
 // 
 // External References:
 // 
 
-void cTg_SingleCut(create_tag_class*); // 2
-void cTg_Addition(node_list_class*, create_tag_class*); // 2
-void cTg_Create(create_tag_class*, void*); // 2
+void cTg_SingleCut(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
 
-extern "C" void cTg_SingleCut__FP16create_tag_class(); // 1
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
-extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void cTg_SingleCut__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

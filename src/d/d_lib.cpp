@@ -73,30 +73,34 @@ struct CSTControl {
 // Forward References:
 // 
 
-void dLib_getEventSwitchNo(int); // 2
-void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*); // 2
-void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*); // 2
+void dLib_getEventSwitchNo(int);
+void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*);
+void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
+extern "C" extern u8 ZeroQuat[16];
+extern "C" extern void* __vt__10CSTControl[4];
+extern "C" extern void* __vt__9STControl[4];
+extern "C" extern u8 struct_80450DF0[8];
 
-extern "C" void __ct__9STControlFssssffss(); // 1
-extern "C" void setWaitParm__9STControlFssssffss(); // 1
-extern "C" void init__9STControlFv(); // 1
-extern "C" void Xinit__9STControlFv(); // 1
-extern "C" void Yinit__9STControlFv(); // 1
-extern "C" void getValueStick__9STControlFv(); // 1
-extern "C" void getAngleStick__9STControlFv(); // 1
-extern "C" void getValueStick__10CSTControlFv(); // 1
-extern "C" void getAngleStick__10CSTControlFv(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkLeftTrigger__9STControlFv(); // 1
-extern "C" void checkRightTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void dLib_getEventSwitchNo__Fi(); // 1
-extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz(); // 1
-extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc(); // 1
-extern "C" void getTime__11dLib_time_cFv(); // 1
-extern "C" void stopTime__11dLib_time_cFv(); // 1
-extern "C" void startTime__11dLib_time_cFv(); // 1
+extern "C" void __ct__9STControlFssssffss();
+extern "C" void setWaitParm__9STControlFssssffss();
+extern "C" void init__9STControlFv();
+extern "C" void Xinit__9STControlFv();
+extern "C" void Yinit__9STControlFv();
+extern "C" void getValueStick__9STControlFv();
+extern "C" void getAngleStick__9STControlFv();
+extern "C" void getValueStick__10CSTControlFv();
+extern "C" void getAngleStick__10CSTControlFv();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void dLib_getEventSwitchNo__Fi();
+extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz();
+extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" void getTime__11dLib_time_cFv();
+extern "C" void stopTime__11dLib_time_cFv();
+extern "C" void startTime__11dLib_time_cFv();
 extern "C" extern u8 ZeroQuat[16];
 extern "C" extern void* __vt__10CSTControl[4];
 extern "C" extern void* __vt__9STControl[4];
@@ -106,18 +110,21 @@ extern "C" extern u8 struct_80450DF0[8];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
-extern "C" void findFsResource__10JKRArchiveCFPCcUl(); // 1
-extern "C" void getAramAddress__14JKRAramArchiveFPCc(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" void findFsResource__10JKRArchiveCFPCcUl();
+extern "C" void getAramAddress__14JKRAramArchiveFPCc();
+extern "C" void OSGetTime();
+extern "C" void PSMTXMultVec();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];

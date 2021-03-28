@@ -12,20 +12,20 @@
 // 
 
 
-extern "C" void CircleBufferReadBytes(); // 1
-extern "C" void CircleBufferWriteBytes(); // 1
-extern "C" void CircleBufferInitialize(); // 1
-extern "C" void CBGetBytesAvailableForRead(); // 1
+extern "C" void CircleBufferReadBytes();
+extern "C" void CircleBufferWriteBytes();
+extern "C" void CircleBufferInitialize();
+extern "C" void CBGetBytesAvailableForRead();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void MWExitCriticalSection(); // 1
-extern "C" void MWEnterCriticalSection(); // 1
-extern "C" void MWInitializeCriticalSection(); // 1
+SECTION_INIT void memcpy();
+extern "C" void MWExitCriticalSection();
+extern "C" void MWEnterCriticalSection();
+extern "C" void MWInitializeCriticalSection();
 
 // 
 // Declarations:

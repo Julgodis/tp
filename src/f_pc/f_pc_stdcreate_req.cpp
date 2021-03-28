@@ -30,55 +30,56 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcSCtRq_phase_Load(standard_create_request_class*); // 2
-void fpcSCtRq_phase_CreateProcess(standard_create_request_class*); // 2
-void fpcSCtRq_phase_SubCreateProcess(standard_create_request_class*); // 2
-void fpcSCtRq_phase_IsComplete(standard_create_request_class*); // 2
-void fpcSCtRq_phase_PostMethod(standard_create_request_class*); // 2
-static s32 fpcSCtRq_phase_Done(standard_create_request_class*); // 2
-void fpcSCtRq_Handler(standard_create_request_class*); // 2
-static bool fpcSCtRq_Delete(standard_create_request_class*); // 2
-bool fpcSCtRq_Cancel(standard_create_request_class*); // 2
-void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
+void fpcSCtRq_phase_Load(standard_create_request_class*);
+void fpcSCtRq_phase_CreateProcess(standard_create_request_class*);
+void fpcSCtRq_phase_SubCreateProcess(standard_create_request_class*);
+void fpcSCtRq_phase_IsComplete(standard_create_request_class*);
+void fpcSCtRq_phase_PostMethod(standard_create_request_class*);
+static s32 fpcSCtRq_phase_Done(standard_create_request_class*);
+void fpcSCtRq_Handler(standard_create_request_class*);
+static bool fpcSCtRq_Delete(standard_create_request_class*);
+bool fpcSCtRq_Cancel(standard_create_request_class*);
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
 
-extern "C" void fpcSCtRq_phase_Load__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_phase_SubCreateProcess__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_phase_IsComplete__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_phase_PostMethod__FP29standard_create_request_class(); // 1
-extern "C" static s32 fpcSCtRq_phase_Done__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_Handler__FP29standard_create_request_class(); // 1
-extern "C" static bool fpcSCtRq_Delete__FP29standard_create_request_class(); // 1
-extern "C" bool fpcSCtRq_Cancel__FP29standard_create_request_class(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void fpcSCtRq_phase_Load__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_phase_CreateProcess__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_phase_SubCreateProcess__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_phase_IsComplete__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_phase_PostMethod__FP29standard_create_request_class();
+extern "C" static s32 fpcSCtRq_phase_Done__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_Handler__FP29standard_create_request_class();
+extern "C" static bool fpcSCtRq_Delete__FP29standard_create_request_class();
+extern "C" bool fpcSCtRq_Cancel__FP29standard_create_request_class();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcBs_Create(s16, unsigned int, void*); // 2
-void fpcBs_SubCreate(base_process_class*); // 2
-void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
-void fpcLy_IsCreatingMesg(layer_class*); // 2
-void fpcLy_SetCurrentLayer(layer_class*); // 2
-void fpcLd_Free(s16); // 2
-void fpcLd_Load(s16); // 2
-void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
-void cPhs_Do(request_of_phase_process_class*, void*); // 2
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_Create(s16, unsigned int, void*);
+void fpcBs_SubCreate(base_process_class*);
+void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
+void fpcLy_IsCreatingMesg(layer_class*);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLd_Free(s16);
+void fpcLd_Load(s16);
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*));
+void cPhs_Do(request_of_phase_process_class*, void*);
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcBs_Create__FsUiPv(); // 1
-extern "C" void fpcBs_SubCreate__FP18base_process_class(); // 1
-extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class(); // 1
-extern "C" void fpcLy_IsCreatingMesg__FP11layer_class(); // 1
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
-extern "C" void fpcLd_Free__Fs(); // 1
-extern "C" void fpcLd_Load__Fs(); // 1
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
-extern "C" void cPhs_Do__FP30request_of_phase_process_classPv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcBs_Create__FsUiPv();
+extern "C" void fpcBs_SubCreate__FP18base_process_class();
+extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+extern "C" void fpcLy_IsCreatingMesg__FP11layer_class();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLd_Free__Fs();
+extern "C" void fpcLd_Load__Fs();
+extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+extern "C" void cPhs_Do__FP30request_of_phase_process_classPv();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 

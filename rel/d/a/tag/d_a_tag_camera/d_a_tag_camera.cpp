@@ -55,48 +55,50 @@ struct dCamera_c {
 // Forward References:
 // 
 
-static bool daTag_Cam_Draw(daTag_Cam_c*); // 2
-static void daTag_Cam_Execute(daTag_Cam_c*); // 2
-static bool daTag_Cam_IsDelete(daTag_Cam_c*); // 2
-static void daTag_Cam_Delete(daTag_Cam_c*); // 2
-static void daTag_Cam_Create(fopAc_ac_c*); // 2
+static bool daTag_Cam_Draw(daTag_Cam_c*);
+static void daTag_Cam_Execute(daTag_Cam_c*);
+static bool daTag_Cam_IsDelete(daTag_Cam_c*);
+static void daTag_Cam_Delete(daTag_Cam_c*);
+static void daTag_Cam_Create(fopAc_ac_c*);
+extern "C" extern void* const lit_4358[22];
+extern "C" extern void* g_profile_TAG_CAMERA[12];
 
-extern "C" static bool func_80489A98(); // 1
-extern "C" static void func_80489AA0(); // 1
-extern "C" static void func_80489B18(); // 1
-extern "C" static void func_80489B2C(); // 1
-extern "C" static void func_80489B6C(); // 1
-extern "C" static void func_80489BE0(); // 1
-extern "C" static void func_80489C04(); // 1
-extern "C" static void func_80489C1C(); // 1
-extern "C" static void func_80489C34(); // 1
-extern "C" static void func_80489C6C(); // 1
-extern "C" static void func_80489CAC(); // 1
-extern "C" static void func_80489CE4(); // 1
-extern "C" static void func_80489CF8(); // 1
-extern "C" static void func_80489D30(); // 1
-extern "C" static void func_80489D5C(); // 1
-extern "C" static void func_80489D70(); // 1
-extern "C" static void func_80489DB0(); // 1
-extern "C" static void func_80489DE4(); // 1
-extern "C" static void func_80489DF8(); // 1
-extern "C" static void func_80489E18(); // 1
-extern "C" static void func_80489E8C(); // 1
-extern "C" static void func_80489EDC(); // 1
-extern "C" void getSwType__11daTag_Cam_cFv(); // 1
-extern "C" void getPrio__11daTag_Cam_cFv(); // 1
-extern "C" void getSwBit__11daTag_Cam_cFv(); // 1
-extern "C" void getCondition__11daTag_Cam_cFv(); // 1
-extern "C" void getCameraId__11daTag_Cam_cFv(); // 1
-extern "C" void getRailID__11daTag_Cam_cFv(); // 1
-extern "C" void getAreaType__11daTag_Cam_cFv(); // 1
-extern "C" void getAreaNoChk__11daTag_Cam_cFv(); // 1
-extern "C" void execute__11daTag_Cam_cFv(); // 1
-extern "C" static bool daTag_Cam_Draw__FP11daTag_Cam_c(); // 1
-extern "C" static void daTag_Cam_Execute__FP11daTag_Cam_c(); // 1
-extern "C" static bool daTag_Cam_IsDelete__FP11daTag_Cam_c(); // 1
-extern "C" static void daTag_Cam_Delete__FP11daTag_Cam_c(); // 1
-extern "C" static void daTag_Cam_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool func_80489A98();
+extern "C" static void func_80489AA0();
+extern "C" static void func_80489B18();
+extern "C" static void func_80489B2C();
+extern "C" static void func_80489B6C();
+extern "C" static void func_80489BE0();
+extern "C" static void func_80489C04();
+extern "C" static void func_80489C1C();
+extern "C" static void func_80489C34();
+extern "C" static void func_80489C6C();
+extern "C" static void func_80489CAC();
+extern "C" static void func_80489CE4();
+extern "C" static void func_80489CF8();
+extern "C" static void func_80489D30();
+extern "C" static void func_80489D5C();
+extern "C" static void func_80489D70();
+extern "C" static void func_80489DB0();
+extern "C" static void func_80489DE4();
+extern "C" static void func_80489DF8();
+extern "C" static void func_80489E18();
+extern "C" static void func_80489E8C();
+extern "C" static void func_80489EDC();
+extern "C" void getSwType__11daTag_Cam_cFv();
+extern "C" void getPrio__11daTag_Cam_cFv();
+extern "C" void getSwBit__11daTag_Cam_cFv();
+extern "C" void getCondition__11daTag_Cam_cFv();
+extern "C" void getCameraId__11daTag_Cam_cFv();
+extern "C" void getRailID__11daTag_Cam_cFv();
+extern "C" void getAreaType__11daTag_Cam_cFv();
+extern "C" void getAreaNoChk__11daTag_Cam_cFv();
+extern "C" void execute__11daTag_Cam_cFv();
+extern "C" static bool daTag_Cam_Draw__FP11daTag_Cam_c();
+extern "C" static void daTag_Cam_Execute__FP11daTag_Cam_c();
+extern "C" static bool daTag_Cam_IsDelete__FP11daTag_Cam_c();
+extern "C" static void daTag_Cam_Delete__FP11daTag_Cam_c();
+extern "C" static void daTag_Cam_Create__FP10fopAc_ac_c();
 extern "C" extern void* const lit_4358[22];
 extern "C" extern void* g_profile_TAG_CAMERA[12];
 
@@ -104,21 +106,27 @@ extern "C" extern void* g_profile_TAG_CAMERA[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void dCam_getBody(); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void dCam_getBody();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getCopyRodCameraActor__9daAlink_cFv(); // 1
-extern "C" void SetTagData__9dCamera_cFP10fopAc_ac_clUsUc(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getCopyRodCameraActor__9daAlink_cFv();
+extern "C" void SetTagData__9dCamera_cFP10fopAc_ac_clUsUc();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void PSMTXMultVec();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

@@ -33,27 +33,27 @@ struct JSUPtrList {
 // 
 
 
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __ct__10JSUPtrListFb(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void setFirst__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void prepend__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void getNthLink__10JSUPtrListCFUl(); // 1
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void setFirst__10JSUPtrListFP10JSUPtrLink();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void getNthLink__10JSUPtrListCFUl();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

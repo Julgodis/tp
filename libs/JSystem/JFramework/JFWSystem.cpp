@@ -91,9 +91,17 @@ struct JFWSystem {
 // Forward References:
 // 
 
+extern "C" extern u32 maxStdHeaps__Q29JFWSystem11CSetUpParam;
+extern "C" extern u32 sysHeapSize__Q29JFWSystem11CSetUpParam;
+extern "C" extern u32 fifoBufSize__Q29JFWSystem11CSetUpParam;
+extern "C" extern u32 aramAudioBufSize__Q29JFWSystem11CSetUpParam;
+extern "C" extern u32 aramGraphBufSize__Q29JFWSystem11CSetUpParam;
+extern "C" extern void* renderMode__Q29JFWSystem11CSetUpParam;
+extern "C" extern u8 systemHeap__9JFWSystem[4];
+extern "C" extern u8 systemConsole__9JFWSystem[4];
 
-extern "C" void firstInit__9JFWSystemFv(); // 1
-extern "C" void init__9JFWSystemFv(); // 1
+extern "C" void firstInit__9JFWSystemFv();
+extern "C" void init__9JFWSystemFv();
 extern "C" extern u32 maxStdHeaps__Q29JFWSystem11CSetUpParam;
 extern "C" extern u32 sysHeapSize__Q29JFWSystem11CSetUpParam;
 extern "C" extern u32 fifoBufSize__Q29JFWSystem11CSetUpParam;
@@ -107,31 +115,33 @@ extern "C" extern u8 systemConsole__9JFWSystem[4];
 // External References:
 // 
 
-void* operator new(u32); // 2
+void* operator new(u32);
+extern "C" extern u8 const JUTResFONT_Ascfont_fix12[16736];
+extern "C" extern u8 GXNtsc480IntDf[60];
 
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void createRoot__10JKRExpHeapFib(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
-extern "C" void create__7JKRAramFUlUllll(); // 1
-extern "C" void __ct__12JUTGraphFifoFUl(); // 1
-extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
-extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
-extern "C" void changeFont__10JUTDbPrintFP7JUTFont(); // 1
-extern "C" void init__10JUTGamePadFv(); // 1
-extern "C" void create__12JUTExceptionFP14JUTDirectPrint(); // 1
-extern "C" void createConsole__12JUTExceptionFPvUl(); // 1
-extern "C" void start__14JUTDirectPrintFv(); // 1
-extern "C" void create__12JUTAssertionFv(); // 1
-extern "C" void createManager__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void create__10JUTConsoleFUiUiP7JKRHeap(); // 1
-extern "C" void createManager__17JUTConsoleManagerFP7JKRHeap(); // 1
-extern "C" void JUTSetReportConsole(); // 1
-extern "C" void JUTSetWarningConsole(); // 1
-extern "C" void OSInit(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void DVDInit(); // 1
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void* __nw__FUl();
+extern "C" void createRoot__10JKRExpHeapFib();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void create__7JKRAramFUlUllll();
+extern "C" void __ct__12JUTGraphFifoFUl();
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" void changeFont__10JUTDbPrintFP7JUTFont();
+extern "C" void init__10JUTGamePadFv();
+extern "C" void create__12JUTExceptionFP14JUTDirectPrint();
+extern "C" void createConsole__12JUTExceptionFPvUl();
+extern "C" void start__14JUTDirectPrintFv();
+extern "C" void create__12JUTAssertionFv();
+extern "C" void createManager__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void create__10JUTConsoleFUiUiP7JKRHeap();
+extern "C" void createManager__17JUTConsoleManagerFP7JKRHeap();
+extern "C" void JUTSetReportConsole();
+extern "C" void JUTSetWarningConsole();
+extern "C" void OSInit();
+extern "C" void OSGetCurrentThread();
+extern "C" void DVDInit();
 extern "C" extern u8 const JUTResFONT_Ascfont_fix12[16736];
 extern "C" extern u8 GXNtsc480IntDf[60];
 

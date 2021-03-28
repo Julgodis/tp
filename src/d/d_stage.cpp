@@ -124,13 +124,22 @@ struct dStage_startStage_c {
 struct dStage_dPnt_c {
 };
 
+struct dStage_MapEventInfo_c {
+};
+
 struct dStage_FileList_dt_c {
 };
 
-struct dStage_FloorInfo_c {
+struct dStage_MemoryConfig_c {
+};
+
+struct dStage_Lbnk_c {
 };
 
 struct dStage_DMap_c {
+};
+
+struct dStage_Elst_c {
 };
 
 struct dStage_Multi_c {
@@ -139,25 +148,16 @@ struct dStage_Multi_c {
 struct dStage_MemoryMap_c {
 };
 
-struct dStage_dPath_c {
-};
-
-struct dStage_Lbnk_c {
-};
-
-struct dStage_FileList2_dt_c {
-};
-
-struct dStage_Elst_c {
+struct dStage_FloorInfo_c {
 };
 
 struct dStage_SoundInfo_c {
 };
 
-struct dStage_MapEventInfo_c {
+struct dStage_FileList2_dt_c {
 };
 
-struct dStage_MemoryConfig_c {
+struct dStage_dPath_c {
 };
 
 struct dStage_stageDt_c {
@@ -462,392 +462,403 @@ struct FuncTable {
 // Forward References:
 // 
 
-static void dStage_SetErrorRoom(); // 2
-void dStage_SetErrorStage(); // 2
-void dStage_GetKeepDoorInfo(); // 2
-void dStage_isBossStage(dStage_dt_c*); // 2
-void dStage_KeepDoorInfoInit(dStage_dt_c*); // 2
-void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
-void dStage_GetRoomKeepDoorInfo(); // 2
-static void dStage_initRoomKeepDoorInfo(); // 2
-static void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*); // 2
-static void dStage_RoomKeepDoorInit(dStage_dt_c*, void*, int, void*); // 2
-static void stayRoomCheck(int, u8*, int); // 2
-static void createRoomScene(int); // 2
-static void dStage_roomInit(int); // 2
-void dStage_searchName(char const*); // 2
-static void dStage_getName(s16, s8); // 2
-void dStage_getName2(s16, s8); // 2
-static void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*); // 2
-static void dStage_cameraCreate(stage_camera2_data_class*, int, int); // 2
-static void dStage_playerInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_cameraInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_RoomCameraInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_arrowInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_paletteInfoInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_filiInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_vrboxInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_vrboxcolInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_plightInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_lgtvInfoInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int); // 2
-static void dStage_stagInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_sclsInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_actorCommonLayerInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_tgscCommonLayerInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_actorInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_actorInit_always(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_tgscInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_doorInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_roomReadInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, int); // 2
-static void dStage_ppntInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_pathInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_rppnInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_rpatInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_soundInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_soundInfoInitCL(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_setLayerTagName(FuncTable*, int, int); // 2
-static void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int); // 2
-static void dStage_stEventInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_mapEventInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_floorInfoInit(dStage_dt_c*, void*, int, void*); // 2
-void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_mecoInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_stageKeepTresureInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_fieldMapTresureInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_dt_c_offsetToPtr(void*); // 2
-static void dStage_mapPathInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_mapPathInitCommonLayer(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_fieldMapMapPathInit(dStage_dt_c*, void*, int, void*); // 2
-static void readMult(dStage_dt_c*, dStage_Multi_c*, bool); // 2
-static void dStage_multInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_lbnkInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_roomTresureInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_layerTresureInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_dmapInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_stageDrtgInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_roomDrtgInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dStage_elstInfoInit(dStage_dt_c*, void*, int, void*); // 2
-static void dKankyo_create(); // 2
-static void layerMemoryInfoLoader(void*, dStage_dt_c*, int); // 2
-static void dStage_dt_c_stageInitLoader(void*, dStage_dt_c*); // 2
-static void layerTableLoader(void*, dStage_dt_c*, int); // 2
-static void layerActorLoader(void*, dStage_dt_c*, int); // 2
-static void dStage_dt_c_stageLoader(void*, dStage_dt_c*); // 2
-void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int); // 2
-void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int); // 2
-void dStage_dt_c_fieldMapLoader(void*, dStage_dt_c*); // 2
-void dStage_infoCreate(); // 2
-void dStage_Create(); // 2
-void dStage_Delete(); // 2
-void dStage_RoomCheck(cBgS_GndChk*); // 2
-void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int); // 2
-void dStage_restartRoom(u32, u32, int); // 2
+static void dStage_SetErrorRoom();
+void dStage_SetErrorStage();
+void dStage_GetKeepDoorInfo();
+void dStage_isBossStage(dStage_dt_c*);
+void dStage_KeepDoorInfoInit(dStage_dt_c*);
+void dStage_KeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*);
+void dStage_GetRoomKeepDoorInfo();
+static void dStage_initRoomKeepDoorInfo();
+static void dStage_RoomKeepDoorInfoProc(dStage_dt_c*, stage_tgsc_class*);
+static void dStage_RoomKeepDoorInit(dStage_dt_c*, void*, int, void*);
+static void stayRoomCheck(int, u8*, int);
+static void createRoomScene(int);
+static void dStage_roomInit(int);
+void dStage_searchName(char const*);
+static void dStage_getName(s16, s8);
+void dStage_getName2(s16, s8);
+static void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*);
+static void dStage_cameraCreate(stage_camera2_data_class*, int, int);
+static void dStage_playerInit(dStage_dt_c*, void*, int, void*);
+static void dStage_cameraInit(dStage_dt_c*, void*, int, void*);
+static void dStage_RoomCameraInit(dStage_dt_c*, void*, int, void*);
+static void dStage_arrowInit(dStage_dt_c*, void*, int, void*);
+static void dStage_paletteInfoInit(dStage_dt_c*, void*, int, void*);
+void dStage_pselectInfoInit(dStage_dt_c*, void*, int, void*);
+void dStage_envrInfoInit(dStage_dt_c*, void*, int, void*);
+void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*);
+static void dStage_fieldMapFiliInfo2Init(dStage_dt_c*, void*, int, void*);
+static void dStage_filiInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_vrboxInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_vrboxcolInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_plightInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_lgtvInfoInit(dStage_dt_c*, void*, int, void*);
+void dStage_stagInfo_GetParticleNo(stage_stag_info_class*, int);
+static void dStage_stagInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_sclsInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_actorCommonLayerInit(dStage_dt_c*, void*, int, void*);
+static void dStage_tgscCommonLayerInit(dStage_dt_c*, void*, int, void*);
+static void dStage_actorInit(dStage_dt_c*, void*, int, void*);
+static void dStage_actorInit_always(dStage_dt_c*, void*, int, void*);
+static void dStage_tgscInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_doorInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_roomReadInit(dStage_dt_c*, void*, int, void*);
+void dStage_roomRead_dt_c_GetReverbStage(roomRead_class&, int);
+static void dStage_ppntInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_pathInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_rppnInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_rpatInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_soundInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_soundInfoInitCL(dStage_dt_c*, void*, int, void*);
+static void dStage_setLayerTagName(FuncTable*, int, int);
+static void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int);
+static void dStage_stEventInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_mapEventInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_floorInfoInit(dStage_dt_c*, void*, int, void*);
+void dStage_memaInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_mecoInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_stageKeepTresureInit(dStage_dt_c*, void*, int, void*);
+static void dStage_fieldMapTresureInit(dStage_dt_c*, void*, int, void*);
+static void dStage_dt_c_offsetToPtr(void*);
+static void dStage_mapPathInit(dStage_dt_c*, void*, int, void*);
+static void dStage_mapPathInitCommonLayer(dStage_dt_c*, void*, int, void*);
+static void dStage_fieldMapMapPathInit(dStage_dt_c*, void*, int, void*);
+static void readMult(dStage_dt_c*, dStage_Multi_c*, bool);
+static void dStage_multInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_lbnkInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_roomTresureInit(dStage_dt_c*, void*, int, void*);
+static void dStage_layerTresureInit(dStage_dt_c*, void*, int, void*);
+static void dStage_dmapInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_stageDrtgInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_roomDrtgInfoInit(dStage_dt_c*, void*, int, void*);
+static void dStage_elstInfoInit(dStage_dt_c*, void*, int, void*);
+static void dKankyo_create();
+static void layerMemoryInfoLoader(void*, dStage_dt_c*, int);
+static void dStage_dt_c_stageInitLoader(void*, dStage_dt_c*);
+static void layerTableLoader(void*, dStage_dt_c*, int);
+static void layerActorLoader(void*, dStage_dt_c*, int);
+static void dStage_dt_c_stageLoader(void*, dStage_dt_c*);
+void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int);
+void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int);
+void dStage_dt_c_fieldMapLoader(void*, dStage_dt_c*);
+void dStage_infoCreate();
+void dStage_Create();
+void dStage_Delete();
+void dStage_RoomCheck(cBgS_GndChk*);
+void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int);
+void dStage_restartRoom(u32, u32, int);
+extern "C" extern char const* const d_d_stage__stringBase0;
+extern "C" extern void* __vt__16dStage_stageDt_c[93];
+extern "C" extern void* __vt__11dStage_dt_c[93];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 mProcID__20dStage_roomControl_c[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 data_80450D68[4];
+extern "C" extern u8 mArcBankName__20dStage_roomControl_c[4];
+extern "C" extern u8 mArcBankData__20dStage_roomControl_c[4];
+extern "C" extern u8 pad_80450D7C[4];
 
-extern "C" void set__18dStage_nextStage_cFPCcScsScScUc(); // 1
-extern "C" static void dStage_SetErrorRoom__Fv(); // 1
-extern "C" void dStage_SetErrorStage__Fv(); // 1
-extern "C" void dStage_GetKeepDoorInfo__Fv(); // 1
-extern "C" void dStage_isBossStage__FP11dStage_dt_c(); // 1
-extern "C" void dStage_KeepDoorInfoInit__FP11dStage_dt_c(); // 1
-extern "C" void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
-extern "C" void dStage_GetRoomKeepDoorInfo__Fv(); // 1
-extern "C" static void dStage_initRoomKeepDoorInfo__Fv(); // 1
-extern "C" static void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class(); // 1
-extern "C" static void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void set__19dStage_startStage_cFPCcScsSc(); // 1
-extern "C" void init__20dStage_roomControl_cFv(); // 1
-extern "C" void initZone__20dStage_roomControl_cFv(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void getMemoryBlock__20dStage_roomControl_cFi(); // 1
-extern "C" void setStayNo__20dStage_roomControl_cFi(); // 1
-extern "C" void setNextStayNo__20dStage_roomControl_cFi(); // 1
-extern "C" static void stayRoomCheck__FiPUci(); // 1
-extern "C" static void createRoomScene__Fi(); // 1
-extern "C" void checkRoomDisp__20dStage_roomControl_cCFi(); // 1
-extern "C" void loadRoom__20dStage_roomControl_cFiPUcb(); // 1
-extern "C" void zoneCountCheck__20dStage_roomControl_cCFi(); // 1
-extern "C" void getStagInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void createMemoryBlock__20dStage_roomControl_cFiUl(); // 1
-extern "C" void destroyMemoryBlock__20dStage_roomControl_cFv(); // 1
-extern "C" void setArcBank__20dStage_roomControl_cFiPCc(); // 1
-extern "C" void getArcBank__20dStage_roomControl_cFi(); // 1
-extern "C" void resetArchiveBank__20dStage_roomControl_cFi(); // 1
-extern "C" void create__Q220dStage_roomControl_c9roomDzs_cFUc(); // 1
-extern "C" void remove__Q220dStage_roomControl_c9roomDzs_cFv(); // 1
-extern "C" void add__Q220dStage_roomControl_c9roomDzs_cFUcUc(); // 1
-extern "C" void init__16dStage_stageDt_cFv(); // 1
-extern "C" void initFileList2__15dStage_roomDt_cFv(); // 1
-extern "C" void init__15dStage_roomDt_cFv(); // 1
-extern "C" static void dStage_roomInit__Fi(); // 1
-extern "C" void SetTimePass__20dStage_roomControl_cFi(); // 1
-extern "C" void getRoom__16dStage_stageDt_cCFv(); // 1
-extern "C" void dStage_searchName__FPCc(); // 1
-extern "C" static void dStage_getName__FsSc(); // 1
-extern "C" void dStage_getName2__FsSc(); // 1
-extern "C" static void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class(); // 1
-extern "C" static void dStage_cameraCreate__FP24stage_camera2_data_classii(); // 1
-extern "C" void getPlayer__15dStage_roomDt_cCFv(); // 1
-extern "C" void getPlayer__16dStage_stageDt_cCFv(); // 1
-extern "C" static void dStage_playerInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_cameraInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_RoomCameraInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_arrowInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void getMapInfo2__15dStage_roomDt_cCFi(); // 1
-extern "C" void getMapInfoBase__15dStage_roomDt_cCFv(); // 1
-extern "C" void getMapInfo2__16dStage_stageDt_cCFi(); // 1
-extern "C" void getMapInfoBase__16dStage_stageDt_cCFv(); // 1
-extern "C" static void dStage_paletteInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_pselectInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_envrInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_filiInfo2Init__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_filiInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_plightInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi(); // 1
-extern "C" static void dStage_stagInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void resetOldMulti__16dStage_stageDt_cFv(); // 1
-extern "C" static void dStage_sclsInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_actorInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_actorInit_always__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_tgscInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_doorInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_roomReadInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi(); // 1
-extern "C" static void dStage_ppntInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_pathInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_rppnInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_rpatInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_soundInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_setLayerTagName__FP9FuncTableii(); // 1
-extern "C" static void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei(); // 1
-extern "C" static void dStage_stEventInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_floorInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" void dStage_memaInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_mecoInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_dt_c_offsetToPtr__FPv(); // 1
-extern "C" static void dStage_mapPathInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void readMult__FP11dStage_dt_cP14dStage_Multi_cb(); // 1
-extern "C" static void dStage_multInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_roomTresureInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_layerTresureInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_dmapInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dStage_elstInfoInit__FP11dStage_dt_cPviPv(); // 1
-extern "C" static void dKankyo_create__Fv(); // 1
-extern "C" static void layerMemoryInfoLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" static void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c(); // 1
-extern "C" static void layerTableLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" void getElst__16dStage_stageDt_cFv(); // 1
-extern "C" static void layerActorLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" static void dStage_dt_c_stageLoader__FPvP11dStage_dt_c(); // 1
-extern "C" void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c(); // 1
-extern "C" void dStage_infoCreate__Fv(); // 1
-extern "C" void dStage_Create__Fv(); // 1
-extern "C" void dStage_Delete__Fv(); // 1
-extern "C" void setOldMulti__16dStage_stageDt_cFv(); // 1
-extern "C" void dStage_RoomCheck__FP11cBgS_GndChk(); // 1
-extern "C" void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void getSclsInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void getSclsInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void dStage_changeScene4Event__FiScibfUlsi(); // 1
-extern "C" void dStage_restartRoom__FUlUli(); // 1
-extern "C" void setCamera__15dStage_roomDt_cFP18stage_camera_class(); // 1
-extern "C" void getCamera__15dStage_roomDt_cCFv(); // 1
-extern "C" void setArrow__15dStage_roomDt_cFP17stage_arrow_class(); // 1
-extern "C" void getArrow__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPlayer__15dStage_roomDt_cFP17stage_actor_class(); // 1
-extern "C" void setPlayerNum__15dStage_roomDt_cFUs(); // 1
-extern "C" void getPlayerNum__15dStage_roomDt_cCFv(); // 1
-extern "C" void setRoom__15dStage_roomDt_cFP14roomRead_class(); // 1
-extern "C" void getRoom__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class(); // 1
-extern "C" void getMapInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class(); // 1
-extern "C" void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class(); // 1
-extern "C" void getPaletteInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class(); // 1
-extern "C" void getPselectInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class(); // 1
-extern "C" void getEnvrInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class(); // 1
-extern "C" void getVrboxInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class(); // 1
-extern "C" void getVrboxcolInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class(); // 1
-extern "C" void getPlightInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPaletteNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getPaletteNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPselectNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getPselectNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setEnvrNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getEnvrNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setVrboxNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getVrboxNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setVrboxcolNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getVrboxcolNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPlightNumInfo__15dStage_roomDt_cFi(); // 1
-extern "C" void getPlightNumInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class(); // 1
-extern "C" void getLightVecInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setLightVecInfoNum__15dStage_roomDt_cFi(); // 1
-extern "C" void getLightVecInfoNum__15dStage_roomDt_cCFv(); // 1
-extern "C" void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class(); // 1
-extern "C" void getStagInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class(); // 1
-extern "C" void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c(); // 1
-extern "C" void getPntInf__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c(); // 1
-extern "C" void getPathInf__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c(); // 1
-extern "C" void getPnt2Inf__15dStage_roomDt_cCFv(); // 1
-extern "C" void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c(); // 1
-extern "C" void getPath2Inf__15dStage_roomDt_cCFv(); // 1
-extern "C" void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c(); // 1
-extern "C" void getSoundInf__15dStage_roomDt_cCFv(); // 1
-extern "C" void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c(); // 1
-extern "C" void getSoundInfCL__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c(); // 1
-extern "C" void getMapEventInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c(); // 1
-extern "C" void getFileList2Info__15dStage_roomDt_cCFv(); // 1
-extern "C" void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c(); // 1
-extern "C" void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c(); // 1
-extern "C" void getFloorInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c(); // 1
-extern "C" void getMemoryConfig__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c(); // 1
-extern "C" void getMemoryMap__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMulti__15dStage_roomDt_cFP14dStage_Multi_c(); // 1
-extern "C" void getMulti__15dStage_roomDt_cCFv(); // 1
-extern "C" void setOldMulti__15dStage_roomDt_cFv(); // 1
-extern "C" void resetOldMulti__15dStage_roomDt_cFv(); // 1
-extern "C" void getOldMulti__15dStage_roomDt_cCFv(); // 1
-extern "C" void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c(); // 1
-extern "C" void getLbnk__15dStage_roomDt_cCFv(); // 1
-extern "C" void setTresure__15dStage_roomDt_cFP19stage_tresure_class(); // 1
-extern "C" void getTresure__15dStage_roomDt_cCFv(); // 1
-extern "C" void setDMap__15dStage_roomDt_cFP13dStage_DMap_c(); // 1
-extern "C" bool getDMap__15dStage_roomDt_cCFv(); // 1
-extern "C" void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class(); // 1
-extern "C" void getDrTg__15dStage_roomDt_cCFv(); // 1
-extern "C" void setDoor__15dStage_roomDt_cFP16stage_tgsc_class(); // 1
-extern "C" void getDoor__15dStage_roomDt_cCFv(); // 1
-extern "C" void setMapPath__15dStage_roomDt_cFPv(); // 1
-extern "C" void getMapPath__15dStage_roomDt_cFv(); // 1
-extern "C" void setElst__15dStage_roomDt_cFP13dStage_Elst_c(); // 1
-extern "C" void getElst__15dStage_roomDt_cFv(); // 1
-extern "C" void setCamera__16dStage_stageDt_cFP18stage_camera_class(); // 1
-extern "C" void getCamera__16dStage_stageDt_cCFv(); // 1
-extern "C" void setArrow__16dStage_stageDt_cFP17stage_arrow_class(); // 1
-extern "C" void getArrow__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPlayer__16dStage_stageDt_cFP17stage_actor_class(); // 1
-extern "C" void setPlayerNum__16dStage_stageDt_cFUs(); // 1
-extern "C" void getPlayerNum__16dStage_stageDt_cCFv(); // 1
-extern "C" void setRoom__16dStage_stageDt_cFP14roomRead_class(); // 1
-extern "C" void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class(); // 1
-extern "C" void getMapInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class(); // 1
-extern "C" void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class(); // 1
-extern "C" void getPaletteInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class(); // 1
-extern "C" void getPselectInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class(); // 1
-extern "C" void getEnvrInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class(); // 1
-extern "C" void getVrboxInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class(); // 1
-extern "C" void getVrboxcolInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class(); // 1
-extern "C" void getPlightInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPaletteNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getPaletteNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPselectNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getPselectNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setEnvrNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getEnvrNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setVrboxNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getVrboxNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setVrboxcolNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getVrboxcolNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class(); // 1
-extern "C" void getLightVecInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setLightVecInfoNum__16dStage_stageDt_cFi(); // 1
-extern "C" void getLightVecInfoNum__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPlightNumInfo__16dStage_stageDt_cFi(); // 1
-extern "C" void getPlightNumInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class(); // 1
-extern "C" void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class(); // 1
-extern "C" void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c(); // 1
-extern "C" void getPntInf__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c(); // 1
-extern "C" void getPathInf__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c(); // 1
-extern "C" void getPnt2Inf__16dStage_stageDt_cCFv(); // 1
-extern "C" void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c(); // 1
-extern "C" void getPath2Inf__16dStage_stageDt_cCFv(); // 1
-extern "C" void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c(); // 1
-extern "C" void getSoundInf__16dStage_stageDt_cCFv(); // 1
-extern "C" void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c(); // 1
-extern "C" void getSoundInfCL__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c(); // 1
-extern "C" void getMapEventInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c(); // 1
-extern "C" void getFileList2Info__16dStage_stageDt_cCFv(); // 1
-extern "C" void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c(); // 1
-extern "C" void getFileListInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c(); // 1
-extern "C" void getFloorInfo__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c(); // 1
-extern "C" void getMemoryConfig__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c(); // 1
-extern "C" void getMemoryMap__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMulti__16dStage_stageDt_cFP14dStage_Multi_c(); // 1
-extern "C" void getMulti__16dStage_stageDt_cCFv(); // 1
-extern "C" void getOldMulti__16dStage_stageDt_cCFv(); // 1
-extern "C" void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c(); // 1
-extern "C" void getLbnk__16dStage_stageDt_cCFv(); // 1
-extern "C" void setTresure__16dStage_stageDt_cFP19stage_tresure_class(); // 1
-extern "C" void getTresure__16dStage_stageDt_cCFv(); // 1
-extern "C" void setDMap__16dStage_stageDt_cFP13dStage_DMap_c(); // 1
-extern "C" void getDMap__16dStage_stageDt_cCFv(); // 1
-extern "C" void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class(); // 1
-extern "C" void getDrTg__16dStage_stageDt_cCFv(); // 1
-extern "C" void setDoor__16dStage_stageDt_cFP16stage_tgsc_class(); // 1
-extern "C" void getDoor__16dStage_stageDt_cCFv(); // 1
-extern "C" void setMapPath__16dStage_stageDt_cFPv(); // 1
-extern "C" bool getMapPath__16dStage_stageDt_cFv(); // 1
-extern "C" void setElst__16dStage_stageDt_cFP13dStage_Elst_c(); // 1
-extern "C" void __sinit_d_stage_cpp(); // 1
-extern "C" static void __arraydtor(); // 1
-extern "C" void __dt__19dStage_roomStatus_cFv(); // 1
-extern "C" void __ct__19dStage_roomStatus_cFv(); // 1
-extern "C" void __dt__19dStage_KeepDoorInfoFv(); // 1
-extern "C" void __dt__21stage_tgsc_data_classFv(); // 1
-extern "C" void __ct__21stage_tgsc_data_classFv(); // 1
+extern "C" void set__18dStage_nextStage_cFPCcScsScScUc();
+extern "C" static void dStage_SetErrorRoom__Fv();
+extern "C" void dStage_SetErrorStage__Fv();
+extern "C" void dStage_GetKeepDoorInfo__Fv();
+extern "C" void dStage_isBossStage__FP11dStage_dt_c();
+extern "C" void dStage_KeepDoorInfoInit__FP11dStage_dt_c();
+extern "C" void dStage_KeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" void dStage_GetRoomKeepDoorInfo__Fv();
+extern "C" static void dStage_initRoomKeepDoorInfo__Fv();
+extern "C" static void dStage_RoomKeepDoorInfoProc__FP11dStage_dt_cP16stage_tgsc_class();
+extern "C" static void dStage_RoomKeepDoorInit__FP11dStage_dt_cPviPv();
+extern "C" void set__19dStage_startStage_cFPCcScsSc();
+extern "C" void init__20dStage_roomControl_cFv();
+extern "C" void initZone__20dStage_roomControl_cFv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void getMemoryBlock__20dStage_roomControl_cFi();
+extern "C" void setStayNo__20dStage_roomControl_cFi();
+extern "C" void setNextStayNo__20dStage_roomControl_cFi();
+extern "C" static void stayRoomCheck__FiPUci();
+extern "C" static void createRoomScene__Fi();
+extern "C" void checkRoomDisp__20dStage_roomControl_cCFi();
+extern "C" void loadRoom__20dStage_roomControl_cFiPUcb();
+extern "C" void zoneCountCheck__20dStage_roomControl_cCFi();
+extern "C" void getStagInfo__16dStage_stageDt_cCFv();
+extern "C" void createMemoryBlock__20dStage_roomControl_cFiUl();
+extern "C" void destroyMemoryBlock__20dStage_roomControl_cFv();
+extern "C" void setArcBank__20dStage_roomControl_cFiPCc();
+extern "C" void getArcBank__20dStage_roomControl_cFi();
+extern "C" void resetArchiveBank__20dStage_roomControl_cFi();
+extern "C" void create__Q220dStage_roomControl_c9roomDzs_cFUc();
+extern "C" void remove__Q220dStage_roomControl_c9roomDzs_cFv();
+extern "C" void add__Q220dStage_roomControl_c9roomDzs_cFUcUc();
+extern "C" void init__16dStage_stageDt_cFv();
+extern "C" void initFileList2__15dStage_roomDt_cFv();
+extern "C" void init__15dStage_roomDt_cFv();
+extern "C" static void dStage_roomInit__Fi();
+extern "C" void SetTimePass__20dStage_roomControl_cFi();
+extern "C" void getRoom__16dStage_stageDt_cCFv();
+extern "C" void dStage_searchName__FPCc();
+extern "C" static void dStage_getName__FsSc();
+extern "C" void dStage_getName2__FsSc();
+extern "C" static void dStage_actorCreate__FP22stage_actor_data_classP16fopAcM_prm_class();
+extern "C" static void dStage_cameraCreate__FP24stage_camera2_data_classii();
+extern "C" void getPlayer__15dStage_roomDt_cCFv();
+extern "C" void getPlayer__16dStage_stageDt_cCFv();
+extern "C" static void dStage_playerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_cameraInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_RoomCameraInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_arrowInit__FP11dStage_dt_cPviPv();
+extern "C" void getMapInfo2__15dStage_roomDt_cCFi();
+extern "C" void getMapInfoBase__15dStage_roomDt_cCFv();
+extern "C" void getMapInfo2__16dStage_stageDt_cCFi();
+extern "C" void getMapInfoBase__16dStage_stageDt_cCFv();
+extern "C" static void dStage_paletteInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_pselectInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_envrInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapFiliInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_filiInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_vrboxInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_vrboxcolInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_plightInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_lgtvInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_stagInfo_GetParticleNo__FP21stage_stag_info_classi();
+extern "C" static void dStage_stagInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void resetOldMulti__16dStage_stageDt_cFv();
+extern "C" static void dStage_sclsInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_tgscCommonLayerInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_actorInit_always__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_tgscInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_doorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomReadInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_roomRead_dt_c_GetReverbStage__FR14roomRead_classi();
+extern "C" static void dStage_ppntInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_pathInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_rppnInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_rpatInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_soundInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_soundInfoInitCL__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_setLayerTagName__FP9FuncTableii();
+extern "C" static void dStage_dt_c_decode__FPvP11dStage_dt_cP9FuncTablei();
+extern "C" static void dStage_stEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mapEventInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_floorInfoInit__FP11dStage_dt_cPviPv();
+extern "C" void dStage_memaInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mecoInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_stageKeepTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_dt_c_offsetToPtr__FPv();
+extern "C" static void dStage_mapPathInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_mapPathInitCommonLayer__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_fieldMapMapPathInit__FP11dStage_dt_cPviPv();
+extern "C" static void readMult__FP11dStage_dt_cP14dStage_Multi_cb();
+extern "C" static void dStage_multInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_lbnkInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_layerTresureInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_dmapInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_stageDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_roomDrtgInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dStage_elstInfoInit__FP11dStage_dt_cPviPv();
+extern "C" static void dKankyo_create__Fv();
+extern "C" static void layerMemoryInfoLoader__FPvP11dStage_dt_ci();
+extern "C" static void dStage_dt_c_stageInitLoader__FPvP11dStage_dt_c();
+extern "C" static void layerTableLoader__FPvP11dStage_dt_ci();
+extern "C" void getElst__16dStage_stageDt_cFv();
+extern "C" static void layerActorLoader__FPvP11dStage_dt_ci();
+extern "C" static void dStage_dt_c_stageLoader__FPvP11dStage_dt_c();
+extern "C" void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
+extern "C" void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
+extern "C" void dStage_dt_c_fieldMapLoader__FPvP11dStage_dt_c();
+extern "C" void dStage_infoCreate__Fv();
+extern "C" void dStage_Create__Fv();
+extern "C" void dStage_Delete__Fv();
+extern "C" void setOldMulti__16dStage_stageDt_cFv();
+extern "C" void dStage_RoomCheck__FP11cBgS_GndChk();
+extern "C" void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void getSclsInfo__15dStage_roomDt_cCFv();
+extern "C" void getSclsInfo__16dStage_stageDt_cCFv();
+extern "C" void dStage_changeScene4Event__FiScibfUlsi();
+extern "C" void dStage_restartRoom__FUlUli();
+extern "C" void setCamera__15dStage_roomDt_cFP18stage_camera_class();
+extern "C" void getCamera__15dStage_roomDt_cCFv();
+extern "C" void setArrow__15dStage_roomDt_cFP17stage_arrow_class();
+extern "C" void getArrow__15dStage_roomDt_cCFv();
+extern "C" void setPlayer__15dStage_roomDt_cFP17stage_actor_class();
+extern "C" void setPlayerNum__15dStage_roomDt_cFUs();
+extern "C" void getPlayerNum__15dStage_roomDt_cCFv();
+extern "C" void setRoom__15dStage_roomDt_cFP14roomRead_class();
+extern "C" void getRoom__15dStage_roomDt_cCFv();
+extern "C" void setMapInfo__15dStage_roomDt_cFP20stage_map_info_class();
+extern "C" void getMapInfo__15dStage_roomDt_cCFv();
+extern "C" void setMapInfoBase__15dStage_roomDt_cFP26stage_map_info_dummy_class();
+extern "C" void setPaletteInfo__15dStage_roomDt_cFP24stage_palette_info_class();
+extern "C" void getPaletteInfo__15dStage_roomDt_cCFv();
+extern "C" void setPselectInfo__15dStage_roomDt_cFP24stage_pselect_info_class();
+extern "C" void getPselectInfo__15dStage_roomDt_cCFv();
+extern "C" void setEnvrInfo__15dStage_roomDt_cFP21stage_envr_info_class();
+extern "C" void getEnvrInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxInfo__15dStage_roomDt_cFP22stage_vrbox_info_class();
+extern "C" void getVrboxInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxcolInfo__15dStage_roomDt_cFP25stage_vrboxcol_info_class();
+extern "C" void getVrboxcolInfo__15dStage_roomDt_cCFv();
+extern "C" void setPlightInfo__15dStage_roomDt_cFP23stage_plight_info_class();
+extern "C" void getPlightInfo__15dStage_roomDt_cCFv();
+extern "C" void setPaletteNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPaletteNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setPselectNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPselectNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setEnvrNumInfo__15dStage_roomDt_cFi();
+extern "C" void getEnvrNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxNumInfo__15dStage_roomDt_cFi();
+extern "C" void getVrboxNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setVrboxcolNumInfo__15dStage_roomDt_cFi();
+extern "C" void getVrboxcolNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setPlightNumInfo__15dStage_roomDt_cFi();
+extern "C" void getPlightNumInfo__15dStage_roomDt_cCFv();
+extern "C" void setLightVecInfo__15dStage_roomDt_cFP30stage_pure_lightvec_info_class();
+extern "C" void getLightVecInfo__15dStage_roomDt_cCFv();
+extern "C" void setLightVecInfoNum__15dStage_roomDt_cFi();
+extern "C" void getLightVecInfoNum__15dStage_roomDt_cCFv();
+extern "C" void setStagInfo__15dStage_roomDt_cFP21stage_stag_info_class();
+extern "C" void getStagInfo__15dStage_roomDt_cCFv();
+extern "C" void setSclsInfo__15dStage_roomDt_cFP27stage_scls_info_dummy_class();
+extern "C" void setPntInfo__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" void getPntInf__15dStage_roomDt_cCFv();
+extern "C" void setPathInfo__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" void getPathInf__15dStage_roomDt_cCFv();
+extern "C" void setPnt2Info__15dStage_roomDt_cFP13dStage_dPnt_c();
+extern "C" void getPnt2Inf__15dStage_roomDt_cCFv();
+extern "C" void setPath2Info__15dStage_roomDt_cFP14dStage_dPath_c();
+extern "C" void getPath2Inf__15dStage_roomDt_cCFv();
+extern "C" void setSoundInf__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInf__15dStage_roomDt_cCFv();
+extern "C" void setSoundInfCL__15dStage_roomDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInfCL__15dStage_roomDt_cCFv();
+extern "C" void setMapEventInfo__15dStage_roomDt_cFP21dStage_MapEventInfo_c();
+extern "C" void getMapEventInfo__15dStage_roomDt_cCFv();
+extern "C" void setFileList2Info__15dStage_roomDt_cFP21dStage_FileList2_dt_c();
+extern "C" void getFileList2Info__15dStage_roomDt_cCFv();
+extern "C" void setFileListInfo__15dStage_roomDt_cFP20dStage_FileList_dt_c();
+extern "C" void setFloorInfo__15dStage_roomDt_cFP18dStage_FloorInfo_c();
+extern "C" void getFloorInfo__15dStage_roomDt_cCFv();
+extern "C" void setMemoryConfig__15dStage_roomDt_cFP21dStage_MemoryConfig_c();
+extern "C" void getMemoryConfig__15dStage_roomDt_cCFv();
+extern "C" void setMemoryMap__15dStage_roomDt_cFP18dStage_MemoryMap_c();
+extern "C" void getMemoryMap__15dStage_roomDt_cCFv();
+extern "C" void setMulti__15dStage_roomDt_cFP14dStage_Multi_c();
+extern "C" void getMulti__15dStage_roomDt_cCFv();
+extern "C" void setOldMulti__15dStage_roomDt_cFv();
+extern "C" void resetOldMulti__15dStage_roomDt_cFv();
+extern "C" void getOldMulti__15dStage_roomDt_cCFv();
+extern "C" void setLbnk__15dStage_roomDt_cFP13dStage_Lbnk_c();
+extern "C" void getLbnk__15dStage_roomDt_cCFv();
+extern "C" void setTresure__15dStage_roomDt_cFP19stage_tresure_class();
+extern "C" void getTresure__15dStage_roomDt_cCFv();
+extern "C" void setDMap__15dStage_roomDt_cFP13dStage_DMap_c();
+extern "C" bool getDMap__15dStage_roomDt_cCFv();
+extern "C" void setDrTg__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" void getDrTg__15dStage_roomDt_cCFv();
+extern "C" void setDoor__15dStage_roomDt_cFP16stage_tgsc_class();
+extern "C" void getDoor__15dStage_roomDt_cCFv();
+extern "C" void setMapPath__15dStage_roomDt_cFPv();
+extern "C" void getMapPath__15dStage_roomDt_cFv();
+extern "C" void setElst__15dStage_roomDt_cFP13dStage_Elst_c();
+extern "C" void getElst__15dStage_roomDt_cFv();
+extern "C" void setCamera__16dStage_stageDt_cFP18stage_camera_class();
+extern "C" void getCamera__16dStage_stageDt_cCFv();
+extern "C" void setArrow__16dStage_stageDt_cFP17stage_arrow_class();
+extern "C" void getArrow__16dStage_stageDt_cCFv();
+extern "C" void setPlayer__16dStage_stageDt_cFP17stage_actor_class();
+extern "C" void setPlayerNum__16dStage_stageDt_cFUs();
+extern "C" void getPlayerNum__16dStage_stageDt_cCFv();
+extern "C" void setRoom__16dStage_stageDt_cFP14roomRead_class();
+extern "C" void setMapInfo__16dStage_stageDt_cFP20stage_map_info_class();
+extern "C" void getMapInfo__16dStage_stageDt_cCFv();
+extern "C" void setMapInfoBase__16dStage_stageDt_cFP26stage_map_info_dummy_class();
+extern "C" void setPaletteInfo__16dStage_stageDt_cFP24stage_palette_info_class();
+extern "C" void getPaletteInfo__16dStage_stageDt_cCFv();
+extern "C" void setPselectInfo__16dStage_stageDt_cFP24stage_pselect_info_class();
+extern "C" void getPselectInfo__16dStage_stageDt_cCFv();
+extern "C" void setEnvrInfo__16dStage_stageDt_cFP21stage_envr_info_class();
+extern "C" void getEnvrInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxInfo__16dStage_stageDt_cFP22stage_vrbox_info_class();
+extern "C" void getVrboxInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxcolInfo__16dStage_stageDt_cFP25stage_vrboxcol_info_class();
+extern "C" void getVrboxcolInfo__16dStage_stageDt_cCFv();
+extern "C" void setPlightInfo__16dStage_stageDt_cFP23stage_plight_info_class();
+extern "C" void getPlightInfo__16dStage_stageDt_cCFv();
+extern "C" void setPaletteNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPaletteNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setPselectNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPselectNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setEnvrNumInfo__16dStage_stageDt_cFi();
+extern "C" void getEnvrNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxNumInfo__16dStage_stageDt_cFi();
+extern "C" void getVrboxNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setVrboxcolNumInfo__16dStage_stageDt_cFi();
+extern "C" void getVrboxcolNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setLightVecInfo__16dStage_stageDt_cFP30stage_pure_lightvec_info_class();
+extern "C" void getLightVecInfo__16dStage_stageDt_cCFv();
+extern "C" void setLightVecInfoNum__16dStage_stageDt_cFi();
+extern "C" void getLightVecInfoNum__16dStage_stageDt_cCFv();
+extern "C" void setPlightNumInfo__16dStage_stageDt_cFi();
+extern "C" void getPlightNumInfo__16dStage_stageDt_cCFv();
+extern "C" void setStagInfo__16dStage_stageDt_cFP21stage_stag_info_class();
+extern "C" void setSclsInfo__16dStage_stageDt_cFP27stage_scls_info_dummy_class();
+extern "C" void setPntInfo__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" void getPntInf__16dStage_stageDt_cCFv();
+extern "C" void setPathInfo__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" void getPathInf__16dStage_stageDt_cCFv();
+extern "C" void setPnt2Info__16dStage_stageDt_cFP13dStage_dPnt_c();
+extern "C" void getPnt2Inf__16dStage_stageDt_cCFv();
+extern "C" void setPath2Info__16dStage_stageDt_cFP14dStage_dPath_c();
+extern "C" void getPath2Inf__16dStage_stageDt_cCFv();
+extern "C" void setSoundInf__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInf__16dStage_stageDt_cCFv();
+extern "C" void setSoundInfCL__16dStage_stageDt_cFP18dStage_SoundInfo_c();
+extern "C" void getSoundInfCL__16dStage_stageDt_cCFv();
+extern "C" void setMapEventInfo__16dStage_stageDt_cFP21dStage_MapEventInfo_c();
+extern "C" void getMapEventInfo__16dStage_stageDt_cCFv();
+extern "C" void setFileList2Info__16dStage_stageDt_cFP21dStage_FileList2_dt_c();
+extern "C" void getFileList2Info__16dStage_stageDt_cCFv();
+extern "C" void setFileListInfo__16dStage_stageDt_cFP20dStage_FileList_dt_c();
+extern "C" void getFileListInfo__16dStage_stageDt_cCFv();
+extern "C" void setFloorInfo__16dStage_stageDt_cFP18dStage_FloorInfo_c();
+extern "C" void getFloorInfo__16dStage_stageDt_cCFv();
+extern "C" void setMemoryConfig__16dStage_stageDt_cFP21dStage_MemoryConfig_c();
+extern "C" void getMemoryConfig__16dStage_stageDt_cCFv();
+extern "C" void setMemoryMap__16dStage_stageDt_cFP18dStage_MemoryMap_c();
+extern "C" void getMemoryMap__16dStage_stageDt_cCFv();
+extern "C" void setMulti__16dStage_stageDt_cFP14dStage_Multi_c();
+extern "C" void getMulti__16dStage_stageDt_cCFv();
+extern "C" void getOldMulti__16dStage_stageDt_cCFv();
+extern "C" void setLbnk__16dStage_stageDt_cFP13dStage_Lbnk_c();
+extern "C" void getLbnk__16dStage_stageDt_cCFv();
+extern "C" void setTresure__16dStage_stageDt_cFP19stage_tresure_class();
+extern "C" void getTresure__16dStage_stageDt_cCFv();
+extern "C" void setDMap__16dStage_stageDt_cFP13dStage_DMap_c();
+extern "C" void getDMap__16dStage_stageDt_cCFv();
+extern "C" void setDrTg__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" void getDrTg__16dStage_stageDt_cCFv();
+extern "C" void setDoor__16dStage_stageDt_cFP16stage_tgsc_class();
+extern "C" void getDoor__16dStage_stageDt_cCFv();
+extern "C" void setMapPath__16dStage_stageDt_cFPv();
+extern "C" bool getMapPath__16dStage_stageDt_cFv();
+extern "C" void setElst__16dStage_stageDt_cFP13dStage_Elst_c();
+extern "C" void __sinit_d_stage_cpp();
+extern "C" static void __arraydtor();
+extern "C" void __dt__19dStage_roomStatus_cFv();
+extern "C" void __ct__19dStage_roomStatus_cFv();
+extern "C" void __dt__19dStage_KeepDoorInfoFv();
+extern "C" void __dt__21stage_tgsc_data_classFv();
+extern "C" void __ct__21stage_tgsc_data_classFv();
 extern "C" extern char const* const d_d_stage__stringBase0;
 extern "C" extern void* __vt__16dStage_stageDt_c[93];
 extern "C" extern void* __vt__11dStage_dt_c[93];
@@ -864,99 +875,104 @@ extern "C" extern u8 pad_80450D7C[4];
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
-void fopAcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
-void fopAcM_CreateAppend(); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopCamM_Create(int, s16, void*); // 2
-void fopScnM_SearchByID(unsigned int); // 2
-void fopScnM_CreateReq(s16, s16, u16, u32); // 2
-void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
-void fopMsgM_Create(s16, int (*)(void*), void*); // 2
-void fpcLy_CurrentLayer(); // 2
-void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void dComIfG_getOldStageRes(char const*); // 2
-void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*); // 2
-void dKy_set_nexttime(f32); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void mDoExt_getArchiveHeap();
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+void fopAcM_FastCreate(s16, int (*)(void*), void*, void*);
+void fopAcM_CreateAppend();
+void fopAcM_delete(fopAc_ac_c*);
+void fopCamM_Create(int, s16, void*);
+void fopScnM_SearchByID(unsigned int);
+void fopScnM_CreateReq(s16, s16, u16, u32);
+void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*));
+void fopMsgM_Create(s16, int (*)(void*), void*);
+void fpcLy_CurrentLayer();
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dComIfG_getStageRes(char const*);
+void dComIfG_getOldStageRes(char const*);
+void dLib_getExpandSizeFromAramArchive(JKRAramArchive*, char const*);
+void dKy_set_nexttime(f32);
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_save_bit_HIO[1184 + 4 /* padding */];
+extern "C" extern u8 data_804505F0[8];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
-extern "C" void __ct__11J3DLightObjFv(); // 1
-extern "C" void getFileListInfo__15dStage_roomDt_cCFv(); // 1
-extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv(); // 1
-extern "C" void fopAcM_CreateAppend__Fv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopCamM_Create__FisPv(); // 1
-extern "C" void fopScnM_SearchByID__FUi(); // 1
-extern "C" void fopScnM_CreateReq__FssUsUl(); // 1
-extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
-extern "C" void fpcLy_CurrentLayer__Fv(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void dComIfG_getOldStageRes__FPCc(); // 1
-extern "C" void check__7daSus_cFScRC4cXyz(); // 1
-extern "C" void execute__7daSus_cFv(); // 1
-extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc(); // 1
-extern "C" void init__12dSv_danBit_cFSc(); // 1
-extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv(); // 1
-extern "C" void clearRoomItem__13dSv_zoneBit_cFv(); // 1
-extern "C" void getSave__10dSv_info_cFi(); // 1
-extern "C" void putSave__10dSv_info_cFi(); // 1
-extern "C" void initZone__10dSv_info_cFv(); // 1
-extern "C" void isActor__10dSv_info_cCFii(); // 1
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc(); // 1
-extern "C" void setPointer__8dMpath_cFScPvi(); // 1
-extern "C" void create__16dEvent_manager_cFv(); // 1
-extern "C" void remove__16dEvent_manager_cFv(); // 1
-extern "C" void GetExitId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void addData__7dTres_cFPQ27dTres_c10list_classSc(); // 1
-extern "C" void dKy_set_nexttime__Ff(); // 1
-extern "C" void init__12dSvBit_HIO_cFv(); // 1
-extern "C" void memalignB__3cMlFiUl(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void getFileListInfo__15dStage_roomDt_cCFv();
+extern "C" void fopAcM_FastCreate__FsPFPv_iPvPv();
+extern "C" void fopAcM_CreateAppend__Fv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopCamM_Create__FisPv();
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fopScnM_CreateReq__FssUsUl();
+extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopMsgM_Create__FsPFPv_iPv();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfG_getOldStageRes__FPCc();
+extern "C" void check__7daSus_cFScRC4cXyz();
+extern "C" void execute__7daSus_cFv();
+extern "C" void dLib_getExpandSizeFromAramArchive__FP14JKRAramArchivePCc();
+extern "C" void init__12dSv_danBit_cFSc();
+extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" void getSave__10dSv_info_cFi();
+extern "C" void putSave__10dSv_info_cFi();
+extern "C" void initZone__10dSv_info_cFv();
+extern "C" void isActor__10dSv_info_cCFii();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void setPointer__8dMpath_cFPQ211dDrawPath_c10room_classPScPSc();
+extern "C" void setPointer__8dMpath_cFScPvi();
+extern "C" void create__16dEvent_manager_cFv();
+extern "C" void remove__16dEvent_manager_cFv();
+extern "C" void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void addData__7dTres_cFPQ27dTres_c10list_classSc();
+extern "C" void dKy_set_nexttime__Ff();
+extern "C" void init__12dSvBit_HIO_cFv();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void snprintf();
+extern "C" void strcmp();
+extern "C" void strncpy();
+extern "C" void strcpy();
 extern "C" extern u8 const j3dDefaultLightInfo[52];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_save_bit_HIO[1184 + 4 /* padding */];

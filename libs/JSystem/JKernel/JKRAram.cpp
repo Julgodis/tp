@@ -85,25 +85,29 @@ struct JKRAram {
 // Forward References:
 // 
 
-static void JKRDecompressFromAramToMainRam(u32, void*, u32, u32, u32, u32*); // 2
-static void decompSZS_subroutine(u8*, u8*); // 2
-static void firstSrcData(); // 2
-static void nextSrcData(u8*); // 2
+static void JKRDecompressFromAramToMainRam(u32, void*, u32, u32, u32, u32*);
+static void decompSZS_subroutine(u8*, u8*);
+static void firstSrcData();
+static void nextSrcData(u8*);
+extern "C" extern char const* const JKRAram__stringBase0;
+extern "C" extern u8 sMessageQueue__7JKRAram[32];
+extern "C" extern u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */];
+extern "C" extern u8 sAramObject__7JKRAram[4];
 
-extern "C" void create__7JKRAramFUlUllll(); // 1
-extern "C" void __ct__7JKRAramFUlUll(); // 1
-extern "C" void __dt__7JKRAramFv(); // 1
-extern "C" void run__7JKRAramFv(); // 1
-extern "C" void checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl(); // 1
-extern "C" void changeGroupIdIfNeed__7JKRAramFPUci(); // 1
-extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
-extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl(); // 1
-extern "C" static void JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl(); // 1
-extern "C" static void decompSZS_subroutine__FPUcPUc(); // 1
-extern "C" static void firstSrcData__Fv(); // 1
-extern "C" static void nextSrcData__FPUc(); // 1
-extern "C" void __sinit_JKRAram_cpp(); // 1
-extern "C" void func_802D2DF0(); // 1
+extern "C" void create__7JKRAramFUlUllll();
+extern "C" void __ct__7JKRAramFUlUll();
+extern "C" void __dt__7JKRAramFv();
+extern "C" void run__7JKRAramFv();
+extern "C" void checkOkAddress__7JKRAramFPUcUlP12JKRAramBlockUl();
+extern "C" void changeGroupIdIfNeed__7JKRAramFPUci();
+extern "C" void mainRamToAram__7JKRAramFPUcUlUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" void aramToMainRam__7JKRAramFUlPUcUl15JKRExpandSwitchUlP7JKRHeapiPUl();
+extern "C" static void JKRDecompressFromAramToMainRam__FUlPvUlUlUlPUl();
+extern "C" static void decompSZS_subroutine__FPUcPUc();
+extern "C" static void firstSrcData__Fv();
+extern "C" static void nextSrcData__FPUc();
+extern "C" void __sinit_JKRAram_cpp();
+extern "C" void func_802D2DF0();
 extern "C" extern char const* const JKRAram__stringBase0;
 extern "C" extern u8 sMessageQueue__7JKRAram[32];
 extern "C" extern u32 sSZSBufferSize__7JKRAram[1 + 1 /* padding */];
@@ -113,54 +117,56 @@ extern "C" extern u8 sAramObject__7JKRAram[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9JKRThreadFUlii(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void __ct__11JKRAramHeapFUlUl(); // 1
-extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode(); // 1
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
-extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand(); // 1
-extern "C" void create__13JKRAramStreamFl(); // 1
-extern "C" void create__9JKRDecompFl(); // 1
-extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
-extern "C" void checkCompressed__9JKRDecompFPUc(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void ARAlloc(); // 1
-extern "C" void ARInit(); // 1
-extern "C" void ARGetSize(); // 1
-extern "C" void ARQInit(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFUlii();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void __ct__11JKRAramHeapFUlUl();
+extern "C" void alloc__11JKRAramHeapFUlQ211JKRAramHeap10EAllocMode();
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand();
+extern "C" void create__13JKRAramStreamFl();
+extern "C" void create__9JKRDecompFl();
+extern "C" void orderSync__9JKRDecompFPUcPUcUlUl();
+extern "C" void checkCompressed__9JKRDecompFPUc();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSReceiveMessage();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void OSResumeThread();
+extern "C" void ARAlloc();
+extern "C" void ARInit();
+extern "C" void ARGetSize();
+extern "C" void ARQInit();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 

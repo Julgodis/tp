@@ -15,15 +15,6 @@ struct Z2SpeechMgr2 {
 	/* 802CC190 */ void speakOneWord(bool);
 };
 
-struct JAISoundHandle {
-};
-
-struct JAISoundID {
-};
-
-struct JAISound {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -31,6 +22,15 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+};
+
+struct JAISound {
 };
 
 struct Z2SoundMgr {
@@ -125,24 +125,26 @@ struct JAISeCategoryMgr {
 // Forward References:
 // 
 
-void seqCallback(JASTrack*, u16); // 2
+void seqCallback(JASTrack*, u16);
+extern "C" extern char const* const Z2SoundMgr__stringBase0;
+extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 
-extern "C" void seqCallback__FP8JASTrackUs(); // 1
-extern "C" void __ct__10Z2SoundMgrFv(); // 1
-extern "C" void func_802A9EE8(); // 1
-extern "C" void calc__10Z2SoundMgrFv(); // 1
-extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs(); // 1
-extern "C" void setFilterOff__10Z2SoundMgrFP8JAISound(); // 1
-extern "C" void resetFilterAll__10Z2SoundMgrFv(); // 1
-extern "C" void mixOut__10Z2SoundMgrFv(); // 1
-extern "C" void framework__10Z2SoundMgrFv(); // 1
-extern "C" void pauseAllGameSound__10Z2SoundMgrFb(); // 1
-extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID(); // 1
-extern "C" void stopSync__10Z2SoundMgrFv(); // 1
-extern "C" void stop__10Z2SoundMgrFv(); // 1
-extern "C" void initParams__10Z2SoundMgrFv(); // 1
-extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
-extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID(); // 1
+extern "C" void seqCallback__FP8JASTrackUs();
+extern "C" void __ct__10Z2SoundMgrFv();
+extern "C" void func_802A9EE8();
+extern "C" void calc__10Z2SoundMgrFv();
+extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs();
+extern "C" void setFilterOff__10Z2SoundMgrFP8JAISound();
+extern "C" void resetFilterAll__10Z2SoundMgrFv();
+extern "C" void mixOut__10Z2SoundMgrFv();
+extern "C" void framework__10Z2SoundMgrFv();
+extern "C" void pauseAllGameSound__10Z2SoundMgrFb();
+extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID();
+extern "C" void stopSync__10Z2SoundMgrFv();
+extern "C" void stop__10Z2SoundMgrFv();
+extern "C" void initParams__10Z2SoundMgrFv();
+extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf();
+extern "C" void isPlayingSoundID__10Z2SoundMgrF10JAISoundID();
 extern "C" extern char const* const Z2SoundMgr__stringBase0;
 extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 
@@ -150,58 +152,67 @@ extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
 // External References:
 // 
 
-void dComIfGs_staffroll_next_go(); // 2
+void dComIfGs_staffroll_next_go();
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451340[8];
 
-extern "C" void dComIfGs_staffroll_next_go__Fv(); // 1
-extern "C" void setFIR__8JASTrackFPCs(); // 1
-extern "C" void setIIR__8JASTrackFPCs(); // 1
-extern "C" void writePort__8JASTrackFUlUs(); // 1
-extern "C" void waitSubFrame__9JASDriverFv(); // 1
-extern "C" void pause__16JAISeCategoryMgrFb(); // 1
-extern "C" void __ct__8JAISeMgrFb(); // 1
-extern "C" void stop__8JAISeMgrFv(); // 1
-extern "C" void stopSoundID__8JAISeMgrF10JAISoundID(); // 1
-extern "C" void initParams__8JAISeMgrFv(); // 1
-extern "C" void calc__8JAISeMgrFv(); // 1
-extern "C" void mixOut__8JAISeMgrFv(); // 1
-extern "C" void func_802A0768(); // 1
-extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
-extern "C" void __ct__9JAISeqMgrFb(); // 1
-extern "C" void func_802A1B48(); // 1
-extern "C" void calc__9JAISeqMgrFv(); // 1
-extern "C" void stop__9JAISeqMgrFv(); // 1
-extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID(); // 1
-extern "C" void mixOut__9JAISeqMgrFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void __ct__12JAIStreamMgrFb(); // 1
-extern "C" void func_802A3C3C(); // 1
-extern "C" void calc__12JAIStreamMgrFv(); // 1
-extern "C" void stop__12JAIStreamMgrFv(); // 1
-extern "C" void stop__12JAIStreamMgrFUl(); // 1
-extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID(); // 1
-extern "C" void mixOut__12JAIStreamMgrFv(); // 1
-extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb(); // 1
-extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv(); // 1
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb(); // 1
-extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff(); // 1
-extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv(); // 1
-extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv(); // 1
-extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void speakOneWord__12Z2SpeechMgr2Fb(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void sprintf(); // 1
+extern "C" void dComIfGs_staffroll_next_go__Fv();
+extern "C" void setFIR__8JASTrackFPCs();
+extern "C" void setIIR__8JASTrackFPCs();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void waitSubFrame__9JASDriverFv();
+extern "C" void pause__16JAISeCategoryMgrFb();
+extern "C" void __ct__8JAISeMgrFb();
+extern "C" void stop__8JAISeMgrFv();
+extern "C" void stopSoundID__8JAISeMgrF10JAISoundID();
+extern "C" void initParams__8JAISeMgrFv();
+extern "C" void calc__8JAISeMgrFv();
+extern "C" void mixOut__8JAISeMgrFv();
+extern "C" void func_802A0768();
+extern "C" void getNumActiveSe__8JAISeMgrCFv();
+extern "C" void __ct__9JAISeqMgrFb();
+extern "C" void func_802A1B48();
+extern "C" void calc__9JAISeqMgrFv();
+extern "C" void stop__9JAISeqMgrFv();
+extern "C" void stopSoundID__9JAISeqMgrF10JAISoundID();
+extern "C" void mixOut__9JAISeqMgrFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void __ct__12JAIStreamMgrFb();
+extern "C" void func_802A3C3C();
+extern "C" void calc__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFv();
+extern "C" void stop__12JAIStreamMgrFUl();
+extern "C" void stopSoundID__12JAIStreamMgrF10JAISoundID();
+extern "C" void mixOut__12JAIStreamMgrFv();
+extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
+extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb();
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv();
+extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv();
+extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID();
+extern "C" void speakOneWord__12Z2SpeechMgr2Fb();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void sprintf();
 extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 extern "C" extern u8 data_80450B4C[4];
 extern "C" extern u8 data_80450B60[4];

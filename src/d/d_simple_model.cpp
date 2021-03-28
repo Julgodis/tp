@@ -55,55 +55,60 @@ struct JKRSolidHeap {
 // Forward References:
 // 
 
-static void dSmplMdl_modelUpdateDL(J3DModel*); // 2
+static void dSmplMdl_modelUpdateDL(J3DModel*);
 
-extern "C" static void dSmplMdl_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void __ct__15dSmplMdl_draw_cFv(); // 1
-extern "C" void __ct__12diff_model_cFv(); // 1
-extern "C" void __dt__15dSmplMdl_draw_cFv(); // 1
-extern "C" void draw__15dSmplMdl_draw_cFv(); // 1
-extern "C" void entry__15dSmplMdl_draw_cFP8J3DModeli(); // 1
-extern "C" void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc(); // 1
-extern "C" void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai(); // 1
-extern "C" void create__12diff_model_cFP12J3DModelDataiUc(); // 1
-extern "C" void getModelData__12diff_model_cFv(); // 1
-extern "C" void remove__12diff_model_cFi(); // 1
-extern "C" void draw__12diff_model_cFv(); // 1
-extern "C" void init__12diff_model_cFv(); // 1
-extern "C" void isSame__12diff_model_cFP12J3DModelDatai(); // 1
-extern "C" void getRoomNo__12diff_model_cFv(); // 1
-extern "C" void insert__12diff_model_cFP11modelList_c(); // 1
+extern "C" static void dSmplMdl_modelUpdateDL__FP8J3DModel();
+extern "C" void __ct__15dSmplMdl_draw_cFv();
+extern "C" void __ct__12diff_model_cFv();
+extern "C" void __dt__15dSmplMdl_draw_cFv();
+extern "C" void draw__15dSmplMdl_draw_cFv();
+extern "C" void entry__15dSmplMdl_draw_cFP8J3DModeli();
+extern "C" void addModel__15dSmplMdl_draw_cFP12J3DModelDataiUc();
+extern "C" void removeModel__15dSmplMdl_draw_cFP12J3DModelDatai();
+extern "C" void create__12diff_model_cFP12J3DModelDataiUc();
+extern "C" void getModelData__12diff_model_cFv();
+extern "C" void remove__12diff_model_cFi();
+extern "C" void draw__12diff_model_cFv();
+extern "C" void init__12diff_model_cFv();
+extern "C" void isSame__12diff_model_cFP12J3DModelDatai();
+extern "C" void getRoomNo__12diff_model_cFv();
+extern "C" void insert__12diff_model_cFP11modelList_c();
 
 // 
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
-void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void operator delete(void*); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeapToSystem(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void operator delete(void*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
-extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeapToSystem__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void __construct_array();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

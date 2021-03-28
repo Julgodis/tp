@@ -96,65 +96,71 @@ struct JKRAramArchive {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__10JKRArchive[20];
 
-extern "C" void check_mount_already__10JKRArchiveFlP7JKRHeap(); // 1
-extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void becomeCurrent__10JKRArchiveFPCc(); // 1
-extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl(); // 1
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
-extern "C" void getResource__10JKRArchiveFPCc(); // 1
-extern "C" void getResource__10JKRArchiveFUlPCc(); // 1
-extern "C" void getIdxResource__10JKRArchiveFUl(); // 1
-extern "C" void getResource__10JKRArchiveFUs(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlUlPCc(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlPCc(); // 1
-extern "C" void readIdxResource__10JKRArchiveFPvUlUl(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlUs(); // 1
-extern "C" void removeResourceAll__10JKRArchiveFv(); // 1
-extern "C" void removeResource__10JKRArchiveFPv(); // 1
-extern "C" void detachResource__10JKRArchiveFPv(); // 1
-extern "C" void getResSize__10JKRArchiveCFPCv(); // 1
-extern "C" void countResource__10JKRArchiveCFv(); // 1
-extern "C" void countFile__10JKRArchiveCFPCc(); // 1
-extern "C" void getFirstFile__10JKRArchiveCFPCc(); // 1
-extern "C" void getFileAttribute__10JKRArchiveCFUl(); // 1
+extern "C" void check_mount_already__10JKRArchiveFlP7JKRHeap();
+extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void becomeCurrent__10JKRArchiveFPCc();
+extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void getResource__10JKRArchiveFPCc();
+extern "C" void getResource__10JKRArchiveFUlPCc();
+extern "C" void getIdxResource__10JKRArchiveFUl();
+extern "C" void getResource__10JKRArchiveFUs();
+extern "C" void readResource__10JKRArchiveFPvUlUlPCc();
+extern "C" void readResource__10JKRArchiveFPvUlPCc();
+extern "C" void readIdxResource__10JKRArchiveFPvUlUl();
+extern "C" void readResource__10JKRArchiveFPvUlUs();
+extern "C" void removeResourceAll__10JKRArchiveFv();
+extern "C" void removeResource__10JKRArchiveFPv();
+extern "C" void detachResource__10JKRArchiveFPv();
+extern "C" void getResSize__10JKRArchiveCFPCv();
+extern "C" void countResource__10JKRArchiveCFv();
+extern "C" void countFile__10JKRArchiveCFPCc();
+extern "C" void getFirstFile__10JKRArchiveCFPCc();
+extern "C" void getFileAttribute__10JKRArchiveCFUl();
 extern "C" extern void* __vt__10JKRArchive[20];
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
+void* operator new(u32, JKRHeap*, int);
+extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
+extern "C" extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
-extern "C" void getExpandedResSize__10JKRArchiveCFPCv(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void unmount__13JKRFileLoaderFv(); // 1
-extern "C" void __ct__12JKRArcFinderFP10JKRArchivell(); // 1
-extern "C" void __dt__10JKRArchiveFv(); // 1
-extern "C" void findDirectory__10JKRArchiveCFPCcUl(); // 1
-extern "C" void findTypeResource__10JKRArchiveCFUlPCc(); // 1
-extern "C" void findFsResource__10JKRArchiveCFPCcUl(); // 1
-extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
-extern "C" void findNameResource__10JKRArchiveCFPCc(); // 1
-extern "C" void findPtrResource__10JKRArchiveCFPCv(); // 1
-extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
-extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl(); // 1
-extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry(); // 1
-extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag(); // 1
-extern "C" void __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void __ct__14JKRCompArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void getExpandedResSize__10JKRArchiveCFPCv();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void unmount__13JKRFileLoaderFv();
+extern "C" void __ct__12JKRArcFinderFP10JKRArchivell();
+extern "C" void __dt__10JKRArchiveFv();
+extern "C" void findDirectory__10JKRArchiveCFPCcUl();
+extern "C" void findTypeResource__10JKRArchiveCFUlPCc();
+extern "C" void findFsResource__10JKRArchiveCFPCcUl();
+extern "C" void findIdxResource__10JKRArchiveCFUl();
+extern "C" void findNameResource__10JKRArchiveCFPCc();
+extern "C" void findPtrResource__10JKRArchiveCFPCv();
+extern "C" void findIdResource__10JKRArchiveCFUs();
+extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+extern "C" void __ct__14JKRAramArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void __ct__13JKRDvdArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void __ct__14JKRCompArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];

@@ -94,48 +94,50 @@ struct JKRExpHeap {
 // Forward References:
 // 
 
-static bool dScnRoom_Draw(room_of_scene_class*); // 2
-static void getResetArchiveBank(int, u8 const**); // 2
-static void resetArchiveBank(int); // 2
-static void setArchiveBank(int); // 2
-static void objectDeleteJugge(void*, void*); // 2
-static void deleteJugge(void*, void*); // 2
-static void isCreatingCallback(create_tag*, unsigned int*); // 2
-static void isCreating(unsigned int); // 2
-static void loadDemoArchive(int); // 2
-static void objectSetCheck(room_of_scene_class*); // 2
-static void dScnRoom_Execute(room_of_scene_class*); // 2
-static bool dScnRoom_IsDelete(room_of_scene_class*); // 2
-static void isReadRoom(int); // 2
-static void dScnRoom_Delete(room_of_scene_class*); // 2
-static void phase_0(room_of_scene_class*); // 2
-static void phase_1(room_of_scene_class*); // 2
-static void phase_2(room_of_scene_class*); // 2
-static void phase_3(room_of_scene_class*); // 2
-static void phase_4(room_of_scene_class*); // 2
-static void dScnRoom_Create(scene_class*); // 2
+static bool dScnRoom_Draw(room_of_scene_class*);
+static void getResetArchiveBank(int, u8 const**);
+static void resetArchiveBank(int);
+static void setArchiveBank(int);
+static void objectDeleteJugge(void*, void*);
+static void deleteJugge(void*, void*);
+static void isCreatingCallback(create_tag*, unsigned int*);
+static void isCreating(unsigned int);
+static void loadDemoArchive(int);
+static void objectSetCheck(room_of_scene_class*);
+static void dScnRoom_Execute(room_of_scene_class*);
+static bool dScnRoom_IsDelete(room_of_scene_class*);
+static void isReadRoom(int);
+static void dScnRoom_Delete(room_of_scene_class*);
+static void phase_0(room_of_scene_class*);
+static void phase_1(room_of_scene_class*);
+static void phase_2(room_of_scene_class*);
+static void phase_3(room_of_scene_class*);
+static void phase_4(room_of_scene_class*);
+static void dScnRoom_Create(scene_class*);
+extern "C" extern char const* const d_s_d_s_room__stringBase0;
+extern "C" extern void* g_profile_ROOM_SCENE[10];
 
-extern "C" static bool dScnRoom_Draw__FP19room_of_scene_class(); // 1
-extern "C" static void getResetArchiveBank__FiPPCUc(); // 1
-extern "C" static void resetArchiveBank__Fi(); // 1
-extern "C" static void setArchiveBank__Fi(); // 1
-extern "C" static void objectDeleteJugge__FPvPv(); // 1
-extern "C" static void deleteJugge__FPvPv(); // 1
-extern "C" static void isCreatingCallback__FP10create_tagPUi(); // 1
-extern "C" static void isCreating__FUi(); // 1
-extern "C" static void loadDemoArchive__Fi(); // 1
-extern "C" static void objectSetCheck__FP19room_of_scene_class(); // 1
-extern "C" static void dScnRoom_Execute__FP19room_of_scene_class(); // 1
-extern "C" static bool dScnRoom_IsDelete__FP19room_of_scene_class(); // 1
-extern "C" static void isReadRoom__Fi(); // 1
-extern "C" static void dScnRoom_Delete__FP19room_of_scene_class(); // 1
-extern "C" static void phase_0__FP19room_of_scene_class(); // 1
-extern "C" static void phase_1__FP19room_of_scene_class(); // 1
-extern "C" static void phase_2__FP19room_of_scene_class(); // 1
-extern "C" void setZoneNo__20dStage_roomControl_cFii(); // 1
-extern "C" static void phase_3__FP19room_of_scene_class(); // 1
-extern "C" static void phase_4__FP19room_of_scene_class(); // 1
-extern "C" static void dScnRoom_Create__FP11scene_class(); // 1
+extern "C" static bool dScnRoom_Draw__FP19room_of_scene_class();
+extern "C" static void getResetArchiveBank__FiPPCUc();
+extern "C" static void resetArchiveBank__Fi();
+extern "C" static void setArchiveBank__Fi();
+extern "C" static void objectDeleteJugge__FPvPv();
+extern "C" static void deleteJugge__FPvPv();
+extern "C" static void isCreatingCallback__FP10create_tagPUi();
+extern "C" static void isCreating__FUi();
+extern "C" static void loadDemoArchive__Fi();
+extern "C" static void objectSetCheck__FP19room_of_scene_class();
+extern "C" static void dScnRoom_Execute__FP19room_of_scene_class();
+extern "C" static bool dScnRoom_IsDelete__FP19room_of_scene_class();
+extern "C" static void isReadRoom__Fi();
+extern "C" static void dScnRoom_Delete__FP19room_of_scene_class();
+extern "C" static void phase_0__FP19room_of_scene_class();
+extern "C" static void phase_1__FP19room_of_scene_class();
+extern "C" static void phase_2__FP19room_of_scene_class();
+extern "C" void setZoneNo__20dStage_roomControl_cFii();
+extern "C" static void phase_3__FP19room_of_scene_class();
+extern "C" static void phase_4__FP19room_of_scene_class();
+extern "C" static void dScnRoom_Create__FP11scene_class();
 extern "C" extern char const* const d_s_d_s_room__stringBase0;
 extern "C" extern void* g_profile_ROOM_SCENE[10];
 
@@ -143,68 +145,79 @@ extern "C" extern void* g_profile_ROOM_SCENE[10];
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopScnM_DeleteReq(scene_class*); // 2
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
-void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*); // 2
-void fpcM_Delete(void*); // 2
-void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int); // 2
-void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int); // 2
-void dComIfG_getRoomArcName(int); // 2
-void dComIfGp_ret_wp_set(s8); // 2
-void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
+void mDoExt_getArchiveHeap();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void fopAc_IsActor(void*);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopScnM_DeleteReq(scene_class*);
+void fpcBs_Is_JustOfType(int, int);
+void fpcCtIt_Judge(void* (*)(void*, void*), void*);
+void fpcLyIt_Judge(layer_class*, void* (*)(void*, void*), void*);
+void fpcM_Delete(void*);
+void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int);
+void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int);
+void dComIfG_getRoomArcName(int);
+void dComIfGp_ret_wp_set(s8);
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*);
+extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mArcBankName__20dStage_roomControl_c[4];
+extern "C" extern u8 mArcBankData__20dStage_roomControl_c[4];
+extern "C" extern u8 struct_80451124[4];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopScnM_DeleteReq__FP11scene_class(); // 1
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv(); // 1
-extern "C" void fpcM_Delete__FPv(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void getMemoryBlock__20dStage_roomControl_cFi(); // 1
-extern "C" void setArcBank__20dStage_roomControl_cFiPCc(); // 1
-extern "C" void getArcBank__20dStage_roomControl_cFi(); // 1
-extern "C" void resetArchiveBank__20dStage_roomControl_cFi(); // 1
-extern "C" void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void getZoneNo__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfG_getRoomArcName__Fi(); // 1
-extern "C" void dComIfGp_ret_wp_set__FSc(); // 1
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
-extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv(); // 1
-extern "C" void clearRoomItem__13dSv_zoneBit_cFv(); // 1
-extern "C" void createZone__10dSv_info_cFi(); // 1
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap(); // 1
-extern "C" void demoInit__16dEvent_manager_cFv(); // 1
-extern "C" void roomInit__16dEvent_manager_cFi(); // 1
-extern "C" void roomFinish__16dEvent_manager_cFi(); // 1
-extern "C" void allForceOnEventMove__Q213dPa_control_c7level_cFv(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void getTotalUsedSize__10JKRExpHeapCFv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strnicmp(); // 1
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopScnM_DeleteReq__FP11scene_class();
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv();
+extern "C" void fpcLyIt_Judge__FP11layer_classPFPvPv_PvPv();
+extern "C" void fpcM_Delete__FPv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void getMemoryBlock__20dStage_roomControl_cFi();
+extern "C" void setArcBank__20dStage_roomControl_cFiPCc();
+extern "C" void getArcBank__20dStage_roomControl_cFi();
+extern "C" void resetArchiveBank__20dStage_roomControl_cFi();
+extern "C" void dStage_dt_c_roomLoader__FPvP11dStage_dt_ci();
+extern "C" void dStage_dt_c_roomReLoader__FPvP11dStage_dt_ci();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void getZoneNo__20dStage_roomControl_cFi();
+extern "C" void dComIfG_getRoomArcName__Fi();
+extern "C" void dComIfGp_ret_wp_set__FSc();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" void createZone__10dSv_info_cFi();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
+extern "C" void demoInit__16dEvent_manager_cFv();
+extern "C" void roomInit__16dEvent_manager_cFi();
+extern "C" void roomFinish__16dEvent_manager_cFi();
+extern "C" void allForceOnEventMove__Q213dPa_control_c7level_cFv();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void getTotalUsedSize__10JKRExpHeapCFv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcmp();
+extern "C" void strnicmp();
 extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
 extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];

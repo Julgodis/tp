@@ -57,25 +57,27 @@ struct DOUBLE_POS {
 // Forward References:
 // 
 
-static bool daKytag13_Draw(kytag13_class*); // 2
-static void vectle_calc(DOUBLE_POS*, cXyz*); // 2
-static void daKytag13_Execute_standard(kytag13_class*); // 2
-static void daKytag13_Execute(kytag13_class*); // 2
-static bool daKytag13_IsDelete(kytag13_class*); // 2
-static bool daKytag13_Delete(kytag13_class*); // 2
-static void daKytag13_Create(fopAc_ac_c*); // 2
+static bool daKytag13_Draw(kytag13_class*);
+static void vectle_calc(DOUBLE_POS*, cXyz*);
+static void daKytag13_Execute_standard(kytag13_class*);
+static void daKytag13_Execute(kytag13_class*);
+static bool daKytag13_IsDelete(kytag13_class*);
+static bool daKytag13_Delete(kytag13_class*);
+static void daKytag13_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_KYTAG13[12];
 
-extern "C" static bool daKytag13_Draw__FP13kytag13_class(); // 1
-extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz(); // 1
-extern "C" static void daKytag13_Execute_standard__FP13kytag13_class(); // 1
-extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" static void daKytag13_Execute__FP13kytag13_class(); // 1
-extern "C" static bool daKytag13_IsDelete__FP13kytag13_class(); // 1
-extern "C" static bool daKytag13_Delete__FP13kytag13_class(); // 1
-extern "C" static void daKytag13_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80860450(); // 1
-extern "C" static void func_80860458(); // 1
-extern "C" static void func_80860460(); // 1
+extern "C" static bool daKytag13_Draw__FP13kytag13_class();
+extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz();
+extern "C" static void daKytag13_Execute_standard__FP13kytag13_class();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" static void daKytag13_Execute__FP13kytag13_class();
+extern "C" static bool daKytag13_IsDelete__FP13kytag13_class();
+extern "C" static bool daKytag13_Delete__FP13kytag13_class();
+extern "C" static void daKytag13_Create__FP10fopAc_ac_c();
+extern "C" static void func_80860450();
+extern "C" static void func_80860458();
+extern "C" static void func_80860460();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_KYTAG13[12];
 
@@ -83,46 +85,55 @@ extern "C" extern void* g_profile_KYTAG13[12];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_get_wind_pow(); // 2
-void dKyw_get_wind_vecpow(); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void dKyw_get_wind_vec();
+void dKyw_get_wind_pow();
+void dKyw_get_wind_vecpow();
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_get_wind_pow__Fv(); // 1
-extern "C" void dKyw_get_wind_vecpow__Fv(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__18dBgS_ObjGndChk_AllFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cM3d_VectorProduct2d__Fffffff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void sqrt(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_get_wind_pow__Fv();
+extern "C" void dKyw_get_wind_vecpow__Fv();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __dt__18dBgS_ObjGndChk_AllFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cM3d_VectorProduct2d__Fffffff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_21();
+extern "C" void _restgpr_21();
+extern "C" void strcmp();
+extern "C" void sqrt();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];

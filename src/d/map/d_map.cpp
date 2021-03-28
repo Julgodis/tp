@@ -33,9 +33,6 @@ struct renderingPlusDoorAndCursor_c {
 	/* 80040ADC */ void getIconPosition(dTres_c::typeGroupData_c*) const;
 };
 
-struct Vec {
-};
-
 struct dDrawPath_c {
 	struct room_class {
 	};
@@ -56,6 +53,9 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
+};
+
+struct Vec {
 };
 
 struct renderingDAmap_c {
@@ -205,74 +205,78 @@ struct dDlst_base_c {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_map_d_map__stringBase0;
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
+extern "C" extern void* __vt__15dRenderingMap_c[23];
 
-extern "C" void getIconSize__15renderingAmap_cCFUc(); // 1
-extern "C" void draw__15renderingAmap_cFv(); // 1
-extern "C" void getDispType__15renderingAmap_cCFv(); // 1
-extern "C" void beforeDrawPath__15renderingAmap_cFv(); // 1
-extern "C" void afterDrawPath__15renderingAmap_cFv(); // 1
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class(); // 1
-extern "C" void drawPath__15renderingAmap_cFv(); // 1
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void getPlayerCursorSize__15renderingAmap_cFv(); // 1
-extern "C" void getRestartCursorSize__15renderingAmap_cFv(); // 1
-extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class(); // 1
-extern "C" void isDrawOutSideTrim__15renderingAmap_cFv(); // 1
-extern "C" void getOutSideBlackLineNumber__15renderingAmap_cFv(); // 1
-extern "C" void isOutSideBlackLine__15renderingAmap_cFv(); // 1
-extern "C" void getLineWidthSub__15renderingAmap_cFi(); // 1
-extern "C" void getDecorationLineWidth__15renderingAmap_cFi(); // 1
-extern "C" void getLineWidth__15renderingAmap_cFi(); // 1
-extern "C" void getColor__6dMap_cFi(); // 1
-extern "C" void getLineColor__15renderingAmap_cFii(); // 1
-extern "C" void getDecoLineColor__15renderingAmap_cFii(); // 1
-extern "C" void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c(); // 1
-extern "C" void getIconGroupNumber__15renderingAmap_cCFUc(); // 1
-extern "C" void hasMap__15renderingAmap_cCFv(); // 1
-extern "C" void isRendDoor__15renderingAmap_cCFv(); // 1
-extern "C" bool isCheckFloor__15renderingAmap_cCFv(); // 1
-extern "C" bool isRendRestart__15renderingAmap_cCFv(); // 1
-extern "C" bool isRendCursor__15renderingAmap_cCFv(); // 1
-extern "C" void isRendAllRoom__15renderingAmap_cCFv(); // 1
-extern "C" void getStayType__15renderingAmap_cCFv(); // 1
-extern "C" void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi(); // 1
-extern "C" void isDrawType__6dMap_cFi(); // 1
-extern "C" void isRendAllRoom__6dMap_cCFv(); // 1
-extern "C" bool isSpecialOutline__6dMap_cFv(); // 1
-extern "C" void copyPalette__6dMap_cFv(); // 1
-extern "C" void setMapPaletteColorAlphaPer__6dMap_cFiif(); // 1
-extern "C" void resCopy__6dMap_cFv(); // 1
-extern "C" void __ct__6dMap_cFiiii(); // 1
-extern "C" void _remove__6dMap_cFv(); // 1
-extern "C" void getMapMinMaxXZ__6dMap_cFiPfPfPfPf(); // 1
-extern "C" void getPack__6dMap_cFiPfPf(); // 1
-extern "C" void calcMapCenterXZ__6dMap_cFiPfPf(); // 1
-extern "C" void calcMapCmPerTexel__6dMap_cFiPf(); // 1
-extern "C" void setMapPaletteColorAlphaPer__6dMap_cFif(); // 1
-extern "C" void copyPalette__6dMap_cFiif(); // 1
-extern "C" void setAmapPaletteColor__6dMap_cFiUcUcUcUc(); // 1
-extern "C" void getDispType__6dMap_cCFv(); // 1
-extern "C" void isDrawRoom__6dMap_cCFii(); // 1
-extern "C" void getRoomNoSingle__6dMap_cFv(); // 1
-extern "C" void isDrawRoomIcon__6dMap_cCFii(); // 1
-extern "C" void _move__6dMap_cFffif(); // 1
-extern "C" void _draw__6dMap_cFv(); // 1
-extern "C" void getFirstData__6dMap_cFUc(); // 1
-extern "C" void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
-extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
-extern "C" void __dt__15dRenderingMap_cFv(); // 1
-extern "C" void __dt__28dDrawPathWithNormalPattern_cFv(); // 1
-extern "C" void __dt__11dDrawPath_cFv(); // 1
-extern "C" void getLineColor__11dDrawPath_cFii(); // 1
-extern "C" void __dt__15renderingAmap_cFv(); // 1
-extern "C" void __ct__15renderingAmap_cFv(); // 1
-extern "C" void __dt__6dMap_cFv(); // 1
-extern "C" bool isRendIcon__15renderingAmap_cCFv(); // 1
-extern "C" void __dt__28renderingPlusDoorAndCursor_cFv(); // 1
-extern "C" void __dt__19renderingPlusDoor_cFv(); // 1
-extern "C" void __dt__16renderingDAmap_cFv(); // 1
+extern "C" void getIconSize__15renderingAmap_cCFUc();
+extern "C" void draw__15renderingAmap_cFv();
+extern "C" void getDispType__15renderingAmap_cCFv();
+extern "C" void beforeDrawPath__15renderingAmap_cFv();
+extern "C" void afterDrawPath__15renderingAmap_cFv();
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10room_class();
+extern "C" void drawPath__15renderingAmap_cFv();
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void getPlayerCursorSize__15renderingAmap_cFv();
+extern "C" void getRestartCursorSize__15renderingAmap_cFv();
+extern "C" void rendering__15renderingAmap_cFPCQ211dDrawPath_c10poly_class();
+extern "C" void isDrawOutSideTrim__15renderingAmap_cFv();
+extern "C" void getOutSideBlackLineNumber__15renderingAmap_cFv();
+extern "C" void isOutSideBlackLine__15renderingAmap_cFv();
+extern "C" void getLineWidthSub__15renderingAmap_cFi();
+extern "C" void getDecorationLineWidth__15renderingAmap_cFi();
+extern "C" void getLineWidth__15renderingAmap_cFi();
+extern "C" void getColor__6dMap_cFi();
+extern "C" void getLineColor__15renderingAmap_cFii();
+extern "C" void getDecoLineColor__15renderingAmap_cFii();
+extern "C" void getIconPosition__6dMap_cCFPQ27dTres_c15typeGroupData_c();
+extern "C" void getIconGroupNumber__15renderingAmap_cCFUc();
+extern "C" void hasMap__15renderingAmap_cCFv();
+extern "C" void isRendDoor__15renderingAmap_cCFv();
+extern "C" bool isCheckFloor__15renderingAmap_cCFv();
+extern "C" bool isRendRestart__15renderingAmap_cCFv();
+extern "C" bool isRendCursor__15renderingAmap_cCFv();
+extern "C" void isRendAllRoom__15renderingAmap_cCFv();
+extern "C" void getStayType__15renderingAmap_cCFv();
+extern "C" void isDrawIconSingle2__15renderingAmap_cCFPCQ27dTres_c6data_sbbi();
+extern "C" void isDrawType__6dMap_cFi();
+extern "C" void isRendAllRoom__6dMap_cCFv();
+extern "C" bool isSpecialOutline__6dMap_cFv();
+extern "C" void copyPalette__6dMap_cFv();
+extern "C" void setMapPaletteColorAlphaPer__6dMap_cFiif();
+extern "C" void resCopy__6dMap_cFv();
+extern "C" void __ct__6dMap_cFiiii();
+extern "C" void _remove__6dMap_cFv();
+extern "C" void getMapMinMaxXZ__6dMap_cFiPfPfPfPf();
+extern "C" void getPack__6dMap_cFiPfPf();
+extern "C" void calcMapCenterXZ__6dMap_cFiPfPf();
+extern "C" void calcMapCmPerTexel__6dMap_cFiPf();
+extern "C" void setMapPaletteColorAlphaPer__6dMap_cFif();
+extern "C" void copyPalette__6dMap_cFiif();
+extern "C" void setAmapPaletteColor__6dMap_cFiUcUcUcUc();
+extern "C" void getDispType__6dMap_cCFv();
+extern "C" void isDrawRoom__6dMap_cCFii();
+extern "C" void getRoomNoSingle__6dMap_cFv();
+extern "C" void isDrawRoomIcon__6dMap_cCFii();
+extern "C" void _move__6dMap_cFffif();
+extern "C" void _draw__6dMap_cFv();
+extern "C" void getFirstData__6dMap_cFUc();
+extern "C" void getNextData__6dMap_cFPQ27dTres_c15typeGroupData_c();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" bool isDrawType__11dDrawPath_cFi();
+extern "C" void __dt__18dRenderingFDAmap_cFv();
+extern "C" void __dt__15dRenderingMap_cFv();
+extern "C" void __dt__28dDrawPathWithNormalPattern_cFv();
+extern "C" void __dt__11dDrawPath_cFv();
+extern "C" void getLineColor__11dDrawPath_cFii();
+extern "C" void __dt__15renderingAmap_cFv();
+extern "C" void __ct__15renderingAmap_cFv();
+extern "C" void __dt__6dMap_cFv();
+extern "C" bool isRendIcon__15renderingAmap_cCFv();
+extern "C" void __dt__28renderingPlusDoorAndCursor_cFv();
+extern "C" void __dt__19renderingPlusDoor_cFv();
+extern "C" void __dt__16renderingDAmap_cFv();
 extern "C" extern char const* const d_map_d_map__stringBase0;
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
@@ -282,72 +286,89 @@ extern "C" extern void* __vt__15dRenderingMap_c[23];
 // External References:
 // 
 
-void dComIfGp_isLightDropMapVisible(); // 2
-void cLib_memCpy(void*, void const*, u32); // 2
-void* operator new(u32, int); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void dComIfGp_isLightDropMapVisible();
+void cLib_memCpy(void*, void const*, u32);
+void* operator new(u32, int);
+void* operator new[](u32, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
+extern "C" extern void* __vt__11dDrawPath_c[16];
+extern "C" extern void* __vt__19renderingPlusDoor_c[41];
+extern "C" extern void* __vt__28renderingPlusDoorAndCursor_c[47];
+extern "C" extern void* __vt__16renderingDAmap_c[38];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 mNextRoomNo__10dMapInfo_c;
+extern "C" extern u8 data_80450E58[4];
+extern "C" extern u8 data_80450E60[4];
+extern "C" extern u8 mMinX__8dMpath_c[4];
+extern "C" extern u8 mMaxX__8dMpath_c[4];
+extern "C" extern u8 mMinZ__8dMpath_c[4];
+extern "C" extern u8 mMaxZ__8dMpath_c[4];
 
-extern "C" void dComIfGp_isLightDropMapVisible__Fv(); // 1
-extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class(); // 1
-extern "C" void drawPath__11dDrawPath_cFv(); // 1
-extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs(); // 1
-extern "C" void preRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void postRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void chkGetCompass__10dMapInfo_nFv(); // 1
-extern "C" void chkGetMap__10dMapInfo_nFv(); // 1
-extern "C" void isVisitedRoom__10dMapInfo_nFi(); // 1
-extern "C" void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf(); // 1
-extern "C" void move__10dMapInfo_cFif(); // 1
-extern "C" void init__16renderingDAmap_cFPUcUsUsUsUs(); // 1
-extern "C" void entry__16renderingDAmap_cFfffiSc(); // 1
-extern "C" void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class(); // 1
-extern "C" void draw__16renderingDAmap_cFv(); // 1
-extern "C" void getBackColor__16renderingDAmap_cCFv(); // 1
-extern "C" void isRenderingFloor__16renderingDAmap_cFi(); // 1
-extern "C" void isDrawRoom__16renderingDAmap_cCFii(); // 1
-extern "C" void preDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" void postDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" void getRoomNoSingle__16renderingDAmap_cFv(); // 1
-extern "C" void getFirstRoomPointer__16renderingDAmap_cFv(); // 1
-extern "C" void getNextRoomPointer__16renderingDAmap_cFv(); // 1
-extern "C" void isDrawPath__16renderingDAmap_cFv(); // 1
-extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv(); // 1
-extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi(); // 1
-extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv(); // 1
-extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii(); // 1
-extern "C" void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec(); // 1
-extern "C" void getFirstData__28renderingPlusDoorAndCursor_cFUc(); // 1
-extern "C" void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c(); // 1
-extern "C" void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c(); // 1
-extern "C" void getIconGroupNumber__16renderingDAmap_cCFUc(); // 1
-extern "C" void getTypeToTypeGroupNo__7dTres_cFUc(); // 1
-extern "C" void cLib_memCpy__FPvPCvUl(); // 1
-extern "C" void* __nw__FUli(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void dComIfGp_isLightDropMapVisible__Fv();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+extern "C" void drawPath__11dDrawPath_cFv();
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void chkGetCompass__10dMapInfo_nFv();
+extern "C" void chkGetMap__10dMapInfo_nFv();
+extern "C" void isVisitedRoom__10dMapInfo_nFi();
+extern "C" void getRoomMinMaxXZ__10dMapInfo_nFiPfPfPfPf();
+extern "C" void move__10dMapInfo_cFif();
+extern "C" void init__16renderingDAmap_cFPUcUsUsUsUs();
+extern "C" void entry__16renderingDAmap_cFfffiSc();
+extern "C" void isSwitch__16renderingDAmap_cFPCQ211dDrawPath_c11group_class();
+extern "C" void draw__16renderingDAmap_cFv();
+extern "C" void getBackColor__16renderingDAmap_cCFv();
+extern "C" void isRenderingFloor__16renderingDAmap_cFi();
+extern "C" void isDrawRoom__16renderingDAmap_cCFii();
+extern "C" void preDrawPath__16renderingDAmap_cFv();
+extern "C" void postDrawPath__16renderingDAmap_cFv();
+extern "C" void getRoomNoSingle__16renderingDAmap_cFv();
+extern "C" void getFirstRoomPointer__16renderingDAmap_cFv();
+extern "C" void getNextRoomPointer__16renderingDAmap_cFv();
+extern "C" void isDrawPath__16renderingDAmap_cFv();
+extern "C" bool getFirstDrawLayerNo__16renderingDAmap_cFv();
+extern "C" void getNextDrawLayerNo__16renderingDAmap_cFi();
+extern "C" void afterDrawPath__28renderingPlusDoorAndCursor_cFv();
+extern "C" void isDrawRoomIcon__16renderingDAmap_cCFii();
+extern "C" void isDrawIconSingle__16renderingDAmap_cCFPCQ27dTres_c6data_siibbPC3Vec();
+extern "C" void getFirstData__28renderingPlusDoorAndCursor_cFUc();
+extern "C" void getNextData__28renderingPlusDoorAndCursor_cFPQ27dTres_c15typeGroupData_c();
+extern "C" void getIconPosition__28renderingPlusDoorAndCursor_cCFPQ27dTres_c15typeGroupData_c();
+extern "C" void getIconGroupNumber__16renderingDAmap_cCFUc();
+extern "C" void getTypeToTypeGroupNo__7dTres_cFUc();
+extern "C" void cLib_memCpy__FPvPCvUl();
+extern "C" void* __nw__FUli();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void DCStoreRange();
+extern "C" void GXGetTexBufferSize();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
 extern "C" extern void* __vt__11dDrawPath_c[16];

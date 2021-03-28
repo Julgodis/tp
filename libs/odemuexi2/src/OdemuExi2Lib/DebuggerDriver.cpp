@@ -12,31 +12,32 @@
 // 
 
 
-extern "C" void DBClose(); // 1
-extern "C" void DBOpen(); // 1
-extern "C" void DBWrite(); // 1
-extern "C" void DBRead(); // 1
-extern "C" void DBQueryData(); // 1
-extern "C" void DBInitInterrupts(); // 1
-extern "C" void DBInitComm(); // 1
-extern "C" static void DBGHandler(); // 1
-extern "C" static void MWCallback(); // 1
-extern "C" static void DBGReadStatus(); // 1
-extern "C" static void DBGWrite(); // 1
-extern "C" static void DBGRead(); // 1
-extern "C" static void DBGReadMailbox(); // 1
-extern "C" static void DBGEXIImm(); // 1
+extern "C" void DBClose();
+extern "C" void DBOpen();
+extern "C" void DBWrite();
+extern "C" void DBRead();
+extern "C" void DBQueryData();
+extern "C" void DBInitInterrupts();
+extern "C" void DBInitComm();
+extern "C" static void DBGHandler();
+extern "C" static void MWCallback();
+extern "C" static void DBGReadStatus();
+extern "C" static void DBGWrite();
+extern "C" static void DBGRead();
+extern "C" static void DBGReadMailbox();
+extern "C" static void DBGEXIImm();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 data_80450AF0;
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSMaskInterrupts();
+extern "C" void __OSUnmaskInterrupts();
 extern "C" extern u32 data_80450AF0;
 
 // 

@@ -12,19 +12,19 @@
 // 
 
 
-extern "C" void __DVDClearWaitingQueue(); // 1
-extern "C" void __DVDPushWaitingQueue(); // 1
-extern "C" void __DVDPopWaitingQueue(); // 1
-extern "C" void __DVDCheckWaitingQueue(); // 1
-extern "C" void __DVDDequeueWaitingQueue(); // 1
+extern "C" void __DVDClearWaitingQueue();
+extern "C" void __DVDPushWaitingQueue();
+extern "C" void __DVDPopWaitingQueue();
+extern "C" void __DVDCheckWaitingQueue();
+extern "C" void __DVDDequeueWaitingQueue();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
 
 // 
 // Declarations:

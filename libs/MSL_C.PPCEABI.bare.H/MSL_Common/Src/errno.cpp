@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
 extern "C" extern u8 errno[4 + 4 /* padding */];
 

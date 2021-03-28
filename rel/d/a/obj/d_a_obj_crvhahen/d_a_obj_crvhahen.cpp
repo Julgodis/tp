@@ -14,14 +14,14 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
-	/* 80BD36E4 */ ~cXyz();
-	/* 80BD3FDC */ cXyz();
-};
-
 struct csXyz {
 	/* 80BD3F9C */ ~csXyz();
 	/* 80BD3FD8 */ csXyz();
+};
+
+struct cXyz {
+	/* 80BD36E4 */ ~cXyz();
+	/* 80BD3FDC */ cXyz();
 };
 
 struct mDoMtx_stack_c {
@@ -94,32 +94,34 @@ struct Vec {
 // Forward References:
 // 
 
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daObjCRVHAHEN_Create(fopAc_ac_c*); // 2
-static void daObjCRVHAHEN_Delete(daObjCRVHAHEN_c*); // 2
-static void daObjCRVHAHEN_Draw(daObjCRVHAHEN_c*); // 2
-static void daObjCRVHAHEN_Execute(daObjCRVHAHEN_c*); // 2
-static bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c*); // 2
+static void useHeapInit(fopAc_ac_c*);
+static void daObjCRVHAHEN_Create(fopAc_ac_c*);
+static void daObjCRVHAHEN_Delete(daObjCRVHAHEN_c*);
+static void daObjCRVHAHEN_Draw(daObjCRVHAHEN_c*);
+static void daObjCRVHAHEN_Execute(daObjCRVHAHEN_c*);
+static bool daObjCRVHAHEN_IsDelete(daObjCRVHAHEN_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_CRVHAHEN[12];
 
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjCRVHAHEN_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c(); // 1
-extern "C" void HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf(); // 1
-extern "C" void Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void Hahen_Hakai__15daObjCRVHAHEN_cFii(); // 1
-extern "C" void CheckCull__15daObjCRVHAHEN_cFv(); // 1
-extern "C" void checkViewArea__15daObjCRVHAHEN_cFP4cXyz(); // 1
-extern "C" void Execute__15daObjCRVHAHEN_cFv(); // 1
-extern "C" void Delete__15daObjCRVHAHEN_cFv(); // 1
-extern "C" void setBaseMtx__15daObjCRVHAHEN_cFv(); // 1
-extern "C" static void daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c(); // 1
-extern "C" static void daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c(); // 1
-extern "C" void create__15daObjCRVHAHEN_cFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" static bool daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c(); // 1
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void daObjCRVHAHEN_Create__FP10fopAc_ac_c();
+extern "C" static void daObjCRVHAHEN_Delete__FP15daObjCRVHAHEN_c();
+extern "C" void HahenSet__15daObjCRVHAHEN_cF4cXyz4cXyz4cXyz4cXyzf();
+extern "C" void Wall_Check__15daObjCRVHAHEN_cF4cXyz4cXyz();
+extern "C" void __dt__4cXyzFv();
+extern "C" void Hahen_Hakai__15daObjCRVHAHEN_cFii();
+extern "C" void CheckCull__15daObjCRVHAHEN_cFv();
+extern "C" void checkViewArea__15daObjCRVHAHEN_cFP4cXyz();
+extern "C" void Execute__15daObjCRVHAHEN_cFv();
+extern "C" void Delete__15daObjCRVHAHEN_cFv();
+extern "C" void setBaseMtx__15daObjCRVHAHEN_cFv();
+extern "C" static void daObjCRVHAHEN_Draw__FP15daObjCRVHAHEN_c();
+extern "C" static void daObjCRVHAHEN_Execute__FP15daObjCRVHAHEN_c();
+extern "C" void create__15daObjCRVHAHEN_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" static bool daObjCRVHAHEN_IsDelete__FP15daObjCRVHAHEN_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_CRVHAHEN[12];
 
@@ -127,56 +129,63 @@ extern "C" extern void* g_profile_Obj_CRVHAHEN[12];
 // External References:
 // 
 
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void operator delete(void*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void mDoLib_project(Vec*, Vec*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc(); // 1
-extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai(); // 1
-extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void __ct__11dBgS_LinChkFv(); // 1
-extern "C" void __dt__11dBgS_LinChkFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void addSimpleModel__14dComIfG_play_cFP12J3DModelDataiUc();
+extern "C" void removeSimpleModel__14dComIfG_play_cFP12J3DModelDatai();
+extern "C" void entrySimpleModel__14dComIfG_play_cFP8J3DModeli();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void __ct__11dBgS_LinChkFv();
+extern "C" void __dt__11dBgS_LinChkFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareDistance();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

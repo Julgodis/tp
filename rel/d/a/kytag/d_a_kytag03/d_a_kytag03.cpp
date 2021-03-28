@@ -31,6 +31,9 @@ struct dPath {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -38,9 +41,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -71,81 +71,91 @@ struct JPABaseEmitter {
 // Forward References:
 // 
 
-static void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*); // 2
-static void get_rail_ratio_pos(dPath*, int, f32, s16*, s16*); // 2
-static void set_path_info(fopAc_ac_c*); // 2
-static void getSound_pos(fopAc_ac_c*); // 2
-static void get_Extent_pos_start_get(kytag03_class*, dPath*, cXyz*, f32, int*); // 2
-static void get_Extent_pos_end_get(kytag03_class*, dPath*, cXyz*, f32, int*); // 2
-static void odour_move(kytag03_class*); // 2
-static bool daKytag03_Draw(kytag03_class*); // 2
-static void daKytag03_Execute(kytag03_class*); // 2
-static bool daKytag03_IsDelete(kytag03_class*); // 2
-static void daKytag03_Delete(kytag03_class*); // 2
-static void daKytag03_Create(fopAc_ac_c*); // 2
+static void dEnvSe_getNearPathPos(cXyz*, cXyz*, dPath*);
+static void get_rail_ratio_pos(dPath*, int, f32, s16*, s16*);
+static void set_path_info(fopAc_ac_c*);
+static void getSound_pos(fopAc_ac_c*);
+static void get_Extent_pos_start_get(kytag03_class*, dPath*, cXyz*, f32, int*);
+static void get_Extent_pos_end_get(kytag03_class*, dPath*, cXyz*, f32, int*);
+static void odour_move(kytag03_class*);
+static bool daKytag03_Draw(kytag03_class*);
+static void daKytag03_Execute(kytag03_class*);
+static bool daKytag03_IsDelete(kytag03_class*);
+static void daKytag03_Delete(kytag03_class*);
+static void daKytag03_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG03[12];
 
-extern "C" static void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath(); // 1
-extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" static void get_rail_ratio_pos__FP5dPathifPsPs(); // 1
-extern "C" static void set_path_info__FP10fopAc_ac_c(); // 1
-extern "C" static void getSound_pos__FP10fopAc_ac_c(); // 1
-extern "C" static void get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi(); // 1
-extern "C" static void get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi(); // 1
-extern "C" static void odour_move__FP13kytag03_class(); // 1
-extern "C" static bool daKytag03_Draw__FP13kytag03_class(); // 1
-extern "C" static void daKytag03_Execute__FP13kytag03_class(); // 1
-extern "C" static bool daKytag03_IsDelete__FP13kytag03_class(); // 1
-extern "C" static void daKytag03_Delete__FP13kytag03_class(); // 1
-extern "C" static void daKytag03_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void dEnvSe_getNearPathPos__FP4cXyzP4cXyzP5dPath();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" static void get_rail_ratio_pos__FP5dPathifPsPs();
+extern "C" static void set_path_info__FP10fopAc_ac_c();
+extern "C" static void getSound_pos__FP10fopAc_ac_c();
+extern "C" static void get_Extent_pos_start_get__FP13kytag03_classP5dPathP4cXyzfPi();
+extern "C" static void get_Extent_pos_end_get__FP13kytag03_classP5dPathP4cXyzfPi();
+extern "C" static void odour_move__FP13kytag03_class();
+extern "C" static bool daKytag03_Draw__FP13kytag03_class();
+extern "C" static void daKytag03_Execute__FP13kytag03_class();
+extern "C" static bool daKytag03_IsDelete__FP13kytag03_class();
+extern "C" static void daKytag03_Delete__FP13kytag03_class();
+extern "C" static void daKytag03_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG03[12];
 
 // 
 // External References:
 // 
 
-void fpcLyIt_AllJudge(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeForPName(void*, void*); // 2
-void fpcFCtRq_Do(fast_create_request*); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dPath_GetNextRoomPath(dPath const*, int); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-void operator delete(void*); // 2
+void fpcLyIt_AllJudge(void* (*)(void*, void*), void*);
+void fpcSch_JudgeForPName(void*, void*);
+void fpcFCtRq_Do(fast_create_request*);
+void dPath_GetRoomPath(int, int);
+void dPath_GetNextRoomPath(dPath const*, int);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dPath_GetNextRoomPath__FPC5dPathi(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void Eye__9dCamera_cFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
-extern "C" void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeForPName__FPvPv();
+extern "C" void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dPath_GetNextRoomPath__FPC5dPathi();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void Eye__9dCamera_cFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

@@ -139,58 +139,61 @@ struct JAIAudience {
 // Forward References:
 // 
 
+extern "C" extern u8 data_804341E4[16 + 4 /* padding */];
+extern "C" extern u8 data_80451354[4];
+extern "C" extern u8 struct_80451358[8];
 
-extern "C" void func_802BBCDC(); // 1
-extern "C" void func_802BBD18(); // 1
-extern "C" void func_802BBD94(); // 1
-extern "C" void __ct__16Z2AudibleChannelFv(); // 1
-extern "C" void calc__9Z2AudibleFv(); // 1
-extern "C" void getOuterParams__9Z2AudibleFi(); // 1
-extern "C" void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi(); // 1
-extern "C" void getChannel__9Z2AudibleFi(); // 1
-extern "C" void getDistVolBit__9Z2AudibleFv(); // 1
-extern "C" void __ct__19Z2Audience3DSettingFv(); // 1
-extern "C" void init__19Z2Audience3DSettingFv(); // 1
-extern "C" void initVolumeDist__19Z2Audience3DSettingFv(); // 1
-extern "C" void updateVolumeDist__19Z2Audience3DSettingFf(); // 1
-extern "C" void initDolbyDist__19Z2Audience3DSettingFv(); // 1
-extern "C" void updateDolbyDist__19Z2Audience3DSettingFff(); // 1
-extern "C" void __ct__13Z2AudioCameraFv(); // 1
-extern "C" void init__13Z2AudioCameraFv(); // 1
-extern "C" void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb(); // 1
-extern "C" void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb(); // 1
-extern "C" void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei(); // 1
-extern "C" void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec(); // 1
-extern "C" void isInSight__13Z2AudioCameraCFR3Vec(); // 1
-extern "C" void __ct__9Z2SpotMicFv(); // 1
-extern "C" void clearMicState__9Z2SpotMicFi(); // 1
-extern "C" void calcVolumeFactor__9Z2SpotMicFi(); // 1
-extern "C" void setMicState__9Z2SpotMicFP13Z2AudioCamerai(); // 1
-extern "C" void calcMicDist__9Z2SpotMicFP9Z2Audible(); // 1
-extern "C" void calcMicPriority__9Z2SpotMicFf(); // 1
-extern "C" void calcMicVolume__9Z2SpotMicFfif(); // 1
-extern "C" void __ct__10Z2AudienceFv(); // 1
-extern "C" void __dt__10Z2AudienceFv(); // 1
-extern "C" void func_802BD288(); // 1
-extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib(); // 1
-extern "C" void func_802BD338(); // 1
-extern "C" void deleteAudible__10Z2AudienceFP10JAIAudible(); // 1
-extern "C" void __dt__9Z2AudibleFv(); // 1
-extern "C" void calcPriority__10Z2AudienceFP10JAIAudible(); // 1
-extern "C" void calcOffMicSound__10Z2AudienceFf(); // 1
-extern "C" void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei(); // 1
-extern "C" void setTargetVolume__10Z2AudienceFfi(); // 1
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
-extern "C" void calcVolume___10Z2AudienceCFfi(); // 1
-extern "C" void calcDeltaPriority___10Z2AudienceCFfib(); // 1
-extern "C" void func_802BDCB0(); // 1
-extern "C" void calcFxMix___10Z2AudienceCFfi(); // 1
-extern "C" void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera(); // 1
-extern "C" void getMaxChannels__10Z2AudienceFv(); // 1
-extern "C" void __sinit_Z2Audience_cpp(); // 1
+extern "C" void func_802BBCDC();
+extern "C" void func_802BBD18();
+extern "C" void func_802BBD94();
+extern "C" void __ct__16Z2AudibleChannelFv();
+extern "C" void calc__9Z2AudibleFv();
+extern "C" void getOuterParams__9Z2AudibleFi();
+extern "C" void setOuterParams__9Z2AudibleFRC14JASSoundParamsRC14JASSoundParamsi();
+extern "C" void getChannel__9Z2AudibleFi();
+extern "C" void getDistVolBit__9Z2AudibleFv();
+extern "C" void __ct__19Z2Audience3DSettingFv();
+extern "C" void init__19Z2Audience3DSettingFv();
+extern "C" void initVolumeDist__19Z2Audience3DSettingFv();
+extern "C" void updateVolumeDist__19Z2Audience3DSettingFf();
+extern "C" void initDolbyDist__19Z2Audience3DSettingFv();
+extern "C" void updateDolbyDist__19Z2Audience3DSettingFff();
+extern "C" void __ct__13Z2AudioCameraFv();
+extern "C" void init__13Z2AudioCameraFv();
+extern "C" void setCameraState__13Z2AudioCameraFPA4_CfR3Vecb();
+extern "C" void setCameraState__13Z2AudioCameraFPA4_fR3VecR3Vecffbb();
+extern "C" void convertAbsToRel__13Z2AudioCameraFP9Z2Audiblei();
+extern "C" void convertAbsToRel__13Z2AudioCameraCFR3VecP3Vec();
+extern "C" void isInSight__13Z2AudioCameraCFR3Vec();
+extern "C" void __ct__9Z2SpotMicFv();
+extern "C" void clearMicState__9Z2SpotMicFi();
+extern "C" void calcVolumeFactor__9Z2SpotMicFi();
+extern "C" void setMicState__9Z2SpotMicFP13Z2AudioCamerai();
+extern "C" void calcMicDist__9Z2SpotMicFP9Z2Audible();
+extern "C" void calcMicPriority__9Z2SpotMicFf();
+extern "C" void calcMicVolume__9Z2SpotMicFfif();
+extern "C" void __ct__10Z2AudienceFv();
+extern "C" void __dt__10Z2AudienceFv();
+extern "C" void func_802BD288();
+extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
+extern "C" void func_802BD338();
+extern "C" void deleteAudible__10Z2AudienceFP10JAIAudible();
+extern "C" void __dt__9Z2AudibleFv();
+extern "C" void calcPriority__10Z2AudienceFP10JAIAudible();
+extern "C" void calcOffMicSound__10Z2AudienceFf();
+extern "C" void mixChannelOut__10Z2AudienceFRC14JASSoundParamsP10JAIAudiblei();
+extern "C" void setTargetVolume__10Z2AudienceFfi();
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
+extern "C" void calcVolume___10Z2AudienceCFfi();
+extern "C" void calcDeltaPriority___10Z2AudienceCFfib();
+extern "C" void func_802BDCB0();
+extern "C" void calcFxMix___10Z2AudienceCFfi();
+extern "C" void calcPitch___10Z2AudienceCFP16Z2AudibleChannelPC9Z2AudiblePC13Z2AudioCamera();
+extern "C" void getMaxChannels__10Z2AudienceFv();
+extern "C" void __sinit_Z2Audience_cpp();
 extern "C" extern u8 data_804341E4[16 + 4 /* padding */];
 extern "C" extern u8 data_80451354[4];
 extern "C" extern u8 struct_80451358[8];
@@ -199,38 +202,52 @@ extern "C" extern u8 struct_80451358[8];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__10JAIAudible[5 + 1 /* padding */];
+extern "C" extern void* __vt__11JAIAudience[8];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 MAX_VOLUME_DISTANCE__7Z2Param;
+extern "C" extern u32 DOLBY_CENTER_VALUE__7Z2Param;
+extern "C" extern u32 DOLBY_FLONT_DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 DISTANCE_FX_PARAM__7Z2Param;
+extern "C" extern u32 SONIC_SPEED__7Z2Param;
+extern "C" extern u32 __float_epsilon;
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern f32 MIN_DISTANCE_VOLUME__7Z2Param;
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void __dt__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void clamp__14JASSoundParamsFv(); // 1
-extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams(); // 1
-extern "C" void __dt__10JAIAudibleFv(); // 1
-extern "C" void __dt__11JAIAudienceFv(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void clamp__14JASSoundParamsFv();
+extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
+extern "C" void __dt__10JAIAudibleFv();
+extern "C" void __dt__11JAIAudienceFv();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXRotAxisRad();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECMag();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__10JAIAudible[5 + 1 /* padding */];
 extern "C" extern void* __vt__11JAIAudience[8];
 extern "C" extern u8 sincosTable___5JMath[65536];

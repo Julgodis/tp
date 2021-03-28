@@ -116,33 +116,35 @@ struct CPaneMgr {
 // Forward References:
 // 
 
-static void daCoach2D_createHeap(fopAc_ac_c*); // 2
-static void daCoach2D_create(daCoach2D_c*); // 2
-static void daCoach2D_destroy(daCoach2D_c*); // 2
-static void daCoach2D_execute(daCoach2D_c*); // 2
-static void daCoach2D_draw(daCoach2D_c*); // 2
+static void daCoach2D_createHeap(fopAc_ac_c*);
+static void daCoach2D_create(daCoach2D_c*);
+static void daCoach2D_destroy(daCoach2D_c*);
+static void daCoach2D_execute(daCoach2D_c*);
+static void daCoach2D_draw(daCoach2D_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_COACH2D[12];
 
-extern "C" void draw__Q211daCoach2D_c6c_listFv(); // 1
-extern "C" static void daCoach2D_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void createHeap__11daCoach2D_cFv(); // 1
-extern "C" void create__11daCoach2D_cFv(); // 1
-extern "C" void destroy__11daCoach2D_cFv(); // 1
-extern "C" void draw__11daCoach2D_cFv(); // 1
-extern "C" void execute__11daCoach2D_cFv(); // 1
-extern "C" void drawMeter__11daCoach2D_cFv(); // 1
-extern "C" void initiate__11daCoach2D_cFv(); // 1
-extern "C" void update__11daCoach2D_cFv(); // 1
-extern "C" void setBrkAnime__11daCoach2D_cFb(); // 1
-extern "C" static void daCoach2D_create__FP11daCoach2D_c(); // 1
-extern "C" static void daCoach2D_destroy__FP11daCoach2D_c(); // 1
-extern "C" static void daCoach2D_execute__FP11daCoach2D_c(); // 1
-extern "C" static void daCoach2D_draw__FP11daCoach2D_c(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" void __dt__15daCoach2D_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void __dt__Q211daCoach2D_c6c_listFv(); // 1
-extern "C" void __dt__11daCoach2D_cFv(); // 1
-extern "C" void __sinit_d_a_coach_2D_cpp(); // 1
+extern "C" void draw__Q211daCoach2D_c6c_listFv();
+extern "C" static void daCoach2D_createHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__11daCoach2D_cFv();
+extern "C" void create__11daCoach2D_cFv();
+extern "C" void destroy__11daCoach2D_cFv();
+extern "C" void draw__11daCoach2D_cFv();
+extern "C" void execute__11daCoach2D_cFv();
+extern "C" void drawMeter__11daCoach2D_cFv();
+extern "C" void initiate__11daCoach2D_cFv();
+extern "C" void update__11daCoach2D_cFv();
+extern "C" void setBrkAnime__11daCoach2D_cFb();
+extern "C" static void daCoach2D_create__FP11daCoach2D_c();
+extern "C" static void daCoach2D_destroy__FP11daCoach2D_c();
+extern "C" static void daCoach2D_execute__FP11daCoach2D_c();
+extern "C" static void daCoach2D_draw__FP11daCoach2D_c();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__15daCoach2D_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__Q211daCoach2D_c6c_listFv();
+extern "C" void __dt__11daCoach2D_cFv();
+extern "C" void __sinit_d_a_coach_2D_cpp();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_COACH2D[12];
 
@@ -150,49 +152,53 @@ extern "C" extern void* g_profile_COACH2D[12];
 // External References:
 // 
 
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-SECTION_INIT void memcpy(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__15dMsgScrnLight_cFUcUc(); // 1
-extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
-extern "C" void __register_global_object(); // 1
+
+SECTION_INIT void memcpy();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__15dMsgScrnLight_cFUcUc();
+extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

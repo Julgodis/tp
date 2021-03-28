@@ -11,6 +11,37 @@
 // Types:
 // 
 
+namespace JGadget {
+	template <typename A1, typename B1>
+	struct TLinkList { };
+	/* TLinkList<JStudio::ctb::TObject, 12> */
+	struct TLinkList__template0 {
+		struct iterator {
+		};
+
+	};
+
+	struct binary {
+		struct TParse_header_block {
+			/* 802DC8C8 */ ~TParse_header_block();
+		};
+
+	};
+
+	struct TLinkListNode {
+	};
+
+	struct TNodeLinkList {
+		struct iterator {
+		};
+
+		/* 802DCA1C */ ~TNodeLinkList();
+		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
+		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
+	};
+
+};
+
 namespace JStudio {
 	namespace ctb {
 		struct TObject {
@@ -67,37 +98,6 @@ namespace JStudio {
 
 };
 
-namespace JGadget {
-	template <typename A1, typename B1>
-	struct TLinkList { };
-	/* TLinkList<JStudio::ctb::TObject, 12> */
-	struct TLinkList__template0 {
-		struct iterator {
-		};
-
-	};
-
-	struct binary {
-		struct TParse_header_block {
-			/* 802DC8C8 */ ~TParse_header_block();
-		};
-
-	};
-
-	struct TLinkListNode {
-	};
-
-	struct TNodeLinkList {
-		struct iterator {
-		};
-
-		/* 802DCA1C */ ~TNodeLinkList();
-		/* 802DCBA8 */ void Insert(JGadget::TNodeLinkList::iterator, JGadget::TLinkListNode*);
-		/* 802DCBD4 */ void Erase(JGadget::TLinkListNode*);
-	};
-
-};
-
 namespace std {
 	/*          */ template <typename A1, typename B1>
 	/*          */ void find_if(/* JGadget::TLinkList::iterator, JGadget::TLinkList::iterator, JStudio::object::TPRObject_ID_equal */);
@@ -110,27 +110,29 @@ namespace std {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
+extern "C" extern void* __vt__Q37JStudio3ctb8TFactory[5];
 
-extern "C" void __dt__Q37JStudio3ctb7TObjectFv(); // 1
-extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
-extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv(); // 1
-extern "C" void __ct__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
-extern "C" void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
-extern "C" void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject(); // 1
-extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void getObject__Q37JStudio3ctb8TControlFPCvUl(); // 1
-extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl(); // 1
-extern "C" void __dt__Q37JStudio3ctb8TFactoryFv(); // 1
-extern "C" void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock(); // 1
-extern "C" void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject(); // 1
-extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl(); // 1
-extern "C" void __dt__Q37JStudio3ctb6TParseFv(); // 1
-extern "C" void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl(); // 1
-extern "C" void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl(); // 1
-extern "C" void __dt__Q37JStudio3ctb14TObject_TxyzRyFv(); // 1
-extern "C" void func_802815B4(); // 1
+extern "C" void __dt__Q37JStudio3ctb7TObjectFv();
+extern "C" void __ct__Q37JStudio3ctb14TObject_TxyzRyFRCQ47JStudio3ctb4data13TParse_TBlock();
+extern "C" bool getScheme__Q37JStudio3ctb14TObject_TxyzRyCFv();
+extern "C" void __ct__Q37JStudio3ctb8TControlFv();
+extern "C" void __dt__Q37JStudio3ctb8TControlFv();
+extern "C" void appendObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void removeObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void destroyObject__Q37JStudio3ctb8TControlFPQ37JStudio3ctb7TObject();
+extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv();
+extern "C" void getObject__Q37JStudio3ctb8TControlFPCvUl();
+extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl();
+extern "C" void __dt__Q37JStudio3ctb8TFactoryFv();
+extern "C" void create__Q37JStudio3ctb8TFactoryFRCQ47JStudio3ctb4data13TParse_TBlock();
+extern "C" void destroy__Q37JStudio3ctb8TFactoryFPQ37JStudio3ctb7TObject();
+extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
+extern "C" void __dt__Q37JStudio3ctb6TParseFv();
+extern "C" void parseHeader_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
+extern "C" void parseBlock_next__Q37JStudio3ctb6TParseFPPCvPUlUl();
+extern "C" void __dt__Q37JStudio3ctb14TObject_TxyzRyFv();
+extern "C" void func_802815B4();
 extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 extern "C" extern void* __vt__Q37JStudio3ctb8TFactory[5];
 
@@ -138,19 +140,20 @@ extern "C" extern void* __vt__Q37JStudio3ctb8TFactory[5];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u32 ga4cSignature__Q37JStudio3ctb4data[1 + 1 /* padding */];
 
-extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void memcmp(); // 1
+extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" void memcmp();
 extern "C" extern u32 ga4cSignature__Q37JStudio3ctb4data[1 + 1 /* padding */];
 
 // 

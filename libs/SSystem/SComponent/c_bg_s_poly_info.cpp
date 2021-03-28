@@ -28,23 +28,23 @@ struct cBgS_PolyInfo {
 // 
 
 
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void ChkSetInfo__13cBgS_PolyInfoCFv(); // 1
-extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
-extern "C" void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo(); // 1
-extern "C" void SetActorInfo__13cBgS_PolyInfoFiPvUi(); // 1
-extern "C" void ChkSafe__13cBgS_PolyInfoCFPCvUi(); // 1
-extern "C" void SetPolyIndex__13cBgS_PolyInfoFi(); // 1
-extern "C" void ChkBgIndex__13cBgS_PolyInfoCFv(); // 1
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ChkSetInfo__13cBgS_PolyInfoCFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo();
+extern "C" void SetActorInfo__13cBgS_PolyInfoFiPvUi();
+extern "C" void ChkSafe__13cBgS_PolyInfoCFPCvUi();
+extern "C" void SetPolyIndex__13cBgS_PolyInfoFi();
+extern "C" void ChkBgIndex__13cBgS_PolyInfoCFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

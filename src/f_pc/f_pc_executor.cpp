@@ -30,51 +30,52 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void fpcEx_IsExist(unsigned int); // 2
-void fpcEx_Execute(base_process_class*); // 2
-static void fpcEx_ToLineQ(base_process_class*); // 2
-void fpcEx_ExecuteQTo(base_process_class*); // 2
-void fpcEx_ToExecuteQ(base_process_class*); // 2
-void fpcEx_Handler(int (*)(void*, void*)); // 2
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcEx_SearchByID(unsigned int);
+void fpcEx_IsExist(unsigned int);
+void fpcEx_Execute(base_process_class*);
+static void fpcEx_ToLineQ(base_process_class*);
+void fpcEx_ExecuteQTo(base_process_class*);
+void fpcEx_ToExecuteQ(base_process_class*);
+void fpcEx_Handler(int (*)(void*, void*));
 
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void fpcEx_IsExist__FUi(); // 1
-extern "C" void fpcEx_Execute__FP18base_process_class(); // 1
-extern "C" static void fpcEx_ToLineQ__FP18base_process_class(); // 1
-extern "C" void fpcEx_ExecuteQTo__FP18base_process_class(); // 1
-extern "C" void fpcEx_ToExecuteQ__FP18base_process_class(); // 1
-extern "C" void fpcEx_Handler__FPFPvPv_i(); // 1
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcEx_Execute__FP18base_process_class();
+extern "C" static void fpcEx_ToLineQ__FP18base_process_class();
+extern "C" void fpcEx_ExecuteQTo__FP18base_process_class();
+extern "C" void fpcEx_ToExecuteQ__FP18base_process_class();
+extern "C" void fpcEx_Handler__FPFPvPv_i();
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcBs_Execute(base_process_class*); // 2
-void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
-void fpcLyIt_AllJudge(void* (*)(void*, void*), void*); // 2
-void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16); // 2
-void fpcLyTg_QueueTo(layer_management_tag_class*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void fpcLnTg_ToQueue(line_tag*, int); // 2
-void fpcLnIt_Queue(int (*)(void*, void*)); // 2
-void fpcPause_IsEnable(void*, u8); // 2
-void cTg_IsUse(create_tag_class*); // 2
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_Execute(base_process_class*);
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*);
+void fpcLyIt_AllJudge(void* (*)(void*, void*), void*);
+void fpcLyTg_ToQueue(layer_management_tag_class*, unsigned int, u16, u16);
+void fpcLyTg_QueueTo(layer_management_tag_class*);
+void fpcSch_JudgeByID(void*, void*);
+void fpcLnTg_ToQueue(line_tag*, int);
+void fpcLnIt_Queue(int (*)(void*, void*));
+void fpcPause_IsEnable(void*, u8);
+void cTg_IsUse(create_tag_class*);
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcBs_Execute__FP18base_process_class(); // 1
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs(); // 1
-extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void fpcLnTg_ToQueue__FP8line_tagi(); // 1
-extern "C" void fpcLnIt_Queue__FPFPvPv_i(); // 1
-extern "C" void fpcPause_IsEnable__FPvUc(); // 1
-extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcBs_Execute__FP18base_process_class();
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLyIt_AllJudge__FPFPvPv_PvPv();
+extern "C" void fpcLyTg_ToQueue__FP26layer_management_tag_classUiUsUs();
+extern "C" void fpcLyTg_QueueTo__FP26layer_management_tag_class();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcLnTg_ToQueue__FP8line_tagi();
+extern "C" void fpcLnIt_Queue__FPFPvPv_i();
+extern "C" void fpcPause_IsEnable__FPvUc();
+extern "C" void cTg_IsUse__FP16create_tag_class();
 extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 

@@ -63,25 +63,27 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-static void dOvlpFd3_Draw(dOvlpFd3_c*); // 2
-static void dOvlpFd3_Execute(dOvlpFd3_c*); // 2
-static bool dOvlpFd3_IsDelete(dOvlpFd3_c*); // 2
-static bool dOvlpFd3_Delete(dOvlpFd3_c*); // 2
-static void dOvlpFd3_Create(void*); // 2
+static void dOvlpFd3_Draw(dOvlpFd3_c*);
+static void dOvlpFd3_Execute(dOvlpFd3_c*);
+static bool dOvlpFd3_IsDelete(dOvlpFd3_c*);
+static bool dOvlpFd3_Delete(dOvlpFd3_c*);
+static void dOvlpFd3_Create(void*);
+extern "C" extern void* g_profile_OVERLAP3[10];
+extern "C" extern void* __vt__16dDlst_snapShot_c[3];
 
-extern "C" void draw__16dDlst_snapShot_cFv(); // 1
-extern "C" void draw__15dOvlpFd3_dlst_cFv(); // 1
-extern "C" void __ct__10dOvlpFd3_cFv(); // 1
-extern "C" void execFirstSnap__10dOvlpFd3_cFv(); // 1
-extern "C" void execFadeOut__10dOvlpFd3_cFv(); // 1
-extern "C" void execNextSnap__10dOvlpFd3_cFv(); // 1
-extern "C" void execFadeIn__10dOvlpFd3_cFv(); // 1
-extern "C" static void dOvlpFd3_Draw__FP10dOvlpFd3_c(); // 1
-extern "C" static void dOvlpFd3_Execute__FP10dOvlpFd3_c(); // 1
-extern "C" static bool dOvlpFd3_IsDelete__FP10dOvlpFd3_c(); // 1
-extern "C" static bool dOvlpFd3_Delete__FP10dOvlpFd3_c(); // 1
-extern "C" static void dOvlpFd3_Create__FPv(); // 1
-extern "C" void __dt__15dOvlpFd3_dlst_cFv(); // 1
+extern "C" void draw__16dDlst_snapShot_cFv();
+extern "C" void draw__15dOvlpFd3_dlst_cFv();
+extern "C" void __ct__10dOvlpFd3_cFv();
+extern "C" void execFirstSnap__10dOvlpFd3_cFv();
+extern "C" void execFadeOut__10dOvlpFd3_cFv();
+extern "C" void execNextSnap__10dOvlpFd3_cFv();
+extern "C" void execFadeIn__10dOvlpFd3_cFv();
+extern "C" static void dOvlpFd3_Draw__FP10dOvlpFd3_c();
+extern "C" static void dOvlpFd3_Execute__FP10dOvlpFd3_c();
+extern "C" static bool dOvlpFd3_IsDelete__FP10dOvlpFd3_c();
+extern "C" static bool dOvlpFd3_Delete__FP10dOvlpFd3_c();
+extern "C" static void dOvlpFd3_Create__FPv();
+extern "C" void __dt__15dOvlpFd3_dlst_cFv();
 extern "C" extern void* g_profile_OVERLAP3[10];
 extern "C" extern void* __vt__16dDlst_snapShot_c[3];
 
@@ -89,70 +91,80 @@ extern "C" extern void* __vt__16dDlst_snapShot_c[3];
 // External References:
 // 
 
-void mDoAud_setFadeOutStart(u8); // 2
-void mDoAud_setFadeInStart(u8); // 2
-void fopOvlpM_SceneIsStart(); // 2
-void fopOvlpM_IsOutReq(overlap_task_class*); // 2
-void fopOvlpM_Done(overlap_task_class*); // 2
-void cLib_calcTimer__template0(u8*); // 2
-void dCam_getBody(); // 2
-void cLib_calcTimer__template4(s8*); // 2
-void cLib_addCalc0(f32*, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
+void fopOvlpM_SceneIsStart();
+void fopOvlpM_IsOutReq(overlap_task_class*);
+void fopOvlpM_Done(overlap_task_class*);
+void cLib_calcTimer__template0(u8*);
+void dCam_getBody();
+void cLib_calcTimer__template4(s8*);
+void cLib_addCalc0(f32*, f32, f32);
+void operator delete(void*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_clearColor[4];
+extern "C" extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
+extern "C" extern u8 sManager__10JFWDisplay[4];
 
-extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
-extern "C" void mDoAud_setFadeInStart__FUc(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void fopOvlpM_SceneIsStart__Fv(); // 1
-extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class(); // 1
-extern "C" void fopOvlpM_Done__FP18overlap_task_class(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void func_80141AE8(); // 1
-extern "C" void Stop__9dCamera_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void func_80252E70(); // 1
-extern "C" void cLib_addCalc0__FPfff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void func_802E980C(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void mDoAud_setFadeOutStart__FUc();
+extern "C" void mDoAud_setFadeInStart__FUc();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void fopOvlpM_SceneIsStart__Fv();
+extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class();
+extern "C" void fopOvlpM_Done__FP18overlap_task_class();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void func_80141AE8();
+extern "C" void Stop__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void func_80252E70();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void __dl__FPv();
+extern "C" void func_802E980C();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void C_MTXPerspective();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXCopyTex();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXSetClipMode();
+extern "C" void __ptmf_scall();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

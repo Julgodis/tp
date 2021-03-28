@@ -29,10 +29,10 @@ struct JSULink { };
 struct JSULink__template2 {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2CreatureEnemy {
@@ -201,75 +201,77 @@ struct JAISoundParamsMove {
 // Forward References:
 // 
 
-static void Z2_E_sw_modPitch(Z2SoundHandlePool*, u32); // 2
-static void Z2_E_ms_modVol(Z2SoundHandlePool*, u32); // 2
-static void Z2_E_mm_modPitch(Z2SoundHandlePool*, u32); // 2
-static void Z2_B_zan_modPitch(Z2SoundHandlePool*, u32); // 2
+static void Z2_E_sw_modPitch(Z2SoundHandlePool*, u32);
+static void Z2_E_ms_modVol(Z2SoundHandlePool*, u32);
+static void Z2_E_mm_modPitch(Z2SoundHandlePool*, u32);
+static void Z2_B_zan_modPitch(Z2SoundHandlePool*, u32);
+extern "C" extern void* __vt__13Z2CreatureGob[12];
+extern "C" extern void* __vt__16Z2CreatureSumomo[12];
 
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void __dt__10Z2CreatureFv(); // 1
-extern "C" void deleteObject__10Z2CreatureFv(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecUcUc(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecP3VecUcUcUc(); // 1
-extern "C" void setSoundStarter__10Z2CreatureFP14Z2SoundStarter(); // 1
-extern "C" void initAnime__10Z2CreatureFPvbff(); // 1
-extern "C" void framework__10Z2CreatureFUlSc(); // 1
-extern "C" void updateAnime__10Z2CreatureFff(); // 1
-extern "C" void stopAnime__10Z2CreatureFv(); // 1
-extern "C" void startCreatureSound__10Z2CreatureF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureVoice__10Z2CreatureF10JAISoundIDSc(); // 1
-extern "C" void startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc(); // 1
-extern "C" void startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc(); // 1
-extern "C" void startCollisionSE__10Z2CreatureFUlUl(); // 1
-extern "C" void __ct__17Z2CreatureCitizenFv(); // 1
-extern "C" void __dt__17Z2CreatureCitizenFv(); // 1
-extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc(); // 1
-extern "C" void deleteObject__17Z2CreatureCitizenFv(); // 1
-extern "C" void setMdlType__17Z2CreatureCitizenFScbb(); // 1
-extern "C" void playVoice__17Z2CreatureCitizenFi(); // 1
-extern "C" void startCreatureVoice__17Z2CreatureCitizenF10JAISoundIDSc(); // 1
-extern "C" void __ct__15Z2CreatureEnemyFv(); // 1
-extern "C" void deleteObject__15Z2CreatureEnemyFv(); // 1
-extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc(); // 1
-extern "C" void init__15Z2CreatureEnemyFP3VecP3VecP3VecUcUcUc(); // 1
-extern "C" void framework__15Z2CreatureEnemyFUlSc(); // 1
-extern "C" void startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc(); // 1
-extern "C" void startCreatureVoiceLevel__15Z2CreatureEnemyF10JAISoundIDSc(); // 1
-extern "C" void startCreatureExtraSound__15Z2CreatureEnemyF10JAISoundIDUlSc(); // 1
-extern "C" void startCreatureExtraSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc(); // 1
-extern "C" void startCollisionSE__15Z2CreatureEnemyFUlUl(); // 1
-extern "C" void setLinkSearch__15Z2CreatureEnemyFb(); // 1
-extern "C" void setEnemyName__15Z2CreatureEnemyFPCc(); // 1
-extern "C" void __ct__16Z2CreatureSumomoFv(); // 1
-extern "C" void playSumomoBgm__16Z2CreatureSumomoFUl(); // 1
-extern "C" void deleteObject__16Z2CreatureSumomoFv(); // 1
-extern "C" void __ct__18Z2SoundObjBeeGroupFv(); // 1
-extern "C" void init__18Z2SoundObjBeeGroupFP3VecUc(); // 1
-extern "C" void playBeeGroupSound__18Z2SoundObjBeeGroupF10JAISoundIDUc(); // 1
-extern "C" void __ct__12Z2CreatureFMFv(); // 1
-extern "C" void deleteObject__12Z2CreatureFMFv(); // 1
-extern "C" void init__12Z2CreatureFMFP3VecP3VecP3VecP3VecP3VecP3VecUcUcUcUcUcUc(); // 1
-extern "C" void framework__12Z2CreatureFMFUlSc(); // 1
-extern "C" void startChainSound__12Z2CreatureFMF10JAISoundIDUcfUlSc(); // 1
-extern "C" void startChainSoundLevel__12Z2CreatureFMF10JAISoundIDUcfUlSc(); // 1
-extern "C" void init__13Z2CreatureGobFP3VecP3VecP3VecUcUcUc(); // 1
-extern "C" void startCreatureVoiceLevel__13Z2CreatureGobF10JAISoundIDSc(); // 1
-extern "C" void __ct__12Z2CreatureOIFv(); // 1
-extern "C" void deleteObject__12Z2CreatureOIFv(); // 1
-extern "C" void init__12Z2CreatureOIFP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3Vec(); // 1
-extern "C" void framework__12Z2CreatureOIFUlSc(); // 1
-extern "C" void startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc(); // 1
-extern "C" void startTentacleSound__12Z2CreatureOIF10JAISoundIDUcUlSc(); // 1
-extern "C" void startTentacleSoundLevel__12Z2CreatureOIF10JAISoundIDUcfUlSc(); // 1
-extern "C" static void Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" static void Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl(); // 1
-extern "C" void __sinit_Z2Creature_cpp(); // 1
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void __dt__10Z2CreatureFv();
+extern "C" void deleteObject__10Z2CreatureFv();
+extern "C" void init__10Z2CreatureFP3VecP3VecUcUc();
+extern "C" void init__10Z2CreatureFP3VecP3VecP3VecUcUcUc();
+extern "C" void setSoundStarter__10Z2CreatureFP14Z2SoundStarter();
+extern "C" void initAnime__10Z2CreatureFPvbff();
+extern "C" void framework__10Z2CreatureFUlSc();
+extern "C" void updateAnime__10Z2CreatureFff();
+extern "C" void stopAnime__10Z2CreatureFv();
+extern "C" void startCreatureSound__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureVoice__10Z2CreatureF10JAISoundIDSc();
+extern "C" void startCreatureVoiceLevel__10Z2CreatureF10JAISoundIDSc();
+extern "C" void startCreatureExtraSound__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCreatureExtraSoundLevel__10Z2CreatureF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__10Z2CreatureFUlUl();
+extern "C" void __ct__17Z2CreatureCitizenFv();
+extern "C" void __dt__17Z2CreatureCitizenFv();
+extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc();
+extern "C" void deleteObject__17Z2CreatureCitizenFv();
+extern "C" void setMdlType__17Z2CreatureCitizenFScbb();
+extern "C" void playVoice__17Z2CreatureCitizenFi();
+extern "C" void startCreatureVoice__17Z2CreatureCitizenF10JAISoundIDSc();
+extern "C" void __ct__15Z2CreatureEnemyFv();
+extern "C" void deleteObject__15Z2CreatureEnemyFv();
+extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc();
+extern "C" void init__15Z2CreatureEnemyFP3VecP3VecP3VecUcUcUc();
+extern "C" void framework__15Z2CreatureEnemyFUlSc();
+extern "C" void startCreatureSound__15Z2CreatureEnemyF10JAISoundIDUlSc();
+extern "C" void startCreatureSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc();
+extern "C" void startCreatureVoice__15Z2CreatureEnemyF10JAISoundIDSc();
+extern "C" void startCreatureVoiceLevel__15Z2CreatureEnemyF10JAISoundIDSc();
+extern "C" void startCreatureExtraSound__15Z2CreatureEnemyF10JAISoundIDUlSc();
+extern "C" void startCreatureExtraSoundLevel__15Z2CreatureEnemyF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__15Z2CreatureEnemyFUlUl();
+extern "C" void setLinkSearch__15Z2CreatureEnemyFb();
+extern "C" void setEnemyName__15Z2CreatureEnemyFPCc();
+extern "C" void __ct__16Z2CreatureSumomoFv();
+extern "C" void playSumomoBgm__16Z2CreatureSumomoFUl();
+extern "C" void deleteObject__16Z2CreatureSumomoFv();
+extern "C" void __ct__18Z2SoundObjBeeGroupFv();
+extern "C" void init__18Z2SoundObjBeeGroupFP3VecUc();
+extern "C" void playBeeGroupSound__18Z2SoundObjBeeGroupF10JAISoundIDUc();
+extern "C" void __ct__12Z2CreatureFMFv();
+extern "C" void deleteObject__12Z2CreatureFMFv();
+extern "C" void init__12Z2CreatureFMFP3VecP3VecP3VecP3VecP3VecP3VecUcUcUcUcUcUc();
+extern "C" void framework__12Z2CreatureFMFUlSc();
+extern "C" void startChainSound__12Z2CreatureFMF10JAISoundIDUcfUlSc();
+extern "C" void startChainSoundLevel__12Z2CreatureFMF10JAISoundIDUcfUlSc();
+extern "C" void init__13Z2CreatureGobFP3VecP3VecP3VecUcUcUc();
+extern "C" void startCreatureVoiceLevel__13Z2CreatureGobF10JAISoundIDSc();
+extern "C" void __ct__12Z2CreatureOIFv();
+extern "C" void deleteObject__12Z2CreatureOIFv();
+extern "C" void init__12Z2CreatureOIFP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3VecP3Vec();
+extern "C" void framework__12Z2CreatureOIFUlSc();
+extern "C" void startCreatureSoundLevel__12Z2CreatureOIF10JAISoundIDUlSc();
+extern "C" void startTentacleSound__12Z2CreatureOIF10JAISoundIDUcUlSc();
+extern "C" void startTentacleSoundLevel__12Z2CreatureOIF10JAISoundIDUcfUlSc();
+extern "C" static void Z2_E_sw_modPitch__FP17Z2SoundHandlePoolUl();
+extern "C" static void Z2_E_ms_modVol__FP17Z2SoundHandlePoolUl();
+extern "C" static void Z2_E_mm_modPitch__FP17Z2SoundHandlePoolUl();
+extern "C" static void Z2_B_zan_modPitch__FP17Z2SoundHandlePoolUl();
+extern "C" void __sinit_Z2Creature_cpp();
 extern "C" extern void* __vt__13Z2CreatureGob[12];
 extern "C" extern void* __vt__16Z2CreatureSumomo[12];
 
@@ -277,60 +279,72 @@ extern "C" extern void* __vt__16Z2CreatureSumomo[12];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__15Z2SoundObjAnime[8];
+extern "C" extern void* __vt__16Z2SoundObjSimple[8];
+extern "C" extern u8 struct_80450868[4];
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 struct_80451358[8];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __dt__16Z2SoundObjSimpleFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void getRandom__6Z2CalcFfff(); // 1
-extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID(); // 1
-extern "C" void incrCrowdSize__7Z2SeMgrFv(); // 1
-extern "C" void decrCrowdSize__7Z2SeMgrFv(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
-extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff(); // 1
-extern "C" void setBattleSeqState__8Z2SeqMgrFUc(); // 1
-extern "C" void setBattleLastHit__8Z2SeqMgrFUc(); // 1
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
-extern "C" void __ct__14Z2SoundObjBaseFv(); // 1
-extern "C" void __dt__14Z2SoundObjBaseFv(); // 1
-extern "C" void init__14Z2SoundObjBaseFP3VecUc(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void framework__14Z2SoundObjBaseFUlSc(); // 1
-extern "C" void dispose__14Z2SoundObjBaseFv(); // 1
-extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool(); // 1
-extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void __ct__15Z2SoundObjAnimeFv(); // 1
-extern "C" void initAnime__15Z2SoundObjAnimeFPvbff(); // 1
-extern "C" void updateAnime__15Z2SoundObjAnimeFff(); // 1
-extern "C" void func_802C0074(); // 1
-extern "C" void func_802C0190(); // 1
-extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__16Z2SoundObjSimpleFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void getRandom__6Z2CalcFfff();
+extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
+extern "C" void incrCrowdSize__7Z2SeMgrFv();
+extern "C" void decrCrowdSize__7Z2SeMgrFv();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+extern "C" void setBattleSeqState__8Z2SeqMgrFUc();
+extern "C" void setBattleLastHit__8Z2SeqMgrFUc();
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
+extern "C" void __ct__14Z2SoundObjBaseFv();
+extern "C" void __dt__14Z2SoundObjBaseFv();
+extern "C" void init__14Z2SoundObjBaseFP3VecUc();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void framework__14Z2SoundObjBaseFUlSc();
+extern "C" void dispose__14Z2SoundObjBaseFv();
+extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
+extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void __ct__15Z2SoundObjAnimeFv();
+extern "C" void initAnime__15Z2SoundObjAnimeFPvbff();
+extern "C" void updateAnime__15Z2SoundObjAnimeFff();
+extern "C" void func_802C0074();
+extern "C" void func_802C0190();
+extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__15Z2SoundObjAnime[8];
 extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 extern "C" extern u8 struct_80450868[4];

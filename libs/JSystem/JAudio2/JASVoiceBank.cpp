@@ -24,19 +24,21 @@ struct JASVoiceBank {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__12JASVoiceBank[5 + 1 /* padding */];
 
-extern "C" void getInstParam__12JASVoiceBankCFiiiP12JASInstParam(); // 1
-extern "C" void __dt__12JASVoiceBankFv(); // 1
-extern "C" void getType__12JASVoiceBankCFv(); // 1
+extern "C" void getInstParam__12JASVoiceBankCFiiiP12JASInstParam();
+extern "C" void __dt__12JASVoiceBankFv();
+extern "C" void getType__12JASVoiceBankCFv();
 extern "C" extern void* __vt__12JASVoiceBank[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__7JASBank[5];
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__7JASBank[5];
 
 // 

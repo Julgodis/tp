@@ -50,53 +50,58 @@ struct dEvt_control_c {
 // Forward References:
 // 
 
-static void daTalk_Create(fopAc_ac_c*); // 2
-static void daTalk_Delete(daTalk_c*); // 2
-static void daTalk_Execute(daTalk_c*); // 2
-static void daTalk_Draw(daTalk_c*); // 2
+static void daTalk_Create(fopAc_ac_c*);
+static void daTalk_Delete(daTalk_c*);
+static void daTalk_Execute(daTalk_c*);
+static void daTalk_Draw(daTalk_c*);
+extern "C" extern void* g_profile_TALK[12];
 
-extern "C" void __dt__8daTalk_cFv(); // 1
-extern "C" void create__8daTalk_cFv(); // 1
-extern "C" void execute__8daTalk_cFv(); // 1
-extern "C" bool draw__8daTalk_cFv(); // 1
-extern "C" void setStatus__8daTalk_cFUs(); // 1
-extern "C" void getStatus__8daTalk_cFv(); // 1
-extern "C" void messageSet__8daTalk_cFv(); // 1
-extern "C" static void daTalk_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTalk_Delete__FP8daTalk_c(); // 1
-extern "C" static void daTalk_Execute__FP8daTalk_c(); // 1
-extern "C" static void daTalk_Draw__FP8daTalk_c(); // 1
+extern "C" void __dt__8daTalk_cFv();
+extern "C" void create__8daTalk_cFv();
+extern "C" void execute__8daTalk_cFv();
+extern "C" bool draw__8daTalk_cFv();
+extern "C" void setStatus__8daTalk_cFUs();
+extern "C" void getStatus__8daTalk_cFv();
+extern "C" void messageSet__8daTalk_cFv();
+extern "C" static void daTalk_Create__FP10fopAc_ac_c();
+extern "C" static void daTalk_Delete__FP8daTalk_c();
+extern "C" static void daTalk_Execute__FP8daTalk_c();
+extern "C" static void daTalk_Draw__FP8daTalk_c();
 extern "C" extern void* g_profile_TALK[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 dist_table__12dAttention_c[6552];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setProcessID__12dMsgObject_cFUi(); // 1
-extern "C" void getpTalkActor__12dMsgObject_cFv(); // 1
-extern "C" void getIdx__12dMsgObject_cFv(); // 1
-extern "C" void getNodeIdx__12dMsgObject_cFv(); // 1
-extern "C" void setStatus__12dMsgObject_cFUs(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __copy(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setProcessID__12dMsgObject_cFUi();
+extern "C" void getpTalkActor__12dMsgObject_cFv();
+extern "C" void getIdx__12dMsgObject_cFv();
+extern "C" void getNodeIdx__12dMsgObject_cFv();
+extern "C" void setStatus__12dMsgObject_cFUs();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __dl__FPv();
+extern "C" void __copy();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 dist_table__12dAttention_c[6552];

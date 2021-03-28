@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void frexp(); // 1
+extern "C" void frexp();
 
 // 
 // External References:

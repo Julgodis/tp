@@ -12,21 +12,22 @@
 // 
 
 
-extern "C" void __sys_free(); // 1
+extern "C" void __sys_free();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 
-extern "C" void OSReport(); // 1
-extern "C" void OSFreeToHeap(); // 1
-extern "C" void OSSetCurrentHeap(); // 1
-extern "C" void OSInitAlloc(); // 1
-extern "C" void OSCreateHeap(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaLo(); // 1
+extern "C" void OSReport();
+extern "C" void OSFreeToHeap();
+extern "C" void OSSetCurrentHeap();
+extern "C" void OSInitAlloc();
+extern "C" void OSCreateHeap();
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaLo();
 extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 
 // 

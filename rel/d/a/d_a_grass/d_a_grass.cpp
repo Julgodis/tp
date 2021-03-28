@@ -60,26 +60,26 @@ struct dScnKy_env_light_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+	/* 8051EB4C */ ~csXyz();
+};
+
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
 };
 
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
-	/* 8051EB4C */ ~csXyz();
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cCcD_Obj {
-};
-
 struct dCcMassS_HitInf {
 	/* 8051ED98 */ ~dCcMassS_HitInf();
+};
+
+struct cCcD_Obj {
 };
 
 struct dGrass_data_c {
@@ -206,82 +206,131 @@ struct J3DPacket {
 // Forward References:
 // 
 
-static void randam_addcol_set(s16*); // 2
-static void dGrass_Tex_Change(); // 2
-static void daGrass_create(daGrass_c*); // 2
-static void daGrass_Delete(daGrass_c*); // 2
-static void daGrass_execute(daGrass_c*); // 2
-static void daGrass_draw(daGrass_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
-void checkGroundY(cXyz&); // 2
-static void flowerCheckGroundY(cXyz&); // 2
+static void randam_addcol_set(s16*);
+static void dGrass_Tex_Change();
+static void daGrass_create(daGrass_c*);
+static void daGrass_Delete(daGrass_c*);
+static void daGrass_execute(daGrass_c*);
+static void daGrass_draw(daGrass_c*);
+static void cLib_calcTimer__template0(u8*);
+void checkGroundY(cXyz&);
+static void flowerCheckGroundY(cXyz&);
+extern "C" extern u32 const lit_5958;
+extern "C" extern u8 const lit_5961[8];
+extern "C" extern u32 const lit_6080;
+extern "C" extern u32 const lit_6081;
+extern "C" extern u32 const lit_6082;
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 l_J_hana01_c_00DL[222 + 2 /* padding */];
+extern "C" extern void* g_profile_GRASS[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_805287EC[4];
+extern "C" extern u8 data_805287F0[4];
+extern "C" extern u8 data_805287F4[4];
+extern "C" extern u8 data_805287F8[4];
+extern "C" extern u8 data_805287FC[4];
+extern "C" extern u8 data_80528800[4];
+extern "C" extern u8 data_80528804[4];
+extern "C" extern u8 data_80528808[4];
+extern "C" extern u8 data_8052880C[4];
+extern "C" extern u8 data_80528810[4];
+extern "C" extern u8 data_80528814[4];
+extern "C" extern u8 data_80528818[4];
+extern "C" extern u8 data_8052881C[4];
+extern "C" extern u8 data_80528820[4];
+extern "C" extern u8 data_80528824[4];
+extern "C" extern u8 data_80528828[4];
+extern "C" extern u8 data_8052882C[4];
+extern "C" extern u8 data_80528830[4];
+extern "C" extern u8 data_80528834[4];
+extern "C" extern u8 data_80528838[4];
+extern "C" extern u8 data_8052883C[4];
+extern "C" extern u8 data_80528840[4];
+extern "C" extern u8 data_80528844[4];
+extern "C" extern u8 data_80528848[4];
+extern "C" extern u8 data_8052884C[4];
 
-extern "C" static void randam_addcol_set__FPs(); // 1
-extern "C" void createGrass__9daGrass_cFv(); // 1
-extern "C" void deleteGrass__9daGrass_cFv(); // 1
-extern "C" void __dt__15dGrass_packet_cFv(); // 1
-extern "C" void executeGrass__9daGrass_cFv(); // 1
-extern "C" void drawGrass__9daGrass_cFv(); // 1
-extern "C" void newGrassData__9daGrass_cFR4cXyziUcUcsUc(); // 1
-extern "C" void createFlower__9daGrass_cFv(); // 1
-extern "C" void deleteFlower__9daGrass_cFv(); // 1
-extern "C" void __dt__16dFlower_packet_cFv(); // 1
-extern "C" void executeFlower__9daGrass_cFv(); // 1
-extern "C" void drawFlower__9daGrass_cFv(); // 1
-extern "C" void newFlowerData__9daGrass_cFScR4cXyziScs(); // 1
-extern "C" static void dGrass_Tex_Change__Fv(); // 1
-extern "C" static void daGrass_create__FP9daGrass_c(); // 1
-extern "C" void create__9daGrass_cFv(); // 1
-extern "C" static void daGrass_Delete__FP9daGrass_c(); // 1
-extern "C" static void daGrass_execute__FP9daGrass_c(); // 1
-extern "C" static void daGrass_draw__FP9daGrass_c(); // 1
-extern "C" static void func_8051D7B4(); // 1
-extern "C" void __sinit_d_a_grass_cpp(); // 1
-extern "C" void WorkCo__13dGrass_data_cFP10fopAc_ac_cUli(); // 1
-extern "C" void WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj(); // 1
-extern "C" void Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz(); // 1
-extern "C" void WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void hitCheck__13dGrass_data_cFiUs(); // 1
-extern "C" void __dt__15dCcMassS_HitInfFv(); // 1
-extern "C" void newData__13dGrass_room_cFP13dGrass_data_c(); // 1
-extern "C" void deleteData__13dGrass_room_cFv(); // 1
-extern "C" void __ct__15dGrass_packet_cFv(); // 1
-extern "C" void draw__15dGrass_packet_cFv(); // 1
-extern "C" void calc__15dGrass_packet_cFv(); // 1
-extern "C" void checkGroundY__FR4cXyz(); // 1
-extern "C" void update__15dGrass_packet_cFv(); // 1
-extern "C" void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc(); // 1
-extern "C" void newData__15dGrass_packet_cFR4cXyziUcUcsUc(); // 1
-extern "C" void deleteRoom__15dGrass_packet_cFi(); // 1
-extern "C" void newAnm__15dGrass_packet_cFv(); // 1
-extern "C" void setAnm__15dGrass_packet_cFis(); // 1
-extern "C" void getSwordTopPos__9daPy_py_cCFv(); // 1
-extern "C" void __ct__13dGrass_room_cFv(); // 1
-extern "C" void __ct__12dGrass_anm_cFv(); // 1
-extern "C" void __dt__13dGrass_data_cFv(); // 1
-extern "C" void __ct__13dGrass_data_cFv(); // 1
-extern "C" void WorkCo__14dFlower_data_cFP10fopAc_ac_cUli(); // 1
-extern "C" void deleteAnm__14dFlower_data_cFv(); // 1
-extern "C" void WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj(); // 1
-extern "C" void WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf(); // 1
-extern "C" void hitCheck__14dFlower_data_cFP10fopAc_ac_ci(); // 1
-extern "C" void newData__14dFlower_room_cFP14dFlower_data_c(); // 1
-extern "C" void deleteData__14dFlower_room_cFv(); // 1
-extern "C" void __ct__16dFlower_packet_cFv(); // 1
-extern "C" void draw__16dFlower_packet_cFv(); // 1
-extern "C" void calc__16dFlower_packet_cFv(); // 1
-extern "C" static void flowerCheckGroundY__FR4cXyz(); // 1
-extern "C" void update__16dFlower_packet_cFv(); // 1
-extern "C" void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs(); // 1
-extern "C" void newData__16dFlower_packet_cFScR4cXyziScs(); // 1
-extern "C" void deleteRoom__16dFlower_packet_cFi(); // 1
-extern "C" void newAnm__16dFlower_packet_cFv(); // 1
-extern "C" void setAnm__16dFlower_packet_cFis(); // 1
-extern "C" void __ct__14dFlower_room_cFv(); // 1
-extern "C" void __ct__13dFlower_anm_cFv(); // 1
-extern "C" void __dt__14dFlower_data_cFv(); // 1
-extern "C" void __ct__14dFlower_data_cFv(); // 1
+extern "C" static void randam_addcol_set__FPs();
+extern "C" void createGrass__9daGrass_cFv();
+extern "C" void deleteGrass__9daGrass_cFv();
+extern "C" void __dt__15dGrass_packet_cFv();
+extern "C" void executeGrass__9daGrass_cFv();
+extern "C" void drawGrass__9daGrass_cFv();
+extern "C" void newGrassData__9daGrass_cFR4cXyziUcUcsUc();
+extern "C" void createFlower__9daGrass_cFv();
+extern "C" void deleteFlower__9daGrass_cFv();
+extern "C" void __dt__16dFlower_packet_cFv();
+extern "C" void executeFlower__9daGrass_cFv();
+extern "C" void drawFlower__9daGrass_cFv();
+extern "C" void newFlowerData__9daGrass_cFScR4cXyziScs();
+extern "C" static void dGrass_Tex_Change__Fv();
+extern "C" static void daGrass_create__FP9daGrass_c();
+extern "C" void create__9daGrass_cFv();
+extern "C" static void daGrass_Delete__FP9daGrass_c();
+extern "C" static void daGrass_execute__FP9daGrass_c();
+extern "C" static void daGrass_draw__FP9daGrass_c();
+extern "C" static void func_8051D7B4();
+extern "C" void __sinit_d_a_grass_cpp();
+extern "C" void WorkCo__13dGrass_data_cFP10fopAc_ac_cUli();
+extern "C" void WorkAt_NoCutAnim__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
+extern "C" void Direction_Set__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_ObjP5csXyz();
+extern "C" void WorkAt__13dGrass_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfUs();
+extern "C" void __dt__5csXyzFv();
+extern "C" void hitCheck__13dGrass_data_cFiUs();
+extern "C" void __dt__15dCcMassS_HitInfFv();
+extern "C" void newData__13dGrass_room_cFP13dGrass_data_c();
+extern "C" void deleteData__13dGrass_room_cFv();
+extern "C" void __ct__15dGrass_packet_cFv();
+extern "C" void draw__15dGrass_packet_cFv();
+extern "C" void calc__15dGrass_packet_cFv();
+extern "C" void checkGroundY__FR4cXyz();
+extern "C" void update__15dGrass_packet_cFv();
+extern "C" void setData__15dGrass_packet_cFP13dGrass_data_ciR4cXyziUcUcsUc();
+extern "C" void newData__15dGrass_packet_cFR4cXyziUcUcsUc();
+extern "C" void deleteRoom__15dGrass_packet_cFi();
+extern "C" void newAnm__15dGrass_packet_cFv();
+extern "C" void setAnm__15dGrass_packet_cFis();
+extern "C" void getSwordTopPos__9daPy_py_cCFv();
+extern "C" void __ct__13dGrass_room_cFv();
+extern "C" void __ct__12dGrass_anm_cFv();
+extern "C" void __dt__13dGrass_data_cFv();
+extern "C" void __ct__13dGrass_data_cFv();
+extern "C" void WorkCo__14dFlower_data_cFP10fopAc_ac_cUli();
+extern "C" void deleteAnm__14dFlower_data_cFv();
+extern "C" void WorkAt_NoCutAnim__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInfP8cCcD_Obj();
+extern "C" void WorkAt__14dFlower_data_cFP10fopAc_ac_cUliP15dCcMassS_HitInf();
+extern "C" void hitCheck__14dFlower_data_cFP10fopAc_ac_ci();
+extern "C" void newData__14dFlower_room_cFP14dFlower_data_c();
+extern "C" void deleteData__14dFlower_room_cFv();
+extern "C" void __ct__16dFlower_packet_cFv();
+extern "C" void draw__16dFlower_packet_cFv();
+extern "C" void calc__16dFlower_packet_cFv();
+extern "C" static void flowerCheckGroundY__FR4cXyz();
+extern "C" void update__16dFlower_packet_cFv();
+extern "C" void setData__16dFlower_packet_cFP14dFlower_data_ciScR4cXyziScs();
+extern "C" void newData__16dFlower_packet_cFScR4cXyziScs();
+extern "C" void deleteRoom__16dFlower_packet_cFi();
+extern "C" void newAnm__16dFlower_packet_cFv();
+extern "C" void setAnm__16dFlower_packet_cFis();
+extern "C" void __ct__14dFlower_room_cFv();
+extern "C" void __ct__13dFlower_anm_cFv();
+extern "C" void __dt__14dFlower_data_cFv();
+extern "C" void __ct__14dFlower_data_cFv();
 extern "C" extern u32 const lit_5958;
 extern "C" extern u8 const lit_5961[8];
 extern "C" extern u32 const lit_6080;
@@ -336,122 +385,33 @@ extern "C" extern u8 data_8052884C[4];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void fopAcM_setStageLayer(void*); // 2
-void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool); // 2
-void fopOvlpM_IsPeek(); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGs_Grass_hide_Set(s8); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_get_wind_pow(); // 2
-void dCcD_GetGObjInf(cCcD_Obj*); // 2
-void dKy_setLight_nowroom_grass(char, f32); // 2
-void dKy_setLight_again(); // 2
-void dKy_Global_amb_set(dKy_tevstr_c*); // 2
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
-void dKy_GfFog_tevstr_set(dKy_tevstr_c*); // 2
-void dKy_get_dayofweek(); // 2
-void dKy_SunMoon_Light_Check(); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rnd(); // 2
-void cM_rndF(f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_chaseAngleS(s16*, s16, s16); // 2
-void GFSetTevColorS10(_GXTevRegID, _GXColorS10); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGs_Grass_hide_Set__FSc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_get_wind_pow__Fv(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj(); // 1
-extern "C" void SetAttr__12dCcMassS_MngFffUcUc(); // 1
-extern "C" void Prepare__12dCcMassS_MngFv(); // 1
-extern "C" void Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf(); // 1
-extern "C" void MassClear__4dCcSFv(); // 1
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
-extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
-extern "C" void dKy_setLight_nowroom_grass__Fcf(); // 1
-extern "C" void dKy_setLight_again__Fv(); // 1
-extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_GfFog_tevstr_set__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_get_dayofweek__Fv(); // 1
-extern "C" void dKy_SunMoon_Light_Check__Fv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_chaseAngleS__FPsss(); // 1
-extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetVtxDescv(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetVtxAttrFmtv(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strcmp(); // 1
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void fopAcM_setStageLayer(void*);
+void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool);
+void fopOvlpM_IsPeek();
+void dComIfGp_getReverb(int);
+void dComIfGs_Grass_hide_Set(s8);
+void dKyw_get_wind_vec();
+void dKyw_get_wind_pow();
+void dCcD_GetGObjInf(cCcD_Obj*);
+void dKy_setLight_nowroom_grass(char, f32);
+void dKy_setLight_again();
+void dKy_Global_amb_set(dKy_tevstr_c*);
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
+void dKy_GfFog_tevstr_set(dKy_tevstr_c*);
+void dKy_get_dayofweek();
+void dKy_SunMoon_Light_Check();
+void cM_atan2s(f32, f32);
+void cM_rnd();
+void cM_rndF(f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_chaseAngleS(s16*, s16, s16);
+void GFSetTevColorS10(_GXTevRegID, _GXColorS10);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];
@@ -476,7 +436,120 @@ extern "C" extern u8 mLight8EcallBack__13dPa_control_c[4];
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGs_Grass_hide_Set__FSc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_get_wind_pow__Fv();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void dCcD_GetGObjInf__FP8cCcD_Obj();
+extern "C" void SetAttr__12dCcMassS_MngFffUcUc();
+extern "C" void Prepare__12dCcMassS_MngFv();
+extern "C" void Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf();
+extern "C" void MassClear__4dCcSFv();
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
+extern "C" void getDaytime__18dScnKy_env_light_cFv();
+extern "C" void dKy_setLight_nowroom_grass__Fcf();
+extern "C" void dKy_setLight_again__Fv();
+extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c();
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" void dKy_GfFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" void dKy_get_dayofweek__Fv();
+extern "C" void dKy_SunMoon_Light_Check__Fv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rnd__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_chaseAngleS__FPsss();
+extern "C" void calcViewFrustum__11J3DUClipperFv();
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void GFSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXSetVtxDescv();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetVtxAttrFmtv();
+extern "C" void GXSetArray();
+extern "C" void GXSetChanAmbColor();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXCallDisplayList();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXLoadNrmMtxImm();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
+extern "C" void strcmp();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 m_deleteRoom__15dGrass_packet_c[12];
+extern "C" extern u8 m_deleteRoom__16dFlower_packet_c[12];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mSystemFar__14mDoLib_clipper;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_myObj__9daGrass_c[4];
+extern "C" extern u8 m_grass__9daGrass_c[4];
+extern "C" extern u8 m_flower__9daGrass_c[4];
+extern "C" extern u8 mLight8EcallBack__13dPa_control_c[4];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

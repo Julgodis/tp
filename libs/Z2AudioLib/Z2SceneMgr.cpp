@@ -141,93 +141,107 @@ struct JAISound {
 // Forward References:
 // 
 
-static void dComIfGs_getStartPoint(); // 2
-static void dComIfGs_isSaveSwitch(int); // 2
+static void dComIfGs_getStartPoint();
+static void dComIfGs_isSaveSwitch(int);
+extern "C" extern char const* const Z2SceneMgr__stringBase0;
 
-extern "C" void __ct__10Z2SceneMgrFv(); // 1
-extern "C" void setInDarkness__10Z2SceneMgrFb(); // 1
-extern "C" void setSceneExist__10Z2SceneMgrFb(); // 1
-extern "C" void setFadeOutStart__10Z2SceneMgrFUc(); // 1
-extern "C" void setFadeInStart__10Z2SceneMgrFUc(); // 1
-extern "C" void setSceneName__10Z2SceneMgrFPcll(); // 1
-extern "C" void __ct__10JAISoundIDFRC10JAISoundID(); // 1
-extern "C" void setFieldBgmPlay__8Z2SeqMgrFb(); // 1
-extern "C" void isActive__12JAIStreamMgrCFv(); // 1
-extern "C" void getID__8JAISoundCFv(); // 1
-extern "C" void func_802B9994(); // 1
-extern "C" static void dComIfGs_getStartPoint__Fv(); // 1
-extern "C" void unMuteSceneBgm__8Z2SeqMgrFUl(); // 1
-extern "C" void muteSceneBgm__8Z2SeqMgrFUlf(); // 1
-extern "C" void __as__10JAISoundIDFRC10JAISoundID(); // 1
-extern "C" static void dComIfGs_isSaveSwitch__Fi(); // 1
-extern "C" void resetCrowdSize__7Z2SeMgrFv(); // 1
-extern "C" void setTwilightGateVol__8Z2SeqMgrFf(); // 1
-extern "C" void setWindStoneVol__8Z2SeqMgrFfUl(); // 1
-extern "C" void __ct__10JAISoundIDFUl(); // 1
-extern "C" void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb(); // 1
-extern "C" void framework__10Z2SceneMgrFv(); // 1
-extern "C" void load1stDynamicWave__10Z2SceneMgrFv(); // 1
-extern "C" void _load1stWaveInner_1__10Z2SceneMgrFv(); // 1
-extern "C" void _load1stWaveInner_2__10Z2SceneMgrFv(); // 1
-extern "C" void check1stDynamicWave__10Z2SceneMgrFv(); // 1
-extern "C" void load2ndDynamicWave__10Z2SceneMgrFv(); // 1
-extern "C" void sceneBgmStart__10Z2SceneMgrFv(); // 1
-extern "C" void loadStaticWaves__10Z2SceneMgrFv(); // 1
-extern "C" bool checkFirstWaves__10Z2SceneMgrFv(); // 1
-extern "C" void eraseSeWave__10Z2SceneMgrFUl(); // 1
-extern "C" void eraseBgmWave__10Z2SceneMgrFUl(); // 1
-extern "C" void getWaveLoadStatus__10Z2SceneMgrFUlUl(); // 1
-extern "C" void loadSeWave__10Z2SceneMgrFUl(); // 1
-extern "C" void loadBgmWave__10Z2SceneMgrFUl(); // 1
+extern "C" void __ct__10Z2SceneMgrFv();
+extern "C" void setInDarkness__10Z2SceneMgrFb();
+extern "C" void setSceneExist__10Z2SceneMgrFb();
+extern "C" void setFadeOutStart__10Z2SceneMgrFUc();
+extern "C" void setFadeInStart__10Z2SceneMgrFUc();
+extern "C" void setSceneName__10Z2SceneMgrFPcll();
+extern "C" void __ct__10JAISoundIDFRC10JAISoundID();
+extern "C" void setFieldBgmPlay__8Z2SeqMgrFb();
+extern "C" void isActive__12JAIStreamMgrCFv();
+extern "C" void getID__8JAISoundCFv();
+extern "C" void func_802B9994();
+extern "C" static void dComIfGs_getStartPoint__Fv();
+extern "C" void unMuteSceneBgm__8Z2SeqMgrFUl();
+extern "C" void muteSceneBgm__8Z2SeqMgrFUlf();
+extern "C" void __as__10JAISoundIDFRC10JAISoundID();
+extern "C" static void dComIfGs_isSaveSwitch__Fi();
+extern "C" void resetCrowdSize__7Z2SeMgrFv();
+extern "C" void setTwilightGateVol__8Z2SeqMgrFf();
+extern "C" void setWindStoneVol__8Z2SeqMgrFfUl();
+extern "C" void __ct__10JAISoundIDFUl();
+extern "C" void sceneChange__10Z2SceneMgrF10JAISoundIDUcUcUcUcUcb();
+extern "C" void framework__10Z2SceneMgrFv();
+extern "C" void load1stDynamicWave__10Z2SceneMgrFv();
+extern "C" void _load1stWaveInner_1__10Z2SceneMgrFv();
+extern "C" void _load1stWaveInner_2__10Z2SceneMgrFv();
+extern "C" void check1stDynamicWave__10Z2SceneMgrFv();
+extern "C" void load2ndDynamicWave__10Z2SceneMgrFv();
+extern "C" void sceneBgmStart__10Z2SceneMgrFv();
+extern "C" void loadStaticWaves__10Z2SceneMgrFv();
+extern "C" bool checkFirstWaves__10Z2SceneMgrFv();
+extern "C" void eraseSeWave__10Z2SceneMgrFUl();
+extern "C" void eraseBgmWave__10Z2SceneMgrFUl();
+extern "C" void getWaveLoadStatus__10Z2SceneMgrFUlUl();
+extern "C" void loadSeWave__10Z2SceneMgrFUl();
+extern "C" void loadBgmWave__10Z2SceneMgrFUl();
 extern "C" extern char const* const Z2SceneMgr__stringBase0;
 
 // 
 // External References:
 // 
 
-void dComIfGs_isStageSwitch(int, int); // 2
-void dComIfGs_isEventBit(u16); // 2
+void dComIfGs_isStageSwitch(int, int);
+void dComIfGs_isEventBit(u16);
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450860[4];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B58[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
 
-extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
-extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dComIfGs_isEventBit__FUs(); // 1
-extern "C" void load__10JASWaveArcFP7JASHeap(); // 1
-extern "C" void loadTail__10JASWaveArcFP7JASHeap(); // 1
-extern "C" void erase__10JASWaveArcFv(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID(); // 1
-extern "C" void resetFilterAll__10Z2SoundMgrFv(); // 1
-extern "C" void resetModY__7Z2SeMgrFv(); // 1
-extern "C" void seStopAll__7Z2SeMgrFUl(); // 1
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void bgmStop__8Z2SeqMgrFUll(); // 1
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
-extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void setHeightVolMod__8Z2SeqMgrFbUl(); // 1
-extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl(); // 1
-extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl(); // 1
-extern "C" void resetBattleBgmParams__8Z2SeqMgrFv(); // 1
-extern "C" void setBattleBgmOff__8Z2SeqMgrFb(); // 1
-extern "C" void menuOut__11Z2StatusMgrFv(); // 1
-extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
-extern "C" void checkDayTime__11Z2StatusMgrFv(); // 1
-extern "C" void setSceneFx__11Z2FxLineMgrFl(); // 1
-extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
-extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc(); // 1
-extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv(); // 1
-extern "C" void resetSceneInner__10Z2EnvSeMgrFv(); // 1
-extern "C" void initSceneEnvSe__10Z2EnvSeMgrFlScf(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dComIfGs_isEventBit__FUs();
+extern "C" void load__10JASWaveArcFP7JASHeap();
+extern "C" void loadTail__10JASWaveArcFP7JASHeap();
+extern "C" void erase__10JASWaveArcFv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" void resetFilterAll__10Z2SoundMgrFv();
+extern "C" void resetModY__7Z2SeMgrFv();
+extern "C" void seStopAll__7Z2SeMgrFUl();
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void setHeightVolMod__8Z2SeqMgrFbUl();
+extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl();
+extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" void resetBattleBgmParams__8Z2SeqMgrFv();
+extern "C" void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" void menuOut__11Z2StatusMgrFv();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void checkDayTime__11Z2StatusMgrFv();
+extern "C" void setSceneFx__11Z2FxLineMgrFl();
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc();
+extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv();
+extern "C" void resetSceneInner__10Z2EnvSeMgrFv();
+extern "C" void initSceneEnvSe__10Z2EnvSeMgrFlScf();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450860[4];

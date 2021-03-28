@@ -38,10 +38,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -212,85 +212,91 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void check_event_condition(u32, u16); // 2
-static void check_flontofplayer(u32, s16, s16); // 2
-static void distace_weight(f32, s16, f32); // 2
-static void distace_angle_adjust(f32, s16, f32); // 2
-static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32); // 2
-static void select_attention(fopAc_ac_c*, void*); // 2
-static void sound_attention(fopAc_ac_c*, void*); // 2
+static void check_event_condition(u32, u16);
+static void check_flontofplayer(u32, s16, s16);
+static void distace_weight(f32, s16, f32);
+static void distace_angle_adjust(f32, s16, f32);
+static void check_distace(cXyz*, s16, cXyz*, f32, f32, f32, f32);
+static void select_attention(fopAc_ac_c*, void*);
+static void sound_attention(fopAc_ac_c*, void*);
+extern "C" extern char const* const d_d_attention__stringBase0;
+extern "C" extern void* __vt__19dAttDraw_CallBack_c[3];
+extern "C" extern void* __vt__11dAttParam_c[3 + 1 /* padding */];
+extern "C" extern u8 pad_8045067A[4];
+extern "C" extern u8 data_80450680[8];
+extern "C" extern u8 data_80450688[8];
 
-extern "C" static void func_80070018(); // 1
-extern "C" void __ct__11dAttParam_cFl(); // 1
-extern "C" void __dt__11dAttParam_cFv(); // 1
-extern "C" void __ct__15dAttDrawParam_cFv(); // 1
-extern "C" void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo(); // 1
-extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl(); // 1
-extern "C" void __dt__12dAttention_cFv(); // 1
-extern "C" void GetLockonList__12dAttention_cFl(); // 1
-extern "C" void getActionBtnB__12dAttention_cFv(); // 1
-extern "C" void getActionBtnXY__12dAttention_cFv(); // 1
-extern "C" void chkAttMask__12dAttention_cFUlUl(); // 1
-extern "C" static void check_event_condition__FUlUs(); // 1
-extern "C" static void check_flontofplayer__FUlss(); // 1
-extern "C" static void distace_weight__Ffsf(); // 1
-extern "C" static void distace_angle_adjust__Ffsf(); // 1
-extern "C" static void check_distace__FP4cXyzsP4cXyzffff(); // 1
-extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl(); // 1
-extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl(); // 1
-extern "C" void initList__12dAttention_cFUl(); // 1
-extern "C" static void select_attention__FP10fopAc_ac_cPv(); // 1
-extern "C" void makeList__12dAttention_cFv(); // 1
-extern "C" void setOwnerAttentionPos__12dAttention_cFv(); // 1
-extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c(); // 1
-extern "C" void __dt__7cSGlobeFv(); // 1
-extern "C" void sortList__12dAttention_cFv(); // 1
-extern "C" void stockAttention__12dAttention_cFv(); // 1
-extern "C" void nextAttention__12dAttention_cFv(); // 1
-extern "C" void freeAttention__12dAttention_cFv(); // 1
-extern "C" void chaseAttention__12dAttention_cFv(); // 1
-extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c(); // 1
-extern "C" static void sound_attention__FP10fopAc_ac_cPv(); // 1
-extern "C" void runSoundProc__12dAttention_cFv(); // 1
-extern "C" void runDrawProc__12dAttention_cFv(); // 1
-extern "C" void runDebugDisp__12dAttention_cFv(); // 1
-extern "C" void checkButton__12dAttention_cFv(); // 1
-extern "C" void triggerProc__12dAttention_cFv(); // 1
-extern "C" void lostCheck__12dAttention_cFv(); // 1
-extern "C" void judgementStatus4Hold__12dAttention_cFv(); // 1
-extern "C" void judgementStatus4Switch__12dAttention_cFv(); // 1
-extern "C" void Run__12dAttention_cFv(); // 1
-extern "C" void Draw__12dAttention_cFv(); // 1
-extern "C" void lockSoundStart__12dAttention_cFUl(); // 1
-extern "C" void setAnm__10dAttDraw_cFUcf(); // 1
-extern "C" void setAlphaAnm__10dAttDraw_cFUcUc(); // 1
-extern "C" void alphaAnm__10dAttDraw_cFv(); // 1
-extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor(); // 1
-extern "C" void draw__10dAttDraw_cFR4cXyzPA4_f(); // 1
-extern "C" void LockonTarget__12dAttention_cFl(); // 1
-extern "C" void LockonReleaseDistanse__12dAttention_cFv(); // 1
-extern "C" void LockonTargetPId__12dAttention_cFl(); // 1
-extern "C" void ActionTarget__12dAttention_cFl(); // 1
-extern "C" void CheckObjectTarget__12dAttention_cFl(); // 1
-extern "C" void LockonTruth__12dAttention_cFv(); // 1
-extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff(); // 1
-extern "C" void getActor__10dAttList_cFv(); // 1
-extern "C" void setActor__10dAttList_cFP10fopAc_ac_c(); // 1
-extern "C" void getPId__10dAttHint_cFPv(); // 1
-extern "C" void convPId__10dAttHint_cFUi(); // 1
-extern "C" void request__10dAttHint_cFP10fopAc_ac_ci(); // 1
-extern "C" void init__10dAttHint_cFv(); // 1
-extern "C" void proc__10dAttHint_cFv(); // 1
-extern "C" void convPId__11dAttCatch_cFUi(); // 1
-extern "C" void init__11dAttCatch_cFv(); // 1
-extern "C" void proc__11dAttCatch_cFv(); // 1
-extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
-extern "C" void convPId__10dAttLook_cFUi(); // 1
-extern "C" void init__10dAttLook_cFv(); // 1
-extern "C" void proc__10dAttLook_cFv(); // 1
-extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi(); // 1
-extern "C" void __dt__15dAttDrawParam_cFv(); // 1
-extern "C" void __sinit_d_attention_cpp(); // 1
+extern "C" static void func_80070018();
+extern "C" void __ct__11dAttParam_cFl();
+extern "C" void __dt__11dAttParam_cFv();
+extern "C" void __ct__15dAttDrawParam_cFv();
+extern "C" void execute__19dAttDraw_CallBack_cFUsP16J3DTransformInfo();
+extern "C" void __ct__12dAttention_cFP10fopAc_ac_cUl();
+extern "C" void __dt__12dAttention_cFv();
+extern "C" void GetLockonList__12dAttention_cFl();
+extern "C" void getActionBtnB__12dAttention_cFv();
+extern "C" void getActionBtnXY__12dAttention_cFv();
+extern "C" void chkAttMask__12dAttention_cFUlUl();
+extern "C" static void check_event_condition__FUlUs();
+extern "C" static void check_flontofplayer__FUlss();
+extern "C" static void distace_weight__Ffsf();
+extern "C" static void distace_angle_adjust__Ffsf();
+extern "C" static void check_distace__FP4cXyzsP4cXyzffff();
+extern "C" void calcWeight__12dAttention_cFiP10fopAc_ac_cfssPUl();
+extern "C" void setList__12dAttention_cFiP10fopAc_ac_cff7cSAngleUl();
+extern "C" void initList__12dAttention_cFUl();
+extern "C" static void select_attention__FP10fopAc_ac_cPv();
+extern "C" void makeList__12dAttention_cFv();
+extern "C" void setOwnerAttentionPos__12dAttention_cFv();
+extern "C" void SelectAttention__12dAttention_cFP10fopAc_ac_c();
+extern "C" void __dt__7cSGlobeFv();
+extern "C" void sortList__12dAttention_cFv();
+extern "C" void stockAttention__12dAttention_cFv();
+extern "C" void nextAttention__12dAttention_cFv();
+extern "C" void freeAttention__12dAttention_cFv();
+extern "C" void chaseAttention__12dAttention_cFv();
+extern "C" void EnemyDistance__12dAttention_cFP10fopAc_ac_c();
+extern "C" static void sound_attention__FP10fopAc_ac_cPv();
+extern "C" void runSoundProc__12dAttention_cFv();
+extern "C" void runDrawProc__12dAttention_cFv();
+extern "C" void runDebugDisp__12dAttention_cFv();
+extern "C" void checkButton__12dAttention_cFv();
+extern "C" void triggerProc__12dAttention_cFv();
+extern "C" void lostCheck__12dAttention_cFv();
+extern "C" void judgementStatus4Hold__12dAttention_cFv();
+extern "C" void judgementStatus4Switch__12dAttention_cFv();
+extern "C" void Run__12dAttention_cFv();
+extern "C" void Draw__12dAttention_cFv();
+extern "C" void lockSoundStart__12dAttention_cFUl();
+extern "C" void setAnm__10dAttDraw_cFUcf();
+extern "C" void setAlphaAnm__10dAttDraw_cFUcUc();
+extern "C" void alphaAnm__10dAttDraw_cFv();
+extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
+extern "C" void draw__10dAttDraw_cFR4cXyzPA4_f();
+extern "C" void LockonTarget__12dAttention_cFl();
+extern "C" void LockonReleaseDistanse__12dAttention_cFv();
+extern "C" void LockonTargetPId__12dAttention_cFl();
+extern "C" void ActionTarget__12dAttention_cFl();
+extern "C" void CheckObjectTarget__12dAttention_cFl();
+extern "C" void LockonTruth__12dAttention_cFv();
+extern "C" void checkDistance__12dAttention_cFP4cXyzsP4cXyzffff();
+extern "C" void getActor__10dAttList_cFv();
+extern "C" void setActor__10dAttList_cFP10fopAc_ac_c();
+extern "C" void getPId__10dAttHint_cFPv();
+extern "C" void convPId__10dAttHint_cFUi();
+extern "C" void request__10dAttHint_cFP10fopAc_ac_ci();
+extern "C" void init__10dAttHint_cFv();
+extern "C" void proc__10dAttHint_cFv();
+extern "C" void convPId__11dAttCatch_cFUi();
+extern "C" void init__11dAttCatch_cFv();
+extern "C" void proc__11dAttCatch_cFv();
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+extern "C" void convPId__10dAttLook_cFUi();
+extern "C" void init__10dAttLook_cFv();
+extern "C" void proc__10dAttLook_cFv();
+extern "C" void request__10dAttLook_cFP10fopAc_ac_cfffsi();
+extern "C" void __dt__15dAttDrawParam_cFv();
+extern "C" void __sinit_d_attention_cpp();
 extern "C" extern char const* const d_d_attention__stringBase0;
 extern "C" extern void* __vt__19dAttDraw_CallBack_c[3];
 extern "C" extern void* __vt__11dAttParam_c[3 + 1 /* padding */];
@@ -302,80 +308,91 @@ extern "C" extern u8 data_80450688[8];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
-void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcIt_Executor(int (*)(void*, void*), void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void operator delete(void*); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcIt_Executor(int (*)(void*, void*), void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
+void fpcSch_JudgeByID(void*, void*);
+void operator delete(void*);
+extern "C" extern void* __vt__25mDoExt_McaMorfCallBack1_c[3];
+extern "C" extern u8 dist_table__12dAttention_c[6552];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 data_80450F58[8];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void __dt__10dAttList_cFv(); // 1
-extern "C" void __ct__10dAttList_cFv(); // 1
-extern "C" void __dt__10dAttDraw_cFv(); // 1
-extern "C" void __ct__10dAttDraw_cFv(); // 1
-extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getAttentionOffsetY__9daPy_py_cFv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
-extern "C" void __ct__7cSAngleFs(); // 1
-extern "C" void Inv__7cSAngleCFv(); // 1
-extern "C" void __mi__7cSAngleCFs(); // 1
-extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void bgmNowBattle__8Z2SeqMgrFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void tan(); // 1
+SECTION_INIT void memcpy();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void __dt__10dAttList_cFv();
+extern "C" void __ct__10dAttList_cFv();
+extern "C" void __dt__10dAttDraw_cFv();
+extern "C" void __ct__10dAttDraw_cFv();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getAttentionOffsetY__9daPy_py_cFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ct__7cSAngleFRC7cSAngle();
+extern "C" void __ct__7cSAngleFs();
+extern "C" void Inv__7cSAngleCFv();
+extern "C" void __mi__7cSAngleCFs();
+extern "C" void __ct__7cSGlobeFRC4cXyz();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmNowBattle__8Z2SeqMgrFf();
+extern "C" void __dl__FPv();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void tan();
 extern "C" extern void* __vt__25mDoExt_McaMorfCallBack1_c[3];
 extern "C" extern u8 dist_table__12dAttention_c[6552];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];

@@ -18,9 +18,10 @@ struct _GXCullMode {
 // Forward References:
 // 
 
-void GFSetGenMode2(u8, u8, u8, u8, _GXCullMode); // 2
+void GFSetGenMode2(u8, u8, u8, u8, _GXCullMode);
+extern "C" extern u8 data_804508B0[8];
 
-extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode(); // 1
+extern "C" void GFSetGenMode2__FUcUcUcUc11_GXCullMode();
 extern "C" extern u8 data_804508B0[8];
 
 // 

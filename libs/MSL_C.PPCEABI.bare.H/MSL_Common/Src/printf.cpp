@@ -11,43 +11,46 @@
 // Forward References:
 // 
 
+extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
 
-extern "C" void sprintf(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void vprintf(); // 1
-extern "C" void fprintf(); // 1
-extern "C" void printf(); // 1
-extern "C" static void __StringWrite(); // 1
-extern "C" static void __FileWrite(); // 1
-extern "C" static void __pformatter(); // 1
-extern "C" static void float2str(); // 1
-extern "C" static void round_decimal(); // 1
-extern "C" static void double2hex(); // 1
-extern "C" static void longlong2str(); // 1
-extern "C" static void long2str(); // 1
-extern "C" static void parse_format(); // 1
+extern "C" void sprintf();
+extern "C" void snprintf();
+extern "C" void vsnprintf();
+extern "C" void vprintf();
+extern "C" void fprintf();
+extern "C" void printf();
+extern "C" static void __StringWrite();
+extern "C" static void __FileWrite();
+extern "C" static void __pformatter();
+extern "C" static void float2str();
+extern "C" static void round_decimal();
+extern "C" static void double2hex();
+extern "C" static void longlong2str();
+extern "C" static void long2str();
+extern "C" static void parse_format();
 extern "C" extern char const* const MSL_Common_Src_printf__stringBase0;
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __files[80];
+extern "C" extern u8 __ctype_map[256];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __va_arg(); // 1
-extern "C" void __div2u(); // 1
-extern "C" void __mod2u(); // 1
-extern "C" void __num2dec(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void fwrite(); // 1
-extern "C" void wcstombs(); // 1
-extern "C" void memchr(); // 1
-extern "C" void strchr(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
-extern "C" void fwide(); // 1
+SECTION_INIT void memcpy();
+extern "C" void __va_arg();
+extern "C" void __div2u();
+extern "C" void __mod2u();
+extern "C" void __num2dec();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fwrite();
+extern "C" void wcstombs();
+extern "C" void memchr();
+extern "C" void strchr();
+extern "C" void strcpy();
+extern "C" void strlen();
+extern "C" void fwide();
 extern "C" extern void* __files[80];
 extern "C" extern u8 __ctype_map[256];
 

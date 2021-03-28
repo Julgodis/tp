@@ -12,16 +12,17 @@
 // 
 
 
-extern "C" void GDSetVtxDescv(); // 1
-extern "C" void GDSetArray(); // 1
-extern "C" void GDSetArrayRaw(); // 1
+extern "C" void GDSetVtxDescv();
+extern "C" void GDSetArray();
+extern "C" void GDSetArrayRaw();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __GDCurrentDL[4];
 
-extern "C" void GDOverflowed(); // 1
+extern "C" void GDOverflowed();
 extern "C" extern u8 __GDCurrentDL[4];
 
 // 

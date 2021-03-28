@@ -12,30 +12,30 @@
 // 
 
 
-extern "C" void TRKDispatchMessage(); // 1
-extern "C" bool TRKInitializeDispatcher(); // 1
+extern "C" void TRKDispatchMessage();
+extern "C" bool TRKInitializeDispatcher();
 
 // 
 // External References:
 // 
 
 
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKDoSetOption(); // 1
-extern "C" void TRKDoStop(); // 1
-extern "C" void TRKDoStep(); // 1
-extern "C" void TRKDoContinue(); // 1
-extern "C" void TRKDoWriteRegisters(); // 1
-extern "C" void TRKDoReadRegisters(); // 1
-extern "C" void TRKDoWriteMemory(); // 1
-extern "C" void TRKDoReadMemory(); // 1
-extern "C" bool TRKDoSupportMask(); // 1
-extern "C" bool TRKDoVersions(); // 1
-extern "C" void TRKDoOverride(); // 1
-extern "C" void TRKDoReset(); // 1
-extern "C" void TRKDoDisconnect(); // 1
-extern "C" void TRKDoConnect(); // 1
-extern "C" void MWTRACE(); // 1
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

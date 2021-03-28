@@ -42,46 +42,52 @@ struct dEvt_control_c {
 // Forward References:
 // 
 
-static void daTagMwait_Create(fopAc_ac_c*); // 2
-static void daTagMwait_Delete(daTagMwait_c*); // 2
-static void daTagMwait_Execute(daTagMwait_c*); // 2
-static bool daTagMwait_Draw(daTagMwait_c*); // 2
+static void daTagMwait_Create(fopAc_ac_c*);
+static void daTagMwait_Delete(daTagMwait_c*);
+static void daTagMwait_Execute(daTagMwait_c*);
+static bool daTagMwait_Draw(daTagMwait_c*);
+extern "C" extern void* g_profile_Tag_Mwait[12];
 
-extern "C" void create__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Delete__FP12daTagMwait_c(); // 1
-extern "C" void execute__12daTagMwait_cFv(); // 1
-extern "C" static void daTagMwait_Execute__FP12daTagMwait_c(); // 1
-extern "C" static bool daTagMwait_Draw__FP12daTagMwait_c(); // 1
+extern "C" void create__12daTagMwait_cFv();
+extern "C" static void daTagMwait_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagMwait_cFv();
+extern "C" static void daTagMwait_Delete__FP12daTagMwait_c();
+extern "C" void execute__12daTagMwait_cFv();
+extern "C" static void daTagMwait_Execute__FP12daTagMwait_c();
+extern "C" static bool daTagMwait_Draw__FP12daTagMwait_c();
 extern "C" extern void* g_profile_Tag_Mwait[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __dl__FPv();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

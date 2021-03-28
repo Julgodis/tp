@@ -37,21 +37,24 @@ struct DynamicModuleControlBase {
 // Forward References:
 // 
 
-static void print_f(char const*, ...); // 2
-static void print(char const*); // 2
-static void dispHeapInfo(); // 2
-static void dispGameInfo(); // 2
-static void dispDateInfo(); // 2
-static void dispConsoleToTerminal(); // 2
-void exception_addition(JUTConsole*); // 2
+static void print_f(char const*, ...);
+static void print(char const*);
+static void dispHeapInfo();
+static void dispGameInfo();
+static void dispDateInfo();
+static void dispConsoleToTerminal();
+void exception_addition(JUTConsole*);
+extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
+extern "C" extern u8 struct_80450C98[4];
+extern "C" extern u8 struct_80450C9C[4];
 
-extern "C" static void print_f__FPCce(); // 1
-extern "C" static void print__FPCc(); // 1
-extern "C" static void dispHeapInfo__Fv(); // 1
-extern "C" static void dispGameInfo__Fv(); // 1
-extern "C" static void dispDateInfo__Fv(); // 1
-extern "C" static void dispConsoleToTerminal__Fv(); // 1
-extern "C" void exception_addition__FP10JUTConsole(); // 1
+extern "C" static void print_f__FPCce();
+extern "C" static void print__FPCc();
+extern "C" static void dispHeapInfo__Fv();
+extern "C" static void dispGameInfo__Fv();
+extern "C" static void dispDateInfo__Fv();
+extern "C" static void dispConsoleToTerminal__Fv();
+extern "C" void exception_addition__FP10JUTConsole();
 extern "C" extern char const* const m_Do_m_Do_machine_exception__stringBase0;
 extern "C" extern u8 struct_80450C98[4];
 extern "C" extern u8 struct_80450C9C[4];
@@ -60,18 +63,29 @@ extern "C" extern u8 struct_80450C9C[4];
 // External References:
 // 
 
+extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sPowerOnTime__7mDoMain[4];
+extern "C" extern u8 data_80450B0C[4];
+extern "C" extern u8 sHungUpTime__7mDoMain[4];
+extern "C" extern u8 data_80450B14[4];
+extern "C" extern u8 gameHeap[4];
+extern "C" extern u8 zeldaHeap[4];
+extern "C" extern u8 archiveHeap[4];
+extern "C" extern u8 systemConsole__9JFWSystem[4];
+extern "C" extern u8 sAramObject__7JKRAram[4];
 
-extern "C" void dump__14dRes_control_cFv(); // 1
-extern "C" void dump__24DynamicModuleControlBaseFv(); // 1
-extern "C" void getFreeSize__7JKRHeapFv(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void dump__11JKRAramHeapFv(); // 1
-extern "C" void print__10JUTConsoleFPCc(); // 1
-extern "C" void JUTConsole_print_f_va_(); // 1
-extern "C" void dumpToTerminal__10JUTConsoleFUi(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
+extern "C" void dump__14dRes_control_cFv();
+extern "C" void dump__24DynamicModuleControlBaseFv();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void dump__11JKRAramHeapFv();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void JUTConsole_print_f_va_();
+extern "C" void dumpToTerminal__10JUTConsoleFUi();
+extern "C" void OSTicksToCalendarTime();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
 extern "C" extern u8 COPYDATE_STRING__7mDoMain[18 + 2 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sPowerOnTime__7mDoMain[4];

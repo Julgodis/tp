@@ -138,36 +138,46 @@ struct J2DAnmBase {
 // Forward References:
 // 
 
-static void J2DGetKeyFrameInterpolation__template0(f32, J3DAnmKeyTableBase*, s16*); // 2
-static void J2DGetKeyFrameInterpolation__template1(f32, J3DAnmKeyTableBase*, f32*); // 2
+static void J2DGetKeyFrameInterpolation__template0(f32, J3DAnmKeyTableBase*, s16*);
+static void J2DGetKeyFrameInterpolation__template1(f32, J3DAnmKeyTableBase*, f32*);
+extern "C" extern void* __vt__15J2DAnmTevRegKey[4];
+extern "C" extern void* __vt__16J2DAnmTexPattern[4];
+extern "C" extern void* __vt__19J2DAnmTextureSRTKey[4];
+extern "C" extern void* __vt__17J2DAnmVtxColorKey[5];
+extern "C" extern void* __vt__18J2DAnmVtxColorFull[5];
+extern "C" extern void* __vt__14J2DAnmColorKey[5];
+extern "C" extern void* __vt__15J2DAnmColorFull[5];
+extern "C" extern void* __vt__11J2DAnmColor[5];
+extern "C" extern void* __vt__18J2DAnmTransformKey[6];
+extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 
-extern "C" void getTransform__19J2DAnmTransformFullCFUsP16J3DTransformInfo(); // 1
-extern "C" void calcTransform__18J2DAnmTransformKeyCFfUsP16J3DTransformInfo(); // 1
-extern "C" void searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen(); // 1
-extern "C" void getColor__15J2DAnmColorFullCFUsP8_GXColor(); // 1
-extern "C" void getColor__14J2DAnmColorKeyCFUsP8_GXColor(); // 1
-extern "C" void getColor__18J2DAnmVtxColorFullCFUcUsP8_GXColor(); // 1
-extern "C" void getColor__17J2DAnmVtxColorKeyCFUcUsP8_GXColor(); // 1
-extern "C" void calcTransform__19J2DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo(); // 1
-extern "C" void searchUpdateMaterialID__19J2DAnmTextureSRTKeyFP9J2DScreen(); // 1
-extern "C" void searchUpdateMaterialID__16J2DAnmTexPatternFP9J2DScreen(); // 1
-extern "C" void getTexNo__16J2DAnmTexPatternCFUsPUs(); // 1
-extern "C" void getResTIMG__16J2DAnmTexPatternCFUs(); // 1
-extern "C" void getPalette__16J2DAnmTexPatternCFUs(); // 1
-extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc(); // 1
-extern "C" void getTevColorReg__15J2DAnmTevRegKeyCFUsP11_GXColorS10(); // 1
-extern "C" void getTevKonstReg__15J2DAnmTevRegKeyCFUsP8_GXColor(); // 1
-extern "C" void searchUpdateMaterialID__15J2DAnmTevRegKeyFP9J2DScreen(); // 1
-extern "C" static void func_8030C77C(); // 1
-extern "C" static void func_8030C9B0(); // 1
-extern "C" void __ct__Q216J2DAnmTexPattern27J2DAnmTexPatternTIMGPointerFv(); // 1
-extern "C" void __dt__Q216J2DAnmTexPattern27J2DAnmTexPatternTIMGPointerFv(); // 1
-extern "C" void __dt__16J2DAnmTexPatternFv(); // 1
-extern "C" void __dt__17J2DAnmVtxColorKeyFv(); // 1
-extern "C" void __dt__18J2DAnmVtxColorFullFv(); // 1
-extern "C" void __dt__15J2DAnmColorFullFv(); // 1
-extern "C" void getTransform__18J2DAnmTransformKeyCFUsP16J3DTransformInfo(); // 1
-extern "C" void __dt__19J2DAnmTransformFullFv(); // 1
+extern "C" void getTransform__19J2DAnmTransformFullCFUsP16J3DTransformInfo();
+extern "C" void calcTransform__18J2DAnmTransformKeyCFfUsP16J3DTransformInfo();
+extern "C" void searchUpdateMaterialID__11J2DAnmColorFP9J2DScreen();
+extern "C" void getColor__15J2DAnmColorFullCFUsP8_GXColor();
+extern "C" void getColor__14J2DAnmColorKeyCFUsP8_GXColor();
+extern "C" void getColor__18J2DAnmVtxColorFullCFUcUsP8_GXColor();
+extern "C" void getColor__17J2DAnmVtxColorKeyCFUcUsP8_GXColor();
+extern "C" void calcTransform__19J2DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+extern "C" void searchUpdateMaterialID__19J2DAnmTextureSRTKeyFP9J2DScreen();
+extern "C" void searchUpdateMaterialID__16J2DAnmTexPatternFP9J2DScreen();
+extern "C" void getTexNo__16J2DAnmTexPatternCFUsPUs();
+extern "C" void getResTIMG__16J2DAnmTexPatternCFUs();
+extern "C" void getPalette__16J2DAnmTexPatternCFUs();
+extern "C" void getVisibility__20J2DAnmVisibilityFullCFUsPUc();
+extern "C" void getTevColorReg__15J2DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void getTevKonstReg__15J2DAnmTevRegKeyCFUsP8_GXColor();
+extern "C" void searchUpdateMaterialID__15J2DAnmTevRegKeyFP9J2DScreen();
+extern "C" static void func_8030C77C();
+extern "C" static void func_8030C9B0();
+extern "C" void __ct__Q216J2DAnmTexPattern27J2DAnmTexPatternTIMGPointerFv();
+extern "C" void __dt__Q216J2DAnmTexPattern27J2DAnmTexPatternTIMGPointerFv();
+extern "C" void __dt__16J2DAnmTexPatternFv();
+extern "C" void __dt__17J2DAnmVtxColorKeyFv();
+extern "C" void __dt__18J2DAnmVtxColorFullFv();
+extern "C" void __dt__15J2DAnmColorFullFv();
+extern "C" void getTransform__18J2DAnmTransformKeyCFUsP16J3DTransformInfo();
+extern "C" void __dt__19J2DAnmTransformFullFv();
 extern "C" extern void* __vt__15J2DAnmTevRegKey[4];
 extern "C" extern void* __vt__16J2DAnmTexPattern[4];
 extern "C" extern void* __vt__19J2DAnmTextureSRTKey[4];
@@ -183,35 +193,40 @@ extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+extern "C" extern void* __vt__10J2DAnmBase[4];
+extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
+extern "C" extern void* __vt__10JUTNameTab[3];
+extern "C" extern void* __vt__14J2DAnmVtxColor[5];
+extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 
-extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
-extern "C" void __dt__15J2DAnmTevRegKeyFv(); // 1
-extern "C" void __dt__19J2DAnmTextureSRTKeyFv(); // 1
-extern "C" void __dt__11J2DAnmColorFv(); // 1
-extern "C" void __dt__18J2DAnmTransformKeyFv(); // 1
-extern "C" void __dt__14J2DAnmColorKeyFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void getColor__11J2DAnmColorCFUsP8_GXColor(); // 1
-extern "C" void get__13J2DDataManageFPCc(); // 1
-extern "C" void getResReference__15J2DResReferenceCFUs(); // 1
-extern "C" void getName__15J2DResReferenceCFUs(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
+extern "C" void __dt__15J2DAnmTevRegKeyFv();
+extern "C" void __dt__19J2DAnmTextureSRTKeyFv();
+extern "C" void __dt__11J2DAnmColorFv();
+extern "C" void __dt__18J2DAnmTransformKeyFv();
+extern "C" void __dt__14J2DAnmColorKeyFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void getColor__11J2DAnmColorCFUsP8_GXColor();
+extern "C" void get__13J2DDataManageFPCc();
+extern "C" void getResReference__15J2DResReferenceCFUs();
+extern "C" void getName__15J2DResReferenceCFUs();
+extern "C" void __destroy_new_array();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__10J2DAnmBase[4];
 extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
 extern "C" extern void* __vt__10JUTNameTab[3];

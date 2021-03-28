@@ -24,6 +24,9 @@ struct cM3dGAab {
 struct cCcD_GStts {
 };
 
+struct cCcD_GObjInf {
+};
+
 struct cCcD_Obj {
 	/* 80263A48 */ void GetAc();
 };
@@ -33,9 +36,6 @@ struct cCcD_Stts {
 	/* 8026395C */ void ClrCcMove();
 	/* 80263970 */ void PlusDmg(int);
 	/* 80263984 */ void GetWeightF() const;
-};
-
-struct cCcD_GObjInf {
 };
 
 struct cCcS {
@@ -93,33 +93,35 @@ struct cCcD_DivideArea {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__4cCcS[12];
+extern "C" extern f32 lit_2762[1 + 1 /* padding */];
 
-extern "C" void __ct__4cCcSFv(); // 1
-extern "C" void Ct__4cCcSFv(); // 1
-extern "C" void Dt__4cCcSFv(); // 1
-extern "C" void GetWt__4cCcSCFUc(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void ClrCoHitInf__4cCcSFv(); // 1
-extern "C" void ClrTgHitInf__4cCcSFv(); // 1
-extern "C" void ClrAtHitInf__4cCcSFv(); // 1
-extern "C" void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void ChkAtTg__4cCcSFv(); // 1
-extern "C" void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void ChkCo__4cCcSFv(); // 1
-extern "C" void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts(); // 1
-extern "C" void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz(); // 1
-extern "C" void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
-extern "C" void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
-extern "C" void CalcArea__4cCcSFv(); // 1
-extern "C" void Move__4cCcSFv(); // 1
-extern "C" void DrawClear__4cCcSFv(); // 1
-extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz(); // 1
-extern "C" bool ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" bool ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" bool ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void MoveAfterCheck__4cCcSFv(); // 1
+extern "C" void __ct__4cCcSFv();
+extern "C" void Ct__4cCcSFv();
+extern "C" void Dt__4cCcSFv();
+extern "C" void GetWt__4cCcSCFUc();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void ClrCoHitInf__4cCcSFv();
+extern "C" void ClrTgHitInf__4cCcSFv();
+extern "C" void ClrAtHitInf__4cCcSFv();
+extern "C" void ChkNoHitAtTg__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void ChkAtTg__4cCcSFv();
+extern "C" void ChkNoHitCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void ChkCo__4cCcSFv();
+extern "C" void CalcTgPlusDmg__4cCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts();
+extern "C" void SetAtTgCommonHitInf__4cCcSFP8cCcD_ObjP8cCcD_ObjP4cXyz();
+extern "C" void SetCoCommonHitInf__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
+extern "C" void SetPosCorrect__4cCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
+extern "C" void CalcArea__4cCcSFv();
+extern "C" void Move__4cCcSFv();
+extern "C" void DrawClear__4cCcSFv();
+extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void SetCoGObjInf__4cCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+extern "C" void SetAtTgGObjInf__4cCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz();
+extern "C" bool ChkNoHitGAtTg__4cCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts();
+extern "C" bool ChkAtTgHitAfterCross__4cCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+extern "C" bool ChkNoHitGCo__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void MoveAfterCheck__4cCcSFv();
 extern "C" extern void* __vt__4cCcS[12];
 extern "C" extern f32 lit_2762[1 + 1 /* padding */];
 
@@ -127,40 +129,45 @@ extern "C" extern f32 lit_2762[1 + 1 /* padding */];
 // External References:
 // 
 
+extern "C" extern void* __vt__15cCcD_DivideArea[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80451158[8];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __dt__4cCcSFv(); // 1
-extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo(); // 1
-extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab(); // 1
-extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl(); // 1
-extern "C" void PlusCcMove__9cCcD_SttsFfff(); // 1
-extern "C" void ClrCcMove__9cCcD_SttsFv(); // 1
-extern "C" void PlusDmg__9cCcD_SttsFi(); // 1
-extern "C" void GetWeightF__9cCcD_SttsCFv(); // 1
-extern "C" void GetAc__8cCcD_ObjFv(); // 1
-extern "C" void SetHit__10cCcD_ObjAtFP8cCcD_Obj(); // 1
-extern "C" void SetHit__10cCcD_ObjTgFP8cCcD_Obj(); // 1
-extern "C" void SetHit__10cCcD_ObjCoFP8cCcD_Obj(); // 1
-extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
-extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab(); // 1
-extern "C" void CalcCenter__8cM3dGAabCFP4cXyz(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__4cCcSFv();
+extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
+extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
+extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
+extern "C" void PlusCcMove__9cCcD_SttsFfff();
+extern "C" void ClrCcMove__9cCcD_SttsFv();
+extern "C" void PlusDmg__9cCcD_SttsFi();
+extern "C" void GetWeightF__9cCcD_SttsCFv();
+extern "C" void GetAc__8cCcD_ObjFv();
+extern "C" void SetHit__10cCcD_ObjAtFP8cCcD_Obj();
+extern "C" void SetHit__10cCcD_ObjTgFP8cCcD_Obj();
+extern "C" void SetHit__10cCcD_ObjCoFP8cCcD_Obj();
+extern "C" void ClearForMinMax__8cM3dGAabFv();
+extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+extern "C" void CalcCenter__8cM3dGAabCFP4cXyz();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECMag();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__15cCcD_DivideArea[3];
 extern "C" extern void* __vt__8cM3dGAab[3];
 extern "C" extern u32 __float_nan;

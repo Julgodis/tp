@@ -26,25 +26,26 @@ struct JKRHeap {
 // 
 
 
-extern "C" void __ct__12JUTGraphFifoFUl(); // 1
-extern "C" void __dt__12JUTGraphFifoFv(); // 1
+extern "C" void __ct__12JUTGraphFifoFUl();
+extern "C" void __dt__12JUTGraphFifoFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void GXInit(); // 1
-extern "C" void GXInitFifoBase(); // 1
-extern "C" void GXInitFifoPtrs(); // 1
-extern "C" void GXSaveCPUFifo(); // 1
-extern "C" void GXGetGPStatus(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void GXInit();
+extern "C" void GXInitFifoBase();
+extern "C" void GXInitFifoPtrs();
+extern "C" void GXSaveCPUFifo();
+extern "C" void GXGetGPStatus();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

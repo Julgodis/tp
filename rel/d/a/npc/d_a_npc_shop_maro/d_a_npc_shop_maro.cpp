@@ -178,117 +178,125 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daNpc_shopMaro_Create(void*); // 2
-static void daNpc_shopMaro_Delete(void*); // 2
-static bool daNpc_shopMaro_Execute(void*); // 2
-static bool daNpc_shopMaro_Draw(void*); // 2
-static bool daNpc_shopMaro_IsDelete(void*); // 2
+static void daNpc_shopMaro_Create(void*);
+static void daNpc_shopMaro_Delete(void*);
+static bool daNpc_shopMaro_Execute(void*);
+static bool daNpc_shopMaro_Draw(void*);
+static bool daNpc_shopMaro_IsDelete(void*);
+extern "C" extern void* g_profile_NPC_SMARO[12];
 
-extern "C" static void daNpc_shopMaro_Create__FPv(); // 1
-extern "C" static void daNpc_shopMaro_Delete__FPv(); // 1
-extern "C" static bool daNpc_shopMaro_Execute__FPv(); // 1
-extern "C" static bool daNpc_shopMaro_Draw__FPv(); // 1
-extern "C" static bool daNpc_shopMaro_IsDelete__FPv(); // 1
-extern "C" void create__16daNpc_shopMaro_cFv(); // 1
-extern "C" void __ct__16daNpc_shopMaro_cFv(); // 1
-extern "C" void __dt__16daNpc_shopMaro_cFv(); // 1
-extern "C" void __ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" bool getResName2__13dShopSystem_cFi(); // 1
-extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void __dt__15daNpcT_JntAnm_cFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void ctrlSubFaceMotion__8daNpcT_cFi(); // 1
-extern "C" bool checkChangeJoint__8daNpcT_cFi(); // 1
-extern "C" bool checkRemoveJoint__8daNpcT_cFi(); // 1
-extern "C" s32 getBackboneJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getNeckJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getHeadJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getFootLJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getFootRJointNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballMaterialNo__8daNpcT_cFv(); // 1
-extern "C" void afterJntAnm__8daNpcT_cFi(); // 1
-extern "C" void setParam__8daNpcT_cFv(); // 1
-extern "C" bool checkChangeEvt__8daNpcT_cFv(); // 1
-extern "C" bool evtTalk__8daNpcT_cFv(); // 1
-extern "C" bool evtEndProc__8daNpcT_cFv(); // 1
-extern "C" bool evtCutProc__8daNpcT_cFv(); // 1
-extern "C" void setAfterTalkMotion__8daNpcT_cFv(); // 1
-extern "C" void action__8daNpcT_cFv(); // 1
-extern "C" void beforeMove__8daNpcT_cFv(); // 1
-extern "C" void afterMoved__8daNpcT_cFv(); // 1
-extern "C" void setAttnPos__8daNpcT_cFv(); // 1
-extern "C" void setCollision__8daNpcT_cFv(); // 1
-extern "C" bool chkXYItems__8daNpcT_cFv(); // 1
-extern "C" void decTmr__8daNpcT_cFv(); // 1
-extern "C" bool drawDbgInfo__8daNpcT_cFv(); // 1
-extern "C" void drawOtherMdl__8daNpcT_cFv(); // 1
-extern "C" void drawGhost__8daNpcT_cFv(); // 1
-extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c(); // 1
-extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c(); // 1
-extern "C" void changeAnm__8daNpcT_cFPiPi(); // 1
-extern "C" void changeBck__8daNpcT_cFPiPi(); // 1
-extern "C" void changeBtp__8daNpcT_cFPiPi(); // 1
-extern "C" void changeBtk__8daNpcT_cFPiPi(); // 1
-extern "C" static void func_80AEC900(); // 1
-extern "C" static void func_80AEC908(); // 1
+extern "C" static void daNpc_shopMaro_Create__FPv();
+extern "C" static void daNpc_shopMaro_Delete__FPv();
+extern "C" static bool daNpc_shopMaro_Execute__FPv();
+extern "C" static bool daNpc_shopMaro_Draw__FPv();
+extern "C" static bool daNpc_shopMaro_IsDelete__FPv();
+extern "C" void create__16daNpc_shopMaro_cFv();
+extern "C" void __ct__16daNpc_shopMaro_cFv();
+extern "C" void __dt__16daNpc_shopMaro_cFv();
+extern "C" void __ct__13dShopSystem_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __dt__4cXyzFv();
+extern "C" bool getResName2__13dShopSystem_cFi();
+extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci();
+extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__8daNpcT_cFPC26daNpcT_faceMotionAnmData_cPC22daNpcT_motionAnmData_cPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPCQ222daNpcT_MotionSeqMngr_c18sequenceStepData_ciPC16daNpcT_evtData_cPPc();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__15daNpcT_JntAnm_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" bool checkChangeJoint__8daNpcT_cFi();
+extern "C" bool checkRemoveJoint__8daNpcT_cFi();
+extern "C" s32 getBackboneJointNo__8daNpcT_cFv();
+extern "C" s32 getNeckJointNo__8daNpcT_cFv();
+extern "C" s32 getHeadJointNo__8daNpcT_cFv();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballMaterialNo__8daNpcT_cFv();
+extern "C" void afterJntAnm__8daNpcT_cFi();
+extern "C" void setParam__8daNpcT_cFv();
+extern "C" bool checkChangeEvt__8daNpcT_cFv();
+extern "C" bool evtTalk__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" bool evtCutProc__8daNpcT_cFv();
+extern "C" void setAfterTalkMotion__8daNpcT_cFv();
+extern "C" void action__8daNpcT_cFv();
+extern "C" void beforeMove__8daNpcT_cFv();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" void setAttnPos__8daNpcT_cFv();
+extern "C" void setCollision__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" bool drawDbgInfo__8daNpcT_cFv();
+extern "C" void drawOtherMdl__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" static void func_80AEC900();
+extern "C" static void func_80AEC908();
 extern "C" extern void* g_profile_NPC_SMARO[12];
 
 // 
 // External References:
 // 
 
-void cM_rndF(f32); // 2
-void operator delete(void*); // 2
+void cM_rndF(f32);
+void operator delete(void*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__8daNpcT_c[49];
+extern "C" extern void* __vt__13dShopSystem_c[52 + 1 /* padding */];
+extern "C" extern void* __vt__9cCcD_Stts[8];
 
-SECTION_INIT void memset(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __ct__11dBgS_LinChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void initialize__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void initialize__22daNpcT_MotionSeqMngr_cFv(); // 1
-extern "C" void initialize__15daNpcT_JntAnm_cFv(); // 1
-extern "C" void ctrlBtk__8daNpcT_cFv(); // 1
-extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel(); // 1
-extern "C" void evtProc__8daNpcT_cFv(); // 1
-extern "C" void setFootPos__8daNpcT_cFv(); // 1
-extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff(); // 1
-extern "C" bool checkCullDraw__8daNpcT_cFv(); // 1
-extern "C" void twilight__8daNpcT_cFv(); // 1
-extern "C" void evtOrder__8daNpcT_cFv(); // 1
-extern "C" void clrParam__8daNpcT_cFv(); // 1
-extern "C" void setMotionAnm__8daNpcT_cFifi(); // 1
-extern "C" void __ct__15dShopItemCtrl_cFv(); // 1
-extern "C" void initShopSystem__13dShopSystem_cFv(); // 1
-extern "C" void __dt__13dShopSystem_cFv(); // 1
-extern "C" void deleteObject__13dShopSystem_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _restgpr_22(); // 1
+SECTION_INIT void memset();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __ct__11dBgS_LinChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void initialize__18daNpcT_ActorMngr_cFv();
+extern "C" void initialize__22daNpcT_MotionSeqMngr_cFv();
+extern "C" void initialize__15daNpcT_JntAnm_cFv();
+extern "C" void ctrlBtk__8daNpcT_cFv();
+extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel();
+extern "C" void evtProc__8daNpcT_cFv();
+extern "C" void setFootPos__8daNpcT_cFv();
+extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff();
+extern "C" bool checkCullDraw__8daNpcT_cFv();
+extern "C" void twilight__8daNpcT_cFv();
+extern "C" void evtOrder__8daNpcT_cFv();
+extern "C" void clrParam__8daNpcT_cFv();
+extern "C" void setMotionAnm__8daNpcT_cFifi();
+extern "C" void __ct__15dShopItemCtrl_cFv();
+extern "C" void initShopSystem__13dShopSystem_cFv();
+extern "C" void __dt__13dShopSystem_cFv();
+extern "C" void deleteObject__13dShopSystem_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void cM_rndF__Ff();
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _restgpr_22();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

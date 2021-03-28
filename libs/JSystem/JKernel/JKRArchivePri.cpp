@@ -51,42 +51,46 @@ struct JKRArchive {
 // Forward References:
 // 
 
+extern "C" extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
-extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode(); // 1
-extern "C" void __dt__10JKRArchiveFv(); // 1
-extern "C" void isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs(); // 1
-extern "C" void findResType__10JKRArchiveCFUl(); // 1
-extern "C" void findDirectory__10JKRArchiveCFPCcUl(); // 1
-extern "C" void findTypeResource__10JKRArchiveCFUlPCc(); // 1
-extern "C" void findFsResource__10JKRArchiveCFPCcUl(); // 1
-extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
-extern "C" void findNameResource__10JKRArchiveCFPCc(); // 1
-extern "C" void findPtrResource__10JKRArchiveCFPCv(); // 1
-extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
-extern "C" void store__Q210JKRArchive8CArcNameFPCc(); // 1
-extern "C" void store__Q210JKRArchive8CArcNameFPCcc(); // 1
-extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl(); // 1
-extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry(); // 1
+extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
+extern "C" void __dt__10JKRArchiveFv();
+extern "C" void isSameName__10JKRArchiveCFRQ210JKRArchive8CArcNameUlUs();
+extern "C" void findResType__10JKRArchiveCFUl();
+extern "C" void findDirectory__10JKRArchiveCFPCcUl();
+extern "C" void findTypeResource__10JKRArchiveCFUlPCc();
+extern "C" void findFsResource__10JKRArchiveCFPCcUl();
+extern "C" void findIdxResource__10JKRArchiveCFUl();
+extern "C" void findNameResource__10JKRArchiveCFPCc();
+extern "C" void findPtrResource__10JKRArchiveCFPCv();
+extern "C" void findIdResource__10JKRArchiveCFUs();
+extern "C" void store__Q210JKRArchive8CArcNameFPCc();
+extern "C" void store__Q210JKRArchive8CArcNameFPCcc();
+extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
 extern "C" extern u8 sCurrentDirID__10JKRArchive[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__10JKRArchive[20];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
-extern "C" void findFromRoot__7JKRHeapFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__13JKRFileLoaderFv(); // 1
-extern "C" void __dt__13JKRFileLoaderFv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void tolower(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void __ct__13JKRFileLoaderFv();
+extern "C" void __dt__13JKRFileLoaderFv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void tolower();
+extern "C" void strcmp();
 extern "C" extern void* __vt__10JKRArchive[20];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];

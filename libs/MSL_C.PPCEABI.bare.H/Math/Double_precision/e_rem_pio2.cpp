@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void __ieee754_rem_pio2(); // 1
+extern "C" void __ieee754_rem_pio2();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __kernel_rem_pio2(); // 1
+extern "C" void __kernel_rem_pio2();
 
 // 
 // Declarations:

@@ -12,15 +12,15 @@
 // 
 
 
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void C_MTXOrtho(); // 1
+extern "C" void C_MTXPerspective();
+extern "C" void C_MTXOrtho();
 
 // 
 // External References:
 // 
 
 
-extern "C" void tanf(); // 1
+extern "C" void tanf();
 
 // 
 // Declarations:

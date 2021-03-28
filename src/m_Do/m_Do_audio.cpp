@@ -54,18 +54,6 @@ struct Z2MultiSeMgr {
 	/* 802AEB34 */ ~Z2MultiSeMgr();
 };
 
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JKRSolidHeap {
-	/* 802D0BF4 */ void adjustSize();
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -73,6 +61,18 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JKRSolidHeap {
+	/* 802D0BF4 */ void adjustSize();
+};
+
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
 };
 
 struct Z2AudioMgr {
@@ -123,30 +123,35 @@ struct JAISeCategoryMgr {
 // Forward References:
 // 
 
-static void mDoAud_Create(); // 2
-void mDoAud_Execute(); // 2
-void mDoAud_setSceneName(char const*, s32, s32); // 2
-void mDoAud_load1stDynamicWave(); // 2
-void mDoAud_setFadeOutStart(u8); // 2
-void mDoAud_setFadeInStart(u8); // 2
-void mDoAud_resetProcess(); // 2
-void mDoAud_resetRecover(); // 2
+static void mDoAud_Create();
+void mDoAud_Execute();
+void mDoAud_setSceneName(char const*, s32, s32);
+void mDoAud_load1stDynamicWave();
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
+void mDoAud_resetProcess();
+void mDoAud_resetRecover();
+extern "C" extern char const* const m_Do_m_Do_audio__stringBase0;
+extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
+extern "C" extern u8 lit_3620[12];
+extern "C" extern u8 struct_80450BB8[4];
+extern "C" extern u8 g_mDoAud_audioHeap[4];
 
-extern "C" void reset__17mDoAud_zelAudio_cFv(); // 1
-extern "C" static void mDoAud_Create__Fv(); // 1
-extern "C" void mDoAud_Execute__Fv(); // 1
-extern "C" void mDoAud_setSceneName__FPCcll(); // 1
-extern "C" void mDoAud_load1stDynamicWave__Fv(); // 1
-extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
-extern "C" void mDoAud_setFadeInStart__FUc(); // 1
-extern "C" void mDoAud_resetProcess__Fv(); // 1
-extern "C" void mDoAud_resetRecover__Fv(); // 1
-extern "C" void __sinit_m_Do_audio_cpp(); // 1
-extern "C" void __dt__17mDoAud_zelAudio_cFv(); // 1
-extern "C" void __dt__10Z2AudioMgrFv(); // 1
-extern "C" void __dt__14JAISoundHandleFv(); // 1
-extern "C" void __dt__12Z2MultiSeObjFv(); // 1
-extern "C" void __dt__16JAISeCategoryMgrFv(); // 1
+extern "C" void reset__17mDoAud_zelAudio_cFv();
+extern "C" static void mDoAud_Create__Fv();
+extern "C" void mDoAud_Execute__Fv();
+extern "C" void mDoAud_setSceneName__FPCcll();
+extern "C" void mDoAud_load1stDynamicWave__Fv();
+extern "C" void mDoAud_setFadeOutStart__FUc();
+extern "C" void mDoAud_setFadeInStart__FUc();
+extern "C" void mDoAud_resetProcess__Fv();
+extern "C" void mDoAud_resetRecover__Fv();
+extern "C" void __sinit_m_Do_audio_cpp();
+extern "C" void __dt__17mDoAud_zelAudio_cFv();
+extern "C" void __dt__10Z2AudioMgrFv();
+extern "C" void __dt__14JAISoundHandleFv();
+extern "C" void __dt__12Z2MultiSeObjFv();
+extern "C" void __dt__16JAISeCategoryMgrFv();
 extern "C" extern char const* const m_Do_m_Do_audio__stringBase0;
 extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
 extern "C" extern u8 lit_3620[12];
@@ -157,42 +162,69 @@ extern "C" extern u8 g_mDoAud_audioHeap[4];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__8JAISeMgr[5];
+extern "C" extern void* __vt__16JAISeCategoryMgr[5];
+extern "C" extern void* __vt__9JAISeqMgr[5 + 1 /* padding */];
+extern "C" extern void* __vt__10Z2SoundMgr[3 + 1 /* padding */];
+extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
+extern "C" extern void* __vt__11Z2SoundInfo[20];
+extern "C" extern void* __vt__15Z2SpeechStarter[5];
+extern "C" extern void* __vt__10Z2AudioMgr[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B50[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B64[4];
+extern "C" extern u8 data_80450B68[4];
+extern "C" extern u8 data_80450B6C[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450C80[8];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1
-extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
-extern "C" void __dt__15JASAudioReseterFv(); // 1
-extern "C" void __dt__14JAISeqDataUserFv(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void __dt__12JAISoundInfoFv(); // 1
-extern "C" void __dt__15JAISoundStarterFv(); // 1
-extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
-extern "C" void __dt__12Z2MultiSeMgrFv(); // 1
-extern "C" void setEventBit__11Z2StatusMgrFPv(); // 1
-extern "C" void setFadeOutStart__10Z2SceneMgrFUc(); // 1
-extern "C" void setFadeInStart__10Z2SceneMgrFUc(); // 1
-extern "C" void setSceneName__10Z2SceneMgrFPcll(); // 1
-extern "C" void load1stDynamicWave__10Z2SceneMgrFv(); // 1
-extern "C" void __dt__10Z2AudienceFv(); // 1
-extern "C" void __ct__10Z2AudioMgrFv(); // 1
-extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
-extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
-extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
-extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
-extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
-extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
-extern "C" void func_802CDB1C(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void changeGroupID__7JKRHeapFUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSReport_Error();
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+extern "C" void __dt__15JASAudioReseterFv();
+extern "C" void __dt__14JAISeqDataUserFv();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void __dt__12JAISoundInfoFv();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void __dt__12Z2MultiSeMgrFv();
+extern "C" void setEventBit__11Z2StatusMgrFPv();
+extern "C" void setFadeOutStart__10Z2SceneMgrFUc();
+extern "C" void setFadeInStart__10Z2SceneMgrFUc();
+extern "C" void setSceneName__10Z2SceneMgrFPcll();
+extern "C" void load1stDynamicWave__10Z2SceneMgrFv();
+extern "C" void __dt__10Z2AudienceFv();
+extern "C" void __ct__10Z2AudioMgrFv();
+extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
+extern "C" void setOutputMode__10Z2AudioMgrFUl();
+extern "C" void gframeProcess__10Z2AudioMgrFv();
+extern "C" void resetProcess__10Z2AudioMgrFUlb();
+extern "C" void resetRecover__10Z2AudioMgrFv();
+extern "C" void hasReset__10Z2AudioMgrCFv();
+extern "C" void func_802CDB1C();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void changeGroupID__7JKRHeapFUc();
+extern "C" void __dl__FPv();
+extern "C" void adjustSize__12JKRSolidHeapFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void OSGetSoundMode();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__8JAISeMgr[5];
 extern "C" extern void* __vt__16JAISeCategoryMgr[5];
 extern "C" extern void* __vt__9JAISeqMgr[5 + 1 /* padding */];

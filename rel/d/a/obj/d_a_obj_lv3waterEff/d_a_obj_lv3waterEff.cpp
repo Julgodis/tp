@@ -25,6 +25,9 @@ struct daObjWaterEff_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -36,17 +39,14 @@ struct cXyz {
 	/* 80C5C6AC */ cXyz();
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -57,36 +57,41 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjWaterEff_Execute(daObjWaterEff_c*); // 2
-static void daObjWaterEff_Delete(daObjWaterEff_c*); // 2
-static void daObjWaterEff_Create(fopAc_ac_c*); // 2
+static void daObjWaterEff_Execute(daObjWaterEff_c*);
+static void daObjWaterEff_Delete(daObjWaterEff_c*);
+static void daObjWaterEff_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Obj_WaterEff[12];
 
-extern "C" void Create__15daObjWaterEff_cFv(); // 1
-extern "C" void create__15daObjWaterEff_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void execute__15daObjWaterEff_cFv(); // 1
-extern "C" void _delete__15daObjWaterEff_cFv(); // 1
-extern "C" static void daObjWaterEff_Execute__FP15daObjWaterEff_c(); // 1
-extern "C" static void daObjWaterEff_Delete__FP15daObjWaterEff_c(); // 1
-extern "C" static void daObjWaterEff_Create__FP10fopAc_ac_c(); // 1
+extern "C" void Create__15daObjWaterEff_cFv();
+extern "C" void create__15daObjWaterEff_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__15daObjWaterEff_cFv();
+extern "C" void _delete__15daObjWaterEff_cFv();
+extern "C" static void daObjWaterEff_Execute__FP15daObjWaterEff_c();
+extern "C" static void daObjWaterEff_Delete__FP15daObjWaterEff_c();
+extern "C" static void daObjWaterEff_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_Obj_WaterEff[12];
 
 // 
 // External References:
 // 
 
-void dKy_camera_water_in_status_check(); // 2
-void operator delete(void*); // 2
+void dKy_camera_water_in_status_check();
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKy_camera_water_in_status_check__Fv(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_25(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKy_camera_water_in_status_check__Fv();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void __construct_array();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_25();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

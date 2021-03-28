@@ -63,40 +63,44 @@ struct JSUPtrList {
 // 
 
 
-extern "C" void __ct__13Z2SoundObjMgrFv(); // 1
-extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
-extern "C" void searchEnemy__13Z2SoundObjMgrFv(); // 1
-extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc(); // 1
-extern "C" void func_802C0074(); // 1
-extern "C" void setBattleInit__13Z2SoundObjMgrFv(); // 1
-extern "C" void checkBattleFinish__13Z2SoundObjMgrFv(); // 1
-extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv(); // 1
-extern "C" void func_802C0190(); // 1
-extern "C" void isTwilightBattle__13Z2SoundObjMgrFv(); // 1
-extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
+extern "C" void __ct__13Z2SoundObjMgrFv();
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" void searchEnemy__13Z2SoundObjMgrFv();
+extern "C" void setGhostEnemyState__13Z2SoundObjMgrFUc();
+extern "C" void func_802C0074();
+extern "C" void setBattleInit__13Z2SoundObjMgrFv();
+extern "C" void checkBattleFinish__13Z2SoundObjMgrFv();
+extern "C" void deleteEnemyAll__13Z2SoundObjMgrFv();
+extern "C" void func_802C0190();
+extern "C" void isTwilightBattle__13Z2SoundObjMgrFv();
+extern "C" void __sinit_Z2SoundObjMgr_cpp();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void changeSubBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void setBattleSearched__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleGhostMute__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleDistState__8Z2SeqMgrFUc(); // 1
-extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" void setBattleSearched__8Z2SeqMgrFb();
+extern "C" void setBattleGhostMute__8Z2SeqMgrFb();
+extern "C" void setBattleDistState__8Z2SeqMgrFUc();
+extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECMag();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_27();
+extern "C" void strcmp();
 extern "C" extern u8 data_80450B48[4];
 extern "C" extern u8 data_80450B80[4];
 extern "C" extern u8 data_80450B84[4];

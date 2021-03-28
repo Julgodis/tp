@@ -102,36 +102,38 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daShopItem_Create(void*); // 2
-static void daShopItem_Delete(void*); // 2
-static void daShopItem_Draw(void*); // 2
-static void daShopItem_Execute(void*); // 2
-static bool daShopItem_IsDelete(void*); // 2
+static void daShopItem_Create(void*);
+static void daShopItem_Delete(void*);
+static void daShopItem_Draw(void*);
+static void daShopItem_Execute(void*);
+static bool daShopItem_IsDelete(void*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_ShopItem[12];
 
-extern "C" void getShopArcname__12daShopItem_cFv(); // 1
-extern "C" void getHeapSize__12daShopItem_cFv(); // 1
-extern "C" void CreateInit__12daShopItem_cFv(); // 1
-extern "C" void set_mtx__12daShopItem_cFv(); // 1
-extern "C" void _execute__12daShopItem_cFv(); // 1
-extern "C" void _draw__12daShopItem_cFv(); // 1
-extern "C" void setListStart__12daShopItem_cFv(); // 1
-extern "C" void setShadow__12daShopItem_cFv(); // 1
-extern "C" void chkFlag__12daShopItem_cFi(); // 1
-extern "C" void getTevFrm__12daShopItem_cFv(); // 1
-extern "C" void getBtpFrm__12daShopItem_cFv(); // 1
-extern "C" void getShadowSize__12daShopItem_cFv(); // 1
-extern "C" void getCollisionH__12daShopItem_cFv(); // 1
-extern "C" void getCollisionR__12daShopItem_cFv(); // 1
-extern "C" static void daShopItem_Create__FPv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daShopItem_Delete__FPv(); // 1
-extern "C" static void daShopItem_Draw__FPv(); // 1
-extern "C" static void daShopItem_Execute__FPv(); // 1
-extern "C" static bool daShopItem_IsDelete__FPv(); // 1
-extern "C" static void func_8059F420(); // 1
-extern "C" static void func_8059F428(); // 1
+extern "C" void getShopArcname__12daShopItem_cFv();
+extern "C" void getHeapSize__12daShopItem_cFv();
+extern "C" void CreateInit__12daShopItem_cFv();
+extern "C" void set_mtx__12daShopItem_cFv();
+extern "C" void _execute__12daShopItem_cFv();
+extern "C" void _draw__12daShopItem_cFv();
+extern "C" void setListStart__12daShopItem_cFv();
+extern "C" void setShadow__12daShopItem_cFv();
+extern "C" void chkFlag__12daShopItem_cFi();
+extern "C" void getTevFrm__12daShopItem_cFv();
+extern "C" void getBtpFrm__12daShopItem_cFv();
+extern "C" void getShadowSize__12daShopItem_cFv();
+extern "C" void getCollisionH__12daShopItem_cFv();
+extern "C" void getCollisionR__12daShopItem_cFv();
+extern "C" static void daShopItem_Create__FPv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" static void daShopItem_Delete__FPv();
+extern "C" static void daShopItem_Draw__FPv();
+extern "C" static void daShopItem_Execute__FPv();
+extern "C" static bool daShopItem_IsDelete__FPv();
+extern "C" static void func_8059F420();
+extern "C" static void func_8059F428();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_ShopItem[12];
 
@@ -139,49 +141,62 @@ extern "C" extern void* g_profile_ShopItem[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void CheckShopItemCreateHeap(fopAc_ac_c*); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void CheckShopItemCreateHeap(fopAc_ac_c*);
+void operator delete(void*);
+extern "C" extern void* const mData__12daShopItem_c[276];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern f32 mSystemFar__14mDoLib_clipper;
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void show__12daItemBase_cFv(); // 1
-extern "C" void chkDraw__12daItemBase_cFv(); // 1
-extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" bool clothCreate__12daItemBase_cFv(); // 1
-extern "C" bool __CreateHeap__12daItemBase_cFv(); // 1
-extern "C" void DrawBase__12daItemBase_cFv(); // 1
-extern "C" void RotateYBase__12daItemBase_cFv(); // 1
-extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
-extern "C" void setTevStr__12daItemBase_cFv(); // 1
-extern "C" void setShadow__12daItemBase_cFv(); // 1
-extern "C" void animEntry__12daItemBase_cFv(); // 1
-extern "C" void animPlay__12daItemBase_cFffffff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void show__12daItemBase_cFv();
+extern "C" void chkDraw__12daItemBase_cFv();
+extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void DeleteBase__12daItemBase_cFPCc();
+extern "C" bool clothCreate__12daItemBase_cFv();
+extern "C" bool __CreateHeap__12daItemBase_cFv();
+extern "C" void DrawBase__12daItemBase_cFv();
+extern "C" void RotateYBase__12daItemBase_cFv();
+extern "C" void settingBeforeDraw__12daItemBase_cFv();
+extern "C" void setTevStr__12daItemBase_cFv();
+extern "C" void setShadow__12daItemBase_cFv();
+extern "C" void animEntry__12daItemBase_cFv();
+extern "C" void animPlay__12daItemBase_cFffffff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* const mData__12daShopItem_c[276];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

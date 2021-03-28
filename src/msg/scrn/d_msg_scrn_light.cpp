@@ -73,41 +73,44 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const msg_scrn_d_msg_scrn_light__stringBase0;
 
-extern "C" void __ct__19dMsgScrnLight_HIO_cFv(); // 1
-extern "C" void updateColor__19dMsgScrnLight_HIO_cFUc(); // 1
-extern "C" void __ct__15dMsgScrnLight_cFUcUc(); // 1
-extern "C" void __dt__15dMsgScrnLight_cFv(); // 1
-extern "C" void draw__15dMsgScrnLight_cFPffffffUc(); // 1
-extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void drawCommon__15dMsgScrnLight_cFfffff(); // 1
-extern "C" void __dt__19dMsgScrnLight_HIO_cFv(); // 1
-extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
+extern "C" void __ct__19dMsgScrnLight_HIO_cFv();
+extern "C" void updateColor__19dMsgScrnLight_HIO_cFUc();
+extern "C" void __ct__15dMsgScrnLight_cFUcUc();
+extern "C" void __dt__15dMsgScrnLight_cFv();
+extern "C" void draw__15dMsgScrnLight_cFPffffffUc();
+extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void drawCommon__15dMsgScrnLight_cFfffff();
+extern "C" void __dt__19dMsgScrnLight_HIO_cFv();
+extern "C" void __sinit_d_msg_scrn_light_cpp();
 extern "C" extern char const* const msg_scrn_d_msg_scrn_light__stringBase0;
 
 // 
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_804510D8[8];
 
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __register_global_object();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 data_804510D8[8];
 

@@ -65,10 +65,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -98,27 +98,30 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjWCover_Draw(daObjWCover_c*); // 2
-static void daObjWCover_Execute(daObjWCover_c*); // 2
-static void daObjWCover_Delete(daObjWCover_c*); // 2
-static void daObjWCover_Create(fopAc_ac_c*); // 2
+static void daObjWCover_Draw(daObjWCover_c*);
+static void daObjWCover_Execute(daObjWCover_c*);
+static void daObjWCover_Delete(daObjWCover_c*);
+static void daObjWCover_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_WellCover[12];
 
-extern "C" void initBaseMtx__13daObjWCover_cFv(); // 1
-extern "C" void setBaseMtx__13daObjWCover_cFv(); // 1
-extern "C" void Create__13daObjWCover_cFv(); // 1
-extern "C" void CreateHeap__13daObjWCover_cFv(); // 1
-extern "C" void create__13daObjWCover_cFv(); // 1
-extern "C" void Execute__13daObjWCover_cFPPA3_A4_f(); // 1
-extern "C" void action__13daObjWCover_cFv(); // 1
-extern "C" void modeWait__13daObjWCover_cFv(); // 1
-extern "C" void init_modeBreak__13daObjWCover_cFv(); // 1
-extern "C" void modeBreak__13daObjWCover_cFv(); // 1
-extern "C" void Draw__13daObjWCover_cFv(); // 1
-extern "C" void Delete__13daObjWCover_cFv(); // 1
-extern "C" static void daObjWCover_Draw__FP13daObjWCover_c(); // 1
-extern "C" static void daObjWCover_Execute__FP13daObjWCover_c(); // 1
-extern "C" static void daObjWCover_Delete__FP13daObjWCover_c(); // 1
-extern "C" static void daObjWCover_Create__FP10fopAc_ac_c(); // 1
+extern "C" void initBaseMtx__13daObjWCover_cFv();
+extern "C" void setBaseMtx__13daObjWCover_cFv();
+extern "C" void Create__13daObjWCover_cFv();
+extern "C" void CreateHeap__13daObjWCover_cFv();
+extern "C" void create__13daObjWCover_cFv();
+extern "C" void Execute__13daObjWCover_cFPPA3_A4_f();
+extern "C" void action__13daObjWCover_cFv();
+extern "C" void modeWait__13daObjWCover_cFv();
+extern "C" void init_modeBreak__13daObjWCover_cFv();
+extern "C" void modeBreak__13daObjWCover_cFv();
+extern "C" void Draw__13daObjWCover_cFv();
+extern "C" void Delete__13daObjWCover_cFv();
+extern "C" static void daObjWCover_Draw__FP13daObjWCover_c();
+extern "C" static void daObjWCover_Execute__FP13daObjWCover_c();
+extern "C" static void daObjWCover_Delete__FP13daObjWCover_c();
+extern "C" static void daObjWCover_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_WellCover[12];
@@ -127,44 +130,52 @@ extern "C" extern void* g_profile_Obj_WellCover[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80D36B18[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareDistance();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

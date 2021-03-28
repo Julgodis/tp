@@ -76,70 +76,74 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTag_SSDrink_Create(void*); // 2
-static void daTag_SSDrink_Delete(void*); // 2
-static void daTag_SSDrink_Execute(void*); // 2
-static void daTag_SSDrink_Draw(void*); // 2
-static bool daTag_SSDrink_IsDelete(void*); // 2
+static void daTag_SSDrink_Create(void*);
+static void daTag_SSDrink_Delete(void*);
+static void daTag_SSDrink_Execute(void*);
+static void daTag_SSDrink_Draw(void*);
+static bool daTag_SSDrink_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_SSDRINK[12];
 
-extern "C" void create__15daTag_SSDrink_cFv(); // 1
-extern "C" bool Delete__15daTag_SSDrink_cFv(); // 1
-extern "C" void Execute__15daTag_SSDrink_cFv(); // 1
-extern "C" bool Draw__15daTag_SSDrink_cFv(); // 1
-extern "C" void getTypeFromParam__15daTag_SSDrink_cFv(); // 1
-extern "C" void getSwitchFromParam__15daTag_SSDrink_cFv(); // 1
-extern "C" void getFlowNodeNum__15daTag_SSDrink_cFv(); // 1
-extern "C" void getValue__15daTag_SSDrink_cFv(); // 1
-extern "C" void restart__15daTag_SSDrink_cFv(); // 1
-extern "C" void initialize__15daTag_SSDrink_cFv(); // 1
-extern "C" void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
-extern "C" void setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i(); // 1
-extern "C" void setAttnPos__15daTag_SSDrink_cFv(); // 1
-extern "C" void chkEvent__15daTag_SSDrink_cFv(); // 1
-extern "C" void orderEvent__15daTag_SSDrink_cFv(); // 1
-extern "C" void wait__15daTag_SSDrink_cFPv(); // 1
-extern "C" void talk__15daTag_SSDrink_cFPv(); // 1
-extern "C" static void daTag_SSDrink_Create__FPv(); // 1
-extern "C" static void daTag_SSDrink_Delete__FPv(); // 1
-extern "C" static void daTag_SSDrink_Execute__FPv(); // 1
-extern "C" static void daTag_SSDrink_Draw__FPv(); // 1
-extern "C" static bool daTag_SSDrink_IsDelete__FPv(); // 1
-extern "C" void __dt__15daTag_SSDrink_cFv(); // 1
-extern "C" void setSoldOut__14daObj_SSBase_cFv(); // 1
+extern "C" void create__15daTag_SSDrink_cFv();
+extern "C" bool Delete__15daTag_SSDrink_cFv();
+extern "C" void Execute__15daTag_SSDrink_cFv();
+extern "C" bool Draw__15daTag_SSDrink_cFv();
+extern "C" void getTypeFromParam__15daTag_SSDrink_cFv();
+extern "C" void getSwitchFromParam__15daTag_SSDrink_cFv();
+extern "C" void getFlowNodeNum__15daTag_SSDrink_cFv();
+extern "C" void getValue__15daTag_SSDrink_cFv();
+extern "C" void restart__15daTag_SSDrink_cFv();
+extern "C" void initialize__15daTag_SSDrink_cFv();
+extern "C" void checkProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i();
+extern "C" void setProcess__15daTag_SSDrink_cFM15daTag_SSDrink_cFPCvPvPv_i();
+extern "C" void setAttnPos__15daTag_SSDrink_cFv();
+extern "C" void chkEvent__15daTag_SSDrink_cFv();
+extern "C" void orderEvent__15daTag_SSDrink_cFv();
+extern "C" void wait__15daTag_SSDrink_cFPv();
+extern "C" void talk__15daTag_SSDrink_cFPv();
+extern "C" static void daTag_SSDrink_Create__FPv();
+extern "C" static void daTag_SSDrink_Delete__FPv();
+extern "C" static void daTag_SSDrink_Execute__FPv();
+extern "C" static void daTag_SSDrink_Draw__FPv();
+extern "C" static bool daTag_SSDrink_IsDelete__FPv();
+extern "C" void __dt__15daTag_SSDrink_cFv();
+extern "C" void setSoldOut__14daObj_SSBase_cFv();
 extern "C" extern void* g_profile_TAG_SSDRINK[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dMsgObject_addTotalPrice(s16); // 2
-void operator delete(void*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void dMsgObject_addTotalPrice(s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void ChkPresentEnd__16dEvent_manager_cFv(); // 1
-extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
-extern "C" void __ct__14daObj_SSBase_cFv(); // 1
-extern "C" void __dt__14daObj_SSBase_cFv(); // 1
-extern "C" void getProcessID__14daObj_SSBase_cFv(); // 1
-extern "C" void dMsgObject_addTotalPrice__Fs(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void ChkPresentEnd__16dEvent_manager_cFv();
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+extern "C" void __ct__14daObj_SSBase_cFv();
+extern "C" void __dt__14daObj_SSBase_cFv();
+extern "C" void getProcessID__14daObj_SSBase_cFv();
+extern "C" void dMsgObject_addTotalPrice__Fs();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_cmpr();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

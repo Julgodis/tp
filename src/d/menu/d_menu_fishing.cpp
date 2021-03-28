@@ -100,77 +100,84 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_fishing__stringBase0;
 
-extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void __dt__15dMenu_Fishing_cFv(); // 1
-extern "C" void _create__15dMenu_Fishing_cFv(); // 1
-extern "C" void _move__15dMenu_Fishing_cFv(); // 1
-extern "C" void _draw__15dMenu_Fishing_cFv(); // 1
-extern "C" void isSync__15dMenu_Fishing_cFv(); // 1
-extern "C" void init__15dMenu_Fishing_cFv(); // 1
-extern "C" void _open__15dMenu_Fishing_cFv(); // 1
-extern "C" void _close__15dMenu_Fishing_cFv(); // 1
-extern "C" void wait_init__15dMenu_Fishing_cFv(); // 1
-extern "C" void wait_move__15dMenu_Fishing_cFv(); // 1
-extern "C" void screenSetBase__15dMenu_Fishing_cFv(); // 1
-extern "C" void screenSetDoIcon__15dMenu_Fishing_cFv(); // 1
-extern "C" void setAButtonString__15dMenu_Fishing_cFUs(); // 1
-extern "C" void setBButtonString__15dMenu_Fishing_cFUs(); // 1
-extern "C" void getFigure__15dMenu_Fishing_cFi(); // 1
-extern "C" void setFishParam__15dMenu_Fishing_cFiUsUc(); // 1
-extern "C" void setHIO__15dMenu_Fishing_cFb(); // 1
-extern "C" void draw__15dMenu_Fishing_cFv(); // 1
-extern "C" void __sinit_d_menu_fishing_cpp(); // 1
+extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void __dt__15dMenu_Fishing_cFv();
+extern "C" void _create__15dMenu_Fishing_cFv();
+extern "C" void _move__15dMenu_Fishing_cFv();
+extern "C" void _draw__15dMenu_Fishing_cFv();
+extern "C" void isSync__15dMenu_Fishing_cFv();
+extern "C" void init__15dMenu_Fishing_cFv();
+extern "C" void _open__15dMenu_Fishing_cFv();
+extern "C" void _close__15dMenu_Fishing_cFv();
+extern "C" void wait_init__15dMenu_Fishing_cFv();
+extern "C" void wait_move__15dMenu_Fishing_cFv();
+extern "C" void screenSetBase__15dMenu_Fishing_cFv();
+extern "C" void screenSetDoIcon__15dMenu_Fishing_cFv();
+extern "C" void setAButtonString__15dMenu_Fishing_cFUs();
+extern "C" void setBButtonString__15dMenu_Fishing_cFUs();
+extern "C" void getFigure__15dMenu_Fishing_cFi();
+extern "C" void setFishParam__15dMenu_Fishing_cFiUsUc();
+extern "C" void setHIO__15dMenu_Fishing_cFb();
+extern "C" void draw__15dMenu_Fishing_cFv();
+extern "C" void __sinit_d_menu_fishing_cpp();
 extern "C" extern char const* const d_menu_d_menu_fishing__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getSubFont(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getSubFont();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getSubFont__Fv(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

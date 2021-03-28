@@ -90,10 +90,10 @@ struct dPa_followEcallBack {
 	/* 80C9E78C */ void __defctor();
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -125,10 +125,10 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -154,49 +154,51 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjStair_create1st(daObjStair_c*); // 2
-static void daObjStair_MoveBGDelete(daObjStair_c*); // 2
-static void daObjStair_MoveBGExecute(daObjStair_c*); // 2
-static void daObjStair_MoveBGDraw(daObjStair_c*); // 2
+static void daObjStair_create1st(daObjStair_c*);
+static void daObjStair_MoveBGDelete(daObjStair_c*);
+static void daObjStair_MoveBGExecute(daObjStair_c*);
+static void daObjStair_MoveBGDraw(daObjStair_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_MvStair[12];
 
-extern "C" void initBaseMtx__12daObjStair_cFv(); // 1
-extern "C" void setBaseMtx__12daObjStair_cFv(); // 1
-extern "C" void Create__12daObjStair_cFv(); // 1
-extern "C" void CreateHeap__12daObjStair_cFv(); // 1
-extern "C" void create1st__12daObjStair_cFv(); // 1
-extern "C" void event_proc_call__12daObjStair_cFv(); // 1
-extern "C" void mode_proc_call__12daObjStair_cFv(); // 1
-extern "C" void Execute__12daObjStair_cFPPA3_A4_f(); // 1
-extern "C" void Draw__12daObjStair_cFv(); // 1
-extern "C" void Delete__12daObjStair_cFv(); // 1
-extern "C" void actionWait__12daObjStair_cFv(); // 1
-extern "C" void actionOrderEvent__12daObjStair_cFv(); // 1
-extern "C" void actionEvent__12daObjStair_cFv(); // 1
-extern "C" bool actionEnd__12daObjStair_cFv(); // 1
-extern "C" void modeWaitUpperInit__12daObjStair_cFv(); // 1
-extern "C" void modeWaitUpper__12daObjStair_cFv(); // 1
-extern "C" void modeUpperInit__12daObjStair_cFv(); // 1
-extern "C" void modeUpper__12daObjStair_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void modeWaitLowerInit__12daObjStair_cFv(); // 1
-extern "C" void modeWaitLower__12daObjStair_cFv(); // 1
-extern "C" void modeLowerInit__12daObjStair_cFv(); // 1
-extern "C" void modeLower__12daObjStair_cFv(); // 1
-extern "C" void setParticle__12daObjStair_cFv(); // 1
-extern "C" void removeParticle__12daObjStair_cFv(); // 1
-extern "C" static void daObjStair_create1st__FP12daObjStair_c(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __dt__19dPa_followEcallBackFv(); // 1
-extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
-extern "C" void __defctor__19dPa_followEcallBackFv(); // 1
-extern "C" static void daObjStair_MoveBGDelete__FP12daObjStair_c(); // 1
-extern "C" static void daObjStair_MoveBGExecute__FP12daObjStair_c(); // 1
-extern "C" static void daObjStair_MoveBGDraw__FP12daObjStair_c(); // 1
-extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
-extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
+extern "C" void initBaseMtx__12daObjStair_cFv();
+extern "C" void setBaseMtx__12daObjStair_cFv();
+extern "C" void Create__12daObjStair_cFv();
+extern "C" void CreateHeap__12daObjStair_cFv();
+extern "C" void create1st__12daObjStair_cFv();
+extern "C" void event_proc_call__12daObjStair_cFv();
+extern "C" void mode_proc_call__12daObjStair_cFv();
+extern "C" void Execute__12daObjStair_cFPPA3_A4_f();
+extern "C" void Draw__12daObjStair_cFv();
+extern "C" void Delete__12daObjStair_cFv();
+extern "C" void actionWait__12daObjStair_cFv();
+extern "C" void actionOrderEvent__12daObjStair_cFv();
+extern "C" void actionEvent__12daObjStair_cFv();
+extern "C" bool actionEnd__12daObjStair_cFv();
+extern "C" void modeWaitUpperInit__12daObjStair_cFv();
+extern "C" void modeWaitUpper__12daObjStair_cFv();
+extern "C" void modeUpperInit__12daObjStair_cFv();
+extern "C" void modeUpper__12daObjStair_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void modeWaitLowerInit__12daObjStair_cFv();
+extern "C" void modeWaitLower__12daObjStair_cFv();
+extern "C" void modeLowerInit__12daObjStair_cFv();
+extern "C" void modeLower__12daObjStair_cFv();
+extern "C" void setParticle__12daObjStair_cFv();
+extern "C" void removeParticle__12daObjStair_cFv();
+extern "C" static void daObjStair_create1st__FP12daObjStair_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" static void daObjStair_MoveBGDelete__FP12daObjStair_c();
+extern "C" static void daObjStair_MoveBGExecute__FP12daObjStair_c();
+extern "C" static void daObjStair_MoveBGDraw__FP12daObjStair_c();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_MvStair[12];
 
@@ -204,59 +206,69 @@ extern "C" extern void* g_profile_Obj_MvStair[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void cLib_addCalc0(f32*, f32, f32); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void cLib_addCalc0(f32*, f32, f32);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__19dPa_followEcallBack[10];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 struct_80C9EAA8[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void cLib_addCalc0__FPfff(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void __ct__19dPa_followEcallBackFUcUc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__19dPa_followEcallBack[10];

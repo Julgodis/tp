@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void atan2(); // 1
+extern "C" void atan2();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_atan2(); // 1
+extern "C" void __ieee754_atan2();
 
 // 
 // Declarations:

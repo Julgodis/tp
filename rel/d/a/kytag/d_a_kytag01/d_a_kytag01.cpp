@@ -33,49 +33,57 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void get_check_pos(kytag01_class*); // 2
-static void mist_tag_move(kytag01_class*); // 2
-static bool daKytag01_Draw(kytag01_class*); // 2
-static void daKytag01_Execute(kytag01_class*); // 2
-static bool daKytag01_IsDelete(kytag01_class*); // 2
-static bool daKytag01_Delete(kytag01_class*); // 2
-static void daKytag01_Create(fopAc_ac_c*); // 2
+static void get_check_pos(kytag01_class*);
+static void mist_tag_move(kytag01_class*);
+static bool daKytag01_Draw(kytag01_class*);
+static void daKytag01_Execute(kytag01_class*);
+static bool daKytag01_IsDelete(kytag01_class*);
+static bool daKytag01_Delete(kytag01_class*);
+static void daKytag01_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG01[12];
 
-extern "C" static void get_check_pos__FP13kytag01_class(); // 1
-extern "C" static void mist_tag_move__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_Draw__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Execute__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_IsDelete__FP13kytag01_class(); // 1
-extern "C" static bool daKytag01_Delete__FP13kytag01_class(); // 1
-extern "C" static void daKytag01_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void get_check_pos__FP13kytag01_class();
+extern "C" static void mist_tag_move__FP13kytag01_class();
+extern "C" static bool daKytag01_Draw__FP13kytag01_class();
+extern "C" static void daKytag01_Execute__FP13kytag01_class();
+extern "C" static bool daKytag01_IsDelete__FP13kytag01_class();
+extern "C" static bool daKytag01_Delete__FP13kytag01_class();
+extern "C" static void daKytag01_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG01[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void dKy_fog_startendz_set(f32, f32, f32); // 2
-void dKy_change_colpat(u8); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void dKy_fog_startendz_set(f32, f32, f32);
+void dKy_change_colpat(u8);
+void cM_atan2s(f32, f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void dKy_fog_startendz_set__Ffff(); // 1
-extern "C" void dKy_change_colpat__FUc(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void startFogSe__10Z2EnvSeMgrFv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void dKy_fog_startendz_set__Ffff();
+extern "C" void dKy_change_colpat__FUc();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void startFogSe__10Z2EnvSeMgrFv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void abs();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

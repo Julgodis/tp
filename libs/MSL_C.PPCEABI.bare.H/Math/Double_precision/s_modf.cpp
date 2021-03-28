@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void modf(); // 1
+extern "C" void modf();
 
 // 
 // External References:

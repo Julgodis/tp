@@ -11,22 +11,27 @@
 // Forward References:
 // 
 
+extern "C" extern u8 GXNtsc480IntDf[60];
+extern "C" extern u8 GXNtsc480Int[60];
+extern "C" extern u8 GXMpal480IntDf[60];
+extern "C" extern u8 GXPal528IntDf[60];
+extern "C" extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
 
-extern "C" void GXSetDispCopySrc(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetDispCopyDst(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXSetDispCopyFrame2Field(); // 1
-extern "C" void GXSetCopyClamp(); // 1
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void GXSetDispCopyYScale(); // 1
-extern "C" void GXSetCopyClear(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXSetDispCopyGamma(); // 1
-extern "C" void GXCopyDisp(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXClearBoundingBox(); // 1
+extern "C" void GXSetDispCopySrc();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetDispCopyDst();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXSetDispCopyFrame2Field();
+extern "C" void GXSetCopyClamp();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void GXSetDispCopyYScale();
+extern "C" void GXSetCopyClear();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXSetDispCopyGamma();
+extern "C" void GXCopyDisp();
+extern "C" void GXCopyTex();
+extern "C" void GXClearBoundingBox();
 extern "C" extern u8 GXNtsc480IntDf[60];
 extern "C" extern u8 GXNtsc480Int[60];
 extern "C" extern u8 GXMpal480IntDf[60];
@@ -37,9 +42,10 @@ extern "C" extern u8 GXEurgb60Hz480IntDf[60 + 4 /* padding */];
 // External References:
 // 
 
+extern "C" extern void* __GXData;
 
-extern "C" void __GetImageTileCount(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void __GetImageTileCount();
+extern "C" void __cvt_fp2unsigned();
 extern "C" extern void* __GXData;
 
 // 

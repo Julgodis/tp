@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_809D6D5C[2];
 
 extern void* const data_809D6D5C[2];
 
@@ -19,7 +20,7 @@ extern void* const data_809D6D5C[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_grm_cpp(); // 1
+extern "C" void __sinit_d_a_npc_grm_cpp();
 
 // 
 // Declarations:

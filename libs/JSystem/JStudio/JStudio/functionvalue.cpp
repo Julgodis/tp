@@ -182,88 +182,94 @@ namespace JGadget {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q27JStudio22TFunctionValue_hermite[8];
+extern "C" extern void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];
+extern "C" extern void* __vt__Q27JStudio19TFunctionValue_list[8];
+extern "C" extern void* __vt__Q27JStudio25TFunctionValue_transition[8];
+extern "C" extern void* __vt__Q27JStudio23TFunctionValue_constant[8];
+extern "C" extern void* __vt__Q27JStudio24TFunctionValue_composite[8];
 
-extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi(); // 1
-extern "C" void __ct__Q27JStudio14TFunctionValueFv(); // 1
-extern "C" void __dt__Q27JStudio14TFunctionValueFv(); // 1
-extern "C" void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv(); // 1
-extern "C" void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd(); // 1
-extern "C" void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd(); // 1
-extern "C" void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd(); // 1
-extern "C" void extrapolateParameter_turn__Q27JStudio13functionvalueFdd(); // 1
-extern "C" void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
-extern "C" void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
-extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd(); // 1
-extern "C" void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd(); // 1
-extern "C" void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv(); // 1
-extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" bool getType__Q27JStudio24TFunctionValue_compositeCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" void initialize__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" void prepare__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" void getValue__Q27JStudio24TFunctionValue_compositeFd(); // 1
-extern "C" void func_80281E5C(); // 1
-extern "C" void func_80281EC8(); // 1
-extern "C" void func_8028202C(); // 1
-extern "C" void func_80282094(); // 1
-extern "C" void func_80282118(); // 1
-extern "C" void func_80282200(); // 1
-extern "C" void func_80282284(); // 1
-extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" s32 getType__Q27JStudio23TFunctionValue_constantCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" void initialize__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" void prepare__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" void getValue__Q27JStudio23TFunctionValue_constantFd(); // 1
-extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" s32 getType__Q27JStudio25TFunctionValue_transitionCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" void initialize__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" void prepare__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" void getValue__Q27JStudio25TFunctionValue_transitionFd(); // 1
-extern "C" void __ct__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" s32 getType__Q27JStudio19TFunctionValue_listCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" void initialize__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" void prepare__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" void getValue__Q27JStudio19TFunctionValue_listFd(); // 1
-extern "C" void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
-extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
-extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
-extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_(); // 1
-extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" s32 getType__Q27JStudio29TFunctionValue_list_parameterCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl(); // 1
-extern "C" void initialize__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void prepare__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void getValue__Q27JStudio29TFunctionValue_list_parameterFd(); // 1
-extern "C" void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
-extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
-extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
-extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd(); // 1
-extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" s32 getType__Q27JStudio22TFunctionValue_hermiteCFv(); // 1
-extern "C" void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl(); // 1
-extern "C" void initialize__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" void prepare__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" void getValue__Q27JStudio22TFunctionValue_hermiteFd(); // 1
-extern "C" void extrapolateParameter_raw__Q27JStudio13functionvalueFdd(); // 1
-extern "C" void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd(); // 1
-extern "C" void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd(); // 1
-extern "C" void func_802835DC(); // 1
-extern "C" void func_80283634(); // 1
-extern "C" void func_80283858(); // 1
-extern "C" void func_802838C8(); // 1
-extern "C" void __dt__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void __dt__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" void __dt__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" void __dt__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" void __dt__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" void func_80283E24(); // 1
-extern "C" void func_80283EB8(); // 1
+extern "C" void toFunction_outside__Q27JStudio14TFunctionValueFi();
+extern "C" void __ct__Q27JStudio14TFunctionValueFv();
+extern "C" void __dt__Q27JStudio14TFunctionValueFv();
+extern "C" void refer_initialize__Q27JStudio29TFunctionValueAttribute_referFv();
+extern "C" void interpolateValue_hermite__Q27JStudio13functionvalueFddddddd();
+extern "C" void interpolateValue_BSpline_uniform__Q27JStudio13functionvalueFddddd();
+extern "C" void interpolateValue_BSpline_nonuniform__Q27JStudio13functionvalueFdPCdPCd();
+extern "C" void extrapolateParameter_turn__Q27JStudio13functionvalueFdd();
+extern "C" void range_initialize__Q27JStudio29TFunctionValueAttribute_rangeFv();
+extern "C" void range_prepare__Q27JStudio29TFunctionValueAttribute_rangeFv();
+extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd();
+extern "C" void range_getParameter__Q27JStudio29TFunctionValueAttribute_rangeCFddd();
+extern "C" void __ct__Q27JStudio29TFunctionValueAttribute_rangeFv();
+extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" bool getType__Q27JStudio24TFunctionValue_compositeCFv();
+extern "C" void getAttributeSet__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" void initialize__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" void prepare__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" void getValue__Q27JStudio24TFunctionValue_compositeFd();
+extern "C" void func_80281E5C();
+extern "C" void func_80281EC8();
+extern "C" void func_8028202C();
+extern "C" void func_80282094();
+extern "C" void func_80282118();
+extern "C" void func_80282200();
+extern "C" void func_80282284();
+extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv();
+extern "C" s32 getType__Q27JStudio23TFunctionValue_constantCFv();
+extern "C" void getAttributeSet__Q27JStudio23TFunctionValue_constantFv();
+extern "C" void initialize__Q27JStudio23TFunctionValue_constantFv();
+extern "C" void prepare__Q27JStudio23TFunctionValue_constantFv();
+extern "C" void getValue__Q27JStudio23TFunctionValue_constantFd();
+extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" s32 getType__Q27JStudio25TFunctionValue_transitionCFv();
+extern "C" void getAttributeSet__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" void initialize__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" void prepare__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" void getValue__Q27JStudio25TFunctionValue_transitionFd();
+extern "C" void __ct__Q27JStudio19TFunctionValue_listFv();
+extern "C" s32 getType__Q27JStudio19TFunctionValue_listCFv();
+extern "C" void getAttributeSet__Q27JStudio19TFunctionValue_listFv();
+extern "C" void initialize__Q27JStudio19TFunctionValue_listFv();
+extern "C" void prepare__Q27JStudio19TFunctionValue_listFv();
+extern "C" void getValue__Q27JStudio19TFunctionValue_listFd();
+extern "C" void update_INTERPOLATE_NONE___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio19TFunctionValue_listFRCQ27JStudio19TFunctionValue_listRCQ37JStudio19TFunctionValue_list11TIndexData_();
+extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" s32 getType__Q27JStudio29TFunctionValue_list_parameterCFv();
+extern "C" void getAttributeSet__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl();
+extern "C" void initialize__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void prepare__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void getValue__Q27JStudio29TFunctionValue_list_parameterFd();
+extern "C" void update_INTERPOLATE_NONE___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+extern "C" void update_INTERPOLATE_LINEAR___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+extern "C" void update_INTERPOLATE_PLATEAU___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+extern "C" void update_INTERPOLATE_BSPLINE_dataMore3___Q27JStudio29TFunctionValue_list_parameterFRCQ27JStudio29TFunctionValue_list_parameterd();
+extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" s32 getType__Q27JStudio22TFunctionValue_hermiteCFv();
+extern "C" void getAttributeSet__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl();
+extern "C" void initialize__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" void prepare__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" void getValue__Q27JStudio22TFunctionValue_hermiteFd();
+extern "C" void extrapolateParameter_raw__Q27JStudio13functionvalueFdd();
+extern "C" void extrapolateParameter_repeat__Q27JStudio13functionvalueFdd();
+extern "C" void extrapolateParameter_clamp__Q27JStudio13functionvalueFdd();
+extern "C" void func_802835DC();
+extern "C" void func_80283634();
+extern "C" void func_80283858();
+extern "C" void func_802838C8();
+extern "C" void __dt__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void __dt__Q27JStudio19TFunctionValue_listFv();
+extern "C" void __dt__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" void __dt__Q27JStudio23TFunctionValue_constantFv();
+extern "C" void __dt__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" void func_80283E24();
+extern "C" void func_80283EB8();
 extern "C" extern void* __vt__Q27JStudio22TFunctionValue_hermite[8];
 extern "C" extern void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];
 extern "C" extern void* __vt__Q27JStudio19TFunctionValue_list[8];
@@ -275,20 +281,21 @@ extern "C" extern void* __vt__Q27JStudio24TFunctionValue_composite[8];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 __float_nan;
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void func_802DCCD0(); // 1
-extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv(); // 1
-extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void div(); // 1
-extern "C" void floor(); // 1
-extern "C" void fmod(); // 1
+extern "C" void __dl__FPv();
+extern "C" void func_802DCCD0();
+extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv();
+extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savefpr_29();
+extern "C" void _restfpr_29();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void div();
+extern "C" void floor();
+extern "C" void fmod();
 extern "C" extern u32 __float_nan;
 
 // 

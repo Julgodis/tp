@@ -40,24 +40,24 @@ struct door_param2_c {
 // 
 
 
-extern "C" void getKind__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getFrontOption__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getBackOption__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getBRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getSwbit__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getSwbit2__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getSwbit3__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void isMsgDoor__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getEventNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getEventNo2__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getMsgNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getFLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getBLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getMFLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getMBLightInf__13door_param2_cFP10fopAc_ac_c(); // 1
+extern "C" void getKind__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getFrontOption__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getBackOption__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getBRoomNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getSwbit__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getSwbit2__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getSwbit3__13door_param2_cFP10fopAc_ac_c();
+extern "C" void isMsgDoor__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getEventNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getEventNo2__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getMsgNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getFLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getBLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getMFLightInf__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getMBLightInf__13door_param2_cFP10fopAc_ac_c();
 
 // 
 // External References:

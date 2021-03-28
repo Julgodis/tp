@@ -21,16 +21,16 @@ struct JAUSoundAnimation {
 // 
 
 
-extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf(); // 1
-extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf(); // 1
+extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf();
+extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf();
 
 // 
 // External References:
 // 
 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

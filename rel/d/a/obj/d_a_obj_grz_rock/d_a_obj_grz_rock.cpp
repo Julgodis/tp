@@ -37,10 +37,10 @@ struct dSv_info_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -59,10 +59,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -132,30 +132,32 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjGrzRock_Draw(daObjGrzRock_c*); // 2
-static void daObjGrzRock_Execute(daObjGrzRock_c*); // 2
-static bool daObjGrzRock_IsDelete(daObjGrzRock_c*); // 2
-static void daObjGrzRock_Delete(daObjGrzRock_c*); // 2
-static void daObjGrzRock_create(fopAc_ac_c*); // 2
+static void daObjGrzRock_Draw(daObjGrzRock_c*);
+static void daObjGrzRock_Execute(daObjGrzRock_c*);
+static bool daObjGrzRock_IsDelete(daObjGrzRock_c*);
+static void daObjGrzRock_Delete(daObjGrzRock_c*);
+static void daObjGrzRock_create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_GrzRock[12];
 
-extern "C" void setBaseMtx__14daObjGrzRock_cFv(); // 1
-extern "C" void setEnvTevColor__14daObjGrzRock_cFv(); // 1
-extern "C" void setRoomNo__14daObjGrzRock_cFv(); // 1
-extern "C" void setPrtcl__14daObjGrzRock_cFv(); // 1
-extern "C" void Create__14daObjGrzRock_cFv(); // 1
-extern "C" void CreateHeap__14daObjGrzRock_cFv(); // 1
-extern "C" void create__14daObjGrzRock_cFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void Execute__14daObjGrzRock_cFPPA3_A4_f(); // 1
-extern "C" void Draw__14daObjGrzRock_cFv(); // 1
-extern "C" void Delete__14daObjGrzRock_cFv(); // 1
-extern "C" static void daObjGrzRock_Draw__FP14daObjGrzRock_c(); // 1
-extern "C" static void daObjGrzRock_Execute__FP14daObjGrzRock_c(); // 1
-extern "C" static bool daObjGrzRock_IsDelete__FP14daObjGrzRock_c(); // 1
-extern "C" static void daObjGrzRock_Delete__FP14daObjGrzRock_c(); // 1
-extern "C" static void daObjGrzRock_create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80C15348(); // 1
-extern "C" static void func_80C15350(); // 1
+extern "C" void setBaseMtx__14daObjGrzRock_cFv();
+extern "C" void setEnvTevColor__14daObjGrzRock_cFv();
+extern "C" void setRoomNo__14daObjGrzRock_cFv();
+extern "C" void setPrtcl__14daObjGrzRock_cFv();
+extern "C" void Create__14daObjGrzRock_cFv();
+extern "C" void CreateHeap__14daObjGrzRock_cFv();
+extern "C" void create__14daObjGrzRock_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void Execute__14daObjGrzRock_cFPPA3_A4_f();
+extern "C" void Draw__14daObjGrzRock_cFv();
+extern "C" void Delete__14daObjGrzRock_cFv();
+extern "C" static void daObjGrzRock_Draw__FP14daObjGrzRock_c();
+extern "C" static void daObjGrzRock_Execute__FP14daObjGrzRock_c();
+extern "C" static bool daObjGrzRock_IsDelete__FP14daObjGrzRock_c();
+extern "C" static void daObjGrzRock_Delete__FP14daObjGrzRock_c();
+extern "C" static void daObjGrzRock_create__FP10fopAc_ac_c();
+extern "C" static void func_80C15348();
+extern "C" static void func_80C15350();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_GrzRock[12];
 
@@ -163,56 +165,62 @@ extern "C" extern void* g_profile_Obj_GrzRock[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

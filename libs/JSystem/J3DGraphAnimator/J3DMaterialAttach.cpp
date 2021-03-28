@@ -27,13 +27,13 @@ struct J3DTevKColorAnm {
 struct J3DTevColorAnm {
 };
 
-struct J3DAnmTevRegKey {
-};
-
 struct J3DAnmColor {
 };
 
 struct J3DAnmTexPattern {
+};
+
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -70,42 +70,44 @@ struct J3DMaterialAnm {
 // 
 
 
-extern "C" void clear__16J3DMaterialTableFv(); // 1
-extern "C" void __ct__16J3DMaterialTableFv(); // 1
-extern "C" void __dt__16J3DMaterialTableFv(); // 1
-extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor(); // 1
-extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor(); // 1
-extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
-extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
+extern "C" void clear__16J3DMaterialTableFv();
+extern "C" void __ct__16J3DMaterialTableFv();
+extern "C" void __dt__16J3DMaterialTableFv();
+extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void createTexMtxForAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void entryMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 const j3dDefaultTexMtxInfo[100];
+extern "C" extern void* __vt__11J3DTexNoAnm[3];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
-extern "C" void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm(); // 1
-extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm(); // 1
-extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm(); // 1
-extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm(); // 1
-extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void setMatColorAnm__14J3DMaterialAnmFiP14J3DMatColorAnm();
+extern "C" void setTexMtxAnm__14J3DMaterialAnmFiP12J3DTexMtxAnm();
+extern "C" void setTexNoAnm__14J3DMaterialAnmFiP11J3DTexNoAnm();
+extern "C" void setTevColorAnm__14J3DMaterialAnmFiP14J3DTevColorAnm();
+extern "C" void setTevKColorAnm__14J3DMaterialAnmFiP15J3DTevKColorAnm();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 extern "C" extern u8 const j3dDefaultTexMtxInfo[100];
 extern "C" extern void* __vt__11J3DTexNoAnm[3];
 

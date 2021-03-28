@@ -51,56 +51,62 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daLv6CstaSw_Draw(daLv6CstaSw_c*); // 2
-static void daLv6CstaSw_Execute(daLv6CstaSw_c*); // 2
-static void daLv6CstaSw_Delete(daLv6CstaSw_c*); // 2
-static void daLv6CstaSw_Create(fopAc_ac_c*); // 2
+static void daLv6CstaSw_Draw(daLv6CstaSw_c*);
+static void daLv6CstaSw_Execute(daLv6CstaSw_c*);
+static void daLv6CstaSw_Delete(daLv6CstaSw_c*);
+static void daLv6CstaSw_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Tag_Lv6CstaSw[12];
 
-extern "C" void __ct__17daLv6CstaSw_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__13daLv6CstaSw_cFv(); // 1
-extern "C" void create__13daLv6CstaSw_cFv(); // 1
-extern "C" void searchSekizoAct__13daLv6CstaSw_cFPvPv(); // 1
-extern "C" void areaCheck__13daLv6CstaSw_cFv(); // 1
-extern "C" void Execute__13daLv6CstaSw_cFv(); // 1
-extern "C" bool Draw__13daLv6CstaSw_cFv(); // 1
-extern "C" bool Delete__13daLv6CstaSw_cFv(); // 1
-extern "C" static void daLv6CstaSw_Draw__FP13daLv6CstaSw_c(); // 1
-extern "C" static void daLv6CstaSw_Execute__FP13daLv6CstaSw_c(); // 1
-extern "C" static void daLv6CstaSw_Delete__FP13daLv6CstaSw_c(); // 1
-extern "C" static void daLv6CstaSw_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__17daLv6CstaSw_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp(); // 1
+extern "C" void __ct__17daLv6CstaSw_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__13daLv6CstaSw_cFv();
+extern "C" void create__13daLv6CstaSw_cFv();
+extern "C" void searchSekizoAct__13daLv6CstaSw_cFPvPv();
+extern "C" void areaCheck__13daLv6CstaSw_cFv();
+extern "C" void Execute__13daLv6CstaSw_cFv();
+extern "C" bool Draw__13daLv6CstaSw_cFv();
+extern "C" bool Delete__13daLv6CstaSw_cFv();
+extern "C" static void daLv6CstaSw_Draw__FP13daLv6CstaSw_c();
+extern "C" static void daLv6CstaSw_Execute__FP13daLv6CstaSw_c();
+extern "C" static void daLv6CstaSw_Delete__FP13daLv6CstaSw_c();
+extern "C" static void daLv6CstaSw_Create__FP10fopAc_ac_c();
+extern "C" void __dt__17daLv6CstaSw_HIO_cFv();
+extern "C" void __sinit_d_a_tag_lv6CstaSw_cpp();
 extern "C" extern void* g_profile_Tag_Lv6CstaSw[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

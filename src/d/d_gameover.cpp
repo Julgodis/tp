@@ -166,53 +166,56 @@ struct J2DPicture {
 // Forward References:
 // 
 
-static void dGameover_Draw(dGameover_c*); // 2
-static void dGameover_Execute(dGameover_c*); // 2
-static bool dGameover_IsDelete(dGameover_c*); // 2
-static void dGameover_Delete(dGameover_c*); // 2
-static void dGameover_Create(msg_class*); // 2
-void d_GameOver_Create(u8); // 2
-void d_GameOver_Delete(unsigned int&); // 2
+static void dGameover_Draw(dGameover_c*);
+static void dGameover_Execute(dGameover_c*);
+static bool dGameover_IsDelete(dGameover_c*);
+static void dGameover_Delete(dGameover_c*);
+static void dGameover_Create(msg_class*);
+void d_GameOver_Create(u8);
+void d_GameOver_Delete(unsigned int&);
+extern "C" extern char const* const d_d_gameover__stringBase0;
+extern "C" extern void* g_profile_GAMEOVER[10];
+extern "C" extern void* __vt__12dMenu_save_c[3 + 3 /* padding */];
 
-extern "C" void draw__24dDlst_Gameover_CAPTURE_cFv(); // 1
-extern "C" void __ct__10dGov_HIO_cFv(); // 1
-extern "C" void _create__11dGameover_cFv(); // 1
-extern "C" void _execute__11dGameover_cFv(); // 1
-extern "C" void playerAnmWait_init__11dGameover_cFv(); // 1
-extern "C" void playerAnmWait_proc__11dGameover_cFv(); // 1
-extern "C" void dispFadeOut_init__11dGameover_cFv(); // 1
-extern "C" void dispFadeOut_proc__11dGameover_cFv(); // 1
-extern "C" void dispWait_init__11dGameover_cFv(); // 1
-extern "C" void dispWait_proc__11dGameover_cFv(); // 1
-extern "C" void demoFadeIn_init__11dGameover_cFv(); // 1
-extern "C" void demoFadeIn_proc__11dGameover_cFv(); // 1
-extern "C" void demoFadeOut_init__11dGameover_cFv(); // 1
-extern "C" void demoFadeOut_proc__11dGameover_cFv(); // 1
-extern "C" void saveOpen_init__11dGameover_cFv(); // 1
-extern "C" void saveOpen_proc__11dGameover_cFv(); // 1
-extern "C" void saveMove_init__11dGameover_cFv(); // 1
-extern "C" void saveMove_proc__11dGameover_cFv(); // 1
-extern "C" void saveClose_init__11dGameover_cFv(); // 1
-extern "C" void saveClose_proc__11dGameover_cFv(); // 1
-extern "C" void deleteWait_init__11dGameover_cFv(); // 1
-extern "C" void deleteWait_proc__11dGameover_cFv(); // 1
-extern "C" void _draw__11dGameover_cFv(); // 1
-extern "C" void _delete__11dGameover_cFv(); // 1
-extern "C" void __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive(); // 1
-extern "C" void __dt__24dDlst_GameOverScrnDraw_cFv(); // 1
-extern "C" void setBackAlpha__24dDlst_GameOverScrnDraw_cFf(); // 1
-extern "C" void draw__24dDlst_GameOverScrnDraw_cFv(); // 1
-extern "C" static void dGameover_Draw__FP11dGameover_c(); // 1
-extern "C" static void dGameover_Execute__FP11dGameover_c(); // 1
-extern "C" static bool dGameover_IsDelete__FP11dGameover_c(); // 1
-extern "C" static void dGameover_Delete__FP11dGameover_c(); // 1
-extern "C" static void dGameover_Create__FP9msg_class(); // 1
-extern "C" void d_GameOver_Create__FUc(); // 1
-extern "C" void d_GameOver_Delete__FRUi(); // 1
-extern "C" void __dt__10dGov_HIO_cFv(); // 1
-extern "C" void __sinit_d_gameover_cpp(); // 1
-extern "C" void __dt__24dDlst_Gameover_CAPTURE_cFv(); // 1
-extern "C" void __dt__12dMenu_save_cFv(); // 1
+extern "C" void draw__24dDlst_Gameover_CAPTURE_cFv();
+extern "C" void __ct__10dGov_HIO_cFv();
+extern "C" void _create__11dGameover_cFv();
+extern "C" void _execute__11dGameover_cFv();
+extern "C" void playerAnmWait_init__11dGameover_cFv();
+extern "C" void playerAnmWait_proc__11dGameover_cFv();
+extern "C" void dispFadeOut_init__11dGameover_cFv();
+extern "C" void dispFadeOut_proc__11dGameover_cFv();
+extern "C" void dispWait_init__11dGameover_cFv();
+extern "C" void dispWait_proc__11dGameover_cFv();
+extern "C" void demoFadeIn_init__11dGameover_cFv();
+extern "C" void demoFadeIn_proc__11dGameover_cFv();
+extern "C" void demoFadeOut_init__11dGameover_cFv();
+extern "C" void demoFadeOut_proc__11dGameover_cFv();
+extern "C" void saveOpen_init__11dGameover_cFv();
+extern "C" void saveOpen_proc__11dGameover_cFv();
+extern "C" void saveMove_init__11dGameover_cFv();
+extern "C" void saveMove_proc__11dGameover_cFv();
+extern "C" void saveClose_init__11dGameover_cFv();
+extern "C" void saveClose_proc__11dGameover_cFv();
+extern "C" void deleteWait_init__11dGameover_cFv();
+extern "C" void deleteWait_proc__11dGameover_cFv();
+extern "C" void _draw__11dGameover_cFv();
+extern "C" void _delete__11dGameover_cFv();
+extern "C" void __ct__24dDlst_GameOverScrnDraw_cFP10JKRArchive();
+extern "C" void __dt__24dDlst_GameOverScrnDraw_cFv();
+extern "C" void setBackAlpha__24dDlst_GameOverScrnDraw_cFf();
+extern "C" void draw__24dDlst_GameOverScrnDraw_cFv();
+extern "C" static void dGameover_Draw__FP11dGameover_c();
+extern "C" static void dGameover_Execute__FP11dGameover_c();
+extern "C" static bool dGameover_IsDelete__FP11dGameover_c();
+extern "C" static void dGameover_Delete__FP11dGameover_c();
+extern "C" static void dGameover_Create__FP9msg_class();
+extern "C" void d_GameOver_Create__FUc();
+extern "C" void d_GameOver_Delete__FRUi();
+extern "C" void __dt__10dGov_HIO_cFv();
+extern "C" void __sinit_d_gameover_cpp();
+extern "C" void __dt__24dDlst_Gameover_CAPTURE_cFv();
+extern "C" void __dt__12dMenu_save_cFv();
 extern "C" extern char const* const d_d_gameover__stringBase0;
 extern "C" extern void* g_profile_GAMEOVER[10];
 extern "C" extern void* __vt__12dMenu_save_c[3 + 3 /* padding */];
@@ -221,96 +224,117 @@ extern "C" extern void* __vt__12dMenu_save_c[3 + 3 /* padding */];
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getSubFont(); // 2
-void fopMsgM_SearchByID(unsigned int); // 2
-void fopMsgM_Delete(void*); // 2
-void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*)); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_setHeapLockFlag(u8); // 2
-void dComIfGp_offHeapLockFlag(int); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getSubFont();
+void fopMsgM_SearchByID(unsigned int);
+void fopMsgM_Delete(void*);
+void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*));
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__14mDoHIO_entry_c[3];
+extern "C" extern void* __vt__16dDlst_MenuSave_c[4];
+extern "C" extern void* __vt__23dDlst_MenuSaveExplain_c[4 + 18 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mFadeColor__13mDoGph_gInf_c[4];
+extern "C" extern u8 g_clearColor[4];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
+extern "C" extern u8 mZbufferTex__13mDoGph_gInf_c[4];
+extern "C" extern f32 mFadeRate__13mDoGph_gInf_c;
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 g_menuHIO[8];
+extern "C" extern u8 sManager__10JFWDisplay[4];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getSubFont__Fv(); // 1
-extern "C" void fopMsgM_SearchByID__FUi(); // 1
-extern "C" void fopMsgM_Delete__FPv(); // 1
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_setHeapLockFlag__FUc(); // 1
-extern "C" void dComIfGp_offHeapLockFlag__Fi(); // 1
-extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__12dMenu_save_cFv(); // 1
-extern "C" void _create__12dMenu_save_cFv(); // 1
-extern "C" void _open__12dMenu_save_cFv(); // 1
-extern "C" void _delete__12dMenu_save_cFv(); // 1
-extern "C" void _move__12dMenu_save_cFv(); // 1
-extern "C" void _draw2__12dMenu_save_cFv(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void resetMiniGameItem__13dMeter2Info_cFb(); // 1
-extern "C" void __ct__15dMsgScrnLight_cFUcUc(); // 1
-extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void func_802FC800(); // 1
-extern "C" void setString__10J2DTextBoxFPCce(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_Delete__FPv();
+extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_setHeapLockFlag__FUc();
+extern "C" void dComIfGp_offHeapLockFlag__Fi();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__12dMenu_save_cFv();
+extern "C" void _create__12dMenu_save_cFv();
+extern "C" void _open__12dMenu_save_cFv();
+extern "C" void _delete__12dMenu_save_cFv();
+extern "C" void _move__12dMenu_save_cFv();
+extern "C" void _draw2__12dMenu_save_cFv();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void resetMiniGameItem__13dMeter2Info_cFb();
+extern "C" void __ct__15dMsgScrnLight_cFUcUc();
+extern "C" void draw__15dMsgScrnLight_cFPfffffffQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void func_802FC800();
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void C_MTXOrtho();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetFogRangeAdj();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

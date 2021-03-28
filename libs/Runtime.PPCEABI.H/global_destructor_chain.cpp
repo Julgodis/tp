@@ -12,8 +12,8 @@
 // 
 
 
-extern "C" void __destroy_global_chain(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void __destroy_global_chain();
+extern "C" void __register_global_object();
 
 // 
 // External References:

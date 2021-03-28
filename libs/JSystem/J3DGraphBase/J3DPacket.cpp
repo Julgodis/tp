@@ -79,40 +79,42 @@ struct J3DDisplayListObj {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 sGDLObj__17J3DDisplayListObj[16];
 
-extern "C" void newDisplayList__17J3DDisplayListObjFUl(); // 1
-extern "C" void newSingleDisplayList__17J3DDisplayListObjFUl(); // 1
-extern "C" void single_To_Double__17J3DDisplayListObjFv(); // 1
-extern "C" void setSingleDisplayList__17J3DDisplayListObjFPvUl(); // 1
-extern "C" void swapBuffer__17J3DDisplayListObjFv(); // 1
-extern "C" void callDL__17J3DDisplayListObjCFv(); // 1
-extern "C" void beginDL__17J3DDisplayListObjFv(); // 1
-extern "C" void endDL__17J3DDisplayListObjFv(); // 1
-extern "C" void beginPatch__17J3DDisplayListObjFv(); // 1
-extern "C" void endPatch__17J3DDisplayListObjFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
-extern "C" void addChildPacket__9J3DPacketFP9J3DPacket(); // 1
-extern "C" void __ct__13J3DDrawPacketFv(); // 1
-extern "C" void __dt__13J3DDrawPacketFv(); // 1
-extern "C" void newDisplayList__13J3DDrawPacketFUl(); // 1
-extern "C" void newSingleDisplayList__13J3DDrawPacketFUl(); // 1
-extern "C" void draw__13J3DDrawPacketFv(); // 1
-extern "C" void __ct__12J3DMatPacketFv(); // 1
-extern "C" void __dt__12J3DMatPacketFv(); // 1
-extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket(); // 1
-extern "C" void beginDiff__12J3DMatPacketFv(); // 1
-extern "C" void endDiff__12J3DMatPacketFv(); // 1
-extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket(); // 1
-extern "C" void draw__12J3DMatPacketFv(); // 1
-extern "C" void __ct__14J3DShapePacketFv(); // 1
-extern "C" void __dt__14J3DShapePacketFv(); // 1
-extern "C" void calcDifferedBufferSize__14J3DShapePacketFUl(); // 1
-extern "C" void newDifferedDisplayList__14J3DShapePacketFUl(); // 1
-extern "C" void prepareDraw__14J3DShapePacketCFv(); // 1
-extern "C" void draw__14J3DShapePacketFv(); // 1
-extern "C" void drawFast__14J3DShapePacketFv(); // 1
-extern "C" void draw__9J3DPacketFv(); // 1
-extern "C" void entry__12J3DMatPacketFP13J3DDrawBuffer(); // 1
+extern "C" void newDisplayList__17J3DDisplayListObjFUl();
+extern "C" void newSingleDisplayList__17J3DDisplayListObjFUl();
+extern "C" void single_To_Double__17J3DDisplayListObjFv();
+extern "C" void setSingleDisplayList__17J3DDisplayListObjFPvUl();
+extern "C" void swapBuffer__17J3DDisplayListObjFv();
+extern "C" void callDL__17J3DDisplayListObjCFv();
+extern "C" void beginDL__17J3DDisplayListObjFv();
+extern "C" void endDL__17J3DDisplayListObjFv();
+extern "C" void beginPatch__17J3DDisplayListObjFv();
+extern "C" void endPatch__17J3DDisplayListObjFv();
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" void addChildPacket__9J3DPacketFP9J3DPacket();
+extern "C" void __ct__13J3DDrawPacketFv();
+extern "C" void __dt__13J3DDrawPacketFv();
+extern "C" void newDisplayList__13J3DDrawPacketFUl();
+extern "C" void newSingleDisplayList__13J3DDrawPacketFUl();
+extern "C" void draw__13J3DDrawPacketFv();
+extern "C" void __ct__12J3DMatPacketFv();
+extern "C" void __dt__12J3DMatPacketFv();
+extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+extern "C" void beginDiff__12J3DMatPacketFv();
+extern "C" void endDiff__12J3DMatPacketFv();
+extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket();
+extern "C" void draw__12J3DMatPacketFv();
+extern "C" void __ct__14J3DShapePacketFv();
+extern "C" void __dt__14J3DShapePacketFv();
+extern "C" void calcDifferedBufferSize__14J3DShapePacketFUl();
+extern "C" void newDifferedDisplayList__14J3DShapePacketFUl();
+extern "C" void prepareDraw__14J3DShapePacketCFv();
+extern "C" void draw__14J3DShapePacketFv();
+extern "C" void drawFast__14J3DShapePacketFv();
+extern "C" void draw__9J3DPacketFv();
+extern "C" void entry__12J3DMatPacketFP13J3DDrawBuffer();
 extern "C" extern void* __vt__9J3DPacket[5];
 extern "C" extern u8 sGDLObj__17J3DDisplayListObj[16];
 
@@ -120,28 +122,35 @@ extern "C" extern u8 sGDLObj__17J3DDisplayListObj[16];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+extern "C" extern u8 sortFuncTable__13J3DDrawBuffer[72];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 struct_804515B0[4];
+extern "C" extern u8 sTexGenBlock__17J3DDifferedTexMtx[4];
+extern "C" extern u8 sTexMtxObj__17J3DDifferedTexMtx[4];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
+extern "C" extern u8 __GDCurrentDL[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __dt__9J3DPacketFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setArray__15J3DVertexBufferCFv(); // 1
-extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
-extern "C" void syncJ3DSysFlags__12J3DModelDataCFv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+SECTION_INIT void memcpy();
+extern "C" void __dt__9J3DPacketFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void setArray__15J3DVertexBufferCFv();
+extern "C" void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" void syncJ3DSysFlags__12J3DModelDataCFv();
+extern "C" void DCStoreRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void GXCallDisplayList();
+extern "C" void GDInitGDLObj();
+extern "C" void GDFlushCurrToMem();
+extern "C" void GDPadCurr32();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern u8 sortFuncTable__13J3DDrawBuffer[72];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 struct_804515B0[4];

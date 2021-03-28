@@ -12,25 +12,29 @@
 // 
 
 
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void DSPAssertInt(); // 1
-extern "C" void DSPInit(); // 1
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void DSPAssertInt();
+extern "C" void DSPInit();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __DSP_tmp_task[4];
+extern "C" extern u8 __DSP_last_task[4];
+extern "C" extern u8 __DSP_first_task[4];
+extern "C" extern u8 __DSP_curr_task[4];
 
-extern "C" void __DSPHandler(); // 1
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void __DSP_debug_printf(); // 1
+extern "C" void __DSPHandler();
+extern "C" void OSRegisterVersion();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void __DSP_debug_printf();
 extern "C" extern u8 __DSP_tmp_task[4];
 extern "C" extern u8 __DSP_last_task[4];
 extern "C" extern u8 __DSP_first_task[4];

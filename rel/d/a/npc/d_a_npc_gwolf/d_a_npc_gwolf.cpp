@@ -14,6 +14,11 @@
 struct request_of_phase_process_class {
 };
 
+struct csXyz {
+	/* 809F7D04 */ ~csXyz();
+	/* 809F7D40 */ csXyz();
+};
+
 struct Vec {
 };
 
@@ -21,11 +26,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 809F7D44 */ ~cXyz();
 	/* 809F7D80 */ cXyz();
-};
-
-struct csXyz {
-	/* 809F7D04 */ ~csXyz();
-	/* 809F7D40 */ csXyz();
 };
 
 struct mDoMtx_stack_c {
@@ -69,6 +69,9 @@ struct mDoExt_bckAnm {
 	/* 8000D990 */ void changeBckOnly(J3DAnmTransform*);
 };
 
+struct mDoExt_McaMorfCallBack2_c {
+};
+
 struct J3DModelData {
 };
 
@@ -76,9 +79,6 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -99,17 +99,17 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct dBgS_ObjAcch {
-	/* 809F828C */ ~dBgS_ObjAcch();
+struct J3DJoint {
 };
 
 struct _GXColorS10 {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct dBgS_ObjAcch {
+	/* 809F828C */ ~dBgS_ObjAcch();
 };
 
 struct daNpc_GWolf_c {
@@ -169,14 +169,14 @@ struct dCcD_GObjInf {
 	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
-struct J3DAnmTransformKey {
-};
-
 struct dCcD_SrcCyl {
 };
 
 struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
+};
+
+struct J3DAnmTransformKey {
 };
 
 struct daNpcF_c {
@@ -413,100 +413,149 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void callback_proc(void*, int); // 2
-static void daNpc_GWolf_Create(void*); // 2
-static void daNpc_GWolf_Delete(void*); // 2
-static void daNpc_GWolf_Execute(void*); // 2
-static void daNpc_GWolf_Draw(void*); // 2
-static bool daNpc_GWolf_IsDelete(void*); // 2
-static void cLib_calcTimer__template0(int*); // 2
+static void callback_proc(void*, int);
+static void daNpc_GWolf_Create(void*);
+static void daNpc_GWolf_Delete(void*);
+static void daNpc_GWolf_Execute(void*);
+static void daNpc_GWolf_Draw(void*);
+static bool daNpc_GWolf_IsDelete(void*);
+static void cLib_calcTimer__template0(int*);
+extern "C" extern u8 const lit_5176[36];
+extern "C" extern u32 const lit_5638;
+extern "C" extern u32 const lit_5640;
+extern "C" extern u32 const lit_5814;
+extern "C" extern u32 const lit_5815;
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 l_brkGetParamList[8];
+extern "C" extern void* g_profile_NPC_GWOLF[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_809F8F34[4];
+extern "C" extern u8 data_809F8F38[4];
+extern "C" extern u8 data_809F8F3C[4];
+extern "C" extern u8 data_809F8F40[4];
+extern "C" extern u8 data_809F8F44[4];
+extern "C" extern u8 data_809F8F48[4];
+extern "C" extern u8 data_809F8F4C[4];
+extern "C" extern u8 data_809F8F50[4];
+extern "C" extern u8 data_809F8F54[4];
+extern "C" extern u8 data_809F8F58[4];
+extern "C" extern u8 data_809F8F5C[4];
+extern "C" extern u8 data_809F8F60[4];
+extern "C" extern u8 data_809F8F64[4];
+extern "C" extern u8 data_809F8F68[4];
+extern "C" extern u8 data_809F8F6C[4];
+extern "C" extern u8 data_809F8F70[4];
+extern "C" extern u8 data_809F8F74[4];
+extern "C" extern u8 data_809F8F78[4];
+extern "C" extern u8 data_809F8F7C[4];
+extern "C" extern u8 data_809F8F80[4];
+extern "C" extern u8 data_809F8F84[4];
+extern "C" extern u8 data_809F8F88[4];
+extern "C" extern u8 data_809F8F8C[4];
+extern "C" extern u8 data_809F8F90[4];
+extern "C" extern u8 data_809F8F94[4];
 
-extern "C" void __ct__13daNpc_GWolf_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__13daNpc_GWolf_cFv(); // 1
-extern "C" void create__13daNpc_GWolf_cFv(); // 1
-extern "C" void CreateHeap__13daNpc_GWolf_cFv(); // 1
-extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
-extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
-extern "C" void __dt__14J3DTevColorAnmFv(); // 1
-extern "C" void __ct__14J3DTevColorAnmFv(); // 1
-extern "C" void __dt__11J3DTexNoAnmFv(); // 1
-extern "C" void __ct__11J3DTexNoAnmFv(); // 1
-extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
-extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
-extern "C" void __dt__14J3DMatColorAnmFv(); // 1
-extern "C" void __ct__14J3DMatColorAnmFv(); // 1
-extern "C" void Delete__13daNpc_GWolf_cFv(); // 1
-extern "C" void Execute__13daNpc_GWolf_cFv(); // 1
-extern "C" void Draw__13daNpc_GWolf_cFv(); // 1
-extern "C" void draw__13daNpc_GWolf_cFiifP11_GXColorS10i(); // 1
-extern "C" void ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel(); // 1
-extern "C" void createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c(); // 1
-extern "C" void ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi(); // 1
-extern "C" void setParam__13daNpc_GWolf_cFv(); // 1
-extern "C" void main__13daNpc_GWolf_cFv(); // 1
-extern "C" void ctrlBtk__13daNpc_GWolf_cFv(); // 1
-extern "C" void adjustShapeAngle__13daNpc_GWolf_cFv(); // 1
-extern "C" void setAttnPos__13daNpc_GWolf_cFv(); // 1
-extern "C" bool setExpressionAnm__13daNpc_GWolf_cFib(); // 1
-extern "C" void setExpression__13daNpc_GWolf_cFif(); // 1
-extern "C" void setMotionAnm__13daNpc_GWolf_cFif(); // 1
-extern "C" void setMotion__13daNpc_GWolf_cFifi(); // 1
-extern "C" bool drawDbgInfo__13daNpc_GWolf_cFv(); // 1
-extern "C" void drawOtherMdls__13daNpc_GWolf_cFv(); // 1
-extern "C" void getTypeFromParam__13daNpc_GWolf_cFv(); // 1
-extern "C" void getModeFromParam__13daNpc_GWolf_cFv(); // 1
-extern "C" void isDelete__13daNpc_GWolf_cFv(); // 1
-extern "C" void reset__13daNpc_GWolf_cFv(); // 1
-extern "C" void playMotion__13daNpc_GWolf_cFv(); // 1
-extern "C" void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i(); // 1
-extern "C" void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i(); // 1
-extern "C" void selectAction__13daNpc_GWolf_cFv(); // 1
-extern "C" void doNormalAction__13daNpc_GWolf_cFi(); // 1
-extern "C" void doEvent__13daNpc_GWolf_cFv(); // 1
-extern "C" void setLookMode__13daNpc_GWolf_cFi(); // 1
-extern "C" void lookat__13daNpc_GWolf_cFv(); // 1
-extern "C" void ECut_attackWarp__13daNpc_GWolf_cFi(); // 1
-extern "C" void ECut_attackWarpHorse__13daNpc_GWolf_cFi(); // 1
-extern "C" void ECut_howlingSessionA__13daNpc_GWolf_cFi(); // 1
-extern "C" static void callback_proc__FPvi(); // 1
-extern "C" void meetGWolfSkip__13daNpc_GWolf_cFv(); // 1
-extern "C" void ECut_meetGWolf__13daNpc_GWolf_cFi(); // 1
-extern "C" void wait__13daNpc_GWolf_cFPv(); // 1
-extern "C" void waitHowling__13daNpc_GWolf_cFPv(); // 1
-extern "C" void waitBrave__13daNpc_GWolf_cFPv(); // 1
-extern "C" void talk__13daNpc_GWolf_cFPv(); // 1
-extern "C" void test__13daNpc_GWolf_cFPv(); // 1
-extern "C" void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" static void daNpc_GWolf_Create__FPv(); // 1
-extern "C" static void daNpc_GWolf_Delete__FPv(); // 1
-extern "C" static void daNpc_GWolf_Execute__FPv(); // 1
-extern "C" static void daNpc_GWolf_Draw__FPv(); // 1
-extern "C" static bool daNpc_GWolf_IsDelete__FPv(); // 1
-extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
-extern "C" void __dt__18daNpcF_ActorMngr_cFv(); // 1
-extern "C" void __ct__18daNpcF_ActorMngr_cFv(); // 1
-extern "C" void __dt__15daNpcF_Lookat_cFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __dt__8daNpcF_cFv(); // 1
-extern "C" void __ct__8daNpcF_cFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void setCollisions__8daNpcF_cFv(); // 1
-extern "C" bool setExpressionBtp__8daNpcF_cFi(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_809F8398(); // 1
-extern "C" void __sinit_d_a_npc_gwolf_cpp(); // 1
-extern "C" void __dt__19daNpc_GWolf_Param_cFv(); // 1
-extern "C" static void func_809F84D0(); // 1
-extern "C" static void func_809F84D8(); // 1
+extern "C" void __ct__13daNpc_GWolf_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__13daNpc_GWolf_cFv();
+extern "C" void create__13daNpc_GWolf_cFv();
+extern "C" void CreateHeap__13daNpc_GWolf_cFv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void Delete__13daNpc_GWolf_cFv();
+extern "C" void Execute__13daNpc_GWolf_cFv();
+extern "C" void Draw__13daNpc_GWolf_cFv();
+extern "C" void draw__13daNpc_GWolf_cFiifP11_GXColorS10i();
+extern "C" void ctrlJoint__13daNpc_GWolf_cFP8J3DJointP8J3DModel();
+extern "C" void createHeapCallBack__13daNpc_GWolf_cFP10fopAc_ac_c();
+extern "C" void ctrlJointCallBack__13daNpc_GWolf_cFP8J3DJointi();
+extern "C" void setParam__13daNpc_GWolf_cFv();
+extern "C" void main__13daNpc_GWolf_cFv();
+extern "C" void ctrlBtk__13daNpc_GWolf_cFv();
+extern "C" void adjustShapeAngle__13daNpc_GWolf_cFv();
+extern "C" void setAttnPos__13daNpc_GWolf_cFv();
+extern "C" bool setExpressionAnm__13daNpc_GWolf_cFib();
+extern "C" void setExpression__13daNpc_GWolf_cFif();
+extern "C" void setMotionAnm__13daNpc_GWolf_cFif();
+extern "C" void setMotion__13daNpc_GWolf_cFifi();
+extern "C" bool drawDbgInfo__13daNpc_GWolf_cFv();
+extern "C" void drawOtherMdls__13daNpc_GWolf_cFv();
+extern "C" void getTypeFromParam__13daNpc_GWolf_cFv();
+extern "C" void getModeFromParam__13daNpc_GWolf_cFv();
+extern "C" void isDelete__13daNpc_GWolf_cFv();
+extern "C" void reset__13daNpc_GWolf_cFv();
+extern "C" void playMotion__13daNpc_GWolf_cFv();
+extern "C" void chkAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+extern "C" void setAction__13daNpc_GWolf_cFM13daNpc_GWolf_cFPCvPvPv_i();
+extern "C" void selectAction__13daNpc_GWolf_cFv();
+extern "C" void doNormalAction__13daNpc_GWolf_cFi();
+extern "C" void doEvent__13daNpc_GWolf_cFv();
+extern "C" void setLookMode__13daNpc_GWolf_cFi();
+extern "C" void lookat__13daNpc_GWolf_cFv();
+extern "C" void ECut_attackWarp__13daNpc_GWolf_cFi();
+extern "C" void ECut_attackWarpHorse__13daNpc_GWolf_cFi();
+extern "C" void ECut_howlingSessionA__13daNpc_GWolf_cFi();
+extern "C" static void callback_proc__FPvi();
+extern "C" void meetGWolfSkip__13daNpc_GWolf_cFv();
+extern "C" void ECut_meetGWolf__13daNpc_GWolf_cFi();
+extern "C" void wait__13daNpc_GWolf_cFPv();
+extern "C" void waitHowling__13daNpc_GWolf_cFPv();
+extern "C" void waitBrave__13daNpc_GWolf_cFPv();
+extern "C" void talk__13daNpc_GWolf_cFPv();
+extern "C" void test__13daNpc_GWolf_cFPv();
+extern "C" void getGroundSlope__13daNpc_GWolf_cFR12dBgS_ObjAcchs();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" static void daNpc_GWolf_Create__FPv();
+extern "C" static void daNpc_GWolf_Delete__FPv();
+extern "C" static void daNpc_GWolf_Execute__FPv();
+extern "C" static void daNpc_GWolf_Draw__FPv();
+extern "C" static bool daNpc_GWolf_IsDelete__FPv();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
+extern "C" void __dt__18daNpcF_ActorMngr_cFv();
+extern "C" void __ct__18daNpcF_ActorMngr_cFv();
+extern "C" void __dt__15daNpcF_Lookat_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8daNpcF_cFv();
+extern "C" void __ct__8daNpcF_cFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void setCollisions__8daNpcF_cFv();
+extern "C" bool setExpressionBtp__8daNpcF_cFi();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" static void func_809F8398();
+extern "C" void __sinit_d_a_npc_gwolf_cpp();
+extern "C" void __dt__19daNpc_GWolf_Param_cFv();
+extern "C" static void func_809F84D0();
+extern "C" static void func_809F84D8();
 extern "C" extern u8 const lit_5176[36];
 extern "C" extern u32 const lit_5638;
 extern "C" extern u32 const lit_5640;
@@ -561,192 +610,36 @@ extern "C" extern u8 data_809F8F94[4];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*); // 2
-void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGs_onStageSwitch(int, int); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void dComIfGs_wolfeye_effect_check(); // 2
-void daNpcT_onEvtBit(u32); // 2
-void daNpcT_chkEvtBit(u32); // 2
-void daNpcT_onTmpBit(u32); // 2
-void daNpcT_offTmpBit(u32); // 2
-void daNpcT_chkTmpBit(u32); // 2
-void dCam_getBody(); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void cLib_chaseS(s16*, s16, s16); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_targetAngleX(cXyz const*, cXyz const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData(); // 1
-extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGs_onStageSwitch__Fii(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void dComIfGs_wolfeye_effect_check__Fv(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void onSkipFade__14dEvt_control_cFv(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void ChkPresentEnd__16dEvent_manager_cFv(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWallR__12dBgS_AcchCirFf(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __ct__11dBgS_LinChkFv(); // 1
-extern "C" void __dt__11dBgS_LinChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void daNpcT_onEvtBit__FUl(); // 1
-extern "C" void daNpcT_chkEvtBit__FUl(); // 1
-extern "C" void daNpcT_onTmpBit__FUl(); // 1
-extern "C" void daNpcT_offTmpBit__FUl(); // 1
-extern "C" void daNpcT_chkTmpBit__FUl(); // 1
-extern "C" void initialize__18daNpcF_ActorMngr_cFv(); // 1
-extern "C" void entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c(); // 1
-extern "C" void remove__18daNpcF_ActorMngr_cFv(); // 1
-extern "C" void getActorP__18daNpcF_ActorMngr_cFv(); // 1
-extern "C" void initialize__15daNpcF_MatAnm_cFv(); // 1
-extern "C" void initialize__15daNpcF_Lookat_cFv(); // 1
-extern "C" void setParam__15daNpcF_Lookat_cFffffffffffffsP4cXyz(); // 1
-extern "C" void calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii(); // 1
-extern "C" void execute__8daNpcF_cFv(); // 1
-extern "C" void tgHitCallBack__8daNpcF_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" void srchAttnActor1__8daNpcF_cFPvPv(); // 1
-extern "C" void setMtx__8daNpcF_cFv(); // 1
-extern "C" void setMtx2__8daNpcF_cFv(); // 1
-extern "C" void initialize__8daNpcF_cFv(); // 1
-extern "C" void getTrnsfrmKeyAnmP__8daNpcF_cFPci(); // 1
-extern "C" void getTexSRTKeyAnmP__8daNpcF_cFPci(); // 1
-extern "C" void getTevRegKeyAnmP__8daNpcF_cFPci(); // 1
-extern "C" void setMcaMorfAnm__8daNpcF_cFP18J3DAnmTransformKeyffiii(); // 1
-extern "C" void setBtkAnm__8daNpcF_cFP19J3DAnmTextureSRTKeyP12J3DModelDatafi(); // 1
-extern "C" void setBrkAnm__8daNpcF_cFP15J3DAnmTevRegKeyP12J3DModelDatafi(); // 1
-extern "C" void setEnvTevColor__8daNpcF_cFv(); // 1
-extern "C" void setRoomNo__8daNpcF_cFv(); // 1
-extern "C" void playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData(); // 1
-extern "C" void setLookatMtx__8daNpcF_cFiPif(); // 1
-extern "C" void hitChk2__8daNpcF_cFP8dCcD_Cylii(); // 1
-extern "C" void setDamage__8daNpcF_cFiii(); // 1
-extern "C" void ctrlMsgAnm__8daNpcF_cFRiRiP10fopAc_ac_ci(); // 1
-extern "C" void orderEvent__8daNpcF_cFiPcUsUsUcUs(); // 1
-extern "C" void changeEvent__8daNpcF_cFPcPcUsUs(); // 1
-extern "C" void initTalk__8daNpcF_cFiPP10fopAc_ac_c(); // 1
-extern "C" void talkProc__8daNpcF_cFPiiPP10fopAc_ac_c(); // 1
-extern "C" void step__8daNpcF_cFsiii(); // 1
-extern "C" void setAngle__8daNpcF_cFs(); // 1
-extern "C" void getDistTableIdx__8daNpcF_cFii(); // 1
-extern "C" void getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii(); // 1
-extern "C" void chkFindPlayer2__8daNpcF_cFis(); // 1
-extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void __dt__11cBgS_GndChkFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void cLib_chaseS__FPsss(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void __dt__10Z2CreatureFv(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecUcUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs(); // 1
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_setEffectMtx(fopAc_ac_c const*, J3DModelData const*);
+void fopAcM_getPolygonAngle(cM3dGPla const*, s16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGs_onStageSwitch(int, int);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfGs_wolfeye_effect_check();
+void daNpcT_onEvtBit(u32);
+void daNpcT_chkEvtBit(u32);
+void daNpcT_onTmpBit(u32);
+void daNpcT_offTmpBit(u32);
+void daNpcT_chkTmpBit(u32);
+void dCam_getBody();
+void cM_atan2s(f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_chaseS(s16*, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_targetAngleX(cXyz const*, cXyz const*);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
@@ -770,7 +663,186 @@ extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_setEffectMtx__FPC10fopAc_ac_cPC12J3DModelData();
+extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGs_onStageSwitch__Fii();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void dComIfGs_wolfeye_effect_check__Fv();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void onSkipFade__14dEvt_control_cFv();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void ChkPresentEnd__16dEvent_manager_cFv();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWallR__12dBgS_AcchCirFf();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __ct__11dBgS_LinChkFv();
+extern "C" void __dt__11dBgS_LinChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void daNpcT_onEvtBit__FUl();
+extern "C" void daNpcT_chkEvtBit__FUl();
+extern "C" void daNpcT_onTmpBit__FUl();
+extern "C" void daNpcT_offTmpBit__FUl();
+extern "C" void daNpcT_chkTmpBit__FUl();
+extern "C" void initialize__18daNpcF_ActorMngr_cFv();
+extern "C" void entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c();
+extern "C" void remove__18daNpcF_ActorMngr_cFv();
+extern "C" void getActorP__18daNpcF_ActorMngr_cFv();
+extern "C" void initialize__15daNpcF_MatAnm_cFv();
+extern "C" void initialize__15daNpcF_Lookat_cFv();
+extern "C" void setParam__15daNpcF_Lookat_cFffffffffffffsP4cXyz();
+extern "C" void calc__15daNpcF_Lookat_cFP10fopAc_ac_cPA4_fPP5csXyziii();
+extern "C" void execute__8daNpcF_cFv();
+extern "C" void tgHitCallBack__8daNpcF_cFP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void srchAttnActor1__8daNpcF_cFPvPv();
+extern "C" void setMtx__8daNpcF_cFv();
+extern "C" void setMtx2__8daNpcF_cFv();
+extern "C" void initialize__8daNpcF_cFv();
+extern "C" void getTrnsfrmKeyAnmP__8daNpcF_cFPci();
+extern "C" void getTexSRTKeyAnmP__8daNpcF_cFPci();
+extern "C" void getTevRegKeyAnmP__8daNpcF_cFPci();
+extern "C" void setMcaMorfAnm__8daNpcF_cFP18J3DAnmTransformKeyffiii();
+extern "C" void setBtkAnm__8daNpcF_cFP19J3DAnmTextureSRTKeyP12J3DModelDatafi();
+extern "C" void setBrkAnm__8daNpcF_cFP15J3DAnmTevRegKeyP12J3DModelDatafi();
+extern "C" void setEnvTevColor__8daNpcF_cFv();
+extern "C" void setRoomNo__8daNpcF_cFv();
+extern "C" void playMotionAnm__8daNpcF_cFPPPQ28daNpcF_c18daNpcF_anmPlayData();
+extern "C" void setLookatMtx__8daNpcF_cFiPif();
+extern "C" void hitChk2__8daNpcF_cFP8dCcD_Cylii();
+extern "C" void setDamage__8daNpcF_cFiii();
+extern "C" void ctrlMsgAnm__8daNpcF_cFRiRiP10fopAc_ac_ci();
+extern "C" void orderEvent__8daNpcF_cFiPcUsUsUcUs();
+extern "C" void changeEvent__8daNpcF_cFPcPcUsUs();
+extern "C" void initTalk__8daNpcF_cFiPP10fopAc_ac_c();
+extern "C" void talkProc__8daNpcF_cFPiiPP10fopAc_ac_c();
+extern "C" void step__8daNpcF_cFsiii();
+extern "C" void setAngle__8daNpcF_cFs();
+extern "C" void getDistTableIdx__8daNpcF_cFii();
+extern "C" void getAttnActorP__8daNpcF_cFiPFPvPv_Pvffffsii();
+extern "C" void chkFindPlayer2__8daNpcF_cFis();
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+extern "C" void dCam_getBody__Fv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void __dt__11cBgS_GndChkFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_chaseS__FPsss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void __dt__10Z2CreatureFv();
+extern "C" void init__10Z2CreatureFP3VecP3VecUcUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_cmpr();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern u8 mCcDCyl__8daNpcF_c[68];
+extern "C" extern void* __vt__8daNpcF_c[18];
+extern "C" extern void* __vt__15daNpcF_MatAnm_c[4 + 6 /* padding */];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern void* __vt__14J3DMaterialAnm[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

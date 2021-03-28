@@ -12,15 +12,17 @@
 // 
 
 
-extern "C" void __ieee754_pow(); // 1
+extern "C" void __ieee754_pow();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
-extern "C" void ldexp(); // 1
-extern "C" void sqrt(); // 1
+extern "C" void ldexp();
+extern "C" void sqrt();
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 errno[4 + 4 /* padding */];
 

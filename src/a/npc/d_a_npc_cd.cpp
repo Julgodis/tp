@@ -23,16 +23,16 @@ struct mDoHIO_entry_c {
 	/* 8015791C */ ~mDoHIO_entry_c();
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -54,10 +54,10 @@ struct daPy_py_c {
 	/* 8015F424 */ void checkNowWolfEyeUp();
 };
 
-struct J3DAnmTransformKey {
+struct J3DJoint {
 };
 
-struct J3DJoint {
+struct J3DAnmTransformKey {
 };
 
 struct J3DModel {
@@ -98,11 +98,11 @@ struct daNpcCd_HIO_Child_c {
 	/* 80157858 */ daNpcCd_HIO_Child_c();
 };
 
-struct cXyz {
-	/* 80009184 */ ~cXyz();
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
+	/* 80009184 */ ~cXyz();
 };
 
 struct dScnKy_env_light_c {
@@ -120,10 +120,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -154,35 +154,40 @@ struct Z2CreatureCitizen {
 // Forward References:
 // 
 
-static void jntNodeCallBack(J3DJoint*, int); // 2
+static void jntNodeCallBack(J3DJoint*, int);
+extern "C" extern u8 const m_cylDat__9daNpcCd_c[68];
+extern "C" extern char const* const a_npc_d_a_npc_cd__stringBase0;
+extern "C" extern void* __vt__18fOpAcm_HIO_entry_c[3];
+extern "C" extern void* __vt__14mDoHIO_entry_c[3];
+extern "C" extern u8 l_Cd_HIO[10684];
 
-extern "C" static void jntNodeCallBack__FP8J3DJointi(); // 1
-extern "C" void NpcCreate__9daNpcCd_cFi(); // 1
-extern "C" void ObjCreate__9daNpcCd_cFi(); // 1
-extern "C" void isM___9daNpcCd_cFv(); // 1
-extern "C" void getAnmP__9daNpcCd_cFii(); // 1
-extern "C" void setAttention__9daNpcCd_cFi(); // 1
-extern "C" void loadResrc__9daNpcCd_cFii(); // 1
-extern "C" void removeResrc__9daNpcCd_cFii(); // 1
-extern "C" void setEnvTevCol__9daNpcCd_cFv(); // 1
-extern "C" void setRoomNo__9daNpcCd_cFv(); // 1
-extern "C" void animation__9daNpcCd_cFv(); // 1
-extern "C" void setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii(); // 1
-extern "C" void drawObj__9daNpcCd_cFiP8J3DModelf(); // 1
-extern "C" void drawNpc__9daNpcCd_cFv(); // 1
-extern "C" void jntNodeCB__9daNpcCd_cFP8J3DJointP8J3DModel(); // 1
-extern "C" void setHitodamaParticle__9daNpcCd_cFv(); // 1
-extern "C" void getNpcMdlDataP__9daNpcCd_cFi(); // 1
-extern "C" void getObjMdlDataP__9daNpcCd_cFi(); // 1
-extern "C" void __ct__13daNpcCd_HIO_cFv(); // 1
-extern "C" void __dt__19daNpcCd_HIO_Child_cFv(); // 1
-extern "C" void __dt__17daNpcCd_HIO_Jnt_cFv(); // 1
-extern "C" void __ct__19daNpcCd_HIO_Child_cFv(); // 1
-extern "C" void __ct__17daNpcCd_HIO_Jnt_cFv(); // 1
-extern "C" void __dt__18fOpAcm_HIO_entry_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void __dt__13daNpcCd_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_npc_cd_cpp(); // 1
+extern "C" static void jntNodeCallBack__FP8J3DJointi();
+extern "C" void NpcCreate__9daNpcCd_cFi();
+extern "C" void ObjCreate__9daNpcCd_cFi();
+extern "C" void isM___9daNpcCd_cFv();
+extern "C" void getAnmP__9daNpcCd_cFii();
+extern "C" void setAttention__9daNpcCd_cFi();
+extern "C" void loadResrc__9daNpcCd_cFii();
+extern "C" void removeResrc__9daNpcCd_cFii();
+extern "C" void setEnvTevCol__9daNpcCd_cFv();
+extern "C" void setRoomNo__9daNpcCd_cFv();
+extern "C" void animation__9daNpcCd_cFv();
+extern "C" void setAnm__9daNpcCd_cFP18J3DAnmTransformKeyffiii();
+extern "C" void drawObj__9daNpcCd_cFiP8J3DModelf();
+extern "C" void drawNpc__9daNpcCd_cFv();
+extern "C" void jntNodeCB__9daNpcCd_cFP8J3DJointP8J3DModel();
+extern "C" void setHitodamaParticle__9daNpcCd_cFv();
+extern "C" void getNpcMdlDataP__9daNpcCd_cFi();
+extern "C" void getObjMdlDataP__9daNpcCd_cFi();
+extern "C" void __ct__13daNpcCd_HIO_cFv();
+extern "C" void __dt__19daNpcCd_HIO_Child_cFv();
+extern "C" void __dt__17daNpcCd_HIO_Jnt_cFv();
+extern "C" void __ct__19daNpcCd_HIO_Child_cFv();
+extern "C" void __ct__17daNpcCd_HIO_Jnt_cFv();
+extern "C" void __dt__18fOpAcm_HIO_entry_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__13daNpcCd_HIO_cFv();
+extern "C" void __sinit_d_a_npc_cd_cpp();
 extern "C" extern u8 const m_cylDat__9daNpcCd_c[68];
 extern "C" extern char const* const a_npc_d_a_npc_cd__stringBase0;
 extern "C" extern void* __vt__18fOpAcm_HIO_entry_c[3];
@@ -193,55 +198,62 @@ extern "C" extern u8 l_Cd_HIO[10684];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cLib_calcTimer__template2(int*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cLib_calcTimer__template2(int*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 data_80450FF8[8];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
-extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
-extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void func_8014D348(); // 1
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc(); // 1
-extern "C" void setMdlType__17Z2CreatureCitizenFScbb(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
+extern "C" void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void func_8014D348();
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void init__17Z2CreatureCitizenFP3VecP3VecUcUc();
+extern "C" void setMdlType__17Z2CreatureCitizenFScbb();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];

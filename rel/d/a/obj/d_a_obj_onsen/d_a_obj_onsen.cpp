@@ -71,10 +71,10 @@ struct dRes_control_c {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -99,24 +99,26 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daObjOnsen_create1st(daObjOnsen_c*); // 2
-static void daObjOnsen_MoveBGDelete(daObjOnsen_c*); // 2
-static void daObjOnsen_MoveBGExecute(daObjOnsen_c*); // 2
-static void daObjOnsen_MoveBGDraw(daObjOnsen_c*); // 2
+static void daObjOnsen_create1st(daObjOnsen_c*);
+static void daObjOnsen_MoveBGDelete(daObjOnsen_c*);
+static void daObjOnsen_MoveBGExecute(daObjOnsen_c*);
+static void daObjOnsen_MoveBGDraw(daObjOnsen_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_Onsen[12];
 
-extern "C" void initBaseMtx__12daObjOnsen_cFv(); // 1
-extern "C" void setBaseMtx__12daObjOnsen_cFv(); // 1
-extern "C" void Create__12daObjOnsen_cFv(); // 1
-extern "C" void CreateHeap__12daObjOnsen_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void create1st__12daObjOnsen_cFv(); // 1
-extern "C" void Execute__12daObjOnsen_cFPPA3_A4_f(); // 1
-extern "C" void Draw__12daObjOnsen_cFv(); // 1
-extern "C" void Delete__12daObjOnsen_cFv(); // 1
-extern "C" static void daObjOnsen_create1st__FP12daObjOnsen_c(); // 1
-extern "C" static void daObjOnsen_MoveBGDelete__FP12daObjOnsen_c(); // 1
-extern "C" static void daObjOnsen_MoveBGExecute__FP12daObjOnsen_c(); // 1
-extern "C" static void daObjOnsen_MoveBGDraw__FP12daObjOnsen_c(); // 1
+extern "C" void initBaseMtx__12daObjOnsen_cFv();
+extern "C" void setBaseMtx__12daObjOnsen_cFv();
+extern "C" void Create__12daObjOnsen_cFv();
+extern "C" void CreateHeap__12daObjOnsen_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__12daObjOnsen_cFv();
+extern "C" void Execute__12daObjOnsen_cFPPA3_A4_f();
+extern "C" void Draw__12daObjOnsen_cFv();
+extern "C" void Delete__12daObjOnsen_cFv();
+extern "C" static void daObjOnsen_create1st__FP12daObjOnsen_c();
+extern "C" static void daObjOnsen_MoveBGDelete__FP12daObjOnsen_c();
+extern "C" static void daObjOnsen_MoveBGExecute__FP12daObjOnsen_c();
+extern "C" static void daObjOnsen_MoveBGDraw__FP12daObjOnsen_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_Onsen[12];
 
@@ -124,43 +126,49 @@ extern "C" extern void* g_profile_Obj_Onsen[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dKy_bg_MAxx_proc(void*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dKy_bg_MAxx_proc(void*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_bg_MAxx_proc__FPv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

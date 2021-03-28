@@ -51,48 +51,50 @@ struct JASBasicWaveBank {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template0(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template1(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template2(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template3(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template4(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template5(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template6(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template0(void const*, u32);
+static void JSUConvertOffsetToPtr__template1(void const*, u32);
+static void JSUConvertOffsetToPtr__template2(void const*, u32);
+static void JSUConvertOffsetToPtr__template3(void const*, u32);
+static void JSUConvertOffsetToPtr__template4(void const*, u32);
+static void JSUConvertOffsetToPtr__template5(void const*, u32);
+static void JSUConvertOffsetToPtr__template6(void const*, u32);
 
-extern "C" void getGroupCount__11JASWSParserFPCv(); // 1
-extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap(); // 1
-extern "C" void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap(); // 1
-extern "C" void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap(); // 1
-extern "C" static void func_80299490(); // 1
-extern "C" static void func_802994A8(); // 1
-extern "C" static void func_802994C0(); // 1
-extern "C" static void func_802994D8(); // 1
-extern "C" static void func_802994F0(); // 1
-extern "C" static void func_80299508(); // 1
-extern "C" static void func_80299520(); // 1
+extern "C" void getGroupCount__11JASWSParserFPCv();
+extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" void createBasicWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" void createSimpleWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" static void func_80299490();
+extern "C" static void func_802994A8();
+extern "C" static void func_802994C0();
+extern "C" static void func_802994D8();
+extern "C" static void func_802994F0();
+extern "C" static void func_80299508();
+extern "C" static void func_80299520();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
+void* operator new(u32, JKRHeap*, int);
+extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
+extern "C" extern u8 JASDram[4];
 
-extern "C" void __ct__16JASBasicWaveBankFv(); // 1
-extern "C" void getWaveGroup__16JASBasicWaveBankFUl(); // 1
-extern "C" void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap(); // 1
-extern "C" void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap(); // 1
-extern "C" void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo(); // 1
-extern "C" void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap(); // 1
-extern "C" void __ct__17JASSimpleWaveBankFv(); // 1
-extern "C" void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap(); // 1
-extern "C" void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo(); // 1
-extern "C" void setFileName__10JASWaveArcFPCc(); // 1
-extern "C" void getFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
+extern "C" void __ct__16JASBasicWaveBankFv();
+extern "C" void getWaveGroup__16JASBasicWaveBankFUl();
+extern "C" void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo();
+extern "C" void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap();
+extern "C" void __ct__17JASSimpleWaveBankFv();
+extern "C" void setWaveTableSize__17JASSimpleWaveBankFUlP7JKRHeap();
+extern "C" void setWaveInfo__17JASSimpleWaveBankFUlRC11JASWaveInfo();
+extern "C" void setFileName__10JASWaveArcFPCc();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
 extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 extern "C" extern u8 JASDram[4];
 

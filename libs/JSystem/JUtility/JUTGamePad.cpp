@@ -107,44 +107,50 @@ struct JKRDisposer {
 // Forward References:
 // 
 
-static void getNumBit(u8*, int); // 2
+static void getNumBit(u8*, int);
+extern "C" extern u8 mPadStatus__10JUTGamePad[48];
+extern "C" extern u8 sAnalogMode__10JUTGamePad[4];
+extern "C" extern u8 sRumbleSupported__10JUTGamePad[4];
+extern "C" extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
+extern "C" extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451500[4];
 
-extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort(); // 1
-extern "C" void __dt__10JUTGamePadFv(); // 1
-extern "C" void initList__10JUTGamePadFv(); // 1
-extern "C" void init__10JUTGamePadFv(); // 1
-extern "C" void clear__10JUTGamePadFv(); // 1
-extern "C" void read__10JUTGamePadFv(); // 1
-extern "C" void assign__10JUTGamePadFv(); // 1
-extern "C" void checkResetCallback__10JUTGamePadFx(); // 1
-extern "C" void update__10JUTGamePadFv(); // 1
-extern "C" void checkResetSwitch__10JUTGamePadFv(); // 1
-extern "C" void clearForReset__10JUTGamePadFv(); // 1
-extern "C" void clear__Q210JUTGamePad7CButtonFv(); // 1
-extern "C" void update__Q210JUTGamePad7CButtonFPC9PADStatusUl(); // 1
-extern "C" void clear__Q210JUTGamePad6CStickFv(); // 1
-extern "C" void update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl(); // 1
-extern "C" void getButton__Q210JUTGamePad6CStickFUl(); // 1
-extern "C" void clear__Q210JUTGamePad7CRumbleFv(); // 1
-extern "C" void clear__Q210JUTGamePad7CRumbleFP10JUTGamePad(); // 1
-extern "C" void startMotor__Q210JUTGamePad7CRumbleFi(); // 1
-extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib(); // 1
-extern "C" static void getNumBit__FPUci(); // 1
-extern "C" void update__Q210JUTGamePad7CRumbleFs(); // 1
-extern "C" void triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl(); // 1
-extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl(); // 1
-extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs(); // 1
-extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv(); // 1
-extern "C" void getGamePad__10JUTGamePadFi(); // 1
-extern "C" void setEnabled__Q210JUTGamePad7CRumbleFUl(); // 1
-extern "C" void setRepeat__Q210JUTGamePad7CButtonFUlUlUl(); // 1
-extern "C" void recalibrate__10JUTGamePadFUl(); // 1
-extern "C" void checkCallback__19JUTGamePadLongPressFiUl(); // 1
-extern "C" void __sinit_JUTGamePad_cpp(); // 1
-extern "C" void func_802E1C54(); // 1
-extern "C" void __ct__Q210JUTGamePad6CStickFv(); // 1
-extern "C" void __ct__Q210JUTGamePad7CButtonFv(); // 1
-extern "C" void func_802E1D08(); // 1
+extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern "C" void __dt__10JUTGamePadFv();
+extern "C" void initList__10JUTGamePadFv();
+extern "C" void init__10JUTGamePadFv();
+extern "C" void clear__10JUTGamePadFv();
+extern "C" void read__10JUTGamePadFv();
+extern "C" void assign__10JUTGamePadFv();
+extern "C" void checkResetCallback__10JUTGamePadFx();
+extern "C" void update__10JUTGamePadFv();
+extern "C" void checkResetSwitch__10JUTGamePadFv();
+extern "C" void clearForReset__10JUTGamePadFv();
+extern "C" void clear__Q210JUTGamePad7CButtonFv();
+extern "C" void update__Q210JUTGamePad7CButtonFPC9PADStatusUl();
+extern "C" void clear__Q210JUTGamePad6CStickFv();
+extern "C" void update__Q210JUTGamePad6CStickFScScQ210JUTGamePad10EStickModeQ210JUTGamePad11EWhichStickUl();
+extern "C" void getButton__Q210JUTGamePad6CStickFUl();
+extern "C" void clear__Q210JUTGamePad7CRumbleFv();
+extern "C" void clear__Q210JUTGamePad7CRumbleFP10JUTGamePad();
+extern "C" void startMotor__Q210JUTGamePad7CRumbleFi();
+extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib();
+extern "C" static void getNumBit__FPUci();
+extern "C" void update__Q210JUTGamePad7CRumbleFs();
+extern "C" void triggerPatternedRumble__Q210JUTGamePad7CRumbleFUl();
+extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
+extern "C" void getGamePad__10JUTGamePadFi();
+extern "C" void setEnabled__Q210JUTGamePad7CRumbleFUl();
+extern "C" void setRepeat__Q210JUTGamePad7CButtonFUlUlUl();
+extern "C" void recalibrate__10JUTGamePadFUl();
+extern "C" void checkCallback__19JUTGamePadLongPressFiUl();
+extern "C" void __sinit_JUTGamePad_cpp();
+extern "C" void func_802E1C54();
+extern "C" void __ct__Q210JUTGamePad6CStickFv();
+extern "C" void __ct__Q210JUTGamePad7CButtonFv();
+extern "C" void func_802E1D08();
 extern "C" extern u8 mPadStatus__10JUTGamePad[48];
 extern "C" extern u8 sAnalogMode__10JUTGamePad[4];
 extern "C" extern u8 sRumbleSupported__10JUTGamePad[4];
@@ -156,40 +162,41 @@ extern "C" extern u8 struct_80451500[4];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 __float_nan;
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __ct__10JSUPtrListFb(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void OSGetResetSwitchState(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void PADClamp(); // 1
-extern "C" void PADClampCircle(); // 1
-extern "C" void PADReset(); // 1
-extern "C" void PADRecalibrate(); // 1
-extern "C" void PADInit(); // 1
-extern "C" void PADRead(); // 1
-extern "C" void PADControlMotor(); // 1
-extern "C" void PADSetSpec(); // 1
-extern "C" void PADSetAnalogMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void atan2(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSGetResetSwitchState();
+extern "C" void OSGetTime();
+extern "C" void PADClamp();
+extern "C" void PADClampCircle();
+extern "C" void PADReset();
+extern "C" void PADRecalibrate();
+extern "C" void PADInit();
+extern "C" void PADRead();
+extern "C" void PADControlMotor();
+extern "C" void PADSetSpec();
+extern "C" void PADSetAnalogMode();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void atan2();
 extern "C" extern u32 __float_nan;
 
 // 

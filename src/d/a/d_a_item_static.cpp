@@ -22,9 +22,9 @@ struct daItem_c {
 // 
 
 
-extern "C" void startCtrl__8daItem_cFv(); // 1
-extern "C" void startControl__8daItem_cFv(); // 1
-extern "C" void endControl__8daItem_cFv(); // 1
+extern "C" void startCtrl__8daItem_cFv();
+extern "C" void startControl__8daItem_cFv();
+extern "C" void endControl__8daItem_cFv();
 
 // 
 // External References:

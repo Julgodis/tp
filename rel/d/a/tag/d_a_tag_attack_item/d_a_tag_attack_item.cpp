@@ -11,11 +11,11 @@
 // Types:
 // 
 
-struct cXyz {
-};
-
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -100,73 +100,83 @@ struct cCcD_GStts {
 // Forward References:
 // 
 
-static void daTagAtkItem_Execute(daTagAtkItem_c*); // 2
-static void daTagAtkItem_Delete(daTagAtkItem_c*); // 2
-static void daTagAtkItem_Create(daTagAtkItem_c*); // 2
+static void daTagAtkItem_Execute(daTagAtkItem_c*);
+static void daTagAtkItem_Delete(daTagAtkItem_c*);
+static void daTagAtkItem_Create(daTagAtkItem_c*);
+extern "C" extern void* g_profile_Tag_AttackItem[12];
 
-extern "C" void setBaseMtx__14daTagAtkItem_cFv(); // 1
-extern "C" void Create__14daTagAtkItem_cFv(); // 1
-extern "C" void create__14daTagAtkItem_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void execute__14daTagAtkItem_cFv(); // 1
-extern "C" void action__14daTagAtkItem_cFv(); // 1
-extern "C" void eventStart__14daTagAtkItem_cFv(); // 1
-extern "C" void eventEnd__14daTagAtkItem_cFv(); // 1
-extern "C" void checkHit__14daTagAtkItem_cFv(); // 1
-extern "C" void createItem__14daTagAtkItem_cFv(); // 1
-extern "C" bool _delete__14daTagAtkItem_cFv(); // 1
-extern "C" static void daTagAtkItem_Execute__FP14daTagAtkItem_c(); // 1
-extern "C" static void daTagAtkItem_Delete__FP14daTagAtkItem_c(); // 1
-extern "C" static void daTagAtkItem_Create__FP14daTagAtkItem_c(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" static void func_805A3100(); // 1
-extern "C" static void func_805A3108(); // 1
-extern "C" static void func_805A3110(); // 1
-extern "C" void __dt__14daTagAtkItem_cFv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" void setBaseMtx__14daTagAtkItem_cFv();
+extern "C" void Create__14daTagAtkItem_cFv();
+extern "C" void create__14daTagAtkItem_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void execute__14daTagAtkItem_cFv();
+extern "C" void action__14daTagAtkItem_cFv();
+extern "C" void eventStart__14daTagAtkItem_cFv();
+extern "C" void eventEnd__14daTagAtkItem_cFv();
+extern "C" void checkHit__14daTagAtkItem_cFv();
+extern "C" void createItem__14daTagAtkItem_cFv();
+extern "C" bool _delete__14daTagAtkItem_cFv();
+extern "C" static void daTagAtkItem_Execute__FP14daTagAtkItem_c();
+extern "C" static void daTagAtkItem_Delete__FP14daTagAtkItem_c();
+extern "C" static void daTagAtkItem_Create__FP14daTagAtkItem_c();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" static void func_805A3100();
+extern "C" static void func_805A3108();
+extern "C" static void func_805A3110();
+extern "C" void __dt__14daTagAtkItem_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 extern "C" extern void* g_profile_Tag_AttackItem[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool); // 2
-void cM_rndFX(f32); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_createItemFromTable(cXyz const*, int, int, int, csXyz const*, int, cXyz const*, f32*, f32*, bool);
+void cM_rndFX(f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_createItemFromTable__FPC4cXyziiiPC5csXyziPC4cXyzPfPfb();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];

@@ -126,92 +126,108 @@ struct JAISeqMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const Z2SeqMgr__stringBase0;
 
-extern "C" void __ct__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void bgmStop__8Z2SeqMgrFUll(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
-extern "C" void subBgmStopInner__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
-extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamStop__8Z2SeqMgrFUl(); // 1
-extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void changeSubBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb(); // 1
-extern "C" void changeFishingBgm__8Z2SeqMgrFl(); // 1
-extern "C" void talkInBgm__8Z2SeqMgrFv(); // 1
-extern "C" void talkOutBgm__8Z2SeqMgrFv(); // 1
-extern "C" void menuInBgm__8Z2SeqMgrFv(); // 1
-extern "C" void menuOutBgm__8Z2SeqMgrFv(); // 1
-extern "C" void fanfareFramework__8Z2SeqMgrFv(); // 1
-extern "C" void stopWolfHowlSong__8Z2SeqMgrFv(); // 1
-extern "C" void setHeightVolMod__8Z2SeqMgrFbUl(); // 1
-extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl(); // 1
-extern "C" void processBgmFramework__8Z2SeqMgrFv(); // 1
-extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl(); // 1
-extern "C" void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei(); // 1
-extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff(); // 1
-extern "C" void resetBattleBgmParams__8Z2SeqMgrFv(); // 1
-extern "C" void setBattleBgmOff__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleSearched__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleDistIgnore__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleGhostMute__8Z2SeqMgrFb(); // 1
-extern "C" void setBattleDistState__8Z2SeqMgrFUc(); // 1
-extern "C" void setBattleSeqState__8Z2SeqMgrFUc(); // 1
-extern "C" void setBattleLastHit__8Z2SeqMgrFUc(); // 1
-extern "C" void battleBgmFramework__8Z2SeqMgrFv(); // 1
-extern "C" void startBattleBgm__8Z2SeqMgrFb(); // 1
-extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc(); // 1
-extern "C" void fieldBgmStart__8Z2SeqMgrFv(); // 1
-extern "C" void fieldRidingMute__8Z2SeqMgrFv(); // 1
-extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv(); // 1
-extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv(); // 1
-extern "C" void fieldBgmFramework__8Z2SeqMgrFv(); // 1
-extern "C" void mbossBgmMuteProcess__8Z2SeqMgrFv(); // 1
-extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl(); // 1
-extern "C" void bgmNowBattle__8Z2SeqMgrFf(); // 1
-extern "C" void taktModeMute__8Z2SeqMgrFv(); // 1
-extern "C" void taktModeMuteOff__8Z2SeqMgrFv(); // 1
+extern "C" void __ct__8Z2SeqMgrFv();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void subBgmStopInner__8Z2SeqMgrFv();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamCheckReady__8Z2SeqMgrFv();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" void onVariantBgmJumpEnd__8Z2SeqMgrFb();
+extern "C" void changeFishingBgm__8Z2SeqMgrFl();
+extern "C" void talkInBgm__8Z2SeqMgrFv();
+extern "C" void talkOutBgm__8Z2SeqMgrFv();
+extern "C" void menuInBgm__8Z2SeqMgrFv();
+extern "C" void menuOutBgm__8Z2SeqMgrFv();
+extern "C" void fanfareFramework__8Z2SeqMgrFv();
+extern "C" void stopWolfHowlSong__8Z2SeqMgrFv();
+extern "C" void setHeightVolMod__8Z2SeqMgrFbUl();
+extern "C" void setTimeProcVolMod__8Z2SeqMgrFbUl();
+extern "C" void processBgmFramework__8Z2SeqMgrFv();
+extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" void getChildTrackVolume__8Z2SeqMgrFP14JAISoundHandlei();
+extern "C" void setChildTrackVolume__8Z2SeqMgrFP14JAISoundHandleifUlff();
+extern "C" void resetBattleBgmParams__8Z2SeqMgrFv();
+extern "C" void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" void setBattleSearched__8Z2SeqMgrFb();
+extern "C" void setBattleDistIgnore__8Z2SeqMgrFb();
+extern "C" void setBattleGhostMute__8Z2SeqMgrFb();
+extern "C" void setBattleDistState__8Z2SeqMgrFUc();
+extern "C" void setBattleSeqState__8Z2SeqMgrFUc();
+extern "C" void setBattleLastHit__8Z2SeqMgrFUc();
+extern "C" void battleBgmFramework__8Z2SeqMgrFv();
+extern "C" void startBattleBgm__8Z2SeqMgrFb();
+extern "C" void stopBattleBgm__8Z2SeqMgrFUcUc();
+extern "C" void fieldBgmStart__8Z2SeqMgrFv();
+extern "C" void fieldRidingMute__8Z2SeqMgrFv();
+extern "C" void onFieldBgmJumpStart__8Z2SeqMgrFv();
+extern "C" void onFieldBgmJumpEnd__8Z2SeqMgrFv();
+extern "C" void fieldBgmFramework__8Z2SeqMgrFv();
+extern "C" void mbossBgmMuteProcess__8Z2SeqMgrFv();
+extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl();
+extern "C" void bgmNowBattle__8Z2SeqMgrFf();
+extern "C" void taktModeMute__8Z2SeqMgrFv();
+extern "C" void taktModeMuteOff__8Z2SeqMgrFv();
 extern "C" extern char const* const Z2SeqMgr__stringBase0;
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 VOL_BGM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_BGM_TALKING__7Z2Param;
+extern "C" extern u32 VOL_BGM_PAUSING__7Z2Param;
+extern "C" extern u8 struct_80450860[4];
+extern "C" extern u8 struct_80450864[4];
+extern "C" extern u8 struct_80450868[4];
+extern "C" extern u32 data_8045086C;
+extern "C" extern u8 data_80450B48[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern f32 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param;
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-extern "C" void calc__9JAISeqMgrFv(); // 1
-extern "C" void stop__9JAISeqMgrFUl(); // 1
-extern "C" void mixOut__9JAISeqMgrFv(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void releaseHandle__8JAISoundFv(); // 1
-extern "C" void lockWhenPrepared__15JAISoundStatus_Fv(); // 1
-extern "C" void unlockIfLocked__15JAISoundStatus_Fv(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void stop__12JAIStreamMgrFUl(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc(); // 1
-extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
-extern "C" void checkDayTime__11Z2StatusMgrFv(); // 1
-extern "C" void setSceneExist__10Z2SceneMgrFb(); // 1
-extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs(); // 1
-extern "C" void searchEnemy__13Z2SoundObjMgrFv(); // 1
-extern "C" void setBattleInit__13Z2SoundObjMgrFv(); // 1
-extern "C" void checkBattleFinish__13Z2SoundObjMgrFv(); // 1
-extern "C" void isTwilightBattle__13Z2SoundObjMgrFv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void calc__9JAISeqMgrFv();
+extern "C" void stop__9JAISeqMgrFUl();
+extern "C" void mixOut__9JAISeqMgrFv();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void releaseHandle__8JAISoundFv();
+extern "C" void lockWhenPrepared__15JAISoundStatus_Fv();
+extern "C" void unlockIfLocked__15JAISoundStatus_Fv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void stop__12JAIStreamMgrFUl();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void checkDayTime__11Z2StatusMgrFv();
+extern "C" void setSceneExist__10Z2SceneMgrFb();
+extern "C" void setForceBattleArea__13Z2SoundObjMgrFbUsUsUs();
+extern "C" void searchEnemy__13Z2SoundObjMgrFv();
+extern "C" void setBattleInit__13Z2SoundObjMgrFv();
+extern "C" void checkBattleFinish__13Z2SoundObjMgrFv();
+extern "C" void isTwilightBattle__13Z2SoundObjMgrFv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u32 VOL_BGM_DEFAULT__7Z2Param;
 extern "C" extern u32 VOL_BGM_TALKING__7Z2Param;
 extern "C" extern u32 VOL_BGM_PAUSING__7Z2Param;

@@ -11,9 +11,12 @@
 // Forward References:
 // 
 
+#pragma section ".dtors$10"
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
+extern void* const pad_80ACFDE8[2];
 
-extern "C" void __register_global_object(); // 1
-extern "C" static void __destroy_global_chain(); // 1
+extern "C" void __register_global_object();
+extern "C" static void __destroy_global_chain();
 #pragma section ".dtors$10"
 __declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
 extern void* const pad_80ACFDE8[2];

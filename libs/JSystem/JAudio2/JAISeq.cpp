@@ -127,28 +127,30 @@ struct JAISeq {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__6JAISeq[12 + 1 /* padding */];
+extern "C" extern u8 data_804340B0[16];
 
-extern "C" static void func_802A0A6C(); // 1
-extern "C" void func_802A0A8C(); // 1
-extern "C" void func_802A0B64(); // 1
-extern "C" void playSeqData___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void reserveChildTracks___6JAISeqFi(); // 1
-extern "C" void releaseChildTracks___6JAISeqFv(); // 1
-extern "C" void prepare_getSeqData___6JAISeqFv(); // 1
-extern "C" void prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void JAISeqMgr_calc___6JAISeqFv(); // 1
-extern "C" void die___6JAISeqFv(); // 1
-extern "C" void func_802A1268(); // 1
-extern "C" void JAISound_tryDie___6JAISeqFv(); // 1
-extern "C" void mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity(); // 1
-extern "C" s32 getNumChild__6JAISeqCFv(); // 1
-extern "C" void getChild__6JAISeqFi(); // 1
-extern "C" void releaseChild__6JAISeqFi(); // 1
-extern "C" void getTrack__6JAISeqFv(); // 1
-extern "C" void getChildTrack__6JAISeqFi(); // 1
-extern "C" void asSeq__6JAISeqFv(); // 1
-extern "C" void getTempoMgr__6JAISeqFv(); // 1
+extern "C" static void func_802A0A6C();
+extern "C" void func_802A0A8C();
+extern "C" void func_802A0B64();
+extern "C" void playSeqData___6JAISeqFRC14JASSoundParams16JAISoundActivity();
+extern "C" void reserveChildTracks___6JAISeqFi();
+extern "C" void releaseChildTracks___6JAISeqFv();
+extern "C" void prepare_getSeqData___6JAISeqFv();
+extern "C" void prepare___6JAISeqFRC14JASSoundParams16JAISoundActivity();
+extern "C" void JAISeqMgr_calc___6JAISeqFv();
+extern "C" void die___6JAISeqFv();
+extern "C" void func_802A1268();
+extern "C" void JAISound_tryDie___6JAISeqFv();
+extern "C" void mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity();
+extern "C" void JAISeqMgr_mixOut___6JAISeqFRC14JASSoundParams16JAISoundActivity();
+extern "C" s32 getNumChild__6JAISeqCFv();
+extern "C" void getChild__6JAISeqFi();
+extern "C" void releaseChild__6JAISeqFi();
+extern "C" void getTrack__6JAISeqFv();
+extern "C" void getChildTrack__6JAISeqFi();
+extern "C" void asSeq__6JAISeqFv();
+extern "C" void getTempoMgr__6JAISeqFv();
 extern "C" extern void* __vt__6JAISeq[12 + 1 /* padding */];
 extern "C" extern u8 data_804340B0[16];
 
@@ -156,51 +158,54 @@ extern "C" extern u8 data_804340B0[16];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
+extern "C" extern u8 struct_80451230[8];
+extern "C" extern u8 data_80451318[8];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void __dt__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void __ct__8JASTrackFv(); // 1
-extern "C" void __dt__8JASTrackFv(); // 1
-extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
-extern "C" void setSeqData__8JASTrackFPvUl(); // 1
-extern "C" void startSeq__8JASTrackFv(); // 1
-extern "C" void stopSeq__8JASTrackFv(); // 1
-extern "C" void connectChild__8JASTrackFUlP8JASTrack(); // 1
-extern "C" void mute__8JASTrackFb(); // 1
-extern "C" void pause__8JASTrackFb(); // 1
-extern "C" void setTempoRate__8JASTrackFf(); // 1
-extern "C" void func_802932E0(); // 1
-extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf(); // 1
-extern "C" void __ct__8JAISoundFv(); // 1
-extern "C" void func_802A2328(); // 1
-extern "C" bool asSe__8JAISoundFv(); // 1
-extern "C" bool asStream__8JAISoundFv(); // 1
-extern "C" void die_JAISound___8JAISoundFv(); // 1
-extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
-extern "C" void calc_JAISound___8JAISoundFv(); // 1
-extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
-extern "C" void init__13JAISoundChildFv(); // 1
-extern "C" void mixOut__13JAISoundChildFP8JASTrack(); // 1
-extern "C" void calc__13JAISoundChildFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void __ct__8JASTrackFv();
+extern "C" void __dt__8JASTrackFv();
+extern "C" void setChannelMgrCount__8JASTrackFUl();
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" void setSeqData__8JASTrackFPvUl();
+extern "C" void startSeq__8JASTrackFv();
+extern "C" void stopSeq__8JASTrackFv();
+extern "C" void connectChild__8JASTrackFUlP8JASTrack();
+extern "C" void mute__8JASTrackFb();
+extern "C" void pause__8JASTrackFb();
+extern "C" void setTempoRate__8JASTrackFf();
+extern "C" void func_802932E0();
+extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+extern "C" void __ct__8JAISoundFv();
+extern "C" void func_802A2328();
+extern "C" bool asSe__8JAISoundFv();
+extern "C" bool asStream__8JAISoundFv();
+extern "C" void die_JAISound___8JAISoundFv();
+extern "C" void increasePrepareCount_JAISound___8JAISoundFv();
+extern "C" void calc_JAISound___8JAISoundFv();
+extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack();
+extern "C" void init__13JAISoundChildFv();
+extern "C" void mixOut__13JAISoundChildFP8JASTrack();
+extern "C" void calc__13JAISoundChildFv();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 extern "C" extern u8 struct_80451230[8];
 extern "C" extern u8 data_80451318[8];

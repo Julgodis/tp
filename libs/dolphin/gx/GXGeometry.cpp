@@ -12,26 +12,27 @@
 // 
 
 
-extern "C" void __GXSetDirtyState(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void __GXSendFlushPrim(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXEnableTexOffsets(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" static void __GXSetGenMode(); // 1
+extern "C" void __GXSetDirtyState();
+extern "C" void GXBegin();
+extern "C" void __GXSendFlushPrim();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXEnableTexOffsets();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetCoPlanar();
+extern "C" static void __GXSetGenMode();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __GXData;
 
-extern "C" void __GXSetVCD(); // 1
-extern "C" void __GXCalculateVLim(); // 1
-extern "C" void __GXSetVAT(); // 1
-extern "C" void __GXSetSUTexRegs(); // 1
-extern "C" void __GXUpdateBPMask(); // 1
+extern "C" void __GXSetVCD();
+extern "C" void __GXCalculateVLim();
+extern "C" void __GXSetVAT();
+extern "C" void __GXSetSUTexRegs();
+extern "C" void __GXUpdateBPMask();
 extern "C" extern void* __GXData;
 
 // 

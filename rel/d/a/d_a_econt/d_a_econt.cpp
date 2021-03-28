@@ -26,42 +26,48 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static bool daEcont_Draw(econt_class*); // 2
-static void s_rd_sub(void*, void*); // 2
-static void rider_game(econt_class*); // 2
-static void daEcont_Execute(econt_class*); // 2
-static bool daEcont_IsDelete(econt_class*); // 2
-static void daEcont_Delete(econt_class*); // 2
-static void daEcont_Create(fopAc_ac_c*); // 2
+static bool daEcont_Draw(econt_class*);
+static void s_rd_sub(void*, void*);
+static void rider_game(econt_class*);
+static void daEcont_Execute(econt_class*);
+static bool daEcont_IsDelete(econt_class*);
+static void daEcont_Delete(econt_class*);
+static void daEcont_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_ECONT[12];
 
-extern "C" static bool daEcont_Draw__FP11econt_class(); // 1
-extern "C" static void s_rd_sub__FPvPv(); // 1
-extern "C" static void rider_game__FP11econt_class(); // 1
-extern "C" static void daEcont_Execute__FP11econt_class(); // 1
-extern "C" static bool daEcont_IsDelete__FP11econt_class(); // 1
-extern "C" static void daEcont_Delete__FP11econt_class(); // 1
-extern "C" static void daEcont_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daEcont_Draw__FP11econt_class();
+extern "C" static void s_rd_sub__FPvPv();
+extern "C" static void rider_game__FP11econt_class();
+extern "C" static void daEcont_Execute__FP11econt_class();
+extern "C" static bool daEcont_IsDelete__FP11econt_class();
+extern "C" static void daEcont_Delete__FP11econt_class();
+extern "C" static void daEcont_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_ECONT[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void dComIfG_TimerStart(int, s16); // 2
-void dComIfG_TimerDeleteRequest(int); // 2
-void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
+void fopAc_IsActor(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void dComIfG_TimerStart(int, s16);
+void dComIfG_TimerDeleteRequest(int);
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 data_805197E0[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void dComIfG_TimerStart__Fis(); // 1
-extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void dComIfG_TimerStart__Fis();
+extern "C" void dComIfG_TimerDeleteRequest__Fi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dTimer_createTimer__FlUlUcUcffff();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

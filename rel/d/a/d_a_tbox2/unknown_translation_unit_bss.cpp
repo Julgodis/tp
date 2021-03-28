@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern u8 struct_80498480[4];
 
 extern "C" extern u8 struct_80498480[4];
 

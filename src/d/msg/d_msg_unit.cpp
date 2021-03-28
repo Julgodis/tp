@@ -25,11 +25,14 @@ struct dMsgUnit_c {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_msg_d_msg_unit__stringBase0;
+extern "C" extern u8 g_msg_unit[4 + 4 /* padding */];
+extern "C" extern u8 data_804510D8[8];
 
-extern "C" void __ct__10dMsgUnit_cFv(); // 1
-extern "C" void __dt__10dMsgUnit_cFv(); // 1
-extern "C" void setTag__10dMsgUnit_cFiiPcb(); // 1
-extern "C" void __sinit_d_msg_unit_cpp(); // 1
+extern "C" void __ct__10dMsgUnit_cFv();
+extern "C" void __dt__10dMsgUnit_cFv();
+extern "C" void setTag__10dMsgUnit_cFiiPcb();
+extern "C" void __sinit_d_msg_unit_cpp();
 extern "C" extern char const* const d_msg_d_msg_unit__stringBase0;
 extern "C" extern u8 g_msg_unit[4 + 4 /* padding */];
 extern "C" extern u8 data_804510D8[8];
@@ -38,16 +41,18 @@ extern "C" extern u8 data_804510D8[8];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_meter2_info[248];
 
-extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
+extern "C" void getDaytime__18dScnKy_env_light_cFv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void sprintf();
+extern "C" void strcmp();
+extern "C" void strcat();
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 g_meter2_info[248];
 

@@ -18,17 +18,17 @@ struct process_method_class {
 // Forward References:
 // 
 
-void fpcMtd_Method(int (*)(void*), void*); // 2
-void fpcMtd_Execute(process_method_class*, void*); // 2
-void fpcMtd_IsDelete(process_method_class*, void*); // 2
-void fpcMtd_Delete(process_method_class*, void*); // 2
-void fpcMtd_Create(process_method_class*, void*); // 2
+void fpcMtd_Method(int (*)(void*), void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
 
-extern "C" void fpcMtd_Method__FPFPv_iPv(); // 1
-extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
+extern "C" void fpcMtd_Method__FPFPv_iPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
 
 // 
 // External References:

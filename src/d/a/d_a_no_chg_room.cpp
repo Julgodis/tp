@@ -41,19 +41,21 @@ struct dBgS {
 // Forward References:
 // 
 
-static void isLoadRoom(int); // 2
-static void daNocrm_create(daNocrm_c*); // 2
-static bool daNocrm_Delete(daNocrm_c*); // 2
-static void daNocrm_execute(daNocrm_c*); // 2
-static bool daNocrm_draw(daNocrm_c*); // 2
+static void isLoadRoom(int);
+static void daNocrm_create(daNocrm_c*);
+static bool daNocrm_Delete(daNocrm_c*);
+static void daNocrm_execute(daNocrm_c*);
+static bool daNocrm_draw(daNocrm_c*);
+extern "C" extern char const* const d_a_d_a_no_chg_room__stringBase0;
+extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 
-extern "C" static void isLoadRoom__Fi(); // 1
-extern "C" void execute__9daNocrm_cFv(); // 1
-extern "C" void getRoomNo__9daNocrm_cFi(); // 1
-extern "C" static void daNocrm_create__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_Delete__FP9daNocrm_c(); // 1
-extern "C" static void daNocrm_execute__FP9daNocrm_c(); // 1
-extern "C" static bool daNocrm_draw__FP9daNocrm_c(); // 1
+extern "C" static void isLoadRoom__Fi();
+extern "C" void execute__9daNocrm_cFv();
+extern "C" void getRoomNo__9daNocrm_cFi();
+extern "C" static void daNocrm_create__FP9daNocrm_c();
+extern "C" static bool daNocrm_Delete__FP9daNocrm_c();
+extern "C" static void daNocrm_execute__FP9daNocrm_c();
+extern "C" static bool daNocrm_draw__FP9daNocrm_c();
 extern "C" extern char const* const d_a_d_a_no_chg_room__stringBase0;
 extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 
@@ -61,24 +63,32 @@ extern "C" extern void* g_profile_NO_CHG_ROOM[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopScnM_SearchByID(unsigned int); // 2
-void fpcNd_IsDeleteTiming(process_node_class*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopScnM_SearchByID(unsigned int);
+void fpcNd_IsDeleteTiming(process_node_class*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_804505F0[8];
+extern "C" extern u8 data_80450D68[4];
 
-extern "C" void OSReport_Warning(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void fopScnM_SearchByID__FUi(); // 1
-extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void OSReport_Warning();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECScale();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

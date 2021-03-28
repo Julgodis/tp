@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __ieee754_exp(); // 1
+extern "C" void __ieee754_exp();
 
 // 
 // External References:

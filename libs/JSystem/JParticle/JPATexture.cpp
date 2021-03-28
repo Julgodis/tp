@@ -29,18 +29,18 @@ struct JPATexture {
 // 
 
 
-extern "C" void __ct__10JPATextureFPCUc(); // 1
-extern "C" void __dt__10JPATextureFv(); // 1
+extern "C" void __ct__10JPATextureFPCUc();
+extern "C" void __dt__10JPATextureFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__10JUTTextureFv(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
 
 // 
 // Declarations:

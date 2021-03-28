@@ -93,65 +93,66 @@ struct JASBNKParser {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template7(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template8(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template9(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template10(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template11(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template12(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template13(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template7(void const*, u32);
+static void JSUConvertOffsetToPtr__template8(void const*, u32);
+static void JSUConvertOffsetToPtr__template9(void const*, u32);
+static void JSUConvertOffsetToPtr__template10(void const*, u32);
+static void JSUConvertOffsetToPtr__template11(void const*, u32);
+static void JSUConvertOffsetToPtr__template12(void const*, u32);
+static void JSUConvertOffsetToPtr__template13(void const*, u32);
 
-extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap(); // 1
-extern "C" void createBasicBank__12JASBNKParserFPCvP7JKRHeap(); // 1
-extern "C" void findChunk__Q212JASBNKParser4Ver1FPCvUl(); // 1
-extern "C" void createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap(); // 1
-extern "C" void createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap(); // 1
-extern "C" void findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc(); // 1
-extern "C" void getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point(); // 1
-extern "C" static void func_80299FA0(); // 1
-extern "C" static void func_80299FB8(); // 1
-extern "C" static void func_80299FD0(); // 1
-extern "C" static void func_80299FE8(); // 1
-extern "C" static void func_8029A000(); // 1
-extern "C" static void func_8029A018(); // 1
-extern "C" static void func_8029A030(); // 1
-extern "C" void __sinit_JASBNKParser_cpp(); // 1
+extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap();
+extern "C" void createBasicBank__12JASBNKParserFPCvP7JKRHeap();
+extern "C" void findChunk__Q212JASBNKParser4Ver1FPCvUl();
+extern "C" void createBasicBank__Q212JASBNKParser4Ver1FPCvP7JKRHeap();
+extern "C" void createBasicBank__Q212JASBNKParser4Ver0FPCvP7JKRHeap();
+extern "C" void findOscPtr__Q212JASBNKParser4Ver0FP12JASBasicBankPCQ312JASBNKParser4Ver07THeaderPCQ312JASBNKParser4Ver04TOsc();
+extern "C" void getOscTableEndPtr__Q212JASBNKParser4Ver0FPCQ213JASOscillator5Point();
+extern "C" static void func_80299FA0();
+extern "C" static void func_80299FB8();
+extern "C" static void func_80299FD0();
+extern "C" static void func_80299FE8();
+extern "C" static void func_8029A000();
+extern "C" static void func_8029A018();
+extern "C" static void func_8029A030();
+extern "C" void __sinit_JASBNKParser_cpp();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
+extern "C" extern u8 JASDram[4];
 
-extern "C" void bcopy__7JASCalcFPCvPvUl(); // 1
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void func_802978DC(); // 1
-extern "C" void __ct__12JASBasicBankFv(); // 1
-extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap(); // 1
-extern "C" void setInst__12JASBasicBankFiP7JASInst(); // 1
-extern "C" void getInst__12JASBasicBankCFi(); // 1
-extern "C" void __ct__12JASBasicInstFv(); // 1
-extern "C" void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap(); // 1
-extern "C" void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data(); // 1
-extern "C" void getKeyRegion__12JASBasicInstFi(); // 1
-extern "C" void __ct__10JASDrumSetFv(); // 1
-extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap(); // 1
-extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc(); // 1
-extern "C" void __ct__Q210JASDrumSet5TPercFv(); // 1
-extern "C" void setRelease__Q210JASDrumSet5TPercFUl(); // 1
-extern "C" void getFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void bcopy__7JASCalcFPCvPvUl();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void func_802978DC();
+extern "C" void __ct__12JASBasicBankFv();
+extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap();
+extern "C" void setInst__12JASBasicBankFiP7JASInst();
+extern "C" void getInst__12JASBasicBankCFi();
+extern "C" void __ct__12JASBasicInstFv();
+extern "C" void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap();
+extern "C" void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data();
+extern "C" void getKeyRegion__12JASBasicInstFi();
+extern "C" void __ct__10JASDrumSetFv();
+extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap();
+extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc();
+extern "C" void __ct__Q210JASDrumSet5TPercFv();
+extern "C" void setRelease__Q210JASDrumSet5TPercFUl();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_28();
 extern "C" extern u8 JASDram[4];
 
 // 

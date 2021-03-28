@@ -105,31 +105,34 @@ struct cCcD_GStts {
 // Forward References:
 // 
 
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjLndRope_Draw(daObjLndRope_c*); // 2
-static void daObjLndRope_Execute(daObjLndRope_c*); // 2
-static bool daObjLndRope_IsDelete(daObjLndRope_c*); // 2
-static void daObjLndRope_Delete(daObjLndRope_c*); // 2
-static void daObjLndRope_Create(fopAc_ac_c*); // 2
+static void createSolidHeap(fopAc_ac_c*);
+static void daObjLndRope_Draw(daObjLndRope_c*);
+static void daObjLndRope_Execute(daObjLndRope_c*);
+static bool daObjLndRope_IsDelete(daObjLndRope_c*);
+static void daObjLndRope_Delete(daObjLndRope_c*);
+static void daObjLndRope_Create(fopAc_ac_c*);
+extern "C" extern u8 const data_80C53364[64];
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_LndRope[12];
 
-extern "C" void create_init__14daObjLndRope_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void initBaseMtx__14daObjLndRope_cFv(); // 1
-extern "C" void setBaseMtx__14daObjLndRope_cFv(); // 1
-extern "C" void setNormalRopePos__14daObjLndRope_cFv(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjLndRope_Draw__FP14daObjLndRope_c(); // 1
-extern "C" static void daObjLndRope_Execute__FP14daObjLndRope_c(); // 1
-extern "C" static bool daObjLndRope_IsDelete__FP14daObjLndRope_c(); // 1
-extern "C" static void daObjLndRope_Delete__FP14daObjLndRope_c(); // 1
-extern "C" void __dt__8dCcD_SphFv(); // 1
-extern "C" static void daObjLndRope_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __ct__8dCcD_SphFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" void create_init__14daObjLndRope_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void initBaseMtx__14daObjLndRope_cFv();
+extern "C" void setBaseMtx__14daObjLndRope_cFv();
+extern "C" void setNormalRopePos__14daObjLndRope_cFv();
+extern "C" static void createSolidHeap__FP10fopAc_ac_c();
+extern "C" static void daObjLndRope_Draw__FP14daObjLndRope_c();
+extern "C" static void daObjLndRope_Execute__FP14daObjLndRope_c();
+extern "C" static bool daObjLndRope_IsDelete__FP14daObjLndRope_c();
+extern "C" static void daObjLndRope_Delete__FP14daObjLndRope_c();
+extern "C" void __dt__8dCcD_SphFv();
+extern "C" static void daObjLndRope_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__8dCcD_SphFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__10cCcD_GSttsFv();
 extern "C" extern u8 const data_80C53364[64];
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_LndRope[12];
@@ -138,60 +141,71 @@ extern "C" extern void* g_profile_Obj_LndRope[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKyw_get_AllWind_vecpow(cXyz*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rnd(); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_targetAngleX(cXyz const*, cXyz const*); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fpcEx_SearchByID(unsigned int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dPath_GetRoomPath(int, int);
+void dKyw_get_AllWind_vecpow(cXyz*);
+void cM_atan2s(f32, f32);
+void cM_rnd();
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_targetAngleX(cXyz const*, cXyz const*);
+void operator delete(void*);
+extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u32 __float_nan;
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi(); // 1
-extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c(); // 1
-extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dKyw_get_AllWind_vecpow__FP4cXyz(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi();
+extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c();
+extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dKyw_get_AllWind_vecpow__FP4cXyz();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rnd__Fv();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

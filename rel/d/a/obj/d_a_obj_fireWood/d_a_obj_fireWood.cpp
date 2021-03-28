@@ -42,6 +42,9 @@ struct dSv_info_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -49,9 +52,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -97,10 +97,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -115,66 +115,41 @@ struct LIGHT_INFLUENCE {
 // Forward References:
 // 
 
-static void daFireWood_Draw(daFireWood_c*); // 2
-static void daFireWood_Execute(daFireWood_c*); // 2
-static void daFireWood_Delete(daFireWood_c*); // 2
-static void daFireWood_Create(fopAc_ac_c*); // 2
+static void daFireWood_Draw(daFireWood_c*);
+static void daFireWood_Execute(daFireWood_c*);
+static void daFireWood_Delete(daFireWood_c*);
+static void daFireWood_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Obj_FireWood[12];
 
-extern "C" void __ct__16daFireWood_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__12daFireWood_cFv(); // 1
-extern "C" void create__12daFireWood_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void lightInit__12daFireWood_cFv(); // 1
-extern "C" void setLight__12daFireWood_cFv(); // 1
-extern "C" void Execute__12daFireWood_cFv(); // 1
-extern "C" bool Draw__12daFireWood_cFv(); // 1
-extern "C" void Delete__12daFireWood_cFv(); // 1
-extern "C" static void daFireWood_Draw__FP12daFireWood_c(); // 1
-extern "C" static void daFireWood_Execute__FP12daFireWood_c(); // 1
-extern "C" static void daFireWood_Delete__FP12daFireWood_c(); // 1
-extern "C" static void daFireWood_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__16daFireWood_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_fireWood_cpp(); // 1
+extern "C" void __ct__16daFireWood_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daFireWood_cFv();
+extern "C" void create__12daFireWood_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void lightInit__12daFireWood_cFv();
+extern "C" void setLight__12daFireWood_cFv();
+extern "C" void Execute__12daFireWood_cFv();
+extern "C" bool Draw__12daFireWood_cFv();
+extern "C" void Delete__12daFireWood_cFv();
+extern "C" static void daFireWood_Draw__FP12daFireWood_c();
+extern "C" static void daFireWood_Execute__FP12daFireWood_c();
+extern "C" static void daFireWood_Delete__FP12daFireWood_c();
+extern "C" static void daFireWood_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daFireWood_HIO_cFv();
+extern "C" void __sinit_d_a_obj_fireWood_cpp();
 extern "C" extern void* g_profile_Obj_FireWood[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfGp_getReverb(int); // 2
-void dKy_plight_set(LIGHT_INFLUENCE*); // 2
-void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfGp_getReverb(int);
+void dKy_plight_set(LIGHT_INFLUENCE*);
+void dKy_plight_cut(LIGHT_INFLUENCE*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
@@ -185,7 +160,43 @@ extern "C" extern void* __vt__9cCcD_Stts[8];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void GetTgHitGObj__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

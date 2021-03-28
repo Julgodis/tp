@@ -196,6 +196,10 @@ struct dCcMassS_Mng {
 struct camera_class {
 };
 
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
 struct cSAngle {
 	/* 80030510 */ ~cSAngle();
 	/* 80271004 */ void Val(s16);
@@ -230,10 +234,6 @@ struct cSAngle {
 
 struct dCamMapToolData {
 	/* 8015FEB8 */ void Set(s32, s32, fopAc_ac_c*, u16, u8);
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
 };
 
 struct dCamera_c {
@@ -499,10 +499,10 @@ struct dBgS_CamGndChk {
 	/* 80077988 */ ~dBgS_CamGndChk();
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS {
@@ -637,268 +637,272 @@ struct Z2Audience {
 // Forward References:
 // 
 
-static void sph_chk_callback(dBgS_SphChk*, cBgD_Vtx_t*, int, int, int, cM3dGPla*, void*); // 2
-void dCam_getAngleY(camera_class*); // 2
-void dCam_getAngleX(camera_class*); // 2
-void dCam_getControledAngleY(camera_class*); // 2
-void dCam_getCamera(); // 2
-void dCam_getBody(); // 2
-static void preparation(camera_process_class*); // 2
-static void view_setup(camera_process_class*); // 2
-static void store(camera_process_class*); // 2
-static void camera_execute(camera_process_class*); // 2
-static void camera_draw(camera_process_class*); // 2
-static void init_phase1(camera_class*); // 2
-static void init_phase2(camera_class*); // 2
-static void camera_create(camera_class*); // 2
-static void camera_delete(camera_process_class*); // 2
-static bool is_camera_delete(void*); // 2
-static void daAlink_getAlinkActorClass(); // 2
-static void dComIfGs_isTmpBit(u16); // 2
-static void dComIfGp_getAttention(); // 2
-static void dComIfG_Bgsp(); // 2
-static void JMAFastSqrt(f32); // 2
-static void dComIfGp_evmng_cameraPlay(); // 2
-static void fopAcM_GetParam(void const*); // 2
+static void sph_chk_callback(dBgS_SphChk*, cBgD_Vtx_t*, int, int, int, cM3dGPla*, void*);
+void dCam_getAngleY(camera_class*);
+void dCam_getAngleX(camera_class*);
+void dCam_getControledAngleY(camera_class*);
+void dCam_getCamera();
+void dCam_getBody();
+static void preparation(camera_process_class*);
+static void view_setup(camera_process_class*);
+static void store(camera_process_class*);
+static void camera_execute(camera_process_class*);
+static void camera_draw(camera_process_class*);
+static void init_phase1(camera_class*);
+static void init_phase2(camera_class*);
+static void camera_create(camera_class*);
+static void camera_delete(camera_process_class*);
+static bool is_camera_delete(void*);
+static void daAlink_getAlinkActorClass();
+static void dComIfGs_isTmpBit(u16);
+static void dComIfGp_getAttention();
+static void dComIfG_Bgsp();
+static void JMAFastSqrt(f32);
+static void dComIfGp_evmng_cameraPlay();
+static void fopAcM_GetParam(void const*);
+extern "C" extern char const* const d_d_camera__stringBase0;
+extern "C" extern u8 engine_tbl__9dCamera_c[240];
+extern "C" extern void* g_profile_CAMERA[17];
+extern "C" extern void* g_profile_CAMERA2[17 + 6 /* padding */];
 
-extern "C" static void func_8015FA2C(); // 1
-extern "C" static void func_8015FA4C(); // 1
-extern "C" static void func_8015FADC(); // 1
-extern "C" static void func_8015FB28(); // 1
-extern "C" static void func_8015FBF8(); // 1
-extern "C" void Set__15dCamMapToolDataFllP10fopAc_ac_cUsUc(); // 1
-extern "C" void __ct__9dCamera_cFP12camera_class(); // 1
-extern "C" static void func_801602C4(); // 1
-extern "C" static void func_80160300(); // 1
-extern "C" void __dt__9dCamera_cFv(); // 1
-extern "C" void initialize__9dCamera_cFP12camera_classP10fopAc_ac_cUlUl(); // 1
-extern "C" void Start__9dCamera_cFv(); // 1
-extern "C" void QuickStart__9dCamera_cFv(); // 1
-extern "C" void Stop__9dCamera_cFv(); // 1
-extern "C" void Stay__9dCamera_cFv(); // 1
-extern "C" void ChangeModeOK__9dCamera_cFl(); // 1
-extern "C" void initPad__9dCamera_cFv(); // 1
-extern "C" void updatePad__9dCamera_cFv(); // 1
-extern "C" void initMonitor__9dCamera_cFv(); // 1
-extern "C" void updateMonitor__9dCamera_cFv(); // 1
-extern "C" void checkForceLockTarget__9dCamera_cFv(); // 1
-extern "C" void infoReport__9dCamera_cFv(); // 1
-extern "C" void Run__9dCamera_cFv(); // 1
-extern "C" void NotRun__9dCamera_cFv(); // 1
-extern "C" void V__9dCamera_cFv(); // 1
-extern "C" void U__9dCamera_cFv(); // 1
-extern "C" void SetTrimSize__9dCamera_cFl(); // 1
-extern "C" void SetTrimTypeForce__9dCamera_cFl(); // 1
-extern "C" void CalcTrimSize__9dCamera_cFv(); // 1
-extern "C" void Draw__9dCamera_cFv(); // 1
-extern "C" void setStageMapToolData__9dCamera_cFv(); // 1
-extern "C" void setMapToolData__9dCamera_cFv(); // 1
-extern "C" void SetTagData__9dCamera_cFP10fopAc_ac_clUsUc(); // 1
-extern "C" void setRoomMapToolData__9dCamera_cFP15dCamMapToolDatall(); // 1
-extern "C" void nextMode__9dCamera_cFl(); // 1
-extern "C" void onModeChange__9dCamera_cFll(); // 1
-extern "C" void ModeFix__9dCamera_cFl(); // 1
-extern "C" void nextType__9dCamera_cFl(); // 1
-extern "C" void onTypeChange__9dCamera_cFll(); // 1
-extern "C" void onStyleChange__9dCamera_cFll(); // 1
-extern "C" void onRoomChange__9dCamera_cFl(); // 1
-extern "C" void getParamTargetActor__9dCamera_cFl(); // 1
-extern "C" void GetCameraTypeFromMapToolID__9dCamera_cFll(); // 1
-extern "C" void GetCameraTypeFromCameraName__9dCamera_cFPCc(); // 1
-extern "C" void GetCameraTypeFromToolData__9dCamera_cFP24stage_camera2_data_class(); // 1
-extern "C" void pushInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_cs(); // 1
-extern "C" void popInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_c(); // 1
-extern "C" void heightOf__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP4cXyz(); // 1
-extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzf(); // 1
-extern "C" void setUSOAngle__9dCamera_cFv(); // 1
-extern "C" void getUSOAngle__9dCamera_cF7cSAngle(); // 1
-extern "C" void pointInSight__9dCamera_cFP4cXyz(); // 1
-extern "C" void radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyzfsf(); // 1
-extern "C" void groundHeight__9dCamera_cFP4cXyz(); // 1
-extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP11dBgS_LinChkUl(); // 1
-extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP4cXyzUl(); // 1
-extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzUl(); // 1
-extern "C" void lineCollisionCheckBush__9dCamera_cFP4cXyzP4cXyz(); // 1
-extern "C" static void sph_chk_callback__FP11dBgS_SphChkP10cBgD_Vtx_tiiiP8cM3dGPlaPv(); // 1
-extern "C" void compWallMargin__9dCamera_cFP4cXyzP4cXyzf(); // 1
-extern "C" void __dt__14dBgS_CamSphChkFv(); // 1
-extern "C" void defaultTriming__9dCamera_cFv(); // 1
-extern "C" void setView__9dCamera_cFffff(); // 1
-extern "C" void forwardCheckAngle__9dCamera_cFv(); // 1
-extern "C" void bumpCheck__9dCamera_cFUl(); // 1
-extern "C" void __dt__Q214cCcD_ShapeAttr5ShapeFv(); // 1
-extern "C" void lineBGCheckBoth__9dCamera_cFP4cXyzP4cXyzP11dBgS_LinChkUl(); // 1
-extern "C" void radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" static void func_80167CB8(); // 1
-extern "C" void jutOutCheck__9dCamera_cFP4cXyzf(); // 1
-extern "C" void tooNearEscape__9dCamera_cFP4cXyz(); // 1
-extern "C" void getWaterSurfaceHeight__9dCamera_cFP4cXyz(); // 1
-extern "C" void checkGroundInfo__9dCamera_cFv(); // 1
-extern "C" void chaseCamera__9dCamera_cFl(); // 1
-extern "C" static void func_8016C25C(); // 1
-extern "C" void Val__7cSAngleCFv(); // 1
-extern "C" static void func_8016C2D4(); // 1
-extern "C" void getHoldA__8mDoCPd_cFUl(); // 1
-extern "C" static void func_8016C330(); // 1
-extern "C" static void func_8016C34C(); // 1
-extern "C" static void func_8016C368(); // 1
-extern "C" void lockonCamera__9dCamera_cFl(); // 1
-extern "C" static void func_8016E410(); // 1
-extern "C" void __ct__7cSGlobeFv(); // 1
-extern "C" void LockEdge__12dAttention_cFv(); // 1
-extern "C" void getMsgCmdSpeaker__9dCamera_cFv(); // 1
-extern "C" void getMsgCmdCut__9dCamera_cFl(); // 1
-extern "C" void talktoCamera__9dCamera_cFl(); // 1
-extern "C" void talkBasePos__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void talkEyePos__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" static void func_80174E50(); // 1
-extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs(); // 1
-extern "C" void SaveZoomRatio__9dCamera_cFv(); // 1
-extern "C" void subjectCamera__9dCamera_cFl(); // 1
-extern "C" void magneCamera__9dCamera_cFl(); // 1
-extern "C" void colosseumCamera__9dCamera_cFl(); // 1
-extern "C" bool test1Camera__9dCamera_cFl(); // 1
-extern "C" bool test2Camera__9dCamera_cFl(); // 1
-extern "C" void towerCamera__9dCamera_cFl(); // 1
-extern "C" void hookshotCamera__9dCamera_cFl(); // 1
-extern "C" void railCamera__9dCamera_cFl(); // 1
-extern "C" void paraRailCamera__9dCamera_cFl(); // 1
-extern "C" void rideCamera__9dCamera_cFl(); // 1
-extern "C" static void func_8017D934(); // 1
-extern "C" bool manualCamera__9dCamera_cFl(); // 1
-extern "C" void observeCamera__9dCamera_cFl(); // 1
-extern "C" void fixedFrameCamera__9dCamera_cFl(); // 1
-extern "C" void fixedPositionCamera__9dCamera_cFl(); // 1
-extern "C" void oneSideCamera__9dCamera_cFl(); // 1
-extern "C" void eventCamera__9dCamera_cFl(); // 1
-extern "C" void currentEvCamera__9dCamera_cFv(); // 1
-extern "C" bool letCamera__9dCamera_cFl(); // 1
-extern "C" void setEventRecoveryTrans__9dCamera_cFs(); // 1
-extern "C" void runEventRecoveryTrans__9dCamera_cFv(); // 1
-extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyz(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyzfs(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyzsf(); // 1
-extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs(); // 1
-extern "C" void Reset__9dCamera_cF4cXyz4cXyz(); // 1
-extern "C" void Reset__9dCamera_cFv(); // 1
-extern "C" void shakeCamera__9dCamera_cFv(); // 1
-extern "C" void StartShake__9dCamera_cFlPUcl4cXyz(); // 1
-extern "C" void StopShake__9dCamera_cFv(); // 1
-extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff(); // 1
-extern "C" void ResetBlure__9dCamera_cFv(); // 1
-extern "C" void SetBlureAlpha__9dCamera_cFf(); // 1
-extern "C" void SetBlureScale__9dCamera_cFfff(); // 1
-extern "C" void SetBlurePosition__9dCamera_cFfff(); // 1
-extern "C" void SetBlureActor__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void blureCamera__9dCamera_cFv(); // 1
-extern "C" void onHorseDush__9dCamera_cFv(); // 1
-extern "C" void GetForceLockOnActor__9dCamera_cFv(); // 1
-extern "C" void ForceLockOn__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void ForceLockOff__9dCamera_cFUi(); // 1
-extern "C" void ForceLockOff__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void dCam_getAngleY__FP12camera_class(); // 1
-extern "C" void dCam_getAngleX__FP12camera_class(); // 1
-extern "C" void dCam_getControledAngleY__FP12camera_class(); // 1
-extern "C" void dCam_getCamera__Fv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" static void preparation__FP20camera_process_class(); // 1
-extern "C" static void view_setup__FP20camera_process_class(); // 1
-extern "C" static void store__FP20camera_process_class(); // 1
-extern "C" void Up__9dCamera_cFv(); // 1
-extern "C" void Eye__9dCamera_cFv(); // 1
-extern "C" void Center__9dCamera_cFv(); // 1
-extern "C" static void camera_execute__FP20camera_process_class(); // 1
-extern "C" static void camera_draw__FP20camera_process_class(); // 1
-extern "C" static void init_phase1__FP12camera_class(); // 1
-extern "C" static void init_phase2__FP12camera_class(); // 1
-extern "C" static void camera_create__FP12camera_class(); // 1
-extern "C" static void camera_delete__FP20camera_process_class(); // 1
-extern "C" static bool is_camera_delete__FPv(); // 1
-extern "C" void Init__14dCamForcusLineFv(); // 1
-extern "C" void Draw__14dCamForcusLineFv(); // 1
-extern "C" void Off__14dCamForcusLineFv(); // 1
-extern "C" void __sinit_d_camera_cpp(); // 1
-extern "C" static void func_801827EC(); // 1
-extern "C" static void func_801827F4(); // 1
-extern "C" static void func_801827FC(); // 1
-extern "C" static void func_80182804(); // 1
-extern "C" void getChainGrabActor__9daAlink_cFv(); // 1
-extern "C" void checkCokkoGlide__9daAlink_cCFv(); // 1
-extern "C" void checkCameraLargeDamage__9daAlink_cCFv(); // 1
-extern "C" void getHsSubChainTopPos__9daAlink_cCFv(); // 1
-extern "C" static void daAlink_getAlinkActorClass__Fv(); // 1
-extern "C" void checkCutHeadProc__9daAlink_cCFv(); // 1
-extern "C" void getRideActor__9daAlink_cFv(); // 1
-extern "C" static void dComIfGs_isTmpBit__FUs(); // 1
-extern "C" void __dt__14d2DBSplinePathFv(); // 1
-extern "C" void __ct__Q29dCamera_c10dCamInfo_cFv(); // 1
-extern "C" void __dt__Q29dCamera_c10dCamInfo_cFv(); // 1
-extern "C" void footHeightOf__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void push_any_key__9dCamera_cFv(); // 1
-extern "C" void clrFlag__9dCamera_cFUl(); // 1
-extern "C" void chkFlag__9dCamera_cFUl(); // 1
-extern "C" void GetCheckObjectCount__12dAttention_cFv(); // 1
-extern "C" static void dComIfGp_getAttention__Fv(); // 1
-extern "C" void Bank__9dCamera_cFv(); // 1
-extern "C" void checkThrowDamage__9daPy_py_cCFv(); // 1
-extern "C" void GetNP__8cM3dGPlaFv(); // 1
-extern "C" void GetCross__11cBgS_LinChkFv(); // 1
-extern "C" static void dComIfG_Bgsp__Fv(); // 1
-extern "C" void V__7cSGlobeCFv(); // 1
-extern "C" void checkGoronSideMove__9daPy_py_cCFv(); // 1
-extern "C" static void JMAFastSqrt__Ff(); // 1
-extern "C" void fabsf__3stdFf(); // 1
-extern "C" void __ct__7cSAngleFv(); // 1
-extern "C" void R__7cSGlobeFf(); // 1
-extern "C" static void dComIfGp_evmng_cameraPlay__Fv(); // 1
-extern "C" void R__7cSGlobeCFv(); // 1
-extern "C" bool __lt__7cSAngleCFRC7cSAngle(); // 1
-extern "C" bool __gt__7cSAngleCFRC7cSAngle(); // 1
-extern "C" void getRightFootPosP__9daPy_py_cFv(); // 1
-extern "C" void getLeftFootPosP__9daPy_py_cFv(); // 1
-extern "C" void getMidnaActor__9daPy_py_cFv(); // 1
-extern "C" void checkCopyRodThrowAfter__9daPy_py_cCFv(); // 1
-extern "C" void keepLock__12dAttention_cFi(); // 1
-extern "C" void checkRide__9daPy_py_cCFv(); // 1
-extern "C" void getRightHandPos__9daPy_py_cCFv(); // 1
-extern "C" void CheckFlag2__11dCamSetup_cFUs(); // 1
-extern "C" void CheckFlag__11dCamSetup_cFUs(); // 1
-extern "C" void WaitRollSpeed__11dCamSetup_cFv(); // 1
-extern "C" void WaitRollTimer__11dCamSetup_cFv(); // 1
-extern "C" void getTrigA__8mDoCPd_cFUl(); // 1
-extern "C" void __ops__7cSAngleCFv(); // 1
-extern "C" void ThrowTimer__11dCamSetup_cFv(); // 1
-extern "C" void ThrowCushion__11dCamSetup_cFv(); // 1
-extern "C" void ThrowVAngle__11dCamSetup_cFv(); // 1
-extern "C" void ThrowCtrAdjust__11dCamSetup_cFv(); // 1
-extern "C" void Arg2__11dCamParam_cFv(); // 1
-extern "C" void Arg1__11dCamParam_cFv(); // 1
-extern "C" void Arg0__11dCamParam_cFv(); // 1
-extern "C" void Fovy__11dCamParam_cFv(); // 1
-extern "C" void Arg2__11dCamParam_cFs(); // 1
-extern "C" void Arg1__11dCamParam_cFUc(); // 1
-extern "C" void Arg0__11dCamParam_cFUc(); // 1
-extern "C" void Fovy__11dCamParam_cFUc(); // 1
-extern "C" void U__7cSGlobeCFv(); // 1
-extern "C" void Flag__11dCamParam_cFlUs(); // 1
-extern "C" void __as__7cSAngleFRC7cSAngle(); // 1
-extern "C" void CheckFlag__11dCamParam_cFUs(); // 1
-extern "C" void Val__11dCamParam_cFli(); // 1
-extern "C" void ChargeBRatio__11dCamSetup_cFv(); // 1
-extern "C" void ChargeTimer__11dCamSetup_cFv(); // 1
-extern "C" void ChargeLatitude__11dCamSetup_cFv(); // 1
-extern "C" void getLashDashStart__9daHorse_cCFv(); // 1
-extern "C" void fabs__3stdFf(); // 1
-extern "C" void checkTurnStandCamera__9daHorse_cCFv(); // 1
-extern "C" void d2s__6cAngleFf(); // 1
-extern "C" void checkJump__9daHorse_cCFv(); // 1
-extern "C" static void fopAcM_GetParam__FPCv(); // 1
-extern "C" void checkNoAttention__12daTagMstop_cCFv(); // 1
-extern "C" void checkNoAttention__12daTagMhint_cCFv(); // 1
-extern "C" void set__4cXyzFfff(); // 1
-extern "C" void checkEndMessage__12daTagMwait_cFv(); // 1
+extern "C" static void func_8015FA2C();
+extern "C" static void func_8015FA4C();
+extern "C" static void func_8015FADC();
+extern "C" static void func_8015FB28();
+extern "C" static void func_8015FBF8();
+extern "C" void Set__15dCamMapToolDataFllP10fopAc_ac_cUsUc();
+extern "C" void __ct__9dCamera_cFP12camera_class();
+extern "C" static void func_801602C4();
+extern "C" static void func_80160300();
+extern "C" void __dt__9dCamera_cFv();
+extern "C" void initialize__9dCamera_cFP12camera_classP10fopAc_ac_cUlUl();
+extern "C" void Start__9dCamera_cFv();
+extern "C" void QuickStart__9dCamera_cFv();
+extern "C" void Stop__9dCamera_cFv();
+extern "C" void Stay__9dCamera_cFv();
+extern "C" void ChangeModeOK__9dCamera_cFl();
+extern "C" void initPad__9dCamera_cFv();
+extern "C" void updatePad__9dCamera_cFv();
+extern "C" void initMonitor__9dCamera_cFv();
+extern "C" void updateMonitor__9dCamera_cFv();
+extern "C" void checkForceLockTarget__9dCamera_cFv();
+extern "C" void infoReport__9dCamera_cFv();
+extern "C" void Run__9dCamera_cFv();
+extern "C" void NotRun__9dCamera_cFv();
+extern "C" void V__9dCamera_cFv();
+extern "C" void U__9dCamera_cFv();
+extern "C" void SetTrimSize__9dCamera_cFl();
+extern "C" void SetTrimTypeForce__9dCamera_cFl();
+extern "C" void CalcTrimSize__9dCamera_cFv();
+extern "C" void Draw__9dCamera_cFv();
+extern "C" void setStageMapToolData__9dCamera_cFv();
+extern "C" void setMapToolData__9dCamera_cFv();
+extern "C" void SetTagData__9dCamera_cFP10fopAc_ac_clUsUc();
+extern "C" void setRoomMapToolData__9dCamera_cFP15dCamMapToolDatall();
+extern "C" void nextMode__9dCamera_cFl();
+extern "C" void onModeChange__9dCamera_cFll();
+extern "C" void ModeFix__9dCamera_cFl();
+extern "C" void nextType__9dCamera_cFl();
+extern "C" void onTypeChange__9dCamera_cFll();
+extern "C" void onStyleChange__9dCamera_cFll();
+extern "C" void onRoomChange__9dCamera_cFl();
+extern "C" void getParamTargetActor__9dCamera_cFl();
+extern "C" void GetCameraTypeFromMapToolID__9dCamera_cFll();
+extern "C" void GetCameraTypeFromCameraName__9dCamera_cFPCc();
+extern "C" void GetCameraTypeFromToolData__9dCamera_cFP24stage_camera2_data_class();
+extern "C" void pushInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_cs();
+extern "C" void popInfo__9dCamera_cFPQ29dCamera_c10dCamInfo_c();
+extern "C" void heightOf__9dCamera_cFP10fopAc_ac_c();
+extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP4cXyz();
+extern "C" void relationalPos__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzf();
+extern "C" void setUSOAngle__9dCamera_cFv();
+extern "C" void getUSOAngle__9dCamera_cF7cSAngle();
+extern "C" void pointInSight__9dCamera_cFP4cXyz();
+extern "C" void radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyzfsf();
+extern "C" void groundHeight__9dCamera_cFP4cXyz();
+extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP11dBgS_LinChkUl();
+extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzP4cXyzUl();
+extern "C" void lineBGCheck__9dCamera_cFP4cXyzP4cXyzUl();
+extern "C" void lineCollisionCheckBush__9dCamera_cFP4cXyzP4cXyz();
+extern "C" static void sph_chk_callback__FP11dBgS_SphChkP10cBgD_Vtx_tiiiP8cM3dGPlaPv();
+extern "C" void compWallMargin__9dCamera_cFP4cXyzP4cXyzf();
+extern "C" void __dt__14dBgS_CamSphChkFv();
+extern "C" void defaultTriming__9dCamera_cFv();
+extern "C" void setView__9dCamera_cFffff();
+extern "C" void forwardCheckAngle__9dCamera_cFv();
+extern "C" void bumpCheck__9dCamera_cFUl();
+extern "C" void __dt__Q214cCcD_ShapeAttr5ShapeFv();
+extern "C" void lineBGCheckBoth__9dCamera_cFP4cXyzP4cXyzP11dBgS_LinChkUl();
+extern "C" void radiusActorInSight__9dCamera_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" static void func_80167CB8();
+extern "C" void jutOutCheck__9dCamera_cFP4cXyzf();
+extern "C" void tooNearEscape__9dCamera_cFP4cXyz();
+extern "C" void getWaterSurfaceHeight__9dCamera_cFP4cXyz();
+extern "C" void checkGroundInfo__9dCamera_cFv();
+extern "C" void chaseCamera__9dCamera_cFl();
+extern "C" static void func_8016C25C();
+extern "C" void Val__7cSAngleCFv();
+extern "C" static void func_8016C2D4();
+extern "C" void getHoldA__8mDoCPd_cFUl();
+extern "C" static void func_8016C330();
+extern "C" static void func_8016C34C();
+extern "C" static void func_8016C368();
+extern "C" void lockonCamera__9dCamera_cFl();
+extern "C" static void func_8016E410();
+extern "C" void __ct__7cSGlobeFv();
+extern "C" void LockEdge__12dAttention_cFv();
+extern "C" void getMsgCmdSpeaker__9dCamera_cFv();
+extern "C" void getMsgCmdCut__9dCamera_cFl();
+extern "C" void talktoCamera__9dCamera_cFl();
+extern "C" void talkBasePos__9dCamera_cFP10fopAc_ac_c();
+extern "C" void talkEyePos__9dCamera_cFP10fopAc_ac_c();
+extern "C" static void func_80174E50();
+extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs();
+extern "C" void SaveZoomRatio__9dCamera_cFv();
+extern "C" void subjectCamera__9dCamera_cFl();
+extern "C" void magneCamera__9dCamera_cFl();
+extern "C" void colosseumCamera__9dCamera_cFl();
+extern "C" bool test1Camera__9dCamera_cFl();
+extern "C" bool test2Camera__9dCamera_cFl();
+extern "C" void towerCamera__9dCamera_cFl();
+extern "C" void hookshotCamera__9dCamera_cFl();
+extern "C" void railCamera__9dCamera_cFl();
+extern "C" void paraRailCamera__9dCamera_cFl();
+extern "C" void rideCamera__9dCamera_cFl();
+extern "C" static void func_8017D934();
+extern "C" bool manualCamera__9dCamera_cFl();
+extern "C" void observeCamera__9dCamera_cFl();
+extern "C" void fixedFrameCamera__9dCamera_cFl();
+extern "C" void fixedPositionCamera__9dCamera_cFl();
+extern "C" void oneSideCamera__9dCamera_cFl();
+extern "C" void eventCamera__9dCamera_cFl();
+extern "C" void currentEvCamera__9dCamera_cFv();
+extern "C" bool letCamera__9dCamera_cFl();
+extern "C" void setEventRecoveryTrans__9dCamera_cFs();
+extern "C" void runEventRecoveryTrans__9dCamera_cFv();
+extern "C" void EventRecoverNotime__9dCamera_cFv();
+extern "C" void Set__9dCamera_cF4cXyz4cXyz();
+extern "C" void Set__9dCamera_cF4cXyz4cXyzfs();
+extern "C" void Set__9dCamera_cF4cXyz4cXyzsf();
+extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs();
+extern "C" void Reset__9dCamera_cF4cXyz4cXyz();
+extern "C" void Reset__9dCamera_cFv();
+extern "C" void shakeCamera__9dCamera_cFv();
+extern "C" void StartShake__9dCamera_cFlPUcl4cXyz();
+extern "C" void StopShake__9dCamera_cFv();
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+extern "C" void ResetBlure__9dCamera_cFv();
+extern "C" void SetBlureAlpha__9dCamera_cFf();
+extern "C" void SetBlureScale__9dCamera_cFfff();
+extern "C" void SetBlurePosition__9dCamera_cFfff();
+extern "C" void SetBlureActor__9dCamera_cFP10fopAc_ac_c();
+extern "C" void blureCamera__9dCamera_cFv();
+extern "C" void onHorseDush__9dCamera_cFv();
+extern "C" void GetForceLockOnActor__9dCamera_cFv();
+extern "C" void ForceLockOn__9dCamera_cFP10fopAc_ac_c();
+extern "C" void ForceLockOff__9dCamera_cFUi();
+extern "C" void ForceLockOff__9dCamera_cFP10fopAc_ac_c();
+extern "C" void dCam_getAngleY__FP12camera_class();
+extern "C" void dCam_getAngleX__FP12camera_class();
+extern "C" void dCam_getControledAngleY__FP12camera_class();
+extern "C" void dCam_getCamera__Fv();
+extern "C" void dCam_getBody__Fv();
+extern "C" static void preparation__FP20camera_process_class();
+extern "C" static void view_setup__FP20camera_process_class();
+extern "C" static void store__FP20camera_process_class();
+extern "C" void Up__9dCamera_cFv();
+extern "C" void Eye__9dCamera_cFv();
+extern "C" void Center__9dCamera_cFv();
+extern "C" static void camera_execute__FP20camera_process_class();
+extern "C" static void camera_draw__FP20camera_process_class();
+extern "C" static void init_phase1__FP12camera_class();
+extern "C" static void init_phase2__FP12camera_class();
+extern "C" static void camera_create__FP12camera_class();
+extern "C" static void camera_delete__FP20camera_process_class();
+extern "C" static bool is_camera_delete__FPv();
+extern "C" void Init__14dCamForcusLineFv();
+extern "C" void Draw__14dCamForcusLineFv();
+extern "C" void Off__14dCamForcusLineFv();
+extern "C" void __sinit_d_camera_cpp();
+extern "C" static void func_801827EC();
+extern "C" static void func_801827F4();
+extern "C" static void func_801827FC();
+extern "C" static void func_80182804();
+extern "C" void getChainGrabActor__9daAlink_cFv();
+extern "C" void checkCokkoGlide__9daAlink_cCFv();
+extern "C" void checkCameraLargeDamage__9daAlink_cCFv();
+extern "C" void getHsSubChainTopPos__9daAlink_cCFv();
+extern "C" static void daAlink_getAlinkActorClass__Fv();
+extern "C" void checkCutHeadProc__9daAlink_cCFv();
+extern "C" void getRideActor__9daAlink_cFv();
+extern "C" static void dComIfGs_isTmpBit__FUs();
+extern "C" void __dt__14d2DBSplinePathFv();
+extern "C" void __ct__Q29dCamera_c10dCamInfo_cFv();
+extern "C" void __dt__Q29dCamera_c10dCamInfo_cFv();
+extern "C" void footHeightOf__9dCamera_cFP10fopAc_ac_c();
+extern "C" void push_any_key__9dCamera_cFv();
+extern "C" void clrFlag__9dCamera_cFUl();
+extern "C" void chkFlag__9dCamera_cFUl();
+extern "C" void GetCheckObjectCount__12dAttention_cFv();
+extern "C" static void dComIfGp_getAttention__Fv();
+extern "C" void Bank__9dCamera_cFv();
+extern "C" void checkThrowDamage__9daPy_py_cCFv();
+extern "C" void GetNP__8cM3dGPlaFv();
+extern "C" void GetCross__11cBgS_LinChkFv();
+extern "C" static void dComIfG_Bgsp__Fv();
+extern "C" void V__7cSGlobeCFv();
+extern "C" void checkGoronSideMove__9daPy_py_cCFv();
+extern "C" static void JMAFastSqrt__Ff();
+extern "C" void fabsf__3stdFf();
+extern "C" void __ct__7cSAngleFv();
+extern "C" void R__7cSGlobeFf();
+extern "C" static void dComIfGp_evmng_cameraPlay__Fv();
+extern "C" void R__7cSGlobeCFv();
+extern "C" bool __lt__7cSAngleCFRC7cSAngle();
+extern "C" bool __gt__7cSAngleCFRC7cSAngle();
+extern "C" void getRightFootPosP__9daPy_py_cFv();
+extern "C" void getLeftFootPosP__9daPy_py_cFv();
+extern "C" void getMidnaActor__9daPy_py_cFv();
+extern "C" void checkCopyRodThrowAfter__9daPy_py_cCFv();
+extern "C" void keepLock__12dAttention_cFi();
+extern "C" void checkRide__9daPy_py_cCFv();
+extern "C" void getRightHandPos__9daPy_py_cCFv();
+extern "C" void CheckFlag2__11dCamSetup_cFUs();
+extern "C" void CheckFlag__11dCamSetup_cFUs();
+extern "C" void WaitRollSpeed__11dCamSetup_cFv();
+extern "C" void WaitRollTimer__11dCamSetup_cFv();
+extern "C" void getTrigA__8mDoCPd_cFUl();
+extern "C" void __ops__7cSAngleCFv();
+extern "C" void ThrowTimer__11dCamSetup_cFv();
+extern "C" void ThrowCushion__11dCamSetup_cFv();
+extern "C" void ThrowVAngle__11dCamSetup_cFv();
+extern "C" void ThrowCtrAdjust__11dCamSetup_cFv();
+extern "C" void Arg2__11dCamParam_cFv();
+extern "C" void Arg1__11dCamParam_cFv();
+extern "C" void Arg0__11dCamParam_cFv();
+extern "C" void Fovy__11dCamParam_cFv();
+extern "C" void Arg2__11dCamParam_cFs();
+extern "C" void Arg1__11dCamParam_cFUc();
+extern "C" void Arg0__11dCamParam_cFUc();
+extern "C" void Fovy__11dCamParam_cFUc();
+extern "C" void U__7cSGlobeCFv();
+extern "C" void Flag__11dCamParam_cFlUs();
+extern "C" void __as__7cSAngleFRC7cSAngle();
+extern "C" void CheckFlag__11dCamParam_cFUs();
+extern "C" void Val__11dCamParam_cFli();
+extern "C" void ChargeBRatio__11dCamSetup_cFv();
+extern "C" void ChargeTimer__11dCamSetup_cFv();
+extern "C" void ChargeLatitude__11dCamSetup_cFv();
+extern "C" void getLashDashStart__9daHorse_cCFv();
+extern "C" void fabs__3stdFf();
+extern "C" void checkTurnStandCamera__9daHorse_cCFv();
+extern "C" void d2s__6cAngleFf();
+extern "C" void checkJump__9daHorse_cCFv();
+extern "C" static void fopAcM_GetParam__FPCv();
+extern "C" void checkNoAttention__12daTagMstop_cCFv();
+extern "C" void checkNoAttention__12daTagMhint_cCFv();
+extern "C" void set__4cXyzFfff();
+extern "C" void checkEndMessage__12daTagMwait_cFv();
 extern "C" extern char const* const d_d_camera__stringBase0;
 extern "C" extern u8 engine_tbl__9dCamera_c[240];
 extern "C" extern void* g_profile_CAMERA[17];
@@ -908,327 +912,357 @@ extern "C" extern void* g_profile_CAMERA2[17 + 6 /* padding */];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
-void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_setStageLayer(void*); // 2
-void fopAcM_searchFromName4Event(char const*, s16); // 2
-void fopCamM_GetParam(camera_class*); // 2
-void fpcSch_JudgeForPName(void*, void*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dComIfGp_getRoomCamera(int); // 2
-void dComIfGp_getRoomArrow(int); // 2
-void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_get_wind_pow(); // 2
-void fopAcM_GetID(void const*); // 2
-void fopAcM_GetName(void*); // 2
-void dComIfGp_getHorseActor(); // 2
-void dKy_camera_water_in_status_set(u8); // 2
-void dKy_pol_sound_get(cBgS_PolyInfo const*); // 2
-void dKy_TeachWind_existence_chk(); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_atan2f(f32, f32); // 2
-void cM_rndFX(f32); // 2
-void cBgW_CheckBRoof(f32); // 2
-void cBgW_CheckBWall(f32); // 2
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
-void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*); // 2
-void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*); // 2
-void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
-void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*); // 2
-void operator+(s16, cSAngle const&); // 2
-void operator-(s16, cSAngle const&); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
+void mDoLib_project(Vec*, Vec*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_setStageLayer(void*);
+void fopAcM_searchFromName4Event(char const*, s16);
+void fopCamM_GetParam(camera_class*);
+void fpcSch_JudgeForPName(void*, void*);
+void fpcSch_JudgeByID(void*, void*);
+void dComIfGp_getRoomCamera(int);
+void dComIfGp_getRoomArrow(int);
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*);
+void dPath_GetRoomPath(int, int);
+void dKyw_get_wind_vec();
+void dKyw_get_wind_pow();
+void fopAcM_GetID(void const*);
+void fopAcM_GetName(void*);
+void dComIfGp_getHorseActor();
+void dKy_camera_water_in_status_set(u8);
+void dKy_pol_sound_get(cBgS_PolyInfo const*);
+void dKy_TeachWind_existence_chk();
+void cM_atan2s(f32, f32);
+void cM_atan2f(f32, f32);
+void cM_rndFX(f32);
+void cBgW_CheckBRoof(f32);
+void cBgW_CheckBWall(f32);
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
+void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
+void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*);
+void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
+void cM3d_2PlaneLinePosNearPos(cM3dGPla const&, cM3dGPla const&, Vec const*, Vec*);
+void operator+(s16, cSAngle const&);
+void operator-(s16, cSAngle const&);
+void operator delete(void*);
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* g_fopCam_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fopVw_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__8cM3dGLin[3];
+extern "C" extern void* __vt__8cM3dGSph[3];
+extern "C" extern void* __vt__18dDlst_effectLine_c[3];
+extern "C" extern void* __vt__14dBgS_CamGndChk[12];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 BaseY__4cXyz[12];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 g_dComIfGoat_gameInfo[4 + 4 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 struct_80450BE4[4];
+extern "C" extern u8 stopStatus__10fopAc_ac_c[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 _0__7cSAngle[2 + 2 /* padding */];
+extern "C" extern u8 _90__7cSAngle[2 + 2 /* padding */];
+extern "C" extern u8 _180__7cSAngle[2 + 2 /* padding */];
+extern "C" extern u8 _270__7cSAngle[2 + 6 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void onBlure__13mDoGph_gInf_cFv(); // 1
-extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void setup__14mDoLib_clipperFffff(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_searchFromName4Event__FPCcs(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void fopCamM_GetParam__FP12camera_class(); // 1
-extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfGp_getRoomCamera__Fi(); // 1
-extern "C" void dComIfGp_getRoomArrow__Fi(); // 1
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
-extern "C" void __dt__7cSAngleFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" void getActiveCamera__14dDemo_object_cFv(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void setViewPort__14dDlst_window_cFffffff(); // 1
-extern "C" void setScissor__14dDlst_window_cFffff(); // 1
-extern "C" void init__8cM_rnd_cFiii(); // 1
-extern "C" void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_get_wind_pow__Fv(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void __dt__7cSGlobeFv(); // 1
-extern "C" void LockonTarget__12dAttention_cFl(); // 1
-extern "C" void LockonReleaseDistanse__12dAttention_cFv(); // 1
-extern "C" void ActionTarget__12dAttention_cFl(); // 1
-extern "C" void CheckObjectTarget__12dAttention_cFl(); // 1
-extern "C" void LockonTruth__12dAttention_cFv(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetActorPointer__4cBgSCFi(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomCamId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl(); // 1
-extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk(); // 1
-extern "C" void SphChk__4dBgSFP11dBgS_SphChkPv(); // 1
-extern "C" void MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__14dBgS_CamGndChkFv(); // 1
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void __ct__14dBgS_CamLinChkFv(); // 1
-extern "C" void __dt__14dBgS_CamLinChkFv(); // 1
-extern "C" void __ct__11dBgS_SphChkFv(); // 1
-extern "C" void __dt__11dBgS_SphChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetUnderwaterRoof__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__12dBgS_RoofChkFv(); // 1
-extern "C" void __dt__12dBgS_RoofChkFv(); // 1
-extern "C" void SetCam__12dCcMassS_MngFRC8cM3dGCps(); // 1
-extern "C" void GetResultCam__12dCcMassS_MngCFv(); // 1
-extern "C" void GetCamTopPos__12dCcMassS_MngFP3Vec(); // 1
-extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void chkCameraPoint__4dCcSFRC4cXyzPQ214cCcD_ShapeAttr5ShapeP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void rationalBezierRatio__8dCamMathFff(); // 1
-extern "C" void zoomFovy__8dCamMathFff(); // 1
-extern "C" void __dt__7cDegreeFv(); // 1
-extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle(); // 1
-extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
-extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
-extern "C" bool Shift__9dCstick_cFUl(); // 1
-extern "C" void __ct__11dCamParam_cFl(); // 1
-extern "C" void __dt__11dCamParam_cFv(); // 1
-extern "C" void Change__11dCamParam_cFl(); // 1
-extern "C" void SearchStyle__11dCamParam_cFUl(); // 1
-extern "C" void __ct__11dCamSetup_cFv(); // 1
-extern "C" void __dt__11dCamSetup_cFv(); // 1
-extern "C" void CheckLatitudeRange__11dCamSetup_cFPs(); // 1
-extern "C" void PlayerHideDist__11dCamSetup_cFv(); // 1
-extern "C" void getEvIntData__9dCamera_cFPiPc(); // 1
-extern "C" void getEvFloatData__9dCamera_cFPfPc(); // 1
-extern "C" void getEvIntData__9dCamera_cFPiPci(); // 1
-extern "C" void getEvFloatData__9dCamera_cFPfPcf(); // 1
-extern "C" void getEvStringData__9dCamera_cFPcPcPc(); // 1
-extern "C" void getEvActor__9dCamera_cFPc(); // 1
-extern "C" void getEvActor__9dCamera_cFPcPc(); // 1
-extern "C" void pauseEvCamera__9dCamera_cFv(); // 1
-extern "C" void fixedFrameEvCamera__9dCamera_cFv(); // 1
-extern "C" void stokerEvCamera__9dCamera_cFv(); // 1
-extern "C" void rollingEvCamera__9dCamera_cFv(); // 1
-extern "C" void fixedPositionEvCamera__9dCamera_cFv(); // 1
-extern "C" void uniformTransEvCamera__9dCamera_cFv(); // 1
-extern "C" void uniformBrakeEvCamera__9dCamera_cFv(); // 1
-extern "C" void uniformAcceleEvCamera__9dCamera_cFv(); // 1
-extern "C" void __as__7cSGlobeFRC7cSGlobe(); // 1
-extern "C" void abs__4cXyzCFv(); // 1
-extern "C" void U__7cSGlobeFRC7cSAngle(); // 1
-extern "C" void __ami__4cXyzFRC3Vec(); // 1
-extern "C" void __apl__4cXyzFRC3Vec(); // 1
-extern "C" void watchActorEvCamera__9dCamera_cFv(); // 1
-extern "C" void V__7cSGlobeFRC7cSAngle(); // 1
-extern "C" void restorePosEvCamera__9dCamera_cFv(); // 1
-extern "C" void talktoEvCamera__9dCamera_cFv(); // 1
-extern "C" void maptoolIdEvCamera__9dCamera_cFv(); // 1
-extern "C" void styleEvCamera__9dCamera_cFv(); // 1
-extern "C" void gameOverEvCamera__9dCamera_cFv(); // 1
-extern "C" void tactEvCamera__9dCamera_cFv(); // 1
-extern "C" bool turnToActorEvCamera__9dCamera_cFv(); // 1
-extern "C" void stbWaitEvCamera__9dCamera_cFv(); // 1
-extern "C" void saveEvCamera__9dCamera_cFv(); // 1
-extern "C" void loadEvCamera__9dCamera_cFv(); // 1
-extern "C" void useItem0EvCamera__9dCamera_cFv(); // 1
-extern "C" void useItem1EvCamera__9dCamera_cFv(); // 1
-extern "C" void getItemEvCamera__9dCamera_cFv(); // 1
-extern "C" void possessedEvCamera__9dCamera_cFv(); // 1
-extern "C" void fixedFramesEvCamera__9dCamera_cFv(); // 1
-extern "C" void bSplineEvCamera__9dCamera_cFv(); // 1
-extern "C" void twoActor0EvCamera__9dCamera_cFv(); // 1
-extern "C" void peepHoleEvCamera__9dCamera_cFv(); // 1
-extern "C" void digHoleEvCamera__9dCamera_cFv(); // 1
-extern "C" void hintTalkEvCamera__9dCamera_cFv(); // 1
-extern "C" void bspTransEvCamera__9dCamera_cFv(); // 1
-extern "C" bool portalWarpEvCamera__9dCamera_cFv(); // 1
-extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void positionOf__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void setFlag__9dCamera_cFUl(); // 1
-extern "C" void eyePos__9dCamera_cFP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_GetID__FPCv(); // 1
-extern "C" void __as__4cXyzFRC4cXyz(); // 1
-extern "C" void __ct__4cXyzFRC4cXyz(); // 1
-extern "C" void Init__14d2DBSplinePathFll(); // 1
-extern "C" void Spot__14d2DBSplinePathFPff(); // 1
-extern "C" bool getE3Zhint__9daAlink_cFv(); // 1
-extern "C" void checkCutLargeTurnState__9daAlink_cCFv(); // 1
-extern "C" void checkBowCameraArrowPosP__9daAlink_cFPsPs(); // 1
-extern "C" void getCopyRodCameraActor__9daAlink_cFv(); // 1
-extern "C" void checkCanoeRideTandem__9daAlink_cFv(); // 1
-extern "C" void checkIronBallThrowMode__9daAlink_cCFv(); // 1
-extern "C" void checkIronBallThrowReturnMode__9daAlink_cCFv(); // 1
-extern "C" void checkMidnaLockJumpPoint__9daAlink_cCFv(); // 1
-extern "C" void __ct__8cM3dGPlaFv(); // 1
-extern "C" void fopAcM_GetName__FPv(); // 1
-extern "C" void checkMagneBootsOn__9daPy_py_cCFv(); // 1
-extern "C" void dComIfGp_getHorseActor__Fv(); // 1
-extern "C" void __ct__4cXyzFfff(); // 1
-extern "C" void getLeftHandPos__9daPy_py_cCFv(); // 1
-extern "C" void getThrowBoomerangActor__9daPy_py_cFv(); // 1
-extern "C" void dKy_camera_water_in_status_set__FUc(); // 1
-extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void dKy_TeachWind_existence_chk__Fv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __ml__4cXyzCFRC3Vec(); // 1
-extern "C" void norm__4cXyzCFv(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_atan2f__Fff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cBgW_CheckBRoof__Ff(); // 1
-extern "C" void cBgW_CheckBWall__Ff(); // 1
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
-extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec(); // 1
-extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec(); // 1
-extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec(); // 1
-extern "C" void cM3d_2PlaneLinePosNearPos__FRC8cM3dGPlaRC8cM3dGPlaPC3VecP3Vec(); // 1
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void __dt__8cM3dGCpsFv(); // 1
-extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf(); // 1
-extern "C" void __ct__8cM3dGCylFPC4cXyzff(); // 1
-extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
-extern "C" void Set__8cM3dGSphFRC4cXyzf(); // 1
-extern "C" void __ct__7cSAngleFRC7cSAngle(); // 1
-extern "C" void __ct__7cSAngleFs(); // 1
-extern "C" void __ct__7cSAngleFf(); // 1
-extern "C" void Val__7cSAngleFRC7cSAngle(); // 1
-extern "C" void Val__7cSAngleFs(); // 1
-extern "C" void Val__7cSAngleFf(); // 1
-extern "C" void Degree__7cSAngleCFv(); // 1
-extern "C" void Norm__7cSAngleCFv(); // 1
-extern "C" void Abs__7cSAngleCFv(); // 1
-extern "C" void Inv__7cSAngleCFv(); // 1
-extern "C" void Sin__7cSAngleCFv(); // 1
-extern "C" void Cos__7cSAngleCFv(); // 1
-extern "C" void __mi__7cSAngleCFv(); // 1
-extern "C" void __pl__7cSAngleCFRC7cSAngle(); // 1
-extern "C" void __mi__7cSAngleCFRC7cSAngle(); // 1
-extern "C" void __apl__7cSAngleFRC7cSAngle(); // 1
-extern "C" void __ami__7cSAngleFRC7cSAngle(); // 1
-extern "C" void __pl__7cSAngleCFs(); // 1
-extern "C" void __mi__7cSAngleCFs(); // 1
-extern "C" void __apl__7cSAngleFs(); // 1
-extern "C" void __ml__7cSAngleCFf(); // 1
-extern "C" void __amu__7cSAngleFf(); // 1
-extern "C" void __pl__FsRC7cSAngle(); // 1
-extern "C" void __mi__FsRC7cSAngle(); // 1
-extern "C" void __ct__7cDegreeFf(); // 1
-extern "C" void Cos__7cDegreeCFv(); // 1
-extern "C" void Tan__7cDegreeCFv(); // 1
-extern "C" void Xyz__7cSPolarCFv(); // 1
-extern "C" void __ct__7cSGlobeFRC7cSGlobe(); // 1
-extern "C" void __ct__7cSGlobeFfss(); // 1
-extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
-extern "C" void __ct__7cSGlobeFRC4cXyz(); // 1
-extern "C" void Val__7cSGlobeFfss(); // 1
-extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle(); // 1
-extern "C" void Val__7cSGlobeFRC4cXyz(); // 1
-extern "C" void Xyz__7cSGlobeCFv(); // 1
-extern "C" void Invert__7cSGlobeFv(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec(); // 1
-extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc(); // 1
-extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf(); // 1
-extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savefpr_29(); // 1
-extern "C" void _restfpr_29(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void tan(); // 1
+extern "C" void onBlure__13mDoGph_gInf_cFv();
+extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf();
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void __ct__4cXyzFv();
+extern "C" void setup__14mDoLib_clipperFffff();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_searchFromName4Event__FPCcs();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void fopCamM_GetParam__FP12camera_class();
+extern "C" void fpcSch_JudgeForPName__FPvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dComIfGp_getRoomCamera__Fi();
+extern "C" void dComIfGp_getRoomArrow__Fi();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void __dt__7cSAngleFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void getActiveCamera__14dDemo_object_cFv();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void setViewPort__14dDlst_window_cFffffff();
+extern "C" void setScissor__14dDlst_window_cFffff();
+extern "C" void init__8cM_rnd_cFiii();
+extern "C" void update__18dDlst_effectLine_cFR4cXyzR8_GXColorUsUsUsUsffff();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_get_wind_pow__Fv();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void __dt__7cSGlobeFv();
+extern "C" void LockonTarget__12dAttention_cFl();
+extern "C" void LockonReleaseDistanse__12dAttention_cFv();
+extern "C" void ActionTarget__12dAttention_cFl();
+extern "C" void CheckObjectTarget__12dAttention_cFl();
+extern "C" void LockonTruth__12dAttention_cFv();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetActorPointer__4cBgSCFi();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetCamMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomCamId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void ChkGrpInf__4dBgSFRC13cBgS_PolyInfoUl();
+extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk();
+extern "C" void SphChk__4dBgSFP11dBgS_SphChkPv();
+extern "C" void MoveBgMatrixCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __dt__14dBgS_CamGndChkFv();
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void __ct__14dBgS_CamLinChkFv();
+extern "C" void __dt__14dBgS_CamLinChkFv();
+extern "C" void __ct__11dBgS_SphChkFv();
+extern "C" void __dt__11dBgS_SphChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void ClrObj__16dBgS_PolyPassChkFv();
+extern "C" void SetCam__16dBgS_PolyPassChkFv();
+extern "C" void ClrCam__16dBgS_PolyPassChkFv();
+extern "C" void SetUnderwaterRoof__16dBgS_PolyPassChkFv();
+extern "C" void __ct__12dBgS_RoofChkFv();
+extern "C" void __dt__12dBgS_RoofChkFv();
+extern "C" void SetCam__12dCcMassS_MngFRC8cM3dGCps();
+extern "C" void GetResultCam__12dCcMassS_MngCFv();
+extern "C" void GetCamTopPos__12dCcMassS_MngFP3Vec();
+extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void chkCameraPoint__4dCcSFRC4cXyzPQ214cCcD_ShapeAttr5ShapeP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void rationalBezierRatio__8dCamMathFff();
+extern "C" void zoomFovy__8dCamMathFff();
+extern "C" void __dt__7cDegreeFv();
+extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
+extern "C" bool Shift__9dCstick_cFUl();
+extern "C" void __ct__11dCamParam_cFl();
+extern "C" void __dt__11dCamParam_cFv();
+extern "C" void Change__11dCamParam_cFl();
+extern "C" void SearchStyle__11dCamParam_cFUl();
+extern "C" void __ct__11dCamSetup_cFv();
+extern "C" void __dt__11dCamSetup_cFv();
+extern "C" void CheckLatitudeRange__11dCamSetup_cFPs();
+extern "C" void PlayerHideDist__11dCamSetup_cFv();
+extern "C" void getEvIntData__9dCamera_cFPiPc();
+extern "C" void getEvFloatData__9dCamera_cFPfPc();
+extern "C" void getEvIntData__9dCamera_cFPiPci();
+extern "C" void getEvFloatData__9dCamera_cFPfPcf();
+extern "C" void getEvStringData__9dCamera_cFPcPcPc();
+extern "C" void getEvActor__9dCamera_cFPc();
+extern "C" void getEvActor__9dCamera_cFPcPc();
+extern "C" void pauseEvCamera__9dCamera_cFv();
+extern "C" void fixedFrameEvCamera__9dCamera_cFv();
+extern "C" void stokerEvCamera__9dCamera_cFv();
+extern "C" void rollingEvCamera__9dCamera_cFv();
+extern "C" void fixedPositionEvCamera__9dCamera_cFv();
+extern "C" void uniformTransEvCamera__9dCamera_cFv();
+extern "C" void uniformBrakeEvCamera__9dCamera_cFv();
+extern "C" void uniformAcceleEvCamera__9dCamera_cFv();
+extern "C" void __as__7cSGlobeFRC7cSGlobe();
+extern "C" void abs__4cXyzCFv();
+extern "C" void U__7cSGlobeFRC7cSAngle();
+extern "C" void __ami__4cXyzFRC3Vec();
+extern "C" void __apl__4cXyzFRC3Vec();
+extern "C" void watchActorEvCamera__9dCamera_cFv();
+extern "C" void V__7cSGlobeFRC7cSAngle();
+extern "C" void restorePosEvCamera__9dCamera_cFv();
+extern "C" void talktoEvCamera__9dCamera_cFv();
+extern "C" void maptoolIdEvCamera__9dCamera_cFv();
+extern "C" void styleEvCamera__9dCamera_cFv();
+extern "C" void gameOverEvCamera__9dCamera_cFv();
+extern "C" void tactEvCamera__9dCamera_cFv();
+extern "C" bool turnToActorEvCamera__9dCamera_cFv();
+extern "C" void stbWaitEvCamera__9dCamera_cFv();
+extern "C" void saveEvCamera__9dCamera_cFv();
+extern "C" void loadEvCamera__9dCamera_cFv();
+extern "C" void useItem0EvCamera__9dCamera_cFv();
+extern "C" void useItem1EvCamera__9dCamera_cFv();
+extern "C" void getItemEvCamera__9dCamera_cFv();
+extern "C" void possessedEvCamera__9dCamera_cFv();
+extern "C" void fixedFramesEvCamera__9dCamera_cFv();
+extern "C" void bSplineEvCamera__9dCamera_cFv();
+extern "C" void twoActor0EvCamera__9dCamera_cFv();
+extern "C" void peepHoleEvCamera__9dCamera_cFv();
+extern "C" void digHoleEvCamera__9dCamera_cFv();
+extern "C" void hintTalkEvCamera__9dCamera_cFv();
+extern "C" void bspTransEvCamera__9dCamera_cFv();
+extern "C" bool portalWarpEvCamera__9dCamera_cFv();
+extern "C" void attentionPos__9dCamera_cFP10fopAc_ac_c();
+extern "C" void directionOf__9dCamera_cFP10fopAc_ac_c();
+extern "C" void positionOf__9dCamera_cFP10fopAc_ac_c();
+extern "C" void setFlag__9dCamera_cFUl();
+extern "C" void eyePos__9dCamera_cFP10fopAc_ac_c();
+extern "C" void fopAcM_GetID__FPCv();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" void Init__14d2DBSplinePathFll();
+extern "C" void Spot__14d2DBSplinePathFPff();
+extern "C" bool getE3Zhint__9daAlink_cFv();
+extern "C" void checkCutLargeTurnState__9daAlink_cCFv();
+extern "C" void checkBowCameraArrowPosP__9daAlink_cFPsPs();
+extern "C" void getCopyRodCameraActor__9daAlink_cFv();
+extern "C" void checkCanoeRideTandem__9daAlink_cFv();
+extern "C" void checkIronBallThrowMode__9daAlink_cCFv();
+extern "C" void checkIronBallThrowReturnMode__9daAlink_cCFv();
+extern "C" void checkMidnaLockJumpPoint__9daAlink_cCFv();
+extern "C" void __ct__8cM3dGPlaFv();
+extern "C" void fopAcM_GetName__FPv();
+extern "C" void checkMagneBootsOn__9daPy_py_cCFv();
+extern "C" void dComIfGp_getHorseActor__Fv();
+extern "C" void __ct__4cXyzFfff();
+extern "C" void getLeftHandPos__9daPy_py_cCFv();
+extern "C" void getThrowBoomerangActor__9daPy_py_cFv();
+extern "C" void dKy_camera_water_in_status_set__FUc();
+extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
+extern "C" void dKy_TeachWind_existence_chk__Fv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __ml__4cXyzCFRC3Vec();
+extern "C" void norm__4cXyzCFv();
+extern "C" void normalize__4cXyzFv();
+extern "C" bool __ne__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_atan2f__Fff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cBgW_CheckBRoof__Ff();
+extern "C" void cBgW_CheckBWall__Ff();
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
+extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
+extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
+extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
+extern "C" void cM3d_2PlaneLinePosNearPos__FRC8cM3dGPlaRC8cM3dGPlaPC3VecP3Vec();
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
+extern "C" void __ct__8cM3dGCylFPC4cXyzff();
+extern "C" void __ct__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" void Set__8cM3dGSphFRC4cXyzf();
+extern "C" void __ct__7cSAngleFRC7cSAngle();
+extern "C" void __ct__7cSAngleFs();
+extern "C" void __ct__7cSAngleFf();
+extern "C" void Val__7cSAngleFRC7cSAngle();
+extern "C" void Val__7cSAngleFs();
+extern "C" void Val__7cSAngleFf();
+extern "C" void Degree__7cSAngleCFv();
+extern "C" void Norm__7cSAngleCFv();
+extern "C" void Abs__7cSAngleCFv();
+extern "C" void Inv__7cSAngleCFv();
+extern "C" void Sin__7cSAngleCFv();
+extern "C" void Cos__7cSAngleCFv();
+extern "C" void __mi__7cSAngleCFv();
+extern "C" void __pl__7cSAngleCFRC7cSAngle();
+extern "C" void __mi__7cSAngleCFRC7cSAngle();
+extern "C" void __apl__7cSAngleFRC7cSAngle();
+extern "C" void __ami__7cSAngleFRC7cSAngle();
+extern "C" void __pl__7cSAngleCFs();
+extern "C" void __mi__7cSAngleCFs();
+extern "C" void __apl__7cSAngleFs();
+extern "C" void __ml__7cSAngleCFf();
+extern "C" void __amu__7cSAngleFf();
+extern "C" void __pl__FsRC7cSAngle();
+extern "C" void __mi__FsRC7cSAngle();
+extern "C" void __ct__7cDegreeFf();
+extern "C" void Cos__7cDegreeCFv();
+extern "C" void Tan__7cDegreeCFv();
+extern "C" void Xyz__7cSPolarCFv();
+extern "C" void __ct__7cSGlobeFRC7cSGlobe();
+extern "C" void __ct__7cSGlobeFfss();
+extern "C" void __ct__7cSGlobeFfRC7cSAngleRC7cSAngle();
+extern "C" void __ct__7cSGlobeFRC4cXyz();
+extern "C" void Val__7cSGlobeFfss();
+extern "C" void Val__7cSGlobeFfRC7cSAngleRC7cSAngle();
+extern "C" void Val__7cSGlobeFRC4cXyz();
+extern "C" void Xyz__7cSGlobeCFv();
+extern "C" void Invert__7cSGlobeFv();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec();
+extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc();
+extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf();
+extern "C" void setAudioCamera__10Z2AudienceFPA4_fR3VecR3Vecffbib();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void C_MTXPerspective();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECCrossProduct();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savefpr_29();
+extern "C" void _restfpr_29();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+extern "C" void strcmp();
+extern "C" void tan();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern void* __vt__8cM3dGPla[3];

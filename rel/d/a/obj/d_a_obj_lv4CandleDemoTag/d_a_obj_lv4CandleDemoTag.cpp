@@ -70,42 +70,44 @@ struct cXyz {
 // Forward References:
 // 
 
-static void dalv4CandleDemoTag_Draw(dalv4CandleDemoTag_c*); // 2
-static void dalv4CandleDemoTag_Execute(dalv4CandleDemoTag_c*); // 2
-static void dalv4CandleDemoTag_Delete(dalv4CandleDemoTag_c*); // 2
-static void dalv4CandleDemoTag_Create(fopAc_ac_c*); // 2
+static void dalv4CandleDemoTag_Draw(dalv4CandleDemoTag_c*);
+static void dalv4CandleDemoTag_Execute(dalv4CandleDemoTag_c*);
+static void dalv4CandleDemoTag_Delete(dalv4CandleDemoTag_c*);
+static void dalv4CandleDemoTag_Create(fopAc_ac_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Tag_Lv4CandleDm[12];
 
-extern "C" void __ct__24dalv4CandleDemoTag_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void create__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void Execute__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void procMain__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void init_modeWatch__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void modeWatch__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void init_modeEnemyCreate__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void modeEnemyCreate__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void init_modeNG__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void modeNG__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void init_modeEnd__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void modeEnd__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void eventStart__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" void searchShutterAct__20dalv4CandleDemoTag_cFPvPv(); // 1
-extern "C" bool Draw__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" bool Delete__20dalv4CandleDemoTag_cFv(); // 1
-extern "C" static void dalv4CandleDemoTag_Draw__FP20dalv4CandleDemoTag_c(); // 1
-extern "C" static void dalv4CandleDemoTag_Execute__FP20dalv4CandleDemoTag_c(); // 1
-extern "C" static void dalv4CandleDemoTag_Delete__FP20dalv4CandleDemoTag_c(); // 1
-extern "C" static void dalv4CandleDemoTag_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__24dalv4CandleDemoTag_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_lv4CandleDemoTag_cpp(); // 1
-extern "C" static void func_80C5D114(); // 1
-extern "C" static void func_80C5D11C(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void __dt__20dalv4CandleDemoTag_cFv(); // 1
+extern "C" void __ct__24dalv4CandleDemoTag_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__20dalv4CandleDemoTag_cFv();
+extern "C" void create__20dalv4CandleDemoTag_cFv();
+extern "C" void Execute__20dalv4CandleDemoTag_cFv();
+extern "C" void procMain__20dalv4CandleDemoTag_cFv();
+extern "C" void init_modeWatch__20dalv4CandleDemoTag_cFv();
+extern "C" void modeWatch__20dalv4CandleDemoTag_cFv();
+extern "C" void init_modeEnemyCreate__20dalv4CandleDemoTag_cFv();
+extern "C" void modeEnemyCreate__20dalv4CandleDemoTag_cFv();
+extern "C" void init_modeNG__20dalv4CandleDemoTag_cFv();
+extern "C" void modeNG__20dalv4CandleDemoTag_cFv();
+extern "C" void init_modeEnd__20dalv4CandleDemoTag_cFv();
+extern "C" void modeEnd__20dalv4CandleDemoTag_cFv();
+extern "C" void eventStart__20dalv4CandleDemoTag_cFv();
+extern "C" void searchShutterAct__20dalv4CandleDemoTag_cFPvPv();
+extern "C" bool Draw__20dalv4CandleDemoTag_cFv();
+extern "C" bool Delete__20dalv4CandleDemoTag_cFv();
+extern "C" static void dalv4CandleDemoTag_Draw__FP20dalv4CandleDemoTag_c();
+extern "C" static void dalv4CandleDemoTag_Execute__FP20dalv4CandleDemoTag_c();
+extern "C" static void dalv4CandleDemoTag_Delete__FP20dalv4CandleDemoTag_c();
+extern "C" static void dalv4CandleDemoTag_Create__FP10fopAc_ac_c();
+extern "C" void __dt__24dalv4CandleDemoTag_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv4CandleDemoTag_cpp();
+extern "C" static void func_80C5D114();
+extern "C" static void func_80C5D11C();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" void __dt__20dalv4CandleDemoTag_cFv();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_Lv4CandleDm[12];
 
@@ -113,35 +115,39 @@ extern "C" extern void* g_profile_Tag_Lv4CandleDm[12];
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_myRoomSearchEnemy(s8); // 2
-void dPath_GetRoomPath(int, int); // 2
-void operator delete(void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_myRoomSearchEnemy__FSc(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_myRoomSearchEnemy(s8);
+void dPath_GetRoomPath(int, int);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_myRoomSearchEnemy__FSc();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

@@ -68,43 +68,45 @@ struct JASCalc {
 // Forward References:
 // 
 
-void DSP_CreateMap2(u32); // 2
+void DSP_CreateMap2(u32);
+extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
+extern "C" extern u8 pad_8045575C[4];
 
-extern "C" void boot__6JASDspFPFPv_v(); // 1
-extern "C" void releaseHalt__6JASDspFUl(); // 1
-extern "C" void finishWork__6JASDspFUs(); // 1
-extern "C" void syncFrame__6JASDspFUlUlUl(); // 1
-extern "C" void setDSPMixerLevel__6JASDspFf(); // 1
-extern "C" void getDSPMixerLevel__6JASDspFv(); // 1
-extern "C" void getDSPHandle__6JASDspFi(); // 1
-extern "C" void setFilterTable__6JASDspFPsPsUl(); // 1
-extern "C" void flushBuffer__6JASDspFv(); // 1
-extern "C" void invalChannelAll__6JASDspFv(); // 1
-extern "C" void initBuffer__6JASDspFv(); // 1
-extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_(); // 1
-extern "C" void init__Q26JASDsp8TChannelFv(); // 1
-extern "C" void playStart__Q26JASDsp8TChannelFv(); // 1
-extern "C" void playStop__Q26JASDsp8TChannelFv(); // 1
-extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv(); // 1
-extern "C" void forceStop__Q26JASDsp8TChannelFv(); // 1
-extern "C" void isActive__Q26JASDsp8TChannelCFv(); // 1
-extern "C" void isFinish__Q26JASDsp8TChannelCFv(); // 1
-extern "C" void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl(); // 1
-extern "C" void setOscInfo__Q26JASDsp8TChannelFUl(); // 1
-extern "C" void initAutoMixer__Q26JASDsp8TChannelFv(); // 1
-extern "C" void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc(); // 1
-extern "C" void setPitch__Q26JASDsp8TChannelFUs(); // 1
-extern "C" void setMixerInitVolume__Q26JASDsp8TChannelFUcs(); // 1
-extern "C" void setMixerVolume__Q26JASDsp8TChannelFUcs(); // 1
-extern "C" void setPauseFlag__Q26JASDsp8TChannelFUc(); // 1
-extern "C" void flush__Q26JASDsp8TChannelFv(); // 1
-extern "C" void initFilter__Q26JASDsp8TChannelFv(); // 1
-extern "C" void setFilterMode__Q26JASDsp8TChannelFUs(); // 1
-extern "C" void setIIRFilterParam__Q26JASDsp8TChannelFPs(); // 1
-extern "C" void setFIR8FilterParam__Q26JASDsp8TChannelFPs(); // 1
-extern "C" void setDistFilter__Q26JASDsp8TChannelFs(); // 1
-extern "C" void setBusConnect__Q26JASDsp8TChannelFUcUc(); // 1
-extern "C" void DSP_CreateMap2__FUl(); // 1
+extern "C" void boot__6JASDspFPFPv_v();
+extern "C" void releaseHalt__6JASDspFUl();
+extern "C" void finishWork__6JASDspFUs();
+extern "C" void syncFrame__6JASDspFUlUlUl();
+extern "C" void setDSPMixerLevel__6JASDspFf();
+extern "C" void getDSPMixerLevel__6JASDspFv();
+extern "C" void getDSPHandle__6JASDspFi();
+extern "C" void setFilterTable__6JASDspFPsPsUl();
+extern "C" void flushBuffer__6JASDspFv();
+extern "C" void invalChannelAll__6JASDspFv();
+extern "C" void initBuffer__6JASDspFv();
+extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+extern "C" void init__Q26JASDsp8TChannelFv();
+extern "C" void playStart__Q26JASDsp8TChannelFv();
+extern "C" void playStop__Q26JASDsp8TChannelFv();
+extern "C" void replyFinishRequest__Q26JASDsp8TChannelFv();
+extern "C" void forceStop__Q26JASDsp8TChannelFv();
+extern "C" void isActive__Q26JASDsp8TChannelCFv();
+extern "C" void isFinish__Q26JASDsp8TChannelCFv();
+extern "C" void setWaveInfo__Q26JASDsp8TChannelFRC11JASWaveInfoUlUl();
+extern "C" void setOscInfo__Q26JASDsp8TChannelFUl();
+extern "C" void initAutoMixer__Q26JASDsp8TChannelFv();
+extern "C" void setAutoMixer__Q26JASDsp8TChannelFUsUcUcUcUc();
+extern "C" void setPitch__Q26JASDsp8TChannelFUs();
+extern "C" void setMixerInitVolume__Q26JASDsp8TChannelFUcs();
+extern "C" void setMixerVolume__Q26JASDsp8TChannelFUcs();
+extern "C" void setPauseFlag__Q26JASDsp8TChannelFUc();
+extern "C" void flush__Q26JASDsp8TChannelFv();
+extern "C" void initFilter__Q26JASDsp8TChannelFv();
+extern "C" void setFilterMode__Q26JASDsp8TChannelFUs();
+extern "C" void setIIRFilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setDistFilter__Q26JASDsp8TChannelFs();
+extern "C" void setBusConnect__Q26JASDsp8TChannelFUcUc();
+extern "C" void DSP_CreateMap2__FUl();
 extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 extern "C" extern u8 pad_8045575C[4];
 
@@ -112,32 +114,33 @@ extern "C" extern u8 pad_8045575C[4];
 // External References:
 // 
 
-void cDyl_InitAsyncIsDone(); // 2
-void DSPReleaseHalt2(u32); // 2
-void DsetupTable(u32, u32, u32, u32, u32); // 2
-void DsetMixerLevel(f32); // 2
-void DspBoot(void (*)(void*)); // 2
-void DspFinishWork(u16); // 2
-void DsyncFrame2(u32, u32, u32); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
+void cDyl_InitAsyncIsDone();
+void DSPReleaseHalt2(u32);
+void DsetupTable(u32, u32, u32, u32, u32);
+void DsetMixerLevel(f32);
+void DspBoot(void (*)(void*));
+void DspFinishWork(u16);
+void DsyncFrame2(u32, u32, u32);
+void* operator new[](u32, JKRHeap*, int);
+extern "C" extern u8 JASDram[4];
 
-extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void DSPReleaseHalt2__FUl(); // 1
-extern "C" void DsetupTable__FUlUlUlUlUl(); // 1
-extern "C" void DsetMixerLevel__Ff(); // 1
-extern "C" void DspBoot__FPFPv_v(); // 1
-extern "C" void DspFinishWork__FUs(); // 1
-extern "C" void DsyncFrame2__FUlUlUl(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void DSPReleaseHalt2__FUl();
+extern "C" void DsetupTable__FUlUlUlUlUl();
+extern "C" void DsetMixerLevel__Ff();
+extern "C" void DspBoot__FPFPv_v();
+extern "C" void DspFinishWork__FUs();
+extern "C" void DsyncFrame2__FUlUlUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void DCInvalidateRange();
+extern "C" void DCFlushRange();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 JASDram[4];
 
 // 

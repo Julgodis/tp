@@ -66,34 +66,36 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-static void daTag_EvtMsg_Create(void*); // 2
-static void daTag_EvtMsg_Delete(void*); // 2
-static void daTag_EvtMsg_Execute(void*); // 2
-static void daTag_EvtMsg_Draw(void*); // 2
-static bool daTag_EvtMsg_IsDelete(void*); // 2
-static void cLib_calcTimer__template0(int*); // 2
+static void daTag_EvtMsg_Create(void*);
+static void daTag_EvtMsg_Delete(void*);
+static void daTag_EvtMsg_Execute(void*);
+static void daTag_EvtMsg_Draw(void*);
+static bool daTag_EvtMsg_IsDelete(void*);
+static void cLib_calcTimer__template0(int*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_TAG_EVTMSG[12];
 
-extern "C" void create__14daTag_EvtMsg_cFv(); // 1
-extern "C" bool Delete__14daTag_EvtMsg_cFv(); // 1
-extern "C" void Execute__14daTag_EvtMsg_cFv(); // 1
-extern "C" bool Draw__14daTag_EvtMsg_cFv(); // 1
-extern "C" void getOnEvtBit__14daTag_EvtMsg_cFv(); // 1
-extern "C" void getOffEvtBit__14daTag_EvtMsg_cFv(); // 1
-extern "C" void getOnSwBit__14daTag_EvtMsg_cFv(); // 1
-extern "C" void getOffSwBit__14daTag_EvtMsg_cFv(); // 1
-extern "C" void getProcType__14daTag_EvtMsg_cFv(); // 1
-extern "C" void isDelete__14daTag_EvtMsg_cFv(); // 1
-extern "C" void chkPointInArea__14daTag_EvtMsg_cF4cXyz(); // 1
-extern "C" void ECut_talk__14daTag_EvtMsg_cFi(); // 1
-extern "C" void ECut_wait__14daTag_EvtMsg_cFi(); // 1
-extern "C" static void daTag_EvtMsg_Create__FPv(); // 1
-extern "C" static void daTag_EvtMsg_Delete__FPv(); // 1
-extern "C" static void daTag_EvtMsg_Execute__FPv(); // 1
-extern "C" static void daTag_EvtMsg_Draw__FPv(); // 1
-extern "C" static bool daTag_EvtMsg_IsDelete__FPv(); // 1
-extern "C" void __dt__14daTag_EvtMsg_cFv(); // 1
-extern "C" static void func_8048D760(); // 1
-extern "C" void __sinit_d_a_tag_evtmsg_cpp(); // 1
+extern "C" void create__14daTag_EvtMsg_cFv();
+extern "C" bool Delete__14daTag_EvtMsg_cFv();
+extern "C" void Execute__14daTag_EvtMsg_cFv();
+extern "C" bool Draw__14daTag_EvtMsg_cFv();
+extern "C" void getOnEvtBit__14daTag_EvtMsg_cFv();
+extern "C" void getOffEvtBit__14daTag_EvtMsg_cFv();
+extern "C" void getOnSwBit__14daTag_EvtMsg_cFv();
+extern "C" void getOffSwBit__14daTag_EvtMsg_cFv();
+extern "C" void getProcType__14daTag_EvtMsg_cFv();
+extern "C" void isDelete__14daTag_EvtMsg_cFv();
+extern "C" void chkPointInArea__14daTag_EvtMsg_cF4cXyz();
+extern "C" void ECut_talk__14daTag_EvtMsg_cFi();
+extern "C" void ECut_wait__14daTag_EvtMsg_cFi();
+extern "C" static void daTag_EvtMsg_Create__FPv();
+extern "C" static void daTag_EvtMsg_Delete__FPv();
+extern "C" static void daTag_EvtMsg_Execute__FPv();
+extern "C" static void daTag_EvtMsg_Draw__FPv();
+extern "C" static bool daTag_EvtMsg_IsDelete__FPv();
+extern "C" void __dt__14daTag_EvtMsg_cFv();
+extern "C" static void func_8048D760();
+extern "C" void __sinit_d_a_tag_evtmsg_cpp();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_TAG_EVTMSG[12];
 
@@ -101,44 +103,49 @@ extern "C" extern void* g_profile_TAG_EVTMSG[12];
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void daNpcF_chkEvtBit(u32); // 2
-void daNpcF_chkPointInArea(cXyz, cXyz, cXyz, s16); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void daNpcF_chkEvtBit(u32);
+void daNpcF_chkPointInArea(cXyz, cXyz, cXyz, s16);
+void operator delete(void*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void daNpcF_chkEvtBit__FUl(); // 1
-extern "C" void daNpcF_chkPointInArea__F4cXyz4cXyz4cXyzs(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void daNpcF_chkEvtBit__FUl();
+extern "C" void daNpcF_chkPointInArea__F4cXyz4cXyz4cXyzs();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

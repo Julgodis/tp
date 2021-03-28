@@ -33,23 +33,23 @@ struct dBgS_Chk {
 // 
 
 
-extern "C" void __ct__8dBgS_ChkFv(); // 1
-extern "C" void __dt__8dBgS_ChkFv(); // 1
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" static void func_80077574(); // 1
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" static void func_80077574();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __ct__15dBgS_GrpPassChkFv(); // 1
-extern "C" void __dt__15dBgS_GrpPassChkFv(); // 1
-extern "C" void __ct__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __dt__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15dBgS_GrpPassChkFv();
+extern "C" void __ct__16dBgS_PolyPassChkFv();
+extern "C" void __dt__16dBgS_PolyPassChkFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

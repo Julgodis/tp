@@ -26,10 +26,10 @@ struct JASRegisterParam {
 // 
 
 
-extern "C" void __ct__16JASRegisterParamFv(); // 1
-extern "C" void init__16JASRegisterParamFv(); // 1
-extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl(); // 1
-extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID(); // 1
+extern "C" void __ct__16JASRegisterParamFv();
+extern "C" void init__16JASRegisterParamFv();
+extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
+extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
 
 // 
 // External References:

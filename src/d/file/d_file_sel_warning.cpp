@@ -66,10 +66,10 @@ struct J2DTextBox {
 	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
-struct J2DGrafContext {
+struct J2DAnmTransform {
 };
 
-struct J2DAnmTransform {
+struct J2DGrafContext {
 };
 
 struct J2DScreen {
@@ -96,54 +96,57 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_file_d_file_sel_warning__stringBase0;
 
-extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc(); // 1
-extern "C" void __dt__15dFile_warning_cFv(); // 1
-extern "C" void screenSet__15dFile_warning_cFv(); // 1
-extern "C" void _move__15dFile_warning_cFv(); // 1
-extern "C" void modeWait__15dFile_warning_cFv(); // 1
-extern "C" void modeMove__15dFile_warning_cFv(); // 1
-extern "C" void baseMoveAnm__15dFile_warning_cFv(); // 1
-extern "C" void openInit__15dFile_warning_cFv(); // 1
-extern "C" void closeInit__15dFile_warning_cFv(); // 1
-extern "C" void init__15dFile_warning_cFv(); // 1
-extern "C" void _draw__15dFile_warning_cFv(); // 1
-extern "C" void drawSelf__15dFile_warning_cFv(); // 1
-extern "C" void setText__15dFile_warning_cFUl(); // 1
-extern "C" void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void draw__16dDlst_FileWarn_cFv(); // 1
-extern "C" void __sinit_d_file_sel_warning_cpp(); // 1
-extern "C" void __dt__16dDlst_FileWarn_cFv(); // 1
-extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform(); // 1
+extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc();
+extern "C" void __dt__15dFile_warning_cFv();
+extern "C" void screenSet__15dFile_warning_cFv();
+extern "C" void _move__15dFile_warning_cFv();
+extern "C" void modeWait__15dFile_warning_cFv();
+extern "C" void modeMove__15dFile_warning_cFv();
+extern "C" void baseMoveAnm__15dFile_warning_cFv();
+extern "C" void openInit__15dFile_warning_cFv();
+extern "C" void closeInit__15dFile_warning_cFv();
+extern "C" void init__15dFile_warning_cFv();
+extern "C" void _draw__15dFile_warning_cFv();
+extern "C" void drawSelf__15dFile_warning_cFv();
+extern "C" void setText__15dFile_warning_cFUl();
+extern "C" void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setBlackWhite__10J2DTextBoxFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void draw__16dDlst_FileWarn_cFv();
+extern "C" void __sinit_d_file_sel_warning_cpp();
+extern "C" void __dt__16dDlst_FileWarn_cFv();
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform();
 extern "C" extern char const* const d_file_d_file_sel_warning__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void mDoExt_removeMesgFont(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void mDoExt_removeMesgFont();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_removeMesgFont__Fv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_removeMesgFont__Fv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __ptmf_scall();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 

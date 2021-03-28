@@ -35,44 +35,50 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static void daTagMmsg_Create(fopAc_ac_c*); // 2
-static void daTagMmsg_Delete(daTagMmsg_c*); // 2
-static void daTagMmsg_Execute(daTagMmsg_c*); // 2
-static bool daTagMmsg_Draw(daTagMmsg_c*); // 2
+static void daTagMmsg_Create(fopAc_ac_c*);
+static void daTagMmsg_Delete(daTagMmsg_c*);
+static void daTagMmsg_Execute(daTagMmsg_c*);
+static bool daTagMmsg_Draw(daTagMmsg_c*);
+extern "C" extern void* g_profile_Tag_Mmsg[12];
 
-extern "C" void create__11daTagMmsg_cFv(); // 1
-extern "C" static void daTagMmsg_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__11daTagMmsg_cFv(); // 1
-extern "C" static void daTagMmsg_Delete__FP11daTagMmsg_c(); // 1
-extern "C" void execute__11daTagMmsg_cFv(); // 1
-extern "C" static void daTagMmsg_Execute__FP11daTagMmsg_c(); // 1
-extern "C" static bool daTagMmsg_Draw__FP11daTagMmsg_c(); // 1
+extern "C" void create__11daTagMmsg_cFv();
+extern "C" static void daTagMmsg_Create__FP10fopAc_ac_c();
+extern "C" void __dt__11daTagMmsg_cFv();
+extern "C" static void daTagMmsg_Delete__FP11daTagMmsg_c();
+extern "C" void execute__11daTagMmsg_cFv();
+extern "C" static void daTagMmsg_Execute__FP11daTagMmsg_c();
+extern "C" static bool daTagMmsg_Draw__FP11daTagMmsg_c();
 extern "C" extern void* g_profile_Tag_Mmsg[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dComIfGp_getRoomCamera(int); // 2
-void dComIfGp_getRoomArrow(int); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void dComIfGp_getRoomCamera(int);
+void dComIfGp_getRoomArrow(int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void dComIfGp_getRoomCamera__Fi(); // 1
-extern "C" void dComIfGp_getRoomArrow__Fi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void dComIfGp_getRoomCamera__Fi();
+extern "C" void dComIfGp_getRoomArrow__Fi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

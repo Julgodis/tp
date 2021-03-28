@@ -12,30 +12,30 @@
 // 
 
 
-extern "C" void HandlePositionFileSupportRequest(); // 1
-extern "C" void HandleCloseFileSupportRequest(); // 1
-extern "C" void HandleOpenFileSupportRequest(); // 1
-extern "C" void TRKRequestSend(); // 1
-extern "C" void TRKSuppAccessFile(); // 1
+extern "C" void HandlePositionFileSupportRequest();
+extern "C" void HandleCloseFileSupportRequest();
+extern "C" void HandleOpenFileSupportRequest();
+extern "C" void TRKRequestSend();
+extern "C" void TRKSuppAccessFile();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memset(); // 1
-extern "C" void strlen(); // 1
-extern "C" void TRKMessageSend(); // 1
-extern "C" void TRKReadBuffer_ui8(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKProcessInput(); // 1
-extern "C" void TRKTestForPacket(); // 1
-extern "C" void OutputData(); // 1
-extern "C" void MWTRACE(); // 1
+SECTION_INIT void memset();
+extern "C" void strlen();
+extern "C" void TRKMessageSend();
+extern "C" void TRKReadBuffer_ui8();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKReleaseBuffer();
+extern "C" void TRKGetBuffer();
+extern "C" void TRKGetFreeBuffer();
+extern "C" void TRKProcessInput();
+extern "C" void TRKTestForPacket();
+extern "C" void OutputData();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

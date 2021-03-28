@@ -86,13 +86,13 @@ struct JAUSeqCollection {
 	/* 802A66AC */ void init(void const*);
 };
 
+struct JAISoundID {
+};
+
 struct JAISeqData {
 };
 
 struct JAISeqDataUser {
-};
-
-struct JAISoundID {
 };
 
 struct JAUSectionHeap {
@@ -187,119 +187,133 @@ struct JAISeqDataMgr {
 // Forward References:
 // 
 
-static void JAUNewSectionHeap(JKRSolidHeap*, bool); // 2
-void JAUNewSectionHeap(bool); // 2
+static void JAUNewSectionHeap(JKRSolidHeap*, bool);
+void JAUNewSectionHeap(bool);
+extern "C" extern char const* const JAUSectionHeap__stringBase0;
 
-extern "C" void __ct__Q210JAUSection12TSectionDataFv(); // 1
-extern "C" void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv(); // 1
-extern "C" void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv(); // 1
-extern "C" void __ct__10JAUSectionFP14JAUSectionHeapUll(); // 1
-extern "C" void finishBuild__10JAUSectionFv(); // 1
-extern "C" void dispose__10JAUSectionFv(); // 1
-extern "C" void newSoundTable__10JAUSectionFPCvUlb(); // 1
-extern "C" void newSoundNameTable__10JAUSectionFPCvUlb(); // 1
-extern "C" void newStreamFileTable__10JAUSectionFPCvb(); // 1
-extern "C" void newSeSeqCollection__10JAUSectionFPCvUl(); // 1
-extern "C" void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl(); // 1
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl(); // 1
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID(); // 1
-extern "C" void newCopy__10JAUSectionFPCvUll(); // 1
-extern "C" void newWaveBank__10JAUSectionFUlPCv(); // 1
-extern "C" void loadWaveArc__10JAUSectionFUlUl(); // 1
-extern "C" void newBank__10JAUSectionFPCvUl(); // 1
-extern "C" void newVoiceBank__10JAUSectionFUlUl(); // 1
-extern "C" void beginNewBankTable__10JAUSectionFUlUl(); // 1
-extern "C" void endNewBankTable__10JAUSectionFv(); // 1
-extern "C" void __ct__Q214JAUSectionHeap16TSectionHeapDataFv(); // 1
-extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive(); // 1
-extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb(); // 1
-extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv(); // 1
-extern "C" static void JAUNewSectionHeap__FP12JKRSolidHeapb(); // 1
-extern "C" void JAUNewSectionHeap__Fb(); // 1
-extern "C" void __ct__14JAUSectionHeapFP12JKRSolidHeapbl(); // 1
-extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
-extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser(); // 1
-extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
-extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData(); // 1
-extern "C" bool releaseSeqData__14JAUSectionHeapFv(); // 1
-extern "C" void __dt__14JAUSectionHeapFv(); // 1
-extern "C" static void func_802A6440(); // 1
-extern "C" void __dt__10JAUSectionFv(); // 1
-extern "C" static void func_802A6574(); // 1
-extern "C" void func_802A65D4(); // 1
-extern "C" void func_802A6614(); // 1
-extern "C" void func_802A6634(); // 1
-extern "C" void func_802A665C(); // 1
-extern "C" static void func_802A6680(); // 1
-extern "C" static void func_802A6688(); // 1
-extern "C" static void func_802A6690(); // 1
-extern "C" static void func_802A6698(); // 1
+extern "C" void __ct__Q210JAUSection12TSectionDataFv();
+extern "C" void resetRegisteredBankTables__Q210JAUSection12TSectionDataFv();
+extern "C" void resetRegisteredWaveBankTables__Q210JAUSection12TSectionDataFv();
+extern "C" void __ct__10JAUSectionFP14JAUSectionHeapUll();
+extern "C" void finishBuild__10JAUSectionFv();
+extern "C" void dispose__10JAUSectionFv();
+extern "C" void newSoundTable__10JAUSectionFPCvUlb();
+extern "C" void newSoundNameTable__10JAUSectionFPCvUlb();
+extern "C" void newStreamFileTable__10JAUSectionFPCvb();
+extern "C" void newSeSeqCollection__10JAUSectionFPCvUl();
+extern "C" void newStaticSeqDataBlock___10JAUSectionF10JAISoundIDUl();
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl();
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID();
+extern "C" void newCopy__10JAUSectionFPCvUll();
+extern "C" void newWaveBank__10JAUSectionFUlPCv();
+extern "C" void loadWaveArc__10JAUSectionFUlUl();
+extern "C" void newBank__10JAUSectionFPCvUl();
+extern "C" void newVoiceBank__10JAUSectionFUlUl();
+extern "C" void beginNewBankTable__10JAUSectionFUlUl();
+extern "C" void endNewBankTable__10JAUSectionFv();
+extern "C" void __ct__Q214JAUSectionHeap16TSectionHeapDataFv();
+extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
+extern "C" void loadDynamicSeq__14JAUSectionHeapF10JAISoundIDb();
+extern "C" void releaseIdleDynamicSeqDataBlock__14JAUSectionHeapFv();
+extern "C" static void JAUNewSectionHeap__FP12JKRSolidHeapb();
+extern "C" void JAUNewSectionHeap__Fb();
+extern "C" void __ct__14JAUSectionHeapFP12JKRSolidHeapbl();
+extern "C" void getOpenSection__14JAUSectionHeapFv();
+extern "C" void setSeqDataUser__14JAUSectionHeapFP14JAISeqDataUser();
+extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl();
+extern "C" void getSeqData__14JAUSectionHeapF10JAISoundIDP10JAISeqData();
+extern "C" bool releaseSeqData__14JAUSectionHeapFv();
+extern "C" void __dt__14JAUSectionHeapFv();
+extern "C" static void func_802A6440();
+extern "C" void __dt__10JAUSectionFv();
+extern "C" static void func_802A6574();
+extern "C" void func_802A65D4();
+extern "C" void func_802A6614();
+extern "C" void func_802A6634();
+extern "C" void func_802A665C();
+extern "C" static void func_802A6680();
+extern "C" static void func_802A6688();
+extern "C" static void func_802A6690();
+extern "C" static void func_802A6698();
 extern "C" extern char const* const JAUSectionHeap__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
+extern "C" extern void* __vt__7JASBank[5];
+extern "C" extern void* __vt__12JASVoiceBank[5 + 1 /* padding */];
+extern "C" extern void* __vt__13JAISeqDataMgr[6];
+extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
+extern "C" extern void* __vt__32JAUStreamDataMgr_StreamFileTable[4];
+extern "C" extern void* __files[80];
+extern "C" extern u8 data_80450B50[4];
+extern "C" extern u8 data_80450B54[4];
+extern "C" extern u8 data_80450B58[4];
+extern "C" extern u8 data_80450B90[4 + 4 /* padding */];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 JASDram[4];
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
-extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap(); // 1
-extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap(); // 1
-extern "C" void load__10JASWaveArcFP7JASHeap(); // 1
-extern "C" void __dt__13JAISeqDataMgrFv(); // 1
-extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
-extern "C" void func_802A4A80(); // 1
-extern "C" void getBank__12JAUBankTableCFUl(); // 1
-extern "C" void init__16JAUSeqCollectionFPCv(); // 1
-extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv(); // 1
-extern "C" void __ct__15JAUSeqDataBlockFv(); // 1
-extern "C" void __ct__23JAUDynamicSeqDataBlocksFv(); // 1
-extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive(); // 1
-extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab(); // 1
-extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock(); // 1
-extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser(); // 1
-extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser(); // 1
-extern "C" void init__13JAUSoundTableFPCv(); // 1
-extern "C" void init__17JAUSoundNameTableFPCv(); // 1
-extern "C" void __ct__18JAUStreamFileTableFv(); // 1
-extern "C" void init__18JAUStreamFileTableFPCv(); // 1
-extern "C" void getNumFiles__18JAUStreamFileTableCFv(); // 1
-extern "C" void getFilePath__18JAUStreamFileTableCFi(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void freeTail__7JKRHeapFv(); // 1
-extern "C" void getFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abort(); // 1
-extern "C" void fprintf(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+extern "C" void createWaveBank__11JASWSParserFPCvP7JKRHeap();
+extern "C" void createBank__12JASBNKParserFPCvP7JKRHeap();
+extern "C" void load__10JASWaveArcFP7JASHeap();
+extern "C" void __dt__13JAISeqDataMgrFv();
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void func_802A4A80();
+extern "C" void getBank__12JAUBankTableCFUl();
+extern "C" void init__16JAUSeqCollectionFPCv();
+extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void __ct__15JAUSeqDataBlockFv();
+extern "C" void __ct__23JAUDynamicSeqDataBlocksFv();
+extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
+extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
+extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
+extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
+extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
+extern "C" void init__13JAUSoundTableFPCv();
+extern "C" void init__17JAUSoundNameTableFPCv();
+extern "C" void __ct__18JAUStreamFileTableFv();
+extern "C" void init__18JAUStreamFileTableFPCv();
+extern "C" void getNumFiles__18JAUStreamFileTableCFv();
+extern "C" void getFilePath__18JAUStreamFileTableCFi();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void freeTail__7JKRHeapFv();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abort();
+extern "C" void fprintf();
 extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
 extern "C" extern void* __vt__7JASBank[5];
 extern "C" extern void* __vt__12JASVoiceBank[5 + 1 /* padding */];

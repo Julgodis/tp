@@ -55,6 +55,18 @@ namespace JGadget {
 
 namespace JStudio {
 	namespace fvb {
+		struct TObject;
+		struct TControl {
+			/* 80284668 */ TControl();
+			/* 80284698 */ ~TControl();
+			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
+			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
+			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
+			/* 802847D0 */ void destroyObject_all();
+			/* 80284834 */ void getObject(void const*, u32);
+			/* 802848D4 */ void getObject_index(u32);
+		};
+
 		struct data {
 			struct TParse_TBlock {
 			};
@@ -66,18 +78,6 @@ namespace JStudio {
 				/* 802850AC */ void getData(JStudio::fvb::data::TParse_TParagraph::TData*) const;
 			};
 
-		};
-
-		struct TObject;
-		struct TControl {
-			/* 80284668 */ TControl();
-			/* 80284698 */ ~TControl();
-			/* 80284704 */ void appendObject(JStudio::fvb::TObject*);
-			/* 80284750 */ void removeObject(JStudio::fvb::TObject*);
-			/* 80284780 */ void destroyObject(JStudio::fvb::TObject*);
-			/* 802847D0 */ void destroyObject_all();
-			/* 80284834 */ void getObject(void const*, u32);
-			/* 802848D4 */ void getObject_index(u32);
 		};
 
 		struct TObject {
@@ -204,94 +204,103 @@ namespace std {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q37JStudio3fvb8TFactory[5];
 
-extern "C" void __dt__Q37JStudio3fvb7TObjectFv(); // 1
-extern "C" void prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl(); // 1
-extern "C" static void func_802841EC(); // 1
-extern "C" static void func_802841F8(); // 1
-extern "C" static void func_80284204(); // 1
-extern "C" static void func_80284210(); // 1
-extern "C" static void func_8028421C(); // 1
-extern "C" static void func_80284228(); // 1
-extern "C" static void func_80284234(); // 1
-extern "C" static void func_80284240(); // 1
-extern "C" void __ct__Q37JStudio3fvb17TObject_compositeFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb17TObject_compositeFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb16TObject_constantFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb16TObject_constantFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb18TObject_transitionFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb18TObject_transitionFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb12TObject_listFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb12TObject_listFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb22TObject_list_parameterFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb22TObject_list_parameterFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb15TObject_hermiteFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void prepare_data___Q37JStudio3fvb15TObject_hermiteFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __ct__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void appendObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject(); // 1
-extern "C" void removeObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject(); // 1
-extern "C" void destroyObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject(); // 1
-extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl(); // 1
-extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl(); // 1
-extern "C" void __dt__Q37JStudio3fvb8TFactoryFv(); // 1
-extern "C" void create__Q37JStudio3fvb8TFactoryFRCQ47JStudio3fvb4data13TParse_TBlock(); // 1
-extern "C" void destroy__Q37JStudio3fvb8TFactoryFPQ37JStudio3fvb7TObject(); // 1
-extern "C" void __ct__Q37JStudio3fvb6TParseFPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __dt__Q37JStudio3fvb6TParseFv(); // 1
-extern "C" void parseHeader_next__Q37JStudio3fvb6TParseFPPCvPUlUl(); // 1
-extern "C" void parseBlock_next__Q37JStudio3fvb6TParseFPPCvPUlUl(); // 1
-extern "C" void __dt__Q37JStudio3fvb15TObject_hermiteFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb22TObject_list_parameterFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb12TObject_listFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb18TObject_transitionFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb16TObject_constantFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb17TObject_compositeFv(); // 1
-extern "C" void func_80285018(); // 1
+extern "C" void __dt__Q37JStudio3fvb7TObjectFv();
+extern "C" void prepare__Q37JStudio3fvb7TObjectFRCQ47JStudio3fvb4data13TParse_TBlockPQ37JStudio3fvb8TControl();
+extern "C" static void func_802841EC();
+extern "C" static void func_802841F8();
+extern "C" static void func_80284204();
+extern "C" static void func_80284210();
+extern "C" static void func_8028421C();
+extern "C" static void func_80284228();
+extern "C" static void func_80284234();
+extern "C" static void func_80284240();
+extern "C" void __ct__Q37JStudio3fvb17TObject_compositeFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb17TObject_compositeFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb16TObject_constantFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb16TObject_constantFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb18TObject_transitionFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb18TObject_transitionFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb12TObject_listFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb12TObject_listFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb22TObject_list_parameterFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb22TObject_list_parameterFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb15TObject_hermiteFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void prepare_data___Q37JStudio3fvb15TObject_hermiteFRCQ57JStudio3fvb4data17TParse_TParagraph5TDataPQ37JStudio3fvb8TControl();
+extern "C" void __ct__Q37JStudio3fvb8TControlFv();
+extern "C" void __dt__Q37JStudio3fvb8TControlFv();
+extern "C" void appendObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject();
+extern "C" void removeObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject();
+extern "C" void destroyObject__Q37JStudio3fvb8TControlFPQ37JStudio3fvb7TObject();
+extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv();
+extern "C" void getObject__Q37JStudio3fvb8TControlFPCvUl();
+extern "C" void getObject_index__Q37JStudio3fvb8TControlFUl();
+extern "C" void __dt__Q37JStudio3fvb8TFactoryFv();
+extern "C" void create__Q37JStudio3fvb8TFactoryFRCQ47JStudio3fvb4data13TParse_TBlock();
+extern "C" void destroy__Q37JStudio3fvb8TFactoryFPQ37JStudio3fvb7TObject();
+extern "C" void __ct__Q37JStudio3fvb6TParseFPQ37JStudio3fvb8TControl();
+extern "C" void __dt__Q37JStudio3fvb6TParseFv();
+extern "C" void parseHeader_next__Q37JStudio3fvb6TParseFPPCvPUlUl();
+extern "C" void parseBlock_next__Q37JStudio3fvb6TParseFPPCvPUlUl();
+extern "C" void __dt__Q37JStudio3fvb15TObject_hermiteFv();
+extern "C" void __dt__Q37JStudio3fvb22TObject_list_parameterFv();
+extern "C" void __dt__Q37JStudio3fvb12TObject_listFv();
+extern "C" void __dt__Q37JStudio3fvb18TObject_transitionFv();
+extern "C" void __dt__Q37JStudio3fvb16TObject_constantFv();
+extern "C" void __dt__Q37JStudio3fvb17TObject_compositeFv();
+extern "C" void func_80285018();
 extern "C" extern void* __vt__Q37JStudio3fvb8TFactory[5];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
+extern "C" extern void* __vt__Q27JStudio22TFunctionValue_hermite[8];
+extern "C" extern void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];
+extern "C" extern void* __vt__Q27JStudio19TFunctionValue_list[8];
+extern "C" extern void* __vt__Q27JStudio25TFunctionValue_transition[8];
+extern "C" extern void* __vt__Q27JStudio23TFunctionValue_constant[8];
+extern "C" extern void* __vt__Q27JStudio24TFunctionValue_composite[8];
+extern "C" extern u32 ga4cSignature__Q37JStudio3fvb4data[1 + 1 /* padding */];
 
-extern "C" void __dt__Q27JStudio14TFunctionValueFv(); // 1
-extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd(); // 1
-extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv(); // 1
-extern "C" void func_80281E5C(); // 1
-extern "C" void func_80281EC8(); // 1
-extern "C" void func_8028202C(); // 1
-extern "C" void func_80282094(); // 1
-extern "C" void func_80282118(); // 1
-extern "C" void func_80282200(); // 1
-extern "C" void func_80282284(); // 1
-extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv(); // 1
-extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv(); // 1
-extern "C" void __ct__Q27JStudio19TFunctionValue_listFv(); // 1
-extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl(); // 1
-extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv(); // 1
-extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl(); // 1
-extern "C" void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData(); // 1
-extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
-extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv(); // 1
-extern "C" void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
+extern "C" void __dt__Q27JStudio14TFunctionValueFv();
+extern "C" void range_set__Q27JStudio29TFunctionValueAttribute_rangeFdd();
+extern "C" void __ct__Q27JStudio24TFunctionValue_compositeFv();
+extern "C" void func_80281E5C();
+extern "C" void func_80281EC8();
+extern "C" void func_8028202C();
+extern "C" void func_80282094();
+extern "C" void func_80282118();
+extern "C" void func_80282200();
+extern "C" void func_80282284();
+extern "C" void __ct__Q27JStudio23TFunctionValue_constantFv();
+extern "C" void __ct__Q27JStudio25TFunctionValue_transitionFv();
+extern "C" void __ct__Q27JStudio19TFunctionValue_listFv();
+extern "C" void __ct__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void data_set__Q27JStudio29TFunctionValue_list_parameterFPCfUl();
+extern "C" void __ct__Q27JStudio22TFunctionValue_hermiteFv();
+extern "C" void data_set__Q27JStudio22TFunctionValue_hermiteFPCfUlUl();
+extern "C" void getData__Q47JStudio3fvb4data17TParse_TParagraphCFPQ57JStudio3fvb4data17TParse_TParagraph5TData();
+extern "C" void isEqual__Q37JStudio6object7TIDDataFRCQ37JStudio6object7TIDDataRCQ37JStudio6object7TIDData();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv();
+extern "C" void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
 extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 extern "C" extern void* __vt__Q27JStudio22TFunctionValue_hermite[8];
 extern "C" extern void* __vt__Q27JStudio29TFunctionValue_list_parameter[8];

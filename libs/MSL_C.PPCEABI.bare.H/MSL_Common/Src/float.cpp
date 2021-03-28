@@ -11,6 +11,11 @@
 // Forward References:
 // 
 
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_huge;
+extern "C" extern u32 __float_max;
+extern "C" extern u32 __float_epsilon;
+extern "C" extern u32 data_80450AF0;
 
 extern "C" extern u32 __float_nan;
 extern "C" extern u32 __float_huge;

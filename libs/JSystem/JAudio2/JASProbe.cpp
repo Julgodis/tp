@@ -23,19 +23,19 @@ struct JASProbe {
 // 
 
 
-extern "C" void start__8JASProbeFPCc(); // 1
-extern "C" void stop__8JASProbeFv(); // 1
-extern "C" void start__8JASProbeFlPCc(); // 1
-extern "C" void stop__8JASProbeFl(); // 1
+extern "C" void start__8JASProbeFPCc();
+extern "C" void stop__8JASProbeFv();
+extern "C" void start__8JASProbeFlPCc();
+extern "C" void stop__8JASProbeFl();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetTime(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSGetTime();
 
 // 
 // Declarations:

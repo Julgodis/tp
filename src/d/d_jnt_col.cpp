@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct Vec {
 };
 
@@ -22,9 +25,6 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
-};
-
-struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -39,12 +39,12 @@ struct fopAc_ac_c {
 struct dJntColData_c {
 };
 
+struct J3DModel {
+};
+
 struct cM3dGLin {
 	/* 80036A5C */ ~cM3dGLin();
 	/* 8026F2E8 */ void SetStartEnd(cXyz const&, cXyz const&);
-};
-
-struct J3DModel {
 };
 
 struct dJntCol_c {
@@ -75,16 +75,18 @@ struct cM3dGCyl {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__8cM3dGLin[3];
+extern "C" extern void* __vt__8cM3dGSph[3];
 
-extern "C" void __ct__9dJntCol_cFv(); // 1
-extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli(); // 1
-extern "C" void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz(); // 1
-extern "C" void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi(); // 1
-extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz(); // 1
-extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
-extern "C" void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz(); // 1
+extern "C" void __ct__9dJntCol_cFv();
+extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli();
+extern "C" void setNowLine__9dJntCol_cFP8cM3dGLinPC4cXyzPC5csXyzP4cXyz();
+extern "C" void searchNearPos__9dJntCol_cCFPC8cM3dGLinPC4cXyzP4cXyzi();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void getArrowOffsetPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz();
+extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
+extern "C" void setArrowPosAndAngle__9dJntCol_cFPC4cXyzPC4cXyziP4cXyzP5csXyz();
 extern "C" extern void* __vt__8cM3dGLin[3];
 extern "C" extern void* __vt__8cM3dGSph[3];
 
@@ -92,57 +94,63 @@ extern "C" extern void* __vt__8cM3dGSph[3];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void cM_atan2s(f32, f32); // 2
-void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*); // 2
-void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool); // 2
-void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*); // 2
-void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
-void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*); // 2
-void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void cM_atan2s(f32, f32);
+void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
+void cM3d_Cross_LinPla(cM3dGLin const*, cM3dGPla const*, Vec*, bool, bool);
+void cM3d_Cross_LinSph_CrossPos(cM3dGSph const&, cM3dGLin const&, Vec*, Vec*);
+void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
+void cM3d_lineVsPosSuisenCross(cM3dGLin const*, Vec const*, Vec*);
+void cM3d_lineVsPosSuisenCross(Vec const&, Vec const&, Vec const&, Vec*);
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 BaseZ__4cXyz[12];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __dv__4cXyzCFf(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec(); // 1
-extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb(); // 1
-extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec(); // 1
-extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec(); // 1
-extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec(); // 1
-extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec(); // 1
-extern "C" void Set__8cM3dGCylFRC4cXyzff(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz(); // 1
-extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec(); // 1
-extern "C" void Set__8cM3dGSphFRC4cXyzf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __dv__4cXyzCFf();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void atan2sY_XZ__4cXyzCFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
+extern "C" void cM3d_Cross_LinPla__FPC8cM3dGLinPC8cM3dGPlaP3Vecbb();
+extern "C" void cM3d_Cross_LinSph_CrossPos__FRC8cM3dGSphRC8cM3dGLinP3VecP3Vec();
+extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
+extern "C" void cM3d_lineVsPosSuisenCross__FPC8cM3dGLinPC3VecP3Vec();
+extern "C" void cM3d_lineVsPosSuisenCross__FRC3VecRC3VecRC3VecP3Vec();
+extern "C" void Set__8cM3dGCylFRC4cXyzff();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
+extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" void Set__8cM3dGSphFRC4cXyzf();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__8cM3dGPla[3];
 extern "C" extern void* __vt__8cM3dGCyl[3];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

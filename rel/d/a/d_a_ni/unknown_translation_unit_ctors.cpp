@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_809511AC[2];
 
 extern void* const data_809511AC[2];
 
@@ -19,7 +20,7 @@ extern void* const data_809511AC[2];
 // 
 
 
-extern "C" void __sinit_d_a_ni_cpp(); // 1
+extern "C" void __sinit_d_a_ni_cpp();
 
 // 
 // Declarations:

@@ -23,9 +23,11 @@ struct JAIStreamAramMgr {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__16JAIStreamAramMgr[5];
+extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
 
-extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
-extern "C" void __dt__16JAIStreamAramMgrFv(); // 1
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void __dt__16JAIStreamAramMgrFv();
 extern "C" extern void* __vt__16JAIStreamAramMgr[5];
 extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
 
@@ -33,9 +35,9 @@ extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

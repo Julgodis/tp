@@ -39,31 +39,62 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void d_kytag12_cut_turn_check(); // 2
-static void d_kytag12_cut_normal_check(); // 2
-static bool daKytag12_Draw(kytag12_class*); // 2
-static void daKytag12_light_swprd_proc(kytag12_class*); // 2
-static void daKytag12_Execute_standard(kytag12_class*); // 2
-static void daKytag12_Execute_arrival(kytag12_class*); // 2
-static void daKytag12_Execute_R00(kytag12_class*); // 2
-static void daKytag12_Execute(kytag12_class*); // 2
-static bool daKytag12_IsDelete(kytag12_class*); // 2
-static void daKytag12_Delete(kytag12_class*); // 2
-static void daKytag12_Create(fopAc_ac_c*); // 2
+static void d_kytag12_cut_turn_check();
+static void d_kytag12_cut_normal_check();
+static bool daKytag12_Draw(kytag12_class*);
+static void daKytag12_light_swprd_proc(kytag12_class*);
+static void daKytag12_Execute_standard(kytag12_class*);
+static void daKytag12_Execute_arrival(kytag12_class*);
+static void daKytag12_Execute_R00(kytag12_class*);
+static void daKytag12_Execute(kytag12_class*);
+static bool daKytag12_IsDelete(kytag12_class*);
+static void daKytag12_Delete(kytag12_class*);
+static void daKytag12_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_4471;
+extern "C" extern u32 const lit_4472;
+extern "C" extern u32 const lit_4473;
+extern "C" extern u32 const lit_4474;
+extern "C" extern u32 const lit_4475;
+extern "C" extern u32 const lit_4478;
+extern "C" extern u32 const lit_4482;
+extern "C" extern u32 const lit_4483;
+extern "C" extern u32 const lit_4484;
+extern "C" extern u32 const lit_4486;
+extern "C" extern u32 const lit_4487;
+extern "C" extern u32 const lit_4488;
+extern "C" extern u32 const lit_4489;
+extern "C" extern u32 const lit_4490;
+extern "C" extern u32 const lit_4492[1 + 1 /* padding */];
+extern "C" extern u32 const lit_4494;
+extern "C" extern u32 const lit_4495;
+extern "C" extern u8 const lit_4496[8];
+extern "C" extern u8 const lit_4497[8];
+extern "C" extern u32 const lit_4498;
+extern "C" extern u32 const lit_4499;
+extern "C" extern u32 const lit_4507;
+extern "C" extern u32 const lit_4508;
+extern "C" extern u32 const lit_4510;
+extern "C" extern u32 const lit_4512;
+extern "C" extern u32 const lit_4513;
+extern "C" extern u32 const lit_4514[1 + 1 /* padding */];
+extern "C" extern u32 const lit_4520;
+extern "C" extern u32 const lit_4525;
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_KYTAG12[12];
 
-extern "C" static void d_kytag12_cut_turn_check__Fv(); // 1
-extern "C" static void d_kytag12_cut_normal_check__Fv(); // 1
-extern "C" static bool daKytag12_Draw__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_light_swprd_proc__FP13kytag12_class(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daKytag12_Execute_standard__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_Execute_arrival__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_Execute_R00__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_Execute__FP13kytag12_class(); // 1
-extern "C" static bool daKytag12_IsDelete__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_Delete__FP13kytag12_class(); // 1
-extern "C" static void daKytag12_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
+extern "C" static void d_kytag12_cut_turn_check__Fv();
+extern "C" static void d_kytag12_cut_normal_check__Fv();
+extern "C" static bool daKytag12_Draw__FP13kytag12_class();
+extern "C" static void daKytag12_light_swprd_proc__FP13kytag12_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" static void daKytag12_Execute_standard__FP13kytag12_class();
+extern "C" static void daKytag12_Execute_arrival__FP13kytag12_class();
+extern "C" static void daKytag12_Execute_R00__FP13kytag12_class();
+extern "C" static void daKytag12_Execute__FP13kytag12_class();
+extern "C" static bool daKytag12_IsDelete__FP13kytag12_class();
+extern "C" static void daKytag12_Delete__FP13kytag12_class();
+extern "C" static void daKytag12_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
 extern "C" extern u32 const lit_4471;
 extern "C" extern u32 const lit_4472;
 extern "C" extern u32 const lit_4473;
@@ -100,33 +131,41 @@ extern "C" extern void* g_profile_KYTAG12[12];
 // External References:
 // 
 
-void dKyw_plight_collision_set(cXyz*, s16, s16, f32, f32, f32, f32, f32); // 2
-void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*); // 2
-void dKyr_evil_init(); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
+void dKyw_plight_collision_set(cXyz*, s16, s16, f32, f32, f32, f32, f32);
+void dKyw_pntlight_collision_get_info(cXyz*, cXyz*, f32*);
+void dKyr_evil_init();
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void dKyw_plight_collision_set__FP4cXyzssfffff(); // 1
-extern "C" void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf(); // 1
-extern "C" void dKyr_evil_init__Fv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void dKyw_plight_collision_set__FP4cXyzssfffff();
+extern "C" void dKyw_pntlight_collision_get_info__FP4cXyzP4cXyzPf();
+extern "C" void dKyr_evil_init__Fv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_18();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_18();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

@@ -30,6 +30,9 @@ struct daYkgr_HIO_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -39,17 +42,14 @@ struct dKy_tevstr_c {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct dPa_YkgrPcallBack {
@@ -77,26 +77,68 @@ struct JGeometry {
 // Forward References:
 // 
 
-static void daYkgrCreate(void*); // 2
-static bool daYkgrDelete(void*); // 2
-static void daYkgrExecute(void*); // 2
-static void daYkgrDraw(void*); // 2
-static bool daYkgrIsDelete(void*); // 2
+static void daYkgrCreate(void*);
+static bool daYkgrDelete(void*);
+static void daYkgrExecute(void*);
+static void daYkgrDraw(void*);
+static bool daYkgrIsDelete(void*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Ykgr[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_805A9158[4];
+extern "C" extern u8 data_805A915C[4];
+extern "C" extern u8 data_805A9160[4];
+extern "C" extern u8 data_805A9164[4];
+extern "C" extern u8 data_805A9168[4];
+extern "C" extern u8 data_805A916C[4];
+extern "C" extern u8 data_805A9170[4];
+extern "C" extern u8 data_805A9174[4];
+extern "C" extern u8 data_805A9178[4];
+extern "C" extern u8 data_805A917C[4];
+extern "C" extern u8 data_805A9180[4];
+extern "C" extern u8 data_805A9184[4];
+extern "C" extern u8 data_805A9188[4];
+extern "C" extern u8 data_805A918C[4];
+extern "C" extern u8 data_805A9190[4];
+extern "C" extern u8 data_805A9194[4];
+extern "C" extern u8 data_805A9198[4];
+extern "C" extern u8 data_805A919C[4];
+extern "C" extern u8 data_805A91A0[4];
+extern "C" extern u8 data_805A91A4[4];
+extern "C" extern u8 data_805A91A8[4];
+extern "C" extern u8 data_805A91AC[4];
+extern "C" extern u8 data_805A91B0[4];
+extern "C" extern u8 data_805A91B4[4];
+extern "C" extern u8 data_805A91B8[4];
 
-extern "C" void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void setParam__17dPa_YkgrPcallBackFf(); // 1
-extern "C" void getPosRate__8daYkgr_cFv(); // 1
-extern "C" static void daYkgrCreate__FPv(); // 1
-extern "C" static bool daYkgrDelete__FPv(); // 1
-extern "C" static void daYkgrExecute__FPv(); // 1
-extern "C" static void daYkgrDraw__FPv(); // 1
-extern "C" static bool daYkgrIsDelete__FPv(); // 1
-extern "C" void __dt__12daYkgr_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void __dt__17dPa_YkgrPcallBackFv(); // 1
-extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void __sinit_d_a_ykgr_cpp(); // 1
-extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void draw__17dPa_YkgrPcallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void setParam__17dPa_YkgrPcallBackFf();
+extern "C" void getPosRate__8daYkgr_cFv();
+extern "C" static void daYkgrCreate__FPv();
+extern "C" static bool daYkgrDelete__FPv();
+extern "C" static void daYkgrExecute__FPv();
+extern "C" static void daYkgrDraw__FPv();
+extern "C" static bool daYkgrIsDelete__FPv();
+extern "C" void __dt__12daYkgr_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__17dPa_YkgrPcallBackFv();
+extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void __sinit_d_a_ykgr_cpp();
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Ykgr[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
@@ -144,40 +186,16 @@ extern "C" extern u8 data_805A91B8[4];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_setStageLayer(void*); // 2
-void dComIfGs_BossLife_public_Get(); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void dComIfGs_BossLife_public_Get__Fv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void __dt__19JPAParticleCallBackFv(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_setStageLayer(void*);
+void dComIfGs_BossLife_public_Get();
+void dPath_GetRoomPath(int, int);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void cM_atan2s(f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -188,7 +206,41 @@ extern "C" extern u8 struct_80450D8C[4];
 extern "C" extern u8 m_aim_rate__8daYkgr_c[4];
 extern "C" extern u8 m_path__8daYkgr_c[4];
 extern "C" extern u8 m_emitter__8daYkgr_c[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void dComIfGs_BossLife_public_Get__Fv();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void __dt__19JPAParticleCallBackFv();
+extern "C" void func_802807E0();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareDistance();
+extern "C" void GXSetIndTexMtx();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 struct_80450D8C[4];
+extern "C" extern u8 m_aim_rate__8daYkgr_c[4];
+extern "C" extern u8 m_path__8daYkgr_c[4];
+extern "C" extern u8 m_emitter__8daYkgr_c[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

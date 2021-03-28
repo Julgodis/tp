@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void asin(); // 1
+extern "C" void asin();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_asin(); // 1
+extern "C" void __ieee754_asin();
 
 // 
 // Declarations:

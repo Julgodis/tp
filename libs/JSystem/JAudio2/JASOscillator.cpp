@@ -29,20 +29,20 @@ struct JASOscillator {
 // 
 
 
-extern "C" void __ct__13JASOscillatorFv(); // 1
-extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data(); // 1
-extern "C" void incCounter__13JASOscillatorFf(); // 1
-extern "C" void getValue__13JASOscillatorCFv(); // 1
-extern "C" void release__13JASOscillatorFv(); // 1
-extern "C" void update__13JASOscillatorFv(); // 1
-extern "C" void updateCurrentValue__13JASOscillatorFf(); // 1
+extern "C" void __ct__13JASOscillatorFv();
+extern "C" void initStart__13JASOscillatorFPCQ213JASOscillator4Data();
+extern "C" void incCounter__13JASOscillatorFf();
+extern "C" void getValue__13JASOscillatorCFv();
+extern "C" void release__13JASOscillatorFv();
+extern "C" void update__13JASOscillatorFv();
+extern "C" void updateCurrentValue__13JASOscillatorFf();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void __cvt_fp2unsigned();
 
 // 
 // Declarations:

@@ -24,11 +24,11 @@ struct JAISoundParamsMove {
 // 
 
 
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
 
 // 
 // External References:

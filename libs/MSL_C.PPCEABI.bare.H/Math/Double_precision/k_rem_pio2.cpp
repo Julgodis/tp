@@ -12,17 +12,17 @@
 // 
 
 
-extern "C" void __kernel_rem_pio2(); // 1
+extern "C" void __kernel_rem_pio2();
 
 // 
 // External References:
 // 
 
 
-extern "C" void _savefpr_25(); // 1
-extern "C" void _restfpr_25(); // 1
-extern "C" void floor(); // 1
-extern "C" void ldexp(); // 1
+extern "C" void _savefpr_25();
+extern "C" void _restfpr_25();
+extern "C" void floor();
+extern "C" void ldexp();
 
 // 
 // Declarations:

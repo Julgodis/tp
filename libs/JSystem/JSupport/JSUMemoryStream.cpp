@@ -32,12 +32,13 @@ struct JSUMemoryInputStream {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
 
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
-extern "C" void readData__20JSUMemoryInputStreamFPvl(); // 1
-extern "C" void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom(); // 1
-extern "C" void getLength__20JSUMemoryInputStreamCFv(); // 1
-extern "C" void getPosition__20JSUMemoryInputStreamCFv(); // 1
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" void readData__20JSUMemoryInputStreamFPvl();
+extern "C" void seekPos__20JSUMemoryInputStreamFl17JSUStreamSeekFrom();
+extern "C" void getLength__20JSUMemoryInputStreamCFv();
+extern "C" void getPosition__20JSUMemoryInputStreamCFv();
 extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
 
 // 
@@ -45,10 +46,10 @@ extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __dt__20JSUMemoryInputStreamFv(); // 1
-extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
-extern "C" void skip__20JSURandomInputStreamFl(); // 1
+SECTION_INIT void memcpy();
+extern "C" void __dt__20JSUMemoryInputStreamFv();
+extern "C" void getAvailable__20JSURandomInputStreamCFv();
+extern "C" void skip__20JSURandomInputStreamFl();
 
 // 
 // Declarations:

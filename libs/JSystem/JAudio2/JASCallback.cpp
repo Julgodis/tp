@@ -22,23 +22,23 @@ struct JASCallbackMgr {
 // 
 
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void callback__14JASCallbackMgrFv(); // 1
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
+extern "C" void callback__14JASCallbackMgrFv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

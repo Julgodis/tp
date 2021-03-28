@@ -66,53 +66,56 @@ struct JKRAramPiece {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRAramPiece__stringBase0;
 
-extern "C" void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
-extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand(); // 1
-extern "C" void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v(); // 1
-extern "C" void sync__12JKRAramPieceFP12JKRAMCommandi(); // 1
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
-extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand(); // 1
-extern "C" void doneDMA__12JKRAramPieceFUl(); // 1
-extern "C" void __ct__12JKRAMCommandFv(); // 1
-extern "C" void __dt__12JKRAMCommandFv(); // 1
-extern "C" void __sinit_JKRAramPiece_cpp(); // 1
+extern "C" void prepareCommand__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+extern "C" void sendCommand__12JKRAramPieceFP12JKRAMCommand();
+extern "C" void orderAsync__12JKRAramPieceFiUlUlUlP12JKRAramBlockPFUl_v();
+extern "C" void sync__12JKRAramPieceFP12JKRAMCommandi();
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+extern "C" void startDMA__12JKRAramPieceFP12JKRAMCommand();
+extern "C" void doneDMA__12JKRAramPieceFUl();
+extern "C" void __ct__12JKRAMCommandFv();
+extern "C" void __dt__12JKRAMCommandFv();
+extern "C" void __sinit_JKRAramPiece_cpp();
 extern "C" extern char const* const JKRAramPiece__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sMessageQueue__7JKRAram[32];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
-extern "C" void OSReport(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void func_802D2DF0(); // 1
-extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void ARQPostRequest(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void OSReport();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void func_802D2DF0();
+extern "C" void sendCommand__9JKRDecompFP16JKRDecompCommand();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCInvalidateRange();
+extern "C" void DCStoreRange();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void ARQPostRequest();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 extern "C" extern u8 sMessageQueue__7JKRAram[32];
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 

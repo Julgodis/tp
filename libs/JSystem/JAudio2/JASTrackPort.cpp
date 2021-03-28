@@ -26,13 +26,13 @@ struct JASTrackPort {
 // 
 
 
-extern "C" void init__12JASTrackPortFv(); // 1
-extern "C" void readImport__12JASTrackPortFUl(); // 1
-extern "C" void readExport__12JASTrackPortFUl(); // 1
-extern "C" void writeImport__12JASTrackPortFUlUs(); // 1
-extern "C" void writeExport__12JASTrackPortFUlUs(); // 1
-extern "C" void checkImport__12JASTrackPortCFUl(); // 1
-extern "C" void checkExport__12JASTrackPortCFUl(); // 1
+extern "C" void init__12JASTrackPortFv();
+extern "C" void readImport__12JASTrackPortFUl();
+extern "C" void readExport__12JASTrackPortFUl();
+extern "C" void writeImport__12JASTrackPortFUlUs();
+extern "C" void writeExport__12JASTrackPortFUlUs();
+extern "C" void checkImport__12JASTrackPortCFUl();
+extern "C" void checkExport__12JASTrackPortCFUl();
 
 // 
 // External References:

@@ -47,17 +47,19 @@ namespace JStudio {
 // Forward References:
 // 
 
+extern "C" extern char const* const JUTDirectPrint__stringBase0;
+extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
-extern "C" void __ct__14JUTDirectPrintFv(); // 1
-extern "C" void start__14JUTDirectPrintFv(); // 1
-extern "C" void erase__14JUTDirectPrintFiiii(); // 1
-extern "C" void drawChar__14JUTDirectPrintFiii(); // 1
-extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
-extern "C" void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb(); // 1
-extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
-extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce(); // 1
-extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
-extern "C" void setCharColor__14JUTDirectPrintFUcUcUc(); // 1
+extern "C" void __ct__14JUTDirectPrintFv();
+extern "C" void start__14JUTDirectPrintFv();
+extern "C" void erase__14JUTDirectPrintFiiii();
+extern "C" void drawChar__14JUTDirectPrintFiii();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" void printSub__14JUTDirectPrintFUsUsPCcP16__va_list_structb();
+extern "C" void drawString__14JUTDirectPrintFUsUsPc();
+extern "C" void drawString_f__14JUTDirectPrintFUsUsPCce();
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+extern "C" void setCharColor__14JUTDirectPrintFUcUcUc();
 extern "C" extern char const* const JUTDirectPrint__stringBase0;
 extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
@@ -65,18 +67,18 @@ extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 // External References:
 // 
 
-void fpcBs_Delete(base_process_class*); // 2
-void* operator new(u32); // 2
+void fpcBs_Delete(base_process_class*);
+void* operator new(u32);
 
-extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
-extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void vsnprintf(); // 1
+extern "C" void fpcBs_Delete__FP18base_process_class();
+extern "C" void __dt__Q27JStudio29TFunctionValue_list_parameterFv();
+extern "C" void* __nw__FUl();
+extern "C" void DCStoreRange();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void vsnprintf();
 
 // 
 // Declarations:

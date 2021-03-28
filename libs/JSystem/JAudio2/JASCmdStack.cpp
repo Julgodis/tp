@@ -35,27 +35,27 @@ struct JASPortCmd {
 // 
 
 
-extern "C" void execAllCommand__10JASPortCmdFv(); // 1
-extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv(); // 1
-extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv(); // 1
-extern "C" void __sinit_JASCmdStack_cpp(); // 1
-extern "C" void __dt__Q210JASPortCmd9TPortHeadFv(); // 1
+extern "C" void execAllCommand__10JASPortCmdFv();
+extern "C" void execCommandOnce__Q210JASPortCmd9TPortHeadFv();
+extern "C" void execCommandStay__Q210JASPortCmd9TPortHeadFv();
+extern "C" void __sinit_JASCmdStack_cpp();
+extern "C" void __dt__Q210JASPortCmd9TPortHeadFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

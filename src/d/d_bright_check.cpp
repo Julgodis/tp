@@ -41,10 +41,10 @@ struct dBrightCheck_c {
 	/* 80193594 */ void _draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -68,43 +68,48 @@ struct J2DScreen {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_bright_check__stringBase0;
 
-extern "C" void __ct__14dBrightCheck_cFP10JKRArchive(); // 1
-extern "C" void __dt__14dBrightCheck_cFv(); // 1
-extern "C" void screenSet__14dBrightCheck_cFv(); // 1
-extern "C" void _move__14dBrightCheck_cFv(); // 1
-extern "C" void modeWait__14dBrightCheck_cFv(); // 1
-extern "C" void modeMove__14dBrightCheck_cFv(); // 1
-extern "C" void _draw__14dBrightCheck_cFv(); // 1
-extern "C" void draw__19dDlst_BrightCheck_cFv(); // 1
-extern "C" void __sinit_d_bright_check_cpp(); // 1
-extern "C" void __dt__19dDlst_BrightCheck_cFv(); // 1
+extern "C" void __ct__14dBrightCheck_cFP10JKRArchive();
+extern "C" void __dt__14dBrightCheck_cFv();
+extern "C" void screenSet__14dBrightCheck_cFv();
+extern "C" void _move__14dBrightCheck_cFv();
+extern "C" void modeWait__14dBrightCheck_cFv();
+extern "C" void modeMove__14dBrightCheck_cFv();
+extern "C" void _draw__14dBrightCheck_cFv();
+extern "C" void draw__19dDlst_BrightCheck_cFv();
+extern "C" void __sinit_d_bright_check_cpp();
+extern "C" void __dt__19dDlst_BrightCheck_cFv();
 extern "C" extern char const* const d_d_bright_check__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getRubyFont(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _restgpr_22(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _restgpr_22();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

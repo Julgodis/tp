@@ -12,12 +12,14 @@
 // 
 
 
-extern "C" void __ieee754_sqrt(); // 1
+extern "C" void __ieee754_sqrt();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 errno[4 + 4 /* padding */];

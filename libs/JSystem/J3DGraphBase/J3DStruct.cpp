@@ -37,12 +37,12 @@ struct J3DFogInfo {
 // 
 
 
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f(); // 1
-extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
-extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo(); // 1
-extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo(); // 1
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
+extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
 
 // 
 // External References:

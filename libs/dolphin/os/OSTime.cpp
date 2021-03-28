@@ -12,22 +12,22 @@
 // 
 
 
-extern "C" void OSGetTime(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void __OSGetSystemTime(); // 1
-extern "C" void __OSTimeToSystemTime(); // 1
-extern "C" static void GetDates(); // 1
-extern "C" void OSTicksToCalendarTime(); // 1
+extern "C" void OSGetTime();
+extern "C" void OSGetTick();
+extern "C" void __OSGetSystemTime();
+extern "C" void __OSTimeToSystemTime();
+extern "C" static void GetDates();
+extern "C" void OSTicksToCalendarTime();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void __mod2i(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __div2i();
+extern "C" void __mod2i();
 
 // 
 // Declarations:

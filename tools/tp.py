@@ -22,6 +22,7 @@ import time
 import hashlib
 import json
 import git
+import libdol
 
 from pathlib import Path
 from rich.logging import RichHandler
@@ -31,7 +32,6 @@ from rich.text import Text
 from rich.table import Table
 
 import multiprocessing as mp
-from libdol2asm import libdol
 
 VERSION = "1.0"
 CONSOLE = Console()

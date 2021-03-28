@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" bool Hu_IsStub(); // 1
+extern "C" bool Hu_IsStub();
 
 // 
 // External References:

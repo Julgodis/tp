@@ -12,16 +12,16 @@
 // 
 
 
-extern "C" void raise(); // 1
+extern "C" void raise();
 
 // 
 // External References:
 // 
 
 
-extern "C" void exit(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
+extern "C" void exit();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
 
 // 
 // Declarations:

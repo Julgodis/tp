@@ -115,103 +115,105 @@ struct JASDvd {
 // Forward References:
 // 
 
-static void my_DVDConvertPathToEntrynum(char const*); // 2
-static void cb(void*); // 2
+static void my_DVDConvertPathToEntrynum(char const*);
+static void cb(void*);
+extern "C" extern char const* const m_Do_m_Do_dvd_thread__stringBase0;
 
-extern "C" void main__9mDoDvdThdFPv(); // 1
-extern "C" void create__9mDoDvdThdFl(); // 1
-extern "C" void suspend__9mDoDvdThdFv(); // 1
-extern "C" static void my_DVDConvertPathToEntrynum__FPCc(); // 1
-extern "C" void __dt__19mDoDvdThd_command_cFv(); // 1
-extern "C" void __ct__17mDoDvdThd_param_cFv(); // 1
-extern "C" void kick__17mDoDvdThd_param_cFv(); // 1
-extern "C" void waitForKick__17mDoDvdThd_param_cFv(); // 1
-extern "C" void getFirstCommand__17mDoDvdThd_param_cFv(); // 1
-extern "C" void addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c(); // 1
-extern "C" void cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c(); // 1
-extern "C" static void cb__FPv(); // 1
-extern "C" void mainLoop__17mDoDvdThd_param_cFv(); // 1
-extern "C" void __ct__19mDoDvdThd_command_cFv(); // 1
-extern "C" void __dt__20mDoDvdThd_callback_cFv(); // 1
-extern "C" void __ct__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
-extern "C" void execute__20mDoDvdThd_callback_cFv(); // 1
-extern "C" void __dt__24mDoDvdThd_mountArchive_cFv(); // 1
-extern "C" void __ct__24mDoDvdThd_mountArchive_cFUc(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void execute__24mDoDvdThd_mountArchive_cFv(); // 1
-extern "C" void __dt__25mDoDvdThd_mountXArchive_cFv(); // 1
-extern "C" void __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode(); // 1
-extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1
-extern "C" void execute__25mDoDvdThd_mountXArchive_cFv(); // 1
-extern "C" void __ct__21mDoDvdThd_toMainRam_cFUc(); // 1
-extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
-extern "C" void __dt__21mDoDvdThd_toMainRam_cFv(); // 1
-extern "C" void execute__21mDoDvdThd_toMainRam_cFv(); // 1
-extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
+extern "C" void main__9mDoDvdThdFPv();
+extern "C" void create__9mDoDvdThdFl();
+extern "C" void suspend__9mDoDvdThdFv();
+extern "C" static void my_DVDConvertPathToEntrynum__FPCc();
+extern "C" void __dt__19mDoDvdThd_command_cFv();
+extern "C" void __ct__17mDoDvdThd_param_cFv();
+extern "C" void kick__17mDoDvdThd_param_cFv();
+extern "C" void waitForKick__17mDoDvdThd_param_cFv();
+extern "C" void getFirstCommand__17mDoDvdThd_param_cFv();
+extern "C" void addition__17mDoDvdThd_param_cFP19mDoDvdThd_command_c();
+extern "C" void cut__17mDoDvdThd_param_cFP19mDoDvdThd_command_c();
+extern "C" static void cb__FPv();
+extern "C" void mainLoop__17mDoDvdThd_param_cFv();
+extern "C" void __ct__19mDoDvdThd_command_cFv();
+extern "C" void __dt__20mDoDvdThd_callback_cFv();
+extern "C" void __ct__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" void execute__20mDoDvdThd_callback_cFv();
+extern "C" void __dt__24mDoDvdThd_mountArchive_cFv();
+extern "C" void __ct__24mDoDvdThd_mountArchive_cFUc();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void execute__24mDoDvdThd_mountArchive_cFv();
+extern "C" void __dt__25mDoDvdThd_mountXArchive_cFv();
+extern "C" void __ct__25mDoDvdThd_mountXArchive_cFUcQ210JKRArchive10EMountMode();
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+extern "C" void execute__25mDoDvdThd_mountXArchive_cFv();
+extern "C" void __ct__21mDoDvdThd_toMainRam_cFUc();
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+extern "C" void __dt__21mDoDvdThd_toMainRam_cFv();
+extern "C" void execute__21mDoDvdThd_toMainRam_cFv();
+extern "C" void __sinit_m_Do_dvd_thread_cpp();
 extern "C" extern char const* const m_Do_m_Do_dvd_thread__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getAssertHeap(); // 2
-void mDoExt_getGameHeap(); // 2
-void mDoExt_getZeldaHeap(); // 2
-void mDoExt_getCommandHeap(); // 2
-void mDoExt_getArchiveHeap(); // 2
-void mDoExt_getArchiveHeapPtr(); // 2
-void mDoExt_getJ2dHeap(); // 2
-void cLs_SingleCut(node_class*); // 2
-void cLs_Addition(node_list_class*, node_class*); // 2
-void cLs_Create(node_list_class*); // 2
-void cNd_ForcedClear(node_class*); // 2
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void mDoExt_getAssertHeap();
+void mDoExt_getGameHeap();
+void mDoExt_getZeldaHeap();
+void mDoExt_getCommandHeap();
+void mDoExt_getArchiveHeap();
+void mDoExt_getArchiveHeapPtr();
+void mDoExt_getJ2dHeap();
+void cLs_SingleCut(node_class*);
+void cLs_Addition(node_list_class*, node_class*);
+void cLs_Create(node_list_class*);
+void cNd_ForcedClear(node_class*);
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 struct_80450C80[8];
 
-extern "C" void OSReport_FatalError(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void mDoExt_getAssertHeap__Fv(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_getZeldaHeap__Fv(); // 1
-extern "C" void mDoExt_getCommandHeap__Fv(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void mDoExt_getArchiveHeapPtr__Fv(); // 1
-extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
-extern "C" void cLs_SingleCut__FP10node_class(); // 1
-extern "C" void cLs_Addition__FP15node_list_classP10node_class(); // 1
-extern "C" void cLs_Create__FP15node_list_class(); // 1
-extern "C" void cNd_ForcedClear__FP10node_class(); // 1
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void getSize__7JKRHeapFPv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSReport_FatalError();
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getAssertHeap__Fv();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_getZeldaHeap__Fv();
+extern "C" void mDoExt_getCommandHeap__Fv();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_getArchiveHeapPtr__Fv();
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void cLs_SingleCut__FP10node_class();
+extern "C" void cLs_Addition__FP15node_list_classP10node_class();
+extern "C" void cLs_Create__FP15node_list_class();
+extern "C" void cNd_ForcedClear__FP10node_class();
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void getSize__7JKRHeapFPv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void mount__10JKRArchiveFlQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCreateThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 struct_80450C80[8];
 
 // 

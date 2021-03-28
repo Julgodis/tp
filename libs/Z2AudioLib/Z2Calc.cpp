@@ -38,14 +38,16 @@ struct JMath {
 // Forward References:
 // 
 
+extern "C" extern u32 cEqualCSlope__6Z2Calc;
+extern "C" extern u32 cEqualPSlope__6Z2Calc;
 
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void getRandom__6Z2CalcFfff(); // 1
-extern "C" void getRandom_0_1__6Z2CalcFv(); // 1
-extern "C" void setParam__Q26Z2Calc8FNoise1fFfff(); // 1
-extern "C" void tau__Q26Z2Calc8FNoise1fFf(); // 1
-extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv(); // 1
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void getRandom__6Z2CalcFfff();
+extern "C" void getRandom_0_1__6Z2CalcFv();
+extern "C" void setParam__Q26Z2Calc8FNoise1fFfff();
+extern "C" void tau__Q26Z2Calc8FNoise1fFf();
+extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv();
 extern "C" extern u32 cEqualCSlope__6Z2Calc;
 extern "C" extern u32 cEqualPSlope__6Z2Calc;
 
@@ -54,9 +56,9 @@ extern "C" extern u32 cEqualPSlope__6Z2Calc;
 // 
 
 
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
-extern "C" void exp(); // 1
-extern "C" void pow(); // 1
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" void exp();
+extern "C" void pow();
 
 // 
 // Declarations:

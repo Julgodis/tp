@@ -35,35 +35,40 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static void daTagHinit_Create(fopAc_ac_c*); // 2
-static void daTagHinit_Delete(daTagHinit_c*); // 2
-static void daTagHinit_Execute(daTagHinit_c*); // 2
-static bool daTagHinit_Draw(daTagHinit_c*); // 2
+static void daTagHinit_Create(fopAc_ac_c*);
+static void daTagHinit_Delete(daTagHinit_c*);
+static void daTagHinit_Execute(daTagHinit_c*);
+static bool daTagHinit_Draw(daTagHinit_c*);
+extern "C" extern void* g_profile_Tag_Hinit[12];
 
-extern "C" void create__12daTagHinit_cFv(); // 1
-extern "C" static void daTagHinit_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12daTagHinit_cFv(); // 1
-extern "C" static void daTagHinit_Delete__FP12daTagHinit_c(); // 1
-extern "C" void execute__12daTagHinit_cFv(); // 1
-extern "C" static void daTagHinit_Execute__FP12daTagHinit_c(); // 1
-extern "C" static bool daTagHinit_Draw__FP12daTagHinit_c(); // 1
+extern "C" void create__12daTagHinit_cFv();
+extern "C" static void daTagHinit_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagHinit_cFv();
+extern "C" static void daTagHinit_Delete__FP12daTagHinit_c();
+extern "C" void execute__12daTagHinit_cFv();
+extern "C" static void daTagHinit_Execute__FP12daTagHinit_c();
+extern "C" static bool daTagHinit_Draw__FP12daTagHinit_c();
 extern "C" extern void* g_profile_Tag_Hinit[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_scall();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

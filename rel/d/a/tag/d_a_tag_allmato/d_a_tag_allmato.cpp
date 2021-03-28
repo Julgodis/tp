@@ -110,120 +110,127 @@ struct cM3dGCyl {
 // Forward References:
 // 
 
-static void daTag_AllMato_Create(void*); // 2
-static void daTag_AllMato_Delete(void*); // 2
-static void daTag_AllMato_Execute(void*); // 2
-static void daTag_AllMato_Draw(void*); // 2
-static bool daTag_AllMato_IsDelete(void*); // 2
+static void daTag_AllMato_Create(void*);
+static void daTag_AllMato_Delete(void*);
+static void daTag_AllMato_Execute(void*);
+static void daTag_AllMato_Draw(void*);
+static bool daTag_AllMato_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_ALLMATO[12];
 
-extern "C" void create__15daTag_AllMato_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" bool Delete__15daTag_AllMato_cFv(); // 1
-extern "C" void Execute__15daTag_AllMato_cFv(); // 1
-extern "C" bool Draw__15daTag_AllMato_cFv(); // 1
-extern "C" void srchBouMato__15daTag_AllMato_cFPvPv(); // 1
-extern "C" void srchItaMato__15daTag_AllMato_cFPvPv(); // 1
-extern "C" void srchTaro__15daTag_AllMato_cFPvPv(); // 1
-extern "C" void srchArrow__15daTag_AllMato_cFPvPv(); // 1
-extern "C" void isDelete__15daTag_AllMato_cFv(); // 1
-extern "C" void entryBouMatoActors__15daTag_AllMato_cFv(); // 1
-extern "C" void entryItaMatoActors__15daTag_AllMato_cFv(); // 1
-extern "C" void getTaroActorP__15daTag_AllMato_cFv(); // 1
-extern "C" void getArrowActorP__15daTag_AllMato_cFv(); // 1
-extern "C" void checkCrsMato__15daTag_AllMato_cFv(); // 1
-extern "C" void checkCrsMato2__15daTag_AllMato_cFv(); // 1
-extern "C" void checkBrkMato__15daTag_AllMato_cFv(); // 1
-extern "C" void evtChange__15daTag_AllMato_cFUs(); // 1
-extern "C" static void daTag_AllMato_Create__FPv(); // 1
-extern "C" static void daTag_AllMato_Delete__FPv(); // 1
-extern "C" static void daTag_AllMato_Execute__FPv(); // 1
-extern "C" static void daTag_AllMato_Draw__FPv(); // 1
-extern "C" static bool daTag_AllMato_IsDelete__FPv(); // 1
-extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void __ct__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void checkCrs__15daObj_ItaMato_cFP10fopAc_ac_c4cXyz4cXyzf(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void checkCrs__15daObj_BouMato_cFP10fopAc_ac_c4cXyz4cXyzf(); // 1
-extern "C" void getStartPos__9daArrow_cFv(); // 1
-extern "C" void __dt__15daTag_AllMato_cFv(); // 1
+extern "C" void create__15daTag_AllMato_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" bool Delete__15daTag_AllMato_cFv();
+extern "C" void Execute__15daTag_AllMato_cFv();
+extern "C" bool Draw__15daTag_AllMato_cFv();
+extern "C" void srchBouMato__15daTag_AllMato_cFPvPv();
+extern "C" void srchItaMato__15daTag_AllMato_cFPvPv();
+extern "C" void srchTaro__15daTag_AllMato_cFPvPv();
+extern "C" void srchArrow__15daTag_AllMato_cFPvPv();
+extern "C" void isDelete__15daTag_AllMato_cFv();
+extern "C" void entryBouMatoActors__15daTag_AllMato_cFv();
+extern "C" void entryItaMatoActors__15daTag_AllMato_cFv();
+extern "C" void getTaroActorP__15daTag_AllMato_cFv();
+extern "C" void getArrowActorP__15daTag_AllMato_cFv();
+extern "C" void checkCrsMato__15daTag_AllMato_cFv();
+extern "C" void checkCrsMato2__15daTag_AllMato_cFv();
+extern "C" void checkBrkMato__15daTag_AllMato_cFv();
+extern "C" void evtChange__15daTag_AllMato_cFUs();
+extern "C" static void daTag_AllMato_Create__FPv();
+extern "C" static void daTag_AllMato_Delete__FPv();
+extern "C" static void daTag_AllMato_Execute__FPv();
+extern "C" static void daTag_AllMato_Draw__FPv();
+extern "C" static bool daTag_AllMato_IsDelete__FPv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __ct__18daNpcT_ActorMngr_cFv();
+extern "C" void checkCrs__15daObj_ItaMato_cFP10fopAc_ac_c4cXyz4cXyzf();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void checkCrs__15daObj_BouMato_cFP10fopAc_ac_c4cXyz4cXyzf();
+extern "C" void getStartPos__9daArrow_cFv();
+extern "C" void __dt__15daTag_AllMato_cFv();
 extern "C" extern void* g_profile_TAG_ALLMATO[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_orderChangeEventId(fopAc_ac_c*, s16, u16, u16); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcEx_IsExist(unsigned int); // 2
-void dComIfGs_wolfeye_effect_check(); // 2
-void daNpcT_chkEvtBit(u32); // 2
-void daNpcT_onTmpBit(u32); // 2
-void daNpcT_offTmpBit(u32); // 2
-void daNpcF_chkEvtBit(u32); // 2
-void dCam_getBody(); // 2
-void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*); // 2
-void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_orderChangeEventId(fopAc_ac_c*, s16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcEx_IsExist(unsigned int);
+void dComIfGs_wolfeye_effect_check();
+void daNpcT_chkEvtBit(u32);
+void daNpcT_onTmpBit(u32);
+void daNpcT_offTmpBit(u32);
+void daNpcF_chkEvtBit(u32);
+void dCam_getBody();
+void cM3d_Cross_LinSph(cM3dGLin const*, cM3dGSph const*, Vec*);
+void cM3d_Cross_CylLin(cM3dGCyl const*, cM3dGLin const*, Vec*, Vec*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcEx_IsExist__FUi(); // 1
-extern "C" void dComIfGs_wolfeye_effect_check__Fv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFPv(); // 1
-extern "C" void setPt2__14dEvt_control_cFPv(); // 1
-extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void initialize__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c(); // 1
-extern "C" void remove__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void getActorP__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void daNpcT_chkEvtBit__FUl(); // 1
-extern "C" void daNpcT_onTmpBit__FUl(); // 1
-extern "C" void daNpcT_offTmpBit__FUl(); // 1
-extern "C" void daNpcF_chkEvtBit__FUl(); // 1
-extern "C" void SaveZoomRatio__9dCamera_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec(); // 1
-extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec(); // 1
-extern "C" void Set__8cM3dGCylFRC4cXyzff(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void Set__8cM3dGSphFRC4cXyzf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strlen(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void dComIfGs_wolfeye_effect_check__Fv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFPv();
+extern "C" void setPt2__14dEvt_control_cFPv();
+extern "C" void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void initialize__18daNpcT_ActorMngr_cFv();
+extern "C" void entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c();
+extern "C" void remove__18daNpcT_ActorMngr_cFv();
+extern "C" void getActorP__18daNpcT_ActorMngr_cFv();
+extern "C" void daNpcT_chkEvtBit__FUl();
+extern "C" void daNpcT_onTmpBit__FUl();
+extern "C" void daNpcT_offTmpBit__FUl();
+extern "C" void daNpcF_chkEvtBit__FUl();
+extern "C" void SaveZoomRatio__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void cM3d_Cross_LinSph__FPC8cM3dGLinPC8cM3dGSphP3Vec();
+extern "C" void cM3d_Cross_CylLin__FPC8cM3dGCylPC8cM3dGLinP3VecP3Vec();
+extern "C" void Set__8cM3dGCylFRC4cXyzff();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void Set__8cM3dGSphFRC4cXyzf();
+extern "C" void __dl__FPv();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strlen();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

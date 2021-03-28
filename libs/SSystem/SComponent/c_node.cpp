@@ -18,41 +18,41 @@ struct node_class {
 // Forward References:
 // 
 
-static void cNd_Join(node_class*, node_class*); // 2
-void cNd_LengthOf(node_class*); // 2
-void cNd_First(node_class*); // 2
-void cNd_Last(node_class*); // 2
-void cNd_Order(node_class*, int); // 2
-void cNd_SingleCut(node_class*); // 2
-static void cNd_Cut(node_class*); // 2
-void cNd_Addition(node_class*, node_class*); // 2
-void cNd_Insert(node_class*, node_class*); // 2
-void cNd_SetObject(node_class*, void*); // 2
-void cNd_ClearObject(node_class*); // 2
-void cNd_ForcedClear(node_class*); // 2
-void cNd_Create(node_class*, void*); // 2
+static void cNd_Join(node_class*, node_class*);
+void cNd_LengthOf(node_class*);
+void cNd_First(node_class*);
+void cNd_Last(node_class*);
+void cNd_Order(node_class*, int);
+void cNd_SingleCut(node_class*);
+static void cNd_Cut(node_class*);
+void cNd_Addition(node_class*, node_class*);
+void cNd_Insert(node_class*, node_class*);
+void cNd_SetObject(node_class*, void*);
+void cNd_ClearObject(node_class*);
+void cNd_ForcedClear(node_class*);
+void cNd_Create(node_class*, void*);
 
-extern "C" static void cNd_Join__FP10node_classP10node_class(); // 1
-extern "C" void cNd_LengthOf__FP10node_class(); // 1
-extern "C" void cNd_First__FP10node_class(); // 1
-extern "C" void cNd_Last__FP10node_class(); // 1
-extern "C" void cNd_Order__FP10node_classi(); // 1
-extern "C" void cNd_SingleCut__FP10node_class(); // 1
-extern "C" static void cNd_Cut__FP10node_class(); // 1
-extern "C" void cNd_Addition__FP10node_classP10node_class(); // 1
-extern "C" void cNd_Insert__FP10node_classP10node_class(); // 1
-extern "C" void cNd_SetObject__FP10node_classPv(); // 1
-extern "C" void cNd_ClearObject__FP10node_class(); // 1
-extern "C" void cNd_ForcedClear__FP10node_class(); // 1
-extern "C" void cNd_Create__FP10node_classPv(); // 1
+extern "C" static void cNd_Join__FP10node_classP10node_class();
+extern "C" void cNd_LengthOf__FP10node_class();
+extern "C" void cNd_First__FP10node_class();
+extern "C" void cNd_Last__FP10node_class();
+extern "C" void cNd_Order__FP10node_classi();
+extern "C" void cNd_SingleCut__FP10node_class();
+extern "C" static void cNd_Cut__FP10node_class();
+extern "C" void cNd_Addition__FP10node_classP10node_class();
+extern "C" void cNd_Insert__FP10node_classP10node_class();
+extern "C" void cNd_SetObject__FP10node_classPv();
+extern "C" void cNd_ClearObject__FP10node_class();
+extern "C" void cNd_ForcedClear__FP10node_class();
+extern "C" void cNd_Create__FP10node_classPv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

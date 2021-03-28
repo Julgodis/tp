@@ -47,47 +47,51 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-static bool daAlldie_Draw(daAlldie_c*); // 2
-static void daAlldie_Execute(daAlldie_c*); // 2
-static bool daAlldie_IsDelete(daAlldie_c*); // 2
-static void daAlldie_Delete(daAlldie_c*); // 2
-static void daAlldie_Create(fopAc_ac_c*); // 2
+static bool daAlldie_Draw(daAlldie_c*);
+static void daAlldie_Execute(daAlldie_c*);
+static bool daAlldie_IsDelete(daAlldie_c*);
+static void daAlldie_Delete(daAlldie_c*);
+static void daAlldie_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_ALLDIE[12];
 
-extern "C" void getEventNo__10daAlldie_cFv(); // 1
-extern "C" void getSwbit__10daAlldie_cFv(); // 1
-extern "C" bool actionWait__10daAlldie_cFv(); // 1
-extern "C" void actionCheck__10daAlldie_cFv(); // 1
-extern "C" void actionTimer__10daAlldie_cFv(); // 1
-extern "C" void actionOrder__10daAlldie_cFv(); // 1
-extern "C" void actionEvent__10daAlldie_cFv(); // 1
-extern "C" void actionNext__10daAlldie_cFv(); // 1
-extern "C" void execute__10daAlldie_cFv(); // 1
-extern "C" static bool daAlldie_Draw__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Execute__FP10daAlldie_c(); // 1
-extern "C" static bool daAlldie_IsDelete__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Delete__FP10daAlldie_c(); // 1
-extern "C" static void daAlldie_Create__FP10fopAc_ac_c(); // 1
+extern "C" void getEventNo__10daAlldie_cFv();
+extern "C" void getSwbit__10daAlldie_cFv();
+extern "C" bool actionWait__10daAlldie_cFv();
+extern "C" void actionCheck__10daAlldie_cFv();
+extern "C" void actionTimer__10daAlldie_cFv();
+extern "C" void actionOrder__10daAlldie_cFv();
+extern "C" void actionEvent__10daAlldie_cFv();
+extern "C" void actionNext__10daAlldie_cFv();
+extern "C" void execute__10daAlldie_cFv();
+extern "C" static bool daAlldie_Draw__FP10daAlldie_c();
+extern "C" static void daAlldie_Execute__FP10daAlldie_c();
+extern "C" static bool daAlldie_IsDelete__FP10daAlldie_c();
+extern "C" static void daAlldie_Delete__FP10daAlldie_c();
+extern "C" static void daAlldie_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_ALLDIE[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_myRoomSearchEnemy(s8); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_myRoomSearchEnemy(s8);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_myRoomSearchEnemy__FSc(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUcl(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_myRoomSearchEnemy__FSc();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void searchMapEventData__14dEvt_control_cFUcl();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

@@ -22,18 +22,20 @@ struct JASLfo {
 // Forward References:
 // 
 
+extern "C" extern u8 sFreeRunLfo__6JASLfo[24];
 
-extern "C" void __ct__6JASLfoFv(); // 1
-extern "C" void getValue__6JASLfoCFv(); // 1
-extern "C" void incCounter__6JASLfoFf(); // 1
-extern "C" void resetCounter__6JASLfoFv(); // 1
-extern "C" void __sinit_JASLfo_cpp(); // 1
+extern "C" void __ct__6JASLfoFv();
+extern "C" void getValue__6JASLfoCFv();
+extern "C" void incCounter__6JASLfoFf();
+extern "C" void resetCounter__6JASLfoFv();
+extern "C" void __sinit_JASLfo_cpp();
 extern "C" extern u8 sFreeRunLfo__6JASLfo[24];
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 extern "C" extern u8 sincosTable___5JMath[65536];
 

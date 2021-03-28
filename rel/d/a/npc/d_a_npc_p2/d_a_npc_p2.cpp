@@ -11,23 +11,26 @@
 // Forward References:
 // 
 
-static bool daNpc_P2Create(void*); // 2
-static bool daNpc_P2Delete(void*); // 2
-static bool daNpc_P2Execute(void*); // 2
-static bool daNpc_P2Draw(void*); // 2
-static bool daNpc_P2IsDelete(void*); // 2
+static bool daNpc_P2Create(void*);
+static bool daNpc_P2Delete(void*);
+static bool daNpc_P2Execute(void*);
+static bool daNpc_P2Draw(void*);
+static bool daNpc_P2IsDelete(void*);
+extern "C" extern void* g_profile_NPC_P2[12];
 
-extern "C" static bool daNpc_P2Create__FPv(); // 1
-extern "C" static bool daNpc_P2Delete__FPv(); // 1
-extern "C" static bool daNpc_P2Execute__FPv(); // 1
-extern "C" static bool daNpc_P2Draw__FPv(); // 1
-extern "C" static bool daNpc_P2IsDelete__FPv(); // 1
+extern "C" static bool daNpc_P2Create__FPv();
+extern "C" static bool daNpc_P2Delete__FPv();
+extern "C" static bool daNpc_P2Execute__FPv();
+extern "C" static bool daNpc_P2Draw__FPv();
+extern "C" static bool daNpc_P2IsDelete__FPv();
 extern "C" extern void* g_profile_NPC_P2[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

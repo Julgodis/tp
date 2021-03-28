@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __kernel_tan(); // 1
+extern "C" void __kernel_tan();
 
 // 
 // External References:

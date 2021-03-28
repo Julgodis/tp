@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __DSP_debug_printf(); // 1
+extern "C" void __DSP_debug_printf();
 
 // 
 // External References:

@@ -31,6 +31,9 @@ struct daTag_MynaLight_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -40,17 +43,14 @@ struct dKy_tevstr_c {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -62,50 +62,56 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTag_MynaLight_Create(void*); // 2
-static void daTag_MynaLight_Delete(void*); // 2
-static void daTag_MynaLight_Execute(void*); // 2
-static void daTag_MynaLight_Draw(void*); // 2
-static bool daTag_MynaLight_IsDelete(void*); // 2
+static void daTag_MynaLight_Create(void*);
+static void daTag_MynaLight_Delete(void*);
+static void daTag_MynaLight_Execute(void*);
+static void daTag_MynaLight_Draw(void*);
+static bool daTag_MynaLight_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_MNLIGHT[12];
 
-extern "C" void create__17daTag_MynaLight_cFv(); // 1
-extern "C" void Delete__17daTag_MynaLight_cFv(); // 1
-extern "C" void Execute__17daTag_MynaLight_cFv(); // 1
-extern "C" void Draw__17daTag_MynaLight_cFv(); // 1
-extern "C" void setTurnOnOffChange__17daTag_MynaLight_cFv(); // 1
-extern "C" void getTurnOnTime__17daTag_MynaLight_cFv(); // 1
-extern "C" void getTurnOffTime__17daTag_MynaLight_cFv(); // 1
-extern "C" void initialize__17daTag_MynaLight_cFv(); // 1
-extern "C" static void daTag_MynaLight_Create__FPv(); // 1
-extern "C" static void daTag_MynaLight_Delete__FPv(); // 1
-extern "C" static void daTag_MynaLight_Execute__FPv(); // 1
-extern "C" static void daTag_MynaLight_Draw__FPv(); // 1
-extern "C" static bool daTag_MynaLight_IsDelete__FPv(); // 1
-extern "C" void __dt__17daTag_MynaLight_cFv(); // 1
+extern "C" void create__17daTag_MynaLight_cFv();
+extern "C" void Delete__17daTag_MynaLight_cFv();
+extern "C" void Execute__17daTag_MynaLight_cFv();
+extern "C" void Draw__17daTag_MynaLight_cFv();
+extern "C" void setTurnOnOffChange__17daTag_MynaLight_cFv();
+extern "C" void getTurnOnTime__17daTag_MynaLight_cFv();
+extern "C" void getTurnOffTime__17daTag_MynaLight_cFv();
+extern "C" void initialize__17daTag_MynaLight_cFv();
+extern "C" static void daTag_MynaLight_Create__FPv();
+extern "C" static void daTag_MynaLight_Delete__FPv();
+extern "C" static void daTag_MynaLight_Execute__FPv();
+extern "C" static void daTag_MynaLight_Draw__FPv();
+extern "C" static bool daTag_MynaLight_IsDelete__FPv();
+extern "C" void __dt__17daTag_MynaLight_cFv();
 extern "C" extern void* g_profile_TAG_MNLIGHT[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfGp_getReverb(int); // 2
-void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfGp_getReverb(int);
+void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKy_BossLight_set__FP4cXyzP8_GXColorfUc(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKy_BossLight_set__FP4cXyzP8_GXColorfUc();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

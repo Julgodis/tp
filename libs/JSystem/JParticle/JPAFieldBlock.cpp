@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct JPABaseParticle {
-};
-
 struct JKRHeap {
 };
 
 struct JPAFieldBlock {
 	/* 8027D088 */ JPAFieldBlock(u8 const*, JKRHeap*);
 	/* 8027D0C0 */ void init(JKRHeap*);
+};
+
+struct JPABaseParticle {
 };
 
 struct JPAEmitterWorkData {
@@ -89,53 +89,54 @@ struct JPAFieldAir {
 // 
 
 
-extern "C" void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf(); // 1
-extern "C" void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle(); // 1
-extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap(); // 1
-extern "C" void init__13JPAFieldBlockFP7JKRHeap(); // 1
-extern "C" void __dt__12JPAFieldBaseFv(); // 1
-extern "C" void __dt__12JPAFieldSpinFv(); // 1
-extern "C" void __dt__12JPAFieldDragFv(); // 1
-extern "C" void __dt__14JPAFieldRandomFv(); // 1
-extern "C" void __dt__18JPAFieldConvectionFv(); // 1
-extern "C" void __dt__14JPAFieldVortexFv(); // 1
-extern "C" void __dt__14JPAFieldNewtonFv(); // 1
-extern "C" void __dt__14JPAFieldMagnetFv(); // 1
-extern "C" void __dt__11JPAFieldAirFv(); // 1
-extern "C" void __dt__15JPAFieldGravityFv(); // 1
+extern "C" void calcAffect__12JPAFieldBaseFP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void calcFadeAffect__12JPAFieldBaseCFP13JPAFieldBlockf();
+extern "C" void prepare__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__15JPAFieldGravityFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__11JPAFieldAirFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__14JPAFieldMagnetFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__14JPAFieldNewtonFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__14JPAFieldVortexFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__18JPAFieldConvectionFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void calc__14JPAFieldRandomFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void calc__12JPAFieldDragFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void prepare__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void calc__12JPAFieldSpinFP18JPAEmitterWorkDataP13JPAFieldBlockP15JPABaseParticle();
+extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+extern "C" void init__13JPAFieldBlockFP7JKRHeap();
+extern "C" void __dt__12JPAFieldBaseFv();
+extern "C" void __dt__12JPAFieldSpinFv();
+extern "C" void __dt__12JPAFieldDragFv();
+extern "C" void __dt__14JPAFieldRandomFv();
+extern "C" void __dt__18JPAFieldConvectionFv();
+extern "C" void __dt__14JPAFieldVortexFv();
+extern "C" void __dt__14JPAFieldNewtonFv();
+extern "C" void __dt__14JPAFieldMagnetFv();
+extern "C" void __dt__11JPAFieldAirFv();
+extern "C" void __dt__15JPAFieldGravityFv();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXRotAxisRad();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECMag();
+extern "C" void PSVECCrossProduct();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u32 __float_epsilon;
 
 // 

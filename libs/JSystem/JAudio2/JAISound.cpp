@@ -69,39 +69,40 @@ struct JAISound {
 // Forward References:
 // 
 
+extern "C" extern char const* const JAISound__stringBase0;
 
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void releaseHandle__8JAISoundFv(); // 1
-extern "C" void attachHandle__8JAISoundFP14JAISoundHandle(); // 1
-extern "C" void lockWhenPrepared__15JAISoundStatus_Fv(); // 1
-extern "C" void unlockIfLocked__15JAISoundStatus_Fv(); // 1
-extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf(); // 1
-extern "C" void __ct__8JAISoundFv(); // 1
-extern "C" void func_802A2328(); // 1
-extern "C" void acceptsNewAudible__8JAISoundCFv(); // 1
-extern "C" void func_802A2474(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" bool asSe__8JAISoundFv(); // 1
-extern "C" bool asSeq__8JAISoundFv(); // 1
-extern "C" bool asStream__8JAISoundFv(); // 1
-extern "C" void die_JAISound___8JAISoundFv(); // 1
-extern "C" void increasePrepareCount_JAISound___8JAISoundFv(); // 1
-extern "C" void calc_JAISound___8JAISoundFv(); // 1
-extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void releaseHandle__8JAISoundFv();
+extern "C" void attachHandle__8JAISoundFP14JAISoundHandle();
+extern "C" void lockWhenPrepared__15JAISoundStatus_Fv();
+extern "C" void unlockIfLocked__15JAISoundStatus_Fv();
+extern "C" void mixOutAll__14JAISoundParamsFRC14JASSoundParamsP14JASSoundParamsf();
+extern "C" void __ct__8JAISoundFv();
+extern "C" void func_802A2328();
+extern "C" void acceptsNewAudible__8JAISoundCFv();
+extern "C" void func_802A2474();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" bool asSe__8JAISoundFv();
+extern "C" bool asSeq__8JAISoundFv();
+extern "C" bool asStream__8JAISoundFv();
+extern "C" void die_JAISound___8JAISoundFv();
+extern "C" void increasePrepareCount_JAISound___8JAISoundFv();
+extern "C" void calc_JAISound___8JAISoundFv();
+extern "C" void initTrack_JAISound___8JAISoundFP8JASTrack();
 extern "C" extern char const* const JAISound__stringBase0;
 
 // 
 // External References:
 // 
 
-void JASReport(char const*, ...); // 2
+void JASReport(char const*, ...);
 
-extern "C" void JASReport__FPCce(); // 1
-extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void JASReport__FPCce();
+extern "C" void setChannelMgrCount__8JASTrackFUl();
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:

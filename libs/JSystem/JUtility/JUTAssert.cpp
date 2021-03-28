@@ -41,24 +41,27 @@ struct JUTAssertion {
 // 
 
 
-extern "C" void create__12JUTAssertionFv(); // 1
-extern "C" void flush_subroutine__12JUTAssertionFv(); // 1
-extern "C" void flushMessage__12JUTAssertionFv(); // 1
-extern "C" void flushMessage_dbPrint__12JUTAssertionFv(); // 1
-extern "C" void setVisible__12JUTAssertionFb(); // 1
-extern "C" void setMessageCount__12JUTAssertionFi(); // 1
+extern "C" void create__12JUTAssertionFv();
+extern "C" void flush_subroutine__12JUTAssertionFv();
+extern "C" void flushMessage__12JUTAssertionFv();
+extern "C" void flushMessage_dbPrint__12JUTAssertionFv();
+extern "C" void setVisible__12JUTAssertionFb();
+extern "C" void setMessageCount__12JUTAssertionFi();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_804508F8[8];
+extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
-extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
-extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void strlen(); // 1
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" void drawString__14JUTDirectPrintFUsUsPc();
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+extern "C" void VIGetRetraceCount();
+extern "C" void strlen();
 extern "C" extern u8 data_804508F8[8];
 extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];

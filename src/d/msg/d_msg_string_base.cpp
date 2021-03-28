@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct J2DTextBox {
+struct JUTFont {
 };
 
 struct COutFont_c {
 };
 
-struct JUTFont {
+struct J2DTextBox {
 };
 
 struct jmessage_string_tReference {
@@ -101,56 +101,59 @@ namespace JGadget {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_msg_d_msg_string_base__stringBase0;
 
-extern "C" void __ct__16dMsgStringBase_cFv(); // 1
-extern "C" void __dt__16dMsgStringBase_cFv(); // 1
-extern "C" void getResource__16dMsgStringBase_cFv(); // 1
-extern "C" void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getPageMax__16dMsgStringBase_cFi(); // 1
-extern "C" void getMessageLocal__16dMsgStringBase_cFUlPc(); // 1
-extern "C" void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc(); // 1
-extern "C" void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getMessage__16dMsgStringBase_cFUlPc(); // 1
-extern "C" void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox(); // 1
-extern "C" void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf(); // 1
+extern "C" void __ct__16dMsgStringBase_cFv();
+extern "C" void __dt__16dMsgStringBase_cFv();
+extern "C" void getResource__16dMsgStringBase_cFv();
+extern "C" void getStringLocal__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getPageMax__16dMsgStringBase_cFi();
+extern "C" void getMessageLocal__16dMsgStringBase_cFUlPc();
+extern "C" void drawFontLocal__16dMsgStringBase_cFP10J2DTextBoxUcffffUlUc();
+extern "C" void getString__16dMsgStringBase_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getStringPage__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getMessage__16dMsgStringBase_cFUlPc();
+extern "C" void resetStringLocal__16dMsgStringBase_cFP10J2DTextBox();
+extern "C" void drawOutFontLocal__16dMsgStringBase_cFP10J2DTextBoxf();
 extern "C" extern char const* const d_msg_d_msg_string_base__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
 
-extern "C" void __ct__26jmessage_string_tReferenceFv(); // 1
-extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getLineLength__26jmessage_string_tReferenceFi(); // 1
-extern "C" void __ct__24jmessage_string_tControlFv(); // 1
-extern "C" void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl(); // 1
-extern "C" void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference(); // 1
-extern "C" void reset__Q28JMessage8TControlFv(); // 1
-extern "C" void update__Q28JMessage8TControlFv(); // 1
-extern "C" void render__Q28JMessage8TControlFv(); // 1
-extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb(); // 1
-extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
-extern "C" void __ct__Q28JMessage18TResourceContainerFv(); // 1
-extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
-extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void __ct__26jmessage_string_tReferenceFv();
+extern "C" void init__26jmessage_string_tReferenceFP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getLineLength__26jmessage_string_tReferenceFi();
+extern "C" void __ct__24jmessage_string_tControlFv();
+extern "C" void __ct__34jmessage_string_tSequenceProcessorFPC26jmessage_string_tReferenceP24jmessage_string_tControl();
+extern "C" void __ct__35jmessage_string_tRenderingProcessorFPC26jmessage_string_tReference();
+extern "C" void reset__Q28JMessage8TControlFv();
+extern "C" void update__Q28JMessage8TControlFv();
+extern "C" void render__Q28JMessage8TControlFv();
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void __ct__Q28JMessage18TResourceContainerFv();
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void erase__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iterator();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 

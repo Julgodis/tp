@@ -49,18 +49,21 @@ struct JKRDisposer {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRFileLoader__stringBase0;
+extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
+extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 
-extern "C" void __ct__13JKRFileLoaderFv(); // 1
-extern "C" void __dt__13JKRFileLoaderFv(); // 1
-extern "C" void unmount__13JKRFileLoaderFv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
-extern "C" void findVolume__13JKRFileLoaderFPPCc(); // 1
-extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc(); // 1
-extern "C" void __sinit_JKRFileLoader_cpp(); // 1
-extern "C" void func_802D45E4(); // 1
+extern "C" void __ct__13JKRFileLoaderFv();
+extern "C" void __dt__13JKRFileLoaderFv();
+extern "C" void unmount__13JKRFileLoaderFv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCc();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void removeResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void findVolume__13JKRFileLoaderFPPCc();
+extern "C" void fetchVolumeName__13JKRFileLoaderFPclPCc();
+extern "C" void __sinit_JKRFileLoader_cpp();
+extern "C" void func_802D45E4();
 extern "C" extern char const* const JKRFileLoader__stringBase0;
 extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
@@ -69,20 +72,21 @@ extern "C" extern u8 sCurrentVolume__13JKRFileLoader[4 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 __lower_map[256];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
 extern "C" extern u8 __lower_map[256];
 
 // 

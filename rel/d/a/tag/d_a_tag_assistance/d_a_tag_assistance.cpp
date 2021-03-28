@@ -23,26 +23,30 @@ struct daTagAssist_c {
 // Forward References:
 // 
 
-static void daTagAssist_Create(fopAc_ac_c*); // 2
-static void daTagAssist_Execute(daTagAssist_c*); // 2
-static bool daTagAssist_IsDelete(daTagAssist_c*); // 2
-static void daTagAssist_Delete(daTagAssist_c*); // 2
+static void daTagAssist_Create(fopAc_ac_c*);
+static void daTagAssist_Execute(daTagAssist_c*);
+static bool daTagAssist_IsDelete(daTagAssist_c*);
+static void daTagAssist_Delete(daTagAssist_c*);
+extern "C" extern void* g_profile_Tag_Assist[12];
 
-extern "C" static void daTagAssist_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagAssist_Execute__FP13daTagAssist_c(); // 1
-extern "C" static bool daTagAssist_IsDelete__FP13daTagAssist_c(); // 1
-extern "C" static void daTagAssist_Delete__FP13daTagAssist_c(); // 1
+extern "C" static void daTagAssist_Create__FP10fopAc_ac_c();
+extern "C" static void daTagAssist_Execute__FP13daTagAssist_c();
+extern "C" static bool daTagAssist_IsDelete__FP13daTagAssist_c();
+extern "C" static void daTagAssist_Delete__FP13daTagAssist_c();
 extern "C" extern void* g_profile_Tag_Assist[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

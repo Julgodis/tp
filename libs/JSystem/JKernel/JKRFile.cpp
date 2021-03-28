@@ -20,16 +20,16 @@ struct JKRFile {
 // 
 
 
-extern "C" void read__7JKRFileFPvll(); // 1
+extern "C" void read__7JKRFileFPvll();
 
 // 
 // External References:
 // 
 
 
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void VIWaitForRetrace();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

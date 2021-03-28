@@ -37,30 +37,33 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTagGuard_Create(fopAc_ac_c*); // 2
-static void daTagGuard_Delete(daTagGuard_c*); // 2
+static void daTagGuard_Create(fopAc_ac_c*);
+static void daTagGuard_Delete(daTagGuard_c*);
+extern "C" extern void* g_profile_TAG_GUARD[12];
 
-extern "C" void getAppearPoint__12daTagGuard_cFP3Vec(); // 1
-extern "C" void createGuard__12daTagGuard_cFUl(); // 1
-extern "C" static void daTagGuard_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagGuard_Delete__FP12daTagGuard_c(); // 1
+extern "C" void getAppearPoint__12daTagGuard_cFP3Vec();
+extern "C" void createGuard__12daTagGuard_cFUl();
+extern "C" static void daTagGuard_Create__FP10fopAc_ac_c();
+extern "C" static void daTagGuard_Delete__FP12daTagGuard_c();
 extern "C" extern void* g_profile_TAG_GUARD[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void dPath_GetPnt(dPath const*, int); // 2
-void dPath_GetRoomPath(int, int); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void dPath_GetPnt(dPath const*, int);
+void dPath_GetRoomPath(int, int);
+void cLib_targetAngleY(Vec const*, Vec const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void dPath_GetPnt__FPC5dPathi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 

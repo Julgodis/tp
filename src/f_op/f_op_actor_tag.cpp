@@ -21,26 +21,27 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fopAcTg_ToActorQ(create_tag_class*); // 2
-void fopAcTg_ActorQTo(create_tag_class*); // 2
-void fopAcTg_Init(create_tag_class*, void*); // 2
+void fopAcTg_ToActorQ(create_tag_class*);
+void fopAcTg_ActorQTo(create_tag_class*);
+void fopAcTg_Init(create_tag_class*, void*);
+extern "C" extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 
-extern "C" void fopAcTg_ToActorQ__FP16create_tag_class(); // 1
-extern "C" void fopAcTg_ActorQTo__FP16create_tag_class(); // 1
-extern "C" void fopAcTg_Init__FP16create_tag_classPv(); // 1
+extern "C" void fopAcTg_ToActorQ__FP16create_tag_class();
+extern "C" void fopAcTg_ActorQTo__FP16create_tag_class();
+extern "C" void fopAcTg_Init__FP16create_tag_classPv();
 extern "C" extern u8 g_fopAcTg_Queue[12 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void cTg_SingleCutFromTree(create_tag_class*); // 2
-void cTg_Addition(node_list_class*, create_tag_class*); // 2
-void cTg_Create(create_tag_class*, void*); // 2
+void cTg_SingleCutFromTree(create_tag_class*);
+void cTg_Addition(node_list_class*, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
 
-extern "C" void cTg_SingleCutFromTree__FP16create_tag_class(); // 1
-extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class(); // 1
-extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" void cTg_Addition__FP15node_list_classP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 
 // 
 // Declarations:

@@ -49,13 +49,13 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct cXyz {
+struct csXyz {
 };
 
 struct cBgS_PolyInfo {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS_MoveBgActor {
@@ -91,59 +91,64 @@ struct cBgS {
 // Forward References:
 // 
 
-static void daObjLv3saka_create1st(daObjLv3saka_c*); // 2
-static void daObjLv3saka_MoveBGDelete(daObjLv3saka_c*); // 2
-static void daObjLv3saka_MoveBGExecute(daObjLv3saka_c*); // 2
-static void daObjLv3saka_MoveBGDraw(daObjLv3saka_c*); // 2
+static void daObjLv3saka_create1st(daObjLv3saka_c*);
+static void daObjLv3saka_MoveBGDelete(daObjLv3saka_c*);
+static void daObjLv3saka_MoveBGExecute(daObjLv3saka_c*);
+static void daObjLv3saka_MoveBGDraw(daObjLv3saka_c*);
+extern "C" extern void* g_profile_Obj_Lv3R10Saka[12];
 
-extern "C" void initBaseMtx__14daObjLv3saka_cFv(); // 1
-extern "C" void setBaseMtx__14daObjLv3saka_cFv(); // 1
-extern "C" void Create__14daObjLv3saka_cFv(); // 1
-extern "C" void CreateHeap__14daObjLv3saka_cFv(); // 1
-extern "C" void create1st__14daObjLv3saka_cFv(); // 1
-extern "C" void Execute__14daObjLv3saka_cFPPA3_A4_f(); // 1
-extern "C" void setNrmDzb__14daObjLv3saka_cFv(); // 1
-extern "C" void setWtrDzb__14daObjLv3saka_cFv(); // 1
-extern "C" bool Draw__14daObjLv3saka_cFv(); // 1
-extern "C" void Delete__14daObjLv3saka_cFv(); // 1
-extern "C" static void daObjLv3saka_create1st__FP14daObjLv3saka_c(); // 1
-extern "C" static void daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c(); // 1
-extern "C" static void daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c(); // 1
-extern "C" static void daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c(); // 1
+extern "C" void initBaseMtx__14daObjLv3saka_cFv();
+extern "C" void setBaseMtx__14daObjLv3saka_cFv();
+extern "C" void Create__14daObjLv3saka_cFv();
+extern "C" void CreateHeap__14daObjLv3saka_cFv();
+extern "C" void create1st__14daObjLv3saka_cFv();
+extern "C" void Execute__14daObjLv3saka_cFPPA3_A4_f();
+extern "C" void setNrmDzb__14daObjLv3saka_cFv();
+extern "C" void setWtrDzb__14daObjLv3saka_cFv();
+extern "C" bool Draw__14daObjLv3saka_cFv();
+extern "C" void Delete__14daObjLv3saka_cFv();
+extern "C" static void daObjLv3saka_create1st__FP14daObjLv3saka_c();
+extern "C" static void daObjLv3saka_MoveBGDelete__FP14daObjLv3saka_c();
+extern "C" static void daObjLv3saka_MoveBGExecute__FP14daObjLv3saka_c();
+extern "C" static void daObjLv3saka_MoveBGDraw__FP14daObjLv3saka_c();
 extern "C" extern void* g_profile_Obj_Lv3R10Saka[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void* operator new(u32); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void* operator new(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+extern "C" void __ct__4dBgWFv();
+extern "C" void Move__4dBgWFv();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void* __nw__FUl();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

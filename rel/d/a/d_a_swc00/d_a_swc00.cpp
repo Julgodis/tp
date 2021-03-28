@@ -50,23 +50,31 @@ struct cXyz {
 // Forward References:
 // 
 
-static void hitCheck(daSwc00_c*); // 2
-static void daSwc00_Execute(daSwc00_c*); // 2
-static bool daSwc00_IsDelete(daSwc00_c*); // 2
-static bool daSwc00_Delete(daSwc00_c*); // 2
-static void daSwc00_Create(fopAc_ac_c*); // 2
+static void hitCheck(daSwc00_c*);
+static void daSwc00_Execute(daSwc00_c*);
+static bool daSwc00_IsDelete(daSwc00_c*);
+static bool daSwc00_Delete(daSwc00_c*);
+static void daSwc00_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_3991;
+extern "C" extern u32 const lit_3992;
+extern "C" extern u32 const lit_3993;
+extern "C" extern u32 const lit_3994;
+extern "C" extern u32 const lit_3995;
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_SWC00[12];
 
-extern "C" static void hitCheck__FP9daSwc00_c(); // 1
-extern "C" static void daSwc00_Execute__FP9daSwc00_c(); // 1
-extern "C" void execute__9daSwc00_cFv(); // 1
-extern "C" void event_proc_call__9daSwc00_cFv(); // 1
-extern "C" void actionWait__9daSwc00_cFv(); // 1
-extern "C" void actionOrderEvent__9daSwc00_cFv(); // 1
-extern "C" void actionEvent__9daSwc00_cFv(); // 1
-extern "C" void actionDead__9daSwc00_cFv(); // 1
-extern "C" static bool daSwc00_IsDelete__FP9daSwc00_c(); // 1
-extern "C" static bool daSwc00_Delete__FP9daSwc00_c(); // 1
-extern "C" static void daSwc00_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void hitCheck__FP9daSwc00_c();
+extern "C" static void daSwc00_Execute__FP9daSwc00_c();
+extern "C" void execute__9daSwc00_cFv();
+extern "C" void event_proc_call__9daSwc00_cFv();
+extern "C" void actionWait__9daSwc00_cFv();
+extern "C" void actionOrderEvent__9daSwc00_cFv();
+extern "C" void actionEvent__9daSwc00_cFv();
+extern "C" void actionDead__9daSwc00_cFv();
+extern "C" static bool daSwc00_IsDelete__FP9daSwc00_c();
+extern "C" static bool daSwc00_Delete__FP9daSwc00_c();
+extern "C" static void daSwc00_Create__FP10fopAc_ac_c();
 extern "C" extern u32 const lit_3991;
 extern "C" extern u32 const lit_3992;
 extern "C" extern u32 const lit_3993;
@@ -80,26 +88,31 @@ extern "C" extern void* g_profile_SWC00[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_805A1F28[4];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void OSReport_Error();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void PSMTXMultVec();
+extern "C" void __ptmf_scall();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

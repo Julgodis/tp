@@ -46,24 +46,24 @@ struct JPAResourceLoader {
 // 
 
 
-extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap(); // 1
-extern "C" void getResource__18JPAResourceManagerCFUs(); // 1
-extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs(); // 1
-extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc(); // 1
-extern "C" void registRes__18JPAResourceManagerFP11JPAResource(); // 1
-extern "C" void registTex__18JPAResourceManagerFP10JPATexture(); // 1
-extern "C" void getResUserWork__18JPAResourceManagerCFUs(); // 1
+extern "C" void __ct__18JPAResourceManagerFPCvP7JKRHeap();
+extern "C" void getResource__18JPAResourceManagerCFUs();
+extern "C" void checkUserIndexDuplication__18JPAResourceManagerCFUs();
+extern "C" void swapTexture__18JPAResourceManagerFPC7ResTIMGPCc();
+extern "C" void registRes__18JPAResourceManagerFP11JPAResource();
+extern "C" void registTex__18JPAResourceManagerFP10JPATexture();
+extern "C" void getResUserWork__18JPAResourceManagerCFUs();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void strcmp();
 
 // 
 // Declarations:

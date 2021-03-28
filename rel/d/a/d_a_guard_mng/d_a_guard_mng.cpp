@@ -37,40 +37,44 @@ struct dSv_danBit_c {
 // Forward References:
 // 
 
-static void s_sub(void*, void*); // 2
-static void daGuardMng_Execute(daGuardMng_c*); // 2
-static bool daGuardMng_IsDelete(daGuardMng_c*); // 2
-static void daGuardMng_Delete(daGuardMng_c*); // 2
-static void daGuardMng_Create(fopAc_ac_c*); // 2
+static void s_sub(void*, void*);
+static void daGuardMng_Execute(daGuardMng_c*);
+static bool daGuardMng_IsDelete(daGuardMng_c*);
+static void daGuardMng_Delete(daGuardMng_c*);
+static void daGuardMng_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_GUARD_MNG[12];
 
-extern "C" static void s_sub__FPvPv(); // 1
-extern "C" void checkMerchantNum__12daGuardMng_cFv(); // 1
-extern "C" void checkAppearTag__12daGuardMng_cFP12daTagGuard_c(); // 1
-extern "C" static void daGuardMng_Execute__FP12daGuardMng_c(); // 1
-extern "C" static bool daGuardMng_IsDelete__FP12daGuardMng_c(); // 1
-extern "C" static void daGuardMng_Delete__FP12daGuardMng_c(); // 1
-extern "C" static void daGuardMng_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void s_sub__FPvPv();
+extern "C" void checkMerchantNum__12daGuardMng_cFv();
+extern "C" void checkAppearTag__12daGuardMng_cFP12daTagGuard_c();
+extern "C" static void daGuardMng_Execute__FP12daGuardMng_c();
+extern "C" static bool daGuardMng_IsDelete__FP12daGuardMng_c();
+extern "C" static void daGuardMng_Delete__FP12daGuardMng_c();
+extern "C" static void daGuardMng_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_GUARD_MNG[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECSquareMag(); // 1
+void fopAc_IsActor(void*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
-extern "C" void getAppearPoint__12daTagGuard_cFP3Vec(); // 1
-extern "C" void createGuard__12daTagGuard_cFUl(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECSquareMag();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" void getAppearPoint__12daTagGuard_cFP3Vec();
+extern "C" void createGuard__12daTagGuard_cFUl();
 
 // 
 // Declarations:

@@ -12,9 +12,9 @@
 // 
 
 
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void __kill_critical_regions(); // 1
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void __kill_critical_regions();
 
 // 
 // External References:

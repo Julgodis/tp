@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __kernel_cos(); // 1
+extern "C" void __kernel_cos();
 
 // 
 // External References:

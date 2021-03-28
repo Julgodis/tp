@@ -27,11 +27,13 @@ struct daItemBase_c {
 // Forward References:
 // 
 
-void CheckShopItemCreateHeap(fopAc_ac_c*); // 2
+void CheckShopItemCreateHeap(fopAc_ac_c*);
+extern "C" extern void* const mData__12daShopItem_c[276];
+extern "C" extern char const* const d_a_d_a_shop_item_static__stringBase0;
 
-extern "C" void getRotateP__12daShopItem_cFv(); // 1
-extern "C" void getPosP__12daShopItem_cFv(); // 1
-extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" void getRotateP__12daShopItem_cFv();
+extern "C" void getPosP__12daShopItem_cFv();
+extern "C" void CheckShopItemCreateHeap__FP10fopAc_ac_c();
 extern "C" extern void* const mData__12daShopItem_c[276];
 extern "C" extern char const* const d_a_d_a_shop_item_static__stringBase0;
 
@@ -40,7 +42,7 @@ extern "C" extern char const* const d_a_d_a_shop_item_static__stringBase0;
 // 
 
 
-extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
+extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss();
 
 // 
 // Declarations:

@@ -48,35 +48,35 @@ struct JUTTexture {
 // 
 
 
-extern "C" void __dt__10JUTTextureFv(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut(); // 1
-extern "C" void attachPalette__10JUTTextureFP10JUTPalette(); // 1
-extern "C" void init__10JUTTextureFv(); // 1
-extern "C" void initTexObj__10JUTTextureFv(); // 1
-extern "C" void initTexObj__10JUTTextureF7_GXTlut(); // 1
-extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
+extern "C" void attachPalette__10JUTTextureFP10JUTPalette();
+extern "C" void init__10JUTTextureFv();
+extern "C" void initTexObj__10JUTTextureFv();
+extern "C" void initTexObj__10JUTTextureF7_GXTlut();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+void operator delete[](void*);
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv(); // 1
-extern "C" void load__10JUTPaletteFv(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlut10_GXTlutFmt15JUTTransparencyUsPv();
+extern "C" void load__10JUTPaletteFv();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

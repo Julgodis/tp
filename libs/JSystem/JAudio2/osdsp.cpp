@@ -18,21 +18,22 @@ struct STRUCT_DSP_TASK {
 // Forward References:
 // 
 
-void DSPAddPriorTask(STRUCT_DSP_TASK*); // 2
+void DSPAddPriorTask(STRUCT_DSP_TASK*);
 
-extern "C" void DSPAddTask(); // 1
-extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK(); // 1
+extern "C" void DSPAddTask();
+extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 DSP_prior_task[4];
 
-extern "C" void OSReport(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __DSP_boot_task(); // 1
-extern "C" void __DSP_insert_task(); // 1
+extern "C" void OSReport();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __DSP_boot_task();
+extern "C" void __DSP_insert_task();
 extern "C" extern u8 DSP_prior_task[4];
 
 // 

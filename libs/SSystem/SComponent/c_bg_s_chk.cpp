@@ -23,18 +23,18 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void SetExtChk__8cBgS_ChkFR8cBgS_Chk(); // 1
-extern "C" void ChkSameActorPid__8cBgS_ChkCFUi(); // 1
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void SetExtChk__8cBgS_ChkFR8cBgS_Chk();
+extern "C" void ChkSameActorPid__8cBgS_ChkCFUi();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

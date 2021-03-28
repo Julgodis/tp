@@ -76,52 +76,54 @@ struct CPaneMgr {
 // 
 
 
-extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
-extern "C" void __dt__14dMsgScrnBase_cFv(); // 1
-extern "C" void init__14dMsgScrnBase_cFv(); // 1
-extern "C" void multiDraw__14dMsgScrnBase_cFv(); // 1
-extern "C" void draw__14dMsgScrnBase_cFv(); // 1
-extern "C" void drawSelf__14dMsgScrnBase_cFv(); // 1
-extern "C" void drawOutFont__14dMsgScrnBase_cFfff(); // 1
-extern "C" void setString__14dMsgScrnBase_cFPcPc(); // 1
-extern "C" void setRubyString__14dMsgScrnBase_cFPc(); // 1
-extern "C" void fukiScale__14dMsgScrnBase_cFf(); // 1
-extern "C" void fukiTrans__14dMsgScrnBase_cFff(); // 1
-extern "C" void fukiAlpha__14dMsgScrnBase_cFf(); // 1
-extern "C" void fontAlpha__14dMsgScrnBase_cFf(); // 1
-extern "C" void isTalkNow__14dMsgScrnBase_cFv(); // 1
+extern "C" void __ct__14dMsgScrnBase_cFv();
+extern "C" void __dt__14dMsgScrnBase_cFv();
+extern "C" void init__14dMsgScrnBase_cFv();
+extern "C" void multiDraw__14dMsgScrnBase_cFv();
+extern "C" void draw__14dMsgScrnBase_cFv();
+extern "C" void drawSelf__14dMsgScrnBase_cFv();
+extern "C" void drawOutFont__14dMsgScrnBase_cFfff();
+extern "C" void setString__14dMsgScrnBase_cFPcPc();
+extern "C" void setRubyString__14dMsgScrnBase_cFPc();
+extern "C" void fukiScale__14dMsgScrnBase_cFf();
+extern "C" void fukiTrans__14dMsgScrnBase_cFff();
+extern "C" void fukiAlpha__14dMsgScrnBase_cFf();
+extern "C" void fontAlpha__14dMsgScrnBase_cFf();
+extern "C" void isTalkNow__14dMsgScrnBase_cFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void exec__14dMsgScrnBase_cFv(); // 1
-extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
-extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
-extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void paneScale__8CPaneMgrFff(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void exec__14dMsgScrnBase_cFv();
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" bool isSelect__14dMsgScrnBase_cFv();
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void paneScale__8CPaneMgrFff();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void __dl__FPv();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 

@@ -56,16 +56,17 @@ namespace JGadget {
 // 
 
 
-extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData(); // 1
-extern "C" void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData(); // 1
-extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData(); // 1
+extern "C" void getData__Q47JStudio3stb4data16TParse_TSequenceCFPQ57JStudio3stb4data16TParse_TSequence5TData();
+extern "C" void getData__Q47JStudio3stb4data17TParse_TParagraphCFPQ57JStudio3stb4data17TParse_TParagraph5TData();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 const gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 
-extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit(); // 1
+extern "C" void parseVariableUInt_16_32_following__Q27JGadget6binaryFPCvPUlPUlPQ37JGadget6binary5TEBit();
 extern "C" extern u8 const gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 
 // 

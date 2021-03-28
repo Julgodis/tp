@@ -11,24 +11,26 @@
 // Forward References:
 // 
 
+extern "C" extern u8 const lit_402[31 + 1 /* padding */];
+SECTION_BSS u8 IsTRKConnected[4 + 4 /* padding */];
 
-extern "C" void TRKDoSetOption(); // 1
-extern "C" void TRKDoStop(); // 1
-extern "C" void TRKDoStep(); // 1
-extern "C" void TRKDoContinue(); // 1
-extern "C" void TRKDoWriteRegisters(); // 1
-extern "C" void TRKDoReadRegisters(); // 1
-extern "C" void TRKDoWriteMemory(); // 1
-extern "C" void TRKDoReadMemory(); // 1
-extern "C" bool TRKDoSupportMask(); // 1
-extern "C" bool TRKDoVersions(); // 1
-extern "C" void TRKDoOverride(); // 1
-extern "C" void TRKDoReset(); // 1
-extern "C" void TRKDoDisconnect(); // 1
-extern "C" void TRKDoConnect(); // 1
-extern "C" void SetTRKConnected(); // 1
-extern "C" void GetTRKConnected(); // 1
-extern "C" void OutputData(); // 1
+extern "C" void TRKDoSetOption();
+extern "C" void TRKDoStop();
+extern "C" void TRKDoStep();
+extern "C" void TRKDoContinue();
+extern "C" void TRKDoWriteRegisters();
+extern "C" void TRKDoReadRegisters();
+extern "C" void TRKDoWriteMemory();
+extern "C" void TRKDoReadMemory();
+extern "C" bool TRKDoSupportMask();
+extern "C" bool TRKDoVersions();
+extern "C" void TRKDoOverride();
+extern "C" void TRKDoReset();
+extern "C" void TRKDoDisconnect();
+extern "C" void TRKDoConnect();
+extern "C" void SetTRKConnected();
+extern "C" void GetTRKConnected();
+extern "C" void OutputData();
 extern "C" extern u8 const lit_402[31 + 1 /* padding */];
 SECTION_BSS u8 IsTRKConnected[4 + 4 /* padding */];
 
@@ -37,33 +39,33 @@ SECTION_BSS u8 IsTRKConnected[4 + 4 /* padding */];
 // 
 
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void __TRK_reset(); // 1
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKMessageSend(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKReadBuffer(); // 1
-extern "C" void TRKAppendBuffer(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKResetBuffer(); // 1
-extern "C" void usr_puts_serial(); // 1
-extern "C" void TRKTargetAccessARAM(); // 1
-extern "C" void TRKTargetStop(); // 1
-extern "C" void TRKTargetStopped(); // 1
-extern "C" void TRKTargetGetPC(); // 1
-extern "C" void TRKTargetStepOutOfRange(); // 1
-extern "C" void TRKTargetSingleStep(); // 1
-extern "C" void TRKTargetAccessExtended2(); // 1
-extern "C" void TRKTargetAccessExtended1(); // 1
-extern "C" void TRKTargetAccessFP(); // 1
-extern "C" void TRKTargetAccessDefault(); // 1
-extern "C" void TRKTargetAccessMemory(); // 1
-extern "C" void __TRK_copy_vectors(); // 1
-extern "C" void TRKWriteUARTN(); // 1
-extern "C" void TRKTargetContinue(); // 1
-extern "C" void SetUseSerialIO(); // 1
-extern "C" void MWTRACE(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void __TRK_reset();
+extern "C" void TRKConstructEvent();
+extern "C" void TRKPostEvent();
+extern "C" void TRKMessageSend();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKReadBuffer();
+extern "C" void TRKAppendBuffer();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKResetBuffer();
+extern "C" void usr_puts_serial();
+extern "C" void TRKTargetAccessARAM();
+extern "C" void TRKTargetStop();
+extern "C" void TRKTargetStopped();
+extern "C" void TRKTargetGetPC();
+extern "C" void TRKTargetStepOutOfRange();
+extern "C" void TRKTargetSingleStep();
+extern "C" void TRKTargetAccessExtended2();
+extern "C" void TRKTargetAccessExtended1();
+extern "C" void TRKTargetAccessFP();
+extern "C" void TRKTargetAccessDefault();
+extern "C" void TRKTargetAccessMemory();
+extern "C" void __TRK_copy_vectors();
+extern "C" void TRKWriteUARTN();
+extern "C" void TRKTargetContinue();
+extern "C" void SetUseSerialIO();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

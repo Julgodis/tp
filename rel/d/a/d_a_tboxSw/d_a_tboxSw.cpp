@@ -35,32 +35,36 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTboxSw_Draw(daTboxSw_c*); // 2
-static void daTboxSw_Execute(daTboxSw_c*); // 2
-static void daTboxSw_Delete(daTboxSw_c*); // 2
-static void daTboxSw_Create(fopAc_ac_c*); // 2
+static void daTboxSw_Draw(daTboxSw_c*);
+static void daTboxSw_Execute(daTboxSw_c*);
+static void daTboxSw_Delete(daTboxSw_c*);
+static void daTboxSw_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_TBOX_SW[12];
 
-extern "C" bool Create__10daTboxSw_cFv(); // 1
-extern "C" void create__10daTboxSw_cFv(); // 1
-extern "C" void execute__10daTboxSw_cFv(); // 1
-extern "C" bool draw__10daTboxSw_cFv(); // 1
-extern "C" bool _delete__10daTboxSw_cFv(); // 1
-extern "C" static void daTboxSw_Draw__FP10daTboxSw_c(); // 1
-extern "C" static void daTboxSw_Execute__FP10daTboxSw_c(); // 1
-extern "C" static void daTboxSw_Delete__FP10daTboxSw_c(); // 1
-extern "C" static void daTboxSw_Create__FP10fopAc_ac_c(); // 1
+extern "C" bool Create__10daTboxSw_cFv();
+extern "C" void create__10daTboxSw_cFv();
+extern "C" void execute__10daTboxSw_cFv();
+extern "C" bool draw__10daTboxSw_cFv();
+extern "C" bool _delete__10daTboxSw_cFv();
+extern "C" static void daTboxSw_Draw__FP10daTboxSw_c();
+extern "C" static void daTboxSw_Execute__FP10daTboxSw_c();
+extern "C" static void daTboxSw_Delete__FP10daTboxSw_c();
+extern "C" static void daTboxSw_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_TBOX_SW[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void onSwitch__10dSv_info_cFii();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

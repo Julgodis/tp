@@ -86,43 +86,52 @@ struct JAISound {
 // 
 
 
-extern "C" void __ct__13Z2WolfHowlMgrFv(); // 1
-extern "C" void resetState__13Z2WolfHowlMgrFv(); // 1
-extern "C" void calcVolumeMod__13Z2WolfHowlMgrFf(); // 1
-extern "C" void getNowPitch__13Z2WolfHowlMgrFv(); // 1
-extern "C" void getNowInputValue__13Z2WolfHowlMgrFv(); // 1
-extern "C" void calcPitchMod__13Z2WolfHowlMgrFff(); // 1
-extern "C" void startWolfHowlSound__13Z2WolfHowlMgrFffbf(); // 1
-extern "C" void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData(); // 1
-extern "C" void getCorrectLine__13Z2WolfHowlMgrFUc(); // 1
-extern "C" void getCorrectLineNum__13Z2WolfHowlMgrFv(); // 1
-extern "C" void checkLine__13Z2WolfHowlMgrFv(); // 1
-extern "C" void getOnLineNum__13Z2WolfHowlMgrFv(); // 1
-extern "C" void startWindStoneSound__13Z2WolfHowlMgrFScP3Vec(); // 1
-extern "C" void startGuideMelody__13Z2WolfHowlMgrFb(); // 1
-extern "C" void skipCorrectDemo__13Z2WolfHowlMgrFv(); // 1
-extern "C" void __sinit_Z2WolfHowlMgr_cpp(); // 1
+extern "C" void __ct__13Z2WolfHowlMgrFv();
+extern "C" void resetState__13Z2WolfHowlMgrFv();
+extern "C" void calcVolumeMod__13Z2WolfHowlMgrFf();
+extern "C" void getNowPitch__13Z2WolfHowlMgrFv();
+extern "C" void getNowInputValue__13Z2WolfHowlMgrFv();
+extern "C" void calcPitchMod__13Z2WolfHowlMgrFff();
+extern "C" void startWolfHowlSound__13Z2WolfHowlMgrFffbf();
+extern "C" void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData();
+extern "C" void getCorrectLine__13Z2WolfHowlMgrFUc();
+extern "C" void getCorrectLineNum__13Z2WolfHowlMgrFv();
+extern "C" void checkLine__13Z2WolfHowlMgrFv();
+extern "C" void getOnLineNum__13Z2WolfHowlMgrFv();
+extern "C" void startWindStoneSound__13Z2WolfHowlMgrFScP3Vec();
+extern "C" void startGuideMelody__13Z2WolfHowlMgrFb();
+extern "C" void skipCorrectDemo__13Z2WolfHowlMgrFv();
+extern "C" void __sinit_Z2WolfHowlMgr_cpp();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80450B38[4];
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void func_802A2FEC(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void stopWolfHowlSong__8Z2SeqMgrFv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void stop__8JAISoundFUl();
+extern "C" void stop__8JAISoundFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void func_802A2FEC();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void stopWolfHowlSong__8Z2SeqMgrFv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 data_80450B38[4];
 extern "C" extern u8 data_80450B44[4];

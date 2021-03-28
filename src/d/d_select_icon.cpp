@@ -38,23 +38,23 @@ struct CPaneMgr {
 // 
 
 
-extern "C" void __ct__9dSi_HIO_cFv(); // 1
-extern "C" void animation__14dSelect_icon_cFv(); // 1
-extern "C" void setAlpha__14dSelect_icon_cFUc(); // 1
-extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff(); // 1
-extern "C" void __dt__9dSi_HIO_cFv(); // 1
-extern "C" void __sinit_d_select_icon_cpp(); // 1
+extern "C" void __ct__9dSi_HIO_cFv();
+extern "C" void animation__14dSelect_icon_cFv();
+extern "C" void setAlpha__14dSelect_icon_cFUc();
+extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff();
+extern "C" void __dt__9dSi_HIO_cFv();
+extern "C" void __sinit_d_select_icon_cpp();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void paneScale__8CPaneMgrFff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void paneScale__8CPaneMgrFff();
+extern "C" void __dl__FPv();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

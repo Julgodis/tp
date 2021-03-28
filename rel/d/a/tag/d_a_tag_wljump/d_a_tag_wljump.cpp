@@ -51,10 +51,10 @@ struct dAttHint_c {
 	/* 800738FC */ void request(fopAc_ac_c*, int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -65,46 +65,53 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagWljump_Create(fopAc_ac_c*); // 2
-static void daTagWljump_Delete(daTagWljump_c*); // 2
-static void daTagWljump_Execute(daTagWljump_c*); // 2
-static void daTagWljump_Draw(daTagWljump_c*); // 2
+static void daTagWljump_Create(fopAc_ac_c*);
+static void daTagWljump_Delete(daTagWljump_c*);
+static void daTagWljump_Execute(daTagWljump_c*);
+static void daTagWljump_Draw(daTagWljump_c*);
+extern "C" extern void* g_profile_Tag_Wljump[12];
 
-extern "C" void create__13daTagWljump_cFv(); // 1
-extern "C" static void daTagWljump_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__13daTagWljump_cFv(); // 1
-extern "C" static void daTagWljump_Delete__FP13daTagWljump_c(); // 1
-extern "C" void execute__13daTagWljump_cFv(); // 1
-extern "C" static void daTagWljump_Execute__FP13daTagWljump_c(); // 1
-extern "C" bool draw__13daTagWljump_cFv(); // 1
-extern "C" static void daTagWljump_Draw__FP13daTagWljump_c(); // 1
+extern "C" void create__13daTagWljump_cFv();
+extern "C" static void daTagWljump_Create__FP10fopAc_ac_c();
+extern "C" void __dt__13daTagWljump_cFv();
+extern "C" static void daTagWljump_Delete__FP13daTagWljump_c();
+extern "C" void execute__13daTagWljump_cFv();
+extern "C" static void daTagWljump_Execute__FP13daTagWljump_c();
+extern "C" bool draw__13daTagWljump_cFv();
+extern "C" static void daTagWljump_Draw__FP13daTagWljump_c();
 extern "C" extern void* g_profile_Tag_Wljump[12];
 
 // 
 // External References:
 // 
 
-void dPath_GetRoomPath(int, int); // 2
-void operator delete(void*); // 2
+void dPath_GetRoomPath(int, int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void request__10dAttHint_cFP10fopAc_ac_ci(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void request__10dAttHint_cFP10fopAc_ac_ci();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

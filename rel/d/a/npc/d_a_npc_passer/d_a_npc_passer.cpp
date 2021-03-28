@@ -156,12 +156,12 @@ struct dBgS_AcchCir {
 struct dBgS {
 };
 
-struct cXyz {
-	/* 80AA6654 */ ~cXyz();
-};
-
 struct csXyz {
 	/* 80AA6690 */ ~csXyz();
+};
+
+struct cXyz {
+	/* 80AA6654 */ ~cXyz();
 };
 
 struct dBgS_Acch {
@@ -235,88 +235,90 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void createHeapCallBack(fopAc_ac_c*); // 2
-static void daNpcPasser_Create(void*); // 2
-static void daNpcPasser_Delete(void*); // 2
-static void daNpcPasser_Execute(void*); // 2
-static void daNpcPasser_Draw(void*); // 2
-static bool daNpcPasser_IsDelete(void*); // 2
-static void cLib_getRndValue__template0(f32, f32); // 2
-static void cLib_getRndValue__template1(int, int); // 2
+static void createHeapCallBack(fopAc_ac_c*);
+static void daNpcPasser_Create(void*);
+static void daNpcPasser_Delete(void*);
+static void daNpcPasser_Execute(void*);
+static void daNpcPasser_Draw(void*);
+static bool daNpcPasser_IsDelete(void*);
+static void cLib_getRndValue__template0(f32, f32);
+static void cLib_getRndValue__template1(int, int);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_NPC_PASSER[12];
 
-extern "C" void __dt__13daNpcPasser_cFv(); // 1
-extern "C" void createHeap__13daNpcPasser_cFv(); // 1
-extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
-extern "C" void create__13daNpcPasser_cFv(); // 1
-extern "C" void execute__13daNpcPasser_cFv(); // 1
-extern "C" void draw__13daNpcPasser_cFv(); // 1
-extern "C" void setAction__13daNpcPasser_cFQ213daNpcPasser_c6Mode_e(); // 1
-extern "C" void callInit__13daNpcPasser_cFv(); // 1
-extern "C" void callExecute__13daNpcPasser_cFv(); // 1
-extern "C" void initPath__13daNpcPasser_cFv(); // 1
-extern "C" void executePath__13daNpcPasser_cFv(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void initEscape__13daNpcPasser_cFv(); // 1
-extern "C" void executeEscape__13daNpcPasser_cFv(); // 1
-extern "C" void initFear__13daNpcPasser_cFv(); // 1
-extern "C" void executeFear__13daNpcPasser_cFv(); // 1
-extern "C" void initFight__13daNpcPasser_cFv(); // 1
-extern "C" void executeFight__13daNpcPasser_cFv(); // 1
-extern "C" void initRelief__13daNpcPasser_cFv(); // 1
-extern "C" void executeRelief__13daNpcPasser_cFv(); // 1
-extern "C" void create_init__13daNpcPasser_cFv(); // 1
-extern "C" void setAngle__13daNpcPasser_cFv(); // 1
-extern "C" void setSpeed__13daNpcPasser_cFffPfi(); // 1
-extern "C" void pathMoveF__13daNpcPasser_cFv(); // 1
-extern "C" void setBaseMtx__13daNpcPasser_cFv(); // 1
-extern "C" void initCollision__13daNpcPasser_cFv(); // 1
-extern "C" void setCollision__13daNpcPasser_cFv(); // 1
-extern "C" void waita__13daNpcPasser_cFPv(); // 1
-extern "C" void talka__13daNpcPasser_cFPv(); // 1
-extern "C" void waitwall__13daNpcPasser_cFPv(); // 1
-extern "C" void talkwall__13daNpcPasser_cFPv(); // 1
-extern "C" void talkbwall__13daNpcPasser_cFPv(); // 1
-extern "C" void talkb__13daNpcPasser_cFPv(); // 1
-extern "C" void talkc__13daNpcPasser_cFPv(); // 1
-extern "C" void waitb__13daNpcPasser_cFPv(); // 1
-extern "C" void sitwaita__13daNpcPasser_cFPv(); // 1
-extern "C" void sittalka__13daNpcPasser_cFPv(); // 1
-extern "C" void sittalkab__13daNpcPasser_cFPv(); // 1
-extern "C" void sitwaitb__13daNpcPasser_cFPv(); // 1
-extern "C" void sittalkb__13daNpcPasser_cFPv(); // 1
-extern "C" void sittalkbb__13daNpcPasser_cFPv(); // 1
-extern "C" void looka__13daNpcPasser_cFPv(); // 1
-extern "C" void lookb__13daNpcPasser_cFPv(); // 1
-extern "C" void playm__13daNpcPasser_cFPv(); // 1
-extern "C" void turnr__13daNpcPasser_cFPv(); // 1
-extern "C" void turnl__13daNpcPasser_cFPv(); // 1
-extern "C" void walka__13daNpcPasser_cFPv(); // 1
-extern "C" void runa__13daNpcPasser_cFPv(); // 1
-extern "C" void runb__13daNpcPasser_cFPv(); // 1
-extern "C" void walkb__13daNpcPasser_cFPv(); // 1
-extern "C" void browsea__13daNpcPasser_cFPv(); // 1
-extern "C" void browseb__13daNpcPasser_cFPv(); // 1
-extern "C" void waitTime__13daNpcPasser_cFPv(); // 1
-extern "C" static void daNpcPasser_Create__FPv(); // 1
-extern "C" static void daNpcPasser_Delete__FPv(); // 1
-extern "C" static void daNpcPasser_Execute__FPv(); // 1
-extern "C" static void daNpcPasser_Draw__FPv(); // 1
-extern "C" static bool daNpcPasser_IsDelete__FPv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_80AA59BC(); // 1
-extern "C" static void func_80AA59F8(); // 1
-extern "C" void __sinit_d_a_npc_passer_cpp(); // 1
-extern "C" static void func_80AA63F4(); // 1
-extern "C" static void func_80AA63FC(); // 1
-extern "C" void __dt__10daNpcCd2_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __dt__16dNpcLib_lookat_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
+extern "C" void __dt__13daNpcPasser_cFv();
+extern "C" void createHeap__13daNpcPasser_cFv();
+extern "C" static void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void create__13daNpcPasser_cFv();
+extern "C" void execute__13daNpcPasser_cFv();
+extern "C" void draw__13daNpcPasser_cFv();
+extern "C" void setAction__13daNpcPasser_cFQ213daNpcPasser_c6Mode_e();
+extern "C" void callInit__13daNpcPasser_cFv();
+extern "C" void callExecute__13daNpcPasser_cFv();
+extern "C" void initPath__13daNpcPasser_cFv();
+extern "C" void executePath__13daNpcPasser_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void initEscape__13daNpcPasser_cFv();
+extern "C" void executeEscape__13daNpcPasser_cFv();
+extern "C" void initFear__13daNpcPasser_cFv();
+extern "C" void executeFear__13daNpcPasser_cFv();
+extern "C" void initFight__13daNpcPasser_cFv();
+extern "C" void executeFight__13daNpcPasser_cFv();
+extern "C" void initRelief__13daNpcPasser_cFv();
+extern "C" void executeRelief__13daNpcPasser_cFv();
+extern "C" void create_init__13daNpcPasser_cFv();
+extern "C" void setAngle__13daNpcPasser_cFv();
+extern "C" void setSpeed__13daNpcPasser_cFffPfi();
+extern "C" void pathMoveF__13daNpcPasser_cFv();
+extern "C" void setBaseMtx__13daNpcPasser_cFv();
+extern "C" void initCollision__13daNpcPasser_cFv();
+extern "C" void setCollision__13daNpcPasser_cFv();
+extern "C" void waita__13daNpcPasser_cFPv();
+extern "C" void talka__13daNpcPasser_cFPv();
+extern "C" void waitwall__13daNpcPasser_cFPv();
+extern "C" void talkwall__13daNpcPasser_cFPv();
+extern "C" void talkbwall__13daNpcPasser_cFPv();
+extern "C" void talkb__13daNpcPasser_cFPv();
+extern "C" void talkc__13daNpcPasser_cFPv();
+extern "C" void waitb__13daNpcPasser_cFPv();
+extern "C" void sitwaita__13daNpcPasser_cFPv();
+extern "C" void sittalka__13daNpcPasser_cFPv();
+extern "C" void sittalkab__13daNpcPasser_cFPv();
+extern "C" void sitwaitb__13daNpcPasser_cFPv();
+extern "C" void sittalkb__13daNpcPasser_cFPv();
+extern "C" void sittalkbb__13daNpcPasser_cFPv();
+extern "C" void looka__13daNpcPasser_cFPv();
+extern "C" void lookb__13daNpcPasser_cFPv();
+extern "C" void playm__13daNpcPasser_cFPv();
+extern "C" void turnr__13daNpcPasser_cFPv();
+extern "C" void turnl__13daNpcPasser_cFPv();
+extern "C" void walka__13daNpcPasser_cFPv();
+extern "C" void runa__13daNpcPasser_cFPv();
+extern "C" void runb__13daNpcPasser_cFPv();
+extern "C" void walkb__13daNpcPasser_cFPv();
+extern "C" void browsea__13daNpcPasser_cFPv();
+extern "C" void browseb__13daNpcPasser_cFPv();
+extern "C" void waitTime__13daNpcPasser_cFPv();
+extern "C" static void daNpcPasser_Create__FPv();
+extern "C" static void daNpcPasser_Delete__FPv();
+extern "C" static void daNpcPasser_Execute__FPv();
+extern "C" static void daNpcPasser_Draw__FPv();
+extern "C" static bool daNpcPasser_IsDelete__FPv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" static void func_80AA59BC();
+extern "C" static void func_80AA59F8();
+extern "C" void __sinit_d_a_npc_passer_cpp();
+extern "C" static void func_80AA63F4();
+extern "C" static void func_80AA63FC();
+extern "C" void __dt__10daNpcCd2_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__16dNpcLib_lookat_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_NPC_PASSER[12];
 
@@ -324,115 +326,129 @@ extern "C" extern void* g_profile_NPC_PASSER[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
-void dKy_getDarktime_hour(); // 2
-void dKy_getDarktime_minute(); // 2
-void dKy_getDarktime_week(); // 2
-void dKy_get_dayofweek(); // 2
-void dKy_darkworld_check(); // 2
-void cM_rndF(f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_getPolygonAngle(cM3dGPla const*, s16);
+void fpcSch_JudgeByID(void*, void*);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void dKy_getDarktime_hour();
+void dKy_getDarktime_minute();
+void dKy_getDarktime_week();
+void dKy_get_dayofweek();
+void dKy_darkworld_check();
+void cM_rndF(f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_distanceAngleS(s16, s16);
+void operator delete(void*);
+extern "C" extern u8 const m_cylDat__10daNpcCd2_c[68];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 l_Cd2_HIO[16396];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void setMorf__13mDoExt_morf_cFf(); // 1
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWallR__12dBgS_AcchCirFf(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void NpcCreate__10daNpcCd2_cFi(); // 1
-extern "C" void ObjCreate__10daNpcCd2_cFi(); // 1
-extern "C" void getAnmP__10daNpcCd2_cFii(); // 1
-extern "C" void setAttention__10daNpcCd2_cFi(); // 1
-extern "C" void loadResrc__10daNpcCd2_cFii(); // 1
-extern "C" void removeResrc__10daNpcCd2_cFii(); // 1
-extern "C" void setEnvTevCol__10daNpcCd2_cFv(); // 1
-extern "C" void setRoomNo__10daNpcCd2_cFv(); // 1
-extern "C" void animation__10daNpcCd2_cFi(); // 1
-extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii(); // 1
-extern "C" void drawShadow__10daNpcCd2_cFf(); // 1
-extern "C" void drawObj__10daNpcCd2_cFiP8J3DModelf(); // 1
-extern "C" void drawNpc__10daNpcCd2_cFv(); // 1
-extern "C" void getEscapeTag__10daNpcCd2_cFv(); // 1
-extern "C" void checkFearSituation__10daNpcCd2_cFv(); // 1
-extern "C" void setPath__11PathTrace_cFiiiP4cXyzb(); // 1
-extern "C" void checkPoint__11PathTrace_cF4cXyzf(); // 1
-extern "C" void checkPathEnd__11PathTrace_cF4cXyzf(); // 1
-extern "C" void getTargetPoint__11PathTrace_cFP3Vec(); // 1
-extern "C" void setNextPoint__11PathTrace_cFR4cXyz(); // 1
-extern "C" void checkObstacle__11PathTrace_cFP10fopAc_ac_c(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" void dKy_getDarktime_hour__Fv(); // 1
-extern "C" void dKy_getDarktime_minute__Fv(); // 1
-extern "C" void dKy_getDarktime_week__Fv(); // 1
-extern "C" void dKy_get_dayofweek__Fv(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void __ct__16dNpcLib_lookat_cFv(); // 1
-extern "C" void dbView__16dNpcLib_lookat_cFv(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __ct__17Z2CreatureCitizenFv(); // 1
-extern "C" void __dt__17Z2CreatureCitizenFv(); // 1
-extern "C" void playVoice__17Z2CreatureCitizenFi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void checkPass__12J3DFrameCtrlFf(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void setMorf__13mDoExt_morf_cFf();
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWallR__12dBgS_AcchCirFf();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void NpcCreate__10daNpcCd2_cFi();
+extern "C" void ObjCreate__10daNpcCd2_cFi();
+extern "C" void getAnmP__10daNpcCd2_cFii();
+extern "C" void setAttention__10daNpcCd2_cFi();
+extern "C" void loadResrc__10daNpcCd2_cFii();
+extern "C" void removeResrc__10daNpcCd2_cFii();
+extern "C" void setEnvTevCol__10daNpcCd2_cFv();
+extern "C" void setRoomNo__10daNpcCd2_cFv();
+extern "C" void animation__10daNpcCd2_cFi();
+extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii();
+extern "C" void drawShadow__10daNpcCd2_cFf();
+extern "C" void drawObj__10daNpcCd2_cFiP8J3DModelf();
+extern "C" void drawNpc__10daNpcCd2_cFv();
+extern "C" void getEscapeTag__10daNpcCd2_cFv();
+extern "C" void checkFearSituation__10daNpcCd2_cFv();
+extern "C" void setPath__11PathTrace_cFiiiP4cXyzb();
+extern "C" void checkPoint__11PathTrace_cF4cXyzf();
+extern "C" void checkPathEnd__11PathTrace_cF4cXyzf();
+extern "C" void getTargetPoint__11PathTrace_cFP3Vec();
+extern "C" void setNextPoint__11PathTrace_cFR4cXyz();
+extern "C" void checkObstacle__11PathTrace_cFP10fopAc_ac_c();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void dKy_getDarktime_hour__Fv();
+extern "C" void dKy_getDarktime_minute__Fv();
+extern "C" void dKy_getDarktime_week__Fv();
+extern "C" void dKy_get_dayofweek__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void __ct__16dNpcLib_lookat_cFv();
+extern "C" void dbView__16dNpcLib_lookat_cFv();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void cM_rndF__Ff();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void __ct__17Z2CreatureCitizenFv();
+extern "C" void __dt__17Z2CreatureCitizenFv();
+extern "C" void playVoice__17Z2CreatureCitizenFi();
+extern "C" void __dl__FPv();
+extern "C" void checkPass__12J3DFrameCtrlFf();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_arr();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void abs();
 extern "C" extern u8 const m_cylDat__10daNpcCd2_c[68];
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* g_fopAc_Method[8];

@@ -59,42 +59,45 @@ struct J2DPane {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_map_common__stringBase0;
 
-extern "C" void __ct__16dMenuMapCommon_cFv(); // 1
-extern "C" void __dt__16dMenuMapCommon_cFv(); // 1
-extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive(); // 1
-extern "C" void drawIcon__16dMenuMapCommon_cFffff(); // 1
-extern "C" void iconScale__16dMenuMapCommon_cFifff(); // 1
-extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc(); // 1
-extern "C" void clearIconInfo__16dMenuMapCommon_cFv(); // 1
-extern "C" void setBlendRatio__16dMenuMapCommon_cFUcff(); // 1
-extern "C" void blinkMove__16dMenuMapCommon_cFs(); // 1
-extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
-extern "C" void getIconSizeX__16dMenuMapCommon_cFUc(); // 1
-extern "C" void getIconSizeY__16dMenuMapCommon_cFUc(); // 1
-extern "C" void debugIcon__16dMenuMapCommon_cFv(); // 1
+extern "C" void __ct__16dMenuMapCommon_cFv();
+extern "C" void __dt__16dMenuMapCommon_cFv();
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" void iconScale__16dMenuMapCommon_cFifff();
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" void clearIconInfo__16dMenuMapCommon_cFv();
+extern "C" void setBlendRatio__16dMenuMapCommon_cFUcff();
+extern "C" void blinkMove__16dMenuMapCommon_cFs();
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
+extern "C" void getIconSizeX__16dMenuMapCommon_cFUc();
+extern "C" void getIconSizeY__16dMenuMapCommon_cFUc();
+extern "C" void debugIcon__16dMenuMapCommon_cFv();
 extern "C" extern char const* const d_menu_d_menu_map_common__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_fmapHIO[1188];
 
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
-extern "C" void setInfluencedAlpha__7J2DPaneFbb(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void setInfluencedAlpha__7J2DPaneFbb();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_fmapHIO[1188];
 

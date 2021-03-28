@@ -43,10 +43,10 @@ struct dSv_player_status_b_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -73,22 +73,24 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daKytag09_Draw(kytag09_class*); // 2
-static bool daKytag09_Execute(kytag09_class*); // 2
-static bool daKytag09_IsDelete(kytag09_class*); // 2
-static void daKytag09_Delete(kytag09_class*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void useHeapInit2(fopAc_ac_c*); // 2
-static void daKytag09_Create(fopAc_ac_c*); // 2
+static void daKytag09_Draw(kytag09_class*);
+static bool daKytag09_Execute(kytag09_class*);
+static bool daKytag09_IsDelete(kytag09_class*);
+static void daKytag09_Delete(kytag09_class*);
+static void useHeapInit(fopAc_ac_c*);
+static void useHeapInit2(fopAc_ac_c*);
+static void daKytag09_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_KYTAG09[12];
 
-extern "C" static void daKytag09_Draw__FP13kytag09_class(); // 1
-extern "C" static bool daKytag09_Execute__FP13kytag09_class(); // 1
-extern "C" static bool daKytag09_IsDelete__FP13kytag09_class(); // 1
-extern "C" static void daKytag09_Delete__FP13kytag09_class(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void useHeapInit2__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag09_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
+extern "C" static void daKytag09_Draw__FP13kytag09_class();
+extern "C" static bool daKytag09_Execute__FP13kytag09_class();
+extern "C" static bool daKytag09_IsDelete__FP13kytag09_class();
+extern "C" static void daKytag09_Delete__FP13kytag09_class();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void useHeapInit2__FP10fopAc_ac_c();
+extern "C" static void daKytag09_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_KYTAG09[12];
 
@@ -96,34 +98,40 @@ extern "C" extern void* g_profile_KYTAG09[12];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void operator delete(void*); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

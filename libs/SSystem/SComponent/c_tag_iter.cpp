@@ -24,11 +24,11 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
-void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
+void cTgIt_MethodCall(create_tag_class*, method_filter*);
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
 
-extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
-extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
 
 // 
 // External References:

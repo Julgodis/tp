@@ -23,7 +23,7 @@ struct JMath {
 // 
 
 
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
 
 // 
 // External References:

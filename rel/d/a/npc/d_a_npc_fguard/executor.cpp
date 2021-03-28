@@ -12,20 +12,22 @@
 // 
 
 
-extern "C" void _prolog(); // 1
-extern "C" void _epilog(); // 1
-extern "C" void _unresolved(); // 1
+extern "C" void _prolog();
+extern "C" void _epilog();
+extern "C" void _unresolved();
 
 // 
 // External References:
 // 
 
+extern u8 const data_809BB3FC[4];
+extern u8 const data_809BB400[4];
 
-extern "C" void ModuleProlog(); // 1
-extern "C" void ModuleEpilog(); // 1
-extern "C" void ModuleUnresolved(); // 1
-extern "C" void ModuleConstructorsX(); // 1
-extern "C" void ModuleDestructorsX(); // 1
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+extern "C" void ModuleUnresolved();
+extern "C" void ModuleConstructorsX();
+extern "C" void ModuleDestructorsX();
 extern u8 const data_809BB3FC[4];
 extern u8 const data_809BB400[4];
 

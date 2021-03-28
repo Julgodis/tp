@@ -29,33 +29,37 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static bool daTag_Telop_Draw(daTag_Telop_c*); // 2
-static void daTag_Telop_Execute(daTag_Telop_c*); // 2
-static bool daTag_Telop_IsDelete(daTag_Telop_c*); // 2
-static void daTag_Telop_Delete(daTag_Telop_c*); // 2
-static void daTag_Telop_Create(fopAc_ac_c*); // 2
+static bool daTag_Telop_Draw(daTag_Telop_c*);
+static void daTag_Telop_Execute(daTag_Telop_c*);
+static bool daTag_Telop_IsDelete(daTag_Telop_c*);
+static void daTag_Telop_Delete(daTag_Telop_c*);
+static void daTag_Telop_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_TAG_TELOP[12];
 
-extern "C" void create__13daTag_Telop_cFv(); // 1
-extern "C" void execute__13daTag_Telop_cFv(); // 1
-extern "C" static bool daTag_Telop_Draw__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Execute__FP13daTag_Telop_c(); // 1
-extern "C" static bool daTag_Telop_IsDelete__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Delete__FP13daTag_Telop_c(); // 1
-extern "C" static void daTag_Telop_Create__FP10fopAc_ac_c(); // 1
+extern "C" void create__13daTag_Telop_cFv();
+extern "C" void execute__13daTag_Telop_cFv();
+extern "C" static bool daTag_Telop_Draw__FP13daTag_Telop_c();
+extern "C" static void daTag_Telop_Execute__FP13daTag_Telop_c();
+extern "C" static bool daTag_Telop_IsDelete__FP13daTag_Telop_c();
+extern "C" static void daTag_Telop_Delete__FP13daTag_Telop_c();
+extern "C" static void daTag_Telop_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_TAG_TELOP[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopMsgM_messageSetDemo(u32); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopMsgM_messageSetDemo(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopMsgM_messageSetDemo__FUl(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopMsgM_messageSetDemo__FUl();
+extern "C" void isEventBit__11dSv_event_cCFUs();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

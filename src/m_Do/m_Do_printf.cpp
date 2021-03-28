@@ -18,52 +18,57 @@ struct __va_list_struct {
 // Forward References:
 // 
 
-static void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32); // 2
-static void my_PutString(char const*); // 2
-static void OSVAttention(char const*, __va_list_struct*); // 2
-void OSReportInit(); // 2
-static void mDoPrintf_vprintf_Interrupt(char const*, __va_list_struct*); // 2
-static void mDoPrintf_vprintf_Thread(char const*, __va_list_struct*); // 2
-static void mDoPrintf_vprintf(char const*, __va_list_struct*); // 2
+static void OSSwitchFiberEx(u32, u32, u32, u32, u32, u32);
+static void my_PutString(char const*);
+static void OSVAttention(char const*, __va_list_struct*);
+void OSReportInit();
+static void mDoPrintf_vprintf_Interrupt(char const*, __va_list_struct*);
+static void mDoPrintf_vprintf_Thread(char const*, __va_list_struct*);
+static void mDoPrintf_vprintf(char const*, __va_list_struct*);
+extern "C" extern char const* const m_Do_m_Do_printf__stringBase0;
 
-extern "C" static void OSSwitchFiberEx__FUlUlUlUlUlUl(); // 1
-extern "C" static void my_PutString__FPCc(); // 1
-extern "C" static void OSVAttention__FPCcP16__va_list_struct(); // 1
-extern "C" void OSAttention(); // 1
-extern "C" void OSReportDisable(); // 1
-extern "C" void OSReportEnable(); // 1
-extern "C" static void OSReportForceEnableOn(); // 1
-extern "C" static void OSReportForceEnableOff(); // 1
-extern "C" void OSReportInit__Fv(); // 1
-extern "C" static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_vprintf__FPCcP16__va_list_struct(); // 1
-extern "C" static void mDoPrintf_VReport(); // 1
-extern "C" static void OSVReport(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_FatalError(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
-extern "C" void OSReport_System(); // 1
-extern "C" void OSPanic(); // 1
+extern "C" static void OSSwitchFiberEx__FUlUlUlUlUlUl();
+extern "C" static void my_PutString__FPCc();
+extern "C" static void OSVAttention__FPCcP16__va_list_struct();
+extern "C" void OSAttention();
+extern "C" void OSReportDisable();
+extern "C" void OSReportEnable();
+extern "C" static void OSReportForceEnableOn();
+extern "C" static void OSReportForceEnableOff();
+extern "C" void OSReportInit__Fv();
+extern "C" static void mDoPrintf_vprintf_Interrupt__FPCcP16__va_list_struct();
+extern "C" static void mDoPrintf_vprintf_Thread__FPCcP16__va_list_struct();
+extern "C" static void mDoPrintf_vprintf__FPCcP16__va_list_struct();
+extern "C" static void mDoPrintf_VReport();
+extern "C" static void OSVReport();
+extern "C" void OSReport();
+extern "C" void OSReport_FatalError();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void OSReport_System();
+extern "C" void OSPanic();
 extern "C" extern char const* const m_Do_m_Do_printf__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_GetCurrentRunningThread(); // 2
+void mDoExt_GetCurrentRunningThread();
+extern "C" extern void* __files[80];
+extern "C" extern u8 lit_3620[12];
+extern "C" extern u8 struct_80450B98[4];
+extern "C" extern u8 data_80450B9C[4];
 
-extern "C" void mDoExt_GetCurrentRunningThread__Fv(); // 1
-extern "C" void PPCHalt(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void fputs(); // 1
-extern "C" void fflush(); // 1
-extern "C" void vprintf(); // 1
+extern "C" void mDoExt_GetCurrentRunningThread__Fv();
+extern "C" void PPCHalt();
+extern "C" void OSGetStackPointer();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void fputs();
+extern "C" void fflush();
+extern "C" void vprintf();
 extern "C" extern void* __files[80];
 extern "C" extern u8 lit_3620[12];
 extern "C" extern u8 struct_80450B98[4];

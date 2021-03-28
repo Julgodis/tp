@@ -91,38 +91,40 @@ struct FmtMember_c {
 // Forward References:
 // 
 
-static bool daFmtMng_Draw(daFmtMng_c*); // 2
-static void daFmtMng_Execute(daFmtMng_c*); // 2
-static bool daFmtMng_IsDelete(daFmtMng_c*); // 2
-static void daFmtMng_Delete(daFmtMng_c*); // 2
-static void daFmtMng_Create(fopAc_ac_c*); // 2
+static bool daFmtMng_Draw(daFmtMng_c*);
+static void daFmtMng_Execute(daFmtMng_c*);
+static bool daFmtMng_IsDelete(daFmtMng_c*);
+static void daFmtMng_Delete(daFmtMng_c*);
+static void daFmtMng_Create(fopAc_ac_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_FORMATION_MNG[12];
 
-extern "C" void initWait__10daFmtMng_cFv(); // 1
-extern "C" void initMemberPos__10daFmtMng_cFv(); // 1
-extern "C" void executeWait__10daFmtMng_cFv(); // 1
-extern "C" void initWalk__10daFmtMng_cFv(); // 1
-extern "C" void executeWalk__10daFmtMng_cFv(); // 1
-extern "C" void setMovePath__10daFmtMng_cFP8FmtPos_ci(); // 1
-extern "C" void checkPathEnd__15daFmtMng_Path_cF4cXyzf(); // 1
-extern "C" void checkPoint__15daFmtMng_Path_cF4cXyzf(); // 1
-extern "C" void initReverse__10daFmtMng_cFv(); // 1
-extern "C" void executeReverse__10daFmtMng_cFv(); // 1
-extern "C" void __dt__8FmtPos_cFv(); // 1
-extern "C" void __ct__8FmtPos_cFv(); // 1
-extern "C" void initMotion__10daFmtMng_cFv(); // 1
-extern "C" void executeMotion__10daFmtMng_cFv(); // 1
-extern "C" void initFight__10daFmtMng_cFv(); // 1
-extern "C" void executeFight__10daFmtMng_cFv(); // 1
-extern "C" static bool daFmtMng_Draw__FP10daFmtMng_c(); // 1
-extern "C" static void daFmtMng_Execute__FP10daFmtMng_c(); // 1
-extern "C" static bool daFmtMng_IsDelete__FP10daFmtMng_c(); // 1
-extern "C" static void daFmtMng_Delete__FP10daFmtMng_c(); // 1
-extern "C" void __dt__11FmtMember_cFv(); // 1
-extern "C" static void daFmtMng_Create__FP10fopAc_ac_c(); // 1
-extern "C" void create__10daFmtMng_cFv(); // 1
-extern "C" void create_init__10daFmtMng_cFv(); // 1
-extern "C" void __ct__11FmtMember_cFv(); // 1
-extern "C" void __sinit_d_a_formation_mng_cpp(); // 1
+extern "C" void initWait__10daFmtMng_cFv();
+extern "C" void initMemberPos__10daFmtMng_cFv();
+extern "C" void executeWait__10daFmtMng_cFv();
+extern "C" void initWalk__10daFmtMng_cFv();
+extern "C" void executeWalk__10daFmtMng_cFv();
+extern "C" void setMovePath__10daFmtMng_cFP8FmtPos_ci();
+extern "C" void checkPathEnd__15daFmtMng_Path_cF4cXyzf();
+extern "C" void checkPoint__15daFmtMng_Path_cF4cXyzf();
+extern "C" void initReverse__10daFmtMng_cFv();
+extern "C" void executeReverse__10daFmtMng_cFv();
+extern "C" void __dt__8FmtPos_cFv();
+extern "C" void __ct__8FmtPos_cFv();
+extern "C" void initMotion__10daFmtMng_cFv();
+extern "C" void executeMotion__10daFmtMng_cFv();
+extern "C" void initFight__10daFmtMng_cFv();
+extern "C" void executeFight__10daFmtMng_cFv();
+extern "C" static bool daFmtMng_Draw__FP10daFmtMng_c();
+extern "C" static void daFmtMng_Execute__FP10daFmtMng_c();
+extern "C" static bool daFmtMng_IsDelete__FP10daFmtMng_c();
+extern "C" static void daFmtMng_Delete__FP10daFmtMng_c();
+extern "C" void __dt__11FmtMember_cFv();
+extern "C" static void daFmtMng_Create__FP10fopAc_ac_c();
+extern "C" void create__10daFmtMng_cFv();
+extern "C" void create_init__10daFmtMng_cFv();
+extern "C" void __ct__11FmtMember_cFv();
+extern "C" void __sinit_d_a_formation_mng_cpp();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_FORMATION_MNG[12];
 
@@ -130,81 +132,28 @@ extern "C" extern void* g_profile_FORMATION_MNG[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_SearchByID(unsigned int, fopAc_ac_c**); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_delete(unsigned int); // 2
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void dPath_GetPnt(dPath const*, int); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
-void dKy_getDarktime_hour(); // 2
-void dKy_getDarktime_minute(); // 2
-void dKy_get_dayofweek(); // 2
-void dKy_darkworld_check(); // 2
-void cM_rndF(f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void push__14mDoMtx_stack_cFv(); // 1
-extern "C" void pop__14mDoMtx_stack_cFv(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_delete__FUi(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void getAnmP__10daNpcCd2_cFii(); // 1
-extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" void dKy_getDarktime_hour__Fv(); // 1
-extern "C" void dKy_getDarktime_minute__Fv(); // 1
-extern "C" void dKy_get_dayofweek__Fv(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void pow(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_SearchByID(unsigned int, fopAc_ac_c**);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_delete(unsigned int);
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void dPath_GetPnt(dPath const*, int);
+void dPath_GetRoomPath(int, int);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void dKy_getDarktime_hour();
+void dKy_getDarktime_minute();
+void dKy_get_dayofweek();
+void dKy_darkworld_check();
+void cM_rndF(f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_distanceAngleS(s16, s16);
+void* operator new[](u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -212,7 +161,67 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mGroundY__11fopAcM_gc_c;
-extern "C" void initPosAngle__10daNpcFgd_cFR3Vecs(); // 1
+
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void push__14mDoMtx_stack_cFv();
+extern "C" void pop__14mDoMtx_stack_cFv();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_delete__FUi();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void dPath_GetPnt__FPC5dPathi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void getAnmP__10daNpcCd2_cFii();
+extern "C" void setAnm__10daNpcCd2_cFP18J3DAnmTransformKeyffiii();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void dKy_getDarktime_hour__Fv();
+extern "C" void dKy_getDarktime_minute__Fv();
+extern "C" void dKy_get_dayofweek__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_new_array();
+extern "C" void __construct_new_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void pow();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" void initPosAngle__10daNpcFgd_cFR3Vecs();
 
 // 
 // Declarations:

@@ -62,21 +62,23 @@ struct JKRDecomp {
 // Forward References:
 // 
 
-static void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*); // 2
-static void decompSZS_subroutine(u8*, u8*); // 2
-static void firstSrcData(); // 2
-static void nextSrcData(u8*); // 2
+static void JKRDecompressFromDVD(JKRDvdFile*, void*, u32, u32, u32, u32, u32*);
+static void decompSZS_subroutine(u8*, u8*);
+static void firstSrcData();
+static void nextSrcData(u8*);
+extern "C" extern char const* const JKRDvdRipper__stringBase0;
+extern "C" extern u32 sSZSBufferSize__12JKRDvdRipper;
 
-extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" static void JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl(); // 1
-extern "C" static void decompSZS_subroutine__FPUcPUc(); // 1
-extern "C" static void firstSrcData__Fv(); // 1
-extern "C" static void nextSrcData__FPUc(); // 1
-extern "C" void isErrorRetry__12JKRDvdRipperFv(); // 1
-extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
-extern "C" void func_802DA820(); // 1
+extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void loadToMainRAM__12JKRDvdRipperFP10JKRDvdFilePUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" static void JKRDecompressFromDVD__FP10JKRDvdFilePvUlUlUlUlPUl();
+extern "C" static void decompSZS_subroutine__FPUcPUc();
+extern "C" static void firstSrcData__Fv();
+extern "C" static void nextSrcData__FPUc();
+extern "C" void isErrorRetry__12JKRDvdRipperFv();
+extern "C" void __sinit_JKRDvdRipper_cpp();
+extern "C" void func_802DA820();
 extern "C" extern char const* const JKRDvdRipper__stringBase0;
 extern "C" extern u32 sSZSBufferSize__12JKRDvdRipper;
 
@@ -84,42 +86,43 @@ extern "C" extern u32 sSZSBufferSize__12JKRDvdRipper;
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JKRDvdFileFv(); // 1
-extern "C" void __dt__10JKRDvdFileFv(); // 1
-extern "C" void open__10JKRDvdFileFPCc(); // 1
-extern "C" void open__10JKRDvdFileFl(); // 1
-extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
-extern "C" void checkCompressed__9JKRDecompFPUc(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JKRDvdFileFv();
+extern "C" void __dt__10JKRDvdFileFv();
+extern "C" void open__10JKRDvdFileFPCc();
+extern "C" void open__10JKRDvdFileFl();
+extern "C" void orderSync__9JKRDecompFPUcPUcUlUl();
+extern "C" void checkCompressed__9JKRDecompFPUc();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCInvalidateRange();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void DVDReadPrio();
+extern "C" void VIWaitForRetrace();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

@@ -45,38 +45,44 @@ struct csXyz {
 // Forward References:
 // 
 
-static void daTagMyna2_Create(fopAc_ac_c*); // 2
-static void daTagMyna2_Execute(daTagMyna2_c*); // 2
-static void daTagMyna2_Delete(daTagMyna2_c*); // 2
-static void cLib_calcTimer__template0(s16*); // 2
+static void daTagMyna2_Create(fopAc_ac_c*);
+static void daTagMyna2_Execute(daTagMyna2_c*);
+static void daTagMyna2_Delete(daTagMyna2_c*);
+static void cLib_calcTimer__template0(s16*);
+extern "C" extern void* g_profile_TAG_MYNA2[12];
 
-extern "C" void create__12daTagMyna2_cFv(); // 1
-extern "C" void execute__12daTagMyna2_cFv(); // 1
-extern "C" static void daTagMyna2_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagMyna2_Execute__FP12daTagMyna2_c(); // 1
-extern "C" static void daTagMyna2_Delete__FP12daTagMyna2_c(); // 1
-extern "C" static void func_80D5CA18(); // 1
+extern "C" void create__12daTagMyna2_cFv();
+extern "C" void execute__12daTagMyna2_cFv();
+extern "C" static void daTagMyna2_Create__FP10fopAc_ac_c();
+extern "C" static void daTagMyna2_Execute__FP12daTagMyna2_c();
+extern "C" static void daTagMyna2_Delete__FP12daTagMyna2_c();
+extern "C" static void func_80D5CA18();
 extern "C" extern void* g_profile_TAG_MYNA2[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

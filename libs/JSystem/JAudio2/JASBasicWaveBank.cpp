@@ -69,31 +69,33 @@ struct JASBasicWaveBank {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__13JASWaveHandle[5];
+extern "C" extern void* __vt__11JASWaveBank[6];
 
-extern "C" void __ct__16JASBasicWaveBankFv(); // 1
-extern "C" void __dt__16JASBasicWaveBankFv(); // 1
-extern "C" void __dt__Q216JASBasicWaveBank11TWaveHandleFv(); // 1
-extern "C" void getWaveGroup__16JASBasicWaveBankFUl(); // 1
-extern "C" void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap(); // 1
-extern "C" void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap(); // 1
-extern "C" void incWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup(); // 1
-extern "C" void decWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup(); // 1
-extern "C" void getWaveHandle__16JASBasicWaveBankCFUl(); // 1
-extern "C" void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo(); // 1
-extern "C" void __ct__Q216JASBasicWaveBank10TWaveGroupFv(); // 1
-extern "C" void __dt__Q216JASBasicWaveBank10TWaveGroupFv(); // 1
-extern "C" void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap(); // 1
-extern "C" void onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv(); // 1
-extern "C" void onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv(); // 1
-extern "C" void getWaveID__Q216JASBasicWaveBank10TWaveGroupCFi(); // 1
-extern "C" void getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv(); // 1
-extern "C" void __dt__11JASWaveBankFv(); // 1
-extern "C" void __dt__13JASWaveHandleFv(); // 1
-extern "C" void __ct__Q216JASBasicWaveBank11TWaveHandleFv(); // 1
-extern "C" void __ct__Q216JASBasicWaveBank14TGroupWaveInfoFv(); // 1
-extern "C" void getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv(); // 1
-extern "C" void getWaveArc__16JASBasicWaveBankFUl(); // 1
-extern "C" void getArcCount__16JASBasicWaveBankCFv(); // 1
+extern "C" void __ct__16JASBasicWaveBankFv();
+extern "C" void __dt__16JASBasicWaveBankFv();
+extern "C" void __dt__Q216JASBasicWaveBank11TWaveHandleFv();
+extern "C" void getWaveGroup__16JASBasicWaveBankFUl();
+extern "C" void setGroupCount__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void setWaveTableSize__16JASBasicWaveBankFUlP7JKRHeap();
+extern "C" void incWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup();
+extern "C" void decWaveTable__16JASBasicWaveBankFPCQ216JASBasicWaveBank10TWaveGroup();
+extern "C" void getWaveHandle__16JASBasicWaveBankCFUl();
+extern "C" void setWaveInfo__16JASBasicWaveBankFPQ216JASBasicWaveBank10TWaveGroupiUsRC11JASWaveInfo();
+extern "C" void __ct__Q216JASBasicWaveBank10TWaveGroupFv();
+extern "C" void __dt__Q216JASBasicWaveBank10TWaveGroupFv();
+extern "C" void setWaveCount__Q216JASBasicWaveBank10TWaveGroupFUlP7JKRHeap();
+extern "C" void onLoadDone__Q216JASBasicWaveBank10TWaveGroupFv();
+extern "C" void onEraseDone__Q216JASBasicWaveBank10TWaveGroupFv();
+extern "C" void getWaveID__Q216JASBasicWaveBank10TWaveGroupCFi();
+extern "C" void getWavePtr__Q216JASBasicWaveBank11TWaveHandleCFv();
+extern "C" void __dt__11JASWaveBankFv();
+extern "C" void __dt__13JASWaveHandleFv();
+extern "C" void __ct__Q216JASBasicWaveBank11TWaveHandleFv();
+extern "C" void __ct__Q216JASBasicWaveBank14TGroupWaveInfoFv();
+extern "C" void getWaveInfo__Q216JASBasicWaveBank11TWaveHandleCFv();
+extern "C" void getWaveArc__16JASBasicWaveBankFUl();
+extern "C" void getArcCount__16JASBasicWaveBankCFv();
 extern "C" extern void* __vt__13JASWaveHandle[5];
 extern "C" extern void* __vt__11JASWaveBank[6];
 
@@ -101,27 +103,28 @@ extern "C" extern void* __vt__11JASWaveBank[6];
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 
-extern "C" void __ct__10JASWaveArcFv(); // 1
-extern "C" void __dt__10JASWaveArcFv(); // 1
-extern "C" void onDispose__10JASWaveArcFv(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10JASWaveArcFv();
+extern "C" void __dt__10JASWaveArcFv();
+extern "C" void onDispose__10JASWaveArcFv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void __destroy_new_array();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u32 one__11JASWaveInfo[1 + 1 /* padding */];
 
 // 

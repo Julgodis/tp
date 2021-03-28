@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __kernel_sin(); // 1
+extern "C" void __kernel_sin();
 
 // 
 // External References:

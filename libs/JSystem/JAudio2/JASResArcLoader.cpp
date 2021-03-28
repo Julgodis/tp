@@ -37,24 +37,24 @@ struct JASDvd {
 // 
 
 
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
-extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive(); // 1
-extern "C" void loadResourceCallback__15JASResArcLoaderFPv(); // 1
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
+extern "C" void loadResourceCallback__15JASResArcLoaderFPv();
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
 
 // 
 // External References:
 // 
 
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlUs(); // 1
-extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
-extern "C" void findIdResource__10JKRArchiveCFUs(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void readResource__10JKRArchiveFPvUlUs();
+extern "C" void findIdxResource__10JKRArchiveCFUl();
+extern "C" void findIdResource__10JKRArchiveCFUs();
+extern "C" void OSSendMessage();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

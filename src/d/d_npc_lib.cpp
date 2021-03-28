@@ -11,6 +11,12 @@
 // Types:
 // 
 
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 8026745C */ void operator+=(csXyz&);
+};
+
 struct Vec {
 };
 
@@ -20,12 +26,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 8026745C */ void operator+=(csXyz&);
 };
 
 struct mDoMtx_stack_c {
@@ -56,48 +56,52 @@ struct dNpcLib_lookat_c {
 // 
 
 
-extern "C" void __ct__16dNpcLib_lookat_cFv(); // 1
-extern "C" void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz(); // 1
-extern "C" void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi(); // 1
-extern "C" void dbView__16dNpcLib_lookat_cFv(); // 1
-extern "C" void setPrm__16dNpcLib_lookat_cFv(); // 1
-extern "C" void update__16dNpcLib_lookat_cFv(); // 1
-extern "C" void limitter__16dNpcLib_lookat_cFPssss(); // 1
-extern "C" void __dt__16dNpcLib_lookat_cFv(); // 1
+extern "C" void __ct__16dNpcLib_lookat_cFv();
+extern "C" void init__16dNpcLib_lookat_cFP8J3DModelPiP5csXyzP5csXyz();
+extern "C" void action__16dNpcLib_lookat_cF4cXyz4cXyzP10fopAc_ac_cPA4_fi();
+extern "C" void dbView__16dNpcLib_lookat_cFv();
+extern "C" void setPrm__16dNpcLib_lookat_cFv();
+extern "C" void update__16dNpcLib_lookat_cFv();
+extern "C" void limitter__16dNpcLib_lookat_cFPssss();
+extern "C" void __dt__16dNpcLib_lookat_cFv();
 
 // 
 // External References:
 // 
 
-void cM_atan2s(f32, f32); // 2
-void operator delete(void*); // 2
+void cM_atan2s(f32, f32);
+void operator delete(void*);
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 Zero__5csXyz[4];
+extern "C" extern u8 data_80451164[4];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void XYZrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void isZero__4cXyzCFv(); // 1
-extern "C" void __apl__5csXyzFR5csXyz(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void normalize__4cXyzFv();
+extern "C" void isZero__4cXyzCFv();
+extern "C" void __apl__5csXyzFR5csXyz();
+extern "C" void cM_atan2s__Fff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 Zero__5csXyz[4];

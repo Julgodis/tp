@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void floor(); // 1
+extern "C" void floor();
 
 // 
 // External References:

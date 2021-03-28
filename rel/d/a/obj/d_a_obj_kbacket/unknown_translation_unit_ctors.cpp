@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_80587D70[2];
 
 extern void* const data_80587D70[2];
 
@@ -19,7 +20,7 @@ extern void* const data_80587D70[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_kbacket_cpp(); // 1
+extern "C" void __sinit_d_a_obj_kbacket_cpp();
 
 // 
 // Declarations:

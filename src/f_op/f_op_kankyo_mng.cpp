@@ -17,6 +17,9 @@ struct layer_class {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -24,9 +27,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -41,45 +41,46 @@ struct cMl {
 // Forward References:
 // 
 
-static void fopKyM_CreateAppend(); // 2
-static void createAppend(int, cXyz*, cXyz*); // 2
-void fopKyM_Delete(void*); // 2
-static void fopKyM_Create(s16, int (*)(void*), void*); // 2
-void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
-void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
-void fopKyM_createWpillar(cXyz const*, f32, int); // 2
-void fopKyM_createMpillar(cXyz const*, f32); // 2
+static void fopKyM_CreateAppend();
+static void createAppend(int, cXyz*, cXyz*);
+void fopKyM_Delete(void*);
+static void fopKyM_Create(s16, int (*)(void*), void*);
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*));
+void fopKyM_fastCreate(s16, int, cXyz*, cXyz*, int (*)(void*));
+void fopKyM_createWpillar(cXyz const*, f32, int);
+void fopKyM_createMpillar(cXyz const*, f32);
 
-extern "C" static void fopKyM_CreateAppend__Fv(); // 1
-extern "C" static void createAppend__FiP4cXyzP4cXyz(); // 1
-extern "C" void fopKyM_Delete__FPv(); // 1
-extern "C" static void fopKyM_Create__FsPFPv_iPv(); // 1
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
-extern "C" void fopKyM_createMpillar__FPC4cXyzf(); // 1
+extern "C" static void fopKyM_CreateAppend__Fv();
+extern "C" static void createAppend__FiP4cXyzP4cXyz();
+extern "C" void fopKyM_Delete__FPv();
+extern "C" static void fopKyM_Create__FsPFPv_iPv();
+extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopKyM_fastCreate__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
+extern "C" void fopKyM_createMpillar__FPC4cXyzf();
 
 // 
 // External References:
 // 
 
-void fpcLy_CurrentLayer(); // 2
-void fpcM_Delete(void*); // 2
-void fpcM_FastCreate(s16, int (*)(void*), void*, void*); // 2
-void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-void cLib_memSet(void*, int, u32); // 2
+void fpcLy_CurrentLayer();
+void fpcM_Delete(void*);
+void fpcM_FastCreate(s16, int (*)(void*), void*, void*);
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
+void cLib_memSet(void*, int, u32);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void fpcLy_CurrentLayer__Fv(); // 1
-extern "C" void fpcM_Delete__FPv(); // 1
-extern "C" void fpcM_FastCreate__FsPFPv_iPvPv(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void memalignB__3cMlFiUl(); // 1
-extern "C" void cLib_memSet__FPviUl(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcM_Delete__FPv();
+extern "C" void fpcM_FastCreate__FsPFPv_iPvPv();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void cLib_memSet__FPviUl();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

@@ -19,6 +19,18 @@ struct mDoGph_gInf_c {
 	/* 800080D0 */ void fadeOut(f32);
 };
 
+struct J3DSkinDeform {
+	/* 8032C96C */ J3DSkinDeform();
+};
+
+struct J3DDeformData {
+};
+
+struct J3DModel {
+	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
+	/* 80327AA0 */ void setSkinDeform(J3DSkinDeform*, u32);
+};
+
 struct Vec {
 };
 
@@ -32,30 +44,18 @@ struct cXyz {
 	/* 804A871C */ cXyz();
 };
 
-struct J3DSkinDeform {
-	/* 8032C96C */ J3DSkinDeform();
-};
-
-struct J3DDeformData {
-};
-
-struct J3DModel {
-	/* 80327A2C */ void setDeformData(J3DDeformData*, u32);
-	/* 80327AA0 */ void setSkinDeform(J3DSkinDeform*, u32);
-};
-
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTexPattern {
 };
 
 struct J3DAnmColor {
 };
 
-struct J3DAnmTexPattern {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -99,19 +99,19 @@ struct mDoExt_baseAnm {
 	/* 8000D428 */ void play();
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
+};
+
+struct J3DModelData {
 };
 
 struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
-};
-
-struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -217,10 +217,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dPa_control_c {
@@ -277,57 +277,104 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void get_foward_angle(cXyz*, cXyz*, s16*, s16*); // 2
-static void awaCheck(J3DModel*); // 2
-static void createHeapCallBack(fopAc_ac_c*); // 2
-static void mDad00_changeXluMaterial(J3DMaterial*, int); // 2
-static void teduna_calc(cXyz*, cXyz*, cXyz*, s16, int); // 2
-static void teduna_draw(J3DModel*, mDoExt_3DlineMat1_c*, dKy_tevstr_c*, int, int, int, int); // 2
-static void teduna_ganon_hand_set(J3DModel*, int, int); // 2
-static void ke_control(daDemo00_c*, demo_s1_ke_s*, int, f32); // 2
-static void ke_move(daDemo00_c*, mDoExt_3DlineMat0_c*, demo_s1_ke_s*, int, f32); // 2
-static void ke_set(daDemo00_c*); // 2
-static void daDemo00_Draw(daDemo00_c*); // 2
-static void daDemo00_Execute(daDemo00_c*); // 2
-static bool daDemo00_IsDelete(daDemo00_c*); // 2
-static void daDemo00_Delete(daDemo00_c*); // 2
-static void daDemo00_Create(fopAc_ac_c*); // 2
+static void get_foward_angle(cXyz*, cXyz*, s16*, s16*);
+static void awaCheck(J3DModel*);
+static void createHeapCallBack(fopAc_ac_c*);
+static void mDad00_changeXluMaterial(J3DMaterial*, int);
+static void teduna_calc(cXyz*, cXyz*, cXyz*, s16, int);
+static void teduna_draw(J3DModel*, mDoExt_3DlineMat1_c*, dKy_tevstr_c*, int, int, int, int);
+static void teduna_ganon_hand_set(J3DModel*, int, int);
+static void ke_control(daDemo00_c*, demo_s1_ke_s*, int, f32);
+static void ke_move(daDemo00_c*, mDoExt_3DlineMat0_c*, demo_s1_ke_s*, int, f32);
+static void ke_set(daDemo00_c*);
+static void daDemo00_Draw(daDemo00_c*);
+static void daDemo00_Execute(daDemo00_c*);
+static bool daDemo00_IsDelete(daDemo00_c*);
+static void daDemo00_Delete(daDemo00_c*);
+static void daDemo00_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_6393;
+extern "C" extern u32 const lit_6394;
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* l_lightData[6];
+extern "C" extern void* g_profile_DEMO00[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_804A8E20[4];
+extern "C" extern u8 data_804A8E24[4];
+extern "C" extern u8 data_804A8E28[4];
+extern "C" extern u8 data_804A8E2C[4];
+extern "C" extern u8 data_804A8E30[4];
+extern "C" extern u8 data_804A8E34[4];
+extern "C" extern u8 data_804A8E38[4];
+extern "C" extern u8 data_804A8E3C[4];
+extern "C" extern u8 data_804A8E40[4];
+extern "C" extern u8 data_804A8E44[4];
+extern "C" extern u8 data_804A8E48[4];
+extern "C" extern u8 data_804A8E4C[4];
+extern "C" extern u8 data_804A8E50[4];
+extern "C" extern u8 data_804A8E54[4];
+extern "C" extern u8 data_804A8E58[4];
+extern "C" extern u8 data_804A8E5C[4];
+extern "C" extern u8 data_804A8E60[4];
+extern "C" extern u8 data_804A8E64[4];
+extern "C" extern u8 data_804A8E68[4];
+extern "C" extern u8 data_804A8E6C[4];
+extern "C" extern u8 data_804A8E70[4];
+extern "C" extern u8 data_804A8E74[4];
+extern "C" extern u8 data_804A8E78[4];
+extern "C" extern u8 data_804A8E7C[4];
+extern "C" extern u8 data_804A8E80[4];
+extern "C" extern u8 data_804A8E84[4];
 
-extern "C" void reset__16daDemo00_resID_cFv(); // 1
-extern "C" void reset__16daDemo00_model_cFv(); // 1
-extern "C" void __dt__10daDemo00_cFv(); // 1
-extern "C" void __dt__12demo_s1_ke_sFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" static void get_foward_angle__FP4cXyzP4cXyzPsPs(); // 1
-extern "C" void setBaseMtx__10daDemo00_cFv(); // 1
-extern "C" void setShadowSize__10daDemo00_cFv(); // 1
-extern "C" static void awaCheck__FP8J3DModel(); // 1
-extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
-extern "C" void createHeap__10daDemo00_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void actStandby__10daDemo00_cFP13dDemo_actor_c(); // 1
-extern "C" void actPerformance__10daDemo00_cFP13dDemo_actor_c(); // 1
-extern "C" void actLeaving__10daDemo00_cFP13dDemo_actor_c(); // 1
-extern "C" static void mDad00_changeXluMaterial__FP11J3DMateriali(); // 1
-extern "C" static void teduna_calc__FP4cXyzP4cXyzP4cXyzsi(); // 1
-extern "C" static void teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii(); // 1
-extern "C" static void teduna_ganon_hand_set__FP8J3DModelii(); // 1
-extern "C" static void ke_control__FP10daDemo00_cP12demo_s1_ke_sif(); // 1
-extern "C" static void ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif(); // 1
-extern "C" static void ke_set__FP10daDemo00_c(); // 1
-extern "C" static void daDemo00_Draw__FP10daDemo00_c(); // 1
-extern "C" void draw__10daDemo00_cFv(); // 1
-extern "C" static void daDemo00_Execute__FP10daDemo00_c(); // 1
-extern "C" void execute__10daDemo00_cFv(); // 1
-extern "C" static bool daDemo00_IsDelete__FP10daDemo00_c(); // 1
-extern "C" static void daDemo00_Delete__FP10daDemo00_c(); // 1
-extern "C" static void daDemo00_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__12demo_s1_ke_sFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __sinit_d_a_demo00_cpp(); // 1
-extern "C" static void __arraydtor_5213(); // 1
-extern "C" static void __arraydtor_5211(); // 1
+extern "C" void reset__16daDemo00_resID_cFv();
+extern "C" void reset__16daDemo00_model_cFv();
+extern "C" void __dt__10daDemo00_cFv();
+extern "C" void __dt__12demo_s1_ke_sFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" static void get_foward_angle__FP4cXyzP4cXyzPsPs();
+extern "C" void setBaseMtx__10daDemo00_cFv();
+extern "C" void setShadowSize__10daDemo00_cFv();
+extern "C" static void awaCheck__FP8J3DModel();
+extern "C" static void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void createHeap__10daDemo00_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void actStandby__10daDemo00_cFP13dDemo_actor_c();
+extern "C" void actPerformance__10daDemo00_cFP13dDemo_actor_c();
+extern "C" void actLeaving__10daDemo00_cFP13dDemo_actor_c();
+extern "C" static void mDad00_changeXluMaterial__FP11J3DMateriali();
+extern "C" static void teduna_calc__FP4cXyzP4cXyzP4cXyzsi();
+extern "C" static void teduna_draw__FP8J3DModelP19mDoExt_3DlineMat1_cP12dKy_tevstr_ciiii();
+extern "C" static void teduna_ganon_hand_set__FP8J3DModelii();
+extern "C" static void ke_control__FP10daDemo00_cP12demo_s1_ke_sif();
+extern "C" static void ke_move__FP10daDemo00_cP19mDoExt_3DlineMat0_cP12demo_s1_ke_sif();
+extern "C" static void ke_set__FP10daDemo00_c();
+extern "C" static void daDemo00_Draw__FP10daDemo00_c();
+extern "C" void draw__10daDemo00_cFv();
+extern "C" static void daDemo00_Execute__FP10daDemo00_c();
+extern "C" void execute__10daDemo00_cFv();
+extern "C" static bool daDemo00_IsDelete__FP10daDemo00_c();
+extern "C" static void daDemo00_Delete__FP10daDemo00_c();
+extern "C" static void daDemo00_Create__FP10fopAc_ac_c();
+extern "C" void __ct__12demo_s1_ke_sFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __sinit_d_a_demo00_cpp();
+extern "C" static void __arraydtor_5213();
+extern "C" static void __arraydtor_5211();
 extern "C" extern u32 const lit_6393;
 extern "C" extern u32 const lit_6394;
 extern "C" extern char const* const stringBase0;
@@ -380,175 +427,45 @@ extern "C" extern u8 data_804A8E84[4];
 // External References:
 // 
 
-void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotS(f32 (* )[4], s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelTexturePatch(J3DModelData*); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_DeleteHeap(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8); // 2
-void dKyw_rain_set(int); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void execItemGet(u8); // 2
-void dCam_getBody(); // 2
-void dKy_change_colpat(u8); // 2
-void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
-void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
-void dKy_pol_sound_get(cBgS_PolyInfo const*); // 2
-void dKy_bg_MAxx_proc(void*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_initRnd2(int, int, int); // 2
-void cM_rndF2(f32); // 2
-void cBgW_CheckBGround(f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void MtxPosition(cXyz*, cXyz*); // 2
-void MtxPush(); // 2
-void MtxPull(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss(); // 1
-extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss(); // 1
-extern "C" void mDoExt_modelTexturePatch__FP12J3DModelData(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void create__21mDoExt_invisibleModelFP8J3DModelUc(); // 1
-extern "C" void entryDL__21mDoExt_invisibleModelFP4cXyz(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
-extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
-extern "C" void updateDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi(); // 1
-extern "C" void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c(); // 1
-extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi(); // 1
-extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c(); // 1
-extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_DeleteHeap__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv(); // 1
-extern "C" void daMP_c_THPPlayerPause__6daMP_cFv(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc(); // 1
-extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc(); // 1
-extern "C" void getActor__14dDemo_object_cFUc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
-extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKyw_rain_set__Fi(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void execItemGet__FUc(); // 1
-extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_change_colpat__FUc(); // 1
-extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc(); // 1
-extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
-extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" bool __ne__4cXyzCFRC3Vec(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_initRnd2__Fiii(); // 1
-extern "C" void cM_rndF2__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cBgW_CheckBGround__Ff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
-extern "C" void MtxPush__Fv(); // 1
-extern "C" void MtxPull__Fv(); // 1
-extern "C" void __ct__10Z2CreatureFv(); // 1
-extern "C" void __dt__10Z2CreatureFv(); // 1
-extern "C" void init__10Z2CreatureFP3VecP3VecUcUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl(); // 1
-extern "C" void setSkinDeform__8J3DModelFP13J3DSkinDeformUl(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void __ct__13J3DSkinDeformFv(); // 1
-extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor(); // 1
-extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelTexturePatch(J3DModelData*);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void mDoLib_project(Vec*, Vec*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_DeleteHeap(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_getPolygonAngle(cM3dGPla const*, s16);
+void dComIfGp_getReverb(int);
+void dComIfGd_setSimpleShadow(cXyz*, f32, f32, cBgS_PolyInfo&, s16, f32, _GXTexObj*);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8);
+void dKyw_rain_set(int);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void execItemGet(u8);
+void dCam_getBody();
+void dKy_change_colpat(u8);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
+void dKy_BossSpotLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
+void dKy_pol_sound_get(cBgS_PolyInfo const*);
+void dKy_bg_MAxx_proc(void*);
+void cM_atan2s(f32, f32);
+void cM_initRnd2(int, int, int);
+void cM_rndF2(f32);
+void cBgW_CheckBGround(f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void MtxPosition(cXyz*, cXyz*);
+void MtxPush();
+void MtxPull();
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
@@ -571,7 +488,159 @@ extern "C" extern u32 __float_nan;
 extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
 extern "C" extern u8 struct_80450D64[4];
 extern "C" extern u8 m_object__7dDemo_c[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btpAnmFP16J3DMaterialTableP16J3DAnmTexPatterniifss();
+extern "C" void entry__13mDoExt_btpAnmFP16J3DMaterialTables();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss();
+extern "C" void mDoExt_modelTexturePatch__FP12J3DModelData();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void create__21mDoExt_invisibleModelFP8J3DModelUc();
+extern "C" void entryDL__21mDoExt_invisibleModelFP4cXyz();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
+extern "C" void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" void updateDL__16mDoExt_McaMorfSOFv();
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi();
+extern "C" void update__19mDoExt_3DlineMat0_cFiR8_GXColorP12dKy_tevstr_c();
+extern "C" void init__19mDoExt_3DlineMat1_cFUsUsP7ResTIMGi();
+extern "C" void update__19mDoExt_3DlineMat1_cFiR8_GXColorP12dKy_tevstr_c();
+extern "C" void setMat__26mDoExt_3DlineMatSortPacketFP18mDoExt_3DlineMat_c();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_DeleteHeap__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGd_setSimpleShadow__FP4cXyzffR13cBgS_PolyInfosfP9_GXTexObj();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv();
+extern "C" void daMP_c_THPPlayerPause__6daMP_cFv();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc();
+extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKyw_rain_set__Fi();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
+extern "C" void execItemGet__FUc();
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+extern "C" void dCam_getBody__Fv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_change_colpat__FUc();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void dKy_BossSpotLight_set__FP4cXyzfffP8_GXColorfUcUc();
+extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
+extern "C" void dKy_bg_MAxx_proc__FPv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" bool __ne__4cXyzCFRC3Vec();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_initRnd2__Fiii();
+extern "C" void cM_rndF2__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cBgW_CheckBGround__Ff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void MtxPosition__FP4cXyzP4cXyz();
+extern "C" void MtxPush__Fv();
+extern "C" void MtxPull__Fv();
+extern "C" void __ct__10Z2CreatureFv();
+extern "C" void __dt__10Z2CreatureFv();
+extern "C" void init__10Z2CreatureFP3VecP3VecUcUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl();
+extern "C" void setSkinDeform__8J3DModelFP13J3DSkinDeformUl();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void __ct__13J3DSkinDeformFv();
+extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" void removeTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern void* __vt__19mDoExt_3DlineMat1_c[5];
+extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u32 g_saftyWhiteColor;
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

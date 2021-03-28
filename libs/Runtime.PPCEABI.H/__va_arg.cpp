@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __va_arg(); // 1
+extern "C" void __va_arg();
 
 // 
 // External References:

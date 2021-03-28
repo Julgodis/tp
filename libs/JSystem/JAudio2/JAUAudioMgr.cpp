@@ -24,14 +24,14 @@ struct JASHeap {
 // 
 
 
-extern "C" void __defctor__7JASHeapFv(); // 1
+extern "C" void __defctor__7JASHeapFv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
+extern "C" void __ct__7JASHeapFP11JASDisposer();
 
 // 
 // Declarations:

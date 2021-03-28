@@ -12,8 +12,8 @@
 // 
 
 
-extern "C" void div(); // 1
-extern "C" void abs(); // 1
+extern "C" void div();
+extern "C" void abs();
 
 // 
 // External References:

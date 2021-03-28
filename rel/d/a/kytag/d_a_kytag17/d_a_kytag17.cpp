@@ -22,25 +22,29 @@ struct fopAc_ac_c {
 // Forward References:
 // 
 
-static bool daKytag17_Draw(kytag17_class*); // 2
-static bool daKytag17_Execute(kytag17_class*); // 2
-static bool daKytag17_IsDelete(kytag17_class*); // 2
-static bool daKytag17_Delete(kytag17_class*); // 2
-static void daKytag17_Create(fopAc_ac_c*); // 2
+static bool daKytag17_Draw(kytag17_class*);
+static bool daKytag17_Execute(kytag17_class*);
+static bool daKytag17_IsDelete(kytag17_class*);
+static bool daKytag17_Delete(kytag17_class*);
+static void daKytag17_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG17[12];
 
-extern "C" static bool daKytag17_Draw__FP13kytag17_class(); // 1
-extern "C" static bool daKytag17_Execute__FP13kytag17_class(); // 1
-extern "C" static bool daKytag17_IsDelete__FP13kytag17_class(); // 1
-extern "C" static bool daKytag17_Delete__FP13kytag17_class(); // 1
-extern "C" static void daKytag17_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag17_Draw__FP13kytag17_class();
+extern "C" static bool daKytag17_Execute__FP13kytag17_class();
+extern "C" static bool daKytag17_IsDelete__FP13kytag17_class();
+extern "C" static bool daKytag17_Delete__FP13kytag17_class();
+extern "C" static void daKytag17_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG17[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_env_light[4880];

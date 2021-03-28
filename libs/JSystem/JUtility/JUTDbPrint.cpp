@@ -46,43 +46,48 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-void JUTReport(int, int, char const*, ...); // 2
-void JUTReport(int, int, int, char const*, ...); // 2
+void JUTReport(int, int, char const*, ...);
+void JUTReport(int, int, int, char const*, ...);
+extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 
-extern "C" void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
-extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap(); // 1
-extern "C" void changeFont__10JUTDbPrintFP7JUTFont(); // 1
-extern "C" void enter__10JUTDbPrintFiiiPCci(); // 1
-extern "C" void flush__10JUTDbPrintFv(); // 1
-extern "C" void flush__10JUTDbPrintFiiii(); // 1
-extern "C" void drawString__10JUTDbPrintFiiiPCUc(); // 1
-extern "C" void JUTReport__FiiPCce(); // 1
-extern "C" void JUTReport__FiiiPCce(); // 1
+extern "C" void __ct__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" void start__10JUTDbPrintFP7JUTFontP7JKRHeap();
+extern "C" void changeFont__10JUTDbPrintFP7JUTFont();
+extern "C" void enter__10JUTDbPrintFiiiPCci();
+extern "C" void flush__10JUTDbPrintFv();
+extern "C" void flush__10JUTDbPrintFiiii();
+extern "C" void drawString__10JUTDbPrintFiiiPCUc();
+extern "C" void JUTReport__FiiPCce();
+extern "C" void JUTReport__FiiiPCce();
 extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
+void* operator new(u32);
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
-extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
-extern "C" void setPort__13J2DOrthoGraphFv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUl();
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void vsnprintf();
+extern "C" void strcpy();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern void* __vt__13J2DOrthoGraph[10];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];

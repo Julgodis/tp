@@ -49,10 +49,10 @@ struct csXyz {
 struct cXyz {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -64,63 +64,70 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagMstop_Create(fopAc_ac_c*); // 2
-static void daTagMstop_Delete(daTagMstop_c*); // 2
-static void daTagMstop_Execute(daTagMstop_c*); // 2
-static bool daTagMstop_Draw(daTagMstop_c*); // 2
+static void daTagMstop_Create(fopAc_ac_c*);
+static void daTagMstop_Delete(daTagMstop_c*);
+static void daTagMstop_Execute(daTagMstop_c*);
+static bool daTagMstop_Draw(daTagMstop_c*);
+extern "C" extern void* g_profile_Tag_Mstop[12];
 
-extern "C" void create__12daTagMstop_cFv(); // 1
-extern "C" static void daTagMstop_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12daTagMstop_cFv(); // 1
-extern "C" static void daTagMstop_Delete__FP12daTagMstop_c(); // 1
-extern "C" void eventOrder__12daTagMstop_cFv(); // 1
-extern "C" void execute__12daTagMstop_cFv(); // 1
-extern "C" static void daTagMstop_Execute__FP12daTagMstop_c(); // 1
-extern "C" static bool daTagMstop_Draw__FP12daTagMstop_c(); // 1
+extern "C" void create__12daTagMstop_cFv();
+extern "C" static void daTagMstop_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagMstop_cFv();
+extern "C" static void daTagMstop_Delete__FP12daTagMstop_c();
+extern "C" void eventOrder__12daTagMstop_cFv();
+extern "C" void execute__12daTagMstop_cFv();
+extern "C" static void daTagMstop_Execute__FP12daTagMstop_c();
+extern "C" static bool daTagMstop_Draw__FP12daTagMstop_c();
 extern "C" extern void* g_profile_Tag_Mstop[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGp_getRoomCamera(int); // 2
-void dComIfGp_getRoomArrow(int); // 2
-void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&); // 2
-void operator delete(void*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
+void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16);
+void dComIfGp_getReverb(int);
+void dComIfGp_getRoomCamera(int);
+void dComIfGp_getRoomArrow(int);
+void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGp_getRoomCamera__Fi(); // 1
-extern "C" void dComIfGp_getRoomArrow__Fi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFPv(); // 1
-extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGp_getRoomCamera__Fi();
+extern "C" void dComIfGp_getRoomArrow__Fi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFPv();
+extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

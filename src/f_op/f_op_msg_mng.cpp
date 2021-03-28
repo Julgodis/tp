@@ -68,85 +68,91 @@ struct J2DPane {
 // Forward References:
 // 
 
-void fopMsgM_setStageLayer(void*); // 2
-void fopMsgM_SearchByID(unsigned int); // 2
-void fopMsgM_GetAppend(void*); // 2
-void fopMsgM_Delete(void*); // 2
-static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, unsigned int); // 2
-static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, unsigned int); // 2
-void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*)); // 2
-void fop_Timer_create(s16, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*)); // 2
-void fopMsgM_messageSet(u32, fopAc_ac_c*, u32); // 2
-void fopMsgM_messageSet(u32, u32); // 2
-void fopMsgM_messageSetDemo(u32); // 2
-void fopMsgM_messageGet(char*, u32); // 2
-void fopMsgM_setMessageID(unsigned int); // 2
-void fopMsgM_Create(s16, int (*)(void*), void*); // 2
-void fopMsgM_valueIncrease(int, int, u8); // 2
-void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
-void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
+void fopMsgM_setStageLayer(void*);
+void fopMsgM_SearchByID(unsigned int);
+void fopMsgM_GetAppend(void*);
+void fopMsgM_Delete(void*);
+static void createAppend(fopAc_ac_c*, cXyz*, u32*, u32*, unsigned int);
+static void createTimerAppend(int, u32, u8, u8, f32, f32, f32, f32, unsigned int);
+void fopMsgM_create(s16, fopAc_ac_c*, cXyz*, u32*, u32*, int (*)(void*));
+void fop_Timer_create(s16, u8, u32, u8, u8, f32, f32, f32, f32, int (*)(void*));
+void fopMsgM_messageSet(u32, fopAc_ac_c*, u32);
+void fopMsgM_messageSet(u32, u32);
+void fopMsgM_messageSetDemo(u32);
+void fopMsgM_messageGet(char*, u32);
+void fopMsgM_setMessageID(unsigned int);
+void fopMsgM_Create(s16, int (*)(void*), void*);
+void fopMsgM_valueIncrease(int, int, u8);
+void fopMsgM_createExpHeap(u32, JKRHeap*);
+void fopMsgM_destroyExpHeap(JKRExpHeap*);
 
-extern "C" void fopMsgM_setStageLayer__FPv(); // 1
-extern "C" void fopMsgM_SearchByID__FUi(); // 1
-extern "C" void fopMsgM_GetAppend__FPv(); // 1
-extern "C" void fopMsgM_Delete__FPv(); // 1
-extern "C" static void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi(); // 1
-extern "C" static void createTimerAppend__FiUlUcUcffffUi(); // 1
-extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i(); // 1
-extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i(); // 1
-extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl(); // 1
-extern "C" void fopMsgM_messageSet__FUlUl(); // 1
-extern "C" void fopMsgM_messageSetDemo__FUl(); // 1
-extern "C" void fopMsgM_messageGet__FPcUl(); // 1
-extern "C" void fopMsgM_setMessageID__FUi(); // 1
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
-extern "C" void setAlpha__7J2DPaneFUc(); // 1
-extern "C" void fopMsgM_valueIncrease__FiiUc(); // 1
-extern "C" void setBlendRatio__10J2DPictureFff(); // 1
-extern "C" void append__10J2DPictureFPCcf(); // 1
-extern "C" void insert__10J2DPictureFPCcUcf(); // 1
-extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
-extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
+extern "C" void fopMsgM_setStageLayer__FPv();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_GetAppend__FPv();
+extern "C" void fopMsgM_Delete__FPv();
+extern "C" static void createAppend__FP10fopAc_ac_cP4cXyzPUlPUlUi();
+extern "C" static void createTimerAppend__FiUlUcUcffffUi();
+extern "C" void fopMsgM_create__FsP10fopAc_ac_cP4cXyzPUlPUlPFPv_i();
+extern "C" void fop_Timer_create__FsUcUlUcUcffffPFPv_i();
+extern "C" void fopMsgM_messageSet__FUlP10fopAc_ac_cUl();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void fopMsgM_messageSetDemo__FUl();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void fopMsgM_setMessageID__FUi();
+extern "C" void fopMsgM_Create__FsPFPv_iPv();
+extern "C" void setAlpha__7J2DPaneFUc();
+extern "C" void fopMsgM_valueIncrease__FiiUc();
+extern "C" void setBlendRatio__10J2DPictureFff();
+extern "C" void append__10J2DPictureFPCcf();
+extern "C" void insert__10J2DPictureFPCcUcf();
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
 
 // 
 // External References:
 // 
 
-void mDoExt_getGameHeap(); // 2
-void fopScnM_SearchByID(unsigned int); // 2
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void fpcLy_CurrentLayer(); // 2
-void fpcM_Delete(void*); // 2
-void fpcPi_Change(process_priority_class*, unsigned int, u16, u16); // 2
-void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
+void mDoExt_getGameHeap();
+void fopScnM_SearchByID(unsigned int);
+void fpcBs_Is_JustOfType(int, int);
+void fpcEx_SearchByID(unsigned int);
+void fpcLy_CurrentLayer();
+void fpcM_Delete(void*);
+void fpcPi_Change(process_priority_class*, unsigned int, u16, u16);
+void fpcSCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
+extern "C" extern u8 mProcID__20dStage_roomControl_c[4];
 
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void fopScnM_SearchByID__FUi(); // 1
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void fpcLy_CurrentLayer__Fv(); // 1
-extern "C" void fpcM_Delete__FPv(); // 1
-extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs(); // 1
-extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void emphasisButtonDelete__9dMeter2_cFv(); // 1
-extern "C" void setMessageIndex__12dMsgObject_cFUlUlb(); // 1
-extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb(); // 1
-extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c(); // 1
-extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
-extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c(); // 1
-extern "C" void memalignB__3cMlFiUl(); // 1
-extern "C" void destroy__7JKRHeapFv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcM_Delete__FPv();
+extern "C" void fpcPi_Change__FP22process_priority_classUiUsUs();
+extern "C" void fpcSCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void emphasisButtonDelete__9dMeter2_cFv();
+extern "C" void setMessageIndex__12dMsgObject_cFUlUlb();
+extern "C" void setMessageIndexDemo__12dMsgObject_cFUlb();
+extern "C" void setTalkPartner__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" void endFlowGroup__12dMsgObject_cFv();
+extern "C" void setTalkActor__12dMsgObject_cFP10fopAc_ac_c();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void destroy__7JKRHeapFv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 g_MsgObject_HIO_c[1040];

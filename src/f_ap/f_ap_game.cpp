@@ -20,46 +20,48 @@ struct fapGm_HIO_c {
 // Forward References:
 // 
 
-static void fapGm_After(); // 2
-void fapGm_Execute(); // 2
-void fapGm_Create(); // 2
+static void fapGm_After();
+void fapGm_Execute();
+void fapGm_Create();
+extern "C" extern u8 g_HIO[64 + 4 /* padding */];
 
-extern "C" void __ct__11fapGm_HIO_cFv(); // 1
-extern "C" static void fapGm_After__Fv(); // 1
-extern "C" void fapGm_Execute__Fv(); // 1
-extern "C" void fapGm_Create__Fv(); // 1
-extern "C" void __dt__11fapGm_HIO_cFv(); // 1
-extern "C" void __sinit_f_ap_game_cpp(); // 1
+extern "C" void __ct__11fapGm_HIO_cFv();
+extern "C" static void fapGm_After__Fv();
+extern "C" void fapGm_Execute__Fv();
+extern "C" void fapGm_Create__Fv();
+extern "C" void __dt__11fapGm_HIO_cFv();
+extern "C" void __sinit_f_ap_game_cpp();
 extern "C" extern u8 g_HIO[64 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void fopCamM_Management(); // 2
-void fopCamM_Init(); // 2
-void fopOvlpM_Management(); // 2
-void fopOvlpM_Init(); // 2
-void fopScnM_Management(); // 2
-void fopScnM_Init(); // 2
-void fopDwTg_CreateQueue(); // 2
-void fpcM_Management(void (*)(void), void (*)(void)); // 2
-void fpcM_Init(); // 2
-void cCt_Counter(int); // 2
-void operator delete(void*); // 2
+void fopCamM_Management();
+void fopCamM_Init();
+void fopOvlpM_Management();
+void fopOvlpM_Init();
+void fopScnM_Management();
+void fopScnM_Init();
+void fopDwTg_CreateQueue();
+void fpcM_Management(void (*)(void), void (*)(void));
+void fpcM_Init();
+void cCt_Counter(int);
+void operator delete(void*);
+extern "C" extern u32 data_80450580;
 
-extern "C" void fopCamM_Management__Fv(); // 1
-extern "C" void fopCamM_Init__Fv(); // 1
-extern "C" void fopOvlpM_Management__Fv(); // 1
-extern "C" void fopOvlpM_Init__Fv(); // 1
-extern "C" void fopScnM_Management__Fv(); // 1
-extern "C" void fopScnM_Init__Fv(); // 1
-extern "C" void fopDwTg_CreateQueue__Fv(); // 1
-extern "C" void fpcM_Management__FPFv_vPFv_v(); // 1
-extern "C" void fpcM_Init__Fv(); // 1
-extern "C" void cCt_Counter__Fi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void fopCamM_Management__Fv();
+extern "C" void fopCamM_Init__Fv();
+extern "C" void fopOvlpM_Management__Fv();
+extern "C" void fopOvlpM_Init__Fv();
+extern "C" void fopScnM_Management__Fv();
+extern "C" void fopScnM_Init__Fv();
+extern "C" void fopDwTg_CreateQueue__Fv();
+extern "C" void fpcM_Management__FPFv_vPFv_v();
+extern "C" void fpcM_Init__Fv();
+extern "C" void cCt_Counter__Fi();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
 extern "C" extern u32 data_80450580;
 
 // 

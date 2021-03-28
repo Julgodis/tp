@@ -43,25 +43,29 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTag_EvtArea_Create(void*); // 2
-static void daTag_EvtArea_Delete(void*); // 2
-static void daTag_EvtArea_Execute(void*); // 2
-static void daTag_EvtArea_Draw(void*); // 2
-static bool daTag_EvtArea_IsDelete(void*); // 2
+static void daTag_EvtArea_Create(void*);
+static void daTag_EvtArea_Delete(void*);
+static void daTag_EvtArea_Execute(void*);
+static void daTag_EvtArea_Draw(void*);
+static bool daTag_EvtArea_IsDelete(void*);
+extern "C" extern u32 const lit_3854;
+extern "C" extern u32 const lit_3855;
+extern "C" extern u32 const lit_3856;
+extern "C" extern void* g_profile_TAG_EVTAREA[12];
 
-extern "C" void create__15daTag_EvtArea_cFv(); // 1
-extern "C" bool Delete__15daTag_EvtArea_cFv(); // 1
-extern "C" void Execute__15daTag_EvtArea_cFv(); // 1
-extern "C" bool Draw__15daTag_EvtArea_cFv(); // 1
-extern "C" void isDelete__15daTag_EvtArea_cFv(); // 1
-extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz(); // 1
-extern "C" static void daTag_EvtArea_Create__FPv(); // 1
-extern "C" static void daTag_EvtArea_Delete__FPv(); // 1
-extern "C" static void daTag_EvtArea_Execute__FPv(); // 1
-extern "C" static void daTag_EvtArea_Draw__FPv(); // 1
-extern "C" static bool daTag_EvtArea_IsDelete__FPv(); // 1
-extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz(); // 1
-extern "C" void __dt__15daTag_EvtArea_cFv(); // 1
+extern "C" void create__15daTag_EvtArea_cFv();
+extern "C" bool Delete__15daTag_EvtArea_cFv();
+extern "C" void Execute__15daTag_EvtArea_cFv();
+extern "C" bool Draw__15daTag_EvtArea_cFv();
+extern "C" void isDelete__15daTag_EvtArea_cFv();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz4cXyz();
+extern "C" static void daTag_EvtArea_Create__FPv();
+extern "C" static void daTag_EvtArea_Delete__FPv();
+extern "C" static void daTag_EvtArea_Execute__FPv();
+extern "C" static void daTag_EvtArea_Draw__FPv();
+extern "C" static bool daTag_EvtArea_IsDelete__FPv();
+extern "C" void chkPointInArea__15daTag_EvtArea_cF4cXyz();
+extern "C" void __dt__15daTag_EvtArea_cFv();
 extern "C" extern u32 const lit_3854;
 extern "C" extern u32 const lit_3855;
 extern "C" extern u32 const lit_3856;
@@ -71,26 +75,31 @@ extern "C" extern void* g_profile_TAG_EVTAREA[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int); // 2
-void daNpcT_chkEvtBit(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void fopAcM_delete(fopAc_ac_c*);
+void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int);
+void daNpcT_chkEvtBit(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi(); // 1
-extern "C" void daNpcT_chkEvtBit__FUl(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi();
+extern "C" void daNpcT_chkEvtBit__FUl();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

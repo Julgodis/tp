@@ -59,49 +59,56 @@ struct JUTGamePad {
 // Forward References:
 // 
 
+extern "C" extern u8 data_80450F58[8];
 
-extern "C" static void func_8006F168(); // 1
-extern "C" static void func_8006F184(); // 1
-extern "C" static void func_8006F1A4(); // 1
-extern "C" static void func_8006F1D8(); // 1
-extern "C" void Run__12dVibration_cFv(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void Kill__12dVibration_cFv(); // 1
-extern "C" void CheckQuake__12dVibration_cFv(); // 1
-extern "C" void setDefault__12dVibration_cFv(); // 1
-extern "C" void Init__12dVibration_cFv(); // 1
-extern "C" void Pause__12dVibration_cFv(); // 1
-extern "C" void Remove__12dVibration_cFv(); // 1
+extern "C" static void func_8006F168();
+extern "C" static void func_8006F184();
+extern "C" static void func_8006F1A4();
+extern "C" static void func_8006F1D8();
+extern "C" void Run__12dVibration_cFv();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void Kill__12dVibration_cFv();
+extern "C" void CheckQuake__12dVibration_cFv();
+extern "C" void setDefault__12dVibration_cFv();
+extern "C" void Init__12dVibration_cFv();
+extern "C" void Pause__12dVibration_cFv();
+extern "C" void Remove__12dVibration_cFv();
 extern "C" extern u8 data_80450F58[8];
 
 // 
 // External References:
 // 
 
-void dCam_getBody(); // 2
-void dKy_darkworld_check(); // 2
-void cM_rnd(); // 2
+void dCam_getBody();
+void dKy_darkworld_check();
+void cM_rnd();
+extern "C" extern u8 const MS_patt__12dVibration_c[88];
+extern "C" extern u8 const CS_patt__12dVibration_c[88];
+extern "C" extern u8 const MQ_patt__12dVibration_c[80];
+extern "C" extern u8 const CQ_patt__12dVibration_c[80];
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void checkVibration__19dSv_player_config_cCFv(); // 1
-extern "C" void StartShake__9dCamera_cFlPUcl4cXyz(); // 1
-extern "C" void StopShake__9dCamera_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void norm__4cXyzCFv(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib(); // 1
-extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl(); // 1
-extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs(); // 1
-extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void checkVibration__19dSv_player_config_cCFv();
+extern "C" void StartShake__9dCamera_cFlPUcl4cXyz();
+extern "C" void StopShake__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void norm__4cXyzCFv();
+extern "C" void cM_rnd__Fv();
+extern "C" void stopMotor__Q210JUTGamePad7CRumbleFib();
+extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+extern "C" void stopPatternedRumble__Q210JUTGamePad7CRumbleFs();
+extern "C" void stopPatternedRumbleAtThePeriod__Q210JUTGamePad7CRumbleFv();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const MS_patt__12dVibration_c[88];
 extern "C" extern u8 const CS_patt__12dVibration_c[88];
 extern "C" extern u8 const MQ_patt__12dVibration_c[80];

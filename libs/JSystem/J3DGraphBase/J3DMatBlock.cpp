@@ -135,10 +135,10 @@ struct J3DTevStage {
 struct J3DTevOrder {
 };
 
-struct J3DIndTevStage {
+struct J3DGXColorS10 {
 };
 
-struct J3DGXColorS10 {
+struct J3DIndTevStage {
 };
 
 struct J3DGXColor {
@@ -471,13 +471,13 @@ struct J3DPEBlockOpa {
 	/* 80323334 */ ~J3DPEBlockOpa();
 };
 
-struct J3DFog {
+struct J3DBlend {
 };
 
 struct J3DAlphaComp {
 };
 
-struct J3DBlend {
+struct J3DFog {
 };
 
 struct J3DPEBlock {
@@ -716,461 +716,480 @@ struct J3DColorBlockAmbientOn {
 // Forward References:
 // 
 
+extern "C" extern char const* const J3DMatBlock__stringBase0;
+extern "C" extern void* __vt__14J3DPEBlockFull[31];
+extern "C" extern void* __vt__16J3DPEBlockFogOff[31];
+extern "C" extern void* __vt__13J3DTevBlock16[55];
+extern "C" extern void* __vt__12J3DTevBlock4[55];
+extern "C" extern void* __vt__12J3DTevBlock2[55];
+extern "C" extern void* __vt__12J3DTevBlock1[55];
+extern "C" extern void* __vt__18J3DTevBlockPatched[55];
+extern "C" extern void* __vt__19J3DTexGenBlockBasic[27];
+extern "C" extern void* __vt__15J3DTexGenBlock4[27];
+extern "C" extern void* __vt__21J3DTexGenBlockPatched[27];
+extern "C" extern void* __vt__20J3DColorBlockLightOn[36];
+extern "C" extern void* __vt__22J3DColorBlockAmbientOn[36];
+extern "C" extern void* __vt__13J3DPEBlockXlu[31];
+extern "C" extern void* __vt__17J3DPEBlockTexEdge[31];
+extern "C" extern void* __vt__13J3DPEBlockOpa[31];
+extern "C" extern void* __vt__15J3DIndBlockFull[19];
+extern "C" extern void* __vt__11J3DTevBlock[55];
+extern "C" extern void* __vt__21J3DColorBlockLightOff[36 + 1 /* padding */];
 
-extern "C" void initialize__21J3DColorBlockLightOffFv(); // 1
-extern "C" void initialize__22J3DColorBlockAmbientOnFv(); // 1
-extern "C" void initialize__20J3DColorBlockLightOnFv(); // 1
-extern "C" void initialize__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void initialize__15J3DTexGenBlock4Fv(); // 1
-extern "C" void initialize__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void initialize__15J3DTevBlockNullFv(); // 1
-extern "C" void initialize__18J3DTevBlockPatchedFv(); // 1
-extern "C" void initialize__12J3DTevBlock1Fv(); // 1
-extern "C" void initialize__12J3DTevBlock2Fv(); // 1
-extern "C" void initialize__12J3DTevBlock4Fv(); // 1
-extern "C" void initialize__13J3DTevBlock16Fv(); // 1
-extern "C" void initialize__15J3DIndBlockFullFv(); // 1
-extern "C" void initialize__16J3DPEBlockFogOffFv(); // 1
-extern "C" void initialize__14J3DPEBlockFullFv(); // 1
-extern "C" s32 countDLSize__21J3DColorBlockLightOffFv(); // 1
-extern "C" s32 countDLSize__22J3DColorBlockAmbientOnFv(); // 1
-extern "C" s32 countDLSize__20J3DColorBlockLightOnFv(); // 1
-extern "C" s32 countDLSize__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" s32 countDLSize__15J3DTexGenBlock4Fv(); // 1
-extern "C" s32 countDLSize__19J3DTexGenBlockBasicFv(); // 1
-extern "C" s32 countDLSize__18J3DTevBlockPatchedFv(); // 1
-extern "C" s32 countDLSize__12J3DTevBlock1Fv(); // 1
-extern "C" s32 countDLSize__12J3DTevBlock2Fv(); // 1
-extern "C" s32 countDLSize__12J3DTevBlock4Fv(); // 1
-extern "C" s32 countDLSize__13J3DTevBlock16Fv(); // 1
-extern "C" s32 countDLSize__15J3DIndBlockFullFv(); // 1
-extern "C" s32 countDLSize__13J3DPEBlockOpaFv(); // 1
-extern "C" s32 countDLSize__17J3DPEBlockTexEdgeFv(); // 1
-extern "C" s32 countDLSize__13J3DPEBlockXluFv(); // 1
-extern "C" s32 countDLSize__16J3DPEBlockFogOffFv(); // 1
-extern "C" s32 countDLSize__14J3DPEBlockFullFv(); // 1
-extern "C" void load__21J3DColorBlockLightOffFv(); // 1
-extern "C" void load__22J3DColorBlockAmbientOnFv(); // 1
-extern "C" void load__20J3DColorBlockLightOnFv(); // 1
-extern "C" void patch__21J3DColorBlockLightOffFv(); // 1
-extern "C" void patchMatColor__21J3DColorBlockLightOffFv(); // 1
-extern "C" void patchLight__21J3DColorBlockLightOffFv(); // 1
-extern "C" void patch__20J3DColorBlockLightOnFv(); // 1
-extern "C" void patchMatColor__20J3DColorBlockLightOnFv(); // 1
-extern "C" void patchLight__20J3DColorBlockLightOnFv(); // 1
-extern "C" void diff__21J3DColorBlockLightOffFUl(); // 1
-extern "C" void diffMatColor__21J3DColorBlockLightOffFv(); // 1
-extern "C" void diffColorChan__21J3DColorBlockLightOffFv(); // 1
-extern "C" void diff__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void diffAmbColor__20J3DColorBlockLightOnFv(); // 1
-extern "C" void diffMatColor__20J3DColorBlockLightOnFv(); // 1
-extern "C" void diffColorChan__20J3DColorBlockLightOnFv(); // 1
-extern "C" void diffLightObj__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void load__15J3DTexGenBlock4Fv(); // 1
-extern "C" void load__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void patch__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void patch__15J3DTexGenBlock4Fv(); // 1
-extern "C" void patch__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void diff__21J3DTexGenBlockPatchedFUl(); // 1
-extern "C" void diffTexMtx__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void diffTexGen__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void load__12J3DTevBlock1Fv(); // 1
-extern "C" void load__12J3DTevBlock2Fv(); // 1
-extern "C" void load__12J3DTevBlock4Fv(); // 1
-extern "C" void load__13J3DTevBlock16Fv(); // 1
-extern "C" void patchTexNo__18J3DTevBlockPatchedFv(); // 1
-extern "C" void patchTevReg__18J3DTevBlockPatchedFv(); // 1
-extern "C" void patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv(); // 1
-extern "C" void patch__18J3DTevBlockPatchedFv(); // 1
-extern "C" void patchTexNo__12J3DTevBlock1Fv(); // 1
-extern "C" void patchTevReg__12J3DTevBlock1Fv(); // 1
-extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock1Fv(); // 1
-extern "C" void patch__12J3DTevBlock1Fv(); // 1
-extern "C" void patchTexNo__12J3DTevBlock2Fv(); // 1
-extern "C" void patchTevReg__12J3DTevBlock2Fv(); // 1
-extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock2Fv(); // 1
-extern "C" void patch__12J3DTevBlock2Fv(); // 1
-extern "C" void patchTexNo__12J3DTevBlock4Fv(); // 1
-extern "C" void patchTevReg__12J3DTevBlock4Fv(); // 1
-extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock4Fv(); // 1
-extern "C" void patch__12J3DTevBlock4Fv(); // 1
-extern "C" void patchTexNo__13J3DTevBlock16Fv(); // 1
-extern "C" void patchTevReg__13J3DTevBlock16Fv(); // 1
-extern "C" void patchTexNoAndTexCoordScale__13J3DTevBlock16Fv(); // 1
-extern "C" void patch__13J3DTevBlock16Fv(); // 1
-extern "C" void diff__11J3DTevBlockFUl(); // 1
-extern "C" void diffTexNo__18J3DTevBlockPatchedFv(); // 1
-extern "C" void diffTevStage__18J3DTevBlockPatchedFv(); // 1
-extern "C" void diffTevStageIndirect__18J3DTevBlockPatchedFv(); // 1
-extern "C" void diffTevReg__18J3DTevBlockPatchedFv(); // 1
-extern "C" void diffTexCoordScale__18J3DTevBlockPatchedFv(); // 1
-extern "C" void diffTexNo__12J3DTevBlock1Fv(); // 1
-extern "C" void diffTevReg__12J3DTevBlock1Fv(); // 1
-extern "C" void diffTevStage__12J3DTevBlock1Fv(); // 1
-extern "C" void diffTevStageIndirect__12J3DTevBlock1Fv(); // 1
-extern "C" void diffTexCoordScale__12J3DTevBlock1Fv(); // 1
-extern "C" void diffTexNo__12J3DTevBlock2Fv(); // 1
-extern "C" void diffTevReg__12J3DTevBlock2Fv(); // 1
-extern "C" void diffTevStage__12J3DTevBlock2Fv(); // 1
-extern "C" void diffTevStageIndirect__12J3DTevBlock2Fv(); // 1
-extern "C" void diffTexCoordScale__12J3DTevBlock2Fv(); // 1
-extern "C" void diffTexNo__12J3DTevBlock4Fv(); // 1
-extern "C" void diffTevReg__12J3DTevBlock4Fv(); // 1
-extern "C" void diffTevStage__12J3DTevBlock4Fv(); // 1
-extern "C" void diffTevStageIndirect__12J3DTevBlock4Fv(); // 1
-extern "C" void diffTexCoordScale__12J3DTevBlock4Fv(); // 1
-extern "C" void diffTexNo__13J3DTevBlock16Fv(); // 1
-extern "C" void diffTevReg__13J3DTevBlock16Fv(); // 1
-extern "C" void diffTevStage__13J3DTevBlock16Fv(); // 1
-extern "C" void diffTevStageIndirect__13J3DTevBlock16Fv(); // 1
-extern "C" void diffTexCoordScale__13J3DTevBlock16Fv(); // 1
-extern "C" void ptrToIndex__13J3DTevBlock16Fv(); // 1
-extern "C" void ptrToIndex__18J3DTevBlockPatchedFv(); // 1
-extern "C" void indexToPtr_private__11J3DTevBlockFUl(); // 1
-extern "C" void load__15J3DIndBlockFullFv(); // 1
-extern "C" void diff__15J3DIndBlockFullFUl(); // 1
-extern "C" void load__13J3DPEBlockOpaFv(); // 1
-extern "C" void load__17J3DPEBlockTexEdgeFv(); // 1
-extern "C" void load__13J3DPEBlockXluFv(); // 1
-extern "C" void load__16J3DPEBlockFogOffFv(); // 1
-extern "C" void diffBlend__16J3DPEBlockFogOffFv(); // 1
-extern "C" void load__14J3DPEBlockFullFv(); // 1
-extern "C" void patch__14J3DPEBlockFullFv(); // 1
-extern "C" void diffFog__14J3DPEBlockFullFv(); // 1
-extern "C" void diffBlend__14J3DPEBlockFullFv(); // 1
-extern "C" void diff__14J3DPEBlockFullFUl(); // 1
-extern "C" void reset__21J3DColorBlockLightOffFP13J3DColorBlock(); // 1
-extern "C" void reset__22J3DColorBlockAmbientOnFP13J3DColorBlock(); // 1
-extern "C" void reset__20J3DColorBlockLightOnFP13J3DColorBlock(); // 1
-extern "C" void reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock(); // 1
-extern "C" void reset__15J3DTexGenBlock4FP14J3DTexGenBlock(); // 1
-extern "C" void reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock(); // 1
-extern "C" void reset__18J3DTevBlockPatchedFP11J3DTevBlock(); // 1
-extern "C" void reset__12J3DTevBlock1FP11J3DTevBlock(); // 1
-extern "C" void reset__12J3DTevBlock2FP11J3DTevBlock(); // 1
-extern "C" void reset__12J3DTevBlock4FP11J3DTevBlock(); // 1
-extern "C" void reset__13J3DTevBlock16FP11J3DTevBlock(); // 1
-extern "C" void reset__15J3DIndBlockFullFP11J3DIndBlock(); // 1
-extern "C" void reset__16J3DPEBlockFogOffFP10J3DPEBlock(); // 1
-extern "C" void reset__14J3DPEBlockFullFP10J3DPEBlock(); // 1
-extern "C" void calc__21J3DTexGenBlockPatchedFPA4_Cf(); // 1
-extern "C" void calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf(); // 1
-extern "C" void calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf(); // 1
-extern "C" void calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf(); // 1
-extern "C" void diffTevReg__11J3DTevBlockFv(); // 1
-extern "C" void diffTevStageIndirect__11J3DTevBlockFv(); // 1
-extern "C" void diffTevStage__11J3DTevBlockFv(); // 1
-extern "C" void diffTexCoordScale__11J3DTevBlockFv(); // 1
-extern "C" void diffTexNo__11J3DTevBlockFv(); // 1
-extern "C" void getType__14J3DPEBlockFullFv(); // 1
-extern "C" void setFog__14J3DPEBlockFullFP6J3DFog(); // 1
-extern "C" void setFog__14J3DPEBlockFullF6J3DFog(); // 1
-extern "C" void getFog__14J3DPEBlockFullFv(); // 1
-extern "C" void setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp(); // 1
-extern "C" void setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp(); // 1
-extern "C" void getAlphaComp__14J3DPEBlockFullFv(); // 1
-extern "C" void setBlend__14J3DPEBlockFullFRC8J3DBlend(); // 1
-extern "C" void setBlend__14J3DPEBlockFullFPC8J3DBlend(); // 1
-extern "C" void getBlend__14J3DPEBlockFullFv(); // 1
-extern "C" void setZMode__14J3DPEBlockFullF8J3DZMode(); // 1
-extern "C" void setZMode__14J3DPEBlockFullFPC8J3DZMode(); // 1
-extern "C" void getZMode__14J3DPEBlockFullFv(); // 1
-extern "C" void setZCompLoc__14J3DPEBlockFullFUc(); // 1
-extern "C" void setZCompLoc__14J3DPEBlockFullFPCUc(); // 1
-extern "C" void getZCompLoc__14J3DPEBlockFullCFv(); // 1
-extern "C" void setDither__14J3DPEBlockFullFUc(); // 1
-extern "C" void setDither__14J3DPEBlockFullFPCUc(); // 1
-extern "C" void getDither__14J3DPEBlockFullCFv(); // 1
-extern "C" void getFogOffset__14J3DPEBlockFullCFv(); // 1
-extern "C" void setFogOffset__14J3DPEBlockFullFUl(); // 1
-extern "C" void __dt__14J3DPEBlockFullFv(); // 1
-extern "C" void diff__16J3DPEBlockFogOffFUl(); // 1
-extern "C" void getType__16J3DPEBlockFogOffFv(); // 1
-extern "C" void setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp(); // 1
-extern "C" void setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp(); // 1
-extern "C" void getAlphaComp__16J3DPEBlockFogOffFv(); // 1
-extern "C" void setBlend__16J3DPEBlockFogOffFRC8J3DBlend(); // 1
-extern "C" void setBlend__16J3DPEBlockFogOffFPC8J3DBlend(); // 1
-extern "C" void getBlend__16J3DPEBlockFogOffFv(); // 1
-extern "C" void setZMode__16J3DPEBlockFogOffF8J3DZMode(); // 1
-extern "C" void setZMode__16J3DPEBlockFogOffFPC8J3DZMode(); // 1
-extern "C" void getZMode__16J3DPEBlockFogOffFv(); // 1
-extern "C" void setZCompLoc__16J3DPEBlockFogOffFUc(); // 1
-extern "C" void setZCompLoc__16J3DPEBlockFogOffFPCUc(); // 1
-extern "C" void getZCompLoc__16J3DPEBlockFogOffCFv(); // 1
-extern "C" void setDither__16J3DPEBlockFogOffFUc(); // 1
-extern "C" void setDither__16J3DPEBlockFogOffFPCUc(); // 1
-extern "C" void getDither__16J3DPEBlockFogOffCFv(); // 1
-extern "C" void __dt__16J3DPEBlockFogOffFv(); // 1
-extern "C" void indexToPtr__13J3DTevBlock16Fv(); // 1
-extern "C" void getType__13J3DTevBlock16Fv(); // 1
-extern "C" void setTexNo__13J3DTevBlock16FUlUs(); // 1
-extern "C" void setTexNo__13J3DTevBlock16FUlPCUs(); // 1
-extern "C" void getTexNo__13J3DTevBlock16CFUl(); // 1
-extern "C" void setTevOrder__13J3DTevBlock16FUl11J3DTevOrder(); // 1
-extern "C" void setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder(); // 1
-extern "C" void getTevOrder__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevColor__13J3DTevBlock16FUl13J3DGXColorS10(); // 1
-extern "C" void setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10(); // 1
-extern "C" void getTevColor__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevKColor__13J3DTevBlock16FUl10J3DGXColor(); // 1
-extern "C" void setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor(); // 1
-extern "C" void getTevKColor__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevKColorSel__13J3DTevBlock16FUlUc(); // 1
-extern "C" void setTevKColorSel__13J3DTevBlock16FUlPCUc(); // 1
-extern "C" void getTevKColorSel__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevKAlphaSel__13J3DTevBlock16FUlUc(); // 1
-extern "C" void setTevKAlphaSel__13J3DTevBlock16FUlPCUc(); // 1
-extern "C" void getTevKAlphaSel__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevStageNum__13J3DTevBlock16FUc(); // 1
-extern "C" void setTevStageNum__13J3DTevBlock16FPCUc(); // 1
-extern "C" void getTevStageNum__13J3DTevBlock16CFv(); // 1
-extern "C" void setTevStage__13J3DTevBlock16FUl11J3DTevStage(); // 1
-extern "C" void setTevStage__13J3DTevBlock16FUlPC11J3DTevStage(); // 1
-extern "C" void getTevStage__13J3DTevBlock16FUl(); // 1
-extern "C" void setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable(); // 1
-extern "C" void setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__13J3DTevBlock16FUl(); // 1
-extern "C" void setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage(); // 1
-extern "C" void setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage(); // 1
-extern "C" void getIndTevStage__13J3DTevBlock16FUl(); // 1
-extern "C" void getTexNoOffset__13J3DTevBlock16CFv(); // 1
-extern "C" void getTevRegOffset__13J3DTevBlock16CFv(); // 1
-extern "C" void setTevRegOffset__13J3DTevBlock16FUl(); // 1
-extern "C" void __dt__13J3DTevBlock16Fv(); // 1
-extern "C" void setTexNoOffset__11J3DTevBlockFUl(); // 1
-extern "C" void ptrToIndex__12J3DTevBlock4Fv(); // 1
-extern "C" void indexToPtr__12J3DTevBlock4Fv(); // 1
-extern "C" void getType__12J3DTevBlock4Fv(); // 1
-extern "C" void setTexNo__12J3DTevBlock4FUlUs(); // 1
-extern "C" void setTexNo__12J3DTevBlock4FUlPCUs(); // 1
-extern "C" void getTexNo__12J3DTevBlock4CFUl(); // 1
-extern "C" void setTevOrder__12J3DTevBlock4FUl11J3DTevOrder(); // 1
-extern "C" void setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder(); // 1
-extern "C" void getTevOrder__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevColor__12J3DTevBlock4FUl13J3DGXColorS10(); // 1
-extern "C" void setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10(); // 1
-extern "C" void getTevColor__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevKColor__12J3DTevBlock4FUl10J3DGXColor(); // 1
-extern "C" void setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor(); // 1
-extern "C" void getTevKColor__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevKColorSel__12J3DTevBlock4FUlUc(); // 1
-extern "C" void setTevKColorSel__12J3DTevBlock4FUlPCUc(); // 1
-extern "C" void getTevKColorSel__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevKAlphaSel__12J3DTevBlock4FUlUc(); // 1
-extern "C" void setTevKAlphaSel__12J3DTevBlock4FUlPCUc(); // 1
-extern "C" void getTevKAlphaSel__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock4FUc(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock4FPCUc(); // 1
-extern "C" void getTevStageNum__12J3DTevBlock4CFv(); // 1
-extern "C" void setTevStage__12J3DTevBlock4FUl11J3DTevStage(); // 1
-extern "C" void setTevStage__12J3DTevBlock4FUlPC11J3DTevStage(); // 1
-extern "C" void getTevStage__12J3DTevBlock4FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable(); // 1
-extern "C" void setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J3DTevBlock4FUl(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J3DTevBlock4FUl(); // 1
-extern "C" void getTexNoOffset__12J3DTevBlock4CFv(); // 1
-extern "C" void getTevRegOffset__12J3DTevBlock4CFv(); // 1
-extern "C" void setTevRegOffset__12J3DTevBlock4FUl(); // 1
-extern "C" void __dt__12J3DTevBlock4Fv(); // 1
-extern "C" void ptrToIndex__12J3DTevBlock2Fv(); // 1
-extern "C" void indexToPtr__12J3DTevBlock2Fv(); // 1
-extern "C" void getType__12J3DTevBlock2Fv(); // 1
-extern "C" void setTexNo__12J3DTevBlock2FUlUs(); // 1
-extern "C" void setTexNo__12J3DTevBlock2FUlPCUs(); // 1
-extern "C" void getTexNo__12J3DTevBlock2CFUl(); // 1
-extern "C" void setTevOrder__12J3DTevBlock2FUl11J3DTevOrder(); // 1
-extern "C" void setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder(); // 1
-extern "C" void getTevOrder__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevColor__12J3DTevBlock2FUl13J3DGXColorS10(); // 1
-extern "C" void setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10(); // 1
-extern "C" void getTevColor__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevKColor__12J3DTevBlock2FUl10J3DGXColor(); // 1
-extern "C" void setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor(); // 1
-extern "C" void getTevKColor__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevKColorSel__12J3DTevBlock2FUlUc(); // 1
-extern "C" void setTevKColorSel__12J3DTevBlock2FUlPCUc(); // 1
-extern "C" void getTevKColorSel__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevKAlphaSel__12J3DTevBlock2FUlUc(); // 1
-extern "C" void setTevKAlphaSel__12J3DTevBlock2FUlPCUc(); // 1
-extern "C" void getTevKAlphaSel__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock2FUc(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock2FPCUc(); // 1
-extern "C" void getTevStageNum__12J3DTevBlock2CFv(); // 1
-extern "C" void setTevStage__12J3DTevBlock2FUl11J3DTevStage(); // 1
-extern "C" void setTevStage__12J3DTevBlock2FUlPC11J3DTevStage(); // 1
-extern "C" void getTevStage__12J3DTevBlock2FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable(); // 1
-extern "C" void setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J3DTevBlock2FUl(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J3DTevBlock2FUl(); // 1
-extern "C" void getTexNoOffset__12J3DTevBlock2CFv(); // 1
-extern "C" void getTevRegOffset__12J3DTevBlock2CFv(); // 1
-extern "C" void setTevRegOffset__12J3DTevBlock2FUl(); // 1
-extern "C" void __dt__12J3DTevBlock2Fv(); // 1
-extern "C" void ptrToIndex__12J3DTevBlock1Fv(); // 1
-extern "C" void indexToPtr__12J3DTevBlock1Fv(); // 1
-extern "C" void getType__12J3DTevBlock1Fv(); // 1
-extern "C" void setTexNo__12J3DTevBlock1FUlUs(); // 1
-extern "C" void setTexNo__12J3DTevBlock1FUlPCUs(); // 1
-extern "C" void getTexNo__12J3DTevBlock1CFUl(); // 1
-extern "C" void setTevOrder__12J3DTevBlock1FUl11J3DTevOrder(); // 1
-extern "C" void setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder(); // 1
-extern "C" void getTevOrder__12J3DTevBlock1FUl(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock1FUc(); // 1
-extern "C" void setTevStageNum__12J3DTevBlock1FPCUc(); // 1
-extern "C" bool getTevStageNum__12J3DTevBlock1CFv(); // 1
-extern "C" void setTevStage__12J3DTevBlock1FUl11J3DTevStage(); // 1
-extern "C" void setTevStage__12J3DTevBlock1FUlPC11J3DTevStage(); // 1
-extern "C" void getTevStage__12J3DTevBlock1FUl(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage(); // 1
-extern "C" void setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J3DTevBlock1FUl(); // 1
-extern "C" void getTexNoOffset__12J3DTevBlock1CFv(); // 1
-extern "C" void __dt__12J3DTevBlock1Fv(); // 1
-extern "C" void setTevKColorSel__11J3DTevBlockFUlPCUc(); // 1
-extern "C" void setTevKAlphaSel__11J3DTevBlockFUlPCUc(); // 1
-extern "C" void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable(); // 1
-extern "C" bool getTevRegOffset__11J3DTevBlockCFv(); // 1
-extern "C" void setTevRegOffset__11J3DTevBlockFUl(); // 1
-extern "C" void load__18J3DTevBlockPatchedFv(); // 1
-extern "C" void indexToPtr__18J3DTevBlockPatchedFv(); // 1
-extern "C" void getType__18J3DTevBlockPatchedFv(); // 1
-extern "C" void setTevStageNum__18J3DTevBlockPatchedFUc(); // 1
-extern "C" void setTevStageNum__18J3DTevBlockPatchedFPCUc(); // 1
-extern "C" void getTevStageNum__18J3DTevBlockPatchedCFv(); // 1
-extern "C" void setTexNo__18J3DTevBlockPatchedFUlUs(); // 1
-extern "C" void setTexNo__18J3DTevBlockPatchedFUlPCUs(); // 1
-extern "C" void getTexNo__18J3DTevBlockPatchedCFUl(); // 1
-extern "C" void setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder(); // 1
-extern "C" void setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder(); // 1
-extern "C" void getTevOrder__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage(); // 1
-extern "C" void setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage(); // 1
-extern "C" void getTevStage__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage(); // 1
-extern "C" void setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage(); // 1
-extern "C" void getIndTevStage__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10(); // 1
-extern "C" void setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10(); // 1
-extern "C" void getTevColor__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor(); // 1
-extern "C" void setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor(); // 1
-extern "C" void getTevKColor__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void setTevKColorSel__18J3DTevBlockPatchedFUlUc(); // 1
-extern "C" void setTevKColorSel__18J3DTevBlockPatchedFUlPCUc(); // 1
-extern "C" void getTevKColorSel__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void getTexNoOffset__18J3DTevBlockPatchedCFv(); // 1
-extern "C" void getTevRegOffset__18J3DTevBlockPatchedCFv(); // 1
-extern "C" void setTevRegOffset__18J3DTevBlockPatchedFUl(); // 1
-extern "C" void __dt__18J3DTevBlockPatchedFv(); // 1
-extern "C" void getType__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale(); // 1
-extern "C" void setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale(); // 1
-extern "C" void getNBTScale__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void __dt__19J3DTexGenBlockBasicFv(); // 1
-extern "C" void setTexGenNum__21J3DTexGenBlockPatchedFUl(); // 1
-extern "C" void setTexGenNum__21J3DTexGenBlockPatchedFPCUl(); // 1
-extern "C" void getTexGenNum__21J3DTexGenBlockPatchedCFv(); // 1
-extern "C" void setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord(); // 1
-extern "C" void getTexCoord__21J3DTexGenBlockPatchedFUl(); // 1
-extern "C" void setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx(); // 1
-extern "C" void getTexMtx__21J3DTexGenBlockPatchedFUl(); // 1
-extern "C" void getTexMtxOffset__21J3DTexGenBlockPatchedCFv(); // 1
-extern "C" void setTexMtxOffset__21J3DTexGenBlockPatchedFUl(); // 1
-extern "C" void getType__15J3DTexGenBlock4Fv(); // 1
-extern "C" void setNBTScale__15J3DTexGenBlock4F11J3DNBTScale(); // 1
-extern "C" void setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale(); // 1
-extern "C" void getNBTScale__15J3DTexGenBlock4Fv(); // 1
-extern "C" void __dt__15J3DTexGenBlock4Fv(); // 1
-extern "C" void load__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void getType__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void getType__20J3DColorBlockLightOnFv(); // 1
-extern "C" void setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor(); // 1
-extern "C" void setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor(); // 1
-extern "C" void getMatColor__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor(); // 1
-extern "C" void setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor(); // 1
-extern "C" void getAmbColor__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void setColorChanNum__20J3DColorBlockLightOnFPCUc(); // 1
-extern "C" void setColorChanNum__20J3DColorBlockLightOnFUc(); // 1
-extern "C" void getColorChanNum__20J3DColorBlockLightOnCFv(); // 1
-extern "C" void setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan(); // 1
-extern "C" void setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan(); // 1
-extern "C" void getColorChan__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void setLight__20J3DColorBlockLightOnFUlP11J3DLightObj(); // 1
-extern "C" void getLight__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void setCullMode__20J3DColorBlockLightOnFUc(); // 1
-extern "C" void setCullMode__20J3DColorBlockLightOnFPCUc(); // 1
-extern "C" void getCullMode__20J3DColorBlockLightOnCFv(); // 1
-extern "C" void getMatColorOffset__20J3DColorBlockLightOnCFv(); // 1
-extern "C" void getColorChanOffset__20J3DColorBlockLightOnCFv(); // 1
-extern "C" void setMatColorOffset__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void setColorChanOffset__20J3DColorBlockLightOnFUl(); // 1
-extern "C" void __dt__20J3DColorBlockLightOnFv(); // 1
-extern "C" void getType__22J3DColorBlockAmbientOnFv(); // 1
-extern "C" void setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor(); // 1
-extern "C" void setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor(); // 1
-extern "C" void getAmbColor__22J3DColorBlockAmbientOnFUl(); // 1
-extern "C" void __dt__22J3DColorBlockAmbientOnFv(); // 1
-extern "C" void setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor(); // 1
-extern "C" void setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor(); // 1
-extern "C" void getMatColor__21J3DColorBlockLightOffFUl(); // 1
-extern "C" void setColorChanNum__21J3DColorBlockLightOffFPCUc(); // 1
-extern "C" void setColorChanNum__21J3DColorBlockLightOffFUc(); // 1
-extern "C" void getColorChanNum__21J3DColorBlockLightOffCFv(); // 1
-extern "C" void setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan(); // 1
-extern "C" void setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan(); // 1
-extern "C" void getColorChan__21J3DColorBlockLightOffFUl(); // 1
-extern "C" void setCullMode__21J3DColorBlockLightOffFUc(); // 1
-extern "C" void setCullMode__21J3DColorBlockLightOffFPCUc(); // 1
-extern "C" void getCullMode__21J3DColorBlockLightOffCFv(); // 1
-extern "C" void getMatColorOffset__21J3DColorBlockLightOffCFv(); // 1
-extern "C" void getColorChanOffset__21J3DColorBlockLightOffCFv(); // 1
-extern "C" void setMatColorOffset__21J3DColorBlockLightOffFUl(); // 1
-extern "C" void setColorChanOffset__21J3DColorBlockLightOffFUl(); // 1
-extern "C" void getType__13J3DPEBlockXluFv(); // 1
-extern "C" void __dt__13J3DPEBlockXluFv(); // 1
-extern "C" void getType__17J3DPEBlockTexEdgeFv(); // 1
-extern "C" void __dt__17J3DPEBlockTexEdgeFv(); // 1
-extern "C" void getType__13J3DPEBlockOpaFv(); // 1
-extern "C" void __dt__13J3DPEBlockOpaFv(); // 1
-extern "C" void getType__15J3DIndBlockFullFv(); // 1
-extern "C" void setIndTexStageNum__15J3DIndBlockFullFUc(); // 1
-extern "C" void getIndTexStageNum__15J3DIndBlockFullCFv(); // 1
-extern "C" void setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder(); // 1
-extern "C" void setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder(); // 1
-extern "C" void getIndTexOrder__15J3DIndBlockFullFUl(); // 1
-extern "C" void setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx(); // 1
-extern "C" void setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx(); // 1
-extern "C" void getIndTexMtx__15J3DIndBlockFullFUl(); // 1
-extern "C" void setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale(); // 1
-extern "C" void setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale(); // 1
-extern "C" void getIndTexCoordScale__15J3DIndBlockFullFUl(); // 1
-extern "C" void __dt__15J3DIndBlockFullFv(); // 1
-extern "C" void patchTexNo__11J3DTevBlockFv(); // 1
-extern "C" void patchTevReg__11J3DTevBlockFv(); // 1
-extern "C" void setTexNo__11J3DTevBlockFUlPCUs(); // 1
-extern "C" void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder(); // 1
-extern "C" void setTevStageNum__11J3DTevBlockFPCUc(); // 1
-extern "C" void setTevStage__11J3DTevBlockFUlPC11J3DTevStage(); // 1
-extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage(); // 1
-extern "C" bool getTexNoOffset__11J3DTevBlockCFv(); // 1
-extern "C" void getType__21J3DColorBlockLightOffFv(); // 1
-extern "C" void __sinit_J3DMatBlock_cpp(); // 1
+extern "C" void initialize__21J3DColorBlockLightOffFv();
+extern "C" void initialize__22J3DColorBlockAmbientOnFv();
+extern "C" void initialize__20J3DColorBlockLightOnFv();
+extern "C" void initialize__21J3DTexGenBlockPatchedFv();
+extern "C" void initialize__15J3DTexGenBlock4Fv();
+extern "C" void initialize__19J3DTexGenBlockBasicFv();
+extern "C" void initialize__15J3DTevBlockNullFv();
+extern "C" void initialize__18J3DTevBlockPatchedFv();
+extern "C" void initialize__12J3DTevBlock1Fv();
+extern "C" void initialize__12J3DTevBlock2Fv();
+extern "C" void initialize__12J3DTevBlock4Fv();
+extern "C" void initialize__13J3DTevBlock16Fv();
+extern "C" void initialize__15J3DIndBlockFullFv();
+extern "C" void initialize__16J3DPEBlockFogOffFv();
+extern "C" void initialize__14J3DPEBlockFullFv();
+extern "C" s32 countDLSize__21J3DColorBlockLightOffFv();
+extern "C" s32 countDLSize__22J3DColorBlockAmbientOnFv();
+extern "C" s32 countDLSize__20J3DColorBlockLightOnFv();
+extern "C" s32 countDLSize__21J3DTexGenBlockPatchedFv();
+extern "C" s32 countDLSize__15J3DTexGenBlock4Fv();
+extern "C" s32 countDLSize__19J3DTexGenBlockBasicFv();
+extern "C" s32 countDLSize__18J3DTevBlockPatchedFv();
+extern "C" s32 countDLSize__12J3DTevBlock1Fv();
+extern "C" s32 countDLSize__12J3DTevBlock2Fv();
+extern "C" s32 countDLSize__12J3DTevBlock4Fv();
+extern "C" s32 countDLSize__13J3DTevBlock16Fv();
+extern "C" s32 countDLSize__15J3DIndBlockFullFv();
+extern "C" s32 countDLSize__13J3DPEBlockOpaFv();
+extern "C" s32 countDLSize__17J3DPEBlockTexEdgeFv();
+extern "C" s32 countDLSize__13J3DPEBlockXluFv();
+extern "C" s32 countDLSize__16J3DPEBlockFogOffFv();
+extern "C" s32 countDLSize__14J3DPEBlockFullFv();
+extern "C" void load__21J3DColorBlockLightOffFv();
+extern "C" void load__22J3DColorBlockAmbientOnFv();
+extern "C" void load__20J3DColorBlockLightOnFv();
+extern "C" void patch__21J3DColorBlockLightOffFv();
+extern "C" void patchMatColor__21J3DColorBlockLightOffFv();
+extern "C" void patchLight__21J3DColorBlockLightOffFv();
+extern "C" void patch__20J3DColorBlockLightOnFv();
+extern "C" void patchMatColor__20J3DColorBlockLightOnFv();
+extern "C" void patchLight__20J3DColorBlockLightOnFv();
+extern "C" void diff__21J3DColorBlockLightOffFUl();
+extern "C" void diffMatColor__21J3DColorBlockLightOffFv();
+extern "C" void diffColorChan__21J3DColorBlockLightOffFv();
+extern "C" void diff__20J3DColorBlockLightOnFUl();
+extern "C" void diffAmbColor__20J3DColorBlockLightOnFv();
+extern "C" void diffMatColor__20J3DColorBlockLightOnFv();
+extern "C" void diffColorChan__20J3DColorBlockLightOnFv();
+extern "C" void diffLightObj__20J3DColorBlockLightOnFUl();
+extern "C" void load__15J3DTexGenBlock4Fv();
+extern "C" void load__19J3DTexGenBlockBasicFv();
+extern "C" void patch__21J3DTexGenBlockPatchedFv();
+extern "C" void patch__15J3DTexGenBlock4Fv();
+extern "C" void patch__19J3DTexGenBlockBasicFv();
+extern "C" void diff__21J3DTexGenBlockPatchedFUl();
+extern "C" void diffTexMtx__21J3DTexGenBlockPatchedFv();
+extern "C" void diffTexGen__21J3DTexGenBlockPatchedFv();
+extern "C" void load__12J3DTevBlock1Fv();
+extern "C" void load__12J3DTevBlock2Fv();
+extern "C" void load__12J3DTevBlock4Fv();
+extern "C" void load__13J3DTevBlock16Fv();
+extern "C" void patchTexNo__18J3DTevBlockPatchedFv();
+extern "C" void patchTevReg__18J3DTevBlockPatchedFv();
+extern "C" void patchTexNoAndTexCoordScale__18J3DTevBlockPatchedFv();
+extern "C" void patch__18J3DTevBlockPatchedFv();
+extern "C" void patchTexNo__12J3DTevBlock1Fv();
+extern "C" void patchTevReg__12J3DTevBlock1Fv();
+extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock1Fv();
+extern "C" void patch__12J3DTevBlock1Fv();
+extern "C" void patchTexNo__12J3DTevBlock2Fv();
+extern "C" void patchTevReg__12J3DTevBlock2Fv();
+extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock2Fv();
+extern "C" void patch__12J3DTevBlock2Fv();
+extern "C" void patchTexNo__12J3DTevBlock4Fv();
+extern "C" void patchTevReg__12J3DTevBlock4Fv();
+extern "C" void patchTexNoAndTexCoordScale__12J3DTevBlock4Fv();
+extern "C" void patch__12J3DTevBlock4Fv();
+extern "C" void patchTexNo__13J3DTevBlock16Fv();
+extern "C" void patchTevReg__13J3DTevBlock16Fv();
+extern "C" void patchTexNoAndTexCoordScale__13J3DTevBlock16Fv();
+extern "C" void patch__13J3DTevBlock16Fv();
+extern "C" void diff__11J3DTevBlockFUl();
+extern "C" void diffTexNo__18J3DTevBlockPatchedFv();
+extern "C" void diffTevStage__18J3DTevBlockPatchedFv();
+extern "C" void diffTevStageIndirect__18J3DTevBlockPatchedFv();
+extern "C" void diffTevReg__18J3DTevBlockPatchedFv();
+extern "C" void diffTexCoordScale__18J3DTevBlockPatchedFv();
+extern "C" void diffTexNo__12J3DTevBlock1Fv();
+extern "C" void diffTevReg__12J3DTevBlock1Fv();
+extern "C" void diffTevStage__12J3DTevBlock1Fv();
+extern "C" void diffTevStageIndirect__12J3DTevBlock1Fv();
+extern "C" void diffTexCoordScale__12J3DTevBlock1Fv();
+extern "C" void diffTexNo__12J3DTevBlock2Fv();
+extern "C" void diffTevReg__12J3DTevBlock2Fv();
+extern "C" void diffTevStage__12J3DTevBlock2Fv();
+extern "C" void diffTevStageIndirect__12J3DTevBlock2Fv();
+extern "C" void diffTexCoordScale__12J3DTevBlock2Fv();
+extern "C" void diffTexNo__12J3DTevBlock4Fv();
+extern "C" void diffTevReg__12J3DTevBlock4Fv();
+extern "C" void diffTevStage__12J3DTevBlock4Fv();
+extern "C" void diffTevStageIndirect__12J3DTevBlock4Fv();
+extern "C" void diffTexCoordScale__12J3DTevBlock4Fv();
+extern "C" void diffTexNo__13J3DTevBlock16Fv();
+extern "C" void diffTevReg__13J3DTevBlock16Fv();
+extern "C" void diffTevStage__13J3DTevBlock16Fv();
+extern "C" void diffTevStageIndirect__13J3DTevBlock16Fv();
+extern "C" void diffTexCoordScale__13J3DTevBlock16Fv();
+extern "C" void ptrToIndex__13J3DTevBlock16Fv();
+extern "C" void ptrToIndex__18J3DTevBlockPatchedFv();
+extern "C" void indexToPtr_private__11J3DTevBlockFUl();
+extern "C" void load__15J3DIndBlockFullFv();
+extern "C" void diff__15J3DIndBlockFullFUl();
+extern "C" void load__13J3DPEBlockOpaFv();
+extern "C" void load__17J3DPEBlockTexEdgeFv();
+extern "C" void load__13J3DPEBlockXluFv();
+extern "C" void load__16J3DPEBlockFogOffFv();
+extern "C" void diffBlend__16J3DPEBlockFogOffFv();
+extern "C" void load__14J3DPEBlockFullFv();
+extern "C" void patch__14J3DPEBlockFullFv();
+extern "C" void diffFog__14J3DPEBlockFullFv();
+extern "C" void diffBlend__14J3DPEBlockFullFv();
+extern "C" void diff__14J3DPEBlockFullFUl();
+extern "C" void reset__21J3DColorBlockLightOffFP13J3DColorBlock();
+extern "C" void reset__22J3DColorBlockAmbientOnFP13J3DColorBlock();
+extern "C" void reset__20J3DColorBlockLightOnFP13J3DColorBlock();
+extern "C" void reset__21J3DTexGenBlockPatchedFP14J3DTexGenBlock();
+extern "C" void reset__15J3DTexGenBlock4FP14J3DTexGenBlock();
+extern "C" void reset__19J3DTexGenBlockBasicFP14J3DTexGenBlock();
+extern "C" void reset__18J3DTevBlockPatchedFP11J3DTevBlock();
+extern "C" void reset__12J3DTevBlock1FP11J3DTevBlock();
+extern "C" void reset__12J3DTevBlock2FP11J3DTevBlock();
+extern "C" void reset__12J3DTevBlock4FP11J3DTevBlock();
+extern "C" void reset__13J3DTevBlock16FP11J3DTevBlock();
+extern "C" void reset__15J3DIndBlockFullFP11J3DIndBlock();
+extern "C" void reset__16J3DPEBlockFogOffFP10J3DPEBlock();
+extern "C" void reset__14J3DPEBlockFullFP10J3DPEBlock();
+extern "C" void calc__21J3DTexGenBlockPatchedFPA4_Cf();
+extern "C" void calcWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+extern "C" void calcPostTexMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+extern "C" void calcPostTexMtxWithoutViewMtx__21J3DTexGenBlockPatchedFPA4_Cf();
+extern "C" void diffTevReg__11J3DTevBlockFv();
+extern "C" void diffTevStageIndirect__11J3DTevBlockFv();
+extern "C" void diffTevStage__11J3DTevBlockFv();
+extern "C" void diffTexCoordScale__11J3DTevBlockFv();
+extern "C" void diffTexNo__11J3DTevBlockFv();
+extern "C" void getType__14J3DPEBlockFullFv();
+extern "C" void setFog__14J3DPEBlockFullFP6J3DFog();
+extern "C" void setFog__14J3DPEBlockFullF6J3DFog();
+extern "C" void getFog__14J3DPEBlockFullFv();
+extern "C" void setAlphaComp__14J3DPEBlockFullFRC12J3DAlphaComp();
+extern "C" void setAlphaComp__14J3DPEBlockFullFPC12J3DAlphaComp();
+extern "C" void getAlphaComp__14J3DPEBlockFullFv();
+extern "C" void setBlend__14J3DPEBlockFullFRC8J3DBlend();
+extern "C" void setBlend__14J3DPEBlockFullFPC8J3DBlend();
+extern "C" void getBlend__14J3DPEBlockFullFv();
+extern "C" void setZMode__14J3DPEBlockFullF8J3DZMode();
+extern "C" void setZMode__14J3DPEBlockFullFPC8J3DZMode();
+extern "C" void getZMode__14J3DPEBlockFullFv();
+extern "C" void setZCompLoc__14J3DPEBlockFullFUc();
+extern "C" void setZCompLoc__14J3DPEBlockFullFPCUc();
+extern "C" void getZCompLoc__14J3DPEBlockFullCFv();
+extern "C" void setDither__14J3DPEBlockFullFUc();
+extern "C" void setDither__14J3DPEBlockFullFPCUc();
+extern "C" void getDither__14J3DPEBlockFullCFv();
+extern "C" void getFogOffset__14J3DPEBlockFullCFv();
+extern "C" void setFogOffset__14J3DPEBlockFullFUl();
+extern "C" void __dt__14J3DPEBlockFullFv();
+extern "C" void diff__16J3DPEBlockFogOffFUl();
+extern "C" void getType__16J3DPEBlockFogOffFv();
+extern "C" void setAlphaComp__16J3DPEBlockFogOffFRC12J3DAlphaComp();
+extern "C" void setAlphaComp__16J3DPEBlockFogOffFPC12J3DAlphaComp();
+extern "C" void getAlphaComp__16J3DPEBlockFogOffFv();
+extern "C" void setBlend__16J3DPEBlockFogOffFRC8J3DBlend();
+extern "C" void setBlend__16J3DPEBlockFogOffFPC8J3DBlend();
+extern "C" void getBlend__16J3DPEBlockFogOffFv();
+extern "C" void setZMode__16J3DPEBlockFogOffF8J3DZMode();
+extern "C" void setZMode__16J3DPEBlockFogOffFPC8J3DZMode();
+extern "C" void getZMode__16J3DPEBlockFogOffFv();
+extern "C" void setZCompLoc__16J3DPEBlockFogOffFUc();
+extern "C" void setZCompLoc__16J3DPEBlockFogOffFPCUc();
+extern "C" void getZCompLoc__16J3DPEBlockFogOffCFv();
+extern "C" void setDither__16J3DPEBlockFogOffFUc();
+extern "C" void setDither__16J3DPEBlockFogOffFPCUc();
+extern "C" void getDither__16J3DPEBlockFogOffCFv();
+extern "C" void __dt__16J3DPEBlockFogOffFv();
+extern "C" void indexToPtr__13J3DTevBlock16Fv();
+extern "C" void getType__13J3DTevBlock16Fv();
+extern "C" void setTexNo__13J3DTevBlock16FUlUs();
+extern "C" void setTexNo__13J3DTevBlock16FUlPCUs();
+extern "C" void getTexNo__13J3DTevBlock16CFUl();
+extern "C" void setTevOrder__13J3DTevBlock16FUl11J3DTevOrder();
+extern "C" void setTevOrder__13J3DTevBlock16FUlPC11J3DTevOrder();
+extern "C" void getTevOrder__13J3DTevBlock16FUl();
+extern "C" void setTevColor__13J3DTevBlock16FUl13J3DGXColorS10();
+extern "C" void setTevColor__13J3DTevBlock16FUlPC13J3DGXColorS10();
+extern "C" void getTevColor__13J3DTevBlock16FUl();
+extern "C" void setTevKColor__13J3DTevBlock16FUl10J3DGXColor();
+extern "C" void setTevKColor__13J3DTevBlock16FUlPC10J3DGXColor();
+extern "C" void getTevKColor__13J3DTevBlock16FUl();
+extern "C" void setTevKColorSel__13J3DTevBlock16FUlUc();
+extern "C" void setTevKColorSel__13J3DTevBlock16FUlPCUc();
+extern "C" void getTevKColorSel__13J3DTevBlock16FUl();
+extern "C" void setTevKAlphaSel__13J3DTevBlock16FUlUc();
+extern "C" void setTevKAlphaSel__13J3DTevBlock16FUlPCUc();
+extern "C" void getTevKAlphaSel__13J3DTevBlock16FUl();
+extern "C" void setTevStageNum__13J3DTevBlock16FUc();
+extern "C" void setTevStageNum__13J3DTevBlock16FPCUc();
+extern "C" void getTevStageNum__13J3DTevBlock16CFv();
+extern "C" void setTevStage__13J3DTevBlock16FUl11J3DTevStage();
+extern "C" void setTevStage__13J3DTevBlock16FUlPC11J3DTevStage();
+extern "C" void getTevStage__13J3DTevBlock16FUl();
+extern "C" void setTevSwapModeInfo__13J3DTevBlock16FUl18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeInfo__13J3DTevBlock16FUlPC18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__13J3DTevBlock16FUl19J3DTevSwapModeTable();
+extern "C" void setTevSwapModeTable__13J3DTevBlock16FUlPC19J3DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__13J3DTevBlock16FUl();
+extern "C" void setIndTevStage__13J3DTevBlock16FUl14J3DIndTevStage();
+extern "C" void setIndTevStage__13J3DTevBlock16FUlPC14J3DIndTevStage();
+extern "C" void getIndTevStage__13J3DTevBlock16FUl();
+extern "C" void getTexNoOffset__13J3DTevBlock16CFv();
+extern "C" void getTevRegOffset__13J3DTevBlock16CFv();
+extern "C" void setTevRegOffset__13J3DTevBlock16FUl();
+extern "C" void __dt__13J3DTevBlock16Fv();
+extern "C" void setTexNoOffset__11J3DTevBlockFUl();
+extern "C" void ptrToIndex__12J3DTevBlock4Fv();
+extern "C" void indexToPtr__12J3DTevBlock4Fv();
+extern "C" void getType__12J3DTevBlock4Fv();
+extern "C" void setTexNo__12J3DTevBlock4FUlUs();
+extern "C" void setTexNo__12J3DTevBlock4FUlPCUs();
+extern "C" void getTexNo__12J3DTevBlock4CFUl();
+extern "C" void setTevOrder__12J3DTevBlock4FUl11J3DTevOrder();
+extern "C" void setTevOrder__12J3DTevBlock4FUlPC11J3DTevOrder();
+extern "C" void getTevOrder__12J3DTevBlock4FUl();
+extern "C" void setTevColor__12J3DTevBlock4FUl13J3DGXColorS10();
+extern "C" void setTevColor__12J3DTevBlock4FUlPC13J3DGXColorS10();
+extern "C" void getTevColor__12J3DTevBlock4FUl();
+extern "C" void setTevKColor__12J3DTevBlock4FUl10J3DGXColor();
+extern "C" void setTevKColor__12J3DTevBlock4FUlPC10J3DGXColor();
+extern "C" void getTevKColor__12J3DTevBlock4FUl();
+extern "C" void setTevKColorSel__12J3DTevBlock4FUlUc();
+extern "C" void setTevKColorSel__12J3DTevBlock4FUlPCUc();
+extern "C" void getTevKColorSel__12J3DTevBlock4FUl();
+extern "C" void setTevKAlphaSel__12J3DTevBlock4FUlUc();
+extern "C" void setTevKAlphaSel__12J3DTevBlock4FUlPCUc();
+extern "C" void getTevKAlphaSel__12J3DTevBlock4FUl();
+extern "C" void setTevStageNum__12J3DTevBlock4FUc();
+extern "C" void setTevStageNum__12J3DTevBlock4FPCUc();
+extern "C" void getTevStageNum__12J3DTevBlock4CFv();
+extern "C" void setTevStage__12J3DTevBlock4FUl11J3DTevStage();
+extern "C" void setTevStage__12J3DTevBlock4FUlPC11J3DTevStage();
+extern "C" void getTevStage__12J3DTevBlock4FUl();
+extern "C" void setTevSwapModeInfo__12J3DTevBlock4FUl18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeInfo__12J3DTevBlock4FUlPC18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J3DTevBlock4FUl19J3DTevSwapModeTable();
+extern "C" void setTevSwapModeTable__12J3DTevBlock4FUlPC19J3DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J3DTevBlock4FUl();
+extern "C" void setIndTevStage__12J3DTevBlock4FUl14J3DIndTevStage();
+extern "C" void setIndTevStage__12J3DTevBlock4FUlPC14J3DIndTevStage();
+extern "C" void getIndTevStage__12J3DTevBlock4FUl();
+extern "C" void getTexNoOffset__12J3DTevBlock4CFv();
+extern "C" void getTevRegOffset__12J3DTevBlock4CFv();
+extern "C" void setTevRegOffset__12J3DTevBlock4FUl();
+extern "C" void __dt__12J3DTevBlock4Fv();
+extern "C" void ptrToIndex__12J3DTevBlock2Fv();
+extern "C" void indexToPtr__12J3DTevBlock2Fv();
+extern "C" void getType__12J3DTevBlock2Fv();
+extern "C" void setTexNo__12J3DTevBlock2FUlUs();
+extern "C" void setTexNo__12J3DTevBlock2FUlPCUs();
+extern "C" void getTexNo__12J3DTevBlock2CFUl();
+extern "C" void setTevOrder__12J3DTevBlock2FUl11J3DTevOrder();
+extern "C" void setTevOrder__12J3DTevBlock2FUlPC11J3DTevOrder();
+extern "C" void getTevOrder__12J3DTevBlock2FUl();
+extern "C" void setTevColor__12J3DTevBlock2FUl13J3DGXColorS10();
+extern "C" void setTevColor__12J3DTevBlock2FUlPC13J3DGXColorS10();
+extern "C" void getTevColor__12J3DTevBlock2FUl();
+extern "C" void setTevKColor__12J3DTevBlock2FUl10J3DGXColor();
+extern "C" void setTevKColor__12J3DTevBlock2FUlPC10J3DGXColor();
+extern "C" void getTevKColor__12J3DTevBlock2FUl();
+extern "C" void setTevKColorSel__12J3DTevBlock2FUlUc();
+extern "C" void setTevKColorSel__12J3DTevBlock2FUlPCUc();
+extern "C" void getTevKColorSel__12J3DTevBlock2FUl();
+extern "C" void setTevKAlphaSel__12J3DTevBlock2FUlUc();
+extern "C" void setTevKAlphaSel__12J3DTevBlock2FUlPCUc();
+extern "C" void getTevKAlphaSel__12J3DTevBlock2FUl();
+extern "C" void setTevStageNum__12J3DTevBlock2FUc();
+extern "C" void setTevStageNum__12J3DTevBlock2FPCUc();
+extern "C" void getTevStageNum__12J3DTevBlock2CFv();
+extern "C" void setTevStage__12J3DTevBlock2FUl11J3DTevStage();
+extern "C" void setTevStage__12J3DTevBlock2FUlPC11J3DTevStage();
+extern "C" void getTevStage__12J3DTevBlock2FUl();
+extern "C" void setTevSwapModeInfo__12J3DTevBlock2FUl18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeInfo__12J3DTevBlock2FUlPC18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J3DTevBlock2FUl19J3DTevSwapModeTable();
+extern "C" void setTevSwapModeTable__12J3DTevBlock2FUlPC19J3DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J3DTevBlock2FUl();
+extern "C" void setIndTevStage__12J3DTevBlock2FUl14J3DIndTevStage();
+extern "C" void setIndTevStage__12J3DTevBlock2FUlPC14J3DIndTevStage();
+extern "C" void getIndTevStage__12J3DTevBlock2FUl();
+extern "C" void getTexNoOffset__12J3DTevBlock2CFv();
+extern "C" void getTevRegOffset__12J3DTevBlock2CFv();
+extern "C" void setTevRegOffset__12J3DTevBlock2FUl();
+extern "C" void __dt__12J3DTevBlock2Fv();
+extern "C" void ptrToIndex__12J3DTevBlock1Fv();
+extern "C" void indexToPtr__12J3DTevBlock1Fv();
+extern "C" void getType__12J3DTevBlock1Fv();
+extern "C" void setTexNo__12J3DTevBlock1FUlUs();
+extern "C" void setTexNo__12J3DTevBlock1FUlPCUs();
+extern "C" void getTexNo__12J3DTevBlock1CFUl();
+extern "C" void setTevOrder__12J3DTevBlock1FUl11J3DTevOrder();
+extern "C" void setTevOrder__12J3DTevBlock1FUlPC11J3DTevOrder();
+extern "C" void getTevOrder__12J3DTevBlock1FUl();
+extern "C" void setTevStageNum__12J3DTevBlock1FUc();
+extern "C" void setTevStageNum__12J3DTevBlock1FPCUc();
+extern "C" bool getTevStageNum__12J3DTevBlock1CFv();
+extern "C" void setTevStage__12J3DTevBlock1FUl11J3DTevStage();
+extern "C" void setTevStage__12J3DTevBlock1FUlPC11J3DTevStage();
+extern "C" void getTevStage__12J3DTevBlock1FUl();
+extern "C" void setIndTevStage__12J3DTevBlock1FUl14J3DIndTevStage();
+extern "C" void setIndTevStage__12J3DTevBlock1FUlPC14J3DIndTevStage();
+extern "C" void getIndTevStage__12J3DTevBlock1FUl();
+extern "C" void getTexNoOffset__12J3DTevBlock1CFv();
+extern "C" void __dt__12J3DTevBlock1Fv();
+extern "C" void setTevKColorSel__11J3DTevBlockFUlPCUc();
+extern "C" void setTevKAlphaSel__11J3DTevBlockFUlPCUc();
+extern "C" void setTevSwapModeInfo__11J3DTevBlockFUl18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeInfo__11J3DTevBlockFUlPC18J3DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__11J3DTevBlockFUlPC19J3DTevSwapModeTable();
+extern "C" bool getTevRegOffset__11J3DTevBlockCFv();
+extern "C" void setTevRegOffset__11J3DTevBlockFUl();
+extern "C" void load__18J3DTevBlockPatchedFv();
+extern "C" void indexToPtr__18J3DTevBlockPatchedFv();
+extern "C" void getType__18J3DTevBlockPatchedFv();
+extern "C" void setTevStageNum__18J3DTevBlockPatchedFUc();
+extern "C" void setTevStageNum__18J3DTevBlockPatchedFPCUc();
+extern "C" void getTevStageNum__18J3DTevBlockPatchedCFv();
+extern "C" void setTexNo__18J3DTevBlockPatchedFUlUs();
+extern "C" void setTexNo__18J3DTevBlockPatchedFUlPCUs();
+extern "C" void getTexNo__18J3DTevBlockPatchedCFUl();
+extern "C" void setTevOrder__18J3DTevBlockPatchedFUl11J3DTevOrder();
+extern "C" void setTevOrder__18J3DTevBlockPatchedFUlPC11J3DTevOrder();
+extern "C" void getTevOrder__18J3DTevBlockPatchedFUl();
+extern "C" void setTevStage__18J3DTevBlockPatchedFUl11J3DTevStage();
+extern "C" void setTevStage__18J3DTevBlockPatchedFUlPC11J3DTevStage();
+extern "C" void getTevStage__18J3DTevBlockPatchedFUl();
+extern "C" void setIndTevStage__18J3DTevBlockPatchedFUl14J3DIndTevStage();
+extern "C" void setIndTevStage__18J3DTevBlockPatchedFUlPC14J3DIndTevStage();
+extern "C" void getIndTevStage__18J3DTevBlockPatchedFUl();
+extern "C" void setTevColor__18J3DTevBlockPatchedFUl13J3DGXColorS10();
+extern "C" void setTevColor__18J3DTevBlockPatchedFUlPC13J3DGXColorS10();
+extern "C" void getTevColor__18J3DTevBlockPatchedFUl();
+extern "C" void setTevKColor__18J3DTevBlockPatchedFUl10J3DGXColor();
+extern "C" void setTevKColor__18J3DTevBlockPatchedFUlPC10J3DGXColor();
+extern "C" void getTevKColor__18J3DTevBlockPatchedFUl();
+extern "C" void setTevKColorSel__18J3DTevBlockPatchedFUlUc();
+extern "C" void setTevKColorSel__18J3DTevBlockPatchedFUlPCUc();
+extern "C" void getTevKColorSel__18J3DTevBlockPatchedFUl();
+extern "C" void getTexNoOffset__18J3DTevBlockPatchedCFv();
+extern "C" void getTevRegOffset__18J3DTevBlockPatchedCFv();
+extern "C" void setTevRegOffset__18J3DTevBlockPatchedFUl();
+extern "C" void __dt__18J3DTevBlockPatchedFv();
+extern "C" void getType__19J3DTexGenBlockBasicFv();
+extern "C" void setNBTScale__19J3DTexGenBlockBasicF11J3DNBTScale();
+extern "C" void setNBTScale__19J3DTexGenBlockBasicFPC11J3DNBTScale();
+extern "C" void getNBTScale__19J3DTexGenBlockBasicFv();
+extern "C" void __dt__19J3DTexGenBlockBasicFv();
+extern "C" void setTexGenNum__21J3DTexGenBlockPatchedFUl();
+extern "C" void setTexGenNum__21J3DTexGenBlockPatchedFPCUl();
+extern "C" void getTexGenNum__21J3DTexGenBlockPatchedCFv();
+extern "C" void setTexCoord__21J3DTexGenBlockPatchedFUlPC11J3DTexCoord();
+extern "C" void getTexCoord__21J3DTexGenBlockPatchedFUl();
+extern "C" void setTexMtx__21J3DTexGenBlockPatchedFUlP9J3DTexMtx();
+extern "C" void getTexMtx__21J3DTexGenBlockPatchedFUl();
+extern "C" void getTexMtxOffset__21J3DTexGenBlockPatchedCFv();
+extern "C" void setTexMtxOffset__21J3DTexGenBlockPatchedFUl();
+extern "C" void getType__15J3DTexGenBlock4Fv();
+extern "C" void setNBTScale__15J3DTexGenBlock4F11J3DNBTScale();
+extern "C" void setNBTScale__15J3DTexGenBlock4FPC11J3DNBTScale();
+extern "C" void getNBTScale__15J3DTexGenBlock4Fv();
+extern "C" void __dt__15J3DTexGenBlock4Fv();
+extern "C" void load__21J3DTexGenBlockPatchedFv();
+extern "C" void getType__21J3DTexGenBlockPatchedFv();
+extern "C" void getType__20J3DColorBlockLightOnFv();
+extern "C" void setMatColor__20J3DColorBlockLightOnFUl10J3DGXColor();
+extern "C" void setMatColor__20J3DColorBlockLightOnFUlPC10J3DGXColor();
+extern "C" void getMatColor__20J3DColorBlockLightOnFUl();
+extern "C" void setAmbColor__20J3DColorBlockLightOnFUl10J3DGXColor();
+extern "C" void setAmbColor__20J3DColorBlockLightOnFUlPC10J3DGXColor();
+extern "C" void getAmbColor__20J3DColorBlockLightOnFUl();
+extern "C" void setColorChanNum__20J3DColorBlockLightOnFPCUc();
+extern "C" void setColorChanNum__20J3DColorBlockLightOnFUc();
+extern "C" void getColorChanNum__20J3DColorBlockLightOnCFv();
+extern "C" void setColorChan__20J3DColorBlockLightOnFUlPC12J3DColorChan();
+extern "C" void setColorChan__20J3DColorBlockLightOnFUlRC12J3DColorChan();
+extern "C" void getColorChan__20J3DColorBlockLightOnFUl();
+extern "C" void setLight__20J3DColorBlockLightOnFUlP11J3DLightObj();
+extern "C" void getLight__20J3DColorBlockLightOnFUl();
+extern "C" void setCullMode__20J3DColorBlockLightOnFUc();
+extern "C" void setCullMode__20J3DColorBlockLightOnFPCUc();
+extern "C" void getCullMode__20J3DColorBlockLightOnCFv();
+extern "C" void getMatColorOffset__20J3DColorBlockLightOnCFv();
+extern "C" void getColorChanOffset__20J3DColorBlockLightOnCFv();
+extern "C" void setMatColorOffset__20J3DColorBlockLightOnFUl();
+extern "C" void setColorChanOffset__20J3DColorBlockLightOnFUl();
+extern "C" void __dt__20J3DColorBlockLightOnFv();
+extern "C" void getType__22J3DColorBlockAmbientOnFv();
+extern "C" void setAmbColor__22J3DColorBlockAmbientOnFUl10J3DGXColor();
+extern "C" void setAmbColor__22J3DColorBlockAmbientOnFUlPC10J3DGXColor();
+extern "C" void getAmbColor__22J3DColorBlockAmbientOnFUl();
+extern "C" void __dt__22J3DColorBlockAmbientOnFv();
+extern "C" void setMatColor__21J3DColorBlockLightOffFUl10J3DGXColor();
+extern "C" void setMatColor__21J3DColorBlockLightOffFUlPC10J3DGXColor();
+extern "C" void getMatColor__21J3DColorBlockLightOffFUl();
+extern "C" void setColorChanNum__21J3DColorBlockLightOffFPCUc();
+extern "C" void setColorChanNum__21J3DColorBlockLightOffFUc();
+extern "C" void getColorChanNum__21J3DColorBlockLightOffCFv();
+extern "C" void setColorChan__21J3DColorBlockLightOffFUlPC12J3DColorChan();
+extern "C" void setColorChan__21J3DColorBlockLightOffFUlRC12J3DColorChan();
+extern "C" void getColorChan__21J3DColorBlockLightOffFUl();
+extern "C" void setCullMode__21J3DColorBlockLightOffFUc();
+extern "C" void setCullMode__21J3DColorBlockLightOffFPCUc();
+extern "C" void getCullMode__21J3DColorBlockLightOffCFv();
+extern "C" void getMatColorOffset__21J3DColorBlockLightOffCFv();
+extern "C" void getColorChanOffset__21J3DColorBlockLightOffCFv();
+extern "C" void setMatColorOffset__21J3DColorBlockLightOffFUl();
+extern "C" void setColorChanOffset__21J3DColorBlockLightOffFUl();
+extern "C" void getType__13J3DPEBlockXluFv();
+extern "C" void __dt__13J3DPEBlockXluFv();
+extern "C" void getType__17J3DPEBlockTexEdgeFv();
+extern "C" void __dt__17J3DPEBlockTexEdgeFv();
+extern "C" void getType__13J3DPEBlockOpaFv();
+extern "C" void __dt__13J3DPEBlockOpaFv();
+extern "C" void getType__15J3DIndBlockFullFv();
+extern "C" void setIndTexStageNum__15J3DIndBlockFullFUc();
+extern "C" void getIndTexStageNum__15J3DIndBlockFullCFv();
+extern "C" void setIndTexOrder__15J3DIndBlockFullFUl14J3DIndTexOrder();
+extern "C" void setIndTexOrder__15J3DIndBlockFullFUlPC14J3DIndTexOrder();
+extern "C" void getIndTexOrder__15J3DIndBlockFullFUl();
+extern "C" void setIndTexMtx__15J3DIndBlockFullFUl12J3DIndTexMtx();
+extern "C" void setIndTexMtx__15J3DIndBlockFullFUlPC12J3DIndTexMtx();
+extern "C" void getIndTexMtx__15J3DIndBlockFullFUl();
+extern "C" void setIndTexCoordScale__15J3DIndBlockFullFUl19J3DIndTexCoordScale();
+extern "C" void setIndTexCoordScale__15J3DIndBlockFullFUlPC19J3DIndTexCoordScale();
+extern "C" void getIndTexCoordScale__15J3DIndBlockFullFUl();
+extern "C" void __dt__15J3DIndBlockFullFv();
+extern "C" void patchTexNo__11J3DTevBlockFv();
+extern "C" void patchTevReg__11J3DTevBlockFv();
+extern "C" void setTexNo__11J3DTevBlockFUlPCUs();
+extern "C" void setTevOrder__11J3DTevBlockFUlPC11J3DTevOrder();
+extern "C" void setTevStageNum__11J3DTevBlockFPCUc();
+extern "C" void setTevStage__11J3DTevBlockFUlPC11J3DTevStage();
+extern "C" void setIndTevStage__11J3DTevBlockFUlPC14J3DIndTevStage();
+extern "C" bool getTexNoOffset__11J3DTevBlockCFv();
+extern "C" void getType__21J3DColorBlockLightOffFv();
+extern "C" void __sinit_J3DMatBlock_cpp();
 extern "C" extern char const* const J3DMatBlock__stringBase0;
 extern "C" extern void* __vt__14J3DPEBlockFull[31];
 extern "C" extern void* __vt__16J3DPEBlockFogOff[31];
@@ -1195,131 +1214,147 @@ extern "C" extern void* __vt__21J3DColorBlockLightOff[36 + 1 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
-void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8); // 2
-void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8); // 2
-void J3DGDSetIndTexCoordScale(_GXIndTexStageID, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale); // 2
-void J3DGDSetIndTexOrder(u32, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID); // 2
-void J3DGDSetTevOrder(_GXTevStageID, _GXTexCoordID, _GXTexMapID, _GXChannelID, _GXTexCoordID, _GXTexMapID, _GXChannelID); // 2
-void J3DGDSetTevKColor(_GXTevKColorID, _GXColor); // 2
-void J3DGDSetTevColorS10(_GXTevRegID, _GXColorS10); // 2
-void J3DGDSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
-void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*); // 2
-void loadTexCoordGens(u32, J3DTexCoord*); // 2
-void isTexNoReg(void*); // 2
-void getTexNoReg(void*); // 2
-void loadTexNo(u32, u16 const&); // 2
-void patchTexNo_PtrToIdx(u32, u16 const&); // 2
+void operator delete(void*);
+void J3DGDSetTexCoordScale2(_GXTexCoordID, u16, u8, u8, u16, u8, u8);
+void J3DGDSetIndTexMtx(_GXIndTexMtxID, f32 (* )[3], s8);
+void J3DGDSetIndTexCoordScale(_GXIndTexStageID, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale, _GXIndTexScale);
+void J3DGDSetIndTexOrder(u32, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID, _GXTexCoordID, _GXTexMapID);
+void J3DGDSetTevOrder(_GXTevStageID, _GXTexCoordID, _GXTexMapID, _GXChannelID, _GXTexCoordID, _GXTexMapID, _GXChannelID);
+void J3DGDSetTevKColor(_GXTevKColorID, _GXColor);
+void J3DGDSetTevColorS10(_GXTevRegID, _GXColorS10);
+void J3DGDSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
+void J3DGDSetFogRangeAdj(u8, u16, _GXFogAdjTable*);
+void loadTexCoordGens(u32, J3DTexCoord*);
+void isTexNoReg(void*);
+void getTexNoReg(void*);
+void loadTexNo(u32, u16 const&);
+void patchTexNo_PtrToIdx(u32, u16 const&);
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern void* __vt__10J3DPEBlock[31];
+extern "C" extern void* __vt__11J3DIndBlock[19];
+extern "C" extern void* __vt__14J3DTexGenBlock[27];
+extern "C" extern void* __vt__13J3DColorBlock[36];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sTexCoordScaleTable__6J3DSys[64 + 4 /* padding */];
+extern "C" extern u8 j3dTevSwapTableTable[1024];
+extern "C" extern u8 j3dAlphaCmpTable[768];
+extern "C" extern u8 j3dZModeTable[96];
+extern "C" extern u8 __GDCurrentDL[4];
+extern "C" extern u32 j3dDefaultColInfo;
+extern "C" extern u32 j3dDefaultAmbInfo;
+extern "C" extern u32 j3dDefaultTevColor;
+extern "C" extern u32 data_804563D8;
+extern "C" extern u32 j3dDefaultTevKColor;
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv(); // 1
-extern "C" void patch__10J3DPEBlockFv(); // 1
-extern "C" void patch__11J3DTevBlockFv(); // 1
-extern "C" bool getZCompLoc__10J3DPEBlockCFv(); // 1
-extern "C" bool getZMode__10J3DPEBlockFv(); // 1
-extern "C" bool getBlend__10J3DPEBlockFv(); // 1
-extern "C" bool getAlphaComp__10J3DPEBlockFv(); // 1
-extern "C" bool getFog__10J3DPEBlockFv(); // 1
-extern "C" bool getIndTevStage__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevStage__11J3DTevBlockFUl(); // 1
-extern "C" void getTexNo__11J3DTevBlockCFUl(); // 1
-extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevKColorSel__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevOrder__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevKColor__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevColor__11J3DTevBlockFUl(); // 1
-extern "C" bool getTevStageNum__11J3DTevBlockCFv(); // 1
-extern "C" bool getAmbColor__13J3DColorBlockFUl(); // 1
-extern "C" void setZCompLoc__10J3DPEBlockFUc(); // 1
-extern "C" void setZMode__10J3DPEBlockF8J3DZMode(); // 1
-extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend(); // 1
-extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp(); // 1
-extern "C" void __dt__19J3DIndTexCoordScaleFv(); // 1
-extern "C" void __dt__12J3DIndTexMtxFv(); // 1
-extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage(); // 1
-extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage(); // 1
-extern "C" void setTexNo__11J3DTevBlockFUlUs(); // 1
-extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable(); // 1
-extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc(); // 1
-extern "C" void setTevKColorSel__11J3DTevBlockFUlUc(); // 1
-extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder(); // 1
-extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor(); // 1
-extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10(); // 1
-extern "C" void setTevStageNum__11J3DTevBlockFUc(); // 1
-extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor(); // 1
-extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor(); // 1
-extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10(); // 1
-extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj(); // 1
-extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc(); // 1
-extern "C" void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc(); // 1
-extern "C" void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale(); // 1
-extern "C" void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID(); // 1
-extern "C" void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID(); // 1
-extern "C" void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor(); // 1
-extern "C" void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10(); // 1
-extern "C" void J3DGDSetFog__F10_GXFogTypeffff8_GXColor(); // 1
-extern "C" void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable(); // 1
-extern "C" void __dt__21J3DColorBlockLightOffFv(); // 1
-extern "C" void __dt__21J3DTexGenBlockPatchedFv(); // 1
-extern "C" void __dt__11J3DTevBlockFv(); // 1
-extern "C" bool countDLSize__11J3DTevBlockFv(); // 1
-extern "C" void load__11J3DTevBlockFv(); // 1
-extern "C" bool getNBTScale__14J3DTexGenBlockFv(); // 1
-extern "C" void diff__10J3DPEBlockFUl(); // 1
-extern "C" void reset__10J3DPEBlockFP10J3DPEBlock(); // 1
-extern "C" void reset__11J3DTevBlockFP11J3DTevBlock(); // 1
-extern "C" void diffFog__10J3DPEBlockFv(); // 1
-extern "C" void diffBlend__10J3DPEBlockFv(); // 1
-extern "C" void setFog__10J3DPEBlockFP6J3DFog(); // 1
-extern "C" void setFog__10J3DPEBlockF6J3DFog(); // 1
-extern "C" void setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp(); // 1
-extern "C" void setBlend__10J3DPEBlockFPC8J3DBlend(); // 1
-extern "C" void setZMode__10J3DPEBlockFPC8J3DZMode(); // 1
-extern "C" void setZCompLoc__10J3DPEBlockFPCUc(); // 1
-extern "C" void setDither__10J3DPEBlockFUc(); // 1
-extern "C" void setDither__10J3DPEBlockFPCUc(); // 1
-extern "C" bool getDither__10J3DPEBlockCFv(); // 1
-extern "C" bool getFogOffset__10J3DPEBlockCFv(); // 1
-extern "C" void setFogOffset__10J3DPEBlockFUl(); // 1
-extern "C" void setNBTScale__14J3DTexGenBlockF11J3DNBTScale(); // 1
-extern "C" void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale(); // 1
-extern "C" void diffAmbColor__13J3DColorBlockFv(); // 1
-extern "C" void diffLightObj__13J3DColorBlockFUl(); // 1
-extern "C" bool getLight__13J3DColorBlockFUl(); // 1
-extern "C" void load__11J3DLightObjCFUl(); // 1
-extern "C" void loadTexCoordGens__FUlP11J3DTexCoord(); // 1
-extern "C" void load__9J3DTexMtxCFUl(); // 1
-extern "C" void calc__9J3DTexMtxFPA4_Cf(); // 1
-extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf(); // 1
-extern "C" void isTexNoReg__FPv(); // 1
-extern "C" void getTexNoReg__FPv(); // 1
-extern "C" void loadTexNo__FUlRCUs(); // 1
-extern "C" void patchTexNo_PtrToIdx__FUlRCUs(); // 1
-extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo(); // 1
-extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo(); // 1
-extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void GDOverflowed(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void patchTexNoAndTexCoordScale__11J3DTevBlockFv();
+extern "C" void patch__10J3DPEBlockFv();
+extern "C" void patch__11J3DTevBlockFv();
+extern "C" bool getZCompLoc__10J3DPEBlockCFv();
+extern "C" bool getZMode__10J3DPEBlockFv();
+extern "C" bool getBlend__10J3DPEBlockFv();
+extern "C" bool getAlphaComp__10J3DPEBlockFv();
+extern "C" bool getFog__10J3DPEBlockFv();
+extern "C" bool getIndTevStage__11J3DTevBlockFUl();
+extern "C" bool getTevStage__11J3DTevBlockFUl();
+extern "C" void getTexNo__11J3DTevBlockCFUl();
+extern "C" bool getTevSwapModeTable__11J3DTevBlockFUl();
+extern "C" bool getTevKAlphaSel__11J3DTevBlockFUl();
+extern "C" bool getTevKColorSel__11J3DTevBlockFUl();
+extern "C" bool getTevOrder__11J3DTevBlockFUl();
+extern "C" bool getTevKColor__11J3DTevBlockFUl();
+extern "C" bool getTevColor__11J3DTevBlockFUl();
+extern "C" bool getTevStageNum__11J3DTevBlockCFv();
+extern "C" bool getAmbColor__13J3DColorBlockFUl();
+extern "C" void setZCompLoc__10J3DPEBlockFUc();
+extern "C" void setZMode__10J3DPEBlockF8J3DZMode();
+extern "C" void setBlend__10J3DPEBlockFRC8J3DBlend();
+extern "C" void setAlphaComp__10J3DPEBlockFRC12J3DAlphaComp();
+extern "C" void __dt__19J3DIndTexCoordScaleFv();
+extern "C" void __dt__12J3DIndTexMtxFv();
+extern "C" void setIndTevStage__11J3DTevBlockFUl14J3DIndTevStage();
+extern "C" void setTevStage__11J3DTevBlockFUl11J3DTevStage();
+extern "C" void setTexNo__11J3DTevBlockFUlUs();
+extern "C" void setTevSwapModeTable__11J3DTevBlockFUl19J3DTevSwapModeTable();
+extern "C" void setTevKAlphaSel__11J3DTevBlockFUlUc();
+extern "C" void setTevKColorSel__11J3DTevBlockFUlUc();
+extern "C" void setTevOrder__11J3DTevBlockFUl11J3DTevOrder();
+extern "C" void setTevKColor__11J3DTevBlockFUl10J3DGXColor();
+extern "C" void setTevColor__11J3DTevBlockFUl13J3DGXColorS10();
+extern "C" void setTevStageNum__11J3DTevBlockFUc();
+extern "C" void setAmbColor__13J3DColorBlockFUl10J3DGXColor();
+extern "C" void setTevKColor__11J3DTevBlockFUlPC10J3DGXColor();
+extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10();
+extern "C" void setLight__13J3DColorBlockFUlP11J3DLightObj();
+extern "C" void setAmbColor__13J3DColorBlockFUlPC10J3DGXColor();
+extern "C" void __dl__FPv();
+extern "C" void J3DGDSetTexCoordScale2__F13_GXTexCoordIDUsUcUcUsUcUc();
+extern "C" void J3DGDSetIndTexMtx__F14_GXIndTexMtxIDPA3_fSc();
+extern "C" void J3DGDSetIndTexCoordScale__F16_GXIndTexStageID14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale14_GXIndTexScale();
+extern "C" void J3DGDSetIndTexOrder__FUl13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID13_GXTexCoordID11_GXTexMapID();
+extern "C" void J3DGDSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID13_GXTexCoordID11_GXTexMapID12_GXChannelID();
+extern "C" void J3DGDSetTevKColor__F14_GXTevKColorID8_GXColor();
+extern "C" void J3DGDSetTevColorS10__F11_GXTevRegID11_GXColorS10();
+extern "C" void J3DGDSetFog__F10_GXFogTypeffff8_GXColor();
+extern "C" void J3DGDSetFogRangeAdj__FUcUsP14_GXFogAdjTable();
+extern "C" void __dt__21J3DColorBlockLightOffFv();
+extern "C" void __dt__21J3DTexGenBlockPatchedFv();
+extern "C" void __dt__11J3DTevBlockFv();
+extern "C" bool countDLSize__11J3DTevBlockFv();
+extern "C" void load__11J3DTevBlockFv();
+extern "C" bool getNBTScale__14J3DTexGenBlockFv();
+extern "C" void diff__10J3DPEBlockFUl();
+extern "C" void reset__10J3DPEBlockFP10J3DPEBlock();
+extern "C" void reset__11J3DTevBlockFP11J3DTevBlock();
+extern "C" void diffFog__10J3DPEBlockFv();
+extern "C" void diffBlend__10J3DPEBlockFv();
+extern "C" void setFog__10J3DPEBlockFP6J3DFog();
+extern "C" void setFog__10J3DPEBlockF6J3DFog();
+extern "C" void setAlphaComp__10J3DPEBlockFPC12J3DAlphaComp();
+extern "C" void setBlend__10J3DPEBlockFPC8J3DBlend();
+extern "C" void setZMode__10J3DPEBlockFPC8J3DZMode();
+extern "C" void setZCompLoc__10J3DPEBlockFPCUc();
+extern "C" void setDither__10J3DPEBlockFUc();
+extern "C" void setDither__10J3DPEBlockFPCUc();
+extern "C" bool getDither__10J3DPEBlockCFv();
+extern "C" bool getFogOffset__10J3DPEBlockCFv();
+extern "C" void setFogOffset__10J3DPEBlockFUl();
+extern "C" void setNBTScale__14J3DTexGenBlockF11J3DNBTScale();
+extern "C" void setNBTScale__14J3DTexGenBlockFPC11J3DNBTScale();
+extern "C" void diffAmbColor__13J3DColorBlockFv();
+extern "C" void diffLightObj__13J3DColorBlockFUl();
+extern "C" bool getLight__13J3DColorBlockFUl();
+extern "C" void load__11J3DLightObjCFUl();
+extern "C" void loadTexCoordGens__FUlP11J3DTexCoord();
+extern "C" void load__9J3DTexMtxCFUl();
+extern "C" void calc__9J3DTexMtxFPA4_Cf();
+extern "C" void calcPostTexMtx__9J3DTexMtxFPA4_Cf();
+extern "C" void isTexNoReg__FPv();
+extern "C" void getTexNoReg__FPv();
+extern "C" void loadTexNo__FUlRCUs();
+extern "C" void patchTexNo_PtrToIdx__FUlRCUs();
+extern "C" void __as__16J3DIndTexMtxInfoFRC16J3DIndTexMtxInfo();
+extern "C" void __as__10J3DFogInfoFRC10J3DFogInfo();
+extern "C" void __as__15J3DNBTScaleInfoFRC15J3DNBTScaleInfo();
+extern "C" void DCStoreRange();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void GDOverflowed();
+extern "C" void __destroy_arr();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const j3dDefaultMtx[48];
 extern "C" extern void* __vt__10J3DPEBlock[31];
 extern "C" extern void* __vt__11J3DIndBlock[19];

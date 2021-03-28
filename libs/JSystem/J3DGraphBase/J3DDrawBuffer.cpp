@@ -44,22 +44,24 @@ struct J3DDrawBuffer {
 // Forward References:
 // 
 
+extern "C" extern u8 sortFuncTable__13J3DDrawBuffer[72];
+extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 
-extern "C" void initialize__13J3DDrawBufferFv(); // 1
-extern "C" void allocBuffer__13J3DDrawBufferFUl(); // 1
-extern "C" void __dt__13J3DDrawBufferFv(); // 1
-extern "C" void frameInit__13J3DDrawBufferFv(); // 1
-extern "C" void entryMatSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryZSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryModelSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryNonSort__13J3DDrawBufferFP12J3DMatPacket(); // 1
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
-extern "C" void draw__13J3DDrawBufferCFv(); // 1
-extern "C" void drawHead__13J3DDrawBufferCFv(); // 1
-extern "C" void drawTail__13J3DDrawBufferCFv(); // 1
-extern "C" void __sinit_J3DDrawBuffer_cpp(); // 1
+extern "C" void initialize__13J3DDrawBufferFv();
+extern "C" void allocBuffer__13J3DDrawBufferFUl();
+extern "C" void __dt__13J3DDrawBufferFv();
+extern "C" void frameInit__13J3DDrawBufferFv();
+extern "C" void entryMatSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryMatAnmSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryZSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryModelSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryInvalidSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryNonSort__13J3DDrawBufferFP12J3DMatPacket();
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" void draw__13J3DDrawBufferCFv();
+extern "C" void drawHead__13J3DDrawBufferCFv();
+extern "C" void drawTail__13J3DDrawBufferCFv();
+extern "C" void __sinit_J3DDrawBuffer_cpp();
 extern "C" extern u8 sortFuncTable__13J3DDrawBuffer[72];
 extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 
@@ -67,22 +69,23 @@ extern "C" extern u8 entryNum__13J3DDrawBuffer[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new[](u32, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern u8 j3dSys[284];
 
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void addChildPacket__9J3DPacketFP9J3DPacket(); // 1
-extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket(); // 1
-extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void addChildPacket__9J3DPacketFP9J3DPacket();
+extern "C" void addShapePacket__12J3DMatPacketFP14J3DShapePacket();
+extern "C" void isSame__12J3DMatPacketCFP12J3DMatPacket();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern u8 j3dSys[284];
 
 // 

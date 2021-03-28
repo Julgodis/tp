@@ -91,14 +91,6 @@ struct J2DPEBlock {
 	/* 802F1840 */ void setGX();
 };
 
-struct J2DAnmColor {
-	/* 802EB390 */ void getColor(u16, _GXColor*) const;
-};
-
-struct J2DAnmTextureSRTKey {
-	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
-};
-
 struct J2DAnmTevRegKey {
 	/* 8030C0F0 */ void getTevColorReg(u16, _GXColorS10*) const;
 	/* 8030C3B4 */ void getTevKonstReg(u16, _GXColor*) const;
@@ -108,6 +100,14 @@ struct J2DAnmTexPattern {
 	/* 8030BEE8 */ void getTexNo(u16, u16*) const;
 	/* 8030BF9C */ void getResTIMG(u16) const;
 	/* 8030BFF0 */ void getPalette(u16) const;
+};
+
+struct J2DAnmTextureSRTKey {
+	/* 8030B9F0 */ void calcTransform(f32, u16, J3DTextureSRTInfo*) const;
+};
+
+struct J2DAnmColor {
+	/* 802EB390 */ void getColor(u16, _GXColor*) const;
 };
 
 struct J2DMaterial {
@@ -176,85 +176,97 @@ struct J2DColorBlock {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__11J2DIndBlock[14];
 
-extern "C" void __ct__11J2DMaterialFv(); // 1
-extern "C" void __dt__11J2DMaterialFv(); // 1
-extern "C" void setGX__11J2DMaterialFv(); // 1
-extern "C" void createTevBlock__11J2DMaterialFib(); // 1
-extern "C" void createIndBlock__11J2DMaterialFib(); // 1
-extern "C" void __ct__Q211J2DMaterial21J2DMaterialAnmPointerFv(); // 1
-extern "C" void makeAnmPointer__11J2DMaterialFv(); // 1
-extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor(); // 1
-extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern(); // 1
-extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey(); // 1
-extern "C" void animation__11J2DMaterialFv(); // 1
-extern "C" void __dt__13J2DColorBlockFv(); // 1
-extern "C" void __dt__11J2DIndBlockFv(); // 1
-extern "C" void __dt__11J2DTevBlockFv(); // 1
-extern "C" void setGX__11J2DIndBlockFv(); // 1
-extern "C" void setGX__11J2DTevBlockFv(); // 1
-extern "C" void setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor(); // 1
-extern "C" void setTevColor__11J2DTevBlockFUl13J2DGXColorS10(); // 1
-extern "C" void setTexNo__11J2DTevBlockFUlUs(); // 1
-extern "C" void setGX__15J2DIndBlockNullFv(); // 1
-extern "C" void getType__15J2DIndBlockNullFv(); // 1
-extern "C" void __dt__15J2DIndBlockNullFv(); // 1
-extern "C" void initialize__11J2DIndBlockFv(); // 1
-extern "C" void setIndTexStageNum__11J2DIndBlockFUc(); // 1
-extern "C" void setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder(); // 1
-extern "C" void setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx(); // 1
-extern "C" void setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale(); // 1
-extern "C" void __ct__11J2DTexCoordFv(); // 1
-extern "C" void __ct__12J2DColorChanFv(); // 1
-extern "C" void __dt__19J2DIndTexCoordScaleFv(); // 1
-extern "C" void __ct__19J2DIndTexCoordScaleFv(); // 1
-extern "C" void __dt__12J2DIndTexMtxFv(); // 1
-extern "C" void __ct__12J2DIndTexMtxFv(); // 1
-extern "C" void __ct__14J2DIndTexOrderFv(); // 1
-extern "C" void getColor__11J2DAnmColorCFUsP8_GXColor(); // 1
+extern "C" void __ct__11J2DMaterialFv();
+extern "C" void __dt__11J2DMaterialFv();
+extern "C" void setGX__11J2DMaterialFv();
+extern "C" void createTevBlock__11J2DMaterialFib();
+extern "C" void createIndBlock__11J2DMaterialFib();
+extern "C" void __ct__Q211J2DMaterial21J2DMaterialAnmPointerFv();
+extern "C" void makeAnmPointer__11J2DMaterialFv();
+extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor();
+extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
+extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
+extern "C" void animation__11J2DMaterialFv();
+extern "C" void __dt__13J2DColorBlockFv();
+extern "C" void __dt__11J2DIndBlockFv();
+extern "C" void __dt__11J2DTevBlockFv();
+extern "C" void setGX__11J2DIndBlockFv();
+extern "C" void setGX__11J2DTevBlockFv();
+extern "C" void setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor();
+extern "C" void setTevColor__11J2DTevBlockFUl13J2DGXColorS10();
+extern "C" void setTexNo__11J2DTevBlockFUlUs();
+extern "C" void setGX__15J2DIndBlockNullFv();
+extern "C" void getType__15J2DIndBlockNullFv();
+extern "C" void __dt__15J2DIndBlockNullFv();
+extern "C" void initialize__11J2DIndBlockFv();
+extern "C" void setIndTexStageNum__11J2DIndBlockFUc();
+extern "C" void setIndTexOrder__11J2DIndBlockFUl14J2DIndTexOrder();
+extern "C" void setIndTexMtx__11J2DIndBlockFUl12J2DIndTexMtx();
+extern "C" void setIndTexCoordScale__11J2DIndBlockFUl19J2DIndTexCoordScale();
+extern "C" void __ct__11J2DTexCoordFv();
+extern "C" void __ct__12J2DColorChanFv();
+extern "C" void __dt__19J2DIndTexCoordScaleFv();
+extern "C" void __ct__19J2DIndTexCoordScaleFv();
+extern "C" void __dt__12J2DIndTexMtxFv();
+extern "C" void __ct__12J2DIndTexMtxFv();
+extern "C" void __ct__14J2DIndTexOrderFv();
+extern "C" void getColor__11J2DAnmColorCFUsP8_GXColor();
 extern "C" extern void* __vt__11J2DIndBlock[14];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new(u32, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new(u32, int);
+void operator delete(void*);
+extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
+extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
+extern "C" extern void* __vt__15J2DIndBlockFull[14];
+extern "C" extern void* __vt__11J2DTevBlock[47];
+extern "C" extern void* __vt__14J2DTexGenBlock[3 + 1 /* padding */];
+extern "C" extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
+extern "C" extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
+extern "C" extern u32 j2dDefaultBlendInfo;
+extern "C" extern u32 j2dDefaultColorChanInfo;
+extern "C" extern u8 struct_804561AC[4];
 
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nw__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut(); // 1
-extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexMtx__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexOrder__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexStageNum__11J2DIndBlockCFv(); // 1
-extern "C" void initialize__13J2DColorBlockFv(); // 1
-extern "C" void setGX__13J2DColorBlockFv(); // 1
-extern "C" void initialize__14J2DTexGenBlockFv(); // 1
-extern "C" void setGX__14J2DTexGenBlockFv(); // 1
-extern "C" void __dt__14J2DTexGenBlockFv(); // 1
-extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
-extern "C" void getTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
-extern "C" void __ct__12J2DTevBlock1Fv(); // 1
-extern "C" void __ct__12J2DTevBlock2Fv(); // 1
-extern "C" void __ct__12J2DTevBlock4Fv(); // 1
-extern "C" void __ct__12J2DTevBlock8Fv(); // 1
-extern "C" void __ct__13J2DTevBlock16Fv(); // 1
-extern "C" void initialize__10J2DPEBlockFv(); // 1
-extern "C" void setGX__10J2DPEBlockFv(); // 1
-extern "C" void calcTransform__19J2DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo(); // 1
-extern "C" void getTexNo__16J2DAnmTexPatternCFUsPUs(); // 1
-extern "C" void getResTIMG__16J2DAnmTexPatternCFUs(); // 1
-extern "C" void getPalette__16J2DAnmTexPatternCFUs(); // 1
-extern "C" void getTevColorReg__15J2DAnmTevRegKeyCFUsP11_GXColorS10(); // 1
-extern "C" void getTevKonstReg__15J2DAnmTevRegKeyCFUsP8_GXColor(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nw__FUli();
+extern "C" void __dl__FPv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette7_GXTlut();
+extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl();
+extern "C" bool getIndTexMtx__11J2DIndBlockFUl();
+extern "C" bool getIndTexOrder__11J2DIndBlockFUl();
+extern "C" bool getIndTexStageNum__11J2DIndBlockCFv();
+extern "C" void initialize__13J2DColorBlockFv();
+extern "C" void setGX__13J2DColorBlockFv();
+extern "C" void initialize__14J2DTexGenBlockFv();
+extern "C" void setGX__14J2DTexGenBlockFv();
+extern "C" void __dt__14J2DTexGenBlockFv();
+extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
+extern "C" void getTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
+extern "C" void __ct__12J2DTevBlock1Fv();
+extern "C" void __ct__12J2DTevBlock2Fv();
+extern "C" void __ct__12J2DTevBlock4Fv();
+extern "C" void __ct__12J2DTevBlock8Fv();
+extern "C" void __ct__13J2DTevBlock16Fv();
+extern "C" void initialize__10J2DPEBlockFv();
+extern "C" void setGX__10J2DPEBlockFv();
+extern "C" void calcTransform__19J2DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+extern "C" void getTexNo__16J2DAnmTexPatternCFUsPUs();
+extern "C" void getResTIMG__16J2DAnmTexPatternCFUs();
+extern "C" void getPalette__16J2DAnmTexPatternCFUs();
+extern "C" void getTevColorReg__15J2DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void getTevKonstReg__15J2DAnmTevRegKeyCFUsP8_GXColor();
+extern "C" void __construct_array();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
 extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
 extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];

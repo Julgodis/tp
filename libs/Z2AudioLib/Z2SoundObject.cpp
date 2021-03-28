@@ -19,10 +19,10 @@ struct Z2SoundStarter {
 	/* 802AAEDC */ void setPortData(JAISoundHandle*, u32, u16, s8);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SoundObjSimple {
@@ -141,38 +141,41 @@ struct JAISound {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__15Z2SoundObjAnime[8];
+extern "C" extern void* __vt__15Z2SoundObjArrow[8];
+extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 
-extern "C" void __ct__14Z2SoundObjBaseFv(); // 1
-extern "C" void __dt__14Z2SoundObjBaseFv(); // 1
-extern "C" void init__14Z2SoundObjBaseFP3VecUc(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void framework__14Z2SoundObjBaseFUlSc(); // 1
-extern "C" void dispose__14Z2SoundObjBaseFv(); // 1
-extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool(); // 1
-extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase(); // 1
-extern "C" void __ct__21Z2DopplerSoundObjBaseFv(); // 1
-extern "C" void __dt__21Z2DopplerSoundObjBaseFv(); // 1
-extern "C" void init__21Z2DopplerSoundObjBaseFP3VecUc(); // 1
-extern "C" void framework__21Z2DopplerSoundObjBaseFUlSc(); // 1
-extern "C" void startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void init__16Z2SoundObjSimpleFP3VecUc(); // 1
-extern "C" void startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc(); // 1
-extern "C" void startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc(); // 1
-extern "C" void __ct__15Z2SoundObjArrowFv(); // 1
-extern "C" void init__15Z2SoundObjArrowFP3VecUc(); // 1
-extern "C" void __ct__15Z2SoundObjAnimeFv(); // 1
-extern "C" void init__15Z2SoundObjAnimeFP3VecUc(); // 1
-extern "C" void initAnime__15Z2SoundObjAnimeFPvbff(); // 1
-extern "C" void ageSounds___15Z2SoundObjAnimeFv(); // 1
-extern "C" void updateAnime__15Z2SoundObjAnimeFff(); // 1
-extern "C" void updateSoundLifeTime___15Z2SoundObjAnimeFff(); // 1
-extern "C" void func_802BF660(); // 1
-extern "C" void func_802BF890(); // 1
-extern "C" void func_802BF898(); // 1
+extern "C" void __ct__14Z2SoundObjBaseFv();
+extern "C" void __dt__14Z2SoundObjBaseFv();
+extern "C" void init__14Z2SoundObjBaseFP3VecUc();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void framework__14Z2SoundObjBaseFUlSc();
+extern "C" void dispose__14Z2SoundObjBaseFv();
+extern "C" void stopOK__14Z2SoundObjBaseFR17Z2SoundHandlePool();
+extern "C" void startSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startLevelSound__14Z2SoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startCollisionSE__14Z2SoundObjBaseFUlUlP14Z2SoundObjBase();
+extern "C" void __ct__21Z2DopplerSoundObjBaseFv();
+extern "C" void __dt__21Z2DopplerSoundObjBaseFv();
+extern "C" void init__21Z2DopplerSoundObjBaseFP3VecUc();
+extern "C" void framework__21Z2DopplerSoundObjBaseFUlSc();
+extern "C" void startSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc();
+extern "C" void startLevelSound__21Z2DopplerSoundObjBaseF10JAISoundIDUlSc();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void init__16Z2SoundObjSimpleFP3VecUc();
+extern "C" void startSound__16Z2SoundObjSimpleF10JAISoundIDUlSc();
+extern "C" void startLevelSound__16Z2SoundObjSimpleF10JAISoundIDUlSc();
+extern "C" void __ct__15Z2SoundObjArrowFv();
+extern "C" void init__15Z2SoundObjArrowFP3VecUc();
+extern "C" void __ct__15Z2SoundObjAnimeFv();
+extern "C" void init__15Z2SoundObjAnimeFP3VecUc();
+extern "C" void initAnime__15Z2SoundObjAnimeFPvbff();
+extern "C" void ageSounds___15Z2SoundObjAnimeFv();
+extern "C" void updateAnime__15Z2SoundObjAnimeFff();
+extern "C" void updateSoundLifeTime___15Z2SoundObjAnimeFff();
+extern "C" void func_802BF660();
+extern "C" void func_802BF890();
+extern "C" void func_802BF898();
 extern "C" extern void* __vt__15Z2SoundObjAnime[8];
 extern "C" extern void* __vt__15Z2SoundObjArrow[8];
 extern "C" extern void* __vt__16Z2SoundObjSimple[8];
@@ -181,38 +184,43 @@ extern "C" extern void* __vt__16Z2SoundObjSimple[8];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 __float_max;
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B88[4];
 
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void acceptsNewAudible__8JAISoundCFv(); // 1
-extern "C" void func_802A2474(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf(); // 1
-extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void __ct__14Z2SoundHandlesFv(); // 1
-extern "C" void __dt__14Z2SoundHandlesFv(); // 1
-extern "C" void initHandlesPool__14Z2SoundHandlesFUc(); // 1
-extern "C" void deleteHandlesPool__14Z2SoundHandlesFv(); // 1
-extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID(); // 1
-extern "C" void getHandleUserData__14Z2SoundHandlesFUl(); // 1
-extern "C" void getFreeHandle__14Z2SoundHandlesFv(); // 1
-extern "C" void getLowPrioSound__14Z2SoundHandlesF10JAISoundID(); // 1
-extern "C" void func_802AB538(); // 1
-extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID(); // 1
-extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getNthLink__10JSUPtrListCFUl(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void acceptsNewAudible__8JAISoundCFv();
+extern "C" void func_802A2474();
+extern "C" void stop__8JAISoundFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void getStartSoundIndex__17JAUSoundAnimationCFf();
+extern "C" void getEndSoundIndex__17JAUSoundAnimationCFf();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void __ct__14Z2SoundHandlesFv();
+extern "C" void __dt__14Z2SoundHandlesFv();
+extern "C" void initHandlesPool__14Z2SoundHandlesFUc();
+extern "C" void deleteHandlesPool__14Z2SoundHandlesFv();
+extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
+extern "C" void getHandleUserData__14Z2SoundHandlesFUl();
+extern "C" void getFreeHandle__14Z2SoundHandlesFv();
+extern "C" void getLowPrioSound__14Z2SoundHandlesF10JAISoundID();
+extern "C" void func_802AB538();
+extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID();
+extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID();
+extern "C" void __dl__FPv();
+extern "C" void getNthLink__10JSUPtrListCFUl();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u32 __float_max;
 extern "C" extern u8 data_80450B4C[4];
 extern "C" extern u8 data_80450B60[4];

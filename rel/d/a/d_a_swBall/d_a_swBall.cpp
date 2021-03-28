@@ -50,27 +50,29 @@ struct Vec {
 // Forward References:
 // 
 
-static void s_ball_sub(void*, void*); // 2
-static void daSwBall_Execute(daSwBall_c*); // 2
-static void daSwBall_Delete(daSwBall_c*); // 2
-static void daSwBall_Create(fopAc_ac_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
+static void s_ball_sub(void*, void*);
+static void daSwBall_Execute(daSwBall_c*);
+static void daSwBall_Delete(daSwBall_c*);
+static void daSwBall_Create(fopAc_ac_c*);
+static void cLib_calcTimer__template0(u8*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_SwBall[12];
 
-extern "C" static void s_ball_sub__FPvPv(); // 1
-extern "C" void checkArea_sub__10daSwBall_cFP10fopAc_ac_c(); // 1
-extern "C" void checkArea__10daSwBall_cFv(); // 1
-extern "C" void search_ball__10daSwBall_cFv(); // 1
-extern "C" void Create__10daSwBall_cFv(); // 1
-extern "C" void create__10daSwBall_cFv(); // 1
-extern "C" void execute__10daSwBall_cFv(); // 1
-extern "C" void actionRun__10daSwBall_cFv(); // 1
-extern "C" void actionStop__10daSwBall_cFv(); // 1
-extern "C" void PutCrrPos__10daSwBall_cFv(); // 1
-extern "C" bool _delete__10daSwBall_cFv(); // 1
-extern "C" static void daSwBall_Execute__FP10daSwBall_c(); // 1
-extern "C" static void daSwBall_Delete__FP10daSwBall_c(); // 1
-extern "C" static void daSwBall_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80D4E974(); // 1
+extern "C" static void s_ball_sub__FPvPv();
+extern "C" void checkArea_sub__10daSwBall_cFP10fopAc_ac_c();
+extern "C" void checkArea__10daSwBall_cFv();
+extern "C" void search_ball__10daSwBall_cFv();
+extern "C" void Create__10daSwBall_cFv();
+extern "C" void create__10daSwBall_cFv();
+extern "C" void execute__10daSwBall_cFv();
+extern "C" void actionRun__10daSwBall_cFv();
+extern "C" void actionStop__10daSwBall_cFv();
+extern "C" void PutCrrPos__10daSwBall_cFv();
+extern "C" bool _delete__10daSwBall_cFv();
+extern "C" static void daSwBall_Execute__FP10daSwBall_c();
+extern "C" static void daSwBall_Delete__FP10daSwBall_c();
+extern "C" static void daSwBall_Create__FP10fopAc_ac_c();
+extern "C" static void func_80D4E974();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_SwBall[12];
 
@@ -78,36 +80,39 @@ extern "C" extern void* g_profile_SwBall[12];
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
-void fpcFCtRq_Do(fast_create_request*); // 2
-void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcSch_JudgeByID(void*, void*);
+void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*));
+void fpcFCtRq_Do(fast_create_request*);
+void dLib_checkActorInRectangle(fopAc_ac_c*, fopAc_ac_c*, cXyz const*, cXyz const*);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_targetAngleY(Vec const*, Vec const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" void initZone__20dStage_roomControl_cFv(); // 1
-extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+extern "C" void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" void initZone__20dStage_roomControl_cFv();
+extern "C" void dLib_checkActorInRectangle__FP10fopAc_ac_cP10fopAc_ac_cPC4cXyzPC4cXyz();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

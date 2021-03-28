@@ -54,26 +54,28 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void J3DLoadCPCmd(u8, u32); // 2
-static void J3DLoadArrayBasePtr(_GXAttr, void*); // 2
+static void J3DLoadCPCmd(u8, u32);
+static void J3DLoadArrayBasePtr(_GXAttr, void*);
+extern "C" extern void* __vt__8J3DShape[6];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void initialize__8J3DShapeFv(); // 1
-extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl(); // 1
-extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr(); // 1
-extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f(); // 1
-extern "C" void countBumpMtxNum__8J3DShapeCFv(); // 1
-extern "C" static void J3DLoadCPCmd__FUcUl(); // 1
-extern "C" static void J3DLoadArrayBasePtr__F7_GXAttrPv(); // 1
-extern "C" void loadVtxArray__8J3DShapeCFv(); // 1
-extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape(); // 1
-extern "C" void makeVtxArrayCmd__8J3DShapeFv(); // 1
-extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1
-extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
-extern "C" void setArrayAndBindPipeline__8J3DShapeCFv(); // 1
-extern "C" void drawFast__8J3DShapeCFv(); // 1
-extern "C" void draw__8J3DShapeCFv(); // 1
-extern "C" void simpleDraw__8J3DShapeCFv(); // 1
-extern "C" void simpleDrawCache__8J3DShapeCFv(); // 1
+extern "C" void initialize__8J3DShapeFv();
+extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
+extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
+extern "C" void calcNBTScale__8J3DShapeFRC3VecPA3_A3_fPA3_A3_f();
+extern "C" void countBumpMtxNum__8J3DShapeCFv();
+extern "C" static void J3DLoadCPCmd__FUcUl();
+extern "C" static void J3DLoadArrayBasePtr__F7_GXAttrPv();
+extern "C" void loadVtxArray__8J3DShapeCFv();
+extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
+extern "C" void makeVtxArrayCmd__8J3DShapeFv();
+extern "C" void makeVcdVatCmd__8J3DShapeFv();
+extern "C" void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" void setArrayAndBindPipeline__8J3DShapeCFv();
+extern "C" void drawFast__8J3DShapeCFv();
+extern "C" void draw__8J3DShapeCFv();
+extern "C" void simpleDraw__8J3DShapeCFv();
+extern "C" void simpleDrawCache__8J3DShapeCFv();
 extern "C" extern void* __vt__8J3DShape[6];
 extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
@@ -81,36 +83,43 @@ extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 // External References:
 // 
 
-void* operator new[](u32); // 2
-void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool); // 2
-void J3DFifoLoadPosMtxImm(f32 (* )[4], u32); // 2
-void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32); // 2
+void* operator new[](u32);
+void J3DGDSetVtxAttrFmtv(_GXVtxFmt, _GXVtxAttrFmtList const*, bool);
+void J3DFifoLoadPosMtxImm(f32 (* )[4], u32);
+void J3DFifoLoadNrmMtxImm(f32 (* )[4], u32);
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 j3dDefaultViewNo[4 + 4 /* padding */];
+extern "C" extern u8 sCurrentPipeline__11J3DShapeMtx[4];
+extern "C" extern u8 sCurrentScaleFlag__11J3DShapeMtx[4];
+extern "C" extern u8 struct_804515B0[4];
+extern "C" extern u8 sTexMtxLoadType__11J3DShapeMtx[4];
+extern "C" extern u8 __GDCurrentDL[4];
 
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb(); // 1
-extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl(); // 1
-extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl(); // 1
-extern "C" void resetMtxLoadCache__11J3DShapeMtxFv(); // 1
-extern "C" void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl(); // 1
-extern "C" void draw__12J3DShapeDrawCFv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void GDSetVtxDescv(); // 1
-extern "C" void GDSetArray(); // 1
-extern "C" void GDSetArrayRaw(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nwa__FUl();
+extern "C" void J3DGDSetVtxAttrFmtv__F9_GXVtxFmtPC17_GXVtxAttrFmtListb();
+extern "C" void J3DFifoLoadPosMtxImm__FPA4_fUl();
+extern "C" void J3DFifoLoadNrmMtxImm__FPA4_fUl();
+extern "C" void resetMtxLoadCache__11J3DShapeMtxFv();
+extern "C" void addTexMtxIndexInDL__12J3DShapeDrawFUlUlUl();
+extern "C" void draw__12J3DShapeDrawCFv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSDisableScheduler();
+extern "C" void OSEnableScheduler();
+extern "C" void GXSetArray();
+extern "C" void GXCallDisplayList();
+extern "C" void GDInitGDLObj();
+extern "C" void GDFlushCurrToMem();
+extern "C" void GDPadCurr32();
+extern "C" void GDSetVtxDescv();
+extern "C" void GDSetArray();
+extern "C" void GDSetArrayRaw();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 j3dDefaultViewNo[4 + 4 /* padding */];
 extern "C" extern u8 sCurrentPipeline__11J3DShapeMtx[4];

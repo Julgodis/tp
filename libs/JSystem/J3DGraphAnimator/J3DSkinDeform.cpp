@@ -63,73 +63,75 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void J3DPSWeightMTXMultVec(f32 (* )[4], f32, Vec*, Vec*); // 2
-static void J3DPSWeightMTXMultVecSR(f32 (* )[4], f32, Vec*, Vec*); // 2
+static void J3DPSWeightMTXMultVec(f32 (* )[4], f32, Vec*, Vec*);
+static void J3DPSWeightMTXMultVecSR(f32 (* )[4], f32, Vec*, Vec*);
+extern "C" extern char const* const J3DSkinDeform__stringBase0;
 
-extern "C" void __ct__12J3DSkinNListFv(); // 1
-extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec(); // 1
-extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec(); // 1
-extern "C" void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv(); // 1
-extern "C" void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv(); // 1
-extern "C" void __ct__13J3DSkinDeformFv(); // 1
-extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer(); // 1
-extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData(); // 1
-extern "C" void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer(); // 1
-extern "C" void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
-extern "C" void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
-extern "C" void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
-extern "C" void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
-extern "C" void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer(); // 1
-extern "C" void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer(); // 1
-extern "C" void deform__13J3DSkinDeformFP8J3DModel(); // 1
-extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer(); // 1
-extern "C" void calc__15J3DVtxColorCalcFP8J3DModel(); // 1
-extern "C" void __dt__13J3DSkinDeformFv(); // 1
+extern "C" void __ct__12J3DSkinNListFv();
+extern "C" static void J3DPSWeightMTXMultVec__FPA4_ffP3VecP3Vec();
+extern "C" static void J3DPSWeightMTXMultVecSR__FPA4_ffP3VecP3Vec();
+extern "C" void calcSkin_VtxPosF32__12J3DSkinNListFPA4_fPvPv();
+extern "C" void calcSkin_VtxNrmF32__12J3DSkinNListFPA4_fPvPv();
+extern "C" void __ct__13J3DSkinDeformFv();
+extern "C" void initSkinInfo__13J3DSkinDeformFP12J3DModelData();
+extern "C" void initMtxIndexArray__13J3DSkinDeformFP12J3DModelData();
+extern "C" void changeFastSkinDL__13J3DSkinDeformFP12J3DModelData();
+extern "C" void calcNrmMtx__13J3DSkinDeformFP12J3DMtxBuffer();
+extern "C" void transformVtxPosNrm__13J3DSkinDeformFP12J3DModelData();
+extern "C" void calcAnmInvJointMtx__13J3DSkinDeformFP12J3DMtxBuffer();
+extern "C" void deformFastVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+extern "C" void deformFastVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+extern "C" void deformVtxPos_F32__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+extern "C" void deformVtxPos_S16__13J3DSkinDeformCFP15J3DVertexBufferP12J3DMtxBuffer();
+extern "C" void deformVtxNrm_F32__13J3DSkinDeformCFP15J3DVertexBuffer();
+extern "C" void deformVtxNrm_S16__13J3DSkinDeformCFP15J3DVertexBuffer();
+extern "C" void deform__13J3DSkinDeformFP8J3DModel();
+extern "C" void deform__13J3DSkinDeformFP15J3DVertexBufferP12J3DMtxBuffer();
+extern "C" void calc__15J3DVtxColorCalcFP8J3DModel();
+extern "C" void __dt__13J3DSkinDeformFv();
 extern "C" extern char const* const J3DSkinDeform__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void J3DGQRSetup7(u32, u32, u32, u32); // 2
-void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+void J3DGQRSetup7(u32, u32, u32, u32);
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
+extern "C" extern u8 PSMulUnit01[8];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void J3DGQRSetup7__FUlUlUlUl(); // 1
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f(); // 1
-extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void J3DGQRSetup7__FUlUlUlUl();
+extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
+extern "C" void makeVcdVatCmd__8J3DShapeFv();
+extern "C" void DCStoreRange();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void __construct_new_array();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 PSMulUnit01[8];
 
 // 

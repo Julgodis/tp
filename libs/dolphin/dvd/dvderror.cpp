@@ -12,16 +12,16 @@
 // 
 
 
-extern "C" static void ErrorCode2Num(); // 1
-extern "C" void __DVDStoreErrorCode(); // 1
+extern "C" static void ErrorCode2Num();
+extern "C" void __DVDStoreErrorCode();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
 
 // 
 // Declarations:

@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_8059DE70[2];
 
 extern void* const data_8059DE70[2];
 
@@ -19,7 +20,7 @@ extern void* const data_8059DE70[2];
 // 
 
 
-extern "C" void __sinit_d_a_obj_yobikusa_cpp(); // 1
+extern "C" void __sinit_d_a_obj_yobikusa_cpp();
 
 // 
 // Declarations:

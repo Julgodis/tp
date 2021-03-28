@@ -22,33 +22,36 @@ struct dKyeff2_c {
 // Forward References:
 // 
 
-static void dKyeff2_Draw(dKyeff2_c*); // 2
-static void dKyeff2_Execute(dKyeff2_c*); // 2
-static bool dKyeff2_IsDelete(dKyeff2_c*); // 2
-static void dKyeff2_Delete(dKyeff2_c*); // 2
-static void dKyeff2_Create(kankyo_class*); // 2
+static void dKyeff2_Draw(dKyeff2_c*);
+static void dKyeff2_Execute(dKyeff2_c*);
+static bool dKyeff2_IsDelete(dKyeff2_c*);
+static void dKyeff2_Delete(dKyeff2_c*);
+static void dKyeff2_Create(kankyo_class*);
+extern "C" extern void* g_profile_KYEFF2[10 + 1 /* padding */];
 
-extern "C" static void dKyeff2_Draw__FP9dKyeff2_c(); // 1
-extern "C" void execute__9dKyeff2_cFv(); // 1
-extern "C" static void dKyeff2_Execute__FP9dKyeff2_c(); // 1
-extern "C" static bool dKyeff2_IsDelete__FP9dKyeff2_c(); // 1
-extern "C" static void dKyeff2_Delete__FP9dKyeff2_c(); // 1
-extern "C" static void dKyeff2_Create__FP12kankyo_class(); // 1
+extern "C" static void dKyeff2_Draw__FP9dKyeff2_c();
+extern "C" void execute__9dKyeff2_cFv();
+extern "C" static void dKyeff2_Execute__FP9dKyeff2_c();
+extern "C" static bool dKyeff2_IsDelete__FP9dKyeff2_c();
+extern "C" static void dKyeff2_Delete__FP9dKyeff2_c();
+extern "C" static void dKyeff2_Create__FP12kankyo_class();
 extern "C" extern void* g_profile_KYEFF2[10 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void dKyw_wether_init2(); // 2
-void dKyw_wether_delete2(); // 2
-void dKyw_wether_move_draw2(); // 2
-void dKyw_wether_draw2(); // 2
+void dKyw_wether_init2();
+void dKyw_wether_delete2();
+void dKyw_wether_move_draw2();
+void dKyw_wether_draw2();
+extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void dKyw_wether_init2__Fv(); // 1
-extern "C" void dKyw_wether_delete2__Fv(); // 1
-extern "C" void dKyw_wether_move_draw2__Fv(); // 1
-extern "C" void dKyw_wether_draw2__Fv(); // 1
+extern "C" void dKyw_wether_init2__Fv();
+extern "C" void dKyw_wether_delete2__Fv();
+extern "C" void dKyw_wether_move_draw2__Fv();
+extern "C" void dKyw_wether_draw2__Fv();
 extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 

@@ -45,69 +45,74 @@ struct Vec {
 // Forward References:
 // 
 
-static void daPasserMng_Execute(daPasserMng_c*); // 2
-static bool daPasserMng_IsDelete(daPasserMng_c*); // 2
-static void daPasserMng_Delete(daPasserMng_c*); // 2
-static void daPasserMng_Create(fopAc_ac_c*); // 2
-static void cLib_getRndValue__template0(int, int); // 2
+static void daPasserMng_Execute(daPasserMng_c*);
+static bool daPasserMng_IsDelete(daPasserMng_c*);
+static void daPasserMng_Delete(daPasserMng_c*);
+static void daPasserMng_Create(fopAc_ac_c*);
+static void cLib_getRndValue__template0(int, int);
+extern "C" extern void* g_profile_PASSER_MNG[12];
 
-extern "C" static void daPasserMng_Execute__FP13daPasserMng_c(); // 1
-extern "C" void execute__13daPasserMng_cFv(); // 1
-extern "C" void getPasserParam__13daPasserMng_cFv(); // 1
-extern "C" void getLuggageParamHigh__13daPasserMng_cFUl(); // 1
-extern "C" static bool daPasserMng_IsDelete__FP13daPasserMng_c(); // 1
-extern "C" static void daPasserMng_Delete__FP13daPasserMng_c(); // 1
-extern "C" static void daPasserMng_Create__FP10fopAc_ac_c(); // 1
-extern "C" void create__13daPasserMng_cFv(); // 1
-extern "C" void create_init__13daPasserMng_cFv(); // 1
-extern "C" static void func_80D46B9C(); // 1
+extern "C" static void daPasserMng_Execute__FP13daPasserMng_c();
+extern "C" void execute__13daPasserMng_cFv();
+extern "C" void getPasserParam__13daPasserMng_cFv();
+extern "C" void getLuggageParamHigh__13daPasserMng_cFUl();
+extern "C" static bool daPasserMng_IsDelete__FP13daPasserMng_c();
+extern "C" static void daPasserMng_Delete__FP13daPasserMng_c();
+extern "C" static void daPasserMng_Create__FP10fopAc_ac_c();
+extern "C" void create__13daPasserMng_cFv();
+extern "C" void create_init__13daPasserMng_cFv();
+extern "C" static void func_80D46B9C();
 extern "C" extern void* g_profile_PASSER_MNG[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_SearchByID(unsigned int, fopAc_ac_c**); // 2
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void dPath_GetPnt(dPath const*, int); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
-void dKy_getDarktime_hour(); // 2
-void dKy_getDarktime_minute(); // 2
-void dKy_getDarktime_week(); // 2
-void dKy_get_dayofweek(); // 2
-void dKy_darkworld_check(); // 2
-void cM_rndF(f32); // 2
-void cLib_targetAngleY(Vec const&, Vec const&); // 2
-void* operator new[](u32); // 2
-void operator delete[](void*); // 2
+void fopAcM_SearchByID(unsigned int, fopAc_ac_c**);
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void dPath_GetPnt(dPath const*, int);
+void dPath_GetRoomPath(int, int);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void dKy_getDarktime_hour();
+void dKy_getDarktime_minute();
+void dKy_getDarktime_week();
+void dKy_get_dayofweek();
+void dKy_darkworld_check();
+void cM_rndF(f32);
+void cLib_targetAngleY(Vec const&, Vec const&);
+void* operator new[](u32);
+void operator delete[](void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" void dKy_getDarktime_hour__Fv(); // 1
-extern "C" void dKy_getDarktime_minute__Fv(); // 1
-extern "C" void dKy_getDarktime_week__Fv(); // 1
-extern "C" void dKy_get_dayofweek__Fv(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cLib_targetAngleY__FRC3VecRC3Vec(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_SearchByID__FUiPP10fopAc_ac_c();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void dPath_GetPnt__FPC5dPathi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void dKy_getDarktime_hour__Fv();
+extern "C" void dKy_getDarktime_minute__Fv();
+extern "C" void dKy_getDarktime_week__Fv();
+extern "C" void dKy_get_dayofweek__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rndF__Ff();
+extern "C" void cLib_targetAngleY__FRC3VecRC3Vec();
+extern "C" void* __nwa__FUl();
+extern "C" void __dla__FPv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

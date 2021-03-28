@@ -91,42 +91,44 @@ struct DynamicModuleControl {
 // Forward References:
 // 
 
-static void calcSum2(u16 const*, u32); // 2
+static void calcSum2(u16 const*, u32);
+extern "C" extern char const* const DynamicLink__stringBase0;
+extern "C" extern void* __vt__20DynamicModuleControl[13];
 
-extern "C" void __dt__24DynamicModuleControlBaseFv(); // 1
-extern "C" void __ct__24DynamicModuleControlBaseFv(); // 1
-extern "C" void link__24DynamicModuleControlBaseFv(); // 1
-extern "C" void unlink__24DynamicModuleControlBaseFv(); // 1
-extern "C" void load_async__24DynamicModuleControlBaseFv(); // 1
-extern "C" void force_unlink__24DynamicModuleControlBaseFv(); // 1
-extern "C" void dump__24DynamicModuleControlBaseFv(); // 1
-extern "C" void __ct__20DynamicModuleControlFPCc(); // 1
-extern "C" void mountCallback__20DynamicModuleControlFPv(); // 1
-extern "C" void initialize__20DynamicModuleControlFv(); // 1
-extern "C" void callback__20DynamicModuleControlFPv(); // 1
-extern "C" static void calcSum2__FPCUsUl(); // 1
-extern "C" void do_load__20DynamicModuleControlFv(); // 1
-extern "C" void do_load_async__20DynamicModuleControlFv(); // 1
-extern "C" void do_unload__20DynamicModuleControlFv(); // 1
-extern "C" void dump2__20DynamicModuleControlFv(); // 1
-extern "C" void do_link__20DynamicModuleControlFv(); // 1
-extern "C" void do_unlink__20DynamicModuleControlFv(); // 1
-extern "C" void getModuleSize__20DynamicModuleControlCFv(); // 1
-extern "C" void getModuleTypeString__20DynamicModuleControlCFv(); // 1
-extern "C" void ModuleProlog(); // 1
-extern "C" void ModuleEpilog(); // 1
-extern "C" void ModuleUnresolved(); // 1
-extern "C" void ModuleConstructorsX(); // 1
-extern "C" void ModuleDestructorsX(); // 1
-extern "C" bool do_link__24DynamicModuleControlBaseFv(); // 1
-extern "C" bool do_load__24DynamicModuleControlBaseFv(); // 1
-extern "C" bool do_unload__24DynamicModuleControlBaseFv(); // 1
-extern "C" bool do_unlink__24DynamicModuleControlBaseFv(); // 1
-extern "C" bool do_load_async__24DynamicModuleControlBaseFv(); // 1
-extern "C" void dump2__24DynamicModuleControlBaseFv(); // 1
-extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv(); // 1
-extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv(); // 1
-extern "C" void getModuleName__20DynamicModuleControlCFv(); // 1
+extern "C" void __dt__24DynamicModuleControlBaseFv();
+extern "C" void __ct__24DynamicModuleControlBaseFv();
+extern "C" void link__24DynamicModuleControlBaseFv();
+extern "C" void unlink__24DynamicModuleControlBaseFv();
+extern "C" void load_async__24DynamicModuleControlBaseFv();
+extern "C" void force_unlink__24DynamicModuleControlBaseFv();
+extern "C" void dump__24DynamicModuleControlBaseFv();
+extern "C" void __ct__20DynamicModuleControlFPCc();
+extern "C" void mountCallback__20DynamicModuleControlFPv();
+extern "C" void initialize__20DynamicModuleControlFv();
+extern "C" void callback__20DynamicModuleControlFPv();
+extern "C" static void calcSum2__FPCUsUl();
+extern "C" void do_load__20DynamicModuleControlFv();
+extern "C" void do_load_async__20DynamicModuleControlFv();
+extern "C" void do_unload__20DynamicModuleControlFv();
+extern "C" void dump2__20DynamicModuleControlFv();
+extern "C" void do_link__20DynamicModuleControlFv();
+extern "C" void do_unlink__20DynamicModuleControlFv();
+extern "C" void getModuleSize__20DynamicModuleControlCFv();
+extern "C" void getModuleTypeString__20DynamicModuleControlCFv();
+extern "C" void ModuleProlog();
+extern "C" void ModuleEpilog();
+extern "C" void ModuleUnresolved();
+extern "C" void ModuleConstructorsX();
+extern "C" void ModuleDestructorsX();
+extern "C" bool do_link__24DynamicModuleControlBaseFv();
+extern "C" bool do_load__24DynamicModuleControlBaseFv();
+extern "C" bool do_unload__24DynamicModuleControlBaseFv();
+extern "C" bool do_unlink__24DynamicModuleControlBaseFv();
+extern "C" bool do_load_async__24DynamicModuleControlBaseFv();
+extern "C" void dump2__24DynamicModuleControlBaseFv();
+extern "C" void getModuleTypeString__24DynamicModuleControlBaseCFv();
+extern "C" bool getModuleSize__24DynamicModuleControlBaseCFv();
+extern "C" void getModuleName__20DynamicModuleControlCFv();
 extern "C" extern char const* const DynamicLink__stringBase0;
 extern "C" extern void* __vt__20DynamicModuleControl[13];
 
@@ -134,39 +136,39 @@ extern "C" extern void* __vt__20DynamicModuleControl[13];
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void operator delete(void*); // 2
+void mDoExt_getArchiveHeap();
+void operator delete(void*);
 
-extern "C" void OSReport(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
-extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
-extern "C" void __dt__20DynamicModuleControlFv(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void resize__7JKRHeapFPvUlP7JKRHeap(); // 1
-extern "C" void getSize__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
-extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc(); // 1
-extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
-extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSLink(); // 1
-extern "C" void OSLinkFixed(); // 1
-extern "C" void OSUnlink(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
+extern "C" void OSReport();
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
+extern "C" void __dt__20DynamicModuleControlFv();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void resize__7JKRHeapFPvUlP7JKRHeap();
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
+extern "C" void __dl__FPv();
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
+extern "C" void mount__10JKRArchiveFPCcQ210JKRArchive10EMountModeP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void loadToMainRAM__12JKRDvdRipperFPCcPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void JUTReportConsole_f();
+extern "C" void OSGetStackPointer();
+extern "C" void OSLink();
+extern "C" void OSLinkFixed();
+extern "C" void OSUnlink();
+extern "C" void OSGetTime();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void snprintf();
 
 // 
 // Declarations:

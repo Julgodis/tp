@@ -23,9 +23,6 @@ struct daNpcT_motionAnmData_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DModel {
-};
-
 struct Vec {
 };
 
@@ -34,6 +31,9 @@ struct cXyz {
 };
 
 struct J3DJoint {
+};
+
+struct J3DModel {
 };
 
 struct daNpcT_c {
@@ -97,6 +97,12 @@ struct dSv_memBit_c {
 	/* 80034860 */ void isSwitch(int) const;
 };
 
+struct dMsgFlow_c {
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
+};
+
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -105,12 +111,6 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
-};
-
-struct dMsgFlow_c {
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
 };
 
 struct dShopSystem_c {
@@ -218,60 +218,62 @@ struct ShopCam_action_c {
 // Forward References:
 // 
 
-static void dShopSystem_searchItemActor(void*, void*); // 2
-static void dShopSystem_searchCameraActor(void*, void*); // 2
+static void dShopSystem_searchItemActor(void*, void*);
+static void dShopSystem_searchCameraActor(void*, void*);
+extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
+extern "C" extern void* __vt__13dShopSystem_c[52 + 1 /* padding */];
 
-extern "C" static void dShopSystem_searchItemActor__FPvPv(); // 1
-extern "C" static void dShopSystem_searchCameraActor__FPvPv(); // 1
-extern "C" void initShopSystem__13dShopSystem_cFv(); // 1
-extern "C" void __dt__13dShopSystem_cFv(); // 1
-extern "C" void onFlag__13dShopSystem_cFi(); // 1
-extern "C" void offFlag__13dShopSystem_cFi(); // 1
-extern "C" void isFlag__13dShopSystem_cFi(); // 1
-extern "C" void onSoldOutItemFlag__13dShopSystem_cFi(); // 1
-extern "C" void offSoldOutItemFlag__13dShopSystem_cFi(); // 1
-extern "C" void isSoldOutItemFlag__13dShopSystem_cFi(); // 1
-extern "C" void checkController__13dShopSystem_cFUcP10dMsgFlow_c(); // 1
-extern "C" void chooseItem3__13dShopSystem_cFUc(); // 1
-extern "C" void chooseItem5__13dShopSystem_cFUc(); // 1
-extern "C" void chooseItem4__13dShopSystem_cFUc(); // 1
-extern "C" void moveCursor__13dShopSystem_cFiUc(); // 1
-extern "C" void moveCursor0__13dShopSystem_cFiUc(); // 1
-extern "C" void moveCursor1__13dShopSystem_cFiUc(); // 1
-extern "C" void drawCursor__13dShopSystem_cFv(); // 1
-extern "C" void itemRotate__13dShopSystem_cFv(); // 1
-extern "C" void itemZoom__13dShopSystem_cFP4cXyz(); // 1
-extern "C" bool seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void shop_init__13dShopSystem_cFb(); // 1
-extern "C" void shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c(); // 1
-extern "C" void createShopItem__13dShopSystem_cFi(); // 1
-extern "C" void setSeq__13dShopSystem_cFUc(); // 1
-extern "C" void setSoldOutFlag__13dShopSystem_cFv(); // 1
-extern "C" void setSoldOut__13dShopSystem_cFv(); // 1
-extern "C" void setSoldOutItemHide__13dShopSystem_cFv(); // 1
-extern "C" void deleteObject__13dShopSystem_cFv(); // 1
-extern "C" void searchItemActor__13dShopSystem_cFv(); // 1
-extern "C" void getFlowNodeNum__13dShopSystem_cFv(); // 1
-extern "C" void setSellItemMax__13dShopSystem_cFUc(); // 1
-extern "C" void checkShopOpen__13dShopSystem_cFv(); // 1
-extern "C" void checkLeftTrigger__13dShopSystem_cFP9STControl(); // 1
-extern "C" void checkRightTrigger__13dShopSystem_cFP9STControl(); // 1
-extern "C" bool dpdMove__13dShopSystem_cFv(); // 1
-extern "C" void __sinit_d_shop_system_cpp(); // 1
-extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci(); // 1
-extern "C" bool getResName2__13dShopSystem_cFi(); // 1
+extern "C" static void dShopSystem_searchItemActor__FPvPv();
+extern "C" static void dShopSystem_searchCameraActor__FPvPv();
+extern "C" void initShopSystem__13dShopSystem_cFv();
+extern "C" void __dt__13dShopSystem_cFv();
+extern "C" void onFlag__13dShopSystem_cFi();
+extern "C" void offFlag__13dShopSystem_cFi();
+extern "C" void isFlag__13dShopSystem_cFi();
+extern "C" void onSoldOutItemFlag__13dShopSystem_cFi();
+extern "C" void offSoldOutItemFlag__13dShopSystem_cFi();
+extern "C" void isSoldOutItemFlag__13dShopSystem_cFi();
+extern "C" void checkController__13dShopSystem_cFUcP10dMsgFlow_c();
+extern "C" void chooseItem3__13dShopSystem_cFUc();
+extern "C" void chooseItem5__13dShopSystem_cFUc();
+extern "C" void chooseItem4__13dShopSystem_cFUc();
+extern "C" void moveCursor__13dShopSystem_cFiUc();
+extern "C" void moveCursor0__13dShopSystem_cFiUc();
+extern "C" void moveCursor1__13dShopSystem_cFiUc();
+extern "C" void drawCursor__13dShopSystem_cFv();
+extern "C" void itemRotate__13dShopSystem_cFv();
+extern "C" void itemZoom__13dShopSystem_cFP4cXyz();
+extern "C" bool seq_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_select_wait__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_select_start__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_select__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_moving__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_decide__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_choose__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_decide_yes__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_decide_no__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_finish__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void seq_event__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void shop_init__13dShopSystem_cFb();
+extern "C" void shop_process__13dShopSystem_cFP10fopAc_ac_cP10dMsgFlow_c();
+extern "C" void createShopItem__13dShopSystem_cFi();
+extern "C" void setSeq__13dShopSystem_cFUc();
+extern "C" void setSoldOutFlag__13dShopSystem_cFv();
+extern "C" void setSoldOut__13dShopSystem_cFv();
+extern "C" void setSoldOutItemHide__13dShopSystem_cFv();
+extern "C" void deleteObject__13dShopSystem_cFv();
+extern "C" void searchItemActor__13dShopSystem_cFv();
+extern "C" void getFlowNodeNum__13dShopSystem_cFv();
+extern "C" void setSellItemMax__13dShopSystem_cFUc();
+extern "C" void checkShopOpen__13dShopSystem_cFv();
+extern "C" void checkLeftTrigger__13dShopSystem_cFP9STControl();
+extern "C" void checkRightTrigger__13dShopSystem_cFP9STControl();
+extern "C" bool dpdMove__13dShopSystem_cFv();
+extern "C" void __sinit_d_shop_system_cpp();
+extern "C" bool beforeStartSeqAction__13dShopSystem_cFP10dMsgFlow_ci();
+extern "C" bool beforeSelectSeqAction__13dShopSystem_cFP10dMsgFlow_ci();
+extern "C" bool getResName2__13dShopSystem_cFi();
 extern "C" extern char const* const d_shop_d_shop_system__stringBase0;
 extern "C" extern void* __vt__13dShopSystem_c[52 + 1 /* padding */];
 
@@ -279,134 +281,140 @@ extern "C" extern void* __vt__13dShopSystem_c[52 + 1 /* padding */];
 // External References:
 // 
 
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(unsigned int); // 2
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcEx_IsExist(unsigned int); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void checkItemGet(u8, int); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dMeter2Info_set2DVibrationM(); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoLib_project(Vec*, Vec*);
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(unsigned int);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_searchActorDistance(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcEx_IsExist(unsigned int);
+void fpcSch_JudgeByID(void*, void*);
+void checkItemGet(u8, int);
+void dMeter2Info_set2DVibration();
+void dMeter2Info_set2DVibrationM();
+void cM_atan2s(f32, f32);
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__9STControl[4];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_cursorHIO[68 + 4 /* padding */];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FUi(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcEx_IsExist__FUi(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void setWaitParm__9STControlFssssffss(); // 1
-extern "C" void init__9STControlFv(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkLeftTrigger__9STControlFv(); // 1
-extern "C" void checkRightTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void onSwitch__12dSv_memBit_cFi(); // 1
-extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
-extern "C" void hide__12daItemBase_cFv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void checkItemGet__FUci(); // 1
-extern "C" void ctrlBtk__8daNpcT_cFv(); // 1
-extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel(); // 1
-extern "C" void evtProc__8daNpcT_cFv(); // 1
-extern "C" void setFootPos__8daNpcT_cFv(); // 1
-extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff(); // 1
-extern "C" bool checkCullDraw__8daNpcT_cFv(); // 1
-extern "C" void twilight__8daNpcT_cFv(); // 1
-extern "C" void evtOrder__8daNpcT_cFv(); // 1
-extern "C" void evtChange__8daNpcT_cFv(); // 1
-extern "C" void clrParam__8daNpcT_cFv(); // 1
-extern "C" void setMotionAnm__8daNpcT_cFifi(); // 1
-extern "C" void initTalk__8daNpcT_cFiPP10fopAc_ac_c(); // 1
-extern "C" void decTmr__8daNpcT_cFv(); // 1
-extern "C" void setCollision__8daNpcT_cFv(); // 1
-extern "C" void setAttnPos__8daNpcT_cFv(); // 1
-extern "C" void ctrlSubFaceMotion__8daNpcT_cFi(); // 1
-extern "C" void afterMoved__8daNpcT_cFv(); // 1
-extern "C" void beforeMove__8daNpcT_cFv(); // 1
-extern "C" void action__8daNpcT_cFv(); // 1
-extern "C" void setParam__8daNpcT_cFv(); // 1
-extern "C" void drawOtherMdl__8daNpcT_cFv(); // 1
-extern "C" void drawGhost__8daNpcT_cFv(); // 1
-extern "C" bool drawDbgInfo__8daNpcT_cFv(); // 1
-extern "C" bool checkRemoveJoint__8daNpcT_cFi(); // 1
-extern "C" bool checkChangeJoint__8daNpcT_cFi(); // 1
-extern "C" void afterJntAnm__8daNpcT_cFi(); // 1
-extern "C" s32 getHeadJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getNeckJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getBackboneJointNo__8daNpcT_cFv(); // 1
-extern "C" void setAfterTalkMotion__8daNpcT_cFv(); // 1
-extern "C" bool evtCutProc__8daNpcT_cFv(); // 1
-extern "C" bool evtEndProc__8daNpcT_cFv(); // 1
-extern "C" bool evtTalk__8daNpcT_cFv(); // 1
-extern "C" bool checkChangeEvt__8daNpcT_cFv(); // 1
-extern "C" s32 getFootRJointNo__8daNpcT_cFv(); // 1
-extern "C" s32 getFootLJointNo__8daNpcT_cFv(); // 1
-extern "C" bool chkXYItems__8daNpcT_cFv(); // 1
-extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" void changeBtp__8daNpcT_cFPiPi(); // 1
-extern "C" void changeBck__8daNpcT_cFPiPi(); // 1
-extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c(); // 1
-extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi(); // 1
-extern "C" void changeBtk__8daNpcT_cFPiPi(); // 1
-extern "C" void changeAnm__8daNpcT_cFPiPi(); // 1
-extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c(); // 1
-extern "C" void __dt__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv(); // 1
-extern "C" bool getEyeballMaterialNo__8daNpcT_cFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void addAlpha__16dSelect_cursor_cFv(); // 1
-extern "C" void decAlpha__16dSelect_cursor_cFv(); // 1
-extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
-extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
-extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz(); // 1
-extern "C" void __dt__15dShopItemCtrl_cFv(); // 1
-extern "C" void getCurrentPos__15dShopItemCtrl_cFi(); // 1
-extern "C" void isHomePos__15dShopItemCtrl_cFi(); // 1
-extern "C" void setRotateAnime__15dShopItemCtrl_cFi(); // 1
-extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
-extern "C" void setShopWaitTimer__12dMsgObject_cFUc(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void isMsgSendControl__12dMsgObject_cFv(); // 1
-extern "C" void onMsgSend__12dMsgObject_cFv(); // 1
-extern "C" void getMessageID__12dMsgObject_cFv(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void getEventId__10dMsgFlow_cFPi(); // 1
-extern "C" void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FUi();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_searchActorDistance__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void setWaitParm__9STControlFssssffss();
+extern "C" void init__9STControlFv();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void onSwitch__12dSv_memBit_cFi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void hide__12daItemBase_cFv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void checkItemGet__FUci();
+extern "C" void ctrlBtk__8daNpcT_cFv();
+extern "C" void ctrlJoint__8daNpcT_cFP8J3DJointP8J3DModel();
+extern "C" void evtProc__8daNpcT_cFv();
+extern "C" void setFootPos__8daNpcT_cFv();
+extern "C" void setFootPrtcl__8daNpcT_cFP4cXyzff();
+extern "C" bool checkCullDraw__8daNpcT_cFv();
+extern "C" void twilight__8daNpcT_cFv();
+extern "C" void evtOrder__8daNpcT_cFv();
+extern "C" void evtChange__8daNpcT_cFv();
+extern "C" void clrParam__8daNpcT_cFv();
+extern "C" void setMotionAnm__8daNpcT_cFifi();
+extern "C" void initTalk__8daNpcT_cFiPP10fopAc_ac_c();
+extern "C" void decTmr__8daNpcT_cFv();
+extern "C" void setCollision__8daNpcT_cFv();
+extern "C" void setAttnPos__8daNpcT_cFv();
+extern "C" void ctrlSubFaceMotion__8daNpcT_cFi();
+extern "C" void afterMoved__8daNpcT_cFv();
+extern "C" void beforeMove__8daNpcT_cFv();
+extern "C" void action__8daNpcT_cFv();
+extern "C" void setParam__8daNpcT_cFv();
+extern "C" void drawOtherMdl__8daNpcT_cFv();
+extern "C" void drawGhost__8daNpcT_cFv();
+extern "C" bool drawDbgInfo__8daNpcT_cFv();
+extern "C" bool checkRemoveJoint__8daNpcT_cFi();
+extern "C" bool checkChangeJoint__8daNpcT_cFi();
+extern "C" void afterJntAnm__8daNpcT_cFi();
+extern "C" s32 getHeadJointNo__8daNpcT_cFv();
+extern "C" s32 getNeckJointNo__8daNpcT_cFv();
+extern "C" s32 getBackboneJointNo__8daNpcT_cFv();
+extern "C" void setAfterTalkMotion__8daNpcT_cFv();
+extern "C" bool evtCutProc__8daNpcT_cFv();
+extern "C" bool evtEndProc__8daNpcT_cFv();
+extern "C" bool evtTalk__8daNpcT_cFv();
+extern "C" bool checkChangeEvt__8daNpcT_cFv();
+extern "C" s32 getFootRJointNo__8daNpcT_cFv();
+extern "C" s32 getFootLJointNo__8daNpcT_cFv();
+extern "C" bool chkXYItems__8daNpcT_cFv();
+extern "C" bool afterSetFaceMotionAnm__8daNpcT_cFiifi();
+extern "C" void changeBtp__8daNpcT_cFPiPi();
+extern "C" void changeBck__8daNpcT_cFPiPi();
+extern "C" void getFaceMotionAnm__8daNpcT_cF26daNpcT_faceMotionAnmData_c();
+extern "C" bool afterSetMotionAnm__8daNpcT_cFiifi();
+extern "C" void changeBtk__8daNpcT_cFPiPi();
+extern "C" void changeAnm__8daNpcT_cFPiPi();
+extern "C" void getMotionAnm__8daNpcT_cF22daNpcT_motionAnmData_c();
+extern "C" void __dt__8daNpcT_cFv();
+extern "C" bool getEyeballLMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballRMaterialNo__8daNpcT_cFv();
+extern "C" bool getEyeballMaterialNo__8daNpcT_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void addAlpha__16dSelect_cursor_cFv();
+extern "C" void decAlpha__16dSelect_cursor_cFv();
+extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
+extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
+extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz();
+extern "C" void __dt__15dShopItemCtrl_cFv();
+extern "C" void getCurrentPos__15dShopItemCtrl_cFi();
+extern "C" void isHomePos__15dShopItemCtrl_cFi();
+extern "C" void setRotateAnime__15dShopItemCtrl_cFi();
+extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void setShopWaitTimer__12dMsgObject_cFUc();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void isMsgSendControl__12dMsgObject_cFv();
+extern "C" void onMsgSend__12dMsgObject_cFv();
+extern "C" void getMessageID__12dMsgObject_cFv();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void getEventId__10dMsgFlow_cFPi();
+extern "C" void query005__10dMsgFlow_cFP21mesg_flow_node_branchP10fopAc_ac_ci();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* __vt__9STControl[4];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

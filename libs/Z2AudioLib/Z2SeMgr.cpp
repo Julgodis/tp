@@ -125,78 +125,112 @@ struct JAISeCategoryMgr {
 // 
 
 
-extern "C" void __ct__7Z2SeMgrFv(); // 1
-extern "C" void __ct__12Z2MultiSeObjFv(); // 1
-extern "C" void initSe__7Z2SeMgrFv(); // 1
-extern "C" void resetModY__7Z2SeMgrFv(); // 1
-extern "C" void modHeightAtCamera__7Z2SeMgrFPPC3Vec(); // 1
-extern "C" void incrCrowdSize__7Z2SeMgrFv(); // 1
-extern "C" void decrCrowdSize__7Z2SeMgrFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStop__7Z2SeMgrF10JAISoundIDUl(); // 1
-extern "C" void seStopAll__7Z2SeMgrFUl(); // 1
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
-extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc(); // 1
-extern "C" void talkInSe__7Z2SeMgrFv(); // 1
-extern "C" void talkOutSe__7Z2SeMgrFv(); // 1
-extern "C" void menuInSe__7Z2SeMgrFv(); // 1
-extern "C" void setLevObjSE__7Z2SeMgrFUlP3VecSc(); // 1
-extern "C" void setMultiTriggerSE__7Z2SeMgrFUlP3VecSc(); // 1
-extern "C" void processSeFramework__7Z2SeMgrFv(); // 1
-extern "C" void isLevelSe__7Z2SeMgrF10JAISoundID(); // 1
-extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID(); // 1
-extern "C" void __ct__12Z2MultiSeMgrFv(); // 1
-extern "C" void __dt__12Z2MultiSeMgrFv(); // 1
-extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec(); // 1
-extern "C" void resetMultiSePos__12Z2MultiSeMgrFv(); // 1
-extern "C" void getPanPower__12Z2MultiSeMgrFv(); // 1
-extern "C" void getDolbyPower__12Z2MultiSeMgrFv(); // 1
+extern "C" void __ct__7Z2SeMgrFv();
+extern "C" void __ct__12Z2MultiSeObjFv();
+extern "C" void initSe__7Z2SeMgrFv();
+extern "C" void resetModY__7Z2SeMgrFv();
+extern "C" void modHeightAtCamera__7Z2SeMgrFPPC3Vec();
+extern "C" void incrCrowdSize__7Z2SeMgrFv();
+extern "C" void decrCrowdSize__7Z2SeMgrFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStop__7Z2SeMgrF10JAISoundIDUl();
+extern "C" void seStopAll__7Z2SeMgrFUl();
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" void messageSePlay__7Z2SeMgrFUsP3VecSc();
+extern "C" void talkInSe__7Z2SeMgrFv();
+extern "C" void talkOutSe__7Z2SeMgrFv();
+extern "C" void menuInSe__7Z2SeMgrFv();
+extern "C" void setLevObjSE__7Z2SeMgrFUlP3VecSc();
+extern "C" void setMultiTriggerSE__7Z2SeMgrFUlP3VecSc();
+extern "C" void processSeFramework__7Z2SeMgrFv();
+extern "C" void isLevelSe__7Z2SeMgrF10JAISoundID();
+extern "C" void isSoundCulling__7Z2SeMgrF10JAISoundID();
+extern "C" void __ct__12Z2MultiSeMgrFv();
+extern "C" void __dt__12Z2MultiSeMgrFv();
+extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec();
+extern "C" void resetMultiSePos__12Z2MultiSeMgrFv();
+extern "C" void getPanPower__12Z2MultiSeMgrFv();
+extern "C" void getDolbyPower__12Z2MultiSeMgrFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param;
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-extern "C" void __dt__14JAISoundHandleFv(); // 1
-extern "C" void __dt__12Z2MultiSeObjFv(); // 1
-extern "C" void stop__16JAISeCategoryMgrFUl(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID(); // 1
-extern "C" void getFreeHandle__15JAISoundHandlesFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void __ct__14JAISoundHandleFv(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID(); // 1
-extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void menuIn__11Z2StatusMgrFv(); // 1
-extern "C" void menuOut__11Z2StatusMgrFv(); // 1
-extern "C" void isMovieDemo__11Z2StatusMgrFv(); // 1
-extern "C" void calcOffMicSound__10Z2AudienceFf(); // 1
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
-extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__14JAISoundHandleFv();
+extern "C" void __dt__12Z2MultiSeObjFv();
+extern "C" void stop__16JAISeCategoryMgrFUl();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
+extern "C" void getFreeHandle__15JAISoundHandlesFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void __ct__14JAISoundHandleFv();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void stopSoundID__10Z2SoundMgrF10JAISoundID();
+extern "C" void multiVolumeSoundID__10Z2SoundMgrF10JAISoundIDf();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void menuIn__11Z2StatusMgrFv();
+extern "C" void menuOut__11Z2StatusMgrFv();
+extern "C" void isMovieDemo__11Z2StatusMgrFv();
+extern "C" void calcOffMicSound__10Z2AudienceFf();
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
+extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
 extern "C" extern u32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
 extern "C" extern u32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;

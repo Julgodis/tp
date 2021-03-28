@@ -12,11 +12,11 @@
 // 
 
 
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetArenaLo(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSAllocFromArenaLo(); // 1
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetArenaLo();
+extern "C" void OSSetArenaHi();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
 
 // 
 // External References:

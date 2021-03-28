@@ -28,20 +28,23 @@ struct JASDvd {
 // 
 
 
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void createThread__6JASDvdFliUl(); // 1
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void createThread__6JASDvdFliUl();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
+void* operator new(u32, JKRHeap*, int);
+extern "C" extern u8 JASDram[4];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-extern "C" void __ct__13JASTaskThreadFiiUl(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__13JASTaskThreadFiiUl();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 JASDram[4];
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];

@@ -52,49 +52,55 @@ struct dEvt_control_c {
 // Forward References:
 // 
 
-static void daTagHstop_Create(fopAc_ac_c*); // 2
-static void daTagHstop_Delete(daTagHstop_c*); // 2
-static void daTagHstop_Execute(daTagHstop_c*); // 2
-static bool daTagHstop_Draw(daTagHstop_c*); // 2
+static void daTagHstop_Create(fopAc_ac_c*);
+static void daTagHstop_Delete(daTagHstop_c*);
+static void daTagHstop_Execute(daTagHstop_c*);
+static bool daTagHstop_Draw(daTagHstop_c*);
+extern "C" extern void* g_profile_Tag_Hstop[12];
 
-extern "C" void create__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Delete__FP12daTagHstop_c(); // 1
-extern "C" void setActive__12daTagHstop_cFv(); // 1
-extern "C" void execute__12daTagHstop_cFv(); // 1
-extern "C" static void daTagHstop_Execute__FP12daTagHstop_c(); // 1
-extern "C" static bool daTagHstop_Draw__FP12daTagHstop_c(); // 1
-extern "C" void __sinit_d_a_tag_hstop_cpp(); // 1
+extern "C" void create__12daTagHstop_cFv();
+extern "C" static void daTagHstop_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagHstop_cFv();
+extern "C" static void daTagHstop_Delete__FP12daTagHstop_c();
+extern "C" void setActive__12daTagHstop_cFv();
+extern "C" void execute__12daTagHstop_cFv();
+extern "C" static void daTagHstop_Execute__FP12daTagHstop_c();
+extern "C" static bool daTagHstop_Draw__FP12daTagHstop_c();
+extern "C" void __sinit_d_a_tag_hstop_cpp();
 extern "C" extern void* g_profile_Tag_Hstop[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16); // 2
-void operator delete(void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void checkRoomRestartStart__9daPy_py_cFv(); // 1
-extern "C" void setFloatingFlow__13dMeter2Info_cFUssb(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __dl__FPv(); // 1
+void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void checkRoomRestartStart__9daPy_py_cFv();
+extern "C" void setFloatingFlow__13dMeter2Info_cFUssb();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __dl__FPv();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

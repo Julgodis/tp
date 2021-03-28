@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern u8 dist_table__12dAttention_c[6552];
 
 extern "C" extern u8 dist_table__12dAttention_c[6552];
 

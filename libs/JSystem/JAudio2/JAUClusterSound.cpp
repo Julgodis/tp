@@ -20,7 +20,7 @@ struct JAISoundHandle {
 // 
 
 
-extern "C" void __ct__14JAISoundHandleFv(); // 1
+extern "C" void __ct__14JAISoundHandleFv();
 
 // 
 // External References:

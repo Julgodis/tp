@@ -12,25 +12,26 @@
 // 
 
 
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetVtxDescv(); // 1
-extern "C" void __GXSetVCD(); // 1
-extern "C" void __GXCalculateVLim(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetVtxAttrFmtv(); // 1
-extern "C" void __GXSetVAT(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
+extern "C" void GXSetVtxDesc();
+extern "C" void GXSetVtxDescv();
+extern "C" void __GXSetVCD();
+extern "C" void __GXCalculateVLim();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetVtxAttrFmtv();
+extern "C" void __GXSetVAT();
+extern "C" void GXSetArray();
+extern "C" void GXInvalidateVtxCache();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __GXData;
 
-extern "C" void __GXSetMatrixIndex(); // 1
+extern "C" void __GXSetMatrixIndex();
 extern "C" extern void* __GXData;
 
 // 

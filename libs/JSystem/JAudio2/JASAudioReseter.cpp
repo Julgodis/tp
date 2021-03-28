@@ -41,29 +41,30 @@ struct JASAudioReseter {
 // 
 
 
-extern "C" void __ct__15JASAudioReseterFv(); // 1
-extern "C" void __dt__15JASAudioReseterFv(); // 1
-extern "C" void start__15JASAudioReseterFUlb(); // 1
-extern "C" void resume__15JASAudioReseterFv(); // 1
-extern "C" void checkDone__15JASAudioReseterCFv(); // 1
-extern "C" void calc__15JASAudioReseterFv(); // 1
-extern "C" void callback__15JASAudioReseterFPv(); // 1
+extern "C" void __ct__15JASAudioReseterFv();
+extern "C" void __dt__15JASAudioReseterFv();
+extern "C" void start__15JASAudioReseterFUlb();
+extern "C" void resume__15JASAudioReseterFv();
+extern "C" void checkDone__15JASAudioReseterCFv();
+extern "C" void calc__15JASAudioReseterFv();
+extern "C" void callback__15JASAudioReseterFPv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B8C[4];
 
-extern "C" void stop__14JASAudioThreadFv(); // 1
-extern "C" void drop__13JASDSPChannelFv(); // 1
-extern "C" void getHandle__13JASDSPChannelFUl(); // 1
-extern "C" void setDSPLevel__9JASDriverFf(); // 1
-extern "C" void getDSPLevel__9JASDriverFv(); // 1
-extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void stop__14JASAudioThreadFv();
+extern "C" void drop__13JASDSPChannelFv();
+extern "C" void getHandle__13JASDSPChannelFUl();
+extern "C" void setDSPLevel__9JASDriverFf();
+extern "C" void getDSPLevel__9JASDriverFv();
+extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv();
+extern "C" void __dl__FPv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
 extern "C" extern u8 data_80450B8C[4];
 
 // 

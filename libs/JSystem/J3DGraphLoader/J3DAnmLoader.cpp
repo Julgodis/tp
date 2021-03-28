@@ -92,6 +92,9 @@ struct J3DAnmLoader {
 	/* 80339800 */ ~J3DAnmLoader();
 };
 
+struct J3DAnmClusterKey {
+};
+
 struct J3DAnmColorKey {
 	/* 8032AB00 */ J3DAnmColorKey();
 };
@@ -100,9 +103,6 @@ struct J3DAnmColorKeyData {
 };
 
 struct J3DAnmClusterKeyData {
-};
-
-struct J3DAnmClusterKey {
 };
 
 struct J3DAnmKeyLoader_v15 {
@@ -130,11 +130,11 @@ struct J3DAnmClusterFullData {
 struct J3DAnmClusterFull {
 };
 
-struct J3DAnmColorFullData {
-};
-
 struct J3DAnmColorFull {
 	/* 8032A93C */ J3DAnmColorFull();
+};
+
+struct J3DAnmColorFullData {
 };
 
 struct J3DAnmFullLoader_v15 {
@@ -160,105 +160,113 @@ struct J3DAnmFullLoader_v15 {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template78(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template79(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template78(void const*, void const*);
+static void JSUConvertOffsetToPtr__template79(void const*, void const*);
+extern "C" extern char const* const J3DAnmLoader__stringBase0;
 
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
-extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv(); // 1
-extern "C" void __ct__20J3DAnmFullLoader_v15Fv(); // 1
-extern "C" void __dt__20J3DAnmFullLoader_v15Fv(); // 1
-extern "C" void __ct__19J3DAnmKeyLoader_v15Fv(); // 1
-extern "C" void __dt__19J3DAnmKeyLoader_v15Fv(); // 1
-extern "C" void load__20J3DAnmFullLoader_v15FPCv(); // 1
-extern "C" void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv(); // 1
-extern "C" void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData(); // 1
-extern "C" void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData(); // 1
-extern "C" void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData(); // 1
-extern "C" void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData(); // 1
-extern "C" void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData(); // 1
-extern "C" void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData(); // 1
-extern "C" void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData(); // 1
-extern "C" void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData(); // 1
-extern "C" void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData(); // 1
-extern "C" void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData(); // 1
-extern "C" void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData(); // 1
-extern "C" void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData(); // 1
-extern "C" void load__19J3DAnmKeyLoader_v15FPCv(); // 1
-extern "C" void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv(); // 1
-extern "C" void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData(); // 1
-extern "C" void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData(); // 1
-extern "C" void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData(); // 1
-extern "C" void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData(); // 1
-extern "C" void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData(); // 1
-extern "C" void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData(); // 1
-extern "C" void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData(); // 1
-extern "C" void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData(); // 1
-extern "C" void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData(); // 1
-extern "C" void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData(); // 1
-extern "C" void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData(); // 1
-extern "C" void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData(); // 1
-extern "C" void __dt__20J3DAnmVisibilityFullFv(); // 1
-extern "C" s32 getKind__20J3DAnmVisibilityFullCFv(); // 1
-extern "C" void __dt__12J3DAnmLoaderFv(); // 1
-extern "C" static void func_80339848(); // 1
-extern "C" static void func_80339860(); // 1
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
+extern "C" void __ct__20J3DAnmFullLoader_v15Fv();
+extern "C" void __dt__20J3DAnmFullLoader_v15Fv();
+extern "C" void __ct__19J3DAnmKeyLoader_v15Fv();
+extern "C" void __dt__19J3DAnmKeyLoader_v15Fv();
+extern "C" void load__20J3DAnmFullLoader_v15FPCv();
+extern "C" void setResource__20J3DAnmFullLoader_v15FP10J3DAnmBasePCv();
+extern "C" void readAnmTransform__20J3DAnmFullLoader_v15FPC23J3DAnmTransformFullData();
+extern "C" void setAnmTransform__20J3DAnmFullLoader_v15FP19J3DAnmTransformFullPC23J3DAnmTransformFullData();
+extern "C" void readAnmColor__20J3DAnmFullLoader_v15FPC19J3DAnmColorFullData();
+extern "C" void setAnmColor__20J3DAnmFullLoader_v15FP15J3DAnmColorFullPC19J3DAnmColorFullData();
+extern "C" void readAnmTexPattern__20J3DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData();
+extern "C" void setAnmTexPattern__20J3DAnmFullLoader_v15FP16J3DAnmTexPatternPC24J3DAnmTexPatternFullData();
+extern "C" void readAnmVisibility__20J3DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData();
+extern "C" void setAnmVisibility__20J3DAnmFullLoader_v15FP20J3DAnmVisibilityFullPC24J3DAnmVisibilityFullData();
+extern "C" void readAnmCluster__20J3DAnmFullLoader_v15FPC21J3DAnmClusterFullData();
+extern "C" void setAnmCluster__20J3DAnmFullLoader_v15FP17J3DAnmClusterFullPC21J3DAnmClusterFullData();
+extern "C" void readAnmVtxColor__20J3DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData();
+extern "C" void setAnmVtxColor__20J3DAnmFullLoader_v15FP18J3DAnmVtxColorFullPC22J3DAnmVtxColorFullData();
+extern "C" void load__19J3DAnmKeyLoader_v15FPCv();
+extern "C" void setResource__19J3DAnmKeyLoader_v15FP10J3DAnmBasePCv();
+extern "C" void readAnmTransform__19J3DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData();
+extern "C" void setAnmTransform__19J3DAnmKeyLoader_v15FP18J3DAnmTransformKeyPC22J3DAnmTransformKeyData();
+extern "C" void readAnmTextureSRT__19J3DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData();
+extern "C" void setAnmTextureSRT__19J3DAnmKeyLoader_v15FP19J3DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData();
+extern "C" void readAnmColor__19J3DAnmKeyLoader_v15FPC18J3DAnmColorKeyData();
+extern "C" void setAnmColor__19J3DAnmKeyLoader_v15FP14J3DAnmColorKeyPC18J3DAnmColorKeyData();
+extern "C" void readAnmCluster__19J3DAnmKeyLoader_v15FPC20J3DAnmClusterKeyData();
+extern "C" void setAnmCluster__19J3DAnmKeyLoader_v15FP16J3DAnmClusterKeyPC20J3DAnmClusterKeyData();
+extern "C" void readAnmTevReg__19J3DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData();
+extern "C" void setAnmTevReg__19J3DAnmKeyLoader_v15FP15J3DAnmTevRegKeyPC19J3DAnmTevRegKeyData();
+extern "C" void readAnmVtxColor__19J3DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData();
+extern "C" void setAnmVtxColor__19J3DAnmKeyLoader_v15FP17J3DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData();
+extern "C" void __dt__20J3DAnmVisibilityFullFv();
+extern "C" s32 getKind__20J3DAnmVisibilityFullCFv();
+extern "C" void __dt__12J3DAnmLoaderFv();
+extern "C" static void func_80339848();
+extern "C" static void func_80339860();
 extern "C" extern char const* const J3DAnmLoader__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template30(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template31(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template32(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template33(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template34(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template35(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template36(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template37(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template38(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template40(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template42(void const*, void const*); // 2
+void* operator new(u32);
+void operator delete(void*);
+void JSUConvertOffsetToPtr__template24(void const*, void const*);
+void JSUConvertOffsetToPtr__template28(void const*, void const*);
+void JSUConvertOffsetToPtr__template30(void const*, void const*);
+void JSUConvertOffsetToPtr__template31(void const*, void const*);
+void JSUConvertOffsetToPtr__template32(void const*, void const*);
+void JSUConvertOffsetToPtr__template33(void const*, void const*);
+void JSUConvertOffsetToPtr__template34(void const*, void const*);
+void JSUConvertOffsetToPtr__template35(void const*, void const*);
+void JSUConvertOffsetToPtr__template36(void const*, void const*);
+void JSUConvertOffsetToPtr__template37(void const*, void const*);
+void JSUConvertOffsetToPtr__template38(void const*, void const*);
+void JSUConvertOffsetToPtr__template39(void const*, void const*);
+void JSUConvertOffsetToPtr__template40(void const*, void const*);
+void JSUConvertOffsetToPtr__template41(void const*, void const*);
+void JSUConvertOffsetToPtr__template42(void const*, void const*);
+extern "C" extern void* __vt__10J3DAnmBase[4];
+extern "C" extern void* __vt__18J3DAnmTransformKey[5];
+extern "C" extern void* __vt__16J3DAnmClusterKey[5];
+extern "C" extern void* __vt__13J3DAnmCluster[5];
+extern "C" extern void* __vt__17J3DAnmClusterFull[5];
+extern "C" extern void* __vt__27J3DAnmTransformFullWithLerp[5];
+extern "C" extern void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */];
 
-extern "C" void OSReport(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void func_802F4260(); // 1
-extern "C" void func_802F42C0(); // 1
-extern "C" void func_8030A458(); // 1
-extern "C" void func_8030A470(); // 1
-extern "C" void func_8030A488(); // 1
-extern "C" void func_8030A4A0(); // 1
-extern "C" void func_8030A4B8(); // 1
-extern "C" void func_8030A4D0(); // 1
-extern "C" void func_8030A4E8(); // 1
-extern "C" void func_8030A500(); // 1
-extern "C" void func_8030A518(); // 1
-extern "C" void func_8030A530(); // 1
-extern "C" void func_8030A548(); // 1
-extern "C" void func_8030A560(); // 1
-extern "C" void func_8030A578(); // 1
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
-extern "C" void __ct__19J3DAnmTextureSRTKeyFv(); // 1
-extern "C" void __ct__18J3DAnmVtxColorFullFv(); // 1
-extern "C" void __ct__17J3DAnmVtxColorKeyFv(); // 1
-extern "C" void __ct__15J3DAnmColorFullFv(); // 1
-extern "C" void __ct__14J3DAnmColorKeyFv(); // 1
-extern "C" void __ct__15J3DAnmTevRegKeyFv(); // 1
-extern "C" void __ct__16J3DAnmTexPatternFv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSReport();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
+extern "C" void func_802F4260();
+extern "C" void func_802F42C0();
+extern "C" void func_8030A458();
+extern "C" void func_8030A470();
+extern "C" void func_8030A488();
+extern "C" void func_8030A4A0();
+extern "C" void func_8030A4B8();
+extern "C" void func_8030A4D0();
+extern "C" void func_8030A4E8();
+extern "C" void func_8030A500();
+extern "C" void func_8030A518();
+extern "C" void func_8030A530();
+extern "C" void func_8030A548();
+extern "C" void func_8030A560();
+extern "C" void func_8030A578();
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
+extern "C" void __ct__19J3DAnmTextureSRTKeyFv();
+extern "C" void __ct__18J3DAnmVtxColorFullFv();
+extern "C" void __ct__17J3DAnmVtxColorKeyFv();
+extern "C" void __ct__15J3DAnmColorFullFv();
+extern "C" void __ct__14J3DAnmColorKeyFv();
+extern "C" void __ct__15J3DAnmTevRegKeyFv();
+extern "C" void __ct__16J3DAnmTexPatternFv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__10J3DAnmBase[4];
 extern "C" extern void* __vt__18J3DAnmTransformKey[5];
 extern "C" extern void* __vt__16J3DAnmClusterKey[5];

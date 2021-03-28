@@ -28,20 +28,20 @@ struct dSv_event_c {
 struct _GXColor {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dPa_control_c {
 	/* 8004D1B8 */ void setSimple(u16, cXyz const*, dKy_tevstr_c const*, u8, _GXColor const&, _GXColor const&, int, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -52,29 +52,36 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daObjOnsenFire_Create(fopAc_ac_c*); // 2
-static void daObjOnsenFire_Execute(daObjOnsenFire_c*); // 2
-static void daObjOnsenFire_Delete(daObjOnsenFire_c*); // 2
+static void daObjOnsenFire_Create(fopAc_ac_c*);
+static void daObjOnsenFire_Execute(daObjOnsenFire_c*);
+static void daObjOnsenFire_Delete(daObjOnsenFire_c*);
+extern "C" extern void* g_profile_OBJ_ONSEN_FIRE[12];
 
-extern "C" void create__16daObjOnsenFire_cFv(); // 1
-extern "C" void execute__16daObjOnsenFire_cFv(); // 1
-extern "C" static void daObjOnsenFire_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjOnsenFire_Execute__FP16daObjOnsenFire_c(); // 1
-extern "C" static void daObjOnsenFire_Delete__FP16daObjOnsenFire_c(); // 1
+extern "C" void create__16daObjOnsenFire_cFv();
+extern "C" void execute__16daObjOnsenFire_cFv();
+extern "C" static void daObjOnsenFire_Create__FP10fopAc_ac_c();
+extern "C" static void daObjOnsenFire_Execute__FP16daObjOnsenFire_c();
+extern "C" static void daObjOnsenFire_Delete__FP16daObjOnsenFire_c();
 extern "C" extern void* g_profile_OBJ_ONSEN_FIRE[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

@@ -35,39 +35,46 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static bool daKytag02_Draw(kytag02_class*); // 2
-static void daKytag02_Execute(kytag02_class*); // 2
-static bool daKytag02_IsDelete(kytag02_class*); // 2
-static void daKytag02_Delete(kytag02_class*); // 2
-static void daKytag02_Create(fopAc_ac_c*); // 2
+static bool daKytag02_Draw(kytag02_class*);
+static void daKytag02_Execute(kytag02_class*);
+static bool daKytag02_IsDelete(kytag02_class*);
+static void daKytag02_Delete(kytag02_class*);
+static void daKytag02_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG02[12];
 
-extern "C" static bool daKytag02_Draw__FP13kytag02_class(); // 1
-extern "C" static void daKytag02_Execute__FP13kytag02_class(); // 1
-extern "C" static bool daKytag02_IsDelete__FP13kytag02_class(); // 1
-extern "C" static void daKytag02_Delete__FP13kytag02_class(); // 1
-extern "C" static void daKytag02_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag02_Draw__FP13kytag02_class();
+extern "C" static void daKytag02_Execute__FP13kytag02_class();
+extern "C" static bool daKytag02_IsDelete__FP13kytag02_class();
+extern "C" static void daKytag02_Delete__FP13kytag02_class();
+extern "C" static void daKytag02_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG02[12];
 
 // 
 // External References:
 // 
 
-void dComIfGp_getReverb(int); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_evt_wind_set(s16, s16); // 2
-void dKyw_evt_wind_set_go(); // 2
+void dComIfGp_getReverb(int);
+void dKyw_get_wind_vec();
+void dKyw_evt_wind_set(s16, s16);
+void dKyw_evt_wind_set_go();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_evt_wind_set__Fss(); // 1
-extern "C" void dKyw_evt_wind_set_go__Fv(); // 1
-extern "C" void initStrongWindSe__10Z2EnvSeMgrFv(); // 1
-extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_evt_wind_set__Fss();
+extern "C" void dKyw_evt_wind_set_go__Fv();
+extern "C" void initStrongWindSe__10Z2EnvSeMgrFv();
+extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec();
+extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

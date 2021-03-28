@@ -32,21 +32,23 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daVrbox_Draw(vrbox_class*); // 2
-static void daVrbox_color_set(vrbox_class*); // 2
-static bool daVrbox_Execute(vrbox_class*); // 2
-static bool daVrbox_IsDelete(vrbox_class*); // 2
-static bool daVrbox_Delete(vrbox_class*); // 2
-static void daVrbox_solidHeapCB(fopAc_ac_c*); // 2
-static void daVrbox_Create(fopAc_ac_c*); // 2
+static void daVrbox_Draw(vrbox_class*);
+static void daVrbox_color_set(vrbox_class*);
+static bool daVrbox_Execute(vrbox_class*);
+static bool daVrbox_IsDelete(vrbox_class*);
+static bool daVrbox_Delete(vrbox_class*);
+static void daVrbox_solidHeapCB(fopAc_ac_c*);
+static void daVrbox_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_VRBOX[12];
 
-extern "C" static void daVrbox_Draw__FP11vrbox_class(); // 1
-extern "C" static void daVrbox_color_set__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_Execute__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_IsDelete__FP11vrbox_class(); // 1
-extern "C" static bool daVrbox_Delete__FP11vrbox_class(); // 1
-extern "C" static void daVrbox_solidHeapCB__FP10fopAc_ac_c(); // 1
-extern "C" static void daVrbox_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daVrbox_Draw__FP11vrbox_class();
+extern "C" static void daVrbox_color_set__FP11vrbox_class();
+extern "C" static bool daVrbox_Execute__FP11vrbox_class();
+extern "C" static bool daVrbox_IsDelete__FP11vrbox_class();
+extern "C" static bool daVrbox_Delete__FP11vrbox_class();
+extern "C" static void daVrbox_solidHeapCB__FP10fopAc_ac_c();
+extern "C" static void daVrbox_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_VRBOX[12];
 
@@ -54,25 +56,32 @@ extern "C" extern void* g_profile_VRBOX[12];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_getStageRes(char const*); // 2
-void dKy_GxFog_set(); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_getStageRes(char const*);
+void dKy_GxFog_set();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void dKy_GxFog_set__Fv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dKy_GxFog_set__Fv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

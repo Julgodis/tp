@@ -24,25 +24,25 @@ struct node_class {
 // Forward References:
 // 
 
-void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*); // 2
-void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*); // 2
+void cTrIt_Method(node_lists_tree_class*, int (*)(node_class*, void*), void*);
+void cTrIt_Judge(node_lists_tree_class*, void* (*)(node_class*, void*), void*);
 
-extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv(); // 1
-extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv(); // 1
+extern "C" void cTrIt_Method__FP21node_lists_tree_classPFP10node_classPv_iPv();
+extern "C" void cTrIt_Judge__FP21node_lists_tree_classPFP10node_classPv_PvPv();
 
 // 
 // External References:
 // 
 
-void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
-void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*);
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*);
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

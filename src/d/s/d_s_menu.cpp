@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern void* g_profile_MENU_SCENE[10];
 
 extern "C" extern void* g_profile_MENU_SCENE[10];
 
@@ -18,6 +19,8 @@ extern "C" extern void* g_profile_MENU_SCENE[10];
 // External References:
 // 
 
+extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
 
 extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];

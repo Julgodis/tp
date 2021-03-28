@@ -172,65 +172,68 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-void daPy_addCalcShort(s16*, s16, s16, s16, s16); // 2
+void daPy_addCalcShort(s16*, s16, s16, s16, s16);
+extern "C" extern void* __vt__18daPy_sightPacket_c[4 + 1 /* padding */];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 struct_8045101C[4];
 
-extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv(); // 1
-extern "C" void updateFrame__16daPy_frameCtrl_cFv(); // 1
-extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff(); // 1
-extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
-extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs(); // 1
-extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz(); // 1
-extern "C" void setParamData__9daPy_py_cFiiii(); // 1
-extern "C" void checkFishingRodItem__9daPy_py_cFi(); // 1
-extern "C" void checkBombItem__9daPy_py_cFi(); // 1
-extern "C" void checkBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkDrinkBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkOilBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkOpenBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkBowItem__9daPy_py_cFi(); // 1
-extern "C" void checkHookshotItem__9daPy_py_cFi(); // 1
-extern "C" void checkTradeItem__9daPy_py_cFi(); // 1
-extern "C" void checkDungeonWarpItem__9daPy_py_cFi(); // 1
-extern "C" void setActor__16daPy_actorKeep_cFv(); // 1
-extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c(); // 1
-extern "C" void clearData__16daPy_actorKeep_cFv(); // 1
-extern "C" void __ct__14daPy_anmHeap_cFUl(); // 1
-extern "C" void __dt__14daPy_anmHeap_cFv(); // 1
-extern "C" void initData__14daPy_anmHeap_cFv(); // 1
-extern "C" void mallocBuffer__14daPy_anmHeap_cFv(); // 1
-extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE(); // 1
-extern "C" void loadData__14daPy_anmHeap_cFUs(); // 1
-extern "C" void loadDataIdx__14daPy_anmHeap_cFUs(); // 1
-extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs(); // 1
-extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs(); // 1
-extern "C" void setAnimeHeap__14daPy_anmHeap_cFv(); // 1
-extern "C" void draw__18daPy_sightPacket_cFv(); // 1
-extern "C" void setSight__18daPy_sightPacket_cFv(); // 1
-extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG(); // 1
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
-extern "C" void checkWoodShieldEquip__9daPy_py_cFv(); // 1
-extern "C" void getAttentionOffsetY__9daPy_py_cFv(); // 1
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
-extern "C" void forceRestartRoom__9daPy_py_cFiUli(); // 1
-extern "C" void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi(); // 1
-extern "C" void cancelFmChainGrab__9daPy_py_cFv(); // 1
-extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
-extern "C" void setPlayerSe__9daPy_py_cFUl(); // 1
-extern "C" void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" void checkRoomRestartStart__9daPy_py_cFv(); // 1
-extern "C" void checkCarryStartLightBallA__9daPy_py_cFv(); // 1
-extern "C" void checkCarryStartLightBallB__9daPy_py_cFv(); // 1
-extern "C" void getSpinnerRideSpeed__9daPy_py_cCFv(); // 1
-extern "C" void checkSpinnerReflectEffect__9daPy_py_cFv(); // 1
-extern "C" void checkBoomerangCharge__9daPy_py_cFv(); // 1
-extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv(); // 1
-extern "C" void getThrowBoomerangActor__9daPy_py_cFv(); // 1
-extern "C" void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" void setPlayerDamage__9daPy_py_cFii(); // 1
-extern "C" void setMidnaMotionNum__9daPy_py_cFi(); // 1
-extern "C" void setMidnaFaceNum__9daPy_py_cFi(); // 1
-extern "C" void daPy_addCalcShort__FPsssss(); // 1
+extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv();
+extern "C" void updateFrame__16daPy_frameCtrl_cFv();
+extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff();
+extern "C" void initOffset__20daPy_boomerangMove_cFPC4cXyz();
+extern "C" void posMove__20daPy_boomerangMove_cFP4cXyzPsP10fopAc_ac_cs();
+extern "C" void bgCheckAfterOffset__20daPy_boomerangMove_cFPC4cXyz();
+extern "C" void setParamData__9daPy_py_cFiiii();
+extern "C" void checkFishingRodItem__9daPy_py_cFi();
+extern "C" void checkBombItem__9daPy_py_cFi();
+extern "C" void checkBottleItem__9daPy_py_cFi();
+extern "C" void checkDrinkBottleItem__9daPy_py_cFi();
+extern "C" void checkOilBottleItem__9daPy_py_cFi();
+extern "C" void checkOpenBottleItem__9daPy_py_cFi();
+extern "C" void checkBowItem__9daPy_py_cFi();
+extern "C" void checkHookshotItem__9daPy_py_cFi();
+extern "C" void checkTradeItem__9daPy_py_cFi();
+extern "C" void checkDungeonWarpItem__9daPy_py_cFi();
+extern "C" void setActor__16daPy_actorKeep_cFv();
+extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c();
+extern "C" void clearData__16daPy_actorKeep_cFv();
+extern "C" void __ct__14daPy_anmHeap_cFUl();
+extern "C" void __dt__14daPy_anmHeap_cFv();
+extern "C" void initData__14daPy_anmHeap_cFv();
+extern "C" void mallocBuffer__14daPy_anmHeap_cFv();
+extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE();
+extern "C" void loadData__14daPy_anmHeap_cFUs();
+extern "C" void loadDataIdx__14daPy_anmHeap_cFUs();
+extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs();
+extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs();
+extern "C" void setAnimeHeap__14daPy_anmHeap_cFv();
+extern "C" void draw__18daPy_sightPacket_cFv();
+extern "C" void setSight__18daPy_sightPacket_cFv();
+extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG();
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
+extern "C" void checkWoodShieldEquip__9daPy_py_cFv();
+extern "C" void getAttentionOffsetY__9daPy_py_cFv();
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
+extern "C" void forceRestartRoom__9daPy_py_cFiUli();
+extern "C" void setFmChainPos__9daPy_py_cFP10fopAc_ac_cP4cXyzi();
+extern "C" void cancelFmChainGrab__9daPy_py_cFv();
+extern "C" void setLookPos__9daPy_py_cFP4cXyz();
+extern "C" void setPlayerSe__9daPy_py_cFUl();
+extern "C" void linkGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
+extern "C" void wolfGrabSubjectNoDraw__9daPy_py_cFP10fopAc_ac_c();
+extern "C" void checkRoomRestartStart__9daPy_py_cFv();
+extern "C" void checkCarryStartLightBallA__9daPy_py_cFv();
+extern "C" void checkCarryStartLightBallB__9daPy_py_cFv();
+extern "C" void getSpinnerRideSpeed__9daPy_py_cCFv();
+extern "C" void checkSpinnerReflectEffect__9daPy_py_cFv();
+extern "C" void checkBoomerangCharge__9daPy_py_cFv();
+extern "C" bool checkBoomerangChargeTime__9daPy_py_cFv();
+extern "C" void getThrowBoomerangActor__9daPy_py_cFv();
+extern "C" void cancelBoomerangLockActor__9daPy_py_cFP10fopAc_ac_c();
+extern "C" void setPlayerDamage__9daPy_py_cFii();
+extern "C" void setMidnaMotionNum__9daPy_py_cFi();
+extern "C" void setMidnaFaceNum__9daPy_py_cFi();
+extern "C" void daPy_addCalcShort__FPsssss();
 extern "C" extern void* __vt__18daPy_sightPacket_c[4 + 1 /* padding */];
 extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
 extern "C" extern u8 struct_8045101C[4];
@@ -239,72 +242,81 @@ extern "C" extern u8 struct_8045101C[4];
 // External References:
 // 
 
-void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32); // 2
-void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
+void mDoExt_createSolidHeapFromGameToCurrent(JKRHeap**, u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoLib_project(Vec*, Vec*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fpcSch_JudgeByID(void*, void*);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+extern "C" extern void* __vt__18mDoExt_transAnmBas[5];
+extern "C" extern void* __vt__18J3DAnmTransformKey[5];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl(); // 1
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz(); // 1
-extern "C" void startRestartRoom__9daAlink_cFUliii(); // 1
-extern "C" void setDamagePoint__9daAlink_cFiiii(); // 1
-extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void checkBoomerangChargeEnd__9daAlink_cFv(); // 1
-extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi(); // 1
-extern "C" void __dt__18daPy_sightPacket_cFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void readIdxResource__10JKRArchiveFPvUlUl(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void update__12J3DFrameCtrlFv(); // 1
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
-extern "C" void __ct__19J3DAnmTextureSRTKeyFv(); // 1
-extern "C" void __ct__16J3DAnmTexPatternFv(); // 1
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FPP7JKRHeapUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz();
+extern "C" void startRestartRoom__9daAlink_cFUliii();
+extern "C" void setDamagePoint__9daAlink_cFiiii();
+extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c();
+extern "C" void checkBoomerangChargeEnd__9daAlink_cFv();
+extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi();
+extern "C" void __dt__18daPy_sightPacket_cFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void readIdxResource__10JKRArchiveFPvUlUl();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" void update__12J3DFrameCtrlFv();
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
+extern "C" void __ct__19J3DAnmTextureSRTKeyFv();
+extern "C" void __ct__16J3DAnmTexPatternFv();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareDistance();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevOrder();
+extern "C" void GXCallDisplayList();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__18mDoExt_transAnmBas[5];
 extern "C" extern void* __vt__18J3DAnmTransformKey[5];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

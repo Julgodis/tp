@@ -100,220 +100,275 @@ struct JASDriver {
 // Forward References:
 // 
 
-static void daMP_PopReadedBuffer(); // 2
-static void daMP_PushReadedBuffer(void*); // 2
-static void daMP_PopFreeReadBuffer(); // 2
-static void daMP_PushFreeReadBuffer(void*); // 2
-static void daMP_PopReadedBuffer2(); // 2
-static void daMP_PushReadedBuffer2(void*); // 2
-static void daMP_ReadThreadStart(); // 2
-static void daMP_ReadThreadCancel(); // 2
-static void daMP_Reader(void*); // 2
-static void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer*); // 2
-static void daMP_CreateReadThread(s32); // 2
-static void daMP_PopFreeTextureSet(); // 2
-static void daMP_PushFreeTextureSet(void*); // 2
-static void daMP_PopDecodedTextureSet(s32); // 2
-static void daMP_PushDecodedTextureSet(void*); // 2
-static void daMP_VideoDecode(daMP_THPReadBuffer*); // 2
-static void daMP_VideoDecoder(void*); // 2
-static void daMP_VideoDecoderForOnMemory(void*); // 2
-static void daMP_CreateVideoDecodeThread(s32, u8*); // 2
-static void daMP_VideoDecodeThreadStart(); // 2
-static void daMP_VideoDecodeThreadCancel(); // 2
-static void daMP_PopFreeAudioBuffer(); // 2
-static void daMP_PushFreeAudioBuffer(void*); // 2
-static void daMP_PopDecodedAudioBuffer(s32); // 2
-static void daMP_PushDecodedAudioBuffer(void*); // 2
-static void daMP_AudioDecode(daMP_THPReadBuffer*); // 2
-static void daMP_AudioDecoder(void*); // 2
-static void daMP_AudioDecoderForOnMemory(void*); // 2
-static void daMP_CreateAudioDecodeThread(s32, u8*); // 2
-static void daMP_AudioDecodeThreadStart(); // 2
-static void daMP_AudioDecodeThreadCancel(); // 2
-static void daMP_THPGXRestore(); // 2
-static void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const*); // 2
-static void daMP_THPGXYuv2RgbDraw(u8*, u8*, u8*, s16, s16, s16, s16, s16, s16); // 2
-static void daMP_MixAudio(s16*, s16*, u32); // 2
-static void daMP_audioCallbackWithMSound(s32); // 2
-static void daMP_audioInitWithMSound(); // 2
-static void daMP_audioQuitWithMSound(); // 2
-static void daMP_PushUsedTextureSet(void*); // 2
-static void daMP_PopUsedTextureSet(); // 2
-static void daMP_THPPlayerInit(s32); // 2
-static void daMP_THPPlayerQuit(); // 2
-static void daMP_THPPlayerOpen(char const*, int); // 2
-static void daMP_THPPlayerClose(); // 2
-static void daMP_THPPlayerCalcNeedMemory(); // 2
-static void daMP_THPPlayerSetBuffer(u8*); // 2
-static void daMP_InitAllMessageQueue(); // 2
-static void daMP_ProperTimingForStart(); // 2
-static void daMP_ProperTimingForGettingNextFrame(); // 2
-static void daMP_PlayControl(u32); // 2
-static void daMP_WaitUntilPrepare(); // 2
-static void daMP_PrepareReady(int); // 2
-static void daMP_THPPlayerPrepare(s32, s32, s32); // 2
-static void daMP_THPPlayerDrawDone(); // 2
-static void daMP_THPPlayerPlay(); // 2
-static void daMP_THPPlayerStop(); // 2
-static void daMP_THPPlayerPause(); // 2
-static void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const*, u32, u32, u32, u32); // 2
-static void daMP_THPPlayerGetVideoInfo(THPVideoInfo*); // 2
-static void daMP_THPPlayerGetAudioInfo(THPAudioInfo*); // 2
-static void daMP_THPPlayerGetTotalFrame(); // 2
-static void daMP_THPPlayerGetState(); // 2
-static void daMP_THPPlayerSetVolume(s32, s32); // 2
-static void daMP_ActivePlayer_Init(char const*); // 2
-static void daMP_ActivePlayer_Finish(); // 2
-static void JKRFree(void*); // 2
-static void daMP_ActivePlayer_Main(); // 2
-static void daMP_ActivePlayer_Draw(); // 2
-static void dComIfGp_event_reset(); // 2
-static void daMP_Get_MovieRestFrame(); // 2
-static void daMP_Set_PercentMovieVolume(f32); // 2
-static void fopAcM_GetParam(void const*); // 2
-static void fpcM_GetParam(void const*); // 2
-static void dComIfGd_set2DOpa(dDlst_base_c*); // 2
-static void fopAcM_OnCondition(fopAc_ac_c*, u32); // 2
-static void* operator new(u32, void*); // 2
-static void fopAcM_CheckCondition(fopAc_ac_c*, u32); // 2
-static bool daMP_Callback_Dummy(daMP_c*); // 2
+static void daMP_PopReadedBuffer();
+static void daMP_PushReadedBuffer(void*);
+static void daMP_PopFreeReadBuffer();
+static void daMP_PushFreeReadBuffer(void*);
+static void daMP_PopReadedBuffer2();
+static void daMP_PushReadedBuffer2(void*);
+static void daMP_ReadThreadStart();
+static void daMP_ReadThreadCancel();
+static void daMP_Reader(void*);
+static void daMP_NEXT_READ_SIZE(daMP_THPReadBuffer*);
+static void daMP_CreateReadThread(s32);
+static void daMP_PopFreeTextureSet();
+static void daMP_PushFreeTextureSet(void*);
+static void daMP_PopDecodedTextureSet(s32);
+static void daMP_PushDecodedTextureSet(void*);
+static void daMP_VideoDecode(daMP_THPReadBuffer*);
+static void daMP_VideoDecoder(void*);
+static void daMP_VideoDecoderForOnMemory(void*);
+static void daMP_CreateVideoDecodeThread(s32, u8*);
+static void daMP_VideoDecodeThreadStart();
+static void daMP_VideoDecodeThreadCancel();
+static void daMP_PopFreeAudioBuffer();
+static void daMP_PushFreeAudioBuffer(void*);
+static void daMP_PopDecodedAudioBuffer(s32);
+static void daMP_PushDecodedAudioBuffer(void*);
+static void daMP_AudioDecode(daMP_THPReadBuffer*);
+static void daMP_AudioDecoder(void*);
+static void daMP_AudioDecoderForOnMemory(void*);
+static void daMP_CreateAudioDecodeThread(s32, u8*);
+static void daMP_AudioDecodeThreadStart();
+static void daMP_AudioDecodeThreadCancel();
+static void daMP_THPGXRestore();
+static void daMP_THPGXYuv2RgbSetup(_GXRenderModeObj const*);
+static void daMP_THPGXYuv2RgbDraw(u8*, u8*, u8*, s16, s16, s16, s16, s16, s16);
+static void daMP_MixAudio(s16*, s16*, u32);
+static void daMP_audioCallbackWithMSound(s32);
+static void daMP_audioInitWithMSound();
+static void daMP_audioQuitWithMSound();
+static void daMP_PushUsedTextureSet(void*);
+static void daMP_PopUsedTextureSet();
+static void daMP_THPPlayerInit(s32);
+static void daMP_THPPlayerQuit();
+static void daMP_THPPlayerOpen(char const*, int);
+static void daMP_THPPlayerClose();
+static void daMP_THPPlayerCalcNeedMemory();
+static void daMP_THPPlayerSetBuffer(u8*);
+static void daMP_InitAllMessageQueue();
+static void daMP_ProperTimingForStart();
+static void daMP_ProperTimingForGettingNextFrame();
+static void daMP_PlayControl(u32);
+static void daMP_WaitUntilPrepare();
+static void daMP_PrepareReady(int);
+static void daMP_THPPlayerPrepare(s32, s32, s32);
+static void daMP_THPPlayerDrawDone();
+static void daMP_THPPlayerPlay();
+static void daMP_THPPlayerStop();
+static void daMP_THPPlayerPause();
+static void daMP_THPPlayerDrawCurrentFrame(_GXRenderModeObj const*, u32, u32, u32, u32);
+static void daMP_THPPlayerGetVideoInfo(THPVideoInfo*);
+static void daMP_THPPlayerGetAudioInfo(THPAudioInfo*);
+static void daMP_THPPlayerGetTotalFrame();
+static void daMP_THPPlayerGetState();
+static void daMP_THPPlayerSetVolume(s32, s32);
+static void daMP_ActivePlayer_Init(char const*);
+static void daMP_ActivePlayer_Finish();
+static void JKRFree(void*);
+static void daMP_ActivePlayer_Main();
+static void daMP_ActivePlayer_Draw();
+static void dComIfGp_event_reset();
+static void daMP_Get_MovieRestFrame();
+static void daMP_Set_PercentMovieVolume(f32);
+static void fopAcM_GetParam(void const*);
+static void fpcM_GetParam(void const*);
+static void dComIfGd_set2DOpa(dDlst_base_c*);
+static void fopAcM_OnCondition(fopAc_ac_c*, u32);
+static void* operator new(u32, void*);
+static void fopAcM_CheckCondition(fopAc_ac_c*, u32);
+static bool daMP_Callback_Dummy(daMP_c*);
+extern "C" extern u32 const lit_4466;
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_MOVIE_PLAYER[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 THPStatistics[1120];
+extern "C" extern u8 daMP_FreeTextureSetMessage[12];
+extern "C" extern u8 daMP_DecodedTextureSetMessage[12];
+extern "C" extern u8 daMP_AudioDecodeThreadStack[409600];
+extern "C" extern u8 daMP_FreeAudioBufferMessage[12];
+extern "C" extern u8 daMP_DecodedAudioBufferMessage[12];
+extern "C" extern u8 daMP_UsedTextureSetMessage[12];
+extern "C" extern u8 daMP_OldAIDCallback[4];
+extern "C" extern u8 daMP_LastAudioBuffer[4];
+extern "C" extern u8 daMP_CurAudioBuffer[4];
+extern "C" extern u8 daMP_AudioSystem[4 + 24 /* padding */];
+extern "C" extern u8 daMP_audioInfo[16];
+extern "C" extern u8 data_80945B10[4];
+extern "C" extern u8 data_80945B14[4];
+extern "C" extern u8 data_80945B18[4];
+extern "C" extern u8 data_80945B1C[4];
+extern "C" extern u8 data_80945B20[4];
+extern "C" extern u8 data_80945B24[4];
+extern "C" extern u8 data_80945B28[4];
+extern "C" extern u8 data_80945B2C[4];
+extern "C" extern u8 data_80945B30[4];
+extern "C" extern u8 data_80945B34[4];
+extern "C" extern u8 data_80945B38[4];
+extern "C" extern u8 data_80945B3C[4];
+extern "C" extern u8 data_80945B40[4];
+extern "C" extern u8 data_80945B44[4];
+extern "C" extern u8 data_80945B48[4];
+extern "C" extern u8 data_80945B4C[4];
+extern "C" extern u8 data_80945B50[4];
+extern "C" extern u8 data_80945B54[4];
+extern "C" extern u8 data_80945B58[4];
+extern "C" extern u8 data_80945B5C[4];
+extern "C" extern u8 data_80945B60[4];
+extern "C" extern u8 data_80945B64[4];
+extern "C" extern u8 data_80945B68[4];
+extern "C" extern u8 data_80945B6C[4];
+extern "C" extern u8 data_80945B70[4];
 
-extern "C" static void THPAudioDecode(); // 1
-extern "C" static void __THPAudioGetNewSample(); // 1
-extern "C" static void __THPAudioInitialize(); // 1
-extern "C" static void THPVideoDecode(); // 1
-extern "C" static void __THPSetupBuffers(); // 1
-extern "C" static void __THPReadFrameHeader(); // 1
-extern "C" static void __THPReadScaneHeader(); // 1
-extern "C" static void __THPReadQuantizationTable(); // 1
-extern "C" static void __THPReadHuffmanTableSpecification(); // 1
-extern "C" static void __THPHuffGenerateSizeTable(); // 1
-extern "C" static void __THPHuffGenerateCodeTable(); // 1
-extern "C" static void __THPHuffGenerateDecoderTables(); // 1
-extern "C" static void __THPRestartDefinition(); // 1
-extern "C" static void __THPPrepBitStream(); // 1
-extern "C" static void __THPDecompressYUV(); // 1
-extern "C" static void __THPGQRRestore(); // 1
-extern "C" static void __THPGQRSetup(); // 1
-extern "C" static void __THPDecompressiMCURow512x448(); // 1
-extern "C" static void __THPInverseDCTY8(); // 1
-extern "C" static void __THPInverseDCTNoYPos(); // 1
-extern "C" static void __THPDecompressiMCURow640x480(); // 1
-extern "C" static void __THPDecompressiMCURowNxN(); // 1
-extern "C" static void __THPHuffDecodeDCTCompY(); // 1
-extern "C" static void __THPHuffDecodeTab(); // 1
-extern "C" static void __THPHuffDecodeDCTCompU(); // 1
-extern "C" static void __THPHuffDecodeDCTCompV(); // 1
-extern "C" static void THPInit(); // 1
-extern "C" static void OSInitFastCast(); // 1
-extern "C" static void daMP_PopReadedBuffer__Fv(); // 1
-extern "C" static void daMP_PushReadedBuffer__FPv(); // 1
-extern "C" static void daMP_PopFreeReadBuffer__Fv(); // 1
-extern "C" static void daMP_PushFreeReadBuffer__FPv(); // 1
-extern "C" static void daMP_PopReadedBuffer2__Fv(); // 1
-extern "C" static void daMP_PushReadedBuffer2__FPv(); // 1
-extern "C" static void daMP_ReadThreadStart__Fv(); // 1
-extern "C" static void daMP_ReadThreadCancel__Fv(); // 1
-extern "C" static void daMP_Reader__FPv(); // 1
-extern "C" static void daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer(); // 1
-extern "C" static void daMP_CreateReadThread__Fl(); // 1
-extern "C" static void daMP_PopFreeTextureSet__Fv(); // 1
-extern "C" static void daMP_PushFreeTextureSet__FPv(); // 1
-extern "C" static void daMP_PopDecodedTextureSet__Fl(); // 1
-extern "C" static void daMP_PushDecodedTextureSet__FPv(); // 1
-extern "C" static void daMP_VideoDecode__FP18daMP_THPReadBuffer(); // 1
-extern "C" static void daMP_VideoDecoder__FPv(); // 1
-extern "C" static void daMP_VideoDecoderForOnMemory__FPv(); // 1
-extern "C" static void daMP_CreateVideoDecodeThread__FlPUc(); // 1
-extern "C" static void daMP_VideoDecodeThreadStart__Fv(); // 1
-extern "C" static void daMP_VideoDecodeThreadCancel__Fv(); // 1
-extern "C" static void daMP_PopFreeAudioBuffer__Fv(); // 1
-extern "C" static void daMP_PushFreeAudioBuffer__FPv(); // 1
-extern "C" static void daMP_PopDecodedAudioBuffer__Fl(); // 1
-extern "C" static void daMP_PushDecodedAudioBuffer__FPv(); // 1
-extern "C" static void daMP_AudioDecode__FP18daMP_THPReadBuffer(); // 1
-extern "C" static void daMP_AudioDecoder__FPv(); // 1
-extern "C" static void daMP_AudioDecoderForOnMemory__FPv(); // 1
-extern "C" static void daMP_CreateAudioDecodeThread__FlPUc(); // 1
-extern "C" static void daMP_AudioDecodeThreadStart__Fv(); // 1
-extern "C" static void daMP_AudioDecodeThreadCancel__Fv(); // 1
-extern "C" static void daMP_THPGXRestore__Fv(); // 1
-extern "C" static void daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj(); // 1
-extern "C" static void GXSetTexCoordGen(); // 1
-extern "C" static void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss(); // 1
-extern "C" static void GXEnd(); // 1
-extern "C" static void GXTexCoord2u16(); // 1
-extern "C" static void GXPosition3s16(); // 1
-extern "C" static void daMP_MixAudio__FPsPsUl(); // 1
-extern "C" static void daMP_audioCallbackWithMSound__Fl(); // 1
-extern "C" static void daMP_audioInitWithMSound__Fv(); // 1
-extern "C" static void daMP_audioQuitWithMSound__Fv(); // 1
-extern "C" static void daMP_PushUsedTextureSet__FPv(); // 1
-extern "C" static void daMP_PopUsedTextureSet__Fv(); // 1
-extern "C" static void daMP_THPPlayerInit__Fl(); // 1
-extern "C" static void daMP_THPPlayerQuit__Fv(); // 1
-extern "C" static void daMP_THPPlayerOpen__FPCci(); // 1
-extern "C" static void daMP_THPPlayerClose__Fv(); // 1
-extern "C" static void daMP_THPPlayerCalcNeedMemory__Fv(); // 1
-extern "C" static void daMP_THPPlayerSetBuffer__FPUc(); // 1
-extern "C" static void daMP_InitAllMessageQueue__Fv(); // 1
-extern "C" static void daMP_ProperTimingForStart__Fv(); // 1
-extern "C" static void daMP_ProperTimingForGettingNextFrame__Fv(); // 1
-extern "C" static void daMP_PlayControl__FUl(); // 1
-extern "C" static void daMP_WaitUntilPrepare__Fv(); // 1
-extern "C" static void daMP_PrepareReady__Fi(); // 1
-extern "C" static void daMP_THPPlayerPrepare__Flll(); // 1
-extern "C" static void daMP_THPPlayerDrawDone__Fv(); // 1
-extern "C" static void daMP_THPPlayerPlay__Fv(); // 1
-extern "C" static void daMP_THPPlayerStop__Fv(); // 1
-extern "C" static void daMP_THPPlayerPause__Fv(); // 1
-extern "C" static void daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl(); // 1
-extern "C" void fadeIn__13mDoGph_gInf_cFf(); // 1
-extern "C" void isFade__13mDoGph_gInf_cFv(); // 1
-extern "C" static void daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo(); // 1
-extern "C" static void daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo(); // 1
-extern "C" static void daMP_THPPlayerGetTotalFrame__Fv(); // 1
-extern "C" static void daMP_THPPlayerGetState__Fv(); // 1
-extern "C" static void daMP_THPPlayerSetVolume__Fll(); // 1
-extern "C" static void daMP_ActivePlayer_Init__FPCc(); // 1
-extern "C" void getRenderMode__8JUTVideoCFv(); // 1
-extern "C" void getManager__8JUTVideoFv(); // 1
-extern "C" static void daMP_ActivePlayer_Finish__Fv(); // 1
-extern "C" static void JKRFree__FPv(); // 1
-extern "C" static void daMP_ActivePlayer_Main__Fv(); // 1
-extern "C" static void daMP_ActivePlayer_Draw__Fv(); // 1
-extern "C" static void dComIfGp_event_reset__Fv(); // 1
-extern "C" void getEvent__14dComIfG_play_cFv(); // 1
-extern "C" static void daMP_Get_MovieRestFrame__Fv(); // 1
-extern "C" static void daMP_Set_PercentMovieVolume__Ff(); // 1
-extern "C" void daMP_c_Get_arg_demoNo__6daMP_cFv(); // 1
-extern "C" static void fopAcM_GetParam__FPCv(); // 1
-extern "C" static void fpcM_GetParam__FPCv(); // 1
-extern "C" void daMP_c_Get_arg_movieNo__6daMP_cFv(); // 1
-extern "C" void daMP_c_Init__6daMP_cFv(); // 1
-extern "C" void setFrameRate__13mDoGph_gInf_cFUs(); // 1
-extern "C" void setFrameRate__10JFWDisplayFUs(); // 1
-extern "C" void getManager__10JFWDisplayFv(); // 1
-extern "C" void daMP_c_Finish__6daMP_cFv(); // 1
-extern "C" void daMP_c_Main__6daMP_cFv(); // 1
-extern "C" void draw__16daMP_Dlst_base_cFv(); // 1
-extern "C" void daMP_c_Draw__6daMP_cFv(); // 1
-extern "C" static void dComIfGd_set2DOpa__FP12dDlst_base_c(); // 1
-extern "C" void set2DOpa__12dDlst_list_cFP12dDlst_base_c(); // 1
-extern "C" void daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c(); // 1
-extern "C" static void fopAcM_OnCondition__FP10fopAc_ac_cUl(); // 1
-extern "C" void __ct__6daMP_cFv(); // 1
-extern "C" static void* __nw__FUlPv(); // 1
-extern "C" static void fopAcM_CheckCondition__FP10fopAc_ac_cUl(); // 1
-extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c(); // 1
-extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c(); // 1
-extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c(); // 1
-extern "C" static bool daMP_Callback_Dummy__FP6daMP_c(); // 1
-extern "C" void __sinit_d_a_movie_player_cpp(); // 1
-extern "C" void __ct__16daMP_Dlst_base_cFv(); // 1
-extern "C" void __ct__12dDlst_base_cFv(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
+extern "C" static void THPAudioDecode();
+extern "C" static void __THPAudioGetNewSample();
+extern "C" static void __THPAudioInitialize();
+extern "C" static void THPVideoDecode();
+extern "C" static void __THPSetupBuffers();
+extern "C" static void __THPReadFrameHeader();
+extern "C" static void __THPReadScaneHeader();
+extern "C" static void __THPReadQuantizationTable();
+extern "C" static void __THPReadHuffmanTableSpecification();
+extern "C" static void __THPHuffGenerateSizeTable();
+extern "C" static void __THPHuffGenerateCodeTable();
+extern "C" static void __THPHuffGenerateDecoderTables();
+extern "C" static void __THPRestartDefinition();
+extern "C" static void __THPPrepBitStream();
+extern "C" static void __THPDecompressYUV();
+extern "C" static void __THPGQRRestore();
+extern "C" static void __THPGQRSetup();
+extern "C" static void __THPDecompressiMCURow512x448();
+extern "C" static void __THPInverseDCTY8();
+extern "C" static void __THPInverseDCTNoYPos();
+extern "C" static void __THPDecompressiMCURow640x480();
+extern "C" static void __THPDecompressiMCURowNxN();
+extern "C" static void __THPHuffDecodeDCTCompY();
+extern "C" static void __THPHuffDecodeTab();
+extern "C" static void __THPHuffDecodeDCTCompU();
+extern "C" static void __THPHuffDecodeDCTCompV();
+extern "C" static void THPInit();
+extern "C" static void OSInitFastCast();
+extern "C" static void daMP_PopReadedBuffer__Fv();
+extern "C" static void daMP_PushReadedBuffer__FPv();
+extern "C" static void daMP_PopFreeReadBuffer__Fv();
+extern "C" static void daMP_PushFreeReadBuffer__FPv();
+extern "C" static void daMP_PopReadedBuffer2__Fv();
+extern "C" static void daMP_PushReadedBuffer2__FPv();
+extern "C" static void daMP_ReadThreadStart__Fv();
+extern "C" static void daMP_ReadThreadCancel__Fv();
+extern "C" static void daMP_Reader__FPv();
+extern "C" static void daMP_NEXT_READ_SIZE__FP18daMP_THPReadBuffer();
+extern "C" static void daMP_CreateReadThread__Fl();
+extern "C" static void daMP_PopFreeTextureSet__Fv();
+extern "C" static void daMP_PushFreeTextureSet__FPv();
+extern "C" static void daMP_PopDecodedTextureSet__Fl();
+extern "C" static void daMP_PushDecodedTextureSet__FPv();
+extern "C" static void daMP_VideoDecode__FP18daMP_THPReadBuffer();
+extern "C" static void daMP_VideoDecoder__FPv();
+extern "C" static void daMP_VideoDecoderForOnMemory__FPv();
+extern "C" static void daMP_CreateVideoDecodeThread__FlPUc();
+extern "C" static void daMP_VideoDecodeThreadStart__Fv();
+extern "C" static void daMP_VideoDecodeThreadCancel__Fv();
+extern "C" static void daMP_PopFreeAudioBuffer__Fv();
+extern "C" static void daMP_PushFreeAudioBuffer__FPv();
+extern "C" static void daMP_PopDecodedAudioBuffer__Fl();
+extern "C" static void daMP_PushDecodedAudioBuffer__FPv();
+extern "C" static void daMP_AudioDecode__FP18daMP_THPReadBuffer();
+extern "C" static void daMP_AudioDecoder__FPv();
+extern "C" static void daMP_AudioDecoderForOnMemory__FPv();
+extern "C" static void daMP_CreateAudioDecodeThread__FlPUc();
+extern "C" static void daMP_AudioDecodeThreadStart__Fv();
+extern "C" static void daMP_AudioDecodeThreadCancel__Fv();
+extern "C" static void daMP_THPGXRestore__Fv();
+extern "C" static void daMP_THPGXYuv2RgbSetup__FPC16_GXRenderModeObj();
+extern "C" static void GXSetTexCoordGen();
+extern "C" static void daMP_THPGXYuv2RgbDraw__FPUcPUcPUcssssss();
+extern "C" static void GXEnd();
+extern "C" static void GXTexCoord2u16();
+extern "C" static void GXPosition3s16();
+extern "C" static void daMP_MixAudio__FPsPsUl();
+extern "C" static void daMP_audioCallbackWithMSound__Fl();
+extern "C" static void daMP_audioInitWithMSound__Fv();
+extern "C" static void daMP_audioQuitWithMSound__Fv();
+extern "C" static void daMP_PushUsedTextureSet__FPv();
+extern "C" static void daMP_PopUsedTextureSet__Fv();
+extern "C" static void daMP_THPPlayerInit__Fl();
+extern "C" static void daMP_THPPlayerQuit__Fv();
+extern "C" static void daMP_THPPlayerOpen__FPCci();
+extern "C" static void daMP_THPPlayerClose__Fv();
+extern "C" static void daMP_THPPlayerCalcNeedMemory__Fv();
+extern "C" static void daMP_THPPlayerSetBuffer__FPUc();
+extern "C" static void daMP_InitAllMessageQueue__Fv();
+extern "C" static void daMP_ProperTimingForStart__Fv();
+extern "C" static void daMP_ProperTimingForGettingNextFrame__Fv();
+extern "C" static void daMP_PlayControl__FUl();
+extern "C" static void daMP_WaitUntilPrepare__Fv();
+extern "C" static void daMP_PrepareReady__Fi();
+extern "C" static void daMP_THPPlayerPrepare__Flll();
+extern "C" static void daMP_THPPlayerDrawDone__Fv();
+extern "C" static void daMP_THPPlayerPlay__Fv();
+extern "C" static void daMP_THPPlayerStop__Fv();
+extern "C" static void daMP_THPPlayerPause__Fv();
+extern "C" static void daMP_THPPlayerDrawCurrentFrame__FPC16_GXRenderModeObjUlUlUlUl();
+extern "C" void fadeIn__13mDoGph_gInf_cFf();
+extern "C" void isFade__13mDoGph_gInf_cFv();
+extern "C" static void daMP_THPPlayerGetVideoInfo__FP12THPVideoInfo();
+extern "C" static void daMP_THPPlayerGetAudioInfo__FP12THPAudioInfo();
+extern "C" static void daMP_THPPlayerGetTotalFrame__Fv();
+extern "C" static void daMP_THPPlayerGetState__Fv();
+extern "C" static void daMP_THPPlayerSetVolume__Fll();
+extern "C" static void daMP_ActivePlayer_Init__FPCc();
+extern "C" void getRenderMode__8JUTVideoCFv();
+extern "C" void getManager__8JUTVideoFv();
+extern "C" static void daMP_ActivePlayer_Finish__Fv();
+extern "C" static void JKRFree__FPv();
+extern "C" static void daMP_ActivePlayer_Main__Fv();
+extern "C" static void daMP_ActivePlayer_Draw__Fv();
+extern "C" static void dComIfGp_event_reset__Fv();
+extern "C" void getEvent__14dComIfG_play_cFv();
+extern "C" static void daMP_Get_MovieRestFrame__Fv();
+extern "C" static void daMP_Set_PercentMovieVolume__Ff();
+extern "C" void daMP_c_Get_arg_demoNo__6daMP_cFv();
+extern "C" static void fopAcM_GetParam__FPCv();
+extern "C" static void fpcM_GetParam__FPCv();
+extern "C" void daMP_c_Get_arg_movieNo__6daMP_cFv();
+extern "C" void daMP_c_Init__6daMP_cFv();
+extern "C" void setFrameRate__13mDoGph_gInf_cFUs();
+extern "C" void setFrameRate__10JFWDisplayFUs();
+extern "C" void getManager__10JFWDisplayFv();
+extern "C" void daMP_c_Finish__6daMP_cFv();
+extern "C" void daMP_c_Main__6daMP_cFv();
+extern "C" void draw__16daMP_Dlst_base_cFv();
+extern "C" void daMP_c_Draw__6daMP_cFv();
+extern "C" static void dComIfGd_set2DOpa__FP12dDlst_base_c();
+extern "C" void set2DOpa__12dDlst_list_cFP12dDlst_base_c();
+extern "C" void daMP_c_Callback_Init__6daMP_cFP10fopAc_ac_c();
+extern "C" static void fopAcM_OnCondition__FP10fopAc_ac_cUl();
+extern "C" void __ct__6daMP_cFv();
+extern "C" static void* __nw__FUlPv();
+extern "C" static void fopAcM_CheckCondition__FP10fopAc_ac_cUl();
+extern "C" void daMP_c_Callback_Finish__6daMP_cFP6daMP_c();
+extern "C" void daMP_c_Callback_Main__6daMP_cFP6daMP_c();
+extern "C" void daMP_c_Callback_Draw__6daMP_cFP6daMP_c();
+extern "C" static bool daMP_Callback_Dummy__FP6daMP_c();
+extern "C" void __sinit_d_a_movie_player_cpp();
+extern "C" void __ct__16daMP_Dlst_base_cFv();
+extern "C" void __ct__12dDlst_base_cFv();
+extern "C" void draw__12dDlst_base_cFv();
 extern "C" extern u32 const lit_4466;
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_MOVIE_PLAYER[12];
@@ -374,114 +429,122 @@ extern "C" extern u8 data_80945B70[4];
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void fopOvlpM_IsPeek(); // 2
-void cAPICPad_ANY_BUTTON(u32); // 2
+void mDoExt_getArchiveHeap();
+void fopOvlpM_IsPeek();
+void cAPICPad_ANY_BUTTON(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_clearColor[4];
+extern "C" extern u8 struct_80450BE4[4];
+extern "C" extern u8 m_myObj__6daMP_c[4];
+extern "C" extern u8 sManager__10JFWDisplay[4];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv(); // 1
-extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
-extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode(); // 1
-extern "C" void getOutputMode__9JASDriverFv(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void PPCMfhid2(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void DCZeroRange(); // 1
-extern "C" void LCEnable(); // 1
-extern "C" void LCDisable(); // 1
-extern "C" void LCStoreData(); // 1
-extern "C" void LCQueueWait(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" void DVDCancel(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIGetNextField(); // 1
-extern "C" void VIGetTvFormat(); // 1
-extern "C" void AIGetDSPSampleRate(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetPixelFmt(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv();
+extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void cAPICPad_ANY_BUTTON__FUl();
+extern "C" void registerMixCallback__9JASDriverFPFl_Ps10JASMixMode();
+extern "C" void getOutputMode__9JASDriverFv();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void PPCMfhid2();
+extern "C" void DCInvalidateRange();
+extern "C" void DCStoreRange();
+extern "C" void DCZeroRange();
+extern "C" void LCEnable();
+extern "C" void LCDisable();
+extern "C" void LCStoreData();
+extern "C" void LCQueueWait();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSCreateThread();
+extern "C" void OSCancelThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetTick();
+extern "C" void PSMTXIdentity();
+extern "C" void C_MTXOrtho();
+extern "C" void DVDOpen();
+extern "C" void DVDClose();
+extern "C" void DVDReadPrio();
+extern "C" void DVDCancel();
+extern "C" void VISetPostRetraceCallback();
+extern "C" void VIGetNextField();
+extern "C" void VIGetTvFormat();
+extern "C" void AIGetDSPSampleRate();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXDrawDone();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInvalidateTexAll();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetFogRangeAdj();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetColorUpdate();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetPixelFmt();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void __div2i();
+extern "C" void sprintf();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

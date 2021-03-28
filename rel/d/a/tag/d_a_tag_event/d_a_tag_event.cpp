@@ -72,42 +72,44 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTag_getBk(u32); // 2
-static void daTag_Event_Draw(daTag_Event_c*); // 2
-static void daTag_Event_Execute(daTag_Event_c*); // 2
-static bool daTag_Event_IsDelete(daTag_Event_c*); // 2
-static void daTag_Event_Delete(daTag_Event_c*); // 2
-static void daTag_Event_Create(fopAc_ac_c*); // 2
+static void daTag_getBk(u32);
+static void daTag_Event_Draw(daTag_Event_c*);
+static void daTag_Event_Execute(daTag_Event_c*);
+static bool daTag_Event_IsDelete(daTag_Event_c*);
+static void daTag_Event_Delete(daTag_Event_c*);
+static void daTag_Event_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_TAG_EVENT[12];
 
-extern "C" static void daTag_getBk__FUl(); // 1
-extern "C" void getEventNo__13daTag_Event_cFv(); // 1
-extern "C" void getSwbit__13daTag_Event_cFv(); // 1
-extern "C" void getSwbit2__13daTag_Event_cFv(); // 1
-extern "C" void getType__13daTag_Event_cFv(); // 1
-extern "C" void getInvalidEventFlag__13daTag_Event_cFv(); // 1
-extern "C" void getAreaType__13daTag_Event_cFv(); // 1
-extern "C" void getValidEventFlag__13daTag_Event_cFv(); // 1
-extern "C" void horseRodeo__13daTag_Event_cFv(); // 1
-extern "C" void arrivalTerms__13daTag_Event_cFv(); // 1
-extern "C" void demoInitProc__13daTag_Event_cFv(); // 1
-extern "C" void demoEndProc__13daTag_Event_cFv(); // 1
-extern "C" void demoProc__13daTag_Event_cFv(); // 1
-extern "C" void create__13daTag_Event_cFv(); // 1
-extern "C" void actionNext__13daTag_Event_cFv(); // 1
-extern "C" void actionEvent__13daTag_Event_cFv(); // 1
-extern "C" void actionReady__13daTag_Event_cFv(); // 1
-extern "C" void checkArea__13daTag_Event_cFv(); // 1
-extern "C" void actionHunt__13daTag_Event_cFv(); // 1
-extern "C" void actionArrival__13daTag_Event_cFv(); // 1
-extern "C" bool actionWait__13daTag_Event_cFv(); // 1
-extern "C" void actionHunt2__13daTag_Event_cFv(); // 1
-extern "C" void execute__13daTag_Event_cFv(); // 1
-extern "C" bool draw__13daTag_Event_cFv(); // 1
-extern "C" static void daTag_Event_Draw__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Execute__FP13daTag_Event_c(); // 1
-extern "C" static bool daTag_Event_IsDelete__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Delete__FP13daTag_Event_c(); // 1
-extern "C" static void daTag_Event_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daTag_getBk__FUl();
+extern "C" void getEventNo__13daTag_Event_cFv();
+extern "C" void getSwbit__13daTag_Event_cFv();
+extern "C" void getSwbit2__13daTag_Event_cFv();
+extern "C" void getType__13daTag_Event_cFv();
+extern "C" void getInvalidEventFlag__13daTag_Event_cFv();
+extern "C" void getAreaType__13daTag_Event_cFv();
+extern "C" void getValidEventFlag__13daTag_Event_cFv();
+extern "C" void horseRodeo__13daTag_Event_cFv();
+extern "C" void arrivalTerms__13daTag_Event_cFv();
+extern "C" void demoInitProc__13daTag_Event_cFv();
+extern "C" void demoEndProc__13daTag_Event_cFv();
+extern "C" void demoProc__13daTag_Event_cFv();
+extern "C" void create__13daTag_Event_cFv();
+extern "C" void actionNext__13daTag_Event_cFv();
+extern "C" void actionEvent__13daTag_Event_cFv();
+extern "C" void actionReady__13daTag_Event_cFv();
+extern "C" void checkArea__13daTag_Event_cFv();
+extern "C" void actionHunt__13daTag_Event_cFv();
+extern "C" void actionArrival__13daTag_Event_cFv();
+extern "C" bool actionWait__13daTag_Event_cFv();
+extern "C" void actionHunt2__13daTag_Event_cFv();
+extern "C" void execute__13daTag_Event_cFv();
+extern "C" bool draw__13daTag_Event_cFv();
+extern "C" static void daTag_Event_Draw__FP13daTag_Event_c();
+extern "C" static void daTag_Event_Execute__FP13daTag_Event_c();
+extern "C" static bool daTag_Event_IsDelete__FP13daTag_Event_c();
+extern "C" static void daTag_Event_Delete__FP13daTag_Event_c();
+extern "C" static void daTag_Event_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_TAG_EVENT[12];
 
@@ -115,24 +117,29 @@ extern "C" extern void* g_profile_TAG_EVENT[12];
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_searchFromName(char const*, u32, u32); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_searchFromName(char const*, u32, u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_searchFromName__FPCcUlUl(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUcl(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_searchFromName__FPCcUlUl();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void searchMapEventData__14dEvt_control_cFUcl();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

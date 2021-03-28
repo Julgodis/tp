@@ -34,30 +34,36 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static bool daKytag14_Draw(kytag14_class*); // 2
-static void daKytag14_Execute(kytag14_class*); // 2
-static bool daKytag14_IsDelete(kytag14_class*); // 2
-static bool daKytag14_Delete(kytag14_class*); // 2
-static void daKytag14_Create(fopAc_ac_c*); // 2
+static bool daKytag14_Draw(kytag14_class*);
+static void daKytag14_Execute(kytag14_class*);
+static bool daKytag14_IsDelete(kytag14_class*);
+static bool daKytag14_Delete(kytag14_class*);
+static void daKytag14_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_KYTAG14[12];
 
-extern "C" static bool daKytag14_Draw__FP13kytag14_class(); // 1
-extern "C" static void daKytag14_Execute__FP13kytag14_class(); // 1
-extern "C" static bool daKytag14_IsDelete__FP13kytag14_class(); // 1
-extern "C" static bool daKytag14_Delete__FP13kytag14_class(); // 1
-extern "C" static void daKytag14_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daKytag14_Draw__FP13kytag14_class();
+extern "C" static void daKytag14_Execute__FP13kytag14_class();
+extern "C" static bool daKytag14_IsDelete__FP13kytag14_class();
+extern "C" static bool daKytag14_Delete__FP13kytag14_class();
+extern "C" static void daKytag14_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_KYTAG14[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void set__25dSv_player_return_place_cFPCcScUc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void set__25dSv_player_return_place_cFPCcScUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

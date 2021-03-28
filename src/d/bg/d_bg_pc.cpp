@@ -23,7 +23,7 @@ struct dBgPc {
 // 
 
 
-extern "C" void setCode__5dBgPcFR5sBgPc(); // 1
+extern "C" void setCode__5dBgPcFR5sBgPc();
 
 // 
 // External References:

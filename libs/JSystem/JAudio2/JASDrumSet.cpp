@@ -40,25 +40,26 @@ struct JASCalc {
 // 
 
 
-extern "C" void __ct__10JASDrumSetFv(); // 1
-extern "C" void __dt__10JASDrumSetFv(); // 1
-extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap(); // 1
-extern "C" void getParam__10JASDrumSetCFiiP12JASInstParam(); // 1
-extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc(); // 1
-extern "C" void __ct__Q210JASDrumSet5TPercFv(); // 1
-extern "C" void setRelease__Q210JASDrumSet5TPercFUl(); // 1
-extern "C" void getType__10JASDrumSetCFv(); // 1
+extern "C" void __ct__10JASDrumSetFv();
+extern "C" void __dt__10JASDrumSetFv();
+extern "C" void newPercArray__10JASDrumSetFUcP7JKRHeap();
+extern "C" void getParam__10JASDrumSetCFiiP12JASInstParam();
+extern "C" void setPerc__10JASDrumSetFiPQ210JASDrumSet5TPerc();
+extern "C" void __ct__Q210JASDrumSet5TPercFv();
+extern "C" void setRelease__Q210JASDrumSet5TPercFUl();
+extern "C" void getType__10JASDrumSetCFv();
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern void* __vt__7JASInst[5];
 
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__7JASInst[5];
 
 // 

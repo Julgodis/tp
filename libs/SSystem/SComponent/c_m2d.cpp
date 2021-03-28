@@ -18,14 +18,16 @@ struct cM2dGCir {
 // Forward References:
 // 
 
-void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*); // 2
+void cM2d_CrossCirLin(cM2dGCir&, f32, f32, f32, f32, f32*, f32*);
 
-extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf(); // 1
+extern "C" void cM2d_CrossCirLin__FR8cM2dGCirffffPfPf();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];

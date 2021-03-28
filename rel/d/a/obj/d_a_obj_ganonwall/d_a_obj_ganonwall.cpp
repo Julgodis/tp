@@ -90,27 +90,29 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daObjGWall_Draw(daObjGWall_c*); // 2
-static void daObjGWall_Execute(daObjGWall_c*); // 2
-static void daObjGWall_Delete(daObjGWall_c*); // 2
-static void daObjGWall_Create(daObjGWall_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+static void daObjGWall_Draw(daObjGWall_c*);
+static void daObjGWall_Execute(daObjGWall_c*);
+static void daObjGWall_Delete(daObjGWall_c*);
+static void daObjGWall_Create(daObjGWall_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_GanonWall[12];
 
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void initBaseMtx__12daObjGWall_cFv(); // 1
-extern "C" void setBaseMtx__12daObjGWall_cFv(); // 1
-extern "C" void Create__12daObjGWall_cFv(); // 1
-extern "C" void CreateHeap__12daObjGWall_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void create__12daObjGWall_cFv(); // 1
-extern "C" void execute__12daObjGWall_cFv(); // 1
-extern "C" void checkDraw__12daObjGWall_cFv(); // 1
-extern "C" void draw__12daObjGWall_cFv(); // 1
-extern "C" void _delete__12daObjGWall_cFv(); // 1
-extern "C" static void daObjGWall_Draw__FP12daObjGWall_c(); // 1
-extern "C" static void daObjGWall_Execute__FP12daObjGWall_c(); // 1
-extern "C" static void daObjGWall_Delete__FP12daObjGWall_c(); // 1
-extern "C" static void daObjGWall_Create__FP12daObjGWall_c(); // 1
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void initBaseMtx__12daObjGWall_cFv();
+extern "C" void setBaseMtx__12daObjGWall_cFv();
+extern "C" void Create__12daObjGWall_cFv();
+extern "C" void CreateHeap__12daObjGWall_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create__12daObjGWall_cFv();
+extern "C" void execute__12daObjGWall_cFv();
+extern "C" void checkDraw__12daObjGWall_cFv();
+extern "C" void draw__12daObjGWall_cFv();
+extern "C" void _delete__12daObjGWall_cFv();
+extern "C" static void daObjGWall_Draw__FP12daObjGWall_c();
+extern "C" static void daObjGWall_Execute__FP12daObjGWall_c();
+extern "C" static void daObjGWall_Delete__FP12daObjGWall_c();
+extern "C" static void daObjGWall_Create__FP12daObjGWall_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_GanonWall[12];
 
@@ -118,44 +120,50 @@ extern "C" extern void* g_profile_Obj_GanonWall[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

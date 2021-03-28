@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern "C" extern u8 ga8cSignature__Q27JStudio4data[8];
 
 extern "C" extern u8 ga8cSignature__Q27JStudio4data[8];
 

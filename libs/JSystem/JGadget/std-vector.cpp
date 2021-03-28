@@ -45,28 +45,28 @@ namespace JGadget {
 // 
 
 
-extern "C" void extend_default__Q27JGadget6vectorFUlUlUl(); // 1
-extern "C" void func_802DCCD0(); // 1
-extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv(); // 1
-extern "C" void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv(); // 1
-extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv(); // 1
-extern "C" void func_802DCE1C(); // 1
-extern "C" void func_802DCE8C(); // 1
-extern "C" void func_802DD130(); // 1
+extern "C" void extend_default__Q27JGadget6vectorFUlUlUl();
+extern "C" void func_802DCCD0();
+extern "C" void __dt__Q27JGadget20TVector_pointer_voidFv();
+extern "C" void insert__Q27JGadget20TVector_pointer_voidFPPvRCPv();
+extern "C" void erase__Q27JGadget20TVector_pointer_voidFPPvPPv();
+extern "C" void func_802DCE1C();
+extern "C" void func_802DCE8C();
+extern "C" void func_802DD130();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

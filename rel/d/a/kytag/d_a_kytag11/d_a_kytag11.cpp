@@ -31,35 +31,43 @@ struct dSv_event_c {
 // Forward References:
 // 
 
-static bool daKytag11_Draw(kytag11_class*); // 2
-static void daKytag11_Execute(kytag11_class*); // 2
-static bool daKytag11_IsDelete(kytag11_class*); // 2
-static bool daKytag11_Delete(kytag11_class*); // 2
-static void daKytag11_Create(fopAc_ac_c*); // 2
-static void dKankyo_DayProc(); // 2
+static bool daKytag11_Draw(kytag11_class*);
+static void daKytag11_Execute(kytag11_class*);
+static bool daKytag11_IsDelete(kytag11_class*);
+static bool daKytag11_Delete(kytag11_class*);
+static void daKytag11_Create(fopAc_ac_c*);
+static void dKankyo_DayProc();
+extern "C" extern void* g_profile_KYTAG11[12];
 
-extern "C" static bool daKytag11_Draw__FP13kytag11_class(); // 1
-extern "C" static void daKytag11_Execute__FP13kytag11_class(); // 1
-extern "C" static bool daKytag11_IsDelete__FP13kytag11_class(); // 1
-extern "C" static bool daKytag11_Delete__FP13kytag11_class(); // 1
-extern "C" static void daKytag11_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void dKankyo_DayProc__Fv(); // 1
+extern "C" static bool daKytag11_Draw__FP13kytag11_class();
+extern "C" static void daKytag11_Execute__FP13kytag11_class();
+extern "C" static bool daKytag11_IsDelete__FP13kytag11_class();
+extern "C" static bool daKytag11_Delete__FP13kytag11_class();
+extern "C" static void daKytag11_Create__FP10fopAc_ac_c();
+extern "C" static void dKankyo_DayProc__Fv();
 extern "C" extern void* g_profile_KYTAG11[12];
 
 // 
 // External References:
 // 
 
-void dKy_getdaytime_hour(); // 2
+void dKy_getdaytime_hour();
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

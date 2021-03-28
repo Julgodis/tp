@@ -42,10 +42,10 @@ struct dSv_event_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -63,21 +63,21 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
-};
-
 struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
+struct _GXColor {
 };
 
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -91,30 +91,32 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daObjSnowSoup_c_createHeap(fopAc_ac_c*); // 2
-static void daObjSnowSoup_create(daObjSnowSoup_c*); // 2
-static void daObjSnowSoup_Delete(daObjSnowSoup_c*); // 2
-static void daObjSnowSoup_execute(daObjSnowSoup_c*); // 2
-static void daObjSnowSoup_draw(daObjSnowSoup_c*); // 2
+static void daObjSnowSoup_c_createHeap(fopAc_ac_c*);
+static void daObjSnowSoup_create(daObjSnowSoup_c*);
+static void daObjSnowSoup_Delete(daObjSnowSoup_c*);
+static void daObjSnowSoup_execute(daObjSnowSoup_c*);
+static void daObjSnowSoup_draw(daObjSnowSoup_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_SnowSoup[12];
 
-extern "C" static void daObjSnowSoup_c_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__15daObjSnowSoup_cFv(); // 1
-extern "C" void __dt__15daObjSnowSoup_cFv(); // 1
-extern "C" void createHeap__15daObjSnowSoup_cFv(); // 1
-extern "C" void create__15daObjSnowSoup_cFv(); // 1
-extern "C" void Delete__15daObjSnowSoup_cFv(); // 1
-extern "C" void draw__15daObjSnowSoup_cFv(); // 1
-extern "C" void execute__15daObjSnowSoup_cFv(); // 1
-extern "C" void init__15daObjSnowSoup_cFv(); // 1
-extern "C" void setModelMtx__15daObjSnowSoup_cFv(); // 1
-extern "C" void createSmkEmtCommon__15daObjSnowSoup_cFv(); // 1
-extern "C" void deleteSmkEmtCommon__15daObjSnowSoup_cFv(); // 1
-extern "C" void createSmkEmtChange__15daObjSnowSoup_cFi(); // 1
-extern "C" void deleteSmkEmtChange__15daObjSnowSoup_cFi(); // 1
-extern "C" static void daObjSnowSoup_create__FP15daObjSnowSoup_c(); // 1
-extern "C" static void daObjSnowSoup_Delete__FP15daObjSnowSoup_c(); // 1
-extern "C" static void daObjSnowSoup_execute__FP15daObjSnowSoup_c(); // 1
-extern "C" static void daObjSnowSoup_draw__FP15daObjSnowSoup_c(); // 1
+extern "C" static void daObjSnowSoup_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __ct__15daObjSnowSoup_cFv();
+extern "C" void __dt__15daObjSnowSoup_cFv();
+extern "C" void createHeap__15daObjSnowSoup_cFv();
+extern "C" void create__15daObjSnowSoup_cFv();
+extern "C" void Delete__15daObjSnowSoup_cFv();
+extern "C" void draw__15daObjSnowSoup_cFv();
+extern "C" void execute__15daObjSnowSoup_cFv();
+extern "C" void init__15daObjSnowSoup_cFv();
+extern "C" void setModelMtx__15daObjSnowSoup_cFv();
+extern "C" void createSmkEmtCommon__15daObjSnowSoup_cFv();
+extern "C" void deleteSmkEmtCommon__15daObjSnowSoup_cFv();
+extern "C" void createSmkEmtChange__15daObjSnowSoup_cFi();
+extern "C" void deleteSmkEmtChange__15daObjSnowSoup_cFi();
+extern "C" static void daObjSnowSoup_create__FP15daObjSnowSoup_c();
+extern "C" static void daObjSnowSoup_Delete__FP15daObjSnowSoup_c();
+extern "C" static void daObjSnowSoup_execute__FP15daObjSnowSoup_c();
+extern "C" static void daObjSnowSoup_draw__FP15daObjSnowSoup_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_SnowSoup[12];
 
@@ -122,41 +124,48 @@ extern "C" extern void* g_profile_Obj_SnowSoup[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdate(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdate(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-SECTION_INIT void memset(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdate__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
+SECTION_INIT void memset();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoExt_modelUpdate__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

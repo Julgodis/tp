@@ -70,14 +70,16 @@ struct JASAudioThread {
 // Forward References:
 // 
 
+extern "C" extern char const* const JASAudioThread__stringBase0;
+extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
-extern "C" void __ct__14JASAudioThreadFiiUl(); // 1
-extern "C" void create__14JASAudioThreadFl(); // 1
-extern "C" void stop__14JASAudioThreadFv(); // 1
-extern "C" void run__14JASAudioThreadFv(); // 1
-extern "C" void DMACallback__14JASAudioThreadFv(); // 1
-extern "C" void DSPCallback__14JASAudioThreadFPv(); // 1
-extern "C" void __dt__14JASAudioThreadFv(); // 1
+extern "C" void __ct__14JASAudioThreadFiiUl();
+extern "C" void create__14JASAudioThreadFl();
+extern "C" void stop__14JASAudioThreadFv();
+extern "C" void run__14JASAudioThreadFv();
+extern "C" void DMACallback__14JASAudioThreadFv();
+extern "C" void DSPCallback__14JASAudioThreadFPv();
+extern "C" void __dt__14JASAudioThreadFv();
 extern "C" extern char const* const JASAudioThread__stringBase0;
 extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 
@@ -85,41 +87,47 @@ extern "C" extern u8 snIntCount__14JASAudioThread[4 + 4 /* padding */];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
+extern "C" extern u8 data_80450B8C[4];
+extern "C" extern u8 JASDram[4];
+extern "C" extern u8 struct_80451260[8];
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
-extern "C" void start__8JASProbeFlPCc(); // 1
-extern "C" void stop__8JASProbeFl(); // 1
-extern "C" void func_802978DC(); // 1
-extern "C" void initAI__9JASDriverFPFv_v(); // 1
-extern "C" void startDMA__9JASDriverFv(); // 1
-extern "C" void stopDMA__9JASDriverFv(); // 1
-extern "C" void updateDac__9JASDriverFv(); // 1
-extern "C" void updateDSP__9JASDriverFv(); // 1
-extern "C" void finishDSPFrame__9JASDriverFv(); // 1
-extern "C" void initAll__13JASDSPChannelFv(); // 1
-extern "C" void boot__6JASDspFPFPv_v(); // 1
-extern "C" void finishWork__6JASDspFUs(); // 1
-extern "C" void initBuffer__6JASDspFv(); // 1
-extern "C" void updateDacCallback__9JASDriverFv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9JKRThreadFP7JKRHeapUlii(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSJamMessage(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSExitThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void newMemPool__17JASGenericMemPoolFUli();
+extern "C" void start__8JASProbeFlPCc();
+extern "C" void stop__8JASProbeFl();
+extern "C" void func_802978DC();
+extern "C" void initAI__9JASDriverFPFv_v();
+extern "C" void startDMA__9JASDriverFv();
+extern "C" void stopDMA__9JASDriverFv();
+extern "C" void updateDac__9JASDriverFv();
+extern "C" void updateDSP__9JASDriverFv();
+extern "C" void finishDSPFrame__9JASDriverFv();
+extern "C" void initAll__13JASDSPChannelFv();
+extern "C" void boot__6JASDspFPFPv_v();
+extern "C" void finishWork__6JASDspFUs();
+extern "C" void initBuffer__6JASDspFv();
+extern "C" void updateDacCallback__9JASDriverFv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFP7JKRHeapUlii();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSJamMessage();
+extern "C" void OSInitThreadQueue();
+extern "C" void OSExitThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSleepThread();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void __register_global_object();
 extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
 extern "C" extern u8 data_80450B8C[4];
 extern "C" extern u8 JASDram[4];

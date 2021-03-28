@@ -157,7 +157,7 @@ class Function(Symbol):
         if c_export:
             # export unmangled name
             await self.export_function_header(exporter, builder, forward=True, original=True)
-            await builder.write(f"; // 1")
+            await builder.write(f";")
             return
 
         if full_qualified_name:
@@ -165,11 +165,11 @@ class Function(Symbol):
                 # forward references are not written for class functions
                 if not self.has_class:
                     await self.export_function_header(exporter, builder, forward=True, full_qualified_name=True, specialize_templates=True)
-                    await builder.write(f"; // 2")
+                    await builder.write(f";")
         else:
             # export the function as a class method
             await self.export_function_header(exporter, builder, forward=True, full_qualified_name=False, template_args=template_args)
-            await builder.write(f"; // 3")
+            await builder.write(f";")
 
     async def export_function_body(self, exporter, builder: AsyncBuilder):
         assert False

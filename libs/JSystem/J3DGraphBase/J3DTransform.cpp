@@ -24,37 +24,41 @@ struct J3DTextureSRTInfo {
 // Forward References:
 // 
 
-static void __MTGQR7(u32); // 2
-void J3DGQRSetup7(u32, u32, u32, u32); // 2
-void J3DCalcBBoardMtx(f32 (* )[4]); // 2
-void J3DCalcYBBoardMtx(f32 (* )[4]); // 2
-void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]); // 2
-void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]); // 2
-void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]); // 2
-void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]); // 2
-void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]); // 2
-void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
-void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]); // 2
-void J3DScaleNrmMtx(f32 (* )[4], Vec const&); // 2
-void J3DScaleNrmMtx33(f32 (* )[3], Vec const&); // 2
-void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]); // 2
-void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32); // 2
+static void __MTGQR7(u32);
+void J3DGQRSetup7(u32, u32, u32, u32);
+void J3DCalcBBoardMtx(f32 (* )[4]);
+void J3DCalcYBBoardMtx(f32 (* )[4]);
+void J3DPSCalcInverseTranspose(f32 (* )[4], f32 (* )[3]);
+void J3DGetTranslateRotateMtx(J3DTransformInfo const&, f32 (* )[4]);
+void J3DGetTranslateRotateMtx(s16, s16, s16, f32, f32, f32, f32 (* )[4]);
+void J3DGetTextureMtx(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxOld(J3DTextureSRTInfo const&, Vec const&, f32 (* )[4]);
+void J3DGetTextureMtxMaya(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DGetTextureMtxMayaOld(J3DTextureSRTInfo const&, f32 (* )[4]);
+void J3DScaleNrmMtx(f32 (* )[4], Vec const&);
+void J3DScaleNrmMtx33(f32 (* )[3], Vec const&);
+void J3DMtxProjConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4]);
+void J3DPSMtxArrayConcat(f32 (* )[4], f32 (* )[4], f32 (* )[4], u32);
+extern "C" extern u8 const j3dDefaultTransformInfo[32];
+extern "C" extern u8 const j3dDefaultScale[12];
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern u8 PSMulUnit01[8];
 
-extern "C" static void __MTGQR7__FUl(); // 1
-extern "C" void J3DGQRSetup7__FUlUlUlUl(); // 1
-extern "C" void J3DCalcBBoardMtx__FPA4_f(); // 1
-extern "C" void J3DCalcYBBoardMtx__FPA4_f(); // 1
-extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f(); // 1
-extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f(); // 1
-extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f(); // 1
-extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f(); // 1
-extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f(); // 1
-extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f(); // 1
-extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f(); // 1
-extern "C" void J3DScaleNrmMtx__FPA4_fRC3Vec(); // 1
-extern "C" void J3DScaleNrmMtx33__FPA3_fRC3Vec(); // 1
-extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f(); // 1
-extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl(); // 1
+extern "C" static void __MTGQR7__FUl();
+extern "C" void J3DGQRSetup7__FUlUlUlUl();
+extern "C" void J3DCalcBBoardMtx__FPA4_f();
+extern "C" void J3DCalcYBBoardMtx__FPA4_f();
+extern "C" void J3DPSCalcInverseTranspose__FPA4_fPA3_f();
+extern "C" void J3DGetTranslateRotateMtx__FRC16J3DTransformInfoPA4_f();
+extern "C" void J3DGetTranslateRotateMtx__FsssfffPA4_f();
+extern "C" void J3DGetTextureMtx__FRC17J3DTextureSRTInfoRC3VecPA4_f();
+extern "C" void J3DGetTextureMtxOld__FRC17J3DTextureSRTInfoRC3VecPA4_f();
+extern "C" void J3DGetTextureMtxMaya__FRC17J3DTextureSRTInfoPA4_f();
+extern "C" void J3DGetTextureMtxMayaOld__FRC17J3DTextureSRTInfoPA4_f();
+extern "C" void J3DScaleNrmMtx__FPA4_fRC3Vec();
+extern "C" void J3DScaleNrmMtx33__FPA3_fRC3Vec();
+extern "C" void J3DMtxProjConcat__FPA4_fPA4_fPA4_f();
+extern "C" void J3DPSMtxArrayConcat__FPA4_fPA4_fPA4_fUl();
 extern "C" extern u8 const j3dDefaultTransformInfo[32];
 extern "C" extern u8 const j3dDefaultScale[12];
 extern "C" extern u8 const j3dDefaultMtx[48];
@@ -64,8 +68,9 @@ extern "C" extern u8 PSMulUnit01[8];
 // External References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void PSVECNormalize(); // 1
+extern "C" void PSVECNormalize();
 extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 

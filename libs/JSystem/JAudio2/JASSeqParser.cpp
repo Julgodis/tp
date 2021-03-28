@@ -155,76 +155,79 @@ struct JASRegisterParam {
 // Forward References:
 // 
 
+extern "C" extern char const* const JASSeqParser__stringBase0;
+extern "C" extern void* __vt__12JASSeqParser[8];
+extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
 
-extern "C" void conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition(); // 1
-extern "C" void writeReg__12JASSeqParserFP8JASTrackUlUl(); // 1
-extern "C" void readReg__12JASSeqParserCFP8JASTrackUl(); // 1
-extern "C" void cmdOpenTrack__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCloseTrack__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCall__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCallF__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRet__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRetF__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdJmp__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdJmpF__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdJmpTable__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCallTable__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdLoopS__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdLoopE__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdNote__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdNoteOn__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdNoteOff__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdReadPort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdWritePort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParentWritePort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdChildWritePort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParentReadPort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdChildReadPort__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdWait__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdWaitByte__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdSetLastNote__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdEnvSet__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdBusConnect__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdSetIntTable__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdClrI__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRetI__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdIntTimer__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdSyncCPU__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdTempo__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" s32 cmdFinish__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" bool cmdNop__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdFIRSet__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdIIRSet__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdBankPrg__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdBank__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdPrg__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParamI__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParamII__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParamE__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdParamEI__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdReg__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRegLoad__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRegUni__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdDump__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void cmdPrintf__12JASSeqParserFP8JASTrackPUl(); // 1
-extern "C" void execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl(); // 1
-extern "C" void execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl(); // 1
-extern "C" void execNoteOff__12JASSeqParserFP8JASTrackUl(); // 1
-extern "C" void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl(); // 1
-extern "C" void parseNoteOff__12JASSeqParserFP8JASTrackUc(); // 1
-extern "C" void parseNoteOn__12JASSeqParserFP8JASTrackUc(); // 1
-extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs(); // 1
-extern "C" void parseRegCommand__12JASSeqParserFP8JASTracki(); // 1
-extern "C" void parse__12JASSeqParserFP8JASTrack(); // 1
-extern "C" void __sinit_JASSeqParser_cpp(); // 1
+extern "C" void conditionCheck__12JASSeqParserFP8JASTrackQ212JASSeqParser15BranchCondition();
+extern "C" void writeReg__12JASSeqParserFP8JASTrackUlUl();
+extern "C" void readReg__12JASSeqParserCFP8JASTrackUl();
+extern "C" void cmdOpenTrack__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCloseTrack__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCall__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCallF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRetF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmp__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmpF__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdJmpTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCallTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdLoopS__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdLoopE__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNote__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNoteOn__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdNoteOff__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParentWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdChildWritePort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParentReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdChildReadPort__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCheckPortImport__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdCheckPortExport__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWait__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdWaitByte__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetLastNote__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdEnvScaleSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdEnvSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSimpleADSR__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBusConnect__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetIntTable__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSetInterrupt__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdDisInterrupt__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdClrI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRetI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIntTimer__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdSyncCPU__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdTempo__12JASSeqParserFP8JASTrackPUl();
+extern "C" s32 cmdFinish__12JASSeqParserFP8JASTrackPUl();
+extern "C" bool cmdNop__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdFIRSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIIRSet__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdIIRCutOff__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBankPrg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdBank__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdPrg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamII__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamE__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdParamEI__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdReg__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegLoad__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegUni__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdRegTblLoad__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdDump__12JASSeqParserFP8JASTrackPUl();
+extern "C" void cmdPrintf__12JASSeqParserFP8JASTrackPUl();
+extern "C" void execNoteOnGate__12JASSeqParserFP8JASTrackUlUlUlUl();
+extern "C" void execNoteOnMidi__12JASSeqParserFP8JASTrackUlUlUl();
+extern "C" void execNoteOff__12JASSeqParserFP8JASTrackUl();
+extern "C" void execCommand__12JASSeqParserFP8JASTrackM12JASSeqParserFPCvPvP8JASTrackPUl_lUlPUl();
+extern "C" void parseNoteOff__12JASSeqParserFP8JASTrackUc();
+extern "C" void parseNoteOn__12JASSeqParserFP8JASTrackUc();
+extern "C" void parseCommand__12JASSeqParserFP8JASTrackUcUs();
+extern "C" void parseRegCommand__12JASSeqParserFP8JASTracki();
+extern "C" void parse__12JASSeqParserFP8JASTrack();
+extern "C" void __sinit_JASSeqParser_cpp();
 extern "C" extern char const* const JASSeqParser__stringBase0;
 extern "C" extern void* __vt__12JASSeqParser[8];
 extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
@@ -233,56 +236,58 @@ extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
 // External References:
 // 
 
-void JASReport(char const*, ...); // 2
+void JASReport(char const*, ...);
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 
-extern "C" void JASReport__FPCce(); // 1
-extern "C" void setSeqData__8JASTrackFPvUl(); // 1
-extern "C" void start__8JASTrackFv(); // 1
-extern "C" void closeChild__8JASTrackFUl(); // 1
-extern "C" void openChild__8JASTrackFUl(); // 1
-extern "C" void connectBus__8JASTrackFii(); // 1
-extern "C" void setLatestKey__8JASTrackFUc(); // 1
-extern "C" void noteOn__8JASTrackFUlUlUl(); // 1
-extern "C" void gateOn__8JASTrackFUlUlfUl(); // 1
-extern "C" void noteOff__8JASTrackFUlUs(); // 1
-extern "C" void setParam__8JASTrackFUlfUl(); // 1
-extern "C" void setOscScale__8JASTrackFUlf(); // 1
-extern "C" void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point(); // 1
-extern "C" void setOscAdsr__8JASTrackFssssUs(); // 1
-extern "C" void setFIR__8JASTrackFPCs(); // 1
-extern "C" void setIIR__8JASTrackFPCs(); // 1
-extern "C" void readPortSelf__8JASTrackFUl(); // 1
-extern "C" void writePortSelf__8JASTrackFUlUs(); // 1
-extern "C" void writePort__8JASTrackFUlUs(); // 1
-extern "C" void readPort__8JASTrackFUl(); // 1
-extern "C" void setTempo__8JASTrackFUs(); // 1
-extern "C" void setTimebase__8JASTrackFUs(); // 1
-extern "C" void checkImport__12JASTrackPortCFUl(); // 1
-extern "C" void checkExport__12JASTrackPortCFUl(); // 1
-extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl(); // 1
-extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID(); // 1
-extern "C" void setIntrMask__10JASSeqCtrlFUl(); // 1
-extern "C" void clrIntrMask__10JASSeqCtrlFUl(); // 1
-extern "C" void retIntr__10JASSeqCtrlFv(); // 1
-extern "C" void checkIntr__10JASSeqCtrlFv(); // 1
-extern "C" void __dt__12JASSeqParserFv(); // 1
-extern "C" void call__12JASSeqReaderFUl(); // 1
-extern "C" void loopStart__12JASSeqReaderFUl(); // 1
-extern "C" void loopEnd__12JASSeqReaderFv(); // 1
-extern "C" void ret__12JASSeqReaderFv(); // 1
-extern "C" void readMidiValue__12JASSeqReaderFv(); // 1
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void JASReport__FPCce();
+extern "C" void setSeqData__8JASTrackFPvUl();
+extern "C" void start__8JASTrackFv();
+extern "C" void closeChild__8JASTrackFUl();
+extern "C" void openChild__8JASTrackFUl();
+extern "C" void connectBus__8JASTrackFii();
+extern "C" void setLatestKey__8JASTrackFUc();
+extern "C" void noteOn__8JASTrackFUlUlUl();
+extern "C" void gateOn__8JASTrackFUlUlfUl();
+extern "C" void noteOff__8JASTrackFUlUs();
+extern "C" void setParam__8JASTrackFUlfUl();
+extern "C" void setOscScale__8JASTrackFUlf();
+extern "C" void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point();
+extern "C" void setOscAdsr__8JASTrackFssssUs();
+extern "C" void setFIR__8JASTrackFPCs();
+extern "C" void setIIR__8JASTrackFPCs();
+extern "C" void readPortSelf__8JASTrackFUl();
+extern "C" void writePortSelf__8JASTrackFUlUs();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void readPort__8JASTrackFUl();
+extern "C" void setTempo__8JASTrackFUs();
+extern "C" void setTimebase__8JASTrackFUs();
+extern "C" void checkImport__12JASTrackPortCFUl();
+extern "C" void checkExport__12JASTrackPortCFUl();
+extern "C" void write__16JASRegisterParamFQ216JASRegisterParam5RegIDUl();
+extern "C" void read__16JASRegisterParamFQ216JASRegisterParam5RegID();
+extern "C" void setIntrMask__10JASSeqCtrlFUl();
+extern "C" void clrIntrMask__10JASSeqCtrlFUl();
+extern "C" void retIntr__10JASSeqCtrlFv();
+extern "C" void checkIntr__10JASSeqCtrlFv();
+extern "C" void __dt__12JASSeqParserFv();
+extern "C" void call__12JASSeqReaderFUl();
+extern "C" void loopStart__12JASSeqReaderFUl();
+extern "C" void loopEnd__12JASSeqReaderFv();
+extern "C" void ret__12JASSeqReaderFv();
+extern "C" void readMidiValue__12JASSeqReaderFv();
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 

@@ -17,15 +17,6 @@ struct _GXColor {
 struct Vec {
 };
 
-struct JStage {
-	struct TSystem {
-	};
-
-	struct TLight {
-	};
-
-};
-
 namespace JStudio {
 	struct data {
 		struct TEOperationData {
@@ -51,6 +42,15 @@ namespace JStudio {
 
 	struct TAdaptor_light {
 		/* 80287308 */ ~TAdaptor_light();
+	};
+
+};
+
+struct JStage {
+	struct TSystem {
+	};
+
+	struct TLight {
 	};
 
 };
@@ -85,47 +85,55 @@ struct JStudio_JStage {
 // 
 
 
-extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight(); // 1
-extern "C" void __dt__Q214JStudio_JStage14TAdaptor_lightFv(); // 1
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv(); // 1
-extern "C" void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv(); // 1
-extern "C" void adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv(); // 1
-extern "C" void adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl(); // 1
-extern "C" void adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl(); // 1
-extern "C" void adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor(); // 1
-extern "C" void __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv(); // 1
-extern "C" void func_8028D2B8(); // 1
+extern "C" void __ct__Q214JStudio_JStage14TAdaptor_lightFPCQ26JStage7TSystemPQ26JStage6TLight();
+extern "C" void __dt__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_begin__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_end__Q214JStudio_JStage14TAdaptor_lightFv();
+extern "C" void adaptor_do_update__Q214JStudio_JStage14TAdaptor_lightFUl();
+extern "C" void adaptor_do_data__Q214JStudio_JStage14TAdaptor_lightFPCvUlPCvUl();
+extern "C" void adaptor_do_FACULTY__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void adaptor_do_ENABLE__Q214JStudio_JStage14TAdaptor_lightFQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void __cl__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_CFfPQ27JStudio8TAdaptor();
+extern "C" void __dt__Q314JStudio_JStage14TAdaptor_light20TVVOutput_direction_Fv();
+extern "C" void func_8028D2B8();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
+extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
+extern "C" extern void* __vt__Q27JStudio14TAdaptor_light[10];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
+extern "C" extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
 
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
-extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec(); // 1
-extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl(); // 1
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
-extern "C" void __dt__Q27JStudio14TAdaptor_lightFv(); // 1
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
-extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl(); // 1
-extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void atan2(); // 1
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void adaptor_setVariableValue_Vec__Q27JStudio8TAdaptorFPCUlRC3Vec();
+extern "C" void adaptor_getVariableValue_Vec__Q27JStudio8TAdaptorCFP3VecPCUl();
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void __dt__Q27JStudio14TAdaptor_lightFv();
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+extern "C" void adaptor_object_ENABLE___Q214JStudio_JStage16TAdaptor_object_FQ37JStudio4data15TEOperationDataPCvUl();
+extern "C" void __ct__Q27JStudio14TVariableValueFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void atan2();
 extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio14TAdaptor_light[16];
 extern "C" extern u8 const sauVariableValue_3_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];
 extern "C" extern u8 const sauVariableValue_3_TARGET_POSITION_XYZ__Q27JStudio14TAdaptor_light[12];

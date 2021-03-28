@@ -11,8 +11,9 @@
 // Forward References:
 // 
 
+SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
 
-extern "C" void TRK_main(); // 1
+extern "C" void TRK_main();
 SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
 
 // 
@@ -20,11 +21,11 @@ SECTION_BSS u8 TRK_mainError[4 + 4 /* padding */];
 // 
 
 
-extern "C" void TRKNubMainLoop(); // 1
-extern "C" void TRKNubWelcome(); // 1
-extern "C" void TRKTerminateNub(); // 1
-extern "C" void TRKInitializeNub(); // 1
-extern "C" void MWTRACE(); // 1
+extern "C" void TRKNubMainLoop();
+extern "C" void TRKNubWelcome();
+extern "C" void TRKTerminateNub();
+extern "C" void TRKInitializeNub();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

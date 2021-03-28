@@ -28,40 +28,43 @@ struct cXyz {
 // Forward References:
 // 
 
-static bool daE_YM_TAG_Draw(daE_YM_TAG_c*); // 2
-static void s_e_ym(void*, void*); // 2
-static void daE_YM_TAG_Execute(daE_YM_TAG_c*); // 2
-static bool daE_YM_TAG_IsDelete(daE_YM_TAG_c*); // 2
-static bool daE_YM_TAG_Delete(daE_YM_TAG_c*); // 2
-static void daE_YM_TAG_Create(daE_YM_TAG_c*); // 2
+static bool daE_YM_TAG_Draw(daE_YM_TAG_c*);
+static void s_e_ym(void*, void*);
+static void daE_YM_TAG_Execute(daE_YM_TAG_c*);
+static bool daE_YM_TAG_IsDelete(daE_YM_TAG_c*);
+static bool daE_YM_TAG_Delete(daE_YM_TAG_c*);
+static void daE_YM_TAG_Create(daE_YM_TAG_c*);
+extern "C" extern void* g_profile_E_YM_TAG[12];
 
-extern "C" static bool daE_YM_TAG_Draw__FP12daE_YM_TAG_c(); // 1
-extern "C" static void s_e_ym__FPvPv(); // 1
-extern "C" void execute__12daE_YM_TAG_cFv(); // 1
-extern "C" static void daE_YM_TAG_Execute__FP12daE_YM_TAG_c(); // 1
-extern "C" static bool daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c(); // 1
-extern "C" static bool daE_YM_TAG_Delete__FP12daE_YM_TAG_c(); // 1
-extern "C" void create__12daE_YM_TAG_cFv(); // 1
-extern "C" static void daE_YM_TAG_Create__FP12daE_YM_TAG_c(); // 1
+extern "C" static bool daE_YM_TAG_Draw__FP12daE_YM_TAG_c();
+extern "C" static void s_e_ym__FPvPv();
+extern "C" void execute__12daE_YM_TAG_cFv();
+extern "C" static void daE_YM_TAG_Execute__FP12daE_YM_TAG_c();
+extern "C" static bool daE_YM_TAG_IsDelete__FP12daE_YM_TAG_c();
+extern "C" static bool daE_YM_TAG_Delete__FP12daE_YM_TAG_c();
+extern "C" void create__12daE_YM_TAG_cFv();
+extern "C" static void daE_YM_TAG_Create__FP12daE_YM_TAG_c();
 extern "C" extern void* g_profile_E_YM_TAG[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcM_IsCreating(unsigned int); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcM_IsCreating__FUi(); // 1
+void fopAc_IsActor(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcM_IsCreating(unsigned int);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
-extern "C" void __dt__4cXyzFv(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcM_IsCreating__FUi();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" void __dt__4cXyzFv();
 
 // 
 // Declarations:

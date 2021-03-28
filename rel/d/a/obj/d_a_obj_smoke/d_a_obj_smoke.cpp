@@ -31,6 +31,9 @@ struct dSv_info_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -38,9 +41,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -51,32 +51,37 @@ struct dPa_control_c {
 // Forward References:
 // 
 
-static void daObjSmoke_Execute(daObjSmoke_c*); // 2
-static void daObjSmoke_Delete(daObjSmoke_c*); // 2
-static void daObjSmoke_Create(fopAc_ac_c*); // 2
+static void daObjSmoke_Execute(daObjSmoke_c*);
+static void daObjSmoke_Delete(daObjSmoke_c*);
+static void daObjSmoke_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Obj_Smoke[12];
 
-extern "C" void initBaseMtx__12daObjSmoke_cFv(); // 1
-extern "C" void setBaseMtx__12daObjSmoke_cFv(); // 1
-extern "C" void Create__12daObjSmoke_cFv(); // 1
-extern "C" void create__12daObjSmoke_cFv(); // 1
-extern "C" void execute__12daObjSmoke_cFv(); // 1
-extern "C" void _delete__12daObjSmoke_cFv(); // 1
-extern "C" static void daObjSmoke_Execute__FP12daObjSmoke_c(); // 1
-extern "C" static void daObjSmoke_Delete__FP12daObjSmoke_c(); // 1
-extern "C" static void daObjSmoke_Create__FP10fopAc_ac_c(); // 1
+extern "C" void initBaseMtx__12daObjSmoke_cFv();
+extern "C" void setBaseMtx__12daObjSmoke_cFv();
+extern "C" void Create__12daObjSmoke_cFv();
+extern "C" void create__12daObjSmoke_cFv();
+extern "C" void execute__12daObjSmoke_cFv();
+extern "C" void _delete__12daObjSmoke_cFv();
+extern "C" static void daObjSmoke_Execute__FP12daObjSmoke_c();
+extern "C" static void daObjSmoke_Delete__FP12daObjSmoke_c();
+extern "C" static void daObjSmoke_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_Obj_Smoke[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void PSMTXTrans(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void PSMTXTrans();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

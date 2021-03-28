@@ -31,6 +31,9 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -38,9 +41,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -71,20 +71,22 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static bool daKytag08_Draw(kytag08_class*); // 2
-static void daKytag08_Execute(kytag08_class*); // 2
-static bool daKytag08_IsDelete(kytag08_class*); // 2
-static void daKytag08_Delete(kytag08_class*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daKytag08_Create(fopAc_ac_c*); // 2
+static bool daKytag08_Draw(kytag08_class*);
+static void daKytag08_Execute(kytag08_class*);
+static bool daKytag08_IsDelete(kytag08_class*);
+static void daKytag08_Delete(kytag08_class*);
+static void useHeapInit(fopAc_ac_c*);
+static void daKytag08_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_KYTAG08[12];
 
-extern "C" static bool daKytag08_Draw__FP13kytag08_class(); // 1
-extern "C" static void daKytag08_Execute__FP13kytag08_class(); // 1
-extern "C" static bool daKytag08_IsDelete__FP13kytag08_class(); // 1
-extern "C" static void daKytag08_Delete__FP13kytag08_class(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag08_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
+extern "C" static bool daKytag08_Draw__FP13kytag08_class();
+extern "C" static void daKytag08_Execute__FP13kytag08_class();
+extern "C" static bool daKytag08_IsDelete__FP13kytag08_class();
+extern "C" static void daKytag08_Delete__FP13kytag08_class();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void daKytag08_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_KYTAG08[12];
 
@@ -92,39 +94,45 @@ extern "C" extern void* g_profile_KYTAG08[12];
 // External References:
 // 
 
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGs_BossLife_public_Set(s8); // 2
-void dComIfGs_BossLife_public_Get(); // 2
-void dKy_darkworld_check(); // 2
-void dKy_shadow_mode_check(u8); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGs_BossLife_public_Set(s8);
+void dComIfGs_BossLife_public_Get();
+void dKy_darkworld_check();
+void dKy_shadow_mode_check(u8);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u32 __float_nan;
 
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGs_BossLife_public_Set__FSc(); // 1
-extern "C" void dComIfGs_BossLife_public_Get__Fv(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void dKy_shadow_mode_check__FUc(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void setFogWipeWidth__10Z2EnvSeMgrFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGs_BossLife_public_Set__FSc();
+extern "C" void dComIfGs_BossLife_public_Get__Fv();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void dKy_shadow_mode_check__FUc();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec();
+extern "C" void setFogWipeWidth__10Z2EnvSeMgrFf();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

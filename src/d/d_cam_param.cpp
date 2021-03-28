@@ -71,49 +71,51 @@ struct cDegree {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_cam_param__stringBase0;
 
-extern "C" void rationalBezierRatio__8dCamMathFff(); // 1
-extern "C" void zoomFovy__8dCamMathFff(); // 1
-extern "C" void __dt__7cDegreeFv(); // 1
-extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle(); // 1
-extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle(); // 1
-extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz(); // 1
-extern "C" void __ct__9dCstick_cFv(); // 1
-extern "C" bool Shift__9dCstick_cFUl(); // 1
-extern "C" void __ct__11dCamBGChk_cFv(); // 1
-extern "C" void __ct__11dCamParam_cFl(); // 1
-extern "C" void __dt__11dCamParam_cFv(); // 1
-extern "C" void Change__11dCamParam_cFl(); // 1
-extern "C" void SearchStyle__11dCamParam_cFUl(); // 1
-extern "C" void __ct__11dCamSetup_cFv(); // 1
-extern "C" void __dt__11dCamSetup_cFv(); // 1
-extern "C" void CheckLatitudeRange__11dCamSetup_cFPs(); // 1
-extern "C" void PlayerHideDist__11dCamSetup_cFv(); // 1
-extern "C" void __dt__9dCstick_cFv(); // 1
+extern "C" void rationalBezierRatio__8dCamMathFff();
+extern "C" void zoomFovy__8dCamMathFff();
+extern "C" void __dt__7cDegreeFv();
+extern "C" void xyzRotateX__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzRotateY__8dCamMathFR4cXyz7cSAngle();
+extern "C" void xyzHorizontalDistance__8dCamMathFR4cXyzR4cXyz();
+extern "C" void __ct__9dCstick_cFv();
+extern "C" bool Shift__9dCstick_cFUl();
+extern "C" void __ct__11dCamBGChk_cFv();
+extern "C" void __ct__11dCamParam_cFl();
+extern "C" void __dt__11dCamParam_cFv();
+extern "C" void Change__11dCamParam_cFl();
+extern "C" void SearchStyle__11dCamParam_cFUl();
+extern "C" void __ct__11dCamSetup_cFv();
+extern "C" void __dt__11dCamSetup_cFv();
+extern "C" void CheckLatitudeRange__11dCamSetup_cFPs();
+extern "C" void PlayerHideDist__11dCamSetup_cFv();
+extern "C" void __dt__9dCstick_cFv();
 extern "C" extern char const* const d_d_cam_param__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoMtx_XrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void dCam_getBody(); // 2
-void cM_atan2f(f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void dCam_getBody();
+void cM_atan2f(f32, f32);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void cM_atan2f__Fff(); // 1
-extern "C" void __ct__7cDegreeFf(); // 1
-extern "C" void Sin__7cDegreeCFv(); // 1
-extern "C" void Cos__7cDegreeCFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void sqrt(); // 1
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void EventRecoverNotime__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void cM_atan2f__Fff();
+extern "C" void __ct__7cDegreeFf();
+extern "C" void Sin__7cDegreeCFv();
+extern "C" void Cos__7cDegreeCFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void sqrt();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

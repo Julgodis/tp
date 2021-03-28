@@ -11,12 +11,13 @@
 // Forward References:
 // 
 
+extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
-extern "C" bool TRKTerminateSerialHandler(); // 1
-extern "C" void TRKInitializeSerialHandler(); // 1
-extern "C" void TRKProcessInput(); // 1
-extern "C" void TRKGetInput(); // 1
-extern "C" void TRKTestForPacket(); // 1
+extern "C" bool TRKTerminateSerialHandler();
+extern "C" void TRKInitializeSerialHandler();
+extern "C" void TRKProcessInput();
+extern "C" void TRKGetInput();
+extern "C" void TRKTestForPacket();
 extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 
@@ -24,16 +25,16 @@ extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 // 
 
 
-extern "C" void TRKConstructEvent(); // 1
-extern "C" void TRKPostEvent(); // 1
-extern "C" void TRKAppendBuffer_ui8(); // 1
-extern "C" void TRKSetBufferPosition(); // 1
-extern "C" void TRKReleaseBuffer(); // 1
-extern "C" void TRKGetBuffer(); // 1
-extern "C" void TRKGetFreeBuffer(); // 1
-extern "C" void TRKReadUARTN(); // 1
-extern "C" void TRKPollUART(); // 1
-extern "C" void MWTRACE(); // 1
+extern "C" void TRKConstructEvent();
+extern "C" void TRKPostEvent();
+extern "C" void TRKAppendBuffer_ui8();
+extern "C" void TRKSetBufferPosition();
+extern "C" void TRKReleaseBuffer();
+extern "C" void TRKGetBuffer();
+extern "C" void TRKGetFreeBuffer();
+extern "C" void TRKReadUARTN();
+extern "C" void TRKPollUART();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

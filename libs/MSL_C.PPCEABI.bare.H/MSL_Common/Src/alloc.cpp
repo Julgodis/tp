@@ -12,20 +12,21 @@
 // 
 
 
-extern "C" void free(); // 1
-extern "C" static void __pool_free(); // 1
-extern "C" static void deallocate_from_fixed_pools(); // 1
-extern "C" static void deallocate_from_var_pools(); // 1
+extern "C" void free();
+extern "C" static void __pool_free();
+extern "C" static void deallocate_from_fixed_pools();
+extern "C" static void deallocate_from_var_pools();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_804519A0[8];
 
-SECTION_INIT void memset(); // 1
-extern "C" void __sys_free(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
+SECTION_INIT void memset();
+extern "C" void __sys_free();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
 extern "C" extern u8 data_804519A0[8];
 
 // 

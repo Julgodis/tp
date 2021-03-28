@@ -12,18 +12,18 @@
 // 
 
 
-extern "C" static void SystemCallVector(); // 1
-extern "C" static void __OSSystemCallVectorEnd(); // 1
-extern "C" void __OSInitSystemCall(); // 1
+extern "C" static void SystemCallVector();
+extern "C" static void __OSSystemCallVectorEnd();
+extern "C" void __OSInitSystemCall();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void DCFlushRangeNoSync(); // 1
-extern "C" void ICInvalidateRange(); // 1
+SECTION_INIT void memcpy();
+extern "C" void DCFlushRangeNoSync();
+extern "C" void ICInvalidateRange();
 
 // 
 // Declarations:

@@ -45,30 +45,30 @@ struct JMessage {
 // 
 
 
-extern "C" void __ct__Q28JMessage8TControlFv(); // 1
-extern "C" void __dt__Q28JMessage8TControlFv(); // 1
-extern "C" void reset__Q28JMessage8TControlFv(); // 1
-extern "C" void update__Q28JMessage8TControlFv(); // 1
-extern "C" void render__Q28JMessage8TControlFv(); // 1
-extern "C" void setMessageCode__Q28JMessage8TControlFUsUs(); // 1
-extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb(); // 1
-extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs(); // 1
+extern "C" void __ct__Q28JMessage8TControlFv();
+extern "C" void __dt__Q28JMessage8TControlFv();
+extern "C" void reset__Q28JMessage8TControlFv();
+extern "C" void update__Q28JMessage8TControlFv();
+extern "C" void render__Q28JMessage8TControlFv();
+extern "C" void setMessageCode__Q28JMessage8TControlFUsUs();
+extern "C" void setMessageID__Q28JMessage8TControlFUlUlPb();
+extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void reset__Q28JMessage10TProcessorFv(); // 1
-extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs(); // 1
-extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb(); // 1
-extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
-extern "C" void process__Q28JMessage18TSequenceProcessorFPCc(); // 1
-extern "C" void process__Q28JMessage19TRenderingProcessorFPCc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void reset__Q28JMessage10TProcessorFv();
+extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs();
+extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
+extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void process__Q28JMessage18TSequenceProcessorFPCc();
+extern "C" void process__Q28JMessage19TRenderingProcessorFPCc();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

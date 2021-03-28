@@ -43,6 +43,9 @@ struct dSv_info_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -52,17 +55,14 @@ struct dKy_tevstr_c {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -77,63 +77,69 @@ struct LIGHT_INFLUENCE {
 // Forward References:
 // 
 
-static void daTimeFire_Draw(daTimeFire_c*); // 2
-static void daTimeFire_Execute(daTimeFire_c*); // 2
-static void daTimeFire_Delete(daTimeFire_c*); // 2
-static void daTimeFire_Create(fopAc_ac_c*); // 2
+static void daTimeFire_Draw(daTimeFire_c*);
+static void daTimeFire_Execute(daTimeFire_c*);
+static void daTimeFire_Delete(daTimeFire_c*);
+static void daTimeFire_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Obj_TimeFire[12];
 
-extern "C" void __ct__16daTimeFire_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__12daTimeFire_cFv(); // 1
-extern "C" void create__12daTimeFire_cFv(); // 1
-extern "C" void lightInit__12daTimeFire_cFv(); // 1
-extern "C" void setLight__12daTimeFire_cFv(); // 1
-extern "C" void cutLight__12daTimeFire_cFv(); // 1
-extern "C" void Execute__12daTimeFire_cFv(); // 1
-extern "C" void fireCheck__12daTimeFire_cFUc(); // 1
-extern "C" bool Draw__12daTimeFire_cFv(); // 1
-extern "C" void Delete__12daTimeFire_cFv(); // 1
-extern "C" static void daTimeFire_Draw__FP12daTimeFire_c(); // 1
-extern "C" static void daTimeFire_Execute__FP12daTimeFire_c(); // 1
-extern "C" static void daTimeFire_Delete__FP12daTimeFire_c(); // 1
-extern "C" static void daTimeFire_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__16daTimeFire_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_timeFire_cpp(); // 1
+extern "C" void __ct__16daTimeFire_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daTimeFire_cFv();
+extern "C" void create__12daTimeFire_cFv();
+extern "C" void lightInit__12daTimeFire_cFv();
+extern "C" void setLight__12daTimeFire_cFv();
+extern "C" void cutLight__12daTimeFire_cFv();
+extern "C" void Execute__12daTimeFire_cFv();
+extern "C" void fireCheck__12daTimeFire_cFUc();
+extern "C" bool Draw__12daTimeFire_cFv();
+extern "C" void Delete__12daTimeFire_cFv();
+extern "C" static void daTimeFire_Draw__FP12daTimeFire_c();
+extern "C" static void daTimeFire_Execute__FP12daTimeFire_c();
+extern "C" static void daTimeFire_Delete__FP12daTimeFire_c();
+extern "C" static void daTimeFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daTimeFire_HIO_cFv();
+extern "C" void __sinit_d_a_obj_timeFire_cpp();
 extern "C" extern void* g_profile_Obj_TimeFire[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void dComIfGp_getReverb(int); // 2
-void dKy_getdaytime_hour(); // 2
-void dKy_getdaytime_minute(); // 2
-void dKy_plight_set(LIGHT_INFLUENCE*); // 2
-void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKy_getdaytime_hour__Fv(); // 1
-extern "C" void dKy_getdaytime_minute__Fv(); // 1
-extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void dComIfGp_getReverb(int);
+void dKy_getdaytime_hour();
+void dKy_getdaytime_minute();
+void dKy_plight_set(LIGHT_INFLUENCE*);
+void dKy_plight_cut(LIGHT_INFLUENCE*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKy_getdaytime_hour__Fv();
+extern "C" void dKy_getdaytime_minute__Fv();
+extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

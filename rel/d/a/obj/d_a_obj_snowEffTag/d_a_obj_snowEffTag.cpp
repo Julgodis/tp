@@ -36,6 +36,9 @@ struct daSnowEffTag_HIO_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -47,9 +50,6 @@ struct Vec {
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -80,51 +80,37 @@ struct JGeometry {
 // Forward References:
 // 
 
-static void daSnowEffTag_Draw(daSnowEffTag_c*); // 2
-static void daSnowEffTag_Execute(daSnowEffTag_c*); // 2
-static void daSnowEffTag_Delete(daSnowEffTag_c*); // 2
-static void daSnowEffTag_Create(fopAc_ac_c*); // 2
+static void daSnowEffTag_Draw(daSnowEffTag_c*);
+static void daSnowEffTag_Execute(daSnowEffTag_c*);
+static void daSnowEffTag_Delete(daSnowEffTag_c*);
+static void daSnowEffTag_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Tag_SnowEff[12];
 
-extern "C" void __ct__18daSnowEffTag_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__14daSnowEffTag_cFv(); // 1
-extern "C" void create__14daSnowEffTag_cFv(); // 1
-extern "C" void playerAreaCheck__14daSnowEffTag_cFv(); // 1
-extern "C" void Execute__14daSnowEffTag_cFv(); // 1
-extern "C" bool Draw__14daSnowEffTag_cFv(); // 1
-extern "C" bool Delete__14daSnowEffTag_cFv(); // 1
-extern "C" static void daSnowEffTag_Draw__FP14daSnowEffTag_c(); // 1
-extern "C" static void daSnowEffTag_Execute__FP14daSnowEffTag_c(); // 1
-extern "C" static void daSnowEffTag_Delete__FP14daSnowEffTag_c(); // 1
-extern "C" static void daSnowEffTag_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__18daSnowEffTag_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_snowEffTag_cpp(); // 1
+extern "C" void __ct__18daSnowEffTag_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daSnowEffTag_cFv();
+extern "C" void create__14daSnowEffTag_cFv();
+extern "C" void playerAreaCheck__14daSnowEffTag_cFv();
+extern "C" void Execute__14daSnowEffTag_cFv();
+extern "C" bool Draw__14daSnowEffTag_cFv();
+extern "C" bool Delete__14daSnowEffTag_cFv();
+extern "C" static void daSnowEffTag_Draw__FP14daSnowEffTag_c();
+extern "C" static void daSnowEffTag_Execute__FP14daSnowEffTag_c();
+extern "C" static void daSnowEffTag_Delete__FP14daSnowEffTag_c();
+extern "C" static void daSnowEffTag_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daSnowEffTag_HIO_cFv();
+extern "C" void __sinit_d_a_obj_snowEffTag_cpp();
 extern "C" extern void* g_profile_Tag_SnowEff[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void dComIfGp_getReverb(int); // 2
-void cM_atan2s(f32, f32); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void dComIfGp_getReverb(int);
+void cM_atan2s(f32, f32);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -132,7 +118,29 @@ extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void func_802807E0();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

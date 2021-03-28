@@ -30,36 +30,40 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagWatchGe_Draw(daTagWatchGe_c*); // 2
-static void s_watchge(void*, void*); // 2
-static void daTagWatchGe_Execute(daTagWatchGe_c*); // 2
-static bool daTagWatchGe_IsDelete(daTagWatchGe_c*); // 2
-static bool daTagWatchGe_Delete(daTagWatchGe_c*); // 2
-static void daTagWatchGe_Create(daTagWatchGe_c*); // 2
+static void daTagWatchGe_Draw(daTagWatchGe_c*);
+static void s_watchge(void*, void*);
+static void daTagWatchGe_Execute(daTagWatchGe_c*);
+static bool daTagWatchGe_IsDelete(daTagWatchGe_c*);
+static bool daTagWatchGe_Delete(daTagWatchGe_c*);
+static void daTagWatchGe_Create(daTagWatchGe_c*);
+extern "C" extern void* g_profile_Tag_WatchGe[12];
 
-extern "C" bool draw__14daTagWatchGe_cFv(); // 1
-extern "C" static void daTagWatchGe_Draw__FP14daTagWatchGe_c(); // 1
-extern "C" static void s_watchge__FPvPv(); // 1
-extern "C" void execute__14daTagWatchGe_cFv(); // 1
-extern "C" static void daTagWatchGe_Execute__FP14daTagWatchGe_c(); // 1
-extern "C" static bool daTagWatchGe_IsDelete__FP14daTagWatchGe_c(); // 1
-extern "C" static bool daTagWatchGe_Delete__FP14daTagWatchGe_c(); // 1
-extern "C" void create__14daTagWatchGe_cFv(); // 1
-extern "C" static void daTagWatchGe_Create__FP14daTagWatchGe_c(); // 1
+extern "C" bool draw__14daTagWatchGe_cFv();
+extern "C" static void daTagWatchGe_Draw__FP14daTagWatchGe_c();
+extern "C" static void s_watchge__FPvPv();
+extern "C" void execute__14daTagWatchGe_cFv();
+extern "C" static void daTagWatchGe_Execute__FP14daTagWatchGe_c();
+extern "C" static bool daTagWatchGe_IsDelete__FP14daTagWatchGe_c();
+extern "C" static bool daTagWatchGe_Delete__FP14daTagWatchGe_c();
+extern "C" void create__14daTagWatchGe_cFv();
+extern "C" static void daTagWatchGe_Create__FP14daTagWatchGe_c();
 extern "C" extern void* g_profile_Tag_WatchGe[12];
 
 // 
 // External References:
 // 
 
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(fopAc_ac_c*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

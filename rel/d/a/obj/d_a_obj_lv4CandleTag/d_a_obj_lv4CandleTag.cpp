@@ -58,10 +58,10 @@ struct dEvLib_callback_c {
 	/* 80C5DAC0 */ bool eventStart();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -72,41 +72,43 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void dalv4CandleTag_Draw(dalv4CandleTag_c*); // 2
-static void dalv4CandleTag_Execute(dalv4CandleTag_c*); // 2
-static void dalv4CandleTag_Delete(dalv4CandleTag_c*); // 2
-static void dalv4CandleTag_Create(fopAc_ac_c*); // 2
+static void dalv4CandleTag_Draw(dalv4CandleTag_c*);
+static void dalv4CandleTag_Execute(dalv4CandleTag_c*);
+static void dalv4CandleTag_Delete(dalv4CandleTag_c*);
+static void dalv4CandleTag_Create(fopAc_ac_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Tag_Lv4Candle[12];
 
-extern "C" void __ct__20dalv4CandleTag_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__16dalv4CandleTag_cFv(); // 1
-extern "C" void create__16dalv4CandleTag_cFv(); // 1
-extern "C" void Execute__16dalv4CandleTag_cFv(); // 1
-extern "C" void procMain__16dalv4CandleTag_cFv(); // 1
-extern "C" void init_modeWatch__16dalv4CandleTag_cFv(); // 1
-extern "C" void modeWatch__16dalv4CandleTag_cFv(); // 1
-extern "C" void init_modeNG__16dalv4CandleTag_cFv(); // 1
-extern "C" void modeNG__16dalv4CandleTag_cFv(); // 1
-extern "C" void init_modeNGWait__16dalv4CandleTag_cFv(); // 1
-extern "C" void modeNGWait__16dalv4CandleTag_cFv(); // 1
-extern "C" void init_modeEnd__16dalv4CandleTag_cFv(); // 1
-extern "C" void modeEnd__16dalv4CandleTag_cFv(); // 1
-extern "C" void eventStart__16dalv4CandleTag_cFv(); // 1
-extern "C" bool Draw__16dalv4CandleTag_cFv(); // 1
-extern "C" bool Delete__16dalv4CandleTag_cFv(); // 1
-extern "C" static void dalv4CandleTag_Draw__FP16dalv4CandleTag_c(); // 1
-extern "C" static void dalv4CandleTag_Execute__FP16dalv4CandleTag_c(); // 1
-extern "C" static void dalv4CandleTag_Delete__FP16dalv4CandleTag_c(); // 1
-extern "C" static void dalv4CandleTag_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__20dalv4CandleTag_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_lv4CandleTag_cpp(); // 1
-extern "C" static void func_80C5DA58(); // 1
-extern "C" static void func_80C5DA60(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" void __dt__16dalv4CandleTag_cFv(); // 1
+extern "C" void __ct__20dalv4CandleTag_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__16dalv4CandleTag_cFv();
+extern "C" void create__16dalv4CandleTag_cFv();
+extern "C" void Execute__16dalv4CandleTag_cFv();
+extern "C" void procMain__16dalv4CandleTag_cFv();
+extern "C" void init_modeWatch__16dalv4CandleTag_cFv();
+extern "C" void modeWatch__16dalv4CandleTag_cFv();
+extern "C" void init_modeNG__16dalv4CandleTag_cFv();
+extern "C" void modeNG__16dalv4CandleTag_cFv();
+extern "C" void init_modeNGWait__16dalv4CandleTag_cFv();
+extern "C" void modeNGWait__16dalv4CandleTag_cFv();
+extern "C" void init_modeEnd__16dalv4CandleTag_cFv();
+extern "C" void modeEnd__16dalv4CandleTag_cFv();
+extern "C" void eventStart__16dalv4CandleTag_cFv();
+extern "C" bool Draw__16dalv4CandleTag_cFv();
+extern "C" bool Delete__16dalv4CandleTag_cFv();
+extern "C" static void dalv4CandleTag_Draw__FP16dalv4CandleTag_c();
+extern "C" static void dalv4CandleTag_Execute__FP16dalv4CandleTag_c();
+extern "C" static void dalv4CandleTag_Delete__FP16dalv4CandleTag_c();
+extern "C" static void dalv4CandleTag_Create__FP10fopAc_ac_c();
+extern "C" void __dt__20dalv4CandleTag_HIO_cFv();
+extern "C" void __sinit_d_a_obj_lv4CandleTag_cpp();
+extern "C" static void func_80C5DA58();
+extern "C" static void func_80C5DA60();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" void __dt__16dalv4CandleTag_cFv();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_Lv4Candle[12];
 
@@ -114,26 +116,31 @@ extern "C" extern void* g_profile_Tag_Lv4Candle[12];
 // External References:
 // 
 
-void operator delete(void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

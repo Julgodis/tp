@@ -109,89 +109,90 @@ struct JMessage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q28JMessage10TReference[4 + 1 /* padding */];
 
-extern "C" void __dt__Q28JMessage10TReferenceFv(); // 1
-extern "C" bool do_word__Q28JMessage10TReferenceCFUl(); // 1
-extern "C" void __dt__Q28JMessage10TProcessorFv(); // 1
-extern "C" void reset__Q28JMessage10TProcessorFv(); // 1
-extern "C" void stack_pushCurrent__Q28JMessage10TProcessorFPCc(); // 1
-extern "C" void stack_popCurrent__Q28JMessage10TProcessorFv(); // 1
-extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs(); // 1
-extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb(); // 1
-extern "C" void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl(); // 1
-extern "C" void on_select_end__Q28JMessage10TProcessorFv(); // 1
-extern "C" void on_select_separate__Q28JMessage10TProcessorFv(); // 1
-extern "C" void do_reset__Q28JMessage10TProcessorFv(); // 1
-extern "C" void do_begin__Q28JMessage10TProcessorFPCvPCc(); // 1
-extern "C" void do_end__Q28JMessage10TProcessorFv(); // 1
-extern "C" void do_character__Q28JMessage10TProcessorFi(); // 1
-extern "C" bool do_tag__Q28JMessage10TProcessorFUlPCvUl(); // 1
-extern "C" void do_select_begin__Q28JMessage10TProcessorFUl(); // 1
-extern "C" void do_select_end__Q28JMessage10TProcessorFv(); // 1
-extern "C" void do_select_separate__Q28JMessage10TProcessorFv(); // 1
-extern "C" void on_tag___Q28JMessage10TProcessorFv(); // 1
-extern "C" void do_resetStatus___Q28JMessage10TProcessorFPCc(); // 1
-extern "C" bool do_setBegin_isReady___Q28JMessage10TProcessorCFv(); // 1
-extern "C" void do_tag___Q28JMessage10TProcessorFUlPCvUl(); // 1
-extern "C" void process_character___Q28JMessage10TProcessorFv(); // 1
-extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
-extern "C" void process_onCharacterEnd_select___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
-extern "C" void process_onSelect_limited___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
-extern "C" void process_onSelect___Q28JMessage10TProcessorFPQ28JMessage10TProcessor(); // 1
-extern "C" void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl(); // 1
-extern "C" void __dt__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void process__Q28JMessage18TSequenceProcessorFPCc(); // 1
-extern "C" void on_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl(); // 1
-extern "C" void on_jump_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void on_jump__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl(); // 1
-extern "C" void on_branch_query__Q28JMessage18TSequenceProcessorFUl(); // 1
-extern "C" void on_branch_queryResult__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void on_branch__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" bool do_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" bool do_jump_isReady__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void do_jump__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" void do_branch_query__Q28JMessage18TSequenceProcessorFUl(); // 1
-extern "C" s32 do_branch_queryResult__Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void do_branch__Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" void do_resetStatus___Q28JMessage18TSequenceProcessorFPCc(); // 1
-extern "C" void do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv(); // 1
-extern "C" void do_begin___Q28JMessage18TSequenceProcessorFPCvPCc(); // 1
-extern "C" void do_end___Q28JMessage18TSequenceProcessorFv(); // 1
-extern "C" void do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl(); // 1
-extern "C" void process_setMessageIndex_reserved___Q28JMessage18TSequenceProcessorFUs(); // 1
-extern "C" void process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs(); // 1
-extern "C" void process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor(); // 1
-extern "C" void process_onJump___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor(); // 1
-extern "C" void process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl(); // 1
-extern "C" void process_onBranch___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl(); // 1
-extern "C" void __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference(); // 1
-extern "C" void __dt__Q28JMessage19TRenderingProcessorFv(); // 1
-extern "C" void process__Q28JMessage19TRenderingProcessorFPCc(); // 1
-extern "C" void do_begin___Q28JMessage19TRenderingProcessorFPCvPCc(); // 1
-extern "C" void do_end___Q28JMessage19TRenderingProcessorFv(); // 1
-extern "C" void do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl(); // 1
-extern "C" void on_message__Q28JMessage10TProcessorCFUl(); // 1
-extern "C" void getMessageText_messageCode__Q28JMessage10TProcessorCFUl(); // 1
+extern "C" void __dt__Q28JMessage10TReferenceFv();
+extern "C" bool do_word__Q28JMessage10TReferenceCFUl();
+extern "C" void __dt__Q28JMessage10TProcessorFv();
+extern "C" void reset__Q28JMessage10TProcessorFv();
+extern "C" void stack_pushCurrent__Q28JMessage10TProcessorFPCc();
+extern "C" void stack_popCurrent__Q28JMessage10TProcessorFv();
+extern "C" void getResource_groupID__Q28JMessage10TProcessorCFUs();
+extern "C" void toMessageCode_messageID__Q28JMessage10TProcessorCFUlUlPb();
+extern "C" void on_select_begin__Q28JMessage10TProcessorFPFPQ28JMessage10TProcessor_PCcPCvPCcUl();
+extern "C" void on_select_end__Q28JMessage10TProcessorFv();
+extern "C" void on_select_separate__Q28JMessage10TProcessorFv();
+extern "C" void do_reset__Q28JMessage10TProcessorFv();
+extern "C" void do_begin__Q28JMessage10TProcessorFPCvPCc();
+extern "C" void do_end__Q28JMessage10TProcessorFv();
+extern "C" void do_character__Q28JMessage10TProcessorFi();
+extern "C" bool do_tag__Q28JMessage10TProcessorFUlPCvUl();
+extern "C" void do_select_begin__Q28JMessage10TProcessorFUl();
+extern "C" void do_select_end__Q28JMessage10TProcessorFv();
+extern "C" void do_select_separate__Q28JMessage10TProcessorFv();
+extern "C" void on_tag___Q28JMessage10TProcessorFv();
+extern "C" void do_resetStatus___Q28JMessage10TProcessorFPCc();
+extern "C" bool do_setBegin_isReady___Q28JMessage10TProcessorCFv();
+extern "C" void do_tag___Q28JMessage10TProcessorFUlPCvUl();
+extern "C" void process_character___Q28JMessage10TProcessorFv();
+extern "C" void process_onCharacterEnd_normal___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void process_onCharacterEnd_select___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void process_onSelect_limited___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void process_onSelect___Q28JMessage10TProcessorFPQ28JMessage10TProcessor();
+extern "C" void __ct__Q28JMessage18TSequenceProcessorFPCQ28JMessage10TReferencePQ28JMessage8TControl();
+extern "C" void __dt__Q28JMessage18TSequenceProcessorFv();
+extern "C" void process__Q28JMessage18TSequenceProcessorFPCc();
+extern "C" void on_isReady__Q28JMessage18TSequenceProcessorFv();
+extern "C" void on_jump_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessor_PCvUl();
+extern "C" void on_jump_isReady__Q28JMessage18TSequenceProcessorFv();
+extern "C" void on_jump__Q28JMessage18TSequenceProcessorFPCvPCc();
+extern "C" void on_branch_register__Q28JMessage18TSequenceProcessorFPFPCQ28JMessage18TSequenceProcessorUl_PCvPCvUl();
+extern "C" void on_branch_query__Q28JMessage18TSequenceProcessorFUl();
+extern "C" void on_branch_queryResult__Q28JMessage18TSequenceProcessorFv();
+extern "C" void on_branch__Q28JMessage18TSequenceProcessorFPCvPCc();
+extern "C" bool do_isReady__Q28JMessage18TSequenceProcessorFv();
+extern "C" bool do_jump_isReady__Q28JMessage18TSequenceProcessorFv();
+extern "C" void do_jump__Q28JMessage18TSequenceProcessorFPCvPCc();
+extern "C" void do_branch_query__Q28JMessage18TSequenceProcessorFUl();
+extern "C" s32 do_branch_queryResult__Q28JMessage18TSequenceProcessorFv();
+extern "C" void do_branch__Q28JMessage18TSequenceProcessorFPCvPCc();
+extern "C" void do_resetStatus___Q28JMessage18TSequenceProcessorFPCc();
+extern "C" void do_setBegin_isReady___Q28JMessage18TSequenceProcessorCFv();
+extern "C" void do_begin___Q28JMessage18TSequenceProcessorFPCvPCc();
+extern "C" void do_end___Q28JMessage18TSequenceProcessorFv();
+extern "C" void do_tag___Q28JMessage18TSequenceProcessorFUlPCvUl();
+extern "C" void process_setMessageIndex_reserved___Q28JMessage18TSequenceProcessorFUs();
+extern "C" void process_setMessageCode___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUsUs();
+extern "C" void process_onJump_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor();
+extern "C" void process_onJump___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessor();
+extern "C" void process_onBranch_limited___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl();
+extern "C" void process_onBranch___Q28JMessage18TSequenceProcessorFPCQ28JMessage18TSequenceProcessorUl();
+extern "C" void __ct__Q28JMessage19TRenderingProcessorFPCQ28JMessage10TReference();
+extern "C" void __dt__Q28JMessage19TRenderingProcessorFv();
+extern "C" void process__Q28JMessage19TRenderingProcessorFPCc();
+extern "C" void do_begin___Q28JMessage19TRenderingProcessorFPCvPCc();
+extern "C" void do_end___Q28JMessage19TRenderingProcessorFv();
+extern "C" void do_tag___Q28JMessage19TRenderingProcessorFUlPCvUl();
+extern "C" void on_message__Q28JMessage10TProcessorCFUl();
+extern "C" void getMessageText_messageCode__Q28JMessage10TProcessorCFUl();
 extern "C" extern void* __vt__Q28JMessage10TReference[4 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs(); // 1
-extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb(); // 1
-extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void setMessageCode_inSequence___Q28JMessage8TControlFPCQ28JMessage10TProcessorUsUs();
+extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb();
+extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

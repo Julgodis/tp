@@ -12,8 +12,8 @@
 // 
 
 
-extern "C" void __flush_buffer(); // 1
-extern "C" void __prep_buffer(); // 1
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
 
 // 
 // External References:

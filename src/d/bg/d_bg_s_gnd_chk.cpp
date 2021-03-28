@@ -60,35 +60,37 @@ struct cBgS_GndChk {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__14dBgS_CamGndChk[12];
+extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
 
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __ct__18dBgS_ObjGndChk_WtrFv(); // 1
-extern "C" void __dt__18dBgS_ObjGndChk_WtrFv(); // 1
-extern "C" void __ct__18dBgS_ObjGndChk_SplFv(); // 1
-extern "C" void __dt__18dBgS_ObjGndChk_SplFv(); // 1
-extern "C" void __dt__18dBgS_ObjGndChk_AllFv(); // 1
-extern "C" void __dt__14dBgS_CamGndChkFv(); // 1
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" static void func_80077B10(); // 1
-extern "C" static void func_80077B18(); // 1
-extern "C" static void func_80077B20(); // 1
-extern "C" static void func_80077B28(); // 1
-extern "C" static void func_80077B30(); // 1
-extern "C" static void func_80077B38(); // 1
-extern "C" static void func_80077B40(); // 1
-extern "C" static void func_80077B48(); // 1
-extern "C" static void func_80077B50(); // 1
-extern "C" static void func_80077B58(); // 1
-extern "C" static void func_80077B60(); // 1
-extern "C" static void func_80077B68(); // 1
-extern "C" static void func_80077B70(); // 1
-extern "C" static void func_80077B78(); // 1
-extern "C" static void func_80077B80(); // 1
-extern "C" static void func_80077B88(); // 1
-extern "C" static void func_80077B90(); // 1
-extern "C" static void func_80077B98(); // 1
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __ct__18dBgS_ObjGndChk_WtrFv();
+extern "C" void __dt__18dBgS_ObjGndChk_WtrFv();
+extern "C" void __ct__18dBgS_ObjGndChk_SplFv();
+extern "C" void __dt__18dBgS_ObjGndChk_SplFv();
+extern "C" void __dt__18dBgS_ObjGndChk_AllFv();
+extern "C" void __dt__14dBgS_CamGndChkFv();
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
+extern "C" static void func_80077B10();
+extern "C" static void func_80077B18();
+extern "C" static void func_80077B20();
+extern "C" static void func_80077B28();
+extern "C" static void func_80077B30();
+extern "C" static void func_80077B38();
+extern "C" static void func_80077B40();
+extern "C" static void func_80077B48();
+extern "C" static void func_80077B50();
+extern "C" static void func_80077B58();
+extern "C" static void func_80077B60();
+extern "C" static void func_80077B68();
+extern "C" static void func_80077B70();
+extern "C" static void func_80077B78();
+extern "C" static void func_80077B80();
+extern "C" static void func_80077B88();
+extern "C" static void func_80077B90();
+extern "C" static void func_80077B98();
 extern "C" extern void* __vt__14dBgS_CamGndChk[12];
 extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
 
@@ -96,17 +98,18 @@ extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 
-extern "C" void __ct__8dBgS_ChkFv(); // 1
-extern "C" void __dt__8dBgS_ChkFv(); // 1
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void __dt__11cBgS_GndChkFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void SetCam__16dBgS_PolyPassChkFv();
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void __dt__11cBgS_GndChkFv();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 
 // 

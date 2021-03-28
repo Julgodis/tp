@@ -32,25 +32,27 @@ struct cM3dGPla {
 // 
 
 
-extern "C" void __ct__8cM3dGPlaFPC4cXyzf(); // 1
-extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz(); // 1
-extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec(); // 1
-extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec(); // 1
-extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf(); // 1
-extern "C" void getCrossYLessD__8cM3dGPlaCFRC3VecPf(); // 1
-extern "C" void Set__8cM3dGPlaFPC8cM3dGPla(); // 1
+extern "C" void __ct__8cM3dGPlaFPC4cXyzf();
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
+extern "C" void SetupNP0__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" void SetupNP__8cM3dGPlaFRC3VecRC3Vec();
+extern "C" void getCrossY__8cM3dGPlaCFRC4cXyzPf();
+extern "C" void getCrossYLessD__8cM3dGPlaCFRC3VecPf();
+extern "C" void Set__8cM3dGPlaFPC8cM3dGPla();
 
 // 
 // External References:
 // 
 
-void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*); // 2
+void cM3d_InDivPos2(Vec const*, Vec const*, f32, Vec*);
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void cM3d_InDivPos2__FPC3VecPC3VecfP3Vec();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECDotProduct();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* __vt__8cM3dGPla[3];
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 

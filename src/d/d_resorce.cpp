@@ -207,69 +207,75 @@ struct J3DAnmLoaderDataBase {
 // Forward References:
 // 
 
-static void setAlpha(J3DMaterialTable*); // 2
-static void setIndirectTex(J3DModelData*); // 2
-static void setAlpha(J3DModelData*); // 2
-static void addWarpMaterial(J3DModelData*); // 2
-static void getArcHeader(JKRArchive*); // 2
-static void myGetMemBlockSize(void*); // 2
-static void myGetMemBlockSize0(void*); // 2
+static void setAlpha(J3DMaterialTable*);
+static void setIndirectTex(J3DModelData*);
+static void setAlpha(J3DModelData*);
+static void addWarpMaterial(J3DModelData*);
+static void getArcHeader(JKRArchive*);
+static void myGetMemBlockSize(void*);
+static void myGetMemBlockSize0(void*);
+extern "C" extern char const* const d_d_resorce__stringBase0;
+extern "C" extern void* __vt__10J3DAnmBase[4];
+extern "C" extern void* __vt__15J3DAnmTransform[5];
+extern "C" extern void* __vt__18mDoExt_transAnmBas[5];
+extern "C" extern void* __vt__18J3DAnmTransformKey[5];
+extern "C" extern void* __vt__11J3DTexNoAnm[3];
 
-extern "C" void __ct__11dRes_info_cFv(); // 1
-extern "C" void __dt__11dRes_info_cFv(); // 1
-extern "C" void set__11dRes_info_cFPCcPCcUcP7JKRHeap(); // 1
-extern "C" static void setAlpha__FP16J3DMaterialTable(); // 1
-extern "C" static void setIndirectTex__FP12J3DModelData(); // 1
-extern "C" static void setAlpha__FP12J3DModelData(); // 1
-extern "C" static void addWarpMaterial__FP12J3DModelData(); // 1
-extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo(); // 1
-extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx(); // 1
-extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
-extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
-extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff(); // 1
-extern "C" void loaderBasicBmd__11dRes_info_cFUlPv(); // 1
-extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
-extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
-extern "C" void __dt__14J3DTevColorAnmFv(); // 1
-extern "C" void __ct__14J3DTevColorAnmFv(); // 1
-extern "C" void __dt__11J3DTexNoAnmFv(); // 1
-extern "C" void __ct__11J3DTexNoAnmFv(); // 1
-extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
-extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
-extern "C" void __dt__14J3DMatColorAnmFv(); // 1
-extern "C" void __ct__14J3DMatColorAnmFv(); // 1
-extern "C" void loadResource__11dRes_info_cFv(); // 1
-extern "C" void __dt__18J3DAnmTransformKeyFv(); // 1
-extern "C" void __dt__15J3DAnmTransformFv(); // 1
-extern "C" void deleteArchiveRes__11dRes_info_cFv(); // 1
-extern "C" static void getArcHeader__FP10JKRArchive(); // 1
-extern "C" void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap(); // 1
-extern "C" void setRes__11dRes_info_cFv(); // 1
-extern "C" static void myGetMemBlockSize__FPv(); // 1
-extern "C" static void myGetMemBlockSize0__FPv(); // 1
-extern "C" void dump_long__11dRes_info_cFP11dRes_info_ci(); // 1
-extern "C" void dump__11dRes_info_cFP11dRes_info_ci(); // 1
-extern "C" void __dt__14dRes_control_cFv(); // 1
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void newResInfo__14dRes_control_cFP11dRes_info_ci(); // 1
-extern "C" void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
-extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci(); // 1
-extern "C" void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap(); // 1
-extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap(); // 1
-extern "C" void dump__14dRes_control_cFv(); // 1
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
-extern "C" void __dt__10J3DAnmBaseFv(); // 1
-extern "C" bool getKind__15J3DAnmTransformCFv(); // 1
-extern "C" void __dt__18mDoExt_transAnmBasFv(); // 1
-extern "C" s32 getKind__18J3DAnmTransformKeyCFv(); // 1
-extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo(); // 1
-extern "C" void calc__11J3DTexNoAnmCFPUs(); // 1
+extern "C" void __ct__11dRes_info_cFv();
+extern "C" void __dt__11dRes_info_cFv();
+extern "C" void set__11dRes_info_cFPCcPCcUcP7JKRHeap();
+extern "C" static void setAlpha__FP16J3DMaterialTable();
+extern "C" static void setIndirectTex__FP12J3DModelData();
+extern "C" static void setAlpha__FP12J3DModelData();
+extern "C" static void addWarpMaterial__FP12J3DModelData();
+extern "C" void __ct__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" void setTexMtx__14J3DTexGenBlockFUlP9J3DTexMtx();
+extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff();
+extern "C" void loaderBasicBmd__11dRes_info_cFUlPv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void loadResource__11dRes_info_cFv();
+extern "C" void __dt__18J3DAnmTransformKeyFv();
+extern "C" void __dt__15J3DAnmTransformFv();
+extern "C" void deleteArchiveRes__11dRes_info_cFv();
+extern "C" static void getArcHeader__FP10JKRArchive();
+extern "C" void setRes__11dRes_info_cFP10JKRArchiveP7JKRHeap();
+extern "C" void setRes__11dRes_info_cFv();
+extern "C" static void myGetMemBlockSize__FPv();
+extern "C" static void myGetMemBlockSize0__FPv();
+extern "C" void dump_long__11dRes_info_cFP11dRes_info_ci();
+extern "C" void dump__11dRes_info_cFP11dRes_info_ci();
+extern "C" void __dt__14dRes_control_cFv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void newResInfo__14dRes_control_cFP11dRes_info_ci();
+extern "C" void getResInfoLoaded__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+extern "C" void setObjectRes__14dRes_control_cFPCcPvUlP7JKRHeap();
+extern "C" void setStageRes__14dRes_control_cFPCcP7JKRHeap();
+extern "C" void dump__14dRes_control_cFv();
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
+extern "C" void __dt__10J3DAnmBaseFv();
+extern "C" bool getKind__15J3DAnmTransformCFv();
+extern "C" void __dt__18mDoExt_transAnmBasFv();
+extern "C" s32 getKind__18J3DAnmTransformKeyCFv();
+extern "C" void getTransform__18J3DAnmTransformKeyCFUsP16J3DTransformInfo();
+extern "C" void calc__11J3DTexNoAnmCFPUs();
 extern "C" extern char const* const d_d_resorce__stringBase0;
 extern "C" extern void* __vt__10J3DAnmBase[4];
 extern "C" extern void* __vt__15J3DAnmTransform[5];
@@ -281,85 +287,94 @@ extern "C" extern void* __vt__11J3DTexNoAnm[3];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_getGameHeap(); // 2
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
-void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void mDoExt_resIDToIndex(JKRArchive*, u16); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_getGameHeap();
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_resIDToIndex(JKRArchive*, u16);
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern void* __vt__14J3DMaterialAnm[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 mZbufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 j3dDefaultTevSwapMode[4];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void OSReport_Warning(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void ConvDzb__4cBgSFPv(); // 1
-extern "C" void initKCollision__8dBgWKColFPv(); // 1
-extern "C" void getSize__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void findFromRoot__7JKRHeapFPv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getIdxResource__10JKRArchiveFUl(); // 1
-extern "C" void getFileAttribute__10JKRArchiveCFUl(); // 1
-extern "C" void findIdxResource__10JKRArchiveCFUl(); // 1
-extern "C" void findNameResource__10JKRArchiveCFPCc(); // 1
-extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG(); // 1
-extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl(); // 1
-extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr(); // 1
-extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo(); // 1
-extern "C" void newSharedDisplayList__12J3DModelDataFUl(); // 1
-extern "C" void makeSharedDL__12J3DModelDataFv(); // 1
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
-extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo(); // 1
-extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs(); // 1
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void load__24J3DClusterLoaderDataBaseFPCv(); // 1
-extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
-extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strlen(); // 1
-extern "C" void stricmp(); // 1
+extern "C" void OSReport_Error();
+extern "C" void OSReport_Warning();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void setTevStageInfo__11J3DTevStageFRC15J3DTevStageInfo();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_resIDToIndex__FP10JKRArchiveUs();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void ConvDzb__4cBgSFPv();
+extern "C" void initKCollision__8dBgWKColFPv();
+extern "C" void getSize__7JKRHeapFPvP7JKRHeap();
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getIdxResource__10JKRArchiveFUl();
+extern "C" void getFileAttribute__10JKRArchiveCFUl();
+extern "C" void findIdxResource__10JKRArchiveCFUl();
+extern "C" void findNameResource__10JKRArchiveCFPCc();
+extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void JUTReportConsole_f();
+extern "C" void addResTIMG__10J3DTextureFUsPC7ResTIMG();
+extern "C" void addTexMtxIndexInDL__8J3DShapeF7_GXAttrUl();
+extern "C" void addTexMtxIndexInVcd__8J3DShapeF7_GXAttr();
+extern "C" void __as__13J3DTexMtxInfoFRC13J3DTexMtxInfo();
+extern "C" void newSharedDisplayList__12J3DModelDataFUl();
+extern "C" void makeSharedDL__12J3DModelDataFv();
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
+extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo();
+extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void load__24J3DClusterLoaderDataBaseFPCv();
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void setResource__20J3DAnmLoaderDataBaseFP10J3DAnmBasePCv();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
+extern "C" void snprintf();
+extern "C" void strncpy();
+extern "C" void strlen();
+extern "C" void stricmp();
 extern "C" extern u8 const j3dDefaultMtx[48];
 extern "C" extern void* __vt__14J3DMaterialAnm[4];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

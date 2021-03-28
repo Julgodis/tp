@@ -12,16 +12,20 @@
 // 
 
 
-extern "C" void __init_user(); // 1
-extern "C" static void __init_cpp(); // 1
-extern "C" void _ExitProcess(); // 1
+extern "C" void __init_user();
+extern "C" static void __init_cpp();
+extern "C" void _ExitProcess();
 
 // 
 // External References:
 // 
 
+#pragma section ".ctors$10"
+__declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
+#pragma section ".ctors$15"
+__declspec(section ".ctors$10") extern void* const _ctors[106];
 
-extern "C" void PPCHalt(); // 1
+extern "C" void PPCHalt();
 #pragma section ".ctors$10"
 __declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
 #pragma section ".ctors$15"

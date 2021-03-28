@@ -68,46 +68,49 @@ struct JKRAramPiece {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRAramStream__stringBase0;
 
-extern "C" void create__13JKRAramStreamFl(); // 1
-extern "C" void __ct__13JKRAramStreamFl(); // 1
-extern "C" void __dt__13JKRAramStreamFv(); // 1
-extern "C" void run__13JKRAramStreamFv(); // 1
-extern "C" bool readFromAram__13JKRAramStreamFv(); // 1
-extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand(); // 1
-extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl(); // 1
-extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi(); // 1
-extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap(); // 1
-extern "C" void __ct__20JKRAramStreamCommandFv(); // 1
-extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
+extern "C" void create__13JKRAramStreamFl();
+extern "C" void __ct__13JKRAramStreamFl();
+extern "C" void __dt__13JKRAramStreamFv();
+extern "C" void run__13JKRAramStreamFv();
+extern "C" bool readFromAram__13JKRAramStreamFv();
+extern "C" void writeToAram__13JKRAramStreamFP20JKRAramStreamCommand();
+extern "C" void write_StreamToAram_Async__13JKRAramStreamFP18JSUFileInputStreamUlUlUlPUl();
+extern "C" void sync__13JKRAramStreamFP20JKRAramStreamCommandi();
+extern "C" void setTransBuffer__13JKRAramStreamFPUcUlP7JKRHeap();
+extern "C" void __ct__20JKRAramStreamCommandFv();
+extern "C" void getAvailable__20JSURandomInputStreamCFv();
 extern "C" extern char const* const JKRAramStream__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9JKRThreadFUlii(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFUlii();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void orderSync__12JKRAramPieceFiUlUlUlP12JKRAramBlock();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSResumeThread();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 

@@ -299,168 +299,171 @@ struct Z2AudioMgr {
 // Forward References:
 // 
 
-static void dSv_item_rename(u8); // 2
+static void dSv_item_rename(u8);
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern char const* const d_save_d_save__stringBase0;
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 
-extern "C" static void dSv_item_rename__FUc(); // 1
-extern "C" void init__21dSv_player_status_a_cFv(); // 1
-extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc(); // 1
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
-extern "C" void setMixItemIndex__21dSv_player_status_a_cFiUc(); // 1
-extern "C" void getMixItemIndex__21dSv_player_status_a_cCFi(); // 1
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
-extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc(); // 1
-extern "C" void init__21dSv_player_status_b_cFv(); // 1
-extern "C" void onDarkClearLV__21dSv_player_status_b_cFi(); // 1
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void onTransformLV__21dSv_player_status_b_cFi(); // 1
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void init__17dSv_horse_place_cFv(); // 1
-extern "C" void set__17dSv_horse_place_cFPCcRC4cXyzsSc(); // 1
-extern "C" void init__25dSv_player_return_place_cFv(); // 1
-extern "C" void set__25dSv_player_return_place_cFPCcScUc(); // 1
-extern "C" void init__33dSv_player_field_last_stay_info_cFv(); // 1
-extern "C" void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc(); // 1
-extern "C" void onRegionBit__33dSv_player_field_last_stay_info_cFi(); // 1
-extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi(); // 1
-extern "C" void init__27dSv_player_last_mark_info_cFv(); // 1
-extern "C" void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc(); // 1
-extern "C" void init__17dSv_player_item_cFv(); // 1
-extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void setLineUpItem__17dSv_player_item_cFv(); // 1
-extern "C" void getLineUpItem__17dSv_player_item_cCFi(); // 1
-extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc(); // 1
-extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc(); // 1
-extern "C" void setEmptyBottle__17dSv_player_item_cFv(); // 1
-extern "C" void setEmptyBottle__17dSv_player_item_cFUc(); // 1
-extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc(); // 1
-extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc(); // 1
-extern "C" void checkBottle__17dSv_player_item_cFUc(); // 1
-extern "C" void checkInsectBottle__17dSv_player_item_cFv(); // 1
-extern "C" void checkEmptyBottle__17dSv_player_item_cFv(); // 1
-extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcb(); // 1
-extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcUcb(); // 1
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb(); // 1
-extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb(); // 1
-extern "C" void setEmptyBombBag__17dSv_player_item_cFv(); // 1
-extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc(); // 1
-extern "C" void checkBombBag__17dSv_player_item_cFUc(); // 1
-extern "C" void setWarashibeItem__17dSv_player_item_cFUc(); // 1
-extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv(); // 1
-extern "C" void setBaitItem__17dSv_player_item_cFUc(); // 1
-extern "C" void init__21dSv_player_get_item_cFv(); // 1
-extern "C" void onFirstBit__21dSv_player_get_item_cFUc(); // 1
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void init__24dSv_player_item_record_cFv(); // 1
-extern "C" void setBombNum__24dSv_player_item_record_cFUcUc(); // 1
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc(); // 1
-extern "C" void addBottleNum__24dSv_player_item_record_cFUcs(); // 1
-extern "C" void getBottleNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void init__21dSv_player_item_max_cFv(); // 1
-extern "C" void setBombNum__21dSv_player_item_max_cFUcUc(); // 1
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
-extern "C" void init__20dSv_player_collect_cFv(); // 1
-extern "C" void setCollect__20dSv_player_collect_cFiUc(); // 1
-extern "C" void isCollect__20dSv_player_collect_cCFiUc(); // 1
-extern "C" void onCollectCrystal__20dSv_player_collect_cFUc(); // 1
-extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc(); // 1
-extern "C" void onCollectMirror__20dSv_player_collect_cFUc(); // 1
-extern "C" void isCollectMirror__20dSv_player_collect_cCFUc(); // 1
-extern "C" void init__17dSv_player_wolf_cFv(); // 1
-extern "C" void init__16dSv_light_drop_cFv(); // 1
-extern "C" void setLightDropNum__16dSv_light_drop_cFUcUc(); // 1
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
-extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc(); // 1
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
-extern "C" void init__17dSv_letter_info_cFv(); // 1
-extern "C" void onLetterGetFlag__17dSv_letter_info_cFi(); // 1
-extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi(); // 1
-extern "C" void onLetterReadFlag__17dSv_letter_info_cFi(); // 1
-extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi(); // 1
-extern "C" void init__18dSv_fishing_info_cFv(); // 1
-extern "C" void addFishCount__18dSv_fishing_info_cFUc(); // 1
-extern "C" void init__17dSv_player_info_cFv(); // 1
-extern "C" void init__19dSv_player_config_cFv(); // 1
-extern "C" void checkVibration__19dSv_player_config_cCFv(); // 1
-extern "C" void getSound__19dSv_player_config_cFv(); // 1
-extern "C" void setSound__19dSv_player_config_cFUc(); // 1
-extern "C" void getVibration__19dSv_player_config_cFv(); // 1
-extern "C" void setVibration__19dSv_player_config_cFUc(); // 1
-extern "C" void init__12dSv_player_cFv(); // 1
-extern "C" void init__12dSv_memBit_cFv(); // 1
-extern "C" void onTbox__12dSv_memBit_cFi(); // 1
-extern "C" void offTbox__12dSv_memBit_cFi(); // 1
-extern "C" void isTbox__12dSv_memBit_cCFi(); // 1
-extern "C" void onSwitch__12dSv_memBit_cFi(); // 1
-extern "C" void offSwitch__12dSv_memBit_cFi(); // 1
-extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
-extern "C" void revSwitch__12dSv_memBit_cFi(); // 1
-extern "C" void onItem__12dSv_memBit_cFi(); // 1
-extern "C" void isItem__12dSv_memBit_cCFi(); // 1
-extern "C" void onDungeonItem__12dSv_memBit_cFi(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void init__11dSv_event_cFv(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
-extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
-extern "C" void init__14dSv_MiniGame_cFv(); // 1
-extern "C" void init__12dSv_memory_cFv(); // 1
-extern "C" void init__13dSv_memory2_cFv(); // 1
-extern "C" void onVisitedRoom__13dSv_memory2_cFi(); // 1
-extern "C" void offVisitedRoom__13dSv_memory2_cFi(); // 1
-extern "C" void isVisitedRoom__13dSv_memory2_cFi(); // 1
-extern "C" void init__12dSv_danBit_cFSc(); // 1
-extern "C" void onSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void offSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
-extern "C" void revSwitch__12dSv_danBit_cFi(); // 1
-extern "C" void onItem__12dSv_danBit_cFi(); // 1
-extern "C" void isItem__12dSv_danBit_cCFi(); // 1
-extern "C" void init__13dSv_zoneBit_cFv(); // 1
-extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv(); // 1
-extern "C" void clearRoomItem__13dSv_zoneBit_cFv(); // 1
-extern "C" void onSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void offSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void isSwitch__13dSv_zoneBit_cCFi(); // 1
-extern "C" void revSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void onOneSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void offOneSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void isOneSwitch__13dSv_zoneBit_cCFi(); // 1
-extern "C" void revOneSwitch__13dSv_zoneBit_cFi(); // 1
-extern "C" void onItem__13dSv_zoneBit_cFi(); // 1
-extern "C" void isItem__13dSv_zoneBit_cCFi(); // 1
-extern "C" void onOneItem__13dSv_zoneBit_cFi(); // 1
-extern "C" void isOneItem__13dSv_zoneBit_cCFi(); // 1
-extern "C" void init__15dSv_zoneActor_cFv(); // 1
-extern "C" void on__15dSv_zoneActor_cFi(); // 1
-extern "C" void off__15dSv_zoneActor_cFi(); // 1
-extern "C" void is__15dSv_zoneActor_cCFi(); // 1
-extern "C" void init__10dSv_zone_cFi(); // 1
-extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc(); // 1
-extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl(); // 1
-extern "C" void init__10dSv_info_cFv(); // 1
-extern "C" void init__10dSv_save_cFv(); // 1
-extern "C" void getSave2__10dSv_save_cFi(); // 1
-extern "C" void getSave__10dSv_info_cFi(); // 1
-extern "C" void putSave__10dSv_info_cFi(); // 1
-extern "C" void initZone__10dSv_info_cFv(); // 1
-extern "C" void createZone__10dSv_info_cFi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void revSwitch__10dSv_info_cFii(); // 1
-extern "C" void onItem__10dSv_info_cFii(); // 1
-extern "C" void isItem__10dSv_info_cCFii(); // 1
-extern "C" void onActor__10dSv_info_cFii(); // 1
-extern "C" void offActor__10dSv_info_cFii(); // 1
-extern "C" void isActor__10dSv_info_cCFii(); // 1
-extern "C" void memory_to_card__10dSv_info_cFPci(); // 1
-extern "C" void card_to_memory__10dSv_info_cFPci(); // 1
-extern "C" void initdata_to_card__10dSv_info_cFPci(); // 1
+extern "C" static void dSv_item_rename__FUc();
+extern "C" void init__21dSv_player_status_a_cFv();
+extern "C" void setSelectItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void setMixItemIndex__21dSv_player_status_a_cFiUc();
+extern "C" void getMixItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" void isMagicFlag__21dSv_player_status_a_cCFUc();
+extern "C" void init__21dSv_player_status_b_cFv();
+extern "C" void onDarkClearLV__21dSv_player_status_b_cFi();
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" void onTransformLV__21dSv_player_status_b_cFi();
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" void init__17dSv_horse_place_cFv();
+extern "C" void set__17dSv_horse_place_cFPCcRC4cXyzsSc();
+extern "C" void init__25dSv_player_return_place_cFv();
+extern "C" void set__25dSv_player_return_place_cFPCcScUc();
+extern "C" void init__33dSv_player_field_last_stay_info_cFv();
+extern "C" void set__33dSv_player_field_last_stay_info_cFPCcRC4cXyzsScUc();
+extern "C" void onRegionBit__33dSv_player_field_last_stay_info_cFi();
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+extern "C" void init__27dSv_player_last_mark_info_cFv();
+extern "C" void setWarpItemData__27dSv_player_last_mark_info_cFPCcRC4cXyzsScUcUc();
+extern "C" void init__17dSv_player_item_cFv();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void setLineUpItem__17dSv_player_item_cFv();
+extern "C" void getLineUpItem__17dSv_player_item_cCFi();
+extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" void setEmptyBottleItemIn__17dSv_player_item_cFUc();
+extern "C" void setEmptyBottle__17dSv_player_item_cFv();
+extern "C" void setEmptyBottle__17dSv_player_item_cFUc();
+extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
+extern "C" void checkBottle__17dSv_player_item_cFUc();
+extern "C" void checkInsectBottle__17dSv_player_item_cFv();
+extern "C" void checkEmptyBottle__17dSv_player_item_cFv();
+extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcb();
+extern "C" void setBombBagItemIn__17dSv_player_item_cFUcUcUcb();
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcb();
+extern "C" void setEmptyBombBagItemIn__17dSv_player_item_cFUcUcb();
+extern "C" void setEmptyBombBag__17dSv_player_item_cFv();
+extern "C" void setEmptyBombBag__17dSv_player_item_cFUcUc();
+extern "C" void checkBombBag__17dSv_player_item_cFUc();
+extern "C" void setWarashibeItem__17dSv_player_item_cFUc();
+extern "C" void setRodTypeLevelUp__17dSv_player_item_cFv();
+extern "C" void setBaitItem__17dSv_player_item_cFUc();
+extern "C" void init__21dSv_player_get_item_cFv();
+extern "C" void onFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void init__24dSv_player_item_record_cFv();
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void setBottleNum__24dSv_player_item_record_cFUcUc();
+extern "C" void addBottleNum__24dSv_player_item_record_cFUcs();
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" void init__21dSv_player_item_max_cFv();
+extern "C" void setBombNum__21dSv_player_item_max_cFUcUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void init__20dSv_player_collect_cFv();
+extern "C" void setCollect__20dSv_player_collect_cFiUc();
+extern "C" void isCollect__20dSv_player_collect_cCFiUc();
+extern "C" void onCollectCrystal__20dSv_player_collect_cFUc();
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
+extern "C" void onCollectMirror__20dSv_player_collect_cFUc();
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
+extern "C" void init__17dSv_player_wolf_cFv();
+extern "C" void init__16dSv_light_drop_cFv();
+extern "C" void setLightDropNum__16dSv_light_drop_cFUcUc();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void onLightDropGetFlag__16dSv_light_drop_cFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void init__17dSv_letter_info_cFv();
+extern "C" void onLetterGetFlag__17dSv_letter_info_cFi();
+extern "C" void isLetterGetFlag__17dSv_letter_info_cCFi();
+extern "C" void onLetterReadFlag__17dSv_letter_info_cFi();
+extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi();
+extern "C" void init__18dSv_fishing_info_cFv();
+extern "C" void addFishCount__18dSv_fishing_info_cFUc();
+extern "C" void init__17dSv_player_info_cFv();
+extern "C" void init__19dSv_player_config_cFv();
+extern "C" void checkVibration__19dSv_player_config_cCFv();
+extern "C" void getSound__19dSv_player_config_cFv();
+extern "C" void setSound__19dSv_player_config_cFUc();
+extern "C" void getVibration__19dSv_player_config_cFv();
+extern "C" void setVibration__19dSv_player_config_cFUc();
+extern "C" void init__12dSv_player_cFv();
+extern "C" void init__12dSv_memBit_cFv();
+extern "C" void onTbox__12dSv_memBit_cFi();
+extern "C" void offTbox__12dSv_memBit_cFi();
+extern "C" void isTbox__12dSv_memBit_cCFi();
+extern "C" void onSwitch__12dSv_memBit_cFi();
+extern "C" void offSwitch__12dSv_memBit_cFi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void revSwitch__12dSv_memBit_cFi();
+extern "C" void onItem__12dSv_memBit_cFi();
+extern "C" void isItem__12dSv_memBit_cCFi();
+extern "C" void onDungeonItem__12dSv_memBit_cFi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void init__11dSv_event_cFv();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setEventReg__11dSv_event_cFUsUc();
+extern "C" void getEventReg__11dSv_event_cCFUs();
+extern "C" void init__14dSv_MiniGame_cFv();
+extern "C" void init__12dSv_memory_cFv();
+extern "C" void init__13dSv_memory2_cFv();
+extern "C" void onVisitedRoom__13dSv_memory2_cFi();
+extern "C" void offVisitedRoom__13dSv_memory2_cFi();
+extern "C" void isVisitedRoom__13dSv_memory2_cFi();
+extern "C" void init__12dSv_danBit_cFSc();
+extern "C" void onSwitch__12dSv_danBit_cFi();
+extern "C" void offSwitch__12dSv_danBit_cFi();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void revSwitch__12dSv_danBit_cFi();
+extern "C" void onItem__12dSv_danBit_cFi();
+extern "C" void isItem__12dSv_danBit_cCFi();
+extern "C" void init__13dSv_zoneBit_cFv();
+extern "C" void clearRoomSwitch__13dSv_zoneBit_cFv();
+extern "C" void clearRoomItem__13dSv_zoneBit_cFv();
+extern "C" void onSwitch__13dSv_zoneBit_cFi();
+extern "C" void offSwitch__13dSv_zoneBit_cFi();
+extern "C" void isSwitch__13dSv_zoneBit_cCFi();
+extern "C" void revSwitch__13dSv_zoneBit_cFi();
+extern "C" void onOneSwitch__13dSv_zoneBit_cFi();
+extern "C" void offOneSwitch__13dSv_zoneBit_cFi();
+extern "C" void isOneSwitch__13dSv_zoneBit_cCFi();
+extern "C" void revOneSwitch__13dSv_zoneBit_cFi();
+extern "C" void onItem__13dSv_zoneBit_cFi();
+extern "C" void isItem__13dSv_zoneBit_cCFi();
+extern "C" void onOneItem__13dSv_zoneBit_cFi();
+extern "C" void isOneItem__13dSv_zoneBit_cCFi();
+extern "C" void init__15dSv_zoneActor_cFv();
+extern "C" void on__15dSv_zoneActor_cFi();
+extern "C" void off__15dSv_zoneActor_cFi();
+extern "C" void is__15dSv_zoneActor_cCFi();
+extern "C" void init__10dSv_zone_cFi();
+extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc();
+extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl();
+extern "C" void init__10dSv_info_cFv();
+extern "C" void init__10dSv_save_cFv();
+extern "C" void getSave2__10dSv_save_cFi();
+extern "C" void getSave__10dSv_info_cFi();
+extern "C" void putSave__10dSv_info_cFi();
+extern "C" void initZone__10dSv_info_cFv();
+extern "C" void createZone__10dSv_info_cFi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void revSwitch__10dSv_info_cFii();
+extern "C" void onItem__10dSv_info_cFii();
+extern "C" void isItem__10dSv_info_cCFii();
+extern "C" void onActor__10dSv_info_cFii();
+extern "C" void offActor__10dSv_info_cFii();
+extern "C" void isActor__10dSv_info_cCFii();
+extern "C" void memory_to_card__10dSv_info_cFPci();
+extern "C" void card_to_memory__10dSv_info_cFPci();
+extern "C" void initdata_to_card__10dSv_info_cFPci();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern char const* const d_save_d_save__stringBase0;
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
@@ -469,50 +472,54 @@ extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 // External References:
 // 
 
-void dComIfGs_setSelectItemIndex(int, u8); // 2
-void dComIfGs_setMixItemIndex(int, u8); // 2
-void dComIfGs_getMixItemIndex(int); // 2
-void dComIfGp_setSelectItem(int); // 2
-s32 dComIfGs_getBottleMax(); // 2
-void dComIfGs_setKeyNum(int, u8); // 2
-void setInitEventBit(); // 2
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
+s32 dComIfGs_getBottleMax();
+void dComIfGs_setKeyNum(int, u8);
+void setInitEventBit();
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sRumbleSupported__10JUTGamePad[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void setNowVibration__14dComIfG_play_cFUc(); // 1
-extern "C" void getNowVibration__14dComIfG_play_cFv(); // 1
-extern "C" void getZoneNo__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
-extern "C" void dComIfGp_setSelectItem__Fi(); // 1
-extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
-extern "C" void dComIfGs_setKeyNum__FiUc(); // 1
-extern "C" void __ct__13dSv_memory2_cFv(); // 1
-extern "C" void __ct__12dSv_memory_cFv(); // 1
-extern "C" void clrSaveFlag__12daObjCarry_cFv(); // 1
-extern "C" void setSaveFlag__12daObjCarry_cFv(); // 1
-extern "C" void setInitEventBit__Fv(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void setHotSpringTimer__13dMeter2Info_cFUc(); // 1
-extern "C" void setSaveStageName__13dMeter2Info_cFPCc(); // 1
-extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void printf(); // 1
-extern "C" void strcpy(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport_Error();
+extern "C" void setNowVibration__14dComIfG_play_cFUc();
+extern "C" void getNowVibration__14dComIfG_play_cFv();
+extern "C" void getZoneNo__20dStage_roomControl_cFi();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" void dComIfGp_setSelectItem__Fi();
+extern "C" s32 dComIfGs_getBottleMax__Fv();
+extern "C" void dComIfGs_setKeyNum__FiUc();
+extern "C" void __ct__13dSv_memory2_cFv();
+extern "C" void __ct__12dSv_memory_cFv();
+extern "C" void clrSaveFlag__12daObjCarry_cFv();
+extern "C" void setSaveFlag__12daObjCarry_cFv();
+extern "C" void setInitEventBit__Fv();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void setHotSpringTimer__13dMeter2Info_cFUc();
+extern "C" void setSaveStageName__13dMeter2Info_cFPCc();
+extern "C" void setOutputMode__10Z2AudioMgrFUl();
+extern "C" void OSGetSoundMode();
+extern "C" void OSGetTime();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __div2i();
+extern "C" void printf();
+extern "C" void strcpy();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];

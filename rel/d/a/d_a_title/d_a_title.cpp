@@ -44,10 +44,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -124,10 +124,10 @@ struct dDemo_object_c {
 	/* 80039088 */ void getActor(u8);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -189,42 +189,45 @@ struct CPaneMgrAlpha {
 // Forward References:
 // 
 
-static void daTitle_Draw(daTitle_c*); // 2
-static void daTitle_Execute(daTitle_c*); // 2
-static void daTitle_Delete(daTitle_c*); // 2
-static void daTitle_Create(fopAc_ac_c*); // 2
+static void daTitle_Draw(daTitle_c*);
+static void daTitle_Execute(daTitle_c*);
+static void daTitle_Delete(daTitle_c*);
+static void daTitle_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_TITLE[12];
 
-extern "C" void __ct__11daTit_HIO_cFv(); // 1
-extern "C" void CreateHeap__9daTitle_cFv(); // 1
-extern "C" void create__9daTitle_cFv(); // 1
-extern "C" void createHeapCallBack__9daTitle_cFP10fopAc_ac_c(); // 1
-extern "C" void Execute__9daTitle_cFv(); // 1
-extern "C" void KeyWaitAnm__9daTitle_cFv(); // 1
-extern "C" void loadWait_init__9daTitle_cFv(); // 1
-extern "C" void loadWait_proc__9daTitle_cFv(); // 1
-extern "C" void logoDispWaitInit__9daTitle_cFv(); // 1
-extern "C" void logoDispWait__9daTitle_cFv(); // 1
-extern "C" void logoDispAnmInit__9daTitle_cFv(); // 1
-extern "C" void logoDispAnm__9daTitle_cFv(); // 1
-extern "C" void keyWaitInit__9daTitle_cFv(); // 1
-extern "C" void keyWait__9daTitle_cFv(); // 1
-extern "C" void nextScene_init__9daTitle_cFv(); // 1
-extern "C" void nextScene_proc__9daTitle_cFv(); // 1
-extern "C" void fastLogoDispInit__9daTitle_cFv(); // 1
-extern "C" void fastLogoDisp__9daTitle_cFv(); // 1
-extern "C" void getDemoPrm__9daTitle_cFv(); // 1
-extern "C" void Draw__9daTitle_cFv(); // 1
-extern "C" void Delete__9daTitle_cFv(); // 1
-extern "C" static void daTitle_Draw__FP9daTitle_c(); // 1
-extern "C" static void daTitle_Execute__FP9daTitle_c(); // 1
-extern "C" static void daTitle_Delete__FP9daTitle_c(); // 1
-extern "C" static void daTitle_Create__FP10fopAc_ac_c(); // 1
-extern "C" void draw__15dDlst_daTitle_cFv(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" void __dt__11daTit_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_title_cpp(); // 1
-extern "C" void __dt__15dDlst_daTitle_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
+extern "C" void __ct__11daTit_HIO_cFv();
+extern "C" void CreateHeap__9daTitle_cFv();
+extern "C" void create__9daTitle_cFv();
+extern "C" void createHeapCallBack__9daTitle_cFP10fopAc_ac_c();
+extern "C" void Execute__9daTitle_cFv();
+extern "C" void KeyWaitAnm__9daTitle_cFv();
+extern "C" void loadWait_init__9daTitle_cFv();
+extern "C" void loadWait_proc__9daTitle_cFv();
+extern "C" void logoDispWaitInit__9daTitle_cFv();
+extern "C" void logoDispWait__9daTitle_cFv();
+extern "C" void logoDispAnmInit__9daTitle_cFv();
+extern "C" void logoDispAnm__9daTitle_cFv();
+extern "C" void keyWaitInit__9daTitle_cFv();
+extern "C" void keyWait__9daTitle_cFv();
+extern "C" void nextScene_init__9daTitle_cFv();
+extern "C" void nextScene_proc__9daTitle_cFv();
+extern "C" void fastLogoDispInit__9daTitle_cFv();
+extern "C" void fastLogoDisp__9daTitle_cFv();
+extern "C" void getDemoPrm__9daTitle_cFv();
+extern "C" void Draw__9daTitle_cFv();
+extern "C" void Delete__9daTitle_cFv();
+extern "C" static void daTitle_Draw__FP9daTitle_c();
+extern "C" static void daTitle_Execute__FP9daTitle_c();
+extern "C" static void daTitle_Delete__FP9daTitle_c();
+extern "C" static void daTitle_Create__FP10fopAc_ac_c();
+extern "C" void draw__15dDlst_daTitle_cFv();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__11daTit_HIO_cFv();
+extern "C" void __sinit_d_a_title_cpp();
+extern "C" void __dt__15dDlst_daTitle_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_TITLE[12];
@@ -233,69 +236,20 @@ extern "C" extern void* g_profile_TITLE[12];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_getGameHeap(); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopOvlpM_IsPeek(); // 2
-void fopScnM_SearchByID(unsigned int); // 2
-void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
-void fopMsgM_messageGet(char*, u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void fopScnM_SearchByID__FUi(); // 1
-extern "C" void fopScnM_ChangeReq__FP11scene_classssUs(); // 1
-extern "C" void fopMsgM_messageGet__FPcUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getActor__14dDemo_object_cFUc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void destroy__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_getGameHeap();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopOvlpM_IsPeek();
+void fopScnM_SearchByID(unsigned int);
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void fopMsgM_messageGet(char*, u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
@@ -308,7 +262,68 @@ extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 extern "C" extern u8 mProcID__20dStage_roomControl_c[4];
 extern "C" extern u8 m_object__7dDemo_c[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fopScnM_SearchByID__FUi();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void destroy__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXTrans();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 mProcID__20dStage_roomControl_c[4];
+extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

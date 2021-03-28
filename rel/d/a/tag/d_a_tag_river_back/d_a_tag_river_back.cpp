@@ -49,10 +49,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -63,25 +63,27 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagRiverBack_Execute(daTagRiverBack_c*); // 2
-static void daTagRiverBack_Delete(daTagRiverBack_c*); // 2
-static void daTagRiverBack_Create(daTagRiverBack_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
+static void daTagRiverBack_Execute(daTagRiverBack_c*);
+static void daTagRiverBack_Delete(daTagRiverBack_c*);
+static void daTagRiverBack_Create(daTagRiverBack_c*);
+static void cLib_calcTimer__template0(u8*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Tag_RiverBack[12];
 
-extern "C" void Create__16daTagRiverBack_cFv(); // 1
-extern "C" void create__16daTagRiverBack_cFv(); // 1
-extern "C" void execute__16daTagRiverBack_cFv(); // 1
-extern "C" void event_proc_call__16daTagRiverBack_cFv(); // 1
-extern "C" void actionWait__16daTagRiverBack_cFv(); // 1
-extern "C" void actionOrderEvent__16daTagRiverBack_cFv(); // 1
-extern "C" void actionEvent__16daTagRiverBack_cFv(); // 1
-extern "C" void actionDead__16daTagRiverBack_cFv(); // 1
-extern "C" void demoProc__16daTagRiverBack_cFv(); // 1
-extern "C" void _delete__16daTagRiverBack_cFv(); // 1
-extern "C" static void daTagRiverBack_Execute__FP16daTagRiverBack_c(); // 1
-extern "C" static void daTagRiverBack_Delete__FP16daTagRiverBack_c(); // 1
-extern "C" static void daTagRiverBack_Create__FP16daTagRiverBack_c(); // 1
-extern "C" static void func_80D5F920(); // 1
+extern "C" void Create__16daTagRiverBack_cFv();
+extern "C" void create__16daTagRiverBack_cFv();
+extern "C" void execute__16daTagRiverBack_cFv();
+extern "C" void event_proc_call__16daTagRiverBack_cFv();
+extern "C" void actionWait__16daTagRiverBack_cFv();
+extern "C" void actionOrderEvent__16daTagRiverBack_cFv();
+extern "C" void actionEvent__16daTagRiverBack_cFv();
+extern "C" void actionDead__16daTagRiverBack_cFv();
+extern "C" void demoProc__16daTagRiverBack_cFv();
+extern "C" void _delete__16daTagRiverBack_cFv();
+extern "C" static void daTagRiverBack_Execute__FP16daTagRiverBack_c();
+extern "C" static void daTagRiverBack_Delete__FP16daTagRiverBack_c();
+extern "C" static void daTagRiverBack_Create__FP16daTagRiverBack_c();
+extern "C" static void func_80D5F920();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_RiverBack[12];
 
@@ -89,31 +91,36 @@ extern "C" extern void* g_profile_Tag_RiverBack[12];
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_80D5FA68[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

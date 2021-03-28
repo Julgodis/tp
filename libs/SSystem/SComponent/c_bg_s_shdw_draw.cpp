@@ -41,21 +41,22 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__13cBgS_ShdwDrawFv(); // 1
-extern "C" void __dt__13cBgS_ShdwDrawFv(); // 1
-extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz(); // 1
-extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i(); // 1
+extern "C" void __ct__13cBgS_ShdwDrawFv();
+extern "C" void __dt__13cBgS_ShdwDrawFv();
+extern "C" void Set__13cBgS_ShdwDrawFR4cXyzR4cXyz();
+extern "C" void SetCallback__13cBgS_ShdwDrawFPFP13cBgS_ShdwDrawP10cBgD_Vtx_tiiiP8cM3dGPla_i();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGAab[3];
 
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__8cM3dGAab[3];
 
 // 

@@ -82,59 +82,59 @@ struct JASDvd {
 // 
 
 
-extern "C" void getRootHeap__16JASWaveArcLoaderFv(); // 1
-extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc(); // 1
-extern "C" void getCurrentDir__16JASWaveArcLoaderFv(); // 1
-extern "C" void __ct__10JASWaveArcFv(); // 1
-extern "C" void __dt__10JASWaveArcFv(); // 1
-extern "C" void loadSetup__10JASWaveArcFUl(); // 1
-extern "C" void eraseSetup__10JASWaveArcFv(); // 1
-extern "C" void loadToAramCallback__10JASWaveArcFPv(); // 1
-extern "C" void sendLoadCmd__10JASWaveArcFv(); // 1
-extern "C" void load__10JASWaveArcFP7JASHeap(); // 1
-extern "C" void loadTail__10JASWaveArcFP7JASHeap(); // 1
-extern "C" void erase__10JASWaveArcFv(); // 1
-extern "C" void onDispose__10JASWaveArcFv(); // 1
-extern "C" void setEntryNum__10JASWaveArcFl(); // 1
-extern "C" void setFileName__10JASWaveArcFPCc(); // 1
-extern "C" void __dt__11JASDisposerFv(); // 1
+extern "C" void getRootHeap__16JASWaveArcLoaderFv();
+extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc();
+extern "C" void getCurrentDir__16JASWaveArcLoaderFv();
+extern "C" void __ct__10JASWaveArcFv();
+extern "C" void __dt__10JASWaveArcFv();
+extern "C" void loadSetup__10JASWaveArcFUl();
+extern "C" void eraseSetup__10JASWaveArcFv();
+extern "C" void loadToAramCallback__10JASWaveArcFPv();
+extern "C" void sendLoadCmd__10JASWaveArcFv();
+extern "C" void load__10JASWaveArcFP7JASHeap();
+extern "C" void loadTail__10JASWaveArcFP7JASHeap();
+extern "C" void erase__10JASWaveArcFv();
+extern "C" void onDispose__10JASWaveArcFv();
+extern "C" void setEntryNum__10JASWaveArcFl();
+extern "C" void setFileName__10JASWaveArcFPCc();
+extern "C" void __dt__11JASDisposerFv();
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+void operator delete[](void*);
 
-extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl(); // 1
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void __ct__7JASHeapFP11JASDisposer(); // 1
-extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
-extern "C" void allocTail__7JASHeapFP7JASHeapUl(); // 1
-extern "C" void free__7JASHeapFv(); // 1
-extern "C" void getSystemHeap__9JASKernelFv(); // 1
-extern "C" void getAramHeap__9JASKernelFv(); // 1
-extern "C" void onDispose__11JASDisposerFv(); // 1
-extern "C" void onLoadDone__10JASWaveArcFv(); // 1
-extern "C" void onEraseDone__10JASWaveArcFv(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
+extern "C" void sendCmdMsg__13JASTaskThreadFPFPv_vPCvUl();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void __ct__7JASHeapFP11JASDisposer();
+extern "C" void alloc__7JASHeapFP7JASHeapUl();
+extern "C" void allocTail__7JASHeapFP7JASHeapUl();
+extern "C" void free__7JASHeapFv();
+extern "C" void getSystemHeap__9JASKernelFv();
+extern "C" void getAramHeap__9JASKernelFv();
+extern "C" void onDispose__11JASDisposerFv();
+extern "C" void onLoadDone__10JASWaveArcFv();
+extern "C" void onEraseDone__10JASWaveArcFv();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void loadToAram__16JKRDvdAramRipperFlUl15JKRExpandSwitchUlUlPUl();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void DVDFastOpen();
+extern "C" void DVDClose();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
+extern "C" void strcat();
+extern "C" void strcpy();
+extern "C" void strlen();
 
 // 
 // Declarations:

@@ -42,21 +42,42 @@ struct Z2SoundObjBase {
 // Forward References:
 // 
 
-static bool daE_ST_LINE_Draw(e_st_line_class*); // 2
-static bool daE_ST_LINE_Execute(e_st_line_class*); // 2
-static bool daE_ST_LINE_IsDelete(e_st_line_class*); // 2
-static void daE_ST_LINE_Delete(e_st_line_class*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_ST_LINE_Create(fopAc_ac_c*); // 2
+static bool daE_ST_LINE_Draw(e_st_line_class*);
+static bool daE_ST_LINE_Execute(e_st_line_class*);
+static bool daE_ST_LINE_IsDelete(e_st_line_class*);
+static void daE_ST_LINE_Delete(e_st_line_class*);
+static void useHeapInit(fopAc_ac_c*);
+static void daE_ST_LINE_Create(fopAc_ac_c*);
+extern "C" extern u8 const lit_3705[4];
+extern "C" extern u32 const lit_3706;
+extern "C" extern u32 const lit_3735;
+extern "C" extern u32 const lit_3759[1 + 1 /* padding */];
+extern "C" extern u8 const lit_3938[8];
+extern "C" extern u8 const lit_3939[8];
+extern "C" extern u8 const lit_3940[8];
+extern "C" extern u32 const lit_3942;
+extern "C" extern u32 const lit_3943;
+extern "C" extern u32 const lit_3944;
+extern "C" extern u32 const lit_3945;
+extern "C" extern u32 const lit_3946;
+extern "C" extern u32 const lit_3947;
+extern "C" extern u32 const lit_4003;
+extern "C" extern u32 const lit_4004;
+extern "C" extern u32 const lit_4070;
+extern "C" extern u32 const lit_4071;
+extern "C" extern u32 const lit_4072;
+extern "C" extern u32 const lit_4073;
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_E_ST_LINE[12];
 
-extern "C" static bool daE_ST_LINE_Draw__FP15e_st_line_class(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static bool daE_ST_LINE_Execute__FP15e_st_line_class(); // 1
-extern "C" static bool daE_ST_LINE_IsDelete__FP15e_st_line_class(); // 1
-extern "C" static void daE_ST_LINE_Delete__FP15e_st_line_class(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_ST_LINE_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
+extern "C" static bool daE_ST_LINE_Draw__FP15e_st_line_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" static bool daE_ST_LINE_Execute__FP15e_st_line_class();
+extern "C" static bool daE_ST_LINE_IsDelete__FP15e_st_line_class();
+extern "C" static void daE_ST_LINE_Delete__FP15e_st_line_class();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void daE_ST_LINE_Create__FP10fopAc_ac_c();
+extern "C" void __ct__4cXyzFv();
 extern "C" extern u8 const lit_3705[4];
 extern "C" extern u32 const lit_3706;
 extern "C" extern u32 const lit_3735;
@@ -83,26 +104,29 @@ extern "C" extern void* g_profile_E_ST_LINE[12];
 // External References:
 // 
 
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void operator delete(void*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void operator delete(void*);
+extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 
-extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void init__19mDoExt_3DlineMat0_cFUsUsi();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void __dl__FPv();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__19mDoExt_3DlineMat0_c[5];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];

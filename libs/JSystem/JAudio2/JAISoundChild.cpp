@@ -29,16 +29,16 @@ struct JAISoundChild {
 // 
 
 
-extern "C" void init__13JAISoundChildFv(); // 1
-extern "C" void mixOut__13JAISoundChildFP8JASTrack(); // 1
-extern "C" void calc__13JAISoundChildFv(); // 1
+extern "C" void init__13JAISoundChildFv();
+extern "C" void mixOut__13JAISoundChildFP8JASTrack();
+extern "C" void calc__13JAISoundChildFv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
 
 // 
 // Declarations:

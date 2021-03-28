@@ -11,19 +11,19 @@
 // Types:
 // 
 
-struct JAISeq {
+struct JAIStream {
 };
 
-struct JAISound {
+struct JAISeq {
 };
 
 struct JAISe {
 };
 
-struct JAIStream {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISound {
 };
 
 struct Z2SoundInfo {
@@ -65,49 +65,54 @@ struct JAISoundInfo {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__11Z2SoundInfo[20];
 
-extern "C" void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getSoundType__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getCategory__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getPriority__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID(); // 1
-extern "C" void getAudibleSw__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe(); // 1
-extern "C" void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq(); // 1
-extern "C" void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream(); // 1
-extern "C" void getStreamFilePath__11Z2SoundInfoF10JAISoundID(); // 1
-extern "C" void getStreamFileEntry__11Z2SoundInfoF10JAISoundID(); // 1
-extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID(); // 1
-extern "C" void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound(); // 1
-extern "C" void __dt__11Z2SoundInfoFv(); // 1
-extern "C" static void func_802BBCBC(); // 1
-extern "C" static void func_802BBCC4(); // 1
-extern "C" static void func_802BBCCC(); // 1
-extern "C" static void func_802BBCD4(); // 1
+extern "C" void getBgmSeqResourceID__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getSoundType__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getCategory__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getPriority__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getAudibleSwFull__11Z2SoundInfoF10JAISoundID();
+extern "C" void getAudibleSw__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getSeInfo__11Z2SoundInfoCF10JAISoundIDP5JAISe();
+extern "C" void getSeqInfo__11Z2SoundInfoCF10JAISoundIDP6JAISeq();
+extern "C" void getStreamInfo__11Z2SoundInfoCF10JAISoundIDP9JAIStream();
+extern "C" void getStreamFilePath__11Z2SoundInfoF10JAISoundID();
+extern "C" void getStreamFileEntry__11Z2SoundInfoF10JAISoundID();
+extern "C" void getSwBit__11Z2SoundInfoCF10JAISoundID();
+extern "C" void getSoundInfo___11Z2SoundInfoCF10JAISoundIDP8JAISound();
+extern "C" void __dt__11Z2SoundInfoFv();
+extern "C" static void func_802BBCBC();
+extern "C" static void func_802BBCC4();
+extern "C" static void func_802BBCCC();
+extern "C" static void func_802BBCD4();
 extern "C" extern void* __vt__11Z2SoundInfo[20];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B50[4];
+extern "C" extern u8 data_80450B58[4];
 
-extern "C" void __dt__12JAISoundInfoFv(); // 1
-extern "C" void __dt__16JAIStreamDataMgrFv(); // 1
-extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID(); // 1
-extern "C" void getData__13JAUSoundTableCF10JAISoundID(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getRandom_0_1__6Z2CalcFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__12JAISoundInfoFv();
+extern "C" void __dt__16JAIStreamDataMgrFv();
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" void getData__13JAUSoundTableCF10JAISoundID();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getRandom_0_1__6Z2CalcFv();
+extern "C" void __dl__FPv();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
 extern "C" extern u8 data_80450B4C[4];
 extern "C" extern u8 data_80450B50[4];

@@ -47,10 +47,10 @@ struct dSv_info_c {
 struct create_tag_class {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -61,20 +61,22 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Timer[12];
 
-extern "C" void _create__Q210daObjTimer5Act_cFv(); // 1
-extern "C" bool _delete__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void mode_wait_init__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void mode_wait__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void mode_count_init__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void mode_count__Q210daObjTimer5Act_cFv(); // 1
-extern "C" void _execute__Q210daObjTimer5Act_cFv(); // 1
-extern "C" static void func_804855A4(); // 1
-extern "C" static void func_804855C4(); // 1
-extern "C" static void func_804855E8(); // 1
-extern "C" static bool func_8048560C(); // 1
-extern "C" static bool func_80485614(); // 1
-extern "C" void func_8048561C(); // 1
+extern "C" void _create__Q210daObjTimer5Act_cFv();
+extern "C" bool _delete__Q210daObjTimer5Act_cFv();
+extern "C" void mode_wait_init__Q210daObjTimer5Act_cFv();
+extern "C" void mode_wait__Q210daObjTimer5Act_cFv();
+extern "C" void mode_count_init__Q210daObjTimer5Act_cFv();
+extern "C" void mode_count__Q210daObjTimer5Act_cFv();
+extern "C" void _execute__Q210daObjTimer5Act_cFv();
+extern "C" static void func_804855A4();
+extern "C" static void func_804855C4();
+extern "C" static void func_804855E8();
+extern "C" static bool func_8048560C();
+extern "C" static bool func_80485614();
+extern "C" void func_8048561C();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Timer[12];
 
@@ -82,16 +84,21 @@ extern "C" extern void* g_profile_Obj_Timer[12];
 // External References:
 // 
 
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopDwTg_DrawQTo(create_tag_class*); // 2
+void fopAcM_delete(fopAc_ac_c*);
+void fopDwTg_DrawQTo(create_tag_class*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_804856E8[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopDwTg_DrawQTo__FP16create_tag_class(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ptmf_scall();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

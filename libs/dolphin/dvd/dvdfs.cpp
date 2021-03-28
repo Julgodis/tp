@@ -11,23 +11,25 @@
 // Forward References:
 // 
 
+extern "C" extern u8 __DVDLongFileNameFlag[4];
+extern "C" extern u8 __DVDThreadQueue[8];
 
-extern "C" void __DVDFSInit(); // 1
-extern "C" void DVDConvertPathToEntrynum(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" static void entryToPath(); // 1
-extern "C" static void DVDConvertEntrynumToPath(); // 1
-extern "C" static void DVDGetCurrentDir(); // 1
-extern "C" void DVDChangeDir(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" static void cbForReadAsync(); // 1
-extern "C" void DVDReadPrio(); // 1
-extern "C" static void cbForReadSync(); // 1
-extern "C" void DVDOpenDir(); // 1
-extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
+extern "C" void __DVDFSInit();
+extern "C" void DVDConvertPathToEntrynum();
+extern "C" void DVDFastOpen();
+extern "C" void DVDOpen();
+extern "C" void DVDClose();
+extern "C" static void entryToPath();
+extern "C" static void DVDConvertEntrynumToPath();
+extern "C" static void DVDGetCurrentDir();
+extern "C" void DVDChangeDir();
+extern "C" void DVDReadAsyncPrio();
+extern "C" static void cbForReadAsync();
+extern "C" void DVDReadPrio();
+extern "C" static void cbForReadSync();
+extern "C" void DVDOpenDir();
+extern "C" void DVDReadDir();
+extern "C" bool DVDCloseDir();
 extern "C" extern u8 __DVDLongFileNameFlag[4];
 extern "C" extern u8 __DVDThreadQueue[8];
 
@@ -36,15 +38,15 @@ extern "C" extern u8 __DVDThreadQueue[8];
 // 
 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
-extern "C" void DVDReadAbsAsyncPrio(); // 1
-extern "C" void DVDCancel(); // 1
-extern "C" void tolower(); // 1
+extern "C" void OSReport();
+extern "C" void OSPanic();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSSleepThread();
+extern "C" void OSWakeupThread();
+extern "C" void DVDReadAbsAsyncPrio();
+extern "C" void DVDCancel();
+extern "C" void tolower();
 
 // 
 // Declarations:

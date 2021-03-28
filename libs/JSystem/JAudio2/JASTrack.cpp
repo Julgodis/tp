@@ -34,7 +34,13 @@ struct JASTrackPort {
 	/* 802935E8 */ void writeExport(u32, u16);
 };
 
-struct JASSoundParams {
+struct JASOscillator {
+	struct Point {
+	};
+
+	struct Data {
+	};
+
 };
 
 struct JASDsp {
@@ -47,13 +53,7 @@ struct JASDsp {
 
 };
 
-struct JASOscillator {
-	struct Point {
-	};
-
-	struct Data {
-	};
-
+struct JASSoundParams {
 };
 
 struct JASChannel {
@@ -198,74 +198,77 @@ struct JASBank {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
+extern "C" extern u8 data_80431AF4[16];
+extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 
-extern "C" void __ct__8JASTrackFv(); // 1
-extern "C" void __dt__8JASTrackFv(); // 1
-extern "C" void setChannelMgrCount__8JASTrackFUl(); // 1
-extern "C" void init__8JASTrackFv(); // 1
-extern "C" void initTimed__8JASTrackFv(); // 1
-extern "C" void inherit__8JASTrackFRC8JASTrack(); // 1
-extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams(); // 1
-extern "C" void setSeqData__8JASTrackFPvUl(); // 1
-extern "C" void startSeq__8JASTrackFv(); // 1
-extern "C" void stopSeq__8JASTrackFv(); // 1
-extern "C" void start__8JASTrackFv(); // 1
-extern "C" void close__8JASTrackFv(); // 1
-extern "C" void connectChild__8JASTrackFUlP8JASTrack(); // 1
-extern "C" void closeChild__8JASTrackFUl(); // 1
-extern "C" void openChild__8JASTrackFUl(); // 1
-extern "C" void connectBus__8JASTrackFii(); // 1
-extern "C" void setLatestKey__8JASTrackFUc(); // 1
-extern "C" void channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl(); // 1
-extern "C" void noteOn__8JASTrackFUlUlUl(); // 1
-extern "C" void gateOn__8JASTrackFUlUlfUl(); // 1
-extern "C" void noteOff__8JASTrackFUlUs(); // 1
-extern "C" void checkNoteStop__8JASTrackCFUl(); // 1
-extern "C" void overwriteOsc__8JASTrackFP10JASChannel(); // 1
-extern "C" void updateTimedParam__8JASTrackFv(); // 1
-extern "C" void updateTrack__8JASTrackFf(); // 1
-extern "C" void updateTempo__8JASTrackFv(); // 1
-extern "C" void updateSeq__8JASTrackFbf(); // 1
-extern "C" void seqTimeToDspTime__8JASTrackFf(); // 1
-extern "C" void setParam__8JASTrackFUlfUl(); // 1
-extern "C" void noteOffAll__8JASTrackFUs(); // 1
-extern "C" void mute__8JASTrackFb(); // 1
-extern "C" void setOscScale__8JASTrackFUlf(); // 1
-extern "C" void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point(); // 1
-extern "C" void setOscAdsr__8JASTrackFssssUs(); // 1
-extern "C" void setFIR__8JASTrackFPCs(); // 1
-extern "C" void setIIR__8JASTrackFPCs(); // 1
-extern "C" void readPortSelf__8JASTrackFUl(); // 1
-extern "C" void writePortSelf__8JASTrackFUlUs(); // 1
-extern "C" void writePort__8JASTrackFUlUs(); // 1
-extern "C" void readPort__8JASTrackFUl(); // 1
-extern "C" void setChannelPauseFlag__8JASTrackFb(); // 1
-extern "C" void pause__8JASTrackFb(); // 1
-extern "C" void getTransposeTotal__8JASTrackCFv(); // 1
-extern "C" void isMute__8JASTrackCFv(); // 1
-extern "C" void setTempo__8JASTrackFUs(); // 1
-extern "C" void setTempoRate__8JASTrackFf(); // 1
-extern "C" void setTimebase__8JASTrackFUs(); // 1
-extern "C" void updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel(); // 1
-extern "C" void channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv(); // 1
-extern "C" void getRootTrack__8JASTrackFv(); // 1
-extern "C" void tickProc__8JASTrackFv(); // 1
-extern "C" void seqMain__8JASTrackFv(); // 1
-extern "C" void cbSeqMain__Q28JASTrack5TListFPv(); // 1
-extern "C" void append__Q28JASTrack5TListFP8JASTrack(); // 1
-extern "C" void seqMain__Q28JASTrack5TListFv(); // 1
-extern "C" void __ct__Q28JASTrack11TChannelMgrFP8JASTrack(); // 1
-extern "C" void init__Q28JASTrack11TChannelMgrFv(); // 1
-extern "C" void releaseAll__Q28JASTrack11TChannelMgrFv(); // 1
-extern "C" void noteOff__Q28JASTrack11TChannelMgrFUlUs(); // 1
-extern "C" void setPauseFlag__Q28JASTrack11TChannelMgrFb(); // 1
-extern "C" void __ct__Q28JASTrack10MoveParam_Fv(); // 1
-extern "C" void func_802932E0(); // 1
-extern "C" void func_80293334(); // 1
-extern "C" void __sinit_JASTrack_cpp(); // 1
-extern "C" void __dt__Q28JASTrack5TListFv(); // 1
-extern "C" void __dt__19JASDefaultBankTableFv(); // 1
-extern "C" void func_80293528(); // 1
+extern "C" void __ct__8JASTrackFv();
+extern "C" void __dt__8JASTrackFv();
+extern "C" void setChannelMgrCount__8JASTrackFUl();
+extern "C" void init__8JASTrackFv();
+extern "C" void initTimed__8JASTrackFv();
+extern "C" void inherit__8JASTrackFRC8JASTrack();
+extern "C" void assignExtBuffer__8JASTrackFUlP14JASSoundParams();
+extern "C" void setSeqData__8JASTrackFPvUl();
+extern "C" void startSeq__8JASTrackFv();
+extern "C" void stopSeq__8JASTrackFv();
+extern "C" void start__8JASTrackFv();
+extern "C" void close__8JASTrackFv();
+extern "C" void connectChild__8JASTrackFUlP8JASTrack();
+extern "C" void closeChild__8JASTrackFUl();
+extern "C" void openChild__8JASTrackFUl();
+extern "C" void connectBus__8JASTrackFii();
+extern "C" void setLatestKey__8JASTrackFUc();
+extern "C" void channelStart__8JASTrackFPQ28JASTrack11TChannelMgrUlUlUl();
+extern "C" void noteOn__8JASTrackFUlUlUl();
+extern "C" void gateOn__8JASTrackFUlUlfUl();
+extern "C" void noteOff__8JASTrackFUlUs();
+extern "C" void checkNoteStop__8JASTrackCFUl();
+extern "C" void overwriteOsc__8JASTrackFP10JASChannel();
+extern "C" void updateTimedParam__8JASTrackFv();
+extern "C" void updateTrack__8JASTrackFf();
+extern "C" void updateTempo__8JASTrackFv();
+extern "C" void updateSeq__8JASTrackFbf();
+extern "C" void seqTimeToDspTime__8JASTrackFf();
+extern "C" void setParam__8JASTrackFUlfUl();
+extern "C" void noteOffAll__8JASTrackFUs();
+extern "C" void mute__8JASTrackFb();
+extern "C" void setOscScale__8JASTrackFUlf();
+extern "C" void setOscTable__8JASTrackFUlPCQ213JASOscillator5Point();
+extern "C" void setOscAdsr__8JASTrackFssssUs();
+extern "C" void setFIR__8JASTrackFPCs();
+extern "C" void setIIR__8JASTrackFPCs();
+extern "C" void readPortSelf__8JASTrackFUl();
+extern "C" void writePortSelf__8JASTrackFUlUs();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void readPort__8JASTrackFUl();
+extern "C" void setChannelPauseFlag__8JASTrackFb();
+extern "C" void pause__8JASTrackFb();
+extern "C" void getTransposeTotal__8JASTrackCFv();
+extern "C" void isMute__8JASTrackCFv();
+extern "C" void setTempo__8JASTrackFUs();
+extern "C" void setTempoRate__8JASTrackFf();
+extern "C" void setTimebase__8JASTrackFUs();
+extern "C" void updateChannel__8JASTrackFP10JASChannelPQ26JASDsp8TChannel();
+extern "C" void channelUpdateCallback__8JASTrackFUlP10JASChannelPQ26JASDsp8TChannelPv();
+extern "C" void getRootTrack__8JASTrackFv();
+extern "C" void tickProc__8JASTrackFv();
+extern "C" void seqMain__8JASTrackFv();
+extern "C" void cbSeqMain__Q28JASTrack5TListFPv();
+extern "C" void append__Q28JASTrack5TListFP8JASTrack();
+extern "C" void seqMain__Q28JASTrack5TListFv();
+extern "C" void __ct__Q28JASTrack11TChannelMgrFP8JASTrack();
+extern "C" void init__Q28JASTrack11TChannelMgrFv();
+extern "C" void releaseAll__Q28JASTrack11TChannelMgrFv();
+extern "C" void noteOff__Q28JASTrack11TChannelMgrFUlUs();
+extern "C" void setPauseFlag__Q28JASTrack11TChannelMgrFb();
+extern "C" void __ct__Q28JASTrack10MoveParam_Fv();
+extern "C" void func_802932E0();
+extern "C" void func_80293334();
+extern "C" void __sinit_JASTrack_cpp();
+extern "C" void __dt__Q28JASTrack5TListFv();
+extern "C" void __dt__19JASDefaultBankTableFv();
+extern "C" void func_80293528();
 extern "C" extern void* __vt__11JASBankList[3 + 1 /* padding */];
 extern "C" extern u8 data_80431AF4[16];
 extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
@@ -274,59 +277,61 @@ extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B90[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451230[8];
 
-SECTION_INIT void memset(); // 1
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void __dt__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void init__12JASTrackPortFv(); // 1
-extern "C" void readImport__12JASTrackPortFUl(); // 1
-extern "C" void readExport__12JASTrackPortFUl(); // 1
-extern "C" void writeImport__12JASTrackPortFUlUs(); // 1
-extern "C" void writeExport__12JASTrackPortFUlUs(); // 1
-extern "C" void __ct__16JASRegisterParamFv(); // 1
-extern "C" void init__16JASRegisterParamFv(); // 1
-extern "C" void __ct__10JASSeqCtrlFv(); // 1
-extern "C" void init__10JASSeqCtrlFv(); // 1
-extern "C" void start__10JASSeqCtrlFPvUl(); // 1
-extern "C" void tickProc__10JASSeqCtrlFP8JASTrack(); // 1
-extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType(); // 1
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void release__10JASChannelFUs(); // 1
-extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data(); // 1
-extern "C" void setMixConfig__10JASChannelFUlUs(); // 1
-extern "C" void setKeySweepTarget__10JASChannelFlUl(); // 1
-extern "C" void free__10JASChannelFv(); // 1
-extern "C" void getDacRate__9JASDriverFv(); // 1
-extern "C" void getSubFrames__9JASDriverFv(); // 1
-extern "C" void setFilterMode__Q26JASDsp8TChannelFUs(); // 1
-extern "C" void setIIRFilterParam__Q26JASDsp8TChannelFPs(); // 1
-extern "C" void setFIR8FilterParam__Q26JASDsp8TChannelFPs(); // 1
-extern "C" void setDistFilter__Q26JASDsp8TChannelFs(); // 1
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memset();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void init__12JASTrackPortFv();
+extern "C" void readImport__12JASTrackPortFUl();
+extern "C" void readExport__12JASTrackPortFUl();
+extern "C" void writeImport__12JASTrackPortFUlUs();
+extern "C" void writeExport__12JASTrackPortFUlUs();
+extern "C" void __ct__16JASRegisterParamFv();
+extern "C" void init__16JASRegisterParamFv();
+extern "C" void __ct__10JASSeqCtrlFv();
+extern "C" void init__10JASSeqCtrlFv();
+extern "C" void start__10JASSeqCtrlFPvUl();
+extern "C" void tickProc__10JASSeqCtrlFP8JASTrack();
+extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
+extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void release__10JASChannelFUs();
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
+extern "C" void setMixConfig__10JASChannelFUlUs();
+extern "C" void setKeySweepTarget__10JASChannelFlUl();
+extern "C" void free__10JASChannelFv();
+extern "C" void getDacRate__9JASDriverFv();
+extern "C" void getSubFrames__9JASDriverFv();
+extern "C" void setFilterMode__Q26JASDsp8TChannelFUs();
+extern "C" void setIIRFilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setFIR8FilterParam__Q26JASDsp8TChannelFPs();
+extern "C" void setDistFilter__Q26JASDsp8TChannelFs();
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+extern "C" void __dl__FPv();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80450B90[4 + 4 /* padding */];
 extern "C" extern u8 struct_80451230[8];
 

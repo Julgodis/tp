@@ -107,37 +107,39 @@ struct cCcS {
 // Forward References:
 // 
 
-static void s_b_sub(void*, void*); // 2
-static void s_a_sub(void*, void*); // 2
-static void daObjWaterFall_Draw(daObjWaterFall_c*); // 2
-static void daObjWaterFall_Execute(daObjWaterFall_c*); // 2
-static void daObjWaterFall_Delete(daObjWaterFall_c*); // 2
-static void daObjWaterFall_Create(fopAc_ac_c*); // 2
+static void s_b_sub(void*, void*);
+static void s_a_sub(void*, void*);
+static void daObjWaterFall_Draw(daObjWaterFall_c*);
+static void daObjWaterFall_Execute(daObjWaterFall_c*);
+static void daObjWaterFall_Delete(daObjWaterFall_c*);
+static void daObjWaterFall_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_WaterFall[12];
 
-extern "C" static void s_b_sub__FPvPv(); // 1
-extern "C" static void s_a_sub__FPvPv(); // 1
-extern "C" void search_bomb__16daObjWaterFall_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void search_arrow__16daObjWaterFall_cFv(); // 1
-extern "C" void initBaseMtx__16daObjWaterFall_cFv(); // 1
-extern "C" void setBaseMtx__16daObjWaterFall_cFv(); // 1
-extern "C" void Create__16daObjWaterFall_cFv(); // 1
-extern "C" void create__16daObjWaterFall_cFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__8dCcD_TriFv(); // 1
-extern "C" void __ct__8dCcD_TriFv(); // 1
-extern "C" void __dt__8cM3dGTriFv(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void execute__16daObjWaterFall_cFv(); // 1
-extern "C" void push_player__16daObjWaterFall_cFv(); // 1
-extern "C" bool draw__16daObjWaterFall_cFv(); // 1
-extern "C" void _delete__16daObjWaterFall_cFv(); // 1
-extern "C" static void daObjWaterFall_Draw__FP16daObjWaterFall_c(); // 1
-extern "C" static void daObjWaterFall_Execute__FP16daObjWaterFall_c(); // 1
-extern "C" static void daObjWaterFall_Delete__FP16daObjWaterFall_c(); // 1
-extern "C" static void daObjWaterFall_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void s_b_sub__FPvPv();
+extern "C" static void s_a_sub__FPvPv();
+extern "C" void search_bomb__16daObjWaterFall_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void search_arrow__16daObjWaterFall_cFv();
+extern "C" void initBaseMtx__16daObjWaterFall_cFv();
+extern "C" void setBaseMtx__16daObjWaterFall_cFv();
+extern "C" void Create__16daObjWaterFall_cFv();
+extern "C" void create__16daObjWaterFall_cFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__8dCcD_TriFv();
+extern "C" void __ct__8dCcD_TriFv();
+extern "C" void __dt__8cM3dGTriFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void execute__16daObjWaterFall_cFv();
+extern "C" void push_player__16daObjWaterFall_cFv();
+extern "C" bool draw__16daObjWaterFall_cFv();
+extern "C" void _delete__16daObjWaterFall_cFv();
+extern "C" static void daObjWaterFall_Draw__FP16daObjWaterFall_c();
+extern "C" static void daObjWaterFall_Execute__FP16daObjWaterFall_c();
+extern "C" static void daObjWaterFall_Delete__FP16daObjWaterFall_c();
+extern "C" static void daObjWaterFall_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_WaterFall[12];
 
@@ -145,50 +147,61 @@ extern "C" extern void* g_profile_Obj_WaterFall[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAc_IsActor(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cM_atan2s(f32, f32);
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__8dCcD_Tri[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__12cCcD_TriAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void checkWaterBomb__7dBomb_cFP10fopAc_ac_c();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void __construct_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];

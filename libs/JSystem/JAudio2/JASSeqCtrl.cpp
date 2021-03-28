@@ -46,31 +46,32 @@ struct JASSeqCtrl {
 // 
 
 
-extern "C" void __ct__10JASSeqCtrlFv(); // 1
-extern "C" void init__10JASSeqCtrlFv(); // 1
-extern "C" void start__10JASSeqCtrlFPvUl(); // 1
-extern "C" void tickProc__10JASSeqCtrlFP8JASTrack(); // 1
-extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType(); // 1
-extern "C" void setIntrMask__10JASSeqCtrlFUl(); // 1
-extern "C" void clrIntrMask__10JASSeqCtrlFUl(); // 1
-extern "C" void retIntr__10JASSeqCtrlFv(); // 1
-extern "C" void findIntr__10JASSeqCtrlFv(); // 1
-extern "C" void checkIntr__10JASSeqCtrlFv(); // 1
-extern "C" void timerProcess__10JASSeqCtrlFv(); // 1
-extern "C" void __sinit_JASSeqCtrl_cpp(); // 1
-extern "C" void __dt__12JASSeqParserFv(); // 1
+extern "C" void __ct__10JASSeqCtrlFv();
+extern "C" void init__10JASSeqCtrlFv();
+extern "C" void start__10JASSeqCtrlFPvUl();
+extern "C" void tickProc__10JASSeqCtrlFP8JASTrack();
+extern "C" void interrupt__10JASSeqCtrlFQ210JASSeqCtrl8IntrType();
+extern "C" void setIntrMask__10JASSeqCtrlFUl();
+extern "C" void clrIntrMask__10JASSeqCtrlFUl();
+extern "C" void retIntr__10JASSeqCtrlFv();
+extern "C" void findIntr__10JASSeqCtrlFv();
+extern "C" void checkIntr__10JASSeqCtrlFv();
+extern "C" void timerProcess__10JASSeqCtrlFv();
+extern "C" void __sinit_JASSeqCtrl_cpp();
+extern "C" void __dt__12JASSeqParserFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__12JASSeqParser[8];
 
-extern "C" void checkNoteStop__8JASTrackCFUl(); // 1
-extern "C" void init__12JASSeqReaderFv(); // 1
-extern "C" void init__12JASSeqReaderFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void checkNoteStop__8JASTrackCFUl();
+extern "C" void init__12JASSeqReaderFv();
+extern "C" void init__12JASSeqReaderFPv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
 extern "C" extern void* __vt__12JASSeqParser[8];
 
 // 

@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void fmod(); // 1
+extern "C" void fmod();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_fmod(); // 1
+extern "C" void __ieee754_fmod();
 
 // 
 // Declarations:

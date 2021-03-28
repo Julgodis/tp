@@ -115,41 +115,48 @@ struct JKRHeap {
 // Forward References:
 // 
 
+extern "C" extern u8 const data_80397F40[24];
+extern "C" extern u8 const data_80397F58[24];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_ringHIO[344];
+extern "C" extern u8 g_fmapHIO[1188];
+extern "C" extern u8 g_cursorHIO[68 + 4 /* padding */];
+extern "C" extern u8 g_menuHIO[8];
 
-extern "C" void __ct__16dMeter_menuHIO_cFv(); // 1
-extern "C" void __ct__23dMeter_drawCollectHIO_cFv(); // 1
-extern "C" void __ct__22dMeter_drawOptionHIO_cFv(); // 1
-extern "C" void __ct__22dMeter_drawLetterHIO_cFv(); // 1
-extern "C" void __ct__23dMeter_drawFishingHIO_cFv(); // 1
-extern "C" void __ct__22dMeter_drawInsectHIO_cFv(); // 1
-extern "C" void __ct__27dMeter_drawCalibrationHIO_cFv(); // 1
-extern "C" void __ct__21dMeter_drawSkillHIO_cFv(); // 1
-extern "C" void __ct__25dMeter_drawEmpButtonHIO_cFv(); // 1
-extern "C" void __ct__24dMeter_drawMiniGameHIO_cFv(); // 1
-extern "C" void __ct__25dMeter_drawLightDropHIO_cFv(); // 1
-extern "C" void __ct__16dMeter_drawHIO_cFv(); // 1
-extern "C" void __ct__16dMeter_ringHIO_cFv(); // 1
-extern "C" void __ct__19dMeter_mapIconHIO_cFv(); // 1
-extern "C" void __ct__16dMeter_fmapHIO_cFv(); // 1
-extern "C" void __dt__16dMeter_fmapHIO_cFv(); // 1
-extern "C" void __ct__18dMeter_cursorHIO_cFv(); // 1
-extern "C" void __dt__25dMeter_drawLightDropHIO_cFv(); // 1
-extern "C" void __dt__25dMeter_drawEmpButtonHIO_cFv(); // 1
-extern "C" void __dt__24dMeter_drawMiniGameHIO_cFv(); // 1
-extern "C" void __dt__21dMeter_drawSkillHIO_cFv(); // 1
-extern "C" void __dt__27dMeter_drawCalibrationHIO_cFv(); // 1
-extern "C" void __dt__22dMeter_drawInsectHIO_cFv(); // 1
-extern "C" void __dt__23dMeter_drawFishingHIO_cFv(); // 1
-extern "C" void __dt__22dMeter_drawLetterHIO_cFv(); // 1
-extern "C" void __dt__22dMeter_drawOptionHIO_cFv(); // 1
-extern "C" void __dt__23dMeter_drawCollectHIO_cFv(); // 1
-extern "C" void __dt__19dMeter_mapIconHIO_cFv(); // 1
-extern "C" void __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv(); // 1
-extern "C" void __dt__18dMeter_cursorHIO_cFv(); // 1
-extern "C" void __dt__16dMeter_ringHIO_cFv(); // 1
-extern "C" void __dt__16dMeter_drawHIO_cFv(); // 1
-extern "C" void __dt__16dMeter_menuHIO_cFv(); // 1
-extern "C" void __sinit_d_meter_HIO_cpp(); // 1
+extern "C" void __ct__16dMeter_menuHIO_cFv();
+extern "C" void __ct__23dMeter_drawCollectHIO_cFv();
+extern "C" void __ct__22dMeter_drawOptionHIO_cFv();
+extern "C" void __ct__22dMeter_drawLetterHIO_cFv();
+extern "C" void __ct__23dMeter_drawFishingHIO_cFv();
+extern "C" void __ct__22dMeter_drawInsectHIO_cFv();
+extern "C" void __ct__27dMeter_drawCalibrationHIO_cFv();
+extern "C" void __ct__21dMeter_drawSkillHIO_cFv();
+extern "C" void __ct__25dMeter_drawEmpButtonHIO_cFv();
+extern "C" void __ct__24dMeter_drawMiniGameHIO_cFv();
+extern "C" void __ct__25dMeter_drawLightDropHIO_cFv();
+extern "C" void __ct__16dMeter_drawHIO_cFv();
+extern "C" void __ct__16dMeter_ringHIO_cFv();
+extern "C" void __ct__19dMeter_mapIconHIO_cFv();
+extern "C" void __ct__16dMeter_fmapHIO_cFv();
+extern "C" void __dt__16dMeter_fmapHIO_cFv();
+extern "C" void __ct__18dMeter_cursorHIO_cFv();
+extern "C" void __dt__25dMeter_drawLightDropHIO_cFv();
+extern "C" void __dt__25dMeter_drawEmpButtonHIO_cFv();
+extern "C" void __dt__24dMeter_drawMiniGameHIO_cFv();
+extern "C" void __dt__21dMeter_drawSkillHIO_cFv();
+extern "C" void __dt__27dMeter_drawCalibrationHIO_cFv();
+extern "C" void __dt__22dMeter_drawInsectHIO_cFv();
+extern "C" void __dt__23dMeter_drawFishingHIO_cFv();
+extern "C" void __dt__22dMeter_drawLetterHIO_cFv();
+extern "C" void __dt__22dMeter_drawOptionHIO_cFv();
+extern "C" void __dt__23dMeter_drawCollectHIO_cFv();
+extern "C" void __dt__19dMeter_mapIconHIO_cFv();
+extern "C" void __ct__Q216dMeter_fmapHIO_c13MapBlinkAnimeFv();
+extern "C" void __dt__18dMeter_cursorHIO_cFv();
+extern "C" void __dt__16dMeter_ringHIO_cFv();
+extern "C" void __dt__16dMeter_drawHIO_cFv();
+extern "C" void __dt__16dMeter_menuHIO_cFv();
+extern "C" void __sinit_d_meter_HIO_cpp();
 extern "C" extern u8 const data_80397F40[24];
 extern "C" extern u8 const data_80397F58[24];
 extern "C" extern u8 g_drawHIO[3880];
@@ -162,22 +169,22 @@ extern "C" extern u8 g_menuHIO[8];
 // External References:
 // 
 
-void mDoExt_getGameHeap(); // 2
-void operator delete(void*); // 2
+void mDoExt_getGameHeap();
+void operator delete(void*);
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

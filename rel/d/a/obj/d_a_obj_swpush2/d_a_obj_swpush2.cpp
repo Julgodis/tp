@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -26,10 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmColor {
 };
 
-struct J3DAnmColor {
+struct J3DAnmTevRegKey {
 };
 
 struct J3DAnmTextureSRTKey {
@@ -184,10 +184,10 @@ struct cBgS {
 struct cBgD_t {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -206,55 +206,58 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Swpush2[12];
 
-extern "C" void getArcName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getBmdName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getDzbName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getNmlBtkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getNmlBrkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getOnBtkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getRunBpkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getRunBrkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void getRunBtkName__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void prmZ_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void is_switch2__Q212daObjSwpush25Act_cCFv(); // 1
-extern "C" void solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c(); // 1
-extern "C" void create_heap__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void create_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void create_res_load__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void Mthd_Create__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void Mthd_Delete__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void set_mtx__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void init_mtx__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void calc_top_pos__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void set_push_flag__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_upper_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_upper__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_u_l_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_u_l__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_lower_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_lower__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void mode_l_u__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_non_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_non__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_reqPause_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_reqPause__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_runPause_init__Q212daObjSwpush25Act_cFi(); // 1
-extern "C" void demo_runPause__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_stop_puase__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_reqSw_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_reqSw__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_runSw_init__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void demo_runSw__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void Mthd_Execute__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" void Mthd_Draw__Q212daObjSwpush25Act_cFv(); // 1
-extern "C" static void func_80CFFB50(); // 1
-extern "C" static void func_80CFFB70(); // 1
-extern "C" static void func_80CFFB90(); // 1
-extern "C" static void func_80CFFBB0(); // 1
-extern "C" void func_80CFFBD0(); // 1
+extern "C" void getArcName__Q212daObjSwpush25Act_cFv();
+extern "C" void getBmdName__Q212daObjSwpush25Act_cFv();
+extern "C" void getDzbName__Q212daObjSwpush25Act_cFv();
+extern "C" void getNmlBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getNmlBrkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getOnBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBpkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBrkName__Q212daObjSwpush25Act_cFv();
+extern "C" void getRunBtkName__Q212daObjSwpush25Act_cFv();
+extern "C" void prmZ_init__Q212daObjSwpush25Act_cFv();
+extern "C" void is_switch2__Q212daObjSwpush25Act_cCFv();
+extern "C" void solidHeapCB__Q212daObjSwpush25Act_cFP10fopAc_ac_c();
+extern "C" void create_heap__Q212daObjSwpush25Act_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create_init__Q212daObjSwpush25Act_cFv();
+extern "C" void create_res_load__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Create__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Delete__Q212daObjSwpush25Act_cFv();
+extern "C" void set_mtx__Q212daObjSwpush25Act_cFv();
+extern "C" void init_mtx__Q212daObjSwpush25Act_cFv();
+extern "C" void rideCB__Q212daObjSwpush25Act_cFP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void calc_top_pos__Q212daObjSwpush25Act_cFv();
+extern "C" void set_push_flag__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_upper_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_upper__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_u_l_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_u_l__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_lower_init__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_lower__Q212daObjSwpush25Act_cFv();
+extern "C" void mode_l_u__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_non_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_non__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqPause_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqPause__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runPause_init__Q212daObjSwpush25Act_cFi();
+extern "C" void demo_runPause__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_stop_puase__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqSw_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_reqSw__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runSw_init__Q212daObjSwpush25Act_cFv();
+extern "C" void demo_runSw__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Execute__Q212daObjSwpush25Act_cFv();
+extern "C" void Mthd_Draw__Q212daObjSwpush25Act_cFv();
+extern "C" static void func_80CFFB50();
+extern "C" static void func_80CFFB70();
+extern "C" static void func_80CFFB90();
+extern "C" static void func_80CFFBB0();
+extern "C" void func_80CFFBD0();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Swpush2[12];
@@ -263,77 +266,86 @@ extern "C" extern void* g_profile_Obj_Swpush2[12];
 // External References:
 // 
 
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dBgW_NewSet(cBgD_t*, u32, f32 (* )[3][4]); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dBgW_NewSet(cBgD_t*, u32, f32 (* )[3][4]);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 struct_80CFFEF8[4];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss(); // 1
-extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void revSwitch__10dSv_info_cFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventData__16dEvent_manager_cFs(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void dBgW_NewSet__FP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bpkAnmFP16J3DMaterialTableP11J3DAnmColoriifss();
+extern "C" void entry__13mDoExt_bpkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void revSwitch__10dSv_info_cFii();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventData__16dEvent_manager_cFs();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void Move__4dBgWFv();
+extern "C" void dBgW_NewSet__FP6cBgD_tUlPA3_A4_f();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void removeMatColorAnimator__16J3DMaterialTableFP11J3DAnmColor();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareDistance();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

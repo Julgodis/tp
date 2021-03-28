@@ -24,13 +24,15 @@ struct csXyz {
 // Forward References:
 // 
 
+extern "C" extern u8 Zero__5csXyz[4];
+extern "C" extern u8 data_80451164[4];
 
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void __pl__5csXyzFR5csXyz(); // 1
-extern "C" void __apl__5csXyzFR5csXyz(); // 1
-extern "C" void __mi__5csXyzFR5csXyz(); // 1
-extern "C" void __ml__5csXyzFf(); // 1
-extern "C" void __sinit_c_sxyz_cpp(); // 1
+extern "C" void __ct__5csXyzFsss();
+extern "C" void __pl__5csXyzFR5csXyz();
+extern "C" void __apl__5csXyzFR5csXyz();
+extern "C" void __mi__5csXyzFR5csXyz();
+extern "C" void __ml__5csXyzFf();
+extern "C" void __sinit_c_sxyz_cpp();
 extern "C" extern u8 Zero__5csXyz[4];
 extern "C" extern u8 data_80451164[4];
 
@@ -39,8 +41,8 @@ extern "C" extern u8 data_80451164[4];
 // 
 
 
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void __dt__5csXyzFv();
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

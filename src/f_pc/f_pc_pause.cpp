@@ -18,25 +18,26 @@ struct layer_class {
 // Forward References:
 // 
 
-void fpcPause_IsEnable(void*, u8); // 2
-void fpcPause_Enable(void*, u8); // 2
-void fpcPause_Disable(void*, u8); // 2
-void fpcPause_Init(void*); // 2
+void fpcPause_IsEnable(void*, u8);
+void fpcPause_Enable(void*, u8);
+void fpcPause_Disable(void*, u8);
+void fpcPause_Init(void*);
 
-extern "C" void fpcPause_IsEnable__FPvUc(); // 1
-extern "C" void fpcPause_Enable__FPvUc(); // 1
-extern "C" void fpcPause_Disable__FPvUc(); // 1
-extern "C" void fpcPause_Init__FPv(); // 1
+extern "C" void fpcPause_IsEnable__FPvUc();
+extern "C" void fpcPause_Enable__FPvUc();
+extern "C" void fpcPause_Disable__FPvUc();
+extern "C" void fpcPause_Init__FPv();
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*); // 2
+void fpcBs_Is_JustOfType(int, int);
+void fpcLyIt_OnlyHere(layer_class*, int (*)(void*, void*), void*);
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcLyIt_OnlyHere__FP11layer_classPFPvPv_iPv();
 extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
 // 

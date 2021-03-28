@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern u8 const data_807B7EB4[4];
 
 extern u8 const data_807B7EB4[4];
 

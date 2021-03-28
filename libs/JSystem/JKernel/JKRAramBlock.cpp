@@ -39,28 +39,28 @@ struct JKRAramBlock {
 // 
 
 
-extern "C" void __ct__12JKRAramBlockFUlUlUlUcb(); // 1
-extern "C" void __dt__12JKRAramBlockFv(); // 1
-extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
-extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap(); // 1
+extern "C" void __ct__12JKRAramBlockFUlUlUlUcb();
+extern "C" void __dt__12JKRAramBlockFv();
+extern "C" void allocHead__12JKRAramBlockFUlUcP11JKRAramHeap();
+extern "C" void allocTail__12JKRAramBlockFUlUcP11JKRAramHeap();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
 
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void insert__10JSUPtrListFP10JSUPtrLinkP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:

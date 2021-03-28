@@ -12,14 +12,16 @@
 // 
 
 
-extern "C" void GXSetGPMetric(); // 1
-extern "C" void GXClearGPMetric(); // 1
-extern "C" void GXReadXfRasMetric(); // 1
+extern "C" void GXSetGPMetric();
+extern "C" void GXClearGPMetric();
+extern "C" void GXReadXfRasMetric();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __cpReg[4];
+extern "C" extern void* __GXData;
 
 extern "C" extern u8 __cpReg[4];
 extern "C" extern void* __GXData;

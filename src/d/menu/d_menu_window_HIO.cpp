@@ -33,16 +33,18 @@ struct dMw_DHIO_c {
 // Forward References:
 // 
 
+extern "C" extern u8 g_mwHIO[304];
+extern "C" extern u8 g_mwDHIO[520];
 
-extern "C" void __ct__9dMw_HIO_cFv(); // 1
-extern "C" void init__9dMw_HIO_cFv(); // 1
-extern "C" bool getBombFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getArrowFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getPachinkoFlag__9dMw_HIO_cFv(); // 1
-extern "C" void __ct__10dMw_DHIO_cFv(); // 1
-extern "C" void __dt__10dMw_DHIO_cFv(); // 1
-extern "C" void __dt__9dMw_HIO_cFv(); // 1
-extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
+extern "C" void __ct__9dMw_HIO_cFv();
+extern "C" void init__9dMw_HIO_cFv();
+extern "C" bool getBombFlag__9dMw_HIO_cFv();
+extern "C" bool getArrowFlag__9dMw_HIO_cFv();
+extern "C" bool getPachinkoFlag__9dMw_HIO_cFv();
+extern "C" void __ct__10dMw_DHIO_cFv();
+extern "C" void __dt__10dMw_DHIO_cFv();
+extern "C" void __dt__9dMw_HIO_cFv();
+extern "C" void __sinit_d_menu_window_HIO_cpp();
 extern "C" extern u8 g_mwHIO[304];
 extern "C" extern u8 g_mwDHIO[520];
 
@@ -50,13 +52,14 @@ extern "C" extern u8 g_mwDHIO[520];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

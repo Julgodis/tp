@@ -242,10 +242,10 @@ struct Z2StatusMgr {
 	/* 802B5F70 */ void heartGaugeOn();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -262,61 +262,63 @@ struct JKRHeap {
 // Forward References:
 // 
 
-static void dMeter2_Draw(dMeter2_c*); // 2
-static void dMeter2_Execute(dMeter2_c*); // 2
-static bool dMeter2_IsDelete(dMeter2_c*); // 2
-static void dMeter2_Delete(dMeter2_c*); // 2
-static void dMeter2_Create(msg_class*); // 2
+static void dMeter2_Draw(dMeter2_c*);
+static void dMeter2_Execute(dMeter2_c*);
+static bool dMeter2_IsDelete(dMeter2_c*);
+static void dMeter2_Delete(dMeter2_c*);
+static void dMeter2_Create(msg_class*);
+extern "C" extern char const* const d_meter_d_meter2__stringBase0;
+extern "C" extern void* g_profile_METER2[10];
 
-extern "C" void _create__9dMeter2_cFv(); // 1
-extern "C" void _execute__9dMeter2_cFv(); // 1
-extern "C" void _draw__9dMeter2_cFv(); // 1
-extern "C" void _delete__9dMeter2_cFv(); // 1
-extern "C" void emphasisButtonDelete__9dMeter2_cFv(); // 1
-extern "C" void setLifeZero__9dMeter2_cFv(); // 1
-extern "C" void checkStatus__9dMeter2_cFv(); // 1
-extern "C" void moveLife__9dMeter2_cFv(); // 1
-extern "C" void moveKantera__9dMeter2_cFv(); // 1
-extern "C" void moveOxygen__9dMeter2_cFv(); // 1
-extern "C" void moveLightDrop__9dMeter2_cFv(); // 1
-extern "C" void moveRupee__9dMeter2_cFv(); // 1
-extern "C" void moveKey__9dMeter2_cFv(); // 1
-extern "C" void moveButtonA__9dMeter2_cFv(); // 1
-extern "C" void moveButtonB__9dMeter2_cFv(); // 1
-extern "C" void moveButtonR__9dMeter2_cFv(); // 1
-extern "C" void moveButtonZ__9dMeter2_cFv(); // 1
-extern "C" void moveButton3D__9dMeter2_cFv(); // 1
-extern "C" void moveButtonC__9dMeter2_cFv(); // 1
-extern "C" void moveButtonS__9dMeter2_cFv(); // 1
-extern "C" void moveButtonXY__9dMeter2_cFv(); // 1
-extern "C" void moveButtonCross__9dMeter2_cFv(); // 1
-extern "C" void moveTouchSubMenu__9dMeter2_cFv(); // 1
-extern "C" void moveSubContents__9dMeter2_cFv(); // 1
-extern "C" void move2DContents__9dMeter2_cFv(); // 1
-extern "C" void checkSubContents__9dMeter2_cFv(); // 1
-extern "C" void check2DContents__9dMeter2_cFv(); // 1
-extern "C" void moveBombNum__9dMeter2_cFv(); // 1
-extern "C" void moveBottleNum__9dMeter2_cFv(); // 1
-extern "C" void moveArrowNum__9dMeter2_cFv(); // 1
-extern "C" void movePachinkoNum__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeLife__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeKantera__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeOxygen__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeLightDrop__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeRupee__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeKey__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeButton__9dMeter2_cFv(); // 1
-extern "C" void alphaAnimeButtonCross__9dMeter2_cFv(); // 1
-extern "C" void isShowLightDrop__9dMeter2_cFv(); // 1
-extern "C" void killSubContents__9dMeter2_cFUc(); // 1
-extern "C" void isKeyVisible__9dMeter2_cFv(); // 1
-extern "C" void isArrowEquip__9dMeter2_cFv(); // 1
-extern "C" void isPachinkoEquip__9dMeter2_cFv(); // 1
-extern "C" static void dMeter2_Draw__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Execute__FP9dMeter2_c(); // 1
-extern "C" static bool dMeter2_IsDelete__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Delete__FP9dMeter2_c(); // 1
-extern "C" static void dMeter2_Create__FP9msg_class(); // 1
+extern "C" void _create__9dMeter2_cFv();
+extern "C" void _execute__9dMeter2_cFv();
+extern "C" void _draw__9dMeter2_cFv();
+extern "C" void _delete__9dMeter2_cFv();
+extern "C" void emphasisButtonDelete__9dMeter2_cFv();
+extern "C" void setLifeZero__9dMeter2_cFv();
+extern "C" void checkStatus__9dMeter2_cFv();
+extern "C" void moveLife__9dMeter2_cFv();
+extern "C" void moveKantera__9dMeter2_cFv();
+extern "C" void moveOxygen__9dMeter2_cFv();
+extern "C" void moveLightDrop__9dMeter2_cFv();
+extern "C" void moveRupee__9dMeter2_cFv();
+extern "C" void moveKey__9dMeter2_cFv();
+extern "C" void moveButtonA__9dMeter2_cFv();
+extern "C" void moveButtonB__9dMeter2_cFv();
+extern "C" void moveButtonR__9dMeter2_cFv();
+extern "C" void moveButtonZ__9dMeter2_cFv();
+extern "C" void moveButton3D__9dMeter2_cFv();
+extern "C" void moveButtonC__9dMeter2_cFv();
+extern "C" void moveButtonS__9dMeter2_cFv();
+extern "C" void moveButtonXY__9dMeter2_cFv();
+extern "C" void moveButtonCross__9dMeter2_cFv();
+extern "C" void moveTouchSubMenu__9dMeter2_cFv();
+extern "C" void moveSubContents__9dMeter2_cFv();
+extern "C" void move2DContents__9dMeter2_cFv();
+extern "C" void checkSubContents__9dMeter2_cFv();
+extern "C" void check2DContents__9dMeter2_cFv();
+extern "C" void moveBombNum__9dMeter2_cFv();
+extern "C" void moveBottleNum__9dMeter2_cFv();
+extern "C" void moveArrowNum__9dMeter2_cFv();
+extern "C" void movePachinkoNum__9dMeter2_cFv();
+extern "C" void alphaAnimeLife__9dMeter2_cFv();
+extern "C" void alphaAnimeKantera__9dMeter2_cFv();
+extern "C" void alphaAnimeOxygen__9dMeter2_cFv();
+extern "C" void alphaAnimeLightDrop__9dMeter2_cFv();
+extern "C" void alphaAnimeRupee__9dMeter2_cFv();
+extern "C" void alphaAnimeKey__9dMeter2_cFv();
+extern "C" void alphaAnimeButton__9dMeter2_cFv();
+extern "C" void alphaAnimeButtonCross__9dMeter2_cFv();
+extern "C" void isShowLightDrop__9dMeter2_cFv();
+extern "C" void killSubContents__9dMeter2_cFUc();
+extern "C" void isKeyVisible__9dMeter2_cFv();
+extern "C" void isArrowEquip__9dMeter2_cFv();
+extern "C" void isPachinkoEquip__9dMeter2_cFv();
+extern "C" static void dMeter2_Draw__FP9dMeter2_c();
+extern "C" static void dMeter2_Execute__FP9dMeter2_c();
+extern "C" static bool dMeter2_IsDelete__FP9dMeter2_c();
+extern "C" static void dMeter2_Delete__FP9dMeter2_c();
+extern "C" static void dMeter2_Create__FP9msg_class();
 extern "C" extern char const* const d_meter_d_meter2__stringBase0;
 extern "C" extern void* g_profile_METER2[10];
 
@@ -324,181 +326,192 @@ extern "C" extern void* g_profile_METER2[10];
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void fopMsgM_setStageLayer(void*); // 2
-void fopMsgM_setMessageID(unsigned int); // 2
-void fopMsgM_Create(s16, int (*)(void*), void*); // 2
-void fopMsgM_createExpHeap(u32, JKRHeap*); // 2
-void fopMsgM_destroyExpHeap(JKRExpHeap*); // 2
-void dComIfGs_setSelectItemIndex(int, u8); // 2
-void dComIfGs_setMixItemIndex(int, u8); // 2
-void dComIfGs_getSelectMixItemNoArrowIndex(int); // 2
-void dComIfGs_getMixItemIndex(int); // 2
-void dComIfGp_setSelectItem(int); // 2
-void dComIfGp_getSelectItem(int); // 2
-void dComIfGp_setHeapLockFlag(u8); // 2
-void dComIfGp_offHeapLockFlag(int); // 2
-void dComIfGp_getSubHeap2D(int); // 2
-void dComIfGp_getSelectItemNum(int); // 2
-void dComIfGp_getSelectItemMaxNum(int); // 2
-void dCam_getBody(); // 2
-void dKy_darkworld_check(); // 2
-bool dMeter2Info_is2DActiveTouchArea(); // 2
-void dTimer_createStockTimer(); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void fopMsgM_setStageLayer(void*);
+void fopMsgM_setMessageID(unsigned int);
+void fopMsgM_Create(s16, int (*)(void*), void*);
+void fopMsgM_createExpHeap(u32, JKRHeap*);
+void fopMsgM_destroyExpHeap(JKRExpHeap*);
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getSelectMixItemNoArrowIndex(int);
+void dComIfGs_getMixItemIndex(int);
+void dComIfGp_setSelectItem(int);
+void dComIfGp_getSelectItem(int);
+void dComIfGp_setHeapLockFlag(u8);
+void dComIfGp_offHeapLockFlag(int);
+void dComIfGp_getSubHeap2D(int);
+void dComIfGp_getSelectItemNum(int);
+void dComIfGp_getSelectItemMaxNum(int);
+void dCam_getBody();
+void dKy_darkworld_check();
+bool dMeter2Info_is2DActiveTouchArea();
+void dTimer_createStockTimer();
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_mwHIO[304];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_ringHIO[344];
+extern "C" extern u8 g_fmapHIO[1188];
+extern "C" extern u8 g_cursorHIO[68 + 4 /* padding */];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void fopMsgM_setStageLayer__FPv(); // 1
-extern "C" void fopMsgM_setMessageID__FUi(); // 1
-extern "C" void fopMsgM_Create__FsPFPv_iPv(); // 1
-extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap(); // 1
-extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap(); // 1
-extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs(); // 1
-extern "C" void getItemBombNumCount__14dComIfG_play_cFUc(); // 1
-extern "C" void clearItemBombNumCount__14dComIfG_play_cFUc(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void getTimerMode__14dComIfG_play_cFv(); // 1
-extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_getSelectMixItemNoArrowIndex__Fi(); // 1
-extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
-extern "C" void dComIfGp_setSelectItem__Fi(); // 1
-extern "C" void dComIfGp_getSelectItem__Fi(); // 1
-extern "C" void dComIfGp_setHeapLockFlag__FUc(); // 1
-extern "C" void dComIfGp_offHeapLockFlag__Fi(); // 1
-extern "C" void dComIfGp_getSubHeap2D__Fi(); // 1
-extern "C" void dComIfGp_getSelectItemNum__Fi(); // 1
-extern "C" void dComIfGp_getSelectItemMaxNum__Fi(); // 1
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
-extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void setBombNum__24dSv_player_item_record_cFUcUc(); // 1
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void getBottleNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
-extern "C" void onCollectCrystal__20dSv_player_collect_cFUc(); // 1
-extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc(); // 1
-extern "C" void onCollectMirror__20dSv_player_collect_cFUc(); // 1
-extern "C" void isCollectMirror__20dSv_player_collect_cCFUc(); // 1
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void __ct__8dScope_cFUc(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" bool getBombFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getArrowFlag__9dMw_HIO_cFv(); // 1
-extern "C" bool getPachinkoFlag__9dMw_HIO_cFv(); // 1
-extern "C" void __ct__14dMeterButton_cFv(); // 1
-extern "C" void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb(); // 1
-extern "C" void isClose__14dMeterButton_cFv(); // 1
-extern "C" void setString__14dMeterButton_cFPcUcUcUc(); // 1
-extern "C" void hideAll__14dMeterButton_cFv(); // 1
-extern "C" void __ct__14dMeterHaihai_cFUc(); // 1
-extern "C" void __ct__15dMeterHakusha_cFPv(); // 1
-extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv(); // 1
-extern "C" void getMapDispEdgeTop__11dMeterMap_cFv(); // 1
-extern "C" void setMapAlpha__11dMeterMap_cFUc(); // 1
-extern "C" void __ct__11dMeterMap_cFP9J2DScreen(); // 1
-extern "C" void _move__11dMeterMap_cFUl(); // 1
-extern "C" void _draw__11dMeterMap_cFv(); // 1
-extern "C" void meter_map_move__11dMeterMap_cFUl(); // 1
-extern "C" void __ct__14dMeterString_cFi(); // 1
-extern "C" void createString__14dMeterString_cFi(); // 1
-extern "C" void __ct__13dMeter2Draw_cFP10JKRExpHeap(); // 1
-extern "C" void exec__13dMeter2Draw_cFUl(); // 1
-extern "C" void drawLife__13dMeter2Draw_cFssff(); // 1
-extern "C" void setAlphaLifeChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaLifeAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLifeAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawKantera__13dMeter2Draw_cFllff(); // 1
-extern "C" void setAlphaKanteraChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawOxygen__13dMeter2Draw_cFllff(); // 1
-extern "C" void setAlphaOxygenChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawLightDrop__13dMeter2Draw_cFUcUcffffUc(); // 1
-extern "C" void setAlphaLightDropChange__13dMeter2Draw_cFb(); // 1
-extern "C" void getNowLightDropRateCalc__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawRupee__13dMeter2Draw_cFs(); // 1
-extern "C" void setAlphaRupeeChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawKey__13dMeter2Draw_cFs(); // 1
-extern "C" void setAlphaKeyChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaKeyAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaKeyAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawButtonA__13dMeter2Draw_cFUcfffffbb(); // 1
-extern "C" void drawButtonB__13dMeter2Draw_cFUcbfffffb(); // 1
-extern "C" void drawButtonR__13dMeter2Draw_cFUcUcbb(); // 1
-extern "C" void drawButtonZ__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButton3D__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonC__13dMeter2Draw_cFUcb(); // 1
-extern "C" void drawButtonS__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonBin__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonXY__13dMeter2Draw_cFiUcUcbb(); // 1
-extern "C" void getButtonCrossParentInitTransY__13dMeter2Draw_cFv(); // 1
-extern "C" void drawButtonCross__13dMeter2Draw_cFff(); // 1
-extern "C" void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaButtonAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb(); // 1
-extern "C" void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb(); // 1
-extern "C" void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl(); // 1
-extern "C" void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb(); // 1
-extern "C" void getActionString__13dMeter2Draw_cFUcUcPUc(); // 1
-extern "C" void setItemNum__13dMeter2Draw_cFUcUcUc(); // 1
-extern "C" void drawItemNum__13dMeter2Draw_cFUcf(); // 1
-extern "C" void drawKanteraMeter__13dMeter2Draw_cFUcf(); // 1
-extern "C" void isButtonVisible__13dMeter2Draw_cFv(); // 1
-extern "C" void getCameraSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void getItemSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void getPlayerSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void isBButtonShow__13dMeter2Draw_cFb(); // 1
-extern "C" void getButtonTimer__13dMeter2Draw_cFv(); // 1
-extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv(); // 1
-extern "C" void isDirectUseItem__13dMeter2Info_cFi(); // 1
-extern "C" void decHotSpringTimer__13dMeter2Info_cFv(); // 1
-extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv(); // 1
-extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void dTimer_createStockTimer__Fv(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void heartGaugeOn__11Z2StatusMgrFv(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void fopMsgM_setStageLayer__FPv();
+extern "C" void fopMsgM_setMessageID__FUi();
+extern "C" void fopMsgM_Create__FsPFPv_iPv();
+extern "C" void fopMsgM_createExpHeap__FUlP7JKRHeap();
+extern "C" void fopMsgM_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void setItemBombNumCount__14dComIfG_play_cFUcs();
+extern "C" void getItemBombNumCount__14dComIfG_play_cFUc();
+extern "C" void clearItemBombNumCount__14dComIfG_play_cFUc();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void getTimerMode__14dComIfG_play_cFv();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getSelectMixItemNoArrowIndex__Fi();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" void dComIfGp_setSelectItem__Fi();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" void dComIfGp_setHeapLockFlag__FUc();
+extern "C" void dComIfGp_offHeapLockFlag__Fi();
+extern "C" void dComIfGp_getSubHeap2D__Fi();
+extern "C" void dComIfGp_getSelectItemNum__Fi();
+extern "C" void dComIfGp_getSelectItemMaxNum__Fi();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void setBombNum__24dSv_player_item_record_cFUcUc();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void onCollectCrystal__20dSv_player_collect_cFUc();
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
+extern "C" void onCollectMirror__20dSv_player_collect_cFUc();
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" bool CalcSubjectAngle__9dCamera_cFPsPs();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __ct__8dScope_cFUc();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" bool getBombFlag__9dMw_HIO_cFv();
+extern "C" bool getArrowFlag__9dMw_HIO_cFv();
+extern "C" bool getPachinkoFlag__9dMw_HIO_cFv();
+extern "C" void __ct__14dMeterButton_cFv();
+extern "C" void _execute__14dMeterButton_cFUlbbbbbbbbbbbbbbbbbbbbbb();
+extern "C" void isClose__14dMeterButton_cFv();
+extern "C" void setString__14dMeterButton_cFPcUcUcUc();
+extern "C" void hideAll__14dMeterButton_cFv();
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void __ct__15dMeterHakusha_cFPv();
+extern "C" void isEnableDispMapAndMapDispSizeTypeNo__11dMeterMap_cFv();
+extern "C" void getMapDispEdgeTop__11dMeterMap_cFv();
+extern "C" void setMapAlpha__11dMeterMap_cFUc();
+extern "C" void __ct__11dMeterMap_cFP9J2DScreen();
+extern "C" void _move__11dMeterMap_cFUl();
+extern "C" void _draw__11dMeterMap_cFv();
+extern "C" void meter_map_move__11dMeterMap_cFUl();
+extern "C" void __ct__14dMeterString_cFi();
+extern "C" void createString__14dMeterString_cFi();
+extern "C" void __ct__13dMeter2Draw_cFP10JKRExpHeap();
+extern "C" void exec__13dMeter2Draw_cFUl();
+extern "C" void drawLife__13dMeter2Draw_cFssff();
+extern "C" void setAlphaLifeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaLifeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLifeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKantera__13dMeter2Draw_cFllff();
+extern "C" void setAlphaKanteraChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawOxygen__13dMeter2Draw_cFllff();
+extern "C" void setAlphaOxygenChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawLightDrop__13dMeter2Draw_cFUcUcffffUc();
+extern "C" void setAlphaLightDropChange__13dMeter2Draw_cFb();
+extern "C" void getNowLightDropRateCalc__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawRupee__13dMeter2Draw_cFs();
+extern "C" void setAlphaRupeeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKey__13dMeter2Draw_cFs();
+extern "C" void setAlphaKeyChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKeyAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKeyAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawButtonA__13dMeter2Draw_cFUcfffffbb();
+extern "C" void drawButtonB__13dMeter2Draw_cFUcbfffffb();
+extern "C" void drawButtonR__13dMeter2Draw_cFUcUcbb();
+extern "C" void drawButtonZ__13dMeter2Draw_cFUc();
+extern "C" void drawButton3D__13dMeter2Draw_cFUc();
+extern "C" void drawButtonC__13dMeter2Draw_cFUcb();
+extern "C" void drawButtonS__13dMeter2Draw_cFUc();
+extern "C" void drawButtonBin__13dMeter2Draw_cFUc();
+extern "C" void drawButtonXY__13dMeter2Draw_cFiUcUcbb();
+extern "C" void getButtonCrossParentInitTransY__13dMeter2Draw_cFv();
+extern "C" void drawButtonCross__13dMeter2Draw_cFff();
+extern "C" void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaButtonAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl();
+extern "C" void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb();
+extern "C" void getActionString__13dMeter2Draw_cFUcUcPUc();
+extern "C" void setItemNum__13dMeter2Draw_cFUcUcUc();
+extern "C" void drawItemNum__13dMeter2Draw_cFUcf();
+extern "C" void drawKanteraMeter__13dMeter2Draw_cFUcf();
+extern "C" void isButtonVisible__13dMeter2Draw_cFv();
+extern "C" void getCameraSubject__13dMeter2Draw_cFv();
+extern "C" void getItemSubject__13dMeter2Draw_cFv();
+extern "C" void getPlayerSubject__13dMeter2Draw_cFv();
+extern "C" void isBButtonShow__13dMeter2Draw_cFb();
+extern "C" void getButtonTimer__13dMeter2Draw_cFv();
+extern "C" void isFloatingMessageVisible__13dMeter2Info_cFv();
+extern "C" void isDirectUseItem__13dMeter2Info_cFi();
+extern "C" void decHotSpringTimer__13dMeter2Info_cFv();
+extern "C" bool dMeter2Info_is2DActiveTouchArea__Fv();
+extern "C" void isPlaceMessage__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void dTimer_createStockTimer__Fv();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void heartGaugeOn__11Z2StatusMgrFv();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

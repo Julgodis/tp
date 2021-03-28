@@ -11,18 +11,23 @@
 // Forward References:
 // 
 
-void DsyncFrame2(u32, u32, u32); // 2
-static void DsyncFrame3(u32, u32, u32, u32, u32); // 2
-static void Dsp_Update_Request(); // 2
-void Dsp_Running_Check(); // 2
-void Dsp_Running_Start(); // 2
+void DsyncFrame2(u32, u32, u32);
+static void DsyncFrame3(u32, u32, u32, u32, u32);
+static void Dsp_Update_Request();
+void Dsp_Running_Check();
+void Dsp_Running_Start();
+extern "C" extern u8 DSP_prior_task[4];
+extern "C" extern u8 data_80451310[8];
+extern "C" extern u8 data_80451318[8];
+extern "C" extern u8 data_80451320[8];
+extern "C" extern u8 data_80451328[8];
 
-extern "C" void __DSPHandler(); // 1
-extern "C" void DsyncFrame2__FUlUlUl(); // 1
-extern "C" static void DsyncFrame3__FUlUlUlUlUl(); // 1
-extern "C" static void Dsp_Update_Request__Fv(); // 1
-extern "C" void Dsp_Running_Check__Fv(); // 1
-extern "C" void Dsp_Running_Start__Fv(); // 1
+extern "C" void __DSPHandler();
+extern "C" void DsyncFrame2__FUlUlUl();
+extern "C" static void DsyncFrame3__FUlUlUlUlUl();
+extern "C" static void Dsp_Update_Request__Fv();
+extern "C" void Dsp_Running_Check__Fv();
+extern "C" void Dsp_Running_Start__Fv();
 extern "C" extern u8 DSP_prior_task[4];
 extern "C" extern u8 data_80451310[8];
 extern "C" extern u8 data_80451318[8];
@@ -33,19 +38,21 @@ extern "C" extern u8 data_80451328[8];
 // External References:
 // 
 
-void DsyncFrame2ch(u32, u32, u32); // 2
-void DsyncFrame4ch(u32, u32, u32, u32, u32); // 2
+void DsyncFrame2ch(u32, u32, u32);
+void DsyncFrame4ch(u32, u32, u32, u32, u32);
+extern "C" extern u8 __DSP_first_task[4];
+extern "C" extern u8 __DSP_curr_task[4];
 
-extern "C" void DsyncFrame2ch__FUlUlUl(); // 1
-extern "C" void DsyncFrame4ch__FUlUlUlUlUl(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void __DSP_exec_task(); // 1
-extern "C" void __DSP_remove_task(); // 1
+extern "C" void DsyncFrame2ch__FUlUlUl();
+extern "C" void DsyncFrame4ch__FUlUlUlUlUl();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void __DSP_exec_task();
+extern "C" void __DSP_remove_task();
 extern "C" extern u8 __DSP_first_task[4];
 extern "C" extern u8 __DSP_curr_task[4];
 

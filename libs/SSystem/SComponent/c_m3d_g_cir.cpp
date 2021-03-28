@@ -26,18 +26,18 @@ struct cM2dGCir {
 // 
 
 
-extern "C" void __ct__8cM3dGCirFv(); // 1
-extern "C" void __dt__8cM2dGCirFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void Set__8cM3dGCirFffff(); // 1
+extern "C" void __ct__8cM3dGCirFv();
+extern "C" void __dt__8cM2dGCirFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void Set__8cM3dGCirFffff();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

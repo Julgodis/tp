@@ -103,11 +103,11 @@ struct dBgS_AcchCir {
 struct dBgS {
 };
 
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
 };
 
 struct dBgS_Acch {
@@ -151,41 +151,44 @@ struct cBgS {
 // Forward References:
 // 
 
-static void Reflect(cXyz*, cBgS_PolyInfo const&, f32); // 2
-static void daItemKantera_Draw(daItemKantera_c*); // 2
-static void daItemKantera_Execute(daItemKantera_c*); // 2
-static void daItemKantera_Delete(daItemKantera_c*); // 2
-static void daItemKantera_Create(fopAc_ac_c*); // 2
+static void Reflect(cXyz*, cBgS_PolyInfo const&, f32);
+static void daItemKantera_Draw(daItemKantera_c*);
+static void daItemKantera_Execute(daItemKantera_c*);
+static void daItemKantera_Delete(daItemKantera_c*);
+static void daItemKantera_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Kantera[12];
 
-extern "C" static void Reflect__FP4cXyzRC13cBgS_PolyInfof(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void initBaseMtx__15daItemKantera_cFv(); // 1
-extern "C" void setBaseMtx__15daItemKantera_cFv(); // 1
-extern "C" void Create__15daItemKantera_cFv(); // 1
-extern "C" bool __CreateHeap__15daItemKantera_cFv(); // 1
-extern "C" void create__15daItemKantera_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void bg_check__15daItemKantera_cFv(); // 1
-extern "C" void actionInit__15daItemKantera_cFv(); // 1
-extern "C" void actionWaitInit__15daItemKantera_cFv(); // 1
-extern "C" void actionWait__15daItemKantera_cFv(); // 1
-extern "C" void initActionOrderGetDemo__15daItemKantera_cFv(); // 1
-extern "C" void actionOrderGetDemo__15daItemKantera_cFv(); // 1
-extern "C" void actionGetDemo__15daItemKantera_cFv(); // 1
-extern "C" void execute__15daItemKantera_cFv(); // 1
-extern "C" void draw__15daItemKantera_cFv(); // 1
-extern "C" void _delete__15daItemKantera_cFv(); // 1
-extern "C" static void daItemKantera_Draw__FP15daItemKantera_c(); // 1
-extern "C" static void daItemKantera_Execute__FP15daItemKantera_c(); // 1
-extern "C" static void daItemKantera_Delete__FP15daItemKantera_c(); // 1
-extern "C" static void daItemKantera_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_80C39630(); // 1
-extern "C" static void func_80C39638(); // 1
+extern "C" static void Reflect__FP4cXyzRC13cBgS_PolyInfof();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void initBaseMtx__15daItemKantera_cFv();
+extern "C" void setBaseMtx__15daItemKantera_cFv();
+extern "C" void Create__15daItemKantera_cFv();
+extern "C" bool __CreateHeap__15daItemKantera_cFv();
+extern "C" void create__15daItemKantera_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void bg_check__15daItemKantera_cFv();
+extern "C" void actionInit__15daItemKantera_cFv();
+extern "C" void actionWaitInit__15daItemKantera_cFv();
+extern "C" void actionWait__15daItemKantera_cFv();
+extern "C" void initActionOrderGetDemo__15daItemKantera_cFv();
+extern "C" void actionOrderGetDemo__15daItemKantera_cFv();
+extern "C" void actionGetDemo__15daItemKantera_cFv();
+extern "C" void execute__15daItemKantera_cFv();
+extern "C" void draw__15daItemKantera_cFv();
+extern "C" void _delete__15daItemKantera_cFv();
+extern "C" static void daItemKantera_Draw__FP15daItemKantera_c();
+extern "C" static void daItemKantera_Execute__FP15daItemKantera_c();
+extern "C" static void daItemKantera_Delete__FP15daItemKantera_c();
+extern "C" static void daItemKantera_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" static void func_80C39630();
+extern "C" static void func_80C39638();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Kantera[12];
@@ -194,77 +197,91 @@ extern "C" extern void* g_profile_Obj_Kantera[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
-void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16); // 2
-void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*); // 2
-void fopAcM_cancelCarryNow(fopAc_ac_c*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void CheckFieldItemCreateHeap(fopAc_ac_c*); // 2
-void checkItemGet(u8, int); // 2
-void cM_atan2s(f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
+void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
+void fopAcM_cancelCarryNow(fopAc_ac_c*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void CheckFieldItemCreateHeap(fopAc_ac_c*);
+void checkItemGet(u8, int);
+void cM_atan2s(f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* field_item_res__10dItem_data[1020];
+extern "C" extern u8 item_info__10dItem_data[1020 + 4 /* padding */];
+extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 data_80C39860[4];
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz(); // 1
-extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void hide__12daItemBase_cFv(); // 1
-extern "C" void show__12daItemBase_cFv(); // 1
-extern "C" void chkDraw__12daItemBase_cFv(); // 1
-extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
-extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void checkItemGet__FUci(); // 1
-extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" bool clothCreate__12daItemBase_cFv(); // 1
-extern "C" void DrawBase__12daItemBase_cFv(); // 1
-extern "C" void RotateYBase__12daItemBase_cFv(); // 1
-extern "C" void setListStart__12daItemBase_cFv(); // 1
-extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
-extern "C" void setTevStr__12daItemBase_cFv(); // 1
-extern "C" void setShadow__12daItemBase_cFv(); // 1
-extern "C" void animEntry__12daItemBase_cFv(); // 1
-extern "C" void chkFlag__12daItemBase_cFi(); // 1
-extern "C" void getTevFrm__12daItemBase_cFv(); // 1
-extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
-extern "C" void getShadowSize__12daItemBase_cFv(); // 1
-extern "C" void getCollisionH__12daItemBase_cFv(); // 1
-extern "C" void getCollisionR__12daItemBase_cFv(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void C_VECReflect(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz();
+extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
+extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void hide__12daItemBase_cFv();
+extern "C" void show__12daItemBase_cFv();
+extern "C" void chkDraw__12daItemBase_cFv();
+extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setPtI_Id__14dEvt_control_cFUi();
+extern "C" void endCheckOld__16dEvent_manager_cFPCc();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void checkItemGet__FUci();
+extern "C" void DeleteBase__12daItemBase_cFPCc();
+extern "C" bool clothCreate__12daItemBase_cFv();
+extern "C" void DrawBase__12daItemBase_cFv();
+extern "C" void RotateYBase__12daItemBase_cFv();
+extern "C" void setListStart__12daItemBase_cFv();
+extern "C" void settingBeforeDraw__12daItemBase_cFv();
+extern "C" void setTevStr__12daItemBase_cFv();
+extern "C" void setShadow__12daItemBase_cFv();
+extern "C" void animEntry__12daItemBase_cFv();
+extern "C" void chkFlag__12daItemBase_cFi();
+extern "C" void getTevFrm__12daItemBase_cFv();
+extern "C" void getBtpFrm__12daItemBase_cFv();
+extern "C" void getShadowSize__12daItemBase_cFv();
+extern "C" void getCollisionH__12daItemBase_cFv();
+extern "C" void getCollisionR__12daItemBase_cFv();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void cM_atan2s__Fff();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void C_VECReflect();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];

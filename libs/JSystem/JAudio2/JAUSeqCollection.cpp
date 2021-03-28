@@ -11,13 +11,13 @@
 // Types:
 // 
 
-struct JAISeqData {
-};
-
 struct JAISeqDataUser {
 };
 
 struct JAISoundID {
+};
+
+struct JAISeqData {
 };
 
 struct JAUSeqDataMgr_SeqCollection {
@@ -47,24 +47,25 @@ struct JAISeqDataMgr {
 // 
 
 
-extern "C" void __ct__16JAUSeqCollectionFv(); // 1
-extern "C" void init__16JAUSeqCollectionFPCv(); // 1
-extern "C" void getSeqData__16JAUSeqCollectionFiiP10JAISeqData(); // 1
-extern "C" void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion(); // 1
-extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv(); // 1
-extern "C" void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser(); // 1
-extern "C" void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv(); // 1
-extern "C" void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData(); // 1
-extern "C" void __dt__27JAUSeqDataMgr_SeqCollectionFv(); // 1
+extern "C" void __ct__16JAUSeqCollectionFv();
+extern "C" void init__16JAUSeqCollectionFPCv();
+extern "C" void getSeqData__16JAUSeqCollectionFiiP10JAISeqData();
+extern "C" void getSeqDataRegion__16JAUSeqCollectionFP16JAISeqDataRegion();
+extern "C" void __ct__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void setSeqDataUser__27JAUSeqDataMgr_SeqCollectionFP14JAISeqDataUser();
+extern "C" void releaseSeqData__27JAUSeqDataMgr_SeqCollectionFv();
+extern "C" void getSeqData__27JAUSeqDataMgr_SeqCollectionF10JAISoundIDP10JAISeqData();
+extern "C" void __dt__27JAUSeqDataMgr_SeqCollectionFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__13JAISeqDataMgr[6];
 
-extern "C" void __dt__13JAISeqDataMgrFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__13JAISeqDataMgrFv();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__13JAISeqDataMgr[6];
 
 // 

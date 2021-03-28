@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -25,16 +25,16 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -100,28 +100,30 @@ struct Z2CreatureEnemy {
 // Forward References:
 // 
 
-static void daL7lowDr_Delete(daL7lowDr_c*); // 2
-static void daL7lowDr_Execute(daL7lowDr_c*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daL7lowDr_Create(daL7lowDr_c*); // 2
-static void daL7lowDr_Draw(daL7lowDr_c*); // 2
-static bool daL7lowDr_IsDelete(daL7lowDr_c*); // 2
+static void daL7lowDr_Delete(daL7lowDr_c*);
+static void daL7lowDr_Execute(daL7lowDr_c*);
+static void useHeapInit(fopAc_ac_c*);
+static void daL7lowDr_Create(daL7lowDr_c*);
+static void daL7lowDr_Draw(daL7lowDr_c*);
+static bool daL7lowDr_IsDelete(daL7lowDr_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_L7lowDr[12];
 
-extern "C" void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v(); // 1
-extern "C" void action__11daL7lowDr_cFv(); // 1
-extern "C" void _delete__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Delete__FP11daL7lowDr_c(); // 1
-extern "C" void mtx_set__11daL7lowDr_cFv(); // 1
-extern "C" void fly__11daL7lowDr_cFv(); // 1
-extern "C" void execute__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Execute__FP11daL7lowDr_c(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" void CreateHeap__11daL7lowDr_cFv(); // 1
-extern "C" void create__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Create__FP11daL7lowDr_c(); // 1
-extern "C" void draw__11daL7lowDr_cFv(); // 1
-extern "C" static void daL7lowDr_Draw__FP11daL7lowDr_c(); // 1
-extern "C" static bool daL7lowDr_IsDelete__FP11daL7lowDr_c(); // 1
+extern "C" void setAction__11daL7lowDr_cFM11daL7lowDr_cFPCvPv_v();
+extern "C" void action__11daL7lowDr_cFv();
+extern "C" void _delete__11daL7lowDr_cFv();
+extern "C" static void daL7lowDr_Delete__FP11daL7lowDr_c();
+extern "C" void mtx_set__11daL7lowDr_cFv();
+extern "C" void fly__11daL7lowDr_cFv();
+extern "C" void execute__11daL7lowDr_cFv();
+extern "C" static void daL7lowDr_Execute__FP11daL7lowDr_c();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" void CreateHeap__11daL7lowDr_cFv();
+extern "C" void create__11daL7lowDr_cFv();
+extern "C" static void daL7lowDr_Create__FP11daL7lowDr_c();
+extern "C" void draw__11daL7lowDr_cFv();
+extern "C" static void daL7lowDr_Draw__FP11daL7lowDr_c();
+extern "C" static bool daL7lowDr_IsDelete__FP11daL7lowDr_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_L7lowDr[12];
 
@@ -129,49 +131,56 @@ extern "C" extern void* g_profile_L7lowDr[12];
 // External References:
 // 
 
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_chaseAngleS(s16*, s16, s16); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void* operator new(u32); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_posMoveF(fopAc_ac_c*, cXyz const*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_chaseAngleS(s16*, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void* operator new(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff(); // 1
-extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
-extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cLib_chaseAngleS__FPsss(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void __ct__15Z2CreatureEnemyFv(); // 1
-extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void setAnm__16mDoExt_McaMorfSOFP15J3DAnmTransformiffff();
+extern "C" void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_posMoveF__FP10fopAc_ac_cPC4cXyz();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cLib_chaseAngleS__FPsss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void __ct__15Z2CreatureEnemyFv();
+extern "C" void init__15Z2CreatureEnemyFP3VecP3VecUcUc();
+extern "C" void* __nw__FUl();
+extern "C" void PSMTXCopy();
+extern "C" void PSVECAdd();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

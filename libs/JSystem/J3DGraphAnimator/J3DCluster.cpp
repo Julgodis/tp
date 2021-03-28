@@ -17,10 +17,10 @@ struct J3DVertexBuffer {
 struct J3DModel {
 };
 
-struct J3DClusterKey {
+struct J3DCluster {
 };
 
-struct J3DCluster {
+struct J3DClusterKey {
 };
 
 struct J3DAnmCluster {
@@ -48,35 +48,36 @@ struct J3DDeformer {
 // 
 
 
-extern "C" void __ct__13J3DDeformDataFv(); // 1
-extern "C" void offAllFlag__13J3DDeformDataFUl(); // 1
-extern "C" void deform__13J3DDeformDataFP8J3DModel(); // 1
-extern "C" void deform__13J3DDeformDataFP15J3DVertexBuffer(); // 1
-extern "C" void setAnm__13J3DDeformDataFP13J3DAnmCluster(); // 1
-extern "C" void __ct__11J3DDeformerFP13J3DDeformData(); // 1
-extern "C" void deform__11J3DDeformerFP15J3DVertexBufferUs(); // 1
-extern "C" void deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf(); // 1
-extern "C" void deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf(); // 1
-extern "C" void deform__11J3DDeformerFP15J3DVertexBufferUsPf(); // 1
-extern "C" void normalizeWeight__11J3DDeformerFiPf(); // 1
+extern "C" void __ct__13J3DDeformDataFv();
+extern "C" void offAllFlag__13J3DDeformDataFUl();
+extern "C" void deform__13J3DDeformDataFP8J3DModel();
+extern "C" void deform__13J3DDeformDataFP15J3DVertexBuffer();
+extern "C" void setAnm__13J3DDeformDataFP13J3DAnmCluster();
+extern "C" void __ct__11J3DDeformerFP13J3DDeformData();
+extern "C" void deform__11J3DDeformerFP15J3DVertexBufferUs();
+extern "C" void deform_VtxPosF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf();
+extern "C" void deform_VtxNrmF32__11J3DDeformerFP15J3DVertexBufferP10J3DClusterP13J3DClusterKeyPf();
+extern "C" void deform__11J3DDeformerFP15J3DVertexBufferUsPf();
+extern "C" void normalizeWeight__11J3DDeformerFiPf();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 asinAcosTable___5JMath[4128];
 
-extern "C" void PPCSync(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void PPCSync();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSVECNormalize();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u8 asinAcosTable___5JMath[4128];
 
 // 

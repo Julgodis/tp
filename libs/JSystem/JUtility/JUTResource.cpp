@@ -35,24 +35,24 @@ struct JKRFileLoader {
 // 
 
 
-extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive(); // 1
-extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive(); // 1
-extern "C" void getResource__15JUTResReferenceFUlP10JKRArchive(); // 1
+extern "C" void getResource__15JUTResReferenceFP14JSUInputStreamUlP10JKRArchive();
+extern "C" void getResource__15JUTResReferenceFPCvUlP10JKRArchive();
+extern "C" void getResource__15JUTResReferenceFUlP10JKRArchive();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void getGlbResource__13JKRFileLoaderFPCc();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

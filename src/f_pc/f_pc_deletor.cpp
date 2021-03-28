@@ -42,71 +42,73 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcDt_IsComplete(); // 2
-static void fpcDt_deleteMethod(base_process_class*); // 2
-void fpcDt_Handler(); // 2
-static void fpcDt_ToQueue(base_process_class*); // 2
-static void fpcDt_ToDeleteQ(base_process_class*); // 2
-void fpcDt_Delete(void*); // 2
+void fpcDt_IsComplete();
+static void fpcDt_deleteMethod(base_process_class*);
+void fpcDt_Handler();
+static void fpcDt_ToQueue(base_process_class*);
+static void fpcDt_ToDeleteQ(base_process_class*);
+void fpcDt_Delete(void*);
 
-extern "C" void fpcDt_IsComplete__Fv(); // 1
-extern "C" static void fpcDt_deleteMethod__FP18base_process_class(); // 1
-extern "C" void fpcDt_Handler__Fv(); // 1
-extern "C" static void fpcDt_ToQueue__FP18base_process_class(); // 1
-extern "C" static void fpcDt_ToDeleteQ__FP18base_process_class(); // 1
-extern "C" void fpcDt_Delete__FPv(); // 1
+extern "C" void fpcDt_IsComplete__Fv();
+extern "C" static void fpcDt_deleteMethod__FP18base_process_class();
+extern "C" void fpcDt_Handler__Fv();
+extern "C" static void fpcDt_ToQueue__FP18base_process_class();
+extern "C" static void fpcDt_ToDeleteQ__FP18base_process_class();
+extern "C" void fpcDt_Delete__FPv();
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcBs_IsDelete(base_process_class*); // 2
-void fpcBs_Delete(base_process_class*); // 2
-void fpcCt_IsDoing(base_process_class*); // 2
-void fpcCt_Abort(base_process_class*); // 2
-void fpcDtTg_IsEmpty(); // 2
-void fpcDtTg_ToDeleteQ(delete_tag_class*); // 2
-void fpcDtTg_Do(delete_tag_class*, int (*)(void*)); // 2
-void fpcEx_IsExist(unsigned int); // 2
-void fpcEx_ExecuteQTo(base_process_class*); // 2
-void fpcLy_DeletingMesg(layer_class*); // 2
-void fpcLy_DeletedMesg(layer_class*); // 2
-void fpcLy_SetCurrentLayer(layer_class*); // 2
-void fpcLy_Cancel(layer_class*); // 2
-void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*); // 2
-void fpcLd_Free(s16); // 2
-void fpcNd_IsDeleteTiming(process_node_class*); // 2
-void fpcPi_IsInQueue(process_priority_class*); // 2
-void fpcPi_Delete(process_priority_class*); // 2
-void fpcLnTg_QueueTo(line_tag*); // 2
-void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
-void cTg_IsUse(create_tag_class*); // 2
+void fpcBs_Is_JustOfType(int, int);
+void fpcBs_IsDelete(base_process_class*);
+void fpcBs_Delete(base_process_class*);
+void fpcCt_IsDoing(base_process_class*);
+void fpcCt_Abort(base_process_class*);
+void fpcDtTg_IsEmpty();
+void fpcDtTg_ToDeleteQ(delete_tag_class*);
+void fpcDtTg_Do(delete_tag_class*, int (*)(void*));
+void fpcEx_IsExist(unsigned int);
+void fpcEx_ExecuteQTo(base_process_class*);
+void fpcLy_DeletingMesg(layer_class*);
+void fpcLy_DeletedMesg(layer_class*);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLy_Cancel(layer_class*);
+void fpcLyIt_OnlyHereLY(layer_class*, int (*)(void*, void*), void*);
+void fpcLd_Free(s16);
+void fpcNd_IsDeleteTiming(process_node_class*);
+void fpcPi_IsInQueue(process_priority_class*);
+void fpcPi_Delete(process_priority_class*);
+void fpcLnTg_QueueTo(line_tag*);
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*);
+void cTg_IsUse(create_tag_class*);
+extern "C" extern u8 g_fpcDtTg_Queue[12 + 4 /* padding */];
+extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcBs_IsDelete__FP18base_process_class(); // 1
-extern "C" void fpcBs_Delete__FP18base_process_class(); // 1
-extern "C" void fpcCt_IsDoing__FP18base_process_class(); // 1
-extern "C" void fpcCt_Abort__FP18base_process_class(); // 1
-extern "C" void fpcDtTg_IsEmpty__Fv(); // 1
-extern "C" void fpcDtTg_ToDeleteQ__FP16delete_tag_class(); // 1
-extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i(); // 1
-extern "C" void fpcEx_IsExist__FUi(); // 1
-extern "C" void fpcEx_ExecuteQTo__FP18base_process_class(); // 1
-extern "C" void fpcLy_DeletingMesg__FP11layer_class(); // 1
-extern "C" void fpcLy_DeletedMesg__FP11layer_class(); // 1
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
-extern "C" void fpcLy_Cancel__FP11layer_class(); // 1
-extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv(); // 1
-extern "C" void fpcLd_Free__Fs(); // 1
-extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class(); // 1
-extern "C" void fpcPi_IsInQueue__FP22process_priority_class(); // 1
-extern "C" void fpcPi_Delete__FP22process_priority_class(); // 1
-extern "C" void fpcLnTg_QueueTo__FP8line_tag(); // 1
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cTg_IsUse__FP16create_tag_class(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcBs_IsDelete__FP18base_process_class();
+extern "C" void fpcBs_Delete__FP18base_process_class();
+extern "C" void fpcCt_IsDoing__FP18base_process_class();
+extern "C" void fpcCt_Abort__FP18base_process_class();
+extern "C" void fpcDtTg_IsEmpty__Fv();
+extern "C" void fpcDtTg_ToDeleteQ__FP16delete_tag_class();
+extern "C" void fpcDtTg_Do__FP16delete_tag_classPFPv_i();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void fpcEx_ExecuteQTo__FP18base_process_class();
+extern "C" void fpcLy_DeletingMesg__FP11layer_class();
+extern "C" void fpcLy_DeletedMesg__FP11layer_class();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLy_Cancel__FP11layer_class();
+extern "C" void fpcLyIt_OnlyHereLY__FP11layer_classPFPvPv_iPv();
+extern "C" void fpcLd_Free__Fs();
+extern "C" void fpcNd_IsDeleteTiming__FP18process_node_class();
+extern "C" void fpcPi_IsInQueue__FP22process_priority_class();
+extern "C" void fpcPi_Delete__FP22process_priority_class();
+extern "C" void fpcLnTg_QueueTo__FP8line_tag();
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cTg_IsUse__FP16create_tag_class();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_fpcDtTg_Queue[12 + 4 /* padding */];
 extern "C" extern u8 g_fpcNd_type[4 + 4 /* padding */];
 

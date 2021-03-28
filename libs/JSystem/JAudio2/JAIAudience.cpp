@@ -19,17 +19,18 @@ struct JAIAudience {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__11JAIAudience[8];
 
-extern "C" void __dt__11JAIAudienceFv(); // 1
+extern "C" void __dt__11JAIAudienceFv();
 extern "C" extern void* __vt__11JAIAudience[8];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

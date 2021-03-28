@@ -28,20 +28,20 @@ struct daObj_SSBase_c {
 // 
 
 
-extern "C" void __ct__14daObj_SSBase_cFv(); // 1
-extern "C" void __dt__14daObj_SSBase_cFv(); // 1
-extern "C" void getProcessID__14daObj_SSBase_cFv(); // 1
-extern "C" void setSoldOut__14daObj_SSBase_cFv(); // 1
+extern "C" void __ct__14daObj_SSBase_cFv();
+extern "C" void __dt__14daObj_SSBase_cFv();
+extern "C" void getProcessID__14daObj_SSBase_cFv();
+extern "C" void setSoldOut__14daObj_SSBase_cFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

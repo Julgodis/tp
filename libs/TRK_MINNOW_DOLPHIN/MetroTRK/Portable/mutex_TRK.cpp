@@ -12,9 +12,9 @@
 // 
 
 
-extern "C" bool TRKReleaseMutex(); // 1
-extern "C" bool TRKAcquireMutex(); // 1
-extern "C" bool TRKInitializeMutex(); // 1
+extern "C" bool TRKReleaseMutex();
+extern "C" bool TRKAcquireMutex();
+extern "C" bool TRKInitializeMutex();
 
 // 
 // External References:

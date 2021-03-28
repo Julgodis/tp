@@ -27,19 +27,19 @@ struct dBgPlc {
 // 
 
 
-extern "C" void __ct__6dBgPlcFv(); // 1
-extern "C" void __dt__6dBgPlcFv(); // 1
-extern "C" void setBase__6dBgPlcFPv(); // 1
-extern "C" void getCode__6dBgPlcCFiPP5sBgPc(); // 1
-extern "C" void getGrpCode__6dBgPlcCFi(); // 1
+extern "C" void __ct__6dBgPlcFv();
+extern "C" void __dt__6dBgPlcFv();
+extern "C" void setBase__6dBgPlcFPv();
+extern "C" void getCode__6dBgPlcCFiPP5sBgPc();
+extern "C" void getGrpCode__6dBgPlcCFi();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

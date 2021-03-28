@@ -11,12 +11,12 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct cXyz {
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
-};
-
-struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -84,10 +84,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -101,27 +101,29 @@ struct WIND_INFLUENCE {
 // Forward References:
 // 
 
-static void daObjTrnd_Draw(daObjTrnd_c*); // 2
-static void daObjTrnd_Execute(daObjTrnd_c*); // 2
-static void daObjTrnd_Delete(daObjTrnd_c*); // 2
-static void daObjTrnd_Create(daObjTrnd_c*); // 2
+static void daObjTrnd_Draw(daObjTrnd_c*);
+static void daObjTrnd_Execute(daObjTrnd_c*);
+static void daObjTrnd_Delete(daObjTrnd_c*);
+static void daObjTrnd_Create(daObjTrnd_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_Tornado[12];
 
-extern "C" void setPntWind__11daObjTrnd_cFv(); // 1
-extern "C" void cutPntWind__11daObjTrnd_cFv(); // 1
-extern "C" void movePntWind__11daObjTrnd_cFv(); // 1
-extern "C" void setCpsInfo__11daObjTrnd_cFv(); // 1
-extern "C" void initBaseMtx__11daObjTrnd_cFv(); // 1
-extern "C" void setBaseMtx__11daObjTrnd_cFv(); // 1
-extern "C" void Create__11daObjTrnd_cFv(); // 1
-extern "C" void create__11daObjTrnd_cFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void execute__11daObjTrnd_cFv(); // 1
-extern "C" bool draw__11daObjTrnd_cFv(); // 1
-extern "C" void _delete__11daObjTrnd_cFv(); // 1
-extern "C" static void daObjTrnd_Draw__FP11daObjTrnd_c(); // 1
-extern "C" static void daObjTrnd_Execute__FP11daObjTrnd_c(); // 1
-extern "C" static void daObjTrnd_Delete__FP11daObjTrnd_c(); // 1
-extern "C" static void daObjTrnd_Create__FP11daObjTrnd_c(); // 1
+extern "C" void setPntWind__11daObjTrnd_cFv();
+extern "C" void cutPntWind__11daObjTrnd_cFv();
+extern "C" void movePntWind__11daObjTrnd_cFv();
+extern "C" void setCpsInfo__11daObjTrnd_cFv();
+extern "C" void initBaseMtx__11daObjTrnd_cFv();
+extern "C" void setBaseMtx__11daObjTrnd_cFv();
+extern "C" void Create__11daObjTrnd_cFv();
+extern "C" void create__11daObjTrnd_cFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void execute__11daObjTrnd_cFv();
+extern "C" bool draw__11daObjTrnd_cFv();
+extern "C" void _delete__11daObjTrnd_cFv();
+extern "C" static void daObjTrnd_Draw__FP11daObjTrnd_c();
+extern "C" static void daObjTrnd_Execute__FP11daObjTrnd_c();
+extern "C" static void daObjTrnd_Delete__FP11daObjTrnd_c();
+extern "C" static void daObjTrnd_Create__FP11daObjTrnd_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_Tornado[12];
 
@@ -129,44 +131,57 @@ extern "C" extern void* g_profile_Obj_Tornado[12];
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dKyw_pntwind_set(WIND_INFLUENCE*); // 2
-void dKyw_pntwind_cut(WIND_INFLUENCE*); // 2
-void dKyw_custom_windpower(f32); // 2
-void dKyw_evt_wind_set(s16, s16); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dKyw_pntwind_set(WIND_INFLUENCE*);
+void dKyw_pntwind_cut(WIND_INFLUENCE*);
+void dKyw_custom_windpower(f32);
+void dKyw_evt_wind_set(s16, s16);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cps[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CpsAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKyw_pntwind_set__FP14WIND_INFLUENCE(); // 1
-extern "C" void dKyw_pntwind_cut__FP14WIND_INFLUENCE(); // 1
-extern "C" void dKyw_custom_windpower__Ff(); // 1
-extern "C" void dKyw_evt_wind_set__Fss(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CpsFRC11dCcD_SrcCps(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void isZero__4cXyzCFv(); // 1
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKyw_pntwind_set__FP14WIND_INFLUENCE();
+extern "C" void dKyw_pntwind_cut__FP14WIND_INFLUENCE();
+extern "C" void dKyw_custom_windpower__Ff();
+extern "C" void dKyw_evt_wind_set__Fss();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CpsFRC11dCcD_SrcCps();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void normalize__4cXyzFv();
+extern "C" void isZero__4cXyzCFv();
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void Set__8cM3dGCpsFRC9cM3dGCpsS();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareDistance();
+extern "C" void __cvt_fp2unsigned();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cps[36];

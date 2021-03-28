@@ -18,18 +18,19 @@ struct node_list_class {
 // Forward References:
 // 
 
-void fpcLn_Create(); // 2
+void fpcLn_Create();
+extern "C" extern void* g_fpcLn_Queue[2];
 
-extern "C" void fpcLn_Create__Fv(); // 1
+extern "C" void fpcLn_Create__Fv();
 extern "C" extern void* g_fpcLn_Queue[2];
 
 // 
 // External References:
 // 
 
-void cLs_Create(node_list_class*); // 2
+void cLs_Create(node_list_class*);
 
-extern "C" void cLs_Create__FP15node_list_class(); // 1
+extern "C" void cLs_Create__FP15node_list_class();
 
 // 
 // Declarations:

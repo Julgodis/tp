@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void ldexp(); // 1
+extern "C" void ldexp();
 
 // 
 // External References:
 // 
 
 
-extern "C" void copysign(); // 1
+extern "C" void copysign();
 
 // 
 // Declarations:

@@ -51,46 +51,51 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTagRmbitSw_create(daTagRmbitSw_c*); // 2
-static void daTagRmbitSw_Delete(daTagRmbitSw_c*); // 2
-static void daTagRmbitSw_execute(daTagRmbitSw_c*); // 2
-static void daTagRmbitSw_draw(daTagRmbitSw_c*); // 2
+static void daTagRmbitSw_create(daTagRmbitSw_c*);
+static void daTagRmbitSw_Delete(daTagRmbitSw_c*);
+static void daTagRmbitSw_execute(daTagRmbitSw_c*);
+static void daTagRmbitSw_draw(daTagRmbitSw_c*);
+extern "C" extern void* g_profile_Tag_RmbitSw[12];
 
-extern "C" void __ct__14daTagRmbitSw_cFv(); // 1
-extern "C" void __dt__14daTagRmbitSw_cFv(); // 1
-extern "C" void create__14daTagRmbitSw_cFv(); // 1
-extern "C" bool Delete__14daTagRmbitSw_cFv(); // 1
-extern "C" bool draw__14daTagRmbitSw_cFv(); // 1
-extern "C" void execute__14daTagRmbitSw_cFv(); // 1
-extern "C" void init__14daTagRmbitSw_cFv(); // 1
-extern "C" void chkPlyrInTag__14daTagRmbitSw_cFv(); // 1
-extern "C" static void daTagRmbitSw_create__FP14daTagRmbitSw_c(); // 1
-extern "C" static void daTagRmbitSw_Delete__FP14daTagRmbitSw_c(); // 1
-extern "C" static void daTagRmbitSw_execute__FP14daTagRmbitSw_c(); // 1
-extern "C" static void daTagRmbitSw_draw__FP14daTagRmbitSw_c(); // 1
+extern "C" void __ct__14daTagRmbitSw_cFv();
+extern "C" void __dt__14daTagRmbitSw_cFv();
+extern "C" void create__14daTagRmbitSw_cFv();
+extern "C" bool Delete__14daTagRmbitSw_cFv();
+extern "C" bool draw__14daTagRmbitSw_cFv();
+extern "C" void execute__14daTagRmbitSw_cFv();
+extern "C" void init__14daTagRmbitSw_cFv();
+extern "C" void chkPlyrInTag__14daTagRmbitSw_cFv();
+extern "C" static void daTagRmbitSw_create__FP14daTagRmbitSw_c();
+extern "C" static void daTagRmbitSw_Delete__FP14daTagRmbitSw_c();
+extern "C" static void daTagRmbitSw_execute__FP14daTagRmbitSw_c();
+extern "C" static void daTagRmbitSw_draw__FP14daTagRmbitSw_c();
 extern "C" extern void* g_profile_Tag_RmbitSw[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void dComIfGs_onVisitedRoom(int); // 2
-void dComIfGs_offVisitedRoom(int); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void dComIfGs_onVisitedRoom(int);
+void dComIfGs_offVisitedRoom(int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void dComIfGs_onVisitedRoom__Fi(); // 1
-extern "C" void dComIfGs_offVisitedRoom__Fi(); // 1
-extern "C" void onVisitedRoom__13dSv_memory2_cFi(); // 1
-extern "C" void offVisitedRoom__13dSv_memory2_cFi(); // 1
-extern "C" void getSave2__10dSv_save_cFi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void dComIfGs_onVisitedRoom__Fi();
+extern "C" void dComIfGs_offVisitedRoom__Fi();
+extern "C" void onVisitedRoom__13dSv_memory2_cFi();
+extern "C" void offVisitedRoom__13dSv_memory2_cFi();
+extern "C" void getSave2__10dSv_save_cFi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

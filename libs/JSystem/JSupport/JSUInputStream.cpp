@@ -33,14 +33,16 @@ struct JSUInputStream {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__20JSURandomInputStream[9];
+extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 
-extern "C" void __dt__14JSUInputStreamFv(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void skip__14JSUInputStreamFl(); // 1
-extern "C" void align__20JSURandomInputStreamFl(); // 1
-extern "C" void skip__20JSURandomInputStreamFl(); // 1
-extern "C" void peek__20JSURandomInputStreamFPvl(); // 1
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
+extern "C" void __dt__14JSUInputStreamFv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void skip__14JSUInputStreamFl();
+extern "C" void align__20JSURandomInputStreamFl();
+extern "C" void skip__20JSURandomInputStreamFl();
+extern "C" void peek__20JSURandomInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
 extern "C" extern void* __vt__20JSURandomInputStream[9];
 extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 
@@ -48,15 +50,16 @@ extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__10JSUIosBase[3];
 
-extern "C" void __dt__20JSURandomInputStreamFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getAvailable__20JSURandomInputStreamCFv(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__20JSURandomInputStreamFv();
+extern "C" void __dl__FPv();
+extern "C" void getAvailable__20JSURandomInputStreamCFv();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__10JSUIosBase[3];
 
 // 

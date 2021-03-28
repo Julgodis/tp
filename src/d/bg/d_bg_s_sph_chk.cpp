@@ -39,29 +39,30 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__11dBgS_SphChkFv(); // 1
-extern "C" void __dt__11dBgS_SphChkFv(); // 1
-extern "C" static void func_80078B70(); // 1
-extern "C" static void func_80078B78(); // 1
-extern "C" static void func_80078B80(); // 1
-extern "C" static void func_80078B88(); // 1
+extern "C" void __ct__11dBgS_SphChkFv();
+extern "C" void __dt__11dBgS_SphChkFv();
+extern "C" static void func_80078B70();
+extern "C" static void func_80078B78();
+extern "C" static void func_80078B80();
+extern "C" static void func_80078B88();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGSph[3];
 
-extern "C" void __ct__8dBgS_ChkFv(); // 1
-extern "C" void __dt__8dBgS_ChkFv(); // 1
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void __dl__FPv();
 extern "C" extern void* __vt__8cM3dGSph[3];
 
 // 

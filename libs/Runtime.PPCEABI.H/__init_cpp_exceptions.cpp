@@ -11,9 +11,17 @@
 // Forward References:
 // 
 
+#pragma section ".ctors$10"
+__declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
+#pragma section ".ctors$15"
+__declspec(section ".ctors$10") extern void* const _ctors[106];
+#pragma section ".dtors$10"
+__declspec(section ".dtors$10") extern void* const __destroy_global_chain_reference;
+#pragma section ".dtors$15"
+__declspec(section ".dtors$15") extern void* const __fini_cpp_exceptions_reference;
 
-extern "C" void __fini_cpp_exceptions(); // 1
-extern "C" void __init_cpp_exceptions(); // 1
+extern "C" void __fini_cpp_exceptions();
+extern "C" void __init_cpp_exceptions();
 #pragma section ".ctors$10"
 __declspec(section ".ctors$10") extern void* const __init_cpp_exceptions_reference;
 #pragma section ".ctors$15"
@@ -27,118 +35,120 @@ __declspec(section ".dtors$15") extern void* const __fini_cpp_exceptions_referen
 // External References:
 // 
 
+#pragma section "extabindex_"
+extern void* const data_8000569C[8];
 
 #pragma section "extabindex_"
 extern void* const data_8000569C[8];
-extern "C" void __sinit_m_Do_main_cpp(); // 1
-extern "C" void __sinit_m_Do_audio_cpp(); // 1
-extern "C" void __sinit_m_Do_graphic_cpp(); // 1
-extern "C" void __sinit_m_Do_mtx_cpp(); // 1
-extern "C" void __sinit_m_Do_lib_cpp(); // 1
-extern "C" void __sinit_m_Do_dvd_thread_cpp(); // 1
-extern "C" void __sinit_m_Do_MemCard_cpp(); // 1
-extern "C" void __sinit_c_damagereaction_cpp(); // 1
-extern "C" void __sinit_f_ap_game_cpp(); // 1
-extern "C" void __sinit_f_op_actor_mng_cpp(); // 1
-extern "C" void __sinit_d_stage_cpp(); // 1
-extern "C" void __sinit_d_com_inf_game_cpp(); // 1
-extern "C" void __sinit_d_com_static_cpp(); // 1
-extern "C" void __sinit_d_map_path_cpp(); // 1
-extern "C" void __sinit_d_map_path_dmap_cpp(); // 1
-extern "C" void __sinit_d_event_lib_cpp(); // 1
-extern "C" void __sinit_d_particle_cpp(); // 1
-extern "C" void __sinit_d_particle_copoly_cpp(); // 1
-extern "C" void __sinit_d_drawlist_cpp(); // 1
-extern "C" void __sinit_d_attention_cpp(); // 1
-extern "C" void __sinit_d_ev_camera_cpp(); // 1
-extern "C" void __sinit_d_a_alink_cpp(); // 1
-extern "C" void __sinit_d_a_npc_cpp(); // 1
-extern "C" void __sinit_d_a_npc_cd_cpp(); // 1
-extern "C" void __sinit_d_a_npc_cd2_cpp(); // 1
-extern "C" void __sinit_d_a_obj_item_cpp(); // 1
-extern "C" void __sinit_d_camera_cpp(); // 1
-extern "C" void __sinit_d_file_select_cpp(); // 1
-extern "C" void __sinit_d_file_sel_warning_cpp(); // 1
-extern "C" void __sinit_d_file_sel_info_cpp(); // 1
-extern "C" void __sinit_d_bright_check_cpp(); // 1
-extern "C" void __sinit_d_scope_cpp(); // 1
-extern "C" void __sinit_d_select_icon_cpp(); // 1
-extern "C" void __sinit_d_shop_system_cpp(); // 1
-extern "C" void __sinit_d_gameover_cpp(); // 1
-extern "C" void __sinit_d_kankyo_cpp(); // 1
-extern "C" void __sinit_d_menu_calibration_cpp(); // 1
-extern "C" void __sinit_d_menu_collect_cpp(); // 1
-extern "C" void __sinit_d_menu_dmap_cpp(); // 1
-extern "C" void __sinit_d_menu_dmap_map_cpp(); // 1
-extern "C" void __sinit_d_menu_fishing_cpp(); // 1
-extern "C" void __sinit_d_menu_fmap_cpp(); // 1
-extern "C" void __sinit_d_menu_insect_cpp(); // 1
-extern "C" void __sinit_d_menu_item_explain_cpp(); // 1
-extern "C" void __sinit_d_menu_letter_cpp(); // 1
-extern "C" void __sinit_d_menu_option_cpp(); // 1
-extern "C" void __sinit_d_menu_ring_cpp(); // 1
-extern "C" void __sinit_d_menu_save_cpp(); // 1
-extern "C" void __sinit_d_menu_skill_cpp(); // 1
-extern "C" void __sinit_d_menu_window_HIO_cpp(); // 1
-extern "C" void __sinit_d_menu_window_cpp(); // 1
-extern "C" void __sinit_d_meter_HIO_cpp(); // 1
-extern "C" void __sinit_d_meter2_info_cpp(); // 1
-extern "C" void __sinit_d_msg_object_cpp(); // 1
-extern "C" void __sinit_d_msg_unit_cpp(); // 1
-extern "C" void __sinit_d_msg_scrn_3select_cpp(); // 1
-extern "C" void __sinit_d_msg_scrn_explain_cpp(); // 1
-extern "C" void __sinit_d_msg_scrn_howl_cpp(); // 1
-extern "C" void __sinit_d_msg_scrn_light_cpp(); // 1
-extern "C" void __sinit_d_msg_flow_cpp(); // 1
-extern "C" void __sinit_d_name_cpp(); // 1
-extern "C" void __sinit_d_pane_class_cpp(); // 1
-extern "C" void __sinit_d_s_logo_cpp(); // 1
-extern "C" void __sinit_d_s_name_cpp(); // 1
-extern "C" void __sinit_d_s_play_cpp(); // 1
-extern "C" void __sinit_d_save_HIO_cpp(); // 1
-extern "C" void __sinit_c_cc_d_cpp(); // 1
-extern "C" void __sinit_c_xyz_cpp(); // 1
-extern "C" void __sinit_c_sxyz_cpp(); // 1
-extern "C" void __sinit_c_m3d_cpp(); // 1
-extern "C" void __sinit_c_angle_cpp(); // 1
-extern "C" void __sinit_JFWDisplay_cpp(); // 1
-extern "C" void func_80288204(); // 1
-extern "C" void func_8028B198(); // 1
-extern "C" void func_8028C180(); // 1
-extern "C" void func_8028C8A4(); // 1
-extern "C" void func_8028D2B8(); // 1
-extern "C" void func_8028E0F4(); // 1
-extern "C" void __sinit_JASHeapCtrl_cpp(); // 1
-extern "C" void __sinit_JASCmdStack_cpp(); // 1
-extern "C" void __sinit_JASTrack_cpp(); // 1
-extern "C" void __sinit_JASSeqCtrl_cpp(); // 1
-extern "C" void __sinit_JASSeqParser_cpp(); // 1
-extern "C" void __sinit_JASBNKParser_cpp(); // 1
-extern "C" void __sinit_JASLfo_cpp(); // 1
-extern "C" void __sinit_JASDriverIF_cpp(); // 1
-extern "C" void __sinit_Z2Audience_cpp(); // 1
-extern "C" void __sinit_Z2SoundObjMgr_cpp(); // 1
-extern "C" void __sinit_Z2Creature_cpp(); // 1
-extern "C" void __sinit_Z2WolfHowlMgr_cpp(); // 1
-extern "C" void __sinit_JKRThread_cpp(); // 1
-extern "C" void __sinit_JKRAram_cpp(); // 1
-extern "C" void __sinit_JKRAramHeap_cpp(); // 1
-extern "C" void __sinit_JKRAramPiece_cpp(); // 1
-extern "C" void __sinit_JKRFileLoader_cpp(); // 1
-extern "C" void __sinit_JKRDvdFile_cpp(); // 1
-extern "C" void __sinit_JKRDvdRipper_cpp(); // 1
-extern "C" void __sinit_JKRDvdAramRipper_cpp(); // 1
-extern "C" void __sinit_JUTGamePad_cpp(); // 1
-extern "C" void __sinit_JUTException_cpp(); // 1
-extern "C" void __sinit_J2DPane_cpp(); // 1
-extern "C" void __sinit_J3DSys_cpp(); // 1
-extern "C" void __sinit_J3DShapeMtx_cpp(); // 1
-extern "C" void __sinit_J3DMatBlock_cpp(); // 1
-extern "C" void __sinit_J3DDrawBuffer_cpp(); // 1
-extern "C" void __sinit_JMATrigonometric_cpp(); // 1
-extern "C" void __destroy_global_chain(); // 1
-extern "C" void __unregister_fragment(); // 1
-extern "C" void __register_fragment(); // 1
+extern "C" void __sinit_m_Do_main_cpp();
+extern "C" void __sinit_m_Do_audio_cpp();
+extern "C" void __sinit_m_Do_graphic_cpp();
+extern "C" void __sinit_m_Do_mtx_cpp();
+extern "C" void __sinit_m_Do_lib_cpp();
+extern "C" void __sinit_m_Do_dvd_thread_cpp();
+extern "C" void __sinit_m_Do_MemCard_cpp();
+extern "C" void __sinit_c_damagereaction_cpp();
+extern "C" void __sinit_f_ap_game_cpp();
+extern "C" void __sinit_f_op_actor_mng_cpp();
+extern "C" void __sinit_d_stage_cpp();
+extern "C" void __sinit_d_com_inf_game_cpp();
+extern "C" void __sinit_d_com_static_cpp();
+extern "C" void __sinit_d_map_path_cpp();
+extern "C" void __sinit_d_map_path_dmap_cpp();
+extern "C" void __sinit_d_event_lib_cpp();
+extern "C" void __sinit_d_particle_cpp();
+extern "C" void __sinit_d_particle_copoly_cpp();
+extern "C" void __sinit_d_drawlist_cpp();
+extern "C" void __sinit_d_attention_cpp();
+extern "C" void __sinit_d_ev_camera_cpp();
+extern "C" void __sinit_d_a_alink_cpp();
+extern "C" void __sinit_d_a_npc_cpp();
+extern "C" void __sinit_d_a_npc_cd_cpp();
+extern "C" void __sinit_d_a_npc_cd2_cpp();
+extern "C" void __sinit_d_a_obj_item_cpp();
+extern "C" void __sinit_d_camera_cpp();
+extern "C" void __sinit_d_file_select_cpp();
+extern "C" void __sinit_d_file_sel_warning_cpp();
+extern "C" void __sinit_d_file_sel_info_cpp();
+extern "C" void __sinit_d_bright_check_cpp();
+extern "C" void __sinit_d_scope_cpp();
+extern "C" void __sinit_d_select_icon_cpp();
+extern "C" void __sinit_d_shop_system_cpp();
+extern "C" void __sinit_d_gameover_cpp();
+extern "C" void __sinit_d_kankyo_cpp();
+extern "C" void __sinit_d_menu_calibration_cpp();
+extern "C" void __sinit_d_menu_collect_cpp();
+extern "C" void __sinit_d_menu_dmap_cpp();
+extern "C" void __sinit_d_menu_dmap_map_cpp();
+extern "C" void __sinit_d_menu_fishing_cpp();
+extern "C" void __sinit_d_menu_fmap_cpp();
+extern "C" void __sinit_d_menu_insect_cpp();
+extern "C" void __sinit_d_menu_item_explain_cpp();
+extern "C" void __sinit_d_menu_letter_cpp();
+extern "C" void __sinit_d_menu_option_cpp();
+extern "C" void __sinit_d_menu_ring_cpp();
+extern "C" void __sinit_d_menu_save_cpp();
+extern "C" void __sinit_d_menu_skill_cpp();
+extern "C" void __sinit_d_menu_window_HIO_cpp();
+extern "C" void __sinit_d_menu_window_cpp();
+extern "C" void __sinit_d_meter_HIO_cpp();
+extern "C" void __sinit_d_meter2_info_cpp();
+extern "C" void __sinit_d_msg_object_cpp();
+extern "C" void __sinit_d_msg_unit_cpp();
+extern "C" void __sinit_d_msg_scrn_3select_cpp();
+extern "C" void __sinit_d_msg_scrn_explain_cpp();
+extern "C" void __sinit_d_msg_scrn_howl_cpp();
+extern "C" void __sinit_d_msg_scrn_light_cpp();
+extern "C" void __sinit_d_msg_flow_cpp();
+extern "C" void __sinit_d_name_cpp();
+extern "C" void __sinit_d_pane_class_cpp();
+extern "C" void __sinit_d_s_logo_cpp();
+extern "C" void __sinit_d_s_name_cpp();
+extern "C" void __sinit_d_s_play_cpp();
+extern "C" void __sinit_d_save_HIO_cpp();
+extern "C" void __sinit_c_cc_d_cpp();
+extern "C" void __sinit_c_xyz_cpp();
+extern "C" void __sinit_c_sxyz_cpp();
+extern "C" void __sinit_c_m3d_cpp();
+extern "C" void __sinit_c_angle_cpp();
+extern "C" void __sinit_JFWDisplay_cpp();
+extern "C" void func_80288204();
+extern "C" void func_8028B198();
+extern "C" void func_8028C180();
+extern "C" void func_8028C8A4();
+extern "C" void func_8028D2B8();
+extern "C" void func_8028E0F4();
+extern "C" void __sinit_JASHeapCtrl_cpp();
+extern "C" void __sinit_JASCmdStack_cpp();
+extern "C" void __sinit_JASTrack_cpp();
+extern "C" void __sinit_JASSeqCtrl_cpp();
+extern "C" void __sinit_JASSeqParser_cpp();
+extern "C" void __sinit_JASBNKParser_cpp();
+extern "C" void __sinit_JASLfo_cpp();
+extern "C" void __sinit_JASDriverIF_cpp();
+extern "C" void __sinit_Z2Audience_cpp();
+extern "C" void __sinit_Z2SoundObjMgr_cpp();
+extern "C" void __sinit_Z2Creature_cpp();
+extern "C" void __sinit_Z2WolfHowlMgr_cpp();
+extern "C" void __sinit_JKRThread_cpp();
+extern "C" void __sinit_JKRAram_cpp();
+extern "C" void __sinit_JKRAramHeap_cpp();
+extern "C" void __sinit_JKRAramPiece_cpp();
+extern "C" void __sinit_JKRFileLoader_cpp();
+extern "C" void __sinit_JKRDvdFile_cpp();
+extern "C" void __sinit_JKRDvdRipper_cpp();
+extern "C" void __sinit_JKRDvdAramRipper_cpp();
+extern "C" void __sinit_JUTGamePad_cpp();
+extern "C" void __sinit_JUTException_cpp();
+extern "C" void __sinit_J2DPane_cpp();
+extern "C" void __sinit_J3DSys_cpp();
+extern "C" void __sinit_J3DShapeMtx_cpp();
+extern "C" void __sinit_J3DMatBlock_cpp();
+extern "C" void __sinit_J3DDrawBuffer_cpp();
+extern "C" void __sinit_JMATrigonometric_cpp();
+extern "C" void __destroy_global_chain();
+extern "C" void __unregister_fragment();
+extern "C" void __register_fragment();
 
 // 
 // Declarations:

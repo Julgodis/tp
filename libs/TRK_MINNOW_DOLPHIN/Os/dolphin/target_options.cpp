@@ -12,13 +12,14 @@
 // 
 
 
-extern "C" void GetUseSerialIO(); // 1
-extern "C" void SetUseSerialIO(); // 1
+extern "C" void GetUseSerialIO();
+extern "C" void SetUseSerialIO();
 
 // 
 // External References:
 // 
 
+SECTION_BSS extern u8 data_8044F828[8];
 
 SECTION_BSS extern u8 data_8044F828[8];
 

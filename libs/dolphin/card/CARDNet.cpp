@@ -11,8 +11,9 @@
 // Forward References:
 // 
 
+extern "C" extern u8 struct_80450A70[8];
 
-extern "C" void CARDGetSerialNo(); // 1
+extern "C" void CARDGetSerialNo();
 extern "C" extern u8 struct_80450A70[8];
 
 // 
@@ -20,8 +21,8 @@ extern "C" extern u8 struct_80450A70[8];
 // 
 
 
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
 
 // 
 // Declarations:

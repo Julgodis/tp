@@ -33,22 +33,22 @@ struct _GXBlendFactor {
 // Forward References:
 // 
 
-void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor); // 2
-void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8); // 2
-void GFSetZMode(u8, _GXCompare, u8); // 2
+void GFSetFog(_GXFogType, f32, f32, f32, f32, _GXColor);
+void GFSetBlendModeEtc(_GXBlendMode, _GXBlendFactor, _GXBlendFactor, _GXLogicOp, u8, u8, u8);
+void GFSetZMode(u8, _GXCompare, u8);
 
-extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor(); // 1
-extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc(); // 1
-extern "C" void GFSetZMode__FUc10_GXCompareUc(); // 1
+extern "C" void GFSetFog__F10_GXFogTypeffff8_GXColor();
+extern "C" void GFSetBlendModeEtc__F12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOpUcUcUc();
+extern "C" void GFSetZMode__FUc10_GXCompareUc();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

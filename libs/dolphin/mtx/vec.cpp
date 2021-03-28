@@ -12,18 +12,18 @@
 // 
 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECCrossProduct(); // 1
-extern "C" void C_VECHalfAngle(); // 1
-extern "C" void C_VECReflect(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void PSVECDistance(); // 1
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECCrossProduct();
+extern "C" void C_VECHalfAngle();
+extern "C" void C_VECReflect();
+extern "C" void PSVECSquareDistance();
+extern "C" void PSVECDistance();
 
 // 
 // External References:

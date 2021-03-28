@@ -129,10 +129,10 @@ struct Z2SeqMgr {
 	/* 802AFE18 */ void bgmStreamPlay();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -143,128 +143,140 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void getTelopNo(char const*); // 2
-static void getTelopNo(); // 2
-static void getStartTelopNo(); // 2
-static void dEvDt_Next_Stage(int, int); // 2
+static void getTelopNo(char const*);
+static void getTelopNo();
+static void getStartTelopNo();
+static void dEvDt_Next_Stage(int, int);
+extern "C" extern char const* const d_event_d_event_data__stringBase0;
 
-extern "C" static void getTelopNo__FPCc(); // 1
-extern "C" static void getTelopNo__Fv(); // 1
-extern "C" static void getStartTelopNo__Fv(); // 1
-extern "C" static void dEvDt_Next_Stage__Fii(); // 1
-extern "C" void flagCheck__11dEvDtFlag_cFi(); // 1
-extern "C" void flagSet__11dEvDtFlag_cFi(); // 1
-extern "C" void flagMaxCheck__11dEvDtFlag_cFi(); // 1
-extern "C" void init__11dEvDtFlag_cFv(); // 1
-extern "C" void finishCheck__12dEvDtEvent_cFv(); // 1
-extern "C" void forceFinish__12dEvDtEvent_cFv(); // 1
-extern "C" void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c(); // 1
-extern "C" void specialProc_WaitStart__12dEvDtStaff_cFi(); // 1
-extern "C" void specialProc_WaitProc__12dEvDtStaff_cFi(); // 1
-extern "C" void specialProc__12dEvDtStaff_cFv(); // 1
-extern "C" void init__12dEvDtStaff_cFv(); // 1
-extern "C" void advanceCut__12dEvDtStaff_cFi(); // 1
-extern "C" void specialProcLight__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcMessage__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcSound__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcCreate__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcDirector__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcPackage__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcTimekeeper__12dEvDtStaff_cFv(); // 1
-extern "C" void specialProcEffect__12dEvDtStaff_cFv(); // 1
-extern "C" void startCheck__10dEvDtCut_cFv(); // 1
-extern "C" void init__11dEvDtBase_cFv(); // 1
-extern "C" void init__11dEvDtBase_cFPci(); // 1
-extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c(); // 1
-extern "C" void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c(); // 1
+extern "C" static void getTelopNo__FPCc();
+extern "C" static void getTelopNo__Fv();
+extern "C" static void getStartTelopNo__Fv();
+extern "C" static void dEvDt_Next_Stage__Fii();
+extern "C" void flagCheck__11dEvDtFlag_cFi();
+extern "C" void flagSet__11dEvDtFlag_cFi();
+extern "C" void flagMaxCheck__11dEvDtFlag_cFi();
+extern "C" void init__11dEvDtFlag_cFv();
+extern "C" void finishCheck__12dEvDtEvent_cFv();
+extern "C" void forceFinish__12dEvDtEvent_cFv();
+extern "C" void specialStaffProc__12dEvDtEvent_cFP12dEvDtStaff_c();
+extern "C" void specialProc_WaitStart__12dEvDtStaff_cFi();
+extern "C" void specialProc_WaitProc__12dEvDtStaff_cFi();
+extern "C" void specialProc__12dEvDtStaff_cFv();
+extern "C" void init__12dEvDtStaff_cFv();
+extern "C" void advanceCut__12dEvDtStaff_cFi();
+extern "C" void specialProcLight__12dEvDtStaff_cFv();
+extern "C" void specialProcMessage__12dEvDtStaff_cFv();
+extern "C" void specialProcSound__12dEvDtStaff_cFv();
+extern "C" void specialProcCreate__12dEvDtStaff_cFv();
+extern "C" void specialProcDirector__12dEvDtStaff_cFv();
+extern "C" void specialProcPackage__12dEvDtStaff_cFv();
+extern "C" void specialProcTimekeeper__12dEvDtStaff_cFv();
+extern "C" void specialProcEffect__12dEvDtStaff_cFv();
+extern "C" void startCheck__10dEvDtCut_cFv();
+extern "C" void init__11dEvDtBase_cFv();
+extern "C" void init__11dEvDtBase_cFPci();
+extern "C" void advanceCut__11dEvDtBase_cFP12dEvDtEvent_c();
+extern "C" void advanceCutLocal__11dEvDtBase_cFP12dEvDtStaff_c();
 extern "C" extern char const* const d_event_d_event_data__stringBase0;
 
 // 
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_searchFromName4Event(char const*, s16); // 2
-void fopMsgM_SearchByID(unsigned int); // 2
-void fopMsgM_messageSet(u32, u32); // 2
-void fopMsgM_messageSetDemo(u32); // 2
-void dStage_searchName(char const*); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int); // 2
-void dComIfGs_onStageSwitch(int, int); // 2
-void dComIfGs_offStageSwitch(int, int); // 2
-void dComIfGs_isStageSwitch(int, int); // 2
-void dEv_defaultSkipProc(void*, int); // 2
-void dCam_getBody(); // 2
-void d_GameOver_Create(u8); // 2
-void d_GameOver_Delete(unsigned int&); // 2
-void dKy_set_nexttime(f32); // 2
-void dKy_instant_timechg(f32); // 2
-void dKy_instant_rainchg(); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_searchFromName4Event(char const*, s16);
+void fopMsgM_SearchByID(unsigned int);
+void fopMsgM_messageSet(u32, u32);
+void fopMsgM_messageSetDemo(u32);
+void dStage_searchName(char const*);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dComIfGs_onStageSwitch(int, int);
+void dComIfGs_offStageSwitch(int, int);
+void dComIfGs_isStageSwitch(int, int);
+void dEv_defaultSkipProc(void*, int);
+void dCam_getBody();
+void d_GameOver_Create(u8);
+void d_GameOver_Delete(unsigned int&);
+void dKy_set_nexttime(f32);
+void dKy_instant_timechg(f32);
+void dKy_instant_rainchg();
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern f32 mFadeRate__13mDoGph_gInf_c;
+extern "C" extern u8 struct_80450BE4[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_control__7dDemo_c[4];
+extern "C" extern u8 m_frameNoMsg__7dDemo_c[4];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern f32 mWipeRate__12dDlst_list_c;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_searchFromName4Event__FPCcs(); // 1
-extern "C" void fopMsgM_SearchByID__FUi(); // 1
-extern "C" void fopMsgM_messageSet__FUlUl(); // 1
-extern "C" void fopMsgM_messageSetDemo__FUl(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dStage_searchName__FPCc(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii(); // 1
-extern "C" void dComIfGs_onStageSwitch__Fii(); // 1
-extern "C" void dComIfGs_offStageSwitch__Fii(); // 1
-extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void start__7dDemo_cFPCUcP4cXyzf(); // 1
-extern "C" void end__7dDemo_cFv(); // 1
-extern "C" void dEv_defaultSkipProc__FPvi(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void setSkipZev__14dEvt_control_cFPvPc(); // 1
-extern "C" void getStageEventDt__14dEvt_control_cFv(); // 1
-extern "C" void convPId__14dEvt_control_cFUi(); // 1
-extern "C" void getStbDemoData__14dEvt_control_cFPc(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
-extern "C" void setPt2__14dEvt_control_cFPv(); // 1
-extern "C" void setPtT__14dEvt_control_cFPv(); // 1
-extern "C" void setPtI__14dEvt_control_cFPv(); // 1
-extern "C" void setPtD__14dEvt_control_cFPv(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyNowCutName__16dEvent_manager_cFi(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void wipeIn__12dDlst_list_cFf(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void d_GameOver_Create__FUc(); // 1
-extern "C" void d_GameOver_Delete__FRUi(); // 1
-extern "C" void dKy_set_nexttime__Ff(); // 1
-extern "C" void dKy_instant_timechg__Ff(); // 1
-extern "C" void dKy_instant_rainchg__Fv(); // 1
-extern "C" void demoMessageGroup__12dMsgObject_cFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void bgmStop__8Z2SeqMgrFUll(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_searchFromName4Event__FPCcs();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void fopMsgM_messageSetDemo__FUl();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dStage_searchName__FPCc();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfGs_onStageSwitch__Fii();
+extern "C" void dComIfGs_offStageSwitch__Fii();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void start__7dDemo_cFPCUcP4cXyzf();
+extern "C" void end__7dDemo_cFv();
+extern "C" void dEv_defaultSkipProc__FPvi();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void setSkipZev__14dEvt_control_cFPvPc();
+extern "C" void getStageEventDt__14dEvt_control_cFv();
+extern "C" void convPId__14dEvt_control_cFUi();
+extern "C" void getStbDemoData__14dEvt_control_cFPc();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void setPt2__14dEvt_control_cFPv();
+extern "C" void setPtT__14dEvt_control_cFPv();
+extern "C" void setPtI__14dEvt_control_cFPv();
+extern "C" void setPtD__14dEvt_control_cFPv();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyNowCutName__16dEvent_manager_cFi();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void getMySubstanceNum__16dEvent_manager_cFiPCc();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void wipeIn__12dDlst_list_cFf();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFPCUcii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void StartBlure__9dCamera_cFiP10fopAc_ac_cff();
+extern "C" void dCam_getBody__Fv();
+extern "C" void d_GameOver_Create__FUc();
+extern "C" void d_GameOver_Delete__FRUi();
+extern "C" void dKy_set_nexttime__Ff();
+extern "C" void dKy_instant_timechg__Ff();
+extern "C" void dKy_instant_rainchg__Fv();
+extern "C" void demoMessageGroup__12dMsgObject_cFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

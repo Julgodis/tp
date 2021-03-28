@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void ceil(); // 1
+extern "C" void ceil();
 
 // 
 // External References:

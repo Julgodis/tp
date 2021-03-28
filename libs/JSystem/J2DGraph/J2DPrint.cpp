@@ -55,46 +55,47 @@ struct J2DPrint {
 // 
 
 
-extern "C" static void J2DPrint_print_alpha_va(); // 1
-extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void __dt__8J2DPrintFv(); // 1
-extern "C" void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb(); // 1
-extern "C" void setBuffer__8J2DPrintFUl(); // 1
-extern "C" void setFontSize__8J2DPrintFv(); // 1
-extern "C" void locate__8J2DPrintFff(); // 1
-extern "C" void print__8J2DPrintFffUcPCce(); // 1
-extern "C" void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc(); // 1
-extern "C" void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb(); // 1
-extern "C" void doCtrlCode__8J2DPrintFi(); // 1
-extern "C" void doEscapeCode__8J2DPrintFPPCUcUc(); // 1
-extern "C" void initchar__8J2DPrintFv(); // 1
-extern "C" void getNumberS32__8J2DPrintFPPCUclli(); // 1
-extern "C" void getNumberF32__8J2DPrintFPPCUcffi(); // 1
+extern "C" static void J2DPrint_print_alpha_va();
+extern "C" void __ct__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void __dt__8J2DPrintFv();
+extern "C" void private_initiate__8J2DPrintFP7JUTFontffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorb();
+extern "C" void setBuffer__8J2DPrintFUl();
+extern "C" void setFontSize__8J2DPrintFv();
+extern "C" void locate__8J2DPrintFff();
+extern "C" void print__8J2DPrintFffUcPCce();
+extern "C" void printReturn__8J2DPrintFPCcff18J2DTextBoxHBinding18J2DTextBoxVBindingffUc();
+extern "C" void parse__8J2DPrintFPCUciiPUsRQ28J2DPrint5TSizeUcb();
+extern "C" void doCtrlCode__8J2DPrintFi();
+extern "C" void doEscapeCode__8J2DPrintFPPCUcUc();
+extern "C" void initchar__8J2DPrintFv();
+extern "C" void getNumberS32__8J2DPrintFPPCUclli();
+extern "C" void getNumberF32__8J2DPrintFPPCUcffi();
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strlen(); // 1
-extern "C" void strtol(); // 1
-extern "C" void strtoul(); // 1
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void vsnprintf();
+extern "C" void strlen();
+extern "C" void strtol();
+extern "C" void strtoul();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 
 // 

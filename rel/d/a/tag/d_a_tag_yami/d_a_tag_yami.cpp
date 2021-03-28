@@ -91,54 +91,66 @@ struct cCcD_GStts {
 // Forward References:
 // 
 
-static void daTagYami_Create(fopAc_ac_c*); // 2
-static void daTagYami_Execute(fopAc_ac_c*); // 2
-static void daTagYami_Delete(daTagYami_c*); // 2
+static void daTagYami_Create(fopAc_ac_c*);
+static void daTagYami_Execute(fopAc_ac_c*);
+static void daTagYami_Delete(daTagYami_c*);
+extern "C" extern void* g_profile_TAG_YAMI[12];
 
-extern "C" void create__11daTagYami_cFv(); // 1
-extern "C" void Execute__11daTagYami_cFv(); // 1
-extern "C" void calcCoC__11daTagYami_cFR4cXyz(); // 1
-extern "C" void col_set__11daTagYami_cFv(); // 1
-extern "C" void chk_CoHit__11daTagYami_cFv(); // 1
-extern "C" void getPlDist__11daTagYami_cFv(); // 1
-extern "C" void onMidnaTagSw__11daTagYami_cFv(); // 1
-extern "C" void offMidnaTagSw2__11daTagYami_cFv(); // 1
-extern "C" static void daTagYami_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagYami_Execute__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagYami_Delete__FP11daTagYami_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void setCoC__11daTagYami_cF4cXyz(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
+extern "C" void create__11daTagYami_cFv();
+extern "C" void Execute__11daTagYami_cFv();
+extern "C" void calcCoC__11daTagYami_cFR4cXyz();
+extern "C" void col_set__11daTagYami_cFv();
+extern "C" void chk_CoHit__11daTagYami_cFv();
+extern "C" void getPlDist__11daTagYami_cFv();
+extern "C" void onMidnaTagSw__11daTagYami_cFv();
+extern "C" void offMidnaTagSw2__11daTagYami_cFv();
+extern "C" static void daTagYami_Create__FP10fopAc_ac_c();
+extern "C" static void daTagYami_Execute__FP10fopAc_ac_c();
+extern "C" static void daTagYami_Delete__FP11daTagYami_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void setCoC__11daTagYami_cF4cXyz();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
 extern "C" extern void* g_profile_TAG_YAMI[12];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
 
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

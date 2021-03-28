@@ -32,10 +32,10 @@ struct daObjKKanban_c {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -73,10 +73,10 @@ struct dCcD_GObjInf {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -126,29 +126,31 @@ struct J3DJoint {
 // Forward References:
 // 
 
-static void nodeCallBack(J3DJoint*, int); // 2
-static void daObjKKanban_create1st(daObjKKanban_c*); // 2
-static void daObjKKanban_MoveBGDelete(daObjKKanban_c*); // 2
-static void daObjKKanban_MoveBGExecute(daObjKKanban_c*); // 2
-static void daObjKKanban_MoveBGDraw(daObjKKanban_c*); // 2
+static void nodeCallBack(J3DJoint*, int);
+static void daObjKKanban_create1st(daObjKKanban_c*);
+static void daObjKKanban_MoveBGDelete(daObjKKanban_c*);
+static void daObjKKanban_MoveBGExecute(daObjKKanban_c*);
+static void daObjKKanban_MoveBGDraw(daObjKKanban_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_KKanban[12];
 
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void initBaseMtx__14daObjKKanban_cFv(); // 1
-extern "C" void setBaseMtx__14daObjKKanban_cFv(); // 1
-extern "C" void Create__14daObjKKanban_cFv(); // 1
-extern "C" void setTG__14daObjKKanban_cFv(); // 1
-extern "C" void CreateHeap__14daObjKKanban_cFv(); // 1
-extern "C" void create1st__14daObjKKanban_cFv(); // 1
-extern "C" void Execute__14daObjKKanban_cFPPA3_A4_f(); // 1
-extern "C" void Draw__14daObjKKanban_cFv(); // 1
-extern "C" void Delete__14daObjKKanban_cFv(); // 1
-extern "C" static void daObjKKanban_create1st__FP14daObjKKanban_c(); // 1
-extern "C" void __dt__8cM3dGTriFv(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" static void daObjKKanban_MoveBGDelete__FP14daObjKKanban_c(); // 1
-extern "C" static void daObjKKanban_MoveBGExecute__FP14daObjKKanban_c(); // 1
-extern "C" static void daObjKKanban_MoveBGDraw__FP14daObjKKanban_c(); // 1
+extern "C" static void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__14daObjKKanban_cFv();
+extern "C" void setBaseMtx__14daObjKKanban_cFv();
+extern "C" void Create__14daObjKKanban_cFv();
+extern "C" void setTG__14daObjKKanban_cFv();
+extern "C" void CreateHeap__14daObjKKanban_cFv();
+extern "C" void create1st__14daObjKKanban_cFv();
+extern "C" void Execute__14daObjKKanban_cFPPA3_A4_f();
+extern "C" void Draw__14daObjKKanban_cFv();
+extern "C" void Delete__14daObjKKanban_cFv();
+extern "C" static void daObjKKanban_create1st__FP14daObjKKanban_c();
+extern "C" void __dt__8cM3dGTriFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" static void daObjKKanban_MoveBGDelete__FP14daObjKKanban_c();
+extern "C" static void daObjKKanban_MoveBGExecute__FP14daObjKKanban_c();
+extern "C" static void daObjKKanban_MoveBGDraw__FP14daObjKKanban_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_KKanban[12];
 
@@ -156,57 +158,70 @@ extern "C" extern void* g_profile_Obj_KKanban[12];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cLib_addCalc0(f32*, f32, f32); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cLib_addCalc0(f32*, f32, f32);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Tri[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_TriAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_TriFRC11dCcD_SrcTri(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec(); // 1
-extern "C" void cLib_addCalc0__FPfff(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_TriFRC11dCcD_SrcTri();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void setPos__8cM3dGTriFPC3VecPC3VecPC3Vec();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void __dl__FPv();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Tri[36];

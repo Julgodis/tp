@@ -42,29 +42,30 @@ struct JASBank {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__7JASBank[5];
 
-extern "C" void __ct__12JASBasicBankFv(); // 1
-extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap(); // 1
-extern "C" void getInstParam__12JASBasicBankCFiiiP12JASInstParam(); // 1
-extern "C" void setInst__12JASBasicBankFiP7JASInst(); // 1
-extern "C" void getInst__12JASBasicBankCFi(); // 1
-extern "C" void __dt__7JASBankFv(); // 1
-extern "C" void __dt__12JASBasicBankFv(); // 1
-extern "C" void getType__12JASBasicBankCFv(); // 1
+extern "C" void __ct__12JASBasicBankFv();
+extern "C" void newInstTable__12JASBasicBankFUcP7JKRHeap();
+extern "C" void getInstParam__12JASBasicBankCFiiiP12JASInstParam();
+extern "C" void setInst__12JASBasicBankFiP7JASInst();
+extern "C" void getInst__12JASBasicBankCFi();
+extern "C" void __dt__7JASBankFv();
+extern "C" void __dt__12JASBasicBankFv();
+extern "C" void getType__12JASBasicBankCFv();
 extern "C" extern void* __vt__7JASBank[5];
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
 
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

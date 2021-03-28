@@ -20,10 +20,10 @@ struct JGeometry {
 
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
 struct JAISoundStarter {
@@ -37,17 +37,18 @@ struct JAISoundStarter {
 // 
 
 
-extern "C" void __ct__15JAISoundStarterFb(); // 1
-extern "C" void __dt__15JAISoundStarterFv(); // 1
-extern "C" void func_802A2FEC(); // 1
+extern "C" void __ct__15JAISoundStarterFb();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void func_802A2FEC();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B78[4];
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 extern "C" extern u8 data_80450B78[4];
 
 // 

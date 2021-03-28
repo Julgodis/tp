@@ -12,17 +12,17 @@
 // 
 
 
-extern "C" void MWExitCriticalSection(); // 1
-extern "C" void MWEnterCriticalSection(); // 1
-extern "C" void MWInitializeCriticalSection(); // 1
+extern "C" void MWExitCriticalSection();
+extern "C" void MWEnterCriticalSection();
+extern "C" void MWInitializeCriticalSection();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
 
 // 
 // Declarations:

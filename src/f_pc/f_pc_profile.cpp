@@ -11,9 +11,10 @@
 // Forward References:
 // 
 
-void fpcPf_Get(s16); // 2
+void fpcPf_Get(s16);
+extern "C" extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
-extern "C" void fpcPf_Get__Fs(); // 1
+extern "C" void fpcPf_Get__Fs();
 extern "C" extern u8 g_fpcPf_ProfileList_p[4 + 4 /* padding */];
 
 // 

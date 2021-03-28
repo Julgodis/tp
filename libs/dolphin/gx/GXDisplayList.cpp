@@ -12,15 +12,16 @@
 // 
 
 
-extern "C" void GXCallDisplayList(); // 1
+extern "C" void GXCallDisplayList();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __GXData;
 
-extern "C" void __GXSetDirtyState(); // 1
-extern "C" void __GXSendFlushPrim(); // 1
+extern "C" void __GXSetDirtyState();
+extern "C" void __GXSendFlushPrim();
 extern "C" extern void* __GXData;
 
 // 

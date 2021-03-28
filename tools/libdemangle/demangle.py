@@ -206,6 +206,32 @@ class ParseCtx:
         self.is_const = False
         self.func_name = None
         self.special_func_name = None
+        self.not_function = False
+
+    def demangle_variable(self):
+        match = None
+        for match in find_double_underscore.finditer(self.mangled):
+            pass
+        if not match:
+            return
+        split_pos = match.start()
+        if split_pos == -1 or split_pos == 0:
+            return
+
+        self.not_function = True
+        self.func_name = self.mangled[:split_pos]
+        self.mangled = self.mangled[split_pos+2:]
+
+        self.demangle_first_class_variable()
+        self.func_name = QualifiedName([
+            self.demangle_str_to_class_name(x)
+            for x in self.func_name.split("::")
+        ])
+        parts = []
+        if self.class_name:
+            parts += self.class_name.parts
+        parts += self.func_name.parts
+        self.full_name = QualifiedName(parts)
 
     def demangle(self):
         # this split is still not accurate, but good enough for most cases
@@ -271,6 +297,13 @@ class ParseCtx:
         else:
             if self.consume_next_char() != 'F':
                 raise ParseError('next char should be F!')
+
+    def demangle_first_class_variable(self):
+        if self.peek_next_char().isdecimal():
+            self.class_name = QualifiedName([self.demangle_class()])
+        elif self.peek_next_char() == 'Q':
+            self.index += 1
+            self.class_name = self.demangle_qualified_name()
 
     def apply_prev_types(self, cur_type, types):
         for type_char in reversed(types):
@@ -504,6 +537,8 @@ class ParseCtx:
         return self.mangled[self.index]
 
     def to_str(self) -> str:
+        if self.not_function:
+            return self.class_name.to_str() + '::' + self.func_name.to_str()
         if self.func_name is None:
             return ''
         elif self.class_name is None:

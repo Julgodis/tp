@@ -24,30 +24,31 @@ struct create_tag_class {
 // Forward References:
 // 
 
-void fopDwTg_ToDrawQ(create_tag_class*, int); // 2
-void fopDwTg_DrawQTo(create_tag_class*); // 2
-void fopDwTg_Init(create_tag_class*, void*); // 2
-void fopDwTg_CreateQueue(); // 2
+void fopDwTg_ToDrawQ(create_tag_class*, int);
+void fopDwTg_DrawQTo(create_tag_class*);
+void fopDwTg_Init(create_tag_class*, void*);
+void fopDwTg_CreateQueue();
+extern "C" extern u8 g_fopDwTg_Queue[8];
 
-extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi(); // 1
-extern "C" void fopDwTg_DrawQTo__FP16create_tag_class(); // 1
-extern "C" void fopDwTg_Init__FP16create_tag_classPv(); // 1
-extern "C" void fopDwTg_CreateQueue__Fv(); // 1
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void fopDwTg_Init__FP16create_tag_classPv();
+extern "C" void fopDwTg_CreateQueue__Fv();
 extern "C" extern u8 g_fopDwTg_Queue[8];
 
 // 
 // External References:
 // 
 
-void cTr_Create(node_lists_tree_class*, node_list_class*, int); // 2
-void cTg_SingleCutFromTree(create_tag_class*); // 2
-void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*); // 2
-void cTg_Create(create_tag_class*, void*); // 2
+void cTr_Create(node_lists_tree_class*, node_list_class*, int);
+void cTg_SingleCutFromTree(create_tag_class*);
+void cTg_AdditionToTree(node_lists_tree_class*, int, create_tag_class*);
+void cTg_Create(create_tag_class*, void*);
 
-extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi(); // 1
-extern "C" void cTg_SingleCutFromTree__FP16create_tag_class(); // 1
-extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class(); // 1
-extern "C" void cTg_Create__FP16create_tag_classPv(); // 1
+extern "C" void cTr_Create__FP21node_lists_tree_classP15node_list_classi();
+extern "C" void cTg_SingleCutFromTree__FP16create_tag_class();
+extern "C" void cTg_AdditionToTree__FP21node_lists_tree_classiP16create_tag_class();
+extern "C" void cTg_Create__FP16create_tag_classPv();
 
 // 
 // Declarations:

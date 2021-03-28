@@ -85,17 +85,19 @@ struct J3DLightInfo {
 // Forward References:
 // 
 
-static void dkWmark_Create(kankyo_class*); // 2
-static void dkWmark_Delete(dkWmark_c*); // 2
-static void dkWmark_Execute(dkWmark_c*); // 2
-static void dkWmark_Draw(dkWmark_c*); // 2
+static void dkWmark_Create(kankyo_class*);
+static void dkWmark_Delete(dkWmark_c*);
+static void dkWmark_Execute(dkWmark_c*);
+static void dkWmark_Draw(dkWmark_c*);
+extern "C" extern char const* const d_d_k_wmark__stringBase0;
+extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 
-extern "C" static void dkWmark_Create__FP12kankyo_class(); // 1
-extern "C" void __dt__9dkWmark_cFv(); // 1
-extern "C" static void dkWmark_Delete__FP9dkWmark_c(); // 1
-extern "C" void setMatrix__9dkWmark_cFv(); // 1
-extern "C" static void dkWmark_Execute__FP9dkWmark_c(); // 1
-extern "C" static void dkWmark_Draw__FP9dkWmark_c(); // 1
+extern "C" static void dkWmark_Create__FP12kankyo_class();
+extern "C" void __dt__9dkWmark_cFv();
+extern "C" static void dkWmark_Delete__FP9dkWmark_c();
+extern "C" void setMatrix__9dkWmark_cFv();
+extern "C" static void dkWmark_Execute__FP9dkWmark_c();
+extern "C" static void dkWmark_Draw__FP9dkWmark_c();
 extern "C" extern char const* const d_d_k_wmark__stringBase0;
 extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 
@@ -103,48 +105,62 @@ extern "C" extern void* g_profile_WMARK[10 + 1 /* padding */];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_createSolidHeapFromGameToCurrent(u32, u32); // 2
-void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopKyM_Delete(void*); // 2
-void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
-void cM_atan2s(f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapFromGameToCurrent(u32, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopKyM_Delete(void*);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
+void cM_atan2s(f32, f32);
+void operator delete(void*);
+extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl(); // 1
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__11J3DLightObjFv(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void fopKyM_Delete__FPv(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void abs(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapFromGameToCurrent__FUlUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fopKyM_Delete__FPv();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void clip__11J3DUClipperCFPA4_Cf3Vecf();
+extern "C" void __dl__FPv();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void abs();
 extern "C" extern u8 const j3dDefaultLightInfo[52];
 extern "C" extern void* __vt__8cM3dGPla[3];
 extern "C" extern void* g_fopKy_Method[5 + 1 /* padding */];

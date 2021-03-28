@@ -32,22 +32,15 @@ struct dJntCol_c {
 	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
-struct dCcD_GStts {
+struct cCcD_GObjInf {
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
+struct dCcD_GStts {
 };
 
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 80263970 */ void PlusDmg(int);
-};
-
-struct cCcD_GObjInf {
-};
-
-struct cCcD_GStts {
 };
 
 struct dCcD_GObjInf {
@@ -58,6 +51,13 @@ struct cCcD_ShapeAttr {
 	struct Shape {
 	};
 
+};
+
+struct cCcD_GStts {
+};
+
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
 };
 
 struct dCcS {
@@ -145,88 +145,99 @@ struct Vec {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__4dCcS[13];
 
-extern "C" void Ct__4dCcSFv(); // 1
-extern "C" void Dt__4dCcSFv(); // 1
-extern "C" void ChkShieldFrontRange__4dCcSFP8cCcD_ObjP8cCcD_ObjiPC4cXyz(); // 1
-extern "C" void ChkShield__4dCcSFP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfPC4cXyz(); // 1
-extern "C" void CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts(); // 1
-extern "C" void ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" void SetCoGObjInf__4dCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts(); // 1
-extern "C" void GetRank__4dCcSFUc(); // 1
-extern "C" bool ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf(); // 1
-extern "C" void CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csXyz(); // 1
-extern "C" void ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10dCcD_GSttsP10dCcD_GSttsP4cXyzb(); // 1
-extern "C" void SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz(); // 1
-extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void chkCameraPoint__4dCcSFRC4cXyzPQ214cCcD_ShapeAttr5ShapeP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void __dt__12cCcD_SphAttrFv(); // 1
-extern "C" void MoveAfterCheck__4dCcSFv(); // 1
-extern "C" void DrawAfter__4dCcSFv(); // 1
-extern "C" void Move__4dCcSFv(); // 1
-extern "C" void Draw__4dCcSFv(); // 1
-extern "C" void MassClear__4dCcSFv(); // 1
-extern "C" void ChkAtTgMtrlHit__4dCcSFUcUc(); // 1
-extern "C" void ChkNoHitGAtTg__4dCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts(); // 1
+extern "C" void Ct__4dCcSFv();
+extern "C" void Dt__4dCcSFv();
+extern "C" void ChkShieldFrontRange__4dCcSFP8cCcD_ObjP8cCcD_ObjiPC4cXyz();
+extern "C" void ChkShield__4dCcSFP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfPC4cXyz();
+extern "C" void CalcTgPlusDmg__4dCcSFP8cCcD_ObjP8cCcD_ObjP9cCcD_SttsP9cCcD_Stts();
+extern "C" void ChkAtTgHitAfterCross__4dCcSFbbPC12cCcD_GObjInfPC12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+extern "C" void SetCoGObjInf__4dCcSFbbP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GStts();
+extern "C" void GetRank__4dCcSFUc();
+extern "C" bool ChkNoHitGCo__4dCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void SetPosCorrect__4dCcSFP8cCcD_ObjP4cXyzP8cCcD_ObjP4cXyzf();
+extern "C" void CalcParticleAngle__4dCcSFP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP5csXyz();
+extern "C" void ProcAtTgHitmark__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12dCcD_GObjInfP12dCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10dCcD_GSttsP10dCcD_GSttsP4cXyzb();
+extern "C" void SetAtTgGObjInf__4dCcSFbbP8cCcD_ObjP8cCcD_ObjP12cCcD_GObjInfP12cCcD_GObjInfP9cCcD_SttsP9cCcD_SttsP10cCcD_GSttsP10cCcD_GSttsP4cXyz();
+extern "C" void ChkCamera__4dCcSFR4cXyzR4cXyzfP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void chkCameraPoint__4dCcSFRC4cXyzPQ214cCcD_ShapeAttr5ShapeP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void __dt__12cCcD_SphAttrFv();
+extern "C" void MoveAfterCheck__4dCcSFv();
+extern "C" void DrawAfter__4dCcSFv();
+extern "C" void Move__4dCcSFv();
+extern "C" void Draw__4dCcSFv();
+extern "C" void MassClear__4dCcSFv();
+extern "C" void ChkAtTgMtrlHit__4dCcSFUcUc();
+extern "C" void ChkNoHitGAtTg__4dCcSFPC12cCcD_GObjInfPC12cCcD_GObjInfP10cCcD_GSttsP10cCcD_GStts();
 extern "C" extern void* __vt__4dCcS[13];
 
 // 
 // External References:
 // 
 
-void cM3d_CalcVecZAngle(Vec const&, csXyz*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
+void cM3d_CalcVecZAngle(Vec const&, csXyz*);
+void cLib_distanceAngleS(s16, s16);
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__15cCcD_DivideInfo[3];
+extern "C" extern void* __vt__8cM3dGSph[3];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__12cCcD_CpsAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 BaseZ__4cXyz[12];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __dt__4dCcSFv(); // 1
-extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
-extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl(); // 1
-extern "C" void SetHitApid__22dCcD_GAtTgCoCommonBaseFUi(); // 1
-extern "C" void SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv(); // 1
-extern "C" void ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv(); // 1
-extern "C" void ChkAtNoGuard__12dCcD_GObjInfFv(); // 1
-extern "C" void Ct__12dCcMassS_MngFv(); // 1
-extern "C" void Clear__12dCcMassS_MngFv(); // 1
-extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo(); // 1
-extern "C" void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab(); // 1
-extern "C" void PlusCcMove__9cCcD_SttsFfff(); // 1
-extern "C" void PlusDmg__9cCcD_SttsFi(); // 1
-extern "C" void GetAc__8cCcD_ObjFv(); // 1
-extern "C" void CalcAabBox__12cCcD_CpsAttrFv(); // 1
-extern "C" void CalcAabBox__12cCcD_SphAttrFv(); // 1
-extern "C" void Ct__4cCcSFv(); // 1
-extern "C" void Dt__4cCcSFv(); // 1
-extern "C" void Move__4cCcSFv(); // 1
-extern "C" void DrawClear__4cCcSFv(); // 1
-extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj(); // 1
-extern "C" void cM3d_CalcVecZAngle__FRC3VecP5csXyz(); // 1
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void __dt__8cM3dGCpsFv(); // 1
-extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf(); // 1
-extern "C" void Set__8cM3dGSphFRC9cM3dGSphS(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECNormalize(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __dt__4dCcSFv();
+extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
+extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl();
+extern "C" void SetHitApid__22dCcD_GAtTgCoCommonBaseFUi();
+extern "C" void SetEffCounterTimer__22dCcD_GAtTgCoCommonBaseFv();
+extern "C" void ChkEffCounter__22dCcD_GAtTgCoCommonBaseFv();
+extern "C" void ChkAtNoGuard__12dCcD_GObjInfFv();
+extern "C" void Ct__12dCcMassS_MngFv();
+extern "C" void Clear__12dCcMassS_MngFv();
+extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
+extern "C" void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab();
+extern "C" void PlusCcMove__9cCcD_SttsFfff();
+extern "C" void PlusDmg__9cCcD_SttsFi();
+extern "C" void GetAc__8cCcD_ObjFv();
+extern "C" void CalcAabBox__12cCcD_CpsAttrFv();
+extern "C" void CalcAabBox__12cCcD_SphAttrFv();
+extern "C" void Ct__4cCcSFv();
+extern "C" void Dt__4cCcSFv();
+extern "C" void Move__4cCcSFv();
+extern "C" void DrawClear__4cCcSFv();
+extern "C" void SetCoGCorrectProc__4cCcSFP8cCcD_ObjP8cCcD_Obj();
+extern "C" void cM3d_CalcVecZAngle__FRC3VecP5csXyz();
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void Set__8cM3dGCpsFRC4cXyzRC4cXyzf();
+extern "C" void Set__8cM3dGSphFRC9cM3dGSphS();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECNormalize();
+extern "C" void PSVECMag();
+extern "C" void PSVECDotProduct();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__8cM3dGAab[3];
 extern "C" extern void* __vt__15cCcD_DivideInfo[3];
 extern "C" extern void* __vt__8cM3dGSph[3];

@@ -18,10 +18,10 @@ struct mDoGph_gInf_c {
 	/* 80007FD8 */ void fadeOut(f32, _GXColor&);
 };
 
-struct Vec {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct Vec {
 };
 
 struct mDoExt_McaMorf {
@@ -52,14 +52,14 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct cXyz {
 	/* 80009184 */ ~cXyz();
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -70,10 +70,10 @@ struct dMsgObject_c {
 	/* 80237AB0 */ void setDemoMessage(u32);
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
 struct JStage {
@@ -114,10 +114,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -273,9 +273,6 @@ struct JUTNameTab {
 	/* 802DEA58 */ void getIndex(char const*) const;
 };
 
-struct JPABaseEmitter {
-};
-
 namespace JStudio {
 	namespace ctb {
 		struct TControl {
@@ -354,6 +351,9 @@ namespace JStudio {
 
 };
 
+struct JPABaseEmitter {
+};
+
 struct JStudio_JParticle {
 	struct TCreateObject {
 		/* 8028E3A0 */ ~TCreateObject();
@@ -384,97 +384,109 @@ namespace JGadget {
 // Forward References:
 // 
 
-static void dDemo_getJaiPointer(char const*, u32, int, u16*); // 2
-void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8); // 2
-static void branchFile(char const*); // 2
-static void getView(); // 2
+static void dDemo_getJaiPointer(char const*, u32, int, u16*);
+void dDemo_setDemoData(fopAc_ac_c*, u8, mDoExt_McaMorf*, char const*, int, u16*, u32, s8);
+static void branchFile(char const*);
+static void getView();
+extern "C" extern char const* const d_d_demo__stringBase0;
+extern "C" extern void* __vt__17jmessage_tControl[3];
+extern "C" extern void* __vt__Q27JStudio13TCreateObject[4];
+extern "C" extern void* __vt__Q27JStudio16TAdaptor_message[9];
+extern "C" extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
+extern "C" extern u8 m_control__7dDemo_c[4];
+extern "C" extern u8 m_mesgControl__7dDemo_c[4];
+extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 m_frame__7dDemo_c[4];
+extern "C" extern u8 m_frameNoMsg__7dDemo_c[4];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern u8 m_status__7dDemo_c[4];
 
-extern "C" static void func_80037DE4(); // 1
-extern "C" static void func_80037E44(); // 1
-extern "C" static void func_80037E74(); // 1
-extern "C" static void func_80037ED4(); // 1
-extern "C" void __ct__13dDemo_actor_cFv(); // 1
-extern "C" void __dt__13dDemo_actor_cFv(); // 1
-extern "C" void getActor__13dDemo_actor_cFv(); // 1
-extern "C" void setActor__13dDemo_actor_cFP10fopAc_ac_c(); // 1
-extern "C" void getPrm_Morf__13dDemo_actor_cFv(); // 1
-extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc(); // 1
-extern "C" static void dDemo_getJaiPointer__FPCcUliPUs(); // 1
-extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc(); // 1
-extern "C" static void branchFile__FPCc(); // 1
-extern "C" void JSGSetData__13dDemo_actor_cFUlPCvUl(); // 1
-extern "C" void JSGSetTranslation__13dDemo_actor_cFRC3Vec(); // 1
-extern "C" void JSGSetScaling__13dDemo_actor_cFRC3Vec(); // 1
-extern "C" void JSGSetRotation__13dDemo_actor_cFRC3Vec(); // 1
-extern "C" void JSGSetShape__13dDemo_actor_cFUl(); // 1
-extern "C" void JSGSetAnimation__13dDemo_actor_cFUl(); // 1
-extern "C" void JSGSetAnimationFrame__13dDemo_actor_cFf(); // 1
-extern "C" void JSGSetAnimationTransition__13dDemo_actor_cFf(); // 1
-extern "C" void JSGSetTextureAnimation__13dDemo_actor_cFUl(); // 1
-extern "C" void JSGSetTextureAnimationFrame__13dDemo_actor_cFf(); // 1
-extern "C" static void getView__Fv(); // 1
-extern "C" void JSGGetProjectionNear__14dDemo_camera_cCFv(); // 1
-extern "C" void JSGSetProjectionNear__14dDemo_camera_cFf(); // 1
-extern "C" void JSGGetProjectionFar__14dDemo_camera_cCFv(); // 1
-extern "C" void JSGSetProjectionFar__14dDemo_camera_cFf(); // 1
-extern "C" void JSGGetProjectionFovy__14dDemo_camera_cCFv(); // 1
-extern "C" void JSGSetProjectionFovy__14dDemo_camera_cFf(); // 1
-extern "C" void JSGGetProjectionAspect__14dDemo_camera_cCFv(); // 1
-extern "C" void JSGSetProjectionAspect__14dDemo_camera_cFf(); // 1
-extern "C" void JSGGetViewPosition__14dDemo_camera_cCFP3Vec(); // 1
-extern "C" void JSGSetViewPosition__14dDemo_camera_cFRC3Vec(); // 1
-extern "C" void JSGGetViewUpVector__14dDemo_camera_cCFP3Vec(); // 1
-extern "C" void JSGSetViewUpVector__14dDemo_camera_cFRC3Vec(); // 1
-extern "C" void JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec(); // 1
-extern "C" void JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec(); // 1
-extern "C" void JSGGetViewRoll__14dDemo_camera_cCFv(); // 1
-extern "C" void JSGSetViewRoll__14dDemo_camera_cFf(); // 1
-extern "C" void JSGSetColor__15dDemo_ambient_cF8_GXColor(); // 1
-extern "C" void JSGSetLightType__13dDemo_light_cFQ26JStage7TELight(); // 1
-extern "C" void JSGSetPosition__13dDemo_light_cFRC3Vec(); // 1
-extern "C" void JSGSetColor__13dDemo_light_cF8_GXColor(); // 1
-extern "C" void JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn(); // 1
-extern "C" void JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn(); // 1
-extern "C" void JSGSetDirection__13dDemo_light_cFRC3Vec(); // 1
-extern "C" void JSGSetFogFunction__11dDemo_fog_cF10_GXFogType(); // 1
-extern "C" void JSGSetStartZ__11dDemo_fog_cFf(); // 1
-extern "C" void JSGSetEndZ__11dDemo_fog_cFf(); // 1
-extern "C" void JSGSetColor__11dDemo_fog_cF8_GXColor(); // 1
-extern "C" void __ct__14dDemo_object_cFv(); // 1
-extern "C" void __dt__14dDemo_object_cFv(); // 1
-extern "C" void appendActor__14dDemo_object_cFP10fopAc_ac_c(); // 1
-extern "C" void getActor__14dDemo_object_cFUc(); // 1
-extern "C" void createCamera__14dDemo_object_cFv(); // 1
-extern "C" void getActiveCamera__14dDemo_object_cFv(); // 1
-extern "C" void createAmbient__14dDemo_object_cFv(); // 1
-extern "C" void appendLight__14dDemo_object_cFv(); // 1
-extern "C" void createFog__14dDemo_object_cFv(); // 1
-extern "C" void remove__14dDemo_object_cFv(); // 1
-extern "C" void __dt__11dDemo_fog_cFv(); // 1
-extern "C" void __dt__13dDemo_light_cFv(); // 1
-extern "C" void __dt__15dDemo_ambient_cFv(); // 1
-extern "C" void JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject(); // 1
-extern "C" void create__7dDemo_cFv(); // 1
-extern "C" void remove__7dDemo_cFv(); // 1
-extern "C" void __dt__14dDemo_system_cFv(); // 1
-extern "C" void __dt__17jmessage_tControlFv(); // 1
-extern "C" void start__7dDemo_cFPCUcP4cXyzf(); // 1
-extern "C" void end__7dDemo_cFv(); // 1
-extern "C" void branch__7dDemo_cFv(); // 1
-extern "C" void update__7dDemo_cFv(); // 1
-extern "C" void setBranchType__7dDemo_cFUs(); // 1
-extern "C" void setBranchId__7dDemo_cFUss(); // 1
-extern "C" void reset__7dDemo_cFv(); // 1
-extern "C" void emitter_create__16dDemo_particle_cFUl(); // 1
-extern "C" void __dt__16dDemo_particle_cFv(); // 1
-extern "C" void __dt__14dDemo_camera_cFv(); // 1
-extern "C" void JSGFindNodeID__13dDemo_actor_cCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f(); // 1
-extern "C" void JSGGetAnimationFrameMax__13dDemo_actor_cCFv(); // 1
-extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv(); // 1
-extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec(); // 1
-extern "C" void JSGGetScaling__13dDemo_actor_cCFP3Vec(); // 1
-extern "C" void JSGGetRotation__13dDemo_actor_cCFP3Vec(); // 1
+extern "C" static void func_80037DE4();
+extern "C" static void func_80037E44();
+extern "C" static void func_80037E74();
+extern "C" static void func_80037ED4();
+extern "C" void __ct__13dDemo_actor_cFv();
+extern "C" void __dt__13dDemo_actor_cFv();
+extern "C" void getActor__13dDemo_actor_cFv();
+extern "C" void setActor__13dDemo_actor_cFP10fopAc_ac_c();
+extern "C" void getPrm_Morf__13dDemo_actor_cFv();
+extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc();
+extern "C" static void dDemo_getJaiPointer__FPCcUliPUs();
+extern "C" void dDemo_setDemoData__FP10fopAc_ac_cUcP14mDoExt_McaMorfPCciPUsUlSc();
+extern "C" static void branchFile__FPCc();
+extern "C" void JSGSetData__13dDemo_actor_cFUlPCvUl();
+extern "C" void JSGSetTranslation__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetScaling__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetRotation__13dDemo_actor_cFRC3Vec();
+extern "C" void JSGSetShape__13dDemo_actor_cFUl();
+extern "C" void JSGSetAnimation__13dDemo_actor_cFUl();
+extern "C" void JSGSetAnimationFrame__13dDemo_actor_cFf();
+extern "C" void JSGSetAnimationTransition__13dDemo_actor_cFf();
+extern "C" void JSGSetTextureAnimation__13dDemo_actor_cFUl();
+extern "C" void JSGSetTextureAnimationFrame__13dDemo_actor_cFf();
+extern "C" static void getView__Fv();
+extern "C" void JSGGetProjectionNear__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionNear__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionFar__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionFar__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionFovy__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionFovy__14dDemo_camera_cFf();
+extern "C" void JSGGetProjectionAspect__14dDemo_camera_cCFv();
+extern "C" void JSGSetProjectionAspect__14dDemo_camera_cFf();
+extern "C" void JSGGetViewPosition__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewPosition__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewUpVector__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewUpVector__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewTargetPosition__14dDemo_camera_cCFP3Vec();
+extern "C" void JSGSetViewTargetPosition__14dDemo_camera_cFRC3Vec();
+extern "C" void JSGGetViewRoll__14dDemo_camera_cCFv();
+extern "C" void JSGSetViewRoll__14dDemo_camera_cFf();
+extern "C" void JSGSetColor__15dDemo_ambient_cF8_GXColor();
+extern "C" void JSGSetLightType__13dDemo_light_cFQ26JStage7TELight();
+extern "C" void JSGSetPosition__13dDemo_light_cFRC3Vec();
+extern "C" void JSGSetColor__13dDemo_light_cF8_GXColor();
+extern "C" void JSGSetDistanceAttenuation__13dDemo_light_cFff13_GXDistAttnFn();
+extern "C" void JSGSetAngleAttenuation__13dDemo_light_cFf9_GXSpotFn();
+extern "C" void JSGSetDirection__13dDemo_light_cFRC3Vec();
+extern "C" void JSGSetFogFunction__11dDemo_fog_cF10_GXFogType();
+extern "C" void JSGSetStartZ__11dDemo_fog_cFf();
+extern "C" void JSGSetEndZ__11dDemo_fog_cFf();
+extern "C" void JSGSetColor__11dDemo_fog_cF8_GXColor();
+extern "C" void __ct__14dDemo_object_cFv();
+extern "C" void __dt__14dDemo_object_cFv();
+extern "C" void appendActor__14dDemo_object_cFP10fopAc_ac_c();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void createCamera__14dDemo_object_cFv();
+extern "C" void getActiveCamera__14dDemo_object_cFv();
+extern "C" void createAmbient__14dDemo_object_cFv();
+extern "C" void appendLight__14dDemo_object_cFv();
+extern "C" void createFog__14dDemo_object_cFv();
+extern "C" void remove__14dDemo_object_cFv();
+extern "C" void __dt__11dDemo_fog_cFv();
+extern "C" void __dt__13dDemo_light_cFv();
+extern "C" void __dt__15dDemo_ambient_cFv();
+extern "C" void JSGFindObject__14dDemo_system_cCFPPQ26JStage7TObjectPCcQ26JStage8TEObject();
+extern "C" void create__7dDemo_cFv();
+extern "C" void remove__7dDemo_cFv();
+extern "C" void __dt__14dDemo_system_cFv();
+extern "C" void __dt__17jmessage_tControlFv();
+extern "C" void start__7dDemo_cFPCUcP4cXyzf();
+extern "C" void end__7dDemo_cFv();
+extern "C" void branch__7dDemo_cFv();
+extern "C" void update__7dDemo_cFv();
+extern "C" void setBranchType__7dDemo_cFUs();
+extern "C" void setBranchId__7dDemo_cFUss();
+extern "C" void reset__7dDemo_cFv();
+extern "C" void emitter_create__16dDemo_particle_cFUl();
+extern "C" void __dt__16dDemo_particle_cFv();
+extern "C" void __dt__14dDemo_camera_cFv();
+extern "C" void JSGFindNodeID__13dDemo_actor_cCFPCc();
+extern "C" void JSGGetNodeTransformation__13dDemo_actor_cCFUlPA4_f();
+extern "C" void JSGGetAnimationFrameMax__13dDemo_actor_cCFv();
+extern "C" void JSGGetTextureAnimationFrameMax__13dDemo_actor_cCFv();
+extern "C" void JSGGetTranslation__13dDemo_actor_cCFP3Vec();
+extern "C" void JSGGetScaling__13dDemo_actor_cCFP3Vec();
+extern "C" void JSGGetRotation__13dDemo_actor_cCFP3Vec();
 extern "C" extern char const* const d_d_demo__stringBase0;
 extern "C" extern void* __vt__17jmessage_tControl[3];
 extern "C" extern void* __vt__Q27JStudio13TCreateObject[4];
@@ -492,124 +504,147 @@ extern "C" extern u8 m_status__7dDemo_c[4];
 // External References:
 // 
 
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_setStageLayer(void*); // 2
-void fopAcM_fastCreate(char const*, u32, cXyz const*, int, csXyz const*, cXyz const*, int (*)(void*), void*); // 2
-void fopAcM_searchFromName(char const*, u32, u32); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dComIfGs_staffroll_next_go_check(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_setStageLayer(void*);
+void fopAcM_fastCreate(char const*, u32, cXyz const*, int, csXyz const*, cXyz const*, int (*)(void*), void*);
+void fopAcM_searchFromName(char const*, u32, u32);
+void fpcSch_JudgeByID(void*, void*);
+void dComIfGs_staffroll_next_go_check();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__Q26JStage6TActor[35 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage7TCamera[37 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage4TFog[23 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage6TLight[27 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage7TObject[15 + 1 /* padding */];
+extern "C" extern void* __vt__Q26JStage7TSystem[20];
+extern "C" extern void* __vt__Q37JStudio3ctb8TFactory[5];
+extern "C" extern void* __vt__Q37JStudio3fvb8TFactory[5];
+extern "C" extern void* __vt__Q27JStudio8TFactory[5];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
+extern "C" extern void* __vt__Q37JStudio3stb8TFactory[5];
+extern "C" extern void* __vt__Q214JStudio_JStage13TCreateObject[4];
+extern "C" extern void* __vt__Q215JStudio_JAudio213TCreateObject[4];
+extern "C" extern void* __vt__Q217JStudio_JParticle13TCreateObject[6];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mEmitterMng__13dPa_control_c[4];
 
-extern "C" void OSReport_Error(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv(); // 1
-extern "C" void play__14mDoExt_McaMorfFP3VecUlSc(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv(); // 1
-extern "C" void fopAcM_searchFromName__FPCcUlUl(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void dComIfGs_staffroll_next_go_check__Fv(); // 1
-extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__17jmessage_tControlFv(); // 1
-extern "C" void setDemoMessage__12dMsgObject_cFUl(); // 1
-extern "C" void __dt__Q26JStage6TActorFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage6TActorCFv(); // 1
-extern "C" s32 JSGGetShape__Q26JStage6TActorCFv(); // 1
-extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv(); // 1
-extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv(); // 1
-extern "C" void __dt__Q26JStage13TAmbientLightFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv(); // 1
-extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv(); // 1
-extern "C" void __dt__Q26JStage7TCameraFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv(); // 1
-extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection(); // 1
-extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf(); // 1
-extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf(); // 1
-extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv(); // 1
-extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView(); // 1
-extern "C" void __dt__Q26JStage4TFogFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage4TFogCFv(); // 1
-extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGGetStartZ__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGGetEndZ__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGGetColor__Q26JStage4TFogCFv(); // 1
-extern "C" void __dt__Q26JStage6TLightFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage6TLightCFv(); // 1
-extern "C" bool JSGGetLightType__Q26JStage6TLightCFv(); // 1
-extern "C" void JSGGetColor__Q26JStage6TLightCFv(); // 1
-extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn(); // 1
-extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn(); // 1
-extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec(); // 1
-extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec(); // 1
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
-extern "C" void __dt__Q26JStage7TSystemFv(); // 1
-extern "C" bool JSGFGetType__Q26JStage7TSystemCFv(); // 1
-extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl(); // 1
-extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject(); // 1
-extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl(); // 1
-extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl(); // 1
-extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void __ct__Q27JStudio8TControlFv(); // 1
-extern "C" void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory(); // 1
-extern "C" void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf(); // 1
-extern "C" void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf(); // 1
-extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
-extern "C" void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject(); // 1
-extern "C" void __ct__Q27JStudio6TParseFPQ27JStudio8TControl(); // 1
-extern "C" void __dt__Q27JStudio6TParseFv(); // 1
-extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv(); // 1
-extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl(); // 1
-extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl(); // 1
-extern "C" void __dt__Q27JStudio16TAdaptor_messageFv(); // 1
-extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message(); // 1
-extern "C" void destroyObject_all__Q37JStudio3stb8TControlFv(); // 1
-extern "C" void reset__Q37JStudio3stb8TControlFv(); // 1
-extern "C" void forward__Q37JStudio3stb8TControlFUl(); // 1
-extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData(); // 1
-extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv(); // 1
-extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
-extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter(); // 1
-extern "C" void __dt__Q28JMessage8TControlFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strlen(); // 1
+extern "C" void OSReport_Error();
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void __dt__4cXyzFv();
+extern "C" void setAnm__14mDoExt_McaMorfFP15J3DAnmTransformiffffPv();
+extern "C" void play__14mDoExt_McaMorfFP3VecUlSc();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_fastCreate__FPCcUlPC4cXyziPC5csXyzPC4cXyzPFPv_iPv();
+extern "C" void fopAcM_searchFromName__FPCcUlUl();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void dComIfGs_staffroll_next_go_check__Fv();
+extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__17jmessage_tControlFv();
+extern "C" void setDemoMessage__12dMsgObject_cFUl();
+extern "C" void __dt__Q26JStage6TActorFv();
+extern "C" s32 JSGFGetType__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetShape__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv();
+extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void __dt__Q26JStage13TAmbientLightFv();
+extern "C" s32 JSGFGetType__Q26JStage13TAmbientLightCFv();
+extern "C" void JSGGetColor__Q26JStage13TAmbientLightCFv();
+extern "C" void __dt__Q26JStage7TCameraFv();
+extern "C" s32 JSGFGetType__Q26JStage7TCameraCFv();
+extern "C" bool JSGGetProjectionType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetProjectionType__Q26JStage7TCameraFQ26JStage18TECameraProjection();
+extern "C" void JSGGetProjectionField__Q26JStage7TCameraCFPf();
+extern "C" void JSGSetProjectionField__Q26JStage7TCameraFPCf();
+extern "C" bool JSGGetViewType__Q26JStage7TCameraCFv();
+extern "C" void JSGSetViewType__Q26JStage7TCameraFQ26JStage12TECameraView();
+extern "C" void __dt__Q26JStage4TFogFv();
+extern "C" s32 JSGFGetType__Q26JStage4TFogCFv();
+extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv();
+extern "C" void JSGGetStartZ__Q26JStage4TFogCFv();
+extern "C" void JSGGetEndZ__Q26JStage4TFogCFv();
+extern "C" void JSGGetColor__Q26JStage4TFogCFv();
+extern "C" void __dt__Q26JStage6TLightFv();
+extern "C" s32 JSGFGetType__Q26JStage6TLightCFv();
+extern "C" bool JSGGetLightType__Q26JStage6TLightCFv();
+extern "C" void JSGGetColor__Q26JStage6TLightCFv();
+extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
+extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
+extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec();
+extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dt__Q26JStage7TSystemFv();
+extern "C" bool JSGFGetType__Q26JStage7TSystemCFv();
+extern "C" bool JSGCreateObject__Q26JStage7TSystemFPCcQ26JStage8TEObjectUl();
+extern "C" void JSGDestroyObject__Q26JStage7TSystemFPQ26JStage7TObject();
+extern "C" bool JSGGetSystemData__Q26JStage7TSystemFUl();
+extern "C" void JSGSetSystemData__Q26JStage7TSystemFUlUl();
+extern "C" void destroyObject_all__Q37JStudio3ctb8TControlFv();
+extern "C" void destroyObject_all__Q37JStudio3fvb8TControlFv();
+extern "C" void __ct__Q27JStudio8TControlFv();
+extern "C" void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory();
+extern "C" void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject();
+extern "C" void __ct__Q27JStudio6TParseFPQ27JStudio8TControl();
+extern "C" void __dt__Q27JStudio6TParseFv();
+extern "C" void adaptor_do_prepare__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_begin__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_end__Q27JStudio8TAdaptorFv();
+extern "C" void adaptor_do_update__Q27JStudio8TAdaptorFUl();
+extern "C" void adaptor_do_data__Q27JStudio8TAdaptorFPCvUlPCvUl();
+extern "C" void __dt__Q27JStudio16TAdaptor_messageFv();
+extern "C" void __ct__Q27JStudio15TObject_messageFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio16TAdaptor_message();
+extern "C" void destroyObject_all__Q37JStudio3stb8TControlFv();
+extern "C" void reset__Q37JStudio3stb8TControlFv();
+extern "C" void forward__Q37JStudio3stb8TControlFUl();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv();
+extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
+extern "C" void __dt__Q28JMessage8TControlFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void PSMTXCopy();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+extern "C" void strcmp();
+extern "C" void strlen();
 extern "C" extern void* __vt__Q26JStage6TActor[35 + 1 /* padding */];
 extern "C" extern void* __vt__Q26JStage13TAmbientLight[17 + 1 /* padding */];
 extern "C" extern void* __vt__Q26JStage7TCamera[37 + 1 /* padding */];

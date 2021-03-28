@@ -25,30 +25,30 @@ struct JUTDirectFile {
 // 
 
 
-extern "C" void fetch32byte__13JUTDirectFileFv(); // 1
-extern "C" void __ct__13JUTDirectFileFv(); // 1
-extern "C" void __dt__13JUTDirectFileFv(); // 1
-extern "C" void fopen__13JUTDirectFileFPCc(); // 1
-extern "C" void fclose__13JUTDirectFileFv(); // 1
-extern "C" void fgets__13JUTDirectFileFPvi(); // 1
+extern "C" void fetch32byte__13JUTDirectFileFv();
+extern "C" void __ct__13JUTDirectFileFv();
+extern "C" void __dt__13JUTDirectFileFv();
+extern "C" void fopen__13JUTDirectFileFPCc();
+extern "C" void fclose__13JUTDirectFileFv();
+extern "C" void fgets__13JUTDirectFileFPvi();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void DVDOpen();
+extern "C" void DVDClose();
+extern "C" void DVDReadAsyncPrio();
+extern "C" void DVDGetCommandBlockStatus();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

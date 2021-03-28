@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -146,10 +146,10 @@ struct Z2SeqMgr {
 	/* 802AFEDC */ void bgmStreamStop(u32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -184,41 +184,85 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void s_b_sub(void*, void*); // 2
-static void nodeCallBack(J3DJoint*, int); // 2
-static void eventCallBack(void*, int); // 2
-static void daObjTobyHouse_create1st(daObjTobyHouse_c*); // 2
-static void daObjTobyHouse_MoveBGDelete(daObjTobyHouse_c*); // 2
-static void daObjTobyHouse_MoveBGExecute(daObjTobyHouse_c*); // 2
-static void daObjTobyHouse_MoveBGDraw(daObjTobyHouse_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
+static void s_b_sub(void*, void*);
+static void nodeCallBack(J3DJoint*, int);
+static void eventCallBack(void*, int);
+static void daObjTobyHouse_create1st(daObjTobyHouse_c*);
+static void daObjTobyHouse_MoveBGDelete(daObjTobyHouse_c*);
+static void daObjTobyHouse_MoveBGExecute(daObjTobyHouse_c*);
+static void daObjTobyHouse_MoveBGDraw(daObjTobyHouse_c*);
+static void cLib_calcTimer__template0(u8*);
+extern "C" extern u32 const lit_4773;
+extern "C" extern u8 const lit_4776[8];
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 data_80D17908[12];
+extern "C" extern void* g_profile_Obj_TobyHouse[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 data_80D17A1C[4];
+extern "C" extern u8 data_80D17A20[4];
+extern "C" extern u8 data_80D17A24[4];
+extern "C" extern u8 data_80D17A28[4];
+extern "C" extern u8 data_80D17A2C[4];
+extern "C" extern u8 data_80D17A30[4];
+extern "C" extern u8 data_80D17A34[4];
+extern "C" extern u8 data_80D17A38[4];
+extern "C" extern u8 data_80D17A3C[4];
+extern "C" extern u8 data_80D17A40[4];
+extern "C" extern u8 data_80D17A44[4];
+extern "C" extern u8 data_80D17A48[4];
+extern "C" extern u8 data_80D17A4C[4];
+extern "C" extern u8 data_80D17A50[4];
+extern "C" extern u8 data_80D17A54[4];
+extern "C" extern u8 data_80D17A58[4];
+extern "C" extern u8 data_80D17A5C[4];
+extern "C" extern u8 data_80D17A60[4];
+extern "C" extern u8 data_80D17A64[4];
+extern "C" extern u8 data_80D17A68[4];
+extern "C" extern u8 data_80D17A6C[4];
+extern "C" extern u8 data_80D17A70[4];
+extern "C" extern u8 data_80D17A74[4];
+extern "C" extern u8 data_80D17A78[4];
+extern "C" extern u8 data_80D17A7C[4];
 
-extern "C" static void s_b_sub__FPvPv(); // 1
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" static void eventCallBack__FPvi(); // 1
-extern "C" void initBaseMtx__16daObjTobyHouse_cFv(); // 1
-extern "C" void setBaseMtx__16daObjTobyHouse_cFv(); // 1
-extern "C" void Create__16daObjTobyHouse_cFv(); // 1
-extern "C" void CreateHeap__16daObjTobyHouse_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void create1st__16daObjTobyHouse_cFv(); // 1
-extern "C" void Execute__16daObjTobyHouse_cFPPA3_A4_f(); // 1
-extern "C" void action__16daObjTobyHouse_cFv(); // 1
-extern "C" void actionWait__16daObjTobyHouse_cFv(); // 1
-extern "C" void actionOrderEvent__16daObjTobyHouse_cFv(); // 1
-extern "C" void actionEvent__16daObjTobyHouse_cFv(); // 1
-extern "C" void actionDead__16daObjTobyHouse_cFv(); // 1
-extern "C" void demoProc__16daObjTobyHouse_cFv(); // 1
-extern "C" void sceneChange__16daObjTobyHouse_cFv(); // 1
-extern "C" void Draw__16daObjTobyHouse_cFv(); // 1
-extern "C" void checkLODModel__16daObjTobyHouse_cFv(); // 1
-extern "C" void Delete__16daObjTobyHouse_cFv(); // 1
-extern "C" static void daObjTobyHouse_create1st__FP16daObjTobyHouse_c(); // 1
-extern "C" static void daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c(); // 1
-extern "C" static void daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c(); // 1
-extern "C" static void daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c(); // 1
-extern "C" static void func_80D176E4(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
+extern "C" static void s_b_sub__FPvPv();
+extern "C" static void nodeCallBack__FP8J3DJointi();
+extern "C" static void eventCallBack__FPvi();
+extern "C" void initBaseMtx__16daObjTobyHouse_cFv();
+extern "C" void setBaseMtx__16daObjTobyHouse_cFv();
+extern "C" void Create__16daObjTobyHouse_cFv();
+extern "C" void CreateHeap__16daObjTobyHouse_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void create1st__16daObjTobyHouse_cFv();
+extern "C" void Execute__16daObjTobyHouse_cFPPA3_A4_f();
+extern "C" void action__16daObjTobyHouse_cFv();
+extern "C" void actionWait__16daObjTobyHouse_cFv();
+extern "C" void actionOrderEvent__16daObjTobyHouse_cFv();
+extern "C" void actionEvent__16daObjTobyHouse_cFv();
+extern "C" void actionDead__16daObjTobyHouse_cFv();
+extern "C" void demoProc__16daObjTobyHouse_cFv();
+extern "C" void sceneChange__16daObjTobyHouse_cFv();
+extern "C" void Draw__16daObjTobyHouse_cFv();
+extern "C" void checkLODModel__16daObjTobyHouse_cFv();
+extern "C" void Delete__16daObjTobyHouse_cFv();
+extern "C" static void daObjTobyHouse_create1st__FP16daObjTobyHouse_c();
+extern "C" static void daObjTobyHouse_MoveBGDelete__FP16daObjTobyHouse_c();
+extern "C" static void daObjTobyHouse_MoveBGExecute__FP16daObjTobyHouse_c();
+extern "C" static void daObjTobyHouse_MoveBGDraw__FP16daObjTobyHouse_c();
+extern "C" static void func_80D176E4();
+extern "C" void __dt__4cXyzFv();
 extern "C" extern u32 const lit_4773;
 extern "C" extern u8 const lit_4776[8];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
@@ -268,112 +312,33 @@ extern "C" extern u8 data_80D17A7C[4];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_setupShareTexture(J3DModelData*, J3DModelData*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeForPName(void*, void*); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGs_offOneZoneSwitch(int, int); // 2
-void dComIfGs_isOneZoneSwitch(int, int); // 2
-void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void dCam_getAngleY(camera_class*); // 2
-void dCam_getAngleX(camera_class*); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeForPName__FPvPv(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGs_offOneZoneSwitch__Fii(); // 1
-extern "C" void dComIfGs_isOneZoneSwitch__Fii(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void dCam_getAngleY__FP12camera_class(); // 1
-extern "C" void dCam_getAngleX__FP12camera_class(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamStop__8Z2SeqMgrFUl(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_setupShareTexture(J3DModelData*, J3DModelData*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcSch_JudgeForPName(void*, void*);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfGs_offOneZoneSwitch(int, int);
+void dComIfGs_isOneZoneSwitch(int, int);
+void dBgS_MoveBGProc_TypicalRotY(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void dCam_getAngleY(camera_class*);
+void dCam_getAngleX(camera_class*);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
@@ -386,7 +351,98 @@ extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_setupShareTexture__FP12J3DModelDataP12J3DModelData();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeForPName__FPvPv();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGs_offOneZoneSwitch__Fii();
+extern "C" void dComIfGs_isOneZoneSwitch__Fii();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void dBgS_MoveBGProc_TypicalRotY__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void dCam_getAngleY__FP12camera_class();
+extern "C" void dCam_getAngleX__FP12camera_class();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_802807E0();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareDistance();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

@@ -52,28 +52,31 @@ struct J3DDrawMtxData {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__12J3DJointTree[4 + 1 /* padding */];
 
-extern "C" void __ct__12J3DJointTreeFv(); // 1
-extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable(); // 1
-extern "C" void findImportantMtxIndex__12J3DJointTreeFv(); // 1
-extern "C" void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf(); // 1
-extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer(); // 1
-extern "C" void __dt__12J3DJointTreeFv(); // 1
+extern "C" void __ct__12J3DJointTreeFv();
+extern "C" void makeHierarchy__12J3DJointTreeFP8J3DJointPPC17J3DModelHierarchyP16J3DMaterialTableP13J3DShapeTable();
+extern "C" void findImportantMtxIndex__12J3DJointTreeFv();
+extern "C" void calc__12J3DJointTreeFP12J3DMtxBufferRC3VecRA3_A4_Cf();
+extern "C" void setMtxBuffer__10J3DMtxCalcFP12J3DMtxBuffer();
+extern "C" void __dt__12J3DJointTreeFv();
 extern "C" extern void* __vt__12J3DJointTree[4 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 mMtxBuffer__10J3DMtxCalc[4];
+extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__14J3DDrawMtxDataFv(); // 1
-extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
-extern "C" void appendChild__8J3DJointFP8J3DJoint(); // 1
-extern "C" void recursiveCalc__8J3DJointFv(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__14J3DDrawMtxDataFv();
+extern "C" void __dt__14J3DDrawMtxDataFv();
+extern "C" void appendChild__8J3DJointFP8J3DJoint();
+extern "C" void recursiveCalc__8J3DJointFv();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
 extern "C" extern u8 mMtxBuffer__10J3DMtxCalc[4];
 extern "C" extern u8 mCurrentMtxCalc__8J3DJoint[4 + 4 /* padding */];
 

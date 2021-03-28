@@ -18,41 +18,41 @@ struct STRUCT_DSP_TASK {
 // Forward References:
 // 
 
-static void DspHandShake(void*); // 2
-void DspBoot(void (*)(void*)); // 2
-void DSPSendCommands2(u32*, u32, void (*)(u16)); // 2
-static void DspInitWork(); // 2
-static void DspStartWork(u32, void (*)(u16)); // 2
-void DspFinishWork(u16); // 2
+static void DspHandShake(void*);
+void DspBoot(void (*)(void*));
+void DSPSendCommands2(u32*, u32, void (*)(u16));
+static void DspInitWork();
+static void DspStartWork(u32, void (*)(u16));
+void DspFinishWork(u16);
 
-extern "C" static void DspHandShake__FPv(); // 1
-extern "C" void DspBoot__FPFPv_v(); // 1
-extern "C" void DSPSendCommands2__FPUlUlPFUs_v(); // 1
-extern "C" static void DspInitWork__Fv(); // 1
-extern "C" static void DspStartWork__FUlPFUs_v(); // 1
-extern "C" void DspFinishWork__FUs(); // 1
+extern "C" static void DspHandShake__FPv();
+extern "C" void DspBoot__FPFPv_v();
+extern "C" void DSPSendCommands2__FPUlUlPFUs_v();
+extern "C" static void DspInitWork__Fv();
+extern "C" static void DspStartWork__FUlPFUs_v();
+extern "C" void DspFinishWork__FUs();
 
 // 
 // External References:
 // 
 
-void DSPAddPriorTask(STRUCT_DSP_TASK*); // 2
-void Dsp_Running_Check(); // 2
-void Dsp_Running_Start(); // 2
+void DSPAddPriorTask(STRUCT_DSP_TASK*);
+void Dsp_Running_Check();
+void Dsp_Running_Start();
 
-extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK(); // 1
-extern "C" void Dsp_Running_Check__Fv(); // 1
-extern "C" void Dsp_Running_Start__Fv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPCheckMailFromDSP(); // 1
-extern "C" void DSPReadMailFromDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void DSPAssertInt(); // 1
-extern "C" void DSPInit(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void DSPAddPriorTask__FP15STRUCT_DSP_TASK();
+extern "C" void Dsp_Running_Check__Fv();
+extern "C" void Dsp_Running_Start__Fv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPCheckMailFromDSP();
+extern "C" void DSPReadMailFromDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void DSPAssertInt();
+extern "C" void DSPInit();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:

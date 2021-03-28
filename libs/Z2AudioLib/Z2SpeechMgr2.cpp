@@ -11,13 +11,6 @@
 // Types:
 // 
 
-struct JAISoundHandle {
-	/* 802A2184 */ void releaseSound();
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -25,6 +18,13 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
+	/* 802A2184 */ void releaseSound();
 };
 
 struct Z2SpeechStarter {
@@ -90,51 +90,60 @@ struct JAISound {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__15Z2SpeechStarter[5];
 
-extern "C" void __ct__12Z2SpeechMgr2Fv(); // 1
-extern "C" void __dt__15Z2SpeechStarterFv(); // 1
-extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs(); // 1
-extern "C" void setTextCount__12Z2SpeechMgr2Fs(); // 1
-extern "C" void speakOneWord__12Z2SpeechMgr2Fb(); // 1
-extern "C" void isNonVerbal__12Z2SpeechMgr2Fv(); // 1
-extern "C" void selectUnit__12Z2SpeechMgr2Fb(); // 1
-extern "C" void selectTail__12Z2SpeechMgr2Fv(); // 1
-extern "C" void framework__12Z2SpeechMgr2Fv(); // 1
-extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc(); // 1
-extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv(); // 1
-extern "C" void __ct__15Z2SpeechStarterFv(); // 1
-extern "C" void func_802CCFF8(); // 1
+extern "C" void __ct__12Z2SpeechMgr2Fv();
+extern "C" void __dt__15Z2SpeechStarterFv();
+extern "C" void setString__12Z2SpeechMgr2FPCUssUcUs();
+extern "C" void setTextCount__12Z2SpeechMgr2Fs();
+extern "C" void speakOneWord__12Z2SpeechMgr2Fb();
+extern "C" void isNonVerbal__12Z2SpeechMgr2Fv();
+extern "C" void selectUnit__12Z2SpeechMgr2Fb();
+extern "C" void selectTail__12Z2SpeechMgr2Fv();
+extern "C" void framework__12Z2SpeechMgr2Fv();
+extern "C" void playOneShotVoice__12Z2SpeechMgr2FUcUsP3VecSc();
+extern "C" void isMidnaSpeak__12Z2SpeechMgr2Fv();
+extern "C" void __ct__15Z2SpeechStarterFv();
+extern "C" void func_802CCFF8();
 extern "C" extern void* __vt__15Z2SpeechStarter[5];
 
 // 
 // External References:
 // 
 
-void dComIfGp_getReverb(int); // 2
-void operator delete(void*); // 2
+void dComIfGp_getReverb(int);
+void operator delete(void*);
+extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void stop__8JAISoundFv(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void __dt__15JAISoundStarterFv(); // 1
-extern "C" void __ct__14Z2SoundStarterFb(); // 1
-extern "C" void func_802AABF4(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void getFogDensity__10Z2EnvSeMgrFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__Q25JMath13TRandom_fast_FUl(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void stop__8JAISoundFv();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void __ct__14Z2SoundStarterFb();
+extern "C" void func_802AABF4();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void getFogDensity__10Z2EnvSeMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void __ct__Q25JMath13TRandom_fast_FUl();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
 extern "C" extern u8 data_80450B3C[4];
 extern "C" extern u8 data_80450B70[4];

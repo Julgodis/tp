@@ -41,11 +41,11 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct mDoExt_bckAnm {
@@ -89,10 +89,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -110,10 +110,10 @@ struct dRes_control_c {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -144,37 +144,40 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daGrdWater_Draw(daGrdWater_c*); // 2
-static void daGrdWater_Execute(daGrdWater_c*); // 2
-static void daGrdWater_Delete(daGrdWater_c*); // 2
-static void daGrdWater_Create(fopAc_ac_c*); // 2
+static void daGrdWater_Draw(daGrdWater_c*);
+static void daGrdWater_Execute(daGrdWater_c*);
+static void daGrdWater_Delete(daGrdWater_c*);
+static void daGrdWater_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_GRDWATER[12];
 
-extern "C" void __ct__16daGrdWater_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__12daGrdWater_cFv(); // 1
-extern "C" void CreateHeap__12daGrdWater_cFv(); // 1
-extern "C" void create__12daGrdWater_cFv(); // 1
-extern "C" void __ct__12daGrdWater_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void Execute__12daGrdWater_cFPPA3_A4_f(); // 1
-extern "C" void init_modeWait__12daGrdWater_cFv(); // 1
-extern "C" void modeWait__12daGrdWater_cFv(); // 1
-extern "C" void init_modeLevelUpA__12daGrdWater_cFv(); // 1
-extern "C" void modeLevelUpA__12daGrdWater_cFv(); // 1
-extern "C" void init_modeLevelDownA__12daGrdWater_cFv(); // 1
-extern "C" void modeLevelDownA__12daGrdWater_cFv(); // 1
-extern "C" void init_modeLevelUpB__12daGrdWater_cFv(); // 1
-extern "C" void modeLevelUpB__12daGrdWater_cFv(); // 1
-extern "C" void init_modeLevelDownB__12daGrdWater_cFv(); // 1
-extern "C" void modeLevelDownB__12daGrdWater_cFv(); // 1
-extern "C" void Draw__12daGrdWater_cFv(); // 1
-extern "C" void Delete__12daGrdWater_cFv(); // 1
-extern "C" static void daGrdWater_Draw__FP12daGrdWater_c(); // 1
-extern "C" static void daGrdWater_Execute__FP12daGrdWater_c(); // 1
-extern "C" static void daGrdWater_Delete__FP12daGrdWater_c(); // 1
-extern "C" static void daGrdWater_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__16daGrdWater_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_groundwater_cpp(); // 1
+extern "C" void __ct__16daGrdWater_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__12daGrdWater_cFv();
+extern "C" void CreateHeap__12daGrdWater_cFv();
+extern "C" void create__12daGrdWater_cFv();
+extern "C" void __ct__12daGrdWater_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void Execute__12daGrdWater_cFPPA3_A4_f();
+extern "C" void init_modeWait__12daGrdWater_cFv();
+extern "C" void modeWait__12daGrdWater_cFv();
+extern "C" void init_modeLevelUpA__12daGrdWater_cFv();
+extern "C" void modeLevelUpA__12daGrdWater_cFv();
+extern "C" void init_modeLevelDownA__12daGrdWater_cFv();
+extern "C" void modeLevelDownA__12daGrdWater_cFv();
+extern "C" void init_modeLevelUpB__12daGrdWater_cFv();
+extern "C" void modeLevelUpB__12daGrdWater_cFv();
+extern "C" void init_modeLevelDownB__12daGrdWater_cFv();
+extern "C" void modeLevelDownB__12daGrdWater_cFv();
+extern "C" void Draw__12daGrdWater_cFv();
+extern "C" void Delete__12daGrdWater_cFv();
+extern "C" static void daGrdWater_Draw__FP12daGrdWater_c();
+extern "C" static void daGrdWater_Execute__FP12daGrdWater_c();
+extern "C" static void daGrdWater_Delete__FP12daGrdWater_c();
+extern "C" static void daGrdWater_Create__FP10fopAc_ac_c();
+extern "C" void __dt__16daGrdWater_HIO_cFv();
+extern "C" void __sinit_d_a_obj_groundwater_cpp();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_GRDWATER[12];
@@ -183,57 +186,14 @@ extern "C" extern void* g_profile_GRDWATER[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dBgS_MoveBGProc_Typical(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void dKy_bg_MAxx_proc(void*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_bg_MAxx_proc__FPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f(); // 1
-extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f(); // 1
-extern "C" void calcAnmMtx__8J3DModelFv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXLightPerspective(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dBgS_MoveBGProc_Typical(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void dKy_bg_MAxx_proc(void*);
+void operator delete(void*);
 extern "C" extern u8 const j3dDefaultMtx[48];
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
@@ -241,7 +201,57 @@ extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 j3dSys[284];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool Create__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_bg_MAxx_proc__FPv();
+extern "C" void __dl__FPv();
+extern "C" void setEffectMtx__13J3DTexMtxInfoFPA4_f();
+extern "C" void simpleCalcMaterial__12J3DModelDataFUsPA4_f();
+extern "C" void calcAnmMtx__8J3DModelFv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void C_MTXLightPerspective();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" extern u8 const j3dDefaultMtx[48];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

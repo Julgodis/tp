@@ -30,35 +30,35 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcFCtRq_Do(fast_create_request*); // 2
-static bool fpcFCtRq_Delete(fast_create_request*); // 2
-void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
+void fpcFCtRq_Do(fast_create_request*);
+static bool fpcFCtRq_Delete(fast_create_request*);
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
 
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request(); // 1
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
+extern "C" void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" static bool fpcFCtRq_Delete__FP19fast_create_request();
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
 
 // 
 // External References:
 // 
 
-void fpcBs_MakeOfId(); // 2
-void fpcBs_Create(s16, unsigned int, void*); // 2
-void fpcBs_SubCreate(base_process_class*); // 2
-void fpcCtRq_Cancel(create_request*); // 2
-void fpcCtRq_Create(layer_class*, u32, create_request_method_class*); // 2
-void fpcLy_SetCurrentLayer(layer_class*); // 2
-void fpcLd_Use(s16); // 2
+void fpcBs_MakeOfId();
+void fpcBs_Create(s16, unsigned int, void*);
+void fpcBs_SubCreate(base_process_class*);
+void fpcCtRq_Cancel(create_request*);
+void fpcCtRq_Create(layer_class*, u32, create_request_method_class*);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLd_Use(s16);
 
-extern "C" void fpcBs_MakeOfId__Fv(); // 1
-extern "C" void fpcBs_Create__FsUiPv(); // 1
-extern "C" void fpcBs_SubCreate__FP18base_process_class(); // 1
-extern "C" void fpcCtRq_Cancel__FP14create_request(); // 1
-extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class(); // 1
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
-extern "C" void fpcLd_Use__Fs(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void fpcBs_MakeOfId__Fv();
+extern "C" void fpcBs_Create__FsUiPv();
+extern "C" void fpcBs_SubCreate__FP18base_process_class();
+extern "C" void fpcCtRq_Cancel__FP14create_request();
+extern "C" void fpcCtRq_Create__FP11layer_classUlP27create_request_method_class();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLd_Use__Fs();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:

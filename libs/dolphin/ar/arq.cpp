@@ -12,23 +12,23 @@
 // 
 
 
-extern "C" static void __ARQServiceQueueLo(); // 1
-extern "C" static void __ARQCallbackHack(); // 1
-extern "C" static void __ARQInterruptServiceRoutine(); // 1
-extern "C" void ARQInit(); // 1
-extern "C" void ARQPostRequest(); // 1
+extern "C" static void __ARQServiceQueueLo();
+extern "C" static void __ARQCallbackHack();
+extern "C" static void __ARQInterruptServiceRoutine();
+extern "C" void ARQInit();
+extern "C" void ARQPostRequest();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __AI_set_stream_sample_rate(); // 1
-extern "C" void ARRegisterDMACallback(); // 1
-extern "C" void ARStartDMA(); // 1
+extern "C" void OSRegisterVersion();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __AI_set_stream_sample_rate();
+extern "C" void ARRegisterDMACallback();
+extern "C" void ARStartDMA();
 
 // 
 // Declarations:

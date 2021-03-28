@@ -47,36 +47,36 @@ struct JASCallbackMgr {
 // 
 
 
-extern "C" void setDSPLevel__9JASDriverFf(); // 1
-extern "C" void getChannelLevel_dsp__9JASDriverFv(); // 1
-extern "C" void getDSPLevel__9JASDriverFv(); // 1
-extern "C" void setOutputMode__9JASDriverFUl(); // 1
-extern "C" void getOutputMode__9JASDriverFv(); // 1
-extern "C" void waitSubFrame__9JASDriverFv(); // 1
-extern "C" void rejectCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv(); // 1
-extern "C" void subframeCallback__9JASDriverFv(); // 1
-extern "C" void DSPSyncCallback__9JASDriverFv(); // 1
-extern "C" void updateDacCallback__9JASDriverFv(); // 1
-extern "C" void __sinit_JASDriverIF_cpp(); // 1
-extern "C" void __ct__Q214JASCallbackMgr9TCallbackFv(); // 1
+extern "C" void setDSPLevel__9JASDriverFf();
+extern "C" void getChannelLevel_dsp__9JASDriverFv();
+extern "C" void getDSPLevel__9JASDriverFv();
+extern "C" void setOutputMode__9JASDriverFUl();
+extern "C" void getOutputMode__9JASDriverFv();
+extern "C" void waitSubFrame__9JASDriverFv();
+extern "C" void rejectCallback__9JASDriverFPFPv_lPv();
+extern "C" void registerDspSyncCallback__9JASDriverFPFPv_lPv();
+extern "C" void registerSubFrameCallback__9JASDriverFPFPv_lPv();
+extern "C" void subframeCallback__9JASDriverFv();
+extern "C" void DSPSyncCallback__9JASDriverFv();
+extern "C" void updateDacCallback__9JASDriverFv();
+extern "C" void __sinit_JASDriverIF_cpp();
+extern "C" void __ct__Q214JASCallbackMgr9TCallbackFv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void regist__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void reject__14JASCallbackMgrFPFPv_lPv(); // 1
-extern "C" void callback__14JASCallbackMgrFv(); // 1
-extern "C" void getSubFrameCounter__9JASDriverFv(); // 1
-extern "C" void setDSPMixerLevel__6JASDspFf(); // 1
-extern "C" void getDSPMixerLevel__6JASDspFv(); // 1
-extern "C" void OSYieldThread(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void regist__14JASCallbackMgrFPFPv_lPv();
+extern "C" void reject__14JASCallbackMgrFPFPv_lPv();
+extern "C" void callback__14JASCallbackMgrFv();
+extern "C" void getSubFrameCounter__9JASDriverFv();
+extern "C" void setDSPMixerLevel__6JASDspFf();
+extern "C" void getDSPMixerLevel__6JASDspFv();
+extern "C" void OSYieldThread();
+extern "C" void __construct_array();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

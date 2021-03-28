@@ -12,19 +12,20 @@
 // 
 
 
-extern "C" void __msl_strnicmp(); // 1
-extern "C" void fflush(); // 1
-extern "C" void fclose(); // 1
+extern "C" void __msl_strnicmp();
+extern "C" void fflush();
+extern "C" void fclose();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __lower_map[256];
 
-extern "C" void free(); // 1
-extern "C" void __flush_all(); // 1
-extern "C" void __flush_buffer(); // 1
-extern "C" void ftell(); // 1
+extern "C" void free();
+extern "C" void __flush_all();
+extern "C" void __flush_buffer();
+extern "C" void ftell();
 extern "C" extern u8 __lower_map[256];
 
 // 

@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void wcstombs(); // 1
+extern "C" void wcstombs();
 
 // 
 // External References:
 // 
 
 
-extern "C" void strncpy(); // 1
+extern "C" void strncpy();
 
 // 
 // Declarations:

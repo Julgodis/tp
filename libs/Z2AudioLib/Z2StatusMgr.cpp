@@ -79,52 +79,63 @@ struct JAISoundParamsMove {
 // Forward References:
 // 
 
+extern "C" extern char const* const Z2StatusMgr__stringBase0;
 
-extern "C" void __ct__11Z2StatusMgrFv(); // 1
-extern "C" void heartGaugeOn__11Z2StatusMgrFv(); // 1
-extern "C" void processHeartGaugeSound__11Z2StatusMgrFv(); // 1
-extern "C" void talkIn__11Z2StatusMgrFv(); // 1
-extern "C" void talkOut__11Z2StatusMgrFv(); // 1
-extern "C" void menuIn__11Z2StatusMgrFv(); // 1
-extern "C" void menuOut__11Z2StatusMgrFv(); // 1
-extern "C" void isMovieDemo__11Z2StatusMgrFv(); // 1
-extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
-extern "C" void processTime__11Z2StatusMgrFv(); // 1
-extern "C" void checkDayTime__11Z2StatusMgrFv(); // 1
-extern "C" void setEventBit__11Z2StatusMgrFPv(); // 1
-extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec(); // 1
-extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc(); // 1
-extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf(); // 1
+extern "C" void __ct__11Z2StatusMgrFv();
+extern "C" void heartGaugeOn__11Z2StatusMgrFv();
+extern "C" void processHeartGaugeSound__11Z2StatusMgrFv();
+extern "C" void talkIn__11Z2StatusMgrFv();
+extern "C" void talkOut__11Z2StatusMgrFv();
+extern "C" void menuIn__11Z2StatusMgrFv();
+extern "C" void menuOut__11Z2StatusMgrFv();
+extern "C" void isMovieDemo__11Z2StatusMgrFv();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void processTime__11Z2StatusMgrFv();
+extern "C" void checkDayTime__11Z2StatusMgrFv();
+extern "C" void setEventBit__11Z2StatusMgrFPv();
+extern "C" void setCameraPolygonPos__11Z2StatusMgrFP3Vec();
+extern "C" void setCameraGroupInfo__11Z2StatusMgrFUc();
+extern "C" void setCameraInWaterDepth__11Z2StatusMgrFf();
 extern "C" extern char const* const Z2StatusMgr__stringBase0;
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450860[4];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B84[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 struct_80451124[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
 
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl(); // 1
-extern "C" void talkInSe__7Z2SeMgrFv(); // 1
-extern "C" void talkOutSe__7Z2SeMgrFv(); // 1
-extern "C" void menuInSe__7Z2SeMgrFv(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void bgmStreamStop__8Z2SeqMgrFUl(); // 1
-extern "C" void talkInBgm__8Z2SeqMgrFv(); // 1
-extern "C" void talkOutBgm__8Z2SeqMgrFv(); // 1
-extern "C" void menuInBgm__8Z2SeqMgrFv(); // 1
-extern "C" void menuOutBgm__8Z2SeqMgrFv(); // 1
-extern "C" void setBattleBgmOff__8Z2SeqMgrFb(); // 1
-extern "C" void sceneBgmStart__10Z2SceneMgrFv(); // 1
-extern "C" void setUnderWaterFx__11Z2FxLineMgrFb(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seMoveVolumeAll__7Z2SeMgrFfUl();
+extern "C" void talkInSe__7Z2SeMgrFv();
+extern "C" void talkOutSe__7Z2SeMgrFv();
+extern "C" void menuInSe__7Z2SeMgrFv();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void bgmStreamStop__8Z2SeqMgrFUl();
+extern "C" void talkInBgm__8Z2SeqMgrFv();
+extern "C" void talkOutBgm__8Z2SeqMgrFv();
+extern "C" void menuInBgm__8Z2SeqMgrFv();
+extern "C" void menuOutBgm__8Z2SeqMgrFv();
+extern "C" void setBattleBgmOff__8Z2SeqMgrFb();
+extern "C" void sceneBgmStart__10Z2SceneMgrFv();
+extern "C" void setUnderWaterFx__11Z2FxLineMgrFb();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strncmp();
+extern "C" void strcmp();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450860[4];
 extern "C" extern u8 data_80450B40[4];

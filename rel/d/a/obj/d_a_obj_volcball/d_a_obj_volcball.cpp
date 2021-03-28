@@ -14,14 +14,14 @@
 struct request_of_phase_process_class {
 };
 
+struct csXyz {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
-};
-
-struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -233,76 +233,79 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void search_big_volc(void*, void*); // 2
-static void daObjVolcBall_Draw(daObjVolcBall_c*); // 2
-static void daObjVolcBall_Execute(daObjVolcBall_c*); // 2
-static void daObjVolcBall_Delete(daObjVolcBall_c*); // 2
-static void daObjVolcBall_Create(fopAc_ac_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
-static void cLib_calcTimer__template1(u32*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+static void search_big_volc(void*, void*);
+static void daObjVolcBall_Draw(daObjVolcBall_c*);
+static void daObjVolcBall_Execute(daObjVolcBall_c*);
+static void daObjVolcBall_Delete(daObjVolcBall_c*);
+static void daObjVolcBall_Create(fopAc_ac_c*);
+static void cLib_calcTimer__template0(u8*);
+static void cLib_calcTimer__template1(u32*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_VolcanicBall[12];
 
-extern "C" void getData__15daObjVolcBall_cFv(); // 1
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void search_big_volc__FPvPv(); // 1
-extern "C" void initBaseMtx__15daObjVolcBall_cFv(); // 1
-extern "C" void setBaseMtx__15daObjVolcBall_cFv(); // 1
-extern "C" void Create__15daObjVolcBall_cFv(); // 1
-extern "C" void CreateHeap__15daObjVolcBall_cFv(); // 1
-extern "C" void create__15daObjVolcBall_cFv(); // 1
-extern "C" void __dt__Q215daObjVolcBall_c7vball_sFv(); // 1
-extern "C" void __dt__19dPa_followEcallBackFv(); // 1
-extern "C" void cleanup__18dPa_levelEcallBackFv(); // 1
-extern "C" void __ct__Q215daObjVolcBall_c7vball_sFv(); // 1
-extern "C" void __defctor__19dPa_followEcallBackFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void execute__15daObjVolcBall_cFv(); // 1
-extern "C" void action__15daObjVolcBall_cFv(); // 1
-extern "C" void initActionPlayerWait__15daObjVolcBall_cFv(); // 1
-extern "C" void initActionWarning__15daObjVolcBall_cFv(); // 1
-extern "C" void initActionSwWait__15daObjVolcBall_cFv(); // 1
-extern "C" void actionPlayerWait__15daObjVolcBall_cFv(); // 1
-extern "C" void actionSwWait__15daObjVolcBall_cFv(); // 1
-extern "C" void actionStop__15daObjVolcBall_cFv(); // 1
-extern "C" void actionWarning__15daObjVolcBall_cFv(); // 1
-extern "C" void actionEruption__15daObjVolcBall_cFv(); // 1
-extern "C" void initActionEnd__15daObjVolcBall_cFv(); // 1
-extern "C" void actionEnd__15daObjVolcBall_cFv(); // 1
-extern "C" void eventStart__15daObjVolcBall_cFv(); // 1
-extern "C" void setEruptEffect__15daObjVolcBall_cFi(); // 1
-extern "C" void setFallEffect__15daObjVolcBall_cFi(); // 1
-extern "C" void endFallEffect__15daObjVolcBall_cFi(); // 1
-extern "C" void createSearchBall__15daObjVolcBall_cFv(); // 1
-extern "C" void createNormalBall__15daObjVolcBall_cFv(); // 1
-extern "C" void executeBall__15daObjVolcBall_cFv(); // 1
-extern "C" void startQuake__15daObjVolcBall_cFv(); // 1
-extern "C" void draw__15daObjVolcBall_cFv(); // 1
-extern "C" void _delete__15daObjVolcBall_cFv(); // 1
-extern "C" static void daObjVolcBall_Draw__FP15daObjVolcBall_c(); // 1
-extern "C" static void daObjVolcBall_Execute__FP15daObjVolcBall_c(); // 1
-extern "C" static void daObjVolcBall_Delete__FP15daObjVolcBall_c(); // 1
-extern "C" static void daObjVolcBall_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__15daObjVolcBall_cFv(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" void __dt__18dPa_levelEcallBackFv(); // 1
-extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" static void func_80D23D6C(); // 1
-extern "C" static void func_80D23D88(); // 1
-extern "C" static void func_80D23DA4(); // 1
-extern "C" static void func_80D23DAC(); // 1
-extern "C" static void func_80D23DB4(); // 1
-extern "C" static void func_80D23DBC(); // 1
+extern "C" void getData__15daObjVolcBall_cFv();
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" static void search_big_volc__FPvPv();
+extern "C" void initBaseMtx__15daObjVolcBall_cFv();
+extern "C" void setBaseMtx__15daObjVolcBall_cFv();
+extern "C" void Create__15daObjVolcBall_cFv();
+extern "C" void CreateHeap__15daObjVolcBall_cFv();
+extern "C" void create__15daObjVolcBall_cFv();
+extern "C" void __dt__Q215daObjVolcBall_c7vball_sFv();
+extern "C" void __dt__19dPa_followEcallBackFv();
+extern "C" void cleanup__18dPa_levelEcallBackFv();
+extern "C" void __ct__Q215daObjVolcBall_c7vball_sFv();
+extern "C" void __defctor__19dPa_followEcallBackFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void execute__15daObjVolcBall_cFv();
+extern "C" void action__15daObjVolcBall_cFv();
+extern "C" void initActionPlayerWait__15daObjVolcBall_cFv();
+extern "C" void initActionWarning__15daObjVolcBall_cFv();
+extern "C" void initActionSwWait__15daObjVolcBall_cFv();
+extern "C" void actionPlayerWait__15daObjVolcBall_cFv();
+extern "C" void actionSwWait__15daObjVolcBall_cFv();
+extern "C" void actionStop__15daObjVolcBall_cFv();
+extern "C" void actionWarning__15daObjVolcBall_cFv();
+extern "C" void actionEruption__15daObjVolcBall_cFv();
+extern "C" void initActionEnd__15daObjVolcBall_cFv();
+extern "C" void actionEnd__15daObjVolcBall_cFv();
+extern "C" void eventStart__15daObjVolcBall_cFv();
+extern "C" void setEruptEffect__15daObjVolcBall_cFi();
+extern "C" void setFallEffect__15daObjVolcBall_cFi();
+extern "C" void endFallEffect__15daObjVolcBall_cFi();
+extern "C" void createSearchBall__15daObjVolcBall_cFv();
+extern "C" void createNormalBall__15daObjVolcBall_cFv();
+extern "C" void executeBall__15daObjVolcBall_cFv();
+extern "C" void startQuake__15daObjVolcBall_cFv();
+extern "C" void draw__15daObjVolcBall_cFv();
+extern "C" void _delete__15daObjVolcBall_cFv();
+extern "C" static void daObjVolcBall_Draw__FP15daObjVolcBall_c();
+extern "C" static void daObjVolcBall_Execute__FP15daObjVolcBall_c();
+extern "C" static void daObjVolcBall_Delete__FP15daObjVolcBall_c();
+extern "C" static void daObjVolcBall_Create__FP10fopAc_ac_c();
+extern "C" void __dt__15daObjVolcBall_cFv();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" void __dt__18dPa_levelEcallBackFv();
+extern "C" void execute__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void executeAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void draw__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" void drawAfter__18JPAEmitterCallBackFP14JPABaseEmitter();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" static void func_80D23D6C();
+extern "C" static void func_80D23D88();
+extern "C" static void func_80D23DA4();
+extern "C" static void func_80D23DAC();
+extern "C" static void func_80D23DB4();
+extern "C" static void func_80D23DBC();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_VolcanicBall[12];
@@ -311,104 +314,120 @@ extern "C" extern void* g_profile_Obj_VolcanicBall[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dStage_SetErrorStage(); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fpcSch_JudgeByID(void*, void*);
+void dStage_SetErrorStage();
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__19dPa_followEcallBack[10];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_80D24100[4];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void dStage_SetErrorStage__Fv(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void CheckQuake__12dVibration_cFv(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void dStage_SetErrorStage__Fv();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void __ct__19dPa_followEcallBackFUcUc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void CheckQuake__12dVibration_cFv();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__19dPa_followEcallBack[10];

@@ -31,10 +31,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -45,21 +45,23 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagLv2PrChk_Execute(daTagLv2PrChk_c*); // 2
-static void daTagLv2PrChk_Delete(daTagLv2PrChk_c*); // 2
-static void daTagLv2PrChk_Create(daTagLv2PrChk_c*); // 2
+static void daTagLv2PrChk_Execute(daTagLv2PrChk_c*);
+static void daTagLv2PrChk_Delete(daTagLv2PrChk_c*);
+static void daTagLv2PrChk_Create(daTagLv2PrChk_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Tag_Lv2PrChk[12];
 
-extern "C" void Create__15daTagLv2PrChk_cFv(); // 1
-extern "C" void create__15daTagLv2PrChk_cFv(); // 1
-extern "C" void execute__15daTagLv2PrChk_cFv(); // 1
-extern "C" void action__15daTagLv2PrChk_cFv(); // 1
-extern "C" void actionCheck__15daTagLv2PrChk_cFv(); // 1
-extern "C" void actionEnd__15daTagLv2PrChk_cFv(); // 1
-extern "C" void seStartWrong__15daTagLv2PrChk_cFv(); // 1
-extern "C" bool _delete__15daTagLv2PrChk_cFv(); // 1
-extern "C" static void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c(); // 1
-extern "C" static void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c(); // 1
-extern "C" static void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c(); // 1
+extern "C" void Create__15daTagLv2PrChk_cFv();
+extern "C" void create__15daTagLv2PrChk_cFv();
+extern "C" void execute__15daTagLv2PrChk_cFv();
+extern "C" void action__15daTagLv2PrChk_cFv();
+extern "C" void actionCheck__15daTagLv2PrChk_cFv();
+extern "C" void actionEnd__15daTagLv2PrChk_cFv();
+extern "C" void seStartWrong__15daTagLv2PrChk_cFv();
+extern "C" bool _delete__15daTagLv2PrChk_cFv();
+extern "C" static void daTagLv2PrChk_Execute__FP15daTagLv2PrChk_c();
+extern "C" static void daTagLv2PrChk_Delete__FP15daTagLv2PrChk_c();
+extern "C" static void daTagLv2PrChk_Create__FP15daTagLv2PrChk_c();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_Lv2PrChk[12];
 
@@ -67,14 +69,19 @@ extern "C" extern void* g_profile_Tag_Lv2PrChk[12];
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_805A5410[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

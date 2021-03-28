@@ -12,14 +12,15 @@
 // 
 
 
-extern "C" void __ieee754_asin(); // 1
+extern "C" void __ieee754_asin();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_nan;
 
-extern "C" void sqrt(); // 1
+extern "C" void sqrt();
 extern "C" extern u32 __float_nan;
 
 // 

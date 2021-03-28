@@ -97,80 +97,80 @@ struct cBgS_LinChk {
 // 
 
 
-extern "C" void __ct__11dBgS_LinChkFv(); // 1
-extern "C" void __dt__11dBgS_LinChkFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void __ct__14dBgS_CamLinChkFv(); // 1
-extern "C" void __dt__14dBgS_CamLinChkFv(); // 1
-extern "C" void __ct__21dBgS_CamLinChk_NorWtrFv(); // 1
-extern "C" void __dt__21dBgS_CamLinChk_NorWtrFv(); // 1
-extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
-extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
-extern "C" void __ct__15dBgS_LinkLinChkFv(); // 1
-extern "C" void __dt__15dBgS_LinkLinChkFv(); // 1
-extern "C" void __ct__15dBgS_BombLinChkFv(); // 1
-extern "C" void __dt__15dBgS_BombLinChkFv(); // 1
-extern "C" void __ct__16dBgS_ArrowLinChkFv(); // 1
-extern "C" void __dt__16dBgS_ArrowLinChkFv(); // 1
-extern "C" void __ct__20dBgS_BoomerangLinChkFv(); // 1
-extern "C" void __dt__20dBgS_BoomerangLinChkFv(); // 1
-extern "C" void __ct__15dBgS_RopeLinChkFv(); // 1
-extern "C" void __dt__15dBgS_RopeLinChkFv(); // 1
-extern "C" void __ct__16dBgS_HorseLinChkFv(); // 1
-extern "C" void __dt__16dBgS_HorseLinChkFv(); // 1
-extern "C" static void func_80078534(); // 1
-extern "C" static void func_8007853C(); // 1
-extern "C" static void func_80078544(); // 1
-extern "C" static void func_8007854C(); // 1
-extern "C" static void func_80078554(); // 1
-extern "C" static void func_8007855C(); // 1
-extern "C" static void func_80078564(); // 1
-extern "C" static void func_8007856C(); // 1
-extern "C" static void func_80078574(); // 1
-extern "C" static void func_8007857C(); // 1
-extern "C" static void func_80078584(); // 1
-extern "C" static void func_8007858C(); // 1
-extern "C" static void func_80078594(); // 1
-extern "C" static void func_8007859C(); // 1
-extern "C" static void func_800785A4(); // 1
-extern "C" static void func_800785AC(); // 1
-extern "C" static void func_800785B4(); // 1
-extern "C" static void func_800785BC(); // 1
-extern "C" static void func_800785C4(); // 1
-extern "C" static void func_800785CC(); // 1
-extern "C" static void func_800785D4(); // 1
-extern "C" static void func_800785DC(); // 1
-extern "C" static void func_800785E4(); // 1
-extern "C" static void func_800785EC(); // 1
-extern "C" static void func_800785F4(); // 1
-extern "C" static void func_800785FC(); // 1
-extern "C" static void func_80078604(); // 1
-extern "C" static void func_8007860C(); // 1
-extern "C" static void func_80078614(); // 1
-extern "C" static void func_8007861C(); // 1
+extern "C" void __ct__11dBgS_LinChkFv();
+extern "C" void __dt__11dBgS_LinChkFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void __ct__14dBgS_CamLinChkFv();
+extern "C" void __dt__14dBgS_CamLinChkFv();
+extern "C" void __ct__21dBgS_CamLinChk_NorWtrFv();
+extern "C" void __dt__21dBgS_CamLinChk_NorWtrFv();
+extern "C" void __ct__14dBgS_ObjLinChkFv();
+extern "C" void __dt__14dBgS_ObjLinChkFv();
+extern "C" void __ct__15dBgS_LinkLinChkFv();
+extern "C" void __dt__15dBgS_LinkLinChkFv();
+extern "C" void __ct__15dBgS_BombLinChkFv();
+extern "C" void __dt__15dBgS_BombLinChkFv();
+extern "C" void __ct__16dBgS_ArrowLinChkFv();
+extern "C" void __dt__16dBgS_ArrowLinChkFv();
+extern "C" void __ct__20dBgS_BoomerangLinChkFv();
+extern "C" void __dt__20dBgS_BoomerangLinChkFv();
+extern "C" void __ct__15dBgS_RopeLinChkFv();
+extern "C" void __dt__15dBgS_RopeLinChkFv();
+extern "C" void __ct__16dBgS_HorseLinChkFv();
+extern "C" void __dt__16dBgS_HorseLinChkFv();
+extern "C" static void func_80078534();
+extern "C" static void func_8007853C();
+extern "C" static void func_80078544();
+extern "C" static void func_8007854C();
+extern "C" static void func_80078554();
+extern "C" static void func_8007855C();
+extern "C" static void func_80078564();
+extern "C" static void func_8007856C();
+extern "C" static void func_80078574();
+extern "C" static void func_8007857C();
+extern "C" static void func_80078584();
+extern "C" static void func_8007858C();
+extern "C" static void func_80078594();
+extern "C" static void func_8007859C();
+extern "C" static void func_800785A4();
+extern "C" static void func_800785AC();
+extern "C" static void func_800785B4();
+extern "C" static void func_800785BC();
+extern "C" static void func_800785C4();
+extern "C" static void func_800785CC();
+extern "C" static void func_800785D4();
+extern "C" static void func_800785DC();
+extern "C" static void func_800785E4();
+extern "C" static void func_800785EC();
+extern "C" static void func_800785F4();
+extern "C" static void func_800785FC();
+extern "C" static void func_80078604();
+extern "C" static void func_8007860C();
+extern "C" static void func_80078614();
+extern "C" static void func_8007861C();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __ct__8dBgS_ChkFv(); // 1
-extern "C" void __dt__8dBgS_ChkFv(); // 1
-extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetCam__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetArrow__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetBomb__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetBoomerang__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetRope__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetHorse__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__11cBgS_LinChkFv(); // 1
-extern "C" void __dt__11cBgS_LinChkFv(); // 1
-extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8dBgS_ChkFv();
+extern "C" void __dt__8dBgS_ChkFv();
+extern "C" void GetPolyPassChkInfo__8dBgS_ChkFv();
+extern "C" void GetGrpPassChkInfo__8dBgS_ChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void SetCam__16dBgS_PolyPassChkFv();
+extern "C" void SetLink__16dBgS_PolyPassChkFv();
+extern "C" void SetArrow__16dBgS_PolyPassChkFv();
+extern "C" void SetBomb__16dBgS_PolyPassChkFv();
+extern "C" void SetBoomerang__16dBgS_PolyPassChkFv();
+extern "C" void SetRope__16dBgS_PolyPassChkFv();
+extern "C" void SetHorse__16dBgS_PolyPassChkFv();
+extern "C" void __ct__11cBgS_LinChkFv();
+extern "C" void __dt__11cBgS_LinChkFv();
+extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

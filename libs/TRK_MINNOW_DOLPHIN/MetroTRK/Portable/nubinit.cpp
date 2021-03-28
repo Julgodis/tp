@@ -11,29 +11,31 @@
 // Forward References:
 // 
 
+SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
-extern "C" void TRKNubWelcome(); // 1
-extern "C" void TRKTerminateNub(); // 1
-extern "C" void TRKInitializeNub(); // 1
+extern "C" void TRKNubWelcome();
+extern "C" void TRKTerminateNub();
+extern "C" void TRKInitializeNub();
 SECTION_BSS extern u8 gTRKBigEndian[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
-extern "C" void TRKInitializeEventQueue(); // 1
-extern "C" void TRKInitializeMessageBuffers(); // 1
-extern "C" bool TRKTerminateSerialHandler(); // 1
-extern "C" void TRKInitializeSerialHandler(); // 1
-extern "C" void usr_put_initialize(); // 1
-extern "C" bool TRKInitializeDispatcher(); // 1
-extern "C" void TRKTargetSetInputPendingPtr(); // 1
-extern "C" void TRKInitializeTarget(); // 1
-extern "C" void InitializeProgramEndTrap(); // 1
-extern "C" void TRK_board_display(); // 1
-extern "C" void TRKInitializeIntDrivenUART(); // 1
-extern "C" void MWTRACE(); // 1
+extern "C" void TRKInitializeEventQueue();
+extern "C" void TRKInitializeMessageBuffers();
+extern "C" bool TRKTerminateSerialHandler();
+extern "C" void TRKInitializeSerialHandler();
+extern "C" void usr_put_initialize();
+extern "C" bool TRKInitializeDispatcher();
+extern "C" void TRKTargetSetInputPendingPtr();
+extern "C" void TRKInitializeTarget();
+extern "C" void InitializeProgramEndTrap();
+extern "C" void TRK_board_display();
+extern "C" void TRKInitializeIntDrivenUART();
+extern "C" void MWTRACE();
 extern "C" extern u8 gTRKInputPendingPtr[4 + 4 /* padding */];
 
 // 

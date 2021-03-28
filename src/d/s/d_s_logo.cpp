@@ -123,10 +123,10 @@ struct cDylPhs {
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -163,59 +163,61 @@ struct J2DPicture {
 // Forward References:
 // 
 
-static void phase_0(dScnLogo_c*); // 2
-static void phase_1(dScnLogo_c*); // 2
-static void phase_2(dScnLogo_c*); // 2
-static void resLoad(request_of_phase_process_class*, dScnLogo_c*); // 2
-static void dScnLogo_Create(scene_class*); // 2
-static void dScnLogo_Execute(dScnLogo_c*); // 2
-static void dScnLogo_Draw(dScnLogo_c*); // 2
-static void dScnLogo_Delete(dScnLogo_c*); // 2
-static bool dScnLogo_IsDelete(dScnLogo_c*); // 2
-static void cLib_calcTimer__template5(u16*); // 2
+static void phase_0(dScnLogo_c*);
+static void phase_1(dScnLogo_c*);
+static void phase_2(dScnLogo_c*);
+static void resLoad(request_of_phase_process_class*, dScnLogo_c*);
+static void dScnLogo_Create(scene_class*);
+static void dScnLogo_Execute(dScnLogo_c*);
+static void dScnLogo_Draw(dScnLogo_c*);
+static void dScnLogo_Delete(dScnLogo_c*);
+static bool dScnLogo_IsDelete(dScnLogo_c*);
+static void cLib_calcTimer__template5(u16*);
+extern "C" extern char const* const d_s_d_s_logo__stringBase0;
+extern "C" extern void* g_profile_LOGO_SCENE[10];
 
-extern "C" void __ct__10dLog_HIO_cFv(); // 1
-extern "C" void preLoad_dyl_create__10dScnLogo_cFv(); // 1
-extern "C" void preLoad_dyl_remove__10dScnLogo_cFv(); // 1
-extern "C" void preLoad_dyl__10dScnLogo_cFv(); // 1
-extern "C" void checkProgSelect__10dScnLogo_cFv(); // 1
-extern "C" void draw__10dScnLogo_cFv(); // 1
-extern "C" void progInDraw__10dScnLogo_cFv(); // 1
-extern "C" void progSelDraw__10dScnLogo_cFv(); // 1
-extern "C" void progOutDraw__10dScnLogo_cFv(); // 1
-extern "C" void progSetDraw__10dScnLogo_cFv(); // 1
-extern "C" void progSet2Draw__10dScnLogo_cFv(); // 1
-extern "C" void progChangeDraw__10dScnLogo_cFv(); // 1
-extern "C" void warningInDraw__10dScnLogo_cFv(); // 1
-extern "C" void warningDispDraw__10dScnLogo_cFv(); // 1
-extern "C" void warningOutDraw__10dScnLogo_cFv(); // 1
-extern "C" void nintendoInDraw__10dScnLogo_cFv(); // 1
-extern "C" void nintendoOutDraw__10dScnLogo_cFv(); // 1
-extern "C" void dolbyInDraw__10dScnLogo_cFv(); // 1
-extern "C" void dolbyOutDraw__10dScnLogo_cFv(); // 1
-extern "C" void dolbyOutDraw2__10dScnLogo_cFv(); // 1
-extern "C" void dvdWaitDraw__10dScnLogo_cFv(); // 1
-extern "C" void nextSceneChange__10dScnLogo_cFv(); // 1
-extern "C" void __dt__10dScnLogo_cFv(); // 1
-extern "C" static void phase_0__FP10dScnLogo_c(); // 1
-extern "C" static void phase_1__FP10dScnLogo_c(); // 1
-extern "C" static void phase_2__FP10dScnLogo_c(); // 1
-extern "C" static void resLoad__FP30request_of_phase_process_classP10dScnLogo_c(); // 1
-extern "C" void create__10dScnLogo_cFv(); // 1
-extern "C" void logoInitGC__10dScnLogo_cFv(); // 1
-extern "C" void dvdDataLoad__10dScnLogo_cFv(); // 1
-extern "C" static void dScnLogo_Create__FP11scene_class(); // 1
-extern "C" static void dScnLogo_Execute__FP10dScnLogo_c(); // 1
-extern "C" static void dScnLogo_Draw__FP10dScnLogo_c(); // 1
-extern "C" static void dScnLogo_Delete__FP10dScnLogo_c(); // 1
-extern "C" static bool dScnLogo_IsDelete__FP10dScnLogo_c(); // 1
-extern "C" void setProgressiveMode__10dScnLogo_cFUc(); // 1
-extern "C" void getProgressiveMode__10dScnLogo_cFv(); // 1
-extern "C" void isProgressiveMode__10dScnLogo_cFv(); // 1
-extern "C" void setRenderMode__10dScnLogo_cFv(); // 1
-extern "C" void __dt__10dLog_HIO_cFv(); // 1
-extern "C" static void func_802585A4(); // 1
-extern "C" void __sinit_d_s_logo_cpp(); // 1
+extern "C" void __ct__10dLog_HIO_cFv();
+extern "C" void preLoad_dyl_create__10dScnLogo_cFv();
+extern "C" void preLoad_dyl_remove__10dScnLogo_cFv();
+extern "C" void preLoad_dyl__10dScnLogo_cFv();
+extern "C" void checkProgSelect__10dScnLogo_cFv();
+extern "C" void draw__10dScnLogo_cFv();
+extern "C" void progInDraw__10dScnLogo_cFv();
+extern "C" void progSelDraw__10dScnLogo_cFv();
+extern "C" void progOutDraw__10dScnLogo_cFv();
+extern "C" void progSetDraw__10dScnLogo_cFv();
+extern "C" void progSet2Draw__10dScnLogo_cFv();
+extern "C" void progChangeDraw__10dScnLogo_cFv();
+extern "C" void warningInDraw__10dScnLogo_cFv();
+extern "C" void warningDispDraw__10dScnLogo_cFv();
+extern "C" void warningOutDraw__10dScnLogo_cFv();
+extern "C" void nintendoInDraw__10dScnLogo_cFv();
+extern "C" void nintendoOutDraw__10dScnLogo_cFv();
+extern "C" void dolbyInDraw__10dScnLogo_cFv();
+extern "C" void dolbyOutDraw__10dScnLogo_cFv();
+extern "C" void dolbyOutDraw2__10dScnLogo_cFv();
+extern "C" void dvdWaitDraw__10dScnLogo_cFv();
+extern "C" void nextSceneChange__10dScnLogo_cFv();
+extern "C" void __dt__10dScnLogo_cFv();
+extern "C" static void phase_0__FP10dScnLogo_c();
+extern "C" static void phase_1__FP10dScnLogo_c();
+extern "C" static void phase_2__FP10dScnLogo_c();
+extern "C" static void resLoad__FP30request_of_phase_process_classP10dScnLogo_c();
+extern "C" void create__10dScnLogo_cFv();
+extern "C" void logoInitGC__10dScnLogo_cFv();
+extern "C" void dvdDataLoad__10dScnLogo_cFv();
+extern "C" static void dScnLogo_Create__FP11scene_class();
+extern "C" static void dScnLogo_Execute__FP10dScnLogo_c();
+extern "C" static void dScnLogo_Draw__FP10dScnLogo_c();
+extern "C" static void dScnLogo_Delete__FP10dScnLogo_c();
+extern "C" static bool dScnLogo_IsDelete__FP10dScnLogo_c();
+extern "C" void setProgressiveMode__10dScnLogo_cFUc();
+extern "C" void getProgressiveMode__10dScnLogo_cFv();
+extern "C" void isProgressiveMode__10dScnLogo_cFv();
+extern "C" void setRenderMode__10dScnLogo_cFv();
+extern "C" void __dt__10dLog_HIO_cFv();
+extern "C" static void func_802585A4();
+extern "C" void __sinit_d_s_logo_cpp();
 extern "C" extern char const* const d_s_d_s_logo__stringBase0;
 extern "C" extern void* g_profile_LOGO_SCENE[10];
 
@@ -223,82 +225,101 @@ extern "C" extern void* g_profile_LOGO_SCENE[10];
 // External References:
 // 
 
-void mDoExt_getGameHeap(); // 2
-void mDoExt_getJ2dHeap(); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getRubyFont(); // 2
-void mDoExt_getSubFont(); // 2
-void mDoExt_setAraCacheSize(u32); // 2
-void mDoRst_reset(int, u32, int); // 2
-void mDoRst_resetCallBack(int, void*); // 2
-void cDyl_InitAsyncIsDone(); // 2
-void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
-void dComIfG_changeOpeningScene(scene_class*, s16); // 2
-void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void mDoExt_getGameHeap();
+void mDoExt_getJ2dHeap();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void mDoExt_getSubFont();
+void mDoExt_setAraCacheSize(u32);
+void mDoRst_reset(int, u32, int);
+void mDoRst_resetCallBack(int, void*);
+void cDyl_InitAsyncIsDone();
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void dComIfG_changeOpeningScene(scene_class*, s16);
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*);
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern u8 g_ntscZeldaProg[60];
+extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__10dDlst_2D_c[3];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u8 struct_80450BB8[4];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 archiveHeap[4];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 mData__12dEnemyItem_c[4 + 4 /* padding */];
+extern "C" extern u8 sManager__10JFWDisplay[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sAramObject__7JKRAram[4];
+extern "C" extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
+extern "C" extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451500[4];
 
-SECTION_INIT void memset(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void mDoExt_getSubFont__Fv(); // 1
-extern "C" void mDoExt_setAraCacheSize__FUl(); // 1
-extern "C" void mDoRst_reset__FiUli(); // 1
-extern "C" void mDoRst_resetCallBack__FiPv(); // 1
-extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap(); // 1
-extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap(); // 1
-extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
-extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
-extern "C" void fopScnM_ChangeReq__FP11scene_classssUs(); // 1
-extern "C" void createParticle__14dComIfG_play_cFv(); // 1
-extern "C" void dComIfG_changeOpeningScene__FP11scene_classs(); // 1
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci(); // 1
-extern "C" void createWork__8dMpath_cFv(); // 1
-extern "C" void createCommon__13dPa_control_cFPCv(); // 1
-extern "C" void __ct__10dDlst_2D_cFP7ResTIMGssssUc(); // 1
-extern "C" void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void createWork__7dTres_cFv(); // 1
-extern "C" void waitBlanking__10JFWDisplayFi(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void loadStaticWaves__10Z2SceneMgrFv(); // 1
-extern "C" bool checkFirstWaves__10Z2SceneMgrFv(); // 1
-extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void destroy__7JKRHeapFv(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void create__10JKRExpHeapFPvUlP7JKRHeapb(); // 1
-extern "C" void getTotalFreeSize__11JKRAramHeapFv(); // 1
-extern "C" void __dt__10J2DPictureFv(); // 1
-extern "C" void OSGetProgressiveMode(); // 1
-extern "C" void OSSetProgressiveMode(); // 1
-extern "C" void VIGetDTVStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memset();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void mDoExt_setAraCacheSize__FUl();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void create__25mDoDvdThd_mountXArchive_cFPCcUcQ210JKRArchive10EMountModeP7JKRHeap();
+extern "C" void create__21mDoDvdThd_toMainRam_cFPCcUcP7JKRHeap();
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void createParticle__14dComIfG_play_cFv();
+extern "C" void dComIfG_changeOpeningScene__FP11scene_classs();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void syncAllRes__14dRes_control_cFP11dRes_info_ci();
+extern "C" void createWork__8dMpath_cFv();
+extern "C" void createCommon__13dPa_control_cFPCv();
+extern "C" void __ct__10dDlst_2D_cFP7ResTIMGssssUc();
+extern "C" void setSimpleTex__21dDlst_shadowControl_cFPC7ResTIMG();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void createWork__7dTres_cFv();
+extern "C" void waitBlanking__10JFWDisplayFi();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void loadStaticWaves__10Z2SceneMgrFv();
+extern "C" bool checkFirstWaves__10Z2SceneMgrFv();
+extern "C" void resetProcess__10Z2AudioMgrFUlb();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void destroy__7JKRHeapFv();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void create__10JKRExpHeapFPvUlP7JKRHeapb();
+extern "C" void getTotalFreeSize__11JKRAramHeapFv();
+extern "C" void __dt__10J2DPictureFv();
+extern "C" void OSGetProgressiveMode();
+extern "C" void OSSetProgressiveMode();
+extern "C" void VIGetDTVStatus();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_ntscZeldaProg[60];
 extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];

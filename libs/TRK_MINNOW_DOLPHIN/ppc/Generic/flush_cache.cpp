@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void TRK_flush_cache(); // 1
+extern "C" void TRK_flush_cache();
 
 // 
 // External References:

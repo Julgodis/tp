@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void MWTRACE(); // 1
+extern "C" void MWTRACE();
 
 // 
 // External References:

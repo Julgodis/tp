@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -59,10 +59,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -73,31 +73,34 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daScExit_Draw(daScExit_c*); // 2
-static void daScExit_Execute(daScExit_c*); // 2
-static void daScExit_Delete(daScExit_c*); // 2
-static void daScExit_Create(daScExit_c*); // 2
-static void cLib_calcTimer__template0(u8*); // 2
+static void daScExit_Draw(daScExit_c*);
+static void daScExit_Execute(daScExit_c*);
+static void daScExit_Delete(daScExit_c*);
+static void daScExit_Create(daScExit_c*);
+static void cLib_calcTimer__template0(u8*);
+extern "C" extern u8 const lit_3800[4];
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_SCENE_EXIT2[12];
 
-extern "C" void initBaseMtx__10daScExit_cFv(); // 1
-extern "C" void setBaseMtx__10daScExit_cFv(); // 1
-extern "C" void Create__10daScExit_cFv(); // 1
-extern "C" void create__10daScExit_cFv(); // 1
-extern "C" void execute__10daScExit_cFv(); // 1
-extern "C" void event_proc_call__10daScExit_cFv(); // 1
-extern "C" void actionWait__10daScExit_cFv(); // 1
-extern "C" void actionOrderEvent__10daScExit_cFv(); // 1
-extern "C" void actionEvent__10daScExit_cFv(); // 1
-extern "C" void actionDead__10daScExit_cFv(); // 1
-extern "C" void demoProc__10daScExit_cFv(); // 1
-extern "C" void checkArea__10daScExit_cFv(); // 1
-extern "C" bool draw__10daScExit_cFv(); // 1
-extern "C" void _delete__10daScExit_cFv(); // 1
-extern "C" static void daScExit_Draw__FP10daScExit_c(); // 1
-extern "C" static void daScExit_Execute__FP10daScExit_c(); // 1
-extern "C" static void daScExit_Delete__FP10daScExit_c(); // 1
-extern "C" static void daScExit_Create__FP10daScExit_c(); // 1
-extern "C" static void func_8059E7D0(); // 1
+extern "C" void initBaseMtx__10daScExit_cFv();
+extern "C" void setBaseMtx__10daScExit_cFv();
+extern "C" void Create__10daScExit_cFv();
+extern "C" void create__10daScExit_cFv();
+extern "C" void execute__10daScExit_cFv();
+extern "C" void event_proc_call__10daScExit_cFv();
+extern "C" void actionWait__10daScExit_cFv();
+extern "C" void actionOrderEvent__10daScExit_cFv();
+extern "C" void actionEvent__10daScExit_cFv();
+extern "C" void actionDead__10daScExit_cFv();
+extern "C" void demoProc__10daScExit_cFv();
+extern "C" void checkArea__10daScExit_cFv();
+extern "C" bool draw__10daScExit_cFv();
+extern "C" void _delete__10daScExit_cFv();
+extern "C" static void daScExit_Draw__FP10daScExit_c();
+extern "C" static void daScExit_Execute__FP10daScExit_c();
+extern "C" static void daScExit_Delete__FP10daScExit_c();
+extern "C" static void daScExit_Create__FP10daScExit_c();
+extern "C" static void func_8059E7D0();
 extern "C" extern u8 const lit_3800[4];
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_SCENE_EXIT2[12];
@@ -106,33 +109,38 @@ extern "C" extern void* g_profile_SCENE_EXIT2[12];
 // External References:
 // 
 
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 data_8059E920[4];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

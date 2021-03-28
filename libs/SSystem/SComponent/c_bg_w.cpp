@@ -21,16 +21,16 @@ struct cBgW_BgId {
 // Forward References:
 // 
 
-void cBgW_CheckBGround(f32); // 2
-void cBgW_CheckBRoof(f32); // 2
-void cBgW_CheckBWall(f32); // 2
+void cBgW_CheckBGround(f32);
+void cBgW_CheckBRoof(f32);
+void cBgW_CheckBWall(f32);
 
-extern "C" void Regist__9cBgW_BgIdFi(); // 1
-extern "C" void Release__9cBgW_BgIdFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void cBgW_CheckBGround__Ff(); // 1
-extern "C" void cBgW_CheckBRoof__Ff(); // 1
-extern "C" void cBgW_CheckBWall__Ff(); // 1
+extern "C" void Regist__9cBgW_BgIdFi();
+extern "C" void Release__9cBgW_BgIdFv();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void cBgW_CheckBGround__Ff();
+extern "C" void cBgW_CheckBRoof__Ff();
+extern "C" void cBgW_CheckBWall__Ff();
 
 // 
 // External References:

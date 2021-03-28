@@ -18,14 +18,6 @@ struct JUTTexture {
 	/* 802DE840 */ void load(_GXTexMapID);
 };
 
-struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
-	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
-	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
-};
-
 struct JKRHeap {
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
 };
@@ -33,6 +25,14 @@ struct JKRHeap {
 struct JPABaseEmitter {
 	/* 8027EDD4 */ void processTillStartFrame();
 	/* 8027EE14 */ void processTermination();
+};
+
+struct JPAEmitterWorkData {
+};
+
+struct JPABaseParticle {
+	/* 8027FFD0 */ void calc_p(JPAEmitterWorkData*);
+	/* 80280260 */ void calc_c(JPAEmitterWorkData*);
 };
 
 struct JPAResource {
@@ -85,218 +85,218 @@ struct JGeometry {
 // 
 
 
-extern "C" void __ct__11JPAResourceFv(); // 1
-extern "C" void init__11JPAResourceFP7JKRHeap(); // 1
-extern "C" void calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter(); // 1
-extern "C" void draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter(); // 1
-extern "C" void drawP__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void drawC__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void setPTev__11JPAResourceFv(); // 1
-extern "C" void setCTev__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void calcKey__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void calcWorkData_c__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void calcWorkData_d__11JPAResourceFP18JPAEmitterWorkData(); // 1
-extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock(); // 1
+extern "C" void __ct__11JPAResourceFv();
+extern "C" void init__11JPAResourceFP7JKRHeap();
+extern "C" void calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter();
+extern "C" void draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter();
+extern "C" void drawP__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void drawC__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void setPTev__11JPAResourceFv();
+extern "C" void setCTev__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void calc_p__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calc_c__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calcField__11JPAResourceFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void calcKey__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void calcWorkData_c__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void calcWorkData_d__11JPAResourceFP18JPAEmitterWorkData();
+extern "C" void prepare__12JPAFieldBaseFP18JPAEmitterWorkDataP13JPAFieldBlock();
 
 // 
 // External References:
 // 
 
-void JPASetPointSize(JPAEmitterWorkData*); // 2
-void JPASetLineWidth(JPAEmitterWorkData*); // 2
-void JPASetPointSize(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPASetLineWidth(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistPrm(JPAEmitterWorkData*); // 2
-void JPARegistEnv(JPAEmitterWorkData*); // 2
-void JPARegistPrmEnv(JPAEmitterWorkData*); // 2
-void JPARegistAlpha(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistPrmAlpha(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistPrmAlphaEnv(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistAlphaEnv(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistEnv(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcClrIdxNormal(JPAEmitterWorkData*); // 2
-void JPACalcClrIdxNormal(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcClrIdxRepeat(JPAEmitterWorkData*); // 2
-void JPACalcClrIdxRepeat(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcClrIdxReverse(JPAEmitterWorkData*); // 2
-void JPACalcClrIdxReverse(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcClrIdxMerge(JPAEmitterWorkData*); // 2
-void JPACalcClrIdxMerge(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcClrIdxRandom(JPAEmitterWorkData*); // 2
-void JPACalcClrIdxRandom(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcPrm(JPAEmitterWorkData*); // 2
-void JPACalcPrm(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcEnv(JPAEmitterWorkData*); // 2
-void JPACalcEnv(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcColorCopy(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPAGenTexCrdMtxIdt(JPAEmitterWorkData*); // 2
-void JPAGenTexCrdMtxAnm(JPAEmitterWorkData*); // 2
-void JPAGenTexCrdMtxPrj(JPAEmitterWorkData*); // 2
-void JPAGenCalcTexCrdMtxAnm(JPAEmitterWorkData*); // 2
-void JPALoadCalcTexCrdMtxAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPALoadTex(JPAEmitterWorkData*); // 2
-void JPALoadTexAnm(JPAEmitterWorkData*); // 2
-void JPALoadTexAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcTexIdxNormal(JPAEmitterWorkData*); // 2
-void JPACalcTexIdxNormal(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcTexIdxRepeat(JPAEmitterWorkData*); // 2
-void JPACalcTexIdxRepeat(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcTexIdxReverse(JPAEmitterWorkData*); // 2
-void JPACalcTexIdxReverse(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcTexIdxMerge(JPAEmitterWorkData*); // 2
-void JPACalcTexIdxMerge(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcTexIdxRandom(JPAEmitterWorkData*); // 2
-void JPACalcTexIdxRandom(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPALoadPosMtxCam(JPAEmitterWorkData*); // 2
-void JPADrawBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawRotBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawYBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawRotYBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawDirection(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawRotDirection(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawDBillboard(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawRotation(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawPoint(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawLine(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPADrawStripe(JPAEmitterWorkData*); // 2
-void JPADrawStripeX(JPAEmitterWorkData*); // 2
-void JPADrawEmitterCallBackB(JPAEmitterWorkData*); // 2
-void JPADrawParticleCallBack(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleX(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleY(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleCopy(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleAnmNormal(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleAnmRepeatX(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleAnmRepeatY(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleAnmReverseX(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcScaleAnmReverseY(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcAlphaAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcAlphaFlickAnm(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPARegistChildPrmEnv(JPAEmitterWorkData*); // 2
-void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPALoadExTex(JPAEmitterWorkData*); // 2
-void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]); // 2
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
+void JPASetPointSize(JPAEmitterWorkData*);
+void JPASetLineWidth(JPAEmitterWorkData*);
+void JPASetPointSize(JPAEmitterWorkData*, JPABaseParticle*);
+void JPASetLineWidth(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistPrm(JPAEmitterWorkData*);
+void JPARegistEnv(JPAEmitterWorkData*);
+void JPARegistPrmEnv(JPAEmitterWorkData*);
+void JPARegistAlpha(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistPrmAlpha(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistPrmAlphaEnv(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistAlphaEnv(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistEnv(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcClrIdxNormal(JPAEmitterWorkData*);
+void JPACalcClrIdxNormal(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcClrIdxRepeat(JPAEmitterWorkData*);
+void JPACalcClrIdxRepeat(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcClrIdxReverse(JPAEmitterWorkData*);
+void JPACalcClrIdxReverse(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcClrIdxMerge(JPAEmitterWorkData*);
+void JPACalcClrIdxMerge(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcClrIdxRandom(JPAEmitterWorkData*);
+void JPACalcClrIdxRandom(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcPrm(JPAEmitterWorkData*);
+void JPACalcPrm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcEnv(JPAEmitterWorkData*);
+void JPACalcEnv(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcColorCopy(JPAEmitterWorkData*, JPABaseParticle*);
+void JPAGenTexCrdMtxIdt(JPAEmitterWorkData*);
+void JPAGenTexCrdMtxAnm(JPAEmitterWorkData*);
+void JPAGenTexCrdMtxPrj(JPAEmitterWorkData*);
+void JPAGenCalcTexCrdMtxAnm(JPAEmitterWorkData*);
+void JPALoadCalcTexCrdMtxAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPALoadTex(JPAEmitterWorkData*);
+void JPALoadTexAnm(JPAEmitterWorkData*);
+void JPALoadTexAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcTexIdxNormal(JPAEmitterWorkData*);
+void JPACalcTexIdxNormal(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcTexIdxRepeat(JPAEmitterWorkData*);
+void JPACalcTexIdxRepeat(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcTexIdxReverse(JPAEmitterWorkData*);
+void JPACalcTexIdxReverse(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcTexIdxMerge(JPAEmitterWorkData*);
+void JPACalcTexIdxMerge(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcTexIdxRandom(JPAEmitterWorkData*);
+void JPACalcTexIdxRandom(JPAEmitterWorkData*, JPABaseParticle*);
+void JPALoadPosMtxCam(JPAEmitterWorkData*);
+void JPADrawBillboard(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawRotBillboard(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawYBillboard(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawRotYBillboard(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawDirection(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawRotDirection(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawDBillboard(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawRotation(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawPoint(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawLine(JPAEmitterWorkData*, JPABaseParticle*);
+void JPADrawStripe(JPAEmitterWorkData*);
+void JPADrawStripeX(JPAEmitterWorkData*);
+void JPADrawEmitterCallBackB(JPAEmitterWorkData*);
+void JPADrawParticleCallBack(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleCopy(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmNormal(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmRepeatX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmRepeatY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmReverseX(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcScaleAnmReverseY(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcAlphaAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcAlphaFlickAnm(JPAEmitterWorkData*, JPABaseParticle*);
+void JPARegistChildPrmEnv(JPAEmitterWorkData*);
+void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*);
+void JPALoadExTex(JPAEmitterWorkData*);
+void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]);
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
 
-extern "C" void JPASetPointSize__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPASetLineWidth__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPASetPointSize__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPASetLineWidth__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistPrm__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPARegistEnv__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPARegistPrmEnv__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPARegistAlpha__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistPrmAlpha__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistPrmAlphaEnv__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistAlphaEnv__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistEnv__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcClrIdxNormal__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcClrIdxNormal__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcClrIdxRepeat__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcClrIdxRepeat__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcClrIdxReverse__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcClrIdxReverse__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcClrIdxMerge__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcClrIdxMerge__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcClrIdxRandom__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcClrIdxRandom__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcPrm__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcPrm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcEnv__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcEnv__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcColorCopy__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPAGenTexCrdMtxIdt__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPAGenTexCrdMtxAnm__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPAGenTexCrdMtxPrj__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPAGenCalcTexCrdMtxAnm__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPALoadCalcTexCrdMtxAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPALoadTex__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPALoadTexAnm__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPALoadTexAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcTexIdxNormal__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcTexIdxNormal__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcTexIdxRepeat__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcTexIdxRepeat__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcTexIdxReverse__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcTexIdxReverse__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcTexIdxMerge__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcTexIdxMerge__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcTexIdxRandom__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcTexIdxRandom__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPALoadPosMtxCam__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPADrawBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawRotBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawYBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawRotYBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawDirection__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawRotDirection__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawDBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawRotation__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawPoint__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawLine__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPADrawStripe__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPADrawStripeX__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPADrawEmitterCallBackB__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPADrawParticleCallBack__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void setGX__12JPABaseShapeCFP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPALoadExTex__FP18JPAEmitterWorkData(); // 1
-extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData(); // 1
-extern "C" void calc__11JPAKeyBlockFf(); // 1
-extern "C" void processTillStartFrame__14JPABaseEmitterFv(); // 1
-extern "C" void processTermination__14JPABaseEmitterFv(); // 1
-extern "C" void calc_p__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
-extern "C" void calc_c__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
-extern "C" void func_80280588(); // 1
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void JPASetPointSize__FP18JPAEmitterWorkData();
+extern "C" void JPASetLineWidth__FP18JPAEmitterWorkData();
+extern "C" void JPASetPointSize__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPASetLineWidth__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistPrm__FP18JPAEmitterWorkData();
+extern "C" void JPARegistEnv__FP18JPAEmitterWorkData();
+extern "C" void JPARegistPrmEnv__FP18JPAEmitterWorkData();
+extern "C" void JPARegistAlpha__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistPrmAlpha__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistPrmAlphaEnv__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistAlphaEnv__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistEnv__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcClrIdxNormal__FP18JPAEmitterWorkData();
+extern "C" void JPACalcClrIdxNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcClrIdxRepeat__FP18JPAEmitterWorkData();
+extern "C" void JPACalcClrIdxRepeat__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcClrIdxReverse__FP18JPAEmitterWorkData();
+extern "C" void JPACalcClrIdxReverse__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcClrIdxMerge__FP18JPAEmitterWorkData();
+extern "C" void JPACalcClrIdxMerge__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcClrIdxRandom__FP18JPAEmitterWorkData();
+extern "C" void JPACalcClrIdxRandom__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcPrm__FP18JPAEmitterWorkData();
+extern "C" void JPACalcPrm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcEnv__FP18JPAEmitterWorkData();
+extern "C" void JPACalcEnv__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcColorCopy__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPAGenTexCrdMtxIdt__FP18JPAEmitterWorkData();
+extern "C" void JPAGenTexCrdMtxAnm__FP18JPAEmitterWorkData();
+extern "C" void JPAGenTexCrdMtxPrj__FP18JPAEmitterWorkData();
+extern "C" void JPAGenCalcTexCrdMtxAnm__FP18JPAEmitterWorkData();
+extern "C" void JPALoadCalcTexCrdMtxAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPALoadTex__FP18JPAEmitterWorkData();
+extern "C" void JPALoadTexAnm__FP18JPAEmitterWorkData();
+extern "C" void JPALoadTexAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcTexIdxNormal__FP18JPAEmitterWorkData();
+extern "C" void JPACalcTexIdxNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcTexIdxRepeat__FP18JPAEmitterWorkData();
+extern "C" void JPACalcTexIdxRepeat__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcTexIdxReverse__FP18JPAEmitterWorkData();
+extern "C" void JPACalcTexIdxReverse__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcTexIdxMerge__FP18JPAEmitterWorkData();
+extern "C" void JPACalcTexIdxMerge__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcTexIdxRandom__FP18JPAEmitterWorkData();
+extern "C" void JPACalcTexIdxRandom__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPALoadPosMtxCam__FP18JPAEmitterWorkData();
+extern "C" void JPADrawBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawRotBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawYBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawRotYBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawDirection__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawRotDirection__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawDBillboard__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawRotation__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawPoint__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawLine__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPADrawStripe__FP18JPAEmitterWorkData();
+extern "C" void JPADrawStripeX__FP18JPAEmitterWorkData();
+extern "C" void JPADrawEmitterCallBackB__FP18JPAEmitterWorkData();
+extern "C" void JPADrawParticleCallBack__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void setGX__12JPABaseShapeCFP18JPAEmitterWorkData();
+extern "C" void JPACalcScaleX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleCopy__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmNormal__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmRepeatX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmRepeatY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmReverseX__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcScaleAnmReverseY__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcAlphaAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcAlphaFlickAnm__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
+extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPALoadExTex__FP18JPAEmitterWorkData();
+extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData();
+extern "C" void calc__11JPAKeyBlockFf();
+extern "C" void processTillStartFrame__14JPABaseEmitterFv();
+extern "C" void processTermination__14JPABaseEmitterFv();
+extern "C" void calc_p__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void calc_c__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void func_80280588();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void GXSetArray();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXSetMisc();
+extern "C" void GXSetTevIndirect();
+extern "C" void GXSetIndTexMtx();
+extern "C" void GXSetIndTexCoordScale();
+extern "C" void GXSetIndTexOrder();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetClipMode();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 
 // 
 // Declarations:

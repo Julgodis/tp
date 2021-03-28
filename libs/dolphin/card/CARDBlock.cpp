@@ -12,23 +12,24 @@
 // 
 
 
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" static void WriteCallback(); // 1
-extern "C" static void EraseCallback(); // 1
-extern "C" void __CARDAllocBlock(); // 1
-extern "C" void __CARDUpdateFatBlock(); // 1
+extern "C" void __CARDGetFatBlock();
+extern "C" static void WriteCallback();
+extern "C" static void EraseCallback();
+extern "C" void __CARDAllocBlock();
+extern "C" void __CARDUpdateFatBlock();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __CARDBlock[544];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void __CARDEraseSector(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDWrite(); // 1
-extern "C" void __CARDCheckSum(); // 1
+SECTION_INIT void memcpy();
+extern "C" void DCStoreRange();
+extern "C" void __CARDEraseSector();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDWrite();
+extern "C" void __CARDCheckSum();
 extern "C" extern u8 __CARDBlock[544];
 
 // 

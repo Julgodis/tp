@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -47,6 +47,9 @@ struct daPPolamp_c {
 	/* 80D4D10C */ void initParam();
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
@@ -54,9 +57,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -83,28 +83,70 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daPPolamp_c_createHeap(fopAc_ac_c*); // 2
-static void daPPolamp_create(daPPolamp_c*); // 2
-static void daPPolamp_Delete(daPPolamp_c*); // 2
-static void daPPolamp_execute(daPPolamp_c*); // 2
-static void daPPolamp_draw(daPPolamp_c*); // 2
+static void daPPolamp_c_createHeap(fopAc_ac_c*);
+static void daPPolamp_create(daPPolamp_c*);
+static void daPPolamp_Delete(daPPolamp_c*);
+static void daPPolamp_execute(daPPolamp_c*);
+static void daPPolamp_draw(daPPolamp_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_PPolamp[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_80D4D394[4];
+extern "C" extern u8 data_80D4D398[4];
+extern "C" extern u8 data_80D4D39C[4];
+extern "C" extern u8 data_80D4D3A0[4];
+extern "C" extern u8 data_80D4D3A4[4];
+extern "C" extern u8 data_80D4D3A8[4];
+extern "C" extern u8 data_80D4D3AC[4];
+extern "C" extern u8 data_80D4D3B0[4];
+extern "C" extern u8 data_80D4D3B4[4];
+extern "C" extern u8 data_80D4D3B8[4];
+extern "C" extern u8 data_80D4D3BC[4];
+extern "C" extern u8 data_80D4D3C0[4];
+extern "C" extern u8 data_80D4D3C4[4];
+extern "C" extern u8 data_80D4D3C8[4];
+extern "C" extern u8 data_80D4D3CC[4];
+extern "C" extern u8 data_80D4D3D0[4];
+extern "C" extern u8 data_80D4D3D4[4];
+extern "C" extern u8 data_80D4D3D8[4];
+extern "C" extern u8 data_80D4D3DC[4];
+extern "C" extern u8 data_80D4D3E0[4];
+extern "C" extern u8 data_80D4D3E4[4];
+extern "C" extern u8 data_80D4D3E8[4];
+extern "C" extern u8 data_80D4D3EC[4];
+extern "C" extern u8 data_80D4D3F0[4];
+extern "C" extern u8 data_80D4D3F4[4];
 
-extern "C" static void daPPolamp_c_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__11daPPolamp_cFv(); // 1
-extern "C" void create__11daPPolamp_cFv(); // 1
-extern "C" void execute__11daPPolamp_cFv(); // 1
-extern "C" void draw__11daPPolamp_cFv(); // 1
-extern "C" void Delete__11daPPolamp_cFv(); // 1
-extern "C" void setModelMtx__11daPPolamp_cFv(); // 1
-extern "C" void setPclModelMtx__11daPPolamp_cFv(); // 1
-extern "C" void createHeap__11daPPolamp_cFv(); // 1
-extern "C" void moveSwing__11daPPolamp_cFv(); // 1
-extern "C" void initParam__11daPPolamp_cFv(); // 1
-extern "C" static void daPPolamp_create__FP11daPPolamp_c(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daPPolamp_Delete__FP11daPPolamp_c(); // 1
-extern "C" static void daPPolamp_execute__FP11daPPolamp_c(); // 1
-extern "C" static void daPPolamp_draw__FP11daPPolamp_c(); // 1
+extern "C" static void daPPolamp_c_createHeap__FP10fopAc_ac_c();
+extern "C" void __dt__11daPPolamp_cFv();
+extern "C" void create__11daPPolamp_cFv();
+extern "C" void execute__11daPPolamp_cFv();
+extern "C" void draw__11daPPolamp_cFv();
+extern "C" void Delete__11daPPolamp_cFv();
+extern "C" void setModelMtx__11daPPolamp_cFv();
+extern "C" void setPclModelMtx__11daPPolamp_cFv();
+extern "C" void createHeap__11daPPolamp_cFv();
+extern "C" void moveSwing__11daPPolamp_cFv();
+extern "C" void initParam__11daPPolamp_cFv();
+extern "C" static void daPPolamp_create__FP11daPPolamp_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" static void daPPolamp_Delete__FP11daPPolamp_c();
+extern "C" static void daPPolamp_execute__FP11daPPolamp_c();
+extern "C" static void daPPolamp_draw__FP11daPPolamp_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_PPolamp[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
@@ -152,48 +194,53 @@ extern "C" extern u8 data_80D4D3F4[4];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_chaseF(f32*, f32, f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void atan2sY_XZ__4cXyzCFv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

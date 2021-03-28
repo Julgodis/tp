@@ -52,26 +52,28 @@ struct J2DPicture {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_scope__stringBase0;
+extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 
-extern "C" void __ct__8dScope_cFUc(); // 1
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void __dt__8dScope_cFv(); // 1
-extern "C" void _execute__8dScope_cFUl(); // 1
-extern "C" void draw__8dScope_cFv(); // 1
-extern "C" void isDead__8dScope_cFv(); // 1
-extern "C" void open_init__8dScope_cFv(); // 1
-extern "C" void open_proc__8dScope_cFv(); // 1
-extern "C" void move_init__8dScope_cFv(); // 1
-extern "C" void move_proc__8dScope_cFv(); // 1
-extern "C" void close_init__8dScope_cFv(); // 1
-extern "C" void close_proc__8dScope_cFv(); // 1
-extern "C" void __dt__11dMeterSub_cFv(); // 1
-extern "C" bool _create__11dMeterSub_cFv(); // 1
-extern "C" bool _delete__11dMeterSub_cFv(); // 1
-extern "C" void draw__11dMeterSub_cFv(); // 1
-extern "C" bool _execute__11dMeterSub_cFUl(); // 1
-extern "C" bool isDead__11dMeterSub_cFv(); // 1
-extern "C" void __sinit_d_scope_cpp(); // 1
+extern "C" void __ct__8dScope_cFUc();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void __dt__8dScope_cFv();
+extern "C" void _execute__8dScope_cFUl();
+extern "C" void draw__8dScope_cFv();
+extern "C" void isDead__8dScope_cFv();
+extern "C" void open_init__8dScope_cFv();
+extern "C" void open_proc__8dScope_cFv();
+extern "C" void move_init__8dScope_cFv();
+extern "C" void move_proc__8dScope_cFv();
+extern "C" void close_init__8dScope_cFv();
+extern "C" void close_proc__8dScope_cFv();
+extern "C" void __dt__11dMeterSub_cFv();
+extern "C" bool _create__11dMeterSub_cFv();
+extern "C" bool _delete__11dMeterSub_cFv();
+extern "C" void draw__11dMeterSub_cFv();
+extern "C" bool _execute__11dMeterSub_cFUl();
+extern "C" bool isDead__11dMeterSub_cFv();
+extern "C" void __sinit_d_scope_cpp();
 extern "C" extern char const* const d_d_scope__stringBase0;
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 
@@ -79,20 +81,23 @@ extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
+void* operator new(u32);
+void operator delete(void*);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];

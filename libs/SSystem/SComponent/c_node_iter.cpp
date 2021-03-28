@@ -18,21 +18,21 @@ struct node_class {
 // Forward References:
 // 
 
-void cNdIt_Method(node_class*, int (*)(node_class*, void*), void*); // 2
-void cNdIt_Judge(node_class*, void* (*)(node_class*, void*), void*); // 2
+void cNdIt_Method(node_class*, int (*)(node_class*, void*), void*);
+void cNdIt_Judge(node_class*, void* (*)(node_class*, void*), void*);
 
-extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv(); // 1
-extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv(); // 1
+extern "C" void cNdIt_Method__FP10node_classPFP10node_classPv_iPv();
+extern "C" void cNdIt_Judge__FP10node_classPFP10node_classPv_PvPv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

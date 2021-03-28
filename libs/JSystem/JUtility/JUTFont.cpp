@@ -30,19 +30,20 @@ struct JUTFont {
 // 
 
 
-extern "C" void __ct__7JUTFontFv(); // 1
-extern "C" void initialize_state__7JUTFontFv(); // 1
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
-extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
+extern "C" void __ct__7JUTFontFv();
+extern "C" void initialize_state__7JUTFontFv();
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void setGradColor__7JUTFontFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __vt__7JUTFont[17];
 
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* __vt__7JUTFont[17];
 
 // 

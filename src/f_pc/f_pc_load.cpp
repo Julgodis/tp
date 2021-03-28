@@ -11,27 +11,27 @@
 // Forward References:
 // 
 
-void fpcLd_Use(s16); // 2
-static void fpcLd_IsLoaded(s16); // 2
-void fpcLd_Free(s16); // 2
-void fpcLd_Load(s16); // 2
+void fpcLd_Use(s16);
+static void fpcLd_IsLoaded(s16);
+void fpcLd_Free(s16);
+void fpcLd_Load(s16);
 
-extern "C" void fpcLd_Use__Fs(); // 1
-extern "C" static void fpcLd_IsLoaded__Fs(); // 1
-extern "C" void fpcLd_Free__Fs(); // 1
-extern "C" void fpcLd_Load__Fs(); // 1
+extern "C" void fpcLd_Use__Fs();
+extern "C" static void fpcLd_IsLoaded__Fs();
+extern "C" void fpcLd_Free__Fs();
+extern "C" void fpcLd_Load__Fs();
 
 // 
 // External References:
 // 
 
-void cDyl_IsLinked(s16); // 2
-void cDyl_Unlink(s16); // 2
-void cDyl_LinkASync(s16); // 2
+void cDyl_IsLinked(s16);
+void cDyl_Unlink(s16);
+void cDyl_LinkASync(s16);
 
-extern "C" void cDyl_IsLinked__Fs(); // 1
-extern "C" void cDyl_Unlink__Fs(); // 1
-extern "C" void cDyl_LinkASync__Fs(); // 1
+extern "C" void cDyl_IsLinked__Fs();
+extern "C" void cDyl_Unlink__Fs();
+extern "C" void cDyl_LinkASync__Fs();
 
 // 
 // Declarations:

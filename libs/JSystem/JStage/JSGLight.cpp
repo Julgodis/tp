@@ -65,42 +65,43 @@ struct JStage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q26JStage6TLight[27 + 1 /* padding */];
 
-extern "C" void __dt__Q26JStage6TLightFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage6TLightCFv(); // 1
-extern "C" bool JSGGetLightType__Q26JStage6TLightCFv(); // 1
-extern "C" void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight(); // 1
-extern "C" void JSGGetColor__Q26JStage6TLightCFv(); // 1
-extern "C" void JSGSetColor__Q26JStage6TLightF8_GXColor(); // 1
-extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn(); // 1
-extern "C" void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn(); // 1
-extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn(); // 1
-extern "C" void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn(); // 1
-extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec(); // 1
-extern "C" void JSGSetPosition__Q26JStage6TLightFRC3Vec(); // 1
-extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec(); // 1
-extern "C" void JSGSetDirection__Q26JStage6TLightFRC3Vec(); // 1
+extern "C" void __dt__Q26JStage6TLightFv();
+extern "C" s32 JSGFGetType__Q26JStage6TLightCFv();
+extern "C" bool JSGGetLightType__Q26JStage6TLightCFv();
+extern "C" void JSGSetLightType__Q26JStage6TLightFQ26JStage7TELight();
+extern "C" void JSGGetColor__Q26JStage6TLightCFv();
+extern "C" void JSGSetColor__Q26JStage6TLightF8_GXColor();
+extern "C" void JSGGetDistanceAttenuation__Q26JStage6TLightCFPfPfP13_GXDistAttnFn();
+extern "C" void JSGSetDistanceAttenuation__Q26JStage6TLightFff13_GXDistAttnFn();
+extern "C" void JSGGetAngleAttenuation__Q26JStage6TLightCFPfP9_GXSpotFn();
+extern "C" void JSGSetAngleAttenuation__Q26JStage6TLightFf9_GXSpotFn();
+extern "C" void JSGGetPosition__Q26JStage6TLightCFP3Vec();
+extern "C" void JSGSetPosition__Q26JStage6TLightFRC3Vec();
+extern "C" void JSGGetDirection__Q26JStage6TLightCFP3Vec();
+extern "C" void JSGSetDirection__Q26JStage6TLightFRC3Vec();
 extern "C" extern void* __vt__Q26JStage6TLight[27 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

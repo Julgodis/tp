@@ -12,15 +12,15 @@
 // 
 
 
-extern "C" void tan(); // 1
+extern "C" void tan();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_rem_pio2(); // 1
-extern "C" void __kernel_tan(); // 1
+extern "C" void __ieee754_rem_pio2();
+extern "C" void __kernel_tan();
 
 // 
 // Declarations:

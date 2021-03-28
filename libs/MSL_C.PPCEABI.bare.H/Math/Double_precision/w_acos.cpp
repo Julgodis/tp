@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void acos(); // 1
+extern "C" void acos();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_acos(); // 1
+extern "C" void __ieee754_acos();
 
 // 
 // Declarations:

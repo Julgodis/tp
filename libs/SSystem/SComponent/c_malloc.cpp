@@ -26,10 +26,11 @@ struct cMl {
 // Forward References:
 // 
 
+extern "C" extern u8 data_80451158[8];
 
-extern "C" void init__3cMlFP7JKRHeap(); // 1
-extern "C" void memalignB__3cMlFiUl(); // 1
-extern "C" void free__3cMlFPv(); // 1
+extern "C" void init__3cMlFP7JKRHeap();
+extern "C" void memalignB__3cMlFiUl();
+extern "C" void free__3cMlFPv();
 extern "C" extern u8 data_80451158[8];
 
 // 
@@ -37,8 +38,8 @@ extern "C" extern u8 data_80451158[8];
 // 
 
 
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
 
 // 
 // Declarations:

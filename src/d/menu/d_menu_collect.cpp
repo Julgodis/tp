@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -300,10 +300,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -419,109 +419,111 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_collect__stringBase0;
+extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
 
-extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void __dt__17dMenu_Collect2D_cFv(); // 1
-extern "C" void _create__17dMenu_Collect2D_cFv(); // 1
-extern "C" void _delete__17dMenu_Collect2D_cFv(); // 1
-extern "C" void initialize__17dMenu_Collect2D_cFv(); // 1
-extern "C" void isFishIconVisible__17dMenu_Collect2D_cFv(); // 1
-extern "C" void isSkillIconVisible__17dMenu_Collect2D_cFv(); // 1
-extern "C" void isInsectIconVisible__17dMenu_Collect2D_cFv(); // 1
-extern "C" void screenSet__17dMenu_Collect2D_cFv(); // 1
-extern "C" void animationSet__17dMenu_Collect2D_cFv(); // 1
-extern "C" void btkAnimeLoop0__17dMenu_Collect2D_cFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setBackAlpha__17dMenu_Collect2D_cFv(); // 1
-extern "C" void cursorMove__17dMenu_Collect2D_cFv(); // 1
-extern "C" void cursorPosSet__17dMenu_Collect2D_cFv(); // 1
-extern "C" void changeSword__17dMenu_Collect2D_cFv(); // 1
-extern "C" void changeShield__17dMenu_Collect2D_cFv(); // 1
-extern "C" void changeClothe__17dMenu_Collect2D_cFv(); // 1
-extern "C" void setArrowMaxNum__17dMenu_Collect2D_cFUc(); // 1
-extern "C" void setWalletMaxNum__17dMenu_Collect2D_cFUs(); // 1
-extern "C" void setSmellType__17dMenu_Collect2D_cFv(); // 1
-extern "C" void setHeartPiece__17dMenu_Collect2D_cFv(); // 1
-extern "C" void setPohMaxNum__17dMenu_Collect2D_cFUc(); // 1
-extern "C" void setEquipItemFrameColorSword__17dMenu_Collect2D_cFi(); // 1
-extern "C" void setEquipItemFrameColorShield__17dMenu_Collect2D_cFi(); // 1
-extern "C" void setEquipItemFrameColorClothes__17dMenu_Collect2D_cFi(); // 1
-extern "C" void setHIO__17dMenu_Collect2D_cFb(); // 1
-extern "C" void getItemTag__17dMenu_Collect2D_cFiib(); // 1
-extern "C" void wait_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void wait_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void save_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void option_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void letter_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void fishing_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void skill_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_open_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_open_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_move_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_move_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_close_init__17dMenu_Collect2D_cFv(); // 1
-extern "C" void insect_close_proc__17dMenu_Collect2D_cFv(); // 1
-extern "C" void _move__17dMenu_Collect2D_cFv(); // 1
-extern "C" void _draw__17dMenu_Collect2D_cFv(); // 1
-extern "C" void drawTop__17dMenu_Collect2D_cFv(); // 1
-extern "C" void isKeyCheck__17dMenu_Collect2D_cFv(); // 1
-extern "C" bool isOutCheck__17dMenu_Collect2D_cFv(); // 1
-extern "C" void setAButtonString__17dMenu_Collect2D_cFUs(); // 1
-extern "C" void setBButtonString__17dMenu_Collect2D_cFUs(); // 1
-extern "C" void setItemNameString__17dMenu_Collect2D_cFUcUc(); // 1
-extern "C" void setItemNameStringNull__17dMenu_Collect2D_cFv(); // 1
-extern "C" void __ct__17dMenu_Collect3D_cFP10JKRExpHeapP17dMenu_Collect2D_cP10CSTControl(); // 1
-extern "C" void __dt__17dMenu_Collect3D_cFv(); // 1
-extern "C" void _create__17dMenu_Collect3D_cFv(); // 1
-extern "C" void _delete__17dMenu_Collect3D_cFv(); // 1
-extern "C" void _move__17dMenu_Collect3D_cFUcUc(); // 1
-extern "C" void draw__17dMenu_Collect3D_cFv(); // 1
-extern "C" void setJ3D__17dMenu_Collect3D_cFPCcPCcPCc(); // 1
-extern "C" void set_mtx__17dMenu_Collect3D_cFv(); // 1
-extern "C" void animePlay__17dMenu_Collect3D_cFv(); // 1
-extern "C" void animeEntry__17dMenu_Collect3D_cFv(); // 1
-extern "C" void createMaskModel__17dMenu_Collect3D_cFv(); // 1
-extern "C" void createMirrorModel__17dMenu_Collect3D_cFv(); // 1
-extern "C" void getCrystalNum__17dMenu_Collect3D_cFv(); // 1
-extern "C" void getMirrorNum__17dMenu_Collect3D_cFv(); // 1
-extern "C" void getMaskMdlVisible__17dMenu_Collect3D_cFv(); // 1
-extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f(); // 1
-extern "C" void toItem3Dpos__17dMenu_Collect3D_cFfffP4cXyz(); // 1
-extern "C" void calcViewMtx__17dMenu_Collect3D_cFPA4_f(); // 1
-extern "C" void draw__20dMenu_Collect2DTop_cFv(); // 1
-extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void __dt__15dMenu_Collect_cFv(); // 1
-extern "C" void _create__15dMenu_Collect_cFv(); // 1
-extern "C" void _delete__15dMenu_Collect_cFv(); // 1
-extern "C" void _move__15dMenu_Collect_cFv(); // 1
-extern "C" void draw__15dMenu_Collect_cFv(); // 1
-extern "C" void __sinit_d_menu_collect_cpp(); // 1
-extern "C" void __dt__20dMenu_Collect2DTop_cFv(); // 1
-extern "C" void draw__17dMenu_Collect2D_cFv(); // 1
+extern "C" void __ct__17dMenu_Collect2D_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void __dt__17dMenu_Collect2D_cFv();
+extern "C" void _create__17dMenu_Collect2D_cFv();
+extern "C" void _delete__17dMenu_Collect2D_cFv();
+extern "C" void initialize__17dMenu_Collect2D_cFv();
+extern "C" void isFishIconVisible__17dMenu_Collect2D_cFv();
+extern "C" void isSkillIconVisible__17dMenu_Collect2D_cFv();
+extern "C" void isInsectIconVisible__17dMenu_Collect2D_cFv();
+extern "C" void screenSet__17dMenu_Collect2D_cFv();
+extern "C" void animationSet__17dMenu_Collect2D_cFv();
+extern "C" void btkAnimeLoop0__17dMenu_Collect2D_cFP19J2DAnmTextureSRTKey();
+extern "C" void setBackAlpha__17dMenu_Collect2D_cFv();
+extern "C" void cursorMove__17dMenu_Collect2D_cFv();
+extern "C" void cursorPosSet__17dMenu_Collect2D_cFv();
+extern "C" void changeSword__17dMenu_Collect2D_cFv();
+extern "C" void changeShield__17dMenu_Collect2D_cFv();
+extern "C" void changeClothe__17dMenu_Collect2D_cFv();
+extern "C" void setArrowMaxNum__17dMenu_Collect2D_cFUc();
+extern "C" void setWalletMaxNum__17dMenu_Collect2D_cFUs();
+extern "C" void setSmellType__17dMenu_Collect2D_cFv();
+extern "C" void setHeartPiece__17dMenu_Collect2D_cFv();
+extern "C" void setPohMaxNum__17dMenu_Collect2D_cFUc();
+extern "C" void setEquipItemFrameColorSword__17dMenu_Collect2D_cFi();
+extern "C" void setEquipItemFrameColorShield__17dMenu_Collect2D_cFi();
+extern "C" void setEquipItemFrameColorClothes__17dMenu_Collect2D_cFi();
+extern "C" void setHIO__17dMenu_Collect2D_cFb();
+extern "C" void getItemTag__17dMenu_Collect2D_cFiib();
+extern "C" void wait_init__17dMenu_Collect2D_cFv();
+extern "C" void wait_proc__17dMenu_Collect2D_cFv();
+extern "C" void save_open_init__17dMenu_Collect2D_cFv();
+extern "C" void save_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void save_move_init__17dMenu_Collect2D_cFv();
+extern "C" void save_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void save_close_init__17dMenu_Collect2D_cFv();
+extern "C" void save_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void option_open_init__17dMenu_Collect2D_cFv();
+extern "C" void option_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void option_move_init__17dMenu_Collect2D_cFv();
+extern "C" void option_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void option_close_init__17dMenu_Collect2D_cFv();
+extern "C" void option_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void letter_open_init__17dMenu_Collect2D_cFv();
+extern "C" void letter_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void letter_move_init__17dMenu_Collect2D_cFv();
+extern "C" void letter_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void letter_close_init__17dMenu_Collect2D_cFv();
+extern "C" void letter_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void fishing_open_init__17dMenu_Collect2D_cFv();
+extern "C" void fishing_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void fishing_move_init__17dMenu_Collect2D_cFv();
+extern "C" void fishing_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void fishing_close_init__17dMenu_Collect2D_cFv();
+extern "C" void fishing_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void skill_open_init__17dMenu_Collect2D_cFv();
+extern "C" void skill_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void skill_move_init__17dMenu_Collect2D_cFv();
+extern "C" void skill_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void skill_close_init__17dMenu_Collect2D_cFv();
+extern "C" void skill_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void insect_open_init__17dMenu_Collect2D_cFv();
+extern "C" void insect_open_proc__17dMenu_Collect2D_cFv();
+extern "C" void insect_move_init__17dMenu_Collect2D_cFv();
+extern "C" void insect_move_proc__17dMenu_Collect2D_cFv();
+extern "C" void insect_close_init__17dMenu_Collect2D_cFv();
+extern "C" void insect_close_proc__17dMenu_Collect2D_cFv();
+extern "C" void _move__17dMenu_Collect2D_cFv();
+extern "C" void _draw__17dMenu_Collect2D_cFv();
+extern "C" void drawTop__17dMenu_Collect2D_cFv();
+extern "C" void isKeyCheck__17dMenu_Collect2D_cFv();
+extern "C" bool isOutCheck__17dMenu_Collect2D_cFv();
+extern "C" void setAButtonString__17dMenu_Collect2D_cFUs();
+extern "C" void setBButtonString__17dMenu_Collect2D_cFUs();
+extern "C" void setItemNameString__17dMenu_Collect2D_cFUcUc();
+extern "C" void setItemNameStringNull__17dMenu_Collect2D_cFv();
+extern "C" void __ct__17dMenu_Collect3D_cFP10JKRExpHeapP17dMenu_Collect2D_cP10CSTControl();
+extern "C" void __dt__17dMenu_Collect3D_cFv();
+extern "C" void _create__17dMenu_Collect3D_cFv();
+extern "C" void _delete__17dMenu_Collect3D_cFv();
+extern "C" void _move__17dMenu_Collect3D_cFUcUc();
+extern "C" void draw__17dMenu_Collect3D_cFv();
+extern "C" void setJ3D__17dMenu_Collect3D_cFPCcPCcPCc();
+extern "C" void set_mtx__17dMenu_Collect3D_cFv();
+extern "C" void animePlay__17dMenu_Collect3D_cFv();
+extern "C" void animeEntry__17dMenu_Collect3D_cFv();
+extern "C" void createMaskModel__17dMenu_Collect3D_cFv();
+extern "C" void createMirrorModel__17dMenu_Collect3D_cFv();
+extern "C" void getCrystalNum__17dMenu_Collect3D_cFv();
+extern "C" void getMirrorNum__17dMenu_Collect3D_cFv();
+extern "C" void getMaskMdlVisible__17dMenu_Collect3D_cFv();
+extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
+extern "C" void toItem3Dpos__17dMenu_Collect3D_cFfffP4cXyz();
+extern "C" void calcViewMtx__17dMenu_Collect3D_cFPA4_f();
+extern "C" void draw__20dMenu_Collect2DTop_cFv();
+extern "C" void __ct__15dMenu_Collect_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void __dt__15dMenu_Collect_cFv();
+extern "C" void _create__15dMenu_Collect_cFv();
+extern "C" void _delete__15dMenu_Collect_cFv();
+extern "C" void _move__15dMenu_Collect_cFv();
+extern "C" void draw__15dMenu_Collect_cFv();
+extern "C" void __sinit_d_menu_collect_cpp();
+extern "C" void __dt__20dMenu_Collect2DTop_cFv();
+extern "C" void draw__17dMenu_Collect2D_cFv();
 extern "C" extern char const* const d_menu_d_menu_collect__stringBase0;
 extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
 
@@ -529,189 +531,204 @@ extern "C" extern u32 mViewOffsetY__17dMenu_Collect3D_c[1 + 1 /* padding */];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
-void mDoExt_destroySolidHeap(JKRSolidHeap*); // 2
-void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getRubyFont(); // 2
-void checkItemGet(u8, int); // 2
-void dKy_tevstr_init(dKy_tevstr_c*, s8, u8); // 2
-void dMw_A_TRIGGER(); // 2
-void dMeter2Info_getNumberTextureName(int); // 2
-void dMeter2Info_setCloth(u8, bool); // 2
-void dMeter2Info_setSword(u8, bool); // 2
-void dMeter2Info_setShield(u8, bool); // 2
-void dMeter2Info_getRecieveLetterNum(); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dMeter2Info_set2DVibrationM(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
+void mDoExt_destroySolidHeap(JKRSolidHeap*);
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_restoreCurrentHeap();
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void checkItemGet(u8, int);
+void dKy_tevstr_init(dKy_tevstr_c*, s8, u8);
+void dMw_A_TRIGGER();
+void dMeter2Info_getNumberTextureName(int);
+void dMeter2Info_setCloth(u8, bool);
+void dMeter2Info_setSword(u8, bool);
+void dMeter2Info_setShield(u8, bool);
+void dMeter2Info_getRecieveLetterNum();
+void dMeter2Info_set2DVibration();
+void dMeter2Info_set2DVibrationM();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 const j3dDefaultLightInfo[52];
+extern "C" extern void* __vt__12J3DFrameCtrl[3];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__8J3DModel[9];
+extern "C" extern void* __vt__14J3DMaterialAnm[4];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss(); // 1
-extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
-extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void __ct__11J3DLightObjFv(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkLeftTrigger__9STControlFv(); // 1
-extern "C" void checkRightTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc(); // 1
-extern "C" void isCollectMirror__20dSv_player_collect_cCFUc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
-extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
-extern "C" void __dt__14J3DTevColorAnmFv(); // 1
-extern "C" void __ct__14J3DTevColorAnmFv(); // 1
-extern "C" void __dt__11J3DTexNoAnmFv(); // 1
-extern "C" void __ct__11J3DTexNoAnmFv(); // 1
-extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
-extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
-extern "C" void __dt__14J3DMatColorAnmFv(); // 1
-extern "C" void __ct__14J3DMatColorAnmFv(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void checkItemGet__FUci(); // 1
-extern "C" void setShieldChange__9daAlink_cFv(); // 1
-extern "C" void initStatusWindow__9daAlink_cFv(); // 1
-extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs(); // 1
-extern "C" void statusWindowDraw__9daAlink_cFv(); // 1
-extern "C" void resetStatusWindow__9daAlink_cFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc(); // 1
-extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void _move__15dMenu_Fishing_cFv(); // 1
-extern "C" void _draw__15dMenu_Fishing_cFv(); // 1
-extern "C" void _open__15dMenu_Fishing_cFv(); // 1
-extern "C" void _close__15dMenu_Fishing_cFv(); // 1
-extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
-extern "C" void _move__14dMenu_Insect_cFv(); // 1
-extern "C" void _draw__14dMenu_Insect_cFv(); // 1
-extern "C" void _open__14dMenu_Insect_cFv(); // 1
-extern "C" void _close__14dMenu_Insect_cFv(); // 1
-extern "C" void getGetInsectNum__14dMenu_Insect_cFv(); // 1
-extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void _move__14dMenu_Letter_cFv(); // 1
-extern "C" void _draw__14dMenu_Letter_cFv(); // 1
-extern "C" void _open__14dMenu_Letter_cFv(); // 1
-extern "C" void _close__14dMenu_Letter_cFv(); // 1
-extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl(); // 1
-extern "C" void _delete__14dMenu_Option_cFv(); // 1
-extern "C" void _move__14dMenu_Option_cFv(); // 1
-extern "C" void _draw__14dMenu_Option_cFv(); // 1
-extern "C" void _open__14dMenu_Option_cFv(); // 1
-extern "C" void _close__14dMenu_Option_cFv(); // 1
-extern "C" void initialize__14dMenu_Option_cFv(); // 1
-extern "C" void __ct__12dMenu_save_cFv(); // 1
-extern "C" void _create__12dMenu_save_cFv(); // 1
-extern "C" void initialize__12dMenu_save_cFv(); // 1
-extern "C" void _open__12dMenu_save_cFv(); // 1
-extern "C" void _close__12dMenu_save_cFv(); // 1
-extern "C" void _delete__12dMenu_save_cFv(); // 1
-extern "C" void _move__12dMenu_save_cFv(); // 1
-extern "C" void _draw__12dMenu_save_cFv(); // 1
-extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void _move__13dMenu_Skill_cFv(); // 1
-extern "C" void _draw__13dMenu_Skill_cFv(); // 1
-extern "C" void _open__13dMenu_Skill_cFv(); // 1
-extern "C" void _close__13dMenu_Skill_cFv(); // 1
-extern "C" void dMw_A_TRIGGER__Fv(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
-extern "C" void dMeter2Info_setCloth__FUcb(); // 1
-extern "C" void dMeter2Info_setSword__FUcb(); // 1
-extern "C" void dMeter2Info_setShield__FUcb(); // 1
-extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
-extern "C" void getSmellTypeMessageID__12dMsgObject_cFv(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void init__15J3DVertexBufferFv(); // 1
-extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo(); // 1
-extern "C" void initialize__8J3DModelFv(); // 1
-extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData(); // 1
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void load__22J3DModelLoaderDataBaseFPCvUl(); // 1
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void tan(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_brkAnmFP16J3DMaterialTableP15J3DAnmTevRegKeyiifss();
+extern "C" void entry__13mDoExt_brkAnmFP16J3DMaterialTablef();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
+extern "C" void mDoExt_destroySolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void __ct__11J3DLightObjFv();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void isCollectCrystal__20dSv_player_collect_cCFUc();
+extern "C" void isCollectMirror__20dSv_player_collect_cCFUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void checkItemGet__FUci();
+extern "C" void setShieldChange__9daAlink_cFv();
+extern "C" void initStatusWindow__9daAlink_cFv();
+extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs();
+extern "C" void statusWindowDraw__9daAlink_cFv();
+extern "C" void resetStatusWindow__9daAlink_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_tevstr_init__FP12dKy_tevstr_cScUc();
+extern "C" void __ct__15dMenu_Fishing_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void _move__15dMenu_Fishing_cFv();
+extern "C" void _draw__15dMenu_Fishing_cFv();
+extern "C" void _open__15dMenu_Fishing_cFv();
+extern "C" void _close__15dMenu_Fishing_cFv();
+extern "C" void __ct__14dMenu_Insect_cFP10JKRExpHeapP9STControlP10CSTControlUc();
+extern "C" void _move__14dMenu_Insect_cFv();
+extern "C" void _draw__14dMenu_Insect_cFv();
+extern "C" void _open__14dMenu_Insect_cFv();
+extern "C" void _close__14dMenu_Insect_cFv();
+extern "C" void getGetInsectNum__14dMenu_Insect_cFv();
+extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void _move__14dMenu_Letter_cFv();
+extern "C" void _draw__14dMenu_Letter_cFv();
+extern "C" void _open__14dMenu_Letter_cFv();
+extern "C" void _close__14dMenu_Letter_cFv();
+extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl();
+extern "C" void _delete__14dMenu_Option_cFv();
+extern "C" void _move__14dMenu_Option_cFv();
+extern "C" void _draw__14dMenu_Option_cFv();
+extern "C" void _open__14dMenu_Option_cFv();
+extern "C" void _close__14dMenu_Option_cFv();
+extern "C" void initialize__14dMenu_Option_cFv();
+extern "C" void __ct__12dMenu_save_cFv();
+extern "C" void _create__12dMenu_save_cFv();
+extern "C" void initialize__12dMenu_save_cFv();
+extern "C" void _open__12dMenu_save_cFv();
+extern "C" void _close__12dMenu_save_cFv();
+extern "C" void _delete__12dMenu_save_cFv();
+extern "C" void _move__12dMenu_save_cFv();
+extern "C" void _draw__12dMenu_save_cFv();
+extern "C" void __ct__13dMenu_Skill_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void _move__13dMenu_Skill_cFv();
+extern "C" void _draw__13dMenu_Skill_cFv();
+extern "C" void _open__13dMenu_Skill_cFv();
+extern "C" void _close__13dMenu_Skill_cFv();
+extern "C" void dMw_A_TRIGGER__Fv();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_setCloth__FUcb();
+extern "C" void dMeter2Info_setSword__FUcb();
+extern "C" void dMeter2Info_setShield__FUcb();
+extern "C" void dMeter2Info_getRecieveLetterNum__Fv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void getSmellTypeMessageID__12dMsgObject_cFv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void adjustSize__12JKRSolidHeapFv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void init__15J3DVertexBufferFv();
+extern "C" void __as__12J3DLightInfoFRC12J3DLightInfo();
+extern "C" void initialize__8J3DModelFv();
+extern "C" void entryModelData__8J3DModelFP12J3DModelDataUlUl();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void load__22J3DModelLoaderDataBaseFPCvUl();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void C_MTXPerspective();
+extern "C" void GXSetProjection();
+extern "C" void GXSetViewport();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
+extern "C" void tan();
 extern "C" extern u8 const j3dDefaultLightInfo[52];
 extern "C" extern void* __vt__12J3DFrameCtrl[3];
 extern "C" extern void* __vt__12dDlst_base_c[3];

@@ -11,10 +11,6 @@
 // Types:
 // 
 
-struct dMenu_Fmap_region_data_c {
-	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
-};
-
 struct dMenu_Fmap_world_data_c {
 };
 
@@ -37,6 +33,10 @@ struct dDrawPath_c {
 	/* 8003CC24 */ void rendering(dDrawPath_c::room_class const*);
 	/* 8003C94C */ void rendering(dDrawPath_c::line_class const*);
 	/* 8003CCC4 */ void drawPath();
+};
+
+struct dMenu_Fmap_region_data_c {
+	/* 8003DB70 */ void getPointStagePathInnerNo(f32, f32, int, int*, int*);
 };
 
 struct renderingFmap_c {
@@ -131,105 +131,115 @@ struct Vec {
 // Forward References:
 // 
 
-static void twoValueLineInterpolation(u8, u8, f32); // 2
-static void twoColorLineInterporation(_GXColor const&, _GXColor const&, f32, _GXColor&); // 2
+static void twoValueLineInterpolation(u8, u8, f32);
+static void twoColorLineInterporation(_GXColor const&, _GXColor const&, f32, _GXColor&);
+extern "C" extern char const* const d_menu_d_menu_fmap_map__stringBase0;
 
-extern "C" static void twoValueLineInterpolation__FUcUcf(); // 1
-extern "C" static void twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor(); // 1
-extern "C" void init__15renderingFmap_cFPUcUsUsUsUs(); // 1
-extern "C" void entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff(); // 1
-extern "C" void isSwitchSpecialOff__15renderingFmap_cFi(); // 1
-extern "C" void isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class(); // 1
-extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi(); // 1
-extern "C" void preDrawPath__15renderingFmap_cFv(); // 1
-extern "C" bool isDrawPath__15renderingFmap_cFv(); // 1
-extern "C" void isDrawRoom__15renderingFmap_cFv(); // 1
-extern "C" void postDrawPath__15renderingFmap_cFv(); // 1
-extern "C" void postRenderingMap__15renderingFmap_cFv(); // 1
-extern "C" void roomSetteing__15renderingFmap_cFv(); // 1
-extern "C" void getFirstRoomPointer__15renderingFmap_cFv(); // 1
-extern "C" void getFirstRegion__15renderingFmap_cFv(); // 1
-extern "C" void getFirstStage__15renderingFmap_cFv(); // 1
-extern "C" void getFirstRoom__15renderingFmap_cFv(); // 1
-extern "C" void getNextRoom__15renderingFmap_cFv(); // 1
-extern "C" void getNextStage__15renderingFmap_cFv(); // 1
-extern "C" void getNextRegion__15renderingFmap_cFv(); // 1
-extern "C" void getNextRoomPointer__15renderingFmap_cFv(); // 1
-extern "C" void setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eUcUcUcUc(); // 1
-extern "C" void setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eRC8_GXColor(); // 1
-extern "C" void isFlashRoomNoCheck__15dMenu_FmapMap_cCFi(); // 1
-extern "C" void setPointColor__15dMenu_FmapMap_cFf(); // 1
-extern "C" void __ct__15dMenu_FmapMap_cFv(); // 1
-extern "C" void __dt__15dMenu_FmapMap_cFv(); // 1
-extern "C" void _create__15dMenu_FmapMap_cFUsUsUsUsPv(); // 1
-extern "C" void _delete__15dMenu_FmapMap_cFv(); // 1
-extern "C" void draw__15dMenu_FmapMap_cFv(); // 1
-extern "C" void rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void getLineWidth__15dMenu_FmapMap_cFi(); // 1
-extern "C" void isDrawType__15dMenu_FmapMap_cFi(); // 1
-extern "C" void setFlashOn__15dMenu_FmapMap_cFiiPUci(); // 1
-extern "C" void getLineColor__15dMenu_FmapMap_cFii(); // 1
-extern "C" void getBackColor__15dMenu_FmapMap_cCFv(); // 1
-extern "C" void getColor__15dMenu_FmapMap_cFi(); // 1
-extern "C" void setTexture__15dMenu_FmapMap_cFUsUsUsUs(); // 1
-extern "C" void setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff(); // 1
-extern "C" void __dt__15renderingFmap_cFv(); // 1
-extern "C" bool isRenderingFloor__15renderingFmap_cFi(); // 1
-extern "C" void beforeDrawPath__15renderingFmap_cFv(); // 1
-extern "C" void afterDrawPath__15renderingFmap_cFv(); // 1
+extern "C" static void twoValueLineInterpolation__FUcUcf();
+extern "C" static void twoColorLineInterporation__FRC8_GXColorRC8_GXColorfR8_GXColor();
+extern "C" void init__15renderingFmap_cFPUcUsUsUsUs();
+extern "C" void entry__15renderingFmap_cFP23dMenu_Fmap_world_data_cifff();
+extern "C" void isSwitchSpecialOff__15renderingFmap_cFi();
+extern "C" void isSwitch__15renderingFmap_cFPCQ211dDrawPath_c11group_class();
+extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
+extern "C" void preDrawPath__15renderingFmap_cFv();
+extern "C" bool isDrawPath__15renderingFmap_cFv();
+extern "C" void isDrawRoom__15renderingFmap_cFv();
+extern "C" void postDrawPath__15renderingFmap_cFv();
+extern "C" void postRenderingMap__15renderingFmap_cFv();
+extern "C" void roomSetteing__15renderingFmap_cFv();
+extern "C" void getFirstRoomPointer__15renderingFmap_cFv();
+extern "C" void getFirstRegion__15renderingFmap_cFv();
+extern "C" void getFirstStage__15renderingFmap_cFv();
+extern "C" void getFirstRoom__15renderingFmap_cFv();
+extern "C" void getNextRoom__15renderingFmap_cFv();
+extern "C" void getNextStage__15renderingFmap_cFv();
+extern "C" void getNextRegion__15renderingFmap_cFv();
+extern "C" void getNextRoomPointer__15renderingFmap_cFv();
+extern "C" void setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eUcUcUcUc();
+extern "C" void setFmapPaletteColor__15dMenu_FmapMap_cFQ215renderingFmap_c9palette_eRC8_GXColor();
+extern "C" void isFlashRoomNoCheck__15dMenu_FmapMap_cCFi();
+extern "C" void setPointColor__15dMenu_FmapMap_cFf();
+extern "C" void __ct__15dMenu_FmapMap_cFv();
+extern "C" void __dt__15dMenu_FmapMap_cFv();
+extern "C" void _create__15dMenu_FmapMap_cFUsUsUsUsPv();
+extern "C" void _delete__15dMenu_FmapMap_cFv();
+extern "C" void draw__15dMenu_FmapMap_cFv();
+extern "C" void rendering__15dMenu_FmapMap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void getLineWidth__15dMenu_FmapMap_cFi();
+extern "C" void isDrawType__15dMenu_FmapMap_cFi();
+extern "C" void setFlashOn__15dMenu_FmapMap_cFiiPUci();
+extern "C" void getLineColor__15dMenu_FmapMap_cFii();
+extern "C" void getBackColor__15dMenu_FmapMap_cCFv();
+extern "C" void getColor__15dMenu_FmapMap_cFi();
+extern "C" void setTexture__15dMenu_FmapMap_cFUsUsUsUs();
+extern "C" void setRendering__15dMenu_FmapMap_cFP23dMenu_Fmap_world_data_ciffff();
+extern "C" void __dt__15renderingFmap_cFv();
+extern "C" bool isRenderingFloor__15renderingFmap_cFi();
+extern "C" void beforeDrawPath__15renderingFmap_cFv();
+extern "C" void afterDrawPath__15renderingFmap_cFv();
 extern "C" extern char const* const d_menu_d_menu_fmap_map__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
-void dComIfGs_isStageSwitch(int, int); // 2
-void dComIfGp_getNowLevel(); // 2
-void* operator new(u32, int); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void dComIfGs_isStageSwitch(int, int);
+void dComIfGp_getNowLevel();
+void* operator new(u32, int);
+void* operator new[](u32, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
+extern "C" extern void* __vt__15dRenderingMap_c[23];
+extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
+extern "C" extern void* __vt__11dDrawPath_c[16];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
-extern "C" void getLineColor__11dDrawPath_cFii(); // 1
-extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
-extern "C" void dComIfGp_getNowLevel__Fv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class(); // 1
-extern "C" void drawPath__11dDrawPath_cFv(); // 1
-extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs(); // 1
-extern "C" void renderingMap__15dRenderingMap_cFv(); // 1
-extern "C" void preRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void postRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii(); // 1
-extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
-extern "C" void isArrival__22dMenu_Fmap_room_data_cFv(); // 1
-extern "C" void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void* __nw__FUli(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetMisc(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" bool isDrawType__11dDrawPath_cFi();
+extern "C" void getLineColor__11dDrawPath_cFii();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void dComIfGp_getNowLevel__Fv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+extern "C" void drawPath__11dDrawPath_cFv();
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
+extern "C" void renderingMap__15dRenderingMap_cFv();
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii();
+extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi();
+extern "C" void isArrival__22dMenu_Fmap_room_data_cFv();
+extern "C" void getPointStagePathInnerNo__24dMenu_Fmap_region_data_cFffiPiPi();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void* __nw__FUli();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void DCStoreRange();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetMisc();
+extern "C" void GXGetTexBufferSize();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__28dDrawPathWithNormalPattern_c[16];
 extern "C" extern void* __vt__15dRenderingMap_c[23];

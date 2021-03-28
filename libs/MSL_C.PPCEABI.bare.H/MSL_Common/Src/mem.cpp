@@ -12,20 +12,20 @@
 // 
 
 
-extern "C" void memcmp(); // 1
-extern "C" void __memrchr(); // 1
-extern "C" void memchr(); // 1
-extern "C" void memmove(); // 1
+extern "C" void memcmp();
+extern "C" void __memrchr();
+extern "C" void memchr();
+extern "C" void memmove();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __copy_longs_rev_unaligned(); // 1
-extern "C" void __copy_longs_unaligned(); // 1
-extern "C" void __copy_longs_rev_aligned(); // 1
-extern "C" void __copy_longs_aligned(); // 1
+extern "C" void __copy_longs_rev_unaligned();
+extern "C" void __copy_longs_unaligned();
+extern "C" void __copy_longs_rev_aligned();
+extern "C" void __copy_longs_aligned();
 
 // 
 // Declarations:

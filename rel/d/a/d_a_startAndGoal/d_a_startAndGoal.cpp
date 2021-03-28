@@ -67,65 +67,71 @@ struct Z2SeqMgr {
 // Forward References:
 // 
 
-static void daStartAndGoal_Execute(daStartAndGoal_c*); // 2
-static void daStartAndGoal_Draw(daStartAndGoal_c*); // 2
-static bool daStartAndGoal_IsDelete(daStartAndGoal_c*); // 2
-static void daStartAndGoal_Delete(daStartAndGoal_c*); // 2
-static void daStartAndGoal_create(fopAc_ac_c*); // 2
+static void daStartAndGoal_Execute(daStartAndGoal_c*);
+static void daStartAndGoal_Draw(daStartAndGoal_c*);
+static bool daStartAndGoal_IsDelete(daStartAndGoal_c*);
+static void daStartAndGoal_Delete(daStartAndGoal_c*);
+static void daStartAndGoal_create(fopAc_ac_c*);
+extern "C" extern void* g_profile_START_AND_GOAL[12];
 
-extern "C" void chkPassed2__21daStartAndGoal_Path_cF4cXyz(); // 1
-extern "C" void getType__16daStartAndGoal_cFv(); // 1
-extern "C" void Create__16daStartAndGoal_cFv(); // 1
-extern "C" void __dt__21daStartAndGoal_Path_cFv(); // 1
-extern "C" void init__16daStartAndGoal_cFv(); // 1
-extern "C" void actorPosCheck__16daStartAndGoal_cFv(); // 1
-extern "C" void readyStartTimer__16daStartAndGoal_cFv(); // 1
-extern "C" void isStartCheck__16daStartAndGoal_cFv(); // 1
-extern "C" void isReadyCheck__16daStartAndGoal_cFv(); // 1
-extern "C" void Execute__16daStartAndGoal_cFv(); // 1
-extern "C" bool Draw__16daStartAndGoal_cFv(); // 1
-extern "C" void Delete__16daStartAndGoal_cFv(); // 1
-extern "C" static void daStartAndGoal_Execute__FP16daStartAndGoal_c(); // 1
-extern "C" static void daStartAndGoal_Draw__FP16daStartAndGoal_c(); // 1
-extern "C" static bool daStartAndGoal_IsDelete__FP16daStartAndGoal_c(); // 1
-extern "C" static void daStartAndGoal_Delete__FP16daStartAndGoal_c(); // 1
-extern "C" static void daStartAndGoal_create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__13daNpcF_Path_cFv(); // 1
-extern "C" void __dt__16daNpcF_SPCurve_cFv(); // 1
+extern "C" void chkPassed2__21daStartAndGoal_Path_cF4cXyz();
+extern "C" void getType__16daStartAndGoal_cFv();
+extern "C" void Create__16daStartAndGoal_cFv();
+extern "C" void __dt__21daStartAndGoal_Path_cFv();
+extern "C" void init__16daStartAndGoal_cFv();
+extern "C" void actorPosCheck__16daStartAndGoal_cFv();
+extern "C" void readyStartTimer__16daStartAndGoal_cFv();
+extern "C" void isStartCheck__16daStartAndGoal_cFv();
+extern "C" void isReadyCheck__16daStartAndGoal_cFv();
+extern "C" void Execute__16daStartAndGoal_cFv();
+extern "C" bool Draw__16daStartAndGoal_cFv();
+extern "C" void Delete__16daStartAndGoal_cFv();
+extern "C" static void daStartAndGoal_Execute__FP16daStartAndGoal_c();
+extern "C" static void daStartAndGoal_Draw__FP16daStartAndGoal_c();
+extern "C" static bool daStartAndGoal_IsDelete__FP16daStartAndGoal_c();
+extern "C" static void daStartAndGoal_Delete__FP16daStartAndGoal_c();
+extern "C" static void daStartAndGoal_create__FP10fopAc_ac_c();
+extern "C" void __dt__13daNpcF_Path_cFv();
+extern "C" void __dt__16daNpcF_SPCurve_cFv();
 extern "C" extern void* g_profile_START_AND_GOAL[12];
 
 // 
 // External References:
 // 
 
-void dComIfG_TimerStart(int, s16); // 2
-void dComIfG_TimerEnd(int, int); // 2
-void dComIfG_TimerDeleteRequest(int); // 2
-void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
-void dTimer_isStart(); // 2
-void dTimer_isReadyFlag(); // 2
-void operator delete(void*); // 2
+void dComIfG_TimerStart(int, s16);
+void dComIfG_TimerEnd(int, int);
+void dComIfG_TimerDeleteRequest(int);
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
+void dTimer_isStart();
+void dTimer_isReadyFlag();
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void getTimerNowTimeMs__14dComIfG_play_cFv(); // 1
-extern "C" void getTimerPtr__14dComIfG_play_cFv(); // 1
-extern "C" void dComIfG_TimerStart__Fis(); // 1
-extern "C" void dComIfG_TimerEnd__Fii(); // 1
-extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
-extern "C" void initialize__16daNpcF_SPCurve_cFP5dPathi(); // 1
-extern "C" void initialize__13daNpcF_Path_cFv(); // 1
-extern "C" void setPathInfo__13daNpcF_Path_cFUcScUc(); // 1
-extern "C" void chkPassed__13daNpcF_Path_cF4cXyz(); // 1
-extern "C" void setNextIdx__13daNpcF_Path_cFv(); // 1
-extern "C" void getNextIdx__13daNpcF_Path_cFv(); // 1
-extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
-extern "C" void dTimer_isStart__Fv(); // 1
-extern "C" void dTimer_isReadyFlag__Fv(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void getTimerNowTimeMs__14dComIfG_play_cFv();
+extern "C" void getTimerPtr__14dComIfG_play_cFv();
+extern "C" void dComIfG_TimerStart__Fis();
+extern "C" void dComIfG_TimerEnd__Fii();
+extern "C" void dComIfG_TimerDeleteRequest__Fi();
+extern "C" void initialize__16daNpcF_SPCurve_cFP5dPathi();
+extern "C" void initialize__13daNpcF_Path_cFv();
+extern "C" void setPathInfo__13daNpcF_Path_cFUcScUc();
+extern "C" void chkPassed__13daNpcF_Path_cF4cXyz();
+extern "C" void setNextIdx__13daNpcF_Path_cFv();
+extern "C" void getNextIdx__13daNpcF_Path_cFv();
+extern "C" void dTimer_createTimer__FlUlUcUcffff();
+extern "C" void dTimer_isStart__Fv();
+extern "C" void dTimer_isReadyFlag__Fv();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

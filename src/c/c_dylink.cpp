@@ -62,64 +62,66 @@ struct DynamicModuleControl {
 // Forward References:
 // 
 
-static void cCc_Init(); // 2
-void cDyl_IsLinked(s16); // 2
-void cDyl_Unlink(s16); // 2
-void cDyl_LinkASync(s16); // 2
-static void cDyl_InitCallback(void*); // 2
-void cDyl_InitAsync(); // 2
-void cDyl_InitAsyncIsDone(); // 2
+static void cCc_Init();
+void cDyl_IsLinked(s16);
+void cDyl_Unlink(s16);
+void cDyl_LinkASync(s16);
+static void cDyl_InitCallback(void*);
+void cDyl_InitAsync();
+void cDyl_InitAsyncIsDone();
+extern "C" extern char const* const c_c_dylink__stringBase0;
 
-extern "C" static void cCc_Init__Fv(); // 1
-extern "C" void cDyl_IsLinked__Fs(); // 1
-extern "C" void cDyl_Unlink__Fs(); // 1
-extern "C" void cDyl_LinkASync__Fs(); // 1
-extern "C" static void cDyl_InitCallback__FPv(); // 1
-extern "C" void cDyl_InitAsync__Fv(); // 1
-extern "C" void cDyl_InitAsyncIsDone__Fv(); // 1
-extern "C" s32 phase_01__7cDylPhsFPv(); // 1
-extern "C" void phase_02__7cDylPhsFPs(); // 1
-extern "C" bool phase_03__7cDylPhsFPv(); // 1
-extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs(); // 1
-extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs(); // 1
-extern "C" bool getModuleName__24DynamicModuleControlBaseCFv(); // 1
-extern "C" void __dt__20DynamicModuleControlFv(); // 1
+extern "C" static void cCc_Init__Fv();
+extern "C" void cDyl_IsLinked__Fs();
+extern "C" void cDyl_Unlink__Fs();
+extern "C" void cDyl_LinkASync__Fs();
+extern "C" static void cDyl_InitCallback__FPv();
+extern "C" void cDyl_InitAsync__Fv();
+extern "C" void cDyl_InitAsyncIsDone__Fv();
+extern "C" s32 phase_01__7cDylPhsFPv();
+extern "C" void phase_02__7cDylPhsFPs();
+extern "C" bool phase_03__7cDylPhsFPv();
+extern "C" void Link__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" void Unlink__7cDylPhsFP30request_of_phase_process_classs();
+extern "C" bool getModuleName__24DynamicModuleControlBaseCFv();
+extern "C" void __dt__20DynamicModuleControlFv();
 extern "C" extern char const* const c_c_dylink__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getArchiveHeap(); // 2
-void fopScnM_CreateReq(s16, s16, u16, u32); // 2
-void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getArchiveHeap();
+void fopScnM_CreateReq(s16, s16, u16, u32);
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__20DynamicModuleControl[13];
 
-SECTION_INIT void memset(); // 1
-extern "C" void OSReport_Error(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv(); // 1
-extern "C" void fopScnM_CreateReq__FssUsUl(); // 1
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
-extern "C" void __dt__24DynamicModuleControlBaseFv(); // 1
-extern "C" void link__24DynamicModuleControlBaseFv(); // 1
-extern "C" void unlink__24DynamicModuleControlBaseFv(); // 1
-extern "C" void load_async__24DynamicModuleControlBaseFv(); // 1
-extern "C" void __ct__20DynamicModuleControlFPCc(); // 1
-extern "C" void initialize__20DynamicModuleControlFv(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb(); // 1
-extern "C" void adjustSize__12JKRSolidHeapFv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCc(); // 1
-extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader(); // 1
-extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc(); // 1
-extern "C" void OSSetStringTable(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void strcmp(); // 1
+SECTION_INIT void memset();
+extern "C" void OSReport_Error();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void create__20mDoDvdThd_callback_cFPFPv_PvPv();
+extern "C" void fopScnM_CreateReq__FssUsUl();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void __dt__24DynamicModuleControlBaseFv();
+extern "C" void link__24DynamicModuleControlBaseFv();
+extern "C" void unlink__24DynamicModuleControlBaseFv();
+extern "C" void load_async__24DynamicModuleControlBaseFv();
+extern "C" void __ct__20DynamicModuleControlFPCc();
+extern "C" void initialize__20DynamicModuleControlFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__12JKRSolidHeapFUlP7JKRHeapb();
+extern "C" void adjustSize__12JKRSolidHeapFv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCc();
+extern "C" void detachResource__13JKRFileLoaderFPvP13JKRFileLoader();
+extern "C" void mount__12JKRFileCacheFPCcP7JKRHeapPCc();
+extern "C" void OSSetStringTable();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+extern "C" void strcmp();
 extern "C" extern void* __vt__20DynamicModuleControl[13];
 
 // 

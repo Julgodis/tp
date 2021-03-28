@@ -24,10 +24,10 @@ struct e_bi_leaf_class {
 struct J3DModelData {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -52,21 +52,23 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daE_BI_LEAF_Draw(e_bi_leaf_class*); // 2
-static void action(e_bi_leaf_class*); // 2
-static void daE_BI_LEAF_Execute(e_bi_leaf_class*); // 2
-static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class*); // 2
-static void daE_BI_LEAF_Delete(e_bi_leaf_class*); // 2
-static void useHeapInit(fopAc_ac_c*); // 2
-static void daE_BI_LEAF_Create(fopAc_ac_c*); // 2
+static void daE_BI_LEAF_Draw(e_bi_leaf_class*);
+static void action(e_bi_leaf_class*);
+static void daE_BI_LEAF_Execute(e_bi_leaf_class*);
+static bool daE_BI_LEAF_IsDelete(e_bi_leaf_class*);
+static void daE_BI_LEAF_Delete(e_bi_leaf_class*);
+static void useHeapInit(fopAc_ac_c*);
+static void daE_BI_LEAF_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_E_BI_LEAF[12];
 
-extern "C" static void daE_BI_LEAF_Draw__FP15e_bi_leaf_class(); // 1
-extern "C" static void action__FP15e_bi_leaf_class(); // 1
-extern "C" static void daE_BI_LEAF_Execute__FP15e_bi_leaf_class(); // 1
-extern "C" static bool daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class(); // 1
-extern "C" static void daE_BI_LEAF_Delete__FP15e_bi_leaf_class(); // 1
-extern "C" static void useHeapInit__FP10fopAc_ac_c(); // 1
-extern "C" static void daE_BI_LEAF_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void daE_BI_LEAF_Draw__FP15e_bi_leaf_class();
+extern "C" static void action__FP15e_bi_leaf_class();
+extern "C" static void daE_BI_LEAF_Execute__FP15e_bi_leaf_class();
+extern "C" static bool daE_BI_LEAF_IsDelete__FP15e_bi_leaf_class();
+extern "C" static void daE_BI_LEAF_Delete__FP15e_bi_leaf_class();
+extern "C" static void useHeapInit__FP10fopAc_ac_c();
+extern "C" static void daE_BI_LEAF_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_E_BI_LEAF[12];
 
@@ -74,31 +76,36 @@ extern "C" extern void* g_profile_E_BI_LEAF[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fpcSch_JudgeByID(void*, void*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

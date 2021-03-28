@@ -27,21 +27,25 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTagGra_Create(fopAc_ac_c*); // 2
-static void daTagGra_Delete(daTagGra_c*); // 2
+static void daTagGra_Create(fopAc_ac_c*);
+static void daTagGra_Delete(daTagGra_c*);
+extern "C" extern void* g_profile_TAG_GRA[12];
 
-extern "C" static void daTagGra_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagGra_Delete__FP10daTagGra_c(); // 1
+extern "C" static void daTagGra_Create__FP10fopAc_ac_c();
+extern "C" static void daTagGra_Delete__FP10daTagGra_c();
 extern "C" extern void* g_profile_TAG_GRA[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

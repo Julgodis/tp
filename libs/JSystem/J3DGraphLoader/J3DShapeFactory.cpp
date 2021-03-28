@@ -40,47 +40,55 @@ struct J3DShape {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template74(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template75(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template76(void const*, u32); // 2
-static void JSUConvertOffsetToPtr__template77(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template74(void const*, u32);
+static void JSUConvertOffsetToPtr__template75(void const*, u32);
+static void JSUConvertOffsetToPtr__template76(void const*, u32);
+static void JSUConvertOffsetToPtr__template77(void const*, u32);
+extern "C" extern char const* const J3DShapeFactory__stringBase0;
 
-extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock(); // 1
-extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList(); // 1
-extern "C" void newShapeMtx__15J3DShapeFactoryCFUlii(); // 1
-extern "C" void newShapeDraw__15J3DShapeFactoryCFii(); // 1
-extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl(); // 1
-extern "C" void calcSize__15J3DShapeFactoryFiUl(); // 1
-extern "C" void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl(); // 1
-extern "C" void calcSizeShapeMtx__15J3DShapeFactoryCFUlii(); // 1
-extern "C" static void func_80337AE0(); // 1
-extern "C" static void func_80337AF8(); // 1
-extern "C" static void func_80337B10(); // 1
-extern "C" static void func_80337B28(); // 1
+extern "C" void __ct__15J3DShapeFactoryFRC13J3DShapeBlock();
+extern "C" void create__15J3DShapeFactoryFiUlP14_GXVtxDescList();
+extern "C" void newShapeMtx__15J3DShapeFactoryCFUlii();
+extern "C" void newShapeDraw__15J3DShapeFactoryCFii();
+extern "C" void allocVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+extern "C" void calcSize__15J3DShapeFactoryFiUl();
+extern "C" void calcSizeVcdVatCmdBuffer__15J3DShapeFactoryFUl();
+extern "C" void calcSizeShapeMtx__15J3DShapeFactoryCFUlii();
+extern "C" static void func_80337AE0();
+extern "C" static void func_80337AF8();
+extern "C" static void func_80337B10();
+extern "C" static void func_80337B28();
 extern "C" extern char const* const J3DShapeFactory__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void JSUConvertOffsetToPtr__template71(void const*, u32); // 2
-void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void JSUConvertOffsetToPtr__template71(void const*, u32);
+void JSUConvertOffsetToPtr__template72(void const*, u32);
+extern "C" extern void* __vt__28J3DShapeMtxYBBoardConcatView[10];
+extern "C" extern void* __vt__27J3DShapeMtxBBoardConcatView[10];
+extern "C" extern void* __vt__26J3DShapeMtxMultiConcatView[10];
+extern "C" extern void* __vt__16J3DShapeMtxMulti[8];
+extern "C" extern void* __vt__21J3DShapeMtxConcatView[10];
+extern "C" extern void* __vt__11J3DShapeMtx[8 + 1 /* padding */];
+extern "C" extern void* __vt__8J3DShape[6];
 
-extern "C" void OSReport(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __ct__12J3DShapeDrawFPCUcUl(); // 1
-extern "C" void initialize__8J3DShapeFv(); // 1
-extern "C" void func_80336764(); // 1
-extern "C" void func_8033677C(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void OSReport();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __ct__12J3DShapeDrawFPCUcUl();
+extern "C" void initialize__8J3DShapeFv();
+extern "C" void func_80336764();
+extern "C" void func_8033677C();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__28J3DShapeMtxYBBoardConcatView[10];
 extern "C" extern void* __vt__27J3DShapeMtxBBoardConcatView[10];
 extern "C" extern void* __vt__26J3DShapeMtxMultiConcatView[10];

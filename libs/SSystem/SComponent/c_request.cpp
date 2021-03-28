@@ -18,15 +18,15 @@ struct request_base_class {
 // Forward References:
 // 
 
-void cReq_Is_Done(request_base_class*); // 2
-void cReq_Done(request_base_class*); // 2
-void cReq_Command(request_base_class*, u8); // 2
-void cReq_Create(request_base_class*, u8); // 2
+void cReq_Is_Done(request_base_class*);
+void cReq_Done(request_base_class*);
+void cReq_Command(request_base_class*, u8);
+void cReq_Create(request_base_class*, u8);
 
-extern "C" void cReq_Is_Done__FP18request_base_class(); // 1
-extern "C" void cReq_Done__FP18request_base_class(); // 1
-extern "C" void cReq_Command__FP18request_base_classUc(); // 1
-extern "C" void cReq_Create__FP18request_base_classUc(); // 1
+extern "C" void cReq_Is_Done__FP18request_base_class();
+extern "C" void cReq_Done__FP18request_base_class();
+extern "C" void cReq_Command__FP18request_base_classUc();
+extern "C" void cReq_Create__FP18request_base_classUc();
 
 // 
 // External References:

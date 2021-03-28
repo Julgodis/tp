@@ -29,22 +29,24 @@ struct JASCalc {
 // Forward References:
 // 
 
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 
-extern "C" void imixcopy__7JASCalcFPCsPCsPsUl(); // 1
-extern "C" void bcopyfast__7JASCalcFPCvPvUl(); // 1
-extern "C" void bcopy__7JASCalcFPCvPvUl(); // 1
-extern "C" void bzerofast__7JASCalcFPvUl(); // 1
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void pow2__7JASCalcFf(); // 1
-extern "C" void func_8028F69C(); // 1
+extern "C" void imixcopy__7JASCalcFPCsPCsPsUl();
+extern "C" void bcopyfast__7JASCalcFPCvPvUl();
+extern "C" void bcopy__7JASCalcFPCvPvUl();
+extern "C" void bzerofast__7JASCalcFPvUl();
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void pow2__7JASCalcFf();
+extern "C" void func_8028F69C();
 extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_huge;
 
-extern "C" void DCZeroRange(); // 1
+extern "C" void DCZeroRange();
 extern "C" extern u32 __float_huge;
 
 // 

@@ -31,6 +31,9 @@ struct daMant_packet_c {
 struct dStage_dt_c {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
@@ -40,9 +43,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80861F60 */ ~cXyz();
 	/* 80862C40 */ cXyz();
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -83,29 +83,37 @@ struct J3DPacket {
 // Forward References:
 // 
 
-static void daMant_Draw(mant_class*); // 2
-static void joint_control(mant_class*, mant_j_s*, int, f32, f32); // 2
-static void mant_v_calc(mant_class*); // 2
-static void mant_move(mant_class*); // 2
-static void daMant_Execute(mant_class*); // 2
-static bool daMant_IsDelete(mant_class*); // 2
-static bool daMant_Delete(mant_class*); // 2
-static void daMant_Create(fopAc_ac_c*); // 2
+static void daMant_Draw(mant_class*);
+static void joint_control(mant_class*, mant_j_s*, int, f32, f32);
+static void mant_v_calc(mant_class*);
+static void mant_move(mant_class*);
+static void daMant_Execute(mant_class*);
+static bool daMant_IsDelete(mant_class*);
+static bool daMant_Delete(mant_class*);
+static void daMant_Create(fopAc_ac_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern u8 l_pos[2028];
+extern "C" extern u8 l_normal[12];
+extern "C" extern u8 l_texCoord[1352];
+extern "C" extern u8 l_Egnd_mantDL[1004];
+extern "C" extern void* pal_d;
+extern "C" extern void* tex_d[2];
+extern "C" extern void* g_profile_MANT[12];
 
-extern "C" void draw__15daMant_packet_cFv(); // 1
-extern "C" static void daMant_Draw__FP10mant_class(); // 1
-extern "C" static void joint_control__FP10mant_classP8mant_j_siff(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void mant_v_calc__FP10mant_class(); // 1
-extern "C" static void mant_move__FP10mant_class(); // 1
-extern "C" static void daMant_Execute__FP10mant_class(); // 1
-extern "C" static bool daMant_IsDelete__FP10mant_class(); // 1
-extern "C" static bool daMant_Delete__FP10mant_class(); // 1
-extern "C" static void daMant_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__8mant_j_sFv(); // 1
-extern "C" void __ct__8mant_j_sFv(); // 1
-extern "C" void __dt__15daMant_packet_cFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
+extern "C" void draw__15daMant_packet_cFv();
+extern "C" static void daMant_Draw__FP10mant_class();
+extern "C" static void joint_control__FP10mant_classP8mant_j_siff();
+extern "C" void __dt__4cXyzFv();
+extern "C" static void mant_v_calc__FP10mant_class();
+extern "C" static void mant_move__FP10mant_class();
+extern "C" static void daMant_Execute__FP10mant_class();
+extern "C" static bool daMant_IsDelete__FP10mant_class();
+extern "C" static bool daMant_Delete__FP10mant_class();
+extern "C" static void daMant_Create__FP10fopAc_ac_c();
+extern "C" void __dt__8mant_j_sFv();
+extern "C" void __ct__8mant_j_sFv();
+extern "C" void __dt__15daMant_packet_cFv();
+extern "C" void __ct__4cXyzFv();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern u8 l_pos[2028];
 extern "C" extern u8 l_normal[12];
@@ -119,110 +127,120 @@ extern "C" extern void* g_profile_MANT[12];
 // External References:
 // 
 
-void mDoMtx_XrotS(f32 (* )[4], s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
-void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*); // 2
-void dKy_setLight_again(); // 2
-void dKy_Global_amb_set(dKy_tevstr_c*); // 2
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
-void cM_rad2s(f32); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cLib_addCalc0(f32*, f32, f32); // 2
-void MtxTrans(f32, f32, f32, u8); // 2
-void MtxPosition(cXyz*, cXyz*); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32);
+void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32);
+void fpcSch_JudgeByID(void*, void*);
+void dStage_filiInfo2Init(dStage_dt_c*, void*, int, void*);
+void dKy_setLight_again();
+void dKy_Global_amb_set(dKy_tevstr_c*);
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
+void cM_rad2s(f32);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cLib_addCalc0(f32*, f32, f32);
+void MtxTrans(f32, f32, f32, u8);
+void MtxPosition(cXyz*, cXyz*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern void* calc_mtx[1 + 1 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
-extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void dStage_filiInfo2Init__FP11dStage_dt_cPviPv(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void dKy_setLight_again__Fv(); // 1
-extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rad2s__Ff(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC3Vec(); // 1
-extern "C" void cLib_addCalc0__FPfff(); // 1
-extern "C" void MtxTrans__FfffUc(); // 1
-extern "C" void MtxPosition__FP4cXyzP4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
-extern "C" void DCStoreRangeNoSync(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void GXLoadTlut(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXCallDisplayList(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff();
+extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void dStage_filiInfo2Init__FP11dStage_dt_cPviPv();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void dKy_setLight_again__Fv();
+extern "C" void dKy_Global_amb_set__FP12dKy_tevstr_c();
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rad2s__Ff();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC3Vec();
+extern "C" void cLib_addCalc0__FPfff();
+extern "C" void MtxTrans__FfffUc();
+extern "C" void MtxPosition__FP4cXyzP4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" void DCStoreRangeNoSync();
+extern "C" void PSMTXConcat();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSquareMag();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetArray();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInitTlutObj();
+extern "C" void GXLoadTlut();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXCallDisplayList();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXLoadNrmMtxImm();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__9J3DPacket[5];

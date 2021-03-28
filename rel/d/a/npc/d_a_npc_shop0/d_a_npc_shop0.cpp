@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -218,57 +218,59 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void createHeapCallBack(fopAc_ac_c*); // 2
-static void daNpc_Shop0_Create(void*); // 2
-static void daNpc_Shop0_Delete(void*); // 2
-static void daNpc_Shop0_Execute(void*); // 2
-static void daNpc_Shop0_Draw(void*); // 2
-static bool daNpc_Shop0_IsDelete(void*); // 2
+static void createHeapCallBack(fopAc_ac_c*);
+static void daNpc_Shop0_Create(void*);
+static void daNpc_Shop0_Delete(void*);
+static void daNpc_Shop0_Execute(void*);
+static void daNpc_Shop0_Draw(void*);
+static bool daNpc_Shop0_IsDelete(void*);
+extern "C" extern u8 const mParam__19daNpc_Shop0_Param_c[12];
+extern "C" extern void* g_profile_NPC_SHOP0[12];
 
-extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__13daNpc_Shop0_cFv(); // 1
-extern "C" void create__13daNpc_Shop0_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__14dBgS_ObjGndChkFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void createHeap__13daNpc_Shop0_cFv(); // 1
-extern "C" void destroy__13daNpc_Shop0_cFv(); // 1
-extern "C" void execute__13daNpc_Shop0_cFv(); // 1
-extern "C" void draw__13daNpc_Shop0_cFv(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void getResName__13daNpc_Shop0_cFv(); // 1
-extern "C" void getParam__13daNpc_Shop0_cFv(); // 1
-extern "C" void getFlowNodeNum__13daNpc_Shop0_cFv(); // 1
-extern "C" void isDelete__13daNpc_Shop0_cFv(); // 1
-extern "C" void init__13daNpc_Shop0_cFv(); // 1
-extern "C" void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc(); // 1
-extern "C" void setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib(); // 1
-extern "C" void setCollision__13daNpc_Shop0_cFv(); // 1
-extern "C" void checkEvent__13daNpc_Shop0_cFv(); // 1
-extern "C" void orderEvent__13daNpc_Shop0_cFv(); // 1
-extern "C" void setMtx__13daNpc_Shop0_cFv(); // 1
-extern "C" void setRoomInf__13daNpc_Shop0_cFv(); // 1
-extern "C" void cut_alert__13daNpc_Shop0_cFii(); // 1
-extern "C" void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i(); // 1
-extern "C" void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi(); // 1
-extern "C" void wait__13daNpc_Shop0_cFPv(); // 1
-extern "C" void talk__13daNpc_Shop0_cFPv(); // 1
-extern "C" static void daNpc_Shop0_Create__FPv(); // 1
-extern "C" static void daNpc_Shop0_Delete__FPv(); // 1
-extern "C" static void daNpc_Shop0_Execute__FPv(); // 1
-extern "C" static void daNpc_Shop0_Draw__FPv(); // 1
-extern "C" static bool daNpc_Shop0_IsDelete__FPv(); // 1
-extern "C" void __dt__19daNpc_Shop0_Param_cFv(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_80AEBBA4(); // 1
-extern "C" static void func_80AEBBAC(); // 1
-extern "C" static void func_80AEBBB4(); // 1
-extern "C" static void func_80AEBBBC(); // 1
-extern "C" static void func_80AEBBC4(); // 1
+extern "C" static void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void __dt__13daNpc_Shop0_cFv();
+extern "C" void create__13daNpc_Shop0_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__14dBgS_ObjGndChkFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void createHeap__13daNpc_Shop0_cFv();
+extern "C" void destroy__13daNpc_Shop0_cFv();
+extern "C" void execute__13daNpc_Shop0_cFv();
+extern "C" void draw__13daNpc_Shop0_cFv();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void getResName__13daNpc_Shop0_cFv();
+extern "C" void getParam__13daNpc_Shop0_cFv();
+extern "C" void getFlowNodeNum__13daNpc_Shop0_cFv();
+extern "C" void isDelete__13daNpc_Shop0_cFv();
+extern "C" void init__13daNpc_Shop0_cFv();
+extern "C" void getTrnsfrmAnmP__13daNpc_Shop0_cFiPPc();
+extern "C" void setBckAnm__13daNpc_Shop0_cFP15J3DAnmTransformfiiib();
+extern "C" void setCollision__13daNpc_Shop0_cFv();
+extern "C" void checkEvent__13daNpc_Shop0_cFv();
+extern "C" void orderEvent__13daNpc_Shop0_cFv();
+extern "C" void setMtx__13daNpc_Shop0_cFv();
+extern "C" void setRoomInf__13daNpc_Shop0_cFv();
+extern "C" void cut_alert__13daNpc_Shop0_cFii();
+extern "C" void chkProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_i();
+extern "C" void setProcess__13daNpc_Shop0_cFM13daNpc_Shop0_cFPCvPvPv_iPvi();
+extern "C" void wait__13daNpc_Shop0_cFPv();
+extern "C" void talk__13daNpc_Shop0_cFPv();
+extern "C" static void daNpc_Shop0_Create__FPv();
+extern "C" static void daNpc_Shop0_Delete__FPv();
+extern "C" static void daNpc_Shop0_Execute__FPv();
+extern "C" static void daNpc_Shop0_Draw__FPv();
+extern "C" static bool daNpc_Shop0_IsDelete__FPv();
+extern "C" void __dt__19daNpc_Shop0_Param_cFv();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" static void func_80AEBBA4();
+extern "C" static void func_80AEBBAC();
+extern "C" static void func_80AEBBB4();
+extern "C" static void func_80AEBBBC();
+extern "C" static void func_80AEBBC4();
 extern "C" extern u8 const mParam__19daNpc_Shop0_Param_c[12];
 extern "C" extern void* g_profile_NPC_SHOP0[12];
 
@@ -276,74 +278,85 @@ extern "C" extern void* g_profile_NPC_SHOP0[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void ChkPresentEnd__16dEvent_manager_cFv(); // 1
-extern "C" void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWallR__12dBgS_AcchCirFf(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void ChkPresentEnd__16dEvent_manager_cFv();
+extern "C" void setSimple__21dDlst_shadowControl_cFP4cXyzffP4cXyzsfP9_GXTexObj();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWallR__12dBgS_AcchCirFf();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_cmpr();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcat();
+extern "C" void strcpy();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];

@@ -42,39 +42,44 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTagRetRm_create(daTagRetRm_c*); // 2
-static void daTagRetRm_Delete(daTagRetRm_c*); // 2
-static void daTagRetRm_execute(daTagRetRm_c*); // 2
-static void daTagRetRm_draw(daTagRetRm_c*); // 2
+static void daTagRetRm_create(daTagRetRm_c*);
+static void daTagRetRm_Delete(daTagRetRm_c*);
+static void daTagRetRm_execute(daTagRetRm_c*);
+static void daTagRetRm_draw(daTagRetRm_c*);
+extern "C" extern void* g_profile_Tag_RetRoom[12];
 
-extern "C" void __ct__12daTagRetRm_cFv(); // 1
-extern "C" void __dt__12daTagRetRm_cFv(); // 1
-extern "C" void create__12daTagRetRm_cFv(); // 1
-extern "C" bool Delete__12daTagRetRm_cFv(); // 1
-extern "C" bool draw__12daTagRetRm_cFv(); // 1
-extern "C" void execute__12daTagRetRm_cFv(); // 1
-extern "C" void init__12daTagRetRm_cFv(); // 1
-extern "C" void chkPlyrInTag__12daTagRetRm_cFv(); // 1
-extern "C" static void daTagRetRm_create__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_Delete__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_execute__FP12daTagRetRm_c(); // 1
-extern "C" static void daTagRetRm_draw__FP12daTagRetRm_c(); // 1
+extern "C" void __ct__12daTagRetRm_cFv();
+extern "C" void __dt__12daTagRetRm_cFv();
+extern "C" void create__12daTagRetRm_cFv();
+extern "C" bool Delete__12daTagRetRm_cFv();
+extern "C" bool draw__12daTagRetRm_cFv();
+extern "C" void execute__12daTagRetRm_cFv();
+extern "C" void init__12daTagRetRm_cFv();
+extern "C" void chkPlyrInTag__12daTagRetRm_cFv();
+extern "C" static void daTagRetRm_create__FP12daTagRetRm_c();
+extern "C" static void daTagRetRm_Delete__FP12daTagRetRm_c();
+extern "C" static void daTagRetRm_execute__FP12daTagRetRm_c();
+extern "C" static void daTagRetRm_draw__FP12daTagRetRm_c();
 extern "C" extern void* g_profile_Tag_RetRoom[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void forceRestartRoom__9daPy_py_cFiUli(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void forceRestartRoom__9daPy_py_cFiUli();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

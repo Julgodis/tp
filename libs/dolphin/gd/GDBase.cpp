@@ -11,11 +11,12 @@
 // Forward References:
 // 
 
+extern "C" extern u8 __GDCurrentDL[4];
 
-extern "C" void GDInitGDLObj(); // 1
-extern "C" void GDFlushCurrToMem(); // 1
-extern "C" void GDPadCurr32(); // 1
-extern "C" void GDOverflowed(); // 1
+extern "C" void GDInitGDLObj();
+extern "C" void GDFlushCurrToMem();
+extern "C" void GDPadCurr32();
+extern "C" void GDOverflowed();
 extern "C" extern u8 __GDCurrentDL[4];
 
 // 
@@ -23,7 +24,7 @@ extern "C" extern u8 __GDCurrentDL[4];
 // 
 
 
-extern "C" void DCFlushRange(); // 1
+extern "C" void DCFlushRange();
 
 // 
 // Declarations:

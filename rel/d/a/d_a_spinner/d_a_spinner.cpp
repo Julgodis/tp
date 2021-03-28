@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct Vec {
 };
 
@@ -22,18 +25,15 @@ struct cXyz {
 	/* 804D1E4C */ ~cXyz();
 };
 
-struct csXyz {
-};
-
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -115,11 +115,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
+struct _GXColor {
 };
 
-struct _GXColor {
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct dPa_control_c {
@@ -132,19 +132,19 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 804D1EF8 */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
 	/* 80074BE8 */ void GetPolyColor(cBgS_PolyInfo const&);
 	/* 80074CBC */ void GetSpecialCode(cBgS_PolyInfo const&);
 	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 	/* 80074EF0 */ void GetGroundCode(cBgS_PolyInfo const&);
 	/* 80075100 */ void GetRoomId(cBgS_PolyInfo const&);
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 804D1EF8 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -287,47 +287,90 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void daSpinner_createHeap(fopAc_ac_c*); // 2
-static void daSpinner_Create(fopAc_ac_c*); // 2
-static void daSpinner_Delete(daSpinner_c*); // 2
-static void daSpinner_Execute(daSpinner_c*); // 2
-static void daSpinner_Draw(daSpinner_c*); // 2
+static void daSpinner_createHeap(fopAc_ac_c*);
+static void daSpinner_Create(fopAc_ac_c*);
+static void daSpinner_Delete(daSpinner_c*);
+static void daSpinner_Execute(daSpinner_c*);
+static void daSpinner_Draw(daSpinner_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_SPINNER[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_804D5030[4];
+extern "C" extern u8 data_804D5034[4];
+extern "C" extern u8 data_804D5038[4];
+extern "C" extern u8 data_804D503C[4];
+extern "C" extern u8 data_804D5040[4];
+extern "C" extern u8 data_804D5044[4];
+extern "C" extern u8 data_804D5048[4];
+extern "C" extern u8 data_804D504C[4];
+extern "C" extern u8 data_804D5050[4];
+extern "C" extern u8 data_804D5054[4];
+extern "C" extern u8 data_804D5058[4];
+extern "C" extern u8 data_804D505C[4];
+extern "C" extern u8 data_804D5060[4];
+extern "C" extern u8 data_804D5064[4];
+extern "C" extern u8 data_804D5068[4];
+extern "C" extern u8 data_804D506C[4];
+extern "C" extern u8 data_804D5070[4];
+extern "C" extern u8 data_804D5074[4];
+extern "C" extern u8 data_804D5078[4];
+extern "C" extern u8 data_804D507C[4];
+extern "C" extern u8 data_804D5080[4];
+extern "C" extern u8 data_804D5084[4];
+extern "C" extern u8 data_804D5088[4];
+extern "C" extern u8 data_804D508C[4];
+extern "C" extern u8 data_804D5090[4];
+extern "C" extern u8 data_804D5094[4];
 
-extern "C" void createHeap__11daSpinner_cFv(); // 1
-extern "C" static void daSpinner_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void create__11daSpinner_cFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __dt__13dBgS_LinkAcchFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" static void daSpinner_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__11daSpinner_cFv(); // 1
-extern "C" static void daSpinner_Delete__FP11daSpinner_c(); // 1
-extern "C" void setRoomInfo__11daSpinner_cFv(); // 1
-extern "C" void setMatrix__11daSpinner_cFv(); // 1
-extern "C" void setEffect__11daSpinner_cFv(); // 1
-extern "C" void posMove__11daSpinner_cFv(); // 1
-extern "C" void __dt__8cM3dGLinFv(); // 1
-extern "C" void setReflectAngle__11daSpinner_cFv(); // 1
-extern "C" void setWallHit__11daSpinner_cFsUl(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void setAnm__11daSpinner_cFv(); // 1
-extern "C" void setNextPathNum__11daSpinner_cFv(); // 1
-extern "C" void getPathNextPos__11daSpinner_cFv(); // 1
-extern "C" void checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz(); // 1
-extern "C" void checkPathMove__11daSpinner_cFv(); // 1
-extern "C" void setSpreadEffect__11daSpinner_cFv(); // 1
-extern "C" void clearSpreadEffect__11daSpinner_cFv(); // 1
-extern "C" void execute__11daSpinner_cFv(); // 1
-extern "C" static void daSpinner_Execute__FP11daSpinner_c(); // 1
-extern "C" void draw__11daSpinner_cFv(); // 1
-extern "C" static void daSpinner_Draw__FP11daSpinner_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
-extern "C" static void func_804D4D70(); // 1
-extern "C" static void func_804D4D78(); // 1
+extern "C" void createHeap__11daSpinner_cFv();
+extern "C" static void daSpinner_createHeap__FP10fopAc_ac_c();
+extern "C" void create__11daSpinner_cFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __dt__13dBgS_LinkAcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" static void daSpinner_Create__FP10fopAc_ac_c();
+extern "C" void __dt__11daSpinner_cFv();
+extern "C" static void daSpinner_Delete__FP11daSpinner_c();
+extern "C" void setRoomInfo__11daSpinner_cFv();
+extern "C" void setMatrix__11daSpinner_cFv();
+extern "C" void setEffect__11daSpinner_cFv();
+extern "C" void posMove__11daSpinner_cFv();
+extern "C" void __dt__8cM3dGLinFv();
+extern "C" void setReflectAngle__11daSpinner_cFv();
+extern "C" void setWallHit__11daSpinner_cFsUl();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void setAnm__11daSpinner_cFv();
+extern "C" void setNextPathNum__11daSpinner_cFv();
+extern "C" void getPathNextPos__11daSpinner_cFv();
+extern "C" void checkLineWallHit__11daSpinner_cFP4cXyzP4cXyz();
+extern "C" void checkPathMove__11daSpinner_cFv();
+extern "C" void setSpreadEffect__11daSpinner_cFv();
+extern "C" void clearSpreadEffect__11daSpinner_cFv();
+extern "C" void execute__11daSpinner_cFv();
+extern "C" static void daSpinner_Execute__FP11daSpinner_c();
+extern "C" void draw__11daSpinner_cFv();
+extern "C" static void daSpinner_Draw__FP11daSpinner_c();
+extern "C" void __dt__10cCcD_GSttsFv();
+extern "C" static void func_804D4D70();
+extern "C" static void func_804D4D78();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_SPINNER[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
@@ -376,154 +419,32 @@ extern "C" extern u8 data_804D5094[4];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelEntryDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setStageLayer(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_getPolygonAngle(cBgS_PolyInfo const&, s16); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGs_isZoneSwitch(int, int); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void dComIfG_getTrigA(u32); // 2
-void dBgS_CheckBWallPoly(cBgS_PolyInfo const&); // 2
-void dCam_getControledAngleY(camera_class*); // 2
-void dKy_pol_sound_get(cBgS_PolyInfo const*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelEntryDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_getPolygonAngle__FRC13cBgS_PolyInfos(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGs_isZoneSwitch__Fii(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void dComIfG_getTrigA__FUl(); // 1
-extern "C" void entry__10daMirror_cFP8J3DModel(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl(); // 1
-extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void init__7dPaPo_cFP9dBgS_Acchff(); // 1
-extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWallR__12dBgS_AcchCirFf(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void __ct__15dBgS_LinkLinChkFv(); // 1
-extern "C" void __dt__15dBgS_LinkLinChkFv(); // 1
-extern "C" void SetLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkAtHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetAtHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void StartCAt__8dCcD_CylFR4cXyz(); // 1
-extern "C" void MoveCAt__8dCcD_CylFR4cXyz(); // 1
-extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc(); // 1
-extern "C" void getAlinkArcName__9daAlink_cFv(); // 1
-extern "C" void checkStageName__9daAlink_cFPCc(); // 1
-extern "C" void getSpinnerGravity__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerMaxFallSpeed__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerJumpRate__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideMoveTime__9daAlink_cFv(); // 1
-extern "C" void getSpinnerRideSpeedF__9daAlink_cFv(); // 1
-extern "C" void getSpinnerRideDecSpeedMax__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideDecSpeedMin__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideDecSpeedRate__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideRotAngleMax__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideRotAngleMin__9daAlink_cCFv(); // 1
-extern "C" void dCam_getControledAngleY__FP12camera_class(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf(); // 1
-extern "C" void __dt__8cM3dGCirFv(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void __dt__14Z2SoundObjBaseFv(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelEntryDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setStageLayer(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_getPolygonAngle(cBgS_PolyInfo const&, s16);
+void dComIfGp_getReverb(int);
+void dComIfGs_isZoneSwitch(int, int);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfG_getTrigA(u32);
+void dBgS_CheckBWallPoly(cBgS_PolyInfo const&);
+void dCam_getControledAngleY(camera_class*);
+void dKy_pol_sound_get(cBgS_PolyInfo const*);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM3d_Len3dSqPntAndSegLine(cM3dGLin const*, Vec const*, Vec*, f32*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_distanceAngleS(s16, s16);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
@@ -540,7 +461,145 @@ extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelEntryDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_getPolygonAngle__FRC13cBgS_PolyInfos();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGs_isZoneSwitch__Fii();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void dComIfG_getTrigA__FUl();
+extern "C" void entry__10daMirror_cFP8J3DModel();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl();
+extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void init__7dPaPo_cFP9dBgS_Acchff();
+extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWallR__12dBgS_AcchCirFf();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void __ct__15dBgS_LinkLinChkFv();
+extern "C" void __dt__15dBgS_LinkLinChkFv();
+extern "C" void SetLink__16dBgS_PolyPassChkFv();
+extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void ChkAtHit__12dCcD_GObjInfFv();
+extern "C" void GetAtHitGObj__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void StartCAt__8dCcD_CylFR4cXyz();
+extern "C" void MoveCAt__8dCcD_CylFR4cXyz();
+extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc();
+extern "C" void getAlinkArcName__9daAlink_cFv();
+extern "C" void checkStageName__9daAlink_cFPCc();
+extern "C" void getSpinnerGravity__9daAlink_cCFv();
+extern "C" void getSpinnerMaxFallSpeed__9daAlink_cCFv();
+extern "C" void getSpinnerJumpRate__9daAlink_cCFv();
+extern "C" void getSpinnerRideMoveTime__9daAlink_cFv();
+extern "C" void getSpinnerRideSpeedF__9daAlink_cFv();
+extern "C" void getSpinnerRideDecSpeedMax__9daAlink_cCFv();
+extern "C" void getSpinnerRideDecSpeedMin__9daAlink_cCFv();
+extern "C" void getSpinnerRideDecSpeedRate__9daAlink_cCFv();
+extern "C" void getSpinnerRideRotAngleMax__9daAlink_cCFv();
+extern "C" void getSpinnerRideRotAngleMin__9daAlink_cCFv();
+extern "C" void dCam_getControledAngleY__FP12camera_class();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void atan2sY_XZ__4cXyzCFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void cM3d_Len3dSqPntAndSegLine__FPC8cM3dGLinPC3VecP3VecPf();
+extern "C" void __dt__8cM3dGCirFv();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void SetStartEnd__8cM3dGLinFRC3VecRC3Vec();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void func_802807E0();
+extern "C" void __dt__14Z2SoundObjBaseFv();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern void* __vt__16Z2SoundObjSimple[8];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

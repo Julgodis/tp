@@ -24,6 +24,9 @@ struct dPath {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -31,9 +34,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -48,27 +48,29 @@ struct JPABaseEmitter {
 // Forward References:
 // 
 
-static void get_rail_ratio_pos(dPath*, int, f32, s16*, s16*); // 2
-static void set_path_info(fopAc_ac_c*); // 2
-static void get_Extent_pos_start_get(kytag10_class*, dPath*, cXyz*, f32, int*); // 2
-static void get_Extent_pos_end_get(kytag10_class*, dPath*, cXyz*, f32, int*); // 2
-static void sparks_move(kytag10_class*); // 2
-static bool daKytag10_Draw(kytag10_class*); // 2
-static void daKytag10_Execute(kytag10_class*); // 2
-static bool daKytag10_IsDelete(kytag10_class*); // 2
-static void daKytag10_Delete(kytag10_class*); // 2
-static void daKytag10_Create(fopAc_ac_c*); // 2
+static void get_rail_ratio_pos(dPath*, int, f32, s16*, s16*);
+static void set_path_info(fopAc_ac_c*);
+static void get_Extent_pos_start_get(kytag10_class*, dPath*, cXyz*, f32, int*);
+static void get_Extent_pos_end_get(kytag10_class*, dPath*, cXyz*, f32, int*);
+static void sparks_move(kytag10_class*);
+static bool daKytag10_Draw(kytag10_class*);
+static void daKytag10_Execute(kytag10_class*);
+static bool daKytag10_IsDelete(kytag10_class*);
+static void daKytag10_Delete(kytag10_class*);
+static void daKytag10_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_3971;
+extern "C" extern void* g_profile_KYTAG10[12];
 
-extern "C" static void get_rail_ratio_pos__FP5dPathifPsPs(); // 1
-extern "C" static void set_path_info__FP10fopAc_ac_c(); // 1
-extern "C" static void get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi(); // 1
-extern "C" static void get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi(); // 1
-extern "C" static void sparks_move__FP13kytag10_class(); // 1
-extern "C" static bool daKytag10_Draw__FP13kytag10_class(); // 1
-extern "C" static void daKytag10_Execute__FP13kytag10_class(); // 1
-extern "C" static bool daKytag10_IsDelete__FP13kytag10_class(); // 1
-extern "C" static void daKytag10_Delete__FP13kytag10_class(); // 1
-extern "C" static void daKytag10_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void get_rail_ratio_pos__FP5dPathifPsPs();
+extern "C" static void set_path_info__FP10fopAc_ac_c();
+extern "C" static void get_Extent_pos_start_get__FP13kytag10_classP5dPathP4cXyzfPi();
+extern "C" static void get_Extent_pos_end_get__FP13kytag10_classP5dPathP4cXyzfPi();
+extern "C" static void sparks_move__FP13kytag10_class();
+extern "C" static bool daKytag10_Draw__FP13kytag10_class();
+extern "C" static void daKytag10_Execute__FP13kytag10_class();
+extern "C" static bool daKytag10_IsDelete__FP13kytag10_class();
+extern "C" static void daKytag10_Delete__FP13kytag10_class();
+extern "C" static void daKytag10_Create__FP10fopAc_ac_c();
 extern "C" extern u32 const lit_3971;
 extern "C" extern void* g_profile_KYTAG10[12];
 
@@ -76,21 +78,26 @@ extern "C" extern void* g_profile_KYTAG10[12];
 // External References:
 // 
 
-void dPath_GetRoomPath(int, int); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void cM_atan2s(f32, f32); // 2
+void dPath_GetRoomPath(int, int);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void cM_atan2s(f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u32 __float_nan;
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void cM_atan2s__Fff();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

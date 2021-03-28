@@ -64,40 +64,45 @@ struct JAUAudioArcInterpreter {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */];
 
-extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection(); // 1
-extern "C" void readCommandMore__16Z2AudioArcLoaderFUl(); // 1
-extern "C" void readBFCA__16Z2AudioArcLoaderFPCv(); // 1
-extern "C" void readBSTN__16Z2AudioArcLoaderFPCvUl(); // 1
-extern "C" void __dt__16Z2AudioArcLoaderFv(); // 1
+extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection();
+extern "C" void readCommandMore__16Z2AudioArcLoaderFUl();
+extern "C" void readBFCA__16Z2AudioArcLoaderFPCv();
+extern "C" void readBSTN__16Z2AudioArcLoaderFPCvUl();
+extern "C" void __dt__16Z2AudioArcLoaderFv();
 extern "C" extern void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 
-extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
-extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection(); // 1
-extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl(); // 1
-extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv(); // 1
-extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl(); // 1
-extern "C" void readBST__17JAUAudioArcLoaderFPCvUl(); // 1
-extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl(); // 1
-extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl(); // 1
-extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl(); // 1
-extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl(); // 1
-extern "C" void readBSFT__17JAUAudioArcLoaderFPCv(); // 1
-extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl(); // 1
-extern "C" void endBNKList__17JAUAudioArcLoaderFv(); // 1
-extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii(); // 1
-extern "C" void getOpenSection__14JAUSectionHeapFv(); // 1
-extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__22JAUAudioArcInterpreterFv();
+extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection();
+extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv();
+extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBST__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
+extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl();
+extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
+extern "C" void readBSFT__17JAUAudioArcLoaderFPCv();
+extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl();
+extern "C" void endBNKList__17JAUAudioArcLoaderFv();
+extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii();
+extern "C" void getOpenSection__14JAUSectionHeapFv();
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" void __dl__FPv();
+extern "C" void mount__10JKRArchiveFPvP7JKRHeapQ210JKRArchive15EMountDirection();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
 extern "C" extern u8 data_80450B40[4];
 extern "C" extern u8 data_80450CC0[4 + 4 /* padding */];

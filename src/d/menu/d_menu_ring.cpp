@@ -214,62 +214,64 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_ring__stringBase0;
+extern "C" extern u8 pad_80454434[4];
 
-extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc(); // 1
-extern "C" void __dt__12dMenu_Ring_cFv(); // 1
-extern "C" void _create__12dMenu_Ring_cFv(); // 1
-extern "C" void _delete__12dMenu_Ring_cFv(); // 1
-extern "C" void _move__12dMenu_Ring_cFv(); // 1
-extern "C" void _draw__12dMenu_Ring_cFv(); // 1
-extern "C" void setKanteraPos__12dMenu_Ring_cFff(); // 1
-extern "C" void isOpen__12dMenu_Ring_cFv(); // 1
-extern "C" void isMoveEnd__12dMenu_Ring_cFv(); // 1
-extern "C" void isClose__12dMenu_Ring_cFv(); // 1
-extern "C" void getStickInfo__12dMenu_Ring_cFP9STControl(); // 1
-extern "C" void calcStickAngle__12dMenu_Ring_cFP9STControlUc(); // 1
-extern "C" void setRotate__12dMenu_Ring_cFv(); // 1
-extern "C" void setItemScale__12dMenu_Ring_cFif(); // 1
-extern "C" void setButtonScale__12dMenu_Ring_cFif(); // 1
-extern "C" void setItem__12dMenu_Ring_cFv(); // 1
-extern "C" void setJumpItem__12dMenu_Ring_cFb(); // 1
-extern "C" void setScale__12dMenu_Ring_cFv(); // 1
-extern "C" void setNameString__12dMenu_Ring_cFUl(); // 1
-extern "C" void setActiveCursor__12dMenu_Ring_cFv(); // 1
-extern "C" void setMixItem__12dMenu_Ring_cFv(); // 1
-extern "C" void drawItem__12dMenu_Ring_cFv(); // 1
-extern "C" void drawItem2__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_wait_init__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_wait_proc__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_move_init__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_move_proc__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_explain_init__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_explain_force_init__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_explain_proc__12dMenu_Ring_cFv(); // 1
-extern "C" void stick_explain_force_proc__12dMenu_Ring_cFv(); // 1
-extern "C" void setSelectItem__12dMenu_Ring_cFiUc(); // 1
-extern "C" void drawSelectItem__12dMenu_Ring_cFv(); // 1
-extern "C" void setSelectItemForce__12dMenu_Ring_cFi(); // 1
-extern "C" void getCursorPos__12dMenu_Ring_cFUc(); // 1
-extern "C" void getItemNum__12dMenu_Ring_cFUc(); // 1
-extern "C" void getItemMaxNum__12dMenu_Ring_cFUc(); // 1
-extern "C" void checkExplainForce__12dMenu_Ring_cFv(); // 1
-extern "C" bool checkCombineBomb__12dMenu_Ring_cFi(); // 1
-extern "C" void setCombineBomb__12dMenu_Ring_cFi(); // 1
-extern "C" void drawNumber__12dMenu_Ring_cFiiff(); // 1
-extern "C" void getItem__12dMenu_Ring_cFiUc(); // 1
-extern "C" void setDoStatus__12dMenu_Ring_cFUc(); // 1
-extern "C" void isMixItemOn__12dMenu_Ring_cFv(); // 1
-extern "C" void isMixItemOff__12dMenu_Ring_cFv(); // 1
-extern "C" void setMixMessage__12dMenu_Ring_cFv(); // 1
-extern "C" void textScaleHIO__12dMenu_Ring_cFv(); // 1
-extern "C" void textCentering__12dMenu_Ring_cFv(); // 1
-extern "C" void clacEllipseFunction__12dMenu_Ring_cFfff(); // 1
-extern "C" void calcDistance__12dMenu_Ring_cFffff(); // 1
-extern "C" void clacEllipsePlotAverage__12dMenu_Ring_cFiff(); // 1
-extern "C" bool dpdMove__12dMenu_Ring_cFv(); // 1
-extern "C" void openExplain__12dMenu_Ring_cFUc(); // 1
-extern "C" void draw__12dMenu_Ring_cFv(); // 1
-extern "C" void __sinit_d_menu_ring_cpp(); // 1
+extern "C" void __ct__12dMenu_Ring_cFP10JKRExpHeapP9STControlP10CSTControlUc();
+extern "C" void __dt__12dMenu_Ring_cFv();
+extern "C" void _create__12dMenu_Ring_cFv();
+extern "C" void _delete__12dMenu_Ring_cFv();
+extern "C" void _move__12dMenu_Ring_cFv();
+extern "C" void _draw__12dMenu_Ring_cFv();
+extern "C" void setKanteraPos__12dMenu_Ring_cFff();
+extern "C" void isOpen__12dMenu_Ring_cFv();
+extern "C" void isMoveEnd__12dMenu_Ring_cFv();
+extern "C" void isClose__12dMenu_Ring_cFv();
+extern "C" void getStickInfo__12dMenu_Ring_cFP9STControl();
+extern "C" void calcStickAngle__12dMenu_Ring_cFP9STControlUc();
+extern "C" void setRotate__12dMenu_Ring_cFv();
+extern "C" void setItemScale__12dMenu_Ring_cFif();
+extern "C" void setButtonScale__12dMenu_Ring_cFif();
+extern "C" void setItem__12dMenu_Ring_cFv();
+extern "C" void setJumpItem__12dMenu_Ring_cFb();
+extern "C" void setScale__12dMenu_Ring_cFv();
+extern "C" void setNameString__12dMenu_Ring_cFUl();
+extern "C" void setActiveCursor__12dMenu_Ring_cFv();
+extern "C" void setMixItem__12dMenu_Ring_cFv();
+extern "C" void drawItem__12dMenu_Ring_cFv();
+extern "C" void drawItem2__12dMenu_Ring_cFv();
+extern "C" void stick_wait_init__12dMenu_Ring_cFv();
+extern "C" void stick_wait_proc__12dMenu_Ring_cFv();
+extern "C" void stick_move_init__12dMenu_Ring_cFv();
+extern "C" void stick_move_proc__12dMenu_Ring_cFv();
+extern "C" void stick_explain_init__12dMenu_Ring_cFv();
+extern "C" void stick_explain_force_init__12dMenu_Ring_cFv();
+extern "C" void stick_explain_proc__12dMenu_Ring_cFv();
+extern "C" void stick_explain_force_proc__12dMenu_Ring_cFv();
+extern "C" void setSelectItem__12dMenu_Ring_cFiUc();
+extern "C" void drawSelectItem__12dMenu_Ring_cFv();
+extern "C" void setSelectItemForce__12dMenu_Ring_cFi();
+extern "C" void getCursorPos__12dMenu_Ring_cFUc();
+extern "C" void getItemNum__12dMenu_Ring_cFUc();
+extern "C" void getItemMaxNum__12dMenu_Ring_cFUc();
+extern "C" void checkExplainForce__12dMenu_Ring_cFv();
+extern "C" bool checkCombineBomb__12dMenu_Ring_cFi();
+extern "C" void setCombineBomb__12dMenu_Ring_cFi();
+extern "C" void drawNumber__12dMenu_Ring_cFiiff();
+extern "C" void getItem__12dMenu_Ring_cFiUc();
+extern "C" void setDoStatus__12dMenu_Ring_cFUc();
+extern "C" void isMixItemOn__12dMenu_Ring_cFv();
+extern "C" void isMixItemOff__12dMenu_Ring_cFv();
+extern "C" void setMixMessage__12dMenu_Ring_cFv();
+extern "C" void textScaleHIO__12dMenu_Ring_cFv();
+extern "C" void textCentering__12dMenu_Ring_cFv();
+extern "C" void clacEllipseFunction__12dMenu_Ring_cFfff();
+extern "C" void calcDistance__12dMenu_Ring_cFffff();
+extern "C" void clacEllipsePlotAverage__12dMenu_Ring_cFiff();
+extern "C" bool dpdMove__12dMenu_Ring_cFv();
+extern "C" void openExplain__12dMenu_Ring_cFUc();
+extern "C" void draw__12dMenu_Ring_cFv();
+extern "C" void __sinit_d_menu_ring_cpp();
 extern "C" extern char const* const d_menu_d_menu_ring__stringBase0;
 extern "C" extern u8 pad_80454434[4];
 
@@ -277,124 +279,133 @@ extern "C" extern u8 pad_80454434[4];
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void dComIfGs_setSelectItemIndex(int, u8); // 2
-void dComIfGs_setMixItemIndex(int, u8); // 2
-void dComIfGs_getMixItemIndex(int); // 2
-s32 dComIfGs_getBottleMax(); // 2
-void dMw_UP_TRIGGER(); // 2
-void dMw_DOWN_TRIGGER(); // 2
-void dMw_A_TRIGGER(); // 2
-void dMw_B_TRIGGER(); // 2
-void dMeter2Info_getNumberTextureName(int); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dMeter2Info_set2DVibrationM(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+void mDoExt_getMesgFont();
+void dComIfGs_setSelectItemIndex(int, u8);
+void dComIfGs_setMixItemIndex(int, u8);
+void dComIfGs_getMixItemIndex(int);
+s32 dComIfGs_getBottleMax();
+void dMw_UP_TRIGGER();
+void dMw_DOWN_TRIGGER();
+void dMw_A_TRIGGER();
+void dMw_B_TRIGGER();
+void dMeter2Info_getNumberTextureName(int);
+void dMeter2Info_set2DVibration();
+void dMeter2Info_set2DVibrationM();
+void dPaneClass_showNullPane(J2DScreen*);
+void dPaneClass_setPriority(void**, JKRHeap*, J2DScreen*, char const*, u32, JKRArchive*);
+void cM_atan2s(f32, f32);
+void cLib_addCalcPosXZ(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void* operator new(u32);
+void* operator new[](u32);
+void operator delete(void*);
+void operator delete[](void*);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_ringHIO[344];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void dComIfGs_setSelectItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_setMixItemIndex__FiUc(); // 1
-extern "C" void dComIfGs_getMixItemIndex__Fi(); // 1
-extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
-extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void getLineUpItem__17dSv_player_item_cCFi(); // 1
-extern "C" void getBombNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void getBottleNum__24dSv_player_item_record_cCFUc(); // 1
-extern "C" void getBombNum__21dSv_player_item_max_cCFUc(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void __ct__15dKantera_icon_cFv(); // 1
-extern "C" void setAlphaRate__15dKantera_icon_cFf(); // 1
-extern "C" void setPos__15dKantera_icon_cFff(); // 1
-extern "C" void setScale__15dKantera_icon_cFff(); // 1
-extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
-extern "C" void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb(); // 1
-extern "C" void move__19dMenu_ItemExplain_cFv(); // 1
-extern "C" void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph(); // 1
-extern "C" void openExplain__19dMenu_ItemExplain_cFUcUcUcb(); // 1
-extern "C" void openExplainTx__19dMenu_ItemExplain_cFUlUl(); // 1
-extern "C" void getAlphaRatio__19dMenu_ItemExplain_cFv(); // 1
-extern "C" void dMw_UP_TRIGGER__Fv(); // 1
-extern "C" void dMw_DOWN_TRIGGER__Fv(); // 1
-extern "C" void dMw_A_TRIGGER__Fv(); // 1
-extern "C" void dMw_B_TRIGGER__Fv(); // 1
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
-extern "C" void warpInProc__13dMeter2Info_cFv(); // 1
-extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei(); // 1
-extern "C" void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture(); // 1
-extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void getTotalFreeSize__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfGs_setSelectItemIndex__FiUc();
+extern "C" void dComIfGs_setMixItemIndex__FiUc();
+extern "C" void dComIfGs_getMixItemIndex__Fi();
+extern "C" s32 dComIfGs_getBottleMax__Fv();
+extern "C" void getSelectItemIndex__21dSv_player_status_a_cCFi();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void getLineUpItem__17dSv_player_item_cCFi();
+extern "C" void getBombNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBottleNum__24dSv_player_item_record_cCFUc();
+extern "C" void getBombNum__21dSv_player_item_max_cCFUc();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void __ct__19dMenu_ItemExplain_cFP10JKRExpHeapP10JKRArchiveP9STControlb();
+extern "C" void move__19dMenu_ItemExplain_cFv();
+extern "C" void draw__19dMenu_ItemExplain_cFP13J2DOrthoGraph();
+extern "C" void openExplain__19dMenu_ItemExplain_cFUcUcUcb();
+extern "C" void openExplainTx__19dMenu_ItemExplain_cFUlUl();
+extern "C" void getAlphaRatio__19dMenu_ItemExplain_cFv();
+extern "C" void dMw_UP_TRIGGER__Fv();
+extern "C" void dMw_DOWN_TRIGGER__Fv();
+extern "C" void dMw_A_TRIGGER__Fv();
+extern "C" void dMw_B_TRIGGER__Fv();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void warpInProc__13dMeter2Info_cFv();
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" void setItemColor__13dMeter2Info_cFUcP10J2DPictureP10J2DPictureP10J2DPictureP10J2DPicture();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void dPaneClass_setPriority__FPPvP7JKRHeapP9J2DScreenPCcUlP10JKRArchive();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_addCalcPosXZ__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void getTotalFreeSize__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* item_resource__10dItem_data[1530];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];

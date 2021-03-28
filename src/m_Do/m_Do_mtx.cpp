@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct csXyz {
+};
+
 struct Quaternion {
 };
 
@@ -22,9 +25,6 @@ struct cXyz {
 	/* 80266CBC */ void outprod(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 80266FDC */ void normalizeRS();
-};
-
-struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -52,55 +52,57 @@ struct mDoMtx_quatStack_c {
 // Forward References:
 // 
 
-static void mDoMtx_XYZrotS(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotS(f32 (* )[4], s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotS(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
-void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]); // 2
-void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]); // 2
-void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*); // 2
-void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*); // 2
+static void mDoMtx_XYZrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotS(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
+void mDoMtx_inverseTranspose(f32 const (* )[4], f32 (* )[4]);
+void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*);
+void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
 
-extern "C" static void mDoMtx_XYZrotS__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotS__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs(); // 1
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f(); // 1
-extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f(); // 1
-extern "C" void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion(); // 1
-extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz(); // 1
-extern "C" void push__14mDoMtx_stack_cFv(); // 1
-extern "C" void pop__14mDoMtx_stack_cFv(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void transM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void XYZrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion(); // 1
-extern "C" void __sinit_m_Do_mtx_cpp(); // 1
-extern "C" void __dt__18mDoMtx_quatStack_cFv(); // 1
-extern "C" void __dt__14mDoMtx_stack_cFv(); // 1
+extern "C" static void mDoMtx_XYZrotS__FPA4_fsss();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotS__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+extern "C" void mDoMtx_inverseTranspose__FPA4_CfPA4_f();
+extern "C" void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion();
+extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+extern "C" void push__14mDoMtx_stack_cFv();
+extern "C" void pop__14mDoMtx_stack_cFv();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void XYZrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion();
+extern "C" void __sinit_m_Do_mtx_cpp();
+extern "C" void __dt__18mDoMtx_quatStack_cFv();
+extern "C" void __dt__14mDoMtx_stack_cFv();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 
@@ -108,26 +110,29 @@ extern "C" extern u8 now__14mDoMtx_stack_c[48];
 // External References:
 // 
 
-void cM_atan2s(f32, f32); // 2
-void operator delete(void*); // 2
+void cM_atan2s(f32, f32);
+void operator delete(void*);
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_epsilon;
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void outprod__4cXyzCFRC3Vec(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void normalizeRS__4cXyzFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void C_MTXLookAt(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void outprod__4cXyzCFRC3Vec();
+extern "C" void normalize__4cXyzFv();
+extern "C" void normalizeRS__4cXyzFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXQuat();
+extern "C" void C_MTXLookAt();
+extern "C" void PSVECDotProduct();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_epsilon;
 extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];

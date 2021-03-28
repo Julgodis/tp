@@ -12,16 +12,16 @@
 // 
 
 
-extern "C" void cos(); // 1
+extern "C" void cos();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_rem_pio2(); // 1
-extern "C" void __kernel_cos(); // 1
-extern "C" void __kernel_sin(); // 1
+extern "C" void __ieee754_rem_pio2();
+extern "C" void __kernel_cos();
+extern "C" void __kernel_sin();
 
 // 
 // Declarations:

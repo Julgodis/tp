@@ -27,22 +27,22 @@ struct J3DJoint {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template73(void const*, u32); // 2
+static void JSUConvertOffsetToPtr__template73(void const*, u32);
 
-extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock(); // 1
-extern "C" void create__15J3DJointFactoryFi(); // 1
-extern "C" static void func_80337338(); // 1
+extern "C" void __ct__15J3DJointFactoryFRC13J3DJointBlock();
+extern "C" void create__15J3DJointFactoryFi();
+extern "C" static void func_80337338();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void JSUConvertOffsetToPtr__template72(void const*, u32); // 2
+void* operator new(u32);
+void JSUConvertOffsetToPtr__template72(void const*, u32);
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __ct__8J3DJointFv(); // 1
-extern "C" void func_8033677C(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __ct__8J3DJointFv();
+extern "C" void func_8033677C();
 
 // 
 // Declarations:

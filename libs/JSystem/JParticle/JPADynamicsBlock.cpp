@@ -28,31 +28,32 @@ struct JPABaseEmitter {
 // Forward References:
 // 
 
-static void JPAVolumePoint(JPAEmitterWorkData*); // 2
-static void JPAVolumeLine(JPAEmitterWorkData*); // 2
-static void JPAVolumeCircle(JPAEmitterWorkData*); // 2
-static void JPAVolumeCube(JPAEmitterWorkData*); // 2
-static void JPAVolumeSphere(JPAEmitterWorkData*); // 2
-static void JPAVolumeCylinder(JPAEmitterWorkData*); // 2
-static void JPAVolumeTorus(JPAEmitterWorkData*); // 2
+static void JPAVolumePoint(JPAEmitterWorkData*);
+static void JPAVolumeLine(JPAEmitterWorkData*);
+static void JPAVolumeCircle(JPAEmitterWorkData*);
+static void JPAVolumeCube(JPAEmitterWorkData*);
+static void JPAVolumeSphere(JPAEmitterWorkData*);
+static void JPAVolumeCylinder(JPAEmitterWorkData*);
+static void JPAVolumeTorus(JPAEmitterWorkData*);
 
-extern "C" static void JPAVolumePoint__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeLine__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeCircle__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeCube__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeSphere__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeCylinder__FP18JPAEmitterWorkData(); // 1
-extern "C" static void JPAVolumeTorus__FP18JPAEmitterWorkData(); // 1
-extern "C" void __ct__16JPADynamicsBlockFPCUc(); // 1
-extern "C" void init__16JPADynamicsBlockFv(); // 1
-extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData(); // 1
+extern "C" static void JPAVolumePoint__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeLine__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeCircle__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeCube__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeSphere__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeCylinder__FP18JPAEmitterWorkData();
+extern "C" static void JPAVolumeTorus__FP18JPAEmitterWorkData();
+extern "C" void __ct__16JPADynamicsBlockFPCUc();
+extern "C" void init__16JPADynamicsBlockFv();
+extern "C" void create__16JPADynamicsBlockFP18JPAEmitterWorkData();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void createParticle__14JPABaseEmitterFv(); // 1
+extern "C" void createParticle__14JPABaseEmitterFv();
 extern "C" extern u8 sincosTable___5JMath[65536];
 
 // 

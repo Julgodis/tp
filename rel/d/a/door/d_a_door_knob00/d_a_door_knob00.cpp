@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -188,60 +188,62 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daKnob20_Draw(daKnob20_c*); // 2
-static void daKnob20_Execute(daKnob20_c*); // 2
-static void daKnob20_Delete(daKnob20_c*); // 2
-static void daKnob20_Create(fopAc_ac_c*); // 2
+static void CheckCreateHeap(fopAc_ac_c*);
+static void daKnob20_Draw(daKnob20_c*);
+static void daKnob20_Execute(daKnob20_c*);
+static void daKnob20_Delete(daKnob20_c*);
+static void daKnob20_Create(fopAc_ac_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_KNOB20[12];
 
-extern "C" void getDoorModel__12knob_param_cFP10fopAc_ac_c(); // 1
-extern "C" void getDoorLightInf__12knob_param_cFP10fopAc_ac_c(); // 1
-extern "C" void getMsgNo__12knob_param_cFP10fopAc_ac_c(); // 1
-extern "C" void getExitNo__12knob_param_cFP10fopAc_ac_c(); // 1
-extern "C" void getAlwaysArcName__10daKnob20_cFv(); // 1
-extern "C" void getEvArcName__10daKnob20_cFv(); // 1
-extern "C" void getDzb__10daKnob20_cFv(); // 1
-extern "C" void getDummyBmd__10daKnob20_cFv(); // 1
-extern "C" void getBmd__10daKnob20_cFv(); // 1
-extern "C" void getDoorModelData__10daKnob20_cFv(); // 1
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void CreateHeap__10daKnob20_cFv(); // 1
-extern "C" void calcMtx__10daKnob20_cFv(); // 1
-extern "C" void CreateInit__10daKnob20_cFv(); // 1
-extern "C" void create__10daKnob20_cFv(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
-extern "C" void checkOpenDoor__10daKnob20_cFPi(); // 1
-extern "C" void setActionFromFlow__10daKnob20_cFv(); // 1
-extern "C" void setEventId__10daKnob20_cFv(); // 1
-extern "C" void checkArea__10daKnob20_cFfff(); // 1
-extern "C" void setEventPrm__10daKnob20_cFv(); // 1
-extern "C" void releaseBG__10daKnob20_cFv(); // 1
-extern "C" void frontCheck__10daKnob20_cFv(); // 1
-extern "C" void getDemoAction__10daKnob20_cFv(); // 1
-extern "C" void demoProc__10daKnob20_cFv(); // 1
-extern "C" void setStart__10daKnob20_cFff(); // 1
-extern "C" void setAngle__10daKnob20_cFv(); // 1
-extern "C" void adjustmentProc__10daKnob20_cFv(); // 1
-extern "C" void openInit__10daKnob20_cFi(); // 1
-extern "C" void openProc__10daKnob20_cFi(); // 1
-extern "C" void openEnd__10daKnob20_cFi(); // 1
-extern "C" void initOpenDemo__10daKnob20_cFv(); // 1
-extern "C" void startDemoProc__10daKnob20_cFv(); // 1
-extern "C" void actionWait__10daKnob20_cFv(); // 1
-extern "C" void actionSpecialDemo__10daKnob20_cFv(); // 1
-extern "C" void actionDemo__10daKnob20_cFv(); // 1
-extern "C" void actionTalk__10daKnob20_cFv(); // 1
-extern "C" void actionTalkWait__10daKnob20_cFv(); // 1
-extern "C" void actionTalkOpen__10daKnob20_cFv(); // 1
-extern "C" void actionInit__10daKnob20_cFv(); // 1
-extern "C" bool actionDead__10daKnob20_cFv(); // 1
-extern "C" void execute__10daKnob20_cFv(); // 1
-extern "C" void draw__10daKnob20_cFv(); // 1
-extern "C" void Delete__10daKnob20_cFv(); // 1
-extern "C" static void daKnob20_Draw__FP10daKnob20_c(); // 1
-extern "C" static void daKnob20_Execute__FP10daKnob20_c(); // 1
-extern "C" static void daKnob20_Delete__FP10daKnob20_c(); // 1
-extern "C" static void daKnob20_Create__FP10fopAc_ac_c(); // 1
+extern "C" void getDoorModel__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getDoorLightInf__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getMsgNo__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getExitNo__12knob_param_cFP10fopAc_ac_c();
+extern "C" void getAlwaysArcName__10daKnob20_cFv();
+extern "C" void getEvArcName__10daKnob20_cFv();
+extern "C" void getDzb__10daKnob20_cFv();
+extern "C" void getDummyBmd__10daKnob20_cFv();
+extern "C" void getBmd__10daKnob20_cFv();
+extern "C" void getDoorModelData__10daKnob20_cFv();
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void CreateHeap__10daKnob20_cFv();
+extern "C" void calcMtx__10daKnob20_cFv();
+extern "C" void CreateInit__10daKnob20_cFv();
+extern "C" void create__10daKnob20_cFv();
+extern "C" void __dt__12J3DFrameCtrlFv();
+extern "C" void checkOpenDoor__10daKnob20_cFPi();
+extern "C" void setActionFromFlow__10daKnob20_cFv();
+extern "C" void setEventId__10daKnob20_cFv();
+extern "C" void checkArea__10daKnob20_cFfff();
+extern "C" void setEventPrm__10daKnob20_cFv();
+extern "C" void releaseBG__10daKnob20_cFv();
+extern "C" void frontCheck__10daKnob20_cFv();
+extern "C" void getDemoAction__10daKnob20_cFv();
+extern "C" void demoProc__10daKnob20_cFv();
+extern "C" void setStart__10daKnob20_cFff();
+extern "C" void setAngle__10daKnob20_cFv();
+extern "C" void adjustmentProc__10daKnob20_cFv();
+extern "C" void openInit__10daKnob20_cFi();
+extern "C" void openProc__10daKnob20_cFi();
+extern "C" void openEnd__10daKnob20_cFi();
+extern "C" void initOpenDemo__10daKnob20_cFv();
+extern "C" void startDemoProc__10daKnob20_cFv();
+extern "C" void actionWait__10daKnob20_cFv();
+extern "C" void actionSpecialDemo__10daKnob20_cFv();
+extern "C" void actionDemo__10daKnob20_cFv();
+extern "C" void actionTalk__10daKnob20_cFv();
+extern "C" void actionTalkWait__10daKnob20_cFv();
+extern "C" void actionTalkOpen__10daKnob20_cFv();
+extern "C" void actionInit__10daKnob20_cFv();
+extern "C" bool actionDead__10daKnob20_cFv();
+extern "C" void execute__10daKnob20_cFv();
+extern "C" void draw__10daKnob20_cFv();
+extern "C" void Delete__10daKnob20_cFv();
+extern "C" static void daKnob20_Draw__FP10daKnob20_c();
+extern "C" static void daKnob20_Execute__FP10daKnob20_c();
+extern "C" static void daKnob20_Delete__FP10daKnob20_c();
+extern "C" static void daKnob20_Create__FP10fopAc_ac_c();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_KNOB20[12];
 
@@ -249,81 +251,91 @@ extern "C" extern void* g_profile_KNOB20[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfG_getStageRes(char const*);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void isPlaceMessage__12dMsgObject_cFv(); // 1
-extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void checkPass__12J3DFrameCtrlFf(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+extern "C" void __ct__4dBgWFv();
+extern "C" void Move__4dBgWFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void isPlaceMessage__12dMsgObject_cFv();
+extern "C" void endFlowGroup__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void checkOpenDoor__10dMsgFlow_cFP10fopAc_ac_cPi();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void checkPass__12J3DFrameCtrlFf();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" void sprintf();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

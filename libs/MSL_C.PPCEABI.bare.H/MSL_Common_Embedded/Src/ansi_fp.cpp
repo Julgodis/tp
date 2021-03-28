@@ -11,11 +11,12 @@
 // Forward References:
 // 
 
+extern "C" extern char const* const MSL_Common_Embedded_Src_ansi_fp__stringBase0;
 
-extern "C" void __num2dec(); // 1
-extern "C" static void __num2dec_internal(); // 1
-extern "C" static void __two_exp(); // 1
-extern "C" static void __timesdec(); // 1
+extern "C" void __num2dec();
+extern "C" static void __num2dec_internal();
+extern "C" static void __two_exp();
+extern "C" static void __timesdec();
 extern "C" extern char const* const MSL_Common_Embedded_Src_ansi_fp__stringBase0;
 
 // 
@@ -23,12 +24,12 @@ extern "C" extern char const* const MSL_Common_Embedded_Src_ansi_fp__stringBase0
 // 
 
 
-extern "C" void __div2u(); // 1
-extern "C" void __mod2u(); // 1
-extern "C" void __cvt_dbl_usll(); // 1
-extern "C" void frexp(); // 1
-extern "C" void ldexp(); // 1
-extern "C" void modf(); // 1
+extern "C" void __div2u();
+extern "C" void __mod2u();
+extern "C" void __cvt_dbl_usll();
+extern "C" void frexp();
+extern "C" void ldexp();
+extern "C" void modf();
 
 // 
 // Declarations:

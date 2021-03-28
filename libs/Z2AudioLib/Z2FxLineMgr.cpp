@@ -11,13 +11,13 @@
 // Types:
 // 
 
+struct JKRHeap {
+	/* 802CE500 */ void free(void*, JKRHeap*);
+};
+
 struct JKRArchive {
 	/* 802D5D38 */ void getResource(u16);
 	/* 802D610C */ void countResource() const;
-};
-
-struct JKRHeap {
-	/* 802CE500 */ void free(void*, JKRHeap*);
 };
 
 struct Z2FxLineConfig {
@@ -54,32 +54,38 @@ struct JASDsp {
 // 
 
 
-extern "C" void __ct__11Z2FxLineMgrFv(); // 1
-extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap(); // 1
-extern "C" void setLineID__11Z2FxLineMgrFScbb(); // 1
-extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb(); // 1
-extern "C" void setFxForceOff__11Z2FxLineMgrFb(); // 1
-extern "C" void setUnderWaterFx__11Z2FxLineMgrFb(); // 1
-extern "C" void setSceneFx__11Z2FxLineMgrFl(); // 1
+extern "C" void __ct__11Z2FxLineMgrFv();
+extern "C" void initDataArc__11Z2FxLineMgrFP10JKRArchiveP7JKRHeap();
+extern "C" void setLineID__11Z2FxLineMgrFScbb();
+extern "C" void setLine__11Z2FxLineMgrFP14Z2FxLineConfigbb();
+extern "C" void setFxForceOff__11Z2FxLineMgrFb();
+extern "C" void setUnderWaterFx__11Z2FxLineMgrFb();
+extern "C" void setSceneFx__11Z2FxLineMgrFl();
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
+void* operator new[](u32, JKRHeap*, int);
+extern "C" extern void* __vt__10JSUIosBase[3];
+extern "C" extern void* __vt__20JSURandomInputStream[9];
+extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
+extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
+extern "C" extern u8 data_80450B40[4];
+extern "C" extern u8 data_80450B80[4];
 
-extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void getResource__10JKRArchiveFUs(); // 1
-extern "C" void countResource__10JKRArchiveCFv(); // 1
-extern "C" void __dt__14JSUInputStreamFv(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void setFXLine__6JASDspFUcPsPQ26JASDsp13FxlineConfig_();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void getResource__10JKRArchiveFUs();
+extern "C" void countResource__10JKRArchiveCFv();
+extern "C" void __dt__14JSUInputStreamFv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_28();
 extern "C" extern void* __vt__10JSUIosBase[3];
 extern "C" extern void* __vt__20JSURandomInputStream[9];
 extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];

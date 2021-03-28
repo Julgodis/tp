@@ -20,7 +20,7 @@ struct J3DShapeMtx {
 // 
 
 
-extern "C" bool getUseMtxNum__11J3DShapeMtxCFv(); // 1
+extern "C" bool getUseMtxNum__11J3DShapeMtxCFv();
 
 // 
 // External References:

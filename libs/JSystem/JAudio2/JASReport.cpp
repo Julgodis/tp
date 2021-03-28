@@ -11,9 +11,10 @@
 // Forward References:
 // 
 
-void JASReport(char const*, ...); // 2
+void JASReport(char const*, ...);
+extern "C" extern u8 struct_80451230[8];
 
-extern "C" void JASReport__FPCce(); // 1
+extern "C" void JASReport__FPCce();
 extern "C" extern u8 struct_80451230[8];
 
 // 
@@ -21,9 +22,9 @@ extern "C" extern u8 struct_80451230[8];
 // 
 
 
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void vsnprintf(); // 1
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void vsnprintf();
 
 // 
 // Declarations:

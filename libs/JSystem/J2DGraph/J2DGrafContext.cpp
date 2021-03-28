@@ -55,61 +55,62 @@ struct J2DGrafContext {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__14J2DGrafContext[10];
 
-extern "C" void __ct__14J2DGrafContextFffff(); // 1
-extern "C" void setPort__14J2DGrafContextFv(); // 1
-extern "C" void setup2D__14J2DGrafContextFv(); // 1
-extern "C" void setScissor__14J2DGrafContextFv(); // 1
-extern "C" void func_802E90C0(); // 1
-extern "C" void func_802E90E4(); // 1
-extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void setLineWidth__14J2DGrafContextFUc(); // 1
-extern "C" void func_802E9260(); // 1
-extern "C" void func_802E9368(); // 1
-extern "C" void func_802E9488(); // 1
-extern "C" void func_802E9564(); // 1
-extern "C" void __dt__14J2DGrafContextFv(); // 1
-extern "C" void place__14J2DGrafContextFffff(); // 1
-extern "C" bool getGrafType__14J2DGrafContextCFv(); // 1
-extern "C" void setLookat__14J2DGrafContextFv(); // 1
+extern "C" void __ct__14J2DGrafContextFffff();
+extern "C" void setPort__14J2DGrafContextFv();
+extern "C" void setup2D__14J2DGrafContextFv();
+extern "C" void setScissor__14J2DGrafContextFv();
+extern "C" void func_802E90C0();
+extern "C" void func_802E90E4();
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void setLineWidth__14J2DGrafContextFUc();
+extern "C" void func_802E9260();
+extern "C" void func_802E9368();
+extern "C" void func_802E9488();
+extern "C" void func_802E9564();
+extern "C" void __dt__14J2DGrafContextFv();
+extern "C" void place__14J2DGrafContextFffff();
+extern "C" bool getGrafType__14J2DGrafContextCFv();
+extern "C" void setLookat__14J2DGrafContextFv();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void ceil(); // 1
+extern "C" void __dl__FPv();
+extern "C" void PSMTXIdentity();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void ceil();
 
 // 
 // Declarations:

@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void pow(); // 1
+extern "C" void pow();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_pow(); // 1
+extern "C" void __ieee754_pow();
 
 // 
 // Declarations:

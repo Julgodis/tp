@@ -21,22 +21,23 @@ struct Quaternion {
 // Forward References:
 // 
 
-void JMAEulerToQuat(s16, s16, s16, Quaternion*); // 2
-void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*); // 2
-void JMAFastVECNormalize(Vec const*, Vec*); // 2
-void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32); // 2
-void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32); // 2
+void JMAEulerToQuat(s16, s16, s16, Quaternion*);
+void JMAQuatLerp(Quaternion const*, Quaternion const*, f32, Quaternion*);
+void JMAFastVECNormalize(Vec const*, Vec*);
+void JMAVECScaleAdd(Vec const*, Vec const*, Vec*, f32);
+void JMAMTXApplyScale(f32 const (* )[4], f32 (* )[4], f32, f32, f32);
 
-extern "C" void JMAEulerToQuat__FsssP10Quaternion(); // 1
-extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion(); // 1
-extern "C" void JMAFastVECNormalize__FPC3VecP3Vec(); // 1
-extern "C" void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf(); // 1
-extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff(); // 1
+extern "C" void JMAEulerToQuat__FsssP10Quaternion();
+extern "C" void JMAQuatLerp__FPC10QuaternionPC10QuaternionfP10Quaternion();
+extern "C" void JMAFastVECNormalize__FPC3VecP3Vec();
+extern "C" void JMAVECScaleAdd__FPC3VecPC3VecP3Vecf();
+extern "C" void JMAMTXApplyScale__FPA4_CfPA4_ffff();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
 
 extern "C" extern u8 sincosTable___5JMath[65536];
 

@@ -128,41 +128,45 @@ struct JKRHeap {
 // Forward References:
 // 
 
-static void search_name_part(u8*, u8*, int); // 2
+static void search_name_part(u8*, u8*, int);
+extern "C" extern char const* const JUTException__stringBase0;
+extern "C" extern u8 data_804508F8[8];
+extern "C" extern u8 sErrorManager__12JUTException[4];
+extern "C" extern u8 sConsole__12JUTException[4];
 
-extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint(); // 1
-extern "C" void create__12JUTExceptionFP14JUTDirectPrint(); // 1
-extern "C" void run__12JUTExceptionFv(); // 1
-extern "C" void errorHandler__12JUTExceptionFUsP9OSContextUlUl(); // 1
-extern "C" void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void setFPException__12JUTExceptionFUl(); // 1
-extern "C" void showFloatSub__12JUTExceptionFif(); // 1
-extern "C" void showFloat__12JUTExceptionFP9OSContext(); // 1
-extern "C" void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl(); // 1
-extern "C" static void search_name_part__FPUcPUci(); // 1
-extern "C" void showStack__12JUTExceptionFP9OSContext(); // 1
-extern "C" void showMainInfo__12JUTExceptionFUsP9OSContextUlUl(); // 1
-extern "C" void showGPR__12JUTExceptionFP9OSContext(); // 1
-extern "C" void showMapInfo_subroutine__12JUTExceptionFUlb(); // 1
-extern "C" void showGPRMap__12JUTExceptionFP9OSContext(); // 1
-extern "C" void showSRR0Map__12JUTExceptionFP9OSContext(); // 1
-extern "C" void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl(); // 1
-extern "C" void isEnablePad__12JUTExceptionCFv(); // 1
-extern "C" void readPad__12JUTExceptionFPUlPUl(); // 1
-extern "C" void printContext__12JUTExceptionFUsP9OSContextUlUl(); // 1
-extern "C" void waitTime__12JUTExceptionFl(); // 1
-extern "C" void createFB__12JUTExceptionFv(); // 1
-extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
-extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v(); // 1
-extern "C" void appendMapFile__12JUTExceptionFPCc(); // 1
-extern "C" void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb(); // 1
-extern "C" void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb(); // 1
-extern "C" void createConsole__12JUTExceptionFPvUl(); // 1
-extern "C" void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl(); // 1
-extern "C" void __dt__12JUTExceptionFv(); // 1
-extern "C" void __sinit_JUTException_cpp(); // 1
-extern "C" void func_802E4194(); // 1
+extern "C" void __ct__12JUTExceptionFP14JUTDirectPrint();
+extern "C" void create__12JUTExceptionFP14JUTDirectPrint();
+extern "C" void run__12JUTExceptionFv();
+extern "C" void errorHandler__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" void panic_f_va__12JUTExceptionFPCciPCcP16__va_list_struct();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void setFPException__12JUTExceptionFUl();
+extern "C" void showFloatSub__12JUTExceptionFif();
+extern "C" void showFloat__12JUTExceptionFP9OSContext();
+extern "C" void searchPartialModule__12JUTExceptionFUlPUlPUlPUlPUl();
+extern "C" static void search_name_part__FPUcPUci();
+extern "C" void showStack__12JUTExceptionFP9OSContext();
+extern "C" void showMainInfo__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" void showGPR__12JUTExceptionFP9OSContext();
+extern "C" void showMapInfo_subroutine__12JUTExceptionFUlb();
+extern "C" void showGPRMap__12JUTExceptionFP9OSContext();
+extern "C" void showSRR0Map__12JUTExceptionFP9OSContext();
+extern "C" void printDebugInfo__12JUTExceptionFQ212JUTException9EInfoPageUsP9OSContextUlUl();
+extern "C" void isEnablePad__12JUTExceptionCFv();
+extern "C" void readPad__12JUTExceptionFPUlPUl();
+extern "C" void printContext__12JUTExceptionFUsP9OSContextUlUl();
+extern "C" void waitTime__12JUTExceptionFl();
+extern "C" void createFB__12JUTExceptionFv();
+extern "C" void setPreUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void setPostUserCallback__12JUTExceptionFPFUsP9OSContextUlUl_v();
+extern "C" void appendMapFile__12JUTExceptionFPCc();
+extern "C" void queryMapAddress__12JUTExceptionFPcUllPUlPUlPcUlbb();
+extern "C" void queryMapAddress_single__12JUTExceptionFPcUllPUlPUlPcUlbb();
+extern "C" void createConsole__12JUTExceptionFPvUl();
+extern "C" void __ct__13JUTExternalFBFP16_GXRenderModeObj8_GXGammaPvUl();
+extern "C" void __dt__12JUTExceptionFv();
+extern "C" void __sinit_JUTException_cpp();
+extern "C" void func_802E4194();
 extern "C" extern char const* const JUTException__stringBase0;
 extern "C" extern u8 data_804508F8[8];
 extern "C" extern u8 sErrorManager__12JUTException[4];
@@ -172,88 +176,92 @@ extern "C" extern u8 sConsole__12JUTException[4];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 GXNtsc480Int[60];
+extern "C" extern u32 __OSFpscrEnableBits;
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSPanic(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9JKRThreadFUlii(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __ct__10JSUPtrListFb(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort(); // 1
-extern "C" void __dt__10JUTGamePadFv(); // 1
-extern "C" void read__10JUTGamePadFv(); // 1
-extern "C" void checkResetCallback__10JUTGamePadFx(); // 1
-extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
-extern "C" void create__10JUTConsoleFUiPvUl(); // 1
-extern "C" void getLineFromObjectSize__10JUTConsoleFUlUi(); // 1
-extern "C" void print_f__10JUTConsoleFPCce(); // 1
-extern "C" void print__10JUTConsoleFPCc(); // 1
-extern "C" void scroll__10JUTConsoleFi(); // 1
-extern "C" void getUsedLine__10JUTConsoleCFv(); // 1
-extern "C" void getLineOffset__10JUTConsoleCFv(); // 1
-extern "C" void drawDirect__17JUTConsoleManagerCFb(); // 1
-extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole(); // 1
-extern "C" void __ct__13JUTDirectFileFv(); // 1
-extern "C" void __dt__13JUTDirectFileFv(); // 1
-extern "C" void fopen__13JUTDirectFileFPCc(); // 1
-extern "C" void fclose__13JUTDirectFileFv(); // 1
-extern "C" void fgets__13JUTDirectFileFPvi(); // 1
-extern "C" void PPCMfmsr(); // 1
-extern "C" void PPCMtmsr(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSGetCurrentContext(); // 1
-extern "C" void OSGetStackPointer(); // 1
-extern "C" void OSFillFPUContext(); // 1
-extern "C" void OSSetErrorHandler(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSProtectRange(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void OSYieldThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void VISetPreRetraceCallback(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIConfigure(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetNextFrameBuffer(); // 1
-extern "C" void VIGetCurrentFrameBuffer(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strtol(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void OSPanic();
+extern "C" void* __nw__FUl();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9JKRThreadFUlii();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern "C" void __dt__10JUTGamePadFv();
+extern "C" void read__10JUTGamePadFv();
+extern "C" void checkResetCallback__10JUTGamePadFx();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" void create__10JUTConsoleFUiPvUl();
+extern "C" void getLineFromObjectSize__10JUTConsoleFUlUi();
+extern "C" void print_f__10JUTConsoleFPCce();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void scroll__10JUTConsoleFi();
+extern "C" void getUsedLine__10JUTConsoleCFv();
+extern "C" void getLineOffset__10JUTConsoleCFv();
+extern "C" void drawDirect__17JUTConsoleManagerCFb();
+extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" void __ct__13JUTDirectFileFv();
+extern "C" void __dt__13JUTDirectFileFv();
+extern "C" void fopen__13JUTDirectFileFPCc();
+extern "C" void fclose__13JUTDirectFileFv();
+extern "C" void fgets__13JUTDirectFileFPvi();
+extern "C" void PPCMfmsr();
+extern "C" void PPCMtmsr();
+extern "C" void OSGetArenaHi();
+extern "C" void OSGetCurrentContext();
+extern "C" void OSGetStackPointer();
+extern "C" void OSFillFPUContext();
+extern "C" void OSSetErrorHandler();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSProtectRange();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSEnableScheduler();
+extern "C" void OSYieldThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetTime();
+extern "C" void VISetPreRetraceCallback();
+extern "C" void VISetPostRetraceCallback();
+extern "C" void VIConfigure();
+extern "C" void VIFlush();
+extern "C" void VISetNextFrameBuffer();
+extern "C" void VIGetCurrentFrameBuffer();
+extern "C" void VISetBlack();
+extern "C" void VIGetRetraceCount();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void __div2i();
+extern "C" void vsnprintf();
+extern "C" void strcmp();
+extern "C" void strcat();
+extern "C" void strcpy();
+extern "C" void strtol();
 extern "C" extern u8 GXNtsc480Int[60];
 extern "C" extern u32 __OSFpscrEnableBits;
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];

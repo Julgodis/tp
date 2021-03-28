@@ -40,38 +40,39 @@ struct dShopItemCtrl_c {
 // 
 
 
-extern "C" void __ct__15dShopItemCtrl_cFv(); // 1
-extern "C" void __dt__15dShopItemCtrl_cFv(); // 1
-extern "C" void getCurrentPos__15dShopItemCtrl_cFi(); // 1
-extern "C" void isHomePos__15dShopItemCtrl_cFi(); // 1
-extern "C" void setRotateAnime__15dShopItemCtrl_cFi(); // 1
-extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb(); // 1
+extern "C" void __ct__15dShopItemCtrl_cFv();
+extern "C" void __dt__15dShopItemCtrl_cFv();
+extern "C" void getCurrentPos__15dShopItemCtrl_cFi();
+extern "C" void isHomePos__15dShopItemCtrl_cFi();
+extern "C" void setRotateAnime__15dShopItemCtrl_cFi();
+extern "C" void setZoomAnime__15dShopItemCtrl_cFiP4cXyzsb();
 
 // 
 // External References:
 // 
 
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void fpcFCtRq_Do(fast_create_request*); // 2
-void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void operator delete(void*); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fpcSch_JudgeByID(void*, void*);
+void fpcFCtRq_Do(fast_create_request*);
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void operator delete(void*);
+extern "C" extern u32 __float_nan;
 
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" void getRotateP__12daShopItem_cFv(); // 1
-extern "C" void getPosP__12daShopItem_cFv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" void getRotateP__12daShopItem_cFv();
+extern "C" void getPosP__12daShopItem_cFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_27();
 extern "C" extern u32 __float_nan;
 
 // 

@@ -27,40 +27,41 @@ struct nodedraw_method_class {
 // Forward References:
 // 
 
-static void fopScn_Draw(scene_class*); // 2
-static void fopScn_Execute(scene_class*); // 2
-static void fopScn_IsDelete(void*); // 2
-static void fopScn_Delete(void*); // 2
-static void fopScn_Create(void*); // 2
+static void fopScn_Draw(scene_class*);
+static void fopScn_Execute(scene_class*);
+static void fopScn_IsDelete(void*);
+static void fopScn_Delete(void*);
+static void fopScn_Create(void*);
+extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 
-extern "C" static void fopScn_Draw__FP11scene_class(); // 1
-extern "C" static void fopScn_Execute__FP11scene_class(); // 1
-extern "C" static void fopScn_IsDelete__FPv(); // 1
-extern "C" static void fopScn_Delete__FPv(); // 1
-extern "C" static void fopScn_Create__FPv(); // 1
+extern "C" static void fopScn_Draw__FP11scene_class();
+extern "C" static void fopScn_Execute__FP11scene_class();
+extern "C" static void fopScn_IsDelete__FPv();
+extern "C" static void fopScn_Delete__FPv();
+extern "C" static void fopScn_Create__FPv();
 extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void fopScnTg_QueueTo(scene_tag_class*); // 2
-void fopScnTg_ToQueue(scene_tag_class*); // 2
-void fopScnTg_Init(scene_tag_class*, void*); // 2
-void fpcMtd_Execute(process_method_class*, void*); // 2
-void fpcMtd_IsDelete(process_method_class*, void*); // 2
-void fpcMtd_Delete(process_method_class*, void*); // 2
-void fpcMtd_Create(process_method_class*, void*); // 2
-void fpcNd_DrawMethod(nodedraw_method_class*, void*); // 2
+void fopScnTg_QueueTo(scene_tag_class*);
+void fopScnTg_ToQueue(scene_tag_class*);
+void fopScnTg_Init(scene_tag_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+void fpcNd_DrawMethod(nodedraw_method_class*, void*);
 
-extern "C" void fopScnTg_QueueTo__FP15scene_tag_class(); // 1
-extern "C" void fopScnTg_ToQueue__FP15scene_tag_class(); // 1
-extern "C" void fopScnTg_Init__FP15scene_tag_classPv(); // 1
-extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
-extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv(); // 1
+extern "C" void fopScnTg_QueueTo__FP15scene_tag_class();
+extern "C" void fopScnTg_ToQueue__FP15scene_tag_class();
+extern "C" void fopScnTg_Init__FP15scene_tag_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void fpcNd_DrawMethod__FP21nodedraw_method_classPv();
 
 // 
 // Declarations:

@@ -12,49 +12,50 @@
 // 
 
 
-extern "C" static void PackArgs(); // 1
-extern "C" static void Run(); // 1
-extern "C" static void ReadDisc(); // 1
-extern "C" static void Callback(); // 1
-extern "C" void __OSGetExecParams(); // 1
-extern "C" static void GetApploaderPosition(); // 1
-extern "C" static void __OSBootDolSimple(); // 1
-extern "C" void __OSBootDol(); // 1
+extern "C" static void PackArgs();
+extern "C" static void Run();
+extern "C" static void ReadDisc();
+extern "C" static void Callback();
+extern "C" void __OSGetExecParams();
+extern "C" static void GetApploaderPosition();
+extern "C" static void __OSBootDolSimple();
+extern "C" void __OSBootDol();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __OSIsGcam[4];
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSSetArenaLo(); // 1
-extern "C" void OSAllocFromArenaLo(); // 1
-extern "C" void ICInvalidateRange(); // 1
-extern "C" void ICFlashInvalidate(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetSaveRegion(); // 1
-extern "C" void __OSDoHotReset(); // 1
-extern "C" void DVDInit(); // 1
-extern "C" void DVDReadAbsAsyncPrio(); // 1
-extern "C" void DVDCancelStreamAsync(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void DVDSetAutoInvalidation(); // 1
-extern "C" void DVDResume(); // 1
-extern "C" void DVDGetCurrentDiskID(); // 1
-extern "C" void DVDCheckDisk(); // 1
-extern "C" void __DVDPrepareResetAsync(); // 1
-extern "C" void AISetStreamPlayState(); // 1
-extern "C" void AISetStreamVolLeft(); // 1
-extern "C" void AISetStreamVolRight(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strncmp(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void OSSetArenaLo();
+extern "C" void OSAllocFromArenaLo();
+extern "C" void ICInvalidateRange();
+extern "C" void ICFlashInvalidate();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSEnableInterrupts();
+extern "C" void __OSMaskInterrupts();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetSaveRegion();
+extern "C" void __OSDoHotReset();
+extern "C" void DVDInit();
+extern "C" void DVDReadAbsAsyncPrio();
+extern "C" void DVDCancelStreamAsync();
+extern "C" void DVDGetCommandBlockStatus();
+extern "C" void DVDSetAutoInvalidation();
+extern "C" void DVDResume();
+extern "C" void DVDGetCurrentDiskID();
+extern "C" void DVDCheckDisk();
+extern "C" void __DVDPrepareResetAsync();
+extern "C" void AISetStreamPlayState();
+extern "C" void AISetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" void sprintf();
+extern "C" void strncmp();
+extern "C" void strcpy();
+extern "C" void strlen();
 extern "C" extern u8 __OSIsGcam[4];
 
 // 

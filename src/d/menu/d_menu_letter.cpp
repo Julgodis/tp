@@ -39,17 +39,17 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct J2DTextBox {
-	/* 801DFA28 */ void getWhite() const;
-	/* 801DFA34 */ void getBlack() const;
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct JUTFont {
 };
 
 struct COutFont_c {
 };
 
-struct JUTFont {
+struct J2DTextBox {
+	/* 801DFA28 */ void getWhite() const;
+	/* 801DFA34 */ void getBlack() const;
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct dMsgString_c {
@@ -136,10 +136,10 @@ struct dMenu_Letter_c {
 	/* 801E1D5C */ void draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -198,139 +198,148 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_letter__stringBase0;
 
-extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl(); // 1
-extern "C" void __dt__14dMenu_Letter_cFv(); // 1
-extern "C" void _create__14dMenu_Letter_cFv(); // 1
-extern "C" void _move__14dMenu_Letter_cFv(); // 1
-extern "C" void _draw__14dMenu_Letter_cFv(); // 1
-extern "C" void isSync__14dMenu_Letter_cFv(); // 1
-extern "C" void letter_init_calc__14dMenu_Letter_cFv(); // 1
-extern "C" void init__14dMenu_Letter_cFv(); // 1
-extern "C" void _open__14dMenu_Letter_cFv(); // 1
-extern "C" void _close__14dMenu_Letter_cFv(); // 1
-extern "C" void wait_init__14dMenu_Letter_cFv(); // 1
-extern "C" void wait_move__14dMenu_Letter_cFv(); // 1
-extern "C" void slide_right_init__14dMenu_Letter_cFv(); // 1
-extern "C" void slide_right_move__14dMenu_Letter_cFv(); // 1
-extern "C" void slide_left_init__14dMenu_Letter_cFv(); // 1
-extern "C" void slide_left_move__14dMenu_Letter_cFv(); // 1
-extern "C" void read_open_init__14dMenu_Letter_cFv(); // 1
-extern "C" void read_open_move__14dMenu_Letter_cFv(); // 1
-extern "C" void read_move_init__14dMenu_Letter_cFv(); // 1
-extern "C" void read_move_move__14dMenu_Letter_cFv(); // 1
-extern "C" void read_next_fadeout_init__14dMenu_Letter_cFv(); // 1
-extern "C" void read_next_fadeout_move__14dMenu_Letter_cFv(); // 1
-extern "C" void read_next_fadein_init__14dMenu_Letter_cFv(); // 1
-extern "C" void read_next_fadein_move__14dMenu_Letter_cFv(); // 1
-extern "C" void read_close_init__14dMenu_Letter_cFv(); // 1
-extern "C" void read_close_move__14dMenu_Letter_cFv(); // 1
-extern "C" void screenSetMenu__14dMenu_Letter_cFv(); // 1
-extern "C" void getWhite__10J2DTextBoxCFv(); // 1
-extern "C" void getBlack__10J2DTextBoxCFv(); // 1
-extern "C" void getWhite__10J2DPictureCFv(); // 1
-extern "C" void getBlack__10J2DPictureCFv(); // 1
-extern "C" void screenSetBase__14dMenu_Letter_cFv(); // 1
-extern "C" void screenSetShadow__14dMenu_Letter_cFv(); // 1
-extern "C" void screenSetLetter__14dMenu_Letter_cFv(); // 1
-extern "C" void screenSetDoIcon__14dMenu_Letter_cFv(); // 1
-extern "C" void setCursorPos__14dMenu_Letter_cFv(); // 1
-extern "C" void changeActiveColor__14dMenu_Letter_cFv(); // 1
-extern "C" void changePageLight__14dMenu_Letter_cFv(); // 1
-extern "C" void setPageText__14dMenu_Letter_cFv(); // 1
-extern "C" void setDMYPageText__14dMenu_Letter_cFv(); // 1
-extern "C" void copyDMYMenu__14dMenu_Letter_cFv(); // 1
-extern "C" void setAButtonString__14dMenu_Letter_cFUs(); // 1
-extern "C" void setBButtonString__14dMenu_Letter_cFUs(); // 1
-extern "C" void getLetterNum__14dMenu_Letter_cFv(); // 1
-extern "C" void setHIO__14dMenu_Letter_cFb(); // 1
-extern "C" void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void draw__14dMenu_Letter_cFv(); // 1
-extern "C" void __sinit_d_menu_letter_cpp(); // 1
+extern "C" void __ct__14dMenu_Letter_cFP10JKRExpHeapP9STControlP10CSTControl();
+extern "C" void __dt__14dMenu_Letter_cFv();
+extern "C" void _create__14dMenu_Letter_cFv();
+extern "C" void _move__14dMenu_Letter_cFv();
+extern "C" void _draw__14dMenu_Letter_cFv();
+extern "C" void isSync__14dMenu_Letter_cFv();
+extern "C" void letter_init_calc__14dMenu_Letter_cFv();
+extern "C" void init__14dMenu_Letter_cFv();
+extern "C" void _open__14dMenu_Letter_cFv();
+extern "C" void _close__14dMenu_Letter_cFv();
+extern "C" void wait_init__14dMenu_Letter_cFv();
+extern "C" void wait_move__14dMenu_Letter_cFv();
+extern "C" void slide_right_init__14dMenu_Letter_cFv();
+extern "C" void slide_right_move__14dMenu_Letter_cFv();
+extern "C" void slide_left_init__14dMenu_Letter_cFv();
+extern "C" void slide_left_move__14dMenu_Letter_cFv();
+extern "C" void read_open_init__14dMenu_Letter_cFv();
+extern "C" void read_open_move__14dMenu_Letter_cFv();
+extern "C" void read_move_init__14dMenu_Letter_cFv();
+extern "C" void read_move_move__14dMenu_Letter_cFv();
+extern "C" void read_next_fadeout_init__14dMenu_Letter_cFv();
+extern "C" void read_next_fadeout_move__14dMenu_Letter_cFv();
+extern "C" void read_next_fadein_init__14dMenu_Letter_cFv();
+extern "C" void read_next_fadein_move__14dMenu_Letter_cFv();
+extern "C" void read_close_init__14dMenu_Letter_cFv();
+extern "C" void read_close_move__14dMenu_Letter_cFv();
+extern "C" void screenSetMenu__14dMenu_Letter_cFv();
+extern "C" void getWhite__10J2DTextBoxCFv();
+extern "C" void getBlack__10J2DTextBoxCFv();
+extern "C" void getWhite__10J2DPictureCFv();
+extern "C" void getBlack__10J2DPictureCFv();
+extern "C" void screenSetBase__14dMenu_Letter_cFv();
+extern "C" void screenSetShadow__14dMenu_Letter_cFv();
+extern "C" void screenSetLetter__14dMenu_Letter_cFv();
+extern "C" void screenSetDoIcon__14dMenu_Letter_cFv();
+extern "C" void setCursorPos__14dMenu_Letter_cFv();
+extern "C" void changeActiveColor__14dMenu_Letter_cFv();
+extern "C" void changePageLight__14dMenu_Letter_cFv();
+extern "C" void setPageText__14dMenu_Letter_cFv();
+extern "C" void setDMYPageText__14dMenu_Letter_cFv();
+extern "C" void copyDMYMenu__14dMenu_Letter_cFv();
+extern "C" void setAButtonString__14dMenu_Letter_cFUs();
+extern "C" void setBButtonString__14dMenu_Letter_cFUs();
+extern "C" void getLetterNum__14dMenu_Letter_cFv();
+extern "C" void setHIO__14dMenu_Letter_cFb();
+extern "C" void getStringPage__12dMsgString_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void draw__14dMenu_Letter_cFv();
+extern "C" void __sinit_d_menu_letter_cpp();
 extern "C" extern char const* const d_menu_d_menu_letter__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getSubFont(); // 2
-void dMeter2Info_getRecieveLetterNum(); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getSubFont();
+void dMeter2Info_getRecieveLetterNum();
+void dMeter2Info_set2DVibration();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 letter_data__12dMenu_Letter[512];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getSubFont__Fv(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void onLetterGetFlag__17dSv_letter_info_cFi(); // 1
-extern "C" void onLetterReadFlag__17dSv_letter_info_cFi(); // 1
-extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi(); // 1
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_getRecieveLetterNum__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void __ct__15dMsgScrnArrow_cFv(); // 1
-extern "C" void draw__15dMsgScrnArrow_cFv(); // 1
-extern "C" void setPos__15dMsgScrnArrow_cFff(); // 1
-extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv(); // 1
-extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv(); // 1
-extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv(); // 1
-extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv(); // 1
-extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc(); // 1
-extern "C" void getPageMax__16dMsgStringBase_cFi(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void func_802E90C0(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void GXGetScissor(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void onLetterGetFlag__17dSv_letter_info_cFi();
+extern "C" void onLetterReadFlag__17dSv_letter_info_cFi();
+extern "C" void isLetterReadFlag__17dSv_letter_info_cCFi();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getRecieveLetterNum__Fv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void __ct__15dMsgScrnArrow_cFv();
+extern "C" void draw__15dMsgScrnArrow_cFv();
+extern "C" void setPos__15dMsgScrnArrow_cFff();
+extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" void arwAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" void dotAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" void dotAnimeMove__15dMsgScrnArrow_cFv();
+extern "C" void getStringPageLocal__16dMsgStringBase_cFUlUcUcP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cUc();
+extern "C" void getPageMax__16dMsgStringBase_cFi();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void func_802E90C0();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 letter_data__12dMenu_Letter[512];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];

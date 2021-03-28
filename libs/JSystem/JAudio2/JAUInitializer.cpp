@@ -106,41 +106,56 @@ struct JASAramStream {
 // 
 
 
-extern "C" void __ct__18JAU_JASInitializerFv(); // 1
-extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap(); // 1
-extern "C" void __ct__18JAU_JAIInitializerFv(); // 1
-extern "C" void initJAInterface__18JAU_JAIInitializerFv(); // 1
+extern "C" void __ct__18JAU_JASInitializerFv();
+extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
+extern "C" void __ct__18JAU_JAIInitializerFv();
+extern "C" void initJAInterface__18JAU_JAIInitializerFv();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_80431AF4[16];
+extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
+extern "C" extern u8 data_80434084[16 + 4 /* padding */];
+extern "C" extern u8 data_804340B0[16];
+extern "C" extern u8 data_804340CC[16 + 4 /* padding */];
+extern "C" extern u8 data_804340FC[16 + 4 /* padding */];
+extern "C" extern u8 data_80450B8C[4];
+extern "C" extern u8 JASDram[4];
+extern "C" extern u8 struct_80451230[8];
+extern "C" extern u8 data_80451310[8];
+extern "C" extern u8 data_80451318[8];
+extern "C" extern u8 data_80451320[8];
+extern "C" extern u8 data_80451328[8];
+extern "C" extern u8 sManager__15JKRThreadSwitch[4];
+extern "C" extern u8 sAramObject__7JKRAram[4];
 
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void createThread__6JASDvdFliUl(); // 1
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
-extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl(); // 1
-extern "C" void setupAramHeap__9JASKernelFUlUl(); // 1
-extern "C" void func_802932E0(); // 1
-extern "C" void func_80293334(); // 1
-extern "C" void initSystem__13JASAramStreamFUlUl(); // 1
-extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc(); // 1
-extern "C" void create__14JASAudioThreadFl(); // 1
-extern "C" void setDSPLevel__9JASDriverFf(); // 1
-extern "C" void setOutputMode__9JASDriverFUl(); // 1
-extern "C" void func_8029FC34(); // 1
-extern "C" void func_802A1268(); // 1
-extern "C" void func_802A1AF4(); // 1
-extern "C" void func_802A3E68(); // 1
-extern "C" void getFreeSize__7JKRHeapFv(); // 1
-extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSGetSoundMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void createThread__6JASDvdFliUl();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void newMemPool__17JASGenericMemPoolFUli();
+extern "C" void setupRootHeap__9JASKernelFP12JKRSolidHeapUl();
+extern "C" void setupAramHeap__9JASKernelFUlUl();
+extern "C" void func_802932E0();
+extern "C" void func_80293334();
+extern "C" void initSystem__13JASAramStreamFUlUl();
+extern "C" void setCurrentDir__16JASWaveArcLoaderFPCc();
+extern "C" void create__14JASAudioThreadFl();
+extern "C" void setDSPLevel__9JASDriverFf();
+extern "C" void setOutputMode__9JASDriverFUl();
+extern "C" void func_8029FC34();
+extern "C" void func_802A1268();
+extern "C" void func_802A1AF4();
+extern "C" void func_802A3E68();
+extern "C" void getFreeSize__7JKRHeapFv();
+extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSGetSoundMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80431AF4[16];
 extern "C" extern u8 data_80431B04[16 + 4 /* padding */];
 extern "C" extern u8 data_80434084[16 + 4 /* padding */];

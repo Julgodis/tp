@@ -37,23 +37,23 @@ struct cBgW_BgId {
 // 
 
 
-extern "C" void __ct__9dBgW_BaseFv(); // 1
-extern "C" void __dt__9cBgW_BgIdFv(); // 1
-extern "C" void __dt__9dBgW_BaseFv(); // 1
-extern "C" void ClrDBgWBase__9dBgW_BaseFv(); // 1
-extern "C" bool ChkMemoryError__9dBgW_BaseFv(); // 1
-extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz(); // 1
-extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs(); // 1
+extern "C" void __ct__9dBgW_BaseFv();
+extern "C" void __dt__9cBgW_BgIdFv();
+extern "C" void __dt__9dBgW_BaseFv();
+extern "C" void ClrDBgWBase__9dBgW_BaseFv();
+extern "C" bool ChkMemoryError__9dBgW_BaseFv();
+extern "C" void CallRideCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" void CallArrowStickCallBack__9dBgW_BaseFP10fopAc_ac_cP10fopAc_ac_cR4cXyz();
+extern "C" void CalcDiffShapeAngleY__9dBgW_BaseFs();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void SetOldShapeAngleY__9dBgW_BaseFs(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void SetOldShapeAngleY__9dBgW_BaseFs();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

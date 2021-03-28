@@ -38,6 +38,11 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct _GXColor {
 };
 
@@ -50,11 +55,6 @@ struct Vec {
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
-};
-
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -155,293 +155,311 @@ struct DOUBLE_POS {
 // Forward References:
 // 
 
-static void vectle_calc(DOUBLE_POS*, cXyz*); // 2
-static void get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-static void dKy_set_eyevect_calc(camera_class*, Vec*, f32, f32); // 2
-static void dKy_set_eyevect_calc2(camera_class*, Vec*, f32, f32); // 2
-static void dKyr_set_btitex_common(_GXTexObj*, ResTIMG*, _GXTexMapID); // 2
-static void dKyr_set_btitex(_GXTexObj*, ResTIMG*); // 2
-void dKyr_lenzflare_move(); // 2
-static void dKyr_moon_arrival_check(); // 2
-void dKyr_sun_move(); // 2
-void dKyr_rain_init(); // 2
-static void rain_bg_chk(dKankyo_rain_Packet*, int); // 2
-static void overhead_bg_chk(); // 2
-static void forward_overhead_bg_chk(cXyz*, f32); // 2
-void dKyr_rain_move(); // 2
-static void d_krain_cut_turn_check(); // 2
-void dKyr_housi_move(); // 2
-void dKyr_snow_init(); // 2
-void dKyr_snow_move(); // 2
-void dKyr_star_init(); // 2
-void dKyr_star_move(); // 2
-void cloud_shadow_move(); // 2
-void vrkumo_move(); // 2
-static void dKr_cullVtx_Set(); // 2
-static void dKyr_draw_rev_moon(f32 (* )[4], u8**); // 2
-void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**); // 2
-void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**); // 2
-void dKyr_drawRain(f32 (* )[4], u8**); // 2
-void dKyr_drawSibuki(f32 (* )[4], u8**); // 2
-void dKyr_drawHousi(f32 (* )[4], u8**); // 2
-void dKyr_drawSnow(f32 (* )[4], u8**); // 2
-void dKyr_drawStar(f32 (* )[4], u8**); // 2
-void drawCloudShadow(f32 (* )[4], u8**); // 2
-void drawVrkumo(f32 (* )[4], _GXColor&, u8**); // 2
-void dKyr_thunder_init(); // 2
-void dKyr_thunder_move(); // 2
-void dKyr_shstar_init(); // 2
-void dKyr_shstar_move(); // 2
-void dKyr_odour_init(); // 2
-void dKyr_odour_move(); // 2
-void dKyr_odour_draw(f32 (* )[4], u8**); // 2
-void dKyr_mud_init(); // 2
-void dKyr_mud_move(); // 2
-void dKyr_mud_draw(f32 (* )[4], u8**); // 2
-void dKyr_evil_init(); // 2
-void dKyr_evil_move(); // 2
-static void dKyr_evil_draw2(f32 (* )[4], u8**); // 2
-static void dKyr_near_bosslight_check(cXyz); // 2
-void dKyr_evil_draw(f32 (* )[4], u8**); // 2
+static void vectle_calc(DOUBLE_POS*, cXyz*);
+static void get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+static void dKy_set_eyevect_calc(camera_class*, Vec*, f32, f32);
+static void dKy_set_eyevect_calc2(camera_class*, Vec*, f32, f32);
+static void dKyr_set_btitex_common(_GXTexObj*, ResTIMG*, _GXTexMapID);
+static void dKyr_set_btitex(_GXTexObj*, ResTIMG*);
+void dKyr_lenzflare_move();
+static void dKyr_moon_arrival_check();
+void dKyr_sun_move();
+void dKyr_rain_init();
+static void rain_bg_chk(dKankyo_rain_Packet*, int);
+static void overhead_bg_chk();
+static void forward_overhead_bg_chk(cXyz*, f32);
+void dKyr_rain_move();
+static void d_krain_cut_turn_check();
+void dKyr_housi_move();
+void dKyr_snow_init();
+void dKyr_snow_move();
+void dKyr_star_init();
+void dKyr_star_move();
+void cloud_shadow_move();
+void vrkumo_move();
+static void dKr_cullVtx_Set();
+static void dKyr_draw_rev_moon(f32 (* )[4], u8**);
+void dKyr_drawSun(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawLenzflare(f32 (* )[4], cXyz*, _GXColor&, u8**);
+void dKyr_drawRain(f32 (* )[4], u8**);
+void dKyr_drawSibuki(f32 (* )[4], u8**);
+void dKyr_drawHousi(f32 (* )[4], u8**);
+void dKyr_drawSnow(f32 (* )[4], u8**);
+void dKyr_drawStar(f32 (* )[4], u8**);
+void drawCloudShadow(f32 (* )[4], u8**);
+void drawVrkumo(f32 (* )[4], _GXColor&, u8**);
+void dKyr_thunder_init();
+void dKyr_thunder_move();
+void dKyr_shstar_init();
+void dKyr_shstar_move();
+void dKyr_odour_init();
+void dKyr_odour_move();
+void dKyr_odour_draw(f32 (* )[4], u8**);
+void dKyr_mud_init();
+void dKyr_mud_move();
+void dKyr_mud_draw(f32 (* )[4], u8**);
+void dKyr_evil_init();
+void dKyr_evil_move();
+static void dKyr_evil_draw2(f32 (* )[4], u8**);
+static void dKyr_near_bosslight_check(cXyz);
+void dKyr_evil_draw(f32 (* )[4], u8**);
+extern "C" extern char const* const d_kankyo_d_kankyo_rain__stringBase0;
 
-extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz(); // 1
-extern "C" static void get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" static void dKy_set_eyevect_calc__FP12camera_classP3Vecff(); // 1
-extern "C" static void dKy_set_eyevect_calc2__FP12camera_classP3Vecff(); // 1
-extern "C" static void dKyr_set_btitex_common__FP9_GXTexObjP7ResTIMG11_GXTexMapID(); // 1
-extern "C" static void dKyr_set_btitex__FP9_GXTexObjP7ResTIMG(); // 1
-extern "C" void dKyr_lenzflare_move__Fv(); // 1
-extern "C" static void dKyr_moon_arrival_check__Fv(); // 1
-extern "C" void dKyr_sun_move__Fv(); // 1
-extern "C" void dKyr_rain_init__Fv(); // 1
-extern "C" static void rain_bg_chk__FP19dKankyo_rain_Packeti(); // 1
-extern "C" static void overhead_bg_chk__Fv(); // 1
-extern "C" static void forward_overhead_bg_chk__FP4cXyzf(); // 1
-extern "C" void dKyr_rain_move__Fv(); // 1
-extern "C" static void d_krain_cut_turn_check__Fv(); // 1
-extern "C" void dKyr_housi_move__Fv(); // 1
-extern "C" void dKyr_snow_init__Fv(); // 1
-extern "C" void dKyr_snow_move__Fv(); // 1
-extern "C" void dKyr_star_init__Fv(); // 1
-extern "C" void dKyr_star_move__Fv(); // 1
-extern "C" void cloud_shadow_move__Fv(); // 1
-extern "C" void vrkumo_move__Fv(); // 1
-extern "C" static void dKr_cullVtx_Set__Fv(); // 1
-extern "C" static void dKyr_draw_rev_moon__FPA4_fPPUc(); // 1
-extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc(); // 1
-extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc(); // 1
-extern "C" void dKyr_drawRain__FPA4_fPPUc(); // 1
-extern "C" void dKyr_drawSibuki__FPA4_fPPUc(); // 1
-extern "C" void dKyr_drawHousi__FPA4_fPPUc(); // 1
-extern "C" void dKyr_drawSnow__FPA4_fPPUc(); // 1
-extern "C" void dKyr_drawStar__FPA4_fPPUc(); // 1
-extern "C" void drawCloudShadow__FPA4_fPPUc(); // 1
-extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc(); // 1
-extern "C" void dKyr_thunder_init__Fv(); // 1
-extern "C" void dKyr_thunder_move__Fv(); // 1
-extern "C" void dKyr_shstar_init__Fv(); // 1
-extern "C" void dKyr_shstar_move__Fv(); // 1
-extern "C" void dKyr_odour_init__Fv(); // 1
-extern "C" void dKyr_odour_move__Fv(); // 1
-extern "C" void dKyr_odour_draw__FPA4_fPPUc(); // 1
-extern "C" void dKyr_mud_init__Fv(); // 1
-extern "C" void dKyr_mud_move__Fv(); // 1
-extern "C" void dKyr_mud_draw__FPA4_fPPUc(); // 1
-extern "C" void dKyr_evil_init__Fv(); // 1
-extern "C" void dKyr_evil_move__Fv(); // 1
-extern "C" static void dKyr_evil_draw2__FPA4_fPPUc(); // 1
-extern "C" static void dKyr_near_bosslight_check__F4cXyz(); // 1
-extern "C" void dKyr_evil_draw__FPA4_fPPUc(); // 1
-extern "C" bool getKandelaarFlamePos__9daPy_py_cFv(); // 1
+extern "C" static void vectle_calc__FP10DOUBLE_POSP4cXyz();
+extern "C" static void get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" static void dKy_set_eyevect_calc__FP12camera_classP3Vecff();
+extern "C" static void dKy_set_eyevect_calc2__FP12camera_classP3Vecff();
+extern "C" static void dKyr_set_btitex_common__FP9_GXTexObjP7ResTIMG11_GXTexMapID();
+extern "C" static void dKyr_set_btitex__FP9_GXTexObjP7ResTIMG();
+extern "C" void dKyr_lenzflare_move__Fv();
+extern "C" static void dKyr_moon_arrival_check__Fv();
+extern "C" void dKyr_sun_move__Fv();
+extern "C" void dKyr_rain_init__Fv();
+extern "C" static void rain_bg_chk__FP19dKankyo_rain_Packeti();
+extern "C" static void overhead_bg_chk__Fv();
+extern "C" static void forward_overhead_bg_chk__FP4cXyzf();
+extern "C" void dKyr_rain_move__Fv();
+extern "C" static void d_krain_cut_turn_check__Fv();
+extern "C" void dKyr_housi_move__Fv();
+extern "C" void dKyr_snow_init__Fv();
+extern "C" void dKyr_snow_move__Fv();
+extern "C" void dKyr_star_init__Fv();
+extern "C" void dKyr_star_move__Fv();
+extern "C" void cloud_shadow_move__Fv();
+extern "C" void vrkumo_move__Fv();
+extern "C" static void dKr_cullVtx_Set__Fv();
+extern "C" static void dKyr_draw_rev_moon__FPA4_fPPUc();
+extern "C" void dKyr_drawSun__FPA4_fP4cXyzR8_GXColorPPUc();
+extern "C" void dKyr_drawLenzflare__FPA4_fP4cXyzR8_GXColorPPUc();
+extern "C" void dKyr_drawRain__FPA4_fPPUc();
+extern "C" void dKyr_drawSibuki__FPA4_fPPUc();
+extern "C" void dKyr_drawHousi__FPA4_fPPUc();
+extern "C" void dKyr_drawSnow__FPA4_fPPUc();
+extern "C" void dKyr_drawStar__FPA4_fPPUc();
+extern "C" void drawCloudShadow__FPA4_fPPUc();
+extern "C" void drawVrkumo__FPA4_fR8_GXColorPPUc();
+extern "C" void dKyr_thunder_init__Fv();
+extern "C" void dKyr_thunder_move__Fv();
+extern "C" void dKyr_shstar_init__Fv();
+extern "C" void dKyr_shstar_move__Fv();
+extern "C" void dKyr_odour_init__Fv();
+extern "C" void dKyr_odour_move__Fv();
+extern "C" void dKyr_odour_draw__FPA4_fPPUc();
+extern "C" void dKyr_mud_init__Fv();
+extern "C" void dKyr_mud_move__Fv();
+extern "C" void dKyr_mud_draw__FPA4_fPPUc();
+extern "C" void dKyr_evil_init__Fv();
+extern "C" void dKyr_evil_move__Fv();
+extern "C" static void dKyr_evil_draw2__FPA4_fPPUc();
+extern "C" static void dKyr_near_bosslight_check__F4cXyz();
+extern "C" void dKyr_evil_draw__FPA4_fPPUc();
+extern "C" bool getKandelaarFlamePos__9daPy_py_cFv();
 extern "C" extern char const* const d_kankyo_d_kankyo_rain__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
-void dComIfG_getStageRes(char const*); // 2
-void dComIfGs_PolyDamageOff_Set(s8); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_get_wind_pow(); // 2
-void dKyw_get_wind_vecpow(); // 2
-void dKyw_pntwind_get_vecpow(cXyz*); // 2
-void dKy_get_parcent(f32, f32, f32); // 2
-void dKy_daynight_check(); // 2
-void dKy_move_room_ratio(dKy_tevstr_c*, s8*); // 2
-void dKy_efplight_set(LIGHT_INFLUENCE*); // 2
-void dKy_efplight_cut(LIGHT_INFLUENCE*); // 2
-void dKy_actor_addcol_amb_set(s16, s16, s16, f32); // 2
-void dKy_bg_addcol_amb_set(s16, s16, s16, f32); // 2
-void dKy_bg1_addcol_amb_set(s16, s16, s16, f32); // 2
-void dKy_addcol_fog_set(s16, s16, s16, f32); // 2
-void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32); // 2
-void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32); // 2
-void dKy_GxFog_set(); // 2
-void dKy_rain_check(); // 2
-void dKy_set_actcol_ratio(f32); // 2
-void dKy_set_bgcol_ratio(f32); // 2
-void dKy_set_fogcol_ratio(f32); // 2
-void dKy_set_vrboxcol_ratio(f32); // 2
-void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32); // 2
-void dKy_darkworld_check(); // 2
-void cM_rad2s(f32); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void* operator new(u32, int); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoLib_project(Vec*, Vec*);
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*));
+void dComIfG_getStageRes(char const*);
+void dComIfGs_PolyDamageOff_Set(s8);
+void dKyw_get_wind_vec();
+void dKyw_get_wind_pow();
+void dKyw_get_wind_vecpow();
+void dKyw_pntwind_get_vecpow(cXyz*);
+void dKy_get_parcent(f32, f32, f32);
+void dKy_daynight_check();
+void dKy_move_room_ratio(dKy_tevstr_c*, s8*);
+void dKy_efplight_set(LIGHT_INFLUENCE*);
+void dKy_efplight_cut(LIGHT_INFLUENCE*);
+void dKy_actor_addcol_amb_set(s16, s16, s16, f32);
+void dKy_bg_addcol_amb_set(s16, s16, s16, f32);
+void dKy_bg1_addcol_amb_set(s16, s16, s16, f32);
+void dKy_addcol_fog_set(s16, s16, s16, f32);
+void dKy_vrbox_addcol_sky0_set(s16, s16, s16, f32);
+void dKy_vrbox_addcol_kasumi_set(s16, s16, s16, f32);
+void dKy_GxFog_set();
+void dKy_rain_check();
+void dKy_set_actcol_ratio(f32);
+void dKy_set_bgcol_ratio(f32);
+void dKy_set_fogcol_ratio(f32);
+void dKy_set_vrboxcol_ratio(f32);
+void dKy_ParticleColor_get_bg(cXyz*, dKy_tevstr_c*, _GXColor*, _GXColor*, _GXColor*, _GXColor*, f32);
+void dKy_darkworld_check();
+void cM_rad2s(f32);
+void cM_atan2s(f32, f32);
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void* operator new(u32, int);
+extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
+extern "C" extern void* __vt__19dKankyo_star_Packet[5];
+extern "C" extern void* __vt__19dKankyo_snow_Packet[5];
+extern "C" extern void* __vt__18dBgS_ObjGndChk_All[12];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void dComIfGs_PolyDamageOff_Set__FSc(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getRunEventName__16dEvent_manager_cFv(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void newData__13dDlst_peekZ_cFssPUl(); // 1
-extern "C" void __dt__8SNOW_EFFFv(); // 1
-extern "C" void __ct__8SNOW_EFFFv(); // 1
-extern "C" void __dt__8STAR_EFFFv(); // 1
-extern "C" void __ct__8STAR_EFFFv(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_get_wind_pow__Fv(); // 1
-extern "C" void dKyw_get_wind_vecpow__Fv(); // 1
-extern "C" void dKyw_pntwind_get_vecpow__FP4cXyz(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__18dBgS_ObjGndChk_AllFv(); // 1
-extern "C" void __ct__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void __dt__18dBgS_CamGndChk_WtrFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__12dBgS_RoofChkFv(); // 1
-extern "C" void __dt__12dBgS_RoofChkFv(); // 1
-extern "C" void Prepare__12dCcMassS_MngFv(); // 1
-extern "C" void checkNowWolfEyeUp__9daPy_py_cFv(); // 1
-extern "C" void dKy_get_parcent__Ffff(); // 1
-extern "C" void getDaytime__18dScnKy_env_light_cFv(); // 1
-extern "C" void dKy_daynight_check__Fv(); // 1
-extern "C" void dKy_move_room_ratio__FP12dKy_tevstr_cPSc(); // 1
-extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_actor_addcol_amb_set__Fsssf(); // 1
-extern "C" void dKy_bg_addcol_amb_set__Fsssf(); // 1
-extern "C" void dKy_bg1_addcol_amb_set__Fsssf(); // 1
-extern "C" void dKy_addcol_fog_set__Fsssf(); // 1
-extern "C" void dKy_vrbox_addcol_sky0_set__Fsssf(); // 1
-extern "C" void dKy_vrbox_addcol_kasumi_set__Fsssf(); // 1
-extern "C" void dKy_GxFog_set__Fv(); // 1
-extern "C" void dKy_rain_check__Fv(); // 1
-extern "C" void dKy_set_actcol_ratio__Ff(); // 1
-extern "C" void dKy_set_bgcol_ratio__Ff(); // 1
-extern "C" void dKy_set_fogcol_ratio__Ff(); // 1
-extern "C" void dKy_set_vrboxcol_ratio__Ff(); // 1
-extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rad2s__Ff(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cM3d_VectorProduct2d__Fffffff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void startNearThunderSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void* __nw__FUli(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXLightPerspective(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetColorUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _savegpr_19(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_18(); // 1
-extern "C" void _restgpr_19(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void atan2(); // 1
-extern "C" void sqrt(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void __dt__5csXyzFv();
+extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfGs_PolyDamageOff_Set__FSc();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getRunEventName__16dEvent_manager_cFv();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void newData__13dDlst_peekZ_cFssPUl();
+extern "C" void __dt__8SNOW_EFFFv();
+extern "C" void __ct__8SNOW_EFFFv();
+extern "C" void __dt__8STAR_EFFFv();
+extern "C" void __ct__8STAR_EFFFv();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_get_wind_pow__Fv();
+extern "C" void dKyw_get_wind_vecpow__Fv();
+extern "C" void dKyw_pntwind_get_vecpow__FP4cXyz();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __dt__18dBgS_ObjGndChk_AllFv();
+extern "C" void __ct__18dBgS_CamGndChk_WtrFv();
+extern "C" void __dt__18dBgS_CamGndChk_WtrFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__12dBgS_RoofChkFv();
+extern "C" void __dt__12dBgS_RoofChkFv();
+extern "C" void Prepare__12dCcMassS_MngFv();
+extern "C" void checkNowWolfEyeUp__9daPy_py_cFv();
+extern "C" void dKy_get_parcent__Ffff();
+extern "C" void getDaytime__18dScnKy_env_light_cFv();
+extern "C" void dKy_daynight_check__Fv();
+extern "C" void dKy_move_room_ratio__FP12dKy_tevstr_cPSc();
+extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_actor_addcol_amb_set__Fsssf();
+extern "C" void dKy_bg_addcol_amb_set__Fsssf();
+extern "C" void dKy_bg1_addcol_amb_set__Fsssf();
+extern "C" void dKy_addcol_fog_set__Fsssf();
+extern "C" void dKy_vrbox_addcol_sky0_set__Fsssf();
+extern "C" void dKy_vrbox_addcol_kasumi_set__Fsssf();
+extern "C" void dKy_GxFog_set__Fv();
+extern "C" void dKy_rain_check__Fv();
+extern "C" void dKy_set_actcol_ratio__Ff();
+extern "C" void dKy_set_bgcol_ratio__Ff();
+extern "C" void dKy_set_fogcol_ratio__Ff();
+extern "C" void dKy_set_vrboxcol_ratio__Ff();
+extern "C" void dKy_ParticleColor_get_bg__FP4cXyzP12dKy_tevstr_cP8_GXColorP8_GXColorP8_GXColorP8_GXColorf();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rad2s__Ff();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cM3d_VectorProduct2d__Fffffff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void startNearThunderSe__10Z2EnvSeMgrFSc();
+extern "C" void* __nw__FUli();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXRotRad();
+extern "C" void PSMTXTrans();
+extern "C" void C_MTXLightPerspective();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetColorUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void GXSetClipMode();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_18();
+extern "C" void _savegpr_19();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_18();
+extern "C" void _restgpr_19();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
+extern "C" void strcmp();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void atan2();
+extern "C" void sqrt();
 extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
 extern "C" extern void* __vt__19dKankyo_star_Packet[5];
 extern "C" extern void* __vt__19dKankyo_snow_Packet[5];

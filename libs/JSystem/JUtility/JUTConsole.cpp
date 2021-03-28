@@ -90,38 +90,40 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
+extern "C" extern char const* const JUTConsole__stringBase0;
+extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
-extern "C" void create__10JUTConsoleFUiUiP7JKRHeap(); // 1
-extern "C" void create__10JUTConsoleFUiPvUl(); // 1
-extern "C" void __ct__10JUTConsoleFUiUib(); // 1
-extern "C" void __dt__10JUTConsoleFv(); // 1
-extern "C" void getObjectSizeFromBufferSize__10JUTConsoleFUiUi(); // 1
-extern "C" void getLineFromObjectSize__10JUTConsoleFUlUi(); // 1
-extern "C" void clear__10JUTConsoleFv(); // 1
-extern "C" void doDraw__10JUTConsoleCFQ210JUTConsole12EConsoleType(); // 1
-extern "C" void print_f__10JUTConsoleFPCce(); // 1
-extern "C" void print__10JUTConsoleFPCc(); // 1
-extern "C" void JUTConsole_print_f_va_(); // 1
-extern "C" void dumpToTerminal__10JUTConsoleFUi(); // 1
-extern "C" void scroll__10JUTConsoleFi(); // 1
-extern "C" void getUsedLine__10JUTConsoleCFv(); // 1
-extern "C" void getLineOffset__10JUTConsoleCFv(); // 1
-extern "C" void __ct__17JUTConsoleManagerFv(); // 1
-extern "C" void createManager__17JUTConsoleManagerFP7JKRHeap(); // 1
-extern "C" void appendConsole__17JUTConsoleManagerFP10JUTConsole(); // 1
-extern "C" void removeConsole__17JUTConsoleManagerFP10JUTConsole(); // 1
-extern "C" void draw__17JUTConsoleManagerCFv(); // 1
-extern "C" void drawDirect__17JUTConsoleManagerCFb(); // 1
-extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole(); // 1
-extern "C" void JUTSetReportConsole(); // 1
-extern "C" static void JUTGetReportConsole(); // 1
-extern "C" void JUTSetWarningConsole(); // 1
-extern "C" static void JUTGetWarningConsole(); // 1
-extern "C" static void JUTReportConsole_f_va(); // 1
-extern "C" void JUTReportConsole_f(); // 1
-extern "C" void JUTReportConsole(); // 1
-extern "C" void JUTWarningConsole_f(); // 1
-extern "C" void JUTWarningConsole(); // 1
+extern "C" void create__10JUTConsoleFUiUiP7JKRHeap();
+extern "C" void create__10JUTConsoleFUiPvUl();
+extern "C" void __ct__10JUTConsoleFUiUib();
+extern "C" void __dt__10JUTConsoleFv();
+extern "C" void getObjectSizeFromBufferSize__10JUTConsoleFUiUi();
+extern "C" void getLineFromObjectSize__10JUTConsoleFUlUi();
+extern "C" void clear__10JUTConsoleFv();
+extern "C" void doDraw__10JUTConsoleCFQ210JUTConsole12EConsoleType();
+extern "C" void print_f__10JUTConsoleFPCce();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void JUTConsole_print_f_va_();
+extern "C" void dumpToTerminal__10JUTConsoleFUi();
+extern "C" void scroll__10JUTConsoleFi();
+extern "C" void getUsedLine__10JUTConsoleCFv();
+extern "C" void getLineOffset__10JUTConsoleCFv();
+extern "C" void __ct__17JUTConsoleManagerFv();
+extern "C" void createManager__17JUTConsoleManagerFP7JKRHeap();
+extern "C" void appendConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" void removeConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" void draw__17JUTConsoleManagerCFv();
+extern "C" void drawDirect__17JUTConsoleManagerCFb();
+extern "C" void setDirectConsole__17JUTConsoleManagerFP10JUTConsole();
+extern "C" void JUTSetReportConsole();
+extern "C" static void JUTGetReportConsole();
+extern "C" void JUTSetWarningConsole();
+extern "C" static void JUTGetWarningConsole();
+extern "C" static void JUTReportConsole_f_va();
+extern "C" void JUTReportConsole_f();
+extern "C" void JUTReportConsole();
+extern "C" void JUTWarningConsole_f();
+extern "C" void JUTWarningConsole();
 extern "C" extern char const* const JUTConsole__stringBase0;
 extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
@@ -129,39 +131,44 @@ extern "C" extern u8 sManager__17JUTConsoleManager[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
-extern "C" void OSReport(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
-extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor(); // 1
-extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb(); // 1
-extern "C" void erase__14JUTDirectPrintFiiii(); // 1
-extern "C" void drawString__14JUTDirectPrintFUsUsPc(); // 1
-extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor(); // 1
-extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
-extern "C" void setPort__13J2DOrthoGraphFv(); // 1
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
-extern "C" void OSEnableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void vsnprintf(); // 1
-extern "C" void strlen(); // 1
+extern "C" void OSReport();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Remove__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void setCharColor__7JUTFontFQ28JUtility6TColor();
+extern "C" void drawString_size_scale__7JUTFontFffffPCcUlb();
+extern "C" void erase__14JUTDirectPrintFiiii();
+extern "C" void drawString__14JUTDirectPrintFUsUsPc();
+extern "C" void setCharColor__14JUTDirectPrintFQ28JUtility6TColor();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
+extern "C" void OSEnableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void VIGetRetraceCount();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void vsnprintf();
+extern "C" void strlen();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern void* __vt__13J2DOrthoGraph[10];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];

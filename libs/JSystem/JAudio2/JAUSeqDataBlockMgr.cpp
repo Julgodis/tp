@@ -30,11 +30,11 @@ struct JSULink__template1 {
 struct JKRArchive {
 };
 
-struct JAUSeqDataBlock {
-	/* 802A68F4 */ JAUSeqDataBlock();
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct JAUSeqDataBlock {
+	/* 802A68F4 */ JAUSeqDataBlock();
 };
 
 struct JAUSeqDataBlocks {
@@ -71,43 +71,44 @@ struct JASResArcLoader {
 // Forward References:
 // 
 
-static void JAUDynamicSeqDataBlocks_receiveLoaded_(u32, u32); // 2
+static void JAUDynamicSeqDataBlocks_receiveLoaded_(u32, u32);
 
-extern "C" void __ct__15JAUSeqDataBlockFv(); // 1
-extern "C" void getSeqData__16JAUSeqDataBlocksF10JAISoundID(); // 1
-extern "C" void seekFreeBlock__16JAUSeqDataBlocksFUl(); // 1
-extern "C" void func_802A69D8(); // 1
-extern "C" void func_802A69F8(); // 1
-extern "C" void hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID(); // 1
-extern "C" void __ct__23JAUDynamicSeqDataBlocksFv(); // 1
-extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive(); // 1
-extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab(); // 1
-extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock(); // 1
-extern "C" static void JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl(); // 1
-extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser(); // 1
-extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser(); // 1
-extern "C" void releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl(); // 1
-extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv(); // 1
+extern "C" void __ct__15JAUSeqDataBlockFv();
+extern "C" void getSeqData__16JAUSeqDataBlocksF10JAISoundID();
+extern "C" void seekFreeBlock__16JAUSeqDataBlocksFUl();
+extern "C" void func_802A69D8();
+extern "C" void func_802A69F8();
+extern "C" void hasFailedBlock__16JAUSeqDataBlocksF10JAISoundID();
+extern "C" void __ct__23JAUDynamicSeqDataBlocksFv();
+extern "C" void setSeqDataArchive__23JAUDynamicSeqDataBlocksFP10JKRArchive();
+extern "C" void getSeqData__23JAUDynamicSeqDataBlocksF10JAISoundIDP14JAISeqDataUserP10JAISeqDatab();
+extern "C" void appendDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP15JAUSeqDataBlock();
+extern "C" static void JAUDynamicSeqDataBlocks_receiveLoaded___FUlUl();
+extern "C" void loadDynamicSeq__23JAUDynamicSeqDataBlocksF10JAISoundIDbP14JAISeqDataUser();
+extern "C" void releaseIdleDynamicSeqDataBlock__23JAUDynamicSeqDataBlocksFP14JAISeqDataUser();
+extern "C" void releaseIdleDynamicSeqDataBlock___23JAUDynamicSeqDataBlocksFP14JAISeqDataUserUl();
+extern "C" void rearrangeLoadingSeqs___23JAUDynamicSeqDataBlocksFv();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_80450B50[4];
 
-extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs(); // 1
-extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void getResSize__15JASResArcLoaderFPC10JKRArchiveUs();
+extern "C" void loadResourceAsync__15JASResArcLoaderFP10JKRArchiveUsPUcUlPFUlUl_vUl();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80450B50[4];
 
 // 

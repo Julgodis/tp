@@ -40,24 +40,25 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void __dt__11cBgS_GndChkFv(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC3Vec(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void PreCheck__11cBgS_GndChkFv(); // 1
-extern "C" static void func_80267D54(); // 1
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void __dt__11cBgS_GndChkFv();
+extern "C" void SetPos__11cBgS_GndChkFPC3Vec();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void PreCheck__11cBgS_GndChkFv();
+extern "C" static void func_80267D54();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern f32 Zero__4cXyz[3];
 
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void __dl__FPv();
 extern "C" extern f32 Zero__4cXyz[3];
 
 // 

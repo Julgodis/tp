@@ -30,6 +30,10 @@ struct daTagSmkEmt_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct _GXColor {
 };
 
@@ -37,10 +41,6 @@ struct dKy_tevstr_c {
 };
 
 struct cXyz {
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -51,39 +51,43 @@ struct dPa_control_c {
 // Forward References:
 // 
 
-static void daTagSmkEmt_create(daTagSmkEmt_c*); // 2
-static void daTagSmkEmt_Delete(daTagSmkEmt_c*); // 2
-static void daTagSmkEmt_execute(daTagSmkEmt_c*); // 2
-static void daTagSmkEmt_draw(daTagSmkEmt_c*); // 2
+static void daTagSmkEmt_create(daTagSmkEmt_c*);
+static void daTagSmkEmt_Delete(daTagSmkEmt_c*);
+static void daTagSmkEmt_execute(daTagSmkEmt_c*);
+static void daTagSmkEmt_draw(daTagSmkEmt_c*);
+extern "C" extern void* g_profile_Tag_SmkEmt[12];
 
-extern "C" void __ct__13daTagSmkEmt_cFv(); // 1
-extern "C" void __dt__13daTagSmkEmt_cFv(); // 1
-extern "C" void create__13daTagSmkEmt_cFv(); // 1
-extern "C" void Delete__13daTagSmkEmt_cFv(); // 1
-extern "C" bool draw__13daTagSmkEmt_cFv(); // 1
-extern "C" bool execute__13daTagSmkEmt_cFv(); // 1
-extern "C" void createSmkEmt__13daTagSmkEmt_cFv(); // 1
-extern "C" void deleteSmkEmt__13daTagSmkEmt_cFv(); // 1
-extern "C" static void daTagSmkEmt_create__FP13daTagSmkEmt_c(); // 1
-extern "C" static void daTagSmkEmt_Delete__FP13daTagSmkEmt_c(); // 1
-extern "C" static void daTagSmkEmt_execute__FP13daTagSmkEmt_c(); // 1
-extern "C" static void daTagSmkEmt_draw__FP13daTagSmkEmt_c(); // 1
+extern "C" void __ct__13daTagSmkEmt_cFv();
+extern "C" void __dt__13daTagSmkEmt_cFv();
+extern "C" void create__13daTagSmkEmt_cFv();
+extern "C" void Delete__13daTagSmkEmt_cFv();
+extern "C" bool draw__13daTagSmkEmt_cFv();
+extern "C" bool execute__13daTagSmkEmt_cFv();
+extern "C" void createSmkEmt__13daTagSmkEmt_cFv();
+extern "C" void deleteSmkEmt__13daTagSmkEmt_cFv();
+extern "C" static void daTagSmkEmt_create__FP13daTagSmkEmt_c();
+extern "C" static void daTagSmkEmt_Delete__FP13daTagSmkEmt_c();
+extern "C" static void daTagSmkEmt_execute__FP13daTagSmkEmt_c();
+extern "C" static void daTagSmkEmt_draw__FP13daTagSmkEmt_c();
 extern "C" extern void* g_profile_Tag_SmkEmt[12];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-SECTION_INIT void memset(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_25(); // 1
+SECTION_INIT void memset();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_25();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_8048F134[2];
 
 extern void* const data_8048F134[2];
 
@@ -19,7 +20,7 @@ extern void* const data_8048F134[2];
 // 
 
 
-extern "C" void __sinit_d_a_tag_lantern_cpp(); // 1
+extern "C" void __sinit_d_a_tag_lantern_cpp();
 
 // 
 // Declarations:

@@ -38,28 +38,29 @@ struct cXyz {
 // Forward References:
 // 
 
-void dPath_GetPnt(dPath const*, int); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dPath_GetNextRoomPath(dPath const*, int); // 2
-void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*); // 2
+void dPath_GetPnt(dPath const*, int);
+void dPath_GetRoomPath(int, int);
+void dPath_GetNextRoomPath(dPath const*, int);
+void dPath_GetPolyRoomPathVec(cBgS_PolyInfo const&, cXyz*, int*);
 
-extern "C" void dPath_GetPnt__FPC5dPathi(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dPath_GetNextRoomPath__FPC5dPathi(); // 1
-extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi(); // 1
+extern "C" void dPath_GetPnt__FPC5dPathi();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dPath_GetNextRoomPath__FPC5dPathi();
+extern "C" void dPath_GetPolyRoomPathVec__FRC13cBgS_PolyInfoP4cXyzPi();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomPathPntNo__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

@@ -64,10 +64,10 @@ struct dDlst_shadowControl_c {
 	/* 80055A14 */ void draw(f32 (* )[4]);
 };
 
-struct dDlst_base_c {
+struct J3DDrawBuffer {
 };
 
-struct J3DDrawBuffer {
+struct dDlst_base_c {
 };
 
 struct dDlst_list_c {
@@ -157,54 +157,66 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-static void createTimg(u16, u16, u32); // 2
-static void darwFilter(_GXColor); // 2
-void mDoGph_BlankingON(); // 2
-void mDoGph_BlankingOFF(); // 2
-static void dScnPly_BeforeOfPaint(); // 2
-void mDoGph_BeforeOfDraw(); // 2
-void mDoGph_AfterOfDraw(); // 2
-static void drawDepth2(view_class*, view_port_class*, int); // 2
-static void trimming(view_class*, view_port_class*); // 2
-void mDoGph_drawFilterQuad(s8, s8); // 2
-static void retry_captue_frame(view_class*, view_port_class*, int); // 2
-static void motionBlure(view_class*); // 2
-static void setLight(); // 2
-static void drawItem3D(); // 2
-void mDoGph_Painter(); // 2
-void mDoGph_Create(); // 2
+static void createTimg(u16, u16, u32);
+static void darwFilter(_GXColor);
+void mDoGph_BlankingON();
+void mDoGph_BlankingOFF();
+static void dScnPly_BeforeOfPaint();
+void mDoGph_BeforeOfDraw();
+void mDoGph_AfterOfDraw();
+static void drawDepth2(view_class*, view_port_class*, int);
+static void trimming(view_class*, view_port_class*);
+void mDoGph_drawFilterQuad(s8, s8);
+static void retry_captue_frame(view_class*, view_port_class*, int);
+static void motionBlure(view_class*);
+static void setLight();
+static void drawItem3D();
+void mDoGph_Painter();
+void mDoGph_Create();
+extern "C" extern char const* const m_Do_m_Do_graphic__stringBase0;
+extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
+extern "C" extern u8 m_bloom__13mDoGph_gInf_c[20];
+extern "C" extern u8 mBackColor__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFadeColor__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFrameBufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 mFrameBufferTex__13mDoGph_gInf_c[4];
+extern "C" extern u8 mZbufferTimg__13mDoGph_gInf_c[4];
+extern "C" extern u8 mZbufferTex__13mDoGph_gInf_c[4];
+extern "C" extern f32 mFadeRate__13mDoGph_gInf_c;
+extern "C" extern u8 struct_80450BE4[4];
 
-extern "C" static void createTimg__FUsUsUl(); // 1
-extern "C" void create__13mDoGph_gInf_cFv(); // 1
-extern "C" void beginRender__13mDoGph_gInf_cFv(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void fadeOut_f__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void onBlure__13mDoGph_gInf_cFv(); // 1
-extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf(); // 1
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" static void darwFilter__F8_GXColor(); // 1
-extern "C" void calcFade__13mDoGph_gInf_cFv(); // 1
-extern "C" void mDoGph_BlankingON__Fv(); // 1
-extern "C" void mDoGph_BlankingOFF__Fv(); // 1
-extern "C" static void dScnPly_BeforeOfPaint__Fv(); // 1
-extern "C" void mDoGph_BeforeOfDraw__Fv(); // 1
-extern "C" void mDoGph_AfterOfDraw__Fv(); // 1
-extern "C" static void drawDepth2__FP10view_classP15view_port_classi(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void trimming__FP10view_classP15view_port_class(); // 1
-extern "C" void mDoGph_drawFilterQuad__FScSc(); // 1
-extern "C" void create__Q213mDoGph_gInf_c7bloom_cFv(); // 1
-extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv(); // 1
-extern "C" void draw__Q213mDoGph_gInf_c7bloom_cFv(); // 1
-extern "C" static void retry_captue_frame__FP10view_classP15view_port_classi(); // 1
-extern "C" static void motionBlure__FP10view_class(); // 1
-extern "C" static void setLight__Fv(); // 1
-extern "C" static void drawItem3D__Fv(); // 1
-extern "C" void mDoGph_Painter__Fv(); // 1
-extern "C" void __dt__13J2DOrthoGraphFv(); // 1
-extern "C" void mDoGph_Create__Fv(); // 1
-extern "C" void __sinit_m_Do_graphic_cpp(); // 1
-extern "C" s32 getAtnActorID__9daPy_py_cCFv(); // 1
+extern "C" static void createTimg__FUsUsUl();
+extern "C" void create__13mDoGph_gInf_cFv();
+extern "C" void beginRender__13mDoGph_gInf_cFv();
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void fadeOut_f__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void onBlure__13mDoGph_gInf_cFv();
+extern "C" void onBlure__13mDoGph_gInf_cFPA4_Cf();
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" static void darwFilter__F8_GXColor();
+extern "C" void calcFade__13mDoGph_gInf_cFv();
+extern "C" void mDoGph_BlankingON__Fv();
+extern "C" void mDoGph_BlankingOFF__Fv();
+extern "C" static void dScnPly_BeforeOfPaint__Fv();
+extern "C" void mDoGph_BeforeOfDraw__Fv();
+extern "C" void mDoGph_AfterOfDraw__Fv();
+extern "C" static void drawDepth2__FP10view_classP15view_port_classi();
+extern "C" void __dt__4cXyzFv();
+extern "C" static void trimming__FP10view_classP15view_port_class();
+extern "C" void mDoGph_drawFilterQuad__FScSc();
+extern "C" void create__Q213mDoGph_gInf_c7bloom_cFv();
+extern "C" void remove__Q213mDoGph_gInf_c7bloom_cFv();
+extern "C" void draw__Q213mDoGph_gInf_c7bloom_cFv();
+extern "C" static void retry_captue_frame__FP10view_classP15view_port_classi();
+extern "C" static void motionBlure__FP10view_class();
+extern "C" static void setLight__Fv();
+extern "C" static void drawItem3D__Fv();
+extern "C" void mDoGph_Painter__Fv();
+extern "C" void __dt__13J2DOrthoGraphFv();
+extern "C" void mDoGph_Create__Fv();
+extern "C" void __sinit_m_Do_graphic_cpp();
+extern "C" s32 getAtnActorID__9daPy_py_cCFv();
 extern "C" extern char const* const m_Do_m_Do_graphic__stringBase0;
 extern "C" extern u8 mFrameBufferTexObj__13mDoGph_gInf_c[32];
 extern "C" extern u8 m_bloom__13mDoGph_gInf_c[20];
@@ -222,142 +234,165 @@ extern "C" extern u8 struct_80450BE4[4];
 // External References:
 // 
 
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16); // 2
-void mDoExt_getArchiveHeap(); // 2
-void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32); // 2
-void mDoExt_adjustSolidHeap(JKRSolidHeap*); // 2
-void mDoExt_restoreCurrentHeap(); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void fpcFCtRq_Do(fast_create_request*); // 2
-void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-void dCam_getBody(); // 2
-void dKy_setLight(); // 2
-void cLib_memSet(void*, int, u32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, Vec const*, s16);
+void mDoExt_getArchiveHeap();
+void mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32);
+void mDoExt_adjustSolidHeap(JKRSolidHeap*);
+void mDoExt_restoreCurrentHeap();
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fpcSch_JudgeByID(void*, void*);
+void fpcFCtRq_Do(fast_create_request*);
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
+void dCam_getBody();
+void dKy_setLight();
+void cLib_memSet(void*, int, u32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_HIO[64 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 mPadStatus__10JUTGamePad[48];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 data_80450580;
+extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
+extern "C" extern u8 g_clearColor[4];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 systemConsole__9JFWSystem[4];
+extern "C" extern u8 sManager__10JFWDisplay[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+extern "C" extern u8 sManager__8JUTVideo[4];
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
+extern "C" extern u8 sManager__10JUTProcBar[4];
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs(); // 1
-extern "C" void mDoExt_getArchiveHeap__Fv(); // 1
-extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl(); // 1
-extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap(); // 1
-extern "C" void mDoExt_restoreCurrentHeap__Fv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void fpcFCtRq_Do__FP19fast_create_request(); // 1
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void calcMenu__13dPa_control_cFv(); // 1
-extern "C" void draw__13dPa_control_cFP11JPADrawInfoUc(); // 1
-extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f(); // 1
-extern "C" void draw__21dDlst_shadowControl_cFPA4_f(); // 1
-extern "C" void init__12dDlst_list_cFv(); // 1
-extern "C" void reset__12dDlst_list_cFv(); // 1
-extern "C" void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer(); // 1
-extern "C" void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer(); // 1
-extern "C" void drawOpaListItem3d__12dDlst_list_cFv(); // 1
-extern "C" void drawXluListItem3d__12dDlst_list_cFv(); // 1
-extern "C" void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c(); // 1
-extern "C" void calcWipe__12dDlst_list_cFv(); // 1
-extern "C" void LockonTruth__12dAttention_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void dKy_setLight__Fv(); // 1
-extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f(); // 1
-extern "C" void cLib_memSet__FPviUl(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor(); // 1
-extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
-extern "C" void setPort__13J2DOrthoGraphFv(); // 1
-extern "C" void func_802E980C(); // 1
-extern "C" void setBuffer__8J2DPrintFUl(); // 1
-extern "C" void drawInit__6J3DSysFv(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" void PPCSync(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void C_MTXLightPerspective(); // 1
-extern "C" void C_MTXLightOrtho(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXInitLightSpot(); // 1
-extern "C" void GXInitLightDistAttn(); // 1
-extern "C" void GXInitLightPos(); // 1
-extern "C" void GXInitLightDir(); // 1
-extern "C" void GXInitLightColor(); // 1
-extern "C" void GXLoadLightObjImm(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXGetTexBufferSize(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetZTexture(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetFogRangeAdj(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXProject(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXGetProjectionv(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXGetViewportv(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3VecPC3Vecs();
+extern "C" void mDoExt_getArchiveHeap__Fv();
+extern "C" void mDoExt_createSolidHeapToCurrent__FUlP7JKRHeapUl();
+extern "C" void mDoExt_adjustSolidHeap__FP12JKRSolidHeap();
+extern "C" void mDoExt_restoreCurrentHeap__Fv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcFCtRq_Do__FP19fast_create_request();
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void calcMenu__13dPa_control_cFv();
+extern "C" void draw__13dPa_control_cFP11JPADrawInfoUc();
+extern "C" void imageDraw__21dDlst_shadowControl_cFPA4_f();
+extern "C" void draw__21dDlst_shadowControl_cFPA4_f();
+extern "C" void init__12dDlst_list_cFv();
+extern "C" void reset__12dDlst_list_cFv();
+extern "C" void drawOpaDrawList__12dDlst_list_cFP13J3DDrawBuffer();
+extern "C" void drawXluDrawList__12dDlst_list_cFP13J3DDrawBuffer();
+extern "C" void drawOpaListItem3d__12dDlst_list_cFv();
+extern "C" void drawXluListItem3d__12dDlst_list_cFv();
+extern "C" void draw__12dDlst_list_cFPP12dDlst_base_cPP12dDlst_base_c();
+extern "C" void calcWipe__12dDlst_list_cFv();
+extern "C" void LockonTruth__12dAttention_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void dKy_setLight__Fv();
+extern "C" void setupItem3D__17dMenu_Collect3D_cFPA4_f();
+extern "C" void cLib_memSet__FPviUl();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void func_802E980C();
+extern "C" void setBuffer__8J2DPrintFUl();
+extern "C" void drawInit__6J3DSysFv();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" void PPCSync();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void C_MTXLightPerspective();
+extern "C" void C_MTXLightOrtho();
+extern "C" void C_MTXPerspective();
+extern "C" void C_MTXOrtho();
+extern "C" void PSVECSquareDistance();
+extern "C" void VISetBlack();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetCoPlanar();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXCopyTex();
+extern "C" void GXInitLightSpot();
+extern "C" void GXInitLightDistAttn();
+extern "C" void GXInitLightPos();
+extern "C" void GXInitLightDir();
+extern "C" void GXInitLightColor();
+extern "C" void GXLoadLightObjImm();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXGetTexBufferSize();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInvalidateTexAll();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetFogRangeAdj();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXProject();
+extern "C" void GXSetProjection();
+extern "C" void GXGetProjectionv();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void GXSetViewport();
+extern "C" void GXGetViewportv();
+extern "C" void GXSetScissor();
+extern "C" void GXSetClipMode();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcmp();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern void* __vt__13J2DOrthoGraph[10];

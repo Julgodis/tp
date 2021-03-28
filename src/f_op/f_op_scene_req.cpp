@@ -33,71 +33,71 @@ struct node_create_request {
 // Forward References:
 // 
 
-static void fopScnRq_phase_ClearOverlap(scene_request_class*); // 2
-static void fopScnRq_phase_Execute(scene_request_class*); // 2
-static void fopScnRq_phase_IsDoingOverlap(scene_request_class*); // 2
-static void fopScnRq_phase_IsDoneOverlap(scene_request_class*); // 2
-static void fopScnRq_phase_Done(scene_request_class*); // 2
-static void fopScnRq_Execute(scene_request_class*); // 2
-static void fopScnRq_PostMethod(void*, scene_request_class*); // 2
-static void fopScnRq_Cancel(scene_request_class*); // 2
-static void fopScnRq_FadeRequest(s16, u16); // 2
-void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16); // 2
-void fopScnRq_ReRequest(unsigned int, s16, void*); // 2
-void fopScnRq_Handler(); // 2
+static void fopScnRq_phase_ClearOverlap(scene_request_class*);
+static void fopScnRq_phase_Execute(scene_request_class*);
+static void fopScnRq_phase_IsDoingOverlap(scene_request_class*);
+static void fopScnRq_phase_IsDoneOverlap(scene_request_class*);
+static void fopScnRq_phase_Done(scene_request_class*);
+static void fopScnRq_Execute(scene_request_class*);
+static void fopScnRq_PostMethod(void*, scene_request_class*);
+static void fopScnRq_Cancel(scene_request_class*);
+static void fopScnRq_FadeRequest(s16, u16);
+void fopScnRq_Request(int, scene_class*, s16, void*, s16, u16);
+void fopScnRq_ReRequest(unsigned int, s16, void*);
+void fopScnRq_Handler();
 
-extern "C" static void fopScnRq_phase_ClearOverlap__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_phase_Execute__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_phase_Done__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_Execute__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_PostMethod__FPvP19scene_request_class(); // 1
-extern "C" static void fopScnRq_Cancel__FP19scene_request_class(); // 1
-extern "C" static void fopScnRq_FadeRequest__FsUs(); // 1
-extern "C" void fopScnRq_Request__FiP11scene_classsPvsUs(); // 1
-extern "C" void fopScnRq_ReRequest__FUisPv(); // 1
-extern "C" void fopScnRq_Handler__Fv(); // 1
+extern "C" static void fopScnRq_phase_ClearOverlap__FP19scene_request_class();
+extern "C" static void fopScnRq_phase_Execute__FP19scene_request_class();
+extern "C" static void fopScnRq_phase_IsDoingOverlap__FP19scene_request_class();
+extern "C" static void fopScnRq_phase_IsDoneOverlap__FP19scene_request_class();
+extern "C" static void fopScnRq_phase_Done__FP19scene_request_class();
+extern "C" static void fopScnRq_Execute__FP19scene_request_class();
+extern "C" static void fopScnRq_PostMethod__FPvP19scene_request_class();
+extern "C" static void fopScnRq_Cancel__FP19scene_request_class();
+extern "C" static void fopScnRq_FadeRequest__FsUs();
+extern "C" void fopScnRq_Request__FiP11scene_classsPvsUs();
+extern "C" void fopScnRq_ReRequest__FUisPv();
+extern "C" void fopScnRq_Handler__Fv();
 
 // 
 // External References:
 // 
 
-void fopOvlpM_ToldAboutID(unsigned int); // 2
-void fopOvlpM_IsDone(); // 2
-void fopOvlpM_IsDoingReq(); // 2
-void fopOvlpM_ClearOfReq(); // 2
-void fopOvlpM_Request(s16, u16); // 2
-void fopOvlpM_Cancel(); // 2
-void fopScnPause_Enable(scene_class*); // 2
-void fopScnPause_Disable(scene_class*); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void fpcNdRq_Execute(node_create_request*); // 2
-void fpcNdRq_Delete(node_create_request*); // 2
-void fpcNdRq_Handler(); // 2
-void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*); // 2
-void fpcNdRq_ReRequest(unsigned int, s16, void*); // 2
-void cPhs_Set(request_of_phase_process_class*, int (**)(void*)); // 2
-void cPhs_Do(request_of_phase_process_class*, void*); // 2
+void fopOvlpM_ToldAboutID(unsigned int);
+void fopOvlpM_IsDone();
+void fopOvlpM_IsDoingReq();
+void fopOvlpM_ClearOfReq();
+void fopOvlpM_Request(s16, u16);
+void fopOvlpM_Cancel();
+void fopScnPause_Enable(scene_class*);
+void fopScnPause_Disable(scene_class*);
+void fpcEx_SearchByID(unsigned int);
+void fpcNdRq_Execute(node_create_request*);
+void fpcNdRq_Delete(node_create_request*);
+void fpcNdRq_Handler();
+void fpcNdRq_Request(u32, int, process_node_class*, s16, void*, node_create_request_method_class*);
+void fpcNdRq_ReRequest(unsigned int, s16, void*);
+void cPhs_Set(request_of_phase_process_class*, int (**)(void*));
+void cPhs_Do(request_of_phase_process_class*, void*);
 
-extern "C" void fopOvlpM_ToldAboutID__FUi(); // 1
-extern "C" void fopOvlpM_IsDone__Fv(); // 1
-extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
-extern "C" void fopOvlpM_ClearOfReq__Fv(); // 1
-extern "C" void fopOvlpM_Request__FsUs(); // 1
-extern "C" void fopOvlpM_Cancel__Fv(); // 1
-extern "C" void fopScnPause_Enable__FP11scene_class(); // 1
-extern "C" void fopScnPause_Disable__FP11scene_class(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void fpcNdRq_Execute__FP19node_create_request(); // 1
-extern "C" void fpcNdRq_Delete__FP19node_create_request(); // 1
-extern "C" void fpcNdRq_Handler__Fv(); // 1
-extern "C" void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class(); // 1
-extern "C" void fpcNdRq_ReRequest__FUisPv(); // 1
-extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i(); // 1
-extern "C" void cPhs_Do__FP30request_of_phase_process_classPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void fopOvlpM_ToldAboutID__FUi();
+extern "C" void fopOvlpM_IsDone__Fv();
+extern "C" void fopOvlpM_IsDoingReq__Fv();
+extern "C" void fopOvlpM_ClearOfReq__Fv();
+extern "C" void fopOvlpM_Request__FsUs();
+extern "C" void fopOvlpM_Cancel__Fv();
+extern "C" void fopScnPause_Enable__FP11scene_class();
+extern "C" void fopScnPause_Disable__FP11scene_class();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void fpcNdRq_Execute__FP19node_create_request();
+extern "C" void fpcNdRq_Delete__FP19node_create_request();
+extern "C" void fpcNdRq_Handler__Fv();
+extern "C" void fpcNdRq_Request__FUliP18process_node_classsPvP32node_create_request_method_class();
+extern "C" void fpcNdRq_ReRequest__FUisPv();
+extern "C" void cPhs_Set__FP30request_of_phase_process_classPPFPv_i();
+extern "C" void cPhs_Do__FP30request_of_phase_process_classPv();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:

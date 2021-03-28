@@ -121,42 +121,44 @@ struct J2DOrthoGraph {
 // Forward References:
 // 
 
-static void callDirectDraw(); // 2
-static void waitForTick(u32, u16); // 2
-static void JFWThreadAlarmHandler(OSAlarm*, OSContext*); // 2
-static void JFWDrawDoneAlarm(); // 2
-static void JFWGXAbortAlarmHandler(OSAlarm*, OSContext*); // 2
-static void diagnoseGpHang(); // 2
+static void callDirectDraw();
+static void waitForTick(u32, u16);
+static void JFWThreadAlarmHandler(OSAlarm*, OSContext*);
+static void JFWDrawDoneAlarm();
+static void JFWGXAbortAlarmHandler(OSAlarm*, OSContext*);
+static void diagnoseGpHang();
+extern "C" extern char const* const JFWDisplay__stringBase0;
+extern "C" extern u8 sManager__10JFWDisplay[4];
 
-extern "C" void ctor_subroutine__10JFWDisplayFb(); // 1
-extern "C" void __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb(); // 1
-extern "C" void __dt__10JFWDisplayFv(); // 1
-extern "C" void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb(); // 1
-extern "C" static void callDirectDraw__Fv(); // 1
-extern "C" void prepareCopyDisp__10JFWDisplayFv(); // 1
-extern "C" void drawendXfb_single__10JFWDisplayFv(); // 1
-extern "C" void exchangeXfb_double__10JFWDisplayFv(); // 1
-extern "C" void exchangeXfb_triple__10JFWDisplayFv(); // 1
-extern "C" void copyXfb_triple__10JFWDisplayFv(); // 1
-extern "C" void preGX__10JFWDisplayFv(); // 1
-extern "C" void endGX__10JFWDisplayFv(); // 1
-extern "C" void beginRender__10JFWDisplayFv(); // 1
-extern "C" void endRender__10JFWDisplayFv(); // 1
-extern "C" void endFrame__10JFWDisplayFv(); // 1
-extern "C" void waitBlanking__10JFWDisplayFi(); // 1
-extern "C" static void waitForTick__FUlUs(); // 1
-extern "C" static void JFWThreadAlarmHandler__FP7OSAlarmP9OSContext(); // 1
-extern "C" void threadSleep__10JFWDisplayFx(); // 1
-extern "C" void clearEfb_init__10JFWDisplayFv(); // 1
-extern "C" void clearEfb__10JFWDisplayFv(); // 1
-extern "C" void clearEfb__10JFWDisplayF8_GXColor(); // 1
-extern "C" void clearEfb__10JFWDisplayFiiii8_GXColor(); // 1
-extern "C" void calcCombinationRatio__10JFWDisplayFv(); // 1
-extern "C" static void JFWDrawDoneAlarm__Fv(); // 1
-extern "C" static void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext(); // 1
-extern "C" static void diagnoseGpHang__Fv(); // 1
-extern "C" void __sinit_JFWDisplay_cpp(); // 1
-extern "C" void func_80273724(); // 1
+extern "C" void ctor_subroutine__10JFWDisplayFb();
+extern "C" void __ct__10JFWDisplayFP7JKRHeapQ26JUTXfb10EXfbNumberb();
+extern "C" void __dt__10JFWDisplayFv();
+extern "C" void createManager__10JFWDisplayFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumberb();
+extern "C" static void callDirectDraw__Fv();
+extern "C" void prepareCopyDisp__10JFWDisplayFv();
+extern "C" void drawendXfb_single__10JFWDisplayFv();
+extern "C" void exchangeXfb_double__10JFWDisplayFv();
+extern "C" void exchangeXfb_triple__10JFWDisplayFv();
+extern "C" void copyXfb_triple__10JFWDisplayFv();
+extern "C" void preGX__10JFWDisplayFv();
+extern "C" void endGX__10JFWDisplayFv();
+extern "C" void beginRender__10JFWDisplayFv();
+extern "C" void endRender__10JFWDisplayFv();
+extern "C" void endFrame__10JFWDisplayFv();
+extern "C" void waitBlanking__10JFWDisplayFi();
+extern "C" static void waitForTick__FUlUs();
+extern "C" static void JFWThreadAlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" void threadSleep__10JFWDisplayFx();
+extern "C" void clearEfb_init__10JFWDisplayFv();
+extern "C" void clearEfb__10JFWDisplayFv();
+extern "C" void clearEfb__10JFWDisplayF8_GXColor();
+extern "C" void clearEfb__10JFWDisplayFiiii8_GXColor();
+extern "C" void calcCombinationRatio__10JFWDisplayFv();
+extern "C" static void JFWDrawDoneAlarm__Fv();
+extern "C" static void JFWGXAbortAlarmHandler__FP7OSAlarmP9OSContext();
+extern "C" static void diagnoseGpHang__Fv();
+extern "C" void __sinit_JFWDisplay_cpp();
+extern "C" void func_80273724();
 extern "C" extern char const* const JFWDisplay__stringBase0;
 extern "C" extern u8 sManager__10JFWDisplay[4];
 
@@ -164,114 +166,124 @@ extern "C" extern u8 sManager__10JFWDisplay[4];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
+extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];
+extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
+extern "C" extern u8 sManager__8JUTVideo[4];
+extern "C" extern u8 sVideoLastTick__8JUTVideo[4];
+extern "C" extern u8 sVideoInterval__8JUTVideo[4];
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
+extern "C" extern u8 sManager__10JUTProcBar[4];
+extern "C" extern u8 sManager__17JUTConsoleManager[4];
 
-extern "C" void OSReport(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __ct__10JSUPtrListFb(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void flush__10JUTDbPrintFv(); // 1
-extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
-extern "C" void flushMessage__12JUTAssertionFv(); // 1
-extern "C" void flushMessage_dbPrint__12JUTAssertionFv(); // 1
-extern "C" void drawDoneStart__8JUTVideoFv(); // 1
-extern "C" void dummyNoDrawWait__8JUTVideoFv(); // 1
-extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void waitRetraceIfNeed__8JUTVideoFv(); // 1
-extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
-extern "C" void destroyManager__6JUTXfbFv(); // 1
-extern "C" void control__8JUTFaderFv(); // 1
-extern "C" void create__10JUTProcBarFv(); // 1
-extern "C" void destroy__10JUTProcBarFv(); // 1
-extern "C" void clear__10JUTProcBarFv(); // 1
-extern "C" void draw__10JUTProcBarFv(); // 1
-extern "C" void draw__17JUTConsoleManagerCFv(); // 1
-extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
-extern "C" void setPort__13J2DOrthoGraphFv(); // 1
-extern "C" void OSCreateAlarm(); // 1
-extern "C" void OSSetAlarm(); // 1
-extern "C" void OSCancelAlarm(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSResumeThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GXInit(); // 1
-extern "C" void GXGetGPStatus(); // 1
-extern "C" void GXGetFifoBase(); // 1
-extern "C" void GXGetFifoSize(); // 1
-extern "C" void GXGetCPUFifo(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXInvalidateVtxCache(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXAbortFrame(); // 1
-extern "C" void GXSetDrawDone(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetDispCopySrc(); // 1
-extern "C" void GXSetDispCopyDst(); // 1
-extern "C" void GXSetCopyClamp(); // 1
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void GXSetDispCopyYScale(); // 1
-extern "C" void GXSetCopyClear(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXSetDispCopyGamma(); // 1
-extern "C" void GXCopyDisp(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXInvalidateTexAll(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetZTexture(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetAlphaUpdate(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetPixelFmt(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetDstAlpha(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXReadXfRasMetric(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __cvt_dbl_usll(); // 1
+extern "C" void OSReport();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void flush__10JUTDbPrintFv();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" void flushMessage__12JUTAssertionFv();
+extern "C" void flushMessage_dbPrint__12JUTAssertionFv();
+extern "C" void drawDoneStart__8JUTVideoFv();
+extern "C" void dummyNoDrawWait__8JUTVideoFv();
+extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void waitRetraceIfNeed__8JUTVideoFv();
+extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void destroyManager__6JUTXfbFv();
+extern "C" void control__8JUTFaderFv();
+extern "C" void create__10JUTProcBarFv();
+extern "C" void destroy__10JUTProcBarFv();
+extern "C" void clear__10JUTProcBarFv();
+extern "C" void draw__10JUTProcBarFv();
+extern "C" void draw__17JUTConsoleManagerCFv();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void OSCreateAlarm();
+extern "C" void OSSetAlarm();
+extern "C" void OSCancelAlarm();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSReceiveMessage();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSResumeThread();
+extern "C" void OSSuspendThread();
+extern "C" void OSGetTime();
+extern "C" void OSGetTick();
+extern "C" void C_MTXOrtho();
+extern "C" void VIFlush();
+extern "C" void VIGetRetraceCount();
+extern "C" void GXInit();
+extern "C" void GXGetGPStatus();
+extern "C" void GXGetFifoBase();
+extern "C" void GXGetFifoSize();
+extern "C" void GXGetCPUFifo();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXInvalidateVtxCache();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXSetDrawDone();
+extern "C" void GXDrawDone();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetDispCopySrc();
+extern "C" void GXSetDispCopyDst();
+extern "C" void GXSetCopyClamp();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void GXSetDispCopyYScale();
+extern "C" void GXSetCopyClear();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXSetDispCopyGamma();
+extern "C" void GXCopyDisp();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXInvalidateTexAll();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetZTexture();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetAlphaUpdate();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetPixelFmt();
+extern "C" void GXSetDither();
+extern "C" void GXSetDstAlpha();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXReadXfRasMetric();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __cvt_dbl_usll();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern void* __vt__13J2DOrthoGraph[10];
 extern "C" extern u8 sDebugPrint__10JUTDbPrint[4 + 4 /* padding */];

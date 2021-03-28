@@ -34,22 +34,22 @@ struct J3DShape {
 // 
 
 
-extern "C" void hide__13J3DShapeTableFv(); // 1
-extern "C" void show__13J3DShapeTableFv(); // 1
-extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData(); // 1
-extern "C" void sortVcdVatCmd__13J3DShapeTableFv(); // 1
+extern "C" void hide__13J3DShapeTableFv();
+extern "C" void show__13J3DShapeTableFv();
+extern "C" void initShapeNodes__13J3DShapeTableFP14J3DDrawMtxDataP13J3DVertexData();
+extern "C" void sortVcdVatCmd__13J3DShapeTableFv();
 
 // 
 // External References:
 // 
 
 
-extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape(); // 1
-extern "C" void makeVcdVatCmd__8J3DShapeFv(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void isSameVcdVatCmd__8J3DShapeFP8J3DShape();
+extern "C" void makeVcdVatCmd__8J3DShapeFv();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
 
 // 
 // Declarations:

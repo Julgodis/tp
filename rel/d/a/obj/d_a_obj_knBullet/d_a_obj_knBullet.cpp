@@ -111,77 +111,88 @@ struct JPABaseEmitter {
 // Forward References:
 // 
 
-static void daObjKnBullet_Execute(daObjKnBullet_c*); // 2
-static void daObjKnBullet_Draw(daObjKnBullet_c*); // 2
-static bool daObjKnBullet_IsDelete(daObjKnBullet_c*); // 2
-static void daObjKnBullet_Delete(daObjKnBullet_c*); // 2
-static void daObjKnBullet_create(fopAc_ac_c*); // 2
-static void cLib_calcTimer__template0(s16*); // 2
+static void daObjKnBullet_Execute(daObjKnBullet_c*);
+static void daObjKnBullet_Draw(daObjKnBullet_c*);
+static bool daObjKnBullet_IsDelete(daObjKnBullet_c*);
+static void daObjKnBullet_Delete(daObjKnBullet_c*);
+static void daObjKnBullet_create(fopAc_ac_c*);
+static void cLib_calcTimer__template0(s16*);
+extern "C" extern void* g_profile_KN_BULLET[12];
 
-extern "C" void Create__15daObjKnBullet_cFv(); // 1
-extern "C" void __dt__8cM3dGSphFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void Execute__15daObjKnBullet_cFv(); // 1
-extern "C" bool Draw__15daObjKnBullet_cFv(); // 1
-extern "C" bool Delete__15daObjKnBullet_cFv(); // 1
-extern "C" void setBaseMtx__15daObjKnBullet_cFv(); // 1
-extern "C" void col_init__15daObjKnBullet_cFv(); // 1
-extern "C" void col_chk__15daObjKnBullet_cFv(); // 1
-extern "C" void hitPrtclSet__15daObjKnBullet_cFv(); // 1
-extern "C" static void daObjKnBullet_Execute__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_Draw__FP15daObjKnBullet_c(); // 1
-extern "C" static bool daObjKnBullet_IsDelete__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_Delete__FP15daObjKnBullet_c(); // 1
-extern "C" static void daObjKnBullet_create__FP10fopAc_ac_c(); // 1
-extern "C" static void func_80C4792C(); // 1
+extern "C" void Create__15daObjKnBullet_cFv();
+extern "C" void __dt__8cM3dGSphFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void Execute__15daObjKnBullet_cFv();
+extern "C" bool Draw__15daObjKnBullet_cFv();
+extern "C" bool Delete__15daObjKnBullet_cFv();
+extern "C" void setBaseMtx__15daObjKnBullet_cFv();
+extern "C" void col_init__15daObjKnBullet_cFv();
+extern "C" void col_chk__15daObjKnBullet_cFv();
+extern "C" void hitPrtclSet__15daObjKnBullet_cFv();
+extern "C" static void daObjKnBullet_Execute__FP15daObjKnBullet_c();
+extern "C" static void daObjKnBullet_Draw__FP15daObjKnBullet_c();
+extern "C" static bool daObjKnBullet_IsDelete__FP15daObjKnBullet_c();
+extern "C" static void daObjKnBullet_Delete__FP15daObjKnBullet_c();
+extern "C" static void daObjKnBullet_create__FP10fopAc_ac_c();
+extern "C" static void func_80C4792C();
 extern "C" extern void* g_profile_KN_BULLET[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void dComIfGp_getReverb(int); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_posMove(fopAc_ac_c*, cXyz const*);
+void fpcEx_SearchByID(unsigned int);
+void dComIfGp_getReverb(int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkAtHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void XYZrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void ChkAtHit__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECScale();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Sph[36];

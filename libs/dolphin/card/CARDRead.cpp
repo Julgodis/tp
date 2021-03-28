@@ -12,26 +12,27 @@
 // 
 
 
-extern "C" void __CARDSeek(); // 1
-extern "C" static void ReadCallback(); // 1
-extern "C" static void CARDReadAsync(); // 1
-extern "C" void CARDRead(); // 1
+extern "C" void __CARDSeek();
+extern "C" static void ReadCallback();
+extern "C" static void CARDReadAsync();
+extern "C" void CARDRead();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __CARDBlock[544];
 
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDRead(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDIsReadable(); // 1
+extern "C" void DCInvalidateRange();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDRead();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDIsReadable();
 extern "C" extern u8 __CARDBlock[544];
 
 // 

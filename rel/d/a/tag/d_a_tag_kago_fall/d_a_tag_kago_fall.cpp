@@ -68,10 +68,10 @@ struct cBgS {
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -82,19 +82,21 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagKagoFall_Execute(daTagKagoFall_c*); // 2
-static void daTagKagoFall_Delete(daTagKagoFall_c*); // 2
-static void daTagKagoFall_Create(daTagKagoFall_c*); // 2
+static void daTagKagoFall_Execute(daTagKagoFall_c*);
+static void daTagKagoFall_Delete(daTagKagoFall_c*);
+static void daTagKagoFall_Create(daTagKagoFall_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Tag_KagoFall[12];
 
-extern "C" void create__15daTagKagoFall_cFv(); // 1
-extern "C" void execute__15daTagKagoFall_cFv(); // 1
-extern "C" void setActionMode__15daTagKagoFall_cFUcUc(); // 1
-extern "C" void actionWaitRiver__15daTagKagoFall_cFv(); // 1
-extern "C" void actionWaitFall__15daTagKagoFall_cFv(); // 1
-extern "C" bool _delete__15daTagKagoFall_cFv(); // 1
-extern "C" static void daTagKagoFall_Execute__FP15daTagKagoFall_c(); // 1
-extern "C" static void daTagKagoFall_Delete__FP15daTagKagoFall_c(); // 1
-extern "C" static void daTagKagoFall_Create__FP15daTagKagoFall_c(); // 1
+extern "C" void create__15daTagKagoFall_cFv();
+extern "C" void execute__15daTagKagoFall_cFv();
+extern "C" void setActionMode__15daTagKagoFall_cFUcUc();
+extern "C" void actionWaitRiver__15daTagKagoFall_cFv();
+extern "C" void actionWaitFall__15daTagKagoFall_cFv();
+extern "C" bool _delete__15daTagKagoFall_cFv();
+extern "C" static void daTagKagoFall_Execute__FP15daTagKagoFall_c();
+extern "C" static void daTagKagoFall_Delete__FP15daTagKagoFall_c();
+extern "C" static void daTagKagoFall_Create__FP15daTagKagoFall_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Tag_KagoFall[12];
 
@@ -102,40 +104,47 @@ extern "C" extern void* g_profile_Tag_KagoFall[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int); // 2
-void dCam_getBody(); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dCam_getBody();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void __ct__11dBgS_LinChkFv(); // 1
-extern "C" void __dt__11dBgS_LinChkFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void Stop__9dCamera_cFv(); // 1
-extern "C" void SetTrimSize__9dCamera_cFl(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyz(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void Eye__9dCamera_cFv(); // 1
-extern "C" void getSelectCursorPos__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void fadeOut__13mDoGph_gInf_cFfR8_GXColor();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void __ct__11dBgS_LinChkFv();
+extern "C" void __dt__11dBgS_LinChkFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void Stop__9dCamera_cFv();
+extern "C" void SetTrimSize__9dCamera_cFl();
+extern "C" void Set__9dCamera_cF4cXyz4cXyz();
+extern "C" void dCam_getBody__Fv();
+extern "C" void Eye__9dCamera_cFv();
+extern "C" void getSelectCursorPos__12dMsgObject_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

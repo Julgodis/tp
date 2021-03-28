@@ -12,28 +12,29 @@
 // 
 
 
-extern "C" static void OnReset(); // 1
-extern "C" static void MEMIntrruptHandler(); // 1
-extern "C" void OSProtectRange(); // 1
-extern "C" static void Config24MB(); // 1
-extern "C" static void Config48MB(); // 1
-extern "C" static void RealMode(); // 1
-extern "C" void __OSInitMemoryProtection(); // 1
+extern "C" static void OnReset();
+extern "C" static void MEMIntrruptHandler();
+extern "C" void OSProtectRange();
+extern "C" static void Config24MB();
+extern "C" static void Config48MB();
+extern "C" static void RealMode();
+extern "C" void __OSInitMemoryProtection();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __OSErrorTable[68 + 12 /* padding */];
 
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void __OSUnhandledException(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSMaskInterrupts(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSRegisterResetFunction(); // 1
+extern "C" void DCInvalidateRange();
+extern "C" void DCFlushRange();
+extern "C" void __OSUnhandledException();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSMaskInterrupts();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSRegisterResetFunction();
 extern "C" extern u8 __OSErrorTable[68 + 12 /* padding */];
 
 // 

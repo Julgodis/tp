@@ -63,51 +63,53 @@ struct JAUAudioArcInterpreter {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
 
-extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection(); // 1
-extern "C" void load__17JAUAudioArcLoaderFPCv(); // 1
-extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl(); // 1
-extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv(); // 1
-extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl(); // 1
-extern "C" void readBST__17JAUAudioArcLoaderFPCvUl(); // 1
-extern "C" void readBSTN__17JAUAudioArcLoaderFPCvUl(); // 1
-extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl(); // 1
-extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl(); // 1
-extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl(); // 1
-extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl(); // 1
-extern "C" void readBSFT__17JAUAudioArcLoaderFPCv(); // 1
-extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl(); // 1
-extern "C" void endBNKList__17JAUAudioArcLoaderFv(); // 1
-extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii(); // 1
-extern "C" void __dt__17JAUAudioArcLoaderFv(); // 1
+extern "C" void __ct__17JAUAudioArcLoaderFP10JAUSection();
+extern "C" void load__17JAUAudioArcLoaderFPCv();
+extern "C" void readWS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBNK__17JAUAudioArcLoaderFUlPCv();
+extern "C" void readBSC__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBST__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBSTN__17JAUAudioArcLoaderFPCvUl();
+extern "C" void readBMS__17JAUAudioArcLoaderFUlPCvUl();
+extern "C" void readBMS_fromArchive__17JAUAudioArcLoaderFUl();
+extern "C" void newVoiceBank__17JAUAudioArcLoaderFUlUl();
+extern "C" void newDynamicSeqBlock__17JAUAudioArcLoaderFUl();
+extern "C" void readBSFT__17JAUAudioArcLoaderFPCv();
+extern "C" void beginBNKList__17JAUAudioArcLoaderFUlUl();
+extern "C" void endBNKList__17JAUAudioArcLoaderFv();
+extern "C" void readMaxSeCategory__17JAUAudioArcLoaderFiii();
+extern "C" void __dt__17JAUAudioArcLoaderFv();
 extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B6C[4];
 
-extern "C" void __ct__22JAUAudioArcInterpreterFv(); // 1
-extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
-extern "C" void parse__22JAUAudioArcInterpreterFPCv(); // 1
-extern "C" bool readCommandMore__22JAUAudioArcInterpreterFUl(); // 1
-extern "C" void newSoundTable__10JAUSectionFPCvUlb(); // 1
-extern "C" void newSoundNameTable__10JAUSectionFPCvUlb(); // 1
-extern "C" void newStreamFileTable__10JAUSectionFPCvb(); // 1
-extern "C" void newSeSeqCollection__10JAUSectionFPCvUl(); // 1
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl(); // 1
-extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID(); // 1
-extern "C" void newWaveBank__10JAUSectionFUlPCv(); // 1
-extern "C" void loadWaveArc__10JAUSectionFUlUl(); // 1
-extern "C" void newBank__10JAUSectionFPCvUl(); // 1
-extern "C" void newVoiceBank__10JAUSectionFUlUl(); // 1
-extern "C" void beginNewBankTable__10JAUSectionFUlUl(); // 1
-extern "C" void endNewBankTable__10JAUSectionFv(); // 1
-extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__22JAUAudioArcInterpreterFv();
+extern "C" void __dt__22JAUAudioArcInterpreterFv();
+extern "C" void parse__22JAUAudioArcInterpreterFPCv();
+extern "C" bool readCommandMore__22JAUAudioArcInterpreterFUl();
+extern "C" void newSoundTable__10JAUSectionFPCvUlb();
+extern "C" void newSoundNameTable__10JAUSectionFPCvUlb();
+extern "C" void newStreamFileTable__10JAUSectionFPCvb();
+extern "C" void newSeSeqCollection__10JAUSectionFPCvUl();
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundIDPCvUl();
+extern "C" void newStaticSeqData__10JAUSectionF10JAISoundID();
+extern "C" void newWaveBank__10JAUSectionFUlPCv();
+extern "C" void loadWaveArc__10JAUSectionFUlUl();
+extern "C" void newBank__10JAUSectionFPCvUl();
+extern "C" void newVoiceBank__10JAUSectionFUlUl();
+extern "C" void beginNewBankTable__10JAUSectionFUlUl();
+extern "C" void endNewBankTable__10JAUSectionFv();
+extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80450B6C[4];
 
 // 

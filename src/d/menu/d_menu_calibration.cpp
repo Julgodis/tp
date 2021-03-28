@@ -51,10 +51,10 @@ struct dMenu_Calibration_c {
 	/* 801AFBF4 */ void draw();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -79,56 +79,62 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_calibration__stringBase0;
 
-extern "C" void __dt__19dMenu_Calibration_cFv(); // 1
-extern "C" void _move__19dMenu_Calibration_cFv(); // 1
-extern "C" void _draw__19dMenu_Calibration_cFv(); // 1
-extern "C" void step1_wait_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step1_wait_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void step1_move_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step1_move_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void step2_wait_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step2_wait_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void step2_move_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step2_move_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void step3_wait_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step3_wait_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void step3_move_init__19dMenu_Calibration_cFv(); // 1
-extern "C" void step3_move_move__19dMenu_Calibration_cFv(); // 1
-extern "C" void setCalibrationValue__19dMenu_Calibration_cFv(); // 1
-extern "C" void setAButtonString__19dMenu_Calibration_cFUs(); // 1
-extern "C" void setBButtonString__19dMenu_Calibration_cFUs(); // 1
-extern "C" void setStepString__19dMenu_Calibration_cFUs(); // 1
-extern "C" void setExplainString__19dMenu_Calibration_cFUs(); // 1
-extern "C" void setHIO__19dMenu_Calibration_cFb(); // 1
-extern "C" void draw__19dMenu_Calibration_cFv(); // 1
-extern "C" void __sinit_d_menu_calibration_cpp(); // 1
+extern "C" void __dt__19dMenu_Calibration_cFv();
+extern "C" void _move__19dMenu_Calibration_cFv();
+extern "C" void _draw__19dMenu_Calibration_cFv();
+extern "C" void step1_wait_init__19dMenu_Calibration_cFv();
+extern "C" void step1_wait_move__19dMenu_Calibration_cFv();
+extern "C" void step1_move_init__19dMenu_Calibration_cFv();
+extern "C" void step1_move_move__19dMenu_Calibration_cFv();
+extern "C" void step2_wait_init__19dMenu_Calibration_cFv();
+extern "C" void step2_wait_move__19dMenu_Calibration_cFv();
+extern "C" void step2_move_init__19dMenu_Calibration_cFv();
+extern "C" void step2_move_move__19dMenu_Calibration_cFv();
+extern "C" void step3_wait_init__19dMenu_Calibration_cFv();
+extern "C" void step3_wait_move__19dMenu_Calibration_cFv();
+extern "C" void step3_move_init__19dMenu_Calibration_cFv();
+extern "C" void step3_move_move__19dMenu_Calibration_cFv();
+extern "C" void setCalibrationValue__19dMenu_Calibration_cFv();
+extern "C" void setAButtonString__19dMenu_Calibration_cFUs();
+extern "C" void setBButtonString__19dMenu_Calibration_cFUs();
+extern "C" void setStepString__19dMenu_Calibration_cFUs();
+extern "C" void setExplainString__19dMenu_Calibration_cFUs();
+extern "C" void setHIO__19dMenu_Calibration_cFb();
+extern "C" void draw__19dMenu_Calibration_cFv();
+extern "C" void __sinit_d_menu_calibration_cpp();
 extern "C" extern char const* const d_menu_d_menu_calibration__stringBase0;
 
 // 
 // External References:
 // 
 
-void dMeter2Info_set2DVibration(); // 2
-void operator delete(void*); // 2
+void dMeter2Info_set2DVibration();
+void operator delete(void*);
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcpy();
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_drawHIO[3880];

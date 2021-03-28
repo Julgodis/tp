@@ -62,57 +62,59 @@ struct JKRDisposer {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRDvdFile__stringBase0;
 
-extern "C" void __ct__10JKRDvdFileFv(); // 1
-extern "C" void __ct__10JKRDvdFileFPCc(); // 1
-extern "C" void __ct__10JKRDvdFileFl(); // 1
-extern "C" void __dt__10JKRDvdFileFv(); // 1
-extern "C" void initiate__10JKRDvdFileFv(); // 1
-extern "C" void open__10JKRDvdFileFPCc(); // 1
-extern "C" void open__10JKRDvdFileFl(); // 1
-extern "C" void close__10JKRDvdFileFv(); // 1
-extern "C" void readData__10JKRDvdFileFPvll(); // 1
-extern "C" s32 writeData__10JKRDvdFileFPCvll(); // 1
-extern "C" void sync__10JKRDvdFileFv(); // 1
-extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo(); // 1
-extern "C" void getFileSize__10JKRDvdFileCFv(); // 1
-extern "C" void __sinit_JKRDvdFile_cpp(); // 1
-extern "C" void func_802D9B44(); // 1
+extern "C" void __ct__10JKRDvdFileFv();
+extern "C" void __ct__10JKRDvdFileFPCc();
+extern "C" void __ct__10JKRDvdFileFl();
+extern "C" void __dt__10JKRDvdFileFv();
+extern "C" void initiate__10JKRDvdFileFv();
+extern "C" void open__10JKRDvdFileFPCc();
+extern "C" void open__10JKRDvdFileFl();
+extern "C" void close__10JKRDvdFileFv();
+extern "C" void readData__10JKRDvdFileFPvll();
+extern "C" s32 writeData__10JKRDvdFileFPCvll();
+extern "C" void sync__10JKRDvdFileFv();
+extern "C" void doneProcess__10JKRDvdFileFlP11DVDFileInfo();
+extern "C" void getFileSize__10JKRDvdFileCFv();
+extern "C" void __sinit_JKRDvdFile_cpp();
+extern "C" void func_802D9B44();
 extern "C" extern char const* const JKRDvdFile__stringBase0;
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__7JKRFile[8];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSReceiveMessage(); // 1
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void DVDFastOpen(); // 1
-extern "C" void DVDOpen(); // 1
-extern "C" void DVDClose(); // 1
-extern "C" void DVDReadAsyncPrio(); // 1
-extern "C" void DVDGetCommandBlockStatus(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSReceiveMessage();
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void OSGetCurrentThread();
+extern "C" void DVDFastOpen();
+extern "C" void DVDOpen();
+extern "C" void DVDClose();
+extern "C" void DVDReadAsyncPrio();
+extern "C" void DVDGetCommandBlockStatus();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__7JKRFile[8];
 
 // 

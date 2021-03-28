@@ -36,19 +36,22 @@ struct cXyz {
 // Forward References:
 // 
 
-static bool daNpc_Fish_Draw(npc_fish_class*); // 2
-static bool daNpc_Fish_Execute(npc_fish_class*); // 2
-static bool daNpc_Fish_IsDelete(npc_fish_class*); // 2
-static bool daNpc_Fish_Delete(npc_fish_class*); // 2
-static void fish_set(fopAc_ac_c*, fish_data_s*); // 2
-static void daNpc_Fish_Create(fopAc_ac_c*); // 2
+static bool daNpc_Fish_Draw(npc_fish_class*);
+static bool daNpc_Fish_Execute(npc_fish_class*);
+static bool daNpc_Fish_IsDelete(npc_fish_class*);
+static bool daNpc_Fish_Delete(npc_fish_class*);
+static void fish_set(fopAc_ac_c*, fish_data_s*);
+static void daNpc_Fish_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_NPC_FISH[12];
 
-extern "C" static bool daNpc_Fish_Draw__FP14npc_fish_class(); // 1
-extern "C" static bool daNpc_Fish_Execute__FP14npc_fish_class(); // 1
-extern "C" static bool daNpc_Fish_IsDelete__FP14npc_fish_class(); // 1
-extern "C" static bool daNpc_Fish_Delete__FP14npc_fish_class(); // 1
-extern "C" static void fish_set__FP10fopAc_ac_cP11fish_data_s(); // 1
-extern "C" static void daNpc_Fish_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daNpc_Fish_Draw__FP14npc_fish_class();
+extern "C" static bool daNpc_Fish_Execute__FP14npc_fish_class();
+extern "C" static bool daNpc_Fish_IsDelete__FP14npc_fish_class();
+extern "C" static bool daNpc_Fish_Delete__FP14npc_fish_class();
+extern "C" static void fish_set__FP10fopAc_ac_cP11fish_data_s();
+extern "C" static void daNpc_Fish_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_NPC_FISH[12];
@@ -57,19 +60,24 @@ extern "C" extern void* g_profile_NPC_FISH[12];
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void cM_rndFX(f32); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void cM_rndFX(f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rndFX__Ff();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

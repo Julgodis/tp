@@ -15,10 +15,6 @@ struct Vec {
 };
 
 namespace JStudio {
-	struct TCreateObject {
-		/* 80285488 */ ~TCreateObject();
-	};
-
 	namespace stb {
 		struct data {
 			struct TParse_TBlock_object {
@@ -54,6 +50,10 @@ namespace JStudio {
 			/* 80289820 */ void parseBlock_object(JStudio::stb::data::TParse_TBlock_object const&, u32);
 		};
 
+	};
+
+	struct TCreateObject {
+		/* 80285488 */ ~TCreateObject();
 	};
 
 	struct TFactory {
@@ -146,66 +146,69 @@ namespace JGadget {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q27JStudio8TFactory[5];
 
-extern "C" void __ct__Q27JStudio8TControlFv(); // 1
-extern "C" void __dt__Q27JStudio8TControlFv(); // 1
-extern "C" void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory(); // 1
-extern "C" void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf(); // 1
-extern "C" void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf(); // 1
-extern "C" void transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject(); // 1
-extern "C" void transform_setOrigin_ctb_index__Q27JStudio8TControlFUl(); // 1
-extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
-extern "C" void __dt__Q27JStudio8TFactoryFv(); // 1
-extern "C" void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject(); // 1
-extern "C" void create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
-extern "C" void __ct__Q27JStudio6TParseFPQ27JStudio8TControl(); // 1
-extern "C" void __dt__Q27JStudio6TParseFv(); // 1
-extern "C" void parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl(); // 1
-extern "C" void parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
-extern "C" void parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
-extern "C" void parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
+extern "C" void __ct__Q27JStudio8TControlFv();
+extern "C" void __dt__Q27JStudio8TControlFv();
+extern "C" void setFactory__Q27JStudio8TControlFPQ27JStudio8TFactory();
+extern "C" void transformOnSet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void transformOnGet_setOrigin_TxyzRy__Q27JStudio8TControlFRC3Vecf();
+extern "C" void transform_setOrigin_ctb__Q27JStudio8TControlFRCQ37JStudio3ctb7TObject();
+extern "C" void transform_setOrigin_ctb_index__Q27JStudio8TControlFUl();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void __dt__Q27JStudio8TFactoryFv();
+extern "C" void appendCreateObject__Q27JStudio8TFactoryFPQ27JStudio13TCreateObject();
+extern "C" void create__Q27JStudio8TFactoryFRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void __ct__Q27JStudio6TParseFPQ27JStudio8TControl();
+extern "C" void __dt__Q27JStudio6TParseFv();
+extern "C" void parseHeader__Q27JStudio6TParseFRCQ47JStudio3stb4data14TParse_THeaderUl();
+extern "C" void parseBlock_block__Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+extern "C" void parseBlock_block_fvb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+extern "C" void parseBlock_block_ctb___Q27JStudio6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
 extern "C" extern void* __vt__Q27JStudio8TFactory[5];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__Q27JStudio13TCreateObject[4];
+extern "C" extern u8 ga8cSignature__Q27JStudio4data[8];
 
-extern "C" void __ct__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3ctb8TControlFv(); // 1
-extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl(); // 1
-extern "C" void __dt__Q37JStudio3ctb8TFactoryFv(); // 1
-extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl(); // 1
-extern "C" void __dt__Q37JStudio3ctb6TParseFv(); // 1
-extern "C" void __ct__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3fvb8TFactoryFv(); // 1
-extern "C" void __ct__Q37JStudio3fvb6TParseFPQ37JStudio3fvb8TControl(); // 1
-extern "C" void __dt__Q37JStudio3fvb6TParseFv(); // 1
-extern "C" void __ct__Q37JStudio3stb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3stb8TControlFv(); // 1
-extern "C" void __dt__Q37JStudio3stb8TFactoryFv(); // 1
-extern "C" void destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject(); // 1
-extern "C" void __ct__Q37JStudio3stb6TParseFPQ37JStudio3stb8TControl(); // 1
-extern "C" void __dt__Q37JStudio3stb6TParseFv(); // 1
-extern "C" void parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl(); // 1
-extern "C" void parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl(); // 1
-extern "C" void parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl(); // 1
-extern "C" void parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl(); // 1
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXRotRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void memcmp(); // 1
+extern "C" void __ct__Q37JStudio3ctb8TControlFv();
+extern "C" void __dt__Q37JStudio3ctb8TControlFv();
+extern "C" void getObject_index__Q37JStudio3ctb8TControlFUl();
+extern "C" void __dt__Q37JStudio3ctb8TFactoryFv();
+extern "C" void __ct__Q37JStudio3ctb6TParseFPQ37JStudio3ctb8TControl();
+extern "C" void __dt__Q37JStudio3ctb6TParseFv();
+extern "C" void __ct__Q37JStudio3fvb8TControlFv();
+extern "C" void __dt__Q37JStudio3fvb8TControlFv();
+extern "C" void __dt__Q37JStudio3fvb8TFactoryFv();
+extern "C" void __ct__Q37JStudio3fvb6TParseFPQ37JStudio3fvb8TControl();
+extern "C" void __dt__Q37JStudio3fvb6TParseFv();
+extern "C" void __ct__Q37JStudio3stb8TControlFv();
+extern "C" void __dt__Q37JStudio3stb8TControlFv();
+extern "C" void __dt__Q37JStudio3stb8TFactoryFv();
+extern "C" void destroy__Q37JStudio3stb8TFactoryFPQ37JStudio3stb7TObject();
+extern "C" void __ct__Q37JStudio3stb6TParseFPQ37JStudio3stb8TControl();
+extern "C" void __dt__Q37JStudio3stb6TParseFv();
+extern "C" void parseHeader_next__Q37JStudio3stb6TParseFPPCvPUlUl();
+extern "C" void parseBlock_next__Q37JStudio3stb6TParseFPPCvPUlUl();
+extern "C" void parseBlock_block__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data13TParse_TBlockUl();
+extern "C" void parseBlock_object__Q37JStudio3stb6TParseFRCQ47JStudio3stb4data20TParse_TBlock_objectUl();
+extern "C" void __dl__FPv();
+extern "C" void parse_next__Q37JGadget6binary19TParse_header_blockFPPCvUl();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXRotRad();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXTransApply();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void memcmp();
 extern "C" extern void* __vt__Q27JStudio13TCreateObject[4];
 extern "C" extern u8 ga8cSignature__Q27JStudio4data[8];
 

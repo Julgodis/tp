@@ -72,11 +72,11 @@ struct dSv_event_c {
 struct J3DModelData {
 };
 
-struct cXyz {
-	/* 804E00A0 */ ~cXyz();
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
+	/* 804E00A0 */ ~cXyz();
 };
 
 struct dScnKy_env_light_c {
@@ -91,10 +91,10 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -160,41 +160,83 @@ struct JUTNameTab {
 // Forward References:
 // 
 
-static void daDitem_Delete(daDitem_c*); // 2
-static void daDitem_Create(daDitem_c*); // 2
-static void daDitem_Execute(daDitem_c*); // 2
-static void daDitem_Draw(daDitem_c*); // 2
+static void daDitem_Delete(daDitem_c*);
+static void daDitem_Create(daDitem_c*);
+static void daDitem_Execute(daDitem_c*);
+static void daDitem_Draw(daDitem_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Demo_Item[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_804E1CBC[4];
+extern "C" extern u8 data_804E1CC0[4];
+extern "C" extern u8 data_804E1CC4[4];
+extern "C" extern u8 data_804E1CC8[4];
+extern "C" extern u8 data_804E1CCC[4];
+extern "C" extern u8 data_804E1CD0[4];
+extern "C" extern u8 data_804E1CD4[4];
+extern "C" extern u8 data_804E1CD8[4];
+extern "C" extern u8 data_804E1CDC[4];
+extern "C" extern u8 data_804E1CE0[4];
+extern "C" extern u8 data_804E1CE4[4];
+extern "C" extern u8 data_804E1CE8[4];
+extern "C" extern u8 data_804E1CEC[4];
+extern "C" extern u8 data_804E1CF0[4];
+extern "C" extern u8 data_804E1CF4[4];
+extern "C" extern u8 data_804E1CF8[4];
+extern "C" extern u8 data_804E1CFC[4];
+extern "C" extern u8 data_804E1D00[4];
+extern "C" extern u8 data_804E1D04[4];
+extern "C" extern u8 data_804E1D08[4];
+extern "C" extern u8 data_804E1D0C[4];
+extern "C" extern u8 data_804E1D10[4];
+extern "C" extern u8 data_804E1D14[4];
+extern "C" extern u8 data_804E1D18[4];
+extern "C" extern u8 data_804E1D1C[4];
 
-extern "C" bool __CreateHeap__9daDitem_cFv(); // 1
-extern "C" void CreateInit__9daDitem_cFv(); // 1
-extern "C" void action__9daDitem_cFv(); // 1
-extern "C" void actionStart__9daDitem_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void actionEvent__9daDitem_cFv(); // 1
-extern "C" void actionWaitLightEnd__9daDitem_cFv(); // 1
-extern "C" void actionEnd__9daDitem_cFv(); // 1
-extern "C" void setInsectEffect__9daDitem_cFv(); // 1
-extern "C" void followInsectEffect__9daDitem_cFv(); // 1
-extern "C" void endInsectEffect__9daDitem_cFv(); // 1
-extern "C" void onEventReg__9daDitem_cFii(); // 1
-extern "C" void set_pos__9daDitem_cFv(); // 1
-extern "C" void anim_control__9daDitem_cFv(); // 1
-extern "C" void initEffectLight__9daDitem_cFv(); // 1
-extern "C" void settingEffectLight__9daDitem_cFv(); // 1
-extern "C" void set_mtx__9daDitem_cFv(); // 1
-extern "C" void setTevStr__9daDitem_cFv(); // 1
-extern "C" void setListStart__9daDitem_cFv(); // 1
-extern "C" void draw_WOOD_STICK__9daDitem_cFv(); // 1
-extern "C" static void daDitem_Delete__FP9daDitem_c(); // 1
-extern "C" static void daDitem_Create__FP9daDitem_c(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" static void daDitem_Execute__FP9daDitem_c(); // 1
-extern "C" static void daDitem_Draw__FP9daDitem_c(); // 1
-extern "C" void __sinit_d_a_demo_item_cpp(); // 1
-extern "C" static void func_804E19B0(); // 1
-extern "C" static void func_804E19B8(); // 1
+extern "C" bool __CreateHeap__9daDitem_cFv();
+extern "C" void CreateInit__9daDitem_cFv();
+extern "C" void action__9daDitem_cFv();
+extern "C" void actionStart__9daDitem_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void actionEvent__9daDitem_cFv();
+extern "C" void actionWaitLightEnd__9daDitem_cFv();
+extern "C" void actionEnd__9daDitem_cFv();
+extern "C" void setInsectEffect__9daDitem_cFv();
+extern "C" void followInsectEffect__9daDitem_cFv();
+extern "C" void endInsectEffect__9daDitem_cFv();
+extern "C" void onEventReg__9daDitem_cFii();
+extern "C" void set_pos__9daDitem_cFv();
+extern "C" void anim_control__9daDitem_cFv();
+extern "C" void initEffectLight__9daDitem_cFv();
+extern "C" void settingEffectLight__9daDitem_cFv();
+extern "C" void set_mtx__9daDitem_cFv();
+extern "C" void setTevStr__9daDitem_cFv();
+extern "C" void setListStart__9daDitem_cFv();
+extern "C" void draw_WOOD_STICK__9daDitem_cFv();
+extern "C" static void daDitem_Delete__FP9daDitem_c();
+extern "C" static void daDitem_Create__FP9daDitem_c();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" static void daDitem_Execute__FP9daDitem_c();
+extern "C" static void daDitem_Draw__FP9daDitem_c();
+extern "C" void __sinit_d_a_demo_item_cpp();
+extern "C" static void func_804E19B0();
+extern "C" static void func_804E19B8();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Demo_Item[12];
 extern "C" extern u8 lit_1107[1 + 3 /* padding */];
@@ -242,92 +284,27 @@ extern "C" extern u8 data_804E1D1C[4];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_addAngleY(fopAc_ac_c*, s16, s16); // 2
-void fopDwTg_ToDrawQ(create_tag_class*, int); // 2
-void fopDwTg_DrawQTo(create_tag_class*); // 2
-void fpcLf_GetPriority(leafdraw_class const*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void CheckItemCreateHeap(fopAc_ac_c*); // 2
-void execItemGet(u8); // 2
-void isInsect(u8); // 2
-void dKy_efplight_set(LIGHT_INFLUENCE*); // 2
-void dKy_efplight_cut(LIGHT_INFLUENCE*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void cLib_chaseUC(u8*, u8, u8); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
-void operator delete(void*); // 2
-
-SECTION_INIT void __init_data(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_addAngleY__FP10fopAc_ac_css(); // 1
-extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi(); // 1
-extern "C" void fopDwTg_DrawQTo__FP16create_tag_class(); // 1
-extern "C" void fpcLf_GetPriority__FPC14leafdraw_class(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
-extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
-extern "C" void hide__12daItemBase_cFv(); // 1
-extern "C" void chkDraw__12daItemBase_cFv(); // 1
-extern "C" void chkDead__12daItemBase_cFv(); // 1
-extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__19dPa_followEcallBackFUcUc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void execItemGet__FUc(); // 1
-extern "C" void isInsect__FUc(); // 1
-extern "C" void DeleteBase__12daItemBase_cFPCc(); // 1
-extern "C" bool clothCreate__12daItemBase_cFv(); // 1
-extern "C" void DrawBase__12daItemBase_cFv(); // 1
-extern "C" void RotateYBase__12daItemBase_cFv(); // 1
-extern "C" void settingBeforeDraw__12daItemBase_cFv(); // 1
-extern "C" void setShadow__12daItemBase_cFv(); // 1
-extern "C" void animEntry__12daItemBase_cFv(); // 1
-extern "C" void animPlay__12daItemBase_cFffffff(); // 1
-extern "C" void chkFlag__12daItemBase_cFi(); // 1
-extern "C" void getTevFrm__12daItemBase_cFv(); // 1
-extern "C" void getBtpFrm__12daItemBase_cFv(); // 1
-extern "C" void getShadowSize__12daItemBase_cFv(); // 1
-extern "C" void getCollisionH__12daItemBase_cFv(); // 1
-extern "C" void getCollisionR__12daItemBase_cFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_addAngleY(fopAc_ac_c*, s16, s16);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
+void fopDwTg_DrawQTo(create_tag_class*);
+void fpcLf_GetPriority(leafdraw_class const*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void CheckItemCreateHeap(fopAc_ac_c*);
+void execItemGet(u8);
+void isInsect(u8);
+void dKy_efplight_set(LIGHT_INFLUENCE*);
+void dKy_efplight_cut(LIGHT_INFLUENCE*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_chaseUC(u8*, u8, u8);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];
@@ -341,7 +318,85 @@ extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 struct_80450D64[4];
-extern "C" void __register_global_object(); // 1
+
+SECTION_INIT void __init_data();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_addAngleY__FP10fopAc_ac_css();
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void fpcLf_GetPriority__FPC14leafdraw_class();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setEventReg__11dSv_event_cFUsUc();
+extern "C" void getEventReg__11dSv_event_cCFUs();
+extern "C" void hide__12daItemBase_cFv();
+extern "C" void chkDraw__12daItemBase_cFv();
+extern "C" void chkDead__12daItemBase_cFv();
+extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c();
+extern "C" void __ct__19dPa_followEcallBackFUcUc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void execItemGet__FUc();
+extern "C" void isInsect__FUc();
+extern "C" void DeleteBase__12daItemBase_cFPCc();
+extern "C" bool clothCreate__12daItemBase_cFv();
+extern "C" void DrawBase__12daItemBase_cFv();
+extern "C" void RotateYBase__12daItemBase_cFv();
+extern "C" void settingBeforeDraw__12daItemBase_cFv();
+extern "C" void setShadow__12daItemBase_cFv();
+extern "C" void animEntry__12daItemBase_cFv();
+extern "C" void animPlay__12daItemBase_cFffffff();
+extern "C" void chkFlag__12daItemBase_cFi();
+extern "C" void getTevFrm__12daItemBase_cFv();
+extern "C" void getBtpFrm__12daItemBase_cFv();
+extern "C" void getShadowSize__12daItemBase_cFv();
+extern "C" void getCollisionH__12daItemBase_cFv();
+extern "C" void getCollisionR__12daItemBase_cFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_efplight_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_efplight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void __dl__FPv();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern void* __vt__12daItemBase_c[17 + 1 /* padding */];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

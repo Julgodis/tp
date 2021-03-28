@@ -43,16 +43,20 @@ struct JASDvd {
 // Forward References:
 // 
 
-static void my_OSCancelAlarmAll(); // 2
-static void destroyVideo(); // 2
-void mDoRst_reset(int, u32, int); // 2
-void mDoRst_resetCallBack(int, void*); // 2
+static void my_OSCancelAlarmAll();
+static void destroyVideo();
+void mDoRst_reset(int, u32, int);
+void mDoRst_resetCallBack(int, void*);
+extern "C" extern char const* const m_Do_m_Do_Reset__stringBase0;
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450C80[8];
+extern "C" extern u8 data_80450C88[8];
 
-extern "C" static void my_OSCancelAlarmAll__Fv(); // 1
-extern "C" static void destroyVideo__Fv(); // 1
-extern "C" void mDoRst_reset__FiUli(); // 1
-extern "C" void mDoRst_resetCallBack__FiPv(); // 1
-extern "C" void getResetData__6mDoRstFv(); // 1
+extern "C" static void my_OSCancelAlarmAll__Fv();
+extern "C" static void destroyVideo__Fv();
+extern "C" void mDoRst_reset__FiUli();
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void getResetData__6mDoRstFv();
 extern "C" extern char const* const m_Do_m_Do_Reset__stringBase0;
 extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
 extern "C" extern u8 struct_80450C80[8];
@@ -62,39 +66,46 @@ extern "C" extern u8 data_80450C88[8];
 // External References:
 // 
 
-void mDoDvdErr_ThdCleanup(); // 2
-void cAPICPad_recalibrate(); // 2
+void mDoDvdErr_ThdCleanup();
+void cAPICPad_recalibrate();
+extern "C" extern u8 g_mDoMemCd_control[8192];
+extern "C" extern u8 struct_80450BB8[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
+extern "C" extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451500[4];
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
-extern "C" void OSAttention(); // 1
-extern "C" void main__9mDoDvdThdFPv(); // 1
-extern "C" void mDoDvdErr_ThdCleanup__Fv(); // 1
-extern "C" void cAPICPad_recalibrate__Fv(); // 1
-extern "C" void pause__13JASTaskThreadFb(); // 1
-extern "C" void getThreadPointer__6JASDvdFv(); // 1
-extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
-extern "C" void destroyManager__8JUTVideoFv(); // 1
-extern "C" void clearIndex__6JUTXfbFv(); // 1
-extern "C" void LCDisable(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSSetSaveRegion(); // 1
-extern "C" void OSResetSystem(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSDetachThread(); // 1
-extern "C" void OSSuspendThread(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
-extern "C" void DVDCheckDisk(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void GXSetCurrentGXThread(); // 1
-extern "C" void GXGetCurrentGXThread(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXAbortFrame(); // 1
-extern "C" void GXDrawDone(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" void _savegpr_27(); // 1
+extern "C" void OSAttention();
+extern "C" void main__9mDoDvdThdFPv();
+extern "C" void mDoDvdErr_ThdCleanup__Fv();
+extern "C" void cAPICPad_recalibrate__Fv();
+extern "C" void pause__13JASTaskThreadFb();
+extern "C" void getThreadPointer__6JASDvdFv();
+extern "C" void hasReset__10Z2AudioMgrCFv();
+extern "C" void destroyManager__8JUTVideoFv();
+extern "C" void clearIndex__6JUTXfbFv();
+extern "C" void LCDisable();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSSetSaveRegion();
+extern "C" void OSResetSystem();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSCancelThread();
+extern "C" void OSDetachThread();
+extern "C" void OSSuspendThread();
+extern "C" void DVDGetDriveStatus();
+extern "C" void DVDCheckDisk();
+extern "C" void VIWaitForRetrace();
+extern "C" void VIFlush();
+extern "C" void VISetBlack();
+extern "C" void GXSetCurrentGXThread();
+extern "C" void GXGetCurrentGXThread();
+extern "C" void GXFlush();
+extern "C" void GXAbortFrame();
+extern "C" void GXDrawDone();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void _savegpr_27();
 extern "C" extern u8 g_mDoMemCd_control[8192];
 extern "C" extern u8 struct_80450BB8[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];

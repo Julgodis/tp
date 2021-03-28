@@ -31,35 +31,39 @@ struct daTagWrHowl_c {
 // Forward References:
 // 
 
-static void daTagWrHowl_create(daTagWrHowl_c*); // 2
-static void daTagWrHowl_Delete(daTagWrHowl_c*); // 2
-static void daTagWrHowl_execute(daTagWrHowl_c*); // 2
-static void daTagWrHowl_draw(daTagWrHowl_c*); // 2
+static void daTagWrHowl_create(daTagWrHowl_c*);
+static void daTagWrHowl_Delete(daTagWrHowl_c*);
+static void daTagWrHowl_execute(daTagWrHowl_c*);
+static void daTagWrHowl_draw(daTagWrHowl_c*);
+extern "C" extern void* g_profile_Tag_WaraHowl[12];
 
-extern "C" void __ct__13daTagWrHowl_cFv(); // 1
-extern "C" void __dt__13daTagWrHowl_cFv(); // 1
-extern "C" void create__13daTagWrHowl_cFv(); // 1
-extern "C" bool Delete__13daTagWrHowl_cFv(); // 1
-extern "C" bool draw__13daTagWrHowl_cFv(); // 1
-extern "C" void execute__13daTagWrHowl_cFv(); // 1
-extern "C" void init__13daTagWrHowl_cFv(); // 1
-extern "C" void chkWlfInTag__13daTagWrHowl_cFv(); // 1
-extern "C" static void daTagWrHowl_create__FP13daTagWrHowl_c(); // 1
-extern "C" static void daTagWrHowl_Delete__FP13daTagWrHowl_c(); // 1
-extern "C" static void daTagWrHowl_execute__FP13daTagWrHowl_c(); // 1
-extern "C" static void daTagWrHowl_draw__FP13daTagWrHowl_c(); // 1
+extern "C" void __ct__13daTagWrHowl_cFv();
+extern "C" void __dt__13daTagWrHowl_cFv();
+extern "C" void create__13daTagWrHowl_cFv();
+extern "C" bool Delete__13daTagWrHowl_cFv();
+extern "C" bool draw__13daTagWrHowl_cFv();
+extern "C" void execute__13daTagWrHowl_cFv();
+extern "C" void init__13daTagWrHowl_cFv();
+extern "C" void chkWlfInTag__13daTagWrHowl_cFv();
+extern "C" static void daTagWrHowl_create__FP13daTagWrHowl_c();
+extern "C" static void daTagWrHowl_Delete__FP13daTagWrHowl_c();
+extern "C" static void daTagWrHowl_execute__FP13daTagWrHowl_c();
+extern "C" static void daTagWrHowl_draw__FP13daTagWrHowl_c();
 extern "C" extern void* g_profile_Tag_WaraHowl[12];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

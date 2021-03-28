@@ -21,8 +21,8 @@ struct JASSoundParams {
 // 
 
 
-extern "C" void clamp__14JASSoundParamsFv(); // 1
-extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams(); // 1
+extern "C" void clamp__14JASSoundParamsFv();
+extern "C" void combine__14JASSoundParamsFRC14JASSoundParamsRC14JASSoundParams();
 
 // 
 // External References:

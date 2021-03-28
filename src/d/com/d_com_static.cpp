@@ -123,69 +123,98 @@ struct dBgS {
 // Forward References:
 // 
 
-void daNpcMsg_setEvtNum(u8); // 2
-void daNpcKakashi_chkSwdTutorialStage(); // 2
-void daNpcKakashi_setSwdTutorialStep(u8); // 2
-void daNpcKakashi_getSwdTutorialStep(); // 2
-void daNpcKakashi_getSwdTutorialResult(); // 2
-void daNpcKakashi_setSwdTutorialResult(bool); // 2
-void daNpcKakashi_getSuccessCount(); // 2
-void daNpcKakashi_incSuccessCount(); // 2
-void daNpcKakashi_clrSuccessCount(); // 2
+void daNpcMsg_setEvtNum(u8);
+void daNpcKakashi_chkSwdTutorialStage();
+void daNpcKakashi_setSwdTutorialStep(u8);
+void daNpcKakashi_getSwdTutorialStep();
+void daNpcKakashi_getSwdTutorialResult();
+void daNpcKakashi_setSwdTutorialResult(bool);
+void daNpcKakashi_getSuccessCount();
+void daNpcKakashi_incSuccessCount();
+void daNpcKakashi_clrSuccessCount();
+extern "C" extern char const* const d_com_d_com_static__stringBase0;
+extern "C" extern u8 mRoom__7daSus_c[256];
+extern "C" extern u8 m_entryModel__10daMirror_c[12];
+extern "C" extern u8 m_deleteRoom__15dGrass_packet_c[12];
+extern "C" extern u8 m_deleteRoom__16dFlower_packet_c[12];
+extern "C" extern u8 struct_80450D88[4];
+extern "C" extern u8 struct_80450D8C[4];
+extern "C" extern u8 m_aim_rate__8daYkgr_c[4];
+extern "C" extern u8 m_path__8daYkgr_c[4];
+extern "C" extern u8 m_emitter__8daYkgr_c[4];
+extern "C" extern u8 m_top__13daTagStream_c[4];
+extern "C" extern u8 m_myObj__10daMirror_c[4];
+extern "C" extern u8 m_myObj__9daGrass_c[4];
+extern "C" extern u8 m_grass__9daGrass_c[4];
+extern "C" extern u8 m_flower__9daGrass_c[4];
+extern "C" extern u8 m_myObj__6daMP_c[4];
+extern "C" extern u8 mTagMagne__12daTagMagne_c[4];
+extern "C" extern u8 struct_80450DC0[4];
+extern "C" extern u8 pad_80450DD1[4];
+extern "C" extern void* M_dir_base__Q212daObjMovebox5Act_c[2];
+extern "C" extern u32 OPEN_SIZE__7daDsh_c;
+extern "C" extern u32 OPEN_ACCEL__7daDsh_c;
+extern "C" extern u32 OPEN_SPEED__7daDsh_c;
+extern "C" extern u32 OPEN_BOUND_SPEED__7daDsh_c;
+extern "C" extern u32 OPEN_BOUND_RATIO__7daDsh_c;
+extern "C" extern u32 CLOSE_ACCEL__7daDsh_c;
+extern "C" extern u32 CLOSE_SPEED__7daDsh_c;
+extern "C" extern u32 CLOSE_BOUND_SPEED__7daDsh_c;
+extern "C" extern u32 CLOSE_BOUND_RATIO__7daDsh_c;
 
-extern "C" void set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
-extern "C" void reset__Q27daSus_c6data_cFv(); // 1
-extern "C" void isSwitch__Q27daSus_c6data_cFv(); // 1
-extern "C" void check__Q27daSus_c6data_cFRC4cXyz(); // 1
-extern "C" void check__Q27daSus_c6data_cFP10fopAc_ac_c(); // 1
-extern "C" void execute__Q27daSus_c6data_cFv(); // 1
-extern "C" void add__Q27daSus_c6room_cFPQ27daSus_c6data_c(); // 1
-extern "C" void reset__Q27daSus_c6room_cFv(); // 1
-extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc(); // 1
-extern "C" void reset__7daSus_cFv(); // 1
-extern "C" void check__7daSus_cFScRC4cXyz(); // 1
-extern "C" void check__7daSus_cFP10fopAc_ac_c(); // 1
-extern "C" void execute__7daSus_cFv(); // 1
-extern "C" void daNpcMsg_setEvtNum__FUc(); // 1
-extern "C" void daNpcKakashi_chkSwdTutorialStage__Fv(); // 1
-extern "C" void daNpcKakashi_setSwdTutorialStep__FUc(); // 1
-extern "C" void daNpcKakashi_getSwdTutorialStep__Fv(); // 1
-extern "C" void daNpcKakashi_getSwdTutorialResult__Fv(); // 1
-extern "C" void daNpcKakashi_setSwdTutorialResult__Fb(); // 1
-extern "C" void daNpcKakashi_getSuccessCount__Fv(); // 1
-extern "C" void daNpcKakashi_incSuccessCount__Fv(); // 1
-extern "C" void daNpcKakashi_clrSuccessCount__Fv(); // 1
-extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c(); // 1
-extern "C" void checkArea__13daTagStream_cFPC4cXyz(); // 1
-extern "C" void entry__10daMirror_cFP8J3DModel(); // 1
-extern "C" void remove__10daMirror_cFv(); // 1
-extern "C" void deleteRoomGrass__9daGrass_cFi(); // 1
-extern "C" void deleteRoomFlower__9daGrass_cFi(); // 1
-extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv(); // 1
-extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf(); // 1
-extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv(); // 1
-extern "C" void daMP_c_THPPlayerPause__6daMP_cFv(); // 1
-extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo(); // 1
-extern "C" void checkMagneA__12daTagMagne_cFv(); // 1
-extern "C" void checkMagneB__12daTagMagne_cFv(); // 1
-extern "C" void checkMagneC__12daTagMagne_cFv(); // 1
-extern "C" void getPlayerNo__11daTagMist_cFv(); // 1
-extern "C" void clrSaveFlag__12daObjCarry_cFv(); // 1
-extern "C" void setSaveFlag__12daObjCarry_cFv(); // 1
-extern "C" void chkSaveFlag__12daObjCarry_cFv(); // 1
-extern "C" void getPos__12daObjCarry_cFi(); // 1
-extern "C" void savePos__12daObjCarry_cFi4cXyz(); // 1
-extern "C" void onSttsFlag__12daObjCarry_cFiUc(); // 1
-extern "C" void offSttsFlag__12daObjCarry_cFiUc(); // 1
-extern "C" void chkSttsFlag__12daObjCarry_cFiUc(); // 1
-extern "C" void setRoomNo__12daObjCarry_cFiSc(); // 1
-extern "C" void getRoomNo__12daObjCarry_cFi(); // 1
-extern "C" void __sinit_d_com_static_cpp(); // 1
-extern "C" static void __arraydtor_4479(); // 1
-extern "C" void __ct__Q27daSus_c6room_cFv(); // 1
-extern "C" static void __arraydtor_3839(); // 1
-extern "C" void __dt__Q27daSus_c6data_cFv(); // 1
-extern "C" void __ct__Q27daSus_c6data_cFv(); // 1
+extern "C" void set__Q27daSus_c6data_cFScRC4cXyzRC4cXyzUcUcUc();
+extern "C" void reset__Q27daSus_c6data_cFv();
+extern "C" void isSwitch__Q27daSus_c6data_cFv();
+extern "C" void check__Q27daSus_c6data_cFRC4cXyz();
+extern "C" void check__Q27daSus_c6data_cFP10fopAc_ac_c();
+extern "C" void execute__Q27daSus_c6data_cFv();
+extern "C" void add__Q27daSus_c6room_cFPQ27daSus_c6data_c();
+extern "C" void reset__Q27daSus_c6room_cFv();
+extern "C" void newData__7daSus_cFScRC4cXyzRC4cXyzUcUcUc();
+extern "C" void reset__7daSus_cFv();
+extern "C" void check__7daSus_cFScRC4cXyz();
+extern "C" void check__7daSus_cFP10fopAc_ac_c();
+extern "C" void execute__7daSus_cFv();
+extern "C" void daNpcMsg_setEvtNum__FUc();
+extern "C" void daNpcKakashi_chkSwdTutorialStage__Fv();
+extern "C" void daNpcKakashi_setSwdTutorialStep__FUc();
+extern "C" void daNpcKakashi_getSwdTutorialStep__Fv();
+extern "C" void daNpcKakashi_getSwdTutorialResult__Fv();
+extern "C" void daNpcKakashi_setSwdTutorialResult__Fb();
+extern "C" void daNpcKakashi_getSuccessCount__Fv();
+extern "C" void daNpcKakashi_incSuccessCount__Fv();
+extern "C" void daNpcKakashi_clrSuccessCount__Fv();
+extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c();
+extern "C" void checkArea__13daTagStream_cFPC4cXyz();
+extern "C" void entry__10daMirror_cFP8J3DModel();
+extern "C" void remove__10daMirror_cFv();
+extern "C" void deleteRoomGrass__9daGrass_cFi();
+extern "C" void deleteRoomFlower__9daGrass_cFi();
+extern "C" void daMP_c_Get_MovieRestFrame__6daMP_cFv();
+extern "C" void daMP_c_Set_PercentMovieVolume__6daMP_cFf();
+extern "C" void daMP_c_THPPlayerPlay__6daMP_cFv();
+extern "C" void daMP_c_THPPlayerPause__6daMP_cFv();
+extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo();
+extern "C" void checkMagneA__12daTagMagne_cFv();
+extern "C" void checkMagneB__12daTagMagne_cFv();
+extern "C" void checkMagneC__12daTagMagne_cFv();
+extern "C" void getPlayerNo__11daTagMist_cFv();
+extern "C" void clrSaveFlag__12daObjCarry_cFv();
+extern "C" void setSaveFlag__12daObjCarry_cFv();
+extern "C" void chkSaveFlag__12daObjCarry_cFv();
+extern "C" void getPos__12daObjCarry_cFi();
+extern "C" void savePos__12daObjCarry_cFi4cXyz();
+extern "C" void onSttsFlag__12daObjCarry_cFiUc();
+extern "C" void offSttsFlag__12daObjCarry_cFiUc();
+extern "C" void chkSttsFlag__12daObjCarry_cFiUc();
+extern "C" void setRoomNo__12daObjCarry_cFiSc();
+extern "C" void getRoomNo__12daObjCarry_cFi();
+extern "C" void __sinit_d_com_static_cpp();
+extern "C" static void __arraydtor_4479();
+extern "C" void __ct__Q27daSus_c6room_cFv();
+extern "C" static void __arraydtor_3839();
+extern "C" void __dt__Q27daSus_c6data_cFv();
+extern "C" void __ct__Q27daSus_c6data_cFv();
 extern "C" extern char const* const d_com_d_com_static__stringBase0;
 extern "C" extern u8 mRoom__7daSus_c[256];
 extern "C" extern u8 m_entryModel__10daMirror_c[12];
@@ -220,35 +249,38 @@ extern "C" extern u32 CLOSE_BOUND_RATIO__7daDsh_c;
 // External References:
 // 
 
-void mDoMch_Create(); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*); // 2
-void operator delete(void*); // 2
+void mDoMch_Create();
+void fopAcM_delete(fopAc_ac_c*);
+void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*);
+void operator delete(void*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 m_status__7dDemo_c[4];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void mDoMch_Create__Fv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void setEventReg__11dSv_event_cFUsUc(); // 1
-extern "C" void getEventReg__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void mDoMch_Create__Fv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void setEventReg__11dSv_event_cFUsUc();
+extern "C" void getEventReg__11dSv_event_cCFUs();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
+extern "C" void strcmp();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 m_status__7dDemo_c[4];

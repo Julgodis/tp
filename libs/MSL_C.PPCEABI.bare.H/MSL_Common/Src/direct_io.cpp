@@ -12,23 +12,23 @@
 // 
 
 
-extern "C" static void __fwrite(); // 1
-extern "C" void fwrite(); // 1
+extern "C" static void __fwrite();
+extern "C" void fwrite();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void __flush_buffer(); // 1
-extern "C" void __prep_buffer(); // 1
-extern "C" void __end_critical_region(); // 1
-extern "C" void __begin_critical_region(); // 1
-extern "C" void fseek(); // 1
-extern "C" void __memrchr(); // 1
-extern "C" void __stdio_atexit(); // 1
-extern "C" void fwide(); // 1
+SECTION_INIT void memcpy();
+extern "C" void __flush_buffer();
+extern "C" void __prep_buffer();
+extern "C" void __end_critical_region();
+extern "C" void __begin_critical_region();
+extern "C" void fseek();
+extern "C" void __memrchr();
+extern "C" void __stdio_atexit();
+extern "C" void fwide();
 
 // 
 // Declarations:

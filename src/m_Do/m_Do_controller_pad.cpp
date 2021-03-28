@@ -40,12 +40,14 @@ struct mDoCPd_c {
 // Forward References:
 // 
 
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
-extern "C" void create__8mDoCPd_cFv(); // 1
-extern "C" void read__8mDoCPd_cFv(); // 1
-extern "C" void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad(); // 1
-extern "C" void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad(); // 1
-extern "C" void recalibrate__8mDoCPd_cFv(); // 1
+extern "C" void create__8mDoCPd_cFv();
+extern "C" void read__8mDoCPd_cFv();
+extern "C" void convert__8mDoCPd_cFP27interface_of_controller_padP10JUTGamePad();
+extern "C" void LRlockCheck__8mDoCPd_cFP27interface_of_controller_pad();
+extern "C" void recalibrate__8mDoCPd_cFv();
 extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 
@@ -53,21 +55,28 @@ extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 // External References:
 // 
 
-void mDoRst_resetCallBack(int, void*); // 2
-void cLib_memSet(void*, int, u32); // 2
-void* operator new(u32); // 2
+void mDoRst_resetCallBack(int, void*);
+void cLib_memSet(void*, int, u32);
+void* operator new(u32);
+extern "C" extern u8 g_HIO[64 + 4 /* padding */];
+extern "C" extern u32 data_80450580;
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 sAnalogMode__10JUTGamePad[4];
+extern "C" extern u8 sCallback__Q210JUTGamePad13C3ButtonReset[4];
+extern "C" extern u8 sCallbackArg__Q210JUTGamePad13C3ButtonReset[4 + 4 /* padding */];
+extern "C" extern u8 struct_80451500[4];
 
-extern "C" void mDoRst_resetCallBack__FiPv(); // 1
-extern "C" void cLib_memSet__FPviUl(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort(); // 1
-extern "C" void read__10JUTGamePadFv(); // 1
-extern "C" void clearForReset__10JUTGamePadFv(); // 1
-extern "C" void getGamePad__10JUTGamePadFi(); // 1
-extern "C" void setEnabled__Q210JUTGamePad7CRumbleFUl(); // 1
-extern "C" void PADSetAnalogMode(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoRst_resetCallBack__FiPv();
+extern "C" void cLib_memSet__FPviUl();
+extern "C" void* __nw__FUl();
+extern "C" void __ct__10JUTGamePadFQ210JUTGamePad8EPadPort();
+extern "C" void read__10JUTGamePadFv();
+extern "C" void clearForReset__10JUTGamePadFv();
+extern "C" void getGamePad__10JUTGamePadFi();
+extern "C" void setEnabled__Q210JUTGamePad7CRumbleFUl();
+extern "C" void PADSetAnalogMode();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_HIO[64 + 4 /* padding */];
 extern "C" extern u32 data_80450580;
 extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];

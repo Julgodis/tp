@@ -12,16 +12,19 @@
 // 
 
 
-extern "C" void strtol(); // 1
-extern "C" void strtoul(); // 1
-extern "C" static void __strtoul(); // 1
+extern "C" void strtol();
+extern "C" void strtoul();
+extern "C" static void __strtoul();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __ctype_map[256];
+extern "C" extern u8 __upper_map[256];
+extern "C" extern u8 errno[4 + 4 /* padding */];
 
-extern "C" void __StringRead(); // 1
+extern "C" void __StringRead();
 extern "C" extern u8 __ctype_map[256];
 extern "C" extern u8 __upper_map[256];
 extern "C" extern u8 errno[4 + 4 /* padding */];

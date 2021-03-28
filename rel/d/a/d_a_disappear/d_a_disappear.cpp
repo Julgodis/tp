@@ -21,6 +21,9 @@ struct disappear_class {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -30,17 +33,14 @@ struct dKy_tevstr_c {
 struct cXyz {
 };
 
-struct csXyz {
-};
-
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -51,51 +51,56 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static bool daDisappear_Draw(disappear_class*); // 2
-static void s_ks_sub(void*, void*); // 2
-static void daDisappear_Execute(disappear_class*); // 2
-static bool daDisappear_IsDelete(disappear_class*); // 2
-static bool daDisappear_Delete(disappear_class*); // 2
-static void yami_disappear(disappear_class*, f32); // 2
-static void ghost_disappear(disappear_class*, f32); // 2
-static void set_disappear(disappear_class*, f32); // 2
-static void daDisappear_Create(fopAc_ac_c*); // 2
+static bool daDisappear_Draw(disappear_class*);
+static void s_ks_sub(void*, void*);
+static void daDisappear_Execute(disappear_class*);
+static bool daDisappear_IsDelete(disappear_class*);
+static bool daDisappear_Delete(disappear_class*);
+static void yami_disappear(disappear_class*, f32);
+static void ghost_disappear(disappear_class*, f32);
+static void set_disappear(disappear_class*, f32);
+static void daDisappear_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_DISAPPEAR[12];
 
-extern "C" static bool daDisappear_Draw__FP15disappear_class(); // 1
-extern "C" static void s_ks_sub__FPvPv(); // 1
-extern "C" static void daDisappear_Execute__FP15disappear_class(); // 1
-extern "C" static bool daDisappear_IsDelete__FP15disappear_class(); // 1
-extern "C" static bool daDisappear_Delete__FP15disappear_class(); // 1
-extern "C" static void yami_disappear__FP15disappear_classf(); // 1
-extern "C" static void ghost_disappear__FP15disappear_classf(); // 1
-extern "C" static void set_disappear__FP15disappear_classf(); // 1
-extern "C" static void daDisappear_Create__FP10fopAc_ac_c(); // 1
+extern "C" static bool daDisappear_Draw__FP15disappear_class();
+extern "C" static void s_ks_sub__FPvPv();
+extern "C" static void daDisappear_Execute__FP15disappear_class();
+extern "C" static bool daDisappear_IsDelete__FP15disappear_class();
+extern "C" static bool daDisappear_Delete__FP15disappear_class();
+extern "C" static void yami_disappear__FP15disappear_classf();
+extern "C" static void ghost_disappear__FP15disappear_classf();
+extern "C" static void set_disappear__FP15disappear_classf();
+extern "C" static void daDisappear_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_DISAPPEAR[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_createItemFromEnemyID(u8, cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void dComIfGp_getReverb(int); // 2
-void dKy_Sound_set(cXyz, int, unsigned int, int); // 2
+void fopAc_IsActor(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_createItemFromEnemyID(u8, cXyz const*, int, int, csXyz const*, cXyz const*, f32*, f32*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void dComIfGp_getReverb(int);
+void dKy_Sound_set(cXyz, int, unsigned int, int);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dKy_Sound_set__F4cXyziUii(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_createItemFromEnemyID__FUcPC4cXyziiPC5csXyzPC4cXyzPfPf();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dKy_Sound_set__F4cXyziUii();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

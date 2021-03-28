@@ -36,10 +36,10 @@ struct Z2SoundMgr {
 	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -163,103 +163,116 @@ struct JAISoundParamsMove {
 // 
 
 
-extern "C" void __ct__11Z2EnvSeBaseFP3Vec(); // 1
-extern "C" void __dt__11Z2EnvSeBaseFv(); // 1
-extern "C" void startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl(); // 1
-extern "C" void startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl(); // 1
-extern "C" void __ct__10Z2EnvSeDirFP3Vec(); // 1
-extern "C" void __dt__10Z2EnvSeDirFv(); // 1
-extern "C" void setPanDir__10Z2EnvSeDirFP3Vec(); // 1
-extern "C" void calcPan__10Z2EnvSeDirFf(); // 1
-extern "C" void startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff(); // 1
-extern "C" void __ct__14Z2EnvSeAutoPanFv(); // 1
-extern "C" void __dt__14Z2EnvSeAutoPanFv(); // 1
-extern "C" void setPanParam__14Z2EnvSeAutoPanFffbbff(); // 1
-extern "C" void calcPan__14Z2EnvSeAutoPanFv(); // 1
-extern "C" void startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff(); // 1
-extern "C" void __ct__10Z2EnvSeMgrFv(); // 1
-extern "C" void __dt__10Z2EnvSeMgrFv(); // 1
-extern "C" void framework__10Z2EnvSeMgrFv(); // 1
-extern "C" void resetScene__10Z2EnvSeMgrFv(); // 1
-extern "C" void resetSceneInner__10Z2EnvSeMgrFv(); // 1
-extern "C" void initSceneEnvSe__10Z2EnvSeMgrFlScf(); // 1
-extern "C" void playSceneEnvSe__10Z2EnvSeMgrFv(); // 1
-extern "C" void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec(); // 1
-extern "C" void startStaticEnvSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void registWindowPos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startRainSe__10Z2EnvSeMgrFlSc(); // 1
-extern "C" void startNearThunderSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void startFarThunderSe__10Z2EnvSeMgrFP3VecSc(); // 1
-extern "C" void setSnowPower__10Z2EnvSeMgrFSc(); // 1
-extern "C" void initStrongWindSe__10Z2EnvSeMgrFv(); // 1
-extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void initRiverSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
-extern "C" void registRiverSePos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void setHyrulSewerOpen__10Z2EnvSeMgrFb(); // 1
-extern "C" void startRiverSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void initFallSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
-extern "C" void registFallSePos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startFallSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void initEtcSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
-extern "C" void registEtcSePos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startEtcSe__10Z2EnvSeMgrFSc(); // 1
-extern "C" void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec(); // 1
-extern "C" void setFogWipeWidth__10Z2EnvSeMgrFf(); // 1
-extern "C" void getFogDensity__10Z2EnvSeMgrFv(); // 1
-extern "C" void startFogSe__10Z2EnvSeMgrFv(); // 1
-extern "C" void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc(); // 1
-extern "C" void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec(); // 1
-extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc(); // 1
+extern "C" void __ct__11Z2EnvSeBaseFP3Vec();
+extern "C" void __dt__11Z2EnvSeBaseFv();
+extern "C" void startEnvSe__11Z2EnvSeBaseF10JAISoundIDfffffUl();
+extern "C" void startEnvSeLevel__11Z2EnvSeBaseF10JAISoundIDfffffUl();
+extern "C" void __ct__10Z2EnvSeDirFP3Vec();
+extern "C" void __dt__10Z2EnvSeDirFv();
+extern "C" void setPanDir__10Z2EnvSeDirFP3Vec();
+extern "C" void calcPan__10Z2EnvSeDirFf();
+extern "C" void startEnvSeDirLevel__10Z2EnvSeDirF10JAISoundIDff();
+extern "C" void __ct__14Z2EnvSeAutoPanFv();
+extern "C" void __dt__14Z2EnvSeAutoPanFv();
+extern "C" void setPanParam__14Z2EnvSeAutoPanFffbbff();
+extern "C" void calcPan__14Z2EnvSeAutoPanFv();
+extern "C" void startEnvSeAutoPanLevel__14Z2EnvSeAutoPanF10JAISoundIDfff();
+extern "C" void __ct__10Z2EnvSeMgrFv();
+extern "C" void __dt__10Z2EnvSeMgrFv();
+extern "C" void framework__10Z2EnvSeMgrFv();
+extern "C" void resetScene__10Z2EnvSeMgrFv();
+extern "C" void resetSceneInner__10Z2EnvSeMgrFv();
+extern "C" void initSceneEnvSe__10Z2EnvSeMgrFlScf();
+extern "C" void playSceneEnvSe__10Z2EnvSeMgrFv();
+extern "C" void initStaticEnvSe__10Z2EnvSeMgrFUcUcUcUcP3Vec();
+extern "C" void startStaticEnvSe__10Z2EnvSeMgrFSc();
+extern "C" void registWindowPos__10Z2EnvSeMgrFP3Vec();
+extern "C" void startRainSe__10Z2EnvSeMgrFlSc();
+extern "C" void startNearThunderSe__10Z2EnvSeMgrFSc();
+extern "C" void startFarThunderSe__10Z2EnvSeMgrFP3VecSc();
+extern "C" void setSnowPower__10Z2EnvSeMgrFSc();
+extern "C" void initStrongWindSe__10Z2EnvSeMgrFv();
+extern "C" void setWindDirection__10Z2EnvSeMgrFP3Vec();
+extern "C" void startStrongWindSe__10Z2EnvSeMgrFSc();
+extern "C" void initRiverSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" void registRiverSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" void setHyrulSewerOpen__10Z2EnvSeMgrFb();
+extern "C" void startRiverSe__10Z2EnvSeMgrFSc();
+extern "C" void initFallSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" void registFallSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" void startFallSe__10Z2EnvSeMgrFSc();
+extern "C" void initEtcSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" void registEtcSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" void startEtcSe__10Z2EnvSeMgrFSc();
+extern "C" void registWolfSmellSePos__10Z2EnvSeMgrFP3Vec();
+extern "C" void startFogWipeTrigger__10Z2EnvSeMgrFP3Vec();
+extern "C" void setFogWipeWidth__10Z2EnvSeMgrFf();
+extern "C" void getFogDensity__10Z2EnvSeMgrFv();
+extern "C" void startFogSe__10Z2EnvSeMgrFv();
+extern "C" void initLv3WaterSe__10Z2EnvSeMgrFUcUcUcUc();
+extern "C" void registLv3WaterSePos__10Z2EnvSeMgrFUcP3Vec();
+extern "C" void startLv3WaterSe__10Z2EnvSeMgrFSc();
 
 // 
 // External References:
 // 
 
-void dComIfGp_getReverb(int); // 2
-void operator delete(void*); // 2
-void JMAFastVECNormalize(Vec const*, Vec*); // 2
+void dComIfGp_getReverb(int);
+void operator delete(void*);
+void JMAFastVECNormalize(Vec const*, Vec*);
+extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B44[4];
+extern "C" extern u8 data_80450B60[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 data_80450B88[4];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+extern "C" extern u32 cEqualCSlope__6Z2Calc;
+extern "C" extern u32 cEqualPSlope__6Z2Calc;
 
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isSwitch__12dSv_memBit_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void releaseHandle__8JAISoundFv(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void func_802A2FEC(); // 1
-extern "C" void linearTransform__6Z2CalcFfffffb(); // 1
-extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign(); // 1
-extern "C" void getRandom__6Z2CalcFfff(); // 1
-extern "C" void setParam__Q26Z2Calc8FNoise1fFfff(); // 1
-extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv(); // 1
-extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __ct__12Z2MultiSeMgrFv(); // 1
-extern "C" void __dt__12Z2MultiSeMgrFv(); // 1
-extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec(); // 1
-extern "C" void resetMultiSePos__12Z2MultiSeMgrFv(); // 1
-extern "C" void getPanPower__12Z2MultiSeMgrFv(); // 1
-extern "C" void getDolbyPower__12Z2MultiSeMgrFv(); // 1
-extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci(); // 1
-extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi(); // 1
-extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci(); // 1
-extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void JMAFastVECNormalize__FPC3VecP3Vec(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isSwitch__12dSv_memBit_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void releaseHandle__8JAISoundFv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void func_802A2FEC();
+extern "C" void linearTransform__6Z2CalcFfffffb();
+extern "C" void getParamByExp__6Z2CalcFffffffQ26Z2Calc9CurveSign();
+extern "C" void getRandom__6Z2CalcFfff();
+extern "C" void setParam__Q26Z2Calc8FNoise1fFfff();
+extern "C" void calcNoise1f__Q26Z2Calc8FNoise1fFv();
+extern "C" void setIIR__10Z2SoundMgrFP8JAISoundPCs();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __ct__12Z2MultiSeMgrFv();
+extern "C" void __dt__12Z2MultiSeMgrFv();
+extern "C" void registMultiSePos__12Z2MultiSeMgrFP3Vec();
+extern "C" void resetMultiSePos__12Z2MultiSeMgrFv();
+extern "C" void getPanPower__12Z2MultiSeMgrFv();
+extern "C" void getDolbyPower__12Z2MultiSeMgrFv();
+extern "C" void convertAbsToRel__10Z2AudienceFR3VecP3Veci();
+extern "C" void calcRelPosVolume__10Z2AudienceFRC3Vecfi();
+extern "C" void calcRelPosPan__10Z2AudienceFRC3Veci();
+extern "C" void calcRelPosDolby__10Z2AudienceFRC3Veci();
+extern "C" void __dl__FPv();
+extern "C" void JMAFastVECNormalize__FPC3VecP3Vec();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const CUTOFF_TO_IIR_TABLE__7JASCalc[1024];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

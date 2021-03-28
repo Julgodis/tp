@@ -61,29 +61,32 @@ namespace JStudio {
 // 
 
 
-extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight(); // 1
-extern "C" void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
-extern "C" void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
-extern "C" void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv(); // 1
-extern "C" void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl(); // 1
-extern "C" void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl(); // 1
+extern "C" void __ct__Q214JStudio_JStage21TAdaptor_ambientLightFPCQ26JStage7TSystemPQ26JStage13TAmbientLight();
+extern "C" void __dt__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+extern "C" void adaptor_do_begin__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+extern "C" void adaptor_do_end__Q214JStudio_JStage21TAdaptor_ambientLightFv();
+extern "C" void adaptor_do_update__Q214JStudio_JStage21TAdaptor_ambientLightFUl();
+extern "C" void adaptor_do_data__Q214JStudio_JStage21TAdaptor_ambientLightFPCvUlPCvUl();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
+extern "C" extern void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
 
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
-extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv(); // 1
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
-extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void __dt__Q27JStudio21TAdaptor_ambientLightFv();
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+extern "C" void __ct__Q27JStudio14TVariableValueFv();
+extern "C" void __dl__FPv();
+extern "C" void __construct_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio21TAdaptor_ambientLight[16];
 extern "C" extern void* __vt__Q27JStudio21TAdaptor_ambientLight[8];
 extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];

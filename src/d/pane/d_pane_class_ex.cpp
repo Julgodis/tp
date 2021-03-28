@@ -36,13 +36,13 @@ struct J2DPicture {
 	/* 8025603C */ bool getMaterial() const;
 };
 
-struct J2DAnmVtxColor {
-};
-
 struct J2DAnmVisibilityFull {
 };
 
 struct J2DAnmTexPattern {
+};
+
+struct J2DAnmVtxColor {
 };
 
 struct J2DPane {
@@ -57,23 +57,23 @@ struct J2DPane {
 // 
 
 
-extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
-extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern(); // 1
-extern "C" void getMaterial__12J2DTextBoxExCFv(); // 1
-extern "C" bool getMaterial__10J2DTextBoxCFv(); // 1
-extern "C" void getMaterial__12J2DPictureExCFv(); // 1
-extern "C" bool getMaterial__10J2DPictureCFv(); // 1
-extern "C" void setAnimation__12J2DTextBoxExFP15J2DAnmTransform(); // 1
-extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTransform(); // 1
-extern "C" void setAnimation__11J2DWindowExFP15J2DAnmTransform(); // 1
+extern "C" void setAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void setAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setAnimation__7J2DPaneFP16J2DAnmTexPattern();
+extern "C" void getMaterial__12J2DTextBoxExCFv();
+extern "C" bool getMaterial__10J2DTextBoxCFv();
+extern "C" void getMaterial__12J2DPictureExCFv();
+extern "C" bool getMaterial__10J2DPictureCFv();
+extern "C" void setAnimation__12J2DTextBoxExFP15J2DAnmTransform();
+extern "C" void setAnimation__12J2DPictureExFP15J2DAnmTransform();
+extern "C" void setAnimation__11J2DWindowExFP15J2DAnmTransform();
 
 // 
 // External References:
 // 
 
 
-extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform(); // 1
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTransform();
 
 // 
 // Declarations:

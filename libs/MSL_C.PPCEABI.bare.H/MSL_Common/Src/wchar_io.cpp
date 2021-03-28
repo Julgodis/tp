@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void fwide(); // 1
+extern "C" void fwide();
 
 // 
 // External References:

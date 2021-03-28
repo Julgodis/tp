@@ -19,6 +19,8 @@ struct __partial_array_destructor {
 // Forward References:
 // 
 
+#pragma section "extab_"
+extern "C" extern void* const _section_symbol_extab[18];
 
 #pragma section "extab_"
 extern "C" extern void* const _section_symbol_extab[18];
@@ -28,7 +30,7 @@ extern "C" extern void* const _section_symbol_extab[18];
 // 
 
 
-extern "C" void __dt__26__partial_array_destructorFv(); // 1
+extern "C" void __dt__26__partial_array_destructorFv();
 
 // 
 // Declarations:

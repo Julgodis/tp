@@ -36,29 +36,30 @@ struct create_tag {
 // Forward References:
 // 
 
-void fpcCtIt_Method(int (*)(void*, void*), void*); // 2
-void fpcCtIt_Judge(void* (*)(void*, void*), void*); // 2
-static void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*); // 2
-void fpcCtIt_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*); // 2
+void fpcCtIt_Method(int (*)(void*, void*), void*);
+void fpcCtIt_Judge(void* (*)(void*, void*), void*);
+static void fpcCtIt_filter_JudgeInLayer(create_tag*, fpcCtIt_jilprm_c*);
+void fpcCtIt_JudgeInLayer(unsigned int, void* (*)(void*, void*), void*);
 
-extern "C" void fpcCtIt_Method__FPFPvPv_iPv(); // 1
-extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" static void fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c(); // 1
-extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv(); // 1
+extern "C" void fpcCtIt_Method__FPFPvPv_iPv();
+extern "C" void fpcCtIt_Judge__FPFPvPv_PvPv();
+extern "C" static void fpcCtIt_filter_JudgeInLayer__FP10create_tagP16fpcCtIt_jilprm_c();
+extern "C" void fpcCtIt_JudgeInLayer__FUiPFPvPv_PvPv();
 
 // 
 // External References:
 // 
 
-void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
-void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*); // 2
-void cTgIt_MethodCall(create_tag_class*, method_filter*); // 2
-void cTgIt_JudgeFilter(create_tag_class*, judge_filter*); // 2
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*);
+void cLsIt_Judge(node_list_class*, void* (*)(node_class*, void*), void*);
+void cTgIt_MethodCall(create_tag_class*, method_filter*);
+void cTgIt_JudgeFilter(create_tag_class*, judge_filter*);
+extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
-extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv(); // 1
-extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter(); // 1
-extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter(); // 1
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
+extern "C" void cLsIt_Judge__FP15node_list_classPFP10node_classPv_PvPv();
+extern "C" void cTgIt_MethodCall__FP16create_tag_classP13method_filter();
+extern "C" void cTgIt_JudgeFilter__FP16create_tag_classP12judge_filter();
 extern "C" extern u8 g_fpcCtTg_Queue[12 + 4 /* padding */];
 
 // 

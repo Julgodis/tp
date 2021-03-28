@@ -12,33 +12,34 @@
 // 
 
 
-extern "C" void __CARDCheckSum(); // 1
-extern "C" static void VerifyID(); // 1
-extern "C" static void VerifyDir(); // 1
-extern "C" static void VerifyFAT(); // 1
-extern "C" void __CARDVerify(); // 1
-extern "C" static void CARDCheckExAsync(); // 1
-extern "C" void CARDCheck(); // 1
+extern "C" void __CARDCheckSum();
+extern "C" static void VerifyID();
+extern "C" static void VerifyDir();
+extern "C" static void VerifyFAT();
+extern "C" void __CARDVerify();
+extern "C" static void CARDCheckExAsync();
+extern "C" void CARDCheck();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __CARDBlock[544];
 
-SECTION_INIT void memset(); // 1
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSLockSramEx(); // 1
-extern "C" void __OSUnlockSramEx(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetFontEncode(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDUpdateFatBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __shr2i(); // 1
+SECTION_INIT void memset();
+SECTION_INIT void memcpy();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSLockSramEx();
+extern "C" void __OSUnlockSramEx();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetFontEncode();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDUpdateFatBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __shr2i();
 extern "C" extern u8 __CARDBlock[544];
 
 // 

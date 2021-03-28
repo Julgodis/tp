@@ -21,29 +21,29 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcCt_IsCreatingByID(unsigned int); // 2
-void fpcCt_IsDoing(base_process_class*); // 2
-void fpcCt_Abort(base_process_class*); // 2
-void fpcCt_Handler(); // 2
+void fpcCt_IsCreatingByID(unsigned int);
+void fpcCt_IsDoing(base_process_class*);
+void fpcCt_Abort(base_process_class*);
+void fpcCt_Handler();
 
-extern "C" void fpcCt_IsCreatingByID__FUi(); // 1
-extern "C" void fpcCt_IsDoing__FP18base_process_class(); // 1
-extern "C" void fpcCt_Abort__FP18base_process_class(); // 1
-extern "C" void fpcCt_Handler__Fv(); // 1
+extern "C" void fpcCt_IsCreatingByID__FUi();
+extern "C" void fpcCt_IsDoing__FP18base_process_class();
+extern "C" void fpcCt_Abort__FP18base_process_class();
+extern "C" void fpcCt_Handler__Fv();
 
 // 
 // External References:
 // 
 
-void fpcCtRq_IsCreatingByID(unsigned int); // 2
-void fpcCtRq_Cancel(create_request*); // 2
-void fpcCtRq_IsDoing(create_request*); // 2
-void fpcCtRq_Handler(); // 2
+void fpcCtRq_IsCreatingByID(unsigned int);
+void fpcCtRq_Cancel(create_request*);
+void fpcCtRq_IsDoing(create_request*);
+void fpcCtRq_Handler();
 
-extern "C" void fpcCtRq_IsCreatingByID__FUi(); // 1
-extern "C" void fpcCtRq_Cancel__FP14create_request(); // 1
-extern "C" void fpcCtRq_IsDoing__FP14create_request(); // 1
-extern "C" void fpcCtRq_Handler__Fv(); // 1
+extern "C" void fpcCtRq_IsCreatingByID__FUi();
+extern "C" void fpcCtRq_Cancel__FP14create_request();
+extern "C" void fpcCtRq_IsDoing__FP14create_request();
+extern "C" void fpcCtRq_Handler__Fv();
 
 // 
 // Declarations:

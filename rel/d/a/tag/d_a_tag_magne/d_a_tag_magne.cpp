@@ -25,22 +25,26 @@ struct daTagMagne_c {
 // Forward References:
 // 
 
-static void daTagMagne_Delete(daTagMagne_c*); // 2
-static void daTagMagne_Create(fopAc_ac_c*); // 2
+static void daTagMagne_Delete(daTagMagne_c*);
+static void daTagMagne_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Tag_Magne[12];
 
-extern "C" void Create__12daTagMagne_cFv(); // 1
-extern "C" void create__12daTagMagne_cFv(); // 1
-extern "C" void _delete__12daTagMagne_cFv(); // 1
-extern "C" static void daTagMagne_Delete__FP12daTagMagne_c(); // 1
-extern "C" static void daTagMagne_Create__FP10fopAc_ac_c(); // 1
+extern "C" void Create__12daTagMagne_cFv();
+extern "C" void create__12daTagMagne_cFv();
+extern "C" void _delete__12daTagMagne_cFv();
+extern "C" static void daTagMagne_Delete__FP12daTagMagne_c();
+extern "C" static void daTagMagne_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_Tag_Magne[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 mTagMagne__12daTagMagne_c[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 mTagMagne__12daTagMagne_c[4];

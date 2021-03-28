@@ -103,10 +103,10 @@ struct dBgW {
 	/* 8007B9C0 */ void Move();
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -155,50 +155,93 @@ struct J3DJoint {
 // Forward References:
 // 
 
-static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*); // 2
-static void nodeCallBack(J3DJoint*, int); // 2
-static void daObjSw5_Draw(daObjSw5_c*); // 2
-static void daObjSw5_Execute(daObjSw5_c*); // 2
-static void daObjSw5_Delete(daObjSw5_c*); // 2
-static void daObjSw5_Create(fopAc_ac_c*); // 2
+static void rideCallBack(dBgW*, fopAc_ac_c*, fopAc_ac_c*);
+static void nodeCallBack(J3DJoint*, int);
+static void daObjSw5_Draw(daObjSw5_c*);
+static void daObjSw5_Execute(daObjSw5_c*);
+static void daObjSw5_Delete(daObjSw5_c*);
+static void daObjSw5_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_Swpush5[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_8059C918[4];
+extern "C" extern u8 data_8059C91C[4];
+extern "C" extern u8 data_8059C920[4];
+extern "C" extern u8 data_8059C924[4];
+extern "C" extern u8 data_8059C928[4];
+extern "C" extern u8 data_8059C92C[4];
+extern "C" extern u8 data_8059C930[4];
+extern "C" extern u8 data_8059C934[4];
+extern "C" extern u8 data_8059C938[4];
+extern "C" extern u8 data_8059C93C[4];
+extern "C" extern u8 data_8059C940[4];
+extern "C" extern u8 data_8059C944[4];
+extern "C" extern u8 data_8059C948[4];
+extern "C" extern u8 data_8059C94C[4];
+extern "C" extern u8 data_8059C950[4];
+extern "C" extern u8 data_8059C954[4];
+extern "C" extern u8 data_8059C958[4];
+extern "C" extern u8 data_8059C95C[4];
+extern "C" extern u8 data_8059C960[4];
+extern "C" extern u8 data_8059C964[4];
+extern "C" extern u8 data_8059C968[4];
+extern "C" extern u8 data_8059C96C[4];
+extern "C" extern u8 data_8059C970[4];
+extern "C" extern u8 data_8059C974[4];
+extern "C" extern u8 data_8059C978[4];
 
-extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c(); // 1
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void initBaseMtx__10daObjSw5_cFv(); // 1
-extern "C" void setBaseMtx__10daObjSw5_cFv(); // 1
-extern "C" void Create__10daObjSw5_cFv(); // 1
-extern "C" void CreateHeap__10daObjSw5_cFv(); // 1
-extern "C" void create__10daObjSw5_cFv(); // 1
-extern "C" void Execute__10daObjSw5_cFPPA3_A4_f(); // 1
-extern "C" void setting_ride_flag__10daObjSw5_cFv(); // 1
-extern "C" bool checkPushable__10daObjSw5_cFv(); // 1
-extern "C" void event_proc_call__10daObjSw5_cFv(); // 1
-extern "C" void actionPauseNoneInit__10daObjSw5_cFv(); // 1
-extern "C" void actionPauseNone__10daObjSw5_cFv(); // 1
-extern "C" void actionPauseOrderInit__10daObjSw5_cFv(); // 1
-extern "C" void actionPauseOrder__10daObjSw5_cFv(); // 1
-extern "C" void actionPauseInit__10daObjSw5_cFv(); // 1
-extern "C" void actionPause__10daObjSw5_cFv(); // 1
-extern "C" void actionWait__10daObjSw5_cFv(); // 1
-extern "C" void actionOrder__10daObjSw5_cFv(); // 1
-extern "C" void actionEvent__10daObjSw5_cFv(); // 1
-extern "C" void calc_top_pos__10daObjSw5_cFv(); // 1
-extern "C" void mode_proc_call__10daObjSw5_cFv(); // 1
-extern "C" void modeWaitLowerInit__10daObjSw5_cFv(); // 1
-extern "C" void modeWaitLower__10daObjSw5_cFv(); // 1
-extern "C" void modeLowerInit__10daObjSw5_cFv(); // 1
-extern "C" void modeLower__10daObjSw5_cFv(); // 1
-extern "C" void modeWaitUpperInit__10daObjSw5_cFv(); // 1
-extern "C" void modeWaitUpper__10daObjSw5_cFv(); // 1
-extern "C" void modeUpperInit__10daObjSw5_cFv(); // 1
-extern "C" void modeUpper__10daObjSw5_cFv(); // 1
-extern "C" void Draw__10daObjSw5_cFv(); // 1
-extern "C" void Delete__10daObjSw5_cFv(); // 1
-extern "C" static void daObjSw5_Draw__FP10daObjSw5_c(); // 1
-extern "C" static void daObjSw5_Execute__FP10daObjSw5_c(); // 1
-extern "C" static void daObjSw5_Delete__FP10daObjSw5_c(); // 1
-extern "C" static void daObjSw5_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
+extern "C" static void rideCallBack__FP4dBgWP10fopAc_ac_cP10fopAc_ac_c();
+extern "C" static void nodeCallBack__FP8J3DJointi();
+extern "C" void initBaseMtx__10daObjSw5_cFv();
+extern "C" void setBaseMtx__10daObjSw5_cFv();
+extern "C" void Create__10daObjSw5_cFv();
+extern "C" void CreateHeap__10daObjSw5_cFv();
+extern "C" void create__10daObjSw5_cFv();
+extern "C" void Execute__10daObjSw5_cFPPA3_A4_f();
+extern "C" void setting_ride_flag__10daObjSw5_cFv();
+extern "C" bool checkPushable__10daObjSw5_cFv();
+extern "C" void event_proc_call__10daObjSw5_cFv();
+extern "C" void actionPauseNoneInit__10daObjSw5_cFv();
+extern "C" void actionPauseNone__10daObjSw5_cFv();
+extern "C" void actionPauseOrderInit__10daObjSw5_cFv();
+extern "C" void actionPauseOrder__10daObjSw5_cFv();
+extern "C" void actionPauseInit__10daObjSw5_cFv();
+extern "C" void actionPause__10daObjSw5_cFv();
+extern "C" void actionWait__10daObjSw5_cFv();
+extern "C" void actionOrder__10daObjSw5_cFv();
+extern "C" void actionEvent__10daObjSw5_cFv();
+extern "C" void calc_top_pos__10daObjSw5_cFv();
+extern "C" void mode_proc_call__10daObjSw5_cFv();
+extern "C" void modeWaitLowerInit__10daObjSw5_cFv();
+extern "C" void modeWaitLower__10daObjSw5_cFv();
+extern "C" void modeLowerInit__10daObjSw5_cFv();
+extern "C" void modeLower__10daObjSw5_cFv();
+extern "C" void modeWaitUpperInit__10daObjSw5_cFv();
+extern "C" void modeWaitUpper__10daObjSw5_cFv();
+extern "C" void modeUpperInit__10daObjSw5_cFv();
+extern "C" void modeUpper__10daObjSw5_cFv();
+extern "C" void Draw__10daObjSw5_cFv();
+extern "C" void Delete__10daObjSw5_cFv();
+extern "C" static void daObjSw5_Draw__FP10daObjSw5_c();
+extern "C" static void daObjSw5_Execute__FP10daObjSw5_c();
+extern "C" static void daObjSw5_Delete__FP10daObjSw5_c();
+extern "C" static void daObjSw5_Create__FP10fopAc_ac_c();
+extern "C" void __dt__4cXyzFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_Swpush5[12];
@@ -247,64 +290,17 @@ extern "C" extern u8 data_8059C978[4];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void fopAcM_orderPotentialEvent(fopAc_ac_c*, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
@@ -313,7 +309,62 @@ extern "C" extern u8 g_env_light[4880];
 extern "C" extern u8 j3dSys[284];
 extern "C" extern u8 mCurrentMtx__6J3DSys[48];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void fopAcM_orderPotentialEvent__FP10fopAc_ac_cUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+extern "C" void __ct__4dBgWFv();
+extern "C" void Move__4dBgWFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

@@ -47,43 +47,46 @@ struct ShopCam_action_c {
 // 
 
 
-extern "C" void shop_cam_action_init__16ShopCam_action_cFv(); // 1
-extern "C" void shop_cam_action__16ShopCam_action_cFv(); // 1
-extern "C" void Save__16ShopCam_action_cFv(); // 1
-extern "C" void EventRecoverNotime__16ShopCam_action_cFv(); // 1
-extern "C" void Reset__16ShopCam_action_cFv(); // 1
-extern "C" void move__16ShopCam_action_cFv(); // 1
-extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
-extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz(); // 1
-extern "C" void _debugSetCamera__16ShopCam_action_cFv(); // 1
-extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz(); // 1
+extern "C" void shop_cam_action_init__16ShopCam_action_cFv();
+extern "C" void shop_cam_action__16ShopCam_action_cFv();
+extern "C" void Save__16ShopCam_action_cFv();
+extern "C" void EventRecoverNotime__16ShopCam_action_cFv();
+extern "C" void Reset__16ShopCam_action_cFv();
+extern "C" void move__16ShopCam_action_cFv();
+extern "C" void setCamDataIdx__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
+extern "C" void setCamDataIdx2__16ShopCam_action_cFP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP10fopAc_ac_cP4cXyzP4cXyz();
+extern "C" void _debugSetCamera__16ShopCam_action_cFv();
+extern "C" void setMasterCamCtrPos__16ShopCam_action_cFP4cXyz();
 
 // 
 // External References:
 // 
 
-void dCam_getBody(); // 2
-void cM_atan2s(f32, f32); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32); // 2
-void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*); // 2
+void dCam_getBody();
+void cM_atan2s(f32, f32);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void cLib_addCalcPos2(cXyz*, cXyz const&, f32, f32);
+void cLib_offsetPos(cXyz*, cXyz const*, s16, cXyz const*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
 
-extern "C" void Stay__9dCamera_cFv(); // 1
-extern "C" void SetTrimSize__9dCamera_cFl(); // 1
-extern "C" void EventRecoverNotime__9dCamera_cFv(); // 1
-extern "C" void Set__9dCamera_cF4cXyz4cXyzfs(); // 1
-extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff(); // 1
-extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void Stay__9dCamera_cFv();
+extern "C" void SetTrimSize__9dCamera_cFl();
+extern "C" void EventRecoverNotime__9dCamera_cFv();
+extern "C" void Set__9dCamera_cF4cXyz4cXyzfs();
+extern "C" void Reset__9dCamera_cF4cXyz4cXyzfs();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void cLib_addCalcPos2__FP4cXyzRC4cXyzff();
+extern "C" void cLib_offsetPos__FP4cXyzPC4cXyzsPC4cXyz();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u32 __float_nan;

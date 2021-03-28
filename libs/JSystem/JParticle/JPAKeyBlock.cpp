@@ -21,16 +21,16 @@ struct JPAKeyBlock {
 // 
 
 
-extern "C" void __ct__11JPAKeyBlockFPCUc(); // 1
-extern "C" void calc__11JPAKeyBlockFf(); // 1
+extern "C" void __ct__11JPAKeyBlockFPCUc();
+extern "C" void calc__11JPAKeyBlockFf();
 
 // 
 // External References:
 // 
 
-void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
+void JPACalcKeyAnmValue(f32, u16, f32 const*);
 
-extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
+extern "C" void JPACalcKeyAnmValue__FfUsPCf();
 
 // 
 // Declarations:

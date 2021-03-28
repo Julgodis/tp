@@ -63,24 +63,26 @@ struct J3DFrameCtrl {
 // Forward References:
 // 
 
-static void texScrollCheck(f32&); // 2
-static void daVrbox2_Draw(vrbox2_class*); // 2
-static void daVrbox2_color_set(vrbox2_class*); // 2
-static void daVrbox2_Execute(vrbox2_class*); // 2
-static bool daVrbox2_IsDelete(vrbox2_class*); // 2
-static bool daVrbox2_Delete(vrbox2_class*); // 2
-static void daVrbox2_solidHeapCB(fopAc_ac_c*); // 2
-static void daVrbox2_Create(fopAc_ac_c*); // 2
+static void texScrollCheck(f32&);
+static void daVrbox2_Draw(vrbox2_class*);
+static void daVrbox2_color_set(vrbox2_class*);
+static void daVrbox2_Execute(vrbox2_class*);
+static bool daVrbox2_IsDelete(vrbox2_class*);
+static bool daVrbox2_Delete(vrbox2_class*);
+static void daVrbox2_solidHeapCB(fopAc_ac_c*);
+static void daVrbox2_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_VRBOX2[12];
 
-extern "C" static void texScrollCheck__FRf(); // 1
-extern "C" static void daVrbox2_Draw__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_color_set__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_Execute__FP12vrbox2_class(); // 1
-extern "C" static bool daVrbox2_IsDelete__FP12vrbox2_class(); // 1
-extern "C" static bool daVrbox2_Delete__FP12vrbox2_class(); // 1
-extern "C" static void daVrbox2_solidHeapCB__FP10fopAc_ac_c(); // 1
-extern "C" static void daVrbox2_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12J3DFrameCtrlFv(); // 1
+extern "C" static void texScrollCheck__FRf();
+extern "C" static void daVrbox2_Draw__FP12vrbox2_class();
+extern "C" static void daVrbox2_color_set__FP12vrbox2_class();
+extern "C" static void daVrbox2_Execute__FP12vrbox2_class();
+extern "C" static bool daVrbox2_IsDelete__FP12vrbox2_class();
+extern "C" static bool daVrbox2_Delete__FP12vrbox2_class();
+extern "C" static void daVrbox2_solidHeapCB__FP10fopAc_ac_c();
+extern "C" static void daVrbox2_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12J3DFrameCtrlFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_VRBOX2[12];
 
@@ -88,58 +90,65 @@ extern "C" extern void* g_profile_VRBOX2[12];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_getStageRes(char const*); // 2
-void dKyw_get_wind_vec(); // 2
-void dKyw_get_wind_pow(); // 2
-void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*); // 2
-void dKy_get_parcent(f32, f32, f32); // 2
-void dKy_GxFog_set(); // 2
-void cM_rndF(f32); // 2
-void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_targetAngleX(cXyz const*, cXyz const*); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_getStageRes(char const*);
+void dKyw_get_wind_vec();
+void dKyw_get_wind_pow();
+void dKyr_get_vectle_calc(cXyz*, cXyz*, cXyz*);
+void dKy_get_parcent(f32, f32, f32);
+void dKy_GxFog_set();
+void cM_rndF(f32);
+void cM3d_VectorProduct2d(f32, f32, f32, f32, f32, f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_targetAngleX(cXyz const*, cXyz const*);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss(); // 1
-extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void dKyw_get_wind_vec__Fv(); // 1
-extern "C" void dKyw_get_wind_pow__Fv(); // 1
-extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void dKy_get_parcent__Ffff(); // 1
-extern "C" void dKy_GxFog_set__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM3d_VectorProduct2d__Fffffff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void _savegpr_17(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_17(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_btkAnmFP16J3DMaterialTableP19J3DAnmTextureSRTKeyiifss();
+extern "C" void entry__13mDoExt_btkAnmFP16J3DMaterialTablef();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dKyw_get_wind_vec__Fv();
+extern "C" void dKyw_get_wind_pow__Fv();
+extern "C" void dKyr_get_vectle_calc__FP4cXyzP4cXyzP4cXyz();
+extern "C" void dKy_get_parcent__Ffff();
+extern "C" void dKy_GxFog_set__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM3d_VectorProduct2d__Fffffff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_targetAngleX__FPC4cXyzPC4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void _savegpr_17();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_17();
+extern "C" void _restgpr_25();
+extern "C" void strcmp();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

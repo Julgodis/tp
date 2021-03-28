@@ -24,8 +24,8 @@ struct JAISoundHandles {
 // 
 
 
-extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID(); // 1
-extern "C" void getFreeHandle__15JAISoundHandlesFv(); // 1
+extern "C" void getHandleSoundID__15JAISoundHandlesF10JAISoundID();
+extern "C" void getFreeHandle__15JAISoundHandlesFv();
 
 // 
 // External References:

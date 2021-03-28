@@ -21,31 +21,32 @@ struct base_process_class {
 // Forward References:
 // 
 
-void fpcDw_Execute(base_process_class*); // 2
-void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
+void fpcDw_Execute(base_process_class*);
+void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*));
 
-extern "C" void fpcDw_Execute__FP18base_process_class(); // 1
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
+extern "C" void fpcDw_Execute__FP18base_process_class();
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
 
 // 
 // External References:
 // 
 
-void fpcBs_Is_JustOfType(int, int); // 2
-void fpcLy_SetCurrentLayer(layer_class*); // 2
-void fpcLy_CurrentLayer(); // 2
-void fpcPause_IsEnable(void*, u8); // 2
-void cAPIGph_BeforeOfDraw(); // 2
-void cAPIGph_AfterOfDraw(); // 2
+void fpcBs_Is_JustOfType(int, int);
+void fpcLy_SetCurrentLayer(layer_class*);
+void fpcLy_CurrentLayer();
+void fpcPause_IsEnable(void*, u8);
+void cAPIGph_BeforeOfDraw();
+void cAPIGph_AfterOfDraw();
+extern "C" extern u8 g_fpcLf_type[4 + 4 /* padding */];
 
-extern "C" void fpcBs_Is_JustOfType__Fii(); // 1
-extern "C" void fpcLy_SetCurrentLayer__FP11layer_class(); // 1
-extern "C" void fpcLy_CurrentLayer__Fv(); // 1
-extern "C" void fpcPause_IsEnable__FPvUc(); // 1
-extern "C" void cAPIGph_BeforeOfDraw__Fv(); // 1
-extern "C" void cAPIGph_AfterOfDraw__Fv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void fpcBs_Is_JustOfType__Fii();
+extern "C" void fpcLy_SetCurrentLayer__FP11layer_class();
+extern "C" void fpcLy_CurrentLayer__Fv();
+extern "C" void fpcPause_IsEnable__FPvUc();
+extern "C" void cAPIGph_BeforeOfDraw__Fv();
+extern "C" void cAPIGph_AfterOfDraw__Fv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_fpcLf_type[4 + 4 /* padding */];
 
 // 

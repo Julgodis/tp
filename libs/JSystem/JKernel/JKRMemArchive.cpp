@@ -93,55 +93,57 @@ struct JKRDecomp {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRMemArchive__stringBase0;
 
-extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag(); // 1
-extern "C" void __dt__13JKRMemArchiveFv(); // 1
-extern "C" void open__13JKRMemArchiveFlQ210JKRArchive15EMountDirection(); // 1
-extern "C" void open__13JKRMemArchiveFPvUl15JKRMemBreakFlag(); // 1
-extern "C" void fetchResource__13JKRMemArchiveFPQ210JKRArchive12SDIFileEntryPUl(); // 1
-extern "C" void fetchResource__13JKRMemArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl(); // 1
-extern "C" void removeResourceAll__13JKRMemArchiveFv(); // 1
-extern "C" void removeResource__13JKRMemArchiveFPv(); // 1
-extern "C" void fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli(); // 1
-extern "C" void getExpandedResSize__13JKRMemArchiveCFPCv(); // 1
+extern "C" void __ct__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void __ct__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+extern "C" void __dt__13JKRMemArchiveFv();
+extern "C" void open__13JKRMemArchiveFlQ210JKRArchive15EMountDirection();
+extern "C" void open__13JKRMemArchiveFPvUl15JKRMemBreakFlag();
+extern "C" void fetchResource__13JKRMemArchiveFPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" void fetchResource__13JKRMemArchiveFPvUlPQ210JKRArchive12SDIFileEntryPUl();
+extern "C" void removeResourceAll__13JKRMemArchiveFv();
+extern "C" void removeResource__13JKRMemArchiveFPv();
+extern "C" void fetchResource_subroutine__13JKRMemArchiveFPUcUlPUcUli();
+extern "C" void getExpandedResSize__13JKRMemArchiveCFPCv();
 extern "C" extern char const* const JKRMemArchive__stringBase0;
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void findFromRoot__7JKRHeapFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void unmount__13JKRFileLoaderFv(); // 1
-extern "C" void becomeCurrent__10JKRArchiveFPCc(); // 1
-extern "C" void getResource__10JKRArchiveFPCc(); // 1
-extern "C" void getResource__10JKRArchiveFUlPCc(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlUlPCc(); // 1
-extern "C" void readResource__10JKRArchiveFPvUlPCc(); // 1
-extern "C" void detachResource__10JKRArchiveFPv(); // 1
-extern "C" void getResSize__10JKRArchiveCFPCv(); // 1
-extern "C" void countFile__10JKRArchiveCFPCc(); // 1
-extern "C" void getFirstFile__10JKRArchiveCFPCc(); // 1
-extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode(); // 1
-extern "C" void __dt__10JKRArchiveFv(); // 1
-extern "C" void findPtrResource__10JKRArchiveCFPCv(); // 1
-extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl(); // 1
-extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry(); // 1
-extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl(); // 1
-extern "C" void orderSync__9JKRDecompFPUcPUcUlUl(); // 1
-extern "C" void prepend__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void panic_f__12JUTExceptionFPCciPCce(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void unmount__13JKRFileLoaderFv();
+extern "C" void becomeCurrent__10JKRArchiveFPCc();
+extern "C" void getResource__10JKRArchiveFPCc();
+extern "C" void getResource__10JKRArchiveFUlPCc();
+extern "C" void readResource__10JKRArchiveFPvUlUlPCc();
+extern "C" void readResource__10JKRArchiveFPvUlPCc();
+extern "C" void detachResource__10JKRArchiveFPv();
+extern "C" void getResSize__10JKRArchiveCFPCv();
+extern "C" void countFile__10JKRArchiveCFPCc();
+extern "C" void getFirstFile__10JKRArchiveCFPCc();
+extern "C" void __ct__10JKRArchiveFlQ210JKRArchive10EMountMode();
+extern "C" void __dt__10JKRArchiveFv();
+extern "C" void findPtrResource__10JKRArchiveCFPCv();
+extern "C" void setExpandSize__10JKRArchiveFPQ210JKRArchive12SDIFileEntryUl();
+extern "C" void getExpandSize__10JKRArchiveCFPQ210JKRArchive12SDIFileEntry();
+extern "C" void loadToMainRAM__12JKRDvdRipperFlPUc15JKRExpandSwitchUlP7JKRHeapQ212JKRDvdRipper15EAllocDirectionUlPiPUl();
+extern "C" void orderSync__9JKRDecompFPUcPUcUlUl();
+extern "C" void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void panic_f__12JUTExceptionFPCciPCce();
+extern "C" void DCInvalidateRange();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sVolumeList__13JKRFileLoader[12];
 
 // 

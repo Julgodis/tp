@@ -59,14 +59,14 @@ struct dSv_info_c {
 struct J3DModelData {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -93,10 +93,10 @@ struct dEvLib_callback_c {
 struct dBgW {
 };
 
-struct cBgS_PolyInfo {
+struct csXyz {
 };
 
-struct csXyz {
+struct cBgS_PolyInfo {
 };
 
 struct dBgS_MoveBgActor {
@@ -124,47 +124,50 @@ struct J3DModel {
 // Forward References:
 // 
 
-static void daAmiShutter_Draw(daAmiShutter_c*); // 2
-static void daAmiShutter_Execute(daAmiShutter_c*); // 2
-static void daAmiShutter_Delete(daAmiShutter_c*); // 2
-static void daAmiShutter_Create(fopAc_ac_c*); // 2
+static void daAmiShutter_Draw(daAmiShutter_c*);
+static void daAmiShutter_Execute(daAmiShutter_c*);
+static void daAmiShutter_Delete(daAmiShutter_c*);
+static void daAmiShutter_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_AmiShutter[12];
 
-extern "C" void __ct__18daAmiShutter_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__14daAmiShutter_cFv(); // 1
-extern "C" void CreateHeap__14daAmiShutter_cFv(); // 1
-extern "C" void create__14daAmiShutter_cFv(); // 1
-extern "C" void Execute__14daAmiShutter_cFPPA3_A4_f(); // 1
-extern "C" void moveShutter__14daAmiShutter_cFv(); // 1
-extern "C" void playerAreaCheck__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeWait__14daAmiShutter_cFv(); // 1
-extern "C" void modeWait__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeWaitEvent__14daAmiShutter_cFv(); // 1
-extern "C" void modeWaitEvent__14daAmiShutter_cFv(); // 1
-extern "C" void eventStart__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeClose__14daAmiShutter_cFv(); // 1
-extern "C" void modeClose__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeCloseEvent__14daAmiShutter_cFv(); // 1
-extern "C" void modeCloseEvent__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeCloseEnd__14daAmiShutter_cFv(); // 1
-extern "C" void modeCloseEnd__14daAmiShutter_cFv(); // 1
-extern "C" void init_modeOpen__14daAmiShutter_cFv(); // 1
-extern "C" void modeOpen__14daAmiShutter_cFv(); // 1
-extern "C" void Draw__14daAmiShutter_cFv(); // 1
-extern "C" void Delete__14daAmiShutter_cFv(); // 1
-extern "C" static void daAmiShutter_Draw__FP14daAmiShutter_c(); // 1
-extern "C" static void daAmiShutter_Execute__FP14daAmiShutter_c(); // 1
-extern "C" static void daAmiShutter_Delete__FP14daAmiShutter_c(); // 1
-extern "C" static void daAmiShutter_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__18daAmiShutter_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_amiShutter_cpp(); // 1
-extern "C" static void func_80BA2278(); // 1
-extern "C" static void func_80BA2280(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" void __dt__14daAmiShutter_cFv(); // 1
+extern "C" void __ct__18daAmiShutter_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__14daAmiShutter_cFv();
+extern "C" void CreateHeap__14daAmiShutter_cFv();
+extern "C" void create__14daAmiShutter_cFv();
+extern "C" void Execute__14daAmiShutter_cFPPA3_A4_f();
+extern "C" void moveShutter__14daAmiShutter_cFv();
+extern "C" void playerAreaCheck__14daAmiShutter_cFv();
+extern "C" void init_modeWait__14daAmiShutter_cFv();
+extern "C" void modeWait__14daAmiShutter_cFv();
+extern "C" void init_modeWaitEvent__14daAmiShutter_cFv();
+extern "C" void modeWaitEvent__14daAmiShutter_cFv();
+extern "C" void eventStart__14daAmiShutter_cFv();
+extern "C" void init_modeClose__14daAmiShutter_cFv();
+extern "C" void modeClose__14daAmiShutter_cFv();
+extern "C" void init_modeCloseEvent__14daAmiShutter_cFv();
+extern "C" void modeCloseEvent__14daAmiShutter_cFv();
+extern "C" void init_modeCloseEnd__14daAmiShutter_cFv();
+extern "C" void modeCloseEnd__14daAmiShutter_cFv();
+extern "C" void init_modeOpen__14daAmiShutter_cFv();
+extern "C" void modeOpen__14daAmiShutter_cFv();
+extern "C" void Draw__14daAmiShutter_cFv();
+extern "C" void Delete__14daAmiShutter_cFv();
+extern "C" static void daAmiShutter_Draw__FP14daAmiShutter_c();
+extern "C" static void daAmiShutter_Execute__FP14daAmiShutter_c();
+extern "C" static void daAmiShutter_Delete__FP14daAmiShutter_c();
+extern "C" static void daAmiShutter_Create__FP10fopAc_ac_c();
+extern "C" void __dt__18daAmiShutter_HIO_cFv();
+extern "C" void __sinit_d_a_obj_amiShutter_cpp();
+extern "C" static void func_80BA2278();
+extern "C" static void func_80BA2280();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void __dt__14daAmiShutter_cFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_AmiShutter[12];
@@ -173,50 +176,16 @@ extern "C" extern void* g_profile_Obj_AmiShutter[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dBgS_MoveBGProc_Typical(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool Create__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_setCullSizeBox2(fopAc_ac_c*, J3DModelData*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dBgS_MoveBGProc_Typical(dBgW*, void*, cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
@@ -227,7 +196,51 @@ extern "C" extern u8 j3dSys[284];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450C98[4];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox2__FP10fopAc_ac_cP12J3DModelData();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void dBgS_MoveBGProc_Typical__FP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool Create__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSVECSquareMag();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__16dBgS_MoveBgActor[10];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450C98[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

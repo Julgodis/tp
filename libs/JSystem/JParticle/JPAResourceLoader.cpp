@@ -66,32 +66,32 @@ struct JPABaseShape {
 // 
 
 
-extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
-extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager(); // 1
+extern "C" void __ct__17JPAResourceLoaderFPCUcP18JPAResourceManager();
+extern "C" void load_jpc__17JPAResourceLoaderFPCUcP18JPAResourceManager();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
 
-extern "C" void registRes__18JPAResourceManagerFP11JPAResource(); // 1
-extern "C" void registTex__18JPAResourceManagerFP10JPATexture(); // 1
-extern "C" void __ct__11JPAResourceFv(); // 1
-extern "C" void init__11JPAResourceFP7JKRHeap(); // 1
-extern "C" void __ct__12JPABaseShapeFPCUcP7JKRHeap(); // 1
-extern "C" void __ct__13JPAExtraShapeFPCUc(); // 1
-extern "C" void __ct__13JPAChildShapeFPCUc(); // 1
-extern "C" void __ct__13JPAExTexShapeFPCUc(); // 1
-extern "C" void __ct__16JPADynamicsBlockFPCUc(); // 1
-extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap(); // 1
-extern "C" void __ct__11JPAKeyBlockFPCUc(); // 1
-extern "C" void __ct__10JPATextureFPCUc(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void _savegpr_18(); // 1
-extern "C" void _restgpr_18(); // 1
+extern "C" void registRes__18JPAResourceManagerFP11JPAResource();
+extern "C" void registTex__18JPAResourceManagerFP10JPATexture();
+extern "C" void __ct__11JPAResourceFv();
+extern "C" void init__11JPAResourceFP7JKRHeap();
+extern "C" void __ct__12JPABaseShapeFPCUcP7JKRHeap();
+extern "C" void __ct__13JPAExtraShapeFPCUc();
+extern "C" void __ct__13JPAChildShapeFPCUc();
+extern "C" void __ct__13JPAExTexShapeFPCUc();
+extern "C" void __ct__16JPADynamicsBlockFPCUc();
+extern "C" void __ct__13JPAFieldBlockFPCUcP7JKRHeap();
+extern "C" void __ct__11JPAKeyBlockFPCUc();
+extern "C" void __ct__10JPATextureFPCUc();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void _savegpr_18();
+extern "C" void _restgpr_18();
 
 // 
 // Declarations:

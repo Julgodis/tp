@@ -36,18 +36,21 @@ struct JUTDirectPrint {
 // Forward References:
 // 
 
+extern "C" extern u8 sManager__8JUTVideo[4];
+extern "C" extern u8 sVideoLastTick__8JUTVideo[4];
+extern "C" extern u8 sVideoInterval__8JUTVideo[4];
 
-extern "C" void createManager__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void destroyManager__8JUTVideoFv(); // 1
-extern "C" void __ct__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void __dt__8JUTVideoFv(); // 1
-extern "C" void preRetraceProc__8JUTVideoFUl(); // 1
-extern "C" void drawDoneStart__8JUTVideoFv(); // 1
-extern "C" void dummyNoDrawWait__8JUTVideoFv(); // 1
-extern "C" void drawDoneCallback__8JUTVideoFv(); // 1
-extern "C" void postRetraceProc__8JUTVideoFUl(); // 1
-extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj(); // 1
-extern "C" void waitRetraceIfNeed__8JUTVideoFv(); // 1
+extern "C" void createManager__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void destroyManager__8JUTVideoFv();
+extern "C" void __ct__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void __dt__8JUTVideoFv();
+extern "C" void preRetraceProc__8JUTVideoFUl();
+extern "C" void drawDoneStart__8JUTVideoFv();
+extern "C" void dummyNoDrawWait__8JUTVideoFv();
+extern "C" void drawDoneCallback__8JUTVideoFv();
+extern "C" void postRetraceProc__8JUTVideoFUl();
+extern "C" void setRenderMode__8JUTVideoFPC16_GXRenderModeObj();
+extern "C" void waitRetraceIfNeed__8JUTVideoFv();
 extern "C" extern u8 sManager__8JUTVideo[4];
 extern "C" extern u8 sVideoLastTick__8JUTVideo[4];
 extern "C" extern u8 sVideoInterval__8JUTVideo[4];
@@ -56,29 +59,31 @@ extern "C" extern u8 sVideoInterval__8JUTVideo[4];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSendMessage(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void VISetPreRetraceCallback(); // 1
-extern "C" void VISetPostRetraceCallback(); // 1
-extern "C" void VIInit(); // 1
-extern "C" void VIWaitForRetrace(); // 1
-extern "C" void VIConfigure(); // 1
-extern "C" void VIFlush(); // 1
-extern "C" void VISetNextFrameBuffer(); // 1
-extern "C" void VIGetNextFrameBuffer(); // 1
-extern "C" void VISetBlack(); // 1
-extern "C" void VIGetRetraceCount(); // 1
-extern "C" void GXFlush(); // 1
-extern "C" void GXSetDrawDone(); // 1
-extern "C" void GXSetDrawDoneCallback(); // 1
-extern "C" void GXCopyDisp(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void changeFrameBuffer__14JUTDirectPrintFPvUsUs();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSendMessage();
+extern "C" void OSGetTick();
+extern "C" void VISetPreRetraceCallback();
+extern "C" void VISetPostRetraceCallback();
+extern "C" void VIInit();
+extern "C" void VIWaitForRetrace();
+extern "C" void VIConfigure();
+extern "C" void VIFlush();
+extern "C" void VISetNextFrameBuffer();
+extern "C" void VIGetNextFrameBuffer();
+extern "C" void VISetBlack();
+extern "C" void VIGetRetraceCount();
+extern "C" void GXFlush();
+extern "C" void GXSetDrawDone();
+extern "C" void GXSetDrawDoneCallback();
+extern "C" void GXCopyDisp();
 extern "C" extern u8 sDirectPrint__14JUTDirectPrint[4 + 4 /* padding */];
 extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 

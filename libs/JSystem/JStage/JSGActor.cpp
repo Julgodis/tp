@@ -61,50 +61,51 @@ struct JStage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q26JStage6TActor[35 + 1 /* padding */];
 
-extern "C" void __dt__Q26JStage6TActorFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetTranslation__Q26JStage6TActorCFP3Vec(); // 1
-extern "C" void JSGSetTranslation__Q26JStage6TActorFRC3Vec(); // 1
-extern "C" void JSGGetScaling__Q26JStage6TActorCFP3Vec(); // 1
-extern "C" void JSGSetScaling__Q26JStage6TActorFRC3Vec(); // 1
-extern "C" void JSGGetRotation__Q26JStage6TActorCFP3Vec(); // 1
-extern "C" void JSGSetRotation__Q26JStage6TActorFRC3Vec(); // 1
-extern "C" s32 JSGGetShape__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetShape__Q26JStage6TActorFUl(); // 1
-extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetAnimation__Q26JStage6TActorFUl(); // 1
-extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetAnimationFrame__Q26JStage6TActorFf(); // 1
-extern "C" void JSGGetAnimationFrameMax__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetAnimationTransition__Q26JStage6TActorFf(); // 1
-extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetTextureAnimation__Q26JStage6TActorFUl(); // 1
-extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv(); // 1
-extern "C" void JSGSetTextureAnimationFrame__Q26JStage6TActorFf(); // 1
-extern "C" void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv(); // 1
+extern "C" void __dt__Q26JStage6TActorFv();
+extern "C" s32 JSGFGetType__Q26JStage6TActorCFv();
+extern "C" void JSGGetTranslation__Q26JStage6TActorCFP3Vec();
+extern "C" void JSGSetTranslation__Q26JStage6TActorFRC3Vec();
+extern "C" void JSGGetScaling__Q26JStage6TActorCFP3Vec();
+extern "C" void JSGSetScaling__Q26JStage6TActorFRC3Vec();
+extern "C" void JSGGetRotation__Q26JStage6TActorCFP3Vec();
+extern "C" void JSGSetRotation__Q26JStage6TActorFRC3Vec();
+extern "C" s32 JSGGetShape__Q26JStage6TActorCFv();
+extern "C" void JSGSetShape__Q26JStage6TActorFUl();
+extern "C" s32 JSGGetAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGSetAnimation__Q26JStage6TActorFUl();
+extern "C" void JSGGetAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void JSGSetAnimationFrame__Q26JStage6TActorFf();
+extern "C" void JSGGetAnimationFrameMax__Q26JStage6TActorCFv();
+extern "C" void JSGGetAnimationTransition__Q26JStage6TActorCFv();
+extern "C" void JSGSetAnimationTransition__Q26JStage6TActorFf();
+extern "C" s32 JSGGetTextureAnimation__Q26JStage6TActorCFv();
+extern "C" void JSGSetTextureAnimation__Q26JStage6TActorFUl();
+extern "C" void JSGGetTextureAnimationFrame__Q26JStage6TActorCFv();
+extern "C" void JSGSetTextureAnimationFrame__Q26JStage6TActorFf();
+extern "C" void JSGGetTextureAnimationFrameMax__Q26JStage6TActorCFv();
 extern "C" extern void* __vt__Q26JStage6TActor[35 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

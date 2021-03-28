@@ -134,44 +134,46 @@ struct CPaneMgr {
 // Forward References:
 // 
 
-static void daBalloon2D_createHeap(fopAc_ac_c*); // 2
-static void daBalloon2D_create(daBalloon2D_c*); // 2
-static void daBalloon2D_destroy(daBalloon2D_c*); // 2
-static void daBalloon2D_execute(daBalloon2D_c*); // 2
-static void daBalloon2D_draw(daBalloon2D_c*); // 2
+static void daBalloon2D_createHeap(fopAc_ac_c*);
+static void daBalloon2D_create(daBalloon2D_c*);
+static void daBalloon2D_destroy(daBalloon2D_c*);
+static void daBalloon2D_execute(daBalloon2D_c*);
+static void daBalloon2D_draw(daBalloon2D_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_BALLOON2D[12];
 
-extern "C" void draw__Q213daBalloon2D_c6c_listFv(); // 1
-extern "C" static void daBalloon2D_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void createHeap__13daBalloon2D_cFv(); // 1
-extern "C" void create__13daBalloon2D_cFv(); // 1
-extern "C" void destroy__13daBalloon2D_cFv(); // 1
-extern "C" void draw__13daBalloon2D_cFv(); // 1
-extern "C" void execute__13daBalloon2D_cFv(); // 1
-extern "C" void drawMeter__13daBalloon2D_cFv(); // 1
-extern "C" void setComboCount__13daBalloon2D_cFUcUc(); // 1
-extern "C" void setScoreCount__13daBalloon2D_cFUl(); // 1
-extern "C" void addScoreCount__13daBalloon2D_cFP4cXyzUlUc(); // 1
-extern "C" void initiate__13daBalloon2D_cFv(); // 1
-extern "C" void update__13daBalloon2D_cFv(); // 1
-extern "C" void setComboNum__13daBalloon2D_cFUc(); // 1
-extern "C" void setBalloonSize__13daBalloon2D_cFUc(); // 1
-extern "C" void setScoreNum__13daBalloon2D_cFi(); // 1
-extern "C" void setAllAlpha__13daBalloon2D_cFv(); // 1
-extern "C" void setComboAlpha__13daBalloon2D_cFv(); // 1
-extern "C" void drawAddScore__13daBalloon2D_cFv(); // 1
-extern "C" void setHIO__13daBalloon2D_cFb(); // 1
-extern "C" static void daBalloon2D_create__FP13daBalloon2D_c(); // 1
-extern "C" void __dt__Q213daBalloon2D_c10CHeadScoreFv(); // 1
-extern "C" void __ct__Q213daBalloon2D_c10CHeadScoreFv(); // 1
-extern "C" static void daBalloon2D_destroy__FP13daBalloon2D_c(); // 1
-extern "C" static void daBalloon2D_execute__FP13daBalloon2D_c(); // 1
-extern "C" static void daBalloon2D_draw__FP13daBalloon2D_c(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" void __dt__17daBalloon2D_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void __dt__Q213daBalloon2D_c6c_listFv(); // 1
-extern "C" void __dt__13daBalloon2D_cFv(); // 1
-extern "C" void __sinit_d_a_balloon_2D_cpp(); // 1
+extern "C" void draw__Q213daBalloon2D_c6c_listFv();
+extern "C" static void daBalloon2D_createHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__13daBalloon2D_cFv();
+extern "C" void create__13daBalloon2D_cFv();
+extern "C" void destroy__13daBalloon2D_cFv();
+extern "C" void draw__13daBalloon2D_cFv();
+extern "C" void execute__13daBalloon2D_cFv();
+extern "C" void drawMeter__13daBalloon2D_cFv();
+extern "C" void setComboCount__13daBalloon2D_cFUcUc();
+extern "C" void setScoreCount__13daBalloon2D_cFUl();
+extern "C" void addScoreCount__13daBalloon2D_cFP4cXyzUlUc();
+extern "C" void initiate__13daBalloon2D_cFv();
+extern "C" void update__13daBalloon2D_cFv();
+extern "C" void setComboNum__13daBalloon2D_cFUc();
+extern "C" void setBalloonSize__13daBalloon2D_cFUc();
+extern "C" void setScoreNum__13daBalloon2D_cFi();
+extern "C" void setAllAlpha__13daBalloon2D_cFv();
+extern "C" void setComboAlpha__13daBalloon2D_cFv();
+extern "C" void drawAddScore__13daBalloon2D_cFv();
+extern "C" void setHIO__13daBalloon2D_cFb();
+extern "C" static void daBalloon2D_create__FP13daBalloon2D_c();
+extern "C" void __dt__Q213daBalloon2D_c10CHeadScoreFv();
+extern "C" void __ct__Q213daBalloon2D_c10CHeadScoreFv();
+extern "C" static void daBalloon2D_destroy__FP13daBalloon2D_c();
+extern "C" static void daBalloon2D_execute__FP13daBalloon2D_c();
+extern "C" static void daBalloon2D_draw__FP13daBalloon2D_c();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" void __dt__17daBalloon2D_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void __dt__Q213daBalloon2D_c6c_listFv();
+extern "C" void __dt__13daBalloon2D_cFv();
+extern "C" void __sinit_d_a_balloon_2D_cpp();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_BALLOON2D[12];
 
@@ -179,62 +181,67 @@ extern "C" extern void* g_profile_BALLOON2D[12];
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dMeter2Info_getNumberTextureName(int); // 2
-void dMeter2Info_getPlusTextureName(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-
-SECTION_INIT void memcpy(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
-extern "C" void dMeter2Info_getPlusTextureName__Fv(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+void mDoExt_getMesgFont();
+void mDoLib_project(Vec*, Vec*);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dMeter2Info_getNumberTextureName(int);
+void dMeter2Info_getPlusTextureName();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];
 extern "C" extern u8 sincosTable___5JMath[65536];
-extern "C" void __register_global_object(); // 1
+
+SECTION_INIT void memcpy();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_getPlusTextureName__Fv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

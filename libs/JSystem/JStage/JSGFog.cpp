@@ -52,38 +52,40 @@ struct JStage {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q26JStage4TFog[23 + 1 /* padding */];
 
-extern "C" void __dt__Q26JStage4TFogFv(); // 1
-extern "C" s32 JSGFGetType__Q26JStage4TFogCFv(); // 1
-extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGSetFogFunction__Q26JStage4TFogF10_GXFogType(); // 1
-extern "C" void JSGGetStartZ__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGSetStartZ__Q26JStage4TFogFf(); // 1
-extern "C" void JSGGetEndZ__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGSetEndZ__Q26JStage4TFogFf(); // 1
-extern "C" void JSGGetColor__Q26JStage4TFogCFv(); // 1
-extern "C" void JSGSetColor__Q26JStage4TFogF8_GXColor(); // 1
+extern "C" void __dt__Q26JStage4TFogFv();
+extern "C" s32 JSGFGetType__Q26JStage4TFogCFv();
+extern "C" bool JSGGetFogFunction__Q26JStage4TFogCFv();
+extern "C" void JSGSetFogFunction__Q26JStage4TFogF10_GXFogType();
+extern "C" void JSGGetStartZ__Q26JStage4TFogCFv();
+extern "C" void JSGSetStartZ__Q26JStage4TFogFf();
+extern "C" void JSGGetEndZ__Q26JStage4TFogCFv();
+extern "C" void JSGSetEndZ__Q26JStage4TFogFf();
+extern "C" void JSGGetColor__Q26JStage4TFogCFv();
+extern "C" void JSGSetColor__Q26JStage4TFogF8_GXColor();
 extern "C" extern void* __vt__Q26JStage4TFog[23 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u32 __float_max;
 
-extern "C" void __dt__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetName__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGUpdate__Q26JStage7TObjectFv(); // 1
-extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv(); // 1
-extern "C" void JSGSetFlag__Q26JStage7TObjectFUl(); // 1
-extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl(); // 1
-extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl(); // 1
-extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl(); // 1
-extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl(); // 1
-extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl(); // 1
-extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc(); // 1
-extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dt__Q26JStage7TObjectFv();
+extern "C" bool JSGGetName__Q26JStage7TObjectCFv();
+extern "C" void JSGUpdate__Q26JStage7TObjectFv();
+extern "C" bool JSGGetFlag__Q26JStage7TObjectCFv();
+extern "C" void JSGSetFlag__Q26JStage7TObjectFUl();
+extern "C" bool JSGGetData__Q26JStage7TObjectCFUlPvUl();
+extern "C" void JSGSetData__Q26JStage7TObjectFUlPCvUl();
+extern "C" void JSGGetParent__Q26JStage7TObjectCFPPQ26JStage7TObjectPUl();
+extern "C" void JSGSetParent__Q26JStage7TObjectFPQ26JStage7TObjectUl();
+extern "C" void JSGSetRelation__Q26JStage7TObjectFbPQ26JStage7TObjectUl();
+extern "C" s32 JSGFindNodeID__Q26JStage7TObjectCFPCc();
+extern "C" void JSGGetNodeTransformation__Q26JStage7TObjectCFUlPA4_f();
+extern "C" void __dl__FPv();
 extern "C" extern u32 __float_max;
 
 // 

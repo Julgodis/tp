@@ -33,25 +33,25 @@ struct cM3dGAab {
 // 
 
 
-extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz(); // 1
-extern "C" void CrossY__8cM3dGAabCFPC4cXyz(); // 1
-extern "C" void UnderPlaneYUnder__8cM3dGAabCFf(); // 1
-extern "C" void TopPlaneYUnder__8cM3dGAabCFf(); // 1
-extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
-extern "C" void SetMinMax__8cM3dGAabFRC4cXyz(); // 1
-extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab(); // 1
-extern "C" void SetMin__8cM3dGAabFRC4cXyz(); // 1
-extern "C" void SetMax__8cM3dGAabFRC4cXyz(); // 1
-extern "C" void CalcCenter__8cM3dGAabCFP4cXyz(); // 1
-extern "C" void PlusR__8cM3dGAabFf(); // 1
+extern "C" void Set__8cM3dGAabFPC4cXyzPC4cXyz();
+extern "C" void CrossY__8cM3dGAabCFPC4cXyz();
+extern "C" void UnderPlaneYUnder__8cM3dGAabCFf();
+extern "C" void TopPlaneYUnder__8cM3dGAabCFf();
+extern "C" void ClearForMinMax__8cM3dGAabFv();
+extern "C" void SetMinMax__8cM3dGAabFRC4cXyz();
+extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+extern "C" void SetMin__8cM3dGAabFRC4cXyz();
+extern "C" void SetMax__8cM3dGAabFRC4cXyz();
+extern "C" void CalcCenter__8cM3dGAabCFP4cXyz();
+extern "C" void PlusR__8cM3dGAabFf();
 
 // 
 // External References:
 // 
 
 
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
 
 // 
 // Declarations:

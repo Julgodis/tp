@@ -48,50 +48,51 @@ struct J3DClusterLoader {
 // Forward References:
 // 
 
-static void JSUConvertOffsetToPtr__template63(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template64(void const*, void const*); // 2
-static void JSUConvertOffsetToPtr__template65(void const*, void const*); // 2
+static void JSUConvertOffsetToPtr__template63(void const*, void const*);
+static void JSUConvertOffsetToPtr__template64(void const*, void const*);
+static void JSUConvertOffsetToPtr__template65(void const*, void const*);
+extern "C" extern char const* const J3DClusterLoader__stringBase0;
 
-extern "C" void load__24J3DClusterLoaderDataBaseFPCv(); // 1
-extern "C" void __ct__20J3DClusterLoader_v15Fv(); // 1
-extern "C" void __dt__20J3DClusterLoader_v15Fv(); // 1
-extern "C" void load__20J3DClusterLoader_v15FPCv(); // 1
-extern "C" void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock(); // 1
-extern "C" void __dt__16J3DClusterLoaderFv(); // 1
-extern "C" static void func_80334644(); // 1
-extern "C" static void func_8033465C(); // 1
-extern "C" static void func_80334674(); // 1
+extern "C" void load__24J3DClusterLoaderDataBaseFPCv();
+extern "C" void __ct__20J3DClusterLoader_v15Fv();
+extern "C" void __dt__20J3DClusterLoader_v15Fv();
+extern "C" void load__20J3DClusterLoader_v15FPCv();
+extern "C" void readCluster__20J3DClusterLoader_v15FPC15J3DClusterBlock();
+extern "C" void __dt__16J3DClusterLoaderFv();
+extern "C" static void func_80334644();
+extern "C" static void func_8033465C();
+extern "C" static void func_80334674();
 extern "C" extern char const* const J3DClusterLoader__stringBase0;
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+void JSUConvertOffsetToPtr__template28(void const*, void const*);
+void JSUConvertOffsetToPtr__template39(void const*, void const*);
+void JSUConvertOffsetToPtr__template41(void const*, void const*);
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void func_802F42C0(); // 1
-extern "C" void func_8030A530(); // 1
-extern "C" void func_8030A560(); // 1
-extern "C" void __ct__13J3DDeformDataFv(); // 1
-extern "C" void __ct__11J3DDeformerFP13J3DDeformData(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" void func_802F42C0();
+extern "C" void func_8030A530();
+extern "C" void func_8030A560();
+extern "C" void __ct__13J3DDeformDataFv();
+extern "C" void __ct__11J3DDeformerFP13J3DDeformData();
+extern "C" void DCStoreRange();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
 
 // 
 // Declarations:

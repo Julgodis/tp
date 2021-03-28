@@ -157,75 +157,80 @@ struct J3DAnmCluster {
 // Forward References:
 // 
 
-static void J3DGetKeyFrameInterpolation__template0(f32, J3DAnmKeyTableBase*, s16*); // 2
-static void J3DGetKeyFrameInterpolation__template1(f32, J3DAnmKeyTableBase*, f32*); // 2
+static void J3DGetKeyFrameInterpolation__template0(f32, J3DAnmKeyTableBase*, s16*);
+static void J3DGetKeyFrameInterpolation__template1(f32, J3DAnmKeyTableBase*, f32*);
+extern "C" extern void* __vt__16J3DAnmClusterKey[5];
+extern "C" extern void* __vt__13J3DAnmCluster[5];
+extern "C" extern void* __vt__17J3DAnmClusterFull[5];
+extern "C" extern void* __vt__27J3DAnmTransformFullWithLerp[5];
+extern "C" extern void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */];
 
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void checkPass__12J3DFrameCtrlFf(); // 1
-extern "C" void update__12J3DFrameCtrlFv(); // 1
-extern "C" void __ct__15J3DAnmTransformFsPfPsPf(); // 1
-extern "C" void getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo(); // 1
-extern "C" void getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo(); // 1
-extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo(); // 1
-extern "C" void __ct__19J3DAnmTextureSRTKeyFv(); // 1
-extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo(); // 1
-extern "C" void getWeight__17J3DAnmClusterFullCFUs(); // 1
-extern "C" void getWeight__16J3DAnmClusterKeyCFUs(); // 1
-extern "C" void __ct__14J3DAnmVtxColorFv(); // 1
-extern "C" void __ct__18J3DAnmVtxColorFullFv(); // 1
-extern "C" void getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor(); // 1
-extern "C" void __ct__17J3DAnmVtxColorKeyFv(); // 1
-extern "C" void getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor(); // 1
-extern "C" void __ct__11J3DAnmColorFv(); // 1
-extern "C" void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable(); // 1
-extern "C" void __ct__15J3DAnmColorFullFv(); // 1
-extern "C" void getColor__15J3DAnmColorFullCFUsP8_GXColor(); // 1
-extern "C" void __ct__14J3DAnmColorKeyFv(); // 1
-extern "C" void getColor__14J3DAnmColorKeyCFUsP8_GXColor(); // 1
-extern "C" void __ct__15J3DAnmTevRegKeyFv(); // 1
-extern "C" void __ct__16J3DAnmTexPatternFv(); // 1
-extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs(); // 1
-extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable(); // 1
-extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData(); // 1
-extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable(); // 1
-extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData(); // 1
-extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10(); // 1
-extern "C" void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor(); // 1
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable(); // 1
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData(); // 1
-extern "C" static void func_8032B8A0(); // 1
-extern "C" static void func_8032BAD4(); // 1
-extern "C" void __dt__14J3DAnmVtxColorFv(); // 1
-extern "C" void __dt__11J3DAnmColorFv(); // 1
-extern "C" void __dt__16J3DAnmTexPatternFv(); // 1
-extern "C" s32 getKind__16J3DAnmTexPatternCFv(); // 1
-extern "C" void __dt__15J3DAnmTevRegKeyFv(); // 1
-extern "C" s32 getKind__15J3DAnmTevRegKeyCFv(); // 1
-extern "C" void __dt__14J3DAnmColorKeyFv(); // 1
-extern "C" s32 getKind__14J3DAnmColorKeyCFv(); // 1
-extern "C" void __dt__15J3DAnmColorFullFv(); // 1
-extern "C" s32 getKind__15J3DAnmColorFullCFv(); // 1
-extern "C" bool getKind__11J3DAnmColorCFv(); // 1
-extern "C" void getColor__11J3DAnmColorCFUsP8_GXColor(); // 1
-extern "C" void __dt__17J3DAnmVtxColorKeyFv(); // 1
-extern "C" s32 getKind__17J3DAnmVtxColorKeyCFv(); // 1
-extern "C" void __dt__18J3DAnmVtxColorFullFv(); // 1
-extern "C" s32 getKind__18J3DAnmVtxColorFullCFv(); // 1
-extern "C" s32 getKind__14J3DAnmVtxColorCFv(); // 1
-extern "C" void getColor__14J3DAnmVtxColorCFUcUsP8_GXColor(); // 1
-extern "C" void __dt__16J3DAnmClusterKeyFv(); // 1
-extern "C" s32 getKind__16J3DAnmClusterKeyCFv(); // 1
-extern "C" void __dt__13J3DAnmClusterFv(); // 1
-extern "C" s32 getKind__13J3DAnmClusterCFv(); // 1
-extern "C" void getWeight__13J3DAnmClusterCFUs(); // 1
-extern "C" void __dt__17J3DAnmClusterFullFv(); // 1
-extern "C" s32 getKind__17J3DAnmClusterFullCFv(); // 1
-extern "C" void __dt__19J3DAnmTextureSRTKeyFv(); // 1
-extern "C" s32 getKind__19J3DAnmTextureSRTKeyCFv(); // 1
-extern "C" void __dt__27J3DAnmTransformFullWithLerpFv(); // 1
-extern "C" s32 getKind__27J3DAnmTransformFullWithLerpCFv(); // 1
-extern "C" void __dt__19J3DAnmTransformFullFv(); // 1
-extern "C" s32 getKind__19J3DAnmTransformFullCFv(); // 1
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void checkPass__12J3DFrameCtrlFf();
+extern "C" void update__12J3DFrameCtrlFv();
+extern "C" void __ct__15J3DAnmTransformFsPfPsPf();
+extern "C" void getTransform__19J3DAnmTransformFullCFUsP16J3DTransformInfo();
+extern "C" void getTransform__27J3DAnmTransformFullWithLerpCFUsP16J3DTransformInfo();
+extern "C" void calcTransform__18J3DAnmTransformKeyCFfUsP16J3DTransformInfo();
+extern "C" void __ct__19J3DAnmTextureSRTKeyFv();
+extern "C" void calcTransform__19J3DAnmTextureSRTKeyCFfUsP17J3DTextureSRTInfo();
+extern "C" void getWeight__17J3DAnmClusterFullCFUs();
+extern "C" void getWeight__16J3DAnmClusterKeyCFUs();
+extern "C" void __ct__14J3DAnmVtxColorFv();
+extern "C" void __ct__18J3DAnmVtxColorFullFv();
+extern "C" void getColor__18J3DAnmVtxColorFullCFUcUsP8_GXColor();
+extern "C" void __ct__17J3DAnmVtxColorKeyFv();
+extern "C" void getColor__17J3DAnmVtxColorKeyCFUcUsP8_GXColor();
+extern "C" void __ct__11J3DAnmColorFv();
+extern "C" void searchUpdateMaterialID__11J3DAnmColorFP16J3DMaterialTable();
+extern "C" void __ct__15J3DAnmColorFullFv();
+extern "C" void getColor__15J3DAnmColorFullCFUsP8_GXColor();
+extern "C" void __ct__14J3DAnmColorKeyFv();
+extern "C" void getColor__14J3DAnmColorKeyCFUsP8_GXColor();
+extern "C" void __ct__15J3DAnmTevRegKeyFv();
+extern "C" void __ct__16J3DAnmTexPatternFv();
+extern "C" void getTexNo__16J3DAnmTexPatternCFUsPUs();
+extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP16J3DMaterialTable();
+extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData();
+extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP16J3DMaterialTable();
+extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData();
+extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void getTevKonstReg__15J3DAnmTevRegKeyCFUsP8_GXColor();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP16J3DMaterialTable();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+extern "C" static void func_8032B8A0();
+extern "C" static void func_8032BAD4();
+extern "C" void __dt__14J3DAnmVtxColorFv();
+extern "C" void __dt__11J3DAnmColorFv();
+extern "C" void __dt__16J3DAnmTexPatternFv();
+extern "C" s32 getKind__16J3DAnmTexPatternCFv();
+extern "C" void __dt__15J3DAnmTevRegKeyFv();
+extern "C" s32 getKind__15J3DAnmTevRegKeyCFv();
+extern "C" void __dt__14J3DAnmColorKeyFv();
+extern "C" s32 getKind__14J3DAnmColorKeyCFv();
+extern "C" void __dt__15J3DAnmColorFullFv();
+extern "C" s32 getKind__15J3DAnmColorFullCFv();
+extern "C" bool getKind__11J3DAnmColorCFv();
+extern "C" void getColor__11J3DAnmColorCFUsP8_GXColor();
+extern "C" void __dt__17J3DAnmVtxColorKeyFv();
+extern "C" s32 getKind__17J3DAnmVtxColorKeyCFv();
+extern "C" void __dt__18J3DAnmVtxColorFullFv();
+extern "C" s32 getKind__18J3DAnmVtxColorFullCFv();
+extern "C" s32 getKind__14J3DAnmVtxColorCFv();
+extern "C" void getColor__14J3DAnmVtxColorCFUcUsP8_GXColor();
+extern "C" void __dt__16J3DAnmClusterKeyFv();
+extern "C" s32 getKind__16J3DAnmClusterKeyCFv();
+extern "C" void __dt__13J3DAnmClusterFv();
+extern "C" s32 getKind__13J3DAnmClusterCFv();
+extern "C" void getWeight__13J3DAnmClusterCFUs();
+extern "C" void __dt__17J3DAnmClusterFullFv();
+extern "C" s32 getKind__17J3DAnmClusterFullCFv();
+extern "C" void __dt__19J3DAnmTextureSRTKeyFv();
+extern "C" s32 getKind__19J3DAnmTextureSRTKeyCFv();
+extern "C" void __dt__27J3DAnmTransformFullWithLerpFv();
+extern "C" s32 getKind__27J3DAnmTransformFullWithLerpCFv();
+extern "C" void __dt__19J3DAnmTransformFullFv();
+extern "C" s32 getKind__19J3DAnmTransformFullCFv();
 extern "C" extern void* __vt__16J3DAnmClusterKey[5];
 extern "C" extern void* __vt__13J3DAnmCluster[5];
 extern "C" extern void* __vt__17J3DAnmClusterFull[5];
@@ -236,21 +241,24 @@ extern "C" extern void* __vt__19J3DAnmTransformFull[5 + 1 /* padding */];
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__10J3DAnmBase[4];
+extern "C" extern void* __vt__15J3DAnmTransform[5];
+extern "C" extern void* __vt__10JUTNameTab[3];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JUTNameTabFv(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JUTNameTabFv();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__10J3DAnmBase[4];
 extern "C" extern void* __vt__15J3DAnmTransform[5];
 extern "C" extern void* __vt__10JUTNameTab[3];

@@ -42,28 +42,30 @@ struct cBgS_Chk {
 // 
 
 
-extern "C" void __ct__11cBgS_LinChkFv(); // 1
-extern "C" void __dt__11cBgS_LinChkFv(); // 1
-extern "C" void ct__11cBgS_LinChkFv(); // 1
-extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi(); // 1
-extern "C" void PreCalc__11cBgS_LinChkFv(); // 1
-extern "C" static void func_80267F80(); // 1
+extern "C" void __ct__11cBgS_LinChkFv();
+extern "C" void __dt__11cBgS_LinChkFv();
+extern "C" void ct__11cBgS_LinChkFv();
+extern "C" void Set2__11cBgS_LinChkFPC4cXyzPC4cXyzUi();
+extern "C" void PreCalc__11cBgS_LinChkFv();
+extern "C" static void func_80267F80();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__8cM3dGLin[3];
+extern "C" extern f32 Zero__4cXyz[3];
 
-extern "C" void __ct__8cBgS_ChkFv(); // 1
-extern "C" void __dt__8cBgS_ChkFv(); // 1
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__8cBgS_ChkFv();
+extern "C" void __dt__8cBgS_ChkFv();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__8cM3dGLin[3];
 extern "C" extern f32 Zero__4cXyz[3];
 

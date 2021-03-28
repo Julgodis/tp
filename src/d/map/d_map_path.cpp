@@ -88,27 +88,31 @@ struct _GXTexObj {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_map_d_map_path__stringBase0;
+extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
+extern "C" extern void* __vt__11dDrawPath_c[16];
+extern "C" extern u8 m_texObjAgg__8dMpath_n[28];
 
-extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
-extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class(); // 1
-extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class(); // 1
-extern "C" void drawPath__11dDrawPath_cFv(); // 1
-extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs(); // 1
-extern "C" void renderingMap__15dRenderingMap_cFv(); // 1
-extern "C" void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv(); // 1
-extern "C" void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv(); // 1
-extern "C" void drawBack__18dRenderingFDAmap_cCFv(); // 1
-extern "C" void preRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void postRenderingMap__18dRenderingFDAmap_cFv(); // 1
-extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class(); // 1
-extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii(); // 1
-extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi(); // 1
-extern "C" void __sinit_d_map_path_cpp(); // 1
-extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv(); // 1
+extern "C" void create__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void remove__Q28dMpath_n18dTexObjAggregate_cFv();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10line_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10poly_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11group_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c11floor_class();
+extern "C" void rendering__11dDrawPath_cFPCQ211dDrawPath_c10room_class();
+extern "C" void drawPath__11dDrawPath_cFv();
+extern "C" void makeResTIMG__15dRenderingMap_cCFP7ResTIMGUsUsPUcPUcUs();
+extern "C" void renderingMap__15dRenderingMap_cFv();
+extern "C" void setTevSettingNonTextureDirectColor__18dRenderingFDAmap_cCFv();
+extern "C" void setTevSettingIntensityTextureToCI__18dRenderingFDAmap_cCFv();
+extern "C" void drawBack__18dRenderingFDAmap_cCFv();
+extern "C" void preRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void postRenderingMap__18dRenderingFDAmap_cFv();
+extern "C" void renderingDecoration__18dRenderingFDAmap_cFPCQ211dDrawPath_c10line_class();
+extern "C" void getDecoLineColor__18dRenderingFDAmap_cFii();
+extern "C" void getDecorationLineWidth__18dRenderingFDAmap_cFi();
+extern "C" void __sinit_d_map_path_cpp();
+extern "C" void __dt__Q28dMpath_n18dTexObjAggregate_cFv();
 extern "C" extern char const* const d_map_d_map_path__stringBase0;
 extern "C" extern void* __vt__18dRenderingFDAmap_c[26];
 extern "C" extern void* __vt__11dDrawPath_c[16];
@@ -118,66 +122,69 @@ extern "C" extern u8 m_texObjAgg__8dMpath_n[28];
 // External References:
 // 
 
-void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_clearColor[4];
 
-extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
-extern "C" void draw__12dDlst_base_cFv(); // 1
-extern "C" bool isDrawType__11dDrawPath_cFi(); // 1
-extern "C" void __dt__18dRenderingFDAmap_cFv(); // 1
-extern "C" void __dt__11dDrawPath_cFv(); // 1
-extern "C" void getLineColor__11dDrawPath_cFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void C_MTXOrtho(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetArray(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXPixModeSync(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetLineWidth(); // 1
-extern "C" void GXSetPointSize(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetTexCopySrc(); // 1
-extern "C" void GXSetTexCopyDst(); // 1
-extern "C" void GXSetCopyFilter(); // 1
-extern "C" void GXCopyTex(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetFog(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXSetZCompLoc(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void GXSetProjection(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void GXSetViewport(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXSetClipMode(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
+extern "C" void draw__12dDlst_base_cFv();
+extern "C" bool isDrawType__11dDrawPath_cFi();
+extern "C" void __dt__18dRenderingFDAmap_cFv();
+extern "C" void __dt__11dDrawPath_cFv();
+extern "C" void getLineColor__11dDrawPath_cFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void C_MTXOrtho();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetArray();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXPixModeSync();
+extern "C" void GXBegin();
+extern "C" void GXSetLineWidth();
+extern "C" void GXSetPointSize();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetTexCopySrc();
+extern "C" void GXSetTexCopyDst();
+extern "C" void GXSetCopyFilter();
+extern "C" void GXCopyTex();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetFog();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXSetZCompLoc();
+extern "C" void GXSetDither();
+extern "C" void GXSetProjection();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void GXSetViewport();
+extern "C" void GXSetScissor();
+extern "C" void GXSetClipMode();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern u8 g_mDoMtx_identity[48 + 24 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_clearColor[4];

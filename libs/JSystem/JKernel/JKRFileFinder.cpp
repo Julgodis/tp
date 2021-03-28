@@ -39,25 +39,25 @@ struct JKRArcFinder {
 // 
 
 
-extern "C" void __ct__12JKRArcFinderFP10JKRArchivell(); // 1
-extern "C" void findNextFile__12JKRArcFinderFv(); // 1
-extern "C" void __ct__12JKRDvdFinderFPCc(); // 1
-extern "C" void __dt__12JKRDvdFinderFv(); // 1
-extern "C" void findNextFile__12JKRDvdFinderFv(); // 1
-extern "C" void __dt__13JKRFileFinderFv(); // 1
-extern "C" void __dt__12JKRArcFinderFv(); // 1
+extern "C" void __ct__12JKRArcFinderFP10JKRArchivell();
+extern "C" void findNextFile__12JKRArcFinderFv();
+extern "C" void __ct__12JKRDvdFinderFPCc();
+extern "C" void __dt__12JKRDvdFinderFv();
+extern "C" void findNextFile__12JKRDvdFinderFv();
+extern "C" void __dt__13JKRFileFinderFv();
+extern "C" void __dt__12JKRArcFinderFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl(); // 1
-extern "C" void DVDOpenDir(); // 1
-extern "C" void DVDReadDir(); // 1
-extern "C" bool DVDCloseDir(); // 1
+extern "C" void __dl__FPv();
+extern "C" void getDirEntry__10JKRArchiveCFPQ210JKRArchive9SDirEntryUl();
+extern "C" void DVDOpenDir();
+extern "C" void DVDReadDir();
+extern "C" bool DVDCloseDir();
 
 // 
 // Declarations:

@@ -50,33 +50,34 @@ struct JASBasicInst {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__7JASInst[5];
 
-extern "C" void __ct__12JASBasicInstFv(); // 1
-extern "C" void __dt__12JASBasicInstFv(); // 1
-extern "C" void getParam__12JASBasicInstCFiiP12JASInstParam(); // 1
-extern "C" void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap(); // 1
-extern "C" void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data(); // 1
-extern "C" void getKeyRegion__12JASBasicInstFi(); // 1
-extern "C" void __dt__Q212JASBasicInst7TKeymapFv(); // 1
-extern "C" void __dt__7JASInstFv(); // 1
-extern "C" void __ct__Q212JASBasicInst7TKeymapFv(); // 1
-extern "C" void getType__12JASBasicInstCFv(); // 1
+extern "C" void __ct__12JASBasicInstFv();
+extern "C" void __dt__12JASBasicInstFv();
+extern "C" void getParam__12JASBasicInstCFiiP12JASInstParam();
+extern "C" void setKeyRegionCount__12JASBasicInstFUlP7JKRHeap();
+extern "C" void setOsc__12JASBasicInstFiPCQ213JASOscillator4Data();
+extern "C" void getKeyRegion__12JASBasicInstFi();
+extern "C" void __dt__Q212JASBasicInst7TKeymapFv();
+extern "C" void __dt__7JASInstFv();
+extern "C" void __ct__Q212JASBasicInst7TKeymapFv();
+extern "C" void getType__12JASBasicInstCFv();
 extern "C" extern void* __vt__7JASInst[5];
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
 
-extern "C" void bzero__7JASCalcFPvUl(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void bzero__7JASCalcFPvUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __destroy_new_array();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

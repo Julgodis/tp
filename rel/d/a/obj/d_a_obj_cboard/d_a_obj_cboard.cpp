@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -83,52 +83,57 @@ struct cBgS {
 // Forward References:
 // 
 
-static void daObjBoard_create1st(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGDelete(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGExecute(daObjBoard_c*); // 2
-static void daObjBoard_MoveBGDraw(daObjBoard_c*); // 2
+static void daObjBoard_create1st(daObjBoard_c*);
+static void daObjBoard_MoveBGDelete(daObjBoard_c*);
+static void daObjBoard_MoveBGExecute(daObjBoard_c*);
+static void daObjBoard_MoveBGDraw(daObjBoard_c*);
+extern "C" extern void* g_profile_Obj_Cboard[12];
 
-extern "C" void initBaseMtx__12daObjBoard_cFv(); // 1
-extern "C" void setBaseMtx__12daObjBoard_cFv(); // 1
-extern "C" void Create__12daObjBoard_cFv(); // 1
-extern "C" bool CreateHeap__12daObjBoard_cFv(); // 1
-extern "C" void create1st__12daObjBoard_cFv(); // 1
-extern "C" void Execute__12daObjBoard_cFPPA3_A4_f(); // 1
-extern "C" bool Draw__12daObjBoard_cFv(); // 1
-extern "C" void Delete__12daObjBoard_cFv(); // 1
-extern "C" static void daObjBoard_create1st__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGDelete__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGExecute__FP12daObjBoard_c(); // 1
-extern "C" static void daObjBoard_MoveBGDraw__FP12daObjBoard_c(); // 1
+extern "C" void initBaseMtx__12daObjBoard_cFv();
+extern "C" void setBaseMtx__12daObjBoard_cFv();
+extern "C" void Create__12daObjBoard_cFv();
+extern "C" bool CreateHeap__12daObjBoard_cFv();
+extern "C" void create1st__12daObjBoard_cFv();
+extern "C" void Execute__12daObjBoard_cFPPA3_A4_f();
+extern "C" bool Draw__12daObjBoard_cFv();
+extern "C" void Delete__12daObjBoard_cFv();
+extern "C" static void daObjBoard_create1st__FP12daObjBoard_c();
+extern "C" static void daObjBoard_MoveBGDelete__FP12daObjBoard_c();
+extern "C" static void daObjBoard_MoveBGExecute__FP12daObjBoard_c();
+extern "C" static void daObjBoard_MoveBGDraw__FP12daObjBoard_c();
 extern "C" extern void* g_profile_Obj_Cboard[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void __ct__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool IsDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToFore__16dBgS_MoveBgActorFv(); // 1
-extern "C" bool ToBack__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f(); // 1
-extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv(); // 1
-extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv(); // 1
-extern "C" void ChkUsed__9cBgW_BgIdCFv(); // 1
-extern "C" void PSMTXCopy(); // 1
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getObjectResName2Index__14dRes_control_cFPCcPCc();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void __ct__16dBgS_MoveBgActorFv();
+extern "C" bool IsDelete__16dBgS_MoveBgActorFv();
+extern "C" bool ToFore__16dBgS_MoveBgActorFv();
+extern "C" bool ToBack__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGCreate__16dBgS_MoveBgActorFPCciPFP4dBgWPvRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz_vUlPA3_A4_f();
+extern "C" void MoveBGDelete__16dBgS_MoveBgActorFv();
+extern "C" void MoveBGExecute__16dBgS_MoveBgActorFv();
+extern "C" void ChkUsed__9cBgW_BgIdCFv();
+extern "C" void PSMTXCopy();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

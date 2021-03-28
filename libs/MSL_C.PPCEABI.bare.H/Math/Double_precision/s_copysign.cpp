@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void copysign(); // 1
+extern "C" void copysign();
 
 // 
 // External References:

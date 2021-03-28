@@ -27,57 +27,57 @@ struct overlap_request_class {
 // Forward References:
 // 
 
-void fopOvlpM_SceneIsStop(); // 2
-void fopOvlpM_SceneIsStart(); // 2
-void fopOvlpM_IsOutReq(overlap_task_class*); // 2
-void fopOvlpM_Done(overlap_task_class*); // 2
-void fopOvlpM_ToldAboutID(unsigned int); // 2
-void fopOvlpM_IsPeek(); // 2
-void fopOvlpM_IsDone(); // 2
-void fopOvlpM_IsDoingReq(); // 2
-void fopOvlpM_ClearOfReq(); // 2
-void fopOvlpM_Request(s16, u16); // 2
-void fopOvlpM_Management(); // 2
-void fopOvlpM_Cancel(); // 2
-void fopOvlpM_Init(); // 2
+void fopOvlpM_SceneIsStop();
+void fopOvlpM_SceneIsStart();
+void fopOvlpM_IsOutReq(overlap_task_class*);
+void fopOvlpM_Done(overlap_task_class*);
+void fopOvlpM_ToldAboutID(unsigned int);
+void fopOvlpM_IsPeek();
+void fopOvlpM_IsDone();
+void fopOvlpM_IsDoingReq();
+void fopOvlpM_ClearOfReq();
+void fopOvlpM_Request(s16, u16);
+void fopOvlpM_Management();
+void fopOvlpM_Cancel();
+void fopOvlpM_Init();
 
-extern "C" void fopOvlpM_SceneIsStop__Fv(); // 1
-extern "C" void fopOvlpM_SceneIsStart__Fv(); // 1
-extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class(); // 1
-extern "C" void fopOvlpM_Done__FP18overlap_task_class(); // 1
-extern "C" void fopOvlpM_ToldAboutID__FUi(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void fopOvlpM_IsDone__Fv(); // 1
-extern "C" void fopOvlpM_IsDoingReq__Fv(); // 1
-extern "C" void fopOvlpM_ClearOfReq__Fv(); // 1
-extern "C" void fopOvlpM_Request__FsUs(); // 1
-extern "C" void fopOvlpM_Management__Fv(); // 1
-extern "C" void fopOvlpM_Cancel__Fv(); // 1
-extern "C" void fopOvlpM_Init__Fv(); // 1
+extern "C" void fopOvlpM_SceneIsStop__Fv();
+extern "C" void fopOvlpM_SceneIsStart__Fv();
+extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class();
+extern "C" void fopOvlpM_Done__FP18overlap_task_class();
+extern "C" void fopOvlpM_ToldAboutID__FUi();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fopOvlpM_IsDone__Fv();
+extern "C" void fopOvlpM_IsDoingReq__Fv();
+extern "C" void fopOvlpM_ClearOfReq__Fv();
+extern "C" void fopOvlpM_Request__FsUs();
+extern "C" void fopOvlpM_Management__Fv();
+extern "C" void fopOvlpM_Cancel__Fv();
+extern "C" void fopOvlpM_Init__Fv();
 
 // 
 // External References:
 // 
 
-void fopOvlpReq_Request(overlap_request_class*, s16, u16); // 2
-void fopOvlpReq_Handler(overlap_request_class*); // 2
-void fopOvlpReq_Cancel(overlap_request_class*); // 2
-void fopOvlpReq_OverlapClr(overlap_request_class*); // 2
-void fopScnPause_Enable(scene_class*); // 2
-void fopScnPause_Disable(scene_class*); // 2
-void fpcEx_SearchByID(unsigned int); // 2
-void cReq_Is_Done(request_base_class*); // 2
-void cReq_Done(request_base_class*); // 2
+void fopOvlpReq_Request(overlap_request_class*, s16, u16);
+void fopOvlpReq_Handler(overlap_request_class*);
+void fopOvlpReq_Cancel(overlap_request_class*);
+void fopOvlpReq_OverlapClr(overlap_request_class*);
+void fopScnPause_Enable(scene_class*);
+void fopScnPause_Disable(scene_class*);
+void fpcEx_SearchByID(unsigned int);
+void cReq_Is_Done(request_base_class*);
+void cReq_Done(request_base_class*);
 
-extern "C" void fopOvlpReq_Request__FP21overlap_request_classsUs(); // 1
-extern "C" void fopOvlpReq_Handler__FP21overlap_request_class(); // 1
-extern "C" void fopOvlpReq_Cancel__FP21overlap_request_class(); // 1
-extern "C" void fopOvlpReq_OverlapClr__FP21overlap_request_class(); // 1
-extern "C" void fopScnPause_Enable__FP11scene_class(); // 1
-extern "C" void fopScnPause_Disable__FP11scene_class(); // 1
-extern "C" void fpcEx_SearchByID__FUi(); // 1
-extern "C" void cReq_Is_Done__FP18request_base_class(); // 1
-extern "C" void cReq_Done__FP18request_base_class(); // 1
+extern "C" void fopOvlpReq_Request__FP21overlap_request_classsUs();
+extern "C" void fopOvlpReq_Handler__FP21overlap_request_class();
+extern "C" void fopOvlpReq_Cancel__FP21overlap_request_class();
+extern "C" void fopOvlpReq_OverlapClr__FP21overlap_request_class();
+extern "C" void fopScnPause_Enable__FP11scene_class();
+extern "C" void fopScnPause_Disable__FP11scene_class();
+extern "C" void fpcEx_SearchByID__FUi();
+extern "C" void cReq_Is_Done__FP18request_base_class();
+extern "C" void cReq_Done__FP18request_base_class();
 
 // 
 // Declarations:

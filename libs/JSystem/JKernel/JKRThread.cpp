@@ -45,6 +45,9 @@ struct JSUList__template4 {
 	/* 802D1F50 */ ~JSUList__template4();
 };
 
+struct JKRThreadName_ {
+};
+
 struct JKRHeap {
 	/* 802CE438 */ void becomeCurrentHeap();
 	/* 802CE474 */ void alloc(u32, int, JKRHeap*);
@@ -63,9 +66,6 @@ struct JKRThread {
 	/* 802D1934 */ void start(void*);
 	/* 802D1960 */ void searchThread(OSThread*);
 	/* 802D1E14 */ bool run();
-};
-
-struct JKRThreadName_ {
 };
 
 struct JKRThreadSwitch {
@@ -87,26 +87,29 @@ struct JKRDisposer {
 // Forward References:
 // 
 
+extern "C" extern char const* const JKRThread__stringBase0;
+extern "C" extern u8 sEndMesgQueue__7JKRTask[32];
+extern "C" extern u8 sManager__15JKRThreadSwitch[4];
 
-extern "C" void __ct__9JKRThreadFUlii(); // 1
-extern "C" void __ct__9JKRThreadFP7JKRHeapUlii(); // 1
-extern "C" void __ct__9JKRThreadFP8OSThreadi(); // 1
-extern "C" void __dt__9JKRThreadFv(); // 1
-extern "C" void setCommon_mesgQueue__9JKRThreadFP7JKRHeapi(); // 1
-extern "C" void setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli(); // 1
-extern "C" void start__9JKRThreadFPv(); // 1
-extern "C" void searchThread__9JKRThreadFP8OSThread(); // 1
-extern "C" void __ct__15JKRThreadSwitchFP7JKRHeap(); // 1
-extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap(); // 1
-extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi(); // 1
-extern "C" void callback__15JKRThreadSwitchFP8OSThreadP8OSThread(); // 1
-extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole(); // 1
-extern "C" bool run__9JKRThreadFv(); // 1
-extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_(); // 1
-extern "C" void __dt__15JKRThreadSwitchFv(); // 1
-extern "C" void __sinit_JKRThread_cpp(); // 1
-extern "C" void func_802D1EFC(); // 1
-extern "C" void func_802D1F50(); // 1
+extern "C" void __ct__9JKRThreadFUlii();
+extern "C" void __ct__9JKRThreadFP7JKRHeapUlii();
+extern "C" void __ct__9JKRThreadFP8OSThreadi();
+extern "C" void __dt__9JKRThreadFv();
+extern "C" void setCommon_mesgQueue__9JKRThreadFP7JKRHeapi();
+extern "C" void setCommon_heapSpecified__9JKRThreadFP7JKRHeapUli();
+extern "C" void start__9JKRThreadFPv();
+extern "C" void searchThread__9JKRThreadFP8OSThread();
+extern "C" void __ct__15JKRThreadSwitchFP7JKRHeap();
+extern "C" void createManager__15JKRThreadSwitchFP7JKRHeap();
+extern "C" void enter__15JKRThreadSwitchFP9JKRThreadi();
+extern "C" void callback__15JKRThreadSwitchFP8OSThreadP8OSThread();
+extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_P10JUTConsole();
+extern "C" bool run__9JKRThreadFv();
+extern "C" void draw__15JKRThreadSwitchFP14JKRThreadName_();
+extern "C" void __dt__15JKRThreadSwitchFv();
+extern "C" void __sinit_JKRThread_cpp();
+extern "C" void func_802D1EFC();
+extern "C" void func_802D1F50();
 extern "C" extern char const* const JKRThread__stringBase0;
 extern "C" extern u8 sEndMesgQueue__7JKRTask[32];
 extern "C" extern u8 sManager__15JKRThreadSwitch[4];
@@ -115,48 +118,51 @@ extern "C" extern u8 sManager__15JKRThreadSwitch[4];
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
+extern "C" extern u8 sRootHeap__7JKRHeap[4];
 
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void alloc__7JKRHeapFUliP7JKRHeap(); // 1
-extern "C" void free__7JKRHeapFPvP7JKRHeap(); // 1
-extern "C" void findFromRoot__7JKRHeapFPv(); // 1
-extern "C" void isSubHeap__7JKRHeapCFP7JKRHeap(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__11JKRDisposerFv(); // 1
-extern "C" void __dt__11JKRDisposerFv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __ct__10JSUPtrListFb(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void clear__10JUTConsoleFv(); // 1
-extern "C" void print_f__10JUTConsoleFPCce(); // 1
-extern "C" void print__10JUTConsoleFPCc(); // 1
-extern "C" void JUTWarningConsole(); // 1
-extern "C" void OSInitMessageQueue(); // 1
-extern "C" void OSSetSwitchThreadCallback(); // 1
-extern "C" void OSIsThreadTerminated(); // 1
-extern "C" void OSCreateThread(); // 1
-extern "C" void OSCancelThread(); // 1
-extern "C" void OSDetachThread(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void __cvt_sll_flt(); // 1
-extern "C" void sprintf(); // 1
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void alloc__7JKRHeapFUliP7JKRHeap();
+extern "C" void free__7JKRHeapFPvP7JKRHeap();
+extern "C" void findFromRoot__7JKRHeapFPv();
+extern "C" void isSubHeap__7JKRHeapCFP7JKRHeap();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__11JKRDisposerFv();
+extern "C" void __dt__11JKRDisposerFv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __ct__10JSUPtrListFb();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void clear__10JUTConsoleFv();
+extern "C" void print_f__10JUTConsoleFPCce();
+extern "C" void print__10JUTConsoleFPCc();
+extern "C" void JUTWarningConsole();
+extern "C" void OSInitMessageQueue();
+extern "C" void OSSetSwitchThreadCallback();
+extern "C" void OSIsThreadTerminated();
+extern "C" void OSCreateThread();
+extern "C" void OSCancelThread();
+extern "C" void OSDetachThread();
+extern "C" void OSGetTick();
+extern "C" void __register_global_object();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void __cvt_sll_flt();
+extern "C" void sprintf();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sCurrentHeap__7JKRHeap[4];
 extern "C" extern u8 sRootHeap__7JKRHeap[4];

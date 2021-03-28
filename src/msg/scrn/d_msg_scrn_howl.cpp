@@ -156,45 +156,48 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const msg_scrn_d_msg_scrn_howl__stringBase0;
+extern "C" extern u8 data_803C1120[56];
+extern "C" extern u8 data_803C1158[56];
 
-extern "C" void __ct__14dMsgScrnHowl_cFv(); // 1
-extern "C" void __dt__14dMsgScrnHowl_cFv(); // 1
-extern "C" void exec__14dMsgScrnHowl_cFv(); // 1
-extern "C" void drawSelf__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_on_init__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_on_proc__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_off_init__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_off_proc__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_stop_init__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_stop_proc__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_demo_play_init__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_demo_play_proc__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_off_test_init__14dMsgScrnHowl_cFv(); // 1
-extern "C" void guide_off_test_proc__14dMsgScrnHowl_cFv(); // 1
-extern "C" void fukiScale__14dMsgScrnHowl_cFf(); // 1
-extern "C" void fukiTrans__14dMsgScrnHowl_cFff(); // 1
-extern "C" void fukiAlpha__14dMsgScrnHowl_cFf(); // 1
-extern "C" void isKeyCheck__14dMsgScrnHowl_cFv(); // 1
-extern "C" void resetLine__14dMsgScrnHowl_cFv(); // 1
-extern "C" void drawWave__14dMsgScrnHowl_cFv(); // 1
-extern "C" void drawGuide__14dMsgScrnHowl_cFv(); // 1
-extern "C" void drawGuide2__14dMsgScrnHowl_cFv(); // 1
-extern "C" void drawEffect__14dMsgScrnHowl_cFv(); // 1
-extern "C" void calcMain__14dMsgScrnHowl_cFv(); // 1
-extern "C" void calcWave__14dMsgScrnHowl_cFv(); // 1
-extern "C" void calcGuide__14dMsgScrnHowl_cFv(); // 1
-extern "C" void moveLineV__14dMsgScrnHowl_cFb(); // 1
-extern "C" void moveBaseLength__14dMsgScrnHowl_cFb(); // 1
-extern "C" void getOnLineNum__14dMsgScrnHowl_cFi(); // 1
-extern "C" void addCount__14dMsgScrnHowl_cFs(); // 1
-extern "C" void addCountGuide__14dMsgScrnHowl_cFs(); // 1
-extern "C" void getNowPlotPitch__14dMsgScrnHowl_cFf(); // 1
-extern "C" void getPlotPitch__14dMsgScrnHowl_cFf(); // 1
-extern "C" void calcPitchLevel__14dMsgScrnHowl_cFv(); // 1
-extern "C" void initGuideData__14dMsgScrnHowl_cFv(); // 1
-extern "C" void getGuideDataSize__14dMsgScrnHowl_cFv(); // 1
-extern "C" void getGuideDataType__14dMsgScrnHowl_cFi(); // 1
-extern "C" void __sinit_d_msg_scrn_howl_cpp(); // 1
+extern "C" void __ct__14dMsgScrnHowl_cFv();
+extern "C" void __dt__14dMsgScrnHowl_cFv();
+extern "C" void exec__14dMsgScrnHowl_cFv();
+extern "C" void drawSelf__14dMsgScrnHowl_cFv();
+extern "C" void guide_on_init__14dMsgScrnHowl_cFv();
+extern "C" void guide_on_proc__14dMsgScrnHowl_cFv();
+extern "C" void guide_off_init__14dMsgScrnHowl_cFv();
+extern "C" void guide_off_proc__14dMsgScrnHowl_cFv();
+extern "C" void guide_stop_init__14dMsgScrnHowl_cFv();
+extern "C" void guide_stop_proc__14dMsgScrnHowl_cFv();
+extern "C" void guide_demo_play_init__14dMsgScrnHowl_cFv();
+extern "C" void guide_demo_play_proc__14dMsgScrnHowl_cFv();
+extern "C" void guide_off_test_init__14dMsgScrnHowl_cFv();
+extern "C" void guide_off_test_proc__14dMsgScrnHowl_cFv();
+extern "C" void fukiScale__14dMsgScrnHowl_cFf();
+extern "C" void fukiTrans__14dMsgScrnHowl_cFff();
+extern "C" void fukiAlpha__14dMsgScrnHowl_cFf();
+extern "C" void isKeyCheck__14dMsgScrnHowl_cFv();
+extern "C" void resetLine__14dMsgScrnHowl_cFv();
+extern "C" void drawWave__14dMsgScrnHowl_cFv();
+extern "C" void drawGuide__14dMsgScrnHowl_cFv();
+extern "C" void drawGuide2__14dMsgScrnHowl_cFv();
+extern "C" void drawEffect__14dMsgScrnHowl_cFv();
+extern "C" void calcMain__14dMsgScrnHowl_cFv();
+extern "C" void calcWave__14dMsgScrnHowl_cFv();
+extern "C" void calcGuide__14dMsgScrnHowl_cFv();
+extern "C" void moveLineV__14dMsgScrnHowl_cFb();
+extern "C" void moveBaseLength__14dMsgScrnHowl_cFb();
+extern "C" void getOnLineNum__14dMsgScrnHowl_cFi();
+extern "C" void addCount__14dMsgScrnHowl_cFs();
+extern "C" void addCountGuide__14dMsgScrnHowl_cFs();
+extern "C" void getNowPlotPitch__14dMsgScrnHowl_cFf();
+extern "C" void getPlotPitch__14dMsgScrnHowl_cFf();
+extern "C" void calcPitchLevel__14dMsgScrnHowl_cFv();
+extern "C" void initGuideData__14dMsgScrnHowl_cFv();
+extern "C" void getGuideDataSize__14dMsgScrnHowl_cFv();
+extern "C" void getGuideDataType__14dMsgScrnHowl_cFi();
+extern "C" void __sinit_d_msg_scrn_howl_cpp();
 extern "C" extern char const* const msg_scrn_d_msg_scrn_howl__stringBase0;
 extern "C" extern u8 data_803C1120[56];
 extern "C" extern u8 data_803C1158[56];
@@ -203,74 +206,78 @@ extern "C" extern u8 data_803C1158[56];
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc(); // 1
-extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb(); // 1
-extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc(); // 1
-extern "C" void arwAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void arwAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc(); // 1
-extern "C" bool isSelect__14dMsgScrnBase_cFv(); // 1
-extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeMove__14dMsgScrnBase_cFv(); // 1
-extern "C" void dotAnimeInit__14dMsgScrnBase_cFv(); // 1
-extern "C" void __ct__14dMsgScrnBase_cFv(); // 1
-extern "C" void __dt__14dMsgScrnBase_cFv(); // 1
-extern "C" void init__14dMsgScrnBase_cFv(); // 1
-extern "C" void multiDraw__14dMsgScrnBase_cFv(); // 1
-extern "C" void draw__14dMsgScrnBase_cFv(); // 1
-extern "C" void fontAlpha__14dMsgScrnBase_cFf(); // 1
-extern "C" void __ct__8CPaneMgrFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__8CPaneMgrFv(); // 1
-extern "C" void getGlobalPosX__8CPaneMgrFv(); // 1
-extern "C" void getGlobalPosY__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void getNowInputValue__13Z2WolfHowlMgrFv(); // 1
-extern "C" void getCorrectLine__13Z2WolfHowlMgrFUc(); // 1
-extern "C" void getCorrectLineNum__13Z2WolfHowlMgrFv(); // 1
-extern "C" void getOnLineNum__13Z2WolfHowlMgrFv(); // 1
-extern "C" void startGuideMelody__13Z2WolfHowlMgrFb(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void func_802E90C0(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void GXGetScissor(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void setSelectRubyString__14dMsgScrnBase_cFPcPcPc();
+extern "C" void setSelectString__14dMsgScrnBase_cFPcPcPc();
+extern "C" bool selectAnimeMove__14dMsgScrnBase_cFUcUcb();
+extern "C" void selectAnimeInit__14dMsgScrnBase_cFUcUcfUc();
+extern "C" void arwAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void arwAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void fukiPosCalc__14dMsgScrnBase_cFUc();
+extern "C" bool isSelect__14dMsgScrnBase_cFv();
+extern "C" bool selectAnimeEnd__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeMove__14dMsgScrnBase_cFv();
+extern "C" void dotAnimeInit__14dMsgScrnBase_cFv();
+extern "C" void __ct__14dMsgScrnBase_cFv();
+extern "C" void __dt__14dMsgScrnBase_cFv();
+extern "C" void init__14dMsgScrnBase_cFv();
+extern "C" void multiDraw__14dMsgScrnBase_cFv();
+extern "C" void draw__14dMsgScrnBase_cFv();
+extern "C" void fontAlpha__14dMsgScrnBase_cFf();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void getGlobalPosX__8CPaneMgrFv();
+extern "C" void getGlobalPosY__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void getNowInputValue__13Z2WolfHowlMgrFv();
+extern "C" void getCorrectLine__13Z2WolfHowlMgrFUc();
+extern "C" void getCorrectLineNum__13Z2WolfHowlMgrFv();
+extern "C" void getOnLineNum__13Z2WolfHowlMgrFv();
+extern "C" void startGuideMelody__13Z2WolfHowlMgrFb();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void func_802E90C0();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void GXGetScissor();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];

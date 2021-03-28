@@ -53,24 +53,26 @@ struct J2DGrafContext {
 // 
 
 
-extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor(); // 1
-extern "C" void control__8JUTFaderFv(); // 1
-extern "C" void draw__8JUTFaderFv(); // 1
-extern "C" void startFadeIn__8JUTFaderFi(); // 1
-extern "C" void startFadeOut__8JUTFaderFi(); // 1
-extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi(); // 1
-extern "C" void __dt__8JUTFaderFv(); // 1
+extern "C" void __ct__8JUTFaderFiiiiQ28JUtility6TColor();
+extern "C" void control__8JUTFaderFv();
+extern "C" void draw__8JUTFaderFv();
+extern "C" void startFadeIn__8JUTFaderFi();
+extern "C" void startFadeOut__8JUTFaderFi();
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
+extern "C" void __dt__8JUTFaderFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
 
-extern "C" void __dl__FPv(); // 1
-extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void func_802E9260(); // 1
-extern "C" void __ct__13J2DOrthoGraphFv(); // 1
+extern "C" void __dl__FPv();
+extern "C" void setColor__14J2DGrafContextFQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void func_802E9260();
+extern "C" void __ct__13J2DOrthoGraphFv();
 extern "C" extern void* __vt__14J2DGrafContext[10];
 extern "C" extern void* __vt__13J2DOrthoGraph[10];
 

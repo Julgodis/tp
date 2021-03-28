@@ -69,10 +69,10 @@ struct dRes_control_c {
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -89,30 +89,32 @@ struct J3DJoint {
 // Forward References:
 // 
 
-static void nodeCallBack(J3DJoint*, int); // 2
-static void createSolidHeap(fopAc_ac_c*); // 2
-static void daObjFlag_Draw(daObjFlag_c*); // 2
-static void daObjFlag_Execute(daObjFlag_c*); // 2
-static bool daObjFlag_IsDelete(daObjFlag_c*); // 2
-static void daObjFlag_Delete(daObjFlag_c*); // 2
-static void daObjFlag_Create(fopAc_ac_c*); // 2
+static void nodeCallBack(J3DJoint*, int);
+static void createSolidHeap(fopAc_ac_c*);
+static void daObjFlag_Draw(daObjFlag_c*);
+static void daObjFlag_Execute(daObjFlag_c*);
+static bool daObjFlag_IsDelete(daObjFlag_c*);
+static void daObjFlag_Delete(daObjFlag_c*);
+static void daObjFlag_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_Obj_Flag[12];
 
-extern "C" void create_init__11daObjFlag_cFv(); // 1
-extern "C" void initBaseMtx__11daObjFlag_cFv(); // 1
-extern "C" void getJointAngle__11daObjFlag_cFP5csXyzi(); // 1
-extern "C" void calcJointAngle__11daObjFlag_cFv(); // 1
-extern "C" void calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf(); // 1
-extern "C" void calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf(); // 1
-extern "C" void getSwingY__11daObjFlag_cFf(); // 1
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" static void createSolidHeap__FP10fopAc_ac_c(); // 1
-extern "C" static void daObjFlag_Draw__FP11daObjFlag_c(); // 1
-extern "C" static void daObjFlag_Execute__FP11daObjFlag_c(); // 1
-extern "C" static bool daObjFlag_IsDelete__FP11daObjFlag_c(); // 1
-extern "C" static void daObjFlag_Delete__FP11daObjFlag_c(); // 1
-extern "C" void __dt__11FlagJoint_cFv(); // 1
-extern "C" static void daObjFlag_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __ct__11FlagJoint_cFv(); // 1
+extern "C" void create_init__11daObjFlag_cFv();
+extern "C" void initBaseMtx__11daObjFlag_cFv();
+extern "C" void getJointAngle__11daObjFlag_cFP5csXyzi();
+extern "C" void calcJointAngle__11daObjFlag_cFv();
+extern "C" void calcAngleSwingZ__11daObjFlag_cFP11FlagJoint_cf();
+extern "C" void calcAngleSwingX__11daObjFlag_cFP11FlagJoint_cf();
+extern "C" void getSwingY__11daObjFlag_cFf();
+extern "C" static void nodeCallBack__FP8J3DJointi();
+extern "C" static void createSolidHeap__FP10fopAc_ac_c();
+extern "C" static void daObjFlag_Draw__FP11daObjFlag_c();
+extern "C" static void daObjFlag_Execute__FP11daObjFlag_c();
+extern "C" static bool daObjFlag_IsDelete__FP11daObjFlag_c();
+extern "C" static void daObjFlag_Delete__FP11daObjFlag_c();
+extern "C" void __dt__11FlagJoint_cFv();
+extern "C" static void daObjFlag_Create__FP10fopAc_ac_c();
+extern "C" void __ct__11FlagJoint_cFv();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_Obj_Flag[12];
 
@@ -120,53 +122,62 @@ extern "C" extern void* g_profile_Obj_Flag[12];
 // External References:
 // 
 
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rnd(); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_chaseS(s16*, s16, s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*);
+void cM_atan2s(f32, f32);
+void cM_rnd();
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_chaseS(s16*, s16, s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __apl__5csXyzFR5csXyz(); // 1
-extern "C" void __mi__5csXyzFR5csXyz(); // 1
-extern "C" void __ml__5csXyzFf(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_chaseS__FPsss(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void sprintf(); // 1
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __apl__5csXyzFR5csXyz();
+extern "C" void __mi__5csXyzFR5csXyz();
+extern "C" void __ml__5csXyzFf();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rnd__Fv();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_chaseS__FPsss();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXCopy();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void sprintf();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

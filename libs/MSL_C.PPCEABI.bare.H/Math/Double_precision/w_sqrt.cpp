@@ -12,14 +12,14 @@
 // 
 
 
-extern "C" void sqrt(); // 1
+extern "C" void sqrt();
 
 // 
 // External References:
 // 
 
 
-extern "C" void __ieee754_sqrt(); // 1
+extern "C" void __ieee754_sqrt();
 
 // 
 // Declarations:

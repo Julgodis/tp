@@ -12,19 +12,19 @@
 // 
 
 
-extern "C" void PSQUATMultiply(); // 1
-extern "C" void C_QUATRotAxisRad(); // 1
-extern "C" void C_QUATSlerp(); // 1
+extern "C" void PSQUATMultiply();
+extern "C" void C_QUATRotAxisRad();
+extern "C" void C_QUATSlerp();
 
 // 
 // External References:
 // 
 
 
-extern "C" void PSVECNormalize(); // 1
-extern "C" void sinf(); // 1
-extern "C" void cosf(); // 1
-extern "C" void acosf(); // 1
+extern "C" void PSVECNormalize();
+extern "C" void sinf();
+extern "C" void cosf();
+extern "C" void acosf();
 
 // 
 // Declarations:

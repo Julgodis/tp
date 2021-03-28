@@ -11,12 +11,6 @@
 // Types:
 // 
 
-struct JAISoundHandle {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -24,6 +18,12 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JAISoundHandle {
 };
 
 struct Z2SoundStarter {
@@ -62,37 +62,43 @@ struct JAISoundParamsMove {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
 
-extern "C" void __ct__14Z2SoundStarterFb(); // 1
-extern "C" void func_802AABF4(); // 1
-extern "C" void func_802AAC3C(); // 1
-extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc(); // 1
-extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc(); // 1
-extern "C" void __dt__14Z2SoundStarterFv(); // 1
+extern "C" void __ct__14Z2SoundStarterFb();
+extern "C" void func_802AABF4();
+extern "C" void func_802AAC3C();
+extern "C" void setPortData__14Z2SoundStarterFP14JAISoundHandleUlUsSc();
+extern "C" void getPortData__14Z2SoundStarterFP14JAISoundHandleUlSc();
+extern "C" void __dt__14Z2SoundStarterFv();
 extern "C" extern void* __vt__14Z2SoundStarter[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B3C[4];
+extern "C" extern u8 data_80450B74[4];
+extern "C" extern u8 data_80450B7C[4];
+extern "C" extern u8 data_80450B80[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void openChild__8JASTrackFUl(); // 1
-extern "C" void writePort__8JASTrackFUlUs(); // 1
-extern "C" void readPort__8JASTrackFUl(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePitch__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveFxMix__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void movePan__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void moveDolby__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void __ct__15JAISoundStarterFb(); // 1
-extern "C" void __dt__15JAISoundStarterFv(); // 1
-extern "C" void getFogDensity__10Z2EnvSeMgrFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void openChild__8JASTrackFUl();
+extern "C" void writePort__8JASTrackFUlUs();
+extern "C" void readPort__8JASTrackFUl();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void movePitch__18JAISoundParamsMoveFfUl();
+extern "C" void moveFxMix__18JAISoundParamsMoveFfUl();
+extern "C" void movePan__18JAISoundParamsMoveFfUl();
+extern "C" void moveDolby__18JAISoundParamsMoveFfUl();
+extern "C" void __ct__15JAISoundStarterFb();
+extern "C" void __dt__15JAISoundStarterFv();
+extern "C" void getFogDensity__10Z2EnvSeMgrFv();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_29();
 extern "C" extern u8 data_80450B3C[4];
 extern "C" extern u8 data_80450B74[4];
 extern "C" extern u8 data_80450B7C[4];

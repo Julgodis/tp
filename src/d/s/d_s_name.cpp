@@ -112,39 +112,42 @@ struct JKRExpHeap {
 // Forward References:
 // 
 
-static void phase_1(char*); // 2
-static void phase_2(char*); // 2
-static void resLoad(request_of_phase_process_class*, char*); // 2
-static void dScnName_Draw(dScnName_c*); // 2
-static void dScnName_Execute(dScnName_c*); // 2
-static void dScnName_IsDelete(dScnName_c*); // 2
-static void dScnName_Delete(dScnName_c*); // 2
-static void dScnName_Create(scene_class*); // 2
+static void phase_1(char*);
+static void phase_2(char*);
+static void resLoad(request_of_phase_process_class*, char*);
+static void dScnName_Draw(dScnName_c*);
+static void dScnName_Execute(dScnName_c*);
+static void dScnName_IsDelete(dScnName_c*);
+static void dScnName_Delete(dScnName_c*);
+static void dScnName_Create(scene_class*);
+extern "C" extern char const* const d_s_d_s_name__stringBase0;
+extern "C" extern void* g_profile_NAME_SCENE[10];
+extern "C" extern void* g_profile_NAMEEX_SCENE[10];
 
-extern "C" void __ct__9dSn_HIO_cFv(); // 1
-extern "C" static void phase_1__FPc(); // 1
-extern "C" static void phase_2__FPc(); // 1
-extern "C" static void resLoad__FP30request_of_phase_process_classPc(); // 1
-extern "C" void create__10dScnName_cFv(); // 1
-extern "C" void setView__10dScnName_cFv(); // 1
-extern "C" void execute__10dScnName_cFv(); // 1
-extern "C" void draw__10dScnName_cFv(); // 1
-extern "C" void __dt__10dScnName_cFv(); // 1
-extern "C" void FileSelectOpen__10dScnName_cFv(); // 1
-extern "C" void FileSelectMain__10dScnName_cFv(); // 1
-extern "C" void FileSelectMainNormal__10dScnName_cFv(); // 1
-extern "C" void FileSelectClose__10dScnName_cFv(); // 1
-extern "C" void brightCheckOpen__10dScnName_cFv(); // 1
-extern "C" void brightCheck__10dScnName_cFv(); // 1
-extern "C" void changeGameScene__10dScnName_cFv(); // 1
-extern "C" static void dScnName_Draw__FP10dScnName_c(); // 1
-extern "C" static void dScnName_Execute__FP10dScnName_c(); // 1
-extern "C" static void dScnName_IsDelete__FP10dScnName_c(); // 1
-extern "C" static void dScnName_Delete__FP10dScnName_c(); // 1
-extern "C" static void dScnName_Create__FP11scene_class(); // 1
-extern "C" void __dt__17dScnName_camera_cFv(); // 1
-extern "C" void __dt__9dSn_HIO_cFv(); // 1
-extern "C" void __sinit_d_s_name_cpp(); // 1
+extern "C" void __ct__9dSn_HIO_cFv();
+extern "C" static void phase_1__FPc();
+extern "C" static void phase_2__FPc();
+extern "C" static void resLoad__FP30request_of_phase_process_classPc();
+extern "C" void create__10dScnName_cFv();
+extern "C" void setView__10dScnName_cFv();
+extern "C" void execute__10dScnName_cFv();
+extern "C" void draw__10dScnName_cFv();
+extern "C" void __dt__10dScnName_cFv();
+extern "C" void FileSelectOpen__10dScnName_cFv();
+extern "C" void FileSelectMain__10dScnName_cFv();
+extern "C" void FileSelectMainNormal__10dScnName_cFv();
+extern "C" void FileSelectClose__10dScnName_cFv();
+extern "C" void brightCheckOpen__10dScnName_cFv();
+extern "C" void brightCheck__10dScnName_cFv();
+extern "C" void changeGameScene__10dScnName_cFv();
+extern "C" static void dScnName_Draw__FP10dScnName_c();
+extern "C" static void dScnName_Execute__FP10dScnName_c();
+extern "C" static void dScnName_IsDelete__FP10dScnName_c();
+extern "C" static void dScnName_Delete__FP10dScnName_c();
+extern "C" static void dScnName_Create__FP11scene_class();
+extern "C" void __dt__17dScnName_camera_cFv();
+extern "C" void __dt__9dSn_HIO_cFv();
+extern "C" void __sinit_d_s_name_cpp();
 extern "C" extern char const* const d_s_d_s_name__stringBase0;
 extern "C" extern void* g_profile_NAME_SCENE[10];
 extern "C" extern void* g_profile_NAMEEX_SCENE[10];
@@ -153,68 +156,80 @@ extern "C" extern void* g_profile_NAMEEX_SCENE[10];
 // External References:
 // 
 
-void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16); // 2
-void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]); // 2
-void mDoExt_getGameHeap(); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void fopOvlpM_IsPeek(); // 2
-void fopScnM_ChangeReq(scene_class*, s16, s16, u16); // 2
-void dComIfG_resetToOpening(scene_class*); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8); // 2
-void dComIfGs_gameStart(); // 2
-void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*); // 2
-void dKy_clear_game_init(); // 2
-void dKy_setLight_init(); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoMtx_lookAt(f32 (* )[4], Vec const*, Vec const*, s16);
+void mDoMtx_concatProjView(f32 const (* )[4], f32 const (* )[4], f32 (* )[4]);
+void mDoExt_getGameHeap();
+void mDoExt_setCurrentHeap(JKRHeap*);
+void fopOvlpM_IsPeek();
+void fopScnM_ChangeReq(scene_class*, s16, s16, u16);
+void dComIfG_resetToOpening(scene_class*);
+void dComIfGp_setNextStage(char const*, s16, s8, s8);
+void dComIfGs_gameStart();
+void dComLbG_PhaseHandler(request_of_phase_process_class*, int (**)(void*), void*);
+void dKy_clear_game_init();
+void dKy_setLight_init();
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern void* mRenderModeObj__15mDoMch_render_c[1 + 1 /* padding */];
+extern "C" extern u32 g_blackColor;
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 struct_80450BE4[4];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 sManager__10JFWDisplay[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs(); // 1
-extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void fopScnM_ChangeReq__FP11scene_classssUs(); // 1
-extern "C" void dComIfG_resetToOpening__FP11scene_class(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScSc(); // 1
-extern "C" void dComIfGs_gameStart__Fv(); // 1
-extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv(); // 1
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
-extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap(); // 1
-extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void cleanup__13dPa_control_cFv(); // 1
-extern "C" void setViewPort__14dDlst_window_cFffffff(); // 1
-extern "C" void setScissor__14dDlst_window_cFffff(); // 1
-extern "C" void Run__12dVibration_cFv(); // 1
-extern "C" void Init__12dVibration_cFv(); // 1
-extern "C" void __ct__14dFile_select_cFP10JKRArchive(); // 1
-extern "C" void _create__14dFile_select_cFv(); // 1
-extern "C" void _move__14dFile_select_cFv(); // 1
-extern "C" void _draw__14dFile_select_cFv(); // 1
-extern "C" void __ct__14dBrightCheck_cFP10JKRArchive(); // 1
-extern "C" void _move__14dBrightCheck_cFv(); // 1
-extern "C" void _draw__14dBrightCheck_cFv(); // 1
-extern "C" void dKy_clear_game_init__Fv(); // 1
-extern "C" void dKy_setLight_init__Fv(); // 1
-extern "C" void changeWater__13dMeter2Info_cFUc(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void bgmStop__8Z2SeqMgrFUll(); // 1
-extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl(); // 1
-extern "C" void bgmStreamPlay__8Z2SeqMgrFv(); // 1
-extern "C" void becomeCurrentHeap__7JKRHeapFv(); // 1
-extern "C" void destroy__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void C_MTXPerspective(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void mDoMtx_lookAt__FPA4_fPC3VecPC3Vecs();
+extern "C" void mDoMtx_concatProjView__FPA4_CfPA4_CfPA4_f();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fopScnM_ChangeReq__FP11scene_classssUs();
+extern "C" void dComIfG_resetToOpening__FP11scene_class();
+extern "C" void dComIfGp_setNextStage__FPCcsScSc();
+extern "C" void dComIfGs_gameStart__Fv();
+extern "C" void dComLbG_PhaseHandler__FP30request_of_phase_process_classPPFPv_iPv();
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void setRes__14dRes_control_cFPCcP11dRes_info_ciPCcUcP7JKRHeap();
+extern "C" void syncRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void deleteRes__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void cleanup__13dPa_control_cFv();
+extern "C" void setViewPort__14dDlst_window_cFffffff();
+extern "C" void setScissor__14dDlst_window_cFffff();
+extern "C" void Run__12dVibration_cFv();
+extern "C" void Init__12dVibration_cFv();
+extern "C" void __ct__14dFile_select_cFP10JKRArchive();
+extern "C" void _create__14dFile_select_cFv();
+extern "C" void _move__14dFile_select_cFv();
+extern "C" void _draw__14dFile_select_cFv();
+extern "C" void __ct__14dBrightCheck_cFP10JKRArchive();
+extern "C" void _move__14dBrightCheck_cFv();
+extern "C" void _draw__14dBrightCheck_cFv();
+extern "C" void dKy_clear_game_init__Fv();
+extern "C" void dKy_setLight_init__Fv();
+extern "C" void changeWater__13dMeter2Info_cFUc();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void bgmStop__8Z2SeqMgrFUll();
+extern "C" void bgmStreamPrepare__8Z2SeqMgrFUl();
+extern "C" void bgmStreamPlay__8Z2SeqMgrFv();
+extern "C" void becomeCurrentHeap__7JKRHeapFv();
+extern "C" void destroy__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void OSGetTime();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXInverse();
+extern "C" void C_MTXPerspective();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern void* g_fopScn_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcNd_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

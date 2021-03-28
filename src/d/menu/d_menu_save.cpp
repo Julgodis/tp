@@ -261,10 +261,10 @@ struct Z2SeqMgr {
 	/* 802B3EAC */ void checkBgmIDPlaying(u32);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -321,136 +321,139 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_save__stringBase0;
+extern "C" extern void* __vt__16dDlst_MenuSave_c[4];
+extern "C" extern void* __vt__23dDlst_MenuSaveExplain_c[4 + 18 /* padding */];
 
-extern "C" void __ct__9dMs_HIO_cFv(); // 1
-extern "C" void __ct__12dMenu_save_cFv(); // 1
-extern "C" void _create__12dMenu_save_cFv(); // 1
-extern "C" void screenSet__12dMenu_save_cFv(); // 1
-extern "C" void initialize__12dMenu_save_cFv(); // 1
-extern "C" void displayInit__12dMenu_save_cFv(); // 1
-extern "C" void _open__12dMenu_save_cFv(); // 1
-extern "C" void _close__12dMenu_save_cFv(); // 1
-extern "C" void _delete__12dMenu_save_cFv(); // 1
-extern "C" void _move__12dMenu_save_cFv(); // 1
-extern "C" void saveSelAnm__12dMenu_save_cFv(); // 1
-extern "C" void selFileWakuAnm__12dMenu_save_cFv(); // 1
-extern "C" void bookIconAnm__12dMenu_save_cFv(); // 1
-extern "C" void memCardWatch__12dMenu_save_cFv(); // 1
-extern "C" void saveQuestion__12dMenu_save_cFv(); // 1
-extern "C" void saveQuestion2__12dMenu_save_cFv(); // 1
-extern "C" void saveQuestion21__12dMenu_save_cFv(); // 1
-extern "C" void saveQuestion3__12dMenu_save_cFv(); // 1
-extern "C" void saveQuestion4__12dMenu_save_cFv(); // 1
-extern "C" void saveGuide__12dMenu_save_cFv(); // 1
-extern "C" void memCardCheck__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrMsgWaitKey__12dMenu_save_cFv(); // 1
-extern "C" void backSaveQuestionInitSet__12dMenu_save_cFv(); // 1
-extern "C" void backSaveQuestion__12dMenu_save_cFv(); // 1
-extern "C" void backSaveQuestion2__12dMenu_save_cFv(); // 1
-extern "C" void closeSelect__12dMenu_save_cFv(); // 1
-extern "C" void closeSelect2__12dMenu_save_cFv(); // 1
-extern "C" void iplSelMsgInitSet__12dMenu_save_cFv(); // 1
-extern "C" void iplSelInitSet__12dMenu_save_cFv(); // 1
-extern "C" void IPLSelectDisp1__12dMenu_save_cFv(); // 1
-extern "C" void IPLSelectDisp2__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrGoIPLSel__12dMenu_save_cFv(); // 1
-extern "C" void IPLSelect2Disp__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrGoIPLSel2__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrGotoIPL__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrMsgWaitFormatSel__12dMenu_save_cFv(); // 1
-extern "C" void cardFormatYesSelDisp__12dMenu_save_cFv(); // 1
-extern "C" void cardFormatNoSelDisp__12dMenu_save_cFv(); // 1
-extern "C" void memCardErrMsgWaitFormatSel2__12dMenu_save_cFv(); // 1
-extern "C" void cardFormatYesSel2Disp__12dMenu_save_cFv(); // 1
-extern "C" void memCardFormat__12dMenu_save_cFv(); // 1
-extern "C" void memCardFormatWait__12dMenu_save_cFv(); // 1
-extern "C" void gameFileMakeSelInitSet__12dMenu_save_cFv(); // 1
-extern "C" void makeGameFileSelDisp__12dMenu_save_cFv(); // 1
-extern "C" void memCardMakeGameFileSel__12dMenu_save_cFv(); // 1
-extern "C" void makeGameFileDisp__12dMenu_save_cFv(); // 1
-extern "C" void memCardMakeGameFile__12dMenu_save_cFv(); // 1
-extern "C" void memCardMakeGameFileWait__12dMenu_save_cFv(); // 1
-extern "C" void memCardCommandEnd__12dMenu_save_cFv(); // 1
-extern "C" void memCardCommandEnd2__12dMenu_save_cFv(); // 1
-extern "C" void memCardDataLoadWait__12dMenu_save_cFv(); // 1
-extern "C" void dataWrite__12dMenu_save_cFv(); // 1
-extern "C" void memCardDataSaveWait__12dMenu_save_cFv(); // 1
-extern "C" void memCardDataSaveWait2__12dMenu_save_cFv(); // 1
-extern "C" void gameContinueDisp__12dMenu_save_cFv(); // 1
-extern "C" void gameContinue__12dMenu_save_cFv(); // 1
-extern "C" void gameContinue2__12dMenu_save_cFv(); // 1
-extern "C" void gameContinue3__12dMenu_save_cFv(); // 1
-extern "C" void saveEnd__12dMenu_save_cFv(); // 1
-extern "C" void endingNoSave__12dMenu_save_cFv(); // 1
-extern "C" void endingNoSave2__12dMenu_save_cFv(); // 1
-extern "C" void endingDataCheck__12dMenu_save_cFv(); // 1
-extern "C" void retryQuestion0__12dMenu_save_cFv(); // 1
-extern "C" void retryQuestion1__12dMenu_save_cFv(); // 1
-extern "C" void retryQuestion2__12dMenu_save_cFv(); // 1
-extern "C" void restartInit__12dMenu_save_cFv(); // 1
-extern "C" void saveWait__12dMenu_save_cFv(); // 1
-extern "C" void messageChange__12dMenu_save_cFv(); // 1
-extern "C" void YesNoSelect__12dMenu_save_cFv(); // 1
-extern "C" void msgTxtSet__12dMenu_save_cFUsb(); // 1
-extern "C" void openSaveSelect__12dMenu_save_cFv(); // 1
-extern "C" void openSaveSelect2__12dMenu_save_cFv(); // 1
-extern "C" void openSaveSelect3__12dMenu_save_cFv(); // 1
-extern "C" void saveSelect__12dMenu_save_cFv(); // 1
-extern "C" void saveSelectStart__12dMenu_save_cFv(); // 1
-extern "C" void selectDataOpenMove__12dMenu_save_cFv(); // 1
-extern "C" void dataSelectAnmSet__12dMenu_save_cFv(); // 1
-extern "C" void saveSelectMoveAnime__12dMenu_save_cFv(); // 1
-extern "C" void saveYesNoSelect__12dMenu_save_cFv(); // 1
-extern "C" void yesnoSelectStart__12dMenu_save_cFv(); // 1
-extern "C" void saveMoveDisp__12dMenu_save_cFv(); // 1
-extern "C" void saveMoveDisp2__12dMenu_save_cFv(); // 1
-extern "C" void yesnoSelectAnmSet__12dMenu_save_cFUc(); // 1
-extern "C" void yesNoCursorMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void yesnoCancelAnmSet__12dMenu_save_cFv(); // 1
-extern "C" void saveYesNoCancelMove__12dMenu_save_cFv(); // 1
-extern "C" void headerTxtSet__12dMenu_save_cFUs(); // 1
-extern "C" void headerTxtChangeAnm__12dMenu_save_cFv(); // 1
-extern "C" void errDispInitSet__12dMenu_save_cFi(); // 1
-extern "C" void msgWindowInitOpen__12dMenu_save_cFv(); // 1
-extern "C" void msgWindowOpen__12dMenu_save_cFv(); // 1
-extern "C" void msgWindowClose__12dMenu_save_cFv(); // 1
-extern "C" void errYesNoSelect__12dMenu_save_cFUcUc(); // 1
-extern "C" void errCurMove__12dMenu_save_cFUcUc(); // 1
-extern "C" void errYesNoCursorMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void errorTxtSet__12dMenu_save_cFUs(); // 1
-extern "C" void errorTxtChangeAnm__12dMenu_save_cFv(); // 1
-extern "C" void saveSelectOpenInit__12dMenu_save_cFv(); // 1
-extern "C" void selectDataBaseMoveAnmInitSet__12dMenu_save_cFii(); // 1
-extern "C" void selectDataBaseMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void saveSelectOpenAnmSet__12dMenu_save_cFv(); // 1
-extern "C" void selectDataMoveAnmInitSet__12dMenu_save_cFii(); // 1
-extern "C" void selectDataMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void yesnoMenuMoveAnmInitSet__12dMenu_save_cFiiUc(); // 1
-extern "C" void yesnoMenuMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void yesnoSelectMoveAnm__12dMenu_save_cFUc(); // 1
-extern "C" void yesnoCursorShow__12dMenu_save_cFv(); // 1
-extern "C" void errorMoveAnmInitSet__12dMenu_save_cFii(); // 1
-extern "C" void errorMoveAnm__12dMenu_save_cFv(); // 1
-extern "C" void modoruTxtDispAnmInit__12dMenu_save_cFUc(); // 1
-extern "C" void modoruTxtDispAnm__12dMenu_save_cFv(); // 1
-extern "C" void ketteiTxtDispAnmInit__12dMenu_save_cFUc(); // 1
-extern "C" void ketteiTxtDispAnm__12dMenu_save_cFv(); // 1
-extern "C" void selectWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc(); // 1
-extern "C" void selectWakuAlpahAnm__12dMenu_save_cFUc(); // 1
-extern "C" void selFileCursorShow__12dMenu_save_cFv(); // 1
-extern "C" void yesnoWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc(); // 1
-extern "C" void yesnoWakuAlpahAnm__12dMenu_save_cFUc(); // 1
-extern "C" void dataSave__12dMenu_save_cFv(); // 1
-extern "C" void setSaveData__12dMenu_save_cFv(); // 1
-extern "C" void setInitSaveData__12dMenu_save_cFv(); // 1
-extern "C" void _draw__12dMenu_save_cFv(); // 1
-extern "C" void _draw2__12dMenu_save_cFv(); // 1
-extern "C" void draw__23dDlst_MenuSaveExplain_cFv(); // 1
-extern "C" void draw__16dDlst_MenuSave_cFv(); // 1
-extern "C" void __dt__16dDlst_MenuSave_cFv(); // 1
-extern "C" void __dt__23dDlst_MenuSaveExplain_cFv(); // 1
-extern "C" void __dt__9dMs_HIO_cFv(); // 1
-extern "C" void __sinit_d_menu_save_cpp(); // 1
+extern "C" void __ct__9dMs_HIO_cFv();
+extern "C" void __ct__12dMenu_save_cFv();
+extern "C" void _create__12dMenu_save_cFv();
+extern "C" void screenSet__12dMenu_save_cFv();
+extern "C" void initialize__12dMenu_save_cFv();
+extern "C" void displayInit__12dMenu_save_cFv();
+extern "C" void _open__12dMenu_save_cFv();
+extern "C" void _close__12dMenu_save_cFv();
+extern "C" void _delete__12dMenu_save_cFv();
+extern "C" void _move__12dMenu_save_cFv();
+extern "C" void saveSelAnm__12dMenu_save_cFv();
+extern "C" void selFileWakuAnm__12dMenu_save_cFv();
+extern "C" void bookIconAnm__12dMenu_save_cFv();
+extern "C" void memCardWatch__12dMenu_save_cFv();
+extern "C" void saveQuestion__12dMenu_save_cFv();
+extern "C" void saveQuestion2__12dMenu_save_cFv();
+extern "C" void saveQuestion21__12dMenu_save_cFv();
+extern "C" void saveQuestion3__12dMenu_save_cFv();
+extern "C" void saveQuestion4__12dMenu_save_cFv();
+extern "C" void saveGuide__12dMenu_save_cFv();
+extern "C" void memCardCheck__12dMenu_save_cFv();
+extern "C" void memCardErrMsgWaitKey__12dMenu_save_cFv();
+extern "C" void backSaveQuestionInitSet__12dMenu_save_cFv();
+extern "C" void backSaveQuestion__12dMenu_save_cFv();
+extern "C" void backSaveQuestion2__12dMenu_save_cFv();
+extern "C" void closeSelect__12dMenu_save_cFv();
+extern "C" void closeSelect2__12dMenu_save_cFv();
+extern "C" void iplSelMsgInitSet__12dMenu_save_cFv();
+extern "C" void iplSelInitSet__12dMenu_save_cFv();
+extern "C" void IPLSelectDisp1__12dMenu_save_cFv();
+extern "C" void IPLSelectDisp2__12dMenu_save_cFv();
+extern "C" void memCardErrGoIPLSel__12dMenu_save_cFv();
+extern "C" void IPLSelect2Disp__12dMenu_save_cFv();
+extern "C" void memCardErrGoIPLSel2__12dMenu_save_cFv();
+extern "C" void memCardErrGotoIPL__12dMenu_save_cFv();
+extern "C" void memCardErrMsgWaitFormatSel__12dMenu_save_cFv();
+extern "C" void cardFormatYesSelDisp__12dMenu_save_cFv();
+extern "C" void cardFormatNoSelDisp__12dMenu_save_cFv();
+extern "C" void memCardErrMsgWaitFormatSel2__12dMenu_save_cFv();
+extern "C" void cardFormatYesSel2Disp__12dMenu_save_cFv();
+extern "C" void memCardFormat__12dMenu_save_cFv();
+extern "C" void memCardFormatWait__12dMenu_save_cFv();
+extern "C" void gameFileMakeSelInitSet__12dMenu_save_cFv();
+extern "C" void makeGameFileSelDisp__12dMenu_save_cFv();
+extern "C" void memCardMakeGameFileSel__12dMenu_save_cFv();
+extern "C" void makeGameFileDisp__12dMenu_save_cFv();
+extern "C" void memCardMakeGameFile__12dMenu_save_cFv();
+extern "C" void memCardMakeGameFileWait__12dMenu_save_cFv();
+extern "C" void memCardCommandEnd__12dMenu_save_cFv();
+extern "C" void memCardCommandEnd2__12dMenu_save_cFv();
+extern "C" void memCardDataLoadWait__12dMenu_save_cFv();
+extern "C" void dataWrite__12dMenu_save_cFv();
+extern "C" void memCardDataSaveWait__12dMenu_save_cFv();
+extern "C" void memCardDataSaveWait2__12dMenu_save_cFv();
+extern "C" void gameContinueDisp__12dMenu_save_cFv();
+extern "C" void gameContinue__12dMenu_save_cFv();
+extern "C" void gameContinue2__12dMenu_save_cFv();
+extern "C" void gameContinue3__12dMenu_save_cFv();
+extern "C" void saveEnd__12dMenu_save_cFv();
+extern "C" void endingNoSave__12dMenu_save_cFv();
+extern "C" void endingNoSave2__12dMenu_save_cFv();
+extern "C" void endingDataCheck__12dMenu_save_cFv();
+extern "C" void retryQuestion0__12dMenu_save_cFv();
+extern "C" void retryQuestion1__12dMenu_save_cFv();
+extern "C" void retryQuestion2__12dMenu_save_cFv();
+extern "C" void restartInit__12dMenu_save_cFv();
+extern "C" void saveWait__12dMenu_save_cFv();
+extern "C" void messageChange__12dMenu_save_cFv();
+extern "C" void YesNoSelect__12dMenu_save_cFv();
+extern "C" void msgTxtSet__12dMenu_save_cFUsb();
+extern "C" void openSaveSelect__12dMenu_save_cFv();
+extern "C" void openSaveSelect2__12dMenu_save_cFv();
+extern "C" void openSaveSelect3__12dMenu_save_cFv();
+extern "C" void saveSelect__12dMenu_save_cFv();
+extern "C" void saveSelectStart__12dMenu_save_cFv();
+extern "C" void selectDataOpenMove__12dMenu_save_cFv();
+extern "C" void dataSelectAnmSet__12dMenu_save_cFv();
+extern "C" void saveSelectMoveAnime__12dMenu_save_cFv();
+extern "C" void saveYesNoSelect__12dMenu_save_cFv();
+extern "C" void yesnoSelectStart__12dMenu_save_cFv();
+extern "C" void saveMoveDisp__12dMenu_save_cFv();
+extern "C" void saveMoveDisp2__12dMenu_save_cFv();
+extern "C" void yesnoSelectAnmSet__12dMenu_save_cFUc();
+extern "C" void yesNoCursorMoveAnm__12dMenu_save_cFv();
+extern "C" void yesnoCancelAnmSet__12dMenu_save_cFv();
+extern "C" void saveYesNoCancelMove__12dMenu_save_cFv();
+extern "C" void headerTxtSet__12dMenu_save_cFUs();
+extern "C" void headerTxtChangeAnm__12dMenu_save_cFv();
+extern "C" void errDispInitSet__12dMenu_save_cFi();
+extern "C" void msgWindowInitOpen__12dMenu_save_cFv();
+extern "C" void msgWindowOpen__12dMenu_save_cFv();
+extern "C" void msgWindowClose__12dMenu_save_cFv();
+extern "C" void errYesNoSelect__12dMenu_save_cFUcUc();
+extern "C" void errCurMove__12dMenu_save_cFUcUc();
+extern "C" void errYesNoCursorMoveAnm__12dMenu_save_cFv();
+extern "C" void errorTxtSet__12dMenu_save_cFUs();
+extern "C" void errorTxtChangeAnm__12dMenu_save_cFv();
+extern "C" void saveSelectOpenInit__12dMenu_save_cFv();
+extern "C" void selectDataBaseMoveAnmInitSet__12dMenu_save_cFii();
+extern "C" void selectDataBaseMoveAnm__12dMenu_save_cFv();
+extern "C" void saveSelectOpenAnmSet__12dMenu_save_cFv();
+extern "C" void selectDataMoveAnmInitSet__12dMenu_save_cFii();
+extern "C" void selectDataMoveAnm__12dMenu_save_cFv();
+extern "C" void yesnoMenuMoveAnmInitSet__12dMenu_save_cFiiUc();
+extern "C" void yesnoMenuMoveAnm__12dMenu_save_cFv();
+extern "C" void yesnoSelectMoveAnm__12dMenu_save_cFUc();
+extern "C" void yesnoCursorShow__12dMenu_save_cFv();
+extern "C" void errorMoveAnmInitSet__12dMenu_save_cFii();
+extern "C" void errorMoveAnm__12dMenu_save_cFv();
+extern "C" void modoruTxtDispAnmInit__12dMenu_save_cFUc();
+extern "C" void modoruTxtDispAnm__12dMenu_save_cFv();
+extern "C" void ketteiTxtDispAnmInit__12dMenu_save_cFUc();
+extern "C" void ketteiTxtDispAnm__12dMenu_save_cFv();
+extern "C" void selectWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc();
+extern "C" void selectWakuAlpahAnm__12dMenu_save_cFUc();
+extern "C" void selFileCursorShow__12dMenu_save_cFv();
+extern "C" void yesnoWakuAlpahAnmInit__12dMenu_save_cFUcUcUcUc();
+extern "C" void yesnoWakuAlpahAnm__12dMenu_save_cFUc();
+extern "C" void dataSave__12dMenu_save_cFv();
+extern "C" void setSaveData__12dMenu_save_cFv();
+extern "C" void setInitSaveData__12dMenu_save_cFv();
+extern "C" void _draw__12dMenu_save_cFv();
+extern "C" void _draw2__12dMenu_save_cFv();
+extern "C" void draw__23dDlst_MenuSaveExplain_cFv();
+extern "C" void draw__16dDlst_MenuSave_cFv();
+extern "C" void __dt__16dDlst_MenuSave_cFv();
+extern "C" void __dt__23dDlst_MenuSaveExplain_cFv();
+extern "C" void __dt__9dMs_HIO_cFv();
+extern "C" void __sinit_d_menu_save_cpp();
 extern "C" extern char const* const d_menu_d_menu_save__stringBase0;
 extern "C" extern void* __vt__16dDlst_MenuSave_c[4];
 extern "C" extern void* __vt__23dDlst_MenuSaveExplain_c[4 + 18 /* padding */];
@@ -459,112 +462,123 @@ extern "C" extern void* __vt__23dDlst_MenuSaveExplain_c[4 + 18 /* padding */];
 // External References:
 // 
 
-void mDoExt_getJ2dHeap(); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_removeMesgFont(); // 2
-void mDoExt_getSubFont(); // 2
-void mDoExt_removeSubFont(); // 2
-void mDoMemCdRWm_TestCheckSumGameData(void*); // 2
-void mDoMemCdRWm_SetCheckSumGameData(u8*, u8); // 2
-void fopMsgM_messageGet(char*, u32); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cAPICPad_ANY_BUTTON(u32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getJ2dHeap();
+void mDoExt_getMesgFont();
+void mDoExt_removeMesgFont();
+void mDoExt_getSubFont();
+void mDoExt_removeSubFont();
+void mDoMemCdRWm_TestCheckSumGameData(void*);
+void mDoMemCdRWm_SetCheckSumGameData(u8*, u8);
+void fopMsgM_messageGet(char*, u32);
+void dPaneClass_showNullPane(J2DScreen*);
+void cAPICPad_ANY_BUTTON(u32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__12dMenu_save_c[3 + 3 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_mDoMemCd_control[8192];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mResetData__6mDoRst[4 + 4 /* padding */];
+extern "C" extern u8 sManager__10JFWDisplay[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_getJ2dHeap__Fv(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_removeMesgFont__Fv(); // 1
-extern "C" void mDoExt_getSubFont__Fv(); // 1
-extern "C" void mDoExt_removeSubFont__Fv(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void load__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl(); // 1
-extern "C" void save__15mDoMemCd_Ctrl_cFPvUlUl(); // 1
-extern "C" void SaveSync__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void getStatus__15mDoMemCd_Ctrl_cFUl(); // 1
-extern "C" void command_format__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void FormatSync__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void command_attach__15mDoMemCd_Ctrl_cFv(); // 1
-extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv(); // 1
-extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc(); // 1
-extern "C" void fopMsgM_messageGet__FPcUl(); // 1
-extern "C" void __ct__9STControlFssssffss(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkLeftTrigger__9STControlFv(); // 1
-extern "C" void checkRightTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void putSave__10dSv_info_cFi(); // 1
-extern "C" void memory_to_card__10dSv_info_cFPci(); // 1
-extern "C" void initdata_to_card__10dSv_info_cFPci(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc(); // 1
-extern "C" void _move__15dFile_warning_cFv(); // 1
-extern "C" void openInit__15dFile_warning_cFv(); // 1
-extern "C" void closeInit__15dFile_warning_cFv(); // 1
-extern "C" void init__15dFile_warning_cFv(); // 1
-extern "C" void _draw__15dFile_warning_cFv(); // 1
-extern "C" void __ct__12dFile_info_cFP10JKRArchiveUc(); // 1
-extern "C" void setSaveData__12dFile_info_cFP10dSv_save_ciUc(); // 1
-extern "C" void _draw__12dFile_info_cFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void setMiniGameItem__13dMeter2Info_cFUc(); // 1
-extern "C" void resetMiniGameItem__13dMeter2Info_cFb(); // 1
-extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc(); // 1
-extern "C" void move__17dMsgScrnExplain_cFv(); // 1
-extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph(); // 1
-extern "C" void openExplain__17dMsgScrnExplain_cFUlUcUcUcb(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void cAPICPad_ANY_BUTTON__FUl(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFPCce(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void printf(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getJ2dHeap__Fv();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_removeMesgFont__Fv();
+extern "C" void mDoExt_getSubFont__Fv();
+extern "C" void mDoExt_removeSubFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void load__15mDoMemCd_Ctrl_cFv();
+extern "C" void LoadSync__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void save__15mDoMemCd_Ctrl_cFPvUlUl();
+extern "C" void SaveSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void getStatus__15mDoMemCd_Ctrl_cFUl();
+extern "C" void command_format__15mDoMemCd_Ctrl_cFv();
+extern "C" void FormatSync__15mDoMemCd_Ctrl_cFv();
+extern "C" void command_attach__15mDoMemCd_Ctrl_cFv();
+extern "C" void mDoMemCdRWm_TestCheckSumGameData__FPv();
+extern "C" void mDoMemCdRWm_SetCheckSumGameData__FPUcUc();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void __ct__9STControlFssssffss();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void putSave__10dSv_info_cFi();
+extern "C" void memory_to_card__10dSv_info_cFPci();
+extern "C" void initdata_to_card__10dSv_info_cFPci();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc();
+extern "C" void _move__15dFile_warning_cFv();
+extern "C" void openInit__15dFile_warning_cFv();
+extern "C" void closeInit__15dFile_warning_cFv();
+extern "C" void init__15dFile_warning_cFv();
+extern "C" void _draw__15dFile_warning_cFv();
+extern "C" void __ct__12dFile_info_cFP10JKRArchiveUc();
+extern "C" void setSaveData__12dFile_info_cFP10dSv_save_ciUc();
+extern "C" void _draw__12dFile_info_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void setMiniGameItem__13dMeter2Info_cFUc();
+extern "C" void resetMiniGameItem__13dMeter2Info_cFb();
+extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
+extern "C" void move__17dMsgScrnExplain_cFv();
+extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
+extern "C" void openExplain__17dMsgScrnExplain_cFUlUcUcUcb();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void cAPICPad_ANY_BUTTON__FUl();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void checkBgmIDPlaying__8Z2SeqMgrFUl();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFPCce();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __register_global_object();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void printf();
+extern "C" void strcpy();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

@@ -74,38 +74,44 @@ struct JStudio_JStage {
 // 
 
 
-extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog(); // 1
-extern "C" void __dt__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
-extern "C" void adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
-extern "C" void adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
-extern "C" void adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv(); // 1
-extern "C" void adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl(); // 1
-extern "C" void adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl(); // 1
-extern "C" void func_8028C8A4(); // 1
-extern "C" void func_8028CAC0(); // 1
-extern "C" void func_8028CB20(); // 1
+extern "C" void __ct__Q214JStudio_JStage12TAdaptor_fogFPCQ26JStage7TSystemPQ26JStage4TFog();
+extern "C" void __dt__Q214JStudio_JStage12TAdaptor_fogFv();
+extern "C" void adaptor_do_prepare__Q214JStudio_JStage12TAdaptor_fogFv();
+extern "C" void adaptor_do_begin__Q214JStudio_JStage12TAdaptor_fogFv();
+extern "C" void adaptor_do_end__Q214JStudio_JStage12TAdaptor_fogFv();
+extern "C" void adaptor_do_update__Q214JStudio_JStage12TAdaptor_fogFUl();
+extern "C" void adaptor_do_data__Q214JStudio_JStage12TAdaptor_fogFPCvUlPCvUl();
+extern "C" void func_8028C8A4();
+extern "C" void func_8028CAC0();
+extern "C" void func_8028CB20();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* __vt__Q27JStudio12TAdaptor_fog[8];
+extern "C" extern void* __vt__Q27JStudio8TAdaptor[8];
+extern "C" extern void* __vt__Q37JStudio14TVariableValue7TOutput[4];
+extern "C" extern u8 soOutput_none___Q27JStudio14TVariableValue[4 + 4 /* padding */];
 
-extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv(); // 1
-extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued(); // 1
-extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor(); // 1
-extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl(); // 1
-extern "C" void __dt__Q27JStudio12TAdaptor_fogFv(); // 1
-extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl(); // 1
-extern "C" void __ct__Q27JStudio14TVariableValueFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__Q37JStudio14TVariableValue7TOutputFv();
+extern "C" void update_immediate___Q27JStudio14TVariableValueFPQ27JStudio14TVariableValued();
+extern "C" void adaptor_setVariableValue_GXColor__Q27JStudio8TAdaptorFPCUlRC8_GXColor();
+extern "C" void adaptor_getVariableValue_GXColor__Q27JStudio8TAdaptorCFP8_GXColorPCUl();
+extern "C" void __dt__Q27JStudio12TAdaptor_fogFv();
+extern "C" void adaptor_object_data___Q214JStudio_JStage16TAdaptor_object_FPCvUlPCvUl();
+extern "C" void __ct__Q27JStudio14TVariableValueFv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const sauVariableValue_4_COLOR_RGBA__Q27JStudio12TAdaptor_fog[16];
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* __vt__Q27JStudio12TAdaptor_fog[8];

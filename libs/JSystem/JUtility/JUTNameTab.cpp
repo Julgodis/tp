@@ -28,21 +28,22 @@ struct JUTNameTab {
 // 
 
 
-extern "C" void __ct__10JUTNameTabFv(); // 1
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void getName__10JUTNameTabCFUs(); // 1
-extern "C" void calcKeyCode__10JUTNameTabCFPCc(); // 1
+extern "C" void __ct__10JUTNameTabFv();
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void getName__10JUTNameTabCFUs();
+extern "C" void calcKeyCode__10JUTNameTabCFPCc();
 
 // 
 // External References:
 // 
 
+extern "C" extern void* __vt__10JUTNameTab[3];
 
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void strcmp();
 extern "C" extern void* __vt__10JUTNameTab[3];
 
 // 

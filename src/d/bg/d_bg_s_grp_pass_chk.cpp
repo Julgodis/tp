@@ -25,17 +25,17 @@ struct cBgS_GrpPassChk {
 // 
 
 
-extern "C" void __ct__15dBgS_GrpPassChkFv(); // 1
-extern "C" void __dt__15dBgS_GrpPassChkFv(); // 1
-extern "C" void __dt__15cBgS_GrpPassChkFv(); // 1
+extern "C" void __ct__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15dBgS_GrpPassChkFv();
+extern "C" void __dt__15cBgS_GrpPassChkFv();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

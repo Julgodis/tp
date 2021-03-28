@@ -29,18 +29,18 @@ struct JPAEmitterWorkData {
 // Forward References:
 // 
 
-void JPALoadExTex(JPAEmitterWorkData*); // 2
+void JPALoadExTex(JPAEmitterWorkData*);
 
-extern "C" void JPALoadExTex__FP18JPAEmitterWorkData(); // 1
-extern "C" void __ct__13JPAExTexShapeFPCUc(); // 1
+extern "C" void JPALoadExTex__FP18JPAEmitterWorkData();
+extern "C" void __ct__13JPAExTexShapeFPCUc();
 
 // 
 // External References:
 // 
 
 
-extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void GXSetTexCoordGen2();
 
 // 
 // Declarations:

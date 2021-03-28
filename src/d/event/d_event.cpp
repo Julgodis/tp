@@ -151,139 +151,149 @@ struct Z2StatusMgr {
 // Forward References:
 // 
 
-void dEv_defaultSkipProc(void*, int); // 2
-void dEv_defaultSkipZev(void*, int); // 2
-void dEv_defaultSkipStb(void*, int); // 2
-void dEv_noFinishSkipProc(void*, int); // 2
+void dEv_defaultSkipProc(void*, int);
+void dEv_defaultSkipZev(void*, int);
+void dEv_defaultSkipStb(void*, int);
+void dEv_noFinishSkipProc(void*, int);
+extern "C" extern char const* const d_event_d_event__stringBase0;
 
-extern "C" static bool func_80041480(); // 1
-extern "C" static void func_80041488(); // 1
-extern "C" void __ct__14dEvt_control_cFv(); // 1
-extern "C" void __ct__12dEvt_order_cFv(); // 1
-extern "C" void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv(); // 1
-extern "C" void order__14dEvt_control_cFUsUsUsUsPvPvsUc(); // 1
-extern "C" void setParam__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void afterFlagProc__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs(); // 1
-extern "C" void talkCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void talkXyCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void catchCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void talkEnd__14dEvt_control_cFv(); // 1
-extern "C" void demoCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void demoEnd__14dEvt_control_cFv(); // 1
-extern "C" void potentialCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void doorCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void itemCheck__14dEvt_control_cFP12dEvt_order_c(); // 1
-extern "C" void endProc__14dEvt_control_cFv(); // 1
-extern "C" void change__14dEvt_control_cFv(); // 1
-extern "C" void entry__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFPv(); // 1
-extern "C" void clearSkipSystem__14dEvt_control_cFv(); // 1
-extern "C" void dEv_defaultSkipProc__FPvi(); // 1
-extern "C" void dEv_defaultSkipZev__FPvi(); // 1
-extern "C" void dEv_defaultSkipStb__FPvi(); // 1
-extern "C" void dEv_noFinishSkipProc__FPvi(); // 1
-extern "C" void getSkipEventName__14dEvt_control_cFv(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void setSkipZev__14dEvt_control_cFPvPc(); // 1
-extern "C" void onSkipFade__14dEvt_control_cFv(); // 1
-extern "C" void offSkipFade__14dEvt_control_cFv(); // 1
-extern "C" void skipper__14dEvt_control_cFv(); // 1
-extern "C" void Step__14dEvt_control_cFv(); // 1
-extern "C" void moveApproval__14dEvt_control_cFPv(); // 1
-extern "C" void compulsory__14dEvt_control_cFPvPCcUs(); // 1
-extern "C" void remove__14dEvt_control_cFv(); // 1
-extern "C" void getStageEventDt__14dEvt_control_cFv(); // 1
-extern "C" void sceneChange__14dEvt_control_cFi(); // 1
-extern "C" void getPId__14dEvt_control_cFPv(); // 1
-extern "C" void convPId__14dEvt_control_cFUi(); // 1
-extern "C" void getStbDemoData__14dEvt_control_cFPc(); // 1
-extern "C" void __ct__11dEvt_info_cFv(); // 1
-extern "C" void setEventName__11dEvt_info_cFPc(); // 1
-extern "C" void getEventName__11dEvt_info_cFv(); // 1
-extern "C" void beforeProc__11dEvt_info_cFv(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUc(); // 1
-extern "C" void searchMapEventData__14dEvt_control_cFUcl(); // 1
-extern "C" void runningEventID__14dEvt_control_cFs(); // 1
-extern "C" void setPt1__14dEvt_control_cFPv(); // 1
-extern "C" void setPt2__14dEvt_control_cFPv(); // 1
-extern "C" void setPtT__14dEvt_control_cFPv(); // 1
-extern "C" void setPtI__14dEvt_control_cFPv(); // 1
-extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
-extern "C" void setPtD__14dEvt_control_cFPv(); // 1
-extern "C" void setGtItm__14dEvt_control_cFUc(); // 1
+extern "C" static bool func_80041480();
+extern "C" static void func_80041488();
+extern "C" void __ct__14dEvt_control_cFv();
+extern "C" void __ct__12dEvt_order_cFv();
+extern "C" void orderOld__14dEvt_control_cFUsUsUsUsPvPvPCv();
+extern "C" void order__14dEvt_control_cFUsUsUsUsPvPvsUc();
+extern "C" void setParam__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void beforeFlagProc__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void afterFlagProc__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void commonCheck__14dEvt_control_cFP12dEvt_order_cUsUs();
+extern "C" void talkCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void talkXyCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void catchCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void talkEnd__14dEvt_control_cFv();
+extern "C" void demoCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void demoEnd__14dEvt_control_cFv();
+extern "C" void potentialCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void doorCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void itemCheck__14dEvt_control_cFP12dEvt_order_c();
+extern "C" void endProc__14dEvt_control_cFv();
+extern "C" void change__14dEvt_control_cFv();
+extern "C" void entry__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFPv();
+extern "C" void clearSkipSystem__14dEvt_control_cFv();
+extern "C" void dEv_defaultSkipProc__FPvi();
+extern "C" void dEv_defaultSkipZev__FPvi();
+extern "C" void dEv_defaultSkipStb__FPvi();
+extern "C" void dEv_noFinishSkipProc__FPvi();
+extern "C" void getSkipEventName__14dEvt_control_cFv();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void setSkipZev__14dEvt_control_cFPvPc();
+extern "C" void onSkipFade__14dEvt_control_cFv();
+extern "C" void offSkipFade__14dEvt_control_cFv();
+extern "C" void skipper__14dEvt_control_cFv();
+extern "C" void Step__14dEvt_control_cFv();
+extern "C" void moveApproval__14dEvt_control_cFPv();
+extern "C" void compulsory__14dEvt_control_cFPvPCcUs();
+extern "C" void remove__14dEvt_control_cFv();
+extern "C" void getStageEventDt__14dEvt_control_cFv();
+extern "C" void sceneChange__14dEvt_control_cFi();
+extern "C" void getPId__14dEvt_control_cFPv();
+extern "C" void convPId__14dEvt_control_cFUi();
+extern "C" void getStbDemoData__14dEvt_control_cFPc();
+extern "C" void __ct__11dEvt_info_cFv();
+extern "C" void setEventName__11dEvt_info_cFPc();
+extern "C" void getEventName__11dEvt_info_cFv();
+extern "C" void beforeProc__11dEvt_info_cFv();
+extern "C" void searchMapEventData__14dEvt_control_cFUc();
+extern "C" void searchMapEventData__14dEvt_control_cFUcl();
+extern "C" void runningEventID__14dEvt_control_cFs();
+extern "C" void setPt1__14dEvt_control_cFPv();
+extern "C" void setPt2__14dEvt_control_cFPv();
+extern "C" void setPtT__14dEvt_control_cFPv();
+extern "C" void setPtI__14dEvt_control_cFPv();
+extern "C" void setPtI_Id__14dEvt_control_cFUi();
+extern "C" void setPtD__14dEvt_control_cFPv();
+extern "C" void setGtItm__14dEvt_control_cFUc();
 extern "C" extern char const* const d_event_d_event__stringBase0;
 
 // 
 // External References:
 // 
 
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_getItemEventPartner(fopAc_ac_c const*); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int); // 2
-void dComIfGp_getSelectItem(int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void dComIfG_getRoomArcName(int); // 2
-void dComIfGs_onVisitedRoom(int); // 2
-void dCam_getBody(); // 2
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_getItemEventPartner(fopAc_ac_c const*);
+void fpcSch_JudgeByID(void*, void*);
+void dStage_changeScene4Event(int, s8, int, bool, f32, u32, s16, int);
+void dComIfGp_getSelectItem(int);
+void dComIfG_getStageRes(char const*);
+void dComIfG_getRoomArcName(int);
+void dComIfGs_onVisitedRoom(int);
+void dCam_getBody();
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern void* __vt__11dEvt_info_c[3 + 1 /* padding */];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_mode__7dDemo_c[4];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void fadeOut__13mDoGph_gInf_cFf(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void getStatusRoomDt__20dStage_roomControl_cFi(); // 1
-extern "C" void dStage_changeScene4Event__FiScibfUlsi(); // 1
-extern "C" void dComIfGp_getSelectItem__Fi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void dComIfG_getRoomArcName__Fi(); // 1
-extern "C" void dComIfGs_onVisitedRoom__Fi(); // 1
-extern "C" void __dt__12dEvt_order_cFv(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dead__12daItemBase_cFv(); // 1
-extern "C" void end__7dDemo_cFv(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void forceFinish__12dEvDtEvent_cFv(); // 1
-extern "C" void setStartDemo__18dEvent_exception_cFi(); // 1
-extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
-extern "C" void endProc__16dEvent_manager_cFsi(); // 1
-extern "C" void Sequencer__16dEvent_manager_cFv(); // 1
-extern "C" void Experts__16dEvent_manager_cFv(); // 1
-extern "C" void getEventData__16dEvent_manager_cFs(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFPCcUcl(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void order__16dEvent_manager_cFs(); // 1
-extern "C" void issueStaff__16dEvent_manager_cFPCc(); // 1
-extern "C" void cancelStaff__16dEvent_manager_cFPCc(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void QuickStart__9dCamera_cFv(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void onKillMessageFlag__12dMsgObject_cFv(); // 1
-extern "C" void setKillMessageFlag__12dMsgObject_cFv(); // 1
-extern "C" void endFlowGroup__12dMsgObject_cFv(); // 1
-extern "C" void setDemoName__11Z2StatusMgrFPc(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void fadeOut__13mDoGph_gInf_cFf();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void getStatusRoomDt__20dStage_roomControl_cFi();
+extern "C" void dStage_changeScene4Event__FiScibfUlsi();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void dComIfG_getRoomArcName__Fi();
+extern "C" void dComIfGs_onVisitedRoom__Fi();
+extern "C" void __dt__12dEvt_order_cFv();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dead__12daItemBase_cFv();
+extern "C" void end__7dDemo_cFv();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void forceFinish__12dEvDtEvent_cFv();
+extern "C" void setStartDemo__18dEvent_exception_cFi();
+extern "C" void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" void endProc__16dEvent_manager_cFsi();
+extern "C" void Sequencer__16dEvent_manager_cFv();
+extern "C" void Experts__16dEvent_manager_cFv();
+extern "C" void getEventData__16dEvent_manager_cFs();
+extern "C" void getEventIdx__16dEvent_manager_cFPCcUcl();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void order__16dEvent_manager_cFs();
+extern "C" void issueStaff__16dEvent_manager_cFPCc();
+extern "C" void cancelStaff__16dEvent_manager_cFPCc();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void QuickStart__9dCamera_cFv();
+extern "C" void dCam_getBody__Fv();
+extern "C" void onKillMessageFlag__12dMsgObject_cFv();
+extern "C" void setKillMessageFlag__12dMsgObject_cFv();
+extern "C" void endFlowGroup__12dMsgObject_cFv();
+extern "C" void setDemoName__11Z2StatusMgrFPc();
+extern "C" void __construct_array();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcat();
+extern "C" void strncpy();
+extern "C" void strcpy();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern void* __vt__11dEvt_info_c[3 + 1 /* padding */];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];

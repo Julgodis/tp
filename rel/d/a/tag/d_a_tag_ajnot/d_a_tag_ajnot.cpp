@@ -26,32 +26,36 @@ struct daTagAJnot_c {
 // Forward References:
 // 
 
-static void daTagAJnot_Create(fopAc_ac_c*); // 2
-static void daTagAJnot_Delete(daTagAJnot_c*); // 2
-static void daTagAJnot_Execute(daTagAJnot_c*); // 2
-static bool daTagAJnot_Draw(daTagAJnot_c*); // 2
+static void daTagAJnot_Create(fopAc_ac_c*);
+static void daTagAJnot_Delete(daTagAJnot_c*);
+static void daTagAJnot_Execute(daTagAJnot_c*);
+static bool daTagAJnot_Draw(daTagAJnot_c*);
+extern "C" extern void* g_profile_Tag_AJnot[12];
 
-extern "C" void create__12daTagAJnot_cFv(); // 1
-extern "C" static void daTagAJnot_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__12daTagAJnot_cFv(); // 1
-extern "C" static void daTagAJnot_Delete__FP12daTagAJnot_c(); // 1
-extern "C" void execute__12daTagAJnot_cFv(); // 1
-extern "C" static void daTagAJnot_Execute__FP12daTagAJnot_c(); // 1
-extern "C" static bool daTagAJnot_Draw__FP12daTagAJnot_c(); // 1
+extern "C" void create__12daTagAJnot_cFv();
+extern "C" static void daTagAJnot_Create__FP10fopAc_ac_c();
+extern "C" void __dt__12daTagAJnot_cFv();
+extern "C" static void daTagAJnot_Delete__FP12daTagAJnot_c();
+extern "C" void execute__12daTagAJnot_cFv();
+extern "C" static void daTagAJnot_Execute__FP12daTagAJnot_c();
+extern "C" static bool daTagAJnot_Draw__FP12daTagAJnot_c();
 extern "C" extern void* g_profile_Tag_AJnot[12];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

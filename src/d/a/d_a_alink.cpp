@@ -17,6 +17,12 @@ struct stage_stag_info_class {
 struct request_of_phase_process_class {
 };
 
+struct csXyz {
+	/* 80018BD0 */ ~csXyz();
+	/* 80112C80 */ csXyz();
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct Quaternion {
 };
 
@@ -42,12 +48,6 @@ struct cXyz {
 	/* 80267150 */ void atan2sY_XZ() const;
 };
 
-struct csXyz {
-	/* 80018BD0 */ ~csXyz();
-	/* 80112C80 */ csXyz();
-	/* 802673F4 */ csXyz(s16, s16, s16);
-};
-
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CDD4 */ void transM(cXyz const&);
@@ -68,10 +68,10 @@ struct mDoExt_blkAnm {
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -512,17 +512,6 @@ struct daAlink_footData_c {
 	/* 800CFCF4 */ daAlink_footData_c();
 };
 
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct J3DAnmBase {
-};
-
-struct dBgS_LinChk {
-	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
-};
-
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
 };
@@ -542,6 +531,9 @@ struct dCcD_GObjInf {
 	/* 800846B0 */ void ResetCoHit();
 };
 
+struct daAlinkHIO_anm_c {
+};
+
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 };
@@ -550,21 +542,20 @@ struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+};
+
 struct dBgW_Base {
 	struct PushPullLabel {
 	};
 
 };
 
-struct daAlinkHIO_anm_c {
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
-struct dCcG_At_Spl {
+struct J3DAnmBase {
 };
 
 struct _GXColorS10 {
@@ -575,14 +566,23 @@ struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
+struct dBgS_LinChk {
+	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
+struct dCcG_At_Spl {
 };
 
 struct JPABaseEmitter {
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
 };
 
 struct daAlink_c {
@@ -2602,6 +2602,13 @@ struct dPa_control_c {
 	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80077414 */ ~dBgS_AcchCir();
+};
+
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
@@ -2630,13 +2637,6 @@ struct dBgS {
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075880 */ void MoveBgTransPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 	/* 80075C6C */ void PushPullCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel);
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80077414 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -3197,10 +3197,10 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
 struct J2DPane {
@@ -3216,2262 +3216,2274 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
-static void daAlink_tgHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daAlink_coHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daAlink_modelCallBack(J3DJoint*, int); // 2
-static void daAlink_headModelCallBack(J3DJoint*, int); // 2
-static void daAlink_wolfModelCallBack(J3DJoint*, int); // 2
-static void daAlink_createHeap(fopAc_ac_c*); // 2
-static void daAlink_Create(fopAc_ac_c*); // 2
-static void daAlink_searchBouDoor(fopAc_ac_c*, void*); // 2
-static void daAlink_searchKolin(fopAc_ac_c*, void*); // 2
-static void daAlink_Execute(daAlink_c*); // 2
-static void daAlink_Draw(daAlink_c*); // 2
-static void daAlink_Delete(daAlink_c*); // 2
-static void daAlink_searchPeepObj(fopAc_ac_c*, void*); // 2
-static void dComIfGp_att_getCatghTarget(); // 2
-static void mDoAud_setLinkHp(s32, s32); // 2
-static void dComIfGs_getLife(); // 2
-static void dComIfGp_getRStatus(); // 2
-static void dComIfGp_setItemLifeCount(f32, u8); // 2
-static void cMtx_multVec(f32 const (* )[4], Vec const*, Vec*); // 2
-static void dComIfGp_evmng_startCheck(char const*); // 2
-static void mDoAud_setLinkGroupInfo(u8); // 2
-static void daAlink_searchNightStalker(fopAc_ac_c*, void*); // 2
-static void daAlink_checkLightBallA(fopAc_ac_c*); // 2
-static void daAlink_checkLightBallB(fopAc_ac_c*); // 2
-static void daAlink_searchLightBall(fopAc_ac_c*, void*); // 2
-static void daAlink_searchGoat(fopAc_ac_c*, void*); // 2
-static void daAlink_searchBoar(fopAc_ac_c*, void*); // 2
-static void daAlink_searchCoach(fopAc_ac_c*, void*); // 2
-static void daAlink_searchCanoe(fopAc_ac_c*, void*); // 2
-static void daAlink_searchIceLeaf(fopAc_ac_c*, void*); // 2
-static void daAlink_hookshotAtHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*); // 2
-static void daAlink_bottleModelCallBack(J3DJoint*, int); // 2
-static void daAlink_searchTagKandelaar(fopAc_ac_c*, void*); // 2
-static void daAlink_searchTagKtOnFire(fopAc_ac_c*, void*); // 2
-static void daAlink_kandelaarModelCallBack(J3DJoint*, int); // 2
-static void daAlink_searchWhistle(fopAc_ac_c*, void*); // 2
-static void daAlink_searchHawk(fopAc_ac_c*, void*); // 2
-static void daAlink_c_getDemoIDData(dDemo_actor_c*, int*, int*, int*, u16*, int*, int*); // 2
-static void daAlink_searchPortal(fopAc_ac_c*, void*); // 2
-static void setBezierPos(cXyz const*, cXyz const*, cXyz const*, cXyz const*, f32, cXyz*); // 2
-static void daAlink_searchGoldWolf(fopAc_ac_c*, void*); // 2
-static void daAlink_searchWolfHowl(fopAc_ac_c*, void*); // 2
-static void daAlink_searchGiant(fopAc_ac_c*, void*); // 2
-static void daAlink_searchGiantTalk(fopAc_ac_c*, void*); // 2
-static void daAlink_searchWolfLockEnemy(fopAc_ac_c*, void*); // 2
-static void daAlink_searchEnemyCargo(fopAc_ac_c*, void*); // 2
-static void mDoAud_seStartLevel(u32, Vec const*, u32, s8); // 2
-static void dComIfGp_setBottleStatus(u8, u8); // 2
-static void fopAcM_onSwitch(fopAc_ac_c const*, int); // 2
-static void dComIfGs_isItemFirstBit(u8); // 2
-static void dStage_stagInfo_GetSaveTbl(stage_stag_info_class*); // 2
-static void dComIfGp_getStage(); // 2
-void fopAcM_GetName(void*); // 2
-static void dComIfGp_getEvent(); // 2
-static void dComIfGp_checkPlayerStatus0(int, u32); // 2
-static void dComIfGp_checkPlayerStatus1(int, u32); // 2
-static void dComIfGp_getEventManager(); // 2
-void dComIfGs_isEventBit(u16); // 2
-static void dComIfGp_getPlayerCameraID(int); // 2
-static void dComIfGp_event_chkEventFlag(u16); // 2
-static void dComIfGp_evmng_getMyStaffId(char const*, fopAc_ac_c*, int); // 2
-static void dComIfGp_event_runCheck(); // 2
-void dComIfGp_getHorseActor(); // 2
-static void dComIfGp_getDoStatus(); // 2
-static void dMeter2Info_offUseButton(int); // 2
-static void dComIfGs_getRupee(); // 2
-static void dComIfGp_setItemRupeeCount(s32); // 2
-static void dMeter2Info_setFloatingMessage(u16, s16, bool); // 2
-void cLib_calcTimer__template0(u8*); // 2
+static void daAlink_tgHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+static void daAlink_coHitCallback(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+static void daAlink_modelCallBack(J3DJoint*, int);
+static void daAlink_headModelCallBack(J3DJoint*, int);
+static void daAlink_wolfModelCallBack(J3DJoint*, int);
+static void daAlink_createHeap(fopAc_ac_c*);
+static void daAlink_Create(fopAc_ac_c*);
+static void daAlink_searchBouDoor(fopAc_ac_c*, void*);
+static void daAlink_searchKolin(fopAc_ac_c*, void*);
+static void daAlink_Execute(daAlink_c*);
+static void daAlink_Draw(daAlink_c*);
+static void daAlink_Delete(daAlink_c*);
+static void daAlink_searchPeepObj(fopAc_ac_c*, void*);
+static void dComIfGp_att_getCatghTarget();
+static void mDoAud_setLinkHp(s32, s32);
+static void dComIfGs_getLife();
+static void dComIfGp_getRStatus();
+static void dComIfGp_setItemLifeCount(f32, u8);
+static void cMtx_multVec(f32 const (* )[4], Vec const*, Vec*);
+static void dComIfGp_evmng_startCheck(char const*);
+static void mDoAud_setLinkGroupInfo(u8);
+static void daAlink_searchNightStalker(fopAc_ac_c*, void*);
+static void daAlink_checkLightBallA(fopAc_ac_c*);
+static void daAlink_checkLightBallB(fopAc_ac_c*);
+static void daAlink_searchLightBall(fopAc_ac_c*, void*);
+static void daAlink_searchGoat(fopAc_ac_c*, void*);
+static void daAlink_searchBoar(fopAc_ac_c*, void*);
+static void daAlink_searchCoach(fopAc_ac_c*, void*);
+static void daAlink_searchCanoe(fopAc_ac_c*, void*);
+static void daAlink_searchIceLeaf(fopAc_ac_c*, void*);
+static void daAlink_hookshotAtHitCallBack(fopAc_ac_c*, dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*);
+static void daAlink_bottleModelCallBack(J3DJoint*, int);
+static void daAlink_searchTagKandelaar(fopAc_ac_c*, void*);
+static void daAlink_searchTagKtOnFire(fopAc_ac_c*, void*);
+static void daAlink_kandelaarModelCallBack(J3DJoint*, int);
+static void daAlink_searchWhistle(fopAc_ac_c*, void*);
+static void daAlink_searchHawk(fopAc_ac_c*, void*);
+static void daAlink_c_getDemoIDData(dDemo_actor_c*, int*, int*, int*, u16*, int*, int*);
+static void daAlink_searchPortal(fopAc_ac_c*, void*);
+static void setBezierPos(cXyz const*, cXyz const*, cXyz const*, cXyz const*, f32, cXyz*);
+static void daAlink_searchGoldWolf(fopAc_ac_c*, void*);
+static void daAlink_searchWolfHowl(fopAc_ac_c*, void*);
+static void daAlink_searchGiant(fopAc_ac_c*, void*);
+static void daAlink_searchGiantTalk(fopAc_ac_c*, void*);
+static void daAlink_searchWolfLockEnemy(fopAc_ac_c*, void*);
+static void daAlink_searchEnemyCargo(fopAc_ac_c*, void*);
+static void mDoAud_seStartLevel(u32, Vec const*, u32, s8);
+static void dComIfGp_setBottleStatus(u8, u8);
+static void fopAcM_onSwitch(fopAc_ac_c const*, int);
+static void dComIfGs_isItemFirstBit(u8);
+static void dStage_stagInfo_GetSaveTbl(stage_stag_info_class*);
+static void dComIfGp_getStage();
+void fopAcM_GetName(void*);
+static void dComIfGp_getEvent();
+static void dComIfGp_checkPlayerStatus0(int, u32);
+static void dComIfGp_checkPlayerStatus1(int, u32);
+static void dComIfGp_getEventManager();
+void dComIfGs_isEventBit(u16);
+static void dComIfGp_getPlayerCameraID(int);
+static void dComIfGp_event_chkEventFlag(u16);
+static void dComIfGp_evmng_getMyStaffId(char const*, fopAc_ac_c*, int);
+static void dComIfGp_event_runCheck();
+void dComIfGp_getHorseActor();
+static void dComIfGp_getDoStatus();
+static void dMeter2Info_offUseButton(int);
+static void dComIfGs_getRupee();
+static void dComIfGp_setItemRupeeCount(s32);
+static void dMeter2Info_setFloatingMessage(u16, s16, bool);
+void cLib_calcTimer__template0(u8*);
+extern "C" extern u8 const m__21daAlinkHIO_gAtKick_c0[36];
+extern "C" extern u8 const m__21daAlinkHIO_zwLight_c0[28];
+extern "C" extern u8 const m__20daAlinkHIO_wlBall_c0[56];
+extern "C" extern u8 const l_worldChangeEventName[16];
+extern "C" extern u8 const l_wolfWorldChangeEventName[21 + 3 /* padding */];
+extern "C" extern u8 const l_crawlStartFrontOffset[12];
+extern "C" extern u8 const m_handLeftInSidePos__9daAlink_c[12];
+extern "C" extern u8 const m_handRightInSidePos__9daAlink_c[12];
+extern "C" extern u8 const data_80391FBC[12];
+extern "C" extern char const* const d_a_d_a_alink__stringBase0;
+extern "C" extern void* g_profile_ALINK[12 + 9 /* padding */];
+extern "C" extern void* __vt__12dBgS_ObjAcch[9];
 
-extern "C" bool getE3Zhint__9daAlink_cFv(); // 1
-extern "C" void getAlinkArcName__9daAlink_cFv(); // 1
-extern "C" static void daAlink_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" static void daAlink_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" void init__16daAlink_matAnm_cFv(); // 1
-extern "C" void calc__16daAlink_matAnm_cCFP11J3DMaterial(); // 1
-extern "C" void checkStageName__9daAlink_cFPCc(); // 1
-extern "C" void tgHitCallback__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInfP12dCcD_GObjInf(); // 1
-extern "C" void coHitCallback__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" void setMatrixWorldAxisRot__9daAlink_cFPA4_fsssiPC4cXyz(); // 1
-extern "C" void jointControll__9daAlink_cFi(); // 1
-extern "C" void setUpperFront__9daAlink_cFv(); // 1
-extern "C" void changeBlendRate__9daAlink_cFi(); // 1
-extern "C" void resetRootMtx__9daAlink_cFv(); // 1
-extern "C" void modelCallBack__9daAlink_cFi(); // 1
-extern "C" static void daAlink_modelCallBack__FP8J3DJointi(); // 1
-extern "C" void headModelCallBack__9daAlink_cFi(); // 1
-extern "C" static void daAlink_headModelCallBack__FP8J3DJointi(); // 1
-extern "C" void wolfModelCallBack__9daAlink_cFi(); // 1
-extern "C" static void daAlink_wolfModelCallBack__FP8J3DJointi(); // 1
-extern "C" void setHatAngle__9daAlink_cFv(); // 1
-extern "C" void calcHairAngle__9daAlink_cFPs(); // 1
-extern "C" void setHairAngle__9daAlink_cFP4cXyzff(); // 1
-extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz(); // 1
-extern "C" void checkAttentionPosAngle__9daAlink_cFP4cXyz(); // 1
-extern "C" void checkActorPosAngle__9daAlink_cFP10fopAc_ac_cPP4cXyz(); // 1
-extern "C" void getNeckAimPos__9daAlink_cFP4cXyzPii(); // 1
-extern "C" void getNeckAimAngle__9daAlink_cFP4cXyzPsPsPsPs(); // 1
-extern "C" void setEyeMove__9daAlink_cFP4cXyzss(); // 1
-extern "C" void setNeckAngle__9daAlink_cFv(); // 1
-extern "C" void getStickAngleFromPlayerShape__9daAlink_cCFPs(); // 1
-extern "C" void commonLineCheck__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi(); // 1
-extern "C" void checkGoronRide__9daAlink_cFv(); // 1
-extern "C" void setMoveSlantAngle__9daAlink_cFv(); // 1
-extern "C" void setArmMatrix__9daAlink_cFv(); // 1
-extern "C" void setFootMatrix__9daAlink_cFv(); // 1
-extern "C" void setMatrixOffset__9daAlink_cFPff(); // 1
-extern "C" void setLegAngle__9daAlink_cFfP18daAlink_footData_cPsPsi(); // 1
-extern "C" void footBgCheck__9daAlink_cFv(); // 1
-extern "C" void handBgCheck__9daAlink_cFv(); // 1
-extern "C" void setItemHeap__9daAlink_cFv(); // 1
-extern "C" void setIdxMask__9daAlink_cFPUsPUs(); // 1
-extern "C" void getAnimeResource__9daAlink_cFP14daPy_anmHeap_cUsUl(); // 1
-extern "C" void initModel__9daAlink_cFP12J3DModelDataUlUl(); // 1
-extern "C" void initModel__9daAlink_cFUsUl(); // 1
-extern "C" void initModelEnv__9daAlink_cFUsUl(); // 1
-extern "C" void initDemoModel__9daAlink_cFPP8J3DModelPCcUl(); // 1
-extern "C" void initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc(); // 1
-extern "C" void createHeap__9daAlink_cFv(); // 1
-extern "C" void __dt__14J3DMaterialAnmFv(); // 1
-extern "C" static void daAlink_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void setSelectEquipItem__9daAlink_cFi(); // 1
-extern "C" void checkBoarStart__9daAlink_cFv(); // 1
-extern "C" void checkCanoeStart__9daAlink_cFv(); // 1
-extern "C" void playerInit__9daAlink_cFv(); // 1
-extern "C" void checkHorseStart__9daAlink_cFUli(); // 1
-extern "C" void setStartProcInit__9daAlink_cFv(); // 1
-extern "C" void create__9daAlink_cFv(); // 1
-extern "C" static void daAlink_Create__FP10fopAc_ac_c(); // 1
-extern "C" void setRoomInfo__9daAlink_cFv(); // 1
-extern "C" void setShapeAngleOnGround__9daAlink_cFv(); // 1
-extern "C" void setStepsOffset__9daAlink_cFv(); // 1
-extern "C" void iceSlipBgCheck__9daAlink_cFv(); // 1
-extern "C" void setIceSlipSpeed__9daAlink_cFv(); // 1
-extern "C" void setPolygonSpeed__9daAlink_cFv(); // 1
-extern "C" void checkWindSpeedOnAngle__9daAlink_cCFv(); // 1
-extern "C" void checkWindSpeedOnAngleAnime__9daAlink_cCFi(); // 1
-extern "C" void checkDashAnime__9daAlink_cCFv(); // 1
-extern "C" void checkWindWallRate__9daAlink_cFRC4cXyz(); // 1
-extern "C" void setWindSpeed__9daAlink_cFv(); // 1
-extern "C" void setBodyPartPos__9daAlink_cFv(); // 1
-extern "C" void setRollJump__9daAlink_cFffs(); // 1
-extern "C" void setAttentionPos__9daAlink_cFv(); // 1
-extern "C" void setMatrix__9daAlink_cFv(); // 1
-extern "C" void simpleAnmPlay__9daAlink_cFP10J3DAnmBase(); // 1
-extern "C" void setSwordPos__9daAlink_cFv(); // 1
-extern "C" void setItemMatrix__9daAlink_cFi(); // 1
-extern "C" void setWolfItemMatrix__9daAlink_cFv(); // 1
-extern "C" void setHandIndex__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void setSwordAtCollision__9daAlink_cFi(); // 1
-extern "C" void checkNoCollisionCorret__9daAlink_cFv(); // 1
-extern "C" void decSwordBlur__9daAlink_cFv(); // 1
-extern "C" void resetWolfAtCollision__9daAlink_cFv(); // 1
-extern "C" void setWolfAtCollision__9daAlink_cFv(); // 1
-extern "C" void resetAtCollision__9daAlink_cFi(); // 1
-extern "C" void setAtCollision__9daAlink_cFv(); // 1
-extern "C" void setWolfCollisionPos__9daAlink_cFv(); // 1
-extern "C" void initLockAt__9daAlink_cFv(); // 1
-extern "C" void cancelLockAt__9daAlink_cFv(); // 1
-extern "C" void setCollisionPos__9daAlink_cFv(); // 1
-extern "C" void setCollision__9daAlink_cFv(); // 1
-extern "C" void getBaseAnimeFrame__9daAlink_cCFv(); // 1
-extern "C" void setAnimeFrame__9daAlink_cFf(); // 1
-extern "C" void setFrameCtrl__9daAlink_cFP16daPy_frameCtrl_cUcssff(); // 1
-extern "C" void getMainBckData__9daAlink_cCFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void checkUnderMove1BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void getUnderUpperAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMPP15J3DAnmTransformPP15J3DAnmTransformiUl(); // 1
-extern "C" void setDoubleAnimeBlendRatio__9daAlink_cFf(); // 1
-extern "C" void commonDoubleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformfffi(); // 1
-extern "C" void setDoubleAnime__9daAlink_cFfffQ29daAlink_c11daAlink_ANMQ29daAlink_c11daAlink_ANMif(); // 1
-extern "C" void commonSingleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformffs(); // 1
-extern "C" void setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf(); // 1
-extern "C" void setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff(); // 1
-extern "C" void setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf(); // 1
-extern "C" void setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c(); // 1
-extern "C" void animePlay__9daAlink_cFP15J3DAnmTransformP16daPy_frameCtrl_c(); // 1
-extern "C" void allAnimePlay__9daAlink_cFv(); // 1
-extern "C" void setUpperAnimeMorf__9daAlink_cFf(); // 1
-extern "C" void setUpperAnimeBase__9daAlink_cFUs(); // 1
-extern "C" void setUpperAnimeBaseMorf__9daAlink_cFUsf(); // 1
-extern "C" void setUpperAnimeBaseSpeed__9daAlink_cFUsff(); // 1
-extern "C" void setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf(); // 1
-extern "C" void setUpperAnimeParam__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERPC16daAlinkHIO_anm_c(); // 1
-extern "C" void resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf(); // 1
-extern "C" void setUnderAnimeMorf__9daAlink_cFf(); // 1
-extern "C" void setUnderAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERffsf(); // 1
-extern "C" void setUnderAnimeParam__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERPC16daAlinkHIO_anm_c(); // 1
-extern "C" void resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf(); // 1
-extern "C" void setOldRootQuaternion__9daAlink_cFsss(); // 1
-extern "C" void checkAtnLeftAnime__9daAlink_cFv(); // 1
-extern "C" void checkAtnRightAnime__9daAlink_cFv(); // 1
-extern "C" void getMoveGroundAngleSpeedRate__9daAlink_cFv(); // 1
-extern "C" void setBlendMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setBlendAtnMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setBlendAtnBackMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setFaceBck__9daAlink_cFUsiUs(); // 1
-extern "C" void setFaceBtp__9daAlink_cFUsiUs(); // 1
-extern "C" void setFaceBtk__9daAlink_cFUsiUs(); // 1
-extern "C" void setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM(); // 1
-extern "C" void setFaceBasicAnime__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void setFacePriTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM(); // 1
-extern "C" void setFacePriAnime__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void resetFacePriBck__9daAlink_cFv(); // 1
-extern "C" void resetFacePriBtp__9daAlink_cFv(); // 1
-extern "C" void resetFacePriBtk__9daAlink_cFv(); // 1
-extern "C" void resetFacePriTexture__9daAlink_cFv(); // 1
-extern "C" void resetFacePriAnime__9daAlink_cFv(); // 1
-extern "C" void playFaceTextureAnime__9daAlink_cFv(); // 1
-extern "C" void getGroundAngle__9daAlink_cFP13cBgS_PolyInfos(); // 1
-extern "C" void getRoofAngle__9daAlink_cFP13cBgS_PolyInfos(); // 1
-extern "C" void getWallEdgePos__9daAlink_cFRC4cXyzP8cM3dGPlaP8cM3dGPlaP4cXyzi(); // 1
-extern "C" void setFrontWallType__9daAlink_cFv(); // 1
-extern "C" void SetPos__12dBgS_RoofChkFRC4cXyz(); // 1
-extern "C" void checkWaterPolygonUnder__9daAlink_cFv(); // 1
-extern "C" void setWaterY__9daAlink_cFv(); // 1
-extern "C" void setHangWaterY__9daAlink_cFv(); // 1
-extern "C" void setSandDownBgCheckWallH__9daAlink_cFv(); // 1
-extern "C" void setBgCheckParam__9daAlink_cFv(); // 1
-extern "C" void checkNotJumpSinkLimit__9daAlink_cFv(); // 1
-extern "C" void checkNotItemSinkLimit__9daAlink_cFv(); // 1
-extern "C" void setSandShapeOffset__9daAlink_cFv(); // 1
-extern "C" void checkLv2MiddleBossBgRide__9daAlink_cFs(); // 1
-extern "C" void getSlidePolygon__9daAlink_cFP8cM3dGPla(); // 1
-extern "C" void checkSlope__9daAlink_cCFv(); // 1
-extern "C" void setPlayerPosAndAngle__9daAlink_cFPC4cXyzsi(); // 1
-extern "C" void setPlayerPosAndAngle__9daAlink_cFPC4cXyzPC5csXyz(); // 1
-extern "C" void setPlayerPosAndAngle__9daAlink_cFPA4_f(); // 1
-extern "C" void itemTriggerCheck__9daAlink_cFUc(); // 1
-extern "C" void itemButtonCheck__9daAlink_cFUc(); // 1
-extern "C" void itemButton__9daAlink_cFv(); // 1
-extern "C" void itemTrigger__9daAlink_cFv(); // 1
-extern "C" void spActionButton__9daAlink_cFv(); // 1
-extern "C" void spActionTrigger__9daAlink_cFv(); // 1
-extern "C" void midnaTalkTrigger__9daAlink_cCFv(); // 1
-extern "C" void swordSwingTrigger__9daAlink_cFv(); // 1
-extern "C" void setItemActionButtonStatus__9daAlink_cFUc(); // 1
-extern "C" void itemActionTrigger__9daAlink_cFv(); // 1
-extern "C" void setStickData__9daAlink_cFv(); // 1
-extern "C" void setAtnList__9daAlink_cFv(); // 1
-extern "C" void setRStatus__9daAlink_cFUc(); // 1
-extern "C" void setRStatusEmphasys__9daAlink_cFUc(); // 1
-extern "C" void setDoStatus__9daAlink_cFUc(); // 1
-extern "C" void setDoStatusEmphasys__9daAlink_cFUc(); // 1
-extern "C" void setDoStatusContinuation__9daAlink_cFUc(); // 1
-extern "C" void setBStatus__9daAlink_cFUc(); // 1
-extern "C" void checkAtnWaitAnime__9daAlink_cFv(); // 1
-extern "C" void setTiredVoice__9daAlink_cFP16daPy_frameCtrl_c(); // 1
-extern "C" void checkRestHPAnime__9daAlink_cFv(); // 1
-extern "C" void getDirectionFromAngle__9daAlink_cFs(); // 1
-extern "C" void checkAttentionState__9daAlink_cFv(); // 1
-extern "C" void getShapeAngleYAtnActor__9daAlink_cFv(); // 1
-extern "C" void setShapeAngleToAtnActor__9daAlink_cFi(); // 1
-extern "C" void initServiceWaitTime__9daAlink_cFv(); // 1
-extern "C" void checkZeroSpeedF__9daAlink_cCFv(); // 1
-extern "C" void setNormalSpeedF__9daAlink_cFff(); // 1
-extern "C" void getStickAngleDistanceRate__9daAlink_cFv(); // 1
-extern "C" void setSpeedAndAngleNormal__9daAlink_cFv(); // 1
-extern "C" void setSpeedAndAngleAtn__9daAlink_cFv(); // 1
-extern "C" void checkRequestTalkActor__9daAlink_cFP10dAttList_cP10fopAc_ac_c(); // 1
-extern "C" void checkServiceWaitMode__9daAlink_cFv(); // 1
-extern "C" void setJumpMode__9daAlink_cFv(); // 1
-extern "C" void getMetamorphoseNearDis__9daAlink_cCFv(); // 1
-extern "C" void getMetamorphoseFarDis__9daAlink_cCFv(); // 1
-extern "C" void getMetamorphoseFarAngle__9daAlink_cCFv(); // 1
-extern "C" void setMidnaMsg__9daAlink_cFv(); // 1
-extern "C" void notTalk__9daAlink_cFv(); // 1
-extern "C" void setTalkStatus__9daAlink_cFv(); // 1
-extern "C" void getFrontRollRate__9daAlink_cFv(); // 1
-extern "C" void decideCommonDoStatus__9daAlink_cFv(); // 1
-extern "C" void decideDoStatus__9daAlink_cFv(); // 1
-extern "C" void checkWaitAction__9daAlink_cFv(); // 1
-extern "C" void setFallVoice__9daAlink_cFv(); // 1
-extern "C" void setLandPassiveData__9daAlink_cFv(); // 1
-extern "C" void setStepLandVibration__9daAlink_cFv(); // 1
-extern "C" void checkLandAction__9daAlink_cFi(); // 1
-extern "C" void checkSlideAction__9daAlink_cFv(); // 1
-extern "C" void checkAutoJumpAction__9daAlink_cFv(); // 1
-extern "C" void checkCutJumpInFly__9daAlink_cFv(); // 1
-extern "C" void checkFrontWallTypeAction__9daAlink_cFv(); // 1
-extern "C" void checkItemActionInitStart__9daAlink_cFv(); // 1
-extern "C" void checkItemChangeAutoAction__9daAlink_cFv(); // 1
-extern "C" void setFastShotTimer__9daAlink_cFv(); // 1
-extern "C" void cancelItemUseQuake__9daAlink_cFi(); // 1
-extern "C" void cancelUpperItemReadyAnime__9daAlink_cFi(); // 1
-extern "C" void checkItemActorPointer__9daAlink_cFv(); // 1
-extern "C" void checkSwordTwirlAction__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionFly__9daAlink_cFv(); // 1
-extern "C" void checkItemButtonChange__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemAction__9daAlink_cFv(); // 1
-extern "C" void orderPeep__9daAlink_cFv(); // 1
-extern "C" void orderTalk__9daAlink_cFi(); // 1
-extern "C" static void daAlink_searchBouDoor__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchKolin__FP10fopAc_ac_cPv(); // 1
-extern "C" void orderZTalk__9daAlink_cFv(); // 1
-extern "C" void checkNormalAction__9daAlink_cFv(); // 1
-extern "C" void checkReadyItem__9daAlink_cFv(); // 1
-extern "C" void checkItemAction__9daAlink_cFv(); // 1
-extern "C" bool checkRAction__9daAlink_cFv(); // 1
-extern "C" void checkMoveDoAction__9daAlink_cFv(); // 1
-extern "C" void checkSideRollAction__9daAlink_cFi(); // 1
-extern "C" void checkNoUpperAnime__9daAlink_cCFv(); // 1
-extern "C" void checkOneHandItemEquipAnime__9daAlink_cCFv(); // 1
-extern "C" void checkItemEquipAnime__9daAlink_cCFv(); // 1
-extern "C" void checkEquipAnime__9daAlink_cCFv(); // 1
-extern "C" void checkWindDashAnime__9daAlink_cCFv(); // 1
-extern "C" void checkSwordTwirlAnime__9daAlink_cCFv(); // 1
-extern "C" void swordEquip__9daAlink_cFi(); // 1
-extern "C" void swordUnequip__9daAlink_cFv(); // 1
-extern "C" void itemEquip__9daAlink_cFUs(); // 1
-extern "C" void itemUnequip__9daAlink_cFUsf(); // 1
-extern "C" void checkFastUnequip__9daAlink_cFv(); // 1
-extern "C" void allUnequip__9daAlink_cFi(); // 1
-extern "C" void checkItemChangeFromButton__9daAlink_cFv(); // 1
-extern "C" void checkNextActionFromButton__9daAlink_cFv(); // 1
-extern "C" void checkGroundSpecialMode__9daAlink_cFv(); // 1
-extern "C" void commonCheckNextAction__9daAlink_cFi(); // 1
-extern "C" void checkNextAction__9daAlink_cFi(); // 1
-extern "C" void commonChangeItem__9daAlink_cFv(); // 1
-extern "C" void setItemAction__9daAlink_cFv(); // 1
-extern "C" void checkNextActionFromCrouch__9daAlink_cFi(); // 1
-extern "C" void checkUpperReadyThrowAnime__9daAlink_cCFv(); // 1
-extern "C" void getBodyAngleXBasePos__9daAlink_cFP4cXyz(); // 1
-extern "C" void getBodyAngleXAtnActor__9daAlink_cFi(); // 1
-extern "C" void setBodyAngleXReadyAnime__9daAlink_cFi(); // 1
-extern "C" void setMagicArmorBrk__9daAlink_cFi(); // 1
-extern "C" void checkMagicArmorHeavy__9daAlink_cCFv(); // 1
-extern "C" void checkBootsOrArmorHeavy__9daAlink_cCFv(); // 1
-extern "C" void checkHeavyStateOn__9daAlink_cFii(); // 1
-extern "C" void setOutPower__9daAlink_cFfsi(); // 1
-extern "C" void initGravity__9daAlink_cFv(); // 1
-extern "C" void setSpecialGravity__9daAlink_cFffi(); // 1
-extern "C" void transAnimeProc__9daAlink_cFP4cXyzff(); // 1
-extern "C" void setFootSpeed__9daAlink_cFv(); // 1
-extern "C" void posMove__9daAlink_cFv(); // 1
-extern "C" void autoGroundHit__9daAlink_cFv(); // 1
-extern "C" void startPeepChange__9daAlink_cFv(); // 1
-extern "C" void setLastSceneDamage__9daAlink_cFiPUl(); // 1
-extern "C" void setLastSceneMode__9daAlink_cFPUl(); // 1
-extern "C" void startRestartRoom__9daAlink_cFUliii(); // 1
-extern "C" void checkCoachGuardGame__9daAlink_cFv(); // 1
-extern "C" void checkRoofRestart__9daAlink_cFv(); // 1
-extern "C" void checkRestartRoom__9daAlink_cFv(); // 1
-extern "C" void getSceneExitMoveAngle__9daAlink_cFv(); // 1
-extern "C" void checkSceneChange__9daAlink_cFi(); // 1
-extern "C" void voiceStart__9daAlink_cFUl(); // 1
-extern "C" void voiceStartLevel__9daAlink_cFUl(); // 1
-extern "C" void seStartSwordCut__9daAlink_cFUl(); // 1
-extern "C" void seStartOnlyReverb__9daAlink_cFUl(); // 1
-extern "C" void seStartOnlyReverbLevel__9daAlink_cFUl(); // 1
-extern "C" void seStartMapInfo__9daAlink_cFUl(); // 1
-extern "C" void seStartMapInfoLevel__9daAlink_cFUl(); // 1
-extern "C" void setBasAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDER(); // 1
-extern "C" void initBasAnime__9daAlink_cFv(); // 1
-extern "C" void resetBasAnime__9daAlink_cFv(); // 1
-extern "C" void checkSightLine__9daAlink_cFfP4cXyz(); // 1
-extern "C" void setMetamorphoseModel__9daAlink_cFi(); // 1
-extern "C" void keepItemData__9daAlink_cFv(); // 1
-extern "C" void returnKeepItemData__9daAlink_cFv(); // 1
-extern "C" void setItemModel__9daAlink_cFv(); // 1
-extern "C" void setItemActor__9daAlink_cFv(); // 1
-extern "C" void makeItemType__9daAlink_cFv(); // 1
-extern "C" void checkZoraWearAbility__9daAlink_cCFv(); // 1
-extern "C" void checkMagicArmorWearAbility__9daAlink_cCFv(); // 1
-extern "C" void loadAramBmd__9daAlink_cFUsUl(); // 1
-extern "C" void loadAram__9daAlink_cFUsUl(); // 1
-extern "C" void loadAramItemBrk__9daAlink_cFUsP8J3DModel(); // 1
-extern "C" void loadAramItemBtk__9daAlink_cFUsP8J3DModel(); // 1
-extern "C" void loadAramItemBtp__9daAlink_cFUsP8J3DModel(); // 1
-extern "C" void changeItemBck__9daAlink_cFUsf(); // 1
-extern "C" void checkGroupItem__9daAlink_cCFii(); // 1
-extern "C" void checkSetItemTrigger__9daAlink_cFi(); // 1
-extern "C" void checkItemSetButton__9daAlink_cFi(); // 1
-extern "C" void checkField__9daAlink_cFv(); // 1
-extern "C" void checkBossRoom__9daAlink_cFv(); // 1
-extern "C" void checkDungeon__9daAlink_cFv(); // 1
-extern "C" void checkCastleTown__9daAlink_cFv(); // 1
-extern "C" void checkCloudSea__9daAlink_cFv(); // 1
-extern "C" void checkRoomOnly__9daAlink_cFv(); // 1
-extern "C" void checkLv2DungeonRoomSpecial__9daAlink_cFv(); // 1
-extern "C" void checkRoomSpecial__9daAlink_cFv(); // 1
-extern "C" void checkRoom__9daAlink_cFv(); // 1
-extern "C" void checkNotBattleStage__9daAlink_cFv(); // 1
-extern "C" void checkNotHeavyBootsStage__9daAlink_cFv(); // 1
-extern "C" void checkNotAutoJumpStage__9daAlink_cFv(); // 1
-extern "C" void checkCastleTownUseItem__9daAlink_cFUs(); // 1
-extern "C" void changeItemTriggerKeepProc__9daAlink_cFUci(); // 1
-extern "C" void checkNewItemChange__9daAlink_cFUc(); // 1
-extern "C" void deleteEquipItem__9daAlink_cFii(); // 1
-extern "C" void setLight__9daAlink_cFv(); // 1
-extern "C" void setFrontRollCrashShock__9daAlink_cFUc(); // 1
-extern "C" void getModelJointMtx__9daAlink_cFUs(); // 1
-extern "C" void onFrollCrashFlg__9daAlink_cFUci(); // 1
-extern "C" void changeWarpMaterial__9daAlink_cFQ29daAlink_c21daAlink_WARP_MAT_MODE(); // 1
-extern "C" void commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC(); // 1
-extern "C" void commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC(); // 1
-extern "C" void procPreActionUnequipInit__9daAlink_cFiP10fopAc_ac_c(); // 1
-extern "C" void procPreActionUnequip__9daAlink_cFv(); // 1
-extern "C" void procServiceWaitInit__9daAlink_cFv(); // 1
-extern "C" void procServiceWait__9daAlink_cFv(); // 1
-extern "C" void procTiredWaitInit__9daAlink_cFv(); // 1
-extern "C" void procTiredWait__9daAlink_cFv(); // 1
-extern "C" void procWaitInit__9daAlink_cFv(); // 1
-extern "C" void procWait__9daAlink_cFv(); // 1
-extern "C" void procMoveInit__9daAlink_cFv(); // 1
-extern "C" void procMove__9daAlink_cFv(); // 1
-extern "C" void procAtnMoveInit__9daAlink_cFv(); // 1
-extern "C" void procAtnMove__9daAlink_cFv(); // 1
-extern "C" void procAtnActorWaitInit__9daAlink_cFv(); // 1
-extern "C" void procAtnActorWait__9daAlink_cFv(); // 1
-extern "C" void procAtnActorMoveInit__9daAlink_cFv(); // 1
-extern "C" void procAtnActorMove__9daAlink_cFv(); // 1
-extern "C" void procWaitTurnInit__9daAlink_cFv(); // 1
-extern "C" void procWaitTurn__9daAlink_cFv(); // 1
-extern "C" void procMoveTurnInit__9daAlink_cFi(); // 1
-extern "C" void procMoveTurn__9daAlink_cFv(); // 1
-extern "C" void procSideStepInit__9daAlink_cFi(); // 1
-extern "C" void procSideStep__9daAlink_cFv(); // 1
-extern "C" void procSideStepLandInit__9daAlink_cFv(); // 1
-extern "C" void procSideStepLand__9daAlink_cFv(); // 1
-extern "C" void procSlideInit__9daAlink_cFs(); // 1
-extern "C" void procSlide__9daAlink_cFv(); // 1
-extern "C" void procSlideLandInit__9daAlink_cFi(); // 1
-extern "C" void procSlideLand__9daAlink_cFv(); // 1
-extern "C" void procFrontRollInit__9daAlink_cFv(); // 1
-extern "C" void procFrontRoll__9daAlink_cFv(); // 1
-extern "C" void procFrontRollCrashInit__9daAlink_cFv(); // 1
-extern "C" void procFrontRollCrash__9daAlink_cFv(); // 1
-extern "C" void procFrontRollSuccessInit__9daAlink_cFv(); // 1
-extern "C" void procFrontRollSuccess__9daAlink_cFv(); // 1
-extern "C" void procSideRollInit__9daAlink_cFi(); // 1
-extern "C" void procSideRoll__9daAlink_cFv(); // 1
-extern "C" void backJumpSpeedDec__9daAlink_cFv(); // 1
-extern "C" void procBackJumpInit__9daAlink_cFi(); // 1
-extern "C" void procBackJump__9daAlink_cFv(); // 1
-extern "C" void procBackJumpLandInit__9daAlink_cFi(); // 1
-extern "C" void procBackJumpLand__9daAlink_cFv(); // 1
-extern "C" void procSlipInit__9daAlink_cFv(); // 1
-extern "C" void procSlip__9daAlink_cFv(); // 1
-extern "C" void procAutoJumpInit__9daAlink_cFi(); // 1
-extern "C" void procAutoJump__9daAlink_cFv(); // 1
-extern "C" void procDiveJumpInit__9daAlink_cFv(); // 1
-extern "C" void procDiveJump__9daAlink_cFv(); // 1
-extern "C" void procRollJumpInit__9daAlink_cFv(); // 1
-extern "C" void procRollJump__9daAlink_cFv(); // 1
-extern "C" void procFallInit__9daAlink_cFif(); // 1
-extern "C" void procFall__9daAlink_cFv(); // 1
-extern "C" void procLandInit__9daAlink_cFf(); // 1
-extern "C" void procLand__9daAlink_cFv(); // 1
-extern "C" void procSmallJumpInit__9daAlink_cFi(); // 1
-extern "C" void procSmallJump__9daAlink_cFv(); // 1
-extern "C" void procStepMoveInit__9daAlink_cFv(); // 1
-extern "C" void procStepMove__9daAlink_cFv(); // 1
-extern "C" void procCrouchInit__9daAlink_cFv(); // 1
-extern "C" void procCrouch__9daAlink_cFv(); // 1
-extern "C" void procCoMetamorphoseInit__9daAlink_cFv(); // 1
-extern "C" void procCoMetamorphose__9daAlink_cFv(); // 1
-extern "C" void procCoMetamorphoseOnlyInit__9daAlink_cFv(); // 1
-extern "C" void procCoMetamorphoseOnly__9daAlink_cFv(); // 1
-extern "C" void procFloorDownReboundInit__9daAlink_cFv(); // 1
-extern "C" void procFloorDownRebound__9daAlink_cFv(); // 1
-extern "C" void procGoronRideWaitInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procGoronRideWait__9daAlink_cFv(); // 1
-extern "C" void execute__9daAlink_cFv(); // 1
-extern "C" static void daAlink_Execute__FP9daAlink_c(); // 1
-extern "C" void setDrawHand__9daAlink_cFv(); // 1
-extern "C" void checkSwordDraw__9daAlink_cFv(); // 1
-extern "C" void checkShieldDraw__9daAlink_cFv(); // 1
-extern "C" void checkItemDraw__9daAlink_cFv(); // 1
-extern "C" void initShadowScaleLight__9daAlink_cFv(); // 1
-extern "C" void moveShadowScaleLight__9daAlink_cFv(); // 1
-extern "C" void shadowDraw__9daAlink_cFv(); // 1
-extern "C" void modelCalc__9daAlink_cFP8J3DModel(); // 1
-extern "C" void basicModelDraw__9daAlink_cFP8J3DModel(); // 1
-extern "C" void modelDraw__9daAlink_cFP8J3DModeli(); // 1
-extern "C" void setWaterDropColor__9daAlink_cFPC13J3DGXColorS10(); // 1
-extern "C" void initTevCustomColor__9daAlink_cFv(); // 1
-extern "C" void draw__9daAlink_cFv(); // 1
-extern "C" static void daAlink_Draw__FP9daAlink_c(); // 1
-extern "C" void __dt__9daAlink_cFv(); // 1
-extern "C" static void daAlink_Delete__FP9daAlink_c(); // 1
-extern "C" void checkNoSubjectModeCamera__9daAlink_cFv(); // 1
-extern "C" void acceptSubjectModeChange__9daAlink_cFv(); // 1
-extern "C" void checkSubjectAction__9daAlink_cFv(); // 1
-extern "C" void checkBodyAngleX__9daAlink_cFs(); // 1
-extern "C" void setBodyAngleToCamera__9daAlink_cFv(); // 1
-extern "C" void setSubjectMode__9daAlink_cFv(); // 1
-extern "C" void subjectCancelTrigger__9daAlink_cFv(); // 1
-extern "C" void checkSubjectEnd__9daAlink_cFi(); // 1
-extern "C" void searchPeepObj__9daAlink_cFP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchPeepObj__FP10fopAc_ac_cPv(); // 1
-extern "C" void procCoSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procCoSubjectivity__9daAlink_cFv(); // 1
-extern "C" void procCoSwimSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procCoSwimSubjectivity__9daAlink_cFv(); // 1
-extern "C" void procCoPeepSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procCoPeepSubjectivity__9daAlink_cFv(); // 1
-extern "C" void checkBoardRide__9daAlink_cCFv(); // 1
-extern "C" void checkCanoeRide__9daAlink_cCFv(); // 1
-extern "C" void checkHorseRide__9daAlink_cCFv(); // 1
-extern "C" void getLeftItemMatrix__9daAlink_cFv(); // 1
-extern "C" void checkBoarRide__9daAlink_cCFv(); // 1
-extern "C" void checkSpinnerRide__9daAlink_cCFv(); // 1
-extern "C" void getLeftHandMatrix__9daAlink_cFv(); // 1
-extern "C" void getRightHandMatrix__9daAlink_cFv(); // 1
-extern "C" void onSceneChangeArea__9daAlink_cFUcUcP10fopAc_ac_c(); // 1
-extern "C" void getRightItemMatrix__9daAlink_cFv(); // 1
-extern "C" void checkPlayerNoDraw__9daAlink_cFv(); // 1
-extern "C" void __ct__9daAlink_cFv(); // 1
-extern "C" void __dt__Q29daAlink_c14firePointEff_cFv(); // 1
-extern "C" void __ct__Q29daAlink_c14firePointEff_cFv(); // 1
-extern "C" void __dt__15LIGHT_INFLUENCEFv(); // 1
-extern "C" void __dt__18daAlink_footData_cFv(); // 1
-extern "C" void __ct__18daAlink_footData_cFv(); // 1
-extern "C" void __dt__29dAlink_bottleWaterPcallBack_cFv(); // 1
-extern "C" void __dt__14daAlink_blur_cFv(); // 1
-extern "C" void __dt__15daAlink_sight_cFv(); // 1
-extern "C" void __dt__20daAlink_lockCursor_cFv(); // 1
-extern "C" void checkRideOn__9daAlink_cCFv(); // 1
-extern "C" static void dComIfGp_att_getCatghTarget__Fv(); // 1
-extern "C" static void mDoAud_setLinkHp__Fll(); // 1
-extern "C" static void dComIfGs_getLife__Fv(); // 1
-extern "C" static void dComIfGp_getRStatus__Fv(); // 1
-extern "C" void checkAttentionLock__9daAlink_cFv(); // 1
-extern "C" static void dComIfGp_setItemLifeCount__FfUc(); // 1
-extern "C" static void cMtx_multVec__FPA4_CfPC3VecP3Vec(); // 1
-extern "C" void getAnmMtx__8J3DModelFi(); // 1
-extern "C" void setBaseTRMtx__8J3DModelFPA4_f(); // 1
-extern "C" void checkFmChainGrabAnime__9daAlink_cCFv(); // 1
-extern "C" void checkSmallUpperGuardAnime__9daAlink_cCFv(); // 1
-extern "C" static void dComIfGp_evmng_startCheck__FPCc(); // 1
-extern "C" static void mDoAud_setLinkGroupInfo__FUc(); // 1
-extern "C" void getAnm__25mDoExt_MtxCalcAnmBlendTblFi(); // 1
-extern "C" void ChkRoofHit__9dBgS_AcchCFv(); // 1
-extern "C" void ClrGroundHit__9dBgS_AcchFv(); // 1
-extern "C" void checkReinRide__9daAlink_cCFv(); // 1
-extern "C" void checkWolfEnemyThrowAnime__9daAlink_cCFv(); // 1
-extern "C" void checkSpecialDemoMode__9daAlink_cCFv(); // 1
-extern "C" void setMidnaTalkStatus__9daAlink_cFUc(); // 1
-extern "C" void set3DStatus__9daAlink_cFUcUc(); // 1
-extern "C" void offSetFlg__16daAlink_matAnm_cFv(); // 1
-extern "C" void checkModeFlg__9daAlink_cCFUl(); // 1
-extern "C" void getShieldChangeWaitTimer__9daAlink_cCFv(); // 1
-extern "C" void getClothesChangeWaitTimer__9daAlink_cCFv(); // 1
-extern "C" void checkHorseStart__9daAlink_cFv(); // 1
-extern "C" void checkCutTurnCharge__9daAlink_cCFv(); // 1
-extern "C" void checkAcceptDungeonWarpAlink__9daAlink_cFi(); // 1
-extern "C" void getSpinnerActor__9daAlink_cFv(); // 1
-extern "C" void getSumouCounter__9daAlink_cCFv(); // 1
-extern "C" void checkSumouWithstand__9daAlink_cCFv(); // 1
-extern "C" void setMidnaMsgNum__9daAlink_cFP10fopAc_ac_cUs(); // 1
-extern "C" void getModelMtx__9daAlink_cFv(); // 1
-extern "C" void getInvMtx__9daAlink_cFv(); // 1
-extern "C" void getLinkBackBone1Matrix__9daAlink_cFv(); // 1
-extern "C" void getWolfMouthMatrix__9daAlink_cFv(); // 1
-extern "C" void getWolfBackbone2Matrix__9daAlink_cFv(); // 1
-extern "C" void getBottleMtx__9daAlink_cFv(); // 1
-extern "C" void getHeadMtx__9daAlink_cFv(); // 1
-extern "C" void getGroundY__9daAlink_cFv(); // 1
-extern "C" void getBaseAnimeFrameRate__9daAlink_cCFv(); // 1
-extern "C" void getAtnActorID__9daAlink_cCFv(); // 1
-extern "C" void getItemID__9daAlink_cCFv(); // 1
-extern "C" void getGrabActorID__9daAlink_cCFv(); // 1
-extern "C" void setForcePutPos__9daAlink_cFRC4cXyz(); // 1
-extern "C" void checkPlayerFly__9daAlink_cCFv(); // 1
-extern "C" void checkFrontRoll__9daAlink_cCFv(); // 1
-extern "C" void checkWolfDash__9daAlink_cCFv(); // 1
-extern "C" void checkAutoJump__9daAlink_cCFv(); // 1
-extern "C" void checkSideStep__9daAlink_cCFv(); // 1
-extern "C" void checkWolfTriggerJump__9daAlink_cCFv(); // 1
-extern "C" void checkGuardBreakMode__9daAlink_cCFv(); // 1
-extern "C" void checkLv3Slide__9daAlink_cCFv(); // 1
-extern "C" void checkWolfHowlDemoMode__9daAlink_cCFv(); // 1
-extern "C" void checkElecDamage__9daAlink_cCFv(); // 1
-extern "C" void checkEmptyBottleSwing__9daAlink_cCFv(); // 1
-extern "C" void checkBottleSwingMode__9daAlink_cCFv(); // 1
-extern "C" void checkHawkWait__9daAlink_cCFv(); // 1
-extern "C" void checkGoatThrow__9daAlink_cCFv(); // 1
-extern "C" void checkGoatThrowAfter__9daAlink_cCFv(); // 1
-extern "C" void checkWolfTagLockJump__9daAlink_cCFv(); // 1
-extern "C" void checkWolfTagLockJumpLand__9daAlink_cCFv(); // 1
-extern "C" void checkWolfRopeHang__9daAlink_cCFv(); // 1
-extern "C" void checkRollJump__9daAlink_cCFv(); // 1
-extern "C" void checkGoronRideWait__9daAlink_cCFv(); // 1
-extern "C" void checkWolfChain__9daAlink_cCFv(); // 1
-extern "C" void checkWolfWait__9daAlink_cCFv(); // 1
-extern "C" void checkWolfJumpAttack__9daAlink_cCFv(); // 1
-extern "C" void checkWolfRSit__9daAlink_cCFv(); // 1
-extern "C" void checkBottleDrinkEnd__9daAlink_cCFv(); // 1
-extern "C" void checkWolfDig__9daAlink_cCFv(); // 1
-extern "C" void checkCutCharge__9daAlink_cCFv(); // 1
-extern "C" void checkCutLargeJumpCharge__9daAlink_cCFv(); // 1
-extern "C" void checkComboCutTurn__9daAlink_cCFv(); // 1
-extern "C" void checkClimbMove__9daAlink_cCFv(); // 1
-extern "C" void checkGrassWhistle__9daAlink_cCFv(); // 1
-extern "C" void checkBoarRun__9daAlink_cCFv(); // 1
-extern "C" void checkHorseRideNotReady__9daAlink_cCFv(); // 1
-extern "C" void getSearchBallScale__9daAlink_cCFv(); // 1
-extern "C" void checkFastShotTime__9daAlink_cFv(); // 1
-extern "C" void checkCutJumpCancelTurn__9daAlink_cCFv(); // 1
-extern "C" void checkSingleBoarBattleSecondBowReady__9daAlink_cCFv(); // 1
-extern "C" void cancelDungeonWarpReadyNeck__9daAlink_cFv(); // 1
-extern "C" void onSceneChangeAreaJump__9daAlink_cFUcUcP10fopAc_ac_c(); // 1
-extern "C" void onSceneChangeDead__9daAlink_cFUci(); // 1
-extern "C" void checkNoEquipItem__9daAlink_cCFv(); // 1
-extern "C" void getBoardCutTurnOffsetAngleY__9daAlink_cCFv(); // 1
-extern "C" void getMagneBootsTopVec__9daAlink_cFv(); // 1
-extern "C" void setCargoCarry__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setGoronSideMove__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setSumouReady__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setSumouPushBackDirection__9daAlink_cFs(); // 1
-extern "C" void setSumouLoseHeadUp__9daAlink_cFv(); // 1
-extern "C" void checkPriActorOwn__9daAlink_cCFPC10fopAc_ac_c(); // 1
-extern "C" void checkWolfEnemyBiteAllOwn__9daAlink_cCFPC10fopAc_ac_c(); // 1
-extern "C" void setWolfEnemyHangBiteAngle__9daAlink_cFs(); // 1
-extern "C" void setSumouGraspCancelCount__9daAlink_cFi(); // 1
-extern "C" void checkItemSwordEquip__9daAlink_cCFv(); // 1
-extern "C" void getSinkShapeOffset__9daAlink_cCFv(); // 1
-extern "C" void checkSinkDead__9daAlink_cCFv(); // 1
-extern "C" void checkCutJumpMode__9daAlink_cCFv(); // 1
-extern "C" void getGiantPuzzleAimAngle__9daAlink_cCFv(); // 1
-extern "C" void getSwordChangeWaitTimer__9daAlink_cCFv(); // 1
-extern "C" void checkMetamorphose__9daAlink_cCFv(); // 1
-extern "C" void checkWolfDownAttackPullOut__9daAlink_cCFv(); // 1
-extern "C" void getMidnaAtnPos__9daAlink_cCFv(); // 1
-extern "C" void checkCopyRodEquip__9daAlink_cCFv(); // 1
-extern "C" void checkCanoeFishingGetLeft__9daAlink_cCFv(); // 1
-extern "C" void checkCanoeFishingGetRight__9daAlink_cCFv(); // 1
-extern "C" void checkBeeChildDrink__9daAlink_cCFv(); // 1
-extern "C" void getWolfHowlMgrP__9daAlink_cFv(); // 1
-extern "C" void checkWolfHowlSuccessAnime__9daAlink_cCFv(); // 1
-extern "C" void checkOctaIealHang__9daAlink_cCFv(); // 1
-extern "C" void cancelOctaIealHang__9daAlink_cFv(); // 1
-extern "C" void cancelDragonHangBackJump__9daAlink_cFv(); // 1
-extern "C" void setOctaIealWildHang__9daAlink_cFv(); // 1
-extern "C" void checkDragonHangRide__9daAlink_cCFv(); // 1
-extern "C" void playerStartCollisionSE__9daAlink_cFUlUl(); // 1
-extern "C" void __dt__16daAlink_matAnm_cFv(); // 1
-extern "C" void __dt__12dBgS_ObjAcchFv(); // 1
-extern "C" void __dt__Q29daAlink_c14hsChainShape_cFv(); // 1
-extern "C" static void daAlink_searchNightStalker__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkLightSwordMtrl__9daAlink_cFv(); // 1
-extern "C" void checkSwordEquipAnime__9daAlink_cCFv(); // 1
-extern "C" void checkCutDashAnime__9daAlink_cCFv(); // 1
-extern "C" void checkCutDashEnemyHit__9daAlink_cFR12dCcD_GObjInf(); // 1
-extern "C" void getSwordAtType__9daAlink_cFv(); // 1
-extern "C" void initCutTurnAt__9daAlink_cFfi(); // 1
-extern "C" void checkCutFinishJumpUp__9daAlink_cFv(); // 1
-extern "C" void changeCutFast__9daAlink_cFv(); // 1
-extern "C" void checkCutFastReady__9daAlink_cFv(); // 1
-extern "C" void setSwordModel__9daAlink_cFv(); // 1
-extern "C" void offSwordModel__9daAlink_cFv(); // 1
-extern "C" void checkCutTypeNoBlur__9daAlink_cCFv(); // 1
-extern "C" void checkCutTurnInput__9daAlink_cCFv(); // 1
-extern "C" void getCutTurnDirection__9daAlink_cCFv(); // 1
-extern "C" void resetCombo__9daAlink_cFi(); // 1
-extern "C" void checkComboCnt__9daAlink_cFv(); // 1
-extern "C" void setCutType__9daAlink_cFUc(); // 1
-extern "C" void setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff(); // 1
-extern "C" void setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff(); // 1
-extern "C" void notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setSwordHitVibration__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void checkAtShieldHit__9daAlink_cFR12dCcD_GObjInf(); // 1
-extern "C" void checkCutReverseAt__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void changeCutReverseProc__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void setCutDash__9daAlink_cFii(); // 1
-extern "C" void checkForceSwordSwing__9daAlink_cFv(); // 1
-extern "C" void setComboReserb__9daAlink_cFv(); // 1
-extern "C" void checkComboReserb__9daAlink_cFv(); // 1
-extern "C" void commonCutAction__9daAlink_cFv(); // 1
-extern "C" void setSwordVoiceSe__9daAlink_cFUl(); // 1
-extern "C" void setSwordChargeVoiceSe__9daAlink_cFv(); // 1
-extern "C" void setSwordComboVoice__9daAlink_cFv(); // 1
-extern "C" void checkCutTurnInputTrigger__9daAlink_cFv(); // 1
-extern "C" void checkCutAction__9daAlink_cFv(); // 1
-extern "C" void checkCutTurnCharge__9daAlink_cFv(); // 1
-extern "C" void getCutDirection__9daAlink_cFv(); // 1
-extern "C" void checkCutCancelNextMode__9daAlink_cFi(); // 1
-extern "C" void checkDoCutAction__9daAlink_cFv(); // 1
-extern "C" void checkCutBackState__9daAlink_cFv(); // 1
-extern "C" void checkCutHeadState__9daAlink_cFv(); // 1
-extern "C" void checkDownAttackState__9daAlink_cFv(); // 1
-extern "C" void checkCutLargeTurnState__9daAlink_cCFv(); // 1
-extern "C" void cancelCutCharge__9daAlink_cFv(); // 1
-extern "C" void initCutAtnActorSearch__9daAlink_cFv(); // 1
-extern "C" void checkCutAtnActorChange__9daAlink_cFv(); // 1
-extern "C" void setCutJumpSpeed__9daAlink_cFi(); // 1
-extern "C" void procCutNormalInit__9daAlink_cFi(); // 1
-extern "C" void procCutNormal__9daAlink_cFv(); // 1
-extern "C" void procCutFinishInit__9daAlink_cFi(); // 1
-extern "C" void procCutFinish__9daAlink_cFv(); // 1
-extern "C" void procCutFinishJumpUpInit__9daAlink_cFv(); // 1
-extern "C" void procCutFinishJumpUp__9daAlink_cFv(); // 1
-extern "C" void procCutFinishJumpUpLandInit__9daAlink_cFv(); // 1
-extern "C" void procCutFinishJumpUpLand__9daAlink_cFv(); // 1
-extern "C" void procCutReverseInit__9daAlink_cFQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void procCutReverse__9daAlink_cFv(); // 1
-extern "C" void procCutJumpInit__9daAlink_cFi(); // 1
-extern "C" void procCutJump__9daAlink_cFv(); // 1
-extern "C" void procCutJumpLandInit__9daAlink_cFi(); // 1
-extern "C" void procCutJumpLand__9daAlink_cFv(); // 1
-extern "C" void procCutTurnInit__9daAlink_cFii(); // 1
-extern "C" void procCutTurn__9daAlink_cFv(); // 1
-extern "C" void procCutTurnChargeInit__9daAlink_cFv(); // 1
-extern "C" void procCutTurnCharge__9daAlink_cFv(); // 1
-extern "C" void procCutTurnMoveInit__9daAlink_cFi(); // 1
-extern "C" void procCutTurnMove__9daAlink_cFv(); // 1
-extern "C" void procCutDownInit__9daAlink_cFv(); // 1
-extern "C" void procCutDown__9daAlink_cFv(); // 1
-extern "C" void procCutDownLandInit__9daAlink_cFP13fopEn_enemy_c(); // 1
-extern "C" void procCutDownLand__9daAlink_cFv(); // 1
-extern "C" void procCutHeadInit__9daAlink_cFv(); // 1
-extern "C" void procCutHead__9daAlink_cFv(); // 1
-extern "C" void procCutHeadLandInit__9daAlink_cFv(); // 1
-extern "C" void procCutHeadLand__9daAlink_cFv(); // 1
-extern "C" void procCutLargeJumpChargeInit__9daAlink_cFv(); // 1
-extern "C" void procCutLargeJumpCharge__9daAlink_cFv(); // 1
-extern "C" void procCutLargeJumpInit__9daAlink_cFv(); // 1
-extern "C" void procCutLargeJump__9daAlink_cFv(); // 1
-extern "C" void procCutLargeJumpLandInit__9daAlink_cFi(); // 1
-extern "C" void procCutLargeJumpLand__9daAlink_cFv(); // 1
-extern "C" void procSwordUnequipSpInit__9daAlink_cFv(); // 1
-extern "C" void procSwordUnequipSp__9daAlink_cFv(); // 1
-extern "C" void getFreezeR__9daAlink_cCFv(); // 1
-extern "C" void getFreezeG__9daAlink_cCFv(); // 1
-extern "C" void getFreezeB__9daAlink_cCFv(); // 1
-extern "C" void checkMiddleBossGoronRoom__9daAlink_cFv(); // 1
-extern "C" void setDkCaught__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void freezeTimerDamage__9daAlink_cFv(); // 1
-extern "C" void onPressedDamage__9daAlink_cFRC4cXyzs(); // 1
-extern "C" void checkNoLandDamageSlidePolygon__9daAlink_cFv(); // 1
-extern "C" void checkCutLandDamage__9daAlink_cFv(); // 1
-extern "C" void checkCaughtEscapeCutTurn__9daAlink_cFv(); // 1
-extern "C" void setThrowDamage__9daAlink_cFsffiii(); // 1
-extern "C" void damageMagnification__9daAlink_cFii(); // 1
-extern "C" void setDamagePoint__9daAlink_cFiiii(); // 1
-extern "C" void setDamagePointNormal__9daAlink_cFi(); // 1
-extern "C" void setLandDamagePoint__9daAlink_cFi(); // 1
-extern "C" void getDamageVec__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void setDashDamage__9daAlink_cFv(); // 1
-extern "C" void checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo(); // 1
-extern "C" void checkMagicArmorNoDamage__9daAlink_cFv(); // 1
-extern "C" void checkPolyDamage__9daAlink_cFv(); // 1
-extern "C" void checkElecReturnDamage__9daAlink_cFR12dCcD_GObjInfPP10fopAc_ac_c(); // 1
-extern "C" void damageTimerCount__9daAlink_cFv(); // 1
-extern "C" void checkHugeAttack__9daAlink_cCFi(); // 1
-extern "C" void checkLargeAttack__9daAlink_cCFi(); // 1
-extern "C" void checkDamageAction__9daAlink_cFv(); // 1
-extern "C" void procDamageInit__9daAlink_cFP12dCcD_GObjInfi(); // 1
-extern "C" void procDamage__9daAlink_cFv(); // 1
-extern "C" void procCoLargeDamageInit__9daAlink_cFiissP12dCcD_GObjInfi(); // 1
-extern "C" void procCoLargeDamage__9daAlink_cFv(); // 1
-extern "C" void procLargeDamageUpInit__9daAlink_cFiiss(); // 1
-extern "C" void procLargeDamageUp__9daAlink_cFv(); // 1
-extern "C" void procCoLargeDamageWallInit__9daAlink_cFiiss(); // 1
-extern "C" void procCoLargeDamageWall__9daAlink_cFv(); // 1
-extern "C" void procCoPolyDamageInit__9daAlink_cFv(); // 1
-extern "C" void procCoPolyDamage__9daAlink_cFv(); // 1
-extern "C" void procLandDamageInit__9daAlink_cFi(); // 1
-extern "C" void procLandDamage__9daAlink_cFv(); // 1
-extern "C" void procCoElecDamageInit__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInfi(); // 1
-extern "C" void procCoElecDamage__9daAlink_cFv(); // 1
-extern "C" void procStEscapeInit__9daAlink_cFv(); // 1
-extern "C" void procStEscape__9daAlink_cFv(); // 1
-extern "C" void procDkCaughtInit__9daAlink_cFUi(); // 1
-extern "C" void procDkCaught__9daAlink_cFv(); // 1
-extern "C" void setScreamWaitAnime__9daAlink_cFv(); // 1
-extern "C" void procScreamWaitInit__9daAlink_cFv(); // 1
-extern "C" void procScreamWait__9daAlink_cFv(); // 1
-extern "C" void procCoSandWallHitInit__9daAlink_cFv(); // 1
-extern "C" void procCoSandWallHit__9daAlink_cFv(); // 1
-extern "C" void procCoLavaReturnInit__9daAlink_cFi(); // 1
-extern "C" void procCoLavaReturn__9daAlink_cFv(); // 1
-extern "C" void procCoSwimFreezeReturnInit__9daAlink_cFv(); // 1
-extern "C" void procCoSwimFreezeReturn__9daAlink_cFv(); // 1
-extern "C" void checkEnemyGroup__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void checkSpecialNpc__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void checkShieldAttackEmphasys__9daAlink_cFv(); // 1
-extern "C" void checkGuardActionChange__9daAlink_cFv(); // 1
-extern "C" void stickArrowIncrement__9daAlink_cFi(); // 1
-extern "C" void setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci(); // 1
-extern "C" void checkWoodShieldEquipNotIronBall__9daAlink_cCFv(); // 1
-extern "C" void getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz(); // 1
-extern "C" void setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz(); // 1
-extern "C" void checkUpperGuardAnime__9daAlink_cCFv(); // 1
-extern "C" void checkPlayerGuard__9daAlink_cCFv(); // 1
-extern "C" void checkPlayerGuardAndAttack__9daAlink_cCFv(); // 1
-extern "C" void checkGuardAccept__9daAlink_cFv(); // 1
-extern "C" void setUpperGuardAnime__9daAlink_cFf(); // 1
-extern "C" void setShieldGuard__9daAlink_cFv(); // 1
-extern "C" void setGuardSe__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void setSmallGuard__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void procGuardSlipInit__9daAlink_cFiP12dCcD_GObjInf(); // 1
-extern "C" void procGuardSlip__9daAlink_cFv(); // 1
-extern "C" void procGuardAttackInit__9daAlink_cFv(); // 1
-extern "C" void procGuardAttack__9daAlink_cFv(); // 1
-extern "C" void procGuardBreakInit__9daAlink_cFv(); // 1
-extern "C" void procGuardBreak__9daAlink_cFv(); // 1
-extern "C" void procTurnMoveInit__9daAlink_cFi(); // 1
-extern "C" void procTurnMove__9daAlink_cFv(); // 1
-extern "C" void getArrowFlyData__9daAlink_cCFPfPfi(); // 1
-extern "C" void getArrowIncAtR__9daAlink_cCFv(); // 1
-extern "C" void getBombArrowFlyExplodeTime__9daAlink_cCFv(); // 1
-extern "C" void getArrowIncAtMaxStart__9daAlink_cCFv(); // 1
-extern "C" void getArrowIncAtMax__9daAlink_cCFv(); // 1
-extern "C" void checkBowAndSlingItem__9daAlink_cFi(); // 1
-extern "C" void setSlingModel__9daAlink_cFv(); // 1
-extern "C" void checkBowCameraArrowPosP__9daAlink_cFPsPs(); // 1
-extern "C" void checkArrowChargeEnd__9daAlink_cCFv(); // 1
-extern "C" void checkBowReadyAnime__9daAlink_cCFv(); // 1
-extern "C" void checkBowAnime__9daAlink_cCFv(); // 1
-extern "C" void makeArrow__9daAlink_cFv(); // 1
-extern "C" void deleteArrow__9daAlink_cFv(); // 1
-extern "C" void setBowOrSlingStatus__9daAlink_cFv(); // 1
-extern "C" void changeArrowType__9daAlink_cFv(); // 1
-extern "C" void cancelBowMoveRideNotAtn__9daAlink_cFv(); // 1
-extern "C" void cancelBowMove__9daAlink_cFv(); // 1
-extern "C" void setBowReadyAnime__9daAlink_cFv(); // 1
-extern "C" void setBowReloadAnime__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionBow__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionBowFly__9daAlink_cFv(); // 1
-extern "C" void checkNextActionBow__9daAlink_cFv(); // 1
-extern "C" void setBowModel__9daAlink_cFv(); // 1
-extern "C" void checkBowGrabLeftHand__9daAlink_cCFv(); // 1
-extern "C" void setBowHangAnime__9daAlink_cFv(); // 1
-extern "C" void setBowNormalAnime__9daAlink_cFv(); // 1
-extern "C" void setBowSight__9daAlink_cFv(); // 1
-extern "C" void procBowSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procBowSubject__9daAlink_cFv(); // 1
-extern "C" void procBowMoveInit__9daAlink_cFv(); // 1
-extern "C" void procBowMove__9daAlink_cFv(); // 1
-extern "C" void checkBoomerangLockAccept__9daAlink_cFv(); // 1
-extern "C" void getBoomSpeed__9daAlink_cFv(); // 1
-extern "C" void getBoomCatchSpeed__9daAlink_cCFv(); // 1
-extern "C" void getBoomFlyMax__9daAlink_cCFv(); // 1
-extern "C" void getBoomLockMax__9daAlink_cFv(); // 1
-extern "C" void getBoomBgThroughTime__9daAlink_cCFv(); // 1
-extern "C" void checkBossBabaRoom__9daAlink_cFv(); // 1
-extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void getBoomerangActor__9daAlink_cFv(); // 1
-extern "C" void checkBoomerangChargeEnd__9daAlink_cFv(); // 1
-extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void initBoomerangUpperAnimeSpeed__9daAlink_cFi(); // 1
-extern "C" void checkBoomerangAnime__9daAlink_cCFv(); // 1
-extern "C" void checkBoomerangThrowAnime__9daAlink_cCFv(); // 1
-extern "C" void setBoomerangReadyQuake__9daAlink_cFv(); // 1
-extern "C" void setBoomerangReadyAnime__9daAlink_cFv(); // 1
-extern "C" void setThrowBoomerangAnime__9daAlink_cFv(); // 1
-extern "C" void setBoomerangCatchAnime__9daAlink_cFv(); // 1
-extern "C" void throwBoomerang__9daAlink_cFv(); // 1
-extern "C" void returnBoomerang__9daAlink_cFi(); // 1
-extern "C" void checkUpperItemActionBoomerang__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionBoomerangFly__9daAlink_cFv(); // 1
-extern "C" void checkNextActionBoomerang__9daAlink_cFv(); // 1
-extern "C" void checkBoomerangCatchAction__9daAlink_cFv(); // 1
-extern "C" void setBoomerangSight__9daAlink_cFv(); // 1
-extern "C" void procBoomerangSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procBoomerangSubject__9daAlink_cFv(); // 1
-extern "C" void procBoomerangMoveInit__9daAlink_cFv(); // 1
-extern "C" void procBoomerangMove__9daAlink_cFv(); // 1
-extern "C" void procBoomerangCatchInit__9daAlink_cFv(); // 1
-extern "C" void procBoomerangCatch__9daAlink_cFv(); // 1
-extern "C" void checkLv6BossRoom__9daAlink_cFv(); // 1
-extern "C" void getCopyRodBallSpeed__9daAlink_cCFv(); // 1
-extern "C" void getCopyRodBallReturnSpeed__9daAlink_cCFv(); // 1
-extern "C" void getCopyRodBallDisMax__9daAlink_cCFv(); // 1
-extern "C" void getCopyRodControllActor__9daAlink_cFv(); // 1
-extern "C" void getCopyRodCameraActor__9daAlink_cFv(); // 1
-extern "C" void initCopyRodUpperAnimeSpeed__9daAlink_cFi(); // 1
-extern "C" void checkForestOldCentury__9daAlink_cFv(); // 1
-extern "C" void checkCopyRodTopUse__9daAlink_cFv(); // 1
-extern "C" void checkCopyRodAnime__9daAlink_cCFv(); // 1
-extern "C" void setCopyRodControllAnime__9daAlink_cFv(); // 1
-extern "C" void setCopyRodControllUpperSpeedRate__9daAlink_cFv(); // 1
-extern "C" void setCopyRodModel__9daAlink_cFv(); // 1
-extern "C" void setCopyRodReadyAnime__9daAlink_cFv(); // 1
-extern "C" void throwCopyRod__9daAlink_cFv(); // 1
-extern "C" void returnCopyRod__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionCopyRod__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionCopyRodFly__9daAlink_cFv(); // 1
-extern "C" void checkNextActionCopyRod__9daAlink_cFv(); // 1
-extern "C" void setCopyRodSight__9daAlink_cFv(); // 1
-extern "C" void procCopyRodSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procCopyRodSubject__9daAlink_cFv(); // 1
-extern "C" void procCopyRodMoveInit__9daAlink_cFv(); // 1
-extern "C" void procCopyRodMove__9daAlink_cFv(); // 1
-extern "C" void procCopyRodSwingInit__9daAlink_cFv(); // 1
-extern "C" void procCopyRodSwing__9daAlink_cFv(); // 1
-extern "C" void procCopyRodReviveInit__9daAlink_cFv(); // 1
-extern "C" void procCopyRodRevive__9daAlink_cFv(); // 1
-extern "C" void concatMagneBootMtx__9daAlink_cFv(); // 1
-extern "C" void concatMagneBootInvMtx__9daAlink_cFv(); // 1
-extern "C" void multVecMagneBootInvMtx__9daAlink_cFP4cXyz(); // 1
-extern "C" void commonMagneLineCheck__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void checkBootsMoveAnime__9daAlink_cFi(); // 1
-extern "C" void setHeavyBoots__9daAlink_cFi(); // 1
-extern "C" void getMagneBootsLocalAngleY__9daAlink_cFsi(); // 1
-extern "C" void setMagneBootsMtx__9daAlink_cFP13cBgS_PolyInfoi(); // 1
-extern "C" void cancelMagneBootsOn__9daAlink_cFv(); // 1
-extern "C" void checkMagneBootsFly__9daAlink_cFv(); // 1
-extern "C" void procBootsEquipInit__9daAlink_cFv(); // 1
-extern "C" void procBootsEquip__9daAlink_cFv(); // 1
-extern "C" void procMagneBootsFlyInit__9daAlink_cFv(); // 1
-extern "C" void procMagneBootsFly__9daAlink_cFv(); // 1
-extern "C" void getBombExplodeTime__9daAlink_cCFv(); // 1
-extern "C" void getBombGravity__9daAlink_cCFv(); // 1
-extern "C" void getBombMaxFallSpeed__9daAlink_cCFv(); // 1
-extern "C" void getBombBoundRate__9daAlink_cCFv(); // 1
-extern "C" void getBombStopSpeedY__9daAlink_cCFv(); // 1
-extern "C" void getBombMaxSpeedY__9daAlink_cCFv(); // 1
-extern "C" void getBombEffScale__9daAlink_cCFv(); // 1
-extern "C" void getBombAtR__9daAlink_cCFv(); // 1
-extern "C" void getEnemyBombColorR__9daAlink_cCFv(); // 1
-extern "C" void getBombWaterGravity__9daAlink_cCFv(); // 1
-extern "C" void getBombWaterMaxFallSpeed__9daAlink_cCFv(); // 1
-extern "C" void getBombExplodeWaterEffectLimit__9daAlink_cCFv(); // 1
-extern "C" void getBombInsectLimitAngle__9daAlink_cCFv(); // 1
-extern "C" static void daAlink_checkLightBallA__FP10fopAc_ac_c(); // 1
-extern "C" static void daAlink_checkLightBallB__FP10fopAc_ac_c(); // 1
-extern "C" static void daAlink_searchLightBall__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkGrabLineCheck__9daAlink_cFv(); // 1
-extern "C" void setGrabCollisionOffset__9daAlink_cFffP13cBgS_PolyInfo(); // 1
-extern "C" void exchangeGrabActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setForceGrab__9daAlink_cFP10fopAc_ac_cii(); // 1
-extern "C" void getGrabThrowRate__9daAlink_cFv(); // 1
-extern "C" void checkGrabThrowAnime__9daAlink_cCFv(); // 1
-extern "C" void checkGrabAnime__9daAlink_cCFv(); // 1
-extern "C" void checkGrabAnimeAndThrow__9daAlink_cCFv(); // 1
-extern "C" void checkGrabCarryActor__9daAlink_cFv(); // 1
-extern "C" void checkGrabSlowMoveActor__9daAlink_cFv(); // 1
-extern "C" void checkGrabHeavyActor__9daAlink_cFv(); // 1
-extern "C" void checkGrabSideActor__9daAlink_cFv(); // 1
-extern "C" void setGrabUpperAnime__9daAlink_cFf(); // 1
-extern "C" void checkGrabRooster__9daAlink_cFv(); // 1
-extern "C" void setGrabItemPos__9daAlink_cFv(); // 1
-extern "C" void freeGrabItem__9daAlink_cFv(); // 1
-extern "C" void setGrabUpperSpeedRate__9daAlink_cFv(); // 1
-extern "C" void setCarryArmAngle__9daAlink_cFff(); // 1
-extern "C" void checkGrabNotThrow__9daAlink_cFv(); // 1
-extern "C" void checkNextActionGrab__9daAlink_cFv(); // 1
-extern "C" void initGrabNextMode__9daAlink_cFv(); // 1
-extern "C" void setGrabItemThrow__9daAlink_cFv(); // 1
-extern "C" void checkUpperGrabItemThrow__9daAlink_cFf(); // 1
-extern "C" void putObjLineCheck__9daAlink_cFR11dBgS_LinChkP4cXyzP10fopAc_ac_c(); // 1
-extern "C" void grabLineCheck__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void setGrabItemActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procGrabReadyInit__9daAlink_cFv(); // 1
-extern "C" void procGrabReady__9daAlink_cFv(); // 1
-extern "C" void procGrabUpInit__9daAlink_cFv(); // 1
-extern "C" void procGrabUp__9daAlink_cFv(); // 1
-extern "C" void procGrabMiss__9daAlink_cFv(); // 1
-extern "C" void procGrabThrowInit__9daAlink_cFi(); // 1
-extern "C" void procGrabThrow__9daAlink_cFv(); // 1
-extern "C" void procGrabPutInit__9daAlink_cFv(); // 1
-extern "C" void procGrabPut__9daAlink_cFv(); // 1
-extern "C" void procGrabWaitInit__9daAlink_cFv(); // 1
-extern "C" void procGrabWait__9daAlink_cFv(); // 1
-extern "C" void procGrabReboundInit__9daAlink_cFi(); // 1
-extern "C" void procGrabRebound__9daAlink_cFv(); // 1
-extern "C" void procGrabStandInit__9daAlink_cFv(); // 1
-extern "C" void procGrabStand__9daAlink_cFv(); // 1
-extern "C" void checkInsectActorName__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procInsectCatchInit__9daAlink_cFv(); // 1
-extern "C" void procInsectCatch__9daAlink_cFv(); // 1
-extern "C" void procPickUpInit__9daAlink_cFv(); // 1
-extern "C" void procPickUp__9daAlink_cFv(); // 1
-extern "C" void procPickPutInit__9daAlink_cFi(); // 1
-extern "C" void procPickPut__9daAlink_cFv(); // 1
-extern "C" void checkSetChainPullAnime__9daAlink_cFs(); // 1
-extern "C" void getChainStickAngleY__9daAlink_cCFs(); // 1
-extern "C" void checkChainEmphasys__9daAlink_cFv(); // 1
-extern "C" void searchFmChainPos__9daAlink_cFv(); // 1
-extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi(); // 1
-extern "C" void checkChainBlockPushPull__9daAlink_cFv(); // 1
-extern "C" void procFmChainUpInit__9daAlink_cFv(); // 1
-extern "C" void procFmChainUp__9daAlink_cFv(); // 1
-extern "C" void procFmChainStrongPullInit__9daAlink_cFv(); // 1
-extern "C" void procFmChainStrongPull__9daAlink_cFv(); // 1
-extern "C" void setWallGrabStatus__9daAlink_cFUcUc(); // 1
-extern "C" void getWallGrabStatus__9daAlink_cFv(); // 1
-extern "C" void wallGrabTrigger__9daAlink_cFv(); // 1
-extern "C" void wallGrabButton__9daAlink_cFv(); // 1
-extern "C" void setPushPullKeepData__9daAlink_cFQ29dBgW_Base13PushPullLabeli(); // 1
-extern "C" void checkPushPullTurnBlock__9daAlink_cFv(); // 1
-extern "C" void checkPullBehindWall__9daAlink_cFv(); // 1
-extern "C" void offGoatStopGame__9daAlink_cFv(); // 1
-extern "C" void checkGoatCatchActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void getGoatCatchDistance2__9daAlink_cFv(); // 1
-extern "C" void endPushPull__9daAlink_cFv(); // 1
-extern "C" void getPushPullAnimeSpeed__9daAlink_cFv(); // 1
-extern "C" void procCoPushPullWaitInit__9daAlink_cFi(); // 1
-extern "C" void procCoPushPullWait__9daAlink_cFv(); // 1
-extern "C" void procCoPushMoveInit__9daAlink_cFii(); // 1
-extern "C" void procCoPushMove__9daAlink_cFv(); // 1
-extern "C" void procPullMoveInit__9daAlink_cFi(); // 1
-extern "C" void procPullMove__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchGoat__FP10fopAc_ac_cPv(); // 1
-extern "C" void cancelGoronThrowEvent__9daAlink_cFv(); // 1
-extern "C" void setGoatStopGameFail__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procGoatMoveInit__9daAlink_cFv(); // 1
-extern "C" void procGoatMove__9daAlink_cFv(); // 1
-extern "C" void procGoatCatchInit__9daAlink_cFP10fopAc_ac_cf(); // 1
-extern "C" void procGoatCatch__9daAlink_cFv(); // 1
-extern "C" void procGoatStrokeInit__9daAlink_cFv(); // 1
-extern "C" void procGoatStroke__9daAlink_cFv(); // 1
-extern "C" void procGoronMoveInit__9daAlink_cFv(); // 1
-extern "C" void procGoronMove__9daAlink_cFv(); // 1
-extern "C" void checkSumouVsActor__9daAlink_cFv(); // 1
-extern "C" void cancelSumouMode__9daAlink_cFv(); // 1
-extern "C" void sumouPunchTrigger__9daAlink_cFv(); // 1
-extern "C" void setSumouPunchStatus__9daAlink_cFv(); // 1
-extern "C" void procSumouReadyInit__9daAlink_cFv(); // 1
-extern "C" void procSumouReady__9daAlink_cFv(); // 1
-extern "C" void procSumouMoveInit__9daAlink_cFv(); // 1
-extern "C" void procSumouMove__9daAlink_cFv(); // 1
-extern "C" void procSumouSideMoveInit__9daAlink_cFv(); // 1
-extern "C" void procSumouSideMove__9daAlink_cFv(); // 1
-extern "C" void procSumouActionInit__9daAlink_cFiii(); // 1
-extern "C" void procSumouAction__9daAlink_cFv(); // 1
-extern "C" void procSumouStaggerInit__9daAlink_cFv(); // 1
-extern "C" void procSumouStagger__9daAlink_cFv(); // 1
-extern "C" void procSumouWinLoseInit__9daAlink_cFv(); // 1
-extern "C" void procSumouWinLose__9daAlink_cFv(); // 1
-extern "C" void procSumouShikoInit__9daAlink_cFv(); // 1
-extern "C" void procSumouShiko__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchBoar__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchCoach__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkHorseZeldaBowMode__9daAlink_cFv(); // 1
-extern "C" void setHorseZeldaDamage__9daAlink_cFv(); // 1
-extern "C" void checkHorseDashAccept__9daAlink_cFv(); // 1
-extern "C" void checkCowGame__9daAlink_cFv(); // 1
-extern "C" void getReinRideDirection__9daAlink_cFv(); // 1
-extern "C" void checkReinRideBgCheck__9daAlink_cFv(); // 1
-extern "C" void commonInitForceRideRein__9daAlink_cFv(); // 1
-extern "C" void initForceRideBoar__9daAlink_cFv(); // 1
-extern "C" void initForceRideHorse__9daAlink_cFv(); // 1
-extern "C" void rideGetOff__9daAlink_cFv(); // 1
-extern "C" void checkHorseNotDamageReaction__9daAlink_cCFv(); // 1
-extern "C" void checkHorseWaitLashAnime__9daAlink_cCFv(); // 1
-extern "C" void checkHorseReinLeftOnly__9daAlink_cCFv(); // 1
-extern "C" void getReinHandType__9daAlink_cCFv(); // 1
-extern "C" void checkHorseLieAnime__9daAlink_cCFv(); // 1
-extern "C" void checkHorseSubjectivity__9daAlink_cCFv(); // 1
-extern "C" void setHorseSwordUpAnime__9daAlink_cFv(); // 1
-extern "C" void setHorseTurnUpperAnime__9daAlink_cFi(); // 1
-extern "C" void checkHorseNoUpperAnime__9daAlink_cCFv(); // 1
-extern "C" void getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void checkHorseNotGrab__9daAlink_cCFv(); // 1
-extern "C" void setHorseStirrup__9daAlink_cFv(); // 1
-extern "C" void changeBoarRunRide__9daAlink_cFv(); // 1
-extern "C" void setSyncHorsePos__9daAlink_cFv(); // 1
-extern "C" void setSyncBoarPos__9daAlink_cFv(); // 1
-extern "C" void setSyncBoarRunPos__9daAlink_cFv(); // 1
-extern "C" void setSyncRidePos__9daAlink_cFv(); // 1
-extern "C" void setHorseTurnAnime__9daAlink_cFv(); // 1
-extern "C" void getBaseHorseAnime__9daAlink_cFPQ29daAlink_c11daAlink_ANM(); // 1
-extern "C" void checkHorseSpecialProc__9daAlink_cFv(); // 1
-extern "C" void checkHorseServiceWaitAnime__9daAlink_cFv(); // 1
-extern "C" void setSyncHorse__9daAlink_cFi(); // 1
-extern "C" void setSyncBoar__9daAlink_cFi(); // 1
-extern "C" void setSyncRide__9daAlink_cFi(); // 1
-extern "C" void setBaseHorseAnimeFrame__9daAlink_cFv(); // 1
-extern "C" void setBaseBoarAnime__9daAlink_cFv(); // 1
-extern "C" void setBaseRideAnime__9daAlink_cFv(); // 1
-extern "C" void checkHorseSwordUpSpped__9daAlink_cFv(); // 1
-extern "C" void setHorseSwordUp__9daAlink_cFi(); // 1
-extern "C" void setRideSubjectAngle__9daAlink_cFs(); // 1
-extern "C" void setBodyAngleRideReadyAnime__9daAlink_cFv(); // 1
-extern "C" void checkHorseGetOffWallCheck__9daAlink_cFP4cXyzP4cXyzs(); // 1
-extern "C" void checkHorseGetOffDirection__9daAlink_cFv(); // 1
-extern "C" void boarForceGetOff__9daAlink_cFv(); // 1
-extern "C" void horseGetOffEnd__9daAlink_cFv(); // 1
-extern "C" void checkNextActionHorse__9daAlink_cFv(); // 1
-extern "C" void checkHorseGetOff__9daAlink_cFv(); // 1
-extern "C" void checkHorseGetOffAndSetDoStatus__9daAlink_cFv(); // 1
-extern "C" void setHorseGetOff__9daAlink_cFi(); // 1
-extern "C" void procHorseRideInit__9daAlink_cFv(); // 1
-extern "C" void procHorseRide__9daAlink_cFv(); // 1
-extern "C" void procHorseGetOffInit__9daAlink_cFi(); // 1
-extern "C" void procHorseGetOff__9daAlink_cFv(); // 1
-extern "C" void procHorseWaitInit__9daAlink_cFv(); // 1
-extern "C" void procHorseWait__9daAlink_cFv(); // 1
-extern "C" void procHorseTurnInit__9daAlink_cFv(); // 1
-extern "C" void procHorseTurn__9daAlink_cFv(); // 1
-extern "C" void procHorseJumpInit__9daAlink_cFv(); // 1
-extern "C" void procHorseJump__9daAlink_cFv(); // 1
-extern "C" void procHorseLandInit__9daAlink_cFv(); // 1
-extern "C" void procHorseLand__9daAlink_cFv(); // 1
-extern "C" void procHorseSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procHorseSubjectivity__9daAlink_cFv(); // 1
-extern "C" void procHorseCutInit__9daAlink_cFv(); // 1
-extern "C" void procHorseCut__9daAlink_cFv(); // 1
-extern "C" void procHorseCutChargeReadyInit__9daAlink_cFv(); // 1
-extern "C" void procHorseCutChargeReady__9daAlink_cFv(); // 1
-extern "C" void procHorseCutTurnInit__9daAlink_cFv(); // 1
-extern "C" void procHorseCutTurn__9daAlink_cFv(); // 1
-extern "C" void procHorseDamageInit__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void procHorseDamage__9daAlink_cFv(); // 1
-extern "C" void procHorseBowSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procHorseBowSubject__9daAlink_cFv(); // 1
-extern "C" void procHorseBowMoveInit__9daAlink_cFv(); // 1
-extern "C" void procHorseBowMove__9daAlink_cFv(); // 1
-extern "C" void procHorseGrabMoveInit__9daAlink_cFv(); // 1
-extern "C" void procHorseGrabMove__9daAlink_cFv(); // 1
-extern "C" void procHorseBoomerangSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procHorseBoomerangSubject__9daAlink_cFv(); // 1
-extern "C" void procHorseBoomerangMoveInit__9daAlink_cFv(); // 1
-extern "C" void procHorseBoomerangMove__9daAlink_cFv(); // 1
-extern "C" void procHorseHookshotSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procHorseHookshotSubject__9daAlink_cFv(); // 1
-extern "C" void procHorseHookshotMoveInit__9daAlink_cFv(); // 1
-extern "C" void procHorseHookshotMove__9daAlink_cFv(); // 1
-extern "C" void procHorseBottleDrinkInit__9daAlink_cFUs(); // 1
-extern "C" void procHorseBottleDrink__9daAlink_cFv(); // 1
-extern "C" void procHorseKandelaarPourInit__9daAlink_cFv(); // 1
-extern "C" void procHorseKandelaarPour__9daAlink_cFv(); // 1
-extern "C" void procHorseComebackInit__9daAlink_cFv(); // 1
-extern "C" void procHorseComeback__9daAlink_cFv(); // 1
-extern "C" void procHorseRunInit__9daAlink_cFv(); // 1
-extern "C" void procHorseRun__9daAlink_cFv(); // 1
-extern "C" void procHorseHangInit__9daAlink_cFP12dCcD_GObjInfi(); // 1
-extern "C" void procHorseHang__9daAlink_cFv(); // 1
-extern "C" void procHorseGetKeyInit__9daAlink_cFv(); // 1
-extern "C" void procHorseGetKey__9daAlink_cFv(); // 1
-extern "C" void procHorseLookDownInit__9daAlink_cFv(); // 1
-extern "C" void procHorseLookDown__9daAlink_cFv(); // 1
-extern "C" void procBoarRunInit__9daAlink_cFv(); // 1
-extern "C" void procBoarRun__9daAlink_cFv(); // 1
-extern "C" void getCanoeMaxSpeed__9daAlink_cCFv(); // 1
-extern "C" void getCanoeBackMaxSpeed__9daAlink_cCFv(); // 1
-extern "C" void getCanoeCres__9daAlink_cCFv(); // 1
-extern "C" void getCanoeSpeedRate__9daAlink_cCFv(); // 1
-extern "C" void getCanoeMaxRotSpeed__9daAlink_cCFv(); // 1
-extern "C" void getCanoeLocalPaddleTop__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchCanoe__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkCanoeRideTandem__9daAlink_cFv(); // 1
-extern "C" void checkFishingRodAndLureItem__9daAlink_cCFv(); // 1
-extern "C" void initFishingRodHand__9daAlink_cFv(); // 1
-extern "C" void getCanoePaddleMatrix__9daAlink_cFv(); // 1
-extern "C" void checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c(); // 1
-extern "C" void checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c(); // 1
-extern "C" void checkCanoeFishingRodGrabOrPut__9daAlink_cCFv(); // 1
-extern "C" void initCanoeRide__9daAlink_cFv(); // 1
-extern "C" void checkCanoeJumpRide__9daAlink_cFv(); // 1
-extern "C" void setArmReelAnime__9daAlink_cFv(); // 1
-extern "C" void setFishingWaitAction__9daAlink_cFv(); // 1
-extern "C" void setFishGetFace__9daAlink_cFv(); // 1
-extern "C" void setRideCanoeBasePos__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setSyncCanoePos__9daAlink_cFv(); // 1
-extern "C" void canoeCommon__9daAlink_cFv(); // 1
-extern "C" void checkNextActionCanoe__9daAlink_cFv(); // 1
-extern "C" void procCanoeRideInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeRide__9daAlink_cFv(); // 1
-extern "C" void procCanoeJumpRideInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procCanoeJumpRide__9daAlink_cFv(); // 1
-extern "C" void procCanoeGetOffInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeGetOff__9daAlink_cFv(); // 1
-extern "C" void procCanoeWaitInit__9daAlink_cFi(); // 1
-extern "C" void procCanoeWait__9daAlink_cFv(); // 1
-extern "C" void procCanoeRowInit__9daAlink_cFi(); // 1
-extern "C" void procCanoeRow__9daAlink_cFv(); // 1
-extern "C" void procCanoePaddleShiftInit__9daAlink_cFi(); // 1
-extern "C" void procCanoePaddleShift__9daAlink_cFv(); // 1
-extern "C" void procCanoePaddlePutInit__9daAlink_cFi(); // 1
-extern "C" void procCanoePaddlePut__9daAlink_cFv(); // 1
-extern "C" void procCanoePaddleGrabInit__9daAlink_cFv(); // 1
-extern "C" void procCanoePaddleGrab__9daAlink_cFv(); // 1
-extern "C" void procCanoeRodGrabInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeRodGrab__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingWait__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingReelInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingReel__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingGetInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeFishingGet__9daAlink_cFv(); // 1
-extern "C" void procCanoeSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeSubjectivity__9daAlink_cFv(); // 1
-extern "C" void procCanoeBowSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeBowSubject__9daAlink_cFv(); // 1
-extern "C" void procCanoeBowMoveInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeBowMove__9daAlink_cFv(); // 1
-extern "C" void procCanoeGrabMoveInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeGrabMove__9daAlink_cFv(); // 1
-extern "C" void procCanoeBoomerangSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeBoomerangSubject__9daAlink_cFv(); // 1
-extern "C" void procCanoeBoomerangMoveInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeBoomerangMove__9daAlink_cFv(); // 1
-extern "C" void procCanoeHookshotSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeHookshotSubject__9daAlink_cFv(); // 1
-extern "C" void procCanoeHookshotMoveInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeHookshotMove__9daAlink_cFv(); // 1
-extern "C" void procCanoeBottleDrinkInit__9daAlink_cFUs(); // 1
-extern "C" void procCanoeBottleDrink__9daAlink_cFv(); // 1
-extern "C" void procCanoeKandelaarPourInit__9daAlink_cFv(); // 1
-extern "C" void procCanoeKandelaarPour__9daAlink_cFv(); // 1
-extern "C" void setGroundFishingRodActor__9daAlink_cFv(); // 1
-extern "C" void procFishingCastInit__9daAlink_cFv(); // 1
-extern "C" void procFishingCast__9daAlink_cFv(); // 1
-extern "C" void procFishingFoodInit__9daAlink_cFv(); // 1
-extern "C" void procFishingFood__9daAlink_cFv(); // 1
-extern "C" void getCrawlMoveAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void getCrawlMoveSpeed__9daAlink_cFv(); // 1
-extern "C" void setCrawlMoveDirectionArrow__9daAlink_cFv(); // 1
-extern "C" void changeCrawlAutoMoveProc__9daAlink_cFP4cXyz(); // 1
-extern "C" void getCrawlMoveVec__9daAlink_cFP4cXyzP4cXyzP4cXyziiPUc(); // 1
-extern "C" void crawlBgCheck__9daAlink_cFP4cXyzP4cXyzi(); // 1
-extern "C" void checkCrawlSideWall__9daAlink_cFP4cXyzP4cXyzP4cXyzP4cXyzPsPs(); // 1
-extern "C" void decideCrawlDoStatus__9daAlink_cFv(); // 1
-extern "C" void checkNotCrawlStand__9daAlink_cFP4cXyz(); // 1
-extern "C" void checkNotCrawlStand__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void checkCrawlInHoll__9daAlink_cFP4cXyzP4cXyzP4cXyzi(); // 1
-extern "C" void setCrawlMoveHoll__9daAlink_cFv(); // 1
-extern "C" void setCrawlMoveAngle__9daAlink_cFv(); // 1
-extern "C" void stopHalfMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setCrawlAutoMoveAimPos__9daAlink_cFv(); // 1
-extern "C" void procCrawlStartInit__9daAlink_cFv(); // 1
-extern "C" void procCrawlStart__9daAlink_cFv(); // 1
-extern "C" void procCrawlMoveInit__9daAlink_cFss(); // 1
-extern "C" void procCrawlMove__9daAlink_cFv(); // 1
-extern "C" void procCrawlAutoMoveInit__9daAlink_cFiP4cXyz(); // 1
-extern "C" void procCrawlAutoMove__9daAlink_cFv(); // 1
-extern "C" void procCrawlEndInit__9daAlink_cFiss(); // 1
-extern "C" void procCrawlEnd__9daAlink_cFv(); // 1
-extern "C" void getHangMoveAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void getHangDirectionFromAngle__9daAlink_cFv(); // 1
-extern "C" void hangMoveBgCheck__9daAlink_cFsP4cXyz(); // 1
-extern "C" void changeHangMoveProc__9daAlink_cFi(); // 1
-extern "C" void checkHangFootWall__9daAlink_cFv(); // 1
-extern "C" void setHangGroundY__9daAlink_cFv(); // 1
-extern "C" void changeHangEndProc__9daAlink_cFv(); // 1
-extern "C" void checkHangStartSideWall__9daAlink_cFs(); // 1
-extern "C" void procHangStartInit__9daAlink_cFv(); // 1
-extern "C" void procHangStart__9daAlink_cFv(); // 1
-extern "C" void procHangFallStartInit__9daAlink_cFP8cM3dGPla(); // 1
-extern "C" void procHangFallStart__9daAlink_cFv(); // 1
-extern "C" void procHangUpInit__9daAlink_cFi(); // 1
-extern "C" void procHangUp__9daAlink_cFv(); // 1
-extern "C" void procHangWaitInit__9daAlink_cFv(); // 1
-extern "C" void procHangWait__9daAlink_cFv(); // 1
-extern "C" void procHangMoveInit__9daAlink_cFi(); // 1
-extern "C" void procHangMove__9daAlink_cFv(); // 1
-extern "C" void procHangClimbInit__9daAlink_cFf(); // 1
-extern "C" void procHangClimb__9daAlink_cFv(); // 1
-extern "C" void procHangWallCatchInit__9daAlink_cFv(); // 1
-extern "C" void procHangWallCatch__9daAlink_cFv(); // 1
-extern "C" void procHangReadyInit__9daAlink_cFv(); // 1
-extern "C" void procHangReady__9daAlink_cFv(); // 1
-extern "C" void procHangLeverDownInit__9daAlink_cFv(); // 1
-extern "C" void procHangLeverDown__9daAlink_cFv(); // 1
-extern "C" void changeDragonActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setDragonHangPos__9daAlink_cFv(); // 1
-extern "C" void setOctaIealHangPos__9daAlink_cFv(); // 1
-extern "C" void setBossBodyHangPos__9daAlink_cFv(); // 1
-extern "C" void procBossBodyHangInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procBossBodyHang__9daAlink_cFv(); // 1
-extern "C" void getLadderUnitCount__9daAlink_cCFv(); // 1
-extern "C" void setLadderInit__9daAlink_cFv(); // 1
-extern "C" void setLadderPosInit__9daAlink_cFv(); // 1
-extern "C" void setLadderPos__9daAlink_cFi(); // 1
-extern "C" void getLadderMoveAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void changeLadderMoveProc__9daAlink_cFi(); // 1
-extern "C" void setMoveBGLadderCorrect__9daAlink_cFv(); // 1
-extern "C" void checkLadderFall__9daAlink_cFv(); // 1
-extern "C" void procLadderUpStartInit__9daAlink_cFv(); // 1
-extern "C" void procLadderUpStart__9daAlink_cFv(); // 1
-extern "C" void procLadderUpEndInit__9daAlink_cFi(); // 1
-extern "C" void procLadderUpEnd__9daAlink_cFv(); // 1
-extern "C" void procLadderDownStartInit__9daAlink_cFv(); // 1
-extern "C" void procLadderDownStart__9daAlink_cFv(); // 1
-extern "C" void procLadderDownEndInit__9daAlink_cFi(); // 1
-extern "C" void procLadderDownEnd__9daAlink_cFv(); // 1
-extern "C" void procLadderMoveInit__9daAlink_cFiiP4cXyz(); // 1
-extern "C" void procLadderMove__9daAlink_cFv(); // 1
-extern "C" void getClimbMoveUpDownAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void getClimbMoveSideAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void checkClimbCode__9daAlink_cFR13cBgS_PolyInfo(); // 1
-extern "C" void setClimbInit__9daAlink_cFv(); // 1
-extern "C" void setClimbShapeOffset__9daAlink_cFv(); // 1
-extern "C" void getClimbDirectionFromAngle__9daAlink_cFv(); // 1
-extern "C" void changeClimbMoveProc__9daAlink_cFi(); // 1
-extern "C" void checkClimbMoveUpDownProc__9daAlink_cFi(); // 1
-extern "C" void checkClimbMoveSideProc__9daAlink_cFi(); // 1
-extern "C" void setMoveBGClimbCorrect__9daAlink_cFv(); // 1
-extern "C" void checkBgCorrectClimbMove__9daAlink_cFP4cXyzP4cXyz(); // 1
-extern "C" void checkClimbRoof__9daAlink_cFf(); // 1
-extern "C" void checkClimbGround__9daAlink_cFP4cXyzf(); // 1
-extern "C" void checkBgClimbMove__9daAlink_cFi(); // 1
-extern "C" void setClimbStartNotGround__9daAlink_cFv(); // 1
-extern "C" void procClimbUpStartInit__9daAlink_cFi(); // 1
-extern "C" void procClimbUpStart__9daAlink_cFv(); // 1
-extern "C" void procClimbDownStartInit__9daAlink_cFs(); // 1
-extern "C" void procClimbDownStart__9daAlink_cFv(); // 1
-extern "C" void procClimbMoveUpDownInit__9daAlink_cFi(); // 1
-extern "C" void procClimbMoveUpDown__9daAlink_cFv(); // 1
-extern "C" void procClimbMoveSideInit__9daAlink_cFv(); // 1
-extern "C" void procClimbMoveSide__9daAlink_cFv(); // 1
-extern "C" void procClimbWaitInit__9daAlink_cFii(); // 1
-extern "C" void procClimbWait__9daAlink_cFv(); // 1
-extern "C" void procClimbToRoofInit__9daAlink_cFv(); // 1
-extern "C" void procClimbToRoof__9daAlink_cFv(); // 1
-extern "C" void getRoofHangFMoveAnmSpeed__9daAlink_cCFv(); // 1
-extern "C" void getRoofHangSMoveAnmSpeed__9daAlink_cCFv(); // 1
-extern "C" void setRoofHangHandOnSE__9daAlink_cFP13cBgS_PolyInfo(); // 1
-extern "C" void checkRoofHangMovePos__9daAlink_cFv(); // 1
-extern "C" void commonRoofHangProc__9daAlink_cFv(); // 1
-extern "C" void checkNextActionRoofHang__9daAlink_cFv(); // 1
-extern "C" void procRoofHangStartInit__9daAlink_cFRC13cBgS_PolyInfoRC4cXyzi(); // 1
-extern "C" void procRoofHangStart__9daAlink_cFv(); // 1
-extern "C" void procRoofHangWaitInit__9daAlink_cFi(); // 1
-extern "C" void procRoofHangWait__9daAlink_cFv(); // 1
-extern "C" void procRoofHangFrontMoveInit__9daAlink_cFv(); // 1
-extern "C" void procRoofHangFrontMove__9daAlink_cFv(); // 1
-extern "C" void procRoofHangSideMoveInit__9daAlink_cFv(); // 1
-extern "C" void procRoofHangSideMove__9daAlink_cFv(); // 1
-extern "C" void procRoofHangTurnInit__9daAlink_cFv(); // 1
-extern "C" void procRoofHangTurn__9daAlink_cFv(); // 1
-extern "C" void setRoofHangSwitch__9daAlink_cFv(); // 1
-extern "C" void procRoofSwitchHangInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procRoofSwitchHang__9daAlink_cFv(); // 1
-extern "C" void getHangPos__13daObjSwHang_cFv(); // 1
-extern "C" void checkZoraWearMaskDraw__9daAlink_cFv(); // 1
-extern "C" void checkAcceptUseItemInWater__9daAlink_cCFUs(); // 1
-extern "C" void swimDeleteItem__9daAlink_cFv(); // 1
-extern "C" void getZoraSwim__9daAlink_cCFv(); // 1
-extern "C" void getSwimFrontMaxSpeed__9daAlink_cCFv(); // 1
-extern "C" void getSwimMaxFallSpeed__9daAlink_cCFv(); // 1
-extern "C" void checkOxygenTimer__9daAlink_cFv(); // 1
-extern "C" void offOxygenTimer__9daAlink_cFv(); // 1
-extern "C" void checkPossibleWaterInMode__9daAlink_cCFv(); // 1
-extern "C" void setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf(); // 1
-extern "C" void swimBgCheck__9daAlink_cFf(); // 1
-extern "C" void setSpeedAndAngleSwim__9daAlink_cFv(); // 1
-extern "C" void checkNextActionSwim__9daAlink_cFv(); // 1
-extern "C" void checkSwimAction__9daAlink_cFi(); // 1
-extern "C" void checkSwimUpAction__9daAlink_cFv(); // 1
-extern "C" void swimOutAfter__9daAlink_cFi(); // 1
-extern "C" void checkSwimFall__9daAlink_cFv(); // 1
-extern "C" void checkSwimOutAction__9daAlink_cFv(); // 1
-extern "C" void setSwimMoveAnime__9daAlink_cFv(); // 1
-extern "C" void checkSwimButtonAccept__9daAlink_cFv(); // 1
-extern "C" void checkUpSwimButtonAccept__9daAlink_cFv(); // 1
-extern "C" void checkSwimButtonMove__9daAlink_cFv(); // 1
-extern "C" void checkZoraSwimMove__9daAlink_cFv(); // 1
-extern "C" void checkSwimNeckUpDown__9daAlink_cCFv(); // 1
-extern "C" void setSwimUpDownOffset__9daAlink_cFv(); // 1
-extern "C" void procSwimUpInit__9daAlink_cFv(); // 1
-extern "C" void procSwimUp__9daAlink_cFv(); // 1
-extern "C" void procSwimWaitInit__9daAlink_cFi(); // 1
-extern "C" void procSwimWait__9daAlink_cFv(); // 1
-extern "C" void procSwimMoveInit__9daAlink_cFv(); // 1
-extern "C" void procSwimMove__9daAlink_cFv(); // 1
-extern "C" void procSwimDiveInit__9daAlink_cFv(); // 1
-extern "C" void procSwimDive__9daAlink_cFv(); // 1
-extern "C" void procSwimHookshotSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procSwimHookshotSubject__9daAlink_cFv(); // 1
-extern "C" void procSwimHookshotMoveInit__9daAlink_cFv(); // 1
-extern "C" void procSwimHookshotMove__9daAlink_cFv(); // 1
-extern "C" void procSwimDamageInit__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void procSwimDamage__9daAlink_cFv(); // 1
-extern "C" void procOctaIealSpitInit__9daAlink_cFv(); // 1
-extern "C" void procOctaIealSpit__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchIceLeaf__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkSnowCode__9daAlink_cCFv(); // 1
-extern "C" void checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo(); // 1
-extern "C" void checkBoardRestart__9daAlink_cFv(); // 1
-extern "C" void boardCommon__9daAlink_cFi(); // 1
-extern "C" void setCommonBoardAnime__9daAlink_cFi(); // 1
-extern "C" void checkNextActionBoard__9daAlink_cFv(); // 1
-extern "C" void checkBoardSwordTriggerAction__9daAlink_cFv(); // 1
-extern "C" void commonProcBoardInit__9daAlink_cFQ29daAlink_c12daAlink_PROC(); // 1
-extern "C" void getBoardRowAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void setBoardLandAnime__9daAlink_cFv(); // 1
-extern "C" void procBoardRideInit__9daAlink_cFv(); // 1
-extern "C" void procBoardRide__9daAlink_cFv(); // 1
-extern "C" void procBoardWaitInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procBoardWait__9daAlink_cFv(); // 1
-extern "C" void procBoardRowInit__9daAlink_cFv(); // 1
-extern "C" void procBoardRow__9daAlink_cFv(); // 1
-extern "C" void procBoardTurnInit__9daAlink_cFv(); // 1
-extern "C" void procBoardTurn__9daAlink_cFv(); // 1
-extern "C" void procBoardJumpInit__9daAlink_cFfi(); // 1
-extern "C" void procBoardJump__9daAlink_cFv(); // 1
-extern "C" void procBoardSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procBoardSubjectivity__9daAlink_cFv(); // 1
-extern "C" void procBoardCutInit__9daAlink_cFv(); // 1
-extern "C" void procBoardCut__9daAlink_cFv(); // 1
-extern "C" void procBoardCutTurnInit__9daAlink_cFv(); // 1
-extern "C" void procBoardCutTurn__9daAlink_cFv(); // 1
-extern "C" void draw__Q29daAlink_c14hsChainShape_cFv(); // 1
-extern "C" void hookshotAtHitCallBack__9daAlink_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" static void daAlink_hookshotAtHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf(); // 1
-extern "C" void getHookshotTopPos__9daAlink_cFv(); // 1
-extern "C" void checkHookshotReturnMode__9daAlink_cCFv(); // 1
-extern "C" void checkHookshotShootReturnMode__9daAlink_cCFv(); // 1
-extern "C" void resetHookshotMode__9daAlink_cFv(); // 1
-extern "C" void setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void checkLv7BossRoom__9daAlink_cFv(); // 1
-extern "C" void checkHookshotStickBG__9daAlink_cFR13cBgS_PolyInfo(); // 1
-extern "C" void cancelHookshotCarry__9daAlink_cFv(); // 1
-extern "C" void changeHookshotDrawModel__9daAlink_cFv(); // 1
-extern "C" void checkHookshotRoofLv7Boss__9daAlink_cFv(); // 1
-extern "C" void checkChaseHookshot__9daAlink_cFv(); // 1
-extern "C" void checkOctaIealSpecialCollect__9daAlink_cFv(); // 1
-extern "C" void checkBossOctaIealRoom__9daAlink_cFv(); // 1
-extern "C" void checkHookshotWait__9daAlink_cCFv(); // 1
-extern "C" void setHookshotCatchNow__9daAlink_cFv(); // 1
-extern "C" void setHookshotCarryOffset__9daAlink_cFUiPC4cXyz(); // 1
-extern "C" void setHookshotModel__9daAlink_cFv(); // 1
-extern "C" void setHookshotSight__9daAlink_cFv(); // 1
-extern "C" void cancelHookshotShot__9daAlink_cFv(); // 1
-extern "C" void cancelHookshotMove__9daAlink_cFv(); // 1
-extern "C" void checkHookshotReadyMaterialOffMode__9daAlink_cCFv(); // 1
-extern "C" void setHookshotReadyMaterial__9daAlink_cFv(); // 1
-extern "C" void initHookshotUpperAnimeSpeed__9daAlink_cFi(); // 1
-extern "C" void initHookshotReady__9daAlink_cFv(); // 1
-extern "C" void setHookshotReadyAnime__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionHookshot__9daAlink_cFv(); // 1
-extern "C" void checkNextActionHookshot__9daAlink_cFv(); // 1
-extern "C" void setHookshotReturnEnd__9daAlink_cFv(); // 1
-extern "C" void setHookshotHangMoveBGCollect__9daAlink_cFv(); // 1
-extern "C" void setHookshotTopPosFly__9daAlink_cFv(); // 1
-extern "C" void setHookshotPos__9daAlink_cFv(); // 1
-extern "C" void setHookshotRoofWaitAnime__9daAlink_cFv(); // 1
-extern "C" void setHookshotWallWaitAnime__9daAlink_cFv(); // 1
-extern "C" void hookshotRoofTurn__9daAlink_cFv(); // 1
-extern "C" void initHookshotRoofWaitActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void checkNextHookPoint__9daAlink_cFv(); // 1
-extern "C" void checkLandHookshotHang__9daAlink_cFv(); // 1
-extern "C" void commonHookshotRoofWait__9daAlink_cFv(); // 1
-extern "C" void commonHookshotWallWait__9daAlink_cFv(); // 1
-extern "C" void procHookshotSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procHookshotSubject__9daAlink_cFv(); // 1
-extern "C" void procHookshotMoveInit__9daAlink_cFv(); // 1
-extern "C" void procHookshotMove__9daAlink_cFv(); // 1
-extern "C" void procHookshotFlyInit__9daAlink_cFv(); // 1
-extern "C" void procHookshotFly__9daAlink_cFv(); // 1
-extern "C" void procHookshotRoofWaitInit__9daAlink_cFiP10fopAc_ac_ci(); // 1
-extern "C" void procHookshotRoofWait__9daAlink_cFv(); // 1
-extern "C" void procHookshotRoofShootInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procHookshotRoofShoot__9daAlink_cFv(); // 1
-extern "C" void procHookshotRoofBootsInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procHookshotRoofBoots__9daAlink_cFv(); // 1
-extern "C" void procHookshotWallWaitInit__9daAlink_cFisi(); // 1
-extern "C" void procHookshotWallWait__9daAlink_cFv(); // 1
-extern "C" void procHookshotWallShootInit__9daAlink_cFv(); // 1
-extern "C" void procHookshotWallShoot__9daAlink_cFv(); // 1
-extern "C" void getSpinnerGravity__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerMaxFallSpeed__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerJumpRate__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideMoveTime__9daAlink_cFv(); // 1
-extern "C" void getSpinnerRideSpeedF__9daAlink_cFv(); // 1
-extern "C" void getSpinnerRideDecSpeedMax__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideDecSpeedMin__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideDecSpeedRate__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideRotAngleMax__9daAlink_cCFv(); // 1
-extern "C" void getSpinnerRideRotAngleMin__9daAlink_cCFv(); // 1
-extern "C" void onSpinnerPathForceRemove__9daAlink_cFv(); // 1
-extern "C" void checkSpinnerPathMove__9daAlink_cFv(); // 1
-extern "C" void checkLv4BossRoom__9daAlink_cFv(); // 1
-extern "C" void checkSpinnerTriggerAttack__9daAlink_cFv(); // 1
-extern "C" void setSpinnerSyncPos__9daAlink_cFv(); // 1
-extern "C" void procSpinnerReadyInit__9daAlink_cFv(); // 1
-extern "C" void procSpinnerReady__9daAlink_cFv(); // 1
-extern "C" void setSpinnerStatus__9daAlink_cFUcUc(); // 1
-extern "C" void procSpinnerWaitInit__9daAlink_cFv(); // 1
-extern "C" void procSpinnerWait__9daAlink_cFv(); // 1
-extern "C" void bottleModelCallBack__9daAlink_cFv(); // 1
-extern "C" static void daAlink_bottleModelCallBack__FP8J3DJointi(); // 1
-extern "C" void getBottleOpenAppearItem__9daAlink_cCFv(); // 1
-extern "C" void checkOilBottleItemNotGet__9daAlink_cFUs(); // 1
-extern "C" void setBottleModel__9daAlink_cFUs(); // 1
-extern "C" void commonBottleDrink__9daAlink_cFi(); // 1
-extern "C" void makeFairy__9daAlink_cFP4cXyzUl(); // 1
-extern "C" void procBottleDrinkInit__9daAlink_cFUs(); // 1
-extern "C" void procBottleDrink__9daAlink_cFv(); // 1
-extern "C" void procBottleOpenInit__9daAlink_cFUs(); // 1
-extern "C" void procBottleOpen__9daAlink_cFv(); // 1
-extern "C" void procBottleSwingInit__9daAlink_cFP10fopAc_ac_ci(); // 1
-extern "C" void procBottleSwing__9daAlink_cFv(); // 1
-extern "C" void procBottleGetInit__9daAlink_cFi(); // 1
-extern "C" void procBottleGet__9daAlink_cFv(); // 1
-extern "C" void Insect_Release__9dInsect_cFv(); // 1
-extern "C" static void daAlink_searchTagKandelaar__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchTagKtOnFire__FP10fopAc_ac_cPv(); // 1
-extern "C" void setKandelaarMtx__9daAlink_cFPA4_fii(); // 1
-extern "C" void checkWaterInKandelaarOffset__9daAlink_cFf(); // 1
-extern "C" void checkWaterInKandelaar__9daAlink_cFf(); // 1
-extern "C" void offKandelaarModel__9daAlink_cFv(); // 1
-extern "C" void checkUseKandelaar__9daAlink_cFi(); // 1
-extern "C" void checkKandelaarSwing__9daAlink_cCFi(); // 1
-extern "C" void kandelaarModelCallBack__9daAlink_cFv(); // 1
-extern "C" static void daAlink_kandelaarModelCallBack__FP8J3DJointi(); // 1
-extern "C" void getKandelaarFlamePos__9daAlink_cFv(); // 1
-extern "C" void checkKandelaarEquipAnime__9daAlink_cCFv(); // 1
-extern "C" void preKandelaarDraw__9daAlink_cFv(); // 1
-extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10(); // 1
-extern "C" void setKandelaarModel__9daAlink_cFv(); // 1
-extern "C" void resetOilBottleModel__9daAlink_cFv(); // 1
-extern "C" void commonKandelaarPourInit__9daAlink_cFv(); // 1
-extern "C" void commonKandelaarPour__9daAlink_cFi(); // 1
-extern "C" void initKandelaarSwing__9daAlink_cFv(); // 1
-extern "C" void procKandelaarSwingInit__9daAlink_cFv(); // 1
-extern "C" void procKandelaarSwing__9daAlink_cFv(); // 1
-extern "C" void procKandelaarPourInit__9daAlink_cFv(); // 1
-extern "C" void procKandelaarPour__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchWhistle__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchHawk__FP10fopAc_ac_cPv(); // 1
-extern "C" void setGrassWhistleModel__9daAlink_cFi(); // 1
-extern "C" void setHorseWhistleModel__9daAlink_cFv(); // 1
-extern "C" void procGrassWhistleGetInit__9daAlink_cFv(); // 1
-extern "C" void procGrassWhistleGet__9daAlink_cFv(); // 1
-extern "C" void procGrassWhistleWaitInit__9daAlink_cFiiisP4cXyz(); // 1
-extern "C" void procGrassWhistleWait__9daAlink_cFv(); // 1
-extern "C" void procCoHorseCallWaitInit__9daAlink_cFi(); // 1
-extern "C" void procCoHorseCallWait__9daAlink_cFv(); // 1
-extern "C" void procHawkCatchInit__9daAlink_cFv(); // 1
-extern "C" void procHawkCatch__9daAlink_cFv(); // 1
-extern "C" void procHawkSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procHawkSubject__9daAlink_cFv(); // 1
-extern "C" void getIronBallCenterPos__9daAlink_cFv(); // 1
-extern "C" void getIronBallBgHit__9daAlink_cCFv(); // 1
-extern "C" void checkIronBallThrowMode__9daAlink_cCFv(); // 1
-extern "C" void checkIronBallThrowReturnMode__9daAlink_cCFv(); // 1
-extern "C" void checkIronBallReturn__9daAlink_cCFv(); // 1
-extern "C" void checkIronBallGroundStop__9daAlink_cCFv(); // 1
-extern "C" void setIronBallWaitUpperAnime__9daAlink_cFi(); // 1
-extern "C" void checkIronBallDelete__9daAlink_cFv(); // 1
-extern "C" void setIronBallReturn__9daAlink_cFi(); // 1
-extern "C" void setIronBallBgCheckPos__9daAlink_cFv(); // 1
-extern "C" void setIronBallModel__9daAlink_cFv(); // 1
-extern "C" void __ct__5csXyzFv(); // 1
-extern "C" void setIronBallGroundVec__9daAlink_cFPC4cXyzP4cXyz(); // 1
-extern "C" void setIronBallChainPos__9daAlink_cFv(); // 1
-extern "C" void checkIronBallReturnChange__9daAlink_cFv(); // 1
-extern "C" void setIronBallPos__9daAlink_cFv(); // 1
-extern "C" void checkIronBallAnime__9daAlink_cCFv(); // 1
-extern "C" void setIronBallReadyAnime__9daAlink_cFv(); // 1
-extern "C" void setIronBallBaseAnime__9daAlink_cFv(); // 1
-extern "C" void checkUpperItemActionIronBall__9daAlink_cFv(); // 1
-extern "C" void checkNextActionIronBall__9daAlink_cFv(); // 1
-extern "C" void procIronBallSubjectInit__9daAlink_cFv(); // 1
-extern "C" void procIronBallSubject__9daAlink_cFv(); // 1
-extern "C" void procIronBallMoveInit__9daAlink_cFv(); // 1
-extern "C" void procIronBallMove__9daAlink_cFv(); // 1
-extern "C" void procIronBallThrowInit__9daAlink_cFv(); // 1
-extern "C" void procIronBallThrow__9daAlink_cFv(); // 1
-extern "C" void procIronBallReturnInit__9daAlink_cFv(); // 1
-extern "C" void procIronBallReturn__9daAlink_cFv(); // 1
-extern "C" void checkEventRun__9daAlink_cCFv(); // 1
-extern "C" void createNpcTks__9daAlink_cFP4cXyziUl(); // 1
-extern "C" void checkSetNpcTks__9daAlink_cFP4cXyzii(); // 1
-extern "C" void checkDemoAction__9daAlink_cFv(); // 1
-extern "C" void checkDemoMoveMode__9daAlink_cCFUl(); // 1
-extern "C" void setDemoMoveData__9daAlink_cFPUlPC4cXyz(); // 1
-extern "C" void setNoDrawSwordShield__9daAlink_cFiUs(); // 1
-extern "C" void setDemoData__9daAlink_cFv(); // 1
-extern "C" void resetDemoBck__9daAlink_cFv(); // 1
-extern "C" void endHighModel__9daAlink_cFv(); // 1
-extern "C" void resetSpecialEvent__9daAlink_cFv(); // 1
-extern "C" void endDemoMode__9daAlink_cFv(); // 1
-extern "C" void getDemoLookActor__9daAlink_cFv(); // 1
-extern "C" void checkFlyAtnWait__9daAlink_cFv(); // 1
-extern "C" void setGetItemFace__9daAlink_cFUs(); // 1
-extern "C" void checkGrabTalkActor__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void setTalkStartBack__9daAlink_cFP4cXyz(); // 1
-extern "C" void setShapeAngleToTalkActor__9daAlink_cFv(); // 1
-extern "C" void setTalkAnime__9daAlink_cFv(); // 1
-extern "C" void setTradeItemAnime__9daAlink_cFv(); // 1
-extern "C" void setTradeItemOutHand__9daAlink_cFv(); // 1
-extern "C" void checkEndMessage__9daAlink_cFUl(); // 1
-extern "C" void setDemoRightHandIndex__9daAlink_cFUs(); // 1
-extern "C" void setDemoLeftHandIndex__9daAlink_cFUs(); // 1
-extern "C" void setDemoRide__9daAlink_cFUs(); // 1
-extern "C" void setDemoBodyBck__9daAlink_cFP13dDemo_actor_cUs(); // 1
-extern "C" void checkFinalBattle__9daAlink_cFv(); // 1
-extern "C" void checkRestartDead__9daAlink_cFii(); // 1
-extern "C" void setDeadRideSyncPos__9daAlink_cFv(); // 1
-extern "C" void checkDeadHP__9daAlink_cFv(); // 1
-extern "C" void checkDeadAction__9daAlink_cFi(); // 1
-extern "C" void setHighModelBck__9daAlink_cFP13mDoExt_bckAnmUs(); // 1
-extern "C" void setHighModelFaceBtk__9daAlink_cFUs(); // 1
-extern "C" void setDemoBrk__9daAlink_cFPP15J3DAnmTevRegKeyP8J3DModelUs(); // 1
-extern "C" void setStickAnmData__9daAlink_cFP10J3DAnmBaseiiUsi(); // 1
-extern "C" static void daAlink_c_getDemoIDData__FP13dDemo_actor_cPiPiPiPUsPiPi(); // 1
-extern "C" void procDemoCommon__9daAlink_cFv(); // 1
-extern "C" void procCoToolDemoInit__9daAlink_cFv(); // 1
-extern "C" void procCoToolDemo__9daAlink_cFv(); // 1
-extern "C" void procCoTalkInit__9daAlink_cFv(); // 1
-extern "C" void procCoTalk__9daAlink_cFv(); // 1
-extern "C" void procCoOpenTreasureInit__9daAlink_cFv(); // 1
-extern "C" void procCoOpenTreasure__9daAlink_cFv(); // 1
-extern "C" void procCoUnequipInit__9daAlink_cFv(); // 1
-extern "C" void procCoUnequip__9daAlink_cFv(); // 1
-extern "C" void setGetSubBgm__9daAlink_cFi(); // 1
-extern "C" void checkTreasureRupeeReturn__9daAlink_cCFi(); // 1
-extern "C" void procCoGetItemInit__9daAlink_cFv(); // 1
-extern "C" void procCoGetItem__9daAlink_cFv(); // 1
-extern "C" void procCoTurnBackInit__9daAlink_cFv(); // 1
-extern "C" void procCoTurnBack__9daAlink_cFv(); // 1
-extern "C" void procDoorOpenInit__9daAlink_cFv(); // 1
-extern "C" void procDoorOpen__9daAlink_cFv(); // 1
-extern "C" void procCoLookWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCoLookWait__9daAlink_cFv(); // 1
-extern "C" void procCoDemoPushPullWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCoDemoPushMoveInit__9daAlink_cFv(); // 1
-extern "C" void setMonkeyMoveAnime__9daAlink_cFv(); // 1
-extern "C" void procMonkeyMoveInit__9daAlink_cFv(); // 1
-extern "C" void procMonkeyMove__9daAlink_cFv(); // 1
-extern "C" void procDemoBoomerangCatchInit__9daAlink_cFv(); // 1
-extern "C" void procDemoBoomerangCatch__9daAlink_cFv(); // 1
-extern "C" void procCoDeadInit__9daAlink_cFi(); // 1
-extern "C" void procCoDead__9daAlink_cFv(); // 1
-extern "C" void procCoLookAroundInit__9daAlink_cFv(); // 1
-extern "C" void procCoLookAround__9daAlink_cFv(); // 1
-extern "C" void procBossAtnWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCoQuakeWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCoCaughtInit__9daAlink_cFv(); // 1
-extern "C" void procLookUpInit__9daAlink_cFv(); // 1
-extern "C" void procLookUp__9daAlink_cFv(); // 1
-extern "C" void procLookUpToGetItemInit__9daAlink_cFv(); // 1
-extern "C" void procLookUpToGetItem__9daAlink_cFv(); // 1
-extern "C" void procHandPatInit__9daAlink_cFv(); // 1
-extern "C" void procHandPat__9daAlink_cFv(); // 1
-extern "C" void procCoFogDeadInit__9daAlink_cFv(); // 1
-extern "C" void procCoFogDead__9daAlink_cFv(); // 1
-extern "C" void procWolfSmellWaitInit__9daAlink_cFv(); // 1
-extern "C" void procCoNodInit__9daAlink_cFv(); // 1
-extern "C" void procCoNod__9daAlink_cFv(); // 1
-extern "C" void procCoEyeAwayInit__9daAlink_cFv(); // 1
-extern "C" void procCoGlareInit__9daAlink_cFv(); // 1
-extern "C" void procCoGlare__9daAlink_cFv(); // 1
-extern "C" void procGoatStopReadyInit__9daAlink_cFv(); // 1
-extern "C" void procGoatStopReady__9daAlink_cFv(); // 1
-extern "C" void procCoGetReadySitInit__9daAlink_cFv(); // 1
-extern "C" void procCoGetReadySit__9daAlink_cFv(); // 1
-extern "C" void procCoTwGateInit__9daAlink_cFv(); // 1
-extern "C" void procCoTwGate__9daAlink_cFv(); // 1
-extern "C" void procWolfSnowEscapeInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSnowEscape__9daAlink_cFv(); // 1
-extern "C" void procZoraMoveInit__9daAlink_cFv(); // 1
-extern "C" void procZoraMove__9daAlink_cFv(); // 1
-extern "C" void procLookAroundTurnInit__9daAlink_cFv(); // 1
-extern "C" void procLookAroundTurn__9daAlink_cFv(); // 1
-extern "C" void procTradeItemOutInit__9daAlink_cFv(); // 1
-extern "C" void procTradeItemOut__9daAlink_cFv(); // 1
-extern "C" void checkLetterItem__9daAlink_cFi(); // 1
-extern "C" void procNotUseItemInit__9daAlink_cFi(); // 1
-extern "C" void procNotUseItem__9daAlink_cFv(); // 1
-extern "C" void procSwordReadyInit__9daAlink_cFv(); // 1
-extern "C" void procSwordReady__9daAlink_cFv(); // 1
-extern "C" void setSwordPushAnime__9daAlink_cFv(); // 1
-extern "C" void procSwordPushInit__9daAlink_cFv(); // 1
-extern "C" void procSwordPush__9daAlink_cFv(); // 1
-extern "C" void procGanonFinishInit__9daAlink_cFv(); // 1
-extern "C" void procGanonFinish__9daAlink_cFv(); // 1
-extern "C" void procCutFastReadyInit__9daAlink_cFv(); // 1
-extern "C" void procCutFastReady__9daAlink_cFv(); // 1
-extern "C" void procMasterSwordStickInit__9daAlink_cFv(); // 1
-extern "C" void procMasterSwordStick__9daAlink_cFv(); // 1
-extern "C" void procMasterSwordPullInit__9daAlink_cFv(); // 1
-extern "C" void procMasterSwordPull__9daAlink_cFv(); // 1
-extern "C" void checkLv7DungeonShop__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarpReadyInit__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarpReady__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarpInit__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarp__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarpSceneStartInit__9daAlink_cFv(); // 1
-extern "C" void procDungeonWarpSceneStart__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchPortal__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkAcceptWarp__9daAlink_cFv(); // 1
-extern "C" void dungeonReturnWarp__9daAlink_cFv(); // 1
-extern "C" void skipPortalObjWarp__9daAlink_cFv(); // 1
-extern "C" void checkWarpStart__9daAlink_cFv(); // 1
-extern "C" void warpModelTexScroll__9daAlink_cFv(); // 1
-extern "C" void procCoWarpInit__9daAlink_cFii(); // 1
-extern "C" void procCoWarp__9daAlink_cFv(); // 1
-extern "C" void commonWaitTurnInit__9daAlink_cFv(); // 1
-extern "C" void commonGrabPutInit__9daAlink_cFv(); // 1
-extern "C" void commonLargeDamageUpInit__9daAlink_cFiiss(); // 1
-extern "C" void commonFallInit__9daAlink_cFi(); // 1
-extern "C" void setEmitter__9daAlink_cFPUlUsPC4cXyzPC5csXyz(); // 1
-extern "C" void setEmitterPolyColor__9daAlink_cFPUlUsR13cBgS_PolyInfoPC4cXyzPC5csXyz(); // 1
-extern "C" void setEmitterColor__9daAlink_cFPUlUsPC4cXyzPC5csXyz(); // 1
-extern "C" void stopDrawParticle__9daAlink_cFUl(); // 1
-extern "C" void setEffectFrontRollParam__9daAlink_cFv(); // 1
-extern "C" void setEffectSlipParam__9daAlink_cFv(); // 1
-extern "C" void setEffectRunParam__9daAlink_cFv(); // 1
-extern "C" void setEffectSmallLandParam__9daAlink_cFv(); // 1
-extern "C" void setEffectLandParam__9daAlink_cFv(); // 1
-extern "C" void setEffectSumouParam__9daAlink_cFv(); // 1
-extern "C" void setFootEffectProcType__9daAlink_cFi(); // 1
-extern "C" void setWolfFootOn__9daAlink_cFi(); // 1
-extern "C" void setFootMark__9daAlink_cFP4cXyzUsi(); // 1
-extern "C" void setEffect__9daAlink_cFv(); // 1
-extern "C" void setSumouEffect__9daAlink_cFv(); // 1
-extern "C" void setWaterfallEffect__9daAlink_cFPC4cXyzPUl(); // 1
-extern "C" void setWaterfallEffect__9daAlink_cFv(); // 1
-extern "C" void setMagneBootsEffect__9daAlink_cFv(); // 1
-extern "C" void setSwordChargeEffect__9daAlink_cFv(); // 1
-extern "C" void setElecDamageEffect__9daAlink_cFv(); // 1
-extern "C" void clearCutTurnEffectID__9daAlink_cFv(); // 1
-extern "C" void setCutTurnEffect__9daAlink_cFv(); // 1
-extern "C" void setHorseCutTurnEffect__9daAlink_cFv(); // 1
-extern "C" void setCutLargeJumpLandEffect__9daAlink_cFv(); // 1
-extern "C" void setBootsLightEffect__9daAlink_cFv(); // 1
-extern "C" void setLightningSwordEffect__9daAlink_cFv(); // 1
-extern "C" void setWolfRollAttackEffect__9daAlink_cFv(); // 1
-extern "C" void setWolfDigEffect__9daAlink_cFv(); // 1
-extern "C" void setWolfSwimEndEffect__9daAlink_cFPP14JPABaseEmitterPP14JPABaseEmitter(); // 1
-extern "C" void setWolfLockAttackEffect__9daAlink_cFv(); // 1
-extern "C" void setWolfJumpAttackEffect__9daAlink_cFv(); // 1
-extern "C" void setWolfBarrierHitEffect__9daAlink_cFR11dBgS_LinChk(); // 1
-extern "C" void setCutWaterDropEffect__9daAlink_cFv(); // 1
-extern "C" void setWaterDropEffect__9daAlink_cFv(); // 1
-extern "C" void setSwordUpColorEffect__9daAlink_cFv(); // 1
-extern "C" void setSwordCutSplash__9daAlink_cFv(); // 1
-extern "C" void setMetamorphoseEffectStartLink__9daAlink_cFv(); // 1
-extern "C" void setMetamorphoseEffect__9daAlink_cFv(); // 1
-extern "C" void setRunSplash__9daAlink_cFv(); // 1
-extern "C" void execute__29dAlink_bottleWaterPcallBack_cFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void resetFairyEffect__9daAlink_cFv(); // 1
-extern "C" void setBottleEffect__9daAlink_cFv(); // 1
-extern "C" void clearFirePointDamageEffect__9daAlink_cFi(); // 1
-extern "C" void initFirePointDamageEffectAll__9daAlink_cFv(); // 1
-extern "C" void initFirePointDamageEffect__9daAlink_cFPC4cXyzP12dCcD_GObjInf(); // 1
-extern "C" void setFirePointDamageEffect__9daAlink_cFv(); // 1
-extern "C" void setFreezeEffect__9daAlink_cFv(); // 1
-extern "C" void setWoodShieldBurnEffect__9daAlink_cFv(); // 1
-extern "C" void clearWoodShieldBurnEffect__9daAlink_cFv(); // 1
-extern "C" void setWoodShieldBurnOutEffect__9daAlink_cFv(); // 1
-extern "C" void initBlur__14daAlink_blur_cFfiPC4cXyzPC4cXyzPC4cXyz(); // 1
-extern "C" static void setBezierPos__FPC4cXyzPC4cXyzPC4cXyzPC4cXyzfP4cXyz(); // 1
-extern "C" void copyBlur__14daAlink_blur_cFPC4cXyzPC4cXyzPC4cXyz(); // 1
-extern "C" void traceBlur__14daAlink_blur_cFPC4cXyzPC4cXyzs(); // 1
-extern "C" void draw__14daAlink_blur_cFv(); // 1
-extern "C" void create__20daAlink_lockCursor_cFv(); // 1
-extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey(); // 1
-extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor(); // 1
-extern "C" void update__20daAlink_lockCursor_cFv(); // 1
-extern "C" void draw__20daAlink_lockCursor_cFv(); // 1
-extern "C" void create__15daAlink_sight_cFv(); // 1
-extern "C" void draw__15daAlink_sight_cFv(); // 1
-extern "C" void onLockFlg__15daAlink_sight_cFv(); // 1
-extern "C" void changeCommon__9daAlink_cFv(); // 1
-extern "C" void changeWolf__9daAlink_cFv(); // 1
-extern "C" void changeLink__9daAlink_cFi(); // 1
-extern "C" void onWolfEyeUp__9daAlink_cFv(); // 1
-extern "C" void offWolfEyeUp__9daAlink_cFv(); // 1
-extern "C" void wolfSenseTrigger__9daAlink_cFv(); // 1
-extern "C" void setWolfSenceStatus__9daAlink_cFUc(); // 1
-extern "C" void wolfClawTrigger__9daAlink_cFv(); // 1
-extern "C" void setWolfDigStatus__9daAlink_cFUc(); // 1
-extern "C" void checkWolfShapeReverse__9daAlink_cCFv(); // 1
-extern "C" void checkWolfSideStep__9daAlink_cCFv(); // 1
-extern "C" void setWolfTailAngle__9daAlink_cFv(); // 1
-extern "C" void checkWolfSlowDash__9daAlink_cFv(); // 1
-extern "C" void setSpeedAndAngleWolf__9daAlink_cFv(); // 1
-extern "C" void setSpeedAndAngleWolfAtn__9daAlink_cFv(); // 1
-extern "C" void checkWolfAtnWait__9daAlink_cFv(); // 1
-extern "C" void checkUnderMove0BckNoArcWolf__9daAlink_cCFQ29daAlink_c12daAlink_WANM(); // 1
-extern "C" void setBlendWolfMoveAnime__9daAlink_cFf(); // 1
-extern "C" void checkWolfAtnMoveBack__9daAlink_cFs(); // 1
-extern "C" void setWolfAtnMoveDirection__9daAlink_cFv(); // 1
-extern "C" void setBlendWolfAtnMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setBlendWolfAtnBackMoveAnime__9daAlink_cFf(); // 1
-extern "C" void setDoubleAnimeWolf__9daAlink_cFfffQ29daAlink_c12daAlink_WANMQ29daAlink_c12daAlink_WANMif(); // 1
-extern "C" void setSingleAnimeWolfBase__9daAlink_cFQ29daAlink_c12daAlink_WANM(); // 1
-extern "C" void setSingleAnimeWolfBaseMorf__9daAlink_cFQ29daAlink_c12daAlink_WANMf(); // 1
-extern "C" void setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff(); // 1
-extern "C" void setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf(); // 1
-extern "C" void setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c(); // 1
-extern "C" void checkWolfLandAction__9daAlink_cFi(); // 1
-extern "C" void checkMidnaUseAbility__9daAlink_cCFv(); // 1
-extern "C" void checkWolfUseAbility__9daAlink_cFv(); // 1
-extern "C" void checkWolfGroundSpecialMode__9daAlink_cFv(); // 1
-extern "C" void checkNextActionWolf__9daAlink_cFi(); // 1
-extern "C" void wolfSideBgCheck__9daAlink_cFs(); // 1
-extern "C" void checkWolfAttackReverse__9daAlink_cFi(); // 1
-extern "C" void checkWolfBarrierHitReverse__9daAlink_cFv(); // 1
-extern "C" void checkWolfBarrierWallHit__9daAlink_cFR13cBgS_PolyInfo(); // 1
-extern "C" void wolfBgCheck__9daAlink_cFv(); // 1
-extern "C" void changeWolfBlendRate__9daAlink_cFi(); // 1
-extern "C" void setWolfFootMatrix__9daAlink_cFv(); // 1
-extern "C" void wolfFootBgCheck__9daAlink_cFv(); // 1
-extern "C" void checkWolfWaitSlipPolygon__9daAlink_cFv(); // 1
-extern "C" void setWolfWaitSlip__9daAlink_cFv(); // 1
-extern "C" void checkWolfAtnDoCharge__9daAlink_cFv(); // 1
-extern "C" void setWolfChainPos__9daAlink_cFv(); // 1
-extern "C" void setWolfAnmVoice__9daAlink_cFv(); // 1
-extern "C" void procWolfServiceWaitInit__9daAlink_cFi(); // 1
-extern "C" void procWolfServiceWait__9daAlink_cFv(); // 1
-extern "C" void procWolfTiredWaitInit__9daAlink_cFv(); // 1
-extern "C" void procWolfTiredWait__9daAlink_cFv(); // 1
-extern "C" void procWolfMidnaRideShockInit__9daAlink_cFv(); // 1
-extern "C" void procWolfMidnaRideShock__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitInit__9daAlink_cFv(); // 1
-extern "C" void procWolfWait__9daAlink_cFv(); // 1
-extern "C" void procWolfMoveInit__9daAlink_cFv(); // 1
-extern "C" void procWolfMove__9daAlink_cFv(); // 1
-extern "C" void procWolfDashInit__9daAlink_cFv(); // 1
-extern "C" void procWolfDash__9daAlink_cFv(); // 1
-extern "C" void procWolfDashReverseInit__9daAlink_cFi(); // 1
-extern "C" void procWolfDashReverse__9daAlink_cFv(); // 1
-extern "C" void procWolfAtnActorMoveInit__9daAlink_cFv(); // 1
-extern "C" void procWolfAtnActorMove__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitTurnInit__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitTurn__9daAlink_cFv(); // 1
-extern "C" void procWolfSideStepInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSideStep__9daAlink_cFv(); // 1
-extern "C" void procWolfSideStepLandInit__9daAlink_cFs(); // 1
-extern "C" void procWolfSideStepLand__9daAlink_cFv(); // 1
-extern "C" void procWolfBackJumpInit__9daAlink_cFi(); // 1
-extern "C" void procWolfBackJump__9daAlink_cFv(); // 1
-extern "C" void procWolfBackJumpLandInit__9daAlink_cFss(); // 1
-extern "C" void procWolfBackJumpLand__9daAlink_cFv(); // 1
-extern "C" void procWolfHowlInit__9daAlink_cFi(); // 1
-extern "C" void procWolfHowl__9daAlink_cFv(); // 1
-extern "C" void procWolfAutoJumpInit__9daAlink_cFi(); // 1
-extern "C" void procWolfAutoJump__9daAlink_cFv(); // 1
-extern "C" void procWolfFallInit__9daAlink_cFif(); // 1
-extern "C" void procWolfFall__9daAlink_cFv(); // 1
-extern "C" void procWolfLandInit__9daAlink_cFv(); // 1
-extern "C" void procWolfLand__9daAlink_cFv(); // 1
-extern "C" void procWolfSitInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSit__9daAlink_cFv(); // 1
-extern "C" void procWolfStepMoveInit__9daAlink_cFv(); // 1
-extern "C" void procWolfStepMove__9daAlink_cFv(); // 1
-extern "C" void procWolfSlipInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSlip__9daAlink_cFv(); // 1
-extern "C" void procWolfSlipTurnInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSlipTurn__9daAlink_cFv(); // 1
-extern "C" void procWolfSlipTurnLandInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSlipTurnLand__9daAlink_cFv(); // 1
-extern "C" void procWolfSlideReadyInit__9daAlink_cFsi(); // 1
-extern "C" void procWolfSlideReady__9daAlink_cFv(); // 1
-extern "C" void procWolfSlideInit__9daAlink_cFsi(); // 1
-extern "C" void procWolfSlide__9daAlink_cFv(); // 1
-extern "C" void procWolfSlideLandInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSlideLand__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitSlipInit__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitSlip__9daAlink_cFv(); // 1
-extern "C" void procWolfSlopeStartInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSlopeStart__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchGoldWolf__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchWolfHowl__FP10fopAc_ac_cPv(); // 1
-extern "C" void setWolfHowlNotHappen__9daAlink_cFi(); // 1
-extern "C" void procWolfHowlDemoInit__9daAlink_cFv(); // 1
-extern "C" void procWolfHowlDemo__9daAlink_cFv(); // 1
-extern "C" void setWolfHowling__15daObj_Sekizoa_cFv(); // 1
-extern "C" void checkWolfRope__9daAlink_cFv(); // 1
-extern "C" void checkWolfRopeHit__9daAlink_cCFP12dCcD_GObjInfPC4cXyzi(); // 1
-extern "C" void checkWolfRopeJumpHang__9daAlink_cFv(); // 1
-extern "C" void getWolfRopeMoveSpeed__9daAlink_cFv(); // 1
-extern "C" void setWolfRopePosY__9daAlink_cFv(); // 1
-extern "C" void initWolfRopeShapeAngle__9daAlink_cFv(); // 1
-extern "C" void wolfRopeSwingInc__9daAlink_cFf(); // 1
-extern "C" void setWolfRopeOffsetY__9daAlink_cFi(); // 1
-extern "C" void getDirectionRopeMove__9daAlink_cCFv(); // 1
-extern "C" void procWolfRopeMoveInit__9daAlink_cFii(); // 1
-extern "C" void procWolfRopeMove__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeHangInit__9daAlink_cFi(); // 1
-extern "C" void procWolfRopeHang__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeTurnInit__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeTurn__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeStaggerInit__9daAlink_cFi(); // 1
-extern "C" void procWolfRopeStagger__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeSubjectivityInit__9daAlink_cFv(); // 1
-extern "C" void procWolfRopeSubjectivity__9daAlink_cFv(); // 1
-extern "C" void getWolfTagJumpTime__9daAlink_cCFv(); // 1
-extern "C" void checkMidnaLockJumpPoint__9daAlink_cCFv(); // 1
-extern "C" void procWolfTagJumpInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procWolfTagJump__9daAlink_cFv(); // 1
-extern "C" void procWolfTagJumpLandInit__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void procWolfTagJumpLand__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchGiant__FP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchGiantTalk__FP10fopAc_ac_cPv(); // 1
-extern "C" void procWolfGiantPuzzleInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGiantPuzzle__9daAlink_cFv(); // 1
-extern "C" void setWolfHangGroundY__9daAlink_cFv(); // 1
-extern "C" void changeWolfHangEndProc__9daAlink_cFv(); // 1
-extern "C" void procWolfHangReadyInit__9daAlink_cFv(); // 1
-extern "C" void procWolfHangReady__9daAlink_cFv(); // 1
-extern "C" void procWolfHangWallCatchInit__9daAlink_cFi(); // 1
-extern "C" void procWolfHangWallCatch__9daAlink_cFv(); // 1
-extern "C" void procWolfHangFallStartInit__9daAlink_cFP8cM3dGPla(); // 1
-extern "C" void procWolfHangFallStart__9daAlink_cFv(); // 1
-extern "C" void setWolfHeadDamage__9daAlink_cFv(); // 1
-extern "C" void procWolfDamageInit__9daAlink_cFP12dCcD_GObjInf(); // 1
-extern "C" void procWolfDamage__9daAlink_cFv(); // 1
-extern "C" void procWolfLargeDamageUpInit__9daAlink_cFiiss(); // 1
-extern "C" void procWolfLargeDamageUp__9daAlink_cFv(); // 1
-extern "C" void procWolfLandDamageInit__9daAlink_cFi(); // 1
-extern "C" void procWolfLandDamage__9daAlink_cFv(); // 1
-extern "C" void setWolfScreamWaitAnime__9daAlink_cFv(); // 1
-extern "C" void procWolfScreamWaitInit__9daAlink_cFv(); // 1
-extern "C" void procWolfScreamWait__9daAlink_cFv(); // 1
-extern "C" void getWolfLieMoveAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void getWolfLieMoveSpeed__9daAlink_cFv(); // 1
-extern "C" void checkMidnaDisappearMode__9daAlink_cCFv(); // 1
-extern "C" void checkWolfLieContinue__9daAlink_cFi(); // 1
-extern "C" void checkNextActionWolfFromLie__9daAlink_cFv(); // 1
-extern "C" void setWolfLieMoveVoice__9daAlink_cFi(); // 1
-extern "C" void checkWolfLieCode__9daAlink_cFv(); // 1
-extern "C" void procWolfLieStartInit__9daAlink_cFi(); // 1
-extern "C" void procWolfLieStart__9daAlink_cFv(); // 1
-extern "C" void procWolfLieMoveInit__9daAlink_cFi(); // 1
-extern "C" void procWolfLieMove__9daAlink_cFv(); // 1
-extern "C" void procWolfLieAutoMoveInit__9daAlink_cFiP4cXyz(); // 1
-extern "C" void procWolfLieAutoMove__9daAlink_cFv(); // 1
-extern "C" void setSpeedAndAngleSwimWolf__9daAlink_cFv(); // 1
-extern "C" void getWolfSwimMoveAnmSpeed__9daAlink_cFv(); // 1
-extern "C" void decideDoStatusSwimWolf__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimUpInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimUp__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimWaitInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSwimWait__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimMoveInit__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimMove__9daAlink_cFv(); // 1
-extern "C" void procWolfSwimEndWaitInit__9daAlink_cFi(); // 1
-extern "C" void procWolfSwimEndWait__9daAlink_cFv(); // 1
-extern "C" void onWolfEnemyBiteAll__9daAlink_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2(); // 1
-extern "C" void resetWolfEnemyBiteAll__9daAlink_cFv(); // 1
-extern "C" void checkWolfEnemyThrowAction__9daAlink_cFv(); // 1
-extern "C" void setWolfLockDomeModel__9daAlink_cFv(); // 1
-extern "C" void setWolfBallModel__9daAlink_cFv(); // 1
-extern "C" void resetWolfBallGrab__9daAlink_cFv(); // 1
-extern "C" void checkWolfLockData__9daAlink_cFv(); // 1
-extern "C" void checkWolfLock__9daAlink_cCFP10fopAc_ac_c(); // 1
-extern "C" void cancelWolfLock__9daAlink_cFP10fopAc_ac_c(); // 1
-extern "C" void getWolfLockActorEnd__9daAlink_cFv(); // 1
-extern "C" void searchWolfLockEnemy__9daAlink_cFP10fopAc_ac_cPv(); // 1
-extern "C" static void daAlink_searchWolfLockEnemy__FP10fopAc_ac_cPv(); // 1
-extern "C" void checkWolfComboCnt__9daAlink_cFv(); // 1
-extern "C" void checkWolfAttackAction__9daAlink_cFv(); // 1
-extern "C" void setWolfEnemyThrowUpperAnime__9daAlink_cFQ29daAlink_c12daAlink_WANMf(); // 1
-extern "C" void setWolfEnemyHangBitePos__9daAlink_cFP13fopEn_enemy_c(); // 1
-extern "C" void setWolfBiteDamage__9daAlink_cFP13fopEn_enemy_c(); // 1
-extern "C" void checkWolfLockAttackChargeState__9daAlink_cFv(); // 1
-extern "C" void procWolfRollAttackChargeInit__9daAlink_cFv(); // 1
-extern "C" void procWolfRollAttackCharge__9daAlink_cFv(); // 1
-extern "C" void procWolfRollAttackMoveInit__9daAlink_cFv(); // 1
-extern "C" void procWolfRollAttackMove__9daAlink_cFv(); // 1
-extern "C" void procWolfJumpAttackInit__9daAlink_cFi(); // 1
-extern "C" void procWolfJumpAttack__9daAlink_cFv(); // 1
-extern "C" void procWolfJumpAttackKickInit__9daAlink_cFv(); // 1
-extern "C" void procWolfJumpAttackKick__9daAlink_cFv(); // 1
-extern "C" void procWolfJumpAttackSlideLandInit__9daAlink_cFiii(); // 1
-extern "C" void procWolfJumpAttackSlideLand__9daAlink_cFv(); // 1
-extern "C" void procWolfJumpAttackNormalLandInit__9daAlink_cFi(); // 1
-extern "C" void procWolfJumpAttackNormalLand__9daAlink_cFv(); // 1
-extern "C" void procWolfWaitAttackInit__9daAlink_cFi(); // 1
-extern "C" void procWolfWaitAttack__9daAlink_cFv(); // 1
-extern "C" void procWolfRollAttackInit__9daAlink_cFii(); // 1
-extern "C" void procWolfRollAttack__9daAlink_cFv(); // 1
-extern "C" void procWolfDownAttackInit__9daAlink_cFv(); // 1
-extern "C" void procWolfDownAttack__9daAlink_cFv(); // 1
-extern "C" void procWolfDownAtLandInit__9daAlink_cFP13fopEn_enemy_c(); // 1
-extern "C" void procWolfDownAtLand__9daAlink_cFv(); // 1
-extern "C" void procWolfDownAtMissLandInit__9daAlink_cFv(); // 1
-extern "C" void procWolfDownAtMissLand__9daAlink_cFv(); // 1
-extern "C" void procWolfLockAttackInit__9daAlink_cFi(); // 1
-extern "C" void procWolfLockAttack__9daAlink_cFv(); // 1
-extern "C" void procWolfLockAttackTurnInit__9daAlink_cFi(); // 1
-extern "C" void procWolfLockAttackTurn__9daAlink_cFv(); // 1
-extern "C" void procWolfAttackReverseInit__9daAlink_cFv(); // 1
-extern "C" void procWolfAttackReverse__9daAlink_cFv(); // 1
-extern "C" void procWolfEnemyThrowInit__9daAlink_cFi(); // 1
-extern "C" void procWolfEnemyThrow__9daAlink_cFv(); // 1
-extern "C" void procWolfEnemyHangBiteInit__9daAlink_cFv(); // 1
-extern "C" void procWolfEnemyHangBite__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabUpInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabUp__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabPutInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabPut__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabThrowInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGrabThrow__9daAlink_cFv(); // 1
-extern "C" void procWolfPushInit__9daAlink_cFv(); // 1
-extern "C" void procWolfPush__9daAlink_cFv(); // 1
-extern "C" static void daAlink_searchEnemyCargo__FP10fopAc_ac_cPv(); // 1
-extern "C" void procWolfCargoCarryInit__9daAlink_cFv(); // 1
-extern "C" void procWolfCargoCarry__9daAlink_cFv(); // 1
-extern "C" void procWolfChainUpInit__9daAlink_cFv(); // 1
-extern "C" void procWolfChainUp__9daAlink_cFv(); // 1
-extern "C" void procWolfGanonCatchInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGanonCatch__9daAlink_cFv(); // 1
-extern "C" void procWolfChainReadyInit__9daAlink_cFv(); // 1
-extern "C" void procWolfChainReady__9daAlink_cFv(); // 1
-extern "C" void procWolfChainWaitInit__9daAlink_cFv(); // 1
-extern "C" void procWolfChainWait__9daAlink_cFv(); // 1
-extern "C" void procWolfDigInit__9daAlink_cFv(); // 1
-extern "C" void procWolfDig__9daAlink_cFv(); // 1
-extern "C" void procWolfDigThroughInit__9daAlink_cFi(); // 1
-extern "C" void procWolfDigThrough__9daAlink_cFv(); // 1
-extern "C" void setSmellSave__9daAlink_cFv(); // 1
-extern "C" void procWolfGetSmellInit__9daAlink_cFv(); // 1
-extern "C" void procWolfGetSmell__9daAlink_cFv(); // 1
-extern "C" void setArcName__9daAlink_cFi(); // 1
-extern "C" void setShieldArcName__9daAlink_cFv(); // 1
-extern "C" void setOriginalHeap__9daAlink_cFPP10JKRExpHeapUl(); // 1
-extern "C" void setClothesChange__9daAlink_cFi(); // 1
-extern "C" void setShieldChange__9daAlink_cFv(); // 1
-extern "C" void loadModelDVD__9daAlink_cFv(); // 1
-extern "C" void setShieldModel__9daAlink_cFv(); // 1
-extern "C" void loadShieldModelDVD__9daAlink_cFv(); // 1
-extern "C" void changeModelDataDirect__9daAlink_cFi(); // 1
-extern "C" void changeModelDataDirectWolf__9daAlink_cFi(); // 1
-extern "C" void initStatusWindow__9daAlink_cFv(); // 1
-extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs(); // 1
-extern "C" void statusWindowDraw__9daAlink_cFv(); // 1
-extern "C" void resetStatusWindow__9daAlink_cFv(); // 1
-extern "C" void __ct__12daAlinkHIO_cFv(); // 1
-extern "C" void __dt__17daAlinkHIO_wolf_cFv(); // 1
-extern "C" void __dt__16daAlinkHIO_cut_cFv(); // 1
-extern "C" void __dt__12daAlinkHIO_cFv(); // 1
-extern "C" void __dt__8dEyeHL_cFv(); // 1
-extern "C" void __dt__18daPy_sightPacket_cFv(); // 1
-extern "C" void __dt__16daPy_frameCtrl_cFv(); // 1
-extern "C" void __ct__16daPy_frameCtrl_cFv(); // 1
-extern "C" void __defctor__14daPy_anmHeap_cFv(); // 1
-extern "C" void __dt__19mDoExt_AnmRatioPackFv(); // 1
-extern "C" void __ct__19mDoExt_AnmRatioPackFv(); // 1
-extern "C" void __dt__16dBgS_LinkRoofChkFv(); // 1
-extern "C" void __dt__15dBgS_LinkGndChkFv(); // 1
-extern "C" void __dt__13dBgS_LinkAcchFv(); // 1
-extern "C" void __ct__8dCcD_CpsFv(); // 1
-extern "C" void __ct__8dCcD_CylFv(); // 1
-extern "C" void __dt__9cCcD_SttsFv(); // 1
-extern "C" void __ct__16daPy_actorKeep_cFv(); // 1
-extern "C" void onNoResetFlg2__9daPy_py_cFQ29daPy_py_c9daPy_FLG2(); // 1
-extern "C" void offNoResetFlg0__9daPy_py_cFQ29daPy_py_c9daPy_FLG0(); // 1
-extern "C" static void mDoAud_seStartLevel__FUlPC3VecUlSc(); // 1
-extern "C" void checkEndResetFlg2__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG2(); // 1
-extern "C" static void dComIfGp_setBottleStatus__FUcUc(); // 1
-extern "C" void getSumouMode__9daPy_py_cCFv(); // 1
-extern "C" void checkNoResetFlg3__9daPy_py_cCFQ29daPy_py_c9daPy_FLG3(); // 1
-extern "C" void onCondition__11dEvt_info_cFUs(); // 1
-extern "C" void __ct__8cM3dGPlaFv(); // 1
-extern "C" void offCondition__11dEvt_info_cFUs(); // 1
-extern "C" void checkShieldGet__9daPy_py_cFv(); // 1
-extern "C" static void fopAcM_onSwitch__FPC10fopAc_ac_ci(); // 1
-extern "C" static void dComIfGs_isItemFirstBit__FUc(); // 1
-extern "C" static void dStage_stagInfo_GetSaveTbl__FP21stage_stag_info_class(); // 1
-extern "C" static void dComIfGp_getStage__Fv(); // 1
-extern "C" void checkEquipHeavyBoots__9daPy_py_cCFv(); // 1
-extern "C" void fopAcM_GetName__FPv(); // 1
-extern "C" void onNoResetFlg0__9daPy_py_cFQ29daPy_py_c9daPy_FLG0(); // 1
-extern "C" void isOrderOK__14dEvt_control_cFv(); // 1
-extern "C" static void dComIfGp_getEvent__Fv(); // 1
-extern "C" static void dComIfGp_checkPlayerStatus0__FiUl(); // 1
-extern "C" static void dComIfGp_checkPlayerStatus1__FiUl(); // 1
-extern "C" void checkEndResetFlg1__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG1(); // 1
-extern "C" static void dComIfGp_getEventManager__Fv(); // 1
-extern "C" void offNoResetFlg1__9daPy_py_cFQ29daPy_py_c9daPy_FLG1(); // 1
-extern "C" void offNoResetFlg2__9daPy_py_cFQ29daPy_py_c9daPy_FLG2(); // 1
-extern "C" void setSpecialDemoType__11daPy_demo_cFv(); // 1
-extern "C" void checkCommandCatch__11dEvt_info_cFv(); // 1
-extern "C" void dComIfGs_isEventBit__FUs(); // 1
-extern "C" void checkWolf__9daPy_py_cCFv(); // 1
-extern "C" void checkSwordGet__9daPy_py_cFv(); // 1
-extern "C" void checkResetFlg0__9daPy_py_cCFQ29daPy_py_c10daPy_RFLG0(); // 1
-extern "C" void ChkGroundHit__9dBgS_AcchCFv(); // 1
-extern "C" void checkNoResetFlg0__9daPy_py_cCFQ29daPy_py_c9daPy_FLG0(); // 1
-extern "C" static void dComIfGp_getPlayerCameraID__Fi(); // 1
-extern "C" static void dComIfGp_event_chkEventFlag__FUs(); // 1
-extern "C" void checkCommandDoor__11dEvt_info_cFv(); // 1
-extern "C" static void dComIfGp_evmng_getMyStaffId__FPCcP10fopAc_ac_ci(); // 1
-extern "C" static void dComIfGp_event_runCheck__Fv(); // 1
-extern "C" void checkNoResetFlg2__9daPy_py_cCFQ29daPy_py_c9daPy_FLG2(); // 1
-extern "C" void checkMagneBootsOn__9daPy_py_cCFv(); // 1
-extern "C" void dComIfGp_getHorseActor__Fv(); // 1
-extern "C" void checkBoarSingleBattle__9daPy_py_cCFv(); // 1
-extern "C" void checkEndResetFlg0__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG0(); // 1
-extern "C" bool getMidnaAtnPos__9daPy_py_cCFv(); // 1
-extern "C" void setMidnaMsgNum__9daPy_py_cFP10fopAc_ac_cUs(); // 1
-extern "C" void getModelMtx__9daPy_py_cFv(); // 1
-extern "C" void getInvMtx__9daPy_py_cFv(); // 1
-extern "C" void getShadowTalkAtnPos__9daPy_py_cFv(); // 1
-extern "C" void getLeftItemMatrix__9daPy_py_cFv(); // 1
-extern "C" void getRightItemMatrix__9daPy_py_cFv(); // 1
-extern "C" void getLeftHandMatrix__9daPy_py_cFv(); // 1
-extern "C" void getRightHandMatrix__9daPy_py_cFv(); // 1
-extern "C" void getLinkBackBone1Matrix__9daPy_py_cFv(); // 1
-extern "C" void getWolfMouthMatrix__9daPy_py_cFv(); // 1
-extern "C" void getWolfBackbone2Matrix__9daPy_py_cFv(); // 1
-extern "C" bool getBottleMtx__9daPy_py_cFv(); // 1
-extern "C" bool checkPlayerGuard__9daPy_py_cCFv(); // 1
-extern "C" bool checkAutoJump__9daPy_py_cCFv(); // 1
-extern "C" bool checkSideStep__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfTriggerJump__9daPy_py_cCFv(); // 1
-extern "C" bool checkGuardBreakMode__9daPy_py_cCFv(); // 1
-extern "C" bool checkLv3Slide__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfHowlDemoMode__9daPy_py_cCFv(); // 1
-extern "C" bool checkChainBlockPushPull__9daPy_py_cFv(); // 1
-extern "C" bool checkElecDamage__9daPy_py_cCFv(); // 1
-extern "C" bool checkEmptyBottleSwing__9daPy_py_cCFv(); // 1
-extern "C" bool checkBottleSwingMode__9daPy_py_cCFv(); // 1
-extern "C" bool checkHawkWait__9daPy_py_cCFv(); // 1
-extern "C" bool checkGoatThrow__9daPy_py_cCFv(); // 1
-extern "C" bool checkGoatThrowAfter__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfTagLockJump__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfTagLockJumpLand__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfRope__9daPy_py_cFv(); // 1
-extern "C" bool checkWolfRopeHang__9daPy_py_cCFv(); // 1
-extern "C" bool checkRollJump__9daPy_py_cCFv(); // 1
-extern "C" bool checkGoronRideWait__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfChain__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfWait__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfJumpAttack__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfRSit__9daPy_py_cCFv(); // 1
-extern "C" bool checkBubbleFly__9daPy_py_cCFv(); // 1
-extern "C" bool checkBottleDrinkEnd__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfDig__9daPy_py_cCFv(); // 1
-extern "C" bool checkCutCharge__9daPy_py_cCFv(); // 1
-extern "C" bool checkCutTurnCharge__9daPy_py_cCFv(); // 1
-extern "C" bool checkCutLargeJumpCharge__9daPy_py_cCFv(); // 1
-extern "C" bool getBokoFlamePos__9daPy_py_cFP4cXyz(); // 1
-extern "C" bool checkComboCutTurn__9daPy_py_cCFv(); // 1
-extern "C" bool checkClimbMove__9daPy_py_cCFv(); // 1
-extern "C" bool checkGrassWhistle__9daPy_py_cCFv(); // 1
-extern "C" bool checkBoarRun__9daPy_py_cCFv(); // 1
-extern "C" bool checkFmChainPut__9daPy_py_cCFv(); // 1
-extern "C" bool checkHorseElecDamage__9daPy_py_cCFv(); // 1
-extern "C" void getBaseAnimeFrameRate__9daPy_py_cCFv(); // 1
-extern "C" void getBaseAnimeFrame__9daPy_py_cCFv(); // 1
-extern "C" void setAnimeFrame__9daPy_py_cFf(); // 1
-extern "C" bool checkWolfLock__9daPy_py_cCFP10fopAc_ac_c(); // 1
-extern "C" bool cancelWolfLock__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" s32 getItemID__9daPy_py_cCFv(); // 1
-extern "C" bool exchangeGrabActor__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" bool setForceGrab__9daPy_py_cFP10fopAc_ac_cii(); // 1
-extern "C" void setForcePutPos__9daPy_py_cFRC4cXyz(); // 1
-extern "C" bool checkPlayerNoDraw__9daPy_py_cFv(); // 1
-extern "C" bool checkRopeTag__9daPy_py_cFv(); // 1
-extern "C" void voiceStart__9daPy_py_cFUl(); // 1
-extern "C" void seStartOnlyReverb__9daPy_py_cFUl(); // 1
-extern "C" void seStartOnlyReverbLevel__9daPy_py_cFUl(); // 1
-extern "C" void setOutPower__9daPy_py_cFfsi(); // 1
-extern "C" void setGrabCollisionOffset__9daPy_py_cFffP13cBgS_PolyInfo(); // 1
-extern "C" void onMagneGrab__9daPy_py_cFff(); // 1
-extern "C" bool getModelJointMtx__9daPy_py_cFUs(); // 1
-extern "C" bool getHeadMtx__9daPy_py_cFv(); // 1
-extern "C" bool setHookshotCarryOffset__9daPy_py_cFUiPC4cXyz(); // 1
-extern "C" bool checkIronBallReturn__9daPy_py_cCFv(); // 1
-extern "C" bool checkIronBallGroundStop__9daPy_py_cCFv(); // 1
-extern "C" bool checkSingleBoarBattleSecondBowReady__9daPy_py_cCFv(); // 1
-extern "C" bool checkPointSubWindowMode__9daPy_py_cCFv(); // 1
-extern "C" void setClothesChange__9daPy_py_cFi(); // 1
-extern "C" void setPlayerPosAndAngle__9daPy_py_cFPA4_f(); // 1
-extern "C" void setPlayerPosAndAngle__9daPy_py_cFPC4cXyzPC5csXyz(); // 1
-extern "C" void setPlayerPosAndAngle__9daPy_py_cFPC4cXyzsi(); // 1
-extern "C" bool setThrowDamage__9daPy_py_cFsffiii(); // 1
-extern "C" bool checkSetNpcTks__9daPy_py_cFP4cXyzii(); // 1
-extern "C" bool setRollJump__9daPy_py_cFffs(); // 1
-extern "C" void playerStartCollisionSE__9daPy_py_cFUlUl(); // 1
-extern "C" void changeTextureAnime__9daPy_py_cFUsUsi(); // 1
-extern "C" void cancelChangeTextureAnime__9daPy_py_cFv(); // 1
-extern "C" void cancelDungeonWarpReadyNeck__9daPy_py_cFv(); // 1
-extern "C" void onSceneChangeArea__9daPy_py_cFUcUcP10fopAc_ac_c(); // 1
-extern "C" void onSceneChangeAreaJump__9daPy_py_cFUcUcP10fopAc_ac_c(); // 1
-extern "C" void onSceneChangeDead__9daPy_py_cFUci(); // 1
-extern "C" bool getSpinnerActor__9daPy_py_cFv(); // 1
-extern "C" bool checkHorseRideNotReady__9daPy_py_cCFv(); // 1
-extern "C" bool checkArrowChargeEnd__9daPy_py_cCFv(); // 1
-extern "C" void getSearchBallScale__9daPy_py_cCFv(); // 1
-extern "C" bool checkFastShotTime__9daPy_py_cFv(); // 1
-extern "C" bool checkNoEquipItem__9daPy_py_cCFv(); // 1
-extern "C" bool checkFireMaterial__9daPy_py_cCFv(); // 1
-extern "C" bool checkKandelaarSwing__9daPy_py_cCFi(); // 1
-extern "C" bool getBoardCutTurnOffsetAngleY__9daPy_py_cCFv(); // 1
-extern "C" void getMagneHitPos__9daPy_py_cFv(); // 1
-extern "C" void getMagneBootsTopVec__9daPy_py_cFv(); // 1
-extern "C" bool checkUseKandelaar__9daPy_py_cFi(); // 1
-extern "C" void setDkCaught__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" void onPressedDamage__9daPy_py_cFRC4cXyzs(); // 1
-extern "C" bool checkPriActorOwn__9daPy_py_cCFPC10fopAc_ac_c(); // 1
-extern "C" bool onWolfEnemyBiteAll__9daPy_py_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2(); // 1
-extern "C" bool checkWolfEnemyBiteAllOwn__9daPy_py_cCFPC10fopAc_ac_c(); // 1
-extern "C" void setWolfEnemyHangBiteAngle__9daPy_py_cFs(); // 1
-extern "C" void setKandelaarMtx__9daPy_py_cFPA4_fii(); // 1
-extern "C" bool getStickAngleFromPlayerShape__9daPy_py_cCFPs(); // 1
-extern "C" bool checkSpinnerPathMove__9daPy_py_cFv(); // 1
-extern "C" bool checkSpinnerTriggerAttack__9daPy_py_cFv(); // 1
-extern "C" void onSpinnerPathForceRemove__9daPy_py_cFv(); // 1
-extern "C" bool getIronBallBgHit__9daPy_py_cCFv(); // 1
-extern "C" bool getIronBallCenterPos__9daPy_py_cFv(); // 1
-extern "C" bool checkCanoeFishingGetLeft__9daPy_py_cCFv(); // 1
-extern "C" bool checkCanoeFishingGetRight__9daPy_py_cCFv(); // 1
-extern "C" bool checkBeeChildDrink__9daPy_py_cCFv(); // 1
-extern "C" void skipPortalObjWarp__9daPy_py_cFv(); // 1
-extern "C" bool checkTreasureRupeeReturn__9daPy_py_cCFi(); // 1
-extern "C" void setSumouReady__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" bool checkAcceptDungeonWarpAlink__9daPy_py_cFi(); // 1
-extern "C" bool getSumouCounter__9daPy_py_cCFv(); // 1
-extern "C" bool checkSumouWithstand__9daPy_py_cCFv(); // 1
-extern "C" void cancelGoronThrowEvent__9daPy_py_cFv(); // 1
-extern "C" void setSumouGraspCancelCount__9daPy_py_cFi(); // 1
-extern "C" void setSumouPushBackDirection__9daPy_py_cFs(); // 1
-extern "C" void setSumouLoseHeadUp__9daPy_py_cFv(); // 1
-extern "C" void getGiantPuzzleAimAngle__9daPy_py_cCFv(); // 1
-extern "C" void setGoronSideMove__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" void setCargoCarry__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" bool getDpdFarFlg__9daPy_py_cCFv(); // 1
-extern "C" bool getHookshotTopPos__9daPy_py_cFv(); // 1
-extern "C" bool checkHookshotReturnMode__9daPy_py_cCFv(); // 1
-extern "C" bool checkHookshotShootReturnMode__9daPy_py_cCFv(); // 1
-extern "C" bool checkOctaIealHang__9daPy_py_cCFv(); // 1
-extern "C" void cancelOctaIealHang__9daPy_py_cFv(); // 1
-extern "C" void cancelDragonHangBackJump__9daPy_py_cFv(); // 1
-extern "C" void setOctaIealWildHang__9daPy_py_cFv(); // 1
-extern "C" bool checkDragonHangRide__9daPy_py_cCFv(); // 1
-extern "C" void changeDragonActor__9daPy_py_cFP10fopAc_ac_c(); // 1
-extern "C" bool getClothesChangeWaitTimer__9daPy_py_cCFv(); // 1
-extern "C" bool getShieldChangeWaitTimer__9daPy_py_cCFv(); // 1
-extern "C" bool getSwordChangeWaitTimer__9daPy_py_cCFv(); // 1
-extern "C" bool checkMetamorphose__9daPy_py_cCFv(); // 1
-extern "C" bool checkWolfDownAttackPullOut__9daPy_py_cCFv(); // 1
-extern "C" bool checkBootsOrArmorHeavy__9daPy_py_cCFv(); // 1
-extern "C" s32 getBottleOpenAppearItem__9daPy_py_cCFv(); // 1
-extern "C" bool checkItemSwordEquip__9daPy_py_cCFv(); // 1
-extern "C" void getSinkShapeOffset__9daPy_py_cCFv(); // 1
-extern "C" bool checkSinkDead__9daPy_py_cCFv(); // 1
-extern "C" bool checkHorseStart__9daPy_py_cFv(); // 1
-extern "C" bool getWolfHowlMgrP__9daPy_py_cFv(); // 1
-extern "C" bool checkWolfHowlSuccessAnime__9daPy_py_cCFv(); // 1
-extern "C" bool checkCopyRodTopUse__9daPy_py_cFv(); // 1
-extern "C" bool checkCopyRodEquip__9daPy_py_cCFv(); // 1
-extern "C" bool checkCutJumpMode__9daPy_py_cCFv(); // 1
-extern "C" void getZeldaActor__9daHorse_cFv(); // 1
-extern "C" static void dComIfGp_getDoStatus__Fv(); // 1
-extern "C" void __ct__4cXyzFfff(); // 1
-extern "C" static void dMeter2Info_offUseButton__Fi(); // 1
-extern "C" void setLinkState__14Z2CreatureLinkFUc(); // 1
-extern "C" static void dComIfGs_getRupee__Fv(); // 1
-extern "C" static void dComIfGp_setItemRupeeCount__Fl(); // 1
-extern "C" static void dMeter2Info_setFloatingMessage__FUssb(); // 1
-extern "C" void onForcePanic__9daMidna_cFv(); // 1
-extern "C" void checkForceNormalColor__9daMidna_cCFv(); // 1
-extern "C" void checkForceTiredColor__9daMidna_cCFv(); // 1
-extern "C" void checkMidnaTired__9daMidna_cFv(); // 1
-extern "C" void onNoServiceWait__9daMidna_cFv(); // 1
-extern "C" void setControllActorData__8daCrod_cFv(); // 1
-extern "C" void func_80141ACC(); // 1
-extern "C" void func_80141AE8(); // 1
-extern "C" void __sinit_d_a_alink_cpp(); // 1
-extern "C" static void func_801446D4(); // 1
-extern "C" static void func_801446DC(); // 1
-extern "C" static void func_801446E4(); // 1
-extern "C" static void func_801446EC(); // 1
-extern "C" static void func_801446F4(); // 1
-extern "C" static void func_801446FC(); // 1
-extern "C" static void func_80144704(); // 1
-extern "C" static void func_8014470C(); // 1
-extern "C" static void func_80144714(); // 1
-extern "C" static void func_8014471C(); // 1
+extern "C" bool getE3Zhint__9daAlink_cFv();
+extern "C" void getAlinkArcName__9daAlink_cFv();
+extern "C" static void daAlink_tgHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" static void daAlink_coHitCallback__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void init__16daAlink_matAnm_cFv();
+extern "C" void calc__16daAlink_matAnm_cCFP11J3DMaterial();
+extern "C" void checkStageName__9daAlink_cFPCc();
+extern "C" void tgHitCallback__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInfP12dCcD_GObjInf();
+extern "C" void coHitCallback__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void setMatrixWorldAxisRot__9daAlink_cFPA4_fsssiPC4cXyz();
+extern "C" void jointControll__9daAlink_cFi();
+extern "C" void setUpperFront__9daAlink_cFv();
+extern "C" void changeBlendRate__9daAlink_cFi();
+extern "C" void resetRootMtx__9daAlink_cFv();
+extern "C" void modelCallBack__9daAlink_cFi();
+extern "C" static void daAlink_modelCallBack__FP8J3DJointi();
+extern "C" void headModelCallBack__9daAlink_cFi();
+extern "C" static void daAlink_headModelCallBack__FP8J3DJointi();
+extern "C" void wolfModelCallBack__9daAlink_cFi();
+extern "C" static void daAlink_wolfModelCallBack__FP8J3DJointi();
+extern "C" void setHatAngle__9daAlink_cFv();
+extern "C" void calcHairAngle__9daAlink_cFPs();
+extern "C" void setHairAngle__9daAlink_cFP4cXyzff();
+extern "C" void setLookPosFromOut__9daAlink_cFP4cXyz();
+extern "C" void checkAttentionPosAngle__9daAlink_cFP4cXyz();
+extern "C" void checkActorPosAngle__9daAlink_cFP10fopAc_ac_cPP4cXyz();
+extern "C" void getNeckAimPos__9daAlink_cFP4cXyzPii();
+extern "C" void getNeckAimAngle__9daAlink_cFP4cXyzPsPsPsPs();
+extern "C" void setEyeMove__9daAlink_cFP4cXyzss();
+extern "C" void setNeckAngle__9daAlink_cFv();
+extern "C" void getStickAngleFromPlayerShape__9daAlink_cCFPs();
+extern "C" void commonLineCheck__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void getMoveBGActorName__9daAlink_cFR13cBgS_PolyInfoi();
+extern "C" void checkGoronRide__9daAlink_cFv();
+extern "C" void setMoveSlantAngle__9daAlink_cFv();
+extern "C" void setArmMatrix__9daAlink_cFv();
+extern "C" void setFootMatrix__9daAlink_cFv();
+extern "C" void setMatrixOffset__9daAlink_cFPff();
+extern "C" void setLegAngle__9daAlink_cFfP18daAlink_footData_cPsPsi();
+extern "C" void footBgCheck__9daAlink_cFv();
+extern "C" void handBgCheck__9daAlink_cFv();
+extern "C" void setItemHeap__9daAlink_cFv();
+extern "C" void setIdxMask__9daAlink_cFPUsPUs();
+extern "C" void getAnimeResource__9daAlink_cFP14daPy_anmHeap_cUsUl();
+extern "C" void initModel__9daAlink_cFP12J3DModelDataUlUl();
+extern "C" void initModel__9daAlink_cFUsUl();
+extern "C" void initModelEnv__9daAlink_cFUsUl();
+extern "C" void initDemoModel__9daAlink_cFPP8J3DModelPCcUl();
+extern "C" void initDemoBck__9daAlink_cFPP13mDoExt_bckAnmPCc();
+extern "C" void createHeap__9daAlink_cFv();
+extern "C" void __dt__14J3DMaterialAnmFv();
+extern "C" static void daAlink_createHeap__FP10fopAc_ac_c();
+extern "C" void setSelectEquipItem__9daAlink_cFi();
+extern "C" void checkBoarStart__9daAlink_cFv();
+extern "C" void checkCanoeStart__9daAlink_cFv();
+extern "C" void playerInit__9daAlink_cFv();
+extern "C" void checkHorseStart__9daAlink_cFUli();
+extern "C" void setStartProcInit__9daAlink_cFv();
+extern "C" void create__9daAlink_cFv();
+extern "C" static void daAlink_Create__FP10fopAc_ac_c();
+extern "C" void setRoomInfo__9daAlink_cFv();
+extern "C" void setShapeAngleOnGround__9daAlink_cFv();
+extern "C" void setStepsOffset__9daAlink_cFv();
+extern "C" void iceSlipBgCheck__9daAlink_cFv();
+extern "C" void setIceSlipSpeed__9daAlink_cFv();
+extern "C" void setPolygonSpeed__9daAlink_cFv();
+extern "C" void checkWindSpeedOnAngle__9daAlink_cCFv();
+extern "C" void checkWindSpeedOnAngleAnime__9daAlink_cCFi();
+extern "C" void checkDashAnime__9daAlink_cCFv();
+extern "C" void checkWindWallRate__9daAlink_cFRC4cXyz();
+extern "C" void setWindSpeed__9daAlink_cFv();
+extern "C" void setBodyPartPos__9daAlink_cFv();
+extern "C" void setRollJump__9daAlink_cFffs();
+extern "C" void setAttentionPos__9daAlink_cFv();
+extern "C" void setMatrix__9daAlink_cFv();
+extern "C" void simpleAnmPlay__9daAlink_cFP10J3DAnmBase();
+extern "C" void setSwordPos__9daAlink_cFv();
+extern "C" void setItemMatrix__9daAlink_cFi();
+extern "C" void setWolfItemMatrix__9daAlink_cFv();
+extern "C" void setHandIndex__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void setSwordAtCollision__9daAlink_cFi();
+extern "C" void checkNoCollisionCorret__9daAlink_cFv();
+extern "C" void decSwordBlur__9daAlink_cFv();
+extern "C" void resetWolfAtCollision__9daAlink_cFv();
+extern "C" void setWolfAtCollision__9daAlink_cFv();
+extern "C" void resetAtCollision__9daAlink_cFi();
+extern "C" void setAtCollision__9daAlink_cFv();
+extern "C" void setWolfCollisionPos__9daAlink_cFv();
+extern "C" void initLockAt__9daAlink_cFv();
+extern "C" void cancelLockAt__9daAlink_cFv();
+extern "C" void setCollisionPos__9daAlink_cFv();
+extern "C" void setCollision__9daAlink_cFv();
+extern "C" void getBaseAnimeFrame__9daAlink_cCFv();
+extern "C" void setAnimeFrame__9daAlink_cFf();
+extern "C" void setFrameCtrl__9daAlink_cFP16daPy_frameCtrl_cUcssff();
+extern "C" void getMainBckData__9daAlink_cCFQ29daAlink_c11daAlink_ANM();
+extern "C" void checkUnderMove0BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM();
+extern "C" void checkUnderMove1BckNoArc__9daAlink_cCFQ29daAlink_c11daAlink_ANM();
+extern "C" void getUnderUpperAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMPP15J3DAnmTransformPP15J3DAnmTransformiUl();
+extern "C" void setDoubleAnimeBlendRatio__9daAlink_cFf();
+extern "C" void commonDoubleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformP15J3DAnmTransformfffi();
+extern "C" void setDoubleAnime__9daAlink_cFfffQ29daAlink_c11daAlink_ANMQ29daAlink_c11daAlink_ANMif();
+extern "C" void commonSingleAnime__9daAlink_cFP15J3DAnmTransformP15J3DAnmTransformffs();
+extern "C" void setSingleAnimeBase__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void setSingleAnimeBaseMorf__9daAlink_cFQ29daAlink_c11daAlink_ANMf();
+extern "C" void setSingleAnimeBaseSpeed__9daAlink_cFQ29daAlink_c11daAlink_ANMff();
+extern "C" void setSingleAnime__9daAlink_cFQ29daAlink_c11daAlink_ANMffsf();
+extern "C" void setSingleAnimeParam__9daAlink_cFQ29daAlink_c11daAlink_ANMPC16daAlinkHIO_anm_c();
+extern "C" void animePlay__9daAlink_cFP15J3DAnmTransformP16daPy_frameCtrl_c();
+extern "C" void allAnimePlay__9daAlink_cFv();
+extern "C" void setUpperAnimeMorf__9daAlink_cFf();
+extern "C" void setUpperAnimeBase__9daAlink_cFUs();
+extern "C" void setUpperAnimeBaseMorf__9daAlink_cFUsf();
+extern "C" void setUpperAnimeBaseSpeed__9daAlink_cFUsff();
+extern "C" void setUpperAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERffsf();
+extern "C" void setUpperAnimeParam__9daAlink_cFUsQ29daAlink_c13daAlink_UPPERPC16daAlinkHIO_anm_c();
+extern "C" void resetUpperAnime__9daAlink_cFQ29daAlink_c13daAlink_UPPERf();
+extern "C" void setUnderAnimeMorf__9daAlink_cFf();
+extern "C" void setUnderAnime__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERffsf();
+extern "C" void setUnderAnimeParam__9daAlink_cFUsQ29daAlink_c13daAlink_UNDERPC16daAlinkHIO_anm_c();
+extern "C" void resetUnderAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDERf();
+extern "C" void setOldRootQuaternion__9daAlink_cFsss();
+extern "C" void checkAtnLeftAnime__9daAlink_cFv();
+extern "C" void checkAtnRightAnime__9daAlink_cFv();
+extern "C" void getMoveGroundAngleSpeedRate__9daAlink_cFv();
+extern "C" void setBlendMoveAnime__9daAlink_cFf();
+extern "C" void setBlendAtnMoveAnime__9daAlink_cFf();
+extern "C" void setBlendAtnBackMoveAnime__9daAlink_cFf();
+extern "C" void setFaceBck__9daAlink_cFUsiUs();
+extern "C" void setFaceBtp__9daAlink_cFUsiUs();
+extern "C" void setFaceBtk__9daAlink_cFUsiUs();
+extern "C" void setFaceBasicTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM();
+extern "C" void setFaceBasicAnime__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void setFacePriTexture__9daAlink_cFQ29daAlink_c13daAlink_FTANM();
+extern "C" void setFacePriAnime__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void resetFacePriBck__9daAlink_cFv();
+extern "C" void resetFacePriBtp__9daAlink_cFv();
+extern "C" void resetFacePriBtk__9daAlink_cFv();
+extern "C" void resetFacePriTexture__9daAlink_cFv();
+extern "C" void resetFacePriAnime__9daAlink_cFv();
+extern "C" void playFaceTextureAnime__9daAlink_cFv();
+extern "C" void getGroundAngle__9daAlink_cFP13cBgS_PolyInfos();
+extern "C" void getRoofAngle__9daAlink_cFP13cBgS_PolyInfos();
+extern "C" void getWallEdgePos__9daAlink_cFRC4cXyzP8cM3dGPlaP8cM3dGPlaP4cXyzi();
+extern "C" void setFrontWallType__9daAlink_cFv();
+extern "C" void SetPos__12dBgS_RoofChkFRC4cXyz();
+extern "C" void checkWaterPolygonUnder__9daAlink_cFv();
+extern "C" void setWaterY__9daAlink_cFv();
+extern "C" void setHangWaterY__9daAlink_cFv();
+extern "C" void setSandDownBgCheckWallH__9daAlink_cFv();
+extern "C" void setBgCheckParam__9daAlink_cFv();
+extern "C" void checkNotJumpSinkLimit__9daAlink_cFv();
+extern "C" void checkNotItemSinkLimit__9daAlink_cFv();
+extern "C" void setSandShapeOffset__9daAlink_cFv();
+extern "C" void checkLv2MiddleBossBgRide__9daAlink_cFs();
+extern "C" void getSlidePolygon__9daAlink_cFP8cM3dGPla();
+extern "C" void checkSlope__9daAlink_cCFv();
+extern "C" void setPlayerPosAndAngle__9daAlink_cFPC4cXyzsi();
+extern "C" void setPlayerPosAndAngle__9daAlink_cFPC4cXyzPC5csXyz();
+extern "C" void setPlayerPosAndAngle__9daAlink_cFPA4_f();
+extern "C" void itemTriggerCheck__9daAlink_cFUc();
+extern "C" void itemButtonCheck__9daAlink_cFUc();
+extern "C" void itemButton__9daAlink_cFv();
+extern "C" void itemTrigger__9daAlink_cFv();
+extern "C" void spActionButton__9daAlink_cFv();
+extern "C" void spActionTrigger__9daAlink_cFv();
+extern "C" void midnaTalkTrigger__9daAlink_cCFv();
+extern "C" void swordSwingTrigger__9daAlink_cFv();
+extern "C" void setItemActionButtonStatus__9daAlink_cFUc();
+extern "C" void itemActionTrigger__9daAlink_cFv();
+extern "C" void setStickData__9daAlink_cFv();
+extern "C" void setAtnList__9daAlink_cFv();
+extern "C" void setRStatus__9daAlink_cFUc();
+extern "C" void setRStatusEmphasys__9daAlink_cFUc();
+extern "C" void setDoStatus__9daAlink_cFUc();
+extern "C" void setDoStatusEmphasys__9daAlink_cFUc();
+extern "C" void setDoStatusContinuation__9daAlink_cFUc();
+extern "C" void setBStatus__9daAlink_cFUc();
+extern "C" void checkAtnWaitAnime__9daAlink_cFv();
+extern "C" void setTiredVoice__9daAlink_cFP16daPy_frameCtrl_c();
+extern "C" void checkRestHPAnime__9daAlink_cFv();
+extern "C" void getDirectionFromAngle__9daAlink_cFs();
+extern "C" void checkAttentionState__9daAlink_cFv();
+extern "C" void getShapeAngleYAtnActor__9daAlink_cFv();
+extern "C" void setShapeAngleToAtnActor__9daAlink_cFi();
+extern "C" void initServiceWaitTime__9daAlink_cFv();
+extern "C" void checkZeroSpeedF__9daAlink_cCFv();
+extern "C" void setNormalSpeedF__9daAlink_cFff();
+extern "C" void getStickAngleDistanceRate__9daAlink_cFv();
+extern "C" void setSpeedAndAngleNormal__9daAlink_cFv();
+extern "C" void setSpeedAndAngleAtn__9daAlink_cFv();
+extern "C" void checkRequestTalkActor__9daAlink_cFP10dAttList_cP10fopAc_ac_c();
+extern "C" void checkServiceWaitMode__9daAlink_cFv();
+extern "C" void setJumpMode__9daAlink_cFv();
+extern "C" void getMetamorphoseNearDis__9daAlink_cCFv();
+extern "C" void getMetamorphoseFarDis__9daAlink_cCFv();
+extern "C" void getMetamorphoseFarAngle__9daAlink_cCFv();
+extern "C" void setMidnaMsg__9daAlink_cFv();
+extern "C" void notTalk__9daAlink_cFv();
+extern "C" void setTalkStatus__9daAlink_cFv();
+extern "C" void getFrontRollRate__9daAlink_cFv();
+extern "C" void decideCommonDoStatus__9daAlink_cFv();
+extern "C" void decideDoStatus__9daAlink_cFv();
+extern "C" void checkWaitAction__9daAlink_cFv();
+extern "C" void setFallVoice__9daAlink_cFv();
+extern "C" void setLandPassiveData__9daAlink_cFv();
+extern "C" void setStepLandVibration__9daAlink_cFv();
+extern "C" void checkLandAction__9daAlink_cFi();
+extern "C" void checkSlideAction__9daAlink_cFv();
+extern "C" void checkAutoJumpAction__9daAlink_cFv();
+extern "C" void checkCutJumpInFly__9daAlink_cFv();
+extern "C" void checkFrontWallTypeAction__9daAlink_cFv();
+extern "C" void checkItemActionInitStart__9daAlink_cFv();
+extern "C" void checkItemChangeAutoAction__9daAlink_cFv();
+extern "C" void setFastShotTimer__9daAlink_cFv();
+extern "C" void cancelItemUseQuake__9daAlink_cFi();
+extern "C" void cancelUpperItemReadyAnime__9daAlink_cFi();
+extern "C" void checkItemActorPointer__9daAlink_cFv();
+extern "C" void checkSwordTwirlAction__9daAlink_cFv();
+extern "C" void checkUpperItemActionFly__9daAlink_cFv();
+extern "C" void checkItemButtonChange__9daAlink_cFv();
+extern "C" void checkUpperItemAction__9daAlink_cFv();
+extern "C" void orderPeep__9daAlink_cFv();
+extern "C" void orderTalk__9daAlink_cFi();
+extern "C" static void daAlink_searchBouDoor__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchKolin__FP10fopAc_ac_cPv();
+extern "C" void orderZTalk__9daAlink_cFv();
+extern "C" void checkNormalAction__9daAlink_cFv();
+extern "C" void checkReadyItem__9daAlink_cFv();
+extern "C" void checkItemAction__9daAlink_cFv();
+extern "C" bool checkRAction__9daAlink_cFv();
+extern "C" void checkMoveDoAction__9daAlink_cFv();
+extern "C" void checkSideRollAction__9daAlink_cFi();
+extern "C" void checkNoUpperAnime__9daAlink_cCFv();
+extern "C" void checkOneHandItemEquipAnime__9daAlink_cCFv();
+extern "C" void checkItemEquipAnime__9daAlink_cCFv();
+extern "C" void checkEquipAnime__9daAlink_cCFv();
+extern "C" void checkWindDashAnime__9daAlink_cCFv();
+extern "C" void checkSwordTwirlAnime__9daAlink_cCFv();
+extern "C" void swordEquip__9daAlink_cFi();
+extern "C" void swordUnequip__9daAlink_cFv();
+extern "C" void itemEquip__9daAlink_cFUs();
+extern "C" void itemUnequip__9daAlink_cFUsf();
+extern "C" void checkFastUnequip__9daAlink_cFv();
+extern "C" void allUnequip__9daAlink_cFi();
+extern "C" void checkItemChangeFromButton__9daAlink_cFv();
+extern "C" void checkNextActionFromButton__9daAlink_cFv();
+extern "C" void checkGroundSpecialMode__9daAlink_cFv();
+extern "C" void commonCheckNextAction__9daAlink_cFi();
+extern "C" void checkNextAction__9daAlink_cFi();
+extern "C" void commonChangeItem__9daAlink_cFv();
+extern "C" void setItemAction__9daAlink_cFv();
+extern "C" void checkNextActionFromCrouch__9daAlink_cFi();
+extern "C" void checkUpperReadyThrowAnime__9daAlink_cCFv();
+extern "C" void getBodyAngleXBasePos__9daAlink_cFP4cXyz();
+extern "C" void getBodyAngleXAtnActor__9daAlink_cFi();
+extern "C" void setBodyAngleXReadyAnime__9daAlink_cFi();
+extern "C" void setMagicArmorBrk__9daAlink_cFi();
+extern "C" void checkMagicArmorHeavy__9daAlink_cCFv();
+extern "C" void checkBootsOrArmorHeavy__9daAlink_cCFv();
+extern "C" void checkHeavyStateOn__9daAlink_cFii();
+extern "C" void setOutPower__9daAlink_cFfsi();
+extern "C" void initGravity__9daAlink_cFv();
+extern "C" void setSpecialGravity__9daAlink_cFffi();
+extern "C" void transAnimeProc__9daAlink_cFP4cXyzff();
+extern "C" void setFootSpeed__9daAlink_cFv();
+extern "C" void posMove__9daAlink_cFv();
+extern "C" void autoGroundHit__9daAlink_cFv();
+extern "C" void startPeepChange__9daAlink_cFv();
+extern "C" void setLastSceneDamage__9daAlink_cFiPUl();
+extern "C" void setLastSceneMode__9daAlink_cFPUl();
+extern "C" void startRestartRoom__9daAlink_cFUliii();
+extern "C" void checkCoachGuardGame__9daAlink_cFv();
+extern "C" void checkRoofRestart__9daAlink_cFv();
+extern "C" void checkRestartRoom__9daAlink_cFv();
+extern "C" void getSceneExitMoveAngle__9daAlink_cFv();
+extern "C" void checkSceneChange__9daAlink_cFi();
+extern "C" void voiceStart__9daAlink_cFUl();
+extern "C" void voiceStartLevel__9daAlink_cFUl();
+extern "C" void seStartSwordCut__9daAlink_cFUl();
+extern "C" void seStartOnlyReverb__9daAlink_cFUl();
+extern "C" void seStartOnlyReverbLevel__9daAlink_cFUl();
+extern "C" void seStartMapInfo__9daAlink_cFUl();
+extern "C" void seStartMapInfoLevel__9daAlink_cFUl();
+extern "C" void setBasAnime__9daAlink_cFQ29daAlink_c13daAlink_UNDER();
+extern "C" void initBasAnime__9daAlink_cFv();
+extern "C" void resetBasAnime__9daAlink_cFv();
+extern "C" void checkSightLine__9daAlink_cFfP4cXyz();
+extern "C" void setMetamorphoseModel__9daAlink_cFi();
+extern "C" void keepItemData__9daAlink_cFv();
+extern "C" void returnKeepItemData__9daAlink_cFv();
+extern "C" void setItemModel__9daAlink_cFv();
+extern "C" void setItemActor__9daAlink_cFv();
+extern "C" void makeItemType__9daAlink_cFv();
+extern "C" void checkZoraWearAbility__9daAlink_cCFv();
+extern "C" void checkMagicArmorWearAbility__9daAlink_cCFv();
+extern "C" void loadAramBmd__9daAlink_cFUsUl();
+extern "C" void loadAram__9daAlink_cFUsUl();
+extern "C" void loadAramItemBrk__9daAlink_cFUsP8J3DModel();
+extern "C" void loadAramItemBtk__9daAlink_cFUsP8J3DModel();
+extern "C" void loadAramItemBtp__9daAlink_cFUsP8J3DModel();
+extern "C" void changeItemBck__9daAlink_cFUsf();
+extern "C" void checkGroupItem__9daAlink_cCFii();
+extern "C" void checkSetItemTrigger__9daAlink_cFi();
+extern "C" void checkItemSetButton__9daAlink_cFi();
+extern "C" void checkField__9daAlink_cFv();
+extern "C" void checkBossRoom__9daAlink_cFv();
+extern "C" void checkDungeon__9daAlink_cFv();
+extern "C" void checkCastleTown__9daAlink_cFv();
+extern "C" void checkCloudSea__9daAlink_cFv();
+extern "C" void checkRoomOnly__9daAlink_cFv();
+extern "C" void checkLv2DungeonRoomSpecial__9daAlink_cFv();
+extern "C" void checkRoomSpecial__9daAlink_cFv();
+extern "C" void checkRoom__9daAlink_cFv();
+extern "C" void checkNotBattleStage__9daAlink_cFv();
+extern "C" void checkNotHeavyBootsStage__9daAlink_cFv();
+extern "C" void checkNotAutoJumpStage__9daAlink_cFv();
+extern "C" void checkCastleTownUseItem__9daAlink_cFUs();
+extern "C" void changeItemTriggerKeepProc__9daAlink_cFUci();
+extern "C" void checkNewItemChange__9daAlink_cFUc();
+extern "C" void deleteEquipItem__9daAlink_cFii();
+extern "C" void setLight__9daAlink_cFv();
+extern "C" void setFrontRollCrashShock__9daAlink_cFUc();
+extern "C" void getModelJointMtx__9daAlink_cFUs();
+extern "C" void onFrollCrashFlg__9daAlink_cFUci();
+extern "C" void changeWarpMaterial__9daAlink_cFQ29daAlink_c21daAlink_WARP_MAT_MODE();
+extern "C" void commonProcInit__9daAlink_cFQ29daAlink_c12daAlink_PROC();
+extern "C" void commonProcInitNotSameProc__9daAlink_cFQ29daAlink_c12daAlink_PROC();
+extern "C" void procPreActionUnequipInit__9daAlink_cFiP10fopAc_ac_c();
+extern "C" void procPreActionUnequip__9daAlink_cFv();
+extern "C" void procServiceWaitInit__9daAlink_cFv();
+extern "C" void procServiceWait__9daAlink_cFv();
+extern "C" void procTiredWaitInit__9daAlink_cFv();
+extern "C" void procTiredWait__9daAlink_cFv();
+extern "C" void procWaitInit__9daAlink_cFv();
+extern "C" void procWait__9daAlink_cFv();
+extern "C" void procMoveInit__9daAlink_cFv();
+extern "C" void procMove__9daAlink_cFv();
+extern "C" void procAtnMoveInit__9daAlink_cFv();
+extern "C" void procAtnMove__9daAlink_cFv();
+extern "C" void procAtnActorWaitInit__9daAlink_cFv();
+extern "C" void procAtnActorWait__9daAlink_cFv();
+extern "C" void procAtnActorMoveInit__9daAlink_cFv();
+extern "C" void procAtnActorMove__9daAlink_cFv();
+extern "C" void procWaitTurnInit__9daAlink_cFv();
+extern "C" void procWaitTurn__9daAlink_cFv();
+extern "C" void procMoveTurnInit__9daAlink_cFi();
+extern "C" void procMoveTurn__9daAlink_cFv();
+extern "C" void procSideStepInit__9daAlink_cFi();
+extern "C" void procSideStep__9daAlink_cFv();
+extern "C" void procSideStepLandInit__9daAlink_cFv();
+extern "C" void procSideStepLand__9daAlink_cFv();
+extern "C" void procSlideInit__9daAlink_cFs();
+extern "C" void procSlide__9daAlink_cFv();
+extern "C" void procSlideLandInit__9daAlink_cFi();
+extern "C" void procSlideLand__9daAlink_cFv();
+extern "C" void procFrontRollInit__9daAlink_cFv();
+extern "C" void procFrontRoll__9daAlink_cFv();
+extern "C" void procFrontRollCrashInit__9daAlink_cFv();
+extern "C" void procFrontRollCrash__9daAlink_cFv();
+extern "C" void procFrontRollSuccessInit__9daAlink_cFv();
+extern "C" void procFrontRollSuccess__9daAlink_cFv();
+extern "C" void procSideRollInit__9daAlink_cFi();
+extern "C" void procSideRoll__9daAlink_cFv();
+extern "C" void backJumpSpeedDec__9daAlink_cFv();
+extern "C" void procBackJumpInit__9daAlink_cFi();
+extern "C" void procBackJump__9daAlink_cFv();
+extern "C" void procBackJumpLandInit__9daAlink_cFi();
+extern "C" void procBackJumpLand__9daAlink_cFv();
+extern "C" void procSlipInit__9daAlink_cFv();
+extern "C" void procSlip__9daAlink_cFv();
+extern "C" void procAutoJumpInit__9daAlink_cFi();
+extern "C" void procAutoJump__9daAlink_cFv();
+extern "C" void procDiveJumpInit__9daAlink_cFv();
+extern "C" void procDiveJump__9daAlink_cFv();
+extern "C" void procRollJumpInit__9daAlink_cFv();
+extern "C" void procRollJump__9daAlink_cFv();
+extern "C" void procFallInit__9daAlink_cFif();
+extern "C" void procFall__9daAlink_cFv();
+extern "C" void procLandInit__9daAlink_cFf();
+extern "C" void procLand__9daAlink_cFv();
+extern "C" void procSmallJumpInit__9daAlink_cFi();
+extern "C" void procSmallJump__9daAlink_cFv();
+extern "C" void procStepMoveInit__9daAlink_cFv();
+extern "C" void procStepMove__9daAlink_cFv();
+extern "C" void procCrouchInit__9daAlink_cFv();
+extern "C" void procCrouch__9daAlink_cFv();
+extern "C" void procCoMetamorphoseInit__9daAlink_cFv();
+extern "C" void procCoMetamorphose__9daAlink_cFv();
+extern "C" void procCoMetamorphoseOnlyInit__9daAlink_cFv();
+extern "C" void procCoMetamorphoseOnly__9daAlink_cFv();
+extern "C" void procFloorDownReboundInit__9daAlink_cFv();
+extern "C" void procFloorDownRebound__9daAlink_cFv();
+extern "C" void procGoronRideWaitInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procGoronRideWait__9daAlink_cFv();
+extern "C" void execute__9daAlink_cFv();
+extern "C" static void daAlink_Execute__FP9daAlink_c();
+extern "C" void setDrawHand__9daAlink_cFv();
+extern "C" void checkSwordDraw__9daAlink_cFv();
+extern "C" void checkShieldDraw__9daAlink_cFv();
+extern "C" void checkItemDraw__9daAlink_cFv();
+extern "C" void initShadowScaleLight__9daAlink_cFv();
+extern "C" void moveShadowScaleLight__9daAlink_cFv();
+extern "C" void shadowDraw__9daAlink_cFv();
+extern "C" void modelCalc__9daAlink_cFP8J3DModel();
+extern "C" void basicModelDraw__9daAlink_cFP8J3DModel();
+extern "C" void modelDraw__9daAlink_cFP8J3DModeli();
+extern "C" void setWaterDropColor__9daAlink_cFPC13J3DGXColorS10();
+extern "C" void initTevCustomColor__9daAlink_cFv();
+extern "C" void draw__9daAlink_cFv();
+extern "C" static void daAlink_Draw__FP9daAlink_c();
+extern "C" void __dt__9daAlink_cFv();
+extern "C" static void daAlink_Delete__FP9daAlink_c();
+extern "C" void checkNoSubjectModeCamera__9daAlink_cFv();
+extern "C" void acceptSubjectModeChange__9daAlink_cFv();
+extern "C" void checkSubjectAction__9daAlink_cFv();
+extern "C" void checkBodyAngleX__9daAlink_cFs();
+extern "C" void setBodyAngleToCamera__9daAlink_cFv();
+extern "C" void setSubjectMode__9daAlink_cFv();
+extern "C" void subjectCancelTrigger__9daAlink_cFv();
+extern "C" void checkSubjectEnd__9daAlink_cFi();
+extern "C" void searchPeepObj__9daAlink_cFP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchPeepObj__FP10fopAc_ac_cPv();
+extern "C" void procCoSubjectivityInit__9daAlink_cFv();
+extern "C" void procCoSubjectivity__9daAlink_cFv();
+extern "C" void procCoSwimSubjectivityInit__9daAlink_cFv();
+extern "C" void procCoSwimSubjectivity__9daAlink_cFv();
+extern "C" void procCoPeepSubjectivityInit__9daAlink_cFv();
+extern "C" void procCoPeepSubjectivity__9daAlink_cFv();
+extern "C" void checkBoardRide__9daAlink_cCFv();
+extern "C" void checkCanoeRide__9daAlink_cCFv();
+extern "C" void checkHorseRide__9daAlink_cCFv();
+extern "C" void getLeftItemMatrix__9daAlink_cFv();
+extern "C" void checkBoarRide__9daAlink_cCFv();
+extern "C" void checkSpinnerRide__9daAlink_cCFv();
+extern "C" void getLeftHandMatrix__9daAlink_cFv();
+extern "C" void getRightHandMatrix__9daAlink_cFv();
+extern "C" void onSceneChangeArea__9daAlink_cFUcUcP10fopAc_ac_c();
+extern "C" void getRightItemMatrix__9daAlink_cFv();
+extern "C" void checkPlayerNoDraw__9daAlink_cFv();
+extern "C" void __ct__9daAlink_cFv();
+extern "C" void __dt__Q29daAlink_c14firePointEff_cFv();
+extern "C" void __ct__Q29daAlink_c14firePointEff_cFv();
+extern "C" void __dt__15LIGHT_INFLUENCEFv();
+extern "C" void __dt__18daAlink_footData_cFv();
+extern "C" void __ct__18daAlink_footData_cFv();
+extern "C" void __dt__29dAlink_bottleWaterPcallBack_cFv();
+extern "C" void __dt__14daAlink_blur_cFv();
+extern "C" void __dt__15daAlink_sight_cFv();
+extern "C" void __dt__20daAlink_lockCursor_cFv();
+extern "C" void checkRideOn__9daAlink_cCFv();
+extern "C" static void dComIfGp_att_getCatghTarget__Fv();
+extern "C" static void mDoAud_setLinkHp__Fll();
+extern "C" static void dComIfGs_getLife__Fv();
+extern "C" static void dComIfGp_getRStatus__Fv();
+extern "C" void checkAttentionLock__9daAlink_cFv();
+extern "C" static void dComIfGp_setItemLifeCount__FfUc();
+extern "C" static void cMtx_multVec__FPA4_CfPC3VecP3Vec();
+extern "C" void getAnmMtx__8J3DModelFi();
+extern "C" void setBaseTRMtx__8J3DModelFPA4_f();
+extern "C" void checkFmChainGrabAnime__9daAlink_cCFv();
+extern "C" void checkSmallUpperGuardAnime__9daAlink_cCFv();
+extern "C" static void dComIfGp_evmng_startCheck__FPCc();
+extern "C" static void mDoAud_setLinkGroupInfo__FUc();
+extern "C" void getAnm__25mDoExt_MtxCalcAnmBlendTblFi();
+extern "C" void ChkRoofHit__9dBgS_AcchCFv();
+extern "C" void ClrGroundHit__9dBgS_AcchFv();
+extern "C" void checkReinRide__9daAlink_cCFv();
+extern "C" void checkWolfEnemyThrowAnime__9daAlink_cCFv();
+extern "C" void checkSpecialDemoMode__9daAlink_cCFv();
+extern "C" void setMidnaTalkStatus__9daAlink_cFUc();
+extern "C" void set3DStatus__9daAlink_cFUcUc();
+extern "C" void offSetFlg__16daAlink_matAnm_cFv();
+extern "C" void checkModeFlg__9daAlink_cCFUl();
+extern "C" void getShieldChangeWaitTimer__9daAlink_cCFv();
+extern "C" void getClothesChangeWaitTimer__9daAlink_cCFv();
+extern "C" void checkHorseStart__9daAlink_cFv();
+extern "C" void checkCutTurnCharge__9daAlink_cCFv();
+extern "C" void checkAcceptDungeonWarpAlink__9daAlink_cFi();
+extern "C" void getSpinnerActor__9daAlink_cFv();
+extern "C" void getSumouCounter__9daAlink_cCFv();
+extern "C" void checkSumouWithstand__9daAlink_cCFv();
+extern "C" void setMidnaMsgNum__9daAlink_cFP10fopAc_ac_cUs();
+extern "C" void getModelMtx__9daAlink_cFv();
+extern "C" void getInvMtx__9daAlink_cFv();
+extern "C" void getLinkBackBone1Matrix__9daAlink_cFv();
+extern "C" void getWolfMouthMatrix__9daAlink_cFv();
+extern "C" void getWolfBackbone2Matrix__9daAlink_cFv();
+extern "C" void getBottleMtx__9daAlink_cFv();
+extern "C" void getHeadMtx__9daAlink_cFv();
+extern "C" void getGroundY__9daAlink_cFv();
+extern "C" void getBaseAnimeFrameRate__9daAlink_cCFv();
+extern "C" void getAtnActorID__9daAlink_cCFv();
+extern "C" void getItemID__9daAlink_cCFv();
+extern "C" void getGrabActorID__9daAlink_cCFv();
+extern "C" void setForcePutPos__9daAlink_cFRC4cXyz();
+extern "C" void checkPlayerFly__9daAlink_cCFv();
+extern "C" void checkFrontRoll__9daAlink_cCFv();
+extern "C" void checkWolfDash__9daAlink_cCFv();
+extern "C" void checkAutoJump__9daAlink_cCFv();
+extern "C" void checkSideStep__9daAlink_cCFv();
+extern "C" void checkWolfTriggerJump__9daAlink_cCFv();
+extern "C" void checkGuardBreakMode__9daAlink_cCFv();
+extern "C" void checkLv3Slide__9daAlink_cCFv();
+extern "C" void checkWolfHowlDemoMode__9daAlink_cCFv();
+extern "C" void checkElecDamage__9daAlink_cCFv();
+extern "C" void checkEmptyBottleSwing__9daAlink_cCFv();
+extern "C" void checkBottleSwingMode__9daAlink_cCFv();
+extern "C" void checkHawkWait__9daAlink_cCFv();
+extern "C" void checkGoatThrow__9daAlink_cCFv();
+extern "C" void checkGoatThrowAfter__9daAlink_cCFv();
+extern "C" void checkWolfTagLockJump__9daAlink_cCFv();
+extern "C" void checkWolfTagLockJumpLand__9daAlink_cCFv();
+extern "C" void checkWolfRopeHang__9daAlink_cCFv();
+extern "C" void checkRollJump__9daAlink_cCFv();
+extern "C" void checkGoronRideWait__9daAlink_cCFv();
+extern "C" void checkWolfChain__9daAlink_cCFv();
+extern "C" void checkWolfWait__9daAlink_cCFv();
+extern "C" void checkWolfJumpAttack__9daAlink_cCFv();
+extern "C" void checkWolfRSit__9daAlink_cCFv();
+extern "C" void checkBottleDrinkEnd__9daAlink_cCFv();
+extern "C" void checkWolfDig__9daAlink_cCFv();
+extern "C" void checkCutCharge__9daAlink_cCFv();
+extern "C" void checkCutLargeJumpCharge__9daAlink_cCFv();
+extern "C" void checkComboCutTurn__9daAlink_cCFv();
+extern "C" void checkClimbMove__9daAlink_cCFv();
+extern "C" void checkGrassWhistle__9daAlink_cCFv();
+extern "C" void checkBoarRun__9daAlink_cCFv();
+extern "C" void checkHorseRideNotReady__9daAlink_cCFv();
+extern "C" void getSearchBallScale__9daAlink_cCFv();
+extern "C" void checkFastShotTime__9daAlink_cFv();
+extern "C" void checkCutJumpCancelTurn__9daAlink_cCFv();
+extern "C" void checkSingleBoarBattleSecondBowReady__9daAlink_cCFv();
+extern "C" void cancelDungeonWarpReadyNeck__9daAlink_cFv();
+extern "C" void onSceneChangeAreaJump__9daAlink_cFUcUcP10fopAc_ac_c();
+extern "C" void onSceneChangeDead__9daAlink_cFUci();
+extern "C" void checkNoEquipItem__9daAlink_cCFv();
+extern "C" void getBoardCutTurnOffsetAngleY__9daAlink_cCFv();
+extern "C" void getMagneBootsTopVec__9daAlink_cFv();
+extern "C" void setCargoCarry__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setGoronSideMove__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setSumouReady__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setSumouPushBackDirection__9daAlink_cFs();
+extern "C" void setSumouLoseHeadUp__9daAlink_cFv();
+extern "C" void checkPriActorOwn__9daAlink_cCFPC10fopAc_ac_c();
+extern "C" void checkWolfEnemyBiteAllOwn__9daAlink_cCFPC10fopAc_ac_c();
+extern "C" void setWolfEnemyHangBiteAngle__9daAlink_cFs();
+extern "C" void setSumouGraspCancelCount__9daAlink_cFi();
+extern "C" void checkItemSwordEquip__9daAlink_cCFv();
+extern "C" void getSinkShapeOffset__9daAlink_cCFv();
+extern "C" void checkSinkDead__9daAlink_cCFv();
+extern "C" void checkCutJumpMode__9daAlink_cCFv();
+extern "C" void getGiantPuzzleAimAngle__9daAlink_cCFv();
+extern "C" void getSwordChangeWaitTimer__9daAlink_cCFv();
+extern "C" void checkMetamorphose__9daAlink_cCFv();
+extern "C" void checkWolfDownAttackPullOut__9daAlink_cCFv();
+extern "C" void getMidnaAtnPos__9daAlink_cCFv();
+extern "C" void checkCopyRodEquip__9daAlink_cCFv();
+extern "C" void checkCanoeFishingGetLeft__9daAlink_cCFv();
+extern "C" void checkCanoeFishingGetRight__9daAlink_cCFv();
+extern "C" void checkBeeChildDrink__9daAlink_cCFv();
+extern "C" void getWolfHowlMgrP__9daAlink_cFv();
+extern "C" void checkWolfHowlSuccessAnime__9daAlink_cCFv();
+extern "C" void checkOctaIealHang__9daAlink_cCFv();
+extern "C" void cancelOctaIealHang__9daAlink_cFv();
+extern "C" void cancelDragonHangBackJump__9daAlink_cFv();
+extern "C" void setOctaIealWildHang__9daAlink_cFv();
+extern "C" void checkDragonHangRide__9daAlink_cCFv();
+extern "C" void playerStartCollisionSE__9daAlink_cFUlUl();
+extern "C" void __dt__16daAlink_matAnm_cFv();
+extern "C" void __dt__12dBgS_ObjAcchFv();
+extern "C" void __dt__Q29daAlink_c14hsChainShape_cFv();
+extern "C" static void daAlink_searchNightStalker__FP10fopAc_ac_cPv();
+extern "C" void checkLightSwordMtrl__9daAlink_cFv();
+extern "C" void checkSwordEquipAnime__9daAlink_cCFv();
+extern "C" void checkCutDashAnime__9daAlink_cCFv();
+extern "C" void checkCutDashEnemyHit__9daAlink_cFR12dCcD_GObjInf();
+extern "C" void getSwordAtType__9daAlink_cFv();
+extern "C" void initCutTurnAt__9daAlink_cFfi();
+extern "C" void checkCutFinishJumpUp__9daAlink_cFv();
+extern "C" void changeCutFast__9daAlink_cFv();
+extern "C" void checkCutFastReady__9daAlink_cFv();
+extern "C" void setSwordModel__9daAlink_cFv();
+extern "C" void offSwordModel__9daAlink_cFv();
+extern "C" void checkCutTypeNoBlur__9daAlink_cCFv();
+extern "C" void checkCutTurnInput__9daAlink_cCFv();
+extern "C" void getCutTurnDirection__9daAlink_cCFv();
+extern "C" void resetCombo__9daAlink_cFi();
+extern "C" void checkComboCnt__9daAlink_cFv();
+extern "C" void setCutType__9daAlink_cFUc();
+extern "C" void setCylAtParam__9daAlink_cFUl11dCcG_At_SplUcUciff();
+extern "C" void setSwordAtParam__9daAlink_cF11dCcG_At_SplUcUciff();
+extern "C" void notSwordHitVibActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setSwordHitVibration__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void checkAtShieldHit__9daAlink_cFR12dCcD_GObjInf();
+extern "C" void checkCutReverseAt__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void changeCutReverseProc__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void setCutDash__9daAlink_cFii();
+extern "C" void checkForceSwordSwing__9daAlink_cFv();
+extern "C" void setComboReserb__9daAlink_cFv();
+extern "C" void checkComboReserb__9daAlink_cFv();
+extern "C" void commonCutAction__9daAlink_cFv();
+extern "C" void setSwordVoiceSe__9daAlink_cFUl();
+extern "C" void setSwordChargeVoiceSe__9daAlink_cFv();
+extern "C" void setSwordComboVoice__9daAlink_cFv();
+extern "C" void checkCutTurnInputTrigger__9daAlink_cFv();
+extern "C" void checkCutAction__9daAlink_cFv();
+extern "C" void checkCutTurnCharge__9daAlink_cFv();
+extern "C" void getCutDirection__9daAlink_cFv();
+extern "C" void checkCutCancelNextMode__9daAlink_cFi();
+extern "C" void checkDoCutAction__9daAlink_cFv();
+extern "C" void checkCutBackState__9daAlink_cFv();
+extern "C" void checkCutHeadState__9daAlink_cFv();
+extern "C" void checkDownAttackState__9daAlink_cFv();
+extern "C" void checkCutLargeTurnState__9daAlink_cCFv();
+extern "C" void cancelCutCharge__9daAlink_cFv();
+extern "C" void initCutAtnActorSearch__9daAlink_cFv();
+extern "C" void checkCutAtnActorChange__9daAlink_cFv();
+extern "C" void setCutJumpSpeed__9daAlink_cFi();
+extern "C" void procCutNormalInit__9daAlink_cFi();
+extern "C" void procCutNormal__9daAlink_cFv();
+extern "C" void procCutFinishInit__9daAlink_cFi();
+extern "C" void procCutFinish__9daAlink_cFv();
+extern "C" void procCutFinishJumpUpInit__9daAlink_cFv();
+extern "C" void procCutFinishJumpUp__9daAlink_cFv();
+extern "C" void procCutFinishJumpUpLandInit__9daAlink_cFv();
+extern "C" void procCutFinishJumpUpLand__9daAlink_cFv();
+extern "C" void procCutReverseInit__9daAlink_cFQ29daAlink_c11daAlink_ANM();
+extern "C" void procCutReverse__9daAlink_cFv();
+extern "C" void procCutJumpInit__9daAlink_cFi();
+extern "C" void procCutJump__9daAlink_cFv();
+extern "C" void procCutJumpLandInit__9daAlink_cFi();
+extern "C" void procCutJumpLand__9daAlink_cFv();
+extern "C" void procCutTurnInit__9daAlink_cFii();
+extern "C" void procCutTurn__9daAlink_cFv();
+extern "C" void procCutTurnChargeInit__9daAlink_cFv();
+extern "C" void procCutTurnCharge__9daAlink_cFv();
+extern "C" void procCutTurnMoveInit__9daAlink_cFi();
+extern "C" void procCutTurnMove__9daAlink_cFv();
+extern "C" void procCutDownInit__9daAlink_cFv();
+extern "C" void procCutDown__9daAlink_cFv();
+extern "C" void procCutDownLandInit__9daAlink_cFP13fopEn_enemy_c();
+extern "C" void procCutDownLand__9daAlink_cFv();
+extern "C" void procCutHeadInit__9daAlink_cFv();
+extern "C" void procCutHead__9daAlink_cFv();
+extern "C" void procCutHeadLandInit__9daAlink_cFv();
+extern "C" void procCutHeadLand__9daAlink_cFv();
+extern "C" void procCutLargeJumpChargeInit__9daAlink_cFv();
+extern "C" void procCutLargeJumpCharge__9daAlink_cFv();
+extern "C" void procCutLargeJumpInit__9daAlink_cFv();
+extern "C" void procCutLargeJump__9daAlink_cFv();
+extern "C" void procCutLargeJumpLandInit__9daAlink_cFi();
+extern "C" void procCutLargeJumpLand__9daAlink_cFv();
+extern "C" void procSwordUnequipSpInit__9daAlink_cFv();
+extern "C" void procSwordUnequipSp__9daAlink_cFv();
+extern "C" void getFreezeR__9daAlink_cCFv();
+extern "C" void getFreezeG__9daAlink_cCFv();
+extern "C" void getFreezeB__9daAlink_cCFv();
+extern "C" void checkMiddleBossGoronRoom__9daAlink_cFv();
+extern "C" void setDkCaught__9daAlink_cFP10fopAc_ac_c();
+extern "C" void freezeTimerDamage__9daAlink_cFv();
+extern "C" void onPressedDamage__9daAlink_cFRC4cXyzs();
+extern "C" void checkNoLandDamageSlidePolygon__9daAlink_cFv();
+extern "C" void checkCutLandDamage__9daAlink_cFv();
+extern "C" void checkCaughtEscapeCutTurn__9daAlink_cFv();
+extern "C" void setThrowDamage__9daAlink_cFsffiii();
+extern "C" void damageMagnification__9daAlink_cFii();
+extern "C" void setDamagePoint__9daAlink_cFiiii();
+extern "C" void setDamagePointNormal__9daAlink_cFi();
+extern "C" void setLandDamagePoint__9daAlink_cFi();
+extern "C" void getDamageVec__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void setDashDamage__9daAlink_cFv();
+extern "C" void checkIcePolygonDamage__9daAlink_cFP13cBgS_PolyInfo();
+extern "C" void checkMagicArmorNoDamage__9daAlink_cFv();
+extern "C" void checkPolyDamage__9daAlink_cFv();
+extern "C" void checkElecReturnDamage__9daAlink_cFR12dCcD_GObjInfPP10fopAc_ac_c();
+extern "C" void damageTimerCount__9daAlink_cFv();
+extern "C" void checkHugeAttack__9daAlink_cCFi();
+extern "C" void checkLargeAttack__9daAlink_cCFi();
+extern "C" void checkDamageAction__9daAlink_cFv();
+extern "C" void procDamageInit__9daAlink_cFP12dCcD_GObjInfi();
+extern "C" void procDamage__9daAlink_cFv();
+extern "C" void procCoLargeDamageInit__9daAlink_cFiissP12dCcD_GObjInfi();
+extern "C" void procCoLargeDamage__9daAlink_cFv();
+extern "C" void procLargeDamageUpInit__9daAlink_cFiiss();
+extern "C" void procLargeDamageUp__9daAlink_cFv();
+extern "C" void procCoLargeDamageWallInit__9daAlink_cFiiss();
+extern "C" void procCoLargeDamageWall__9daAlink_cFv();
+extern "C" void procCoPolyDamageInit__9daAlink_cFv();
+extern "C" void procCoPolyDamage__9daAlink_cFv();
+extern "C" void procLandDamageInit__9daAlink_cFi();
+extern "C" void procLandDamage__9daAlink_cFv();
+extern "C" void procCoElecDamageInit__9daAlink_cFP10fopAc_ac_cP12dCcD_GObjInfi();
+extern "C" void procCoElecDamage__9daAlink_cFv();
+extern "C" void procStEscapeInit__9daAlink_cFv();
+extern "C" void procStEscape__9daAlink_cFv();
+extern "C" void procDkCaughtInit__9daAlink_cFUi();
+extern "C" void procDkCaught__9daAlink_cFv();
+extern "C" void setScreamWaitAnime__9daAlink_cFv();
+extern "C" void procScreamWaitInit__9daAlink_cFv();
+extern "C" void procScreamWait__9daAlink_cFv();
+extern "C" void procCoSandWallHitInit__9daAlink_cFv();
+extern "C" void procCoSandWallHit__9daAlink_cFv();
+extern "C" void procCoLavaReturnInit__9daAlink_cFi();
+extern "C" void procCoLavaReturn__9daAlink_cFv();
+extern "C" void procCoSwimFreezeReturnInit__9daAlink_cFv();
+extern "C" void procCoSwimFreezeReturn__9daAlink_cFv();
+extern "C" void checkEnemyGroup__9daAlink_cFP10fopAc_ac_c();
+extern "C" void checkSpecialNpc__9daAlink_cFP10fopAc_ac_c();
+extern "C" void checkShieldAttackEmphasys__9daAlink_cFv();
+extern "C" void checkGuardActionChange__9daAlink_cFv();
+extern "C" void stickArrowIncrement__9daAlink_cFi();
+extern "C" void setArrowShieldActor__9daAlink_cFP10fopAc_ac_ci();
+extern "C" void checkWoodShieldEquipNotIronBall__9daAlink_cCFv();
+extern "C" void getArrowShieldOffset__9daAlink_cCFPC4cXyzPC5csXyzP4cXyzP4cXyz();
+extern "C" void setArrowShieldPos__9daAlink_cCFP4cXyzP5csXyzPC4cXyzPC4cXyz();
+extern "C" void checkUpperGuardAnime__9daAlink_cCFv();
+extern "C" void checkPlayerGuard__9daAlink_cCFv();
+extern "C" void checkPlayerGuardAndAttack__9daAlink_cCFv();
+extern "C" void checkGuardAccept__9daAlink_cFv();
+extern "C" void setUpperGuardAnime__9daAlink_cFf();
+extern "C" void setShieldGuard__9daAlink_cFv();
+extern "C" void setGuardSe__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void setSmallGuard__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void procGuardSlipInit__9daAlink_cFiP12dCcD_GObjInf();
+extern "C" void procGuardSlip__9daAlink_cFv();
+extern "C" void procGuardAttackInit__9daAlink_cFv();
+extern "C" void procGuardAttack__9daAlink_cFv();
+extern "C" void procGuardBreakInit__9daAlink_cFv();
+extern "C" void procGuardBreak__9daAlink_cFv();
+extern "C" void procTurnMoveInit__9daAlink_cFi();
+extern "C" void procTurnMove__9daAlink_cFv();
+extern "C" void getArrowFlyData__9daAlink_cCFPfPfi();
+extern "C" void getArrowIncAtR__9daAlink_cCFv();
+extern "C" void getBombArrowFlyExplodeTime__9daAlink_cCFv();
+extern "C" void getArrowIncAtMaxStart__9daAlink_cCFv();
+extern "C" void getArrowIncAtMax__9daAlink_cCFv();
+extern "C" void checkBowAndSlingItem__9daAlink_cFi();
+extern "C" void setSlingModel__9daAlink_cFv();
+extern "C" void checkBowCameraArrowPosP__9daAlink_cFPsPs();
+extern "C" void checkArrowChargeEnd__9daAlink_cCFv();
+extern "C" void checkBowReadyAnime__9daAlink_cCFv();
+extern "C" void checkBowAnime__9daAlink_cCFv();
+extern "C" void makeArrow__9daAlink_cFv();
+extern "C" void deleteArrow__9daAlink_cFv();
+extern "C" void setBowOrSlingStatus__9daAlink_cFv();
+extern "C" void changeArrowType__9daAlink_cFv();
+extern "C" void cancelBowMoveRideNotAtn__9daAlink_cFv();
+extern "C" void cancelBowMove__9daAlink_cFv();
+extern "C" void setBowReadyAnime__9daAlink_cFv();
+extern "C" void setBowReloadAnime__9daAlink_cFv();
+extern "C" void checkUpperItemActionBow__9daAlink_cFv();
+extern "C" void checkUpperItemActionBowFly__9daAlink_cFv();
+extern "C" void checkNextActionBow__9daAlink_cFv();
+extern "C" void setBowModel__9daAlink_cFv();
+extern "C" void checkBowGrabLeftHand__9daAlink_cCFv();
+extern "C" void setBowHangAnime__9daAlink_cFv();
+extern "C" void setBowNormalAnime__9daAlink_cFv();
+extern "C" void setBowSight__9daAlink_cFv();
+extern "C" void procBowSubjectInit__9daAlink_cFv();
+extern "C" void procBowSubject__9daAlink_cFv();
+extern "C" void procBowMoveInit__9daAlink_cFv();
+extern "C" void procBowMove__9daAlink_cFv();
+extern "C" void checkBoomerangLockAccept__9daAlink_cFv();
+extern "C" void getBoomSpeed__9daAlink_cFv();
+extern "C" void getBoomCatchSpeed__9daAlink_cCFv();
+extern "C" void getBoomFlyMax__9daAlink_cCFv();
+extern "C" void getBoomLockMax__9daAlink_cFv();
+extern "C" void getBoomBgThroughTime__9daAlink_cCFv();
+extern "C" void checkBossBabaRoom__9daAlink_cFv();
+extern "C" void cancelBoomerangLock__9daAlink_cFP10fopAc_ac_c();
+extern "C" void getBoomerangActor__9daAlink_cFv();
+extern "C" void checkBoomerangChargeEnd__9daAlink_cFv();
+extern "C" void checkBoomerangCarry__9daAlink_cFP10fopAc_ac_c();
+extern "C" void initBoomerangUpperAnimeSpeed__9daAlink_cFi();
+extern "C" void checkBoomerangAnime__9daAlink_cCFv();
+extern "C" void checkBoomerangThrowAnime__9daAlink_cCFv();
+extern "C" void setBoomerangReadyQuake__9daAlink_cFv();
+extern "C" void setBoomerangReadyAnime__9daAlink_cFv();
+extern "C" void setThrowBoomerangAnime__9daAlink_cFv();
+extern "C" void setBoomerangCatchAnime__9daAlink_cFv();
+extern "C" void throwBoomerang__9daAlink_cFv();
+extern "C" void returnBoomerang__9daAlink_cFi();
+extern "C" void checkUpperItemActionBoomerang__9daAlink_cFv();
+extern "C" void checkUpperItemActionBoomerangFly__9daAlink_cFv();
+extern "C" void checkNextActionBoomerang__9daAlink_cFv();
+extern "C" void checkBoomerangCatchAction__9daAlink_cFv();
+extern "C" void setBoomerangSight__9daAlink_cFv();
+extern "C" void procBoomerangSubjectInit__9daAlink_cFv();
+extern "C" void procBoomerangSubject__9daAlink_cFv();
+extern "C" void procBoomerangMoveInit__9daAlink_cFv();
+extern "C" void procBoomerangMove__9daAlink_cFv();
+extern "C" void procBoomerangCatchInit__9daAlink_cFv();
+extern "C" void procBoomerangCatch__9daAlink_cFv();
+extern "C" void checkLv6BossRoom__9daAlink_cFv();
+extern "C" void getCopyRodBallSpeed__9daAlink_cCFv();
+extern "C" void getCopyRodBallReturnSpeed__9daAlink_cCFv();
+extern "C" void getCopyRodBallDisMax__9daAlink_cCFv();
+extern "C" void getCopyRodControllActor__9daAlink_cFv();
+extern "C" void getCopyRodCameraActor__9daAlink_cFv();
+extern "C" void initCopyRodUpperAnimeSpeed__9daAlink_cFi();
+extern "C" void checkForestOldCentury__9daAlink_cFv();
+extern "C" void checkCopyRodTopUse__9daAlink_cFv();
+extern "C" void checkCopyRodAnime__9daAlink_cCFv();
+extern "C" void setCopyRodControllAnime__9daAlink_cFv();
+extern "C" void setCopyRodControllUpperSpeedRate__9daAlink_cFv();
+extern "C" void setCopyRodModel__9daAlink_cFv();
+extern "C" void setCopyRodReadyAnime__9daAlink_cFv();
+extern "C" void throwCopyRod__9daAlink_cFv();
+extern "C" void returnCopyRod__9daAlink_cFv();
+extern "C" void checkUpperItemActionCopyRod__9daAlink_cFv();
+extern "C" void checkUpperItemActionCopyRodFly__9daAlink_cFv();
+extern "C" void checkNextActionCopyRod__9daAlink_cFv();
+extern "C" void setCopyRodSight__9daAlink_cFv();
+extern "C" void procCopyRodSubjectInit__9daAlink_cFv();
+extern "C" void procCopyRodSubject__9daAlink_cFv();
+extern "C" void procCopyRodMoveInit__9daAlink_cFv();
+extern "C" void procCopyRodMove__9daAlink_cFv();
+extern "C" void procCopyRodSwingInit__9daAlink_cFv();
+extern "C" void procCopyRodSwing__9daAlink_cFv();
+extern "C" void procCopyRodReviveInit__9daAlink_cFv();
+extern "C" void procCopyRodRevive__9daAlink_cFv();
+extern "C" void concatMagneBootMtx__9daAlink_cFv();
+extern "C" void concatMagneBootInvMtx__9daAlink_cFv();
+extern "C" void multVecMagneBootInvMtx__9daAlink_cFP4cXyz();
+extern "C" void commonMagneLineCheck__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void checkBootsMoveAnime__9daAlink_cFi();
+extern "C" void setHeavyBoots__9daAlink_cFi();
+extern "C" void getMagneBootsLocalAngleY__9daAlink_cFsi();
+extern "C" void setMagneBootsMtx__9daAlink_cFP13cBgS_PolyInfoi();
+extern "C" void cancelMagneBootsOn__9daAlink_cFv();
+extern "C" void checkMagneBootsFly__9daAlink_cFv();
+extern "C" void procBootsEquipInit__9daAlink_cFv();
+extern "C" void procBootsEquip__9daAlink_cFv();
+extern "C" void procMagneBootsFlyInit__9daAlink_cFv();
+extern "C" void procMagneBootsFly__9daAlink_cFv();
+extern "C" void getBombExplodeTime__9daAlink_cCFv();
+extern "C" void getBombGravity__9daAlink_cCFv();
+extern "C" void getBombMaxFallSpeed__9daAlink_cCFv();
+extern "C" void getBombBoundRate__9daAlink_cCFv();
+extern "C" void getBombStopSpeedY__9daAlink_cCFv();
+extern "C" void getBombMaxSpeedY__9daAlink_cCFv();
+extern "C" void getBombEffScale__9daAlink_cCFv();
+extern "C" void getBombAtR__9daAlink_cCFv();
+extern "C" void getEnemyBombColorR__9daAlink_cCFv();
+extern "C" void getBombWaterGravity__9daAlink_cCFv();
+extern "C" void getBombWaterMaxFallSpeed__9daAlink_cCFv();
+extern "C" void getBombExplodeWaterEffectLimit__9daAlink_cCFv();
+extern "C" void getBombInsectLimitAngle__9daAlink_cCFv();
+extern "C" static void daAlink_checkLightBallA__FP10fopAc_ac_c();
+extern "C" static void daAlink_checkLightBallB__FP10fopAc_ac_c();
+extern "C" static void daAlink_searchLightBall__FP10fopAc_ac_cPv();
+extern "C" void checkGrabLineCheck__9daAlink_cFv();
+extern "C" void setGrabCollisionOffset__9daAlink_cFffP13cBgS_PolyInfo();
+extern "C" void exchangeGrabActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setForceGrab__9daAlink_cFP10fopAc_ac_cii();
+extern "C" void getGrabThrowRate__9daAlink_cFv();
+extern "C" void checkGrabThrowAnime__9daAlink_cCFv();
+extern "C" void checkGrabAnime__9daAlink_cCFv();
+extern "C" void checkGrabAnimeAndThrow__9daAlink_cCFv();
+extern "C" void checkGrabCarryActor__9daAlink_cFv();
+extern "C" void checkGrabSlowMoveActor__9daAlink_cFv();
+extern "C" void checkGrabHeavyActor__9daAlink_cFv();
+extern "C" void checkGrabSideActor__9daAlink_cFv();
+extern "C" void setGrabUpperAnime__9daAlink_cFf();
+extern "C" void checkGrabRooster__9daAlink_cFv();
+extern "C" void setGrabItemPos__9daAlink_cFv();
+extern "C" void freeGrabItem__9daAlink_cFv();
+extern "C" void setGrabUpperSpeedRate__9daAlink_cFv();
+extern "C" void setCarryArmAngle__9daAlink_cFff();
+extern "C" void checkGrabNotThrow__9daAlink_cFv();
+extern "C" void checkNextActionGrab__9daAlink_cFv();
+extern "C" void initGrabNextMode__9daAlink_cFv();
+extern "C" void setGrabItemThrow__9daAlink_cFv();
+extern "C" void checkUpperGrabItemThrow__9daAlink_cFf();
+extern "C" void putObjLineCheck__9daAlink_cFR11dBgS_LinChkP4cXyzP10fopAc_ac_c();
+extern "C" void grabLineCheck__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void setGrabItemActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procGrabReadyInit__9daAlink_cFv();
+extern "C" void procGrabReady__9daAlink_cFv();
+extern "C" void procGrabUpInit__9daAlink_cFv();
+extern "C" void procGrabUp__9daAlink_cFv();
+extern "C" void procGrabMiss__9daAlink_cFv();
+extern "C" void procGrabThrowInit__9daAlink_cFi();
+extern "C" void procGrabThrow__9daAlink_cFv();
+extern "C" void procGrabPutInit__9daAlink_cFv();
+extern "C" void procGrabPut__9daAlink_cFv();
+extern "C" void procGrabWaitInit__9daAlink_cFv();
+extern "C" void procGrabWait__9daAlink_cFv();
+extern "C" void procGrabReboundInit__9daAlink_cFi();
+extern "C" void procGrabRebound__9daAlink_cFv();
+extern "C" void procGrabStandInit__9daAlink_cFv();
+extern "C" void procGrabStand__9daAlink_cFv();
+extern "C" void checkInsectActorName__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procInsectCatchInit__9daAlink_cFv();
+extern "C" void procInsectCatch__9daAlink_cFv();
+extern "C" void procPickUpInit__9daAlink_cFv();
+extern "C" void procPickUp__9daAlink_cFv();
+extern "C" void procPickPutInit__9daAlink_cFi();
+extern "C" void procPickPut__9daAlink_cFv();
+extern "C" void checkSetChainPullAnime__9daAlink_cFs();
+extern "C" void getChainStickAngleY__9daAlink_cCFs();
+extern "C" void checkChainEmphasys__9daAlink_cFv();
+extern "C" void searchFmChainPos__9daAlink_cFv();
+extern "C" void setFmChainPosFromOut__9daAlink_cFP10fopAc_ac_cP4cXyzi();
+extern "C" void checkChainBlockPushPull__9daAlink_cFv();
+extern "C" void procFmChainUpInit__9daAlink_cFv();
+extern "C" void procFmChainUp__9daAlink_cFv();
+extern "C" void procFmChainStrongPullInit__9daAlink_cFv();
+extern "C" void procFmChainStrongPull__9daAlink_cFv();
+extern "C" void setWallGrabStatus__9daAlink_cFUcUc();
+extern "C" void getWallGrabStatus__9daAlink_cFv();
+extern "C" void wallGrabTrigger__9daAlink_cFv();
+extern "C" void wallGrabButton__9daAlink_cFv();
+extern "C" void setPushPullKeepData__9daAlink_cFQ29dBgW_Base13PushPullLabeli();
+extern "C" void checkPushPullTurnBlock__9daAlink_cFv();
+extern "C" void checkPullBehindWall__9daAlink_cFv();
+extern "C" void offGoatStopGame__9daAlink_cFv();
+extern "C" void checkGoatCatchActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void getGoatCatchDistance2__9daAlink_cFv();
+extern "C" void endPushPull__9daAlink_cFv();
+extern "C" void getPushPullAnimeSpeed__9daAlink_cFv();
+extern "C" void procCoPushPullWaitInit__9daAlink_cFi();
+extern "C" void procCoPushPullWait__9daAlink_cFv();
+extern "C" void procCoPushMoveInit__9daAlink_cFii();
+extern "C" void procCoPushMove__9daAlink_cFv();
+extern "C" void procPullMoveInit__9daAlink_cFi();
+extern "C" void procPullMove__9daAlink_cFv();
+extern "C" static void daAlink_searchGoat__FP10fopAc_ac_cPv();
+extern "C" void cancelGoronThrowEvent__9daAlink_cFv();
+extern "C" void setGoatStopGameFail__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procGoatMoveInit__9daAlink_cFv();
+extern "C" void procGoatMove__9daAlink_cFv();
+extern "C" void procGoatCatchInit__9daAlink_cFP10fopAc_ac_cf();
+extern "C" void procGoatCatch__9daAlink_cFv();
+extern "C" void procGoatStrokeInit__9daAlink_cFv();
+extern "C" void procGoatStroke__9daAlink_cFv();
+extern "C" void procGoronMoveInit__9daAlink_cFv();
+extern "C" void procGoronMove__9daAlink_cFv();
+extern "C" void checkSumouVsActor__9daAlink_cFv();
+extern "C" void cancelSumouMode__9daAlink_cFv();
+extern "C" void sumouPunchTrigger__9daAlink_cFv();
+extern "C" void setSumouPunchStatus__9daAlink_cFv();
+extern "C" void procSumouReadyInit__9daAlink_cFv();
+extern "C" void procSumouReady__9daAlink_cFv();
+extern "C" void procSumouMoveInit__9daAlink_cFv();
+extern "C" void procSumouMove__9daAlink_cFv();
+extern "C" void procSumouSideMoveInit__9daAlink_cFv();
+extern "C" void procSumouSideMove__9daAlink_cFv();
+extern "C" void procSumouActionInit__9daAlink_cFiii();
+extern "C" void procSumouAction__9daAlink_cFv();
+extern "C" void procSumouStaggerInit__9daAlink_cFv();
+extern "C" void procSumouStagger__9daAlink_cFv();
+extern "C" void procSumouWinLoseInit__9daAlink_cFv();
+extern "C" void procSumouWinLose__9daAlink_cFv();
+extern "C" void procSumouShikoInit__9daAlink_cFv();
+extern "C" void procSumouShiko__9daAlink_cFv();
+extern "C" static void daAlink_searchBoar__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchCoach__FP10fopAc_ac_cPv();
+extern "C" void checkHorseZeldaBowMode__9daAlink_cFv();
+extern "C" void setHorseZeldaDamage__9daAlink_cFv();
+extern "C" void checkHorseDashAccept__9daAlink_cFv();
+extern "C" void checkCowGame__9daAlink_cFv();
+extern "C" void getReinRideDirection__9daAlink_cFv();
+extern "C" void checkReinRideBgCheck__9daAlink_cFv();
+extern "C" void commonInitForceRideRein__9daAlink_cFv();
+extern "C" void initForceRideBoar__9daAlink_cFv();
+extern "C" void initForceRideHorse__9daAlink_cFv();
+extern "C" void rideGetOff__9daAlink_cFv();
+extern "C" void checkHorseNotDamageReaction__9daAlink_cCFv();
+extern "C" void checkHorseWaitLashAnime__9daAlink_cCFv();
+extern "C" void checkHorseReinLeftOnly__9daAlink_cCFv();
+extern "C" void getReinHandType__9daAlink_cCFv();
+extern "C" void checkHorseLieAnime__9daAlink_cCFv();
+extern "C" void checkHorseSubjectivity__9daAlink_cCFv();
+extern "C" void setHorseSwordUpAnime__9daAlink_cFv();
+extern "C" void setHorseTurnUpperAnime__9daAlink_cFi();
+extern "C" void checkHorseNoUpperAnime__9daAlink_cCFv();
+extern "C" void getHorseReinHandPos__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void checkHorseNotGrab__9daAlink_cCFv();
+extern "C" void setHorseStirrup__9daAlink_cFv();
+extern "C" void changeBoarRunRide__9daAlink_cFv();
+extern "C" void setSyncHorsePos__9daAlink_cFv();
+extern "C" void setSyncBoarPos__9daAlink_cFv();
+extern "C" void setSyncBoarRunPos__9daAlink_cFv();
+extern "C" void setSyncRidePos__9daAlink_cFv();
+extern "C" void setHorseTurnAnime__9daAlink_cFv();
+extern "C" void getBaseHorseAnime__9daAlink_cFPQ29daAlink_c11daAlink_ANM();
+extern "C" void checkHorseSpecialProc__9daAlink_cFv();
+extern "C" void checkHorseServiceWaitAnime__9daAlink_cFv();
+extern "C" void setSyncHorse__9daAlink_cFi();
+extern "C" void setSyncBoar__9daAlink_cFi();
+extern "C" void setSyncRide__9daAlink_cFi();
+extern "C" void setBaseHorseAnimeFrame__9daAlink_cFv();
+extern "C" void setBaseBoarAnime__9daAlink_cFv();
+extern "C" void setBaseRideAnime__9daAlink_cFv();
+extern "C" void checkHorseSwordUpSpped__9daAlink_cFv();
+extern "C" void setHorseSwordUp__9daAlink_cFi();
+extern "C" void setRideSubjectAngle__9daAlink_cFs();
+extern "C" void setBodyAngleRideReadyAnime__9daAlink_cFv();
+extern "C" void checkHorseGetOffWallCheck__9daAlink_cFP4cXyzP4cXyzs();
+extern "C" void checkHorseGetOffDirection__9daAlink_cFv();
+extern "C" void boarForceGetOff__9daAlink_cFv();
+extern "C" void horseGetOffEnd__9daAlink_cFv();
+extern "C" void checkNextActionHorse__9daAlink_cFv();
+extern "C" void checkHorseGetOff__9daAlink_cFv();
+extern "C" void checkHorseGetOffAndSetDoStatus__9daAlink_cFv();
+extern "C" void setHorseGetOff__9daAlink_cFi();
+extern "C" void procHorseRideInit__9daAlink_cFv();
+extern "C" void procHorseRide__9daAlink_cFv();
+extern "C" void procHorseGetOffInit__9daAlink_cFi();
+extern "C" void procHorseGetOff__9daAlink_cFv();
+extern "C" void procHorseWaitInit__9daAlink_cFv();
+extern "C" void procHorseWait__9daAlink_cFv();
+extern "C" void procHorseTurnInit__9daAlink_cFv();
+extern "C" void procHorseTurn__9daAlink_cFv();
+extern "C" void procHorseJumpInit__9daAlink_cFv();
+extern "C" void procHorseJump__9daAlink_cFv();
+extern "C" void procHorseLandInit__9daAlink_cFv();
+extern "C" void procHorseLand__9daAlink_cFv();
+extern "C" void procHorseSubjectivityInit__9daAlink_cFv();
+extern "C" void procHorseSubjectivity__9daAlink_cFv();
+extern "C" void procHorseCutInit__9daAlink_cFv();
+extern "C" void procHorseCut__9daAlink_cFv();
+extern "C" void procHorseCutChargeReadyInit__9daAlink_cFv();
+extern "C" void procHorseCutChargeReady__9daAlink_cFv();
+extern "C" void procHorseCutTurnInit__9daAlink_cFv();
+extern "C" void procHorseCutTurn__9daAlink_cFv();
+extern "C" void procHorseDamageInit__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void procHorseDamage__9daAlink_cFv();
+extern "C" void procHorseBowSubjectInit__9daAlink_cFv();
+extern "C" void procHorseBowSubject__9daAlink_cFv();
+extern "C" void procHorseBowMoveInit__9daAlink_cFv();
+extern "C" void procHorseBowMove__9daAlink_cFv();
+extern "C" void procHorseGrabMoveInit__9daAlink_cFv();
+extern "C" void procHorseGrabMove__9daAlink_cFv();
+extern "C" void procHorseBoomerangSubjectInit__9daAlink_cFv();
+extern "C" void procHorseBoomerangSubject__9daAlink_cFv();
+extern "C" void procHorseBoomerangMoveInit__9daAlink_cFv();
+extern "C" void procHorseBoomerangMove__9daAlink_cFv();
+extern "C" void procHorseHookshotSubjectInit__9daAlink_cFv();
+extern "C" void procHorseHookshotSubject__9daAlink_cFv();
+extern "C" void procHorseHookshotMoveInit__9daAlink_cFv();
+extern "C" void procHorseHookshotMove__9daAlink_cFv();
+extern "C" void procHorseBottleDrinkInit__9daAlink_cFUs();
+extern "C" void procHorseBottleDrink__9daAlink_cFv();
+extern "C" void procHorseKandelaarPourInit__9daAlink_cFv();
+extern "C" void procHorseKandelaarPour__9daAlink_cFv();
+extern "C" void procHorseComebackInit__9daAlink_cFv();
+extern "C" void procHorseComeback__9daAlink_cFv();
+extern "C" void procHorseRunInit__9daAlink_cFv();
+extern "C" void procHorseRun__9daAlink_cFv();
+extern "C" void procHorseHangInit__9daAlink_cFP12dCcD_GObjInfi();
+extern "C" void procHorseHang__9daAlink_cFv();
+extern "C" void procHorseGetKeyInit__9daAlink_cFv();
+extern "C" void procHorseGetKey__9daAlink_cFv();
+extern "C" void procHorseLookDownInit__9daAlink_cFv();
+extern "C" void procHorseLookDown__9daAlink_cFv();
+extern "C" void procBoarRunInit__9daAlink_cFv();
+extern "C" void procBoarRun__9daAlink_cFv();
+extern "C" void getCanoeMaxSpeed__9daAlink_cCFv();
+extern "C" void getCanoeBackMaxSpeed__9daAlink_cCFv();
+extern "C" void getCanoeCres__9daAlink_cCFv();
+extern "C" void getCanoeSpeedRate__9daAlink_cCFv();
+extern "C" void getCanoeMaxRotSpeed__9daAlink_cCFv();
+extern "C" void getCanoeLocalPaddleTop__9daAlink_cFv();
+extern "C" static void daAlink_searchCanoe__FP10fopAc_ac_cPv();
+extern "C" void checkCanoeRideTandem__9daAlink_cFv();
+extern "C" void checkFishingRodAndLureItem__9daAlink_cCFv();
+extern "C" void initFishingRodHand__9daAlink_cFv();
+extern "C" void getCanoePaddleMatrix__9daAlink_cFv();
+extern "C" void checkFishingRodGrab__9daAlink_cCFP10fopAc_ac_c();
+extern "C" void checkCanoePaddleGrab__9daAlink_cCFP10fopAc_ac_c();
+extern "C" void checkCanoeFishingRodGrabOrPut__9daAlink_cCFv();
+extern "C" void initCanoeRide__9daAlink_cFv();
+extern "C" void checkCanoeJumpRide__9daAlink_cFv();
+extern "C" void setArmReelAnime__9daAlink_cFv();
+extern "C" void setFishingWaitAction__9daAlink_cFv();
+extern "C" void setFishGetFace__9daAlink_cFv();
+extern "C" void setRideCanoeBasePos__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setSyncCanoePos__9daAlink_cFv();
+extern "C" void canoeCommon__9daAlink_cFv();
+extern "C" void checkNextActionCanoe__9daAlink_cFv();
+extern "C" void procCanoeRideInit__9daAlink_cFv();
+extern "C" void procCanoeRide__9daAlink_cFv();
+extern "C" void procCanoeJumpRideInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procCanoeJumpRide__9daAlink_cFv();
+extern "C" void procCanoeGetOffInit__9daAlink_cFv();
+extern "C" void procCanoeGetOff__9daAlink_cFv();
+extern "C" void procCanoeWaitInit__9daAlink_cFi();
+extern "C" void procCanoeWait__9daAlink_cFv();
+extern "C" void procCanoeRowInit__9daAlink_cFi();
+extern "C" void procCanoeRow__9daAlink_cFv();
+extern "C" void procCanoePaddleShiftInit__9daAlink_cFi();
+extern "C" void procCanoePaddleShift__9daAlink_cFv();
+extern "C" void procCanoePaddlePutInit__9daAlink_cFi();
+extern "C" void procCanoePaddlePut__9daAlink_cFv();
+extern "C" void procCanoePaddleGrabInit__9daAlink_cFv();
+extern "C" void procCanoePaddleGrab__9daAlink_cFv();
+extern "C" void procCanoeRodGrabInit__9daAlink_cFv();
+extern "C" void procCanoeRodGrab__9daAlink_cFv();
+extern "C" void procCanoeFishingWaitInit__9daAlink_cFv();
+extern "C" void procCanoeFishingWait__9daAlink_cFv();
+extern "C" void procCanoeFishingReelInit__9daAlink_cFv();
+extern "C" void procCanoeFishingReel__9daAlink_cFv();
+extern "C" void procCanoeFishingGetInit__9daAlink_cFv();
+extern "C" void procCanoeFishingGet__9daAlink_cFv();
+extern "C" void procCanoeSubjectivityInit__9daAlink_cFv();
+extern "C" void procCanoeSubjectivity__9daAlink_cFv();
+extern "C" void procCanoeBowSubjectInit__9daAlink_cFv();
+extern "C" void procCanoeBowSubject__9daAlink_cFv();
+extern "C" void procCanoeBowMoveInit__9daAlink_cFv();
+extern "C" void procCanoeBowMove__9daAlink_cFv();
+extern "C" void procCanoeGrabMoveInit__9daAlink_cFv();
+extern "C" void procCanoeGrabMove__9daAlink_cFv();
+extern "C" void procCanoeBoomerangSubjectInit__9daAlink_cFv();
+extern "C" void procCanoeBoomerangSubject__9daAlink_cFv();
+extern "C" void procCanoeBoomerangMoveInit__9daAlink_cFv();
+extern "C" void procCanoeBoomerangMove__9daAlink_cFv();
+extern "C" void procCanoeHookshotSubjectInit__9daAlink_cFv();
+extern "C" void procCanoeHookshotSubject__9daAlink_cFv();
+extern "C" void procCanoeHookshotMoveInit__9daAlink_cFv();
+extern "C" void procCanoeHookshotMove__9daAlink_cFv();
+extern "C" void procCanoeBottleDrinkInit__9daAlink_cFUs();
+extern "C" void procCanoeBottleDrink__9daAlink_cFv();
+extern "C" void procCanoeKandelaarPourInit__9daAlink_cFv();
+extern "C" void procCanoeKandelaarPour__9daAlink_cFv();
+extern "C" void setGroundFishingRodActor__9daAlink_cFv();
+extern "C" void procFishingCastInit__9daAlink_cFv();
+extern "C" void procFishingCast__9daAlink_cFv();
+extern "C" void procFishingFoodInit__9daAlink_cFv();
+extern "C" void procFishingFood__9daAlink_cFv();
+extern "C" void getCrawlMoveAnmSpeed__9daAlink_cFv();
+extern "C" void getCrawlMoveSpeed__9daAlink_cFv();
+extern "C" void setCrawlMoveDirectionArrow__9daAlink_cFv();
+extern "C" void changeCrawlAutoMoveProc__9daAlink_cFP4cXyz();
+extern "C" void getCrawlMoveVec__9daAlink_cFP4cXyzP4cXyzP4cXyziiPUc();
+extern "C" void crawlBgCheck__9daAlink_cFP4cXyzP4cXyzi();
+extern "C" void checkCrawlSideWall__9daAlink_cFP4cXyzP4cXyzP4cXyzP4cXyzPsPs();
+extern "C" void decideCrawlDoStatus__9daAlink_cFv();
+extern "C" void checkNotCrawlStand__9daAlink_cFP4cXyz();
+extern "C" void checkNotCrawlStand__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void checkCrawlInHoll__9daAlink_cFP4cXyzP4cXyzP4cXyzi();
+extern "C" void setCrawlMoveHoll__9daAlink_cFv();
+extern "C" void setCrawlMoveAngle__9daAlink_cFv();
+extern "C" void stopHalfMoveAnime__9daAlink_cFf();
+extern "C" void setCrawlAutoMoveAimPos__9daAlink_cFv();
+extern "C" void procCrawlStartInit__9daAlink_cFv();
+extern "C" void procCrawlStart__9daAlink_cFv();
+extern "C" void procCrawlMoveInit__9daAlink_cFss();
+extern "C" void procCrawlMove__9daAlink_cFv();
+extern "C" void procCrawlAutoMoveInit__9daAlink_cFiP4cXyz();
+extern "C" void procCrawlAutoMove__9daAlink_cFv();
+extern "C" void procCrawlEndInit__9daAlink_cFiss();
+extern "C" void procCrawlEnd__9daAlink_cFv();
+extern "C" void getHangMoveAnmSpeed__9daAlink_cFv();
+extern "C" void getHangDirectionFromAngle__9daAlink_cFv();
+extern "C" void hangMoveBgCheck__9daAlink_cFsP4cXyz();
+extern "C" void changeHangMoveProc__9daAlink_cFi();
+extern "C" void checkHangFootWall__9daAlink_cFv();
+extern "C" void setHangGroundY__9daAlink_cFv();
+extern "C" void changeHangEndProc__9daAlink_cFv();
+extern "C" void checkHangStartSideWall__9daAlink_cFs();
+extern "C" void procHangStartInit__9daAlink_cFv();
+extern "C" void procHangStart__9daAlink_cFv();
+extern "C" void procHangFallStartInit__9daAlink_cFP8cM3dGPla();
+extern "C" void procHangFallStart__9daAlink_cFv();
+extern "C" void procHangUpInit__9daAlink_cFi();
+extern "C" void procHangUp__9daAlink_cFv();
+extern "C" void procHangWaitInit__9daAlink_cFv();
+extern "C" void procHangWait__9daAlink_cFv();
+extern "C" void procHangMoveInit__9daAlink_cFi();
+extern "C" void procHangMove__9daAlink_cFv();
+extern "C" void procHangClimbInit__9daAlink_cFf();
+extern "C" void procHangClimb__9daAlink_cFv();
+extern "C" void procHangWallCatchInit__9daAlink_cFv();
+extern "C" void procHangWallCatch__9daAlink_cFv();
+extern "C" void procHangReadyInit__9daAlink_cFv();
+extern "C" void procHangReady__9daAlink_cFv();
+extern "C" void procHangLeverDownInit__9daAlink_cFv();
+extern "C" void procHangLeverDown__9daAlink_cFv();
+extern "C" void changeDragonActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setDragonHangPos__9daAlink_cFv();
+extern "C" void setOctaIealHangPos__9daAlink_cFv();
+extern "C" void setBossBodyHangPos__9daAlink_cFv();
+extern "C" void procBossBodyHangInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procBossBodyHang__9daAlink_cFv();
+extern "C" void getLadderUnitCount__9daAlink_cCFv();
+extern "C" void setLadderInit__9daAlink_cFv();
+extern "C" void setLadderPosInit__9daAlink_cFv();
+extern "C" void setLadderPos__9daAlink_cFi();
+extern "C" void getLadderMoveAnmSpeed__9daAlink_cFv();
+extern "C" void changeLadderMoveProc__9daAlink_cFi();
+extern "C" void setMoveBGLadderCorrect__9daAlink_cFv();
+extern "C" void checkLadderFall__9daAlink_cFv();
+extern "C" void procLadderUpStartInit__9daAlink_cFv();
+extern "C" void procLadderUpStart__9daAlink_cFv();
+extern "C" void procLadderUpEndInit__9daAlink_cFi();
+extern "C" void procLadderUpEnd__9daAlink_cFv();
+extern "C" void procLadderDownStartInit__9daAlink_cFv();
+extern "C" void procLadderDownStart__9daAlink_cFv();
+extern "C" void procLadderDownEndInit__9daAlink_cFi();
+extern "C" void procLadderDownEnd__9daAlink_cFv();
+extern "C" void procLadderMoveInit__9daAlink_cFiiP4cXyz();
+extern "C" void procLadderMove__9daAlink_cFv();
+extern "C" void getClimbMoveUpDownAnmSpeed__9daAlink_cFv();
+extern "C" void getClimbMoveSideAnmSpeed__9daAlink_cFv();
+extern "C" void checkClimbCode__9daAlink_cFR13cBgS_PolyInfo();
+extern "C" void setClimbInit__9daAlink_cFv();
+extern "C" void setClimbShapeOffset__9daAlink_cFv();
+extern "C" void getClimbDirectionFromAngle__9daAlink_cFv();
+extern "C" void changeClimbMoveProc__9daAlink_cFi();
+extern "C" void checkClimbMoveUpDownProc__9daAlink_cFi();
+extern "C" void checkClimbMoveSideProc__9daAlink_cFi();
+extern "C" void setMoveBGClimbCorrect__9daAlink_cFv();
+extern "C" void checkBgCorrectClimbMove__9daAlink_cFP4cXyzP4cXyz();
+extern "C" void checkClimbRoof__9daAlink_cFf();
+extern "C" void checkClimbGround__9daAlink_cFP4cXyzf();
+extern "C" void checkBgClimbMove__9daAlink_cFi();
+extern "C" void setClimbStartNotGround__9daAlink_cFv();
+extern "C" void procClimbUpStartInit__9daAlink_cFi();
+extern "C" void procClimbUpStart__9daAlink_cFv();
+extern "C" void procClimbDownStartInit__9daAlink_cFs();
+extern "C" void procClimbDownStart__9daAlink_cFv();
+extern "C" void procClimbMoveUpDownInit__9daAlink_cFi();
+extern "C" void procClimbMoveUpDown__9daAlink_cFv();
+extern "C" void procClimbMoveSideInit__9daAlink_cFv();
+extern "C" void procClimbMoveSide__9daAlink_cFv();
+extern "C" void procClimbWaitInit__9daAlink_cFii();
+extern "C" void procClimbWait__9daAlink_cFv();
+extern "C" void procClimbToRoofInit__9daAlink_cFv();
+extern "C" void procClimbToRoof__9daAlink_cFv();
+extern "C" void getRoofHangFMoveAnmSpeed__9daAlink_cCFv();
+extern "C" void getRoofHangSMoveAnmSpeed__9daAlink_cCFv();
+extern "C" void setRoofHangHandOnSE__9daAlink_cFP13cBgS_PolyInfo();
+extern "C" void checkRoofHangMovePos__9daAlink_cFv();
+extern "C" void commonRoofHangProc__9daAlink_cFv();
+extern "C" void checkNextActionRoofHang__9daAlink_cFv();
+extern "C" void procRoofHangStartInit__9daAlink_cFRC13cBgS_PolyInfoRC4cXyzi();
+extern "C" void procRoofHangStart__9daAlink_cFv();
+extern "C" void procRoofHangWaitInit__9daAlink_cFi();
+extern "C" void procRoofHangWait__9daAlink_cFv();
+extern "C" void procRoofHangFrontMoveInit__9daAlink_cFv();
+extern "C" void procRoofHangFrontMove__9daAlink_cFv();
+extern "C" void procRoofHangSideMoveInit__9daAlink_cFv();
+extern "C" void procRoofHangSideMove__9daAlink_cFv();
+extern "C" void procRoofHangTurnInit__9daAlink_cFv();
+extern "C" void procRoofHangTurn__9daAlink_cFv();
+extern "C" void setRoofHangSwitch__9daAlink_cFv();
+extern "C" void procRoofSwitchHangInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procRoofSwitchHang__9daAlink_cFv();
+extern "C" void getHangPos__13daObjSwHang_cFv();
+extern "C" void checkZoraWearMaskDraw__9daAlink_cFv();
+extern "C" void checkAcceptUseItemInWater__9daAlink_cCFUs();
+extern "C" void swimDeleteItem__9daAlink_cFv();
+extern "C" void getZoraSwim__9daAlink_cCFv();
+extern "C" void getSwimFrontMaxSpeed__9daAlink_cCFv();
+extern "C" void getSwimMaxFallSpeed__9daAlink_cCFv();
+extern "C" void checkOxygenTimer__9daAlink_cFv();
+extern "C" void offOxygenTimer__9daAlink_cFv();
+extern "C" void checkPossibleWaterInMode__9daAlink_cCFv();
+extern "C" void setWaterInAnmRate__9daAlink_cFP16daPy_frameCtrl_cf();
+extern "C" void swimBgCheck__9daAlink_cFf();
+extern "C" void setSpeedAndAngleSwim__9daAlink_cFv();
+extern "C" void checkNextActionSwim__9daAlink_cFv();
+extern "C" void checkSwimAction__9daAlink_cFi();
+extern "C" void checkSwimUpAction__9daAlink_cFv();
+extern "C" void swimOutAfter__9daAlink_cFi();
+extern "C" void checkSwimFall__9daAlink_cFv();
+extern "C" void checkSwimOutAction__9daAlink_cFv();
+extern "C" void setSwimMoveAnime__9daAlink_cFv();
+extern "C" void checkSwimButtonAccept__9daAlink_cFv();
+extern "C" void checkUpSwimButtonAccept__9daAlink_cFv();
+extern "C" void checkSwimButtonMove__9daAlink_cFv();
+extern "C" void checkZoraSwimMove__9daAlink_cFv();
+extern "C" void checkSwimNeckUpDown__9daAlink_cCFv();
+extern "C" void setSwimUpDownOffset__9daAlink_cFv();
+extern "C" void procSwimUpInit__9daAlink_cFv();
+extern "C" void procSwimUp__9daAlink_cFv();
+extern "C" void procSwimWaitInit__9daAlink_cFi();
+extern "C" void procSwimWait__9daAlink_cFv();
+extern "C" void procSwimMoveInit__9daAlink_cFv();
+extern "C" void procSwimMove__9daAlink_cFv();
+extern "C" void procSwimDiveInit__9daAlink_cFv();
+extern "C" void procSwimDive__9daAlink_cFv();
+extern "C" void procSwimHookshotSubjectInit__9daAlink_cFv();
+extern "C" void procSwimHookshotSubject__9daAlink_cFv();
+extern "C" void procSwimHookshotMoveInit__9daAlink_cFv();
+extern "C" void procSwimHookshotMove__9daAlink_cFv();
+extern "C" void procSwimDamageInit__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void procSwimDamage__9daAlink_cFv();
+extern "C" void procOctaIealSpitInit__9daAlink_cFv();
+extern "C" void procOctaIealSpit__9daAlink_cFv();
+extern "C" static void daAlink_searchIceLeaf__FP10fopAc_ac_cPv();
+extern "C" void checkSnowCode__9daAlink_cCFv();
+extern "C" void checkSnowCodePolygon__9daAlink_cFR13cBgS_PolyInfo();
+extern "C" void checkBoardRestart__9daAlink_cFv();
+extern "C" void boardCommon__9daAlink_cFi();
+extern "C" void setCommonBoardAnime__9daAlink_cFi();
+extern "C" void checkNextActionBoard__9daAlink_cFv();
+extern "C" void checkBoardSwordTriggerAction__9daAlink_cFv();
+extern "C" void commonProcBoardInit__9daAlink_cFQ29daAlink_c12daAlink_PROC();
+extern "C" void getBoardRowAnmSpeed__9daAlink_cFv();
+extern "C" void setBoardLandAnime__9daAlink_cFv();
+extern "C" void procBoardRideInit__9daAlink_cFv();
+extern "C" void procBoardRide__9daAlink_cFv();
+extern "C" void procBoardWaitInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procBoardWait__9daAlink_cFv();
+extern "C" void procBoardRowInit__9daAlink_cFv();
+extern "C" void procBoardRow__9daAlink_cFv();
+extern "C" void procBoardTurnInit__9daAlink_cFv();
+extern "C" void procBoardTurn__9daAlink_cFv();
+extern "C" void procBoardJumpInit__9daAlink_cFfi();
+extern "C" void procBoardJump__9daAlink_cFv();
+extern "C" void procBoardSubjectivityInit__9daAlink_cFv();
+extern "C" void procBoardSubjectivity__9daAlink_cFv();
+extern "C" void procBoardCutInit__9daAlink_cFv();
+extern "C" void procBoardCut__9daAlink_cFv();
+extern "C" void procBoardCutTurnInit__9daAlink_cFv();
+extern "C" void procBoardCutTurn__9daAlink_cFv();
+extern "C" void draw__Q29daAlink_c14hsChainShape_cFv();
+extern "C" void hookshotAtHitCallBack__9daAlink_cFP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" static void daAlink_hookshotAtHitCallBack__FP10fopAc_ac_cP12dCcD_GObjInfP10fopAc_ac_cP12dCcD_GObjInf();
+extern "C" void getHookshotTopPos__9daAlink_cFv();
+extern "C" void checkHookshotReturnMode__9daAlink_cCFv();
+extern "C" void checkHookshotShootReturnMode__9daAlink_cCFv();
+extern "C" void resetHookshotMode__9daAlink_cFv();
+extern "C" void setEnemyBombHookshot__9daAlink_cFP10fopAc_ac_c();
+extern "C" void checkLv7BossRoom__9daAlink_cFv();
+extern "C" void checkHookshotStickBG__9daAlink_cFR13cBgS_PolyInfo();
+extern "C" void cancelHookshotCarry__9daAlink_cFv();
+extern "C" void changeHookshotDrawModel__9daAlink_cFv();
+extern "C" void checkHookshotRoofLv7Boss__9daAlink_cFv();
+extern "C" void checkChaseHookshot__9daAlink_cFv();
+extern "C" void checkOctaIealSpecialCollect__9daAlink_cFv();
+extern "C" void checkBossOctaIealRoom__9daAlink_cFv();
+extern "C" void checkHookshotWait__9daAlink_cCFv();
+extern "C" void setHookshotCatchNow__9daAlink_cFv();
+extern "C" void setHookshotCarryOffset__9daAlink_cFUiPC4cXyz();
+extern "C" void setHookshotModel__9daAlink_cFv();
+extern "C" void setHookshotSight__9daAlink_cFv();
+extern "C" void cancelHookshotShot__9daAlink_cFv();
+extern "C" void cancelHookshotMove__9daAlink_cFv();
+extern "C" void checkHookshotReadyMaterialOffMode__9daAlink_cCFv();
+extern "C" void setHookshotReadyMaterial__9daAlink_cFv();
+extern "C" void initHookshotUpperAnimeSpeed__9daAlink_cFi();
+extern "C" void initHookshotReady__9daAlink_cFv();
+extern "C" void setHookshotReadyAnime__9daAlink_cFv();
+extern "C" void checkUpperItemActionHookshot__9daAlink_cFv();
+extern "C" void checkNextActionHookshot__9daAlink_cFv();
+extern "C" void setHookshotReturnEnd__9daAlink_cFv();
+extern "C" void setHookshotHangMoveBGCollect__9daAlink_cFv();
+extern "C" void setHookshotTopPosFly__9daAlink_cFv();
+extern "C" void setHookshotPos__9daAlink_cFv();
+extern "C" void setHookshotRoofWaitAnime__9daAlink_cFv();
+extern "C" void setHookshotWallWaitAnime__9daAlink_cFv();
+extern "C" void hookshotRoofTurn__9daAlink_cFv();
+extern "C" void initHookshotRoofWaitActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void checkNextHookPoint__9daAlink_cFv();
+extern "C" void checkLandHookshotHang__9daAlink_cFv();
+extern "C" void commonHookshotRoofWait__9daAlink_cFv();
+extern "C" void commonHookshotWallWait__9daAlink_cFv();
+extern "C" void procHookshotSubjectInit__9daAlink_cFv();
+extern "C" void procHookshotSubject__9daAlink_cFv();
+extern "C" void procHookshotMoveInit__9daAlink_cFv();
+extern "C" void procHookshotMove__9daAlink_cFv();
+extern "C" void procHookshotFlyInit__9daAlink_cFv();
+extern "C" void procHookshotFly__9daAlink_cFv();
+extern "C" void procHookshotRoofWaitInit__9daAlink_cFiP10fopAc_ac_ci();
+extern "C" void procHookshotRoofWait__9daAlink_cFv();
+extern "C" void procHookshotRoofShootInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procHookshotRoofShoot__9daAlink_cFv();
+extern "C" void procHookshotRoofBootsInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procHookshotRoofBoots__9daAlink_cFv();
+extern "C" void procHookshotWallWaitInit__9daAlink_cFisi();
+extern "C" void procHookshotWallWait__9daAlink_cFv();
+extern "C" void procHookshotWallShootInit__9daAlink_cFv();
+extern "C" void procHookshotWallShoot__9daAlink_cFv();
+extern "C" void getSpinnerGravity__9daAlink_cCFv();
+extern "C" void getSpinnerMaxFallSpeed__9daAlink_cCFv();
+extern "C" void getSpinnerJumpRate__9daAlink_cCFv();
+extern "C" void getSpinnerRideMoveTime__9daAlink_cFv();
+extern "C" void getSpinnerRideSpeedF__9daAlink_cFv();
+extern "C" void getSpinnerRideDecSpeedMax__9daAlink_cCFv();
+extern "C" void getSpinnerRideDecSpeedMin__9daAlink_cCFv();
+extern "C" void getSpinnerRideDecSpeedRate__9daAlink_cCFv();
+extern "C" void getSpinnerRideRotAngleMax__9daAlink_cCFv();
+extern "C" void getSpinnerRideRotAngleMin__9daAlink_cCFv();
+extern "C" void onSpinnerPathForceRemove__9daAlink_cFv();
+extern "C" void checkSpinnerPathMove__9daAlink_cFv();
+extern "C" void checkLv4BossRoom__9daAlink_cFv();
+extern "C" void checkSpinnerTriggerAttack__9daAlink_cFv();
+extern "C" void setSpinnerSyncPos__9daAlink_cFv();
+extern "C" void procSpinnerReadyInit__9daAlink_cFv();
+extern "C" void procSpinnerReady__9daAlink_cFv();
+extern "C" void setSpinnerStatus__9daAlink_cFUcUc();
+extern "C" void procSpinnerWaitInit__9daAlink_cFv();
+extern "C" void procSpinnerWait__9daAlink_cFv();
+extern "C" void bottleModelCallBack__9daAlink_cFv();
+extern "C" static void daAlink_bottleModelCallBack__FP8J3DJointi();
+extern "C" void getBottleOpenAppearItem__9daAlink_cCFv();
+extern "C" void checkOilBottleItemNotGet__9daAlink_cFUs();
+extern "C" void setBottleModel__9daAlink_cFUs();
+extern "C" void commonBottleDrink__9daAlink_cFi();
+extern "C" void makeFairy__9daAlink_cFP4cXyzUl();
+extern "C" void procBottleDrinkInit__9daAlink_cFUs();
+extern "C" void procBottleDrink__9daAlink_cFv();
+extern "C" void procBottleOpenInit__9daAlink_cFUs();
+extern "C" void procBottleOpen__9daAlink_cFv();
+extern "C" void procBottleSwingInit__9daAlink_cFP10fopAc_ac_ci();
+extern "C" void procBottleSwing__9daAlink_cFv();
+extern "C" void procBottleGetInit__9daAlink_cFi();
+extern "C" void procBottleGet__9daAlink_cFv();
+extern "C" void Insect_Release__9dInsect_cFv();
+extern "C" static void daAlink_searchTagKandelaar__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchTagKtOnFire__FP10fopAc_ac_cPv();
+extern "C" void setKandelaarMtx__9daAlink_cFPA4_fii();
+extern "C" void checkWaterInKandelaarOffset__9daAlink_cFf();
+extern "C" void checkWaterInKandelaar__9daAlink_cFf();
+extern "C" void offKandelaarModel__9daAlink_cFv();
+extern "C" void checkUseKandelaar__9daAlink_cFi();
+extern "C" void checkKandelaarSwing__9daAlink_cCFi();
+extern "C" void kandelaarModelCallBack__9daAlink_cFv();
+extern "C" static void daAlink_kandelaarModelCallBack__FP8J3DJointi();
+extern "C" void getKandelaarFlamePos__9daAlink_cFv();
+extern "C" void checkKandelaarEquipAnime__9daAlink_cCFv();
+extern "C" void preKandelaarDraw__9daAlink_cFv();
+extern "C" void setTevColor__11J3DTevBlockFUlPC13J3DGXColorS10();
+extern "C" void setKandelaarModel__9daAlink_cFv();
+extern "C" void resetOilBottleModel__9daAlink_cFv();
+extern "C" void commonKandelaarPourInit__9daAlink_cFv();
+extern "C" void commonKandelaarPour__9daAlink_cFi();
+extern "C" void initKandelaarSwing__9daAlink_cFv();
+extern "C" void procKandelaarSwingInit__9daAlink_cFv();
+extern "C" void procKandelaarSwing__9daAlink_cFv();
+extern "C" void procKandelaarPourInit__9daAlink_cFv();
+extern "C" void procKandelaarPour__9daAlink_cFv();
+extern "C" static void daAlink_searchWhistle__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchHawk__FP10fopAc_ac_cPv();
+extern "C" void setGrassWhistleModel__9daAlink_cFi();
+extern "C" void setHorseWhistleModel__9daAlink_cFv();
+extern "C" void procGrassWhistleGetInit__9daAlink_cFv();
+extern "C" void procGrassWhistleGet__9daAlink_cFv();
+extern "C" void procGrassWhistleWaitInit__9daAlink_cFiiisP4cXyz();
+extern "C" void procGrassWhistleWait__9daAlink_cFv();
+extern "C" void procCoHorseCallWaitInit__9daAlink_cFi();
+extern "C" void procCoHorseCallWait__9daAlink_cFv();
+extern "C" void procHawkCatchInit__9daAlink_cFv();
+extern "C" void procHawkCatch__9daAlink_cFv();
+extern "C" void procHawkSubjectInit__9daAlink_cFv();
+extern "C" void procHawkSubject__9daAlink_cFv();
+extern "C" void getIronBallCenterPos__9daAlink_cFv();
+extern "C" void getIronBallBgHit__9daAlink_cCFv();
+extern "C" void checkIronBallThrowMode__9daAlink_cCFv();
+extern "C" void checkIronBallThrowReturnMode__9daAlink_cCFv();
+extern "C" void checkIronBallReturn__9daAlink_cCFv();
+extern "C" void checkIronBallGroundStop__9daAlink_cCFv();
+extern "C" void setIronBallWaitUpperAnime__9daAlink_cFi();
+extern "C" void checkIronBallDelete__9daAlink_cFv();
+extern "C" void setIronBallReturn__9daAlink_cFi();
+extern "C" void setIronBallBgCheckPos__9daAlink_cFv();
+extern "C" void setIronBallModel__9daAlink_cFv();
+extern "C" void __ct__5csXyzFv();
+extern "C" void setIronBallGroundVec__9daAlink_cFPC4cXyzP4cXyz();
+extern "C" void setIronBallChainPos__9daAlink_cFv();
+extern "C" void checkIronBallReturnChange__9daAlink_cFv();
+extern "C" void setIronBallPos__9daAlink_cFv();
+extern "C" void checkIronBallAnime__9daAlink_cCFv();
+extern "C" void setIronBallReadyAnime__9daAlink_cFv();
+extern "C" void setIronBallBaseAnime__9daAlink_cFv();
+extern "C" void checkUpperItemActionIronBall__9daAlink_cFv();
+extern "C" void checkNextActionIronBall__9daAlink_cFv();
+extern "C" void procIronBallSubjectInit__9daAlink_cFv();
+extern "C" void procIronBallSubject__9daAlink_cFv();
+extern "C" void procIronBallMoveInit__9daAlink_cFv();
+extern "C" void procIronBallMove__9daAlink_cFv();
+extern "C" void procIronBallThrowInit__9daAlink_cFv();
+extern "C" void procIronBallThrow__9daAlink_cFv();
+extern "C" void procIronBallReturnInit__9daAlink_cFv();
+extern "C" void procIronBallReturn__9daAlink_cFv();
+extern "C" void checkEventRun__9daAlink_cCFv();
+extern "C" void createNpcTks__9daAlink_cFP4cXyziUl();
+extern "C" void checkSetNpcTks__9daAlink_cFP4cXyzii();
+extern "C" void checkDemoAction__9daAlink_cFv();
+extern "C" void checkDemoMoveMode__9daAlink_cCFUl();
+extern "C" void setDemoMoveData__9daAlink_cFPUlPC4cXyz();
+extern "C" void setNoDrawSwordShield__9daAlink_cFiUs();
+extern "C" void setDemoData__9daAlink_cFv();
+extern "C" void resetDemoBck__9daAlink_cFv();
+extern "C" void endHighModel__9daAlink_cFv();
+extern "C" void resetSpecialEvent__9daAlink_cFv();
+extern "C" void endDemoMode__9daAlink_cFv();
+extern "C" void getDemoLookActor__9daAlink_cFv();
+extern "C" void checkFlyAtnWait__9daAlink_cFv();
+extern "C" void setGetItemFace__9daAlink_cFUs();
+extern "C" void checkGrabTalkActor__9daAlink_cFP10fopAc_ac_c();
+extern "C" void setTalkStartBack__9daAlink_cFP4cXyz();
+extern "C" void setShapeAngleToTalkActor__9daAlink_cFv();
+extern "C" void setTalkAnime__9daAlink_cFv();
+extern "C" void setTradeItemAnime__9daAlink_cFv();
+extern "C" void setTradeItemOutHand__9daAlink_cFv();
+extern "C" void checkEndMessage__9daAlink_cFUl();
+extern "C" void setDemoRightHandIndex__9daAlink_cFUs();
+extern "C" void setDemoLeftHandIndex__9daAlink_cFUs();
+extern "C" void setDemoRide__9daAlink_cFUs();
+extern "C" void setDemoBodyBck__9daAlink_cFP13dDemo_actor_cUs();
+extern "C" void checkFinalBattle__9daAlink_cFv();
+extern "C" void checkRestartDead__9daAlink_cFii();
+extern "C" void setDeadRideSyncPos__9daAlink_cFv();
+extern "C" void checkDeadHP__9daAlink_cFv();
+extern "C" void checkDeadAction__9daAlink_cFi();
+extern "C" void setHighModelBck__9daAlink_cFP13mDoExt_bckAnmUs();
+extern "C" void setHighModelFaceBtk__9daAlink_cFUs();
+extern "C" void setDemoBrk__9daAlink_cFPP15J3DAnmTevRegKeyP8J3DModelUs();
+extern "C" void setStickAnmData__9daAlink_cFP10J3DAnmBaseiiUsi();
+extern "C" static void daAlink_c_getDemoIDData__FP13dDemo_actor_cPiPiPiPUsPiPi();
+extern "C" void procDemoCommon__9daAlink_cFv();
+extern "C" void procCoToolDemoInit__9daAlink_cFv();
+extern "C" void procCoToolDemo__9daAlink_cFv();
+extern "C" void procCoTalkInit__9daAlink_cFv();
+extern "C" void procCoTalk__9daAlink_cFv();
+extern "C" void procCoOpenTreasureInit__9daAlink_cFv();
+extern "C" void procCoOpenTreasure__9daAlink_cFv();
+extern "C" void procCoUnequipInit__9daAlink_cFv();
+extern "C" void procCoUnequip__9daAlink_cFv();
+extern "C" void setGetSubBgm__9daAlink_cFi();
+extern "C" void checkTreasureRupeeReturn__9daAlink_cCFi();
+extern "C" void procCoGetItemInit__9daAlink_cFv();
+extern "C" void procCoGetItem__9daAlink_cFv();
+extern "C" void procCoTurnBackInit__9daAlink_cFv();
+extern "C" void procCoTurnBack__9daAlink_cFv();
+extern "C" void procDoorOpenInit__9daAlink_cFv();
+extern "C" void procDoorOpen__9daAlink_cFv();
+extern "C" void procCoLookWaitInit__9daAlink_cFv();
+extern "C" void procCoLookWait__9daAlink_cFv();
+extern "C" void procCoDemoPushPullWaitInit__9daAlink_cFv();
+extern "C" void procCoDemoPushMoveInit__9daAlink_cFv();
+extern "C" void setMonkeyMoveAnime__9daAlink_cFv();
+extern "C" void procMonkeyMoveInit__9daAlink_cFv();
+extern "C" void procMonkeyMove__9daAlink_cFv();
+extern "C" void procDemoBoomerangCatchInit__9daAlink_cFv();
+extern "C" void procDemoBoomerangCatch__9daAlink_cFv();
+extern "C" void procCoDeadInit__9daAlink_cFi();
+extern "C" void procCoDead__9daAlink_cFv();
+extern "C" void procCoLookAroundInit__9daAlink_cFv();
+extern "C" void procCoLookAround__9daAlink_cFv();
+extern "C" void procBossAtnWaitInit__9daAlink_cFv();
+extern "C" void procCoQuakeWaitInit__9daAlink_cFv();
+extern "C" void procCoCaughtInit__9daAlink_cFv();
+extern "C" void procLookUpInit__9daAlink_cFv();
+extern "C" void procLookUp__9daAlink_cFv();
+extern "C" void procLookUpToGetItemInit__9daAlink_cFv();
+extern "C" void procLookUpToGetItem__9daAlink_cFv();
+extern "C" void procHandPatInit__9daAlink_cFv();
+extern "C" void procHandPat__9daAlink_cFv();
+extern "C" void procCoFogDeadInit__9daAlink_cFv();
+extern "C" void procCoFogDead__9daAlink_cFv();
+extern "C" void procWolfSmellWaitInit__9daAlink_cFv();
+extern "C" void procCoNodInit__9daAlink_cFv();
+extern "C" void procCoNod__9daAlink_cFv();
+extern "C" void procCoEyeAwayInit__9daAlink_cFv();
+extern "C" void procCoGlareInit__9daAlink_cFv();
+extern "C" void procCoGlare__9daAlink_cFv();
+extern "C" void procGoatStopReadyInit__9daAlink_cFv();
+extern "C" void procGoatStopReady__9daAlink_cFv();
+extern "C" void procCoGetReadySitInit__9daAlink_cFv();
+extern "C" void procCoGetReadySit__9daAlink_cFv();
+extern "C" void procCoTwGateInit__9daAlink_cFv();
+extern "C" void procCoTwGate__9daAlink_cFv();
+extern "C" void procWolfSnowEscapeInit__9daAlink_cFv();
+extern "C" void procWolfSnowEscape__9daAlink_cFv();
+extern "C" void procZoraMoveInit__9daAlink_cFv();
+extern "C" void procZoraMove__9daAlink_cFv();
+extern "C" void procLookAroundTurnInit__9daAlink_cFv();
+extern "C" void procLookAroundTurn__9daAlink_cFv();
+extern "C" void procTradeItemOutInit__9daAlink_cFv();
+extern "C" void procTradeItemOut__9daAlink_cFv();
+extern "C" void checkLetterItem__9daAlink_cFi();
+extern "C" void procNotUseItemInit__9daAlink_cFi();
+extern "C" void procNotUseItem__9daAlink_cFv();
+extern "C" void procSwordReadyInit__9daAlink_cFv();
+extern "C" void procSwordReady__9daAlink_cFv();
+extern "C" void setSwordPushAnime__9daAlink_cFv();
+extern "C" void procSwordPushInit__9daAlink_cFv();
+extern "C" void procSwordPush__9daAlink_cFv();
+extern "C" void procGanonFinishInit__9daAlink_cFv();
+extern "C" void procGanonFinish__9daAlink_cFv();
+extern "C" void procCutFastReadyInit__9daAlink_cFv();
+extern "C" void procCutFastReady__9daAlink_cFv();
+extern "C" void procMasterSwordStickInit__9daAlink_cFv();
+extern "C" void procMasterSwordStick__9daAlink_cFv();
+extern "C" void procMasterSwordPullInit__9daAlink_cFv();
+extern "C" void procMasterSwordPull__9daAlink_cFv();
+extern "C" void checkLv7DungeonShop__9daAlink_cFv();
+extern "C" void procDungeonWarpReadyInit__9daAlink_cFv();
+extern "C" void procDungeonWarpReady__9daAlink_cFv();
+extern "C" void procDungeonWarpInit__9daAlink_cFv();
+extern "C" void procDungeonWarp__9daAlink_cFv();
+extern "C" void procDungeonWarpSceneStartInit__9daAlink_cFv();
+extern "C" void procDungeonWarpSceneStart__9daAlink_cFv();
+extern "C" static void daAlink_searchPortal__FP10fopAc_ac_cPv();
+extern "C" void checkAcceptWarp__9daAlink_cFv();
+extern "C" void dungeonReturnWarp__9daAlink_cFv();
+extern "C" void skipPortalObjWarp__9daAlink_cFv();
+extern "C" void checkWarpStart__9daAlink_cFv();
+extern "C" void warpModelTexScroll__9daAlink_cFv();
+extern "C" void procCoWarpInit__9daAlink_cFii();
+extern "C" void procCoWarp__9daAlink_cFv();
+extern "C" void commonWaitTurnInit__9daAlink_cFv();
+extern "C" void commonGrabPutInit__9daAlink_cFv();
+extern "C" void commonLargeDamageUpInit__9daAlink_cFiiss();
+extern "C" void commonFallInit__9daAlink_cFi();
+extern "C" void setEmitter__9daAlink_cFPUlUsPC4cXyzPC5csXyz();
+extern "C" void setEmitterPolyColor__9daAlink_cFPUlUsR13cBgS_PolyInfoPC4cXyzPC5csXyz();
+extern "C" void setEmitterColor__9daAlink_cFPUlUsPC4cXyzPC5csXyz();
+extern "C" void stopDrawParticle__9daAlink_cFUl();
+extern "C" void setEffectFrontRollParam__9daAlink_cFv();
+extern "C" void setEffectSlipParam__9daAlink_cFv();
+extern "C" void setEffectRunParam__9daAlink_cFv();
+extern "C" void setEffectSmallLandParam__9daAlink_cFv();
+extern "C" void setEffectLandParam__9daAlink_cFv();
+extern "C" void setEffectSumouParam__9daAlink_cFv();
+extern "C" void setFootEffectProcType__9daAlink_cFi();
+extern "C" void setWolfFootOn__9daAlink_cFi();
+extern "C" void setFootMark__9daAlink_cFP4cXyzUsi();
+extern "C" void setEffect__9daAlink_cFv();
+extern "C" void setSumouEffect__9daAlink_cFv();
+extern "C" void setWaterfallEffect__9daAlink_cFPC4cXyzPUl();
+extern "C" void setWaterfallEffect__9daAlink_cFv();
+extern "C" void setMagneBootsEffect__9daAlink_cFv();
+extern "C" void setSwordChargeEffect__9daAlink_cFv();
+extern "C" void setElecDamageEffect__9daAlink_cFv();
+extern "C" void clearCutTurnEffectID__9daAlink_cFv();
+extern "C" void setCutTurnEffect__9daAlink_cFv();
+extern "C" void setHorseCutTurnEffect__9daAlink_cFv();
+extern "C" void setCutLargeJumpLandEffect__9daAlink_cFv();
+extern "C" void setBootsLightEffect__9daAlink_cFv();
+extern "C" void setLightningSwordEffect__9daAlink_cFv();
+extern "C" void setWolfRollAttackEffect__9daAlink_cFv();
+extern "C" void setWolfDigEffect__9daAlink_cFv();
+extern "C" void setWolfSwimEndEffect__9daAlink_cFPP14JPABaseEmitterPP14JPABaseEmitter();
+extern "C" void setWolfLockAttackEffect__9daAlink_cFv();
+extern "C" void setWolfJumpAttackEffect__9daAlink_cFv();
+extern "C" void setWolfBarrierHitEffect__9daAlink_cFR11dBgS_LinChk();
+extern "C" void setCutWaterDropEffect__9daAlink_cFv();
+extern "C" void setWaterDropEffect__9daAlink_cFv();
+extern "C" void setSwordUpColorEffect__9daAlink_cFv();
+extern "C" void setSwordCutSplash__9daAlink_cFv();
+extern "C" void setMetamorphoseEffectStartLink__9daAlink_cFv();
+extern "C" void setMetamorphoseEffect__9daAlink_cFv();
+extern "C" void setRunSplash__9daAlink_cFv();
+extern "C" void execute__29dAlink_bottleWaterPcallBack_cFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void resetFairyEffect__9daAlink_cFv();
+extern "C" void setBottleEffect__9daAlink_cFv();
+extern "C" void clearFirePointDamageEffect__9daAlink_cFi();
+extern "C" void initFirePointDamageEffectAll__9daAlink_cFv();
+extern "C" void initFirePointDamageEffect__9daAlink_cFPC4cXyzP12dCcD_GObjInf();
+extern "C" void setFirePointDamageEffect__9daAlink_cFv();
+extern "C" void setFreezeEffect__9daAlink_cFv();
+extern "C" void setWoodShieldBurnEffect__9daAlink_cFv();
+extern "C" void clearWoodShieldBurnEffect__9daAlink_cFv();
+extern "C" void setWoodShieldBurnOutEffect__9daAlink_cFv();
+extern "C" void initBlur__14daAlink_blur_cFfiPC4cXyzPC4cXyzPC4cXyz();
+extern "C" static void setBezierPos__FPC4cXyzPC4cXyzPC4cXyzPC4cXyzfP4cXyz();
+extern "C" void copyBlur__14daAlink_blur_cFPC4cXyzPC4cXyzPC4cXyz();
+extern "C" void traceBlur__14daAlink_blur_cFPC4cXyzPC4cXyzs();
+extern "C" void draw__14daAlink_blur_cFv();
+extern "C" void create__20daAlink_lockCursor_cFv();
+extern "C" void setAnimation__7J2DPaneFP15J2DAnmTevRegKey();
+extern "C" void setAnimation__7J2DPaneFP11J2DAnmColor();
+extern "C" void update__20daAlink_lockCursor_cFv();
+extern "C" void draw__20daAlink_lockCursor_cFv();
+extern "C" void create__15daAlink_sight_cFv();
+extern "C" void draw__15daAlink_sight_cFv();
+extern "C" void onLockFlg__15daAlink_sight_cFv();
+extern "C" void changeCommon__9daAlink_cFv();
+extern "C" void changeWolf__9daAlink_cFv();
+extern "C" void changeLink__9daAlink_cFi();
+extern "C" void onWolfEyeUp__9daAlink_cFv();
+extern "C" void offWolfEyeUp__9daAlink_cFv();
+extern "C" void wolfSenseTrigger__9daAlink_cFv();
+extern "C" void setWolfSenceStatus__9daAlink_cFUc();
+extern "C" void wolfClawTrigger__9daAlink_cFv();
+extern "C" void setWolfDigStatus__9daAlink_cFUc();
+extern "C" void checkWolfShapeReverse__9daAlink_cCFv();
+extern "C" void checkWolfSideStep__9daAlink_cCFv();
+extern "C" void setWolfTailAngle__9daAlink_cFv();
+extern "C" void checkWolfSlowDash__9daAlink_cFv();
+extern "C" void setSpeedAndAngleWolf__9daAlink_cFv();
+extern "C" void setSpeedAndAngleWolfAtn__9daAlink_cFv();
+extern "C" void checkWolfAtnWait__9daAlink_cFv();
+extern "C" void checkUnderMove0BckNoArcWolf__9daAlink_cCFQ29daAlink_c12daAlink_WANM();
+extern "C" void setBlendWolfMoveAnime__9daAlink_cFf();
+extern "C" void checkWolfAtnMoveBack__9daAlink_cFs();
+extern "C" void setWolfAtnMoveDirection__9daAlink_cFv();
+extern "C" void setBlendWolfAtnMoveAnime__9daAlink_cFf();
+extern "C" void setBlendWolfAtnBackMoveAnime__9daAlink_cFf();
+extern "C" void setDoubleAnimeWolf__9daAlink_cFfffQ29daAlink_c12daAlink_WANMQ29daAlink_c12daAlink_WANMif();
+extern "C" void setSingleAnimeWolfBase__9daAlink_cFQ29daAlink_c12daAlink_WANM();
+extern "C" void setSingleAnimeWolfBaseMorf__9daAlink_cFQ29daAlink_c12daAlink_WANMf();
+extern "C" void setSingleAnimeWolfBaseSpeed__9daAlink_cFQ29daAlink_c12daAlink_WANMff();
+extern "C" void setSingleAnimeWolf__9daAlink_cFQ29daAlink_c12daAlink_WANMffsf();
+extern "C" void setSingleAnimeWolfParam__9daAlink_cFQ29daAlink_c12daAlink_WANMPC16daAlinkHIO_anm_c();
+extern "C" void checkWolfLandAction__9daAlink_cFi();
+extern "C" void checkMidnaUseAbility__9daAlink_cCFv();
+extern "C" void checkWolfUseAbility__9daAlink_cFv();
+extern "C" void checkWolfGroundSpecialMode__9daAlink_cFv();
+extern "C" void checkNextActionWolf__9daAlink_cFi();
+extern "C" void wolfSideBgCheck__9daAlink_cFs();
+extern "C" void checkWolfAttackReverse__9daAlink_cFi();
+extern "C" void checkWolfBarrierHitReverse__9daAlink_cFv();
+extern "C" void checkWolfBarrierWallHit__9daAlink_cFR13cBgS_PolyInfo();
+extern "C" void wolfBgCheck__9daAlink_cFv();
+extern "C" void changeWolfBlendRate__9daAlink_cFi();
+extern "C" void setWolfFootMatrix__9daAlink_cFv();
+extern "C" void wolfFootBgCheck__9daAlink_cFv();
+extern "C" void checkWolfWaitSlipPolygon__9daAlink_cFv();
+extern "C" void setWolfWaitSlip__9daAlink_cFv();
+extern "C" void checkWolfAtnDoCharge__9daAlink_cFv();
+extern "C" void setWolfChainPos__9daAlink_cFv();
+extern "C" void setWolfAnmVoice__9daAlink_cFv();
+extern "C" void procWolfServiceWaitInit__9daAlink_cFi();
+extern "C" void procWolfServiceWait__9daAlink_cFv();
+extern "C" void procWolfTiredWaitInit__9daAlink_cFv();
+extern "C" void procWolfTiredWait__9daAlink_cFv();
+extern "C" void procWolfMidnaRideShockInit__9daAlink_cFv();
+extern "C" void procWolfMidnaRideShock__9daAlink_cFv();
+extern "C" void procWolfWaitInit__9daAlink_cFv();
+extern "C" void procWolfWait__9daAlink_cFv();
+extern "C" void procWolfMoveInit__9daAlink_cFv();
+extern "C" void procWolfMove__9daAlink_cFv();
+extern "C" void procWolfDashInit__9daAlink_cFv();
+extern "C" void procWolfDash__9daAlink_cFv();
+extern "C" void procWolfDashReverseInit__9daAlink_cFi();
+extern "C" void procWolfDashReverse__9daAlink_cFv();
+extern "C" void procWolfAtnActorMoveInit__9daAlink_cFv();
+extern "C" void procWolfAtnActorMove__9daAlink_cFv();
+extern "C" void procWolfWaitTurnInit__9daAlink_cFv();
+extern "C" void procWolfWaitTurn__9daAlink_cFv();
+extern "C" void procWolfSideStepInit__9daAlink_cFi();
+extern "C" void procWolfSideStep__9daAlink_cFv();
+extern "C" void procWolfSideStepLandInit__9daAlink_cFs();
+extern "C" void procWolfSideStepLand__9daAlink_cFv();
+extern "C" void procWolfBackJumpInit__9daAlink_cFi();
+extern "C" void procWolfBackJump__9daAlink_cFv();
+extern "C" void procWolfBackJumpLandInit__9daAlink_cFss();
+extern "C" void procWolfBackJumpLand__9daAlink_cFv();
+extern "C" void procWolfHowlInit__9daAlink_cFi();
+extern "C" void procWolfHowl__9daAlink_cFv();
+extern "C" void procWolfAutoJumpInit__9daAlink_cFi();
+extern "C" void procWolfAutoJump__9daAlink_cFv();
+extern "C" void procWolfFallInit__9daAlink_cFif();
+extern "C" void procWolfFall__9daAlink_cFv();
+extern "C" void procWolfLandInit__9daAlink_cFv();
+extern "C" void procWolfLand__9daAlink_cFv();
+extern "C" void procWolfSitInit__9daAlink_cFi();
+extern "C" void procWolfSit__9daAlink_cFv();
+extern "C" void procWolfStepMoveInit__9daAlink_cFv();
+extern "C" void procWolfStepMove__9daAlink_cFv();
+extern "C" void procWolfSlipInit__9daAlink_cFv();
+extern "C" void procWolfSlip__9daAlink_cFv();
+extern "C" void procWolfSlipTurnInit__9daAlink_cFi();
+extern "C" void procWolfSlipTurn__9daAlink_cFv();
+extern "C" void procWolfSlipTurnLandInit__9daAlink_cFv();
+extern "C" void procWolfSlipTurnLand__9daAlink_cFv();
+extern "C" void procWolfSlideReadyInit__9daAlink_cFsi();
+extern "C" void procWolfSlideReady__9daAlink_cFv();
+extern "C" void procWolfSlideInit__9daAlink_cFsi();
+extern "C" void procWolfSlide__9daAlink_cFv();
+extern "C" void procWolfSlideLandInit__9daAlink_cFv();
+extern "C" void procWolfSlideLand__9daAlink_cFv();
+extern "C" void procWolfWaitSlipInit__9daAlink_cFv();
+extern "C" void procWolfWaitSlip__9daAlink_cFv();
+extern "C" void procWolfSlopeStartInit__9daAlink_cFi();
+extern "C" void procWolfSlopeStart__9daAlink_cFv();
+extern "C" static void daAlink_searchGoldWolf__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchWolfHowl__FP10fopAc_ac_cPv();
+extern "C" void setWolfHowlNotHappen__9daAlink_cFi();
+extern "C" void procWolfHowlDemoInit__9daAlink_cFv();
+extern "C" void procWolfHowlDemo__9daAlink_cFv();
+extern "C" void setWolfHowling__15daObj_Sekizoa_cFv();
+extern "C" void checkWolfRope__9daAlink_cFv();
+extern "C" void checkWolfRopeHit__9daAlink_cCFP12dCcD_GObjInfPC4cXyzi();
+extern "C" void checkWolfRopeJumpHang__9daAlink_cFv();
+extern "C" void getWolfRopeMoveSpeed__9daAlink_cFv();
+extern "C" void setWolfRopePosY__9daAlink_cFv();
+extern "C" void initWolfRopeShapeAngle__9daAlink_cFv();
+extern "C" void wolfRopeSwingInc__9daAlink_cFf();
+extern "C" void setWolfRopeOffsetY__9daAlink_cFi();
+extern "C" void getDirectionRopeMove__9daAlink_cCFv();
+extern "C" void procWolfRopeMoveInit__9daAlink_cFii();
+extern "C" void procWolfRopeMove__9daAlink_cFv();
+extern "C" void procWolfRopeHangInit__9daAlink_cFi();
+extern "C" void procWolfRopeHang__9daAlink_cFv();
+extern "C" void procWolfRopeTurnInit__9daAlink_cFv();
+extern "C" void procWolfRopeTurn__9daAlink_cFv();
+extern "C" void procWolfRopeStaggerInit__9daAlink_cFi();
+extern "C" void procWolfRopeStagger__9daAlink_cFv();
+extern "C" void procWolfRopeSubjectivityInit__9daAlink_cFv();
+extern "C" void procWolfRopeSubjectivity__9daAlink_cFv();
+extern "C" void getWolfTagJumpTime__9daAlink_cCFv();
+extern "C" void checkMidnaLockJumpPoint__9daAlink_cCFv();
+extern "C" void procWolfTagJumpInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procWolfTagJump__9daAlink_cFv();
+extern "C" void procWolfTagJumpLandInit__9daAlink_cFP10fopAc_ac_c();
+extern "C" void procWolfTagJumpLand__9daAlink_cFv();
+extern "C" static void daAlink_searchGiant__FP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchGiantTalk__FP10fopAc_ac_cPv();
+extern "C" void procWolfGiantPuzzleInit__9daAlink_cFv();
+extern "C" void procWolfGiantPuzzle__9daAlink_cFv();
+extern "C" void setWolfHangGroundY__9daAlink_cFv();
+extern "C" void changeWolfHangEndProc__9daAlink_cFv();
+extern "C" void procWolfHangReadyInit__9daAlink_cFv();
+extern "C" void procWolfHangReady__9daAlink_cFv();
+extern "C" void procWolfHangWallCatchInit__9daAlink_cFi();
+extern "C" void procWolfHangWallCatch__9daAlink_cFv();
+extern "C" void procWolfHangFallStartInit__9daAlink_cFP8cM3dGPla();
+extern "C" void procWolfHangFallStart__9daAlink_cFv();
+extern "C" void setWolfHeadDamage__9daAlink_cFv();
+extern "C" void procWolfDamageInit__9daAlink_cFP12dCcD_GObjInf();
+extern "C" void procWolfDamage__9daAlink_cFv();
+extern "C" void procWolfLargeDamageUpInit__9daAlink_cFiiss();
+extern "C" void procWolfLargeDamageUp__9daAlink_cFv();
+extern "C" void procWolfLandDamageInit__9daAlink_cFi();
+extern "C" void procWolfLandDamage__9daAlink_cFv();
+extern "C" void setWolfScreamWaitAnime__9daAlink_cFv();
+extern "C" void procWolfScreamWaitInit__9daAlink_cFv();
+extern "C" void procWolfScreamWait__9daAlink_cFv();
+extern "C" void getWolfLieMoveAnmSpeed__9daAlink_cFv();
+extern "C" void getWolfLieMoveSpeed__9daAlink_cFv();
+extern "C" void checkMidnaDisappearMode__9daAlink_cCFv();
+extern "C" void checkWolfLieContinue__9daAlink_cFi();
+extern "C" void checkNextActionWolfFromLie__9daAlink_cFv();
+extern "C" void setWolfLieMoveVoice__9daAlink_cFi();
+extern "C" void checkWolfLieCode__9daAlink_cFv();
+extern "C" void procWolfLieStartInit__9daAlink_cFi();
+extern "C" void procWolfLieStart__9daAlink_cFv();
+extern "C" void procWolfLieMoveInit__9daAlink_cFi();
+extern "C" void procWolfLieMove__9daAlink_cFv();
+extern "C" void procWolfLieAutoMoveInit__9daAlink_cFiP4cXyz();
+extern "C" void procWolfLieAutoMove__9daAlink_cFv();
+extern "C" void setSpeedAndAngleSwimWolf__9daAlink_cFv();
+extern "C" void getWolfSwimMoveAnmSpeed__9daAlink_cFv();
+extern "C" void decideDoStatusSwimWolf__9daAlink_cFv();
+extern "C" void procWolfSwimUpInit__9daAlink_cFv();
+extern "C" void procWolfSwimUp__9daAlink_cFv();
+extern "C" void procWolfSwimWaitInit__9daAlink_cFi();
+extern "C" void procWolfSwimWait__9daAlink_cFv();
+extern "C" void procWolfSwimMoveInit__9daAlink_cFv();
+extern "C" void procWolfSwimMove__9daAlink_cFv();
+extern "C" void procWolfSwimEndWaitInit__9daAlink_cFi();
+extern "C" void procWolfSwimEndWait__9daAlink_cFv();
+extern "C" void onWolfEnemyBiteAll__9daAlink_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2();
+extern "C" void resetWolfEnemyBiteAll__9daAlink_cFv();
+extern "C" void checkWolfEnemyThrowAction__9daAlink_cFv();
+extern "C" void setWolfLockDomeModel__9daAlink_cFv();
+extern "C" void setWolfBallModel__9daAlink_cFv();
+extern "C" void resetWolfBallGrab__9daAlink_cFv();
+extern "C" void checkWolfLockData__9daAlink_cFv();
+extern "C" void checkWolfLock__9daAlink_cCFP10fopAc_ac_c();
+extern "C" void cancelWolfLock__9daAlink_cFP10fopAc_ac_c();
+extern "C" void getWolfLockActorEnd__9daAlink_cFv();
+extern "C" void searchWolfLockEnemy__9daAlink_cFP10fopAc_ac_cPv();
+extern "C" static void daAlink_searchWolfLockEnemy__FP10fopAc_ac_cPv();
+extern "C" void checkWolfComboCnt__9daAlink_cFv();
+extern "C" void checkWolfAttackAction__9daAlink_cFv();
+extern "C" void setWolfEnemyThrowUpperAnime__9daAlink_cFQ29daAlink_c12daAlink_WANMf();
+extern "C" void setWolfEnemyHangBitePos__9daAlink_cFP13fopEn_enemy_c();
+extern "C" void setWolfBiteDamage__9daAlink_cFP13fopEn_enemy_c();
+extern "C" void checkWolfLockAttackChargeState__9daAlink_cFv();
+extern "C" void procWolfRollAttackChargeInit__9daAlink_cFv();
+extern "C" void procWolfRollAttackCharge__9daAlink_cFv();
+extern "C" void procWolfRollAttackMoveInit__9daAlink_cFv();
+extern "C" void procWolfRollAttackMove__9daAlink_cFv();
+extern "C" void procWolfJumpAttackInit__9daAlink_cFi();
+extern "C" void procWolfJumpAttack__9daAlink_cFv();
+extern "C" void procWolfJumpAttackKickInit__9daAlink_cFv();
+extern "C" void procWolfJumpAttackKick__9daAlink_cFv();
+extern "C" void procWolfJumpAttackSlideLandInit__9daAlink_cFiii();
+extern "C" void procWolfJumpAttackSlideLand__9daAlink_cFv();
+extern "C" void procWolfJumpAttackNormalLandInit__9daAlink_cFi();
+extern "C" void procWolfJumpAttackNormalLand__9daAlink_cFv();
+extern "C" void procWolfWaitAttackInit__9daAlink_cFi();
+extern "C" void procWolfWaitAttack__9daAlink_cFv();
+extern "C" void procWolfRollAttackInit__9daAlink_cFii();
+extern "C" void procWolfRollAttack__9daAlink_cFv();
+extern "C" void procWolfDownAttackInit__9daAlink_cFv();
+extern "C" void procWolfDownAttack__9daAlink_cFv();
+extern "C" void procWolfDownAtLandInit__9daAlink_cFP13fopEn_enemy_c();
+extern "C" void procWolfDownAtLand__9daAlink_cFv();
+extern "C" void procWolfDownAtMissLandInit__9daAlink_cFv();
+extern "C" void procWolfDownAtMissLand__9daAlink_cFv();
+extern "C" void procWolfLockAttackInit__9daAlink_cFi();
+extern "C" void procWolfLockAttack__9daAlink_cFv();
+extern "C" void procWolfLockAttackTurnInit__9daAlink_cFi();
+extern "C" void procWolfLockAttackTurn__9daAlink_cFv();
+extern "C" void procWolfAttackReverseInit__9daAlink_cFv();
+extern "C" void procWolfAttackReverse__9daAlink_cFv();
+extern "C" void procWolfEnemyThrowInit__9daAlink_cFi();
+extern "C" void procWolfEnemyThrow__9daAlink_cFv();
+extern "C" void procWolfEnemyHangBiteInit__9daAlink_cFv();
+extern "C" void procWolfEnemyHangBite__9daAlink_cFv();
+extern "C" void procWolfGrabUpInit__9daAlink_cFv();
+extern "C" void procWolfGrabUp__9daAlink_cFv();
+extern "C" void procWolfGrabPutInit__9daAlink_cFv();
+extern "C" void procWolfGrabPut__9daAlink_cFv();
+extern "C" void procWolfGrabThrowInit__9daAlink_cFv();
+extern "C" void procWolfGrabThrow__9daAlink_cFv();
+extern "C" void procWolfPushInit__9daAlink_cFv();
+extern "C" void procWolfPush__9daAlink_cFv();
+extern "C" static void daAlink_searchEnemyCargo__FP10fopAc_ac_cPv();
+extern "C" void procWolfCargoCarryInit__9daAlink_cFv();
+extern "C" void procWolfCargoCarry__9daAlink_cFv();
+extern "C" void procWolfChainUpInit__9daAlink_cFv();
+extern "C" void procWolfChainUp__9daAlink_cFv();
+extern "C" void procWolfGanonCatchInit__9daAlink_cFv();
+extern "C" void procWolfGanonCatch__9daAlink_cFv();
+extern "C" void procWolfChainReadyInit__9daAlink_cFv();
+extern "C" void procWolfChainReady__9daAlink_cFv();
+extern "C" void procWolfChainWaitInit__9daAlink_cFv();
+extern "C" void procWolfChainWait__9daAlink_cFv();
+extern "C" void procWolfDigInit__9daAlink_cFv();
+extern "C" void procWolfDig__9daAlink_cFv();
+extern "C" void procWolfDigThroughInit__9daAlink_cFi();
+extern "C" void procWolfDigThrough__9daAlink_cFv();
+extern "C" void setSmellSave__9daAlink_cFv();
+extern "C" void procWolfGetSmellInit__9daAlink_cFv();
+extern "C" void procWolfGetSmell__9daAlink_cFv();
+extern "C" void setArcName__9daAlink_cFi();
+extern "C" void setShieldArcName__9daAlink_cFv();
+extern "C" void setOriginalHeap__9daAlink_cFPP10JKRExpHeapUl();
+extern "C" void setClothesChange__9daAlink_cFi();
+extern "C" void setShieldChange__9daAlink_cFv();
+extern "C" void loadModelDVD__9daAlink_cFv();
+extern "C" void setShieldModel__9daAlink_cFv();
+extern "C" void loadShieldModelDVD__9daAlink_cFv();
+extern "C" void changeModelDataDirect__9daAlink_cFi();
+extern "C" void changeModelDataDirectWolf__9daAlink_cFi();
+extern "C" void initStatusWindow__9daAlink_cFv();
+extern "C" void statusWindowExecute__9daAlink_cFPC4cXyzs();
+extern "C" void statusWindowDraw__9daAlink_cFv();
+extern "C" void resetStatusWindow__9daAlink_cFv();
+extern "C" void __ct__12daAlinkHIO_cFv();
+extern "C" void __dt__17daAlinkHIO_wolf_cFv();
+extern "C" void __dt__16daAlinkHIO_cut_cFv();
+extern "C" void __dt__12daAlinkHIO_cFv();
+extern "C" void __dt__8dEyeHL_cFv();
+extern "C" void __dt__18daPy_sightPacket_cFv();
+extern "C" void __dt__16daPy_frameCtrl_cFv();
+extern "C" void __ct__16daPy_frameCtrl_cFv();
+extern "C" void __defctor__14daPy_anmHeap_cFv();
+extern "C" void __dt__19mDoExt_AnmRatioPackFv();
+extern "C" void __ct__19mDoExt_AnmRatioPackFv();
+extern "C" void __dt__16dBgS_LinkRoofChkFv();
+extern "C" void __dt__15dBgS_LinkGndChkFv();
+extern "C" void __dt__13dBgS_LinkAcchFv();
+extern "C" void __ct__8dCcD_CpsFv();
+extern "C" void __ct__8dCcD_CylFv();
+extern "C" void __dt__9cCcD_SttsFv();
+extern "C" void __ct__16daPy_actorKeep_cFv();
+extern "C" void onNoResetFlg2__9daPy_py_cFQ29daPy_py_c9daPy_FLG2();
+extern "C" void offNoResetFlg0__9daPy_py_cFQ29daPy_py_c9daPy_FLG0();
+extern "C" static void mDoAud_seStartLevel__FUlPC3VecUlSc();
+extern "C" void checkEndResetFlg2__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG2();
+extern "C" static void dComIfGp_setBottleStatus__FUcUc();
+extern "C" void getSumouMode__9daPy_py_cCFv();
+extern "C" void checkNoResetFlg3__9daPy_py_cCFQ29daPy_py_c9daPy_FLG3();
+extern "C" void onCondition__11dEvt_info_cFUs();
+extern "C" void __ct__8cM3dGPlaFv();
+extern "C" void offCondition__11dEvt_info_cFUs();
+extern "C" void checkShieldGet__9daPy_py_cFv();
+extern "C" static void fopAcM_onSwitch__FPC10fopAc_ac_ci();
+extern "C" static void dComIfGs_isItemFirstBit__FUc();
+extern "C" static void dStage_stagInfo_GetSaveTbl__FP21stage_stag_info_class();
+extern "C" static void dComIfGp_getStage__Fv();
+extern "C" void checkEquipHeavyBoots__9daPy_py_cCFv();
+extern "C" void fopAcM_GetName__FPv();
+extern "C" void onNoResetFlg0__9daPy_py_cFQ29daPy_py_c9daPy_FLG0();
+extern "C" void isOrderOK__14dEvt_control_cFv();
+extern "C" static void dComIfGp_getEvent__Fv();
+extern "C" static void dComIfGp_checkPlayerStatus0__FiUl();
+extern "C" static void dComIfGp_checkPlayerStatus1__FiUl();
+extern "C" void checkEndResetFlg1__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG1();
+extern "C" static void dComIfGp_getEventManager__Fv();
+extern "C" void offNoResetFlg1__9daPy_py_cFQ29daPy_py_c9daPy_FLG1();
+extern "C" void offNoResetFlg2__9daPy_py_cFQ29daPy_py_c9daPy_FLG2();
+extern "C" void setSpecialDemoType__11daPy_demo_cFv();
+extern "C" void checkCommandCatch__11dEvt_info_cFv();
+extern "C" void dComIfGs_isEventBit__FUs();
+extern "C" void checkWolf__9daPy_py_cCFv();
+extern "C" void checkSwordGet__9daPy_py_cFv();
+extern "C" void checkResetFlg0__9daPy_py_cCFQ29daPy_py_c10daPy_RFLG0();
+extern "C" void ChkGroundHit__9dBgS_AcchCFv();
+extern "C" void checkNoResetFlg0__9daPy_py_cCFQ29daPy_py_c9daPy_FLG0();
+extern "C" static void dComIfGp_getPlayerCameraID__Fi();
+extern "C" static void dComIfGp_event_chkEventFlag__FUs();
+extern "C" void checkCommandDoor__11dEvt_info_cFv();
+extern "C" static void dComIfGp_evmng_getMyStaffId__FPCcP10fopAc_ac_ci();
+extern "C" static void dComIfGp_event_runCheck__Fv();
+extern "C" void checkNoResetFlg2__9daPy_py_cCFQ29daPy_py_c9daPy_FLG2();
+extern "C" void checkMagneBootsOn__9daPy_py_cCFv();
+extern "C" void dComIfGp_getHorseActor__Fv();
+extern "C" void checkBoarSingleBattle__9daPy_py_cCFv();
+extern "C" void checkEndResetFlg0__9daPy_py_cCFQ29daPy_py_c11daPy_ERFLG0();
+extern "C" bool getMidnaAtnPos__9daPy_py_cCFv();
+extern "C" void setMidnaMsgNum__9daPy_py_cFP10fopAc_ac_cUs();
+extern "C" void getModelMtx__9daPy_py_cFv();
+extern "C" void getInvMtx__9daPy_py_cFv();
+extern "C" void getShadowTalkAtnPos__9daPy_py_cFv();
+extern "C" void getLeftItemMatrix__9daPy_py_cFv();
+extern "C" void getRightItemMatrix__9daPy_py_cFv();
+extern "C" void getLeftHandMatrix__9daPy_py_cFv();
+extern "C" void getRightHandMatrix__9daPy_py_cFv();
+extern "C" void getLinkBackBone1Matrix__9daPy_py_cFv();
+extern "C" void getWolfMouthMatrix__9daPy_py_cFv();
+extern "C" void getWolfBackbone2Matrix__9daPy_py_cFv();
+extern "C" bool getBottleMtx__9daPy_py_cFv();
+extern "C" bool checkPlayerGuard__9daPy_py_cCFv();
+extern "C" bool checkAutoJump__9daPy_py_cCFv();
+extern "C" bool checkSideStep__9daPy_py_cCFv();
+extern "C" bool checkWolfTriggerJump__9daPy_py_cCFv();
+extern "C" bool checkGuardBreakMode__9daPy_py_cCFv();
+extern "C" bool checkLv3Slide__9daPy_py_cCFv();
+extern "C" bool checkWolfHowlDemoMode__9daPy_py_cCFv();
+extern "C" bool checkChainBlockPushPull__9daPy_py_cFv();
+extern "C" bool checkElecDamage__9daPy_py_cCFv();
+extern "C" bool checkEmptyBottleSwing__9daPy_py_cCFv();
+extern "C" bool checkBottleSwingMode__9daPy_py_cCFv();
+extern "C" bool checkHawkWait__9daPy_py_cCFv();
+extern "C" bool checkGoatThrow__9daPy_py_cCFv();
+extern "C" bool checkGoatThrowAfter__9daPy_py_cCFv();
+extern "C" bool checkWolfTagLockJump__9daPy_py_cCFv();
+extern "C" bool checkWolfTagLockJumpLand__9daPy_py_cCFv();
+extern "C" bool checkWolfRope__9daPy_py_cFv();
+extern "C" bool checkWolfRopeHang__9daPy_py_cCFv();
+extern "C" bool checkRollJump__9daPy_py_cCFv();
+extern "C" bool checkGoronRideWait__9daPy_py_cCFv();
+extern "C" bool checkWolfChain__9daPy_py_cCFv();
+extern "C" bool checkWolfWait__9daPy_py_cCFv();
+extern "C" bool checkWolfJumpAttack__9daPy_py_cCFv();
+extern "C" bool checkWolfRSit__9daPy_py_cCFv();
+extern "C" bool checkBubbleFly__9daPy_py_cCFv();
+extern "C" bool checkBottleDrinkEnd__9daPy_py_cCFv();
+extern "C" bool checkWolfDig__9daPy_py_cCFv();
+extern "C" bool checkCutCharge__9daPy_py_cCFv();
+extern "C" bool checkCutTurnCharge__9daPy_py_cCFv();
+extern "C" bool checkCutLargeJumpCharge__9daPy_py_cCFv();
+extern "C" bool getBokoFlamePos__9daPy_py_cFP4cXyz();
+extern "C" bool checkComboCutTurn__9daPy_py_cCFv();
+extern "C" bool checkClimbMove__9daPy_py_cCFv();
+extern "C" bool checkGrassWhistle__9daPy_py_cCFv();
+extern "C" bool checkBoarRun__9daPy_py_cCFv();
+extern "C" bool checkFmChainPut__9daPy_py_cCFv();
+extern "C" bool checkHorseElecDamage__9daPy_py_cCFv();
+extern "C" void getBaseAnimeFrameRate__9daPy_py_cCFv();
+extern "C" void getBaseAnimeFrame__9daPy_py_cCFv();
+extern "C" void setAnimeFrame__9daPy_py_cFf();
+extern "C" bool checkWolfLock__9daPy_py_cCFP10fopAc_ac_c();
+extern "C" bool cancelWolfLock__9daPy_py_cFP10fopAc_ac_c();
+extern "C" s32 getItemID__9daPy_py_cCFv();
+extern "C" bool exchangeGrabActor__9daPy_py_cFP10fopAc_ac_c();
+extern "C" bool setForceGrab__9daPy_py_cFP10fopAc_ac_cii();
+extern "C" void setForcePutPos__9daPy_py_cFRC4cXyz();
+extern "C" bool checkPlayerNoDraw__9daPy_py_cFv();
+extern "C" bool checkRopeTag__9daPy_py_cFv();
+extern "C" void voiceStart__9daPy_py_cFUl();
+extern "C" void seStartOnlyReverb__9daPy_py_cFUl();
+extern "C" void seStartOnlyReverbLevel__9daPy_py_cFUl();
+extern "C" void setOutPower__9daPy_py_cFfsi();
+extern "C" void setGrabCollisionOffset__9daPy_py_cFffP13cBgS_PolyInfo();
+extern "C" void onMagneGrab__9daPy_py_cFff();
+extern "C" bool getModelJointMtx__9daPy_py_cFUs();
+extern "C" bool getHeadMtx__9daPy_py_cFv();
+extern "C" bool setHookshotCarryOffset__9daPy_py_cFUiPC4cXyz();
+extern "C" bool checkIronBallReturn__9daPy_py_cCFv();
+extern "C" bool checkIronBallGroundStop__9daPy_py_cCFv();
+extern "C" bool checkSingleBoarBattleSecondBowReady__9daPy_py_cCFv();
+extern "C" bool checkPointSubWindowMode__9daPy_py_cCFv();
+extern "C" void setClothesChange__9daPy_py_cFi();
+extern "C" void setPlayerPosAndAngle__9daPy_py_cFPA4_f();
+extern "C" void setPlayerPosAndAngle__9daPy_py_cFPC4cXyzPC5csXyz();
+extern "C" void setPlayerPosAndAngle__9daPy_py_cFPC4cXyzsi();
+extern "C" bool setThrowDamage__9daPy_py_cFsffiii();
+extern "C" bool checkSetNpcTks__9daPy_py_cFP4cXyzii();
+extern "C" bool setRollJump__9daPy_py_cFffs();
+extern "C" void playerStartCollisionSE__9daPy_py_cFUlUl();
+extern "C" void changeTextureAnime__9daPy_py_cFUsUsi();
+extern "C" void cancelChangeTextureAnime__9daPy_py_cFv();
+extern "C" void cancelDungeonWarpReadyNeck__9daPy_py_cFv();
+extern "C" void onSceneChangeArea__9daPy_py_cFUcUcP10fopAc_ac_c();
+extern "C" void onSceneChangeAreaJump__9daPy_py_cFUcUcP10fopAc_ac_c();
+extern "C" void onSceneChangeDead__9daPy_py_cFUci();
+extern "C" bool getSpinnerActor__9daPy_py_cFv();
+extern "C" bool checkHorseRideNotReady__9daPy_py_cCFv();
+extern "C" bool checkArrowChargeEnd__9daPy_py_cCFv();
+extern "C" void getSearchBallScale__9daPy_py_cCFv();
+extern "C" bool checkFastShotTime__9daPy_py_cFv();
+extern "C" bool checkNoEquipItem__9daPy_py_cCFv();
+extern "C" bool checkFireMaterial__9daPy_py_cCFv();
+extern "C" bool checkKandelaarSwing__9daPy_py_cCFi();
+extern "C" bool getBoardCutTurnOffsetAngleY__9daPy_py_cCFv();
+extern "C" void getMagneHitPos__9daPy_py_cFv();
+extern "C" void getMagneBootsTopVec__9daPy_py_cFv();
+extern "C" bool checkUseKandelaar__9daPy_py_cFi();
+extern "C" void setDkCaught__9daPy_py_cFP10fopAc_ac_c();
+extern "C" void onPressedDamage__9daPy_py_cFRC4cXyzs();
+extern "C" bool checkPriActorOwn__9daPy_py_cCFPC10fopAc_ac_c();
+extern "C" bool onWolfEnemyBiteAll__9daPy_py_cFP10fopAc_ac_cQ29daPy_py_c9daPy_FLG2();
+extern "C" bool checkWolfEnemyBiteAllOwn__9daPy_py_cCFPC10fopAc_ac_c();
+extern "C" void setWolfEnemyHangBiteAngle__9daPy_py_cFs();
+extern "C" void setKandelaarMtx__9daPy_py_cFPA4_fii();
+extern "C" bool getStickAngleFromPlayerShape__9daPy_py_cCFPs();
+extern "C" bool checkSpinnerPathMove__9daPy_py_cFv();
+extern "C" bool checkSpinnerTriggerAttack__9daPy_py_cFv();
+extern "C" void onSpinnerPathForceRemove__9daPy_py_cFv();
+extern "C" bool getIronBallBgHit__9daPy_py_cCFv();
+extern "C" bool getIronBallCenterPos__9daPy_py_cFv();
+extern "C" bool checkCanoeFishingGetLeft__9daPy_py_cCFv();
+extern "C" bool checkCanoeFishingGetRight__9daPy_py_cCFv();
+extern "C" bool checkBeeChildDrink__9daPy_py_cCFv();
+extern "C" void skipPortalObjWarp__9daPy_py_cFv();
+extern "C" bool checkTreasureRupeeReturn__9daPy_py_cCFi();
+extern "C" void setSumouReady__9daPy_py_cFP10fopAc_ac_c();
+extern "C" bool checkAcceptDungeonWarpAlink__9daPy_py_cFi();
+extern "C" bool getSumouCounter__9daPy_py_cCFv();
+extern "C" bool checkSumouWithstand__9daPy_py_cCFv();
+extern "C" void cancelGoronThrowEvent__9daPy_py_cFv();
+extern "C" void setSumouGraspCancelCount__9daPy_py_cFi();
+extern "C" void setSumouPushBackDirection__9daPy_py_cFs();
+extern "C" void setSumouLoseHeadUp__9daPy_py_cFv();
+extern "C" void getGiantPuzzleAimAngle__9daPy_py_cCFv();
+extern "C" void setGoronSideMove__9daPy_py_cFP10fopAc_ac_c();
+extern "C" void setCargoCarry__9daPy_py_cFP10fopAc_ac_c();
+extern "C" bool getDpdFarFlg__9daPy_py_cCFv();
+extern "C" bool getHookshotTopPos__9daPy_py_cFv();
+extern "C" bool checkHookshotReturnMode__9daPy_py_cCFv();
+extern "C" bool checkHookshotShootReturnMode__9daPy_py_cCFv();
+extern "C" bool checkOctaIealHang__9daPy_py_cCFv();
+extern "C" void cancelOctaIealHang__9daPy_py_cFv();
+extern "C" void cancelDragonHangBackJump__9daPy_py_cFv();
+extern "C" void setOctaIealWildHang__9daPy_py_cFv();
+extern "C" bool checkDragonHangRide__9daPy_py_cCFv();
+extern "C" void changeDragonActor__9daPy_py_cFP10fopAc_ac_c();
+extern "C" bool getClothesChangeWaitTimer__9daPy_py_cCFv();
+extern "C" bool getShieldChangeWaitTimer__9daPy_py_cCFv();
+extern "C" bool getSwordChangeWaitTimer__9daPy_py_cCFv();
+extern "C" bool checkMetamorphose__9daPy_py_cCFv();
+extern "C" bool checkWolfDownAttackPullOut__9daPy_py_cCFv();
+extern "C" bool checkBootsOrArmorHeavy__9daPy_py_cCFv();
+extern "C" s32 getBottleOpenAppearItem__9daPy_py_cCFv();
+extern "C" bool checkItemSwordEquip__9daPy_py_cCFv();
+extern "C" void getSinkShapeOffset__9daPy_py_cCFv();
+extern "C" bool checkSinkDead__9daPy_py_cCFv();
+extern "C" bool checkHorseStart__9daPy_py_cFv();
+extern "C" bool getWolfHowlMgrP__9daPy_py_cFv();
+extern "C" bool checkWolfHowlSuccessAnime__9daPy_py_cCFv();
+extern "C" bool checkCopyRodTopUse__9daPy_py_cFv();
+extern "C" bool checkCopyRodEquip__9daPy_py_cCFv();
+extern "C" bool checkCutJumpMode__9daPy_py_cCFv();
+extern "C" void getZeldaActor__9daHorse_cFv();
+extern "C" static void dComIfGp_getDoStatus__Fv();
+extern "C" void __ct__4cXyzFfff();
+extern "C" static void dMeter2Info_offUseButton__Fi();
+extern "C" void setLinkState__14Z2CreatureLinkFUc();
+extern "C" static void dComIfGs_getRupee__Fv();
+extern "C" static void dComIfGp_setItemRupeeCount__Fl();
+extern "C" static void dMeter2Info_setFloatingMessage__FUssb();
+extern "C" void onForcePanic__9daMidna_cFv();
+extern "C" void checkForceNormalColor__9daMidna_cCFv();
+extern "C" void checkForceTiredColor__9daMidna_cCFv();
+extern "C" void checkMidnaTired__9daMidna_cFv();
+extern "C" void onNoServiceWait__9daMidna_cFv();
+extern "C" void setControllActorData__8daCrod_cFv();
+extern "C" void func_80141ACC();
+extern "C" void func_80141AE8();
+extern "C" void __sinit_d_a_alink_cpp();
+extern "C" static void func_801446D4();
+extern "C" static void func_801446DC();
+extern "C" static void func_801446E4();
+extern "C" static void func_801446EC();
+extern "C" static void func_801446F4();
+extern "C" static void func_801446FC();
+extern "C" static void func_80144704();
+extern "C" static void func_8014470C();
+extern "C" static void func_80144714();
+extern "C" static void func_8014471C();
 extern "C" extern u8 const m__21daAlinkHIO_gAtKick_c0[36];
 extern "C" extern u8 const m__21daAlinkHIO_zwLight_c0[28];
 extern "C" extern u8 const m__20daAlinkHIO_wlBall_c0[56];
@@ -5489,792 +5501,868 @@ extern "C" extern void* __vt__12dBgS_ObjAcch[9];
 // External References:
 // 
 
-void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void mDoMtx_XrotS(f32 (* )[4], s16); // 2
-void mDoMtx_XrotM(f32 (* )[4], s16); // 2
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotS(f32 (* )[4], s16); // 2
-void mDoMtx_ZrotM(f32 (* )[4], s16); // 2
-void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*); // 2
-void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*); // 2
-void mDoExt_modelEntryDL(J3DModel*); // 2
-void mDoExt_getGameHeap(); // 2
-void mDoExt_destroyExpHeap(JKRExpHeap*); // 2
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void mDoLib_pos2camera(Vec*, Vec*); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Executor(int (*)(void*, void*), void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_setStageLayer(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*); // 2
-void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*)); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderTalkEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderTalkItemBtnEvent(u16, fopAc_ac_c*, fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderDoorEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderCatchEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16); // 2
-void fopAcM_orderOtherEvent(fopAc_ac_c*, char const*, u16, u16, u16); // 2
-void fopAcM_orderOtherEvent(fopAc_ac_c*, fopAc_ac_c*, char const*, u16, u16, u16); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void fopAcM_orderTreasureEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16); // 2
-void fopAcM_getTalkEventPartner(fopAc_ac_c const*); // 2
-void fopAcM_getItemEventPartner(fopAc_ac_c const*); // 2
-void fopAcM_getEventPartner(fopAc_ac_c const*); // 2
-void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*); // 2
-void fopAcM_createItemForSimpleDemo(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32); // 2
-void fopAcM_setCarryNow(fopAc_ac_c*, int); // 2
-void fopAcM_cancelCarryNow(fopAc_ac_c*); // 2
-void fopAcM_getWaterY(cXyz const*, f32*); // 2
-void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*); // 2
-void fopAcM_getWaterStream(cXyz const*, cBgS_PolyInfo const&, cXyz*, int*, int); // 2
-void fopAcM_getPolygonAngle(cM3dGPla const*, s16); // 2
-void fopOvlpM_IsPeek(); // 2
-void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*)); // 2
-void fopKyM_createWpillar(cXyz const*, f32, int); // 2
-void fopMsgM_SearchByID(unsigned int); // 2
-void fopMsgM_messageSet(u32, u32); // 2
-void fpcM_IsCreating(unsigned int); // 2
-void fpcSch_JudgeByID(void*, void*); // 2
-void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*)); // 2
-void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*); // 2
-void dStage_RoomCheck(cBgS_GndChk*); // 2
-void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16); // 2
-void dStage_changeScene(int, f32, u32, s8, s16, int); // 2
-void dStage_restartRoom(u32, u32, int); // 2
-void dComIfGp_checkItemGet(u8, int); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*, JKRHeap*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int); // 2
-void dComIfGs_isOneZoneSwitch(int, int); // 2
-void dComIfGs_getMaxLifeGauge(); // 2
-void dComIfGp_getSelectItem(int); // 2
-s32 dComIfGs_getBottleMax(); // 2
-void dComIfGp_getSelectItemNum(int); // 2
-void dComIfGp_setSelectItemNum(int, s16); // 2
-void dComIfGp_addSelectItemNum(int, s16); // 2
-void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*); // 2
-void dComIfGs_setSelectEquipClothes(u8); // 2
-void dComIfGs_getWarpStageName(); // 2
-void dComIfGs_getWarpPlayerPos(); // 2
-void dComIfGs_getWarpPlayerAngleY(); // 2
-void dComIfGs_getWarpRoomNo(); // 2
-void dComIfGs_Wolf_Change_Check(); // 2
-void dComIfGs_PolyDamageOff_Check(); // 2
-void dComIfGp_TargetWarpPt_set(u8); // 2
-void dComIfGp_TargetWarpPt_get(); // 2
-void dComIfGp_TransportWarp_check(); // 2
-void dEv_noFinishSkipProc(void*, int); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*); // 2
-void dBgS_CheckBWallPoly(cBgS_PolyInfo const&); // 2
-void dBgS_CheckBGroundPoly(cBgS_PolyInfo const&); // 2
-void dBgS_GetNY(cBgS_PolyInfo const&); // 2
-void execItemGet(u8); // 2
-void checkItemGet(u8, int); // 2
-void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&); // 2
-void daPy_addCalcShort(s16*, s16, s16, s16, s16); // 2
-void dCam_getControledAngleY(camera_class*); // 2
-void dCam_getBody(); // 2
-void d_GameOver_Create(u8); // 2
-void dKy_setLight_again(); // 2
-void dKy_plight_set(LIGHT_INFLUENCE*); // 2
-void dKy_plight_cut(LIGHT_INFLUENCE*); // 2
-void dKy_Itemgetcol_chg_on(); // 2
-void dKy_Sound_set(cXyz, int, unsigned int, int); // 2
-void dKy_SordFlush_set(cXyz, int); // 2
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
-void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8); // 2
-void dKy_pol_efftype_get(cBgS_PolyInfo const*); // 2
-void dKy_pol_sound_get(cBgS_PolyInfo const*); // 2
-void dKy_pol_argument_get(cBgS_PolyInfo const*); // 2
-void dKy_TeachWind_existence_chk(); // 2
-bool dKy_withwarp_capture_check(); // 2
-void dKy_darkworld_check(); // 2
-void dKy_shadow_mode_set(u8); // 2
-void dKy_shadow_mode_reset(u8); // 2
-void dMeter2Info_setShield(u8, bool); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cPhs_Reset(request_of_phase_process_class*); // 2
-void cM_rad2s(f32); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_atan2f(f32, f32); // 2
-void cM_rnd(); // 2
-void cM_rndF(f32); // 2
-void cM_rndFX(f32); // 2
-void cBgW_CheckBGround(f32); // 2
-void cBgW_CheckBRoof(f32); // 2
-void cBgW_CheckBWall(f32); // 2
-void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*); // 2
-void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*); // 2
-void cM3d_3PlaneCrossPos(cM3dGPla const&, cM3dGPla const&, cM3dGPla const&, Vec*); // 2
-void cLib_memCpy(void*, void const*, u32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32); // 2
-void cLib_addCalcAngleS(s16*, s16, s16, s16, s16); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void cLib_chaseUC(u8*, u8, u8); // 2
-void cLib_chaseS(s16*, s16, s16); // 2
-void cLib_chaseF(f32*, f32, f32); // 2
-void cLib_chasePos(cXyz*, cXyz const&, f32); // 2
-void cLib_chasePosXZ(cXyz*, cXyz const&, f32); // 2
-void cLib_chaseAngleS(s16*, s16, s16); // 2
-void cLib_targetAngleY(Vec const*, Vec const*); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void JMAEulerToQuat(s16, s16, s16, Quaternion*); // 2
+void mDoMtx_XYZrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotS(f32 (* )[4], s16, s16, s16);
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void mDoMtx_XrotS(f32 (* )[4], s16);
+void mDoMtx_XrotM(f32 (* )[4], s16);
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoMtx_ZrotS(f32 (* )[4], s16);
+void mDoMtx_ZrotM(f32 (* )[4], s16);
+void mDoMtx_QuatConcat(Quaternion const*, Quaternion const*, Quaternion*);
+void mDoMtx_MtxToRot(f32 const (* )[4], csXyz*);
+void mDoExt_modelEntryDL(J3DModel*);
+void mDoExt_getGameHeap();
+void mDoExt_destroyExpHeap(JKRExpHeap*);
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void mDoLib_project(Vec*, Vec*);
+void mDoLib_pos2camera(Vec*, Vec*);
+void fopAc_IsActor(void*);
+void fopAcIt_Executor(int (*)(void*, void*), void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_setStageLayer(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void fopAcM_fastCreate(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*), void*);
+void fopAcM_createChild(s16, unsigned int, u32, cXyz const*, int, csXyz const*, cXyz const*, s8, int (*)(void*));
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderTalkEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16);
+void fopAcM_orderTalkItemBtnEvent(u16, fopAc_ac_c*, fopAc_ac_c*, u16, u16);
+void fopAcM_orderDoorEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16);
+void fopAcM_orderCatchEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16);
+void fopAcM_orderOtherEvent(fopAc_ac_c*, char const*, u16, u16, u16);
+void fopAcM_orderOtherEvent(fopAc_ac_c*, fopAc_ac_c*, char const*, u16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void fopAcM_orderTreasureEvent(fopAc_ac_c*, fopAc_ac_c*, u16, u16);
+void fopAcM_getTalkEventPartner(fopAc_ac_c const*);
+void fopAcM_getItemEventPartner(fopAc_ac_c const*);
+void fopAcM_getEventPartner(fopAc_ac_c const*);
+void fopAcM_createItemForPresentDemo(cXyz const*, int, u8, int, int, csXyz const*, cXyz const*);
+void fopAcM_createItemForSimpleDemo(cXyz const*, int, int, csXyz const*, cXyz const*, f32, f32);
+void fopAcM_setCarryNow(fopAc_ac_c*, int);
+void fopAcM_cancelCarryNow(fopAc_ac_c*);
+void fopAcM_getWaterY(cXyz const*, f32*);
+void fpoAcM_relativePos(fopAc_ac_c const*, cXyz const*, cXyz*);
+void fopAcM_getWaterStream(cXyz const*, cBgS_PolyInfo const&, cXyz*, int*, int);
+void fopAcM_getPolygonAngle(cM3dGPla const*, s16);
+void fopOvlpM_IsPeek();
+void fopKyM_create(s16, int, cXyz*, cXyz*, int (*)(void*));
+void fopKyM_createWpillar(cXyz const*, f32, int);
+void fopMsgM_SearchByID(unsigned int);
+void fopMsgM_messageSet(u32, u32);
+void fpcM_IsCreating(unsigned int);
+void fpcSch_JudgeByID(void*, void*);
+void fpcDw_Handler(int (*)(int (*)(void*, void*)), int (*)(void*, void*));
+void fpcFCtRq_Request(layer_class*, s16, int (*)(void*, void*), void*, void*);
+void dStage_RoomCheck(cBgS_GndChk*);
+void dStage_changeSceneExitId(cBgS_PolyInfo&, f32, u32, s8, s16);
+void dStage_changeScene(int, f32, u32, s8, s16, int);
+void dStage_restartRoom(u32, u32, int);
+void dComIfGp_checkItemGet(u8, int);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*, JKRHeap*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int);
+void dComIfGs_isOneZoneSwitch(int, int);
+void dComIfGs_getMaxLifeGauge();
+void dComIfGp_getSelectItem(int);
+s32 dComIfGs_getBottleMax();
+void dComIfGp_getSelectItemNum(int);
+void dComIfGp_setSelectItemNum(int, s16);
+void dComIfGp_addSelectItemNum(int, s16);
+void dComIfGd_setShadow(u32, s8, J3DModel*, cXyz*, f32, f32, f32, f32, cBgS_PolyInfo&, dKy_tevstr_c*, s16, f32, _GXTexObj*);
+void dComIfGs_setSelectEquipClothes(u8);
+void dComIfGs_getWarpStageName();
+void dComIfGs_getWarpPlayerPos();
+void dComIfGs_getWarpPlayerAngleY();
+void dComIfGs_getWarpRoomNo();
+void dComIfGs_Wolf_Change_Check();
+void dComIfGs_PolyDamageOff_Check();
+void dComIfGp_TargetWarpPt_set(u8);
+void dComIfGp_TargetWarpPt_get();
+void dComIfGp_TransportWarp_check();
+void dEv_noFinishSkipProc(void*, int);
+void dPath_GetRoomPath(int, int);
+void dKyw_get_AllWind_vec(cXyz*, cXyz*, f32*);
+void dBgS_CheckBWallPoly(cBgS_PolyInfo const&);
+void dBgS_CheckBGroundPoly(cBgS_PolyInfo const&);
+void dBgS_GetNY(cBgS_PolyInfo const&);
+void execItemGet(u8);
+void checkItemGet(u8, int);
+void daNpcF_getPlayerInfoFromPlayerList(int, int, cXyz&, csXyz&);
+void daPy_addCalcShort(s16*, s16, s16, s16, s16);
+void dCam_getControledAngleY(camera_class*);
+void dCam_getBody();
+void d_GameOver_Create(u8);
+void dKy_setLight_again();
+void dKy_plight_set(LIGHT_INFLUENCE*);
+void dKy_plight_cut(LIGHT_INFLUENCE*);
+void dKy_Itemgetcol_chg_on();
+void dKy_Sound_set(cXyz, int, unsigned int, int);
+void dKy_SordFlush_set(cXyz, int);
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
+void dKy_WolfEyeLight_set(cXyz*, f32, f32, f32, _GXColor*, f32, u8, u8);
+void dKy_pol_efftype_get(cBgS_PolyInfo const*);
+void dKy_pol_sound_get(cBgS_PolyInfo const*);
+void dKy_pol_argument_get(cBgS_PolyInfo const*);
+void dKy_TeachWind_existence_chk();
+bool dKy_withwarp_capture_check();
+void dKy_darkworld_check();
+void dKy_shadow_mode_set(u8);
+void dKy_shadow_mode_reset(u8);
+void dMeter2Info_setShield(u8, bool);
+void dPaneClass_showNullPane(J2DScreen*);
+void cPhs_Reset(request_of_phase_process_class*);
+void cM_rad2s(f32);
+void cM_atan2s(f32, f32);
+void cM_atan2f(f32, f32);
+void cM_rnd();
+void cM_rndF(f32);
+void cM_rndFX(f32);
+void cBgW_CheckBGround(f32);
+void cBgW_CheckBRoof(f32);
+void cBgW_CheckBWall(f32);
+void cM3d_Len2dSqPntAndSegLine(f32, f32, f32, f32, f32, f32, f32*, f32*, f32*);
+void cM3d_SignedLenPlaAndPos(cM3dGPla const*, Vec const*);
+void cM3d_3PlaneCrossPos(cM3dGPla const&, cM3dGPla const&, cM3dGPla const&, Vec*);
+void cLib_memCpy(void*, void const*, u32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32);
+void cLib_addCalcAngleS(s16*, s16, s16, s16, s16);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void cLib_chaseUC(u8*, u8, u8);
+void cLib_chaseS(s16*, s16, s16);
+void cLib_chaseF(f32*, f32, f32);
+void cLib_chasePos(cXyz*, cXyz const&, f32);
+void cLib_chasePosXZ(cXyz*, cXyz const&, f32);
+void cLib_chaseAngleS(s16*, s16, s16);
+void cLib_targetAngleY(Vec const*, Vec const*);
+void cLib_distanceAngleS(s16, s16);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void JPACalcKeyAnmValue(f32, u16, f32 const*);
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+void JMAEulerToQuat(s16, s16, s16, Quaternion*);
+extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
+extern "C" extern void* __vt__12J3DFrameCtrl[3];
+extern "C" extern void* data_803A3360[11];
+extern "C" extern void* __vt__19J3DMtxCalcNoAnmBase[11];
+extern "C" extern void* __vt__28mDoExt_MtxCalcAnmBlendTblOld[11];
+extern "C" extern void* __vt__25mDoExt_MtxCalcAnmBlendTbl[11];
+extern "C" extern void* __vt__10J3DMtxCalc[11 + 1 /* padding */];
+extern "C" extern void* __vt__19JPAParticleCallBack[5];
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* __vt__8cM3dGPla[3];
+extern "C" extern void* __vt__14dBgS_ObjGndChk[12 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern void* __vt__8cM3dGSph[3];
+extern "C" extern void* __vt__22dPa_hermiteEcallBack_c[9];
+extern "C" extern void* __vt__18dPa_levelEcallBack[9];
+extern "C" extern void* __vt__18JPAEmitterCallBack[7];
+extern "C" extern u8 m_typeFourData__8dPaPoF_c[60];
+extern "C" extern u8 m_emitterFourData__8dPaPoF_c[60 + 28 /* padding */];
+extern "C" extern void* __vt__8dCcD_Sph[36];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__8dCcD_Cps[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__10dCcD_GStts[3];
+extern "C" extern void* __vt__10cCcD_GStts[3];
+extern "C" extern void* __vt__18daPy_sightPacket_c[4 + 1 /* padding */];
+extern "C" extern void* __vt__12cCcD_SphAttr[25];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__12cCcD_CpsAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern void* __vt__14J3DMaterialAnm[4];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 mLineCheck__11fopAcM_lc_c[112];
+extern "C" extern u8 mGndCheck__11fopAcM_gc_c[84];
+extern "C" extern u8 mWaterCheck__11fopAcM_wt_c[84 + 4 /* padding */];
+extern "C" extern u8 mDemoArcName__20dStage_roomControl_c[10 + 2 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mSimpleTexObj__21dDlst_shadowControl_c[32];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 BaseX__4cXyz[12];
+extern "C" extern u8 BaseY__4cXyz[12];
+extern "C" extern u8 BaseZ__4cXyz[12];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u16 m_branchId__7dDemo_c[1 + 3 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u32 __float_max;
+extern "C" extern u8 data_80450B38[4];
+extern "C" extern f32 mGroundY__11fopAcM_gc_c;
+extern "C" extern f32 mWaterY__11fopAcM_wt_c[1 + 1 /* padding */];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" extern u8 m_top__12daTagHstop_c[4 + 4 /* padding */];
+extern "C" extern u8 m_object__7dDemo_c[4];
+extern "C" extern u8 mWaterBubblePcallBack__13dPa_control_c[4];
+extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
+extern "C" extern u8 struct_80450FB8[4];
+extern "C" extern u8 struct_80450FBC[4];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 struct_8045101C[4];
+extern "C" extern u8 Zero__5csXyz[4];
+extern "C" extern u8 data_80451164[4];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
+extern "C" extern u8 mLinkPtr__14Z2CreatureLink[4 + 4 /* padding */];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" s32 getAtnActorID__9daPy_py_cCFv(); // 1
-extern "C" void mDoMtx_XYZrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotS__FPA4_fsss(); // 1
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void mDoMtx_XrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_XrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_ZrotM__FPA4_fs(); // 1
-extern "C" void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion(); // 1
-extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void transM__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void scaleM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz(); // 1
-extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion(); // 1
-extern "C" void play__14mDoExt_baseAnmFv(); // 1
-extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb(); // 1
-extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform(); // 1
-extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf(); // 1
-extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss(); // 1
-extern "C" void mDoExt_modelEntryDL__FP8J3DModel(); // 1
-extern "C" void __ct__13J3DGXColorS10Fv(); // 1
-extern "C" void mDoExt_getGameHeap__Fv(); // 1
-extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap(); // 1
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
-extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__5csXyzFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Executor__FPFPvPv_iPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_setStageLayer__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv(); // 1
-extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderTalkEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderTalkItemBtnEvent__FUsP10fopAc_ac_cP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderDoorEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderCatchEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs(); // 1
-extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cP10fopAc_ac_cPCcUsUsUs(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void fopAcM_orderTreasureEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_getEventPartner__FPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz(); // 1
-extern "C" void fopAcM_createItemForSimpleDemo__FPC4cXyziiPC5csXyzPC4cXyzff(); // 1
-extern "C" void fopAcM_setCarryNow__FP10fopAc_ac_ci(); // 1
-extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_getWaterY__FPC4cXyzPf(); // 1
-extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz(); // 1
-extern "C" void fopAcM_getWaterStream__FPC4cXyzRC13cBgS_PolyInfoP4cXyzPii(); // 1
-extern "C" void __dt__8cM3dGPlaFv(); // 1
-extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas(); // 1
-extern "C" void lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz(); // 1
-extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz(); // 1
-extern "C" void onFrollCrashFlg__9daPy_py_cFUci(); // 1
-extern "C" bool checkWolfDash__9daPy_py_cCFv(); // 1
-extern "C" bool checkFrontRoll__9daPy_py_cCFv(); // 1
-extern "C" bool checkHorseRide__9daPy_py_cCFv(); // 1
-extern "C" s32 getGrabActorID__9daPy_py_cCFv(); // 1
-extern "C" void fopOvlpM_IsPeek__Fv(); // 1
-extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i(); // 1
-extern "C" void fopKyM_createWpillar__FPC4cXyzfi(); // 1
-extern "C" void fopMsgM_SearchByID__FUi(); // 1
-extern "C" void fopMsgM_messageSet__FUlUl(); // 1
-extern "C" void fpcM_IsCreating__FUi(); // 1
-extern "C" void fpcSch_JudgeByID__FPvPv(); // 1
-extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i(); // 1
-extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv(); // 1
-extern "C" void dStage_RoomCheck__FP11cBgS_GndChk(); // 1
-extern "C" void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs(); // 1
-extern "C" void dStage_changeScene__FifUlScsi(); // 1
-extern "C" void dStage_restartRoom__FUlUli(); // 1
-extern "C" void dComIfGp_checkItemGet__FUci(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii(); // 1
-extern "C" void dComIfGs_isOneZoneSwitch__Fii(); // 1
-extern "C" void dComIfGs_getMaxLifeGauge__Fv(); // 1
-extern "C" void dComIfGp_getSelectItem__Fi(); // 1
-extern "C" s32 dComIfGs_getBottleMax__Fv(); // 1
-extern "C" void dComIfGp_getSelectItemNum__Fi(); // 1
-extern "C" void dComIfGp_setSelectItemNum__Fis(); // 1
-extern "C" void dComIfGp_addSelectItemNum__Fis(); // 1
-extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj(); // 1
-extern "C" void dComIfGs_setSelectEquipClothes__FUc(); // 1
-extern "C" void dComIfGs_getWarpStageName__Fv(); // 1
-extern "C" void dComIfGs_getWarpPlayerPos__Fv(); // 1
-extern "C" void dComIfGs_getWarpPlayerAngleY__Fv(); // 1
-extern "C" void dComIfGs_getWarpRoomNo__Fv(); // 1
-extern "C" void dComIfGs_Wolf_Change_Check__Fv(); // 1
-extern "C" void dComIfGs_PolyDamageOff_Check__Fv(); // 1
-extern "C" void dComIfGp_TargetWarpPt_set__FUc(); // 1
-extern "C" void dComIfGp_TargetWarpPt_get__Fv(); // 1
-extern "C" void dComIfGp_TransportWarp_check__Fv(); // 1
-extern "C" void entry__10daMirror_cFP8J3DModel(); // 1
-extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo(); // 1
-extern "C" void getPlayerNo__11daTagMist_cFv(); // 1
-extern "C" void getRupeeMax__21dSv_player_status_a_cCFv(); // 1
-extern "C" void isTransformLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void setItem__17dSv_player_item_cFiUc(); // 1
-extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc(); // 1
-extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc(); // 1
-extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc(); // 1
-extern "C" void checkBottle__17dSv_player_item_cFUc(); // 1
-extern "C" void setBaitItem__17dSv_player_item_cFUc(); // 1
-extern "C" void isFirstBit__21dSv_player_get_item_cCFUc(); // 1
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isDungeonItem__12dSv_memBit_cCFi(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void offEventBit__11dSv_event_cFUs(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isSwitch__12dSv_danBit_cCFi(); // 1
-extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc(); // 1
-extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __ct__9dJntCol_cFv(); // 1
-extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli(); // 1
-extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi(); // 1
-extern "C" void getItemNo__12daItemBase_cFv(); // 1
-extern "C" void hide__12daItemBase_cFv(); // 1
-extern "C" void show__12daItemBase_cFv(); // 1
-extern "C" void dead__12daItemBase_cFv(); // 1
-extern "C" void checkWait__10e_wb_classFv(); // 1
-extern "C" void setPlayerRideNow__10e_wb_classFv(); // 1
-extern "C" void setPlayerRide__10e_wb_classFv(); // 1
-extern "C" void getOff__10e_wb_classFv(); // 1
-extern "C" void checkDownDamage__10e_wb_classFv(); // 1
-extern "C" void checkNormalRideMode__10e_wb_classCFv(); // 1
-extern "C" void setRunRideMode__10e_wb_classFv(); // 1
-extern "C" void getPrm_Morf__13dDemo_actor_cFv(); // 1
-extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc(); // 1
-extern "C" void getActor__14dDemo_object_cFUc(); // 1
-extern "C" void setBranchId__7dDemo_cFUss(); // 1
-extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
-extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData(); // 1
-extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff(); // 1
-extern "C" void loaderBasicBmd__11dRes_info_cFUlPv(); // 1
-extern "C" void __dt__15J3DTevKColorAnmFv(); // 1
-extern "C" void __ct__15J3DTevKColorAnmFv(); // 1
-extern "C" void __dt__14J3DTevColorAnmFv(); // 1
-extern "C" void __ct__14J3DTevColorAnmFv(); // 1
-extern "C" void __dt__11J3DTexNoAnmFv(); // 1
-extern "C" void __ct__11J3DTexNoAnmFv(); // 1
-extern "C" void __dt__12J3DTexMtxAnmFv(); // 1
-extern "C" void __ct__12J3DTexMtxAnmFv(); // 1
-extern "C" void __dt__14J3DMatColorAnmFv(); // 1
-extern "C" void __ct__14J3DMatColorAnmFv(); // 1
-extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFPv(); // 1
-extern "C" void dEv_noFinishSkipProc__FPvi(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void compulsory__14dEvt_control_cFPvPCcUs(); // 1
-extern "C" void convPId__14dEvt_control_cFUi(); // 1
-extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
-extern "C" void setPtD__14dEvt_control_cFPv(); // 1
-extern "C" void setStartDemo__18dEvent_exception_cFi(); // 1
-extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
-extern "C" void orderStartDemo__16dEvent_manager_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void startCheckOld__16dEvent_manager_cFPCc(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getMyNowCutName__16dEvent_manager_cFi(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void setGoal__16dEvent_manager_cFP4cXyz(); // 1
-extern "C" void getGoal__16dEvent_manager_cFv(); // 1
-extern "C" void getRunEventName__16dEvent_manager_cFv(); // 1
-extern "C" void checkStartDemo__16dEvent_manager_cFv(); // 1
-extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl(); // 1
-extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf(); // 1
-extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz(); // 1
-extern "C" void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz(); // 1
-extern "C" void init__7dPaPo_cFP9dBgS_Acchff(); // 1
-extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff(); // 1
-extern "C" void clearFourAllID__8dPaPoF_cFv(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void addReal__21dDlst_shadowControl_cFUlP8J3DModel(); // 1
-extern "C" void newData__13dDlst_peekZ_cFssPUl(); // 1
-extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz(); // 1
-extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf(); // 1
-extern "C" bool getKandelaarFlamePos__9daPy_py_cFv(); // 1
-extern "C" void StartShock__12dVibration_cFii4cXyz(); // 1
-extern "C" void StartQuake__12dVibration_cFii4cXyz(); // 1
-extern "C" void StopQuake__12dVibration_cFi(); // 1
-extern "C" void GetLockonList__12dAttention_cFl(); // 1
-extern "C" void getActionBtnB__12dAttention_cFv(); // 1
-extern "C" void getActionBtnXY__12dAttention_cFv(); // 1
-extern "C" void LockonTarget__12dAttention_cFl(); // 1
-extern "C" void LockonTruth__12dAttention_cFv(); // 1
-extern "C" void getActor__10dAttList_cFv(); // 1
-extern "C" void convPId__10dAttHint_cFUi(); // 1
-extern "C" void convPId__11dAttCatch_cFUi(); // 1
-extern "C" void convPId__10dAttLook_cFUi(); // 1
-extern "C" void LineCross__4cBgSFP11cBgS_LinChk(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetActorPointer__4cBgSCFi(); // 1
-extern "C" void GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo(); // 1
-extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla(); // 1
-extern "C" void GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz(); // 1
-extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetExitId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetWallCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk(); // 1
-extern "C" void MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb(); // 1
-extern "C" void MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13PushPullLabel(); // 1
-extern "C" void dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo(); // 1
-extern "C" void dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo(); // 1
-extern "C" void dBgS_GetNY__FRC13cBgS_PolyInfo(); // 1
-extern "C" void __ct__12dBgS_AcchCirFv(); // 1
-extern "C" void SetWallR__12dBgS_AcchCirFf(); // 1
-extern "C" void SetWall__12dBgS_AcchCirFff(); // 1
-extern "C" void __dt__9dBgS_AcchFv(); // 1
-extern "C" void __ct__9dBgS_AcchFv(); // 1
-extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz(); // 1
-extern "C" void Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir(); // 1
-extern "C" void CrrPos__9dBgS_AcchFR4dBgS(); // 1
-extern "C" void SetGndThinCellingOff__9dBgS_AcchFv(); // 1
-extern "C" void ClrGndThinCellingOff__9dBgS_AcchFv(); // 1
-extern "C" void OnWallSort__9dBgS_AcchFv(); // 1
-extern "C" void __dt__12dBgS_AcchCirFv(); // 1
-extern "C" bool checkPlayerFly__9daPy_py_cCFv(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c(); // 1
-extern "C" void __ct__14dBgS_ObjLinChkFv(); // 1
-extern "C" void __dt__14dBgS_ObjLinChkFv(); // 1
-extern "C" void __ct__15dBgS_LinkLinChkFv(); // 1
-extern "C" void __dt__15dBgS_LinkLinChkFv(); // 1
-extern "C" void __ct__16dBgS_ArrowLinChkFv(); // 1
-extern "C" void __dt__16dBgS_ArrowLinChkFv(); // 1
-extern "C" void __ct__20dBgS_BoomerangLinChkFv(); // 1
-extern "C" void __dt__20dBgS_BoomerangLinChkFv(); // 1
-extern "C" void __ct__15dBgS_RopeLinChkFv(); // 1
-extern "C" void __dt__15dBgS_RopeLinChkFv(); // 1
-extern "C" void SetObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrObj__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrLink__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetBomb__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrBomb__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetStatue__16dBgS_PolyPassChkFv(); // 1
-extern "C" void ClrStatue__16dBgS_PolyPassChkFv(); // 1
-extern "C" void SetIronBall__16dBgS_PolyPassChkFv(); // 1
-extern "C" void __ct__12dBgS_RoofChkFv(); // 1
-extern "C" void __dt__12dBgS_RoofChkFv(); // 1
-extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Move__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkAtHit__12dCcD_GObjInfFv(); // 1
-extern "C" void ResetAtHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetAtHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void ChkTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void ResetTgHit__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitGObj__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv(); // 1
-extern "C" void getHitSeID__12dCcD_GObjInfFUci(); // 1
-extern "C" void ChkCoHit__12dCcD_GObjInfFv(); // 1
-extern "C" void ResetCoHit__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CpsFRC11dCcD_SrcCps(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void StartCAt__8dCcD_CylFR4cXyz(); // 1
-extern "C" void MoveCAt__8dCcD_CylFR4cXyz(); // 1
-extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph(); // 1
-extern "C" void StartCAt__8dCcD_SphFR4cXyz(); // 1
-extern "C" void MoveCAt__8dCcD_SphFR4cXyz(); // 1
-extern "C" void __dt__8dCcD_CylFv(); // 1
-extern "C" void __dt__8dCcD_CpsFv(); // 1
-extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc(); // 1
-extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv(); // 1
-extern "C" void StartEventCamera__9dCamera_cFiie(); // 1
-extern "C" void EndEventCamera__9dCamera_cFi(); // 1
-extern "C" void abs__4cXyzCFv(); // 1
-extern "C" void checkMidnaRide__9daPy_py_cCFv(); // 1
-extern "C" void __as__4cXyzFRC4cXyz(); // 1
-extern "C" void __ct__4cXyzFRC4cXyz(); // 1
-extern "C" bool checkCanoeRide__9daPy_py_cCFv(); // 1
-extern "C" bool checkBoardRide__9daPy_py_cCFv(); // 1
-extern "C" bool checkSpinnerRide__9daPy_py_cCFv(); // 1
-extern "C" bool checkBoarRide__9daPy_py_cCFv(); // 1
-extern "C" void getShadowTalkAtnPos__9daAlink_cFv(); // 1
-extern "C" void execItemGet__FUc(); // 1
-extern "C" void checkItemGet__FUci(); // 1
-extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc(); // 1
-extern "C" void remove__8dEyeHL_cFv(); // 1
-extern "C" void getActorP__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz(); // 1
-extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv(); // 1
-extern "C" void updateFrame__16daPy_frameCtrl_cFv(); // 1
-extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff(); // 1
-extern "C" void setParamData__9daPy_py_cFiiii(); // 1
-extern "C" void checkFishingRodItem__9daPy_py_cFi(); // 1
-extern "C" void checkBombItem__9daPy_py_cFi(); // 1
-extern "C" void checkBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkDrinkBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkOilBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkOpenBottleItem__9daPy_py_cFi(); // 1
-extern "C" void checkBowItem__9daPy_py_cFi(); // 1
-extern "C" void checkHookshotItem__9daPy_py_cFi(); // 1
-extern "C" void checkTradeItem__9daPy_py_cFi(); // 1
-extern "C" void checkDungeonWarpItem__9daPy_py_cFi(); // 1
-extern "C" void setActor__16daPy_actorKeep_cFv(); // 1
-extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c(); // 1
-extern "C" void clearData__16daPy_actorKeep_cFv(); // 1
-extern "C" void __ct__14daPy_anmHeap_cFUl(); // 1
-extern "C" void __dt__14daPy_anmHeap_cFv(); // 1
-extern "C" void mallocBuffer__14daPy_anmHeap_cFv(); // 1
-extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE(); // 1
-extern "C" void loadDataIdx__14daPy_anmHeap_cFUs(); // 1
-extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs(); // 1
-extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs(); // 1
-extern "C" void setAnimeHeap__14daPy_anmHeap_cFv(); // 1
-extern "C" void draw__18daPy_sightPacket_cFv(); // 1
-extern "C" void setSight__18daPy_sightPacket_cFv(); // 1
-extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG(); // 1
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
-extern "C" void checkWoodShieldEquip__9daPy_py_cFv(); // 1
-extern "C" void checkCarryStartLightBallA__9daPy_py_cFv(); // 1
-extern "C" void checkCarryStartLightBallB__9daPy_py_cFv(); // 1
-extern "C" void daPy_addCalcShort__FPsssss(); // 1
-extern "C" void Start__9dCamera_cFv(); // 1
-extern "C" void Stop__9dCamera_cFv(); // 1
-extern "C" void ChangeModeOK__9dCamera_cFl(); // 1
-extern "C" void SetTrimTypeForce__9dCamera_cFl(); // 1
-extern "C" void GetCameraTypeFromCameraName__9dCamera_cFPCc(); // 1
-extern "C" void GetForceLockOnActor__9dCamera_cFv(); // 1
-extern "C" void dCam_getControledAngleY__FP12camera_class(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void d_GameOver_Create__FUc(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void dKy_setLight_again__Fv(); // 1
-extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE(); // 1
-extern "C" void dKy_Itemgetcol_chg_on__Fv(); // 1
-extern "C" void dKy_Sound_set__F4cXyziUii(); // 1
-extern "C" void dKy_SordFlush_set__F4cXyzi(); // 1
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc(); // 1
-extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void dKy_pol_argument_get__FPC13cBgS_PolyInfo(); // 1
-extern "C" void dKy_TeachWind_existence_chk__Fv(); // 1
-extern "C" bool dKy_withwarp_capture_check__Fv(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void dKy_shadow_mode_set__FUc(); // 1
-extern "C" void dKy_shadow_mode_reset__FUc(); // 1
-extern "C" void setFloatingMessage__13dMeter2Info_cFUssb(); // 1
-extern "C" void onDirectUseItem__13dMeter2Info_cFi(); // 1
-extern "C" void resetWarpStatus__13dMeter2Info_cFv(); // 1
-extern "C" void warpInProc__13dMeter2Info_cFv(); // 1
-extern "C" void warpOutProc__13dMeter2Info_cFv(); // 1
-extern "C" void dMeter2Info_setShield__FUcb(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void onMsgSend__12dMsgObject_cFv(); // 1
-extern "C" void setSmellType__12dMsgObject_cFUc(); // 1
-extern "C" void isHowlHearingMode__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void ClrCcMove__9cCcD_SttsFv(); // 1
-extern "C" void SetIGrp__10cCcD_ObjCoFUl(); // 1
-extern "C" void SetVsGrp__10cCcD_ObjCoFUl(); // 1
-extern "C" void Set__4cCcSFP8cCcD_Obj(); // 1
-extern "C" void cPhs_Reset__FP30request_of_phase_process_class(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __dv__4cXyzCFf(); // 1
-extern "C" void outprod__4cXyzCFRC3Vec(); // 1
-extern "C" void normZP__4cXyzCFv(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void normalizeZP__4cXyzFv(); // 1
-extern "C" void atan2sX_Z__4cXyzCFv(); // 1
-extern "C" void atan2sY_XZ__4cXyzCFv(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void cM_rad2s__Ff(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_atan2f__Fff(); // 1
-extern "C" void cM_rnd__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void __ct__13cBgS_PolyInfoFv(); // 1
-extern "C" void __dt__13cBgS_PolyInfoFv(); // 1
-extern "C" void ClearPi__13cBgS_PolyInfoFv(); // 1
-extern "C" void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo(); // 1
-extern "C" void cBgW_CheckBGround__Ff(); // 1
-extern "C" void cBgW_CheckBRoof__Ff(); // 1
-extern "C" void cBgW_CheckBWall__Ff(); // 1
-extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf(); // 1
-extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec(); // 1
-extern "C" void cM3d_3PlaneCrossPos__FRC8cM3dGPlaRC8cM3dGPlaRC8cM3dGPlaP3Vec(); // 1
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void __dt__8cM3dGCpsFv(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz(); // 1
-extern "C" void __ct__8cM3dGPlaFPC4cXyzf(); // 1
-extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz(); // 1
-extern "C" void SetC__8cM3dGSphFRC4cXyz(); // 1
-extern "C" void SetR__8cM3dGSphFf(); // 1
-extern "C" void cLib_memCpy__FPvPCvUl(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff(); // 1
-extern "C" void cLib_addCalcAngleS__FPsssss(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void cLib_chaseUC__FPUcUcUc(); // 1
-extern "C" void cLib_chaseS__FPsss(); // 1
-extern "C" void cLib_chaseF__FPfff(); // 1
-extern "C" void cLib_chasePos__FP4cXyzRC4cXyzf(); // 1
-extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf(); // 1
-extern "C" void cLib_chaseAngleS__FPsss(); // 1
-extern "C" void cLib_targetAngleY__FPC3VecPC3Vec(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
-extern "C" void __dt__19JPAParticleCallBackFv(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
-extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData(); // 1
-extern "C" void getAramHeap__9JASKernelFv(); // 1
-extern "C" void func_802A0A8C(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void bgmStart__8Z2SeqMgrFUlUll(); // 1
-extern "C" void subBgmStart__8Z2SeqMgrFUl(); // 1
-extern "C" void subBgmStop__8Z2SeqMgrFv(); // 1
-extern "C" void changeBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void changeSubBgmStatus__8Z2SeqMgrFl(); // 1
-extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl(); // 1
-extern "C" void taktModeMute__8Z2SeqMgrFv(); // 1
-extern "C" void taktModeMuteOff__8Z2SeqMgrFv(); // 1
-extern "C" void deleteObject__14Z2SoundObjBaseFv(); // 1
-extern "C" void __ct__16Z2SoundObjSimpleFv(); // 1
-extern "C" void initAnime__10Z2CreatureFPvbff(); // 1
-extern "C" void updateAnime__10Z2CreatureFff(); // 1
-extern "C" void startCollisionSE__10Z2CreatureFUlUl(); // 1
-extern "C" void setLinkGroupInfo__14Z2CreatureLinkFUc(); // 1
-extern "C" void setLinkHp__14Z2CreatureLinkFll(); // 1
-extern "C" void setLinkSwordType__14Z2CreatureLinkFll(); // 1
-extern "C" void setLinkShieldType__14Z2CreatureLinkFll(); // 1
-extern "C" void setLinkBootsType__14Z2CreatureLinkFl(); // 1
-extern "C" void __ct__14Z2CreatureLinkFv(); // 1
-extern "C" void __dt__14Z2CreatureLinkFv(); // 1
-extern "C" void init__14Z2CreatureLinkFP3VecP3VecP3Vec(); // 1
-extern "C" void initKantera__14Z2CreatureLinkFP3Vec(); // 1
-extern "C" void deleteKantera__14Z2CreatureLinkFv(); // 1
-extern "C" void setKanteraState__14Z2CreatureLinkFUc(); // 1
-extern "C" void setSinkDepth__14Z2CreatureLinkFSc(); // 1
-extern "C" void setRiding__14Z2CreatureLinkFb(); // 1
-extern "C" void setMagnetized__14Z2CreatureLinkFb(); // 1
-extern "C" void setWolfEyeOpen__14Z2CreatureLinkFb(); // 1
-extern "C" void startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc(); // 1
-extern "C" void startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc(); // 1
-extern "C" void startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc(); // 1
-extern "C" void startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc(); // 1
-extern "C" void startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc(); // 1
-extern "C" void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef(); // 1
-extern "C" void setResumeAttack__14Z2CreatureLinkFb(); // 1
-extern "C" void __ct__13Z2WolfHowlMgrFv(); // 1
-extern "C" void startWolfHowlSound__13Z2WolfHowlMgrFffbf(); // 1
-extern "C" void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData(); // 1
-extern "C" void skipCorrectDemo__13Z2WolfHowlMgrFv(); // 1
-extern "C" void freeAll__7JKRHeapFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void create__10JKRExpHeapFUlP7JKRHeapb(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void readIdxResource__10JKRArchiveFPvUlUl(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void reinitGX__6J3DSysFv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
-extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
-extern "C" void diff__8J3DModelFv(); // 1
-extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl(); // 1
-extern "C" void calcWeightEnvelopeMtx__8J3DModelFv(); // 1
-extern "C" void init__12J3DFrameCtrlFs(); // 1
-extern "C" void checkPass__12J3DFrameCtrlFf(); // 1
-extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData(); // 1
-extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData(); // 1
-extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10(); // 1
-extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData(); // 1
-extern "C" void initialize__14J3DMaterialAnmFv(); // 1
-extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial(); // 1
-extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern(); // 1
-extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey(); // 1
-extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey(); // 1
-extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag(); // 1
-extern "C" void JMAEulerToQuat__FsssP10Quaternion(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXInverse(); // 1
-extern "C" void PSMTXRotAxisRad(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXQuat(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSMTXMultVecSR(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXLoadLightObjImm(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXLoadTexObj(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColor(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetZMode(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void __cvt_fp2unsigned(); // 1
-extern "C" void __save_gpr(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_16(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void __restore_gpr(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_16(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abs(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
-extern "C" void strlen(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" s32 getAtnActorID__9daPy_py_cCFv();
+extern "C" void mDoMtx_XYZrotM__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotS__FPA4_fsss();
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void mDoMtx_XrotS__FPA4_fs();
+extern "C" void mDoMtx_XrotM__FPA4_fs();
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void mDoMtx_ZrotS__FPA4_fs();
+extern "C" void mDoMtx_ZrotM__FPA4_fs();
+extern "C" void mDoMtx_QuatConcat__FPC10QuaternionPC10QuaternionP10Quaternion();
+extern "C" void mDoMtx_MtxToRot__FPA4_CfP5csXyz();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void transM__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void scaleM__14mDoMtx_stack_cFfff();
+extern "C" void ZXYrotS__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void ZXYrotM__14mDoMtx_stack_cFRC5csXyz();
+extern "C" void quatM__14mDoMtx_stack_cFPC10Quaternion();
+extern "C" void play__14mDoExt_baseAnmFv();
+extern "C" void init__13mDoExt_bckAnmFP15J3DAnmTransformiifssb();
+extern "C" void changeBckOnly__13mDoExt_bckAnmFP15J3DAnmTransform();
+extern "C" void entry__13mDoExt_bckAnmFP12J3DModelDataf();
+extern "C" void init__13mDoExt_blkAnmFP13J3DDeformDataP13J3DAnmClusteriifss();
+extern "C" void mDoExt_modelEntryDL__FP8J3DModel();
+extern "C" void __ct__13J3DGXColorS10Fv();
+extern "C" void mDoExt_getGameHeap__Fv();
+extern "C" void mDoExt_destroyExpHeap__FP10JKRExpHeap();
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void initOldFrameMorf__22mDoExt_MtxCalcOldFrameFfUsUs();
+extern "C" void __ct__4cXyzFv();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__5csXyzFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Executor__FPFPvPv_iPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_setStageLayer__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void fopAcM_fastCreate__FsUlPC4cXyziPC5csXyzPC4cXyzScPFPv_iPv();
+extern "C" void fopAcM_createChild__FsUiUlPC4cXyziPC5csXyzPC4cXyzScPFPv_i();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderTalkEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderTalkItemBtnEvent__FUsP10fopAc_ac_cP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderDoorEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderCatchEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs();
+extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cP10fopAc_ac_cPCcUsUsUs();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void fopAcM_orderTreasureEvent__FP10fopAc_ac_cP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c();
+extern "C" void fopAcM_getItemEventPartner__FPC10fopAc_ac_c();
+extern "C" void fopAcM_getEventPartner__FPC10fopAc_ac_c();
+extern "C" void fopAcM_createItemForPresentDemo__FPC4cXyziUciiPC5csXyzPC4cXyz();
+extern "C" void fopAcM_createItemForSimpleDemo__FPC4cXyziiPC5csXyzPC4cXyzff();
+extern "C" void fopAcM_setCarryNow__FP10fopAc_ac_ci();
+extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
+extern "C" void fopAcM_getWaterY__FPC4cXyzPf();
+extern "C" void fpoAcM_relativePos__FPC10fopAc_ac_cPC4cXyzP4cXyz();
+extern "C" void fopAcM_getWaterStream__FPC4cXyzRC13cBgS_PolyInfoP4cXyzPii();
+extern "C" void __dt__8cM3dGPlaFv();
+extern "C" void fopAcM_getPolygonAngle__FPC8cM3dGPlas();
+extern "C" void lineCheck__11fopAcM_lc_cFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void gndCheck__11fopAcM_gc_cFPC4cXyz();
+extern "C" void waterCheck__11fopAcM_wt_cFPC4cXyz();
+extern "C" void onFrollCrashFlg__9daPy_py_cFUci();
+extern "C" bool checkWolfDash__9daPy_py_cCFv();
+extern "C" bool checkFrontRoll__9daPy_py_cCFv();
+extern "C" bool checkHorseRide__9daPy_py_cCFv();
+extern "C" s32 getGrabActorID__9daPy_py_cCFv();
+extern "C" void fopOvlpM_IsPeek__Fv();
+extern "C" void fopKyM_create__FsiP4cXyzP4cXyzPFPv_i();
+extern "C" void fopKyM_createWpillar__FPC4cXyzfi();
+extern "C" void fopMsgM_SearchByID__FUi();
+extern "C" void fopMsgM_messageSet__FUlUl();
+extern "C" void fpcM_IsCreating__FUi();
+extern "C" void fpcSch_JudgeByID__FPvPv();
+extern "C" void fpcDw_Handler__FPFPFPvPv_i_iPFPvPv_i();
+extern "C" void fpcFCtRq_Request__FP11layer_classsPFPvPv_iPvPv();
+extern "C" void dStage_RoomCheck__FP11cBgS_GndChk();
+extern "C" void dStage_changeSceneExitId__FR13cBgS_PolyInfofUlScs();
+extern "C" void dStage_changeScene__FifUlScsi();
+extern "C" void dStage_restartRoom__FUlUli();
+extern "C" void dComIfGp_checkItemGet__FUci();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCcP7JKRHeap();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGp_setNextStage__FPCcsScScfUliScsii();
+extern "C" void dComIfGs_isOneZoneSwitch__Fii();
+extern "C" void dComIfGs_getMaxLifeGauge__Fv();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" s32 dComIfGs_getBottleMax__Fv();
+extern "C" void dComIfGp_getSelectItemNum__Fi();
+extern "C" void dComIfGp_setSelectItemNum__Fis();
+extern "C" void dComIfGp_addSelectItemNum__Fis();
+extern "C" void dComIfGd_setShadow__FUlScP8J3DModelP4cXyzffffR13cBgS_PolyInfoP12dKy_tevstr_csfP9_GXTexObj();
+extern "C" void dComIfGs_setSelectEquipClothes__FUc();
+extern "C" void dComIfGs_getWarpStageName__Fv();
+extern "C" void dComIfGs_getWarpPlayerPos__Fv();
+extern "C" void dComIfGs_getWarpPlayerAngleY__Fv();
+extern "C" void dComIfGs_getWarpRoomNo__Fv();
+extern "C" void dComIfGs_Wolf_Change_Check__Fv();
+extern "C" void dComIfGs_PolyDamageOff_Check__Fv();
+extern "C" void dComIfGp_TargetWarpPt_set__FUc();
+extern "C" void dComIfGp_TargetWarpPt_get__Fv();
+extern "C" void dComIfGp_TransportWarp_check__Fv();
+extern "C" void entry__10daMirror_cFP8J3DModel();
+extern "C" void checkMagnetCode__12daTagMagne_cFR13cBgS_PolyInfo();
+extern "C" void getPlayerNo__11daTagMist_cFv();
+extern "C" void getRupeeMax__21dSv_player_status_a_cCFv();
+extern "C" void isTransformLV__21dSv_player_status_b_cCFi();
+extern "C" void setItem__17dSv_player_item_cFiUc();
+extern "C" void setBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" void setEquipBottleItemIn__17dSv_player_item_cFUcUc();
+extern "C" void setEquipBottleItemEmpty__17dSv_player_item_cFUc();
+extern "C" void checkBottle__17dSv_player_item_cFUc();
+extern "C" void setBaitItem__17dSv_player_item_cFUc();
+extern "C" void isFirstBit__21dSv_player_get_item_cCFUc();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isDungeonItem__12dSv_memBit_cCFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void offEventBit__11dSv_event_cFUs();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isSwitch__12dSv_danBit_cCFi();
+extern "C" void setRoom__13dSv_restart_cFRC4cXyzsSc();
+extern "C" void set__17dSv_turnRestart_cFRC4cXyzsScUl();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __ct__9dJntCol_cFv();
+extern "C" void init__9dJntCol_cFP10fopAc_ac_cPC13dJntColData_cP8J3DModeli();
+extern "C" void getHitmarkPosAndAngle__9dJntCol_cCFPC4cXyzPC5csXyzP4cXyzP5csXyzi();
+extern "C" void getItemNo__12daItemBase_cFv();
+extern "C" void hide__12daItemBase_cFv();
+extern "C" void show__12daItemBase_cFv();
+extern "C" void dead__12daItemBase_cFv();
+extern "C" void checkWait__10e_wb_classFv();
+extern "C" void setPlayerRideNow__10e_wb_classFv();
+extern "C" void setPlayerRide__10e_wb_classFv();
+extern "C" void getOff__10e_wb_classFv();
+extern "C" void checkDownDamage__10e_wb_classFv();
+extern "C" void checkNormalRideMode__10e_wb_classCFv();
+extern "C" void setRunRideMode__10e_wb_classFv();
+extern "C" void getPrm_Morf__13dDemo_actor_cFv();
+extern "C" void getDemoIDData__13dDemo_actor_cFPiPiPiPUsPUc();
+extern "C" void getActor__14dDemo_object_cFUc();
+extern "C" void setBranchId__7dDemo_cFUss();
+extern "C" void onWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void offWarpMaterial__11dRes_info_cFP12J3DModelData();
+extern "C" void setWarpSRT__11dRes_info_cFP12J3DModelDataRC4cXyzff();
+extern "C" void loaderBasicBmd__11dRes_info_cFUlPv();
+extern "C" void __dt__15J3DTevKColorAnmFv();
+extern "C" void __ct__15J3DTevKColorAnmFv();
+extern "C" void __dt__14J3DTevColorAnmFv();
+extern "C" void __ct__14J3DTevColorAnmFv();
+extern "C" void __dt__11J3DTexNoAnmFv();
+extern "C" void __ct__11J3DTexNoAnmFv();
+extern "C" void __dt__12J3DTexMtxAnmFv();
+extern "C" void __ct__12J3DTexMtxAnmFv();
+extern "C" void __dt__14J3DMatColorAnmFv();
+extern "C" void __ct__14J3DMatColorAnmFv();
+extern "C" void getResInfo__14dRes_control_cFPCcP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void getIDRes__14dRes_control_cFPCcUsP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFPv();
+extern "C" void dEv_noFinishSkipProc__FPvi();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void compulsory__14dEvt_control_cFPvPCcUs();
+extern "C" void convPId__14dEvt_control_cFUi();
+extern "C" void setPtI_Id__14dEvt_control_cFUi();
+extern "C" void setPtD__14dEvt_control_cFPv();
+extern "C" void setStartDemo__18dEvent_exception_cFi();
+extern "C" void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" void orderStartDemo__16dEvent_manager_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void startCheckOld__16dEvent_manager_cFPCc();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getMyNowCutName__16dEvent_manager_cFi();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void setGoal__16dEvent_manager_cFP4cXyz();
+extern "C" void getGoal__16dEvent_manager_cFv();
+extern "C" void getRunEventName__16dEvent_manager_cFv();
+extern "C" void checkStartDemo__16dEvent_manager_cFv();
+extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void setHitMark__13dPa_control_cFUsP10fopAc_ac_cPC4cXyzPC5csXyzPC4cXyzUl();
+extern "C" void setWaterRipple__13dPa_control_cFPUlR13cBgS_PolyInfoPC4cXyzfPC12dKy_tevstr_cPC4cXyzSc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void getPolyColor__13dPa_control_cFR13cBgS_PolyInfoiP8_GXColorP8_GXColorPUcPf();
+extern "C" void setPoly__13dPa_control_cFUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void setPoly__13dPa_control_cFUlUsR13cBgS_PolyInfoPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyziP18dPa_levelEcallBackScPC4cXyz();
+extern "C" void setOldPosP__22dPa_hermiteEcallBack_cFPC4cXyzPC4cXyz();
+extern "C" void init__7dPaPo_cFP9dBgS_Acchff();
+extern "C" void setEffectCenter__7dPaPo_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void setEffectFour__8dPaPoF_cFPC12dKy_tevstr_cPC4cXyzUlUlPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC4cXyzPC5csXyzPC4cXyzScff();
+extern "C" void clearFourAllID__8dPaPoF_cFv();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void addReal__21dDlst_shadowControl_cFUlP8J3DModel();
+extern "C" void newData__13dDlst_peekZ_cFssPUl();
+extern "C" void entryZSortXluDrawList__12dDlst_list_cFP13J3DDrawBufferP9J3DPacketR4cXyz();
+extern "C" void dKyw_get_AllWind_vec__FP4cXyzP4cXyzPf();
+extern "C" bool getKandelaarFlamePos__9daPy_py_cFv();
+extern "C" void StartShock__12dVibration_cFii4cXyz();
+extern "C" void StartQuake__12dVibration_cFii4cXyz();
+extern "C" void StopQuake__12dVibration_cFi();
+extern "C" void GetLockonList__12dAttention_cFl();
+extern "C" void getActionBtnB__12dAttention_cFv();
+extern "C" void getActionBtnXY__12dAttention_cFv();
+extern "C" void LockonTarget__12dAttention_cFl();
+extern "C" void LockonTruth__12dAttention_cFv();
+extern "C" void getActor__10dAttList_cFv();
+extern "C" void convPId__10dAttHint_cFUi();
+extern "C" void convPId__11dAttCatch_cFUi();
+extern "C" void convPId__10dAttLook_cFUi();
+extern "C" void LineCross__4cBgSFP11cBgS_LinChk();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetActorPointer__4cBgSCFi();
+extern "C" void GetBgWBasePointer__4cBgSCFRC13cBgS_PolyInfo();
+extern "C" void ChkPolySafe__4cBgSFRC13cBgS_PolyInfo();
+extern "C" void GetTriPla__4cBgSCFRC13cBgS_PolyInfoP8cM3dGPla();
+extern "C" void GetTriPnt__4cBgSCFRC13cBgS_PolyInfoP4cXyzP4cXyzP4cXyz();
+extern "C" void ChkMoveBG__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void ChkMoveBG_NoDABg__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetExitId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetHorseNoEntry__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetSpecialCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetMagnetCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetMonkeyBarsCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetWallCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAtt0__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAtt1__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetGroundCode__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomPathId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetGrpSoundId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetPolyAttackThrough__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void ChkPolyHSStick__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void RoofChk__4dBgSFP12dBgS_RoofChk();
+extern "C" void MoveBgCrrPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyzbb();
+extern "C" void MoveBgTransPos__4dBgSFRC13cBgS_PolyInfobP4cXyzP5csXyzP5csXyz();
+extern "C" void PushPullCallBack__4dBgSFRC13cBgS_PolyInfoP10fopAc_ac_csQ29dBgW_Base13PushPullLabel();
+extern "C" void dBgS_CheckBWallPoly__FRC13cBgS_PolyInfo();
+extern "C" void dBgS_CheckBGroundPoly__FRC13cBgS_PolyInfo();
+extern "C" void dBgS_GetNY__FRC13cBgS_PolyInfo();
+extern "C" void __ct__12dBgS_AcchCirFv();
+extern "C" void SetWallR__12dBgS_AcchCirFf();
+extern "C" void SetWall__12dBgS_AcchCirFff();
+extern "C" void __dt__9dBgS_AcchFv();
+extern "C" void __ct__9dBgS_AcchFv();
+extern "C" void Set__9dBgS_AcchFP4cXyzP4cXyzP10fopAc_ac_ciP12dBgS_AcchCirP4cXyzP5csXyzP5csXyz();
+extern "C" void Set__9dBgS_AcchFP10fopAc_ac_ciP12dBgS_AcchCir();
+extern "C" void CrrPos__9dBgS_AcchFR4dBgS();
+extern "C" void SetGndThinCellingOff__9dBgS_AcchFv();
+extern "C" void ClrGndThinCellingOff__9dBgS_AcchFv();
+extern "C" void OnWallSort__9dBgS_AcchFv();
+extern "C" void __dt__12dBgS_AcchCirFv();
+extern "C" bool checkPlayerFly__9daPy_py_cCFv();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void Set__11dBgS_LinChkFPC4cXyzPC4cXyzPC10fopAc_ac_c();
+extern "C" void __ct__14dBgS_ObjLinChkFv();
+extern "C" void __dt__14dBgS_ObjLinChkFv();
+extern "C" void __ct__15dBgS_LinkLinChkFv();
+extern "C" void __dt__15dBgS_LinkLinChkFv();
+extern "C" void __ct__16dBgS_ArrowLinChkFv();
+extern "C" void __dt__16dBgS_ArrowLinChkFv();
+extern "C" void __ct__20dBgS_BoomerangLinChkFv();
+extern "C" void __dt__20dBgS_BoomerangLinChkFv();
+extern "C" void __ct__15dBgS_RopeLinChkFv();
+extern "C" void __dt__15dBgS_RopeLinChkFv();
+extern "C" void SetObj__16dBgS_PolyPassChkFv();
+extern "C" void ClrObj__16dBgS_PolyPassChkFv();
+extern "C" void SetLink__16dBgS_PolyPassChkFv();
+extern "C" void ClrLink__16dBgS_PolyPassChkFv();
+extern "C" void SetBomb__16dBgS_PolyPassChkFv();
+extern "C" void ClrBomb__16dBgS_PolyPassChkFv();
+extern "C" void SetStatue__16dBgS_PolyPassChkFv();
+extern "C" void ClrStatue__16dBgS_PolyPassChkFv();
+extern "C" void SetIronBall__16dBgS_PolyPassChkFv();
+extern "C" void __ct__12dBgS_RoofChkFv();
+extern "C" void __dt__12dBgS_RoofChkFv();
+extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Move__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void ChkAtHit__12dCcD_GObjInfFv();
+extern "C" void ResetAtHit__12dCcD_GObjInfFv();
+extern "C" void GetAtHitGObj__12dCcD_GObjInfFv();
+extern "C" void ChkTgHit__12dCcD_GObjInfFv();
+extern "C" void ResetTgHit__12dCcD_GObjInfFv();
+extern "C" void GetTgHitGObj__12dCcD_GObjInfFv();
+extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv();
+extern "C" void getHitSeID__12dCcD_GObjInfFUci();
+extern "C" void ChkCoHit__12dCcD_GObjInfFv();
+extern "C" void ResetCoHit__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CpsFRC11dCcD_SrcCps();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void StartCAt__8dCcD_CylFR4cXyz();
+extern "C" void MoveCAt__8dCcD_CylFR4cXyz();
+extern "C" void Set__8dCcD_SphFRC11dCcD_SrcSph();
+extern "C" void StartCAt__8dCcD_SphFR4cXyz();
+extern "C" void MoveCAt__8dCcD_SphFR4cXyz();
+extern "C" void __dt__8dCcD_CylFv();
+extern "C" void __dt__8dCcD_CpsFv();
+extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc();
+extern "C" bool checkCutJumpCancelTurn__9daPy_py_cCFv();
+extern "C" void StartEventCamera__9dCamera_cFiie();
+extern "C" void EndEventCamera__9dCamera_cFi();
+extern "C" void abs__4cXyzCFv();
+extern "C" void checkMidnaRide__9daPy_py_cCFv();
+extern "C" void __as__4cXyzFRC4cXyz();
+extern "C" void __ct__4cXyzFRC4cXyz();
+extern "C" bool checkCanoeRide__9daPy_py_cCFv();
+extern "C" bool checkBoardRide__9daPy_py_cCFv();
+extern "C" bool checkSpinnerRide__9daPy_py_cCFv();
+extern "C" bool checkBoarRide__9daPy_py_cCFv();
+extern "C" void getShadowTalkAtnPos__9daAlink_cFv();
+extern "C" void execItemGet__FUc();
+extern "C" void checkItemGet__FUci();
+extern "C" void entry__8dEyeHL_cFP12J3DModelDataPCc();
+extern "C" void remove__8dEyeHL_cFv();
+extern "C" void getActorP__18daNpcT_ActorMngr_cFv();
+extern "C" void daNpcF_getPlayerInfoFromPlayerList__FiiR4cXyzR5csXyz();
+extern "C" void checkAnmEnd__16daPy_frameCtrl_cFv();
+extern "C" void updateFrame__16daPy_frameCtrl_cFv();
+extern "C" void setFrameCtrl__16daPy_frameCtrl_cFUcssff();
+extern "C" void setParamData__9daPy_py_cFiiii();
+extern "C" void checkFishingRodItem__9daPy_py_cFi();
+extern "C" void checkBombItem__9daPy_py_cFi();
+extern "C" void checkBottleItem__9daPy_py_cFi();
+extern "C" void checkDrinkBottleItem__9daPy_py_cFi();
+extern "C" void checkOilBottleItem__9daPy_py_cFi();
+extern "C" void checkOpenBottleItem__9daPy_py_cFi();
+extern "C" void checkBowItem__9daPy_py_cFi();
+extern "C" void checkHookshotItem__9daPy_py_cFi();
+extern "C" void checkTradeItem__9daPy_py_cFi();
+extern "C" void checkDungeonWarpItem__9daPy_py_cFi();
+extern "C" void setActor__16daPy_actorKeep_cFv();
+extern "C" void setData__16daPy_actorKeep_cFP10fopAc_ac_c();
+extern "C" void clearData__16daPy_actorKeep_cFv();
+extern "C" void __ct__14daPy_anmHeap_cFUl();
+extern "C" void __dt__14daPy_anmHeap_cFv();
+extern "C" void mallocBuffer__14daPy_anmHeap_cFv();
+extern "C" void createHeap__14daPy_anmHeap_cFQ214daPy_anmHeap_c16daAlinkHEAP_TYPE();
+extern "C" void loadDataIdx__14daPy_anmHeap_cFUs();
+extern "C" void loadDataPriIdx__14daPy_anmHeap_cFUs();
+extern "C" void loadDataDemoRID__14daPy_anmHeap_cFUsUs();
+extern "C" void setAnimeHeap__14daPy_anmHeap_cFv();
+extern "C" void draw__18daPy_sightPacket_cFv();
+extern "C" void setSight__18daPy_sightPacket_cFv();
+extern "C" void setSightImage__18daPy_sightPacket_cFP7ResTIMG();
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
+extern "C" void checkWoodShieldEquip__9daPy_py_cFv();
+extern "C" void checkCarryStartLightBallA__9daPy_py_cFv();
+extern "C" void checkCarryStartLightBallB__9daPy_py_cFv();
+extern "C" void daPy_addCalcShort__FPsssss();
+extern "C" void Start__9dCamera_cFv();
+extern "C" void Stop__9dCamera_cFv();
+extern "C" void ChangeModeOK__9dCamera_cFl();
+extern "C" void SetTrimTypeForce__9dCamera_cFl();
+extern "C" void GetCameraTypeFromCameraName__9dCamera_cFPCc();
+extern "C" void GetForceLockOnActor__9dCamera_cFv();
+extern "C" void dCam_getControledAngleY__FP12camera_class();
+extern "C" void dCam_getBody__Fv();
+extern "C" void d_GameOver_Create__FUc();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void dKy_setLight_again__Fv();
+extern "C" void dKy_plight_set__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_plight_cut__FP15LIGHT_INFLUENCE();
+extern "C" void dKy_Itemgetcol_chg_on__Fv();
+extern "C" void dKy_Sound_set__F4cXyziUii();
+extern "C" void dKy_SordFlush_set__F4cXyzi();
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" void dKy_WolfEyeLight_set__FP4cXyzfffP8_GXColorfUcUc();
+extern "C" void dKy_pol_efftype_get__FPC13cBgS_PolyInfo();
+extern "C" void dKy_pol_sound_get__FPC13cBgS_PolyInfo();
+extern "C" void dKy_pol_argument_get__FPC13cBgS_PolyInfo();
+extern "C" void dKy_TeachWind_existence_chk__Fv();
+extern "C" bool dKy_withwarp_capture_check__Fv();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void dKy_shadow_mode_set__FUc();
+extern "C" void dKy_shadow_mode_reset__FUc();
+extern "C" void setFloatingMessage__13dMeter2Info_cFUssb();
+extern "C" void onDirectUseItem__13dMeter2Info_cFi();
+extern "C" void resetWarpStatus__13dMeter2Info_cFv();
+extern "C" void warpInProc__13dMeter2Info_cFv();
+extern "C" void warpOutProc__13dMeter2Info_cFv();
+extern "C" void dMeter2Info_setShield__FUcb();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void onMsgSend__12dMsgObject_cFv();
+extern "C" void setSmellType__12dMsgObject_cFUc();
+extern "C" void isHowlHearingMode__12dMsgObject_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void ClrCcMove__9cCcD_SttsFv();
+extern "C" void SetIGrp__10cCcD_ObjCoFUl();
+extern "C" void SetVsGrp__10cCcD_ObjCoFUl();
+extern "C" void Set__4cCcSFP8cCcD_Obj();
+extern "C" void cPhs_Reset__FP30request_of_phase_process_class();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __dv__4cXyzCFf();
+extern "C" void outprod__4cXyzCFRC3Vec();
+extern "C" void normZP__4cXyzCFv();
+extern "C" void normalize__4cXyzFv();
+extern "C" void normalizeZP__4cXyzFv();
+extern "C" void atan2sX_Z__4cXyzCFv();
+extern "C" void atan2sY_XZ__4cXyzCFv();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void cM_rad2s__Ff();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_atan2f__Fff();
+extern "C" void cM_rnd__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void __ct__13cBgS_PolyInfoFv();
+extern "C" void __dt__13cBgS_PolyInfoFv();
+extern "C" void ClearPi__13cBgS_PolyInfoFv();
+extern "C" void SetPolyInfo__13cBgS_PolyInfoFRC13cBgS_PolyInfo();
+extern "C" void cBgW_CheckBGround__Ff();
+extern "C" void cBgW_CheckBRoof__Ff();
+extern "C" void cBgW_CheckBWall__Ff();
+extern "C" void cM3d_Len2dSqPntAndSegLine__FffffffPfPfPf();
+extern "C" void cM3d_SignedLenPlaAndPos__FPC8cM3dGPlaPC3Vec();
+extern "C" void cM3d_3PlaneCrossPos__FRC8cM3dGPlaRC8cM3dGPlaRC8cM3dGPlaP3Vec();
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void SetStartEnd__8cM3dGLinFRC4cXyzRC4cXyz();
+extern "C" void __ct__8cM3dGPlaFPC4cXyzf();
+extern "C" void crossInfLin__8cM3dGPlaCFRC4cXyzRC4cXyzR4cXyz();
+extern "C" void SetC__8cM3dGSphFRC4cXyz();
+extern "C" void SetR__8cM3dGSphFf();
+extern "C" void cLib_memCpy__FPvPCvUl();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff();
+extern "C" void cLib_addCalcAngleS__FPsssss();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void cLib_chaseUC__FPUcUcUc();
+extern "C" void cLib_chaseS__FPsss();
+extern "C" void cLib_chaseF__FPfff();
+extern "C" void cLib_chasePos__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chasePosXZ__FP4cXyzRC4cXyzf();
+extern "C" void cLib_chaseAngleS__FPsss();
+extern "C" void cLib_targetAngleY__FPC3VecPC3Vec();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void __dt__19JPAParticleCallBackFv();
+extern "C" void func_802807E0();
+extern "C" void JPACalcKeyAnmValue__FfUsPCf();
+extern "C" void getData__Q47JStudio3stb4data22TParse_TParagraph_dataCFPQ57JStudio3stb4data22TParse_TParagraph_data5TData();
+extern "C" void getAramHeap__9JASKernelFv();
+extern "C" void func_802A0A8C();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void bgmStart__8Z2SeqMgrFUlUll();
+extern "C" void subBgmStart__8Z2SeqMgrFUl();
+extern "C" void subBgmStop__8Z2SeqMgrFv();
+extern "C" void changeBgmStatus__8Z2SeqMgrFl();
+extern "C" void changeSubBgmStatus__8Z2SeqMgrFl();
+extern "C" void bgmSetSwordUsing__8Z2SeqMgrFl();
+extern "C" void taktModeMute__8Z2SeqMgrFv();
+extern "C" void taktModeMuteOff__8Z2SeqMgrFv();
+extern "C" void deleteObject__14Z2SoundObjBaseFv();
+extern "C" void __ct__16Z2SoundObjSimpleFv();
+extern "C" void initAnime__10Z2CreatureFPvbff();
+extern "C" void updateAnime__10Z2CreatureFff();
+extern "C" void startCollisionSE__10Z2CreatureFUlUl();
+extern "C" void setLinkGroupInfo__14Z2CreatureLinkFUc();
+extern "C" void setLinkHp__14Z2CreatureLinkFll();
+extern "C" void setLinkSwordType__14Z2CreatureLinkFll();
+extern "C" void setLinkShieldType__14Z2CreatureLinkFll();
+extern "C" void setLinkBootsType__14Z2CreatureLinkFl();
+extern "C" void __ct__14Z2CreatureLinkFv();
+extern "C" void __dt__14Z2CreatureLinkFv();
+extern "C" void init__14Z2CreatureLinkFP3VecP3VecP3Vec();
+extern "C" void initKantera__14Z2CreatureLinkFP3Vec();
+extern "C" void deleteKantera__14Z2CreatureLinkFv();
+extern "C" void setKanteraState__14Z2CreatureLinkFUc();
+extern "C" void setSinkDepth__14Z2CreatureLinkFSc();
+extern "C" void setRiding__14Z2CreatureLinkFb();
+extern "C" void setMagnetized__14Z2CreatureLinkFb();
+extern "C" void setWolfEyeOpen__14Z2CreatureLinkFb();
+extern "C" void startLinkSound__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startLinkSoundLevel__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startLinkVoice__14Z2CreatureLinkF10JAISoundIDSc();
+extern "C" void startLinkVoiceLevel__14Z2CreatureLinkF10JAISoundIDSc();
+extern "C" void startLinkSwordSound__14Z2CreatureLinkF10JAISoundIDUlSc();
+extern "C" void startHitItemSE__14Z2CreatureLinkFUlUlP14Z2SoundObjBasef();
+extern "C" void setResumeAttack__14Z2CreatureLinkFb();
+extern "C" void __ct__13Z2WolfHowlMgrFv();
+extern "C" void startWolfHowlSound__13Z2WolfHowlMgrFffbf();
+extern "C" void setCorrectData__13Z2WolfHowlMgrFScP14Z2WolfHowlData();
+extern "C" void skipCorrectDemo__13Z2WolfHowlMgrFv();
+extern "C" void freeAll__7JKRHeapFv();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void create__10JKRExpHeapFUlP7JKRHeapb();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void readIdxResource__10JKRArchiveFPvUlUl();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void reinitGX__6J3DSysFv();
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" void diff__8J3DModelFv();
+extern "C" void setDeformData__8J3DModelFP13J3DDeformDataUl();
+extern "C" void calcWeightEnvelopeMtx__8J3DModelFv();
+extern "C" void init__12J3DFrameCtrlFs();
+extern "C" void checkPass__12J3DFrameCtrlFf();
+extern "C" void searchUpdateMaterialID__16J3DAnmTexPatternFP12J3DModelData();
+extern "C" void searchUpdateMaterialID__19J3DAnmTextureSRTKeyFP12J3DModelData();
+extern "C" void getTevColorReg__15J3DAnmTevRegKeyCFUsP11_GXColorS10();
+extern "C" void searchUpdateMaterialID__15J3DAnmTevRegKeyFP12J3DModelData();
+extern "C" void initialize__14J3DMaterialAnmFv();
+extern "C" void calc__14J3DMaterialAnmCFP11J3DMaterial();
+extern "C" void removeTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void removeTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void entryTexNoAnimator__16J3DMaterialTableFP16J3DAnmTexPattern();
+extern "C" void entryTexMtxAnimator__16J3DMaterialTableFP19J3DAnmTextureSRTKey();
+extern "C" void entryTevRegAnimator__16J3DMaterialTableFP15J3DAnmTevRegKey();
+extern "C" void load__20J3DAnmLoaderDataBaseFPCv24J3DAnmLoaderDataBaseFlag();
+extern "C" void JMAEulerToQuat__FsssP10Quaternion();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXInverse();
+extern "C" void PSMTXRotAxisRad();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXQuat();
+extern "C" void PSMTXMultVec();
+extern "C" void PSMTXMultVecSR();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECDotProduct();
+extern "C" void PSVECSquareDistance();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXLoadLightObjImm();
+extern "C" void GXSetChanAmbColor();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetNumChans();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXLoadTexObj();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColor();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetZMode();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXLoadNrmMtxImm();
+extern "C" void GXSetCurrentMtx();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void __construct_new_array();
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_scall();
+extern "C" void __cvt_fp2unsigned();
+extern "C" void __save_gpr();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_16();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void __restore_gpr();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_16();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abs();
+extern "C" void strcmp();
+extern "C" void strcpy();
+extern "C" void strlen();
 extern "C" extern u8 const tempBitLabels__20dSv_event_tmp_flag_c[370 + 2 /* padding */];
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 extern "C" extern void* __vt__12J3DFrameCtrl[3];

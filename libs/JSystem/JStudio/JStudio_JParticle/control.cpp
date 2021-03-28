@@ -11,9 +11,6 @@
 // Types:
 // 
 
-struct JPABaseEmitter {
-};
-
 namespace JStudio {
 	struct TObject {
 	};
@@ -38,6 +35,9 @@ namespace JStudio {
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 	};
 
+};
+
+struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {
@@ -79,30 +79,31 @@ struct JPAEmitterManager {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__Q217JStudio_JParticle13TCreateObject[6];
 
-extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv(); // 1
-extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object(); // 1
-extern "C" void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl(); // 1
-extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter(); // 1
-extern "C" void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject(); // 1
+extern "C" void __dt__Q217JStudio_JParticle13TCreateObjectFv();
+extern "C" void create__Q217JStudio_JParticle13TCreateObjectFPPQ27JStudio7TObjectRCQ47JStudio3stb4data20TParse_TBlock_object();
+extern "C" void emitter_create__Q217JStudio_JParticle13TCreateObjectFUl();
+extern "C" void emitter_destroy__Q217JStudio_JParticle13TCreateObjectFP14JPABaseEmitter();
+extern "C" void createObject_JPA_PARTICLE___Q217JStudio_JParticle13TCreateObjectFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ217JStudio_JParticle13TCreateObject();
 extern "C" extern void* __vt__Q217JStudio_JParticle13TCreateObject[6];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
 
-extern "C" void func_8027DEBC(); // 1
-extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter(); // 1
-extern "C" void __dt__Q27JStudio13TCreateObjectFv(); // 1
-extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle(); // 1
-extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void func_8027DEBC();
+extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
+extern "C" void __dt__Q27JStudio13TCreateObjectFv();
+extern "C" void __ct__Q27JStudio16TObject_particleFRCQ47JStudio3stb4data20TParse_TBlock_objectPQ27JStudio17TAdaptor_particle();
+extern "C" void __ct__Q217JStudio_JParticle17TAdaptor_particleFPQ217JStudio_JParticle13TCreateObject();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

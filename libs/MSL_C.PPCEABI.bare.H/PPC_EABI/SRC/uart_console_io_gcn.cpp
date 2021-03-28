@@ -12,18 +12,18 @@
 // 
 
 
-extern "C" bool __close_console(); // 1
-extern "C" void __write_console(); // 1
+extern "C" bool __close_console();
+extern "C" void __write_console();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSGetConsoleType(); // 1
-extern "C" void InitializeUART(); // 1
-extern "C" void WriteUARTN(); // 1
-extern "C" void __TRK_write_console(); // 1
+extern "C" void OSGetConsoleType();
+extern "C" void InitializeUART();
+extern "C" void WriteUARTN();
+extern "C" void __TRK_write_console();
 
 // 
 // Declarations:

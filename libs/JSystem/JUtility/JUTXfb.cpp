@@ -35,36 +35,39 @@ struct JUTXfb {
 // Forward References:
 // 
 
+extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
-extern "C" void clearIndex__6JUTXfbFv(); // 1
-extern "C" void common_init__6JUTXfbFi(); // 1
-extern "C" void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
-extern "C" void __dt__6JUTXfbFv(); // 1
-extern "C" void delXfb__6JUTXfbFi(); // 1
-extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
-extern "C" void destroyManager__6JUTXfbFv(); // 1
-extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber(); // 1
+extern "C" void clearIndex__6JUTXfbFv();
+extern "C" void common_init__6JUTXfbFi();
+extern "C" void __ct__6JUTXfbFPC16_GXRenderModeObjP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void __dt__6JUTXfbFv();
+extern "C" void delXfb__6JUTXfbFi();
+extern "C" void createManager__6JUTXfbFP7JKRHeapQ26JUTXfb10EXfbNumber();
+extern "C" void destroyManager__6JUTXfbFv();
+extern "C" void initiate__6JUTXfbFUsUsP7JKRHeapQ26JUTXfb10EXfbNumber();
 extern "C" extern u8 sManager__6JUTXfb[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u8 sSystemHeap__7JKRHeap[4];
+extern "C" extern u8 sManager__8JUTVideo[4];
 
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void GXGetNumXfbLines(); // 1
-extern "C" void GXGetYScaleFactor(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void GXGetNumXfbLines();
+extern "C" void GXGetYScaleFactor();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 sSystemHeap__7JKRHeap[4];
 extern "C" extern u8 sManager__8JUTVideo[4];
 

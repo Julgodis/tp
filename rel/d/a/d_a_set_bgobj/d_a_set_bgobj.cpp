@@ -42,14 +42,16 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daSetBgObj_Delete(daSetBgObj_c*); // 2
-static void daSetBgObj_Create(fopAc_ac_c*); // 2
+static void daSetBgObj_Delete(daSetBgObj_c*);
+static void daSetBgObj_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern void* g_profile_SET_BG_OBJ[12];
 
-extern "C" void CreateInit__12daSetBgObj_cFv(); // 1
-extern "C" void create__12daSetBgObj_cFv(); // 1
-extern "C" void Delete__12daSetBgObj_cFv(); // 1
-extern "C" static void daSetBgObj_Delete__FP12daSetBgObj_c(); // 1
-extern "C" static void daSetBgObj_Create__FP10fopAc_ac_c(); // 1
+extern "C" void CreateInit__12daSetBgObj_cFv();
+extern "C" void create__12daSetBgObj_cFv();
+extern "C" void Delete__12daSetBgObj_cFv();
+extern "C" static void daSetBgObj_Delete__FP12daSetBgObj_c();
+extern "C" static void daSetBgObj_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern void* g_profile_SET_BG_OBJ[12];
 
@@ -57,17 +59,20 @@ extern "C" extern void* g_profile_SET_BG_OBJ[12];
 // External References:
 // 
 
-void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
+void fopAcM_create(s16, u32, cXyz const*, int, csXyz const*, cXyz const*, s8);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void sprintf(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_create__FsUlPC4cXyziPC5csXyzPC4cXyzSc();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void getArcName__12daSetBgObj_cFP10fopAc_ac_c();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void sprintf();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

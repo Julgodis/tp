@@ -81,41 +81,43 @@ namespace JGadget {
 // 
 
 
-extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb(); // 1
-extern "C" void __ct__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
-extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
-extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs(); // 1
-extern "C" void Do_create__Q38JMessage18TResourceContainer10TCResourceFv(); // 1
-extern "C" void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource(); // 1
-extern "C" void __ct__Q28JMessage18TResourceContainerFv(); // 1
-extern "C" void setEncoding__Q28JMessage18TResourceContainerFUc(); // 1
-extern "C" void setEncoding___Q28JMessage18TResourceContainerFUc(); // 1
-extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer(); // 1
-extern "C" void __dt__Q28JMessage6TParseFv(); // 1
-extern "C" void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl(); // 1
-extern "C" void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl(); // 1
-extern "C" void parseCharacter_1Byte__Q28JMessage6localeFPPCc(); // 1
-extern "C" void parseCharacter_2Byte__Q28JMessage6localeFPPCc(); // 1
-extern "C" void func_802A94D4(); // 1
+extern "C" void toMessageIndex_messageID__Q28JMessage9TResourceCFUlUlPb();
+extern "C" void __ct__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void __dt__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void Get_groupID__Q38JMessage18TResourceContainer10TCResourceFUs();
+extern "C" void Do_create__Q38JMessage18TResourceContainer10TCResourceFv();
+extern "C" void Do_destroy__Q38JMessage18TResourceContainer10TCResourceFPQ28JMessage9TResource();
+extern "C" void __ct__Q28JMessage18TResourceContainerFv();
+extern "C" void setEncoding__Q28JMessage18TResourceContainerFUc();
+extern "C" void setEncoding___Q28JMessage18TResourceContainerFUc();
+extern "C" void __ct__Q28JMessage6TParseFPQ28JMessage18TResourceContainer();
+extern "C" void __dt__Q28JMessage6TParseFv();
+extern "C" void parseHeader_next__Q28JMessage6TParseFPPCvPUlUl();
+extern "C" void parseBlock_next__Q28JMessage6TParseFPPCvPUlUl();
+extern "C" void parseCharacter_1Byte__Q28JMessage6localeFPPCc();
+extern "C" void parseCharacter_2Byte__Q28JMessage6localeFPPCc();
+extern "C" void func_802A94D4();
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
+extern "C" extern u32 ga4cSignature__Q28JMessage4data[1 + 1 /* padding */];
 
-extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc(); // 1
-extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv(); // 1
-extern "C" void __dt__Q27JGadget13TNodeLinkListFv(); // 1
-extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode(); // 1
-extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void memcmp(); // 1
+extern "C" void parseCharacter_ShiftJIS__Q28JMessage6localeFPPCc();
+extern "C" void parseCharacter_UTF8__Q28JMessage6localeFPPCc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dt__Q37JGadget6binary19TParse_header_blockFv();
+extern "C" void __dt__Q27JGadget13TNodeLinkListFv();
+extern "C" void Insert__Q27JGadget13TNodeLinkListFQ37JGadget13TNodeLinkList8iteratorPQ27JGadget13TLinkListNode();
+extern "C" void Erase__Q27JGadget13TNodeLinkListFPQ27JGadget13TLinkListNode();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
+extern "C" void memcmp();
 extern "C" extern void* __vt__Q37JGadget6binary19TParse_header_block[5];
 extern "C" extern u32 ga4cSignature__Q28JMessage4data[1 + 1 /* padding */];
 

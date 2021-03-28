@@ -30,20 +30,20 @@ struct J2DDataManage {
 // 
 
 
-extern "C" void get__13J2DDataManageFPCc(); // 1
-extern "C" void get__13J2DDataManageFP14JSUInputStream(); // 1
-extern "C" void getResReference__15J2DResReferenceCFUs(); // 1
-extern "C" void getName__15J2DResReferenceCFUs(); // 1
+extern "C" void get__13J2DDataManageFPCc();
+extern "C" void get__13J2DDataManageFP14JSUInputStream();
+extern "C" void getResReference__15J2DResReferenceCFUs();
+extern "C" void getName__15J2DResReferenceCFUs();
 
 // 
 // External References:
 // 
 
 
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 
 // 
 // Declarations:

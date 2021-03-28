@@ -49,43 +49,49 @@ struct dPa_control_c {
 // Forward References:
 // 
 
-static void daObjDigholl_Create(fopAc_ac_c*); // 2
-static void daObjDigholl_Delete(daObjDigholl_c*); // 2
-static void daObjDigholl_Execute(daObjDigholl_c*); // 2
-static void daObjDigholl_Draw(daObjDigholl_c*); // 2
+static void daObjDigholl_Create(fopAc_ac_c*);
+static void daObjDigholl_Delete(daObjDigholl_c*);
+static void daObjDigholl_Execute(daObjDigholl_c*);
+static void daObjDigholl_Draw(daObjDigholl_c*);
+extern "C" extern void* g_profile_Obj_Digholl[12];
 
-extern "C" void create__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Delete__FP14daObjDigholl_c(); // 1
-extern "C" void execute__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Execute__FP14daObjDigholl_c(); // 1
-extern "C" bool draw__14daObjDigholl_cFv(); // 1
-extern "C" static void daObjDigholl_Draw__FP14daObjDigholl_c(); // 1
+extern "C" void create__14daObjDigholl_cFv();
+extern "C" static void daObjDigholl_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daObjDigholl_cFv();
+extern "C" static void daObjDigholl_Delete__FP14daObjDigholl_c();
+extern "C" void execute__14daObjDigholl_cFv();
+extern "C" static void daObjDigholl_Execute__FP14daObjDigholl_c();
+extern "C" bool draw__14daObjDigholl_cFv();
+extern "C" static void daObjDigholl_Draw__FP14daObjDigholl_c();
 extern "C" extern void* g_profile_Obj_Digholl[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32); // 2
-void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32); // 2
-void cLib_distanceAngleS(s16, s16); // 2
-void operator delete(void*); // 2
+void fopAcM_SetMin(fopAc_ac_c*, f32, f32, f32);
+void fopAcM_SetMax(fopAc_ac_c*, f32, f32, f32);
+void cLib_distanceAngleS(s16, s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u32 __float_nan;
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff(); // 1
-extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif(); // 1
-extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
-extern "C" void cLib_distanceAngleS__Fss(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_SetMin__FP10fopAc_ac_cfff();
+extern "C" void fopAcM_SetMax__FP10fopAc_ac_cfff();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void setSimple__13dPa_control_cFUsPC4cXyzPC12dKy_tevstr_cUcRC8_GXColorRC8_GXColorif();
+extern "C" void setLookPos__9daPy_py_cFP4cXyz();
+extern "C" void cLib_distanceAngleS__Fss();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

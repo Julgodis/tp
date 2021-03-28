@@ -40,42 +40,48 @@ struct cXyz {
 // Forward References:
 // 
 
-static void daTagMist_Execute(daTagMist_c*); // 2
-static void daTagMist_Delete(daTagMist_c*); // 2
-static void daTagMist_Create(fopAc_ac_c*); // 2
+static void daTagMist_Execute(daTagMist_c*);
+static void daTagMist_Delete(daTagMist_c*);
+static void daTagMist_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Tag_Mist[12];
 
-extern "C" void offSw__11daTagMist_cFv(); // 1
-extern "C" void onMySw__11daTagMist_cFv(); // 1
-extern "C" void isMySw__11daTagMist_cFv(); // 1
-extern "C" void Create__11daTagMist_cFv(); // 1
-extern "C" void create__11daTagMist_cFv(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void __ct__4cXyzFv(); // 1
-extern "C" void execute__11daTagMist_cFv(); // 1
-extern "C" bool _delete__11daTagMist_cFv(); // 1
-extern "C" static void daTagMist_Execute__FP11daTagMist_c(); // 1
-extern "C" static void daTagMist_Delete__FP11daTagMist_c(); // 1
-extern "C" static void daTagMist_Create__FP10fopAc_ac_c(); // 1
+extern "C" void offSw__11daTagMist_cFv();
+extern "C" void onMySw__11daTagMist_cFv();
+extern "C" void isMySw__11daTagMist_cFv();
+extern "C" void Create__11daTagMist_cFv();
+extern "C" void create__11daTagMist_cFv();
+extern "C" void __dt__4cXyzFv();
+extern "C" void __ct__4cXyzFv();
+extern "C" void execute__11daTagMist_cFv();
+extern "C" bool _delete__11daTagMist_cFv();
+extern "C" static void daTagMist_Execute__FP11daTagMist_c();
+extern "C" static void daTagMist_Delete__FP11daTagMist_c();
+extern "C" static void daTagMist_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_Tag_Mist[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void operator delete(void*); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450DC0[4];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void PSVECSubtract();
+extern "C" void __construct_array();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_27();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

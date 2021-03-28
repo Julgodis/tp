@@ -11,12 +11,13 @@
 // Forward References:
 // 
 
+extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 
-extern "C" static void DLInsert(); // 1
-extern "C" void OSFreeToHeap(); // 1
-extern "C" void OSSetCurrentHeap(); // 1
-extern "C" void OSInitAlloc(); // 1
-extern "C" void OSCreateHeap(); // 1
+extern "C" static void DLInsert();
+extern "C" void OSFreeToHeap();
+extern "C" void OSSetCurrentHeap();
+extern "C" void OSInitAlloc();
+extern "C" void OSCreateHeap();
 extern "C" extern u32 __OSCurrHeap[1 + 1 /* padding */];
 
 // 

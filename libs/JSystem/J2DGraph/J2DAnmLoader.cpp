@@ -93,11 +93,11 @@ struct J2DAnmLoader {
 	/* 8030A410 */ ~J2DAnmLoader();
 };
 
-struct J2DAnmBase {
-	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
+struct J2DAnmColorKey {
 };
 
-struct J2DAnmColorKey {
+struct J2DAnmBase {
+	/* 800569B0 */ void searchUpdateMaterialID(J2DScreen*);
 };
 
 struct J2DAnmKeyLoader_v15 {
@@ -141,88 +141,101 @@ struct J2DAnmFullLoader_v15 {
 // Forward References:
 // 
 
-void JSUConvertOffsetToPtr__template30(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template31(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template32(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template33(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template34(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template35(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template36(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template37(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template38(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template39(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template40(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template41(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template42(void const*, void const*); // 2
+void JSUConvertOffsetToPtr__template30(void const*, void const*);
+void JSUConvertOffsetToPtr__template31(void const*, void const*);
+void JSUConvertOffsetToPtr__template32(void const*, void const*);
+void JSUConvertOffsetToPtr__template33(void const*, void const*);
+void JSUConvertOffsetToPtr__template34(void const*, void const*);
+void JSUConvertOffsetToPtr__template35(void const*, void const*);
+void JSUConvertOffsetToPtr__template36(void const*, void const*);
+void JSUConvertOffsetToPtr__template37(void const*, void const*);
+void JSUConvertOffsetToPtr__template38(void const*, void const*);
+void JSUConvertOffsetToPtr__template39(void const*, void const*);
+void JSUConvertOffsetToPtr__template40(void const*, void const*);
+void JSUConvertOffsetToPtr__template41(void const*, void const*);
+void JSUConvertOffsetToPtr__template42(void const*, void const*);
+extern "C" extern void* __vt__14J2DAnmVtxColor[5];
 
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void __ct__19J2DAnmKeyLoader_v15Fv(); // 1
-extern "C" void __dt__19J2DAnmKeyLoader_v15Fv(); // 1
-extern "C" void load__19J2DAnmKeyLoader_v15FPCv(); // 1
-extern "C" void setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv(); // 1
-extern "C" void readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData(); // 1
-extern "C" void setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData(); // 1
-extern "C" void readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData(); // 1
-extern "C" void setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData(); // 1
-extern "C" void readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData(); // 1
-extern "C" void setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData(); // 1
-extern "C" void readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData(); // 1
-extern "C" void setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData(); // 1
-extern "C" void load__20J2DAnmFullLoader_v15FPCv(); // 1
-extern "C" void setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv(); // 1
-extern "C" void __ct__20J2DAnmFullLoader_v15Fv(); // 1
-extern "C" void __dt__20J2DAnmFullLoader_v15Fv(); // 1
-extern "C" void readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData(); // 1
-extern "C" void setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData(); // 1
-extern "C" void readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData(); // 1
-extern "C" void setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData(); // 1
-extern "C" void readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData(); // 1
-extern "C" void setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData(); // 1
-extern "C" void readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData(); // 1
-extern "C" void setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData(); // 1
-extern "C" void readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData(); // 1
-extern "C" void setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData(); // 1
-extern "C" void readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData(); // 1
-extern "C" void setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData(); // 1
-extern "C" void __dt__14J2DAnmVtxColorFv(); // 1
-extern "C" void __dt__20J2DAnmVisibilityFullFv(); // 1
-extern "C" void __dt__12J2DAnmLoaderFv(); // 1
-extern "C" void func_8030A458(); // 1
-extern "C" void func_8030A470(); // 1
-extern "C" void func_8030A488(); // 1
-extern "C" void func_8030A4A0(); // 1
-extern "C" void func_8030A4B8(); // 1
-extern "C" void func_8030A4D0(); // 1
-extern "C" void func_8030A4E8(); // 1
-extern "C" void func_8030A500(); // 1
-extern "C" void func_8030A518(); // 1
-extern "C" void func_8030A530(); // 1
-extern "C" void func_8030A548(); // 1
-extern "C" void func_8030A560(); // 1
-extern "C" void func_8030A578(); // 1
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void __ct__19J2DAnmKeyLoader_v15Fv();
+extern "C" void __dt__19J2DAnmKeyLoader_v15Fv();
+extern "C" void load__19J2DAnmKeyLoader_v15FPCv();
+extern "C" void setResource__19J2DAnmKeyLoader_v15FP10J2DAnmBasePCv();
+extern "C" void readAnmTransform__19J2DAnmKeyLoader_v15FPC22J3DAnmTransformKeyData();
+extern "C" void setAnmTransform__19J2DAnmKeyLoader_v15FP18J2DAnmTransformKeyPC22J3DAnmTransformKeyData();
+extern "C" void readAnmTextureSRT__19J2DAnmKeyLoader_v15FPC23J3DAnmTextureSRTKeyData();
+extern "C" void setAnmTextureSRT__19J2DAnmKeyLoader_v15FP19J2DAnmTextureSRTKeyPC23J3DAnmTextureSRTKeyData();
+extern "C" void readAnmColor__19J2DAnmKeyLoader_v15FPC18J3DAnmColorKeyData();
+extern "C" void setAnmColor__19J2DAnmKeyLoader_v15FP14J2DAnmColorKeyPC18J3DAnmColorKeyData();
+extern "C" void readAnmVtxColor__19J2DAnmKeyLoader_v15FPC21J3DAnmVtxColorKeyData();
+extern "C" void setAnmVtxColor__19J2DAnmKeyLoader_v15FP17J2DAnmVtxColorKeyPC21J3DAnmVtxColorKeyData();
+extern "C" void load__20J2DAnmFullLoader_v15FPCv();
+extern "C" void setResource__20J2DAnmFullLoader_v15FP10J2DAnmBasePCv();
+extern "C" void __ct__20J2DAnmFullLoader_v15Fv();
+extern "C" void __dt__20J2DAnmFullLoader_v15Fv();
+extern "C" void readAnmTransform__20J2DAnmFullLoader_v15FPC23J3DAnmTransformFullData();
+extern "C" void setAnmTransform__20J2DAnmFullLoader_v15FP19J2DAnmTransformFullPC23J3DAnmTransformFullData();
+extern "C" void readAnmColor__20J2DAnmFullLoader_v15FPC19J3DAnmColorFullData();
+extern "C" void setAnmColor__20J2DAnmFullLoader_v15FP15J2DAnmColorFullPC19J3DAnmColorFullData();
+extern "C" void readAnmTexPattern__20J2DAnmFullLoader_v15FPC24J3DAnmTexPatternFullData();
+extern "C" void setAnmTexPattern__20J2DAnmFullLoader_v15FP16J2DAnmTexPatternPC24J3DAnmTexPatternFullData();
+extern "C" void readAnmTevReg__19J2DAnmKeyLoader_v15FPC19J3DAnmTevRegKeyData();
+extern "C" void setAnmTevReg__19J2DAnmKeyLoader_v15FP15J2DAnmTevRegKeyPC19J3DAnmTevRegKeyData();
+extern "C" void readAnmVisibility__20J2DAnmFullLoader_v15FPC24J3DAnmVisibilityFullData();
+extern "C" void setAnmVisibility__20J2DAnmFullLoader_v15FP20J2DAnmVisibilityFullPC24J3DAnmVisibilityFullData();
+extern "C" void readAnmVtxColor__20J2DAnmFullLoader_v15FPC22J3DAnmVtxColorFullData();
+extern "C" void setAnmVtxColor__20J2DAnmFullLoader_v15FP18J2DAnmVtxColorFullPC22J3DAnmVtxColorFullData();
+extern "C" void __dt__14J2DAnmVtxColorFv();
+extern "C" void __dt__20J2DAnmVisibilityFullFv();
+extern "C" void __dt__12J2DAnmLoaderFv();
+extern "C" void func_8030A458();
+extern "C" void func_8030A470();
+extern "C" void func_8030A488();
+extern "C" void func_8030A4A0();
+extern "C" void func_8030A4B8();
+extern "C" void func_8030A4D0();
+extern "C" void func_8030A4E8();
+extern "C" void func_8030A500();
+extern "C" void func_8030A518();
+extern "C" void func_8030A530();
+extern "C" void func_8030A548();
+extern "C" void func_8030A560();
+extern "C" void func_8030A578();
 extern "C" extern void* __vt__14J2DAnmVtxColor[5];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void JSUConvertOffsetToPtr__template24(void const*, void const*); // 2
-void JSUConvertOffsetToPtr__template28(void const*, void const*); // 2
+void* operator new(u32);
+void operator delete(void*);
+void JSUConvertOffsetToPtr__template24(void const*, void const*);
+void JSUConvertOffsetToPtr__template28(void const*, void const*);
+extern "C" extern void* __vt__10J2DAnmBase[4];
+extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
+extern "C" extern void* __vt__15J2DAnmTevRegKey[4];
+extern "C" extern void* __vt__16J2DAnmTexPattern[4];
+extern "C" extern void* __vt__19J2DAnmTextureSRTKey[4];
+extern "C" extern void* __vt__17J2DAnmVtxColorKey[5];
+extern "C" extern void* __vt__18J2DAnmVtxColorFull[5];
+extern "C" extern void* __vt__14J2DAnmColorKey[5];
+extern "C" extern void* __vt__15J2DAnmColorFull[5];
+extern "C" extern void* __vt__11J2DAnmColor[5];
+extern "C" extern void* __vt__18J2DAnmTransformKey[6];
+extern "C" extern void* __vt__19J2DAnmTransformFull[5];
 
-extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JUTNameTabFv(); // 1
-extern "C" void setResource__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void func_802F4260(); // 1
-extern "C" void func_802F42C0(); // 1
-extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+extern "C" void searchUpdateMaterialID__10J2DAnmBaseFP9J2DScreen();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JUTNameTabFv();
+extern "C" void setResource__10JUTNameTabFPC7ResNTAB();
+extern "C" void func_802F4260();
+extern "C" void func_802F42C0();
+extern "C" void getColor__14J2DAnmVtxColorCFUcUsP8_GXColor();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
 extern "C" extern void* __vt__10J2DAnmBase[4];
 extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
 extern "C" extern void* __vt__15J2DAnmTevRegKey[4];

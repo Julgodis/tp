@@ -49,54 +49,59 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static void daTag_Push_Create(void*); // 2
-static void daTag_Push_Delete(void*); // 2
-static void daTag_Push_Execute(void*); // 2
-static void daTag_Push_Draw(void*); // 2
-static bool daTag_Push_IsDelete(void*); // 2
+static void daTag_Push_Create(void*);
+static void daTag_Push_Delete(void*);
+static void daTag_Push_Execute(void*);
+static void daTag_Push_Draw(void*);
+static bool daTag_Push_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_PUSH[12];
 
-extern "C" void srchActor__12daTag_Push_cFPvPv(); // 1
-extern "C" void create__12daTag_Push_cFv(); // 1
-extern "C" bool Delete__12daTag_Push_cFv(); // 1
-extern "C" void Execute__12daTag_Push_cFv(); // 1
-extern "C" bool Draw__12daTag_Push_cFv(); // 1
-extern "C" void isDelete__12daTag_Push_cFv(); // 1
-extern "C" void chkPointInArea__12daTag_Push_cF4cXyz(); // 1
-extern "C" static void daTag_Push_Create__FPv(); // 1
-extern "C" static void daTag_Push_Delete__FPv(); // 1
-extern "C" static void daTag_Push_Execute__FPv(); // 1
-extern "C" static void daTag_Push_Draw__FPv(); // 1
-extern "C" static bool daTag_Push_IsDelete__FPv(); // 1
-extern "C" void __dt__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void __dt__12daTag_Push_cFv(); // 1
+extern "C" void srchActor__12daTag_Push_cFPvPv();
+extern "C" void create__12daTag_Push_cFv();
+extern "C" bool Delete__12daTag_Push_cFv();
+extern "C" void Execute__12daTag_Push_cFv();
+extern "C" bool Draw__12daTag_Push_cFv();
+extern "C" void isDelete__12daTag_Push_cFv();
+extern "C" void chkPointInArea__12daTag_Push_cF4cXyz();
+extern "C" static void daTag_Push_Create__FPv();
+extern "C" static void daTag_Push_Delete__FPv();
+extern "C" static void daTag_Push_Execute__FPv();
+extern "C" static void daTag_Push_Draw__FPv();
+extern "C" static bool daTag_Push_IsDelete__FPv();
+extern "C" void __dt__18daNpcT_ActorMngr_cFv();
+extern "C" void __dt__12daTag_Push_cFv();
 extern "C" extern void* g_profile_TAG_PUSH[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fpcEx_Search(void* (*)(void*, void*), void*); // 2
-void fpcEx_IsExist(unsigned int); // 2
-void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int); // 2
-void operator delete(void*); // 2
+void fopAc_IsActor(void*);
+void fopAcM_delete(fopAc_ac_c*);
+void fpcEx_Search(void* (*)(void*, void*), void*);
+void fpcEx_IsExist(unsigned int);
+void daNpcT_chkPointInArea(cXyz, cXyz, cXyz, s16, int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fpcEx_Search__FPFPvPv_PvPv(); // 1
-extern "C" void fpcEx_IsExist__FUi(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void initialize__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c(); // 1
-extern "C" void getActorP__18daNpcT_ActorMngr_cFv(); // 1
-extern "C" void daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi(); // 1
-extern "C" void entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fpcEx_Search__FPFPvPv_PvPv();
+extern "C" void fpcEx_IsExist__FUi();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void initialize__18daNpcT_ActorMngr_cFv();
+extern "C" void entry__18daNpcT_ActorMngr_cFP10fopAc_ac_c();
+extern "C" void getActorP__18daNpcT_ActorMngr_cFv();
+extern "C" void daNpcT_chkPointInArea__F4cXyz4cXyz4cXyzsi();
+extern "C" void entry__18daNpcF_ActorMngr_cFP10fopAc_ac_c();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

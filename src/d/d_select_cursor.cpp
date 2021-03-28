@@ -20,17 +20,17 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
 struct JKRArchive {
 };
 
 struct J2DAnmTransformKey {
 	/* 801959C0 */ ~J2DAnmTransformKey();
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
 };
 
 struct dSelect_cursor_c {
@@ -94,63 +94,69 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_select_cursor__stringBase0;
 
-extern "C" void __ct__19dSelect_cursorHIO_cFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void __dt__16dSelect_cursor_cFv(); // 1
-extern "C" void draw__16dSelect_cursor_cFv(); // 1
-extern "C" void update__16dSelect_cursor_cFv(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void addAlpha__16dSelect_cursor_cFv(); // 1
-extern "C" void decAlpha__16dSelect_cursor_cFv(); // 1
-extern "C" void setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor(); // 1
-extern "C" void setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setCursorAnimation__16dSelect_cursor_cFv(); // 1
-extern "C" void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey(); // 1
-extern "C" void moveCenter__16dSelect_cursor_cFP7J2DPaneff(); // 1
-extern "C" void __dt__19dSelect_cursorHIO_cFv(); // 1
-extern "C" void __dt__18J2DAnmTransformKeyFv(); // 1
+extern "C" void __ct__19dSelect_cursorHIO_cFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void __dt__16dSelect_cursor_cFv();
+extern "C" void draw__16dSelect_cursor_cFv();
+extern "C" void update__16dSelect_cursor_cFv();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void addAlpha__16dSelect_cursor_cFv();
+extern "C" void decAlpha__16dSelect_cursor_cFv();
+extern "C" void setBpkAnimation__16dSelect_cursor_cFP11J2DAnmColor();
+extern "C" void setBtk0Animation__16dSelect_cursor_cFP19J2DAnmTextureSRTKey();
+extern "C" void setCursorAnimation__16dSelect_cursor_cFv();
+extern "C" void setBckAnimation__16dSelect_cursor_cFP18J2DAnmTransformKey();
+extern "C" void moveCenter__16dSelect_cursor_cFP7J2DPaneff();
+extern "C" void __dt__19dSelect_cursorHIO_cFv();
+extern "C" void __dt__18J2DAnmTransformKeyFv();
 extern "C" extern char const* const d_d_select_cursor__stringBase0;
 
 // 
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__10J2DAnmBase[4];
+extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];
+extern "C" extern void* __vt__18J2DAnmTransformKey[6];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void animation__14dSelect_icon_cFv(); // 1
-extern "C" void setAlpha__14dSelect_icon_cFUc(); // 1
-extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+extern "C" void animation__14dSelect_icon_cFv();
+extern "C" void setAlpha__14dSelect_icon_cFUc();
+extern "C" void setPos__14dSelect_icon_cFP7J2DPaneff();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__10J2DAnmBase[4];
 extern "C" extern void* __vt__15J2DAnmTransform[5 + 4 /* padding */];

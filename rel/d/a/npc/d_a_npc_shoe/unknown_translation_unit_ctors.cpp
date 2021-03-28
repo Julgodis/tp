@@ -11,6 +11,7 @@
 // Forward References:
 // 
 
+extern void* const data_80AEA39C[2];
 
 extern void* const data_80AEA39C[2];
 
@@ -19,7 +20,7 @@ extern void* const data_80AEA39C[2];
 // 
 
 
-extern "C" void __sinit_d_a_npc_shoe_cpp(); // 1
+extern "C" void __sinit_d_a_npc_shoe_cpp();
 
 // 
 // Declarations:

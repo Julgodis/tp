@@ -12,19 +12,19 @@
 // 
 
 
-extern "C" void SISetSamplingRate(); // 1
-extern "C" void SIRefreshSamplingRate(); // 1
+extern "C" void SISetSamplingRate();
+extern "C" void SIRefreshSamplingRate();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSReport(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void SISetXY(); // 1
-extern "C" void VIGetTvFormat(); // 1
+extern "C" void OSReport();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void SISetXY();
+extern "C" void VIGetTvFormat();
 
 // 
 // Declarations:

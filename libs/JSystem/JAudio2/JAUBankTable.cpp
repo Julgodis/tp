@@ -37,15 +37,15 @@ struct JAUBankTableDictionary {
 // 
 
 
-extern "C" void func_802A4A80(); // 1
-extern "C" void getBank__12JAUBankTableCFUl(); // 1
+extern "C" void func_802A4A80();
+extern "C" void getBank__12JAUBankTableCFUl();
 
 // 
 // External References:
 // 
 
 
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
 
 // 
 // Declarations:

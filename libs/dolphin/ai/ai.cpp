@@ -12,39 +12,39 @@
 // 
 
 
-extern "C" void AIRegisterDMACallback(); // 1
-extern "C" void AIInitDMA(); // 1
-extern "C" void AIStartDMA(); // 1
-extern "C" void AIStopDMA(); // 1
-extern "C" void AISetStreamPlayState(); // 1
-extern "C" static void AIGetStreamPlayState(); // 1
-extern "C" void AISetDSPSampleRate(); // 1
-extern "C" void AIGetDSPSampleRate(); // 1
-extern "C" void __AI_set_stream_sample_rate(); // 1
-extern "C" static void AIGetStreamSampleRate(); // 1
-extern "C" void AISetStreamVolLeft(); // 1
-extern "C" static void AIGetStreamVolLeft(); // 1
-extern "C" void AISetStreamVolRight(); // 1
-extern "C" static void AIGetStreamVolRight(); // 1
-extern "C" void AIInit(); // 1
-extern "C" static void __AISHandler(); // 1
-extern "C" static void __AIDHandler(); // 1
-extern "C" static void __AICallbackStackSwitch(); // 1
-extern "C" static void __AI_SRC_INIT(); // 1
+extern "C" void AIRegisterDMACallback();
+extern "C" void AIInitDMA();
+extern "C" void AIStartDMA();
+extern "C" void AIStopDMA();
+extern "C" void AISetStreamPlayState();
+extern "C" static void AIGetStreamPlayState();
+extern "C" void AISetDSPSampleRate();
+extern "C" void AIGetDSPSampleRate();
+extern "C" void __AI_set_stream_sample_rate();
+extern "C" static void AIGetStreamSampleRate();
+extern "C" void AISetStreamVolLeft();
+extern "C" static void AIGetStreamVolLeft();
+extern "C" void AISetStreamVolRight();
+extern "C" static void AIGetStreamVolRight();
+extern "C" void AIInit();
+extern "C" static void __AISHandler();
+extern "C" static void __AIDHandler();
+extern "C" static void __AICallbackStackSwitch();
+extern "C" static void __AI_SRC_INIT();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSRegisterVersion(); // 1
-extern "C" void OSSetCurrentContext(); // 1
-extern "C" void OSClearContext(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __OSSetInterruptHandler(); // 1
-extern "C" void __OSUnmaskInterrupts(); // 1
-extern "C" void OSGetTime(); // 1
+extern "C" void OSRegisterVersion();
+extern "C" void OSSetCurrentContext();
+extern "C" void OSClearContext();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __OSSetInterruptHandler();
+extern "C" void __OSUnmaskInterrupts();
+extern "C" void OSGetTime();
 
 // 
 // Declarations:

@@ -174,10 +174,10 @@ struct dComIfG_play_c {
 	/* 8002B3B0 */ void getNowVibration();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -251,79 +251,82 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern u8 const data_803974D8[32];
+extern "C" extern u8 const data_80397560[40];
+extern "C" extern char const* const d_menu_d_menu_option__stringBase0;
 
-extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl(); // 1
-extern "C" void __dt__14dMenu_Option_cFv(); // 1
-extern "C" void _create__14dMenu_Option_cFv(); // 1
-extern "C" void _delete__14dMenu_Option_cFv(); // 1
-extern "C" void _move__14dMenu_Option_cFv(); // 1
-extern "C" void _draw__14dMenu_Option_cFv(); // 1
-extern "C" void drawHaihai__14dMenu_Option_cFv(); // 1
-extern "C" void isSync__14dMenu_Option_cFv(); // 1
-extern "C" void checkLeftTrigger__14dMenu_Option_cFv(); // 1
-extern "C" void checkRightTrigger__14dMenu_Option_cFv(); // 1
-extern "C" void setAnimation__14dMenu_Option_cFv(); // 1
-extern "C" void _open__14dMenu_Option_cFv(); // 1
-extern "C" void _close__14dMenu_Option_cFv(); // 1
-extern "C" void atten_init__14dMenu_Option_cFv(); // 1
-extern "C" void atten_move__14dMenu_Option_cFv(); // 1
-extern "C" void vib_init__14dMenu_Option_cFv(); // 1
-extern "C" void vib_move__14dMenu_Option_cFv(); // 1
-extern "C" void sound_init__14dMenu_Option_cFv(); // 1
-extern "C" void sound_move__14dMenu_Option_cFv(); // 1
-extern "C" void change_init__14dMenu_Option_cFv(); // 1
-extern "C" void change_move__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_open_init__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_open_move__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_move_init__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_move_move__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_select_init__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_select_move__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_close_init__14dMenu_Option_cFv(); // 1
-extern "C" void confirm_close_move__14dMenu_Option_cFv(); // 1
-extern "C" void tv_open1_move__14dMenu_Option_cFv(); // 1
-extern "C" void tv_open2_move__14dMenu_Option_cFv(); // 1
-extern "C" void tv_move_move__14dMenu_Option_cFv(); // 1
-extern "C" void tv_close1_move__14dMenu_Option_cFv(); // 1
-extern "C" void tv_close2_move__14dMenu_Option_cFv(); // 1
-extern "C" void calibration_open1_move__14dMenu_Option_cFv(); // 1
-extern "C" void calibration_open2_move__14dMenu_Option_cFv(); // 1
-extern "C" void calibration_move_move__14dMenu_Option_cFv(); // 1
-extern "C" void calibration_close1_move__14dMenu_Option_cFv(); // 1
-extern "C" void calibration_close2_move__14dMenu_Option_cFv(); // 1
-extern "C" void menuVisible__14dMenu_Option_cFv(); // 1
-extern "C" void menuShow__14dMenu_Option_cFi(); // 1
-extern "C" void menuHide__14dMenu_Option_cFi(); // 1
-extern "C" void screenSet__14dMenu_Option_cFv(); // 1
-extern "C" void setSoundMode__14dMenu_Option_cFUl(); // 1
-extern "C" void setAttenString__14dMenu_Option_cFv(); // 1
-extern "C" void setVibString__14dMenu_Option_cFv(); // 1
-extern "C" void setSoundString__14dMenu_Option_cFv(); // 1
-extern "C" void setCursorPos__14dMenu_Option_cFUc(); // 1
-extern "C" void setSelectColor__14dMenu_Option_cFUcb(); // 1
-extern "C" void getSelectType__14dMenu_Option_cFv(); // 1
-extern "C" void changeBarColor__14dMenu_Option_cFb(); // 1
-extern "C" void setHIO__14dMenu_Option_cFb(); // 1
-extern "C" void cursorAnime__14dMenu_Option_cFf(); // 1
-extern "C" void setZButtonString__14dMenu_Option_cFUs(); // 1
-extern "C" void changeTVCheck__14dMenu_Option_cFv(); // 1
-extern "C" void setAButtonString__14dMenu_Option_cFUs(); // 1
-extern "C" void setBButtonString__14dMenu_Option_cFUs(); // 1
-extern "C" void isRumbleSupported__14dMenu_Option_cFv(); // 1
-extern "C" bool dpdMenuMove__14dMenu_Option_cFv(); // 1
-extern "C" void paneResize__14dMenu_Option_cFUx(); // 1
-extern "C" void initialize__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoMenuMoveAnmInitSet__14dMenu_Option_cFii(); // 1
-extern "C" void yesnoMenuMoveAnm__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoSelectMoveAnm__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoCursorShow__14dMenu_Option_cFv(); // 1
-extern "C" void yesNoSelectStart__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoSelectAnmSet__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoCancelAnmSet__14dMenu_Option_cFv(); // 1
-extern "C" void yesnoWakuAlpahAnmInit__14dMenu_Option_cFUcUcUcUc(); // 1
-extern "C" void yesnoWakuAlpahAnm__14dMenu_Option_cFUc(); // 1
-extern "C" void draw__14dMenu_Option_cFv(); // 1
-extern "C" void __sinit_d_menu_option_cpp(); // 1
+extern "C" void __ct__14dMenu_Option_cFP10JKRArchiveP9STControl();
+extern "C" void __dt__14dMenu_Option_cFv();
+extern "C" void _create__14dMenu_Option_cFv();
+extern "C" void _delete__14dMenu_Option_cFv();
+extern "C" void _move__14dMenu_Option_cFv();
+extern "C" void _draw__14dMenu_Option_cFv();
+extern "C" void drawHaihai__14dMenu_Option_cFv();
+extern "C" void isSync__14dMenu_Option_cFv();
+extern "C" void checkLeftTrigger__14dMenu_Option_cFv();
+extern "C" void checkRightTrigger__14dMenu_Option_cFv();
+extern "C" void setAnimation__14dMenu_Option_cFv();
+extern "C" void _open__14dMenu_Option_cFv();
+extern "C" void _close__14dMenu_Option_cFv();
+extern "C" void atten_init__14dMenu_Option_cFv();
+extern "C" void atten_move__14dMenu_Option_cFv();
+extern "C" void vib_init__14dMenu_Option_cFv();
+extern "C" void vib_move__14dMenu_Option_cFv();
+extern "C" void sound_init__14dMenu_Option_cFv();
+extern "C" void sound_move__14dMenu_Option_cFv();
+extern "C" void change_init__14dMenu_Option_cFv();
+extern "C" void change_move__14dMenu_Option_cFv();
+extern "C" void confirm_open_init__14dMenu_Option_cFv();
+extern "C" void confirm_open_move__14dMenu_Option_cFv();
+extern "C" void confirm_move_init__14dMenu_Option_cFv();
+extern "C" void confirm_move_move__14dMenu_Option_cFv();
+extern "C" void confirm_select_init__14dMenu_Option_cFv();
+extern "C" void confirm_select_move__14dMenu_Option_cFv();
+extern "C" void confirm_close_init__14dMenu_Option_cFv();
+extern "C" void confirm_close_move__14dMenu_Option_cFv();
+extern "C" void tv_open1_move__14dMenu_Option_cFv();
+extern "C" void tv_open2_move__14dMenu_Option_cFv();
+extern "C" void tv_move_move__14dMenu_Option_cFv();
+extern "C" void tv_close1_move__14dMenu_Option_cFv();
+extern "C" void tv_close2_move__14dMenu_Option_cFv();
+extern "C" void calibration_open1_move__14dMenu_Option_cFv();
+extern "C" void calibration_open2_move__14dMenu_Option_cFv();
+extern "C" void calibration_move_move__14dMenu_Option_cFv();
+extern "C" void calibration_close1_move__14dMenu_Option_cFv();
+extern "C" void calibration_close2_move__14dMenu_Option_cFv();
+extern "C" void menuVisible__14dMenu_Option_cFv();
+extern "C" void menuShow__14dMenu_Option_cFi();
+extern "C" void menuHide__14dMenu_Option_cFi();
+extern "C" void screenSet__14dMenu_Option_cFv();
+extern "C" void setSoundMode__14dMenu_Option_cFUl();
+extern "C" void setAttenString__14dMenu_Option_cFv();
+extern "C" void setVibString__14dMenu_Option_cFv();
+extern "C" void setSoundString__14dMenu_Option_cFv();
+extern "C" void setCursorPos__14dMenu_Option_cFUc();
+extern "C" void setSelectColor__14dMenu_Option_cFUcb();
+extern "C" void getSelectType__14dMenu_Option_cFv();
+extern "C" void changeBarColor__14dMenu_Option_cFb();
+extern "C" void setHIO__14dMenu_Option_cFb();
+extern "C" void cursorAnime__14dMenu_Option_cFf();
+extern "C" void setZButtonString__14dMenu_Option_cFUs();
+extern "C" void changeTVCheck__14dMenu_Option_cFv();
+extern "C" void setAButtonString__14dMenu_Option_cFUs();
+extern "C" void setBButtonString__14dMenu_Option_cFUs();
+extern "C" void isRumbleSupported__14dMenu_Option_cFv();
+extern "C" bool dpdMenuMove__14dMenu_Option_cFv();
+extern "C" void paneResize__14dMenu_Option_cFUx();
+extern "C" void initialize__14dMenu_Option_cFv();
+extern "C" void yesnoMenuMoveAnmInitSet__14dMenu_Option_cFii();
+extern "C" void yesnoMenuMoveAnm__14dMenu_Option_cFv();
+extern "C" void yesnoSelectMoveAnm__14dMenu_Option_cFv();
+extern "C" void yesnoCursorShow__14dMenu_Option_cFv();
+extern "C" void yesNoSelectStart__14dMenu_Option_cFv();
+extern "C" void yesnoSelectAnmSet__14dMenu_Option_cFv();
+extern "C" void yesnoCancelAnmSet__14dMenu_Option_cFv();
+extern "C" void yesnoWakuAlpahAnmInit__14dMenu_Option_cFUcUcUcUc();
+extern "C" void yesnoWakuAlpahAnm__14dMenu_Option_cFUc();
+extern "C" void draw__14dMenu_Option_cFv();
+extern "C" void __sinit_d_menu_option_cpp();
 extern "C" extern u8 const data_803974D8[32];
 extern "C" extern u8 const data_80397560[40];
 extern "C" extern char const* const d_menu_d_menu_option__stringBase0;
@@ -332,102 +335,111 @@ extern "C" extern char const* const d_menu_d_menu_option__stringBase0;
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getRubyFont(); // 2
-void fopMsgM_messageGet(char*, u32); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dMeter2Info_set2DVibrationM(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void fopMsgM_messageGet(char*, u32);
+void dMeter2Info_set2DVibration();
+void dMeter2Info_set2DVibrationM();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 mFader__13mDoGph_gInf_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
+extern "C" extern u8 sRumbleSupported__10JUTGamePad[4];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap(); // 1
-extern "C" void fopMsgM_messageGet__FPcUl(); // 1
-extern "C" void setNowVibration__14dComIfG_play_cFUc(); // 1
-extern "C" void getNowVibration__14dComIfG_play_cFv(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkLeftTrigger__9STControlFv(); // 1
-extern "C" void checkRightTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void getSound__19dSv_player_config_cFv(); // 1
-extern "C" void setSound__19dSv_player_config_cFUc(); // 1
-extern "C" void setVibration__19dSv_player_config_cFUc(); // 1
-extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc(); // 1
-extern "C" void _move__15dFile_warning_cFv(); // 1
-extern "C" void openInit__15dFile_warning_cFv(); // 1
-extern "C" void closeInit__15dFile_warning_cFv(); // 1
-extern "C" void drawSelf__15dFile_warning_cFv(); // 1
-extern "C" void setText__15dFile_warning_cFUl(); // 1
-extern "C" void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive(); // 1
-extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb(); // 1
-extern "C" void setParam__16dSelect_cursor_cFfffff(); // 1
-extern "C" void setScale__16dSelect_cursor_cFf(); // 1
-extern "C" void setAlphaRate__16dSelect_cursor_cFf(); // 1
-extern "C" void _move__19dMenu_Calibration_cFv(); // 1
-extern "C" void dMw_fade_out__5dMw_cFv(); // 1
-extern "C" void dMw_fade_in__5dMw_cFv(); // 1
-extern "C" void __ct__14dMeterHaihai_cFUc(); // 1
-extern "C" void drawHaihai__14dMeterHaihai_cFUcffff(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__8CPaneMgrFv(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void OSSetSoundMode(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void create__24mDoDvdThd_mountArchive_cFPCcUcP7JKRHeap();
+extern "C" void fopMsgM_messageGet__FPcUl();
+extern "C" void setNowVibration__14dComIfG_play_cFUc();
+extern "C" void getNowVibration__14dComIfG_play_cFv();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkLeftTrigger__9STControlFv();
+extern "C" void checkRightTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void getSound__19dSv_player_config_cFv();
+extern "C" void setSound__19dSv_player_config_cFUc();
+extern "C" void setVibration__19dSv_player_config_cFUc();
+extern "C" void __ct__15dFile_warning_cFP10JKRArchiveUc();
+extern "C" void _move__15dFile_warning_cFv();
+extern "C" void openInit__15dFile_warning_cFv();
+extern "C" void closeInit__15dFile_warning_cFv();
+extern "C" void drawSelf__15dFile_warning_cFv();
+extern "C" void setText__15dFile_warning_cFUl();
+extern "C" void setFontColor__15dFile_warning_cFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void __ct__16dSelect_cursor_cFUcfP10JKRArchive();
+extern "C" void setPos__16dSelect_cursor_cFffP7J2DPaneb();
+extern "C" void setParam__16dSelect_cursor_cFfffff();
+extern "C" void setScale__16dSelect_cursor_cFf();
+extern "C" void setAlphaRate__16dSelect_cursor_cFf();
+extern "C" void _move__19dMenu_Calibration_cFv();
+extern "C" void dMw_fade_out__5dMw_cFv();
+extern "C" void dMw_fade_in__5dMw_cFv();
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void drawHaihai__14dMeterHaihai_cFUcffff();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__8CPaneMgrFv();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void colorAnime__8CPaneMgrFsQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorUc();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void setOutputMode__10Z2AudioMgrFUl();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void startPatternedRumble__Q210JUTGamePad7CRumbleFPvQ310JUTGamePad7CRumble7ERumbleUl();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void OSSetSoundMode();
+extern "C" void __construct_array();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 m_gamePad__8mDoCPd_c[16];
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];

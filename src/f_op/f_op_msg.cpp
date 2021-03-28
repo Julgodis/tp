@@ -27,46 +27,48 @@ struct create_tag_class {
 // Forward References:
 // 
 
-static void fopMsg_Draw(void*); // 2
-static void fopMsg_Execute(void*); // 2
-static void fopMsg_IsDelete(void*); // 2
-static void fopMsg_Delete(void*); // 2
-static void fopMsg_Create(void*); // 2
+static void fopMsg_Draw(void*);
+static void fopMsg_Execute(void*);
+static void fopMsg_IsDelete(void*);
+static void fopMsg_Delete(void*);
+static void fopMsg_Create(void*);
+extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
 
-extern "C" static void fopMsg_Draw__FPv(); // 1
-extern "C" static void fopMsg_Execute__FPv(); // 1
-extern "C" static void fopMsg_IsDelete__FPv(); // 1
-extern "C" static void fopMsg_Delete__FPv(); // 1
-extern "C" static void fopMsg_Create__FPv(); // 1
+extern "C" static void fopMsg_Draw__FPv();
+extern "C" static void fopMsg_Execute__FPv();
+extern "C" static void fopMsg_IsDelete__FPv();
+extern "C" static void fopMsg_Delete__FPv();
+extern "C" static void fopMsg_Create__FPv();
 extern "C" extern void* g_fopMsg_Method[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void fopMsgM_GetAppend(void*); // 2
-void fopDwTg_ToDrawQ(create_tag_class*, int); // 2
-void fopDwTg_DrawQTo(create_tag_class*); // 2
-void fopDwTg_Init(create_tag_class*, void*); // 2
-void fpcBs_MakeOfType(int*); // 2
-void fpcLf_GetPriority(leafdraw_class const*); // 2
-void fpcLf_DrawMethod(leafdraw_method_class*, void*); // 2
-void fpcMtd_Execute(process_method_class*, void*); // 2
-void fpcMtd_IsDelete(process_method_class*, void*); // 2
-void fpcMtd_Delete(process_method_class*, void*); // 2
-void fpcMtd_Create(process_method_class*, void*); // 2
+void fopMsgM_GetAppend(void*);
+void fopDwTg_ToDrawQ(create_tag_class*, int);
+void fopDwTg_DrawQTo(create_tag_class*);
+void fopDwTg_Init(create_tag_class*, void*);
+void fpcBs_MakeOfType(int*);
+void fpcLf_GetPriority(leafdraw_class const*);
+void fpcLf_DrawMethod(leafdraw_method_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+extern "C" extern u8 struct_80451124[4];
 
-extern "C" void fopMsgM_GetAppend__FPv(); // 1
-extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi(); // 1
-extern "C" void fopDwTg_DrawQTo__FP16create_tag_class(); // 1
-extern "C" void fopDwTg_Init__FP16create_tag_classPv(); // 1
-extern "C" void fpcBs_MakeOfType__FPi(); // 1
-extern "C" void fpcLf_GetPriority__FPC14leafdraw_class(); // 1
-extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv(); // 1
-extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
+extern "C" void fopMsgM_GetAppend__FPv();
+extern "C" void fopDwTg_ToDrawQ__FP16create_tag_classi();
+extern "C" void fopDwTg_DrawQTo__FP16create_tag_class();
+extern "C" void fopDwTg_Init__FP16create_tag_classPv();
+extern "C" void fpcBs_MakeOfType__FPi();
+extern "C" void fpcLf_GetPriority__FPC14leafdraw_class();
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
 extern "C" extern u8 struct_80451124[4];
 
 // 

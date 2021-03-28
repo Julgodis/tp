@@ -22,16 +22,16 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct mDoExt_McaMorfCallBack2_c {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
-struct mDoExt_McaMorfCallBack2_c {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -108,14 +108,14 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+	/* 802673F4 */ csXyz(s16, s16, s16);
+};
+
 struct _GXColor {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct csXyz {
-	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
 struct dPa_control_c {
@@ -153,10 +153,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -168,50 +168,52 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void daTagTWGate_Create(fopAc_ac_c*); // 2
-static void daTagTWGate_Delete(daTagTWGate_c*); // 2
-static void daTagTWGate_Execute(daTagTWGate_c*); // 2
-static void daTagTWGate_Draw(daTagTWGate_c*); // 2
-static bool daTagTWGate_IsDelete(daTagTWGate_c*); // 2
+static void daTagTWGate_Create(fopAc_ac_c*);
+static void daTagTWGate_Delete(daTagTWGate_c*);
+static void daTagTWGate_Execute(daTagTWGate_c*);
+static void daTagTWGate_Draw(daTagTWGate_c*);
+static bool daTagTWGate_IsDelete(daTagTWGate_c*);
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Tag_TWGate[12];
 
-extern "C" void initWait__13daTagTWGate_cFv(); // 1
-extern "C" void executeWait__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoFilone1__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoFilone1__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoFilone2__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoFilone2__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoFilone3__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoFilone3__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoOrdin1__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoOrdin1__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoOrdin2__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoOrdin2__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoOrdin3__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoOrdin3__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoRanail1__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoRanail1__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoRanail2__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoRanail2__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoRanail3__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoRanail3__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoHyral1__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoHyral1__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoHyral2__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoHyral2__13daTagTWGate_cFv(); // 1
-extern "C" void initDemoHyral3__13daTagTWGate_cFv(); // 1
-extern "C" void executeDemoHyral3__13daTagTWGate_cFv(); // 1
-extern "C" void initBaseMtx__13daTagTWGate_cFv(); // 1
-extern "C" void downloadModels__13daTagTWGate_cFv(); // 1
-extern "C" void initTalk__13daTagTWGate_cFiPP10fopAc_ac_c(); // 1
-extern "C" void talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c(); // 1
-extern "C" void createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c(); // 1
-extern "C" void CreateHeap__13daTagTWGate_cFv(); // 1
-extern "C" static void daTagTWGate_Create__FP10fopAc_ac_c(); // 1
-extern "C" static void daTagTWGate_Delete__FP13daTagTWGate_c(); // 1
-extern "C" static void daTagTWGate_Execute__FP13daTagTWGate_c(); // 1
-extern "C" static void daTagTWGate_Draw__FP13daTagTWGate_c(); // 1
-extern "C" static bool daTagTWGate_IsDelete__FP13daTagTWGate_c(); // 1
-extern "C" void __sinit_d_a_tag_TWgate_cpp(); // 1
+extern "C" void initWait__13daTagTWGate_cFv();
+extern "C" void executeWait__13daTagTWGate_cFv();
+extern "C" void initDemoFilone1__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone1__13daTagTWGate_cFv();
+extern "C" void initDemoFilone2__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone2__13daTagTWGate_cFv();
+extern "C" void initDemoFilone3__13daTagTWGate_cFv();
+extern "C" void executeDemoFilone3__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin1__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin1__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin2__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin2__13daTagTWGate_cFv();
+extern "C" void initDemoOrdin3__13daTagTWGate_cFv();
+extern "C" void executeDemoOrdin3__13daTagTWGate_cFv();
+extern "C" void initDemoRanail1__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail1__13daTagTWGate_cFv();
+extern "C" void initDemoRanail2__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail2__13daTagTWGate_cFv();
+extern "C" void initDemoRanail3__13daTagTWGate_cFv();
+extern "C" void executeDemoRanail3__13daTagTWGate_cFv();
+extern "C" void initDemoHyral1__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral1__13daTagTWGate_cFv();
+extern "C" void initDemoHyral2__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral2__13daTagTWGate_cFv();
+extern "C" void initDemoHyral3__13daTagTWGate_cFv();
+extern "C" void executeDemoHyral3__13daTagTWGate_cFv();
+extern "C" void initBaseMtx__13daTagTWGate_cFv();
+extern "C" void downloadModels__13daTagTWGate_cFv();
+extern "C" void initTalk__13daTagTWGate_cFiPP10fopAc_ac_c();
+extern "C" void talkProc__13daTagTWGate_cFPiiPP10fopAc_ac_c();
+extern "C" void createHeapCallBack__13daTagTWGate_cFP10fopAc_ac_c();
+extern "C" void CreateHeap__13daTagTWGate_cFv();
+extern "C" static void daTagTWGate_Create__FP10fopAc_ac_c();
+extern "C" static void daTagTWGate_Delete__FP13daTagTWGate_c();
+extern "C" static void daTagTWGate_Execute__FP13daTagTWGate_c();
+extern "C" static void daTagTWGate_Draw__FP13daTagTWGate_c();
+extern "C" static bool daTagTWGate_IsDelete__FP13daTagTWGate_c();
+extern "C" void __sinit_d_a_tag_TWgate_cpp();
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Tag_TWGate[12];
 
@@ -219,75 +221,81 @@ extern "C" extern void* g_profile_Tag_TWGate[12];
 // External References:
 // 
 
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderChangeEventId(fopAc_ac_c*, s16, u16, u16); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_setNextStage(char const*, s16, s8, s8); // 2
-void dEv_noFinishSkipProc(void*, int); // 2
-void* operator new(u32); // 2
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_searchActorDistanceXZ2(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderChangeEventId(fopAc_ac_c*, s16, u16, u16);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_setNextStage(char const*, s16, s8, s8);
+void dEv_noFinishSkipProc(void*, int);
+void* operator new(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void transS__14mDoMtx_stack_cFRC4cXyz(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl(); // 1
-extern "C" void play__16mDoExt_McaMorfSOFUlSc(); // 1
-extern "C" void entryDL__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void modelCalc__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_setNextStage__FPCcsScSc(); // 1
-extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi(); // 1
-extern "C" void onEventBit__11dSv_event_cFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void reset__14dEvt_control_cFPv(); // 1
-extern "C" void dEv_noFinishSkipProc__FPvi(); // 1
-extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii(); // 1
-extern "C" void onSkipFade__14dEvt_control_cFv(); // 1
-extern "C" void setObjectArchive__16dEvent_manager_cFPc(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyNowCutName__16dEvent_manager_cFi(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void offMsgSendControl__12dMsgObject_cFv(); // 1
-extern "C" void isMsgSendControl__12dMsgObject_cFv(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void getMsgNo__10dMsgFlow_cFv(); // 1
-extern "C" void getMsg__10dMsgFlow_cFv(); // 1
-extern "C" void __ct__5csXyzFsss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void pow(); // 1
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void transS__14mDoMtx_stack_cFRC4cXyz();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__16mDoExt_McaMorfSOFP12J3DModelDataP25mDoExt_McaMorfCallBack1_cP25mDoExt_McaMorfCallBack2_cP15J3DAnmTransformifiiP10Z2CreatureUlUl();
+extern "C" void play__16mDoExt_McaMorfSOFUlSc();
+extern "C" void entryDL__16mDoExt_McaMorfSOFv();
+extern "C" void modelCalc__16mDoExt_McaMorfSOFv();
+extern "C" void stopZelAnime__16mDoExt_McaMorfSOFv();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_searchActorDistanceXZ2__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderChangeEventId__FP10fopAc_ac_csUsUs();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_setNextStage__FPCcsScSc();
+extern "C" void isDarkClearLV__21dSv_player_status_b_cCFi();
+extern "C" void onEventBit__11dSv_event_cFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void reset__14dEvt_control_cFPv();
+extern "C" void dEv_noFinishSkipProc__FPvi();
+extern "C" void setSkipProc__14dEvt_control_cFPvPFPvi_ii();
+extern "C" void onSkipFade__14dEvt_control_cFv();
+extern "C" void setObjectArchive__16dEvent_manager_cFPc();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyNowCutName__16dEvent_manager_cFi();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void offMsgSendControl__12dMsgObject_cFv();
+extern "C" void isMsgSendControl__12dMsgObject_cFv();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void getMsgNo__10dMsgFlow_cFv();
+extern "C" void getMsg__10dMsgFlow_cFv();
+extern "C" void __ct__5csXyzFsss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void PSMTXCopy();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void pow();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

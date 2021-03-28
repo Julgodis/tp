@@ -25,21 +25,21 @@ struct JPABaseParticle {
 // Forward References:
 // 
 
-void JPARegistChildPrmEnv(JPAEmitterWorkData*); // 2
-void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
-void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*); // 2
+void JPARegistChildPrmEnv(JPAEmitterWorkData*);
+void JPACalcChildAlphaOut(JPAEmitterWorkData*, JPABaseParticle*);
+void JPACalcChildScaleOut(JPAEmitterWorkData*, JPABaseParticle*);
 
-extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData(); // 1
-extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void __ct__13JPAChildShapeFPCUc(); // 1
+extern "C" void JPARegistChildPrmEnv__FP18JPAEmitterWorkData();
+extern "C" void JPACalcChildAlphaOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void JPACalcChildScaleOut__FP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void __ct__13JPAChildShapeFPCUc();
 
 // 
 // External References:
 // 
 
 
-extern "C" void GXSetTevColor(); // 1
+extern "C" void GXSetTevColor();
 
 // 
 // Declarations:

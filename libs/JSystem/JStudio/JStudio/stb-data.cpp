@@ -11,6 +11,8 @@
 // Forward References:
 // 
 
+extern "C" extern u8 const gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
+extern "C" extern u32 ga4cSignature__Q37JStudio3stb4data[1 + 1 /* padding */];
 
 extern "C" extern u8 const gauDataSize_TEParagraph_data__Q37JStudio3stb4data[32];
 extern "C" extern u32 ga4cSignature__Q37JStudio3stb4data[1 + 1 /* padding */];

@@ -12,15 +12,15 @@
 // 
 
 
-extern "C" void TRKMessageSend(); // 1
+extern "C" void TRKMessageSend();
 
 // 
 // External References:
 // 
 
 
-extern "C" void TRKWriteUARTN(); // 1
-extern "C" void MWTRACE(); // 1
+extern "C" void TRKWriteUARTN();
+extern "C" void MWTRACE();
 
 // 
 // Declarations:

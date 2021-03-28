@@ -11,8 +11,11 @@
 // Forward References:
 // 
 
+extern "C" extern u8 __ctype_map[256];
+extern "C" extern u8 __lower_map[256];
+extern "C" extern u8 __upper_map[256];
 
-extern "C" void tolower(); // 1
+extern "C" void tolower();
 extern "C" extern u8 __ctype_map[256];
 extern "C" extern u8 __lower_map[256];
 extern "C" extern u8 __upper_map[256];

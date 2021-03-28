@@ -30,31 +30,38 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void get_check_pos(kytag00_class*); // 2
-static void wether_tag_reset(kytag00_class*); // 2
-static void wether_tag_move(kytag00_class*); // 2
-static void raincnt_set(f32); // 2
-static void raincnt_cut(); // 2
-static void wether_tag_efect_reset(kytag00_class*); // 2
-static void wether_tag_efect_move(kytag00_class*); // 2
-static void daKytag00_Draw(kytag00_class*); // 2
-static void daKytag00_Execute(kytag00_class*); // 2
-static bool daKytag00_IsDelete(kytag00_class*); // 2
-static void daKytag00_Delete(kytag00_class*); // 2
-static void daKytag00_Create(fopAc_ac_c*); // 2
+static void get_check_pos(kytag00_class*);
+static void wether_tag_reset(kytag00_class*);
+static void wether_tag_move(kytag00_class*);
+static void raincnt_set(f32);
+static void raincnt_cut();
+static void wether_tag_efect_reset(kytag00_class*);
+static void wether_tag_efect_move(kytag00_class*);
+static void daKytag00_Draw(kytag00_class*);
+static void daKytag00_Execute(kytag00_class*);
+static bool daKytag00_IsDelete(kytag00_class*);
+static void daKytag00_Delete(kytag00_class*);
+static void daKytag00_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_4101;
+extern "C" extern u32 const lit_4102;
+extern "C" extern u32 const lit_4103;
+extern "C" extern u32 const lit_4104;
+extern "C" extern u32 const lit_4105;
+extern "C" extern u32 const lit_4106;
+extern "C" extern void* g_profile_KYTAG00[12];
 
-extern "C" static void get_check_pos__FP13kytag00_class(); // 1
-extern "C" static void wether_tag_reset__FP13kytag00_class(); // 1
-extern "C" static void wether_tag_move__FP13kytag00_class(); // 1
-extern "C" static void raincnt_set__Ff(); // 1
-extern "C" static void raincnt_cut__Fv(); // 1
-extern "C" static void wether_tag_efect_reset__FP13kytag00_class(); // 1
-extern "C" static void wether_tag_efect_move__FP13kytag00_class(); // 1
-extern "C" static void daKytag00_Draw__FP13kytag00_class(); // 1
-extern "C" static void daKytag00_Execute__FP13kytag00_class(); // 1
-extern "C" static bool daKytag00_IsDelete__FP13kytag00_class(); // 1
-extern "C" static void daKytag00_Delete__FP13kytag00_class(); // 1
-extern "C" static void daKytag00_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void get_check_pos__FP13kytag00_class();
+extern "C" static void wether_tag_reset__FP13kytag00_class();
+extern "C" static void wether_tag_move__FP13kytag00_class();
+extern "C" static void raincnt_set__Ff();
+extern "C" static void raincnt_cut__Fv();
+extern "C" static void wether_tag_efect_reset__FP13kytag00_class();
+extern "C" static void wether_tag_efect_move__FP13kytag00_class();
+extern "C" static void daKytag00_Draw__FP13kytag00_class();
+extern "C" static void daKytag00_Execute__FP13kytag00_class();
+extern "C" static bool daKytag00_IsDelete__FP13kytag00_class();
+extern "C" static void daKytag00_Delete__FP13kytag00_class();
+extern "C" static void daKytag00_Create__FP10fopAc_ac_c();
 extern "C" extern u32 const lit_4101;
 extern "C" extern u32 const lit_4102;
 extern "C" extern u32 const lit_4103;
@@ -67,17 +74,24 @@ extern "C" extern void* g_profile_KYTAG00[12];
 // External References:
 // 
 
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void setSnowPower__10Z2EnvSeMgrFSc(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void setSnowPower__10Z2EnvSeMgrFSc();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

@@ -77,73 +77,80 @@ struct cXyz {
 // Forward References:
 // 
 
-static void createHeapCallBack(fopAc_ac_c*); // 2
-static void daTag_Msg_Create(void*); // 2
-static void daTag_Msg_Delete(void*); // 2
-static void daTag_Msg_Execute(void*); // 2
-static void daTag_Msg_Draw(void*); // 2
-static bool daTag_Msg_IsDelete(void*); // 2
+static void createHeapCallBack(fopAc_ac_c*);
+static void daTag_Msg_Create(void*);
+static void daTag_Msg_Delete(void*);
+static void daTag_Msg_Execute(void*);
+static void daTag_Msg_Draw(void*);
+static bool daTag_Msg_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_MSG[12];
 
-extern "C" static void createHeapCallBack__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__11daTag_Msg_cFv(); // 1
-extern "C" void create__11daTag_Msg_cFv(); // 1
-extern "C" void createHeap__11daTag_Msg_cFv(); // 1
-extern "C" void destroy__11daTag_Msg_cFv(); // 1
-extern "C" void execute__11daTag_Msg_cFv(); // 1
-extern "C" bool draw__11daTag_Msg_cFv(); // 1
-extern "C" void rangeCheck__11daTag_Msg_cFv(); // 1
-extern "C" void otherCheck__11daTag_Msg_cFv(); // 1
-extern "C" void getResName__11daTag_Msg_cFv(); // 1
-extern "C" void getParam__11daTag_Msg_cFv(); // 1
-extern "C" void cut_speak__11daTag_Msg_cFii(); // 1
-extern "C" static void daTag_Msg_Create__FPv(); // 1
-extern "C" static void daTag_Msg_Delete__FPv(); // 1
-extern "C" static void daTag_Msg_Execute__FPv(); // 1
-extern "C" static void daTag_Msg_Draw__FPv(); // 1
-extern "C" static bool daTag_Msg_IsDelete__FPv(); // 1
-extern "C" void __dt__17daTag_Msg_Param_cFv(); // 1
+extern "C" static void createHeapCallBack__FP10fopAc_ac_c();
+extern "C" void __dt__11daTag_Msg_cFv();
+extern "C" void create__11daTag_Msg_cFv();
+extern "C" void createHeap__11daTag_Msg_cFv();
+extern "C" void destroy__11daTag_Msg_cFv();
+extern "C" void execute__11daTag_Msg_cFv();
+extern "C" bool draw__11daTag_Msg_cFv();
+extern "C" void rangeCheck__11daTag_Msg_cFv();
+extern "C" void otherCheck__11daTag_Msg_cFv();
+extern "C" void getResName__11daTag_Msg_cFv();
+extern "C" void getParam__11daTag_Msg_cFv();
+extern "C" void cut_speak__11daTag_Msg_cFii();
+extern "C" static void daTag_Msg_Create__FPv();
+extern "C" static void daTag_Msg_Delete__FPv();
+extern "C" static void daTag_Msg_Execute__FPv();
+extern "C" static void daTag_Msg_Draw__FPv();
+extern "C" static bool daTag_Msg_IsDelete__FPv();
+extern "C" void __dt__17daTag_Msg_Param_cFv();
 extern "C" extern void* g_profile_TAG_MSG[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_searchActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_searchActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cPCcUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareMag();
+extern "C" void _savegpr_26();
+extern "C" void _restgpr_26();
+extern "C" void strcpy();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];

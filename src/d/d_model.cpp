@@ -54,49 +54,56 @@ struct J3DPacket {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__6dMdl_c[5 + 1 /* padding */];
 
-extern "C" void draw__6dMdl_cFv(); // 1
-extern "C" void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c(); // 1
-extern "C" void entryObj__6dMdl_cFP10dMdl_obj_c(); // 1
-extern "C" void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c(); // 1
-extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c(); // 1
-extern "C" void create__10dMdl_mng_cFv(); // 1
-extern "C" void __dt__6dMdl_cFv(); // 1
-extern "C" void remove__10dMdl_mng_cFv(); // 1
-extern "C" void reset__10dMdl_mng_cFv(); // 1
-extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsi(); // 1
-extern "C" void __ct__6dMdl_cFv(); // 1
+extern "C" void draw__6dMdl_cFv();
+extern "C" void create__6dMdl_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" void entryObj__6dMdl_cFP10dMdl_obj_c();
+extern "C" void search__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsP12dKy_tevstr_c();
+extern "C" void create__10dMdl_mng_cFv();
+extern "C" void __dt__6dMdl_cFv();
+extern "C" void remove__10dMdl_mng_cFv();
+extern "C" void reset__10dMdl_mng_cFv();
+extern "C" void entry__10dMdl_mng_cFP12J3DModelDataUsi();
+extern "C" void __ct__6dMdl_cFv();
 extern "C" extern void* __vt__6dMdl_c[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void dKy_setLight_nowroom_actor(dKy_tevstr_c*); // 2
-void dKy_setLight_again(); // 2
-void dKy_GxFog_tevstr_set(dKy_tevstr_c*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void dKy_setLight_nowroom_actor(dKy_tevstr_c*);
+void dKy_setLight_again();
+void dKy_GxFog_tevstr_set(dKy_tevstr_c*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__9J3DPacket[5];
+extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u32 g_whiteColor;
+extern "C" extern u8 sOldVcdVatCmd__8J3DShape[4];
 
-extern "C" void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c(); // 1
-extern "C" void dKy_setLight_again__Fv(); // 1
-extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer(); // 1
-extern "C" void loadPreDrawSetting__8J3DShapeCFv(); // 1
-extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void GXSetChanAmbColor(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXLoadPosMtxImm(); // 1
-extern "C" void GXLoadNrmMtxImm(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void dKy_setLight_nowroom_actor__FP12dKy_tevstr_c();
+extern "C" void dKy_setLight_again__Fv();
+extern "C" void dKy_GxFog_tevstr_set__FP12dKy_tevstr_c();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" bool entry__9J3DPacketFP13J3DDrawBuffer();
+extern "C" void loadPreDrawSetting__8J3DShapeCFv();
+extern "C" void entryImm__13J3DDrawBufferFP9J3DPacketUs();
+extern "C" void PSMTXConcat();
+extern "C" void GXSetChanAmbColor();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXLoadPosMtxImm();
+extern "C" void GXLoadNrmMtxImm();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern void* __vt__9J3DPacket[5];
 extern "C" extern u8 mStatus__20dStage_roomControl_c[65792];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

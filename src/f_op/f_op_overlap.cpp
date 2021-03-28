@@ -24,36 +24,37 @@ struct leafdraw_method_class {
 // Forward References:
 // 
 
-static void fopOvlp_Draw(void*); // 2
-static void fopOvlp_Execute(void*); // 2
-static void fopOvlp_IsDelete(void*); // 2
-static void fopOvlp_Delete(void*); // 2
-static void fopOvlp_Create(void*); // 2
+static void fopOvlp_Draw(void*);
+static void fopOvlp_Execute(void*);
+static void fopOvlp_IsDelete(void*);
+static void fopOvlp_Delete(void*);
+static void fopOvlp_Create(void*);
+extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
 
-extern "C" static void fopOvlp_Draw__FPv(); // 1
-extern "C" static void fopOvlp_Execute__FPv(); // 1
-extern "C" static void fopOvlp_IsDelete__FPv(); // 1
-extern "C" static void fopOvlp_Delete__FPv(); // 1
-extern "C" static void fopOvlp_Create__FPv(); // 1
+extern "C" static void fopOvlp_Draw__FPv();
+extern "C" static void fopOvlp_Execute__FPv();
+extern "C" static void fopOvlp_IsDelete__FPv();
+extern "C" static void fopOvlp_Delete__FPv();
+extern "C" static void fopOvlp_Create__FPv();
 extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void fpcLf_DrawMethod(leafdraw_method_class*, void*); // 2
-void fpcMtd_Execute(process_method_class*, void*); // 2
-void fpcMtd_IsDelete(process_method_class*, void*); // 2
-void fpcMtd_Delete(process_method_class*, void*); // 2
-void fpcMtd_Create(process_method_class*, void*); // 2
-void cReq_Create(request_base_class*, u8); // 2
+void fpcLf_DrawMethod(leafdraw_method_class*, void*);
+void fpcMtd_Execute(process_method_class*, void*);
+void fpcMtd_IsDelete(process_method_class*, void*);
+void fpcMtd_Delete(process_method_class*, void*);
+void fpcMtd_Create(process_method_class*, void*);
+void cReq_Create(request_base_class*, u8);
 
-extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv(); // 1
-extern "C" void fpcMtd_Execute__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_IsDelete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Delete__FP20process_method_classPv(); // 1
-extern "C" void fpcMtd_Create__FP20process_method_classPv(); // 1
-extern "C" void cReq_Create__FP18request_base_classUc(); // 1
+extern "C" void fpcLf_DrawMethod__FP21leafdraw_method_classPv();
+extern "C" void fpcMtd_Execute__FP20process_method_classPv();
+extern "C" void fpcMtd_IsDelete__FP20process_method_classPv();
+extern "C" void fpcMtd_Delete__FP20process_method_classPv();
+extern "C" void fpcMtd_Create__FP20process_method_classPv();
+extern "C" void cReq_Create__FP18request_base_classUc();
 
 // 
 // Declarations:

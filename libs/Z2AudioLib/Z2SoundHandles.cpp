@@ -75,45 +75,48 @@ struct JAISound {
 // Forward References:
 // 
 
+extern "C" extern u8 data_804341C4[16 + 4 /* padding */];
 
-extern "C" void __ct__14Z2SoundHandlesFv(); // 1
-extern "C" void __dt__14Z2SoundHandlesFv(); // 1
-extern "C" void initHandlesPool__14Z2SoundHandlesFUc(); // 1
-extern "C" void deleteHandlesPool__14Z2SoundHandlesFv(); // 1
-extern "C" void func_802AB200(); // 1
-extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID(); // 1
-extern "C" void getHandleUserData__14Z2SoundHandlesFUl(); // 1
-extern "C" void getFreeHandle__14Z2SoundHandlesFv(); // 1
-extern "C" void getLowPrioSound__14Z2SoundHandlesF10JAISoundID(); // 1
-extern "C" void stopAllSounds__14Z2SoundHandlesFUl(); // 1
-extern "C" void isActive__14Z2SoundHandlesCFv(); // 1
-extern "C" void func_802AB538(); // 1
+extern "C" void __ct__14Z2SoundHandlesFv();
+extern "C" void __dt__14Z2SoundHandlesFv();
+extern "C" void initHandlesPool__14Z2SoundHandlesFUc();
+extern "C" void deleteHandlesPool__14Z2SoundHandlesFv();
+extern "C" void func_802AB200();
+extern "C" void getHandleSoundID__14Z2SoundHandlesF10JAISoundID();
+extern "C" void getHandleUserData__14Z2SoundHandlesFUl();
+extern "C" void getFreeHandle__14Z2SoundHandlesFv();
+extern "C" void getLowPrioSound__14Z2SoundHandlesF10JAISoundID();
+extern "C" void stopAllSounds__14Z2SoundHandlesFUl();
+extern "C" void isActive__14Z2SoundHandlesCFv();
+extern "C" void func_802AB538();
 extern "C" extern u8 data_804341C4[16 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 data_80450B5C[4];
+extern "C" extern u8 data_80451348[8];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void __dt__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void free__17JASGenericMemPoolFPvUl(); // 1
-extern "C" void releaseSound__14JAISoundHandleFv(); // 1
-extern "C" void stop__8JAISoundFUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void __dt__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void free__17JASGenericMemPoolFPvUl();
+extern "C" void releaseSound__14JAISoundHandleFv();
+extern "C" void stop__8JAISoundFUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
 extern "C" extern u8 data_80450B5C[4];
 extern "C" extern u8 data_80451348[8];
 

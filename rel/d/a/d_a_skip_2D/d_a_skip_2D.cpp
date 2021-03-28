@@ -41,43 +41,47 @@ struct dDlst_list_c {
 // Forward References:
 // 
 
-static void daSkip2D_createHeap(fopAc_ac_c*); // 2
-static void daSkip2D_Create(void*); // 2
-static void daSkip2D_Delete(void*); // 2
-static void daSkip2D_Execute(void*); // 2
-static void daSkip2D_Draw(void*); // 2
-static bool daSkip2D_IsDelete(void*); // 2
+static void daSkip2D_createHeap(fopAc_ac_c*);
+static void daSkip2D_Create(void*);
+static void daSkip2D_Delete(void*);
+static void daSkip2D_Execute(void*);
+static void daSkip2D_Draw(void*);
+static bool daSkip2D_IsDelete(void*);
+extern "C" extern void* g_profile_SKIP2D[12];
 
-extern "C" static void daSkip2D_createHeap__FP10fopAc_ac_c(); // 1
-extern "C" void createHeap__10daSkip2D_cFv(); // 1
-extern "C" void create__10daSkip2D_cFv(); // 1
-extern "C" bool destroy__10daSkip2D_cFv(); // 1
-extern "C" void draw__10daSkip2D_cFv(); // 1
-extern "C" bool execute__10daSkip2D_cFv(); // 1
-extern "C" void initiate__10daSkip2D_cFv(); // 1
-extern "C" static void daSkip2D_Create__FPv(); // 1
-extern "C" static void daSkip2D_Delete__FPv(); // 1
-extern "C" static void daSkip2D_Execute__FPv(); // 1
-extern "C" static void daSkip2D_Draw__FPv(); // 1
-extern "C" static bool daSkip2D_IsDelete__FPv(); // 1
-extern "C" void __dt__10daSkip2D_cFv(); // 1
+extern "C" static void daSkip2D_createHeap__FP10fopAc_ac_c();
+extern "C" void createHeap__10daSkip2D_cFv();
+extern "C" void create__10daSkip2D_cFv();
+extern "C" bool destroy__10daSkip2D_cFv();
+extern "C" void draw__10daSkip2D_cFv();
+extern "C" bool execute__10daSkip2D_cFv();
+extern "C" void initiate__10daSkip2D_cFv();
+extern "C" static void daSkip2D_Create__FPv();
+extern "C" static void daSkip2D_Delete__FPv();
+extern "C" static void daSkip2D_Execute__FPv();
+extern "C" static void daSkip2D_Draw__FPv();
+extern "C" static bool daSkip2D_IsDelete__FPv();
+extern "C" void __dt__10daSkip2D_cFv();
 extern "C" extern void* g_profile_SKIP2D[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c(); // 1
-extern "C" void __ct__14dMeterButton_cFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void set__12dDlst_list_cFRPP12dDlst_base_cRPP12dDlst_base_cP12dDlst_base_c();
+extern "C" void __ct__14dMeterButton_cFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

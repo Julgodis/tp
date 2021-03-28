@@ -61,15 +61,6 @@ struct Z2FxLineMgr {
 struct JKRArchive {
 };
 
-struct JAISoundHandle {
-};
-
-struct JKRSolidHeap {
-};
-
-struct JAISoundID {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -77,6 +68,15 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
+};
+
+struct JAISoundID {
+};
+
+struct JKRSolidHeap {
+};
+
+struct JAISoundHandle {
 };
 
 struct Z2AudioMgr {
@@ -224,20 +224,23 @@ struct JAISeMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const Z2AudioMgr__stringBase0;
+extern "C" extern void* __vt__10Z2AudioMgr[3];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10Z2AudioMgrFv(); // 1
-extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive(); // 1
-extern "C" void func_802CD7F8(); // 1
-extern "C" void setOutputMode__10Z2AudioMgrFUl(); // 1
-extern "C" void zeldaGFrameWork__10Z2AudioMgrFv(); // 1
-extern "C" void gframeProcess__10Z2AudioMgrFv(); // 1
-extern "C" void resetProcess__10Z2AudioMgrFUlb(); // 1
-extern "C" void resetRecover__10Z2AudioMgrFv(); // 1
-extern "C" void hasReset__10Z2AudioMgrCFv(); // 1
-extern "C" void func_802CDB1C(); // 1
-extern "C" void func_802CDB68(); // 1
-extern "C" void func_802CDC08(); // 1
-extern "C" void func_802CDCEC(); // 1
+extern "C" void __ct__10Z2AudioMgrFv();
+extern "C" void init__10Z2AudioMgrFP12JKRSolidHeapUlPvP10JKRArchive();
+extern "C" void func_802CD7F8();
+extern "C" void setOutputMode__10Z2AudioMgrFUl();
+extern "C" void zeldaGFrameWork__10Z2AudioMgrFv();
+extern "C" void gframeProcess__10Z2AudioMgrFv();
+extern "C" void resetProcess__10Z2AudioMgrFUlb();
+extern "C" void resetRecover__10Z2AudioMgrFv();
+extern "C" void hasReset__10Z2AudioMgrCFv();
+extern "C" void func_802CDB1C();
+extern "C" void func_802CDB68();
+extern "C" void func_802CDC08();
+extern "C" void func_802CDCEC();
 extern "C" extern char const* const Z2AudioMgr__stringBase0;
 extern "C" extern void* __vt__10Z2AudioMgr[3];
 extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
@@ -246,82 +249,106 @@ extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 // External References:
 // 
 
-void JAUNewSectionHeap(bool); // 2
-void seqCallback(JASTrack*, u16); // 2
-void* operator new(u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void JAUNewSectionHeap(bool);
+void seqCallback(JASTrack*, u16);
+void* operator new(u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
+extern "C" extern void* __vt__16JAIStreamAramMgr[5];
+extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];
+extern "C" extern void* __vt__17JAUAudioArcLoader[17 + 1 /* padding */];
+extern "C" extern void* __vt__16Z2AudioArcLoader[17 + 1 /* padding */];
+extern "C" extern void* __vt__11Z2SoundInfo[20];
+extern "C" extern void* __files[80];
+extern "C" extern u8 data_804341C4[16 + 4 /* padding */];
+extern "C" extern u8 data_804341E4[16 + 4 /* padding */];
+extern "C" extern u32 VOL_BGM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param;
+extern "C" extern u8 data_80450B4C[4];
+extern "C" extern u8 data_80450B50[4];
+extern "C" extern u8 sCallBackFunc__12JASSeqParser[4];
+extern "C" extern u8 sBlockSize__13JASAramStream[4];
+extern "C" extern u8 data_80451348[8];
+extern "C" extern u8 data_80451354[4];
 
-extern "C" void alloc__7JASHeapFP7JASHeapUl(); // 1
-extern "C" void free__7JASHeapFv(); // 1
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void newMemPool__17JASGenericMemPoolFUli(); // 1
-extern "C" void getAramHeap__9JASKernelFv(); // 1
-extern "C" void __dt__7JASHeapFv(); // 1
-extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive(); // 1
-extern "C" void getSubFrames__9JASDriverFv(); // 1
-extern "C" void __ct__15JASAudioReseterFv(); // 1
-extern "C" void start__15JASAudioReseterFUlb(); // 1
-extern "C" void resume__15JASAudioReseterFv(); // 1
-extern "C" void checkDone__15JASAudioReseterCFv(); // 1
-extern "C" void setOutputMode__9JASDriverFUl(); // 1
-extern "C" void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement(); // 1
-extern "C" void setAudience__8JAISeMgrFP11JAIAudience(); // 1
-extern "C" void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr(); // 1
-extern "C" void getNumActiveSe__8JAISeMgrCFv(); // 1
-extern "C" void __ct__12JAISoundInfoFb(); // 1
-extern "C" void moveVolume__18JAISoundParamsMoveFfUl(); // 1
-extern "C" void __dt__16JAIStreamAramMgrFv(); // 1
-extern "C" void __dt__22JAUAudioArcInterpreterFv(); // 1
-extern "C" void load__17JAUAudioArcLoaderFPCv(); // 1
-extern "C" void __defctor__7JASHeapFv(); // 1
-extern "C" void __ct__18JAU_JASInitializerFv(); // 1
-extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap(); // 1
-extern "C" void __ct__18JAU_JAIInitializerFv(); // 1
-extern "C" void initJAInterface__18JAU_JAIInitializerFv(); // 1
-extern "C" void finishBuild__10JAUSectionFv(); // 1
-extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive(); // 1
-extern "C" void JAUNewSectionHeap__Fb(); // 1
-extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl(); // 1
-extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection(); // 1
-extern "C" void seqCallback__FP8JASTrackUs(); // 1
-extern "C" void __ct__10Z2SoundMgrFv(); // 1
-extern "C" void framework__10Z2SoundMgrFv(); // 1
-extern "C" void stopSync__10Z2SoundMgrFv(); // 1
-extern "C" void initParams__10Z2SoundMgrFv(); // 1
-extern "C" void __ct__14Z2SoundStarterFb(); // 1
-extern "C" void func_802AB200(); // 1
-extern "C" void __ct__7Z2SeMgrFv(); // 1
-extern "C" void initSe__7Z2SeMgrFv(); // 1
-extern "C" void processSeFramework__7Z2SeMgrFv(); // 1
-extern "C" void __ct__8Z2SeqMgrFv(); // 1
-extern "C" void processBgmFramework__8Z2SeqMgrFv(); // 1
-extern "C" void __ct__11Z2StatusMgrFv(); // 1
-extern "C" void processHeartGaugeSound__11Z2StatusMgrFv(); // 1
-extern "C" void menuOut__11Z2StatusMgrFv(); // 1
-extern "C" void processTime__11Z2StatusMgrFv(); // 1
-extern "C" void __ct__10Z2SceneMgrFv(); // 1
-extern "C" void framework__10Z2SceneMgrFv(); // 1
-extern "C" void __ct__11Z2FxLineMgrFv(); // 1
-extern "C" void __ct__10Z2AudienceFv(); // 1
-extern "C" void func_802BD288(); // 1
-extern "C" void __ct__13Z2SoundObjMgrFv(); // 1
-extern "C" void __ct__12Z2SpeechMgr2Fv(); // 1
-extern "C" void framework__12Z2SpeechMgr2Fv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void abort(); // 1
-extern "C" void fprintf(); // 1
+extern "C" void alloc__7JASHeapFP7JASHeapUl();
+extern "C" void free__7JASHeapFv();
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void newMemPool__17JASGenericMemPoolFUli();
+extern "C" void getAramHeap__9JASKernelFv();
+extern "C" void __dt__7JASHeapFv();
+extern "C" void getResMaxSize__15JASResArcLoaderFPC10JKRArchive();
+extern "C" void getSubFrames__9JASDriverFv();
+extern "C" void __ct__15JASAudioReseterFv();
+extern "C" void start__15JASAudioReseterFUlb();
+extern "C" void resume__15JASAudioReseterFv();
+extern "C" void checkDone__15JASAudioReseterCFv();
+extern "C" void setOutputMode__9JASDriverFUl();
+extern "C" void setCategoryArrangement__8JAISeMgrFRC24JAISeCategoryArrangement();
+extern "C" void setAudience__8JAISeMgrFP11JAIAudience();
+extern "C" void setSeqDataMgr__8JAISeMgrFP13JAISeqDataMgr();
+extern "C" void getNumActiveSe__8JAISeMgrCFv();
+extern "C" void __ct__12JAISoundInfoFb();
+extern "C" void moveVolume__18JAISoundParamsMoveFfUl();
+extern "C" void __dt__16JAIStreamAramMgrFv();
+extern "C" void __dt__22JAUAudioArcInterpreterFv();
+extern "C" void load__17JAUAudioArcLoaderFPCv();
+extern "C" void __defctor__7JASHeapFv();
+extern "C" void __ct__18JAU_JASInitializerFv();
+extern "C" void initJASystem__18JAU_JASInitializerFP12JKRSolidHeap();
+extern "C" void __ct__18JAU_JAIInitializerFv();
+extern "C" void initJAInterface__18JAU_JAIInitializerFv();
+extern "C" void finishBuild__10JAUSectionFv();
+extern "C" void setSeqDataArchive__14JAUSectionHeapFP10JKRArchive();
+extern "C" void JAUNewSectionHeap__Fb();
+extern "C" void newDynamicSeqBlock__14JAUSectionHeapFUl();
+extern "C" void __ct__16Z2AudioArcLoaderFP10JAUSection();
+extern "C" void seqCallback__FP8JASTrackUs();
+extern "C" void __ct__10Z2SoundMgrFv();
+extern "C" void framework__10Z2SoundMgrFv();
+extern "C" void stopSync__10Z2SoundMgrFv();
+extern "C" void initParams__10Z2SoundMgrFv();
+extern "C" void __ct__14Z2SoundStarterFb();
+extern "C" void func_802AB200();
+extern "C" void __ct__7Z2SeMgrFv();
+extern "C" void initSe__7Z2SeMgrFv();
+extern "C" void processSeFramework__7Z2SeMgrFv();
+extern "C" void __ct__8Z2SeqMgrFv();
+extern "C" void processBgmFramework__8Z2SeqMgrFv();
+extern "C" void __ct__11Z2StatusMgrFv();
+extern "C" void processHeartGaugeSound__11Z2StatusMgrFv();
+extern "C" void menuOut__11Z2StatusMgrFv();
+extern "C" void processTime__11Z2StatusMgrFv();
+extern "C" void __ct__10Z2SceneMgrFv();
+extern "C" void framework__10Z2SceneMgrFv();
+extern "C" void __ct__11Z2FxLineMgrFv();
+extern "C" void __ct__10Z2AudienceFv();
+extern "C" void func_802BD288();
+extern "C" void __ct__13Z2SoundObjMgrFv();
+extern "C" void __ct__12Z2SpeechMgr2Fv();
+extern "C" void framework__12Z2SpeechMgr2Fv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void abort();
+extern "C" void fprintf();
 extern "C" extern void* __vt__12JAUSoundInfo[4 + 1 /* padding */];
 extern "C" extern void* __vt__16JAIStreamAramMgr[5];
 extern "C" extern void* __vt__16JAIStreamDataMgr[4 + 1 /* padding */];

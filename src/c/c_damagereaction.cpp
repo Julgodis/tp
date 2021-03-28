@@ -14,10 +14,10 @@
 struct fopAc_ac_c {
 };
 
-struct JPABaseParticle {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct JPABaseParticle {
 };
 
 struct JPTraceParticleCallBack4 {
@@ -36,15 +36,18 @@ struct JPAParticleCallBack {
 // Forward References:
 // 
 
-void cDmrNowMidnaTalk(); // 2
+void cDmrNowMidnaTalk();
+extern "C" extern void* __vt__19JPAParticleCallBack[5];
+extern "C" extern u8 data_80450CA0[4];
+extern "C" extern u8 JPTracePCB4[4];
 
-extern "C" void execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void cDmrNowMidnaTalk__Fv(); // 1
-extern "C" void __dt__24JPTraceParticleCallBack4Fv(); // 1
-extern "C" void __sinit_c_damagereaction_cpp(); // 1
-extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
-extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle(); // 1
+extern "C" void execute__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void draw__24JPTraceParticleCallBack4FP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void cDmrNowMidnaTalk__Fv();
+extern "C" void __dt__24JPTraceParticleCallBack4Fv();
+extern "C" void __sinit_c_damagereaction_cpp();
+extern "C" void execute__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
+extern "C" void draw__19JPAParticleCallBackFP14JPABaseEmitterP15JPABaseParticle();
 extern "C" extern void* __vt__19JPAParticleCallBack[5];
 extern "C" extern u8 data_80450CA0[4];
 extern "C" extern u8 JPTracePCB4[4];
@@ -53,13 +56,14 @@ extern "C" extern u8 JPTracePCB4[4];
 // External References:
 // 
 
-void fopAcM_getTalkEventPartner(fopAc_ac_c const*); // 2
-void operator delete(void*); // 2
+void fopAcM_getTalkEventPartner(fopAc_ac_c const*);
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c(); // 1
-extern "C" void __dt__19JPAParticleCallBackFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __register_global_object(); // 1
+extern "C" void fopAcM_getTalkEventPartner__FPC10fopAc_ac_c();
+extern "C" void __dt__19JPAParticleCallBackFv();
+extern "C" void __dl__FPv();
+extern "C" void __register_global_object();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
 // 

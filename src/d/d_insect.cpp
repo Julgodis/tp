@@ -56,39 +56,42 @@ struct Vec {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_insect__stringBase0;
 
-extern "C" void __ct__9dInsect_cFv(); // 1
-extern "C" void Insect_GetDemoMain__9dInsect_cFv(); // 1
-extern "C" void CalcZBuffer__9dInsect_cFf(); // 1
+extern "C" void __ct__9dInsect_cFv();
+extern "C" void Insect_GetDemoMain__9dInsect_cFv();
+extern "C" void CalcZBuffer__9dInsect_cFf();
 extern "C" extern char const* const d_d_insect__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoLib_project(Vec*, Vec*); // 2
-void mDoLib_pos2camera(Vec*, Vec*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16); // 2
-void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*); // 2
-void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int); // 2
-void fopAcM_cancelCarryNow(fopAc_ac_c*); // 2
+void mDoLib_project(Vec*, Vec*);
+void mDoLib_pos2camera(Vec*, Vec*);
+void fopAcM_delete(fopAc_ac_c*);
+void fopAcM_orderItemEvent(fopAc_ac_c*, u16, u16);
+void fopAcM_createItemForTrBoxDemo(cXyz const*, int, int, int, csXyz const*, cXyz const*);
+void fopAcM_createItem(cXyz const*, int, int, int, csXyz const*, cXyz const*, int);
+void fopAcM_cancelCarryNow(fopAc_ac_c*);
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz(); // 1
-extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi(); // 1
-extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setPtI_Id__14dEvt_control_cFUi(); // 1
-extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
-extern "C" void newData__13dDlst_peekZ_cFssPUl(); // 1
-extern "C" void Insect_Release__9dInsect_cFv(); // 1
-extern "C" void isCatchNotGiveInsect__14dMenu_Insect_cFUc(); // 1
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void fopAcM_orderItemEvent__FP10fopAc_ac_cUsUs();
+extern "C" void fopAcM_createItemForTrBoxDemo__FPC4cXyziiiPC5csXyzPC4cXyz();
+extern "C" void fopAcM_createItem__FPC4cXyziiiPC5csXyzPC4cXyzi();
+extern "C" void fopAcM_cancelCarryNow__FP10fopAc_ac_c();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setPtI_Id__14dEvt_control_cFUi();
+extern "C" void endCheckOld__16dEvent_manager_cFPCc();
+extern "C" void newData__13dDlst_peekZ_cFssPUl();
+extern "C" void Insect_Release__9dInsect_cFv();
+extern "C" void isCatchNotGiveInsect__14dMenu_Insect_cFUc();
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 

@@ -30,6 +30,9 @@ struct dSv_event_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -38,9 +41,6 @@ struct dKy_tevstr_c {
 
 struct cXyz {
 	/* 808589A4 */ ~cXyz();
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -59,64 +59,107 @@ struct Z2EnvSeMgr {
 // Forward References:
 // 
 
-static void dice_wether_init(u8, f32, f32); // 2
-static void dice_wether_execute(u8, f32, f32); // 2
-static void dice_rain_minus(); // 2
-static void dKy_event_proc(); // 2
-static void daKytag06_type_04_Execute(kytag06_class*); // 2
-static void set_path_info(fopAc_ac_c*); // 2
-static void near_rail_get(kytag06_class*, cXyz*); // 2
-static void daKytag06_Draw(kytag06_class*); // 2
-static void daKytag06_lv7_boss_wether_proc(kytag06_class*, u8); // 2
-static void daKytag06_Ganon_wether_proc(kytag06_class*, u8); // 2
-static void daKytag06_wether_proc(kytag06_class*, u8); // 2
-static void daKytag06_type_07_wether_Execute(kytag06_class*); // 2
-static void daKytag06_type_07_Execute(kytag06_class*); // 2
-static void daKytag06_type_06_Execute(kytag06_class*); // 2
-static void daKytag06_type_08_Execute(kytag06_class*); // 2
-static void daKytag06_type_09_Execute(kytag06_class*); // 2
-static void daKytag06_type_10_Execute(kytag06_class*); // 2
-static void daKytag06_type_11_Execute(kytag06_class*); // 2
-static void daKytag06_type_05_Execute(kytag06_class*); // 2
-static void daKytag06_type_03_Execute(kytag06_class*); // 2
-static void daKytag06_Execute(kytag06_class*); // 2
-static bool daKytag06_IsDelete(kytag06_class*); // 2
-static void daKytag06_Delete(kytag06_class*); // 2
-static void daKytag06_type04_init(fopAc_ac_c*); // 2
-static void daKytag06_type06_init(fopAc_ac_c*); // 2
-static void daKytag06_type02_init(fopAc_ac_c*); // 2
-static void daKytag06_type03_init(fopAc_ac_c*); // 2
-static void daKytag06_Create(fopAc_ac_c*); // 2
+static void dice_wether_init(u8, f32, f32);
+static void dice_wether_execute(u8, f32, f32);
+static void dice_rain_minus();
+static void dKy_event_proc();
+static void daKytag06_type_04_Execute(kytag06_class*);
+static void set_path_info(fopAc_ac_c*);
+static void near_rail_get(kytag06_class*, cXyz*);
+static void daKytag06_Draw(kytag06_class*);
+static void daKytag06_lv7_boss_wether_proc(kytag06_class*, u8);
+static void daKytag06_Ganon_wether_proc(kytag06_class*, u8);
+static void daKytag06_wether_proc(kytag06_class*, u8);
+static void daKytag06_type_07_wether_Execute(kytag06_class*);
+static void daKytag06_type_07_Execute(kytag06_class*);
+static void daKytag06_type_06_Execute(kytag06_class*);
+static void daKytag06_type_08_Execute(kytag06_class*);
+static void daKytag06_type_09_Execute(kytag06_class*);
+static void daKytag06_type_10_Execute(kytag06_class*);
+static void daKytag06_type_11_Execute(kytag06_class*);
+static void daKytag06_type_05_Execute(kytag06_class*);
+static void daKytag06_type_03_Execute(kytag06_class*);
+static void daKytag06_Execute(kytag06_class*);
+static bool daKytag06_IsDelete(kytag06_class*);
+static void daKytag06_Delete(kytag06_class*);
+static void daKytag06_type04_init(fopAc_ac_c*);
+static void daKytag06_type06_init(fopAc_ac_c*);
+static void daKytag06_type02_init(fopAc_ac_c*);
+static void daKytag06_type03_init(fopAc_ac_c*);
+static void daKytag06_Create(fopAc_ac_c*);
+extern "C" extern char const* const stringBase0;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_KYTAG06[12];
+extern "C" extern u8 lit_1107[1 + 3 /* padding */];
+extern "C" extern u8 lit_1105[1 + 3 /* padding */];
+extern "C" extern u8 lit_1104[1 + 3 /* padding */];
+extern "C" extern u8 lit_1099[1 + 3 /* padding */];
+extern "C" extern u8 lit_1097[1 + 3 /* padding */];
+extern "C" extern u8 lit_1095[1 + 3 /* padding */];
+extern "C" extern u8 lit_1094[1 + 3 /* padding */];
+extern "C" extern u8 lit_1057[1 + 3 /* padding */];
+extern "C" extern u8 lit_1055[1 + 3 /* padding */];
+extern "C" extern u8 lit_1053[1 + 3 /* padding */];
+extern "C" extern u8 lit_1052[1 + 3 /* padding */];
+extern "C" extern u8 lit_1014[1 + 3 /* padding */];
+extern "C" extern u8 lit_1012[1 + 3 /* padding */];
+extern "C" extern u8 lit_1010[1 + 3 /* padding */];
+extern "C" extern u8 lit_1009[1 + 3 /* padding */];
+extern "C" extern u8 data_8085A18C[4];
+extern "C" extern u8 data_8085A190[4];
+extern "C" extern u8 data_8085A194[4];
+extern "C" extern u8 data_8085A198[4];
+extern "C" extern u8 data_8085A19C[4];
+extern "C" extern u8 data_8085A1A0[4];
+extern "C" extern u8 data_8085A1A4[4];
+extern "C" extern u8 data_8085A1A8[4];
+extern "C" extern u8 data_8085A1AC[4];
+extern "C" extern u8 data_8085A1B0[4];
+extern "C" extern u8 data_8085A1B4[4];
+extern "C" extern u8 data_8085A1B8[4];
+extern "C" extern u8 data_8085A1BC[4];
+extern "C" extern u8 data_8085A1C0[4];
+extern "C" extern u8 data_8085A1C4[4];
+extern "C" extern u8 data_8085A1C8[4];
+extern "C" extern u8 data_8085A1CC[4];
+extern "C" extern u8 data_8085A1D0[4];
+extern "C" extern u8 data_8085A1D4[4];
+extern "C" extern u8 data_8085A1D8[4];
+extern "C" extern u8 data_8085A1DC[4];
+extern "C" extern u8 data_8085A1E0[4];
+extern "C" extern u8 data_8085A1E4[4];
+extern "C" extern u8 data_8085A1E8[4];
+extern "C" extern u8 data_8085A1EC[4];
 
-extern "C" static void dice_wether_init__FUcff(); // 1
-extern "C" static void dice_wether_execute__FUcff(); // 1
-extern "C" static void dice_rain_minus__Fv(); // 1
-extern "C" static void dKy_event_proc__Fv(); // 1
-extern "C" static void daKytag06_type_04_Execute__FP13kytag06_class(); // 1
-extern "C" static void set_path_info__FP10fopAc_ac_c(); // 1
-extern "C" static void near_rail_get__FP13kytag06_classP4cXyz(); // 1
-extern "C" static void daKytag06_Draw__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc(); // 1
-extern "C" static void daKytag06_Ganon_wether_proc__FP13kytag06_classUc(); // 1
-extern "C" static void daKytag06_wether_proc__FP13kytag06_classUc(); // 1
-extern "C" static void daKytag06_type_07_wether_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_07_Execute__FP13kytag06_class(); // 1
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" static void daKytag06_type_06_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_08_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_09_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_10_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_11_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_05_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type_03_Execute__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_Execute__FP13kytag06_class(); // 1
-extern "C" static bool daKytag06_IsDelete__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_Delete__FP13kytag06_class(); // 1
-extern "C" static void daKytag06_type04_init__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag06_type06_init__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag06_type02_init__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag06_type03_init__FP10fopAc_ac_c(); // 1
-extern "C" static void daKytag06_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void dice_wether_init__FUcff();
+extern "C" static void dice_wether_execute__FUcff();
+extern "C" static void dice_rain_minus__Fv();
+extern "C" static void dKy_event_proc__Fv();
+extern "C" static void daKytag06_type_04_Execute__FP13kytag06_class();
+extern "C" static void set_path_info__FP10fopAc_ac_c();
+extern "C" static void near_rail_get__FP13kytag06_classP4cXyz();
+extern "C" static void daKytag06_Draw__FP13kytag06_class();
+extern "C" static void daKytag06_lv7_boss_wether_proc__FP13kytag06_classUc();
+extern "C" static void daKytag06_Ganon_wether_proc__FP13kytag06_classUc();
+extern "C" static void daKytag06_wether_proc__FP13kytag06_classUc();
+extern "C" static void daKytag06_type_07_wether_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_07_Execute__FP13kytag06_class();
+extern "C" void __dt__4cXyzFv();
+extern "C" static void daKytag06_type_06_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_08_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_09_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_10_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_11_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_05_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_type_03_Execute__FP13kytag06_class();
+extern "C" static void daKytag06_Execute__FP13kytag06_class();
+extern "C" static bool daKytag06_IsDelete__FP13kytag06_class();
+extern "C" static void daKytag06_Delete__FP13kytag06_class();
+extern "C" static void daKytag06_type04_init__FP10fopAc_ac_c();
+extern "C" static void daKytag06_type06_init__FP10fopAc_ac_c();
+extern "C" static void daKytag06_type02_init__FP10fopAc_ac_c();
+extern "C" static void daKytag06_type03_init__FP10fopAc_ac_c();
+extern "C" static void daKytag06_Create__FP10fopAc_ac_c();
 extern "C" extern char const* const stringBase0;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_KYTAG06[12];
@@ -165,52 +208,19 @@ extern "C" extern u8 data_8085A1EC[4];
 // External References:
 // 
 
-void dComIfGs_BossLife_public_Get(); // 2
-void dPath_GetRoomPath(int, int); // 2
-void dKyw_custom_windpower(f32); // 2
-void dKyw_evt_wind_set(s16, s16); // 2
-void dKyw_evt_wind_set_go(); // 2
-void dKyw_rain_set(int); // 2
-void dKy_change_colpat(u8); // 2
-void dKy_custom_colset(u8, u8, f32); // 2
-void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8); // 2
-void dKy_darkworld_check(); // 2
-void cM_rndF(f32); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void operator delete(void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void getLayerNo__14dComIfG_play_cFi(); // 1
-extern "C" void dComIfGs_BossLife_public_Get__Fv(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void dPath_GetRoomPath__Fii(); // 1
-extern "C" void dKyw_custom_windpower__Ff(); // 1
-extern "C" void dKyw_evt_wind_set__Fss(); // 1
-extern "C" void dKyw_evt_wind_set_go__Fv(); // 1
-extern "C" void dKyw_rain_set__Fi(); // 1
-extern "C" void dKy_change_colpat__FUc(); // 1
-extern "C" void dKy_custom_colset__FUcUcf(); // 1
-extern "C" void dKy_BossLight_set__FP4cXyzP8_GXColorfUc(); // 1
-extern "C" void dKy_darkworld_check__Fv(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void setSnowPower__10Z2EnvSeMgrFSc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
+void dComIfGs_BossLife_public_Get();
+void dPath_GetRoomPath(int, int);
+void dKyw_custom_windpower(f32);
+void dKyw_evt_wind_set(s16, s16);
+void dKyw_evt_wind_set_go();
+void dKyw_rain_set(int);
+void dKy_change_colpat(u8);
+void dKy_custom_colset(u8, u8, f32);
+void dKy_BossLight_set(cXyz*, _GXColor*, f32, u8);
+void dKy_darkworld_check();
+void cM_rndF(f32);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
@@ -219,7 +229,48 @@ extern "C" extern u8 g_mEnvSeMgr[780];
 extern "C" extern u8 g_Counter[12 + 4 /* padding */];
 extern "C" extern u32 __float_nan;
 extern "C" extern u8 struct_80450D64[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void getLayerNo__14dComIfG_play_cFi();
+extern "C" void dComIfGs_BossLife_public_Get__Fv();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void dPath_GetRoomPath__Fii();
+extern "C" void dKyw_custom_windpower__Ff();
+extern "C" void dKyw_evt_wind_set__Fss();
+extern "C" void dKyw_evt_wind_set_go__Fv();
+extern "C" void dKyw_rain_set__Fi();
+extern "C" void dKy_change_colpat__FUc();
+extern "C" void dKy_custom_colset__FUcUcf();
+extern "C" void dKy_BossLight_set__FP4cXyzP8_GXColorfUc();
+extern "C" void dKy_darkworld_check__Fv();
+extern "C" void cM_rndF__Ff();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void setSnowPower__10Z2EnvSeMgrFSc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 g_mEnvSeMgr[780];
+extern "C" extern u8 g_Counter[12 + 4 /* padding */];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

@@ -37,36 +37,37 @@ struct J3DDrawMtxData {
 // 
 
 
-extern "C" void __ct__13J3DVertexDataFv(); // 1
-extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData(); // 1
-extern "C" void init__15J3DVertexBufferFv(); // 1
-extern "C" void __dt__15J3DVertexBufferFv(); // 1
-extern "C" void setArray__15J3DVertexBufferCFv(); // 1
-extern "C" void copyLocalVtxPosArray__15J3DVertexBufferFUl(); // 1
-extern "C" void copyLocalVtxNrmArray__15J3DVertexBufferFUl(); // 1
-extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl(); // 1
-extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv(); // 1
-extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv(); // 1
-extern "C" void __ct__14J3DDrawMtxDataFv(); // 1
-extern "C" void __dt__14J3DDrawMtxDataFv(); // 1
+extern "C" void __ct__13J3DVertexDataFv();
+extern "C" void setVertexData__15J3DVertexBufferFP13J3DVertexData();
+extern "C" void init__15J3DVertexBufferFv();
+extern "C" void __dt__15J3DVertexBufferFv();
+extern "C" void setArray__15J3DVertexBufferCFv();
+extern "C" void copyLocalVtxPosArray__15J3DVertexBufferFUl();
+extern "C" void copyLocalVtxNrmArray__15J3DVertexBufferFUl();
+extern "C" void copyLocalVtxArray__15J3DVertexBufferFUl();
+extern "C" void allocTransformedVtxPosArray__15J3DVertexBufferFv();
+extern "C" void allocTransformedVtxNrmArray__15J3DVertexBufferFv();
+extern "C" void __ct__14J3DDrawMtxDataFv();
+extern "C" void __dt__14J3DDrawMtxDataFv();
 
 // 
 // External References:
 // 
 
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
+void* operator new[](u32, int);
+void operator delete(void*);
+extern "C" extern u8 j3dSys[284];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void DCStoreRange(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+SECTION_INIT void memcpy();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void DCStoreRange();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 j3dSys[284];
 
 // 

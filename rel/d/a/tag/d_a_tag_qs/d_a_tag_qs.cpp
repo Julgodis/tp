@@ -92,78 +92,89 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
-static void hikiyose(cXyz*, cXyz*, cXyz*, f32); // 2
-static void search(void*, void*); // 2
-static void daTagQs_Draw(daTagQs_c*); // 2
-static void daTagQs_Execute(daTagQs_c*); // 2
-static bool daTagQs_IsDelete(daTagQs_c*); // 2
-static void daTagQs_Delete(daTagQs_c*); // 2
-static void daTagQs_Create(fopAc_ac_c*); // 2
+static void hikiyose(cXyz*, cXyz*, cXyz*, f32);
+static void search(void*, void*);
+static void daTagQs_Draw(daTagQs_c*);
+static void daTagQs_Execute(daTagQs_c*);
+static bool daTagQs_IsDelete(daTagQs_c*);
+static void daTagQs_Delete(daTagQs_c*);
+static void daTagQs_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_TAG_QS[12];
 
-extern "C" void __dt__9daTagQs_cFv(); // 1
-extern "C" void create__9daTagQs_cFv(); // 1
-extern "C" void __dt__10dCcD_GSttsFv(); // 1
-extern "C" void __dt__8cM3dGCylFv(); // 1
-extern "C" void __dt__8cM3dGAabFv(); // 1
-extern "C" void getPower__9daTagQs_cFv(); // 1
-extern "C" void getSafeArea__9daTagQs_cFv(); // 1
-extern "C" void getPower80__9daTagQs_cFv(); // 1
-extern "C" void getCenterPower__9daTagQs_cFv(); // 1
-extern "C" void calcPower__9daTagQs_cFff(); // 1
-extern "C" static void hikiyose__FP4cXyzP4cXyzP4cXyzf(); // 1
-extern "C" static void search__FPvPv(); // 1
-extern "C" void execute__9daTagQs_cFv(); // 1
-extern "C" bool draw__9daTagQs_cFv(); // 1
-extern "C" static void daTagQs_Draw__FP9daTagQs_c(); // 1
-extern "C" static void daTagQs_Execute__FP9daTagQs_c(); // 1
-extern "C" static bool daTagQs_IsDelete__FP9daTagQs_c(); // 1
-extern "C" static void daTagQs_Delete__FP9daTagQs_c(); // 1
-extern "C" static void daTagQs_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__10cCcD_GSttsFv(); // 1
+extern "C" void __dt__9daTagQs_cFv();
+extern "C" void create__9daTagQs_cFv();
+extern "C" void __dt__10dCcD_GSttsFv();
+extern "C" void __dt__8cM3dGCylFv();
+extern "C" void __dt__8cM3dGAabFv();
+extern "C" void getPower__9daTagQs_cFv();
+extern "C" void getSafeArea__9daTagQs_cFv();
+extern "C" void getPower80__9daTagQs_cFv();
+extern "C" void getCenterPower__9daTagQs_cFv();
+extern "C" void calcPower__9daTagQs_cFff();
+extern "C" static void hikiyose__FP4cXyzP4cXyzP4cXyzf();
+extern "C" static void search__FPvPv();
+extern "C" void execute__9daTagQs_cFv();
+extern "C" bool draw__9daTagQs_cFv();
+extern "C" static void daTagQs_Draw__FP9daTagQs_c();
+extern "C" static void daTagQs_Execute__FP9daTagQs_c();
+extern "C" static bool daTagQs_IsDelete__FP9daTagQs_c();
+extern "C" static void daTagQs_Delete__FP9daTagQs_c();
+extern "C" static void daTagQs_Create__FP10fopAc_ac_c();
+extern "C" void __dt__10cCcD_GSttsFv();
 extern "C" extern void* g_profile_TAG_QS[12];
 
 // 
 // External References:
 // 
 
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfGs_BossLife_public_Set(s8); // 2
-void cM_atan2s(f32, f32); // 2
-void cM_rndFX(f32); // 2
-void operator delete(void*); // 2
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_delete(fopAc_ac_c*);
+void dComIfGp_getReverb(int);
+void dComIfGs_BossLife_public_Set(s8);
+void cM_atan2s(f32, f32);
+void cM_rndFX(f32);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern void* __vt__8dCcD_Cyl[36];
+extern "C" extern void* __vt__9dCcD_Stts[11];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern void* __vt__9cCcD_Stts[8];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfGs_BossLife_public_Set__FSc(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void getItemNo__12daItemBase_cFv(); // 1
-extern "C" void startCtrl__8daItem_cFv(); // 1
-extern "C" void __ct__10dCcD_GSttsFv(); // 1
-extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c(); // 1
-extern "C" void __ct__12dCcD_GObjInfFv(); // 1
-extern "C" void __dt__12dCcD_GObjInfFv(); // 1
-extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void normalize__4cXyzFv(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM_rndFX__Ff(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfGs_BossLife_public_Set__FSc();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void getItemNo__12daItemBase_cFv();
+extern "C" void startCtrl__8daItem_cFv();
+extern "C" void __ct__10dCcD_GSttsFv();
+extern "C" void Init__9dCcD_SttsFiiP10fopAc_ac_c();
+extern "C" void __ct__12dCcD_GObjInfFv();
+extern "C" void __dt__12dCcD_GObjInfFv();
+extern "C" void Set__8dCcD_CylFRC11dCcD_SrcCyl();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void normalize__4cXyzFv();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM_rndFX__Ff();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void __dl__FPv();
+extern "C" void PSVECAdd();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern void* __vt__8dCcD_Cyl[36];

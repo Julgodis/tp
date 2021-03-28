@@ -29,15 +29,6 @@ struct dMsgObject_c {
 	/* 8023822C */ void getStatus();
 };
 
-struct JMSMesgEntry_c {
-};
-
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -47,9 +38,18 @@ struct JGeometry {
 
 };
 
+struct ResTIMG {
+};
+
+struct ResTLUT {
+};
+
 struct J2DPicture {
 	/* 802FC708 */ J2DPicture(ResTIMG const*);
 	/* 802FC800 */ J2DPicture(u64, JGeometry::TBox2<f32> const&, ResTIMG const*, ResTLUT const*);
+};
+
+struct JMSMesgEntry_c {
 };
 
 struct dMeter2Info_c {
@@ -60,7 +60,30 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-struct J2DAnmColor {
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+};
+
+struct J2DGrafContext {
+};
+
+struct J2DScreen {
+	/* 802F8498 */ J2DScreen();
+	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
+	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
+};
+
+struct CPaneMgrAlpha {
+	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
+	/* 802555C8 */ void show();
+	/* 80255608 */ void hide();
+	/* 8025564C */ void isVisible();
+	/* 802557D0 */ void setAlphaRate(f32);
+	/* 80255828 */ void getAlphaRate();
 };
 
 struct JUtility {
@@ -83,23 +106,6 @@ struct J2DPane {
 	/* 802F7FCC */ void animationTransform();
 };
 
-struct J2DGrafContext {
-};
-
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
-};
-
-struct J2DScreen {
-	/* 802F8498 */ J2DScreen();
-	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
-	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
-	/* 802F9690 */ void animation();
-};
-
-struct JKRExpHeap {
-};
-
 struct CPaneMgr {
 	/* 80253984 */ CPaneMgr(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80254458 */ void setBlackWhite(JUtility::TColor, JUtility::TColor);
@@ -107,13 +113,7 @@ struct CPaneMgr {
 	/* 80254EBC */ void getGlobalVtxCenter(J2DPane*, bool, s16);
 };
 
-struct CPaneMgrAlpha {
-	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
-	/* 802555C8 */ void show();
-	/* 80255608 */ void hide();
-	/* 8025564C */ void isVisible();
-	/* 802557D0 */ void setAlphaRate(f32);
-	/* 80255828 */ void getAlphaRate();
+struct J2DAnmColor {
 };
 
 struct dMeter2Draw_c {
@@ -223,10 +223,10 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -256,103 +256,105 @@ struct J2DAnmLoaderDataBase {
 // Forward References:
 // 
 
+extern "C" extern u8 const data_803988B8[24];
+extern "C" extern char const* const d_meter_d_meter2_draw__stringBase0;
 
-extern "C" void __ct__13dMeter2Draw_cFP10JKRExpHeap(); // 1
-extern "C" void __dt__13dMeter2Draw_cFv(); // 1
-extern "C" void init__13dMeter2Draw_cFv(); // 1
-extern "C" void exec__13dMeter2Draw_cFUl(); // 1
-extern "C" void draw__13dMeter2Draw_cFv(); // 1
-extern "C" void initLife__13dMeter2Draw_cFv(); // 1
-extern "C" void initMagic__13dMeter2Draw_cFv(); // 1
-extern "C" void initLightDrop__13dMeter2Draw_cFv(); // 1
-extern "C" void initRupeeKey__13dMeter2Draw_cFv(); // 1
-extern "C" void initButton__13dMeter2Draw_cFv(); // 1
-extern "C" void initButtonCross__13dMeter2Draw_cFv(); // 1
-extern "C" void playPikariBckAnimation__13dMeter2Draw_cFf(); // 1
-extern "C" void setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor(); // 1
-extern "C" void playPikariBpkAnimation__13dMeter2Draw_cFf(); // 1
-extern "C" void playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor(); // 1
-extern "C" void drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
-extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void changeTextureLife__13dMeter2Draw_cFibUc(); // 1
-extern "C" void drawLife__13dMeter2Draw_cFssff(); // 1
-extern "C" void setAlphaLifeChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaLifeAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLifeAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawKanteraScreen__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawMagic__13dMeter2Draw_cFssff(); // 1
-extern "C" void setAlphaMagicChange__13dMeter2Draw_cFb(); // 1
-extern "C" void drawKantera__13dMeter2Draw_cFllff(); // 1
-extern "C" void setAlphaKanteraChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawOxygen__13dMeter2Draw_cFllff(); // 1
-extern "C" void setAlphaOxygenChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawLightDrop__13dMeter2Draw_cFUcUcffffUc(); // 1
-extern "C" void setAlphaLightDropChange__13dMeter2Draw_cFb(); // 1
-extern "C" void getNowLightDropRateCalc__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawRupee__13dMeter2Draw_cFs(); // 1
-extern "C" void setAlphaRupeeChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawKey__13dMeter2Draw_cFs(); // 1
-extern "C" void setAlphaKeyChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaKeyAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaKeyAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void drawButtonA__13dMeter2Draw_cFUcfffffbb(); // 1
-extern "C" void drawButtonB__13dMeter2Draw_cFUcbfffffb(); // 1
-extern "C" void drawButtonR__13dMeter2Draw_cFUcUcbb(); // 1
-extern "C" void drawButtonZ__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButton3D__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonC__13dMeter2Draw_cFUcb(); // 1
-extern "C" void drawButtonS__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonBin__13dMeter2Draw_cFUc(); // 1
-extern "C" void drawButtonXY__13dMeter2Draw_cFiUcUcbb(); // 1
-extern "C" void getButtonCrossParentInitTransY__13dMeter2Draw_cFv(); // 1
-extern "C" void drawButtonCross__13dMeter2Draw_cFff(); // 1
-extern "C" void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonChange__13dMeter2Draw_cFb(); // 1
-extern "C" void setAlphaButtonAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv(); // 1
-extern "C" void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv(); // 1
-extern "C" void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb(); // 1
-extern "C" void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb(); // 1
-extern "C" void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl(); // 1
-extern "C" void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb(); // 1
-extern "C" void getNumberTexture__13dMeter2Draw_cFi(); // 1
-extern "C" void getActionString__13dMeter2Draw_cFUcUcPUc(); // 1
-extern "C" void changeTextureItemB__13dMeter2Draw_cFUc(); // 1
-extern "C" void changeTextureItemXY__13dMeter2Draw_cFiUc(); // 1
-extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
-extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas(); // 1
-extern "C" void setItemNum__13dMeter2Draw_cFUcUcUc(); // 1
-extern "C" void drawItemNum__13dMeter2Draw_cFUcf(); // 1
-extern "C" void drawKanteraMeter__13dMeter2Draw_cFUcf(); // 1
-extern "C" void isButtonVisible__13dMeter2Draw_cFv(); // 1
-extern "C" void setItemParamX__13dMeter2Draw_cFUc(); // 1
-extern "C" void setItemParamY__13dMeter2Draw_cFUc(); // 1
-extern "C" void setItemParamZ__13dMeter2Draw_cFUc(); // 1
-extern "C" void setItemParamB__13dMeter2Draw_cFUc(); // 1
-extern "C" void getFishingType__13dMeter2Draw_cFv(); // 1
-extern "C" void getCanoeFishing__13dMeter2Draw_cFv(); // 1
-extern "C" void getCameraSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void getItemSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void getPlayerSubject__13dMeter2Draw_cFv(); // 1
-extern "C" void isBButtonShow__13dMeter2Draw_cFb(); // 1
-extern "C" void getButtonTimer__13dMeter2Draw_cFv(); // 1
+extern "C" void __ct__13dMeter2Draw_cFP10JKRExpHeap();
+extern "C" void __dt__13dMeter2Draw_cFv();
+extern "C" void init__13dMeter2Draw_cFv();
+extern "C" void exec__13dMeter2Draw_cFUl();
+extern "C" void draw__13dMeter2Draw_cFv();
+extern "C" void initLife__13dMeter2Draw_cFv();
+extern "C" void initMagic__13dMeter2Draw_cFv();
+extern "C" void initLightDrop__13dMeter2Draw_cFv();
+extern "C" void initRupeeKey__13dMeter2Draw_cFv();
+extern "C" void initButton__13dMeter2Draw_cFv();
+extern "C" void initButtonCross__13dMeter2Draw_cFv();
+extern "C" void playPikariBckAnimation__13dMeter2Draw_cFf();
+extern "C" void setPikariBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
+extern "C" void playPikariBpkAnimation__13dMeter2Draw_cFf();
+extern "C" void playOxygenBpkAnimation__13dMeter2Draw_cFP11J2DAnmColor();
+extern "C" void drawPikari__13dMeter2Draw_cFP8CPaneMgrPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void drawPikariHakusha__13dMeter2Draw_cFffffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void changeTextureLife__13dMeter2Draw_cFibUc();
+extern "C" void drawLife__13dMeter2Draw_cFssff();
+extern "C" void setAlphaLifeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaLifeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLifeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKanteraScreen__13dMeter2Draw_cFUc();
+extern "C" void drawMagic__13dMeter2Draw_cFssff();
+extern "C" void setAlphaMagicChange__13dMeter2Draw_cFb();
+extern "C" void drawKantera__13dMeter2Draw_cFllff();
+extern "C" void setAlphaKanteraChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKanteraAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKanteraAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawOxygen__13dMeter2Draw_cFllff();
+extern "C" void setAlphaOxygenChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaOxygenAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaOxygenAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawLightDrop__13dMeter2Draw_cFUcUcffffUc();
+extern "C" void setAlphaLightDropChange__13dMeter2Draw_cFb();
+extern "C" void getNowLightDropRateCalc__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaLightDropAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawRupee__13dMeter2Draw_cFs();
+extern "C" void setAlphaRupeeChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaRupeeAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaRupeeAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawKey__13dMeter2Draw_cFs();
+extern "C" void setAlphaKeyChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaKeyAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaKeyAnimeMax__13dMeter2Draw_cFv();
+extern "C" void drawButtonA__13dMeter2Draw_cFUcfffffbb();
+extern "C" void drawButtonB__13dMeter2Draw_cFUcbfffffb();
+extern "C" void drawButtonR__13dMeter2Draw_cFUcUcbb();
+extern "C" void drawButtonZ__13dMeter2Draw_cFUc();
+extern "C" void drawButton3D__13dMeter2Draw_cFUc();
+extern "C" void drawButtonC__13dMeter2Draw_cFUcb();
+extern "C" void drawButtonS__13dMeter2Draw_cFUc();
+extern "C" void drawButtonBin__13dMeter2Draw_cFUc();
+extern "C" void drawButtonXY__13dMeter2Draw_cFiUcUcbb();
+extern "C" void getButtonCrossParentInitTransY__13dMeter2Draw_cFv();
+extern "C" void drawButtonCross__13dMeter2Draw_cFff();
+extern "C" void setAlphaButtonCrossAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossItemAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossItemAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossMapAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonCrossMapAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonChange__13dMeter2Draw_cFb();
+extern "C" void setAlphaButtonAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonAAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMin__13dMeter2Draw_cFv();
+extern "C" void setAlphaButtonBAnimeMax__13dMeter2Draw_cFv();
+extern "C" void setButtonIconAAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconBAlpha__13dMeter2Draw_cFUcUlb();
+extern "C" void setButtonIconMidonaAlpha__13dMeter2Draw_cFUl();
+extern "C" void setButtonIconAlpha__13dMeter2Draw_cFiUcUlb();
+extern "C" void getNumberTexture__13dMeter2Draw_cFi();
+extern "C" void getActionString__13dMeter2Draw_cFUcUcPUc();
+extern "C" void changeTextureItemB__13dMeter2Draw_cFUc();
+extern "C" void changeTextureItemXY__13dMeter2Draw_cFiUc();
+extern "C" void setAlphaAnimeMin__13dMeter2Draw_cFP13CPaneMgrAlphas();
+extern "C" void setAlphaAnimeMax__13dMeter2Draw_cFP13CPaneMgrAlphas();
+extern "C" void setItemNum__13dMeter2Draw_cFUcUcUc();
+extern "C" void drawItemNum__13dMeter2Draw_cFUcf();
+extern "C" void drawKanteraMeter__13dMeter2Draw_cFUcf();
+extern "C" void isButtonVisible__13dMeter2Draw_cFv();
+extern "C" void setItemParamX__13dMeter2Draw_cFUc();
+extern "C" void setItemParamY__13dMeter2Draw_cFUc();
+extern "C" void setItemParamZ__13dMeter2Draw_cFUc();
+extern "C" void setItemParamB__13dMeter2Draw_cFUc();
+extern "C" void getFishingType__13dMeter2Draw_cFv();
+extern "C" void getCanoeFishing__13dMeter2Draw_cFv();
+extern "C" void getCameraSubject__13dMeter2Draw_cFv();
+extern "C" void getItemSubject__13dMeter2Draw_cFv();
+extern "C" void getPlayerSubject__13dMeter2Draw_cFv();
+extern "C" void isBButtonShow__13dMeter2Draw_cFb();
+extern "C" void getButtonTimer__13dMeter2Draw_cFv();
 extern "C" extern u8 const data_803988B8[24];
 extern "C" extern char const* const d_meter_d_meter2_draw__stringBase0;
 
@@ -360,105 +362,112 @@ extern "C" extern char const* const d_meter_d_meter2_draw__stringBase0;
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void dComIfGs_getMaxLifeGauge(); // 2
-void dComIfGp_getSelectItem(int); // 2
-void isBottleItem(u8); // 2
-void dCam_getBody(); // 2
-void dMeter2Info_getNumberTextureName(int); // 2
-void dMeter2Info_isMapOpenCheck(); // 2
-void dMeter2Info_isItemOpenCheck(); // 2
-void dMeter2Info_set2DVibration(); // 2
-void dMsgObject_getGroupID(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void dComIfGs_getMaxLifeGauge();
+void dComIfGp_getSelectItem(int);
+void isBottleItem(u8);
+void dCam_getBody();
+void dMeter2Info_getNumberTextureName(int);
+void dMeter2Info_isMapOpenCheck();
+void dMeter2Info_isItemOpenCheck();
+void dMeter2Info_set2DVibration();
+void dMsgObject_getGroupID();
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void dComIfGs_getMaxLifeGauge__Fv(); // 1
-extern "C" void dComIfGp_getSelectItem__Fi(); // 1
-extern "C" void getItem__17dSv_player_item_cCFib(); // 1
-extern "C" void getLightDropNum__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void isBottleItem__FUc(); // 1
-extern "C" void dCam_getBody__Fv(); // 1
-extern "C" void __ct__15dKantera_icon_cFv(); // 1
-extern "C" void setAlphaRate__15dKantera_icon_cFf(); // 1
-extern "C" void setPos__15dKantera_icon_cFff(); // 1
-extern "C" void setScale__15dKantera_icon_cFff(); // 1
-extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void isDirectUseItem__13dMeter2Info_cFi(); // 1
-extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei(); // 1
-extern "C" void dMeter2Info_getNumberTextureName__Fi(); // 1
-extern "C" void dMeter2Info_isMapOpenCheck__Fv(); // 1
-extern "C" void dMeter2Info_isItemOpenCheck__Fv(); // 1
-extern "C" void dMeter2Info_set2DVibration__Fv(); // 1
-extern "C" void dMsgObject_getGroupID__Fv(); // 1
-extern "C" void isHowlMessage__12dMsgObject_cFv(); // 1
-extern "C" void getStatus__12dMsgObject_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive(); // 1
-extern "C" void appendChild__7J2DPaneFP7J2DPane(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition(); // 1
-extern "C" void getGlbVtx__7J2DPaneCFUc(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void func_802FC800(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void _savegpr_15(); // 1
-extern "C" void _savegpr_20(); // 1
-extern "C" void _savegpr_21(); // 1
-extern "C" void _savegpr_22(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_15(); // 1
-extern "C" void _restgpr_20(); // 1
-extern "C" void _restgpr_21(); // 1
-extern "C" void _restgpr_22(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfGs_getMaxLifeGauge__Fv();
+extern "C" void dComIfGp_getSelectItem__Fi();
+extern "C" void getItem__17dSv_player_item_cCFib();
+extern "C" void getLightDropNum__16dSv_light_drop_cCFUc();
+extern "C" void isLightDropGetFlag__16dSv_light_drop_cCFUc();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void isBottleItem__FUc();
+extern "C" void dCam_getBody__Fv();
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringKana__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void isDirectUseItem__13dMeter2Info_cFi();
+extern "C" void readItemTexture__13dMeter2Info_cFUcPvP10J2DPicturePvP10J2DPicturePvP10J2DPicturePvP10J2DPicturei();
+extern "C" void dMeter2Info_getNumberTextureName__Fi();
+extern "C" void dMeter2Info_isMapOpenCheck__Fv();
+extern "C" void dMeter2Info_isItemOpenCheck__Fv();
+extern "C" void dMeter2Info_set2DVibration__Fv();
+extern "C" void dMsgObject_getGroupID__Fv();
+extern "C" void isHowlMessage__12dMsgObject_cFv();
+extern "C" void getStatus__12dMsgObject_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBlackWhite__8CPaneMgrFQ28JUtility6TColorQ28JUtility6TColor();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void getGlbResource__10JKRArchiveFUlPCcP10JKRArchive();
+extern "C" void appendChild__7J2DPaneFP7J2DPane();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void setBasePosition__7J2DPaneF15J2DBasePosition();
+extern "C" void getGlbVtx__7J2DPaneCFUc();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void func_802FC800();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_15();
+extern "C" void _savegpr_20();
+extern "C" void _savegpr_21();
+extern "C" void _savegpr_22();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_15();
+extern "C" void _restgpr_20();
+extern "C" void _restgpr_21();
+extern "C" void _restgpr_22();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* item_resource__10dItem_data[1530];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

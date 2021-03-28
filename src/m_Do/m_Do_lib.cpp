@@ -37,16 +37,19 @@ struct J3DUClipper {
 // Forward References:
 // 
 
-void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*); // 2
-void mDoLib_project(Vec*, Vec*); // 2
-void mDoLib_pos2camera(Vec*, Vec*); // 2
+void mDoLib_setResTimgObj(ResTIMG const*, _GXTexObj*, u32, _GXTlutObj*);
+void mDoLib_project(Vec*, Vec*);
+void mDoLib_pos2camera(Vec*, Vec*);
+extern "C" extern u8 mClipper__14mDoLib_clipper[92];
+extern "C" extern f32 mSystemFar__14mDoLib_clipper;
+extern "C" extern f32 mFovyRate__14mDoLib_clipper;
 
-extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj(); // 1
-extern "C" void setup__14mDoLib_clipperFffff(); // 1
-extern "C" void mDoLib_project__FP3VecP3Vec(); // 1
-extern "C" void mDoLib_pos2camera__FP3VecP3Vec(); // 1
-extern "C" void __sinit_m_Do_lib_cpp(); // 1
-extern "C" void __dt__11J3DUClipperFv(); // 1
+extern "C" void mDoLib_setResTimgObj__FPC7ResTIMGP9_GXTexObjUlP10_GXTlutObj();
+extern "C" void setup__14mDoLib_clipperFffff();
+extern "C" void mDoLib_project__FP3VecP3Vec();
+extern "C" void mDoLib_pos2camera__FP3VecP3Vec();
+extern "C" void __sinit_m_Do_lib_cpp();
+extern "C" void __dt__11J3DUClipperFv();
 extern "C" extern u8 mClipper__14mDoLib_clipper[92];
 extern "C" extern f32 mSystemFar__14mDoLib_clipper;
 extern "C" extern f32 mFovyRate__14mDoLib_clipper;
@@ -55,19 +58,21 @@ extern "C" extern f32 mFovyRate__14mDoLib_clipper;
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
 
-extern "C" void init__11J3DUClipperFv(); // 1
-extern "C" void calcViewFrustum__11J3DUClipperFv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void GXInitTexObj(); // 1
-extern "C" void GXInitTexObjCI(); // 1
-extern "C" void GXInitTexObjLOD(); // 1
-extern "C" void GXInitTlutObj(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void init__11J3DUClipperFv();
+extern "C" void calcViewFrustum__11J3DUClipperFv();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXMultVec();
+extern "C" void GXInitTexObj();
+extern "C" void GXInitTexObjCI();
+extern "C" void GXInitTexObjLOD();
+extern "C" void GXInitTlutObj();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sincosTable___5JMath[65536];
 

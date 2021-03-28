@@ -29,10 +29,10 @@ struct JAUSoundNameTable {
 // 
 
 
-extern "C" void init__13JAUSoundTableFPCv(); // 1
-extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID(); // 1
-extern "C" void getData__13JAUSoundTableCF10JAISoundID(); // 1
-extern "C" void init__17JAUSoundNameTableFPCv(); // 1
+extern "C" void init__13JAUSoundTableFPCv();
+extern "C" void getTypeID__13JAUSoundTableCF10JAISoundID();
+extern "C" void getData__13JAUSoundTableCF10JAISoundID();
+extern "C" void init__17JAUSoundNameTableFPCv();
 
 // 
 // External References:

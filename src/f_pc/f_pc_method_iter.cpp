@@ -21,17 +21,17 @@ struct node_class {
 // Forward References:
 // 
 
-void fpcMtdIt_Method(node_list_class*, int (*)(void*)); // 2
+void fpcMtdIt_Method(node_list_class*, int (*)(void*));
 
-extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i(); // 1
+extern "C" void fpcMtdIt_Method__FP15node_list_classPFPv_i();
 
 // 
 // External References:
 // 
 
-void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*); // 2
+void cLsIt_Method(node_list_class*, int (*)(node_class*, void*), void*);
 
-extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv(); // 1
+extern "C" void cLsIt_Method__FP15node_list_classPFP10node_classPv_iPv();
 
 // 
 // Declarations:

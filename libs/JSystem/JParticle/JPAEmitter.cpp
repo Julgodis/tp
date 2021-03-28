@@ -63,32 +63,34 @@ struct JPABaseEmitter {
 // 
 
 
-extern "C" void __dt__18JPAEmitterCallBackFv(); // 1
-extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource(); // 1
-extern "C" void createParticle__14JPABaseEmitterFv(); // 1
-extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void processTillStartFrame__14JPABaseEmitterFv(); // 1
-extern "C" void processTermination__14JPABaseEmitterFv(); // 1
-extern "C" void func_8027EEB0(); // 1
-extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv(); // 1
-extern "C" void getDrawCount__14JPABaseEmitterCFv(); // 1
-extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID(); // 1
+extern "C" void __dt__18JPAEmitterCallBackFv();
+extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
+extern "C" void createParticle__14JPABaseEmitterFv();
+extern "C" void createChild__14JPABaseEmitterFP15JPABaseParticle();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void processTillStartFrame__14JPABaseEmitterFv();
+extern "C" void processTermination__14JPABaseEmitterFv();
+extern "C" void func_8027EEB0();
+extern "C" void getCurrentCreateNumber__14JPABaseEmitterCFv();
+extern "C" void getDrawCount__14JPABaseEmitterCFv();
+extern "C" void loadTexture__14JPABaseEmitterFUc11_GXTexMapID();
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
+extern "C" extern void* __vt__18JPAEmitterCallBack[7];
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData(); // 1
-extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSMTXMultVec(); // 1
+extern "C" void init_p__15JPABaseParticleFP18JPAEmitterWorkData();
+extern "C" void init_c__15JPABaseParticleFP18JPAEmitterWorkDataP15JPABaseParticle();
+extern "C" void __dl__FPv();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void PSMTXIdentity();
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXScale();
+extern "C" void PSMTXMultVec();
 extern "C" extern void* __vt__18JPAEmitterCallBack[7];
 extern "C" extern u32 __float_epsilon;
 

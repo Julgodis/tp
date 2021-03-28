@@ -11,10 +11,11 @@
 // Forward References:
 // 
 
+extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 
-extern "C" void __ptmf_test(); // 1
-extern "C" void __ptmf_cmpr(); // 1
-extern "C" void __ptmf_scall(); // 1
+extern "C" void __ptmf_test();
+extern "C" void __ptmf_cmpr();
+extern "C" void __ptmf_scall();
 extern "C" extern u8 const __ptmf_null[12 + 4 /* padding */];
 
 // 

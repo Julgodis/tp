@@ -37,39 +37,44 @@ struct DALKMIST_INFLUENCE {
 // Forward References:
 // 
 
-static void daTagLightBall_Draw(daTagLightBall_c*); // 2
-static void daTagLightBall_Execute(daTagLightBall_c*); // 2
-static void daTagLightBall_Delete(daTagLightBall_c*); // 2
-static void daTagLightBall_Create(fopAc_ac_c*); // 2
+static void daTagLightBall_Draw(daTagLightBall_c*);
+static void daTagLightBall_Execute(daTagLightBall_c*);
+static void daTagLightBall_Delete(daTagLightBall_c*);
+static void daTagLightBall_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_Tag_LightBall[12];
 
-extern "C" void initBaseMtx__16daTagLightBall_cFv(); // 1
-extern "C" void setBaseMtx__16daTagLightBall_cFv(); // 1
-extern "C" void Create__16daTagLightBall_cFv(); // 1
-extern "C" void create__16daTagLightBall_cFv(); // 1
-extern "C" void execute__16daTagLightBall_cFv(); // 1
-extern "C" bool draw__16daTagLightBall_cFv(); // 1
-extern "C" void _delete__16daTagLightBall_cFv(); // 1
-extern "C" static void daTagLightBall_Draw__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Execute__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Delete__FP16daTagLightBall_c(); // 1
-extern "C" static void daTagLightBall_Create__FP10fopAc_ac_c(); // 1
+extern "C" void initBaseMtx__16daTagLightBall_cFv();
+extern "C" void setBaseMtx__16daTagLightBall_cFv();
+extern "C" void Create__16daTagLightBall_cFv();
+extern "C" void create__16daTagLightBall_cFv();
+extern "C" void execute__16daTagLightBall_cFv();
+extern "C" bool draw__16daTagLightBall_cFv();
+extern "C" void _delete__16daTagLightBall_cFv();
+extern "C" static void daTagLightBall_Draw__FP16daTagLightBall_c();
+extern "C" static void daTagLightBall_Execute__FP16daTagLightBall_c();
+extern "C" static void daTagLightBall_Delete__FP16daTagLightBall_c();
+extern "C" static void daTagLightBall_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_Tag_LightBall[12];
 
 // 
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*); // 2
-void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*); // 2
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void dKy_dalkmist_inf_set(DALKMIST_INFLUENCE*);
+void dKy_dalkmist_inf_cut(DALKMIST_INFLUENCE*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE(); // 1
-extern "C" void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE(); // 1
-extern "C" void PSMTXTrans(); // 1
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void dKy_dalkmist_inf_set__FP18DALKMIST_INFLUENCE();
+extern "C" void dKy_dalkmist_inf_cut__FP18DALKMIST_INFLUENCE();
+extern "C" void PSMTXTrans();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

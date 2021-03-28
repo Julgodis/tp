@@ -28,27 +28,28 @@ namespace JStudio {
 // 
 
 
-extern "C" void getRotation_xyz__Q27JStudio4mathFPA4_ffff(); // 1
-extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec(); // 1
-extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf(); // 1
+extern "C" void getRotation_xyz__Q27JStudio4mathFPA4_ffff();
+extern "C" void getTransformation_SRxyzT__Q27JStudio4mathFPA4_fRC3VecRC3VecRC3Vec();
+extern "C" void getFromTransformation_SRxyzT__Q27JStudio4mathFP3VecP3VecP3VecPA4_Cf();
 
 // 
 // External References:
 // 
 
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void PSMTXConcat(); // 1
-extern "C" void PSMTXTransApply(); // 1
-extern "C" void PSMTXScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
-extern "C" void asin(); // 1
-extern "C" void atan2(); // 1
+extern "C" void PSMTXConcat();
+extern "C" void PSMTXTransApply();
+extern "C" void PSMTXScale();
+extern "C" void PSVECMag();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void cos();
+extern "C" void sin();
+extern "C" void asin();
+extern "C" void atan2();
 extern "C" extern u32 __float_epsilon;
 
 // 

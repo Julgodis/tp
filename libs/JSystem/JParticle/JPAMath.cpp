@@ -24,29 +24,31 @@ struct JGeometry {
 // Forward References:
 // 
 
-void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]); // 2
-void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]); // 2
-void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*, JGeometry::TVec3__template0*); // 2
-void JPACalcKeyAnmValue(f32, u16, f32 const*); // 2
+void JPAGetDirMtx(JGeometry::TVec3__template0 const&, f32 (* )[4]);
+void JPAGetYZRotateMtx(s16, s16, f32 (* )[4]);
+void JPAGetXYZRotateMtx(s16, s16, s16, f32 (* )[4]);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void JPASetRMtxSTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*, JGeometry::TVec3__template0*);
+void JPACalcKeyAnmValue(f32, u16, f32 const*);
 
-extern "C" void func_80280588(); // 1
-extern "C" void JPAGetYZRotateMtx__FssPA4_f(); // 1
-extern "C" void JPAGetXYZRotateMtx__FsssPA4_f(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void func_80280808(); // 1
-extern "C" void JPACalcKeyAnmValue__FfUsPCf(); // 1
+extern "C" void func_80280588();
+extern "C" void JPAGetYZRotateMtx__FssPA4_f();
+extern "C" void JPAGetXYZRotateMtx__FsssPA4_f();
+extern "C" void func_802807E0();
+extern "C" void func_80280808();
+extern "C" void JPACalcKeyAnmValue__FfUsPCf();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void PSMTXIdentity(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void PSMTXIdentity();
+extern "C" void PSVECMag();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_28();
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u32 __float_epsilon;
 

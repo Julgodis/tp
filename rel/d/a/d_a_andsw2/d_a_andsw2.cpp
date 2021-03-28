@@ -51,65 +51,69 @@ struct dEvent_manager_c {
 // Forward References:
 // 
 
-static void daAndsw2_actionOnAll(daAndsw2_c*); // 2
-static void daAndsw2_actionTimer(daAndsw2_c*); // 2
-static void daAndsw2_actionOrder(daAndsw2_c*); // 2
-static void daAndsw2_actionEvent(daAndsw2_c*); // 2
-static void daAndsw2_actionOff(daAndsw2_c*); // 2
-static bool daAndsw2_actionWait(daAndsw2_c*); // 2
-static void daAndsw2_Execute(daAndsw2_c*); // 2
-static void daAndsw2_Delete(daAndsw2_c*); // 2
-static void daAndsw2_Create(fopAc_ac_c*); // 2
+static void daAndsw2_actionOnAll(daAndsw2_c*);
+static void daAndsw2_actionTimer(daAndsw2_c*);
+static void daAndsw2_actionOrder(daAndsw2_c*);
+static void daAndsw2_actionEvent(daAndsw2_c*);
+static void daAndsw2_actionOff(daAndsw2_c*);
+static bool daAndsw2_actionWait(daAndsw2_c*);
+static void daAndsw2_Execute(daAndsw2_c*);
+static void daAndsw2_Delete(daAndsw2_c*);
+static void daAndsw2_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_ANDSW2[12];
 
-extern "C" void getEventNo__10daAndsw2_cFv(); // 1
-extern "C" void getSwbit__10daAndsw2_cFv(); // 1
-extern "C" void getSwbit2__10daAndsw2_cFv(); // 1
-extern "C" void getType__10daAndsw2_cFv(); // 1
-extern "C" void getTimer__10daAndsw2_cFv(); // 1
-extern "C" void getNum__10daAndsw2_cFv(); // 1
-extern "C" void getTopSw__10daAndsw2_cFv(); // 1
-extern "C" void getSwAns__10daAndsw2_cFv(); // 1
-extern "C" void chkAllSw2__10daAndsw2_cFv(); // 1
-extern "C" void chkSwStatus__10daAndsw2_cFv(); // 1
-extern "C" void chkSwStatus2__10daAndsw2_cFv(); // 1
-extern "C" void __dt__10daAndsw2_cFv(); // 1
-extern "C" void create__10daAndsw2_cFv(); // 1
-extern "C" static void daAndsw2_actionOnAll__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionTimer__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionOrder__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionEvent__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_actionOff__FP10daAndsw2_c(); // 1
-extern "C" static bool daAndsw2_actionWait__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Execute__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Delete__FP10daAndsw2_c(); // 1
-extern "C" static void daAndsw2_Create__FP10fopAc_ac_c(); // 1
+extern "C" void getEventNo__10daAndsw2_cFv();
+extern "C" void getSwbit__10daAndsw2_cFv();
+extern "C" void getSwbit2__10daAndsw2_cFv();
+extern "C" void getType__10daAndsw2_cFv();
+extern "C" void getTimer__10daAndsw2_cFv();
+extern "C" void getNum__10daAndsw2_cFv();
+extern "C" void getTopSw__10daAndsw2_cFv();
+extern "C" void getSwAns__10daAndsw2_cFv();
+extern "C" void chkAllSw2__10daAndsw2_cFv();
+extern "C" void chkSwStatus__10daAndsw2_cFv();
+extern "C" void chkSwStatus2__10daAndsw2_cFv();
+extern "C" void __dt__10daAndsw2_cFv();
+extern "C" void create__10daAndsw2_cFv();
+extern "C" static void daAndsw2_actionOnAll__FP10daAndsw2_c();
+extern "C" static void daAndsw2_actionTimer__FP10daAndsw2_c();
+extern "C" static void daAndsw2_actionOrder__FP10daAndsw2_c();
+extern "C" static void daAndsw2_actionEvent__FP10daAndsw2_c();
+extern "C" static void daAndsw2_actionOff__FP10daAndsw2_c();
+extern "C" static bool daAndsw2_actionWait__FP10daAndsw2_c();
+extern "C" static void daAndsw2_Execute__FP10daAndsw2_c();
+extern "C" static void daAndsw2_Delete__FP10daAndsw2_c();
+extern "C" static void daAndsw2_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_ANDSW2[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16); // 2
-void dLib_getEventSwitchNo(int); // 2
-void operator delete(void*); // 2
+void fopAcM_orderOtherEventId(fopAc_ac_c*, s16, u8, u16, u16, u16);
+void dLib_getEventSwitchNo(int);
+void operator delete(void*);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs(); // 1
-extern "C" void dLib_getEventSwitchNo__Fi(); // 1
-extern "C" void onSwitch__10dSv_info_cFii(); // 1
-extern "C" void offSwitch__10dSv_info_cFii(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc(); // 1
-extern "C" void endCheck__16dEvent_manager_cFs(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_orderOtherEventId__FP10fopAc_ac_csUcUsUsUs();
+extern "C" void dLib_getEventSwitchNo__Fi();
+extern "C" void onSwitch__10dSv_info_cFii();
+extern "C" void offSwitch__10dSv_info_cFii();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void getEventIdx__16dEvent_manager_cFP10fopAc_ac_cUc();
+extern "C" void endCheck__16dEvent_manager_cFs();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

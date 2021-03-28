@@ -75,6 +75,9 @@ struct dSv_player_get_item_c {
 struct dPa_levelEcallBack {
 };
 
+struct csXyz {
+};
+
 struct _GXColor {
 };
 
@@ -88,9 +91,6 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
-};
-
-struct csXyz {
 };
 
 struct dPa_control_c {
@@ -155,57 +155,60 @@ struct JGeometry {
 // Forward References:
 // 
 
-static void daPoFire_Draw(daPoFire_c*); // 2
-static void daPoFire_Execute(daPoFire_c*); // 2
-static void daPoFire_Delete(daPoFire_c*); // 2
-static void daPoFire_Create(fopAc_ac_c*); // 2
+static void daPoFire_Draw(daPoFire_c*);
+static void daPoFire_Execute(daPoFire_c*);
+static void daPoFire_Delete(daPoFire_c*);
+static void daPoFire_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_3889;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_Obj_poFire[12];
 
-extern "C" void __ct__14daPoFire_HIO_cFv(); // 1
-extern "C" void __dt__14mDoHIO_entry_cFv(); // 1
-extern "C" void setBaseMtx__10daPoFire_cFv(); // 1
-extern "C" void create__10daPoFire_cFv(); // 1
-extern "C" void Execute__10daPoFire_cFv(); // 1
-extern "C" void procMain__10daPoFire_cFv(); // 1
-extern "C" void setFire__10daPoFire_cFv(); // 1
-extern "C" void searchCandle__10daPoFire_cFPvPv(); // 1
-extern "C" void searchFireTag__10daPoFire_cFPvPv(); // 1
-extern "C" void init_modeInitMove__10daPoFire_cFv(); // 1
-extern "C" void modeInitMove__10daPoFire_cFv(); // 1
-extern "C" void modeWait__10daPoFire_cFv(); // 1
-extern "C" void init_modeWaitSetEffect__10daPoFire_cFv(); // 1
-extern "C" void modeWaitSetEffect__10daPoFire_cFv(); // 1
-extern "C" void init_modeMoveOut__10daPoFire_cFv(); // 1
-extern "C" void modeMoveOut__10daPoFire_cFv(); // 1
-extern "C" void init_modeMove__10daPoFire_cFv(); // 1
-extern "C" void modeMove__10daPoFire_cFv(); // 1
-extern "C" void init_modeMoveWait__10daPoFire_cFv(); // 1
-extern "C" void modeMoveWait__10daPoFire_cFv(); // 1
-extern "C" void modeNoMove__10daPoFire_cFv(); // 1
-extern "C" void init_modeOnFire__10daPoFire_cFv(); // 1
-extern "C" void modeOnFire__10daPoFire_cFv(); // 1
-extern "C" void init_modeFireEnd__10daPoFire_cFv(); // 1
-extern "C" void modeFireEnd__10daPoFire_cFv(); // 1
-extern "C" void eventStart__10daPoFire_cFv(); // 1
-extern "C" void eventRun__10daPoFire_cFv(); // 1
-extern "C" bool eventEnd__10daPoFire_cFv(); // 1
-extern "C" bool Draw__10daPoFire_cFv(); // 1
-extern "C" void Delete__10daPoFire_cFv(); // 1
-extern "C" static void daPoFire_Draw__FP10daPoFire_c(); // 1
-extern "C" static void daPoFire_Execute__FP10daPoFire_c(); // 1
-extern "C" static void daPoFire_Delete__FP10daPoFire_c(); // 1
-extern "C" static void daPoFire_Create__FP10fopAc_ac_c(); // 1
-extern "C" void __dt__14daPoFire_HIO_cFv(); // 1
-extern "C" void __sinit_d_a_obj_poFire_cpp(); // 1
-extern "C" static void func_80CB3DBC(); // 1
-extern "C" static void func_80CB3DC4(); // 1
-extern "C" static void func_80CB3DCC(); // 1
-extern "C" static void func_80CB3DD4(); // 1
-extern "C" void __dt__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventStart__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventRun__17dEvLib_callback_cFv(); // 1
-extern "C" bool eventEnd__17dEvLib_callback_cFv(); // 1
-extern "C" void getFirePos__12daPoCandle_cFv(); // 1
-extern "C" void __dt__10daPoFire_cFv(); // 1
+extern "C" void __ct__14daPoFire_HIO_cFv();
+extern "C" void __dt__14mDoHIO_entry_cFv();
+extern "C" void setBaseMtx__10daPoFire_cFv();
+extern "C" void create__10daPoFire_cFv();
+extern "C" void Execute__10daPoFire_cFv();
+extern "C" void procMain__10daPoFire_cFv();
+extern "C" void setFire__10daPoFire_cFv();
+extern "C" void searchCandle__10daPoFire_cFPvPv();
+extern "C" void searchFireTag__10daPoFire_cFPvPv();
+extern "C" void init_modeInitMove__10daPoFire_cFv();
+extern "C" void modeInitMove__10daPoFire_cFv();
+extern "C" void modeWait__10daPoFire_cFv();
+extern "C" void init_modeWaitSetEffect__10daPoFire_cFv();
+extern "C" void modeWaitSetEffect__10daPoFire_cFv();
+extern "C" void init_modeMoveOut__10daPoFire_cFv();
+extern "C" void modeMoveOut__10daPoFire_cFv();
+extern "C" void init_modeMove__10daPoFire_cFv();
+extern "C" void modeMove__10daPoFire_cFv();
+extern "C" void init_modeMoveWait__10daPoFire_cFv();
+extern "C" void modeMoveWait__10daPoFire_cFv();
+extern "C" void modeNoMove__10daPoFire_cFv();
+extern "C" void init_modeOnFire__10daPoFire_cFv();
+extern "C" void modeOnFire__10daPoFire_cFv();
+extern "C" void init_modeFireEnd__10daPoFire_cFv();
+extern "C" void modeFireEnd__10daPoFire_cFv();
+extern "C" void eventStart__10daPoFire_cFv();
+extern "C" void eventRun__10daPoFire_cFv();
+extern "C" bool eventEnd__10daPoFire_cFv();
+extern "C" bool Draw__10daPoFire_cFv();
+extern "C" void Delete__10daPoFire_cFv();
+extern "C" static void daPoFire_Draw__FP10daPoFire_c();
+extern "C" static void daPoFire_Execute__FP10daPoFire_c();
+extern "C" static void daPoFire_Delete__FP10daPoFire_c();
+extern "C" static void daPoFire_Create__FP10fopAc_ac_c();
+extern "C" void __dt__14daPoFire_HIO_cFv();
+extern "C" void __sinit_d_a_obj_poFire_cpp();
+extern "C" static void func_80CB3DBC();
+extern "C" static void func_80CB3DC4();
+extern "C" static void func_80CB3DCC();
+extern "C" static void func_80CB3DD4();
+extern "C" void __dt__17dEvLib_callback_cFv();
+extern "C" bool eventStart__17dEvLib_callback_cFv();
+extern "C" bool eventRun__17dEvLib_callback_cFv();
+extern "C" bool eventEnd__17dEvLib_callback_cFv();
+extern "C" void getFirePos__12daPoCandle_cFv();
+extern "C" void __dt__10daPoFire_cFv();
 extern "C" extern u32 const lit_3889;
 extern "C" extern u32 lit_1787[1 + 4 /* padding */];
 extern "C" extern void* g_profile_Obj_poFire[12];
@@ -214,65 +217,71 @@ extern "C" extern void* g_profile_Obj_poFire[12];
 // External References:
 // 
 
-void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16); // 2
-void fopAc_IsActor(void*); // 2
-void fopAcIt_Judge(void* (*)(void*, void*), void*); // 2
-void fopAcM_setRoomLayer(void*, int); // 2
-void fopAcM_delete(fopAc_ac_c*); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void cLib_addCalc(f32*, f32, f32, f32, f32); // 2
-void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32); // 2
-void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*); // 2
-void operator delete(void*); // 2
-
-extern "C" void mDoMtx_ZXYrotM__FPA4_fsss(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAc_IsActor__FPv(); // 1
-extern "C" void fopAcIt_Judge__FPFPvPv_PvPv(); // 1
-extern "C" void fopAcM_setRoomLayer__FPvi(); // 1
-extern "C" void fopAcM_delete__FP10fopAc_ac_c(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void offFirstBit__21dSv_player_get_item_cFUc(); // 1
-extern "C" void setPtT__14dEvt_control_cFPv(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void eventUpdate__17dEvLib_callback_cFv(); // 1
-extern "C" void orderEvent__17dEvLib_callback_cFiii(); // 1
-extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void getEmitter__Q213dPa_control_c7level_cFUl(); // 1
-extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void __ct__11dBgS_GndChkFv(); // 1
-extern "C" void __dt__11dBgS_GndChkFv(); // 1
-extern "C" void __pl__4cXyzCFRC3Vec(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void cLib_addCalc__FPfffff(); // 1
-extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void func_802807E0(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
+void mDoMtx_ZXYrotM(f32 (* )[4], s16, s16, s16);
+void fopAc_IsActor(void*);
+void fopAcIt_Judge(void* (*)(void*, void*), void*);
+void fopAcM_setRoomLayer(void*, int);
+void fopAcM_delete(fopAc_ac_c*);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void cLib_addCalc(f32*, f32, f32, f32, f32);
+void cLib_addCalcPos(cXyz*, cXyz const&, f32, f32, f32);
+void JPASetRMtxTVecfromMtx(f32 const (* )[4], f32 (* )[4], JGeometry::TVec3__template0*);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 sincosTable___5JMath[65536];
 extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void mDoMtx_ZXYrotM__FPA4_fsss();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAc_IsActor__FPv();
+extern "C" void fopAcIt_Judge__FPFPvPv_PvPv();
+extern "C" void fopAcM_setRoomLayer__FPvi();
+extern "C" void fopAcM_delete__FP10fopAc_ac_c();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void offFirstBit__21dSv_player_get_item_cFUc();
+extern "C" void setPtT__14dEvt_control_cFPv();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void eventUpdate__17dEvLib_callback_cFv();
+extern "C" void orderEvent__17dEvLib_callback_cFiii();
+extern "C" void forceOnEventMove__Q213dPa_control_c7level_cFUl();
+extern "C" void getEmitter__Q213dPa_control_c7level_cFUl();
+extern "C" void set__13dPa_control_cFUlUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void request__11dAttCatch_cFP10fopAc_ac_cUcfffsi();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void __ct__11dBgS_GndChkFv();
+extern "C" void __dt__11dBgS_GndChkFv();
+extern "C" void __pl__4cXyzCFRC3Vec();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void cLib_addCalc__FPfffff();
+extern "C" void cLib_addCalcPos__FP4cXyzRC4cXyzfff();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void func_802807E0();
+extern "C" void __dl__FPv();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 mParticleTracePCB__13dPa_control_c[4 + 4 /* padding */];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

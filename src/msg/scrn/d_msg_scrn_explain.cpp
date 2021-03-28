@@ -70,16 +70,16 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct JUTFont {
 };
 
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
 };
 
-struct JUTFont {
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct dMsgObject_c {
@@ -98,10 +98,10 @@ struct Z2SpeechMgr2 {
 	/* 802CBF60 */ void setTextCount(s16);
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -148,95 +148,102 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const msg_scrn_d_msg_scrn_explain__stringBase0;
 
-extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc(); // 1
-extern "C" void __dt__17dMsgScrnExplain_cFv(); // 1
-extern "C" void move__17dMsgScrnExplain_cFv(); // 1
-extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph(); // 1
-extern "C" void wait_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void wait_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void open_request_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void open_request_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void open_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void open_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void move_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void move_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void move_select_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void move_select_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void close_init__17dMsgScrnExplain_cFv(); // 1
-extern "C" void close_proc__17dMsgScrnExplain_cFv(); // 1
-extern "C" void openExplain__17dMsgScrnExplain_cFUlUcUcUcb(); // 1
-extern "C" void getAlphaRatio__17dMsgScrnExplain_cFv(); // 1
-extern "C" void checkTriggerA__17dMsgScrnExplain_cFv(); // 1
-extern "C" void checkTriggerB__17dMsgScrnExplain_cFv(); // 1
-extern "C" void __sinit_d_msg_scrn_explain_cpp(); // 1
+extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
+extern "C" void __dt__17dMsgScrnExplain_cFv();
+extern "C" void move__17dMsgScrnExplain_cFv();
+extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
+extern "C" void wait_init__17dMsgScrnExplain_cFv();
+extern "C" void wait_proc__17dMsgScrnExplain_cFv();
+extern "C" void open_request_init__17dMsgScrnExplain_cFv();
+extern "C" void open_request_proc__17dMsgScrnExplain_cFv();
+extern "C" void open_init__17dMsgScrnExplain_cFv();
+extern "C" void open_proc__17dMsgScrnExplain_cFv();
+extern "C" void move_init__17dMsgScrnExplain_cFv();
+extern "C" void move_proc__17dMsgScrnExplain_cFv();
+extern "C" void move_select_init__17dMsgScrnExplain_cFv();
+extern "C" void move_select_proc__17dMsgScrnExplain_cFv();
+extern "C" void close_init__17dMsgScrnExplain_cFv();
+extern "C" void close_proc__17dMsgScrnExplain_cFv();
+extern "C" void openExplain__17dMsgScrnExplain_cFUlUcUcUcb();
+extern "C" void getAlphaRatio__17dMsgScrnExplain_cFv();
+extern "C" void checkTriggerA__17dMsgScrnExplain_cFv();
+extern "C" void checkTriggerB__17dMsgScrnExplain_cFv();
+extern "C" void __sinit_d_msg_scrn_explain_cpp();
 extern "C" extern char const* const msg_scrn_d_msg_scrn_explain__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void dMeter2Info_set2DVibrationM(); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void dMeter2Info_set2DVibrationM();
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 g_MsgObject_HIO_c[1040];
+extern "C" extern u8 data_80450B70[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void checkTrigger__9STControlFv(); // 1
-extern "C" void checkUpTrigger__9STControlFv(); // 1
-extern "C" void checkDownTrigger__9STControlFv(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void getStringLength__13dMeter2Info_cFP7JUTFontffPc(); // 1
-extern "C" void dMeter2Info_set2DVibrationM__Fv(); // 1
-extern "C" void __ct__10COutFont_cFUc(); // 1
-extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs(); // 1
-extern "C" void __ct__17dMsgScrn3Select_cFv(); // 1
-extern "C" void isSelect__17dMsgScrn3Select_cFv(); // 1
-extern "C" void setString__17dMsgScrn3Select_cFPcPcPc(); // 1
-extern "C" void setRubyString__17dMsgScrn3Select_cFPcPcPc(); // 1
-extern "C" void translate__17dMsgScrn3Select_cFff(); // 1
-extern "C" void draw__17dMsgScrn3Select_cFff(); // 1
-extern "C" void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc(); // 1
-extern "C" void selAnimeMove__17dMsgScrn3Select_cFUcUcb(); // 1
-extern "C" void selAnimeEnd__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getTextBoxWidth__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getFontSize__17dMsgScrn3Select_cFv(); // 1
-extern "C" void getCharSpace__17dMsgScrn3Select_cFv(); // 1
-extern "C" void __ct__15dMsgScrnArrow_cFv(); // 1
-extern "C" void draw__15dMsgScrnArrow_cFv(); // 1
-extern "C" void setPos__15dMsgScrnArrow_cFff(); // 1
-extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv(); // 1
-extern "C" void __ct__12dMsgString_cFv(); // 1
-extern "C" void __dt__12dMsgString_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void setTextCount__12Z2SpeechMgr2Fs(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getBounds__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void snprintf(); // 1
-extern "C" void strcat(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void checkTrigger__9STControlFv();
+extern "C" void checkUpTrigger__9STControlFv();
+extern "C" void checkDownTrigger__9STControlFv();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void getStringLength__13dMeter2Info_cFP7JUTFontffPc();
+extern "C" void dMeter2Info_set2DVibrationM__Fv();
+extern "C" void __ct__10COutFont_cFUc();
+extern "C" void getString__12dMsgObject_cFUlP10J2DTextBoxP10J2DTextBoxP7JUTFontP10COutFont_cPcPcPcPs();
+extern "C" void __ct__17dMsgScrn3Select_cFv();
+extern "C" void isSelect__17dMsgScrn3Select_cFv();
+extern "C" void setString__17dMsgScrn3Select_cFPcPcPc();
+extern "C" void setRubyString__17dMsgScrn3Select_cFPcPcPc();
+extern "C" void translate__17dMsgScrn3Select_cFff();
+extern "C" void draw__17dMsgScrn3Select_cFff();
+extern "C" void selAnimeInit__17dMsgScrn3Select_cFUcUcUcfUc();
+extern "C" void selAnimeMove__17dMsgScrn3Select_cFUcUcb();
+extern "C" void selAnimeEnd__17dMsgScrn3Select_cFv();
+extern "C" void getTextBoxWidth__17dMsgScrn3Select_cFv();
+extern "C" void getFontSize__17dMsgScrn3Select_cFv();
+extern "C" void getCharSpace__17dMsgScrn3Select_cFv();
+extern "C" void __ct__15dMsgScrnArrow_cFv();
+extern "C" void draw__15dMsgScrnArrow_cFv();
+extern "C" void setPos__15dMsgScrnArrow_cFff();
+extern "C" void arwAnimeInit__15dMsgScrnArrow_cFv();
+extern "C" void __ct__12dMsgString_cFv();
+extern "C" void __dt__12dMsgString_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void setTextCount__12Z2SpeechMgr2Fs();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getBounds__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void snprintf();
+extern "C" void strcat();
+extern "C" void strcpy();
 extern "C" extern u8 m_cpadInfo__8mDoCPd_c[256];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_meter2_info[248];

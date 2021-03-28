@@ -53,34 +53,38 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_d_kantera_icon_meter__stringBase0;
 
-extern "C" void __ct__15dKantera_icon_cFv(); // 1
-extern "C" void __dt__15dKantera_icon_cFv(); // 1
-extern "C" void initiate__15dKantera_icon_cFv(); // 1
-extern "C" void setAlphaRate__15dKantera_icon_cFf(); // 1
-extern "C" void setPos__15dKantera_icon_cFff(); // 1
-extern "C" void setScale__15dKantera_icon_cFff(); // 1
-extern "C" void setNowGauge__15dKantera_icon_cFUsUs(); // 1
-extern "C" void draw__19dDlst_KanteraIcon_cFv(); // 1
-extern "C" void __dt__19dDlst_KanteraIcon_cFv(); // 1
+extern "C" void __ct__15dKantera_icon_cFv();
+extern "C" void __dt__15dKantera_icon_cFv();
+extern "C" void initiate__15dKantera_icon_cFv();
+extern "C" void setAlphaRate__15dKantera_icon_cFf();
+extern "C" void setPos__15dKantera_icon_cFff();
+extern "C" void setScale__15dKantera_icon_cFff();
+extern "C" void setNowGauge__15dKantera_icon_cFUsUs();
+extern "C" void draw__19dDlst_KanteraIcon_cFv();
+extern "C" void __dt__19dDlst_KanteraIcon_cFv();
 extern "C" extern char const* const d_d_kantera_icon_meter__stringBase0;
 
 // 
 // External References:
 // 
 
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void dPaneClass_showNullPane(J2DScreen*);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
 
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 g_drawHIO[3880];

@@ -430,291 +430,294 @@ struct J2DColorBlock {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__15J2DIndBlockFull[14];
+extern "C" extern void* __vt__11J2DTevBlock[47];
+extern "C" extern void* __vt__14J2DTexGenBlock[3 + 1 /* padding */];
 
-extern "C" void initialize__13J2DColorBlockFv(); // 1
-extern "C" void setGX__13J2DColorBlockFv(); // 1
-extern "C" void initialize__14J2DTexGenBlockFv(); // 1
-extern "C" void setGX__14J2DTexGenBlockFv(); // 1
-extern "C" void __dt__14J2DTexGenBlockFv(); // 1
-extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
-extern "C" void getTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx(); // 1
-extern "C" bool getTexture__11J2DTevBlockFUl(); // 1
-extern "C" bool getPalette__11J2DTevBlockFUl(); // 1
-extern "C" void __ct__12J2DTevBlock1Fv(); // 1
-extern "C" void __dt__12J2DTevBlock1Fv(); // 1
-extern "C" void initialize__12J2DTevBlock1Fv(); // 1
-extern "C" void prepareTexture__12J2DTevBlock1FUc(); // 1
-extern "C" void insertTexture__12J2DTevBlock1FUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__12J2DTevBlock1FUlP10JUTTexture(); // 1
-extern "C" void setTexture__12J2DTevBlock1FUlPC7ResTIMG(); // 1
-extern "C" void setTexture__12J2DTevBlock1FUlP10JUTTexture(); // 1
-extern "C" void removeTexture__12J2DTevBlock1FUl(); // 1
-extern "C" void setFont__12J2DTevBlock1FP7ResFONT(); // 1
-extern "C" void setFont__12J2DTevBlock1FP7JUTFont(); // 1
-extern "C" void setPalette__12J2DTevBlock1FUlPC7ResTLUT(); // 1
-extern "C" void shiftDeleteFlag__12J2DTevBlock1FUcb(); // 1
-extern "C" void setGX__12J2DTevBlock1Fv(); // 1
-extern "C" void loadTexture__12J2DTevBlock1F11_GXTexMapIDUl(); // 1
-extern "C" void __ct__12J2DTevBlock2Fv(); // 1
-extern "C" void __dt__12J2DTevBlock2Fv(); // 1
-extern "C" void initialize__12J2DTevBlock2Fv(); // 1
-extern "C" void prepareTexture__12J2DTevBlock2FUc(); // 1
-extern "C" void insertTexture__12J2DTevBlock2FUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__12J2DTevBlock2FUlP10JUTTexture(); // 1
-extern "C" void setTexture__12J2DTevBlock2FUlPC7ResTIMG(); // 1
-extern "C" void setTexture__12J2DTevBlock2FUlP10JUTTexture(); // 1
-extern "C" void removeTexture__12J2DTevBlock2FUl(); // 1
-extern "C" void setFont__12J2DTevBlock2FP7ResFONT(); // 1
-extern "C" void setFont__12J2DTevBlock2FP7JUTFont(); // 1
-extern "C" void setPalette__12J2DTevBlock2FUlPC7ResTLUT(); // 1
-extern "C" void shiftDeleteFlag__12J2DTevBlock2FUcb(); // 1
-extern "C" void setGX__12J2DTevBlock2Fv(); // 1
-extern "C" void loadTexture__12J2DTevBlock2F11_GXTexMapIDUl(); // 1
-extern "C" void __ct__12J2DTevBlock4Fv(); // 1
-extern "C" void __dt__12J2DTevBlock4Fv(); // 1
-extern "C" void initialize__12J2DTevBlock4Fv(); // 1
-extern "C" void prepareTexture__12J2DTevBlock4FUc(); // 1
-extern "C" void insertTexture__12J2DTevBlock4FUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__12J2DTevBlock4FUlP10JUTTexture(); // 1
-extern "C" void setTexture__12J2DTevBlock4FUlPC7ResTIMG(); // 1
-extern "C" void setTexture__12J2DTevBlock4FUlP10JUTTexture(); // 1
-extern "C" void removeTexture__12J2DTevBlock4FUl(); // 1
-extern "C" void setFont__12J2DTevBlock4FP7ResFONT(); // 1
-extern "C" void setFont__12J2DTevBlock4FP7JUTFont(); // 1
-extern "C" void setPalette__12J2DTevBlock4FUlPC7ResTLUT(); // 1
-extern "C" void shiftDeleteFlag__12J2DTevBlock4FUcb(); // 1
-extern "C" void setGX__12J2DTevBlock4Fv(); // 1
-extern "C" void loadTexture__12J2DTevBlock4F11_GXTexMapIDUl(); // 1
-extern "C" void __ct__12J2DTevBlock8Fv(); // 1
-extern "C" void __dt__12J2DTevBlock8Fv(); // 1
-extern "C" void initialize__12J2DTevBlock8Fv(); // 1
-extern "C" void prepareTexture__12J2DTevBlock8FUc(); // 1
-extern "C" void insertTexture__12J2DTevBlock8FUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__12J2DTevBlock8FUlP10JUTTexture(); // 1
-extern "C" void setTexture__12J2DTevBlock8FUlPC7ResTIMG(); // 1
-extern "C" void setTexture__12J2DTevBlock8FUlP10JUTTexture(); // 1
-extern "C" void removeTexture__12J2DTevBlock8FUl(); // 1
-extern "C" void setFont__12J2DTevBlock8FP7ResFONT(); // 1
-extern "C" void setFont__12J2DTevBlock8FP7JUTFont(); // 1
-extern "C" void setPalette__12J2DTevBlock8FUlPC7ResTLUT(); // 1
-extern "C" void shiftDeleteFlag__12J2DTevBlock8FUcb(); // 1
-extern "C" void setGX__12J2DTevBlock8Fv(); // 1
-extern "C" void loadTexture__12J2DTevBlock8F11_GXTexMapIDUl(); // 1
-extern "C" void __ct__13J2DTevBlock16Fv(); // 1
-extern "C" void __dt__13J2DTevBlock16Fv(); // 1
-extern "C" void initialize__13J2DTevBlock16Fv(); // 1
-extern "C" void prepareTexture__13J2DTevBlock16FUc(); // 1
-extern "C" void insertTexture__13J2DTevBlock16FUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void insertTexture__13J2DTevBlock16FUlP10JUTTexture(); // 1
-extern "C" void setTexture__13J2DTevBlock16FUlPC7ResTIMG(); // 1
-extern "C" void setTexture__13J2DTevBlock16FUlP10JUTTexture(); // 1
-extern "C" void removeTexture__13J2DTevBlock16FUl(); // 1
-extern "C" void setFont__13J2DTevBlock16FP7ResFONT(); // 1
-extern "C" void setFont__13J2DTevBlock16FP7JUTFont(); // 1
-extern "C" void setPalette__13J2DTevBlock16FUlPC7ResTLUT(); // 1
-extern "C" void shiftDeleteFlag__13J2DTevBlock16FUcb(); // 1
-extern "C" void setGX__13J2DTevBlock16Fv(); // 1
-extern "C" void loadTexture__13J2DTevBlock16F11_GXTexMapIDUl(); // 1
-extern "C" void initialize__15J2DIndBlockFullFv(); // 1
-extern "C" void setGX__15J2DIndBlockFullFv(); // 1
-extern "C" void initialize__10J2DPEBlockFv(); // 1
-extern "C" void setGX__10J2DPEBlockFv(); // 1
-extern "C" void __ct__14J2DIndTevStageFv(); // 1
-extern "C" void __ct__19J2DTevSwapModeTableFv(); // 1
-extern "C" void __ct__11J2DTevStageFv(); // 1
-extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo(); // 1
-extern "C" void __ct__11J2DTevOrderFv(); // 1
-extern "C" void __ct__13J2DGXColorS10Fv(); // 1
-extern "C" void getType__15J2DIndBlockFullFv(); // 1
-extern "C" void setIndTexStageNum__15J2DIndBlockFullFUc(); // 1
-extern "C" void getIndTexStageNum__15J2DIndBlockFullCFv(); // 1
-extern "C" void setIndTexOrder__15J2DIndBlockFullFUl14J2DIndTexOrder(); // 1
-extern "C" void getIndTexOrder__15J2DIndBlockFullFUl(); // 1
-extern "C" void setIndTexMtx__15J2DIndBlockFullFUl12J2DIndTexMtx(); // 1
-extern "C" void getIndTexMtx__15J2DIndBlockFullFUl(); // 1
-extern "C" void setIndTexCoordScale__15J2DIndBlockFullFUl19J2DIndTexCoordScale(); // 1
-extern "C" void getIndTexCoordScale__15J2DIndBlockFullFUl(); // 1
-extern "C" void __dt__15J2DIndBlockFullFv(); // 1
-extern "C" void getType__13J2DTevBlock16Fv(); // 1
-extern "C" s32 getMaxStage__13J2DTevBlock16Fv(); // 1
-extern "C" void setTexNo__13J2DTevBlock16FUlUs(); // 1
-extern "C" void getTexNo__13J2DTevBlock16CFUl(); // 1
-extern "C" void setFontNo__13J2DTevBlock16FUs(); // 1
-extern "C" void getFontNo__13J2DTevBlock16CFv(); // 1
-extern "C" void setTevOrder__13J2DTevBlock16FUl11J2DTevOrder(); // 1
-extern "C" void getTevOrder__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevColor__13J2DTevBlock16FUl13J2DGXColorS10(); // 1
-extern "C" void getTevColor__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevKColor__13J2DTevBlock16FUlQ28JUtility6TColor(); // 1
-extern "C" void getTevKColor__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevKColorSel__13J2DTevBlock16FUlUc(); // 1
-extern "C" void getTevKColorSel__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevKAlphaSel__13J2DTevBlock16FUlUc(); // 1
-extern "C" void getTevKAlphaSel__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevStageNum__13J2DTevBlock16FUc(); // 1
-extern "C" void getTevStageNum__13J2DTevBlock16CFv(); // 1
-extern "C" void setTevStage__13J2DTevBlock16FUl11J2DTevStage(); // 1
-extern "C" void getTevStage__13J2DTevBlock16FUl(); // 1
-extern "C" void setTevSwapModeInfo__13J2DTevBlock16FUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__13J2DTevBlock16FUl19J2DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__13J2DTevBlock16FUl(); // 1
-extern "C" void setIndTevStage__13J2DTevBlock16FUl14J2DIndTevStage(); // 1
-extern "C" void getIndTevStage__13J2DTevBlock16FUl(); // 1
-extern "C" void insertTexture__13J2DTevBlock16FUlPC7ResTIMG(); // 1
-extern "C" void getTexture__13J2DTevBlock16FUl(); // 1
-extern "C" void getPalette__13J2DTevBlock16FUl(); // 1
-extern "C" void getFont__13J2DTevBlock16Fv(); // 1
-extern "C" void setUndeleteFlag__13J2DTevBlock16FUc(); // 1
-extern "C" void setFontUndeleteFlag__13J2DTevBlock16Fv(); // 1
-extern "C" void getType__12J2DTevBlock8Fv(); // 1
-extern "C" s32 getMaxStage__12J2DTevBlock8Fv(); // 1
-extern "C" void setTexNo__12J2DTevBlock8FUlUs(); // 1
-extern "C" void getTexNo__12J2DTevBlock8CFUl(); // 1
-extern "C" void setFontNo__12J2DTevBlock8FUs(); // 1
-extern "C" void getFontNo__12J2DTevBlock8CFv(); // 1
-extern "C" void setTevOrder__12J2DTevBlock8FUl11J2DTevOrder(); // 1
-extern "C" void getTevOrder__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevColor__12J2DTevBlock8FUl13J2DGXColorS10(); // 1
-extern "C" void getTevColor__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevKColor__12J2DTevBlock8FUlQ28JUtility6TColor(); // 1
-extern "C" void getTevKColor__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevKColorSel__12J2DTevBlock8FUlUc(); // 1
-extern "C" void getTevKColorSel__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevKAlphaSel__12J2DTevBlock8FUlUc(); // 1
-extern "C" void getTevKAlphaSel__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevStageNum__12J2DTevBlock8FUc(); // 1
-extern "C" void getTevStageNum__12J2DTevBlock8CFv(); // 1
-extern "C" void setTevStage__12J2DTevBlock8FUl11J2DTevStage(); // 1
-extern "C" void getTevStage__12J2DTevBlock8FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J2DTevBlock8FUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J2DTevBlock8FUl19J2DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J2DTevBlock8FUl(); // 1
-extern "C" void setIndTevStage__12J2DTevBlock8FUl14J2DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J2DTevBlock8FUl(); // 1
-extern "C" void insertTexture__12J2DTevBlock8FUlPC7ResTIMG(); // 1
-extern "C" void getTexture__12J2DTevBlock8FUl(); // 1
-extern "C" void getPalette__12J2DTevBlock8FUl(); // 1
-extern "C" void getFont__12J2DTevBlock8Fv(); // 1
-extern "C" void setUndeleteFlag__12J2DTevBlock8FUc(); // 1
-extern "C" void setFontUndeleteFlag__12J2DTevBlock8Fv(); // 1
-extern "C" void getType__12J2DTevBlock4Fv(); // 1
-extern "C" s32 getMaxStage__12J2DTevBlock4Fv(); // 1
-extern "C" void setTexNo__12J2DTevBlock4FUlUs(); // 1
-extern "C" void getTexNo__12J2DTevBlock4CFUl(); // 1
-extern "C" void setFontNo__12J2DTevBlock4FUs(); // 1
-extern "C" void getFontNo__12J2DTevBlock4CFv(); // 1
-extern "C" void setTevOrder__12J2DTevBlock4FUl11J2DTevOrder(); // 1
-extern "C" void getTevOrder__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevColor__12J2DTevBlock4FUl13J2DGXColorS10(); // 1
-extern "C" void getTevColor__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevKColor__12J2DTevBlock4FUlQ28JUtility6TColor(); // 1
-extern "C" void getTevKColor__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevKColorSel__12J2DTevBlock4FUlUc(); // 1
-extern "C" void getTevKColorSel__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevKAlphaSel__12J2DTevBlock4FUlUc(); // 1
-extern "C" void getTevKAlphaSel__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevStageNum__12J2DTevBlock4FUc(); // 1
-extern "C" void getTevStageNum__12J2DTevBlock4CFv(); // 1
-extern "C" void setTevStage__12J2DTevBlock4FUl11J2DTevStage(); // 1
-extern "C" void getTevStage__12J2DTevBlock4FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J2DTevBlock4FUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J2DTevBlock4FUl19J2DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J2DTevBlock4FUl(); // 1
-extern "C" void setIndTevStage__12J2DTevBlock4FUl14J2DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J2DTevBlock4FUl(); // 1
-extern "C" void insertTexture__12J2DTevBlock4FUlPC7ResTIMG(); // 1
-extern "C" void getTexture__12J2DTevBlock4FUl(); // 1
-extern "C" void getPalette__12J2DTevBlock4FUl(); // 1
-extern "C" void getFont__12J2DTevBlock4Fv(); // 1
-extern "C" void setUndeleteFlag__12J2DTevBlock4FUc(); // 1
-extern "C" void setFontUndeleteFlag__12J2DTevBlock4Fv(); // 1
-extern "C" void getType__12J2DTevBlock2Fv(); // 1
-extern "C" s32 getMaxStage__12J2DTevBlock2Fv(); // 1
-extern "C" void setTexNo__12J2DTevBlock2FUlUs(); // 1
-extern "C" void getTexNo__12J2DTevBlock2CFUl(); // 1
-extern "C" void setFontNo__12J2DTevBlock2FUs(); // 1
-extern "C" void getFontNo__12J2DTevBlock2CFv(); // 1
-extern "C" void setTevOrder__12J2DTevBlock2FUl11J2DTevOrder(); // 1
-extern "C" void getTevOrder__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevColor__12J2DTevBlock2FUl13J2DGXColorS10(); // 1
-extern "C" void getTevColor__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevKColor__12J2DTevBlock2FUlQ28JUtility6TColor(); // 1
-extern "C" void getTevKColor__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevKColorSel__12J2DTevBlock2FUlUc(); // 1
-extern "C" void getTevKColorSel__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevKAlphaSel__12J2DTevBlock2FUlUc(); // 1
-extern "C" void getTevKAlphaSel__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevStageNum__12J2DTevBlock2FUc(); // 1
-extern "C" void getTevStageNum__12J2DTevBlock2CFv(); // 1
-extern "C" void setTevStage__12J2DTevBlock2FUl11J2DTevStage(); // 1
-extern "C" void getTevStage__12J2DTevBlock2FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J2DTevBlock2FUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J2DTevBlock2FUl19J2DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J2DTevBlock2FUl(); // 1
-extern "C" void setIndTevStage__12J2DTevBlock2FUl14J2DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J2DTevBlock2FUl(); // 1
-extern "C" void insertTexture__12J2DTevBlock2FUlPC7ResTIMG(); // 1
-extern "C" void getTexture__12J2DTevBlock2FUl(); // 1
-extern "C" void getPalette__12J2DTevBlock2FUl(); // 1
-extern "C" void getFont__12J2DTevBlock2Fv(); // 1
-extern "C" void setUndeleteFlag__12J2DTevBlock2FUc(); // 1
-extern "C" void setFontUndeleteFlag__12J2DTevBlock2Fv(); // 1
-extern "C" void getType__12J2DTevBlock1Fv(); // 1
-extern "C" bool getMaxStage__12J2DTevBlock1Fv(); // 1
-extern "C" void setTexNo__12J2DTevBlock1FUlUs(); // 1
-extern "C" void getTexNo__12J2DTevBlock1CFUl(); // 1
-extern "C" void setFontNo__12J2DTevBlock1FUs(); // 1
-extern "C" void getFontNo__12J2DTevBlock1CFv(); // 1
-extern "C" void setTevOrder__12J2DTevBlock1FUl11J2DTevOrder(); // 1
-extern "C" void getTevOrder__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevColor__12J2DTevBlock1FUl13J2DGXColorS10(); // 1
-extern "C" void getTevColor__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevKColor__12J2DTevBlock1FUlQ28JUtility6TColor(); // 1
-extern "C" void getTevKColor__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevKColorSel__12J2DTevBlock1FUlUc(); // 1
-extern "C" void getTevKColorSel__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevKAlphaSel__12J2DTevBlock1FUlUc(); // 1
-extern "C" void getTevKAlphaSel__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevStageNum__12J2DTevBlock1FUc(); // 1
-extern "C" bool getTevStageNum__12J2DTevBlock1CFv(); // 1
-extern "C" void setTevStage__12J2DTevBlock1FUl11J2DTevStage(); // 1
-extern "C" void getTevStage__12J2DTevBlock1FUl(); // 1
-extern "C" void setTevSwapModeInfo__12J2DTevBlock1FUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__12J2DTevBlock1FUl19J2DTevSwapModeTable(); // 1
-extern "C" void getTevSwapModeTable__12J2DTevBlock1FUl(); // 1
-extern "C" void setIndTevStage__12J2DTevBlock1FUl14J2DIndTevStage(); // 1
-extern "C" void getIndTevStage__12J2DTevBlock1FUl(); // 1
-extern "C" void insertTexture__12J2DTevBlock1FUlPC7ResTIMG(); // 1
-extern "C" void getTexture__12J2DTevBlock1FUl(); // 1
-extern "C" void getPalette__12J2DTevBlock1FUl(); // 1
-extern "C" void getFont__12J2DTevBlock1Fv(); // 1
-extern "C" void setUndeleteFlag__12J2DTevBlock1FUc(); // 1
-extern "C" void setFontUndeleteFlag__12J2DTevBlock1Fv(); // 1
-extern "C" void initialize__11J2DTevBlockFv(); // 1
-extern "C" void loadTexture__11J2DTevBlockF11_GXTexMapIDUl(); // 1
-extern "C" void setFontNo__11J2DTevBlockFUs(); // 1
-extern "C" void setTevOrder__11J2DTevBlockFUl11J2DTevOrder(); // 1
-extern "C" void setTevKColorSel__11J2DTevBlockFUlUc(); // 1
-extern "C" void setTevKAlphaSel__11J2DTevBlockFUlUc(); // 1
-extern "C" void setTevStageNum__11J2DTevBlockFUc(); // 1
-extern "C" void setTevStage__11J2DTevBlockFUl11J2DTevStage(); // 1
-extern "C" void setTevSwapModeInfo__11J2DTevBlockFUl18J2DTevSwapModeInfo(); // 1
-extern "C" void setTevSwapModeTable__11J2DTevBlockFUl19J2DTevSwapModeTable(); // 1
-extern "C" void setIndTevStage__11J2DTevBlockFUl14J2DIndTevStage(); // 1
-extern "C" bool insertTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
-extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette(); // 1
-extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
-extern "C" bool setTexture__11J2DTevBlockFUlP10JUTTexture(); // 1
-extern "C" bool setTexture__11J2DTevBlockFUlPC7ResTIMG(); // 1
-extern "C" bool removeTexture__11J2DTevBlockFUl(); // 1
-extern "C" bool setFont__11J2DTevBlockFP7JUTFont(); // 1
-extern "C" bool setFont__11J2DTevBlockFP7ResFONT(); // 1
-extern "C" bool setPalette__11J2DTevBlockFUlPC7ResTLUT(); // 1
-extern "C" bool prepareTexture__11J2DTevBlockFUc(); // 1
-extern "C" bool getFont__11J2DTevBlockFv(); // 1
-extern "C" void shiftDeleteFlag__11J2DTevBlockFUcb(); // 1
-extern "C" void setUndeleteFlag__11J2DTevBlockFUc(); // 1
-extern "C" void setFontUndeleteFlag__11J2DTevBlockFv(); // 1
+extern "C" void initialize__13J2DColorBlockFv();
+extern "C" void setGX__13J2DColorBlockFv();
+extern "C" void initialize__14J2DTexGenBlockFv();
+extern "C" void setGX__14J2DTexGenBlockFv();
+extern "C" void __dt__14J2DTexGenBlockFv();
+extern "C" void setTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
+extern "C" void getTexMtx__14J2DTexGenBlockFUlR9J2DTexMtx();
+extern "C" bool getTexture__11J2DTevBlockFUl();
+extern "C" bool getPalette__11J2DTevBlockFUl();
+extern "C" void __ct__12J2DTevBlock1Fv();
+extern "C" void __dt__12J2DTevBlock1Fv();
+extern "C" void initialize__12J2DTevBlock1Fv();
+extern "C" void prepareTexture__12J2DTevBlock1FUc();
+extern "C" void insertTexture__12J2DTevBlock1FUlPC7ResTIMGP10JUTPalette();
+extern "C" void insertTexture__12J2DTevBlock1FUlP10JUTTexture();
+extern "C" void setTexture__12J2DTevBlock1FUlPC7ResTIMG();
+extern "C" void setTexture__12J2DTevBlock1FUlP10JUTTexture();
+extern "C" void removeTexture__12J2DTevBlock1FUl();
+extern "C" void setFont__12J2DTevBlock1FP7ResFONT();
+extern "C" void setFont__12J2DTevBlock1FP7JUTFont();
+extern "C" void setPalette__12J2DTevBlock1FUlPC7ResTLUT();
+extern "C" void shiftDeleteFlag__12J2DTevBlock1FUcb();
+extern "C" void setGX__12J2DTevBlock1Fv();
+extern "C" void loadTexture__12J2DTevBlock1F11_GXTexMapIDUl();
+extern "C" void __ct__12J2DTevBlock2Fv();
+extern "C" void __dt__12J2DTevBlock2Fv();
+extern "C" void initialize__12J2DTevBlock2Fv();
+extern "C" void prepareTexture__12J2DTevBlock2FUc();
+extern "C" void insertTexture__12J2DTevBlock2FUlPC7ResTIMGP10JUTPalette();
+extern "C" void insertTexture__12J2DTevBlock2FUlP10JUTTexture();
+extern "C" void setTexture__12J2DTevBlock2FUlPC7ResTIMG();
+extern "C" void setTexture__12J2DTevBlock2FUlP10JUTTexture();
+extern "C" void removeTexture__12J2DTevBlock2FUl();
+extern "C" void setFont__12J2DTevBlock2FP7ResFONT();
+extern "C" void setFont__12J2DTevBlock2FP7JUTFont();
+extern "C" void setPalette__12J2DTevBlock2FUlPC7ResTLUT();
+extern "C" void shiftDeleteFlag__12J2DTevBlock2FUcb();
+extern "C" void setGX__12J2DTevBlock2Fv();
+extern "C" void loadTexture__12J2DTevBlock2F11_GXTexMapIDUl();
+extern "C" void __ct__12J2DTevBlock4Fv();
+extern "C" void __dt__12J2DTevBlock4Fv();
+extern "C" void initialize__12J2DTevBlock4Fv();
+extern "C" void prepareTexture__12J2DTevBlock4FUc();
+extern "C" void insertTexture__12J2DTevBlock4FUlPC7ResTIMGP10JUTPalette();
+extern "C" void insertTexture__12J2DTevBlock4FUlP10JUTTexture();
+extern "C" void setTexture__12J2DTevBlock4FUlPC7ResTIMG();
+extern "C" void setTexture__12J2DTevBlock4FUlP10JUTTexture();
+extern "C" void removeTexture__12J2DTevBlock4FUl();
+extern "C" void setFont__12J2DTevBlock4FP7ResFONT();
+extern "C" void setFont__12J2DTevBlock4FP7JUTFont();
+extern "C" void setPalette__12J2DTevBlock4FUlPC7ResTLUT();
+extern "C" void shiftDeleteFlag__12J2DTevBlock4FUcb();
+extern "C" void setGX__12J2DTevBlock4Fv();
+extern "C" void loadTexture__12J2DTevBlock4F11_GXTexMapIDUl();
+extern "C" void __ct__12J2DTevBlock8Fv();
+extern "C" void __dt__12J2DTevBlock8Fv();
+extern "C" void initialize__12J2DTevBlock8Fv();
+extern "C" void prepareTexture__12J2DTevBlock8FUc();
+extern "C" void insertTexture__12J2DTevBlock8FUlPC7ResTIMGP10JUTPalette();
+extern "C" void insertTexture__12J2DTevBlock8FUlP10JUTTexture();
+extern "C" void setTexture__12J2DTevBlock8FUlPC7ResTIMG();
+extern "C" void setTexture__12J2DTevBlock8FUlP10JUTTexture();
+extern "C" void removeTexture__12J2DTevBlock8FUl();
+extern "C" void setFont__12J2DTevBlock8FP7ResFONT();
+extern "C" void setFont__12J2DTevBlock8FP7JUTFont();
+extern "C" void setPalette__12J2DTevBlock8FUlPC7ResTLUT();
+extern "C" void shiftDeleteFlag__12J2DTevBlock8FUcb();
+extern "C" void setGX__12J2DTevBlock8Fv();
+extern "C" void loadTexture__12J2DTevBlock8F11_GXTexMapIDUl();
+extern "C" void __ct__13J2DTevBlock16Fv();
+extern "C" void __dt__13J2DTevBlock16Fv();
+extern "C" void initialize__13J2DTevBlock16Fv();
+extern "C" void prepareTexture__13J2DTevBlock16FUc();
+extern "C" void insertTexture__13J2DTevBlock16FUlPC7ResTIMGP10JUTPalette();
+extern "C" void insertTexture__13J2DTevBlock16FUlP10JUTTexture();
+extern "C" void setTexture__13J2DTevBlock16FUlPC7ResTIMG();
+extern "C" void setTexture__13J2DTevBlock16FUlP10JUTTexture();
+extern "C" void removeTexture__13J2DTevBlock16FUl();
+extern "C" void setFont__13J2DTevBlock16FP7ResFONT();
+extern "C" void setFont__13J2DTevBlock16FP7JUTFont();
+extern "C" void setPalette__13J2DTevBlock16FUlPC7ResTLUT();
+extern "C" void shiftDeleteFlag__13J2DTevBlock16FUcb();
+extern "C" void setGX__13J2DTevBlock16Fv();
+extern "C" void loadTexture__13J2DTevBlock16F11_GXTexMapIDUl();
+extern "C" void initialize__15J2DIndBlockFullFv();
+extern "C" void setGX__15J2DIndBlockFullFv();
+extern "C" void initialize__10J2DPEBlockFv();
+extern "C" void setGX__10J2DPEBlockFv();
+extern "C" void __ct__14J2DIndTevStageFv();
+extern "C" void __ct__19J2DTevSwapModeTableFv();
+extern "C" void __ct__11J2DTevStageFv();
+extern "C" void setTevStageInfo__11J2DTevStageFRC15J2DTevStageInfo();
+extern "C" void __ct__11J2DTevOrderFv();
+extern "C" void __ct__13J2DGXColorS10Fv();
+extern "C" void getType__15J2DIndBlockFullFv();
+extern "C" void setIndTexStageNum__15J2DIndBlockFullFUc();
+extern "C" void getIndTexStageNum__15J2DIndBlockFullCFv();
+extern "C" void setIndTexOrder__15J2DIndBlockFullFUl14J2DIndTexOrder();
+extern "C" void getIndTexOrder__15J2DIndBlockFullFUl();
+extern "C" void setIndTexMtx__15J2DIndBlockFullFUl12J2DIndTexMtx();
+extern "C" void getIndTexMtx__15J2DIndBlockFullFUl();
+extern "C" void setIndTexCoordScale__15J2DIndBlockFullFUl19J2DIndTexCoordScale();
+extern "C" void getIndTexCoordScale__15J2DIndBlockFullFUl();
+extern "C" void __dt__15J2DIndBlockFullFv();
+extern "C" void getType__13J2DTevBlock16Fv();
+extern "C" s32 getMaxStage__13J2DTevBlock16Fv();
+extern "C" void setTexNo__13J2DTevBlock16FUlUs();
+extern "C" void getTexNo__13J2DTevBlock16CFUl();
+extern "C" void setFontNo__13J2DTevBlock16FUs();
+extern "C" void getFontNo__13J2DTevBlock16CFv();
+extern "C" void setTevOrder__13J2DTevBlock16FUl11J2DTevOrder();
+extern "C" void getTevOrder__13J2DTevBlock16FUl();
+extern "C" void setTevColor__13J2DTevBlock16FUl13J2DGXColorS10();
+extern "C" void getTevColor__13J2DTevBlock16FUl();
+extern "C" void setTevKColor__13J2DTevBlock16FUlQ28JUtility6TColor();
+extern "C" void getTevKColor__13J2DTevBlock16FUl();
+extern "C" void setTevKColorSel__13J2DTevBlock16FUlUc();
+extern "C" void getTevKColorSel__13J2DTevBlock16FUl();
+extern "C" void setTevKAlphaSel__13J2DTevBlock16FUlUc();
+extern "C" void getTevKAlphaSel__13J2DTevBlock16FUl();
+extern "C" void setTevStageNum__13J2DTevBlock16FUc();
+extern "C" void getTevStageNum__13J2DTevBlock16CFv();
+extern "C" void setTevStage__13J2DTevBlock16FUl11J2DTevStage();
+extern "C" void getTevStage__13J2DTevBlock16FUl();
+extern "C" void setTevSwapModeInfo__13J2DTevBlock16FUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__13J2DTevBlock16FUl19J2DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__13J2DTevBlock16FUl();
+extern "C" void setIndTevStage__13J2DTevBlock16FUl14J2DIndTevStage();
+extern "C" void getIndTevStage__13J2DTevBlock16FUl();
+extern "C" void insertTexture__13J2DTevBlock16FUlPC7ResTIMG();
+extern "C" void getTexture__13J2DTevBlock16FUl();
+extern "C" void getPalette__13J2DTevBlock16FUl();
+extern "C" void getFont__13J2DTevBlock16Fv();
+extern "C" void setUndeleteFlag__13J2DTevBlock16FUc();
+extern "C" void setFontUndeleteFlag__13J2DTevBlock16Fv();
+extern "C" void getType__12J2DTevBlock8Fv();
+extern "C" s32 getMaxStage__12J2DTevBlock8Fv();
+extern "C" void setTexNo__12J2DTevBlock8FUlUs();
+extern "C" void getTexNo__12J2DTevBlock8CFUl();
+extern "C" void setFontNo__12J2DTevBlock8FUs();
+extern "C" void getFontNo__12J2DTevBlock8CFv();
+extern "C" void setTevOrder__12J2DTevBlock8FUl11J2DTevOrder();
+extern "C" void getTevOrder__12J2DTevBlock8FUl();
+extern "C" void setTevColor__12J2DTevBlock8FUl13J2DGXColorS10();
+extern "C" void getTevColor__12J2DTevBlock8FUl();
+extern "C" void setTevKColor__12J2DTevBlock8FUlQ28JUtility6TColor();
+extern "C" void getTevKColor__12J2DTevBlock8FUl();
+extern "C" void setTevKColorSel__12J2DTevBlock8FUlUc();
+extern "C" void getTevKColorSel__12J2DTevBlock8FUl();
+extern "C" void setTevKAlphaSel__12J2DTevBlock8FUlUc();
+extern "C" void getTevKAlphaSel__12J2DTevBlock8FUl();
+extern "C" void setTevStageNum__12J2DTevBlock8FUc();
+extern "C" void getTevStageNum__12J2DTevBlock8CFv();
+extern "C" void setTevStage__12J2DTevBlock8FUl11J2DTevStage();
+extern "C" void getTevStage__12J2DTevBlock8FUl();
+extern "C" void setTevSwapModeInfo__12J2DTevBlock8FUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J2DTevBlock8FUl19J2DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J2DTevBlock8FUl();
+extern "C" void setIndTevStage__12J2DTevBlock8FUl14J2DIndTevStage();
+extern "C" void getIndTevStage__12J2DTevBlock8FUl();
+extern "C" void insertTexture__12J2DTevBlock8FUlPC7ResTIMG();
+extern "C" void getTexture__12J2DTevBlock8FUl();
+extern "C" void getPalette__12J2DTevBlock8FUl();
+extern "C" void getFont__12J2DTevBlock8Fv();
+extern "C" void setUndeleteFlag__12J2DTevBlock8FUc();
+extern "C" void setFontUndeleteFlag__12J2DTevBlock8Fv();
+extern "C" void getType__12J2DTevBlock4Fv();
+extern "C" s32 getMaxStage__12J2DTevBlock4Fv();
+extern "C" void setTexNo__12J2DTevBlock4FUlUs();
+extern "C" void getTexNo__12J2DTevBlock4CFUl();
+extern "C" void setFontNo__12J2DTevBlock4FUs();
+extern "C" void getFontNo__12J2DTevBlock4CFv();
+extern "C" void setTevOrder__12J2DTevBlock4FUl11J2DTevOrder();
+extern "C" void getTevOrder__12J2DTevBlock4FUl();
+extern "C" void setTevColor__12J2DTevBlock4FUl13J2DGXColorS10();
+extern "C" void getTevColor__12J2DTevBlock4FUl();
+extern "C" void setTevKColor__12J2DTevBlock4FUlQ28JUtility6TColor();
+extern "C" void getTevKColor__12J2DTevBlock4FUl();
+extern "C" void setTevKColorSel__12J2DTevBlock4FUlUc();
+extern "C" void getTevKColorSel__12J2DTevBlock4FUl();
+extern "C" void setTevKAlphaSel__12J2DTevBlock4FUlUc();
+extern "C" void getTevKAlphaSel__12J2DTevBlock4FUl();
+extern "C" void setTevStageNum__12J2DTevBlock4FUc();
+extern "C" void getTevStageNum__12J2DTevBlock4CFv();
+extern "C" void setTevStage__12J2DTevBlock4FUl11J2DTevStage();
+extern "C" void getTevStage__12J2DTevBlock4FUl();
+extern "C" void setTevSwapModeInfo__12J2DTevBlock4FUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J2DTevBlock4FUl19J2DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J2DTevBlock4FUl();
+extern "C" void setIndTevStage__12J2DTevBlock4FUl14J2DIndTevStage();
+extern "C" void getIndTevStage__12J2DTevBlock4FUl();
+extern "C" void insertTexture__12J2DTevBlock4FUlPC7ResTIMG();
+extern "C" void getTexture__12J2DTevBlock4FUl();
+extern "C" void getPalette__12J2DTevBlock4FUl();
+extern "C" void getFont__12J2DTevBlock4Fv();
+extern "C" void setUndeleteFlag__12J2DTevBlock4FUc();
+extern "C" void setFontUndeleteFlag__12J2DTevBlock4Fv();
+extern "C" void getType__12J2DTevBlock2Fv();
+extern "C" s32 getMaxStage__12J2DTevBlock2Fv();
+extern "C" void setTexNo__12J2DTevBlock2FUlUs();
+extern "C" void getTexNo__12J2DTevBlock2CFUl();
+extern "C" void setFontNo__12J2DTevBlock2FUs();
+extern "C" void getFontNo__12J2DTevBlock2CFv();
+extern "C" void setTevOrder__12J2DTevBlock2FUl11J2DTevOrder();
+extern "C" void getTevOrder__12J2DTevBlock2FUl();
+extern "C" void setTevColor__12J2DTevBlock2FUl13J2DGXColorS10();
+extern "C" void getTevColor__12J2DTevBlock2FUl();
+extern "C" void setTevKColor__12J2DTevBlock2FUlQ28JUtility6TColor();
+extern "C" void getTevKColor__12J2DTevBlock2FUl();
+extern "C" void setTevKColorSel__12J2DTevBlock2FUlUc();
+extern "C" void getTevKColorSel__12J2DTevBlock2FUl();
+extern "C" void setTevKAlphaSel__12J2DTevBlock2FUlUc();
+extern "C" void getTevKAlphaSel__12J2DTevBlock2FUl();
+extern "C" void setTevStageNum__12J2DTevBlock2FUc();
+extern "C" void getTevStageNum__12J2DTevBlock2CFv();
+extern "C" void setTevStage__12J2DTevBlock2FUl11J2DTevStage();
+extern "C" void getTevStage__12J2DTevBlock2FUl();
+extern "C" void setTevSwapModeInfo__12J2DTevBlock2FUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J2DTevBlock2FUl19J2DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J2DTevBlock2FUl();
+extern "C" void setIndTevStage__12J2DTevBlock2FUl14J2DIndTevStage();
+extern "C" void getIndTevStage__12J2DTevBlock2FUl();
+extern "C" void insertTexture__12J2DTevBlock2FUlPC7ResTIMG();
+extern "C" void getTexture__12J2DTevBlock2FUl();
+extern "C" void getPalette__12J2DTevBlock2FUl();
+extern "C" void getFont__12J2DTevBlock2Fv();
+extern "C" void setUndeleteFlag__12J2DTevBlock2FUc();
+extern "C" void setFontUndeleteFlag__12J2DTevBlock2Fv();
+extern "C" void getType__12J2DTevBlock1Fv();
+extern "C" bool getMaxStage__12J2DTevBlock1Fv();
+extern "C" void setTexNo__12J2DTevBlock1FUlUs();
+extern "C" void getTexNo__12J2DTevBlock1CFUl();
+extern "C" void setFontNo__12J2DTevBlock1FUs();
+extern "C" void getFontNo__12J2DTevBlock1CFv();
+extern "C" void setTevOrder__12J2DTevBlock1FUl11J2DTevOrder();
+extern "C" void getTevOrder__12J2DTevBlock1FUl();
+extern "C" void setTevColor__12J2DTevBlock1FUl13J2DGXColorS10();
+extern "C" void getTevColor__12J2DTevBlock1FUl();
+extern "C" void setTevKColor__12J2DTevBlock1FUlQ28JUtility6TColor();
+extern "C" void getTevKColor__12J2DTevBlock1FUl();
+extern "C" void setTevKColorSel__12J2DTevBlock1FUlUc();
+extern "C" void getTevKColorSel__12J2DTevBlock1FUl();
+extern "C" void setTevKAlphaSel__12J2DTevBlock1FUlUc();
+extern "C" void getTevKAlphaSel__12J2DTevBlock1FUl();
+extern "C" void setTevStageNum__12J2DTevBlock1FUc();
+extern "C" bool getTevStageNum__12J2DTevBlock1CFv();
+extern "C" void setTevStage__12J2DTevBlock1FUl11J2DTevStage();
+extern "C" void getTevStage__12J2DTevBlock1FUl();
+extern "C" void setTevSwapModeInfo__12J2DTevBlock1FUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__12J2DTevBlock1FUl19J2DTevSwapModeTable();
+extern "C" void getTevSwapModeTable__12J2DTevBlock1FUl();
+extern "C" void setIndTevStage__12J2DTevBlock1FUl14J2DIndTevStage();
+extern "C" void getIndTevStage__12J2DTevBlock1FUl();
+extern "C" void insertTexture__12J2DTevBlock1FUlPC7ResTIMG();
+extern "C" void getTexture__12J2DTevBlock1FUl();
+extern "C" void getPalette__12J2DTevBlock1FUl();
+extern "C" void getFont__12J2DTevBlock1Fv();
+extern "C" void setUndeleteFlag__12J2DTevBlock1FUc();
+extern "C" void setFontUndeleteFlag__12J2DTevBlock1Fv();
+extern "C" void initialize__11J2DTevBlockFv();
+extern "C" void loadTexture__11J2DTevBlockF11_GXTexMapIDUl();
+extern "C" void setFontNo__11J2DTevBlockFUs();
+extern "C" void setTevOrder__11J2DTevBlockFUl11J2DTevOrder();
+extern "C" void setTevKColorSel__11J2DTevBlockFUlUc();
+extern "C" void setTevKAlphaSel__11J2DTevBlockFUlUc();
+extern "C" void setTevStageNum__11J2DTevBlockFUc();
+extern "C" void setTevStage__11J2DTevBlockFUl11J2DTevStage();
+extern "C" void setTevSwapModeInfo__11J2DTevBlockFUl18J2DTevSwapModeInfo();
+extern "C" void setTevSwapModeTable__11J2DTevBlockFUl19J2DTevSwapModeTable();
+extern "C" void setIndTevStage__11J2DTevBlockFUl14J2DIndTevStage();
+extern "C" bool insertTexture__11J2DTevBlockFUlP10JUTTexture();
+extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMGP10JUTPalette();
+extern "C" bool insertTexture__11J2DTevBlockFUlPC7ResTIMG();
+extern "C" bool setTexture__11J2DTevBlockFUlP10JUTTexture();
+extern "C" bool setTexture__11J2DTevBlockFUlPC7ResTIMG();
+extern "C" bool removeTexture__11J2DTevBlockFUl();
+extern "C" bool setFont__11J2DTevBlockFP7JUTFont();
+extern "C" bool setFont__11J2DTevBlockFP7ResFONT();
+extern "C" bool setPalette__11J2DTevBlockFUlPC7ResTLUT();
+extern "C" bool prepareTexture__11J2DTevBlockFUc();
+extern "C" bool getFont__11J2DTevBlockFv();
+extern "C" void shiftDeleteFlag__11J2DTevBlockFUcb();
+extern "C" void setUndeleteFlag__11J2DTevBlockFUc();
+extern "C" void setFontUndeleteFlag__11J2DTevBlockFv();
 extern "C" extern void* __vt__15J2DIndBlockFull[14];
 extern "C" extern void* __vt__11J2DTevBlock[47];
 extern "C" extern void* __vt__14J2DTexGenBlock[3 + 1 /* padding */];
@@ -723,77 +726,94 @@ extern "C" extern void* __vt__14J2DTexGenBlock[3 + 1 /* padding */];
 // External References:
 // 
 
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
+extern "C" extern u8 const j2dDefaultTevStageInfo[20];
+extern "C" extern u8 const j2dDefaultIndTevStageInfo[12];
+extern "C" extern void* __vt__11J2DIndBlock[14];
+extern "C" extern u32 j2dDefaultColInfo;
+extern "C" extern u32 j2dDefaultTevOrderInfoNull;
+extern "C" extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
+extern "C" extern u8 j2dDefaultTevColor[8];
+extern "C" extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
+extern "C" extern u32 j2dDefaultTevKColor;
+extern "C" extern u8 j2dDefaultTevSwapMode[4];
+extern "C" extern u32 j2dDefaultTevSwapModeTable;
+extern "C" extern u32 j2dDefaultBlendInfo;
+extern "C" extern u8 data_804561A4[4];
+extern "C" extern u32 j2dDefaultColorChanInfo;
+extern "C" extern u8 struct_804561AC[4];
 
-extern "C" void __ct__Q28JUtility6TColorFv(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dt__10JUTTextureFv(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc(); // 1
-extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette(); // 1
-extern "C" void attachPalette__10JUTTextureFP10JUTPalette(); // 1
-extern "C" void load__10JUTTextureF11_GXTexMapID(); // 1
-extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT(); // 1
-extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap(); // 1
-extern "C" void load__9J2DTexMtxFUl(); // 1
-extern "C" void calc__9J2DTexMtxFv(); // 1
-extern "C" void load__14J2DIndTevStageFUc(); // 1
-extern "C" void load__12J2DIndTexMtxFUc(); // 1
-extern "C" void load__19J2DIndTexCoordScaleFUc(); // 1
-extern "C" void load__14J2DIndTexOrderFUc(); // 1
-extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevStage__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevColor__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevOrder__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKColorSel__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKColor__11J2DTevBlockFUl(); // 1
-extern "C" void getFontNo__11J2DTevBlockCFv(); // 1
-extern "C" void getTexNo__11J2DTevBlockCFUl(); // 1
-extern "C" bool getTevStageNum__11J2DTevBlockCFv(); // 1
-extern "C" bool getIndTevStage__11J2DTevBlockFUl(); // 1
-extern "C" void __dt__11J2DTevBlockFv(); // 1
-extern "C" void setGX__11J2DTevBlockFv(); // 1
-extern "C" void setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor(); // 1
-extern "C" void setTevColor__11J2DTevBlockFUl13J2DGXColorS10(); // 1
-extern "C" void setTexNo__11J2DTevBlockFUlUs(); // 1
-extern "C" void __dt__19J2DIndTexCoordScaleFv(); // 1
-extern "C" void __dt__12J2DIndTexMtxFv(); // 1
-extern "C" void GXSetTexCoordGen2(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetChanMatColor(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevColorIn(); // 1
-extern "C" void GXSetTevAlphaIn(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetTevColorS10(); // 1
-extern "C" void GXSetTevKColor(); // 1
-extern "C" void GXSetTevKColorSel(); // 1
-extern "C" void GXSetTevKAlphaSel(); // 1
-extern "C" void GXSetTevSwapMode(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetAlphaCompare(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetDither(); // 1
-extern "C" void __destroy_arr(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__Q28JUtility6TColorFv();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void __dt__10JUTTextureFv();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGUc();
+extern "C" void storeTIMG__10JUTTextureFPC7ResTIMGP10JUTPalette();
+extern "C" void attachPalette__10JUTTextureFP10JUTPalette();
+extern "C" void load__10JUTTextureF11_GXTexMapID();
+extern "C" void storeTLUT__10JUTPaletteF7_GXTlutP7ResTLUT();
+extern "C" void __ct__10JUTResFontFPC7ResFONTP7JKRHeap();
+extern "C" void load__9J2DTexMtxFUl();
+extern "C" void calc__9J2DTexMtxFv();
+extern "C" void load__14J2DIndTevStageFUc();
+extern "C" void load__12J2DIndTexMtxFUc();
+extern "C" void load__19J2DIndTexCoordScaleFUc();
+extern "C" void load__14J2DIndTexOrderFUc();
+extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl();
+extern "C" bool getTevStage__11J2DTevBlockFUl();
+extern "C" bool getTevColor__11J2DTevBlockFUl();
+extern "C" bool getTevOrder__11J2DTevBlockFUl();
+extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl();
+extern "C" bool getTevKColorSel__11J2DTevBlockFUl();
+extern "C" bool getTevKColor__11J2DTevBlockFUl();
+extern "C" void getFontNo__11J2DTevBlockCFv();
+extern "C" void getTexNo__11J2DTevBlockCFUl();
+extern "C" bool getTevStageNum__11J2DTevBlockCFv();
+extern "C" bool getIndTevStage__11J2DTevBlockFUl();
+extern "C" void __dt__11J2DTevBlockFv();
+extern "C" void setGX__11J2DTevBlockFv();
+extern "C" void setTevKColor__11J2DTevBlockFUlQ28JUtility6TColor();
+extern "C" void setTevColor__11J2DTevBlockFUl13J2DGXColorS10();
+extern "C" void setTexNo__11J2DTevBlockFUlUs();
+extern "C" void __dt__19J2DIndTexCoordScaleFv();
+extern "C" void __dt__12J2DIndTexMtxFv();
+extern "C" void GXSetTexCoordGen2();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetChanMatColor();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevColorIn();
+extern "C" void GXSetTevAlphaIn();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetTevColorS10();
+extern "C" void GXSetTevKColor();
+extern "C" void GXSetTevKColorSel();
+extern "C" void GXSetTevKAlphaSel();
+extern "C" void GXSetTevSwapMode();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetAlphaCompare();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetDither();
+extern "C" void __destroy_arr();
+extern "C" void __construct_array();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
 extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
 extern "C" extern u8 const j2dDefaultTevStageInfo[20];

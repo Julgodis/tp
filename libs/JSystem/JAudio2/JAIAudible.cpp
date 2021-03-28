@@ -19,17 +19,18 @@ struct JAIAudible {
 // Forward References:
 // 
 
+extern "C" extern void* __vt__10JAIAudible[5 + 1 /* padding */];
 
-extern "C" void __dt__10JAIAudibleFv(); // 1
+extern "C" void __dt__10JAIAudibleFv();
 extern "C" extern void* __vt__10JAIAudible[5 + 1 /* padding */];
 
 // 
 // External References:
 // 
 
-void operator delete(void*); // 2
+void operator delete(void*);
 
-extern "C" void __dl__FPv(); // 1
+extern "C" void __dl__FPv();
 
 // 
 // Declarations:

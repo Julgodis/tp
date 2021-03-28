@@ -65,30 +65,47 @@ struct J2DIndBlock {
 // Forward References:
 // 
 
+extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
+extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
+extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
+extern "C" extern u8 const j2dDefaultTevStageInfo[20];
+extern "C" extern u8 const j2dDefaultIndTevStageInfo[12];
+extern "C" extern u32 j2dDefaultColInfo;
+extern "C" extern u32 j2dDefaultTevOrderInfoNull;
+extern "C" extern u16 j2dDefaultIndTexOrderNull[1 + 1 /* padding */];
+extern "C" extern u8 j2dDefaultTevColor[8];
+extern "C" extern u8 j2dDefaultIndTexCoordScaleInfo[2 + 2 /* padding */];
+extern "C" extern u32 j2dDefaultTevKColor;
+extern "C" extern u8 j2dDefaultTevSwapMode[4];
+extern "C" extern u32 j2dDefaultTevSwapModeTable;
+extern "C" extern u32 j2dDefaultBlendInfo;
+extern "C" extern u8 data_804561A4[4];
+extern "C" extern u32 j2dDefaultColorChanInfo;
+extern "C" extern u8 struct_804561AC[4];
 
-extern "C" void load__9J2DTexMtxFUl(); // 1
-extern "C" void calc__9J2DTexMtxFv(); // 1
-extern "C" void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f(); // 1
-extern "C" void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f(); // 1
-extern "C" void load__14J2DIndTevStageFUc(); // 1
-extern "C" void load__12J2DIndTexMtxFUc(); // 1
-extern "C" void load__19J2DIndTexCoordScaleFUc(); // 1
-extern "C" void load__14J2DIndTexOrderFUc(); // 1
-extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevStage__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevColor__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevOrder__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKColorSel__11J2DTevBlockFUl(); // 1
-extern "C" bool getTevKColor__11J2DTevBlockFUl(); // 1
-extern "C" void getFontNo__11J2DTevBlockCFv(); // 1
-extern "C" void getTexNo__11J2DTevBlockCFUl(); // 1
-extern "C" bool getTevStageNum__11J2DTevBlockCFv(); // 1
-extern "C" bool getIndTevStage__11J2DTevBlockFUl(); // 1
-extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexMtx__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexOrder__11J2DIndBlockFUl(); // 1
-extern "C" bool getIndTexStageNum__11J2DIndBlockCFv(); // 1
+extern "C" void load__9J2DTexMtxFUl();
+extern "C" void calc__9J2DTexMtxFv();
+extern "C" void getTextureMtx__9J2DTexMtxFRC17J2DTextureSRTInfo3VecPA4_f();
+extern "C" void getTextureMtxMaya__9J2DTexMtxFRC17J2DTextureSRTInfoPA4_f();
+extern "C" void load__14J2DIndTevStageFUc();
+extern "C" void load__12J2DIndTexMtxFUc();
+extern "C" void load__19J2DIndTexCoordScaleFUc();
+extern "C" void load__14J2DIndTexOrderFUc();
+extern "C" bool getTevSwapModeTable__11J2DTevBlockFUl();
+extern "C" bool getTevStage__11J2DTevBlockFUl();
+extern "C" bool getTevColor__11J2DTevBlockFUl();
+extern "C" bool getTevOrder__11J2DTevBlockFUl();
+extern "C" bool getTevKAlphaSel__11J2DTevBlockFUl();
+extern "C" bool getTevKColorSel__11J2DTevBlockFUl();
+extern "C" bool getTevKColor__11J2DTevBlockFUl();
+extern "C" void getFontNo__11J2DTevBlockCFv();
+extern "C" void getTexNo__11J2DTevBlockCFUl();
+extern "C" bool getTevStageNum__11J2DTevBlockCFv();
+extern "C" bool getIndTevStage__11J2DTevBlockFUl();
+extern "C" bool getIndTexCoordScale__11J2DIndBlockFUl();
+extern "C" bool getIndTexMtx__11J2DIndBlockFUl();
+extern "C" bool getIndTexOrder__11J2DIndBlockFUl();
+extern "C" bool getIndTexStageNum__11J2DIndBlockCFv();
 extern "C" extern u8 const j2dDefaultTexCoordInfo[32];
 extern "C" extern u8 const j2dDefaultTexMtxInfo[36];
 extern "C" extern u8 const j2dDefaultIndTexMtxInfo[28];
@@ -112,15 +129,15 @@ extern "C" extern u8 struct_804561AC[4];
 // 
 
 
-extern "C" void GXSetTevIndirect(); // 1
-extern "C" void GXSetIndTexMtx(); // 1
-extern "C" void GXSetIndTexCoordScale(); // 1
-extern "C" void GXSetIndTexOrder(); // 1
-extern "C" void GXLoadTexMtxImm(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void cos(); // 1
-extern "C" void sin(); // 1
+extern "C" void GXSetTevIndirect();
+extern "C" void GXSetIndTexMtx();
+extern "C" void GXSetIndTexCoordScale();
+extern "C" void GXSetIndTexOrder();
+extern "C" void GXLoadTexMtxImm();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" void cos();
+extern "C" void sin();
 
 // 
 // Declarations:

@@ -28,25 +28,33 @@ struct JUTFader {
 // Forward References:
 // 
 
-static bool dOvlpFd_Draw(overlap1_class*); // 2
-static void dOvlpFd_startFadeIn(int); // 2
-static void dOvlpFd_FadeOut(overlap1_class*); // 2
-static void dOvlpFd_Wait(overlap1_class*); // 2
-static void dOvlpFd_FadeIn(overlap1_class*); // 2
-static void dOvlpFd_Execute(overlap1_class*); // 2
-static bool dOvlpFd_IsDelete(overlap1_class*); // 2
-static bool dOvlpFd_Delete(overlap1_class*); // 2
-static void dOvlpFd_Create(void*); // 2
+static bool dOvlpFd_Draw(overlap1_class*);
+static void dOvlpFd_startFadeIn(int);
+static void dOvlpFd_FadeOut(overlap1_class*);
+static void dOvlpFd_Wait(overlap1_class*);
+static void dOvlpFd_FadeIn(overlap1_class*);
+static void dOvlpFd_Execute(overlap1_class*);
+static bool dOvlpFd_IsDelete(overlap1_class*);
+static bool dOvlpFd_Delete(overlap1_class*);
+static void dOvlpFd_Create(void*);
+extern "C" extern void* g_profile_OVERLAP0[10];
+extern "C" extern void* g_profile_OVERLAP1[10];
+extern "C" extern void* g_profile_OVERLAP6[10];
+extern "C" extern void* g_profile_OVERLAP7[10];
+extern "C" extern void* g_profile_OVERLAP8[10];
+extern "C" extern void* g_profile_OVERLAP9[10];
+extern "C" extern void* g_profile_OVERLAP10[10];
+extern "C" extern void* g_profile_OVERLAP11[10 + 1 /* padding */];
 
-extern "C" static bool dOvlpFd_Draw__FP14overlap1_class(); // 1
-extern "C" static void dOvlpFd_startFadeIn__Fi(); // 1
-extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class(); // 1
-extern "C" static void dOvlpFd_Wait__FP14overlap1_class(); // 1
-extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class(); // 1
-extern "C" static void dOvlpFd_Execute__FP14overlap1_class(); // 1
-extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class(); // 1
-extern "C" static bool dOvlpFd_Delete__FP14overlap1_class(); // 1
-extern "C" static void dOvlpFd_Create__FPv(); // 1
+extern "C" static bool dOvlpFd_Draw__FP14overlap1_class();
+extern "C" static void dOvlpFd_startFadeIn__Fi();
+extern "C" static void dOvlpFd_FadeOut__FP14overlap1_class();
+extern "C" static void dOvlpFd_Wait__FP14overlap1_class();
+extern "C" static void dOvlpFd_FadeIn__FP14overlap1_class();
+extern "C" static void dOvlpFd_Execute__FP14overlap1_class();
+extern "C" static bool dOvlpFd_IsDelete__FP14overlap1_class();
+extern "C" static bool dOvlpFd_Delete__FP14overlap1_class();
+extern "C" static void dOvlpFd_Create__FPv();
 extern "C" extern void* g_profile_OVERLAP0[10];
 extern "C" extern void* g_profile_OVERLAP1[10];
 extern "C" extern void* g_profile_OVERLAP6[10];
@@ -60,18 +68,22 @@ extern "C" extern void* g_profile_OVERLAP11[10 + 1 /* padding */];
 // External References:
 // 
 
-void mDoAud_setFadeOutStart(u8); // 2
-void mDoAud_setFadeInStart(u8); // 2
-void fopOvlpM_SceneIsStart(); // 2
-void fopOvlpM_IsOutReq(overlap_task_class*); // 2
-void fopOvlpM_Done(overlap_task_class*); // 2
+void mDoAud_setFadeOutStart(u8);
+void mDoAud_setFadeInStart(u8);
+void fopOvlpM_SceneIsStart();
+void fopOvlpM_IsOutReq(overlap_task_class*);
+void fopOvlpM_Done(overlap_task_class*);
+extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 sManager__10JFWDisplay[4];
 
-extern "C" void mDoAud_setFadeOutStart__FUc(); // 1
-extern "C" void mDoAud_setFadeInStart__FUc(); // 1
-extern "C" void fopOvlpM_SceneIsStart__Fv(); // 1
-extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class(); // 1
-extern "C" void fopOvlpM_Done__FP18overlap_task_class(); // 1
-extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi(); // 1
+extern "C" void mDoAud_setFadeOutStart__FUc();
+extern "C" void mDoAud_setFadeInStart__FUc();
+extern "C" void fopOvlpM_SceneIsStart__Fv();
+extern "C" void fopOvlpM_IsOutReq__FP18overlap_task_class();
+extern "C" void fopOvlpM_Done__FP18overlap_task_class();
+extern "C" void setStatus__8JUTFaderFQ28JUTFader7EStatusi();
 extern "C" extern void* g_fopOvlp_Method[5 + 1 /* padding */];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

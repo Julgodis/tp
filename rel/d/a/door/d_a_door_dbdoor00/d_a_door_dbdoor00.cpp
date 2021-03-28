@@ -64,14 +64,14 @@ struct dStage_roomControl_c {
 struct J3DModelData {
 };
 
+struct dKy_tevstr_c {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -148,45 +148,51 @@ struct J3DJoint {
 // Forward References:
 // 
 
-static void nodeCallBack(J3DJoint*, int); // 2
-static void CheckCreateHeap(fopAc_ac_c*); // 2
-static void daDbdoor00_Draw(daDbDoor00_c*); // 2
-static void daDbdoor00_Execute(daDbDoor00_c*); // 2
-static bool daDbdoor00_IsDelete(daDbDoor00_c*); // 2
-static void daDbdoor00_Delete(daDbDoor00_c*); // 2
-static void daDbdoor00_Create(fopAc_ac_c*); // 2
+static void nodeCallBack(J3DJoint*, int);
+static void CheckCreateHeap(fopAc_ac_c*);
+static void daDbdoor00_Draw(daDbDoor00_c*);
+static void daDbdoor00_Execute(daDbDoor00_c*);
+static bool daDbdoor00_IsDelete(daDbDoor00_c*);
+static void daDbdoor00_Delete(daDbDoor00_c*);
+static void daDbdoor00_Create(fopAc_ac_c*);
+extern "C" extern u32 const lit_3953;
+extern "C" extern u32 const lit_3954;
+extern "C" extern u32 const lit_3955;
+extern "C" extern u32 const lit_3956;
+extern "C" extern u32 lit_1787[1 + 4 /* padding */];
+extern "C" extern void* g_profile_DBDOOR[12];
 
-extern "C" static void nodeCallBack__FP8J3DJointi(); // 1
-extern "C" void getAlwaysArcName__12daDbDoor00_cFv(); // 1
-extern "C" void getDzb__12daDbDoor00_cFv(); // 1
-extern "C" void getDummyBmdName__12daDbDoor00_cFv(); // 1
-extern "C" void getBmdArcName__12daDbDoor00_cFv(); // 1
-extern "C" void getBmdName__12daDbDoor00_cFv(); // 1
-extern "C" void getDoorModelData__12daDbDoor00_cFv(); // 1
-extern "C" static void CheckCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void CreateHeap__12daDbDoor00_cFv(); // 1
-extern "C" void calcMtx__12daDbDoor00_cFv(); // 1
-extern "C" void CreateInit__12daDbDoor00_cFv(); // 1
-extern "C" void create__12daDbDoor00_cFv(); // 1
-extern "C" void getDemoAction__12daDbDoor00_cFv(); // 1
-extern "C" void demoProc__12daDbDoor00_cFv(); // 1
-extern "C" void checkArea__12daDbDoor00_cFv(); // 1
-extern "C" bool checkUnlock__12daDbDoor00_cFv(); // 1
-extern "C" void actionWait__12daDbDoor00_cFv(); // 1
-extern "C" void actionLockWait__12daDbDoor00_cFv(); // 1
-extern "C" void actionLockOff__12daDbDoor00_cFv(); // 1
-extern "C" void actionLockDemo__12daDbDoor00_cFv(); // 1
-extern "C" void actionCloseWait__12daDbDoor00_cFv(); // 1
-extern "C" void actionOpen__12daDbDoor00_cFv(); // 1
-extern "C" void execute__12daDbDoor00_cFv(); // 1
-extern "C" void checkDraw__12daDbDoor00_cFv(); // 1
-extern "C" void draw__12daDbDoor00_cFv(); // 1
-extern "C" void Delete__12daDbDoor00_cFv(); // 1
-extern "C" static void daDbdoor00_Draw__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Execute__FP12daDbDoor00_c(); // 1
-extern "C" static bool daDbdoor00_IsDelete__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Delete__FP12daDbDoor00_c(); // 1
-extern "C" static void daDbdoor00_Create__FP10fopAc_ac_c(); // 1
+extern "C" static void nodeCallBack__FP8J3DJointi();
+extern "C" void getAlwaysArcName__12daDbDoor00_cFv();
+extern "C" void getDzb__12daDbDoor00_cFv();
+extern "C" void getDummyBmdName__12daDbDoor00_cFv();
+extern "C" void getBmdArcName__12daDbDoor00_cFv();
+extern "C" void getBmdName__12daDbDoor00_cFv();
+extern "C" void getDoorModelData__12daDbDoor00_cFv();
+extern "C" static void CheckCreateHeap__FP10fopAc_ac_c();
+extern "C" void CreateHeap__12daDbDoor00_cFv();
+extern "C" void calcMtx__12daDbDoor00_cFv();
+extern "C" void CreateInit__12daDbDoor00_cFv();
+extern "C" void create__12daDbDoor00_cFv();
+extern "C" void getDemoAction__12daDbDoor00_cFv();
+extern "C" void demoProc__12daDbDoor00_cFv();
+extern "C" void checkArea__12daDbDoor00_cFv();
+extern "C" bool checkUnlock__12daDbDoor00_cFv();
+extern "C" void actionWait__12daDbDoor00_cFv();
+extern "C" void actionLockWait__12daDbDoor00_cFv();
+extern "C" void actionLockOff__12daDbDoor00_cFv();
+extern "C" void actionLockDemo__12daDbDoor00_cFv();
+extern "C" void actionCloseWait__12daDbDoor00_cFv();
+extern "C" void actionOpen__12daDbDoor00_cFv();
+extern "C" void execute__12daDbDoor00_cFv();
+extern "C" void checkDraw__12daDbDoor00_cFv();
+extern "C" void draw__12daDbDoor00_cFv();
+extern "C" void Delete__12daDbDoor00_cFv();
+extern "C" static void daDbdoor00_Draw__FP12daDbDoor00_c();
+extern "C" static void daDbdoor00_Execute__FP12daDbDoor00_c();
+extern "C" static bool daDbdoor00_IsDelete__FP12daDbDoor00_c();
+extern "C" static void daDbdoor00_Delete__FP12daDbDoor00_c();
+extern "C" static void daDbdoor00_Create__FP10fopAc_ac_c();
 extern "C" extern u32 const lit_3953;
 extern "C" extern u32 const lit_3954;
 extern "C" extern u32 const lit_3955;
@@ -198,72 +204,81 @@ extern "C" extern void* g_profile_DBDOOR[12];
 // External References:
 // 
 
-void mDoMtx_YrotS(f32 (* )[4], s16); // 2
-void mDoMtx_YrotM(f32 (* )[4], s16); // 2
-void mDoExt_modelUpdateDL(J3DModel*); // 2
-void mDoExt_J3DModel__create(J3DModelData*, u32, u32); // 2
-void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32); // 2
-void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*); // 2
-void fopAcM_orderOtherEvent(fopAc_ac_c*, char const*, u16, u16, u16); // 2
-void dComIfG_resLoad(request_of_phase_process_class*, char const*); // 2
-void dComIfG_resDelete(request_of_phase_process_class*, char const*); // 2
-void dComIfGp_getReverb(int); // 2
-void dComIfG_getStageRes(char const*); // 2
-void cLib_addCalcAngleS2(s16*, s16, s16, s16); // 2
-void* operator new(u32); // 2
+void mDoMtx_YrotS(f32 (* )[4], s16);
+void mDoMtx_YrotM(f32 (* )[4], s16);
+void mDoExt_modelUpdateDL(J3DModel*);
+void mDoExt_J3DModel__create(J3DModelData*, u32, u32);
+void fopAcM_entrySolidHeap(fopAc_ac_c*, int (*)(fopAc_ac_c*), u32);
+void fopAcM_seenActorAngleY(fopAc_ac_c const*, fopAc_ac_c const*);
+void fopAcM_orderOtherEvent(fopAc_ac_c*, char const*, u16, u16, u16);
+void dComIfG_resLoad(request_of_phase_process_class*, char const*);
+void dComIfG_resDelete(request_of_phase_process_class*, char const*);
+void dComIfGp_getReverb(int);
+void dComIfG_getStageRes(char const*);
+void cLib_addCalcAngleS2(s16*, s16, s16, s16);
+void* operator new(u32);
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 now__14mDoMtx_stack_c[48];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_env_light[4880];
+extern "C" extern u8 j3dSys[284];
+extern "C" extern u8 mCurrentMtx__6J3DSys[48];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoMtx_YrotS__FPA4_fs(); // 1
-extern "C" void mDoMtx_YrotM__FPA4_fs(); // 1
-extern "C" void push__14mDoMtx_stack_cFv(); // 1
-extern "C" void pop__14mDoMtx_stack_cFv(); // 1
-extern "C" void transM__14mDoMtx_stack_cFfff(); // 1
-extern "C" void mDoExt_modelUpdateDL__FP8J3DModel(); // 1
-extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl(); // 1
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl(); // 1
-extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c(); // 1
-extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs(); // 1
-extern "C" void checkRoomDisp__20dStage_roomControl_cCFi(); // 1
-extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void dComIfG_getStageRes__FPCc(); // 1
-extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c(); // 1
-extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void setEventName__11dEvt_info_cFPc(); // 1
-extern "C" void endCheckOld__16dEvent_manager_cFPCc(); // 1
-extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci(); // 1
-extern "C" void getIsAddvance__16dEvent_manager_cFi(); // 1
-extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii(); // 1
-extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci(); // 1
-extern "C" void cutEnd__16dEvent_manager_cFi(); // 1
-extern "C" void setGoal__16dEvent_manager_cFP4cXyz(); // 1
-extern "C" void Release__4cBgSFP9dBgW_Base(); // 1
-extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c(); // 1
-extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f(); // 1
-extern "C" void __ct__4dBgWFv(); // 1
-extern "C" void Move__4dBgWFv(); // 1
-extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c(); // 1
-extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void cLib_addCalcAngleS2__FPssss(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void getIndex__10JUTNameTabCFPCc(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void PSMTXTrans(); // 1
-extern "C" void PSMTXMultVec(); // 1
-extern "C" void __ptmf_scall(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void sprintf(); // 1
+extern "C" void mDoMtx_YrotS__FPA4_fs();
+extern "C" void mDoMtx_YrotM__FPA4_fs();
+extern "C" void push__14mDoMtx_stack_cFv();
+extern "C" void pop__14mDoMtx_stack_cFv();
+extern "C" void transM__14mDoMtx_stack_cFfff();
+extern "C" void mDoExt_modelUpdateDL__FP8J3DModel();
+extern "C" void mDoExt_J3DModel__create__FP12J3DModelDataUlUl();
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void fopAcM_entrySolidHeap__FP10fopAc_ac_cPFP10fopAc_ac_c_iUl();
+extern "C" void fopAcM_seenActorAngleY__FPC10fopAc_ac_cPC10fopAc_ac_c();
+extern "C" void fopAcM_orderOtherEvent__FP10fopAc_ac_cPCcUsUsUs();
+extern "C" void checkRoomDisp__20dStage_roomControl_cCFi();
+extern "C" void dComIfG_resLoad__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfG_resDelete__FP30request_of_phase_process_classPCc();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void dComIfG_getStageRes__FPCc();
+extern "C" void getDoorModel__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getFRoomNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getExitNo__13door_param2_cFP10fopAc_ac_c();
+extern "C" void getRes__14dRes_control_cFPCcPCcP11dRes_info_ci();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void setEventName__11dEvt_info_cFPc();
+extern "C" void endCheckOld__16dEvent_manager_cFPCc();
+extern "C" void getMyStaffId__16dEvent_manager_cFPCcP10fopAc_ac_ci();
+extern "C" void getIsAddvance__16dEvent_manager_cFi();
+extern "C" void getMyActIdx__16dEvent_manager_cFiPCPCciii();
+extern "C" void getMySubstanceP__16dEvent_manager_cFiPCci();
+extern "C" void cutEnd__16dEvent_manager_cFi();
+extern "C" void setGoal__16dEvent_manager_cFP4cXyz();
+extern "C" void Release__4cBgSFP9dBgW_Base();
+extern "C" void Regist__4dBgSFP9dBgW_BaseP10fopAc_ac_c();
+extern "C" void Set__4cBgWFP6cBgD_tUlPA3_A4_f();
+extern "C" void __ct__4dBgWFv();
+extern "C" void Move__4dBgWFv();
+extern "C" void settingTevStruct__18dScnKy_env_light_cFiP4cXyzP12dKy_tevstr_c();
+extern "C" void setLightTevColorType_MAJI__18dScnKy_env_light_cFP12J3DModelDataP12dKy_tevstr_c();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void cLib_addCalcAngleS2__FPssss();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void getIndex__10JUTNameTabCFPCc();
+extern "C" void PSMTXCopy();
+extern "C" void PSMTXTrans();
+extern "C" void PSMTXMultVec();
+extern "C" void __ptmf_scall();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void sprintf();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 now__14mDoMtx_stack_c[48];

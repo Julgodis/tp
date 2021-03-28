@@ -35,31 +35,37 @@ struct dSv_info_c {
 // Forward References:
 // 
 
-static bool daTag_Chk_Draw(daTag_Chk_c*); // 2
-static void daTag_Chk_Execute(daTag_Chk_c*); // 2
-static bool daTag_Chk_IsDelete(daTag_Chk_c*); // 2
-static void daTag_Chk_Delete(daTag_Chk_c*); // 2
-static void daTag_Chk_Create(fopAc_ac_c*); // 2
+static bool daTag_Chk_Draw(daTag_Chk_c*);
+static void daTag_Chk_Execute(daTag_Chk_c*);
+static bool daTag_Chk_IsDelete(daTag_Chk_c*);
+static void daTag_Chk_Delete(daTag_Chk_c*);
+static void daTag_Chk_Create(fopAc_ac_c*);
+extern "C" extern void* g_profile_TAG_CHKPOINT[12];
 
-extern "C" void execute__11daTag_Chk_cFv(); // 1
-extern "C" static bool daTag_Chk_Draw__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Execute__FP11daTag_Chk_c(); // 1
-extern "C" static bool daTag_Chk_IsDelete__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Delete__FP11daTag_Chk_c(); // 1
-extern "C" static void daTag_Chk_Create__FP10fopAc_ac_c(); // 1
+extern "C" void execute__11daTag_Chk_cFv();
+extern "C" static bool daTag_Chk_Draw__FP11daTag_Chk_c();
+extern "C" static void daTag_Chk_Execute__FP11daTag_Chk_c();
+extern "C" static bool daTag_Chk_IsDelete__FP11daTag_Chk_c();
+extern "C" static void daTag_Chk_Delete__FP11daTag_Chk_c();
+extern "C" static void daTag_Chk_Create__FP10fopAc_ac_c();
 extern "C" extern void* g_profile_TAG_CHKPOINT[12];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u32 __float_nan;
+extern "C" extern u8 struct_80450D64[4];
 
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void isSwitch__10dSv_info_cCFii(); // 1
-extern "C" void setLookPos__9daPy_py_cFP4cXyz(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void isSwitch__10dSv_info_cCFii();
+extern "C" void setLookPos__9daPy_py_cFP4cXyz();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

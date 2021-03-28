@@ -12,22 +12,22 @@
 // 
 
 
-extern "C" static void cb(); // 1
-extern "C" void __fstLoad(); // 1
+extern "C" static void cb();
+extern "C" void __fstLoad();
 
 // 
 // External References:
 // 
 
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSReport(); // 1
-extern "C" void OSGetArenaHi(); // 1
-extern "C" void OSSetArenaHi(); // 1
-extern "C" void DVDReadAbsAsyncForBS(); // 1
-extern "C" void DVDReadDiskID(); // 1
-extern "C" void DVDReset(); // 1
-extern "C" void DVDGetDriveStatus(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSReport();
+extern "C" void OSGetArenaHi();
+extern "C" void OSSetArenaHi();
+extern "C" void DVDReadAbsAsyncForBS();
+extern "C" void DVDReadDiskID();
+extern "C" void DVDReset();
+extern "C" void DVDGetDriveStatus();
 
 // 
 // Declarations:

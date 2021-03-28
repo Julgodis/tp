@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void atan(); // 1
+extern "C" void atan();
 
 // 
 // External References:

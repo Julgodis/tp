@@ -27,6 +27,9 @@ struct dCcMassS_Obj {
 	/* 800855C8 */ dCcMassS_Obj();
 };
 
+struct Vec {
+};
+
 struct dCcMassS_HitInf {
 	/* 80085334 */ void ClearPointer();
 };
@@ -35,9 +38,6 @@ struct cM3dGCps {
 	/* 8026EF88 */ cM3dGCps();
 	/* 8026EFA4 */ ~cM3dGCps();
 	/* 8026F080 */ void SetCps(cM3dGCps const&);
-};
-
-struct Vec {
 };
 
 struct dCcMassS_Mng {
@@ -96,59 +96,69 @@ struct cCcD_CpsAttr {
 // 
 
 
-extern "C" void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v(); // 1
-extern "C" void Clear__12dCcMassS_ObjFv(); // 1
-extern "C" void ClearPointer__15dCcMassS_HitInfFv(); // 1
-extern "C" void __ct__12dCcMassS_MngFv(); // 1
-extern "C" void __dt__12cCcD_CpsAttrFv(); // 1
-extern "C" void __dt__12cCcD_CylAttrFv(); // 1
-extern "C" void __dt__14cCcD_ShapeAttrFv(); // 1
-extern "C" void __ct__12dCcMassS_ObjFv(); // 1
-extern "C" void Ct__12dCcMassS_MngFv(); // 1
-extern "C" void SetAttr__12dCcMassS_MngFffUcUc(); // 1
-extern "C" void Prepare__12dCcMassS_MngFv(); // 1
-extern "C" void Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf(); // 1
-extern "C" void Clear__12dCcMassS_MngFv(); // 1
-extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc(); // 1
-extern "C" void SetCam__12dCcMassS_MngFRC8cM3dGCps(); // 1
-extern "C" void GetResultCam__12dCcMassS_MngCFv(); // 1
-extern "C" void GetCamTopPos__12dCcMassS_MngFP3Vec(); // 1
+extern "C" void Set__12dCcMassS_ObjFP8cCcD_ObjUcPFP10fopAc_ac_cP4cXyzUl_v();
+extern "C" void Clear__12dCcMassS_ObjFv();
+extern "C" void ClearPointer__15dCcMassS_HitInfFv();
+extern "C" void __ct__12dCcMassS_MngFv();
+extern "C" void __dt__12cCcD_CpsAttrFv();
+extern "C" void __dt__12cCcD_CylAttrFv();
+extern "C" void __dt__14cCcD_ShapeAttrFv();
+extern "C" void __ct__12dCcMassS_ObjFv();
+extern "C" void Ct__12dCcMassS_MngFv();
+extern "C" void SetAttr__12dCcMassS_MngFffUcUc();
+extern "C" void Prepare__12dCcMassS_MngFv();
+extern "C" void Chk__12dCcMassS_MngFP4cXyzPP10fopAc_ac_cP15dCcMassS_HitInf();
+extern "C" void Clear__12dCcMassS_MngFv();
+extern "C" void Set__12dCcMassS_MngFP8cCcD_ObjUc();
+extern "C" void SetCam__12dCcMassS_MngFRC8cM3dGCps();
+extern "C" void GetResultCam__12dCcMassS_MngCFv();
+extern "C" void GetCamTopPos__12dCcMassS_MngFP3Vec();
 
 // 
 // External References:
 // 
 
-void cM_rndF(f32); // 2
-void operator delete(void*); // 2
+void cM_rndF(f32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dCcMassS_Obj[3];
+extern "C" extern void* __vt__15cCcD_DivideArea[3];
+extern "C" extern void* __vt__8cM3dGCyl[3];
+extern "C" extern void* __vt__8cM3dGAab[3];
+extern "C" extern void* __vt__15cCcD_DivideInfo[3];
+extern "C" extern void* __vt__12dCcMassS_Mng[3 + 1 /* padding */];
+extern "C" extern void* __vt__12cCcD_CylAttr[25];
+extern "C" extern void* __vt__12cCcD_CpsAttr[25];
+extern "C" extern void* __vt__14cCcD_ShapeAttr[22];
+extern "C" extern f32 G_CM3D_F_ABS_MIN[1 + 1 /* padding */];
 
-extern "C" void __dt__12dCcMassS_ObjFv(); // 1
-extern "C" void Set__15cCcD_DivideInfoFUlUlUl(); // 1
-extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo(); // 1
-extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab(); // 1
-extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl(); // 1
-extern "C" void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab(); // 1
-extern "C" void PlusCcMove__9cCcD_SttsFfff(); // 1
-extern "C" void cM_rndF__Ff(); // 1
-extern "C" void ClearForMinMax__8cM3dGAabFv(); // 1
-extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab(); // 1
-extern "C" void __ct__8cM3dGCpsFv(); // 1
-extern "C" void __dt__8cM3dGCpsFv(); // 1
-extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps(); // 1
-extern "C" void SetC__8cM3dGCylFRC4cXyz(); // 1
-extern "C" void SetH__8cM3dGCylFf(); // 1
-extern "C" void SetR__8cM3dGCylFf(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECMag(); // 1
-extern "C" void PSVECSquareDistance(); // 1
-extern "C" void __construct_array(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void __dt__12dCcMassS_ObjFv();
+extern "C" void Set__15cCcD_DivideInfoFUlUlUl();
+extern "C" void Chk__15cCcD_DivideInfoCFRC15cCcD_DivideInfo();
+extern "C" void SetArea__15cCcD_DivideAreaFRC8cM3dGAab();
+extern "C" void CalcDivideInfo__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAabUl();
+extern "C" void CalcDivideInfoOverArea__15cCcD_DivideAreaFP15cCcD_DivideInfoRC8cM3dGAab();
+extern "C" void PlusCcMove__9cCcD_SttsFfff();
+extern "C" void cM_rndF__Ff();
+extern "C" void ClearForMinMax__8cM3dGAabFv();
+extern "C" void SetMinMax__8cM3dGAabFRC8cM3dGAab();
+extern "C" void __ct__8cM3dGCpsFv();
+extern "C" void __dt__8cM3dGCpsFv();
+extern "C" void SetCps__8cM3dGCpsFRC8cM3dGCps();
+extern "C" void SetC__8cM3dGCylFRC4cXyz();
+extern "C" void SetH__8cM3dGCylFf();
+extern "C" void SetR__8cM3dGCylFf();
+extern "C" void __dl__FPv();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECMag();
+extern "C" void PSVECSquareDistance();
+extern "C" void __construct_array();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_29();
 extern "C" extern void* __vt__12dCcMassS_Obj[3];
 extern "C" extern void* __vt__15cCcD_DivideArea[3];
 extern "C" extern void* __vt__8cM3dGCyl[3];

@@ -35,20 +35,20 @@ struct d2DBSplinePath {
 // 
 
 
-extern "C" void Init__14d2DBSplinePathFll(); // 1
-extern "C" void Step__14d2DBSplinePathFv(); // 1
-extern "C" void Calc__14d2DBSplinePathFP4cXyz(); // 1
-extern "C" void Calc__14d2DBSplinePathFPf(); // 1
-extern "C" void Spot__14d2DBSplinePathFPff(); // 1
-extern "C" void Init__10dPathCurveFP5dPath(); // 1
-extern "C" void bSpline2__10dPathCurveFf(); // 1
+extern "C" void Init__14d2DBSplinePathFll();
+extern "C" void Step__14d2DBSplinePathFv();
+extern "C" void Calc__14d2DBSplinePathFP4cXyz();
+extern "C" void Calc__14d2DBSplinePathFPf();
+extern "C" void Spot__14d2DBSplinePathFPff();
+extern "C" void Init__10dPathCurveFP5dPath();
+extern "C" void bSpline2__10dPathCurveFf();
 
 // 
 // External References:
 // 
 
 
-extern "C" void PSVECAdd(); // 1
+extern "C" void PSVECAdd();
 
 // 
 // Declarations:

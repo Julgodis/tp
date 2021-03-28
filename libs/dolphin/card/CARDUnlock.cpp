@@ -12,32 +12,33 @@
 // 
 
 
-extern "C" static void bitrev(); // 1
-extern "C" static void ReadArrayUnlock(); // 1
-extern "C" static void DummyLen(); // 1
-extern "C" void __CARDUnlock(); // 1
-extern "C" static void InitCallback(); // 1
-extern "C" static void DoneCallback(); // 1
+extern "C" static void bitrev();
+extern "C" static void ReadArrayUnlock();
+extern "C" static void DummyLen();
+extern "C" void __CARDUnlock();
+extern "C" static void InitCallback();
+extern "C" static void DoneCallback();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __CARDBlock[544];
 
-SECTION_INIT void memset(); // 1
-extern "C" void DSPAddTask(); // 1
-extern "C" void DCInvalidateRange(); // 1
-extern "C" void DCFlushRange(); // 1
-extern "C" void OSGetTick(); // 1
-extern "C" void EXIImmEx(); // 1
-extern "C" void EXIProbe(); // 1
-extern "C" void EXISelect(); // 1
-extern "C" void EXIDeselect(); // 1
-extern "C" void EXIUnlock(); // 1
-extern "C" void DSPCheckMailToDSP(); // 1
-extern "C" void DSPSendMailToDSP(); // 1
-extern "C" void __CARDReadStatus(); // 1
-extern "C" void __CARDMountCallback(); // 1
+SECTION_INIT void memset();
+extern "C" void DSPAddTask();
+extern "C" void DCInvalidateRange();
+extern "C" void DCFlushRange();
+extern "C" void OSGetTick();
+extern "C" void EXIImmEx();
+extern "C" void EXIProbe();
+extern "C" void EXISelect();
+extern "C" void EXIDeselect();
+extern "C" void EXIUnlock();
+extern "C" void DSPCheckMailToDSP();
+extern "C" void DSPSendMailToDSP();
+extern "C" void __CARDReadStatus();
+extern "C" void __CARDMountCallback();
 extern "C" extern u8 __CARDBlock[544];
 
 // 

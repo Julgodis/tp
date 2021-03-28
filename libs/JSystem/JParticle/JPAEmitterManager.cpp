@@ -36,22 +36,19 @@ struct JPAResourceManager {
 	/* 80273E68 */ void getResource(u16) const;
 };
 
-struct JPAEmitterWorkData {
-};
-
 struct JPAParticleCallBack {
-};
-
-struct JPADrawInfo {
 };
 
 struct JPAEmitterCallBack {
 };
 
-struct JPABaseEmitter;
+struct JPADrawInfo {
+};
+
 struct JKRHeap {
 };
 
+struct JPABaseEmitter;
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -82,6 +79,9 @@ struct JPABaseEmitter {
 	/* 8027EC60 */ void deleteAllParticle();
 };
 
+struct JPAEmitterWorkData {
+};
+
 struct JPAResource {
 	/* 802755E8 */ void calc(JPAEmitterWorkData*, JPABaseEmitter*);
 	/* 80275A94 */ void draw(JPAEmitterWorkData*, JPABaseEmitter*);
@@ -100,67 +100,68 @@ struct JPANode__template0 {
 // 
 
 
-extern "C" void __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc(); // 1
-extern "C" void func_8027DEBC(); // 1
-extern "C" void calc__17JPAEmitterManagerFUc(); // 1
-extern "C" void draw__17JPAEmitterManagerFPC11JPADrawInfoUc(); // 1
-extern "C" void forceDeleteAllEmitter__17JPAEmitterManagerFv(); // 1
-extern "C" void forceDeleteGroupEmitter__17JPAEmitterManagerFUc(); // 1
-extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter(); // 1
-extern "C" void entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc(); // 1
-extern "C" void clearResourceManager__17JPAEmitterManagerFUc(); // 1
-extern "C" void calcYBBCam__17JPAEmitterManagerFv(); // 1
-extern "C" void func_8027E51C(); // 1
-extern "C" void func_8027E54C(); // 1
-extern "C" void func_8027E588(); // 1
-extern "C" void func_8027E598(); // 1
-extern "C" void __dt__14JPABaseEmitterFv(); // 1
-extern "C" void __ct__14JPABaseEmitterFv(); // 1
+extern "C" void __ct__17JPAEmitterManagerFUlUlP7JKRHeapUcUc();
+extern "C" void func_8027DEBC();
+extern "C" void calc__17JPAEmitterManagerFUc();
+extern "C" void draw__17JPAEmitterManagerFPC11JPADrawInfoUc();
+extern "C" void forceDeleteAllEmitter__17JPAEmitterManagerFv();
+extern "C" void forceDeleteGroupEmitter__17JPAEmitterManagerFUc();
+extern "C" void forceDeleteEmitter__17JPAEmitterManagerFP14JPABaseEmitter();
+extern "C" void entryResourceManager__17JPAEmitterManagerFP18JPAResourceManagerUc();
+extern "C" void clearResourceManager__17JPAEmitterManagerFUc();
+extern "C" void calcYBBCam__17JPAEmitterManagerFv();
+extern "C" void func_8027E51C();
+extern "C" void func_8027E54C();
+extern "C" void func_8027E588();
+extern "C" void func_8027E598();
+extern "C" void __dt__14JPABaseEmitterFv();
+extern "C" void __ct__14JPABaseEmitterFv();
 
 // 
 // External References:
 // 
 
-void* operator new(u32, JKRHeap*, int); // 2
-void* operator new[](u32, JKRHeap*, int); // 2
-void operator delete(void*); // 2
+void* operator new(u32, JKRHeap*, int);
+void* operator new[](u32, JKRHeap*, int);
+void operator delete(void*);
+extern "C" extern u32 __float_epsilon;
 
-extern "C" void getResource__18JPAResourceManagerCFUs(); // 1
-extern "C" void calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter(); // 1
-extern "C" void draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter(); // 1
-extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource(); // 1
-extern "C" void deleteAllParticle__14JPABaseEmitterFv(); // 1
-extern "C" void* __nw__FUlP7JKRHeapi(); // 1
-extern "C" void* __nwa__FUlP7JKRHeapi(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __ct__10JSUPtrLinkFPv(); // 1
-extern "C" void __dt__10JSUPtrLinkFv(); // 1
-extern "C" void __dt__10JSUPtrListFv(); // 1
-extern "C" void initiate__10JSUPtrListFv(); // 1
-extern "C" void append__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void prepend__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void remove__10JSUPtrListFP10JSUPtrLink(); // 1
-extern "C" void PSMTXCopy(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXClearVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXEnableTexOffsets(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetCoPlanar(); // 1
-extern "C" void GXSetNumChans(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetTevColorOp(); // 1
-extern "C" void GXSetTevAlphaOp(); // 1
-extern "C" void GXSetCurrentMtx(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void getResource__18JPAResourceManagerCFUs();
+extern "C" void calc__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter();
+extern "C" void draw__11JPAResourceFP18JPAEmitterWorkDataP14JPABaseEmitter();
+extern "C" void init__14JPABaseEmitterFP17JPAEmitterManagerP11JPAResource();
+extern "C" void deleteAllParticle__14JPABaseEmitterFv();
+extern "C" void* __nw__FUlP7JKRHeapi();
+extern "C" void* __nwa__FUlP7JKRHeapi();
+extern "C" void __dl__FPv();
+extern "C" void __ct__10JSUPtrLinkFPv();
+extern "C" void __dt__10JSUPtrLinkFv();
+extern "C" void __dt__10JSUPtrListFv();
+extern "C" void initiate__10JSUPtrListFv();
+extern "C" void append__10JSUPtrListFP10JSUPtrLink();
+extern "C" void prepend__10JSUPtrListFP10JSUPtrLink();
+extern "C" void remove__10JSUPtrListFP10JSUPtrLink();
+extern "C" void PSMTXCopy();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXClearVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXEnableTexOffsets();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetCoPlanar();
+extern "C" void GXSetNumChans();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetTevColorOp();
+extern "C" void GXSetTevAlphaOp();
+extern "C" void GXSetCurrentMtx();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_29();
 extern "C" extern u32 __float_epsilon;
 
 // 

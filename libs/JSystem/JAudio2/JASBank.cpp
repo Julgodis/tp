@@ -55,28 +55,32 @@ struct JASBank {
 // 
 
 
-extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
+extern "C" void noteOn__7JASBankFPC7JASBankiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void noteOnOsc__7JASBankFiUcUcUsPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
+extern "C" extern u8 sBankDisposeList__10JASChannel[64];
+extern "C" extern u8 lit_556[12 + 4 /* padding */];
+extern "C" extern u8 struct_80451260[8];
 
-extern "C" void __ct__17JASGenericMemPoolFv(); // 1
-extern "C" void alloc__17JASGenericMemPoolFUl(); // 1
-extern "C" void func_802978DC(); // 1
-extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv(); // 1
-extern "C" void play__10JASChannelFv(); // 1
-extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data(); // 1
-extern "C" void getDacRate__9JASDriverFv(); // 1
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_25(); // 1
+extern "C" void __ct__17JASGenericMemPoolFv();
+extern "C" void alloc__17JASGenericMemPoolFUl();
+extern "C" void func_802978DC();
+extern "C" void __ct__10JASChannelFPFUlP10JASChannelPQ26JASDsp8TChannelPv_vPv();
+extern "C" void play__10JASChannelFv();
+extern "C" void setOscInit__10JASChannelFUlPCQ213JASOscillator4Data();
+extern "C" void getDacRate__9JASDriverFv();
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_25();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_25();
 extern "C" extern u8 data_80431B34[16 + 4 /* padding */];
 extern "C" extern u8 sBankDisposeList__10JASChannel[64];
 extern "C" extern u8 lit_556[12 + 4 /* padding */];

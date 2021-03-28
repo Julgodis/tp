@@ -61,47 +61,47 @@ struct CPaneMgrAlpha {
 // 
 
 
-extern "C" void __ct__13CPaneMgrAlphaFv(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__13CPaneMgrAlphaFv(); // 1
-extern "C" void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap(); // 1
-extern "C" void show__13CPaneMgrAlphaFv(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void isVisible__13CPaneMgrAlphaFv(); // 1
-extern "C" void rateCalc__13CPaneMgrAlphaFssUc(); // 1
-extern "C" void setAlpha__13CPaneMgrAlphaFUc(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc(); // 1
-extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane(); // 1
-extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane(); // 1
-extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc(); // 1
-extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void __dt__17CPaneMgrAlphaMorfFv(); // 1
-extern "C" void initiateAlphaMorf__17CPaneMgrAlphaMorfFv(); // 1
-extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv(); // 1
-extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf(); // 1
-extern "C" void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane(); // 1
-extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef(); // 1
+extern "C" void __ct__13CPaneMgrAlphaFv();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__13CPaneMgrAlphaFv();
+extern "C" void initiateAlpha__13CPaneMgrAlphaFP7J2DPaneP10JKRExpHeap();
+extern "C" void show__13CPaneMgrAlphaFv();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void isVisible__13CPaneMgrAlphaFv();
+extern "C" void rateCalc__13CPaneMgrAlphaFssUc();
+extern "C" void setAlpha__13CPaneMgrAlphaFUc();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void alphaAnime__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void alphaAnimeLoop__13CPaneMgrAlphaFsUcUcUc();
+extern "C" void childPaneCount__13CPaneMgrAlphaFP7J2DPane();
+extern "C" void childPaneGetAlpha__13CPaneMgrAlphaFP7J2DPane();
+extern "C" void childPaneSetAlpha__13CPaneMgrAlphaFP7J2DPaneUc();
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void __dt__17CPaneMgrAlphaMorfFv();
+extern "C" void initiateAlphaMorf__17CPaneMgrAlphaMorfFv();
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
+extern "C" void childPaneBackupAlpha__17CPaneMgrAlphaMorfFP7J2DPane();
+extern "C" void childPaneSetAlphaMorf__17CPaneMgrAlphaMorfFP7J2DPanef();
 
 // 
 // External References:
 // 
 
-void mDoExt_getCurrentHeap(); // 2
-void operator delete(void*); // 2
+void mDoExt_getCurrentHeap();
+void operator delete(void*);
 
-extern "C" void mDoExt_getCurrentHeap__Fv(); // 1
-extern "C" void alloc__7JKRHeapFUli(); // 1
-extern "C" void free__7JKRHeapFPv(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getFirstChildPane__7J2DPaneFv(); // 1
-extern "C" void getNextChildPane__7J2DPaneFv(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
+extern "C" void mDoExt_getCurrentHeap__Fv();
+extern "C" void alloc__7JKRHeapFUli();
+extern "C" void free__7JKRHeapFPv();
+extern "C" void __dl__FPv();
+extern "C" void getFirstChildPane__7J2DPaneFv();
+extern "C" void getNextChildPane__7J2DPaneFv();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
 
 // 
 // Declarations:

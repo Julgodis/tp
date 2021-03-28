@@ -12,33 +12,33 @@
 // 
 
 
-extern "C" void OSInitMutex(); // 1
-extern "C" void OSLockMutex(); // 1
-extern "C" void OSUnlockMutex(); // 1
-extern "C" void __OSUnlockAllMutex(); // 1
-extern "C" void OSTryLockMutex(); // 1
-extern "C" void OSInitCond(); // 1
-extern "C" void OSWaitCond(); // 1
-extern "C" void OSSignalCond(); // 1
-extern "C" static void __OSCheckMutex(); // 1
-extern "C" void __OSCheckDeadLock(); // 1
-extern "C" void __OSCheckMutexes(); // 1
+extern "C" void OSInitMutex();
+extern "C" void OSLockMutex();
+extern "C" void OSUnlockMutex();
+extern "C" void __OSUnlockAllMutex();
+extern "C" void OSTryLockMutex();
+extern "C" void OSInitCond();
+extern "C" void OSWaitCond();
+extern "C" void OSSignalCond();
+extern "C" static void __OSCheckMutex();
+extern "C" void __OSCheckDeadLock();
+extern "C" void __OSCheckMutexes();
 
 // 
 // External References:
 // 
 
 
-extern "C" void OSDisableInterrupts(); // 1
-extern "C" void OSRestoreInterrupts(); // 1
-extern "C" void OSInitThreadQueue(); // 1
-extern "C" void OSGetCurrentThread(); // 1
-extern "C" void OSDisableScheduler(); // 1
-extern "C" void OSEnableScheduler(); // 1
-extern "C" void __OSGetEffectivePriority(); // 1
-extern "C" void __OSPromoteThread(); // 1
-extern "C" void OSSleepThread(); // 1
-extern "C" void OSWakeupThread(); // 1
+extern "C" void OSDisableInterrupts();
+extern "C" void OSRestoreInterrupts();
+extern "C" void OSInitThreadQueue();
+extern "C" void OSGetCurrentThread();
+extern "C" void OSDisableScheduler();
+extern "C" void OSEnableScheduler();
+extern "C" void __OSGetEffectivePriority();
+extern "C" void __OSPromoteThread();
+extern "C" void OSSleepThread();
+extern "C" void OSWakeupThread();
 
 // 
 // Declarations:

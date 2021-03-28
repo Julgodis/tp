@@ -65,58 +65,63 @@ struct cBgS {
 // Forward References:
 // 
 
-static void daTag_Lantern_Create(void*); // 2
-static void daTag_Lantern_Delete(void*); // 2
-static void daTag_Lantern_Execute(void*); // 2
-static void daTag_Lantern_Draw(void*); // 2
-static bool daTag_Lantern_IsDelete(void*); // 2
+static void daTag_Lantern_Create(void*);
+static void daTag_Lantern_Delete(void*);
+static void daTag_Lantern_Execute(void*);
+static void daTag_Lantern_Draw(void*);
+static bool daTag_Lantern_IsDelete(void*);
+extern "C" extern void* g_profile_TAG_LANTERN[12];
 
-extern "C" void __dt__15daTag_Lantern_cFv(); // 1
-extern "C" void create__15daTag_Lantern_cFv(); // 1
-extern "C" void Delete__15daTag_Lantern_cFv(); // 1
-extern "C" void Execute__15daTag_Lantern_cFv(); // 1
-extern "C" bool Draw__15daTag_Lantern_cFv(); // 1
-extern "C" void initialize__15daTag_Lantern_cFv(); // 1
-extern "C" static void daTag_Lantern_Create__FPv(); // 1
-extern "C" static void daTag_Lantern_Delete__FPv(); // 1
-extern "C" static void daTag_Lantern_Execute__FPv(); // 1
-extern "C" static void daTag_Lantern_Draw__FPv(); // 1
-extern "C" static bool daTag_Lantern_IsDelete__FPv(); // 1
-extern "C" void __sinit_d_a_tag_lantern_cpp(); // 1
-extern "C" void __dt__21daTag_Lantern_Param_cFv(); // 1
+extern "C" void __dt__15daTag_Lantern_cFv();
+extern "C" void create__15daTag_Lantern_cFv();
+extern "C" void Delete__15daTag_Lantern_cFv();
+extern "C" void Execute__15daTag_Lantern_cFv();
+extern "C" bool Draw__15daTag_Lantern_cFv();
+extern "C" void initialize__15daTag_Lantern_cFv();
+extern "C" static void daTag_Lantern_Create__FPv();
+extern "C" static void daTag_Lantern_Delete__FPv();
+extern "C" static void daTag_Lantern_Execute__FPv();
+extern "C" static void daTag_Lantern_Draw__FPv();
+extern "C" static bool daTag_Lantern_IsDelete__FPv();
+extern "C" void __sinit_d_a_tag_lantern_cpp();
+extern "C" void __dt__21daTag_Lantern_Param_cFv();
 extern "C" extern void* g_profile_TAG_LANTERN[12];
 
 // 
 // External References:
 // 
 
-void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32); // 2
-void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16); // 2
-void operator delete(void*); // 2
-
-extern "C" void __ct__10fopAc_ac_cFv(); // 1
-extern "C" void __dt__10fopAc_ac_cFv(); // 1
-extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff(); // 1
-extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs(); // 1
-extern "C" void reset__14dEvt_control_cFv(); // 1
-extern "C" void GroundCross__4cBgSFP11cBgS_GndChk(); // 1
-extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo(); // 1
-extern "C" void __ct__10dMsgFlow_cFv(); // 1
-extern "C" void __dt__10dMsgFlow_cFv(); // 1
-extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c(); // 1
-extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci(); // 1
-extern "C" void __ct__11cBgS_GndChkFv(); // 1
-extern "C" void __dt__11cBgS_GndChkFv(); // 1
-extern "C" void SetPos__11cBgS_GndChkFPC4cXyz(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_29(); // 1
+void fopAcM_setCullSizeBox(fopAc_ac_c*, f32, f32, f32, f32, f32, f32);
+void fopAcM_orderSpeakEvent(fopAc_ac_c*, u16, u16);
+void operator delete(void*);
 extern "C" extern void* g_fopAc_Method[8];
 extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 struct_80450D64[4];
-extern "C" void __register_global_object(); // 1
+
+extern "C" void __ct__10fopAc_ac_cFv();
+extern "C" void __dt__10fopAc_ac_cFv();
+extern "C" void fopAcM_setCullSizeBox__FP10fopAc_ac_cffffff();
+extern "C" void fopAcM_orderSpeakEvent__FP10fopAc_ac_cUsUs();
+extern "C" void reset__14dEvt_control_cFv();
+extern "C" void GroundCross__4cBgSFP11cBgS_GndChk();
+extern "C" void GetPolyColor__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void GetRoomId__4dBgSFRC13cBgS_PolyInfo();
+extern "C" void __ct__10dMsgFlow_cFv();
+extern "C" void __dt__10dMsgFlow_cFv();
+extern "C" void init__10dMsgFlow_cFP10fopAc_ac_ciiPP10fopAc_ac_c();
+extern "C" void doFlow__10dMsgFlow_cFP10fopAc_ac_cPP10fopAc_ac_ci();
+extern "C" void __ct__11cBgS_GndChkFv();
+extern "C" void __dt__11cBgS_GndChkFv();
+extern "C" void SetPos__11cBgS_GndChkFPC4cXyz();
+extern "C" void __dl__FPv();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_29();
+extern "C" extern void* g_fopAc_Method[8];
+extern "C" extern void* g_fpcLf_Method[5 + 1 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 struct_80450D64[4];
+extern "C" void __register_global_object();
 
 // 
 // Declarations:

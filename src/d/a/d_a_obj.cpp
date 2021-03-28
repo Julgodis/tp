@@ -72,10 +72,10 @@ struct dPa_modelEcallBack {
 struct dPa_levelEcallBack {
 };
 
-struct _GXColor {
+struct csXyz {
 };
 
-struct csXyz {
+struct _GXColor {
 };
 
 struct dPa_control_c {
@@ -105,64 +105,73 @@ struct Z2SeMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_a_d_a_obj__stringBase0;
 
-extern "C" void eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi(); // 1
-extern "C" void make_eff_break_kotubo__5daObjFP10fopAc_ac_c(); // 1
-extern "C" void make_eff_break_kotubo2__5daObjFP10fopAc_ac_c(); // 1
-extern "C" void make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c(); // 1
-extern "C" void make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c(); // 1
-extern "C" void posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff(); // 1
-extern "C" static void func_800373F0(); // 1
-extern "C" static void func_800374EC(); // 1
-extern "C" void posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz(); // 1
-extern "C" void quat_rotBaseY__5daObjFP10QuaternionRC4cXyz(); // 1
-extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl(); // 1
-extern "C" void GetCoCP__12cCcD_CylAttrFv(); // 1
-extern "C" void GetCoCP__12cCcD_SphAttrFv(); // 1
+extern "C" void eff_break_tsubo__5daObjFP10fopAc_ac_c4cXyzi();
+extern "C" void make_eff_break_kotubo__5daObjFP10fopAc_ac_c();
+extern "C" void make_eff_break_kotubo2__5daObjFP10fopAc_ac_c();
+extern "C" void make_eff_break_gm_kotubo__5daObjFP10fopAc_ac_c();
+extern "C" void make_eff_break_gm_ootubo__5daObjFP10fopAc_ac_c();
+extern "C" void posMoveF_stream__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzff();
+extern "C" static void func_800373F0();
+extern "C" static void func_800374EC();
+extern "C" void posMoveF_grade__5daObjFP10fopAc_ac_cPC4cXyzPC4cXyzffPC4cXyzffPC4cXyz();
+extern "C" void quat_rotBaseY__5daObjFP10QuaternionRC4cXyz();
+extern "C" void HitSeStart__5daObjFPC4cXyziPC12dCcD_GObjInfUl();
+extern "C" void GetCoCP__12cCcD_CylAttrFv();
+extern "C" void GetCoCP__12cCcD_SphAttrFv();
 extern "C" extern char const* const d_a_d_a_obj__stringBase0;
 
 // 
 // External References:
 // 
 
-void fopAcM_posMove(fopAc_ac_c*, cXyz const*); // 2
-void dComIfGp_getReverb(int); // 2
-void cM_atan2s(f32, f32); // 2
-void cM3d_CrawVec(Vec const&, Vec const&, Vec*); // 2
+void fopAcM_posMove(fopAc_ac_c*, cXyz const*);
+void dComIfGp_getReverb(int);
+void cM_atan2s(f32, f32);
+void cM3d_CrawVec(Vec const&, Vec const&, Vec*);
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 mTsubo__13dPa_control_c[64];
+extern "C" extern f32 Zero__4cXyz[3];
+extern "C" extern u8 BaseY__4cXyz[12];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 struct_80450DF0[8];
+extern "C" extern u8 mEcallback__18dPa_modelEcallBack[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void __dt__4cXyzFv(); // 1
-extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz(); // 1
-extern "C" void dComIfGp_getReverb__Fi(); // 1
-extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci(); // 1
-extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc(); // 1
-extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf(); // 1
-extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv(); // 1
-extern "C" void GetTgHitObj__12dCcD_GObjInfFv(); // 1
-extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv(); // 1
-extern "C" void checkMasterSwordEquip__9daPy_py_cFv(); // 1
-extern "C" void __mi__4cXyzCFRC3Vec(); // 1
-extern "C" void __ml__4cXyzCFf(); // 1
-extern "C" void __dv__4cXyzCFf(); // 1
-extern "C" void outprod__4cXyzCFRC3Vec(); // 1
-extern "C" void cM_atan2s__Fff(); // 1
-extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec(); // 1
-extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void PSVECAdd(); // 1
-extern "C" void PSVECSubtract(); // 1
-extern "C" void PSVECScale(); // 1
-extern "C" void PSVECSquareMag(); // 1
-extern "C" void PSVECDotProduct(); // 1
-extern "C" void C_QUATRotAxisRad(); // 1
-extern "C" void __register_global_object(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void acos(); // 1
+extern "C" void __dt__4cXyzFv();
+extern "C" void fopAcM_posMove__FP10fopAc_ac_cPC4cXyz();
+extern "C" void dComIfGp_getReverb__Fi();
+extern "C" void getRes__14dRes_control_cFPCclP11dRes_info_ci();
+extern "C" void setModel__18dPa_modelEcallBackFP14JPABaseEmitterP12J3DModelDataRC12dKy_tevstr_cUcPvUcUc();
+extern "C" void set__13dPa_control_cFUcUsPC4cXyzPC12dKy_tevstr_cPC5csXyzPC4cXyzUcP18dPa_levelEcallBackScPC8_GXColorPC8_GXColorPC4cXyzf();
+extern "C" void GetAc__22dCcD_GAtTgCoCommonBaseFv();
+extern "C" void GetTgHitObj__12dCcD_GObjInfFv();
+extern "C" void GetTgHitObjSe__12dCcD_GObjInfFv();
+extern "C" void checkMasterSwordEquip__9daPy_py_cFv();
+extern "C" void __mi__4cXyzCFRC3Vec();
+extern "C" void __ml__4cXyzCFf();
+extern "C" void __dv__4cXyzCFf();
+extern "C" void outprod__4cXyzCFRC3Vec();
+extern "C" void cM_atan2s__Fff();
+extern "C" void cM3d_CrawVec__FRC3VecRC3VecP3Vec();
+extern "C" void seStart__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void PSVECAdd();
+extern "C" void PSVECSubtract();
+extern "C" void PSVECScale();
+extern "C" void PSVECSquareMag();
+extern "C" void PSVECDotProduct();
+extern "C" void C_QUATRotAxisRad();
+extern "C" void __register_global_object();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void acos();
 extern "C" extern u8 g_dComIfG_gameInfo[122384];
 extern "C" extern u8 mTsubo__13dPa_control_c[64];
 extern "C" extern f32 Zero__4cXyz[3];

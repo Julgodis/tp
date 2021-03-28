@@ -11,6 +11,48 @@
 // Forward References:
 // 
 
+extern "C" extern u32 DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 MAX_VOLUME_DISTANCE__7Z2Param;
+extern "C" extern u32 DOLBY_CENTER_VALUE__7Z2Param;
+extern "C" extern u32 DOLBY_FLONT_DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 DOLBY_BEHIND_DISTANCE_MAX__7Z2Param;
+extern "C" extern u32 DISTANCE_FX_PARAM__7Z2Param;
+extern "C" extern u32 SONIC_SPEED__7Z2Param;
+extern "C" extern u32 VOL_BGM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_DEFAULT__7Z2Param;
+extern "C" extern u32 VOL_BGM_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_TALKING__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_TALKING__7Z2Param;
+extern "C" extern u32 VOL_BGM_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_SYSTEM_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_VOICE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_MOTION_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_LINK_FOOTNOTE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_VOICE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_CHAR_MOVE_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_OBJECT_PAUSING__7Z2Param;
+extern "C" extern u32 VOL_SE_ATMOSPHERE_PAUSING__7Z2Param;
+extern "C" extern u8 struct_80450860[4];
+extern "C" extern u8 struct_80450864[4];
+extern "C" extern u8 struct_80450868[4];
+extern "C" extern u32 data_8045086C;
+extern "C" extern f32 MIN_DISTANCE_VOLUME__7Z2Param;
+extern "C" extern f32 ENEMY_LASTHIT_MUTE_VOLUME__7Z2Param;
+extern "C" extern u8 struct_80451340[8];
+extern "C" extern u8 data_80451348[8];
 
 extern "C" extern u32 DISTANCE_MAX__7Z2Param;
 extern "C" extern u32 MAX_VOLUME_DISTANCE__7Z2Param;

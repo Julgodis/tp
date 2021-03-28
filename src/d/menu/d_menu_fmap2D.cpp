@@ -49,10 +49,7 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct JKRExpHeap {
+struct JKRArchive {
 };
 
 struct JGeometry {
@@ -68,9 +65,6 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
-struct JKRArchive {
-};
-
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
@@ -78,11 +72,17 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
+struct JKRExpHeap {
+};
+
 struct CPaneMgrAlpha {
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 80255608 */ void hide();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmTextureSRTKey {
 };
 
 struct dMenu_Fmap2DTop_c {
@@ -197,10 +197,10 @@ struct dMenuMapCommon_c {
 	/* 801C4600 */ void moveLightDropAnime();
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
 struct Z2SeMgr {
@@ -257,189 +257,198 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_menu_d_menu_fmap2D__stringBase0;
 
-extern "C" void __ct__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void __dt__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void draw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff(); // 1
-extern "C" void calcAllMapPos__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf(); // 1
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf(); // 1
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf(); // 1
-extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff(); // 1
-extern "C" void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf(); // 1
-extern "C" void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG(); // 1
-extern "C" void deleteSpotPane__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void zoomMapCalc__18dMenu_Fmap2DBack_cFf(); // 1
-extern "C" void zoomMapCalc2__18dMenu_Fmap2DBack_cFf(); // 1
-extern "C" void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void scrollCalc__18dMenu_Fmap2DBack_cFf(); // 1
-extern "C" void mapBlink__18dMenu_Fmap2DBack_cFPs(); // 1
-extern "C" void setSpotCursor__18dMenu_Fmap2DBack_cFUc(); // 1
-extern "C" void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl(); // 1
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb(); // 1
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb(); // 1
-extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb(); // 1
-extern "C" void isShowRegion__18dMenu_Fmap2DBack_cFi(); // 1
-extern "C" void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcRenderingPos__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcRenderingScale__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getPathScale__18dMenu_Fmap2DBack_cFf(); // 1
-extern "C" void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi(); // 1
-extern "C" void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf(); // 1
-extern "C" void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf(); // 1
-extern "C" void regionTextureDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void stageTextureDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void worldGridDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void regionGridDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void worldOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void scrollAreaDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void regionOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void stageOriginDraw__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcBlink__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void calcBackAlpha__18dMenu_Fmap2DBack_cFb(); // 1
-extern "C" void btkAnimeLoop__18dMenu_Fmap2DBack_cFf(); // 1
-extern "C" void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc(); // 1
-extern "C" void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl(); // 1
-extern "C" void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb(); // 1
-extern "C" void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb(); // 1
-extern "C" void drawDebugStageArea__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff(); // 1
-extern "C" void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff(); // 1
-extern "C" void calcDrawPriority__18dMenu_Fmap2DBack_cFv(); // 1
-extern "C" void setArrowPosAxis__18dMenu_Fmap2DBack_cFff(); // 1
-extern "C" void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl(); // 1
-extern "C" void __dt__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void _execute__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb(); // 1
-extern "C" void draw__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf(); // 1
-extern "C" void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc(); // 1
-extern "C" void setTitleNameString__17dMenu_Fmap2DTop_cFUl(); // 1
-extern "C" void setAreaNameString__17dMenu_Fmap2DTop_cFUl(); // 1
-extern "C" void setZButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
-extern "C" void setBButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
-extern "C" void setAButtonString__17dMenu_Fmap2DTop_cFUlUc(); // 1
-extern "C" void setCrossLRString__17dMenu_Fmap2DTop_cFUl(); // 1
-extern "C" void set3DStickString__17dMenu_Fmap2DTop_cFUl(); // 1
-extern "C" void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl(); // 1
-extern "C" void deleteExplain__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf(); // 1
-extern "C" void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
-extern "C" void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
-extern "C" void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha(); // 1
-extern "C" void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi(); // 1
-extern "C" void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" void setHIO__17dMenu_Fmap2DTop_cFb(); // 1
-extern "C" void isWarpAccept__17dMenu_Fmap2DTop_cFv(); // 1
-extern "C" static void func_801D810C(); // 1
+extern "C" void __ct__18dMenu_Fmap2DBack_cFv();
+extern "C" void __dt__18dMenu_Fmap2DBack_cFv();
+extern "C" void draw__18dMenu_Fmap2DBack_cFv();
+extern "C" void setRegionTexData__18dMenu_Fmap2DBack_cFUcP7ResTIMGfffffffff();
+extern "C" void calcAllMapPos__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcAllMapScaleRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcAllMapPos2DFirst__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFPCcffPfPf();
+extern "C" void calcAllMapPos2D__18dMenu_Fmap2DBack_cFffPfPffff();
+extern "C" void calcAllMapPosWorld__18dMenu_Fmap2DBack_cFffPfPf();
+extern "C" void setSpotPane__18dMenu_Fmap2DBack_cFP7ResTIMG();
+extern "C" void deleteSpotPane__18dMenu_Fmap2DBack_cFv();
+extern "C" void zoomMapCalc__18dMenu_Fmap2DBack_cFf();
+extern "C" void zoomMapCalc2__18dMenu_Fmap2DBack_cFf();
+extern "C" void zoomMapCalcHIO__18dMenu_Fmap2DBack_cFv();
+extern "C" void scrollCalc__18dMenu_Fmap2DBack_cFf();
+extern "C" void mapBlink__18dMenu_Fmap2DBack_cFPs();
+extern "C" void setSpotCursor__18dMenu_Fmap2DBack_cFUc();
+extern "C" void allmap_move2__18dMenu_Fmap2DBack_cFP9STControl();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcfffUcb();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcPCcfffUcb();
+extern "C" void setIcon2DPos__18dMenu_Fmap2DBack_cFUcUcPCcfffUcb();
+extern "C" void isShowRegion__18dMenu_Fmap2DBack_cFi();
+extern "C" void getMapAreaGlobalPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalCenterPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaGlobalCenterPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaSizeX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapAreaSizeY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaLX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaLY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeRealX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaCenterPosX__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaCenterPosY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeY__18dMenu_Fmap2DBack_cFv();
+extern "C" void getMapScissorAreaSizeRealY__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcRenderingPos__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcRenderingScale__18dMenu_Fmap2DBack_cFv();
+extern "C" void getPathScale__18dMenu_Fmap2DBack_cFf();
+extern "C" void getAllMapZoomRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void getRegionMapZoomRate__18dMenu_Fmap2DBack_cFi();
+extern "C" void getSpotMapZoomRate__18dMenu_Fmap2DBack_cFv();
+extern "C" void getStageOriginPath__18dMenu_Fmap2DBack_cFUcPfPf();
+extern "C" void calcOffset__18dMenu_Fmap2DBack_cFUcPCcPfPf();
+extern "C" void regionTextureDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void stageTextureDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void worldGridDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void regionGridDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void worldOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void scrollAreaDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void regionOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void stageOriginDraw__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcBlink__18dMenu_Fmap2DBack_cFv();
+extern "C" void calcBackAlpha__18dMenu_Fmap2DBack_cFb();
+extern "C" void btkAnimeLoop__18dMenu_Fmap2DBack_cFf();
+extern "C" void setBaseBackAlpha__18dMenu_Fmap2DBack_cFUc();
+extern "C" void regionMapMove__18dMenu_Fmap2DBack_cFP9STControl();
+extern "C" void stageMapMove__18dMenu_Fmap2DBack_cFP9STControlUcb();
+extern "C" void setAllAlphaRate__18dMenu_Fmap2DBack_cFfb();
+extern "C" void drawDebugStageArea__18dMenu_Fmap2DBack_cFv();
+extern "C" void drawDebugRegionArea__18dMenu_Fmap2DBack_cFv();
+extern "C" void setArrowPos3D__18dMenu_Fmap2DBack_cFUcPCcff();
+extern "C" void setArrowPos3DOffset__18dMenu_Fmap2DBack_cFUcPCcfff();
+extern "C" void calcDrawPriority__18dMenu_Fmap2DBack_cFv();
+extern "C" void setArrowPosAxis__18dMenu_Fmap2DBack_cFff();
+extern "C" void __ct__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+extern "C" void __dt__17dMenu_Fmap2DTop_cFv();
+extern "C" void _execute__17dMenu_Fmap2DTop_cFv();
+extern "C" void setAllAlphaRate__17dMenu_Fmap2DTop_cFfb();
+extern "C" void draw__17dMenu_Fmap2DTop_cFv();
+extern "C" void btkAnimeLoop__17dMenu_Fmap2DTop_cFP19J2DAnmTextureSRTKeyf();
+extern "C" void setMoyaAlpha__17dMenu_Fmap2DTop_cFUc();
+extern "C" void setTitleNameString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void setAreaNameString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void setZButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setBButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setAButtonString__17dMenu_Fmap2DTop_cFUlUc();
+extern "C" void setCrossLRString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void set3DStickString__17dMenu_Fmap2DTop_cFUl();
+extern "C" void createExplain__17dMenu_Fmap2DTop_cFP10JKRExpHeapP9STControl();
+extern "C" void deleteExplain__17dMenu_Fmap2DTop_cFv();
+extern "C" void setArrowAlphaRatio__17dMenu_Fmap2DTop_cFUcf();
+extern "C" void setAlphaAnimeMin__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void setAlphaAnimeMid__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void setAlphaAnimeMax__17dMenu_Fmap2DTop_cFP13CPaneMgrAlpha();
+extern "C" void checkPlayerWarpAccept__17dMenu_Fmap2DTop_cFv();
+extern "C" void checkWarpAcceptRegion__17dMenu_Fmap2DTop_cFi();
+extern "C" void checkWarpAcceptRegion4__17dMenu_Fmap2DTop_cFv();
+extern "C" void checkWarpAcceptCannon__17dMenu_Fmap2DTop_cFv();
+extern "C" void setHIO__17dMenu_Fmap2DTop_cFb();
+extern "C" void isWarpAccept__17dMenu_Fmap2DTop_cFv();
+extern "C" static void func_801D810C();
 extern "C" extern char const* const d_menu_d_menu_fmap2D__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_setCurrentHeap(JKRHeap*); // 2
-void mDoExt_getMesgFont(); // 2
-void mDoExt_getRubyFont(); // 2
-void dComIfGs_isStageSwitch(int, int); // 2
-void dComIfGp_getNowLevel(); // 2
-void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void cLib_addCalc2(f32*, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
-void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int); // 2
-void J2DFillBox(f32, f32, f32, f32, JUtility::TColor); // 2
-void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8); // 2
+void mDoExt_setCurrentHeap(JKRHeap*);
+void mDoExt_getMesgFont();
+void mDoExt_getRubyFont();
+void dComIfGs_isStageSwitch(int, int);
+void dComIfGp_getNowLevel();
+void dMeter2Info_getPixel(f32, f32, f32, f32, f32, f32, ResTIMG const*);
+void dPaneClass_showNullPane(J2DScreen*);
+void cLib_addCalc2(f32*, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+void J2DDrawLine(f32, f32, f32, f32, JUtility::TColor, int);
+void J2DFillBox(f32, f32, f32, f32, JUtility::TColor);
+void J2DDrawFrame(f32, f32, f32, f32, JUtility::TColor, u8);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_fmapHIO[1188];
+extern "C" extern u8 g_meter2_info[248];
+extern "C" extern u8 sincosTable___5JMath[65536];
+extern "C" extern u8 m_midnaActor__9daPy_py_c[4];
+extern "C" extern u8 mAudioMgrPtr__10Z2AudioMgr[4 + 4 /* padding */];
 
-extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap(); // 1
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void mDoExt_getRubyFont__Fv(); // 1
-extern "C" void dComIfGs_isStageSwitch__Fii(); // 1
-extern "C" void dComIfGp_getNowLevel__Fv(); // 1
-extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi(); // 1
-extern "C" void isEventBit__11dSv_event_cCFUs(); // 1
-extern "C" void __ct__16dMenuMapCommon_cFv(); // 1
-extern "C" void __dt__16dMenuMapCommon_cFv(); // 1
-extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive(); // 1
-extern "C" void drawIcon__16dMenuMapCommon_cFffff(); // 1
-extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc(); // 1
-extern "C" void blinkMove__16dMenuMapCommon_cFs(); // 1
-extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv(); // 1
-extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi(); // 1
-extern "C" void __ct__14dMeterHaihai_cFUc(); // 1
-extern "C" void drawHaihai__14dMeterHaihai_cFUc(); // 1
-extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG(); // 1
-extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc(); // 1
-extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void hide__13CPaneMgrAlphaFv(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void getAlphaRate__13CPaneMgrAlphaFv(); // 1
-extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv(); // 1
-extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf(); // 1
-extern "C" void cLib_addCalc2__FPffff(); // 1
-extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void func_802E90C0(); // 1
-extern "C" void J2DDrawLine__FffffQ28JUtility6TColori(); // 1
-extern "C" void J2DFillBox__FffffQ28JUtility6TColor(); // 1
-extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc(); // 1
-extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf(); // 1
-extern "C" void getParentPane__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void __ct__10J2DPictureFPC7ResTIMG(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void GXGetScissor(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _savegpr_24(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _savegpr_29(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void _restgpr_24(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
-extern "C" void _restgpr_29(); // 1
-extern "C" void strcmp(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_setCurrentHeap__FP7JKRHeap();
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void mDoExt_getRubyFont__Fv();
+extern "C" void dComIfGs_isStageSwitch__Fii();
+extern "C" void dComIfGp_getNowLevel__Fv();
+extern "C" void isRegionBit__33dSv_player_field_last_stay_info_cCFi();
+extern "C" void isEventBit__11dSv_event_cCFUs();
+extern "C" void __ct__16dMenuMapCommon_cFv();
+extern "C" void __dt__16dMenuMapCommon_cFv();
+extern "C" void initiate__16dMenuMapCommon_cFP10JKRArchive();
+extern "C" void drawIcon__16dMenuMapCommon_cFffff();
+extern "C" void setIconInfo__16dMenuMapCommon_cFUcfffffUc();
+extern "C" void blinkMove__16dMenuMapCommon_cFs();
+extern "C" void moveLightDropAnime__16dMenuMapCommon_cFv();
+extern "C" void getPointStagePathInnerNo__15renderingFmap_cFP24dMenu_Fmap_region_data_cffiPiPi();
+extern "C" void __ct__14dMeterHaihai_cFUc();
+extern "C" void drawHaihai__14dMeterHaihai_cFUc();
+extern "C" void getStringKanji__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void dMeter2Info_getPixel__FffffffPC7ResTIMG();
+extern "C" void __ct__17dMsgScrnExplain_cFP9STControlUcbUc();
+extern "C" void draw__17dMsgScrnExplain_cFP13J2DOrthoGraph();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtx__8CPaneMgrFP7J2DPanePA3_A4_fUcbs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void __ct__13CPaneMgrAlphaFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void hide__13CPaneMgrAlphaFv();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void getAlphaRate__13CPaneMgrAlphaFv();
+extern "C" void __ct__17CPaneMgrAlphaMorfFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void setBackupAlpha__17CPaneMgrAlphaMorfFv();
+extern "C" void setAlphaMorfRate__17CPaneMgrAlphaMorfFf();
+extern "C" void cLib_addCalc2__FPffff();
+extern "C" void seStartLevel__7Z2SeMgrF10JAISoundIDPC3VecUlScffffUc();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void func_802E90C0();
+extern "C" void J2DDrawLine__FffffQ28JUtility6TColori();
+extern "C" void J2DFillBox__FffffQ28JUtility6TColor();
+extern "C" void J2DDrawFrame__FffffQ28JUtility6TColorUc();
+extern "C" void rotate__7J2DPaneFff13J2DRotateAxisf();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void __ct__10J2DPictureFPC7ResTIMG();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void GXGetScissor();
+extern "C" void _savegpr_23();
+extern "C" void _savegpr_24();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _savegpr_29();
+extern "C" void _restgpr_23();
+extern "C" void _restgpr_24();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
+extern "C" void _restgpr_29();
+extern "C" void strcmp();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern u8 saveBitLabels__16dSv_event_flag_c[1644 + 4 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

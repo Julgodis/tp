@@ -29,26 +29,29 @@ struct daItemBase_c {
 // Forward References:
 // 
 
-void CheckItemCreateHeap(fopAc_ac_c*); // 2
-void CheckFieldItemCreateHeap(fopAc_ac_c*); // 2
+void CheckItemCreateHeap(fopAc_ac_c*);
+void CheckFieldItemCreateHeap(fopAc_ac_c*);
+extern "C" extern u8 const m_data__12daItemBase_c[56];
 
-extern "C" void getItemNo__12daItemBase_cFv(); // 1
-extern "C" void hide__12daItemBase_cFv(); // 1
-extern "C" void show__12daItemBase_cFv(); // 1
-extern "C" void changeDraw__12daItemBase_cFv(); // 1
-extern "C" void chkDraw__12daItemBase_cFv(); // 1
-extern "C" void dead__12daItemBase_cFv(); // 1
-extern "C" void chkDead__12daItemBase_cFv(); // 1
-extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c(); // 1
-extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c(); // 1
+extern "C" void getItemNo__12daItemBase_cFv();
+extern "C" void hide__12daItemBase_cFv();
+extern "C" void show__12daItemBase_cFv();
+extern "C" void changeDraw__12daItemBase_cFv();
+extern "C" void chkDraw__12daItemBase_cFv();
+extern "C" void dead__12daItemBase_cFv();
+extern "C" void chkDead__12daItemBase_cFv();
+extern "C" void CheckItemCreateHeap__FP10fopAc_ac_c();
+extern "C" void CheckFieldItemCreateHeap__FP10fopAc_ac_c();
 extern "C" extern u8 const m_data__12daItemBase_c[56];
 
 // 
 // External References:
 // 
 
+extern "C" extern void* item_resource__10dItem_data[1530];
+extern "C" extern void* field_item_res__10dItem_data[1020];
 
-extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss(); // 1
+extern "C" void CreateItemHeap__12daItemBase_cFPCcsssssss();
 extern "C" extern void* item_resource__10dItem_data[1530];
 extern "C" extern void* field_item_res__10dItem_data[1020];
 

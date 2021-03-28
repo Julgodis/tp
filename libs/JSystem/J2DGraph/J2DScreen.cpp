@@ -60,19 +60,41 @@ struct JGeometry {
 
 };
 
-struct J2DGrafContext {
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmTexPattern {
+};
+
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DMaterial {
+	/* 802EA1AC */ J2DMaterial();
+	/* 802EA2CC */ ~J2DMaterial();
+	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
+	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
+	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
+	/* 802EA89C */ void setAnimation(J2DAnmColor*);
+	/* 802EAC78 */ void animation();
 };
 
 struct J2DAnmTransform {
+};
+
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DGrafContext {
 };
 
 struct J2DAnmVtxColor {
 };
 
 struct J2DAnmBase {
-};
-
-struct J2DAnmVisibilityFull {
 };
 
 struct J2DPane {
@@ -102,28 +124,6 @@ struct J2DPane {
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
 	/* 802F8478 */ void drawSelf(f32, f32);
-};
-
-struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTevRegKey {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DMaterial {
-	/* 802EA1AC */ J2DMaterial();
-	/* 802EA2CC */ ~J2DMaterial();
-	/* 802EAA2C */ void setAnimation(J2DAnmTexPattern*);
-	/* 802EA94C */ void setAnimation(J2DAnmTextureSRTKey*);
-	/* 802EAB0C */ void setAnimation(J2DAnmTevRegKey*);
-	/* 802EA89C */ void setAnimation(J2DAnmColor*);
-	/* 802EAC78 */ void animation();
 };
 
 struct J2DWindowEx {
@@ -217,137 +217,144 @@ struct J2DDataManage {
 // Forward References:
 // 
 
+extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void __dt__9J2DScreenFv(); // 1
-extern "C" void clean__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
-extern "C" void private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
-extern "C" void checkSignature__9J2DScreenFP20JSURandomInputStream(); // 1
-extern "C" void getScreenInformation__9J2DScreenFP20JSURandomInputStream(); // 1
-extern "C" void makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive(); // 1
-extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void search__9J2DScreenFUx(); // 1
-extern "C" void searchUserInfo__9J2DScreenFUx(); // 1
-extern "C" void drawSelf__9J2DScreenFffPA3_A4_f(); // 1
-extern "C" void getResReference__9J2DScreenFP20JSURandomInputStreamUl(); // 1
-extern "C" void createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive(); // 1
-extern "C" void isUsed__9J2DScreenFPC7ResTIMG(); // 1
-extern "C" void isUsed__9J2DScreenFPC7ResFONT(); // 1
-extern "C" void getNameResource__9J2DScreenFPCc(); // 1
-extern "C" void animation__9J2DScreenFv(); // 1
-extern "C" void setAnimation__9J2DScreenFP11J2DAnmColor(); // 1
-extern "C" void setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setAnimation__9J2DScreenFP16J2DAnmTexPattern(); // 1
-extern "C" void setAnimation__9J2DScreenFP15J2DAnmTevRegKey(); // 1
-extern "C" void setAnimation__9J2DScreenFP14J2DAnmVtxColor(); // 1
-extern "C" void setAnimation__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
-extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl(); // 1
-extern "C" s32 getTypeID__9J2DScreenCFv(); // 1
-extern "C" void calcMtx__9J2DScreenFv(); // 1
-extern "C" void setAnimation__9J2DScreenFP10J2DAnmBase(); // 1
-extern "C" void setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setAnimationVC__9J2DScreenFP14J2DAnmVtxColor(); // 1
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void __dt__9J2DScreenFv();
+extern "C" void clean__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void setPriority__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void private_set__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void checkSignature__9J2DScreenFP20JSURandomInputStream();
+extern "C" void getScreenInformation__9J2DScreenFP20JSURandomInputStream();
+extern "C" void makeHierarchyPanes__9J2DScreenFP7J2DPaneP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void search__9J2DScreenFUx();
+extern "C" void searchUserInfo__9J2DScreenFUx();
+extern "C" void drawSelf__9J2DScreenFffPA3_A4_f();
+extern "C" void getResReference__9J2DScreenFP20JSURandomInputStreamUl();
+extern "C" void createMaterial__9J2DScreenFP20JSURandomInputStreamUlP10JKRArchive();
+extern "C" void isUsed__9J2DScreenFPC7ResTIMG();
+extern "C" void isUsed__9J2DScreenFPC7ResFONT();
+extern "C" void getNameResource__9J2DScreenFPCc();
+extern "C" void animation__9J2DScreenFv();
+extern "C" void setAnimation__9J2DScreenFP11J2DAnmColor();
+extern "C" void setAnimation__9J2DScreenFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__9J2DScreenFP16J2DAnmTexPattern();
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTevRegKey();
+extern "C" void setAnimation__9J2DScreenFP14J2DAnmVtxColor();
+extern "C" void setAnimation__9J2DScreenFP20J2DAnmVisibilityFull();
+extern "C" void createPane__9J2DScreenFRC18J2DScrnBlockHeaderP20JSURandomInputStreamP7J2DPaneUl();
+extern "C" s32 getTypeID__9J2DScreenCFv();
+extern "C" void calcMtx__9J2DScreenFv();
+extern "C" void setAnimation__9J2DScreenFP10J2DAnmBase();
+extern "C" void setAnimationVF__9J2DScreenFP20J2DAnmVisibilityFull();
+extern "C" void setAnimationVC__9J2DScreenFP14J2DAnmVtxColor();
 extern "C" extern u8 mDataManage__9J2DScreen[4 + 4 /* padding */];
 
 // 
 // External References:
 // 
 
-void* operator new(u32); // 2
-void* operator new[](u32); // 2
-void* operator new[](u32, int); // 2
-void operator delete(void*); // 2
-void operator delete[](void*); // 2
+void* operator new(u32);
+void* operator new[](u32);
+void* operator new[](u32, int);
+void operator delete(void*);
+void operator delete[](void*);
+extern "C" extern void* __vt__10JSUIosBase[3];
+extern "C" extern void* __vt__20JSURandomInputStream[9];
+extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];
+extern "C" extern void* __vt__20JSUMemoryInputStream[9 + 1 /* padding */];
+extern "C" extern void* __vt__14J2DGrafContext[10];
+extern "C" extern void* __vt__13J2DOrthoGraph[10];
 
-extern "C" void setAlpha__7J2DPaneFUc(); // 1
-extern "C" void clearAnmTransform__9J2DScreenFv(); // 1
-extern "C" void makeMatrix__7J2DPaneFff(); // 1
-extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void* __nwa__FUl(); // 1
-extern "C" void* __nwa__FUli(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void __dla__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void __dt__14JSUInputStreamFv(); // 1
-extern "C" void read__14JSUInputStreamFPvl(); // 1
-extern "C" void peek__20JSURandomInputStreamFPvl(); // 1
-extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom(); // 1
-extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl(); // 1
-extern "C" void __ct__10JUTNameTabFPC7ResNTAB(); // 1
-extern "C" void __ct__13J2DOrthoGraphFffffff(); // 1
-extern "C" void setPort__13J2DOrthoGraphFv(); // 1
-extern "C" void __ct__11J2DMaterialFv(); // 1
-extern "C" void __dt__11J2DMaterialFv(); // 1
-extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor(); // 1
-extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey(); // 1
-extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern(); // 1
-extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey(); // 1
-extern "C" void animation__11J2DMaterialFv(); // 1
-extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock(); // 1
-extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive(); // 1
-extern "C" void func_802F5D40(); // 1
-extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc(); // 1
-extern "C" void __dt__7J2DPaneFv(); // 1
-extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb(); // 1
-extern "C" void func_802F6D18(); // 1
-extern "C" void move__7J2DPaneFff(); // 1
-extern "C" void add__7J2DPaneFff(); // 1
-extern "C" void resize__7J2DPaneFff(); // 1
-extern "C" void search__7J2DPaneFUx(); // 1
-extern "C" void searchUserInfo__7J2DPaneFUx(); // 1
-extern "C" void isUsed__7J2DPaneFPC7ResTIMG(); // 1
-extern "C" void isUsed__7J2DPaneFPC7ResFONT(); // 1
-extern "C" void makeMatrix__7J2DPaneFffff(); // 1
-extern "C" void setCullBack__7J2DPaneF11_GXCullMode(); // 1
-extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase(); // 1
-extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform(); // 1
-extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull(); // 1
-extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor(); // 1
-extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform(); // 1
-extern "C" void rewriteAlpha__7J2DPaneFv(); // 1
-extern "C" void setCullBack__7J2DPaneFb(); // 1
-extern "C" void setConnectParent__7J2DPaneFb(); // 1
-extern "C" void update__7J2DPaneFv(); // 1
-extern "C" void drawSelf__7J2DPaneFff(); // 1
-extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
-extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial(); // 1
-extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
-extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial(); // 1
-extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamP10JKRArchive(); // 1
-extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
-extern "C" void __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
-extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
-extern "C" void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial(); // 1
-extern "C" void get__13J2DDataManageFPCc(); // 1
-extern "C" void GXSetVtxDesc(); // 1
-extern "C" void GXSetVtxAttrFmt(); // 1
-extern "C" void GXSetNumTexGens(); // 1
-extern "C" void GXBegin(); // 1
-extern "C" void GXSetCullMode(); // 1
-extern "C" void GXSetChanCtrl(); // 1
-extern "C" void GXSetNumIndStages(); // 1
-extern "C" void GXSetTevDirect(); // 1
-extern "C" void GXSetTevOp(); // 1
-extern "C" void GXSetTevSwapModeTable(); // 1
-extern "C" void GXSetTevOrder(); // 1
-extern "C" void GXSetNumTevStages(); // 1
-extern "C" void GXSetBlendMode(); // 1
-extern "C" void GXSetScissor(); // 1
-extern "C" void GXGetScissor(); // 1
-extern "C" void __destroy_new_array(); // 1
-extern "C" void __construct_new_array(); // 1
-extern "C" void _savegpr_25(); // 1
-extern "C" void _savegpr_26(); // 1
-extern "C" void _savegpr_27(); // 1
-extern "C" void _savegpr_28(); // 1
-extern "C" void _restgpr_25(); // 1
-extern "C" void _restgpr_26(); // 1
-extern "C" void _restgpr_27(); // 1
-extern "C" void _restgpr_28(); // 1
+extern "C" void setAlpha__7J2DPaneFUc();
+extern "C" void clearAnmTransform__9J2DScreenFv();
+extern "C" void makeMatrix__7J2DPaneFff();
+extern "C" void setAnimation__9J2DScreenFP15J2DAnmTransform();
+extern "C" void* __nw__FUl();
+extern "C" void* __nwa__FUl();
+extern "C" void* __nwa__FUli();
+extern "C" void __dl__FPv();
+extern "C" void __dla__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void __dt__14JSUInputStreamFv();
+extern "C" void read__14JSUInputStreamFPvl();
+extern "C" void peek__20JSURandomInputStreamFPvl();
+extern "C" void seek__20JSURandomInputStreamFl17JSUStreamSeekFrom();
+extern "C" void setBuffer__20JSUMemoryInputStreamFPCvl();
+extern "C" void __ct__10JUTNameTabFPC7ResNTAB();
+extern "C" void __ct__13J2DOrthoGraphFffffff();
+extern "C" void setPort__13J2DOrthoGraphFv();
+extern "C" void __ct__11J2DMaterialFv();
+extern "C" void __dt__11J2DMaterialFv();
+extern "C" void setAnimation__11J2DMaterialFP11J2DAnmColor();
+extern "C" void setAnimation__11J2DMaterialFP19J2DAnmTextureSRTKey();
+extern "C" void setAnimation__11J2DMaterialFP16J2DAnmTexPattern();
+extern "C" void setAnimation__11J2DMaterialFP15J2DAnmTevRegKey();
+extern "C" void animation__11J2DMaterialFv();
+extern "C" void __ct__18J2DMaterialFactoryFRC16J2DMaterialBlock();
+extern "C" void create__18J2DMaterialFactoryCFP11J2DMaterialiUlP15J2DResReferenceP15J2DResReferenceP10JKRArchive();
+extern "C" void func_802F5D40();
+extern "C" void __ct__7J2DPaneFP7J2DPaneP20JSURandomInputStreamUc();
+extern "C" void __dt__7J2DPaneFv();
+extern "C" void draw__7J2DPaneFffPC14J2DGrafContextbb();
+extern "C" void func_802F6D18();
+extern "C" void move__7J2DPaneFff();
+extern "C" void add__7J2DPaneFff();
+extern "C" void resize__7J2DPaneFff();
+extern "C" void search__7J2DPaneFUx();
+extern "C" void searchUserInfo__7J2DPaneFUx();
+extern "C" void isUsed__7J2DPaneFPC7ResTIMG();
+extern "C" void isUsed__7J2DPaneFPC7ResFONT();
+extern "C" void makeMatrix__7J2DPaneFffff();
+extern "C" void setCullBack__7J2DPaneF11_GXCullMode();
+extern "C" void setAnimation__7J2DPaneFP10J2DAnmBase();
+extern "C" void animationTransform__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void setVisibileAnimation__7J2DPaneFP20J2DAnmVisibilityFull();
+extern "C" void setVtxColorAnimation__7J2DPaneFP14J2DAnmVtxColor();
+extern "C" void animationPane__7J2DPaneFPC15J2DAnmTransform();
+extern "C" void rewriteAlpha__7J2DPaneFv();
+extern "C" void setCullBack__7J2DPaneFb();
+extern "C" void setConnectParent__7J2DPaneFb();
+extern "C" void update__7J2DPaneFv();
+extern "C" void drawSelf__7J2DPaneFff();
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
+extern "C" void __ct__9J2DWindowFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
+extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
+extern "C" void __ct__10J2DPictureFP7J2DPaneP20JSURandomInputStreamP11J2DMaterial();
+extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamP10JKRArchive();
+extern "C" void __ct__10J2DTextBoxFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+extern "C" void __ct__11J2DWindowExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+extern "C" void __ct__12J2DPictureExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+extern "C" void __ct__12J2DTextBoxExFP7J2DPaneP20JSURandomInputStreamUlP11J2DMaterial();
+extern "C" void get__13J2DDataManageFPCc();
+extern "C" void GXSetVtxDesc();
+extern "C" void GXSetVtxAttrFmt();
+extern "C" void GXSetNumTexGens();
+extern "C" void GXBegin();
+extern "C" void GXSetCullMode();
+extern "C" void GXSetChanCtrl();
+extern "C" void GXSetNumIndStages();
+extern "C" void GXSetTevDirect();
+extern "C" void GXSetTevOp();
+extern "C" void GXSetTevSwapModeTable();
+extern "C" void GXSetTevOrder();
+extern "C" void GXSetNumTevStages();
+extern "C" void GXSetBlendMode();
+extern "C" void GXSetScissor();
+extern "C" void GXGetScissor();
+extern "C" void __destroy_new_array();
+extern "C" void __construct_new_array();
+extern "C" void _savegpr_25();
+extern "C" void _savegpr_26();
+extern "C" void _savegpr_27();
+extern "C" void _savegpr_28();
+extern "C" void _restgpr_25();
+extern "C" void _restgpr_26();
+extern "C" void _restgpr_27();
+extern "C" void _restgpr_28();
 extern "C" extern void* __vt__10JSUIosBase[3];
 extern "C" extern void* __vt__20JSURandomInputStream[9];
 extern "C" extern void* __vt__14JSUInputStream[6 + 1 /* padding */];

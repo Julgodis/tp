@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void TRK_fill_mem(); // 1
+extern "C" void TRK_fill_mem();
 
 // 
 // External References:

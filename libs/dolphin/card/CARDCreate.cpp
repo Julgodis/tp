@@ -12,31 +12,32 @@
 // 
 
 
-extern "C" static void CreateCallbackFat(); // 1
-extern "C" static void CARDCreateAsync(); // 1
-extern "C" void CARDCreate(); // 1
+extern "C" static void CreateCallbackFat();
+extern "C" static void CARDCreateAsync();
+extern "C" void CARDCreate();
 
 // 
 // External References:
 // 
 
+extern "C" extern u8 __CARDBlock[544];
 
-SECTION_INIT void memcpy(); // 1
-extern "C" void OSGetTime(); // 1
-extern "C" void __CARDDefaultApiCallback(); // 1
-extern "C" void __CARDSyncCallback(); // 1
-extern "C" void __CARDGetControlBlock(); // 1
-extern "C" void __CARDPutControlBlock(); // 1
-extern "C" void __CARDSync(); // 1
-extern "C" void __CARDGetFatBlock(); // 1
-extern "C" void __CARDAllocBlock(); // 1
-extern "C" void __CARDGetDirBlock(); // 1
-extern "C" void __CARDUpdateDir(); // 1
-extern "C" void __CARDCompareFileName(); // 1
-extern "C" void __div2i(); // 1
-extern "C" void memcmp(); // 1
-extern "C" void strncpy(); // 1
-extern "C" void strlen(); // 1
+SECTION_INIT void memcpy();
+extern "C" void OSGetTime();
+extern "C" void __CARDDefaultApiCallback();
+extern "C" void __CARDSyncCallback();
+extern "C" void __CARDGetControlBlock();
+extern "C" void __CARDPutControlBlock();
+extern "C" void __CARDSync();
+extern "C" void __CARDGetFatBlock();
+extern "C" void __CARDAllocBlock();
+extern "C" void __CARDGetDirBlock();
+extern "C" void __CARDUpdateDir();
+extern "C" void __CARDCompareFileName();
+extern "C" void __div2i();
+extern "C" void memcmp();
+extern "C" void strncpy();
+extern "C" void strlen();
 extern "C" extern u8 __CARDBlock[544];
 
 // 

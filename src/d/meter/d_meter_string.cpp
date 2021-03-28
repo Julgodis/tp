@@ -93,56 +93,62 @@ struct CPaneMgr {
 // Forward References:
 // 
 
+extern "C" extern char const* const d_meter_d_meter_string__stringBase0;
 
-extern "C" void __ct__14dMeterString_cFi(); // 1
-extern "C" void __dt__14dMeterString_cFv(); // 1
-extern "C" void _create__14dMeterString_cFv(); // 1
-extern "C" void _execute__14dMeterString_cFUl(); // 1
-extern "C" void draw__14dMeterString_cFv(); // 1
-extern "C" void _delete__14dMeterString_cFv(); // 1
-extern "C" void createString__14dMeterString_cFi(); // 1
-extern "C" void playBckAnimation__14dMeterString_cFf(); // 1
-extern "C" void drawPikari__14dMeterString_cFv(); // 1
-extern "C" void isLeadByte__14dMeterString_cFi(); // 1
+extern "C" void __ct__14dMeterString_cFi();
+extern "C" void __dt__14dMeterString_cFv();
+extern "C" void _create__14dMeterString_cFv();
+extern "C" void _execute__14dMeterString_cFUl();
+extern "C" void draw__14dMeterString_cFv();
+extern "C" void _delete__14dMeterString_cFv();
+extern "C" void createString__14dMeterString_cFi();
+extern "C" void playBckAnimation__14dMeterString_cFf();
+extern "C" void drawPikari__14dMeterString_cFv();
+extern "C" void isLeadByte__14dMeterString_cFi();
 extern "C" extern char const* const d_meter_d_meter_string__stringBase0;
 
 // 
 // External References:
 // 
 
-void mDoExt_getMesgFont(); // 2
-void dComIfG_TimerDeleteRequest(int); // 2
-void dPaneClass_showNullPane(J2DScreen*); // 2
-void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32); // 2
-void* operator new(u32); // 2
-void operator delete(void*); // 2
+void mDoExt_getMesgFont();
+void dComIfG_TimerDeleteRequest(int);
+void dPaneClass_showNullPane(J2DScreen*);
+void dTimer_createTimer(s32, u32, u8, u8, f32, f32, f32, f32);
+void* operator new(u32);
+void operator delete(void*);
+extern "C" extern void* __vt__12dDlst_base_c[3];
+extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
+extern "C" extern u8 g_dComIfG_gameInfo[122384];
+extern "C" extern u8 g_drawHIO[3880];
+extern "C" extern u8 g_meter2_info[248];
 
-extern "C" void mDoExt_getMesgFont__Fv(); // 1
-extern "C" void dComIfG_TimerDeleteRequest__Fi(); // 1
-extern "C" bool isDead__11dMeterSub_cFv(); // 1
-extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc(); // 1
-extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c(); // 1
-extern "C" void resetMeterString__13dMeter2Info_cFv(); // 1
-extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap(); // 1
-extern "C" void paneTrans__8CPaneMgrFff(); // 1
-extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs(); // 1
-extern "C" void dPaneClass_showNullPane__FP9J2DScreen(); // 1
-extern "C" void setAlphaRate__13CPaneMgrAlphaFf(); // 1
-extern "C" void dTimer_createTimer__FlUlUcUcffff(); // 1
-extern "C" void* __nw__FUl(); // 1
-extern "C" void __dl__FPv(); // 1
-extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader(); // 1
-extern "C" void getParentPane__7J2DPaneFv(); // 1
-extern "C" void animationTransform__7J2DPaneFv(); // 1
-extern "C" void __ct__9J2DScreenFv(); // 1
-extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive(); // 1
-extern "C" void draw__9J2DScreenFffPC14J2DGrafContext(); // 1
-extern "C" void getStringPtr__10J2DTextBoxCFv(); // 1
-extern "C" void setString__10J2DTextBoxFsPCce(); // 1
-extern "C" void load__20J2DAnmLoaderDataBaseFPCv(); // 1
-extern "C" void _savegpr_23(); // 1
-extern "C" void _restgpr_23(); // 1
-extern "C" void strcpy(); // 1
+extern "C" void mDoExt_getMesgFont__Fv();
+extern "C" void dComIfG_TimerDeleteRequest__Fi();
+extern "C" bool isDead__11dMeterSub_cFv();
+extern "C" void drawPikari__13dMeter2Draw_cFffPffQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorQ28JUtility6TColorfUc();
+extern "C" void getString__13dMeter2Info_cFUlPcP14JMSMesgEntry_c();
+extern "C" void resetMeterString__13dMeter2Info_cFv();
+extern "C" void __ct__8CPaneMgrFP9J2DScreenUxUcP10JKRExpHeap();
+extern "C" void paneTrans__8CPaneMgrFff();
+extern "C" void getGlobalVtxCenter__8CPaneMgrFP7J2DPanebs();
+extern "C" void dPaneClass_showNullPane__FP9J2DScreen();
+extern "C" void setAlphaRate__13CPaneMgrAlphaFf();
+extern "C" void dTimer_createTimer__FlUlUcUcffff();
+extern "C" void* __nw__FUl();
+extern "C" void __dl__FPv();
+extern "C" void getGlbResource__13JKRFileLoaderFPCcP13JKRFileLoader();
+extern "C" void getParentPane__7J2DPaneFv();
+extern "C" void animationTransform__7J2DPaneFv();
+extern "C" void __ct__9J2DScreenFv();
+extern "C" void setPriority__9J2DScreenFPCcUlP10JKRArchive();
+extern "C" void draw__9J2DScreenFffPC14J2DGrafContext();
+extern "C" void getStringPtr__10J2DTextBoxCFv();
+extern "C" void setString__10J2DTextBoxFsPCce();
+extern "C" void load__20J2DAnmLoaderDataBaseFPCv();
+extern "C" void _savegpr_23();
+extern "C" void _restgpr_23();
+extern "C" void strcpy();
 extern "C" extern void* __vt__12dDlst_base_c[3];
 extern "C" extern void* __vt__11dMeterSub_c[8 + 3 /* padding */];
 extern "C" extern u8 g_dComIfG_gameInfo[122384];

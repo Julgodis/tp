@@ -12,7 +12,7 @@
 // 
 
 
-extern "C" void __DVDPrintFatalMessage(); // 1
+extern "C" void __DVDPrintFatalMessage();
 
 // 
 // External References:
