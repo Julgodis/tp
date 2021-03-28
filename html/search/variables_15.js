@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['waitingbits_83568',['WaitingBits',['../Pad_8cpp.html#a9c989ce1c5c86f783b1e1d6fb481081a',1,'Pad.cpp']]],
-  ['waitingcoverclose_83569',['WaitingCoverClose',['../dvdlow_8cpp.html#abc7ce2faf2b4f79cbb2ec4cb57ecf478',1,'dvdlow.cpp']]],
-  ['waitingqueue_83570',['WaitingQueue',['../dvdqueue_8cpp.html#a9aa05cd28c26899b1e0dfd6a2ccaba93',1,'dvdqueue.cpp']]],
-  ['wolfangle_83571',['wolfAngle',['../d__a__npc__cd2_8cpp.html#a4776343a55071c746a274bd2d67f6b2d',1,'d_a_npc_cd2.cpp']]],
-  ['workaroundseeklocation_83572',['WorkAroundSeekLocation',['../dvdlow_8cpp.html#ad2776ea8a66ea3ce1a6750ad5e9c26be',1,'dvdlow.cpp']]],
-  ['workaroundtype_83573',['WorkAroundType',['../dvdlow_8cpp.html#a53b4debab236b9b6e140dfad12118eab',1,'dvdlow.cpp']]]
+  ['underoffsety_83315',['underOffsetY',['../d__a__alink_8cpp.html#a6dbe3fe3f618e45e9d5ade5687cc4725',1,'d_a_alink.cpp']]],
+  ['unit01_83316',['Unit01',['../mtx_8cpp.html#a7d7ccfddb3989c142e6beae496168cd2',1,'Unit01():&#160;mtx.cpp'],['../J3DTransform_8cpp.html#a7d7ccfddb3989c142e6beae496168cd2',1,'Unit01():&#160;J3DTransform.cpp']]],
+  ['unknownheaperrors_83317',['unknownHeapErrors',['../m__Do__machine_8cpp.html#af9181c10215140f12ecdf6e321f4fcc3',1,'m_Do_machine.cpp']]]
 ];
