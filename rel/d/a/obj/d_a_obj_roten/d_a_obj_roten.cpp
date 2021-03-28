@@ -39,13 +39,13 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -89,10 +89,10 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

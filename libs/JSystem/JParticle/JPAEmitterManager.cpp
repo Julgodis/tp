@@ -36,6 +36,19 @@ struct JPAResourceManager {
 	/* 80273E68 */ void getResource(u16) const;
 };
 
+struct JPABaseEmitter;
+struct JKRHeap {
+};
+
+struct JPAEmitterCallBack {
+};
+
+struct JPADrawInfo {
+};
+
+struct JPAParticleCallBack {
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -43,19 +56,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JPADrawInfo {
-};
-
-struct JPABaseEmitter;
-struct JPAParticleCallBack {
-};
-
-struct JPAEmitterCallBack {
-};
-
-struct JKRHeap {
 };
 
 struct JPAEmitterManager {

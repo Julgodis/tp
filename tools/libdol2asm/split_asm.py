@@ -23,8 +23,8 @@ from . import util
 from . import symbol_finder
 from . import generate_functions
 from . import generate_symbols
-from . import merge_symbols
-from . import symbol_naming
+from . import tools
+from . import naming
 
 import libdol
 import librel
@@ -271,24 +271,25 @@ class Dol2AsmSplitter:
                         self.symbol_table.add_section(module, section)
 
     def combine_symbols(self):
-        print(f"{self.step_count:2} Combine symbols")
+        print(f"{self.step_count:2} Calculate function alignment and merge unaligned symbols")
         self.step_count += 1
 
         for module in self.modules:
             libs = list(module.libraries.values())
-            add_list, remove_list = merge_symbols.execute(self.context, libs)
+            tools.calculate_function_alignments(self.context, libs)
+            add_list, remove_list = tools.merge_symbols(self.context, libs)
             for symbol in remove_list:
                 self.symbol_table.remove_symbol(symbol)
             for symbol in add_list:
                 self.symbol_table.add_symbol(symbol)
 
     def name_symbols(self):
-        print(f"{self.step_count:2} Name symbols")
+        print(f"{self.step_count:2} Naming")
         self.step_count += 1
 
         for module in self.modules:
             libs = list(module.libraries.values())
-            symbol_naming.execute(self.context, libs)
+            naming.execute(self.context, libs)
 
     def search_for_reference_arrays(self):
         # Find reference arrays

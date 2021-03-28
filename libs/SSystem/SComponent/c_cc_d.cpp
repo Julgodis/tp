@@ -15,6 +15,9 @@ struct cXyz {
 	/* 80009184 */ ~cXyz();
 };
 
+struct Vec {
+};
+
 struct cM3dGCyl;
 struct cM3dGSph {
 	/* 8026F710 */ void cross(cM3dGSph const*, cXyz*) const;
@@ -24,9 +27,6 @@ struct cM3dGSph {
 struct cM3dGCyl {
 	/* 8026F208 */ void cross(cM3dGSph const*, cXyz*) const;
 	/* 8026F22C */ void cross(cM3dGCyl const*, cXyz*) const;
-};
-
-struct Vec {
 };
 
 struct cM3dGTri {
@@ -43,13 +43,6 @@ struct cM3dGAab {
 	/* 8026EE68 */ void PlusR(f32);
 };
 
-struct cCcD_AabAttr {
-};
-
-struct cCcD_PntAttr {
-};
-
-struct cCcD_TriAttr;
 struct cCcD_ShapeAttr {
 	struct Shape {
 	};
@@ -62,31 +55,15 @@ struct cCcD_ShapeAttr {
 	/* 802649E0 */ bool CrossCo(cCcD_ShapeAttr const&, f32*) const;
 };
 
-struct cCcD_CpsAttr;
-struct cCcD_SphAttr;
-struct cCcD_CylAttr {
-	/* 80084CC0 */ void GetCoCP() const;
-	/* 80037A4C */ void GetCoCP();
-	/* 8026420C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
-	/* 802641C8 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
-	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
-	/* 80264250 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
-	/* 80084CD0 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
-	/* 80084CD8 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
-	/* 8026417C */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
-	/* 80264288 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
-	/* 80264310 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
-	/* 80084D10 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
-	/* 80084D18 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
-	/* 80084D20 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
-	/* 80084D28 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
-	/* 802642CC */ void CrossCo(cCcD_SphAttr const&, f32*) const;
-	/* 800854E0 */ ~cCcD_CylAttr();
-	/* 80264368 */ void CalcAabBox();
-	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
-	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
+struct cCcD_CylAttr;
+struct cCcD_PntAttr {
 };
 
+struct cCcD_CpsAttr;
+struct cCcD_AabAttr {
+};
+
+struct cCcD_TriAttr;
 struct cCcD_SphAttr {
 	/* 80084B44 */ void GetCoCP() const;
 	/* 80037A54 */ void GetCoCP();
@@ -128,6 +105,29 @@ struct cCcD_CpsAttr {
 	/* 80085450 */ ~cCcD_CpsAttr();
 	/* 80263FC4 */ void CalcAabBox();
 	/* 80264014 */ void GetNVec(cXyz const&, cXyz*) const;
+};
+
+struct cCcD_CylAttr {
+	/* 80084CC0 */ void GetCoCP() const;
+	/* 80037A4C */ void GetCoCP();
+	/* 8026420C */ void CrossAtTg(cCcD_SphAttr const&, cXyz*) const;
+	/* 802641C8 */ void CrossAtTg(cCcD_CylAttr const&, cXyz*) const;
+	/* 80084CC8 */ bool CrossAtTg(cCcD_AabAttr const&, cXyz*) const;
+	/* 80264250 */ void CrossAtTg(cCcD_TriAttr const&, cXyz*) const;
+	/* 80084CD0 */ bool CrossAtTg(cCcD_PntAttr const&, cXyz*) const;
+	/* 80084CD8 */ void CrossAtTg(cCcD_ShapeAttr const&, cXyz*) const;
+	/* 8026417C */ void CrossAtTg(cCcD_CpsAttr const&, cXyz*) const;
+	/* 80264288 */ void CrossCo(cCcD_CylAttr const&, f32*) const;
+	/* 80264310 */ void CrossCo(cCcD_CpsAttr const&, f32*) const;
+	/* 80084D10 */ bool CrossCo(cCcD_AabAttr const&, f32*) const;
+	/* 80084D18 */ bool CrossCo(cCcD_TriAttr const&, f32*) const;
+	/* 80084D20 */ bool CrossCo(cCcD_PntAttr const&, f32*) const;
+	/* 80084D28 */ void CrossCo(cCcD_ShapeAttr const&, f32*) const;
+	/* 802642CC */ void CrossCo(cCcD_SphAttr const&, f32*) const;
+	/* 800854E0 */ ~cCcD_CylAttr();
+	/* 80264368 */ void CalcAabBox();
+	/* 802643D0 */ void GetNVec(cXyz const&, cXyz*) const;
+	/* 802644B8 */ void getShapeAccess(cCcD_ShapeAttr::Shape*) const;
 };
 
 struct cCcD_TriAttr {

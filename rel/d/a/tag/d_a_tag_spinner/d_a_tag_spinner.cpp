@@ -15,10 +15,10 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct cXyz {
+struct dPath {
 };
 
-struct dPath {
+struct cXyz {
 };
 
 struct daTagSppath_c {

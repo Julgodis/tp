@@ -15,8 +15,8 @@ lbl_8075F0BC:
 /* 8075F0F0  40 80 00 08 */	bge lbl_8075F0F8
 /* 8075F0F4  48 00 00 E4 */	b lbl_8075F1D8
 lbl_8075F0F8:
-/* 8075F0F8  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 8075F0FC  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 8075F0F8  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 8075F0FC  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 8075F100  C0 03 00 10 */	lfs f0, 0x10(r3)
 /* 8075F104  D0 1D 05 2C */	stfs f0, 0x52c(r29)
 /* 8075F108  3C 60 80 45 */	lis r3, calc_mtx@ha

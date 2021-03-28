@@ -86,10 +86,10 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRExpHeap {
+struct JUTFont {
 };
 
-struct JUTFont {
+struct JKRExpHeap {
 };
 
 struct dMsgScrnTree_c {
@@ -146,11 +146,11 @@ struct dMsgScrnBase_c {
 	/* 8023C3EC */ void setRubyString(char*);
 };
 
-struct J2DTextBox {
-};
-
 struct COutFont_c {
 	/* 80225C94 */ COutFont_c(u8);
+};
+
+struct J2DTextBox {
 };
 
 struct dMsgObject_c {

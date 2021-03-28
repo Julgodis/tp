@@ -167,8 +167,8 @@ lbl_806BD2E8:
 /* 806BD2FC  4B 96 F6 80 */	b getLayerNo__14dComIfG_play_cFi
 /* 806BD300  2C 03 00 00 */	cmpwi r3, 0
 /* 806BD304  40 82 00 4C */	bne lbl_806BD350
-/* 806BD308  3C 60 80 6C */	lis r3, data_806BE79E@ha
-/* 806BD30C  38 83 E7 9E */	addi r4, r3, data_806BE79E@l
+/* 806BD308  3C 60 80 6C */	lis r3, struct_806BE79C+0x2@ha
+/* 806BD30C  38 83 E7 9E */	addi r4, r3, struct_806BE79C+0x2@l
 /* 806BD310  A8 64 00 00 */	lha r3, 0(r4)
 /* 806BD314  38 03 00 01 */	addi r0, r3, 1
 /* 806BD318  B0 04 00 00 */	sth r0, 0(r4)

@@ -26,17 +26,17 @@ struct fopAc_ac_c {
 struct e_cr_egg_class {
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

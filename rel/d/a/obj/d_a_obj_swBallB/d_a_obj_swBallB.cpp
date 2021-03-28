@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -72,13 +72,13 @@ struct dStage_roomControl_c {
 	/* 80024338 */ void initZone();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -102,10 +102,10 @@ struct dEvLib_callback_c {
 	/* 80CF5938 */ bool eventEnd();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

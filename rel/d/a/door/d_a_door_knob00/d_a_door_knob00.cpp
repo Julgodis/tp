@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD9C */ void transM(f32, f32, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {

@@ -33,13 +33,13 @@ struct daObjHBarrel_c {
 	/* 80C17090 */ void callEmt();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -133,10 +133,10 @@ struct Z2SoundObjBase {
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

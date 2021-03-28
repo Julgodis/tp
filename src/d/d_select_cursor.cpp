@@ -20,17 +20,17 @@ struct dSelect_icon_c {
 	/* 80195B70 */ void setPos(J2DPane*, f32, f32);
 };
 
-struct J2DAnmColor {
-};
-
 struct J2DAnmTransformKey {
 	/* 801959C0 */ ~J2DAnmTransformKey();
 };
 
-struct JKRArchive {
+struct J2DAnmTextureSRTKey {
 };
 
-struct J2DAnmTextureSRTKey {
+struct J2DAnmColor {
+};
+
+struct JKRArchive {
 };
 
 struct dSelect_cursor_c {

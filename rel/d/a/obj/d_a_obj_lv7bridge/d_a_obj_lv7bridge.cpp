@@ -22,10 +22,10 @@ struct mDoMtx_stack_c {
 	/* 8000CDD4 */ void transM(cXyz const&);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -201,10 +201,10 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

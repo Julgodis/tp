@@ -84,10 +84,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

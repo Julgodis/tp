@@ -29,13 +29,13 @@ struct dSv_memBit_c {
 	/* 80034934 */ void isDungeonItem(int) const;
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {

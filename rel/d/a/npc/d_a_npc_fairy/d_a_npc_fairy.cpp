@@ -39,7 +39,13 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -48,13 +54,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Vec {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -71,15 +71,15 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
 
 	/* 80145898 */ void initialize();
 	/* 809B88E8 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -198,13 +198,15 @@ struct daNpc_Fairy_Param_c {
 struct J3DAnmTransformKey {
 };
 
-struct J3DAnmColor {
-};
-
 struct _GXColorS10 {
 };
 
 struct J3DModel {
+};
+
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct cXyz {
@@ -213,9 +215,7 @@ struct cXyz {
 	/* 809B889C */ cXyz();
 };
 
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
+struct J3DAnmColor {
 };
 
 struct daNpcT_c {
@@ -337,13 +337,13 @@ struct dPa_control_c {
 	/* 8004D4CC */ void set(u32, u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct dBgS {
-};
-
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 809B8930 */ ~dBgS_AcchCir();
+};
+
+struct dBgS {
 };
 
 struct dBgS_Acch {

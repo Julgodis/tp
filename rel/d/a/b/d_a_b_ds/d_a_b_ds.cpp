@@ -45,10 +45,10 @@ struct mDoExt_morf_c {
 	/* 805CFBE8 */ void isStop();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -71,7 +71,7 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -80,7 +80,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -101,10 +101,10 @@ struct daPy_py_c {
 	/* 805DC9DC */ void changeDemoMode(u32, int, int, s16);
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_DS_c {

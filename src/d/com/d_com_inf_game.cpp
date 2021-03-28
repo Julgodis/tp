@@ -181,10 +181,10 @@ struct dStage_nextStage_c {
 	/* 80023E28 */ void set(char const*, s8, s16, s8, s8, u8);
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
 struct dSmplMdl_draw_c {

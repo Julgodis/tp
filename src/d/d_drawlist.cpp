@@ -33,9 +33,6 @@ struct dDlst_shadowTri_c {
 	/* 80056344 */ dDlst_shadowTri_c();
 };
 
-struct _GXTexObj {
-};
-
 struct Vec {
 };
 
@@ -45,6 +42,9 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 802670AC */ void isZero() const;
+};
+
+struct _GXTexObj {
 };
 
 struct dDlst_shadowSimple_c {
@@ -102,6 +102,12 @@ struct dDlst_peekZ_c {
 	/* 80056080 */ void peekData();
 };
 
+struct dDlst_base_c {
+};
+
+struct _GXColor {
+};
+
 struct J3DPacket {
 };
 
@@ -112,12 +118,6 @@ struct J3DDrawBuffer {
 	/* 80325068 */ void frameInit();
 	/* 8032548C */ void entryImm(J3DPacket*, u16);
 	/* 803254AC */ void draw() const;
-};
-
-struct dDlst_base_c {
-};
-
-struct _GXColor {
 };
 
 struct dDlst_list_c {

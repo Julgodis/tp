@@ -24,10 +24,10 @@ struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -54,13 +54,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -262,10 +262,10 @@ struct cBgS {
 struct _GXTexObj {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -37,16 +37,16 @@ struct mDoExt_bckAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -65,10 +65,10 @@ struct daTag_EvtArea_c {
 	/* 8048C94C */ void chkPointInArea(cXyz, cXyz);
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcShad_c {
@@ -129,11 +129,11 @@ struct J3DAnmTransformKey {
 struct _GXColorS10 {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct daNpcF_c {

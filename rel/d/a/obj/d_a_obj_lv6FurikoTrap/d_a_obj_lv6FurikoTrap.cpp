@@ -38,13 +38,13 @@ struct daLv6FurikoTrap_HIO_c {
 	/* 80C73050 */ ~daLv6FurikoTrap_HIO_c();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -119,10 +119,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

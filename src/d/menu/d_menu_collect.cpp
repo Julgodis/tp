@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -114,6 +114,14 @@ struct dMenu_save_c {
 	/* 801F69B8 */ void _draw();
 };
 
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+	/* 8003242C */ void checkLeftTrigger();
+	/* 800324A8 */ void checkRightTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct JKRHeap {
 	/* 802CE5CC */ void freeAll();
 	/* 802CE784 */ void getTotalFreeSize();
@@ -124,14 +132,6 @@ struct JKRExpHeap {
 };
 
 struct CSTControl {
-};
-
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-	/* 8003242C */ void checkLeftTrigger();
-	/* 800324A8 */ void checkRightTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_Skill_c {
@@ -300,10 +300,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

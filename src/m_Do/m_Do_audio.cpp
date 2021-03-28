@@ -54,6 +54,11 @@ struct Z2MultiSeMgr {
 	/* 802AEB34 */ ~Z2MultiSeMgr();
 };
 
+struct JAISoundHandle {
+	/* 80007838 */ ~JAISoundHandle();
+	/* 802A2184 */ void releaseSound();
+};
+
 struct JGeometry {
 	template <typename A1>
 	struct TVec3 { };
@@ -61,11 +66,6 @@ struct JGeometry {
 	struct TVec3__template0 {
 	};
 
-};
-
-struct JAISoundHandle {
-	/* 80007838 */ ~JAISoundHandle();
-	/* 802A2184 */ void releaseSound();
 };
 
 struct JKRSolidHeap {

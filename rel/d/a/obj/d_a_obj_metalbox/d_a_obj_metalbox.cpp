@@ -28,13 +28,13 @@ struct daObjMBox_c {
 	/* 80593394 */ void Delete();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {

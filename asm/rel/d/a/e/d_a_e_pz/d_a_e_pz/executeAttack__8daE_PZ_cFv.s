@@ -100,8 +100,8 @@ lbl_8075C7D4:
 /* 8075C814  4B FF BF ED */	bl setBck__8daE_PZ_cFiUcff
 /* 8075C818  3B 60 00 00 */	li r27, 0
 /* 8075C81C  8B 9E 07 D8 */	lbz r28, 0x7d8(r30)
-/* 8075C820  3C 60 80 76 */	lis r3, data_80761E29@ha
-/* 8075C824  3B A3 1E 29 */	addi r29, r3, data_80761E29@l
+/* 8075C820  3C 60 80 76 */	lis r3, struct_80761E0C+0x1D@ha
+/* 8075C824  3B A3 1E 29 */	addi r29, r3, struct_80761E0C+0x1D@l
 /* 8075C828  48 00 00 80 */	b lbl_8075C8A8
 lbl_8075C82C:
 /* 8075C82C  88 1E 07 D4 */	lbz r0, 0x7d4(r30)

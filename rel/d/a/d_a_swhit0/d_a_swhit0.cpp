@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -25,10 +25,10 @@ struct mDoExt_brkAnm {
 	/* 8000D7A8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -77,10 +77,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -146,10 +146,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

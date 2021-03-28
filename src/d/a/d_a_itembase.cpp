@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -49,10 +49,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -90,10 +90,10 @@ struct daItemBase_c {
 	/* 8015B0B8 */ void getData();
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

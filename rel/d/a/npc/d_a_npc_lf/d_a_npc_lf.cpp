@@ -35,17 +35,17 @@ struct daNPC_LF_HIO_c {
 	/* 80A6A8E4 */ ~daNPC_LF_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

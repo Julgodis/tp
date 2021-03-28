@@ -130,10 +130,10 @@ struct dComIfG_play_c {
 	/* 8002CBDC */ void getTimerPtr();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

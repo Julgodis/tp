@@ -34,10 +34,10 @@ struct mDoExt_morf_c {
 	/* 806024EC */ void isStop();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -68,7 +68,7 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -77,7 +77,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -103,10 +103,10 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {

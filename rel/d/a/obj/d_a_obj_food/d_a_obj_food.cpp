@@ -35,18 +35,18 @@ struct daObj_Food_HIO_c {
 	/* 80BF1CE8 */ ~daObj_Food_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

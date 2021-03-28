@@ -86,18 +86,18 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

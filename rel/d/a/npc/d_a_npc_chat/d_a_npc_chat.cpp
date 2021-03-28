@@ -37,13 +37,13 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
+struct J3DAnmTextureSRTKey {
+};
+
 struct J3DAnmTexPattern {
 };
 
 struct J3DAnmTevRegKey {
-};
-
-struct J3DAnmTextureSRTKey {
 };
 
 struct J3DMaterialTable {
@@ -67,7 +67,7 @@ struct mDoExt_brkAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -76,7 +76,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

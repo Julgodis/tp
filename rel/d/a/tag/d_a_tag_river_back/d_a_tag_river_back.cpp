@@ -49,10 +49,10 @@ struct dEvent_manager_c {
 	/* 8004817C */ void cutEnd(int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

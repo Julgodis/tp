@@ -24,10 +24,10 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
+struct JAISoundHandle {
 };
 
-struct JAISoundHandle {
+struct JAISoundID {
 };
 
 struct Z2SoundStarter {

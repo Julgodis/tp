@@ -16,13 +16,13 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct JKRArchive {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
+};
+
+struct JKRArchive {
 };
 
 struct dFile_warning_c {

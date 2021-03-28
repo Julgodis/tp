@@ -6,23 +6,17 @@ from .data import *
 
 # TODO: What is faster to use here? capstone or doing it our self?
 
-# blr
-
 
 def is_blr(data: bytearray) -> bool:
     if len(data) < 4:
         return False
     return data[0] == 0x4E and data[1] == 0x80 and data[2] == 0x00 and data[3] == 0x20
 
-# li r3, XXXX
-
 
 def is_li_r3_XXXX(data: bytearray) -> bool:
     if len(data) < 4:
         return False
     return data[0] == 0x38 and data[1] == 0x60
-
-# lwz r3, XXXX(rI)
 
 
 def is_lwz_r3_XXXX_r(data: bytearray, i: int) -> bool:
@@ -34,8 +28,6 @@ def is_lwz_r3_XXXX_r(data: bytearray, i: int) -> bool:
 def is_lwz_r3_XXXX(data: bytearray) -> bool:
     return is_lwz_r3_XXXX_r(data, 3)
 
-# lhz r3, XXXX(r3)
-
 
 def is_lhz_r3_XXXX_r(data: bytearray, i: int) -> bool:
     if len(data) < 4:
@@ -46,8 +38,6 @@ def is_lhz_r3_XXXX_r(data: bytearray, i: int) -> bool:
 def is_lhz_r3_XXXX(data: bytearray) -> bool:
     return is_lhz_r3_XXXX_r(data, 3)
 
-# lha r3, XXXX(rI)
-
 
 def is_lha_r3_XXXX_r(data: bytearray, i: int) -> bool:
     if len(data) < 4:
@@ -57,8 +47,6 @@ def is_lha_r3_XXXX_r(data: bytearray, i: int) -> bool:
 
 def is_lha_r3_XXXX(data: bytearray) -> bool:
     return is_lha_r3_XXXX_r(data, 3)
-
-# lbz r3, XXXX(rI)
 
 
 def is_lbz_r3_XXXX_r(data: bytearray, i: int) -> bool:
@@ -74,8 +62,6 @@ def is_lbz_r3_XXXX(data: bytearray) -> bool:
 def ppc_inst(opcode, rA, rB):
     return ((opcode & 0x3F) << 10) | ((rA & 0x1F) << 5) | ((rB & 0x1F) << 0)
 
-# addi rA, rB, XXXX
-
 
 def is_addi_rArBIMM(data: bytearray, A: int, B: int) -> bool:
     if len(data) < 4:
@@ -90,8 +76,8 @@ def get_short_value(data: bytearray) -> int:
 
 
 def is_return_function(data: bytearray) -> bool:
-    """Check if the function is matching the following instructions:
-            blr
+    """
+        blr
     """
 
     if len(data) != 4:
@@ -100,9 +86,9 @@ def is_return_function(data: bytearray) -> bool:
 
 
 def is_return_integer_function(data: bytearray) -> bool:
-    """Check if the function is matching the following instructions:
-            li r3, XXXX
-            blr
+    """
+        li r3, XXXX
+        blr
     """
 
     if len(data) != 8:
@@ -111,9 +97,9 @@ def is_return_integer_function(data: bytearray) -> bool:
 
 
 def is_load_first_param_function(data: bytearray) -> Tuple[bool, int, str]:
-    """Check if the function is matching the following instructions:
-            LOAD VALUE INTO r3
-            blr
+    """
+        LOAD VALUE INTO r3
+        blr
     """
 
     if len(data) != 8:
@@ -134,10 +120,11 @@ def is_load_first_param_function(data: bytearray) -> Tuple[bool, int, str]:
 
 
 def is_reference_first_param_function(data: bytearray) -> Tuple[bool, int, str]:
-    """Check if the function is matching the following instructions:
-            ADD VALUE with r3
-            blr
     """
+        ADD VALUE with r3
+        blr
+    """
+
     if len(data) != 8:
         return False, None, None
     if not is_blr(data[4:]):
@@ -150,9 +137,9 @@ def is_reference_first_param_function(data: bytearray) -> Tuple[bool, int, str]:
 
 
 def is_load_global_function(data: bytearray) -> Tuple[bool, int, str, int]:
-    """Check if the function is matching the following instructions:
-            LOAD VALUE INTO r3 from r13/r2
-            blr
+    """
+        LOAD VALUE INTO r3 from r13/r2
+        blr
     """
 
     if len(data) != 8:
@@ -175,9 +162,8 @@ def is_load_global_function(data: bytearray) -> Tuple[bool, int, str, int]:
 
 def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
     """
-    Create function from group of linker map symbols. 
-    Try to find simply pattern of function that we can decompile when generating c++ code.
-
+    Create function from group of linker map symbols. If possible try to 
+    identify simple easily decompilable functions.
     """
 
     if len(group) == 1:
@@ -217,4 +203,5 @@ def from_group(section: Section, group: List[linker_map.Symbol]) -> Function:
     if first.size <= 0:
         return []
 
+    # the function was not decompilable
     return [ASMFunction.create(section, group)]

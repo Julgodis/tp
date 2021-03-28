@@ -140,10 +140,10 @@ struct Z2SoundObjBase {
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -40,10 +40,10 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

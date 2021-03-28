@@ -24,10 +24,10 @@ struct mDoGph_gInf_c {
 
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -66,14 +66,7 @@ struct dStage_roomControl_c {
 	/* 8019F780 */ void GetTimePass();
 };
 
-struct J3DModelData {
-	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
-};
-
 struct _GXColorS10 {
-};
-
-struct dKy_tevstr_c {
 };
 
 struct Vec {
@@ -84,6 +77,13 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
+	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
 };
 
 struct dScnKy_env_light_c {

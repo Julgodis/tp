@@ -20,11 +20,11 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
-};
-
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
+};
+
+struct JAISoundID {
 };
 
 struct Z2SpeechStarter {

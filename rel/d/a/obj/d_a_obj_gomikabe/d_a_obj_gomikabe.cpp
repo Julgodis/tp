@@ -194,10 +194,10 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

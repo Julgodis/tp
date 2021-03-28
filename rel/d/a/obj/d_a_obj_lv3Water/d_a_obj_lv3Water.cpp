@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80C587F0 */ ~mDoHIO_entry_c();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -61,14 +61,14 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -133,10 +133,10 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

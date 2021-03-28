@@ -24,16 +24,16 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct JUTFont {
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {
@@ -50,23 +50,23 @@ struct dMsgObject_c {
 	/* 80238258 */ void getScrnDrawPtr();
 };
 
-struct J2DPane {
-	/* 802F7100 */ void getBounds();
-};
-
-struct JKRExpHeap {
+struct J2DGrafContext {
 };
 
 struct JKRArchive {
-};
-
-struct J2DGrafContext {
 };
 
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
+};
+
+struct JKRExpHeap {
+};
+
+struct J2DPane {
+	/* 802F7100 */ void getBounds();
 };
 
 struct CPaneMgr {
@@ -205,10 +205,10 @@ struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

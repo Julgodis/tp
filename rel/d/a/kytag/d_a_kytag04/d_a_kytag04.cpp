@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -70,13 +70,13 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
 struct cXyz {
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -91,10 +91,10 @@ struct dComIfG_play_c {
 	/* 8002C97C */ void getLayerNo(int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

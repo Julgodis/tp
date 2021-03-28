@@ -26,10 +26,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -51,13 +51,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -101,13 +101,13 @@ struct dStage_roomControl_c {
 	/* 8002490C */ void setArcBank(int, char const*);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80A89160 */ ~cXyz();
 	/* 80A8DD54 */ cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

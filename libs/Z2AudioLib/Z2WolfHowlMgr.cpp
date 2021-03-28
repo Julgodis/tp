@@ -11,10 +11,10 @@
 // Types:
 // 
 
-struct Z2WolfHowlData {
+struct Vec {
 };
 
-struct Vec {
+struct Z2WolfHowlData {
 };
 
 struct Z2WolfHowlMgr {

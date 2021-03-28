@@ -27,7 +27,9 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -36,9 +38,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -59,13 +59,18 @@ struct daNpcT_faceMotionAnmData_c {
 struct daNpcT_evtData_c {
 };
 
+struct daNpcT_MotionSeqMngr_c {
+	struct sequenceStepData_c {
+	};
+
+	/* 80145898 */ void initialize();
+	/* 8099C968 */ ~daNpcT_MotionSeqMngr_c();
+};
+
 struct _GXColorS10 {
 };
 
 struct J3DModel {
-};
-
-struct J3DJoint {
 };
 
 struct dCcD_GObjInf {
@@ -73,12 +78,7 @@ struct dCcD_GObjInf {
 	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
-struct daNpcT_MotionSeqMngr_c {
-	struct sequenceStepData_c {
-	};
-
-	/* 80145898 */ void initialize();
-	/* 8099C968 */ ~daNpcT_MotionSeqMngr_c();
+struct J3DJoint {
 };
 
 struct daNpcT_c {

@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JPABaseEmitter {
+};
+
 namespace JStudio {
 	struct TObject {
 	};
@@ -35,9 +38,6 @@ namespace JStudio {
 		/* 8028776C */ TObject_particle(JStudio::stb::data::TParse_TBlock_object const&, JStudio::TAdaptor_particle*);
 	};
 
-};
-
-struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {

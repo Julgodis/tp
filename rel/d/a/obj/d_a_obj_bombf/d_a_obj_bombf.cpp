@@ -28,13 +28,13 @@ struct daObjBombf_c {
 	/* 80BBADF8 */ void draw();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {

@@ -14,6 +14,9 @@
 struct request_of_phase_process_class {
 };
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -21,9 +24,6 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 8047DBB0 */ ~cXyz();
 	/* 8047DBEC */ cXyz();
-};
-
-struct Quaternion {
 };
 
 struct csXyz {

@@ -23,6 +23,9 @@ struct mDoHIO_entry_c {
 	/* 80798C00 */ ~mDoHIO_entry_c();
 };
 
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -32,18 +35,15 @@ struct cXyz {
 	/* 8079D560 */ ~cXyz();
 };
 
-struct J3DModel {
-};
-
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -54,7 +54,7 @@ struct mDoExt_btkAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -63,7 +63,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

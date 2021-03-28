@@ -15,13 +15,13 @@ struct dMeterSub_c {
 	/* 80194138 */ bool isDead();
 };
 
-struct J2DAnmColor {
-};
-
 struct J2DAnmTransformKey {
 };
 
 struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
 };
 
 struct dMeterHaihai_c {

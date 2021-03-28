@@ -49,10 +49,10 @@ struct csXyz {
 struct cXyz {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

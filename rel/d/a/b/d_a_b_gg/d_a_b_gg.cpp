@@ -39,7 +39,7 @@ struct mDoGph_gInf_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -48,7 +48,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -72,10 +72,10 @@ struct daPy_py_c {
 	/* 8015F8E4 */ void cancelBoomerangLockActor(fopAc_ac_c*);
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daB_GG_c {

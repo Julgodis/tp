@@ -24,13 +24,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {
@@ -240,7 +240,6 @@ extern "C" extern u8 lit_1052[1 + 3 /* padding */];
 extern "C" extern u8 lit_1014[1 + 3 /* padding */];
 extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
-extern "C" extern u8 lit_1009[1 + 1 /* padding */];
 extern "C" extern u8 data_80BC273C[4];
 extern "C" extern u8 data_80BC2740[4];
 extern "C" extern u8 data_80BC2744[4];
@@ -635,11 +634,8 @@ u8 lit_1012[1 + 3 /* padding */];
 /* 80BC2520-80BC2524 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
 u8 lit_1010[1 + 3 /* padding */];
 
-/* 80BC2524-80BC2526 0001+01 s=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 1 /* padding */];
-
-/* 80BC2526-80BC2528 0002+00 s=5 e=0 z=0  None .bss       wy                                                           */
-static u8 wy[2];
+/* 80BC2524-80BC2528 0004+00 s=5 e=0 z=0  None .bss       None                                                         */
+static u8 struct_80BC2524[4];
 
 /* 80BBD740-80BBDA64 0324+00 s=1 e=0 z=0  None .text      control1__FP13obj_brg_classP4br_s                            */
 #pragma push

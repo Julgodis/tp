@@ -21,8 +21,8 @@ lbl_80736DD4:
 lbl_80736DF4:
 /* 80736DF4  38 00 00 00 */	li r0, 0
 /* 80736DF8  98 1F 0B AC */	stb r0, 0xbac(r31)
-/* 80736DFC  3C 60 80 74 */	lis r3, data_8073A171@ha
-/* 80736E00  38 83 A1 71 */	addi r4, r3, data_8073A171@l
+/* 80736DFC  3C 60 80 74 */	lis r3, struct_8073A14C+0x25@ha
+/* 80736E00  38 83 A1 71 */	addi r4, r3, struct_8073A14C+0x25@l
 /* 80736E04  88 64 00 00 */	lbz r3, 0(r4)
 /* 80736E08  38 03 FF FF */	addi r0, r3, -1
 /* 80736E0C  98 04 00 00 */	stb r0, 0(r4)

@@ -50,10 +50,10 @@ struct cBgS_PolyInfo {
 	/* 802681AC */ void ChkBgIndex() const;
 };
 
-struct cXyz {
+struct csXyz {
 };
 
-struct csXyz {
+struct cXyz {
 };
 
 struct dBgS {

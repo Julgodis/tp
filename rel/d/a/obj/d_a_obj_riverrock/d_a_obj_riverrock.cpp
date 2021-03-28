@@ -170,10 +170,10 @@ struct Z2SoundObjBase {
 	/* 802BDFF8 */ void deleteObject();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

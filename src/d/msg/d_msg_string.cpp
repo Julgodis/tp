@@ -11,14 +11,14 @@
 // Types:
 // 
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct J2DTextBox {
 };
 
 struct JUTFont {
 };
 
-struct J2DTextBox {
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgString_c {

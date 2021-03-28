@@ -31,15 +31,15 @@ struct daObj_Kbox_HIO_c {
 	/* 80C3EF98 */ ~daObj_Kbox_HIO_c();
 };
 
+struct cXyz {
+	/* 80266B84 */ void operator*(f32) const;
+	/* 80C3D8BC */ ~cXyz();
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
-	/* 80266B84 */ void operator*(f32) const;
-	/* 80C3D8BC */ ~cXyz();
 };
 
 struct dScnKy_env_light_c {

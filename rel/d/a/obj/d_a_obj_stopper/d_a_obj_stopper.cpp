@@ -155,10 +155,10 @@ struct cCcD_GStts {
 	/* 80CEEE7C */ ~cCcD_GStts();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

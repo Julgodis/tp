@@ -41,13 +41,13 @@ struct daGraveStone_c {
 	/* 80C1311C */ void Delete();
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {
@@ -70,6 +70,11 @@ struct dPa_control_c {
 
 };
 
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F58 */ void SetWall(f32, f32);
+};
+
 struct cBgS_PolyInfo {
 };
 
@@ -79,11 +84,6 @@ struct dBgS {
 };
 
 struct csXyz {
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {
@@ -161,10 +161,10 @@ struct cBgS {
 	/* 80074250 */ void Release(dBgW_Base*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

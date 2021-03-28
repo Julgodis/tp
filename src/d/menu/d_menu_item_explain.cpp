@@ -54,12 +54,6 @@ struct JMSMesgEntry_c {
 struct JUTFont {
 };
 
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -67,6 +61,12 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -80,6 +80,12 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct JKRArchive {
 };
 
@@ -87,12 +93,6 @@ struct JKRExpHeap {
 };
 
 struct J2DOrthoGraph {
-};
-
-struct STControl {
-	/* 8003219C */ void checkTrigger();
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_ItemExplain_c {
@@ -130,10 +130,10 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

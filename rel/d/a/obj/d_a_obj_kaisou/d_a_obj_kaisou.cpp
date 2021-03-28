@@ -34,10 +34,10 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daObjKaisou_c {

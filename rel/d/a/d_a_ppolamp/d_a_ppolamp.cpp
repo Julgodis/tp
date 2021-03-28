@@ -14,10 +14,10 @@
 struct request_of_phase_process_class {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -47,9 +47,6 @@ struct daPPolamp_c {
 	/* 80D4D10C */ void initParam();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
@@ -57,6 +54,9 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

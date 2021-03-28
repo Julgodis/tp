@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80CE81AC */ ~mDoHIO_entry_c();
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -54,10 +54,10 @@ struct daStairBlock_HIO_c {
 	/* 80CE8CDC */ ~daStairBlock_HIO_c();
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -112,10 +112,10 @@ struct cCcS {
 	/* 80264BA8 */ void Set(cCcD_Obj*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

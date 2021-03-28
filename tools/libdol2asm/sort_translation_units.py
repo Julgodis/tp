@@ -1,7 +1,8 @@
 
 from collections import defaultdict
+
 from . import util
-from .exception import Dol2ZelException
+from .context import Context
 
 class Node:
     def __init__(self, name):
@@ -26,7 +27,7 @@ def unique_keeporder(seq):
     seen_add = seen.add
     return [x for x in seq if not (x in seen or seen_add(x))]
 
-def sort(keys, order_sections):
+def sort(context: Context, keys, order_sections):
     nodes = dict([(x, Node(x)) for x in keys])
     orders = []
     for os, osv in order_sections.items():
@@ -52,7 +53,7 @@ def sort(keys, order_sections):
     if len(top_nodes) > 1:
         pass
     elif len(top_nodes) == 0:
-        raise Dol2ZelException("error: found no top-level node")
+        context.error("error: found no top-level node")
 
     def calculate_max_depth(k, depth):
         node = nodes[k]

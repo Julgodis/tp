@@ -65,21 +65,21 @@ struct csXyz {
 	/* 8051EB4C */ ~csXyz();
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
 	/* 8004CA90 */ void set(u8, u16, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, u8, dPa_levelEcallBack*, s8, _GXColor const*, _GXColor const*, cXyz const*, f32);
 };
 
-struct cCcD_Obj {
-};
-
 struct dCcMassS_HitInf {
 	/* 8051ED98 */ ~dCcMassS_HitInf();
+};
+
+struct cCcD_Obj {
 };
 
 struct dGrass_data_c {
@@ -2264,14 +2264,8 @@ u8 lit_1009[1 + 3 /* padding */];
 /* 80527910-80527920 000C+04 s=1 e=0 z=0  None .bss       @4293                                                        */
 static u8 lit_4293[12 + 4 /* padding */];
 
-/* 80527920-80527926 0006+00 s=1 e=0 z=0  None .bss       ang$4292                                                     */
-static u8 data_80527920[6];
-
-/* 80527926-8052792A 0002+02 s=1 e=0 z=0  None .bss       exec_count_dammy$4868                                        */
-static u8 data_80527926[2 + 2 /* padding */];
-
-/* 8052792A-80527930 0002+04 s=1 e=0 z=0  None .bss       exec_count_dammy2$4871                                       */
-static u8 data_8052792A[2 + 4 /* padding */];
+/* 80527920-80527930 000C+04 s=2 e=0 z=0  None .bss       None                                                         */
+static u8 struct_80527920[12 + 4 /* padding */];
 
 /* 80527930-805284E8 0BB8+00 s=1 e=0 z=0  None .bss       mAngleZ$5046                                                 */
 static u8 data_80527930[3000];

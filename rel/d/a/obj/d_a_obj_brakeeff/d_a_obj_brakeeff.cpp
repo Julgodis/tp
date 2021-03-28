@@ -17,10 +17,10 @@ struct request_of_phase_process_class {
 struct obj_brakeeff_class {
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -36,17 +36,17 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

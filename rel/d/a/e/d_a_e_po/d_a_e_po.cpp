@@ -24,6 +24,9 @@ struct mDoExt_morf_c {
 	/* 80757404 */ void isStop();
 };
 
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -43,9 +46,6 @@ struct cXyz {
 	/* 80757670 */ cXyz(cXyz const&);
 };
 
-struct J3DModel {
-};
-
 struct mDoExt_invisibleModel {
 	/* 8000E53C */ void create(J3DModel*, u8);
 	/* 8000E7C0 */ void entryDL(cXyz*);
@@ -54,7 +54,7 @@ struct mDoExt_invisibleModel {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -63,7 +63,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

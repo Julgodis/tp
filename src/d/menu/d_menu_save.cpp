@@ -71,9 +71,6 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct J2DOrthoGraph {
-};
-
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 8003219C */ void checkTrigger();
@@ -81,6 +78,9 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -261,10 +261,10 @@ struct Z2SeqMgr {
 	/* 802B3EAC */ void checkBgmIDPlaying(u32);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

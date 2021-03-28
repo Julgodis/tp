@@ -22,7 +22,7 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -31,7 +31,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -52,15 +52,15 @@ struct daB_GOS_HIO_c {
 	/* 80605320 */ ~daB_GOS_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

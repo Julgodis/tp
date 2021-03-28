@@ -31,7 +31,10 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -40,10 +43,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -56,10 +56,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpc_SoldierB_c {
@@ -102,10 +102,15 @@ struct daNpc_SoldierB_Param_c {
 	/* 80AF5A68 */ ~daNpc_SoldierB_Param_c();
 };
 
+struct J3DAnmTransformKey {
+};
+
 struct _GXColorS10 {
 };
 
-struct J3DAnmTransformKey {
+struct dCcD_GObjInf {
+	/* 80083A28 */ dCcD_GObjInf();
+	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct dCcD_SrcCyl {
@@ -113,11 +118,6 @@ struct dCcD_SrcCyl {
 
 struct dCcD_Cyl {
 	/* 800848B4 */ void Set(dCcD_SrcCyl const&);
-};
-
-struct dCcD_GObjInf {
-	/* 80083A28 */ dCcD_GObjInf();
-	/* 800840E4 */ ~dCcD_GObjInf();
 };
 
 struct daNpcF_c {

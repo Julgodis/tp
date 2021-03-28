@@ -70,10 +70,10 @@ struct cBgS_PolyInfo {
 	/* 802681A4 */ void SetPolyIndex(int);
 };
 
+struct dBgS_Acch;
 struct csXyz {
 };
 
-struct dBgS_Acch;
 struct dBgS {
 	/* 8007524C */ void WallCorrect(dBgS_Acch*);
 	/* 80075374 */ void WallCorrectSort(dBgS_Acch*);

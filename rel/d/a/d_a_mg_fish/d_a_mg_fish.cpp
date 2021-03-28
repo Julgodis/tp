@@ -27,10 +27,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -56,13 +56,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -493,7 +493,6 @@ extern "C" extern u8 lit_1052[1 + 3 /* padding */];
 extern "C" extern u8 lit_1014[1 + 3 /* padding */];
 extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
-extern "C" extern u8 lit_1009[1 + 1 /* padding */];
 extern "C" extern u8 data_80536CF8[4];
 extern "C" extern u8 data_80536CFC[4];
 extern "C" extern u8 data_80536D00[4];
@@ -1330,11 +1329,8 @@ u8 lit_1012[1 + 3 /* padding */];
 /* 80536BB8-80536BBC 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
 u8 lit_1010[1 + 3 /* padding */];
 
-/* 80536BBC-80536BBE 0001+01 s=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 1 /* padding */];
-
-/* 80536BBE-80536BC0 0002+00 s=2 e=0 z=0  None .bss       None                                                         */
-static u8 data_80536BBE[2];
+/* 80536BBC-80536BC0 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
+static u8 struct_80536BBC[4];
 
 /* 80536BC0-80536BCC 000C+00 s=1 e=0 z=0  None .bss       @3674                                                        */
 static u8 lit_3674[12];

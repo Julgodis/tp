@@ -82,18 +82,18 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-struct JKRExpHeap {
-};
-
-struct CSTControl {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 8003242C */ void checkLeftTrigger();
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct JKRExpHeap {
+};
+
+struct CSTControl {
 };
 
 struct dMenu_Insect_c {
@@ -135,10 +135,10 @@ struct dMenu_Insect_c {
 	/* 801DA630 */ void draw();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

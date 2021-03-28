@@ -41,7 +41,9 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -50,9 +52,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -75,10 +75,10 @@ struct daNpc_Hanjo_c {
 	/* 809F9C98 */ void getType();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNPC_TK_c {
@@ -452,7 +452,6 @@ extern "C" extern u8 lit_1052[1 + 3 /* padding */];
 extern "C" extern u8 lit_1014[1 + 3 /* padding */];
 extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
-extern "C" extern u8 lit_1009[1 + 1 /* padding */];
 extern "C" extern u8 data_80B0C668[4];
 extern "C" extern u8 data_80B0C66C[4];
 extern "C" extern u8 data_80B0C670[4];
@@ -1428,11 +1427,8 @@ u8 lit_1012[1 + 3 /* padding */];
 /* 80B0C5F0-80B0C5F4 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
 u8 lit_1010[1 + 3 /* padding */];
 
-/* 80B0C5F4-80B0C5F6 0001+01 s=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 1 /* padding */];
-
-/* 80B0C5F6-80B0C5F8 0002+00 s=2 e=0 z=0  None .bss       m_near_angle                                                 */
-static u8 m_near_angle[2];
+/* 80B0C5F4-80B0C5F8 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
+static u8 struct_80B0C5F4[4];
 
 /* 80B0C5F8-80B0C5FC 0004+00 s=2 e=0 z=0  None .bss       m_near_actor                                                 */
 static u8 m_near_actor[4];

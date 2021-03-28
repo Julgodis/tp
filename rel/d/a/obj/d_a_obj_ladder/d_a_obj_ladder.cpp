@@ -141,10 +141,10 @@ struct cBgS {
 	/* 800744A0 */ void GroundCross(cBgS_GndChk*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

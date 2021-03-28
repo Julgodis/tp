@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -35,13 +35,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -64,12 +64,12 @@ struct daFr_HIO_c {
 	/* 8051B920 */ ~daFr_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

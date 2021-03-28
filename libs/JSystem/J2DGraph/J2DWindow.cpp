@@ -69,28 +69,31 @@ struct JGeometry {
 
 };
 
-struct J2DAnmTevRegKey {
+struct J2DMaterial {
 };
 
-struct J2DAnmTextureSRTKey {
-};
-
-struct J2DAnmTexPattern {
-};
-
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmColor {
+struct J2DAnmVtxColor {
 };
 
 struct J2DAnmVisibilityFull {
 };
 
-struct J2DAnmVtxColor {
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
+};
+
+struct J2DAnmTevRegKey {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTransform {
+};
+
+struct J2DAnmTexPattern {
 };
 
 struct J2DPane {
@@ -130,9 +133,6 @@ struct J2DPane {
 	/* 802F83FC */ void setAnimationVC(J2DAnmVtxColor*);
 	/* 802F8464 */ void setConnectParent(bool);
 	/* 802F8474 */ void update();
-};
-
-struct J2DMaterial {
 };
 
 struct J2DWindow {

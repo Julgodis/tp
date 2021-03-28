@@ -33,10 +33,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF44 */ void ZXYrotM(csXyz const&);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -422,8 +422,7 @@ extern "C" void __dt__19daBoomerang_sight_cFv(); // 1
 extern "C" void __ct__4cXyzFv(); // 1
 extern "C" void __dt__12J3DFrameCtrlFv(); // 1
 extern "C" extern u8 const l_blurTop[12];
-extern "C" extern u8 const l_blurRoot[12 + 6 /* padding */];
-extern "C" extern u16 const m_lockWaitTime__18daBoomerang_HIO_c0;
+extern "C" extern u8 const struct_804A2868[20];
 extern "C" extern u32 const m_minCircleR__18daBoomerang_HIO_c0;
 extern "C" extern u32 const m_middleCircleR__18daBoomerang_HIO_c0;
 extern "C" extern u32 const m_maxCircleR__18daBoomerang_HIO_c0;
@@ -681,15 +680,13 @@ SECTION_RODATA u8 const l_blurTop[12] = {
 	0x42, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 };
 
-/* 804A2868-804A287A 000C+06 s=0 e=0 z=0  None .rodata    l_blurRoot                                                   */
-SECTION_RODATA u8 const l_blurRoot[12 + 6 /* padding */] = {
+/* 804A2868-804A287C 0014+00 s=0 e=0 z=0  None .rodata    None                                                         */
+SECTION_RODATA u8 const struct_804A2868[20] = {
+	/* 804A2868 000C data_804A2868 l_blurRoot */
 	0xC2, 0x20, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
-	/* padding */
-	0xB4, 0xA0, 0x8C, 0x3C, 0x1E, 0x1E,
+	/* 804A287A 0002 data_804A287A m_lockWaitTime__18daBoomerang_HIO_c0 */
+	0x00, 0x0A,
 };
-
-/* 804A287A-804A287C 0002+00 s=0 e=0 z=0  None .rodata    m_lockWaitTime__18daBoomerang_HIO_c0                         */
-SECTION_RODATA u16 const m_lockWaitTime__18daBoomerang_HIO_c0 = 0x000A;
 
 /* 804A287C-804A2880 0004+00 s=0 e=0 z=0  None .rodata    m_minCircleR__18daBoomerang_HIO_c0                           */
 SECTION_RODATA u32 const m_minCircleR__18daBoomerang_HIO_c0 = 0x41E00000;

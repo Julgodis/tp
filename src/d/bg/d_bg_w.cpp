@@ -25,30 +25,17 @@ struct dBgW_Base {
 	/* 8007E6DC */ void CallArrowStickCallBack(fopAc_ac_c*, fopAc_ac_c*, cXyz&);
 };
 
-struct cBgS_PolyInfo {
-	/* 802681A4 */ void SetPolyIndex(int);
-};
-
-struct dBgS_RoofChk {
-};
-
-struct dBgS_SplGrpChk {
+struct cBgS_PolyPassChk {
 };
 
 struct cBgS_GrpPassChk {
 };
 
-struct cM3dGPla {
-	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
+struct dBgS_RoofChk {
 };
 
-struct dBgS_CaptPoly {
-};
-
-struct dBgS_SphChk {
-};
-
-struct csXyz {
+struct cBgS_PolyInfo {
+	/* 802681A4 */ void SetPolyIndex(int);
 };
 
 struct Vec {
@@ -61,7 +48,20 @@ struct dBgS_Acch {
 	/* 800772E8 */ void CalcMovePosWork();
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_SphChk {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct csXyz {
+};
+
+struct dBgS_CaptPoly {
+};
+
+struct cM3dGPla {
+	/* 8026F57C */ void getCrossY(cXyz const&, f32*) const;
 };
 
 struct dBgW {
@@ -187,10 +187,10 @@ struct cBgW_GrpElm {
 	/* 8007A1E4 */ cBgW_GrpElm();
 };
 
-struct cBgD_t {
+struct cBgS_ShdwDraw {
 };
 
-struct cBgS_ShdwDraw {
+struct cBgD_t {
 };
 
 struct cBgS_LinChk {

@@ -76,10 +76,10 @@ struct JAISound {
 struct JAISeqDataRegion {
 };
 
-struct JAISeqMgr;
 struct JAIAudience {
 };
 
+struct JAISeqMgr;
 struct JAISeq {
 	/* 802A0A8C */ JAISeq(JAISeqMgr*, JAISoundStrategyMgr<JAISeq>*);
 	/* 802A0B64 */ void JAISeqMgr_startID_(JAISoundID, JGeometry::TVec3<f32> const*, JAIAudience*, int, int);

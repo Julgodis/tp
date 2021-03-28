@@ -17,10 +17,10 @@ struct standard_create_request_class {
 struct request_of_phase_process_class {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -62,10 +62,10 @@ struct dSv_info_c {
 	/* 80035360 */ void isSwitch(int, int) const;
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -115,10 +115,10 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

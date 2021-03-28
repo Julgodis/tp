@@ -36,14 +36,14 @@ struct fopAc_ac_c {
 	/* 80018B64 */ fopAc_ac_c();
 };
 
+struct cXyz {
+	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
-	/* 80266B34 */ void operator-(Vec const&) const;
 };
 
 struct dScnKy_env_light_c {

@@ -242,10 +242,10 @@ struct Z2StatusMgr {
 	/* 802B5F70 */ void heartGaugeOn();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -34,13 +34,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -58,13 +58,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {

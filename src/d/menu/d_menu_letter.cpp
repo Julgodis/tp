@@ -39,17 +39,17 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct COutFont_c {
-};
-
-struct JUTFont {
-};
-
 struct J2DTextBox {
 	/* 801DFA28 */ void getWhite() const;
 	/* 801DFA34 */ void getBlack() const;
 	/* 80300658 */ void getStringPtr() const;
 	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct JUTFont {
+};
+
+struct COutFont_c {
 };
 
 struct dMsgString_c {
@@ -80,15 +80,15 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
+struct STControl {
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct JKRExpHeap {
 };
 
 struct CSTControl {
-};
-
-struct STControl {
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_Letter_c {
@@ -136,10 +136,10 @@ struct dMenu_Letter_c {
 	/* 801E1D5C */ void draw();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

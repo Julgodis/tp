@@ -84,10 +84,10 @@ struct dDlst_NameIN_c {
 	/* 8025115C */ ~dDlst_NameIN_c();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

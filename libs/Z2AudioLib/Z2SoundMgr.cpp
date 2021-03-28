@@ -24,13 +24,13 @@ struct JGeometry {
 
 };
 
-struct JAISoundID {
-};
-
 struct JAISoundHandle {
 };
 
 struct JAISound {
+};
+
+struct JAISoundID {
 };
 
 struct Z2SoundMgr {

@@ -34,10 +34,10 @@ struct mDoGph_gInf_c {
 	/* 8054A4CC */ void fadeIn(f32, _GXColor&);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -53,10 +53,10 @@ struct mDoExt_btkAnm {
 	/* 8000D6D8 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -430,7 +430,6 @@ extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
 extern "C" extern u8 koro2_reset[4 + 4 /* padding */];
 extern "C" extern u8 data_8054B1F4[4 + 4 /* padding */];
-extern "C" extern u8 data_8054B1FC[4 + 1 /* padding */];
 extern "C" extern u8 data_8054B204[4];
 extern "C" extern u8 data_8054B208[4];
 extern "C" extern u8 data_8054B20C[4];
@@ -1817,11 +1816,8 @@ u8 koro2_reset[4 + 4 /* padding */];
 /* 8054B1F4-8054B1FC 0004+04 s=0 e=0 z=0  None .bss       old_stick_x$5644                                             */
 u8 data_8054B1F4[4 + 4 /* padding */];
 
-/* 8054B1FC-8054B201 0004+01 s=0 e=0 z=0  None .bss       old_stick_sx$5647                                            */
-u8 data_8054B1FC[4 + 1 /* padding */];
-
-/* 8054B201-8054B204 0003+00 s=2 e=0 z=0  None .bss       None                                                         */
-static u8 data_8054B201[3];
+/* 8054B1FC-8054B204 0008+00 s=2 e=0 z=0  None .bss       None                                                         */
+static u8 struct_8054B1FC[8];
 
 /* 8054868C-805488B8 022C+00 s=1 e=0 z=0  None .text      env_control__FP15npc_henna_class                             */
 #pragma push

@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80BF93E8 */ ~mDoHIO_entry_c();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {

@@ -11,15 +11,15 @@
 // Types:
 // 
 
-struct jmessage_tControl {
-	/* 802299EC */ jmessage_tControl();
-};
-
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
+};
+
+struct jmessage_tControl {
+	/* 802299EC */ jmessage_tControl();
 };
 
 struct jmessage_tReference {
@@ -116,20 +116,15 @@ struct jmessage_tMeasureProcessor {
 	/* 8022B5F4 */ ~jmessage_tMeasureProcessor();
 };
 
-struct jmessage_string_tControl {
-	/* 8022FB5C */ jmessage_string_tControl();
-	/* 802328DC */ ~jmessage_string_tControl();
-};
-
-struct COutFont_c {
-	/* 80226CF8 */ void initialize();
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
 };
 
 struct JUTFont {
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
+struct COutFont_c {
+	/* 80226CF8 */ void initialize();
 };
 
 struct jmessage_string_tReference {
@@ -145,6 +140,11 @@ struct jmessage_string_tReference {
 	/* 8022FACC */ void setOutfontLength(int, f32);
 	/* 8022FAF0 */ void clearOutfontLength(int);
 	/* 8022FB24 */ void getLineCountNowPage();
+};
+
+struct jmessage_string_tControl {
+	/* 8022FB5C */ jmessage_string_tControl();
+	/* 802328DC */ ~jmessage_string_tControl();
 };
 
 struct jmessage_string_tSequenceProcessor {

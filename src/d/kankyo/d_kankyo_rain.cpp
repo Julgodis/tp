@@ -43,9 +43,6 @@ struct csXyz {
 	/* 802673F4 */ csXyz(s16, s16, s16);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
@@ -55,6 +52,9 @@ struct Vec {
 struct cXyz {
 	/* 80009184 */ ~cXyz();
 	/* 80266AE4 */ void operator+(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

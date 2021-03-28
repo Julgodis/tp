@@ -48,15 +48,15 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
+struct STControl {
+	/* 80032524 */ void checkUpTrigger();
+	/* 800325A0 */ void checkDownTrigger();
+};
+
 struct JKRExpHeap {
 };
 
 struct CSTControl {
-};
-
-struct STControl {
-	/* 80032524 */ void checkUpTrigger();
-	/* 800325A0 */ void checkDownTrigger();
 };
 
 struct dMenu_Skill_c {
@@ -92,10 +92,10 @@ struct dMenu_Skill_c {
 	/* 801F9A08 */ void draw();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

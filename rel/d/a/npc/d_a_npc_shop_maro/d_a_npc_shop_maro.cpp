@@ -30,23 +30,23 @@ struct daNpcT_faceMotionAnmData_c {
 struct daNpcT_evtData_c {
 };
 
-struct J3DJoint {
-};
-
-struct J3DModel {
-};
-
-struct cXyz {
-	/* 80AEC0DC */ ~cXyz();
-	/* 80AEC670 */ cXyz();
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
 
 	/* 80145898 */ void initialize();
 	/* 80AEC6BC */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct J3DModel {
+};
+
+struct J3DJoint {
+};
+
+struct cXyz {
+	/* 80AEC0DC */ ~cXyz();
+	/* 80AEC670 */ cXyz();
 };
 
 struct daNpcT_c {

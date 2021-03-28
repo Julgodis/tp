@@ -19,8 +19,8 @@ lbl_8075F734:
 /* 8075F778  4B 8A D6 24 */	b transM__14mDoMtx_stack_cFfff
 /* 8075F77C  3C 60 80 76 */	lis r3, lit_3908@ha
 /* 8075F780  C0 03 15 04 */	lfs f0, lit_3908@l(r3)
-/* 8075F784  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 8075F788  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 8075F784  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 8075F788  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 8075F78C  C0 23 00 08 */	lfs f1, 8(r3)
 /* 8075F790  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 8075F794  41 82 00 10 */	beq lbl_8075F7A4

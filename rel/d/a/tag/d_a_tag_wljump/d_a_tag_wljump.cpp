@@ -51,10 +51,10 @@ struct dAttHint_c {
 	/* 800738FC */ void request(fopAc_ac_c*, int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

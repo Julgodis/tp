@@ -2,8 +2,8 @@ lbl_80739D00:
 /* 80739D00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80739D04  7C 08 02 A6 */	mflr r0
 /* 80739D08  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80739D0C  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80739D10  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80739D0C  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80739D10  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80739D14  4B FF C4 F9 */	bl __ct__15daE_OctBg_HIO_cFv
 /* 80739D18  3C 80 80 74 */	lis r4, __dt__15daE_OctBg_HIO_cFv@ha
 /* 80739D1C  38 84 9C B8 */	addi r4, r4, __dt__15daE_OctBg_HIO_cFv@l

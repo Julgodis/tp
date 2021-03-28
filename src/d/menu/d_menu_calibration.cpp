@@ -51,10 +51,10 @@ struct dMenu_Calibration_c {
 	/* 801AFBF4 */ void draw();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

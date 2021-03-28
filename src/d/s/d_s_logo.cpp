@@ -123,10 +123,10 @@ struct cDylPhs {
 	/* 8001884C */ void Link(request_of_phase_process_class*, s16);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -26,14 +26,14 @@ struct daNpcT_faceMotionAnmData_c {
 struct J3DModel {
 };
 
+struct J3DJoint {
+};
+
 struct Vec {
 };
 
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -97,12 +97,6 @@ struct dSv_memBit_c {
 	/* 80034860 */ void isSwitch(int) const;
 };
 
-struct dMsgFlow_c {
-	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
-	/* 8024A528 */ void getEventId(int*);
-	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
-};
-
 struct STControl {
 	/* 80032088 */ void setWaitParm(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 800320AC */ void init();
@@ -111,6 +105,12 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct dMsgFlow_c {
+	/* 8024A2D8 */ void doFlow(fopAc_ac_c*, fopAc_ac_c**, int);
+	/* 8024A528 */ void getEventId(int*);
+	/* 8024B2C0 */ void query005(mesg_flow_node_branch*, fopAc_ac_c*, int);
 };
 
 struct dShopSystem_c {

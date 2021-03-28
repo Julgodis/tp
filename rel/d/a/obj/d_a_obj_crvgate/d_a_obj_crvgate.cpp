@@ -188,10 +188,10 @@ struct Z2SoundObjSimple {
 	/* 802BE844 */ Z2SoundObjSimple();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

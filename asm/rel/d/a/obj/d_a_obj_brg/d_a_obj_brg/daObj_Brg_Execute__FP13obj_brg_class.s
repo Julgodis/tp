@@ -204,8 +204,8 @@ lbl_80BBF4E8:
 /* 80BBF508  C0 21 01 00 */	lfs f1, 0x100(r1)
 /* 80BBF50C  C0 41 01 08 */	lfs f2, 0x108(r1)
 /* 80BBF510  4B 6A 81 64 */	b cM_atan2s__Fff
-/* 80BBF514  3C 80 80 BC */	lis r4, wy@ha
-/* 80BBF518  B0 64 25 26 */	sth r3, wy@l(r4)
+/* 80BBF514  3C 80 80 BC */	lis r4, struct_80BC2524+0x2@ha
+/* 80BBF518  B0 64 25 26 */	sth r3, struct_80BC2524+0x2@l(r4)
 /* 80BBF51C  3C 9E 00 01 */	addis r4, r30, 1
 /* 80BBF520  A8 64 AF 20 */	lha r3, -0x50e0(r4)
 /* 80BBF524  38 03 00 01 */	addi r0, r3, 1
@@ -1117,8 +1117,8 @@ lbl_80BC01B0:
 /* 80BC0268  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80BC026C  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 80BC0270  80 63 00 00 */	lwz r3, 0(r3)
-/* 80BC0274  3C 80 80 BC */	lis r4, wy@ha
-/* 80BC0278  38 84 25 26 */	addi r4, r4, wy@l
+/* 80BC0274  3C 80 80 BC */	lis r4, struct_80BC2524+0x2@ha
+/* 80BC0278  38 84 25 26 */	addi r4, r4, struct_80BC2524+0x2@l
 /* 80BC027C  A8 84 00 00 */	lha r4, 0(r4)
 /* 80BC0280  4B 44 C1 5C */	b mDoMtx_YrotS__FPA4_fs
 /* 80BC0284  38 61 01 18 */	addi r3, r1, 0x118

@@ -16,10 +16,10 @@ lbl_80736BB4:
 /* 80736BEC  38 60 00 00 */	li r3, 0
 /* 80736BF0  48 00 01 A4 */	b lbl_80736D94
 lbl_80736BF4:
-/* 80736BF4  3C 60 80 74 */	lis r3, data_8073A172@ha
-/* 80736BF8  88 83 A1 72 */	lbz r4, data_8073A172@l(r3)
-/* 80736BFC  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80736C00  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80736BF4  3C 60 80 74 */	lis r3, struct_8073A14C+0x26@ha
+/* 80736BF8  88 83 A1 72 */	lbz r4, struct_8073A14C+0x26@l(r3)
+/* 80736BFC  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80736C00  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80736C04  88 03 00 20 */	lbz r0, 0x20(r3)
 /* 80736C08  7C 04 00 40 */	cmplw r4, r0
 /* 80736C0C  40 80 01 84 */	bge lbl_80736D90
@@ -103,8 +103,8 @@ lbl_80736D1C:
 /* 80736D24  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 80736D28  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80736D2C:
-/* 80736D2C  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80736D30  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80736D2C  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80736D30  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80736D34  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80736D38  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80736D3C  40 80 00 54 */	bge lbl_80736D90

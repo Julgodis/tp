@@ -32,10 +32,6 @@ struct dJntCol_c {
 	/* 80036C44 */ void getHitmarkPosAndAngle(cXyz const*, csXyz const*, cXyz*, csXyz*, int) const;
 };
 
-struct cCcD_Obj {
-	/* 80263A48 */ void GetAc();
-};
-
 struct cCcD_GObjInf {
 };
 
@@ -45,6 +41,9 @@ struct cCcD_ShapeAttr {
 
 };
 
+struct dCcD_GStts {
+};
+
 struct cCcD_GStts {
 };
 
@@ -52,12 +51,13 @@ struct dCcD_GObjInf {
 	/* 800843DC */ void ChkAtNoGuard();
 };
 
+struct cCcD_Obj {
+	/* 80263A48 */ void GetAc();
+};
+
 struct cCcD_Stts {
 	/* 80263934 */ void PlusCcMove(f32, f32, f32);
 	/* 80263970 */ void PlusDmg(int);
-};
-
-struct dCcD_GStts {
 };
 
 struct dCcS {

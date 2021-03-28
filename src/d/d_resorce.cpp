@@ -24,6 +24,9 @@ struct mDoDvdThd_mountArchive_c {
 	/* 80015E14 */ void create(char const*, u8, JKRHeap*);
 };
 
+struct cXyz {
+};
+
 struct JKRArchive {
 	/* 802D5CE4 */ void getIdxResource(u32);
 	/* 802D625C */ void getFileAttribute(u32) const;
@@ -35,9 +38,6 @@ struct J3DModelData {
 	/* 80325E14 */ void newSharedDisplayList(u32);
 	/* 80325F94 */ void makeSharedDL();
 	/* 8032600C */ void simpleCalcMaterial(u16, f32 (* )[4]);
-};
-
-struct cXyz {
 };
 
 struct dRes_info_c {

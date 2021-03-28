@@ -120,10 +120,10 @@ struct dBgS_Acch {
 	/* 80076AAC */ void CrrPos(dBgS&);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

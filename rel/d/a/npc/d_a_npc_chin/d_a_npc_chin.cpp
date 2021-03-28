@@ -60,16 +60,16 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -151,13 +151,13 @@ struct daNpcF_ActorMngr_c {
 	/* 80990F14 */ daNpcF_ActorMngr_c();
 };
 
-struct dKy_tevstr_c {
+struct J3DModel {
 };
 
 struct J3DJoint {
 };
 
-struct J3DModel {
+struct dKy_tevstr_c {
 };
 
 struct daNpcChin_c {

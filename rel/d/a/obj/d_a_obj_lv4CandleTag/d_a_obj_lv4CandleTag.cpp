@@ -58,10 +58,10 @@ struct dEvLib_callback_c {
 	/* 80C5DAC0 */ bool eventStart();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

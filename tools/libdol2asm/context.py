@@ -6,6 +6,11 @@ from .globals import *
 
 @dataclass
 class Context:
+    """
+    The context is used to provide ways for multiprocessing 
+    code to print and talk to the main process.
+    """
+
     index: int
     output: Queue
 
@@ -35,6 +40,8 @@ class Context:
 
 @dataclass
 class MainContext(Context):
+    """ Context that is ONLY used on the main process. """
+    
     def send_command(self, command, *args):
         if command == 'debug':
             debug(*args)

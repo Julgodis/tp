@@ -127,10 +127,10 @@ struct cBgS {
 struct _GXTexObj {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

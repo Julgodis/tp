@@ -471,10 +471,10 @@ struct J3DPEBlockOpa {
 	/* 80323334 */ ~J3DPEBlockOpa();
 };
 
-struct J3DBlend {
+struct J3DAlphaComp {
 };
 
-struct J3DAlphaComp {
+struct J3DBlend {
 };
 
 struct J3DFog {

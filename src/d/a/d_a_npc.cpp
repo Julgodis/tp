@@ -46,16 +46,16 @@ struct mDoExt_morf_c {
 	/* 8000FB7C */ void setMorf(f32);
 };
 
-struct J3DAnmColor {
-};
-
 struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmColor {
+};
+
+struct J3DAnmTevRegKey {
 };
 
 struct J3DMaterialTable {
@@ -85,10 +85,10 @@ struct mDoExt_bpkAnm {
 	/* 8000D518 */ void entry(J3DMaterialTable*, f32);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -127,8 +127,10 @@ struct daNpcT_motionAnmData_c {
 struct daNpcT_faceMotionAnmData_c {
 };
 
-struct J3DFrameCtrl {
-	/* 803283FC */ void init(s16);
+struct J3DAnmTransformKey {
+};
+
+struct _GXColorS10 {
 };
 
 struct J3DModel {
@@ -138,13 +140,11 @@ struct dCcD_GObjInf {
 	/* 80084460 */ void ChkTgHit();
 };
 
-struct J3DAnmTransformKey {
-};
-
-struct _GXColorS10 {
-};
-
 struct J3DJoint {
+};
+
+struct J3DFrameCtrl {
+	/* 803283FC */ void init(s16);
 };
 
 struct daNpcT_c {
@@ -447,13 +447,13 @@ struct daBaseNpc_path_c {
 	/* 801503FC */ ~daBaseNpc_path_c();
 };
 
-struct cBgS_PolyInfo {
-	/* 802680B0 */ ~cBgS_PolyInfo();
-};
-
 struct dBgW {
 	/* 8007B970 */ dBgW();
 	/* 8007B9C0 */ void Move();
+};
+
+struct cBgS_PolyInfo {
+	/* 802680B0 */ ~cBgS_PolyInfo();
 };
 
 struct daBaseNpc_moveBgActor_c {

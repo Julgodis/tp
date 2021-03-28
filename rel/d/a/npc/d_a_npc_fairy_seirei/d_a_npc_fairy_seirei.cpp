@@ -20,12 +20,6 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
-struct daNpcT_evtData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
@@ -34,7 +28,13 @@ struct daNpcT_MotionSeqMngr_c {
 	/* 80541898 */ ~daNpcT_MotionSeqMngr_c();
 };
 
+struct daNpcT_faceMotionAnmData_c {
+};
+
 struct daNpcT_motionAnmData_c {
+};
+
+struct daNpcT_evtData_c {
 };
 
 struct daNpc_FairySeirei_c {
@@ -70,12 +70,12 @@ struct daNpc_FairySeirei_Param_c {
 struct J3DModel {
 };
 
+struct J3DJoint {
+};
+
 struct cXyz {
 	/* 805412D0 */ ~cXyz();
 	/* 8054184C */ cXyz();
-};
-
-struct J3DJoint {
 };
 
 struct daNpcT_c {
@@ -150,10 +150,10 @@ struct csXyz {
 	/* 8054174C */ csXyz();
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

@@ -69,10 +69,10 @@ struct mDoExt_morf_c {
 	/* 8061AD20 */ void isStop();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -95,7 +95,8 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C06F4 */ void stopAnime();
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -104,8 +105,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C06F4 */ void stopAnime();
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

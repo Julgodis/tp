@@ -18,6 +18,9 @@ struct daPy_py_c {
 	/* 8015F398 */ void checkMasterSwordEquip();
 };
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -27,9 +30,6 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266C18 */ void operator/(f32) const;
 	/* 80266CBC */ void outprod(Vec const&) const;
-};
-
-struct Quaternion {
 };
 
 struct dCcD_GObjInf {
@@ -56,10 +56,10 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
-struct dKy_tevstr_c {
+struct JPABaseEmitter {
 };
 
-struct JPABaseEmitter {
+struct dKy_tevstr_c {
 };
 
 struct J3DModelData {

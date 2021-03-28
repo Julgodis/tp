@@ -53,8 +53,8 @@ lbl_80BBE008:
 /* 80BBE0D4  3C 60 80 45 */	lis r3, calc_mtx@ha
 /* 80BBE0D8  38 63 07 68 */	addi r3, r3, calc_mtx@l
 /* 80BBE0DC  80 63 00 00 */	lwz r3, 0(r3)
-/* 80BBE0E0  3C 80 80 BC */	lis r4, wy@ha
-/* 80BBE0E4  38 84 25 26 */	addi r4, r4, wy@l
+/* 80BBE0E0  3C 80 80 BC */	lis r4, struct_80BC2524+0x2@ha
+/* 80BBE0E4  38 84 25 26 */	addi r4, r4, struct_80BC2524+0x2@l
 /* 80BBE0E8  A8 84 00 00 */	lha r4, 0(r4)
 /* 80BBE0EC  4B 44 E2 F0 */	b mDoMtx_YrotS__FPA4_fs
 /* 80BBE0F0  C0 1D 00 00 */	lfs f0, 0(r29)

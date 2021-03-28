@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -19,9 +22,6 @@ struct cXyz {
 	/* 80266CBC */ void outprod(Vec const&) const;
 	/* 80266EF4 */ void normalize();
 	/* 80266FDC */ void normalizeRS();
-};
-
-struct Quaternion {
 };
 
 struct csXyz {

@@ -17,6 +17,9 @@ struct stage_stag_info_class {
 struct request_of_phase_process_class {
 };
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -37,9 +40,6 @@ struct cXyz {
 	/* 80266F48 */ void normalizeZP();
 	/* 80267128 */ void atan2sX_Z() const;
 	/* 80267150 */ void atan2sY_XZ() const;
-};
-
-struct Quaternion {
 };
 
 struct csXyz {
@@ -68,10 +68,10 @@ struct mDoExt_blkAnm {
 	/* 8000DA08 */ void init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16);
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_bckAnm {
@@ -512,8 +512,22 @@ struct daAlink_footData_c {
 	/* 800CFCF4 */ daAlink_footData_c();
 };
 
+struct J3DAnmBase {
+};
+
 struct dBgS_LinChk {
 	/* 80077D64 */ void Set(cXyz const*, cXyz const*, fopAc_ac_c const*);
+};
+
+struct _GXColorS10 {
+};
+
+struct J3DAnmTevRegKey {
+	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
+	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct daAlinkHIO_anm_c {
 };
 
 struct JKRHeap {
@@ -522,6 +536,18 @@ struct JKRHeap {
 
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct dAttList_c {
+	/* 80073864 */ void getActor();
+};
+
+struct dDemo_actor_c {
+	/* 8003819C */ void getPrm_Morf();
+	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
+};
+
+struct JPABaseEmitter {
 };
 
 struct dCcD_GObjInf {
@@ -539,7 +565,11 @@ struct dCcD_GObjInf {
 	/* 800846B0 */ void ResetCoHit();
 };
 
-struct JPABaseEmitter {
+struct cM3dGPla {
+	/* 8001DB90 */ ~cM3dGPla();
+	/* 801411F0 */ cM3dGPla();
+	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
+	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
 };
 
 struct dBgW_Base {
@@ -548,38 +578,8 @@ struct dBgW_Base {
 
 };
 
-struct daAlinkHIO_anm_c {
-};
-
-struct _GXColorS10 {
-};
-
-struct J3DAnmTevRegKey {
-	/* 8032B1F8 */ void getTevColorReg(u16, _GXColorS10*) const;
-	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
-struct dDemo_actor_c {
-	/* 8003819C */ void getPrm_Morf();
-	/* 80038338 */ void getDemoIDData(int*, int*, int*, u16*, u8*);
-};
-
 struct J3DGXColorS10 {
 	/* 8000E460 */ J3DGXColorS10();
-};
-
-struct cM3dGPla {
-	/* 8001DB90 */ ~cM3dGPla();
-	/* 801411F0 */ cM3dGPla();
-	/* 8026F3DC */ cM3dGPla(cXyz const*, f32);
-	/* 8026F408 */ void crossInfLin(cXyz const&, cXyz const&, cXyz&) const;
-};
-
-struct dAttList_c {
-	/* 80073864 */ void getActor();
-};
-
-struct J3DAnmBase {
 };
 
 struct dCcG_At_Spl {
@@ -2602,6 +2602,13 @@ struct dPa_control_c {
 	/* 8004D068 */ void setPoly(u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80075F58 */ void SetWall(f32, f32);
+	/* 80077414 */ ~dBgS_AcchCir();
+};
+
 struct dBgS_RoofChk {
 	/* 80078FF4 */ dBgS_RoofChk();
 	/* 80079090 */ ~dBgS_RoofChk();
@@ -2630,13 +2637,6 @@ struct dBgS {
 	/* 80075774 */ void MoveBgCrrPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*, bool, bool);
 	/* 80075880 */ void MoveBgTransPos(cBgS_PolyInfo const&, bool, cXyz*, csXyz*, csXyz*);
 	/* 80075C6C */ void PushPullCallBack(cBgS_PolyInfo const&, fopAc_ac_c*, s16, dBgW_Base::PushPullLabel);
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80075F58 */ void SetWall(f32, f32);
-	/* 80077414 */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {
@@ -3145,12 +3145,12 @@ struct J3DShape {
 	/* 80315300 */ void loadPreDrawSetting() const;
 };
 
-struct J3DAnmTexPattern {
-	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
-};
-
 struct J3DAnmTextureSRTKey {
 	/* 8032B1D4 */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DAnmTexPattern {
+	/* 8032B09C */ void searchUpdateMaterialID(J3DModelData*);
 };
 
 struct J3DMaterialTable {
@@ -3197,10 +3197,10 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
-struct J2DAnmColor {
+struct J2DAnmTevRegKey {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmColor {
 };
 
 struct J2DPane {

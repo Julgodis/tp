@@ -14,7 +14,13 @@
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -23,13 +29,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Vec {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -53,15 +53,15 @@ struct daTag_EvtArea_c {
 	/* 8048C94C */ void chkPointInArea(cXyz, cXyz);
 };
 
-struct daNpcT_faceMotionAnmData_c {
-};
-
 struct daNpcT_MotionSeqMngr_c {
 	struct sequenceStepData_c {
 	};
 
 	/* 80145898 */ void initialize();
 	/* 80AB86A4 */ ~daNpcT_MotionSeqMngr_c();
+};
+
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -225,18 +225,18 @@ struct dRes_control_c {
 	/* 8003C2EC */ void getRes(char const*, s32, dRes_info_c*, int);
 };
 
+struct dBgS_AcchCir {
+	/* 80075EAC */ dBgS_AcchCir();
+	/* 80075F40 */ void SetWallR(f32);
+	/* 80AB86EC */ ~dBgS_AcchCir();
+};
+
 struct dBgS {
 };
 
 struct csXyz {
 	/* 80AB8004 */ ~csXyz();
 	/* 80AB85A0 */ csXyz();
-};
-
-struct dBgS_AcchCir {
-	/* 80075EAC */ dBgS_AcchCir();
-	/* 80075F40 */ void SetWallR(f32);
-	/* 80AB86EC */ ~dBgS_AcchCir();
 };
 
 struct dBgS_Acch {

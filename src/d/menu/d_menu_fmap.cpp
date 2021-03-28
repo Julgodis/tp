@@ -95,15 +95,15 @@ struct dMenu_Fmap_world_data_c {
 struct dMenu_Fmap_stage_data_c {
 };
 
+struct STControl {
+	/* 8003219C */ void checkTrigger();
+};
+
 struct JKRExpHeap {
 	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
 };
 
 struct CSTControl {
-};
-
-struct STControl {
-	/* 8003219C */ void checkTrigger();
 };
 
 struct dMenu_Fmap_c {
@@ -325,10 +325,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

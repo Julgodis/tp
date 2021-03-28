@@ -36,10 +36,10 @@ struct Z2SoundMgr {
 	/* 802AA270 */ void setIIR(JAISound*, s16 const*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

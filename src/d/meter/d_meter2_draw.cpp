@@ -32,12 +32,6 @@ struct dMsgObject_c {
 struct JMSMesgEntry_c {
 };
 
-struct ResTLUT {
-};
-
-struct ResTIMG {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -45,6 +39,12 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct ResTLUT {
+};
+
+struct ResTIMG {
 };
 
 struct J2DPicture {
@@ -60,23 +60,17 @@ struct dMeter2Info_c {
 	/* 8021CF08 */ void readItemTexture(u8, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, void*, J2DPicture*, int);
 };
 
-struct J2DAnmColor {
-};
-
-struct JKRExpHeap {
-};
-
 struct JUtility {
 	struct TColor {
 	};
 
 };
 
-struct JKRArchive {
-	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
+struct J2DGrafContext {
 };
 
-struct J2DGrafContext {
+struct JKRArchive {
+	/* 802D5B38 */ void getGlbResource(u32, char const*, JKRArchive*);
 };
 
 struct J2DScreen {
@@ -86,6 +80,9 @@ struct J2DScreen {
 	/* 802F9690 */ void animation();
 };
 
+struct JKRExpHeap {
+};
+
 struct CPaneMgrAlpha {
 	/* 802553FC */ CPaneMgrAlpha(J2DScreen*, u64, u8, JKRExpHeap*);
 	/* 802555C8 */ void show();
@@ -93,6 +90,9 @@ struct CPaneMgrAlpha {
 	/* 8025564C */ void isVisible();
 	/* 802557D0 */ void setAlphaRate(f32);
 	/* 80255828 */ void getAlphaRate();
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DBasePosition {
@@ -223,10 +223,10 @@ struct dKantera_icon_c {
 	/* 801AEC44 */ void setNowGauge(u16, u16);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

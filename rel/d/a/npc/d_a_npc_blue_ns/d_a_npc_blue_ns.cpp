@@ -17,7 +17,13 @@ struct request_of_phase_process_class {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Vec {
+};
+
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -26,13 +32,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Vec {
-};
-
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -80,15 +80,15 @@ struct daNpcF_c {
 	/* 8096C744 */ void drawOtherMdls();
 };
 
+struct csXyz {
+	/* 8096C0E4 */ ~csXyz();
+	/* 8096C120 */ csXyz();
+};
+
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 8096C124 */ ~cXyz();
 	/* 8096C160 */ cXyz();
-};
-
-struct csXyz {
-	/* 8096C0E4 */ ~csXyz();
-	/* 8096C120 */ csXyz();
 };
 
 struct daNpcF_Lookat_c {
@@ -107,10 +107,10 @@ struct daNpcF_ActorMngr_c {
 	/* 8096BFD8 */ daNpcF_ActorMngr_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcBlueNS_c {

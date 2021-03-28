@@ -69,14 +69,14 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
+struct cXyz {
+	/* 804E00A0 */ ~cXyz();
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
-	/* 804E00A0 */ ~cXyz();
 };
 
 struct dScnKy_env_light_c {

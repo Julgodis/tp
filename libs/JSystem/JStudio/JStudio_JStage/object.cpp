@@ -14,12 +14,6 @@
 struct Vec {
 };
 
-struct JStage {
-	struct TObject {
-	};
-
-};
-
 namespace JStudio {
 	struct TControl {
 		struct TTransform_translation_rotation_scaling {
@@ -38,6 +32,12 @@ namespace JStudio {
 
 	struct math {
 		/* 80285B44 */ void getTransformation_SRxyzT(f32 (* )[4], Vec const&, Vec const&, Vec const&);
+	};
+
+};
+
+struct JStage {
+	struct TObject {
 	};
 
 };

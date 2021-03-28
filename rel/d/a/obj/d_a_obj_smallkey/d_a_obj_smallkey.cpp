@@ -115,10 +115,10 @@ struct dPa_followEcallBack {
 	/* 80CDA48C */ void __defctor();
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

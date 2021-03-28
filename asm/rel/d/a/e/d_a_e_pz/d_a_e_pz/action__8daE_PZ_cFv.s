@@ -6,8 +6,8 @@ lbl_8075F3A8:
 /* 8075F3B8  7C 7F 1B 78 */	mr r31, r3
 /* 8075F3BC  3C 80 80 76 */	lis r4, lit_3929@ha
 /* 8075F3C0  C0 24 15 30 */	lfs f1, lit_3929@l(r4)
-/* 8075F3C4  3C 80 80 76 */	lis r4, l_HIO@ha
-/* 8075F3C8  38 84 1E 0C */	addi r4, r4, l_HIO@l
+/* 8075F3C4  3C 80 80 76 */	lis r4, struct_80761E0C+0x0@ha
+/* 8075F3C8  38 84 1E 0C */	addi r4, r4, struct_80761E0C+0x0@l
 /* 8075F3CC  C0 04 00 08 */	lfs f0, 8(r4)
 /* 8075F3D0  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8075F3D4  D0 03 07 CC */	stfs f0, 0x7cc(r3)

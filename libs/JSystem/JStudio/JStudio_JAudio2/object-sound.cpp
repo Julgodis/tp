@@ -109,11 +109,11 @@ struct JAISoundStatus_ {
 	/* 802A2244 */ void unlockIfLocked();
 };
 
-struct JAISoundID {
-};
-
 struct JAISoundHandle {
 	/* 802A2184 */ void releaseSound();
+};
+
+struct JAISoundID {
 };
 
 struct JAISoundStarter {

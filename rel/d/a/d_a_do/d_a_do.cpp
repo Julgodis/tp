@@ -18,10 +18,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -43,13 +43,13 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct Vec {
 };
 
 struct J3DAnmTransform {
 };
 
-struct Vec {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -82,14 +82,14 @@ struct daDo_HIO_c {
 	/* 8066ED40 */ ~daDo_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80668134 */ ~cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -387,7 +387,6 @@ extern "C" extern u8 lit_1052[1 + 3 /* padding */];
 extern "C" extern u8 lit_1014[1 + 3 /* padding */];
 extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
-extern "C" extern u8 lit_1009[1 + 1 /* padding */];
 extern "C" extern u8 lit_5578[12 + 4 /* padding */];
 extern "C" extern u8 data_8066F320[12];
 extern "C" extern u8 data_8066F32C[4];
@@ -1269,11 +1268,8 @@ u8 lit_1012[1 + 3 /* padding */];
 /* 8066F2B0-8066F2B4 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
 u8 lit_1010[1 + 3 /* padding */];
 
-/* 8066F2B4-8066F2B6 0001+01 s=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 1 /* padding */];
-
-/* 8066F2B6-8066F2B8 0002+00 s=2 e=0 z=0  None .bss       None                                                         */
-static u8 data_8066F2B6[2];
+/* 8066F2B4-8066F2B8 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
+static u8 struct_8066F2B4[4];
 
 /* 8066F2B8-8066F2C4 000C+00 s=1 e=0 z=0  None .bss       @3657                                                        */
 static u8 lit_3657[12];

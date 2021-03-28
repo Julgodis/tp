@@ -21,7 +21,7 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -30,7 +30,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -324,7 +324,6 @@ extern "C" extern u8 lit_1052[1 + 3 /* padding */];
 extern "C" extern u8 lit_1014[1 + 3 /* padding */];
 extern "C" extern u8 lit_1012[1 + 3 /* padding */];
 extern "C" extern u8 lit_1010[1 + 3 /* padding */];
-extern "C" extern u8 lit_1009[1 + 1 /* padding */];
 extern "C" extern u8 data_806BE7E8[4];
 extern "C" extern u8 data_806BE7EC[4];
 extern "C" extern u8 data_806BE7F0[4];
@@ -973,11 +972,8 @@ u8 lit_1012[1 + 3 /* padding */];
 /* 806BE798-806BE79C 0001+03 s=0 e=0 z=0  None .bss       @1010                                                        */
 u8 lit_1010[1 + 3 /* padding */];
 
-/* 806BE79C-806BE79E 0001+01 s=0 e=0 z=0  None .bss       @1009                                                        */
-u8 lit_1009[1 + 1 /* padding */];
-
-/* 806BE79E-806BE7A0 0002+00 s=1 e=0 z=0  None .bss       s_AtCount__22@unnamed@d_a_e_fs_cpp@                          */
-static u8 data_806BE79E[2];
+/* 806BE79C-806BE7A0 0004+00 s=1 e=0 z=0  None .bss       None                                                         */
+static u8 struct_806BE79C[4];
 
 /* 806BE7A0-806BE7A4 0004+00 s=2 e=0 z=0  None .bss       None                                                         */
 static u8 data_806BE7A0[4];

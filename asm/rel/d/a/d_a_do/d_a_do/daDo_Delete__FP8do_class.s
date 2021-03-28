@@ -12,8 +12,8 @@ lbl_8066E49C:
 /* 8066E4C4  28 00 00 00 */	cmplwi r0, 0
 /* 8066E4C8  41 82 00 10 */	beq lbl_8066E4D8
 /* 8066E4CC  38 00 00 00 */	li r0, 0
-/* 8066E4D0  3C 60 80 67 */	lis r3, data_8066F2B6@ha
-/* 8066E4D4  98 03 F2 B6 */	stb r0, data_8066F2B6@l(r3)
+/* 8066E4D0  3C 60 80 67 */	lis r3, struct_8066F2B4+0x2@ha
+/* 8066E4D4  98 03 F2 B6 */	stb r0, struct_8066F2B4+0x2@l(r3)
 lbl_8066E4D8:
 /* 8066E4D8  80 1F 00 F0 */	lwz r0, 0xf0(r31)
 /* 8066E4DC  28 00 00 00 */	cmplwi r0, 0

@@ -133,10 +133,10 @@ struct cBgS {
 	/* 800743B4 */ void LineCross(cBgS_LinChk*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

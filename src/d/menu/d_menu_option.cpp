@@ -174,10 +174,10 @@ struct dComIfG_play_c {
 	/* 8002B3B0 */ void getNowVibration();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

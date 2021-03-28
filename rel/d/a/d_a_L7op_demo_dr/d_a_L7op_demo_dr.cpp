@@ -14,9 +14,6 @@
 struct request_of_phase_process_class {
 };
 
-struct csXyz {
-};
-
 struct Vec {
 };
 
@@ -25,6 +22,9 @@ struct cXyz {
 	/* 805ADDD8 */ void abs(Vec const&) const;
 	/* 805ADEEC */ cXyz(cXyz const&);
 	/* 805ADF2C */ void operator=(cXyz const&);
+};
+
+struct csXyz {
 };
 
 struct mDoMtx_stack_c {
@@ -41,7 +41,7 @@ struct mDoExt_morf_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -50,7 +50,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

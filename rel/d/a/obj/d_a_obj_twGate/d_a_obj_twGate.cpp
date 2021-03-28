@@ -18,10 +18,10 @@ struct mDoHIO_entry_c {
 	/* 80D1FB3C */ ~mDoHIO_entry_c();
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -66,13 +66,13 @@ struct dSv_player_status_b_c {
 	/* 80032BB0 */ void isDarkClearLV(int) const;
 };
 
+struct cXyz {
+};
+
 struct dKy_tevstr_c {
 };
 
 struct J3DModelData {
-};
-
-struct cXyz {
 };
 
 struct dScnKy_env_light_c {

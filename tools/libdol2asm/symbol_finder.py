@@ -11,7 +11,7 @@ from .data import *
 from . import util
 from . import linker_map
 from . import binary
-from . import sort_objects
+from . import sort_translation_units
 from . import generate_symbols
 from . import generate_functions
 from . import settings
@@ -306,7 +306,7 @@ def search(context: Context,
 
         # sort object files. each section will have its own order of the object files, combine everything to find a god-order
         order_sections = tree_order[k]
-        order = sort_objects.sort(v.keys(), order_sections)
+        order = sort_translation_units.sort(context, v.keys(), order_sections)
 
         for tuk in order:
             translation_name = tuk

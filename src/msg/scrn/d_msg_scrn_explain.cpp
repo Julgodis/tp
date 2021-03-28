@@ -16,13 +16,13 @@ struct dMsgString_c {
 	/* 80249D28 */ ~dMsgString_c();
 };
 
-struct J2DOrthoGraph {
-};
-
 struct STControl {
 	/* 8003219C */ void checkTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -70,16 +70,16 @@ struct dMsgScrn3Select_c {
 	/* 8023A97C */ void getCharSpace();
 };
 
-struct COutFont_c {
-	/* 80225C94 */ COutFont_c(u8);
+struct J2DTextBox {
+	/* 80300658 */ void getStringPtr() const;
+	/* 8030074C */ void setString(s16, char const*, ...);
 };
 
 struct JUTFont {
 };
 
-struct J2DTextBox {
-	/* 80300658 */ void getStringPtr() const;
-	/* 8030074C */ void setString(s16, char const*, ...);
+struct COutFont_c {
+	/* 80225C94 */ COutFont_c(u8);
 };
 
 struct dMsgObject_c {
@@ -98,10 +98,10 @@ struct Z2SpeechMgr2 {
 	/* 802CBF60 */ void setTextCount(s16);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

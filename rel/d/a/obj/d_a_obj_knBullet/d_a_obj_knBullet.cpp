@@ -36,9 +36,6 @@ struct daObjKnBullet_c {
 struct dPa_levelEcallBack {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
@@ -48,6 +45,9 @@ struct Vec {
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266F48 */ void normalizeZP();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

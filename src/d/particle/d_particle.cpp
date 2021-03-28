@@ -60,13 +60,24 @@ struct dPa_wbPcallBack_c {
 	/* 8004FECC */ ~dPa_wbPcallBack_c();
 };
 
-struct JGeometry {
-	template <typename A1>
-	struct TVec3 { };
-	/* TVec3<f32> */
-	struct TVec3__template0 {
-	};
+struct _GXColor {
+};
 
+struct JPAEmitterCallBack {
+	/* 80050368 */ void execute(JPABaseEmitter*);
+	/* 8005036C */ void draw(JPABaseEmitter*);
+	/* 80050370 */ void drawAfter(JPABaseEmitter*);
+	/* 80050374 */ void executeAfter(JPABaseEmitter*);
+	/* 8027E6A4 */ ~JPAEmitterCallBack();
+};
+
+struct JPADrawInfo {
+};
+
+struct JPAParticleCallBack {
+	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
+	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
+	/* 8027EFA4 */ ~JPAParticleCallBack();
 };
 
 struct ResTIMG {
@@ -79,21 +90,13 @@ struct JPAResourceManager {
 	/* 80273FCC */ void getResUserWork(u16) const;
 };
 
-struct JPADrawInfo {
-};
+struct JGeometry {
+	template <typename A1>
+	struct TVec3 { };
+	/* TVec3<f32> */
+	struct TVec3__template0 {
+	};
 
-struct JPAParticleCallBack {
-	/* 800183D4 */ void execute(JPABaseEmitter*, JPABaseParticle*);
-	/* 800183D8 */ void draw(JPABaseEmitter*, JPABaseParticle*);
-	/* 8027EFA4 */ ~JPAParticleCallBack();
-};
-
-struct JPAEmitterCallBack {
-	/* 80050368 */ void execute(JPABaseEmitter*);
-	/* 8005036C */ void draw(JPABaseEmitter*);
-	/* 80050370 */ void drawAfter(JPABaseEmitter*);
-	/* 80050374 */ void executeAfter(JPABaseEmitter*);
-	/* 8027E6A4 */ ~JPAEmitterCallBack();
 };
 
 struct JPAEmitterManager {
@@ -107,9 +110,6 @@ struct JPAEmitterManager {
 };
 
 struct dKy_tevstr_c {
-};
-
-struct _GXColor {
 };
 
 struct dPa_simpleEcallBack {

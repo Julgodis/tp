@@ -26,10 +26,10 @@ struct dSv_event_c {
 	/* 800349BC */ void isEventBit(u16) const;
 };
 
-struct J2DOrthoGraph {
+struct STControl {
 };
 
-struct STControl {
+struct J2DOrthoGraph {
 };
 
 struct dMsgScrnExplain_c {
@@ -49,12 +49,6 @@ struct dMeter2Info_c {
 	/* 8021C544 */ void getStringKanji(u32, char*, JMSMesgEntry_c*);
 };
 
-struct JKRExpHeap {
-};
-
-struct JKRArchive {
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -68,11 +62,17 @@ struct J2DGrafContext {
 	/* 802E90C0 */ void scissor(JGeometry::TBox2<f32> const&);
 };
 
+struct JKRArchive {
+};
+
 struct J2DScreen {
 	/* 802F8498 */ J2DScreen();
 	/* 802F8648 */ void setPriority(char const*, u32, JKRArchive*);
 	/* 802F8ED4 */ void draw(f32, f32, J2DGrafContext const*);
 	/* 802F9690 */ void animation();
+};
+
+struct JKRExpHeap {
 };
 
 struct CPaneMgrAlpha {
@@ -197,10 +197,10 @@ struct dMenuMapCommon_c {
 	/* 801C4600 */ void moveLightDropAnime();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

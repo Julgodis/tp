@@ -67,13 +67,13 @@ struct dMeter2Draw_c {
 	/* 802140DC */ void drawPikari(f32, f32, f32*, f32, JUtility::TColor, JUtility::TColor, JUtility::TColor, JUtility::TColor, f32, u8);
 };
 
+struct STControl {
+};
+
 struct JKRExpHeap {
 };
 
 struct CSTControl {
-};
-
-struct STControl {
 };
 
 struct dMenu_Ring_c {

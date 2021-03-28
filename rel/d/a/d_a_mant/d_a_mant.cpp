@@ -31,9 +31,6 @@ struct daMant_packet_c {
 struct dStage_dt_c {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
@@ -43,6 +40,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80861F60 */ ~cXyz();
 	/* 80862C40 */ cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

@@ -26,7 +26,7 @@ struct mDoHIO_entry_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -35,7 +35,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -57,10 +57,10 @@ struct daPy_py_c {
 struct J3DAnmTransformKey {
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcCd_c {
@@ -98,11 +98,11 @@ struct daNpcCd_HIO_Child_c {
 	/* 80157858 */ daNpcCd_HIO_Child_c();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

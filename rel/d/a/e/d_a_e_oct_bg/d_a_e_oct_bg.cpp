@@ -19,10 +19,10 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTevRegKey {
 };
 
-struct J3DAnmTevRegKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -37,7 +37,7 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -46,7 +46,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -73,10 +73,10 @@ struct fopAcM_gc_c {
 	/* 8001DCBC */ void gndCheck(cXyz const*);
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daE_OctBg_c {
@@ -1111,8 +1111,8 @@ asm static void daE_OctBg_Delete(daE_OctBg_c* param_0) {
 /* 8073A140-8073A14C 000C+00 s=1 e=0 z=0  None .bss       @3763                                                        */
 static u8 lit_3763[12];
 
-/* 8073A14C-8073A171 0024+01 s=8 e=0 z=0  None .bss       l_HIO                                                        */
-static u8 l_HIO[36 + 1 /* padding */];
+/* 8073A14C-8073A174 0028+00 s=10 e=0 z=0  None .bss       None                                                         */
+static u8 struct_8073A14C[40];
 
 /* 807368C8-80736A78 01B0+00 s=1 e=0 z=0  None .text      cc_set__11daE_OctBg_cFv                                      */
 #pragma push
@@ -1135,13 +1135,6 @@ asm void daE_OctBg_c::mtx_set() {
 }
 #pragma pop
 
-
-/* ############################################################################################## */
-/* 8073A171-8073A172 0001+00 s=4 e=0 z=0  None .bss       None                                                         */
-static u8 data_8073A171[1];
-
-/* 8073A172-8073A174 0002+00 s=3 e=0 z=0  None .bss       None                                                         */
-static u8 data_8073A172[2];
 
 /* 80736BB4-80736DAC 01F8+00 s=1 e=0 z=0  None .text      checkNormalAttack__11daE_OctBg_cFv                           */
 #pragma push

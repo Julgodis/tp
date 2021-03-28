@@ -12,8 +12,8 @@ lbl_80737678:
 /* 807376A0  80 1D 0B 70 */	lwz r0, 0xb70(r29)
 /* 807376A4  2C 00 00 00 */	cmpwi r0, 0
 /* 807376A8  40 82 00 50 */	bne lbl_807376F8
-/* 807376AC  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 807376B0  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 807376AC  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 807376B0  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 807376B4  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 807376B8  4B B3 02 9C */	b cM_rndF__Ff
 /* 807376BC  7F A3 EB 78 */	mr r3, r29
@@ -56,8 +56,8 @@ lbl_80737720:
 lbl_80737748:
 /* 80737748  C0 44 04 D4 */	lfs f2, 0x4d4(r4)
 /* 8073774C  C0 3D 04 AC */	lfs f1, 0x4ac(r29)
-/* 80737750  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80737754  3B 83 A1 4C */	addi r28, r3, l_HIO@l
+/* 80737750  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80737754  3B 83 A1 4C */	addi r28, r3, struct_8073A14C+0x0@l
 /* 80737758  C0 1C 00 14 */	lfs f0, 0x14(r28)
 /* 8073775C  EC 01 00 2A */	fadds f0, f1, f0
 /* 80737760  FC 02 00 40 */	fcmpo cr0, f2, f0
@@ -187,8 +187,8 @@ lbl_80737920:
 /* 80737928  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 8073792C  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80737930:
-/* 80737930  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80737934  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80737930  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80737934  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80737938  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 8073793C  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80737940  EC 02 00 28 */	fsubs f0, f2, f0
@@ -304,8 +304,8 @@ lbl_80737ACC:
 /* 80737AD4  3C 60 80 45 */	lis r3, __float_nan@ha
 /* 80737AD8  C0 23 0A E0 */	lfs f1, __float_nan@l(r3)
 lbl_80737ADC:
-/* 80737ADC  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80737AE0  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80737ADC  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80737AE0  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80737AE4  C0 43 00 10 */	lfs f2, 0x10(r3)
 /* 80737AE8  C0 1F 00 0C */	lfs f0, 0xc(r31)
 /* 80737AEC  EC 02 00 28 */	fsubs f0, f2, f0
@@ -377,8 +377,8 @@ lbl_80737BE8:
 /* 80737BE8  88 1D 0B AF */	lbz r0, 0xbaf(r29)
 /* 80737BEC  28 00 00 00 */	cmplwi r0, 0
 /* 80737BF0  40 82 00 40 */	bne lbl_80737C30
-/* 80737BF4  3C 60 80 74 */	lis r3, l_HIO@ha
-/* 80737BF8  38 63 A1 4C */	addi r3, r3, l_HIO@l
+/* 80737BF4  3C 60 80 74 */	lis r3, struct_8073A14C+0x0@ha
+/* 80737BF8  38 63 A1 4C */	addi r3, r3, struct_8073A14C+0x0@l
 /* 80737BFC  C0 23 00 10 */	lfs f1, 0x10(r3)
 /* 80737C00  4B B2 FD 54 */	b cM_rndF__Ff
 /* 80737C04  7F A3 EB 78 */	mr r3, r29

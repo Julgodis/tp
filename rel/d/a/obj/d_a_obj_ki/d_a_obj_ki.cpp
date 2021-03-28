@@ -32,10 +32,10 @@ struct mDoExt_McaMorfCallBack2_c {
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct J3DModelData {
+struct J3DAnmTransform {
 };
 
-struct J3DAnmTransform {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorf {
@@ -53,12 +53,12 @@ struct daObj_Ki_HIO_c {
 	/* 80C44AA8 */ ~daObj_Ki_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80C4408C */ ~cXyz();
 	/* 80C44AA0 */ cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {

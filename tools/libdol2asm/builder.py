@@ -4,6 +4,8 @@ import asyncio
 import aiofiles
 
 class AsyncBuilder:
+    """ Writes code to file asynchronous """
+    
     def __init__(self, path):
         self.path = path
         self.new_line = "\n"

@@ -24,12 +24,6 @@ struct mDoExt_bckAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
-};
-
-struct mDoExt_McaMorfCallBack1_c {
-};
-
 struct Vec {
 };
 
@@ -37,6 +31,12 @@ struct Z2Creature {
 	/* 802C03C8 */ Z2Creature();
 	/* 802C0420 */ ~Z2Creature();
 	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+};
+
+struct mDoExt_McaMorfCallBack1_c {
+};
+
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -50,10 +50,10 @@ struct fopAc_ac_c {
 	/* 80018C8C */ ~fopAc_ac_c();
 };
 
-struct J3DJoint {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DJoint {
 };
 
 struct daNpcRafrel_c {
@@ -104,11 +104,11 @@ struct J3DAnmTransformKey {
 struct _GXColorS10 {
 };
 
-struct J3DAnmTexPattern {
-	/* 8032AF50 */ void getTexNo(u16, u16*) const;
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DAnmTexPattern {
+	/* 8032AF50 */ void getTexNo(u16, u16*) const;
 };
 
 struct daNpcF_c {
@@ -153,15 +153,15 @@ struct daNpcF_MatAnm_c {
 	/* 80150738 */ void initialize();
 };
 
+struct csXyz {
+	/* 80ABF2E0 */ ~csXyz();
+	/* 80ABF31C */ csXyz();
+};
+
 struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80ABF320 */ ~cXyz();
 	/* 80ABF35C */ cXyz();
-};
-
-struct csXyz {
-	/* 80ABF2E0 */ ~csXyz();
-	/* 80ABF31C */ csXyz();
 };
 
 struct daNpcF_Lookat_c {

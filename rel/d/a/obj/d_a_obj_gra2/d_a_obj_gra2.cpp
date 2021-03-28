@@ -51,14 +51,14 @@ struct mDoExt_bckAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
 };
 
-struct Z2Creature {
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -82,13 +82,13 @@ struct daPy_py_c {
 	/* 8015F3FC */ void getAttentionOffsetY();
 };
 
-struct dBgW {
-};
-
 struct J3DModel {
 };
 
 struct J3DJoint {
+};
+
+struct dBgW {
 };
 
 struct daObj_GrA_c {
@@ -339,10 +339,10 @@ struct dRes_control_c {
 struct dPa_levelEcallBack {
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -354,15 +354,15 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
+struct dBgS_AcchCir {
+	/* 80075F58 */ void SetWall(f32, f32);
+};
+
 struct dBgW_Base {
 };
 
 struct dBgS {
 	/* 80074A08 */ void Regist(dBgW_Base*, fopAc_ac_c*);
-};
-
-struct dBgS_AcchCir {
-	/* 80075F58 */ void SetWall(f32, f32);
 };
 
 struct dBgS_Acch {

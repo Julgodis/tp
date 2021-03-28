@@ -21,14 +21,14 @@ struct mDoMemCd_Ctrl_c {
 	/* 80016F2C */ void FormatSync();
 };
 
-struct J3DMaterialTable {
-};
-
 struct J3DModelData {
 };
 
 struct J3DAnmTevRegKey {
 	/* 8032B87C */ void searchUpdateMaterialID(J3DModelData*);
+};
+
+struct J3DMaterialTable {
 };
 
 struct mDoExt_brkAnm {
@@ -73,10 +73,6 @@ struct dSv_event_c {
 struct JKRArchive {
 };
 
-struct J2DAnmTextureSRTKey {
-	/* 80184274 */ ~J2DAnmTextureSRTKey();
-};
-
 struct JGeometry {
 	template <typename A1>
 	struct TBox2 { };
@@ -84,6 +80,10 @@ struct JGeometry {
 	struct TBox2__template0 {
 	};
 
+};
+
+struct J2DAnmTextureSRTKey {
+	/* 80184274 */ ~J2DAnmTextureSRTKey();
 };
 
 struct J2DPane {
@@ -100,10 +100,10 @@ struct dSelect_cursor_c {
 	/* 801952A0 */ void setAlphaRate(f32);
 };
 
-struct dKy_tevstr_c {
+struct cXyz {
 };
 
-struct cXyz {
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -119,12 +119,6 @@ struct dName_c {
 	/* 80250560 */ void _draw();
 };
 
-struct COutFont_c {
-};
-
-struct JUTFont {
-};
-
 struct JUtility {
 	struct TColor {
 	};
@@ -136,6 +130,12 @@ struct J2DTextBox {
 	/* 80300658 */ void getStringPtr() const;
 	/* 80300660 */ void setString(char const*, ...);
 	/* 8030074C */ void setString(s16, char const*, ...);
+};
+
+struct JUTFont {
+};
+
+struct COutFont_c {
 };
 
 struct dMsgString_c {
@@ -390,10 +390,10 @@ struct dComIfG_play_c {
 	/* 8002B2C8 */ void itemInit();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

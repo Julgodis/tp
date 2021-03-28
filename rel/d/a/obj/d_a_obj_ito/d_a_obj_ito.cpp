@@ -60,9 +60,6 @@ struct daObj_Ito_HIO_c {
 	/* 8047D778 */ ~daObj_Ito_HIO_c();
 };
 
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -72,6 +69,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8047B9A4 */ ~cXyz();
 	/* 8047D594 */ cXyz();
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

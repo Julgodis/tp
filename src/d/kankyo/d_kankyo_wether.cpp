@@ -32,9 +32,6 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct _GXColor {
 };
 
@@ -48,6 +45,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 80266D30 */ void normZP() const;
 	/* 8026706C */ bool operator!=(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

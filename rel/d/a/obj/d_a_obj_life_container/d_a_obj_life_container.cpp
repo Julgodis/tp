@@ -106,10 +106,10 @@ struct dPa_followEcallBack {
 	/* 80049580 */ dPa_followEcallBack(u8, u8);
 };
 
-struct dKy_tevstr_c {
+struct _GXColor {
 };
 
-struct _GXColor {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -223,10 +223,10 @@ struct Z2SoundObjBase {
 	/* 802BE4A4 */ void startCollisionSE(u32, u32, Z2SoundObjBase*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

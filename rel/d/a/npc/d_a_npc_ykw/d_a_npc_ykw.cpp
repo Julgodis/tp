@@ -28,7 +28,10 @@ struct mDoMtx_stack_c {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
+	/* 802C03C8 */ Z2Creature();
+	/* 802C0420 */ ~Z2Creature();
+	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -37,10 +40,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
-	/* 802C03C8 */ Z2Creature();
-	/* 802C0420 */ ~Z2Creature();
-	/* 802C0530 */ void init(Vec*, Vec*, u8, u8);
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -58,10 +58,16 @@ struct daTag_EvtArea_c {
 	/* 8048C94C */ void chkPointInArea(cXyz, cXyz);
 };
 
-struct daNpcT_faceMotionAnmData_c {
+struct daNpcT_MotionSeqMngr_c {
+	struct sequenceStepData_c {
+	};
+
+	/* 80145898 */ void initialize();
+	/* 80145A24 */ void checkEndSequence();
+	/* 80B672D8 */ ~daNpcT_MotionSeqMngr_c();
 };
 
-struct J3DJoint {
+struct daNpcT_faceMotionAnmData_c {
 };
 
 struct daNpcT_motionAnmData_c {
@@ -70,13 +76,7 @@ struct daNpcT_motionAnmData_c {
 struct daNpcT_evtData_c {
 };
 
-struct daNpcT_MotionSeqMngr_c {
-	struct sequenceStepData_c {
-	};
-
-	/* 80145898 */ void initialize();
-	/* 80145A24 */ void checkEndSequence();
-	/* 80B672D8 */ ~daNpcT_MotionSeqMngr_c();
+struct J3DJoint {
 };
 
 struct daNpc_ykW_c {
@@ -157,14 +157,14 @@ struct _GXColorS10 {
 struct J3DModel {
 };
 
-struct csXyz {
-	/* 80B66C38 */ ~csXyz();
-	/* 80B671D4 */ csXyz();
-};
-
 struct dCcD_GObjInf {
 	/* 80083A28 */ dCcD_GObjInf();
 	/* 800840E4 */ ~dCcD_GObjInf();
+};
+
+struct csXyz {
+	/* 80B66C38 */ ~csXyz();
+	/* 80B671D4 */ csXyz();
 };
 
 struct daNpcT_c {
@@ -313,14 +313,14 @@ struct dPa_control_c {
 	/* 8004D6A4 */ void setPoly(u32, u16, cBgS_PolyInfo&, cXyz const*, dKy_tevstr_c const*, csXyz const*, cXyz const*, int, dPa_levelEcallBack*, s8, cXyz const*);
 };
 
-struct dBgS {
-	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
-};
-
 struct dBgS_AcchCir {
 	/* 80075EAC */ dBgS_AcchCir();
 	/* 80075F40 */ void SetWallR(f32);
 	/* 80B67320 */ ~dBgS_AcchCir();
+};
+
+struct dBgS {
+	/* 80074E50 */ void GetPolyAtt0(cBgS_PolyInfo const&);
 };
 
 struct dBgS_Acch {

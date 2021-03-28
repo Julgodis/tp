@@ -79,9 +79,6 @@ struct dSv_event_c {
 	/* 80034A04 */ void getEventReg(u16) const;
 };
 
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -91,6 +88,9 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8086CC30 */ ~cXyz();
 	/* 8086FF80 */ cXyz();
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

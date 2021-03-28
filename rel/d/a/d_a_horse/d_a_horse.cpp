@@ -14,6 +14,9 @@
 struct request_of_phase_process_class {
 };
 
+struct Quaternion {
+};
+
 struct Vec {
 };
 
@@ -28,9 +31,6 @@ struct cXyz {
 	/* 808392D8 */ cXyz();
 };
 
-struct Quaternion {
-};
-
 struct mDoMtx_stack_c {
 	/* 8000CD64 */ void transS(cXyz const&);
 	/* 8000CD9C */ void transM(f32, f32, f32);
@@ -38,10 +38,10 @@ struct mDoMtx_stack_c {
 	/* 8000CF7C */ void quatM(Quaternion const*);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTexPattern {
 };
 
-struct J3DAnmTexPattern {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btpAnm {
@@ -65,13 +65,13 @@ struct mDoExt_3DlineMatSortPacket {
 	/* 80014738 */ void setMat(mDoExt_3DlineMat_c*);
 };
 
-struct ResTIMG {
+struct dKy_tevstr_c {
 };
 
 struct _GXColor {
 };
 
-struct dKy_tevstr_c {
+struct ResTIMG {
 };
 
 struct mDoExt_3DlineMat1_c {

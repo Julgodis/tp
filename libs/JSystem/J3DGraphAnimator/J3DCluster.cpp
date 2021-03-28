@@ -17,7 +17,7 @@ struct J3DVertexBuffer {
 struct J3DModel {
 };
 
-struct J3DClusterKey {
+struct J3DCluster {
 };
 
 struct J3DAnmCluster {
@@ -31,7 +31,7 @@ struct J3DDeformData {
 	/* 8032E364 */ void setAnm(J3DAnmCluster*);
 };
 
-struct J3DCluster {
+struct J3DClusterKey {
 };
 
 struct J3DDeformer {

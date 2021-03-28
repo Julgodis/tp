@@ -18,13 +18,13 @@ struct Vec {
 };
 
 namespace JStudio {
+	struct TControl {
+	};
+
 	struct data {
 		struct TEOperationData {
 		};
 
-	};
-
-	struct TControl {
 	};
 
 	struct TAdaptor {

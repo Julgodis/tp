@@ -55,11 +55,11 @@ struct dPa_levelEcallBack {
 struct csXyz {
 };
 
-struct dKy_tevstr_c {
-};
-
 struct cXyz {
 	/* 80009184 */ ~cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {
@@ -70,10 +70,10 @@ struct dMsgObject_c {
 	/* 80237AB0 */ void setDemoMessage(u32);
 };
 
-struct _GXDistAttnFn {
+struct _GXSpotFn {
 };
 
-struct _GXSpotFn {
+struct _GXDistAttnFn {
 };
 
 struct JStage {
@@ -114,10 +114,10 @@ struct JStage {
 		/* 80280B88 */ void JSGGetColor() const;
 	};
 
-	struct TECameraProjection {
+	struct TECameraView {
 	};
 
-	struct TECameraView {
+	struct TECameraProjection {
 	};
 
 	struct TCamera {
@@ -273,6 +273,9 @@ struct JUTNameTab {
 	/* 802DEA58 */ void getIndex(char const*) const;
 };
 
+struct JPABaseEmitter {
+};
+
 namespace JStudio {
 	namespace ctb {
 		struct TControl {
@@ -349,9 +352,6 @@ namespace JStudio {
 	struct TObject {
 	};
 
-};
-
-struct JPABaseEmitter {
 };
 
 struct JStudio_JParticle {

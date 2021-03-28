@@ -135,13 +135,6 @@ struct dMenu_StageMapCtrl_c {
 	/* 801C2590 */ void setPlusZoomCenterZ(f32);
 };
 
-struct JKRExpHeap {
-	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
-};
-
-struct J2DOrthoGraph {
-};
-
 struct STControl {
 	/* 80032044 */ STControl(s16, s16, s16, s16, f32, f32, s16, s16);
 	/* 8003219C */ void checkTrigger();
@@ -149,6 +142,13 @@ struct STControl {
 	/* 800324A8 */ void checkRightTrigger();
 	/* 80032524 */ void checkUpTrigger();
 	/* 800325A0 */ void checkDownTrigger();
+};
+
+struct JKRExpHeap {
+	/* 802CEE2C */ void create(u32, JKRHeap*, bool);
+};
+
+struct J2DOrthoGraph {
 };
 
 struct dMenu_ItemExplain_c {
@@ -289,10 +289,10 @@ struct dDlst_list_c {
 	/* 80056794 */ void set(dDlst_base_c**&, dDlst_base_c**&, dDlst_base_c*);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

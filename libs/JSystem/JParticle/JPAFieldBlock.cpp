@@ -11,6 +11,9 @@
 // Types:
 // 
 
+struct JPABaseParticle {
+};
+
 struct JKRHeap {
 };
 
@@ -20,9 +23,6 @@ struct JPAFieldBlock {
 };
 
 struct JPAEmitterWorkData {
-};
-
-struct JPABaseParticle {
 };
 
 struct JPAFieldVortex {

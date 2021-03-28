@@ -18,6 +18,9 @@ struct mDoMtx_stack_c {
 	/* 8000CE38 */ void scaleM(f32, f32, f32);
 };
 
+struct J3DModel {
+};
+
 struct Vec {
 };
 
@@ -25,9 +28,6 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8072C130 */ ~cXyz();
-};
-
-struct J3DModel {
 };
 
 struct mDoExt_invisibleModel {
@@ -38,7 +38,7 @@ struct mDoExt_invisibleModel {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -47,7 +47,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {

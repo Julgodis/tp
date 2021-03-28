@@ -48,9 +48,6 @@ struct dSv_info_c {
 	/* 80035200 */ void onSwitch(int, int);
 };
 
-struct dKy_tevstr_c {
-};
-
 struct Vec {
 };
 
@@ -58,6 +55,9 @@ struct cXyz {
 	/* 80266AE4 */ void operator+(Vec const&) const;
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80D139FC */ ~cXyz();
+};
+
+struct dKy_tevstr_c {
 };
 
 struct dScnKy_env_light_c {
@@ -97,10 +97,10 @@ struct dEvt_control_c {
 	/* 80042468 */ void reset();
 };
 
-struct J3DModelData {
+struct J3DModel {
 };
 
-struct J3DModel {
+struct J3DModelData {
 };
 
 struct dComIfG_play_c {

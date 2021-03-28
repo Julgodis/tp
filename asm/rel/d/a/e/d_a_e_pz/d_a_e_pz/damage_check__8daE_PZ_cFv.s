@@ -12,8 +12,8 @@ lbl_80758E04:
 /* 80758E2C  2C 00 00 13 */	cmpwi r0, 0x13
 /* 80758E30  41 82 00 28 */	beq lbl_80758E58
 /* 80758E34  C0 3F 07 A0 */	lfs f1, 0x7a0(r31)
-/* 80758E38  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 80758E3C  3B C3 1E 0C */	addi r30, r3, l_HIO@l
+/* 80758E38  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 80758E3C  3B C3 1E 0C */	addi r30, r3, struct_80761E0C+0x0@l
 /* 80758E40  C0 1E 00 08 */	lfs f0, 8(r30)
 /* 80758E44  FC 01 00 00 */	fcmpu cr0, f1, f0
 /* 80758E48  40 82 00 10 */	bne lbl_80758E58
@@ -78,8 +78,8 @@ lbl_80758EFC:
 /* 80758F28  38 A0 00 00 */	li r5, 0
 /* 80758F2C  3C C0 80 76 */	lis r6, lit_3907@ha
 /* 80758F30  C0 26 15 00 */	lfs f1, lit_3907@l(r6)
-/* 80758F34  3C C0 80 76 */	lis r6, l_HIO@ha
-/* 80758F38  38 C6 1E 0C */	addi r6, r6, l_HIO@l
+/* 80758F34  3C C0 80 76 */	lis r6, struct_80761E0C+0x0@ha
+/* 80758F38  38 C6 1E 0C */	addi r6, r6, struct_80761E0C+0x0@l
 /* 80758F3C  C0 46 00 14 */	lfs f2, 0x14(r6)
 /* 80758F40  4B FF F8 C1 */	bl setBck__8daE_PZ_cFiUcff
 /* 80758F44  38 00 00 00 */	li r0, 0

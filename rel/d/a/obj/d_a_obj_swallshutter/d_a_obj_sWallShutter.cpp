@@ -106,10 +106,10 @@ struct dBgS_MoveBgActor {
 	/* 80078950 */ void MoveBGExecute();
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

@@ -130,8 +130,8 @@ lbl_8075BB34:
 /* 8075BB4C  C0 3E 00 04 */	lfs f1, 4(r30)
 /* 8075BB50  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 8075BB54  4B FF CC AD */	bl setBck__8daE_PZ_cFiUcff
-/* 8075BB58  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 8075BB5C  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 8075BB58  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 8075BB5C  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 8075BB60  C0 03 00 08 */	lfs f0, 8(r3)
 /* 8075BB64  D0 18 07 9C */	stfs f0, 0x79c(r24)
 /* 8075BB68  D0 18 07 A0 */	stfs f0, 0x7a0(r24)
@@ -149,8 +149,8 @@ lbl_8075BB80:
 /* 8075BB94  4E 80 04 21 */	bctrl 
 /* 8075BB98  2C 03 00 00 */	cmpwi r3, 0
 /* 8075BB9C  41 82 00 38 */	beq lbl_8075BBD4
-/* 8075BBA0  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 8075BBA4  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 8075BBA0  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 8075BBA4  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 8075BBA8  A8 03 00 18 */	lha r0, 0x18(r3)
 /* 8075BBAC  98 18 07 D3 */	stb r0, 0x7d3(r24)
 /* 8075BBB0  7F 03 C3 78 */	mr r3, r24
@@ -205,8 +205,8 @@ lbl_8075BC50:
 /* 8075BC64  4B FF CC 49 */	bl setActionMode__8daE_PZ_cFii
 /* 8075BC68  48 00 09 A4 */	b lbl_8075C60C
 lbl_8075BC6C:
-/* 8075BC6C  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 8075BC70  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 8075BC6C  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 8075BC70  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 8075BC74  A8 03 00 18 */	lha r0, 0x18(r3)
 /* 8075BC78  98 18 07 D3 */	stb r0, 0x7d3(r24)
 /* 8075BC7C  7F 03 C3 78 */	mr r3, r24

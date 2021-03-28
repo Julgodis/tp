@@ -2,8 +2,8 @@ lbl_80760CA8:
 /* 80760CA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80760CAC  7C 08 02 A6 */	mflr r0
 /* 80760CB0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80760CB4  3C 60 80 76 */	lis r3, l_HIO@ha
-/* 80760CB8  38 63 1E 0C */	addi r3, r3, l_HIO@l
+/* 80760CB4  3C 60 80 76 */	lis r3, struct_80761E0C+0x0@ha
+/* 80760CB8  38 63 1E 0C */	addi r3, r3, struct_80761E0C+0x0@l
 /* 80760CBC  4B FF 78 B1 */	bl __ct__12daE_PZ_HIO_cFv
 /* 80760CC0  3C 80 80 76 */	lis r4, __dt__12daE_PZ_HIO_cFv@ha
 /* 80760CC4  38 84 0C 60 */	addi r4, r4, __dt__12daE_PZ_HIO_cFv@l

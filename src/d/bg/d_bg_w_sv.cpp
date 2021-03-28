@@ -21,10 +21,10 @@ struct dBgW_Base {
 struct cBgD_t {
 };
 
-struct cBgS_PolyInfo {
+struct cXyz {
 };
 
-struct cXyz {
+struct cBgS_PolyInfo {
 };
 
 struct csXyz {
@@ -41,25 +41,25 @@ struct dBgWSv {
 	/* 800835DC */ ~dBgWSv();
 };
 
-struct dBgS_RoofChk {
-};
-
-struct dBgS_SplGrpChk {
+struct cBgS_PolyPassChk {
 };
 
 struct cBgS_GrpPassChk {
 };
 
-struct dBgS_CaptPoly {
-};
-
-struct dBgS_SphChk {
+struct dBgS_RoofChk {
 };
 
 struct dBgS_Acch {
 };
 
-struct cBgS_PolyPassChk {
+struct dBgS_SphChk {
+};
+
+struct dBgS_SplGrpChk {
+};
+
+struct dBgS_CaptPoly {
 };
 
 struct dBgW {

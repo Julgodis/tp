@@ -17,10 +17,10 @@ struct cBgS_PolyInfo {
 struct cXyz {
 };
 
-struct dKy_tevstr_c {
+struct csXyz {
 };
 
-struct csXyz {
+struct dKy_tevstr_c {
 };
 
 struct dPa_control_c {

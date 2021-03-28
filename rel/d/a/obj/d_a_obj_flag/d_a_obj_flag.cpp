@@ -69,10 +69,10 @@ struct dRes_control_c {
 	/* 8003C37C */ void getRes(char const*, char const*, dRes_info_c*, int);
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

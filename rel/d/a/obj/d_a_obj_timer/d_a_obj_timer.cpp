@@ -47,10 +47,10 @@ struct dSv_info_c {
 struct create_tag_class {
 };
 
-struct JAISoundID {
+struct Vec {
 };
 
-struct Vec {
+struct JAISoundID {
 };
 
 struct Z2SeMgr {

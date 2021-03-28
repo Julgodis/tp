@@ -54,12 +54,6 @@ struct daTogeRoll_HIO_c {
 	/* 80C798D0 */ ~daTogeRoll_HIO_c();
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -68,6 +62,12 @@ struct cXyz {
 	/* 80266B34 */ void operator-(Vec const&) const;
 	/* 80266F48 */ void normalizeZP();
 	/* 8026702C */ bool operator==(Vec const&) const;
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

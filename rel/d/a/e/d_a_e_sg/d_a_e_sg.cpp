@@ -41,12 +41,6 @@ struct dStage_roomControl_c {
 	/* 800244E8 */ void checkRoomDisp(int) const;
 };
 
-struct dKy_tevstr_c {
-};
-
-struct J3DModelData {
-};
-
 struct Vec {
 };
 
@@ -55,6 +49,12 @@ struct cXyz {
 	/* 80266B84 */ void operator*(f32) const;
 	/* 8078A4DC */ ~cXyz();
 	/* 8078DD7C */ cXyz();
+};
+
+struct dKy_tevstr_c {
+};
+
+struct J3DModelData {
 };
 
 struct dScnKy_env_light_c {

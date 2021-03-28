@@ -28,10 +28,10 @@ struct mDoExt_morf_c {
 	/* 807613B0 */ void setFrame(f32);
 };
 
-struct J3DMaterialTable {
+struct J3DAnmTextureSRTKey {
 };
 
-struct J3DAnmTextureSRTKey {
+struct J3DMaterialTable {
 };
 
 struct mDoExt_btkAnm {
@@ -54,7 +54,7 @@ struct mDoExt_baseAnm {
 struct mDoExt_McaMorfCallBack2_c {
 };
 
-struct J3DModelData {
+struct Z2Creature {
 };
 
 struct mDoExt_McaMorfCallBack1_c {
@@ -63,7 +63,7 @@ struct mDoExt_McaMorfCallBack1_c {
 struct J3DAnmTransform {
 };
 
-struct Z2Creature {
+struct J3DModelData {
 };
 
 struct mDoExt_McaMorfSO {
@@ -1707,8 +1707,8 @@ static u8 struct_80761DFC[4];
 /* 80761E00-80761E0C 000C+00 s=1 e=0 z=0  None .bss       @3922                                                        */
 static u8 lit_3922[12];
 
-/* 80761E0C-80761E29 001C+01 s=11 e=0 z=0  None .bss       l_HIO                                                        */
-static u8 l_HIO[28 + 1 /* padding */];
+/* 80761E0C-80761E2C 0020+00 s=12 e=0 z=0  None .bss       None                                                         */
+static u8 struct_80761E0C[32];
 
 /* 80758A94-80758BA0 010C+00 s=3 e=0 z=0  None .text      mPzScaleSet__8daE_PZ_cFb                                     */
 #pragma push
@@ -1788,9 +1788,6 @@ asm void daE_PZ_c::executeSearchPoint() {
 
 
 /* ############################################################################################## */
-/* 80761E29-80761E2C 0003+00 s=1 e=0 z=0  None .bss       None                                                         */
-static u8 data_80761E29[3];
-
 /* 80761E2C-80761E3C 000C+04 s=1 e=0 z=0  None .bss       @4339                                                        */
 static u8 lit_4339[12 + 4 /* padding */];
 

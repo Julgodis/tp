@@ -60,16 +60,16 @@ struct JGeometry {
 
 };
 
-struct J2DAnmColor {
-};
-
-struct J2DAnmTextureSRTKey {
+struct J2DAnmTevRegKey {
 };
 
 struct J2DAnmTexPattern {
 };
 
-struct J2DAnmTevRegKey {
+struct J2DAnmTextureSRTKey {
+};
+
+struct J2DAnmColor {
 };
 
 struct J2DMaterial {
@@ -82,19 +82,19 @@ struct J2DMaterial {
 	/* 802EAC78 */ void animation();
 };
 
-struct J2DAnmTransform {
-};
-
-struct J2DAnmBase {
-};
-
-struct J2DAnmVisibilityFull {
+struct J2DAnmVtxColor {
 };
 
 struct J2DGrafContext {
 };
 
-struct J2DAnmVtxColor {
+struct J2DAnmVisibilityFull {
+};
+
+struct J2DAnmBase {
+};
+
+struct J2DAnmTransform {
 };
 
 struct J2DPane {
